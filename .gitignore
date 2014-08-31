@@ -11,3 +11,4 @@ build/*
 DerivedData/*
 wordmaster3.1/Resources/bin/*.bin
 
+Game/frameworks/runtime-src/proj.ios_mac/DerivedData/*
