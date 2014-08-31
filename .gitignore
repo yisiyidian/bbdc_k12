@@ -1,0 +1,13 @@
+.DS_Store
+
+xcuserdata
+*.xcuserstate
+
+*.xccheckout
+*.meta
+*.xcbkptlist
+
+build/*
+DerivedData/*
+wordmaster3.1/Resources/bin/*.bin
+
