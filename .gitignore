@@ -11,4 +11,27 @@ build/*
 DerivedData/*
 
 CocosLuaGame/frameworks/runtime-src/proj.ios_mac/CocosLuaGame.xcodeproj/xcuserdata/*.xcuserdatad
-CocosLuaGame/frameworks/runtime-src/proj.ios_mac/DerivedData/*
+CocosLuaGame/frameworks/runtime-src/proj.ios_mac/DerivedData
+CocosLuaGame/frameworks/cocos2d-x/build/build
+CocosLuaGame/frameworks/cocos2d-x/cocos/scripting/lua-bindings/proj.ios_mac/build/cocos2d_lua_bindings.build
+CocosLuaGame/frameworks/runtime-src/proj.ios_mac/build/CocosLuaGame.build
+CocosLuaGame/runtime/ios/CocosLuaGame iOS.app.dSYM
+CocosLuaGame/runtime/ios/CocosLuaGame.app
+CocosLuaGame/frameworks/cocos2d-x/plugin/plugins/*/proj.android/bin/*
+CocosLuaGame/frameworks/cocos2d-x/plugin/publish
+
+userconf.ini
+
+DerivedData
+local.properties
+# *.class
+# *.d
+# *.a
+# *.o
+environment.sh
+
+bin
+obj
+gen
+contents.xcworkspacedata
+org.eclipse.ltk.core.refactoring.prefs

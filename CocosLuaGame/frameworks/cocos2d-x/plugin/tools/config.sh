@@ -5,6 +5,8 @@ export ALL_PLUGINS=("flurry" "umeng" \
 "twitter" "weibo" \
 "qh360" "uc")
 
+# export ALL_PLUGINS=("flurry" "iosiap")
+
 # define the plugin root directory & publish target directory
 export TARGET_DIR_NAME="publish"
 if [ ! ${PLUGIN_ROOT} ]; then
