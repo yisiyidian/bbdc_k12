@@ -5,6 +5,8 @@
 #include "Runtime.h"
 #include "ConfigParser.h"
 
+#include "lua_bb_auto.hpp"
+
 using namespace CocosDenshion;
 
 USING_NS_CC;
@@ -59,6 +61,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     //register custom function
     //LuaStack* stack = engine->getLuaStack();
     //register_custom_function(stack->getLuaState());
+    
+    lua_getglobal(stack->getLuaState(), "_G");
+    register_all_bb(stack->getLuaState());
+    lua_settop(stack->getLuaState(), 0);
     
 #if (COCOS2D_DEBUG>0)
     if (startRuntime())

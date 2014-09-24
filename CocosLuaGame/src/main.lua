@@ -23,7 +23,7 @@ local function main()
     
     cc.FileUtils:getInstance():addSearchPath("src")
     cc.FileUtils:getInstance():addSearchPath("res")
-    cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(480, 320, 0)
+    cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(480 * 2, 320 * 2, cc.ResolutionPolicy.FIXED_HEIGHT)
     
     --create scene 
     local scene = require("GameScene")
@@ -35,6 +35,8 @@ local function main()
     else
         cc.Director:getInstance():runWithScene(gameScene)
     end
+
+    local val = bbns.BBTestLua:create():show(10)
 
 end
 

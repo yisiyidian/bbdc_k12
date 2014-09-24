@@ -76,6 +76,8 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
+		B83CAB2719D30AE10022A91F /* BBTestLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B83CAB2519D30AE10022A91F /* BBTestLua.cpp */; };
+		B83CAB2819D30AE10022A91F /* BBTestLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B83CAB2519D30AE10022A91F /* BBTestLua.cpp */; };
 		B8618DE019B3373300673610 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B8618DDF19B3373300673610 /* Default-Portrait.png */; };
 		B8B9A4F519B335B300F696FB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B9A4F419B335B300F696FB /* StoreKit.framework */; };
 		C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
@@ -421,6 +423,8 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B83CAB2519D30AE10022A91F /* BBTestLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBTestLua.cpp; sourceTree = "<group>"; };
+		B83CAB2619D30AE10022A91F /* BBTestLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTestLua.h; sourceTree = "<group>"; };
 		B8618DDF19B3373300673610 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
 		B8B9A4F419B335B300F696FB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		C00FD48A1938512100C6382D /* Landscape_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Landscape_png.cpp; sourceTree = "<group>"; };
@@ -718,6 +722,16 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
+		B83CAB2219D30AC10022A91F /* bb */ = {
+			isa = PBXGroup;
+			children = (
+				B83CAB2519D30AE10022A91F /* BBTestLua.cpp */,
+				B83CAB2619D30AE10022A91F /* BBTestLua.h */,
+			);
+			name = bb;
+			path = ../Classes/bb;
+			sourceTree = "<group>";
+		};
 		C00FD4891938512100C6382D /* runtime */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +814,7 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B83CAB2219D30AC10022A91F /* bb */,
 				C00FD4891938512100C6382D /* runtime */,
 				C033B51A191B337200D06937 /* VisibleRect.cpp */,
 				C033B51B191B337200D06937 /* VisibleRect.h */,
@@ -1158,6 +1173,7 @@
 				C00FD49B1938512100C6382D /* Runtime.cpp in Sources */,
 				3EB515591952865D006966AA /* extension_set.cc in Sources */,
 				3EB5155B1952865D006966AA /* generated_message_util.cc in Sources */,
+				B83CAB2819D30AE10022A91F /* BBTestLua.cpp in Sources */,
 				C0619CD81896894800872C26 /* Runtime_ios-mac.mm in Sources */,
 				3EB5152D19528284006966AA /* Protos.pb.cc in Sources */,
 				C00FD4931938512100C6382D /* Landscape_png.cpp in Sources */,
@@ -1176,6 +1192,7 @@
 				C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
 				C00FD49A1938512100C6382D /* Runtime.cpp in Sources */,
+				B83CAB2719D30AE10022A91F /* BBTestLua.cpp in Sources */,
 				3EB515621952865D006966AA /* message_lite.cc in Sources */,
 				C06C3796191A1D1E00617BED /* ConfigParser.cpp in Sources */,
 				3EB515601952865D006966AA /* zero_copy_stream_impl_lite.cc in Sources */,
