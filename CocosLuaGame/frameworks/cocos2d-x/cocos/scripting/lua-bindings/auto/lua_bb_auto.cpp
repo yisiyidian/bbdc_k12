@@ -1,5 +1,7 @@
 #include "lua_bb_auto.hpp"
 #include "BBTestLua.h"
+#include "BBHttpRequest.h"
+#include "BBHttpResponse.h"
 #include "network/HttpClient.h"
 #include "tolua_fix.h"
 #include "LuaBasicConversions.h"
@@ -147,6 +149,44 @@ int lua_register_bb_BBTestLua(lua_State* tolua_S)
     std::string typeName = typeid(BBTestLua).name();
     g_luaType[typeName] = "BBTestLua";
     g_typeCast["BBTestLua"] = "BBTestLua";
+    return 1;
+}
+
+static int lua_bb_BBHttpRequest_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (BBHttpRequest)");
+    return 0;
+}
+
+int lua_register_bb_BBHttpRequest(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"BBHttpRequest");
+    tolua_cclass(tolua_S,"BBHttpRequest","BBHttpRequest","cc.HttpRequest",nullptr);
+
+    tolua_beginmodule(tolua_S,"BBHttpRequest");
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(BBHttpRequest).name();
+    g_luaType[typeName] = "BBHttpRequest";
+    g_typeCast["BBHttpRequest"] = "BBHttpRequest";
+    return 1;
+}
+
+static int lua_bb_BBHttpResponse_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (BBHttpResponse)");
+    return 0;
+}
+
+int lua_register_bb_BBHttpResponse(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"BBHttpResponse");
+    tolua_cclass(tolua_S,"BBHttpResponse","BBHttpResponse","cc.HttpResponse",nullptr);
+
+    tolua_beginmodule(tolua_S,"BBHttpResponse");
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(BBHttpResponse).name();
+    g_luaType[typeName] = "BBHttpResponse";
+    g_typeCast["BBHttpResponse"] = "BBHttpResponse";
     return 1;
 }
 
@@ -563,7 +603,9 @@ TOLUA_API int register_all_bb(lua_State* tolua_S)
 	tolua_module(tolua_S,"bbns",0);
 	tolua_beginmodule(tolua_S,"bbns");
 
+	lua_register_bb_BBHttpRequest(tolua_S);
 	lua_register_bb_BBTestLua(tolua_S);
+	lua_register_bb_BBHttpResponse(tolua_S);
 	lua_register_bb_HttpClient(tolua_S);
 
 	tolua_endmodule(tolua_S);

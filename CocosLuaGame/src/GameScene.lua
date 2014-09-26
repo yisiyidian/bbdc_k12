@@ -186,6 +186,7 @@ end
 --  -H "X-AVOSCloud-Application-Key: 8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg" \
 --  https://cn.avoscloud.com/1.1/classes/WMAV_DeviceData
 function GameScene:testPost()
+    bbns.HttpClient:getInstance()
     local http=require("socket")
 
     local xhr = cc.XMLHttpRequest:new()
