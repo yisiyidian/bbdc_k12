@@ -181,4 +181,23 @@ function GameScene:createLayerMenu()
     return layerMenu
 end
 
+--curl -X GET \
+--  -H "X-AVOSCloud-Application-Id: 9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l" \
+--  -H "X-AVOSCloud-Application-Key: 8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg" \
+--  https://cn.avoscloud.com/1.1/classes/WMAV_DeviceData
+function GameScene:testPost()
+    local http=require("socket")
+
+    local xhr = cc.XMLHttpRequest:new()
+    xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
+    xhr:open("GET", "https://cn.avoscloud.com/1.1/classes/WMAV_DeviceData")
+    xhr:setRequestHeader('X-AVOSCloud-Application-Id', '9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l')
+    xhr:setRequestHeader('X-AVOSCloud-Application-Key', '8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg')
+    local function onResponse()
+        print(xhr.response)
+    end
+    xhr:registerScriptHandler(onResponse)
+    xhr:send()
+end
+
 return GameScene

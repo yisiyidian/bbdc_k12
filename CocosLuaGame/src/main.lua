@@ -37,9 +37,9 @@ local function main()
     end
 
     local val = bbns.BBTestLua:create():show(10)
+    gameScene:testPost()
 
 end
-
 
 local status, msg = xpcall(main, __G__TRACKBACK__)
 if not status then
