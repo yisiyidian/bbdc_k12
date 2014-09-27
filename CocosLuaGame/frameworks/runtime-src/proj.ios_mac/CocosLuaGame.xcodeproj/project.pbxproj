@@ -76,10 +76,6 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
-		B8299C2919D56F7A00252917 /* BBHttpRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8299C2719D56F7A00252917 /* BBHttpRequest.cpp */; };
-		B8299C2A19D56F7A00252917 /* BBHttpRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8299C2719D56F7A00252917 /* BBHttpRequest.cpp */; };
-		B8299C3119D56FEC00252917 /* BBHttpResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8299C2F19D56FEC00252917 /* BBHttpResponse.cpp */; };
-		B8299C3219D56FEC00252917 /* BBHttpResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8299C2F19D56FEC00252917 /* BBHttpResponse.cpp */; };
 		B83CAB2719D30AE10022A91F /* BBTestLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B83CAB2519D30AE10022A91F /* BBTestLua.cpp */; };
 		B83CAB2819D30AE10022A91F /* BBTestLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B83CAB2519D30AE10022A91F /* BBTestLua.cpp */; };
 		B8618DE019B3373300673610 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B8618DDF19B3373300673610 /* Default-Portrait.png */; };
@@ -427,10 +423,6 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		B8299C2719D56F7A00252917 /* BBHttpRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBHttpRequest.cpp; sourceTree = "<group>"; };
-		B8299C2819D56F7A00252917 /* BBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHttpRequest.h; sourceTree = "<group>"; };
-		B8299C2F19D56FEC00252917 /* BBHttpResponse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBHttpResponse.cpp; sourceTree = "<group>"; };
-		B8299C3019D56FEC00252917 /* BBHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHttpResponse.h; sourceTree = "<group>"; };
 		B83CAB2519D30AE10022A91F /* BBTestLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBTestLua.cpp; sourceTree = "<group>"; };
 		B83CAB2619D30AE10022A91F /* BBTestLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTestLua.h; sourceTree = "<group>"; };
 		B8618DDF19B3373300673610 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
@@ -735,10 +727,6 @@
 			children = (
 				B83CAB2519D30AE10022A91F /* BBTestLua.cpp */,
 				B83CAB2619D30AE10022A91F /* BBTestLua.h */,
-				B8299C2719D56F7A00252917 /* BBHttpRequest.cpp */,
-				B8299C2819D56F7A00252917 /* BBHttpRequest.h */,
-				B8299C2F19D56FEC00252917 /* BBHttpResponse.cpp */,
-				B8299C3019D56FEC00252917 /* BBHttpResponse.h */,
 			);
 			name = bb;
 			path = ../Classes/bb;
@@ -1180,7 +1168,6 @@
 				3EB5156D1952865D006966AA /* stringprintf.cc in Sources */,
 				C07828F818B4D72E00BD2287 /* main.m in Sources */,
 				3EB515611952865D006966AA /* zero_copy_stream_impl_lite.cc in Sources */,
-				B8299C2A19D56F7A00252917 /* BBHttpRequest.cpp in Sources */,
 				3EB5156F1952865D006966AA /* wire_format_lite.cc in Sources */,
 				3EB515631952865D006966AA /* message_lite.cc in Sources */,
 				C00FD49B1938512100C6382D /* Runtime.cpp in Sources */,
@@ -1189,7 +1176,6 @@
 				B83CAB2819D30AE10022A91F /* BBTestLua.cpp in Sources */,
 				C0619CD81896894800872C26 /* Runtime_ios-mac.mm in Sources */,
 				3EB5152D19528284006966AA /* Protos.pb.cc in Sources */,
-				B8299C3219D56FEC00252917 /* BBHttpResponse.cpp in Sources */,
 				C00FD4931938512100C6382D /* Landscape_png.cpp in Sources */,
 				3EB5155F1952865D006966AA /* zero_copy_stream.cc in Sources */,
 				3EB515671952865D006966AA /* atomicops_internals_x86_msvc.cc in Sources */,
@@ -1211,10 +1197,8 @@
 				C06C3796191A1D1E00617BED /* ConfigParser.cpp in Sources */,
 				3EB515601952865D006966AA /* zero_copy_stream_impl_lite.cc in Sources */,
 				C00FD4961938512100C6382D /* PlayEnable_png.cpp in Sources */,
-				B8299C2919D56F7A00252917 /* BBHttpRequest.cpp in Sources */,
 				3EB5152C19528284006966AA /* Protos.pb.cc in Sources */,
 				3EB515661952865D006966AA /* atomicops_internals_x86_msvc.cc in Sources */,
-				B8299C3119D56FEC00252917 /* BBHttpResponse.cpp in Sources */,
 				3EB515641952865D006966AA /* repeated_field.cc in Sources */,
 				C00FD4941938512100C6382D /* PlayDisable_png.cpp in Sources */,
 				C00FD49C1938512100C6382D /* Shine_png.cpp in Sources */,

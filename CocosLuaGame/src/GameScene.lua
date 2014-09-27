@@ -186,19 +186,22 @@ end
 --  -H "X-AVOSCloud-Application-Key: 8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg" \
 --  https://cn.avoscloud.com/1.1/classes/WMAV_DeviceData
 function GameScene:testPost()
-    bbns.HttpClient:getInstance()
-    local http=require("socket")
+    -- bbns.HttpClient:getInstance()
+    -- local a = bbns.BBHttpRequest:new()
+    -- a = nil
+    -- local http=require("socket")
 
     local xhr = cc.XMLHttpRequest:new()
     xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
-    xhr:open("GET", "https://cn.avoscloud.com/1.1/classes/WMAV_DeviceData")
+    -- xhr:open("POST", "http://localhost:3000/avos/sv_appVersion")
+    xhr:open("POST", "http://localhost:3000/avos/apiLogIn")
     xhr:setRequestHeader('X-AVOSCloud-Application-Id', '9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l')
     xhr:setRequestHeader('X-AVOSCloud-Application-Key', '8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg')
     local function onResponse()
-        print(xhr.response)
+        print('xhr.response: ', xhr.responseType, xhr.response, xhr:getAllResponseHeaders())
     end
     xhr:registerScriptHandler(onResponse)
-    xhr:send()
+    xhr:send('username=Guo1&password=111111')
 end
 
 return GameScene

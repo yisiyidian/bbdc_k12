@@ -36,7 +36,7 @@ local function main()
         cc.Director:getInstance():runWithScene(gameScene)
     end
 
-    local val = bbns.BBTestLua:create():show(10)
+    -- local val = bbns.BBTestLua:create():show(10)
     gameScene:testPost()
 
 end

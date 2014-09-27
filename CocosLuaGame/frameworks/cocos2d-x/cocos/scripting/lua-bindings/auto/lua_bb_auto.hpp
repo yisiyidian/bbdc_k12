@@ -16,16 +16,4 @@ int register_all_bb(lua_State* tolua_S);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 #endif // __bb_h__
