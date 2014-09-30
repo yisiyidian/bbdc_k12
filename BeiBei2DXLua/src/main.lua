@@ -1,5 +1,6 @@
 
 require "Cocos2d"
+require "src/model/mat"
 
 -- cclog
 local cclog = function(...)
@@ -37,6 +38,8 @@ local function main()
         cc.Director:getInstance():runWithScene(gameScene)
     end
 
+
+    mat(4,4)
 end
 
 
