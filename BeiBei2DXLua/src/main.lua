@@ -29,13 +29,14 @@ local function main()
     --create scene 
     local scene = require("AppScene")
     local gameScene = scene.create()
+    gameScene:test()
     
     if cc.Director:getInstance():getRunningScene() then
         cc.Director:getInstance():replaceScene(gameScene)
     else
         cc.Director:getInstance():runWithScene(gameScene)
     end
-
+    
 end
 
 

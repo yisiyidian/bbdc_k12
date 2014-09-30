@@ -19,4 +19,9 @@ function AppScene:ctor()
     self.schedulerID = nil
 end
 
+function AppScene:test()
+    require "model.mat"
+    mat(4, 4)
+end
+
 return AppScene
