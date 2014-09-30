@@ -674,12 +674,12 @@ public:
 #include "ResData.h"
         int designWidth = 1280;
         int designHeight = 800;
-        Director::getInstance()->getOpenGLView()->setDesignResolutionSize(designWidth,designHeight,ResolutionPolicy::EXACT_FIT);
+//        Director::getInstance()->getOpenGLView()->setDesignResolutionSize(designWidth,designHeight,ResolutionPolicy::EXACT_FIT);
         Image* imagebg = new Image();
         imagebg->initWithImageData(__landscapePngData, sizeof(__landscapePngData));
         if (!ConfigParser::getInstance()->isLanscape()){
             imagebg->initWithImageData(__portraitPngData, sizeof(__portraitPngData));
-            Director::getInstance()->getOpenGLView()->setDesignResolutionSize(designHeight,designWidth,ResolutionPolicy::EXACT_FIT);
+//            Director::getInstance()->getOpenGLView()->setDesignResolutionSize(designHeight,designWidth,ResolutionPolicy::EXACT_FIT);
         }
         Texture2D* texturebg = Director::getInstance()->getTextureCache()->addImage(imagebg, "play_background");
         auto background = Sprite::createWithTexture(texturebg);
