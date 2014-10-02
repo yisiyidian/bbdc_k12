@@ -23,8 +23,12 @@ function AppScene:ctor()
 end
 
 function AppScene:test()
-    require "model.mat"
-    mat(4, 4)
+    require "model.randomMat"
+    randomMat(4, 4)
+    
+    
+    
+
 end
 
 return AppScene
