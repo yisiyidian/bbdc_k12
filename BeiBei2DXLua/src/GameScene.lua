@@ -89,6 +89,11 @@ function GameScene:createLayerFarm()
             layerFarm:addChild(spriteCrop)
         end
     end
+    
+    
+    local main_back = sp.SkeletonAnimation:create("coconut_light.json", "coconut_light.atlas", 0.5)
+    main_back:setPosition(100, 100)
+    layerFarm:addChild(main_back)
 
     -- add moving dog
     local spriteDog = self:creatDog()

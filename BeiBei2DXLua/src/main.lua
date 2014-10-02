@@ -1,5 +1,6 @@
 
 require "Cocos2d"
+require "src/model/randomMat"
 
 -- cclog
 local cclog = function(...)

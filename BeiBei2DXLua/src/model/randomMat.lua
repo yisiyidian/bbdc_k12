@@ -1,6 +1,6 @@
 
 
-function mat(m, n)
+function randomMat(m, n)
     -- local variate
     local main_mat
     local main_m
