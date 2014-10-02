@@ -32,13 +32,12 @@ local function main()
     local h = size.height
     cclog('design size:', w, h)
     
-    local debugger = require "common.debugger"
+    local debugger = require("common.debugger")
     debugger.configLog(true, true)
     
     --create scene 
     local scene = require("AppScene")
     local gameScene = scene.create()
-    gameScene:test()
     
     if cc.Director:getInstance():getRunningScene() then
         cc.Director:getInstance():replaceScene(gameScene)
@@ -46,6 +45,8 @@ local function main()
         cc.Director:getInstance():runWithScene(gameScene)
     end
     
+    require('example.example')
+    testSpine(gameScene.gameLayer)
 end
 
 

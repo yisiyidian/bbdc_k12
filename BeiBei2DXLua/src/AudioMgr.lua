@@ -1,5 +1,5 @@
-require "Cocos2d"
-require "Cocos2dConstants"
+require("Cocos2d")
+require("Cocos2dConstants")
 
 function playMusic(filename, isLoop)
     local bgMusicPath = cc.FileUtils:getInstance():fullPathForFilename(filename) 

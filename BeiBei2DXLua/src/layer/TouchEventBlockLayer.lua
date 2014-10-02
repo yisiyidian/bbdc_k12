@@ -1,5 +1,5 @@
-require "Cocos2d"
-require "Cocos2dConstants"
+require("Cocos2d")
+require("Cocos2dConstants")
 
 local TouchEventBlockLayer = class("TouchEventBlockLayer", function ()
     return cc.Layer:create()
