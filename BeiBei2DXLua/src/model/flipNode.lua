@@ -14,7 +14,9 @@ function flipNode(back, character, location)
 
     -- function detail
     init = function()
-        main_back = cc.Sprite:create("image/coconut_font.png")
+        main_back = sp.SkeletonAnimation:create("res/spine/"..back..".json", "res/spine/"..back..".atlas", 0.5)
+        main_back:addAnimation(0, 'normal', true)
+        
         main_character_content = character
         main_character_label = cc.Label:createWithTTF(character)
         
