@@ -2,12 +2,10 @@ require "model/flipNode"
 require "model/flipMat"
 
 function filpMat(word, m, n)
-    -- constant
-    local charaster_set = {"a","b","c"}
-
     -- local variate
     local main_layer
     local main_word
+    local charaster_set_filtered
     local main_m
     local main_n
     local main_logic_mat
@@ -20,7 +18,11 @@ function filpMat(word, m, n)
     -- function detail
     init = function ()
         main_layer = cc.Layer.create()
-        main_word = word    
+        main_word = word
+        charaster_set_filtered = {}
+        for i = 1, 26 do
+            if string.char(97+i) 
+        end
        
     	main_m = m
     	main_n = n
@@ -33,10 +35,13 @@ function filpMat(word, m, n)
     	   main_node_mat[i] = {}
     	   for j = 1, main_n do
     	       diff = main_logic_mat[i][j] - randomStartIndex
-    	       --if diff >= 0 and diff < string.len(main_word) then
-    	       main_node_mat[i][j] = flipNode("coconut_font","a",vec2_table(i, j))
-    	           
-    	       --end
+    	       if diff >= 0 and diff < string.len(main_word) then
+    	           main_node_mat[i][j] = flipNode("coconut_font", string.sub(main_word[0], diff+1, diff+1), vec2_table(i, j))
+    	       else
+    	           math.randomseed(os.time())
+                   main_node_mat[i][j] = flipNode("coconut_font", charaster_set[math.random(1, 26)], vec2_table(i, j))
+    	       end
+    	       
     	   end
     	end
     	
