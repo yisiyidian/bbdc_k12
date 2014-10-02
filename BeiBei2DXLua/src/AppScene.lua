@@ -26,9 +26,10 @@ function AppScene:test()
     require "model.randomMat"
     randomMat(4, 4)
     
-    
-    
-
+    print(self.gameLayer)
+    local main_back = sp.SkeletonAnimation:create("res/spine/spineboy.json", "res/spine/spineboy.atlas", 0.5)
+    main_back:setPosition(50, 50)
+    self.gameLayer:addChild(main_back)
 end
 
 return AppScene
