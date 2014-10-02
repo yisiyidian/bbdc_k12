@@ -3,6 +3,7 @@ local debugger = require("common.debugger")
 local logd = debugger.logd
 local DataExample = require('example.DataExample')
 require("common.resource")
+local server = require('server.Server')
 
 function testSpine(layer)
     require "model.randomMat"
@@ -14,4 +15,7 @@ function testSpine(layer)
     layer:addChild(main_back)
     
     local data = DataExample.create()
+    logd(data.des)
+
+    server.request('apiLogIn', {['username']='Guo1', ['password']=111111}, nil)
 end

@@ -7,7 +7,7 @@ end)
 
 function DataExample.create()
     local data = DataExample.new()
-    
+    data.des = 'DataExample des'
     return data
 end
 

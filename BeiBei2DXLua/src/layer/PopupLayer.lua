@@ -5,6 +5,9 @@ local PopupLayer = class("PopupLayer", function ()
     return cc.Layer:create()
 end)
 
-
+function PopupLayer.create()
+    local layer = PopupLayer.new()
+    return layer
+end
 
 return PopupLayer
