@@ -11,23 +11,17 @@ function flipNode(back, character, location)
 
     -- local function
     local init
-    local printMat
-    local randomPoint
-    local disoriginizeDirction
-    local randomPath
 
     -- function detail
     init = function()
-        main_back = sp.SkeletonAnimation:create("coconut_light.json", "coconut_light.atlas", 0.5)
+        main_back = cc.Sprite:create("image/coconut_font.png")
         main_character_content = character
+        main_character_label = cc.Label:createWithTTF(character)
         
         scroll_state = 0
         login_location = location
         hasSelected = false
-        
-        
-        
-        
     end
+    
     
 end
