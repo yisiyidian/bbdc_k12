@@ -32,6 +32,9 @@ local function main()
     local h = size.height
     cclog('design size:', w, h)
     
+    local debugger = require "common.debugger"
+    debugger.configLog(true, true)
+    
     --create scene 
     local scene = require("AppScene")
     local gameScene = scene.create()
