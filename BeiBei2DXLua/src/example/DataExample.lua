@@ -1,0 +1,21 @@
+--require "Cocos2d"
+--require "Cocos2dConstants"
+--
+--local M = class("AppScene", function()
+--    return cc.Ref
+--end)
+--
+--function AppScene.create()
+--    local scene = AppScene.new()
+--    -- playMusic("background.mp3", true)
+--    return scene
+--end
+--
+--
+--function AppScene:ctor()
+--    self.visibleSize = cc.Director:getInstance():getVisibleSize()
+--    self.origin = cc.Director:getInstance():getVisibleOrigin()
+--    self.schedulerID = nil
+--end
+--
+--return AppScene

@@ -26,6 +26,11 @@ local function main()
     -- cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(480, 320, 0)
     -- cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(320 * 2, 480 * 2, cc.ResolutionPolicy.FIXED_HEIGHT)
     
+    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
+    local w = size.width
+    local h = size.height
+    cclog('design size:', w, h)
+    
     --create scene 
     local scene = require("AppScene")
     local gameScene = scene.create()
