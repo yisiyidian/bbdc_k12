@@ -24,12 +24,17 @@ set(SPINE_SRC
   SlotData.cpp
   extension.cpp
   spine-cocos2dx.cpp
-  CCSkeleton.cpp
-  CCSkeletonAnimation.cpp
   BoundingBoxAttachment.cpp
   Event.cpp
   EventData.cpp
   SkeletonBounds.cpp
+  IkConstraint.cpp 
+  IkConstraintData.cpp 
+  MeshAttachment.cpp 
+  PolygonBatch.cpp 
+  SkeletonAnimation.cpp 
+  SkeletonRenderer.cpp 
+  SkinnedMeshAttachment.cpp 
 )
 
 include_directories(

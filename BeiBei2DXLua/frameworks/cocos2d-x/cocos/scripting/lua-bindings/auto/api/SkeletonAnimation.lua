@@ -1,14 +1,14 @@
 
 --------------------------------
 -- @module SkeletonAnimation
--- @extend Skeleton
+-- @extend SkeletonRenderer
 -- @parent_module sp
 
 --------------------------------
 -- @function [parent=#SkeletonAnimation] setMix 
 -- @param self
--- @param #char char
--- @param #char char
+-- @param #string str
+-- @param #string str
 -- @param #float float
         
 --------------------------------
