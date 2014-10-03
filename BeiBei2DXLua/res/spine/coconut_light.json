@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "FzD9Ud94V+A4XATVDb7PMkeZiys", "spine": "2.0.17", "width": 150.07, "height": 134.08 },
+"skeleton": { "hash": "wJ1eI0BPcm2axqKRY038+OP5Uvg", "spine": "2.0.17", "width": 150.07, "height": 134.08 },
 "bones": [
 	{ "name": "root", "rotation": 0.03 },
 	{ "name": "bone", "parent": "root" }
@@ -38,19 +38,6 @@
 	}
 },
 "animations": {
-	"bomb": {
-		"slots": {
-			"coconut": {
-				"attachment": [
-					{ "time": 0, "name": "coconut_bumb1" },
-					{ "time": 0.0333, "name": "coconut_bumb2" },
-					{ "time": 0.0666, "name": "coconut_bumb3" },
-					{ "time": 0.1, "name": "coconut_bumb4" },
-					{ "time": 0.1333, "name": "coconut_bumb5" }
-				]
-			}
-		}
-	},
 	"down": {
 		"slots": {
 			"coconut": {
@@ -177,6 +164,19 @@
 					{ "time": 0.1, "name": "light_coconut_up2" },
 					{ "time": 0.1333, "name": "light_coconut_up1" },
 					{ "time": 0.1666, "name": "coconut_font" }
+				]
+			}
+		}
+	},
+	"win": {
+		"slots": {
+			"coconut": {
+				"attachment": [
+					{ "time": 0, "name": "coconut_bumb1" },
+					{ "time": 0.0333, "name": "coconut_bumb2" },
+					{ "time": 0.0666, "name": "coconut_bumb3" },
+					{ "time": 0.1, "name": "coconut_bumb4" },
+					{ "time": 0.1333, "name": "coconut_bumb5" }
 				]
 			}
 		}
