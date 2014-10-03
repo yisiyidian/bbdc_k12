@@ -32,10 +32,10 @@ function testSpine(layer)
     logd(data.des)
 
     local function onSucceed(api, result)
-        logd('onSucceed:' .. api .. json.encode(result))
+        logd('onSucceed:' .. api .. ', ' .. json.encode(result))
     end 
     local function onFailed(api, code, message)
-        logd('onFailed:' ..  api .. code .. message)
+        logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
     end
     server.request('apiLogIn', {['username']='Guo1', ['password']=111111}, onSucceed, onFailed)
     server.request('apiLogIn', {['username']='yehanjie1', ['password']=111111}, onSucceed, onFailed)
