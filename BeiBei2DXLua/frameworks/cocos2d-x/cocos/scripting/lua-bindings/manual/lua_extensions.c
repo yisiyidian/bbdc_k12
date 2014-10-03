@@ -7,10 +7,12 @@ extern "C" {
 // socket
 #include "luasocket/luasocket.h"
 #include "luasocket/mime.h"
+#include "lsqlite3/lsqlite3.h"
 
 static luaL_Reg luax_exts[] = {
     {"socket.core", luaopen_socket_core},
     {"mime.core", luaopen_mime_core},
+    {"lsqlite3", luaopen_lsqlite3},
     {NULL, NULL}
 };
 

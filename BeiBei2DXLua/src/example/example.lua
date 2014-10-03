@@ -25,4 +25,6 @@ function testSpine(layer)
     end
     server.request('apiLogIn', {['username']='Guo1', ['password']=111111}, onSucceed, onFailed)
     server.request('apiLogIn', {['username']='yehanjie1', ['password']=111111}, onSucceed, onFailed)
+
+    local sqlite3 = require("lsqlite3")
 end
