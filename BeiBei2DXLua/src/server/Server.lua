@@ -1,8 +1,4 @@
-require "Cocos2d"
-require "Cocos2dConstants"
-local json  = require('json')
-local debugger = require("common.debugger")
-local logd = debugger.logd
+require("common.resource")
 
 local Server = {}
 
@@ -39,13 +35,13 @@ function Server.request(api, parameters, onSucceed, onFailed)
 
     --
     xhr:registerScriptHandler(function ()
-        logd('response: api:' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
-        logd('response: data:' .. xhr.response) -- .. ', ' .. xhr:getAllResponseHeaders())
+        s_logd('response: api:' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
+        s_logd('response: data:' .. xhr.response) -- .. ', ' .. xhr:getAllResponseHeaders())
         
         if xhr.status ~= 200 then
             onFailed(api, xhr.status, xhr.statusText)
         elseif xhr.response ~= nil then
-            local data = json.decode(xhr.response)
+            local data = s_json.decode(xhr.response)
             local result = data.result
             local code = result.code
             local message = result.message
@@ -65,7 +61,7 @@ function Server.request(api, parameters, onSucceed, onFailed)
         str = str .. key .. '=' .. value
     end 
     xhr:send(str)
-    logd('request: api:' .. api .. ', parameters:' .. str)
+    s_logd('request: api:' .. api .. ', parameters:' .. str)
 end
 
 return Server

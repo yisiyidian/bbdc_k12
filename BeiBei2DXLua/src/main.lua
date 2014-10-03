@@ -1,6 +1,5 @@
 
 require "Cocos2d"
-require "src/model/randomMat"
 
 -- cclog
 local cclog = function(...)
@@ -32,22 +31,26 @@ local function main()
     local w = size.width
     local h = size.height
     cclog('design size:', w, h)
+
+    --------------------------------------------------------------------------------
+    require("common.resource")
+    initGlobal()
     
-    local debugger = require("common.debugger")
-    debugger.configLog(true, true)
+    s_debugger.configLog(true, true)
     
     --create scene 
     local scene = require("AppScene")
-    local gameScene = scene.create()
+    s_SCENE = scene.create()
     
     if cc.Director:getInstance():getRunningScene() then
-        cc.Director:getInstance():replaceScene(gameScene)
+        cc.Director:getInstance():replaceScene(s_SCENE)
     else
-        cc.Director:getInstance():runWithScene(gameScene)
+        cc.Director:getInstance():runWithScene(s_SCENE)
     end
     
+    --------------------------------------------------------------------------------
     require('example.example')
-    testSpine(gameScene.gameLayer)
+    test()
 end
 
 
