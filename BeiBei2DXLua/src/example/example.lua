@@ -1,3 +1,5 @@
+require "Cocos2d"
+
 local json  = require('json')
 local debugger = require("common.debugger")
 local logd = debugger.logd
@@ -6,8 +8,20 @@ require("common.resource")
 local server = require('server.Server')
 
 function testSpine(layer)
-    require "model.randomMat"
-    randomMat(4, 4)
+    --require "model.randomMat"
+    --randomMat(4, 4)
+
+    --logd('testSpine')
+    --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 1)
+    --main_back:setPosition(50, 50)
+    --layer:addChild(main_back)
+
+    --local node = s_flipNode.create("coconut_light", "a", 1, 2)
+    --node:setPosition(100, 100)
+    --layer:addChild(node)
+    
+    local mat = s_flipMat.create("apple", 4, 4)
+    layer:addChild(mat)
 
     logd('testSpine')
     local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)
@@ -25,6 +39,7 @@ function testSpine(layer)
     end
     server.request('apiLogIn', {['username']='Guo1', ['password']=111111}, onSucceed, onFailed)
     server.request('apiLogIn', {['username']='yehanjie1', ['password']=111111}, onSucceed, onFailed)
+
 
     local sqlite3 = require("lsqlite3")
 end
