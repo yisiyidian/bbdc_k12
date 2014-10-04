@@ -32,7 +32,7 @@ local function main()
     local h = size.height
 
     --------------------------------------------------------------------------------
-    require("common.resource")
+    require("common.global")
     initGlobal()
     s_SCENE_WIDTH = w
     s_SCENE_HEIGHT = h

@@ -29,9 +29,9 @@ function initGlobal()
     s_SERVER                  = require('server.Server')
 
     --global class
-    s_FlipNode                = require("model.FlipNode")
-    s_FlipMat                 = require("model.FlipMat")
+    s_FlipNode                = require("view.FlipNode")
+    s_FlipMat                 = require("view.FlipMat")
 
     --global function
-    s_RandomMat               = require("model.RandomMat")
+    s_RandomMat               = require("common.RandomMat")
 end

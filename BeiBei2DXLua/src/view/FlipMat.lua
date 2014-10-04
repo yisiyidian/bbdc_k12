@@ -1,5 +1,5 @@
-require "model.RandomMat"
-local FlipNode = require("model.FlipNode")
+require "common.RandomMat"
+local FlipNode = require("view.FlipNode")
 
 local FlipMat = class("FlipMat", function()
 return cc.Layer:create()

@@ -1,7 +1,7 @@
 require "Cocos2d"
 
 local DataExample = require('example.DataExample')
-require("common.resource")
+require("common.global")
 
 -- test layers
 local StudyLayer = require('view.StudyLayer')
