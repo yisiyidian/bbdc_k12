@@ -9,6 +9,7 @@ function DataUser.create()
     data.id                                = ''
     data.serverTime                        = ''
     data.username                          = ''
+    data.nickname                          = ''
     data.password                          = ''
     data.sessionToken                      = ''
     

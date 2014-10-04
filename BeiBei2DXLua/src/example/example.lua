@@ -45,4 +45,10 @@ function test()
 --    for row in db:nrows("SELECT * FROM test") do
 --        s_logd('sqlite3:' .. row.id .. ', ' .. row.content)
 --    end
+
+    -- local path = cc.FileUtils:getInstance():fullPathForFilename('data/lv_cet4.json')
+    -- local data = cc.FileUtils:getInstance():getStringFromFile(path)
+    -- s_logd('start')
+    -- s_json.decode(data)
+    -- s_logd('end')
 end

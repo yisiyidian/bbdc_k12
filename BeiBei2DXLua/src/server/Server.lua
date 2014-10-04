@@ -69,4 +69,6 @@ function Server.request(api, parameters, onSucceed, onFailed)
     s_logd('request: api:' .. api .. ', parameters:' .. str)
 end
 
+-- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin
+
 return Server
