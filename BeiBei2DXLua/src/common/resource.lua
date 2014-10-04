@@ -15,6 +15,7 @@ s_flipMat                 = nil
 --global function
 s_randomMat               = nil
 
+s_APP_VERSION             = 150
 s_SCENE_WIDTH             = 1.0
 s_SCREEN_HEIGHT           = 1.0
 s_HEIGHT                  = 1136.0
