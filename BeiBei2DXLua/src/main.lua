@@ -34,8 +34,10 @@ local function main()
     --------------------------------------------------------------------------------
     require("common.resource")
     initGlobal()
-    s_HEIGHT_SCALE = s_HEIGHT / h
-    cclog('design size:' .. w .. ',' .. h .. ',' .. s_HEIGHT_SCALE)
+    s_SCENE_WIDTH = w
+    s_SCENE_HEIGHT = h
+    s_HEIGHT_SCALE = s_HEIGHT / s_SCENE_HEIGHT
+    cclog('design size:' .. s_SCENE_WIDTH .. ',' .. s_SCENE_HEIGHT .. ',' .. s_HEIGHT_SCALE)
     
     s_debugger.configLog(true, true)
     
