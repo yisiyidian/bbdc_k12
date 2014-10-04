@@ -2,11 +2,11 @@ require("common.global")
 
 local Server = {}
 
-Server.debugLocal = false
+Server.debugLocalHost = false
 Server.isAppStoreServer = false
 
 local function getURL()
-    if Server.debugLocal then
+    if Server.debugLocalHost then
         return 'http://localhost:3000/avos/'
     else
         return 'https://cn.avoscloud.com/1.1/functions/'
@@ -42,7 +42,12 @@ function Server.request(api, parameters, onSucceed, onFailed)
             onFailed(api, xhr.status, xhr.statusText)
         elseif xhr.response ~= nil then
             local data = s_json.decode(xhr.response)
-            local result = data.result
+            local result
+            if Server.debugLocalHost then 
+                result = data 
+            else
+                result = data.result
+            end
             local code = result.code
             local message = result.message
 

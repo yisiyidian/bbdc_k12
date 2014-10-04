@@ -20,17 +20,17 @@ function test()
     
 --    local data = DataExample.create()
 --    s_logd(data.des)
---
---    local function onSucceed(api, result)
---        s_logd('onSucceed:' .. api .. ', ' .. s_json.encode(result))
---    end 
---    local function onFailed(api, code, message)
---        s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
---    end
---    s_SERVER.request('apiLogIn', {['username']='Guo1', ['password']=111111}, onSucceed, onFailed)
---    s_SERVER.request('apiLogIn', {['username']='yehanjie1', ['password']=111111}, onSucceed, onFailed)
---
---
+
+   -- local function onSucceed(api, result)
+   --     s_logd('onSucceed:' .. api .. ', ' .. s_json.encode(result))
+   -- end 
+   -- local function onFailed(api, code, message)
+   --     s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
+   -- end
+   -- s_funcLogin('yehanjie1', 111111, onSucceed, onFailed)
+   -- s_funcSignin('_test000', 111111, onSucceed, onFailed)
+
+
 --    local sqlite3 = require("lsqlite3")
 --    local db = sqlite3.open_memory()
 --
