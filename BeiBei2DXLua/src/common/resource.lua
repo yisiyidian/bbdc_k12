@@ -15,6 +15,9 @@ s_flipMat                 = nil
 --global function
 s_randomMat               = nil
 
+s_HEIGHT                  = 1136.0
+s_HEIGHT_SCALE            = 1.0
+
 function initGlobal()
     s_debugger                = require("common.debugger")
     s_logd                    = s_debugger.logd

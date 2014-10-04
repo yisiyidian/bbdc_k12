@@ -30,11 +30,12 @@ local function main()
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     local w = size.width
     local h = size.height
-    cclog('design size:', w, h)
 
     --------------------------------------------------------------------------------
     require("common.resource")
     initGlobal()
+    s_HEIGHT_SCALE = s_HEIGHT / h
+    cclog('design size:' .. w .. ',' .. h .. ',' .. s_HEIGHT_SCALE)
     
     s_debugger.configLog(true, true)
     
