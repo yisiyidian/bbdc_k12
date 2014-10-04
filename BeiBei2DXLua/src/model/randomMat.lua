@@ -1,6 +1,6 @@
 
 
-function randomMat(m, n)
+function RandomMat(m, n)
     -- local variate
     local main_mat
     local isFindPath

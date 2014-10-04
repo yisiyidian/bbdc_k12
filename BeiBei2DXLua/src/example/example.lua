@@ -3,19 +3,7 @@ require "Cocos2d"
 local DataExample = require('example.DataExample')
 require("common.resource")
 
-function test()
-    --require "model.randomMat"
-    --randomMat(4, 4)
-
-    --logd('testSpine')
-    --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 1)
-    --main_back:setPosition(50, 50)
-    --layer:addChild(main_back)
-
-    --local node = s_flipNode.create("coconut_light", "a", 1, 2)
-    --node:setPosition(100, 100)
-    --layer:addChild(node)
-    
+function test()    
     local mat = s_flipMat.create("apple", 4, 4)
     s_SCENE.gameLayer:addChild(mat)
 

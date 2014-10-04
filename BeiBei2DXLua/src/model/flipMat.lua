@@ -1,14 +1,14 @@
-require "model.randomMat"
-local flipNode = require("model.flipNode")
+require "model.RandomMat"
+local FlipNode = require("model.FlipNode")
 
-local flipMat = class("flipMat", function()
+local FlipMat = class("FlipMat", function()
 return cc.Layer:create()
 end)
 
-function flipMat.create(word, m ,n)
+function FlipMat.create(word, m ,n)
     -- system variate
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    local main = flipMat.new()
+    local main = FlipMat.new()
     
     -- system function
     math.randomseed(os.time())
@@ -49,7 +49,7 @@ function flipMat.create(word, m ,n)
     local left = (size.width - (main_m-1)*gap) / 2
     local bottom = left
     
-    local main_logic_mat = randomMat(main_m, main_n)
+    local main_logic_mat = RandomMat(main_m, main_n)
     local randomStartIndex = math.random(1, main_m*main_n)
     
     local main_mat = {}
@@ -59,10 +59,10 @@ function flipMat.create(word, m ,n)
             local diff = main_logic_mat[i][j] - randomStartIndex
             local node
             if diff >= 0 and diff < string.len(main_word) then
-                node = flipNode.create("coconut_light", string.sub(main_word,diff+1,diff+1), i, j)
+                node = FlipNode.create("coconut_light", string.sub(main_word,diff+1,diff+1), i, j)
             else
                 local randomIndex = math.random(1, #charaster_set_filtered)
-                node = flipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                node = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
             end
             node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
             main:addChild(node)
@@ -97,8 +97,6 @@ function flipMat.create(word, m ,n)
                     
                     onNode = true
                     
-                    print(string.format("(%d,%d)->%d",current_node_x,current_node_y,current_dir))
-                    
                     return
                 end
             end
@@ -109,7 +107,6 @@ function flipMat.create(word, m ,n)
     
     -- handing touch events
     onTouchBegan = function(touch, event)
-        print("touch began")
         local location = touch:getLocation()
         
         startTouchLocation = location
@@ -222,15 +219,12 @@ function flipMat.create(word, m ,n)
     end
 
     onTouchEnded = function(touch, event)
-        print("touch ended")
         local location = touch:getLocation()
-
 
         local selectWord = ""
         for i = 1, #selectStack do
             selectWord = selectWord .. selectStack[i].main_character_content
         end
-        print(selectWord)
 
         if selectWord == main_word then
             for i = 1, #selectStack do
@@ -258,7 +252,7 @@ function flipMat.create(word, m ,n)
 end
 
 
-return flipMat
+return FlipMat
 
 
 
