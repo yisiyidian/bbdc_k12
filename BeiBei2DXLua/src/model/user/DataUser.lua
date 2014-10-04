@@ -39,8 +39,7 @@ function DataUser.create()
     data.checkInWordUpdateDate             = nil
     data.hasCheckInButtonAppeared          = false
 
-//unlock next chapter
-@property (nonatomic) int needToUnlockNextChapter;
+    data.needToUnlockNextChapter           = 0
 
 
     return data
