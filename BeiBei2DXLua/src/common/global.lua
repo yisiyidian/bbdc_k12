@@ -9,11 +9,11 @@ s_SCENE                   = nil
 s_SERVER                  = nil
 
 --global class
-s_flipNode                = nil
-s_flipMat                 = nil
+s_FlipNode                = nil
+s_FlipMat                 = nil
 
 --global function
-s_randomMat               = nil
+s_RandomMat               = nil
 
 s_APP_VERSION             = 150
 s_SCENE_WIDTH             = 1.0
@@ -30,9 +30,9 @@ function initGlobal()
     s_SERVER                  = require('server.Server')
 
     --global class
-    s_flipNode                = require("model.FlipNode")
-    s_flipMat                 = require("model.FlipMat")
+    s_FlipNode                = require("view.FlipNode")
+    s_FlipMat                 = require("view.FlipMat")
 
     --global function
-    s_randomMat               = require("model.RandomMat")
+    s_RandomMat               = require("common.RandomMat")
 end

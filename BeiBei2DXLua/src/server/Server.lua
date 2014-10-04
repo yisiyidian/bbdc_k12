@@ -1,4 +1,4 @@
-require("common.resource")
+require("common.global")
 
 local Server = {}
 
