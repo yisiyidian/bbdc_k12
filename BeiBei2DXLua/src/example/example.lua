@@ -11,7 +11,7 @@ function test()
     --s_SCENE.gameLayer:addChild(mat)
 
     local studyLayer = StudyLayer.create()
-    s_SCENE.gameLayer:addChild(studyLayer)
+    s_SCENE:replaceGameLayer(studyLayer)
 
     --logd('testSpine')
     --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)
