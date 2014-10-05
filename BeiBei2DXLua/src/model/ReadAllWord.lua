@@ -17,18 +17,9 @@ function Split(szFullString, szSeparator)
     return nSplitArray
 end
 
-function getFile(file_name)
-    -- local f = io.open(file_name, 'r')
-    -- local string = f:read("*a")
-    -- f:close()
-    -- return string
-
-    return cc.FileUtils:getInstance():getStringFromFile(file_name)
-end
-
 function ReadAllWord()
     WordInfo = {}
-    local content = getFile("cfg/allwords")
+    local content = cc.FileUtils:getInstance():getStringFromFile("cfg/allwords")
 
     local lines = Split(content, "\n")
 

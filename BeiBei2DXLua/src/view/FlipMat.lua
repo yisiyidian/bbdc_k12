@@ -9,7 +9,9 @@ function FlipMat.create(word, m ,n)
     -- system variate
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     local main = FlipMat.new()
-    
+    main:setContentSize(640,640)
+    main:setAnchorPoint(0,0)
+
     -- system function
     math.randomseed(os.time())
     
@@ -78,6 +80,7 @@ function FlipMat.create(word, m ,n)
                 local node_position = cc.p(node:getPosition())
                 local node_size = node:getContentSize()
                 
+                
                 if location.x >= node_position.x - node_size.width/2 and location.x <= node_position.x + node_size.width/2 
                 and location.y >= node_position.y - node_size.height/2 and location.y <= node_position.y + node_size.height/2 then
                     current_node_x = i
@@ -96,7 +99,6 @@ function FlipMat.create(word, m ,n)
                     end
                     
                     onNode = true
-                    
                     return
                 end
             end

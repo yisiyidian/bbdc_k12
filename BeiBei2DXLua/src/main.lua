@@ -47,6 +47,9 @@ local function main()
     local scene = require("AppScene")
     s_SCENE = scene.create()
     
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
+    
     if cc.Director:getInstance():getRunningScene() then
         cc.Director:getInstance():replaceScene(s_SCENE)
     else

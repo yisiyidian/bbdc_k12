@@ -59,7 +59,7 @@ function test()
    -- local function onFailed(api, code, message)
    --     s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
    -- end
-   -- s_funcLogin('yehanjie1', 111111, onSucceed, onFailed)
+   -- s_funcLogin('yehanjie1', 111111, onSuccexed, onFailed)
    -- s_funcSignin('_test000', 111111, onSucceed, onFailed)
 
 

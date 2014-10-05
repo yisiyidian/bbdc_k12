@@ -1,3 +1,6 @@
+
+require "model.ReadAllWord"
+
 s_spineCoconutLightJson   = "res/spine/coconut_light.json"
 s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
 
@@ -40,13 +43,11 @@ function initGlobal()
     s_funcSignin              = userbaseserver.signin
     s_funcLogin               = userbaseserver.login
 
-    --global class
-    s_FlipNode                = require("view.FlipNode")
-    s_FlipMat                 = require("view.FlipMat")
-
     --global function
-    s_RandomMat               = require("common.RandomMat")
-
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
     s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
+
+    --global variate
+    s_WordPool                = ReadAllWord()
+    s_CorePlayManager         = nil
 end

@@ -50,13 +50,15 @@ function FlipNode.create(back, character, x, y)
             main.down_back()
         elseif main.scroll_state == 3 then
             main.left_back()
-        else
+        elseif main.scroll_state == 4 then
             main.right_back()
+        else
+            main.normal()
         end
     end
 
     main.bigSize = function()
-
+        
     end
 
     main.middleSize = function()
@@ -66,7 +68,11 @@ function FlipNode.create(back, character, x, y)
     main.smallSize = function()
 
     end
-
+    
+    main.normal = function()
+        main.main_back:addAnimation(0, 'normal', false)
+    end
+    
     main.win = function()
         main.main_back:addAnimation(0, 'win', false)
         main.main_character_label:setVisible(false)

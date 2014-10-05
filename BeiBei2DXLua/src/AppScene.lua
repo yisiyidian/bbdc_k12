@@ -27,7 +27,7 @@ function AppScene.create()
 
     scene.popupLayer = PopupLayer.create()
     scene:addChild(scene.popupLayer)
-
+    
     scene.tipsLayer = TipsLayer.create()
     scene:addChild(scene.tipsLayer)
 
@@ -50,5 +50,9 @@ function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
 end
+--function AppScene:replaceGameLayer(newGameLayer)
+--    self.gameLayer:removeAllChild()
+--    self.gameLayer:addChild(newGameLayer)
+--end
 
 return AppScene
