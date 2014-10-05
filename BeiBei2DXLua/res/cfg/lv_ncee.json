@@ -1,0 +1,5075 @@
+{
+  "Levels": {
+    "Level": [
+{
+    "index": 0, 
+    "word_content": "many|apple|tea", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level0"
+}
+,{
+    "index": 1, 
+    "word_content": "many|apple|tea", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 30, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 12, 
+    "summary_boss_stars": 1, 
+    "type": 1, 
+    "level_key": "level1"
+}
+,{
+    "index": 2, 
+    "word_content": "pink|drill|salary", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level2"
+}
+,{
+    "index": 3, 
+    "word_content": "bond|gram|share|Plot", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level3"
+}
+,{
+    "index": 4, 
+    "word_content": "honey|accuse|dark|before|suit", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level4"
+}
+,{
+    "index": 5, 
+    "word_content": "forget|belt|die|apply|twist|hunt", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level5"
+}
+,{
+    "index": 6, 
+    "word_content": "pink|drill|salary|bond|gram|share|Plot|honey|accuse|dark|before|suit|forget|belt|die|apply|twist|hunt", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 10, 
+    "type": 1, 
+    "level_key": "level6"
+}
+,{
+    "index": 7, 
+    "word_content": "claw|rail|random", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level7"
+}
+,{
+    "index": 8, 
+    "word_content": "insect|sick|rigid|pulse", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level8"
+}
+,{
+    "index": 9, 
+    "word_content": "lip|socket|hand|spare|clinic", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level9"
+}
+,{
+    "index": 10, 
+    "word_content": "victim|topic|liquid|rat|band|pub", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level10"
+}
+,{
+    "index": 11, 
+    "word_content": "claw|rail|random|insect|sick|rigid|pulse|lip|socket|hand|spare|clinic|victim|topic|liquid|rat|band|pub", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 20, 
+    "type": 1, 
+    "level_key": "level11"
+}
+,{
+    "index": 12, 
+    "word_content": "ground|Oceania|bathe", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level12"
+}
+,{
+    "index": 13, 
+    "word_content": "zone|tie|song|anxiety", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level13"
+}
+,{
+    "index": 14, 
+    "word_content": "quite|junior|debt|scan|down", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level14"
+}
+,{
+    "index": 15, 
+    "word_content": "greedy|record|outline|stage|still|attach", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level15"
+}
+,{
+    "index": 16, 
+    "word_content": "ground|Oceania|bathe|zone|tie|song|anxiety|quite|junior|debt|scan|down|greedy|record|outline|stage|still|attach", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 29, 
+    "type": 1, 
+    "level_key": "level16"
+}
+,{
+    "index": 17, 
+    "word_content": "baby|attract|dessert", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level17"
+}
+,{
+    "index": 18, 
+    "word_content": "surplus|betray|giraffe|aboard", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level18"
+}
+,{
+    "index": 19, 
+    "word_content": "emperor|modest|style|pot|whale", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level19"
+}
+,{
+    "index": 20, 
+    "word_content": "move|opinion|within|tight|above|illegal", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level20"
+}
+,{
+    "index": 21, 
+    "word_content": "baby|attract|dessert|surplus|betray|giraffe|aboard|emperor|modest|style|pot|whale|move|opinion|within|tight|above|illegal", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 39, 
+    "type": 1, 
+    "level_key": "level21"
+}
+,{
+    "index": 22, 
+    "word_content": "hunter|India|haircut", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level22"
+}
+,{
+    "index": 23, 
+    "word_content": "opera|stair|lend|attempt", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level23"
+}
+,{
+    "index": 24, 
+    "word_content": "perform|saying|select|senior|tree", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level24"
+}
+,{
+    "index": 25, 
+    "word_content": "belong|devote|till|book|boot|improve", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level25"
+}
+,{
+    "index": 26, 
+    "word_content": "hunter|India|haircut|opera|stair|lend|attempt|perform|saying|select|senior|tree|belong|devote|till|book|boot|improve", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 48, 
+    "type": 1, 
+    "level_key": "level26"
+}
+,{
+    "index": 27, 
+    "word_content": "minus|pork|collect", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level27"
+}
+,{
+    "index": 28, 
+    "word_content": "design|attend|wrestle|hole", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level28"
+}
+,{
+    "index": 29, 
+    "word_content": "spade|up|border|vest|in", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level29"
+}
+,{
+    "index": 30, 
+    "word_content": "sale|soil|corrupt|needle|bomb|piano", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level30"
+}
+,{
+    "index": 31, 
+    "word_content": "minus|pork|collect|design|attend|wrestle|hole|spade|up|border|vest|in|sale|soil|corrupt|needle|bomb|piano", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 58, 
+    "type": 1, 
+    "level_key": "level31"
+}
+,{
+    "index": 32, 
+    "word_content": "reflect|obvious|expense", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level32"
+}
+,{
+    "index": 33, 
+    "word_content": "exit|cupboard|scenery|hopeful", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level33"
+}
+,{
+    "index": 34, 
+    "word_content": "insist|twelfth|castle|medicine|greet", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level34"
+}
+,{
+    "index": 35, 
+    "word_content": "support|race|simplify|pretty|virtue|should", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level35"
+}
+,{
+    "index": 36, 
+    "word_content": "reflect|obvious|expense|exit|cupboard|scenery|hopeful|insist|twelfth|castle|medicine|greet|support|race|simplify|pretty|virtue|should", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 68, 
+    "type": 1, 
+    "level_key": "level36"
+}
+,{
+    "index": 37, 
+    "word_content": "loose|turning|spot", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level37"
+}
+,{
+    "index": 38, 
+    "word_content": "bacon|argument|use|puzzle", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level38"
+}
+,{
+    "index": 39, 
+    "word_content": "section|seaside|pyramid|currency|bite", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level39"
+}
+,{
+    "index": 40, 
+    "word_content": "view|deliver|bury|fool|forever|camel", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level40"
+}
+,{
+    "index": 41, 
+    "word_content": "loose|turning|spot|bacon|argument|use|puzzle|section|seaside|pyramid|currency|bite|view|deliver|bury|fool|forever|camel", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 77, 
+    "type": 1, 
+    "level_key": "level41"
+}
+,{
+    "index": 42, 
+    "word_content": "summary|sigh|due", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level42"
+}
+,{
+    "index": 43, 
+    "word_content": "tablet|origin|address|outward", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level43"
+}
+,{
+    "index": 44, 
+    "word_content": "wild|sew|silver|madam|blame", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level44"
+}
+,{
+    "index": 45, 
+    "word_content": "fire|bark|suggest|curtain|remind|shaver", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level45"
+}
+,{
+    "index": 46, 
+    "word_content": "summary|sigh|due|tablet|origin|address|outward|wild|sew|silver|madam|blame|fire|bark|suggest|curtain|remind|shaver", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 87, 
+    "type": 1, 
+    "level_key": "level46"
+}
+,{
+    "index": 47, 
+    "word_content": "patience|previous|stable", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level47"
+}
+,{
+    "index": 48, 
+    "word_content": "yours|male|outing|nation", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level48"
+}
+,{
+    "index": 49, 
+    "word_content": "former|sob|hometown|mix|adopt", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level49"
+}
+,{
+    "index": 50, 
+    "word_content": "hers|unlike|supreme|conduct|advice|stranger", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level50"
+}
+,{
+    "index": 51, 
+    "word_content": "patience|previous|stable|yours|male|outing|nation|former|sob|hometown|mix|adopt|hers|unlike|supreme|conduct|advice|stranger", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 96, 
+    "type": 1, 
+    "level_key": "level51"
+}
+,{
+    "index": 52, 
+    "word_content": "himself|carpet|skill", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level52"
+}
+,{
+    "index": 53, 
+    "word_content": "wash|bee|botany|explore", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level53"
+}
+,{
+    "index": 54, 
+    "word_content": "bid|tailor|rob|ready|tax", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level54"
+}
+,{
+    "index": 55, 
+    "word_content": "give|insert|conflict|endless|jaw|artist", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level55"
+}
+,{
+    "index": 56, 
+    "word_content": "himself|carpet|skill|wash|bee|botany|explore|bid|tailor|rob|ready|tax|give|insert|conflict|endless|jaw|artist", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 106, 
+    "type": 1, 
+    "level_key": "level56"
+}
+,{
+    "index": 57, 
+    "word_content": "analyse|fifth|booth", 
+    "summary_boss_drop": "[]", 
+    "word_num": 3, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level57"
+}
+,{
+    "index": 58, 
+    "word_content": "inside|noble|native|pianist", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level58"
+}
+,{
+    "index": 59, 
+    "word_content": "moral|update|store|absent|comment", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level59"
+}
+,{
+    "index": 60, 
+    "word_content": "myself|crazy|basin|burden|outdoors|budget", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level60"
+}
+,{
+    "index": 61, 
+    "word_content": "analyse|fifth|booth|inside|noble|native|pianist|moral|update|store|absent|comment|myself|crazy|basin|burden|outdoors|budget", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 18, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 116, 
+    "type": 1, 
+    "level_key": "level61"
+}
+,{
+    "index": 62, 
+    "word_content": "walnut|wolf|warmth|love", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level62"
+}
+,{
+    "index": 63, 
+    "word_content": "noon|jog|dynamic|match|badminton", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level63"
+}
+,{
+    "index": 64, 
+    "word_content": "somehow|hunger|uncertain|comfort|corner|character", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level64"
+}
+,{
+    "index": 65, 
+    "word_content": "decline|southwest|superb|fur|time|concept|fair", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level65"
+}
+,{
+    "index": 66, 
+    "word_content": "walnut|wolf|warmth|love|noon|jog|dynamic|match|badminton|somehow|hunger|uncertain|comfort|corner|character|decline|southwest|superb|fur|time|concept|fair", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 125, 
+    "type": 1, 
+    "level_key": "level66"
+}
+,{
+    "index": 67, 
+    "word_content": "recommend|pleased|matter|handbag", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level67"
+}
+,{
+    "index": 68, 
+    "word_content": "attack|daily|host|but|elegant", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level68"
+}
+,{
+    "index": 69, 
+    "word_content": "undertake|salute|brand|port|ambulance|diploma", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level69"
+}
+,{
+    "index": 70, 
+    "word_content": "alone|knife|past|passive|pollute|fast|nest", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level70"
+}
+,{
+    "index": 71, 
+    "word_content": "recommend|pleased|matter|handbag|attack|daily|host|but|elegant|undertake|salute|brand|port|ambulance|diploma|alone|knife|past|passive|pollute|fast|nest", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 135, 
+    "type": 1, 
+    "level_key": "level71"
+}
+,{
+    "index": 72, 
+    "word_content": "noisy|single|expect|idiom", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level72"
+}
+,{
+    "index": 73, 
+    "word_content": "whichever|vinegar|bathtub|intention|balcony", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level73"
+}
+,{
+    "index": 74, 
+    "word_content": "block|league|outside|swallow|mop|rubber", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level74"
+}
+,{
+    "index": 75, 
+    "word_content": "rely|timetable|cash|then|barber|also|fond", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level75"
+}
+,{
+    "index": 76, 
+    "word_content": "noisy|single|expect|idiom|whichever|vinegar|bathtub|intention|balcony|block|league|outside|swallow|mop|rubber|rely|timetable|cash|then|barber|also|fond", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 144, 
+    "type": 1, 
+    "level_key": "level76"
+}
+,{
+    "index": 77, 
+    "word_content": "adapt|shuttle|case|comedy", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level77"
+}
+,{
+    "index": 78, 
+    "word_content": "get|sixth|risk|pattern|reason", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level78"
+}
+,{
+    "index": 79, 
+    "word_content": "perhaps|eagle|cream|bay|climate|directory", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level79"
+}
+,{
+    "index": 80, 
+    "word_content": "drag|observe|ripe|statue|authority|elect|clerk", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level80"
+}
+,{
+    "index": 81, 
+    "word_content": "adapt|shuttle|case|comedy|get|sixth|risk|pattern|reason|perhaps|eagle|cream|bay|climate|directory|drag|observe|ripe|statue|authority|elect|clerk", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 154, 
+    "type": 1, 
+    "level_key": "level81"
+}
+,{
+    "index": 82, 
+    "word_content": "lack|onion|consist|backward", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level82"
+}
+,{
+    "index": 83, 
+    "word_content": "principle|gym|spoken|fist|sneeze", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level83"
+}
+,{
+    "index": 84, 
+    "word_content": "mountain|otherwise|solar|leather|muddy|schoolboy", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level84"
+}
+,{
+    "index": 85, 
+    "word_content": "custom|desire|technical|major|textbook|diverse|hostess", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level85"
+}
+,{
+    "index": 86, 
+    "word_content": "lack|onion|consist|backward|principle|gym|spoken|fist|sneeze|mountain|otherwise|solar|leather|muddy|schoolboy|custom|desire|technical|major|textbook|diverse|hostess", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 164, 
+    "type": 1, 
+    "level_key": "level86"
+}
+,{
+    "index": 87, 
+    "word_content": "equip|circulate|stove|abolish", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level87"
+}
+,{
+    "index": 88, 
+    "word_content": "sacrifice|compass|beauty|friend|nursery", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level88"
+}
+,{
+    "index": 89, 
+    "word_content": "downtown|bless|obey|once|sir|missile", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level89"
+}
+,{
+    "index": 90, 
+    "word_content": "surround|physical|sing|forgive|deserve|instruct|visit", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level90"
+}
+,{
+    "index": 91, 
+    "word_content": "equip|circulate|stove|abolish|sacrifice|compass|beauty|friend|nursery|downtown|bless|obey|once|sir|missile|surround|physical|sing|forgive|deserve|instruct|visit", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 173, 
+    "type": 1, 
+    "level_key": "level91"
+}
+,{
+    "index": 92, 
+    "word_content": "ocean|actual|arbitrary|tear", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level92"
+}
+,{
+    "index": 93, 
+    "word_content": "sailor|actress|catch|suspect|mistake", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level93"
+}
+,{
+    "index": 94, 
+    "word_content": "fierce|found|pillow|athlete|alphabet|cartoon", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level94"
+}
+,{
+    "index": 95, 
+    "word_content": "flash|world|evolution|drawback|mineral|scream|argue", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level95"
+}
+,{
+    "index": 96, 
+    "word_content": "ocean|actual|arbitrary|tear|sailor|actress|catch|suspect|mistake|fierce|found|pillow|athlete|alphabet|cartoon|flash|world|evolution|drawback|mineral|scream|argue", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 183, 
+    "type": 1, 
+    "level_key": "level96"
+}
+,{
+    "index": 97, 
+    "word_content": "sideways|target|cafeteria|truck", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level97"
+}
+,{
+    "index": 98, 
+    "word_content": "shot|include|respect|telephone|theory", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level98"
+}
+,{
+    "index": 99, 
+    "word_content": "personal|attain|annual|wonderful|mist|navy", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level99"
+}
+,{
+    "index": 100, 
+    "word_content": "relay|impress|great|teenager|energetic|sell|concern", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level100"
+}
+,{
+    "index": 101, 
+    "word_content": "sideways|target|cafeteria|truck|shot|include|respect|telephone|theory|personal|attain|annual|wonderful|mist|navy|relay|impress|great|teenager|energetic|sell|concern", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 192, 
+    "type": 1, 
+    "level_key": "level101"
+}
+,{
+    "index": 102, 
+    "word_content": "deer|bring|flood|bedroom", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level102"
+}
+,{
+    "index": 103, 
+    "word_content": "slight|donate|focus|used|cheers", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level103"
+}
+,{
+    "index": 104, 
+    "word_content": "half|Africa|quiz|golf|blanket|thirsty", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level104"
+}
+,{
+    "index": 105, 
+    "word_content": "shore|TRUE|oppose|typical|collection|blue|admire", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level105"
+}
+,{
+    "index": 106, 
+    "word_content": "deer|bring|flood|bedroom|slight|donate|focus|used|cheers|half|Africa|quiz|golf|blanket|thirsty|shore|TRUE|oppose|typical|collection|blue|admire", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 202, 
+    "type": 1, 
+    "level_key": "level106"
+}
+,{
+    "index": 107, 
+    "word_content": "power|novel|either|merely", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level107"
+}
+,{
+    "index": 108, 
+    "word_content": "rescue|gravity|session|inn|mask", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level108"
+}
+,{
+    "index": 109, 
+    "word_content": "fancy|valley|sadness|reduce|tend|assistance", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level109"
+}
+,{
+    "index": 110, 
+    "word_content": "revolution|chant|sorrow|dive|violin|measure|circus", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level110"
+}
+,{
+    "index": 111, 
+    "word_content": "power|novel|either|merely|rescue|gravity|session|inn|mask|fancy|valley|sadness|reduce|tend|assistance|revolution|chant|sorrow|dive|violin|measure|circus", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 212, 
+    "type": 1, 
+    "level_key": "level111"
+}
+,{
+    "index": 112, 
+    "word_content": "bakery|regardless|promise|tram", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level112"
+}
+,{
+    "index": 113, 
+    "word_content": "aggressive|franc|bored|hurt|poet", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level113"
+}
+,{
+    "index": 114, 
+    "word_content": "recreation|department|production|split|instrument|amount", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level114"
+}
+,{
+    "index": 115, 
+    "word_content": "pound|centigrade|importance|thief|connection|dam|African", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level115"
+}
+,{
+    "index": 116, 
+    "word_content": "bakery|regardless|promise|tram|aggressive|franc|bored|hurt|poet|recreation|department|production|split|instrument|amount|pound|centigrade|importance|thief|connection|dam|African", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 221, 
+    "type": 1, 
+    "level_key": "level116"
+}
+,{
+    "index": 117, 
+    "word_content": "diet|speak|vase|cushion", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level117"
+}
+,{
+    "index": 118, 
+    "word_content": "balance|society|busy|scientific|arithmetic", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level118"
+}
+,{
+    "index": 119, 
+    "word_content": "tap|lake|motivation|lawyer|neck|jar", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level119"
+}
+,{
+    "index": 120, 
+    "word_content": "possess|cater|accept|bottle|fragile|maid|appear", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level120"
+}
+,{
+    "index": 121, 
+    "word_content": "diet|speak|vase|cushion|balance|society|busy|scientific|arithmetic|tap|lake|motivation|lawyer|neck|jar|possess|cater|accept|bottle|fragile|maid|appear", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 231, 
+    "type": 1, 
+    "level_key": "level121"
+}
+,{
+    "index": 122, 
+    "word_content": "dignity|pin|signal|hatch", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level122"
+}
+,{
+    "index": 123, 
+    "word_content": "tremble|ash|flesh|survive|consume", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level123"
+}
+,{
+    "index": 124, 
+    "word_content": "mental|unrest|impossible|shout|load|kick", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level124"
+}
+,{
+    "index": 125, 
+    "word_content": "foolish|favour|worth|succeed|figure|blouse|postman", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level125"
+}
+,{
+    "index": 126, 
+    "word_content": "dignity|pin|signal|hatch|tremble|ash|flesh|survive|consume|mental|unrest|impossible|shout|load|kick|foolish|favour|worth|succeed|figure|blouse|postman", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 240, 
+    "type": 1, 
+    "level_key": "level126"
+}
+,{
+    "index": 127, 
+    "word_content": "fat|excuse|freedom|mustard", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level127"
+}
+,{
+    "index": 128, 
+    "word_content": "sweat|confuse|escape|wave|scene", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level128"
+}
+,{
+    "index": 129, 
+    "word_content": "union|alike|defend|powder|press|lung", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level129"
+}
+,{
+    "index": 130, 
+    "word_content": "type|ceremony|allergic|strengthen|prepare|appeal|surgeon", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level130"
+}
+,{
+    "index": 131, 
+    "word_content": "fat|excuse|freedom|mustard|sweat|confuse|escape|wave|scene|union|alike|defend|powder|press|lung|type|ceremony|allergic|strengthen|prepare|appeal|surgeon", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 250, 
+    "type": 1, 
+    "level_key": "level131"
+}
+,{
+    "index": 132, 
+    "word_content": "reserve|actor|request|break", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level132"
+}
+,{
+    "index": 133, 
+    "word_content": "ruin|energy|throat|street|animal", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level133"
+}
+,{
+    "index": 134, 
+    "word_content": "sacred|commercial|rude|seed|advise|aid", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level134"
+}
+,{
+    "index": 135, 
+    "word_content": "read|ninth|yesterday|porter|carrot|caption|refresh", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level135"
+}
+,{
+    "index": 136, 
+    "word_content": "reserve|actor|request|break|ruin|energy|throat|street|animal|sacred|commercial|rude|seed|advise|aid|read|ninth|yesterday|porter|carrot|caption|refresh", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 260, 
+    "type": 1, 
+    "level_key": "level136"
+}
+,{
+    "index": 137, 
+    "word_content": "cheat|ahead|paragraph|corn", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level137"
+}
+,{
+    "index": 138, 
+    "word_content": "trunk|mosquito|indeed|birthplace|atom", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level138"
+}
+,{
+    "index": 139, 
+    "word_content": "mouse|law|palace|aspect|are|banana", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level139"
+}
+,{
+    "index": 140, 
+    "word_content": "anxious|pile|customs|overweight|outgoing|oral|housewife", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level140"
+}
+,{
+    "index": 141, 
+    "word_content": "cheat|ahead|paragraph|corn|trunk|mosquito|indeed|birthplace|atom|mouse|law|palace|aspect|are|banana|anxious|pile|customs|overweight|outgoing|oral|housewife", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 269, 
+    "type": 1, 
+    "level_key": "level141"
+}
+,{
+    "index": 142, 
+    "word_content": "react|television|spit|fortune", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level142"
+}
+,{
+    "index": 143, 
+    "word_content": "angle|criminal|racial|waiting|onto", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level143"
+}
+,{
+    "index": 144, 
+    "word_content": "ballet|headache|obtain|wise|grocer|ancestor", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level144"
+}
+,{
+    "index": 145, 
+    "word_content": "urban|fax|behave|automatic|recite|sharpen|flee", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level145"
+}
+,{
+    "index": 146, 
+    "word_content": "react|television|spit|fortune|angle|criminal|racial|waiting|onto|ballet|headache|obtain|wise|grocer|ancestor|urban|fax|behave|automatic|recite|sharpen|flee", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 279, 
+    "type": 1, 
+    "level_key": "level146"
+}
+,{
+    "index": 147, 
+    "word_content": "reward|socialist|aircraft|vocabulary", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level147"
+}
+,{
+    "index": 148, 
+    "word_content": "instant|postcard|capsule|smile|approach", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level148"
+}
+,{
+    "index": 149, 
+    "word_content": "watermelon|adore|graduate|nephew|abortion|continent", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level149"
+}
+,{
+    "index": 150, 
+    "word_content": "nearby|canteen|astronomer|protect|affect|accomplish|exact", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level150"
+}
+,{
+    "index": 151, 
+    "word_content": "reward|socialist|aircraft|vocabulary|instant|postcard|capsule|smile|approach|watermelon|adore|graduate|nephew|abortion|continent|nearby|canteen|astronomer|protect|affect|accomplish|exact", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 288, 
+    "type": 1, 
+    "level_key": "level151"
+}
+,{
+    "index": 152, 
+    "word_content": "cycle|rebuild|net|close", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level152"
+}
+,{
+    "index": 153, 
+    "word_content": "cage|convenience|sponsor|export|tough", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level153"
+}
+,{
+    "index": 154, 
+    "word_content": "legal|brush|burglar|nut|pain|hello", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level154"
+}
+,{
+    "index": 155, 
+    "word_content": "medal|mild|anchor|command|assist|upset|beard", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level155"
+}
+,{
+    "index": 156, 
+    "word_content": "cycle|rebuild|net|close|cage|convenience|sponsor|export|tough|legal|brush|burglar|nut|pain|hello|medal|mild|anchor|command|assist|upset|beard", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 298, 
+    "type": 1, 
+    "level_key": "level156"
+}
+,{
+    "index": 157, 
+    "word_content": "steak|chain|arrival|fry", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level157"
+}
+,{
+    "index": 158, 
+    "word_content": "water|lift|demand|choke|am", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level158"
+}
+,{
+    "index": 159, 
+    "word_content": "chemist|idea|brewery|awkward|benefit|insure", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level159"
+}
+,{
+    "index": 160, 
+    "word_content": "depth|waste|deal|inspect|appropriate|annoy|leak", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level160"
+}
+,{
+    "index": 161, 
+    "word_content": "steak|chain|arrival|fry|water|lift|demand|choke|am|chemist|idea|brewery|awkward|benefit|insure|depth|waste|deal|inspect|appropriate|annoy|leak", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 308, 
+    "type": 1, 
+    "level_key": "level161"
+}
+,{
+    "index": 162, 
+    "word_content": "roof|wallet|cattle|assess", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level162"
+}
+,{
+    "index": 163, 
+    "word_content": "pardon|candle|nine|entire|bad", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level163"
+}
+,{
+    "index": 164, 
+    "word_content": "though|deed|simple|scratch|prefer|wake", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level164"
+}
+,{
+    "index": 165, 
+    "word_content": "secure|invent|advance|Queue|jam|very|steel", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level165"
+}
+,{
+    "index": 166, 
+    "word_content": "roof|wallet|cattle|assess|pardon|candle|nine|entire|bad|though|deed|simple|scratch|prefer|wake|secure|invent|advance|Queue|jam|very|steel", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 317, 
+    "type": 1, 
+    "level_key": "level166"
+}
+,{
+    "index": 167, 
+    "word_content": "smoker|institution|safe|ending", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level167"
+}
+,{
+    "index": 168, 
+    "word_content": "embassy|thank|cheek|comb|breath", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level168"
+}
+,{
+    "index": 169, 
+    "word_content": "educate|ferry|tomb|gifted|injury|likely", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level169"
+}
+,{
+    "index": 170, 
+    "word_content": "bother|chief|chance|per|flame|root|punctuation", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level170"
+}
+,{
+    "index": 171, 
+    "word_content": "smoker|institution|safe|ending|embassy|thank|cheek|comb|breath|educate|ferry|tomb|gifted|injury|likely|bother|chief|chance|per|flame|root|punctuation", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 327, 
+    "type": 1, 
+    "level_key": "level171"
+}
+,{
+    "index": 172, 
+    "word_content": "loaf|bag|partly|chaos", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level172"
+}
+,{
+    "index": 173, 
+    "word_content": "awake|error|nearly|soccer|neat", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level173"
+}
+,{
+    "index": 174, 
+    "word_content": "flow|satisfy|license|unless|visitor|float", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level174"
+}
+,{
+    "index": 175, 
+    "word_content": "bench|urgent|sleeve|combine|wire|swing|cookie", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level175"
+}
+,{
+    "index": 176, 
+    "word_content": "loaf|bag|partly|chaos|awake|error|nearly|soccer|neat|flow|satisfy|license|unless|visitor|float|bench|urgent|sleeve|combine|wire|swing|cookie", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 336, 
+    "type": 1, 
+    "level_key": "level176"
+}
+,{
+    "index": 177, 
+    "word_content": "below|mass|harm|habit", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level177"
+}
+,{
+    "index": 178, 
+    "word_content": "slave|explode|grey|honest|teach", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level178"
+}
+,{
+    "index": 179, 
+    "word_content": "fare|blank|quilt|wipe|back|biology", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level179"
+}
+,{
+    "index": 180, 
+    "word_content": "breast|bed|female|confirm|broad|pretend|crowd", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level180"
+}
+,{
+    "index": 181, 
+    "word_content": "below|mass|harm|habit|slave|explode|grey|honest|teach|fare|blank|quilt|wipe|back|biology|breast|bed|female|confirm|broad|pretend|crowd", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 346, 
+    "type": 1, 
+    "level_key": "level181"
+}
+,{
+    "index": 182, 
+    "word_content": "connect|foggy|bowling|pump", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level182"
+}
+,{
+    "index": 183, 
+    "word_content": "evening|sink|travel|box|shock", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level183"
+}
+,{
+    "index": 184, 
+    "word_content": "account|ski|process|toy|dull|ox", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level184"
+}
+,{
+    "index": 185, 
+    "word_content": "minibus|hang|policewoman|each|promote|some|considerate", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level185"
+}
+,{
+    "index": 186, 
+    "word_content": "connect|foggy|bowling|pump|evening|sink|travel|box|shock|account|ski|process|toy|dull|ox|minibus|hang|policewoman|each|promote|some|considerate", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 356, 
+    "type": 1, 
+    "level_key": "level186"
+}
+,{
+    "index": 187, 
+    "word_content": "compromise|particular|fish|deadline", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level187"
+}
+,{
+    "index": 188, 
+    "word_content": "gain|relief|autonomous|courtyard|harvest", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level188"
+}
+,{
+    "index": 189, 
+    "word_content": "lecture|crop|average|destination|astronaut|basement", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level189"
+}
+,{
+    "index": 190, 
+    "word_content": "volcano|skip|ample|equipment|campaign|roast|prohibit", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level190"
+}
+,{
+    "index": 191, 
+    "word_content": "compromise|particular|fish|deadline|gain|relief|autonomous|courtyard|harvest|lecture|crop|average|destination|astronaut|basement|volcano|skip|ample|equipment|campaign|roast|prohibit", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 365, 
+    "type": 1, 
+    "level_key": "level191"
+}
+,{
+    "index": 192, 
+    "word_content": "bravery|friction|homeland|confident", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level192"
+}
+,{
+    "index": 193, 
+    "word_content": "accent|merry|import|delicate|waitress", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level193"
+}
+,{
+    "index": 194, 
+    "word_content": "violent|sunlight|lap|purchase|discourage|creature", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level194"
+}
+,{
+    "index": 195, 
+    "word_content": "brake|saucer|cigar|turkey|cure|polish|washroom", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level195"
+}
+,{
+    "index": 196, 
+    "word_content": "bravery|friction|homeland|confident|accent|merry|import|delicate|waitress|violent|sunlight|lap|purchase|discourage|creature|brake|saucer|cigar|turkey|cure|polish|washroom", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 375, 
+    "type": 1, 
+    "level_key": "level196"
+}
+,{
+    "index": 197, 
+    "word_content": "infer|geography|majority|beast", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level197"
+}
+,{
+    "index": 198, 
+    "word_content": "tick|Ms|powerful|ask|recorder", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level198"
+}
+,{
+    "index": 199, 
+    "word_content": "survival|mainland|narrow|tall|belief|practical", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level199"
+}
+,{
+    "index": 200, 
+    "word_content": "moon|wealthy|crew|interrupt|approve|electricity|grandparent", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level200"
+}
+,{
+    "index": 201, 
+    "word_content": "infer|geography|majority|beast|tick|Ms|powerful|ask|recorder|survival|mainland|narrow|tall|belief|practical|moon|wealthy|crew|interrupt|approve|electricity|grandparent", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 384, 
+    "type": 1, 
+    "level_key": "level201"
+}
+,{
+    "index": 202, 
+    "word_content": "cyclist|equal|strong|guide", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level202"
+}
+,{
+    "index": 203, 
+    "word_content": "sure|table|translate|inform|dictation", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level203"
+}
+,{
+    "index": 204, 
+    "word_content": "addicted|novelist|religious|forehead|mankind|various", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level204"
+}
+,{
+    "index": 205, 
+    "word_content": "appointment|postpone|damage|tiresome|civil|decorate|oh", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level205"
+}
+,{
+    "index": 206, 
+    "word_content": "cyclist|equal|strong|guide|sure|table|translate|inform|dictation|addicted|novelist|religious|forehead|mankind|various|appointment|postpone|damage|tiresome|civil|decorate|oh", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 394, 
+    "type": 1, 
+    "level_key": "level206"
+}
+,{
+    "index": 207, 
+    "word_content": "decade|application|head|upward", 
+    "summary_boss_drop": "[]", 
+    "word_num": 4, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level207"
+}
+,{
+    "index": 208, 
+    "word_content": "beautiful|Politics|melon|umbrella|citizen", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level208"
+}
+,{
+    "index": 209, 
+    "word_content": "hardworking|mountainous|autumn|and|resemble|scold", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level209"
+}
+,{
+    "index": 210, 
+    "word_content": "adult|determine|diagram|ought|bend|postage|bean", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level210"
+}
+,{
+    "index": 211, 
+    "word_content": "decade|application|head|upward|beautiful|Politics|melon|umbrella|citizen|hardworking|mountainous|autumn|and|resemble|scold|adult|determine|diagram|ought|bend|postage|bean", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 22, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 404, 
+    "type": 1, 
+    "level_key": "level211"
+}
+,{
+    "index": 212, 
+    "word_content": "musical|hammer|sex|drop|scar", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level212"
+}
+,{
+    "index": 213, 
+    "word_content": "agency|collar|broom|tractor|waiter|taste", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level213"
+}
+,{
+    "index": 214, 
+    "word_content": "delight|editor|conventional|grammar|pray|traffic|soul", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level214"
+}
+,{
+    "index": 215, 
+    "word_content": "relationship|painter|shade|highway|distant|painful|youth|seek", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level215"
+}
+,{
+    "index": 216, 
+    "word_content": "musical|hammer|sex|drop|scar|agency|collar|broom|tractor|waiter|taste|delight|editor|conventional|grammar|pray|traffic|soul|relationship|painter|shade|highway|distant|painful|youth|seek", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 413, 
+    "type": 1, 
+    "level_key": "level216"
+}
+,{
+    "index": 217, 
+    "word_content": "servant|vacant|rainbow|intend|intelligence", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level217"
+}
+,{
+    "index": 218, 
+    "word_content": "tobacco|appoint|packet|pear|talent|grain", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level218"
+}
+,{
+    "index": 219, 
+    "word_content": "aware|trick|cave|steam|baggage|cab|theft", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level219"
+}
+,{
+    "index": 220, 
+    "word_content": "add|nuclear|thus|limit|ray|stress|whistle|father", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level220"
+}
+,{
+    "index": 221, 
+    "word_content": "servant|vacant|rainbow|intend|intelligence|tobacco|appoint|packet|pear|talent|grain|aware|trick|cave|steam|baggage|cab|theft|add|nuclear|thus|limit|ray|stress|whistle|father", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 423, 
+    "type": 1, 
+    "level_key": "level221"
+}
+,{
+    "index": 222, 
+    "word_content": "duty|bureaucratic|goods|inspire|facial", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level222"
+}
+,{
+    "index": 223, 
+    "word_content": "orbit|super|choice|disappointed|fade|amuse", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level223"
+}
+,{
+    "index": 224, 
+    "word_content": "gradual|disagreement|fiction|pour|tourism|battle|folk", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level224"
+}
+,{
+    "index": 225, 
+    "word_content": "recycle|ton|purpose|biochemistry|Canada|aim|smog|eye", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level225"
+}
+,{
+    "index": 226, 
+    "word_content": "duty|bureaucratic|goods|inspire|facial|orbit|super|choice|disappointed|fade|amuse|gradual|disagreement|fiction|pour|tourism|battle|folk|recycle|ton|purpose|biochemistry|Canada|aim|smog|eye", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 432, 
+    "type": 1, 
+    "level_key": "level226"
+}
+,{
+    "index": 227, 
+    "word_content": "eastern|cell|club|poem|good", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level227"
+}
+,{
+    "index": 228, 
+    "word_content": "fee|desert|cheque|Olympic|seventh|track", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level228"
+}
+,{
+    "index": 229, 
+    "word_content": "normal|movie|defeat|enter|vain|north|appreciation", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level229"
+}
+,{
+    "index": 230, 
+    "word_content": "god|delay|phrase|yummy|tube|slide|seize|luggage", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level230"
+}
+,{
+    "index": 231, 
+    "word_content": "eastern|cell|club|poem|good|fee|desert|cheque|Olympic|seventh|track|normal|movie|defeat|enter|vain|north|appreciation|god|delay|phrase|yummy|tube|slide|seize|luggage", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 442, 
+    "type": 1, 
+    "level_key": "level231"
+}
+,{
+    "index": 232, 
+    "word_content": "nail|stadium|bar|enlarge|pick", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level232"
+}
+,{
+    "index": 233, 
+    "word_content": "warm|pole|quality|way|unusual|rare", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level233"
+}
+,{
+    "index": 234, 
+    "word_content": "lead|hope|dawn|sheet|hen|goat|expert", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level234"
+}
+,{
+    "index": 235, 
+    "word_content": "agent|butcher|content|admit|antique|care|stare|forest", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level235"
+}
+,{
+    "index": 236, 
+    "word_content": "nail|stadium|bar|enlarge|pick|warm|pole|quality|way|unusual|rare|lead|hope|dawn|sheet|hen|goat|expert|agent|butcher|content|admit|antique|care|stare|forest", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 452, 
+    "type": 1, 
+    "level_key": "level236"
+}
+,{
+    "index": 237, 
+    "word_content": "mailbox|central|wind|hi|boss", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level237"
+}
+,{
+    "index": 238, 
+    "word_content": "nature|local|replace|bone|mixture|glory", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level238"
+}
+,{
+    "index": 239, 
+    "word_content": "fog|news|fuel|blood|divide|branch|January", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level239"
+}
+,{
+    "index": 240, 
+    "word_content": "rough|wing|dozen|boil|sound|pack|perfume|order", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level240"
+}
+,{
+    "index": 241, 
+    "word_content": "mailbox|central|wind|hi|boss|nature|local|replace|bone|mixture|glory|fog|news|fuel|blood|divide|branch|January|rough|wing|dozen|boil|sound|pack|perfume|order", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 461, 
+    "type": 1, 
+    "level_key": "level241"
+}
+,{
+    "index": 242, 
+    "word_content": "dash|journey|swell|ankle|his", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level242"
+}
+,{
+    "index": 243, 
+    "word_content": "lemon|why|brown|call|oxygen|work", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level243"
+}
+,{
+    "index": 244, 
+    "word_content": "appetite|helicopter|affair|afternoon|crossroads|handle|envy", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level244"
+}
+,{
+    "index": 245, 
+    "word_content": "member|organ|flag|diamond|fluent|staff|mutton|spoon", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level245"
+}
+,{
+    "index": 246, 
+    "word_content": "dash|journey|swell|ankle|his|lemon|why|brown|call|oxygen|work|appetite|helicopter|affair|afternoon|crossroads|handle|envy|member|organ|flag|diamond|fluent|staff|mutton|spoon", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 471, 
+    "type": 1, 
+    "level_key": "level246"
+}
+,{
+    "index": 247, 
+    "word_content": "income|pioneer|suitcase|means|journalist", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level247"
+}
+,{
+    "index": 248, 
+    "word_content": "authentic|boycott|movement|institute|employ|alarm", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level248"
+}
+,{
+    "index": 249, 
+    "word_content": "religion|basis|reality|outspoken|attitude|voice|presentation", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level249"
+}
+,{
+    "index": 250, 
+    "word_content": "contain|valid|paperwork|federal|shortcoming|atmosphere|reliable|nutrition", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level250"
+}
+,{
+    "index": 251, 
+    "word_content": "income|pioneer|suitcase|means|journalist|authentic|boycott|movement|institute|employ|alarm|religion|basis|reality|outspoken|attitude|voice|presentation|contain|valid|paperwork|federal|shortcoming|atmosphere|reliable|nutrition", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 480, 
+    "type": 1, 
+    "level_key": "level251"
+}
+,{
+    "index": 252, 
+    "word_content": "five|physicist|Japanese|trial|anniversary", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level252"
+}
+,{
+    "index": 253, 
+    "word_content": "hesitate|digital|spaceship|sunburnt|souvenir|extra", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level253"
+}
+,{
+    "index": 254, 
+    "word_content": "function|troop|volunteer|multiply|arrest|entry|clear", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level254"
+}
+,{
+    "index": 255, 
+    "word_content": "beneath|protection|roundabout|line|addition|poison|childhood|handful", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level255"
+}
+,{
+    "index": 256, 
+    "word_content": "five|physicist|Japanese|trial|anniversary|hesitate|digital|spaceship|sunburnt|souvenir|extra|function|troop|volunteer|multiply|arrest|entry|clear|beneath|protection|roundabout|line|addition|poison|childhood|handful", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 490, 
+    "type": 1, 
+    "level_key": "level256"
+}
+,{
+    "index": 257, 
+    "word_content": "regard|fold|amusement|black|outstanding", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level257"
+}
+,{
+    "index": 258, 
+    "word_content": "Buddhism|wherever|armchair|amaze|somewhere|arctic", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level258"
+}
+,{
+    "index": 259, 
+    "word_content": "cloth|drunk|position|failure|correction|pence|awful", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level259"
+}
+,{
+    "index": 260, 
+    "word_content": "furnished|freezing|data|October|minority|bachelor|security|accuracy", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level260"
+}
+,{
+    "index": 261, 
+    "word_content": "regard|fold|amusement|black|outstanding|Buddhism|wherever|armchair|amaze|somewhere|arctic|cloth|drunk|position|failure|correction|pence|awful|furnished|freezing|data|October|minority|bachelor|security|accuracy", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 500, 
+    "type": 1, 
+    "level_key": "level261"
+}
+,{
+    "index": 262, 
+    "word_content": "fault|dormitory|ambiguous|unemployment|niece", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level262"
+}
+,{
+    "index": 263, 
+    "word_content": "treat|curious|pan|city|those|of", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level263"
+}
+,{
+    "index": 264, 
+    "word_content": "millionaire|network|mistaken|liberation|companion|dumpling|radiation", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level264"
+}
+,{
+    "index": 265, 
+    "word_content": "make|waist|cafe|underwear|schoolmate|housework|breakthrough|pressure", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level265"
+}
+,{
+    "index": 266, 
+    "word_content": "fault|dormitory|ambiguous|unemployment|niece|treat|curious|pan|city|those|of|millionaire|network|mistaken|liberation|companion|dumpling|radiation|make|waist|cafe|underwear|schoolmate|housework|breakthrough|pressure", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 509, 
+    "type": 1, 
+    "level_key": "level266"
+}
+,{
+    "index": 267, 
+    "word_content": "direction|reference|translator|caution|quarrel", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level267"
+}
+,{
+    "index": 268, 
+    "word_content": "tale|kindergarten|satellite|modem|status|committee", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level268"
+}
+,{
+    "index": 269, 
+    "word_content": "thinking|medium|accompany|unconscious|murder|garage|apologize", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level269"
+}
+,{
+    "index": 270, 
+    "word_content": "persuade|violinist|shadow|transport|accelerate|splendid|storm|analysis", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level270"
+}
+,{
+    "index": 271, 
+    "word_content": "direction|reference|translator|caution|quarrel|tale|kindergarten|satellite|modem|status|committee|thinking|medium|accompany|unconscious|murder|garage|apologize|persuade|violinist|shadow|transport|accelerate|splendid|storm|analysis", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 519, 
+    "type": 1, 
+    "level_key": "level271"
+}
+,{
+    "index": 272, 
+    "word_content": "opposite|construct|farthest|conductor|political", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level272"
+}
+,{
+    "index": 273, 
+    "word_content": "arm|prevent|training|disappoint|dress|brunch", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level273"
+}
+,{
+    "index": 274, 
+    "word_content": "composition|lay|reasonable|steady|thunderstorm|translation|fellow", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level274"
+}
+,{
+    "index": 275, 
+    "word_content": "destroy|declare|year|brief|settlement|restaurant|print|abnormal", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level275"
+}
+,{
+    "index": 276, 
+    "word_content": "opposite|construct|farthest|conductor|political|arm|prevent|training|disappoint|dress|brunch|composition|lay|reasonable|steady|thunderstorm|translation|fellow|destroy|declare|year|brief|settlement|restaurant|print|abnormal", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 528, 
+    "type": 1, 
+    "level_key": "level276"
+}
+,{
+    "index": 277, 
+    "word_content": "familiar|confidence|poisonous|educator|container", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level277"
+}
+,{
+    "index": 278, 
+    "word_content": "manner|scissors|rule|feather|thankful|substitute", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level278"
+}
+,{
+    "index": 279, 
+    "word_content": "astonish|throw|ignore|underline|justice|suite|teapot", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level279"
+}
+,{
+    "index": 280, 
+    "word_content": "range|possibility|chat|tolerate|challenging|revision|classify|credit", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level280"
+}
+,{
+    "index": 281, 
+    "word_content": "familiar|confidence|poisonous|educator|container|manner|scissors|rule|feather|thankful|substitute|astonish|throw|ignore|underline|justice|suite|teapot|range|possibility|chat|tolerate|challenging|revision|classify|credit", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 538, 
+    "type": 1, 
+    "level_key": "level281"
+}
+,{
+    "index": 282, 
+    "word_content": "troublesome|gun|keep|appreciate|witness", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level282"
+}
+,{
+    "index": 283, 
+    "word_content": "temperature|tentative|week|geometry|tape|parrot", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level283"
+}
+,{
+    "index": 284, 
+    "word_content": "bride|popcorn|superior|starvation|selfish|shark|recipe", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level284"
+}
+,{
+    "index": 285, 
+    "word_content": "agriculture|independent|exhibition|evidence|spy|reform|kettle|operate", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level285"
+}
+,{
+    "index": 286, 
+    "word_content": "troublesome|gun|keep|appreciate|witness|temperature|tentative|week|geometry|tape|parrot|bride|popcorn|superior|starvation|selfish|shark|recipe|agriculture|independent|exhibition|evidence|spy|reform|kettle|operate", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 548, 
+    "type": 1, 
+    "level_key": "level286"
+}
+,{
+    "index": 287, 
+    "word_content": "sensitive|whatever|hire|transparent|clever", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level287"
+}
+,{
+    "index": 288, 
+    "word_content": "careless|nurse|slice|tin|ordinary|be", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level288"
+}
+,{
+    "index": 289, 
+    "word_content": "meeting|sword|download|exchange|republic|plate|funeral", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level289"
+}
+,{
+    "index": 290, 
+    "word_content": "salty|withdraw|microwave|ambition|dinosaur|typist|cheerful|rhyme", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level290"
+}
+,{
+    "index": 291, 
+    "word_content": "sensitive|whatever|hire|transparent|clever|careless|nurse|slice|tin|ordinary|be|meeting|sword|download|exchange|republic|plate|funeral|salty|withdraw|microwave|ambition|dinosaur|typist|cheerful|rhyme", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 557, 
+    "type": 1, 
+    "level_key": "level291"
+}
+,{
+    "index": 292, 
+    "word_content": "disagree|disaster|squeeze|shallow|monument", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level292"
+}
+,{
+    "index": 293, 
+    "word_content": "hardship|hopeless|sharp|rag|information|occupy", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level293"
+}
+,{
+    "index": 294, 
+    "word_content": "voyage|communist|assessment|policeman|audience|disappear|adolescent", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level294"
+}
+,{
+    "index": 295, 
+    "word_content": "systematic|eyesight|length|symphony|conclude|really|uniform|kindness", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level295"
+}
+,{
+    "index": 296, 
+    "word_content": "disagree|disaster|squeeze|shallow|monument|hardship|hopeless|sharp|rag|information|occupy|voyage|communist|assessment|policeman|audience|disappear|adolescent|systematic|eyesight|length|symphony|conclude|really|uniform|kindness", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 567, 
+    "type": 1, 
+    "level_key": "level296"
+}
+,{
+    "index": 297, 
+    "word_content": "flashlight|town|occupation|pineapple|heel", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level297"
+}
+,{
+    "index": 298, 
+    "word_content": "spoonful|disability|nowadays|award|hug|chemical", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level298"
+}
+,{
+    "index": 299, 
+    "word_content": "prize|comfortable|organization|referee|lorry|retire|constitution", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level299"
+}
+,{
+    "index": 300, 
+    "word_content": "tidy|affection|achievement|performer|wisdom|overhead|pea|pronounce", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level300"
+}
+,{
+    "index": 301, 
+    "word_content": "flashlight|town|occupation|pineapple|heel|spoonful|disability|nowadays|award|hug|chemical|prize|comfortable|organization|referee|lorry|retire|constitution|tidy|affection|achievement|performer|wisdom|overhead|pea|pronounce", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 576, 
+    "type": 1, 
+    "level_key": "level301"
+}
+,{
+    "index": 302, 
+    "word_content": "what|upper|strike|bridegroom|southeast", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level302"
+}
+,{
+    "index": 303, 
+    "word_content": "straight|material|welcome|meanwhile|recover|shopkeeper", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level303"
+}
+,{
+    "index": 304, 
+    "word_content": "Christian|exist|calm|charge|symptom|receptionist|button", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level304"
+}
+,{
+    "index": 305, 
+    "word_content": "official|handkerchief|organise|jeep|humorous|clothes|seventy|division", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level305"
+}
+,{
+    "index": 306, 
+    "word_content": "what|upper|strike|bridegroom|southeast|straight|material|welcome|meanwhile|recover|shopkeeper|Christian|exist|calm|charge|symptom|receptionist|button|official|handkerchief|organise|jeep|humorous|clothes|seventy|division", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 586, 
+    "type": 1, 
+    "level_key": "level306"
+}
+,{
+    "index": 307, 
+    "word_content": "cassette|advocate|painting|ashamed|universe", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level307"
+}
+,{
+    "index": 308, 
+    "word_content": "separation|switch|shower|weakness|base|graph", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level308"
+}
+,{
+    "index": 309, 
+    "word_content": "frost|corporation|effect|fortunate|impression|sour|sightseeing", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level309"
+}
+,{
+    "index": 310, 
+    "word_content": "adventure|motherland|clumsy|stupid|appendix|distinguish|customer|canal", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level310"
+}
+,{
+    "index": 311, 
+    "word_content": "cassette|advocate|painting|ashamed|universe|separation|switch|shower|weakness|base|graph|frost|corporation|effect|fortunate|impression|sour|sightseeing|adventure|motherland|clumsy|stupid|appendix|distinguish|customer|canal", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 596, 
+    "type": 1, 
+    "level_key": "level311"
+}
+,{
+    "index": 312, 
+    "word_content": "discount|nationwide|globe|slim|truly", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level312"
+}
+,{
+    "index": 313, 
+    "word_content": "body|herself|biography|headmaster|frequent|jet", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level313"
+}
+,{
+    "index": 314, 
+    "word_content": "vivid|civilization|tool|debate|terror|petrol|stocking", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level314"
+}
+,{
+    "index": 315, 
+    "word_content": "teamwork|boundary|seventeen|harmful|thought|throughout|burst|porridge", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level315"
+}
+,{
+    "index": 316, 
+    "word_content": "discount|nationwide|globe|slim|truly|body|herself|biography|headmaster|frequent|jet|vivid|civilization|tool|debate|terror|petrol|stocking|teamwork|boundary|seventeen|harmful|thought|throughout|burst|porridge", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 605, 
+    "type": 1, 
+    "level_key": "level316"
+}
+,{
+    "index": 317, 
+    "word_content": "whenever|terrify|buffet|subject|airspace", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level317"
+}
+,{
+    "index": 318, 
+    "word_content": "changeable|wool|event|bicycle|tasty|mathematics", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level318"
+}
+,{
+    "index": 319, 
+    "word_content": "unbearable|classic|tire|beneficial|brochure|thirst|twin", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level319"
+}
+,{
+    "index": 320, 
+    "word_content": "sneaker|clothing|mud|rapid|roll|immediately|harmony|hamburger", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level320"
+}
+,{
+    "index": 321, 
+    "word_content": "whenever|terrify|buffet|subject|airspace|changeable|wool|event|bicycle|tasty|mathematics|unbearable|classic|tire|beneficial|brochure|thirst|twin|sneaker|clothing|mud|rapid|roll|immediately|harmony|hamburger", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 615, 
+    "type": 1, 
+    "level_key": "level321"
+}
+,{
+    "index": 322, 
+    "word_content": "fifteen|regular|kilometre|supply|tooth", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level322"
+}
+,{
+    "index": 323, 
+    "word_content": "applaud|nowhere|rewind|whose|forecast|anything", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level323"
+}
+,{
+    "index": 324, 
+    "word_content": "valuable|same|carve|gas|casual|negotiate|happiness", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level324"
+}
+,{
+    "index": 325, 
+    "word_content": "mat|carbon|gather|quantity|arch|foot|optional|cost", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level325"
+}
+,{
+    "index": 326, 
+    "word_content": "fifteen|regular|kilometre|supply|tooth|applaud|nowhere|rewind|whose|forecast|anything|valuable|same|carve|gas|casual|negotiate|happiness|mat|carbon|gather|quantity|arch|foot|optional|cost", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 624, 
+    "type": 1, 
+    "level_key": "level326"
+}
+,{
+    "index": 327, 
+    "word_content": "quit|association|librarian|grandparents|calculate", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level327"
+}
+,{
+    "index": 328, 
+    "word_content": "convince|gentle|candidate|Panic|injure|extreme", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level328"
+}
+,{
+    "index": 329, 
+    "word_content": "moustache|gymnastics|admirable|cooker|shave|explicit|assistant", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level329"
+}
+,{
+    "index": 330, 
+    "word_content": "skin|violate|complex|fasten|parallel|kilogram|generation|worldwide", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level330"
+}
+,{
+    "index": 331, 
+    "word_content": "quit|association|librarian|grandparents|calculate|convince|gentle|candidate|Panic|injure|extreme|moustache|gymnastics|admirable|cooker|shave|explicit|assistant|skin|violate|complex|fasten|parallel|kilogram|generation|worldwide", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 634, 
+    "type": 1, 
+    "level_key": "level331"
+}
+,{
+    "index": 332, 
+    "word_content": "contrary|technique|experience|pure|greeting", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level332"
+}
+,{
+    "index": 333, 
+    "word_content": "mercy|compulsory|contradict|permit|liberty|celebrate", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level333"
+}
+,{
+    "index": 334, 
+    "word_content": "communism|consequence|laughter|laundry|contribute|innocent|relax", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level334"
+}
+,{
+    "index": 335, 
+    "word_content": "reading|find|coincidence|competence|district|compete|distance|however", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level335"
+}
+,{
+    "index": 336, 
+    "word_content": "contrary|technique|experience|pure|greeting|mercy|compulsory|contradict|permit|liberty|celebrate|communism|consequence|laughter|laundry|contribute|innocent|relax|reading|find|coincidence|competence|district|compete|distance|however", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 644, 
+    "type": 1, 
+    "level_key": "level336"
+}
+,{
+    "index": 337, 
+    "word_content": "toothpaste|expression|erupt|search|fragrant", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level337"
+}
+,{
+    "index": 338, 
+    "word_content": "chalk|overlook|shoot|kangaroo|judge|project", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level338"
+}
+,{
+    "index": 339, 
+    "word_content": "temple|anger|abundant|differ|board|operator|personnel", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level339"
+}
+,{
+    "index": 340, 
+    "word_content": "altitude|flour|transform|pipe|soup|file|forgetful|disadvantage", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level340"
+}
+,{
+    "index": 341, 
+    "word_content": "toothpaste|expression|erupt|search|fragrant|chalk|overlook|shoot|kangaroo|judge|project|temple|anger|abundant|differ|board|operator|personnel|altitude|flour|transform|pipe|soup|file|forgetful|disadvantage", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 653, 
+    "type": 1, 
+    "level_key": "level341"
+}
+,{
+    "index": 342, 
+    "word_content": "pity|swift|agricultural|invitation|occur", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level342"
+}
+,{
+    "index": 343, 
+    "word_content": "spiritual|building|altogether|represent|socialism|adolescence", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level343"
+}
+,{
+    "index": 344, 
+    "word_content": "strength|Wednesday|apartment|northern|system|adjustment|prejudice", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level344"
+}
+,{
+    "index": 345, 
+    "word_content": "necklace|remove|pollution|relevant|bargain|postcode|acre|compensate", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level345"
+}
+,{
+    "index": 346, 
+    "word_content": "pity|swift|agricultural|invitation|occur|spiritual|building|altogether|represent|socialism|adolescence|strength|Wednesday|apartment|northern|system|adjustment|prejudice|necklace|remove|pollution|relevant|bargain|postcode|acre|compensate", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 663, 
+    "type": 1, 
+    "level_key": "level346"
+}
+,{
+    "index": 347, 
+    "word_content": "villager|worthwhile|ceiling|fence|barbecue", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level347"
+}
+,{
+    "index": 348, 
+    "word_content": "schedule|dynasty|satisfaction|carpenter|arrange|education", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level348"
+}
+,{
+    "index": 349, 
+    "word_content": "physician|tomorrow|gesture|software|earn|strawberry|write", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level349"
+}
+,{
+    "index": 350, 
+    "word_content": "author|plus|prove|sky|subjective|airmail|shopping|vast", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level350"
+}
+,{
+    "index": 351, 
+    "word_content": "villager|worthwhile|ceiling|fence|barbecue|schedule|dynasty|satisfaction|carpenter|arrange|education|physician|tomorrow|gesture|software|earn|strawberry|write|author|plus|prove|sky|subjective|airmail|shopping|vast", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 672, 
+    "type": 1, 
+    "level_key": "level351"
+}
+,{
+    "index": 352, 
+    "word_content": "pepper|suffering|loss|bow|explanation", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level352"
+}
+,{
+    "index": 353, 
+    "word_content": "punctual|ago|suffer|typewriter|advertise|whisper", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level353"
+}
+,{
+    "index": 354, 
+    "word_content": "sharpener|photographer|counter|relative|sow|crime|description", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level354"
+}
+,{
+    "index": 355, 
+    "word_content": "visa|competition|generous|copy|preview|positive|downstairs|sickness", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level355"
+}
+,{
+    "index": 356, 
+    "word_content": "pepper|suffering|loss|bow|explanation|punctual|ago|suffer|typewriter|advertise|whisper|sharpener|photographer|counter|relative|sow|crime|description|visa|competition|generous|copy|preview|positive|downstairs|sickness", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 682, 
+    "type": 1, 
+    "level_key": "level356"
+}
+,{
+    "index": 357, 
+    "word_content": "complete|grateful|apart|Precious|independence", 
+    "summary_boss_drop": "[]", 
+    "word_num": 5, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level357"
+}
+,{
+    "index": 358, 
+    "word_content": "beer|conservative|rainfall|circumstance|entrance|total", 
+    "summary_boss_drop": "[]", 
+    "word_num": 6, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level358"
+}
+,{
+    "index": 359, 
+    "word_content": "symbol|interpreter|strait|announce|triangle|swim|afterwards", 
+    "summary_boss_drop": "[]", 
+    "word_num": 7, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level359"
+}
+,{
+    "index": 360, 
+    "word_content": "dip|amazing|rot|clay|finance|difficulty|equality|businessman", 
+    "summary_boss_drop": "[]", 
+    "word_num": 8, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 0, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 0, 
+    "summary_boss_stars": 0, 
+    "type": 0, 
+    "level_key": "level360"
+}
+,{
+    "index": 361, 
+    "word_content": "complete|grateful|apart|Precious|independence|beer|conservative|rainfall|circumstance|entrance|total|symbol|interpreter|strait|announce|triangle|swim|afterwards|dip|amazing|rot|clay|finance|difficulty|equality|businessman", 
+    "summary_boss_drop": "[item_energy_0,1]", 
+    "word_num": 26, 
+    "chapter_key": "Chapter0", 
+    "book_key": "ncee", 
+    "summary_boss_time": 90, 
+    "summary_boss_word": "", 
+    "summary_boss_hp": 40, 
+    "summary_boss_stars": 692, 
+    "type": 1, 
+    "level_key": "level361"
+}
+
+]
+         }
+}

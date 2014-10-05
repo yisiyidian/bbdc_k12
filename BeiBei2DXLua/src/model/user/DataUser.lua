@@ -6,11 +6,12 @@ end)
 function DataUser.create()
     local data = DataUser.new()
 
-    data.objectId                          = ''
+    data.id                                = ''
     data.serverTime                        = ''
     data.username                          = ''
+    data.nickname                          = ''
     data.password                          = ''
-    data.session                           = ''
+    data.sessionToken                      = ''
     
     data.appVersion                        = s_APP_VERSION 
     data.tutorialStep                      = 0 

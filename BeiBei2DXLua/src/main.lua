@@ -40,6 +40,8 @@ local function main()
     cclog('design size:' .. s_SCENE_WIDTH .. ',' .. s_SCENE_HEIGHT .. ',' .. s_HEIGHT_SCALE)
     
     s_debugger.configLog(true, true)
+    s_SERVER.debugLocalHost = false -- 'http://localhost:3000/avos/'
+    s_SERVER.isAppStoreServer = false
     
     --create scene 
     local scene = require("AppScene")

@@ -46,4 +46,9 @@ function AppScene:ctor()
     self.schedulerID = nil
 end
 
+function AppScene:replaceGameLayer(newLayer)
+    self.gameLayer:removeAllChildren()
+    self.gameLayer:addChild(newLayer)
+end
+
 return AppScene
