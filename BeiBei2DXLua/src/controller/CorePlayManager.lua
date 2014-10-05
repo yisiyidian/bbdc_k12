@@ -18,14 +18,13 @@ function CorePlayManager.loadConfiguration()
     for i = 1, #CorePlayManager.wordList do
         CorePlayManager.dictionary[i] = s_WordPool[CorePlayManager.wordList[i]]
     end
-    CorePlayManager.currentWord = CorePlayManager.dictionary[CorePlayManager.currentWordIndex]
+    --CorePlayManager.currentWord = CorePlayManager.dictionary[CorePlayManager.currentWordIndex]
 end
 
 function CorePlayManager.enterStudyLayer()
     CorePlayManager.currentWord = CorePlayManager.dictionary[CorePlayManager.currentWordIndex]
-    s_SCENE.gameLayer:removeAllChildrenWithCleanup()
     local studyLayer = StudyLayer.create()
-    s_SCENE.gamelayer:addChild(studyLayer)
+    s_SCENE:replaceGameLayer(studyLayer)
 end
 
 function CorePlayManager.leaveStudyLayer()

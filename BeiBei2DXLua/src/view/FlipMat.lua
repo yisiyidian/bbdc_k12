@@ -81,8 +81,9 @@ function FlipMat.create(word, m ,n)
                 local node_size = node:getContentSize()
                 
                 
-                if location.x >= node_position.x - node_size.width/2 and location.x <= node_position.x + node_size.width/2 
-                and location.y >= node_position.y - node_size.height/2 and location.y <= node_position.y + node_size.height/2 then
+                --if location.x >= node_position.x - node_size.width/2 and location.x <= node_position.x + node_size.width/2 
+                --and location.y >= node_position.y - node_size.height/2 and location.y <= node_position.y + node_size.height/2 then
+                if cc.rectContainsPoint(node:getBoundingBox(), location) then
                     current_node_x = i
                     current_node_y = j
                     
@@ -109,7 +110,7 @@ function FlipMat.create(word, m ,n)
     
     -- handing touch events
     onTouchBegan = function(touch, event)
-        local location = touch:getLocation()
+        local location = main:convertToNodeSpace(touch:getLocation())
         
         startTouchLocation = location
         lastTouchLocation = location
@@ -134,7 +135,7 @@ function FlipMat.create(word, m ,n)
     onTouchMoved = function(touch, event)
         local length_gap = 3.0
 
-        local location = touch:getLocation()
+        local location = main:convertToNodeSpace(touch:getLocation())
 
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
@@ -221,7 +222,7 @@ function FlipMat.create(word, m ,n)
     end
 
     onTouchEnded = function(touch, event)
-        local location = touch:getLocation()
+        local location = main:convertToNodeSpace(touch:getLocation())
 
         local selectWord = ""
         for i = 1, #selectStack do

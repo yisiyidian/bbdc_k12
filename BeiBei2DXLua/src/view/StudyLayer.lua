@@ -94,7 +94,7 @@ function StudyLayer.create()
 
     local mat = FlipMat.create("apple",4,4)
     --mat:setPosition(layer:getContentSize().width,0)
-    mat:setPosition(0,0)
+    mat:setPosition(400,0)
     layer:addChild(mat)
     
     local aaa = function(sender, eventType)
@@ -109,28 +109,29 @@ function StudyLayer.create()
         end
     end
     
-    button_changeview:addTouchEventListener(aaa)
-
-    local onTouchBegan = function(touch, event)
-        print("touch began")
-        s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
-        s_CorePlayManager.enterStudyLayer()
-    end
-    
-    local onTouchMoved = function(touch, event)
-        print("touch moved")
-    end
-    
-    local onTouchEnded = function(touch, event)
-        print("touch ended")
-    end
-    
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
-    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-    local eventDispatcher = layer:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+--    button_changeview:addTouchEventListener(aaa)
+--
+--    local onTouchBegan = function(touch, event)
+--        print("touch began")
+--        --s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+--        --s_CorePlayManager.enterStudyLayer()
+--    end
+--    
+--    local onTouchMoved = function(touch, event)
+--        print("touch moved")
+--    end
+--    
+--    local onTouchEnded = function(touch, event)
+--        print("touch ended")
+--    end
+--    
+--    local listener = cc.EventListenerTouchOneByOne:create()
+--   
+--    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+--    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+--    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+--    local eventDispatcher = layer:getEventDispatcher()
+--    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
 
     return layer
 end

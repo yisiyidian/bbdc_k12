@@ -8,13 +8,13 @@ local StudyLayer = require('view.StudyLayer')
 local CorePlayManager = require("controller.CorePlayManager")
 
 function test()
-    local studyLayer = StudyLayer.create()
-    s_SCENE:replaceGameLayer(studyLayer)
+    --local studyLayer = StudyLayer.create()
+    --s_SCENE:replaceGameLayer(studyLayer)
 
     -- local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
-    -- corePlayManager.enterStudyLayer()
+    s_CorePlayManager.enterStudyLayer()
 
     --logd('testSpine')
     --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)
