@@ -8,6 +8,8 @@ s_json                    = nil
 s_SCENE                   = nil
 s_SERVER                  = nil
 
+s_localSqlite             = nil
+
 --global class
 s_FlipNode                = nil
 s_FlipMat                 = nil

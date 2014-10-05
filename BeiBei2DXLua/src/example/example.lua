@@ -31,18 +31,21 @@ function test()
 --    s_SERVER.request('apiLogIn', {['username']='yehanjie1', ['password']=111111}, onSucceed, onFailed)
 --
 --
---    local sqlite3 = require("lsqlite3")
---    local db = sqlite3.open_memory()
---
---    db:exec[[
---      CREATE TABLE test (id INTEGER PRIMARY KEY, content);
---
---      INSERT INTO test VALUES (NULL, 'Hello World');
---      INSERT INTO test VALUES (NULL, 'Hello Lua');
---      INSERT INTO test VALUES (NULL, 'Hello Sqlite3')
---    ]]
---
---    for row in db:nrows("SELECT * FROM test") do
---        s_logd('sqlite3:' .. row.id .. ', ' .. row.content)
---    end
+    local sqlite3 = require("lsqlite3")
+    local dbPath = cc.FileUtils:getInstance():getWritablePath().."local.sqlite"
+    print(cc.FileUtils:getInstance():getWritablePath())
+    local db = sqlite3.open(dbPath)
+
+
+    db:exec[[
+      CREATE TABLE test (id INTEGER PRIMARY KEY, content);
+
+      INSERT INTO test VALUES (NULL, 'Hello World');
+      INSERT INTO test VALUES (NULL, 'Hello Lua');
+      INSERT INTO test VALUES (NULL, 'Hello Sqlite3')
+    ]]
+
+    for row in db:nrows("SELECT * FROM test") do
+        s_logd('sqlite3:' .. row.id .. ', ' .. row.content)
+    end
 end
