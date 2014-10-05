@@ -56,13 +56,16 @@ local function main()
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
     
+    local example = require("example.example")
+    
+    test()
+    
     --------------------------------------------------------------------------------
 --    s_localSqlite = require("model.localData.LocalDatabaseManager")
 --    s_localSqlite.open()
 --    s_localSqlite.initTables()
 --    s_localSqlite.showTables()
     --s_localSqlite.close()
-
 end
 
 
