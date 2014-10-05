@@ -52,10 +52,10 @@ local function main()
     end
     
     --------------------------------------------------------------------------------
-    s_localSqlite = require("model.localData.LocalDatabaseManager")
-    s_localSqlite.open()
-    s_localSqlite.initTables()
-    s_localSqlite.showTables()
+--    s_localSqlite = require("model.localData.LocalDatabaseManager")
+--    s_localSqlite.open()
+--    s_localSqlite.initTables()
+--    s_localSqlite.showTables()
     --s_localSqlite.close()
 
 end
