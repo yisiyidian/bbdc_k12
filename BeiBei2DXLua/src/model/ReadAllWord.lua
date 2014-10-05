@@ -28,8 +28,10 @@ end
 
 function ReadAllWord()
     WordInfo = {}
-    local content = cc.FileUtils:getInstance():getStringFromFile("cfg/allwords")
+    local content = getFile("cfg/allwords")
+
     local lines = Split(content, "\n")
+
     for i = 1, #lines do
         local terms = Split(lines[i], "\t")
         local word = Word.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7])
