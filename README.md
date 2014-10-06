@@ -1,6 +1,8 @@
 BeiBeiDanCiX
 ============
 
+----------------------------------------------------------------------------------------
+
 - BeiBei2DXLua
     |-- config.json : 运行时测试用配置
     |-- frameworks
@@ -22,3 +24,7 @@ BeiBeiDanCiX
 - tools
     |-- 0_exportCfg.command : 导出 raw/cfg/*.json 到 res/cfg/*
     |-- exportCfg_allwords.py : 处理 raw/cfg/allwords.json 为代码使用的格式 res/cfg/allwords
+
+----------------------------------------------------------------------------------------
+
+每条数据加上 appVersion 字段和被存储的次数 recordCnt 来保证单机和联网的数据同步

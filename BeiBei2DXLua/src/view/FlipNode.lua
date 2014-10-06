@@ -1,6 +1,7 @@
 require("Cocos2d")
 require("Cocos2dConstants")
 
+-- TODO : scroll_state - should NOT some magic numbers
 
 local FlipNode = class("FlipNode", function()
     return cc.Sprite:create()
