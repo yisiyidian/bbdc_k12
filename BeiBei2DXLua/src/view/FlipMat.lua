@@ -8,9 +8,11 @@ end)
 function FlipMat.create(word, m ,n)
     -- system variate
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
+    
     local main = FlipMat.new()
     main:setContentSize(640,640)
-    main:setAnchorPoint(0,0)
+    main:setAnchorPoint(0.5,0)
+    main:ignoreAnchorPointForPosition(false)
 
     -- system function
     math.randomseed(os.time())

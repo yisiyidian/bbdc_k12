@@ -36,7 +36,34 @@ function TestLayer.create()
     print(sub_colorBlock:getPosition())
     print(sub_colorBlock:getAnchorPoint().x)
     print(sub_colorBlock:getAnchorPoint().y)
+    
+    onTouchBegan1 = function(touch, event)
+        print("touch 1")
 
+        -- CCTOUCHBEGAN event must return true
+        return true
+    end
+    
+    onTouchBegan2 = function(touch, event)
+        print("touch 2")
+
+        -- CCTOUCHBEGAN event must return true
+        return true
+    end
+    
+    local listener1 = cc.EventListenerTouchOneByOne:create()
+    listener1:registerScriptHandler(onTouchBegan1, cc.Handler.EVENT_TOUCH_BEGAN )
+    listener1:setSwallowTouches(true)
+    local eventDispatcher1 = colorBlock:getEventDispatcher()
+    eventDispatcher1:addEventListenerWithSceneGraphPriority(listener1, colorBlock)
+    
+    
+    local listener2 = cc.EventListenerTouchOneByOne:create()
+    listener2:registerScriptHandler(onTouchBegan2, cc.Handler.EVENT_TOUCH_BEGAN )
+    listener2:setSwallowTouches(true)
+    local eventDispatcher2 = sub_colorBlock:getEventDispatcher()
+    eventDispatcher2:addEventListenerWithSceneGraphPriority(listener2, sub_colorBlock)
+    
     return main
 end
 
