@@ -1,6 +1,29 @@
 BeiBeiDanCiX
 ============
 
+1. OSX下面的包管理工具 Homebrew
+安装命令:
+    ruby ­e "$(curl ­fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+2. 好用的 shell zsh
+安装命令:
+    curl ­L http://install.ohmyz.sh | sh
+
+3. android sdk
+安装命令:
+    brew install android­sdk
+    android
+打开 android sdk 管理界面后选择对应的 sdk 进行安装
+
+3. android­ndk
+安装流程:
+    brew install android­ndk
+    git checkout e8448bb /usr/local/Library/Formula/android­ndk.rb
+
+4. ant
+安装命令:
+    brew install ant
+
 ----------------------------------------------------------------------------------------
 
 - BeiBei2DXLua
@@ -27,4 +50,24 @@ BeiBeiDanCiX
 
 ----------------------------------------------------------------------------------------
 
+lua 简明教程: http://coolshell.cn/articles/10739.html
+
+全局常量:  s_{name} 参考 common/resource.lua. 如果是 class，加上 s_class{XXX}
+全局变量:  v_{name}
+普通方法: 参考 example/example.lua 和 AudioMgr.lua
+普通类: 参考 example/DataExample.lua
+继承自 cocos2d-x 的类: 参考 AppScene.lua
+模块: 参考 common/debugger.lua
+类似C++单例模式: 参考 server/Server.lua
+
+代码中打印日志请使用全局函数 s_logd
+
+----------------------------------------------------------------------------------------
+
+每天有15分钟的代码复审的任务，关于代码复审：http://coolshell.cn/articles/1302.html
+
+----------------------------------------------------------------------------------------
+
+TODO:
+layer 替换模块
 每条数据加上 appVersion 字段和被存储的次数 recordCnt 来保证单机和联网的数据同步
