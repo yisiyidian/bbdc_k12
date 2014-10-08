@@ -24,6 +24,10 @@ BeiBeiDanCiX
 安装命令:
     brew install ant
 
+5. build & run apk
+    cd BeiBei2DXLua
+    cocos run -p android -j 4 --ap 20
+
 ----------------------------------------------------------------------------------------
 
 - BeiBei2DXLua
