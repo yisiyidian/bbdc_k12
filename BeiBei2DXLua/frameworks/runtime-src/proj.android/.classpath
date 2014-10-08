@@ -6,7 +6,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="../../cocos2d-x/common/avos/Android/android-async-http-1.4.4-fix.jar"/>
-	<classpathentry kind="lib" path="../..//cocos2d-x/common/avos/Android/avoscloud-v2.6.5.jar"/>
+	<classpathentry kind="lib" path="../../cocos2d-x/common/avos/Android/avoscloud-v2.6.5.jar"/>
 	<classpathentry kind="lib" path="../../cocos2d-x/common/avos/Android/avosfeedback-v2.6.5.zip"/>
 	<classpathentry kind="lib" path="../../cocos2d-x/common/avos/Android/avosstatistics-v2.6.5.jar"/>
 	<classpathentry kind="lib" path="../../cocos2d-x/common/avos/Android/fastjson.jar"/>

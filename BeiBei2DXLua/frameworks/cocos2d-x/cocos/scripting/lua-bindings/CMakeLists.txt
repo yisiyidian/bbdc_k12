@@ -1,4 +1,5 @@
 set(LUABINDING_SRC
+  auto/lua_cx_common.cpp
   auto/lua_cocos2dx_auto.cpp
   auto/lua_cocos2dx_extension_auto.cpp
   auto/lua_cocos2dx_studio_auto.cpp
