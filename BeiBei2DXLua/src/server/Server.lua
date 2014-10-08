@@ -32,12 +32,18 @@ function Server.request(api, parameters, onSucceed, onFailed)
     xhr:open('POST', getURL() .. api)
     xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
     xhr:setRequestHeader('X-AVOSCloud-Application-Key', appKey)
+    xhr:setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
 
     --
     xhr:registerScriptHandler(function ()
-        s_logd('response: api:' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
-        s_logd('response: data:' .. xhr.response) -- .. ', ' .. xhr:getAllResponseHeaders())
+        -- * xhr.readyState：XMLHttpRequest对象的状态，等于4表示数据已经接收完毕
+        -- * xhr.status：服务器返回的状态码，等于200表示一切正常
+        -- * xhr.responseText：服务器返回的文本数据
+        -- * xhr.statusText：服务器返回的状态文本
+        s_logd('response api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
+        s_logd('response data: ' .. xhr.response) -- .. ', ' .. xhr:getAllResponseHeaders())
         
+        -- readyState == 4
         if xhr.status ~= 200 then
             onFailed(api, xhr.status, xhr.statusText)
         elseif xhr.response ~= nil then
@@ -57,6 +63,8 @@ function Server.request(api, parameters, onSucceed, onFailed)
                 onSucceed(api, result)
             end
         end
+
+        xhr:unregisterScriptHandler()
     end)
 
     --

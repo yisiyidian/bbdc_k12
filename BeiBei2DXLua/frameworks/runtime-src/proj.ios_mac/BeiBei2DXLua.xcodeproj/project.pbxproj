@@ -61,6 +61,16 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
+		B85146AE19E4EBD50027372E /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146A719E4EBD50027372E /* AVOSCloud.framework */; };
+		B85146B219E4EC690027372E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146B119E4EC690027372E /* SystemConfiguration.framework */; };
+		B85146B419E4EC740027372E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146B319E4EC740027372E /* MobileCoreServices.framework */; };
+		B85146B619E4EC7E0027372E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146B519E4EC7E0027372E /* CoreTelephony.framework */; };
+		B85146B819E4EC8A0027372E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146B719E4EC8A0027372E /* CoreLocation.framework */; };
+		B85146BA19E4EC9C0027372E /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146B919E4EC9C0027372E /* libicucore.dylib */; };
+		B85146BC19E4EF5A0027372E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146BB19E4EF5A0027372E /* CFNetwork.framework */; };
+		B85146BE19E4EF8A0027372E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146BD19E4EF8A0027372E /* Security.framework */; };
+		B85146C919E4F7490027372E /* CXAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85146C619E4F7490027372E /* CXAnalytics.mm */; };
+		B85146CA19E4F7490027372E /* CXAvos.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85146C819E4F7490027372E /* CXAvos.mm */; };
 		B887DBC219DF8EEA00A04441 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B887DBC119DF8EEA00A04441 /* Images.xcassets */; };
 		C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
 		C00FD4931938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
@@ -390,6 +400,18 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B85146A719E4EBD50027372E /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		B85146B119E4EC690027372E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		B85146B319E4EC740027372E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		B85146B519E4EC7E0027372E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		B85146B719E4EC8A0027372E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		B85146B919E4EC9C0027372E /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/usr/lib/libicucore.dylib; sourceTree = DEVELOPER_DIR; };
+		B85146BB19E4EF5A0027372E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		B85146BD19E4EF8A0027372E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		B85146C619E4F7490027372E /* CXAnalytics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAnalytics.mm; sourceTree = "<group>"; };
+		B85146C819E4F7490027372E /* CXAvos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAvos.mm; sourceTree = "<group>"; };
+		B85146CC19E501C10027372E /* CXAvos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAvos.h; sourceTree = "<group>"; };
+		B85146CE19E501E60027372E /* CXAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAnalytics.h; sourceTree = "<group>"; };
 		B887DBC119DF8EEA00A04441 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "BeiBei2DXLua iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		C00FD48A1938512100C6382D /* Landscape_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Landscape_png.cpp; sourceTree = "<group>"; };
 		C00FD48B1938512100C6382D /* PlayDisable_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayDisable_png.cpp; sourceTree = "<group>"; };
@@ -482,6 +504,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85146BE19E4EF8A0027372E /* Security.framework in Frameworks */,
+				B85146BC19E4EF5A0027372E /* CFNetwork.framework in Frameworks */,
+				B85146BA19E4EC9C0027372E /* libicucore.dylib in Frameworks */,
+				B85146B819E4EC8A0027372E /* CoreLocation.framework in Frameworks */,
+				B85146B619E4EC7E0027372E /* CoreTelephony.framework in Frameworks */,
+				B85146B419E4EC740027372E /* MobileCoreServices.framework in Frameworks */,
+				B85146B219E4EC690027372E /* SystemConfiguration.framework in Frameworks */,
 				3EEEDB61197107C0006A9FF8 /* MediaPlayer.framework in Frameworks */,
 				C03781F618BF65B100FE4F13 /* libluabindings iOS.a in Frameworks */,
 				15A8A4441834C43700142BE0 /* libchipmunk iOS.a in Frameworks */,
@@ -495,6 +524,7 @@
 				F293B3CD15EB7BE500256477 /* QuartzCore.framework in Frameworks */,
 				F293B3D115EB7BE500256477 /* OpenAL.framework in Frameworks */,
 				F293B3D315EB7BE500256477 /* AudioToolbox.framework in Frameworks */,
+				B85146AE19E4EBD50027372E /* AVOSCloud.framework in Frameworks */,
 				F293B3D515EB7BE500256477 /* AVFoundation.framework in Frameworks */,
 				F293B3D915EB7BE500256477 /* Foundation.framework in Frameworks */,
 				F293B3DB15EB7BE500256477 /* CoreGraphics.framework in Frameworks */,
@@ -662,6 +692,35 @@
 			path = mac;
 			sourceTree = "<group>";
 		};
+		B851469D19E4EBD50027372E /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B851469E19E4EBD50027372E /* avos */,
+			);
+			name = common;
+			path = "../../cocos2d-x/common";
+			sourceTree = "<group>";
+		};
+		B851469E19E4EBD50027372E /* avos */ = {
+			isa = PBXGroup;
+			children = (
+				B85146CE19E501E60027372E /* CXAnalytics.h */,
+				B85146CC19E501C10027372E /* CXAvos.h */,
+				B85146A619E4EBD50027372E /* iOS */,
+			);
+			path = avos;
+			sourceTree = "<group>";
+		};
+		B85146A619E4EBD50027372E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B85146C619E4F7490027372E /* CXAnalytics.mm */,
+				B85146C819E4F7490027372E /* CXAvos.mm */,
+				B85146A719E4EBD50027372E /* AVOSCloud.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		C00FD4891938512100C6382D /* runtime */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +752,7 @@
 		F293B3BD15EB7BE500256477 = {
 			isa = PBXGroup;
 			children = (
+				B851469D19E4EBD50027372E /* common */,
 				C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */,
 				15A8A4031834BDA200142BE0 /* cocos2d_libs.xcodeproj */,
 				5023810617EBBCAC00990C9B /* ios */,
@@ -717,6 +777,13 @@
 		F293B3CB15EB7BE500256477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B85146BD19E4EF8A0027372E /* Security.framework */,
+				B85146BB19E4EF5A0027372E /* CFNetwork.framework */,
+				B85146B919E4EC9C0027372E /* libicucore.dylib */,
+				B85146B719E4EC8A0027372E /* CoreLocation.framework */,
+				B85146B519E4EC7E0027372E /* CoreTelephony.framework */,
+				B85146B319E4EC740027372E /* MobileCoreServices.framework */,
+				B85146B119E4EC690027372E /* SystemConfiguration.framework */,
 				3EEEDB60197107C0006A9FF8 /* MediaPlayer.framework */,
 				3EB51526195187AF006966AA /* CFNetwork.framework */,
 				15A8A4871834C90E00142BE0 /* libcurl.dylib */,
@@ -1093,6 +1160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85146C919E4F7490027372E /* CXAnalytics.mm in Sources */,
 				3EB5156A1952865D006966AA /* once.cc in Sources */,
 				C00FD4981938512100C6382D /* Portrait_png.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
@@ -1101,6 +1169,7 @@
 				C00FD49A1938512100C6382D /* Runtime.cpp in Sources */,
 				3EB515621952865D006966AA /* message_lite.cc in Sources */,
 				C06C3796191A1D1E00617BED /* ConfigParser.cpp in Sources */,
+				B85146CA19E4F7490027372E /* CXAvos.mm in Sources */,
 				3EB515601952865D006966AA /* zero_copy_stream_impl_lite.cc in Sources */,
 				C00FD4961938512100C6382D /* PlayEnable_png.cpp in Sources */,
 				3EB5152C19528284006966AA /* Protos.pb.cc in Sources */,
@@ -1303,12 +1372,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/bmo/Dev/mygithub/BeiBeiDanCiX/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/iOS",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					CC_TARGET_OS_IPHONE,
 					"$(inherited)",
+					"DEBUG_APPSTORE_SERVER=0",
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Classes/protobuf-lite";
 				INFOPLIST_FILE = ios/Info.plist;
@@ -1330,6 +1404,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/bmo/Dev/mygithub/BeiBeiDanCiX/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (

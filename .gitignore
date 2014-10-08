@@ -10,15 +10,18 @@ xcuserdata
 build/*
 DerivedData/*
 
-CocosLuaGame/frameworks/runtime-src/proj.ios_mac/CocosLuaGame.xcodeproj/xcuserdata/*.xcuserdatad
-CocosLuaGame/frameworks/runtime-src/proj.ios_mac/DerivedData
-CocosLuaGame/frameworks/cocos2d-x/build/build
-CocosLuaGame/frameworks/cocos2d-x/cocos/scripting/lua-bindings/proj.ios_mac/build/cocos2d_lua_bindings.build
-CocosLuaGame/frameworks/runtime-src/proj.ios_mac/build/CocosLuaGame.build
-CocosLuaGame/runtime/ios/CocosLuaGame iOS.app.dSYM
-CocosLuaGame/runtime/ios/CocosLuaGame.app
-CocosLuaGame/frameworks/cocos2d-x/plugin/plugins/*/proj.android/bin/*
-CocosLuaGame/frameworks/cocos2d-x/plugin/publish
+BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/build
+BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/BeiBei2DXLua.xcodeproj/xcuserdata/*.xcuserdatad
+
+BeiBei2DXLua/frameworks/cocos2d-x/cocos/scripting/lua-bindings/proj.ios_mac/build
+BeiBei2DXLua/frameworks/cocos2d-x/plugin/plugins/*/proj.android/bin/*
+BeiBei2DXLua/frameworks/cocos2d-x/plugin/publish
+BeiBei2DXLua/frameworks/cocos2d-x/build
+BeiBei2DXLua/frameworks/cocos2d-x/cocos/scripting/lua-bindings/proj.ios_mac/build
+
+BeiBei2DXLua/runtime/android
+BeiBei2DXLua/runtime/ios
+BeiBei2DXLua/runtime/mac
 
 userconf.ini
 

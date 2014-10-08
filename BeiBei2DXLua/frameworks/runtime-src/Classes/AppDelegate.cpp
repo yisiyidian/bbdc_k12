@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 #include "Runtime.h"
 #include "ConfigParser.h"
+#include "lua_cx_common.hpp"
 
 using namespace CocosDenshion;
 
@@ -57,8 +58,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     stack->setXXTEAKeyAndSign("2dxLua", strlen("2dxLua"), "XXTEA", strlen("XXTEA"));
     
     //register custom function
-    //LuaStack* stack = engine->getLuaStack();
-    //register_custom_function(stack->getLuaState());
+    register_all_cx_common(stack->getLuaState());
     
 #if (COCOS2D_DEBUG>0)
     if (startRuntime())

@@ -219,6 +219,8 @@
 		2905FAD718CF143800240AA3 /* lua_cocos2dx_ui_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2905FAD418CF143800240AA3 /* lua_cocos2dx_ui_manual.cpp */; };
 		2905FAD818CF143800240AA3 /* lua_cocos2dx_ui_manual.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2905FAD518CF143800240AA3 /* lua_cocos2dx_ui_manual.hpp */; };
 		2905FAD918CF143800240AA3 /* lua_cocos2dx_ui_manual.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2905FAD518CF143800240AA3 /* lua_cocos2dx_ui_manual.hpp */; };
+		B85146D319E504B20027372E /* lua_cx_common.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B85146D019E503280027372E /* lua_cx_common.hpp */; };
+		B85146D419E504B80027372E /* lua_cx_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85146CF19E503280027372E /* lua_cx_common.cpp */; };
 		B8DE662419DE4D0A00F6536E /* lsqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = B8DE662219DE4D0A00F6536E /* lsqlite3.c */; };
 		B8DE662519DE4D0A00F6536E /* lsqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = B8DE662219DE4D0A00F6536E /* lsqlite3.c */; };
 		B8DE662619DE4D0A00F6536E /* lsqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DE662319DE4D0A00F6536E /* lsqlite3.h */; };
@@ -346,6 +348,8 @@
 		2905FACF18CF12E600240AA3 /* lua_cocos2dx_ui_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_ui_auto.hpp; sourceTree = "<group>"; };
 		2905FAD418CF143800240AA3 /* lua_cocos2dx_ui_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_ui_manual.cpp; sourceTree = "<group>"; };
 		2905FAD518CF143800240AA3 /* lua_cocos2dx_ui_manual.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_ui_manual.hpp; sourceTree = "<group>"; };
+		B85146CF19E503280027372E /* lua_cx_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cx_common.cpp; sourceTree = "<group>"; };
+		B85146D019E503280027372E /* lua_cx_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cx_common.hpp; sourceTree = "<group>"; };
 		B8DE662219DE4D0A00F6536E /* lsqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lsqlite3.c; sourceTree = "<group>"; };
 		B8DE662319DE4D0A00F6536E /* lsqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lsqlite3.h; sourceTree = "<group>"; };
 		B8DE662819DE4D6A00F6536E /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
@@ -401,6 +405,8 @@
 		1AACE74818BC45C200215002 /* auto */ = {
 			isa = PBXGroup;
 			children = (
+				B85146CF19E503280027372E /* lua_cx_common.cpp */,
+				B85146D019E503280027372E /* lua_cx_common.hpp */,
 				156EADF11977A2BA00F53709 /* lua_cocos2dx_experimental_video_auto.cpp */,
 				156EADF21977A2BA00F53709 /* lua_cocos2dx_experimental_video_auto.hpp */,
 				15622967197780DE009C9067 /* lua_cocos2dx_experimental_auto.cpp */,
@@ -642,6 +648,7 @@
 				1AACE81018BC45C200215002 /* lua_extensions.h in Headers */,
 				1AACE82018BC45C200215002 /* LuaOpengl.h in Headers */,
 				1503FAA418DA8A1C00F6518C /* buffer.h in Headers */,
+				B85146D319E504B20027372E /* lua_cx_common.hpp in Headers */,
 				1ABCA26018CD8F7D0087CE3A /* tcp.h in Headers */,
 				1AACE80418BC45C200215002 /* lua_cocos2dx_manual.hpp in Headers */,
 				B8DE662D19DE4D6A00F6536E /* sqlite3.h in Headers */,
@@ -832,6 +839,7 @@
 				2905FAD718CF143800240AA3 /* lua_cocos2dx_ui_manual.cpp in Sources */,
 				1ABCA26A18CD8F7D0087CE3A /* unix.c in Sources */,
 				B8DE662519DE4D0A00F6536E /* lsqlite3.c in Sources */,
+				B85146D419E504B80027372E /* lua_cx_common.cpp in Sources */,
 				1AACE7F218BC45C200215002 /* lua_cocos2dx_coco_studio_manual.cpp in Sources */,
 				1503FAA218DA8A1C00F6518C /* buffer.c in Sources */,
 				1AACE80E18BC45C200215002 /* lua_extensions.c in Sources */,
@@ -1014,7 +1022,7 @@
 					"$(inherited)",
 					CC_TARGET_OS_IPHONE,
 				);
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../common/avos";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../external/lua/luajit/prebuilt/ios",
@@ -1039,7 +1047,7 @@
 					"$(inherited)",
 					CC_TARGET_OS_IPHONE,
 				);
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../common/avos";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../external/lua/luajit/prebuilt/ios",

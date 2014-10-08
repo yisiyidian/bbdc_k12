@@ -32,6 +32,8 @@
 #import "CCEAGLView.h"
 #include "ConfigParser.h"
 
+#import <AVOSCloud/AVOSCloud.h>
+
 @implementation AppController
 
 #pragma mark -
@@ -42,7 +44,22 @@ static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+#ifdef DEBUG
+    #if DEBUG_APPSTORE_SERVER == 0
+        [AVOSCloud setApplicationId:@"9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l"
+                          clientKey:@"8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg"];
+    #else
+        [AVOSCloud setApplicationId:@"eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw"
+                          clientKey:@"9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6"];
+    #endif
+        [AVCloud setProductionMode:NO];
+#else
+        [AVOSCloud setApplicationId:@"eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw"
+                          clientKey:@"9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6"];
+        [AVCloud setProductionMode:YES];
+#endif
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     // Override point for customization after application launch.
     
     ConfigParser::getInstance()->readConfig();
