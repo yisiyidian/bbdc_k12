@@ -83,4 +83,6 @@ function test()
     -- s_logd('start')
     -- s_json.decode(data)
     -- s_logd('end')
+
+    -- cx.CXAnalytics:logEventAndLabel('luatestEvent', 'lualabel')
 end
