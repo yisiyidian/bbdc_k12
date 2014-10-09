@@ -14,11 +14,21 @@ local function getURL()
 end
 
 local function getAppData()
+    local timestamp = os.time()
+
+    -- test server
+    local appId = '9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l'
+    local appKey = '8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg'
+
     if Server.isAppStoreServer then
-        return 'eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw', '9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6'
-    else -- test server
-        return '9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l', '8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg'
+        appId = 'eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw'
+        appKey = '9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6'
     end
+
+    local xmd5 = ''
+    xmd5 = cx.CXUtils:md5(timestamp .. appKey, xmd5)
+    local sign = xmd5 .. ',' .. timestamp
+    return appId, sign
 end
 
 -- api : string
@@ -26,12 +36,12 @@ end
 -- onSucceed(api, result) -- result : json
 -- onFailed(api, code, message)
 function Server.request(api, parameters, onSucceed, onFailed)
-    local appId, appKey = getAppData()
+    local appId, sign = getAppData()
     local xhr = cc.XMLHttpRequest:new()    
     xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
     xhr:open('POST', getURL() .. api)
     xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
-    xhr:setRequestHeader('X-AVOSCloud-Application-Key', appKey)
+    xhr:setRequestHeader('X-AVOSCloud-Request-Sign', sign)
     xhr:setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
 
     --

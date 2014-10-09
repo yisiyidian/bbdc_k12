@@ -42,6 +42,7 @@ LOCAL_SRC_FILES := manual/CCLuaBridge.cpp \
           auto/lua_cocos2dx_experimental_video_auto.cpp \
           ../../../common/avos/Android/CXAnalytics.cpp \
           ../../../common/avos/Android/CXAvos.cpp \
+          ../../../common/CXUtils.cpp \
           ../../../external/lua/tolua/tolua_event.c \
           ../../../external/lua/tolua/tolua_is.c \
           ../../../external/lua/tolua/tolua_map.c \
@@ -67,7 +68,9 @@ LOCAL_SRC_FILES := manual/CCLuaBridge.cpp \
           ../../../external/xxtea/xxtea.cpp
 
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../common/avos \
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../common \
+                    $(LOCAL_PATH)/../../../common/md5 \
+                    $(LOCAL_PATH)/../../../common/avos \
                     $(LOCAL_PATH)/../../../external/lua/tolua \
                     $(LOCAL_PATH)/../../../external/lua/luajit/include \
                     $(LOCAL_PATH)/../../../external/lua \

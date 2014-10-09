@@ -72,6 +72,8 @@
 		B85146C919E4F7490027372E /* CXAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85146C619E4F7490027372E /* CXAnalytics.mm */; };
 		B85146CA19E4F7490027372E /* CXAvos.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85146C819E4F7490027372E /* CXAvos.mm */; };
 		B887DBC219DF8EEA00A04441 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B887DBC119DF8EEA00A04441 /* Images.xcassets */; };
+		B8F6490219E657DE00E55CE0 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490019E657DE00E55CE0 /* md5.c */; };
+		B8F6490519E6580600E55CE0 /* CXUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490319E6580600E55CE0 /* CXUtils.cpp */; };
 		C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
 		C00FD4931938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
 		C00FD4941938512100C6382D /* PlayDisable_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48B1938512100C6382D /* PlayDisable_png.cpp */; };
@@ -413,6 +415,10 @@
 		B85146CC19E501C10027372E /* CXAvos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAvos.h; sourceTree = "<group>"; };
 		B85146CE19E501E60027372E /* CXAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAnalytics.h; sourceTree = "<group>"; };
 		B887DBC119DF8EEA00A04441 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "BeiBei2DXLua iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		B8F6490019E657DE00E55CE0 /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md5.c; sourceTree = "<group>"; };
+		B8F6490119E657DE00E55CE0 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		B8F6490319E6580600E55CE0 /* CXUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXUtils.cpp; sourceTree = "<group>"; };
+		B8F6490419E6580600E55CE0 /* CXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXUtils.h; sourceTree = "<group>"; };
 		C00FD48A1938512100C6382D /* Landscape_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Landscape_png.cpp; sourceTree = "<group>"; };
 		C00FD48B1938512100C6382D /* PlayDisable_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayDisable_png.cpp; sourceTree = "<group>"; };
 		C00FD48C1938512100C6382D /* PlayEnable_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayEnable_png.cpp; sourceTree = "<group>"; };
@@ -696,6 +702,9 @@
 			isa = PBXGroup;
 			children = (
 				B851469E19E4EBD50027372E /* avos */,
+				B8F6490319E6580600E55CE0 /* CXUtils.cpp */,
+				B8F6490419E6580600E55CE0 /* CXUtils.h */,
+				B8F648FF19E657DE00E55CE0 /* md5 */,
 			);
 			name = common;
 			path = "../../cocos2d-x/common";
@@ -719,6 +728,15 @@
 				B85146A719E4EBD50027372E /* AVOSCloud.framework */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		B8F648FF19E657DE00E55CE0 /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				B8F6490019E657DE00E55CE0 /* md5.c */,
+				B8F6490119E657DE00E55CE0 /* md5.h */,
+			);
+			path = md5;
 			sourceTree = "<group>";
 		};
 		C00FD4891938512100C6382D /* runtime */ = {
@@ -1162,11 +1180,13 @@
 			files = (
 				B85146C919E4F7490027372E /* CXAnalytics.mm in Sources */,
 				3EB5156A1952865D006966AA /* once.cc in Sources */,
+				B8F6490519E6580600E55CE0 /* CXUtils.cpp in Sources */,
 				C00FD4981938512100C6382D /* Portrait_png.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
 				C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
 				C00FD49A1938512100C6382D /* Runtime.cpp in Sources */,
+				B8F6490219E657DE00E55CE0 /* md5.c in Sources */,
 				3EB515621952865D006966AA /* message_lite.cc in Sources */,
 				C06C3796191A1D1E00617BED /* ConfigParser.cpp in Sources */,
 				B85146CA19E4F7490027372E /* CXAvos.mm in Sources */,
@@ -1374,7 +1394,7 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/bmo/Dev/mygithub/BeiBeiDanCiX/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/iOS",
+					"$(SRCROOT)/../../cocos2d-x/common/avos/iOS",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1406,7 +1426,7 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/bmo/Dev/mygithub/BeiBeiDanCiX/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/iOS",
+					"$(SRCROOT)/../../cocos2d-x/common/avos/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;

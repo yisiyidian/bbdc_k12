@@ -1022,7 +1022,10 @@
 					"$(inherited)",
 					CC_TARGET_OS_IPHONE,
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../common/avos";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../../common/avos",
+					"$(SRCROOT)/../../../../common",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../external/lua/luajit/prebuilt/ios",
@@ -1047,7 +1050,10 @@
 					"$(inherited)",
 					CC_TARGET_OS_IPHONE,
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../common/avos";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../../common/avos",
+					"$(SRCROOT)/../../../../common",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../external/lua/luajit/prebuilt/ios",
