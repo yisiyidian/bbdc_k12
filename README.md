@@ -9,6 +9,14 @@ BeiBeiDanCiX
 安装命令:
     curl ­L http://install.ohmyz.sh | sh
 
+打开 .zshrc
+    # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+    export COCOS_CONSOLE_ROOT=XXX/cocos2d-x-3.2/tools/cocos2d-console/bin
+    export ANT_ROOT=/usr/local/bin
+    export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/23.0.2
+    export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d
+    export PATH=$ANT_ROOT:$ANDROID_SDK_ROOT:$NDK_ROOT:$COCOS_CONSOLE_ROOT:$PATH
+
 3. android sdk
 安装命令:
     brew install android­sdk

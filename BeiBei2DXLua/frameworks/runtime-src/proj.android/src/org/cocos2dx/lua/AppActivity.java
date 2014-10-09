@@ -58,9 +58,11 @@ import com.avos.avoscloud.AVAnalytics;
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
 
-public class AppActivity extends Cocos2dxActivity{
+public class AppActivity extends Cocos2dxActivity {
 
 	static String hostIPAdress="0.0.0.0";
+	private static Context context = null;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -72,6 +74,9 @@ public class AppActivity extends Cocos2dxActivity{
 		// AVOSCloud.initialize(this, "eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw", "9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6");
 		
 		AVAnalytics.trackAppOpened(getIntent());
+		AVAnalytics.enableCrashReport(this, true);
+		
+		context = getApplicationContext();
 		
 		if(nativeIsLandScape()) {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
@@ -105,25 +110,37 @@ public class AppActivity extends Cocos2dxActivity{
 		}
 		hostIPAdress = getHostIpAddress();
 	}
+
+	protected void onPause() {
+        super.onPause();
+        AVAnalytics.onPause(this);
+    }
+
+    protected void onResume() {
+        super.onResume();
+        AVAnalytics.onResume(this);
+    }
+    
 	private boolean isNetworkConnected() {
-	        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);  
-	        if (cm != null) {  
-	            NetworkInfo networkInfo = cm.getActiveNetworkInfo();  
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		if (cm != null) {
+			NetworkInfo networkInfo = cm.getActiveNetworkInfo();
 			ArrayList networkTypes = new ArrayList();
 			networkTypes.add(ConnectivityManager.TYPE_WIFI);
 			try {
-				networkTypes.add(ConnectivityManager.class.getDeclaredField("TYPE_ETHERNET").getInt(null));
+				networkTypes.add(ConnectivityManager.class.getDeclaredField(
+						"TYPE_ETHERNET").getInt(null));
 			} catch (NoSuchFieldException nsfe) {
-			}
-			catch (IllegalAccessException iae) {
+			} catch (IllegalAccessException iae) {
 				throw new RuntimeException(iae);
 			}
-			if (networkInfo != null && networkTypes.contains(networkInfo.getType())) {
-	                return true;  
-	            }  
-	        }  
-	        return false;  
-	    } 
+			if (networkInfo != null
+					&& networkTypes.contains(networkInfo.getType())) {
+				return true;
+			}
+		}
+		return false;
+	}
 	 
 	public String getHostIpAddress() {
 		WifiManager wifiMgr = (WifiManager) getSystemService(WIFI_SERVICE);
@@ -143,6 +160,12 @@ public class AppActivity extends Cocos2dxActivity{
 		}
 		return null;
 	}
+	
+	public static void onEvent(String eventName, String  tag) {  
+		if (context != null) {
+			AVAnalytics.onEvent(context, eventName, tag);
+		}
+	} 
 	
 	private static native boolean nativeIsLandScape();
 	private static native boolean nativeIsDebug();
