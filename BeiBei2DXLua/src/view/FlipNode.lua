@@ -8,7 +8,6 @@ local FlipNode = class("FlipNode", function()
 end)
 
 
-
 function FlipNode.create(back, character, x, y)
     local main = FlipNode.new()
     main:setContentSize(120,120)

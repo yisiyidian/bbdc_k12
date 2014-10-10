@@ -41,13 +41,9 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     button_pronounce = ccui.Button:create()
     button_pronounce:loadTextures("image/button/soundButton1.png", "", "")
     button_pronounce:addTouchEventListener(pronounce)
-    
-    button_wordname = ccui.Button:create()
-    button_wordname:setTitleText(wordname)
-    button_wordname:setTitleFontSize(80)
-    button_wordname:setTitleColor(cc.c4b(0,0,0,255))
-    --button_wordname:setScale(math.min(400,button_wordname:getContentSize().width)/button_wordname:getContentSize().width)
-    button_wordname:addTouchEventListener(pronounce)
+        
+    button_wordname = cc.Label:createWithSystemFont(wordname,"",80)
+    button_wordname:setColor(cc.c4b(0,0,0,255))
     
     button_country = ccui.Button:create()
     button_country:loadTextures("image/button/USButton1.png", "", "")
@@ -55,21 +51,12 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     button_country:setTitleFontSize(30)
     button_country:addTouchEventListener(changeCountry)
     
-    button_soundmark_us = ccui.Button:create()
-    button_soundmark_us:setTitleText(soundmarkus)
-    button_soundmark_us:setTitleFontSize(40)
-    button_soundmark_us:setTitleColor(cc.c4b(0,0,0,255))
-    --button_soundmark_us:setScale(math.min(400,button_soundmark_us:getContentSize().width)/button_soundmark_us:getContentSize().width)
-    button_soundmark_us:addTouchEventListener(changeCountry)
+    button_soundmark_us = cc.Label:createWithSystemFont(soundmarkus,"",40)
+    button_soundmark_us:setColor(cc.c4b(0,0,0,255))
     
-    button_soundmark_en = ccui.Button:create()
-    
-    button_soundmark_en:setTitleText(soundmarken)
-    button_soundmark_en:setTitleFontSize(40)
-    button_soundmark_en:setTitleColor(cc.c4b(0,0,0,255))
-    --button_soundmark_en:setScale(math.min(400,button_soundmark_en:getContentSize().width)/button_soundmark_en:getContentSize().width)
-    button_soundmark_en:addTouchEventListener(changeCountry)
-   
+    button_soundmark_en = cc.Label:createWithSystemFont(soundmarken,"",40)
+    button_soundmark_en:setColor(cc.c4b(0,0,0,255))
+
     -- handle position
     local max_text_length = math.max(button_wordname:getContentSize().width, button_soundmark_en:getContentSize().width, button_soundmark_us:getContentSize().width)
     local total_length = button_pronounce:getContentSize().width + max_text_length + 10
@@ -91,7 +78,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     
     button_soundmark_en:setVisible(false)
 
-    return main
+    return main    
 end
 
 
