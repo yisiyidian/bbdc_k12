@@ -13,6 +13,14 @@ function FlipMat.create(word, m ,n)
     main:setContentSize(640,640)
     main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
+    
+    -- block function
+    main.success = function()
+        print("right")
+    end
+    main.fail = function()
+        print("wrong")
+    end
 
     -- system function
     math.randomseed(os.time())
@@ -54,7 +62,8 @@ function FlipMat.create(word, m ,n)
     local bottom = left
     
     local main_logic_mat = RandomMat(main_m, main_n)
-    local randomStartIndex = math.random(1, main_m*main_n)
+    local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
+    print("start.."..randomStartIndex)
     
     local main_mat = {}
     for i = 1, main_m do
@@ -64,6 +73,7 @@ function FlipMat.create(word, m ,n)
             local node
             if diff >= 0 and diff < string.len(main_word) then
                 node = FlipNode.create("coconut_light", string.sub(main_word,diff+1,diff+1), i, j)
+                print(i..".."..j)
             else
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 node = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
@@ -237,12 +247,16 @@ function FlipMat.create(word, m ,n)
                 node.win()
             end
             selectStack = {}
+            
+            main.success()
         else
             for i = 1, #selectStack do
                 local node = selectStack[i]
                 node.removeSelectStyle()
             end
             selectStack = {}
+            
+            main.fail()
         end
     end
 

@@ -57,7 +57,7 @@ function StudyLayer.create()
     
     local size_big = cloud_down:getContentSize()
 
-    local progressBar = ProgressBar.create(2,2)
+    local progressBar = ProgressBar.create(#s_CorePlayManager.wordList,s_CorePlayManager.currentWordIndex)
     progressBar:setPositionY(1038)
     layer:addChild(progressBar)
 
@@ -90,9 +90,25 @@ function StudyLayer.create()
     button_detail:addTouchEventListener(button_detail_clicked)
     layer:addChild(button_detail)
     
-    local mat = FlipMat.create("apple",4,4)
+    local success = function()
+        if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
+            s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+            s_CorePlayManager.enterStudyLayer()
+        else
+            print("pass all word in this level")
+        end
+    end
+
+    local fail = function()
+        print("new wrong")
+    end
+    
+    local mat = FlipMat.create(wordName,4,4)
     mat:setPosition(size_big.width/2*3, 100)
     cloud_down:addChild(mat)
+    
+    mat.success = success
+    mat.fail = fail
     
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
