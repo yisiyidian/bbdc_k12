@@ -8,6 +8,7 @@ local FlipMat = require("view.FlipMat")
 local SoundMark = require("view.SoundMark")
 local WordDetailInfo = require("view.WordDetailInfo")
 local StudyAlter = require("view.StudyAlter")
+local TestAlter = require("view.TestAlter")
 
 
 local StudyLayer = class("StudyLayer", function ()
@@ -162,7 +163,8 @@ function StudyLayer.create()
     cloud_down:addChild(button_changeview)
     
     
-    local tmp = StudyAlter.create()
+    --local tmp = TestAlter.createFromFirstAlter()
+    local tmp = TestAlter.createFromSecondAlter()
     tmp:setPosition(size.width/2, size.height/2)
     layer:addChild(tmp)
     

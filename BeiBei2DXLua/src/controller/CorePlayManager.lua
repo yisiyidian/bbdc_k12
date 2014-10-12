@@ -7,7 +7,7 @@ local CorePlayManager = {}
 
 CorePlayManager.dictionary = {}
 CorePlayManager.currentWordIndex = 1
-CorePlayManager.wordList = {"apple","pear","water"}
+CorePlayManager.wordList = {"apple","pear","water","day"}
 CorePlayManager.currentWord = nil
 
 function CorePlayManager.create()
