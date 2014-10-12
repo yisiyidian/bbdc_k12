@@ -21,6 +21,11 @@ function FlipMat.create(word, m ,n)
     main.fail = function()
         print("wrong")
     end
+    
+    main.globalLock = false
+    main.rightLock = false
+    main.wrongLock = false
+    
 
     -- system function
     math.randomseed(os.time())
@@ -66,6 +71,7 @@ function FlipMat.create(word, m ,n)
     print("start.."..randomStartIndex)
     
     local main_mat = {}
+    local firstFlipNode = nil
     for i = 1, main_m do
         main_mat[i] = {}
         for j = 1, main_n do
@@ -73,7 +79,6 @@ function FlipMat.create(word, m ,n)
             local node
             if diff >= 0 and diff < string.len(main_word) then
                 node = FlipNode.create("coconut_light", string.sub(main_word,diff+1,diff+1), i, j)
-                print(i..".."..j)
             else
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 node = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
@@ -81,6 +86,17 @@ function FlipMat.create(word, m ,n)
             node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
             main:addChild(node)
             main_mat[i][j] = node
+            
+            if diff == 0 then
+                firstFlipNode = node
+            
+                firstFlipNode.firstStyle()
+                
+                local action1 = cc.ScaleTo:create(0.5,1.05)
+                local action2 = cc.ScaleTo:create(0.5,0.95)
+                local action3 = cc.Sequence:create(action1,action2)
+                firstFlipNode:runAction(cc.RepeatForever:create(action3))
+            end
         end
     end
     
@@ -92,9 +108,6 @@ function FlipMat.create(word, m ,n)
                 local node_position = cc.p(node:getPosition())
                 local node_size = node:getContentSize()
                 
-                
-                --if location.x >= node_position.x - node_size.width/2 and location.x <= node_position.x + node_size.width/2 
-                --and location.y >= node_position.y - node_size.height/2 and location.y <= node_position.y + node_size.height/2 then
                 if cc.rectContainsPoint(node:getBoundingBox(), location) then
                     current_node_x = i
                     current_node_y = j
@@ -122,6 +135,10 @@ function FlipMat.create(word, m ,n)
     
     -- handing touch events
     onTouchBegan = function(touch, event)
+        if globalLock then
+            return true
+        end
+        
         local location = main:convertToNodeSpace(touch:getLocation())
         
         startTouchLocation = location
@@ -145,6 +162,10 @@ function FlipMat.create(word, m ,n)
     end
 
     onTouchMoved = function(touch, event)
+        if globalLock then
+            return
+        end
+    
         local length_gap = 3.0
 
         local location = main:convertToNodeSpace(touch:getLocation())
@@ -166,6 +187,10 @@ function FlipMat.create(word, m ,n)
     end
     
     fakeTouchMoved = function(location)
+        if globalLock then
+            return
+        end
+    
         checkTouchLocation(location)
 
         if startAtNode then
@@ -234,6 +259,10 @@ function FlipMat.create(word, m ,n)
     end
 
     onTouchEnded = function(touch, event)
+        if globalLock then
+            return
+        end
+    
         local location = main:convertToNodeSpace(touch:getLocation())
 
         local selectWord = ""
@@ -242,6 +271,10 @@ function FlipMat.create(word, m ,n)
         end
 
         if selectWord == main_word then
+            if main.rightLock then
+                globalLock = true
+            end
+        
             for i = 1, #selectStack do
                 local node = selectStack[i]
                 node.win()
@@ -250,11 +283,17 @@ function FlipMat.create(word, m ,n)
             
             main.success()
         else
+            if main.wrongLock then
+                globalLock = true
+            end
+        
             for i = 1, #selectStack do
                 local node = selectStack[i]
                 node.removeSelectStyle()
             end
             selectStack = {}
+            
+            firstFlipNode.firstStyle()
             
             main.fail()
         end

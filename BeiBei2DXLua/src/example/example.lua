@@ -3,9 +3,6 @@ require "Cocos2d"
 local DataExample = require('example.DataExample')
 require("common.global")
 
--- test layers
-local StudyLayer = require('view.StudyLayer')
-local TestLayer = require('view.TestLayer')
 
 function test()
     --local testLayer = TestLayer.create()
@@ -14,6 +11,7 @@ function test()
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
+    --s_CorePlayManager.enterTestLayer()
     s_CorePlayManager.enterStudyLayer()
 
     --logd('testSpine')

@@ -6,6 +6,8 @@ require("common.global")
 local ProgressBar = require("view.ProgressBar")
 local FlipMat = require("view.FlipMat")
 local SoundMark = require("view.SoundMark")
+local WordDetailInfo = require("view.WordDetailInfo")
+local StudyAlter = require("view.StudyAlter")
 
 
 local StudyLayer = class("StudyLayer", function ()
@@ -30,6 +32,10 @@ function StudyLayer.create()
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), size.width, size.height)    
     layer:addChild(backColor)
+    
+    local wordDetailInfo = WordDetailInfo.create(word)
+    wordDetailInfo:setPosition(size.width/2, 0)
+    layer:addChild(wordDetailInfo)
     
     
     local button_changeview
@@ -60,6 +66,12 @@ function StudyLayer.create()
     local progressBar = ProgressBar.create(#s_CorePlayManager.wordList,s_CorePlayManager.currentWordIndex)
     progressBar:setPositionY(1038)
     layer:addChild(progressBar)
+
+    local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
+    --label_wordmeaning:setAnchorPoint(0,1)
+    label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
+    label_wordmeaningSmall:setPosition(size.width/2, 896)
+    layer:addChild(label_wordmeaningSmall)
 
     local soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
     soundMark:setPosition(size_big.width/2, 600)
@@ -109,6 +121,8 @@ function StudyLayer.create()
     
     mat.success = success
     mat.fail = fail
+    mat.rightLock = true
+    mat.wrongLock = false
     
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -147,6 +161,10 @@ function StudyLayer.create()
     button_changeview:addTouchEventListener(button_changeview_clicked)
     cloud_down:addChild(button_changeview)
     
+    
+    local tmp = StudyAlter.create()
+    tmp:setPosition(size.width/2, size.height/2)
+    layer:addChild(tmp)
     
 --
 --    local onTouchBegan = function(touch, event)

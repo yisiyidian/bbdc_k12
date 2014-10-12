@@ -22,21 +22,24 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local button_soundmark_us
 
     local changeCountry = function()
-        if button_country:getTitleText() == "US" then
-            button_country:setTitleText("EN")
-            button_soundmark_en:setVisible(true)
-            button_soundmark_us:setVisible(false)
-        else
-            button_country:setTitleText("US")
-            button_soundmark_en:setVisible(false)
-            button_soundmark_us:setVisible(true)
+        if eventType == ccui.TouchEventType.began then
+            if button_country:getTitleText() == "US" then
+                button_country:setTitleText("EN")
+                button_soundmark_en:setVisible(true)
+                button_soundmark_us:setVisible(false)
+            else
+                button_country:setTitleText("US")
+                button_soundmark_en:setVisible(false)
+                button_soundmark_us:setVisible(true)
+            end
         end
     end
     
     local pronounce = function()
-    	print("pronounce")
+        if eventType == ccui.TouchEventType.began then
+    	   print("pronounce")
+    	end
     end
-
 
     button_pronounce = ccui.Button:create()
     button_pronounce:loadTextures("image/button/soundButton1.png", "", "")

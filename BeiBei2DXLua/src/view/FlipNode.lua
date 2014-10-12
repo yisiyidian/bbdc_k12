@@ -36,6 +36,9 @@ function FlipNode.create(back, character, x, y)
     main.main_character_label:setPosition(mainSize.width/2, mainSize.height/2)
     main:addChild(main.main_character_label)
 
+    main.firstStyle = function()
+        main.main_back:addAnimation(0, 'select', false)
+    end
 
     main.addSelectStyle = function()
         main.hasSelected = true
