@@ -38,6 +38,23 @@ showGirlAndStar = function()
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
     
+    -- add star
+    local showStar = function()
+        local stars = sp.SkeletonAnimation:create("res/spine/star_yellow_3_public.json", "res/spine/star_yellow_3_public.atlas", 1)
+        stars:setPosition(back:getContentSize().width/2, 700)
+        back:addChild(stars)
+        
+        --stars:addAnimation(0, 'animation_1_star', false)
+        --stars:addAnimation(0, 'animation_2_star', false)
+        stars:addAnimation(0, 'animation_3_star', false)
+        --stars:addAnimation(0, 'animation_no_star', false)
+    end
+    
+    local action1 = cc.DelayTime:create(0.5)
+    local action2 = cc.CallFunc:create(showStar)
+    local action3 = cc.Sequence:create(action1, action2)
+    back:runAction(action3)
+    
     local button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
         
