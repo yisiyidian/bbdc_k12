@@ -57,7 +57,7 @@ function TestLayer.create()
 
     local size_big = cloud_down:getContentSize()
 
-    local progressBar = ProgressBar.create(#s_CorePlayManager.wordList,s_CorePlayManager.currentWordIndex)
+    local progressBar = ProgressBar.create(true)
     progressBar:setPositionY(1038)
     layer:addChild(progressBar)
     
@@ -67,6 +67,9 @@ function TestLayer.create()
     layer:addChild(label_wordmeaningSmall)
 
     local success = function()
+        s_CorePlayManager.answerRight()
+        progressBar.rightStyle()
+    
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
         showAnswerStateBack:setPosition(-size.width/2, 768)
         layer:addChild(showAnswerStateBack)
@@ -103,6 +106,8 @@ function TestLayer.create()
     end
 
     local fail = function()
+        progressBar.wrongStyle()
+        
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
         showAnswerStateBack:setPosition(size.width/2*3, 768)
         layer:addChild(showAnswerStateBack)

@@ -65,7 +65,7 @@ function StudyLayer.create()
     
     local size_big = cloud_down:getContentSize()
 
-    local progressBar = ProgressBar.create(#s_CorePlayManager.wordList,s_CorePlayManager.currentWordIndex)
+    local progressBar = ProgressBar.create(false)
     progressBar:setPositionY(1038)
     layer:addChild(progressBar)
 
@@ -104,6 +104,8 @@ function StudyLayer.create()
     layer:addChild(button_detail)
     
     local success = function()
+        progressBar.rightStyle()
+    
         local changeLayer = function()
             if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
                 s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1

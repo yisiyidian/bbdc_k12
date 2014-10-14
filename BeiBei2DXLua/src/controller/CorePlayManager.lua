@@ -9,6 +9,8 @@ CorePlayManager.dictionary = {}
 CorePlayManager.currentWordIndex = 1
 CorePlayManager.wordList = {"apple","pear","water","day"}
 CorePlayManager.currentWord = nil
+CorePlayManager.answerStateRecord = {}
+CorePlayManager.wordProficiency = {}
 
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
@@ -18,6 +20,8 @@ end
 function CorePlayManager.loadConfiguration()
     for i = 1, #CorePlayManager.wordList do
         CorePlayManager.dictionary[i] = s_WordPool[CorePlayManager.wordList[i]]
+        CorePlayManager.answerStateRecord[i] = 0
+        CorePlayManager.wordProficiency[i] = 1
     end
 end
 
@@ -39,6 +43,10 @@ end
 
 function CorePlayManager.leaveTestLayer()
     s_logd("leave")
+end
+
+function CorePlayManager.answerRight()
+    CorePlayManager.answerStateRecord[CorePlayManager.currentWordIndex] = 1
 end
 
 

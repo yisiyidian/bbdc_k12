@@ -66,10 +66,7 @@ function FlipMat.create(word, m ,n)
     
     local main_logic_mat = RandomMat(main_m, main_n)
     local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
-<<<<<<< HEAD
-    s_logd("start.."..randomStartIndex)
-=======
->>>>>>> add donot konw button and alter animation
+
     
     local main_mat = {}
     local firstFlipNode = nil

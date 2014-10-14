@@ -1,0 +1,43 @@
+{
+"skeleton": {
+	"hash": "5z74qin+D6B5XZmfThDI2FW5x30",
+	"spine": "2.0.22",
+	"width": 49,
+	"height": 35,
+	"images": "/Users/wangsiyu/Desktop/ /单词游戏/第一关/学习测试界面动画/进度条错误动画"
+},
+"bones": [
+	{ "name": "root", "color": "9c9c9c00" }
+],
+"slots": [
+	{ "name": "xuexiceshi_jindutiao_wrong", "bone": "root", "attachment": "xuexiceshi_jindutiao_wrong" }
+],
+"skins": {
+	"default": {
+		"xuexiceshi_jindutiao_wrong": {
+			"xuexiceshi_jindutiao_wrong": { "width": 49, "height": 35 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"xuexiceshi_jindutiao_wrong": {
+				"color": [
+					{ "time": 0.2333, "color": "ffffffff" },
+					{ "time": 0.4666, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{ "time": 0, "x": 0.111, "y": 0.111 },
+					{ "time": 0.2333, "x": 1, "y": 1 },
+					{ "time": 0.4666, "x": 2.391, "y": 2.391 }
+				]
+			}
+		}
+	}
+}
+}
