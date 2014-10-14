@@ -13,8 +13,8 @@ function test()
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
-    s_CorePlayManager.enterTestLayer()
-    --s_CorePlayManager.enterStudyLayer()
+    --s_CorePlayManager.enterTestLayer()
+    s_CorePlayManager.enterStudyLayer()
 
     --logd('testSpine')
     --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)

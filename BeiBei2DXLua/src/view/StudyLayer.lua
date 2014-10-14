@@ -17,6 +17,8 @@ end)
 
 
 function StudyLayer.create()
+    s_SCENE.touchEventBlockLayer.unlockTouch()
+
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     --local scheduler = cc.Director:getInstance():getScheduler()
 
