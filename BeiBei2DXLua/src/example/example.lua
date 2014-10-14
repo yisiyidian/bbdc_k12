@@ -60,7 +60,10 @@ function test()
    s_funcLogin('yehanjie1', '111111', onSuccexed, onFailed)
    -- s_funcSignin('_test000', '111111', onSucceed, onFailed)
 
-
+   -- local LogInSignUpLayer = require('view.LogInSignUpLayer')
+   -- local node = LogInSignUpLayer.create()
+   -- s_SCENE.gameLayer:addChild(node)
+   
 --    local sqlite3 = require("lsqlite3")
 --    local db = sqlite3.open_memory()
 --

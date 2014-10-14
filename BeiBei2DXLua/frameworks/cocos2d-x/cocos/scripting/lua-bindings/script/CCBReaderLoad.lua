@@ -6,6 +6,7 @@ function CCBReaderLoad(strFilePath,proxy,owner)
     end
 
     local ccbReader = proxy:createCCBReader()
+    ccbReader:setCCBRootPath('res/ccb/')
     local node      = ccbReader:load(strFilePath)
     local rootName  = "" 
     --owner set in readCCBFromFile is proxy
