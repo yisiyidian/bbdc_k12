@@ -50,6 +50,13 @@ showGirlAndStar = function()
         --stars:addAnimation(0, 'animation_no_star', false)
     end
     
+    
+    local girl = sp.SkeletonAnimation:create("res/spine/bb_unhappy_public.json", "res/spine/bb_unhappy_public.atlas", 1)
+    girl:setPosition(50,100)
+    back:addChild(girl)      
+    girl:addAnimation(0, 'animation', true)
+    
+    
     local action1 = cc.DelayTime:create(0.5)
     local action2 = cc.CallFunc:create(showStar)
     local action3 = cc.Sequence:create(action1, action2)
