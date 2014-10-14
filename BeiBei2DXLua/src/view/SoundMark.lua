@@ -21,7 +21,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local button_soundmark_en
     local button_soundmark_us
 
-    local changeCountry = function()
+    local changeCountry = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             if button_country:getTitleText() == "US" then
                 button_country:setTitleText("EN")
@@ -35,7 +35,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
         end
     end
     
-    local pronounce = function()
+    local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
     	   s_logd("pronounce")
     	end

@@ -18,6 +18,7 @@ end)
 
 function StudyLayer.create()
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
+    --local scheduler = cc.Director:getInstance():getScheduler()
 
     local layer = StudyLayer.new()
 
@@ -69,7 +70,6 @@ function StudyLayer.create()
     layer:addChild(progressBar)
 
     local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
-    --label_wordmeaning:setAnchorPoint(0,1)
     label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
     label_wordmeaningSmall:setPosition(size.width/2, 896)
     layer:addChild(label_wordmeaningSmall)
@@ -104,12 +104,21 @@ function StudyLayer.create()
     layer:addChild(button_detail)
     
     local success = function()
-        if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
-            s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
-            s_CorePlayManager.enterStudyLayer()
-        else
-            s_logd("pass all word in this level")
+        local changeLayer = function()
+            if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
+                s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+                s_CorePlayManager.enterStudyLayer()
+            else
+                local alter = StudyAlter.create()
+                alter:setPosition(size.width/2, size.height/2)
+                layer:addChild(alter)
+            end
         end
+ 
+        local action1 = cc.DelayTime:create(1)
+        local action2 = cc.CallFunc:create(changeLayer)
+        local action3 = cc.Sequence:create(action1,action2)
+        layer:runAction(action3)    
     end
 
     local fail = function()
@@ -163,10 +172,10 @@ function StudyLayer.create()
     cloud_down:addChild(button_changeview)
     
     
-    --local tmp = TestAlter.createFromFirstAlter()
-    local tmp = TestAlter.createFromSecondAlter()
-    tmp:setPosition(size.width/2, size.height/2)
-    layer:addChild(tmp)
+--    --local tmp = TestAlter.createFromFirstAlter()
+--    local tmp = TestAlter.createFromSecondAlter()
+--    tmp:setPosition(size.width/2, size.height/2)
+--    layer:addChild(tmp)
     
 --
 --    local onTouchBegan = function(touch, event)

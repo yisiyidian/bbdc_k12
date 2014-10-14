@@ -19,7 +19,6 @@ function CorePlayManager.loadConfiguration()
     for i = 1, #CorePlayManager.wordList do
         CorePlayManager.dictionary[i] = s_WordPool[CorePlayManager.wordList[i]]
     end
-    --CorePlayManager.currentWord = CorePlayManager.dictionary[CorePlayManager.currentWordIndex]
 end
 
 function CorePlayManager.enterStudyLayer()
