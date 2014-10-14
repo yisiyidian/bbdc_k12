@@ -34,7 +34,7 @@ function test()
 --
 --    local sqlite3 = require("lsqlite3")
 --    local dbPath = cc.FileUtils:getInstance():getWritablePath().."local.sqlite"
---    print(cc.FileUtils:getInstance():getWritablePath())
+--    s_logd(cc.FileUtils:getInstance():getWritablePath())
 --    local db = sqlite3.open(dbPath)
 --
 --

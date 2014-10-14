@@ -36,7 +36,7 @@ function RandomMat(m, n)
             for j = 1, n do
                 tmp = tmp .. main_mat[i][j] .." "
             end
-            print(tmp)
+            s_logd(tmp)
         end
     end
 

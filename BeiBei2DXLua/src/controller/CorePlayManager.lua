@@ -29,7 +29,7 @@ function CorePlayManager.enterStudyLayer()
 end
 
 function CorePlayManager.leaveStudyLayer()
-    print("leave")
+    s_logd("leave")
 end
 
 function CorePlayManager.enterTestLayer()
@@ -39,7 +39,7 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    print("leave")
+    s_logd("leave")
 end
 
 

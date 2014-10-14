@@ -16,10 +16,10 @@ function FlipMat.create(word, m ,n)
     
     -- block function
     main.success = function()
-        print("right")
+        s_logd("right")
     end
     main.fail = function()
-        print("wrong")
+        s_logd("wrong")
     end
     
     main.globalLock = false
@@ -68,7 +68,7 @@ function FlipMat.create(word, m ,n)
     
     local main_logic_mat = RandomMat(main_m, main_n)
     local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
-    print("start.."..randomStartIndex)
+    s_logd("start.."..randomStartIndex)
     
     local main_mat = {}
     local firstFlipNode = nil

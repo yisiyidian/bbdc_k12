@@ -108,12 +108,12 @@ function StudyLayer.create()
             s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
             s_CorePlayManager.enterStudyLayer()
         else
-            print("pass all word in this level")
+            s_logd("pass all word in this level")
         end
     end
 
     local fail = function()
-        print("new wrong")
+        s_logd("new wrong")
     end
     
     local mat = FlipMat.create(wordName,4,4)
@@ -170,17 +170,17 @@ function StudyLayer.create()
     
 --
 --    local onTouchBegan = function(touch, event)
---        print("touch began")
+--        s_logd("touch began")
 --        --s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
 --        --s_CorePlayManager.enterStudyLayer()
 --    end
 --    
 --    local onTouchMoved = function(touch, event)
---        print("touch moved")
+--        s_logd("touch moved")
 --    end
 --    
 --    local onTouchEnded = function(touch, event)
---        print("touch ended")
+--        s_logd("touch ended")
 --    end
 --    
 --    local listener = cc.EventListenerTouchOneByOne:create()

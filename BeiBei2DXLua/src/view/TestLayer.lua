@@ -83,7 +83,7 @@ function TestLayer.create()
             s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
             s_CorePlayManager.enterTestLayer()
         else
-            print("pass all word in this level")
+            s_logd("pass all word in this level")
         end
     end
 

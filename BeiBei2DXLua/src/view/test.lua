@@ -19,33 +19,33 @@ function TestLayer.create()
     sub_colorBlock:ignoreAnchorPointForPosition(false)
     colorBlock:addChild(sub_colorBlock)
 
-    print(main:getContentSize().height)
-    print(main:getContentSize().width)
-    print(main:getPosition())
-    print(main:getAnchorPoint().x)
-    print(main:getAnchorPoint().y)
+    s_logd(main:getContentSize().height)
+    s_logd(main:getContentSize().width)
+    s_logd(main:getPosition())
+    s_logd(main:getAnchorPoint().x)
+    s_logd(main:getAnchorPoint().y)
     
-    print(colorBlock:getContentSize().height) 
-    print(colorBlock:getContentSize().width)
-    print(colorBlock:getPosition())
-    print(colorBlock:getAnchorPoint().x)
-    print(colorBlock:getAnchorPoint().y)
+    s_logd(colorBlock:getContentSize().height) 
+    s_logd(colorBlock:getContentSize().width)
+    s_logd(colorBlock:getPosition())
+    s_logd(colorBlock:getAnchorPoint().x)
+    s_logd(colorBlock:getAnchorPoint().y)
     
-    print(sub_colorBlock:getContentSize().height) 
-    print(sub_colorBlock:getContentSize().width)
-    print(sub_colorBlock:getPosition())
-    print(sub_colorBlock:getAnchorPoint().x)
-    print(sub_colorBlock:getAnchorPoint().y)
+    s_logd(sub_colorBlock:getContentSize().height) 
+    s_logd(sub_colorBlock:getContentSize().width)
+    s_logd(sub_colorBlock:getPosition())
+    s_logd(sub_colorBlock:getAnchorPoint().x)
+    s_logd(sub_colorBlock:getAnchorPoint().y)
     
     onTouchBegan1 = function(touch, event)
-        print("touch 1")
+        s_logd("touch 1")
 
         -- CCTOUCHBEGAN event must return true
         return true
     end
     
     onTouchBegan2 = function(touch, event)
-        print("touch 2")
+        s_logd("touch 2")
 
         -- CCTOUCHBEGAN event must return true
         return true

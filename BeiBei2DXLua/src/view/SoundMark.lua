@@ -37,7 +37,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     
     local pronounce = function()
         if eventType == ccui.TouchEventType.began then
-    	   print("pronounce")
+    	   s_logd("pronounce")
     	end
     end
 

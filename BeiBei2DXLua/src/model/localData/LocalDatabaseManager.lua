@@ -21,7 +21,7 @@ function Manager.open()
     local sqlite3 = require("sqlite3")
     local databasePath = cc.FileUtils:getInstance():getWritablePath().."localDB.sqlite"
     Manager.database = sqlite3.open(databasePath)
-    print(databasePath)
+    s_logd(databasePath)
     
     -- check version update
     if s_APP_VERSION == 151 then
