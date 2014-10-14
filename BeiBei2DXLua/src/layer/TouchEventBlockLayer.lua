@@ -14,16 +14,16 @@ function TouchEventBlockLayer.create()
     local layer = TouchEventBlockLayer.new()
     
     local onTouchBegan = function(touch, event)
-        s_logd("touch began on block layer")
+        --s_logd("touch began on block layer")
         return true
     end
     
     local onTouchMoved = function(touch, event)
-        s_logd("touch moved on block layer")
+        --s_logd("touch moved on block layer")
     end
     
     local onTouchEnded = function(touch, event)
-        s_logd("touch ended on block layer")
+        --s_logd("touch ended on block layer")
     end
     
     listener = cc.EventListenerTouchOneByOne:create()

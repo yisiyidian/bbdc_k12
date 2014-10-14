@@ -15,6 +15,8 @@ end)
 
 
 function TestLayer.create()
+    s_SCENE.touchEventBlockLayer.unlockTouch()
+
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = TestLayer.new()
@@ -36,6 +38,8 @@ function TestLayer.create()
     local button_changeview_clicked
     local button_detail
     local button_detail_clicked
+    
+    local playOver = false
 
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
@@ -67,6 +71,9 @@ function TestLayer.create()
     layer:addChild(label_wordmeaningSmall)
 
     local success = function()
+        playOver = true
+        s_SCENE.touchEventBlockLayer.lockTouch()
+        
         s_CorePlayManager.answerRight()
         progressBar.rightStyle()
     
@@ -105,7 +112,13 @@ function TestLayer.create()
         layer:runAction(action3) 
     end
 
-    local fail = function()
+    local fail = function()   
+    
+    end
+    
+    local timeOut = function()
+        s_SCENE.touchEventBlockLayer.lockTouch()
+    
         progressBar.wrongStyle()
         
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
@@ -152,7 +165,7 @@ function TestLayer.create()
     mat.success = success
     mat.fail = fail
     mat.rightLock = true
-    mat.wrongLock = true
+    mat.wrongLock = false
 
     local progress_back = cc.Sprite:create("image/progress/progressB1.png")
     progress_back:setPosition(size.width/2, 100)
@@ -176,7 +189,7 @@ function TestLayer.create()
     
     local button_donotknow_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            fail()   
+            timeOut()   
         end
     end
     
@@ -188,30 +201,32 @@ function TestLayer.create()
 --        time = time + 0.05
 --        print(time)
     
-        local loss = 5.0/(15+0.5*string.len(s_CorePlayManager.currentWord.wordName))
-        --local loss = 5.0/5
-        local current_percentage = progress:getPercentage()
-        current_percentage = current_percentage - loss
-        if current_percentage > 0 then
-            progress:setPercentage(current_percentage)
-        else
-            progress:setPercentage(0)
-            if mat.globalLock == false then
-                mat.globalLock = true
-                fail()
+        if playOver == false then
+            local loss = 5.0/(15+0.5*string.len(s_CorePlayManager.currentWord.wordName))
+            --local loss = 5.0/5
+            local current_percentage = progress:getPercentage()
+            current_percentage = current_percentage - loss
+            if current_percentage > 0 then
+                progress:setPercentage(current_percentage)
+            else
+                progress:setPercentage(0)
+                if mat.globalLock == false then
+                    mat.globalLock = true
+                    timeOut()
+                end
             end
-        end
-        
-        if current_percentage <= 90 then
-            if button_donotknow == nil then
-                button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
-                button_donotknow:setAnchorPoint(1,0.5)
-                button_donotknow:setPosition(size.width+button_donotknow:getContentSize().width,910)
-                button_donotknow:addTouchEventListener(button_donotknow_clicked)
-                backColor:addChild(button_donotknow)
-                
-                local action = cc.MoveTo:create(0.5,cc.p(size.width,910))
-                button_donotknow:runAction(action)
+            
+            if current_percentage <= 90 then
+                if button_donotknow == nil then
+                    button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
+                    button_donotknow:setAnchorPoint(1,0.5)
+                    button_donotknow:setPosition(size.width+button_donotknow:getContentSize().width,910)
+                    button_donotknow:addTouchEventListener(button_donotknow_clicked)
+                    backColor:addChild(button_donotknow)
+
+                    local action = cc.MoveTo:create(0.5,cc.p(size.width,910))
+                    button_donotknow:runAction(action)
+                end
             end
         end
     end
