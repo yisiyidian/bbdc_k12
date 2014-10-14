@@ -1,0 +1,130 @@
+require("Cocos2d")
+require("Cocos2dConstants")
+
+require("common.global")
+
+local ProgressBar = require("view.ProgressBar")
+local FlipMat = require("view.FlipMat")
+local SoundMark = require("view.SoundMark")
+local WordDetailInfo = require("view.WordDetailInfo")
+local StudyAlter = require("view.StudyAlter")
+local TestAlter = require("view.TestAlter")
+
+
+local ReviewBossLayer = class("ReviewBossLayer", function ()
+    return cc.Layer:create()
+end)
+
+
+function ReviewBossLayer.create()
+    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
+
+    local layer = ReviewBossLayer.new()
+
+    local word = s_CorePlayManager.currentWord
+    local wordName = word.wordName
+    local wordSoundMarkEn = word.wordSoundMarkEn
+    local wordSoundMarkAm = word.wordSoundMarkAm
+    local wordMeaning = word.wordMeaning
+    local wordMeaningSmall = word.wordMeaningSmall
+    local sentenceEn = word.sentenceEn
+    local sentenceCn = word.sentenceCn
+
+    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
+    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), size.width, size.height)    
+    layer:addChild(backColor)
+
+    local wordDetailInfo = WordDetailInfo.create(word)
+    wordDetailInfo:setPosition(size.width/2, 0)
+    layer:addChild(wordDetailInfo)
+
+
+    local button_changeview
+    local button_changeview_clicked
+    local button_detail
+    local button_detail_clicked
+
+    local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
+    cloud_up:ignoreAnchorPointForPosition(false)
+    cloud_up:setAnchorPoint(0.5, 1)
+    cloud_up:setPosition(size.width/2, size.height)
+    layer:addChild(cloud_up)
+
+    local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
+    cloud_down:ignoreAnchorPointForPosition(false)
+    cloud_down:setAnchorPoint(0.5, 0)
+    cloud_down:setPosition(size.width/2, 0)
+    layer:addChild(cloud_down)
+
+    local beach = cc.Sprite:create("image/studyscene/studyscene_beach_down.png")
+    beach:ignoreAnchorPointForPosition(false)
+    beach:setAnchorPoint(0.5, 0)
+    beach:setPosition(size.width/2, 0)
+    layer:addChild(beach)
+
+    local size_big = cloud_down:getContentSize()
+
+    local progressBar = ProgressBar.create(#s_CorePlayManager.wordList,s_CorePlayManager.currentWordIndex)
+    progressBar:setPositionY(1038)
+    layer:addChild(progressBar)
+
+    local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
+    --label_wordmeaning:setAnchorPoint(0,1)
+    label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
+    label_wordmeaningSmall:setPosition(size.width/2, 896)
+    layer:addChild(label_wordmeaningSmall)
+
+    local soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
+    soundMark:setPosition(size_big.width/2, 600)
+    cloud_down:addChild(soundMark)
+
+
+    local success = function()
+        if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
+            s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+            s_CorePlayManager.enterReviewBossLayer()
+        else
+            print("pass all word in this level")
+        end
+    end
+
+    local fail = function()
+        print("new wrong")
+    end
+
+    local mat = FlipMat.create(wordName,4,4)
+    mat:setPosition(size_big.width/2*3, 100)
+    cloud_down:addChild(mat)
+
+    mat.success = success
+    mat.fail = fail
+    mat.rightLock = true
+    mat.wrongLock = false
+
+    --
+    --    local onTouchBegan = function(touch, event)
+    --        print("touch began")
+    --        --s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+    --        --s_CorePlayManager.enterReviewBossLayer()
+    --    end
+    --    
+    --    local onTouchMoved = function(touch, event)
+    --        print("touch moved")
+    --    end
+    --    
+    --    local onTouchEnded = function(touch, event)
+    --        print("touch ended")
+    --    end
+    --    
+    --    local listener = cc.EventListenerTouchOneByOne:create()
+    --   
+    --    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    --    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    --    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    --    local eventDispatcher = layer:getEventDispatcher()
+    --    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+
+    return layer
+end
+
+return ReviewBossLayer

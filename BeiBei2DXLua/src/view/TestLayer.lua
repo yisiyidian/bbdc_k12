@@ -5,6 +5,8 @@ require("common.global")
 
 local ProgressBar = require("view.ProgressBar")
 local FlipMat = require("view.FlipMat")
+local StudyAlter = require("view.StudyAlter")
+local TestAlter = require("view.TestAlter")
 
 
 local TestLayer = class("TestLayer", function ()
@@ -13,6 +15,8 @@ end)
 
 
 function TestLayer.create()
+    s_SCENE.touchEventBlockLayer.unlockTouch()
+
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = TestLayer.new()
@@ -34,6 +38,8 @@ function TestLayer.create()
     local button_changeview_clicked
     local button_detail
     local button_detail_clicked
+    
+    local playOver = false
 
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
@@ -55,7 +61,7 @@ function TestLayer.create()
 
     local size_big = cloud_down:getContentSize()
 
-    local progressBar = ProgressBar.create(#s_CorePlayManager.wordList,s_CorePlayManager.currentWordIndex)
+    local progressBar = ProgressBar.create(true)
     progressBar:setPositionY(1038)
     layer:addChild(progressBar)
     
@@ -65,9 +71,18 @@ function TestLayer.create()
     layer:addChild(label_wordmeaningSmall)
 
     local success = function()
+        playOver = true
+        s_SCENE.touchEventBlockLayer.lockTouch()
+        
+        s_CorePlayManager.answerRight()
+        progressBar.rightStyle()
+    
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
-        showAnswerStateBack:setPosition(size.width/2, 768)
+        showAnswerStateBack:setPosition(-size.width/2, 768)
         layer:addChild(showAnswerStateBack)
+        
+        local action = cc.MoveTo:create(0.5,cc.p(size.width/2, 768))
+        showAnswerStateBack:runAction(action)
 
         local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
         sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
@@ -79,18 +94,39 @@ function TestLayer.create()
         right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
         showAnswerStateBack:addChild(right_wordname)
     
-        if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
-            s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
-            s_CorePlayManager.enterTestLayer()
-        else
-            s_logd("pass all word in this level")
+        
+        local changeLayer = function()
+            if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
+                s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+                s_CorePlayManager.enterTestLayer()
+            else
+                local alter = TestAlter.createFromFirstAlter()
+                alter:setPosition(size.width/2, size.height/2)
+                layer:addChild(alter)
+            end
         end
+
+        local action1 = cc.DelayTime:create(1)
+        local action2 = cc.CallFunc:create(changeLayer)
+        local action3 = cc.Sequence:create(action1,action2)
+        layer:runAction(action3) 
     end
 
-    local fail = function()
+    local fail = function()   
+    
+    end
+    
+    local timeOut = function()
+        s_SCENE.touchEventBlockLayer.lockTouch()
+    
+        progressBar.wrongStyle()
+        
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
-        showAnswerStateBack:setPosition(size.width/2, 768)
+        showAnswerStateBack:setPosition(size.width/2*3, 768)
         layer:addChild(showAnswerStateBack)
+        
+        local action = cc.MoveTo:create(0.5,cc.p(size.width/2, 768))
+        showAnswerStateBack:runAction(action)
         
         local sign = cc.Sprite:create("image/testscene/testscene_wrong_x.png")
         sign:setPosition(showAnswerStateBack:getContentSize().width*0.1, showAnswerStateBack:getContentSize().height*0.45)
@@ -101,6 +137,25 @@ function TestLayer.create()
         right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
         right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
         showAnswerStateBack:addChild(right_wordname)
+        
+        local changeLayer = function()
+            if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
+                s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+                s_CorePlayManager.enterTestLayer()
+            else
+                --s_CorePlayManager.currentWordIndex = 1
+                --s_CorePlayManager.enterStudyLayer()
+                
+                local alter = TestAlter.createFromFirstAlter()
+                alter:setPosition(size.width/2, size.height/2)
+                layer:addChild(alter)
+            end
+        end
+
+        local action1 = cc.DelayTime:create(1)
+        local action2 = cc.CallFunc:create(changeLayer)
+        local action3 = cc.Sequence:create(action1,action2)
+        layer:runAction(action3) 
     end
 
     local mat = FlipMat.create(wordName,4,4)
@@ -110,7 +165,7 @@ function TestLayer.create()
     mat.success = success
     mat.fail = fail
     mat.rightLock = true
-    mat.wrongLock = true
+    mat.wrongLock = false
 
     local progress_back = cc.Sprite:create("image/progress/progressB1.png")
     progress_back:setPosition(size.width/2, 100)
@@ -121,25 +176,68 @@ function TestLayer.create()
     progress:setMidpoint(cc.p(0, 0))
     progress:setBarChangeRate(cc.p(1, 0))
     progress:setPosition(progress_back:getPosition())
-    progress:setPercentage(80)
+    progress:setPercentage(100)
     layer:addChild(progress)
     
-    local aaa = function()
-        local current_percentage = progress:getPercentage()
-        current_percentage = current_percentage - 0.1
-        if current_percentage >= 0 then
-            progress:setPercentage(current_percentage)
-        else
-            progress:setPercentage(0)
-            
-            -- time out
-            mat.globalLock = true
+    
+    if s_CorePlayManager.currentWordIndex == 1 then
+        local readygo = sp.SkeletonAnimation:create("res/spine/readygo_diyiguan.json", "res/spine/readygo_diyiguan.atlas", 1)
+        readygo:setPosition(size.width/2, size.height/2)
+        layer:addChild(readygo)
+        readygo:addAnimation(0, 'animation', false)
+    end
+    
+    local button_donotknow_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            timeOut()   
         end
     end
     
-    local scheduler = cc.Director:getInstance():getScheduler()
-    local schedulerEntry = scheduler:scheduleScriptFunc(aaa, 0.01, false)
     
+    local button_donotknow = nil
+
+    local time = 0
+    local update = function()
+--        time = time + 0.05
+--        print(time)
+    
+        if playOver == false then
+            local loss = 5.0/(15+0.5*string.len(s_CorePlayManager.currentWord.wordName))
+            --local loss = 5.0/5
+            local current_percentage = progress:getPercentage()
+            current_percentage = current_percentage - loss
+            if current_percentage > 0 then
+                progress:setPercentage(current_percentage)
+            else
+                progress:setPercentage(0)
+                if mat.globalLock == false then
+                    mat.globalLock = true
+                    timeOut()
+                end
+            end
+            
+            if current_percentage <= 90 then
+                if button_donotknow == nil then
+                    button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
+                    button_donotknow:setAnchorPoint(1,0.5)
+                    button_donotknow:setPosition(size.width+button_donotknow:getContentSize().width,910)
+                    button_donotknow:addTouchEventListener(button_donotknow_clicked)
+                    backColor:addChild(button_donotknow)
+
+                    local action = cc.MoveTo:create(0.5,cc.p(size.width,910))
+                    button_donotknow:runAction(action)
+                end
+            end
+        end
+    end
+    
+    schedule(layer,update,0.05)
+    
+    --local scheduler = cc.Director:getInstance():getScheduler()
+    --local schedulerEntry = scheduler:scheduleScriptFunc(update, 0.05, false)
+    
+    
+     
     return layer
 end
 

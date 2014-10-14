@@ -1,0 +1,48 @@
+
+bb_unhappy_public.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bb_inhappy_1
+  rotate: false
+  xy: 2, 596
+  size: 213, 295
+  orig: 213, 295
+  offset: 0, 0
+  index: -1
+bb_inhappy_2
+  rotate: false
+  xy: 2, 299
+  size: 213, 295
+  orig: 213, 295
+  offset: 0, 0
+  index: -1
+bb_inhappy_3
+  rotate: false
+  xy: 217, 596
+  size: 213, 295
+  orig: 213, 295
+  offset: 0, 0
+  index: -1
+bb_inhappy_4
+  rotate: false
+  xy: 2, 2
+  size: 213, 295
+  orig: 213, 295
+  offset: 0, 0
+  index: -1
+bb_inhappy_5
+  rotate: false
+  xy: 217, 299
+  size: 213, 295
+  orig: 213, 295
+  offset: 0, 0
+  index: -1
+bb_inhappy_6
+  rotate: false
+  xy: 432, 596
+  size: 213, 295
+  orig: 213, 295
+  offset: 0, 0
+  index: -1

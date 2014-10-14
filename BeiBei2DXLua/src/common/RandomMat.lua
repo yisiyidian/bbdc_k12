@@ -27,7 +27,7 @@ function RandomMat(m, n)
         end
 
         randomPath(0,0,0)
-        printMat()
+        --printMat()
     end
 
     printMat = function()

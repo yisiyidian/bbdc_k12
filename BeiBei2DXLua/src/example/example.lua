@@ -4,15 +4,17 @@ local DataExample = require('example.DataExample')
 require("common.global")
 
 
+local ziaoangTest = require("view.ZiaoangTest")
+
 function test()
-    --local testLayer = TestLayer.create()
-    --s_SCENE:replaceGameLayer(testLayer)
+    --local a = ziaoangTest.create()
+    --s_SCENE:replaceGameLayer(a)
 
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
-    --s_CorePlayManager.enterTestLayer()
-    s_CorePlayManager.enterStudyLayer()
+    s_CorePlayManager.enterTestLayer()
+    --s_CorePlayManager.enterStudyLayer()
 
     --logd('testSpine')
     --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)

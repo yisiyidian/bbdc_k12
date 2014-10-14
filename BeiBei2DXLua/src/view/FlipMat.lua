@@ -16,10 +16,8 @@ function FlipMat.create(word, m ,n)
     
     -- block function
     main.success = function()
-        s_logd("right")
     end
     main.fail = function()
-        s_logd("wrong")
     end
     
     main.globalLock = false
@@ -68,7 +66,7 @@ function FlipMat.create(word, m ,n)
     
     local main_logic_mat = RandomMat(main_m, main_n)
     local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
-    s_logd("start.."..randomStartIndex)
+
     
     local main_mat = {}
     local firstFlipNode = nil
@@ -135,7 +133,7 @@ function FlipMat.create(word, m ,n)
     
     -- handing touch events
     onTouchBegan = function(touch, event)
-        if globalLock then
+        if main.globalLock then
             return true
         end
         
@@ -162,7 +160,7 @@ function FlipMat.create(word, m ,n)
     end
 
     onTouchMoved = function(touch, event)
-        if globalLock then
+        if main.globalLock then
             return
         end
     
@@ -187,7 +185,7 @@ function FlipMat.create(word, m ,n)
     end
     
     fakeTouchMoved = function(location)
-        if globalLock then
+        if main.globalLock then
             return
         end
     
@@ -259,7 +257,11 @@ function FlipMat.create(word, m ,n)
     end
 
     onTouchEnded = function(touch, event)
-        if globalLock then
+        if main.globalLock then
+            return
+        end
+        
+        if #selectStack < 1 then
             return
         end
     
@@ -272,7 +274,7 @@ function FlipMat.create(word, m ,n)
 
         if selectWord == main_word then
             if main.rightLock then
-                globalLock = true
+                main.globalLock = true
             end
         
             for i = 1, #selectStack do
@@ -284,7 +286,7 @@ function FlipMat.create(word, m ,n)
             main.success()
         else
             if main.wrongLock then
-                globalLock = true
+                main.globalLock = true
             end
         
             for i = 1, #selectStack do

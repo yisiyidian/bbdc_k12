@@ -4,7 +4,10 @@ local ProgressBar = class("ProgressBar", function()
 return cc.Layer:create()
 end)
 
-function ProgressBar.create(totalIndex, currentIndex)
+function ProgressBar.create(isWrongStateShow)
+    local totalIndex = #s_CorePlayManager.wordList
+    local currentIndex = s_CorePlayManager.currentWordIndex
+
     -- system variate
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     local main = ProgressBar.new()
@@ -12,95 +15,119 @@ function ProgressBar.create(totalIndex, currentIndex)
 
     local gap = 40
     local left = (size.width - (totalIndex-1)*gap)/2
-
-    local frame
-
-    if totalIndex == 1 then
-        local node = cc.Sprite:create("image/ProgressBar/blue_middle.png")
-        node:setPosition(main:getContentSize().width/2, main:getContentSize().height/2)
-        main:addChild(node)
-
-        frame = cc.Sprite:create("image/ProgressBar/frame_middle.png")
-        frame:setPosition(main:getContentSize().width/2, main:getContentSize().height/2)
-    elseif totalIndex == 2 then
-        for i = 1, totalIndex do
-            local node
-            if i == 1 then
-                if i < currentIndex then
-                node = cc.Sprite:create("image/ProgressBar/yellow_left.png")
-                else
-                node = cc.Sprite:create("image/ProgressBar/blue_left.png")
-                end
-
-                if i == currentIndex then
-                    frame = cc.Sprite:create("image/ProgressBar/frame_left.png")
-                    frame:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
-                end
-            else
-                if i < currentIndex then
-                node = cc.Sprite:create("image/ProgressBar/yellow_right.png")
-                else
-                node = cc.Sprite:create("image/ProgressBar/blue_right.png")
-                end
-
-                if i == currentIndex then
-                    frame = cc.Sprite:create("image/ProgressBar/frame_right.png")
-                    frame:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
-                end
-            end
-            node:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
-            main:addChild(node)
-        end
-    else
-        for i = 1, totalIndex do
-            local node
-            if i == 1 then
-                if i < currentIndex then
-                    node = cc.Sprite:create("image/ProgressBar/yellow_left.png")
-                else
-                    node = cc.Sprite:create("image/ProgressBar/blue_left.png")
-                end
-
-                if i == currentIndex then
-                    frame = cc.Sprite:create("image/ProgressBar/frame_left.png")
-                    frame:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
-                end
-            elseif i == totalIndex then
-                if i < currentIndex then
-                    node = cc.Sprite:create("image/ProgressBar/yellow_right.png")
-                else
-                    node = cc.Sprite:create("image/ProgressBar/blue_right.png")
-                end
-
-                if i == currentIndex then
-                    frame = cc.Sprite:create("image/ProgressBar/frame_right.png")
-                    frame:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
-                end
-            else
-                if i < currentIndex then
-                    node = cc.Sprite:create("image/ProgressBar/yellow_middle.png")
-                else
-                    node = cc.Sprite:create("image/ProgressBar/blue_middle.png")
-                end
-
-                if i == currentIndex then
-                    frame = cc.Sprite:create("image/ProgressBar/frame_middle.png")
-                    frame:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
-                end
-            end
-            node:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
-            main:addChild(node)
+    
+    -- new code
+    local imageNameList = {}
+    for i = 1, currentIndex - 1 do
+        imageNameList[i] = "image/ProgressBar/yellow_middle.png"
+        if isWrongStateShow and s_CorePlayManager.answerStateRecord[i] == 0 then
+            imageNameList[i] = "image/ProgressBar/red_middle.png"
         end
     end
-
-    main:addChild(frame)
-
-    -- add animation
+    for i = currentIndex, totalIndex do
+        imageNameList[i] = "image/ProgressBar/blue_middle.png"  
+    end
+    
+    if totalIndex > 1 then
+        if imageNameList[1] == "image/ProgressBar/yellow_middle.png" then
+            imageNameList[1] = "image/ProgressBar/yellow_left.png"
+        else if imageNameList[1] == "image/ProgressBar/red_middle.png" then
+            imageNameList[1] = "image/ProgressBar/red_left.png"
+        else
+            imageNameList[1] = "image/ProgressBar/blue_left.png"
+        end
+        end
+--        
+        if imageNameList[totalIndex] == "image/ProgressBar/yellow_middle.png" then
+            imageNameList[totalIndex] = "image/ProgressBar/yellow_right.png"
+        else if imageNameList[totalIndex] == "image/ProgressBar/red_middle.png" then
+            imageNameList[totalIndex] = "image/ProgressBar/red_right.png"
+        else
+            imageNameList[totalIndex] = "image/ProgressBar/blue_right.png"
+        end
+        end
+    end
+    
+    local frame = nil
+    for i = 1, totalIndex do
+        local node = cc.Sprite:create(imageNameList[i])
+        node:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
+        main:addChild(node)
+        
+        if i == currentIndex then
+            frame = cc.Sprite:create("image/ProgressBar/frame_middle.png")
+            if totalIndex > 1 then
+                if currentIndex == 1 then
+                    frame = cc.Sprite:create("image/ProgressBar/frame_left.png")
+                else if currentIndex == totalIndex then
+                    frame = cc.Sprite:create("image/ProgressBar/frame_right.png")
+                end
+                end
+            end
+            frame:setPosition(left+(i-1)*gap, main:getContentSize().height/2)
+            main:addChild(frame)
+        end
+    end
+    
     local fadeOut = cc.FadeOut:create(0.5)
     local fadeIn = cc.FadeIn:create(0.5)
     local sequence = cc.Sequence:create(fadeOut, fadeIn)
     frame:runAction(cc.RepeatForever:create(sequence))
+    
 
+    -- add right and wrong animation
+    main.rightStyle = function()
+        local name = nil
+        if imageNameList[currentIndex] == "image/ProgressBar/blue_left.png" then
+            name = "image/ProgressBar/yellow_left.png"
+        else if imageNameList[currentIndex] == "image/ProgressBar/blue_middle.png" then
+            name = "image/ProgressBar/yellow_middle.png"
+        else
+            name = "image/ProgressBar/yellow_right.png"
+        end   
+        end
+        local block = cc.Sprite:create(name)
+        block:setPosition(frame:getPosition())
+        block:setOpacity(0)
+        main:addChild(block)
+        
+        local action = cc.FadeIn:create(0.5)
+        block:runAction(action)
+        
+        local right = sp.SkeletonAnimation:create("res/spine/huadanci_jindutiao_public_wright.json", "res/spine/huadanci_jindutiao_public_wright.atlas", 1)
+        right:setPosition(frame:getPosition())
+        main:addChild(right)
+        right:addAnimation(0, 'animation', false)
+        
+        main:removeChild(frame,true)
+    end
+    
+    main.wrongStyle = function()
+        local name = nil
+        if imageNameList[currentIndex] == "image/ProgressBar/blue_left.png" then
+            name = "image/ProgressBar/red_left.png"
+        else if imageNameList[currentIndex] == "image/ProgressBar/blue_middle.png" then
+            name = "image/ProgressBar/red_middle.png"
+        else
+            name = "image/ProgressBar/red_right.png"
+        end   
+        end
+        local block = cc.Sprite:create(name)
+        block:setPosition(frame:getPosition())
+        block:setOpacity(0)
+        main:addChild(block)
+
+        local action = cc.FadeIn:create(0.5)
+        block:runAction(action)
+        
+        local wrong = sp.SkeletonAnimation:create("res/spine/huadanci_jindutiao_public_wrong.json", "res/spine/huadanci_jindutiao_public_wrong.atlas", 1)
+        wrong:setPosition(frame:getPosition())
+        main:addChild(wrong)
+        wrong:addAnimation(0, 'animation', false)
+        
+        main:removeChild(frame,true)
+    end
+    
     return main
 end
 
