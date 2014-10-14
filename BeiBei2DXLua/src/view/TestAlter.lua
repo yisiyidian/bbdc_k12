@@ -51,7 +51,12 @@ showGirlAndStar = function()
     end
     
     
-    local girl = sp.SkeletonAnimation:create("res/spine/bb_unhappy_public.json", "res/spine/bb_unhappy_public.atlas", 1)
+--    local girl = sp.SkeletonAnimation:create("res/spine/bb_unhappy_public.json", "res/spine/bb_unhappy_public.atlas", 1)
+--    girl:setPosition(50,100)
+--    back:addChild(girl)      
+--    girl:addAnimation(0, 'animation', true)
+    
+    local girl = sp.SkeletonAnimation:create("res/spine/bb_happy_public.json", "res/spine/bb_happy_public.atlas", 1)
     girl:setPosition(50,100)
     back:addChild(girl)      
     girl:addAnimation(0, 'animation', true)
