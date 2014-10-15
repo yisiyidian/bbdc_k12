@@ -9,13 +9,51 @@ function RBProgressBar.create(totalIndex)
     
     local main = RBProgressBar.new()
     main:setContentSize(size.width, 10)
-
+    main:ignoreAnchorPointForPosition(false)
+    main:setAnchorPoint(0.5,0.5)
+    
+    local local_size = main:getContentSize()
+    
+    local currentIndex = 2
+    
     -- init framework
-    -- TODO
+    local progress_back = cc.Sprite:create("image/progress/rb_progressBack.png")
+    progress_back:setPosition(local_size.width/2, local_size.height/2)
+    main:addChild(progress_back)
 
+    local progress = cc.ProgressTimer:create(cc.Sprite:create("image/progress/rb_progressFront.png"))
+    progress:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+    progress:setMidpoint(cc.p(0, 0))
+    progress:setBarChangeRate(cc.p(1, 0))
+    progress:setPosition(progress_back:getPosition())
+    progress:setPercentage(100*(currentIndex-1)/totalIndex)
+    main:addChild(progress)
+    
+    local left = (local_size.width - progress_back:getContentSize().width) / 2
+    local gap = progress_back:getContentSize().width / totalIndex
+    
+    local index = cc.Sprite:create("image/progress/rb_progressIndex.png")
+    index:setAnchorPoint(0.5,1)
+    index:setPosition(left + gap* (currentIndex - 1), 0)
+    main:addChild(index)
+
+    local label_number = cc.Label:createWithSystemFont(1,"",24)
+    label_number:setColor(cc.c4b(255,255,255,255))
+    label_number:setPosition(index:getContentSize().width/2, index:getContentSize().height*0.4)
+    index:addChild(label_number)
+
+    
     -- add addOne animation
     main.addOne = function()
-        -- TODO
+        currentIndex = currentIndex + 1
+    
+        local action1 = cc.MoveTo:create(0.3, cc.p(left + gap* (currentIndex - 1), 0))
+        index:runAction(action1)
+        
+        local addPercent = function()
+        end
+        
+        
     end
 
     return main

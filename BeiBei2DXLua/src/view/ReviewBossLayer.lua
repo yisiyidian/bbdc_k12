@@ -3,6 +3,8 @@ require("Cocos2dConstants")
 
 require("common.global")
 
+local RBProgressBar = require("view.RBProgressBar")
+
 
 local ReviewBossLayer = class("ReviewBossLayer", function ()
     return cc.Layer:create()
@@ -19,7 +21,9 @@ function ReviewBossLayer.create()
     back:setPosition(size.width/2, size.height/2)
     layer:addChild(back)
 
-
+    local rbProgressBar = RBProgressBar.create(5)
+    rbProgressBar:setPosition(size.width/2, 1040)
+    layer:addChild(rbProgressBar)
     
     local onTouchBegan = function(touch, event)
         s_logd("touch began on block layer")
