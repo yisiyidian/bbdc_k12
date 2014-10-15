@@ -14,7 +14,7 @@ function test()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
     s_DATA_MANAGER.loadText()
-    s_logd(s_DATA_MANAGER.getTextWithKey('feedback_title'))
+    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
 
     s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()

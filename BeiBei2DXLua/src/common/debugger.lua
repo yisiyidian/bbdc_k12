@@ -44,6 +44,12 @@ function debugger.logd(...)
     end
 end
 
+function debugger.logdStr(str)
+    if mEnableLogDebug then
+        print(str)
+    end
+end
+
 function debugger.traceStack(msg)
     print("----------------------------------------")
     print("LUA ERROR: " .. tostring(msg) .. "\n")

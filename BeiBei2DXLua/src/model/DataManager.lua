@@ -10,7 +10,7 @@ function DataManager.loadText()
 end
 
 function DataManager.getTextWithIndex(TEXT_ID_)
-    if DataManager.text ~= nil and TEXT_ID_ <= #DataManager.text then
+    if DataManager.text ~= nil and TEXT_ID_ > 0 and TEXT_ID_ <= #DataManager.text then
         return DataManager.text[TEXT_ID_]['cn']
     else
         return 'error: no text with ' .. TEXT_ID_

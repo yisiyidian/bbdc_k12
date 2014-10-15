@@ -14,11 +14,11 @@
     },
     {
       "key": "feedback_mail_suggestion",
-      "cn": "用户建议:%@"
+      "cn": "用户建议:%s"
     },
     {
       "key": "feedback_mail_bug",
-      "cn": "用户 Bug :%@"
+      "cn": "用户 Bug :%s"
     },
     {
       "key": "word_learned",
@@ -110,11 +110,11 @@
     },
     {
       "key": "friend_ask_for",
-      "cn": "%@ 请求加你为好友"
+      "cn": "%s 请求加你为好友"
     },
     {
       "key": "beibei_ID",
-      "cn": "贝贝ID：%@"
+      "cn": "贝贝ID：%s"
     },
     {
       "key": "friend_agree",
@@ -342,7 +342,7 @@
     },
     {
       "key": "IC_learning",
-      "cn": "正在学习%@词汇"
+      "cn": "正在学习%s词汇"
     },
     {
       "key": "IC_learning_Efficiency_0",
@@ -458,11 +458,11 @@
     },
     {
       "key": "user_sign_type_WMUserSignTypeAnonymous",
-      "cn": "账号：游客%@"
+      "cn": "账号：游客%s"
     },
     {
       "key": "user_sign_type_WMUserSignTypeUser",
-      "cn": "账号：%@"
+      "cn": "账号：%s"
     },
     {
       "key": "sign_tip_title",
@@ -506,7 +506,7 @@
     },
     {
       "key": "error_no_local_user_data",
-      "cn": "设备上没有此用户：%@"
+      "cn": "设备上没有此用户：%s"
     },
     {
       "key": "request_to_be_friend",
@@ -570,7 +570,7 @@
     },
     {
       "key": "dictionary",
-      "cn": "%@词汇"
+      "cn": "%s词汇"
     },
     {
         "key": "loading",
