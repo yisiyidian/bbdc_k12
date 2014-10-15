@@ -24,9 +24,9 @@ function test()
 
     s_DATA_MANAGER.loadEnergy()
 
-    s_CorePlayManager.enterTestLayer()
+    --s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()
-    --s_CorePlayManager.enterReviewBossLayer()
+    s_CorePlayManager.enterReviewBossLayer()
 
     --logd('testSpine')
     --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)
