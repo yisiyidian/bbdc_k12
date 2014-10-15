@@ -174,21 +174,28 @@ showDetailInfo = function()
     selectWordMeaning:setPosition(selectWordBack:getContentSize().width/2, selectWordBack:getContentSize().height/2)
     selectWordBack:addChild(selectWordMeaning)
     
+    local button_array = {}
+    local lastSelectIndex = nil
     local showSelectWordInfo = function(sender,eventType)
-        if eventType == ccui.TouchEventType.began then            
+        if eventType == ccui.TouchEventType.began then
             selectWordMeaning:setString(s_WordPool[s_CorePlayManager.wordList[sender.tag]].wordMeaningSmall)
-            if sender.name == "right" then
-                local tmp = cc.Scale9Sprite:create("image/alter/testscene_rightword_back_dark.png")
-                sender:setBackgroundSpriteForState(tmp, cc.CONTROL_STATE_NORMAL )
+            
+            if button_array[lastSelectIndex].name == "right" then
+                button_array[lastSelectIndex]:loadTextures("image/alter/testscene_rightword_back_light.png", "", "")
             else
-                local tmp = cc.Scale9Sprite:create("image/alter/testscene_rightword_back_dark.png")
-                sender:setBackgroundSpriteForState(tmp, cc.CONTROL_STATE_NORMAL )
+                button_array[lastSelectIndex]:loadTextures("image/alter/testscene_wrongword_back_light.png", "", "")
             end
+            
+            if sender.name == "right" then
+                sender:loadTextures("image/alter/testscene_rightword_back_dark.png", "", "")
+            else
+                sender:loadTextures("image/alter/testscene_wrongword_back_dark.png", "", "")
+            end
+            
+            lastSelectIndex = sender.tag
         end
     end
     
-    local button_array = {}
-    local lastSelectIndex = nil
     for i = 1, 5 do
         for j = 1, 3 do
             local index = 3*i + j - 3
@@ -197,13 +204,12 @@ showDetailInfo = function()
                 if s_CorePlayManager.answerStateRecord[index] == 1 then
                     word_back = ccui.Button:create("image/alter/testscene_rightword_back_light.png")
                     word_back.name = "right"
-                  
                 else
                     if lastSelectIndex == nil then
                         lastSelectIndex = index
                     end
                     word_back = ccui.Button:create("image/alter/testscene_wrongword_back_light.png")
-                    word_back.name = "wrong" 
+                    word_back.name = "wrong"
                 end
                 word_back:setPosition(116+160*(j-1), 676-78*(i-1))
                 word_back:setTitleText(s_CorePlayManager.wordList[index])
