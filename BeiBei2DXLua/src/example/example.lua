@@ -15,6 +15,14 @@ function test()
 
     s_DATA_MANAGER.loadText()
     s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
+    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
+    
+    s_DATA_MANAGER.loadBooks()
+    for k,v in pairs(s_DATA_MANAGER.books) do
+      s_logd(k .. ': ' .. v.name)
+    end
+
+    s_DATA_MANAGER.loadEnergy()
 
     s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()

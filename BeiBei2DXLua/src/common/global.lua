@@ -5,7 +5,29 @@ local function _initConstant()
     s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
 
     s_allwords = "cfg/allwords"
+    
+    s_books = 'cfg/books.json'
+    s_chapters = 'cfg/chapters.json'
+    s_daily = 'cfg/dailyCheckIn.json'
+    s_energy = 'cfg/energy.json'
+    s_items = 'cfg/items.json'
+    s_lv_cet4 = 'cfg/lv_cet4.json'
+    s_lv_cet6 = 'cfg/lv_cet6.json'
+    s_ielts = 'cfg/lv_ielts.json'
+    s_necc = 'cfg/lv_ncee.json'
+    s_toefl = 'cfg/lv_toefl.json'
+    s_review_boos = 'cfg/review_boss.json'
+    s_starRule = 'cfg/starRule.json'
     s_text = 'cfg/text.json'
+
+    -- s_energy
+    s_energyMaxCount = 4
+    s_energyCoolDownSecs = 1800
+    s_normal_level_energy_cost = 1
+    s_summary_boss_energy_cost = 1
+    s_review_boss_energy_cost = 1
+    s_friend_request_max_count = 30
+    s_friend_max_count = 50
 
     require('common.text')
     s_DATA_MANAGER = require('model.DataManager')
