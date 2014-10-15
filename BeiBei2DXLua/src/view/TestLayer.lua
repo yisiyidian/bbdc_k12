@@ -121,13 +121,9 @@ function TestLayer.create()
     end
     
     local timeOut = function()
-<<<<<<< HEAD
-        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-=======
         playOver = true
-        s_SCENE.touchEventBlockLayer.lockTouch()
->>>>>>> add star rule and lock for study scene and study alter
-    
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
         progressBar.wrongStyle()
         
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")

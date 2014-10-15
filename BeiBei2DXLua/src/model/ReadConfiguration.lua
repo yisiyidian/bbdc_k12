@@ -8,7 +8,6 @@ function ReadStarRule()
 
     local data = json.decode(content)
     
-    
     for i = 1, #data do
         tmp = {}
         tmp[1] = data[i]["star_1"]

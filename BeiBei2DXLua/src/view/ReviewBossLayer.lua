@@ -12,6 +12,7 @@ end)
 
 
 function ReviewBossLayer.create()
+    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = ReviewBossLayer.new()
 
@@ -26,7 +27,7 @@ function ReviewBossLayer.create()
     layer:addChild(rbProgressBar)
     
     local onTouchBegan = function(touch, event)
-        s_logd("touch began on block layer")
+        --s_logd("touch began on block layer")
         return true
     end
 

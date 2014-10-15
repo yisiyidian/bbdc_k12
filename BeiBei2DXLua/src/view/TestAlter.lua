@@ -1,4 +1,5 @@
 require("common.global")
+require("model.ReadConfiguration")
 
 local TestAlter = class("TestAlter", function()
     return cc.Layer:create()
@@ -69,10 +70,29 @@ showGirlAndStar = function()
         stars:setPosition(back:getContentSize().width/2, 700)
         back:addChild(stars)
         
-        --stars:addAnimation(0, 'animation_1_star', false)
-        --stars:addAnimation(0, 'animation_2_star', false)
-        stars:addAnimation(0, 'animation_3_star', false)
-        --stars:addAnimation(0, 'animation_no_star', false)
+        local rightCount = 0
+        for i = 1, #s_CorePlayManager.answerStateRecord do
+            rightCount = rightCount + s_CorePlayManager.answerStateRecord[i]
+        end
+        
+        starRule = ReadStarRule()
+        local star1 = starRule[#s_CorePlayManager.wordList][1]
+        local star2 = starRule[#s_CorePlayManager.wordList][2]
+        local star3 = starRule[#s_CorePlayManager.wordList][3]
+        
+        print(rightCount.." "..star1..star2..star3)
+        
+        if rightCount >= star3 then
+            stars:addAnimation(0, 'animation_3_star', false)
+        else if rightCount >= star2 then
+            stars:addAnimation(0, 'animation_2_star', false)
+        else if rightCount >= star1 then
+            stars:addAnimation(0, 'animation_1_star', false)
+        else
+            stars:addAnimation(0, 'animation_no_star', false)
+        end    
+        end
+        end
     end
     
     
