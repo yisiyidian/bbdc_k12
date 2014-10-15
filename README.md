@@ -26,7 +26,7 @@ BeiBeiDanCiX
       - android
    - 打开 android sdk 管理界面后选择对应的 sdk 进行安装
 
-3. android­ndk
+3. android­ ndk
    - 安装流程:
       - brew install android­ndk
       - git checkout e8448bb /usr/local/Library/Formula/android­ndk.rb
@@ -38,6 +38,9 @@ BeiBeiDanCiX
 5. build & run apk
     - cd BeiBei2DXLua
     - cocos run -p android -j 4 --ap 20
+
+6. eclipse ADT Plugin
+    - http://developer.android.com/sdk/installing/installing-adt.html
 
 ----------------------------------------------------------------------------------------
 目录结构

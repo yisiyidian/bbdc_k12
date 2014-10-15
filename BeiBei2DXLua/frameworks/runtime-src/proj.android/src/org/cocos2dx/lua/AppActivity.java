@@ -68,10 +68,13 @@ public class AppActivity extends Cocos2dxActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
-		// test server
-		AVOSCloud.initialize(this, "9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l", "8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg");
-		// app store server
-		// AVOSCloud.initialize(this, "eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw", "9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6");
+		if(nativeIsDebug()) {
+			// test server
+			AVOSCloud.initialize(this, "9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l", "8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg");
+		} else {
+			// app store server
+			AVOSCloud.initialize(this, "eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw", "9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6");
+		}
 		
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);
