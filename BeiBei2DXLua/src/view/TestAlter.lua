@@ -64,29 +64,58 @@ showGirlAndStar = function()
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
     
+    local rightCount = 0
+    local starCount = nil
+    for i = 1, #s_CorePlayManager.answerStateRecord do
+        rightCount = rightCount + s_CorePlayManager.answerStateRecord[i]
+    end
+
+    starRule = ReadStarRule()
+    local star1 = starRule[#s_CorePlayManager.wordList][1]
+    local star2 = starRule[#s_CorePlayManager.wordList][2]
+    local star3 = starRule[#s_CorePlayManager.wordList][3]
+
+    print(rightCount.." "..star1..star2..star3)
+
+    if rightCount >= star3 then
+        starCount = 3
+        --stars:addAnimation(0, 'animation_3_star', false)
+    else if rightCount >= star2 then
+        starCount = 2
+        --stars:addAnimation(0, 'animation_2_star', false)
+    else if rightCount >= star1 then
+        starCount = 1
+        --stars:addAnimation(0, 'animation_1_star', false)
+    else
+        starCount = 0
+        --stars:addAnimation(0, 'animation_no_star', false)
+    end    
+    end
+    end
+    
+    if starCount > 0 then
+        local girl = sp.SkeletonAnimation:create("res/spine/bb_happy_public.json", "res/spine/bb_happy_public.atlas", 1)
+        girl:setPosition(50,100)
+        back:addChild(girl)      
+        girl:addAnimation(0, 'animation', true)
+    else
+        local girl = sp.SkeletonAnimation:create("res/spine/bb_unhappy_public.json", "res/spine/bb_unhappy_public.atlas", 1)
+        girl:setPosition(50,100)
+        back:addChild(girl)      
+        girl:addAnimation(0, 'animation', true)
+    end
+    
     -- add star
     local showStar = function()
         local stars = sp.SkeletonAnimation:create("res/spine/star_yellow_3_public.json", "res/spine/star_yellow_3_public.atlas", 1)
         stars:setPosition(back:getContentSize().width/2, 700)
         back:addChild(stars)
         
-        local rightCount = 0
-        for i = 1, #s_CorePlayManager.answerStateRecord do
-            rightCount = rightCount + s_CorePlayManager.answerStateRecord[i]
-        end
-        
-        starRule = ReadStarRule()
-        local star1 = starRule[#s_CorePlayManager.wordList][1]
-        local star2 = starRule[#s_CorePlayManager.wordList][2]
-        local star3 = starRule[#s_CorePlayManager.wordList][3]
-        
-        print(rightCount.." "..star1..star2..star3)
-        
-        if rightCount >= star3 then
+        if starCount == 3 then
             stars:addAnimation(0, 'animation_3_star', false)
-        else if rightCount >= star2 then
+        else if starCount == 2 then
             stars:addAnimation(0, 'animation_2_star', false)
-        else if rightCount >= star1 then
+        else if starCount == 1 then
             stars:addAnimation(0, 'animation_1_star', false)
         else
             stars:addAnimation(0, 'animation_no_star', false)
@@ -94,18 +123,6 @@ showGirlAndStar = function()
         end
         end
     end
-    
-    
---    local girl = sp.SkeletonAnimation:create("res/spine/bb_unhappy_public.json", "res/spine/bb_unhappy_public.atlas", 1)
---    girl:setPosition(50,100)
---    back:addChild(girl)      
---    girl:addAnimation(0, 'animation', true)
-    
-    local girl = sp.SkeletonAnimation:create("res/spine/bb_happy_public.json", "res/spine/bb_happy_public.atlas", 1)
-    girl:setPosition(50,100)
-    back:addChild(girl)      
-    girl:addAnimation(0, 'animation', true)
-    
     
     local action1 = cc.DelayTime:create(0.5)
     local action2 = cc.CallFunc:create(showStar)
