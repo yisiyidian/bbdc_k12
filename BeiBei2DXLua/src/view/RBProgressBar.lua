@@ -21,12 +21,4 @@ function RBProgressBar.create(totalIndex)
     return main
 end
 
-
 return RBProgressBar
-
-
-
-
-
-
-

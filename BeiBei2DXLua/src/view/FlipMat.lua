@@ -1,3 +1,13 @@
+
+
+-- magic number
+local dir_up    = 1
+local dir_down  = 2
+local dir_left  = 3
+local dir_right = 4
+
+
+
 require "common.RandomMat"
 local FlipNode = require("view.FlipNode")
 
@@ -110,13 +120,13 @@ function FlipMat.create(word, m ,n)
                     local x = location.x - node_position.x
                     local y = location.y - node_position.y
                     if y > x and y > -x then
-                        current_dir = 1
+                        current_dir = dir_up
                     elseif y < x and y < -x then
-                        current_dir = 2
+                        current_dir = dir_down
                     elseif y > x and y < -x then
-                        current_dir = 3
+                        current_dir = dir_left
                     else
-                        current_dir = 4
+                        current_dir = dir_right
                     end
                     
                     onNode = true
@@ -218,11 +228,11 @@ function FlipMat.create(word, m ,n)
                     end
                 else
                     if #selectStack == 0 then
-                        if current_dir == 1 then
+                        if current_dir == dir_up then
                             currentNode.down()
-                        elseif current_dir == 2 then
+                        elseif current_dir == dir_down then
                             currentNode.up()
-                        elseif current_dir == 3 then
+                        elseif current_dir == dir_left then
                             currentNode.right()
                         else
                             currentNode.left()
@@ -235,11 +245,11 @@ function FlipMat.create(word, m ,n)
                             selectStack[#selectStack+1] = currentNode
                             currentNode.addSelectStyle()
                             currentNode.bigSize()
-                            if current_dir == 1 then
+                            if current_dir == dir_up then
                                 currentNode.down()
-                            elseif current_dir == 2 then
+                            elseif current_dir == dir_down then
                                 currentNode.up()
-                            elseif current_dir == 3 then
+                            elseif current_dir == dir_left then
                                 currentNode.right()
                             else
                                 currentNode.left()
