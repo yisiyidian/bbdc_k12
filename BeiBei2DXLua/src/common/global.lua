@@ -3,6 +3,11 @@ local function _initConstant()
     --
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
     s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
+
+    s_text = 'cfg/text.json'
+
+    require('common.text')
+    s_DATA_MANAGER = require('model.DataManager')
 end
 
 local function _initTool()

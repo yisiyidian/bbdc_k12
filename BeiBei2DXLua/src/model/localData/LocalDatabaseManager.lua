@@ -23,11 +23,11 @@ function Manager.open()
     Manager.database = sqlite3.open(databasePath)
     s_logd(databasePath)
     
+    -- TODO
     -- check version update
     if s_APP_VERSION == 151 then
         updateLocalDatabase()
     end
-        
 end
 
 -- close local sqlite

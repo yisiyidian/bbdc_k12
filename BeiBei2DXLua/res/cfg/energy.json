@@ -1,0 +1,9 @@
+{
+    "energyMaxCount": 4,
+    "energyCoolDownSecs": 1800,
+    "normal_level_energy_cost":1,
+    "summary_boss_energy_cost":1,
+    "review_boss_energy_cost":1,
+    "friend_request_max_count":30,
+    "friend_max_count":50
+}

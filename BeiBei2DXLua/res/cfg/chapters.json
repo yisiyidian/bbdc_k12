@@ -1,0 +1,21 @@
+{
+  "Chapters": {
+    "Chapter": [
+{"book_key":"ncee",	"chapter_key":"Chapter0",	"index":0,	"ChapterImage":"chapterBigButton1.png",	"BackImage":"chapterBack1.png",	"NameImage":"chapterName1.png",	"Name":"夏威夷"},
+{"book_key":"ncee",	"chapter_key":"Chapter1",	"index":1,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"洛杉矶"},
+{"book_key":"ncee",	"chapter_key":"Chapter2",	"index":2,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"旧金山"},
+{"book_key":"cet4",	"chapter_key":"Chapter0",	"index":0,	"ChapterImage":"chapterBigButton1.png",	"BackImage":"chapterBack1.png",	"NameImage":"chapterName1.png",	"Name":"夏威夷"},
+{"book_key":"cet4",	"chapter_key":"Chapter1",	"index":1,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"洛杉矶"},
+{"book_key":"cet4",	"chapter_key":"Chapter2",	"index":2,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"旧金山"},
+{"book_key":"cet6",	"chapter_key":"Chapter0",	"index":0,	"ChapterImage":"chapterBigButton1.png",	"BackImage":"chapterBack1.png",	"NameImage":"chapterName1.png",	"Name":"夏威夷"},
+{"book_key":"cet6",	"chapter_key":"Chapter1",	"index":1,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"洛杉矶"},
+{"book_key":"cet6",	"chapter_key":"Chapter2",	"index":2,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"旧金山"},
+{"book_key":"ielts",	"chapter_key":"Chapter0",	"index":0,	"ChapterImage":"chapterBigButton1.png",	"BackImage":"chapterBack1.png",	"NameImage":"chapterName1.png",	"Name":"夏威夷"},
+{"book_key":"ielts",	"chapter_key":"Chapter1",	"index":1,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"洛杉矶"},
+{"book_key":"ielts",	"chapter_key":"Chapter2",	"index":2,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"旧金山"},
+{"book_key":"toefl",	"chapter_key":"Chapter0",	"index":0,	"ChapterImage":"chapterBigButton1.png",	"BackImage":"chapterBack1.png",	"NameImage":"chapterName1.png",	"Name":"夏威夷"},
+{"book_key":"toefl",	"chapter_key":"Chapter1",	"index":1,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"洛杉矶"},
+{"book_key":"toefl",	"chapter_key":"Chapter2",	"index":2,	"ChapterImage":"chapterBigButton2.png",	"BackImage":"chapterBack2.png",	"NameImage":"chapterName2.png",	"Name":"旧金山"}
+    ]
+  }
+}

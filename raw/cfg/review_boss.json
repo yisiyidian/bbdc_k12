@@ -1,0 +1,15 @@
+{
+    "review_boss_key": "MR.zhang",
+    "review_boss_type": 0,
+    "review_boss_word_num":20,
+    "review_boss_drop_list": [
+    {
+      "itemKey": "item_energy_0",
+      "count": 1
+    },
+    {
+      "itemKey": "item_energy_0",
+      "count": 2
+    }
+  ]
+}

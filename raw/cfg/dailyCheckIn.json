@@ -1,0 +1,11 @@
+{
+  "dailyCheckIn": [
+{"day":1,	"itemKey":"item_energy_0",	"count":1,	"default_word":"apple|tea|where"},
+{"day":2,	"itemKey":"item_energy_0",	"count":2,	"default_word":"apple|tea|where"},
+{"day":3,	"itemKey":"item_energy_0",	"count":2,	"default_word":"apple|tea|where"},
+{"day":4,	"itemKey":"item_energy_0",	"count":2,	"default_word":"apple|tea|where"},
+{"day":5,	"itemKey":"item_energy_0",	"count":3,	"default_word":"apple|tea|where"},
+{"day":6,	"itemKey":"item_energy_0",	"count":3,	"default_word":"apple|tea|where"},
+{"day":7,	"itemKey":"item_energy_0",	"count":5,	"default_word":"apple|tea|where"}
+  ]
+}

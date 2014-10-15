@@ -13,6 +13,9 @@ function test()
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
+    s_DATA_MANAGER.loadText()
+    s_logd(s_DATA_MANAGER.getTextWithKey('feedback_title'))
+
     s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()
 
