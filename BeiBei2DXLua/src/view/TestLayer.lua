@@ -15,9 +15,7 @@ end)
 
 
 function TestLayer.create()
-    s_SCENE.touchEventBlockLayer.unlockTouch()
-
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
     local layer = TestLayer.new()
 
@@ -30,8 +28,7 @@ function TestLayer.create()
     local sentenceEn = word.sentenceEn
     local sentenceCn = word.sentenceCn
 
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), size.width, size.height)    
+    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), s_DESIGN_WIDTH, s_DESIGN_HEIGHT)    
     layer:addChild(backColor)
 
     local button_changeview
@@ -44,19 +41,19 @@ function TestLayer.create()
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
     cloud_up:setAnchorPoint(0.5, 1)
-    cloud_up:setPosition(size.width/2, size.height)
+    cloud_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
     layer:addChild(cloud_up)
 
     local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
     cloud_down:ignoreAnchorPointForPosition(false)
     cloud_down:setAnchorPoint(0.5, 0)
-    cloud_down:setPosition(size.width/2, 0)
+    cloud_down:setPosition(s_DESIGN_WIDTH/2, 0)
     layer:addChild(cloud_down)
 
     local beach = cc.Sprite:create("image/studyscene/studyscene_beach_down.png")
     beach:ignoreAnchorPointForPosition(false)
     beach:setAnchorPoint(0.5, 0)
-    beach:setPosition(size.width/2, 0)
+    beach:setPosition(s_DESIGN_WIDTH/2, 0)
     layer:addChild(beach)
 
     local size_big = cloud_down:getContentSize()
@@ -67,21 +64,21 @@ function TestLayer.create()
     
     local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
     label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
-    label_wordmeaningSmall:setPosition(size.width/2, 896)
+    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 896)
     layer:addChild(label_wordmeaningSmall)
 
     local success = function()
         playOver = true
-        s_SCENE.touchEventBlockLayer.lockTouch()
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         
         s_CorePlayManager.answerRight()
         progressBar.rightStyle()
     
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
-        showAnswerStateBack:setPosition(-size.width/2, 768)
+        showAnswerStateBack:setPosition(-s_DESIGN_WIDTH/2, 768)
         layer:addChild(showAnswerStateBack)
         
-        local action = cc.MoveTo:create(0.5,cc.p(size.width/2, 768))
+        local action = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 768))
         showAnswerStateBack:runAction(action)
 
         local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
@@ -101,7 +98,7 @@ function TestLayer.create()
                 s_CorePlayManager.enterTestLayer()
             else
                 local alter = TestAlter.createFromFirstAlter()
-                alter:setPosition(size.width/2, size.height/2)
+                alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
             end
         end
@@ -117,15 +114,15 @@ function TestLayer.create()
     end
     
     local timeOut = function()
-        s_SCENE.touchEventBlockLayer.lockTouch()
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     
         progressBar.wrongStyle()
         
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
-        showAnswerStateBack:setPosition(size.width/2*3, 768)
+        showAnswerStateBack:setPosition(s_DESIGN_WIDTH/2*3, 768)
         layer:addChild(showAnswerStateBack)
         
-        local action = cc.MoveTo:create(0.5,cc.p(size.width/2, 768))
+        local action = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 768))
         showAnswerStateBack:runAction(action)
         
         local sign = cc.Sprite:create("image/testscene/testscene_wrong_x.png")
@@ -147,7 +144,7 @@ function TestLayer.create()
                 --s_CorePlayManager.enterStudyLayer()
                 
                 local alter = TestAlter.createFromFirstAlter()
-                alter:setPosition(size.width/2, size.height/2)
+                alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
             end
         end
@@ -168,7 +165,7 @@ function TestLayer.create()
     mat.wrongLock = false
 
     local progress_back = cc.Sprite:create("image/progress/progressB1.png")
-    progress_back:setPosition(size.width/2, 100)
+    progress_back:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(progress_back)
     
     local progress = cc.ProgressTimer:create(cc.Sprite:create("image/progress/progressF1.png"))
@@ -182,7 +179,7 @@ function TestLayer.create()
     
     if s_CorePlayManager.currentWordIndex == 1 then
         local readygo = sp.SkeletonAnimation:create("res/spine/readygo_diyiguan.json", "res/spine/readygo_diyiguan.atlas", 1)
-        readygo:setPosition(size.width/2, size.height/2)
+        readygo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
         layer:addChild(readygo)
         readygo:addAnimation(0, 'animation', false)
     end
@@ -220,11 +217,11 @@ function TestLayer.create()
                 if button_donotknow == nil then
                     button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
                     button_donotknow:setAnchorPoint(1,0.5)
-                    button_donotknow:setPosition(size.width+button_donotknow:getContentSize().width,910)
+                    button_donotknow:setPosition(s_DESIGN_WIDTH+button_donotknow:getContentSize().width,910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
                     backColor:addChild(button_donotknow)
 
-                    local action = cc.MoveTo:create(0.5,cc.p(size.width,910))
+                    local action = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH,910))
                     button_donotknow:runAction(action)
                 end
             end

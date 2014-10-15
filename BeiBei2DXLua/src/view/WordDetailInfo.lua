@@ -6,12 +6,11 @@ end)
 
 function WordDetailInfo.create(word)
     -- system variate
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local height = 600
 
     local main = WordDetailInfo.new()
-    main:setContentSize(size.width, height)
+    main:setContentSize(s_DESIGN_WIDTH, height)
     main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
     
@@ -24,7 +23,7 @@ function WordDetailInfo.create(word)
     
     local index_y = height
     local text_length = 500
-    local left = (size.width - text_length)/2
+    local left = (s_DESIGN_WIDTH - text_length)/2
     
     label_wordname = cc.Label:createWithSystemFont(word.wordName,"",40)
     label_wordname:setAnchorPoint(0,1)
@@ -38,7 +37,7 @@ function WordDetailInfo.create(word)
     -- add sprite for split
     sprite_split = cc.Sprite:create("image/studyscene/studyscene_detailinfo_splitline.png")
     sprite_split:setAnchorPoint(0.5,1)
-    sprite_split:setPosition(size.width/2, index_y)
+    sprite_split:setPosition(s_DESIGN_WIDTH/2, index_y)
     main:addChild(sprite_split)
     index_y = index_y - sprite_split:getContentSize().height - 10
     

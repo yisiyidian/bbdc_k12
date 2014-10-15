@@ -26,38 +26,25 @@ local function main()
     cc.Director:getInstance():setDisplayStats(false)
     -- cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(480, 320, 0)
     -- cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(320 * 2, 480 * 2, cc.ResolutionPolicy.FIXED_HEIGHT)
-    
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    local w = size.width
-    local h = size.height
 
     --------------------------------------------------------------------------------
     require("common.global")
-    initGlobal()
-    s_SCENE_WIDTH = w
-    s_SCENE_HEIGHT = h
-    s_HEIGHT_SCALE = s_HEIGHT / s_SCENE_HEIGHT
-    cclog('design size:' .. s_SCENE_WIDTH .. ',' .. s_SCENE_HEIGHT .. ',' .. s_HEIGHT_SCALE)
-    
-    s_debugger.configLog(true, true)
-    s_SERVER.debugLocalHost = false -- 'http://localhost:3000/avos/'
-    s_SERVER.isAppStoreServer = false
-    
-    --create scene 
-    local scene = require("AppScene")
-    s_SCENE = scene.create()
-    
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
+    initApp()
     
     if cc.Director:getInstance():getRunningScene() then
         cc.Director:getInstance():replaceScene(s_SCENE)
     else
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
+
+    -- 
+    require("model.ReadAllWord")
+    s_WordPool = ReadAllWord()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
     
+    -- test
     local example = require("example.example")
-    
     test()
     
     --------------------------------------------------------------------------------

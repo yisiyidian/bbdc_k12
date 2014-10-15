@@ -6,9 +6,6 @@ return cc.Layer:create()
 end)
 
 function FlipMat.create(word, m ,n)
-    -- system variate
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    
     local main = FlipMat.new()
     main:setContentSize(640,640)
     main:setAnchorPoint(0.5,0)
@@ -61,7 +58,7 @@ function FlipMat.create(word, m ,n)
     end
 
     local gap = 132
-    local left = (size.width - (main_m-1)*gap) / 2
+    local left = (s_DESIGN_WIDTH - (main_m-1)*gap) / 2
     local bottom = left
     
     local main_logic_mat = RandomMat(main_m, main_n)

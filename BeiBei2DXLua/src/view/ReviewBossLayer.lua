@@ -17,7 +17,6 @@ end)
 
 
 function ReviewBossLayer.create()
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = ReviewBossLayer.new()
 
@@ -30,12 +29,11 @@ function ReviewBossLayer.create()
     local sentenceEn = word.sentenceEn
     local sentenceCn = word.sentenceCn
 
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), size.width, size.height)    
+    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), s_DESIGN_WIDTH, s_DESIGN_HEIGHT)    
     layer:addChild(backColor)
 
     local wordDetailInfo = WordDetailInfo.create(word)
-    wordDetailInfo:setPosition(size.width/2, 0)
+    wordDetailInfo:setPosition(s_DESIGN_WIDTH/2, 0)
     layer:addChild(wordDetailInfo)
 
 
@@ -47,19 +45,19 @@ function ReviewBossLayer.create()
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
     cloud_up:setAnchorPoint(0.5, 1)
-    cloud_up:setPosition(size.width/2, size.height)
+    cloud_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
     layer:addChild(cloud_up)
 
     local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
     cloud_down:ignoreAnchorPointForPosition(false)
     cloud_down:setAnchorPoint(0.5, 0)
-    cloud_down:setPosition(size.width/2, 0)
+    cloud_down:setPosition(s_DESIGN_WIDTH/2, 0)
     layer:addChild(cloud_down)
 
     local beach = cc.Sprite:create("image/studyscene/studyscene_beach_down.png")
     beach:ignoreAnchorPointForPosition(false)
     beach:setAnchorPoint(0.5, 0)
-    beach:setPosition(size.width/2, 0)
+    beach:setPosition(s_DESIGN_WIDTH/2, 0)
     layer:addChild(beach)
 
     local size_big = cloud_down:getContentSize()
@@ -71,7 +69,7 @@ function ReviewBossLayer.create()
     local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
     --label_wordmeaning:setAnchorPoint(0,1)
     label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
-    label_wordmeaningSmall:setPosition(size.width/2, 896)
+    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 896)
     layer:addChild(label_wordmeaningSmall)
 
     local soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)

@@ -9,12 +9,11 @@ function ProgressBar.create(isWrongStateShow)
     local currentIndex = s_CorePlayManager.currentWordIndex
 
     -- system variate
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     local main = ProgressBar.new()
-    main:setContentSize(size.width, 10)
+    main:setContentSize(s_DESIGN_WIDTH, 10)
 
     local gap = 40
-    local left = (size.width - (totalIndex-1)*gap)/2
+    local left = (s_DESIGN_WIDTH - (totalIndex-1)*gap)/2
     
     -- new code
     local imageNameList = {}

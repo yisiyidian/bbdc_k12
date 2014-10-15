@@ -57,7 +57,7 @@ function Server.request(api, parameters, onSucceed, onFailed)
         if xhr.status ~= 200 then
             onFailed(api, xhr.status, xhr.statusText)
         elseif xhr.response ~= nil then
-            local data = s_json.decode(xhr.response)
+            local data = s_JSON.decode(xhr.response)
             local result
             if Server.debugLocalHost then 
                 result = data 

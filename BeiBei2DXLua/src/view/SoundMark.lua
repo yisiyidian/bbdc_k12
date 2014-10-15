@@ -6,12 +6,11 @@ end)
 
 function SoundMark.create(wordname, soundmarkus, soundmarken)
     -- system variate
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     
     local gap = 115
     
     local main = SoundMark.new()
-    main:setContentSize(size.width, gap)
+    main:setContentSize(s_DESIGN_WIDTH, gap)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
@@ -63,8 +62,8 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     -- handle position
     local max_text_length = math.max(button_wordname:getContentSize().width, button_soundmark_en:getContentSize().width, button_soundmark_us:getContentSize().width)
     local total_length = button_pronounce:getContentSize().width + max_text_length + 10
-    local position_left_x = (size.width-total_length)/2 + button_pronounce:getContentSize().width/2
-    local position_right_x = (size.width+total_length)/2 - max_text_length/2
+    local position_left_x = (s_DESIGN_WIDTH-total_length)/2 + button_pronounce:getContentSize().width/2
+    local position_right_x = (s_DESIGN_WIDTH+total_length)/2 - max_text_length/2
     
     button_pronounce:setPosition(position_left_x,gap)
     button_wordname:setPosition(position_right_x,gap)

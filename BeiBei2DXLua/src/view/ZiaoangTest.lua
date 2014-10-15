@@ -6,7 +6,6 @@ end)
 
 function ZiaoangTest.create()
     -- system variate
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     local main = ZiaoangTest.new()
     --main:setContentSize(640,640)
     --main:setAnchorPoint(0,0)
@@ -68,7 +67,7 @@ function ZiaoangTest.create()
     local button_donotknow_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             local b = cc.Sprite:create("image/testscene/testscene_donotkonw.png")
-            b:setPosition(size.width/2, size.height/2)
+            b:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
             main:addChild(b)
         end
     end
@@ -76,8 +75,8 @@ function ZiaoangTest.create()
     --local button_donotknow = nil
     local button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
     button_donotknow:setAnchorPoint(1,0.5)
-    --button_donotknow:setPosition(size.width+button_donotknow:getContentSize().width,896)
-    button_donotknow:setPosition(size.width,896)
+    --button_donotknow:setPosition(s_DESIGN_WIDTH+button_donotknow:getContentSize().width,896)
+    button_donotknow:setPosition(s_DESIGN_WIDTH,896)
     button_donotknow:addTouchEventListener(button_donotknow_clicked)
     main:addChild(button_donotknow)
     

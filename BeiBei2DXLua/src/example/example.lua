@@ -25,7 +25,7 @@ function test()
 --    s_logd(data.des)
 --
 --    local function onSucceed(api, result)
---        s_logd('onSucceed:' .. api .. ', ' .. s_json.encode(result))
+--        s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
 --    end 
 --    local function onFailed(api, code, message)
 --        s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
@@ -54,7 +54,7 @@ function test()
 
 
    -- local function onSucceed(api, result)
-   --     s_logd('onSucceed:' .. api .. ', ' .. s_json.encode(result))
+   --     s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
    -- end 
    -- local function onFailed(api, code, message)
    --     s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
@@ -84,7 +84,7 @@ function test()
     -- local path = cc.FileUtils:getInstance():fullPathForFilename('data/lv_cet4.json')
     -- local data = cc.FileUtils:getInstance():getStringFromFile(path)
     -- s_logd('start')
-    -- s_json.decode(data)
+    -- s_JSON.decode(data)
     -- s_logd('end')
 
     -- cx.CXAnalytics:logEventAndLabel('luatestEvent', 'lualabel')
