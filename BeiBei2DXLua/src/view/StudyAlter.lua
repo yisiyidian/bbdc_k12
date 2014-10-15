@@ -64,7 +64,7 @@ function StudyAlter.create()
         return true
     end
 
-    listener = cc.EventListenerTouchOneByOne:create()
+    local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
 
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )

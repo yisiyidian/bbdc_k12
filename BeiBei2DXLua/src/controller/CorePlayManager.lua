@@ -2,6 +2,7 @@ require "common.global"
 
 local StudyLayer = require("view.StudyLayer")
 local TestLayer = require("view.TestLayer")
+local ReviewBossLayer = require("view.ReviewBossLayer")
 
 local CorePlayManager = {}
 
@@ -47,6 +48,11 @@ end
 
 function CorePlayManager.answerRight()
     CorePlayManager.answerStateRecord[CorePlayManager.currentWordIndex] = 1
+end
+
+function CorePlayManager.enterReviewBossLayer()
+    local reviewBossLayer = ReviewBossLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossLayer)
 end
 
 

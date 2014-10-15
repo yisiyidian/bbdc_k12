@@ -21,7 +21,7 @@ function TestAlter.createFromFirstAlter()
         return true
     end
 
-    listener = cc.EventListenerTouchOneByOne:create()
+    local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
 
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
@@ -43,7 +43,7 @@ function TestAlter.createFromSecondAlter()
         return true
     end
 
-    listener = cc.EventListenerTouchOneByOne:create()
+    local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
 
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
@@ -141,9 +141,11 @@ showDetailInfo = function()
         if eventType == ccui.TouchEventType.began then            
             selectWordMeaning:setString(s_WordPool[s_CorePlayManager.wordList[sender.tag]].wordMeaningSmall)
             if sender.name == "right" then
-                
+                local tmp = cc.Scale9Sprite:create("image/alter/testscene_rightword_back_dark.png")
+                sender:setBackgroundSpriteForState(tmp, cc.CONTROL_STATE_NORMAL )
             else
-                
+                local tmp = cc.Scale9Sprite:create("image/alter/testscene_rightword_back_dark.png")
+                sender:setBackgroundSpriteForState(tmp, cc.CONTROL_STATE_NORMAL )
             end
         end
     end
