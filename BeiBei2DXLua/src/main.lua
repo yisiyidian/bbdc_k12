@@ -38,8 +38,7 @@ local function main()
     end
 
     -- 
-    require("model.ReadAllWord")
-    s_WordPool = ReadAllWord()
+    s_WordPool = s_DATA_MANAGER.readAllWord()
     s_CorePlayManager = require("controller.CorePlayManager")
     s_CorePlayManager.create()
     

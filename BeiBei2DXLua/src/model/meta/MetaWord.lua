@@ -1,10 +1,10 @@
 
-local Word = class("Word", function()
+local MetaWord = class("MetaWord", function()
     return {}
 end)
 
-function Word.create(wordName, wordSoundMarkEn, wordSoundMarkAm, wordMeaning, wordMeaningSmall, sentenceEn, sentenceCn)
-    local main = Word.new()
+function MetaWord.create(wordName, wordSoundMarkEn, wordSoundMarkAm, wordMeaning, wordMeaningSmall, sentenceEn, sentenceCn)
+    local main = MetaWord.new()
     main.wordName = wordName
     main.wordSoundMarkEn = wordSoundMarkEn
     main.wordSoundMarkAm = wordSoundMarkAm
@@ -15,4 +15,4 @@ function Word.create(wordName, wordSoundMarkEn, wordSoundMarkAm, wordMeaning, wo
     return main
 end
 
-return Word
+return MetaWord
