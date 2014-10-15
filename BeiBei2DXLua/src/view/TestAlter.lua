@@ -15,6 +15,19 @@ function TestAlter.createFromFirstAlter()
     main:ignoreAnchorPointForPosition(false)
     
     showGirlAndStar()
+    
+    local onTouchBegan = function(touch, event)
+        --s_logd("touch began on block layer")
+        return true
+    end
+
+    listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    local eventDispatcher = main:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+    
     return main
 end
 
@@ -24,6 +37,19 @@ function TestAlter.createFromSecondAlter()
     main:ignoreAnchorPointForPosition(false)
 
     showDetailInfo()
+    
+    local onTouchBegan = function(touch, event)
+        --s_logd("touch began on block layer")
+        return true
+    end
+
+    listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    local eventDispatcher = main:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+    
     return main
 end
 
@@ -114,16 +140,32 @@ showDetailInfo = function()
     local showSelectWordInfo = function(sender,eventType)
         if eventType == ccui.TouchEventType.began then            
             selectWordMeaning:setString(s_WordPool[s_CorePlayManager.wordList[sender.tag]].wordMeaningSmall)
+            if sender.name == "right" then
+                
+            else
+                
+            end
         end
     end
     
     local button_array = {}
-    
-    for i = 1, 5 do 
+    local lastSelectIndex = nil
+    for i = 1, 5 do
         for j = 1, 3 do
             local index = 3*i + j - 3
             if index <= #s_CorePlayManager.wordList then
-                local word_back = ccui.Button:create("image/alter/testscene_rightword_back_light.png")
+                local word_back = nil
+                if s_CorePlayManager.answerStateRecord[index] == 1 then
+                    word_back = ccui.Button:create("image/alter/testscene_rightword_back_light.png")
+                    word_back.name = "right"
+                  
+                else
+                    if lastSelectIndex == nil then
+                        lastSelectIndex = index
+                    end
+                    word_back = ccui.Button:create("image/alter/testscene_wrongword_back_light.png")
+                    word_back.name = "wrong" 
+                end
                 word_back:setPosition(116+160*(j-1), 676-78*(i-1))
                 word_back:setTitleText(s_CorePlayManager.wordList[index])
                 word_back:setTitleColor(cc.c4b(0,0,0,255))
@@ -135,6 +177,11 @@ showDetailInfo = function()
             end
         end
     end
+    if lastSelectIndex == nil then
+        lastSelectIndex = 1
+    end
+    showSelectWordInfo(button_array[lastSelectIndex], ccui.TouchEventType.began)
+    
     
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

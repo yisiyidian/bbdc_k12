@@ -1,0 +1,17 @@
+[
+{"word_num":1,	"star_1":1,	"star_2":1,	"star_3":1},
+{"word_num":2,	"star_1":1,	"star_2":1,	"star_3":2},
+{"word_num":3,	"star_1":2,	"star_2":2,	"star_3":3},
+{"word_num":4,	"star_1":3,	"star_2":3,	"star_3":4},
+{"word_num":5,	"star_1":3,	"star_2":4,	"star_3":5},
+{"word_num":6,	"star_1":4,	"star_2":5,	"star_3":6},
+{"word_num":7,	"star_1":5,	"star_2":6,	"star_3":7},
+{"word_num":8,	"star_1":5,	"star_2":7,	"star_3":8},
+{"word_num":9,	"star_1":6,	"star_2":8,	"star_3":9},
+{"word_num":10,	"star_1":6,	"star_2":8,	"star_3":10},
+{"word_num":11,	"star_1":7,	"star_2":9,	"star_3":11},
+{"word_num":12,	"star_1":8,	"star_2":10,"star_3":12},
+{"word_num":13,	"star_1":8,	"star_2":11,"star_3":13},
+{"word_num":14,	"star_1":9,	"star_2":12,"star_3":14},
+{"word_num":15,	"star_1":9,	"star_2":12,"star_3":15}
+]

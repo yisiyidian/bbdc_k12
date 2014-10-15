@@ -124,7 +124,7 @@ function ProgressBar.create(isWrongStateShow)
         main:addChild(wrong)
         wrong:addAnimation(0, 'animation', false)
         
-        main:removeChild(frame,true)
+        frame:setVisible(false)
     end
     
     return main

@@ -7,6 +7,7 @@ local ProgressBar = require("view.ProgressBar")
 local FlipMat = require("view.FlipMat")
 local StudyAlter = require("view.StudyAlter")
 local TestAlter = require("view.TestAlter")
+require("model.ReadConfiguration")
 
 
 local TestLayer = class("TestLayer", function ()
@@ -16,6 +17,10 @@ end)
 
 function TestLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    ReadStarRule()
+
+
+    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = TestLayer.new()
 
@@ -97,6 +102,8 @@ function TestLayer.create()
                 s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
                 s_CorePlayManager.enterTestLayer()
             else
+                s_SCENE.touchEventBlockLayer.unlockTouch()
+                
                 local alter = TestAlter.createFromFirstAlter()
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
@@ -114,7 +121,12 @@ function TestLayer.create()
     end
     
     local timeOut = function()
+<<<<<<< HEAD
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+=======
+        playOver = true
+        s_SCENE.touchEventBlockLayer.lockTouch()
+>>>>>>> add star rule and lock for study scene and study alter
     
         progressBar.wrongStyle()
         
@@ -140,8 +152,7 @@ function TestLayer.create()
                 s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
                 s_CorePlayManager.enterTestLayer()
             else
-                --s_CorePlayManager.currentWordIndex = 1
-                --s_CorePlayManager.enterStudyLayer()
+                s_SCENE.touchEventBlockLayer.unlockTouch()
                 
                 local alter = TestAlter.createFromFirstAlter()
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)

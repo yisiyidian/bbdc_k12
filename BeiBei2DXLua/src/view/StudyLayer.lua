@@ -19,7 +19,7 @@ end)
 function StudyLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
-    --local scheduler = cc.Director:getInstance():getScheduler()
+    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = StudyLayer.new()
 
@@ -80,18 +80,27 @@ function StudyLayer.create()
     
     button_detail_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            s_SCENE.touchEventBlockLayer.lockTouch()
             if button_detail:getRotation() == 0 then
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, -700))
                 cloud_down:runAction(action1)
             
                 local action2 = cc.RotateTo:create(0.4,180)
                 button_detail:runAction(action2)
+                
+                local action3 = cc.DelayTime:create(0.5)
+                local action4 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
+                layer:runAction(cc.Sequence:create(action3, action4))
             else
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 0))
                 cloud_down:runAction(action1)
 
                 local action2 = cc.RotateTo:create(0.4,0)
                 button_detail:runAction(action2)
+                
+                local action3 = cc.DelayTime:create(0.5)
+                local action4 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
+                layer:runAction(cc.Sequence:create(action3, action4))
             end
         end
     end
@@ -104,6 +113,7 @@ function StudyLayer.create()
     layer:addChild(button_detail)
     
     local success = function()
+        s_SCENE.touchEventBlockLayer.lockTouch()
         progressBar.rightStyle()
     
         local changeLayer = function()
@@ -111,6 +121,8 @@ function StudyLayer.create()
                 s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
                 s_CorePlayManager.enterStudyLayer()
             else
+                s_SCENE.touchEventBlockLayer.unlockTouch()
+            
                 local alter = StudyAlter.create()
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
@@ -124,7 +136,7 @@ function StudyLayer.create()
     end
 
     local fail = function()
-        s_logd("new wrong")
+        --s_logd("new wrong")
     end
     
     local mat = FlipMat.create(wordName,4,4)
@@ -138,6 +150,7 @@ function StudyLayer.create()
     
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            s_SCENE.touchEventBlockLayer.lockTouch()
             if button_changeview:getTitleText() == "去划单词" then
                 button_changeview:setTitleText("再看一次")
 
@@ -149,6 +162,10 @@ function StudyLayer.create()
                 
                 local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+60, 930))
                 button_detail:runAction(action3)
+                
+                local action4 = cc.DelayTime:create(0.5)
+                local action5 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
+                layer:runAction(cc.Sequence:create(action4, action5))
             else
                 button_changeview:setTitleText("去划单词")
 
@@ -160,6 +177,10 @@ function StudyLayer.create()
                 
                 local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width-60, 930))
                 button_detail:runAction(action3)
+                
+                local action4 = cc.DelayTime:create(0.5)
+                local action5 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
+                layer:runAction(cc.Sequence:create(action4, action5))
             end
         end
     end

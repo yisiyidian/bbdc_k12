@@ -59,6 +59,18 @@ function StudyAlter.create()
     button_right:addTouchEventListener(button_right_clicked)
     back:addChild(button_right)
 
+    local onTouchBegan = function(touch, event)
+        --s_logd("touch began on block layer")
+        return true
+    end
+
+    listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    local eventDispatcher = main:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+
     return main    
 end
 
