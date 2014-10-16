@@ -36,11 +36,6 @@ local function main()
     else
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
-
-    -- 
-    s_WordPool = s_DATA_MANAGER.readAllWord()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
     
     -- test
     local example = require("example.example")

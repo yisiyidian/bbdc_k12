@@ -1,10 +1,45 @@
 local DataManager = {}
 
+require('common.text')
+local MetaBook = require("model.meta.MetaBook")
+
+s_BOOK_KEY_NCEE  = 'ncee'
+s_BOOK_KEY_CET4  = 'cet4'
+s_BOOK_KEY_CET6  = 'cet6'
+s_BOOK_KEY_IELTS = 'ielts'
+s_BOOK_KEY_TOEFL = 'toefl'
+
 DataManager.text = nil
 DataManager.books = nil
 DataManager.chapters = nil
+DataManager.items = nil
+DataManager.level_ncee = nil
+DataManager.level_cet4 = nil
+DataManager.level_cet6 = nil
+DataManager.level_ielts = nil
+DataManager.level_toefl = nil
+DataManager.reviewBoos = nil
 DataManager.starRules = nil
 DataManager.dailyCheckIn = nil
+
+s_energyMaxCount = 4
+s_energyCoolDownSecs = 1800
+s_normal_level_energy_cost = 1
+s_summary_boss_energy_cost = 1
+s_review_boss_energy_cost = 1
+s_friend_request_max_count = 30
+s_friend_max_count = 50
+
+s_allwords = "cfg/allwords"
+s_books = 'cfg/books.json'
+s_chapters = 'cfg/chapters.json'
+s_daily = 'cfg/dailyCheckIn.json'
+s_energy = 'cfg/energy.json'
+s_items = 'cfg/items.json'
+local getLevelConfigFilePath = function (bookkey) return string.format('cfg/lv_%s.json', bookkey) end
+s_review_boos = 'cfg/review_boss.json'
+s_starRule = 'cfg/starRule.json'
+s_text = 'cfg/text.json'
 
 -- text -------------------------------------------------------------------
 
@@ -42,7 +77,7 @@ end
 
 -- word -------------------------------------------------------------------
 
-function DataManager.readAllWord()
+function DataManager.loadAllWords()
     local wordInfo = {}
     local content = cc.FileUtils:getInstance():getStringFromFile(s_allwords)
     local lines = split(content, "\n")
@@ -62,7 +97,7 @@ end
 function DataManager.loadBooks()
     local jsonObj = loadJsonFile(s_books)
     local jsonArr = jsonObj['books']
-    local MetaBook = require("model.meta.MetaBook")
+    
     DataManager.books = {}
     for i = 1, #jsonArr do 
         local data = jsonArr[i]
@@ -130,6 +165,73 @@ function DataManager.loadEnergy()
     s_friend_max_count = jsonObj['friend_max_count'] 
 end
 
+-- items -------------------------------------------------------------------
+
+function DataManager.loadItems()
+    local jsonObj = loadJsonFile(s_items)
+    local jsonArr = jsonObj['items']
+    local MetaItem = require("model.meta.MetaItem")
+    DataManager.items = {}
+    for i = 1, #jsonArr do 
+        local data = jsonArr[i]
+        local items = MetaItem.create(data['key'], data['type'])
+        DataManager.items[i] = items
+    end
+end
+
+-- levels -------------------------------------------------------------------
+
+function DataManager.loadLevels(bookkey)
+    local jsonObj = loadJsonFile(getLevelConfigFilePath(bookkey))
+    local jsonArr = jsonObj['Levels']['Level']
+    local MetaLevel = require("model.meta.MetaLevel")
+    local levels = {}
+    for i = 1, #jsonArr do 
+        local data = jsonArr[i]
+        local lv = MetaLevel.create(data['index'], 
+                                    data['word_content'],
+                                    data['summary_boss_drop'], 
+                                    data['chapter_key'], 
+                                    data['book_key'], 
+                                    data['summary_boss_time'], 
+                                    data['summary_boss_word'],
+                                    data['summary_boss_hp'], 
+                                    data['summary_boss_stars'], 
+                                    data['type'], 
+                                    data['level_key'])
+        levels[i] = lv
+    end
+
+    if bookkey == s_BOOK_KEY_NCEE then
+        DataManager.level_ncee = levels
+    elseif bookkey == s_BOOK_KEY_CET4 then
+        DataManager.level_cet4 = levels
+    elseif bookkey == s_BOOK_KEY_CET6 then
+        DataManager.level_cet6 = levels
+    elseif bookkey == s_BOOK_KEY_IELTS then
+        DataManager.level_ielts = levels
+    elseif bookkey == s_BOOK_KEY_TOEFL then
+        DataManager.level_toefl = levels
+    end
+end
+
+-- review boss -------------------------------------------------------------------
+
+function DataManager.loadReviewBoss()
+    local jsonObj = loadJsonFile(s_review_boos)
+    DataManager.reviewBoos = {}
+    DataManager.reviewBoos["review_boss_key"] = jsonObj["review_boss_key"]
+    DataManager.reviewBoos["review_boss_type"] = jsonObj["review_boss_type"]
+    DataManager.reviewBoos["review_boss_word_num"] = jsonObj["review_boss_word_num"]
+
+    DataManager.reviewBoos["review_boss_drop_list"] = {}
+    local jsonArr = jsonObj['review_boss_drop_list']
+    for i = 1, #jsonArr do 
+        local data = jsonArr[i]
+        DataManager.reviewBoos["review_boss_drop_list"][i] = {["itemKey"]=data["itemKey"], ["count"]=data["count"]}
+    end
+end
+
 -- star rule -------------------------------------------------------------------
 
 function DataManager.loadStarRules()
@@ -146,5 +248,7 @@ function DataManager.loadStarRules()
         DataManager.starRules[i] = sr
     end
 end
+
+-------------------------------------------------------------------
 
 return DataManager
