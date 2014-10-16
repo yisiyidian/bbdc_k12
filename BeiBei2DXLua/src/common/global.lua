@@ -23,8 +23,10 @@ end
 local function _initScene()
     -- size
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    s_DESIGN_WIDTH  = size.width
-    s_DESIGN_HEIGHT = size.height
+    s_SCREEN_WIDTH  = size.width
+    s_SCREEN_HEIGHT = size.height
+    s_DESIGN_WIDTH  = size.width -- TODO multiscreen
+    s_DESIGN_HEIGHT = size.height -- TODO multiscreen
     s_HEIGHT        = 1136.0
     s_HEIGHT_SCALE  = s_HEIGHT / s_DESIGN_HEIGHT
 
