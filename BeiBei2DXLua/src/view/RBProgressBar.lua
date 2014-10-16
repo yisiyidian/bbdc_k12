@@ -36,7 +36,7 @@ function RBProgressBar.create(totalIndex)
     index:setPosition(left + gap* (currentIndex - 1), 0)
     main:addChild(index)
 
-    local label_number = cc.Label:createWithSystemFont(1,"",24)
+    local label_number = cc.Label:createWithSystemFont(currentIndex,"",24)
     label_number:setColor(cc.c4b(255,255,255,255))
     label_number:setPosition(index:getContentSize().width/2, index:getContentSize().height*0.4)
     index:addChild(label_number)
@@ -46,9 +46,31 @@ function RBProgressBar.create(totalIndex)
     main.addOne = function()
         currentIndex = currentIndex + 1
         
-        index:setPosition(left + gap* (currentIndex - 1), 0)
+        label_number:setString(currentIndex)
+        
+        local action1 = cc.MoveTo:create(0.5,cc.p(left + gap* (currentIndex - 1), 0))
+        index:runAction(action1)
+        --index:setPosition(left + gap* (currentIndex - 1), 0)
     
-        progress:setPercentage(100*(currentIndex-1)/totalIndex)
+        local scrPercent = progress:getPercentage()
+        local dstPercent = 100*(currentIndex-1)/totalIndex
+        local gap = (dstPercent - scrPercent)/50     
+        
+        local scheduler = nil
+        local schedulerEntry = nil
+        
+        local add = function()
+            progress:setPercentage(progress:getPercentage() + gap)
+            if progress:getPercentage() >= dstPercent then
+                scheduler:unscheduleScriptEntry(schedulerEntry)
+            end
+        end
+    
+        scheduler = cc.Director:getInstance():getScheduler()
+        
+        schedulerEntry = scheduler:scheduleScriptFunc(add, 0.01, false)
+        
+        --progress:setPercentage(100*(currentIndex-1)/totalIndex)
     end
 
     return main
