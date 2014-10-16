@@ -6,12 +6,18 @@ local ReviewBossLayer = require("view.ReviewBossLayer")
 
 local CorePlayManager = {}
 
+-- study scene and test scene variate
 CorePlayManager.dictionary = {}
 CorePlayManager.currentWordIndex = 1
 CorePlayManager.wordList = {"apple","pear","water","day"}
 CorePlayManager.currentWord = nil
 CorePlayManager.answerStateRecord = {}
 CorePlayManager.wordProficiency = {}
+
+-- study scene and test scene variate
+CorePlayManager.rbWordList = {"apple","pear","water","day"}
+CorePlayManager.rbDictionary = {}
+
 
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()

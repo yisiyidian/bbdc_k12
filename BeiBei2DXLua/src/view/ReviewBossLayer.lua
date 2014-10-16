@@ -25,8 +25,30 @@ function ReviewBossLayer.create()
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, 1040)
     layer:addChild(rbProgressBar)
     
+    
+    local sprite_array = {}
+    for i = 1, 4 do 
+        local tmp = {}
+        for j = 1, 3 do
+            local sprite = cc.Sprite:create("image/reviewbossscene/rb_boss.png")
+            sprite:setPosition(200*j - 80, 936 - 260*i)
+            sprite:setScale(0.8)
+            layer:addChild(sprite)
+            tmp[j] = sprite
+        end
+        sprite_array[i] = tmp
+    end
+    
     local onTouchBegan = function(touch, event)
         --s_logd("touch began on block layer")
+        
+        for i = 1, 4 do
+            for j = 1, 3 do
+                local action = cc.MoveBy:create(0.5, cc.p(0, 260))
+                sprite_array[i][j]:runAction(action)
+            end
+        end
+        
         return true
     end
 
