@@ -15,8 +15,10 @@ CorePlayManager.answerStateRecord = {}
 CorePlayManager.wordProficiency = {}
 
 -- study scene and test scene variate
-CorePlayManager.rbWordList = {"apple","pear","water","day"}
+CorePlayManager.rbWordList = {"apple","pear","water","day","sun","moon","book"}
+CorePlayManager.rbCurrentWordIndex = 1
 CorePlayManager.rbDictionary = {}
+CorePlayManager.rbCurrentWord = nil
 
 
 function CorePlayManager.create()
@@ -57,6 +59,11 @@ function CorePlayManager.answerRight()
 end
 
 function CorePlayManager.enterReviewBossLayer()
+    CorePlayManager.rbCurrentWordIndex = 1
+    for i = 1, #CorePlayManager.rbWordList do
+        CorePlayManager.rbDictionary[i] = s_WordPool[CorePlayManager.rbWordList[i]]
+    end
+
     local reviewBossLayer = ReviewBossLayer.create()
     s_SCENE:replaceGameLayer(reviewBossLayer)
 end

@@ -13,7 +13,7 @@ function RBProgressBar.create(totalIndex)
     
     local local_size = main:getContentSize()
     
-    local currentIndex = 2
+    local currentIndex = 1
     
     -- init framework
     local progress_back = cc.Sprite:create("image/progress/rb_progressBack.png")
@@ -45,14 +45,10 @@ function RBProgressBar.create(totalIndex)
     -- add addOne animation
     main.addOne = function()
         currentIndex = currentIndex + 1
+        
+        index:setPosition(left + gap* (currentIndex - 1), 0)
     
-        local action1 = cc.MoveTo:create(0.3, cc.p(left + gap* (currentIndex - 1), 0))
-        index:runAction(action1)
-        
-        local addPercent = function()
-        end
-        
-        
+        progress:setPercentage(100*(currentIndex-1)/totalIndex)
     end
 
     return main

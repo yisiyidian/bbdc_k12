@@ -1,7 +1,11 @@
 require("Cocos2d")
 require("Cocos2dConstants")
 
--- TODO : scroll_state - should NOT some magic numbers
+local dir_up    = 1
+local dir_down  = 2
+local dir_left  = 3
+local dir_right = 4
+local dir_init  = 0
 
 local FlipNode = class("FlipNode", function()
     return cc.Sprite:create()
@@ -19,7 +23,7 @@ function FlipNode.create(back, character, x, y)
     main.logicX = x
     main.logicY = y
     main.main_character_content = character
-    main.scroll_state = 0
+    main.scroll_state = dir_init
     main.hasSelected = false
     
     --main.main_back = cc.Sprite:create(back)
@@ -47,13 +51,13 @@ function FlipNode.create(back, character, x, y)
 
     main.removeSelectStyle = function()
         main.hasSelected = false
-        if main.scroll_state == 1 then
+        if main.scroll_state == dir_up then
             main.up_back()
-        elseif main.scroll_state == 2 then
+        elseif main.scroll_state == dir_down then
             main.down_back()
-        elseif main.scroll_state == 3 then
+        elseif main.scroll_state == dir_left then
             main.left_back()
-        elseif main.scroll_state == 4 then
+        elseif main.scroll_state == dir_right then
             main.right_back()
         else
             main.normal()
@@ -82,49 +86,49 @@ function FlipNode.create(back, character, x, y)
     end
 
     main.up = function()
-        main.scroll_state = 1
+        main.scroll_state = dir_up
         main.main_back:addAnimation(0, 'up', false)
         main.main_character_label:setColor(cc.c3b(255,255,255))
     end
 
     main.down = function()
-        main.scroll_state = 2
+        main.scroll_state = dir_down
         main.main_back:addAnimation(0, 'down', false)
         main.main_character_label:setColor(cc.c3b(255,255,255))
     end
 
     main.left = function()
-        main.scroll_state = 3
+        main.scroll_state = dir_left
         main.main_back:addAnimation(0, 'left', false)
         main.main_character_label:setColor(cc.c3b(255,255,255))
     end
 
     main.right = function()
-        main.scroll_state = 4
+        main.scroll_state = dir_right
         main.main_back:addAnimation(0, 'right', false)
         main.main_character_label:setColor(cc.c3b(255,255,255))
     end
 
     main.up_back = function()
-        main.scroll_state = 0
+        main.scroll_state = dir_init
         main.main_back:addAnimation(0, 'up_back', false)
         main.main_character_label:setColor(cc.c3b(0,0,0))
     end
 
     main.down_back = function()
-        main.scroll_state = 0
+        main.scroll_state = dir_init
         main.main_back:addAnimation(0, 'down_back', false)
         main.main_character_label:setColor(cc.c3b(0,0,0))
     end
 
     main.left_back = function()
-        main.scroll_state = 0
+        main.scroll_state = dir_init
         main.main_back:addAnimation(0, 'left_back', false)
         main.main_character_label:setColor(cc.c3b(0,0,0))
     end
 
     main.right_back = function()
-        main.scroll_state = 0
+        main.scroll_state = dir_init
         main.main_back:addAnimation(0, 'right_back', false)
         main.main_character_label:setColor(cc.c3b(0,0,0))
     end

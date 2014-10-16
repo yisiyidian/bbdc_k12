@@ -78,19 +78,13 @@ showGirlAndStar = function()
 
     if rightCount >= star3 then
         starCount = 3
-        --stars:addAnimation(0, 'animation_3_star', false)
-    else if rightCount >= star2 then
+    elseif rightCount >= star2 then
         starCount = 2
-        --stars:addAnimation(0, 'animation_2_star', false)
-    else if rightCount >= star1 then
+    elseif rightCount >= star1 then
         starCount = 1
-        --stars:addAnimation(0, 'animation_1_star', false)
     else
         starCount = 0
-        --stars:addAnimation(0, 'animation_no_star', false)
     end    
-    end
-    end
     
     if starCount > 0 then
         local girl = sp.SkeletonAnimation:create("res/spine/bb_happy_public.json", "res/spine/bb_happy_public.atlas", 1)
@@ -112,15 +106,13 @@ showGirlAndStar = function()
         
         if starCount == 3 then
             stars:addAnimation(0, 'animation_3_star', false)
-        else if starCount == 2 then
+        elseif starCount == 2 then
             stars:addAnimation(0, 'animation_2_star', false)
-        else if starCount == 1 then
+        elseif starCount == 1 then
             stars:addAnimation(0, 'animation_1_star', false)
         else
             stars:addAnimation(0, 'animation_no_star', false)
         end    
-        end
-        end
     end
     
     local action1 = cc.DelayTime:create(0.5)
