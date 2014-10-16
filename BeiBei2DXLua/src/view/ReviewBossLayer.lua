@@ -15,7 +15,6 @@ end)
 
 function ReviewBossLayer.create()
     math.randomseed(os.time())
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = ReviewBossLayer.new()
 
@@ -32,7 +31,7 @@ function ReviewBossLayer.create()
     s_CorePlayManager.rbCurrentWord = s_CorePlayManager.dictionary[s_CorePlayManager.rbCurrentWordIndex]
     local wordMeaningBeTestedNow = cc.Label:createWithSystemFont(s_CorePlayManager.rbCurrentWord.wordMeaningSmall,"",40)
     wordMeaningBeTestedNow:setColor(cc.c4b(0,0,0,255))
-    wordMeaningBeTestedNow:setPosition(size.width/2, size.height*0.8)
+    wordMeaningBeTestedNow:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.8)
     layer:addChild(wordMeaningBeTestedNow)
     
     local rightIndex = {}
