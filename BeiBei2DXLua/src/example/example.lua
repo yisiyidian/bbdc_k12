@@ -18,12 +18,12 @@ function test()
     s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
     
     s_DATA_MANAGER.loadBooks()
-    for k,v in pairs(s_DATA_MANAGER.books) do
-      s_logd(k .. ': ' .. v.name)
-    end
-
+    s_DATA_MANAGER.loadChapters()
+    s_DATA_MANAGER.loadDailyCheckIns()
     s_DATA_MANAGER.loadEnergy()
     s_DATA_MANAGER.loadStarRules()
+
+    print_lua_table(s_DATA_MANAGER.dailyCheckIn)
 
     --s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()

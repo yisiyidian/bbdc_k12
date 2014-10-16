@@ -42,6 +42,8 @@ local function _initTool()
     s_debugger.configLog(true, true)
     s_logd     = s_debugger.logd
     s_logdStr  = s_debugger.logdStr
+
+    require('common.utils')
 end
 
 local function _initScene()

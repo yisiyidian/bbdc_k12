@@ -6,9 +6,6 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-
-
-require "common.RandomMat"
 local FlipNode = require("view.FlipNode")
 
 local FlipMat = class("FlipMat", function()
@@ -71,7 +68,7 @@ function FlipMat.create(word, m ,n)
     local left = (s_DESIGN_WIDTH - (main_m-1)*gap) / 2
     local bottom = left
     
-    local main_logic_mat = RandomMat(main_m, main_n)
+    local main_logic_mat = randomMat(main_m, main_n)
     local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
 
     

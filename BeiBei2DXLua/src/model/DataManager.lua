@@ -2,7 +2,9 @@ local DataManager = {}
 
 DataManager.text = nil
 DataManager.books = nil
+DataManager.chapters = nil
 DataManager.starRules = nil
+DataManager.dailyCheckIn = nil
 
 -- text -------------------------------------------------------------------
 
@@ -40,23 +42,6 @@ end
 
 -- word -------------------------------------------------------------------
 
-local function split(szFullString, szSeparator)
-    local nFindStartIndex = 1
-    local nSplitIndex = 1
-    local nSplitArray = {}
-    while true do
-        local nFindLastIndex = string.find(szFullString, szSeparator, nFindStartIndex)
-        if not nFindLastIndex then
-            nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, string.len(szFullString))
-            break
-        end
-        nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, nFindLastIndex - 1)
-        nFindStartIndex = nFindLastIndex + string.len(szSeparator)
-        nSplitIndex = nSplitIndex + 1
-    end
-    return nSplitArray
-end
-
 function DataManager.readAllWord()
     local wordInfo = {}
     local content = cc.FileUtils:getInstance():getStringFromFile(s_allwords)
@@ -92,6 +77,43 @@ function DataManager.loadBooks()
                                     data['progressColor_g'],
                                     data['progressColor_b'])
         DataManager.books[data['key']] = book
+    end
+end
+
+-- chapter -------------------------------------------------------------------
+
+function DataManager.loadChapters()
+    local jsonObj = loadJsonFile(s_chapters)
+    local jsonArr = jsonObj['Chapters']['Chapter']
+    local MetaChapter = require("model.meta.MetaChapter")
+    DataManager.chapters = {}
+    for i = 1, #jsonArr do 
+        local data = jsonArr[i]
+        local chapter = MetaChapter.create(data['book_key'],
+                                    data['chapter_key'],
+                                    data['index'],
+                                    data['ChapterImage'],
+                                    data['BackImage'],
+                                    data['NameImage'],
+                                    data['Name'])
+        DataManager.chapters[i] = chapter
+    end
+end
+
+-- dailyCheckIn -------------------------------------------------------------------
+
+function DataManager.loadDailyCheckIns()
+    local jsonObj = loadJsonFile(s_daily)
+    local jsonArr = jsonObj['dailyCheckIn']
+    local MetaDailyCheckIn = require("model.meta.MetaDailyCheckIn")
+    DataManager.dailyCheckIn = {}
+    for i = 1, #jsonArr do 
+        local data = jsonArr[i]
+        local dailyCheckIn = MetaDailyCheckIn.create(data['day'],
+                                    data['itemKey'],
+                                    data['count'],
+                                    data['default_word'])
+        DataManager.dailyCheckIn[i] = dailyCheckIn
     end
 end
 
