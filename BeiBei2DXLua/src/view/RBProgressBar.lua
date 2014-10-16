@@ -5,10 +5,9 @@ local RBProgressBar = class("RBProgressBar", function()
 end)
 
 function RBProgressBar.create(totalIndex)
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     
     local main = RBProgressBar.new()
-    main:setContentSize(size.width, 10)
+    main:setContentSize(s_DESIGN_WIDTH, 10)
     main:ignoreAnchorPointForPosition(false)
     main:setAnchorPoint(0.5,0.5)
     

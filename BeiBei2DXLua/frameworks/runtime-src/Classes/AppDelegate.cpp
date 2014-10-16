@@ -23,9 +23,9 @@ AppDelegate::~AppDelegate()
 bool AppDelegate::applicationDidFinishLaunching()
 {
     
-#if (COCOS2D_DEBUG>0 && CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
-    initRuntime();
-#endif
+//#if (COCOS2D_DEBUG>0)
+//    initRuntime();
+//#endif
     
     if (!ConfigParser::getInstance()->isInit()) {
         ConfigParser::getInstance()->readConfig();
@@ -63,10 +63,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     register_all_cx_common(state);
     lua_pop(state, 1);
     
-#if (COCOS2D_DEBUG>0 && CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
-    if (startRuntime())
-        return true;
-#endif
+//#if (COCOS2D_DEBUG>0)
+//    if (startRuntime())
+//        return true;
+//#endif
 
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
     return true;

@@ -2,6 +2,7 @@ local DataManager = {}
 
 DataManager.text = nil
 DataManager.books = nil
+DataManager.starRules = nil
 
 -- text -------------------------------------------------------------------
 
@@ -105,6 +106,23 @@ function DataManager.loadEnergy()
     s_review_boss_energy_cost = jsonObj['review_boss_energy_cost'] 
     s_friend_request_max_count = jsonObj['friend_request_max_count'] 
     s_friend_max_count = jsonObj['friend_max_count'] 
+end
+
+-- star rule -------------------------------------------------------------------
+
+function DataManager.loadStarRules()
+    local jsonObj = loadJsonFile(s_starRule)
+    local jsonArr = jsonObj['starRule']
+    local MetaStarRule = require("model.meta.MetaStarRule")
+    DataManager.starRules = {}
+    for i = 1, #jsonArr do 
+        local data = jsonArr[i]
+        local sr = MetaStarRule.create(data['word_num'],
+                                    data['star_1'],
+                                    data['star_2'],
+                                    data['star_3'])
+        DataManager.starRules[i] = sr
+    end
 end
 
 return DataManager

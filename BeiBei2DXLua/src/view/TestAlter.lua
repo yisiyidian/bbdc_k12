@@ -1,5 +1,4 @@
 require("common.global")
-require("model.ReadConfiguration")
 
 local TestAlter = class("TestAlter", function()
     return cc.Layer:create()

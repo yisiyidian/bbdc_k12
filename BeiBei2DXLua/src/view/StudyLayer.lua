@@ -19,8 +19,6 @@ end)
 function StudyLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-
     local layer = StudyLayer.new()
 
     local word = s_CorePlayManager.currentWord

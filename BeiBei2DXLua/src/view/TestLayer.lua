@@ -7,8 +7,6 @@ local ProgressBar = require("view.ProgressBar")
 local FlipMat = require("view.FlipMat")
 local StudyAlter = require("view.StudyAlter")
 local TestAlter = require("view.TestAlter")
-require("model.ReadConfiguration")
-
 
 local TestLayer = class("TestLayer", function ()
     return cc.Layer:create()
@@ -17,10 +15,7 @@ end)
 
 function TestLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    ReadStarRule()
-
-
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
+    
 
     local layer = TestLayer.new()
 

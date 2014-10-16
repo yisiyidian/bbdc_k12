@@ -12,18 +12,17 @@ end)
 
 
 function ReviewBossLayer.create()
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
 
     local layer = ReviewBossLayer.new()
 
     local back = cc.Sprite:create("image/reviewbossscene/background_fuxiboss_diyiguan.png")
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5, 0.5)
-    back:setPosition(size.width/2, size.height/2)
+    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
     layer:addChild(back)
 
     local rbProgressBar = RBProgressBar.create(5)
-    rbProgressBar:setPosition(size.width/2, 1040)
+    rbProgressBar:setPosition(s_DESIGN_WIDTH/2, 1040)
     layer:addChild(rbProgressBar)
     
     local onTouchBegan = function(touch, event)

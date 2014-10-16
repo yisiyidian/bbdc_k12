@@ -23,6 +23,7 @@ function test()
     end
 
     s_DATA_MANAGER.loadEnergy()
+    s_DATA_MANAGER.loadStarRules()
 
     s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()
