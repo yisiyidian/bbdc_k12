@@ -26,11 +26,11 @@ function test()
     s_DATA_MANAGER.loadDailyCheckIns()
     s_DATA_MANAGER.loadEnergy()
     s_DATA_MANAGER.loadItems()
-    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+    -- s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
     s_DATA_MANAGER.loadReviewBoss()
     s_DATA_MANAGER.loadStarRules()
 
-    print_lua_table(s_DATA_MANAGER.level_ncee)
+    -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
     s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()

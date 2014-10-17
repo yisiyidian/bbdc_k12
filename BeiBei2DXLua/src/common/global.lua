@@ -23,15 +23,24 @@ end
 local function _initScene()
     -- size
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    s_SCREEN_WIDTH  = size.width
-    s_SCREEN_HEIGHT = size.height
+    local _SCREEN_WIDTH  = size.width
+    local _SCREEN_HEIGHT = size.height
+    
+    -- ********************** --
     s_DESIGN_WIDTH  = 640.0
     s_DESIGN_HEIGHT = 1136.0
-    s_HEIGHT        = s_SCREEN_HEIGHT
-    s_HEIGHT_SCALE  = s_SCREEN_HEIGHT / s_DESIGN_HEIGHT
-    s_WIDTH         = s_DESIGN_WIDTH * s_HEIGHT_SCALE
+    -- ********************** --
 
-    -- print(s_SCREEN_WIDTH, s_SCREEN_HEIGHT, s_DESIGN_WIDTH, s_DESIGN_HEIGHT, s_WIDTH, s_HEIGHT, s_HEIGHT_SCALE, (s_SCREEN_WIDTH - s_WIDTH) / 2.0)
+    local _HEIGHT        = _SCREEN_HEIGHT
+    local _HEIGHT_SCALE  = _SCREEN_HEIGHT / s_DESIGN_HEIGHT
+    local _WIDTH         = s_DESIGN_WIDTH * _HEIGHT_SCALE
+
+    -- ********************** --
+    s_DESIGN_OFFSET_WIDTH = (_SCREEN_WIDTH - _WIDTH) / 2.0 / _HEIGHT_SCALE
+    s_LEFT_X = -s_DESIGN_OFFSET_WIDTH
+    s_RIGHT_X = s_DESIGN_WIDTH + s_DESIGN_OFFSET_WIDTH
+    -- ********************** --
+
     cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.ResolutionPolicy.FIXED_HEIGHT)
 
     -- create main scene 

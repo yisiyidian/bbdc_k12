@@ -17,8 +17,7 @@ function AppScene.create()
     local scene = AppScene.new()
 
     scene.rootLayer = cc.Layer:create()
-    scene.rootLayer:setPosition((s_SCREEN_WIDTH - s_WIDTH) / 2.0, 0)
-    -- scene.rootLayer:setScale(s_HEIGHT_SCALE)
+    scene.rootLayer:setPosition(s_DESIGN_OFFSET_WIDTH, 0)
     scene:addChild(scene.rootLayer)
     
     scene.bgLayer = BackgroundLayer.create()
