@@ -43,12 +43,6 @@ function ReviewBossLayer.create()
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, 1040)
     layer:addChild(rbProgressBar)
     
-    s_CorePlayManager.rbCurrentWord = s_CorePlayManager.dictionary[s_CorePlayManager.rbCurrentWordIndex]
-    local wordMeaningBeTestedNow = cc.Label:createWithSystemFont(s_CorePlayManager.rbCurrentWord.wordMeaningSmall,"",40)
-    wordMeaningBeTestedNow:setColor(cc.c4b(0,0,0,255))
-    wordMeaningBeTestedNow:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.8)
-    layer:addChild(wordMeaningBeTestedNow)
-    
     local getRandomWordForRightWord = function(wordName)
         local currentWordIndex = nil
     	tmp = {}
@@ -60,14 +54,14 @@ function ReviewBossLayer.create()
     	end
     	
     	table.remove(tmp, currentWordIndex)
-    	math.randomseed(os.time())
+    
     	local randomIndex = math.random(1, #tmp)
     	local word1 = tmp[randomIndex]
         table.remove(tmp, randomIndex)
         local randomIndex = math.random(1, #tmp)
         local word2 = tmp[randomIndex]
     	
-        local rightIndex = math.random(1,3)
+        local rightIndex = math.random(1,1024)%3 + 1
         ans = {}
         ans[rightIndex] = wordName
         if rightIndex == 1 then
@@ -83,6 +77,7 @@ function ReviewBossLayer.create()
     	return ans
     end
 
+    local rbCurrentWordIndex = 1
     local wordToBeTested = {}
     local sprite_array = {}
     for i = 1, #s_CorePlayManager.rbWordList do
@@ -103,8 +98,13 @@ function ReviewBossLayer.create()
         sprite_array[i] = tmp
     end
     
+    local wordMeaningBeTestedNow = cc.Label:createWithSystemFont(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall,"",40)
+    wordMeaningBeTestedNow:setColor(cc.c4b(0,0,0,255))
+    wordMeaningBeTestedNow:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.8)
+    layer:addChild(wordMeaningBeTestedNow)
+    
     local checkTouchIndex = function(location)
-        for i = 1, #s_CorePlayManager.rbWordList do
+        for i = 1, #wordToBeTested do
             for j = 1, 3 do
                 local sprite = sprite_array[i][j]
                 if cc.rectContainsPoint(sprite:getBoundingBox(), location) then
@@ -121,32 +121,43 @@ function ReviewBossLayer.create()
         
         print(logic_location.x, logic_location.y)
         
-        if logic_location.x == s_CorePlayManager.rbCurrentWordIndex then     
-            if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][logic_location.y].main_character_label.string then
+        if logic_location.x == rbCurrentWordIndex then
+            if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][logic_location.y].character then
                 rbProgressBar.addOne()
                 sprite_array[logic_location.x][logic_location.y].right()
-                
-                
             else
                 sprite_array[logic_location.x][logic_location.y].wrong()
+                
+                table.insert(wordToBeTested, wordToBeTested[rbCurrentWordIndex])
+                local words = getRandomWordForRightWord(wordToBeTested[#wordToBeTested])
+                local index_x, index_y = sprite_array[#sprite_array][1]:getPosition()
+                local tmp = {}
+                for j = 1, 3 do
+                    local sprite = ReviewBossNode.create(words[j])
+                    sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), index_y - 260))
+                    sprite:setScale(0.8)
+                    layer:addChild(sprite)
+                    tmp[j] = sprite
+                end
+                table.insert(sprite_array, tmp)
             end
             
-            if s_CorePlayManager.rbCurrentWordIndex < #wordToBeTested then
+            if rbCurrentWordIndex < #wordToBeTested then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                for i = 1, #s_CorePlayManager.rbWordList do
+                for i = 1, #wordToBeTested do
                     for j = 1, 3 do
                         local sprite = sprite_array[i][j]
-                        if i == s_CorePlayManager.rbCurrentWordIndex-1 then
+                        if i == rbCurrentWordIndex-1 then
                             local action1 = cc.MoveBy:create(0.5, cc.p(80-40*j,260))
                             local action2 = cc.ScaleTo:create(0.5, 0)
                             local action3 = cc.Spawn:create(action1, action2)
                             sprite:runAction(action3)
-                        elseif i == s_CorePlayManager.rbCurrentWordIndex then
+                        elseif i == rbCurrentWordIndex then
                             local action1 = cc.MoveBy:create(0.5, cc.p(80-40*j,260))
                             local action2 = cc.ScaleTo:create(0.5, 0.8)
                             local action3 = cc.Spawn:create(action1, action2)
                             sprite:runAction(action3)
-                        elseif i == s_CorePlayManager.rbCurrentWordIndex + 1 then
+                        elseif i == rbCurrentWordIndex + 1 then
                             local action1 = cc.MoveBy:create(0.5, cc.p(40*j-80,260))
                             local action2 = cc.ScaleTo:create(0.5, 1)
                             local action3 = cc.Spawn:create(action1, action2)
@@ -162,9 +173,11 @@ function ReviewBossLayer.create()
                 local action2 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
                 layer:runAction(cc.Sequence:create(action1, action2))
                 
-                s_CorePlayManager.rbCurrentWordIndex = s_CorePlayManager.rbCurrentWordIndex + 1
-                s_CorePlayManager.rbCurrentWord = s_CorePlayManager.dictionary[s_CorePlayManager.rbCurrentWordIndex]
-                wordMeaningBeTestedNow:setString(s_CorePlayManager.rbCurrentWord.wordMeaningSmall)
+                rbCurrentWordIndex = rbCurrentWordIndex + 1
+                print(rbCurrentWordIndex)
+                print(wordToBeTested[rbCurrentWordIndex])
+                print(s_WordPool[wordToBeTested[rbCurrentWordIndex]])
+                wordMeaningBeTestedNow:setString(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall)
             else
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 local alter = ReviewBossAlter.create()
