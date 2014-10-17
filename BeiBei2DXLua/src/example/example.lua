@@ -5,11 +5,7 @@ require("common.global")
 
 
 local ziaoangTest = require("view.ZiaoangTest")
-function test1()
-    s_level = require('view/LevelLayer.lua')
-    layer = s_level.create()
-    layer:tes()
-end
+
 
 function test()
     --local a = ziaoangTest.create()
