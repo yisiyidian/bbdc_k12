@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "iBS/5v7eWpZQyGLmm3yaL0Qdn5s",
+	"hash": "t3/OU8/3fWQDEfTRZrRutr/h0lg",
 	"spine": "2.0.22",
 	"width": 2562.56,
 	"height": 953.94,
@@ -69,7 +69,7 @@
 			"fuxiboss_diyiguan_grass3": { "x": 32.82, "y": -2.55, "rotation": -102, "width": 51, "height": 57 }
 		},
 		"fuxiboss_diyiguan_sand_you": {
-			"fuxiboss_diyiguan_sand_you": { "x": 256, "y": -520.93, "width": 342, "height": 94 }
+			"fuxiboss_diyiguan_sand_you": { "x": 255, "y": -520.93, "width": 342, "height": 94 }
 		},
 		"fuxiboss_diyiguan_sand_zuo": {
 			"fuxiboss_diyiguan_sand_zuo": { "x": -170.95, "y": -521.1, "width": 512, "height": 94 }

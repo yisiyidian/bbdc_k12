@@ -148,23 +148,27 @@ function ReviewBossLayer.create()
                     for j = 1, 3 do
                         local sprite = sprite_array[i][j]
                         if i == rbCurrentWordIndex-1 then
-                            local action1 = cc.MoveBy:create(0.5, cc.p(80-40*j,260))
-                            local action2 = cc.ScaleTo:create(0.5, 0)
+                            local action0 = cc.DelayTime:create(0.1)
+                            local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,260))
+                            local action2 = cc.ScaleTo:create(0.4, 0)
                             local action3 = cc.Spawn:create(action1, action2)
-                            sprite:runAction(action3)
+                            sprite:runAction(cc.Sequence:create(action0, action3))
                         elseif i == rbCurrentWordIndex then
-                            local action1 = cc.MoveBy:create(0.5, cc.p(80-40*j,260))
-                            local action2 = cc.ScaleTo:create(0.5, 0.8)
+                            local action0 = cc.DelayTime:create(0.1)
+                            local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,260))
+                            local action2 = cc.ScaleTo:create(0.4, 0.8)
                             local action3 = cc.Spawn:create(action1, action2)
-                            sprite:runAction(action3)
+                            sprite:runAction(cc.Sequence:create(action0, action3))
                         elseif i == rbCurrentWordIndex + 1 then
-                            local action1 = cc.MoveBy:create(0.5, cc.p(40*j-80,260))
-                            local action2 = cc.ScaleTo:create(0.5, 1)
+                            local action0 = cc.DelayTime:create(0.1)
+                            local action1 = cc.MoveBy:create(0.4, cc.p(40*j-80,260))
+                            local action2 = cc.ScaleTo:create(0.4, 1)
                             local action3 = cc.Spawn:create(action1, action2)
-                            sprite:runAction(action3)
+                            sprite:runAction(cc.Sequence:create(action0, action3))
                         else
-                            local action = cc.MoveBy:create(0.5, cc.p(0,260))
-                            sprite:runAction(action)
+                            local action0 = cc.DelayTime:create(0.1)
+                            local action1 = cc.MoveBy:create(0.4, cc.p(0,260))
+                            sprite:runAction(cc.Sequence:create(action0, action1))
                         end
                     end
                 end
@@ -180,9 +184,17 @@ function ReviewBossLayer.create()
                 wordMeaningBeTestedNow:setString(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall)
             else
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-                local alter = ReviewBossAlter.create()
-                alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                layer:addChild(alter)
+                
+                local showAlter = function()
+                    local alter = ReviewBossAlter.create()
+                    alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(alter)
+                end
+                
+                local action1 = cc.DelayTime:create(0.5)
+                local action2 = cc.CallFunc:create(showAlter)
+                local action3 = cc.Sequence:create(action1,action2)
+                layer:runAction(action3)
             end            
         end
         
