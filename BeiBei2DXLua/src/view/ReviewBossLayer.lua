@@ -48,9 +48,9 @@ function ReviewBossLayer.create()
                 sprite = ReviewBossNode.create(s_CorePlayManager.rbWordList[math.random(1,#s_CorePlayManager.rbWordList)])
             end
             if i == 1 then
-                sprite:setPosition(cc.p(200*j - 80, 850 - 260*i - 260))
+                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 850 - 260*i - 260))
             else
-                sprite:setPosition(cc.p(160*j, 850 - 260*i - 260))
+                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 260*i - 260))
                 sprite:setScale(0.8)
             end
             layer:addChild(sprite)
@@ -105,7 +105,7 @@ function ReviewBossLayer.create()
                             local action1 = cc.MoveBy:create(0.5, cc.p(40*j-80,260))
                             local action2 = cc.ScaleTo:create(0.5, 1)
                             local action3 = cc.Spawn:create(action1, action2)
-                            sprite:runAction(action3)  
+                            sprite:runAction(action3)
                         else
                             local action = cc.MoveBy:create(0.5, cc.p(0,260))
                             sprite:runAction(action)
