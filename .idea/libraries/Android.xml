@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Android">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/Android/android-async-http-1.4.4-fix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/Android/fastjson.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/Android/avosstatistics-v2.6.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/Android/avoscloud-v2.6.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/Android/avosfeedback-v2.6.5.zip!/" />
+      <root url="jar://$PROJECT_DIR$/BeiBei2DXLua/frameworks/cocos2d-x/common/avos/Android/httpmime-4.2.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

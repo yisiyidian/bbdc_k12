@@ -25,10 +25,11 @@ local function _initScene()
     local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
     s_SCREEN_WIDTH  = size.width
     s_SCREEN_HEIGHT = size.height
-    s_DESIGN_WIDTH  = size.width -- TODO multiscreen
-    s_DESIGN_HEIGHT = size.height -- TODO multiscreen
+    s_DESIGN_WIDTH  = 856.0 -- size.width -- TODO multiscreen
+    s_DESIGN_HEIGHT = 1136.0  -- size.height -- TODO multiscreen
     s_HEIGHT        = 1136.0
-    s_HEIGHT_SCALE  = s_HEIGHT / s_DESIGN_HEIGHT
+    s_HEIGHT_SCALE  = s_DESIGN_WIDTH / s_SCREEN_HEIGHT
+    s_WIDTH         = s_SCREEN_WIDTH * s_HEIGHT_SCALE
 
     -- create main scene 
     local scene = require("AppScene")
