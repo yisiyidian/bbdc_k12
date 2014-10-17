@@ -10,6 +10,7 @@ function DebugLayer.create()
     
     layer.debugInfo = cc.Label:createWithSystemFont("DEBUG", "Helvetica", 24)
     layer.debugInfo:setAnchorPoint(cc.p(0,0))
+    layer.debugInfo:setPosition(s_LEFT_X, 0)
     layer:addChild(layer.debugInfo)
     
     return layer

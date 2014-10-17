@@ -18,11 +18,11 @@ function ReviewBossAlter.create()
     local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
-
-
-    local boss = cc.Sprite:create("image/reviewbossscene/rb_success.png")
-    boss:setPosition(back:getContentSize().width/2,400)
-    back:addChild(boss)
+    
+    local boss = sp.SkeletonAnimation:create("res/spine/beidafeide_zhanglaoshi.json", "res/spine/beidafeide_zhanglaoshi.atlas", 1)
+    boss:setPosition(150,270)
+    back:addChild(boss)      
+    boss:addAnimation(0, 'animation', true)
 
     local button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

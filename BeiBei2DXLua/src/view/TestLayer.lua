@@ -15,8 +15,7 @@ end)
 
 function TestLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    
-
+   
     local layer = TestLayer.new()
 
     local word = s_CorePlayManager.currentWord
