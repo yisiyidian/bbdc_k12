@@ -47,8 +47,12 @@ function ReviewBossLayer.create()
             else
                 sprite = ReviewBossNode.create(s_CorePlayManager.rbWordList[math.random(1,#s_CorePlayManager.rbWordList)])
             end
-            sprite:setPosition(cc.p(200*j - 80, 936 - 260*i - 260))
-            sprite:setScale(0.8)
+            if i == 1 then
+                sprite:setPosition(cc.p(200*j - 80, 850 - 260*i - 260))
+            else
+                sprite:setPosition(cc.p(160*j, 850 - 260*i - 260))
+                sprite:setScale(0.8)
+            end
             layer:addChild(sprite)
             tmp[j] = sprite
         end
@@ -88,15 +92,20 @@ function ReviewBossLayer.create()
                     for j = 1, 3 do
                         local sprite = sprite_array[i][j]
                         if i == s_CorePlayManager.rbCurrentWordIndex-1 then
-                            local action1 = cc.MoveBy:create(0.5, cc.p(0,130))
+                            local action1 = cc.MoveBy:create(0.5, cc.p(80-40*j,260))
                             local action2 = cc.ScaleTo:create(0.5, 0)
                             local action3 = cc.Spawn:create(action1, action2)
                             sprite:runAction(action3)
---                        elseif i == s_CorePlayManager.rbCurrentWordIndex then
---                            local action1 = cc.MoveBy:create(0.5, cc.p(0,130))
---                            local action2 = cc.ScaleTo:create(0.5, 0)
---                            local action3 = cc.Spawn:create(action1, action2)
---                            sprite:runAction(action3)
+                        elseif i == s_CorePlayManager.rbCurrentWordIndex then
+                            local action1 = cc.MoveBy:create(0.5, cc.p(80-40*j,260))
+                            local action2 = cc.ScaleTo:create(0.5, 0.8)
+                            local action3 = cc.Spawn:create(action1, action2)
+                            sprite:runAction(action3)
+                        elseif i == s_CorePlayManager.rbCurrentWordIndex + 1 then
+                            local action1 = cc.MoveBy:create(0.5, cc.p(40*j-80,260))
+                            local action2 = cc.ScaleTo:create(0.5, 1)
+                            local action3 = cc.Spawn:create(action1, action2)
+                            sprite:runAction(action3)  
                         else
                             local action = cc.MoveBy:create(0.5, cc.p(0,260))
                             sprite:runAction(action)

@@ -6,7 +6,7 @@ end)
 function DataUser.create()
     local data = DataUser.new()
 
-    data.id                                = ''
+    data.userId                            = ''
     data.serverTime                        = ''
     data.username                          = ''
     data.nickname                          = ''
@@ -19,7 +19,7 @@ function DataUser.create()
     data.reviewBossTutorialStep            = 0 
     data.bookKey                           = ''
     data.energyLastCoolDownTime            = -1 
-    data.energyCount                       = 7 -- MODEL_MANAGER.energyMaxCount 
+    data.energyCount                       = 7
     data.wordsCount                        = 0 
     data.masterCount                       = 0 
 

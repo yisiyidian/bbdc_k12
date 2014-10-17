@@ -10,7 +10,8 @@ function ReviewBossNode.create(character)
     local main = ReviewBossNode.new()
     
     main:setContentSize(194,192)
-    main:setAnchorPoint(0.5,0.5)
+    main:setAnchorPoint(0.5,0)
+    main:ignoreAnchorPointForPosition(false)
 
     local mainSize = main:getContentSize()
 
