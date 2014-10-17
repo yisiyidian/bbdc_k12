@@ -121,8 +121,7 @@ function ReviewBossLayer.create()
                 s_CorePlayManager.rbCurrentWord = s_CorePlayManager.dictionary[s_CorePlayManager.rbCurrentWordIndex]
                 wordMeaningBeTestedNow:setString(s_CorePlayManager.rbCurrentWord.wordMeaningSmall)
             else
-                print("game over")
-                --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 local alter = ReviewBossAlter.create()
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)

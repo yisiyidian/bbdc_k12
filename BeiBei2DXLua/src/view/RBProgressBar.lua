@@ -50,27 +50,9 @@ function RBProgressBar.create(totalIndex)
         
         local action1 = cc.MoveTo:create(0.5,cc.p(left + gap* (currentIndex - 1), 0))
         index:runAction(action1)
-        --index:setPosition(left + gap* (currentIndex - 1), 0)
     
-        local scrPercent = progress:getPercentage()
-        local dstPercent = 100*(currentIndex-1)/totalIndex
-        local gap = (dstPercent - scrPercent)/50     
-        
-        local scheduler = nil
-        local schedulerEntry = nil
-        
-        local add = function()
-            progress:setPercentage(progress:getPercentage() + gap)
-            if progress:getPercentage() >= dstPercent then
-                scheduler:unscheduleScriptEntry(schedulerEntry)
-            end
-        end
-    
-        scheduler = cc.Director:getInstance():getScheduler()
-        
-        schedulerEntry = scheduler:scheduleScriptFunc(add, 0.01, false)
-        
-        --progress:setPercentage(100*(currentIndex-1)/totalIndex)
+        local action2 = cc.ProgressTo:create(0.5, 100*(currentIndex-1)/totalIndex)
+        progress:runAction(action2)
     end
 
     return main
