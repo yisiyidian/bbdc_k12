@@ -14,7 +14,7 @@ function test()
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
-    cx.CXUtils:showMail('test', 'palyerName')
+    --cx.CXUtils:showMail('test', 'palyerName')
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
     s_CorePlayManager.create()
@@ -81,7 +81,7 @@ function test()
    -- local function onFailed(api, code, message)
    --     s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
    -- end
-   s_funcLogin('yehanjie1', '111111', onSuccexed, onFailed)
+   -- s_funcLogin('yehanjie1', '111111', onSuccexed, onFailed)
    -- s_funcSignin('_test000', '111111', onSucceed, onFailed)
 
    -- local LogInSignUpLayer = require('view.LogInSignUpLayer')
