@@ -40,7 +40,7 @@ local function main()
     -- test
     local example = require("example.example")
     test()
-
+    --test1()
     --------------------------------------------------------------------------------
 --    s_localSqlite = require("model.localData.LocalDatabaseManager")
 --    s_localSqlite.open()

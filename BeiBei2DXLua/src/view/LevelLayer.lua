@@ -12,3 +12,8 @@ function LevelLayer.create()
     return layer
 end
 
+function LevelLayer:tes()
+    s_logd("hello, level")
+end
+
+return LevelLayer
