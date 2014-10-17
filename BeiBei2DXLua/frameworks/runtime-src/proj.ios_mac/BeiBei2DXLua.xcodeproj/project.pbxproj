@@ -61,6 +61,8 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
+		B80E072919F10314006EDBCF /* CXMailFeedBack.mm in Sources */ = {isa = PBXBuildFile; fileRef = B80E072819F10314006EDBCF /* CXMailFeedBack.mm */; };
+		B80E072D19F106A2006EDBCF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80E072C19F106A2006EDBCF /* MessageUI.framework */; };
 		B85146AE19E4EBD50027372E /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146A719E4EBD50027372E /* AVOSCloud.framework */; };
 		B85146B219E4EC690027372E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146B119E4EC690027372E /* SystemConfiguration.framework */; };
 		B85146B419E4EC740027372E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85146B319E4EC740027372E /* MobileCoreServices.framework */; };
@@ -402,6 +404,8 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B80E072819F10314006EDBCF /* CXMailFeedBack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXMailFeedBack.mm; sourceTree = "<group>"; };
+		B80E072C19F106A2006EDBCF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		B85146A719E4EBD50027372E /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		B85146B119E4EC690027372E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		B85146B319E4EC740027372E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
@@ -510,6 +514,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80E072D19F106A2006EDBCF /* MessageUI.framework in Frameworks */,
 				B85146BE19E4EF8A0027372E /* Security.framework in Frameworks */,
 				B85146BC19E4EF5A0027372E /* CFNetwork.framework in Frameworks */,
 				B85146BA19E4EC9C0027372E /* libicucore.dylib in Frameworks */,
@@ -698,12 +703,21 @@
 			path = mac;
 			sourceTree = "<group>";
 		};
+		B80E072619F10314006EDBCF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B80E072819F10314006EDBCF /* CXMailFeedBack.mm */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		B851469D19E4EBD50027372E /* common */ = {
 			isa = PBXGroup;
 			children = (
 				B851469E19E4EBD50027372E /* avos */,
 				B8F6490319E6580600E55CE0 /* CXUtils.cpp */,
 				B8F6490419E6580600E55CE0 /* CXUtils.h */,
+				B80E072619F10314006EDBCF /* iOS */,
 				B8F648FF19E657DE00E55CE0 /* md5 */,
 			);
 			name = common;
@@ -795,6 +809,7 @@
 		F293B3CB15EB7BE500256477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B80E072C19F106A2006EDBCF /* MessageUI.framework */,
 				B85146BD19E4EF8A0027372E /* Security.framework */,
 				B85146BB19E4EF5A0027372E /* CFNetwork.framework */,
 				B85146B919E4EC9C0027372E /* libicucore.dylib */,
@@ -1195,6 +1210,7 @@
 				3EB5152C19528284006966AA /* Protos.pb.cc in Sources */,
 				3EB515661952865D006966AA /* atomicops_internals_x86_msvc.cc in Sources */,
 				3EB515641952865D006966AA /* repeated_field.cc in Sources */,
+				B80E072919F10314006EDBCF /* CXMailFeedBack.mm in Sources */,
 				C00FD4941938512100C6382D /* PlayDisable_png.cpp in Sources */,
 				C00FD49C1938512100C6382D /* Shine_png.cpp in Sources */,
 				3EB5156E1952865D006966AA /* wire_format_lite.cc in Sources */,

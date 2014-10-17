@@ -127,6 +127,40 @@ int lua_register_cx_common_CXAnalytics(lua_State* tolua_S)
     return 1;
 }
 
+int lua_cx_common_CXUtils_showMail(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 2)
+    {
+        const char* arg0;
+        const char* arg1;
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
+        if(!ok)
+            return 0;
+        CXUtils::showMail(arg0, arg1);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "showMail",argc, 2);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_showMail'.",&tolua_err);
+#endif
+    return 0;
+}
 int lua_cx_common_CXUtils_md5(lua_State* tolua_S)
 {
     int argc = 0;
@@ -174,6 +208,7 @@ int lua_register_cx_common_CXUtils(lua_State* tolua_S)
     tolua_cclass(tolua_S,"CXUtils","CXUtils","",nullptr);
 
     tolua_beginmodule(tolua_S,"CXUtils");
+        tolua_function(tolua_S,"showMail", lua_cx_common_CXUtils_showMail);
         tolua_function(tolua_S,"md5", lua_cx_common_CXUtils_md5);
     tolua_endmodule(tolua_S);
     std::string typeName = typeid(CXUtils).name();

@@ -14,6 +14,7 @@
 
 class CXUtils {
 public:
+    static void showMail(const char* mailTitle, const char* userName);
     static std::string& md5(const char* in, std::string& out);
 };
 

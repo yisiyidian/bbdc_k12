@@ -13,6 +13,7 @@ function test()
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
+    cx.CXUtils:showMail('test', 'palyerName')
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
     s_CorePlayManager.create()
@@ -32,8 +33,8 @@ function test()
 
     -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
-    s_CorePlayManager.enterTestLayer()
-    --s_CorePlayManager.enterStudyLayer()
+    -- s_CorePlayManager.enterTestLayer()
+    s_CorePlayManager.enterStudyLayer()
     --s_CorePlayManager.enterReviewBossLayer()
 
     --logd('testSpine')
