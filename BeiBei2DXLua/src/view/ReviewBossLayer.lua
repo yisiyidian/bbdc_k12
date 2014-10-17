@@ -17,12 +17,27 @@ function ReviewBossLayer.create()
     math.randomseed(os.time())
 
     local layer = ReviewBossLayer.new()
-
-    local back = cc.Sprite:create("image/reviewbossscene/background_fuxiboss_diyiguan.png")
-    back:ignoreAnchorPointForPosition(false)
-    back:setAnchorPoint(0.5, 0.5)
+    
+    local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH, 263)
+    fillColor1:setPosition(0,0)
+    layer:addChild(fillColor1)
+    
+    local fillColor2 = cc.LayerColor:create(cc.c4b(26,169,227,255), s_DESIGN_WIDTH, 542-263)
+    fillColor2:setPosition(0,263)
+    layer:addChild(fillColor2)
+    
+    local fillColor3 = cc.LayerColor:create(cc.c4b(36,186,248,255), s_DESIGN_WIDTH, 776-542)
+    fillColor3:setPosition(0,542)
+    layer:addChild(fillColor3)
+    
+    local fillColor4 = cc.LayerColor:create(cc.c4b(213,243,255,255), s_DESIGN_WIDTH, s_DESIGN_HEIGHT-776)
+    fillColor4:setPosition(0,776)
+    layer:addChild(fillColor4)
+    
+    local back = sp.SkeletonAnimation:create("res/spine/fuxiboss_background.json", "res/spine/fuxiboss_background.atlas", 1)
     back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    layer:addChild(back)
+    layer:addChild(back)      
+    back:addAnimation(0, 'animation', true)
 
     local rbProgressBar = RBProgressBar.create(#s_CorePlayManager.rbWordList)
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, 1040)
@@ -34,19 +49,48 @@ function ReviewBossLayer.create()
     wordMeaningBeTestedNow:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.8)
     layer:addChild(wordMeaningBeTestedNow)
     
-    local rightIndex = {}
-    local sprite_array = {}
-    for i = 1, #s_CorePlayManager.rbWordList do 
-        local tmp = {}
-        local randomIndex = math.random(1, 3)
-        rightIndex[i] = randomIndex
-        for j = 1, 3 do
-            local sprite = nil
-            if j == randomIndex then
-                sprite = ReviewBossNode.create(s_CorePlayManager.rbWordList[i])
-            else
-                sprite = ReviewBossNode.create(s_CorePlayManager.rbWordList[math.random(1,#s_CorePlayManager.rbWordList)])
+    local getRandomWordForRightWord = function(wordName)
+        local currentWordIndex = nil
+    	tmp = {}
+    	for i = 1, #s_CorePlayManager.rbWordList do
+            table.insert(tmp, s_CorePlayManager.rbWordList[i])
+            if s_CorePlayManager.rbWordList[i] == wordName then
+                currentWordIndex = i
             end
+    	end
+    	
+    	table.remove(tmp, currentWordIndex)
+    	math.randomseed(os.time())
+    	local randomIndex = math.random(1, #tmp)
+    	local word1 = tmp[randomIndex]
+        table.remove(tmp, randomIndex)
+        local randomIndex = math.random(1, #tmp)
+        local word2 = tmp[randomIndex]
+    	
+        local rightIndex = math.random(1,3)
+        ans = {}
+        ans[rightIndex] = wordName
+        if rightIndex == 1 then
+            ans[2] = word1
+            ans[3] = word2
+        elseif rightIndex == 2 then
+            ans[3] = word1
+            ans[1] = word2
+        else
+            ans[1] = word1
+            ans[2] = word2
+        end
+    	return ans
+    end
+
+    local wordToBeTested = {}
+    local sprite_array = {}
+    for i = 1, #s_CorePlayManager.rbWordList do
+        table.insert(wordToBeTested, s_CorePlayManager.rbWordList[i])
+        local words = getRandomWordForRightWord(s_CorePlayManager.rbWordList[i])
+        local tmp = {}
+        for j = 1, 3 do
+            local sprite = ReviewBossNode.create(words[j])
             if i == 1 then
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 850 - 260*i - 260))
             else
@@ -77,16 +121,17 @@ function ReviewBossLayer.create()
         
         print(logic_location.x, logic_location.y)
         
-        if logic_location.x == s_CorePlayManager.rbCurrentWordIndex then
-            rbProgressBar.addOne()
-        
-            if rightIndex[logic_location.x] == logic_location.y then
+        if logic_location.x == s_CorePlayManager.rbCurrentWordIndex then     
+            if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][logic_location.y].main_character_label.string then
+                rbProgressBar.addOne()
                 sprite_array[logic_location.x][logic_location.y].right()
+                
+                
             else
                 sprite_array[logic_location.x][logic_location.y].wrong()
             end
             
-            if s_CorePlayManager.rbCurrentWordIndex < #s_CorePlayManager.rbWordList then
+            if s_CorePlayManager.rbCurrentWordIndex < #wordToBeTested then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 for i = 1, #s_CorePlayManager.rbWordList do
                     for j = 1, 3 do
