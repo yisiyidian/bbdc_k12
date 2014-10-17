@@ -9,7 +9,7 @@ local function getURL()
     if Server.debugLocalHost then
         return 'http://localhost:3000/avos/'
     else
-        return 'https://cn.avoscloud.com/1.1/functions/'
+        return 'https://leancloud.cn/1.1/functions/'
     end
 end
 
