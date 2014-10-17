@@ -15,27 +15,32 @@ end)
 
 function AppScene.create()
     local scene = AppScene.new()
+
+    scene.rootLayer = cc.Layer:create()
+    scene.rootLayer:setPosition((s_SCREEN_WIDTH - s_WIDTH) / 2.0, 0)
+    -- scene.rootLayer:setScale(s_HEIGHT_SCALE)
+    scene:addChild(scene.rootLayer)
     
     scene.bgLayer = BackgroundLayer.create()
-    scene:addChild(scene.bgLayer)
+    scene.rootLayer:addChild(scene.bgLayer)
 
     scene.gameLayer = GameLayer.create()
-    scene:addChild(scene.gameLayer)
+    scene.rootLayer:addChild(scene.gameLayer)
 
     scene.hudLayer = HudLayer.create()
-    scene:addChild(scene.hudLayer)
+    scene.rootLayer:addChild(scene.hudLayer)
 
     scene.popupLayer = PopupLayer.create()
-    scene:addChild(scene.popupLayer)
+    scene.rootLayer:addChild(scene.popupLayer)
     
     scene.tipsLayer = TipsLayer.create()
-    scene:addChild(scene.tipsLayer)
+    scene.rootLayer:addChild(scene.tipsLayer)
 
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
-    scene:addChild(scene.touchEventBlockLayer)
+    scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
     scene.debugLayer = DebugLayer.create()
-    scene:addChild(scene.debugLayer)
+    scene.rootLayer:addChild(scene.debugLayer)
     
     return scene
 end
