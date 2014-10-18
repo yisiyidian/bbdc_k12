@@ -1,7 +1,8 @@
 local DataManager = {}
 
 require('common.text')
-local MetaBook = require("model.meta.MetaBook")
+
+---------------------------------------------------------------------------
 
 s_BOOK_KEY_NCEE  = 'ncee'
 s_BOOK_KEY_CET4  = 'cet4'
@@ -97,7 +98,7 @@ end
 function DataManager.loadBooks()
     local jsonObj = loadJsonFile(s_books)
     local jsonArr = jsonObj['books']
-    
+    local MetaBook = require("model.meta.MetaBook")
     DataManager.books = {}
     for i = 1, #jsonArr do 
         local data = jsonArr[i]

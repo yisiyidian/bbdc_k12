@@ -20,6 +20,11 @@ function test()
     --   s_logd(text)
     -- end)
 
+    local StartViewLayer = require('view.StartViewLayer')
+    local layer = StartViewLayer.create()
+    layer:setAnchorPoint(0.5,0)
+    layer:setPosition(s_LEFT_X, 0)
+    s_SCENE:replaceGameLayer(layer)
 
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
@@ -42,7 +47,7 @@ function test()
 
     --s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()
-    s_CorePlayManager.enterReviewBossLayer()
+    -- s_CorePlayManager.enterReviewBossLayer()
 
     -- s_level = require('view/LevelLayer.lua')
     -- layer = s_level.create()
@@ -93,7 +98,7 @@ function test()
    -- local function onFailed(api, code, message)
    --     s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
    -- end
-   s_funcLogin('yehanjie1', '111111', onSuccexed, onFailed)
+   -- s_funcLogin('yehanjie1', '111111', onSuccexed, onFailed)
    -- s_funcSignin('_test000', '111111', onSucceed, onFailed)
 
    -- local LogInSignUpLayer = require('view.LogInSignUpLayer')
