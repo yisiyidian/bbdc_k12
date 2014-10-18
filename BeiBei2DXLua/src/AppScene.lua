@@ -1,6 +1,6 @@
 require("Cocos2d")
 require("Cocos2dConstants")
-require("AudioMgr")
+
 local BackgroundLayer = require("layer.BackgroundLayer")
 local GameLayer = require("layer.GameLayer")
 local HudLayer = require("layer.HudLayer")

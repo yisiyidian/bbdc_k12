@@ -20,6 +20,8 @@ function test()
     --   s_logd(text)
     -- end)
 
+    playMusic(s_sound_bgm1, true)
+
     local StartViewLayer = require('view.StartViewLayer')
     local layer = StartViewLayer.create()
     layer:setAnchorPoint(0.5,0)

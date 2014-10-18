@@ -4,6 +4,37 @@ local function _initConstant()
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
     s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
 
+    s_sound_Aluminum_Can_Open = 'res/sound/Aluminum_Can_Open.mp3'
+    s_sound_bgm1 = 'res/sound/bgm1.mp3'
+    s_sound_buttonEffect = 'res/sound/buttonEffect.mp3'
+    s_sound_clickLocked = 'res/sound/clickLocked.mp3'
+    s_sound_clickWave = 'res/sound/clickWave.mp3'
+    s_sound_cost = 'res/sound/cost.mp3'
+    s_sound_faila = 'res/sound/fail.m4a'
+    s_sound_fail = 'res/sound/fail.mp3'
+    s_sound_FightBoss = 'res/sound/FightBoss.mp3'
+    s_sound_First_Noel_pluto = 'res/sound/First_Noel_pluto.mp3'
+    s_sound_Get_Outside = 'res/sound/Get_Outside.mp3'
+    s_sound_learn_false = 'res/sound/learn_false.mp3'
+    s_sound_learn_true = 'res/sound/learn_true.mp3'
+    s_sound_Mechanical_Clock_Ring = 'res/sound/Mechanical_Clock_Ring.mp3'
+    s_sound_Pluto = 'res/sound/Pluto.mp3'
+    s_sound_ReadyGo = 'res/sound/ReadyGo.mp3'
+    s_sound_Road_to_Moscow = 'res/sound/Road_to_Moscow.mp3'
+    s_sound_slideCoconut = 'res/sound/slideCoconut.mp3'
+    s_sound_slideCoconut1 = 'res/sound/slideCoconut1.mp3'
+    s_sound_slideCoconut2 = 'res/sound/slideCoconut2.mp3'
+    s_sound_slideCoconut3 = 'res/sound/slideCoconut3.mp3'
+    s_sound_slideCoconut4 = 'res/sound/slideCoconut4.mp3'
+    s_sound_slideCoconut5 = 'res/sound/slideCoconut5.mp3'
+    s_sound_slideCoconut6 = 'res/sound/slideCoconut6.mp3'
+    s_sound_star1 = 'res/sound/star1.mp3'
+    s_sound_star2 = 'res/sound/star2.mp3'
+    s_sound_star3 = 'res/sound/star3.mp3'
+    s_sound_wina = 'res/sound/win.m4a'
+    s_sound_win = 'res/sound/win.mp3'
+    s_sound_wrong = 'res/sound/wrong.mp3'
+
     s_DATA_MANAGER = require('model.DataManager')
 end
 
@@ -20,6 +51,7 @@ local function _initTool()
     s_logdStr  = s_debugger.logdStr
 
     require('common.utils')
+    require("AudioMgr")
 end
 
 local function _initScene()
