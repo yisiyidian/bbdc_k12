@@ -15,6 +15,17 @@ function test()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
     --cx.CXUtils:showMail('test', 'palyerName')
+    -- cx.CXUtils:getInstance():requestProducts('com.beibei.wordmaster.ep30', function (ret, text)
+    --   s_logd(ret)
+    --   s_logd(text)
+    -- end)
+
+    local StartViewLayer = require('view.StartViewLayer')
+    local layer = StartViewLayer.create()
+    layer:setAnchorPoint(0.5,0)
+    layer:setPosition(s_LEFT_X, 0)
+    s_SCENE:replaceGameLayer(layer)
+
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
     s_CorePlayManager.create()
@@ -36,7 +47,13 @@ function test()
 
     --s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()
-    s_CorePlayManager.enterReviewBossLayer()
+    -- s_CorePlayManager.enterReviewBossLayer()
+
+    -- s_level = require('view/LevelLayer.lua')
+    -- layer = s_level.create()
+    --layer:setAnchorPoint(0.5,0)
+    --layer:setPosition(s_LEFT_X, 0)
+    -- s_SCENE:replaceGameLayer(layer)
 
     --logd('testSpine')
     --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)

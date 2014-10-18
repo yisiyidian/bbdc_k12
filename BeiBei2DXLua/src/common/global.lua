@@ -8,6 +8,8 @@ local function _initConstant()
 end
 
 local function _initTool()
+    require("CCBReaderLoad")
+    
     -- tools
     s_JSON = require('json')
 
@@ -65,6 +67,11 @@ local function _initServer()
     local userbaseserver      = require('server.UserBaseServer')
     s_funcSignin              = userbaseserver.signin
     s_funcLogin               = userbaseserver.login
+end
+
+local function _initData()
+    local DataUser = require('model.user.DataUser')
+    s_CURRENT_USER = DataUser.create()
 end
 
 local function _declaration()
