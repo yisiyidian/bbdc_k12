@@ -10,6 +10,7 @@ local LevelLayer = class("LevelLayer", function()
     return cc.Layer:create()
 end)
 
+
 function LevelLayer.create()
     local layer = LevelLayer.new()
     layer:loadCCB()
@@ -17,12 +18,20 @@ function LevelLayer.create()
 end
 
 function LevelLayer:loadCCB()
-    s_logd("hello, CCB")
     ccbLevelLayer['onLevelButtonClicked'] = self.onLevelButtonClicked
     local proxy = cc.CCBProxy:create()
-    local contentNode  = CCBReaderLoad("res/ccb/chapter1.ccbi", proxy, ccbLogInSignUpLayer)
-    --self:addChild(node)
-    --local contentNode = cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png')
+    local contentNode  = CCBReaderLoad("res/ccb/chapter1.ccbi", proxy, ccbLevelLayer)
+    ccbLevelLayer['contentNode'] = contentNode;
+    
+    ccbLevelLayer['levelSet'] = contentNode:getChildByTag(5)
+    for i = 1, #ccbLevelLayer['levelSet']:getChildren() do
+        ccbLevelLayer['levelSet']:getChildren()[i]:setName('levelButton'..(ccbLevelLayer['levelSet']:getChildren()[i]:getTag()))
+        print(ccbLevelLayer['levelSet']:getChildren()[i]:getName())
+    end
+    
+    --local buttonNode = cc.ControlButton:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png')
+    --buttonNode:setPosition(100,100)
+    --self:addChild(buttonNode)
     local scrollViewNode = cc.ScrollView:create() 
     -- scroll view scroll
     local function scrollViewDidScroll()
@@ -43,12 +52,14 @@ function LevelLayer:loadCCB()
         --scrollViewNode:setScale(1.0)
         scrollViewNode:setContainer(contentNode)
         contentNode:setContentSize(856,2927)
-        local position = contentNode:getContentSize()
         
+        
+        local position = contentNode:getContentSize()
         s_logd('contentSize:%f,%f',position.width,position.height)
         scrollViewNode:updateInset()
         scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_BOTH)
         scrollViewNode:setBounceable(false)
+        
         --scrollViewNode:setDelegate()
         scrollViewNode:setClippingToBounds(true)
         --scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
@@ -60,6 +71,11 @@ function LevelLayer:loadCCB()
 end
 
 function LevelLayer:onLevelButtonClicked()
-    s_logd("click level")
+    local levelName = 'levelButton'..self
+    local selectedLevelButton = ccbLevelLayer['levelSet']:getChildByName(levelName)
+    print(selectedLevelButton:getPosition())
+
+    --local test = cc.MenuItemSprite:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
+    selectedLevelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
 end
 return LevelLayer

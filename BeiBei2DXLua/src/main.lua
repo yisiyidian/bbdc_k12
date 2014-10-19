@@ -38,6 +38,10 @@ local function main()
     -- test
     local example = require("example.example")
     test()
+-- level test
+--    local levelLayer = require('view/LevelLayer.lua')
+--    local layer = levelLayer.create()
+--    s_SCENE:replaceGameLayer(layer)
 
     --------------------------------------------------------------------------------
 --    s_localSqlite = require("model.localData.LocalDatabaseManager")
