@@ -119,6 +119,7 @@ function initApp()
     _initTool()
     _initScene()
     _initServer()
+    _initData()
     _declaration()
 end
 

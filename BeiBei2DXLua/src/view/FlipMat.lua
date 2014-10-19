@@ -12,7 +12,7 @@ local FlipMat = class("FlipMat", function()
 return cc.Layer:create()
 end)
 
-function FlipMat.create(word, m ,n)
+function FlipMat.create(word, m ,n, isNewPlayerModel)
     local main = FlipMat.new()
     main:setContentSize(640,640)
     main:setAnchorPoint(0.5,0)
@@ -27,6 +27,10 @@ function FlipMat.create(word, m ,n)
     main.globalLock = false
     main.rightLock = false
     main.wrongLock = false
+    main.answerPath = {}
+    for i = 1, string.len(word) do
+        main.answerPath[i] = {x=0, y=0}
+    end
     
 
     -- system function
@@ -48,11 +52,10 @@ function FlipMat.create(word, m ,n)
     local current_dir
     local onNode
     local startAtNode
+    local startNode
     
     local startTouchLocation
     local lastTouchLocation
-    
-    local startNode
     
     local selectStack = {}
 
@@ -81,12 +84,35 @@ function FlipMat.create(word, m ,n)
             local node
             if diff >= 0 and diff < string.len(main_word) then
                 node = FlipNode.create("coconut_light", string.sub(main_word,diff+1,diff+1), i, j)
+                node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                main:addChild(node)
+                
+                local tmp = {}
+                tmp.x = i
+                tmp.y = j
+                main.answerPath[diff+1] = tmp
             else
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 node = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                if isNewPlayerModel then
+                    node:setPosition(320, -1136)
+                    main:addChild(node)
+                    
+                    local tmp_sprite = cc.Sprite:create("image/coconut_font.png")
+                    tmp_sprite:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                    tmp_sprite:setOpacity(120)
+                    main:addChild(tmp_sprite)
+                    
+                    local tmp_label = cc.Label:createWithSystemFont(charaster_set_filtered[randomIndex],"",40)
+                    tmp_label:setColor(cc.c3b(0,0,0))
+                    tmp_label:setOpacity(120)
+                    tmp_label:setPosition(tmp_sprite:getContentSize().width/2, tmp_sprite:getContentSize().height/2)
+                    tmp_sprite:addChild(tmp_label)
+                else
+                    node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                    main:addChild(node)
+                end
             end
-            node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
-            main:addChild(node)
             main_mat[i][j] = node
             
             if diff == 0 then
@@ -101,6 +127,30 @@ function FlipMat.create(word, m ,n)
             end
         end
     end
+    
+    main.finger_action = function()
+        local finger = cc.Sprite:create("image/studyscene/global_finger.png")
+        finger:setAnchorPoint(0,1)
+        finger:setPosition(firstFlipNode:getPosition())
+        main:addChild(finger)    
+        
+        local actionList = {}
+        local action1 = cc.DelayTime:create(0.5)
+        table.insert(actionList, action1)
+        for i = 1, #main.answerPath do
+            local action2 = cc.MoveTo:create(0.5, cc.p(main_mat[main.answerPath[i].x][main.answerPath[i].y]:getPosition()))
+            table.insert(actionList, action2)
+        end
+        local action3 = cc.FadeOut:create(0.5)
+        local action4 = cc.Place:create(cc.p(firstFlipNode:getPosition()))
+        local action5 = cc.FadeIn:create(0.5)
+        table.insert(actionList, action3)
+        table.insert(actionList, action4)
+        table.insert(actionList, action5)
+        local action6 = cc.Sequence:create(actionList)
+        finger:runAction(cc.RepeatForever:create(action6))
+    end
+    main.finger_action()
     
     -- local function
     local checkTouchLocation = function(location)
@@ -306,6 +356,8 @@ function FlipMat.create(word, m ,n)
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
+    --listener:setSwallowTouches(true)
+    
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )

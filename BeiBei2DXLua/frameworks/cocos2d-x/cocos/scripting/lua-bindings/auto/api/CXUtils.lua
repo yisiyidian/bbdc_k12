@@ -5,18 +5,6 @@
 -- @parent_module cx
 
 --------------------------------
--- @function [parent=#CXUtils] requestProducts 
--- @param self
--- @param #char char
--- @param #int int
-        
---------------------------------
--- @function [parent=#CXUtils] invokeLuaCallbackFunction 
--- @param self
--- @param #int int
--- @param #char char
-        
---------------------------------
 -- @function [parent=#CXUtils] showMail 
 -- @param self
 -- @param #char char

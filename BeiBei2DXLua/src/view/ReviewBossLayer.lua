@@ -127,8 +127,6 @@ function ReviewBossLayer.create()
         local location = layer:convertToNodeSpace(touch:getLocation())
         local logic_location = checkTouchIndex(location)
         
-        print(logic_location.x, logic_location.y)
-        
         if logic_location.x == rbCurrentWordIndex then
             if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][logic_location.y].character then
                 rbProgressBar.addOne()
@@ -186,9 +184,6 @@ function ReviewBossLayer.create()
                 layer:runAction(cc.Sequence:create(action1, action2))
                 
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
-                print(rbCurrentWordIndex)
-                print(wordToBeTested[rbCurrentWordIndex])
-                print(s_WordPool[wordToBeTested[rbCurrentWordIndex]])
                 wordMeaningBeTestedNow:setString(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall)
             else
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
