@@ -12,7 +12,7 @@ local FlipMat = class("FlipMat", function()
 return cc.Layer:create()
 end)
 
-function FlipMat.create(word, m ,n)
+function FlipMat.create(word, m ,n, isNewPlayerModel)
     local main = FlipMat.new()
     main:setContentSize(640,640)
     main:setAnchorPoint(0.5,0)
@@ -84,6 +84,9 @@ function FlipMat.create(word, m ,n)
             local node
             if diff >= 0 and diff < string.len(main_word) then
                 node = FlipNode.create("coconut_light", string.sub(main_word,diff+1,diff+1), i, j)
+                node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                main:addChild(node)
+                
                 local tmp = {}
                 tmp.x = i
                 tmp.y = j
@@ -91,9 +94,25 @@ function FlipMat.create(word, m ,n)
             else
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 node = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                if isNewPlayerModel then
+                    node:setPosition(320, -1136)
+                    main:addChild(node)
+                    
+                    local tmp_sprite = cc.Sprite:create("image/coconut_font.png")
+                    tmp_sprite:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                    tmp_sprite:setOpacity(120)
+                    main:addChild(tmp_sprite)
+                    
+                    local tmp_label = cc.Label:createWithSystemFont(charaster_set_filtered[randomIndex],"",40)
+                    tmp_label:setColor(cc.c3b(0,0,0))
+                    tmp_label:setOpacity(120)
+                    tmp_label:setPosition(tmp_sprite:getContentSize().width/2, tmp_sprite:getContentSize().height/2)
+                    tmp_sprite:addChild(tmp_label)
+                else
+                    node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                    main:addChild(node)
+                end
             end
-            node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
-            main:addChild(node)
             main_mat[i][j] = node
             
             if diff == 0 then
@@ -337,6 +356,8 @@ function FlipMat.create(word, m ,n)
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
+    --listener:setSwallowTouches(true)
+    
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
