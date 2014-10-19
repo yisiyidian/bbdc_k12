@@ -30,13 +30,15 @@ function StudyLayer.create()
     local sentenceEn = word.sentenceEn
     local sentenceCn = word.sentenceCn
 
-    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), s_DESIGN_WIDTH, s_DESIGN_HEIGHT)    
+    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
+    backColor:setAnchorPoint(0.5,0.5)
+    backColor:ignoreAnchorPointForPosition(false)  
+    backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
     
     local wordDetailInfo = WordDetailInfo.create(word)
     wordDetailInfo:setPosition(s_DESIGN_WIDTH/2, 0)
     layer:addChild(wordDetailInfo)
-    
     
     local button_changeview
     local button_changeview_clicked
