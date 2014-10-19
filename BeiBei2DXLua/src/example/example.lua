@@ -12,29 +12,33 @@ function test()
 
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
-
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
-
-    s_DATA_MANAGER.loadText()
-    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
-    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
     
-    s_DATA_MANAGER.loadBooks()
-    s_DATA_MANAGER.loadChapters()
-    s_DATA_MANAGER.loadDailyCheckIns()
-    s_DATA_MANAGER.loadEnergy()
-    s_DATA_MANAGER.loadItems()
-    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
-    s_DATA_MANAGER.loadReviewBoss()
-    s_DATA_MANAGER.loadStarRules()
+    local checkIn = require("view/CheckIn")
+    local inNode = checkIn.create()
+    s_GAME_LAYER:addChild(inNode)
 
-    print_lua_table(s_DATA_MANAGER.level_ncee)
-
-    --s_CorePlayManager.enterTestLayer()
-    --s_CorePlayManager.enterStudyLayer()
-    s_CorePlayManager.enterReviewBossLayer()
+--    s_WordPool = s_DATA_MANAGER.loadAllWords()
+--    s_CorePlayManager = require("controller.CorePlayManager")
+--    s_CorePlayManager.create()
+--
+--    s_DATA_MANAGER.loadText()
+--    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
+--    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
+--    
+--    s_DATA_MANAGER.loadBooks()
+--    s_DATA_MANAGER.loadChapters()
+--    s_DATA_MANAGER.loadDailyCheckIns()
+--    s_DATA_MANAGER.loadEnergy()
+--    s_DATA_MANAGER.loadItems()
+--    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+--    s_DATA_MANAGER.loadReviewBoss()
+--    s_DATA_MANAGER.loadStarRules()
+--
+--    print_lua_table(s_DATA_MANAGER.level_ncee)
+--
+--    --s_CorePlayManager.enterTestLayer()
+--    --s_CorePlayManager.enterStudyLayer()
+--    s_CorePlayManager.enterReviewBossLayer()
 
     --logd('testSpine')
     --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)
