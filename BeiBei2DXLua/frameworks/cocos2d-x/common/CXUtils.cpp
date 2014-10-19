@@ -8,7 +8,22 @@
 
 #include "CXUtils.h"
 #include "md5.h"
-#include <string.h>
+
+using namespace std;
+using namespace cocos2d;
+
+CXUtils* CXUtils::m_pInstance = nullptr;
+
+CXUtils* CXUtils::getInstance() {
+    if (!m_pInstance) {
+        m_pInstance = new CXUtils();
+    }
+    return m_pInstance;
+}
+
+CXUtils::CXUtils() {
+    
+}
 
 int toMD5(char* dest, const char* src)
 {
@@ -29,6 +44,6 @@ std::string& CXUtils::md5(const char* in, std::string& out)
     char md5str[33] = {0,};
     toMD5(md5str, in);
     out = md5str;
-    
+
     return out;
 }

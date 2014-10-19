@@ -159,6 +159,11 @@ static AppDelegate s_sharedApplication;
     [super dealloc];
 }
 
+#pragma mark -
+
+-(RootViewController*) getViewController {
+    return viewController;
+}
 
 @end
 

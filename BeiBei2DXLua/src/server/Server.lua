@@ -4,12 +4,13 @@ local Server = {}
 
 Server.debugLocalHost = false
 Server.isAppStoreServer = false
+Server.sessionToken = ''
 
 local function getURL()
     if Server.debugLocalHost then
         return 'http://localhost:3000/avos/'
     else
-        return 'https://cn.avoscloud.com/1.1/functions/'
+        return 'https://leancloud.cn/1.1/functions/'
     end
 end
 
@@ -43,6 +44,9 @@ function Server.request(api, parameters, onSucceed, onFailed)
     xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
     xhr:setRequestHeader('X-AVOSCloud-Request-Sign', sign)
     xhr:setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+    if (string.len(Server.sessionToken) > 0) then
+        xhr:setRequestHeader('X-AVOSCloud-Session-Token', Server.sessionToken)
+    end
 
     --
     xhr:registerScriptHandler(function ()

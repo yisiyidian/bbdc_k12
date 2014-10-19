@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "hZ5fJtPTxcXaYvNawaweaf9pwg4", "spine": "2.0.22", "width": 309.06, "height": 325, "images": "./进度条正确动画/" },
+"skeleton": { "hash": "hZ5fJtPTxcXaYvNawaweaf9pwg4", "spine": "2.0.22", "width": 309.06, "height": 308.49, "images": "./进度条正确动画/" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "bone", "parent": "root", "x": 46.99, "y": 111.18 },

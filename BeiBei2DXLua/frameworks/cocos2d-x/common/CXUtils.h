@@ -11,10 +11,19 @@
 
 #include <stdio.h>
 #include <string>
+#include "cocos2d.h"
 
-class CXUtils {
+class CXUtils : public cocos2d::Ref {
 public:
+    static CXUtils* getInstance();
+    
+    static void showMail(const char* mailTitle, const char* userName);
     static std::string& md5(const char* in, std::string& out);
+    
+private:
+    CXUtils();
+    
+    static CXUtils* m_pInstance;
 };
 
 #endif /* defined(__BeiBei2DXLua__CXUtils__) */

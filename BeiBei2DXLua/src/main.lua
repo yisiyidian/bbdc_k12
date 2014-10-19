@@ -24,8 +24,6 @@ local function main()
     cc.FileUtils:getInstance():addSearchPath("src")
     cc.FileUtils:getInstance():addSearchPath("res")
     cc.Director:getInstance():setDisplayStats(false)
-    -- cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(480, 320, 0)
-    -- cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(320 * 2, 480 * 2, cc.ResolutionPolicy.FIXED_HEIGHT)
 
     --------------------------------------------------------------------------------
     require("common.global")
@@ -36,17 +34,17 @@ local function main()
     else
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
+
+   local StartViewLayer = require('view.StartViewLayer')
+   local layer = StartViewLayer.create()
+   layer:setAnchorPoint(0.5, 0)
+   layer:setPosition(s_LEFT_X, 0)
+   s_SCENE:replaceGameLayer(layer)
+
     
     -- test
-    local example = require("example.example")
-    test()
-
-    --------------------------------------------------------------------------------
---    s_localSqlite = require("model.localData.LocalDatabaseManager")
---    s_localSqlite.open()
---    s_localSqlite.initTables()
---    s_localSqlite.showTables()
-    --s_localSqlite.close()
+    -- local example = require("example.example")
+    -- test()
 end
 
 

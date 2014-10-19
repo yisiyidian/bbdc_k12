@@ -1,6 +1,6 @@
 require("Cocos2d")
 require("Cocos2dConstants")
-require("AudioMgr")
+
 local BackgroundLayer = require("layer.BackgroundLayer")
 local GameLayer = require("layer.GameLayer")
 local HudLayer = require("layer.HudLayer")
@@ -15,27 +15,31 @@ end)
 
 function AppScene.create()
     local scene = AppScene.new()
+
+    scene.rootLayer = cc.Layer:create()
+    scene.rootLayer:setPosition(s_DESIGN_OFFSET_WIDTH, 0)
+    scene:addChild(scene.rootLayer)
     
     scene.bgLayer = BackgroundLayer.create()
-    scene:addChild(scene.bgLayer)
+    scene.rootLayer:addChild(scene.bgLayer)
 
     scene.gameLayer = GameLayer.create()
-    scene:addChild(scene.gameLayer)
+    scene.rootLayer:addChild(scene.gameLayer)
 
     scene.hudLayer = HudLayer.create()
-    scene:addChild(scene.hudLayer)
+    scene.rootLayer:addChild(scene.hudLayer)
 
     scene.popupLayer = PopupLayer.create()
-    scene:addChild(scene.popupLayer)
+    scene.rootLayer:addChild(scene.popupLayer)
     
     scene.tipsLayer = TipsLayer.create()
-    scene:addChild(scene.tipsLayer)
+    scene.rootLayer:addChild(scene.tipsLayer)
 
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
-    scene:addChild(scene.touchEventBlockLayer)
+    scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
     scene.debugLayer = DebugLayer.create()
-    scene:addChild(scene.debugLayer)
+    scene.rootLayer:addChild(scene.debugLayer)
     
     return scene
 end
@@ -49,6 +53,17 @@ end
 function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
+end
+
+function AppScene:popup(popupNode)
+    self.popupLayer.listener:setSwallowTouches(true)
+    self.popupLayer:removeAllChildren()
+    self.popupLayer:addChild(popupNode) 
+end
+
+function AppScene:removeAllPopups()
+    self.popupLayer.listener:setSwallowTouches(false)
+    self.popupLayer:removeAllChildren()
 end
 
 return AppScene

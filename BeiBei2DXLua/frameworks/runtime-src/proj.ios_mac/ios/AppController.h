@@ -31,5 +31,7 @@
     RootViewController    *viewController;
 }
 
+-(RootViewController*) getViewController;
+
 @end
 

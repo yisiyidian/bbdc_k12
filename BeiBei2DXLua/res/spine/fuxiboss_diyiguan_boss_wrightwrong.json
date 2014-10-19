@@ -1,0 +1,194 @@
+{
+"skeleton": {
+	"hash": "yLvOusAGxCIUDMKVgfsX16iD8Uc",
+	"spine": "2.0.22",
+	"width": 195,
+	"height": 192,
+	"images": "/Users/wangsiyu/Desktop/ /单词游戏/第一关/fuxiboss动画"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": -0.26, "y": 100.38 }
+],
+"slots": [
+	{ "name": "button_audupus_wright_boss2", "bone": "root", "attachment": "button_audupus_wright_boss2" },
+	{ "name": "button_audupus_normal_boss1", "bone": "root", "attachment": "button_audupus_normal_boss1" },
+	{ "name": "button_audupus_wright_boss2_an1", "bone": "root", "attachment": "button_audupus_wright_boss2_an2" },
+	{ "name": "button_audupus_wrong_1_boss2", "bone": "root", "attachment": "button_audupus_wrong_1_boss2" },
+	{ "name": "button_audupus_wrong_2_boss2", "bone": "bone", "attachment": "button_audupus_wrong_2_boss2" }
+],
+"skins": {
+	"default": {
+		"button_audupus_normal_boss1": {
+			"button_audupus_normal_boss1": { "y": 96, "width": 195, "height": 192 }
+		},
+		"button_audupus_wright_boss2": {
+			"button_audupus_wright_boss2": { "y": 96, "width": 226, "height": 191 }
+		},
+		"button_audupus_wright_boss2_an1": {
+			"button_audupus_wright_boss2_an1": { "y": 108.78, "width": 215, "height": 135 },
+			"button_audupus_wright_boss2_an2": { "y": 108.78, "width": 188, "height": 122 },
+			"button_audupus_wright_boss2_an3": { "y": 108.78, "width": 154, "height": 96 }
+		},
+		"button_audupus_wrong_1_boss2": {
+			"button_audupus_wrong_1_boss2": { "y": 96, "width": 195, "height": 192 }
+		},
+		"button_audupus_wrong_2_boss2": {
+			"button_audupus_wrong_2_boss2": { "x": 0.26, "y": -5.29, "width": 109, "height": 105 }
+		}
+	}
+},
+"animations": {
+	"oudupus1": {
+		"slots": {
+			"button_audupus_wright_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"button_audupus_wright_boss2_an1": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"button_audupus_wrong_1_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"button_audupus_wrong_2_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"oudupus2": {
+		"slots": {
+			"button_audupus_normal_boss1": {
+				"attachment": [
+					{ "time": 0.0666, "name": null }
+				]
+			},
+			"button_audupus_wright_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2, "name": "button_audupus_wright_boss2" }
+				],
+				"color": [
+					{ "time": 0.2, "color": "ffffff00" },
+					{ "time": 0.3666, "color": "ffffffff" }
+				]
+			},
+			"button_audupus_wright_boss2_an1": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.0666, "name": "button_audupus_wright_boss2_an1" },
+					{ "time": 0.1333, "name": "button_audupus_wright_boss2_an2" },
+					{ "time": 0.2, "name": "button_audupus_wright_boss2_an3" },
+					{ "time": 0.2666, "name": null }
+				]
+			},
+			"button_audupus_wrong_1_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"button_audupus_wrong_2_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	},
+	"oudupus3": {
+		"slots": {
+			"button_audupus_normal_boss1": {
+				"attachment": [
+					{ "time": 0.0666, "name": null }
+				]
+			},
+			"button_audupus_wright_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				],
+				"color": [
+					{ "time": 0.2, "color": "ffffff00" },
+					{ "time": 0.3666, "color": "ffffffff" }
+				]
+			},
+			"button_audupus_wright_boss2_an1": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.0666, "name": "button_audupus_wright_boss2_an1" },
+					{ "time": 0.1333, "name": "button_audupus_wright_boss2_an2" },
+					{ "time": 0.2, "name": "button_audupus_wright_boss2_an3" },
+					{ "time": 0.2666, "name": null }
+				]
+			},
+			"button_audupus_wrong_1_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2, "name": "button_audupus_wrong_1_boss2" }
+				],
+				"color": [
+					{ "time": 0.2, "color": "ffffff00" },
+					{ "time": 0.3666, "color": "ffffffff" }
+				]
+			},
+			"button_audupus_wrong_2_boss2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2, "name": "button_audupus_wrong_2_boss2" }
+				],
+				"color": [
+					{ "time": 0.2, "color": "ffffff00" },
+					{ "time": 0.3666, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0.3666, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{ "time": 0.2666, "angle": 8.31 },
+					{ "time": 0.4666, "angle": -7.55 },
+					{ "time": 0.6333, "angle": 8.31 },
+					{ "time": 0.8, "angle": -7.55 },
+					{ "time": 0.9333, "angle": -0.21 }
+				],
+				"translate": [
+					{ "time": 0.2, "x": -1.65, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

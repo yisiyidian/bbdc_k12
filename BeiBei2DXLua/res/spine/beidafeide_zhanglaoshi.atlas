@@ -1,0 +1,104 @@
+
+beidafeide_zhanglaoshi.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zhanglaoshi_0000s_0000s_0000_nose
+  rotate: false
+  xy: 2, 782
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0001_left-eye1
+  rotate: false
+  xy: 273, 782
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0002_felt-eye2
+  rotate: false
+  xy: 544, 782
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0003_felt-eye3
+  rotate: true
+  xy: 2, 511
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0004_right-eye1
+  rotate: true
+  xy: 2, 240
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0005_right-eye2
+  rotate: false
+  xy: 2, 2
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0006_right-eye3
+  rotate: true
+  xy: 240, 511
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0007_moutch-
+  rotate: true
+  xy: 240, 240
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0008_moutch1
+  rotate: false
+  xy: 273, 2
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0009_shadow
+  rotate: true
+  xy: 478, 511
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0010_face
+  rotate: true
+  xy: 478, 240
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0011_bao
+  rotate: false
+  xy: 544, 2
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0012_foot1
+  rotate: false
+  xy: 716, 544
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1
+zhanglaoshi_0000s_0000s_0013_foot
+  rotate: true
+  xy: 716, 273
+  size: 269, 236
+  orig: 269, 236
+  offset: 0, 0
+  index: -1

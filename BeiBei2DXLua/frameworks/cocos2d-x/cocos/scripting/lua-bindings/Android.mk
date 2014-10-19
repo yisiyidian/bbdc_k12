@@ -43,7 +43,9 @@ LOCAL_SRC_FILES := manual/CCLuaBridge.cpp \
           ../../../common/avos/Android/CXAnalytics.cpp \
           ../../../common/avos/Android/CXAvos.cpp \
           ../../../common/md5/md5.c \
+          ../../../common/Android/CXMailFeedBack.cpp \
           ../../../common/CXUtils.cpp \
+          ../../../common/CXStore.cpp \
           ../../../external/lua/tolua/tolua_event.c \
           ../../../external/lua/tolua/tolua_is.c \
           ../../../external/lua/tolua/tolua_map.c \

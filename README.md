@@ -117,3 +117,6 @@ lua 简明教程: http://coolshell.cn/articles/10739.html
 TODO:
 layer 替换模块
 每条数据加上 appVersion 字段和被存储的次数 recordCnt 来保证单机和联网的数据同步
+资源代码加密
+在线更新代码
+
