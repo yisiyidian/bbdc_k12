@@ -20,13 +20,13 @@ function test()
     --   s_logd(text)
     -- end)
 
-    playMusic(s_sound_bgm1, true)
-
-    local StartViewLayer = require('view.StartViewLayer')
-    local layer = StartViewLayer.create()
-    layer:setAnchorPoint(0.5,0)
-    layer:setPosition(s_LEFT_X, 0)
-    s_SCENE:replaceGameLayer(layer)
+--    playMusic(s_sound_bgm1, true)
+--
+--    local StartViewLayer = require('view.StartViewLayer')
+--    local layer = StartViewLayer.create()
+--    layer:setAnchorPoint(0.5,0)
+--    layer:setPosition(s_LEFT_X, 0)
+--    s_SCENE:replaceGameLayer(layer)
 
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
@@ -48,8 +48,8 @@ function test()
     -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
     --s_CorePlayManager.enterTestLayer()
-    --s_CorePlayManager.enterStudyLayer()
-    -- s_CorePlayManager.enterReviewBossLayer()
+    s_CorePlayManager.enterStudyLayer()
+    --s_CorePlayManager.enterReviewBossLayer()
 
     -- s_level = require('view/LevelLayer.lua')
     -- layer = s_level.create()

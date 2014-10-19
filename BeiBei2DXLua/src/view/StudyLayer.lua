@@ -117,15 +117,28 @@ function StudyLayer.create()
         progressBar.rightStyle()
     
         local changeLayer = function()
-            if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
-                s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
-                s_CorePlayManager.enterStudyLayer()
+            if s_CorePlayManager.replayWrongWordState then
+                if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wrongWordList then
+                    s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+                    s_CorePlayManager.enterStudyLayer()
+                else
+                    s_SCENE.touchEventBlockLayer.unlockTouch()
+
+                    local alter = TestAlter.createFromSecondAlter()
+                    alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(alter)
+                end
             else
-                s_SCENE.touchEventBlockLayer.unlockTouch()
-            
-                local alter = StudyAlter.create()
-                alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                layer:addChild(alter)
+                if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
+                    s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+                    s_CorePlayManager.enterStudyLayer()
+                else
+                    s_SCENE.touchEventBlockLayer.unlockTouch()
+
+                    local alter = StudyAlter.create()
+                    alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(alter)
+                end
             end
         end
  

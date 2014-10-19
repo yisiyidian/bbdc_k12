@@ -219,7 +219,7 @@ showDetailInfo = function()
     
     
     local button_left_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.began then            
             s_CorePlayManager.currentWordIndex = 1
             s_CorePlayManager.enterStudyLayer()
         end
@@ -227,7 +227,7 @@ showDetailInfo = function()
     
     local button_middle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            s_CorePlayManager.currentWordIndex = 1
+            s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()
         end
     end
