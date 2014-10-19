@@ -5,7 +5,12 @@ return cc.Layer:create()
 end)
 
 function ProgressBar.create(isWrongStateShow)
-    local totalIndex = #s_CorePlayManager.wordList
+    local totalIndex = nil
+    if s_CorePlayManager.replayWrongWordState then
+        totalIndex = #s_CorePlayManager.wrongWordList
+    else
+        totalIndex = #s_CorePlayManager.wordList
+    end
     local currentIndex = s_CorePlayManager.currentWordIndex
 
     -- system variate

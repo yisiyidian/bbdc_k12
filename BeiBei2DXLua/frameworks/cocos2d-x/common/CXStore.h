@@ -19,13 +19,17 @@ public:
     static CXStore* getInstance();
     
     void requestProducts(const char* productIds, CXLUAFUNC nHandler);
-    void invokeLuaCallbackFunction_requestProducts(int msgId, const char* text);
+    void invokeLuaCallbackFunction_requestProducts(int code, const char* json);
+    
+    void payForProduct(const char* productId, CXLUAFUNC nHandler);
+    void invokeLuaCallbackFunction_payForProduct(int code, const char* msg, const char* json);
     
 private:
     CXStore();
     
     static CXStore* m_pInstance;
     int mLuaHandlerId_requestProducts;
+    int mLuaHandlerId_payResult;
 };
 
 

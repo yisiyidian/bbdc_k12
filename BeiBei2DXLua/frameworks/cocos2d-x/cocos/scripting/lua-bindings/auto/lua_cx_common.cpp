@@ -299,6 +299,58 @@ int lua_cx_common_CXStore_invokeLuaCallbackFunction_requestProducts(lua_State* t
 
     return 0;
 }
+int lua_cx_common_CXStore_payForProduct(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXStore* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXStore",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXStore*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXStore_payForProduct'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        const char* arg0;
+        CXLUAFUNC arg1;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
+
+        if (!toluafix_isfunction(tolua_S,3,"LUA_FUNCTION",0,&tolua_err))
+            goto tolua_lerror;
+
+        arg1 = (  toluafix_ref_function(tolua_S,3,0));
+        if(!ok)
+            return 0;
+        cobj->payForProduct(arg0, arg1);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "payForProduct",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXStore_payForProduct'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXStore_requestProducts(lua_State* tolua_S)
 {
     int argc = 0;
@@ -351,6 +403,58 @@ int lua_cx_common_CXStore_requestProducts(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cx_common_CXStore_invokeLuaCallbackFunction_payForProduct(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXStore* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXStore",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXStore*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXStore_invokeLuaCallbackFunction_payForProduct'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        int arg0;
+        const char* arg1;
+        const char* arg2;
+
+        ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0);
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
+
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp); arg2 = arg2_tmp.c_str();
+        if(!ok)
+            return 0;
+        cobj->invokeLuaCallbackFunction_payForProduct(arg0, arg1, arg2);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "invokeLuaCallbackFunction_payForProduct",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXStore_invokeLuaCallbackFunction_payForProduct'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXStore_getInstance(lua_State* tolua_S)
 {
     int argc = 0;
@@ -395,7 +499,9 @@ int lua_register_cx_common_CXStore(lua_State* tolua_S)
 
     tolua_beginmodule(tolua_S,"CXStore");
         tolua_function(tolua_S,"invokeLuaCallbackFunction_requestProducts",lua_cx_common_CXStore_invokeLuaCallbackFunction_requestProducts);
+        tolua_function(tolua_S,"payForProduct",lua_cx_common_CXStore_payForProduct);
         tolua_function(tolua_S,"requestProducts",lua_cx_common_CXStore_requestProducts);
+        tolua_function(tolua_S,"invokeLuaCallbackFunction_payForProduct",lua_cx_common_CXStore_invokeLuaCallbackFunction_payForProduct);
         tolua_function(tolua_S,"getInstance", lua_cx_common_CXStore_getInstance);
     tolua_endmodule(tolua_S);
     std::string typeName = typeid(CXStore).name();

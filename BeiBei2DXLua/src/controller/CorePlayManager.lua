@@ -7,32 +7,41 @@ local ReviewBossLayer = require("view.ReviewBossLayer")
 local CorePlayManager = {}
 
 -- study scene and test scene variate
-CorePlayManager.dictionary = {}
-CorePlayManager.currentWordIndex = 1
 CorePlayManager.wordList = {"apple","pear","water","day"}
+CorePlayManager.currentWordIndex = 1
 CorePlayManager.currentWord = nil
 CorePlayManager.answerStateRecord = {}
 CorePlayManager.wordProficiency = {}
 
--- study scene and test scene variate
+CorePlayManager.currentScore = 0
+CorePlayManager.currentRatio = 0
+
+CorePlayManager.replayWrongWordState = false
+CorePlayManager.wrongWordList = {}
+
+CorePlayManager.newPlayerState = false
+
+-- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
 
 
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
-    --CorePlayManager.enterStudyLayer()
 end
 
 function CorePlayManager.loadConfiguration()
     for i = 1, #CorePlayManager.wordList do
-        CorePlayManager.dictionary[i] = s_WordPool[CorePlayManager.wordList[i]]
         CorePlayManager.answerStateRecord[i] = 0
         CorePlayManager.wordProficiency[i] = 1
     end
 end
 
 function CorePlayManager.enterStudyLayer()
-    CorePlayManager.currentWord = CorePlayManager.dictionary[CorePlayManager.currentWordIndex]
+    if CorePlayManager.replayWrongWordState then
+        CorePlayManager.currentWord = s_WordPool[CorePlayManager.wrongWordList[CorePlayManager.currentWordIndex]]
+    else
+        CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
+    end
     local studyLayer = StudyLayer.create()
     s_SCENE:replaceGameLayer(studyLayer)
 end
@@ -42,7 +51,7 @@ function CorePlayManager.leaveStudyLayer()
 end
 
 function CorePlayManager.enterTestLayer()
-    CorePlayManager.currentWord = CorePlayManager.dictionary[CorePlayManager.currentWordIndex]
+    CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     local testLayer = TestLayer.create()
     s_SCENE:replaceGameLayer(testLayer)
 end
@@ -53,6 +62,16 @@ end
 
 function CorePlayManager.answerRight()
     CorePlayManager.answerStateRecord[CorePlayManager.currentWordIndex] = 1
+end
+
+function CorePlayManager.generateWrongWordList()
+    for i = 1, #CorePlayManager.wordList do
+        if CorePlayManager.answerStateRecord[i] == 0 then
+            table.insert( CorePlayManager.wrongWordList, CorePlayManager.wordList[i] )
+        end
+    end
+    CorePlayManager.replayWrongWordState = true
+    CorePlayManager.currentWordIndex = 1
 end
 
 function CorePlayManager.enterReviewBossLayer()
