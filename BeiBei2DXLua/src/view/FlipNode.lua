@@ -78,6 +78,9 @@ function FlipNode.create(back, character, x, y)
     
     main.normal = function()
         main.main_back:addAnimation(0, 'normal', false)
+        main.main_character_label:setColor(cc.c3b(0,0,0))
+        main.main_character_label:setVisible(true)
+        main.hasSelected = false
     end
     
     main.win = function()

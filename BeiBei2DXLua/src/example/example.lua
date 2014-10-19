@@ -13,7 +13,7 @@ function test()
     --local corePlayManager = CorePlayManager.create()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
     
-    local checkIn = require("view/CheckIn")
+    local checkIn = require("view.SummaryBossLayer")
     local inNode = checkIn.create()
     s_GAME_LAYER:addChild(inNode)
 
