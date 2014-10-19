@@ -24,34 +24,33 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 --
---    local StartViewLayer = require('view.StartViewLayer')
---    local layer = StartViewLayer.create()
---    layer:setAnchorPoint(0.5,0)
---    layer:setPosition(s_LEFT_X, 0)
---    s_SCENE:replaceGameLayer(layer)
+   local PopupLoginSignup = require('popup.PopupLoginSignup')
+   local layer = PopupLoginSignup.create()
+   layer:setAnchorPoint(0.5,0)
+   s_SCENE:popup(layer)
 
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
+    -- s_WordPool = s_DATA_MANAGER.loadAllWords()
+    -- s_CorePlayManager = require("controller.CorePlayManager")
+    -- s_CorePlayManager.create()
 
-    s_DATA_MANAGER.loadText()
-    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
-    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
+    -- s_DATA_MANAGER.loadText()
+    -- s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
+    -- s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
     
-    s_DATA_MANAGER.loadBooks()
-    s_DATA_MANAGER.loadChapters()
-    s_DATA_MANAGER.loadDailyCheckIns()
-    s_DATA_MANAGER.loadEnergy()
-    s_DATA_MANAGER.loadItems()
-    -- s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
-    s_DATA_MANAGER.loadReviewBoss()
-    s_DATA_MANAGER.loadStarRules()
+    -- s_DATA_MANAGER.loadBooks()
+    -- s_DATA_MANAGER.loadChapters()
+    -- s_DATA_MANAGER.loadDailyCheckIns()
+    -- s_DATA_MANAGER.loadEnergy()
+    -- s_DATA_MANAGER.loadItems()
+    -- -- s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+    -- s_DATA_MANAGER.loadReviewBoss()
+    -- s_DATA_MANAGER.loadStarRules()
 
-    -- print_lua_table(s_DATA_MANAGER.level_ncee)
+    -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
-    --s_CorePlayManager.enterTestLayer()
-    s_CorePlayManager.enterStudyLayer()
-    --s_CorePlayManager.enterReviewBossLayer()
+    -- --s_CorePlayManager.enterTestLayer()
+    -- s_CorePlayManager.enterStudyLayer()
+    -- --s_CorePlayManager.enterReviewBossLayer()
 
     -- s_level = require('view/LevelLayer.lua')
     -- layer = s_level.create()
@@ -96,14 +95,7 @@ function test()
 --    end
 
 
-   -- local function onSucceed(api, result)
-   --     s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
-   -- end 
-   -- local function onFailed(api, code, message)
-   --     s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
-   -- end
-   -- s_funcLogin('yehanjie1', '111111', onSuccexed, onFailed)
-   -- s_funcSignin('_test000', '111111', onSucceed, onFailed)
+   
 
    -- local LogInSignUpLayer = require('view.LogInSignUpLayer')
    -- local node = LogInSignUpLayer.create()
@@ -131,4 +123,11 @@ function test()
     -- s_logd('end')
 
     -- cx.CXAnalytics:logEventAndLabel('luatestEvent', 'lualabel')
+
+    --------------------------------------------------------------------------------
+--    s_localSqlite = require("model.localData.LocalDatabaseManager")
+--    s_localSqlite.open()
+--    s_localSqlite.initTables()
+--    s_localSqlite.showTables()
+    --s_localSqlite.close()
 end

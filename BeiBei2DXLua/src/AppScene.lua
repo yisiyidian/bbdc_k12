@@ -55,4 +55,15 @@ function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:addChild(newLayer)
 end
 
+function AppScene:popup(popupNode)
+    self.popupLayer.listener:setSwallowTouches(true)
+    self.popupLayer:removeAllChildren()
+    self.popupLayer:addChild(popupNode) 
+end
+
+function AppScene:removeAllPopups()
+    self.popupLayer.listener:setSwallowTouches(false)
+    self.popupLayer:removeAllChildren()
+end
+
 return AppScene
