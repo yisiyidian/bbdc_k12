@@ -141,7 +141,7 @@ function StudyLayer.create()
                 end
             end
         end
- 
+        
         local action1 = cc.DelayTime:create(1)
         local action2 = cc.CallFunc:create(changeLayer)
         local action3 = cc.Sequence:create(action1,action2)
