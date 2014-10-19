@@ -207,6 +207,16 @@ function StudyLayer.create()
     button_changeview:addTouchEventListener(button_changeview_clicked)
     cloud_down:addChild(button_changeview)
     
+    local fingerClick = sp.SkeletonAnimation:create("res/spine/yindaoye_shoudonghua_dianji.json", "res/spine/yindaoye_shoudonghua_dianji.atlas", 1)
+    fingerClick:setPosition(s_DESIGN_WIDTH/2, 10)
+    layer:addChild(fingerClick)
+    fingerClick:addAnimation(0, 'animation', true)
+    
+    
+    local newplayerHintBack = cc.Sprite:create("image/studyscene/global_jianjieyindaobeijing_chuxian.png")
+    newplayerHintBack:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    layer:addChild(newplayerHintBack)
+    
     
 --    --local tmp = TestAlter.createFromFirstAlter()
 --    local tmp = TestAlter.createFromSecondAlter()

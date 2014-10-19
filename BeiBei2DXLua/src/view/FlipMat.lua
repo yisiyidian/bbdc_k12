@@ -93,7 +93,6 @@ function FlipMat.create(word, m ,n)
                 node = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
             end
             node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
-            node:setOpacity(0.5)
             main:addChild(node)
             main_mat[i][j] = node
             

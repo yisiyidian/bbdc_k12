@@ -19,6 +19,8 @@ CorePlayManager.currentRatio = 0
 CorePlayManager.replayWrongWordState = false
 CorePlayManager.wrongWordList = {}
 
+CorePlayManager.newPlayerState = false
+
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
 
