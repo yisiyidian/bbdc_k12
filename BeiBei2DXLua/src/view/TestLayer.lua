@@ -156,7 +156,7 @@ function TestLayer.create()
         layer:runAction(action3) 
     end
 
-    local mat = FlipMat.create(wordName,4,4)
+    local mat = FlipMat.create(wordName,4,4,false)
     mat:setPosition(size_big.width/2, 100)
     cloud_down:addChild(mat)
 
