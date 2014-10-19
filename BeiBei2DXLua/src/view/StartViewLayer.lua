@@ -23,12 +23,13 @@ end
 
 function StartViewLayer:onPlay()
     local function onSucceed(api, result)
-        s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
+        -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
+        s_CURRENT_USER:parseServerData(result)
     end 
     local function onFailed(api, code, message)
         s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
     end
-    s_funcLogin('yehanjie1', '111111', onSuccexed, onFailed)
+    s_funcLogin('yehanjie1', '111111', onSucceed, onFailed)
     -- s_funcSignin('_test000', '111111', onSucceed, onFailed)
 end
 

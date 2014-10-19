@@ -46,4 +46,12 @@ function DataUser.create()
     return data
 end
 
+function DataUser:parseServerData(data)
+    for key, value in pairs(self) do
+        if nil ~= data[key] then
+            self[key] = data[key]
+        end
+    end
+end
+
 return DataUser
