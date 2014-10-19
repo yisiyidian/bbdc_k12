@@ -81,6 +81,7 @@
 		B89AB3DB19F24AE5003EA22A /* libPluginProtocol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3D919F24A76003EA22A /* libPluginProtocol.a */; };
 		B8F6490219E657DE00E55CE0 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490019E657DE00E55CE0 /* md5.c */; };
 		B8F6490519E6580600E55CE0 /* CXUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490319E6580600E55CE0 /* CXUtils.cpp */; };
+		B8FEC35819F37569004509FB /* CXStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8FEC35619F37569004509FB /* CXStore.cpp */; };
 		C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
 		C00FD4931938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
 		C00FD4941938512100C6382D /* PlayDisable_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48B1938512100C6382D /* PlayDisable_png.cpp */; };
@@ -447,6 +448,8 @@
 		B8F6490119E657DE00E55CE0 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
 		B8F6490319E6580600E55CE0 /* CXUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXUtils.cpp; sourceTree = "<group>"; };
 		B8F6490419E6580600E55CE0 /* CXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXUtils.h; sourceTree = "<group>"; };
+		B8FEC35619F37569004509FB /* CXStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXStore.cpp; sourceTree = "<group>"; };
+		B8FEC35719F37569004509FB /* CXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXStore.h; sourceTree = "<group>"; };
 		C00FD48A1938512100C6382D /* Landscape_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Landscape_png.cpp; sourceTree = "<group>"; };
 		C00FD48B1938512100C6382D /* PlayDisable_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayDisable_png.cpp; sourceTree = "<group>"; };
 		C00FD48C1938512100C6382D /* PlayEnable_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayEnable_png.cpp; sourceTree = "<group>"; };
@@ -744,6 +747,8 @@
 			isa = PBXGroup;
 			children = (
 				B851469E19E4EBD50027372E /* avos */,
+				B8FEC35619F37569004509FB /* CXStore.cpp */,
+				B8FEC35719F37569004509FB /* CXStore.h */,
 				B8F6490319E6580600E55CE0 /* CXUtils.cpp */,
 				B8F6490419E6580600E55CE0 /* CXUtils.h */,
 				B80E072619F10314006EDBCF /* iOS */,
@@ -1274,6 +1279,7 @@
 				3EB5156A1952865D006966AA /* once.cc in Sources */,
 				B8F6490519E6580600E55CE0 /* CXUtils.cpp in Sources */,
 				C00FD4981938512100C6382D /* Portrait_png.cpp in Sources */,
+				B8FEC35819F37569004509FB /* CXStore.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
 				C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,

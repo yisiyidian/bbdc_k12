@@ -54,6 +54,7 @@ import android.widget.Toast;
 
 import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVAnalytics;
+import com.anysdk.framework.PluginWrapper;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -62,6 +63,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 	static String hostIPAdress="0.0.0.0";
 	private static Context context = null;
+	private static AppActivity instance = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +82,9 @@ public class AppActivity extends Cocos2dxActivity {
 		AVAnalytics.enableCrashReport(this, true);
 		
 		context = getApplicationContext();
+		instance = this;
+		
+		PluginWrapper.init(this);
 		
 		if(nativeIsLandScape()) {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
@@ -114,14 +119,30 @@ public class AppActivity extends Cocos2dxActivity {
 		hostIPAdress = getHostIpAddress();
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data){
+		super.onActivityResult(requestCode, resultCode, data);
+		PluginWrapper.onActivityResult(requestCode, resultCode, data);
+	}
+	
+	@Override
 	protected void onPause() {
+		PluginWrapper.onPause();
+		AVAnalytics.onPause(this);
         super.onPause();
-        AVAnalytics.onPause(this);
     }
 
+	@Override
     protected void onResume() {
         super.onResume();
         AVAnalytics.onResume(this);
+        PluginWrapper.onResume();
+    }
+    
+    @Override
+    protected void onNewIntent(Intent intent) {
+        PluginWrapper.onNewIntent(intent);
+        super.onNewIntent(intent);
     }
     
 	private boolean isNetworkConnected() {
@@ -169,6 +190,19 @@ public class AppActivity extends Cocos2dxActivity {
 			AVAnalytics.onEvent(context, eventName, tag);
 		}
 	} 
+	
+	public static void showMail(String mailTitle, String username) {
+		Intent i = new Intent(Intent.ACTION_SEND);
+		i.setType("message/rfc822");
+		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"beibeidanci@qq.com"});
+		i.putExtra(Intent.EXTRA_SUBJECT, mailTitle + ":" + username);
+		// i.putExtra(Intent.EXTRA_TEXT   , "(发送反馈邮件)");
+		try {
+			instance.startActivity(Intent.createChooser(i, "发送反馈邮件"));
+		} catch (android.content.ActivityNotFoundException ex) {
+		    Toast.makeText(instance, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+		}
+	}
 	
 	private static native boolean nativeIsLandScape();
 	private static native boolean nativeIsDebug();

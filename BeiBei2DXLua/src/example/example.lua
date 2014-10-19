@@ -15,10 +15,10 @@ function test()
     -- s_SCENE.gameLayer:addChild(corePlayManager)
 
     --cx.CXUtils:showMail('test', 'palyerName')
-    -- cx.CXUtils:getInstance():requestProducts('com.beibei.wordmaster.ep30', function (ret, text)
-    --   s_logd(ret)
-    --   s_logd(text)
-    -- end)
+--    cx.CXStore:getInstance():requestProducts('com.beibei.wordmaster.ep30', function (ret, text)
+--       s_logd(ret)
+--      s_logd(text)
+--    end)
 
     playMusic(s_sound_bgm1, true)
 

@@ -6,6 +6,11 @@
 #include "ConfigParser.h"
 #include "lua_cx_common.hpp"
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "anysdkbindings.h"
+#include "anysdk_manual_bindings.h"
+#endif
+
 using namespace CocosDenshion;
 
 USING_NS_CC;
@@ -62,6 +67,16 @@ bool AppDelegate::applicationDidFinishLaunching()
     lua_getglobal(state, "_G");
     register_all_cx_common(state);
     lua_pop(state, 1);
+    
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    {
+    LuaStack* stack = engine->getLuaStack();
+    lua_getglobal(stack->getLuaState(), "_G");
+    tolua_anysdk_open(stack->getLuaState());
+    tolua_anysdk_manual_open(stack->getLuaState());
+    lua_pop(stack->getLuaState(), 1);
+    }
+#endif
     
 //#if (COCOS2D_DEBUG>0)
 //    if (startRuntime())

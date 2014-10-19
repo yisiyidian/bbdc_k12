@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="libs/avosstatistics-v2.6.5.jar"/>
 	<classpathentry kind="lib" path="libs/fastjson.jar"/>
 	<classpathentry kind="lib" path="libs/httpmime-4.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/libPluginProtocol.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
