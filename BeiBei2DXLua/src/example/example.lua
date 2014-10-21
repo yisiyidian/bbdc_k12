@@ -22,12 +22,12 @@ function test()
    --      end)
    -- end)
 
-    playMusic(s_sound_bgm1, true)
---
-   local PopupLoginSignup = require('popup.PopupLoginSignup')
-   local layer = PopupLoginSignup.create()
-   layer:setAnchorPoint(0.5,0)
-   s_SCENE:popup(layer)
+--    playMusic(s_sound_bgm1, true)
+
+--   local PopupLoginSignup = require('popup.PopupLoginSignup')
+--   local layer = PopupLoginSignup.create()
+--   layer:setAnchorPoint(0.5,0)
+--   s_SCENE:popup(layer)
 
     -- s_WordPool = s_DATA_MANAGER.loadAllWords()
     -- s_CorePlayManager = require("controller.CorePlayManager")
@@ -125,9 +125,9 @@ function test()
     -- cx.CXAnalytics:logEventAndLabel('luatestEvent', 'lualabel')
 
     --------------------------------------------------------------------------------
---    s_localSqlite = require("model.localData.LocalDatabaseManager")
+--    s_localSqlite = require("model.LocalDatabaseManager")
 --    s_localSqlite.open()
 --    s_localSqlite.initTables()
 --    s_localSqlite.showTables()
-    --s_localSqlite.close()
+--    s_localSqlite.close()
 end

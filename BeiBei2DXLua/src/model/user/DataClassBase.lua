@@ -9,7 +9,7 @@ end
 
 function DataClassBase:ctor()
     self.userId = ''
-    self.createAt = os.time()
+    self.createdAt = os.time()
     self.updatedAt = 0
 end
 
