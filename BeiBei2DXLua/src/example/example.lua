@@ -23,15 +23,15 @@ function test()
    -- end)
 
 --    playMusic(s_sound_bgm1, true)
---
-   local PopupLoginSignup = require('popup.PopupLoginSignup')
-   local layer = PopupLoginSignup.create()
-   layer:setAnchorPoint(0.5,0)
-   s_SCENE:popup(layer)
 
-    -- s_WordPool = s_DATA_MANAGER.loadAllWords()
-    -- s_CorePlayManager = require("controller.CorePlayManager")
-    -- s_CorePlayManager.create()
+--   local PopupLoginSignup = require('popup.PopupLoginSignup')
+--   local layer = PopupLoginSignup.create()
+--   layer:setAnchorPoint(0.5,0)
+--   s_SCENE:popup(layer)
+
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
 
     -- s_DATA_MANAGER.loadText()
     -- s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
@@ -48,9 +48,9 @@ function test()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
-    -- --s_CorePlayManager.enterTestLayer()
-    -- s_CorePlayManager.enterStudyLayer()
-    -- --s_CorePlayManager.enterReviewBossLayer()
+    --s_CorePlayManager.enterTestLayer()
+    --s_CorePlayManager.enterStudyLayer()
+    s_CorePlayManager.enterReviewBossLayer()
 
     -- s_level = require('view/LevelLayer.lua')
     -- layer = s_level.create()
@@ -125,9 +125,9 @@ function test()
     -- cx.CXAnalytics:logEventAndLabel('luatestEvent', 'lualabel')
 
     --------------------------------------------------------------------------------
---    s_localSqlite = require("model.localData.LocalDatabaseManager")
+--    s_localSqlite = require("model.LocalDatabaseManager")
 --    s_localSqlite.open()
 --    s_localSqlite.initTables()
 --    s_localSqlite.showTables()
-    --s_localSqlite.close()
+--    s_localSqlite.close()
 end

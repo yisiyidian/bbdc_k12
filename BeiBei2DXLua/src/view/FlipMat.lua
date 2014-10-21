@@ -13,6 +13,9 @@ return cc.Layer:create()
 end)
 
 function FlipMat.create(word, m ,n, isNewPlayerModel)
+    --local spineName = "coin"
+    local spineName = "coconut_light"
+
     local main = FlipMat.new()
     main:setContentSize(640,640)
     main:setAnchorPoint(0.5,0)
@@ -83,7 +86,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
             local diff = main_logic_mat[i][j] - randomStartIndex
             local node
             if diff >= 0 and diff < string.len(main_word) then
-                node = FlipNode.create("coconut_light", string.sub(main_word,diff+1,diff+1), i, j)
+                node = FlipNode.create(spineName, string.sub(main_word,diff+1,diff+1), i, j)
                 node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
                 main:addChild(node)
                 
@@ -93,7 +96,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
                 main.answerPath[diff+1] = tmp
             else
                 local randomIndex = math.random(1, #charaster_set_filtered)
-                node = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                node = FlipNode.create(spineName, charaster_set_filtered[randomIndex], i, j)
                 if isNewPlayerModel then
                     node:setPosition(320, -1136)
                     main:addChild(node)
@@ -150,7 +153,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         local action6 = cc.Sequence:create(actionList)
         finger:runAction(cc.RepeatForever:create(action6))
     end
-    main.finger_action()
+    --main.finger_action()
     
     -- local function
     local checkTouchLocation = function(location)

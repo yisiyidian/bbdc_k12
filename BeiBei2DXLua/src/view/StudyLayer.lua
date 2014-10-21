@@ -187,28 +187,38 @@ function StudyLayer.create()
             end
         end
         
+        
+        
+        local endEffect = function()
+            local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,936))
+            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,900))
+            cloud_up:runAction(action4)
+            cloud_down:runAction(action5)
+        
+            local action6 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
+            mat:runAction(action6)
+        
+            local action7 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
+            button_changeview:runAction(action7)
+        end
+        
         local action1 = cc.DelayTime:create(1)
-        local action2 = cc.CallFunc:create(changeLayer)
-        local action3 = cc.Sequence:create(action1,action2)
-        layer:runAction(action3)    
+        local action2 = cc.CallFunc:create(endEffect)
+        local action3 = cc.DelayTime:create(0.5)
+        local action4 = cc.CallFunc:create(changeLayer)
+        local action5 = cc.Sequence:create(action1,action2,action3,action4)
+        layer:runAction(action5)
         
-        local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,936))
-        local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,900))
-        cloud_up:runAction(action4)
-        cloud_down:runAction(action5)
-        
-        local action6 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
-        mat:runAction(action6)
-        
-        local action7 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
-        button_changeview:runAction(action7)
     end
 
     local fail = function()
         --s_logd("new wrong")
     end
-    
-    mat = FlipMat.create(wordName,4,4,true)
+    if s_CorePlayManager.newPlayerState then
+        mat = FlipMat.create(wordName,4,4,true)
+    else
+        mat = FlipMat.create(wordName,4,4,false)
+    end
     mat:setPosition(size_big.width/2*3, 120)
     layer:addChild(mat)
     

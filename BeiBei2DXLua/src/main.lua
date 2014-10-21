@@ -43,8 +43,8 @@ local function main()
 
     
     -- test
---    local example = require("example.example")
---    test()
+    local example = require("example.example")
+    test()
 -- level test
     local levelLayer = require('view/LevelLayer.lua')
     local layer = levelLayer.create()
@@ -58,6 +58,9 @@ local function main()
     --s_localSqlite.close()
     -- local example = require("example.example")
     -- test()
+
+--    local example = require("example.example")
+--    test()
 end
 
 
