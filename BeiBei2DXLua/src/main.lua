@@ -43,8 +43,8 @@ local function main()
 
     
     -- test
-    -- local example = require("example.example")
-    -- test()
+    local example = require("example.example")
+    test()
 end
 
 

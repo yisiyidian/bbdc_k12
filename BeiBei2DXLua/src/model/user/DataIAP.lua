@@ -1,14 +1,18 @@
+local DataClassBase = require('model/user/DataClassBase')
+
 local DataIAP = class("DataIAP", function()
-    return {}
+    return DataClassBase.new()
 end)
 
 function DataIAP.create()
     local data = DataIAP.new()
-    data.userId = ''
-    data.pid = ''
-    data.paymentInfo = nil
-    data.isSucceed = false
     return data
+end
+
+function DataIAP:ctor()
+    self.pid = ''
+    self.paymentInfo = nil
+    self.isSucceed = false
 end
 
 return DataIAP

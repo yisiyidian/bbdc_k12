@@ -160,11 +160,11 @@ end
 ---- UserDefault -----------------------------------------------------------
 
 local is_sound_on_key = 'sound'
-function Manager.isSoundOn() cc.UserDefault:getInstance():getBoolForKey(is_sound_on_key, true) end
+function Manager.isSoundOn() return cc.UserDefault:getInstance():getBoolForKey(is_sound_on_key, true) end
 function Manager.setSoundOn(b) cc.UserDefault:getInstance():setBoolForKey(is_sound_on_key, b) end
 
 local is_music_on_key = 'music'
-function Manager.isMusicOn() cc.UserDefault:getInstance():getBoolForKey(is_music_on_key, true) end
+function Manager.isMusicOn() return cc.UserDefault:getInstance():getBoolForKey(is_music_on_key, true) end
 function Manager.setMusicOn(b) cc.UserDefault:getInstance():setBoolForKey(is_music_on_key, b) end
 
 return Manager

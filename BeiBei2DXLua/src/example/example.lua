@@ -22,7 +22,7 @@ function test()
    --      end)
    -- end)
 
---    playMusic(s_sound_bgm1, true)
+    playMusic(s_sound_bgm1, true)
 --
    local PopupLoginSignup = require('popup.PopupLoginSignup')
    local layer = PopupLoginSignup.create()

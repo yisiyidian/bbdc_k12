@@ -1,49 +1,49 @@
+local DataClassBase = require('model/user/DataClassBase')
 
 local DataUser = class("DataUser", function()
-    return {}
+    return DataClassBase.new()
 end)
 
 function DataUser.create()
     local data = DataUser.new()
-
-    data.userId                            = ''
-    data.serverTime                        = ''
-    data.username                          = ''
-    data.nickname                          = ''
-    data.password                          = ''
-    data.sessionToken                      = ''
-    
-    data.appVersion                        = s_APP_VERSION 
-    data.tutorialStep                      = 0 
-    data.isSoundAm                         = true 
-    data.reviewBossTutorialStep            = 0 
-    data.bookKey                           = ''
-    data.energyLastCoolDownTime            = -1 
-    data.energyCount                       = 7
-    data.wordsCount                        = 0 
-    data.masterCount                       = 0 
-
-    data.fansCount                         = 0 
-    data.friendsCount                      = 0 
-    data.fans                              = {}
-    data.friends                           = {}
-    
-    data.currentWordsIndex                 = 0 
-    data.currentChapterIndex               = 0 
-    data.currentLevelIndex                 = 0 
-    data.currentSelectedLevelIndex         = 0 
-    data.stars                             = 0 
-    data.bulletinBoardTime                 = 0 
-    data.bulletinBoardMask                 = 0
-
-    data.checkInWord                       = ''
-    data.checkInWordUpdateDate             = nil
-    data.hasCheckInButtonAppeared          = false
-
-    data.needToUnlockNextChapter           = 0
-
-
     return data
+end
+
+function DataUser:ctor()
+    self.serverTime                        = ''
+    self.username                          = ''
+    self.nickname                          = ''
+    self.password                          = ''
+    self.sessionToken                      = ''
+
+    self.appVersion                        = s_APP_VERSION 
+    self.tutorialStep                      = 0 
+    self.isSoundAm                         = true 
+    self.reviewBossTutorialStep            = 0 
+    self.bookKey                           = ''
+    self.energyLastCoolDownTime            = -1 
+    self.energyCount                       = 7
+    self.wordsCount                        = 0 
+    self.masterCount                       = 0 
+
+    self.fansCount                         = 0 
+    self.friendsCount                      = 0 
+    self.fans                              = {}
+    self.friends                           = {}
+
+    self.currentWordsIndex                 = 0 
+    self.currentChapterIndex               = 0 
+    self.currentLevelIndex                 = 0 
+    self.currentSelectedLevelIndex         = 0 
+    self.stars                             = 0 
+    self.bulletinBoardTime                 = 0 
+    self.bulletinBoardMask                 = 0
+
+    self.checkInWord                       = ''
+    self.checkInWordUpdateDate             = nil
+    self.hasCheckInButtonAppeared          = false
+
+    self.needToUnlockNextChapter           = 0
 end
 
 function DataUser:parseServerData(data)

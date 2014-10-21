@@ -1,16 +1,20 @@
+local DataClassBase = require('model/user/DataClassBase')
+
 local DataStatistics = class("DataStatistics", function()
-    return {}
+    return DataClassBase.new()
 end)
 
 function DataStatistics.create()
     local data = DataStatistics.new()
-    data.userId = ''
-    data.bookkey = ''
-    data.bookWordNum = 0
-    data.learnedWordCount = 0
-    data.masteredWordCount = 0
-    data.learnedDays = 0
     return data
+end
+
+function DataStatistics:ctor()
+    self.bookkey = ''
+    self.bookWordNum = 0
+    self.learnedWordCount = 0
+    self.masteredWordCount = 0
+    self.learnedDays = 0
 end
 
 return DataStatistics

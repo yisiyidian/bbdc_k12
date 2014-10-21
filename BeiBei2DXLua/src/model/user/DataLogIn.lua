@@ -1,19 +1,23 @@
+local DataClassBase = require('model/user/DataClassBase')
+
 local DataLogIn = class("DataLogIn", function()
-    return {}
+    return DataClassBase.new()
 end)
 
 function DataLogIn.create()
     local data = DataLogIn.new()
-    data.userId = ''
-    data.Monday = nil
-    data.Tuesday = nil
-    data.Wednesday = nil
-    data.Thursday = nil
-    data.Friday = nil
-    data.Saturday = nil
-    data.Sunday = nil
-    data.week = nil
     return data
+end
+
+function DataLogIn:ctor()
+    self.Monday = nil
+    self.Tuesday = nil
+    self.Wednesday = nil
+    self.Thursday = nil
+    self.Friday = nil
+    self.Saturday = nil
+    self.Sunday = nil
+    self.week = nil
 end
 
 return DataLogIn

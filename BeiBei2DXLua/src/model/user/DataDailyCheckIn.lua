@@ -1,13 +1,16 @@
+local DataClassBase = require('model/user/DataClassBase')
+
 local DataDailyCheckIn = class("DataDailyCheckIn", function()
-    return {}
+    return DataClassBase.new()
 end)
 
 function DataDailyCheckIn.create()
     local data = DataDailyCheckIn.new()
-    data.userId = ''
-    data.dailyCheckInAwards = 0
-    data.updatedAt = nil
     return data
+end
+
+function DataDailyCheckIn:ctor()
+    self.dailyCheckInAwards = 0
 end
 
 return DataDailyCheckIn
