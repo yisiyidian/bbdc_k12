@@ -3,7 +3,10 @@ require "common.global"
 local StudyLayer = require("view.StudyLayer")
 local StudyLayerII = require("view.StudyLayerII")
 local TestLayer = require("view.TestLayer")
-local ReviewBossLayer = require("view.ReviewBossLayer")
+local ReviewBossLayer = require("view.reviewboss.reviewbossI.ReviewBossLayer")
+local ReviewBossLayerII = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
+local ReviewBossLayerIII = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
+
 
 local CorePlayManager = {}
 
@@ -78,8 +81,12 @@ function CorePlayManager.generateWrongWordList()
 end
 
 function CorePlayManager.enterReviewBossLayer()
-    local reviewBossLayer = ReviewBossLayer.create()
-    s_SCENE:replaceGameLayer(reviewBossLayer)
+--    local reviewBossLayer = ReviewBossLayer.create()
+--    s_SCENE:replaceGameLayer(reviewBossLayer)
+    local reviewBossLayerII = ReviewBossLayerII.create()
+    s_SCENE:replaceGameLayer(reviewBossLayerII)
+--    local reviewBossLayerIII = ReviewBossLayerIII.create()
+--    s_SCENE:replaceGameLayer(reviewBossLayerIII)
 end
 
 

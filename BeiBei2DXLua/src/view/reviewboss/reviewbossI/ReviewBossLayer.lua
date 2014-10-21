@@ -3,9 +3,9 @@ require("Cocos2dConstants")
 
 require("common.global")
 
-local RBProgressBar = require("view.RBProgressBar")
-local ReviewBossNode = require("view.ReviewBossNode")
-local ReviewBossAlter = require("view.ReviewBossAlter")
+local RBProgressBar = require("view.reviewboss.RBProgressBar")
+local ReviewBossNode = require("view.reviewboss.ReviewBossNode")
+local ReviewBossAlter = require("view.reviewboss.ReviewBossAlter")
 
 
 local ReviewBossLayer = class("ReviewBossLayer", function ()
@@ -47,7 +47,7 @@ function ReviewBossLayer.create()
     layer:addChild(back)      
     back:addAnimation(0, 'animation', true)
 
-    local rbProgressBar = RBProgressBar.create(#s_CorePlayManager.rbWordList)
+    local rbProgressBar = RBProgressBar.create(#s_CorePlayManager.rbWordList, "blue")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, 1040)
     layer:addChild(rbProgressBar)
     
