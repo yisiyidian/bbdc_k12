@@ -35,20 +35,20 @@ local function main()
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
 
-   local StartViewLayer = require('view.StartViewLayer')
-   local layer = StartViewLayer.create()
-   layer:setAnchorPoint(0.5, 0)
-   layer:setPosition(s_LEFT_X, 0)
-   s_SCENE:replaceGameLayer(layer)
+--   local StartViewLayer = require('view.StartViewLayer')
+--   local layer = StartViewLayer.create()
+--   layer:setAnchorPoint(0.5, 0)
+--   layer:setPosition(s_LEFT_X, 0)
+--   s_SCENE:replaceGameLayer(layer)
 
     
     -- test
-    local example = require("example.example")
-    test()
+--    local example = require("example.example")
+--    test()
 -- level test
---    local levelLayer = require('view/LevelLayer.lua')
---    local layer = levelLayer.create()
---    s_SCENE:replaceGameLayer(layer)
+    local levelLayer = require('view/LevelLayer.lua')
+    local layer = levelLayer.create()
+    s_SCENE:replaceGameLayer(layer)
 
     --------------------------------------------------------------------------------
 --    s_localSqlite = require("model.localData.LocalDatabaseManager")
