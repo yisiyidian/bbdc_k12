@@ -1,6 +1,7 @@
 require "common.global"
 
 local StudyLayer = require("view.StudyLayer")
+local StudyLayerII = require("view.StudyLayerII")
 local TestLayer = require("view.TestLayer")
 local ReviewBossLayer = require("view.ReviewBossLayer")
 
@@ -19,7 +20,7 @@ CorePlayManager.currentRatio = 0
 CorePlayManager.replayWrongWordState = false
 CorePlayManager.wrongWordList = {}
 
-CorePlayManager.newPlayerState = true
+CorePlayManager.newPlayerState = false
 
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
@@ -42,8 +43,10 @@ function CorePlayManager.enterStudyLayer()
     else
         CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     end
-    local studyLayer = StudyLayer.create()
-    s_SCENE:replaceGameLayer(studyLayer)
+--    local studyLayer = StudyLayer.create()
+--    s_SCENE:replaceGameLayer(studyLayer)
+    local studyLayerII = StudyLayerII.create()
+    s_SCENE:replaceGameLayer(studyLayerII)
 end
 
 function CorePlayManager.leaveStudyLayer()

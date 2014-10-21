@@ -48,9 +48,9 @@ function test()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
-    -- --s_CorePlayManager.enterTestLayer()
-    -- s_CorePlayManager.enterStudyLayer()
-    -- --s_CorePlayManager.enterReviewBossLayer()
+    --s_CorePlayManager.enterTestLayer()
+    --s_CorePlayManager.enterStudyLayer()
+    s_CorePlayManager.enterReviewBossLayer()
 
     -- s_level = require('view/LevelLayer.lua')
     -- layer = s_level.create()

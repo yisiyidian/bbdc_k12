@@ -16,7 +16,6 @@ function FlipNode.create(back, character, x, y)
     local main = FlipNode.new()
     main:setContentSize(120,120)
     main:setAnchorPoint(0.5,0.5)
-    main:setColor(cc.c3b(1,1,1))
     
     local mainSize = main:getContentSize()
 
