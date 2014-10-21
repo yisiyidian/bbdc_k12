@@ -70,9 +70,12 @@ function ReviewBossLayerIII.create()
         for j = 1, 3 do
             local sprite = ReviewBossNode.create(words[j])
             if i == 1 then
-                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 850 - 260*i - 260))
+                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 330))
+            elseif i == 2 then
+                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 140))
+                sprite:setScale(0.8)
             else
-                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 260*i - 260))
+                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), -200))
                 sprite:setScale(0.8)
             end
             layer:addChild(sprite)
@@ -83,8 +86,16 @@ function ReviewBossLayerIII.create()
 
     local wordMeaningBeTestedNow = cc.Label:createWithSystemFont(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall,"",40)
     wordMeaningBeTestedNow:setColor(cc.c4b(0,0,0,255))
-    wordMeaningBeTestedNow:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.8)
+    wordMeaningBeTestedNow:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.83)
     layer:addChild(wordMeaningBeTestedNow)
+
+    local effect1 = cc.Sprite:create("image/reviewbossscene/reviewbossIII_effect1.png")
+    effect1:setPosition(s_DESIGN_WIDTH/2, 100)
+    layer:addChild(effect1)   
+
+    local effect2 = cc.Sprite:create("image/reviewbossscene/reviewbossIII_effect2.png")
+    effect2:setPosition(s_DESIGN_WIDTH - 50, 100)
+    layer:addChild(effect2)   
 
     local checkTouchIndex = function(location)
         for i = 1, #wordToBeTested do
@@ -130,25 +141,25 @@ function ReviewBossLayerIII.create()
                         local sprite = sprite_array[i][j]
                         if i == rbCurrentWordIndex-1 then
                             local action0 = cc.DelayTime:create(0.1)
-                            local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,260))
+                            local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH/2 - 120 + 120*(j-1), 770))
                             local action2 = cc.ScaleTo:create(0.4, 0)
                             local action3 = cc.Spawn:create(action1, action2)
                             sprite:runAction(cc.Sequence:create(action0, action3))
                         elseif i == rbCurrentWordIndex then
                             local action0 = cc.DelayTime:create(0.1)
-                            local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,260))
+                            local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 570))
                             local action2 = cc.ScaleTo:create(0.4, 0.8)
                             local action3 = cc.Spawn:create(action1, action2)
                             sprite:runAction(cc.Sequence:create(action0, action3))
                         elseif i == rbCurrentWordIndex + 1 then
                             local action0 = cc.DelayTime:create(0.1)
-                            local action1 = cc.MoveBy:create(0.4, cc.p(40*j-80,260))
+                            local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 330))
                             local action2 = cc.ScaleTo:create(0.4, 1)
                             local action3 = cc.Spawn:create(action1, action2)
                             sprite:runAction(cc.Sequence:create(action0, action3))
-                        else
+                        elseif i == rbCurrentWordIndex + 2 then
                             local action0 = cc.DelayTime:create(0.1)
-                            local action1 = cc.MoveBy:create(0.4, cc.p(0,260))
+                            local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 140))
                             sprite:runAction(cc.Sequence:create(action0, action1))
                         end
                     end

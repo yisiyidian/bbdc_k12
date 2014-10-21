@@ -83,10 +83,10 @@ end
 function CorePlayManager.enterReviewBossLayer()
 --    local reviewBossLayer = ReviewBossLayer.create()
 --    s_SCENE:replaceGameLayer(reviewBossLayer)
-    local reviewBossLayerII = ReviewBossLayerII.create()
-    s_SCENE:replaceGameLayer(reviewBossLayerII)
---    local reviewBossLayerIII = ReviewBossLayerIII.create()
---    s_SCENE:replaceGameLayer(reviewBossLayerIII)
+--    local reviewBossLayerII = ReviewBossLayerII.create()
+--    s_SCENE:replaceGameLayer(reviewBossLayerII)
+    local reviewBossLayerIII = ReviewBossLayerIII.create()
+    s_SCENE:replaceGameLayer(reviewBossLayerIII)
 end
 
 
