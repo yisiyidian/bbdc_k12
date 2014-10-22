@@ -26,6 +26,7 @@ local function main()
     cc.Director:getInstance():setDisplayStats(false)
 
     --------------------------------------------------------------------------------
+
     require("common.global")
     initApp()
     

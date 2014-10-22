@@ -130,4 +130,6 @@ function test()
 --    s_localSqlite.initTables()
 --    s_localSqlite.showTables()
 --    s_localSqlite.close()
+    
+    s_STORE.init()    
 end

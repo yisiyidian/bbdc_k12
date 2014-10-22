@@ -108,6 +108,10 @@ local function _initData()
     s_CURRENT_USER = DataUser.create()
 end
 
+local function _initStore()
+    s_STORE = require('store.Store')
+end
+
 local function _declaration()
     s_WordPool        = nil
     s_CorePlayManager = nil
