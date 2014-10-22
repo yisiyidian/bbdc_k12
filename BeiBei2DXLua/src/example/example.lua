@@ -50,7 +50,7 @@ function test()
 
     --s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterStudyLayer()
---    s_CorePlayManager.enterReviewBossLayer()
+    s_CorePlayManager.enterReviewBossLayer()
 
     -- s_level = require('view/LevelLayer.lua')
     -- layer = s_level.create()

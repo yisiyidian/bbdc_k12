@@ -39,13 +39,31 @@ function TapNode.create(back, character, x, y)
 
     main.addSelectStyle = function()
         main.hasSelected = true
-        main.main_back:loadTextures(selectName)
+        
+        local tmp = cc.Sprite:create(selectName)
+        local w = tmp:getContentSize().width
+        local h = tmp:getContentSize().height
+        
+        local a = cc.SpriteFrame:create(selectName,cc.rect(0,0,w,h))
+        main.main_back:setSpriteFrame(a)
+        
+        --local texture = cc.Director:getInstance():getTextureCache():addImage(selectName)
+        --cc.textureCache.addImage("HelloHTML5World.png");
+        --main.main_back:loadTextures(texture)
         
     end
 
     main.removeSelectStyle = function()
         main.hasSelected = false
-        main.main_back:loadTextures(normalName)
+        
+        local tmp = cc.Sprite:create(normalName)
+        local w = tmp:getContentSize().width
+        local h = tmp:getContentSize().height
+        
+        local a = cc.SpriteFrame:create(normalName,cc.rect(0,0,w,h))
+        
+        main.main_back:setSpriteFrame(a)
+        --main.main_back:loadTextures(normalName)
     end
 
     main.bigSize = function()
