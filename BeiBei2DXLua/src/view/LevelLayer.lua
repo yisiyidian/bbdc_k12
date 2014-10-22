@@ -13,11 +13,10 @@ end)
 
 function LevelLayer.create()
     local layer = LevelLayer.new()
-    layer:loadCCB()
     return layer
 end
 
-function LevelLayer:loadCCB()
+function LevelLayer:ctor()
     ccbLevelLayer['onLevelButtonClicked'] = self.onLevelButtonClicked
     local proxy = cc.CCBProxy:create()
     local contentNode  = CCBReaderLoad("res/ccb/chapter1.ccbi", proxy, ccbLevelLayer)
@@ -71,11 +70,17 @@ function LevelLayer:loadCCB()
 end
 
 function LevelLayer:onLevelButtonClicked()
-    local levelName = 'levelButton'..self
-    local selectedLevelButton = ccbLevelLayer['levelSet']:getChildByName(levelName)
-    print(selectedLevelButton:getPosition())
-
-    --local test = cc.MenuItemSprite:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
-    selectedLevelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
+    local PopupNormalLevel = require('popup.PopupSummarySuccess')
+    local popLayer = PopupNormalLevel.create()
+--    popLayer:setAnchorPoint(0.5,0.5)
+    s_SCENE:popup(popLayer)
+ --popupLayer:setPosition(100,100)
+ --s_SCENE:popup(popupLayer)
+--    local levelName = 'levelButton'..self
+--    local selectedLevelButton = ccbLevelLayer['levelSet']:getChildByName(levelName)
+--    print(selectedLevelButton:getPosition())
+--
+--    --local test = cc.MenuItemSprite:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
+--    selectedLevelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
 end
 return LevelLayer

@@ -126,6 +126,7 @@ function initApp()
     _initScene()
     _initServer()
     _initData()
+    _initStore()
     _declaration()
 end
 
