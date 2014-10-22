@@ -44,6 +44,8 @@ function DataUser:ctor()
     self.hasCheckInButtonAppeared          = false
 
     self.needToUnlockNextChapter           = 0
+
+    self.dailyCheckInData                  = {}
 end
 
 function DataUser:parseServerData(data)
