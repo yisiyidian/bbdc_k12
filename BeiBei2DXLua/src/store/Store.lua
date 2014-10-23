@@ -60,8 +60,8 @@ function Store.buy(onResult)
             if ret == 0 then
                 Store.isRequestProductsSucceed = true
                 cx.CXStore:getInstance():payForProduct(productId, onResult)
-            else
-                -- TODO
+            elseif onResult ~= nil then
+                onResult(ret, json, info)
             end
         end)
     end

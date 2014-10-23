@@ -54,9 +54,9 @@ function StartViewLayer:onSignUp()
     s_SCENE:popup(layer)
     
     -- TODO
-    s_STORE.buy(function (code, msg, info) 
-        s_DEBUG_LAYER.debugInfo:setString(msg)
-    end)
+--    s_STORE.buy(function (code, msg, info) 
+--        s_DEBUG_LAYER.debugInfo:setString(msg)
+--    end)
 end
 
 function StartViewLayer:onLogIn()
