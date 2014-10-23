@@ -43,6 +43,8 @@ function TapMat.create(word, m ,n)
     local current_node_y
     local onNode
     local lastTouchLocation
+    
+    
 
     local selectStack = {}
 
@@ -92,6 +94,13 @@ function TapMat.create(word, m ,n)
             end
         end
     end
+    
+    local light = cc.Sprite:create("image/studyscene/long_light.png")
+    light:setAnchorPoint(0.5,0.05)
+    light:setVisible(false)
+    light:setPosition(firstTapNode:getPosition())
+    main:addChild(light)
+    
 
     -- local function
     local checkTouchLocation = function(location)
@@ -114,6 +123,8 @@ function TapMat.create(word, m ,n)
         if main.globalLock then
             return true
         end
+        
+        light:setVisible(true)
 
         local location = main:convertToNodeSpace(touch:getLocation())
         fakeTouchMoved(location)
@@ -150,6 +161,8 @@ function TapMat.create(word, m ,n)
         if main.globalLock then
             return
         end
+        
+        light:setPosition(location)
 
         checkTouchLocation(location)
 
@@ -185,6 +198,8 @@ function TapMat.create(word, m ,n)
         if main.globalLock then
             return
         end
+        
+        light:setVisible(false)
 
         if #selectStack < 1 then
             return
