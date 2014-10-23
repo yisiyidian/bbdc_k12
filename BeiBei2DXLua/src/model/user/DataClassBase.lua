@@ -50,6 +50,7 @@ function DataClassBase.create()
 end
 
 function DataClassBase:ctor()
+    self.objectId = ''
     self.userId = ''
     self.createdAt = os.time()
     self.updatedAt = 0

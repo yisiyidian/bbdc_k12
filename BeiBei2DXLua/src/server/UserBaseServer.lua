@@ -13,8 +13,18 @@ function UserBaseServer.login(username, password, onSucceed, onFailed)
     s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
 end
 
-function UserBaseServer.dailyCheckIn(userId, onSucceed, onFailed)
-    s_SERVER.request('apiuserdailycheckin', {['userId']=userId}, onSucceed, onFailed)
+function UserBaseServer.dailyCheckIn(onSucceed, onFailed)
+    s_SERVER.request('apiUserDailyCheckin', nil, onSucceed, onFailed)
+end
+
+-- who I follow
+function UserBaseServer.getFollowees(onSucceed, onFailed)
+    s_SERVER.request('apiGetFollowees', nil, onSucceed, onFailed)
+end
+
+-- who follow me
+function UserBaseServer.getFollowers(onSucceed, onFailed)
+    s_SERVER.request('apiGetFollowers', nil, onSucceed, onFailed)
 end
 
 return UserBaseServer

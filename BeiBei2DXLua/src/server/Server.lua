@@ -83,11 +83,15 @@ function Server.request(api, parameters, onSucceed, onFailed)
 
     --
     local str = ''
-    for key, value in pairs(parameters) do  
-        if string.len(str) > 0 then str = str .. '&' end
-        str = str .. key .. '=' .. value
-    end 
-    xhr:send(str)
+    if parameters ~= nil then
+        for key, value in pairs(parameters) do  
+            if string.len(str) > 0 then str = str .. '&' end
+            str = str .. key .. '=' .. value
+        end
+        xhr:send(str)
+    else 
+        xhr:send()
+    end
     s_logd('request: api:' .. api .. ', parameters:' .. str)
 end
 

@@ -26,25 +26,40 @@ function StartViewLayer:onPlay()
         -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
         parseServerDataToUserData(result, s_CURRENT_USER)
 
-        s_UserBaseServer.dailyCheckIn(s_CURRENT_USER.userId, 
-            function (api, result)
-                local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
-                s_CURRENT_USER.dailyCheckInData = {}
-                for i, v in ipairs(result['results']) do
-                    local data = DataDailyCheckIn.create()
-                    parseServerDataToUserData(v, data)
-                    s_CURRENT_USER.dailyCheckInData[i] = data
-                    print_lua_table(data)
-                end 
-            end,
-            function (api, code, message)
-            end)
+--        s_UserBaseServer.dailyCheckIn( 
+--            function (api, result)
+--                local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
+--                s_CURRENT_USER.dailyCheckInData = {}
+--                for i, v in ipairs(result['WMAV_DailyCheckInData']) do
+--                    local data = DataDailyCheckIn.create()
+--                    parseServerDataToUserData(v, data)
+--                    s_CURRENT_USER.dailyCheckInData[i] = data
+--                    print('111')
+--                    print_lua_table(v)
+--                    print('222')
+--                    print_lua_table(data)
+--                end 
+--            end,
+--            function (api, code, message) end
+--        )
+        
+--        s_UserBaseServer.getFollowees( 
+--            function (api, result)
+--                local DataUser = require('model.user.DataUser')
+--                for i, v in ipairs(result['followees']) do
+--                    local data = DataUser.create()
+--                    parseServerDataToUserData(v, data)
+--                    print_lua_table(data)
+--                end 
+--            end,
+--            function (api, code, message)
+--            end
+--        )
     end 
     local function onFailed(api, code, message)
         s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
     end
     s_UserBaseServer.login('yehanjie1', '111111', onSucceed, onFailed)
-    -- s_funcSignin('_test000', '111111', onSucceed, onFailed)
 end
 
 function StartViewLayer:onSignUp()
