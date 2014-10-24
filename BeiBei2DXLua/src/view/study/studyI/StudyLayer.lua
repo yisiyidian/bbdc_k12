@@ -36,6 +36,7 @@ function StudyLayer.create()
     local button_changeview_clicked
     local button_detail
     local button_detail_clicked
+    local button_reddot
     
     local soundMark
     local mat
@@ -134,6 +135,10 @@ function StudyLayer.create()
         if eventType == ccui.TouchEventType.began then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_detail:getRotation() == 0 then
+                if button_reddot then
+                    button_detail:removeChild(button_reddot,true)
+                end
+                
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 0))
                 cloud_down:runAction(action1)
             
@@ -299,6 +304,14 @@ function StudyLayer.create()
                 button_detail:setPosition(cc.p(layer:getContentSize().width-60, 930))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backColor:addChild(button_detail)
+                
+                button_reddot = ccui.Button:create()
+                button_reddot:setTouchEnabled(true)
+                button_reddot:loadTextures("image/button/dot_red.png", "", "")
+                button_reddot:setPosition(button_detail:getContentSize().width, button_detail:getContentSize().height)
+                button_reddot:setTitleText("1")
+                button_reddot:setTitleFontSize(24)
+                button_detail:addChild(button_reddot)
                 
                 button_changeview = ccui.Button:create()
                 button_changeview:setTouchEnabled(true)

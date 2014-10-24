@@ -1,11 +1,14 @@
 require "common.global"
 
+
+local chapterIndex = 1
+
 local StudyLayer            = require("view.study.studyI.StudyLayer")
 local StudyLayerII          = require("view.study.studyII.StudyLayerII")
---local StudyLayerIII         = require("view.study.studyIII.StudyLayerIII")
+local StudyLayerIII         = require("view.study.studyIII.studyLayerIII")
 local TestLayer             = require("view.test.testI.TestLayer")
 local TestLayerII           = require("view.test.testII.TestLayerII")
---local TestLayerIII          = require("view.test.testIII.TestLayerIII")
+local TestLayerIII          = require("view.test.testIII.testLayerIII")
 local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
 local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
 local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
@@ -49,10 +52,17 @@ function CorePlayManager.enterStudyLayer()
     else
         CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     end
---    local studyLayer = StudyLayer.create()
---    s_SCENE:replaceGameLayer(studyLayer)
-    local studyLayerII = StudyLayerII.create()
-    s_SCENE:replaceGameLayer(studyLayerII)
+    
+    if chapterIndex == 1 then
+        local studyLayer = StudyLayer.create()
+        s_SCENE:replaceGameLayer(studyLayer)
+    elseif chapterIndex == 2 then
+        local studyLayerII = StudyLayerII.create()
+        s_SCENE:replaceGameLayer(studyLayerII)
+    elseif chapterIndex == 3 then
+        local studyLayerIII = StudyLayerIII.create()
+        s_SCENE:replaceGameLayer(studyLayerIII)
+    end
 end
 
 function CorePlayManager.leaveStudyLayer()
@@ -61,10 +71,17 @@ end
 
 function CorePlayManager.enterTestLayer()
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
---    local testLayer = TestLayer.create()
---    s_SCENE:replaceGameLayer(testLayer)
-    local testLayerII = TestLayerII.create()
-    s_SCENE:replaceGameLayer(testLayerII)
+    
+    if chapterIndex == 1 then
+        local testLayer = TestLayer.create()
+        s_SCENE:replaceGameLayer(testLayer)
+    elseif chapterIndex == 2 then
+        local testLayerII = TestLayerII.create()
+        s_SCENE:replaceGameLayer(testLayerII)
+    elseif chapterIndex == 3 then
+        local testLayerIII = TestLayerIII.create()
+        s_SCENE:replaceGameLayer(testLayerIII)
+    end
 end
 
 function CorePlayManager.leaveTestLayer()
@@ -86,12 +103,16 @@ function CorePlayManager.generateWrongWordList()
 end
 
 function CorePlayManager.enterReviewBossLayer()
---    local reviewBossLayer = ReviewBossLayer.create()
---    s_SCENE:replaceGameLayer(reviewBossLayer)
---    local reviewBossLayerII = ReviewBossLayerII.create()
---    s_SCENE:replaceGameLayer(reviewBossLayerII)
-    local reviewBossLayerIII = ReviewBossLayerIII.create()
-    s_SCENE:replaceGameLayer(reviewBossLayerIII)
+    if chapterIndex == 1 then
+        local reviewBossLayer = ReviewBossLayer.create()
+        s_SCENE:replaceGameLayer(reviewBossLayer)
+    elseif chapterIndex == 2 then
+        local reviewBossLayerII = ReviewBossLayerII.create()
+        s_SCENE:replaceGameLayer(reviewBossLayerII)
+    elseif chapterIndex == 3 then
+        local reviewBossLayerIII = ReviewBossLayerIII.create()
+        s_SCENE:replaceGameLayer(reviewBossLayerIII)
+    end
 end
 
 
