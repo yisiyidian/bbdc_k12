@@ -29,13 +29,7 @@ function test()
 --   layer:setAnchorPoint(0.5,0)
 --   s_SCENE:popup(layer)
 
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
     
-    s_CorePlayManager.enterStudyLayer()
-    --s_CorePlayManager.enterTestLayer()
-    --s_CorePlayManager.enterReviewBossLayer()
 
     -- s_DATA_MANAGER.loadText()
     -- s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
@@ -48,7 +42,15 @@ function test()
     -- s_DATA_MANAGER.loadItems()
     -- -- s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
     -- s_DATA_MANAGER.loadReviewBoss()
-    -- s_DATA_MANAGER.loadStarRules()
+    s_DATA_MANAGER.loadStarRules()
+    
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
+
+    s_CorePlayManager.enterStudyLayer()
+    --s_CorePlayManager.enterTestLayer()
+    --s_CorePlayManager.enterReviewBossLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 

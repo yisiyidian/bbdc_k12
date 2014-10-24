@@ -4,7 +4,7 @@ local StudyLayer            = require("view.study.studyI.StudyLayer")
 local StudyLayerII          = require("view.study.studyII.StudyLayerII")
 --local StudyLayerIII         = require("view.study.studyIII.StudyLayerIII")
 local TestLayer             = require("view.test.testI.TestLayer")
---local TestLayerII           = require("view.test.testII.TestLayerII")
+local TestLayerII           = require("view.test.testII.TestLayerII")
 --local TestLayerIII          = require("view.test.testIII.TestLayerIII")
 local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
 local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
@@ -61,8 +61,10 @@ end
 
 function CorePlayManager.enterTestLayer()
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
-    local testLayer = TestLayer.create()
-    s_SCENE:replaceGameLayer(testLayer)
+--    local testLayer = TestLayer.create()
+--    s_SCENE:replaceGameLayer(testLayer)
+    local testLayerII = TestLayerII.create()
+    s_SCENE:replaceGameLayer(testLayerII)
 end
 
 function CorePlayManager.leaveTestLayer()

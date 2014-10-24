@@ -147,14 +147,15 @@ function TapMat.create(word, m ,n)
 
     -- handing touch events
     onTouchBegan = function(touch, event)
-        local location = main:convertToNodeSpace(touch:getLocation())
-        if not cc.rectContainsPoint(main:getBoundingBox(), location) then
+        if not cc.rectContainsPoint(main:getBoundingBox(), touch:getLocation()) then
             return false
         end
     
         if main.globalLock then
             return true
         end
+        
+        local location = main:convertToNodeSpace(touch:getLocation())
         
         light:setVisible(true)
         

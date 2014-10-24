@@ -38,40 +38,42 @@ function StudyLayerII.create()
     local mat
     local soundMark
     
+    local viewIndex= 1
+    
     local back = cc.Sprite:create("image/studyscene/studyII_back.png")
-    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2 - 800)
+    back:setScale(2.7)
     layer:addChild(back)
     bigWidth = back:getContentSize().width
     
     local back_bigchair = cc.Sprite:create("image/studyscene/studyII_back_bigchair.png")
     back_bigchair:setAnchorPoint(0.5,0)
-    back_bigchair:setPosition(s_DESIGN_WIDTH/2, 0)
+    back_bigchair:setPosition(s_DESIGN_WIDTH/2, -290)
     layer:addChild(back_bigchair)
     
-    local back_smallchair = cc.Sprite:create("image/studyscene/studyII_back_smallchair.png")
-    back_smallchair:setAnchorPoint(0.5,0)
-    back_smallchair:setPosition(s_DESIGN_WIDTH/2, 0)
-    layer:addChild(back_smallchair)
+    local back_smallchair_left = cc.Sprite:create("image/studyscene/studyII_back_smallchair2.png")
+    back_smallchair_left:setAnchorPoint(0,0)
+    back_smallchair_left:setPosition(-(bigWidth-s_DESIGN_WIDTH)/2, 0)
+    layer:addChild(back_smallchair_left)
+    
+    local back_smallchair_right = cc.Sprite:create("image/studyscene/studyII_back_smallchair2.png")
+    back_smallchair_right:setFlippedX(true)
+    back_smallchair_right:setAnchorPoint(1,0)
+    back_smallchair_right:setPosition(bigWidth-(bigWidth-s_DESIGN_WIDTH)/2, 0)
+    layer:addChild(back_smallchair_right)
     
     
     local progressBar = ProgressBar.create(false)
-    progressBar:setPositionY(1038)
+    progressBar:setPositionY(1060)
     layer:addChild(progressBar)
     
     local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
     label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
-    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 696)
+    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 730)
     label_wordmeaningSmall:setScale(math.min(560/label_wordmeaningSmall:getContentSize().width, 1.5))
     layer:addChild(label_wordmeaningSmall)
 
-    local action3 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 896))
-    local action4 = cc.ScaleTo:create(0.5, math.min(200/label_wordmeaningSmall:getContentSize().width, 1))
-    label_wordmeaningSmall:runAction(cc.Spawn:create(action3, action4))
-
-
-    local wordDetailInfo = WordDetailInfo.create(word)
-    wordDetailInfo:setPosition(back:getContentSize().width/2, 0)
-    back:addChild(wordDetailInfo)
+    
     
 
     button_detail_clicked = function(sender, eventType)
@@ -101,17 +103,8 @@ function StudyLayerII.create()
         end
     end
 
-    button_detail = ccui.Button:create()
-    button_detail:setTouchEnabled(true)
-    button_detail:loadTextures("image/button/button_arrow.png", "", "")
-    button_detail:setPosition(cc.p(layer:getContentSize().width-75, 910))
-    button_detail:addTouchEventListener(button_detail_clicked)
-    layer:addChild(button_detail)
     
     
-    soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
-    soundMark:setPosition(bigWidth/2, 500)
-    back_bigchair:addChild(soundMark)
     
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -153,14 +146,7 @@ function StudyLayerII.create()
         end
     end   
     
-    button_changeview = ccui.Button:create()
-    button_changeview:setTouchEnabled(true)
-    button_changeview:loadTextures("image/button/button_huadanci__dianji.png", "", "")
-    button_changeview:setTitleText("去划单词")
-    button_changeview:setTitleFontSize(30)
-    button_changeview:setPosition(s_DESIGN_WIDTH/2, 80)
-    button_changeview:addTouchEventListener(button_changeview_clicked)
-    layer:addChild(button_changeview)
+    
 
     local success = function()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -219,13 +205,74 @@ function StudyLayerII.create()
     end
     
     mat = TapMat.create(wordName,4,4)
-    mat:setPosition(bigWidth/2*3, 120)
+    mat:setPosition(bigWidth/2*3, 100)
     layer:addChild(mat)
 
     mat.success = success
     mat.fail = fail
     mat.rightLock = true
     mat.wrongLock = false
+
+
+    local onTouchBegan = function(touch, event)
+        s_logd("touch began")
+        if viewIndex == 1 then     
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+            local addWordDetailInfo = function()
+                soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
+                soundMark:setPosition(bigWidth/2, 500)
+                back_bigchair:addChild(soundMark)
+                
+                button_detail = ccui.Button:create()
+                button_detail:setTouchEnabled(true)
+                button_detail:loadTextures("image/button/button_arrow.png", "", "")
+                button_detail:setPosition(cc.p(layer:getContentSize().width-75, 920))
+                button_detail:addTouchEventListener(button_detail_clicked)
+                layer:addChild(button_detail)
+
+                button_changeview = ccui.Button:create()
+                button_changeview:setTouchEnabled(true)
+                button_changeview:loadTextures("image/button/button_huadanci__dianji.png", "", "")
+                button_changeview:setTitleText("去划单词")
+                button_changeview:setTitleFontSize(30)
+                button_changeview:setPosition(bigWidth/2, 50)
+                button_changeview:addTouchEventListener(button_changeview_clicked)
+                back_bigchair:addChild(button_changeview)
+                
+                local wordDetailInfo = WordDetailInfo.create(word)
+                wordDetailInfo:setPosition(back:getContentSize().width/2, 0)
+                back:addChild(wordDetailInfo)
+            end
+
+            local movePanel = function()
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+                local action2 = cc.ScaleTo:create(0.5,1)
+                local action3 = cc.Spawn:create(action1, action2)
+                back:runAction(action3)
+            
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 0))
+                local action2 = cc.CallFunc:create(addWordDetailInfo)
+                back_bigchair:runAction(cc.Sequence:create(action1, action2))
+                viewIndex = 2
+
+                local action3 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 920))
+                local action4 = cc.ScaleTo:create(0.5, math.min(200/label_wordmeaningSmall:getContentSize().width, 1))
+                label_wordmeaningSmall:runAction(cc.Spawn:create(action3, action4))
+            end
+            
+            local action1 = cc.CallFunc:create(movePanel)
+            local action2 = cc.DelayTime:create(0.5)
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            layer:runAction(cc.Sequence:create(action1, action2, action3))
+        end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
 
     return layer
 end
