@@ -252,10 +252,35 @@ function TapMat.create(word, m ,n)
                 main.globalLock = true
             end
 
-            for i = 1, #selectStack do
+            local moveTimeGap = 0.8/#selectStack
+
+            local actionArray1 = {}
+            for i = 2, #selectStack do
                 local node = selectStack[i]
-                node.win()
+                local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
+                table.insert(actionArray1,action)
             end
+            
+            local light_start = cc.Sprite:create("image/studyscene/long_light.png")
+            light_start:setAnchorPoint(0.5,0.05)
+            light_start:setPosition(selectStack[1]:getPosition())
+            main:addChild(light_start)
+            light_start:runAction(cc.Sequence:create(actionArray1))
+            
+
+            local actionArray2 = {}
+            for i = 1, #selectStack-1 do
+                local node = selectStack[#selectStack-i]
+                local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
+                table.insert(actionArray2,action)
+            end
+            
+            local light_end = cc.Sprite:create("image/studyscene/long_light.png")
+            light_end:setAnchorPoint(0.5,0.05)
+            light_end:setPosition(selectStack[#selectStack]:getPosition())
+            main:addChild(light_end)
+            light_end:runAction(cc.Sequence:create(actionArray2))
+              
             selectStack = {}
 
             main.success()

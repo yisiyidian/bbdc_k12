@@ -35,6 +35,7 @@ function StudyLayerII.create()
     local button_detail_clicked
     local button_changeview
     local button_changeview_clicked
+    local button_reddot
     local mat
     local soundMark
     
@@ -80,6 +81,10 @@ function StudyLayerII.create()
         if eventType == ccui.TouchEventType.began then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             if button_detail:getRotation() == 0 then
+                if button_reddot then
+                    button_detail:removeChild(button_reddot,true)
+                end
+            
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, -600))
                 back_bigchair:runAction(action1)
                 
@@ -179,16 +184,7 @@ function StudyLayerII.create()
         end
         
         local endEffect = function()
---            local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,936))
---            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,900))
---            cloud_up:runAction(action4)
---            cloud_down:runAction(action5)
---
---            local action6 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
---            mat:runAction(action6)
---
---            local action7 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
---            button_changeview:runAction(action7)
+        
         end
 
         local action1 = cc.DelayTime:create(1)
@@ -230,6 +226,14 @@ function StudyLayerII.create()
                 button_detail:setPosition(cc.p(layer:getContentSize().width-75, 920))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 layer:addChild(button_detail)
+                
+                button_reddot = ccui.Button:create()
+                button_reddot:setTouchEnabled(true)
+                button_reddot:loadTextures("image/button/dot_red.png", "", "")
+                button_reddot:setPosition(button_detail:getContentSize().width, button_detail:getContentSize().height)
+                button_reddot:setTitleText("1")
+                button_reddot:setTitleFontSize(24)
+                button_detail:addChild(button_reddot)
 
                 button_changeview = ccui.Button:create()
                 button_changeview:setTouchEnabled(true)

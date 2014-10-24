@@ -1,7 +1,7 @@
 require "common.global"
 
 
-local chapterIndex = 1
+local chapterIndex = 2
 
 local StudyLayer            = require("view.study.studyI.StudyLayer")
 local StudyLayerII          = require("view.study.studyII.StudyLayerII")
