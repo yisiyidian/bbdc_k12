@@ -43,6 +43,8 @@ function TapMat.create(word, m ,n)
     local current_node_y
     local onNode
     local lastTouchLocation
+    
+    
 
     local selectStack = {}
 
@@ -92,6 +94,13 @@ function TapMat.create(word, m ,n)
             end
         end
     end
+    
+    local light = cc.Sprite:create("image/studyscene/long_light.png")
+    light:setAnchorPoint(0.5,0.05)
+    light:setVisible(false)
+    light:setPosition(firstTapNode:getPosition())
+    main:addChild(light)
+    
 
     -- local function
     local checkTouchLocation = function(location)
@@ -108,12 +117,42 @@ function TapMat.create(word, m ,n)
         end
         onNode = false
     end
+    
+    
+    local back_box = cc.Layer:create()
+    local back_box_num = 0
+   
+    local updateSelectWord = function()
+        for i = 1, back_box_num do
+            main:removeChildByTag(i,true)
+            main:removeChildByTag(100+i,true)
+        end
+        
+        local gap = 28
+        local left = s_DESIGN_WIDTH/2 - (#selectStack-1)*gap/2
+        for i = 1, #selectStack do
+            local term_back = cc.Sprite:create("image/studyscene/circle_back_green.png")
+            term_back:setPosition(left+(i-1)*gap,640)
+            term_back:setTag(i)
+            main:addChild(term_back)
+        end
+        for i = 1, #selectStack do
+            local term_char = cc.Label:createWithSystemFont("a","",28)
+            term_char:setColor(cc.c4b(0,0,0,255))
+            term_char:setPosition(left+(i-1)*gap,640)
+            term_char:setTag(100+i)
+            main:addChild(term_char)
+        end
+        back_box_num = #selectStack
+    end
 
     -- handing touch events
     onTouchBegan = function(touch, event)
         if main.globalLock then
             return true
         end
+        
+        light:setVisible(true)
 
         local location = main:convertToNodeSpace(touch:getLocation())
         fakeTouchMoved(location)
@@ -150,6 +189,8 @@ function TapMat.create(word, m ,n)
         if main.globalLock then
             return
         end
+        
+        light:setPosition(location)
 
         checkTouchLocation(location)
 
@@ -162,17 +203,20 @@ function TapMat.create(word, m ,n)
                     if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                         stackTop.removeSelectStyle()
                         table.remove(selectStack)
+                        updateSelectWord()
                     end
                 end
             else
                 if #selectStack == 0 then
                     currentNode.addSelectStyle()
                     table.insert(selectStack, currentNode)
+                    updateSelectWord()
                 else
                     local stackTop = selectStack[#selectStack]
                     if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                         currentNode.addSelectStyle()
                         table.insert(selectStack, currentNode)
+                        updateSelectWord()
                     end
                 end
             end
@@ -185,6 +229,8 @@ function TapMat.create(word, m ,n)
         if main.globalLock then
             return
         end
+        
+        light:setVisible(false)
 
         if #selectStack < 1 then
             return
