@@ -42,8 +42,11 @@ local function main()
 --    layer:setPosition(s_LEFT_X, 0)
 --    s_SCENE:replaceGameLayer(layer)
 
-    local example = require("example.example")
-    test()
+--    local example = require("example.example")
+--    test()
+      local level = require('view/LevelLayer.lua')
+      layer = level.create()
+      s_SCENE:replaceGameLayer(layer)
 end
 
 

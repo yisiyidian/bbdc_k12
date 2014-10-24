@@ -4,7 +4,7 @@ require("CCBReaderLoad")
 require("common.global")
 
 ccbLevelLayer = ccbLevelLayer or {}
-ccb['chapter1'] = ccbLevelLayer
+ccb['chapter2'] = ccbLevelLayer
 
 local LevelLayer = class("LevelLayer", function()
     return cc.Layer:create()
@@ -19,7 +19,7 @@ end
 function LevelLayer:ctor()
     ccbLevelLayer['onLevelButtonClicked'] = self.onLevelButtonClicked
     local proxy = cc.CCBProxy:create()
-    local contentNode  = CCBReaderLoad("res/ccb/chapter1.ccbi", proxy, ccbLevelLayer)
+    local contentNode  = CCBReaderLoad("res/ccb/chapter2.ccbi", proxy, ccbLevelLayer)
     ccbLevelLayer['contentNode'] = contentNode;
     
     ccbLevelLayer['levelSet'] = contentNode:getChildByTag(5)
