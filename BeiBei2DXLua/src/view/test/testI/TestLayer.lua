@@ -3,10 +3,10 @@ require("Cocos2dConstants")
 
 require("common.global")
 
-local ProgressBar = require("view.ProgressBar")
-local FlipMat = require("view.FlipMat")
-local StudyAlter = require("view.StudyAlter")
-local TestAlter = require("view.TestAlter")
+local ProgressBar = require("view.progress.ProgressBar")
+local FlipMat = require("view.mat.FlipMat")
+local StudyAlter = require("view.study.StudyAlter")
+local TestAlter = require("view.test.TestAlter")
 
 local TestLayer = class("TestLayer", function ()
     return cc.Layer:create()

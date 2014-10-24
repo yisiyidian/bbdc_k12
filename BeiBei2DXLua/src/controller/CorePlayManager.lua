@@ -1,11 +1,14 @@
 require "common.global"
 
-local StudyLayer = require("view.StudyLayer")
-local StudyLayerII = require("view.StudyLayerII")
-local TestLayer = require("view.TestLayer")
-local ReviewBossLayer = require("view.reviewboss.reviewbossI.ReviewBossLayer")
-local ReviewBossLayerII = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
-local ReviewBossLayerIII = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
+local StudyLayer            = require("view.study.studyI.StudyLayer")
+local StudyLayerII          = require("view.study.studyII.StudyLayerII")
+--local StudyLayerIII         = require("view.study.studyIII.StudyLayerIII")
+local TestLayer             = require("view.test.testI.TestLayer")
+--local TestLayerII           = require("view.test.testII.TestLayerII")
+--local TestLayerIII          = require("view.test.testIII.TestLayerIII")
+local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
+local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
+local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
 
 
 local CorePlayManager = {}

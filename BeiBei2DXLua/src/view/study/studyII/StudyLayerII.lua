@@ -3,12 +3,12 @@ require("Cocos2dConstants")
 
 require("common.global")
 
-local ProgressBar = require("view.ProgressBar")
-local TapMat = require("view.TapMat")
-local SoundMark = require("view.SoundMark")
-local WordDetailInfo = require("view.WordDetailInfo")
-local StudyAlter = require("view.StudyAlter")
-local TestAlter = require("view.TestAlter")
+local ProgressBar = require("view.progress.ProgressBar")
+local TapMat = require("view.mat.TapMat")
+local SoundMark = require("view.study.SoundMark")
+local WordDetailInfo = require("view.study.WordDetailInfo")
+local StudyAlter = require("view.study.StudyAlter")
+local TestAlter = require("view.test.TestAlter")
 
 
 local StudyLayerII = class("StudyLayerII", function ()

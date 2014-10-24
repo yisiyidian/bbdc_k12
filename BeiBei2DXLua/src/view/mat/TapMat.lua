@@ -1,6 +1,6 @@
 
 
-local TapNode = require("view.TapNode")
+local TapNode = require("view.mat.TapNode")
 
 local TapMat = class("TapMat", function()
     return cc.Layer:create()

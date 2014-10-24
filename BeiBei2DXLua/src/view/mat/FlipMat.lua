@@ -6,7 +6,7 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-local FlipNode = require("view.FlipNode")
+local FlipNode = require("view.mat.FlipNode")
 
 local FlipMat = class("FlipMat", function()
 return cc.Layer:create()
