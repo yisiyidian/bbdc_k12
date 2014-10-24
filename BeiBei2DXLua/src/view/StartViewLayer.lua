@@ -26,8 +26,9 @@ function StartViewLayer:onPlay()
         -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
         parseServerDataToUserData(result, s_CURRENT_USER)
 
---        s_UserBaseServer.dailyCheckIn( 
+--        s_UserBaseServer.dailyCheckInOfCurrentUser( 
 --            function (api, result)
+--                print_lua_table(result)
 --                local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 --                s_CURRENT_USER.dailyCheckInData = {}
 --                for i, v in ipairs(result['WMAV_DailyCheckInData']) do
@@ -43,18 +44,22 @@ function StartViewLayer:onPlay()
 --            function (api, code, message) end
 --        )
         
---        s_UserBaseServer.getFollowees( 
---            function (api, result)
+        s_UserBaseServer.getFolloweesOfCurrentUser( 
+            function (api, result)
+                print_lua_table(result.result)
 --                local DataUser = require('model.user.DataUser')
---                for i, v in ipairs(result['followees']) do
+                for i, v in ipairs(result.result.results) do
 --                    local data = DataUser.create()
 --                    parseServerDataToUserData(v, data)
---                    print_lua_table(data)
---                end 
---            end,
---            function (api, code, message)
---            end
---        )
+                    print_lua_table(v)
+                end 
+            end,
+            function (api, code, message)
+            end
+        )
+
+        
+        
     end 
     local function onFailed(api, code, message)
         s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
@@ -67,6 +72,14 @@ function StartViewLayer:onSignUp()
     local layer = PopupLoginSignup.create()
     layer:setAnchorPoint(0.5,0)
     s_SCENE:popup(layer)
+    
+    s_UserBaseServer.getLevelsOfCurrentUser(
+        function (api, result)
+            print_lua_table(result) 
+        end,
+        function (api, code, message)
+        end
+    )
     
     -- TODO
 --    s_STORE.buy(function (code, msg, info) 

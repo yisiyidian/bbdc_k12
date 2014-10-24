@@ -12,7 +12,7 @@ end
 function DataUser:ctor()
     self.serverTime                        = ''
     self.username                          = ''
-    self.nickname                          = ''
+    self.nickName                          = ''
     self.password                          = ''
     self.sessionToken                      = ''
 

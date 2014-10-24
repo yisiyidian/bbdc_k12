@@ -95,6 +95,14 @@ function Server.request(api, parameters, onSucceed, onFailed)
     s_logd('request: api:' .. api .. ', parameters:' .. str)
 end
 
+-- doCloudQuery 回调中的 result 包含三个属性：
+--     results - 查询结果的 AV.Object 列表
+--     count - 如果使用了 select count(*) 的查询语法，返回符合查询条件的记录数目。
+--     className - 查询的 class name
+function Server.CloudQueryLanguage(cql, onSucceed, onFailed)
+    Server.request('apiCQL', {['cql']=cql}, onSucceed, onFailed)
+end
+
 -- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin
 
 return Server
