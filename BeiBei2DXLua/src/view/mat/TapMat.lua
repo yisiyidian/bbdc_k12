@@ -45,7 +45,6 @@ function TapMat.create(word, m ,n)
     local lastTouchLocation
     
     
-
     local selectStack = {}
 
     local charaster_set_filtered = {}
@@ -121,7 +120,7 @@ function TapMat.create(word, m ,n)
     
     local back_box = cc.Layer:create()
     local back_box_num = 0
-   
+    
     local updateSelectWord = function()
         for i = 1, back_box_num do
             main:removeChildByTag(i,true)
@@ -137,7 +136,7 @@ function TapMat.create(word, m ,n)
             main:addChild(term_back)
         end
         for i = 1, #selectStack do
-            local term_char = cc.Label:createWithSystemFont("a","",28)
+            local term_char = cc.Label:createWithSystemFont(selectStack[i].main_character_content,"",28)
             term_char:setColor(cc.c4b(0,0,0,255))
             term_char:setPosition(left+(i-1)*gap,640)
             term_char:setTag(100+i)
@@ -148,13 +147,17 @@ function TapMat.create(word, m ,n)
 
     -- handing touch events
     onTouchBegan = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(main:getBoundingBox(), location) then
+            return false
+        end
+    
         if main.globalLock then
             return true
         end
         
         light:setVisible(true)
-
-        local location = main:convertToNodeSpace(touch:getLocation())
+        
         fakeTouchMoved(location)
         lastTouchLocation = location
         return true
