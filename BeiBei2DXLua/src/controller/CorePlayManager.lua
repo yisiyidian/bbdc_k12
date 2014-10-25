@@ -1,8 +1,6 @@
 require "common.global"
 
 
-local chapterIndex = 2
-
 local StudyLayer            = require("view.study.studyI.StudyLayer")
 local StudyLayerII          = require("view.study.studyII.StudyLayerII")
 local StudyLayerIII         = require("view.study.studyIII.studyLayerIII")
@@ -31,6 +29,8 @@ CorePlayManager.wrongWordList = {}
 
 CorePlayManager.newPlayerState = false
 
+CorePlayManager.chapterIndex = 1
+
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
 
@@ -53,13 +53,13 @@ function CorePlayManager.enterStudyLayer()
         CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     end
     
-    if chapterIndex == 1 then
+    if CorePlayManager.chapterIndex == 1 then
         local studyLayer = StudyLayer.create()
         s_SCENE:replaceGameLayer(studyLayer)
-    elseif chapterIndex == 2 then
+    elseif CorePlayManager.chapterIndex == 2 then
         local studyLayerII = StudyLayerII.create()
         s_SCENE:replaceGameLayer(studyLayerII)
-    elseif chapterIndex == 3 then
+    elseif CorePlayManager.chapterIndex == 3 then
         local studyLayerIII = StudyLayerIII.create()
         s_SCENE:replaceGameLayer(studyLayerIII)
     end
@@ -72,13 +72,13 @@ end
 function CorePlayManager.enterTestLayer()
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     
-    if chapterIndex == 1 then
+    if CorePlayManager.chapterIndex == 1 then
         local testLayer = TestLayer.create()
         s_SCENE:replaceGameLayer(testLayer)
-    elseif chapterIndex == 2 then
+    elseif CorePlayManager.chapterIndex == 2 then
         local testLayerII = TestLayerII.create()
         s_SCENE:replaceGameLayer(testLayerII)
-    elseif chapterIndex == 3 then
+    elseif CorePlayManager.chapterIndex == 3 then
         local testLayerIII = TestLayerIII.create()
         s_SCENE:replaceGameLayer(testLayerIII)
     end
@@ -103,13 +103,13 @@ function CorePlayManager.generateWrongWordList()
 end
 
 function CorePlayManager.enterReviewBossLayer()
-    if chapterIndex == 1 then
+    if CorePlayManager.chapterIndex == 1 then
         local reviewBossLayer = ReviewBossLayer.create()
         s_SCENE:replaceGameLayer(reviewBossLayer)
-    elseif chapterIndex == 2 then
+    elseif CorePlayManager.chapterIndex == 2 then
         local reviewBossLayerII = ReviewBossLayerII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerII)
-    elseif chapterIndex == 3 then
+    elseif CorePlayManager.chapterIndex == 3 then
         local reviewBossLayerIII = ReviewBossLayerIII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerIII)
     end

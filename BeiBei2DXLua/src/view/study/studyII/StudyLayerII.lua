@@ -209,9 +209,7 @@ function StudyLayerII.create()
     mat.rightLock = true
     mat.wrongLock = false
 
-
     local onTouchBegan = function(touch, event)
-        s_logd("touch began")
         if viewIndex == 1 then     
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
