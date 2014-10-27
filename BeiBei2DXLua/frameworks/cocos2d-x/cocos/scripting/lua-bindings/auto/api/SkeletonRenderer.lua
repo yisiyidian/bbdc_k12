@@ -10,6 +10,21 @@
 -- @param #float float
         
 --------------------------------
+-- @function [parent=#SkeletonRenderer] getDebugSlotsEnabled 
+-- @param self
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- @function [parent=#SkeletonRenderer] getNodeForSlot 
+-- @param self
+-- @param #char char
+-- @return Node#Node ret (return value: cc.Node)
+        
+--------------------------------
+-- @function [parent=#SkeletonRenderer] setBonesToSetupPose 
+-- @param self
+        
+--------------------------------
 -- @function [parent=#SkeletonRenderer] isOpacityModifyRGB 
 -- @param self
 -- @return bool#bool ret (return value: bool)
@@ -20,26 +35,7 @@
 -- @param #bool bool
         
 --------------------------------
--- @function [parent=#SkeletonRenderer] getDebugSlotsEnabled 
--- @param self
--- @return bool#bool ret (return value: bool)
-        
---------------------------------
--- @function [parent=#SkeletonRenderer] setBonesToSetupPose 
--- @param self
-        
---------------------------------
 -- @function [parent=#SkeletonRenderer] setSlotsToSetupPose 
--- @param self
-        
---------------------------------
--- @function [parent=#SkeletonRenderer] setSkin 
--- @param self
--- @param #string str
--- @return bool#bool ret (return value: bool)
-        
---------------------------------
--- @function [parent=#SkeletonRenderer] setToSetupPose 
 -- @param self
         
 --------------------------------
@@ -48,14 +44,13 @@
 -- @param #bool bool
         
 --------------------------------
+-- @function [parent=#SkeletonRenderer] setToSetupPose 
+-- @param self
+        
+--------------------------------
 -- @function [parent=#SkeletonRenderer] setDebugBonesEnabled 
 -- @param self
 -- @param #bool bool
-        
---------------------------------
--- @function [parent=#SkeletonRenderer] getSkeleton 
--- @param self
--- @return spSkeleton#spSkeleton ret (return value: spSkeleton)
         
 --------------------------------
 -- @function [parent=#SkeletonRenderer] getDebugBonesEnabled 
@@ -66,6 +61,17 @@
 -- @function [parent=#SkeletonRenderer] getTimeScale 
 -- @param self
 -- @return float#float ret (return value: float)
+        
+--------------------------------
+-- @function [parent=#SkeletonRenderer] setSkin 
+-- @param self
+-- @param #string str
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- @function [parent=#SkeletonRenderer] getSkeleton 
+-- @param self
+-- @return spSkeleton#spSkeleton ret (return value: spSkeleton)
         
 --------------------------------
 -- @function [parent=#SkeletonRenderer] getBoundingBox 

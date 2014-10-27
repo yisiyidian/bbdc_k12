@@ -139,6 +139,8 @@ void SkeletonRenderer::draw (Renderer* renderer, const Mat4& transform, uint32_t
 }
 
 void SkeletonRenderer::drawSkeleton (const Mat4 &transform, uint32_t transformFlags) {
+    updateNodeForSlot();
+    
 	getGLProgramState()->apply(transform);
 
 	Color3B nodeColor = getColor();
@@ -386,6 +388,46 @@ void SkeletonRenderer::setOpacityModifyRGB (bool value) {
 
 bool SkeletonRenderer::isOpacityModifyRGB () const {
 	return _premultipliedAlpha;
+}
+    
+cocos2d::Node* SkeletonRenderer::getNodeForSlot(const char* slotName){
+    SlotNodeIter iter = m_slotNodes.find(slotName);
+    if (iter != m_slotNodes.end()) {
+        sSlotNode& slot_node = iter->second;
+        return slot_node.node;
+    } else {
+        spSlot* slot = findSlot(slotName);
+        
+        if (slot != NULL) {
+            Node* node = Node::create();
+            node->setPosition(0, 0);
+            this->addChild(node);
+            sSlotNode slot_node;
+            slot_node.slot = slot;
+            slot_node.node = node;
+            m_slotNodes.insert(SlotNodeMap::value_type(slotName, slot_node));
+            return node;
+        } else {
+            return NULL;
+        }
+    }
+}
+
+void SkeletonRenderer::updateNodeForSlot() {
+    for (SlotNodeIter iter = m_slotNodes.begin(), end = m_slotNodes.end(); iter != end; ++iter) {
+        sSlotNode& slot_node = iter->second;
+        spSlot* slot = slot_node.slot;
+        Node* node = slot_node.node;
+        spBone* bone = slot->bone;
+        if(bone!=NULL){
+            node->setPosition(bone->worldX, bone->worldY);
+            node->setRotation(-bone->worldRotation);
+            node->setScaleX(bone->worldScaleX);
+            node->setScaleY(bone->worldScaleY);
+        }
+        node->setOpacity(255*slot->a);
+        node->setColor(Color3B(255*slot->r, 255*slot->g, 255*slot->b));
+    }
 }
 
 }
