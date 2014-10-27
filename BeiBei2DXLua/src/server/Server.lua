@@ -55,7 +55,7 @@ function Server.request(api, parameters, onSucceed, onFailed)
         -- * xhr.responseText：服务器返回的文本数据
         -- * xhr.statusText：服务器返回的状态文本
         s_logd('\n>>>\nresponse api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
-        s_logd('response data: \n' .. xhr.response .. '\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
+        s_logd('response data: \n\n' .. xhr.response .. '\n\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
         
         -- readyState == 4
         if xhr.status ~= 200 then

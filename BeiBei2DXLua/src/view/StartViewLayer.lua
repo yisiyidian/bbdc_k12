@@ -1,6 +1,5 @@
 
-ccbStartViewLayer = ccbStartViewLayer or {}
-ccb['start_view'] = ccbStartViewLayer
+
 
 local StartViewLayer = class("StartViewLayer", function ()
     return cc.Layer:create()
@@ -12,12 +11,16 @@ function StartViewLayer.create()
 end
 
 function StartViewLayer:ctor()
-    ccbStartViewLayer['onPlay'] = self.onPlay
-    ccbStartViewLayer['onSignUp'] = self.onSignUp
-    ccbStartViewLayer['onLogIn'] = self.onLogIn
+    self.ccbStartViewLayer = {}
+    self.ccbStartViewLayer['onPlay'] = self.onPlay
+    self.ccbStartViewLayer['onSignUp'] = self.onSignUp
+    self.ccbStartViewLayer['onLogIn'] = self.onLogIn
+
+    self.ccb = {}
+    self.ccb['start_view'] = self.ccbStartViewLayer
 
     local proxy = cc.CCBProxy:create()
-    local node  = CCBReaderLoad("res/ccb/start_view.ccbi", proxy, ccbStartViewLayer)
+    local node  = CCBReaderLoad("res/ccb/start_view.ccbi", proxy, self.ccbStartViewLayer, self.ccb)
     self:addChild(node)
 end
 

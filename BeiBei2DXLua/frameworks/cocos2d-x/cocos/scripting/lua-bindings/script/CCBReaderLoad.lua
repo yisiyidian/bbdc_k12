@@ -1,6 +1,5 @@
-ccb = ccb or {}
 
-function CCBReaderLoad(strFilePath,proxy,owner)
+function CCBReaderLoad(strFilePath,proxy,owner,ccb)
     if nil == proxy then
         return nil
     end
@@ -11,6 +10,7 @@ function CCBReaderLoad(strFilePath,proxy,owner)
     local rootName  = "" 
     --owner set in readCCBFromFile is proxy
     if nil ~= owner then
+
         --Callbacks
         local ownerCallbackNames = ccbReader:getOwnerCallbackNames() 
         local ownerCallbackNodes = ccbReader:getOwnerCallbackNodes()

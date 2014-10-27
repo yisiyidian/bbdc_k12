@@ -1,6 +1,5 @@
 
-ccbPopupNormalLevel = ccbPopupNormalLevel or {}
-ccb['popup_normal_level'] = ccbPopupNormalLevel
+
 
 local PopupNormalLevel = class("PopupNormalLevel", function()
     return cc.Layer:create()
@@ -11,12 +10,16 @@ function PopupNormalLevel.create()
     return layer
 end
 function PopupNormalLevel:ctor()
-    ccbPopupNormalLevel['onCloseButtonClicked'] = self.onCloseButtonClicked
-    ccbPopupNormalLevel['onStudyButtonClicked'] = self.onStudyButtonClicked
-    ccbPopupNormalLevel['onTestButtonClicked'] = self.onTestButtonClicked
---  
+    self.ccbPopupNormalLevel = {}
+    self.ccbPopupNormalLevel['onCloseButtonClicked'] = self.onCloseButtonClicked
+    self.ccbPopupNormalLevel['onStudyButtonClicked'] = self.onStudyButtonClicked
+    self.ccbPopupNormalLevel['onTestButtonClicked'] = self.onTestButtonClicked
+
+    self.ccb = {}
+    self.ccb['popup_normal_level'] = self.ccbPopupNormalLevel
+
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi',proxy,ccbPopupNormalLevel)
+    local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
     node:setPosition(0,200)
     
     -- run action --
