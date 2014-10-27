@@ -42,7 +42,7 @@ local function _initTool()
     require("CCBReaderLoad")
     
     -- tools
-    s_JSON = require('json')
+    s_JSON = require("common/json")
 
     -- debug
     s_debugger = require("common.debugger")

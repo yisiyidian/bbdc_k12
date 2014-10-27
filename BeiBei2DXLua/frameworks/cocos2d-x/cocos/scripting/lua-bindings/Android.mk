@@ -68,6 +68,9 @@ LOCAL_SRC_FILES := manual/CCLuaBridge.cpp \
           ../../../external/lua/luasocket/usocket.c \
           ../../../external/lua/lsqlite3/lsqlite3.c \
           ../../../external/lua/lsqlite3/sqlite3.c \
+          ../../../external/lua/cjson/fpconv.c \
+          ../../../external/lua/cjson/strbuf.c \
+          ../../../external/lua/cjson/lua_cjson.c \
           ../../../external/xxtea/xxtea.cpp
 
 

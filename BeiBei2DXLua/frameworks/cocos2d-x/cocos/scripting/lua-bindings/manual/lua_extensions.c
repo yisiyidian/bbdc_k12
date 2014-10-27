@@ -8,11 +8,13 @@ extern "C" {
 #include "luasocket/luasocket.h"
 #include "luasocket/mime.h"
 #include "lsqlite3/lsqlite3.h"
+#include "cjson/lua_cjson.h"
 
 static luaL_Reg luax_exts[] = {
     {"socket.core", luaopen_socket_core},
     {"mime.core", luaopen_mime_core},
     {"lsqlite3", luaopen_lsqlite3},
+    {"cjson", luaopen_cjson},
     {NULL, NULL}
 };
 

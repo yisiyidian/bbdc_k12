@@ -229,6 +229,12 @@
 		B8DE662B19DE4D6A00F6536E /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = B8DE662819DE4D6A00F6536E /* sqlite3.c */; };
 		B8DE662C19DE4D6A00F6536E /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DE662919DE4D6A00F6536E /* sqlite3.h */; };
 		B8DE662D19DE4D6A00F6536E /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = B8DE662919DE4D6A00F6536E /* sqlite3.h */; };
+		B8E9827519FE2A5900EA6FA6 /* fpconv.c in Sources */ = {isa = PBXBuildFile; fileRef = B8E9826D19FE2A5900EA6FA6 /* fpconv.c */; };
+		B8E9827619FE2A5900EA6FA6 /* fpconv.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E9826E19FE2A5900EA6FA6 /* fpconv.h */; };
+		B8E9827819FE2A5900EA6FA6 /* lua_cjson.c in Sources */ = {isa = PBXBuildFile; fileRef = B8E9827019FE2A5900EA6FA6 /* lua_cjson.c */; };
+		B8E9827919FE2A5900EA6FA6 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = B8E9827119FE2A5900EA6FA6 /* strbuf.c */; };
+		B8E9827A19FE2A5900EA6FA6 /* strbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E9827219FE2A5900EA6FA6 /* strbuf.h */; };
+		B8E9827C19FE2CDF00EA6FA6 /* lua_cjson.h in Headers */ = {isa = PBXBuildFile; fileRef = B8E9827B19FE2CDF00EA6FA6 /* lua_cjson.h */; };
 		C08D4F731974E00F00C87690 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D9BAFA1974D30000EC35BB /* liblua.a */; };
 		C0FEF4D618BE0E70001F446C /* lua_debugger.c in Sources */ = {isa = PBXBuildFile; fileRef = C0FEF4D418BE0E70001F446C /* lua_debugger.c */; };
 		C0FEF4D718BE0E70001F446C /* lua_debugger.c in Sources */ = {isa = PBXBuildFile; fileRef = C0FEF4D418BE0E70001F446C /* lua_debugger.c */; };
@@ -354,6 +360,12 @@
 		B8DE662319DE4D0A00F6536E /* lsqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lsqlite3.h; sourceTree = "<group>"; };
 		B8DE662819DE4D6A00F6536E /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		B8DE662919DE4D6A00F6536E /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		B8E9826D19FE2A5900EA6FA6 /* fpconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fpconv.c; sourceTree = "<group>"; };
+		B8E9826E19FE2A5900EA6FA6 /* fpconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fpconv.h; sourceTree = "<group>"; };
+		B8E9827019FE2A5900EA6FA6 /* lua_cjson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua_cjson.c; sourceTree = "<group>"; };
+		B8E9827119FE2A5900EA6FA6 /* strbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strbuf.c; sourceTree = "<group>"; };
+		B8E9827219FE2A5900EA6FA6 /* strbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strbuf.h; sourceTree = "<group>"; };
+		B8E9827B19FE2CDF00EA6FA6 /* lua_cjson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_cjson.h; sourceTree = "<group>"; };
 		C0D9BAFA1974D30000EC35BB /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = ../../../../external/lua/lua/prebuilt/ios/liblua.a; sourceTree = "<group>"; };
 		C0FEF4D418BE0E70001F446C /* lua_debugger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua_debugger.c; sourceTree = "<group>"; };
 		C0FEF4D518BE0E70001F446C /* lua_debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_debugger.h; sourceTree = "<group>"; };
@@ -505,6 +517,7 @@
 		1ABCA1E218CD8F230087CE3A /* external */ = {
 			isa = PBXGroup;
 			children = (
+				B8E9826A19FE2A5900EA6FA6 /* cjson */,
 				B8DE662119DE4D0A00F6536E /* lsqlite3 */,
 				1540AF54193EC30500717D8E /* xxtea */,
 				1ABCA1E318CD8F2D0087CE3A /* luajit */,
@@ -618,6 +631,20 @@
 			path = ../../../../external/lua/lsqlite3;
 			sourceTree = "<group>";
 		};
+		B8E9826A19FE2A5900EA6FA6 /* cjson */ = {
+			isa = PBXGroup;
+			children = (
+				B8E9826D19FE2A5900EA6FA6 /* fpconv.c */,
+				B8E9826E19FE2A5900EA6FA6 /* fpconv.h */,
+				B8E9827019FE2A5900EA6FA6 /* lua_cjson.c */,
+				B8E9827B19FE2CDF00EA6FA6 /* lua_cjson.h */,
+				B8E9827119FE2A5900EA6FA6 /* strbuf.c */,
+				B8E9827219FE2A5900EA6FA6 /* strbuf.h */,
+			);
+			name = cjson;
+			path = ../../../../external/lua/cjson;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -643,6 +670,7 @@
 				1ABCA23C18CD8F7D0087CE3A /* inet.h in Headers */,
 				1562296A197780DE009C9067 /* lua_cocos2dx_experimental_auto.hpp in Headers */,
 				B8DE662719DE4D0A00F6536E /* lsqlite3.h in Headers */,
+				B8E9827C19FE2CDF00EA6FA6 /* lua_cjson.h in Headers */,
 				1AACE7D018BC45C200215002 /* lua_cocos2dx_spine_auto.hpp in Headers */,
 				1ABCA1EB18CD8F470087CE3A /* lauxlib.h in Headers */,
 				1AACE81018BC45C200215002 /* lua_extensions.h in Headers */,
@@ -658,10 +686,12 @@
 				1562297619778209009C9067 /* lua_cocos2dx_experimental_manual.hpp in Headers */,
 				1AACE82418BC45C200215002 /* LuaScriptHandlerMgr.h in Headers */,
 				1AACE7FC18BC45C200215002 /* lua_cocos2dx_extension_manual.h in Headers */,
+				B8E9827619FE2A5900EA6FA6 /* fpconv.h in Headers */,
 				2905FAD318CF12E600240AA3 /* lua_cocos2dx_ui_auto.hpp in Headers */,
 				156EADF41977A2BA00F53709 /* lua_cocos2dx_experimental_video_auto.hpp in Headers */,
 				1AACE7EC18BC45C200215002 /* CCLuaValue.h in Headers */,
 				2905FAD918CF143800240AA3 /* lua_cocos2dx_ui_manual.hpp in Headers */,
+				B8E9827A19FE2A5900EA6FA6 /* strbuf.h in Headers */,
 				1AACE80C18BC45C200215002 /* lua_cocos2dx_spine_manual.hpp in Headers */,
 				1ABCA25018CD8F7D0087CE3A /* options.h in Headers */,
 				1ABCA1F118CD8F470087CE3A /* lualib.h in Headers */,
@@ -830,6 +860,7 @@
 				1ABCA23E18CD8F7D0087CE3A /* luasocket.c in Sources */,
 				1ABCA25218CD8F7D0087CE3A /* select.c in Sources */,
 				1ABCA24A18CD8F7D0087CE3A /* mime.c in Sources */,
+				B8E9827819FE2A5900EA6FA6 /* lua_cjson.c in Sources */,
 				1540AF58193EC30500717D8E /* xxtea.cpp in Sources */,
 				1ABCA26218CD8F7D0087CE3A /* timeout.c in Sources */,
 				1503FAA618DA8A1C00F6518C /* io.c in Sources */,
@@ -839,6 +870,8 @@
 				2905FAD718CF143800240AA3 /* lua_cocos2dx_ui_manual.cpp in Sources */,
 				1ABCA26A18CD8F7D0087CE3A /* unix.c in Sources */,
 				B8DE662519DE4D0A00F6536E /* lsqlite3.c in Sources */,
+				B8E9827519FE2A5900EA6FA6 /* fpconv.c in Sources */,
+				B8E9827919FE2A5900EA6FA6 /* strbuf.c in Sources */,
 				B85146D419E504B80027372E /* lua_cx_common.cpp in Sources */,
 				1AACE7F218BC45C200215002 /* lua_cocos2dx_coco_studio_manual.cpp in Sources */,
 				1503FAA218DA8A1C00F6518C /* buffer.c in Sources */,
