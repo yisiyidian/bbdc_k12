@@ -1,6 +1,6 @@
 
 
-local TapNode = require("view.TapNode")
+local TapNode = require("view.mat.TapNode")
 
 local TapMat = class("TapMat", function()
     return cc.Layer:create()
@@ -45,7 +45,6 @@ function TapMat.create(word, m ,n)
     local lastTouchLocation
     
     
-
     local selectStack = {}
 
     local charaster_set_filtered = {}
@@ -121,7 +120,7 @@ function TapMat.create(word, m ,n)
     
     local back_box = cc.Layer:create()
     local back_box_num = 0
-   
+    
     local updateSelectWord = function()
         for i = 1, back_box_num do
             main:removeChildByTag(i,true)
@@ -137,7 +136,7 @@ function TapMat.create(word, m ,n)
             main:addChild(term_back)
         end
         for i = 1, #selectStack do
-            local term_char = cc.Label:createWithSystemFont("a","",28)
+            local term_char = cc.Label:createWithSystemFont(selectStack[i].main_character_content,"",28)
             term_char:setColor(cc.c4b(0,0,0,255))
             term_char:setPosition(left+(i-1)*gap,640)
             term_char:setTag(100+i)
@@ -148,13 +147,18 @@ function TapMat.create(word, m ,n)
 
     -- handing touch events
     onTouchBegan = function(touch, event)
+        if not cc.rectContainsPoint(main:getBoundingBox(), touch:getLocation()) then
+            return false
+        end
+    
         if main.globalLock then
             return true
         end
         
-        light:setVisible(true)
-
         local location = main:convertToNodeSpace(touch:getLocation())
+        
+        light:setVisible(true)
+        
         fakeTouchMoved(location)
         lastTouchLocation = location
         return true
@@ -248,10 +252,35 @@ function TapMat.create(word, m ,n)
                 main.globalLock = true
             end
 
-            for i = 1, #selectStack do
+            local moveTimeGap = 0.8/#selectStack
+
+            local actionArray1 = {}
+            for i = 2, #selectStack do
                 local node = selectStack[i]
-                node.win()
+                local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
+                table.insert(actionArray1,action)
             end
+            
+            local light_start = cc.Sprite:create("image/studyscene/long_light.png")
+            light_start:setAnchorPoint(0.5,0.05)
+            light_start:setPosition(selectStack[1]:getPosition())
+            main:addChild(light_start)
+            light_start:runAction(cc.Sequence:create(actionArray1))
+            
+
+            local actionArray2 = {}
+            for i = 1, #selectStack-1 do
+                local node = selectStack[#selectStack-i]
+                local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
+                table.insert(actionArray2,action)
+            end
+            
+            local light_end = cc.Sprite:create("image/studyscene/long_light.png")
+            light_end:setAnchorPoint(0.5,0.05)
+            light_end:setPosition(selectStack[#selectStack]:getPosition())
+            main:addChild(light_end)
+            light_end:runAction(cc.Sequence:create(actionArray2))
+              
             selectStack = {}
 
             main.success()

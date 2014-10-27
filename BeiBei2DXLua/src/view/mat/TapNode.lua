@@ -22,8 +22,6 @@ function TapNode.create(back, character, x, y)
     main.main_character_content = character
     main.hasSelected = false
 
-    print(normalName)
-    print(selectName)
     main.main_back = cc.Sprite:create(normalName)
     main.main_back:setPosition(mainSize.width/2, mainSize.height/2)
     main:addChild(main.main_back)
