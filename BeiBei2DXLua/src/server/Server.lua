@@ -54,8 +54,8 @@ function Server.request(api, parameters, onSucceed, onFailed)
         -- * xhr.status：服务器返回的状态码，等于200表示一切正常
         -- * xhr.responseText：服务器返回的文本数据
         -- * xhr.statusText：服务器返回的状态文本
-        s_logd('response api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
-        s_logd('response data: ' .. xhr.response) -- .. ', ' .. xhr:getAllResponseHeaders())
+        s_logd('\n>>>\nresponse api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
+        s_logd('response data: \n' .. xhr.response .. '\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
         
         -- readyState == 4
         if xhr.status ~= 200 then
@@ -92,7 +92,7 @@ function Server.request(api, parameters, onSucceed, onFailed)
     else 
         xhr:send()
     end
-    s_logd('request: api:' .. api .. ', parameters:' .. str)
+    s_logd('\n>>>\nrequest: api:' .. api .. ', parameters:' .. str .. '\n<<<\n')
 end
 
 -- doCloudQuery 回调中的 result 包含三个属性：
@@ -101,6 +101,10 @@ end
 --     className - 查询的 class name
 function Server.CloudQueryLanguage(cql, onSucceed, onFailed)
     Server.request('apiCQL', {['cql']=cql}, onSucceed, onFailed)
+end
+
+function Server.CloudQueryLanguageExtend(cat, cql, onSucceed, onFailed)
+    Server.request('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
 end
 
 -- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin

@@ -26,37 +26,47 @@ function StartViewLayer:onPlay()
         -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
         parseServerDataToUserData(result, s_CURRENT_USER)
 
---        s_UserBaseServer.dailyCheckInOfCurrentUser( 
---            function (api, result)
---                print_lua_table(result)
---                local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
---                s_CURRENT_USER.dailyCheckInData = {}
---                for i, v in ipairs(result['WMAV_DailyCheckInData']) do
---                    local data = DataDailyCheckIn.create()
---                    parseServerDataToUserData(v, data)
---                    s_CURRENT_USER.dailyCheckInData[i] = data
---                    print('111')
---                    print_lua_table(v)
---                    print('222')
---                    print_lua_table(data)
---                end 
---            end,
---            function (api, code, message) end
---        )
+-- DONE
+        -- s_UserBaseServer.dailyCheckInOfCurrentUser( 
+        --    function (api, result)
+        --        local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
+        --        s_CURRENT_USER.dailyCheckInData = {}
+        --        for i, v in ipairs(result.results) do
+        --            local data = DataDailyCheckIn.create()
+        --            parseServerDataToUserData(v, data)
+        --            s_CURRENT_USER.dailyCheckInData[i] = data
+        --        end 
+        --    end,
+        --    function (api, code, message) end
+        -- )
         
-        s_UserBaseServer.getFolloweesOfCurrentUser( 
-            function (api, result)
-                print_lua_table(result.result)
---                local DataUser = require('model.user.DataUser')
-                for i, v in ipairs(result.result.results) do
---                    local data = DataUser.create()
---                    parseServerDataToUserData(v, data)
-                    print_lua_table(v)
-                end 
-            end,
-            function (api, code, message)
-            end
-        )
+-- DONE        
+        -- s_UserBaseServer.getFolloweesOfCurrentUser( 
+        --     function (api, result)
+        --         print(result.results)
+        --         local DataUser = require('model.user.DataUser')
+        --         for i, v in ipairs(result.results) do
+        --             local data = DataUser.create()
+        --             parseServerDataToUserData(v.followee, data)
+        --         end 
+        --     end,
+        --     function (api, code, message)
+        --     end
+        -- )
+
+-- DONE
+        -- s_UserBaseServer.getFollowersOfCurrentUser( 
+        --     function (api, result)
+        --         print(result.results)
+        --         local DataUser = require('model.user.DataUser')
+        --         for i, v in ipairs(result.results) do
+        --             local data = DataUser.create()
+        --             parseServerDataToUserData(v.follower, data)
+        --         end 
+        --     end,
+        --     function (api, code, message)
+        --     end
+        -- )
 
         
         
