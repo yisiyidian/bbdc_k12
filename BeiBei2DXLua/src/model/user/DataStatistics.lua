@@ -10,6 +10,8 @@ function DataStatistics.create()
 end
 
 function DataStatistics:ctor()
+    self.className = 'WMAV_ICStatisticsData'
+    
     self.bookkey = ''
     self.bookWordNum = 0
     self.learnedWordCount = 0

@@ -40,7 +40,7 @@ function StartViewLayer:onPlay()
         --            s_CURRENT_USER.dailyCheckInData[i] = data
         --        end 
         --    end,
-        --    function (api, code, message) end
+        --    function (api, code, message, description) end
         -- )
         
 -- DONE        
@@ -53,7 +53,7 @@ function StartViewLayer:onPlay()
         --             parseServerDataToUserData(v.followee, data)
         --         end 
         --     end,
-        --     function (api, code, message)
+        --     function (api, code, message, description)
         --     end
         -- )
 
@@ -67,15 +67,15 @@ function StartViewLayer:onPlay()
         --             parseServerDataToUserData(v.follower, data)
         --         end 
         --     end,
-        --     function (api, code, message)
+        --     function (api, code, message, description)
         --     end
         -- )
 
         
         
     end 
-    local function onFailed(api, code, message)
-        s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
+    local function onFailed(api, code, message, description)
+        s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message .. ', ' .. description)
     end
     s_UserBaseServer.login('yehanjie1', '111111', onSucceed, onFailed)
 end
@@ -86,13 +86,24 @@ function StartViewLayer:onSignUp()
     layer:setAnchorPoint(0.5,0)
     s_SCENE:popup(layer)
     
-    s_UserBaseServer.getLevelsOfCurrentUser(
-        function (api, result)
-            print_lua_table(result) 
-        end,
-        function (api, code, message)
-        end
-    )
+-- DONE : get level data & update data    
+    -- s_UserBaseServer.getLevelsOfCurrentUser(
+    --     function (api, result)
+    --         local DataLevel = require('model.user.DataLevel')
+    --         for i, v in ipairs(result.results) do
+    --             local data = DataLevel.create()
+    --             parseServerDataToUserData(v, data)
+
+    --             print_lua_table(data) 
+    --             print(dataToJSONString(data))
+
+    --             data.hearts = 255
+    --             s_SERVER.updateData(data, function (api, result) print_lua_table(result) end, function (api, code, message, description) end)
+    --         end 
+    --     end,
+    --     function (api, code, message, description)
+    --     end
+    -- )
     
     -- TODO
 --    s_STORE.buy(function (code, msg, info) 
@@ -103,7 +114,7 @@ end
 function StartViewLayer:onLogIn()
     local PopupLoginSignup = require('popup.PopupLoginSignup')
     local layer = PopupLoginSignup.create()
-    layer:setAnchorPoint(0.5,0)
+    layer:setAnchorPoint(0.5, 0)
     s_SCENE:popup(layer)
 end
 

@@ -10,6 +10,8 @@ function DataUser.create()
 end
 
 function DataUser:ctor()
+    self.className                         = '_User'
+    
     self.serverTime                        = ''
     self.username                          = ''
     self.nickName                          = ''

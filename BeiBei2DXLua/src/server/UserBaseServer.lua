@@ -1,5 +1,5 @@
 -- onSucceed(api, result) -- result : json
--- onFailed(api, code, message)
+-- onFailed(api, code, message, description)
 
 require("common.global")
 

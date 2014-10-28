@@ -10,6 +10,8 @@ function DataDailyCheckIn.create()
 end
 
 function DataDailyCheckIn:ctor()
+    self.className = 'WMAV_DailyCheckInData'
+    
     self.dailyCheckInAwards = 0
 end
 

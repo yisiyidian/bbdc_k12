@@ -6,15 +6,12 @@ end)
 
 function DataWord.create()
     local data = DataWord.new()
-    data.userId = ''
-    data.wordId = ''
-    data.bookKey = ''
-    data.status = 0
-
     return data
 end
 
 function DataWord:ctor()
+    self.className = 'WMAV_UserWord'
+    
     self.wordId = ''
     self.bookKey = ''
     self.status = 0

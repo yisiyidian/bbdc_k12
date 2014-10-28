@@ -7,6 +7,7 @@ local HudLayer = require("layer.HudLayer")
 local PopupLayer = require("layer.PopupLayer")
 local TipsLayer = require("layer.TipsLayer")
 local TouchEventBlockLayer = require("layer.TouchEventBlockLayer")
+local LoadingCircleLayer = require('layer.LoadingCircleLayer')
 local DebugLayer = require("layer.DebugLayer")
 
 local AppScene = class("AppScene", function()
@@ -37,6 +38,10 @@ function AppScene.create()
 
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
+
+    -- TODO
+    scene.loadingCircleLayer = LoadingCircleLayer.create()
+    scene.rootLayer:addChild(scene.loadingCircleLayer)
 
     scene.debugLayer = DebugLayer.create()
     scene.rootLayer:addChild(scene.debugLayer)

@@ -14,6 +14,10 @@ local function getURL()
     end
 end
 
+-- create : POST
+-- update : PUT
+-- https://leancloud.cn/1.1/classes/
+
 local function getAppData()
     local timestamp = os.time()
 
@@ -35,7 +39,7 @@ end
 -- api : string
 -- parameters : table
 -- onSucceed(api, result) -- result : json
--- onFailed(api, code, message)
+-- onFailed(api, code, message, description)
 function Server.request(api, parameters, onSucceed, onFailed)
     local appId, sign = getAppData()
     local xhr = cc.XMLHttpRequest:new()    
@@ -58,8 +62,23 @@ function Server.request(api, parameters, onSucceed, onFailed)
         s_logd('response data: \n\n' .. xhr.response .. '\n\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
         
         -- readyState == 4
+        
+    -- pure RESTful API : TODO
+        -- 一个请求是否成功是由 HTTP 状态码标明的. 
+        -- 一个 2XX 的状态码表示成功, 而一个 4XX 表示请求失败. 
+        -- 当一个请求失败时响应的主体仍然是一个 JSON 对象, 
+        -- 但是总是会包含 code 和 error 这两个字段, 
+        -- 您可以用它们来进行 debug. 
+        -- 举个例子, 如果尝试用不允许的 key 来保存一个对象会得到如下信息:
+        -- {
+        --   "code": 105,
+        --   "error": "invalid field name: bl!ng"
+        -- }
+
+    -- Cloud Code
+        -- {'code': error.code, 'message': error.message, 'description':error.description}
         if xhr.status ~= 200 then
-            onFailed(api, xhr.status, xhr.statusText)
+            onFailed(api, xhr.status, xhr.statusText, '')
         elseif xhr.response ~= nil then
             local data = s_JSON.decode(xhr.response)
             local result
@@ -70,9 +89,10 @@ function Server.request(api, parameters, onSucceed, onFailed)
             end
             local code = result.code
             local message = result.message
+            local description = result.description
 
             if code and onFailed then
-                onFailed(api, code, message)
+                onFailed(api, code, message, description)
             elseif not code and onSucceed then 
                 onSucceed(api, result)
             end
@@ -105,6 +125,15 @@ end
 
 function Server.CloudQueryLanguageExtend(cat, cql, onSucceed, onFailed)
     Server.request('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
+end
+
+-- save & update
+function Server.createData(obj, onSucceed, onFailed)
+    Server.request('apiSave', {['classname']=obj.className, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
+end
+
+function Server.updateData(obj, onSucceed, onFailed)
+    Server.request('apiUpdate', {['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
 end
 
 -- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin

@@ -10,6 +10,8 @@ function DataLogIn.create()
 end
 
 function DataLogIn:ctor()
+    self.className = 'WMAV_LogInDateData'
+    
     self.Monday = nil
     self.Tuesday = nil
     self.Wednesday = nil

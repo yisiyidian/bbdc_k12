@@ -40,6 +40,28 @@ function parseServerDataToUserData(serverdata, userdata)
     end
 end
 
+function dataToJSONString(dataObj)
+    local str = '{'
+    for key, value in pairs(dataObj) do  
+        if (key == 'createdAt' or key == 'updatedAt' or key == 'className' or string.find(key, '__') ~= nil or value == nil) == false then 
+            if (type(value) == 'string') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":"' .. value .. '"'
+            elseif (type(value) == 'boolean') then
+                if string.len(str) > 1 then str = str .. ',' end
+                local b = 0
+                if value == true then b = 1 end
+                str = str .. '"' .. key .. '":' .. b
+            elseif (type(value) ~= 'function' and type(value) ~= 'table') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":' .. value
+            end
+        end
+    end
+    str = str .. '}'
+    return str
+end
+
 local DataClassBase = class("DataClassBase", function()
     return {}
 end)
@@ -50,6 +72,7 @@ function DataClassBase.create()
 end
 
 function DataClassBase:ctor()
+    self.className = ''
     self.objectId = ''
     self.userId = ''
     self.createdAt = os.time()

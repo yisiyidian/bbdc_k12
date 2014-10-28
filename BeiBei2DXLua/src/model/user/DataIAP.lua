@@ -10,6 +10,8 @@ function DataIAP.create()
 end
 
 function DataIAP:ctor()
+    self.className = 'WMAV_IAPData'
+    
     self.pid = ''
     self.paymentInfo = nil
     self.isSucceed = false
