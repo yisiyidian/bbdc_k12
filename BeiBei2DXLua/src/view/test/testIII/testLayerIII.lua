@@ -27,8 +27,12 @@ function TestLayerIII.create()
     local sentenceEn = word.sentenceEn
     local sentenceCn = word.sentenceCn
 
-    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), s_DESIGN_WIDTH, s_DESIGN_HEIGHT)    
-    layer:addChild(backColor)
+    local backImage = cc.Sprite:create("image/studyscene/background_zhuwanfa_disnaguan.png") 
+    backImage:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
+    layer:addChild(backImage)
+    
+    local bigWidth = backImage:getContentSize().width
+    local offset = (bigWidth - s_DESIGN_WIDTH)/2
 
     local button_changeview
     local button_changeview_clicked
@@ -37,25 +41,29 @@ function TestLayerIII.create()
 
     local playOver = false
 
-    local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
-    cloud_up:ignoreAnchorPointForPosition(false)
-    cloud_up:setAnchorPoint(0.5, 1)
-    cloud_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
-    layer:addChild(cloud_up)
+    local back_up = cc.Sprite:create("image/studyscene/frontground_zhuwanfa_disnaguan.png")
+    back_up:ignoreAnchorPointForPosition(false)
+    back_up:setAnchorPoint(0.5, 1)
+    back_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
+    layer:addChild(back_up)
 
-    local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
-    cloud_down:ignoreAnchorPointForPosition(false)
-    cloud_down:setAnchorPoint(0.5, 0)
-    cloud_down:setPosition(s_DESIGN_WIDTH/2, 0)
-    layer:addChild(cloud_down)
+    local back_down = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_green.png")
+    back_down:ignoreAnchorPointForPosition(false)
+    back_down:setAnchorPoint(0.5, 0)
+    back_down:setPosition(s_DESIGN_WIDTH/2, 0)
+    layer:addChild(back_down)
 
-    local beach = cc.Sprite:create("image/studyscene/studyscene_beach_down.png")
-    beach:ignoreAnchorPointForPosition(false)
-    beach:setAnchorPoint(0.5, 0)
-    beach:setPosition(s_DESIGN_WIDTH/2, 0)
-    layer:addChild(beach)
+    local money1 = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_money1.png")
+    money1:ignoreAnchorPointForPosition(false)
+    money1:setAnchorPoint(0, 0)
+    money1:setPosition(-(bigWidth-s_DESIGN_WIDTH)/2, 0)
+    layer:addChild(money1)
 
-    local size_big = cloud_down:getContentSize()
+    local money2 = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_money2.png")
+    money2:ignoreAnchorPointForPosition(false)
+    money2:setAnchorPoint(1, 0)
+    money2:setPosition(bigWidth-(bigWidth-s_DESIGN_WIDTH)/2, 0)
+    layer:addChild(money2)
 
     local progressBar = ProgressBar.create(true)
     progressBar:setPositionY(1038)
@@ -157,8 +165,8 @@ function TestLayerIII.create()
     end
 
     local mat = FlipMat.create(wordName,4,4,false)
-    mat:setPosition(size_big.width/2, 100)
-    cloud_down:addChild(mat)
+    mat:setPosition(bigWidth/2, 100)
+    back_down:addChild(mat)
 
     mat.success = success
     mat.fail = fail
@@ -198,7 +206,6 @@ function TestLayerIII.create()
     local update = function()
         --        time = time + 0.05
         --        print(time)
-
         if playOver == false then
             local loss = 5.0/(15+0.5*string.len(s_CorePlayManager.currentWord.wordName))
             --local loss = 5.0/5
@@ -218,11 +225,11 @@ function TestLayerIII.create()
                 if button_donotknow == nil then
                     button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
                     button_donotknow:setAnchorPoint(1,0.5)
-                    button_donotknow:setPosition(s_DESIGN_WIDTH+button_donotknow:getContentSize().width,910)
+                    button_donotknow:setPosition(offset+s_DESIGN_WIDTH+button_donotknow:getContentSize().width,910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
-                    backColor:addChild(button_donotknow)
+                    backImage:addChild(button_donotknow)
 
-                    local action = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH,910))
+                    local action = cc.MoveTo:create(0.5,cc.p(offset+s_DESIGN_WIDTH,910))
                     button_donotknow:runAction(action)
                 end
             end
