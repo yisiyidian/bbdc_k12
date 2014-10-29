@@ -48,8 +48,8 @@ function test()
     s_CorePlayManager = require("controller.CorePlayManager")
     s_CorePlayManager.create()
 
-    s_CorePlayManager.enterStudyLayer()
-    --s_CorePlayManager.enterTestLayer()
+    --s_CorePlayManager.enterStudyLayer()
+    s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterReviewBossLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
