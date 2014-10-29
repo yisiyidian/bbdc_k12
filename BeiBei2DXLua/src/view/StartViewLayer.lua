@@ -104,6 +104,12 @@ function StartViewLayer:onSignUp()
     --     function (api, code, message, description)
     --     end
     -- )
+
+-- DONE : create data
+    -- local DataLevel = require('model.user.DataLevel')
+    -- local data = DataLevel.create()
+    -- data.userId = s_CURRENT_USER.objectId
+    -- s_SERVER.createData(data, function (api, result) print_lua_table(result) end, function (api, code, message, description) end)
     
     -- TODO
 --    s_STORE.buy(function (code, msg, info) 

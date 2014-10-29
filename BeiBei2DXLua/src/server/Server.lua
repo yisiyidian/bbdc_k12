@@ -127,9 +127,9 @@ function Server.CloudQueryLanguageExtend(cat, cql, onSucceed, onFailed)
     Server.request('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
 end
 
--- save & update
+-- create & update
 function Server.createData(obj, onSucceed, onFailed)
-    Server.request('apiSave', {['classname']=obj.className, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
+    Server.request('apiCreate', {['className']=obj.className, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
 end
 
 function Server.updateData(obj, onSucceed, onFailed)
