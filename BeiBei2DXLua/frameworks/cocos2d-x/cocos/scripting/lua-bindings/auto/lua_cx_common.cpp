@@ -8,6 +8,113 @@
 
 
 
+int lua_cx_common_CXAvos_downloadFile(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_downloadFile'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        const char* arg0;
+        const char* arg1;
+        CXLUAFUNC arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
+
+        if (!toluafix_isfunction(tolua_S,4,"LUA_FUNCTION",0,&tolua_err))
+            goto tolua_lerror;
+
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
+        if(!ok)
+            return 0;
+        cobj->downloadFile(arg0, arg1, arg2);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "downloadFile",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_downloadFile'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_getInstance(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 0)
+    {
+        if(!ok)
+            return 0;
+        CXAvos* ret = CXAvos::getInstance();
+        object_to_luaval<CXAvos>(tolua_S, "CXAvos",(CXAvos*)ret);
+        return 1;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "getInstance",argc, 0);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_getInstance'.",&tolua_err);
+#endif
+    return 0;
+}
+static int lua_cx_common_CXAvos_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (CXAvos)");
+    return 0;
+}
+
+int lua_register_cx_common_CXAvos(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"CXAvos");
+    tolua_cclass(tolua_S,"CXAvos","CXAvos","cc.Ref",nullptr);
+
+    tolua_beginmodule(tolua_S,"CXAvos");
+        tolua_function(tolua_S,"downloadFile",lua_cx_common_CXAvos_downloadFile);
+        tolua_function(tolua_S,"getInstance", lua_cx_common_CXAvos_getInstance);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(CXAvos).name();
+    g_luaType[typeName] = "CXAvos";
+    g_typeCast["CXAvos"] = "CXAvos";
+    return 1;
+}
+
 int lua_cx_common_CXAnalytics_beginLog(lua_State* tolua_S)
 {
     int argc = 0;
@@ -516,6 +623,7 @@ TOLUA_API int register_all_cx_common(lua_State* tolua_S)
 	tolua_module(tolua_S,"cx",0);
 	tolua_beginmodule(tolua_S,"cx");
 
+	lua_register_cx_common_CXAvos(tolua_S);
 	lua_register_cx_common_CXAnalytics(tolua_S);
 	lua_register_cx_common_CXUtils(tolua_S);
 	lua_register_cx_common_CXStore(tolua_S);

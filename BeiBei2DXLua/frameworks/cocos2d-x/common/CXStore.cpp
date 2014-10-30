@@ -95,6 +95,7 @@ CXStore* CXStore::m_pInstance = nullptr;
 CXStore* CXStore::getInstance() {
     if (!m_pInstance) {
         m_pInstance = new CXStore();
+        m_pInstance->autorelease();
     }
     return m_pInstance;
 }

@@ -2,6 +2,11 @@
 -- @module cx
 
 --------------------------------------------------------
+-- the cx CXAvos
+-- @field [parent=#cx] CXAvos#CXAvos CXAvos preloaded module
+
+
+--------------------------------------------------------
 -- the cx CXAnalytics
 -- @field [parent=#cx] CXAnalytics#CXAnalytics CXAnalytics preloaded module
 

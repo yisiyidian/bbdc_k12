@@ -17,6 +17,7 @@ CXUtils* CXUtils::m_pInstance = nullptr;
 CXUtils* CXUtils::getInstance() {
     if (!m_pInstance) {
         m_pInstance = new CXUtils();
+        m_pInstance->autorelease();
     }
     return m_pInstance;
 }
