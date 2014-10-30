@@ -22,10 +22,21 @@ function LoginLayer.create()
     local intro_array = {}
     for i = 1,4 do
         local intro = cc.Sprite:create("image/login/denglu_"..i.."_background.png")
-        intro:setPosition(s_DESIGN_WIDTH/2*(2*i-1),s_DESIGN_HEIGHT/2)
+        if i == 1 then
+            intro:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
+        else
+            intro:setPosition(s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2)
+        end
         layer:addChild(intro)
         table.insert(intro_array, intro)
     end
+
+    -- 临时添加 start
+    local intro = cc.Sprite:create("image/login/denglu_4_background.png")
+    intro:setPosition(s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2)
+    layer:addChild(intro)
+    table.insert(intro_array, intro)
+    -- 临时添加 end
 
     local cloud = cc.Sprite:create("image/login/cloud_denglu.png")
     cloud:setAnchorPoint(0.5,0)
@@ -73,11 +84,16 @@ function LoginLayer.create()
         now_x = location.x
         if now_x - 200 > start_x then
             if currentIndex ~= 1 then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
-                for i = 1,4 do
-                    local action = cc.MoveBy:create(0.5, cc.p(s_DESIGN_WIDTH,0))
-                    intro_array[i]:runAction(action)
-                end
+
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2))
+                intro_array[currentIndex]:runAction(action1)
+  
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                intro_array[currentIndex-1]:runAction(cc.Sequence:create(action2, action3))
+
                 circle_back_array[currentIndex]:setVisible(true)
                 circle_font_array[currentIndex]:setVisible(false)
                 currentIndex = currentIndex - 1
@@ -86,11 +102,16 @@ function LoginLayer.create()
             end
         elseif now_x + 200 < start_x then
             if currentIndex ~= 5 then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
-                for i = 1,4 do
-                    local action = cc.MoveBy:create(0.5, cc.p(-s_DESIGN_WIDTH,0))
-                    intro_array[i]:runAction(action)
-                end
+                
+                local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2))
+                intro_array[currentIndex]:runAction(action1)
+
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                intro_array[currentIndex+1]:runAction(cc.Sequence:create(action2, action3))
+                
                 circle_back_array[currentIndex]:setVisible(true)
                 circle_font_array[currentIndex]:setVisible(false)
                 currentIndex = currentIndex + 1
@@ -99,7 +120,6 @@ function LoginLayer.create()
             end
         end
     end
-
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
