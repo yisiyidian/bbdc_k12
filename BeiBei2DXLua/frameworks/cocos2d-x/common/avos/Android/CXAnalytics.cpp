@@ -22,7 +22,7 @@ void CXAnalytics::logEventAndLabel(const char* event, const char* tag) {
         return;
 
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "org/cocos2dx/lua/AppActivity", "onEvent", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "onEvent", "(Ljava/lang/String;Ljava/lang/String;)V")) {
         jstring stringArgEvent = t.env->NewStringUTF(event);
         jstring stringArgTag = t.env->NewStringUTF(tag);
 

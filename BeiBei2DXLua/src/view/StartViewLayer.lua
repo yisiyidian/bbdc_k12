@@ -112,9 +112,8 @@ function StartViewLayer:onSignUp()
     -- s_SERVER.createData(data, function (api, result) print_lua_table(result) end, function (api, code, message, description) end)
     
     -- TODO
---    s_STORE.buy(function (code, msg, info) 
---        s_DEBUG_LAYER.debugInfo:setString(msg)
---    end)
+    s_STORE.init()
+    s_STORE.login(nil)
 end
 
 function StartViewLayer:onLogIn()
@@ -122,6 +121,11 @@ function StartViewLayer:onLogIn()
     local layer = PopupLoginSignup.create()
     layer:setAnchorPoint(0.5, 0)
     s_SCENE:popup(layer)
+
+    s_STORE.buy(function (code, msg, info) 
+        -- s_DEBUG_LAYER.debugInfo:setString(msg)
+        s_logd('s_STORE:' .. code .. ', msg:' .. msg)
+    end)
 end
 
 return StartViewLayer
