@@ -241,8 +241,6 @@ function TestLayerIII.create()
     --local scheduler = cc.Director:getInstance():getScheduler()
     --local schedulerEntry = scheduler:scheduleScriptFunc(update, 0.05, false)
 
-
-
     return layer
 end
 
