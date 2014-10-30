@@ -10,6 +10,7 @@ local TestLayerIII          = require("view.test.testIII.testLayerIII")
 local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
 local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
 local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
+local LoginLayer            = require("view/login/LoginLayer.lua")
 
 
 local CorePlayManager = {}
@@ -113,6 +114,11 @@ function CorePlayManager.enterReviewBossLayer()
         local reviewBossLayerIII = ReviewBossLayerIII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerIII)
     end
+end
+
+function CorePlayManager.enterLoginLayer()
+    local loginLayer = LoginLayer.create()
+    s_SCENE:replaceGameLayer(loginLayer)
 end
 
 
