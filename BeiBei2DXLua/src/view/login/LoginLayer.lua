@@ -32,20 +32,27 @@ function LoginLayer.create()
     cloud:setPosition(s_DESIGN_WIDTH/2,-200)
     layer:addChild(cloud)
 
-    local circle_array = {}
+    local circle_back_array = {}
+    local circle_font_array = {}
     local gap = 50
     local left = s_DESIGN_WIDTH/2 - gap*2
     for i = 1, 5 do
+        local circle_back = cc.Sprite:create("image/login/yuan_white_denglu.png")
+        circle_back:setPosition(left+gap*(i-1),50)
+        layer:addChild(circle_back)
+        table.insert(circle_back_array, circle_back)
+        
+        local circle_font = cc.Sprite:create("image/login/yuan_blue_denglu.png")
+        circle_font:setPosition(left+gap*(i-1),50)
+        layer:addChild(circle_font)
+        table.insert(circle_font_array, circle_font)
+        
         if i == currentIndex then
-            local circle = cc.Sprite:create("image/login/yuan_blue_denglu.png")
-            circle:setPosition(left+gap*(i-1),50)
-            layer:addChild(circle)
-            table.insert(intro_array, circle)
+           circle_back:setVisible(false)
+           circle_font:setVisible(true)
         else
-            local circle = cc.Sprite:create("image/login/yuan_white_denglu.png")
-            circle:setPosition(left+gap*(i-1),50)
-            layer:addChild(circle)
-            table.insert(intro_array, circle)
+           circle_back:setVisible(true)
+           circle_font:setVisible(false)
         end
     end
     
@@ -71,7 +78,11 @@ function LoginLayer.create()
                     local action = cc.MoveBy:create(0.5, cc.p(s_DESIGN_WIDTH,0))
                     intro_array[i]:runAction(action)
                 end
+                circle_back_array[currentIndex]:setVisible(true)
+                circle_font_array[currentIndex]:setVisible(false)
                 currentIndex = currentIndex - 1
+                circle_back_array[currentIndex]:setVisible(false)
+                circle_font_array[currentIndex]:setVisible(true)
             end
         elseif now_x + 200 < start_x then
             if currentIndex ~= 5 then
@@ -80,7 +91,11 @@ function LoginLayer.create()
                     local action = cc.MoveBy:create(0.5, cc.p(-s_DESIGN_WIDTH,0))
                     intro_array[i]:runAction(action)
                 end
+                circle_back_array[currentIndex]:setVisible(true)
+                circle_font_array[currentIndex]:setVisible(false)
                 currentIndex = currentIndex + 1
+                circle_back_array[currentIndex]:setVisible(false)
+                circle_font_array[currentIndex]:setVisible(true)
             end
         end
     end
