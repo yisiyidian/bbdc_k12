@@ -38,6 +38,11 @@ function StartViewLayer:onPlay()
                     s_CURRENT_USER.levels[i] = data
                     print_lua_table(data)
                 end 
+                
+                 s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+                 local level = require('view/LevelLayer.lua')
+                 layer = level.create()
+                 s_SCENE:replaceGameLayer(layer)
             end,
             function (api, code, message, description)
             end
