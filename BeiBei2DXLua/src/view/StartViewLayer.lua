@@ -1,6 +1,5 @@
 
 
-
 local StartViewLayer = class("StartViewLayer", function ()
     return cc.Layer:create()
 end)
@@ -28,6 +27,21 @@ function StartViewLayer:onPlay()
     local function onSucceed(api, result)
         -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
         parseServerDataToUserData(result, s_CURRENT_USER)
+
+        s_UserBaseServer.getLevelsOfCurrentUser(
+            function (api, result)
+                local DataLevel = require('model.user.DataLevel')
+                s_CURRENT_USER.levels = {}
+                for i, v in ipairs(result.results) do
+                    local data = DataLevel.create()
+                    parseServerDataToUserData(v, data)
+                    s_CURRENT_USER.levels[i] = data
+                    print_lua_table(data)
+                end 
+            end,
+            function (api, code, message, description)
+            end
+        )
 
 -- DONE
         -- s_UserBaseServer.dailyCheckInOfCurrentUser( 
