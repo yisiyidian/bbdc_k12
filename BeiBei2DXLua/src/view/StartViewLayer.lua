@@ -1,6 +1,5 @@
 
 
-
 local StartViewLayer = class("StartViewLayer", function ()
     return cc.Layer:create()
 end)

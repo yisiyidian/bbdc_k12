@@ -22,10 +22,11 @@ end
 
 function LevelLayer:ctor()
     -- initialize chapter 1
-    ccbLevelLayer['onLevelButtonClicked'] = self.onLevelButtonClicked
-    local proxy = cc.CCBProxy:create()
-    local contentNode1  = CCBReaderLoad("res/ccb/chapter1.ccbi", proxy, ccbLevelLayer)
-    ccbLevelLayer['contentNode1'] = contentNode1;
+    self.ccbLevelLayer1 = {}   
+    self.ccbLevelLayer1['onLevelButtonClicked'] = self.onLevelButtonClicked
+    local proxy1 = cc.CCBProxy:create()
+    local contentNode1  = CCBReaderLoad("res/ccb/chapter1.ccbi", proxy1, self.ccbLevelLayer1)
+    self.ccbLevelLayer1['contentNode1'] = self.contentNode1;
     
     ccbLevelLayer['levelSet'] = contentNode1:getChildByTag(5)
     for i = 1, #ccbLevelLayer['levelSet']:getChildren() do
