@@ -1,0 +1,219 @@
+{
+"skeleton": { "spine": "1.9.17", "hash": "4JwrhyLthYHISPkt3AxmFbbc7sw", "width": 271, "height": 132.55 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "board-big", "parent": "root", "x": 90.22, "y": 86.47 },
+	{ "name": "board-small", "parent": "root", "x": 87.79, "y": 76.86 },
+	{ "name": "crab", "parent": "root", "x": 91.63, "y": 24.14 },
+	{ "name": "crab-big", "parent": "root", "x": 91.57, "y": 58.9 },
+	{ "name": "crab-leg-small", "parent": "root", "x": 90.42, "y": 48.99 },
+	{ "name": "crab-mouth", "parent": "root", "x": 91.57, "y": 19.57 }
+],
+"slots": [
+	{ "name": "board-small", "bone": "board-small", "attachment": "board-small" },
+	{ "name": "crab", "bone": "crab", "attachment": "crab" },
+	{ "name": "crab-small", "bone": "crab-leg-small", "attachment": "crab-small" },
+	{ "name": "board-big", "bone": "board-big", "attachment": "board-big" },
+	{ "name": "crab-big", "bone": "crab-big", "attachment": "crab-big" }
+],
+"skins": {
+	"default": {
+		"board-big": {
+			"board-big": { "x": 4.06, "y": -14.91, "width": 271, "height": 123 }
+		},
+		"board-small": {
+			"board-small": { "x": 3.7, "y": 2.61, "width": 181, "height": 78 }
+		},
+		"crab": {
+			"crab": { "x": -0.13, "y": 3.35, "width": 64, "height": 54 }
+		},
+		"crab-big": {
+			"crab-big": { "x": 0.42, "y": -15.12, "width": 87, "height": 35 }
+		},
+		"crab-small": {
+			"crab-small": { "x": 0.09, "y": -3.17, "width": 70, "height": 19 }
+		}
+	}
+},
+"animations": {
+	"crab-appear": {
+		"slots": {
+			"board-big": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"crab-leg-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -155.96 },
+					{ "time": 0.4, "x": 0, "y": 26.63 },
+					{ "time": 0.6, "x": 0, "y": 0 }
+				]
+			},
+			"crab": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -155.96 },
+					{ "time": 0.4, "x": 0, "y": 26.63 },
+					{ "time": 0.6, "x": 0, "y": 0 }
+				]
+			},
+			"board-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -155.96 },
+					{ "time": 0.4, "x": 0, "y": 26.63 },
+					{ "time": 0.6, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"crab-click": {
+		"slots": {
+			"crab-big": {
+				"attachment": [
+					{ "time": 0, "name": "crab-big" },
+					{ "time": 0.0333, "name": "crab-big" }
+				]
+			}
+		},
+		"bones": {
+			"board-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": 0, "y": 0 }
+				]
+			},
+			"crab-leg-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": 0, "y": 0 }
+				]
+			},
+			"crab": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"crab-big": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": 0, "y": 0 }
+				]
+			}
+		}
+	},
+	"crab-right&disappear": {
+		"slots": {
+			"board-big": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			},
+			"crab-big": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"board-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.3333, "x": 0, "y": 29.48, "curve": "stepped" },
+					{ "time": 0.4333, "x": 0, "y": 29.48 },
+					{ "time": 0.9333, "x": 0, "y": -146.4 }
+				]
+			},
+			"crab-leg-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.3333, "x": 0, "y": 29.48, "curve": "stepped" },
+					{ "time": 0.4333, "x": 0, "y": 29.48 },
+					{ "time": 0.9333, "x": 0, "y": -146.4 }
+				]
+			},
+			"crab": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.3333, "x": 0, "y": 29.48, "curve": "stepped" },
+					{ "time": 0.4333, "x": 0, "y": 29.48 },
+					{ "time": 0.9333, "x": 0, "y": -146.4 }
+				]
+			},
+			"crab-mouth": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.3333, "x": 0, "y": 29.48, "curve": "stepped" },
+					{ "time": 0.4333, "x": 0, "y": 29.48 },
+					{ "time": 0.9333, "x": 0, "y": -146.4 }
+				]
+			}
+		}
+	},
+	"crab-wrong": {
+		"slots": {
+			"board-big": {
+				"attachment": [
+					{ "time": 0, "name": "board-big" }
+				]
+			},
+			"crab-big": {
+				"attachment": [
+					{ "time": 0, "name": "crab-big" }
+				]
+			}
+		},
+		"bones": {
+			"board-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"crab-leg-small": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				]
+			},
+			"crab-big": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.1, "angle": 4.05 },
+					{ "time": 0.2333, "angle": -7.4 },
+					{ "time": 0.3666, "angle": 4.05 },
+					{ "time": 0.5, "angle": -7.4 },
+					{ "time": 0.6, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6, "x": 0, "y": 0 }
+				]
+			},
+			"crab": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.1, "angle": 4.05 },
+					{ "time": 0.2333, "angle": -7.4 },
+					{ "time": 0.3666, "angle": 4.05 },
+					{ "time": 0.5, "angle": -7.4 },
+					{ "time": 0.6, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.6, "x": 0, "y": 0 }
+				]
+			},
+			"board-big": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.1, "angle": 4.05 },
+					{ "time": 0.2333, "angle": -7.4 },
+					{ "time": 0.3666, "angle": 4.05 },
+					{ "time": 0.5, "angle": -7.4 },
+					{ "time": 0.6, "angle": 0 }
+				]
+			}
+		}
+	}
+}
+}

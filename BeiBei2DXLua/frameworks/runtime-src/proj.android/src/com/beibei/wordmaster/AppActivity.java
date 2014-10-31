@@ -26,10 +26,9 @@ THE SOFTWARE.
 ****************************************************************************/
 package com.beibei.wordmaster;
 
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Enumeration;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
@@ -38,7 +37,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -47,8 +45,6 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
-import android.text.format.Formatter;
-import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -72,7 +68,6 @@ public class AppActivity extends Cocos2dxActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
 		if(nativeIsDebug()) {
@@ -154,7 +149,7 @@ public class AppActivity extends Cocos2dxActivity {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 		if (cm != null) {
 			NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-			ArrayList networkTypes = new ArrayList();
+			ArrayList<Integer> networkTypes = new ArrayList<Integer>();
 			networkTypes.add(ConnectivityManager.TYPE_WIFI);
 			try {
 				networkTypes.add(ConnectivityManager.class.getDeclaredField(
@@ -209,24 +204,51 @@ public class AppActivity extends Cocos2dxActivity {
 		}
 	}
 	
-	public static void downloadFile(String objectId, String savepath) {
+	public static void downloadFile(final String objectId, final String savepath) {
 		AVFile.withObjectIdInBackground(objectId, new GetFileCallback<AVFile>() {
 			@Override
-			public void done(AVFile file, AVException e) {
-				if (e != null) {
-					
+			public void done(final AVFile file, AVException e) {
+				if (file == null || e != null) {
+					invokeLuaCallbackFunctionDL(objectId, file != null ? file.getName() : "", e != null ? e.getLocalizedMessage() : "get file object error", 0);
 				} else {
 					file.getDataInBackground(new GetDataCallback() {
-						
+						@Override
+						public void done(byte[] data, AVException arg1) {
+							if (arg1 != null) {
+								invokeLuaCallbackFunctionDL(objectId, file != null ? file.getName() : "", arg1.getLocalizedMessage(), 0);
+							} else {
+								if (saveFile(savepath, file.getName(), data)) {
+									invokeLuaCallbackFunctionDL(objectId, file.getName(), "save file succeed", 1);
+								} else {
+									invokeLuaCallbackFunctionDL(objectId, file.getName(), "save file error", 0);
+								}
+							}
+						}
 					}, new ProgressCallback() {
-						
+						@Override
+						public void done(Integer arg0) {
+						}						
 					});
 				}
 			}
 		});
 	}
 	
+	private static boolean saveFile(String savepath, String filename, byte[] data) {
+		File file = new File(savepath , filename);
+        try {
+			file.createNewFile();
+			FileOutputStream out = new FileOutputStream(file);
+			out.write(data);
+			out.close();
+			return true;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
 	private static native boolean nativeIsLandScape();
 	private static native boolean nativeIsDebug();
-	
+	private static native void invokeLuaCallbackFunctionDL(String objectId, String filename, String error, int isSaved);
 }

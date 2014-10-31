@@ -1,0 +1,41 @@
+
+first-level-summary-boss-beach-crab.png
+size: 361,361
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+board-big
+  rotate: false
+  xy: 2, 239
+  size: 270, 122
+  orig: 271, 123
+  offset: 0, 1
+  index: -1
+board-small
+  rotate: false
+  xy: 2, 159
+  size: 181, 78
+  orig: 181, 78
+  offset: 0, 0
+  index: -1
+crab
+  rotate: false
+  xy: 2, 103
+  size: 64, 54
+  orig: 64, 54
+  offset: 0, 0
+  index: -1
+crab-big
+  rotate: false
+  xy: 274, 326
+  size: 87, 35
+  orig: 87, 35
+  offset: 0, 0
+  index: -1
+crab-small
+  rotate: false
+  xy: 185, 218
+  size: 70, 19
+  orig: 70, 19
+  offset: 0, 0
+  index: -1
