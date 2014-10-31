@@ -43,10 +43,11 @@ function StartViewLayer:onPlay()
         --     end
         -- )
 
-        cx.CXAvos:getInstance():downloadFile('5430b806e4b0c0d48049e293', cc.FileUtils:getInstance():getWritablePath(), 
-            function (objectId, filename, err, isSaved)
-                print('objectId:' .. objectId .. ', filename:' .. filename .. ', error:' .. err .. ', isSaved:' .. tostring(isSaved))
-        end)
+-- download file from avos
+        -- cx.CXAvos:getInstance():downloadFile('5430b806e4b0c0d48049e293', cc.FileUtils:getInstance():getWritablePath(), 
+        --     function (objectId, filename, err, isSaved)
+        --         print('objectId:' .. objectId .. ', filename:' .. filename .. ', error:' .. err .. ', isSaved:' .. tostring(isSaved))
+        -- end)
 
 -- DONE
         -- s_UserBaseServer.dailyCheckInOfCurrentUser( 

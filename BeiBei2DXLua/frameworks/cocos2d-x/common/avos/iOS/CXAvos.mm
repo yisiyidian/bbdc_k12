@@ -38,7 +38,7 @@ void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC 
             } else {
                 NSString *filePath = [[NSString stringWithUTF8String:savepath] stringByAppendingPathComponent:file.name];
                 [data writeToFile:filePath atomically:YES];
-                invokeLuaCallbackFunction_dl(objectId, file.name.UTF8String, "", true);
+                invokeLuaCallbackFunction_dl(objectId, file.name.UTF8String, "save file succeed", true);
             }
         } progressBlock:^(NSInteger percentDone) {
             //
