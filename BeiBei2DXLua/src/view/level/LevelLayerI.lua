@@ -24,6 +24,33 @@ function isLevelUnlocked(chapterKey, levelKey)
     end
 end
 
+function plotLevelStar(levelButton, heart)
+    local star1, star2, star3
+    if heart >= 3 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star3 = cc.Sprite:create('image/chapter_level/starFull.png')
+    elseif heart == 2 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    elseif heart == 1 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    else
+        star1 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    end
+    star1:setPosition(30,30)
+    star2:setPosition(80,10)
+    star3:setPosition(130,30)
+    levelButton:addChild(star1, 5)
+    levelButton:addChild(star2, 5)
+    levelButton:addChild(star3, 5)
+end
+
 function LevelLayerI:ctor()
     self.ccbLevelLayerI = {}
     self.ccbLevelLayerI['onLevelButtonClicked'] = self.onLevelButtonClicked
@@ -39,13 +66,17 @@ function LevelLayerI:ctor()
     self:setContentSize(contentNode:getContentSize())
     self:addChild(contentNode)
     
+--    local back = sp.SkeletonAnimation:create("spine/3fxzls  xuanxiaoguan  diaoluo.json", "spine/3fxzls  xuanxiaoguan  diaoluo.atlas", 1)
+--    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+--    self:addChild(back)      
+--    back:addAnimation(0, 'animation', false)
     -- replot levelbutton ui based on the configuration file
     local levelConfig = s_DATA_MANAGER.level_ncee
-
     for i = 1, #levelConfig do
         if levelConfig[i]['chapter_key'] == 'Chapter0' then
-            s_logd('%s, %s, %s',levelConfig[i]['chapter_key'],levelConfig[i]['type'],levelConfig[i]['level_key'])
+            --s_logd('%s, %s, %s',levelConfig[i]['chapter_key'],levelConfig[i]['type'],levelConfig[i]['level_key'])
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
+            plotLevelStar(levelButton,2)
             if string.format('%s',levelConfig[i]['type']) == '1' then
                 if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
@@ -55,7 +86,7 @@ function LevelLayerI:ctor()
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_locked.png'))
                 end
             else 
-                if not isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
+                if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                 end
