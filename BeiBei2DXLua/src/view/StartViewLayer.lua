@@ -28,20 +28,25 @@ function StartViewLayer:onPlay()
         -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
         parseServerDataToUserData(result, s_CURRENT_USER)
 
-        s_UserBaseServer.getLevelsOfCurrentUser(
-            function (api, result)
-                local DataLevel = require('model.user.DataLevel')
-                s_CURRENT_USER.levels = {}
-                for i, v in ipairs(result.results) do
-                    local data = DataLevel.create()
-                    parseServerDataToUserData(v, data)
-                    s_CURRENT_USER.levels[i] = data
-                    print_lua_table(data)
-                end 
-            end,
-            function (api, code, message, description)
-            end
-        )
+        -- s_UserBaseServer.getLevelsOfCurrentUser(
+        --     function (api, result)
+        --         local DataLevel = require('model.user.DataLevel')
+        --         s_CURRENT_USER.levels = {}
+        --         for i, v in ipairs(result.results) do
+        --             local data = DataLevel.create()
+        --             parseServerDataToUserData(v, data)
+        --             s_CURRENT_USER.levels[i] = data
+        --             print_lua_table(data)
+        --         end 
+        --     end,
+        --     function (api, code, message, description)
+        --     end
+        -- )
+
+        cx.CXAvos:getInstance():downloadFile('5430b806e4b0c0d48049e293', cc.FileUtils:getInstance():getWritablePath(), 
+            function (objectId, filename, err, isSaved)
+                print('objectId:' .. objectId .. ', filename:' .. filename .. ', error:' .. err .. ', isSaved:' .. tostring(isSaved))
+        end)
 
 -- DONE
         -- s_UserBaseServer.dailyCheckInOfCurrentUser( 

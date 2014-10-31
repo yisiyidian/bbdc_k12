@@ -19,12 +19,11 @@ public:
     static CXAvos* getInstance();
     
     void downloadFile(const char* objectId, const char* savepath, CXLUAFUNC nHandler);
+    void invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved);
     
 private:
     static CXAvos* m_pInstance;
     CXAvos();
-    
-    void invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved);
     
     int mLuaHandlerId_dl;
 };
