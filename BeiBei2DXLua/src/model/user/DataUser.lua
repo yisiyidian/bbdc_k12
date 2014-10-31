@@ -48,6 +48,7 @@ function DataUser:ctor()
     self.needToUnlockNextChapter           = 0
 
     self.dailyCheckInData                  = {}
+    self.levels                            = {}
 end
 
 function DataUser:parseServerData(data)

@@ -52,8 +52,13 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.GetFileCallback;
+import com.avos.avoscloud.GetDataCallback;
+import com.avos.avoscloud.ProgressCallback;
 import com.anysdk.framework.PluginWrapper;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
@@ -202,6 +207,23 @@ public class AppActivity extends Cocos2dxActivity {
 		} catch (android.content.ActivityNotFoundException ex) {
 		    Toast.makeText(instance, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 		}
+	}
+	
+	public static void downloadFile(String objectId, String savepath) {
+		AVFile.withObjectIdInBackground(objectId, new GetFileCallback<AVFile>() {
+			@Override
+			public void done(AVFile file, AVException e) {
+				if (e != null) {
+					
+				} else {
+					file.getDataInBackground(new GetDataCallback() {
+						
+					}, new ProgressCallback() {
+						
+					});
+				}
+			}
+		});
 	}
 	
 	private static native boolean nativeIsLandScape();
