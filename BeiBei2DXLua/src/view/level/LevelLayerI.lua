@@ -24,6 +24,7 @@ function LevelLayerI:ctor()
     for i = 1, #self.ccbLevelLayerI['levelSet']:getChildren() do
         self.ccbLevelLayerI['levelSet']:getChildren()[i]:setName('level'..self.ccbLevelLayerI['levelSet']:getChildren()[i]:getTag())
     end
+    self:setContentSize(contentNode:getContentSize())
     self:addChild(contentNode)
     
     -- replot levelbutton ui based on the configuration file
