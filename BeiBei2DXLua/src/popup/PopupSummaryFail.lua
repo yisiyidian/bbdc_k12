@@ -1,7 +1,4 @@
 
-ccbPopupSummaryFail = ccbPopupSummaryFail or {}
-ccb['popup_summary_fail'] = ccbPopupSummaryFail
-
 local PopupSummaryFail = class('PopupSummaryFail', function()
     return cc.Layer:create()
 end)
@@ -12,11 +9,14 @@ function PopupSummaryFail:create()
 end
 
 function PopupSummaryFail:ctor()
-    ccbPopupSummaryFail['onCloseButtonClicked'] = self.onCloseButtonClicked
-    ccbPopupSummaryFail['onContinueButtonClicked'] = self.onContinueButtonClicked
+    self.ccbPopupSummaryFail = {}
+    self.ccbPopupSummaryFail['onCloseButtonClicked'] = self.onCloseButtonClicked
+    self.ccbPopupSummaryFail['onContinueButtonClicked'] = self.onContinueButtonClicked
     
+    self.ccb = {}
+    self.ccb['popup_summary_fail'] = self.ccbPopupSummaryFail
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('res/ccb/popup_summary_fail.ccbi',proxy,ccbPopupSummaryFail)
+    local node = CCBReaderLoad('res/ccb/popup_summary_fail.ccbi',proxy,self.ccbPopupSummaryFail,self.ccb)
     
     -- run action
     node:setPosition(0, 200)

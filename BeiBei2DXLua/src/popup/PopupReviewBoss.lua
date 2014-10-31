@@ -1,7 +1,4 @@
 
-ccbPopupReviewBoss = ccbPopReviewBoss or {}
-ccb['popup_review_boss'] = ccbPopReviewBoss
-
 local PopupReviewBoss = class('PopupReviewBoss', function()
     return cc.Layer:create()
 end)
@@ -12,11 +9,14 @@ function PopupReviewBoss:create()
 end
 
 function PopupReviewBoss:ctor()
-    ccbPopupReviewBoss['onCloseButtonClicked'] = self.onCloseButtonClicked 
-    ccbPopupReviewBoss['onGoButtonClicked'] = self.onGoButtonClicked
+    self.ccbPopupReviewBoss = {}
+    self.ccbPopupReviewBoss['onCloseButtonClicked'] = self.onCloseButtonClicked 
+    self.ccbPopupReviewBoss['onGoButtonClicked'] = self.onGoButtonClicked
     
+    self.ccb = {}
+    self.ccb['popup_review_boss'] = self.ccbPopupReviewBoss
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('ccb/popup_review_boss.ccbi',proxy,ccbPopupReviewBoss)
+    local node = CCBReaderLoad('ccb/popup_review_boss.ccbi',proxy,self.ccbPopupReviewBoss,self.ccb)
     -- run action
     node:setPosition(0, 200)
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))

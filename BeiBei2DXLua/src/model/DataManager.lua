@@ -216,6 +216,41 @@ function DataManager.loadLevels(bookkey)
     end
 end
 
+function DataManager.getLevelConfig(bookKey, chapterKey, levelKey)
+    if bookKey == s_BOOK_KEY_NCEE then
+        for i = 1, #DataManager.level_ncee do
+            if DataManager.level_ncee[i]['chapter_key'] == chapterKey and DataManager.level_ncee[i]['level_key'] == levelKey then
+                 print(DataManager.level_ncee[i]['chapter_key'])
+                 return DataManager.level_ncee[i]
+            end
+        end
+    elseif bookKey == s_BOOK_KEY_CET4 then
+        for i = 1, #DataManager.level_cet4 do
+            if DataManager.level_cet4[i]['chapter_key'] == chapterKey and DataManager.level_cet4[i]['level_key'] == levelKey then
+                return DataManager.level_cet4[i]
+            end
+        end
+    elseif bookKey == s_BOOK_KEY_CET6 then
+        for i = 1, #DataManager.level_cet6 do
+            if DataManager.level_cet6[i]['chapter_key'] == chapterKey and DataManager.level_cet6[i]['level_key'] == levelKey then
+                return DataManager.level_cet6[i]
+            end
+        end
+    elseif bookkey == s_BOOK_KEY_IELTS then
+        for i = 1, #DataManager.level_ielts do
+            if DataManager.level_ielts[i]['chapter_key'] == chapterKey and DataManager.level_ielts[i]['level_key'] == levelKey then
+                return DataManager.level_ielts[i]
+            end
+        end
+    elseif bookKey == s_BOOK_KEY_TOEFL then
+        for i = 1, #DataManager.level_toefl do
+            if DataManager.level_toefl[i]['chapter_key'] == chapterKey and DataManager.level_toefl[i]['level_key'] == levelKey then
+                return DataManager.level_toefl[i]
+            end
+        end
+    end
+end
+
 -- review boss -------------------------------------------------------------------
 
 function DataManager.loadReviewBoss()

@@ -24,6 +24,14 @@ function isLevelUnlocked(chapterKey, levelKey)
     end
 end
 
+function getLevelData(chapterKey, levelKey)
+    for i = 1, #s_CURRENT_USER.levels do
+        if s_CURRENT_USER.levels[i].chapterKey == chapterKey and s_CURRENT_USER.levels[i].levelKey == levelKey then
+            return s_CURRENT_USER.levels[i]
+        end
+    end
+end
+
 function plotLevelStar(levelButton, heart)
     local star1, star2, star3
     if heart >= 3 then
@@ -53,7 +61,10 @@ end
 
 function LevelLayerI:ctor()
     self.ccbLevelLayerI = {}
-    self.ccbLevelLayerI['onLevelButtonClicked'] = self.onLevelButtonClicked
+    self.ccbLevelLayerI['onLevelButtonClicked'] = 
+    function(levelTag)
+        self:onLevelButtonClicked(levelTag-1)
+    end
     self.ccb = {}
     self.ccb['chapter1'] = self.ccbLevelLayerI
     
@@ -76,7 +87,6 @@ function LevelLayerI:ctor()
         if levelConfig[i]['chapter_key'] == 'Chapter0' then
             --s_logd('%s, %s, %s',levelConfig[i]['chapter_key'],levelConfig[i]['type'],levelConfig[i]['level_key'])
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
-            plotLevelStar(levelButton,2)
             if string.format('%s',levelConfig[i]['type']) == '1' then
                 if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
@@ -95,8 +105,20 @@ function LevelLayerI:ctor()
     end
 end
 
-function LevelLayerI:onLevelButtonClicked()
-    s_logd('on LevelButtonClicked')
+function LevelLayerI:onLevelButtonClicked(levelTag)
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
+    -- check level type
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..levelTag)
+    if levelConfig['type'] == 0 then  -- normal level
+        local popupNormal = require('popup.PopupNormalLevel')
+        local layer = popupNormal.create()
+        s_SCENE:popup(layer)
+    elseif levelConfig['type'] == 1 then -- summaryboss level
+        -- check whether summary boss level can be played (starcount)
+        local popupSummary = require('popup.PopupSummarySuccess')
+        local layer = popupSummary.create()
+        s_SCENE:popup(layer)
+    end
 end
 
 return LevelLayerI
