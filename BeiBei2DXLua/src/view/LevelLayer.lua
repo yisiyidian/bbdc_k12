@@ -37,7 +37,11 @@ function LevelLayer:ctor()
       local levelStypeI = require('view.level.LevelLayerI')
       local levelLayer1 = levelStypeI.create()
       --self:addChild(levelLayer1)
-     
+      local currentLevelButton = levelLayer1.ccbLevelLayerI['levelSet']:getChildByName('level1')
+      local player = cc.Sprite:create('image/gril_head.png')
+      player:setPosition(50,20)
+      player:setScale(0.5)
+      currentLevelButton:addChild(player)
 --    -- initialize chapter 2
 --    ccbLevelLayer2['onLevelButtonClicked'] = self.onLevelButtonClicked
 --    local proxy2 = cc.CCBProxy:create()
