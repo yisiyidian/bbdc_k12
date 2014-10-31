@@ -1,0 +1,36 @@
+{
+"skeleton": { "spine": "1.9.17", "hash": "EkitiPoYD1Lg/lK971mPo+McwDE", "width": 75.76, "height": 81.16 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": 36.96, "y": 46.74 }
+],
+"slots": [
+	{ "name": "xuanxiaoguan1_2", "bone": "root", "attachment": "xuanxiaoguan1_2" },
+	{ "name": "xuanxiaoguan1_1", "bone": "bone", "attachment": "xuanxiaoguan1_1" }
+],
+"skins": {
+	"default": {
+		"xuanxiaoguan1_1": {
+			"xuanxiaoguan1_1": { "x": -1.04, "y": 0.29, "width": 71, "height": 62 }
+		},
+		"xuanxiaoguan1_2": {
+			"xuanxiaoguan1_2": { "x": 44.95, "y": 26.55, "width": 56, "height": 54 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.2, "angle": 25.28, "curve": "stepped" },
+					{ "time": 1.3333, "angle": 25.28 },
+					{ "time": 2.5666, "angle": 0, "curve": "stepped" },
+					{ "time": 2.9333, "angle": 0 }
+				]
+			}
+		}
+	}
+}
+}

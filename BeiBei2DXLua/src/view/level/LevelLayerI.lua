@@ -59,6 +59,35 @@ function plotLevelStar(levelButton, heart)
     levelButton:addChild(star3, 5)
 end
 
+function LevelLayerI:plotLevelDecoration()
+    for i = 0, 11 do
+        local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..i)
+        if i % 5 == 0 then
+            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
+            deco:addAnimation(0,'animation',true)
+            deco:setPosition(70,90)
+            levelButton:addChild(deco)
+        elseif i % 5 == 1 then
+            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
+            deco:addAnimation(0,'animation',true)
+            deco:setPosition(-10,40)
+            levelButton:addChild(deco)
+        elseif i % 5 == 2 then
+            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
+            deco:addAnimation(0,'animation',true)
+            deco:setPosition(0,60)
+            levelButton:addChild(deco)
+        elseif i % 5 == 3 then
+            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
+            deco:addAnimation(0,'animation',true)
+            deco:setPosition(60,40)
+            levelButton:addChild(deco)
+        elseif i % 5 == 4 then
+
+        end
+    end
+end
+
 function LevelLayerI:ctor()
     self.ccbLevelLayerI = {}
     self.ccbLevelLayerI['onLevelButtonClicked'] = 
@@ -76,7 +105,7 @@ function LevelLayerI:ctor()
     end
     self:setContentSize(contentNode:getContentSize())
     self:addChild(contentNode)
-    
+    self:plotLevelDecoration()
 --    local back = sp.SkeletonAnimation:create("spine/3fxzls  xuanxiaoguan  diaoluo.json", "spine/3fxzls  xuanxiaoguan  diaoluo.atlas", 1)
 --    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
 --    self:addChild(back)      
@@ -85,7 +114,7 @@ function LevelLayerI:ctor()
     local levelConfig = s_DATA_MANAGER.level_ncee
     for i = 1, #levelConfig do
         if levelConfig[i]['chapter_key'] == 'Chapter0' then
-            --s_logd('%s, %s, %s',levelConfig[i]['chapter_key'],levelConfig[i]['type'],levelConfig[i]['level_key'])
+            -- change button image
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
             if string.format('%s',levelConfig[i]['type']) == '1' then
                 if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then

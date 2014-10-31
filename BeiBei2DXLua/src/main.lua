@@ -50,15 +50,15 @@ local function main()
 --     s_SCENE:replaceGameLayer(layer)
 
 
---   local StartViewLayer = require('view.StartViewLayer')
---   local layer = StartViewLayer.create()
---   layer:setAnchorPoint(0.5, 0)
---   layer:setPosition(s_LEFT_X, 0)
---   s_SCENE:replaceGameLayer(layer)
+   local StartViewLayer = require('view.StartViewLayer')
+   local layer = StartViewLayer.create()
+   layer:setAnchorPoint(0.5, 0)
+   layer:setPosition(s_LEFT_X, 0)
+   s_SCENE:replaceGameLayer(layer)
 
 
-     local example = require("example.example")
-     test()
+--     local example = require("example.example")
+--     test()
       -- local level = require('view/LevelLayer.lua')
       -- layer = level.create()
       -- s_SCENE:replaceGameLayer(layer)

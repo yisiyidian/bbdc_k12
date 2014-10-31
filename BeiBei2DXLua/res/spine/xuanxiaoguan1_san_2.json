@@ -1,0 +1,41 @@
+{
+"skeleton": { "spine": "1.9.17", "hash": "703nCM4UomQcdzlltQ0JcCnNRXA", "width": 86.5, "height": 77 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": 14.57, "y": 52.5 }
+],
+"slots": [
+	{ "name": "xuanxiaoguan1_san_2_2", "bone": "root", "attachment": "xuanxiaoguan1_san_2_2" },
+	{ "name": "xuanxiaoguan1_san_2_1", "bone": "bone", "attachment": "xuanxiaoguan1_san_2_1" }
+],
+"skins": {
+	"default": {
+		"xuanxiaoguan1_san_2_1": {
+			"xuanxiaoguan1_san_2_1": { "x": 19.92, "y": -12.5, "width": 69, "height": 74 }
+		},
+		"xuanxiaoguan1_san_2_2": {
+			"xuanxiaoguan1_san_2_2": { "x": 47.49, "y": 25.99, "width": 78, "height": 52 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.2, "angle": -12.14 },
+					{ "time": 2.3, "angle": 0, "curve": "stepped" },
+					{ "time": 2.5, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 1.2, "x": 3.73, "y": 2.46 },
+					{ "time": 2.3, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2.5, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}
