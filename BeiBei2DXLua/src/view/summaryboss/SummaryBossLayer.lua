@@ -29,6 +29,10 @@ function SummaryBossLayer.create()
     layer.currentIndex = 1
     layer.crab = {}
     layer.ccbcrab = {}
+    layer.hintTime = 0
+    layer.isPaused = false
+    layer.isHinting = false
+    
     
     local startAtNode
 
@@ -51,6 +55,25 @@ function SummaryBossLayer.create()
     layer:initBossLayer()
     layer:initMap()
     
+    --update
+    local function update(delta)
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock then
+            return
+        end
+        
+        if layer.hintTime < 10 or layer.isPaused then
+            if layer.hintTime >= 8 and layer.isPaused then
+                layer.hintTime = 8
+            else
+                layer.hintTime = layer.hintTime + delta
+            end
+        elseif not layer.isPaused and not layer.isHinting then
+            s_logd('hint')
+            layer:hint()
+        end
+    end
+    layer:scheduleUpdateWithPriorityLua(update, 0)
+    
     -- handing touch events
     onTouchBegan = function(touch, event)
         if layer.globalLock then
@@ -65,6 +88,7 @@ function SummaryBossLayer.create()
         layer:checkTouchLocation(location)
         
         if layer.onNode then
+            layer.isPaused = true
             for i = 1, 5 do
                 for j = 1,5 do
                     layer.coconut[i][j]:stopAllActions()
@@ -89,6 +113,7 @@ function SummaryBossLayer.create()
         
         for i = 1,#layer.wordPool[layer.currentIndex] do
             if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) then
+                layer.isPaused = true
                 layer.ccbcrab[i]['boardBig']:setVisible(true)
                 layer.ccbcrab[i]['boardSmall']:setVisible(false)
                 layer.ccbcrab[i]['legBig']:setVisible(true)
@@ -104,7 +129,9 @@ function SummaryBossLayer.create()
                 end
             end
         end
-        
+        if layer.isPaused then
+            layer.isHinting = false
+        end
         -- CCTOUCHBEGAN event must return true
         return true
     end
@@ -207,6 +234,8 @@ function SummaryBossLayer.create()
     end
 
     onTouchEnded = function(touch, event)
+        
+        layer.isPaused = false
         if layer.globalLock then
             return
         end
@@ -238,6 +267,7 @@ function SummaryBossLayer.create()
             if layer.crabOnView[i] then
                 if selectWord == layer.wordPool[layer.currentIndex][i] then
                     killedCrabCount = killedCrabCount + 1
+                    layer.hintTime = 0
                     match = true
                     layer.crabOnView[i] = false
                     layer.currentBlood = layer.currentBlood - #selectStack
@@ -384,6 +414,7 @@ function SummaryBossLayer:initBossLayer()
     self.currentBlood = self.totalBlood
     self.totalTime = 40
     self.onCrab = 0
+    self.isLose = false
 
     --add back
     local blueBack = cc.LayerColor:create(cc.c4b(52, 177, 240, 255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
@@ -443,6 +474,7 @@ function SummaryBossLayer:initBossLayer()
         bossAction[#bossAction + 1] = cc.Spawn:create(move,moveAnimation)
     end
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
+        self.isLose = true
         self:lose()
     end,{})
     boss:runAction(cc.Sequence:create(bossAction))
@@ -600,6 +632,7 @@ function SummaryBossLayer:initMap()
     self:initStartIndex()
     self.coconut = {}
     self.isFirst = {}
+    self.isCrab = {}
     for i = 1, #self.crab do
         self.crab[i]:removeFromParent()
     end
@@ -617,13 +650,16 @@ function SummaryBossLayer:initMap()
     for i = 1, 5 do
         self.coconut[i] = {}
         self.isFirst[i] = {}
+        self.isCrab[i] = {}
         for j = 1, 5 do
             local randomIndex = math.random(1, #charaster_set_filtered)
             self.isFirst[i][j] = 0
+            self.isCrab[i][j] = 0
             if #self.wordPool[self.currentIndex] == 1 then
                 local diff = main_logic_mat[i][j] - self.startIndexPool[1]
                 if diff >= 0 and diff < string.len(self.wordPool[self.currentIndex][1]) then
                     self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
+                    self.isCrab[i][j] = 1
                     if diff == 0 then
                         self.coconut[i][j].firstStyle()
                         self.isFirst[i][j] = 1
@@ -637,8 +673,10 @@ function SummaryBossLayer:initMap()
                 local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
                     self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
                     self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    self.isCrab[i][j] = 2
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
                     self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
@@ -657,10 +695,13 @@ function SummaryBossLayer:initMap()
                 local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
                     self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
                     self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    self.isCrab[i][j] = 2
                 elseif diff3 >= 0 and diff3 < string.len(self.wordPool[self.currentIndex][3]) then
                     self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
+                    self.isCrab[i][j] = 3
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
                     self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
@@ -750,6 +791,27 @@ function SummaryBossLayer:lose()
     local alter = SummaryBossAlter.create(false)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
+end
+
+function SummaryBossLayer:hint()
+    self.isHinting = true
+    local num = math.random(1,#self.wordPool[self.currentIndex])
+    local index = 1
+    for i = 1, #self.wordPool[self.currentIndex] do
+        if self.crabOnView[i] then
+            index = i
+            break
+        end
+    end
+    s_logd('x = %d',index)
+    for i = 1, 5 do
+        for j = 1, 5 do
+            if self.isCrab[i][j] == index then
+                self.coconut[i][j]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
+            end
+        end
+    end
+    
 end
 
 return SummaryBossLayer
