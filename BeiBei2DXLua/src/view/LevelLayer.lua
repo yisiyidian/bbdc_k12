@@ -78,7 +78,7 @@ function LevelLayer:ctor()
         --contentNode1:setPosition(0,2470)
         --contentNode2:addChild(contentNode)
         --contentNode2:addChild(contentNode1)
-        --scrollViewNode:scrollToPercentHorizontal(14,0,true)
+        --scrollViewNode:scrollToPercentVertical(14,0,true)
         --scrollViewNode:setContentOffset(100)
         
 --        local position = contentNode1:getContentSize()
