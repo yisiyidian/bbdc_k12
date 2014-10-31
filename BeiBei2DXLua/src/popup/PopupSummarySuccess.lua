@@ -1,7 +1,4 @@
 
-ccbPopupSummarySuccess = ccbPopupSummarySuccess or {}
-ccb['popup_summary_success'] = ccbPopupSummarySuccess
-
 local PopupSummarySuccess = class('PopupSummarySuccess', function()
     return cc.Layer:create()
 end)
@@ -12,11 +9,14 @@ function PopupSummarySuccess:create()
 end
 
 function PopupSummarySuccess:ctor()
-    ccbPopupSummarySuccess['onCloseButtonClicked'] = self.onCloseButtonClicked
-    ccbPopupSummarySuccess['onGoButtonClicked'] = self.onGoButtonClicked
-
+    self.ccbPopupSummarySuccess = {}
+    self.ccbPopupSummarySuccess['onCloseButtonClicked'] = self.onCloseButtonClicked
+    self.ccbPopupSummarySuccess['onGoButtonClicked'] = self.onGoButtonClicked
+    
+    self.ccb = {}
+    self.ccb['popup_summary_success'] = self.ccbPopupSummarySuccess
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('res/ccb/popup_summary_success.ccbi',proxy,ccbPopupSummarySuccess)
+    local node = CCBReaderLoad('res/ccb/popup_summary_success.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
 
     -- run action
     node:setPosition(0, 200)

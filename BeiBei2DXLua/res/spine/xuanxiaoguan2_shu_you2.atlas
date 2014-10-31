@@ -1,0 +1,27 @@
+
+xuanxiaoguan2_shu_you2.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yezishuxuanxiaoguan1_shu2_1
+  rotate: false
+  xy: 2, 32
+  size: 110, 84
+  orig: 110, 84
+  offset: 0, 0
+  index: -1
+yezishuxuanxiaoguan1_shu2_2
+  rotate: true
+  xy: 2, 2
+  size: 28, 55
+  orig: 28, 55
+  offset: 0, 0
+  index: -1
+yezishuxuanxiaoguan1_shu2_3
+  rotate: true
+  xy: 59, 10
+  size: 20, 42
+  orig: 20, 42
+  offset: 0, 0
+  index: -1

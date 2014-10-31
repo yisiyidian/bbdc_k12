@@ -1,0 +1,83 @@
+
+3fxzls  xuanxiaoguan  diaoluo.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bai eye
+  rotate: false
+  xy: 195, 255
+  size: 39, 18
+  orig: 39, 18
+  offset: 0, 0
+  index: -1
+erduo
+  rotate: false
+  xy: 273, 396
+  size: 144, 111
+  orig: 144, 111
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 88
+  size: 159, 157
+  orig: 159, 157
+  offset: 0, 0
+  index: -1
+foot
+  rotate: false
+  xy: 2, 377
+  size: 269, 130
+  orig: 269, 130
+  offset: 0, 0
+  index: -1
+lift eye
+  rotate: false
+  xy: 419, 424
+  size: 43, 44
+  orig: 43, 44
+  offset: 0, 0
+  index: -1
+liuhai
+  rotate: true
+  xy: 195, 275
+  size: 100, 44
+  orig: 100, 44
+  offset: 0, 0
+  index: -1
+moutch
+  rotate: false
+  xy: 419, 470
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+right
+  rotate: false
+  xy: 115, 42
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+toufa
+  rotate: false
+  xy: 2, 247
+  size: 191, 128
+  orig: 191, 128
+  offset: 0, 0
+  index: -1
+yingzi
+  rotate: false
+  xy: 2, 2
+  size: 111, 84
+  orig: 111, 84
+  offset: 0, 0
+  index: -1
+youbaieye
+  rotate: true
+  xy: 163, 205
+  size: 40, 18
+  orig: 40, 18
+  offset: 0, 0
+  index: -1
