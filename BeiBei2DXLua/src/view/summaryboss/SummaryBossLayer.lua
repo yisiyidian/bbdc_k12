@@ -60,7 +60,7 @@ function SummaryBossLayer.create()
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock then
             return
         end
-        
+        --
         if layer.hintTime < 10 or layer.isPaused then
             if layer.hintTime >= 8 and layer.isPaused then
                 layer.hintTime = 8
