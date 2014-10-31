@@ -3,6 +3,7 @@ require("Cocos2dConstants")
 require("common.global")
 
 local SummaryBossAlter = require("view.summaryboss.SummaryBossAlter")
+local Pause = require("view.Pause")
 
 local FlipNode = require("view.mat.FlipNode")
 
@@ -439,6 +440,28 @@ function SummaryBossLayer:initBossLayer()
     local blink = cc.Sequence:create(blinkIn,blinkOut)
     local repeatBlink = cc.Repeat:create(blink,math.ceil(self.totalTime * 0.1))
     blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
+    
+    --add pauseButton
+    local menu = cc.Menu:create()
+    self:addChild(menu)
+    local pauseBtn = cc.MenuItemImage:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    pauseBtn:ignoreAnchorPointForPosition(false)
+    pauseBtn:setAnchorPoint(0,1)
+    menu:setPosition(0, s_DESIGN_HEIGHT)
+    menu:addChild(pauseBtn)
+
+    local function pauseScene(sender)
+        local pauseLayer = Pause.create()
+        pauseLayer:setPosition(s_LEFT_X, 0)
+        self:addChild(pauseLayer,1000)
+        -- Pause actions
+        local director = cc.Director:getInstance()
+        local pausedTargets = director:getActionManager():pauseAllRunningActions()
+
+        -- Resume actions
+        --director:getActionManager():resumeTargets(pausedTargets)
+    end
+    pauseBtn:registerScriptTapHandler(pauseScene)
     
     --add girl
     local girl = sp.SkeletonAnimation:create("spine/summaryboss/girl-stand.json","spine/summaryboss/girl-stand.atlas",1)
