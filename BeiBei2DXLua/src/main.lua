@@ -44,9 +44,10 @@ local function main()
 
     local example = require("example.example")
     test()
-      -- local level = require('view/LevelLayer.lua')
-      -- layer = level.create()
-      -- s_SCENE:replaceGameLayer(layer)
+--     s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+--     local level = require('view/LevelLayer.lua')
+--     layer = level.create()
+--     s_SCENE:replaceGameLayer(layer)
 end
 
 
