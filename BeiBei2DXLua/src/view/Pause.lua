@@ -10,10 +10,16 @@ ccbPause = ccbPause or {}
 
 function Pause.create()
     local layer = Pause.new()
+    
     return layer
 end
 
 function Pause:ctor()
+    -- Pause actions
+    local director = cc.Director:getInstance()
+    self.targets = director:getActionManager():pauseAllRunningActions()
+    s_logd(#self.targets)
+    
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     self:addChild(back)
@@ -40,15 +46,16 @@ function Pause:ctor()
     
     ccbPause['soundOff']:setVisible(false)
     ccbPause['musicOff']:setVisible(false)
-    local  pDirector = cc.Director:getInstance()
-    pDirector:getActionManager():addAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))),ccbPause['mask'],true)
-    --ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
+    ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
     
 end
 
 function Pause:onClose()
     local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)))
     local remove = cc.CallFunc:create(function() 
+        local director = cc.Director:getInstance()
+        director:getActionManager():resumeTargets(ccbPause['Layer'].targets)
+        ccbPause['Layer']:getParent().layerPaused = false
         ccbPause['Layer']:removeFromParent()
     end,{})
     ccbPause['mask']:runAction(cc.Sequence:create(move,remove))

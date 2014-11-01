@@ -58,10 +58,12 @@ function SummaryBossLayer.create()
     
     --update
     local function update(delta)
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock then
+        
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
             return
         end
-        --
+        
+        --s_logd(layer.hintTime)
         if layer.hintTime < 10 or layer.isPaused then
             if layer.hintTime >= 8 and layer.isPaused then
                 layer.hintTime = 8
@@ -69,7 +71,7 @@ function SummaryBossLayer.create()
                 layer.hintTime = layer.hintTime + delta
             end
         elseif not layer.isPaused and not layer.isHinting then
-            s_logd('hint')
+            
             layer:hint()
         end
     end
@@ -416,6 +418,7 @@ function SummaryBossLayer:initBossLayer()
     self.totalTime = 40
     self.onCrab = 0
     self.isLose = false
+    self.layerPaused = false 
 
     --add back
     local blueBack = cc.LayerColor:create(cc.c4b(52, 177, 240, 255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
@@ -451,14 +454,11 @@ function SummaryBossLayer:initBossLayer()
     menu:addChild(pauseBtn)
 
     local function pauseScene(sender)
-        local pauseLayer = Pause.create()
+        
+        local pauseLayer = Pause.create(pausedTargets)
         pauseLayer:setPosition(s_LEFT_X, 0)
         self:addChild(pauseLayer,1000)
-        -- Pause actions
-        local director = cc.Director:getInstance()
-        local pausedTargets = director:getActionManager():pauseAllRunningActions()
-
-        -- Resume actions
+        self.layerPaused = true
         --director:getActionManager():resumeTargets(pausedTargets)
     end
     pauseBtn:registerScriptTapHandler(pauseScene)
@@ -477,9 +477,12 @@ function SummaryBossLayer:initBossLayer()
     self:addChild(readyGo,100)
     
     --add boss
+    local bossNode = cc.Node:create()
+    bossNode:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
+    self:addChild(bossNode)
     local boss = sp.SkeletonAnimation:create("spine/summaryboss/klswangqianzou.json","spine/summaryboss/klswangqianzou.atlas",1)
-    boss:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
-    self:addChild(boss)
+    boss:setPosition(0,0)
+    bossNode:addChild(boss)
     boss:setAnimation(0,'a2',true)
     local bossAction = {}
     bossAction[1] = cc.DelayTime:create(2.3)
@@ -500,7 +503,7 @@ function SummaryBossLayer:initBossLayer()
         self.isLose = true
         self:lose()
     end,{})
-    boss:runAction(cc.Sequence:create(bossAction))
+    bossNode:runAction(cc.Sequence:create(bossAction))
     local bloodBack = cc.Sprite:create("image/summarybossscene/summaryboss_blood_back.png")
     bloodBack:setPosition(100,215)
     boss:addChild(bloodBack)
