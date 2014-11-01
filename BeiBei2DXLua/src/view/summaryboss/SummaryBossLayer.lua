@@ -79,7 +79,7 @@ function SummaryBossLayer.create()
     
     -- handing touch events
     onTouchBegan = function(touch, event)
-        if layer.globalLock then
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
             return true
         end
         
@@ -140,8 +140,8 @@ function SummaryBossLayer.create()
     end
 
     onTouchMoved = function(touch, event)
-        if layer.globalLock then
-            return
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
+            return true
         end
     
         local length_gap = 3.0
@@ -243,7 +243,7 @@ function SummaryBossLayer.create()
             return
         end
         
-        s_logd(layer.onCrab)
+        --s_logd(layer.onCrab)
         if layer.onCrab > 0 then
 
             layer.ccbcrab[layer.onCrab]['boardBig']:setVisible(false)
@@ -454,8 +454,10 @@ function SummaryBossLayer:initBossLayer()
     menu:addChild(pauseBtn)
 
     local function pauseScene(sender)
-        
-        local pauseLayer = Pause.create(pausedTargets)
+        if self.currentBlood <= 0 or self.isLose or self.globalLock or self.layerPaused then
+            return
+        end
+        local pauseLayer = Pause.create()
         pauseLayer:setPosition(s_LEFT_X, 0)
         self:addChild(pauseLayer,1000)
         self.layerPaused = true
