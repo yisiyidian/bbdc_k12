@@ -1,0 +1,62 @@
+
+bb_hello_public.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bb_hello_1
+  rotate: false
+  xy: 2, 134
+  size: 175, 370
+  orig: 175, 370
+  offset: 0, 0
+  index: -1
+bb_hello_2
+  rotate: false
+  xy: 2, 506
+  size: 175, 374
+  orig: 175, 374
+  offset: 0, 0
+  index: -1
+bb_hello_3
+  rotate: false
+  xy: 343, 505
+  size: 157, 375
+  orig: 157, 375
+  offset: 0, 0
+  index: -1
+bb_hello_4
+  rotate: false
+  xy: 179, 499
+  size: 162, 381
+  orig: 162, 381
+  offset: 0, 0
+  index: -1
+bb_hello_5
+  rotate: true
+  xy: 502, 570
+  size: 153, 378
+  orig: 153, 378
+  offset: 0, 0
+  index: -1
+bb_hello_6
+  rotate: true
+  xy: 502, 725
+  size: 155, 377
+  orig: 155, 377
+  offset: 0, 0
+  index: -1
+bb_hello_7
+  rotate: false
+  xy: 179, 121
+  size: 153, 376
+  orig: 153, 376
+  offset: 0, 0
+  index: -1
+bb_hello_8
+  rotate: true
+  xy: 502, 415
+  size: 153, 377
+  orig: 153, 377
+  offset: 0, 0
+  index: -1

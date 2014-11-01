@@ -62,26 +62,34 @@ end
 function LevelLayerI:plotLevelDecoration()
     for i = 0, 11 do
         local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..i)
-        if i % 5 == 0 then
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..i)
+        if levelConfig['type'] == 1 then
+            -- add summary boss
+            local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+            summaryboss:setPosition(0,10)
+            summaryboss:addAnimation(0, 'animation',true)
+            summaryboss:setScale(0.7)
+            levelButton:addChild(summaryboss, 3)
+        elseif i % 5 == 0 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(70,90)
-            levelButton:addChild(deco)
+            levelButton:addChild(deco, 3)
         elseif i % 5 == 1 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(-10,40)
-            levelButton:addChild(deco)
+            levelButton:addChild(deco, 3)
         elseif i % 5 == 2 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(0,60)
-            levelButton:addChild(deco)
+            levelButton:addChild(deco, 3)
         elseif i % 5 == 3 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(60,40)
-            levelButton:addChild(deco)
+            levelButton:addChild(deco, 3)
         elseif i % 5 == 4 then
 
         end
@@ -117,7 +125,7 @@ function LevelLayerI:ctor()
             -- change button image
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
             if string.format('%s',levelConfig[i]['type']) == '1' then
-                if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
+                if not isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
                 else
