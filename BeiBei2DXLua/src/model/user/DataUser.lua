@@ -59,4 +59,12 @@ function DataUser:parseServerData(data)
     end
 end
 
+function DataUser:getUserLevelData(chapterKey, levelKey)
+    for i = 1, #self.levels do
+        if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
+            return self.levels[i]
+        end
+    end
+end
+
 return DataUser
