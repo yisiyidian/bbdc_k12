@@ -45,6 +45,11 @@ function StartViewLayer:onPlay()
         s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message .. ', ' .. description)
     end
     s_UserBaseServer.login('yehanjie1', '111111', onSucceed, onFailed)
+
+    -- cx.CXAvos:getInstance():logIn('yehanjie1', '111111', function (u, e)
+    --     if u ~= nil then print('logIn:' .. u) end
+    --     if e ~= nil then print('logIn:' .. e) end
+    -- end)
 end
 
 function StartViewLayer:onSignUp()

@@ -57,5 +57,29 @@ extern "C"
 		env->ReleaseStringUTFChars(filename, nativeString_filename);
 		env->ReleaseStringUTFChars(error, nativeString_error);
 	}
+
+    void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionSU(JNIEnv *env, jobject thisz,
+            jstring objectjson, jstring error)
+    {
+        const char *nativeString_objectjson = env->GetStringUTFChars(objectjson, 0);
+        const char *nativeString_error = env->GetStringUTFChars(error, 0);
+
+        CXAvos::getInstance()->invokeLuaCallbackFunction_su(nativeString_objectjson, nativeString_error);
+
+        env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
+        env->ReleaseStringUTFChars(error, nativeString_error);
+    }
+
+    void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionLI(JNIEnv *env, jobject thisz,
+            jstring objectjson, jstring error)
+    {
+        const char *nativeString_objectjson = env->GetStringUTFChars(objectjson, 0);
+        const char *nativeString_error = env->GetStringUTFChars(error, 0);
+
+        CXAvos::getInstance()->invokeLuaCallbackFunction_li(nativeString_objectjson, nativeString_error);
+
+        env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
+        env->ReleaseStringUTFChars(error, nativeString_error);
+    }
 }
 

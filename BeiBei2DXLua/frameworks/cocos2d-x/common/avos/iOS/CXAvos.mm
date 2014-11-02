@@ -21,7 +21,9 @@ CXAvos* CXAvos::getInstance() {
 }
 
 CXAvos::CXAvos()
-: mLuaHandlerId_dl(0) {
+: mLuaHandlerId_dl(0)
+, mLuaHandlerId_signUp(0)
+, mLuaHandlerId_logIn(0) {
     
 }
 
@@ -46,10 +48,8 @@ void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC 
     }];
 }
 
-void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved)
-{
-    if (mLuaHandlerId_dl > 0)
-    {
+void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved) {
+    if (mLuaHandlerId_dl > 0) {
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();
         stack->pushString(objectId);
@@ -59,4 +59,47 @@ void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* file
         stack->executeFunctionByHandler(mLuaHandlerId_dl, 4);
         stack->clean();
     }
+}
+
+void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandler) {
+    mLuaHandlerId_signUp = nHandler;
+    AVUser* user = [AVUser user];
+    user.username = [NSString stringWithUTF8String:username];
+    user.password = [NSString stringWithUTF8String:password];
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        invokeLuaCallbackFunction_su(user ? user.description.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
+    }];
+}
+
+void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* error) {
+    if (mLuaHandlerId_signUp > 0) {
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(objectjson);
+        stack->pushString(error);
+        stack->executeFunctionByHandler(mLuaHandlerId_signUp, 2);
+        stack->clean();
+    }
+}
+
+void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandler) {
+    mLuaHandlerId_logIn = nHandler;
+    [AVUser logInWithUsernameInBackground:[NSString stringWithUTF8String:username] password:[NSString stringWithUTF8String:password] block:^(AVUser *user, NSError *error) {
+        invokeLuaCallbackFunction_li(user ? user.description.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
+    }];
+}
+
+void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* error) {
+    if (mLuaHandlerId_logIn > 0) {
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(objectjson);
+        stack->pushString(error);
+        stack->executeFunctionByHandler(mLuaHandlerId_logIn, 2);
+        stack->clean();
+    }
+}
+
+void CXAvos::logOut() {
+    [AVUser logOut];
 }

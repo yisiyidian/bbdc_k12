@@ -7,6 +7,14 @@ local UserBaseServer = {}
 
 ---------------------------------------------------------------------------------------------------------------------
 
+-- function validateUsername(s)
+--     return string.match(s, "[a-zA-Z\u4e00-\u9fa5][a-zA-Z0-9\u4e00-\u9fa5]{3,14}+")
+-- end
+
+-- function validatePassword(s)
+--     return string.match(s, "^[\\x00-\\x7F]{6,16}$")
+-- end
+
 function UserBaseServer.signup(username, password, onSucceed, onFailed)
     s_SERVER.request('apiSignUp', {['username']=username, ['password']=password}, onSucceed, onFailed)
 end
