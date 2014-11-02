@@ -56,4 +56,21 @@ end
 
 -- CQL <<<
 
+---------------------------------------------------------------------------------------------------------------------
+
+function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFailed)
+    local s = function (api, result)
+        for i, v in ipairs(result.results) do
+            parseServerDataToUserData(v, dataObject)
+        end
+        if onSucceed ~= nil then onSucceed(api, result) end
+    end
+    dataObject.userId = s_CURRENT_USER.objectId
+    if string.len(dataObject.objectId) <= 0 then
+        s_SERVER.createData(dataObject, onSucceed, onFailed)
+    else
+        s_SERVER.updateData(dataObject, onSucceed, onFailed)
+    end
+end
+
 return UserBaseServer
