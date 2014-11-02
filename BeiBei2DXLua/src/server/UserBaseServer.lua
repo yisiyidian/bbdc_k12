@@ -27,7 +27,14 @@ curl -X GET \
 ]]--
 
 ----
-
+--[[
+s_UserBaseServer.dailyCheckInOfCurrentUser( 
+   function (api, result)
+       s_CURRENT_USER:parseServerDailyCheckInData(result.results)
+   end,
+   function (api, code, message, description) end
+)
+]]--
 function UserBaseServer.dailyCheckInOfCurrentUser(onSucceed, onFailed)
     local cql = "select * from WMAV_DailyCheckInData where userId='" .. s_CURRENT_USER.userId .. "'"
     s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
@@ -36,12 +43,30 @@ end
 ----
 
 -- who I follow
+--[[
+s_UserBaseServer.getFolloweesOfCurrentUser( 
+    function (api, result)
+        parseServerFolloweesData(result.results)
+    end,
+    function (api, code, message, description)
+    end
+)
+]]--
 function UserBaseServer.getFolloweesOfCurrentUser(onSucceed, onFailed)
     local cql = string.format("select include followee from _Followee where user=pointer('_User', '%s')", s_CURRENT_USER.userId)
     s_SERVER.CloudQueryLanguageExtend('followee', cql, onSucceed, onFailed)
 end
 
 -- who follow me
+--[[
+s_UserBaseServer.getFollowersOfCurrentUser( 
+    function (api, result)
+        parseServerFollowersData(result.results)
+    end,
+    function (api, code, message, description)
+    end
+)
+]]--
 function UserBaseServer.getFollowersOfCurrentUser(onSucceed, onFailed)
     local cql = string.format("select include follower from _Follower where user=pointer('_User', '%s')", s_CURRENT_USER.userId)
     s_SERVER.CloudQueryLanguageExtend('follower', cql, onSucceed, onFailed)
@@ -79,6 +104,15 @@ function UserBaseServer.getLevels(userId, bookKey, onSucceed, onFailed)
     s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
 end
 
+--[[
+s_UserBaseServer.getLevelsOfCurrentUser(
+    function (api, result)
+        s_CURRENT_USER:parseServerLevelData(result.results)
+    end,
+    function (api, code, message, description)
+    end
+)
+]]--
 function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
     UserBaseServer.getLevels(s_CURRENT_USER.userId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
 end

@@ -4,7 +4,30 @@ local HttpRequestClient = {}
 
 -- CQL >>>
 
-
+-- callbackFunc: function (index, title, content)
+function HttpRequestClient.getBulletinBoard(callbackFunc)
+    local retIdx = -1
+    local retTitle = ''
+    local retContent = ''
+    local onSucceed = function (api, result)
+        for i, v in ipairs(result.results) do
+            local idx = v["index"]
+            local t = v["content_top"]
+            local ct = v["content"]
+            if idx > retIdx then
+                retIdx = idx
+                retTitle = t
+                retContent = ct
+            end
+        end
+        if callbackFunc ~= nil then callbackFunc(retIdx, retTitle, retContent) end
+    end
+    local onFailed = function (api, code, message, description)
+        if callbackFunc ~= nil then callbackFunc(retIdx, retTitle, retContent) end
+    end
+    local cql = "select * from WMAV_BulletinBoard"
+    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+end
 
 -- CQL <<<
 

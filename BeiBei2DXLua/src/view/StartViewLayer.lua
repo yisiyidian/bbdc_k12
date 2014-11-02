@@ -31,42 +31,14 @@ function StartViewLayer:onPlay()
             function (api, result)
                 s_CURRENT_USER:parseServerLevelData(result.results)
                 
-                 s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
-                 local level = require('view/LevelLayer.lua')
-                 layer = level.create()
-                 s_SCENE:replaceGameLayer(layer)
+                s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+                local level = require('view/LevelLayer.lua')
+                layer = level.create()
+                s_SCENE:replaceGameLayer(layer)
             end,
             function (api, code, message, description)
             end
         )
-
--- DONE
-        -- s_UserBaseServer.dailyCheckInOfCurrentUser( 
-        --    function (api, result)
-        --        s_CURRENT_USER:parseServerDailyCheckInData(result.results)
-        --    end,
-        --    function (api, code, message, description) end
-        -- )
-        
--- DONE        
-        -- s_UserBaseServer.getFolloweesOfCurrentUser( 
-        --     function (api, result)
-        --         parseServerFolloweesData(result.results)
-        --     end,
-        --     function (api, code, message, description)
-        --     end
-        -- )
-
--- DONE
-        -- s_UserBaseServer.getFollowersOfCurrentUser( 
-        --     function (api, result)
-        --         parseServerFollowersData(result.results)
-        --     end,
-        --     function (api, code, message, description)
-        --     end
-        -- )
-
-        
         
     end 
     local function onFailed(api, code, message, description)
