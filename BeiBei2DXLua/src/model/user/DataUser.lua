@@ -32,6 +32,8 @@ function DataUser:ctor()
     self.friendsCount                      = 0 
     self.fans                              = {}
     self.friends                           = {}
+    self.followees                         = {} -- who I follow
+    self.followers                         = {} -- who follow me
 
     self.currentWordsIndex                 = 0 
     self.currentChapterIndex               = 0 
@@ -56,6 +58,48 @@ function DataUser:parseServerData(data)
         if nil ~= data[key] then
             self[key] = data[key]
         end
+    end
+end
+
+function DataUser:parseServerLevelData(results)
+    local DataLevel = require('model.user.DataLevel')
+    self.levels = {}
+    for i, v in ipairs(results) do
+        local data = DataLevel.create()
+        parseServerDataToUserData(v, data)
+        self.levels[i] = data
+        print_lua_table(data)
+    end
+end
+
+function DataUser:parseServerDailyCheckInData(results)
+    local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
+   self.dailyCheckInData = {}
+   for i, v in ipairs(results) do
+       local data = DataDailyCheckIn.create()
+       parseServerDataToUserData(v, data)
+       self.dailyCheckInData[i] = data
+       print_lua_table(data)
+   end 
+end
+
+-- who I follow
+function DataUser:parseServerFolloweesData(results)
+    self.followees = {}
+    for i, v in ipairs(results) do
+        local data = DataUser.create()
+        parseServerDataToUserData(v.followee, data)
+        self.followees[i] = data
+    end
+end
+
+-- who follow me
+function DataUser:parseServerFollowersData(results)
+    self.followers = {}
+    for i, v in ipairs(results) do
+        local data = DataUser.create()
+        parseServerDataToUserData(v.follower, data)
+        self.followers[i] = data
     end
 end
 

@@ -52,6 +52,8 @@ local function _initTool()
 
     require('common.utils')
     require("AudioMgr")
+
+    DEBUG_PRINT_LUA_TABLE = true
 end
 
 local function _initScene()

@@ -4,18 +4,7 @@ local HttpRequestClient = {}
 
 -- CQL >>>
 
---[[
-curl -X GET \
-  -H "X-AVOSCloud-Application-Id: 9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l" \
-  -H "X-AVOSCloud-Application-Key: 8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg" \
-  -G \
-  --data-urlencode 'cql=select * from _User where username="yehanjie1"' \
-  https://leancloud.cn/1.1/cloudQuery
-]]--
-function HttpRequestClient.searchUserByUserName(username, onSucceed, onFailed)
-    local cql = "select * from _User where username='" .. username
-    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
-end
+
 
 -- CQL <<<
 
