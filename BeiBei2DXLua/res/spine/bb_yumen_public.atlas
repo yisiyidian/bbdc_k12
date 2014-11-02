@@ -1,0 +1,69 @@
+
+bb_yumen_public.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bb_pangxie
+  rotate: false
+  xy: 2, 2
+  size: 36, 32
+  orig: 36, 32
+  offset: 0, 0
+  index: -1
+bb_yumen_1
+  rotate: false
+  xy: 162, 411
+  size: 156, 355
+  orig: 156, 355
+  offset: 0, 0
+  index: -1
+bb_yumen_2
+  rotate: true
+  xy: 320, 623
+  size: 143, 367
+  orig: 143, 367
+  offset: 0, 0
+  index: -1
+bb_yumen_3
+  rotate: false
+  xy: 2, 400
+  size: 158, 366
+  orig: 158, 366
+  offset: 0, 0
+  index: -1
+bb_yumen_4
+  rotate: false
+  xy: 2, 36
+  size: 157, 362
+  orig: 157, 362
+  offset: 0, 0
+  index: -1
+bb_yumen_5
+  rotate: false
+  xy: 161, 54
+  size: 152, 344
+  orig: 152, 344
+  offset: 0, 0
+  index: -1
+bb_yumen_6
+  rotate: true
+  xy: 320, 313
+  size: 152, 349
+  orig: 152, 349
+  offset: 0, 0
+  index: -1
+bb_yumen_7
+  rotate: true
+  xy: 320, 467
+  size: 154, 349
+  orig: 154, 349
+  offset: 0, 0
+  index: -1
+bb_yumen_8
+  rotate: true
+  xy: 315, 152
+  size: 159, 341
+  orig: 159, 341
+  offset: 0, 0
+  index: -1

@@ -20,6 +20,12 @@ function PopupSummarySuccess:ctor()
     
     -- set title
     self.ccbPopupSummarySuccess['summary_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_NORMAL_START_PLAY_SUMMARY_BOSS))
+    -- add summary boss
+    local boss = sp.SkeletonAnimation:create('spine/klschongshangdaoxia.json', 'spine/klschongshangdaoxia.atlas',1)
+    boss:addAnimation(0, 'animation', true)
+    boss:setPosition(self:getContentSize().width/3, self:getContentSize().height/3)
+    self:addChild(boss, 10)
+    
     -- run action
     node:setPosition(0, 200)
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
