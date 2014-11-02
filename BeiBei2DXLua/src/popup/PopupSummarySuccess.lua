@@ -17,7 +17,9 @@ function PopupSummarySuccess:ctor()
     self.ccb['popup_summary_success'] = self.ccbPopupSummarySuccess
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_summary_success.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
-
+    
+    -- set title
+    self.ccbPopupSummarySuccess['summary_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_NORMAL_START_PLAY_SUMMARY_BOSS))
     -- run action
     node:setPosition(0, 200)
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))

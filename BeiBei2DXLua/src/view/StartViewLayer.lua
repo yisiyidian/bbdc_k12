@@ -39,6 +39,7 @@ function StartViewLayer:onPlay()
                     print_lua_table(data)
                 end 
                 
+                 s_DATA_MANAGER.loadText()
                  s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
                  local level = require('view/LevelLayer.lua')
                  layer = level.create()
