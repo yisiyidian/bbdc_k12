@@ -28,6 +28,26 @@ function StartViewLayer:onPlay()
         -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
         parseServerDataToUserData(result, s_CURRENT_USER)
 
+        s_UserBaseServer.getLevelsOfCurrentUser(
+            function (api, result)
+                local DataLevel = require('model.user.DataLevel')
+                s_CURRENT_USER.levels = {}
+                for i, v in ipairs(result.results) do
+                    local data = DataLevel.create()
+                    parseServerDataToUserData(v, data)
+                    s_CURRENT_USER.levels[i] = data
+                    print_lua_table(data)
+                end 
+                
+                 s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+                 local level = require('view/LevelLayer.lua')
+                 layer = level.create()
+                 s_SCENE:replaceGameLayer(layer)
+            end,
+            function (api, code, message, description)
+            end
+        )
+
         -- s_UserBaseServer.getLevelsOfCurrentUser(
         --     function (api, result)
         --         local DataLevel = require('model.user.DataLevel')

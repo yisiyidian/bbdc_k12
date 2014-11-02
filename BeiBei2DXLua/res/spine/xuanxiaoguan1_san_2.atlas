@@ -1,0 +1,20 @@
+
+xuanxiaoguan1_san_2.png
+size: 125,125
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xuanxiaoguan1_san_2_1
+  rotate: false
+  xy: 2, 51
+  size: 69, 74
+  orig: 69, 74
+  offset: 0, 0
+  index: -1
+xuanxiaoguan1_san_2_2
+  rotate: true
+  xy: 73, 47
+  size: 78, 52
+  orig: 78, 52
+  offset: 0, 0
+  index: -1

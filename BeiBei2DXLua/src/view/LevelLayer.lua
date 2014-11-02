@@ -34,10 +34,14 @@ function LevelLayer:ctor()
 --    chapterTitle1:setAnchorPoint(0, 0.5)
 --    chapterTitle1:setPosition(0, 2800)
 --    contentNode1:addChild(chapterTitle1) 
-      local levelLayerI = require('view.level.LevelLayerI')
-      local levelStype1 = levelLayerI.create()
-      self:addChild(levelStype1)
-     
+      local levelStypeI = require('view.level.LevelLayerI')
+      local levelLayer1 = levelStypeI.create()
+      --self:addChild(levelLayer1)
+      local currentLevelButton = levelLayer1.ccbLevelLayerI['levelSet']:getChildByName('level1')
+      local player = cc.Sprite:create('image/chapter_level/gril_head.png')
+      player:setPosition(50,20)
+      player:setScale(0.5)
+      currentLevelButton:addChild(player, 5)
 --    -- initialize chapter 2
 --    ccbLevelLayer2['onLevelButtonClicked'] = self.onLevelButtonClicked
 --    local proxy2 = cc.CCBProxy:create()
@@ -57,42 +61,42 @@ function LevelLayer:ctor()
     --local buttonNode = cc.ControlButton:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png')
     --buttonNode:setPosition(100,100)
     --self:addChild(buttonNode)
---    local scrollViewNode = cc.ScrollView:create() 
---    -- scroll view scroll
---    local function scrollViewDidScroll()
---        print 'scrollview did scroll'
---    end
---    
---    local function scrollViewDidZoom()
---        print 'scrollview did zoom'
---    end
---    
---    if nil ~= scrollViewNode then
---        scrollViewNode:setViewSize(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
---        scrollViewNode:setPosition(0,0)
---        contentNode2:setContentSize(856,5397)
---        scrollViewNode:ignoreAnchorPointForPosition(true)
---        scrollViewNode:setContainer(contentNode2)
---        --contentNode:setAnchorPoint(0.5,0.5)
-----        contentNode2:setContentSize(500,1000)
---        contentNode1:setPosition(0,2470)
---        --contentNode2:addChild(contentNode)
---        contentNode2:addChild(contentNode1)
---        --scrollViewNode:scrollToPercentHorizontal(14,0,true)
---        --scrollViewNode:setContentOffset(100)
---        
+    local scrollViewNode = cc.ScrollView:create() 
+    -- scroll view scroll
+    local function scrollViewDidScroll()
+        print 'scrollview did scroll'
+    end
+    
+    local function scrollViewDidZoom()
+        print 'scrollview did zoom'
+    end
+    
+    if nil ~= scrollViewNode then
+        scrollViewNode:setViewSize(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
+        scrollViewNode:setPosition(0,0)
+        --contentNode2:setContentSize(856,5397)
+        scrollViewNode:ignoreAnchorPointForPosition(true)
+        scrollViewNode:setContainer(levelLayer1)
+        --contentNode:setAnchorPoint(0.5,0.5)
+--        contentNode2:setContentSize(500,1000)
+        --contentNode1:setPosition(0,2470)
+        --contentNode2:addChild(contentNode)
+        --contentNode2:addChild(contentNode1)
+        --scrollViewNode:scrollToPercentVertical(14,0,true)
+        --scrollViewNode:setContentOffset(100)
+        
 --        local position = contentNode1:getContentSize()
 --        s_logd('contentSize:%f,%f',position.width,position.height)
---        scrollViewNode:updateInset()
---        scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_BOTH)
---        scrollViewNode:setBounceable(false)
---        
---        --scrollViewNode:setDelegate()
---        scrollViewNode:setClippingToBounds(true)
---        --scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
---        --scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
---        self:addChild(scrollViewNode)
---    end
+        scrollViewNode:updateInset()
+        scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
+        scrollViewNode:setBounceable(true)
+        
+        scrollViewNode:setDelegate()
+        scrollViewNode:setClippingToBounds(false)
+        scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
+        scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
+        self:addChild(scrollViewNode)
+    end
     
     
 
