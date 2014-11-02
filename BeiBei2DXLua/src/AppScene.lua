@@ -10,6 +10,15 @@ local TouchEventBlockLayer = require("layer.TouchEventBlockLayer")
 local LoadingCircleLayer = require('layer.LoadingCircleLayer')
 local DebugLayer = require("layer.DebugLayer")
 
+-- define level layer state constant
+s_normal_level_state = 'normalLevelState'
+s_normal_next_state = 'normalNextState'
+s_normal_retry_state = 'normalRetryState'
+s_unlock_normal_plotInfo_state = 'unlockNormalPlotInfoState'
+s_unlock_normal_notPlotInfo_state = 'unlockNormalNotPlotInfoState'
+s_review_boss_appear_state = 'reviewBossAppearState'
+s_review_boss_pass_state = 'reviewBossPassState'
+
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
 end)
@@ -45,6 +54,9 @@ function AppScene.create()
 
     scene.debugLayer = DebugLayer.create()
     scene.rootLayer:addChild(scene.debugLayer)
+    
+    -- scene global variables
+    scene.levelLayerState = s_normal_level_state
     
     return scene
 end

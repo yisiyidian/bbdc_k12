@@ -24,13 +24,6 @@ function isLevelUnlocked(chapterKey, levelKey)
     end
 end
 
-function getLevelData(chapterKey, levelKey)
-    for i = 1, #s_CURRENT_USER.levels do
-        if s_CURRENT_USER.levels[i].chapterKey == chapterKey and s_CURRENT_USER.levels[i].levelKey == levelKey then
-            return s_CURRENT_USER.levels[i]
-        end
-    end
-end
 
 function plotLevelStar(levelButton, heart)
     local star1, star2, star3
@@ -70,28 +63,42 @@ function LevelLayerI:plotLevelDecoration()
             summaryboss:addAnimation(0, 'animation',true)
             summaryboss:setScale(0.7)
             levelButton:addChild(summaryboss, 3)
-        elseif i % 5 == 0 then
+        elseif i % 8 == 0 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(70,90)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 1 then
+        elseif i % 8 == 1 then
+            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yezi.png')
+            deco:setPosition(120, 130)
+            levelButton:addChild(deco, 3)
+        elseif i % 8 == 2 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(-10,40)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 2 then
+        elseif i % 8 == 3 then
+            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_pangxie.png')
+            deco:setPosition(70, 110)
+            levelButton:addChild(deco, 3)
+        elseif i % 8 == 4 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
             deco:addAnimation(0,'animation',true)
-            deco:setPosition(0,60)
+            deco:setPosition(-10,40)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 3 then
+        elseif i % 8 == 5 then
+            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yinliao.png')
+            deco:setPosition(120, 80)
+            levelButton:addChild(deco, 3)
+        elseif i % 8 == 6 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(60,40)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 4 then
-
+        elseif i % 8 == 7 then
+            local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
+            deco:setPosition(120, 130)
+            levelButton:addChild(deco, 3)
         end
     end
 end
@@ -146,15 +153,25 @@ function LevelLayerI:onLevelButtonClicked(levelTag)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..levelTag)
-    if levelConfig['type'] == 0 then  -- normal level
+    if s_SCENE.levelLayerState == s_review_boss_appear_state then -- review boss appear
+        local popupReview = require('popup.PopupReviewBoss')
+        local layer = popupReview.create()
+        s_SCENE:popup(layer)
+    elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
         local layer = popupNormal.create()
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        local popupSummary = require('popup.PopupSummarySuccess')
-        local layer = popupSummary.create()
-        s_SCENE:popup(layer)
+        if s_CURRENT_USER.stars >= levelConfig['summary_boss_stars'] then
+            local popupSummary = require('popup.PopupSummarySuccess')
+            local layer = popupSummary.create(s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
+            s_SCENE:popup(layer)
+        else
+            local popupSummary = require('popup.PopupSummaryFail')
+            local layer = popupSummary.create(s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
+            s_SCENE:popup(layer)
+        end
     end
 end
 

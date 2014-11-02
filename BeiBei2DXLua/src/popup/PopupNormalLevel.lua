@@ -32,9 +32,9 @@ function PopupNormalLevel:ctor()
     
     -- add girl hello animation
     local girl_hello = sp.SkeletonAnimation:create('spine/bb_hello_public.json', 'spine/bb_hello_public.atlas',1)
-    girl_hello:setPosition(200, 375)
+    girl_hello:setPosition(node:getContentSize().width/3, node:getContentSize().height/3)
     girl_hello:addAnimation(0, 'animation', true)
-    self:addChild(girl_hello, 5)
+    node:addChild(girl_hello, 5)
     
     self:addChild(node)
 end
