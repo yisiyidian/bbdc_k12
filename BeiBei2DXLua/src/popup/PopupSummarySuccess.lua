@@ -3,12 +3,12 @@ local PopupSummarySuccess = class('PopupSummarySuccess', function()
     return cc.Layer:create()
 end)
 
-function PopupSummarySuccess:create()
-    local layer = PopupSummarySuccess.new()
+function PopupSummarySuccess.create(current_star, total_star)
+    local layer = PopupSummarySuccess.new(current_star, total_star)
     return layer
 end
 
-function PopupSummarySuccess:ctor()
+function PopupSummarySuccess:ctor(current_star, total_star)
     self.ccbPopupSummarySuccess = {}
     self.ccbPopupSummarySuccess['onCloseButtonClicked'] = self.onCloseButtonClicked
     self.ccbPopupSummarySuccess['onGoButtonClicked'] = self.onGoButtonClicked
@@ -25,6 +25,10 @@ function PopupSummarySuccess:ctor()
     boss:addAnimation(0, 'animation', true)
     boss:setPosition(self:getContentSize().width/3, self:getContentSize().height/3)
     self:addChild(boss, 10)
+    
+    -- set stars
+    self.ccbPopupSummarySuccess['current_star_count']:setString(current_star)
+    self.ccbPopupSummarySuccess['total_star_count']:setString(total_star) 
     
     -- run action
     node:setPosition(0, 200)

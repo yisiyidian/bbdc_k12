@@ -3,12 +3,12 @@ local PopupSummaryFail = class('PopupSummaryFail', function()
     return cc.Layer:create()
 end)
 
-function PopupSummaryFail.create(starInfo)
-    local layer = PopupSummaryFail.new(starInfo)
+function PopupSummaryFail.create(current_star, total_star)
+    local layer = PopupSummaryFail.new(current_star, total_star)
     return layer
 end
 
-function PopupSummaryFail:ctor(starInfo)
+function PopupSummaryFail:ctor(current_star, total_star)
     self.ccbPopupSummaryFail = {}
     self.ccbPopupSummaryFail['onCloseButtonClicked'] = self.onCloseButtonClicked
     self.ccbPopupSummaryFail['onContinueButtonClicked'] = self.onContinueButtonClicked
@@ -26,9 +26,8 @@ function PopupSummaryFail:ctor(starInfo)
     girl:setPosition(self:getContentSize().width/3, self:getContentSize().height/4)
     self:addChild(girl, 10)
     -- set stars
-    s_logd(starInfo[1]..',',starInfo[2])
-    self.ccbPopupSummaryFail['current_star_count']:setString(starInfo[1])
-    self.ccbPopupSummaryFail['total_star_count']:setString(starInfo[2]) 
+    self.ccbPopupSummaryFail['current_star_count']:setString(current_star)
+    self.ccbPopupSummaryFail['total_star_count']:setString(total_star) 
     -- run action
     node:setPosition(0, 200)
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
