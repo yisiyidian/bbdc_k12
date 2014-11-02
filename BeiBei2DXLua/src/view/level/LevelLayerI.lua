@@ -24,13 +24,6 @@ function isLevelUnlocked(chapterKey, levelKey)
     end
 end
 
-function getLevelData(chapterKey, levelKey)
-    for i = 1, #s_CURRENT_USER.levels do
-        if s_CURRENT_USER.levels[i].chapterKey == chapterKey and s_CURRENT_USER.levels[i].levelKey == levelKey then
-            return s_CURRENT_USER.levels[i]
-        end
-    end
-end
 
 function plotLevelStar(levelButton, heart)
     local star1, star2, star3
@@ -70,28 +63,42 @@ function LevelLayerI:plotLevelDecoration()
             summaryboss:addAnimation(0, 'animation',true)
             summaryboss:setScale(0.7)
             levelButton:addChild(summaryboss, 3)
-        elseif i % 5 == 0 then
+        elseif i % 8 == 0 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(70,90)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 1 then
+        elseif i % 8 == 1 then
+            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yezi.png')
+            deco:setPosition(120, 130)
+            levelButton:addChild(deco, 3)
+        elseif i % 8 == 2 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(-10,40)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 2 then
+        elseif i % 8 == 3 then
+            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_pangxie.png')
+            deco:setPosition(70, 110)
+            levelButton:addChild(deco, 3)
+        elseif i % 8 == 4 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
             deco:addAnimation(0,'animation',true)
-            deco:setPosition(0,60)
+            deco:setPosition(-10,40)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 3 then
+        elseif i % 8 == 5 then
+            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yinliao.png')
+            deco:setPosition(120, 80)
+            levelButton:addChild(deco, 3)
+        elseif i % 8 == 6 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
             deco:addAnimation(0,'animation',true)
             deco:setPosition(60,40)
             levelButton:addChild(deco, 3)
-        elseif i % 5 == 4 then
-
+        elseif i % 8 == 7 then
+            local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
+            deco:setPosition(120, 130)
+            levelButton:addChild(deco, 3)
         end
     end
 end
