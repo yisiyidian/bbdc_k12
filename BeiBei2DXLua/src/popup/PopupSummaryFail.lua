@@ -23,8 +23,8 @@ function PopupSummaryFail:ctor(current_star, total_star)
     -- add sad girl
     local girl = sp.SkeletonAnimation:create('spine/bb_yumen_public.json', 'spine/bb_yumen_public.atlas',1)
     girl:addAnimation(0, 'animation', true)
-    girl:setPosition(self:getContentSize().width/3, self:getContentSize().height/4)
-    self:addChild(girl, 10)
+    girl:setPosition(node:getContentSize().width/3, node:getContentSize().height/4)
+    node:addChild(girl, 10)
     -- set stars
     self.ccbPopupSummaryFail['current_star_count']:setString(current_star)
     self.ccbPopupSummaryFail['total_star_count']:setString(total_star) 

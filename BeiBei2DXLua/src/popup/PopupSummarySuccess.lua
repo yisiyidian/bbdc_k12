@@ -23,8 +23,8 @@ function PopupSummarySuccess:ctor(current_star, total_star)
     -- add summary boss
     local boss = sp.SkeletonAnimation:create('spine/klschongshangdaoxia.json', 'spine/klschongshangdaoxia.atlas',1)
     boss:addAnimation(0, 'animation', true)
-    boss:setPosition(self:getContentSize().width/3, self:getContentSize().height/3)
-    self:addChild(boss, 10)
+    boss:setPosition(node:getContentSize().width/3, node:getContentSize().height/3)
+    node:addChild(boss, 10)
     
     -- set stars
     self.ccbPopupSummarySuccess['current_star_count']:setString(current_star)

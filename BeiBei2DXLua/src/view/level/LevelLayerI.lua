@@ -153,13 +153,17 @@ function LevelLayerI:onLevelButtonClicked(levelTag)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..levelTag)
-    if levelConfig['type'] == 0 then  -- normal level
+    if s_SCENE.levelLayerState == s_review_boss_appear_state then -- review boss appear
+        local popupReview = require('popup.PopupReviewBoss')
+        local layer = popupReview.create()
+        s_SCENE:popup(layer)
+    elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
         local layer = popupNormal.create()
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        if s_CURRENT_USER.stars <= levelConfig['summary_boss_stars'] then
+        if s_CURRENT_USER.stars >= levelConfig['summary_boss_stars'] then
             local popupSummary = require('popup.PopupSummarySuccess')
             local layer = popupSummary.create(s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
