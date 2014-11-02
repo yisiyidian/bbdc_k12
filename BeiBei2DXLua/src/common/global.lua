@@ -99,6 +99,7 @@ local function _initServer()
     s_SERVER.isAppStoreServer = false
     -- user base server
     s_UserBaseServer          = require('server.UserBaseServer')
+    s_HttpRequestClient       = require('server.HttpRequestClient')
 end
 
 local function _initData()
