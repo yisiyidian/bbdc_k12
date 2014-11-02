@@ -61,10 +61,17 @@ function AppScene.create()
     return scene
 end
 
+-- delta time : seconds
+local function update(dt)
+    -- print(dt)
+end
+
 function AppScene:ctor()
     self.visibleSize = cc.Director:getInstance():getVisibleSize()
     self.origin = cc.Director:getInstance():getVisibleOrigin()
     self.schedulerID = nil
+
+    self:scheduleUpdateWithPriorityLua(update, 0)
 end
 
 function AppScene:replaceGameLayer(newLayer)

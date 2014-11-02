@@ -123,7 +123,10 @@ function randomMat(m, n)
     return main_mat
 end
 
+DEBUG_PRINT_LUA_TABLE = false
 function print_lua_table (lua_table, indent)
+    if DEBUG_PRINT_LUA_TABLE == false then return end
+    
     indent = indent or 0
     for k, v in pairs(lua_table) do
         if type(k) == "string" then

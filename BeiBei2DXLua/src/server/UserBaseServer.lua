@@ -26,12 +26,14 @@ curl -X GET \
   https://leancloud.cn/1.1/cloudQuery
 ]]--
 
--- CQL >>>
+----
 
 function UserBaseServer.dailyCheckInOfCurrentUser(onSucceed, onFailed)
     local cql = "select * from WMAV_DailyCheckInData where userId='" .. s_CURRENT_USER.userId .. "'"
     s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
 end
+
+----
 
 -- who I follow
 function UserBaseServer.getFolloweesOfCurrentUser(onSucceed, onFailed)
@@ -45,6 +47,33 @@ function UserBaseServer.getFollowersOfCurrentUser(onSucceed, onFailed)
     s_SERVER.CloudQueryLanguageExtend('follower', cql, onSucceed, onFailed)
 end
 
+--[[
+curl -X GET \
+  -H "X-AVOSCloud-Application-Id: 9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l" \
+  -H "X-AVOSCloud-Application-Key: 8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg" \
+  -G \
+  --data-urlencode 'cql=select * from _User where username="yehanjie1"' \
+  https://leancloud.cn/1.1/cloudQuery
+]]--
+function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
+    local cql = "select * from _User where username='" .. username
+    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+end
+
+function UserBaseServer.follow(targetDataUser, onSucceed, onFailed)
+    s_SERVER.request('apiFollow', {['myObjectId']=s_CURRENT_USER.objectId, ['targetObjectId']=targetDataUser.objectId}, onSucceed, onFailed)
+end
+
+function UserBaseServer.unfollow(targetDataUser, onSucceed, onFailed)
+    s_SERVER.request('apiUnfollow', {['myObjectId']=s_CURRENT_USER.objectId, ['targetObjectId']=targetDataUser.objectId}, onSucceed, onFailed)
+end
+
+function UserBaseServer.removeFan(fanDataUser, onSucceed, onFailed)
+    s_SERVER.request('apiRemoveFan', {['myObjectId']=s_CURRENT_USER.objectId, ['fanObjectId']=fanDataUser.objectId}, onSucceed, onFailed)
+end
+
+----
+
 function UserBaseServer.getLevels(userId, bookKey, onSucceed, onFailed)
     local cql = "select * from WMAV_LevelData where userId='" .. userId .. "' and bookKey='" .. bookKey .. "'"
     s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
@@ -54,6 +83,23 @@ function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
     UserBaseServer.getLevels(s_CURRENT_USER.userId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
 end
 
--- CQL <<<
+----
+
+---------------------------------------------------------------------------------------------------------------------
+
+function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFailed)
+    local s = function (api, result)
+        for i, v in ipairs(result.results) do
+            parseServerDataToUserData(v, dataObject)
+        end
+        if onSucceed ~= nil then onSucceed(api, result) end
+    end
+    dataObject.userId = s_CURRENT_USER.objectId
+    if string.len(dataObject.objectId) <= 0 then
+        s_SERVER.createData(dataObject, onSucceed, onFailed)
+    else
+        s_SERVER.updateData(dataObject, onSucceed, onFailed)
+    end
+end
 
 return UserBaseServer

@@ -25,19 +25,11 @@ end
 
 function StartViewLayer:onPlay()
     local function onSucceed(api, result)
-        -- s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
         parseServerDataToUserData(result, s_CURRENT_USER)
 
         s_UserBaseServer.getLevelsOfCurrentUser(
             function (api, result)
-                local DataLevel = require('model.user.DataLevel')
-                s_CURRENT_USER.levels = {}
-                for i, v in ipairs(result.results) do
-                    local data = DataLevel.create()
-                    parseServerDataToUserData(v, data)
-                    s_CURRENT_USER.levels[i] = data
-                    print_lua_table(data)
-                end 
+                s_CURRENT_USER:parseServerLevelData(result.results)
                 
                  s_DATA_MANAGER.loadText()
                  s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
@@ -49,37 +41,10 @@ function StartViewLayer:onPlay()
             end
         )
 
-        -- s_UserBaseServer.getLevelsOfCurrentUser(
-        --     function (api, result)
-        --         local DataLevel = require('model.user.DataLevel')
-        --         s_CURRENT_USER.levels = {}
-        --         for i, v in ipairs(result.results) do
-        --             local data = DataLevel.create()
-        --             parseServerDataToUserData(v, data)
-        --             s_CURRENT_USER.levels[i] = data
-        --             print_lua_table(data)
-        --         end 
-        --     end,
-        --     function (api, code, message, description)
-        --     end
-        -- )
-
--- download file from avos
-        -- cx.CXAvos:getInstance():downloadFile('5430b806e4b0c0d48049e293', cc.FileUtils:getInstance():getWritablePath(), 
-        --     function (objectId, filename, err, isSaved)
-        --         print('objectId:' .. objectId .. ', filename:' .. filename .. ', error:' .. err .. ', isSaved:' .. tostring(isSaved))
-        -- end)
-
 -- DONE
         -- s_UserBaseServer.dailyCheckInOfCurrentUser( 
         --    function (api, result)
-        --        local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
-        --        s_CURRENT_USER.dailyCheckInData = {}
-        --        for i, v in ipairs(result.results) do
-        --            local data = DataDailyCheckIn.create()
-        --            parseServerDataToUserData(v, data)
-        --            s_CURRENT_USER.dailyCheckInData[i] = data
-        --        end 
+        --        s_CURRENT_USER:parseServerDailyCheckInData(result.results)
         --    end,
         --    function (api, code, message, description) end
         -- )
@@ -87,12 +52,7 @@ function StartViewLayer:onPlay()
 -- DONE        
         -- s_UserBaseServer.getFolloweesOfCurrentUser( 
         --     function (api, result)
-        --         print(result.results)
-        --         local DataUser = require('model.user.DataUser')
-        --         for i, v in ipairs(result.results) do
-        --             local data = DataUser.create()
-        --             parseServerDataToUserData(v.followee, data)
-        --         end 
+        --         parseServerFolloweesData(result.results)
         --     end,
         --     function (api, code, message, description)
         --     end
@@ -101,12 +61,7 @@ function StartViewLayer:onPlay()
 -- DONE
         -- s_UserBaseServer.getFollowersOfCurrentUser( 
         --     function (api, result)
-        --         print(result.results)
-        --         local DataUser = require('model.user.DataUser')
-        --         for i, v in ipairs(result.results) do
-        --             local data = DataUser.create()
-        --             parseServerDataToUserData(v.follower, data)
-        --         end 
+        --         parseServerFollowersData(result.results)
         --     end,
         --     function (api, code, message, description)
         --     end
@@ -126,35 +81,10 @@ function StartViewLayer:onSignUp()
     local layer = PopupLoginSignup.create()
     layer:setAnchorPoint(0.5,0)
     s_SCENE:popup(layer)
-    
--- DONE : get level data & update data    
-    -- s_UserBaseServer.getLevelsOfCurrentUser(
-    --     function (api, result)
-    --         local DataLevel = require('model.user.DataLevel')
-    --         for i, v in ipairs(result.results) do
-    --             local data = DataLevel.create()
-    --             parseServerDataToUserData(v, data)
-
-    --             print_lua_table(data) 
-    --             print(dataToJSONString(data))
-
-    --             data.hearts = 255
-    --             s_SERVER.updateData(data, function (api, result) print_lua_table(result) end, function (api, code, message, description) end)
-    --         end 
-    --     end,
-    --     function (api, code, message, description)
-    --     end
-    -- )
-
--- DONE : create data
-    -- local DataLevel = require('model.user.DataLevel')
-    -- local data = DataLevel.create()
-    -- data.userId = s_CURRENT_USER.objectId
-    -- s_SERVER.createData(data, function (api, result) print_lua_table(result) end, function (api, code, message, description) end)
-    
-    -- TODO
-    s_STORE.init()
-    s_STORE.login(nil)
+        
+    -- -- TODO
+    -- s_STORE.init()
+    -- s_STORE.login(nil)
 end
 
 function StartViewLayer:onLogIn()
@@ -163,10 +93,10 @@ function StartViewLayer:onLogIn()
     layer:setAnchorPoint(0.5, 0)
     s_SCENE:popup(layer)
 
-    s_STORE.buy(function (code, msg, info) 
-        -- s_DEBUG_LAYER.debugInfo:setString(msg)
-        s_logd('s_STORE:' .. code .. ', msg:' .. msg)
-    end)
+    -- s_STORE.buy(function (code, msg, info) 
+    --     -- s_DEBUG_LAYER.debugInfo:setString(msg)
+    --     s_logd('s_STORE:' .. code .. ', msg:' .. msg)
+    -- end)
 end
 
 return StartViewLayer
