@@ -56,6 +56,14 @@ function LevelLayerI:plotLevelDecoration()
     for i = 0, 11 do
         local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..i)
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..i)
+        
+--        if i == 3 or i == 10 then  -- plot boat animation
+--            local boat = sp.SkeletonAnimation:create('spine/first-level-moving-boat-bottom.json', 'spine/first-level-moving-boat-bottom.atlas',1)
+--            boat:addAnimation(0, 'anmiation', true)
+--            boat:setPosition(levelButton:getContentSize().width/2, -400)
+--            levelButton:addChild(boat)
+--        end
+        
         if levelConfig['type'] == 1 then
             -- add summary boss
             local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -103,6 +111,13 @@ function LevelLayerI:plotLevelDecoration()
     end
 end
 
+-- define touch event
+local onTouchBegan = function(touch, event) 
+    local touchPosition = touch:getLocation()
+    -- plot shark
+    print(touchPosition.x..touchPosition.y)
+end
+
 function LevelLayerI:ctor()
     self.ccbLevelLayerI = {}
     self.ccbLevelLayerI['onLevelButtonClicked'] = 
@@ -147,6 +162,12 @@ function LevelLayerI:ctor()
             end
         end
     end
+    
+    -- register touch event
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 end
 
 function LevelLayerI:onLevelButtonClicked(levelTag)
