@@ -67,7 +67,7 @@ void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandl
     user.username = [NSString stringWithUTF8String:username];
     user.password = [NSString stringWithUTF8String:password];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        invokeLuaCallbackFunction_su(user ? user.description.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
+        invokeLuaCallbackFunction_su(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
     }];
 }
 
@@ -85,7 +85,7 @@ void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* er
 void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_logIn = nHandler;
     [AVUser logInWithUsernameInBackground:[NSString stringWithUTF8String:username] password:[NSString stringWithUTF8String:password] block:^(AVUser *user, NSError *error) {
-        invokeLuaCallbackFunction_li(user ? user.description.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
+        invokeLuaCallbackFunction_li(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
     }];
 }
 

@@ -30,7 +30,7 @@ end
 
 function parseServerDataToUserData(serverdata, userdata)
     for key, value in pairs(userdata) do
-        if nil ~= serverdata[key] then
+        if nil ~= serverdata[key] and key ~= 'password'then
             if (key == 'createdAt' or key == 'updatedAt') and type(serverdata[key]) == 'string' then
                 userdata[key] = getSecondsFromString(serverdata[key])
             else
@@ -43,7 +43,15 @@ end
 function dataToJSONString(dataObj)
     local str = '{'
     for key, value in pairs(dataObj) do  
-        if ((key == 'objectId' and string.len(value) <= 0) or key == 'createdAt' or key == 'updatedAt' or key == 'className' or string.find(key, '__') ~= nil or value == nil) == false then 
+        if (key == 'objectId'
+            or key == 'sessionToken'
+            or key == 'password' 
+            or key == 'createdAt' 
+            or key == 'updatedAt' 
+            or key == 'className' 
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
             if (type(value) == 'string') then
                 if string.len(str) > 1 then str = str .. ',' end
                 str = str .. '"' .. key .. '":"' .. value .. '"'
@@ -56,6 +64,7 @@ function dataToJSONString(dataObj)
                 if string.len(str) > 1 then str = str .. ',' end
                 str = str .. '"' .. key .. '":' .. value
             end
+            
         end
     end
     str = str .. '}'

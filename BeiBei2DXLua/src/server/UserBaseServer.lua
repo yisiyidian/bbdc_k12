@@ -1,5 +1,3 @@
--- onSucceed(api, result) -- result : json
--- onFailed(api, code, message, description)
 
 require("common.global")
 
@@ -15,13 +13,54 @@ local UserBaseServer = {}
 --     return string.match(s, "^[\\x00-\\x7F]{6,16}$")
 -- end
 
-function UserBaseServer.signup(username, password, onSucceed, onFailed)
-    s_SERVER.request('apiSignUp', {['username']=username, ['password']=password}, onSucceed, onFailed)
+local function onResponse_signup_login(sessionToken, e, onResponse)
+    if e ~= nil then 
+        s_logd('signup/logIn:' .. e) 
+        if onResponse ~= nil then onResponse(s_CURRENT_USER, e) end
+    elseif sessionToken ~= nil then 
+        s_logd('signup/logIn:' .. sessionToken)
+        s_CURRENT_USER.sessionToken = sessionToken
+        UserBaseServer.searchUserByUserName(s_CURRENT_USER.username, function (api, result)
+            for i, v in ipairs(result.results) do
+               parseServerDataToUserData(v, s_CURRENT_USER)
+               if onResponse ~= nil then onResponse(s_CURRENT_USER, nil) end
+               print_lua_table(s_CURRENT_USER)
+               break
+           end
+        end,
+        function (api, code, message, description)
+            if onResponse ~= nil then onResponse(s_CURRENT_USER, description) end
+        end)
+    else
+        s_logd('signup/logIn:no sessionToken') 
+        if onResponse ~= nil then onResponse(s_CURRENT_USER, 'no sessionToken') end
+    end
 end
 
-function UserBaseServer.login(username, password, onSucceed, onFailed)
-    s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
+-- function (user data, error description)
+function UserBaseServer.signup(username, password, onResponse)
+    -- s_SERVER.request('apiSignUp', {['username']=username, ['password']=password}, onSucceed, onFailed)
+    s_CURRENT_USER.username = username
+    s_CURRENT_USER.password = password
+    cx.CXAvos:getInstance():signUp(username, password, function (sessionToken, e)
+        onResponse_signup_login(sessionToken, e, onResponse)
+    end)
 end
+
+-- function (user data, error description)
+function UserBaseServer.login(username, password, onResponse)
+    -- s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
+    s_CURRENT_USER.username = username
+    s_CURRENT_USER.password = password
+    cx.CXAvos:getInstance():logIn(username, password, function (sessionToken, e)
+        onResponse_signup_login(sessionToken, e, onResponse)
+    end)
+end
+
+---------------------------------------------------------------------------------------------------------------------
+
+-- onSucceed(api, result) -- result : json
+-- onFailed(api, code, message, description)
 
 ---------------------------------------------------------------------------------------------------------------------
 

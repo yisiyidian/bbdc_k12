@@ -24,8 +24,7 @@ function StartViewLayer:ctor()
 end
 
 function StartViewLayer:onPlay()
-    local function onSucceed(api, result)
-        parseServerDataToUserData(result, s_CURRENT_USER)
+    local function onResponse(u, e)
 
         s_UserBaseServer.getLevelsOfCurrentUser(
             function (api, result)
@@ -70,10 +69,7 @@ function StartViewLayer:onPlay()
         
         
     end 
-    local function onFailed(api, code, message, description)
-        s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message .. ', ' .. description)
-    end
-    s_UserBaseServer.login('yehanjie1', '111111', onSucceed, onFailed)
+    s_UserBaseServer.login('yehanjie1', '111111', onResponse)
 end
 
 function StartViewLayer:onSignUp()
