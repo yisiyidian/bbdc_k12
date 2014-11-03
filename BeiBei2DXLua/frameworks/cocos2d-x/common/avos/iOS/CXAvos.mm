@@ -67,17 +67,18 @@ void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandl
     user.username = [NSString stringWithUTF8String:username];
     user.password = [NSString stringWithUTF8String:password];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        invokeLuaCallbackFunction_su(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
+        invokeLuaCallbackFunction_su(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : -1);
     }];
 }
 
-void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* error) {
+void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* error, int errorcode) {
     if (mLuaHandlerId_signUp > 0) {
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();
         stack->pushString(objectjson);
         stack->pushString(error);
-        stack->executeFunctionByHandler(mLuaHandlerId_signUp, 2);
+        stack->pushInt(errorcode);
+        stack->executeFunctionByHandler(mLuaHandlerId_signUp, 3);
         stack->clean();
     }
 }
@@ -85,17 +86,18 @@ void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* er
 void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_logIn = nHandler;
     [AVUser logInWithUsernameInBackground:[NSString stringWithUTF8String:username] password:[NSString stringWithUTF8String:password] block:^(AVUser *user, NSError *error) {
-        invokeLuaCallbackFunction_li(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr);
+        invokeLuaCallbackFunction_li(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : -1);
     }];
 }
 
-void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* error) {
+void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode) {
     if (mLuaHandlerId_logIn > 0) {
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();
         stack->pushString(objectjson);
         stack->pushString(error);
-        stack->executeFunctionByHandler(mLuaHandlerId_logIn, 2);
+        stack->pushInt(errorcode);
+        stack->executeFunctionByHandler(mLuaHandlerId_logIn, 3);
         stack->clean();
     }
 }

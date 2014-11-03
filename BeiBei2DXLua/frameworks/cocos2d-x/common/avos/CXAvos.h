@@ -22,10 +22,10 @@ public:
     void invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved);
     
     void signUp(const char* username, const char* password, CXLUAFUNC nHandler);
-    void invokeLuaCallbackFunction_su(const char* objectjson, const char* error);
+    void invokeLuaCallbackFunction_su(const char* objectjson, const char* error, int errorcode);
     
     void logIn(const char* username, const char* password, CXLUAFUNC nHandler);
-    void invokeLuaCallbackFunction_li(const char* objectjson, const char* error);
+    void invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode);
     
     void logOut();
     

@@ -72,13 +72,14 @@ void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandl
     }
 }
 
-void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* error) {
+void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* error, int errorcode) {
     if (mLuaHandlerId_signUp > 0) {
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();
         stack->pushString(objectjson);
         stack->pushString(error);
-        stack->executeFunctionByHandler(mLuaHandlerId_signUp, 2);
+        stack->pushInt(errorcode);
+        stack->executeFunctionByHandler(mLuaHandlerId_signUp, 3);
         stack->clean();
     }
 }
@@ -98,13 +99,14 @@ void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandle
     }
 }
 
-void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* error) {
+void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode) {
     if (mLuaHandlerId_logIn > 0) {
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();
         stack->pushString(objectjson);
         stack->pushString(error);
-        stack->executeFunctionByHandler(mLuaHandlerId_logIn, 2);
+        stack->pushInt(errorcode);
+        stack->executeFunctionByHandler(mLuaHandlerId_logIn, 3);
         stack->clean();
     }
 }

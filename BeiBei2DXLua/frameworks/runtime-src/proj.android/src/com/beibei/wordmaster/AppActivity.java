@@ -258,9 +258,9 @@ public class AppActivity extends Cocos2dxActivity {
 		user.signUpInBackground(new SignUpCallback() {
 		    public void done(AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionSU(user.getSessionToken(), null);
+		        	invokeLuaCallbackFunctionSU(user.getSessionToken(), null, -1);
 		        } else {
-		        	invokeLuaCallbackFunctionSU(null, e.getLocalizedMessage());
+		        	invokeLuaCallbackFunctionSU(null, e.getLocalizedMessage(), e.getCode());
 		        }
 		    }
 		});
@@ -270,9 +270,9 @@ public class AppActivity extends Cocos2dxActivity {
 		AVUser.logInInBackground(username, password, new LogInCallback<AVUser>() {
 			public void done(AVUser user, AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionLI(user.getSessionToken(), null);
+		        	invokeLuaCallbackFunctionLI(user.getSessionToken(), null, -1);
 		        } else {
-		        	invokeLuaCallbackFunctionLI(null, e.getLocalizedMessage());
+		        	invokeLuaCallbackFunctionLI(null, e.getLocalizedMessage(), e.getCode());
 		        }
 		    }
 		});
@@ -285,6 +285,6 @@ public class AppActivity extends Cocos2dxActivity {
 	private static native boolean nativeIsLandScape();
 	private static native boolean nativeIsDebug();
 	private static native void invokeLuaCallbackFunctionDL(String objectId, String filename, String error, int isSaved);
-	private static native void invokeLuaCallbackFunctionSU(String objectjson, String error);
-	private static native void invokeLuaCallbackFunctionLI(String objectjson, String error);
+	private static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
+	private static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
 }
