@@ -24,7 +24,7 @@ function StartViewLayer:ctor()
 end
 
 function StartViewLayer:onPlay()
-    local function onResponse(u, e)
+    local function onResponse(u, e, code)
 
         s_UserBaseServer.getLevelsOfCurrentUser(
             function (api, result)

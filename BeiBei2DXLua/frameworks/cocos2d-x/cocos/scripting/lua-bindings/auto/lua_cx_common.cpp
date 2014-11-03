@@ -89,20 +89,23 @@ int lua_cx_common_CXAvos_invokeLuaCallbackFunction_su(lua_State* tolua_S)
 #endif
 
     argc = lua_gettop(tolua_S)-1;
-    if (argc == 2) 
+    if (argc == 3) 
     {
         const char* arg0;
         const char* arg1;
+        int arg2;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2);
         if(!ok)
             return 0;
-        cobj->invokeLuaCallbackFunction_su(arg0, arg1);
+        cobj->invokeLuaCallbackFunction_su(arg0, arg1, arg2);
         return 0;
     }
-    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "invokeLuaCallbackFunction_su",argc, 2);
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "invokeLuaCallbackFunction_su",argc, 3);
     return 0;
 
 #if COCOS2D_DEBUG >= 1
@@ -346,20 +349,23 @@ int lua_cx_common_CXAvos_invokeLuaCallbackFunction_li(lua_State* tolua_S)
 #endif
 
     argc = lua_gettop(tolua_S)-1;
-    if (argc == 2) 
+    if (argc == 3) 
     {
         const char* arg0;
         const char* arg1;
+        int arg2;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2);
         if(!ok)
             return 0;
-        cobj->invokeLuaCallbackFunction_li(arg0, arg1);
+        cobj->invokeLuaCallbackFunction_li(arg0, arg1, arg2);
         return 0;
     }
-    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "invokeLuaCallbackFunction_li",argc, 2);
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "invokeLuaCallbackFunction_li",argc, 3);
     return 0;
 
 #if COCOS2D_DEBUG >= 1

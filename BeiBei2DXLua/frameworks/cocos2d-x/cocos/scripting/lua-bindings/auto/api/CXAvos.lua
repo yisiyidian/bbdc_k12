@@ -17,6 +17,7 @@
 -- @param self
 -- @param #char char
 -- @param #char char
+-- @param #int int
         
 --------------------------------
 -- @function [parent=#CXAvos] signUp 
@@ -48,6 +49,7 @@
 -- @param self
 -- @param #char char
 -- @param #char char
+-- @param #int int
         
 --------------------------------
 -- @function [parent=#CXAvos] getInstance 
