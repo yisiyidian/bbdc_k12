@@ -5,12 +5,51 @@ local UserBaseServer = {}
 
 ---------------------------------------------------------------------------------------------------------------------
 
--- function validateUsername(s)
---     return string.match(s, "[a-zA-Z\u4e00-\u9fa5][a-zA-Z0-9\u4e00-\u9fa5]{3,14}+")
--- end
+function validateUsername(s)
+    local length = string.len(s)
+    if length < 1 then return false end
+    s_logd(string.format('%s, %d', s, length))
+
+    local c = s:sub(1, 1)
+    local ord = c:byte()
+    if (ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then 
+        local i = 1
+        local len = 1
+        while i < length do
+            local c = s:sub(i, i)
+            local ord = c:byte()
+            if (ord >= 48 and ord <= 57) or(ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then
+                if ord > 128 then
+                    i = i + 3
+                else
+                    i = i + 1
+                end
+            else
+                s_logd(string.format('%s, %d, %s', s, length, c))
+                return false
+            end
+
+            len = len + 1
+        end
+
+        if len < 4 or len > 16 then 
+          s_logd(string.format('%s, %d, %d', s, length, len))
+          return false 
+        end
+    else
+        return false
+    end
+
+    return true
+end
 
 function validatePassword(s)
-    return string.match(s, "^[\\x00-\\x7F]{6,16}$")
+    local length = string.len(s)
+    if length < 6 or length > 16 then return false end
+
+    local modifiedString, numberOfSubstitutions = string.gsub(s, '[0-9a-zA-Z]', '')
+    s_logd(string.format('%s, %d, %s, %d', s, length, modifiedString, numberOfSubstitutions))
+    return numberOfSubstitutions >= 6 and numberOfSubstitutions <= 16 and numberOfSubstitutions == length
 end
 
 local function onResponse_signup_login(sessionToken, e, code, onResponse)
