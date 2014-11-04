@@ -24,10 +24,10 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
-    local PopupLoginSignup = require('view.summaryboss.SummaryBossLayer')
-   local layer = PopupLoginSignup.create()
-   layer:setAnchorPoint(0.5,0)
-   s_SCENE:popup(layer)
+-- local PopupLoginSignup = require('view.summaryboss.SummaryBossLayer')
+-- local layer = PopupLoginSignup.create()
+-- layer:setAnchorPoint(0.5,0)
+-- s_SCENE:popup(layer)
 
     
 
