@@ -87,12 +87,12 @@ function UserBaseServer.signup(username, password, onResponse)
     end)
 end
 
--- function (user data, error description)
+-- function (user data, error description, error code)
 function UserBaseServer.login(username, password, onResponse)
     -- s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
-    cx.CXAvos:getInstance():logIn(username, password, function (sessionToken, e)
+    cx.CXAvos:getInstance():logIn(username, password, function (sessionToken, e, code)
         onResponse_signup_login(sessionToken, e, code, onResponse)
     end)
 end
