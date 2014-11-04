@@ -4,7 +4,6 @@ require("Cocos2dConstants")
 require("common.global")
 
 local LoginAlter = require("view.login.LoginAlter")
-local RegisterAlter = require("view.login.RegisterAlter")
 
 
 local IntroLayer = class("IntroLayer", function ()
@@ -163,7 +162,7 @@ function IntroLayer.create()
                                 
                 local button_login_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then                        
-                        local loginAlter = LoginAlter.create()
+                        local loginAlter = LoginAlter.createLogin()
                         loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(loginAlter)
                     end
@@ -171,9 +170,9 @@ function IntroLayer.create()
                 
                 local button_register_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then
-                        local registerAlter = RegisterAlter.create()
-                        registerAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                        layer:addChild(registerAlter)
+                        local loginAlter = LoginAlter.createRegister()
+                        loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        layer:addChild(loginAlter)
                     end
                 end
 
