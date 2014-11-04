@@ -9,9 +9,9 @@ local UserBaseServer = {}
 --     return string.match(s, "[a-zA-Z\u4e00-\u9fa5][a-zA-Z0-9\u4e00-\u9fa5]{3,14}+")
 -- end
 
--- function validatePassword(s)
---     return string.match(s, "^[\\x00-\\x7F]{6,16}$")
--- end
+function validatePassword(s)
+    return string.match(s, "^[\\x00-\\x7F]{6,16}$")
+end
 
 local function onResponse_signup_login(sessionToken, e, code, onResponse)
     if e ~= nil then 
@@ -23,6 +23,7 @@ local function onResponse_signup_login(sessionToken, e, code, onResponse)
         UserBaseServer.searchUserByUserName(s_CURRENT_USER.username, function (api, result)
             for i, v in ipairs(result.results) do
                parseServerDataToUserData(v, s_CURRENT_USER)
+               s_CURRENT_USER.userId = s_CURRENT_USER.objectId
                if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
                print_lua_table(s_CURRENT_USER)
                break
@@ -83,7 +84,7 @@ s_UserBaseServer.dailyCheckInOfCurrentUser(
 )
 ]]--
 function UserBaseServer.dailyCheckInOfCurrentUser(onSucceed, onFailed)
-    local cql = "select * from WMAV_DailyCheckInData where userId='" .. s_CURRENT_USER.userId .. "'"
+    local cql = "select * from WMAV_DailyCheckInData where userId='" .. s_CURRENT_USER.objectId .. "'"
     s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
 end
 
@@ -100,7 +101,7 @@ s_UserBaseServer.getFolloweesOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getFolloweesOfCurrentUser(onSucceed, onFailed)
-    local cql = string.format("select include followee from _Followee where user=pointer('_User', '%s')", s_CURRENT_USER.userId)
+    local cql = string.format("select include followee from _Followee where user=pointer('_User', '%s')", s_CURRENT_USER.objectId)
     s_SERVER.CloudQueryLanguageExtend('followee', cql, onSucceed, onFailed)
 end
 
@@ -115,7 +116,7 @@ s_UserBaseServer.getFollowersOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getFollowersOfCurrentUser(onSucceed, onFailed)
-    local cql = string.format("select include follower from _Follower where user=pointer('_User', '%s')", s_CURRENT_USER.userId)
+    local cql = string.format("select include follower from _Follower where user=pointer('_User', '%s')", s_CURRENT_USER.objectId)
     s_SERVER.CloudQueryLanguageExtend('follower', cql, onSucceed, onFailed)
 end
 
@@ -128,7 +129,7 @@ curl -X GET \
   https://leancloud.cn/1.1/cloudQuery
 ]]--
 function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
-    local cql = "select * from _User where username='" .. username
+    local cql = "select * from _User where username='" .. username .. "'"
     s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
 end
 
@@ -161,7 +162,7 @@ s_UserBaseServer.getLevelsOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
-    UserBaseServer.getLevels(s_CURRENT_USER.userId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
+    UserBaseServer.getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
 end
 
 ----
