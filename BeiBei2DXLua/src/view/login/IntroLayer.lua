@@ -28,7 +28,7 @@ function IntroLayer.create()
         if i == 1 then
             intro:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
         else
-            intro:setPosition(s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2)
+            intro:setPosition(s_DESIGN_WIDTH*2,s_DESIGN_HEIGHT/2)
         end
         layer:addChild(intro)
         table.insert(intro_array, intro)
@@ -132,7 +132,7 @@ function IntroLayer.create()
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
 
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2))
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*2,s_DESIGN_HEIGHT/2))
                 intro_array[currentIndex]:runAction(action1)
   
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
@@ -152,7 +152,7 @@ function IntroLayer.create()
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
                 
-                local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2))
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH-s_DESIGN_WIDTH*2,s_DESIGN_HEIGHT/2))
                 intro_array[currentIndex]:runAction(action1)
 
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
@@ -174,16 +174,26 @@ function IntroLayer.create()
                 local button_login_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then                        
                         local loginAlter = LoginAlter.createLogin()
+                        loginAlter:setTag(1)
                         loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(loginAlter)
+                        
+                        loginAlter.close = function()
+                            layer:removeChildByTag(1)
+                        end
                     end
                 end
                 
                 local button_register_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then
                         local loginAlter = LoginAlter.createRegister()
+                        loginAlter:setTag(2)
                         loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(loginAlter)
+                        
+                        loginAlter.close = function()
+                            layer:removeChildByTag(2)
+                        end
                     end
                 end
 
@@ -193,11 +203,11 @@ function IntroLayer.create()
                     button_login = ccui.Button:create()
                     button_login:loadTextures("image/button/studyscene_blue_button.png", "", "")
                     button_login:addTouchEventListener(button_login_clicked)
-                    button_login:setPosition(s_DESIGN_WIDTH/2-150, 200)
+                    button_login:setPosition(cloud:getContentSize().width/2-150, 200)
                     button_login:setTitleFontSize(36)
                     button_login:setTitleText("登陆")
                     button_login:setTitleColor(cc.c4b(255,255,255,255))
-                    layer:addChild(button_login)
+                    cloud:addChild(button_login)
                 end
                 
                 if button_register then
@@ -206,11 +216,11 @@ function IntroLayer.create()
                     button_register = ccui.Button:create()
                     button_register:loadTextures("image/button/button_white_denglu.png", "", "")
                     button_register:addTouchEventListener(button_register_clicked)
-                    button_register:setPosition(s_DESIGN_WIDTH/2+150, 200)
+                    button_register:setPosition(cloud:getContentSize().width/2+150, 200)
                     button_register:setTitleFontSize(36)
                     button_register:setTitleText("注册")
-                    button_register:setTitleColor(cc.c4b(0,0,0,255))
-                    layer:addChild(button_register)
+                    button_register:setTitleColor(cc.c4b(115,197,243,255))
+                    cloud:addChild(button_register)
                 end
             end
         end

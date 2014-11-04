@@ -4,11 +4,11 @@ local LoginAlter = class("LoginAlter", function()
     return cc.Layer:create()
 end)
 
-local showLogin
-local showRegister
+local showLogin = nil
+local showRegister = nil
 
-local back_login
-local back_register
+local back_login = nil
+local back_register = nil
 
 local main = nil
 
@@ -17,6 +17,12 @@ function LoginAlter.createLogin()
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
+    main.close = function()
+    end
+    
+    back_login = nil
+    back_register = nil
+    
     showLogin()
 
     local onTouchBegan = function(touch, event)
@@ -38,6 +44,12 @@ function LoginAlter.createRegister()
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
+
+    main.close = function()
+    end
+
+    back_login = nil
+    back_register = nil
 
     showRegister()
 
@@ -197,7 +209,7 @@ showLogin = function()
     button_login:setPosition(back_width/2, 200)
     button_login:setTitleFontSize(28)
     button_login:setTitleText("返回注册")
-    button_login:setTitleColor(cc.c4b(0,0,0,255))
+    button_login:setTitleColor(cc.c4b(115,197,243,255))
     back_login:addChild(button_login)  
     
     local button_qq_clicked = function(sender, eventType)
@@ -229,6 +241,17 @@ showLogin = function()
     button_weibo:setPosition(back_width/2+100,100)
     button_weibo:addTouchEventListener(button_weibo_clicked)
     back_login:addChild(button_weibo)
+    
+
+    local button_close_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            main.close()
+        end
+    end
+    local button_close = ccui.Button:create("image/button/button_close.png")
+    button_close:setPosition(back_width-30,back_height-10)
+    button_close:addTouchEventListener(button_close_clicked)
+    back_login:addChild(button_close)
 end
 
 showRegister = function()
@@ -368,8 +391,48 @@ showRegister = function()
     button_login:setPosition(back_width/2, 200)
     button_login:setTitleFontSize(28)
     button_login:setTitleText("返回登陆")
-    button_login:setTitleColor(cc.c4b(0,0,0,255))
+    button_login:setTitleColor(cc.c4b(115,197,243,255))
     back_register:addChild(button_login) 
+    
+    local button_qq_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+
+        end
+    end
+    local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
+    button_qq:setPosition(back_width/2,100)
+    button_qq:addTouchEventListener(button_qq_clicked)
+    back_register:addChild(button_qq)
+
+    local button_weixin_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+
+        end
+    end
+    local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
+    button_weixin:setPosition(back_width/2-100,100)
+    button_weixin:addTouchEventListener(button_weixin_clicked)
+    back_register:addChild(button_weixin)
+
+    local button_weibo_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+
+        end
+    end
+    local button_weibo = ccui.Button:create("image/login/button_login_signupweibo.png")
+    button_weibo:setPosition(back_width/2+100,100)
+    button_weibo:addTouchEventListener(button_weibo_clicked)
+    back_register:addChild(button_weibo)
+    
+    local button_close_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            main.close()
+        end
+    end
+    local button_close = ccui.Button:create("image/button/button_close.png")
+    button_close:setPosition(back_width-30,back_height-10)
+    button_close:addTouchEventListener(button_close_clicked)
+    back_register:addChild(button_close)
 end
 
 return LoginAlter
