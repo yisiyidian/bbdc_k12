@@ -154,7 +154,16 @@ showLogin = function()
 
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            s_logd("for allen -- login")
+            local function onResponse(u, e, code)
+                if e then
+                    print("login fail")
+                    print(e)
+                    print(code)
+                else
+                    print("login success")
+                end
+            end
+            s_UserBaseServer.login(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
         end
     end
     
@@ -287,11 +296,17 @@ showRegister = function()
     textField_password:setPosition(cc.p(password:getContentSize().width / 2.0, password:getContentSize().height / 2.0))
     textField_password:addEventListener(textFieldEvent_password)
     password:addChild(textField_password)
-
-
+    
     local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            s_logd("for allen -- register")
+        if eventType == ccui.TouchEventType.began then            
+            local function onResponse(u, e, code)
+                if e then
+                    print("register fail")
+                else
+                    print("register success")
+                end
+            end
+            s_UserBaseServer.signup(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
         end
     end
 
@@ -301,7 +316,6 @@ showRegister = function()
     submit:setTitleFontSize(30)
     submit:addTouchEventListener(submit_clicked)
     back_register:addChild(submit)
-
 
     local button_login_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -330,9 +344,6 @@ showRegister = function()
     button_login:setScale(0.5)
     back_register:addChild(button_login) 
 end
-
-
-
 
 return LoginAlter
 
