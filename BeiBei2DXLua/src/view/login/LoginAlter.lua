@@ -99,9 +99,18 @@ showLogin = function()
     head:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
     circle:addChild(head)
 
+    local label1 = cc.Label:createWithSystemFont("登陆","",40)
+    label1:setColor(cc.c4b(115,197,243,255))
+    label1:setPosition(back_width/2,680)
+    back_login:addChild(label1)
+    
+    local label2 = cc.Label:createWithSystemFont("登陆可以和更多的好友一起背单词","",24)
+    label2:setColor(cc.c4b(100,100,100,255))
+    label2:setPosition(back_width/2,640)
+    back_login:addChild(label2)
     
     local username = cc.Sprite:create("image/login/sl_username.png")
-    username:setPosition(back_width/2, 600)
+    username:setPosition(back_width/2, 550)
     back_login:addChild(username)
       
     local textField_username
@@ -133,7 +142,7 @@ showLogin = function()
     username:addChild(textField_username)
     
     local password = cc.Sprite:create("image/login/sl_password.png")
-    password:setPosition(back_width/2, 500)
+    password:setPosition(back_width/2, 450)
     back_login:addChild(password)
     
     local function textFieldEvent_password(sender, eventType)
@@ -179,7 +188,7 @@ showLogin = function()
     end
     
     local submit = ccui.Button:create("image/login/sl_button_confirm.png","","")
-    submit:setPosition(back_width/2, 400)
+    submit:setPosition(back_width/2, 350)
     submit:setTitleText("登陆")
     submit:setTitleFontSize(30)
     submit:addTouchEventListener(submit_clicked)
@@ -284,8 +293,18 @@ showRegister = function()
     head:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
     circle:addChild(head)
 
+    local label1 = cc.Label:createWithSystemFont("注册","",40)
+    label1:setColor(cc.c4b(115,197,243,255))
+    label1:setPosition(back_width/2,680)
+    back_register:addChild(label1)
+
+    local label2 = cc.Label:createWithSystemFont("注册可以和更多的好友一起背单词","",24)
+    label2:setColor(cc.c4b(100,100,100,255))
+    label2:setPosition(back_width/2,640)
+    back_register:addChild(label2)
+
     local username = cc.Sprite:create("image/login/sl_username.png")
-    username:setPosition(back_width/2, 600)
+    username:setPosition(back_width/2, 550)
     back_register:addChild(username)
 
     local textField_username
@@ -317,7 +336,7 @@ showRegister = function()
     username:addChild(textField_username)
 
     local password = cc.Sprite:create("image/login/sl_password.png")
-    password:setPosition(back_width/2, 500)
+    password:setPosition(back_width/2, 450)
     back_register:addChild(password)
 
     local function textFieldEvent_password(sender, eventType)
@@ -362,7 +381,7 @@ showRegister = function()
     end
 
     local submit = ccui.Button:create("image/login/sl_button_confirm.png","","")
-    submit:setPosition(back_width/2, 400)
+    submit:setPosition(back_width/2, 350)
     submit:setTitleText("注册")
     submit:setTitleFontSize(30)
     submit:addTouchEventListener(submit_clicked)
