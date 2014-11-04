@@ -30,7 +30,7 @@ end
 
 function parseServerDataToUserData(serverdata, userdata)
     for key, value in pairs(userdata) do
-        if nil ~= serverdata[key] and key ~= 'password'then
+        if nil ~= serverdata[key] and key ~= 'sessionToken' and key ~= 'password' then
             if (key == 'createdAt' or key == 'updatedAt') and type(serverdata[key]) == 'string' then
                 userdata[key] = getSecondsFromString(serverdata[key])
             else

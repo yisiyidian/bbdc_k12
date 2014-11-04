@@ -2,21 +2,22 @@ require("common.global")
 
 local Server = {}
 
-Server.debugLocalHost = false
+Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
 Server.sessionToken = ''
 
 local function getURL()
-    if Server.debugLocalHost then
-        return 'http://localhost:3000/avos/'
-    else
-        return 'https://leancloud.cn/1.1/functions/'
-    end
+    -- if Server.debugLocalHost then
+    --     return 'http://localhost:3000/avos/'
+    -- else
+        return 'https://leancloud.cn/1.1/'
+    -- end
 end
 
 -- create : POST
 -- update : PUT
 -- https://leancloud.cn/1.1/classes/
+-- https://leancloud.cn/1.1/users/51fa6886e4b0cc0b5a3792e9/updatePassword
 
 local function getAppData()
     local timestamp = os.time()
@@ -40,14 +41,14 @@ end
 -- parameters : table
 -- onSucceed(api, result) -- result : json
 -- onFailed(api, code, message, description)
-function Server.request(api, parameters, onSucceed, onFailed)
+local function __request__(api, httpRequestType, contentType, parameters, onSucceed, onFailed)
     local appId, sign = getAppData()
     local xhr = cc.XMLHttpRequest:new()    
     xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
-    xhr:open('POST', getURL() .. api)
+    xhr:open(httpRequestType, getURL() .. api)
     xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
     xhr:setRequestHeader('X-AVOSCloud-Request-Sign', sign)
-    xhr:setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+    xhr:setRequestHeader('Content-Type', contentType)
     if (string.len(Server.sessionToken) > 0) then
         xhr:setRequestHeader('X-AVOSCloud-Session-Token', Server.sessionToken)
     end
@@ -112,7 +113,11 @@ function Server.request(api, parameters, onSucceed, onFailed)
     else 
         xhr:send()
     end
-    s_logd('\n>>>\nrequest: api:' .. api .. ', parameters:' .. str .. '\n<<<\n')
+    s_logd('\n>>>\nrequest: api:' .. api .. ', sessionToken:' .. Server.sessionToken .. ', parameters:' .. str .. '\n<<<\n')
+end
+
+function Server.requestFunction(api, parameters, onSucceed, onFailed)
+    __request__('functions/' .. api, 'POST', 'application/x-www-form-urlencoded; charset=UTF-8', parameters, onSucceed, onFailed)
 end
 
 -- doCloudQuery 回调中的 result 包含三个属性：
@@ -120,20 +125,35 @@ end
 --     count - 如果使用了 select count(*) 的查询语法，返回符合查询条件的记录数目。
 --     className - 查询的 class name
 function Server.CloudQueryLanguage(cql, onSucceed, onFailed)
-    Server.request('apiCQL', {['cql']=cql}, onSucceed, onFailed)
+    Server.requestFunction('apiCQL', {['cql']=cql}, onSucceed, onFailed)
 end
 
 function Server.CloudQueryLanguageExtend(cat, cql, onSucceed, onFailed)
-    Server.request('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
+    Server.requestFunction('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
 end
 
 -- create & update
 function Server.createData(obj, onSucceed, onFailed)
-    Server.request('apiCreate', {['className']=obj.className, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
+    Server.requestFunction('apiCreate', {['className']=obj.className, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
 end
 
 function Server.updateData(obj, onSucceed, onFailed)
-    Server.request('apiUpdate', {['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
+    Server.requestFunction('apiUpdate', {['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
+end
+
+--[[
+curl -X PUT \
+>   -H "X-AVOSCloud-Application-Id: 9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l" \
+>   -H "X-AVOSCloud-Application-Key: 8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg" \
+>   -H "X-AVOSCloud-Session-Token: 43jda47e79x8734m0bic30jyg" \
+>   -H "Content-Type: application/json" \
+>   -d '{"old_password":"111111", "new_password":"222222"}' \
+>   https://leancloud.cn/1.1/users/54128e44e4b080380a47debc/updatePassword
+{"updatedAt":"2014-11-04T07:34:43.718Z","objectId":"54128e44e4b080380a47debc"}
+]]--
+function Server.updatePassword(old_password, new_password, userObjectId, onSucceed, onFailed)
+    -- __request__('users/' .. userObjectId .. '/updatePassword', 'PUT', 'application/json', {['old_password']=old_password, ['new_password']=new_password}, onSucceed, onFailed)
+    Server.requestFunction('apiCurl', {['cql']=cql}, onSucceed, onFailed)
 end
 
 -- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin
