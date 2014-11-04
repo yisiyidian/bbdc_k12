@@ -7,10 +7,35 @@ local LevelLayer = class("LevelLayer", function()
     return cc.Layer:create()
 end)
 
+local player
 
 function LevelLayer.create()
     local layer = LevelLayer.new()
     return layer
+end
+
+function LevelLayer:levelStateManager()
+    -- TODO Check Review boss state
+    
+    -- TODO switch state
+    if s_SCENE.levelLayerState == s_normal_level_state then
+       
+    elseif s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
+        -- update level state and plot popup(call on level button clicked)
+        -- TODO CHECK level index valid
+        s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
+        s_SERVER.updateData(s_CURRENT_USER,
+            function(api, result)  -- succeed
+            
+            end,
+            function(api, code, message, description) -- fail
+            end
+        )
+        
+    elseif s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
+        -- update level state  
+      
+    end
 end
 
 function LevelLayer:ctor()
@@ -38,10 +63,13 @@ function LevelLayer:ctor()
       local levelLayer1 = levelStypeI.create()
       --self:addChild(levelLayer1)
       local currentLevelButton = levelLayer1.ccbLevelLayerI['levelSet']:getChildByName('level1')
-      local player = cc.Sprite:create('image/chapter_level/gril_head.png')
+      player = cc.Sprite:create('image/chapter_level/gril_head.png')
       player:setPosition(50,20)
       player:setScale(0.5)
       currentLevelButton:addChild(player, 5)
+      
+      -- level layer state manager
+      
 --    -- initialize chapter 2
 --    ccbLevelLayer2['onLevelButtonClicked'] = self.onLevelButtonClicked
 --    local proxy2 = cc.CCBProxy:create()

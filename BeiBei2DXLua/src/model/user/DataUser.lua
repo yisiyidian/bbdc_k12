@@ -111,4 +111,30 @@ function DataUser:getUserLevelData(chapterKey, levelKey)
     end
 end
 
+function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
+    for i = 1, #self.levels do
+        if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
+            self.levels[i].hearts = stars
+            s_SERVER.updateData(self.levels[i],
+            function(api,result)
+            end,
+            function(api, code, message, description)
+            end)        
+        end
+    end
+end
+
+function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
+    for i = 1, #self.levels do
+        if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
+            self.levels[i].isLevelUnlocked = unlocked
+            s_SERVER.updateData(self.levels[i],
+                function(api,result)
+                end,
+                function(api, code, message, description)
+                end)        
+        end
+    end
+end
+
 return DataUser
