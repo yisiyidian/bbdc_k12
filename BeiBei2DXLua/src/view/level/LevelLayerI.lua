@@ -180,7 +180,7 @@ function LevelLayerI:onLevelButtonClicked(levelTag)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
-        local layer = popupNormal.create()
+        local layer = popupNormal.create(levelTag)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
