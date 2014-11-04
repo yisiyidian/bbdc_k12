@@ -129,6 +129,7 @@ function LevelLayerI:ctor()
     
     local proxy = cc.CCBProxy:create()
     local contentNode = CCBReaderLoad('ccb/chapter1.ccbi',proxy,self.ccbLevelLayerI,self.ccb)
+    self.ccbLevelLayerI['contentNode'] = contentNode
     self.ccbLevelLayerI['levelSet'] = contentNode:getChildByTag(5)
     for i = 1, #self.ccbLevelLayerI['levelSet']:getChildren() do
         self.ccbLevelLayerI['levelSet']:getChildren()[i]:setName('level'..(self.ccbLevelLayerI['levelSet']:getChildren()[i]:getTag()-1))
@@ -173,7 +174,7 @@ end
 function LevelLayerI:onLevelButtonClicked(levelTag)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
     -- check level type
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig('ncee','Chapter0','level'..levelTag)
     if s_SCENE.levelLayerState == s_review_boss_appear_state then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()

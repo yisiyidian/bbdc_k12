@@ -69,7 +69,7 @@ function StartViewLayer:onPlay()
         
         
     end 
-    s_UserBaseServer.login('yehanjie1', '111111', onResponse)
+    s_UserBaseServer.login('yehanjie1', '222222', onResponse)
 end
 
 function StartViewLayer:onSignUp()

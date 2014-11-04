@@ -218,6 +218,7 @@ function DataManager.loadLevels(bookkey)
 end
 
 function DataManager.getLevelConfig(bookKey, chapterKey, levelKey)
+    s_logd(bookKey..','..chapterKey..','..levelKey)
     if bookKey == s_BOOK_KEY_NCEE then
         for i = 1, #DataManager.level_ncee do
             if DataManager.level_ncee[i]['chapter_key'] == chapterKey and DataManager.level_ncee[i]['level_key'] == levelKey then
