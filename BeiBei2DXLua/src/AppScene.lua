@@ -90,4 +90,11 @@ function AppScene:removeAllPopups()
     self.popupLayer:removeAllChildren()
 end
 
+function AppScene:callFuncWithDelay(delay, func) 
+    local delayAction = cc.DelayTime:create(delay)
+    local callAction = cc.CallFunc:create(func)
+    local sequence = cc.Sequence:create(delayAction, callAction)
+    self:runAction(sequence)   
+end
+
 return AppScene

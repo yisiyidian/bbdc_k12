@@ -148,6 +148,8 @@ function Manager.initTables()
 --  ]]
 end
 
+
+
 function Manager.showTables()
     for row in Manager.database:nrows("SELECT * FROM test") do
         s_logd('sqlite3:' .. row.id .. ', ' .. row.content)

@@ -9,6 +9,7 @@ function MetaLevel.create(index,
                         summary_boss_drop, 
                         chapter_key, 
                         book_key, 
+                        word_num,
                         summary_boss_time, 
                         summary_boss_word,
                         summary_boss_hp, 
@@ -23,6 +24,7 @@ function MetaLevel.create(index,
     obj.summary_boss_drop = summary_boss_drop
     obj.chapter_key = chapter_key
     obj.book_key = book_key
+    obj.word_num = word_num
     obj.summary_boss_time = summary_boss_time
     obj.summary_boss_word = summary_boss_word
     obj.summary_boss_hp = summary_boss_hp

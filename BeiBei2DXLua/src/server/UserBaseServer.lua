@@ -90,7 +90,7 @@ function UserBaseServer.signup(username, password, onResponse)
     end)
 end
 
--- function (user data, error description)
+-- function (user data, error description, error code)
 function UserBaseServer.login(username, password, onResponse)
     -- s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
     s_CURRENT_USER.username = username

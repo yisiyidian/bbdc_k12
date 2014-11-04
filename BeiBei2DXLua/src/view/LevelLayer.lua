@@ -7,10 +7,46 @@ local LevelLayer = class("LevelLayer", function()
     return cc.Layer:create()
 end)
 
+local player
+local levelLayerI
 
 function LevelLayer.create()
     local layer = LevelLayer.new()
     return layer
+end
+
+function LevelLayer:levelStateManager()
+    -- test
+    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    -- TODO Check Review boss state
+    
+    -- TODO switch state
+    if s_SCENE.levelLayerState == s_normal_level_state then
+        print(s_SCENE.levelLayerState)
+       
+    elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
+        print(s_SCENE.levelLayerState)
+        -- update level state and plot popup(call on level button clicked)
+        -- TODO CHECK level index valid
+        --s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
+        --s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
+        local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level2')
+        levelLayerI:plotStarAnimation(3, 3)
+        --print('start_run')
+        s_SCENE:callFuncWithDelay(3,function()
+            local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
+            player:runAction(action)
+        end
+        )
+
+--        local scheduler = require('framework.scheduler')
+--        levelLayerI:onLevelButtonClicked(4)
+        
+        
+    elseif s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
+        -- update level state  
+        print(s_SCENE.levelLayerState)
+    end
 end
 
 function LevelLayer:ctor()
@@ -35,13 +71,17 @@ function LevelLayer:ctor()
 --    chapterTitle1:setPosition(0, 2800)
 --    contentNode1:addChild(chapterTitle1) 
       local levelStypeI = require('view.level.LevelLayerI')
-      local levelLayer1 = levelStypeI.create()
+      levelLayerI = levelStypeI.create()
       --self:addChild(levelLayer1)
-      local currentLevelButton = levelLayer1.ccbLevelLayerI['levelSet']:getChildByName('level1')
-      local player = cc.Sprite:create('image/chapter_level/gril_head.png')
-      player:setPosition(50,20)
+      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level1')
+      local image = 'image/chapter_level/gril_head.png'
+      player = cc.MenuItemImage:create(image,image,image)
+      player:setPosition(currentLevelButton:getPosition())
       player:setScale(0.5)
-      currentLevelButton:addChild(player, 5)
+      levelLayerI.ccbLevelLayerI['levelSet']:addChild(player, 5)
+      
+      -- level layer state manager
+      self:levelStateManager()
 --    -- initialize chapter 2
 --    ccbLevelLayer2['onLevelButtonClicked'] = self.onLevelButtonClicked
 --    local proxy2 = cc.CCBProxy:create()
@@ -65,6 +105,7 @@ function LevelLayer:ctor()
     -- scroll view scroll
     local function scrollViewDidScroll()
         print 'scrollview did scroll'
+        print(scrollViewNode:getPosition())
     end
     
     local function scrollViewDidZoom()
@@ -76,7 +117,9 @@ function LevelLayer:ctor()
         scrollViewNode:setPosition(0,0)
         --contentNode2:setContentSize(856,5397)
         scrollViewNode:ignoreAnchorPointForPosition(true)
-        scrollViewNode:setContainer(levelLayer1)
+        scrollViewNode:setContainer(levelLayerI)
+        scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
+        --scrollViewNode:setSizePercent(50)
         --contentNode:setAnchorPoint(0.5,0.5)
 --        contentNode2:setContentSize(500,1000)
         --contentNode1:setPosition(0,2470)
@@ -87,14 +130,14 @@ function LevelLayer:ctor()
         
 --        local position = contentNode1:getContentSize()
 --        s_logd('contentSize:%f,%f',position.width,position.height)
-        scrollViewNode:updateInset()
         scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
         scrollViewNode:setBounceable(true)
-        
+        scrollViewNode:setClippingToBounds(true)
+        scrollViewNode:updateInset()
         scrollViewNode:setDelegate()
-        scrollViewNode:setClippingToBounds(false)
-        scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
-        scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
+
+        --scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
+        --scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
         self:addChild(scrollViewNode)
     end
     
