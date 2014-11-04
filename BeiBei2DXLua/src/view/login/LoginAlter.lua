@@ -192,13 +192,12 @@ showLogin = function()
     end
     
     local button_login = ccui.Button:create()
-    button_login:loadTextures("image/button/button_white_denglu.png", "", "")
+    button_login:loadTextures("image/button/button_login_signup.png", "", "")
     button_login:addTouchEventListener(button_login_clicked)
     button_login:setPosition(back_width/2, 200)
-    button_login:setTitleFontSize(36)
+    button_login:setTitleFontSize(28)
     button_login:setTitleText("返回注册")
     button_login:setTitleColor(cc.c4b(0,0,0,255))
-    button_login:setScale(0.5)
     back_login:addChild(button_login)  
     
     local button_qq_clicked = function(sender, eventType)
@@ -364,13 +363,12 @@ showRegister = function()
     end
 
     local button_login = ccui.Button:create()
-    button_login:loadTextures("image/button/button_white_denglu.png", "", "")
+    button_login:loadTextures("image/button/button_login_signup.png", "", "")
     button_login:addTouchEventListener(button_login_clicked)
     button_login:setPosition(back_width/2, 200)
-    button_login:setTitleFontSize(36)
+    button_login:setTitleFontSize(28)
     button_login:setTitleText("返回登陆")
     button_login:setTitleColor(cc.c4b(0,0,0,255))
-    button_login:setScale(0.5)
     back_register:addChild(button_login) 
 end
 
