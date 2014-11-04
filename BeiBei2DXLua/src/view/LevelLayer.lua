@@ -18,7 +18,6 @@ end
 function LevelLayer:levelStateManager()
     -- test
     s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-    print(s_SCENE.levelLayerState..'!!!!!!!!!!!!!!')
     -- TODO Check Review boss state
     
     -- TODO switch state
@@ -32,9 +31,14 @@ function LevelLayer:levelStateManager()
         --s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
         --s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
         local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level2')
-        local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
-        print('start_run')
-        player:runAction(action)
+        levelLayerI:plotStarAnimation(3, 3)
+        --print('start_run')
+        s_SCENE:callFuncWithDelay(3,function()
+            local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
+            player:runAction(action)
+        end
+        )
+
 --        local scheduler = require('framework.scheduler')
 --        levelLayerI:onLevelButtonClicked(4)
         
