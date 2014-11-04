@@ -88,17 +88,17 @@ function LevelLayerI:plotStarAnimation(levelTag, heart)
     
     s_SCENE:callFuncWithDelay(0.3,function()
         star1:setVisible(true)
-        local action = cc.ScaleTo:create(0.3, 1.0)
+        local action = cc.ScaleTo:create(0.4, 1.0)
         star1:runAction(action)
     end)
     s_SCENE:callFuncWithDelay(0.6,function()
         star2:setVisible(true)
-        local action = cc.ScaleTo:create(0.3, 1.0)
+        local action = cc.ScaleTo:create(0.4, 1.0)
         star2:runAction(action)
     end)
     s_SCENE:callFuncWithDelay(0.9,function()
         star3:setVisible(true)
-        local action = cc.ScaleTo:create(0.3, 1.0)
+        local action = cc.ScaleTo:create(0.4, 1.0)
         star3:runAction(action)
     end)
     
@@ -108,58 +108,59 @@ function LevelLayerI:plotLevelDecoration()
     for i = 0, 11 do
         local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..i)
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..i)
-        
+        local levelData = s_CURRENT_USER:getUserLevelData('Chapter0','level'..i)
 --        if i == 3 or i == 10 then  -- plot boat animation
 --            local boat = sp.SkeletonAnimation:create('spine/first-level-moving-boat-bottom.json', 'spine/first-level-moving-boat-bottom.atlas',1)
 --            boat:addAnimation(0, 'anmiation', true)
 --            boat:setPosition(levelButton:getContentSize().width/2, -400)
 --            levelButton:addChild(boat)
 --        end
-        
-        if levelConfig['type'] == 1 then
-            -- add summary boss
-            local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-            summaryboss:setPosition(0,10)
-            summaryboss:addAnimation(0, 'animation',true)
-            summaryboss:setScale(0.7)
-            levelButton:addChild(summaryboss, 3)
-        elseif i % 8 == 0 then
-            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
-            deco:addAnimation(0,'animation',true)
-            deco:setPosition(70,90)
-            levelButton:addChild(deco, 3)
-        elseif i % 8 == 1 then
-            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yezi.png')
-            deco:setPosition(120, 130)
-            levelButton:addChild(deco, 3)
-        elseif i % 8 == 2 then
-            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
-            deco:addAnimation(0,'animation',true)
-            deco:setPosition(-10,40)
-            levelButton:addChild(deco, 3)
-        elseif i % 8 == 3 then
-            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_pangxie.png')
-            deco:setPosition(70, 110)
-            levelButton:addChild(deco, 3)
-        elseif i % 8 == 4 then
-            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
-            deco:addAnimation(0,'animation',true)
-            deco:setPosition(-10,40)
-            levelButton:addChild(deco, 3)
-        elseif i % 8 == 5 then
-            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yinliao.png')
-            deco:setPosition(120, 80)
-            levelButton:addChild(deco, 3)
-        elseif i % 8 == 6 then
-            local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
-            deco:addAnimation(0,'animation',true)
-            deco:setPosition(60,40)
-            levelButton:addChild(deco, 3)
-        elseif i % 8 == 7 then
-            local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
-            deco:setPosition(120, 130)
-            levelButton:addChild(deco, 3)
-        end
+ --       if  levelData.isLevelUnlocked then  -- test
+            if levelConfig['type'] == 1 then
+                -- add summary boss
+                local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+                summaryboss:setPosition(0,10)
+                summaryboss:addAnimation(0, 'animation',true)
+                summaryboss:setScale(0.7)
+                levelButton:addChild(summaryboss, 3)
+            elseif i % 8 == 0 then
+                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
+                deco:addAnimation(0,'animation',true)
+                deco:setPosition(70,90)
+                levelButton:addChild(deco, 3)
+            elseif i % 8 == 1 then
+                local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yezi.png')
+                deco:setPosition(120, 130)
+                levelButton:addChild(deco, 3)
+            elseif i % 8 == 2 then
+                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
+                deco:addAnimation(0,'animation',true)
+                deco:setPosition(-10,40)
+                levelButton:addChild(deco, 3)
+            elseif i % 8 == 3 then
+                local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_pangxie.png')
+                deco:setPosition(70, 110)
+                levelButton:addChild(deco, 3)
+            elseif i % 8 == 4 then
+                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
+                deco:addAnimation(0,'animation',true)
+                deco:setPosition(-10,40)
+                levelButton:addChild(deco, 3)
+            elseif i % 8 == 5 then
+                local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yinliao.png')
+                deco:setPosition(120, 80)
+                levelButton:addChild(deco, 3)
+            elseif i % 8 == 6 then
+                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
+                deco:addAnimation(0,'animation',true)
+                deco:setPosition(60,40)
+                levelButton:addChild(deco, 3)
+            elseif i % 8 == 7 then
+                local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
+                deco:setPosition(120, 130)
+                levelButton:addChild(deco, 3)
+            end
+        --end
     end
 end
 
@@ -200,7 +201,7 @@ function LevelLayerI:ctor()
             -- change button image
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
             if string.format('%s',levelConfig[i]['type']) == '1' then
-                if not isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
+                if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
                 else
@@ -211,6 +212,11 @@ function LevelLayerI:ctor()
                 if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
+                    local lockImage = 'ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked_Lock.png'
+                 
+                    local lock = cc.MenuItemImage:create(lockImage,lockImage,lockImage)
+                    lock:setPosition(cc.p(levelButton:getPosition()))
+                    self.ccbLevelLayerI['levelSet']:addChild(lock,5)
                 end
             end
         end
