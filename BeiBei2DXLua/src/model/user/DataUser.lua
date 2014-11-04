@@ -137,4 +137,12 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
     end
 end
 
+function DataUser:updateDataToServer()
+    s_SERVER.updateData(self,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end) 
+end
+
 return DataUser

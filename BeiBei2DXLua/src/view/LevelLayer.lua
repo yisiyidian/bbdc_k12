@@ -24,13 +24,9 @@ function LevelLayer:levelStateManager()
         -- update level state and plot popup(call on level button clicked)
         -- TODO CHECK level index valid
         s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
-        s_SERVER.updateData(s_CURRENT_USER,
-            function(api, result)  -- succeed
-            
-            end,
-            function(api, code, message, description) -- fail
-            end
-        )
+        s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
+        
+        
         
     elseif s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
         -- update level state  
@@ -93,6 +89,7 @@ function LevelLayer:ctor()
     -- scroll view scroll
     local function scrollViewDidScroll()
         print 'scrollview did scroll'
+        print(scrollViewNode:getPosition())
     end
     
     local function scrollViewDidZoom()
@@ -105,6 +102,8 @@ function LevelLayer:ctor()
         --contentNode2:setContentSize(856,5397)
         scrollViewNode:ignoreAnchorPointForPosition(true)
         scrollViewNode:setContainer(levelLayer1)
+        scrollViewNode:setContentOffset(cc.vertex2F(0,-1000), false)
+        --scrollViewNode:setSizePercent(50)
         --contentNode:setAnchorPoint(0.5,0.5)
 --        contentNode2:setContentSize(500,1000)
         --contentNode1:setPosition(0,2470)

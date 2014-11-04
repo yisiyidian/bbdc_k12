@@ -115,7 +115,7 @@ end
 local onTouchBegan = function(touch, event) 
     local touchPosition = touch:getLocation()
     -- plot shark
-    print(touchPosition.x..touchPosition.y)
+    --print(touchPosition.x..touchPosition.y)
 end
 
 function LevelLayerI:ctor()

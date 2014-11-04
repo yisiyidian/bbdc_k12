@@ -194,6 +194,7 @@ function DataManager.loadLevels(bookkey)
                                     data['summary_boss_drop'], 
                                     data['chapter_key'], 
                                     data['book_key'], 
+                                    data['word_num'],
                                     data['summary_boss_time'], 
                                     data['summary_boss_word'],
                                     data['summary_boss_hp'], 
