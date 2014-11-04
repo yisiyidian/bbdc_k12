@@ -3,13 +3,17 @@ require("Cocos2dConstants")
 
 require("common.global")
 
-local LoginLayer = class("LoginLayer", function ()
+local LoginAlter = require("view.login.LoginAlter")
+local RegisterAlter = require("view.login.RegisterAlter")
+
+
+local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
 end)
 
 
-function LoginLayer.create()
-    local layer = LoginLayer.new()
+function IntroLayer.create()
+    local layer = IntroLayer.new()
     
     local currentIndex = 1
     
@@ -30,13 +34,6 @@ function LoginLayer.create()
         layer:addChild(intro)
         table.insert(intro_array, intro)
     end
-
---    -- 临时添加 start
---    local intro = cc.Sprite:create("image/login/denglu_4_background.png")
---    intro:setPosition(s_DESIGN_WIDTH*1.5,s_DESIGN_HEIGHT/2)
---    layer:addChild(intro)
---    table.insert(intro_array, intro)
---    -- 临时添加 end
 
     local intro = cc.Layer:create()
     intro:setContentSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT)
@@ -165,14 +162,18 @@ function LoginLayer.create()
                 cloud:runAction(action2)
                                 
                 local button_login_clicked = function(sender, eventType)
-                    if eventType == ccui.TouchEventType.began then
-                        s_logd("login")
+                    if eventType == ccui.TouchEventType.began then                        
+                        local loginAlter = LoginAlter.create()
+                        loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        layer:addChild(loginAlter)
                     end
                 end
                 
                 local button_register_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then
-                        s_logd("register")
+                        local registerAlter = RegisterAlter.create()
+                        registerAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        layer:addChild(registerAlter)
                     end
                 end
 
@@ -214,4 +215,4 @@ function LoginLayer.create()
     return layer
 end
 
-return LoginLayer
+return IntroLayer
