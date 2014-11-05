@@ -4,11 +4,11 @@ local LoginAlter = class("LoginAlter", function()
     return cc.Layer:create()
 end)
 
-local showLogin
-local showRegister
+local showLogin = nil
+local showRegister = nil
 
-local back_login
-local back_register
+local back_login = nil
+local back_register = nil
 
 local main = nil
 
@@ -17,6 +17,12 @@ function LoginAlter.createLogin()
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
+    main.close = function()
+    end
+    
+    back_login = nil
+    back_register = nil
+    
     showLogin()
 
     local onTouchBegan = function(touch, event)
@@ -38,6 +44,12 @@ function LoginAlter.createRegister()
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
+
+    main.close = function()
+    end
+
+    back_login = nil
+    back_register = nil
 
     showRegister()
 
@@ -87,9 +99,18 @@ showLogin = function()
     head:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
     circle:addChild(head)
 
+    local label1 = cc.Label:createWithSystemFont("登陆","",40)
+    label1:setColor(cc.c4b(115,197,243,255))
+    label1:setPosition(back_width/2,680)
+    back_login:addChild(label1)
+    
+    local label2 = cc.Label:createWithSystemFont("登陆可以和更多的好友一起背单词","",24)
+    label2:setColor(cc.c4b(100,100,100,255))
+    label2:setPosition(back_width/2,640)
+    back_login:addChild(label2)
     
     local username = cc.Sprite:create("image/login/sl_username.png")
-    username:setPosition(back_width/2, 600)
+    username:setPosition(back_width/2, 550)
     back_login:addChild(username)
       
     local textField_username
@@ -121,7 +142,7 @@ showLogin = function()
     username:addChild(textField_username)
     
     local password = cc.Sprite:create("image/login/sl_password.png")
-    password:setPosition(back_width/2, 500)
+    password:setPosition(back_width/2, 450)
     back_login:addChild(password)
     
     local function textFieldEvent_password(sender, eventType)
@@ -167,7 +188,7 @@ showLogin = function()
     end
     
     local submit = ccui.Button:create("image/login/sl_button_confirm.png","","")
-    submit:setPosition(back_width/2, 400)
+    submit:setPosition(back_width/2, 350)
     submit:setTitleText("登陆")
     submit:setTitleFontSize(30)
     submit:addTouchEventListener(submit_clicked)
@@ -192,13 +213,12 @@ showLogin = function()
     end
     
     local button_login = ccui.Button:create()
-    button_login:loadTextures("image/button/button_white_denglu.png", "", "")
+    button_login:loadTextures("image/button/button_login_signup.png", "", "")
     button_login:addTouchEventListener(button_login_clicked)
     button_login:setPosition(back_width/2, 200)
-    button_login:setTitleFontSize(36)
+    button_login:setTitleFontSize(28)
     button_login:setTitleText("返回注册")
-    button_login:setTitleColor(cc.c4b(0,0,0,255))
-    button_login:setScale(0.5)
+    button_login:setTitleColor(cc.c4b(115,197,243,255))
     back_login:addChild(button_login)  
     
     local button_qq_clicked = function(sender, eventType)
@@ -230,6 +250,17 @@ showLogin = function()
     button_weibo:setPosition(back_width/2+100,100)
     button_weibo:addTouchEventListener(button_weibo_clicked)
     back_login:addChild(button_weibo)
+    
+
+    local button_close_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            main.close()
+        end
+    end
+    local button_close = ccui.Button:create("image/button/button_close.png")
+    button_close:setPosition(back_width-30,back_height-10)
+    button_close:addTouchEventListener(button_close_clicked)
+    back_login:addChild(button_close)
 end
 
 showRegister = function()
@@ -262,8 +293,18 @@ showRegister = function()
     head:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
     circle:addChild(head)
 
+    local label1 = cc.Label:createWithSystemFont("注册","",40)
+    label1:setColor(cc.c4b(115,197,243,255))
+    label1:setPosition(back_width/2,680)
+    back_register:addChild(label1)
+
+    local label2 = cc.Label:createWithSystemFont("注册可以和更多的好友一起背单词","",24)
+    label2:setColor(cc.c4b(100,100,100,255))
+    label2:setPosition(back_width/2,640)
+    back_register:addChild(label2)
+
     local username = cc.Sprite:create("image/login/sl_username.png")
-    username:setPosition(back_width/2, 600)
+    username:setPosition(back_width/2, 550)
     back_register:addChild(username)
 
     local textField_username
@@ -295,7 +336,7 @@ showRegister = function()
     username:addChild(textField_username)
 
     local password = cc.Sprite:create("image/login/sl_password.png")
-    password:setPosition(back_width/2, 500)
+    password:setPosition(back_width/2, 450)
     back_register:addChild(password)
 
     local function textFieldEvent_password(sender, eventType)
@@ -340,7 +381,7 @@ showRegister = function()
     end
 
     local submit = ccui.Button:create("image/login/sl_button_confirm.png","","")
-    submit:setPosition(back_width/2, 400)
+    submit:setPosition(back_width/2, 350)
     submit:setTitleText("注册")
     submit:setTitleFontSize(30)
     submit:addTouchEventListener(submit_clicked)
@@ -364,14 +405,53 @@ showRegister = function()
     end
 
     local button_login = ccui.Button:create()
-    button_login:loadTextures("image/button/button_white_denglu.png", "", "")
+    button_login:loadTextures("image/button/button_login_signup.png", "", "")
     button_login:addTouchEventListener(button_login_clicked)
     button_login:setPosition(back_width/2, 200)
-    button_login:setTitleFontSize(36)
+    button_login:setTitleFontSize(28)
     button_login:setTitleText("返回登陆")
-    button_login:setTitleColor(cc.c4b(0,0,0,255))
-    button_login:setScale(0.5)
+    button_login:setTitleColor(cc.c4b(115,197,243,255))
     back_register:addChild(button_login) 
+    
+    local button_qq_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+
+        end
+    end
+    local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
+    button_qq:setPosition(back_width/2,100)
+    button_qq:addTouchEventListener(button_qq_clicked)
+    back_register:addChild(button_qq)
+
+    local button_weixin_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+
+        end
+    end
+    local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
+    button_weixin:setPosition(back_width/2-100,100)
+    button_weixin:addTouchEventListener(button_weixin_clicked)
+    back_register:addChild(button_weixin)
+
+    local button_weibo_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+
+        end
+    end
+    local button_weibo = ccui.Button:create("image/login/button_login_signupweibo.png")
+    button_weibo:setPosition(back_width/2+100,100)
+    button_weibo:addTouchEventListener(button_weibo_clicked)
+    back_register:addChild(button_weibo)
+    
+    local button_close_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            main.close()
+        end
+    end
+    local button_close = ccui.Button:create("image/button/button_close.png")
+    button_close:setPosition(back_width-30,back_height-10)
+    button_close:addTouchEventListener(button_close_clicked)
+    back_register:addChild(button_close)
 end
 
 return LoginAlter

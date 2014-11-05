@@ -44,14 +44,14 @@ function test()
 --    s_DATA_MANAGER.loadReviewBoss()
 --    s_DATA_MANAGER.loadStarRules()
 --    
---    s_WordPool = s_DATA_MANAGER.loadAllWords()
---    s_CorePlayManager = require("controller.CorePlayManager")
---    s_CorePlayManager.create()
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
 
     --s_CorePlayManager.enterStudyLayer()
     --s_CorePlayManager.enterTestLayer()
     --s_CorePlayManager.enterReviewBossLayer()
-    --s_CorePlayManager.enterLoginLayer()
+    s_CorePlayManager.enterIntroLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
