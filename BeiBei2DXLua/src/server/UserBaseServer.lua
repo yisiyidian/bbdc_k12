@@ -100,9 +100,48 @@ function UserBaseServer.login(username, password, onResponse)
     end)
 end
 
-function UserBaseServer.updateUsernameAndPassword(username, password)
-    if s_CURRENT_USER.username == username then
-        
+-- function (username, password, error description, error code)
+function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
+    local change_password = function (password, onResponse)
+        if s_CURRENT_USER.password ~= password then
+            s_SERVER.updatePassword(s_CURRENT_USER.password, password, s_CURRENT_USER.objectId, 
+                function (api, result) 
+                    s_CURRENT_USER.password = password
+                    onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
+                end, 
+                function (api, code, message, description) 
+                    onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
+                end)
+        else
+            s_CURRENT_USER.password = password
+            onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
+        end
+    end
+
+    if s_CURRENT_USER.username ~= username then
+
+        UserBaseServer.isUserNameExist(username, function (api, result)
+            if result.count <= 0 then
+                local obj = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['username']=username}
+                UserBaseServer.saveDataObjectOfCurrentUser(obj, 
+                    function (api, result) 
+                        s_CURRENT_USER.username = username
+                        change_password(password, onResponse)
+                    end, 
+                    function (api, code, message, description) 
+                        onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
+                    end
+                )
+            else
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DATABASE_MGR.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
+            end
+        end,
+        function (api, code, message, description)
+            onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
+        end)
+
+    else
+        change_password(password, onResponse)
     end
 end
 

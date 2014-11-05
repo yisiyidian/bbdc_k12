@@ -258,7 +258,7 @@ public class AppActivity extends Cocos2dxActivity {
 		user.signUpInBackground(new SignUpCallback() {
 		    public void done(AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionSU(user.getSessionToken(), null, -1);
+		        	invokeLuaCallbackFunctionSU(user.getSessionToken(), null, 0);
 		        } else {
 		        	invokeLuaCallbackFunctionSU(null, e.getLocalizedMessage(), e.getCode());
 		        }
@@ -270,7 +270,7 @@ public class AppActivity extends Cocos2dxActivity {
 		AVUser.logInInBackground(username, password, new LogInCallback<AVUser>() {
 			public void done(AVUser user, AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionLI(user.getSessionToken(), null, -1);
+		        	invokeLuaCallbackFunctionLI(user.getSessionToken(), null, 0);
 		        } else {
 		        	invokeLuaCallbackFunctionLI(null, e.getLocalizedMessage(), e.getCode());
 		        }
