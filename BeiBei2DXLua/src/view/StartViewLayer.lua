@@ -35,17 +35,6 @@ function StartViewLayer:onPlay()
                 local level = require('view/LevelLayer.lua')
                 layer = level.create()
                 s_SCENE:replaceGameLayer(layer)
-
-                s_SERVER.updatePassword('222222', '111111', s_CURRENT_USER.objectId, 
-                    function (api, result)
-                        print_lua_table (result)
-                    end, 
-                    function (api, code, message, description)
-                        print(code)
-                        print(message)
-                        print(description)
-                    end
-                )
             end,
             function (api, code, message, description)
             end

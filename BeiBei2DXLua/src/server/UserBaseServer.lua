@@ -131,8 +131,9 @@ curl -X GET \
   https://leancloud.cn/1.1/cloudQuery
 ]]--
 function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
-    local cql = "select * from _User where username='" .. username .. "'"
-    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+    -- local cql = "select * from _User where username='" .. username .. "'"
+    -- s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+    s_SERVER.search('classes/_User?where={"username":"' .. username .. '"}', onSucceed, onFailed)
 end
 
 function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
