@@ -1,5 +1,8 @@
 require("common.global")
 
+local BigAlter = require("view.alter.BigAlter")
+local SmallAlter = require("view.alter.SmallAlter")
+
 local LoginAlter = class("LoginAlter", function()
     return cc.Layer:create()
 end)
@@ -153,9 +156,9 @@ showLogin = function()
             textField_password:setPlaceHolder("密码")
             --back_login:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
         elseif eventType == ccui.TextFiledEventType.insert_text then
-        --self._displayValueLabel:setString("insert words")
+            --self._displayValueLabel:setString("insert words")
         elseif eventType == ccui.TextFiledEventType.delete_backward then
-        --self._displayValueLabel:setString("delete word")
+            --self._displayValueLabel:setString("delete word")
         end
     end
 
@@ -176,11 +179,24 @@ showLogin = function()
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             local function onResponse(u, e, code)
-                if e then
-                    print("login fail")
-                    print(e)
+                if e then                  
+                    local smallAlter = SmallAlter.create(e)
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    smallAlter:setTag(1)
+                    main:addChild(smallAlter)
+                    
+                    smallAlter.close = function()
+                        main:removeChildByTag(1)
+                    end
                 else
-                    print("login success")
+                    local smallAlter = SmallAlter.create("登陆成功")
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    smallAlter:setTag(1)
+                    main:addChild(smallAlter)
+
+                    smallAlter.close = function()
+                        main:removeChildByTag(1)
+                    end
                 end
             end
             s_UserBaseServer.login(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
@@ -318,9 +334,9 @@ showRegister = function()
             textField_username:setPlaceHolder("用户名")
             --back_register:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
         elseif eventType == ccui.TextFiledEventType.insert_text then
-        --self._displayValueLabel:setString("insert words")
+            --self._displayValueLabel:setString("insert words")
         elseif eventType == ccui.TextFiledEventType.delete_backward then
-        --self._displayValueLabel:setString("delete word")
+            --self._displayValueLabel:setString("delete word")
         end
     end
 
@@ -347,9 +363,9 @@ showRegister = function()
             textField_password:setPlaceHolder("密码")
             --back_register:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
         elseif eventType == ccui.TextFiledEventType.insert_text then
-        --self._displayValueLabel:setString("insert words")
+            --self._displayValueLabel:setString("insert words")
         elseif eventType == ccui.TextFiledEventType.delete_backward then
-        --self._displayValueLabel:setString("delete word")
+            --self._displayValueLabel:setString("delete word")
         end
     end
 
@@ -370,10 +386,23 @@ showRegister = function()
         if eventType == ccui.TouchEventType.began then            
             local function onResponse(u, e, code)
                 if e then
-                    print("register fail")
-                    print(e)
+                    local smallAlter = SmallAlter.create(e)
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    smallAlter:setTag(1)
+                    main:addChild(smallAlter)
+
+                    smallAlter.close = function()
+                        main:removeChildByTag(1)
+                    end
                 else
-                    print("register success")
+                    local smallAlter = SmallAlter.create("注册成功")
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    smallAlter:setTag(1)
+                    main:addChild(smallAlter)
+
+                    smallAlter.close = function()
+                        main:removeChildByTag(1)
+                    end
                 end
             end
             s_UserBaseServer.signup(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)

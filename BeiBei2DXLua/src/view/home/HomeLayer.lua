@@ -16,11 +16,6 @@ function HomeLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
 
-
-
-
-
-
     local onTouchBegan = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         
