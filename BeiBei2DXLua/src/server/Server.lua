@@ -14,11 +14,6 @@ local function getURL()
     end
 end
 
--- create : POST
--- update : PUT
--- https://leancloud.cn/1.1/classes/
--- https://leancloud.cn/1.1/users/51fa6886e4b0cc0b5a3792e9/updatePassword
-
 local function getAppData()
     local timestamp = os.time()
 

@@ -182,16 +182,17 @@ end
 
 ----
 --[[
-s_UserBaseServer.dailyCheckInOfCurrentUser( 
+s_UserBaseServer.getDailyCheckInOfCurrentUser( 
    function (api, result)
        s_CURRENT_USER:parseServerDailyCheckInData(result.results)
    end,
    function (api, code, message, description) end
 )
 ]]--
-function UserBaseServer.dailyCheckInOfCurrentUser(onSucceed, onFailed)
-    local cql = "select * from WMAV_DailyCheckInData where userId='" .. s_CURRENT_USER.objectId .. "'"
-    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
+    -- local cql = "select * from WMAV_DailyCheckInData where userId='" .. s_CURRENT_USER.objectId .. "'"
+    -- s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+    s_SERVER.search('classes/WMAV_DailyCheckInData?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
 end
 
 ----
