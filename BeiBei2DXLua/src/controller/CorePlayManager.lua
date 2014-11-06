@@ -10,7 +10,7 @@ local TestLayerIII          = require("view.test.testIII.testLayerIII")
 local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
 local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
 local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
-local IntroLayer            = require("view/login/IntroLayer.lua")
+local IntroLayer            = require("view/login/IntroLayer")
 
 
 local CorePlayManager = {}

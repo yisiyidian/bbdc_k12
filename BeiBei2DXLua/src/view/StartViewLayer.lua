@@ -30,7 +30,6 @@ function StartViewLayer:onPlay()
             function (api, result)
                 s_CURRENT_USER:parseServerLevelData(result.results)
                 
-                s_DATA_MANAGER.loadText()
                 s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
                 local level = require('view/LevelLayer.lua')
                 layer = level.create()
