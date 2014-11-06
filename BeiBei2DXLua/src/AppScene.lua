@@ -48,7 +48,6 @@ function AppScene.create()
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
-    -- TODO
     scene.loadingCircleLayer = LoadingCircleLayer.create()
     scene.rootLayer:addChild(scene.loadingCircleLayer)
 

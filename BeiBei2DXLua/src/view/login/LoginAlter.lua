@@ -178,6 +178,15 @@ showLogin = function()
 
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            if validateUsername(textField_username:getStringValue()) == false then
+                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                return
+            end
+            if validatePassword(textField_password:getStringValue()) == false then
+                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                return
+            end
+
             local function onResponse(u, e, code)
                 if e then                  
                     local smallAlter = SmallAlter.create(e)
@@ -198,7 +207,9 @@ showLogin = function()
                         main:removeChildByTag(1)
                     end
                 end
+                s_LOADING_CIRCLE_LAYER:hide()
             end
+            s_LOADING_CIRCLE_LAYER:show()
             s_UserBaseServer.login(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
         end
     end
@@ -383,7 +394,16 @@ showRegister = function()
     password:addChild(textField_password)
     
     local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then            
+        if eventType == ccui.TouchEventType.began then       
+            if validateUsername(textField_username:getStringValue()) == false then
+                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                return
+            end
+            if validatePassword(textField_password:getStringValue()) == false then
+                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                return
+            end
+                
             local function onResponse(u, e, code)
                 if e then
                     local smallAlter = SmallAlter.create(e)
@@ -404,7 +424,9 @@ showRegister = function()
                         main:removeChildByTag(1)
                     end
                 end
+                s_LOADING_CIRCLE_LAYER:hide()
             end
+            s_LOADING_CIRCLE_LAYER:show()
             s_UserBaseServer.signup(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
         end
     end

@@ -133,7 +133,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                     end
                 )
             else
-                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DATABASE_MGR.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
             end
         end,
         function (api, code, message, description)

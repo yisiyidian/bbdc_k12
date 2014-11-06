@@ -24,10 +24,10 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
- local PopupLoginSignup = require('view.PersonalInfo')
- local layer = PopupLoginSignup.create()
- layer:setAnchorPoint(0.5,0)
- s_SCENE:popup(layer)
+-- local PopupLoginSignup = require('view.summaryboss.SummaryBossLayer')
+-- local layer = PopupLoginSignup.create()
+-- layer:setAnchorPoint(0.5,0)
+-- s_SCENE:popup(layer)
 
     
 
@@ -43,14 +43,14 @@ function test()
 --    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
 --    s_DATA_MANAGER.loadReviewBoss()
 --    s_DATA_MANAGER.loadStarRules()
---    
+
+      -- test -- ziaoang ------------------------------------------------------------------------------------
 --    s_WordPool = s_DATA_MANAGER.loadAllWords()
 --    s_CorePlayManager = require("controller.CorePlayManager")
 --    s_CorePlayManager.create()
---
---    --s_CorePlayManager.enterStudyLayer()
---    --s_CorePlayManager.enterTestLayer()
---    --s_CorePlayManager.enterReviewBossLayer()
+--    s_CorePlayManager.enterStudyLayer()
+--    s_CorePlayManager.enterTestLayer()
+--    s_CorePlayManager.enterReviewBossLayer()
 --    s_CorePlayManager.enterIntroLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
@@ -116,11 +116,12 @@ function test()
     -- cx.CXAnalytics:logEventAndLabel('luatestEvent', 'lualabel')
 
     --------------------------------------------------------------------------------
---    s_localSqlite = require("model.LocalDatabaseManager")
---    s_localSqlite.open()
---    s_localSqlite.initTables()
---    s_localSqlite.showTables()
---    s_localSqlite.close()
+    s_localSqlite = require("model.LocalDatabaseManager")
+    s_localSqlite.open()
+    s_localSqlite.initTables()
+    s_localSqlite.insertTable_Word_Prociency('apple', '4')
+    s_localSqlite.showTable_Word_Prociency()
+    s_localSqlite.close()
     
     --s_STORE.init()    
 end

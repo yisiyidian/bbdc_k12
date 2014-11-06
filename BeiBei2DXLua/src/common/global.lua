@@ -89,6 +89,7 @@ local function _initScene()
     s_POPUP_LAYER             = s_SCENE.popupLayer
     s_TIPS_LAYER              = s_SCENE.tipsLayer
     s_TOUCH_EVENT_BLOCK_LAYER = s_SCENE.touchEventBlockLayer
+    s_LOADING_CIRCLE_LAYER    = s_SCENE.loadingCircleLayer
     s_DEBUG_LAYER             = s_SCENE.debugLayer
 end
 
