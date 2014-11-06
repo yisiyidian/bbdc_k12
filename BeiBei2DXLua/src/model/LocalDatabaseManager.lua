@@ -173,9 +173,22 @@ function Manager.insertTable_RB_control()
 end
 
 function Manager.insertTable_RB_record(wordName)
+    local RBWORDNUM = 20
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM RB_record") do
+        num = num + 1
+    end
     
-    local query = "INSERT INTO RB_control VALUES ('user1', 'book1', 'boss1', '2014-10-6', '17', '"..wordName.."', '2014-11-6');"
+    local wordID = num + 1
+    local bossID = ((wordID - 1) / RBWORDNUM) + 1
+    
+    local query = "INSERT INTO RB_control VALUES ('user1', 'book1', '"..bossID.."', '2014-10-6', '"..wordID.."', '"..wordName.."', '2014-11-6');"
     Manager.database:exec(query)
+    
+    if wordID % RBWORDNUM == 0 then
+        Manager.insertTable_RB_control()
+    end
 end
 
 function Manager.showTable_Word_Prociency()
