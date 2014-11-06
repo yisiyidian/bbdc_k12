@@ -43,31 +43,42 @@ function Manager.initTables()
 --        INSERT INTO test VALUES (NULL, 'Hello Sqlite2');
 --   ]]
    
-   -- CREATE table Review boss Control
-   Manager.database:exec[[
+    -- create table Word_Prociency
+    Manager.database:exec[[        
+        create table if not exists Word_Prociency(
+            userId TEXT,
+            bookKey TEXT,
+            wordName TEXT,
+            prociencyValue INTEGER,
+            lastUpdate TEXT
+        );
+    ]]
+   
+    -- CREATE table Review boss Control
+    Manager.database:exec[[
         create table if not exists RB_control(
-            bossId INTEGER PRIMARY KEY,
             userId INTEGER,
             bookKey TEXT,
+            bossId INTEGER,
+            wordCount INTEGER,
             appearCount INTEGER,
-            lastUpdate TEXT,
-            wordCount INTEGER
+            lastUpdate TEXT
         ); 
-   ]]
-   -- create table Review boss Record
-   Manager.database:exec[[
+    ]]
+    -- create table Review boss Record
+    Manager.database:exec[[
         create table if not exists RB_record(
-            bossId INTEGER PRIMARY KEY,
             userId INTEGER,
             bookKey TEXT,
+            bossId INTEGER,
             insertDate TEXT,
             wordId INTEGER,
-            wordMeaning TEXT,
-            wordName TEXT
+            wordName TEXT,
+            lastUpdate TEXT
         );
-   ]]
-   -- create table database game design configuration
-   Manager.database:exec[[
+    ]]
+    -- create table database game design configuration
+    Manager.database:exec[[
         create table if not exists DB_gameDesignConfiguration(
             books TEXT,
             booksV INTEGER,
@@ -95,7 +106,7 @@ function Manager.initTables()
             revew_bossV INTEGER,
             starRule TEXT
         );
-   ]]
+    ]]
 
 --   -- create table db_userInfo
 --   Manager.database.exec[[
@@ -135,24 +146,69 @@ function Manager.initTables()
 --            userId TEXT
 --        );
 --  ]]
-  
-  -- create table word_Prociency
---  Manager.database.exec[[
---        CREATE TABLE WORD_Prociency(
---            bookKey TEXT,
---            lastUpdate TEXT,
---            prociencyValue INTEGER,
---            userId TEXT,
---            wordName TEXT
---        );
---  ]]
 end
 
 
+function Manager.insertTable_Word_Prociency(wordName, wordProciency)
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE wordName = '"..wordName.."'") do
+        num = num + 1
+    end
+    
+    if num == 0 then
+        local query = "INSERT INTO Word_Prociency VALUES ('user1', 'book1', '"..wordName.."', '"..wordProciency.."', '2014-11-6');"
+        Manager.database:exec(query)
+        
+        if wordProciency == 0 then
+            Manager.insertTable_RB_record(wordName)
+        end
+    else
+        print("word exists")
+    end
+end
 
-function Manager.showTables()
-    for row in Manager.database:nrows("SELECT * FROM test") do
-        s_logd('sqlite3:' .. row.id .. ', ' .. row.content)
+function Manager.insertTable_RB_control()
+    local query = "INSERT INTO RB_control VALUES ('user1', 'book1', 'boss1', '30', '2', '2014-11-6');"
+    Manager.database:exec(query)
+end
+
+function Manager.insertTable_RB_record(wordName)
+    local RBWORDNUM = 20
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM RB_record") do
+        num = num + 1
+    end
+    
+    local wordID = num + 1
+    local bossID = ((wordID - 1) / RBWORDNUM) + 1
+    
+    local query = "INSERT INTO RB_control VALUES ('user1', 'book1', '"..bossID.."', '2014-10-6', '"..wordID.."', '"..wordName.."', '2014-11-6');"
+    Manager.database:exec(query)
+    
+    if wordID % RBWORDNUM == 0 then
+        Manager.insertTable_RB_control()
+    end
+end
+
+function Manager.showTable_Word_Prociency()
+    s_logd("Word_Prociency ---------------------------")
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency") do
+        s_logd(row.wordName .. ',' .. row.prociencyValue)
+    end
+end
+
+function Manager.showTable_RB_control()
+    s_logd("RB_control -------------------------------")
+    for row in Manager.database:nrows("SELECT * FROM RB_control") do
+        s_logd(row.bossId .. ',' .. row.wordCount)
+    end
+end
+
+function Manager.showTable_RB_record()
+    s_logd("RB_record --------------------------------")
+    for row in Manager.database:nrows("SELECT * FROM RB_record") do
+        s_logd(row.bossId .. ',' .. row.wordId .. ',' .. row.wordName)
     end
 end
 
