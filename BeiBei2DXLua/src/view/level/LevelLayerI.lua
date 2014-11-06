@@ -107,7 +107,7 @@ end
 function LevelLayerI:plotLevelDecoration()
     for i = 0, 11 do
         local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..i)
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..i)
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter0','level'..i)
         local levelData = s_CURRENT_USER:getUserLevelData('Chapter0','level'..i)
 --        if i == 3 or i == 10 then  -- plot boat animation
 --            local boat = sp.SkeletonAnimation:create('spine/first-level-moving-boat-bottom.json', 'spine/first-level-moving-boat-bottom.atlas',1)
@@ -195,7 +195,7 @@ function LevelLayerI:ctor()
 --    self:addChild(back)      
 --    back:addAnimation(0, 'animation', false)
     -- replot levelbutton ui based on the configuration file
-    local levelConfig = s_DATA_MANAGER.level_ncee
+    local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
     for i = 1, #levelConfig do
         if levelConfig[i]['chapter_key'] == 'Chapter0' then
             -- change button image
@@ -232,7 +232,7 @@ end
 function LevelLayerI:onLevelButtonClicked(levelTag)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
     -- check level type
-    local levelConfig = s_DATA_MANAGER.getLevelConfig('ncee','Chapter0','level'..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter0','level'..levelTag)
     if s_SCENE.levelLayerState == s_review_boss_appear_state then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()

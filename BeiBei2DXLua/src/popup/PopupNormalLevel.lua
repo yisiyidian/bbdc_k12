@@ -58,7 +58,7 @@ function PopupNormalLevel:ctor(levelTag)
     self:plotStar(node, 3)
     
     -- plot word count
-    local levelConfig = s_DATA_MANAGER.getLevelConfig('ncee','Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
     self.ccbPopupNormalLevel['_wordCount']:setString(levelConfig['word_num'])
     -- run action --
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))

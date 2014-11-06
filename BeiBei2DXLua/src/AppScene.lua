@@ -69,8 +69,9 @@ function AppScene:ctor()
     self.visibleSize = cc.Director:getInstance():getVisibleSize()
     self.origin = cc.Director:getInstance():getVisibleOrigin()
     self.schedulerID = nil
-
+    
     self:scheduleUpdateWithPriorityLua(update, 0)
+    self:registerCustomEvent()
 end
 
 function AppScene:replaceGameLayer(newLayer)
@@ -94,6 +95,42 @@ function AppScene:callFuncWithDelay(delay, func)
     local callAction = cc.CallFunc:create(func)
     local sequence = cc.Sequence:create(delayAction, callAction)
     self:runAction(sequence)   
+end
+
+function AppScene:dispatchCustomEvent(eventName)
+    local event = cc.EventCustom:new(eventName)
+    self:getEventDispatcher():dispatchEvent(event)
+end
+
+function AppScene:registerCustomEvent()
+    local customEventHandle = function (event)
+        s_LOADING_CIRCLE_LAYER:show()
+        if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
+
+        elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
+            s_UserBaseServer.getLevelsOfCurrentUser(
+                function (api, result)
+                    s_CURRENT_USER:parseServerLevelData(result.results)
+                    
+                    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+                    local level = require('view/LevelLayer')
+                    layer = level.create()
+                    s_SCENE:replaceGameLayer(layer)
+
+                    s_LOADING_CIRCLE_LAYER:hide()
+                end,
+                function (api, code, message, description)
+                end
+            )
+        end
+    end
+
+    local eventDispatcher = self:getEventDispatcher()
+    self.listenerSignUp = cc.EventListenerCustom:create(CUSTOM_EVENT_SIGNUP, customEventHandle)
+    eventDispatcher:addEventListenerWithFixedPriority(self.listenerSignUp, 1)
+
+    self.listenerLogIn = cc.EventListenerCustom:create(CUSTOM_EVENT_LOGIN, customEventHandle)
+    eventDispatcher:addEventListenerWithFixedPriority(self.listenerLogIn, 1)
 end
 
 return AppScene

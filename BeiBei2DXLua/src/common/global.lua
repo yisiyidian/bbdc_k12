@@ -35,6 +35,9 @@ local function _initConstant()
     s_sound_win = 'res/sound/win.mp3'
     s_sound_wrong = 'res/sound/wrong.mp3'
 
+    CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
+    CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
+
     s_DATA_MANAGER = require('model.DataManager')
 end
 

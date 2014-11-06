@@ -43,6 +43,13 @@ function LoadingCircleLayer:ctor()
     self.loadingIcon:setScale(2)
     self:addChild(self.loadingIcon)
 
+    self.label_info = cc.Label:createWithSystemFont("", "", 28)
+    self.label_info:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    self.label_info:setColor(cc.c4b(255,255,255,255))
+    self.label_info:setAnchorPoint(0.5, 1)
+    self.label_info:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2 - self.loadingIcon:getContentSize().height - 10)
+    self:addChild(self.label_info)
+
     local degree = 0
     -- delta time : seconds
     local function update(dt)
@@ -55,7 +62,12 @@ function LoadingCircleLayer:ctor()
     self:scheduleUpdateWithPriorityLua(update, 0)
 end
 
-function LoadingCircleLayer:show()
+function LoadingCircleLayer:show(info)
+    if info == nil then 
+        self.label_info:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING)) 
+    else
+        self.label_info:setString(info)
+    end
     self.listener:setSwallowTouches(true)
     self:setVisible(true)
 end

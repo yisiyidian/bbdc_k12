@@ -197,17 +197,11 @@ showLogin = function()
                     smallAlter.close = function()
                         main:removeChildByTag(1)
                     end
-                else
-                    local smallAlter = SmallAlter.create("登陆成功")
-                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    smallAlter:setTag(1)
-                    main:addChild(smallAlter)
 
-                    smallAlter.close = function()
-                        main:removeChildByTag(1)
-                    end
+                    s_LOADING_CIRCLE_LAYER:hide()
+                else
+                    s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_LOGIN)
                 end
-                s_LOADING_CIRCLE_LAYER:hide()
             end
             s_LOADING_CIRCLE_LAYER:show()
             s_UserBaseServer.login(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
@@ -414,17 +408,11 @@ showRegister = function()
                     smallAlter.close = function()
                         main:removeChildByTag(1)
                     end
-                else
-                    local smallAlter = SmallAlter.create("注册成功")
-                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    smallAlter:setTag(1)
-                    main:addChild(smallAlter)
 
-                    smallAlter.close = function()
-                        main:removeChildByTag(1)
-                    end
+                    s_LOADING_CIRCLE_LAYER:hide()
+                else
+                    s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_SIGNUP)
                 end
-                s_LOADING_CIRCLE_LAYER:hide()
             end
             s_LOADING_CIRCLE_LAYER:show()
             s_UserBaseServer.signup(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
