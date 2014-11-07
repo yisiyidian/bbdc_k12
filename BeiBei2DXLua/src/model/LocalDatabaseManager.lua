@@ -17,9 +17,9 @@ end
 -- connect local sqlite
 function Manager.open()
     local sqlite3 = require("sqlite3")
-    local databasePath = cc.FileUtils:getInstance():getWritablePath().."localDB.sqlite"
+    local databasePath = cc.FileUtils:getInstance():getWritablePath() .. "localDB.sqlite"
     Manager.database = sqlite3.open(databasePath)
-    s_logd(databasePath)
+    s_logd('databasePath:' .. databasePath)
     
     -- TODO
     -- check version update
@@ -35,14 +35,7 @@ end
 
 -- init data structure
 function Manager.initTables()
---   Manager.database:exec[[
---        create table if not exists test(id INTEGER PRIMARY KEY, content);
---        INSERT INTO test VALUES (NULL, 'Hello World');
---        INSERT INTO test VALUES (NULL, 'Hello Lua');
---        INSERT INTO test VALUES (NULL, 'Hello Sqlite3');
---        INSERT INTO test VALUES (NULL, 'Hello Sqlite2');
---   ]]
-   
+
     -- create table Word_Prociency
     Manager.database:exec[[        
         create table if not exists Word_Prociency(
@@ -57,7 +50,7 @@ function Manager.initTables()
     -- CREATE table Review boss Control
     Manager.database:exec[[
         create table if not exists RB_control(
-            userId INTEGER,
+            userId TEXT,
             bookKey TEXT,
             bossId INTEGER,
             wordCount INTEGER,
@@ -65,10 +58,11 @@ function Manager.initTables()
             lastUpdate TEXT
         ); 
     ]]
+
     -- create table Review boss Record
     Manager.database:exec[[
         create table if not exists RB_record(
-            userId INTEGER,
+            userId TEXT,
             bookKey TEXT,
             bossId INTEGER,
             insertDate TEXT,
@@ -77,6 +71,7 @@ function Manager.initTables()
             lastUpdate TEXT
         );
     ]]
+
     -- create table database game design configuration
     Manager.database:exec[[
         create table if not exists DB_gameDesignConfiguration(
@@ -108,44 +103,44 @@ function Manager.initTables()
         );
     ]]
 
---   -- create table db_userInfo
---   Manager.database.exec[[
---        CREATE TABLE DB_userInfo(
---            checkInWord TEXT,
---            checkInWordUpdateDate TEXT,
---            lastLoginDate TEXT,
---            nickName TEXT,
---            objectId TEXT,
---            password TEXT,
---            signType INTEGER,
---            userName TEXT
---        );
---   ]]
+    -- create table db_userInfo
+    Manager.database:exec[[
+        create table if not exists DB_userInfo(
+            checkInWord TEXT,
+            checkInWordUpdateDate TEXT,
+            lastLoginDate TEXT,
+            nickName TEXT,
+            objectId TEXT,
+            password TEXT,
+            signType INTEGER,
+            username TEXT
+       );
+    ]]
    
-   -- create table IC_loginDate
---   Manager.database.exec[[
---        CREATE TABLE IC_loginDate(
---            monday TEXT,
---            tuesday TEXT,
---            wednesday TEXT,
---            thursday TEXT,
---            friday TEXT,
---            saturday TEXT,
---            sunday TEXT,
---            userId TEXT,
---            week INTEGER PRIMARY KEY
---        );
---   ]]
+    -- create table IC_loginDate
+    Manager.database:exec[[
+        create table if not exists IC_loginDate(
+            monday TEXT,
+            tuesday TEXT,
+            wednesday TEXT,
+            thursday TEXT,
+            friday TEXT,
+            saturday TEXT,
+            sunday TEXT,
+            userId TEXT,
+            week INTEGER PRIMARY KEY
+        );
+    ]]
    
-  -- create table IC_word_day
---  Manager.database.exec[[
---        CREATE TABLE IC_word_day(
---            bookName TEXT,
---            learnedDate TEXT,
---            learnedWordCount INTEGER,
---            userId TEXT
---        );
---  ]]
+    -- create table IC_word_day
+    Manager.database:exec[[
+       create table if not exists IC_word_day(
+           bookName TEXT,
+           learnedDate TEXT,
+           learnedWordCount INTEGER,
+           userId TEXT
+       );
+    ]]
 end
 
 
