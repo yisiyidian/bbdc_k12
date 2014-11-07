@@ -10,7 +10,9 @@ local TestLayerIII          = require("view.test.testIII.testLayerIII")
 local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
 local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
 local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
-local IntroLayer            = require("view/login/IntroLayer")
+local IntroLayer            = require("view.login.IntroLayer")
+local HomeLayer             = require("view.home.HomeLayer")
+local LevelLayer            = require("view.LevelLayer")
 
 
 local CorePlayManager = {}
@@ -137,5 +139,14 @@ function CorePlayManager.enterIntroLayer()
     s_SCENE:replaceGameLayer(IntroLayer)
 end
 
+function CorePlayManager.enterHomeLayer()
+    local homeLayer = HomeLayer.create()
+    s_SCENE:replaceGameLayer(homeLayer)
+end
+
+function CorePlayManager.enterLevelLayer()
+    local levelLayer = LevelLayer.create()
+    s_SCENE:replaceGameLayer(levelLayer)
+end
 
 return CorePlayManager

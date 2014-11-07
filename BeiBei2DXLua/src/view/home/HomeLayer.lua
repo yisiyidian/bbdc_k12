@@ -16,6 +16,20 @@ function HomeLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
 
+   
+    local button_middle_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            s_CorePlayManager.enterLevelLayer()
+        end
+    end
+
+    local button_middle = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
+    button_middle:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    button_middle:setTitleText("进入关卡选择界面")
+    button_middle:setTitleFontSize(30)
+    button_middle:addTouchEventListener(button_middle_clicked)
+    layer:addChild(button_middle)
+    
     local onTouchBegan = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         

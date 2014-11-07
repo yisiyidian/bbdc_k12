@@ -119,11 +119,13 @@ function AppScene:registerCustomEvent()
                     s_DATA_MANAGER.loadItems()
                     s_DATA_MANAGER.loadReviewBoss()
                     s_DATA_MANAGER.loadStarRules()
-                    
                     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-                    local level = require('view/LevelLayer')
-                    layer = level.create()
-                    s_SCENE:replaceGameLayer(layer)
+                    
+                    
+--                    local level = require('view/LevelLayer')
+--                    layer = level.create()
+--                    s_SCENE:replaceGameLayer(layer)
+                    s_CorePlayManager.enterHomeLayer()
 
                     s_LOADING_CIRCLE_LAYER:hide()
                 end,
