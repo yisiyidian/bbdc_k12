@@ -97,6 +97,8 @@ function AppScene:callFuncWithDelay(delay, func)
     self:runAction(sequence)   
 end
 
+---- custom event
+
 function AppScene:dispatchCustomEvent(eventName)
     local event = cc.EventCustom:new(eventName)
     self:getEventDispatcher():dispatchEvent(event)
@@ -104,24 +106,10 @@ end
 
 function AppScene:registerCustomEvent()
     local customEventHandle = function (event)
-        s_LOADING_CIRCLE_LAYER:show()
         if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
-
+            s_SCENE:getDailyCheckIn()
         elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
-            s_UserBaseServer.getLevelsOfCurrentUser(
-                function (api, result)
-                    s_CURRENT_USER:parseServerLevelData(result.results)
-                    
-                    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-                    local LevelLayer = require('view/LevelLayer')
-                    local layer = LevelLayer.create()
-                    s_SCENE:replaceGameLayer(layer)
-
-                    s_LOADING_CIRCLE_LAYER:hide()
-                end,
-                function (api, code, message, description)
-                end
-            )
+            s_SCENE:getDailyCheckIn()
         end
     end
 
@@ -131,6 +119,71 @@ function AppScene:registerCustomEvent()
 
     self.listenerLogIn = cc.EventListenerCustom:create(CUSTOM_EVENT_LOGIN, customEventHandle)
     eventDispatcher:addEventListenerWithFixedPriority(self.listenerLogIn, 1)
+end
+
+---- sign up & log in
+
+function AppScene:getDailyCheckIn()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
+    s_UserBaseServer.getDailyCheckInOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerDailyCheckInData(result.results)
+            self:getFollowees()
+        end,
+        function (api, code, message, description) 
+            self:getFollowees()
+        end
+    )
+end
+
+-- TODO : configs
+
+function AppScene:getFollowees()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
+    s_UserBaseServer.getFolloweesOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerFolloweesData(result.results)
+            self:getFollowers()
+        end,
+        function (api, code, message, description)
+            self:getFollowers()
+        end
+    )
+end
+
+function AppScene:getFollowers()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
+    s_UserBaseServer.getFollowersOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerFollowersData(result.results)
+            self:getLevels()
+        end,
+        function (api, code, message, description)
+            self:getLevels()
+        end
+    )
+end
+
+function AppScene:getLevels()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_LEVEL_DATA))
+    s_UserBaseServer.getLevelsOfCurrentUser(
+        function (api, result)
+            s_CURRENT_USER:parseServerLevelData(result.results)
+            self:onUserServerDatasCompleted()            
+            s_LOADING_CIRCLE_LAYER:hide()
+        end,
+        function (api, code, message, description)
+            self:onUserServerDatasCompleted()
+            s_LOADING_CIRCLE_LAYER:hide()
+        end
+    )
+end
+
+function AppScene:onUserServerDatasCompleted()
+    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+    local LevelLayer = require('view/LevelLayer')
+    local layer = LevelLayer.create()
+    s_SCENE:replaceGameLayer(layer)
 end
 
 return AppScene
