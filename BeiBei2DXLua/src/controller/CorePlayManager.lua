@@ -88,7 +88,7 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    s_logd("leave test scene")
+    s_Scene.levelLayerState = s_unlock_normal_plotInfo_state
     CorePlayManager.enterLevelLayer()
 end
 
