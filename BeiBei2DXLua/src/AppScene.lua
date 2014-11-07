@@ -180,6 +180,7 @@ function AppScene:getLevels()
 end
 
 function AppScene:onUserServerDatasCompleted()
+
     s_DATA_MANAGER.loadBooks()
     s_DATA_MANAGER.loadChapters()
     s_DATA_MANAGER.loadDailyCheckIns()
@@ -189,6 +190,9 @@ function AppScene:onUserServerDatasCompleted()
     s_DATA_MANAGER.loadStarRules()
     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
 
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
     s_CorePlayManager.enterHomeLayer()
     
     -- local LevelLayer = require('view/LevelLayer')
