@@ -236,8 +236,9 @@ showDetailInfo = function()
     
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            s_CorePlayManager.currentWordIndex = 1
-            s_CorePlayManager.enterStudyLayer()
+--            s_CorePlayManager.currentWordIndex = 1
+--            s_CorePlayManager.enterStudyLayer()
+            s_CorePlayManager.leaveTestLayer()
         end
     end
     

@@ -88,7 +88,8 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    s_logd("leave")
+    s_logd("leave test scene")
+    CorePlayManager.enterLevelLayer()
 end
 
 function CorePlayManager.answerRight()
