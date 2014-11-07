@@ -88,6 +88,15 @@ end
 
 function PopupNormalLevel:onStudyButtonClicked(levelTag)
     self:onCloseButtonClicked()
+
+    s_logd('on study button clicked')
+    
+    print("levelTag----"..self.ccb['levelTag'])
+    
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,"Chapter0","level"..self.ccb['levelTag'])
+    print(levelConfig.word_content)
+    
+
     s_CorePlayManager.enterStudyLayer()
 end
 
