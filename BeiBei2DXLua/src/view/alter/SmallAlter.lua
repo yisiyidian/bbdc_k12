@@ -10,6 +10,7 @@ function SmallAlter.create(info)
     main:ignoreAnchorPointForPosition(false)
 
     main.close = function()
+        main:removeFromParentAndCleanup()
     end
 
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
@@ -35,7 +36,7 @@ function SmallAlter.create(info)
         end
     end
 
-    local button_middle = ccui.Button:create("image/button/studyscene_blue_button.png","","")
+    local button_middle = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
     button_middle:setPosition(back:getContentSize().width/2, back:getContentSize().height/2-50)
     button_middle:setTitleText("确定")
     button_middle:setTitleFontSize(30)

@@ -89,11 +89,14 @@ end
 function PopupNormalLevel:onStudyButtonClicked()
     self:onCloseButtonClicked()
     s_logd('on study button clicked')
+    s_CorePlayManager.enterStudyLayer()
 end
 
 function PopupNormalLevel:onTestButtonClicked()
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
+    
+    
 end
 
 return PopupNormalLevel

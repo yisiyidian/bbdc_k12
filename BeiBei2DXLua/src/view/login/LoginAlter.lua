@@ -193,17 +193,14 @@ showLogin = function()
                     smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     smallAlter:setTag(1)
                     main:addChild(smallAlter)
-                    
-                    smallAlter.close = function()
-                        main:removeChildByTag(1)
-                    end
-
+                   
                     s_LOADING_CIRCLE_LAYER:hide()
                 else
                     s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_LOGIN)
+                    --s_CorePlayManager.enterHomeLayer()
                 end
             end
-            s_LOADING_CIRCLE_LAYER:show()
+            s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
             s_UserBaseServer.login(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
         end
     end
@@ -405,16 +402,12 @@ showRegister = function()
                     smallAlter:setTag(1)
                     main:addChild(smallAlter)
 
-                    smallAlter.close = function()
-                        main:removeChildByTag(1)
-                    end
-
                     s_LOADING_CIRCLE_LAYER:hide()
                 else
                     s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_SIGNUP)
                 end
             end
-            s_LOADING_CIRCLE_LAYER:show()
+            s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
             s_UserBaseServer.signup(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
         end
     end
