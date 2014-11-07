@@ -30,7 +30,7 @@ CorePlayManager.wrongWordList = {}
 
 CorePlayManager.newPlayerState = false
 
-CorePlayManager.chapterIndex = 3
+CorePlayManager.chapterIndex = 1
 
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
@@ -42,8 +42,8 @@ end
 
 function CorePlayManager.loadConfiguration()
     for i = 1, #CorePlayManager.wordList do
-        CorePlayManager.answerStateRecord[i] = 0
-        CorePlayManager.wordProficiency[i] = 1
+        CorePlayManager.answerStateRecord[i] = 0    -- 0 for answer wrong and 1 for answer right
+        CorePlayManager.wordProficiency[i]   = 1    -- 0 for unfamiliar word and 1 for familiar word
     end
 end
 
@@ -93,6 +93,10 @@ function CorePlayManager.answerRight()
     CorePlayManager.answerStateRecord[CorePlayManager.currentWordIndex] = 1
 end
 
+function CorePlayManager.unfamiliarWord()
+    CorePlayManager.wordProficiency[CorePlayManager.currentWordIndex] = 0
+end
+
 function CorePlayManager.generateWrongWordList()
     for i = 1, #CorePlayManager.wordList do
         if CorePlayManager.answerStateRecord[i] == 0 then
@@ -101,6 +105,18 @@ function CorePlayManager.generateWrongWordList()
     end
     CorePlayManager.replayWrongWordState = true
     CorePlayManager.currentWordIndex = 1
+end
+
+function CorePlayManager.recordWordProciency()
+    for i = 1, #CorePlayManager.wordList do
+        if CorePlayManager.wordProficiency[i] == 0 then
+            print("word: "..CorePlayManager.wordList[i].." pro:0")
+            s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 0)
+        else
+            print("word: "..CorePlayManager.wordList[i].." pro:5")
+            s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 5)
+        end
+    end
 end
 
 function CorePlayManager.enterReviewBossLayer()
