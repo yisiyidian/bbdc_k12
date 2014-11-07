@@ -14,6 +14,8 @@ function TestAlter.createFromFirstAlter()
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
     
+    s_CorePlayManager.recordWordProciency()
+    
     showGirlAndStar()
     
     local onTouchBegan = function(touch, event)
@@ -234,8 +236,9 @@ showDetailInfo = function()
     
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            s_CorePlayManager.currentWordIndex = 1
-            s_CorePlayManager.enterStudyLayer()
+--            s_CorePlayManager.currentWordIndex = 1
+--            s_CorePlayManager.enterStudyLayer()
+            s_CorePlayManager.leaveTestLayer()
         end
     end
     

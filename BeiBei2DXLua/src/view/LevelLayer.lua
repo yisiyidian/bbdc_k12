@@ -25,15 +25,21 @@ function LevelLayer:levelStateManager()
         print(s_SCENE.levelLayerState)
        
     elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
-        print(s_SCENE.levelLayerState)
+        s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
+        s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
         -- update level state and plot popup(call on level button clicked)
+        s_SCENE.levelLayerState = s_normal_level_state
+--        s_SCENE:callFuncWithDelay(10,function()
+--            levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelIndex)
+--        end)
+        
         -- TODO CHECK level index valid
-        --s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
-        --s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
-        local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level2')
+       
+        
         levelLayerI:plotStarAnimation(3, 3)
         --print('start_run')
         s_SCENE:callFuncWithDelay(3,function()
+            local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)
             local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
             player:runAction(action)
         end
@@ -101,7 +107,7 @@ function LevelLayer:ctor()
     --local buttonNode = cc.ControlButton:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png')
     --buttonNode:setPosition(100,100)
     --self:addChild(buttonNode)
-    local scrollViewNode = cc.ScrollView:create() 
+    local scrollViewNode = ccui.ScrollView:create() 
     -- scroll view scroll
     local function scrollViewDidScroll()
         print 'scrollview did scroll'
@@ -113,12 +119,13 @@ function LevelLayer:ctor()
     end
     
     if nil ~= scrollViewNode then
-        scrollViewNode:setViewSize(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
+        --scrollViewNode:setIn(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
         scrollViewNode:setPosition(0,0)
         --contentNode2:setContentSize(856,5397)
-        scrollViewNode:ignoreAnchorPointForPosition(true)
-        scrollViewNode:setContainer(levelLayerI)
-        scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
+        --scrollViewNode:ignoreAnchorPointForPosition(true)
+        --scrollViewNode:setContainer(levelLayerI)
+        scrollViewNode:setContentSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT)
+        --scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
         --scrollViewNode:setSizePercent(50)
         --contentNode:setAnchorPoint(0.5,0.5)
 --        contentNode2:setContentSize(500,1000)
@@ -127,22 +134,21 @@ function LevelLayer:ctor()
         --contentNode2:addChild(contentNode1)
         --scrollViewNode:scrollToPercentVertical(14,0,true)
         --scrollViewNode:setContentOffset(100)
-        
+        scrollViewNode:setInnerContainerSize(cc.size(levelLayerI:getContentSize().width,levelLayerI:getContentSize().height))  
+        scrollViewNode:addChild(levelLayerI) 
+        scrollViewNode:setTouchEnabled(true)
 --        local position = contentNode1:getContentSize()
 --        s_logd('contentSize:%f,%f',position.width,position.height)
-        scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
-        scrollViewNode:setBounceable(true)
-        scrollViewNode:setClippingToBounds(true)
-        scrollViewNode:updateInset()
-        scrollViewNode:setDelegate()
+        --scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
+        --scrollViewNode:setBounceable(true)
+        --scrollViewNode:setClippingToBounds(true)
+        --scrollViewNode:updateInset()
+        --scrollViewNode:setDelegate()
 
         --scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
         --scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
         self:addChild(scrollViewNode)
     end
-    
-    
-
 end
 
 function LevelLayer:onLevelButtonClicked()

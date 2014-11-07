@@ -41,13 +41,20 @@ end
 
 function PopupNormalLevel:ctor(levelTag)
     self.ccbPopupNormalLevel = {}
-    self.ccbPopupNormalLevel['onCloseButtonClicked'] = self.onCloseButtonClicked
-    self.ccbPopupNormalLevel['onStudyButtonClicked'] = self.onStudyButtonClicked
-    self.ccbPopupNormalLevel['onTestButtonClicked'] = self.onTestButtonClicked
+    self.ccbPopupNormalLevel['onCloseButtonClicked'] = function()
+        self:onCloseButtonClicked()
+    end
+    self.ccbPopupNormalLevel['onStudyButtonClicked'] = function()
+        print('sjfkla: '..levelTag)
+        self:onStudyButtonClicked(levelTag)
+    end
+    self.ccbPopupNormalLevel['onTestButtonClicked'] = function()
+        self:onTestButtonClicked()
+    end
 
     self.ccb = {}
     self.ccb['popup_normal_level'] = self.ccbPopupNormalLevel
-
+    self.ccb['levelTag'] = levelTag
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
     node:setPosition(0,200)
@@ -58,7 +65,7 @@ function PopupNormalLevel:ctor(levelTag)
     self:plotStar(node, 3)
     
     -- plot word count
-    local levelConfig = s_DATA_MANAGER.getLevelConfig('ncee','Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
     self.ccbPopupNormalLevel['_wordCount']:setString(levelConfig['word_num'])
     -- run action --
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
@@ -79,12 +86,25 @@ function PopupNormalLevel:onCloseButtonClicked()
     s_SCENE:removeAllPopups()
 end
 
-function PopupNormalLevel:onStudyButtonClicked()
+function PopupNormalLevel:onStudyButtonClicked(levelTag)
+    self:onCloseButtonClicked()
+
     s_logd('on study button clicked')
+    
+    print("levelTag----"..self.ccb['levelTag'])
+    
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,"Chapter0","level"..self.ccb['levelTag'])
+    print(levelConfig.word_content)
+    
+
+    s_CorePlayManager.enterStudyLayer()
 end
 
 function PopupNormalLevel:onTestButtonClicked()
+    self:onCloseButtonClicked()
     s_logd('on test button clicked')
+    
+    
 end
 
 return PopupNormalLevel

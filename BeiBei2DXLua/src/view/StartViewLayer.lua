@@ -29,8 +29,9 @@ function StartViewLayer:onPlay()
         s_UserBaseServer.getLevelsOfCurrentUser(
             function (api, result)
                 s_CURRENT_USER:parseServerLevelData(result.results)
-                
+                s_CURRENT_USER.bookKey = s_BOOK_KEY_NCEE
                 s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+                
                 local level = require('view/LevelLayer.lua')
                 layer = level.create()
                 s_SCENE:replaceGameLayer(layer)

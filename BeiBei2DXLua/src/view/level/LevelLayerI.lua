@@ -107,7 +107,7 @@ end
 function LevelLayerI:plotLevelDecoration()
     for i = 0, 11 do
         local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..i)
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_BOOK_KEY_NCEE,'Chapter0','level'..i)
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter0','level'..i)
         local levelData = s_CURRENT_USER:getUserLevelData('Chapter0','level'..i)
 --        if i == 3 or i == 10 then  -- plot boat animation
 --            local boat = sp.SkeletonAnimation:create('spine/first-level-moving-boat-bottom.json', 'spine/first-level-moving-boat-bottom.atlas',1)
@@ -115,7 +115,8 @@ function LevelLayerI:plotLevelDecoration()
 --            boat:setPosition(levelButton:getContentSize().width/2, -400)
 --            levelButton:addChild(boat)
 --        end
- --       if  levelData.isLevelUnlocked then  -- test
+        print(levelData)
+        --if  levelData ~= nil and levelData.isLevelUnlocked then  -- test
             if levelConfig['type'] == 1 then
                 -- add summary boss
                 local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -195,7 +196,7 @@ function LevelLayerI:ctor()
 --    self:addChild(back)      
 --    back:addAnimation(0, 'animation', false)
     -- replot levelbutton ui based on the configuration file
-    local levelConfig = s_DATA_MANAGER.level_ncee
+    local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
     for i = 1, #levelConfig do
         if levelConfig[i]['chapter_key'] == 'Chapter0' then
             -- change button image
@@ -209,7 +210,7 @@ function LevelLayerI:ctor()
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_locked.png'))
                 end
             else 
-                if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
+                if  isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                     local lockImage = 'ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked_Lock.png'
@@ -232,7 +233,7 @@ end
 function LevelLayerI:onLevelButtonClicked(levelTag)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
     -- check level type
-    local levelConfig = s_DATA_MANAGER.getLevelConfig('ncee','Chapter0','level'..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter0','level'..levelTag)
     if s_SCENE.levelLayerState == s_review_boss_appear_state then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()
@@ -245,7 +246,7 @@ function LevelLayerI:onLevelButtonClicked(levelTag)
         -- check whether summary boss level can be played (starcount)
         if s_CURRENT_USER.stars >= levelConfig['summary_boss_stars'] then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelTag, s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         else
             local popupSummary = require('popup.PopupSummaryFail')

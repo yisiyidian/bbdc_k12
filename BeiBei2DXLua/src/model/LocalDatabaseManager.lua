@@ -156,7 +156,7 @@ function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     end
     
     if num == 0 then
-        local query = "INSERT INTO Word_Prociency VALUES ('user1', 'book1', '"..wordName.."', '"..wordProciency.."', '2014-11-6');"
+        local query = "INSERT INTO Word_Prociency VALUES ('user1', 'book1', '"..wordName.."', "..wordProciency..", '2014-11-6');"
         Manager.database:exec(query)
         
         if wordProciency == 0 then

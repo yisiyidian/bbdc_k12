@@ -70,6 +70,8 @@ function DataUser:parseServerLevelData(results)
         self.levels[i] = data
         print_lua_table(data)
     end
+    
+    print('level size : '..#self.levels)
 end
 
 function DataUser:parseServerDailyCheckInData(results)
@@ -109,36 +111,47 @@ function DataUser:getUserLevelData(chapterKey, levelKey)
             return self.levels[i]
         end
     end
+    return nil
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
-    for i = 1, #self.levels do
-        if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
-            self.levels[i].hearts = stars
-            s_SERVER.updateData(self.levels[i],
-            function(api,result)
-            end,
-            function(api, code, message, description)
-            end)        
-        end
+    local levelData = self:getUserLevelData(chapterKey, levelKey)
+    if levelData == nil then
+        local DataLevel = require('model.user.DataLevel')
+        levelData = DataLevel.create()
+        levelData.bookKey = s_CURRENT_USER.bookKey
+        levelData.chapterKey = chapterKey
+        levelData.levelKey = levelKey
     end
+
+    levelData.hearts = stars
+    s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
+    function(api,result)
+    end,
+    function(api, code, message, description)
+    end)        
 end
 
 function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
-    for i = 1, #self.levels do
-        if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
-            self.levels[i].isLevelUnlocked = unlocked
-            s_SERVER.updateData(self.levels[i],
-                function(api,result)
-                end,
-                function(api, code, message, description)
-                end)        
-        end
+    local levelData = self:getUserLevelData(chapterKey, levelKey)
+    if levelData == nil then
+        local DataLevel = require('model.user.DataLevel')
+        levelData = DataLevel.create()
+        levelData.bookKey = s_CURRENT_USER.bookKey
+        levelData.chapterKey = chapterKey
+        levelData.levelKey = levelKey
     end
+
+    levelData.isLevelUnlocked = unlocked
+    s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end)  
 end
 
 function DataUser:updateDataToServer()
-    s_SERVER.updateData(self,
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
         function(api,result)
         end,
         function(api, code, message, description)

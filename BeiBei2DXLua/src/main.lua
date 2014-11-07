@@ -40,6 +40,10 @@ local function main()
     local IntroLayer = require("view.PersonalInfo")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
+    
+    --- for test
+    -- require("example.example")
+    -- test()
 end
 
 

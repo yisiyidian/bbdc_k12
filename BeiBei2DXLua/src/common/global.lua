@@ -35,6 +35,9 @@ local function _initConstant()
     s_sound_win = 'res/sound/win.mp3'
     s_sound_wrong = 'res/sound/wrong.mp3'
 
+    CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
+    CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
+
     s_DATA_MANAGER = require('model.DataManager')
 end
 
@@ -105,6 +108,8 @@ end
 
 local function _initData()
     s_DATABASE_MGR = require('model.LocalDatabaseManager')
+    s_DATABASE_MGR.open()
+    s_DATABASE_MGR.initTables()
 
     local DataUser = require('model.user.DataUser')
     s_CURRENT_USER = DataUser.create()
