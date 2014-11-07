@@ -7,6 +7,7 @@ end)
 
 function PopupNormalLevel.create(levelTag)
     local layer = PopupNormalLevel.new(levelTag)
+    print('level_tag'..levelTag)
     return layer
 end
 
@@ -41,13 +42,19 @@ end
 
 function PopupNormalLevel:ctor(levelTag)
     self.ccbPopupNormalLevel = {}
-    self.ccbPopupNormalLevel['onCloseButtonClicked'] = self.onCloseButtonClicked
-    self.ccbPopupNormalLevel['onStudyButtonClicked'] = self.onStudyButtonClicked
-    self.ccbPopupNormalLevel['onTestButtonClicked'] = self.onTestButtonClicked
+    self.ccbPopupNormalLevel['onCloseButtonClicked'] = function()
+        self:onCloseButtonClicked()
+    end
+    self.ccbPopupNormalLevel['onStudyButtonClicked'] = function()
+        self:onStudyButtonClicked()
+    end
+    self.ccbPopupNormalLevel['onTestButtonClicked'] = function()
+        self:onTestButtonClicked()
+    end
 
     self.ccb = {}
     self.ccb['popup_normal_level'] = self.ccbPopupNormalLevel
-
+    self.ccb['levelTag'] = levelTag
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
     node:setPosition(0,200)
@@ -80,10 +87,12 @@ function PopupNormalLevel:onCloseButtonClicked()
 end
 
 function PopupNormalLevel:onStudyButtonClicked()
+    self:onCloseButtonClicked()
     s_logd('on study button clicked')
 end
 
 function PopupNormalLevel:onTestButtonClicked()
+    self:onCloseButtonClicked()
     s_logd('on test button clicked')
 end
 
