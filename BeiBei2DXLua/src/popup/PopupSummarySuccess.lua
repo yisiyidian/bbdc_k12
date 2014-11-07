@@ -3,17 +3,18 @@ local PopupSummarySuccess = class('PopupSummarySuccess', function()
     return cc.Layer:create()
 end)
 
-function PopupSummarySuccess.create(current_star, total_star)
-    local layer = PopupSummarySuccess.new(current_star, total_star)
+function PopupSummarySuccess.create(levelTag, current_star, total_star)
+    local layer = PopupSummarySuccess.new(levelTag, current_star, total_star)
     return layer
 end
 
-function PopupSummarySuccess:ctor(current_star, total_star)
+function PopupSummarySuccess:ctor(levelTag, current_star, total_star)
     self.ccbPopupSummarySuccess = {}
     self.ccbPopupSummarySuccess['onCloseButtonClicked'] = self.onCloseButtonClicked
     self.ccbPopupSummarySuccess['onGoButtonClicked'] = self.onGoButtonClicked
     
     self.ccb = {}
+    self.ccb['levelTag'] = levelTag
     self.ccb['popup_summary_success'] = self.ccbPopupSummarySuccess
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_summary_success.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
@@ -45,6 +46,7 @@ function PopupSummarySuccess:onCloseButtonClicked()
 end
 
 function PopupSummarySuccess:onGoButtonClicked()
+    self:onCloseButtonClicked()
     s_logd('on go button clicked')
 end
 

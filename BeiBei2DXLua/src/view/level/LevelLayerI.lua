@@ -246,7 +246,7 @@ function LevelLayerI:onLevelButtonClicked(levelTag)
         -- check whether summary boss level can be played (starcount)
         if s_CURRENT_USER.stars >= levelConfig['summary_boss_stars'] then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelTag, s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         else
             local popupSummary = require('popup.PopupSummaryFail')
