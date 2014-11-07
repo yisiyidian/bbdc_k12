@@ -25,15 +25,21 @@ function LevelLayer:levelStateManager()
         print(s_SCENE.levelLayerState)
        
     elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
-        print(s_SCENE.levelLayerState)
+        s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
+        s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
         -- update level state and plot popup(call on level button clicked)
+        s_SCENE.levelLayerState = s_normal_level_state
+--        s_SCENE:callFuncWithDelay(10,function()
+--            levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelIndex)
+--        end)
+        
         -- TODO CHECK level index valid
-        --s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
-        --s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
-        local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level2')
+       
+        
         levelLayerI:plotStarAnimation(3, 3)
         --print('start_run')
         s_SCENE:callFuncWithDelay(3,function()
+            local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)
             local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
             player:runAction(action)
         end

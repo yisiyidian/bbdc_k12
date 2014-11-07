@@ -7,7 +7,6 @@ end)
 
 function PopupNormalLevel.create(levelTag)
     local layer = PopupNormalLevel.new(levelTag)
-    print('level_tag'..levelTag)
     return layer
 end
 
@@ -46,7 +45,8 @@ function PopupNormalLevel:ctor(levelTag)
         self:onCloseButtonClicked()
     end
     self.ccbPopupNormalLevel['onStudyButtonClicked'] = function()
-        self:onStudyButtonClicked()
+        print('sjfkla: '..levelTag)
+        self:onStudyButtonClicked(levelTag)
     end
     self.ccbPopupNormalLevel['onTestButtonClicked'] = function()
         self:onTestButtonClicked()
@@ -86,9 +86,8 @@ function PopupNormalLevel:onCloseButtonClicked()
     s_SCENE:removeAllPopups()
 end
 
-function PopupNormalLevel:onStudyButtonClicked()
+function PopupNormalLevel:onStudyButtonClicked(levelTag)
     self:onCloseButtonClicked()
-    s_logd('on study button clicked')
     s_CorePlayManager.enterStudyLayer()
 end
 
