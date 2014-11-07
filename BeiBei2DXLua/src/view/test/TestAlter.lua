@@ -14,6 +14,8 @@ function TestAlter.createFromFirstAlter()
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
     
+    s_CorePlayManager.recordWordProciency()
+    
     showGirlAndStar()
     
     local onTouchBegan = function(touch, event)

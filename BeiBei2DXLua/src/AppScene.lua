@@ -180,10 +180,20 @@ function AppScene:getLevels()
 end
 
 function AppScene:onUserServerDatasCompleted()
+    s_DATA_MANAGER.loadBooks()
+    s_DATA_MANAGER.loadChapters()
+    s_DATA_MANAGER.loadDailyCheckIns()
+    s_DATA_MANAGER.loadEnergy()
+    s_DATA_MANAGER.loadItems()
+    s_DATA_MANAGER.loadReviewBoss()
+    s_DATA_MANAGER.loadStarRules()
     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-    local LevelLayer = require('view/LevelLayer')
-    local layer = LevelLayer.create()
-    s_SCENE:replaceGameLayer(layer)
+
+    s_CorePlayManager.enterHomeLayer()
+    
+    -- local LevelLayer = require('view/LevelLayer')
+    -- local layer = LevelLayer.create()
+    -- s_SCENE:replaceGameLayer(layer)
 end
 
 return AppScene
