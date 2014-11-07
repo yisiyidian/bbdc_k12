@@ -113,8 +113,8 @@ function AppScene:registerCustomEvent()
                     s_CURRENT_USER:parseServerLevelData(result.results)
                     
                     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-                    local level = require('view/LevelLayer')
-                    layer = level.create()
+                    local LevelLayer = require('view/LevelLayer')
+                    local layer = LevelLayer.create()
                     s_SCENE:replaceGameLayer(layer)
 
                     s_LOADING_CIRCLE_LAYER:hide()

@@ -47,39 +47,39 @@ extern "C"
 	void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionDL(JNIEnv *env, jobject thisz,
 			jstring objectId, jstring filename, jstring error, jint isSaved)
 	{
-		const char *nativeString_objectId = env->GetStringUTFChars(objectId, 0);
-		const char *nativeString_filename = env->GetStringUTFChars(filename, 0);
-		const char *nativeString_error = env->GetStringUTFChars(error, 0);
+		const char *nativeString_objectId = objectId ? env->GetStringUTFChars(objectId, 0) : 0;
+		const char *nativeString_filename = filename ? env->GetStringUTFChars(filename, 0) : 0;
+		const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
 
 		CXAvos::getInstance()->invokeLuaCallbackFunction_dl(nativeString_objectId, nativeString_filename, nativeString_error, isSaved);
 
-		env->ReleaseStringUTFChars(objectId, nativeString_objectId);
-		env->ReleaseStringUTFChars(filename, nativeString_filename);
-		env->ReleaseStringUTFChars(error, nativeString_error);
+		if (objectId) env->ReleaseStringUTFChars(objectId, nativeString_objectId);
+		if (filename) env->ReleaseStringUTFChars(filename, nativeString_filename);
+		if (error) env->ReleaseStringUTFChars(error, nativeString_error);
 	}
 
     void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionSU(JNIEnv *env, jobject thisz,
             jstring objectjson, jstring error, jint errorcode)
     {
-        const char *nativeString_objectjson = env->GetStringUTFChars(objectjson, 0);
-        const char *nativeString_error = env->GetStringUTFChars(error, 0);
+        const char *nativeString_objectjson = objectjson ? env->GetStringUTFChars(objectjson, 0) : 0;
+        const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
 
         CXAvos::getInstance()->invokeLuaCallbackFunction_su(nativeString_objectjson, nativeString_error, errorcode);
 
-        env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
-        env->ReleaseStringUTFChars(error, nativeString_error);
+        if (objectjson) env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
+        if (error) env->ReleaseStringUTFChars(error, nativeString_error);
     }
 
     void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionLI(JNIEnv *env, jobject thisz,
             jstring objectjson, jstring error, jint errorcode)
     {
-        const char *nativeString_objectjson = env->GetStringUTFChars(objectjson, 0);
-        const char *nativeString_error = env->GetStringUTFChars(error, 0);
+        const char *nativeString_objectjson = objectjson ? env->GetStringUTFChars(objectjson, 0) : 0;
+        const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
 
         CXAvos::getInstance()->invokeLuaCallbackFunction_li(nativeString_objectjson, nativeString_error, errorcode);
 
-        env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
-        env->ReleaseStringUTFChars(error, nativeString_error);
+        if (objectjson) env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
+        if (error) env->ReleaseStringUTFChars(error, nativeString_error);
     }
 }
 
