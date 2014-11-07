@@ -37,9 +37,12 @@ local function main()
     end
 
     s_DATA_MANAGER.loadText()
-    local IntroLayer = require("view/login/IntroLayer")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+--    local IntroLayer = require("view/login/IntroLayer")
+--    local introLayer = IntroLayer.create()
+--    s_SCENE:replaceGameLayer(introLayer)
+      local startLayer = require('view.StartViewLayer')
+      local layer = startLayer.create()
+      s_SCENE:replaceGameLayer(layer)
 end
 
 

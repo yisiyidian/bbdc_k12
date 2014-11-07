@@ -115,7 +115,8 @@ function LevelLayerI:plotLevelDecoration()
 --            boat:setPosition(levelButton:getContentSize().width/2, -400)
 --            levelButton:addChild(boat)
 --        end
- --       if  levelData.isLevelUnlocked then  -- test
+        print(levelData)
+        --if  levelData ~= nil and levelData.isLevelUnlocked then  -- test
             if levelConfig['type'] == 1 then
                 -- add summary boss
                 local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -209,7 +210,7 @@ function LevelLayerI:ctor()
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_locked.png'))
                 end
             else 
-                if isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
+                if  isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                     local lockImage = 'ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked_Lock.png'

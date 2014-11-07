@@ -101,7 +101,7 @@ function LevelLayer:ctor()
     --local buttonNode = cc.ControlButton:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png')
     --buttonNode:setPosition(100,100)
     --self:addChild(buttonNode)
-    local scrollViewNode = cc.ScrollView:create() 
+    local scrollViewNode = ccui.ScrollView:create() 
     -- scroll view scroll
     local function scrollViewDidScroll()
         print 'scrollview did scroll'
@@ -113,12 +113,13 @@ function LevelLayer:ctor()
     end
     
     if nil ~= scrollViewNode then
-        scrollViewNode:setViewSize(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
+        --scrollViewNode:setIn(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
         scrollViewNode:setPosition(0,0)
         --contentNode2:setContentSize(856,5397)
-        scrollViewNode:ignoreAnchorPointForPosition(true)
-        scrollViewNode:setContainer(levelLayerI)
-        scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
+        --scrollViewNode:ignoreAnchorPointForPosition(true)
+        --scrollViewNode:setContainer(levelLayerI)
+        scrollViewNode:setContentSize(865, 1000)
+        --scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
         --scrollViewNode:setSizePercent(50)
         --contentNode:setAnchorPoint(0.5,0.5)
 --        contentNode2:setContentSize(500,1000)
@@ -127,22 +128,21 @@ function LevelLayer:ctor()
         --contentNode2:addChild(contentNode1)
         --scrollViewNode:scrollToPercentVertical(14,0,true)
         --scrollViewNode:setContentOffset(100)
-        
+        scrollViewNode:setInnerContainerSize(cc.size(640, 3000))  
+        scrollViewNode:addChild(levelLayerI) 
+        scrollViewNode:setTouchEnabled(true)
 --        local position = contentNode1:getContentSize()
 --        s_logd('contentSize:%f,%f',position.width,position.height)
-        scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
-        scrollViewNode:setBounceable(true)
-        scrollViewNode:setClippingToBounds(true)
-        scrollViewNode:updateInset()
-        scrollViewNode:setDelegate()
+        --scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
+        --scrollViewNode:setBounceable(true)
+        --scrollViewNode:setClippingToBounds(true)
+        --scrollViewNode:updateInset()
+        --scrollViewNode:setDelegate()
 
         --scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
         --scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
         self:addChild(scrollViewNode)
     end
-    
-    
-
 end
 
 function LevelLayer:onLevelButtonClicked()
