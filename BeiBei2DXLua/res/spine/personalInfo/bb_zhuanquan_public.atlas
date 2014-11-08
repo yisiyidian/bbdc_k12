@@ -1,0 +1,62 @@
+
+bb_zhuanquan_public.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bb_zhuanquan_1
+  rotate: true
+  xy: 437, 637
+  size: 167, 375
+  orig: 167, 375
+  offset: 0, 0
+  index: -1
+bb_zhuanquan_2
+  rotate: false
+  xy: 2, 284
+  size: 210, 344
+  orig: 210, 344
+  offset: 0, 0
+  index: -1
+bb_zhuanquan_3
+  rotate: false
+  xy: 233, 640
+  size: 202, 343
+  orig: 202, 343
+  offset: 0, 0
+  index: -1
+bb_zhuanquan_4
+  rotate: true
+  xy: 2, 104
+  size: 178, 341
+  orig: 178, 341
+  offset: 0, 0
+  index: -1
+bb_zhuanquan_5
+  rotate: true
+  xy: 345, 472
+  size: 163, 362
+  orig: 163, 362
+  offset: 0, 0
+  index: -1
+bb_zhuanquan_6
+  rotate: true
+  xy: 437, 806
+  size: 177, 368
+  orig: 177, 368
+  offset: 0, 0
+  index: -1
+bb_zhuanquan_7
+  rotate: false
+  xy: 814, 620
+  size: 169, 363
+  orig: 169, 363
+  offset: 0, 0
+  index: -1
+bb_zhuanquan_8
+  rotate: false
+  xy: 2, 630
+  size: 229, 353
+  orig: 229, 353
+  offset: 0, 0
+  index: -1
