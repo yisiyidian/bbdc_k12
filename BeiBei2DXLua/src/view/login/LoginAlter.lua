@@ -187,23 +187,7 @@ showLogin = function()
                 return
             end
 
-            local function onResponse(u, e, code)
-                if e then                  
-                    local smallAlter = SmallAlter.create(e)
-                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    smallAlter:setTag(1)
-                    main:addChild(smallAlter)
-                   
-                    s_LOADING_CIRCLE_LAYER:hide()
-                else
-                    
-                    
-                    s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_LOGIN)
-                    --s_CorePlayManager.enterHomeLayer()
-                end
-            end
-            s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
-            s_UserBaseServer.login(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
+            s_SCENE:logIn(textField_username:getStringValue(), textField_password:getStringValue())
         end
     end
     

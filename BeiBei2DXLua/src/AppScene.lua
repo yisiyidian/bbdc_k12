@@ -127,6 +127,19 @@ end
 
 ---- sign up & log in
 
+function AppScene:logIn(username, password)
+    local function onResponse(u, e, code)
+        if e then                  
+            s_TIPS_LAYER:showSmall(e)
+            s_LOADING_CIRCLE_LAYER:hide()
+        else
+            s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_LOGIN)
+        end
+    end
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
+    s_UserBaseServer.login(username, password, onResponse)
+end
+
 function AppScene:getDailyCheckIn()
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
     s_UserBaseServer.getDailyCheckInOfCurrentUser( 

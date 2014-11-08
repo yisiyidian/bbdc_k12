@@ -40,6 +40,12 @@ function parseServerDataToUserData(serverdata, userdata)
     end
 end
 
+function parseLocalDatabaseToUserData(localdb, userdata)
+    for key, value in pairs(localdb) do
+        userdata[key] = localdb[key]
+    end
+end
+
 function dataToJSONString(dataObj)
     local str = '{'
     for key, value in pairs(dataObj) do  
