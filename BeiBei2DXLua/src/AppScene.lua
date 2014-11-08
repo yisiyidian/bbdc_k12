@@ -107,9 +107,13 @@ end
 function AppScene:registerCustomEvent()
     local customEventHandle = function (event)
         if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
-            s_SCENE:getDailyCheckIn()
+            s_SCENE:gotoChooseBook()
         elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
-            s_SCENE:getDailyCheckIn()
+            if s_CURRENT_USER.bookKey == '' then
+                s_SCENE:gotoChooseBook()
+            else
+                s_SCENE:getDailyCheckIn()
+            end
         end
     end
 
@@ -122,6 +126,19 @@ function AppScene:registerCustomEvent()
 end
 
 ---- sign up & log in
+
+function AppScene:logIn(username, password)
+    local function onResponse(u, e, code)
+        if e then                  
+            s_TIPS_LAYER:showSmall(e)
+            s_LOADING_CIRCLE_LAYER:hide()
+        else
+            s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_LOGIN)
+        end
+    end
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
+    s_UserBaseServer.login(username, password, onResponse)
+end
 
 function AppScene:getDailyCheckIn()
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
@@ -179,8 +196,7 @@ function AppScene:getLevels()
     )
 end
 
-function AppScene:onUserServerDatasCompleted()
-
+function AppScene:loadConfigs()
     s_DATA_MANAGER.loadBooks()
     s_DATA_MANAGER.loadChapters()
     s_DATA_MANAGER.loadDailyCheckIns()
@@ -188,16 +204,25 @@ function AppScene:onUserServerDatasCompleted()
     s_DATA_MANAGER.loadItems()
     s_DATA_MANAGER.loadReviewBoss()
     s_DATA_MANAGER.loadStarRules()
-    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
 
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
     s_CorePlayManager.create()
+end
+
+
+-- no book key
+function AppScene:gotoChooseBook()
+    s_LOADING_CIRCLE_LAYER:hide()
+    self:loadConfigs()
+    s_CorePlayManager.enterBookLayer()
+end
+
+-- with book key
+function AppScene:onUserServerDatasCompleted()    
+    self:loadConfigs()
+    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
     s_CorePlayManager.enterHomeLayer()
-    
-    -- local LevelLayer = require('view/LevelLayer')
-    -- local layer = LevelLayer.create()
-    -- s_SCENE:replaceGameLayer(layer)
 end
 
 return AppScene

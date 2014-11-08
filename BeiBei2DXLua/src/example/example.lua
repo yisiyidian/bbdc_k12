@@ -31,27 +31,28 @@ function test()
 
     
 
-    s_DATA_MANAGER.loadText()
-    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
-    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
-    
-    s_DATA_MANAGER.loadBooks()
-    s_DATA_MANAGER.loadChapters()
-    s_DATA_MANAGER.loadDailyCheckIns()
-    s_DATA_MANAGER.loadEnergy()
-    s_DATA_MANAGER.loadItems()
-    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
-    s_DATA_MANAGER.loadReviewBoss()
-    s_DATA_MANAGER.loadStarRules()
-
-      -- test -- ziaoang ------------------------------------------------------------------------------------
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
---    s_CorePlayManager.enterStudyLayer()
---    s_CorePlayManager.enterTestLayer()
---    s_CorePlayManager.enterReviewBossLayer()
-    s_CorePlayManager.enterIntroLayer()
+--    s_DATA_MANAGER.loadText()
+--    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
+--    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
+--    
+--    s_DATA_MANAGER.loadBooks()
+--    s_DATA_MANAGER.loadChapters()
+--    s_DATA_MANAGER.loadDailyCheckIns()
+--    s_DATA_MANAGER.loadEnergy()
+--    s_DATA_MANAGER.loadItems()
+--    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+--    s_DATA_MANAGER.loadReviewBoss()
+--    s_DATA_MANAGER.loadStarRules()
+--
+--      -- test -- ziaoang ------------------------------------------------------------------------------------
+--    s_WordPool = s_DATA_MANAGER.loadAllWords()
+--    s_CorePlayManager = require("controller.CorePlayManager")
+--    s_CorePlayManager.create()
+----    s_CorePlayManager.enterStudyLayer()
+----    s_CorePlayManager.enterTestLayer()
+----    s_CorePlayManager.enterReviewBossLayer()
+----    s_CorePlayManager.enterIntroLayer()
+--    s_CorePlayManager.enterBookLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 

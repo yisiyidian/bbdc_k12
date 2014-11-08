@@ -44,7 +44,7 @@ function DataUser:ctor()
     self.bulletinBoardMask                 = 0
 
     self.checkInWord                       = ''
-    self.checkInWordUpdateDate             = nil
+    self.checkInWordUpdateDate             = 0
     self.hasCheckInButtonAppeared          = false
 
     self.needToUnlockNextChapter           = 0

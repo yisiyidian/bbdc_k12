@@ -12,9 +12,9 @@ end
 function DataWord:ctor()
     self.className = 'WMAV_UserWord'
     
-    self.wordId = ''
+    self.wordName = ''
     self.bookKey = ''
-    self.status = 0
+    self.prociencyValue = 0
 end
 
 return DataWord

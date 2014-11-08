@@ -49,6 +49,7 @@ function IntroLayer.create()
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_logd("visitor")
+    --        playSound(s_sound_buttonEffect)
         end
     end
     
@@ -177,7 +178,7 @@ function IntroLayer.create()
                         loginAlter:setTag(1)
                         loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(loginAlter)
-                        
+                --        playSound(s_sound_buttonEffect)
                         loginAlter.close = function()
                             layer:removeChildByTag(1)
                         end
@@ -190,7 +191,7 @@ function IntroLayer.create()
                         loginAlter:setTag(2)
                         loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(loginAlter)
-                        
+               --         playSound(s_sound_buttonEffect)
                         loginAlter.close = function()
                             layer:removeChildByTag(2)
                         end
@@ -231,8 +232,16 @@ function IntroLayer.create()
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
-
+    
+    playMusic(s_sound_Pluto,true)
+    
+    
     return layer
 end
+
+
+
+    
+
 
 return IntroLayer

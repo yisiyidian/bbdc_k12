@@ -33,19 +33,35 @@ function Manager.close()
     Manager.database:close()
 end
 
+function Manager.createTable(objectOfDataClass)
+    local sql = 'create table if not exists ' .. objectOfDataClass.className .. '(\n'
+
+    local str = ''
+    for key, value in pairs(objectOfDataClass) do  
+        if (key == 'sessionToken'  
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
+            if (type(value) == 'string') then
+                if string.len(str) > 1 then str = str .. ',\n' end
+                str = str .. key .. ' TEXT'
+            elseif (type(value) == 'boolean') then
+                if string.len(str) > 1 then str = str .. ',\n' end
+                str = str .. key .. ' INTEGER'
+            elseif (type(value) == 'number') then
+                if string.len(str) > 1 then str = str .. ',\n' end
+                str = str .. key .. ' INTEGER'
+            end     
+        end
+    end
+
+    sql = sql .. str .. '\n);'
+
+    Manager.database:exec(sql)
+end
+
 -- init data structure
 function Manager.initTables()
-
-    -- create table Word_Prociency
-    Manager.database:exec[[        
-        create table if not exists Word_Prociency(
-            userId TEXT,
-            bookKey TEXT,
-            wordName TEXT,
-            prociencyValue INTEGER,
-            lastUpdate TEXT
-        );
-    ]]
    
     -- CREATE table Review boss Control
     Manager.database:exec[[
@@ -103,55 +119,131 @@ function Manager.initTables()
         );
     ]]
 
-    -- create table db_userInfo
-    Manager.database:exec[[
-        create table if not exists DB_userInfo(
-            checkInWord TEXT,
-            checkInWordUpdateDate TEXT,
-            lastLoginDate TEXT,
-            nickName TEXT,
-            objectId TEXT,
-            password TEXT,
-            signType INTEGER,
-            username TEXT
-       );
-    ]]
-   
-    -- create table IC_loginDate
-    Manager.database:exec[[
-        create table if not exists IC_loginDate(
-            monday TEXT,
-            tuesday TEXT,
-            wednesday TEXT,
-            thursday TEXT,
-            friday TEXT,
-            saturday TEXT,
-            sunday TEXT,
-            userId TEXT,
-            week INTEGER PRIMARY KEY
-        );
-    ]]
-   
-    -- create table IC_word_day
-    Manager.database:exec[[
-       create table if not exists IC_word_day(
-           bookName TEXT,
-           learnedDate TEXT,
-           learnedWordCount INTEGER,
-           userId TEXT
-       );
-    ]]
+    local userDataClasses = {
+        require('model.user.DataDailyCheckIn'),
+        require('model.user.DataDailyWord'),
+        require('model.user.DataIAP'),
+        require('model.user.DataLevel'),
+        require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
+        require('model.user.DataStatistics'),      -- IC_word_day same as DataStatistics
+        require('model.user.DataUser'),            -- db_userInfo same as DataUser
+        require('model.user.DataWord')             -- Word_Prociency same as DataWord
+    }
+    for i = 1, #userDataClasses do
+        Manager.createTable(userDataClasses[i].create())
+    end
 end
 
+-- if record exists then update record
+-- else create record
+function Manager.saveDataClassObject(objectOfDataClass)
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'") do
+        num = num + 1
+        break
+    end
+
+    local insert = function ()
+        local keys, values = '', ''
+        for key, value in pairs(objectOfDataClass) do  
+            if (key == 'sessionToken'  
+                or string.find(key, '__') ~= nil 
+                or value == nil) == false then 
+
+                if (type(value) == 'string') then
+                    if string.len(keys) > 0 then keys = keys .. ',' end
+                    keys = keys .. "'" .. key .. "'"
+
+                    if string.len(values) > 0 then values = values .. ',' end
+                    values = values .. "'" .. value .. "'"
+                elseif (type(value) == 'boolean') then
+                    if string.len(keys) > 0 then keys = keys .. ',' end
+                    if string.len(values) > 0 then values = values .. ',' end
+                    if value then
+                        keys = keys .. "'" .. key .. "'"
+                        values = values .. '1'
+                    else
+                        keys = keys .. "'" .. key .. "'"
+                        values = values .. '0'
+                    end
+                elseif (type(value) == 'number') then
+                    if string.len(keys) > 0 then keys = keys .. ',' end
+                    keys = keys .. "'" .. key .. "'"
+
+                    if string.len(values) > 0 then values = values .. ',' end
+                    values = values .. value
+                end
+            end
+        end
+        return keys, values
+    end
+
+    local update = function ()
+        local str = ''
+        for key, value in pairs(objectOfDataClass) do  
+            if (key == 'sessionToken'  
+                or string.find(key, '__') ~= nil 
+                or value == nil) == false then 
+
+                if (type(value) == 'string') then
+                    if string.len(str) > 0 then str = str .. ',' end
+                    str = str .. "'" .. key .. "'" .. '=' .. "'" .. value .. "'"
+                elseif (type(value) == 'boolean') then
+                    if string.len(str) > 0 then str = str .. ',' end
+                    if value then
+                        str = str .. "'" .. key .. "'=1"
+                    else
+                        str = str .. "'" .. key .. "'=0"
+                    end
+                elseif (type(value) == 'number') then
+                    if string.len(str) > 0 then str = str .. ',' end
+                    str = str .. "'" .. key .. "'" .. '=' .. value
+                end     
+            end
+        end
+        return str
+    end
+
+    if num == 0 then
+        local keys, values = insert()
+        local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
+        s_logd(query)
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        s_logd(query)
+        Manager.database:exec(query)
+    end
+end
+
+function Manager.getUserDataFromLocalDB(objectOfDataClass)
+    local lastLogIn = 0
+    local data = nil
+    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
+        -- print_lua_table(row)
+        if row.updatedAt > lastLogIn then
+            s_logd(string.format('getUserDataFromLocalDB updatedAt: %s, %f, %f', row.objectId, row.updatedAt, lastLogIn))
+            lastLogIn = row.updatedAt
+            data = row
+        end
+    end
+
+    if data ~= nil then
+        parseLocalDatabaseToUserData(data, objectOfDataClass)     
+        return true
+    end
+
+    return false
+end
 
 function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE wordName = '"..wordName.."'") do
+    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord WHERE wordName = '"..wordName.."'") do
         num = num + 1
     end
     
     if num == 0 then
-        local query = "INSERT INTO Word_Prociency VALUES ('user1', 'book1', '"..wordName.."', "..wordProciency..", '2014-11-6');"
+        local query = "INSERT INTO WMAV_UserWord VALUES ('user1', 'book1', '"..wordName.."', "..wordProciency..", '2014-11-6');"
         Manager.database:exec(query)
         
         if wordProciency == 0 then
@@ -187,8 +279,8 @@ function Manager.insertTable_RB_record(wordName)
 end
 
 function Manager.showTable_Word_Prociency()
-    s_logd("Word_Prociency ---------------------------")
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency") do
+    s_logd("WMAV_UserWord ---------------------------")
+    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord") do
         s_logd(row.wordName .. ',' .. row.prociencyValue)
     end
 end

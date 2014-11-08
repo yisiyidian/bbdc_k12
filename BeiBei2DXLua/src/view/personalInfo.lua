@@ -28,8 +28,8 @@ function PersonalInfo:ctor()
             intro:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
         else
             intro:setPosition(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT*0.5)
-        end     
-               
+        end   
+              
         self:addChild(intro,0,string.format('back%d',i))
         if i > 1 then
             local scrollButton = cc.Sprite:create("image/PersonalInfo/scrollHintButton.png")
@@ -47,11 +47,11 @@ function PersonalInfo:ctor()
         table.insert(intro_array, intro)
     end
     
-    
-    
-    
     self:PLVM()
     self:login()
+    
+    --1
+    self:XXTJ()
     
     local onTouchBegan = function(touch, event)
         local location = self:convertToNodeSpace(touch:getLocation())
@@ -258,7 +258,7 @@ function PersonalInfo:PLVM()
         smallCircleTail:setPosition(0.5 * circleBackBig:getContentSize().width + 220 * math.cos((0.5 + 0.02 * learnProgress:getPercentage()) * math.pi),0.5 * circleBackBig:getContentSize().height + 220 * math.sin((0.5 + 0.02 * learnProgress:getPercentage()) * math.pi))
         smallCircleTail2:setPosition(0.5 * circleBackSmall:getContentSize().width + 161 * math.cos((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi),0.5 * circleBackSmall:getContentSize().height + 161 * math.sin((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi))
     end
-    self:scheduleUpdateWithPriorityLua(update, 0)
+    back:scheduleUpdateWithPriorityLua(update, 0)
 end
 
 function PersonalInfo:PLVI()
@@ -369,6 +369,7 @@ function PersonalInfo:login()
         
         button[i]:setPosition((5-i)/5 * s_DESIGN_WIDTH,0)  
         menu:addChild(button[i])
+        
         --button event
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended  and selectButton ~= i then
@@ -407,74 +408,228 @@ function PersonalInfo:login()
                 end 
             end
         end      
-        button[i]:addTouchEventListener(touchEvent)
+        button[i]:addTouchEventListener(touchEvent)   
+    end
+    --add front/back button
+    if weekCount > 4 then  
+        local menu1 = cc.Menu:create()
+        menu1:setPosition(0,0)
+        back:addChild(menu1,0,'menu')
+
+        local frontButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/front_button.png','','')
+        --frontButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
+        frontButton:setPosition(0.95 * s_DESIGN_WIDTH,0.2 * s_DESIGN_HEIGHT)
+        --frontButton:setVisible(false)
+        menu1:addChild(frontButton,0,'front')
+        local backButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','','')
+        --backButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
+        backButton:setPosition(0.05 * s_DESIGN_WIDTH,0.2 * s_DESIGN_HEIGHT)
+        backButton:setVisible(false)
+        menu1:addChild(backButton)
+
+        --frontButton:setVisible(true)
+        -- button event
+        local function onFront(sender)
+            --if eventType == ccui.TouchEventType.ended then
+            button[rightButton]:setVisible(false)
+            button[rightButton + 4]:setVisible(true)
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *s_DESIGN_WIDTH,0) ))
+            rightButton = rightButton + 1
+
+            if rightButton >= weekCount - 3 and frontButton:isVisible() then
+                s_logd(rightButton)
+                frontButton:setVisible(false)
+                if frontButton:isVisible() then
+                    s_logd('true')
+                else 
+                    s_logd('false')
+                end
+                --frontButton:setScale(2)
+            end
+            if rightButton > 1 and  backButton:isVisible() == false then
+                backButton:setVisible(true)
+            end
+            --end
+        end
+        --            
+        local function onBack(sender,eventType)
+            --if eventType == ccui.TouchEventType.ended then
+            button[rightButton + 3]:setVisible(false)
+            button[rightButton - 1]:setVisible(true)
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *s_DESIGN_WIDTH,0) ))
+            rightButton = rightButton - 1
+            if rightButton <= 1 then
+                backButton:setVisible(false)
+            end
+            if rightButton < weekCount - 3 then
+                frontButton:setVisible(true)
+            end
+            --end
+        end
+        frontButton:registerScriptTapHandler(onFront)
+        --frontButton:addTouchEventListener(onFront)
+        backButton:registerScriptTapHandler(onBack)
+
+    end
+end   
+
+function PersonalInfo:XXTJ()
+   local everydayWord = 20
+   local totalWord = 1000
+   local wordFinished = 100
+   local dayToFinish = 0
+   local back = self:getChildByName('back1')
+   local positionX =  0.5 * s_DESIGN_WIDTH + 150
+   -- > 99(mark 1) or not (mark 0)
+   local mark = 0
+   local string_everydayWord = "X个"
+   local string_dayToFinish = "X天"
+   local label_dayToFinish = ""
+   
+   if numberWord == 0 then 
+        dayToFinish = 99
+        mark = 1
+   else
+        dayToFinish = math.ceil((totalWord - wordFinished) / everydayWord)
         
-        --add front/back button
-        if weekCount > 4 then  
-            local menu1 = cc.Menu:create()
-            menu1:setPosition(0,0)
-            back:addChild(menu1,0,'menu')
-             
-            local frontButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png')
-            --frontButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
-            frontButton:setPosition(0.05 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
-            --frontButton:setVisible(false)
-            menu1:addChild(frontButton,0,'front')
-            local backButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','','')
-            --backButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
-            backButton:setPosition(0.05 * s_DESIGN_WIDTH,0.2 * s_DESIGN_HEIGHT)
-            backButton:setVisible(false)
-            menu1:addChild(backButton)
-            
-            --frontButton:setVisible(true)
-            -- button event
-            local function onFront(sender)
-                --if eventType == ccui.TouchEventType.ended then
-                    button[rightButton]:setVisible(false)
-                    button[rightButton + 4]:setVisible(true)
-                    menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *s_DESIGN_WIDTH,0) ))
-                    rightButton = rightButton + 1
-                    
-                    if rightButton >= weekCount - 6 and frontButton:isVisible() then
-                        s_logd(rightButton)
-                        frontButton:setVisible(false)
-                        if frontButton:isVisible() then
-                            s_logd('true')
-                       else 
-                            s_logd('false')
-                       end
-                        --frontButton:setScale(2)
-                    end
-                    if rightButton > 1 and  backButton:isVisible() == false then
-                        backButton:setVisible(true)
-                    end
-                --end
+        mark = 0
+        if dayToFinish > 99 then 
+        dayToFinish = 99
+        mark = 1
+        end
+   end
+   
+    string_everydayWord = string.format("%s%s", tostring(everydayWord) , "个") 
+    
+    
+    if mark == 0 then
+        string_dayToFinish = string.format("%s%s", tostring(dayToFinish) , "天") 
+    else
+        string_dayToFinish = string.format("%s%s%s", "大于",tostring(dayToFinish) , "天") 
+    end
+    
+   
+    local girl = sp.SkeletonAnimation:create('spine/personalInfo/bb_zhuanquan_public.json','spine/personalInfo/bb_zhuanquan_public.atlas', 1)
+    girl:setAnimation(0,'animation',true)
+    girl:ignoreAnchorPointForPosition(false)
+    girl:setAnchorPoint(0.5,0.5)
+    girl:setPosition(0.5 * s_DESIGN_WIDTH - 150,0.5 * s_DESIGN_HEIGHT - 250)
+    back:addChild(girl)
+   
+   
+    local label_everydayWord = cc.Label:createWithSystemFont(everydayWord,"",60)
+    label_everydayWord:ignoreAnchorPointForPosition(false)
+    label_everydayWord:setPosition(positionX - 50,0.5 * s_DESIGN_HEIGHT + 50)
+    label_everydayWord:setAnchorPoint(0.5,0.5)
+    label_everydayWord:setColor(cc.c4b(255,255,255 ,255))
+    back:addChild(label_everydayWord)
+    
+    local label_ge = cc.Label:createWithSystemFont("个","",36)
+    label_ge:ignoreAnchorPointForPosition(false)
+    label_ge:setPosition(positionX + 50,0.5 * s_DESIGN_HEIGHT + 50)
+    label_ge:setAnchorPoint(0.5,0.5)
+    label_ge:setColor(cc.c4b(255,255,255 ,255))
+    back:addChild(label_ge)
+    
+    local line_up = cc.LayerColor:create(cc.c4b(255,255,255,255),200,1)
+    line_up:ignoreAnchorPointForPosition(false)
+    line_up:setAnchorPoint(0.5,0.5)
+    line_up:setPosition(positionX,0.5 * s_DESIGN_HEIGHT )
+    back:addChild(line_up)  
+    
+    local label_everyday = cc.Label:createWithSystemFont("每日平均","",36)
+    label_everyday:ignoreAnchorPointForPosition(false)
+    label_everyday:setPosition(positionX,0.5 * s_DESIGN_HEIGHT - 50)
+    label_everyday:setAnchorPoint(0.5,0.5)
+    label_everyday:setColor(cc.c4b(255,255,255 ,255))
+    back:addChild(label_everyday)
+
+
+    if mark == 0 then
+    label_dayToFinish = cc.Label:createWithSystemFont(dayToFinish,"",60)
+    label_dayToFinish:ignoreAnchorPointForPosition(false)
+    label_dayToFinish:setPosition(positionX - 50,0.5 * s_DESIGN_HEIGHT - 150)
+    label_dayToFinish:setAnchorPoint(0.5,0.5)
+    label_dayToFinish:setColor(cc.c4b(255,255,255 ,255))
+    back:addChild(label_dayToFinish)
+    
+    local label_tian = cc.Label:createWithSystemFont("天","",36)
+    label_tian:ignoreAnchorPointForPosition(false)
+    label_tian:setPosition(positionX + 50,0.5 * s_DESIGN_HEIGHT - 150)
+    label_tian:setAnchorPoint(0.5,0.5)
+    label_tian:setColor(cc.c4b(255,255,255 ,255))
+    back:addChild(label_tian)
+    else
+        local label_dayu = cc.Label:createWithSystemFont("大于","",36)
+        label_dayu:ignoreAnchorPointForPosition(false)
+        label_dayu:setPosition(positionX - 100,0.5 * s_DESIGN_HEIGHT - 150)
+        label_dayu:setAnchorPoint(0.5,0.5)
+        label_dayu:setColor(cc.c4b(255,255,255 ,255))
+        back:addChild(label_dayu)
+        
+         label_dayToFinish = cc.Label:createWithSystemFont(dayToFinish,"",60)
+        label_dayToFinish:ignoreAnchorPointForPosition(false)
+        label_dayToFinish:setPosition(positionX + 10 ,0.5 * s_DESIGN_HEIGHT - 150)
+        label_dayToFinish:setAnchorPoint(0.5,0.5)
+        label_dayToFinish:setColor(cc.c4b(255,255,255 ,255))
+        back:addChild(label_dayToFinish)
+
+        local label_tian = cc.Label:createWithSystemFont("天","",36)
+        label_tian:ignoreAnchorPointForPosition(false)
+        label_tian:setPosition(positionX + 100,0.5 * s_DESIGN_HEIGHT - 150)
+        label_tian:setAnchorPoint(0.5,0.5)
+        label_tian:setColor(cc.c4b(255,255,255 ,255))
+        back:addChild(label_tian)   
+    end
+    
+    
+    local line_down = cc.LayerColor:create(cc.c4b(255,255,255,255),200,1)
+    line_down:ignoreAnchorPointForPosition(false)
+    line_down:setAnchorPoint(0.5,0.5)
+    line_down:setPosition(positionX,0.5 * s_DESIGN_HEIGHT - 200)
+    back:addChild(line_down) 
+    
+    local label_finishday = cc.Label:createWithSystemFont("完成还需","",36)
+    label_finishday:ignoreAnchorPointForPosition(false)
+    label_finishday:setPosition(positionX,0.5 * s_DESIGN_HEIGHT - 250)
+    label_finishday:setAnchorPoint(0.5,0.5)
+    label_finishday:setColor(cc.c4b(255,255,255 ,255))
+    back:addChild(label_finishday)
+
+    -- changing number
+    local i = 0
+    local function update(delta)
+        i = i+5
+        if everydayWord > 10 then
+        -- 0 up to everydayWord
+        label_everydayWord:setString( math.ceil(everydayWord / 100 * i))
+        -- 99 down to dayToFinish
+             if mark == 0 then 
+                 label_dayToFinish:setString(math.ceil(99 - (99 -dayToFinish ) / 100 * i))
+             end
+             if i >= 100 then
+             self:unscheduleUpdate()           
+             end
+        else
+            label_everydayWord:setString(i / 5)
+                if mark == 0 then 
+                label_dayToFinish:setString(math.ceil(99 - (99 -dayToFinish ) / 100 * i))
+                end
+            if i / 5 == everydayWord then
+                label_dayToFinish:setString(dayToFinish)
+                self:unscheduleUpdate()           
             end
---            
-            local function onBack(sender,eventType)
-                --if eventType == ccui.TouchEventType.ended then
-                    button[rightButton + 3]:setVisible(false)
-                    button[rightButton - 1]:setVisible(true)
-                    menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *s_DESIGN_WIDTH,0) ))
-                    rightButton = rightButton - 1
-                    if rightButton <= 1 then
-                        backButton:setVisible(false)
-                    end
-                    if rightButton < weekCount - 3 then
-                        frontButton:setVisible(true)
-                    end
-                --end
-            end
-            frontButton:registerScriptTapHandler(onFront)
-            --frontButton:addTouchEventListener(onFront)
-            backButton:registerScriptTapHandler(onBack)
-            
         end
         
-        
+
         
     end
     
+
+    self:scheduleUpdateWithPriorityLua(update, 0)
+
+    
+	
 end
 
 return PersonalInfo

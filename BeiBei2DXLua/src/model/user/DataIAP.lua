@@ -13,7 +13,7 @@ function DataIAP:ctor()
     self.className = 'WMAV_IAPData'
     
     self.pid = ''
-    self.paymentInfo = nil
+    self.paymentInfo = 0
     self.isSucceed = false
 end
 

@@ -37,15 +37,28 @@ local function main()
     end
 
     s_DATA_MANAGER.loadText()
---    local IntroLayer = require("view.login.IntroLayer")
-   local IntroLayer = require("view.PersonalInfo")
---    local IntroLayer = require("view.ScrollviewTest")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+
+    local startApp = function ()
+        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+        else
+            local IntroLayer = require("view.login.IntroLayer")
+            local introLayer = IntroLayer.create()
+            s_SCENE:replaceGameLayer(introLayer)
+        end
+    end
+    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        local SplashView = require("view.SplashView")
+        local sv = SplashView.create()
+        s_SCENE:replaceGameLayer(sv)
+        sv:setOnFinished(startApp)
+    else
+        startApp()
+    end
     
-    --- for test
-    -- require("example.example")
-    -- test()
+    --for test
+--     require("example.example")
+--     test()
 end
 
 

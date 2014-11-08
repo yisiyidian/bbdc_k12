@@ -120,11 +120,11 @@ function LevelLayer:ctor()
     
     if nil ~= scrollViewNode then
         --scrollViewNode:setIn(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
-        scrollViewNode:setPosition(0,0)
+        scrollViewNode:setPosition(s_LEFT_X,0)
         --contentNode2:setContentSize(856,5397)
         --scrollViewNode:ignoreAnchorPointForPosition(true)
         --scrollViewNode:setContainer(levelLayerI)
-        scrollViewNode:setContentSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT)
+        scrollViewNode:setContentSize(s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
         --scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
         --scrollViewNode:setSizePercent(50)
         --contentNode:setAnchorPoint(0.5,0.5)
@@ -149,6 +149,9 @@ function LevelLayer:ctor()
         --scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
         self:addChild(scrollViewNode)
     end
+    
+    playMusic(s_sound_bgm1,true)
+    
 end
 
 function LevelLayer:onLevelButtonClicked()
