@@ -20,6 +20,28 @@ function StudyLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
     local layer = StudyLayer.new()
+    
+    local viewIndex = 1
+    
+    -- time
+    local time = 0
+    local view1_time = 0
+    local view2_time = 0
+    local view3_time = 0
+    local update = function()
+        time = time + 1
+        if viewIndex == 1 then
+            view1_time = view1_time + 1
+        elseif viewIndex == 2 then
+            view2_time = view2_time + 1
+            if view2_time >= 5 then
+                s_CorePlayManager.unfamiliarWord()
+            end
+        elseif viewIndex == 3 then
+            view3_time = view3_time + 1
+        end
+    end
+    schedule(layer,update,1)
 
     local word = s_CorePlayManager.currentWord
     local wordName = word.wordName
@@ -29,8 +51,6 @@ function StudyLayer.create()
     local wordMeaningSmall = word.wordMeaningSmall
     local sentenceEn = word.sentenceEn
     local sentenceCn = word.sentenceCn
-    
-    local viewIndex = 1
 
     local button_changeview
     local button_changeview_clicked
@@ -51,7 +71,7 @@ function StudyLayer.create()
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
-   
+    
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
     cloud_up:setAnchorPoint(0.5, 1)
@@ -117,8 +137,6 @@ function StudyLayer.create()
     cloud_up:runAction(action1)
     cloud_down:runAction(cc.Sequence:create(action2, action3))
     
-    
-      
     local size_big = cloud_down:getContentSize()
 
     local progressBar = ProgressBar.create(false)
@@ -137,6 +155,7 @@ function StudyLayer.create()
             if button_detail:getRotation() == 0 then
                 if button_reddot then
                     button_detail:removeChild(button_reddot,true)
+                    s_CorePlayManager.unfamiliarWord()
                 end
                 
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 0))
@@ -217,7 +236,7 @@ function StudyLayer.create()
     end
 
     local fail = function()
-        --s_logd("new wrong")
+        s_CorePlayManager.unfamiliarWord()
     end
     if s_CorePlayManager.newPlayerState then
         mat = FlipMat.create(wordName,4,4,true)
@@ -238,6 +257,7 @@ function StudyLayer.create()
             if button_changeview:getTitleText() == "去划单词" then
                 local change = function()
                     button_changeview:setTitleText("再看一次")
+                    viewIndex = 3
 
                     local action1 = cc.MoveTo:create(0.5,cc.p(-size_big.width/2, -200))
                     soundMark:runAction(action1)
@@ -270,7 +290,10 @@ function StudyLayer.create()
                     change()
                 end
             else
+                s_CorePlayManager.unfamiliarWord()
+                
                 button_changeview:setTitleText("去划单词")
+                viewIndex = 2
 
                 local action1 = cc.MoveTo:create(0.5,cc.p(size_big.width/2, -200))
                 soundMark:runAction(action1)

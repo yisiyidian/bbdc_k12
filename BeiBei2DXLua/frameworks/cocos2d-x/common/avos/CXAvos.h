@@ -21,11 +21,21 @@ public:
     void downloadFile(const char* objectId, const char* savepath, CXLUAFUNC nHandler);
     void invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved);
     
+    void signUp(const char* username, const char* password, CXLUAFUNC nHandler);
+    void invokeLuaCallbackFunction_su(const char* objectjson, const char* error, int errorcode);
+    
+    void logIn(const char* username, const char* password, CXLUAFUNC nHandler);
+    void invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode);
+    
+    void logOut();
+    
 private:
     static CXAvos* m_pInstance;
     CXAvos();
     
     int mLuaHandlerId_dl;
+    int mLuaHandlerId_signUp;
+    int mLuaHandlerId_logIn;
 };
 
 #endif /* defined(__BeiBei2DXLua__CXAvos__) */

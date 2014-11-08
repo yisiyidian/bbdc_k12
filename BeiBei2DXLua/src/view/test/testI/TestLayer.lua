@@ -37,17 +37,41 @@ function TestLayer.create()
     
     local playOver = false
 
+--    local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
+--    cloud_up:ignoreAnchorPointForPosition(false)
+--    cloud_up:setAnchorPoint(0.5, 1)
+--    cloud_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
+--    layer:addChild(cloud_up)
+
+--    local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
+--    cloud_down:ignoreAnchorPointForPosition(false)
+--    cloud_down:setAnchorPoint(0.5, 0)
+--    cloud_down:setPosition(s_DESIGN_WIDTH/2, 0)
+--    layer:addChild(cloud_down)
+
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
     cloud_up:setAnchorPoint(0.5, 1)
-    cloud_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
+    cloud_up:setPosition(s_DESIGN_WIDTH/2, 1014)
     layer:addChild(cloud_up)
 
+    local cloud_up_tail = cc.LayerColor:create(cc.c4b(38,158,220,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
+    cloud_up_tail:setAnchorPoint(0.5,0)
+    cloud_up_tail:ignoreAnchorPointForPosition(false)  
+    cloud_up_tail:setPosition(cloud_up:getContentSize().width/2,cloud_up:getContentSize().height)
+    cloud_up:addChild(cloud_up_tail)
+    
     local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
     cloud_down:ignoreAnchorPointForPosition(false)
     cloud_down:setAnchorPoint(0.5, 0)
-    cloud_down:setPosition(s_DESIGN_WIDTH/2, 0)
+    cloud_down:setPosition(s_DESIGN_WIDTH/2, 771)
     layer:addChild(cloud_down)
+
+    local cloud_down_tail = cc.LayerColor:create(cc.c4b(213,243,255,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
+    cloud_down_tail:setAnchorPoint(0.5,1)
+    cloud_down_tail:ignoreAnchorPointForPosition(false)  
+    cloud_down_tail:setPosition(cloud_up:getContentSize().width/2,0)
+    cloud_down:addChild(cloud_down_tail)
 
     local beach = cc.Sprite:create("image/studyscene/studyscene_beach_down.png")
     beach:ignoreAnchorPointForPosition(false)
@@ -111,7 +135,7 @@ function TestLayer.create()
     end
 
     local fail = function()   
-    
+        s_CorePlayManager.unfamiliarWord()
     end
     
     local timeOut = function()
@@ -119,6 +143,7 @@ function TestLayer.create()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
         progressBar.wrongStyle()
+        s_CorePlayManager.unfamiliarWord()
         
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
         showAnswerStateBack:setPosition(s_DESIGN_WIDTH/2*3, 768)
@@ -157,8 +182,8 @@ function TestLayer.create()
     end
 
     local mat = FlipMat.create(wordName,4,4,false)
-    mat:setPosition(size_big.width/2, 100)
-    cloud_down:addChild(mat)
+    mat:setPosition(s_DESIGN_WIDTH/2, 100)
+    layer:addChild(mat)
 
     mat.success = success
     mat.fail = fail

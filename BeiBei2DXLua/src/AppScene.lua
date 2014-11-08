@@ -10,6 +10,15 @@ local TouchEventBlockLayer = require("layer.TouchEventBlockLayer")
 local LoadingCircleLayer = require('layer.LoadingCircleLayer')
 local DebugLayer = require("layer.DebugLayer")
 
+-- define level layer state constant
+s_normal_level_state = 'normalLevelState'
+s_normal_next_state = 'normalNextState'
+s_normal_retry_state = 'normalRetryState'
+s_unlock_normal_plotInfo_state = 'unlockNormalPlotInfoState'
+s_unlock_normal_notPlotInfo_state = 'unlockNormalNotPlotInfoState'
+s_review_boss_appear_state = 'reviewBossAppearState'
+s_review_boss_pass_state = 'reviewBossPassState'
+
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
 end)
@@ -39,20 +48,30 @@ function AppScene.create()
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
-    -- TODO
     scene.loadingCircleLayer = LoadingCircleLayer.create()
     scene.rootLayer:addChild(scene.loadingCircleLayer)
 
     scene.debugLayer = DebugLayer.create()
     scene.rootLayer:addChild(scene.debugLayer)
     
+    -- scene global variables
+    scene.levelLayerState = s_normal_level_state
+    
     return scene
+end
+
+-- delta time : seconds
+local function update(dt)
+    -- print(dt)
 end
 
 function AppScene:ctor()
     self.visibleSize = cc.Director:getInstance():getVisibleSize()
     self.origin = cc.Director:getInstance():getVisibleOrigin()
     self.schedulerID = nil
+    
+    self:scheduleUpdateWithPriorityLua(update, 0)
+    self:registerCustomEvent()
 end
 
 function AppScene:replaceGameLayer(newLayer)
@@ -69,6 +88,116 @@ end
 function AppScene:removeAllPopups()
     self.popupLayer.listener:setSwallowTouches(false)
     self.popupLayer:removeAllChildren()
+end
+
+function AppScene:callFuncWithDelay(delay, func) 
+    local delayAction = cc.DelayTime:create(delay)
+    local callAction = cc.CallFunc:create(func)
+    local sequence = cc.Sequence:create(delayAction, callAction)
+    self:runAction(sequence)   
+end
+
+---- custom event
+
+function AppScene:dispatchCustomEvent(eventName)
+    local event = cc.EventCustom:new(eventName)
+    self:getEventDispatcher():dispatchEvent(event)
+end
+
+function AppScene:registerCustomEvent()
+    local customEventHandle = function (event)
+        if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
+            s_SCENE:getDailyCheckIn()
+        elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
+            s_SCENE:getDailyCheckIn()
+        end
+    end
+
+    local eventDispatcher = self:getEventDispatcher()
+    self.listenerSignUp = cc.EventListenerCustom:create(CUSTOM_EVENT_SIGNUP, customEventHandle)
+    eventDispatcher:addEventListenerWithFixedPriority(self.listenerSignUp, 1)
+
+    self.listenerLogIn = cc.EventListenerCustom:create(CUSTOM_EVENT_LOGIN, customEventHandle)
+    eventDispatcher:addEventListenerWithFixedPriority(self.listenerLogIn, 1)
+end
+
+---- sign up & log in
+
+function AppScene:getDailyCheckIn()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
+    s_UserBaseServer.getDailyCheckInOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerDailyCheckInData(result.results)
+            self:getFollowees()
+        end,
+        function (api, code, message, description) 
+            self:getFollowees()
+        end
+    )
+end
+
+-- TODO : configs
+
+function AppScene:getFollowees()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
+    s_UserBaseServer.getFolloweesOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerFolloweesData(result.results)
+            self:getFollowers()
+        end,
+        function (api, code, message, description)
+            self:getFollowers()
+        end
+    )
+end
+
+function AppScene:getFollowers()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
+    s_UserBaseServer.getFollowersOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerFollowersData(result.results)
+            self:getLevels()
+        end,
+        function (api, code, message, description)
+            self:getLevels()
+        end
+    )
+end
+
+function AppScene:getLevels()
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_LEVEL_DATA))
+    s_UserBaseServer.getLevelsOfCurrentUser(
+        function (api, result)
+            s_CURRENT_USER:parseServerLevelData(result.results)
+            self:onUserServerDatasCompleted()            
+            s_LOADING_CIRCLE_LAYER:hide()
+        end,
+        function (api, code, message, description)
+            self:onUserServerDatasCompleted()
+            s_LOADING_CIRCLE_LAYER:hide()
+        end
+    )
+end
+
+function AppScene:onUserServerDatasCompleted()
+
+    s_DATA_MANAGER.loadBooks()
+    s_DATA_MANAGER.loadChapters()
+    s_DATA_MANAGER.loadDailyCheckIns()
+    s_DATA_MANAGER.loadEnergy()
+    s_DATA_MANAGER.loadItems()
+    s_DATA_MANAGER.loadReviewBoss()
+    s_DATA_MANAGER.loadStarRules()
+    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
+    s_CorePlayManager.enterHomeLayer()
+    
+    -- local LevelLayer = require('view/LevelLayer')
+    -- local layer = LevelLayer.create()
+    -- s_SCENE:replaceGameLayer(layer)
 end
 
 return AppScene

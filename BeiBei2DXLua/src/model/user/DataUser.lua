@@ -12,7 +12,7 @@ end
 function DataUser:ctor()
     self.className                         = '_User'
     
-    self.serverTime                        = ''
+    self.serverTime                        = 0
     self.username                          = ''
     self.nickName                          = ''
     self.password                          = ''
@@ -32,6 +32,8 @@ function DataUser:ctor()
     self.friendsCount                      = 0 
     self.fans                              = {}
     self.friends                           = {}
+    self.followees                         = {} -- who I follow
+    self.followers                         = {} -- who follow me
 
     self.currentWordsIndex                 = 0 
     self.currentChapterIndex               = 0 
@@ -59,12 +61,101 @@ function DataUser:parseServerData(data)
     end
 end
 
+function DataUser:parseServerLevelData(results)
+    local DataLevel = require('model.user.DataLevel')
+    self.levels = {}
+    for i, v in ipairs(results) do
+        local data = DataLevel.create()
+        parseServerDataToUserData(v, data)
+        self.levels[i] = data
+        print_lua_table(data)
+    end
+    
+    print('level size : '..#self.levels)
+end
+
+function DataUser:parseServerDailyCheckInData(results)
+    local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
+   self.dailyCheckInData = {}
+   for i, v in ipairs(results) do
+       local data = DataDailyCheckIn.create()
+       parseServerDataToUserData(v, data)
+       self.dailyCheckInData[i] = data
+       print_lua_table(data)
+   end 
+end
+
+-- who I follow
+function DataUser:parseServerFolloweesData(results)
+    self.followees = {}
+    for i, v in ipairs(results) do
+        local data = DataUser.create()
+        parseServerDataToUserData(v.followee, data)
+        self.followees[i] = data
+    end
+end
+
+-- who follow me
+function DataUser:parseServerFollowersData(results)
+    self.followers = {}
+    for i, v in ipairs(results) do
+        local data = DataUser.create()
+        parseServerDataToUserData(v.follower, data)
+        self.followers[i] = data
+    end
+end
+
 function DataUser:getUserLevelData(chapterKey, levelKey)
     for i = 1, #self.levels do
         if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
             return self.levels[i]
         end
     end
+    return nil
+end
+
+function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
+    local levelData = self:getUserLevelData(chapterKey, levelKey)
+    if levelData == nil then
+        local DataLevel = require('model.user.DataLevel')
+        levelData = DataLevel.create()
+        levelData.bookKey = s_CURRENT_USER.bookKey
+        levelData.chapterKey = chapterKey
+        levelData.levelKey = levelKey
+    end
+
+    levelData.hearts = stars
+    s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
+    function(api,result)
+    end,
+    function(api, code, message, description)
+    end)        
+end
+
+function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
+    local levelData = self:getUserLevelData(chapterKey, levelKey)
+    if levelData == nil then
+        local DataLevel = require('model.user.DataLevel')
+        levelData = DataLevel.create()
+        levelData.bookKey = s_CURRENT_USER.bookKey
+        levelData.chapterKey = chapterKey
+        levelData.levelKey = levelKey
+    end
+
+    levelData.isLevelUnlocked = unlocked
+    s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end)  
+end
+
+function DataUser:updateDataToServer()
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end) 
 end
 
 return DataUser

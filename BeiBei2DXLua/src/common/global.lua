@@ -35,6 +35,9 @@ local function _initConstant()
     s_sound_win = 'res/sound/win.mp3'
     s_sound_wrong = 'res/sound/wrong.mp3'
 
+    CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
+    CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
+
     s_DATA_MANAGER = require('model.DataManager')
 end
 
@@ -52,6 +55,8 @@ local function _initTool()
 
     require('common.utils')
     require("AudioMgr")
+
+    DEBUG_PRINT_LUA_TABLE = true
 end
 
 local function _initScene()
@@ -87,6 +92,7 @@ local function _initScene()
     s_POPUP_LAYER             = s_SCENE.popupLayer
     s_TIPS_LAYER              = s_SCENE.tipsLayer
     s_TOUCH_EVENT_BLOCK_LAYER = s_SCENE.touchEventBlockLayer
+    s_LOADING_CIRCLE_LAYER    = s_SCENE.loadingCircleLayer
     s_DEBUG_LAYER             = s_SCENE.debugLayer
 end
 
@@ -97,10 +103,13 @@ local function _initServer()
     s_SERVER.isAppStoreServer = false
     -- user base server
     s_UserBaseServer          = require('server.UserBaseServer')
+    s_HttpRequestClient       = require('server.HttpRequestClient')
 end
 
 local function _initData()
     s_DATABASE_MGR = require('model.LocalDatabaseManager')
+    s_DATABASE_MGR.open()
+    s_DATABASE_MGR.initTables()
 
     local DataUser = require('model.user.DataUser')
     s_CURRENT_USER = DataUser.create()

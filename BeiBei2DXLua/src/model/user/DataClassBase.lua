@@ -1,5 +1,5 @@
 
-function getSecondsFromString(srcDateTime)  
+local function getSecondsFromString(srcDateTime)  
     -- Compute the difference in seconds between local time and UTC.
     local function get_timezone()
       local now = os.time()
@@ -16,12 +16,12 @@ function getSecondsFromString(srcDateTime)
 
     -- iso8601
     -- 2014-09-12T14:10:12.495Z
-    local Y = string.sub(srcDateTime,1,4)  
-    local M = string.sub(srcDateTime,6,7)  
-    local D = string.sub(srcDateTime,9,10)  
-    local H = string.sub(srcDateTime,12,13)  
-    local MM = string.sub(srcDateTime,15,16)  
-    local SS = string.sub(srcDateTime,18,19)  
+    local Y  = string.sub(srcDateTime,  1,  4)  
+    local M  = string.sub(srcDateTime,  6,  7)  
+    local D  = string.sub(srcDateTime,  9, 10)  
+    local H  = string.sub(srcDateTime, 12, 13)  
+    local MM = string.sub(srcDateTime, 15, 16)  
+    local SS = string.sub(srcDateTime, 18, 19)  
     local ms = string.sub(srcDateTime, 21, string.len(srcDateTime) - 1)
     
     local t = os.time{year=Y, month=M, day=D, hour=(H+loh), min=(MM+lom), sec=SS} 
@@ -30,7 +30,7 @@ end
 
 function parseServerDataToUserData(serverdata, userdata)
     for key, value in pairs(userdata) do
-        if nil ~= serverdata[key] then
+        if nil ~= serverdata[key] and key ~= 'sessionToken' and key ~= 'password' then
             if (key == 'createdAt' or key == 'updatedAt') and type(serverdata[key]) == 'string' then
                 userdata[key] = getSecondsFromString(serverdata[key])
             else
@@ -43,7 +43,15 @@ end
 function dataToJSONString(dataObj)
     local str = '{'
     for key, value in pairs(dataObj) do  
-        if ((key == 'objectId' and string.len(value) <= 0) or key == 'createdAt' or key == 'updatedAt' or key == 'className' or string.find(key, '__') ~= nil or value == nil) == false then 
+        if (key == 'objectId'
+            or key == 'sessionToken'
+            or key == 'password' 
+            or key == 'createdAt' 
+            or key == 'updatedAt' 
+            or key == 'className' 
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
             if (type(value) == 'string') then
                 if string.len(str) > 1 then str = str .. ',' end
                 str = str .. '"' .. key .. '":"' .. value .. '"'
@@ -56,6 +64,7 @@ function dataToJSONString(dataObj)
                 if string.len(str) > 1 then str = str .. ',' end
                 str = str .. '"' .. key .. '":' .. value
             end
+            
         end
     end
     str = str .. '}'

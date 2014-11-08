@@ -24,34 +24,34 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
-    local PopupLoginSignup = require('view.PersonalInfo')
-    local layer = PopupLoginSignup.create()
-    layer:setAnchorPoint(0.5,0)
-    s_SCENE:popup(layer)
+ local PopupLoginSignup = require('view.PersonalInfo')
+ local layer = PopupLoginSignup.create()
+ layer:setAnchorPoint(0.5,0)
+ s_SCENE:popup(layer)
 
     
 
---    s_DATA_MANAGER.loadText()
---    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
---    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
---    
---    s_DATA_MANAGER.loadBooks()
---    s_DATA_MANAGER.loadChapters()
---    s_DATA_MANAGER.loadDailyCheckIns()
---    s_DATA_MANAGER.loadEnergy()
---    s_DATA_MANAGER.loadItems()
---    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
---    s_DATA_MANAGER.loadReviewBoss()
---    s_DATA_MANAGER.loadStarRules()
---    
---    s_WordPool = s_DATA_MANAGER.loadAllWords()
---    s_CorePlayManager = require("controller.CorePlayManager")
---    s_CorePlayManager.create()
+    s_DATA_MANAGER.loadText()
+    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
+    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
+    
+    s_DATA_MANAGER.loadBooks()
+    s_DATA_MANAGER.loadChapters()
+    s_DATA_MANAGER.loadDailyCheckIns()
+    s_DATA_MANAGER.loadEnergy()
+    s_DATA_MANAGER.loadItems()
+    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+    s_DATA_MANAGER.loadReviewBoss()
+    s_DATA_MANAGER.loadStarRules()
 
-    --s_CorePlayManager.enterStudyLayer()
-    --s_CorePlayManager.enterTestLayer()
-    --s_CorePlayManager.enterReviewBossLayer()
-    --s_CorePlayManager.enterLoginLayer()
+      -- test -- ziaoang ------------------------------------------------------------------------------------
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
+--    s_CorePlayManager.enterStudyLayer()
+--    s_CorePlayManager.enterTestLayer()
+--    s_CorePlayManager.enterReviewBossLayer()
+    s_CorePlayManager.enterIntroLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
@@ -66,18 +66,6 @@ function test()
     --main_back:setPosition(50, 50)
     --layer:addChild(main_back)
     
---    local data = DataExample.create()
---    s_logd(data.des)
---
---    local function onSucceed(api, result)
---        s_logd('onSucceed:' .. api .. ', ' .. s_JSON.encode(result))
---    end 
---    local function onFailed(api, code, message)
---        s_logd('onFailed:' ..  api .. ', ' .. code .. ', ' .. message)
---    end
---    s_SERVER.request('apiLogIn', {['username']='Guo1', ['password']=111111}, onSucceed, onFailed)
---    s_SERVER.request('apiLogIn', {['username']='yehanjie1', ['password']=111111}, onSucceed, onFailed)
---
 --
 --    local sqlite3 = require("lsqlite3")
 --    local dbPath = cc.FileUtils:getInstance():getWritablePath().."local.sqlite"
@@ -131,7 +119,8 @@ function test()
 --    s_localSqlite = require("model.LocalDatabaseManager")
 --    s_localSqlite.open()
 --    s_localSqlite.initTables()
---    s_localSqlite.showTables()
+--    s_localSqlite.insertTable_Word_Prociency('apple', '4')
+--    s_localSqlite.showTable_Word_Prociency()
 --    s_localSqlite.close()
     
     --s_STORE.init()    

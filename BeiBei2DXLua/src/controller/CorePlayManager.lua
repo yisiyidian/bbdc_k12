@@ -10,7 +10,9 @@ local TestLayerIII          = require("view.test.testIII.testLayerIII")
 local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
 local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
 local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
-local LoginLayer            = require("view/login/LoginLayer.lua")
+local IntroLayer            = require("view.login.IntroLayer")
+local HomeLayer             = require("view.home.HomeLayer")
+local LevelLayer            = require("view.LevelLayer")
 
 
 local CorePlayManager = {}
@@ -30,7 +32,7 @@ CorePlayManager.wrongWordList = {}
 
 CorePlayManager.newPlayerState = false
 
-CorePlayManager.chapterIndex = 3
+CorePlayManager.chapterIndex = 1
 
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
@@ -42,8 +44,8 @@ end
 
 function CorePlayManager.loadConfiguration()
     for i = 1, #CorePlayManager.wordList do
-        CorePlayManager.answerStateRecord[i] = 0
-        CorePlayManager.wordProficiency[i] = 1
+        CorePlayManager.answerStateRecord[i] = 0    -- 0 for answer wrong and 1 for answer right
+        CorePlayManager.wordProficiency[i]   = 1    -- 0 for unfamiliar word and 1 for familiar word
     end
 end
 
@@ -86,11 +88,16 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    s_logd("leave")
+    s_Scene.levelLayerState = s_unlock_normal_plotInfo_state
+    CorePlayManager.enterLevelLayer()
 end
 
 function CorePlayManager.answerRight()
     CorePlayManager.answerStateRecord[CorePlayManager.currentWordIndex] = 1
+end
+
+function CorePlayManager.unfamiliarWord()
+    CorePlayManager.wordProficiency[CorePlayManager.currentWordIndex] = 0
 end
 
 function CorePlayManager.generateWrongWordList()
@@ -101,6 +108,18 @@ function CorePlayManager.generateWrongWordList()
     end
     CorePlayManager.replayWrongWordState = true
     CorePlayManager.currentWordIndex = 1
+end
+
+function CorePlayManager.recordWordProciency()
+    for i = 1, #CorePlayManager.wordList do
+        if CorePlayManager.wordProficiency[i] == 0 then
+            print("word: "..CorePlayManager.wordList[i].." pro:0")
+            s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 0)
+        else
+            print("word: "..CorePlayManager.wordList[i].." pro:5")
+            s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 5)
+        end
+    end
 end
 
 function CorePlayManager.enterReviewBossLayer()
@@ -116,10 +135,19 @@ function CorePlayManager.enterReviewBossLayer()
     end
 end
 
-function CorePlayManager.enterLoginLayer()
-    local loginLayer = LoginLayer.create()
-    s_SCENE:replaceGameLayer(loginLayer)
+function CorePlayManager.enterIntroLayer()
+    local IntroLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(IntroLayer)
 end
 
+function CorePlayManager.enterHomeLayer()
+    local homeLayer = HomeLayer.create()
+    s_SCENE:replaceGameLayer(homeLayer)
+end
+
+function CorePlayManager.enterLevelLayer()
+    local levelLayer = LevelLayer.create()
+    s_SCENE:replaceGameLayer(levelLayer)
+end
 
 return CorePlayManager

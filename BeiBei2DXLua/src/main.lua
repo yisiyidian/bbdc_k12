@@ -36,32 +36,14 @@ local function main()
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
 
---    local StartViewLayer = require('view.StartViewLayer')
---    local layer = StartViewLayer.create()
---    layer:setAnchorPoint(0.5, 0)
---    layer:setPosition(s_LEFT_X, 0)
---    s_SCENE:replaceGameLayer(layer)
-
---    local example = require("example.example")
---    test()
---     s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
---     local level = require('view/LevelLayer.lua')
---     layer = level.create()
---     s_SCENE:replaceGameLayer(layer)
-
-
---   local StartViewLayer = require('view.StartViewLayer')
---   local layer = StartViewLayer.create()
---   layer:setAnchorPoint(0.5, 0)
---   layer:setPosition(s_LEFT_X, 0)
---   s_SCENE:replaceGameLayer(layer)
-
-
-     local example = require("example.example")
-     test()
-      -- local level = require('view/LevelLayer.lua')
-      -- layer = level.create()
-      -- s_SCENE:replaceGameLayer(layer)
+    s_DATA_MANAGER.loadText()
+    local IntroLayer = require("view.login.IntroLayer")
+    local introLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(introLayer)
+    
+    --- for test
+    -- require("example.example")
+    -- test()
 end
 
 

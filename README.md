@@ -6,11 +6,11 @@ BeiBeiDanCiX
 
 1. OSX下面的包管理工具 Homebrew
    - 安装命令:
-     - ruby ­e "$(curl ­fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+     - ruby ­-e "$(curl ­fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 2. 好用的 shell zsh
    - 安装命令:
-     - curl ­L http://install.ohmyz.sh | sh
+     - curl ­-L http://install.ohmyz.sh | sh
 
    - 打开 .zshrc
        - # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
@@ -22,13 +22,13 @@ BeiBeiDanCiX
 
 3. android sdk
    - 安装命令:
-      - brew install android­sdk
+      - brew install android­-sdk
       - android
    - 打开 android sdk 管理界面后选择对应的 sdk 进行安装
 
 3. android­ ndk
    - 安装流程:
-      - brew install android­ndk
+      - brew install android­-ndk
       - git checkout e8448bb /usr/local/Library/Formula/android­ndk.rb
 
 4. ant
