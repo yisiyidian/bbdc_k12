@@ -11,6 +11,8 @@
 #include "anysdk_manual_bindings.h"
 #endif
 
+#define DEBUG_RUNTIME 0
+
 using namespace CocosDenshion;
 
 USING_NS_CC;
@@ -28,9 +30,9 @@ AppDelegate::~AppDelegate()
 bool AppDelegate::applicationDidFinishLaunching()
 {
     
-//#if (COCOS2D_DEBUG>0)
-//    initRuntime();
-//#endif
+#if (COCOS2D_DEBUG>0 && DEBUG_RUNTIME > 0)
+    initRuntime();
+#endif
     
     if (!ConfigParser::getInstance()->isInit()) {
         ConfigParser::getInstance()->readConfig();
@@ -78,10 +80,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     }
 #endif
     
-//#if (COCOS2D_DEBUG>0)
-//    if (startRuntime())
-//        return true;
-//#endif
+#if (COCOS2D_DEBUG>0 && DEBUG_RUNTIME > 0)
+    if (startRuntime())
+        return true;
+#endif
 
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
     return true;
