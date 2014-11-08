@@ -13,6 +13,7 @@ local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossL
 local IntroLayer            = require("view.login.IntroLayer")
 local HomeLayer             = require("view.home.HomeLayer")
 local LevelLayer            = require("view.LevelLayer")
+local BookLayer             = require("view.book.BookLayer")
 
 
 local CorePlayManager = {}
@@ -149,6 +150,11 @@ end
 function CorePlayManager.enterLevelLayer()
     local levelLayer = LevelLayer.create()
     s_SCENE:replaceGameLayer(levelLayer)
+end
+
+function CorePlayManager.enterBookLayer()
+    local bookLayer = BookLayer.create()
+    s_SCENE:replaceGameLayer(bookLayer)
 end
 
 return CorePlayManager

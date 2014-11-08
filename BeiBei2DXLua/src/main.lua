@@ -37,15 +37,17 @@ local function main()
     end
 
     s_DATA_MANAGER.loadText()
---    local IntroLayer = require("view.login.IntroLayer")
---    local introLayer = IntroLayer.create()
---    s_SCENE:replaceGameLayer(introLayer)
+
+    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        -- TODO
+    else
+        local IntroLayer = require("view.login.IntroLayer")
+        local introLayer = IntroLayer.create()
+        s_SCENE:replaceGameLayer(introLayer)
+    end
+
     
-    local IntroLayer = require("view.PersonalInfo")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
-    
-    --- for test
+    --for test
     -- require("example.example")
     -- test()
 end
