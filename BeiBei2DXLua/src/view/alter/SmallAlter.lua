@@ -9,6 +9,11 @@ function SmallAlter.create(info)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
+    main.affirm = function()
+--        main:removeFromParentAndCleanup()
+        
+    end
+
     main.close = function()
         main:removeFromParentAndCleanup()
     end
@@ -24,24 +29,39 @@ function SmallAlter.create(info)
     local label_info = cc.Label:createWithSystemFont(info,"",28)
     label_info:setColor(cc.c4b(0,0,0,255))
     label_info:setMaxLineWidth(back:getContentSize().width*4/5)
-    label_info:setWidth(back:getContentSize().width*4/5)
+--    label_info:setWidth(back:getContentSize().width*4/5)
     label_info:setPosition(back:getContentSize().width/2, back:getContentSize().height/2+50)
     back:addChild(label_info)
 
-    local button_middle_clicked = function(sender, eventType)
+    local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            --main.close()
+--            main.close()
+        elseif eventType == ccui.TouchEventType.ended then
+            main.affirm()
+        end
+    end
+
+    local button_left = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
+    button_left:setPosition(back:getContentSize().width/2-120, back:getContentSize().height/2-70)
+    button_left:setTitleText("确定")
+    button_left:setTitleFontSize(30)
+    button_left:addTouchEventListener(button_left_clicked)
+    back:addChild(button_left)
+    
+    local button_right_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+--            main.close()
         elseif eventType == ccui.TouchEventType.ended then
             main.close()
         end
     end
 
-    local button_middle = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
-    button_middle:setPosition(back:getContentSize().width/2, back:getContentSize().height/2-50)
-    button_middle:setTitleText("确定")
-    button_middle:setTitleFontSize(30)
-    button_middle:addTouchEventListener(button_middle_clicked)
-    back:addChild(button_middle)
+    local button_right = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
+    button_right:setPosition(back:getContentSize().width/2+120, back:getContentSize().height/2-70)
+    button_right:setTitleText("取消")
+    button_right:setTitleFontSize(30)
+    button_right:addTouchEventListener(button_right_clicked)
+    back:addChild(button_right)
 
     local onTouchBegan = function(touch, event)
         --s_logd("touch began on block layer")

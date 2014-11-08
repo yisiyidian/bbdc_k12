@@ -36,14 +36,15 @@ local function main()
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
 
-    s_DATA_MANAGER.loadText()
-    local IntroLayer = require("view.login.IntroLayer")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+--    s_DATA_MANAGER.loadText()
+--    local IntroLayer = require("view.login.IntroLayer")
+--    local introLayer = IntroLayer.create()
+--    s_SCENE:replaceGameLayer(introLayer)
     
-    --- for test
-    -- require("example.example")
-    -- test()
+    
+    --for test
+    require("example.example")
+    test()
 end
 
 
