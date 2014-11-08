@@ -37,6 +37,7 @@ local function main()
     end
 
     s_DATA_MANAGER.loadText()
+
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         -- TODO
     else
@@ -44,6 +45,7 @@ local function main()
         local introLayer = IntroLayer.create()
         s_SCENE:replaceGameLayer(introLayer)
     end
+
     
     --for test
     -- require("example.example")

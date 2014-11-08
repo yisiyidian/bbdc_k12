@@ -17,28 +17,12 @@ function BookLayer.create()
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
-    layer:addChild(backColor)
-
-
---    local button_middle_clicked = function(sender, eventType)
---        if eventType == ccui.TouchEventType.began then
---            s_CorePlayManager.enterLevelLayer()
---        end
---    end
---
---    local button_middle = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
---    button_middle:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
---    button_middle:setTitleText("进入关卡选择界面")
---    button_middle:setTitleFontSize(30)
---    button_middle:addTouchEventListener(button_middle_clicked)
---    layer:addChild(button_middle)
-    
+    layer:addChild(backColor)    
     
     local hint = cc.Label:createWithSystemFont("学英语就像翻越大山，开始挑战吧","",28)
     hint:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT-100)
     hint:setColor(cc.c4b(100,100,100,255))
-    backColor:addChild(hint)
-    
+    backColor:addChild(hint) 
     
     local name_array = {'CEE', 'CET4', 'CET6', 'IELTF', 'TOEFL'}
     local func_array = {}
@@ -61,6 +45,9 @@ function BookLayer.create()
                     elseif i == 5 then
                         s_CURRENT_USER.bookKey = s_BOOK_KEY_TOEFL
                     end
+                    
+                    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+                    s_CorePlayManager.enterHomeLayer()
                 end
             end
         end

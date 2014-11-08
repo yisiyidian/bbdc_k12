@@ -194,24 +194,22 @@ function AppScene:loadConfigs()
 
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
 end
 
+
+-- no book key
 function AppScene:gotoChooseBook()
+    s_LOADING_CIRCLE_LAYER:hide()
     self:loadConfigs()
-    -- TODO
-    
+    s_CorePlayManager.enterBookLayer()
 end
 
+-- with book key
 function AppScene:onUserServerDatasCompleted()    
     self:loadConfigs()
     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-
-    s_CorePlayManager.create()
     s_CorePlayManager.enterHomeLayer()
-    
-    -- local LevelLayer = require('view/LevelLayer')
-    -- local layer = LevelLayer.create()
-    -- s_SCENE:replaceGameLayer(layer)
 end
 
 return AppScene

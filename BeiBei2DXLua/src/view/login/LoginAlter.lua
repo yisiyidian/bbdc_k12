@@ -196,6 +196,8 @@ showLogin = function()
                    
                     s_LOADING_CIRCLE_LAYER:hide()
                 else
+                    
+                    
                     s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_LOGIN)
                     --s_CorePlayManager.enterHomeLayer()
                 end
