@@ -13,7 +13,7 @@ function DataDailyWord:ctor()
     self.className = 'WMAV_ICDailyWordData'
     
     self.bookKey = ''
-    self.learnedDate = nil
+    self.learnedDate = 0
     self.learnedWordCount = 0
 end
 
