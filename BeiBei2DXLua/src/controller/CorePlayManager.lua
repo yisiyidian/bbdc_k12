@@ -18,7 +18,8 @@ local LevelLayer            = require("view.LevelLayer")
 local CorePlayManager = {}
 
 -- study scene and test scene variate
-CorePlayManager.wordList = {"apple","pear","water","day"}
+--CorePlayManager.wordList = {"apple","pear","water","day"}
+CorePlayManager.wordList = {}
 CorePlayManager.currentWordIndex = 1
 CorePlayManager.currentWord = nil
 CorePlayManager.answerStateRecord = {}
@@ -88,7 +89,7 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    s_Scene.levelLayerState = s_unlock_normal_plotInfo_state
+    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     CorePlayManager.enterLevelLayer()
 end
 
