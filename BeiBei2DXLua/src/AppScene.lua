@@ -107,9 +107,13 @@ end
 function AppScene:registerCustomEvent()
     local customEventHandle = function (event)
         if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
-            s_SCENE:getDailyCheckIn()
+            s_SCENE:gotoChooseBook()
         elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
-            s_SCENE:getDailyCheckIn()
+            if s_CURRENT_USER.bookKey == '' then
+                s_SCENE:gotoChooseBook()
+            else
+                s_SCENE:getDailyCheckIn()
+            end
         end
     end
 
@@ -179,8 +183,7 @@ function AppScene:getLevels()
     )
 end
 
-function AppScene:onUserServerDatasCompleted()
-
+function AppScene:loadConfigs()
     s_DATA_MANAGER.loadBooks()
     s_DATA_MANAGER.loadChapters()
     s_DATA_MANAGER.loadDailyCheckIns()
@@ -188,10 +191,21 @@ function AppScene:onUserServerDatasCompleted()
     s_DATA_MANAGER.loadItems()
     s_DATA_MANAGER.loadReviewBoss()
     s_DATA_MANAGER.loadStarRules()
-    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
 
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
+end
+
+function AppScene:gotoChooseBook()
+    self:loadConfigs()
+    -- TODO
+    
+end
+
+function AppScene:onUserServerDatasCompleted()    
+    self:loadConfigs()
+    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+
     s_CorePlayManager.create()
     s_CorePlayManager.enterHomeLayer()
     
