@@ -45,7 +45,7 @@ local function main()
         s_SCENE:replaceGameLayer(introLayer)
     end
     
-    --- for test
+    --for test
     -- require("example.example")
     -- test()
 end

@@ -91,8 +91,6 @@ function PopupNormalLevel:onStudyButtonClicked(levelTag)
 
     s_logd('on study button clicked')
     
-    print("levelTag----"..levelTag)
-    
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,"Chapter0","level"..levelTag)
     print(levelConfig.word_content)
     
