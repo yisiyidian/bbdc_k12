@@ -149,6 +149,9 @@ function LevelLayer:ctor()
         --scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
         self:addChild(scrollViewNode)
     end
+    
+    playMusic(s_sound_bgm1,true)
+    
 end
 
 function LevelLayer:onLevelButtonClicked()

@@ -40,6 +40,7 @@ local function main()
 
     local startApp = function ()
         local IntroLayer = require("view.login.IntroLayer")
+    --    local IntroLayer = require("view.LevelLayer")
         local introLayer = IntroLayer.create()
         s_SCENE:replaceGameLayer(introLayer)
     end
