@@ -134,6 +134,107 @@ function Manager.initTables()
     end
 end
 
+-- if record exists then update record
+-- else create record
+function Manager.saveDataClassObject(objectOfDataClass)
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'") do
+        num = num + 1
+        break
+    end
+
+    local insert = function ()
+        local keys, values = '', ''
+        for key, value in pairs(objectOfDataClass) do  
+            if (key == 'sessionToken'  
+                or string.find(key, '__') ~= nil 
+                or value == nil) == false then 
+
+                if (type(value) == 'string') then
+                    if string.len(keys) > 0 then keys = keys .. ',' end
+                    keys = keys .. "'" .. key .. "'"
+
+                    if string.len(values) > 0 then values = values .. ',' end
+                    values = values .. "'" .. value .. "'"
+                elseif (type(value) == 'boolean') then
+                    if string.len(keys) > 0 then keys = keys .. ',' end
+                    if string.len(values) > 0 then values = values .. ',' end
+                    if value then
+                        keys = keys .. "'" .. key .. "'"
+                        values = values .. '1'
+                    else
+                        keys = keys .. "'" .. key .. "'"
+                        values = values .. '0'
+                    end
+                elseif (type(value) == 'number') then
+                    if string.len(keys) > 0 then keys = keys .. ',' end
+                    keys = keys .. "'" .. key .. "'"
+
+                    if string.len(values) > 0 then values = values .. ',' end
+                    values = values .. value
+                end
+            end
+        end
+        return keys, values
+    end
+
+    local update = function ()
+        local str = ''
+        for key, value in pairs(objectOfDataClass) do  
+            if (key == 'sessionToken'  
+                or string.find(key, '__') ~= nil 
+                or value == nil) == false then 
+
+                if (type(value) == 'string') then
+                    if string.len(str) > 0 then str = str .. ',' end
+                    str = str .. "'" .. key .. "'" .. '=' .. "'" .. value .. "'"
+                elseif (type(value) == 'boolean') then
+                    if string.len(str) > 0 then str = str .. ',' end
+                    if value then
+                        str = str .. "'" .. key .. "'=1"
+                    else
+                        str = str .. "'" .. key .. "'=0"
+                    end
+                elseif (type(value) == 'number') then
+                    if string.len(str) > 0 then str = str .. ',' end
+                    str = str .. "'" .. key .. "'" .. '=' .. value
+                end     
+            end
+        end
+        return str
+    end
+
+    if num == 0 then
+        local keys, values = insert()
+        local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
+        s_logd(query)
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        s_logd(query)
+        Manager.database:exec(query)
+    end
+end
+
+function Manager.getUserDataFromLocalDB(objectOfDataClass)
+    local lastLogIn = 0
+    local data = nil
+    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
+        -- print_lua_table(row)
+        if row.updatedAt > lastLogIn then
+            s_logd(string.format('getUserDataFromLocalDB updatedAt: %s, %f, %f', row.objectId, row.updatedAt, lastLogIn))
+            lastLogIn = row.updatedAt
+            data = row
+        end
+    end
+
+    if data ~= nil then
+        parseLocalDatabaseToUserData(data, objectOfDataClass)     
+        return true
+    end
+
+    return false
+end
 
 function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     local num = 0

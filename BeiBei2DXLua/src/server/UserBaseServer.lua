@@ -62,8 +62,11 @@ local function onResponse_signup_login(sessionToken, e, code, onResponse)
         s_SERVER.sessionToken = sessionToken
         UserBaseServer.searchUserByUserName(s_CURRENT_USER.username, function (api, result)
             for i, v in ipairs(result.results) do
+               
                parseServerDataToUserData(v, s_CURRENT_USER)
                s_CURRENT_USER.userId = s_CURRENT_USER.objectId
+               s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+
                if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
                print_lua_table(s_CURRENT_USER)
                break
