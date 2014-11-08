@@ -48,7 +48,10 @@ function PersonalInfo:ctor()
     end
     
     
+    
+    
     self:PLVM()
+    self:login()
     
     local onTouchBegan = function(touch, event)
         local location = self:convertToNodeSpace(touch:getLocation())
@@ -256,6 +259,222 @@ function PersonalInfo:PLVM()
         smallCircleTail2:setPosition(0.5 * circleBackSmall:getContentSize().width + 161 * math.cos((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi),0.5 * circleBackSmall:getContentSize().height + 161 * math.sin((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi))
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
+end
+
+function PersonalInfo:PLVI()
+    
+end
+
+function PersonalInfo:login()
+    local back = self:getChildByName('back2')
+    math.randomseed(os.time()) 
+    local loginArray = {}
+    local weekCount = 8
+    local totalDay = 0
+    local weekDay = {}
+    for i = 1 , weekCount do 
+        loginArray[i] = {}
+        weekDay[i] = 0
+        for j = 1,7 do
+            loginArray[i][j] = math.random(0,1)
+            if loginArray[i][j] == 1 then
+                totalDay = totalDay + 1
+                weekDay[i] = weekDay[i] + 1
+            end
+        end
+    end
+    --draw circle 
+    for i = 1,7 do
+        local str
+        if loginArray[1][i] == 1 then
+            str = 'res/image/PersonalInfo/PLVI/login.png'
+        elseif i < 6 then
+            str = 'res/image/PersonalInfo/PLVI/not_login.png'
+        else
+            str = 'res/image/PersonalInfo/PLVI/not_coming.png'
+        end
+        local dayRing = cc.ProgressTimer:create(cc.Sprite:create(str))
+        dayRing:setPosition(0.5 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
+        dayRing:setScale(1.0)
+        dayRing:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+        dayRing:setReverseDirection(false)
+        dayRing:setPercentage(100/7)
+        dayRing:setRotation( 360 * (i-1) / 7)
+        back:addChild(dayRing,0,string.format('day%d',i))
+    end
+    local center = cc.Sprite:create('res/image/PersonalInfo/PLVI/center.png')
+    center:setPosition(0.5 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
+    center:setScale(1.0)
+    
+    local line = cc.LayerColor:create(cc.c4b(0,0,0,255),center:getContentSize().width * 0.8,1)
+    line:ignoreAnchorPointForPosition(false)
+    line:setAnchorPoint(0.5,0.5)
+    line:setPosition(0.5 * center:getContentSize().width,0.5 * center:getContentSize().height)
+    center:addChild(line)
+    
+    local weekDayLabel = cc.Label:createWithSystemFont(string.format('本周 %d 天',weekDay[1]),'',40)
+    weekDayLabel:setColor(cc.c3b(0,0,0))
+    weekDayLabel:ignoreAnchorPointForPosition(false)
+    weekDayLabel:setAnchorPoint(0.5,0)
+    weekDayLabel:setPosition(0.5 * center:getContentSize().width,0.55 * center:getContentSize().height)
+    center:addChild(weekDayLabel)
+    
+    local totalLabel = cc.Label:createWithSystemFont(string.format('累计登陆%d天',totalDay),'',28)
+    totalLabel:setColor(cc.c3b(0,0,0))
+    totalLabel:ignoreAnchorPointForPosition(false)
+    totalLabel:setAnchorPoint(0.5,1)
+    totalLabel:setPosition(0.5 * center:getContentSize().width,0.45 * center:getContentSize().height)
+    center:addChild(totalLabel)
+    
+    back:addChild(center,1)
+    --add button
+    local menu = cc.Node:create()
+    menu:setPosition(0, 0.2 * s_DESIGN_HEIGHT)
+    back:addChild(menu)
+    local selectButton = 1
+    local rightButton = 1
+    local button = {}
+    for i = 1, weekCount do
+        
+        button[i] = ccui.Button:create()
+        if i > 4 then
+            button[i]:setVisible(false)
+        end
+        button[i]:setTouchEnabled(true)
+        --add label on button
+        local weekLabel = cc.Label:createWithSystemFont(string.format('%d周',weekCount + 1 - i),'',40)
+        local yearLabel = cc.Label:createWithSystemFont('2014','',28)
+        local dateLabel = cc.Label:createWithSystemFont('9.8~9.14','',24)
+        local sun = cc.Sprite:create('res/image/PersonalInfo/login/wsy_suanzhong.png')
+        
+        if i > 1 then
+            button[i]:loadTextures("res/image/PersonalInfo/login/wsy_chengseban.png", "res/image/PersonalInfo/login/wsy_chengseban.png", "")
+            sun:setVisible(false)
+        else 
+            button[i]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
+            
+            weekLabel:setString('本周')
+            weekLabel:setColor(cc.c3b(255,103,0))
+            dateLabel:setColor(cc.c3b(255,103,0))
+            yearLabel:setColor(cc.c3b(255,103,0))
+        end
+        weekLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.7)
+        button[i]:addChild(weekLabel,0,'week')
+        yearLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.4)
+        button[i]:addChild(yearLabel,0,'year')
+        dateLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.2)
+        button[i]:addChild(dateLabel,0,'date')
+        sun:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height)
+        button[i]:addChild(sun,0,'sun')
+        
+        button[i]:setPosition((5-i)/5 * s_DESIGN_WIDTH,0)  
+        menu:addChild(button[i])
+        --button event
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended  and selectButton ~= i then
+                button[selectButton]:getChildByName('sun'):setVisible(false)
+                button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,255,255))
+                button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,255,255))
+                button[selectButton]:getChildByName('week'):setColor(cc.c3b(255,255,255))
+                button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_chengseban.png", "res/image/PersonalInfo/login/wsy_chengseban.png", "")
+                selectButton = i
+                s_logd(i)
+                button[selectButton]:getChildByName('sun'):setVisible(true)
+                button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,103,0))
+                button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,103,0))
+                button[selectButton]:getChildByName('week'):setColor(cc.c3b(255,103,0))
+                button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
+                weekDayLabel:setString(string.format('本周 %d 天',weekDay[i]))
+                for j = 1,7 do
+                    local str
+                    if loginArray[i][j] == 1 then
+                        str = 'res/image/PersonalInfo/PLVI/login.png'
+                    elseif j < 6 then
+                        str = 'res/image/PersonalInfo/PLVI/not_login.png'
+                    else
+                        str = 'res/image/PersonalInfo/PLVI/not_coming.png'
+                    end
+                    local dayRing = back:getChildByName(string.format('day%d',j))
+                    dayRing:removeFromParent()
+                    dayRing = cc.ProgressTimer:create(cc.Sprite:create(str))
+                    dayRing:setPosition(0.5 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
+                    dayRing:setScale(1.0)
+                    dayRing:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+                    dayRing:setReverseDirection(false)
+                    dayRing:setPercentage(100/7)
+                    dayRing:setRotation( 360 * (j-1) / 7)
+                    back:addChild(dayRing,0,string.format('day%d',j))
+                end 
+            end
+        end      
+        button[i]:addTouchEventListener(touchEvent)
+        
+        --add front/back button
+        if weekCount > 4 then  
+            local menu1 = cc.Menu:create()
+            menu1:setPosition(0,0)
+            back:addChild(menu1,0,'menu')
+             
+            local frontButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png')
+            --frontButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
+            frontButton:setPosition(0.05 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
+            --frontButton:setVisible(false)
+            menu1:addChild(frontButton,0,'front')
+            local backButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','','')
+            --backButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
+            backButton:setPosition(0.05 * s_DESIGN_WIDTH,0.2 * s_DESIGN_HEIGHT)
+            backButton:setVisible(false)
+            menu1:addChild(backButton)
+            
+            --frontButton:setVisible(true)
+            -- button event
+            local function onFront(sender)
+                --if eventType == ccui.TouchEventType.ended then
+                    button[rightButton]:setVisible(false)
+                    button[rightButton + 4]:setVisible(true)
+                    menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *s_DESIGN_WIDTH,0) ))
+                    rightButton = rightButton + 1
+                    
+                    if rightButton >= weekCount - 6 and frontButton:isVisible() then
+                        s_logd(rightButton)
+                        frontButton:setVisible(false)
+                        if frontButton:isVisible() then
+                            s_logd('true')
+                       else 
+                            s_logd('false')
+                       end
+                        --frontButton:setScale(2)
+                    end
+                    if rightButton > 1 and  backButton:isVisible() == false then
+                        backButton:setVisible(true)
+                    end
+                --end
+            end
+--            
+            local function onBack(sender,eventType)
+                --if eventType == ccui.TouchEventType.ended then
+                    button[rightButton + 3]:setVisible(false)
+                    button[rightButton - 1]:setVisible(true)
+                    menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *s_DESIGN_WIDTH,0) ))
+                    rightButton = rightButton - 1
+                    if rightButton <= 1 then
+                        backButton:setVisible(false)
+                    end
+                    if rightButton < weekCount - 3 then
+                        frontButton:setVisible(true)
+                    end
+                --end
+            end
+            frontButton:registerScriptTapHandler(onFront)
+            --frontButton:addTouchEventListener(onFront)
+            backButton:registerScriptTapHandler(onBack)
+            
+        end
+        
+        
+        
+    end
+    
 end
 
 return PersonalInfo
