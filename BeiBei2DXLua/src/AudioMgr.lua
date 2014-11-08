@@ -1,6 +1,6 @@
 require("Cocos2d")
 require("Cocos2dConstants")
-local db = require('model/LocalDatabaseManager')
+local db = require('model.LocalDatabaseManager')
 
 function playMusic(filename, isLoop)
     if db.isMusicOn() then

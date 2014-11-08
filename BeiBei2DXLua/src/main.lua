@@ -38,12 +38,18 @@ local function main()
 
     s_DATA_MANAGER.loadText()
 
-    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-        -- TODO
-    else
+    local startApp = function ()
         local IntroLayer = require("view.login.IntroLayer")
         local introLayer = IntroLayer.create()
         s_SCENE:replaceGameLayer(introLayer)
+    end
+    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        local SplashView = require("view.SplashView")
+        local sv = SplashView.create()
+        s_SCENE:replaceGameLayer(sv)
+        sv:setOnFinished(startApp)
+    else
+        startApp()
     end
 
     

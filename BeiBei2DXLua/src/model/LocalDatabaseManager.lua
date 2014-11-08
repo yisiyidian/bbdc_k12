@@ -56,7 +56,7 @@ function Manager.createTable(objectOfDataClass)
     end
 
     sql = sql .. str .. '\n);'
-    print(sql)
+
     Manager.database:exec(sql)
 end
 
