@@ -43,16 +43,40 @@ function test()
     s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
     s_DATA_MANAGER.loadReviewBoss()
     s_DATA_MANAGER.loadStarRules()
+    
+      -- test houqi
+--    s_WordPool = s_DATA_MANAGER.loadAllWords()
+--    s_CorePlayManager = require("controller.CorePlayManager")
+--    s_CorePlayManager.create()
+--
+--    s_CorePlayManager.enterBookLayer()
+    local startApp = function ()
+        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+        else
+            local IntroLayer = require("view.login.IntroLayer")
+            local introLayer = IntroLayer.create()
+            s_SCENE:replaceGameLayer(introLayer)
+        end
+    end
+    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        local SplashView = require("view.SplashView")
+        local sv = SplashView.create()
+        s_SCENE:replaceGameLayer(sv)
+        sv:setOnFinished(startApp)
+    else
+        startApp()
+    end
 
       -- test -- ziaoang ------------------------------------------------------------------------------------
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
---    s_CorePlayManager.enterStudyLayer()
---    s_CorePlayManager.enterTestLayer()
---    s_CorePlayManager.enterReviewBossLayer()
---    s_CorePlayManager.enterIntroLayer()
-    s_CorePlayManager.enterBookLayer()
+--    s_WordPool = s_DATA_MANAGER.loadAllWords()
+--    s_CorePlayManager = require("controller.CorePlayManager")
+--    s_CorePlayManager.create()
+----    s_CorePlayManager.enterStudyLayer()
+----    s_CorePlayManager.enterTestLayer()
+----    s_CorePlayManager.enterReviewBossLayer()
+----    s_CorePlayManager.enterIntroLayer()
+--    s_CorePlayManager.enterBookLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 

@@ -173,6 +173,9 @@ local onTouchBegan = function(touch, event)
 end
 
 function LevelLayerI:ctor()
+--    self:initHead()
+    
+    
     self.ccbLevelLayerI = {}
     self.ccbLevelLayerI['onLevelButtonClicked'] = 
     function(levelTag)
@@ -229,6 +232,16 @@ function LevelLayerI:ctor()
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 end
+
+--function LevelLayerI:initHead()
+--    local girl = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
+--    girl:ignoreAnchorPointForPosition(false)
+--    girl:setAnchorPoint(0,0)
+--    girl:setPosition(0  , 0)
+--    girl:setLocalZOrder(1)
+--    self:addChild(girl)
+--end
+
 
 function LevelLayerI:onLevelButtonClicked(levelTag)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
