@@ -37,7 +37,7 @@ BeiBeiDanCiX
 
 5. build & run apk
     - cd BeiBei2DXLua
-    - cocos run -p android -j 4 --ap 20
+    - cocos run -p android -j 4 --ap 17
 
 6. eclipse ADT Plugin
     - http://developer.android.com/sdk/installing/installing-adt.html
