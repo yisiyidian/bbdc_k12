@@ -21,8 +21,8 @@ local BookLayer             = require("view.book.BookLayer")
 local CorePlayManager = {}
 
 -- study scene and test scene variate
---CorePlayManager.wordList = {"apple","pear","water","day"}
-CorePlayManager.wordList = {}
+CorePlayManager.wordList = {"apple","pear","water","day"}
+--CorePlayManager.wordList = {}
 CorePlayManager.currentWordIndex = 1
 CorePlayManager.currentWord = nil
 CorePlayManager.answerStateRecord = {}
