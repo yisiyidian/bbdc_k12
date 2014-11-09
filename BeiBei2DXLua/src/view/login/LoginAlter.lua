@@ -112,29 +112,55 @@ showLogin = function()
     label2:setPosition(back_width/2,640)
     back_login:addChild(label2)
     
+    
+    
+    local textField_username
+    local textField_password  
+    local cursor
+    
     local username = cc.Sprite:create("image/login/sl_username.png")
     username:setPosition(back_width/2, 550)
     back_login:addChild(username)
-      
-    local textField_username
-    local textField_password  
+     
+    local cursorShowUp = function()
+        cursor:stopAllActions()
+        cursor:setVisible(false)
+        local action1 = cc.DelayTime:create(0.1)
+        local action2 = cc.CallFunc:create(
+            function()
+                cursor:setPosition(textField_username:getContentSize().width,textField_username:getContentSize().height/2)
+                cursor:setVisible(true)
+            end
+        )
+        local action3 = cc.FadeIn:create(0.5)
+        local action4 = cc.FadeOut:create(0.5)
+        local action5 = cc.RepeatForever:create(cc.Sequence:create(action3,action4))
+        cursor:runAction(cc.Sequence:create(action1, action2))
+        cursor:runAction(action5)
+    end
       
     local function textFieldEvent_username(sender, eventType)
+        print("->-><-<-")
         if eventType == ccui.TextFiledEventType.attach_with_ime then   
+            print("ininin")
             textField_username:setPlaceHolder("")
-            --back_login:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2+100)))
+            cursorShowUp()
         elseif eventType == ccui.TextFiledEventType.detach_with_ime then
+            print("outout")
+            cursor:stopAllActions()
+            cursor:setVisible(false)
             textField_username:setPlaceHolder("用户名")
-            --back_login:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
         elseif eventType == ccui.TextFiledEventType.insert_text then
-            --self._displayValueLabel:setString("insert words")
+            cursorShowUp()
         elseif eventType == ccui.TextFiledEventType.delete_backward then
-            --self._displayValueLabel:setString("delete word")
+            cursorShowUp()
         end
     end
 
     textField_username = ccui.TextField:create()
     textField_username:setTouchEnabled(true)
+    textField_username:setTouchSize(cc.size(460,80))
+    textField_username:setTouchAreaEnabled(true)
     textField_username:setFontSize(30)
     textField_username:setMaxLengthEnabled(true)
     textField_username:setMaxLength(10)
@@ -143,6 +169,11 @@ showLogin = function()
     textField_username:setPosition(cc.p(username:getContentSize().width / 2.0, username:getContentSize().height / 2.0))
     textField_username:addEventListener(textFieldEvent_username)
     username:addChild(textField_username)
+    
+    cursor = cc.Label:createWithSystemFont("|","",30)
+    cursor:setColor(cc.c4b(0,0,0,255))
+    cursor:setVisible(false)
+    textField_username:addChild(cursor)
     
     local password = cc.Sprite:create("image/login/sl_password.png")
     password:setPosition(back_width/2, 450)
@@ -156,9 +187,9 @@ showLogin = function()
             textField_password:setPlaceHolder("密码")
             --back_login:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
         elseif eventType == ccui.TextFiledEventType.insert_text then
-            --self._displayValueLabel:setString("insert words")
+            
         elseif eventType == ccui.TextFiledEventType.delete_backward then
-            --self._displayValueLabel:setString("delete word")
+            
         end
     end
 
@@ -381,16 +412,7 @@ showRegister = function()
                 return
             end
                 
-            local function onResponse(u, e, code)
-                if e then
-                    s_TIPS_LAYER:showSmall(e)
-                    s_LOADING_CIRCLE_LAYER:hide()
-                else
-                    s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_SIGNUP)
-                end
-            end
-            s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
-            s_UserBaseServer.signup(textField_username:getStringValue(), textField_password:getStringValue(), onResponse)
+            s_SCENE:signUp(textField_username:getStringValue(), textField_password:getStringValue())
         end
     end
 

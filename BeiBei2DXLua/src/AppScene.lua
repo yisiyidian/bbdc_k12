@@ -71,7 +71,7 @@ function AppScene:ctor()
     self.schedulerID = nil
     
     self:scheduleUpdateWithPriorityLua(update, 0)
-    self:registerCustomEvent()
+    -- self:registerCustomEvent()
 end
 
 function AppScene:replaceGameLayer(newLayer)
@@ -99,35 +99,49 @@ end
 
 ---- custom event
 
-function AppScene:dispatchCustomEvent(eventName)
-    local event = cc.EventCustom:new(eventName)
-    self:getEventDispatcher():dispatchEvent(event)
-end
+-- function AppScene:dispatchCustomEvent(eventName)
+--     local event = cc.EventCustom:new(eventName)
+--     self:getEventDispatcher():dispatchEvent(event)
+-- end
 
-function AppScene:registerCustomEvent()
-    local customEventHandle = function (event)
-        if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
-            s_SCENE:gotoChooseBook()
-            s_LOADING_CIRCLE_LAYER:hide()
-        elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
-            if s_CURRENT_USER.bookKey == '' then
-                s_SCENE:gotoChooseBook()
-                s_LOADING_CIRCLE_LAYER:hide()
-            else
-                s_SCENE:getDailyCheckIn()
-            end
-        end
-    end
+-- function AppScene:registerCustomEvent()
+--     local customEventHandle = function (event)
+--         if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
+--             s_SCENE:gotoChooseBook()
+--             s_LOADING_CIRCLE_LAYER:hide()
+--         elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
+--             if s_CURRENT_USER.bookKey == '' then
+--                 s_SCENE:gotoChooseBook()
+--                 s_LOADING_CIRCLE_LAYER:hide()
+--             else
+--                 s_SCENE:getDailyCheckIn()
+--             end
+--         end
+--     end
 
-    local eventDispatcher = self:getEventDispatcher()
-    self.listenerSignUp = cc.EventListenerCustom:create(CUSTOM_EVENT_SIGNUP, customEventHandle)
-    eventDispatcher:addEventListenerWithFixedPriority(self.listenerSignUp, 1)
+--     local eventDispatcher = self:getEventDispatcher()
+--     self.listenerSignUp = cc.EventListenerCustom:create(CUSTOM_EVENT_SIGNUP, customEventHandle)
+--     eventDispatcher:addEventListenerWithFixedPriority(self.listenerSignUp, 1)
 
-    self.listenerLogIn = cc.EventListenerCustom:create(CUSTOM_EVENT_LOGIN, customEventHandle)
-    eventDispatcher:addEventListenerWithFixedPriority(self.listenerLogIn, 1)
-end
+--     self.listenerLogIn = cc.EventListenerCustom:create(CUSTOM_EVENT_LOGIN, customEventHandle)
+--     eventDispatcher:addEventListenerWithFixedPriority(self.listenerLogIn, 1)
+-- end
 
 ---- sign up & log in
+
+function AppScene:signUp(username, password)
+    local function onResponse(u, e, code)
+        if e then
+            s_TIPS_LAYER:showSmall(e)
+            s_LOADING_CIRCLE_LAYER:hide()
+        else
+            s_SCENE:gotoChooseBook()
+            s_LOADING_CIRCLE_LAYER:hide()
+        end
+    end
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
+    s_UserBaseServer.signup(username, password, onResponse)
+end
 
 function AppScene:logIn(username, password)
     local function onResponse(u, e, code)
@@ -135,7 +149,12 @@ function AppScene:logIn(username, password)
             s_TIPS_LAYER:showSmall(e)
             s_LOADING_CIRCLE_LAYER:hide()
         else
-            s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_LOGIN)
+            if s_CURRENT_USER.bookKey == '' then
+                s_SCENE:gotoChooseBook()
+                s_LOADING_CIRCLE_LAYER:hide()
+            else
+                s_SCENE:getDailyCheckIn()
+            end
         end
     end
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))

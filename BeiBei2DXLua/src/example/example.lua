@@ -8,28 +8,11 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
-    local startApp = function ()
-        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-        else
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create()
-            s_SCENE:replaceGameLayer(introLayer)
-        end
-    end
-    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-        local SplashView = require("view.SplashView")
-        local sv = SplashView.create()
-        s_SCENE:replaceGameLayer(sv)
-        sv:setOnFinished(startApp)
-    else
-        startApp()
-    end
-  -- s_SERVER.debugLocalHost = true
-  -- local function onSucceed (api, result) print (result.count) end
-  -- local function onFailed (api, code, message, description) end
-  -- -- s_SERVER.searchCount('WMAV_DeviceData', '{"country":"US"}', onSucceed, onFailed)
-  -- s_SERVER.searchCount('_User', '{"username":"' .. 'yehanjie1' .. '"}', onSucceed, onFailed)
+-- s_SERVER.debugLocalHost = true
+-- local function onSucceed (api, result) print (result.count) end
+-- local function onFailed (api, code, message, description) end
+-- -- s_SERVER.searchCount('WMAV_DeviceData', '{"country":"US"}', onSucceed, onFailed)
+-- s_SERVER.searchCount('_User', '{"username":"' .. 'yehanjie1' .. '"}', onSucceed, onFailed)
 
 --local a = ziaoangTest.create()
 --s_SCENE:replaceGameLayer(a)
@@ -53,43 +36,42 @@ function test()
 -- s_SCENE:popup(layer)
 
 
+    s_DATA_MANAGER.loadText()
+    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
+    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
+    
+    s_DATA_MANAGER.loadBooks()
+    s_DATA_MANAGER.loadChapters()
+    s_DATA_MANAGER.loadDailyCheckIns()
+    s_DATA_MANAGER.loadEnergy()
+    s_DATA_MANAGER.loadItems()
+    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+    s_DATA_MANAGER.loadReviewBoss()
+    s_DATA_MANAGER.loadStarRules()
 
---    s_DATA_MANAGER.loadText()
---    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
---    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
---    
---    s_DATA_MANAGER.loadBooks()
---    s_DATA_MANAGER.loadChapters()
---    s_DATA_MANAGER.loadDailyCheckIns()
---    s_DATA_MANAGER.loadEnergy()
---    s_DATA_MANAGER.loadItems()
---    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
---    s_DATA_MANAGER.loadReviewBoss()
---    s_DATA_MANAGER.loadStarRules()
---
---      -- test -- ziaoang ------------------------------------------------------------------------------------
---    s_WordPool = s_DATA_MANAGER.loadAllWords()
---    s_CorePlayManager = require("controller.CorePlayManager")
---    s_CorePlayManager.create()
-----    s_CorePlayManager.enterStudyLayer()
-----    s_CorePlayManager.enterTestLayer()
-----    s_CorePlayManager.enterReviewBossLayer()
-----    s_CorePlayManager.enterIntroLayer()
+      -- test -- ziaoang ------------------------------------------------------------------------------------
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
+    s_CorePlayManager.enterStudyLayer()
+--    s_CorePlayManager.enterTestLayer()
+--    s_CorePlayManager.enterReviewBossLayer()
+--    s_CorePlayManager.enterIntroLayer()
 --    s_CorePlayManager.enterBookLayer()
 
--- -- print_lua_table(s_DATA_MANAGER.level_ncee)
+    -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
--- s_level = require('view/LevelLayer.lua')
--- layer = s_level.create()
---layer:setAnchorPoint(0.5,0)
---layer:setPosition(s_LEFT_X, 0)
--- s_SCENE:replaceGameLayer(layer)
+    -- s_level = require('view/LevelLayer.lua')
+    -- layer = s_level.create()
+    --layer:setAnchorPoint(0.5,0)
+    --layer:setPosition(s_LEFT_X, 0)
+    -- s_SCENE:replaceGameLayer(layer)
 
---logd('testSpine')
---local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)
---main_back:setPosition(50, 50)
---layer:addChild(main_back)
-
+    --logd('testSpine')
+    --local main_back = sp.SkeletonAnimation:create(s_spineCoconutLightJson, s_spineCoconutLightAtalas, 0.5)
+    --main_back:setPosition(50, 50)
+    --layer:addChild(main_back)
+    
 --
 --    local sqlite3 = require("lsqlite3")
 --    local dbPath = cc.FileUtils:getInstance():getWritablePath().."local.sqlite"
