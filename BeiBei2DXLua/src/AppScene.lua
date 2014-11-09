@@ -108,9 +108,11 @@ function AppScene:registerCustomEvent()
     local customEventHandle = function (event)
         if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
             s_SCENE:gotoChooseBook()
+            s_LOADING_CIRCLE_LAYER:hide()
         elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
             if s_CURRENT_USER.bookKey == '' then
                 s_SCENE:gotoChooseBook()
+                s_LOADING_CIRCLE_LAYER:hide()
             else
                 s_SCENE:getDailyCheckIn()
             end
@@ -213,7 +215,6 @@ end
 
 -- no book key
 function AppScene:gotoChooseBook()
-    s_LOADING_CIRCLE_LAYER:hide()
     self:loadConfigs()
     s_CorePlayManager.enterBookLayer()
 end

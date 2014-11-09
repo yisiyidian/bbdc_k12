@@ -383,11 +383,7 @@ showRegister = function()
                 
             local function onResponse(u, e, code)
                 if e then
-                    local smallAlter = SmallAlter.create(e)
-                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    smallAlter:setTag(1)
-                    main:addChild(smallAlter)
-
+                    s_TIPS_LAYER:showSmall(e)
                     s_LOADING_CIRCLE_LAYER:hide()
                 else
                     s_SCENE:dispatchCustomEvent(CUSTOM_EVENT_SIGNUP)

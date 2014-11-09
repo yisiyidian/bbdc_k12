@@ -38,27 +38,39 @@ local function main()
 
     s_DATA_MANAGER.loadText()
 
---    local startApp = function ()
---        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
---            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
---        else
---            local IntroLayer = require("view.login.IntroLayer")
---            local introLayer = IntroLayer.create()
---            s_SCENE:replaceGameLayer(introLayer)
---        end
---    end
---    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
---        local SplashView = require("view.SplashView")
---        local sv = SplashView.create()
---        s_SCENE:replaceGameLayer(sv)
---        sv:setOnFinished(startApp)
---    else
---        startApp()
---    end
-    
-
+-- *************************************
+-- All test code must in example.example
+-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-- |||||||||||||||||||||||||||||||||||||
+-- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+local test_code = 0
+-- *************************************
+if test_code == 0 then
+    local startApp = function ()
+        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+        else
+            local IntroLayer = require("view.login.IntroLayer")
+            local introLayer = IntroLayer.create()
+            s_SCENE:replaceGameLayer(introLayer)
+        end
+    end
+    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        local SplashView = require("view.SplashView")
+        local sv = SplashView.create()
+        s_SCENE:replaceGameLayer(sv)
+        sv:setOnFinished(startApp)
+    else
+        startApp()
+    end
+else    
+    -- *************************************
+    --for test
     require("example.example")
     test()
+    -- *************************************
+end
+
 end
 
 

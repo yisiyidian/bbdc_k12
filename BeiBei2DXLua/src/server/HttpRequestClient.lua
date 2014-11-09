@@ -2,8 +2,6 @@ local HttpRequestClient = {}
 
 ---------------------------------------------------------------------------------------------------------------------
 
--- CQL >>>
-
 -- callbackFunc: function (index, title, content)
 function HttpRequestClient.getBulletinBoard(callbackFunc)
     local retIdx = -1
@@ -25,11 +23,8 @@ function HttpRequestClient.getBulletinBoard(callbackFunc)
     local onFailed = function (api, code, message, description)
         if callbackFunc ~= nil then callbackFunc(retIdx, retTitle, retContent) end
     end
-    local cql = "select * from WMAV_BulletinBoard"
-    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+    s_SERVER.search('classes/WMAV_BulletinBoard', onSucceed, onFailed)
 end
-
--- CQL <<<
 
 ---------------------------------------------------------------------------------------------------------------------
 

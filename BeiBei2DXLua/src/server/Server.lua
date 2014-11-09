@@ -4,6 +4,7 @@ local Server = {}
 
 Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
+Server.production = 0
 Server.sessionToken = ''
 
 local function getURL()
@@ -43,7 +44,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
     xhr:open(httpRequestType, getURL() .. api)
     xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
     xhr:setRequestHeader('X-AVOSCloud-Request-Sign', sign)
-    -- "X-AVOSCloud-Application-Production: 0"
+    xhr:setRequestHeader('X-AVOSCloud-Application-Production', Server.production)
     xhr:setRequestHeader('Content-Type', contentType)
     if (string.len(Server.sessionToken) > 0) then
         xhr:setRequestHeader('X-AVOSCloud-Session-Token', Server.sessionToken)
@@ -120,6 +121,11 @@ function Server.requestFunction(api, parameters, onSucceed, onFailed)
     end
 end
 
+---------------------------------------------------------------
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+-- CQL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 -- doCloudQuery 回调中的 result 包含三个属性：
 --     results - 查询结果的 AV.Object 列表
 --     count - 如果使用了 select count(*) 的查询语法，返回符合查询条件的记录数目。
@@ -131,7 +137,11 @@ end
 function Server.CloudQueryLanguageExtend(cat, cql, onSucceed, onFailed)
     Server.requestFunction('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
 end
+-- CQL <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+
+
+-- cloud function >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 -- create & update
 function Server.createData(obj, onSucceed, onFailed)
     Server.requestFunction('apiCreate', {['className']=obj.className, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
@@ -140,8 +150,17 @@ end
 function Server.updateData(obj, onSucceed, onFailed)
     Server.requestFunction('apiUpdate', {['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
 end
+-- cloud function <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
--- s_SERVER.search('classes/WMAV_BulletinBoard?where={"index":0}',
+
+
+-- rest >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-- 回调中的 result 包含一个至三个属性：
+--     results - 查询结果的 AV.Object 列表
+--     count - 
+--     className - 查询的 class name
+--
+-- s_SERVER.search('classes/WMAV_BulletinBoard,
 --     function (api, result)
 --         print_lua_table (result)
 --     end, 
@@ -152,7 +171,23 @@ end
 --     end
 -- )
 function Server.search(restSQL, onSucceed, onFailed)
-    Server.requestFunction('apiSearch', {['path']='/1.1/' .. restSQL}, onSucceed, onFailed)
+    Server.requestFunction('apiRestSearch', {['path']='/1.1/' .. restSQL}, onSucceed, onFailed)
+end
+
+-- s_SERVER.searchCount('WMAV_DeviceData', 
+--     '{"country":"US"}', 
+--     function (api, result) 
+--       print (result.count)
+--     end, 
+--     function (api, code, message, description) end)
+function Server.searchCount(className, where, onSucceed, onFailed)
+    local sql = {
+        ['path']='/1.1/classes/' .. className, 
+        ['count']=1,
+        ['limit']=0
+    }
+    if where ~= nil then sql['where'] = where end
+    Server.requestFunction('apiRestSearch', sql, onSucceed, onFailed)
 end
 
 --[[
@@ -167,8 +202,9 @@ curl -X PUT \
 ]]--
 -- onSucceed result = {"updatedAt":"2014-11-05T07:26:00.515Z","objectId":"54128e44e4b080380a47debc"}
 function Server.updatePassword(old_password, new_password, userObjectId, onSucceed, onFailed)
-    Server.requestFunction('apiUpdate', {['path']='/1.1/users/' .. userObjectId .. '/updatePassword', ['json']=dataToJSONString({['old_password']=old_password, ['new_password']=new_password})}, onSucceed, onFailed)
+    Server.requestFunction('apiRestUpdate', {['path']='/1.1/users/' .. userObjectId .. '/updatePassword', ['json']=dataToJSONString({['old_password']=old_password, ['new_password']=new_password})}, onSucceed, onFailed)
 end
+-- rest <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 -- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin
 

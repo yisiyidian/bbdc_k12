@@ -3,7 +3,6 @@ require("Cocos2dConstants")
 require("common.global")
 
 local BigAlter = require("view.alter.BigAlter")
-local SmallAlter = require("view.alter.SmallAlter")
 
 local BookLayer = class("BookLayer", function ()
     return cc.Layer:create()
@@ -25,15 +24,12 @@ function BookLayer.create()
     backColor:addChild(hint) 
     
     local name_array = {'CEE', 'CET4', 'CET6', 'IELTF', 'TOEFL'}
+    local full_name_array = {'NCEE', 'CET4', 'CET6', 'IELTF', 'TOEFL'}
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then                
-                local smallAlter = SmallAlter.create("选择"..name_array[i].."课程")
-                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                layer:addChild(smallAlter)
-                
-                smallAlter.affirm = function()
+            if eventType == ccui.TouchEventType.began then          
+                local affirm = function()
                     if i == 1 then
                         s_CURRENT_USER.bookKey = s_BOOK_KEY_NCEE
                     elseif i == 2 then
@@ -47,8 +43,19 @@ function BookLayer.create()
                     end
                     
                     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-                    s_CorePlayManager.enterHomeLayer()
-                end
+                    
+                    s_LOADING_CIRCLE_LAYER:show()
+                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+                        function (api, result)
+                            s_CorePlayManager.enterHomeLayer()
+                            s_LOADING_CIRCLE_LAYER:hide()
+                        end,
+                        function (api, code, message, description)
+                            s_TIPS_LAYER:showSmall(message)
+                            s_LOADING_CIRCLE_LAYER:hide()
+                        end)
+                end      
+                s_TIPS_LAYER:showSmall("选择"..full_name_array[i].."课程", affirm)
             end
         end
         table.insert(func_array, click)
@@ -72,7 +79,7 @@ function BookLayer.create()
         smallButton:setPosition(smallBack:getContentSize().width/2,0)
         smallBack:addChild(smallButton)
         
-        local name = cc.Label:createWithSystemFont(name_array[i],"",28)
+        local name = cc.Label:createWithSystemFont(full_name_array[i],"",28)
         name:setPosition(smallButton:getContentSize().width/2,smallButton:getContentSize().height/2)
         smallButton:addChild(name)
     end
