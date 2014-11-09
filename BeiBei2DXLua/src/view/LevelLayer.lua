@@ -119,12 +119,14 @@ function LevelLayer:ctor()
     end
     
     if nil ~= scrollViewNode then
+        local fullWidth = levelLayerI:getContentSize().width
         --scrollViewNode:setIn(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
-        scrollViewNode:setPosition(s_LEFT_X,0)
+        scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
+
         --contentNode2:setContentSize(856,5397)
         --scrollViewNode:ignoreAnchorPointForPosition(true)
         --scrollViewNode:setContainer(levelLayerI)
-        scrollViewNode:setContentSize(s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+        scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
         --scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
         --scrollViewNode:setSizePercent(50)
         --contentNode:setAnchorPoint(0.5,0.5)
@@ -134,7 +136,7 @@ function LevelLayer:ctor()
         --contentNode2:addChild(contentNode1)
         --scrollViewNode:scrollToPercentVertical(14,0,true)
         --scrollViewNode:setContentOffset(100)
-        scrollViewNode:setInnerContainerSize(cc.size(levelLayerI:getContentSize().width,levelLayerI:getContentSize().height))  
+        scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
         scrollViewNode:addChild(levelLayerI) 
         scrollViewNode:setTouchEnabled(true)
 --        local position = contentNode1:getContentSize()
