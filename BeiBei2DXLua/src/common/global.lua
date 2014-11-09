@@ -101,6 +101,7 @@ local function _initServer()
     s_SERVER                  = require('server.Server')
     s_SERVER.debugLocalHost   = false -- 'http://localhost:3000/avos/'
     s_SERVER.isAppStoreServer = false
+    s_SERVER.production       = 0
     -- user base server
     s_UserBaseServer          = require('server.UserBaseServer')
     s_HttpRequestClient       = require('server.HttpRequestClient')

@@ -44,11 +44,15 @@ function BookLayer.create()
                     
                     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
                     
-                    s_UserBaseServer:saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+                    s_LOADING_CIRCLE_LAYER:show()
+                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
                         function (api, result)
                             s_CorePlayManager.enterHomeLayer()
+                            s_LOADING_CIRCLE_LAYER:hide()
                         end,
                         function (api, code, message, description)
+                            s_TIPS_LAYER:showSmall(message)
+                            s_LOADING_CIRCLE_LAYER:hide()
                         end)
                 end      
                 s_TIPS_LAYER:showSmall("选择"..full_name_array[i].."课程", affirm)

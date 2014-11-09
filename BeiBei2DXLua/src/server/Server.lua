@@ -4,6 +4,7 @@ local Server = {}
 
 Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
+Server.production = 0
 Server.sessionToken = ''
 
 local function getURL()
@@ -43,7 +44,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
     xhr:open(httpRequestType, getURL() .. api)
     xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
     xhr:setRequestHeader('X-AVOSCloud-Request-Sign', sign)
-    -- "X-AVOSCloud-Application-Production: 0"
+    xhr:setRequestHeader('X-AVOSCloud-Application-Production', Server.production)
     xhr:setRequestHeader('Content-Type', contentType)
     if (string.len(Server.sessionToken) > 0) then
         xhr:setRequestHeader('X-AVOSCloud-Session-Token', Server.sessionToken)
@@ -152,7 +153,7 @@ end
 --     end
 -- )
 function Server.search(restSQL, onSucceed, onFailed)
-    Server.requestFunction('apiSearch', {['path']='/1.1/' .. restSQL}, onSucceed, onFailed)
+    Server.requestFunction('apiRestSearch', {['path']='/1.1/' .. restSQL}, onSucceed, onFailed)
 end
 
 --[[
@@ -167,7 +168,7 @@ curl -X PUT \
 ]]--
 -- onSucceed result = {"updatedAt":"2014-11-05T07:26:00.515Z","objectId":"54128e44e4b080380a47debc"}
 function Server.updatePassword(old_password, new_password, userObjectId, onSucceed, onFailed)
-    Server.requestFunction('apiUpdate', {['path']='/1.1/users/' .. userObjectId .. '/updatePassword', ['json']=dataToJSONString({['old_password']=old_password, ['new_password']=new_password})}, onSucceed, onFailed)
+    Server.requestFunction('apiRestUpdate', {['path']='/1.1/users/' .. userObjectId .. '/updatePassword', ['json']=dataToJSONString({['old_password']=old_password, ['new_password']=new_password})}, onSucceed, onFailed)
 end
 
 -- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin
