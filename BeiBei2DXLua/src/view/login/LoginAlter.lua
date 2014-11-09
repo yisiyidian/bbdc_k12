@@ -112,14 +112,16 @@ showLogin = function()
     label2:setPosition(back_width/2,640)
     back_login:addChild(label2)
     
-    local username = cc.Sprite:create("image/login/sl_username.png")
-    username:setPosition(back_width/2, 550)
-    back_login:addChild(username)
-      
+    
+    
     local textField_username
     local textField_password  
     local cursor
-      
+    
+    local username = cc.Sprite:create("image/login/sl_username.png")
+    username:setPosition(back_width/2, 550)
+    back_login:addChild(username)
+     
     local cursorShowUp = function()
         cursor:stopAllActions()
         cursor:setVisible(false)
@@ -138,10 +140,14 @@ showLogin = function()
     end
       
     local function textFieldEvent_username(sender, eventType)
+        print("->-><-<-")
         if eventType == ccui.TextFiledEventType.attach_with_ime then   
+            print("ininin")
             textField_username:setPlaceHolder("")
             cursorShowUp()
         elseif eventType == ccui.TextFiledEventType.detach_with_ime then
+            print("outout")
+            cursor:stopAllActions()
             cursor:setVisible(false)
             textField_username:setPlaceHolder("用户名")
         elseif eventType == ccui.TextFiledEventType.insert_text then
@@ -153,6 +159,8 @@ showLogin = function()
 
     textField_username = ccui.TextField:create()
     textField_username:setTouchEnabled(true)
+    textField_username:setTouchSize(cc.size(460,80))
+    textField_username:setTouchAreaEnabled(true)
     textField_username:setFontSize(30)
     textField_username:setMaxLengthEnabled(true)
     textField_username:setMaxLength(10)

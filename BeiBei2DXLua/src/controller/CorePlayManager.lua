@@ -3,10 +3,12 @@ require "common.global"
 
 local StudyLayer            = require("view.study.studyI.StudyLayer")
 local StudyLayerII          = require("view.study.studyII.StudyLayerII")
-local StudyLayerIII         = require("view.study.studyIII.studyLayerIII")
+local StudyLayerIII         = require("view.study.studyIII.StudyLayerIII")
+local StudyLayerIV          = require("view.study.studyIV.StudyLayerIV")
 local TestLayer             = require("view.test.testI.TestLayer")
 local TestLayerII           = require("view.test.testII.TestLayerII")
-local TestLayerIII          = require("view.test.testIII.testLayerIII")
+local TestLayerIII          = require("view.test.testIII.TestLayerIII")
+local TestLayerIV           = require("view.test.testIV.TestLayerIV")
 local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
 local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
 local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
@@ -34,7 +36,7 @@ CorePlayManager.wrongWordList = {}
 
 CorePlayManager.newPlayerState = false
 
-CorePlayManager.chapterIndex = 1
+CorePlayManager.chapterIndex = 4
 
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
@@ -67,6 +69,9 @@ function CorePlayManager.enterStudyLayer()
     elseif CorePlayManager.chapterIndex == 3 then
         local studyLayerIII = StudyLayerIII.create()
         s_SCENE:replaceGameLayer(studyLayerIII)
+    elseif CorePlayManager.chapterIndex == 4 then
+        local studyLayerIV = StudyLayerIV.create()
+        s_SCENE:replaceGameLayer(studyLayerIV)
     end
 end
 
@@ -86,6 +91,9 @@ function CorePlayManager.enterTestLayer()
     elseif CorePlayManager.chapterIndex == 3 then
         local testLayerIII = TestLayerIII.create()
         s_SCENE:replaceGameLayer(testLayerIII)
+    elseif CorePlayManager.chapterIndex == 4 then
+        local testLayerIV = TestLayerIV.create()
+        s_SCENE:replaceGameLayer(testLayerIV)
     end
 end
 
