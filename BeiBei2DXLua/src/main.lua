@@ -57,8 +57,8 @@ local function main()
     end
     
     --for test
-    -- require("example.example")
-    -- test()
+--     require("example.example")
+--     test()
 end
 
 
