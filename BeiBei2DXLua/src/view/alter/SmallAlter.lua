@@ -5,7 +5,8 @@ local SmallAlter = class("SmallAlter", function()
 end)
 
 function SmallAlter.create(info)
-    local main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    local main = cc.Layer:create()
+    main:setContentSize(s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
@@ -63,17 +64,17 @@ function SmallAlter.create(info)
     button_right:addTouchEventListener(button_right_clicked)
     back:addChild(button_right)
 
-    local onTouchBegan = function(touch, event)
-        --s_logd("touch began on block layer")
-        return true
-    end
+    -- local onTouchBegan = function(touch, event)
+    --     --s_logd("touch began on block layer")
+    --     return true
+    -- end
 
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:setSwallowTouches(true)
+    -- local listener = cc.EventListenerTouchOneByOne:create()
+    -- listener:setSwallowTouches(true)
 
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    local eventDispatcher = main:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+    -- listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    -- local eventDispatcher = main:getEventDispatcher()
+    -- eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
     return main    
 end
