@@ -38,6 +38,14 @@ local function main()
 
     s_DATA_MANAGER.loadText()
 
+-- *************************************
+-- All test code must in example.example
+-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-- |||||||||||||||||||||||||||||||||||||
+-- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+local test_code = 0
+-- *************************************
+if test_code == 0 then
     local startApp = function ()
         if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
             s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
@@ -55,10 +63,14 @@ local function main()
     else
         startApp()
     end
-    
+else    
+    -- *************************************
     --for test
---     require("example.example")
---     test()
+    require("example.example")
+    test()
+    -- *************************************
+end
+
 end
 
 

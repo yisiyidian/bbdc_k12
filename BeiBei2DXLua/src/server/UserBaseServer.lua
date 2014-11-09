@@ -173,14 +173,11 @@ curl -X GET \
   https://leancloud.cn/1.1/cloudQuery
 ]]--
 function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
-    -- local cql = "select * from _User where username='" .. username .. "'"
-    -- s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
     s_SERVER.search('classes/_User?where={"username":"' .. username .. '"}', onSucceed, onFailed)
 end
 
 function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
-    local cql = "select count(*) from _User where username='" .. username .. "'"
-    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
+    s_SERVER.searchCount('_User', '{"username":"' .. username .. '"}', onSucceed, onFailed)
 end
 
 ----
@@ -193,8 +190,6 @@ s_UserBaseServer.getDailyCheckInOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
-    -- local cql = "select * from WMAV_DailyCheckInData where userId='" .. s_CURRENT_USER.objectId .. "'"
-    -- s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
     s_SERVER.search('classes/WMAV_DailyCheckInData?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
 end
 
