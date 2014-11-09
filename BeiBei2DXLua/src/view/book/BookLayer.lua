@@ -19,7 +19,7 @@ function BookLayer.create()
     layer:addChild(backColor)    
     
     local hint = cc.Label:createWithSystemFont("学英语就像翻越大山，开始挑战吧","",28)
-    hint:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT-100)
+    hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT-100)
     hint:setColor(cc.c4b(100,100,100,255))
     backColor:addChild(hint) 
     
@@ -64,12 +64,13 @@ function BookLayer.create()
         smallBack:addTouchEventListener(func_array[i])
         smallBack:setAnchorPoint(0.5,0)
         if i%2 == 0 then
-            smallBack:setPosition(s_DESIGN_WIDTH/2 + 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
+     --       smallBack:setPosition(s_DESIGN_WIDTH/2 + 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
+            smallBack:setPosition((s_RIGHT_X - s_LEFT_X)/2 + 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
         else
-            smallBack:setPosition(s_DESIGN_WIDTH/2 - 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
+            smallBack:setPosition((s_RIGHT_X - s_LEFT_X)/2 - 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
         end
         if i == 5 then
-            smallBack:setPositionX(s_DESIGN_WIDTH/2)
+            smallBack:setPositionX((s_RIGHT_X - s_LEFT_X)/2)
         end
         backColor:addChild(smallBack)
         
