@@ -29,10 +29,11 @@ function SmallAlter.create(info)
 
     local label_info = cc.Label:createWithSystemFont(info,"",28)
     label_info:setColor(cc.c4b(0,0,0,255))
-    label_info:setMaxLineWidth(back:getContentSize().width*4/5)
---    label_info:setWidth(back:getContentSize().width*4/5)
+    label_info:setDimensions(back:getContentSize().width*4/5,0)
     label_info:setPosition(back:getContentSize().width/2, back:getContentSize().height/2+50)
     back:addChild(label_info)
+    
+    
 
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

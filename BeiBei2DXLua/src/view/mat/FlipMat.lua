@@ -19,6 +19,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         spineName = "coconut_light"
     elseif s_CorePlayManager.chapterIndex == 3 then
         spineName = "coin"
+    else
+        spineName = "coconut_light"    
     end
 
     local main = FlipMat.new()
