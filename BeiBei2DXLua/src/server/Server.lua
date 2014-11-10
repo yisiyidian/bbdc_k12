@@ -57,6 +57,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
         -- * xhr.responseText：服务器返回的文本数据
         -- * xhr.statusText：服务器返回的状态文本
         s_logd('\n>>>\nresponse api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
+        if parameters ~= nil then print_lua_table(parameters) end
         s_logd('response data: \n\n' .. xhr.response .. '\n\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
         
         -- readyState == 4
