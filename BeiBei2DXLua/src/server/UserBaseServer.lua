@@ -206,8 +206,8 @@ s_UserBaseServer.getFolloweesOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getFolloweesOfCurrentUser(onSucceed, onFailed)
-    local cql = string.format("select include followee from _Followee where user=pointer('_User', '%s')", s_CURRENT_USER.objectId)
-    s_SERVER.CloudQueryLanguageExtend('followee', cql, onSucceed, onFailed)
+    local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
+    s_SERVER.searchRelations('_Followee', sql, 'followee', onSucceed, onFailed)
 end
 
 -- who follow me
@@ -221,8 +221,8 @@ s_UserBaseServer.getFollowersOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getFollowersOfCurrentUser(onSucceed, onFailed)
-    local cql = string.format("select include follower from _Follower where user=pointer('_User', '%s')", s_CURRENT_USER.objectId)
-    s_SERVER.CloudQueryLanguageExtend('follower', cql, onSucceed, onFailed)
+    local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
+    s_SERVER.searchRelations('_Follower', sql, 'follower', onSucceed, onFailed)
 end
 
 function UserBaseServer.follow(targetDataUser, onSucceed, onFailed)
@@ -239,11 +239,6 @@ end
 
 ----
 
-function UserBaseServer.getLevels(userId, bookKey, onSucceed, onFailed)
-    local cql = "select * from WMAV_LevelData where userId='" .. userId .. "' and bookKey='" .. bookKey .. "'"
-    s_SERVER.CloudQueryLanguage(cql, onSucceed, onFailed)
-end
-
 --[[
 s_UserBaseServer.getLevelsOfCurrentUser(
     function (api, result)
@@ -253,8 +248,11 @@ s_UserBaseServer.getLevelsOfCurrentUser(
     end
 )
 ]]--
+local function getLevels(userId, bookKey, onSucceed, onFailed)
+    s_SERVER.search('classes/WMAV_LevelData?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
+end
 function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
-    UserBaseServer.getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
+    getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
 end
 
 ----

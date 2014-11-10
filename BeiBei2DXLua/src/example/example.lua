@@ -9,8 +9,11 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 function test()
 -- s_SERVER.debugLocalHost = true
--- local function onSucceed (api, result) print (result.count) end
--- local function onFailed (api, code, message, description) end
+-- local function onSucceed (api, result) print_lua_table (result) end
+-- local function onFailed (api, code, message, description) print (message) end
+-- local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', '54128e44e4b080380a47debc')
+--     s_SERVER.searchRelations('_Followee', sql, 'followee', onSucceed, onFailed)
+-- s_SERVER.search('classes/WMAV_LevelData?where={"userId":"' .. '54128e44e4b080380a47debc' .. '","bookKey":"' .. 'ncee' .. '"}', onSucceed, onFailed)
 -- -- s_SERVER.searchCount('WMAV_DeviceData', '{"country":"US"}', onSucceed, onFailed)
 -- s_SERVER.searchCount('_User', '{"username":"' .. 'yehanjie1' .. '"}', onSucceed, onFailed)
 
@@ -36,24 +39,24 @@ function test()
 -- s_SCENE:popup(layer)
 
 
-    s_DATA_MANAGER.loadText()
-    s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
-    s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
+    -- s_DATA_MANAGER.loadText()
+    -- s_logdStr(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION))
+    -- s_logdStr(s_DATA_MANAGER.getTextWithKey('feedback_btn_bug'))
     
-    s_DATA_MANAGER.loadBooks()
-    s_DATA_MANAGER.loadChapters()
-    s_DATA_MANAGER.loadDailyCheckIns()
-    s_DATA_MANAGER.loadEnergy()
-    s_DATA_MANAGER.loadItems()
-    s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
-    s_DATA_MANAGER.loadReviewBoss()
-    s_DATA_MANAGER.loadStarRules()
+    -- s_DATA_MANAGER.loadBooks()
+    -- s_DATA_MANAGER.loadChapters()
+    -- s_DATA_MANAGER.loadDailyCheckIns()
+    -- s_DATA_MANAGER.loadEnergy()
+    -- s_DATA_MANAGER.loadItems()
+    -- s_DATA_MANAGER.loadLevels(s_BOOK_KEY_NCEE)
+    -- s_DATA_MANAGER.loadReviewBoss()
+    -- s_DATA_MANAGER.loadStarRules()
 
-      -- test -- ziaoang ------------------------------------------------------------------------------------
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
-    s_CorePlayManager.enterStudyLayer()
+    --   -- test -- ziaoang ------------------------------------------------------------------------------------
+    -- s_WordPool = s_DATA_MANAGER.loadAllWords()
+    -- s_CorePlayManager = require("controller.CorePlayManager")
+    -- s_CorePlayManager.create()
+    -- s_CorePlayManager.enterStudyLayer()
 --    s_CorePlayManager.enterTestLayer()
 --    s_CorePlayManager.enterReviewBossLayer()
 --    s_CorePlayManager.enterIntroLayer()

@@ -87,6 +87,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
             end
             local code = result.code
             local message = result.message
+            if message == nil then message = result.error end
             local description = result.description
 
             if code and onFailed then
@@ -187,6 +188,15 @@ function Server.searchCount(className, where, onSucceed, onFailed)
         ['limit']=0
     }
     if where ~= nil then sql['where'] = where end
+    Server.requestFunction('apiRestSearch', sql, onSucceed, onFailed)
+end
+
+function Server.searchRelations(className, where, relations, onSucceed, onFailed)
+    local sql = {
+        ['path']='/1.1/classes/' .. className, 
+        ['where'] = where,
+        ['include']=relations
+    }
     Server.requestFunction('apiRestSearch', sql, onSucceed, onFailed)
 end
 
