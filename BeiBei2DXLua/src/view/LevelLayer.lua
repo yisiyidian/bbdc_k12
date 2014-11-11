@@ -31,14 +31,15 @@ function LevelLayer:levelStateManager()
         s_SCENE:callFuncWithDelay(2, function()
             s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
         end)
-        -- plot star animation
-        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
         
         -- save and update level data
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
         --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+
+        -- plot star animation
+        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
         
         -- update level state and plot popup(call on level button clicked)
         s_SCENE.levelLayerState = s_normal_level_state
