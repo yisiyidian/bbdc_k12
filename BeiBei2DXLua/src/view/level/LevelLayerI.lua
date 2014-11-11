@@ -215,14 +215,15 @@ function LevelLayerI:ctor()
             else 
                 if  not isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     
-                    local lockSprite2 = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')
-                    lockSprite2:setPosition(levelButton:getContentSize().width/2, levelButton:getContentSize().height/2)
-                    levelButton:addChild(lockSprite2)
+                    local lockSprite1 = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')
+                    lockSprite1:setPosition(levelButton:getContentSize().width/2 - 10, levelButton:getContentSize().height/2)
+                    levelButton:addChild(lockSprite1)
+                    lockSprite1:setName('lockLayer')
                     --levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
                     --levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')) 
-                    local lockSprite1 = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked_Lock.png')
-                    lockSprite1:setPosition(levelButton:getContentSize().width/2, levelButton:getContentSize().height/2)
-                    levelButton:addChild(lockSprite1)
+                    local lockSprite2 = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked_Lock.png')
+                    lockSprite2:setPosition(levelButton:getContentSize().width/2 - 10, levelButton:getContentSize().height/2)
+                    levelButton:addChild(lockSprite2)
                     
                     
 --                    local lock = cc.MenuItemImage:create(lockImage,lockImage,lockImage)
