@@ -36,9 +36,12 @@ function DataUser:ctor()
     self.followers                         = {} -- who follow me
 
     self.currentWordsIndex                 = 0 
-    self.currentChapterIndex               = 0 
-    self.currentLevelIndex                 = 0 
-    self.currentSelectedLevelIndex         = 0 
+--    self.currentChapterIndex               = 0 
+--    self.currentLevelIndex                 = 0 
+--    self.currentSelectedLevelIndex         = 0 
+    self.currentChapterKey                 = ''
+    self.currentLevelKey                   = ''
+    self.currentSelectedLevelKey           = ''
     self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
@@ -123,11 +126,12 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         levelData.bookKey = s_CURRENT_USER.bookKey
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
-        levelData.hearts = stars
+        --levelData.hearts = stars
+        levelData.stars = stars
         self.levels.insert(levelData)
     end
-
-    levelData.hearts = stars
+    levelData.stars = stars
+    --levelData.hearts = stars
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
     function(api,result)
     end,

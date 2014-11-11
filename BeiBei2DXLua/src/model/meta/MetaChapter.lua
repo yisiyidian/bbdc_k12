@@ -6,7 +6,7 @@ end)
 
 function MetaChapter.create(book_key,
                         chapter_key,
-                        index,
+--                        index,
                         ChapterImage,
                         BackImage,
                         NameImage,
@@ -16,7 +16,7 @@ function MetaChapter.create(book_key,
 
     obj.book_key = book_key
     obj.chapter_key = chapter_key
-    obj.index = index
+--    obj.index = index
     obj.ChapterImage = ChapterImage
     obj.BackImage = BackImage
     obj.NameImage = NameImage
