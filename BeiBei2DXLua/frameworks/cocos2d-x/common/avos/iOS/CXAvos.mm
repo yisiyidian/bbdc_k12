@@ -61,13 +61,42 @@ void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* file
     }
 }
 
+NSString* AVUserToJsonStr(AVUser* user) {
+    NSMutableDictionary* json = [NSMutableDictionary dictionary];
+    
+    json[@"username"] = user.username;
+    json[@"sessionToken"] = user.sessionToken;
+    json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
+    json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
+    for (NSString* key in user.allKeys) {
+        id obj = [user objectForKey:key];
+        if ([obj isKindOfClass:[NSString class]]) {
+            json[key] = ((NSString*)obj);
+        } else if ([obj isKindOfClass:[NSNumber class]]) {
+            json[key] = ((NSNumber*)obj);
+        }
+    }
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
+                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    if (! jsonData) {
+        CCLOG("AVUserToJsonStr Got an error: %s", error.localizedDescription.UTF8String);
+        return @"{}";
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        return jsonString;
+    }
+}
+
 void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_signUp = nHandler;
     AVUser* user = [AVUser user];
     user.username = [NSString stringWithUTF8String:username];
     user.password = [NSString stringWithUTF8String:password];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        invokeLuaCallbackFunction_su(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
+        invokeLuaCallbackFunction_su(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
     }];
 }
 
@@ -86,7 +115,7 @@ void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* er
 void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_logIn = nHandler;
     [AVUser logInWithUsernameInBackground:[NSString stringWithUTF8String:username] password:[NSString stringWithUTF8String:password] block:^(AVUser *user, NSError *error) {
-        invokeLuaCallbackFunction_li(user ? user.sessionToken.UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
+        invokeLuaCallbackFunction_li(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
     }];
 }
 
