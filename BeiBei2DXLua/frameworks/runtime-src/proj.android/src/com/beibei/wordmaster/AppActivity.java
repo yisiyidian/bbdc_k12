@@ -58,6 +58,7 @@ import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SignUpCallback;
 import com.avos.avoscloud.LogInCallback;
+import com.alibaba.fastjson.JSONObject;
 import com.anysdk.framework.PluginWrapper;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
@@ -251,6 +252,11 @@ public class AppActivity extends Cocos2dxActivity {
 		}
 	}
 	
+	private static String AVUserToJsonStr(AVUser user) {
+		org.json.JSONObject json = user.toJSONObject();
+		return json.toString();
+	}
+	
 	public static void signUp(String username, String password) {
 		final AVUser user = new AVUser();
 		user.setUsername(username);
@@ -258,7 +264,7 @@ public class AppActivity extends Cocos2dxActivity {
 		user.signUpInBackground(new SignUpCallback() {
 		    public void done(AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionSU(user.getSessionToken(), null, 0);
+		        	invokeLuaCallbackFunctionSU(AVUserToJsonStr(user), null, 0);
 		        } else {
 		        	invokeLuaCallbackFunctionSU(null, e.getLocalizedMessage(), e.getCode());
 		        }
@@ -270,7 +276,7 @@ public class AppActivity extends Cocos2dxActivity {
 		AVUser.logInInBackground(username, password, new LogInCallback<AVUser>() {
 			public void done(AVUser user, AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionLI(user.getSessionToken(), null, 0);
+		        	invokeLuaCallbackFunctionLI(AVUserToJsonStr(user), null, 0);
 		        } else {
 		        	invokeLuaCallbackFunctionLI(null, e.getLocalizedMessage(), e.getCode());
 		        }

@@ -52,29 +52,19 @@ function validatePassword(s)
     return numberOfSubstitutions >= 6 and numberOfSubstitutions <= 16 and numberOfSubstitutions == length
 end
 
-local function onResponse_signup_login(sessionToken, e, code, onResponse)
+local function onResponse_signup_login(objectjson, e, code, onResponse)
     if e ~= nil then 
         s_logd('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
-    elseif sessionToken ~= nil then 
-        s_logd('signup/logIn:' .. sessionToken)
-        s_CURRENT_USER.sessionToken = sessionToken
-        s_SERVER.sessionToken = sessionToken
-        UserBaseServer.searchUserByUserName(s_CURRENT_USER.username, function (api, result)
-            for i, v in ipairs(result.results) do
-               
-               parseServerDataToUserData(v, s_CURRENT_USER)
-               s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-               s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-
-               if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
-               print_lua_table(s_CURRENT_USER)
-               break
-           end
-        end,
-        function (api, code, message, description)
-            if onResponse ~= nil then onResponse(s_CURRENT_USER, description, code) end
-        end)
+    elseif objectjson ~= nil then 
+        local user = s_JSON.decode(objectjson)
+        s_logd('signup/logIn:' .. objectjson)
+        s_CURRENT_USER.sessionToken = user.sessionToken
+        s_SERVER.sessionToken = user.sessionToken
+        parseServerDataToUserData(user, s_CURRENT_USER)
+        s_CURRENT_USER.userId = s_CURRENT_USER.objectId
+        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+        if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
     else
         s_logd('signup/logIn:no sessionToken') 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, 'no sessionToken', code) end
@@ -88,8 +78,8 @@ function UserBaseServer.signup(username, password, onResponse)
     -- s_SERVER.request('apiSignUp', {['username']=username, ['password']=password}, onSucceed, onFailed)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
-    cx.CXAvos:getInstance():signUp(username, password, function (sessionToken, e, code)
-        onResponse_signup_login(sessionToken, e, code, onResponse)
+    cx.CXAvos:getInstance():signUp(username, password, function (objectjson, e, code)
+        onResponse_signup_login(objectjson, e, code, onResponse)
     end)
 end
 
@@ -98,8 +88,8 @@ function UserBaseServer.login(username, password, onResponse)
     -- s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
-    cx.CXAvos:getInstance():logIn(username, password, function (sessionToken, e, code)
-        onResponse_signup_login(sessionToken, e, code, onResponse)
+    cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
+        onResponse_signup_login(objectjson, e, code, onResponse)
     end)
 end
 
