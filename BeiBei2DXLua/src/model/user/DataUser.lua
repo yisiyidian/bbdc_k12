@@ -106,14 +106,32 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
-function DataUser:getUserLevelData(chapterKey, levelKey)
-    
+function DataUser:getUserLevelData(chapterKey, levelKey)   
     for i = 1, #self.levels do
         if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
             return self.levels[i]
         end
     end
     return nil
+end
+
+function DataUser:initLevels()
+    for i = 1, #self.levels do
+        self.levels[i].chapterKey = 'chapter0'
+        self.levels[i].stars = 0
+        self.levels[i].levelKey = 'level'..(i-1)
+        if self.levels[i].levelKey ~= 'level0' then
+            self.levels[i].isLevelUnlocked = false
+        end
+        s_UserBaseServer.saveDataObjectOfCurrentUser(self.levels[i],
+            function(api,result)
+            end,
+            function(api, code, message, description)
+            end) 
+    end
+    self.currentChapterKey = 'chapter0'
+    self.currentLevelKey = 'level0'
+    self:updateDataToServer()
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)

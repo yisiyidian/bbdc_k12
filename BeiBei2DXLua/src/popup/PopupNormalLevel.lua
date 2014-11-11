@@ -5,8 +5,8 @@ local PopupNormalLevel = class("PopupNormalLevel", function()
     return cc.Layer:create()
 end)
 
-function PopupNormalLevel.create(levelTag)
-    local layer = PopupNormalLevel.new(levelTag)
+function PopupNormalLevel.create(levelKey)
+    local layer = PopupNormalLevel.new(levelKey)
     return layer
 end
 
@@ -39,14 +39,13 @@ function PopupNormalLevel:plotStar(node, starCount)
     node:addChild(star3)
 end
 
-function PopupNormalLevel:ctor(levelTag)
+function PopupNormalLevel:ctor(levelKey)
     self.ccbPopupNormalLevel = {}
     self.ccbPopupNormalLevel['onCloseButtonClicked'] = function()
         self:onCloseButtonClicked()
     end
     self.ccbPopupNormalLevel['onStudyButtonClicked'] = function()
-        print('sjfkla: '..levelTag)
-        self:onStudyButtonClicked(levelTag)
+        self:onStudyButtonClicked(levelKey)
     end
     self.ccbPopupNormalLevel['onTestButtonClicked'] = function()
         self:onTestButtonClicked()
@@ -54,17 +53,20 @@ function PopupNormalLevel:ctor(levelTag)
 
     self.ccb = {}
     self.ccb['popup_normal_level'] = self.ccbPopupNormalLevel
-    self.ccb['levelTag'] = levelTag
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
     node:setPosition(0,200)
     
     -- plot stars
-    local levelData = s_CURRENT_USER:getUserLevelData('Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
-    self:plotStar(node, levelData.hearts)
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
+    
+    print('!!!----!!!')
+    print_lua_table(s_CURRENT_USER.levels)
+    print('chapteKey:'..s_CURRENT_USER.currentChapterKey..','..levelKey)
+    self:plotStar(node, levelData.stars)
     
     -- plot word count
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     self.ccbPopupNormalLevel['_wordCount']:setString(levelConfig['word_num'])
     -- run action --
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
@@ -85,12 +87,11 @@ function PopupNormalLevel:onCloseButtonClicked()
     s_SCENE:removeAllPopups()
 end
 
-function PopupNormalLevel:onStudyButtonClicked(levelTag)
+function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
-
     s_logd('on study button clicked')
     
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,"Chapter0","level"..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     print(levelConfig.word_content)
     
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
