@@ -1,7 +1,8 @@
 require("common.global")
 
-local BigAlter = require("view.alter.BigAlter")
-local SmallAlter = require("view.alter.SmallAlter")
+local BigAlter      = require("view.alter.BigAlter")
+local SmallAlter    = require("view.alter.SmallAlter")
+local InputNode     = require("view.login.InputNode")
 
 local LoginAlter = class("LoginAlter", function()
     return cc.Layer:create()
@@ -113,67 +114,9 @@ showLogin = function()
     back_login:addChild(label2)
     
     
-    
-    local textField_username
-    local textField_password  
-    local cursor
-    
-    local username = cc.Sprite:create("image/login/sl_username.png")
+    local username = InputNode.create()
     username:setPosition(back_width/2, 550)
     back_login:addChild(username)
-     
-    local cursorShowUp = function()
-        cursor:stopAllActions()
-        cursor:setVisible(false)
-        local action1 = cc.DelayTime:create(0.1)
-        local action2 = cc.CallFunc:create(
-            function()
-                cursor:setPosition(textField_username:getContentSize().width,textField_username:getContentSize().height/2)
-                cursor:setVisible(true)
-            end
-        )
-        local action3 = cc.FadeIn:create(0.5)
-        local action4 = cc.FadeOut:create(0.5)
-        local action5 = cc.RepeatForever:create(cc.Sequence:create(action3,action4))
-        cursor:runAction(cc.Sequence:create(action1, action2))
-        cursor:runAction(action5)
-    end
-      
-    local function textFieldEvent_username(sender, eventType)
-        print("->-><-<-")
-        if eventType == ccui.TextFiledEventType.attach_with_ime then   
-            print("ininin")
-            textField_username:setPlaceHolder("")
-            cursorShowUp()
-        elseif eventType == ccui.TextFiledEventType.detach_with_ime then
-            print("outout")
-            cursor:stopAllActions()
-            cursor:setVisible(false)
-            textField_username:setPlaceHolder("用户名")
-        elseif eventType == ccui.TextFiledEventType.insert_text then
-            cursorShowUp()
-        elseif eventType == ccui.TextFiledEventType.delete_backward then
-            cursorShowUp()
-        end
-    end
-
-    textField_username = ccui.TextField:create()
-    textField_username:setTouchEnabled(true)
-    textField_username:setTouchSize(cc.size(460,80))
-    textField_username:setTouchAreaEnabled(true)
-    textField_username:setFontSize(30)
-    textField_username:setMaxLengthEnabled(true)
-    textField_username:setMaxLength(10)
-    textField_username:setColor(cc.c4b(0,0,0,255))
-    textField_username:setPlaceHolder("用户名")
-    textField_username:setPosition(cc.p(username:getContentSize().width / 2.0, username:getContentSize().height / 2.0))
-    textField_username:addEventListener(textFieldEvent_username)
-    username:addChild(textField_username)
-    
-    cursor = cc.Label:createWithSystemFont("|","",30)
-    cursor:setColor(cc.c4b(0,0,0,255))
-    cursor:setVisible(false)
-    textField_username:addChild(cursor)
     
     local password = cc.Sprite:create("image/login/sl_password.png")
     password:setPosition(back_width/2, 450)

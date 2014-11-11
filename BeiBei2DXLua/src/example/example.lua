@@ -64,7 +64,7 @@ function test()
     -- s_CorePlayManager.enterStudyLayer()
 --    s_CorePlayManager.enterTestLayer()
 --    s_CorePlayManager.enterReviewBossLayer()
---    s_CorePlayManager.enterIntroLayer()
+    s_CorePlayManager.enterIntroLayer()
 --    s_CorePlayManager.enterBookLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
