@@ -8,6 +8,11 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+    -- s_HttpRequestClient.downloadFileFromAVOSWithObjectId('5430b806e4b0c0d48049e293', 
+    --     function (objectId, filename, err, isSaved) 
+
+    --     end)
+
 -- s_SERVER.debugLocalHost = true
 -- local function onSucceed (api, result) print_lua_table (result) end
 -- local function onFailed (api, code, message, description) print (message) end

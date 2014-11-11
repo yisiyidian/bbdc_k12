@@ -28,19 +28,22 @@ CXAvos::CXAvos()
 }
 
 void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC nHandler) {
+    NSString* oID = [NSString stringWithUTF8String:objectId];
+    NSString* path = [NSString stringWithUTF8String:savepath];
     mLuaHandlerId_dl = nHandler;
-    [AVFile getFileWithObjectId:[NSString stringWithUTF8String:objectId] withBlock:^(AVFile *file, NSError *error) {
+    
+    [AVFile getFileWithObjectId:oID withBlock:^(AVFile *file, NSError *error) {
         if (!file || error) {
-            invokeLuaCallbackFunction_dl(objectId, file ? file.name.UTF8String : "", error ? error.localizedDescription.UTF8String : "get file object error", false);
+            invokeLuaCallbackFunction_dl(oID.UTF8String, file ? file.name.UTF8String : "", error ? error.localizedDescription.UTF8String : "get file object error", false);
             return;
         }
         [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (error) {
-                invokeLuaCallbackFunction_dl(objectId, file.name.UTF8String, error.localizedDescription.UTF8String, false);
+                invokeLuaCallbackFunction_dl(oID.UTF8String, file.name.UTF8String, error.localizedDescription.UTF8String, false);
             } else {
-                NSString *filePath = [[NSString stringWithUTF8String:savepath] stringByAppendingPathComponent:file.name];
+                NSString *filePath = [path stringByAppendingPathComponent:file.name];
                 [data writeToFile:filePath atomically:YES];
-                invokeLuaCallbackFunction_dl(objectId, file.name.UTF8String, "save file succeed", true);
+                invokeLuaCallbackFunction_dl(oID.UTF8String, file.name.UTF8String, "save file succeed", true);
             }
         } progressBlock:^(NSInteger percentDone) {
             //
