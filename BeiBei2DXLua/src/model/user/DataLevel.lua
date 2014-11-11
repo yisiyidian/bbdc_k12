@@ -13,13 +13,14 @@ function DataLevel:ctor()
     self.className = 'WMAV_LevelData'
     
     self.chapterKey = ''
-    self.chapterIndex = 0
+--    self.chapterIndex = 0
     self.levelKey = ''
-    self.levelIndex = 0
+--    self.levelIndex = 0
     self.isLevelUnlocked = false
     self.isPlayed = false
     self.isPassed = false
-    self.hearts = 0
+    self.stars = 0
+--    self.hearts = 0
     self.bookKey = ''
 
     self.version = 0

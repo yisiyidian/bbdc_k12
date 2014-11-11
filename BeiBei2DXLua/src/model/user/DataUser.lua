@@ -20,7 +20,7 @@ function DataUser:ctor()
 
     self.appVersion                        = s_APP_VERSION 
     self.tutorialStep                      = 0 
-    self.isSoundAm                         = true 
+    self.isSoundAm                         = 1 
     self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
     self.energyLastCoolDownTime            = -1 
@@ -36,16 +36,19 @@ function DataUser:ctor()
     self.followers                         = {} -- who follow me
 
     self.currentWordsIndex                 = 0 
-    self.currentChapterIndex               = 0 
-    self.currentLevelIndex                 = 0 
-    self.currentSelectedLevelIndex         = 0 
+--    self.currentChapterIndex               = 0 
+--    self.currentLevelIndex                 = 0 
+--    self.currentSelectedLevelIndex         = 0 
+    self.currentChapterKey                 = ''
+    self.currentLevelKey                   = ''
+    self.currentSelectedLevelKey           = ''
     self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
 
     self.checkInWord                       = ''
     self.checkInWordUpdateDate             = 0
-    self.hasCheckInButtonAppeared          = false
+    self.hasCheckInButtonAppeared          = 0
 
     self.needToUnlockNextChapter           = 0
 
@@ -70,8 +73,6 @@ function DataUser:parseServerLevelData(results)
         self.levels[i] = data
         print_lua_table(data)
     end
-    
-    print('level size : '..#self.levels)
 end
 
 function DataUser:parseServerDailyCheckInData(results)
@@ -105,13 +106,34 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
-function DataUser:getUserLevelData(chapterKey, levelKey)
+function DataUser:getUserLevelData(chapterKey, levelKey)   
     for i = 1, #self.levels do
         if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
             return self.levels[i]
         end
     end
     return nil
+end
+
+function DataUser:initLevels()
+    for i = 1, #self.levels do
+        self.levels[i].chapterKey = 'chapter0'
+        self.levels[i].stars = 0
+        self.levels[i].levelKey = 'level'..(i-1)
+        if self.levels[i].levelKey ~= 'level0' then
+            self.levels[i].isLevelUnlocked = 0
+        else
+            self.levels[i].isLevelUnlocked = 1
+        end
+        s_UserBaseServer.saveDataObjectOfCurrentUser(self.levels[i],
+            function(api,result)
+            end,
+            function(api, code, message, description)
+            end) 
+    end
+    self.currentChapterKey = 'chapter0'
+    self.currentLevelKey = 'level0'
+    self:updateDataToServer()
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
@@ -123,11 +145,19 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         levelData.bookKey = s_CURRENT_USER.bookKey
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
-        levelData.hearts = stars
-        self.levels.insert(levelData)
+        --levelData.hearts = stars
+        levelData.stars = stars
+        --print('--------')
+        --s_CURRENT_USER.currentChapterKey = 'chapter0'
+        
+        --self:updateDataToServer()
+        --print_lua_table(levelData)
+        table.insert(self.levels,levelData)
     end
-
-    levelData.hearts = stars
+    
+    
+    levelData.stars = stars
+    --levelData.hearts = stars
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
     function(api,result)
     end,
@@ -160,8 +190,8 @@ function DataUser:isLevelUnlocked(chapterKey, levelKey)
     if levelData == nil then
         return false
     end
-    print(levelData.isLevelUnlocked)
-    if levelData.isLevelUnlocked then
+    
+    if levelData.isLevelUnlocked ~= 0 then
         return true
     else
         return false
@@ -175,5 +205,6 @@ function DataUser:updateDataToServer()
         function(api, code, message, description)
         end) 
 end
+
 
 return DataUser

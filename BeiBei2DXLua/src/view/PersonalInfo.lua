@@ -279,7 +279,6 @@ function PersonalInfo:PLVI()
     local dateArray = {}
     math.random(0,20)
     for i = 1 , dayCount do 
-        --math.randomseed(os.time())
         countArray[i] = math.random(0,20)
         s_logd(countArray[i])
         dateArray[i] = string.format('%d',i)
