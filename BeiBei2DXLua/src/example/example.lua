@@ -38,10 +38,10 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
- local PopupLoginSignup = require('view.PersonalInfo')
- local layer = PopupLoginSignup.create()
- layer:setAnchorPoint(0.5,0)
- s_SCENE:popup(layer)
+-- local PopupLoginSignup = require('view.PersonalInfo')
+-- local layer = PopupLoginSignup.create()
+-- layer:setAnchorPoint(0.5,0)
+-- s_SCENE:popup(layer)
 
 
     -- s_DATA_MANAGER.loadText()
@@ -59,8 +59,8 @@ function test()
 
     --   -- test -- ziaoang ------------------------------------------------------------------------------------
     -- s_WordPool = s_DATA_MANAGER.loadAllWords()
-    -- s_CorePlayManager = require("controller.CorePlayManager")
-    -- s_CorePlayManager.create()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
     -- s_CorePlayManager.enterStudyLayer()
 --    s_CorePlayManager.enterTestLayer()
 --    s_CorePlayManager.enterReviewBossLayer()

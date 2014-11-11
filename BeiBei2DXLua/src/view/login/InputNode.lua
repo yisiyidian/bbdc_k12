@@ -4,7 +4,7 @@ local InputNode = class("InputNode", function()
     return cc.Layer:create()
 end)
 
-function InputNode.create()
+function InputNode.create(type)
     local width = 450
     local height = 80
 
@@ -20,7 +20,11 @@ function InputNode.create()
     local cursorShowUp
     local eventHandle
     
-    backImage = cc.Sprite:create("image/login/sl_username.png")
+    if type == "username" then
+        backImage = cc.Sprite:create("image/login/sl_username.png")
+    else
+        backImage = cc.Sprite:create("image/login/sl_password.png")
+    end    
     backImage:setPosition(width/2, height/2)
     main:addChild(backImage)
       
@@ -42,7 +46,6 @@ function InputNode.create()
     end
 
     eventHandle = function(sender, eventType)
-        print("handle touch event of text field")
         if eventType == ccui.TextFiledEventType.attach_with_ime then   
             print("in text field")
             textField:setPlaceHolder("")
@@ -51,7 +54,11 @@ function InputNode.create()
             print("out text field")
             cursor:stopAllActions()
             cursor:setVisible(false)
-            textField:setPlaceHolder("用户名")
+            if type == "username" then
+                textField:setPlaceHolder("用户名")
+            else
+                textField:setPlaceHolder("密码")
+            end
         elseif eventType == ccui.TextFiledEventType.insert_text then
             cursorShowUp()
         elseif eventType == ccui.TextFiledEventType.delete_backward then
@@ -67,7 +74,13 @@ function InputNode.create()
     textField:setMaxLengthEnabled(true)
     textField:setMaxLength(16)
     textField:setColor(cc.c4b(0,0,0,255))
-    textField:setPlaceHolder("用户名")
+    if type == "username" then
+        textField:setPlaceHolder("用户名")
+    else
+        textField:setPlaceHolder("密码")
+        textField:setPasswordEnabled(true)
+        textField:setPasswordStyleText("*")
+    end
     textField:setPosition(cc.p(backImage:getContentSize().width / 2.0, backImage:getContentSize().height / 2.0))
     textField:addEventListener(eventHandle)
     backImage:addChild(textField)

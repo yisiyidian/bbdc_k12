@@ -75,14 +75,11 @@ end
 
 showLogin = function()
     if back_login then
-        s_logd("login exist")
         local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
         local action2 = cc.EaseBackOut:create(action1)
         back_login:runAction(action2)
-
         return
     end
-    s_logd("login not exist")
 
     back_login = cc.Sprite:create("image/login/background_white_login.png")
     back_login:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
@@ -113,43 +110,14 @@ showLogin = function()
     label2:setPosition(back_width/2,640)
     back_login:addChild(label2)
     
-    
-    local username = InputNode.create()
+    local username = InputNode.create("username")
     username:setPosition(back_width/2, 550)
     back_login:addChild(username)
     
-    local password = cc.Sprite:create("image/login/sl_password.png")
+    local password = InputNode.create("password")
     password:setPosition(back_width/2, 450)
     back_login:addChild(password)
     
-    local function textFieldEvent_password(sender, eventType)
-        if eventType == ccui.TextFiledEventType.attach_with_ime then   
-            textField_password:setPlaceHolder("") 
-            --back_login:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2+200)))
-        elseif eventType == ccui.TextFiledEventType.detach_with_ime then
-            textField_password:setPlaceHolder("密码")
-            --back_login:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
-        elseif eventType == ccui.TextFiledEventType.insert_text then
-            
-        elseif eventType == ccui.TextFiledEventType.delete_backward then
-            
-        end
-    end
-
-    textField_password = ccui.TextField:create()
-    textField_password:setPasswordEnabled(true)
-    textField_password:setPasswordStyleText("*")
-    textField_password:setMaxLengthEnabled(true)
-    textField_password:setMaxLength(10)
-    textField_password:setTouchEnabled(true)
-    textField_password:setFontSize(30)
-    textField_password:setColor(cc.c4b(0,0,0,255))
-    textField_password:setPlaceHolder("密码")
-    textField_password:setPosition(cc.p(password:getContentSize().width / 2.0, password:getContentSize().height / 2.0))
-    textField_password:addEventListener(textFieldEvent_password)
-    password:addChild(textField_password)
-
-
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             if validateUsername(textField_username:getStringValue()) == false then
@@ -160,7 +128,6 @@ showLogin = function()
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
-
             s_SCENE:logIn(textField_username:getStringValue(), textField_password:getStringValue())
         end
     end
@@ -172,64 +139,42 @@ showLogin = function()
     submit:addTouchEventListener(submit_clicked)
     back_login:addChild(submit)
     
-    
-    local button_login_clicked = function(sender, eventType)
+    local button_toggle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             local remove = function()
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
                 back_login:runAction(action2)
             end
-
             local action1 = cc.CallFunc:create(remove)
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(showRegister)
             local action4 = cc.Sequence:create(action1, action2, action3)
-
             main:runAction(action4)   
         end
     end
     
-    local button_login = ccui.Button:create()
-    button_login:loadTextures("image/button/button_login_signup.png", "", "")
-    button_login:addTouchEventListener(button_login_clicked)
-    button_login:setPosition(back_width/2, 200)
-    button_login:setTitleFontSize(28)
-    button_login:setTitleText("返回注册")
-    button_login:setTitleColor(cc.c4b(115,197,243,255))
-    back_login:addChild(button_login)  
+    local button_toggle = ccui.Button:create()
+    button_toggle:loadTextures("image/button/button_login_signup.png", "", "")
+    button_toggle:addTouchEventListener(button_toggle_clicked)
+    button_toggle:setPosition(back_width/2, 200)
+    button_toggle:setTitleFontSize(28)
+    button_toggle:setTitleText("返回注册")
+    button_toggle:setTitleColor(cc.c4b(115,197,243,255))
+    back_login:addChild(button_toggle)  
     
-    local button_qq_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-           
-        end
-    end
     local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
     button_qq:setPosition(back_width/2,100)
-    button_qq:addTouchEventListener(button_qq_clicked)
     back_login:addChild(button_qq)
-    
-    local button_weixin_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
 
-        end
-    end
     local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weixin:setPosition(back_width/2-100,100)
-    button_weixin:addTouchEventListener(button_weixin_clicked)
     back_login:addChild(button_weixin)
-    
-    local button_weibo_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
 
-        end
-    end
-    local button_weibo = ccui.Button:create("image/login/button_login_signupweibo.png")
+    local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weibo:setPosition(back_width/2+100,100)
-    button_weibo:addTouchEventListener(button_weibo_clicked)
     back_login:addChild(button_weibo)
     
-
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             main.close()
@@ -243,14 +188,11 @@ end
 
 showRegister = function()
     if back_register then
-        s_logd("register exist")
         local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
         local action2 = cc.EaseBackOut:create(action1)
         back_register:runAction(action2)
-        
         return
     end
-    s_logd("register not exist")
 
     back_register = cc.Sprite:create("image/login/background_white_login.png")
     back_register:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
@@ -281,68 +223,13 @@ showRegister = function()
     label2:setPosition(back_width/2,640)
     back_register:addChild(label2)
 
-    local username = cc.Sprite:create("image/login/sl_username.png")
+    local username = InputNode.create("username")
     username:setPosition(back_width/2, 550)
-    back_register:addChild(username)
+    back_login:addChild(username)
 
-    local textField_username
-    local textField_password  
-
-    local function textFieldEvent_username(sender, eventType)
-        if eventType == ccui.TextFiledEventType.attach_with_ime then   
-            textField_username:setPlaceHolder("")
-            --back_register:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2+100)))
-        elseif eventType == ccui.TextFiledEventType.detach_with_ime then
-            textField_username:setPlaceHolder("用户名")
-            --back_register:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
-        elseif eventType == ccui.TextFiledEventType.insert_text then
-            --self._displayValueLabel:setString("insert words")
-        elseif eventType == ccui.TextFiledEventType.delete_backward then
-            --self._displayValueLabel:setString("delete word")
-        end
-    end
-
-    textField_username = ccui.TextField:create()
-    textField_username:setTouchEnabled(true)
-    textField_username:setFontSize(30)
-    textField_username:setMaxLengthEnabled(true)
-    textField_username:setMaxLength(10)
-    textField_username:setColor(cc.c4b(0,0,0,255))
-    textField_username:setPlaceHolder("用户名")
-    textField_username:setPosition(cc.p(username:getContentSize().width / 2.0, username:getContentSize().height / 2.0))
-    textField_username:addEventListener(textFieldEvent_username)
-    username:addChild(textField_username)
-
-    local password = cc.Sprite:create("image/login/sl_password.png")
+    local password = InputNode.create("password")
     password:setPosition(back_width/2, 450)
-    back_register:addChild(password)
-
-    local function textFieldEvent_password(sender, eventType)
-        if eventType == ccui.TextFiledEventType.attach_with_ime then   
-            textField_password:setPlaceHolder("") 
-            --back_register:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2+200)))
-        elseif eventType == ccui.TextFiledEventType.detach_with_ime then
-            textField_password:setPlaceHolder("密码")
-            --back_register:runAction(cc.MoveTo:create(0.25, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)))
-        elseif eventType == ccui.TextFiledEventType.insert_text then
-            --self._displayValueLabel:setString("insert words")
-        elseif eventType == ccui.TextFiledEventType.delete_backward then
-            --self._displayValueLabel:setString("delete word")
-        end
-    end
-
-    textField_password = ccui.TextField:create()
-    textField_password:setPasswordEnabled(true)
-    textField_password:setPasswordStyleText("*")
-    textField_password:setMaxLengthEnabled(true)
-    textField_password:setMaxLength(10)
-    textField_password:setTouchEnabled(true)
-    textField_password:setFontSize(30)
-    textField_password:setColor(cc.c4b(0,0,0,255))
-    textField_password:setPlaceHolder("密码")
-    textField_password:setPosition(cc.p(password:getContentSize().width / 2.0, password:getContentSize().height / 2.0))
-    textField_password:addEventListener(textFieldEvent_password)
-    password:addChild(textField_password)
+    back_login:addChild(password)
     
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then       
@@ -354,7 +241,6 @@ showRegister = function()
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
-                
             s_SCENE:signUp(textField_username:getStringValue(), textField_password:getStringValue())
         end
     end
@@ -366,60 +252,40 @@ showRegister = function()
     submit:addTouchEventListener(submit_clicked)
     back_register:addChild(submit)
 
-    local button_login_clicked = function(sender, eventType)
+    local button_toggle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             local remove = function()
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
                 back_register:runAction(action2)
             end
-
             local action1 = cc.CallFunc:create(remove)
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(showLogin)
             local action4 = cc.Sequence:create(action1, action2, action3)
-
             main:runAction(action4)   
         end
     end
 
-    local button_login = ccui.Button:create()
-    button_login:loadTextures("image/button/button_login_signup.png", "", "")
-    button_login:addTouchEventListener(button_login_clicked)
-    button_login:setPosition(back_width/2, 200)
-    button_login:setTitleFontSize(28)
-    button_login:setTitleText("返回登陆")
-    button_login:setTitleColor(cc.c4b(115,197,243,255))
-    back_register:addChild(button_login) 
+    local button_toggle = ccui.Button:create()
+    button_toggle:loadTextures("image/button/button_login_signup.png", "", "")
+    button_toggle:addTouchEventListener(button_toggle_clicked)
+    button_toggle:setPosition(back_width/2, 200)
+    button_toggle:setTitleFontSize(28)
+    button_toggle:setTitleText("返回登陆")
+    button_toggle:setTitleColor(cc.c4b(115,197,243,255))
+    back_register:addChild(button_toggle) 
     
-    local button_qq_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-
-        end
-    end
     local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
     button_qq:setPosition(back_width/2,100)
-    button_qq:addTouchEventListener(button_qq_clicked)
     back_register:addChild(button_qq)
-
-    local button_weixin_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-
-        end
-    end
+    
     local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weixin:setPosition(back_width/2-100,100)
-    button_weixin:addTouchEventListener(button_weixin_clicked)
     back_register:addChild(button_weixin)
 
-    local button_weibo_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-
-        end
-    end
-    local button_weibo = ccui.Button:create("image/login/button_login_signupweibo.png")
+    local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weibo:setPosition(back_width/2+100,100)
-    button_weibo:addTouchEventListener(button_weibo_clicked)
     back_register:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
