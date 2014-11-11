@@ -127,7 +127,7 @@ function DataManager.loadChapters()
         local data = jsonArr[i]
         local chapter = MetaChapter.create(data['book_key'],
                                     data['chapter_key'],
-                                    data['index'],
+                                    --data['index'],
                                     data['ChapterImage'],
                                     data['BackImage'],
                                     data['NameImage'],
@@ -189,7 +189,7 @@ function DataManager.loadLevels(bookkey)
     local levels = {}
     for i = 1, #jsonArr do 
         local data = jsonArr[i]
-        local lv = MetaLevel.create(data['index'], 
+        local lv = MetaLevel.create(--data['index'], 
                                     data['word_content'],
                                     data['summary_boss_drop'], 
                                     data['chapter_key'], 
@@ -233,7 +233,6 @@ function DataManager.getLevels( bookkey )
 end
 
 function DataManager.getLevelConfig(bookKey, chapterKey, levelKey)
-    s_logd(bookKey..','..chapterKey..','..levelKey)
     if bookKey == s_BOOK_KEY_NCEE then
         for i = 1, #DataManager.level_ncee do
             if DataManager.level_ncee[i]['chapter_key'] == chapterKey and DataManager.level_ncee[i]['level_key'] == levelKey then

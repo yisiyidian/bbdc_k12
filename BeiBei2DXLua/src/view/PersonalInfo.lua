@@ -13,6 +13,7 @@ end
 
 function PersonalInfo:ctor()
     self:initHead()
+    math.randomseed(os.time())
     local currentIndex = 4
     local moved = false
     local start_y = nil
@@ -33,10 +34,10 @@ function PersonalInfo:ctor()
         self:addChild(intro,0,string.format('back%d',i))
         if i > 1 then
             local scrollButton = cc.Sprite:create("image/PersonalInfo/scrollHintButton.png")
-            scrollButton:setPosition(s_DESIGN_WIDTH/2  ,s_DESIGN_HEIGHT * 0.08)
+            scrollButton:setPosition(s_DESIGN_WIDTH/2  ,s_DESIGN_HEIGHT * 0.05)
             scrollButton:setLocalZOrder(1)
             intro:addChild(scrollButton)
-            local move = cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-30)),cc.MoveBy:create(0.5,cc.p(0,30)))
+            local move = cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-20)),cc.MoveBy:create(0.5,cc.p(0,20)))
             scrollButton:runAction(cc.RepeatForever:create(move))
         
         end
@@ -48,9 +49,8 @@ function PersonalInfo:ctor()
     end
     
     self:PLVM()
+    self:PLVI()
     self:login()
-    
-    --1
     self:XXTJ()
     
     local onTouchBegan = function(touch, event)
@@ -262,6 +262,224 @@ function PersonalInfo:PLVM()
 end
 
 function PersonalInfo:PLVI()
+    local back = self:getChildByName('back3')
+    
+    local dayCount = 2
+    
+    local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
+    gezi:setPosition(s_DESIGN_WIDTH * 0.55, s_DESIGN_HEIGHT * 0.53)
+    back:addChild(gezi)
+
+    local yBar = cc.Sprite:create("image/PersonalInfo/PLVI/lv_information_zuobiantiao_1.png")
+    yBar:setAnchorPoint(0, 1)
+    yBar:setPosition(0, s_DESIGN_HEIGHT * 0.8)
+    back:addChild(yBar)
+    
+    local countArray = {}
+    local dateArray = {}
+    for i = 1 , dayCount do 
+        math.randomseed(os.time())
+        s_logd(os.time())
+        countArray[i] = math.random(0,30)
+        s_logd(countArray[i])
+        dateArray[i] = string.format('%d',i)
+        if i > 1 then
+            countArray[i] = countArray[i - 1] + countArray[i]
+        end
+    end
+    
+    local function drawXYLabel(date,count)
+        local max = count[#count]
+        local min = count[1]
+        local yLabel = {}
+        local xLabel = date
+        local point = {}
+        local tableHeight = gezi:getContentSize().height
+        local tableWidth = gezi:getContentSize().width
+        for i = 1, #count do
+            local x
+            local y
+            if #count > 1 then
+                --yLabel[i] = min + (max - min) * (i - 1) / (#count - 1)
+                x = (i - 0.5) / #count
+            else 
+                --yLabel[i] = min
+                x = 0.5 / 4
+            end
+            if max > min then
+                y = (count[i] - min) / (max - min) * 0.7 + 0.2
+            elseif max > 0 then
+                y = 0.9
+            else 
+                y = 0.2              
+            end
+            point[i] = cc.p(x,y)
+            local x_i = cc.Label:createWithSystemFont(xLabel[i],'',24)
+            x_i:setPosition(x * tableWidth , 0)
+            gezi:addChild(x_i)
+        end
+        for i = 1, 5 do
+            yLabel[i] = min + (max - min) * (i - 1) / (5 - 1)
+            local y_i = cc.Label:createWithSystemFont(math.ceil(yLabel[i]),'',24)
+            y_i:setColor(cc.c3b(201,43,44))
+            y_i:setAlignment(cc.TEXT_ALIGNMENT_RIGHT)
+            y_i:setPosition(0.5 * yBar:getContentSize().width , (0.2 + 0.7 * (i - 1) / 4) * tableHeight)
+            yBar:addChild(y_i)
+        end
+    end
+    
+    local xArray = {}
+    local yArray = {}
+    local labelCount = 4
+    if dayCount < 4 then
+        labelCount = dayCount
+    end
+    for i = 1, labelCount do
+        yArray[i] = countArray[dayCount - labelCount + i]
+        xArray[i] = dateArray[dayCount - labelCount + i]
+    end
+    drawXYLabel(xArray,yArray)
+    
+    local menu = cc.Node:create()
+    menu:setPosition(0, 0.16 * s_DESIGN_HEIGHT)
+    back:addChild(menu)
+    local selectButton = 1
+    local rightButton = 1
+    local button = {}
+    for i = 1, dayCount do
+
+        button[i] = ccui.Button:create()
+        if i > 4 then
+            button[i]:setVisible(false)
+        end
+        button[i]:setTouchEnabled(true)
+        --add label on button
+        local weekLabel = cc.Label:createWithSystemFont(string.format('%d周',dayCount + 1 - i),'',40)
+        local yearLabel = cc.Label:createWithSystemFont('2014','',28)
+        local dateLabel = cc.Label:createWithSystemFont('9.8~9.14','',24)
+        local sun = cc.Sprite:create('res/image/PersonalInfo/login/wsy_suanzhong.png')
+
+        if i > 1 then
+            button[i]:loadTextures("res/image/PersonalInfo/login/wsy_hongseban.png", "res/image/PersonalInfo/login/wsy_hongseban.png", "")
+            sun:setVisible(false)
+        else 
+            button[i]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
+
+            weekLabel:setString('本周')
+            weekLabel:setColor(cc.c3b(201,103,0))
+            dateLabel:setColor(cc.c3b(255,103,0))
+            yearLabel:setColor(cc.c3b(255,103,0))
+        end
+        weekLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.7)
+        button[i]:addChild(weekLabel,0,'week')
+        yearLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.4)
+        button[i]:addChild(yearLabel,0,'year')
+        dateLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.2)
+        button[i]:addChild(dateLabel,0,'date')
+        sun:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height)
+        button[i]:addChild(sun,0,'sun')
+        if dayCount > 3 then
+            button[i]:setPosition((5-i)/5 * s_DESIGN_WIDTH,0)  
+        else
+            button[i]:setPosition((dayCount + 1 - i)/5 * s_DESIGN_WIDTH,0)
+        end  
+        menu:addChild(button[i])
+
+        --button event
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended  and selectButton ~= i then
+                button[selectButton]:getChildByName('sun'):setVisible(false)
+                button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,255,255))
+                button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,255,255))
+                button[selectButton]:getChildByName('week'):setColor(cc.c3b(255,255,255))
+                button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_hongseban.png", "res/image/PersonalInfo/login/wsy_hongseban.png", "")
+                selectButton = i
+                s_logd(i)
+                button[selectButton]:getChildByName('sun'):setVisible(true)
+                button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,103,0))
+                button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,103,0))
+                button[selectButton]:getChildByName('week'):setColor(cc.c3b(255,103,0))
+                button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
+                
+            end
+        end      
+        button[i]:addTouchEventListener(touchEvent)   
+    end
+    --add front/back button
+    if dayCount > 4 then  
+        local menu1 = cc.Menu:create()
+        menu1:setPosition(0,0)
+        back:addChild(menu1,0,'menu')
+
+        local frontButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/front_button.png','','')
+        --frontButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
+        frontButton:setPosition(0.95 * s_DESIGN_WIDTH,0.16 * s_DESIGN_HEIGHT)
+        --frontButton:setVisible(false)
+        menu1:addChild(frontButton,0,'front')
+        local backButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','','')
+        --backButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
+        backButton:setPosition(0.05 * s_DESIGN_WIDTH,0.16 * s_DESIGN_HEIGHT)
+        backButton:setVisible(false)
+        menu1:addChild(backButton)
+
+        --frontButton:setVisible(true)
+        -- button event
+        local function onFront(sender)
+            --if eventType == ccui.TouchEventType.ended then
+            gezi:removeAllChildrenWithCleanup(true)
+            yBar:removeAllChildrenWithCleanup(true)
+            for i = 1, labelCount do
+                yArray[i] = countArray[dayCount - labelCount + i - rightButton]
+                xArray[i] = dateArray[dayCount - labelCount + i - rightButton]
+            end
+            button[rightButton]:setVisible(false)
+            button[rightButton + 4]:setVisible(true)
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *s_DESIGN_WIDTH,0) ))
+            rightButton = rightButton + 1
+            
+            drawXYLabel(xArray,yArray)
+            if rightButton >= dayCount - 3 and frontButton:isVisible() then
+                s_logd(rightButton)
+                frontButton:setVisible(false)
+                if frontButton:isVisible() then
+                    s_logd('true')
+                else 
+                    s_logd('false')
+                end
+                --frontButton:setScale(2)
+            end
+            if rightButton > 1 and  backButton:isVisible() == false then
+                backButton:setVisible(true)
+            end
+            --end
+        end
+        --            
+        local function onBack(sender,eventType)
+            --if eventType == ccui.TouchEventType.ended then
+            gezi:removeAllChildrenWithCleanup(true)
+            yBar:removeAllChildrenWithCleanup(true)
+            for i = 1, labelCount do
+                yArray[i] = countArray[dayCount - labelCount + i - rightButton + 2]
+                xArray[i] = dateArray[dayCount - labelCount + i - rightButton + 2]
+            end
+            drawXYLabel(xArray,yArray)
+            button[rightButton + 3]:setVisible(false)
+            button[rightButton - 1]:setVisible(true)
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *s_DESIGN_WIDTH,0) ))
+            rightButton = rightButton - 1
+            
+            if rightButton <= 1 then
+                backButton:setVisible(false)
+            end
+            if rightButton < dayCount - 3 then
+                frontButton:setVisible(true)
+            end
+            --end
+        end
+        frontButton:registerScriptTapHandler(onFront)
+        backButton:registerScriptTapHandler(onBack)
+
+    end
     
 end
 
@@ -366,8 +584,11 @@ function PersonalInfo:login()
         button[i]:addChild(dateLabel,0,'date')
         sun:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height)
         button[i]:addChild(sun,0,'sun')
-        
-        button[i]:setPosition((5-i)/5 * s_DESIGN_WIDTH,0)  
+        if weekCount > 3 then
+            button[i]:setPosition((5-i)/5 * s_DESIGN_WIDTH,0)  
+        else
+            button[i]:setPosition((weekCount + 1 - i)/5 * s_DESIGN_WIDTH,0)
+        end
         menu:addChild(button[i])
         
         --button event

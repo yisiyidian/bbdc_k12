@@ -4,7 +4,7 @@ local MetaLevel = class("MetaLevel", function()
     return {}
 end)
 
-function MetaLevel.create(index, 
+function MetaLevel.create(--index, 
                         word_content,
                         summary_boss_drop, 
                         chapter_key, 
@@ -19,7 +19,7 @@ function MetaLevel.create(index,
 
     local obj = MetaLevel.new()
 
-    obj.index = index
+ --   obj.index = index
     obj.word_content = word_content
     obj.summary_boss_drop = summary_boss_drop
     obj.chapter_key = chapter_key
