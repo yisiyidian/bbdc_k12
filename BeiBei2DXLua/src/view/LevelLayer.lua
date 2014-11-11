@@ -25,6 +25,17 @@ function LevelLayer:levelStateManager()
         print(s_SCENE.levelLayerState)
        
     elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
+        -- lock screen and plot animation
+        s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
+        s_SCENE:callFuncWithDelay(2, function()
+            s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
+        end)
+        -- plot star animation
+        s_CURRENT_USER:setUserLevelDataOfStars('Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..s_CURRENT_USER.currentLevelIndex,2)
+        local levelData = s_CURRENT_USER:getUserLevelData('Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..s_CURRENT_USER.currentLevelIndex)
+        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelIndex, levelData.hearts)
+        
+        -- 
         s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
         s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter'..s_CURRENT_USER.currentChapterIndex, 'level'..s_CURRENT_USER.currentLevelIndex)
         -- update level state and plot popup(call on level button clicked)
@@ -34,9 +45,7 @@ function LevelLayer:levelStateManager()
 --        end)
         
         -- TODO CHECK level index valid
-       
         
-        levelLayerI:plotStarAnimation(3, 3)
         --print('start_run')
         s_SCENE:callFuncWithDelay(3,function()
             local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)
@@ -56,36 +65,19 @@ function LevelLayer:levelStateManager()
 end
 
 function LevelLayer:ctor()
-    -- initialize chapter 1
---    self.ccbLevelLayer1 = {}  
---    self.ccbLevelLayer1['onLevelButtonClicked'] = self.onLevelButtonClicked
---    
---    self.ccb = {}
---    self.ccb['chapter1'] = ccbLevelLayer1
---    local proxy1 = cc.CCBProxy:create()
---    local contentNode1  = CCBReaderLoad("res/ccb/chapter1.ccbi", proxy1, self.ccbLevelLayer1, self.ccb)
---    self.ccbLevelLayer1['contentNode1'] = contentNode1;
---    
---    self.ccbLevelLayer1['levelSet'] = contentNode1:getChildByTag(5) -- level node
---    for i = 1, #self.ccbLevelLayer1['levelSet']:getChildren() do
---        self.ccbLevelLayer1['levelSet']:getChildren()[i]:setName('levelButton'..(self.ccbLevelLayer1['levelSet']:getChildren()[i]:getTag()))
---        print(self.ccbLevelLayer1['levelSet']:getChildren()[i]:getName())
---    end
-    
---    local chapterTitle1 = cc.Sprite:create('ccb/ccbResources/chapter_level/tittle_xuanxiaoguan1_background_adorn1.png')
---    chapterTitle1:setAnchorPoint(0, 0.5)
---    chapterTitle1:setPosition(0, 2800)
---    contentNode1:addChild(chapterTitle1) 
       local levelStypeI = require('view.level.LevelLayerI')
       levelLayerI = levelStypeI.create()
       --self:addChild(levelLayer1)
-      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level1')
+      
+      -- plot player position
+      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)
       local image = 'image/chapter_level/gril_head.png'
       player = cc.MenuItemImage:create(image,image,image)
+      player:setEnabled(false)
       player:setPosition(currentLevelButton:getPosition())
       player:setScale(0.5)
       levelLayerI.ccbLevelLayerI['levelSet']:addChild(player, 5)
-      
+
       -- level layer state manager
       self:levelStateManager()
 --    -- initialize chapter 2

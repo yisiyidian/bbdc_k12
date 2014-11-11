@@ -116,12 +116,15 @@ end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
     local levelData = self:getUserLevelData(chapterKey, levelKey)
+    --print('levelData-------------------'..levelData)
     if levelData == nil then
         local DataLevel = require('model.user.DataLevel')
         levelData = DataLevel.create()
         levelData.bookKey = s_CURRENT_USER.bookKey
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
+        levelData.hearts = stars
+        self.levels.insert(levelData)
     end
 
     levelData.hearts = stars
@@ -140,6 +143,8 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
         levelData.bookKey = s_CURRENT_USER.bookKey
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
+        levelData.isLevelUnlocked = unlocked
+        table.insert(self.levels,levelData)
     end
 
     levelData.isLevelUnlocked = unlocked
@@ -148,6 +153,19 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
         end,
         function(api, code, message, description)
         end)  
+end
+
+function DataUser:isLevelUnlocked(chapterKey, levelKey) 
+    local levelData = self:getUserLevelData(chapterKey, levelKey)
+    if levelData == nil then
+        return false
+    end
+    print(levelData.isLevelUnlocked)
+    if levelData.isLevelUnlocked then
+        return true
+    else
+        return false
+    end
 end
 
 function DataUser:updateDataToServer()
