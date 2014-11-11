@@ -104,7 +104,6 @@ function LevelLayerI:plotLevelDecoration()
 --            boat:setPosition(levelButton:getContentSize().width/2, -400)
 --            levelButton:addChild(boat)
 --        end
-        --print(levelData)
         if  levelData ~= nil and levelData.isLevelUnlocked then  -- test
             if levelConfig['type'] == 1 then
                 -- add summary boss
@@ -183,10 +182,7 @@ function LevelLayerI:ctor()
     self:setContentSize(contentNode:getContentSize())
     self:addChild(contentNode)
     self:plotLevelDecoration()
---    local back = sp.SkeletonAnimation:create("spine/3fxzls  xuanxiaoguan  diaoluo.json", "spine/3fxzls  xuanxiaoguan  diaoluo.atlas", 1)
---    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
---    self:addChild(back)      
---    back:addAnimation(0, 'animation', false)
+
     -- replot levelbutton ui based on the configuration file
     local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
     for i = 1, #levelConfig do
@@ -211,12 +207,12 @@ function LevelLayerI:ctor()
             else 
                 if  not s_CURRENT_USER:isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then         
                     local lockLayer = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')
-                    lockLayer:setPosition(levelButton:getContentSize().width/2 - 11, levelButton:getContentSize().height/2 + 4)
+                    lockLayer:setPosition(levelButton:getContentSize().width/2 - 10, levelButton:getContentSize().height/2 + 4)
                     levelButton:addChild(lockLayer)
                     lockLayer:setName('lockLayer'..string.sub(levelButton:getName(),6))
                     
                     local lockSprite = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked_Lock.png')
-                    lockSprite:setPosition(levelButton:getContentSize().width/2 - 11, levelButton:getContentSize().height/2 + 4)
+                    lockSprite:setPosition(levelButton:getContentSize().width/2 - 10, levelButton:getContentSize().height/2 + 4)
                     lockSprite:setName('lockSprite'..string.sub(levelButton:getName(), 6))
                     levelButton:addChild(lockSprite)
                     

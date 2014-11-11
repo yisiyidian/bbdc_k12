@@ -60,9 +60,8 @@ function PopupNormalLevel:ctor(levelTag)
     node:setPosition(0,200)
     
     -- plot stars
-    --local levelData = s_CURRENT_USER:getUserLevelData('Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
-    --print(levelData.hearts)
-    self:plotStar(node, 3)
+    local levelData = s_CURRENT_USER:getUserLevelData('Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
+    self:plotStar(node, levelData.hearts)
     
     -- plot word count
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..levelTag)
