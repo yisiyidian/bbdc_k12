@@ -85,7 +85,9 @@ function LevelLayer:ctor()
       player:setPosition(currentLevelButton:getPosition())
       player:setScale(0.5)
       levelLayerI.ccbLevelLayerI['levelSet']:addChild(player, 5)
-      
+      s_CURRENT_USER:setUserLevelDataOfUnlocked('Chapter0','level2',true)
+      s_CURRENT_USER.currentLevelIndex = 0
+      s_CURRENT_USER:updateDataToServer()
       -- level layer state manager
       self:levelStateManager()
 --    -- initialize chapter 2
