@@ -20,7 +20,7 @@ function DataUser:ctor()
 
     self.appVersion                        = s_APP_VERSION 
     self.tutorialStep                      = 0 
-    self.isSoundAm                         = true 
+    self.isSoundAm                         = 1 
     self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
     self.energyLastCoolDownTime            = -1 
@@ -48,7 +48,7 @@ function DataUser:ctor()
 
     self.checkInWord                       = ''
     self.checkInWordUpdateDate             = 0
-    self.hasCheckInButtonAppeared          = false
+    self.hasCheckInButtonAppeared          = 0
 
     self.needToUnlockNextChapter           = 0
 
@@ -121,7 +121,9 @@ function DataUser:initLevels()
         self.levels[i].stars = 0
         self.levels[i].levelKey = 'level'..(i-1)
         if self.levels[i].levelKey ~= 'level0' then
-            self.levels[i].isLevelUnlocked = false
+            self.levels[i].isLevelUnlocked = 0
+        else
+            self.levels[i].isLevelUnlocked = 1
         end
         s_UserBaseServer.saveDataObjectOfCurrentUser(self.levels[i],
             function(api,result)
@@ -188,8 +190,8 @@ function DataUser:isLevelUnlocked(chapterKey, levelKey)
     if levelData == nil then
         return false
     end
-    print(levelData.isLevelUnlocked)
-    if levelData.isLevelUnlocked then
+    
+    if levelData.isLevelUnlocked ~= 0 then
         return true
     else
         return false

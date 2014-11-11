@@ -18,6 +18,7 @@ end
 function LevelLayer:levelStateManager()
     -- test
     s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     
     -- TODO switch state
@@ -31,31 +32,30 @@ function LevelLayer:levelStateManager()
             s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
         end)
         -- plot star animation
+        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
+        
+        -- save and update level data
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
-        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelIndex, levelData.stars)
-        --s_CURRENT_USER:initLevels()
-        -- 
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
-        s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        
         -- update level state and plot popup(call on level button clicked)
         s_SCENE.levelLayerState = s_normal_level_state
---        s_SCENE:callFuncWithDelay(10,function()
---            levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelIndex)
---        end)
+        s_SCENE:callFuncWithDelay(3,function()
+            levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
+        end)
         
         -- TODO CHECK level index valid
         
         --print('start_run')
         s_SCENE:callFuncWithDelay(3,function()
-            local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)
+            local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
             local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
             player:runAction(action)
         end
         )
 
---        local scheduler = require('framework.scheduler')
---        levelLayerI:onLevelButtonClicked(4)
         
         
     elseif s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
@@ -75,7 +75,6 @@ function LevelLayer:ctor()
 --                    end) 
 --        end
         
-        print('0000000000000000000000')
       local levelStypeI = require('view.level.LevelLayerI')
       levelLayerI = levelStypeI.create()
       --self:addChild(levelLayer1)

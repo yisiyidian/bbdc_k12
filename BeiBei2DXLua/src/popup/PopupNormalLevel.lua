@@ -44,6 +44,7 @@ function PopupNormalLevel:ctor(levelKey)
     self.ccbPopupNormalLevel['onCloseButtonClicked'] = function()
         self:onCloseButtonClicked()
     end
+
     self.ccbPopupNormalLevel['onStudyButtonClicked'] = function()
         self:onStudyButtonClicked(levelKey)
     end
@@ -52,6 +53,7 @@ function PopupNormalLevel:ctor(levelKey)
     end
 
     self.ccb = {}
+    self.ccb['levelKey'] = 1
     self.ccb['popup_normal_level'] = self.ccbPopupNormalLevel
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
@@ -89,6 +91,7 @@ end
 
 function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
+    print(self.ccb['levelKey'])
     s_logd('on study button clicked')
     
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
