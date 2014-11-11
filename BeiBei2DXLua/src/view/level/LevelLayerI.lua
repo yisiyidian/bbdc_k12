@@ -41,18 +41,18 @@ function plotLevelStar(levelButton, heart)
     levelButton:addChild(star3, 5)
 end
 
-function LevelLayerI:plotStarAnimation(levelTag, heart)
+function LevelLayerI:plotStarAnimation(levelTag, starCount)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
     local star1, star2, star3
-    if heart >= 3 then
+    if starCount >= 3 then
         star1 = cc.Sprite:create('image/chapter_level/starFull.png')
         star2 = cc.Sprite:create('image/chapter_level/starFull.png')
         star3 = cc.Sprite:create('image/chapter_level/starFull.png')
-    elseif heart == 2 then
+    elseif starCount == 2 then
         star1 = cc.Sprite:create('image/chapter_level/starFull.png')
         star2 = cc.Sprite:create('image/chapter_level/starFull.png')
         star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
-    elseif heart == 1 then
+    elseif starCount == 1 then
         star1 = cc.Sprite:create('image/chapter_level/starFull.png')
         star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
         star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
@@ -96,8 +96,8 @@ end
 function LevelLayerI:plotLevelDecoration()
     for i = 0, 11 do
         local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..i)
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter0','level'..i)
-        local levelData = s_CURRENT_USER:getUserLevelData('Chapter0','level'..i)
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,'level'..i)
+        local levelData = s_CURRENT_USER:getUserLevelData('chapter0','level'..i)
 --        if i == 3 or i == 10 then  -- plot boat animation
 --            local boat = sp.SkeletonAnimation:create('spine/first-level-moving-boat-bottom.json', 'spine/first-level-moving-boat-bottom.atlas',1)
 --            boat:addAnimation(0, 'anmiation', true)
@@ -167,7 +167,7 @@ function LevelLayerI:ctor()
     self.ccbLevelLayerI = {}
     self.ccbLevelLayerI['onLevelButtonClicked'] = 
     function(levelTag)
-        self:onLevelButtonClicked(levelTag-1)
+        self:onLevelButtonClicked('level'..(levelTag-1))
     end
     self.ccb = {}
     self.ccb['chapter1'] = self.ccbLevelLayerI
@@ -239,23 +239,23 @@ end
 --end
 
 
-function LevelLayerI:onLevelButtonClicked(levelTag)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName('level'..levelTag)
+function LevelLayerI:onLevelButtonClicked(levelKey)
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     -- check level type
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'Chapter0','level'..levelTag)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     if s_SCENE.levelLayerState == s_review_boss_appear_state then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
-        local layer = popupNormal.create(levelTag)
+        local layer = popupNormal.create(levelKey)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
         if s_CURRENT_USER.stars >= levelConfig['summary_boss_stars'] then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(levelTag, s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         else
             local popupSummary = require('popup.PopupSummaryFail')

@@ -279,7 +279,8 @@ function PersonalInfo:PLVI()
     local dateArray = {}
     for i = 1 , dayCount do 
         math.randomseed(os.time())
-        countArray[i] = math.random(0,20)
+        s_logd(os.time())
+        countArray[i] = math.random(0,30)
         s_logd(countArray[i])
         dateArray[i] = string.format('%d',i)
         if i > 1 then

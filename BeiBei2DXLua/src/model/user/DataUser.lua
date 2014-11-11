@@ -73,8 +73,6 @@ function DataUser:parseServerLevelData(results)
         self.levels[i] = data
         print_lua_table(data)
     end
-    
-    print('level size : '..#self.levels)
 end
 
 function DataUser:parseServerDailyCheckInData(results)
@@ -109,6 +107,7 @@ function DataUser:parseServerFollowersData(results)
 end
 
 function DataUser:getUserLevelData(chapterKey, levelKey)
+    
     for i = 1, #self.levels do
         if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
             return self.levels[i]
@@ -128,8 +127,15 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         levelData.levelKey = levelKey
         --levelData.hearts = stars
         levelData.stars = stars
-        self.levels.insert(levelData)
+        --print('--------')
+        --s_CURRENT_USER.currentChapterKey = 'chapter0'
+        
+        --self:updateDataToServer()
+        --print_lua_table(levelData)
+        table.insert(self.levels,levelData)
     end
+    
+    
     levelData.stars = stars
     --levelData.hearts = stars
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
@@ -179,5 +185,6 @@ function DataUser:updateDataToServer()
         function(api, code, message, description)
         end) 
 end
+
 
 return DataUser

@@ -33,7 +33,7 @@ function LevelLayer:levelStateManager()
         -- plot star animation
         s_CURRENT_USER:setUserLevelDataOfStars('Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..s_CURRENT_USER.currentLevelIndex,2)
         local levelData = s_CURRENT_USER:getUserLevelData('Chapter'..s_CURRENT_USER.currentChapterIndex,'level'..s_CURRENT_USER.currentLevelIndex)
-        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelIndex, levelData.hearts)
+        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelIndex, levelData.stars)
         
         -- 
         s_CURRENT_USER.currentLevelIndex = s_CURRENT_USER.currentLevelIndex + 1
@@ -65,6 +65,17 @@ function LevelLayer:levelStateManager()
 end
 
 function LevelLayer:ctor()
+
+--        for i = 1, #s_CURRENT_USER.levels do
+--        s_CURRENT_USER.levels[i].chapterKey = string.gsub(s_CURRENT_USER.levels[i].chapterKey,'Chapter','chapter')
+--            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.levels[i],
+--                    function(api,result)
+--                    end,
+--                    function(api, code, message, description)
+--                    end) 
+--        end
+        
+        print('0000000000000000000000')
       local levelStypeI = require('view.level.LevelLayerI')
       levelLayerI = levelStypeI.create()
       --self:addChild(levelLayer1)
