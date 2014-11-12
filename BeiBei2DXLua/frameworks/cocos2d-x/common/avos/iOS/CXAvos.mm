@@ -67,6 +67,7 @@ void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* file
 NSString* AVUserToJsonStr(AVUser* user) {
     NSMutableDictionary* json = [NSMutableDictionary dictionary];
     
+    json[@"objectId"] = user.objectId;
     json[@"username"] = user.username;
     json[@"sessionToken"] = user.sessionToken;
     json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
