@@ -147,7 +147,7 @@ function TapMat.create(word, m ,n)
         end
         for i = 1, #selectStack do
             local term_char = cc.Label:createWithSystemFont(selectStack[i].main_character_content,"",28)
-            term_char:setColor(cc.c4b(0,0,0,255))
+            term_char:setColor(cc.c4b(255,255,255,255))
             term_char:setPosition(left+(i-1)*gap,640)
             term_char:setTag(100+i)
             main:addChild(term_char)
