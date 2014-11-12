@@ -32,13 +32,21 @@ function LevelLayer:levelStateManager()
             s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
         end)
         -- plot star animation
+        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
         levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
         
+        -- plot unlock next level animation
+        levelLayerI:plotUnlockNextLevelAnimation()
+        
         -- save and update level data
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
-        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
         --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        
+        -- plot player animation
+        local targetPosition = levelLayerI:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
+        local action = cc.MoveTo:create(0.5, targetPosition)
+        player:runAction(action)
         
         -- update level state and plot popup(call on level button clicked)
         s_SCENE.levelLayerState = s_normal_level_state
@@ -77,7 +85,6 @@ function LevelLayer:ctor()
         
       local levelStypeI = require('view.level.LevelLayerI')
       levelLayerI = levelStypeI.create()
-      --self:addChild(levelLayer1)
       
       -- plot player position
       local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)

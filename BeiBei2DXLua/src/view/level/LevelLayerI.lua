@@ -93,11 +93,30 @@ function LevelLayerI:plotStarAnimation(levelKey, starCount)
     
 end
 
+function LevelLayerI:plotUnlockNextLevelAnimation()
+    local nextLevelIndex = string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1
+    local nextLevelKey = 'level'..nextLevelIndex
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(nextLevelKey)
+    local lockSprite = levelButton:getChildByName('lockSprite'..nextLevelIndex)
+    local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
+    local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
+    local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),5)
+    local action5 = cc.MoveBy:create(0.1, cc.p(5,0))
+    local action = cc.Sequence:create(action1, action4)
+    lockSprite:runAction(action)
+end
+
+function LevelLayerI:clickLockedLevelAnmation(levelKey)
+
+end
+
 function LevelLayerI:getPlayerPositionForLevel(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
-    local position = levelButton:getPosition()
+    print(type(levelButton:getPosition()))
+    local position = vec2_table(levelButton:getPosition().y, levelButton:getPosition().y)
     if levelConfig['type'] == 1 then
     
     
