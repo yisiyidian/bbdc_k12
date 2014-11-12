@@ -7,6 +7,8 @@ import sys
 import zipfile
 import shutil
 
+import xxteaFiles
+
 def makeDirIfNotExist(dirPath):
     if not ( os.path.exists(dirPath) and os.path.isdir(dirPath) ):
         os.makedirs(dirPath)
@@ -39,6 +41,25 @@ def encode(inputfilepath, outputfilepath):
         sys.exit(1)
     pass
 
+def encode_xxtea(inputfilepath, outputfilepath):
+    try:
+        fileRaw = open(inputfilepath, "rb")  #io.BufferedReader
+        swf = open(outputfilepath, "wb")
+
+        b = fileRaw.read()
+        fileRaw.close()
+
+        s = xxteaFiles.encryptStr(b)
+
+        swf.write(s)
+        swf.close()
+    
+    except IOError:
+        print(sys.stderr)
+        print("File could not be opened: ", inputfilepath, outputfilepath)
+        sys.exit(1)
+    pass
+
 def zipJSONFiles(json_path, bin_path):
     makeDirIfNotExist(bin_path)
     for parent, dirnames, filenames in os.walk(json_path):
@@ -49,7 +70,7 @@ def zipJSONFiles(json_path, bin_path):
                 and filename.find('all-wcprops') < 0 \
                 and filename.find('.xls') <= 0):
                 filename_encoded = filename.replace('.json', '.bin')
-                encode(json_path + '/' + filename, bin_path + '/' + filename_encoded)
+                encode_xxtea(json_path + '/' + filename, bin_path + '/' + filename_encoded)
                 print('encoded: ' + bin_path + '/' + filename_encoded)
     pass
 

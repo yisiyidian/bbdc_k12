@@ -180,6 +180,7 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
     levelData.isLevelUnlocked = unlocked
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
         function(api,result)
+            s_DATABASE_MGR.saveDataClassObject(levelData)
         end,
         function(api, code, message, description)
         end)  
@@ -196,6 +197,28 @@ function DataUser:isLevelUnlocked(chapterKey, levelKey)
     else
         return false
     end
+end
+
+-- energy api
+function DataUser:resetEnergyLastCoolDownTime()
+    if self.energyCount >= s_energyMaxCount then
+        self.energyLastCoolDownTime = self.serverTime
+    end
+    if self.energyLastCoolDownTime > self.serverTime and self.serverTime > 0 then
+        self.energyLastCoolDownTime = self.serverTime
+    end
+end
+
+function DataUser:useEnergys(count)
+    self:resetEnergyLastCoolDownTime()
+    self.energyCount = self.energyCount - count
+    self:updateDataToServer()
+end
+
+function DataUser:addEnergys(count)
+    self:resetEnergyLastCoolDownTime()
+    self.energyCount = self.energyCount + count
+    self:updateDataToServer()
 end
 
 function DataUser:updateDataToServer()

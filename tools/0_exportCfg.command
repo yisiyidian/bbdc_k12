@@ -19,3 +19,5 @@ python exportTextCodes.py  ${baseDirForScriptSelf}/../raw/cfg/text.json ${baseDi
 #review_boss.json
 #starRule.json
 #text.json
+
+python encodeJson2Bin.py ${baseDirForScriptSelf}/../raw/cfg/ ${baseDirForScriptSelf}/../BeiBei2DXLua/res/cfg/

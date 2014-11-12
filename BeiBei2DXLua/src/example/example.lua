@@ -8,16 +8,8 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+    -- print(loadXxteaFile('cfg/books.bin'))
 
- local startApp = function ()
-        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-        else
-            local IntroLayer = require("popup/PopupEnergyInfo")
-            local introLayer = IntroLayer.create()
-            s_SCENE:replaceGameLayer(introLayer)
-        end
-        end
     -- s_HttpRequestClient.downloadFileFromAVOSWithObjectId('5430b806e4b0c0d48049e293', 
     --     function (objectId, filename, err, isSaved) 
 

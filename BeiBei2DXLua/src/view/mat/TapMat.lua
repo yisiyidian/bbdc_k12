@@ -7,7 +7,14 @@ local TapMat = class("TapMat", function()
 end)
 
 function TapMat.create(word, m ,n)
-    local spriteName = "popcorn"
+    local spriteName
+    if s_CorePlayManager.chapterIndex == 2 then
+        spriteName = "popcorn"
+    elseif s_CorePlayManager.chapterIndex == 4 then
+        spriteName = "snowball"
+    else
+        spriteName = "popcorn"
+    end
 
     local main = TapMat.new()
     main:setContentSize(640,640)
@@ -94,11 +101,14 @@ function TapMat.create(word, m ,n)
         end
     end
     
-    local light = cc.Sprite:create("image/studyscene/long_light.png")
-    light:setAnchorPoint(0.5,0.05)
-    light:setVisible(false)
-    light:setPosition(firstTapNode:getPosition())
-    main:addChild(light)
+    local light = nil
+    if s_CorePlayManager.chapterIndex == 2 then
+        light = cc.Sprite:create("image/studyscene/long_light.png")
+        light:setAnchorPoint(0.5,0.05)
+        light:setVisible(false)
+        light:setPosition(firstTapNode:getPosition())
+        main:addChild(light)
+    end
     
 
     -- local function
@@ -137,7 +147,7 @@ function TapMat.create(word, m ,n)
         end
         for i = 1, #selectStack do
             local term_char = cc.Label:createWithSystemFont(selectStack[i].main_character_content,"",28)
-            term_char:setColor(cc.c4b(0,0,0,255))
+            term_char:setColor(cc.c4b(255,255,255,255))
             term_char:setPosition(left+(i-1)*gap,640)
             term_char:setTag(100+i)
             main:addChild(term_char)
@@ -157,7 +167,9 @@ function TapMat.create(word, m ,n)
         
         local location = main:convertToNodeSpace(touch:getLocation())
         
-        light:setVisible(true)
+        if s_CorePlayManager.chapterIndex == 2 then
+            light:setVisible(true)
+        end
         
         fakeTouchMoved(location)
         lastTouchLocation = location
@@ -194,7 +206,9 @@ function TapMat.create(word, m ,n)
             return
         end
         
-        light:setPosition(location)
+        if s_CorePlayManager.chapterIndex == 2 then
+            light:setPosition(location)
+        end
 
         checkTouchLocation(location)
 
@@ -234,7 +248,9 @@ function TapMat.create(word, m ,n)
             return
         end
         
-        light:setVisible(false)
+        if s_CorePlayManager.chapterIndex == 2 then
+            light:setVisible(false)
+        end
 
         if #selectStack < 1 then
             return
@@ -254,32 +270,33 @@ function TapMat.create(word, m ,n)
 
             local moveTimeGap = 0.8/#selectStack
 
-            local actionArray1 = {}
-            for i = 2, #selectStack do
-                local node = selectStack[i]
-                local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
-                table.insert(actionArray1,action)
+            if s_CorePlayManager.chapterIndex == 2 then
+                local actionArray1 = {}
+                for i = 2, #selectStack do
+                    local node = selectStack[i]
+                    local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
+                    table.insert(actionArray1,action)
+                end
+            
+                local light_start = cc.Sprite:create("image/studyscene/long_light.png")
+                light_start:setAnchorPoint(0.5,0.05)
+                light_start:setPosition(selectStack[1]:getPosition())
+                main:addChild(light_start)
+                light_start:runAction(cc.Sequence:create(actionArray1))
+            
+                local actionArray2 = {}
+                for i = 1, #selectStack-1 do
+                    local node = selectStack[#selectStack-i]
+                    local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
+                    table.insert(actionArray2,action)
+                end
+            
+                local light_end = cc.Sprite:create("image/studyscene/long_light.png")
+                light_end:setAnchorPoint(0.5,0.05)
+                light_end:setPosition(selectStack[#selectStack]:getPosition())
+                main:addChild(light_end)
+                light_end:runAction(cc.Sequence:create(actionArray2))
             end
-            
-            local light_start = cc.Sprite:create("image/studyscene/long_light.png")
-            light_start:setAnchorPoint(0.5,0.05)
-            light_start:setPosition(selectStack[1]:getPosition())
-            main:addChild(light_start)
-            light_start:runAction(cc.Sequence:create(actionArray1))
-            
-
-            local actionArray2 = {}
-            for i = 1, #selectStack-1 do
-                local node = selectStack[#selectStack-i]
-                local action = cc.MoveTo:create(moveTimeGap,cc.p(node:getPosition()))
-                table.insert(actionArray2,action)
-            end
-            
-            local light_end = cc.Sprite:create("image/studyscene/long_light.png")
-            light_end:setAnchorPoint(0.5,0.05)
-            light_end:setPosition(selectStack[#selectStack]:getPosition())
-            main:addChild(light_end)
-            light_end:runAction(cc.Sequence:create(actionArray2))
               
             selectStack = {}
 

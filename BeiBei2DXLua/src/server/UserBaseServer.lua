@@ -57,14 +57,38 @@ local function onResponse_signup_login(objectjson, e, code, onResponse)
         s_logd('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
-        local user = s_JSON.decode(objectjson)
-        s_logd('signup/logIn:' .. objectjson)
-        s_CURRENT_USER.sessionToken = user.sessionToken
-        s_SERVER.sessionToken = user.sessionToken
-        parseServerDataToUserData(user, s_CURRENT_USER)
-        s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-        if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
+        -- TODO: Android unknown error
+        if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+            local sessionToken = objectjson
+            s_logd('signup/logIn:' .. sessionToken)
+            s_CURRENT_USER.sessionToken = sessionToken
+            s_SERVER.sessionToken = sessionToken
+            UserBaseServer.searchUserByUserName(s_CURRENT_USER.username, function (api, result)
+                for i, v in ipairs(result.results) do
+                   
+                   parseServerDataToUserData(v, s_CURRENT_USER)
+                   s_CURRENT_USER.userId = s_CURRENT_USER.objectId
+                   s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+
+                   if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
+                   print_lua_table(s_CURRENT_USER)
+                   break
+               end
+            end,
+            function (api, code, message, description)
+                if onResponse ~= nil then onResponse(s_CURRENT_USER, description, code) end
+            end)
+        else
+            s_logd('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
+            local user = s_JSON.decode(objectjson)
+            s_CURRENT_USER.sessionToken = user.sessionToken
+            s_SERVER.sessionToken = user.sessionToken
+            parseServerDataToUserData(user, s_CURRENT_USER)
+            s_CURRENT_USER.userId = s_CURRENT_USER.objectId
+            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+            
+            if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
+        end
     else
         s_logd('signup/logIn:no sessionToken') 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, 'no sessionToken', code) end

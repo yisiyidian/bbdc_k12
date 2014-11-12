@@ -11,7 +11,9 @@
 #include "anysdk_manual_bindings.h"
 #endif
 
-#define DEBUG_RUNTIME 0
+#if (COCOS2D_DEBUG>0 && CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#define DEBUG_RUNTIME 1
+#endif
 
 using namespace CocosDenshion;
 

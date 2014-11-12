@@ -62,7 +62,24 @@ end
 
 -- delta time : seconds
 local function update(dt)
-    -- print(dt)
+    if s_CURRENT_USER.sessionToken ~= '' and  s_CURRENT_USER.serverTime >= 0 then
+        s_CURRENT_USER.serverTime = s_CURRENT_USER.serverTime + dt
+        if s_CURRENT_USER.energyCount <= s_energyMaxCount then
+            if s_CURRENT_USER.energyLastCoolDownTime < 0 then
+                s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.serverTime;
+            end
+            local cnt = (s_CURRENT_USER.serverTime - s_CURRENT_USER.resetEnergyLastCoolDownTime) / s_energyCoolDownSecs
+            if cnt > 0 then
+                s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + cnt
+                if s_CURRENT_USER.energyCount >= s_energyMaxCount then
+                    s_CURRENT_USER.energyCount = s_energyMaxCount
+                    s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.serverTime
+                else 
+                    s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.energyLastCoolDownTime + cnt * s_energyCoolDownSecs
+                end
+            end
+        end
+    end 
 end
 
 function AppScene:ctor()
@@ -82,6 +99,7 @@ end
 function AppScene:popup(popupNode)
     self.popupLayer.listener:setSwallowTouches(true)
     self.popupLayer:removeAllChildren()
+    self.popupLayer:addBackground()
     self.popupLayer:addChild(popupNode) 
 end
 

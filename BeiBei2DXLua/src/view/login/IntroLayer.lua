@@ -15,6 +15,7 @@ function IntroLayer.create()
     local layer = IntroLayer.new()
     
     local currentIndex = 1
+    local moveLength = 100
     
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
@@ -23,7 +24,7 @@ function IntroLayer.create()
     layer:addChild(backColor)
 
     local intro_array = {}
-    for i = 1,4 do
+    for i = 1, 3 do
         local intro = cc.Sprite:create("image/login/denglu_"..i.."_background.png")
         if i == 1 then
             intro:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
@@ -70,10 +71,9 @@ function IntroLayer.create()
     layer:addChild(cloud)
     
     local label_hint_array = {}
-    table.insert(label_hint_array, "单词消消玩玩 考试统统搞定")
-    table.insert(label_hint_array, "背单词 根本停不下来")
     table.insert(label_hint_array, "一关一城市 贝贝带你游美国")
     table.insert(label_hint_array, "随时随地 消消记记")
+    table.insert(label_hint_array, "生词错词分类 数据私人定制")
     table.insert(label_hint_array, "登陆贝贝单词 发现更多精彩")
     
     local label_hint = cc.Label:createWithSystemFont(label_hint_array[currentIndex],"",36)
@@ -84,8 +84,8 @@ function IntroLayer.create()
     local circle_back_array = {}
     local circle_font_array = {}
     local gap = 50
-    local left = s_DESIGN_WIDTH/2 - gap*2
-    for i = 1, 5 do
+    local left = s_DESIGN_WIDTH/2 - gap*1.5
+    for i = 1, 4 do
         local circle_back = cc.Sprite:create("image/login/yuan_white_denglu.png")
         circle_back:setPosition(left+gap*(i-1),50)
         layer:addChild(circle_back)
@@ -120,8 +120,8 @@ function IntroLayer.create()
         end
         local location = layer:convertToNodeSpace(touch:getLocation())
         now_x = location.x
-        if now_x - 200 > start_x then
-            if currentIndex == 5 then
+        if now_x - moveLength > start_x then
+            if currentIndex == 4 then
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
                 cloud:runAction(action2)
                 
@@ -148,8 +148,8 @@ function IntroLayer.create()
                 
                 label_hint:setString(label_hint_array[currentIndex])             
             end
-        elseif now_x + 200 < start_x then
-            if currentIndex < 5 then
+        elseif now_x + moveLength < start_x then
+            if currentIndex < 4 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
                 
@@ -168,7 +168,7 @@ function IntroLayer.create()
                 
                 label_hint:setString(label_hint_array[currentIndex])   
             end
-            if currentIndex == 5 then                
+            if currentIndex == 4 then                
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
                 cloud:runAction(action2)
                                 
@@ -233,7 +233,7 @@ function IntroLayer.create()
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
-    playMusic(s_sound_Pluto,true)
+--    playMusic(s_sound_Pluto,true)
     
     
     return layer

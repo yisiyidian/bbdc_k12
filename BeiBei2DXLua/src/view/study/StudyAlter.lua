@@ -38,7 +38,7 @@ function StudyAlter.create()
         end
     end
     
-    local button_left = ccui.Button:create("image/button/studyscene_blue_button.png","","")
+    local button_left = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
     button_left:setPosition(140,150)
     button_left:setTitleText("重学")
     button_left:setTitleFontSize(30)
@@ -52,7 +52,7 @@ function StudyAlter.create()
         end
     end
     
-    local button_right = ccui.Button:create("image/button/studyscene_blue_button.png","","")
+    local button_right = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
     button_right:setPosition(400,150)
     button_right:setTitleText("考试")
     button_right:setTitleFontSize(30)
