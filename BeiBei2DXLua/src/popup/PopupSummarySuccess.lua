@@ -52,6 +52,10 @@ end
 function PopupSummarySuccess:onGoButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on go button clicked')
+    local summaryboss = require('view/summaryboss/SummaryBossLayer')
+    local layer = summaryboss.create()
+    layer:setAnchorPoint(0.5,0)
+    s_SCENE:popup(layer)
 end
 
 return PopupSummarySuccess
