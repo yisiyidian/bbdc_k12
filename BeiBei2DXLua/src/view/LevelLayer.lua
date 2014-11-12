@@ -106,16 +106,7 @@ function LevelLayer:levelStateManager()
 end
 
 function LevelLayer:ctor()
-
---        for i = 1, #s_CURRENT_USER.levels do
---        s_CURRENT_USER.levels[i].chapterKey = string.gsub(s_CURRENT_USER.levels[i].chapterKey,'Chapter','chapter')
---            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.levels[i],
---                    function(api,result)
---                    end,
---                    function(api, code, message, description)
---                    end) 
---        end
-        
+    
       local levelStypeI = require('view.level.LevelLayerI')
       levelLayerI = levelStypeI.create()
       
@@ -130,25 +121,6 @@ function LevelLayer:ctor()
 
       -- level layer state manager
       self:levelStateManager()
---    -- initialize chapter 2
---    ccbLevelLayer2['onLevelButtonClicked'] = self.onLevelButtonClicked
---    local proxy2 = cc.CCBProxy:create()
---    local contentNode2  = CCBReaderLoad("res/ccb/chapter2.ccbi", proxy, ccbLevelLayer)
---    ccbLevelLayer2['contentNode'] = contentNode2;
---
---    ccbLevelLayer2['levelSet'] = contentNode2:getChildByTag(5)
---    for i = 1, #ccbLevelLayer2['levelSet']:getChildren() do
---        ccbLevelLayer2['levelSet']:getChildren()[i]:setName('levelButton'..(ccbLevelLayer2['levelSet']:getChildren()[i]:getTag()))
---        print(ccbLevelLayer2['levelSet']:getChildren()[i]:getName())
---    end
---    
---    local chapter2Title = cc.Sprite:create('ccb/ccbResources/chapter_level/tittle_xuanxiaoguan2_losangles.png')
---    chapter2Title:setAnchorPoint(0, 0.5)
---    chapter2Title:setPosition(0, 2450)
---    contentNode2:addChild(chapter2Title) 
-    --local buttonNode = cc.ControlButton:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png')
-    --buttonNode:setPosition(100,100)
-    --self:addChild(buttonNode)
     local scrollViewNode = ccui.ScrollView:create() 
     -- scroll view scroll
     local function scrollViewDidScroll()
@@ -162,35 +134,12 @@ function LevelLayer:ctor()
     
     if nil ~= scrollViewNode then
         local fullWidth = levelLayerI:getContentSize().width
-        --scrollViewNode:setIn(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT))
         scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
 
-        --contentNode2:setContentSize(856,5397)
-        --scrollViewNode:ignoreAnchorPointForPosition(true)
-        --scrollViewNode:setContainer(levelLayerI)
         scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
-        --scrollViewNode:setContentOffset(cc.vertex2F(0,-1500), false)
-        --scrollViewNode:setSizePercent(50)
-        --contentNode:setAnchorPoint(0.5,0.5)
---        contentNode2:setContentSize(500,1000)
-        --contentNode1:setPosition(0,2470)
-        --contentNode2:addChild(contentNode)
-        --contentNode2:addChild(contentNode1)
-        --scrollViewNode:scrollToPercentVertical(14,0,true)
-        --scrollViewNode:setContentOffset(100)
         scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
         scrollViewNode:addChild(levelLayerI) 
         scrollViewNode:setTouchEnabled(true)
---        local position = contentNode1:getContentSize()
---        s_logd('contentSize:%f,%f',position.width,position.height)
-        --scrollViewNode:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
-        --scrollViewNode:setBounceable(true)
-        --scrollViewNode:setClippingToBounds(true)
-        --scrollViewNode:updateInset()
-        --scrollViewNode:setDelegate()
-
-        --scrollViewNode:registerScriptHandler(scrollViewDidScroll,cc.SCROLLVIEW_SCRIPT_SCROLL)
-        --scrollViewNode:registerScriptHandler(scrollViewDidZoom,cc.SCROLLVIEW_SCRIPT_ZOOM)
         self:addChild(scrollViewNode)
     end
     
