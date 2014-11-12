@@ -17,12 +17,12 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-function SummaryBossLayer.create()   
+function SummaryBossLayer.create(levelConfig)   
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     math.randomseed(os.time())
     --add coconut
-    
+    --layer.levelConfig = levelConfig
     layer.coconut = {}
     layer.isFirst = {}
     layer.wordPool = {}
@@ -52,8 +52,8 @@ function SummaryBossLayer.create()
     local fakeTouchMoved
     local onTouchEnded
     
-    layer:initWordList()
-    layer:initBossLayer()
+    layer:initWordList(levelConfig)
+    layer:initBossLayer(levelConfig)
     layer:initMap()
     
     --update
@@ -402,7 +402,7 @@ function SummaryBossLayer.create()
     return layer  
 end
 
-function SummaryBossLayer:initBossLayer()
+function SummaryBossLayer:initBossLayer(levelConfig)
     self.globalLock = true
 --    local unlock = cc.CallFunc:create(function() 
 --        
@@ -413,9 +413,9 @@ function SummaryBossLayer:initBossLayer()
     
     --stage info
     self.girlAfraid = false
-    self.totalBlood = 10
+    self.totalBlood = levelConfig.summary_boss_hp
     self.currentBlood = self.totalBlood
-    self.totalTime = 40
+    self.totalTime = levelConfig.summary_boss_time
     self.onCrab = 0
     self.isLose = false
     self.layerPaused = false 
@@ -535,8 +535,8 @@ function SummaryBossLayer:initBossLayer()
     self.hole = hole
 end
 
-function SummaryBossLayer:initWordList()
-    local wordList = {"apple","pear","water","day"}
+function SummaryBossLayer:initWordList(levelConfig)
+    local wordList = split(levelConfig.word_content,'|')
     local index = 1
     
     for i = 1, #wordList do
