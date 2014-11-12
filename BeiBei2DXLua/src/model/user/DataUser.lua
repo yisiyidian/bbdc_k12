@@ -198,6 +198,28 @@ function DataUser:isLevelUnlocked(chapterKey, levelKey)
     end
 end
 
+-- energy api
+function DataUser:resetEnergyLastCoolDownTime()
+    if self.energyCount >= s_energyMaxCount then
+        self.energyLastCoolDownTime = self.serverTime
+    end
+    if self.energyLastCoolDownTime > self.serverTime and self.serverTime > 0 then
+        self.energyLastCoolDownTime = self.serverTime
+    end
+end
+
+function DataUser:useEnergys(count)
+    self:resetEnergyLastCoolDownTime()
+    self.energyCount = self.energyCount - count
+    self:updateDataToServer()
+end
+
+function DataUser:addEnergys(count)
+    self:resetEnergyLastCoolDownTime()
+    self.energyCount = self.energyCount + count
+    self:updateDataToServer()
+end
+
 function DataUser:updateDataToServer()
     s_UserBaseServer.saveDataObjectOfCurrentUser(self,
         function(api,result)
