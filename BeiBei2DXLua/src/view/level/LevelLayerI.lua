@@ -93,12 +93,11 @@ function LevelLayerI:plotStarAnimation(levelKey, starCount)
     
 end
 
-function LevelLayerI:plotUnlockNextLevelAnimation()
-    local nextLevelIndex = string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1
-    local nextLevelKey = 'level'..nextLevelIndex
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(nextLevelKey)
-    local lockSprite = levelButton:getChildByName('lockSprite'..nextLevelIndex)
-    local lockLayer = levelButton:getChildByName('lockLayer'..nextLevelIndex)
+function LevelLayerI:plotUnlockLevelAnimation(levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+    local lockLayer = levelButton:getChildByName('lockLayer'..levelIndex)
 
     local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
     local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
@@ -114,7 +113,7 @@ function LevelLayerI:plotUnlockNextLevelAnimation()
     lockLayer:runAction(cc.Sequence:create(action7, action8))
     
     s_SCENE:callFuncWithDelay(1.1,function()
-        self:plotLevelDecoration(s_CURRENT_USER.currentLevelKey)
+        self:plotLevelDecoration(levelKey)
     end)
 end
 
@@ -228,7 +227,7 @@ end
 local onTouchBegan = function(touch, event) 
     local touchPosition = touch:getLocation()
     -- plot shark
-    --print(touchPosition.x..touchPosition.y)
+    --print(touchPosition.x..','..touchPosition.y)
 end
 
 function LevelLayerI:ctor()
