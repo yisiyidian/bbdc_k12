@@ -91,7 +91,6 @@ end
 
 function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
-    print(self.ccb['levelKey'])
     s_logd('on study button clicked')
     
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
