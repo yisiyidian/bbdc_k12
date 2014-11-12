@@ -253,8 +253,11 @@ public class AppActivity extends Cocos2dxActivity {
 	}
 	
 	private static String AVUserToJsonStr(AVUser user) {
-		org.json.JSONObject json = user.toJSONObject();
-		return json.toString();
+//		TODO: Android unknown error
+//		org.json.JSONObject json = user.toJSONObject();
+//		return json.toString();
+		
+		return user.getSessionToken();
 	}
 	
 	public static void signUp(String username, String password) {
