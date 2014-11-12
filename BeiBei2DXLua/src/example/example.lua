@@ -8,6 +8,16 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+
+ local startApp = function ()
+        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+        else
+            local IntroLayer = require("popup/PopupEnergyInfo")
+            local introLayer = IntroLayer.create()
+            s_SCENE:replaceGameLayer(introLayer)
+        end
+        end
     -- s_HttpRequestClient.downloadFileFromAVOSWithObjectId('5430b806e4b0c0d48049e293', 
     --     function (objectId, filename, err, isSaved) 
 
@@ -38,10 +48,10 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
- local PopupLoginSignup = require('view.PersonalInfo')
- local layer = PopupLoginSignup.create()
- layer:setAnchorPoint(0.5,0)
- s_SCENE:popup(layer)
+-- local PopupLoginSignup = require('view.PersonalInfo')
+-- local layer = PopupLoginSignup.create()
+-- layer:setAnchorPoint(0.5,0)
+-- s_SCENE:popup(layer)
 
 
     -- s_DATA_MANAGER.loadText()
