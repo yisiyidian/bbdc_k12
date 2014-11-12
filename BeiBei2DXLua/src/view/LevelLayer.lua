@@ -25,7 +25,7 @@ function LevelLayer:levelStateManager()
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
        
-    elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
+    elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
         -- lock screen and plot animation
         s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
         s_SCENE:callFuncWithDelay(3.9, function()
@@ -54,27 +54,22 @@ function LevelLayer:levelStateManager()
         end)
         
         -- update level state and plot popup(call on level button clicked)
+        if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
+            s_SCENE:callFuncWithDelay(4,function()
+                levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
+            end)
+        end
         s_SCENE.levelLayerState = s_normal_level_state
-        s_SCENE:callFuncWithDelay(4,function()
-            levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
-        end)
         
         -- TODO CHECK level index valid
         
-        --print('start_run')
         s_SCENE:callFuncWithDelay(3,function()
             local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
             local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
             player:runAction(action)
         end
         )
-
-        
-        
-    elseif s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
-        -- update level state  
-        print(s_SCENE.levelLayerState)
-    end
+     end
 end
 
 function LevelLayer:ctor()
