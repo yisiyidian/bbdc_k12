@@ -17,7 +17,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    s_SCENE.levelLayerState = s_review_boss_pass_state
+    --s_SCENE.levelLayerState = s_normal_level_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -107,20 +107,20 @@ end
 
 function LevelLayer:ctor()
     
-      local levelStypeI = require('view.level.LevelLayerI')
-      levelLayerI = levelStypeI.create()
-      
-      -- plot player position
-      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
-      local image = 'image/chapter_level/gril_head.png'
-      player = cc.MenuItemImage:create(image,image,image)
-      player:setEnabled(false)
-      player:setPosition(currentLevelButton:getPosition())
-      player:setScale(0.5)
-      levelLayerI.ccbLevelLayerI['levelSet']:addChild(player, 5)
-
-      -- level layer state manager
-      self:levelStateManager()
+    local levelStypeI = require('view.level.LevelLayerI')
+    levelLayerI = levelStypeI.create()
+    
+    -- plot player position
+    local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
+    local image = 'image/chapter_level/gril_head.png'
+    player = cc.MenuItemImage:create(image,image,image)
+    player:setEnabled(false)
+    player:setPosition(currentLevelButton:getPosition())
+    player:setScale(0.5)
+    levelLayerI.ccbLevelLayerI['levelSet']:addChild(player, 5)
+    
+    -- level layer state manager
+    self:levelStateManager()
     local scrollViewNode = ccui.ScrollView:create() 
     -- scroll view scroll
     local function scrollViewDidScroll()
