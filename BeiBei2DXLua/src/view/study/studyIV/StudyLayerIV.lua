@@ -15,7 +15,6 @@ local StudyLayerIV = class("StudyLayerIV", function ()
     return cc.Layer:create()
 end)
 
-
 function StudyLayerIV.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
@@ -38,6 +37,7 @@ function StudyLayerIV.create()
     local button_detail_clicked
 
     local soundMark
+    local wordDetailInfo
     local mat
 
     local fingerClick
@@ -45,44 +45,37 @@ function StudyLayerIV.create()
     local label_wordmeaningSmall
     local guideOver = false
     
+    local meaning_y1  = 696
+    local meaning_y2  = 896
+    local mountain_y1 = 400
+    local mountain_y2 = 770
+    local mountain_y3 = 0
+    local soundMark_y = -300
+    local button_y    = -700
+    local mat_y       = 80
+    local detail_x1    = s_DESIGN_WIDTH - 120
+    local detail_x2    = s_DESIGN_WIDTH + 120
+    local detail_y    = 900
+    
     local backColor = cc.LayerColor:create(cc.c4b(170,205,243,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
-
-    local bigWidth = backColor:getContentSize().width
-
-    local back_up = cc.Sprite:create("image/studyscene/frontground_zhuwanfa_disnaguan.png")
-    back_up:ignoreAnchorPointForPosition(false)
-    back_up:setAnchorPoint(0.5, 1)
-    back_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
-    layer:addChild(back_up)
-
-    local back_down = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_green.png")
-    back_down:ignoreAnchorPointForPosition(false)
-    back_down:setAnchorPoint(0.5, 0)
-    back_down:setPosition(s_DESIGN_WIDTH/2, 0)
-    layer:addChild(back_down)
-
-    local money1 = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_money1.png")
-    money1:ignoreAnchorPointForPosition(false)
-    money1:setAnchorPoint(0, 0)
-    money1:setPosition(-(bigWidth-s_DESIGN_WIDTH)/2, 0)
-    layer:addChild(money1)
-
-    local money2 = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_money2.png")
-    money2:ignoreAnchorPointForPosition(false)
-    money2:setAnchorPoint(1, 0)
-    money2:setPosition(bigWidth-(bigWidth-s_DESIGN_WIDTH)/2, 0)
-    layer:addChild(money2)
-
-    --    local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 1014))
-    --    local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 360))
-    --    local action3 = cc.CallFunc:create(newPlayerGuideInit)
-    --
-    --    back_up:runAction(action1)
-    --    back_down:runAction(cc.Sequence:create(action2, action3))
+    
+    local mountain = cc.Sprite:create("image/studyscene/background1_huadanci4_mountain.png")
+    mountain:ignoreAnchorPointForPosition(false)
+    mountain:setAnchorPoint(0.5, 0)
+    mountain:setPosition(s_DESIGN_WIDTH/2, mountain_y1)
+    layer:addChild(mountain)
+    
+    local bigWidth = mountain:getContentSize().width
+    
+    local mountain_tail = cc.LayerColor:create(cc.c4b(97,137,189,255), mountain:getContentSize().width, s_DESIGN_HEIGHT)  
+    mountain_tail:setAnchorPoint(0.5,1)
+    mountain_tail:ignoreAnchorPointForPosition(false)  
+    mountain_tail:setPosition(mountain:getContentSize().width/2, 0)
+    mountain:addChild(mountain_tail)
 
     local progressBar = ProgressBar.create(false)
     progressBar:setPositionY(1038)
@@ -90,7 +83,7 @@ function StudyLayerIV.create()
 
     local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
     label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
-    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 696)
+    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, meaning_y1)
     label_wordmeaningSmall:setScale(math.min(560/label_wordmeaningSmall:getContentSize().width, 1.5))
     layer:addChild(label_wordmeaningSmall)
 
@@ -98,8 +91,8 @@ function StudyLayerIV.create()
         if eventType == ccui.TouchEventType.began then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_detail:getRotation() == 0 then
-                local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, -700))
-                back_down:runAction(action1)
+                local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 0))
+                mountain:runAction(action1)
 
                 local action2 = cc.RotateTo:create(0.4,180)
                 button_detail:runAction(action2)
@@ -108,8 +101,8 @@ function StudyLayerIV.create()
                 local action4 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
                 layer:runAction(cc.Sequence:create(action3, action4))
             else
-                local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 0))
-                back_down:runAction(action1)
+                local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 770))
+                mountain:runAction(action1)
 
                 local action2 = cc.RotateTo:create(0.4,0)
                 button_detail:runAction(action2)
@@ -152,10 +145,11 @@ function StudyLayerIV.create()
         end
 
         local endEffect = function()
-            local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,936))
-            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,900))
-            back_up:runAction(action4)
-            back_down:runAction(action5)
+            label_wordmeaningSmall:removeFromParentAndCleanup()
+            wordDetailInfo:removeFromParentAndCleanup()
+        
+            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,mountain_y1))
+            mountain:runAction(action5)
 
             local action6 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
             mat:runAction(action6)
@@ -170,7 +164,6 @@ function StudyLayerIV.create()
         local action4 = cc.CallFunc:create(changeLayer)
         local action5 = cc.Sequence:create(action1,action2,action3,action4)
         layer:runAction(action5)
-
     end
 
     local fail = function()
@@ -181,7 +174,7 @@ function StudyLayerIV.create()
     else
         mat = FlipMat.create(wordName,4,4,false)
     end
-    mat:setPosition(s_DESIGN_WIDTH/2*3, 120)
+    mat:setPosition(s_DESIGN_WIDTH/2*3, 80)
     layer:addChild(mat)
 
     mat.success = success
@@ -193,49 +186,30 @@ function StudyLayerIV.create()
         if eventType == ccui.TouchEventType.began then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_changeview:getTitleText() == "去划单词" then
-                local change = function()
-                    button_changeview:setTitleText("再看一次")
+                button_changeview:setTitleText("再看一次")
 
-                    local action1 = cc.MoveTo:create(0.5,cc.p(-bigWidth/2, 550))
-                    soundMark:runAction(action1)
+                local action1 = cc.MoveTo:create(0.5,cc.p(-bigWidth/2, soundMark_y))
+                soundMark:runAction(action1)
 
-                    local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))
-                    mat:runAction(action2)
+                local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, mat_y))
+                mat:runAction(action2)
 
-                    local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+60, 930))
-                    button_detail:runAction(action3)
+                local action3 = cc.MoveTo:create(0.5,cc.p(detail_x2, detail_y))
+                button_detail:runAction(action3)
 
-                    local action4 = cc.DelayTime:create(0.5)
-                    local action5 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
-                    layer:runAction(cc.Sequence:create(action4, action5))
-                end
-
-                if s_CorePlayManager.newPlayerState then
-                    if not guideOver then
-                        local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, 300))
-                        newplayerHintBack:runAction(action1)
-
-                        local action2 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 10))
-                        local action3 = cc.CallFunc:create(change)
-                        fingerClick:runAction(cc.Sequence:create(action2, action3))
-                    else
-                        change()
-                    end
-
-                    guideOver = true
-                else
-                    change()
-                end
+                local action4 = cc.DelayTime:create(0.5)
+                local action5 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
+                layer:runAction(cc.Sequence:create(action4, action5))
             else
                 button_changeview:setTitleText("去划单词")
 
-                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 550))
+                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, soundMark_y))
                 soundMark:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5,cc.p(bigWidth/2*3, 120))
+                local action2 = cc.MoveTo:create(0.5,cc.p(bigWidth/2*3, mat_y))
                 mat:runAction(action2)
 
-                local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width-60, 930))
+                local action3 = cc.MoveTo:create(0.5,cc.p(detail_x1, detail_y))
                 button_detail:runAction(action3)
 
                 local action4 = cc.DelayTime:create(0.5)
@@ -246,72 +220,54 @@ function StudyLayerIV.create()
     end   
 
     local onTouchBegan = function(touch, event)
-        s_logd("touch began")
         if viewIndex == 1 then     
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
             local addWordDetailInfo = function()
                 soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
-                soundMark:setPosition(bigWidth/2, 550)
-                back_down:addChild(soundMark)
-
-                button_detail = ccui.Button:create()
-                button_detail:setTouchEnabled(true)
-                button_detail:loadTextures("image/button/button_zhuwanfa_disnaguan.png", "", "")
-                button_detail:setPosition(cc.p(s_DESIGN_WIDTH-60, 900))
-                button_detail:addTouchEventListener(button_detail_clicked)
-                backColor:addChild(button_detail)
-
+                soundMark:setPosition(bigWidth/2, soundMark_y)
+                mountain:addChild(soundMark)
+                
                 button_changeview = ccui.Button:create()
                 button_changeview:setTouchEnabled(true)
                 button_changeview:loadTextures("image/button/button_zhuwanfa_disnaguan_another.png", "", "")
                 button_changeview:setTitleText("去划单词")
                 button_changeview:setTitleFontSize(30)
-                button_changeview:setPosition(bigWidth/2, 50)
+                button_changeview:setPosition(bigWidth/2, button_y)
                 button_changeview:addTouchEventListener(button_changeview_clicked)
-                back_down:addChild(button_changeview)
+                mountain:addChild(button_changeview)
 
-                local wordDetailInfo = WordDetailInfo.create(word)
-                wordDetailInfo:setPosition(bigWidth/2, 0)
+                button_detail = ccui.Button:create()
+                button_detail:setTouchEnabled(true)
+                button_detail:loadTextures("image/button/button_zhuwanfa_disnaguan.png", "", "")
+                button_detail:setPosition(cc.p(detail_x1, detail_y))
+                button_detail:addTouchEventListener(button_detail_clicked)
+                backColor:addChild(button_detail)
+
+                wordDetailInfo = WordDetailInfo.create(word)
+                wordDetailInfo:setPosition(s_DESIGN_WIDTH/2, 0)
                 backColor:addChild(wordDetailInfo)
             end
 
             local moveBack = function()
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 0))
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, mountain_y2))
                 local action2 = cc.CallFunc:create(addWordDetailInfo)
-                back_down:runAction(cc.Sequence:create(action1, action2))
+                mountain:runAction(cc.Sequence:create(action1, action2))
                 viewIndex = 2
 
-                local action3 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 896))
+                local action3 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, meaning_y2))
                 local action4 = cc.ScaleTo:create(0.5, math.min(200/label_wordmeaningSmall:getContentSize().width, 1))
                 label_wordmeaningSmall:runAction(cc.Spawn:create(action3, action4))
             end
-
-            if s_CorePlayManager.newPlayerState then
-                local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
-                local action2 = cc.Place:create(cc.p(-s_DESIGN_WIDTH/2, 300))
-                local action3 = cc.DelayTime:create(0.5)
-                local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 300))
-                newplayerHintBack:runAction(cc.Sequence:create(action1, action2, action3, action4))
-
-                local action5 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 50))
-                local action6 = cc.CallFunc:create(moveBack)
-                local action7 = cc.Place:create(cc.p(2*s_DESIGN_WIDTH-200, 10))
-                local action8 = cc.DelayTime:create(0.5)
-                local action9 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 10))
-                local action10 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                fingerClick:runAction(cc.Sequence:create(action5, action6, action7, action8,action9,action10))  
-            else
-                local action1 = cc.CallFunc:create(moveBack)
-                local action2 = cc.DelayTime:create(0.5)
-                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                layer:runAction(cc.Sequence:create(action1, action2, action3))
-            end 
+            
+            local action1 = cc.CallFunc:create(moveBack)
+            local action2 = cc.DelayTime:create(0.5)
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            layer:runAction(cc.Sequence:create(action1, action2, action3))
         end
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
-
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
