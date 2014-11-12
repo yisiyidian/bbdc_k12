@@ -14,7 +14,7 @@ end
 
 
 
-function plotLevelStar(levelButton, heart)
+function LevelLayerI:plotLevelStar(levelButton, heart)
     local star1, star2, star3
     if heart >= 3 then
         star1 = cc.Sprite:create('image/chapter_level/starFull.png')
@@ -93,12 +93,11 @@ function LevelLayerI:plotStarAnimation(levelKey, starCount)
     
 end
 
-function LevelLayerI:plotUnlockNextLevelAnimation()
-    local nextLevelIndex = string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1
-    local nextLevelKey = 'level'..nextLevelIndex
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(nextLevelKey)
-    local lockSprite = levelButton:getChildByName('lockSprite'..nextLevelIndex)
-    local lockLayer = levelButton:getChildByName('lockLayer'..nextLevelIndex)
+function LevelLayerI:plotUnlockLevelAnimation(levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+    local lockLayer = levelButton:getChildByName('lockLayer'..levelIndex)
 
     local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
     local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
@@ -114,7 +113,7 @@ function LevelLayerI:plotUnlockNextLevelAnimation()
     lockLayer:runAction(cc.Sequence:create(action7, action8))
     
     s_SCENE:callFuncWithDelay(1.1,function()
-        self:plotLevelDecoration(s_CURRENT_USER.currentLevelKey)
+        self:plotLevelDecoration(levelKey)
     end)
 end
 
@@ -125,10 +124,15 @@ function LevelLayerI:clickLockedLevelAnmation(levelKey)
     local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
     local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
     local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
-    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),4)
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),3)
     local action5 = cc.MoveBy:create(0.1, cc.p(5,0)) 
     local action = cc.Sequence:create(action1, action4, action5, nil)
     lockSprite:runAction(action)
+    
+    local action7 = cc.ScaleTo:create(0.15,1.15,0.85)
+    local action8 = cc.ScaleTo:create(0.15,0.85,1.15)
+    local action9 = cc.ScaleTo:create(0.1, 1, 1)
+    clickedButton:runAction(cc.Sequence:create(action7, action8, action9, nil))
 end
 
 function LevelLayerI:getPlayerPositionForLevel(levelKey)
@@ -144,6 +148,18 @@ function LevelLayerI:getPlayerPositionForLevel(levelKey)
     return position
 end
 
+function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzls  xuanxiaoguan  diaoluo.json', 'spine/3fxzls  xuanxiaoguan  diaoluo.atlas', 1)
+    reviewBoss:addAnimation(0, 'animation', true)
+    reviewBoss:setPosition(0, 0)
+    levelButton:addChild(reviewBoss)
+end
+
+function LevelLayerI:plotReviewBossPassOnLevel(levelKey)
+
+end
+
 function LevelLayerI:plotLevelDecoration(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
@@ -156,6 +172,9 @@ function LevelLayerI:plotLevelDecoration(levelKey)
 --            levelButton:addChild(boat)
 --        end
     if  levelData ~= nil and levelData.isLevelUnlocked then  -- test
+        if levelData.stars > 0 then
+            self:plotLevelStar(levelButton, levelData.stars)
+        end
         if levelConfig['type'] == 1 then
             -- add summary boss
             local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -208,7 +227,7 @@ end
 local onTouchBegan = function(touch, event) 
     local touchPosition = touch:getLocation()
     -- plot shark
-    --print(touchPosition.x..touchPosition.y)
+    --print(touchPosition.x..','..touchPosition.y)
 end
 
 function LevelLayerI:ctor()
@@ -253,8 +272,7 @@ function LevelLayerI:ctor()
                     lockSprite:setName('lockSprite'..string.sub(levelButton:getName(),6))
                     levelButton:addChild(lockSprite)
                 end
-            else 
-                
+            else                 
                 if  s_CURRENT_USER:isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then  
                     self:plotLevelDecoration(levelConfig[i]['level_key'])
                 else       
@@ -294,8 +312,7 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
---    s_SCENE.levelLayerState = s_review_boss_appear_state
-    if s_SCENE.levelLayerState == s_review_boss_appear_state then -- review boss appear
+    if s_SCENE.levelLayerState == s_review_boss_appear_state and levelKey == 'level'..(string.sub(s_CURRENT_USER.currentLevelKey,6)+1)then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()
         s_SCENE:popup(layer)
