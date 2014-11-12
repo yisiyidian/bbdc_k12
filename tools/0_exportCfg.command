@@ -20,4 +20,4 @@ python exportTextCodes.py  ${baseDirForScriptSelf}/../raw/cfg/text.json ${baseDi
 #starRule.json
 #text.json
 
-python encodeJson2Bin.py ${baseDirForScriptSelf}/../raw/cfg/ ${baseDirForScriptSelf}/../BeiBei2DXLua/res/cfg/
+#python encodeJson2Bin.py ${baseDirForScriptSelf}/../raw/cfg/ ${baseDirForScriptSelf}/../BeiBei2DXLua/res/cfg/

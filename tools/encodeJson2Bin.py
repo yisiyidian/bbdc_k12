@@ -7,7 +7,8 @@ import sys
 import zipfile
 import shutil
 
-import xxteaFiles
+# import xxteaFiles
+import xxtea
 
 def makeDirIfNotExist(dirPath):
     if not ( os.path.exists(dirPath) and os.path.isdir(dirPath) ):
@@ -42,22 +43,23 @@ def encode(inputfilepath, outputfilepath):
     pass
 
 def encode_xxtea(inputfilepath, outputfilepath):
-    try:
-        fileRaw = open(inputfilepath, "rb")  #io.BufferedReader
-        swf = open(outputfilepath, "wb")
+    xxtea.encrypt_file(inputfilepath, outputfilepath, 0x0839042f, 0xa98f0ce1, 0x430c8bef, 0x765bc1f0)
+    # try:
+    #     fileRaw = open(inputfilepath, "rb")  #io.BufferedReader
+    #     swf = open(outputfilepath, "wb")
 
-        b = fileRaw.read()
-        fileRaw.close()
+    #     b = fileRaw.read()
+    #     fileRaw.close()
 
-        s = xxteaFiles.encryptStr(b)
+    #     s = xxteaFiles.encryptStr(b)
 
-        swf.write(s)
-        swf.close()
+    #     swf.write(s)
+    #     swf.close()
     
-    except IOError:
-        print(sys.stderr)
-        print("File could not be opened: ", inputfilepath, outputfilepath)
-        sys.exit(1)
+    # except IOError:
+    #     print(sys.stderr)
+    #     print("File could not be opened: ", inputfilepath, outputfilepath)
+    #     sys.exit(1)
     pass
 
 def zipJSONFiles(json_path, bin_path):
