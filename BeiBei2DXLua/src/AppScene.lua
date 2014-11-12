@@ -70,7 +70,13 @@ local function update(dt)
             end
             local cnt = (s_CURRENT_USER.serverTime - s_CURRENT_USER.resetEnergyLastCoolDownTime) / s_energyCoolDownSecs
             if cnt > 0 then
-            
+                s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + cnt
+                if s_CURRENT_USER.energyCount >= s_energyMaxCount then
+                    s_CURRENT_USER.energyCount = s_energyMaxCount
+                    s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.serverTime
+                else 
+                    s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.energyLastCoolDownTime + cnt * s_energyCoolDownSecs
+                end
             end
         end
     end 
