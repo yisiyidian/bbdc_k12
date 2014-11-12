@@ -15,6 +15,7 @@ function IntroLayer.create()
     local layer = IntroLayer.new()
     
     local currentIndex = 1
+    local moveLength = 100
     
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
@@ -120,7 +121,7 @@ function IntroLayer.create()
         end
         local location = layer:convertToNodeSpace(touch:getLocation())
         now_x = location.x
-        if now_x - 200 > start_x then
+        if now_x - moveLength > start_x then
             if currentIndex == 5 then
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
                 cloud:runAction(action2)
@@ -148,7 +149,7 @@ function IntroLayer.create()
                 
                 label_hint:setString(label_hint_array[currentIndex])             
             end
-        elseif now_x + 200 < start_x then
+        elseif now_x + moveLength < start_x then
             if currentIndex < 5 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
@@ -233,7 +234,7 @@ function IntroLayer.create()
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
-    playMusic(s_sound_Pluto,true)
+--    playMusic(s_sound_Pluto,true)
     
     
     return layer

@@ -42,6 +42,9 @@ function LevelLayer:levelStateManager()
         --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
         --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+
+        -- plot star animation
+        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
         
         -- plot player animation
         local targetPosition = levelLayerI:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)

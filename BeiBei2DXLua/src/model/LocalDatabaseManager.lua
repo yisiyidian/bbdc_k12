@@ -47,7 +47,7 @@ function Manager.createTable(objectOfDataClass)
                 str = str .. key .. ' TEXT'
             elseif (type(value) == 'boolean') then
                 if string.len(str) > 1 then str = str .. ',\n' end
-                str = str .. key .. ' INTEGER'
+                str = str .. key .. ' Boolean'
             elseif (type(value) == 'number') then
                 if string.len(str) > 1 then str = str .. ',\n' end
                 str = str .. key .. ' INTEGER'
@@ -159,13 +159,15 @@ function Manager.saveDataClassObject(objectOfDataClass)
                 elseif (type(value) == 'boolean') then
                     if string.len(keys) > 0 then keys = keys .. ',' end
                     if string.len(values) > 0 then values = values .. ',' end
-                    if value then
                         keys = keys .. "'" .. key .. "'"
-                        values = values .. '1'
-                    else
-                        keys = keys .. "'" .. key .. "'"
-                        values = values .. '0'
-                    end
+                        values = values .. tostring(value)
+                    -- if value then
+                    --     keys = keys .. "'" .. key .. "'"
+                    --     values = values .. '1'
+                    -- else
+                    --     keys = keys .. "'" .. key .. "'"
+                    --     values = values .. '0'
+                    -- end
                 elseif (type(value) == 'number') then
                     if string.len(keys) > 0 then keys = keys .. ',' end
                     keys = keys .. "'" .. key .. "'"
@@ -190,11 +192,12 @@ function Manager.saveDataClassObject(objectOfDataClass)
                     str = str .. "'" .. key .. "'" .. '=' .. "'" .. value .. "'"
                 elseif (type(value) == 'boolean') then
                     if string.len(str) > 0 then str = str .. ',' end
-                    if value then
-                        str = str .. "'" .. key .. "'=1"
-                    else
-                        str = str .. "'" .. key .. "'=0"
-                    end
+                    str = str .. "'" .. key .. "'=" .. tostring(value)
+                    -- if value then
+                    --     str = str .. "'" .. key .. "'=1"
+                    -- else
+                    --     str = str .. "'" .. key .. "'=0"
+                    -- end
                 elseif (type(value) == 'number') then
                     if string.len(str) > 0 then str = str .. ',' end
                     str = str .. "'" .. key .. "'" .. '=' .. value

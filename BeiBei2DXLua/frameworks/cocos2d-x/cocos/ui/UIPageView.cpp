@@ -213,13 +213,13 @@ ssize_t PageView::getPageCount()const
 
 float PageView::getPositionXByIndex(ssize_t idx)const
 {
-    return (getContentSize().width * (idx-_curPageIdx));
+    return (getContentSize().height * (idx-_curPageIdx));
 }
 
 void PageView::onSizeChanged()
 {
     Layout::onSizeChanged();
-    _rightBoundary = getContentSize().width;
+    _rightBoundary = getContentSize().height;
     
     _doLayoutDirty = true;
 }
@@ -248,11 +248,11 @@ void PageView::updateAllPagesPosition()
         _curPageIdx = pageCount-1;
     }
     
-    float pageWidth = getContentSize().width;
+    float pageWidth = getContentSize().height;
     for (int i=0; i<pageCount; i++)
     {
         Layout* page = _pages.at(i);
-        page->setPosition(Vec2((i-_curPageIdx) * pageWidth, 0));
+        page->setPosition(Vec2(0,(i-_curPageIdx) * pageWidth));
         
     }
 }
@@ -266,7 +266,7 @@ void PageView::scrollToPage(ssize_t idx)
     }
     _curPageIdx = idx;
     Layout* curPage = _pages.at(idx);
-    _autoScrollDistance = -(curPage->getPosition().x);
+    _autoScrollDistance = -(curPage->getPosition().y);
     _autoScrollSpeed = fabs(_autoScrollDistance)/0.2f;
     _autoScrollDirection = _autoScrollDistance > 0 ? AutoScrollDirection::RIGHT : AutoScrollDirection::LEFT;
     _isAutoScrolling = true;
@@ -381,8 +381,8 @@ void PageView::movePages(float offset)
 {
     for (auto& page : this->getPages())
     {
-        page->setPosition(Vec2(page->getPosition().x + offset,
-                               page->getPosition().y));
+        page->setPosition(Vec2(page->getPosition().x ,
+                               page->getPosition().y + offset));
     }
 }
 
@@ -435,7 +435,7 @@ void PageView::handleMoveLogic(Touch *touch)
     Vec2 touchPoint = touch->getLocation();
     
     float offset = 0.0;
-    offset = touchPoint.x - touch->getPreviousLocation().x;
+    offset = touchPoint.y - touch->getPreviousLocation().y;
     
     if (offset < 0)
     {
@@ -459,8 +459,8 @@ void PageView::handleReleaseLogic(Touch *touch)
     {
         Vec2 curPagePos = curPage->getPosition();
         ssize_t pageCount = this->getPageCount();
-        float curPageLocation = curPagePos.x;
-        float pageWidth = getContentSize().width;
+        float curPageLocation = curPagePos.y;
+        float pageWidth = getContentSize().height;
         float boundary = pageWidth/2.0f;
         if (curPageLocation <= -boundary)
         {
@@ -504,7 +504,7 @@ void PageView::interceptTouchEvent(TouchEventType event, Widget *sender, Touch *
         case TouchEventType::MOVED:
         {
             float offset = 0;
-            offset = fabs(sender->getTouchBeganPosition().x - touchPoint.x);
+            offset = fabs(sender->getTouchBeganPosition().y - touchPoint.y);
             if (offset > _childFocusCancelOffset)
             {
                 sender->setHighlighted(false);

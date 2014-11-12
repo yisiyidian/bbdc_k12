@@ -264,7 +264,7 @@ end
 function PersonalInfo:PLVI()
     local back = self:getChildByName('back3')
     
-    local dayCount = 2
+    local dayCount = 18
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setPosition(s_DESIGN_WIDTH * 0.55, s_DESIGN_HEIGHT * 0.53)
@@ -277,43 +277,46 @@ function PersonalInfo:PLVI()
     
     local countArray = {}
     local dateArray = {}
+    math.random(0,20)
     for i = 1 , dayCount do 
-        math.randomseed(os.time())
-        s_logd(os.time())
-        countArray[i] = math.random(0,30)
+        countArray[i] = math.random(0,20)
         s_logd(countArray[i])
         dateArray[i] = string.format('%d',i)
         if i > 1 then
             countArray[i] = countArray[i - 1] + countArray[i]
         end
     end
-    
+    local point = {}
+    local selectPoint
+    local countLabel
+    local tableHeight = gezi:getContentSize().height
+    local tableWidth = gezi:getContentSize().width
     local function drawXYLabel(date,count)
         local max = count[#count]
         local min = count[1]
         local yLabel = {}
         local xLabel = date
-        local point = {}
-        local tableHeight = gezi:getContentSize().height
-        local tableWidth = gezi:getContentSize().width
+        point = {}
+        
         for i = 1, #count do
             local x
             local y
             if #count > 1 then
                 --yLabel[i] = min + (max - min) * (i - 1) / (#count - 1)
-                x = (i - 0.5) / #count
+                x = (i - 0.5) / (#count + 1)
             else 
                 --yLabel[i] = min
-                x = 0.5 / 4
+                x = 0.5 / 5
             end
             if max > min then
-                y = (count[i] - min) / (max - min) * 0.7 + 0.2
+                y = (count[i] - min) / (max - min) * 0.58 + 0.2
             elseif max > 0 then
-                y = 0.9
+                y = 0.78
             else 
                 y = 0.2              
             end
             point[i] = cc.p(x,y)
+            s_logd('x= %f,y = %f',x,y)
             local x_i = cc.Label:createWithSystemFont(xLabel[i],'',24)
             x_i:setPosition(x * tableWidth , 0)
             gezi:addChild(x_i)
@@ -323,9 +326,66 @@ function PersonalInfo:PLVI()
             local y_i = cc.Label:createWithSystemFont(math.ceil(yLabel[i]),'',24)
             y_i:setColor(cc.c3b(201,43,44))
             y_i:setAlignment(cc.TEXT_ALIGNMENT_RIGHT)
-            y_i:setPosition(0.5 * yBar:getContentSize().width , (0.2 + 0.7 * (i - 1) / 4) * tableHeight)
+            y_i:setPosition(0.5 * yBar:getContentSize().width , (0.2 + 0.58 * (i - 1) / 4) * tableHeight)
             yBar:addChild(y_i)
         end
+        local length = {}
+        if #count > 0 then
+            for i = 1,#count - 1 do
+                --s_logd(count[i])
+                 length[i] = math.sqrt( math.pow((point[i + 1].x - point[i].x) * tableWidth,2) + math.pow((point[i + 1].y - point[i].y) * tableHeight,2))
+                local angle = math.acos((point[i + 1].x - point[i].x) * tableWidth / length[i])
+                local line = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVI/chart_line.png'))
+                line:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+                line:ignoreAnchorPointForPosition(false)
+                line:setAnchorPoint(0.02,0.5)
+                line:setPosition(point[i].x * tableWidth ,point[i].y * tableHeight+ (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
+                line:setScale(length[i] / (line:getContentSize().width*0.98),1)
+                line:setRotation(-angle * 180 / math.pi)
+                line:setPercentage(0)
+                line:setMidpoint(cc.p(0,0))
+                line:setBarChangeRate(cc.p(1,0))
+                local to = cc.ProgressTo:create(length[i] / 200, 100)
+                local delayTime = 0
+                if i > 1 then
+                    for j = 1,i - 1 do
+                	   delayTime = delayTime + length[j] / 200
+                    end
+                end
+                
+                line:runAction(cc.Sequence:create(cc.DelayTime:create(delayTime),to))
+                gezi:addChild(line)
+            end
+        end
+        selectPoint = cc.Sprite:create('image/PersonalInfo/login/wsy_suanzhong.png')
+        selectPoint:ignoreAnchorPointForPosition(false)
+        selectPoint:setAnchorPoint(0.5,0.5)
+        selectPoint:setPosition(point[#count].x * tableWidth ,point[#count].y * tableHeight+ (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
+        gezi:addChild(selectPoint)
+        selectPoint:setVisible(false)
+        local time = 0
+        for i = 1,#count - 1 do
+            time = time + length[i] / 200
+        end
+        selectPoint:runAction(cc.Sequence:create(cc.DelayTime:create(time),cc.Show:create()))
+        
+        local board = cc.Sprite:create('image/PersonalInfo/PLVI/learnedCountBoard_IC.png')
+        board:ignoreAnchorPointForPosition(false)
+        board:setAnchorPoint(0.5,0)
+        board:setPosition(0.5 * selectPoint:getContentSize().width,selectPoint:getContentSize().height)
+        selectPoint:addChild(board)
+        
+        local label = cc.Label:createWithSystemFont('个','',24)
+        label:setColor(cc.c3b(0,0,0))
+        label:setAnchorPoint(0,0.5)
+        label:setPosition(0.65 * board:getContentSize().width,0.5 * board:getContentSize().height)
+        board:addChild(label)
+        countLabel = cc.Label:createWithSystemFont(string.format('%d',count[#count]),'',52)
+        countLabel:ignoreAnchorPointForPosition(false)
+        countLabel:setAnchorPoint(0.7,0.5)
+        countLabel:setColor(cc.c3b(0,0,0))
+        countLabel:setPosition(0.5 * board:getContentSize().width,0.55 * board:getContentSize().height)
+        board:addChild(countLabel,0,'count')
     end
     
     local xArray = {}
@@ -346,17 +406,18 @@ function PersonalInfo:PLVI()
     local selectButton = 1
     local rightButton = 1
     local button = {}
+    local date = os.time()
     for i = 1, dayCount do
-
+    
         button[i] = ccui.Button:create()
         if i > 4 then
             button[i]:setVisible(false)
         end
         button[i]:setTouchEnabled(true)
         --add label on button
-        local weekLabel = cc.Label:createWithSystemFont(string.format('%d周',dayCount + 1 - i),'',40)
-        local yearLabel = cc.Label:createWithSystemFont('2014','',28)
-        local dateLabel = cc.Label:createWithSystemFont('9.8~9.14','',24)
+        local dateLabel = cc.Label:createWithSystemFont(os.date("%d", date),'',40)
+        local yearLabel = cc.Label:createWithSystemFont(os.date("%Y", date),'',24)
+        local monthLabel = cc.Label:createWithSystemFont(string.upper(os.date("%b", date)),'',28)
         local sun = cc.Sprite:create('res/image/PersonalInfo/login/wsy_suanzhong.png')
 
         if i > 1 then
@@ -364,17 +425,22 @@ function PersonalInfo:PLVI()
             sun:setVisible(false)
         else 
             button[i]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
-
-            weekLabel:setString('本周')
-            weekLabel:setColor(cc.c3b(201,103,0))
-            dateLabel:setColor(cc.c3b(255,103,0))
-            yearLabel:setColor(cc.c3b(255,103,0))
+            dateLabel:setString('今天')
+            dateLabel:setSystemFontSize(30)
+            monthLabel:setString('today')
+            yearLabel:setString(' ')
+            monthLabel:setColor(cc.c3b(201,43,44))
+            dateLabel:setColor(cc.c3b(201,43,44))
+            yearLabel:setColor(cc.c3b(201,43,44))
         end
-        weekLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.7)
-        button[i]:addChild(weekLabel,0,'week')
-        yearLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.4)
+        monthLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.4)
+        button[i]:addChild(monthLabel,0,'month')
+        yearLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.2)
         button[i]:addChild(yearLabel,0,'year')
-        dateLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.2)
+        dateLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.7)
+        if i == 1 then
+            dateLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.6)
+        end
         button[i]:addChild(dateLabel,0,'date')
         sun:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height)
         button[i]:addChild(sun,0,'sun')
@@ -384,26 +450,29 @@ function PersonalInfo:PLVI()
             button[i]:setPosition((dayCount + 1 - i)/5 * s_DESIGN_WIDTH,0)
         end  
         menu:addChild(button[i])
-
+        date = date - 24 * 3600
         --button event
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended  and selectButton ~= i then
                 button[selectButton]:getChildByName('sun'):setVisible(false)
                 button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,255,255))
                 button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,255,255))
-                button[selectButton]:getChildByName('week'):setColor(cc.c3b(255,255,255))
+                button[selectButton]:getChildByName('month'):setColor(cc.c3b(255,255,255))
                 button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_hongseban.png", "res/image/PersonalInfo/login/wsy_hongseban.png", "")
                 selectButton = i
                 s_logd(i)
                 button[selectButton]:getChildByName('sun'):setVisible(true)
-                button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,103,0))
-                button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,103,0))
-                button[selectButton]:getChildByName('week'):setColor(cc.c3b(255,103,0))
+                button[selectButton]:getChildByName('date'):setColor(cc.c3b(201,43,44))
+                button[selectButton]:getChildByName('year'):setColor(cc.c3b(201,43,44))
+                button[selectButton]:getChildByName('month'):setColor(cc.c3b(201,43,44))
                 button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
-                
+                --selectPoint:setVisible(true)
+                selectPoint:setPosition(point[#point - selectButton + rightButton].x * tableWidth ,point[#point - selectButton + rightButton].y * tableHeight+ (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
+                countLabel:setString(string.format('%d',countArray[#countArray + 1 - selectButton]))
             end
         end      
-        button[i]:addTouchEventListener(touchEvent)   
+        button[i]:addTouchEventListener(touchEvent)
+           
     end
     --add front/back button
     if dayCount > 4 then  
@@ -490,6 +559,12 @@ function PersonalInfo:login()
     local weekCount = 8
     local totalDay = 0
     local weekDay = {}
+    local isWeek = tonumber(os.date('%w',os.time()),10)
+    local lastDate = os.time()
+    if isWeek > 0 then
+        lastDate = lastDate + (7 - isWeek) * 24 * 3600
+    end
+    local firstDate = lastDate - 6 * 24 * 3600
     for i = 1 , weekCount do 
         loginArray[i] = {}
         weekDay[i] = 0
@@ -561,8 +636,10 @@ function PersonalInfo:login()
         button[i]:setTouchEnabled(true)
         --add label on button
         local weekLabel = cc.Label:createWithSystemFont(string.format('%d周',weekCount + 1 - i),'',40)
-        local yearLabel = cc.Label:createWithSystemFont('2014','',28)
-        local dateLabel = cc.Label:createWithSystemFont('9.8~9.14','',24)
+        local yearLabel = cc.Label:createWithSystemFont(os.date("%Y", os.time()),'',28)
+        local dateLabel = cc.Label:createWithSystemFont(string.format('%s~%s',string.sub(os.date('%x',firstDate),1,5),string.sub(os.date('%x',lastDate),1,5)),'',18)
+        firstDate = firstDate - 7 * 24 * 3600
+        lastDate = lastDate - 7 * 24 * 3600
         local sun = cc.Sprite:create('res/image/PersonalInfo/login/wsy_suanzhong.png')
         
         if i > 1 then

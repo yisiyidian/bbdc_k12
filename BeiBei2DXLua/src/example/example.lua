@@ -8,6 +8,11 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+    -- s_HttpRequestClient.downloadFileFromAVOSWithObjectId('5430b806e4b0c0d48049e293', 
+    --     function (objectId, filename, err, isSaved) 
+
+    --     end)
+
 -- s_SERVER.debugLocalHost = true
 -- local function onSucceed (api, result) print_lua_table (result) end
 -- local function onFailed (api, code, message, description) print (message) end
@@ -33,10 +38,10 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
- local PopupLoginSignup = require('view.PersonalInfo')
- local layer = PopupLoginSignup.create()
- layer:setAnchorPoint(0.5,0)
- s_SCENE:popup(layer)
+-- local PopupLoginSignup = require('view.PersonalInfo')
+-- local layer = PopupLoginSignup.create()
+-- layer:setAnchorPoint(0.5,0)
+-- s_SCENE:popup(layer)
 
 
     -- s_DATA_MANAGER.loadText()
@@ -54,12 +59,12 @@ function test()
 
     --   -- test -- ziaoang ------------------------------------------------------------------------------------
     -- s_WordPool = s_DATA_MANAGER.loadAllWords()
-    -- s_CorePlayManager = require("controller.CorePlayManager")
-    -- s_CorePlayManager.create()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
     -- s_CorePlayManager.enterStudyLayer()
 --    s_CorePlayManager.enterTestLayer()
 --    s_CorePlayManager.enterReviewBossLayer()
---    s_CorePlayManager.enterIntroLayer()
+    s_CorePlayManager.enterIntroLayer()
 --    s_CorePlayManager.enterBookLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)

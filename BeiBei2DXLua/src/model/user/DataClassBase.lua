@@ -63,9 +63,10 @@ function dataToJSONString(dataObj)
                 str = str .. '"' .. key .. '":"' .. value .. '"'
             elseif (type(value) == 'boolean') then
                 if string.len(str) > 1 then str = str .. ',' end
-                local b = 0
-                if value == true then b = 1 end
-                str = str .. '"' .. key .. '":' .. b
+                -- local b = 0
+                -- if value == true then b = 1 end
+                -- str = str .. '"' .. key .. '":' .. b
+                str = str .. '"' .. key .. '":' .. tostring(value)
             elseif (type(value) ~= 'function' and type(value) ~= 'table') then
                 if string.len(str) > 1 then str = str .. ',' end
                 str = str .. '"' .. key .. '":' .. value
