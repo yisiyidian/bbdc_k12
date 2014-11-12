@@ -20,6 +20,8 @@ public:
     static void showMail(const char* mailTitle, const char* userName);
     static std::string& md5(const char* in, std::string& out);
     
+    static const char *xxteaDecrypt(const char *data, uint32_t data_len, const char *key, uint32_t key_len, uint32_t *ret_length);
+    
 private:
     CXUtils();
     
