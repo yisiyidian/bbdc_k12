@@ -17,7 +17,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    s_SCENE.levelLayerState = s_normal_level_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     
@@ -28,22 +28,34 @@ function LevelLayer:levelStateManager()
     elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
         -- lock screen and plot animation
         s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
-        s_SCENE:callFuncWithDelay(2, function()
+        s_SCENE:callFuncWithDelay(3.9, function()
             s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
         end)
+        -- plot star animation
+        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
+        
+        -- plot unlock next level animation
+        levelLayerI:plotUnlockNextLevelAnimation()
         
         -- save and update level data
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
-        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
         --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
 
         -- plot star animation
-        levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
+        --levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
+        
+        -- plot player animation
+        s_SCENE:callFuncWithDelay(1.3,function()
+            local targetPosition = levelLayerI:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
+            local action = cc.MoveTo:create(0.8, targetPosition)
+            player:runAction(action)      
+        end)
         
         -- update level state and plot popup(call on level button clicked)
         s_SCENE.levelLayerState = s_normal_level_state
-        s_SCENE:callFuncWithDelay(3,function()
+        s_SCENE:callFuncWithDelay(4,function()
             levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
         end)
         
@@ -78,10 +90,9 @@ function LevelLayer:ctor()
         
       local levelStypeI = require('view.level.LevelLayerI')
       levelLayerI = levelStypeI.create()
-      --self:addChild(levelLayer1)
       
       -- plot player position
-      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)
+      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
       local image = 'image/chapter_level/gril_head.png'
       player = cc.MenuItemImage:create(image,image,image)
       player:setEnabled(false)

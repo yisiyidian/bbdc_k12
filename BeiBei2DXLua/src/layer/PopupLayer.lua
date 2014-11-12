@@ -32,4 +32,10 @@ function PopupLayer:ctor()
     self.listener:setSwallowTouches(false)
 end
 
+function PopupLayer:addBackground()
+    local bg = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    bg:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+    self:addChild(bg)
+end
+
 return PopupLayer

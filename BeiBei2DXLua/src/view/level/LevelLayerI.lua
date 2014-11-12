@@ -93,14 +93,44 @@ function LevelLayerI:plotStarAnimation(levelKey, starCount)
     
 end
 
+function LevelLayerI:plotUnlockNextLevelAnimation()
+    local nextLevelIndex = string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1
+    local nextLevelKey = 'level'..nextLevelIndex
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(nextLevelKey)
+    local lockSprite = levelButton:getChildByName('lockSprite'..nextLevelIndex)
+    local lockLayer = levelButton:getChildByName('lockLayer'..nextLevelIndex)
+
+    local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
+    local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
+    local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),4)
+    local action5 = cc.MoveBy:create(0.1, cc.p(5,0))  
+    local action6 = cc.FadeOut:create(0.1)
+    local action = cc.Sequence:create(action1, action4, action5, action6, nil)
+    lockSprite:runAction(action)
+    
+    local action7 = cc.DelayTime:create(1)
+    local action8 = cc.FadeOut:create(0.1)
+    lockLayer:runAction(cc.Sequence:create(action7, action8))
+    
+    s_SCENE:callFuncWithDelay(1.1,function()
+        self:plotLevelDecoration(s_CURRENT_USER.currentLevelKey)
+    end)
+end
+
+function LevelLayerI:clickLockedLevelAnmation(levelKey)
+    local clickedButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    --local lockSprite = clickedButton 
+end
+
 function LevelLayerI:getPlayerPositionForLevel(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
-    local position = levelButton:getPosition()
+    --print(levelButton:getPositionX()..','..levelButton:getPositionY())
+    local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
     if levelConfig['type'] == 1 then
-    
-    
+           
     end
     
     return position
@@ -122,7 +152,8 @@ function LevelLayerI:plotLevelDecoration(levelKey)
             -- add summary boss
             local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
             summaryboss:setPosition(0,10)
-            summaryboss:addAnimation(0, 'animation',true)
+            --summaryboss:addAnimation(0, 'animation',false)
+            summaryboss:addAnimation(0, 'jianxiao', true)
             summaryboss:setScale(0.7)
             levelButton:addChild(summaryboss, 3)
         elseif levelIndex % 8 == 0 then

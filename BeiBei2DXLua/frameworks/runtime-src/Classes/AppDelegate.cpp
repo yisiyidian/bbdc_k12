@@ -11,7 +11,9 @@
 #include "anysdk_manual_bindings.h"
 #endif
 
+#if (COCOS2D_DEBUG>0)
 #define DEBUG_RUNTIME 0
+#endif
 
 using namespace CocosDenshion;
 

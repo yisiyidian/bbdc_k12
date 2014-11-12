@@ -82,6 +82,7 @@ end
 function AppScene:popup(popupNode)
     self.popupLayer.listener:setSwallowTouches(true)
     self.popupLayer:removeAllChildren()
+    self.popupLayer:addBackground()
     self.popupLayer:addChild(popupNode) 
 end
 
