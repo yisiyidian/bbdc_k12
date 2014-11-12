@@ -17,7 +17,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    s_SCENE.levelLayerState = s_normal_level_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     
@@ -92,7 +92,7 @@ function LevelLayer:ctor()
       levelLayerI = levelStypeI.create()
       
       -- plot player position
-      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName('level'..s_CURRENT_USER.currentLevelIndex)
+      local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
       local image = 'image/chapter_level/gril_head.png'
       player = cc.MenuItemImage:create(image,image,image)
       player:setEnabled(false)
