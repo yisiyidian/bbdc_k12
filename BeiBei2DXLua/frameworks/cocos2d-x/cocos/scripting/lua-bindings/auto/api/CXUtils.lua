@@ -5,6 +5,16 @@
 -- @parent_module cx
 
 --------------------------------
+-- @function [parent=#CXUtils] xxteaDecrypt 
+-- @param self
+-- @param #char char
+-- @param #unsigned int int
+-- @param #char char
+-- @param #unsigned int int
+-- @param #unsigned int int
+-- @return char#char ret (return value: char)
+        
+--------------------------------
 -- @function [parent=#CXUtils] showMail 
 -- @param self
 -- @param #char char

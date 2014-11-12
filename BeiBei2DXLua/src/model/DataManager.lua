@@ -42,7 +42,15 @@ s_review_boos = 'cfg/review_boss.json'
 s_starRule = 'cfg/starRule.json'
 s_text = 'cfg/text.json'
 
--- text -------------------------------------------------------------------
+function loadXxteaFile(filepath)
+    local path = cc.FileUtils:getInstance():fullPathForFilename(filepath)
+    local data = cc.FileUtils:getInstance():getStringFromFile(path)
+    local key = 'mycrush42mycrush42'
+    local retLen = 0
+    local str = cx.CXUtils:xxteaDecrypt(data, string.len(data), key, string.len(key), retLen)
+    local jsonObj = s_JSON.decode(str)
+    return jsonObj
+end
 
 local function loadJsonFile(filepath)
     local path = cc.FileUtils:getInstance():fullPathForFilename(filepath)
@@ -50,6 +58,8 @@ local function loadJsonFile(filepath)
     local jsonObj = s_JSON.decode(data)
     return jsonObj
 end
+
+-- text -------------------------------------------------------------------
 
 function DataManager.loadText()
     local jsonObj = loadJsonFile(s_text)

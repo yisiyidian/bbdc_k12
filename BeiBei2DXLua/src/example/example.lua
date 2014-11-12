@@ -8,6 +8,8 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+    -- print(loadXxteaFile('cfg/books.bin'))
+
     -- s_HttpRequestClient.downloadFileFromAVOSWithObjectId('5430b806e4b0c0d48049e293', 
     --     function (objectId, filename, err, isSaved) 
 
@@ -58,10 +60,10 @@ function test()
     -- s_DATA_MANAGER.loadStarRules()
 
     --   -- test -- ziaoang ------------------------------------------------------------------------------------
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
-    s_CorePlayManager.enterStudyLayer()
+    -- s_WordPool = s_DATA_MANAGER.loadAllWords()
+    -- s_CorePlayManager = require("controller.CorePlayManager")
+    -- s_CorePlayManager.create()
+    -- s_CorePlayManager.enterStudyLayer()
 --    s_CorePlayManager.enterTestLayer()
 --    s_CorePlayManager.enterReviewBossLayer()
 --    s_CorePlayManager.enterIntroLayer()
