@@ -63,7 +63,6 @@ function StudyLayerII.create()
     back_smallchair_right:setPosition(bigWidth-(bigWidth-s_DESIGN_WIDTH)/2, 0)
     layer:addChild(back_smallchair_right)
     
-    
     local progressBar = ProgressBar.create(false)
     progressBar:setPositionY(1060)
     layer:addChild(progressBar)
@@ -73,9 +72,6 @@ function StudyLayerII.create()
     label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 730)
     label_wordmeaningSmall:setScale(math.min(560/label_wordmeaningSmall:getContentSize().width, 1.5))
     layer:addChild(label_wordmeaningSmall)
-
-    
-    
 
     button_detail_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -108,9 +104,6 @@ function StudyLayerII.create()
         end
     end
 
-    
-    
-    
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -151,8 +144,6 @@ function StudyLayerII.create()
         end
     end   
     
-    
-
     local success = function()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         progressBar.rightStyle()

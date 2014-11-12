@@ -20,7 +20,14 @@ function LevelLayer:levelStateManager()
     s_SCENE.levelLayerState = s_normal_level_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
-    
+    local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
+    if reviewBossId ~= -1 then
+        -- check whether current level is passed
+        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        if levelData.stars > 0 then
+        
+        end
+    end
     -- TODO switch state
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
@@ -69,6 +76,8 @@ function LevelLayer:levelStateManager()
             player:runAction(action)
         end
         )
+     elseif s_SCENE.levelLayerState == s_review_boss_appear_state then
+        
      end
 end
 

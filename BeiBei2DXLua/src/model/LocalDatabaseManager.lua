@@ -288,10 +288,58 @@ function Manager.showTable_Word_Prociency()
     end
 end
 
+-- return current valid review bossId
+function Manager:getCurrentReviewBossID()
+    local bossId = -1
+    for row in Manager.database:nrows('SELECT * FROM RB_control') do
+        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
+            -- TODO check the boss appear time
+            local currentTime = os.time()
+            local diffTime = os.time() - row.lastUpdate
+            if row.appearCount == 0 then
+                bossId = row.bossId
+                break
+            elseif row.appearCount == 1 then
+                if diffTime >= 24 * 3600 then
+                    bossId = row.bossId
+                    break
+                end
+            elseif row.appearCount == 2 then
+                if diffTime >= 24 * 3 * 3600 then
+                    bossId = row.bossId
+                    break
+                end
+            elseif row.appearCount == 3 then
+                if diffTime >= 24 * 3 * 3600 then
+                    bossId = row.bossId
+                    break
+                end
+            elseif row.appearCount == 4 then
+                if diffTime >= 24 * 7 * 3600 then
+                    bossId = row.bossId
+                    break
+                end 
+            end
+        end
+    end
+    return bossId
+end
+
+-- update review boss after played
+function Manager.updateReviewBossRecord(bossId)
+    for row in Manager.database:nrows('SELECT * FROM RB_control where bossId = '..bossId) do
+        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
+            -- update
+            local command = 'UPDATE RB_control SET appearCount = '..(row.appearCount+1)..' , lastUpdate = '..(os.time())
+            Manager.database:exec(command)
+        end
+    end
+end
+
 function Manager.showTable_RB_control()
-    s_logd("RB_control -------------------------------")
+    s_logd("RB_control1 -------------------------------")
     for row in Manager.database:nrows("SELECT * FROM RB_control") do
-        s_logd(row.bossId .. ',' .. row.wordCount)
+        s_logd(row.bossId .. ',' .. row.appearCount..','..row.lastUpdate)
     end
 end
 
