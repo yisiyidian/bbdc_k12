@@ -4,7 +4,7 @@ require("Cocos2dConstants")
 require("common.global")
 
 local ProgressBar = require("view.progress.ProgressBar")
-local FlipMat = require("view.mat.FlipMat")
+local TapMat = require("view.mat.TapMat")
 local SoundMark = require("view.study.SoundMark")
 local WordDetailInfo = require("view.study.WordDetailInfo")
 local StudyAlter = require("view.study.StudyAlter")
@@ -40,8 +40,6 @@ function StudyLayerIV.create()
     local wordDetailInfo
     local mat
 
-    local fingerClick
-    local newplayerHintBack
     local label_wordmeaningSmall
     local guideOver = false
     
@@ -53,8 +51,8 @@ function StudyLayerIV.create()
     local soundMark_y = -300
     local button_y    = -700
     local mat_y       = 80
-    local detail_x1    = s_DESIGN_WIDTH - 120
-    local detail_x2    = s_DESIGN_WIDTH + 120
+    local detail_x1   = s_DESIGN_WIDTH - 120
+    local detail_x2   = s_DESIGN_WIDTH + 120
     local detail_y    = 900
     
     local backColor = cc.LayerColor:create(cc.c4b(170,205,243,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
@@ -169,18 +167,14 @@ function StudyLayerIV.create()
     local fail = function()
     --s_logd("new wrong")
     end
-    if s_CorePlayManager.newPlayerState then
-        mat = FlipMat.create(wordName,4,4,true)
-    else
-        mat = FlipMat.create(wordName,4,4,false)
-    end
+    
+    mat = TapMat.create(wordName,4,4)
     mat:setPosition(s_DESIGN_WIDTH/2*3, 80)
-    layer:addChild(mat)
-
     mat.success = success
     mat.fail = fail
     mat.rightLock = true
     mat.wrongLock = false
+    layer:addChild(mat)
 
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
