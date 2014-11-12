@@ -100,7 +100,11 @@ void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandl
     user.username = [NSString stringWithUTF8String:username];
     user.password = [NSString stringWithUTF8String:password];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        invokeLuaCallbackFunction_su(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
+        const char* objson = nullptr;
+        if (user && user.objectId) {
+            objson = AVUserToJsonStr(user).UTF8String;
+        }
+        invokeLuaCallbackFunction_su(objson, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
     }];
 }
 
