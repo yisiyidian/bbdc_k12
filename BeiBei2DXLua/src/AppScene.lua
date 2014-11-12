@@ -82,13 +82,12 @@ end
 function AppScene:popup(popupNode)
     self.popupLayer.listener:setSwallowTouches(true)
     self.popupLayer:removeAllChildren()
-    self.popupLayer:setVisible(true)
+    self.popupLayer:addBackground()
     self.popupLayer:addChild(popupNode) 
 end
 
 function AppScene:removeAllPopups()
     self.popupLayer.listener:setSwallowTouches(false)
-    self.popupLayer:setVisible(false)
     self.popupLayer:removeAllChildren()
 end
 

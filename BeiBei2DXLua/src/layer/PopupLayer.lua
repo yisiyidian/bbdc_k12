@@ -11,7 +11,6 @@ function PopupLayer.create()
 end
 
 function PopupLayer:ctor()
-    self:setVisible(false)
     local onTouchBegan = function(touch, event)
         return true
     end
@@ -31,9 +30,12 @@ function PopupLayer:ctor()
     eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
 
     self.listener:setSwallowTouches(false)
-    self.bg = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    self.bg:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
-    self:addChild(self.bg)
+end
+
+function PopupLayer:addBackground()
+    local bg = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    bg:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+    self:addChild(bg)
 end
 
 return PopupLayer
