@@ -225,11 +225,11 @@ showRegister = function()
 
     local username = InputNode.create("username")
     username:setPosition(back_width/2, 550)
-    back_login:addChild(username)
+    back_register:addChild(username)
 
     local password = InputNode.create("password")
     password:setPosition(back_width/2, 450)
-    back_login:addChild(password)
+    back_register:addChild(password)
     
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then       
