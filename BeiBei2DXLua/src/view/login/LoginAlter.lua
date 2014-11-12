@@ -120,15 +120,15 @@ showLogin = function()
     
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            if validateUsername(textField_username:getStringValue()) == false then
+            if validateUsername(username.textField:getStringValue()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
-            if validatePassword(textField_password:getStringValue()) == false then
+            if validatePassword(password.textField:getStringValue()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
-            s_SCENE:logIn(textField_username:getStringValue(), textField_password:getStringValue())
+            s_SCENE:logIn(username.textField:getStringValue(), password.textField:getStringValue())
         end
     end
     
@@ -233,15 +233,15 @@ showRegister = function()
     
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then       
-            if validateUsername(textField_username:getStringValue()) == false then
+            if validateUsername(username.textField:getStringValue()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
-            if validatePassword(textField_password:getStringValue()) == false then
+            if validatePassword(password.textField:getStringValue()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
-            s_SCENE:signUp(textField_username:getStringValue(), textField_password:getStringValue())
+            s_SCENE:signUp(username.textField:getStringValue(), password.textField:getStringValue())
         end
     end
 

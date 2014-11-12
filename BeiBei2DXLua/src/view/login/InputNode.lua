@@ -14,8 +14,8 @@ function InputNode.create(type)
     main:ignoreAnchorPointForPosition(false)
     
     local backImage
-    local textField
     local cursor
+    main.textField = nil
     
     local cursorShowUp
     local eventHandle
@@ -34,7 +34,7 @@ function InputNode.create(type)
         local action1 = cc.DelayTime:create(0.1)
         local action2 = cc.CallFunc:create(
             function()
-                cursor:setPosition(textField:getContentSize().width,textField:getContentSize().height/2)
+                cursor:setPosition(main.textField:getContentSize().width,main.textField:getContentSize().height/2)
                 cursor:setVisible(true)
             end
         )
@@ -48,16 +48,16 @@ function InputNode.create(type)
     eventHandle = function(sender, eventType)
         if eventType == ccui.TextFiledEventType.attach_with_ime then   
             print("in text field")
-            textField:setPlaceHolder("")
+            main.textField:setPlaceHolder("")
             cursorShowUp()
         elseif eventType == ccui.TextFiledEventType.detach_with_ime then
             print("out text field")
             cursor:stopAllActions()
             cursor:setVisible(false)
             if type == "username" then
-                textField:setPlaceHolder("用户名")
+                main.textField:setPlaceHolder("用户名")
             else
-                textField:setPlaceHolder("密码")
+                main.textField:setPlaceHolder("密码")
             end
         elseif eventType == ccui.TextFiledEventType.insert_text then
             cursorShowUp()
@@ -66,29 +66,29 @@ function InputNode.create(type)
         end
     end
 
-    textField = ccui.TextField:create()
-    textField:setTouchEnabled(true)
-    textField:setTouchSize(cc.size(width,height))
-    textField:setTouchAreaEnabled(true)
-    textField:setFontSize(30)
-    textField:setMaxLengthEnabled(true)
-    textField:setMaxLength(16)
-    textField:setColor(cc.c4b(0,0,0,255))
+    main.textField = ccui.TextField:create()
+    main.textField:setTouchEnabled(true)
+    main.textField:setTouchSize(cc.size(width,height))
+    main.textField:setTouchAreaEnabled(true)
+    main.textField:setFontSize(30)
+    main.textField:setMaxLengthEnabled(true)
+    main.textField:setMaxLength(16)
+    main.textField:setColor(cc.c4b(0,0,0,255))
     if type == "username" then
-        textField:setPlaceHolder("用户名")
+        main.textField:setPlaceHolder("用户名")
     else
-        textField:setPlaceHolder("密码")
-        textField:setPasswordEnabled(true)
-        textField:setPasswordStyleText("*")
+        main.textField:setPlaceHolder("密码")
+        main.textField:setPasswordEnabled(true)
+        main.textField:setPasswordStyleText("*")
     end
-    textField:setPosition(cc.p(backImage:getContentSize().width / 2.0, backImage:getContentSize().height / 2.0))
-    textField:addEventListener(eventHandle)
-    backImage:addChild(textField)
+    main.textField:setPosition(cc.p(backImage:getContentSize().width / 2.0, backImage:getContentSize().height / 2.0))
+    main.textField:addEventListener(eventHandle)
+    backImage:addChild(main.textField)
 
     cursor = cc.Label:createWithSystemFont("|","",30)
     cursor:setColor(cc.c4b(0,0,0,255))
     cursor:setVisible(false)
-    textField:addChild(cursor)
+    main.textField:addChild(cursor)
 
     return main    
 end
