@@ -39,9 +39,9 @@ function DataUser:ctor()
 --    self.currentChapterIndex               = 0 
 --    self.currentLevelIndex                 = 0 
 --    self.currentSelectedLevelIndex         = 0 
-    self.currentChapterKey                 = ''
-    self.currentLevelKey                   = ''
-    self.currentSelectedLevelKey           = ''
+    self.currentChapterKey                 = 'chapter0'
+    self.currentLevelKey                   = 'level0'
+    self.currentSelectedLevelKey           = 'level0'
     self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
