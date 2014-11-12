@@ -39,9 +39,9 @@ function DataUser:ctor()
 --    self.currentChapterIndex               = 0 
 --    self.currentLevelIndex                 = 0 
 --    self.currentSelectedLevelIndex         = 0 
-    self.currentChapterKey                 = 'chapter0'
-    self.currentLevelKey                   = 'level0'
-    self.currentSelectedLevelKey           = 'level0'
+    self.currentChapterKey                 = ''
+    self.currentLevelKey                   = ''
+    self.currentSelectedLevelKey           = ''
     self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
@@ -180,6 +180,7 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
     levelData.isLevelUnlocked = unlocked
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
         function(api,result)
+            s_DATABASE_MGR.saveDataClassObject(levelData)
         end,
         function(api, code, message, description)
         end)  

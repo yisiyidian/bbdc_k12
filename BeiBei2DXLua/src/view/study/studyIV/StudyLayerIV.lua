@@ -4,7 +4,7 @@ require("Cocos2dConstants")
 require("common.global")
 
 local ProgressBar = require("view.progress.ProgressBar")
-local FlipMat = require("view.mat.FlipMat")
+local TapMat = require("view.mat.TapMat")
 local SoundMark = require("view.study.SoundMark")
 local WordDetailInfo = require("view.study.WordDetailInfo")
 local StudyAlter = require("view.study.StudyAlter")
@@ -30,6 +30,25 @@ function StudyLayerIV.create()
     local sentenceCn = word.sentenceCn
 
     local viewIndex = 1
+    
+    local time = 0
+    local view1_time = 0
+    local view2_time = 0
+    local view3_time = 0
+    local update = function()
+        time = time + 1
+        if viewIndex == 1 then
+            view1_time = view1_time + 1
+        elseif viewIndex == 2 then
+            view2_time = view2_time + 1
+            if view2_time >= 5 then
+                s_CorePlayManager.unfamiliarWord()
+            end
+        elseif viewIndex == 3 then
+            view3_time = view3_time + 1
+        end
+    end
+    schedule(layer,update,1)
 
     local button_changeview
     local button_changeview_clicked
@@ -40,10 +59,7 @@ function StudyLayerIV.create()
     local wordDetailInfo
     local mat
 
-    local fingerClick
-    local newplayerHintBack
     local label_wordmeaningSmall
-    local guideOver = false
     
     local meaning_y1  = 696
     local meaning_y2  = 896
@@ -53,8 +69,8 @@ function StudyLayerIV.create()
     local soundMark_y = -300
     local button_y    = -700
     local mat_y       = 80
-    local detail_x1    = s_DESIGN_WIDTH - 120
-    local detail_x2    = s_DESIGN_WIDTH + 120
+    local detail_x1   = s_DESIGN_WIDTH - 120
+    local detail_x2   = s_DESIGN_WIDTH + 120
     local detail_y    = 900
     
     local backColor = cc.LayerColor:create(cc.c4b(170,205,243,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
@@ -91,6 +107,8 @@ function StudyLayerIV.create()
         if eventType == ccui.TouchEventType.began then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_detail:getRotation() == 0 then
+                s_CorePlayManager.unfamiliarWord()
+                
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 0))
                 mountain:runAction(action1)
 
@@ -167,26 +185,23 @@ function StudyLayerIV.create()
     end
 
     local fail = function()
-    --s_logd("new wrong")
+        s_CorePlayManager.unfamiliarWord()
     end
-    if s_CorePlayManager.newPlayerState then
-        mat = FlipMat.create(wordName,4,4,true)
-    else
-        mat = FlipMat.create(wordName,4,4,false)
-    end
+    
+    mat = TapMat.create(wordName,4,4)
     mat:setPosition(s_DESIGN_WIDTH/2*3, 80)
-    layer:addChild(mat)
-
     mat.success = success
     mat.fail = fail
     mat.rightLock = true
     mat.wrongLock = false
+    layer:addChild(mat)
 
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_changeview:getTitleText() == "去划单词" then
                 button_changeview:setTitleText("再看一次")
+                viewIndex = 3
 
                 local action1 = cc.MoveTo:create(0.5,cc.p(-bigWidth/2, soundMark_y))
                 soundMark:runAction(action1)
@@ -201,7 +216,10 @@ function StudyLayerIV.create()
                 local action5 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
                 layer:runAction(cc.Sequence:create(action4, action5))
             else
+                s_CorePlayManager.unfamiliarWord()
+            
                 button_changeview:setTitleText("去划单词")
+                viewIndex = 2
 
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, soundMark_y))
                 soundMark:runAction(action1)
@@ -230,7 +248,7 @@ function StudyLayerIV.create()
                 
                 button_changeview = ccui.Button:create()
                 button_changeview:setTouchEnabled(true)
-                button_changeview:loadTextures("image/button/button_zhuwanfa_disnaguan_another.png", "", "")
+                button_changeview:loadTextures("image/button/button_zhuwanfa_disnaguan_another.png", "image/button/button_zhuwanfa_disnaguan_another.png", "")
                 button_changeview:setTitleText("去划单词")
                 button_changeview:setTitleFontSize(30)
                 button_changeview:setPosition(bigWidth/2, button_y)
@@ -239,7 +257,7 @@ function StudyLayerIV.create()
 
                 button_detail = ccui.Button:create()
                 button_detail:setTouchEnabled(true)
-                button_detail:loadTextures("image/button/button_zhuwanfa_disnaguan.png", "", "")
+                button_detail:loadTextures("image/button/button_zhuwanfa_disnaguan.png", "image/button/button_zhuwanfa_disnaguan.png", "")
                 button_detail:setPosition(cc.p(detail_x1, detail_y))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backColor:addChild(button_detail)

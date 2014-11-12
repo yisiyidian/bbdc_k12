@@ -51,12 +51,13 @@ function LoadingCircleLayer:ctor()
     self:addChild(self.label_info)
 
     local degree = 0
+    local layer = self
     -- delta time : seconds
     local function update(dt)
-        if self:isVisible() then 
+        if layer:isVisible() then 
             degree = degree + 10 * 30 * dt
             if degree >= 360 then degree = 0 end
-            self.loadingIcon:setRotation(degree)
+            layer.loadingIcon:setRotation(degree)
         end
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
