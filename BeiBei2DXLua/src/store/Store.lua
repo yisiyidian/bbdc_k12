@@ -55,9 +55,8 @@ function Store.buy(onResult)
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         local agent = AgentManager:getInstance()
         local iap_plugin_maps = agent:getIAPPlugin()
+
         for key, value in pairs(iap_plugin_maps) do
-            s_logd("setResultListener key:" .. key)
-            s_logd("setResultListener value: " .. type(value))
             value:setResultListener(onResult)
         end
 
@@ -76,10 +75,12 @@ function Store.buy(onResult)
 
             Server_Id="1"
         }
-        s_logd('payForProduct: ' .. info.Product_Name)
+        print('DDDDDDDDDDDDDDDDDD')
+        print_lua_table(info)
+        print('DDDDDDDDDDDDDDDDDD')
+        print_lua_table(iap_plugin_maps)
+        print('DDDDDDDDDDDDDDDDDD')
         for key, value in pairs(iap_plugin_maps) do
-            s_logd("payForProduct key:" .. key)
-            s_logd("payForProduct value: " .. type(value))
             value:payForProduct(info)
         end
         s_logd('payForProduct: ' .. info.Product_Id)
