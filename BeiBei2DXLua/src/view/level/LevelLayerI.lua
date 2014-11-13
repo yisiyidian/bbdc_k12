@@ -172,7 +172,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
 --            levelButton:addChild(boat)
 --        end
     if  levelData ~= nil and levelData.isLevelUnlocked then  -- test
-        if levelData.stars > 0 then
+        if levelData.stars > 0 and s_CURRENT_USER.currentLevelKey ~= levelData.levelKey then
             self:plotLevelStar(levelButton, levelData.stars)
         end
         if levelConfig['type'] == 1 then
@@ -309,7 +309,7 @@ end
 
 function LevelLayerI:onLevelButtonClicked(levelKey)
     s_CURRENT_USER.currentSelectedLevelKey = levelKey
-    s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey)
+    --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
