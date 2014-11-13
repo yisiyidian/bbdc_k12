@@ -139,5 +139,17 @@ function test()
 --    s_localSqlite.showTable_Word_Prociency()
 --    s_localSqlite.close()
 
---s_STORE.init()    
+    local function onBuyResult( code, msg, info )
+        print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
+    end
+
+    local function onResult( pPlugin, code, msg )
+        print('store login: ' .. tostring(code) .. ', ' .. msg)
+        if code == 2 then
+            s_STORE.buy(onBuyResult)
+        end
+    end
+
+    s_STORE.init()    
+    s_STORE.login(onResult)
 end

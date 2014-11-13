@@ -43,35 +43,32 @@ local function main()
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- |||||||||||||||||||||||||||||||||||||
 -- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-local test_code = 1
---    local IntroLayer = require("popup/PopupEnergyInfo")
---    local introLayer = IntroLayer.create()
---    s_SCENE:replaceGameLayer(introLayer)
+local test_code = 0
 -- *************************************
 if test_code == 0 then
-    local startApp = function ()
-        if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-        else
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create()
-            s_SCENE:replaceGameLayer(introLayer)
-        end
-    end
-    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-        local SplashView = require("view.SplashView")
-        local sv = SplashView.create()
-        s_SCENE:replaceGameLayer(sv)
-        sv:setOnFinished(startApp)
-    else
-        startApp()
-    end
+   local startApp = function ()
+       if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+           s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+       else
+           local IntroLayer = require("view.login.IntroLayer")
+           local introLayer = IntroLayer.create()
+           s_SCENE:replaceGameLayer(introLayer)
+       end
+   end
+   if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+       local SplashView = require("view.SplashView")
+       local sv = SplashView.create()
+       s_SCENE:replaceGameLayer(sv)
+       sv:setOnFinished(startApp)
+   else
+       startApp()
+   end
 else    
-    -- *************************************
-    --for test
-    require("example.example")
-    test()
-    -- *************************************
+   -- *************************************
+   --for test
+   require("example.example")
+   test()
+   -- *************************************
 end
 
 end

@@ -12,6 +12,7 @@ end
 function DataUser:ctor()
     self.className                         = '_User'
     
+    self.localTime                         = 0
     self.serverTime                        = 0
     self.username                          = ''
     self.nickName                          = ''
@@ -54,6 +55,7 @@ function DataUser:ctor()
 
     self.dailyCheckInData                  = {}
     self.levels                            = {}
+    self.logInDatas                        = {}
 end
 
 function DataUser:parseServerData(data)
@@ -86,6 +88,17 @@ function DataUser:parseServerDailyCheckInData(results)
    end 
 end
 
+function DataUser:parseServerDataLogIn(results)
+    local DataDailyCheckIn = require('model.user.DataLogIn')
+   self.logInDatas = {}
+   for i, v in ipairs(results) do
+       local data = DataLogIn.create()
+       parseServerDataToUserData(v, data)
+       self.logInDatas[i] = data
+       print_lua_table(data)
+   end 
+end
+
 -- who I follow
 function DataUser:parseServerFolloweesData(results)
     self.followees = {}
@@ -107,9 +120,10 @@ function DataUser:parseServerFollowersData(results)
 end
 
 function DataUser:getUserLevelData(chapterKey, levelKey)   
-    for i = 1, #self.levels do
-        if self.levels[i].chapterKey == chapterKey and self.levels[i].levelKey == levelKey then
-            return self.levels[i]
+    for i,v in ipairs(self.levels) do
+        s_logd('getUserLevelData: ' .. v.chapterKey .. ', ' .. v.levelKey)
+        if v.chapterKey == chapterKey and v.levelKey == levelKey then
+            return v
         end
     end
     return nil
@@ -165,7 +179,7 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
     end)        
 end
 
-function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
+function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onSucceed, onFailed)
     local levelData = self:getUserLevelData(chapterKey, levelKey)
     if levelData == nil then
         local DataLevel = require('model.user.DataLevel')
@@ -179,10 +193,12 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked)
 
     levelData.isLevelUnlocked = unlocked
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
-        function(api,result)
+        function (api, result)
             s_DATABASE_MGR.saveDataClassObject(levelData)
+            if onSucceed ~= nil then onSucceed(api, result) end
         end,
-        function(api, code, message, description)
+        function (api, code, message, description)
+            if onFailed ~= nil then onFailed(api, code, message, description) end
         end)  
 end
 
