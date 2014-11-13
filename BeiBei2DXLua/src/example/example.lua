@@ -60,14 +60,15 @@ function test()
     -- s_DATA_MANAGER.loadStarRules()
 
     --   -- test -- ziaoang ------------------------------------------------------------------------------------
-    -- s_WordPool = s_DATA_MANAGER.loadAllWords()
-    -- s_CorePlayManager = require("controller.CorePlayManager")
-    -- s_CorePlayManager.create()
-    -- s_CorePlayManager.enterStudyLayer()
+    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_CorePlayManager = require("controller.CorePlayManager")
+    s_CorePlayManager.create()
+--    s_CorePlayManager.enterStudyLayer()
 --    s_CorePlayManager.enterTestLayer()
 --    s_CorePlayManager.enterReviewBossLayer()
 --    s_CorePlayManager.enterIntroLayer()
 --    s_CorePlayManager.enterBookLayer()
+    s_CorePlayManager.enterHomeLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
