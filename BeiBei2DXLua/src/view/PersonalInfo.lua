@@ -19,19 +19,22 @@ function PersonalInfo:ctor()
     local start_y = nil
     local colorArray = {cc.c4b(56,182,236,255 ),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(143,197,46,255 )}
     local titleArray = {'单词掌握统计','单词学习增长','登陆贝贝天数','学习效率统计'}
-    local intro_array = {}
-    for i = 1,4 do
-        
+    self.intro_array = {}
+    
+    local pageView = ccui.PageView:create()
+    pageView:setTouchEnabled(true)
+    pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT))
+    pageView:setPosition(0,0)
+    
+    for i = 1 , 4 do
+        local layout = ccui.Layout:create()
+        layout:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT))
+
         local intro = cc.LayerColor:create(colorArray[5-i], s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
         intro:ignoreAnchorPointForPosition(false)
-        intro:setAnchorPoint(0.5,0.5)
-        if i == 4 then
-            intro:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
-        else
-            intro:setPosition(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT*0.5)
-        end   
-              
-        self:addChild(intro,0,string.format('back%d',i))
+        intro:setAnchorPoint(0.5,0.5) 
+        intro:setPosition(s_DESIGN_WIDTH/2  ,s_DESIGN_HEIGHT/2)
+        layout:addChild(intro,0,string.format('back%d',i))
         if i > 1 then
             local scrollButton = cc.Sprite:create("image/PersonalInfo/scrollHintButton.png")
             scrollButton:setPosition(s_DESIGN_WIDTH/2  ,s_DESIGN_HEIGHT * 0.05)
@@ -39,73 +42,50 @@ function PersonalInfo:ctor()
             intro:addChild(scrollButton)
             local move = cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-20)),cc.MoveBy:create(0.5,cc.p(0,20)))
             scrollButton:runAction(cc.RepeatForever:create(move))
-        
+
         end
         local title = cc.Label:createWithSystemFont(titleArray[5-i],'',36)
         title:setPosition(0.5 * s_DESIGN_WIDTH,0.75 * s_DESIGN_HEIGHT)
         title:setColor(cc.c3b(255,255,255))
         intro:addChild(title)
-        table.insert(intro_array, intro)
-    end
-    
-    self:PLVM()
-    self:PLVI()
-    self:login()
-    self:XXTJ()
-    
-    local onTouchBegan = function(touch, event)
-        local location = self:convertToNodeSpace(touch:getLocation())
-        start_y = location.y
-        moved = false
-        return true
-    end
-    local onTouchMoved = function(touch, event)
-        if moved then
-            return
+        table.insert(self.intro_array, intro)
+
+        pageView:addPage(layout)
+
+    end 
+
+    local function pageViewEvent(sender, eventType)
+        if eventType == ccui.PageViewEventType.turning then
+            local pageView = sender
+            s_logd("page %d " , pageView:getCurPageIndex() + 1)
         end
-        local location = self:convertToNodeSpace(touch:getLocation())
-        local now_y = location.y
-        if now_y - 200 > start_y then
+    end 
 
-            if currentIndex > 1 then
-                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                moved = true
-
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT*1.5))
-                intro_array[currentIndex]:runAction(action1)
-
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                intro_array[currentIndex-1]:runAction(cc.Sequence:create(action2, action3))
-
-                currentIndex = currentIndex - 1 
-                
-           
+    pageView:addEventListener(pageViewEvent)
+    self:addChild(pageView)
+    local lastPage = -1
+    local function update(delta)
+        local curPage = pageView:getCurPageIndex()
+        
+        if curPage ~= lastPage then
+            s_logd("%d,%d",lastPage,curPage)
+            if lastPage >= 0 then
+                self.intro_array[curPage+1]:removeAllChildren()
             end
-        elseif now_y + 200 < start_y then
-            if currentIndex < 4 then
-                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                moved = true
-
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT/2))
-                intro_array[currentIndex]:runAction(action1)
-
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                intro_array[currentIndex+1]:runAction(cc.Sequence:create(action2, action3))
-
-                currentIndex = currentIndex + 1
-              
-  
+            lastPage = curPage
+            if curPage == 3 then
+                self:PLVM() 
+            elseif curPage == 2 then
+                self:PLVI()
+            elseif curPage == 1 then
+                self:login()
+            else
+                self:XXTJ()
             end
         end
     end
-
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
-    local eventDispatcher = self:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+    self:scheduleUpdateWithPriorityLua(update, 0)
+    
 end
 
 function PersonalInfo:initHead()
@@ -145,26 +125,14 @@ function PersonalInfo:initHead()
     label_study:setPosition(0.5 * back_color:getContentSize().width,0.5 * back_color:getContentSize().height)
     label_study:setLocalZOrder(2)
     back_color:addChild(label_study)
-
-    --    local back_Button = cc.MenuItemImage("image/PersonalInfo/backButtonInPersonalInfo.png",
-    --        "image/PersonalInfo/backButtonInPersonalInfo.png","image/PersonalInfo/backButtonInPersonalInfo.png")
-    --    back_Button:setPosition(0,0)
-    --    back_Button:setLocalZOrder(1)
-    --    
-    --    local menu = cc.Menu:create()
-    --    menu:addChild(back_Button)
-    --    
-    --    local s = cc.Director:getInstance():getWinSize()
-    --    menu:setPosition(cc.p(s.width/2, s.height/2))
-    --
-    --    self.addChild(menu)
+    
 end
 
 function PersonalInfo:PLVM()
     local updateTime = 0
     local learnPercent = 0.6
     local masterPercent = 0.5
-    local back = self:getChildByName('back4')
+    local back = self.intro_array[4]
     local circleBack = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_white.png')
     circleBack:setPosition(0.5 * s_DESIGN_WIDTH,0.42 * s_DESIGN_HEIGHT)
     back:addChild(circleBack)
@@ -262,7 +230,7 @@ function PersonalInfo:PLVM()
 end
 
 function PersonalInfo:PLVI()
-    local back = self:getChildByName('back3')
+    local back = self.intro_array[3]
     
     local dayCount = 18
     
@@ -345,11 +313,11 @@ function PersonalInfo:PLVI()
                 line:setPercentage(0)
                 line:setMidpoint(cc.p(0,0))
                 line:setBarChangeRate(cc.p(1,0))
-                local to = cc.ProgressTo:create(length[i] / 200, 100)
+                local to = cc.ProgressTo:create(length[i] / 500, 100)
                 local delayTime = 0
                 if i > 1 then
                     for j = 1,i - 1 do
-                	   delayTime = delayTime + length[j] / 200
+                	   delayTime = delayTime + length[j] / 500
                     end
                 end
                 
@@ -553,10 +521,12 @@ function PersonalInfo:PLVI()
 end
 
 function PersonalInfo:login()
-    local back = self:getChildByName('back2')
+    local back = self.intro_array[2]
+    local loginData = s_CURRENT_USER.logInDatas
+    
     math.randomseed(os.time()) 
     local loginArray = {}
-    local weekCount = 8
+    local weekCount = #loginData
     local totalDay = 0
     local weekDay = {}
     local isWeek = tonumber(os.date('%w',os.time()),10)
@@ -566,10 +536,10 @@ function PersonalInfo:login()
     end
     local firstDate = lastDate - 6 * 24 * 3600
     for i = 1 , weekCount do 
-        loginArray[i] = {}
+        loginArray[i] = loginData[i]:getDays()
         weekDay[i] = 0
         for j = 1,7 do
-            loginArray[i][j] = math.random(0,1)
+            --loginArray[i][j] = math.random(0,1)
             if loginArray[i][j] == 1 then
                 totalDay = totalDay + 1
                 weekDay[i] = weekDay[i] + 1
@@ -776,7 +746,7 @@ function PersonalInfo:XXTJ()
    local totalWord = 1000
    local wordFinished = 100
    local dayToFinish = 0
-   local back = self:getChildByName('back1')
+    local back = self.intro_array[1]
    local positionX =  0.5 * s_DESIGN_WIDTH + 150
    -- > 99(mark 1) or not (mark 0)
    local mark = 0
@@ -906,7 +876,7 @@ function PersonalInfo:XXTJ()
                  label_dayToFinish:setString(math.ceil(99 - (99 -dayToFinish ) / 100 * i))
              end
              if i >= 100 then
-             self:unscheduleUpdate()           
+                back:unscheduleUpdate()           
              end
         else
             label_everydayWord:setString(i / 5)
@@ -915,7 +885,7 @@ function PersonalInfo:XXTJ()
                 end
             if i / 5 == everydayWord then
                 label_dayToFinish:setString(dayToFinish)
-                self:unscheduleUpdate()           
+                back:unscheduleUpdate()           
             end
         end
         
@@ -924,7 +894,7 @@ function PersonalInfo:XXTJ()
     end
     
 
-    self:scheduleUpdateWithPriorityLua(update, 0)
+    back:scheduleUpdateWithPriorityLua(update, 0)
 
     
 	

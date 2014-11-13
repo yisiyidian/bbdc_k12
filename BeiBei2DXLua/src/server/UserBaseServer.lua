@@ -253,6 +253,12 @@ end
 
 ----
 
+function UserBaseServer.getDataLogIn(userId, week, onSucceed, onFailed)
+    s_SERVER.search('classes/WMAV_LogInDateData?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
+end
+
+----
+
 --[[
 s_UserBaseServer.getLevelsOfCurrentUser(
     function (api, result)
