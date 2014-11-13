@@ -522,9 +522,11 @@ end
 
 function PersonalInfo:login()
     local back = self.intro_array[2]
+    local loginData = s_CURRENT_USER.logInDatas
+    
     math.randomseed(os.time()) 
     local loginArray = {}
-    local weekCount = 8
+    local weekCount = #loginData
     local totalDay = 0
     local weekDay = {}
     local isWeek = tonumber(os.date('%w',os.time()),10)
@@ -534,10 +536,10 @@ function PersonalInfo:login()
     end
     local firstDate = lastDate - 6 * 24 * 3600
     for i = 1 , weekCount do 
-        loginArray[i] = {}
+        loginArray[i] = loginData[i]:getDays()
         weekDay[i] = 0
         for j = 1,7 do
-            loginArray[i][j] = math.random(0,1)
+            --loginArray[i][j] = math.random(0,1)
             if loginArray[i][j] == 1 then
                 totalDay = totalDay + 1
                 weekDay[i] = weekDay[i] + 1
