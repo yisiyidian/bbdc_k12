@@ -14,7 +14,7 @@ function DataIAP:ctor()
     
     self.pid = ''
     self.paymentInfo = 0
-    self.isSucceed = false
+    self.isSucceed = 0
 end
 
 return DataIAP

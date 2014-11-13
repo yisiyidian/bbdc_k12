@@ -16,9 +16,9 @@ function DataLevel:ctor()
 --    self.chapterIndex = 0
     self.levelKey = ''
 --    self.levelIndex = 0
-    self.isLevelUnlocked = false
-    self.isPlayed = false
-    self.isPassed = false
+    self.isLevelUnlocked = 0
+    self.isPlayed = 0
+    self.isPassed = 0
     self.stars = 0
 --    self.hearts = 0
     self.bookKey = ''

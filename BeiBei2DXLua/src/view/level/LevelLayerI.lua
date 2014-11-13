@@ -308,6 +308,7 @@ end
 
 
 function LevelLayerI:onLevelButtonClicked(levelKey)
+    s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
