@@ -12,6 +12,7 @@ end
 function DataUser:ctor()
     self.className                         = '_User'
     
+    self.localTime                         = 0
     self.serverTime                        = 0
     self.username                          = ''
     self.nickName                          = ''
@@ -54,6 +55,7 @@ function DataUser:ctor()
 
     self.dailyCheckInData                  = {}
     self.levels                            = {}
+    self.logInDatas                        = {}
 end
 
 function DataUser:parseServerData(data)
@@ -82,6 +84,17 @@ function DataUser:parseServerDailyCheckInData(results)
        local data = DataDailyCheckIn.create()
        parseServerDataToUserData(v, data)
        self.dailyCheckInData[i] = data
+       print_lua_table(data)
+   end 
+end
+
+function DataUser:parseServerDataLogIn(results)
+    local DataDailyCheckIn = require('model.user.DataLogIn')
+   self.logInDatas = {}
+   for i, v in ipairs(results) do
+       local data = DataLogIn.create()
+       parseServerDataToUserData(v, data)
+       self.logInDatas[i] = data
        print_lua_table(data)
    end 
 end

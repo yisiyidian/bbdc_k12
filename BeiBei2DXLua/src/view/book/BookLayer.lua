@@ -51,14 +51,14 @@ function BookLayer.create()
                     s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
                         function (api, result)
                             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
-                            function (api, result)
-                                s_CorePlayManager.enterHomeLayer()
-                                s_LOADING_CIRCLE_LAYER:hide()
-                            end,
-                            function (api, code, message, description)
-                                s_TIPS_LAYER:showSmall(message)
-                                s_LOADING_CIRCLE_LAYER:hide()
-                            end)
+                                function (api, result)
+                                    s_CorePlayManager.enterHomeLayer()
+                                    s_LOADING_CIRCLE_LAYER:hide()
+                                end,
+                                function (api, code, message, description)
+                                    s_TIPS_LAYER:showSmall(message)
+                                    s_LOADING_CIRCLE_LAYER:hide()
+                                end)
                         end,
                         function (api, code, message, description)
                             s_TIPS_LAYER:showSmall(message)

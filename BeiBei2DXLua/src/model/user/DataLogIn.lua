@@ -22,4 +22,34 @@ function DataLogIn:ctor()
     self.week = 0
 end
 
+-- first day is Sunday
+function getWeekDay(secondsFrom1970)
+    local dd = os.date("*t", secondsFrom1970)
+    return dd.wday
+end
+
+function getCurrentLogInWeek(offsetSeconds_1stPlay_now)
+    local ret = offsetSeconds_1stPlay_now / 7 * 24 * 60 * 60.0
+    return math.ceil(ret)
+end
+
+function DataLogIn:setWeekDay(secondsFrom1970)
+    local wd = getWeekDay(secondsFrom1970)
+    if wd == 1 then
+        self.Sunday = 1
+    elseif wd == 2 then
+        self.Monday = 1
+    elseif wd == 3 then
+        self.Tuesday = 1
+    elseif wd == 4 then
+        self.Wednesday = 1
+    elseif wd == 5 then
+        self.Thursday = 1
+    elseif wd == 6 then
+        self.Friday = 1
+    elseif wd == 7 then
+        self.Saturday = 1
+    end
+end
+
 return DataLogIn
