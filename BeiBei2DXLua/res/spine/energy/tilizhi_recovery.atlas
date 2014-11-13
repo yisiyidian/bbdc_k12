@@ -1,0 +1,13 @@
+
+tilizhi_recovery.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tilizih_2
+  rotate: false
+  xy: 2, 20
+  size: 129, 111
+  orig: 129, 111
+  offset: 0, 0
+  index: -1

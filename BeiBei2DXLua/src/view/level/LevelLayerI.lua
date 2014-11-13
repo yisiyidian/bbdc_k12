@@ -172,7 +172,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
 --            levelButton:addChild(boat)
 --        end
     if  levelData ~= nil and levelData.isLevelUnlocked then  -- test
-        if levelData.stars > 0 then
+        if levelData.stars > 0 and s_CURRENT_USER.currentLevelKey ~= levelData.levelKey then
             self:plotLevelStar(levelButton, levelData.stars)
         end
         if levelConfig['type'] == 1 then
@@ -257,7 +257,7 @@ function LevelLayerI:ctor()
             -- change button image
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
             if string.format('%s',levelConfig[i]['type']) == '1' then
-                if s_CURRENT_USER:isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
+                if s_CURRENT_USER:getIsLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     self:plotLevelDecoration(levelConfig[i]['level_key'])
                     levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
                     levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
@@ -273,7 +273,7 @@ function LevelLayerI:ctor()
                     levelButton:addChild(lockSprite)
                 end
             else                 
-                if  s_CURRENT_USER:isLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then  
+                if  s_CURRENT_USER:getIsLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then  
                     self:plotLevelDecoration(levelConfig[i]['level_key'])
                 else       
                     local lockLayer = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_locked.png')
@@ -308,7 +308,8 @@ end
 
 
 function LevelLayerI:onLevelButtonClicked(levelKey)
-    s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey)
+    s_CURRENT_USER.currentSelectedLevelKey = levelKey
+    --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)

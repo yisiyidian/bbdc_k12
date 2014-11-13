@@ -98,7 +98,12 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    --print('-------- before levave~~~~~~~~~~')
+    --print('current:'..s_CURRENT_USER.currentLevelKey..', selected:'..s_CURRENT_USER.currentSelectedLevelKey)
+    if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.currentSelectedLevelKey then
+        s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    end
+    s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
     CorePlayManager.enterLevelLayer()
 end
 
@@ -156,8 +161,10 @@ function CorePlayManager.enterHomeLayer()
 end
 
 function CorePlayManager.enterLevelLayer()
+    print('!!------------------------!!')
+    
     local levelLayer = LevelLayer.create()
-
+    
     
     s_SCENE:replaceGameLayer(levelLayer)
 end
