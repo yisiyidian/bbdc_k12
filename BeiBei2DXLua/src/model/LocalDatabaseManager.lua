@@ -136,6 +136,8 @@ end
 
 -- if record exists then update record
 -- else create record
+--
+-- ALTER TABLE table_name ADD column_name datatype
 function Manager.saveDataClassObject(objectOfDataClass)
     local num = 0
     for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'") do

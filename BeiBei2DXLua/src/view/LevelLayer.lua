@@ -17,7 +17,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    --s_SCENE.levelLayerState = s_normal_level_state
+    --s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -49,11 +49,11 @@ function LevelLayer:levelStateManager()
         levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
         
         -- save and update level data
-        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
-        --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
         -- plot unlock next level animation
-        levelLayerI:plotUnlockNextLevelAnimation()
+        levelLayerI:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
         -- plot player animation
         s_SCENE:callFuncWithDelay(1.3,function()
             local targetPosition = levelLayerI:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
@@ -63,7 +63,7 @@ function LevelLayer:levelStateManager()
         
         -- update level state and plot popup(call on level button clicked)
         if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
-            s_SCENE:callFuncWithDelay(4,function()
+            s_SCENE:callFuncWithDelay(3,function()
                 levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
             end)
         end
@@ -82,9 +82,9 @@ function LevelLayer:levelStateManager()
      elseif s_SCENE.levelLayerState == s_review_boss_pass_state then
 
         -- save and update level data
-        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
-        --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
         -- plot unlock level animation
         levelLayerI:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
         -- plot player animation
@@ -96,7 +96,7 @@ function LevelLayer:levelStateManager()
 
         -- update level state and plot popup(call on level button clicked)
         if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
-            s_SCENE:callFuncWithDelay(4,function()
+            s_SCENE:callFuncWithDelay(3,function()
                 levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
             end)
         end
@@ -135,7 +135,7 @@ function LevelLayer:ctor()
     if nil ~= scrollViewNode then
         local fullWidth = levelLayerI:getContentSize().width
         scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
-
+        --scrollViewNode:scrollToPercentVertical(15,0,false)
         scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
         scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
         scrollViewNode:addChild(levelLayerI) 

@@ -154,7 +154,6 @@ function AppScene:signUp(username, password)
             s_LOADING_CIRCLE_LAYER:hide()
         else
             s_SCENE:gotoChooseBook()
-            s_LOADING_CIRCLE_LAYER:hide()
         end
     end
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
@@ -169,7 +168,6 @@ function AppScene:logIn(username, password)
         else
             if s_CURRENT_USER.bookKey == '' then
                 s_SCENE:gotoChooseBook()
-                s_LOADING_CIRCLE_LAYER:hide()
             else
                 s_SCENE:getDailyCheckIn()
             end
@@ -226,11 +224,9 @@ function AppScene:getLevels()
         function (api, result)
             s_CURRENT_USER:parseServerLevelData(result.results)
             self:onUserServerDatasCompleted()            
-            s_LOADING_CIRCLE_LAYER:hide()
         end,
         function (api, code, message, description)
             self:onUserServerDatasCompleted()
-            s_LOADING_CIRCLE_LAYER:hide()
         end
     )
 end
@@ -249,18 +245,63 @@ function AppScene:loadConfigs()
     s_CorePlayManager.create()
 end
 
+function AppScene:saveSignUpAndLogInData(onSaved)
+    self:loadConfigs()
+
+    local DataLogIn = require('model/user/DataLogIn')
+    local function updateWeek(data, week)
+        if data == nil then 
+            data = DataLogIn.create()
+        end
+        data.week = week
+        data:setWeekDay(os.time())
+        s_DATABASE_MGR.saveDataClassObject(data)
+        s_UserBaseServer.saveDataObjectOfCurrentUser(data, 
+            function (api, result)
+                onSaved()
+                s_LOADING_CIRCLE_LAYER:hide()
+            end,
+            function (api, code, message, description)
+                onSaved()
+                s_LOADING_CIRCLE_LAYER:hide()
+            end)
+    end
+
+    if s_CURRENT_USER.localTime == 0 then
+        s_CURRENT_USER.localTime = os.time()
+        updateWeek(nil, 1)
+    else
+        local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
+        s_UserBaseServer.getDataLogIn(s_CURRENT_USER.objectId, currentWeeks,
+            function (api, result)
+                s_CURRENT_USER:parseServerDataLogIn(result.results)
+                if #(result.results) <= 0 then
+                    updateWeek(nil, currentWeeks)
+                else
+                    local data = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+                    updateWeek(data, data.week)
+                end
+            end,
+            function (api, code, message, description)
+                onSaved()
+                s_LOADING_CIRCLE_LAYER:hide()
+            end)
+    end
+end
 
 -- no book key
 function AppScene:gotoChooseBook()
-    self:loadConfigs()
-    s_CorePlayManager.enterBookLayer()
+    self:saveSignUpAndLogInData(function ()
+        s_CorePlayManager.enterBookLayer()
+    end)
 end
 
 -- with book key
 function AppScene:onUserServerDatasCompleted()    
-    self:loadConfigs()
-    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-    s_CorePlayManager.enterHomeLayer()
+    self:saveSignUpAndLogInData(function ()
+        s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+        s_CorePlayManager.enterHomeLayer()
+    end)
 end
 
 return AppScene
