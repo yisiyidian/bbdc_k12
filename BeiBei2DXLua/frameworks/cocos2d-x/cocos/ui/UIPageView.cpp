@@ -31,7 +31,7 @@ namespace ui {
 IMPLEMENT_CLASS_GUI_INFO(PageView)
 
 PageView::PageView():
-_curPageIdx(0),
+_curPageIdx(100),
 _touchMoveDirection(TouchDirection::LEFT),
 _leftBoundaryChild(nullptr),
 _rightBoundaryChild(nullptr),
@@ -381,8 +381,10 @@ void PageView::movePages(float offset)
 {
     for (auto& page : this->getPages())
     {
+        //printf("before = %f %f",page->getPositionX(),page->getPositionY());
         page->setPosition(Vec2(page->getPosition().x ,
                                page->getPosition().y + offset));
+        //printf("before = %f %f",page->getPositionX(),page->getPositionY());
     }
 }
 
@@ -404,9 +406,9 @@ bool PageView::scrollPages(float touchOffset)
     {
         case TouchDirection::LEFT: // left
 
-            if (_rightBoundaryChild->getRightBoundary() + touchOffset <= _rightBoundary)
+            if (_rightBoundaryChild->getTopBoundary() + touchOffset <= _rightBoundary)
             {
-                realOffset = _rightBoundary - _rightBoundaryChild->getRightBoundary();
+                realOffset = _rightBoundary - _rightBoundaryChild->getTopBoundary();
                 movePages(realOffset);
                 return false;
             }
@@ -414,9 +416,9 @@ bool PageView::scrollPages(float touchOffset)
             
         case TouchDirection::RIGHT: // right
 
-            if (_leftBoundaryChild->getLeftBoundary() + touchOffset >= _leftBoundary)
+            if (_leftBoundaryChild->getBottomBoundary() + touchOffset >= _leftBoundary)
             {
-                realOffset = _leftBoundary - _leftBoundaryChild->getLeftBoundary();
+                realOffset = _leftBoundary - _leftBoundaryChild->getBottomBoundary();
                 movePages(realOffset);
                 return false;
             }
