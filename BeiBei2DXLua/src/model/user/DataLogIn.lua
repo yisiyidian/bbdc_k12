@@ -52,4 +52,14 @@ function DataLogIn:setWeekDay(secondsFrom1970)
     end
 end
 
+function DataLogIn:getDays()
+    return {self.Monday,
+    self.Tuesday,
+    self.Wednesday,
+    self.Thursday,
+    self.Friday,
+    self.Saturday,
+    self.Sunday}
+end
+
 return DataLogIn

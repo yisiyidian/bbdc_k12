@@ -98,7 +98,10 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.selectedLevelKey then
+        s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    end
+    s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.chapterKey,s_CURRENT_USER.levelKey,2)
     CorePlayManager.enterLevelLayer()
 end
 
@@ -157,7 +160,7 @@ end
 
 function CorePlayManager.enterLevelLayer()
     local levelLayer = LevelLayer.create()
-
+    
     
     s_SCENE:replaceGameLayer(levelLayer)
 end

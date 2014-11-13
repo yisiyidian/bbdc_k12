@@ -49,11 +49,11 @@ function LevelLayer:levelStateManager()
         levelLayerI:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
         
         -- save and update level data
-        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
-        --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
         -- plot unlock next level animation
-        levelLayerI:plotUnlockNextLevelAnimation()
+        levelLayerI:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
         -- plot player animation
         s_SCENE:callFuncWithDelay(1.3,function()
             local targetPosition = levelLayerI:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
@@ -82,9 +82,9 @@ function LevelLayer:levelStateManager()
      elseif s_SCENE.levelLayerState == s_review_boss_pass_state then
 
         -- save and update level data
-        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
-        --s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
         -- plot unlock level animation
         levelLayerI:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
         -- plot player animation
