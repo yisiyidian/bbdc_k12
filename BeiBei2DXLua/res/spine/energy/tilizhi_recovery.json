@@ -1,0 +1,36 @@
+{
+"skeleton": {
+	"hash": "shmtpUnFAkuhnATj2NAWBA4/YP8",
+	"spine": "2.0.22",
+	"width": 151.87,
+	"height": 130.67,
+	"images": "/Users/wangsiyu/Desktop/ /单词游戏/体力值动画"
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "tilizih_2", "bone": "root", "attachment": "tilizih_2" }
+],
+"skins": {
+	"default": {
+		"tilizih_2": {
+			"tilizih_2": { "width": 129, "height": 111 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"root": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1666, "x": 1.18, "y": 1.18 },
+					{ "time": 0.6666, "x": 1.05, "y": 1.05 },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

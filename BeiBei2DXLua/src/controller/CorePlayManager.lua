@@ -98,7 +98,9 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.selectedLevelKey then
+    --print('-------- before levave~~~~~~~~~~')
+    --print('current:'..s_CURRENT_USER.currentLevelKey..', selected:'..s_CURRENT_USER.currentSelectedLevelKey)
+    if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.currentSelectedLevelKey then
         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     end
     s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
