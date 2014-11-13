@@ -10,35 +10,45 @@ function RightTopNode.create()
     return layer
 end
 
+local introLayer
+
 function RightTopNode:ctor()
-    local heartNumber = 4
+    local heartNumber = 2
     local heartShow = ""
     local starNumber = 1
 
-    -- click
+       
+    -- heart info     
+--    local IntroLayer = require("popup/PopupEnergyInfo")
+--    local introLayer = IntroLayer.create()  
+
 
     local click_star = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-        ----      print(string.format("click_star"))
-
-        --           s_TIPS_LAYER:showSmall("click_star", affirm)
+--            local IntroLayer = require("popup/PopupStarInfo")
+--            local introLayer = IntroLayer.create()  
+--            s_SCENE:popup(introLayer)
         end
     end
 
     local click_heart = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            --       print(string.format("click_heart"))
-            -- test timer
-            heartNumber = heartNumber - 1
+            -- click
 
-            s_TIPS_LAYER:showSmall(heartNumber, affirm)
+            local IntroLayer = require("popup/PopupEnergyInfo")
+            introLayer = IntroLayer.create()  
+            s_SCENE:popup(introLayer)
+
+            local action1 = cc.MoveTo:create(0.3, cc.p(0,-300))          
+            introLayer:runAction(action1)
+            
+
         end 
     end
 
     local click_word = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then    
-            ----       print(string.format("click_word"))
-            s_TIPS_LAYER:showSmall("click_word", affirm)
+
         end
     end
 
@@ -77,7 +87,7 @@ function RightTopNode:ctor()
     wordAday:addTouchEventListener(click_word)
     wordAday:ignoreAnchorPointForPosition(false)
     wordAday:setAnchorPoint(1,0.5)
-    wordAday:setPosition(s_RIGHT_X - 18 , s_DESIGN_HEIGHT - 230 )
+    wordAday:setPosition(s_RIGHT_X - 15 , s_DESIGN_HEIGHT - 230 )
     wordAday:setLocalZOrder(1)
     wordAday:setScale(0.5);
     self:addChild(wordAday)
@@ -96,7 +106,7 @@ function RightTopNode:ctor()
     wordAday_back:runAction(cc.RepeatForever:create(action))
 
 
-    if heartNumber == 4 then
+    if heartNumber >= 4 then
         heartShow = "full"
     end
 
@@ -127,7 +137,19 @@ function RightTopNode:ctor()
             sec = sec - delta
             heartShow = min..":"..string.format("%d",sec)
             label_heart:setString(heartShow)
+            heartExist:setString(heartNumber)
+            
+            -- update data
+            introLayer.ccbPopupEnergyInfo['energyNumber']:setString(string.format(min)..':'..string.format("%d",sec))
+            introLayer.ccbPopupEnergyInfo['energy_number'] = heartNumber
+            local animation = introLayer.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
+            local label = animation:getChildByName("energyNumber")
+            label:setString(heartNumber)
+            
 
+
+
+            
             if sec <= 0 then
                 sec = 59
                 min = min - 1
@@ -137,7 +159,8 @@ function RightTopNode:ctor()
                 min = 29
                 heartNumber = heartNumber + 1
             end
-        elseif heartNumber == 4 then
+            
+        elseif heartNumber >= 4 then
             label_heart:setString("full" )
         end
     end
