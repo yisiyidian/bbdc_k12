@@ -17,7 +17,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    --s_SCENE.levelLayerState = s_normal_level_state
+    --s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -63,7 +63,7 @@ function LevelLayer:levelStateManager()
         
         -- update level state and plot popup(call on level button clicked)
         if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
-            s_SCENE:callFuncWithDelay(4,function()
+            s_SCENE:callFuncWithDelay(3,function()
                 levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
             end)
         end
@@ -96,7 +96,7 @@ function LevelLayer:levelStateManager()
 
         -- update level state and plot popup(call on level button clicked)
         if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
-            s_SCENE:callFuncWithDelay(4,function()
+            s_SCENE:callFuncWithDelay(3,function()
                 levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
             end)
         end
@@ -135,7 +135,7 @@ function LevelLayer:ctor()
     if nil ~= scrollViewNode then
         local fullWidth = levelLayerI:getContentSize().width
         scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
-
+        --scrollViewNode:scrollToPercentVertical(15,0,false)
         scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
         scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
         scrollViewNode:addChild(levelLayerI) 

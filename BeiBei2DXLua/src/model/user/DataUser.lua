@@ -168,8 +168,8 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         --print_lua_table(levelData)
         table.insert(self.levels,levelData)
     end
-    
-    
+    print('!!!!!!!!!!!!!!')
+    print_lua_table(levelData)
     levelData.stars = stars
     --levelData.hearts = stars
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
@@ -202,7 +202,7 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
         end)  
 end
 
-function DataUser:isLevelUnlocked(chapterKey, levelKey) 
+function DataUser:getIsLevelUnlocked(chapterKey, levelKey) 
     local levelData = self:getUserLevelData(chapterKey, levelKey)
     if levelData == nil then
         return false
