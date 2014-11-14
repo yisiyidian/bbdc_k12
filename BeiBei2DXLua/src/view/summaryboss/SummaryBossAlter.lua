@@ -124,10 +124,10 @@ function SummaryBossAlter:lose2()
 end
 
 function SummaryBossAlter:win1()
-    local levelData = self:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectLevelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
     local isPassed = levelData.isPassed
     if isPassed == 0 then
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectLevelKey,3)
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
     end
     self.winBoard = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
     self.winBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
