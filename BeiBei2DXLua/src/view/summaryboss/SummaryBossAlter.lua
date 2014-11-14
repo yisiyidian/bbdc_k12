@@ -11,7 +11,7 @@ function SummaryBossAlter.create(win)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     if win then
-        layer:win()
+        layer:win1()
     else
         layer:lose()
     end
@@ -123,7 +123,7 @@ function SummaryBossAlter:lose2()
     
 end
 
-function SummaryBossAlter:win()
+function SummaryBossAlter:win1()
     local levelData = self:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectLevelKey)
     local isPassed = levelData.isPassed
     if isPassed == 0 then
