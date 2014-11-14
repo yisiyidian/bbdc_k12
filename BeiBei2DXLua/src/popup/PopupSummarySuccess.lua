@@ -56,7 +56,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
     local summaryboss = require('view/summaryboss/SummaryBossLayer')
     local layer = summaryboss.create(levelConfig)
     layer:setAnchorPoint(0.5,0)
-    s_SCENE:popup(layer)
+    s_SCENE:replaceGameLayer(layer)
 end
 
 return PopupSummarySuccess

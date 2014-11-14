@@ -1,6 +1,5 @@
 require "common.global"
 
-
 local StudyLayer            = require("view.study.studyI.StudyLayer")
 local StudyLayerII          = require("view.study.studyII.StudyLayerII")
 local StudyLayerIII         = require("view.study.studyIII.StudyLayerIII")
@@ -25,23 +24,7 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.loadConfiguration()
-    CorePlayManager.wordList = {"apple","pear","water","day"}
-    CorePlayManager.currentWordIndex = 1
-    CorePlayManager.currentWord = nil
     
-    CorePlayManager.answerStateRecord = {}
-    CorePlayManager.wordProficiency = {}
-    for i = 1, #CorePlayManager.wordList do
-        CorePlayManager.answerStateRecord[i] = 0    -- 0 for answer wrong and 1 for answer right
-        CorePlayManager.wordProficiency[i]   = 1    -- 0 for unfamiliar word and 1 for familiar word
-    end
-
-    CorePlayManager.currentScore = 0
-    CorePlayManager.currentRatio = 0
-
-    CorePlayManager.newPlayerState = false
-    CorePlayManager.replayWrongWordState = false
-    CorePlayManager.wrongWordList = {}
     
     -- reviewboss scene variate
     CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
@@ -66,6 +49,8 @@ function CorePlayManager.initStudyTestState()
     CorePlayManager.newPlayerState = false
     CorePlayManager.replayWrongWordState = false
     CorePlayManager.wrongWordList = {}
+    
+    CorePlayManager.buttonListState = -1
 end
 
 function CorePlayManager.enterStudyLayer()
@@ -121,12 +106,13 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    --s_logd('-------- before levave~~~~~~~~~~')
-    --s_logd('current:'..s_CURRENT_USER.currentLevelKey..', selected:'..s_CURRENT_USER.currentSelectedLevelKey)
     if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.currentSelectedLevelKey then
         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     end
-    --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentcurrentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+    CorePlayManager.enterLevelLayer()
+end
+
+function CorePlayManager.leaveTestLayer_replay()
     CorePlayManager.enterLevelLayer()
 end
 

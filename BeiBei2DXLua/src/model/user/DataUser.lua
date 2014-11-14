@@ -184,7 +184,9 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         print('-------- after insert table -----')
         print_lua_table(levelData)
     end
-    levelData.stars = stars
+    if levelData.stars < stars then
+        levelData.stars = stars
+    end
     if levelData.stars > 0 then
         levelData.isPassed = 1
     end
@@ -231,7 +233,7 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
         print_lua_table(levelData)
         table.insert(self.levels,levelData)
         print('-------- after insert table -----')
-        print_lua_table(levels)
+        print_lua_table(self.levels)
     end
 
     levelData.isLevelUnlocked = unlocked
