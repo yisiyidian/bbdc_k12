@@ -30,7 +30,6 @@ function PopupNormalLevel:plotStar(node, starCount)
         star3 = cc.Sprite:create('image/chapter_level/yellowStar.png')
     end
     
-    
     star1:setPosition(node:getContentSize().width*0.3, node:getContentSize().height*0.67)
     star2:setPosition(node:getContentSize().width*0.5, node:getContentSize().height*0.71)
     star3:setPosition(node:getContentSize().width*0.7, node:getContentSize().height*0.67)
@@ -103,6 +102,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
 
+    s_CorePlayManager.initStudyTestState()
     s_CorePlayManager.enterStudyLayer()
 end
 
@@ -110,6 +110,13 @@ function PopupNormalLevel:onTestButtonClicked()
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
     
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    print(levelConfig.word_content)
+
+    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+
+    s_CorePlayManager.initStudyTestState()
+    s_CorePlayManager.enterTestLayer()
 end
 
 return PopupNormalLevel

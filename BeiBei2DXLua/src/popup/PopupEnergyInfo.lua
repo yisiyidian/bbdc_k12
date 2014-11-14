@@ -12,12 +12,12 @@ end
 function PopupEnergyInfo:ctor(heartNumber)
 
     self.energy_number = heartNumber
-
+    
     
     local json = ''
     local atlas = ''
-    local min = 29
-    local sec = 59
+--    local min = time_betweenServerAndEnergy / 60
+--    local sec = time_betweenServerAndEnergy % 60
   --  print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
      self.ccbPopupEnergyInfo = {}
         
@@ -46,7 +46,7 @@ function PopupEnergyInfo:ctor(heartNumber)
     local node = CCBReaderLoad('res/ccb/righttopnode_heart.ccbi', proxy, self.ccbPopupEnergyInfo, self.ccb)
     self.ccbPopupEnergyInfo['title']:setString('贝贝的体力正在恢复！')
     self.ccbPopupEnergyInfo['subtitle']:setString('复习以前的关卡不耗费体力')
-    self.ccbPopupEnergyInfo['energyNumber']:setString(string.format(min)..':'..string.format(sec))
+    self.ccbPopupEnergyInfo['energyNumber']:setString("123")
     self.ccbPopupEnergyInfo['energyNumber']:setScale(2)
     node:setPosition(0,600)
     self:addChild(node)
@@ -101,6 +101,7 @@ function PopupEnergyInfo:onBuyButtonClicked()
 --    self:runAction(action1)  
     local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
     self:runAction(action1) 
+
  
     s_SCENE:callFuncWithDelay(0.3,function()
         local IntroLayer = require("popup/PopupEnergyBuy")
