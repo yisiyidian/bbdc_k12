@@ -58,7 +58,7 @@ function PopupNormalLevel:ctor(levelKey)
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
     node:setPosition(0,200)
-    
+    --s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,levelKey,1)
     -- plot stars
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     
@@ -80,6 +80,12 @@ function PopupNormalLevel:ctor(levelKey)
     girl_hello:addAnimation(0, 'animation', true)
     node:addChild(girl_hello, 5)
     
+    -- change the test button
+    if levelData.isPlayed == 1 then
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('res/ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_NORMAL)
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_HIGH_LIGHTED)
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_SELECTED)
+    end
     self:addChild(node)
 end
 
@@ -103,7 +109,6 @@ end
 function PopupNormalLevel:onTestButtonClicked()
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
-    
     
 end
 
