@@ -175,6 +175,9 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.stars = stars
+        if levelData.stars > 0 then
+            levelData.isPassed = 1
+        end
         print('------ before insert table-----')
         print_lua_table(levelData)
         table.insert(self.levels,levelData)
@@ -182,6 +185,9 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         print_lua_table(levelData)
     end
     levelData.stars = stars
+    if levelData.stars > 0 then
+        levelData.isPassed = 1
+    end
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
     function(api,result)
     end,
@@ -211,7 +217,6 @@ function DataUser:setUserLevelDataOfIsPlayed(chapterKey, levelKey, isPlayed)
         function(api, code, message, description)
         end) 
 end
-
 
 function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onSucceed, onFailed)
     local levelData = self:getUserLevelData(chapterKey, levelKey)
