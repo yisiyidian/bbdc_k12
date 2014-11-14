@@ -119,15 +119,30 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
-function DataUser:getUserLevelData(chapterKey, levelKey)   
+function DataUser:getUserLevelData(chapterKey, levelKey)  
+    print('begin get user level data') 
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: ' .. v.chapterKey .. ', ' .. v.levelKey)
+        s_logd('getUserLevelData: ' .. v.chapterKey .. ', ' .. v.levelKey..','..v.stars)
         if v.chapterKey == chapterKey and v.levelKey == levelKey then
             return v
         end
     end
+    print('end get user level data')
     return nil
 end
+
+function DataUser:getUserCurrentChapterObtainedStarCount()
+    local count = 0
+    for i, v in ipairs(self.levels) do
+        print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
+        if v.chapterKey == self.currentChapterKey then
+            count = count + v.stars
+        end
+    end
+    --print('starCount:'..count)
+    return count
+end
+
 
 function DataUser:initLevels()
     for i = 1, #self.levels do
@@ -147,6 +162,7 @@ function DataUser:initLevels()
     end
     self.currentChapterKey = 'chapter0'
     self.currentLevelKey = 'level0'
+    self.currentSelectedLevelKey = 'level0'
     self:updateDataToServer()
 end
 
@@ -159,7 +175,11 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.stars = stars
+        print('------ before insert table-----')
+        print_lua_table(levelData)
         table.insert(self.levels,levelData)
+        print('-------- after insert table -----')
+        print_lua_table(levelData)
     end
     levelData.stars = stars
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
@@ -178,7 +198,11 @@ function DataUser:setUserLevelDataOfIsPlayed(chapterKey, levelKey, isPlayed)
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.isPlayed = isPlayed
+        print('------ before insert table-----')
+        print_lua_table(levelData)
         table.insert(self.levels,levelData)
+        print('-------- after insert table -----')
+        print_lua_table(levelData)
     end
     levelData.isPlayed = isPlayed
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
@@ -198,7 +222,11 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.isLevelUnlocked = unlocked
+        print('------ before insert table-----')
+        print_lua_table(levelData)
         table.insert(self.levels,levelData)
+        print('-------- after insert table -----')
+        print_lua_table(levels)
     end
 
     levelData.isLevelUnlocked = unlocked
