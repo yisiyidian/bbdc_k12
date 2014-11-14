@@ -144,8 +144,6 @@ function HomeLayer.create()
     data_name:setPosition(data:getContentSize().width/2+30, data:getContentSize().height/2-5)
     data:addChild(data_name)
     
-    
-    
     local onTouchBegan = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         
