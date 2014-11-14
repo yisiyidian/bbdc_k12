@@ -15,9 +15,10 @@ local back_login = nil
 local back_register = nil
 
 local main = nil
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 function LoginAlter.createLogin()
-    main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
@@ -45,7 +46,7 @@ function LoginAlter.createLogin()
 end
 
 function LoginAlter.createRegister()
-    main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
@@ -75,17 +76,17 @@ end
 
 showLogin = function()
     if back_login then
-        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
         local action2 = cc.EaseBackOut:create(action1)
         back_login:runAction(action2)
         return
     end
 
     back_login = cc.Sprite:create("image/login/background_white_login.png")
-    back_login:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
+    back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back_login)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back_login:runAction(action2)
 
@@ -142,7 +143,7 @@ showLogin = function()
     local button_toggle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             local remove = function()
-                local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
+                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
                 back_login:runAction(action2)
             end
@@ -188,17 +189,17 @@ end
 
 showRegister = function()
     if back_register then
-        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
         local action2 = cc.EaseBackOut:create(action1)
         back_register:runAction(action2)
         return
     end
 
     back_register = cc.Sprite:create("image/login/background_white_login.png")
-    back_register:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
+    back_register:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back_register)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back_register:runAction(action2)
 
@@ -255,7 +256,7 @@ showRegister = function()
     local button_toggle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             local remove = function()
-                local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
+                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
                 back_register:runAction(action2)
             end

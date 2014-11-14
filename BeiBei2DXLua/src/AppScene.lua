@@ -68,7 +68,7 @@ local function update(dt)
             if s_CURRENT_USER.energyLastCoolDownTime < 0 then
                 s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.serverTime;
             end
-            local cnt = (s_CURRENT_USER.serverTime - s_CURRENT_USER.resetEnergyLastCoolDownTime) / s_energyCoolDownSecs
+            local cnt = (s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime) / s_energyCoolDownSecs
             if cnt > 0 then
                 s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + cnt
                 if s_CURRENT_USER.energyCount >= s_energyMaxCount then

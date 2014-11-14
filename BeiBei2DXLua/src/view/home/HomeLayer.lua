@@ -9,26 +9,55 @@ end)
 
 function HomeLayer.create()
     local layer = HomeLayer.new()
+    
+    local offset = 500
+    local viewIndex = 1
 
     local backImage = cc.Sprite:create("image/homescene/main_backGround.png")
     backImage:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
     layer:addChild(backImage)
     
+    local setting_back
+    
+    local bigWidth = backImage:getContentSize().width
+    
     local name = cc.Label:createWithSystemFont("贝贝单词","",40)
     name:setColor(cc.c4b(255,255,255,255))
-    name:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT-75)
-    layer:addChild(name)
+    name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-75)
+    backImage:addChild(name)
    
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            if viewIndex == 1 then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
+                viewIndex = 2
+            
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
+                backImage:runAction(action1)
+
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                setting_back:runAction(cc.Sequence:create(action2, action3))
+            else
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                
+                viewIndex = 1
+
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+                backImage:runAction(action1)
+
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                setting_back:runAction(cc.Sequence:create(action2, action3))
+            end
         end
     end
 
     local button_left = ccui.Button:create("image/homescene/main_set.png","image/homescene/main_set.png","")
-    button_left:setPosition(50, s_DESIGN_HEIGHT-75)
+    button_left:setPosition((bigWidth-s_DESIGN_WIDTH)/2+50, s_DESIGN_HEIGHT-75)
     button_left:addTouchEventListener(button_left_clicked)
-    layer:addChild(button_left)
+    backImage:addChild(button_left)
     
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -37,13 +66,13 @@ function HomeLayer.create()
     end
     
     local button_right = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
-    button_right:setPosition(s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-75)
+    button_right:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-75)
     button_right:addTouchEventListener(button_right_clicked)
-    layer:addChild(button_right)   
+    backImage:addChild(button_right)   
     
     local heart_back = cc.Sprite:create("image/homescene/main_physicalbar.png")
-    heart_back:setPosition(s_DESIGN_WIDTH-100, s_DESIGN_HEIGHT-200)
-    layer:addChild(heart_back)
+    heart_back:setPosition(s_DESIGN_WIDTH, s_DESIGN_HEIGHT-200)
+    backImage:addChild(heart_back)
     
     local heart = cc.Sprite:create("image/homescene/main_heart.png")
     heart:setPosition(10, heart_back:getContentSize().height/2)
@@ -60,8 +89,8 @@ function HomeLayer.create()
     heart_back:addChild(heart_time)
 
     local container = cc.Sprite:create("image/homescene/main_wordstore.png")
-    container:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    layer:addChild(container)
+    container:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+    backImage:addChild(container)
     
     local has_study = cc.ProgressTimer:create(cc.Sprite:create("image/homescene/main_learned.png"))
     has_study:setType(cc.PROGRESS_TIMER_TYPE_BAR)
@@ -117,27 +146,27 @@ function HomeLayer.create()
     
     local label = cc.Label:createWithSystemFont("第三章 拉斯维加斯 第5关","",28)
     label:setColor(cc.c4b(0,0,0,255))
-    label:setPosition(s_DESIGN_WIDTH/2, 300)
-    layer:addChild(label)
+    label:setPosition(bigWidth/2, 300)
+    backImage:addChild(label)
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-
+            s_CorePlayManager.enterLevelLayer()
         end
     end
 
     local button_play = ccui.Button:create("image/homescene/main_play.png","image/homescene/main_play.png","")
     button_play:setTitleText("继续闯关   》")
     button_play:setTitleFontSize(30)
-    button_play:setPosition(s_DESIGN_WIDTH/2, 200)
+    button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
-    layer:addChild(button_play)
+    backImage:addChild(button_play)
 
 
     local data = cc.Sprite:create("image/homescene/main_bottom.png")
     data:setAnchorPoint(0.5,0)
-    data:setPosition(s_DESIGN_WIDTH/2, 0)
-    layer:addChild(data)
+    data:setPosition(bigWidth/2, 0)
+    backImage:addChild(data)
     
     local data_name = cc.Label:createWithSystemFont("数据","",28)
     data_name:setColor(cc.c4b(0,0,0,255))
@@ -145,9 +174,54 @@ function HomeLayer.create()
     data:addChild(data_name)
     
     
+    -- setting ui
+    setting_back = cc.Sprite:create("image/homescene/setup_background.png")
+    setting_back:setAnchorPoint(1,0.5)
+    setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
+    layer:addChild(setting_back)
+    
+    
+    local logo_name = {"head","book","photo","feedback","information","logout"}
+    local label_name = {"游客1234","选择书籍", "拍摄头像", "用户反馈", "完善个人信息", "登出游戏"}
+    for i = 1, 6 do
+        local button_back_clicked = function(sender, eventType)
+            if eventType == ccui.TouchEventType.began then
+                print(label_name[i])
+            end
+        end
+
+        local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+        button_back:setAnchorPoint(0, 1)
+        button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 20)
+        button_back:addTouchEventListener(button_back_clicked)
+        setting_back:addChild(button_back)
+        
+        local logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
+        logo:setPosition(button_back:getContentSize().width-offset+50, button_back:getContentSize().height/2)
+        button_back:addChild(logo)
+        
+        local label = cc.Label:createWithSystemFont(label_name[i],"",28)
+        label:setColor(cc.c4b(0,0,0,255))
+        label:setAnchorPoint(0, 0.5)
+        label:setPosition(button_back:getContentSize().width-offset+100, button_back:getContentSize().height/2)
+        button_back:addChild(label)
+        
+        local split = cc.Sprite:create("image/homescene/setup_line.png")
+        split:setAnchorPoint(0.5,0)
+        split:setPosition(button_back:getContentSize().width/2, 0)
+        button_back:addChild(split)
+    end
+    
+    local setting_shadow = cc.Sprite:create("image/homescene/setup_shadow.png")
+    setting_shadow:setAnchorPoint(1,0.5)
+    setting_shadow:setPosition(setting_back:getContentSize().width, setting_back:getContentSize().height/2)
+    setting_back:addChild(setting_shadow)
+    
     
     local onTouchBegan = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
+        
+        
         
         return true
     end

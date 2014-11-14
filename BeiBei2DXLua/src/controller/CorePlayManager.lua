@@ -36,7 +36,9 @@ CorePlayManager.wrongWordList = {}
 
 CorePlayManager.newPlayerState = false
 
-CorePlayManager.chapterIndex = 4
+CorePlayManager.chapterIndex = 1
+--CorePlayManager.chapterIndex = string.sub(s_CURRENT_USER.currentChapterKey, 7)
+
 
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
@@ -103,7 +105,7 @@ function CorePlayManager.leaveTestLayer()
     if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.currentSelectedLevelKey then
         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     end
-    s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+    --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
     CorePlayManager.enterLevelLayer()
 end
 

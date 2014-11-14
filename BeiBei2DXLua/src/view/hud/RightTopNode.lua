@@ -11,11 +11,15 @@ function RightTopNode.create()
 end
 
 local introLayer
+local heartNumber 
+local starNumber
 
 function RightTopNode:ctor()
-    local heartNumber = 2
+    heartNumber = s_CURRENT_USER.energyCount
     local heartShow = ""
-    local starNumber = 1
+    starNumber = 1
+    -- click heart or not
+    local click_heart = 0
 
        
     -- heart info     
@@ -25,21 +29,25 @@ function RightTopNode:ctor()
 
     local click_star = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
---            local IntroLayer = require("popup/PopupStarInfo")
---            local introLayer = IntroLayer.create()  
---            s_SCENE:popup(introLayer)
+            local IntroLayer = require("popup/PopupStarInfo")
+            introLayer = IntroLayer.create(starNumber)  
+            s_SCENE:popup(introLayer)
+            
+            local action1 = cc.MoveTo:create(0.3, cc.p(0,-400))          
+            introLayer:runAction(action1)
         end
     end
 
     local click_heart = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- click
-
+            click_heart = 1
+            
             local IntroLayer = require("popup/PopupEnergyInfo")
-            introLayer = IntroLayer.create()  
+            introLayer = IntroLayer.create(heartNumber)  
             s_SCENE:popup(introLayer)
 
-            local action1 = cc.MoveTo:create(0.3, cc.p(0,-300))          
+            local action1 = cc.MoveTo:create(0.3, cc.p(0,-400))          
             introLayer:runAction(action1)
             
 
@@ -128,7 +136,10 @@ function RightTopNode:ctor()
     star_back:addChild(label_star)
 
     -- changing number (30 min)
+    
+    
     -- click heart
+  --  local time_betweenServerAndReset = s_CURRENT_USER.serverTime - s_CURRENT_USER.resetEnergyLastCoolDownTime
     local min = 29
     local sec = 59
     local function update(delta)
@@ -140,11 +151,14 @@ function RightTopNode:ctor()
             heartExist:setString(heartNumber)
             
             -- update data
+            
+            if  click_heart == 1 then 
             introLayer.ccbPopupEnergyInfo['energyNumber']:setString(string.format(min)..':'..string.format("%d",sec))
             introLayer.ccbPopupEnergyInfo['energy_number'] = heartNumber
             local animation = introLayer.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
             local label = animation:getChildByName("energyNumber")
             label:setString(heartNumber)
+            end
             
 
 

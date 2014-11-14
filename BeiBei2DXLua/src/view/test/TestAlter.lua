@@ -8,9 +8,10 @@ local showDetailInfo
 local showGirlAndStar
 
 local main = nil
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
-function TestAlter.createFromFirstAlter()  
-    main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+function TestAlter.createFromFirstAlter()
+    main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
     
@@ -34,7 +35,7 @@ function TestAlter.createFromFirstAlter()
 end
 
 function TestAlter.createFromSecondAlter()
-    main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
@@ -58,10 +59,10 @@ end
 
 showGirlAndStar = function()
     local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
-    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
+    back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
     
-    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
     
@@ -115,7 +116,7 @@ showGirlAndStar = function()
             stars:addAnimation(0, 'animation_no_star', false)
         end 
         
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.bookKey, 'level1', starCount)
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey, starCount)
     end
     
     local action1 = cc.DelayTime:create(0.5)
@@ -127,7 +128,7 @@ showGirlAndStar = function()
         if eventType == ccui.TouchEventType.began then
         
             local removeFirstAlter = function()
-                local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
+                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
                 back:runAction(action2)
             end
@@ -151,10 +152,10 @@ end
 
 showDetailInfo = function()
     local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
-    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
+    back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
     
-    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
 
