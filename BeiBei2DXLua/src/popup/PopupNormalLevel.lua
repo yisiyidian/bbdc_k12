@@ -48,7 +48,7 @@ function PopupNormalLevel:ctor(levelKey)
         self:onStudyButtonClicked(levelKey)
     end
     self.ccbPopupNormalLevel['onTestButtonClicked'] = function()
-        self:onTestButtonClicked()
+        self:onTestButtonClicked(levelKey)
     end
 
     self.ccb = {}
@@ -106,7 +106,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     s_CorePlayManager.enterStudyLayer()
 end
 
-function PopupNormalLevel:onTestButtonClicked()
+function PopupNormalLevel:onTestButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
     
