@@ -43,7 +43,7 @@ local function main()
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- |||||||||||||||||||||||||||||||||||||
 -- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-local test_code = 0
+local test_code = 1
 -- *************************************
 if test_code == 0 then
    local startApp = function ()

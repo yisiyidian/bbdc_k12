@@ -25,7 +25,13 @@ function FriendList:ctor()
     for i = 1,20 do
         array[i] = string.format("ListView_item_%d",i - 1)
     end
-
+    
+    local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
+    back:ignoreAnchorPointForPosition(false)
+    back:setAnchorPoint(0.5,0.5)
+    back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
+    self:addChild(back)
+    
     local listView = ccui.ListView:create()
     -- set list view ex direction
     listView:setDirection(ccui.ScrollViewDir.vertical)
