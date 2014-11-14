@@ -233,7 +233,7 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
         print_lua_table(levelData)
         table.insert(self.levels,levelData)
         print('-------- after insert table -----')
-        print_lua_table(levels)
+        print_lua_table(self.levels)
     end
 
     levelData.isLevelUnlocked = unlocked
