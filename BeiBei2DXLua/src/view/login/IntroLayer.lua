@@ -119,7 +119,7 @@ function IntroLayer.create()
             return
         end
         local location = layer:convertToNodeSpace(touch:getLocation())
-        now_x = location.x
+        local now_x = location.x
         if now_x - moveLength > start_x then
             if currentIndex == 4 then
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
