@@ -36,7 +36,9 @@ CorePlayManager.wrongWordList = {}
 
 CorePlayManager.newPlayerState = false
 
-CorePlayManager.chapterIndex = 4
+CorePlayManager.chapterIndex = 1
+--CorePlayManager.chapterIndex = string.sub(s_CURRENT_USER.currentChapterKey, 7)
+
 
 -- reviewboss scene variate
 CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}

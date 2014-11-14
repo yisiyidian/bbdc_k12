@@ -3,17 +3,17 @@ local  PopupEnergyBuy = class("PopupEnergyBuy", function()
 end)
 
 
-function PopupEnergyBuy.create()
-    local layer = PopupEnergyBuy.new()
+function PopupEnergyBuy.create(energy_number)
+    local layer = PopupEnergyBuy.new(energy_number)
     return layer
 end
 
 
 
-function PopupEnergyBuy:ctor()
+function PopupEnergyBuy:ctor(energy_number)
  --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
  
-    self.energy_number = 3
+    self.energy_number = energy_number
     
     local json = ''
     local atlas = ''
@@ -36,7 +36,7 @@ function PopupEnergyBuy:ctor()
     self.ccb['closeButton'] = self.ccbPopupEnergyBuy_closeButton
     self.ccb['buyButton'] = self.ccbPopupEnergyBuy_buyButton
     self.ccb['popupWindow'] = self.ccbPopupEnergyBuy_popupWindow
-    self.ccb['energy_number'] = 3
+    self.ccb['energy_number'] = energy_number
 
 
 
@@ -49,7 +49,7 @@ function PopupEnergyBuy:ctor()
     self.ccbPopupEnergyBuy['subsubtitle']:setString('每30分钟回复一点')
     self.ccbPopupEnergyBuy['energyNumber']:setString('+30')
     self.ccbPopupEnergyBuy['energyNumber']:setScale(2)
-    node:setPosition(0,200)
+    node:setPosition(0,600)
     self:addChild(node)
 
     local label_buyEnergy = cc.Label:createWithSystemFont("￥6.00","",36)
