@@ -502,8 +502,10 @@ function SummaryBossLayer:initBossLayer(levelConfig)
         bossAction[#bossAction + 1] = cc.Spawn:create(move,moveAnimation)
     end
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
-        self.isLose = true
-        self:lose()
+        if self.currentBlood > 0 then
+            self.isLose = true
+            self:lose()
+        end
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
     local bloodBack = cc.Sprite:create("image/summarybossscene/summaryboss_blood_back.png")
