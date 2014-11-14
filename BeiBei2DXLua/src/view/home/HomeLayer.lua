@@ -193,7 +193,7 @@ function HomeLayer.create()
         local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
         button_back:setAnchorPoint(0, 1)
         button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 20)
-        button_back:addTouchEventListener(button_play_clicked)
+        button_back:addTouchEventListener(button_back_clicked)
         setting_back:addChild(button_back)
         
         local logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")

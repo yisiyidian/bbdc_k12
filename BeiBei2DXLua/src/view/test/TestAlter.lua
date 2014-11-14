@@ -115,7 +115,7 @@ showGirlAndStar = function()
             stars:addAnimation(0, 'animation_no_star', false)
         end 
         
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.bookKey, 'level1', starCount)
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey, starCount)
     end
     
     local action1 = cc.DelayTime:create(0.5)
