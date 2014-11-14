@@ -347,7 +347,7 @@ function StudyLayer.create()
                 cloud_down:addChild(button_changeview)
                 
                 local wordDetailInfo = WordDetailInfo.create(word)
-                wordDetailInfo:setPosition(s_DESIGN_WIDTH/2, 0)
+                wordDetailInfo:setPosition(bigWidth/2, 0)
                 backColor:addChild(wordDetailInfo)
             end
             

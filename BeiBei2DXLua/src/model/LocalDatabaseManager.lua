@@ -1,4 +1,6 @@
 
+local RBWORDNUM = 20
+
 require("lsqlite3")
 
 -- define Manager
@@ -81,7 +83,6 @@ function Manager.initTables()
             userId TEXT,
             bookKey TEXT,
             bossId INTEGER,
-            insertDate TEXT,
             wordId INTEGER,
             wordName TEXT,
             lastUpdate TEXT
@@ -248,7 +249,10 @@ function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     end
     
     if num == 0 then
-        local query = "INSERT INTO WMAV_UserWord VALUES ('user1', 'book1', '"..wordName.."', "..wordProciency..", '2014-11-6');"
+        local user = s_CURRENT_USER.objectId
+        local book = s_CURRENT_USER.bookKey
+        local time = os.time()
+        local query = "INSERT INTO WMAV_UserWord VALUES ('"..user.."', '"..book.."', '"..wordName.."', "..wordProciency..", '"..time.."');"
         Manager.database:exec(query)
         
         if wordProciency == 0 then
@@ -259,14 +263,15 @@ function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     end
 end
 
-function Manager.insertTable_RB_control()
-    local query = "INSERT INTO RB_control VALUES ('user1', 'book1', 'boss1', '30', '2', '2014-11-6');"
+function Manager.insertTable_RB_control(bossID)
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local query = "INSERT INTO RB_control VALUES ('"..user.."', '"..book.."', "..bossID..", "..RBWORDNUM..", 0, '"..time.."');"
     Manager.database:exec(query)
 end
 
 function Manager.insertTable_RB_record(wordName)
-    local RBWORDNUM = 20
-
     local num = 0
     for row in Manager.database:nrows("SELECT * FROM RB_record") do
         num = num + 1
@@ -275,11 +280,14 @@ function Manager.insertTable_RB_record(wordName)
     local wordID = num + 1
     local bossID = ((wordID - 1) / RBWORDNUM) + 1
     
-    local query = "INSERT INTO RB_control VALUES ('user1', 'book1', '"..bossID.."', '2014-10-6', '"..wordID.."', '"..wordName.."', '2014-11-6');"
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local query = "INSERT INTO RB_control VALUES ('"..user.."', '"..book.."', "..bossID..", "..wordID..", '"..wordName.."', '"..time.."');"
     Manager.database:exec(query)
     
     if wordID % RBWORDNUM == 0 then
-        Manager.insertTable_RB_control()
+        Manager.insertTable_RB_control(bossID)
     end
 end
 
