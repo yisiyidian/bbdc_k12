@@ -62,9 +62,8 @@ function PopupNormalLevel:ctor(levelKey)
     -- plot stars
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     
-    print('!!!----!!!')
-    print_lua_table(s_CURRENT_USER.levels)
-    print('chapteKey:'..s_CURRENT_USER.currentChapterKey..','..levelKey)
+    --print_lua_table(s_CURRENT_USER.levels)
+    --print('chapteKey:'..s_CURRENT_USER.currentChapterKey..','..levelKey)
     self:plotStar(node, levelData.stars)
     
     -- plot word count

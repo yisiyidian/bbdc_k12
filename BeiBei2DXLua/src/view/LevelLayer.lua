@@ -17,7 +17,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    s_SCENE.levelLayerState = s_normal_level_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -51,6 +51,7 @@ function LevelLayer:levelStateManager()
         -- save and update level data
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
+        --s_CURRENT_USER.currentLevelKey = 'level1'
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
         -- plot unlock next level animation
         levelLayerI:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
@@ -116,7 +117,7 @@ function LevelLayer:ctor()
     player = cc.MenuItemImage:create(image,image,image)
     player:setEnabled(false)
     player:setPosition(currentLevelButton:getPosition())
-    player:setScale(0.5)
+    player:setScale(0.4)
     levelLayerI.ccbLevelLayerI['levelSet']:addChild(player, 5)
     
     -- level layer state manager
