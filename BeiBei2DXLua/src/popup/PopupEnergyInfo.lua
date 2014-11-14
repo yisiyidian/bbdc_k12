@@ -3,16 +3,15 @@ local  PopupEnergyInfo = class("PopupEnergyInfo", function()
 end)
 
 
-function PopupEnergyInfo.create()
-    local layer = PopupEnergyInfo.new()
+
+function PopupEnergyInfo.create(heartNumber)
+    local layer = PopupEnergyInfo.new(heartNumber)
     return layer
 end
 
-local number
+function PopupEnergyInfo:ctor(heartNumber)
 
-function PopupEnergyInfo:ctor()
-
-    self.energy_number = 3
+    self.energy_number = heartNumber
 
     
     local json = ''
@@ -40,7 +39,7 @@ function PopupEnergyInfo:ctor()
     self.ccb['buyButton'] = self.ccbPopupEnergyInfo_buyButton
     self.ccb['popupWindow'] = self.ccbPopupEnergyInfo_popupWindow
 
-    self.ccb['energy_number'] = 3
+    self.ccb['energy_number'] = heartNumber
 
     
     local proxy = cc.CCBProxy:create()
@@ -49,7 +48,7 @@ function PopupEnergyInfo:ctor()
     self.ccbPopupEnergyInfo['subtitle']:setString('复习以前的关卡不耗费体力')
     self.ccbPopupEnergyInfo['energyNumber']:setString(string.format(min)..':'..string.format(sec))
     self.ccbPopupEnergyInfo['energyNumber']:setScale(2)
-    node:setPosition(0,500)
+    node:setPosition(0,600)
     self:addChild(node)
     
     local label_buyEnergy = cc.Label:createWithSystemFont("体力商店购买","",36)
@@ -97,14 +96,26 @@ end
 
 function PopupEnergyInfo:onBuyButtonClicked()
  --   s_logd('on buy button clicked')
-    local IntroLayer = require("popup/PopupEnergyBuy")
-    local introLayer = IntroLayer.create()  
-    s_SCENE:popup(introLayer)
-    
-    local animation = introLayer.ccbPopupEnergyBuy['popupWindow']:getChildByName("heart_animation")
-    local label = animation:getChildByName("energyNumber")
-    label:setString(123)
+ 
+--    local action1 = cc.MoveTo:create(10, cc.p(0,-600))          
+--    self:runAction(action1)  
+    local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
+    self:runAction(action1) 
+ 
+    s_SCENE:callFuncWithDelay(0.3,function()
+        local IntroLayer = require("popup/PopupEnergyBuy")
+        local introLayer = IntroLayer.create(self.energy_number)  
+        s_SCENE:popup(introLayer)
 
+        local action2 = cc.MoveTo:create(0.3, cc.p(0,-400))          
+        introLayer:runAction(action2)
+    end)
+
+    
+--    local animation = introLayer.ccbPopupEnergyBuy['popupWindow']:getChildByName("heart_animation")
+--    local label = animation:getChildByName("energyNumber")
+--    label:setString(self.energy_number )
+--    introLayer.ccbPopupEnergyBuy['energy_number'] =  self.energy_number 
 
     
 end
