@@ -18,9 +18,10 @@ local time_betweenServerAndEnergy
 
 function RightTopNode:ctor()
     heartNumber = s_CURRENT_USER.energyCount 
---    starNumber = s_CURRENT_USER.getUserCurrentChapterObtainedStarCount()
+
+    starNumber = s_CURRENT_USER:getUserCurrentChapterObtainedStarCount()
     --test
-    --heartNumber = 1
+    heartNumber = 1
 
     local heartShow = ""
  --   starNumber = 1
@@ -162,8 +163,13 @@ function RightTopNode:ctor()
         if introLayer_heart ~= nil then
             if introLayer_heart.ccbPopupEnergyInfo ~= nil then
             introLayer_heart.ccbPopupEnergyInfo['energyNumber']:setString(heartShow)
-            end
+            local animation = introLayer_heart.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
+            local label = animation:getChildByName("energyNumber")
+            label:setString(heartNumber)
+            
+            end     
         end
+        
 
          
 --       --show number

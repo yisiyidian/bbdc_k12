@@ -8,7 +8,7 @@ function PopupEnergyBuy.create(energy_number)
     return layer
 end
 
-
+local label_energyNumber
 
 function PopupEnergyBuy:ctor(energy_number)
  --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -74,9 +74,47 @@ function PopupEnergyBuy:ctor(energy_number)
     heart:setName("heart_animation")
     heart:setPosition(0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().height  + 30)
     self.ccbPopupEnergyBuy['popupWindow']:addChild(heart) 
+    
+    local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
+    local min = time_betweenServerAndEnergy / 60
+    local sec = time_betweenServerAndEnergy % 60
+    
+    local function update(delta)
+            sec = sec - delta
+              
+        if energy_number < 4 then  
+            label_energyNumber:setString(energy_number)
+        end           
+
+
+        if sec <= 0 then
+            sec = 59
+            min = min - 1
+        end
+
+        if min <= 0 then 
+            min = 29
+            energy_number = energy_number + 1
+        end
+        
+        if energy_number == 4 then 
+            local remove = self.removeChildByName("heart_animation")
+            local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
+            replace:setAnimation(0,'animation',true)
+            replace:ignoreAnchorPointForPosition(false)
+            replace:setAnchorPoint(0.5,0.5)
+            replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
+            replace:setName("heart_animation")
+            self.ccbPopupEnergyInfo['popupWindow']:addChild(replace) 
+        end
+
+    end
+
+
+    self:scheduleUpdateWithPriorityLua(update, 0) 
 
     if self.energy_number > 0 and self.energy_number < 4 then
-        local label_energyNumber = cc.Label:createWithSystemFont(self.energy_number,"",36)
+        label_energyNumber = cc.Label:createWithSystemFont(energy_number,"",36)
         label_energyNumber:setColor(cc.c4b(255,255,255 ,255))
         label_energyNumber:setPosition(0.5 * heart:getContentSize().width ,0.5 * heart:getContentSize().height )
         label_energyNumber:setName("energyNumber")

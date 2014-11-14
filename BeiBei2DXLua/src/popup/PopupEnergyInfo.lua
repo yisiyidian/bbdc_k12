@@ -12,7 +12,7 @@ end
 function PopupEnergyInfo:ctor(heartNumber)
 
     self.energy_number = heartNumber
-    
+
     
     local json = ''
     local atlas = ''
@@ -79,10 +79,45 @@ function PopupEnergyInfo:ctor(heartNumber)
     local label_energyNumber = cc.Label:createWithSystemFont( self.energy_number,"",36)
     label_energyNumber:setColor(cc.c4b(255,255,255 ,255))
     label_energyNumber:setPosition(0.5 * heart:getContentSize().width ,0.5 * heart:getContentSize().height )
-        label_energyNumber:setName("energyNumber")
+    label_energyNumber:setName("energyNumber")
     heart:addChild(label_energyNumber,1)
 --      print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     end
+    
+    local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
+    local min = time_betweenServerAndEnergy / 60
+    local sec = time_betweenServerAndEnergy % 60
+
+    local function update(delta)
+        sec = sec - delta         
+
+        if sec <= 0 then
+            sec = 59
+            min = min - 1
+        end
+
+        if min <= 0 then 
+            min = 29
+            heartNumber = heartNumber + 1
+        end
+        
+        if heartNumber == 4 then 
+            local remove = self.removeChildByName("heart_animation")
+            local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
+            replace:setAnimation(0,'animation',true)
+            replace:ignoreAnchorPointForPosition(false)
+            replace:setAnchorPoint(0.5,0.5)
+            replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
+            replace:setName("heart_animation")
+            self.ccbPopupEnergyInfo['popupWindow']:addChild(replace) 
+        end
+
+
+    end
+
+
+    self:scheduleUpdateWithPriorityLua(update, 0) 
+
     
     
 end
