@@ -103,6 +103,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
 
+    s_CorePlayManager.initStudyTestState()
     s_CorePlayManager.enterStudyLayer()
 end
 

@@ -20,39 +20,54 @@ local BookLayer             = require("view.book.BookLayer")
 
 local CorePlayManager = {}
 
--- study scene and test scene variate
-CorePlayManager.wordList = {"apple","pear","water","day"}
---CorePlayManager.wordList = {}
-CorePlayManager.currentWordIndex = 1
-CorePlayManager.currentWord = nil
-CorePlayManager.answerStateRecord = {}
-CorePlayManager.wordProficiency = {}
-
-CorePlayManager.currentScore = 0
-CorePlayManager.currentRatio = 0
-
-CorePlayManager.replayWrongWordState = false
-CorePlayManager.wrongWordList = {}
-
-CorePlayManager.newPlayerState = false
-
-CorePlayManager.chapterIndex = 1
---CorePlayManager.chapterIndex = string.sub(s_CURRENT_USER.currentChapterKey, 7)
-
-
--- reviewboss scene variate
-CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
-
-
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
 function CorePlayManager.loadConfiguration()
+    CorePlayManager.chapterIndex = 1
+
+    CorePlayManager.wordList = {"apple","pear","water","day"}
+    CorePlayManager.currentWordIndex = 1
+    CorePlayManager.currentWord = nil
+    
+    CorePlayManager.answerStateRecord = {}
+    CorePlayManager.wordProficiency = {}
     for i = 1, #CorePlayManager.wordList do
         CorePlayManager.answerStateRecord[i] = 0    -- 0 for answer wrong and 1 for answer right
         CorePlayManager.wordProficiency[i]   = 1    -- 0 for unfamiliar word and 1 for familiar word
     end
+
+    CorePlayManager.currentScore = 0
+    CorePlayManager.currentRatio = 0
+
+    CorePlayManager.newPlayerState = false
+    CorePlayManager.replayWrongWordState = false
+    CorePlayManager.wrongWordList = {}
+    
+    -- reviewboss scene variate
+    CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
+end
+
+function CorePlayManager.initStudyTestState()
+    CorePlayManager.chapterIndex = 1
+
+    CorePlayManager.currentWordIndex = 1
+    CorePlayManager.currentWord = nil
+
+    CorePlayManager.answerStateRecord = {}
+    CorePlayManager.wordProficiency = {}
+    for i = 1, #CorePlayManager.wordList do
+        CorePlayManager.answerStateRecord[i] = 0    -- 0 for answer wrong and 1 for answer right
+        CorePlayManager.wordProficiency[i]   = 1    -- 0 for unfamiliar word and 1 for familiar word
+    end
+
+    CorePlayManager.currentScore = 0
+    CorePlayManager.currentRatio = 0
+
+    CorePlayManager.newPlayerState = false
+    CorePlayManager.replayWrongWordState = false
+    CorePlayManager.wrongWordList = {}
 end
 
 function CorePlayManager.enterStudyLayer()
@@ -79,6 +94,8 @@ end
 
 function CorePlayManager.leaveStudyLayer()
     s_logd("leave")
+    
+    
 end
 
 function CorePlayManager.enterTestLayer()

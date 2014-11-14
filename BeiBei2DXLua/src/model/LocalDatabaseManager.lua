@@ -290,6 +290,26 @@ function Manager.showTable_Word_Prociency()
     end
 end
 
+function Manager.getStudyWordsNum()
+    local sum = 0
+    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord") do
+        if row.prociencyValue == 5 then
+            sum = sum + 1
+        end
+    end
+    return sum
+end
+
+function Manager.getGraspWordsNum()
+    local sum = 0
+    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord") do
+        sum = sum + 1
+    end
+    return sum
+end
+
+
+
 -- return current valid review bossId
 function Manager:getCurrentReviewBossID()
     local bossId = -1

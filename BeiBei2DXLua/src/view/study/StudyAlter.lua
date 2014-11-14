@@ -5,6 +5,8 @@ local StudyAlter = class("StudyAlter", function()
 end)
 
 function StudyAlter.create()
+    s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey,1)
+
     -- system variate
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
