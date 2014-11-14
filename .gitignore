@@ -11,7 +11,7 @@ build/*
 DerivedData/*
 
 BeiBei2DXLua/frameworks/runtime-src/proj.android/assets
-BeiBei2DXLua/frameworks/runtime-src/proj.android/libs
+BeiBei2DXLua/frameworks/runtime-src/proj.android/libs/armeabi
 BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/build
 BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/BeiBei2DXLua.xcodeproj/xcuserdata/*.xcuserdatad
 
