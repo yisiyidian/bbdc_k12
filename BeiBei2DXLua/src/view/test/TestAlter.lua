@@ -116,6 +116,7 @@ showGirlAndStar = function()
             stars:addAnimation(0, 'animation_no_star', false)
         end 
         
+        s_CorePlayManager.currentScore = starCount
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey, starCount)
     end
     
@@ -191,6 +192,8 @@ showDetailInfo = function()
         end
     end
     
+    local right_num = 0
+    local wrong_num = 0
     for i = 1, 5 do
         for j = 1, 3 do
             local index = 3*i + j - 3
@@ -199,12 +202,14 @@ showDetailInfo = function()
                 if s_CorePlayManager.answerStateRecord[index] == 1 then
                     word_back = ccui.Button:create("image/alter/testscene_rightword_back_light.png")
                     word_back.name = "right"
+                    right_num = right_num + 1
                 else
                     if lastSelectIndex == nil then
                         lastSelectIndex = index
                     end
                     word_back = ccui.Button:create("image/alter/testscene_wrongword_back_light.png")
                     word_back.name = "wrong"
+                    wrong_num = wrong_num + 1
                 end
                 word_back:setPosition(116+160*(j-1), 676-78*(i-1))
                 word_back:setTitleText(s_CorePlayManager.wordList[index])
@@ -223,49 +228,132 @@ showDetailInfo = function()
     showSelectWordInfo(button_array[lastSelectIndex], ccui.TouchEventType.began)
     
     
-    local button_left_clicked = function(sender, eventType)
+    local button_replayall_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then            
-            s_CorePlayManager.currentWordIndex = 1
-            s_CorePlayManager.enterStudyLayer()
+            s_CorePlayManager.leaveTestLayer_replay()
         end
     end
     
-    local button_middle_clicked = function(sender, eventType)
+    local button_replaywrong_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()
         end
     end
     
-    local button_right_clicked = function(sender, eventType)
+    local button_continue_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_CorePlayManager.leaveTestLayer()
         end
     end
     
-    local button_left = ccui.Button:create("image/button/button_blue_147x79.png")
-    button_left:setPosition(112, 225)
-    button_left:setTitleText("重新玩")
-    button_left:setTitleColor(cc.c4b(0,0,0,255))
-    button_left:setTitleFontSize(28)
-    button_left:addTouchEventListener(button_left_clicked)
-    back:addChild(button_left)
+    local button_replayall = ccui.Button:create("image/button/button_blue_147x79.png")
+    button_replayall:setPosition(112, 225)
+    button_replayall:setTitleText("重新玩")
+    button_replayall:setTitleColor(cc.c4b(255,255,255,255))
+    button_replayall:setTitleFontSize(28)
+    button_replayall:addTouchEventListener(button_replayall_clicked)
+    button_replayall:setVisible(false)
+    back:addChild(button_replayall)
     
-    local button_middle = ccui.Button:create("image/button/button_blue_147x79.png")
-    button_middle:setPosition(275, 225)
-    button_middle:setTitleText("玩错词")
-    button_middle:setTitleColor(cc.c4b(0,0,0,255))
-    button_middle:setTitleFontSize(28)
-    button_middle:addTouchEventListener(button_middle_clicked)
-    back:addChild(button_middle)
+    local button_replaywrong = ccui.Button:create("image/button/button_blue_147x79.png")
+    button_replaywrong:setPosition(275, 225)
+    button_replaywrong:setTitleText("玩错词")
+    button_replaywrong:setTitleColor(cc.c4b(255,255,255,255))
+    button_replaywrong:setTitleFontSize(28)
+    button_replaywrong:addTouchEventListener(button_replaywrong_clicked)
+    button_replaywrong:setVisible(false)
+    back:addChild(button_replaywrong)
     
-    local button_right = ccui.Button:create("image/button/button_blue_147x79.png")
-    button_right:setPosition(436, 225)
-    button_right:setTitleText("继续玩")
-    button_right:setTitleColor(cc.c4b(0,0,0,255))
-    button_right:setTitleFontSize(28)
-    button_right:addTouchEventListener(button_right_clicked)
-    back:addChild(button_right)
+    local button_continue = ccui.Button:create("image/button/button_blue_147x79.png")
+    button_continue:setPosition(436, 225)
+    button_continue:setTitleText("继续玩")
+    button_continue:setTitleColor(cc.c4b(255,255,255,255))
+    button_continue:setTitleFontSize(28)
+    button_continue:addTouchEventListener(button_continue_clicked)
+    button_continue:setVisible(false)
+    back:addChild(button_continue)
+    
+    if s_CorePlayManager.replayWrongWordState then
+        if s_CorePlayManager.buttonListState == 1 then
+            button_replayall:setVisible(true)
+            button_continue:setVisible(true)
+            button_replayall:setPositionX(178)
+            button_continue:setPositionX(370)
+        elseif s_CorePlayManager.buttonListState == 2 then
+            -- no this situation
+        elseif s_CorePlayManager.buttonListState == 3 then
+            button_replayall:setVisible(true)
+            button_replayall:setPositionX(275)
+        elseif s_CorePlayManager.buttonListState == 4 then
+            -- no this situation
+        elseif s_CorePlayManager.buttonListState == 5 then
+            button_continue:setVisible(true)
+            button_continue:setPositionX(275)
+        elseif s_CorePlayManager.buttonListState == 6 then
+            -- no this situation
+        elseif s_CorePlayManager.buttonListState == 7 then
+            button_replayall:setVisible(true)
+            button_replayall:setPositionX(275)
+        elseif s_CorePlayManager.buttonListState == 8 then
+            -- no this situation
+        end
+    else
+        local passed = false
+        if passed then
+            if s_CorePlayManager.currentScore > 0 then
+                if wrong_num > 0 then
+                    button_replayall:setVisible(true)
+                    button_replaywrong:setVisible(true)
+                    button_continue:setVisible(true)
+                    s_CorePlayManager.buttonListState = 1
+                else
+                    button_replayall:setVisible(true)
+                    button_continue:setVisible(true)
+                    button_replayall:setPositionX(178)
+                    button_continue:setPositionX(370)
+                    s_CorePlayManager.buttonListState = 2
+                end
+            else
+                if wrong_num > 0 then
+                    button_replayall:setVisible(true)
+                    button_replaywrong:setVisible(true)
+                    button_replayall:setPositionX(178)
+                    button_replaywrong:setPositionX(370)
+                    s_CorePlayManager.buttonListState = 3
+                else
+                    -- no this situation
+                    s_CorePlayManager.buttonListState = 4
+                end
+            end
+        else
+            if s_CorePlayManager.currentScore > 0 then
+                if wrong_num > 0 then                    
+                    button_replaywrong:setVisible(true)
+                    button_continue:setVisible(true)
+                    button_replaywrong:setPositionX(178)
+                    button_continue:setPositionX(370)
+                    s_CorePlayManager.buttonListState = 5
+                else
+                    button_continue:setVisible(true)
+                    button_continue:setPositionX(275)
+                    s_CorePlayManager.buttonListState = 6
+                end
+            else
+                if wrong_num > 0 then
+                    button_replayall:setVisible(true)
+                    button_replaywrong:setVisible(true)
+                    button_replayall:setPositionX(178)
+                    button_replaywrong:setPositionX(370)
+                    s_CorePlayManager.buttonListState = 7
+                else
+                    -- no this situation
+                    s_CorePlayManager.buttonListState = 8
+                end
+            end
+        end
+    end
+    
 end
 
 return TestAlter

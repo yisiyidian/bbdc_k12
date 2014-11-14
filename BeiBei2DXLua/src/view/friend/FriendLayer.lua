@@ -72,7 +72,7 @@ function FriendLayer:ctor()
         self.friendSearchButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
         self:removeChildByName('list',true)
         self:removeChildByName('request',true)
-        if not self:getChildByName('list') then
+        if not self:getChildByName('search') then
             local search = require('view.friend.FriendSearch')
             local layer = search.create()
             layer:setAnchorPoint(0.5,0)
@@ -86,7 +86,7 @@ function FriendLayer:ctor()
         self.friendSearchButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
         self:removeChildByName('search',true)
         self:removeChildByName('list',true)
-        if not self:getChildByName('list') then
+        if not self:getChildByName('request') then
             local request = require('view.friend.FriendRequest')
             local layer = request.create()
             layer:setAnchorPoint(0.5,0)
