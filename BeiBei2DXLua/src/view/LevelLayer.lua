@@ -142,6 +142,36 @@ function LevelLayer:ctor()
         scrollViewNode:setTouchEnabled(true)
         self:addChild(scrollViewNode)
     end
+
+--    local function listViewEvent(sender, eventType)
+--        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
+--            print("select child index = ",sender:getCurSelectedIndex())
+--        end
+--    end
+--
+--    local function scrollViewEvent(sender, evenType)
+--        if evenType == ccui.ScrollviewEventType.scrollToBottom then
+--            print("SCROLL_TO_BOTTOM")
+--        elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
+--            print("SCROLL_TO_TOP")
+--        end
+--    end
+    
+--    -- create list view
+--    local listView = ccui.ListView:create()
+--    listView:setDirection(ccui.ScrollViewDir.vertical)
+--    listView:setBounceEnabled(true)
+--    listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
+--    listView:setPosition(0, 0)
+--    listView:addEventListener(listViewEvent)
+--    listView:addScrollViewEventListener(scrollViewEvent)
+--    self:addChild(listView)
+--    
+--    -- add list view item
+--    local item1 = ccui.Layout:create()
+--    item1:setTouchEnabled(true)
+--    item1:setContentSize(levelLayerI:getContentSize())
+--    levelLayerI:setPosition(cc.p(item1:getContentSize().width/2, item1:getContentSize().height/2))
     
     playMusic(s_sound_bgm1,true)
     
