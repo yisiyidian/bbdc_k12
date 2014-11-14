@@ -127,12 +127,12 @@ function LevelLayerI:clickLockedLevelAnmation(levelKey)
     local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),3)
     local action5 = cc.MoveBy:create(0.1, cc.p(5,0)) 
     local action = cc.Sequence:create(action1, action4, action5, nil)
-    lockSprite:runAction(action)
+    --lockSprite:runAction(action)
     
     local action7 = cc.ScaleTo:create(0.15,1.15,0.85)
     local action8 = cc.ScaleTo:create(0.15,0.85,1.15)
     local action9 = cc.ScaleTo:create(0.1, 1, 1)
-    clickedButton:runAction(cc.Sequence:create(action7, action8, action9, nil))
+    --clickedButton:runAction(cc.Sequence:create(action7, action8, action9, nil))
 end
 
 function LevelLayerI:getPlayerPositionForLevel(levelKey)
@@ -142,7 +142,7 @@ function LevelLayerI:getPlayerPositionForLevel(levelKey)
     --print(levelButton:getPositionX()..','..levelButton:getPositionY())
     local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
     if levelConfig['type'] == 1 then
-          
+          position.y = position.y - 50
     end
     
     return position
@@ -165,13 +165,14 @@ function LevelLayerI:plotLevelDecoration(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
     local levelIndex = string.sub(levelKey, 6)
+
 --        if i == 3 or i == 10 then  -- plot boat animation
 --            local boat = sp.SkeletonAnimation:create('spine/first-level-moving-boat-bottom.json', 'spine/first-level-moving-boat-bottom.atlas',1)
 --            boat:addAnimation(0, 'anmiation', true)
 --            boat:setPosition(levelButton:getContentSize().width/2, -400)
 --            levelButton:addChild(boat)
 --        end
-    if  levelData ~= nil and levelData.isLevelUnlocked then  -- test
+    if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
         if levelData.stars > 0 and s_CURRENT_USER.currentLevelKey ~= levelData.levelKey then
             self:plotLevelStar(levelButton, levelData.stars)
         end
@@ -326,13 +327,13 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        if s_CURRENT_USER.stars <= levelConfig['summary_boss_stars'] then
+        if s_CURRENT_USER:getUserCurrentChapterObtainedStarCount() >= levelConfig['summary_boss_stars'] then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(levelKey, s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserCurrentChapterObtainedStarCount(),levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         else
             local popupSummary = require('popup.PopupSummaryFail')
-            local layer = popupSummary.create(s_CURRENT_USER.stars,levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(s_CURRENT_USER:getUserCurrentChapterObtainedStarCount(),levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         end
     end

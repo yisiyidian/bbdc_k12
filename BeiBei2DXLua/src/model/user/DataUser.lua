@@ -119,15 +119,30 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
-function DataUser:getUserLevelData(chapterKey, levelKey)   
+function DataUser:getUserLevelData(chapterKey, levelKey)  
+    print('begin get user level data') 
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: ' .. v.chapterKey .. ', ' .. v.levelKey)
+        s_logd('getUserLevelData: ' .. v.chapterKey .. ', ' .. v.levelKey..','..v.stars)
         if v.chapterKey == chapterKey and v.levelKey == levelKey then
             return v
         end
     end
+    print('end get user level data')
     return nil
 end
+
+function DataUser:getUserCurrentChapterObtainedStarCount()
+    local count = 0
+    for i, v in ipairs(self.levels) do
+        print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
+        if v.chapterKey == self.currentChapterKey then
+            count = count + v.stars
+        end
+    end
+    --print('starCount:'..count)
+    return count
+end
+
 
 function DataUser:initLevels()
     for i = 1, #self.levels do
@@ -147,36 +162,60 @@ function DataUser:initLevels()
     end
     self.currentChapterKey = 'chapter0'
     self.currentLevelKey = 'level0'
+    self.currentSelectedLevelKey = 'level0'
     self:updateDataToServer()
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
     local levelData = self:getUserLevelData(chapterKey, levelKey)
-    --print('levelData-------------------'..levelData)
     if levelData == nil then
         local DataLevel = require('model.user.DataLevel')
         levelData = DataLevel.create()
         levelData.bookKey = s_CURRENT_USER.bookKey
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
-        --levelData.hearts = stars
         levelData.stars = stars
-        --print('--------')
-        --s_CURRENT_USER.currentChapterKey = 'chapter0'
-        
-        --self:updateDataToServer()
-        --print_lua_table(levelData)
+        if levelData.stars > 0 then
+            levelData.isPassed = 1
+        end
+        print('------ before insert table-----')
+        print_lua_table(levelData)
         table.insert(self.levels,levelData)
+        print('-------- after insert table -----')
+        print_lua_table(levelData)
     end
-    print('!!!!!!!!!!!!!!')
-    print_lua_table(levelData)
     levelData.stars = stars
-    --levelData.hearts = stars
+    if levelData.stars > 0 then
+        levelData.isPassed = 1
+    end
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
     function(api,result)
     end,
     function(api, code, message, description)
     end)        
+end
+
+function DataUser:setUserLevelDataOfIsPlayed(chapterKey, levelKey, isPlayed)
+    local levelData = self:getUserLevelData(chapterKey, levelKey)
+    if levelData == nil then
+        local DataLevel = require('model.user.DataLevel')
+        levelData = DataLevel.create()
+        levelData.bookKey = s_CURRENT_USER.bookKey
+        levelData.chapterKey = chapterKey
+        levelData.levelKey = levelKey
+        levelData.isPlayed = isPlayed
+        print('------ before insert table-----')
+        print_lua_table(levelData)
+        table.insert(self.levels,levelData)
+        print('-------- after insert table -----')
+        print_lua_table(levelData)
+    end
+    levelData.isPlayed = isPlayed
+    s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end) 
 end
 
 function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onSucceed, onFailed)
@@ -188,7 +227,11 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.isLevelUnlocked = unlocked
+        print('------ before insert table-----')
+        print_lua_table(levelData)
         table.insert(self.levels,levelData)
+        print('-------- after insert table -----')
+        print_lua_table(levels)
     end
 
     levelData.isLevelUnlocked = unlocked

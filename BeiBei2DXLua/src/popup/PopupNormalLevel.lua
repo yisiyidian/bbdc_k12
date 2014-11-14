@@ -30,7 +30,6 @@ function PopupNormalLevel:plotStar(node, starCount)
         star3 = cc.Sprite:create('image/chapter_level/yellowStar.png')
     end
     
-    
     star1:setPosition(node:getContentSize().width*0.3, node:getContentSize().height*0.67)
     star2:setPosition(node:getContentSize().width*0.5, node:getContentSize().height*0.71)
     star3:setPosition(node:getContentSize().width*0.7, node:getContentSize().height*0.67)
@@ -58,13 +57,12 @@ function PopupNormalLevel:ctor(levelKey)
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
     node:setPosition(0,200)
-    
+    --s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,levelKey,1)
     -- plot stars
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     
-    print('!!!----!!!')
-    print_lua_table(s_CURRENT_USER.levels)
-    print('chapteKey:'..s_CURRENT_USER.currentChapterKey..','..levelKey)
+    --print_lua_table(s_CURRENT_USER.levels)
+    --print('chapteKey:'..s_CURRENT_USER.currentChapterKey..','..levelKey)
     self:plotStar(node, levelData.stars)
     
     -- plot word count
@@ -81,6 +79,12 @@ function PopupNormalLevel:ctor(levelKey)
     girl_hello:addAnimation(0, 'animation', true)
     node:addChild(girl_hello, 5)
     
+    -- change the test button
+    if levelData.isPlayed == 1 then
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('res/ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_NORMAL)
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_HIGH_LIGHTED)
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_SELECTED)
+    end
     self:addChild(node)
 end
 
@@ -98,6 +102,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
 
+    s_CorePlayManager.initStudyTestState()
     s_CorePlayManager.enterStudyLayer()
 end
 
@@ -105,7 +110,13 @@ function PopupNormalLevel:onTestButtonClicked()
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
     
-    
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    print(levelConfig.word_content)
+
+    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+
+    s_CorePlayManager.initStudyTestState()
+    s_CorePlayManager.enterTestLayer()
 end
 
 return PopupNormalLevel
