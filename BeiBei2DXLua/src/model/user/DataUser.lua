@@ -152,32 +152,42 @@ end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
     local levelData = self:getUserLevelData(chapterKey, levelKey)
-    --print('levelData-------------------'..levelData)
     if levelData == nil then
         local DataLevel = require('model.user.DataLevel')
         levelData = DataLevel.create()
         levelData.bookKey = s_CURRENT_USER.bookKey
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
-        --levelData.hearts = stars
         levelData.stars = stars
-        --print('--------')
-        --s_CURRENT_USER.currentChapterKey = 'chapter0'
-        
-        --self:updateDataToServer()
-        --print_lua_table(levelData)
         table.insert(self.levels,levelData)
     end
-    print('!!!!!!!!!!!!!!')
-    print_lua_table(levelData)
     levelData.stars = stars
-    --levelData.hearts = stars
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
     function(api,result)
     end,
     function(api, code, message, description)
     end)        
 end
+
+function DataUser:setUserLevelDataOfIsPlayed(chapterKey, levelKey, isPlayed)
+    local levelData = self:getUserLevelData(chapterKey, levelKey)
+    if levelData == nil then
+        local DataLevel = require('model.user.DataLevel')
+        levelData = DataLevel.create()
+        levelData.bookKey = s_CURRENT_USER.bookKey
+        levelData.chapterKey = chapterKey
+        levelData.levelKey = levelKey
+        levelData.isPlayed = isPlayed
+        table.insert(self.levels,levelData)
+    end
+    levelData.isPlayed = isPlayed
+    s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end) 
+end
+
 
 function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onSucceed, onFailed)
     local levelData = self:getUserLevelData(chapterKey, levelKey)
