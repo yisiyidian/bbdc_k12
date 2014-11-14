@@ -288,9 +288,12 @@ function SummaryBossLayer.create(levelConfig)
                         node.win()
                         local bullet = node.bullet
                         bullet:setVisible(true)
-                        local bossPos = cc.p(layer.boss:getPosition())
+                        local bossPos = cc.p(layer.bossNode:getPosition())
+                        s_logd("boss %f %f",bossPos.x,bossPos.y)
                         local bulletPos = cc.p(bullet:getPosition())
+                        s_logd("bullet %f %f",bulletPos.x,bulletPos.y)
                         bossPos = cc.p(bossPos.x + 50 - bulletPos.x, bossPos.y + 50 - bulletPos.y)
+                        s_logd("moveby %f %f",bossPos.x,bossPos.y)
                         local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / 1200
                         if time > 0.5 then
                             time = 0.5
@@ -317,13 +320,15 @@ function SummaryBossLayer.create(levelConfig)
                     end
                     if layer.currentBlood <= 0 then
                         layer.globalLock = true
+                        layer.blink:stopAllActions()
                         --layer.boss:stopAllActions()
                         local move = cc.MoveTo:create(0.5,cc.p(0.9 * s_DESIGN_WIDTH,1.1 * s_DESIGN_HEIGHT))
                         local mini = cc.ScaleTo:create(0.5,0.5)
                         local rotate = cc.RotateBy:create(0.5,360)
                         local fly = cc.Spawn:create(move,rotate)
                         local win = cc.CallFunc:create(function()
-                            layer.boss:removeFromParent()
+                            
+                            --layer.boss:removeFromParent()
                             layer:win()
                         end,{})
                         layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
@@ -435,15 +440,17 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     self:addChild(blinkBack,0)
     local wait = cc.DelayTime:create(2.3 + self.totalTime * 0.9)
     local afraid = cc.CallFunc:create(function() 
-        self.girlAfraid = true
-        self.girl:setAnimation(0,'girl-afraid',true)
+        if self.currentBlood > 0 then
+            self.girlAfraid = true
+            self.girl:setAnimation(0,'girl-afraid',true)
+        end
     end,{})
     local blinkIn = cc.FadeTo:create(0.5,50)
     local blinkOut = cc.FadeTo:create(0.5,0.0)
     local blink = cc.Sequence:create(blinkIn,blinkOut)
     local repeatBlink = cc.Repeat:create(blink,math.ceil(self.totalTime * 0.1))
     blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
-    
+    self.blink = blinkBack
     --add pauseButton
     local menu = cc.Menu:create()
     self:addChild(menu)
@@ -502,8 +509,10 @@ function SummaryBossLayer:initBossLayer(levelConfig)
         bossAction[#bossAction + 1] = cc.Spawn:create(move,moveAnimation)
     end
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
-        self.isLose = true
-        self:lose()
+        if self.currentBlood > 0 then
+            self.isLose = true
+            self:lose()
+        end
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
     local bloodBack = cc.Sprite:create("image/summarybossscene/summaryboss_blood_back.png")
@@ -517,7 +526,7 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     boss.blood:setPercentage(100)
     boss:addChild(boss.blood) 
     self.boss = boss
-    
+    self.bossNode = bossNode
     --add hole
     local hole = {}    
     local gap = 120

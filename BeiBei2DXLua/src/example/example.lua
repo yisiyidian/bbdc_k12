@@ -40,10 +40,12 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
- -- local PopupLoginSignup = require('view.PersonalInfo')
- -- local layer = PopupLoginSignup.create()
- -- layer:setAnchorPoint(0.5,0)
- -- s_SCENE:popup(layer)
+    local IntroLayer = require('view.hud.RightTopNode')
+-- local layer = PopupLoginSignup.create()
+-- layer:setAnchorPoint(0.5,0)
+-- s_SCENE:popup(layer)
+    local introLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(introLayer)
 
 
     -- s_DATA_MANAGER.loadText()
@@ -60,14 +62,15 @@ function test()
     -- s_DATA_MANAGER.loadStarRules()
 
     --   -- test -- ziaoang ------------------------------------------------------------------------------------
-    -- s_WordPool = s_DATA_MANAGER.loadAllWords()
-    -- s_CorePlayManager = require("controller.CorePlayManager")
-    -- s_CorePlayManager.create()
-    -- s_CorePlayManager.enterStudyLayer()
---    s_CorePlayManager.enterTestLayer()
---    s_CorePlayManager.enterReviewBossLayer()
---    s_CorePlayManager.enterIntroLayer()
---    s_CorePlayManager.enterBookLayer()
+--    s_WordPool = s_DATA_MANAGER.loadAllWords()
+--    s_CorePlayManager = require("controller.CorePlayManager")
+--    s_CorePlayManager.create()
+----    s_CorePlayManager.enterStudyLayer()
+----    s_CorePlayManager.enterTestLayer()
+----    s_CorePlayManager.enterReviewBossLayer()
+----    s_CorePlayManager.enterIntroLayer()
+----    s_CorePlayManager.enterBookLayer()
+--    s_CorePlayManager.enterHomeLayer()
 
     -- -- print_lua_table(s_DATA_MANAGER.level_ncee)
 
@@ -139,17 +142,17 @@ function test()
 --    s_localSqlite.showTable_Word_Prociency()
 --    s_localSqlite.close()
 
-    local function onBuyResult( code, msg, info )
-        print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
-    end
-
-    local function onResult( pPlugin, code, msg )
-        print('store login: ' .. tostring(code) .. ', ' .. msg)
-        if code == 2 then
-            s_STORE.buy(onBuyResult)
-        end
-    end
-
-    s_STORE.init()    
-    s_STORE.login(onResult)
+--    local function onBuyResult( code, msg, info )
+--        print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
+--    end
+--
+--    local function onResult( pPlugin, code, msg )
+--        print('store login: ' .. tostring(code) .. ', ' .. msg)
+--        if code == 2 then
+--            s_STORE.buy(onBuyResult)
+--        end
+--    end
+--
+--    s_STORE.init()    
+--    s_STORE.login(onResult)
 end

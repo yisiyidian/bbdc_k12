@@ -1,6 +1,5 @@
 require "common.global"
 
-
 local StudyLayer            = require("view.study.studyI.StudyLayer")
 local StudyLayerII          = require("view.study.studyII.StudyLayerII")
 local StudyLayerIII         = require("view.study.studyIII.StudyLayerIII")
@@ -20,39 +19,38 @@ local BookLayer             = require("view.book.BookLayer")
 
 local CorePlayManager = {}
 
--- study scene and test scene variate
-CorePlayManager.wordList = {"apple","pear","water","day"}
---CorePlayManager.wordList = {}
-CorePlayManager.currentWordIndex = 1
-CorePlayManager.currentWord = nil
-CorePlayManager.answerStateRecord = {}
-CorePlayManager.wordProficiency = {}
-
-CorePlayManager.currentScore = 0
-CorePlayManager.currentRatio = 0
-
-CorePlayManager.replayWrongWordState = false
-CorePlayManager.wrongWordList = {}
-
-CorePlayManager.newPlayerState = false
-
-CorePlayManager.chapterIndex = 1
---CorePlayManager.chapterIndex = string.sub(s_CURRENT_USER.currentChapterKey, 7)
-
-
--- reviewboss scene variate
-CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
-
-
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
 function CorePlayManager.loadConfiguration()
+    
+    
+    -- reviewboss scene variate
+    CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
+end
+
+function CorePlayManager.initStudyTestState()
+    CorePlayManager.currentChapterKey = 1
+
+    CorePlayManager.currentWordIndex = 1
+    CorePlayManager.currentWord = nil
+
+    CorePlayManager.answerStateRecord = {}
+    CorePlayManager.wordProficiency = {}
     for i = 1, #CorePlayManager.wordList do
         CorePlayManager.answerStateRecord[i] = 0    -- 0 for answer wrong and 1 for answer right
         CorePlayManager.wordProficiency[i]   = 1    -- 0 for unfamiliar word and 1 for familiar word
     end
+
+    CorePlayManager.currentScore = 0
+    CorePlayManager.currentRatio = 0
+
+    CorePlayManager.newPlayerState = false
+    CorePlayManager.replayWrongWordState = false
+    CorePlayManager.wrongWordList = {}
+    
+    CorePlayManager.buttonListState = -1
 end
 
 function CorePlayManager.enterStudyLayer()
@@ -62,50 +60,59 @@ function CorePlayManager.enterStudyLayer()
         CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     end
     
-    if CorePlayManager.chapterIndex == 1 then
+    if s_CURRENT_USER.currentChapterKey == "chapter0" then
         local studyLayer = StudyLayer.create()
         s_SCENE:replaceGameLayer(studyLayer)
-    elseif CorePlayManager.chapterIndex == 2 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
         local studyLayerII = StudyLayerII.create()
         s_SCENE:replaceGameLayer(studyLayerII)
-    elseif CorePlayManager.chapterIndex == 3 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter2" then
         local studyLayerIII = StudyLayerIII.create()
         s_SCENE:replaceGameLayer(studyLayerIII)
-    elseif CorePlayManager.chapterIndex == 4 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter3" then
         local studyLayerIV = StudyLayerIV.create()
         s_SCENE:replaceGameLayer(studyLayerIV)
+    else
+        s_logd("system error")
+        s_logd(s_CURRENT_USER.currentChapterKey)
     end
 end
 
 function CorePlayManager.leaveStudyLayer()
     s_logd("leave")
+    
+    
 end
 
 function CorePlayManager.enterTestLayer()
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     
-    if CorePlayManager.chapterIndex == 1 then
+    if s_CURRENT_USER.currentChapterKey == "chapter0" then
         local testLayer = TestLayer.create()
         s_SCENE:replaceGameLayer(testLayer)
-    elseif CorePlayManager.chapterIndex == 2 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
         local testLayerII = TestLayerII.create()
         s_SCENE:replaceGameLayer(testLayerII)
-    elseif CorePlayManager.chapterIndex == 3 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter2" then
         local testLayerIII = TestLayerIII.create()
         s_SCENE:replaceGameLayer(testLayerIII)
-    elseif CorePlayManager.chapterIndex == 4 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter3" then
         local testLayerIV = TestLayerIV.create()
         s_SCENE:replaceGameLayer(testLayerIV)
+    else
+        s_logd("system error")
+        s_logd(s_CURRENT_USER.currentChapterKey)
     end
 end
 
 function CorePlayManager.leaveTestLayer()
-    --print('-------- before levave~~~~~~~~~~')
-    --print('current:'..s_CURRENT_USER.currentLevelKey..', selected:'..s_CURRENT_USER.currentSelectedLevelKey)
     if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.currentSelectedLevelKey then
         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     end
-    --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+    CorePlayManager.enterLevelLayer()
+end
+
+function CorePlayManager.leaveTestLayer_replay()
     CorePlayManager.enterLevelLayer()
 end
 
@@ -130,25 +137,28 @@ end
 function CorePlayManager.recordWordProciency()
     for i = 1, #CorePlayManager.wordList do
         if CorePlayManager.wordProficiency[i] == 0 then
-            print("word: "..CorePlayManager.wordList[i].." pro:0")
+            s_logd("word: "..CorePlayManager.wordList[i].." pro:0")
             s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 0)
         else
-            print("word: "..CorePlayManager.wordList[i].." pro:5")
+            s_logd("word: "..CorePlayManager.wordList[i].." pro:5")
             s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 5)
         end
     end
 end
 
 function CorePlayManager.enterReviewBossLayer()
-    if CorePlayManager.chapterIndex == 1 then
+    if s_CURRENT_USER.currentChapterKey == "chapter0" then
         local reviewBossLayer = ReviewBossLayer.create()
         s_SCENE:replaceGameLayer(reviewBossLayer)
-    elseif CorePlayManager.chapterIndex == 2 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
         local reviewBossLayerII = ReviewBossLayerII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerII)
-    elseif CorePlayManager.chapterIndex == 3 then
+    elseif s_CURRENT_USER.currentChapterKey == "chapter2" then
         local reviewBossLayerIII = ReviewBossLayerIII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerIII)
+    else
+        s_logd("system error")
+        s_logd(s_CURRENT_USER.currentChapterKey)
     end
 end
 
@@ -163,7 +173,7 @@ function CorePlayManager.enterHomeLayer()
 end
 
 function CorePlayManager.enterLevelLayer()
-    print('!!------------------------!!')
+    s_logd('!!------------------------!!')
     
     local levelLayer = LevelLayer.create()
     
