@@ -184,7 +184,9 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         print('-------- after insert table -----')
         print_lua_table(levelData)
     end
-    levelData.stars = stars
+    if levelData.stars < stars then
+        levelData.stars = stars
+    end
     if levelData.stars > 0 then
         levelData.isPassed = 1
     end
