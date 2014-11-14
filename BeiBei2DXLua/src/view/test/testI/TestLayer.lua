@@ -27,7 +27,12 @@ function TestLayer.create()
     local sentenceEn = word.sentenceEn
     local sentenceCn = word.sentenceCn
 
-    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), s_DESIGN_WIDTH, s_DESIGN_HEIGHT)    
+    local  bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+
+    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), bigWidth, s_DESIGN_HEIGHT)  
+    backColor:setAnchorPoint(0.5,0.5)
+    backColor:ignoreAnchorPointForPosition(false)  
+    backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
 
     local button_changeview
@@ -36,18 +41,6 @@ function TestLayer.create()
     local button_detail_clicked
     
     local playOver = false
-
---    local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
---    cloud_up:ignoreAnchorPointForPosition(false)
---    cloud_up:setAnchorPoint(0.5, 1)
---    cloud_up:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
---    layer:addChild(cloud_up)
-
---    local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
---    cloud_down:ignoreAnchorPointForPosition(false)
---    cloud_down:setAnchorPoint(0.5, 0)
---    cloud_down:setPosition(s_DESIGN_WIDTH/2, 0)
---    layer:addChild(cloud_down)
 
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
@@ -243,11 +236,11 @@ function TestLayer.create()
                 if button_donotknow == nil then
                     button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
                     button_donotknow:setAnchorPoint(1,0.5)
-                    button_donotknow:setPosition(s_DESIGN_WIDTH+button_donotknow:getContentSize().width,910)
+                    button_donotknow:setPosition(bigWidth+button_donotknow:getContentSize().width,910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
                     backColor:addChild(button_donotknow)
 
-                    local action = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH,910))
+                    local action = cc.MoveTo:create(0.5,cc.p(bigWidth,910))
                     button_donotknow:runAction(action)
                 end
             end

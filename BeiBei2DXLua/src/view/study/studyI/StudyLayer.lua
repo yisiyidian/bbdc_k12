@@ -66,7 +66,9 @@ function StudyLayer.create()
     local label_wordmeaningSmall
     local guideOver = false
     
-    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
+    local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+    
+    local backColor = cc.LayerColor:create(cc.c4b(61,191,243,255), bigWidth, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
@@ -145,7 +147,7 @@ function StudyLayer.create()
     
     local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
     label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
-    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 696)
+    label_wordmeaningSmall:setPosition(bigWidth/2, 696)
     label_wordmeaningSmall:setScale(math.min(560/label_wordmeaningSmall:getContentSize().width, 1.5))
     backColor:addChild(label_wordmeaningSmall)
     
@@ -355,7 +357,7 @@ function StudyLayer.create()
                 cloud_down:runAction(cc.Sequence:create(action1, action2))
                 viewIndex = 2
                 
-                local action3 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 896))
+                local action3 = cc.MoveTo:create(0.5, cc.p(bigWidth/2, 896))
                 local action4 = cc.ScaleTo:create(0.5, math.min(200/label_wordmeaningSmall:getContentSize().width, 1))
                 label_wordmeaningSmall:runAction(cc.Spawn:create(action3, action4))
             end

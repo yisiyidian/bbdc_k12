@@ -36,7 +36,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
                 backImage:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(offset,s_DESIGN_HEIGHT/2))
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             else
@@ -47,7 +47,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
                 backImage:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(0,s_DESIGN_HEIGHT/2))
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             end
@@ -177,7 +177,7 @@ function HomeLayer.create()
     -- setting ui
     setting_back = cc.Sprite:create("image/homescene/setup_background.png")
     setting_back:setAnchorPoint(1,0.5)
-    setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
+    setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
     
     
