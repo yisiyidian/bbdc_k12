@@ -18,7 +18,7 @@ local time_betweenServerAndEnergy
 
 function RightTopNode:ctor()
     heartNumber = s_CURRENT_USER.energyCount 
-    starNumber = s_CURRENT_USER:getUserLevelData
+--    starNumber = s_CURRENT_USER.getUserCurrentChapterObtainedStarCount()
     --test
     --heartNumber = 1
 
