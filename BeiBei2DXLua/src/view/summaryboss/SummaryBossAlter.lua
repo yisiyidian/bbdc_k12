@@ -6,6 +6,7 @@ end)
 
 function SummaryBossAlter.create(win)
     local layer = SummaryBossAlter.new()
+    layer.win = win
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
@@ -106,17 +107,28 @@ function SummaryBossAlter:lose2()
     
     local function backToLevelScene(sender)
         s_logd("back") 
+        local level = require('view.LevelLayer')
+        local layer = level.create()
+        s_SCENE:replaceGameLayer(layer)
     end
     continue:registerScriptTapHandler(backToLevelScene)
     
     local function challengeAgain(sender)
-        s_logd("again") 
+        s_logd("again")
+        local level = require('view.LevelLayer')
+        local layer = level.create()
+        s_SCENE:replaceGameLayer(layer) 
     end
     again:registerScriptTapHandler(challengeAgain)
     
 end
 
 function SummaryBossAlter:win()
+    local levelData = self:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectLevelKey)
+    local isPassed = levelData.isPassed
+    if isPassed == 0 then
+        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectLevelKey,3)
+    end
     self.winBoard = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
     self.winBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.winBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
@@ -156,6 +168,12 @@ function SummaryBossAlter:win()
     
     local function backToLevelScene(sender)
        s_logd("clicked") 
+       local level = require('view.LevelLayer')
+       local layer = level.create()
+       if self.win and isPassed == 0 then
+           s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+       end
+       s_SCENE:replaceGameLayer(layer)
     end
     continue:registerScriptTapHandler(backToLevelScene)
     

@@ -12,7 +12,7 @@ function FriendLayer.create()
 end
 
 function FriendLayer:ctor()
-    local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+    local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
