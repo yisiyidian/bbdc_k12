@@ -51,7 +51,7 @@ function RBProgressBar.create(totalIndex, color)
     main.addOne = function()
         currentIndex = currentIndex + 1
         
-        label_number:setString(currentIndex)
+        label_number:setString(currentIndex-1)
         
         local action1 = cc.MoveTo:create(0.5,cc.p(left + gap* (currentIndex - 1), 0))
         index:runAction(action1)
