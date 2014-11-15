@@ -132,7 +132,6 @@ function HomeLayer.create()
     label4:setPosition(container:getContentSize().width/2, 150)
     container:addChild(label4)
     
-    
     local button_change_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
 
@@ -144,7 +143,7 @@ function HomeLayer.create()
     button_change:addTouchEventListener(button_change_clicked)
     container:addChild(button_change)
     
-    local label = cc.Label:createWithSystemFont("第三章 拉斯维加斯 第5关","",28)
+    local label = cc.Label:createWithSystemFont("第一章 拉斯维加斯 第5关","",28)
     label:setColor(cc.c4b(0,0,0,255))
     label:setPosition(bigWidth/2, 300)
     backImage:addChild(label)
@@ -217,18 +216,53 @@ function HomeLayer.create()
     setting_shadow:setPosition(setting_back:getContentSize().width, setting_back:getContentSize().height/2)
     setting_back:addChild(setting_shadow)
     
-    
+   
+    local moveLength = 100
+    local moved = false
+    local start_x = nil
     local onTouchBegan = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
-        
-        
-        
+        start_x = location.x
+        moved = false
         return true
     end
     
     local onTouchMoved = function(touch, event)
+        if moved then
+            return
+        end
+    
         local location = layer:convertToNodeSpace(touch:getLocation())
-        
+        local now_x = location.x
+        if now_x - moveLength > start_x then
+            print("right")
+            if viewIndex == 1 then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+                viewIndex = 2
+
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
+                backImage:runAction(action1)
+
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                setting_back:runAction(cc.Sequence:create(action2, action3))
+            end
+        elseif now_x + moveLength < start_x then
+            print("left")
+            if viewIndex == 2 then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+                viewIndex = 1
+
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+                backImage:runAction(action1)
+
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                setting_back:runAction(cc.Sequence:create(action2, action3))
+            end
+        end
     end
  
     local listener = cc.EventListenerTouchOneByOne:create()
