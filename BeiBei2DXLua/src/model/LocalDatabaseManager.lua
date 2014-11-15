@@ -1,5 +1,5 @@
 
-local RBWORDNUM = 20
+local RBWORDNUM = 3
 
 require("lsqlite3")
 
@@ -253,14 +253,15 @@ function Manager.getUserDataFromLocalDB(objectOfDataClass)
 end
 
 function Manager.insertTable_Word_Prociency(wordName, wordProciency)
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE bookKey = '"..s_CURRENT_USER.bookKey.."' and wordName = '"..wordName.."'") do
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..book.."' and wordName = '"..wordName.."'") do
         num = num + 1
     end
     
     if num == 0 then
-        local user = s_CURRENT_USER.objectId
-        local book = s_CURRENT_USER.bookKey
         local time = os.time()
         local query = "INSERT INTO Word_Prociency VALUES ('"..user.."', '"..book.."', '"..wordName.."', "..wordProciency..", '"..time.."');"
         Manager.database:exec(query)
@@ -275,34 +276,6 @@ function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     Manager.showTable_Word_Prociency()
 end
 
-function Manager.insertTable_RB_control(bossID)
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local query = "INSERT INTO RB_control VALUES ('"..user.."', '"..book.."', "..bossID..", "..RBWORDNUM..", 0, '"..time.."');"
-    Manager.database:exec(query)
-end
-
-function Manager.insertTable_RB_record(wordName)
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM RB_record WHERE bookKey = '"..s_CURRENT_USER.bookKey.."'") do
-        num = num + 1
-    end
-    
-    local wordID = num + 1
-    local bossID = ((wordID - 1) / RBWORDNUM) + 1
-    
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local query = "INSERT INTO RB_control VALUES ('"..user.."', '"..book.."', "..bossID..", "..wordID..", '"..wordName.."', '"..time.."');"
-    Manager.database:exec(query)
-    
-    if wordID % RBWORDNUM == 0 then
-        Manager.insertTable_RB_control(bossID)
-    end
-end
-
 function Manager.showTable_Word_Prociency()
     s_logd("Word_Prociency --------------------------- begin")
     for row in Manager.database:nrows("SELECT * FROM Word_Prociency") do
@@ -311,25 +284,86 @@ function Manager.showTable_Word_Prociency()
     s_logd("Word_Prociency --------------------------- end")
 end
 
+function Manager.insertTable_RB_control(bossID)
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local query = "INSERT INTO RB_control VALUES ('"..user.."', '"..book.."', "..bossID..", "..RBWORDNUM..", 0, '"..time.."');"
+    Manager.database:exec(query)
+end
+
+function Manager.showTable_RB_control()
+    s_logd("RB_control ------------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM RB_control") do
+        s_logd("bossID:"..row.bossId..' appearCount:'..row.appearCount)
+    end
+    s_logd("RB_control ------------------------------- end")
+end
+
+function Manager.insertTable_RB_record(wordName)
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+    
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM RB_record WHERE userId = '"..user.."' and bookKey = '"..book.."'") do
+        num = num + 1
+    end
+    
+    local wordID = num + 1
+    local bossID = math.floor((wordID - 1) / RBWORDNUM) + 1
+    
+    local time = os.time()
+    local query = "INSERT INTO RB_record VALUES ('"..user.."', '"..book.."', "..bossID..", "..wordID..", '"..wordName.."', '"..time.."');"
+    print(query)
+    Manager.database:exec(query)
+    
+    s_logd("insert word "..wordName.." into review boss")
+    Manager.showTable_RB_record()
+    
+    if wordID % RBWORDNUM == 0 then
+        Manager.insertTable_RB_control(bossID)
+        s_logd("generate a new review boss")
+        Manager.showTable_RB_control()
+    end
+end
+
+function Manager.showTable_RB_record()
+    s_logd("RB_record -------------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM RB_record") do
+        s_logd("bossID:"..row.bossId..' wordID:' .. row.wordId .. ' wordName:' .. row.wordName)
+    end
+    s_logd("RB_record -------------------------------- end")
+end
+
+function Manager.getRBWordList(bossID)
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+    local wordList = {}
+    for row in Manager.database:nrows("SELECT * FROM RB_record WHERE userId = '"..user.."' and bookKey = '"..book.."' and bossId = '"..bossID.."'") do
+        table.insert(wordList, row.wordName)
+    end
+    return wordList
+end
+
+
+
 function Manager.getStudyWordsNum(bookKey)
+    local user = s_CURRENT_USER.objectId
     local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE bookKey = '"..bookKey.."'") do
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
         sum = sum + 1
     end
     return sum
 end
 
 function Manager.getGraspWordsNum(bookKey)
+    local user = s_CURRENT_USER.objectId
     local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE bookKey = '"..bookKey.."'") do
-        if row.wordProciency == 5 then
-            sum = sum + 1
-        end
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
+        sum = sum + 1
     end
     return sum
 end
-
-
 
 -- return current valid review bossId
 function Manager:getCurrentReviewBossID()
@@ -379,19 +413,7 @@ function Manager.updateReviewBossRecord(bossId)
     end
 end
 
-function Manager.showTable_RB_control()
-    s_logd("RB_control1 -------------------------------")
-    for row in Manager.database:nrows("SELECT * FROM RB_control") do
-        s_logd(row.bossId .. ',' .. row.appearCount..','..row.lastUpdate)
-    end
-end
 
-function Manager.showTable_RB_record()
-    s_logd("RB_record --------------------------------")
-    for row in Manager.database:nrows("SELECT * FROM RB_record") do
-        s_logd(row.bossId .. ',' .. row.wordId .. ',' .. row.wordName)
-    end
-end
 
 ---- UserDefault -----------------------------------------------------------
 
