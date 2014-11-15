@@ -127,6 +127,7 @@ function SummaryBossAlter:win1()
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
     local isPassed = levelData.isPassed
     if isPassed == 0 then
+        s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
     end
     self.winBoard = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
@@ -170,9 +171,9 @@ function SummaryBossAlter:win1()
        s_logd("clicked") 
        local level = require('view.LevelLayer')
        local layer = level.create()
-       if self.win and isPassed == 0 then
-           s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-       end
+       --if self.win and isPassed == 0 then
+       --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+       --end
        s_SCENE:replaceGameLayer(layer)
     end
     continue:registerScriptTapHandler(backToLevelScene)

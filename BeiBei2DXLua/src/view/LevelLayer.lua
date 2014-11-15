@@ -123,6 +123,9 @@ function LevelLayer:ctor()
     -- level layer state manager
     self:levelStateManager()
     local scrollViewNode = ccui.ScrollView:create() 
+    
+    print('-----current user=====')
+    print_lua_table(s_CURRENT_USER)
     -- scroll view scroll
     local function scrollViewDidScroll()
         print 'scrollview did scroll'
@@ -171,12 +174,15 @@ function LevelLayer:ctor()
 --    local item1 = ccui.Layout:create()
 --    item1:setTouchEnabled(true)
 --    item1:setContentSize(levelLayerI:getContentSize())
---    levelLayerI:setPosition(cc.p(item1:getContentSize().width/2, item1:getContentSize().height/2))
+--    levelLayerI:setPosition(0,0)
+--    --levelLayerI:setPosition(cc.p(item1:getContentSize().width/2, item1:getContentSize().height/2))
 --    item1:addChild(levelLayerI)
 --    listView:setItemModel(item1)
 --    listView:pushBackDefaultItem()
 --    listView:insertDefaultItem(0)
     playMusic(s_sound_bgm1,true)
+    
+    
     
 end
 
