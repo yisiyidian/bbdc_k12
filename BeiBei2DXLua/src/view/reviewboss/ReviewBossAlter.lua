@@ -6,19 +6,18 @@ end)
 
 function ReviewBossAlter.create()
     local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
-    print("update begin")
     s_DATABASE_MGR.updateReviewBossRecord(bossID)
-    print("update end")
     
-    local main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+    local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
     local back = cc.Sprite:create("image/alter/rb_alertBackImage.png")
-    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
+    back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
     
