@@ -24,8 +24,6 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.loadConfiguration()
-    
-    
     -- reviewboss scene variate
     CorePlayManager.rbWordList = {"apple","pear","water","day","wonder","needle"}
 end
@@ -147,6 +145,12 @@ function CorePlayManager.recordWordProciency()
 end
 
 function CorePlayManager.enterReviewBossLayer()
+    local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
+    CorePlayManager.rbWordList = s_DATABASE_MGR.getRBWordList(bossID)
+    if #CorePlayManager.rbWordList < 3 then
+        return
+    end
+    
     if s_CURRENT_USER.currentChapterKey == "chapter0" then
         local reviewBossLayer = ReviewBossLayer.create()
         s_SCENE:replaceGameLayer(reviewBossLayer)
@@ -162,6 +166,10 @@ function CorePlayManager.enterReviewBossLayer()
     end
 end
 
+function CorePlayManager.leaveReviewBossLayer()
+    CorePlayManager.enterLevelLayer()
+end
+
 function CorePlayManager.enterIntroLayer()
     local IntroLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(IntroLayer)
@@ -174,10 +182,7 @@ end
 
 function CorePlayManager.enterLevelLayer()
     s_logd('!!------------------------!!')
-    
     local levelLayer = LevelLayer.create()
-    
-    
     s_SCENE:replaceGameLayer(levelLayer)
 end
 

@@ -166,12 +166,12 @@ function LevelLayerI:plotLevelDecoration(levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
     local levelIndex = string.sub(levelKey, 6)
 
---        if i == 3 or i == 10 then  -- plot boat animation
---            local boat = sp.SkeletonAnimation:create('spine/first-level-moving-boat-bottom.json', 'spine/first-level-moving-boat-bottom.atlas',1)
---            boat:addAnimation(0, 'anmiation', true)
---            boat:setPosition(levelButton:getContentSize().width/2, -400)
---            levelButton:addChild(boat)
---        end
+        if i == 3 or i == 10 then  -- plot boat animation
+            local boat = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
+            boat:addAnimation(0, 'anmiation', true)
+            boat:setPosition(levelButton:getContentSize().width/2, -400)
+            levelButton:addChild(boat)
+        end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
         if levelData.stars > 0 and s_CURRENT_USER.currentLevelKey ~= levelData.levelKey then
             self:plotLevelStar(levelButton, levelData.stars)

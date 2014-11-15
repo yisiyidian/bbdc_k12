@@ -170,15 +170,21 @@ function LevelLayer:ctor()
     listView:addEventListener(listViewEvent)
     self:addChild(listView)
     
-    -- add list view item
+    -- add list view item1
     local item1 = ccui.Layout:create()
     item1:setTouchEnabled(true)
     item1:setContentSize(levelLayerI:getContentSize())    
     levelLayerI:setPosition(cc.p(0, 0))
     item1:addChild(levelLayerI)
-    item1:setPositionPercent(cc.p(20, 10))
+    --item1:setPositionPercent(cc.p(20, 10))
     listView:pushBackCustomItem(item1)
     
+    local item1_2 = ccui.Layout:create()
+    local connection1_2 = cc.Scale9Sprite:create('ccb/ccbResources/chapter_level/connection/connection_xuanxiaoguan1-2_background.png')
+    item1_2:setContentSize(connection1_2:getContentSize())
+    connection1_2:setPosition(cc.p(item1_2:getContentSize().width/2, item1_2:getContentSize().height/2))
+    item1_2:addChild(connection1_2)
+    listView:pushBackCustomItem(item1_2)
 --    local item2 = ccui.Layout:create()
 --    item2:setTouchEnabled(true)
 --    item2:setContentSize(levelLayerII:getContentSize())    
@@ -222,20 +228,5 @@ function LevelLayer:ctor()
     
     
     
-end
-
-function LevelLayer:onLevelButtonClicked()
-    local PopupNormalLevel = require('popup.PopupSummarySuccess')
-    local popLayer = PopupNormalLevel.create()
---    popLayer:setAnchorPoint(0.5,0.5)
-    s_SCENE:popup(popLayer)
- --popupLayer:setPosition(100,100)
- --s_SCENE:popup(popupLayer)
---    local levelName = 'levelButton'..self
---    local selectedLevelButton = ccbLevelLayer['levelSet']:getChildByName(levelName)
---    print(selectedLevelButton:getPosition())
---
---    --local test = cc.MenuItemSprite:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
---    selectedLevelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/background_xuanxiaoguan2_head_coveredbycloud_1.png'))
 end
 return LevelLayer

@@ -37,7 +37,7 @@ local function main()
     end
 
     s_DATA_MANAGER.loadText()
-
+    
 -- *************************************
 -- All test code must in example.example
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
