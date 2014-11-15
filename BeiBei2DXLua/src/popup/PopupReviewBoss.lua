@@ -47,7 +47,14 @@ function PopupReviewBoss:onGoButtonClicked()
     s_logd('on go button clicked')
     
     self:onCloseButtonClicked()
-    s_CorePlayManager.enterReviewBossLayer()
+    if s_CURRENT_USER.energyCount >= s_review_boss_energy_cost then
+        s_CURRENT_USER:useEnergys(s_review_boss_energy_cost)
+        s_CorePlayManager.enterReviewBossLayer()
+    else 
+        local energyInfoLayer = require('popup.PopupEnergyInfo')
+        local layer = energyInfoLayer.create()
+        s_SCENE:popup(layer)
+    end
 end
 
 return PopupReviewBoss

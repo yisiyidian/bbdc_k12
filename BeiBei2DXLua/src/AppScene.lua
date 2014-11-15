@@ -78,6 +78,7 @@ local function update(dt)
                 else 
                     s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.energyLastCoolDownTime + cnt * s_energyCoolDownSecs
                 end
+                s_CURRENT_USER:updateDataToServer()
             end
         end
     end 

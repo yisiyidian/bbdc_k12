@@ -52,11 +52,18 @@ end
 function PopupSummarySuccess:onGoButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on go button clicked')
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    local summaryboss = require('view/summaryboss/SummaryBossLayer')
-    local layer = summaryboss.create(levelConfig)
-    layer:setAnchorPoint(0.5,0)
-    s_SCENE:replaceGameLayer(layer)
+    if s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
+        s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+        local summaryboss = require('view/summaryboss/SummaryBossLayer')
+        local layer = summaryboss.create(levelConfig)
+        layer:setAnchorPoint(0.5,0)
+        s_SCENE:replaceGameLayer(layer)
+    else 
+        local energyInfoLayer = require('popup.PopupEnergyInfo')
+        local layer = energyInfoLayer.create()
+        s_SCENE:popup(layer)
+    end
 end
 
 return PopupSummarySuccess

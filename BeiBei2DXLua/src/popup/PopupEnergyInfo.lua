@@ -44,8 +44,12 @@ function PopupEnergyInfo:ctor()
     self.ccbPopupEnergyInfo['subtitle']:setString('复习以前的关卡不耗费体力')
     self.ccbPopupEnergyInfo['energyNumber']:setString(s_CURRENT_USER.energyCount)
     self.ccbPopupEnergyInfo['energyNumber']:setScale(2)
-    node:setPosition(0,0)
+    node:setPosition(0,600)
     self:addChild(node)
+    
+    local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
+    local action2 = cc.EaseBackOut:create(action1)
+    node:runAction(action2)
     
     local label_buyEnergy = cc.Label:createWithSystemFont("体力商店购买","",36)
     label_buyEnergy:setPosition(0.5 * self.ccbPopupEnergyInfo['buyButton']:getContentSize().width + 20,0.5 * self.ccbPopupEnergyInfo['buyButton']:getContentSize().height)
