@@ -32,8 +32,6 @@ function PopupReviewBoss:ctor()
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
     local action2 = cc.EaseBackOut:create(action1)
     node:runAction(action2)
-    
-
 end
 
 function PopupReviewBoss:onCloseButtonClicked()
@@ -43,6 +41,9 @@ end
 
 function PopupReviewBoss:onGoButtonClicked()
     s_logd('on go button clicked')
+    
+    self:onCloseButtonClicked()
+    s_CorePlayManager.enterReviewBossLayer()
 end
 
 return PopupReviewBoss
