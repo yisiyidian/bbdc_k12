@@ -133,6 +133,8 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
         end
     end
 
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
     s_CorePlayManager.initStudyTestState()
     s_CorePlayManager.enterStudyLayer()
 end
@@ -142,10 +144,7 @@ function PopupNormalLevel:onTestButtonClicked(levelKey)
     s_logd('on test button clicked')
     
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    print(levelConfig.word_content)
-
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
-
     s_CorePlayManager.initStudyTestState()
     s_CorePlayManager.enterTestLayer()
 end
