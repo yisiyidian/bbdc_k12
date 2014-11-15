@@ -197,6 +197,13 @@ function HomeLayer.create()
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
                 print(label_name[i])
+                if label_name[i] == "选择书籍" then
+                    s_CorePlayManager.enterBookLayer()
+                elseif label_name[i] == "登出游戏" then
+                    
+                else
+                    
+                end
             end
         end
 
