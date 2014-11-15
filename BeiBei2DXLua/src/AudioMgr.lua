@@ -4,14 +4,44 @@ local db = require('model.LocalDatabaseManager')
 
 function playMusic(filename, isLoop)
     if db.isMusicOn() then
-        local bgMusicPath = cc.FileUtils:getInstance():fullPathForFilename(filename) 
-        cc.SimpleAudioEngine:getInstance():playMusic(bgMusicPath, isLoop)
+        local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename) 
+        if cc.FileUtils:getInstance():isFileExist(localPath) then
+            cc.SimpleAudioEngine:getInstance():playMusic(localPath, isLoop)
+        end
     end
 end
 
 function playSound(filename)
     if db.isSoundOn() then
-        local effectPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
-        cc.SimpleAudioEngine:getInstance():preloadEffect(effectPath)
+        local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
+        if cc.FileUtils:getInstance():isFileExist(localPath) then
+            cc.SimpleAudioEngine:getInstance():preloadEffect(localPath)
+        end
+    end
+end
+
+function getWordSoundFileName(word)
+    local isAm = 'us' -- us en
+    if s_CURRENT_USER ~= nil then 
+        if s_CURRENT_USER.isSoundAm == 0 then
+            isAm = 'en' 
+        end 
+    end
+    local filename = isAm .. '_' .. word .. '.mp3'
+    return filename
+end
+
+function getWordSoundFilePath(word)
+    local filename = 'res/words/' .. getWordSoundFileName(word)
+    local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
+    return localPath
+end
+
+function playWordSound(word)
+    if db.isSoundOn() then
+        local localPath = getWordSoundFilePath(word)
+        if cc.FileUtils:getInstance():isFileExist(localPath) then
+            cc.SimpleAudioEngine:getInstance():preloadEffect(localPath)
+        end
     end
 end

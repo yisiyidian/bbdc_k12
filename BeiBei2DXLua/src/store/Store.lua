@@ -69,8 +69,8 @@ function Store.buy(onResult)
             Product_Count="1",  
 
             Role_Id=userID,  
-            Role_Name=s_CURRENT_USER.username,
-            Role_Grade=s_CURRENT_USER.currentLevelIndex,
+            Role_Name='Test',--s_CURRENT_USER.username,
+            Role_Grade='1', -- s_CURRENT_USER.currentLevelIndex,
             Role_Balance="0",
 
             Server_Id="1"

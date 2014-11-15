@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/AVConstants.h</key>
 		<data>
-		m1X8hmIxLJUuvHK4KY9WVAmySPo=
+		ScgWmrZ/2h3ZEms3v43xIUVc5QI=
 		</data>
 		<key>Headers/AVFile.h</key>
 		<data>
@@ -63,6 +63,14 @@
 		<key>Headers/AVGroup.h</key>
 		<data>
 		s81XkuvnnxyzP3d7nSzMY46rV5Q=
+		</data>
+		<key>Headers/AVHistoryMessage.h</key>
+		<data>
+		KM08k2LUaBCWPMlkitni9hKNzws=
+		</data>
+		<key>Headers/AVHistoryMessageQuery.h</key>
+		<data>
+		aKuiE4aUpWOPY7aEaGDFd4bx3Fw=
 		</data>
 		<key>Headers/AVInstallation.h</key>
 		<data>
@@ -78,7 +86,7 @@
 		</data>
 		<key>Headers/AVOSCloud.h</key>
 		<data>
-		K6b7LNXrvVS4Y7Op4prYTY+Dysc=
+		dtonPubbYLuGvzXqqBUSDycAQ8M=
 		</data>
 		<key>Headers/AVObject+Subclass.h</key>
 		<data>
@@ -94,7 +102,7 @@
 		</data>
 		<key>Headers/AVQuery.h</key>
 		<data>
-		EIhpOsHkUl30MTKsUGtpK/f5Hvs=
+		uixTDXu+Sipac28XVz9RWBM/u9I=
 		</data>
 		<key>Headers/AVRelation.h</key>
 		<data>
@@ -122,7 +130,7 @@
 		</data>
 		<key>Headers/AVStatus.h</key>
 		<data>
-		k3TqSzp5iUUpf4g7/kf5hdb7PUs=
+		6TzJreEA4MSyrkaFFeJH+joK/oM=
 		</data>
 		<key>Headers/AVSubclassing.h</key>
 		<data>
@@ -257,7 +265,7 @@
 		</data>
 		<key>Headers/AVConstants.h</key>
 		<data>
-		m1X8hmIxLJUuvHK4KY9WVAmySPo=
+		ScgWmrZ/2h3ZEms3v43xIUVc5QI=
 		</data>
 		<key>Headers/AVFile.h</key>
 		<data>
@@ -270,6 +278,14 @@
 		<key>Headers/AVGroup.h</key>
 		<data>
 		s81XkuvnnxyzP3d7nSzMY46rV5Q=
+		</data>
+		<key>Headers/AVHistoryMessage.h</key>
+		<data>
+		KM08k2LUaBCWPMlkitni9hKNzws=
+		</data>
+		<key>Headers/AVHistoryMessageQuery.h</key>
+		<data>
+		aKuiE4aUpWOPY7aEaGDFd4bx3Fw=
 		</data>
 		<key>Headers/AVInstallation.h</key>
 		<data>
@@ -285,7 +301,7 @@
 		</data>
 		<key>Headers/AVOSCloud.h</key>
 		<data>
-		K6b7LNXrvVS4Y7Op4prYTY+Dysc=
+		dtonPubbYLuGvzXqqBUSDycAQ8M=
 		</data>
 		<key>Headers/AVObject+Subclass.h</key>
 		<data>
@@ -301,7 +317,7 @@
 		</data>
 		<key>Headers/AVQuery.h</key>
 		<data>
-		EIhpOsHkUl30MTKsUGtpK/f5Hvs=
+		uixTDXu+Sipac28XVz9RWBM/u9I=
 		</data>
 		<key>Headers/AVRelation.h</key>
 		<data>
@@ -329,7 +345,7 @@
 		</data>
 		<key>Headers/AVStatus.h</key>
 		<data>
-		k3TqSzp5iUUpf4g7/kf5hdb7PUs=
+		6TzJreEA4MSyrkaFFeJH+joK/oM=
 		</data>
 		<key>Headers/AVSubclassing.h</key>
 		<data>
