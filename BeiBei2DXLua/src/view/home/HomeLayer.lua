@@ -8,6 +8,15 @@ end)
 
 
 function HomeLayer.create()
+    -- data begin
+    local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
+    local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local chapterIndex      = string.sub(s_CURRENT_USER.currentChapterKey,8,8)+1
+    local chapterName       = s_DATA_MANAGER.chapters[chapterIndex].Name
+    local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6,6)+1
+    local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
+    -- data end
+    
     local layer = HomeLayer.new()
     
     local offset = 500
@@ -112,12 +121,12 @@ function HomeLayer.create()
     magnifier:setPosition(container:getContentSize().width-70, 70)
     container:addChild(magnifier)
     
-    local label1 = cc.Label:createWithSystemFont("四级词汇","",28)
+    local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",28)
     label1:setColor(cc.c4b(255,255,255,255))
     label1:setPosition(container:getContentSize().width/2, 350)
     container:addChild(label1)
     
-    local label2 = cc.Label:createWithSystemFont("4000词","",20)
+    local label2 = cc.Label:createWithSystemFont(bookWordCount.."词","",20)
     label2:setColor(cc.c4b(255,255,255,255))
     label2:setPosition(container:getContentSize().width/2, 320)
     container:addChild(label2)
@@ -143,7 +152,7 @@ function HomeLayer.create()
     button_change:addTouchEventListener(button_change_clicked)
     container:addChild(button_change)
     
-    local label = cc.Label:createWithSystemFont("第一章 拉斯维加斯 第5关","",28)
+    local label = cc.Label:createWithSystemFont(levelName,"",28)
     label:setColor(cc.c4b(0,0,0,255))
     label:setPosition(bigWidth/2, 300)
     backImage:addChild(label)

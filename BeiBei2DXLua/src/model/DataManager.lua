@@ -126,6 +126,8 @@ function DataManager.loadBooks()
     end
 end
 
+
+
 -- chapter -------------------------------------------------------------------
 
 function DataManager.loadChapters()
