@@ -143,7 +143,7 @@ showGirlAndStar = function()
         end
     end
 
-    local button_goon = ccui.Button:create("image/button/studyscene_blue_button.png")
+    local button_goon = ccui.Button:create("image/button/studyscene_blue_button.png", "image/button/studyscene_blue_button.png")
     button_goon:setPosition(380,200)
     button_goon:setTitleText("继续")
     button_goon:setTitleFontSize(30)
@@ -200,20 +200,20 @@ showDetailInfo = function()
             if index <= #s_CorePlayManager.wordList then
                 local word_back = nil
                 if s_CorePlayManager.answerStateRecord[index] == 1 then
-                    word_back = ccui.Button:create("image/alter/testscene_rightword_back_light.png")
+                    word_back = ccui.Button:create("image/alter/testscene_rightword_back_light.png", "image/alter/testscene_rightword_back_light.png")
                     word_back.name = "right"
                     right_num = right_num + 1
                 else
                     if lastSelectIndex == nil then
                         lastSelectIndex = index
                     end
-                    word_back = ccui.Button:create("image/alter/testscene_wrongword_back_light.png")
+                    word_back = ccui.Button:create("image/alter/testscene_wrongword_back_light.png", "image/alter/testscene_wrongword_back_light.png")
                     word_back.name = "wrong"
                     wrong_num = wrong_num + 1
                 end
                 word_back:setPosition(116+160*(j-1), 676-78*(i-1))
                 word_back:setTitleText(s_CorePlayManager.wordList[index])
-                word_back:setTitleColor(cc.c4b(0,0,0,255))
+                word_back:setTitleColor(cc.c4b(255,255,255,255))
                 word_back:setTitleFontSize(28)
                 word_back:addTouchEventListener(showSelectWordInfo)
                 word_back.tag = index
@@ -247,7 +247,7 @@ showDetailInfo = function()
         end
     end
     
-    local button_replayall = ccui.Button:create("image/button/button_blue_147x79.png")
+    local button_replayall = ccui.Button:create("image/button/button_blue_147x79.png", "image/button/button_blue_147x79.png")
     button_replayall:setPosition(112, 225)
     button_replayall:setTitleText("重新玩")
     button_replayall:setTitleColor(cc.c4b(255,255,255,255))
@@ -256,7 +256,7 @@ showDetailInfo = function()
     button_replayall:setVisible(false)
     back:addChild(button_replayall)
     
-    local button_replaywrong = ccui.Button:create("image/button/button_blue_147x79.png")
+    local button_replaywrong = ccui.Button:create("image/button/button_blue_147x79.png", "image/button/button_blue_147x79.png")
     button_replaywrong:setPosition(275, 225)
     button_replaywrong:setTitleText("玩错词")
     button_replaywrong:setTitleColor(cc.c4b(255,255,255,255))
@@ -265,7 +265,7 @@ showDetailInfo = function()
     button_replaywrong:setVisible(false)
     back:addChild(button_replaywrong)
     
-    local button_continue = ccui.Button:create("image/button/button_blue_147x79.png")
+    local button_continue = ccui.Button:create("image/button/button_blue_147x79.png", "image/button/button_blue_147x79.png")
     button_continue:setPosition(436, 225)
     button_continue:setTitleText("继续玩")
     button_continue:setTitleColor(cc.c4b(255,255,255,255))

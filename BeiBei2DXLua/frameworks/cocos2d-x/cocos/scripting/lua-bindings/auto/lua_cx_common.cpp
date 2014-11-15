@@ -151,9 +151,6 @@ int lua_cx_common_CXAvos_signUp(lua_State* tolua_S)
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
 
-        if (!toluafix_isfunction(tolua_S,4,"LUA_FUNCTION",0,&tolua_err))
-            goto tolua_lerror;
-
         arg2 = (  toluafix_ref_function(tolua_S,4,0));
         if(!ok)
             return 0;
@@ -205,9 +202,6 @@ int lua_cx_common_CXAvos_downloadFile(lua_State* tolua_S)
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
-
-        if (!toluafix_isfunction(tolua_S,4,"LUA_FUNCTION",0,&tolua_err))
-            goto tolua_lerror;
 
         arg2 = (  toluafix_ref_function(tolua_S,4,0));
         if(!ok)
@@ -303,9 +297,6 @@ int lua_cx_common_CXAvos_logIn(lua_State* tolua_S)
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp); arg1 = arg1_tmp.c_str();
-
-        if (!toluafix_isfunction(tolua_S,4,"LUA_FUNCTION",0,&tolua_err))
-            goto tolua_lerror;
 
         arg2 = (  toluafix_ref_function(tolua_S,4,0));
         if(!ok)
@@ -799,9 +790,6 @@ int lua_cx_common_CXStore_payForProduct(lua_State* tolua_S)
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
 
-        if (!toluafix_isfunction(tolua_S,3,"LUA_FUNCTION",0,&tolua_err))
-            goto tolua_lerror;
-
         arg1 = (  toluafix_ref_function(tolua_S,3,0));
         if(!ok)
             return 0;
@@ -850,9 +838,6 @@ int lua_cx_common_CXStore_requestProducts(lua_State* tolua_S)
         CXLUAFUNC arg1;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
-
-        if (!toluafix_isfunction(tolua_S,3,"LUA_FUNCTION",0,&tolua_err))
-            goto tolua_lerror;
 
         arg1 = (  toluafix_ref_function(tolua_S,3,0));
         if(!ok)

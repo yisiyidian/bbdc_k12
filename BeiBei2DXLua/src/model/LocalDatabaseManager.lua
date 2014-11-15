@@ -404,6 +404,9 @@ end
 
 -- update review boss after played
 function Manager.updateReviewBossRecord(bossId)
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+
     for row in Manager.database:nrows('SELECT * FROM RB_control where bossId = '..bossId) do
         if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
             -- update
@@ -411,6 +414,18 @@ function Manager.updateReviewBossRecord(bossId)
             Manager.database:exec(command)
         end
     end
+    Manager.showTable_RB_control()
+    
+    for row1 in Manager.database:nrows("SELECT * FROM RB_record where userId='"..user.."' and bookKey='"..book.."' and bossId = "..bossId) do
+        local wordName = row1.wordName
+        print("update word name:"..wordName)
+        for row2 in Manager.database:nrows("SELECT * FROM Word_Prociency where userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'") do
+            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
+            Manager.database:exec(command)
+            print(command)
+        end
+    end
+    Manager.showTable_Word_Prociency()
 end
 
 

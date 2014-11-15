@@ -5,8 +5,11 @@ local ReviewBossAlter = class("ReviewBossAlter", function()
 end)
 
 function ReviewBossAlter.create()
-    -- system variate
-
+    local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
+    print("update begin")
+    s_DATABASE_MGR.updateReviewBossRecord(bossID)
+    print("update end")
+    
     local main = cc.LayerColor:create(cc.c4b(0,0,0,100),s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)

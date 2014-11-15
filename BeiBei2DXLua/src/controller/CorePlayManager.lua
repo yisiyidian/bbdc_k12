@@ -167,6 +167,7 @@ function CorePlayManager.enterReviewBossLayer()
 end
 
 function CorePlayManager.leaveReviewBossLayer()
+    s_SCENE.levelLayerState = s_review_boss_pass_state
     CorePlayManager.enterLevelLayer()
 end
 
