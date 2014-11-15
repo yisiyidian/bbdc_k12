@@ -37,7 +37,7 @@ function StudyAlter.create()
     
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-        
+            s_CorePlayManager.enterLevelLayer()
         end
     end
     

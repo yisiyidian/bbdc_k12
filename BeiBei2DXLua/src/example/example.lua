@@ -25,9 +25,9 @@ function test()
     --     downloadFunc()
     -- end
 
-    s_SCENE:logIn("yehanjie1", "222222")
+    -- s_SCENE:logIn("yehanjie1", "222222")
 
-    -- playWordSound('aa')
+    playWordSound('apple')
     -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
     --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
     -- end)

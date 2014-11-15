@@ -37,7 +37,9 @@ BeiBeiDanCiX
 
 5. build & run apk
     - cd BeiBei2DXLua
-    - cocos run -p android -j 4 --ap 17
+    - (debug) cocos run -p android -j 4 --ap 17
+    - (release ERROR) cocos run -p android -j 4 --ap 17 --compile-script 1 --lua-encrypt --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA" -m release
+    - (release) cocos run -p android -j 4 --ap 17 --compile-script 1 -m release
 
 6. eclipse ADT Plugin
     - http://developer.android.com/sdk/installing/installing-adt.html

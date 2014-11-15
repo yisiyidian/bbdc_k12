@@ -68,10 +68,12 @@ function IntroLayer.create()
         return userName
     end
     
-    local visitLogin = function()
+    local visitLogin
+    visitLogin = function()
         local randomUserName = genRandomUserName()
         s_logd("randomUserName: "..randomUserName)
 
+        s_LOADING_CIRCLE_LAYER:show()
         s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
             if result.count <= 0 then -- not exist the user name
                 s_SCENE:signUp(randomUserName, "bbdc123#")
@@ -80,7 +82,8 @@ function IntroLayer.create()
             end
         end,
         function (api, code, message, description)
-            -- server error
+            s_TIPS_LAYER:showSmall(message)
+            s_LOADING_CIRCLE_LAYER:hide()
         end)
     end
     
@@ -158,11 +161,11 @@ function IntroLayer.create()
         local now_x = location.x
         if now_x - moveLength > start_x then
             if currentIndex == 4 then
+                button_login:setVisible(false)
+                button_register:setVisible(false)
+            
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
                 cloud:runAction(action2)
-                
-                button_login:setVisible(false)
-                button_register:setVisible(falses)
             end
         
             if currentIndex > 1 then
@@ -206,7 +209,11 @@ function IntroLayer.create()
             end
             if currentIndex == 4 then                
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
-                cloud:runAction(action2)
+                local action3 = cc.CallFunc:create(function()
+                    button_login:setVisible(true)
+                    button_register:setVisible(true)
+                end)
+                cloud:runAction(cc.Sequence:create(action2, action3))
                                 
                 local button_login_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then                        
@@ -234,9 +241,7 @@ function IntroLayer.create()
                     end
                 end
 
-                if button_login then
-                    button_login:setVisible(true)
-                else
+                if not button_login then
                     button_login = ccui.Button:create()
                     button_login:loadTextures("image/button/studyscene_blue_button.png", "", "")
                     button_login:addTouchEventListener(button_login_clicked)
@@ -244,12 +249,11 @@ function IntroLayer.create()
                     button_login:setTitleFontSize(36)
                     button_login:setTitleText("登陆")
                     button_login:setTitleColor(cc.c4b(255,255,255,255))
+                    button_login:setVisible(false)
                     cloud:addChild(button_login)
                 end
                 
-                if button_register then
-                    button_register:setVisible(true)
-                else
+                if not button_register then
                     button_register = ccui.Button:create()
                     button_register:loadTextures("image/button/button_white_denglu.png", "", "")
                     button_register:addTouchEventListener(button_register_clicked)
@@ -257,6 +261,7 @@ function IntroLayer.create()
                     button_register:setTitleFontSize(36)
                     button_register:setTitleText("注册")
                     button_register:setTitleColor(cc.c4b(115,197,243,255))
+                    button_register:setVisible(false)
                     cloud:addChild(button_register)
                 end
             end
@@ -270,8 +275,6 @@ function IntroLayer.create()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
 --    playMusic(s_sound_Pluto,true)
-    
-    
     return layer
 end
 
