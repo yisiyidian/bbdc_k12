@@ -47,10 +47,48 @@ function IntroLayer.create()
     head:setPosition(s_DESIGN_WIDTH/2, 800)
     intro:addChild(head)
     
+    local genRandomUserName = function()
+        local userNameLength = 8
+        local userName = ""
+        
+        math.randomseed(os.time())
+        for i = 1, userNameLength do
+            local randomIndex = math.random(0, 25)
+            local randomSmallCharIndex = string.byte('a') + randomIndex
+            local randomBigCharIndex   = string.byte('A') + randomIndex
+            
+            randomIndex = math.random(1, 2)
+            if randomIndex == 1 then
+                userName = userName .. string.char(randomSmallCharIndex)
+            else
+                userName = userName .. string.char(randomBigCharIndex)
+            end
+        end
+        
+        return userName
+    end
+    
+    local visitLogin = function()
+        local randomUserName = genRandomUserName()
+        s_logd("randomUserName: "..randomUserName)
+
+        s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
+            if result.count <= 0 then -- not exist the user name
+                s_SCENE:signUp(randomUserName, "bbdc123#")
+            else -- exist the user name
+                visitLogin()
+            end
+        end,
+        function (api, code, message, description)
+            -- server error
+        end)
+    end
+    
+    
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_logd("visitor")
-    --        playSound(s_sound_buttonEffect)
+            visitLogin()
         end
     end
     
