@@ -182,7 +182,6 @@ function CorePlayManager.enterHomeLayer()
 end
 
 function CorePlayManager.enterLevelLayer()
-    s_logd('!!------------------------!!')
     local levelLayer = LevelLayer.create()
     s_SCENE:replaceGameLayer(levelLayer)
 end
