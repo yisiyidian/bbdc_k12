@@ -21,7 +21,7 @@ function RightTopNode:ctor()
 
     starNumber = s_CURRENT_USER:getUserCurrentChapterObtainedStarCount()
     --test
-    heartNumber = 1
+    
 
     local heartShow = ""
  --   starNumber = 1
@@ -39,7 +39,7 @@ function RightTopNode:ctor()
             introLayer_star = IntroLayer.create(starNumber)  
             s_SCENE:popup(introLayer_star)
             
-            local action1 = cc.MoveTo:create(0.3, cc.p(0,-400))          
+            local action1 = cc.MoveTo:create(0.3, cc.p(0,-600))          
             introLayer_star:runAction(action1)
         end
     end
@@ -52,7 +52,8 @@ function RightTopNode:ctor()
             introLayer_heart = IntroLayer.create(heartNumber)  
             s_SCENE:popup(introLayer_heart)
 
-            local action1 = cc.MoveTo:create(0.3, cc.p(0,-400))          
+            
+            local action1 = cc.MoveTo:create(0.3, cc.p(0,-600))          
             introLayer_heart:runAction(action1)
             
 
@@ -145,7 +146,10 @@ function RightTopNode:ctor()
     local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
     local min = time_betweenServerAndEnergy / 60
     local sec = time_betweenServerAndEnergy % 60
-    
+--    s_CURRENT_USER.addEnergys(10)
+
+
+
     
     local function update(delta)
     
@@ -153,7 +157,21 @@ function RightTopNode:ctor()
            heartShow = "full"
         else     
             sec = sec - delta
-            heartShow = string.format("%d",min) ..":"..string.format("%d",sec)           
+            heartShow = string.format("%d",min) ..":"..string.format("%d",sec)   
+            
+            if sec < 0 then
+                sec = 59
+                min = min - 1
+            end
+
+            if min < 0 then 
+                min = 29
+
+                s_CURRENT_USER:addEnergys(1)
+                heartNumber = s_CURRENT_USER.energyCount 
+                
+            end    
+                    
         end           
        heartExist:setString(heartNumber)  
        label_heart:setString(heartShow)
@@ -165,8 +183,9 @@ function RightTopNode:ctor()
             introLayer_heart.ccbPopupEnergyInfo['energyNumber']:setString(heartShow)
             local animation = introLayer_heart.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
             local label = animation:getChildByName("energyNumber")
+            if label ~= nil then
             label:setString(heartNumber)
-            
+            end
             end     
         end
         
@@ -178,16 +197,7 @@ function RightTopNode:ctor()
 --         local label = animation:getChildByName("energyNumber")
 --         label:setString(heartShow)
             
-            
-       if sec <= 0 then
-            sec = 59
-              min = min - 1
-        end
-
-         if min <= 0 then 
-            min = 29
-              heartNumber = heartNumber + 1
-         end
+           
 
 
     end

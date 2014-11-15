@@ -88,21 +88,28 @@ function PopupEnergyInfo:ctor(heartNumber)
     local min = time_betweenServerAndEnergy / 60
     local sec = time_betweenServerAndEnergy % 60
 
-    local function update(delta)
-        sec = sec - delta         
 
-        if sec <= 0 then
+    
+    
+    local function update(delta)
+         
+        --test
+      --  self.ccbPopupEnergyInfo['energyNumber']:setString(string.format("%d",sec)  )
+       if heartNumber < 4 then 
+            sec = sec - delta   
+        if sec < 0 then
             sec = 59
             min = min - 1
+
         end
 
-        if min <= 0 then 
+        if min < 0 then 
             min = 29
             heartNumber = heartNumber + 1
-        end
-        
+            self.energy_number = heartNumber
+     
         if heartNumber == 4 then 
-            local remove = self.removeChildByName("heart_animation")
+            local change = self.ccbPopupEnergyInfo['popupWindow']:removeChildByName("heart_animation")
             local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
             replace:setAnimation(0,'animation',true)
             replace:ignoreAnchorPointForPosition(false)
@@ -110,7 +117,13 @@ function PopupEnergyInfo:ctor(heartNumber)
             replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
             replace:setName("heart_animation")
             self.ccbPopupEnergyInfo['popupWindow']:addChild(replace) 
+        end       
+            
         end
+        end
+        
+
+
 
 
     end
@@ -143,7 +156,7 @@ function PopupEnergyInfo:onBuyButtonClicked()
         local introLayer = IntroLayer.create(self.energy_number)  
         s_SCENE:popup(introLayer)
 
-        local action2 = cc.MoveTo:create(0.3, cc.p(0,-400))          
+        local action2 = cc.MoveTo:create(0.3, cc.p(0,-600))          
         introLayer:runAction(action2)
     end)
 

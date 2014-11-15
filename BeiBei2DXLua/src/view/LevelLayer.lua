@@ -176,6 +176,14 @@ function LevelLayer:ctor()
 --    listView:setItemModel(item1)
 --    listView:pushBackDefaultItem()
 --    listView:insertDefaultItem(0)
+
+    local IntroLayer = require("view.hud.RightTopNode")
+    local introLayer = IntroLayer.create()
+    s_SCENE:addChild(introLayer)
+    
+
+
+
     playMusic(s_sound_bgm1,true)
     
 end

@@ -40,12 +40,20 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
-    local IntroLayer = require('view.hud.RightTopNode')
--- local layer = PopupLoginSignup.create()
--- layer:setAnchorPoint(0.5,0)
--- s_SCENE:popup(layer)
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+
+    s_SCENE:logIn("yehanjie1", "222222")
+
+
+
+
+
+
+--    local IntroLayer = require('view.hud.RightTopNode')
+---- local layer = PopupLoginSignup.create()
+---- layer:setAnchorPoint(0.5,0)
+---- s_SCENE:popup(layer)
+--    local introLayer = IntroLayer.create()
+--    s_SCENE:replaceGameLayer(introLayer)
 
 
     -- s_DATA_MANAGER.loadText()
