@@ -68,10 +68,12 @@ function IntroLayer.create()
         return userName
     end
     
-    local visitLogin = function()
+    local visitLogin
+    visitLogin = function()
         local randomUserName = genRandomUserName()
         s_logd("randomUserName: "..randomUserName)
 
+        s_LOADING_CIRCLE_LAYER:show()
         s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
             if result.count <= 0 then -- not exist the user name
                 s_SCENE:signUp(randomUserName, "bbdc123#")
@@ -80,7 +82,8 @@ function IntroLayer.create()
             end
         end,
         function (api, code, message, description)
-            -- server error
+            s_TIPS_LAYER:showSmall(message)
+            s_LOADING_CIRCLE_LAYER:hide()
         end)
     end
     
