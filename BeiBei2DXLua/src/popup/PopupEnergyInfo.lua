@@ -4,14 +4,14 @@ end)
 
 
 
-function PopupEnergyInfo.create(heartNumber)
-    local layer = PopupEnergyInfo.new(heartNumber)
+function PopupEnergyInfo.create()
+    local layer = PopupEnergyInfo.new()
     return layer
 end
 
-function PopupEnergyInfo:ctor(heartNumber)
+function PopupEnergyInfo:ctor()
 
-    self.energy_number = heartNumber
+    self.energy_number = s_CURRENT_USER.energyCount 
 
     
     local json = ''
@@ -39,14 +39,14 @@ function PopupEnergyInfo:ctor(heartNumber)
     self.ccb['buyButton'] = self.ccbPopupEnergyInfo_buyButton
     self.ccb['popupWindow'] = self.ccbPopupEnergyInfo_popupWindow
 
-    self.ccb['energy_number'] = heartNumber
+    self.ccb['energy_number'] = s_CURRENT_USER.energyCount 
 
     
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/righttopnode_heart.ccbi', proxy, self.ccbPopupEnergyInfo, self.ccb)
     self.ccbPopupEnergyInfo['title']:setString('贝贝的体力正在恢复！')
     self.ccbPopupEnergyInfo['subtitle']:setString('复习以前的关卡不耗费体力')
-    self.ccbPopupEnergyInfo['energyNumber']:setString("123")
+    self.ccbPopupEnergyInfo['energyNumber']:setString(self.energy_number)
     self.ccbPopupEnergyInfo['energyNumber']:setScale(2)
     node:setPosition(0,600)
     self:addChild(node)
@@ -75,28 +75,35 @@ function PopupEnergyInfo:ctor(heartNumber)
     heart:setName("heart_animation")
     self.ccbPopupEnergyInfo['popupWindow']:addChild(heart) 
     
-    if  self.energy_number > 0 and  self.energy_number < 4 then
-    local label_energyNumber = cc.Label:createWithSystemFont( self.energy_number,"",36)
+
+    local label_energyNumber = cc.Label:createWithSystemFont( "","",36)
     label_energyNumber:setColor(cc.c4b(255,255,255 ,255))
     label_energyNumber:setPosition(0.5 * heart:getContentSize().width ,0.5 * heart:getContentSize().height )
     label_energyNumber:setName("energyNumber")
     heart:addChild(label_energyNumber,1)
---      print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    end
+
     
     local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
     local min = time_betweenServerAndEnergy / 60
     local sec = time_betweenServerAndEnergy % 60
 
 
-    
+
     
     local function update(delta)
          
         --test
       --  self.ccbPopupEnergyInfo['energyNumber']:setString(string.format("%d",sec)  )
-       if heartNumber < 4 then 
+      
+        if self.energy_number < 4 then 
             sec = sec - delta   
+            self.ccbPopupEnergyInfo['energyNumber']:setString(string.format("%d",min) ..":"..string.format("%d",sec))
+            local animation = self.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
+            local label = animation:getChildByName("energyNumber")
+            label:setString(s_CURRENT_USER.energyCount )
+
+
+            
         if sec < 0 then
             sec = 59
             min = min - 1
@@ -105,10 +112,9 @@ function PopupEnergyInfo:ctor(heartNumber)
 
         if min < 0 then 
             min = 29
-            heartNumber = heartNumber + 1
-            self.energy_number = heartNumber
-     
-        if heartNumber == 4 then 
+            self.energy_number = s_CURRENT_USER.energyCount 
+            
+            if self.energy_number == 4 then 
             local change = self.ccbPopupEnergyInfo['popupWindow']:removeChildByName("heart_animation")
             local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
             replace:setAnimation(0,'animation',true)
@@ -117,9 +123,16 @@ function PopupEnergyInfo:ctor(heartNumber)
             replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
             replace:setName("heart_animation")
             self.ccbPopupEnergyInfo['popupWindow']:addChild(replace) 
-        end       
+            end       
             
         end
+        
+        else 
+            local animation = self.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
+            local label = animation:getChildByName("energyNumber")
+            label:setString("")
+        
+            self.ccbPopupEnergyInfo['energyNumber']:setString("full")
         end
         
 
@@ -153,7 +166,7 @@ function PopupEnergyInfo:onBuyButtonClicked()
  
     s_SCENE:callFuncWithDelay(0.3,function()
         local IntroLayer = require("popup/PopupEnergyBuy")
-        local introLayer = IntroLayer.create(self.energy_number)  
+        local introLayer = IntroLayer.create()  
         s_SCENE:popup(introLayer)
 
         local action2 = cc.MoveTo:create(0.3, cc.p(0,-600))          

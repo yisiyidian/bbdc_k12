@@ -36,7 +36,7 @@ function RightTopNode:ctor()
     local click_star = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             local IntroLayer = require("popup/PopupStarInfo")
-            introLayer_star = IntroLayer.create(starNumber)  
+            introLayer_star = IntroLayer.create()  
             s_SCENE:popup(introLayer_star)
             
             local action1 = cc.MoveTo:create(0.3, cc.p(0,-600))          
@@ -49,7 +49,7 @@ function RightTopNode:ctor()
             -- click
             
             local IntroLayer = require("popup/PopupEnergyInfo")
-            introLayer_heart = IntroLayer.create(heartNumber)  
+            introLayer_heart = IntroLayer.create()  
             s_SCENE:popup(introLayer_heart)
 
             
@@ -146,6 +146,7 @@ function RightTopNode:ctor()
     local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
     local min = time_betweenServerAndEnergy / 60
     local sec = time_betweenServerAndEnergy % 60
+     
 --    s_CURRENT_USER.addEnergys(10)
 
 
@@ -166,8 +167,6 @@ function RightTopNode:ctor()
 
             if min < 0 then 
                 min = 29
-
-                s_CURRENT_USER:addEnergys(1)
                 heartNumber = s_CURRENT_USER.energyCount 
                 
             end    
@@ -178,16 +177,16 @@ function RightTopNode:ctor()
        -- update data  
 
 --       --show full or time
-        if introLayer_heart ~= nil then
-            if introLayer_heart.ccbPopupEnergyInfo ~= nil then
-            introLayer_heart.ccbPopupEnergyInfo['energyNumber']:setString(heartShow)
-            local animation = introLayer_heart.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
-            local label = animation:getChildByName("energyNumber")
-            if label ~= nil then
-            label:setString(heartNumber)
-            end
-            end     
-        end
+--        if introLayer_heart ~= nil then
+--            if introLayer_heart.ccbPopupEnergyInfo ~= nil then
+--            introLayer_heart.ccbPopupEnergyInfo['energyNumber']:setString(heartShow)
+--            local animation = introLayer_heart.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
+--            local label = animation:getChildByName("energyNumber")
+--            if label ~= nil then
+--            label:setString(heartNumber)
+--            end
+--            end     
+--        end
         
 
          

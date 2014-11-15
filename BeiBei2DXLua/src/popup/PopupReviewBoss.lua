@@ -10,8 +10,12 @@ end
 
 function PopupReviewBoss:ctor()
     self.ccbPopupReviewBoss = {}
-    self.ccbPopupReviewBoss['onCloseButtonClicked'] = self.onCloseButtonClicked 
-    self.ccbPopupReviewBoss['onGoButtonClicked'] = self.onGoButtonClicked
+    self.ccbPopupReviewBoss['onCloseButtonClicked'] = function()
+        self:onCloseButtonClicked()
+    end 
+    self.ccbPopupReviewBoss['onGoButtonClicked'] = function()
+        self:onGoButtonClicked()
+    end
     
     self.ccb = {}
     self.ccb['popup_review_boss'] = self.ccbPopupReviewBoss
@@ -32,8 +36,6 @@ function PopupReviewBoss:ctor()
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
     local action2 = cc.EaseBackOut:create(action1)
     node:runAction(action2)
-    
-
 end
 
 function PopupReviewBoss:onCloseButtonClicked()
@@ -43,6 +45,9 @@ end
 
 function PopupReviewBoss:onGoButtonClicked()
     s_logd('on go button clicked')
+    
+    self:onCloseButtonClicked()
+    s_CorePlayManager.enterReviewBossLayer()
 end
 
 return PopupReviewBoss

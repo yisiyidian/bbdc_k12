@@ -84,6 +84,8 @@ function PopupNormalLevel:ctor(levelKey)
         self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('res/ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_NORMAL)
         self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_HIGH_LIGHTED)
         self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_SELECTED)
+    else 
+        self.ccbPopupNormalLevel['_test']:setVisible(false)
     end
     self:addChild(node)
 end
@@ -97,11 +99,18 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on study button clicked')
     
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    print(levelConfig.word_content)
-    
-    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+--    if s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
+--        s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+--        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+--        print(levelConfig.word_content)
+--    end
 
+--    else 
+--        local energyInfoLayer = require('popup.PopupEnergyInfo')
+--        s_CURRENT_USER:useEnergys(2)
+--        local layer = energyInfoLayer.create(5)
+--        s_SCENE:popup(layer)
+--    end
     -- download sounds of next level
     local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + 5)
     s_logd(nextLevelKey)

@@ -3,16 +3,16 @@ local  PopupStarInfo = class("PopupStarInfo", function()
 end)
 
 
-function PopupStarInfo.create(starNumber)
-    local layer = PopupStarInfo.new(starNumber)
+function PopupStarInfo.create()
+    local layer = PopupStarInfo.new()
     return layer
 end
 
 
 
-function PopupStarInfo:ctor(starNumber)
+function PopupStarInfo:ctor()
     --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
+    local  starNumber = s_CURRENT_USER:getUserCurrentChapterObtainedStarCount()
     local  totalNumber = 255
     
     self.ccbPopupStarInfo = {}
