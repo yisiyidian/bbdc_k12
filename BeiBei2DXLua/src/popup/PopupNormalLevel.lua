@@ -97,13 +97,21 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on study button clicked')
     
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    print(levelConfig.word_content)
-    
-    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+    if s_CURRENT_USER.energyCount <= s_normal_level_energy_cost then
+        s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+        print(levelConfig.word_content)
 
-    s_CorePlayManager.initStudyTestState()
-    s_CorePlayManager.enterStudyLayer()
+        s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+
+        s_CorePlayManager.initStudyTestState()
+        s_CorePlayManager.enterStudyLayer()
+    else 
+        local energyInfoLayer = require('popup.PopupEnergyInfo')
+        s_CURRENT_USER:useEnergys(2)
+        local layer = energyInfoLayer.create(5)
+        s_SCENE:popup(layer)
+    end
 end
 
 function PopupNormalLevel:onTestButtonClicked(levelKey)

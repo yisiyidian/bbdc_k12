@@ -120,10 +120,10 @@ function DataUser:parseServerFollowersData(results)
 end
 
 function DataUser:getUserLevelData(chapterKey, levelKey)  
-    print('begin get user level data') 
+    print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: ' .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked)
-        if v.chapterKey == chapterKey and v.levelKey == levelKey then
+        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked)
+        if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == s_CURRENT_USER.bookKey then
             return v
         end
     end
