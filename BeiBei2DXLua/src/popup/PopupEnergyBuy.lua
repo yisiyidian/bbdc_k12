@@ -3,17 +3,17 @@ local  PopupEnergyBuy = class("PopupEnergyBuy", function()
 end)
 
 
-function PopupEnergyBuy.create(energy_number)
-    local layer = PopupEnergyBuy.new(energy_number)
+function PopupEnergyBuy.create()
+    local layer = PopupEnergyBuy.new()
     return layer
 end
 
 local label_energyNumber
 
-function PopupEnergyBuy:ctor(energy_number)
+function PopupEnergyBuy:ctor()
  --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
  
-    self.energy_number = energy_number
+    self.energy_number =  s_CURRENT_USER.energyCount 
     
     local json = ''
     local atlas = ''
@@ -36,7 +36,7 @@ function PopupEnergyBuy:ctor(energy_number)
     self.ccb['closeButton'] = self.ccbPopupEnergyBuy_closeButton
     self.ccb['buyButton'] = self.ccbPopupEnergyBuy_buyButton
     self.ccb['popupWindow'] = self.ccbPopupEnergyBuy_popupWindow
-    self.ccb['energy_number'] = energy_number
+    self.ccb['energy_number'] =  s_CURRENT_USER.energyCount 
 
 
 
@@ -83,8 +83,8 @@ function PopupEnergyBuy:ctor(energy_number)
     local function update(delta)
            
               
-        if energy_number < 4 then  
-            label_energyNumber:setString(energy_number)  
+        if self.energy_number  < 4 then  
+            label_energyNumber:setString(s_CURRENT_USER.energyCount )  
             sec = sec - delta     
             
         if sec < 0 then
@@ -94,9 +94,9 @@ function PopupEnergyBuy:ctor(energy_number)
 
         if min < 0 then 
             min = 29
-            energy_number = energy_number + 1 
+            self.energy_number = s_CURRENT_USER.energyCount 
             
-            if energy_number == 4 then 
+            if self.energy_number == 4 then 
             local remove = self.ccbPopupEnergyBuy['popupWindow']:removeChildByName("heart_animation")
             local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
             replace:setAnimation(0,'animation',true)
