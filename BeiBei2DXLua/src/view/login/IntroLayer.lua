@@ -272,8 +272,6 @@ function IntroLayer.create()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
 --    playMusic(s_sound_Pluto,true)
-    
-    
     return layer
 end
 

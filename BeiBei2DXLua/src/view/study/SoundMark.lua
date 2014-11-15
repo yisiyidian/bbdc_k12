@@ -23,10 +23,12 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local changeCountry = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             if button_country:getTitleText() == "US" then
+                s_CURRENT_USER.isSoundAm = 0
                 button_country:setTitleText("EN")
                 button_soundmark_en:setVisible(true)
                 button_soundmark_us:setVisible(false)
             else
+                s_CURRENT_USER.isSoundAm = 1
                 button_country:setTitleText("US")
                 button_soundmark_en:setVisible(false)
                 button_soundmark_us:setVisible(true)
@@ -36,7 +38,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-    	   s_logd("pronounce")
+            playWordSound(wordname)
     	end
     end
 
@@ -76,7 +78,11 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     main:addChild(button_soundmark_us)
     main:addChild(button_soundmark_en)
     
-    button_soundmark_en:setVisible(false)
+    if s_CURRENT_USER.isSoundAm == 1 then
+        button_soundmark_en:setVisible(false)
+    else
+        button_soundmark_us:setVisible(false)
+    end
 
     return main    
 end
