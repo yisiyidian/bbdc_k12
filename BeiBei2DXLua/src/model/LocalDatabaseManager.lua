@@ -65,6 +65,17 @@ end
 -- init data structure
 function Manager.initTables()
    
+    -- CREATE table Word Prociency
+    Manager.database:exec[[
+        create table if not exists Word_Prociency(
+            userId TEXT,
+            bookKey TEXT,
+            wordName TEXT,
+            wordProciency INTEGER,
+            lastUpdate TEXT
+        );
+    ]]
+   
     -- CREATE table Review boss Control
     Manager.database:exec[[
         create table if not exists RB_control(
@@ -127,8 +138,7 @@ function Manager.initTables()
         require('model.user.DataLevel'),
         require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
         require('model.user.DataStatistics'),      -- IC_word_day same as DataStatistics
-        require('model.user.DataUser'),            -- db_userInfo same as DataUser
-        require('model.user.DataWord')             -- Word_Prociency same as DataWord
+        require('model.user.DataUser')             -- db_userInfo same as DataUser
     }
     for i = 1, #userDataClasses do
         Manager.createTable(userDataClasses[i].create())
@@ -244,7 +254,7 @@ end
 
 function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord WHERE wordName = '"..wordName.."'") do
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE bookKey = '"..s_CURRENT_USER.bookKey.."' and wordName = '"..wordName.."'") do
         num = num + 1
     end
     
@@ -252,7 +262,7 @@ function Manager.insertTable_Word_Prociency(wordName, wordProciency)
         local user = s_CURRENT_USER.objectId
         local book = s_CURRENT_USER.bookKey
         local time = os.time()
-        local query = "INSERT INTO WMAV_UserWord VALUES ('"..user.."', '"..book.."', '"..wordName.."', "..wordProciency..", '"..time.."');"
+        local query = "INSERT INTO Word_Prociency VALUES ('"..user.."', '"..book.."', '"..wordName.."', "..wordProciency..", '"..time.."');"
         Manager.database:exec(query)
         
         if wordProciency == 0 then
@@ -261,6 +271,8 @@ function Manager.insertTable_Word_Prociency(wordName, wordProciency)
     else
         print("word exists")
     end
+    
+    Manager.showTable_Word_Prociency()
 end
 
 function Manager.insertTable_RB_control(bossID)
@@ -273,7 +285,7 @@ end
 
 function Manager.insertTable_RB_record(wordName)
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM RB_record") do
+    for row in Manager.database:nrows("SELECT * FROM RB_record WHERE bookKey = '"..s_CURRENT_USER.bookKey.."'") do
         num = num + 1
     end
     
@@ -292,26 +304,27 @@ function Manager.insertTable_RB_record(wordName)
 end
 
 function Manager.showTable_Word_Prociency()
-    s_logd("WMAV_UserWord ---------------------------")
-    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord") do
-        s_logd(row.wordName .. ',' .. row.prociencyValue)
+    s_logd("Word_Prociency --------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency") do
+        s_logd(row.wordName .. ',' .. row.wordProciency)
     end
+    s_logd("Word_Prociency --------------------------- end")
 end
 
-function Manager.getStudyWordsNum()
+function Manager.getStudyWordsNum(bookKey)
     local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord") do
-        if row.prociencyValue == 5 then
-            sum = sum + 1
-        end
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE bookKey = '"..bookKey.."'") do
+        sum = sum + 1
     end
     return sum
 end
 
-function Manager.getGraspWordsNum()
+function Manager.getGraspWordsNum(bookKey)
     local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM WMAV_UserWord") do
-        sum = sum + 1
+    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE bookKey = '"..bookKey.."'") do
+        if row.wordProciency == 5 then
+            sum = sum + 1
+        end
     end
     return sum
 end
