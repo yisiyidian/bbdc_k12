@@ -39,7 +39,6 @@ function ReviewBossAlter.create()
     button_goon:addTouchEventListener(button_goon_clicked)
     back:addChild(button_goon)
 
-
     local onTouchBegan = function(touch, event)
         --s_logd("touch began on block layer")
         return true
