@@ -5,10 +5,10 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="libs/android-async-http-1.4.4-fix.jar"/>
-	<classpathentry kind="lib" path="libs/avoscloud-v2.6.5.jar"/>
-	<classpathentry kind="lib" path="libs/avosfeedback-v2.6.5.zip"/>
-	<classpathentry kind="lib" path="libs/avosstatistics-v2.6.5.jar"/>
+	<classpathentry kind="lib" path="libs/android-async-http-1.4.6.jar"/>
+	<classpathentry kind="lib" path="libs/avoscloud-v2.6.7.jar"/>
+	<classpathentry kind="lib" path="libs/avosfeedback-v2.6.7.zip"/>
+	<classpathentry kind="lib" path="libs/avosstatistics-v2.6.7.jar"/>
 	<classpathentry kind="lib" path="libs/fastjson.jar"/>
 	<classpathentry kind="lib" path="libs/httpmime-4.2.4.jar"/>
 	<classpathentry kind="lib" path="libs/libPluginProtocol.jar"/>
