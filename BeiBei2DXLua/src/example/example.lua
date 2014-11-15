@@ -8,6 +8,9 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+
+    s_SCENE:logIn("yehanjie1", "222222")
+
     -- playWordSound('aa')
     -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
     --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))

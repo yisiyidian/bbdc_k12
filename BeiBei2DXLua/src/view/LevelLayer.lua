@@ -181,11 +181,34 @@ function LevelLayer:ctor()
 --    listView:pushBackDefaultItem()
 --    listView:insertDefaultItem(0)
 
+    -- right top node
+
     local IntroLayer = require("view.hud.RightTopNode")
     local introLayer = IntroLayer.create()
-    s_SCENE:addChild(introLayer)
+    self:addChild(introLayer)
     
-
+--    -- pause call
+--    
+--    local click_pause = function(sender, eventType)
+--        if eventType == ccui.TouchEventType.began then
+--            local IntroLayer = require("view/Pause")
+--            local introLayer = IntroLayer.create()  
+--            s_SCENE:popup(introLayer)
+--
+--            local action1 = cc.MoveTo:create(0.3, cc.p(0,-600))          
+--            introLayer:runAction(action1)
+--        end
+--    end
+--    
+--    -- pause node
+--    
+--    local pauseButton = ccui.Button:create("image/button/pauseButtonWhite.png", "image/button/pauseButtonWhite.png", "")
+--    pauseButton:addTouchEventListener(click_pause)
+--    pauseButton:ignoreAnchorPointForPosition(false)
+--    pauseButton:setAnchorPoint(0,0.5)
+--    pauseButton:setPosition(s_LEFT_X  , s_DESIGN_HEIGHT - 100 )
+--    pauseButton:setLocalZOrder(1)
+--    self:addChild(pauseButton)
 
 
     playMusic(s_sound_bgm1,true)

@@ -42,6 +42,7 @@ function Pause:ctor()
 
     local proxy = cc.CCBProxy:create()
     local node  = CCBReaderLoad("res/ccb/pause.ccbi", proxy, ccbPause, self.ccb)
+    node:setPosition(0,600)
     self:addChild(node)
     
     ccbPause['soundOff']:setVisible(false)
@@ -59,6 +60,7 @@ function Pause:onClose()
         ccbPause['Layer']:removeFromParent()
     end,{})
     ccbPause['mask']:runAction(cc.Sequence:create(move,remove))
+    s_SCENE:removeAllPopups()
 end
 
 function Pause:onRetry()
