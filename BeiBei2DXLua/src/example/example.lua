@@ -8,6 +8,22 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+    -- local wordList = {'apple', 'tea', 'many'}
+    -- local index = 1
+    -- local total = #wordList
+    -- if total > 0 then
+    --     local downloadFunc
+    --     downloadFunc = function ()
+    --         s_HttpRequestClient.downloadWordSoundFile(wordList[index], function (objectId, filename, err, isSaved) 
+    --             s_logd(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
+    --             index = index + 1
+    --             if index <= total then downloadFunc() end 
+    --         end)
+    --     end
+
+    --     downloadFunc()
+    -- end
+
     -- playWordSound('aa')
     -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
     --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
