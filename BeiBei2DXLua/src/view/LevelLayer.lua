@@ -110,6 +110,7 @@ function LevelLayer:ctor()
     
     local levelStypeI = require('view.level.LevelLayerI')
     levelLayerI = levelStypeI.create()
+    levelLayerII = levelStypeI.create()
     
     -- plot player position
     local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
@@ -122,37 +123,36 @@ function LevelLayer:ctor()
     
     -- level layer state manager
     self:levelStateManager()
-    local scrollViewNode = ccui.ScrollView:create() 
-    
-    print('-----current user=====')
-    print_lua_table(s_CURRENT_USER)
+--    local scrollViewNode = ccui.ScrollView:create()    
+--    print('-----current user=====')
+--    print_lua_table(s_CURRENT_USER)
     -- scroll view scroll
-    local function scrollViewDidScroll()
-        print 'scrollview did scroll'
-        print(scrollViewNode:getPosition())
-    end
-    
-    local function scrollViewDidZoom()
-        print 'scrollview did zoom'
-    end
-    
-    if nil ~= scrollViewNode then
-        local fullWidth = levelLayerI:getContentSize().width
-        scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
-        --scrollViewNode:scrollToPercentVertical(15,0,false)
-        scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
-        scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
-        scrollViewNode:addChild(levelLayerI) 
-        scrollViewNode:setTouchEnabled(true)
-        self:addChild(scrollViewNode)
-    end
-
---    local function listViewEvent(sender, eventType)
---        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
---            print("select child index = ",sender:getCurSelectedIndex())
---        end
+--    local function scrollViewDidScroll()
+--        print 'scrollview did scroll'
+--        print(scrollViewNode:getPosition())
+--    end
+--    
+--    local function scrollViewDidZoom()
+--        print 'scrollview did zoom'
+--    end
+--    
+--    if nil ~= scrollViewNode then
+--        local fullWidth = levelLayerI:getContentSize().width
+--        scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
+--        --scrollViewNode:scrollToPercentVertical(15,0,false)
+--        scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
+--        scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
+--        scrollViewNode:addChild(levelLayerI) 
+--        scrollViewNode:setTouchEnabled(true)
+--        self:addChild(scrollViewNode)
 --    end
 --
+    local function listViewEvent(sender, eventType)
+        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
+            print("select child index = ",sender:getCurSelectedIndex())
+        end
+    end
+
 --    local function scrollViewEvent(sender, evenType)
 --        if evenType == ccui.ScrollviewEventType.scrollToBottom then
 --            print("SCROLL_TO_BOTTOM")
@@ -160,26 +160,33 @@ function LevelLayer:ctor()
 --            print("SCROLL_TO_TOP")
 --        end
 --    end  
---    -- create list view
---    local listView = ccui.ListView:create()
---    listView:setDirection(ccui.ScrollViewDir.vertical)
---    listView:setBounceEnabled(true)
---    listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
---    listView:setPosition(0, 0)
---    listView:addEventListener(listViewEvent)
---    listView:addScrollViewEventListener(scrollViewEvent)
---    self:addChild(listView)
---    
---    -- add list view item
---    local item1 = ccui.Layout:create()
---    item1:setTouchEnabled(true)
---    item1:setContentSize(levelLayerI:getContentSize())
---    levelLayerI:setPosition(0,0)
---    --levelLayerI:setPosition(cc.p(item1:getContentSize().width/2, item1:getContentSize().height/2))
---    item1:addChild(levelLayerI)
---    listView:setItemModel(item1)
---    listView:pushBackDefaultItem()
---    listView:insertDefaultItem(0)
+    -- create list view
+    local listView = ccui.ListView:create()
+    listView:setDirection(ccui.ScrollViewDir.vertical)
+    --listView:setBounceEnabled(true)
+    local fullWidth = levelLayerI:getContentSize().width
+    listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
+    listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
+    listView:addEventListener(listViewEvent)
+    self:addChild(listView)
+    
+    -- add list view item
+    local item1 = ccui.Layout:create()
+    item1:setTouchEnabled(true)
+    item1:setContentSize(levelLayerI:getContentSize())    
+    levelLayerI:setPosition(cc.p(0, 0))
+    item1:addChild(levelLayerI)
+    item1:setPositionPercent(cc.p(20, 10))
+    listView:pushBackCustomItem(item1)
+    
+--    local item2 = ccui.Layout:create()
+--    item2:setTouchEnabled(true)
+--    item2:setContentSize(levelLayerII:getContentSize())    
+--    levelLayerII:setPosition(cc.p(0, 0))
+--    item2:addChild(levelLayerII)
+--    listView:pushBackCustomItem(item2)
+--    --listView:insertCustomItem(item1, 0)
+--    playMusic(s_sound_bgm1,true)
 
     -- right top node
 
