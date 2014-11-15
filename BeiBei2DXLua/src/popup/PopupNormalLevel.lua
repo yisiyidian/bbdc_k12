@@ -98,45 +98,41 @@ end
 function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on study button clicked')
-    
---    if s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
---        s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
---        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
---        print(levelConfig.word_content)
---    end
+    if s_CURRENT_USER.energyCount <= s_normal_level_energy_cost then
+        s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+        -- download sounds of next level
+        local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + 5)
+        s_logd(nextLevelKey)
+        local nextLevelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey)
+        if nextLevelConfig ~= nil then
+            local wordList = split(nextLevelConfig.word_content, "|")
+            local index = 1
+            local total = #wordList
+            if total > 0 then
+                local downloadFunc
+                downloadFunc = function ()
+                    s_HttpRequestClient.downloadWordSoundFile(wordList[index], function (objectId, filename, err, isSaved) 
+                        s_logd(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
+                        index = index + 1
+                        if index <= total then downloadFunc() end 
+                    end)
+                end
 
---    else 
---        local energyInfoLayer = require('popup.PopupEnergyInfo')
---        s_CURRENT_USER:useEnergys(2)
---        local layer = energyInfoLayer.create(5)
---        s_SCENE:popup(layer)
---    end
-    -- download sounds of next level
-    local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + 5)
-    s_logd(nextLevelKey)
-    local nextLevelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey)
-    if nextLevelConfig ~= nil then
-        local wordList = split(nextLevelConfig.word_content, "|")
-        local index = 1
-        local total = #wordList
-        if total > 0 then
-            local downloadFunc
-            downloadFunc = function ()
-                s_HttpRequestClient.downloadWordSoundFile(wordList[index], function (objectId, filename, err, isSaved) 
-                    s_logd(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
-                    index = index + 1
-                    if index <= total then downloadFunc() end 
-                end)
+                downloadFunc(handleFunc)
             end
-
-            downloadFunc(handleFunc)
         end
+
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+        s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+        s_CorePlayManager.initStudyTestState()
+        s_CorePlayManager.enterStudyLayer()
+    else 
+        s_CURRENT_USER:useEnergys(2)
+        local energyInfoLayer = require('popup.PopupEnergyInfo')
+        local layer = energyInfoLayer.create()
+        s_SCENE:popup(layer)
     end
 
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
-    s_CorePlayManager.initStudyTestState()
-    s_CorePlayManager.enterStudyLayer()
 end
 
 function PopupNormalLevel:onTestButtonClicked(levelKey)
