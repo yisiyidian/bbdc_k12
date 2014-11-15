@@ -339,7 +339,7 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()
         s_SCENE:popup(layer)
-    elseif levelData.isLevelUnlocked == 0 then
+    elseif levelData ~= nil and levelData.isLevelUnlocked == 0 then
         self:clickLockedLevelAnmation(levelKey)
     elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
