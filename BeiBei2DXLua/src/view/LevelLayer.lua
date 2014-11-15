@@ -187,6 +187,15 @@ function LevelLayer:ctor()
 --    listView:pushBackCustomItem(item2)
 --    --listView:insertCustomItem(item1, 0)
 --    playMusic(s_sound_bgm1,true)
+
+    local IntroLayer = require("view.hud.RightTopNode")
+    local introLayer = IntroLayer.create()
+    s_SCENE:addChild(introLayer)
+    
+
+
+
+    playMusic(s_sound_bgm1,true)
     
     
     

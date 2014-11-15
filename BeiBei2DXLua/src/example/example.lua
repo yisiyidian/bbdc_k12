@@ -8,6 +8,10 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+    -- playWordSound('aa')
+    -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
+    --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
+    -- end)
     -- print(loadXxteaFile('cfg/books.bin'))
 
     -- s_HttpRequestClient.downloadFileFromAVOSWithObjectId('5430b806e4b0c0d48049e293', 
@@ -40,12 +44,12 @@ function test()
 
 --    playMusic(s_sound_bgm1, true)
 
-    local IntroLayer = require('view.hud.RightTopNode')
+    -- local IntroLayer = require('view.hud.RightTopNode')
 -- local layer = PopupLoginSignup.create()
 -- layer:setAnchorPoint(0.5,0)
 -- s_SCENE:popup(layer)
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+    -- local introLayer = IntroLayer.create()
+    -- s_SCENE:replaceGameLayer(introLayer)
 
 
     -- s_DATA_MANAGER.loadText()

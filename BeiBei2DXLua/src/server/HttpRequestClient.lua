@@ -38,4 +38,40 @@ function HttpRequestClient.downloadFileFromAVOSWithObjectId(fileObjectId, onDown
     end)
 end
 
+--[[
+    s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
+        print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
+    end)
+]]--
+local function getWordObject(word, onSucceed, onFailed)
+    s_SERVER.search('classes/_File?where={"name":"' .. getWordSoundFileName(word) .. '"}', onSucceed, onFailed)
+end
+function HttpRequestClient.downloadWordSoundFile(word, onDownloaded)
+    local localPath = getWordSoundFilePath(word)
+    s_logd(localPath)
+    if cc.FileUtils:getInstance():isFileExist(localPath) then
+        if onDownloaded ~= nil then onDownloaded(nil, localPath, nil, true) end
+    else
+        getWordObject(word, 
+            function (api, result)
+                local len = #(result.results)
+                if len <= 0 then 
+                    if onDownloaded ~= nil then onDownloaded(nil, localPath, 'not found', false) end
+                else
+                    for i, v in ipairs(result.results) do
+                        local objectId = v['objectId']
+                        HttpRequestClient.downloadFileFromAVOSWithObjectId(objectId, 
+                            function (objectId, filename, err, isSaved)
+                                if onDownloaded ~= nil then onDownloaded(objectId, filename, err, isSaved) end                
+                            end)
+                        break
+                    end
+                end
+            end,
+            function (api, code, message, description)
+                if onDownloaded ~= nil then onDownloaded(nil, localPath, message, false) end
+            end)
+    end
+end
+
 return HttpRequestClient

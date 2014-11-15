@@ -78,35 +78,41 @@ function PopupEnergyBuy:ctor(energy_number)
     local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
     local min = time_betweenServerAndEnergy / 60
     local sec = time_betweenServerAndEnergy % 60
+
     
     local function update(delta)
-            sec = sec - delta
+           
               
         if energy_number < 4 then  
-            label_energyNumber:setString(energy_number)
-        end           
-
-
-        if sec <= 0 then
+            label_energyNumber:setString(energy_number)  
+            sec = sec - delta     
+            
+        if sec < 0 then
             sec = 59
             min = min - 1
         end
 
-        if min <= 0 then 
+        if min < 0 then 
             min = 29
-            energy_number = energy_number + 1
-        end
-        
-        if energy_number == 4 then 
-            local remove = self.removeChildByName("heart_animation")
+            energy_number = energy_number + 1 
+            
+            if energy_number == 4 then 
+            local remove = self.ccbPopupEnergyBuy['popupWindow']:removeChildByName("heart_animation")
             local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
             replace:setAnimation(0,'animation',true)
             replace:ignoreAnchorPointForPosition(false)
             replace:setAnchorPoint(0.5,0.5)
-            replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
+                replace:setPosition(0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().height  + 30)
             replace:setName("heart_animation")
-            self.ccbPopupEnergyInfo['popupWindow']:addChild(replace) 
+                self.ccbPopupEnergyBuy['popupWindow']:addChild(replace) 
+            end
         end
+        end           
+
+
+        
+        
+
 
     end
 
