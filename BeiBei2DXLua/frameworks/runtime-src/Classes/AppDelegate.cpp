@@ -64,7 +64,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
 
     LuaStack* stack = engine->getLuaStack();
-    stack->setXXTEAKeyAndSign("2dxLua", strlen("2dxLua"), "XXTEA", strlen("XXTEA"));
+    stack->setXXTEAKeyAndSign("fuck2dxLua", strlen("fuck2dxLua"), "fuckXXTEA", strlen("fuckXXTEA"));
     
     //register custom function
     auto state = stack->getLuaState();

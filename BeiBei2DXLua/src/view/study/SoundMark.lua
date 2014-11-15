@@ -40,15 +40,13 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     	end
     end
 
-    button_pronounce = ccui.Button:create()
-    button_pronounce:loadTextures("image/button/soundButton1.png", "image/button/soundButton1.png", "")
+    button_pronounce = ccui.Button:create("image/button/soundButton1.png", "image/button/soundButton1.png", "")
     button_pronounce:addTouchEventListener(pronounce)
         
     button_wordname = cc.Label:createWithSystemFont(wordname,"",80)
     button_wordname:setColor(cc.c4b(0,0,0,255))
     
-    button_country = ccui.Button:create()
-    button_country:loadTextures("image/button/USButton1.png", "image/button/USButton1.png", "")
+    button_country = ccui.Button:create("image/button/USButton1.png", "image/button/USButton1.png", "")
     button_country:setTitleText("US")
     button_country:setTitleFontSize(30)
     button_country:addTouchEventListener(changeCountry)

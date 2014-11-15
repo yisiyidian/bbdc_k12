@@ -41,7 +41,7 @@ function playWordSound(word)
     if db.isSoundOn() then
         local localPath = getWordSoundFilePath(word)
         if cc.FileUtils:getInstance():isFileExist(localPath) then
-            cc.SimpleAudioEngine:getInstance():preloadEffect(localPath)
+            cc.SimpleAudioEngine:getInstance():playMusic(localPath, false)
         end
     end
 end

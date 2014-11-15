@@ -41,7 +41,7 @@ function RBProgressBar.create(totalIndex, color)
     index:setPosition(left + gap* (currentIndex - 1), 0)
     main:addChild(index)
 
-    local label_number = cc.Label:createWithSystemFont(currentIndex,"",24)
+    local label_number = cc.Label:createWithSystemFont(currentIndex-1,"",24)
     label_number:setColor(cc.c4b(255,255,255,255))
     label_number:setPosition(index:getContentSize().width/2, index:getContentSize().height*0.4)
     index:addChild(label_number)
@@ -51,7 +51,7 @@ function RBProgressBar.create(totalIndex, color)
     main.addOne = function()
         currentIndex = currentIndex + 1
         
-        label_number:setString(currentIndex)
+        label_number:setString(currentIndex-1)
         
         local action1 = cc.MoveTo:create(0.5,cc.p(left + gap* (currentIndex - 1), 0))
         index:runAction(action1)
