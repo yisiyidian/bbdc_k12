@@ -129,12 +129,12 @@ function LevelLayerI:clickLockedLevelAnmation(levelKey)
     local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),3)
     local action5 = cc.MoveBy:create(0.1, cc.p(5,0)) 
     local action = cc.Sequence:create(action1, action4, action5, nil)
-    --lockSprite:runAction(action)
+    lockSprite:runAction(action)
     
     local action7 = cc.ScaleTo:create(0.15,1.15,0.85)
     local action8 = cc.ScaleTo:create(0.15,0.85,1.15)
     local action9 = cc.ScaleTo:create(0.1, 1, 1)
-    --clickedButton:runAction(cc.Sequence:create(action7, action8, action9, nil))
+    clickedButton:runAction(cc.Sequence:create(action7, action8, action9, nil))
 end
 
 function LevelLayerI:getPlayerPositionForLevel(levelKey)
@@ -341,7 +341,7 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()
         s_SCENE:popup(layer)
-    elseif levelData ~= nil and levelData.isLevelUnlocked == 0 then
+    elseif levelData == nil or levelData.isLevelUnlocked == 0 then
         self:clickLockedLevelAnmation(levelKey)
     elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
