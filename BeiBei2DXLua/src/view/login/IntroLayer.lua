@@ -84,10 +84,8 @@ function IntroLayer.create()
         end)
     end
     
-    
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            s_logd("visitor")
             visitLogin()
         end
     end

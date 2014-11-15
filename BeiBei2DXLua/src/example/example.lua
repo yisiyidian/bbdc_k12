@@ -8,6 +8,7 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+
     -- local wordList = {'apple', 'tea', 'many'}
     -- local index = 1
     -- local total = #wordList
@@ -23,6 +24,8 @@ function test()
 
     --     downloadFunc()
     -- end
+
+    s_SCENE:logIn("yehanjie1", "222222")
 
     -- playWordSound('aa')
     -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 

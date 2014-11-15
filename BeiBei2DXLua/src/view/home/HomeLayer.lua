@@ -8,6 +8,17 @@ end)
 
 
 function HomeLayer.create()
+    -- data begin
+    local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
+    local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local chapterIndex      = string.sub(s_CURRENT_USER.currentChapterKey,8,8)+1
+    local chapterName       = s_DATA_MANAGER.chapters[chapterIndex].Name
+    local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6,6)+1
+    local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
+    local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
+    local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+    -- data end
+    
     local layer = HomeLayer.new()
     
     local offset = 500
@@ -97,7 +108,7 @@ function HomeLayer.create()
     has_study:setMidpoint(cc.p(1, 0))
     has_study:setBarChangeRate(cc.p(0, 1))
     has_study:setPosition(192, 205)
-    has_study:setPercentage(50)
+    has_study:setPercentage(100 * studyWordNum / bookWordCount)
     container:addChild(has_study)
     
     local has_grasp = cc.ProgressTimer:create(cc.Sprite:create("image/homescene/main_mastery.png"))
@@ -105,29 +116,29 @@ function HomeLayer.create()
     has_grasp:setMidpoint(cc.p(1, 0))
     has_grasp:setBarChangeRate(cc.p(0, 1))
     has_grasp:setPosition(192, 205)
-    has_grasp:setPercentage(30)
+    has_grasp:setPercentage(100 * graspWordNum / bookWordCount)
     container:addChild(has_grasp)
     
     local magnifier = cc.Sprite:create("image/homescene/main_magnifier.png")
     magnifier:setPosition(container:getContentSize().width-70, 70)
     container:addChild(magnifier)
     
-    local label1 = cc.Label:createWithSystemFont("四级词汇","",28)
+    local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",28)
     label1:setColor(cc.c4b(255,255,255,255))
     label1:setPosition(container:getContentSize().width/2, 350)
     container:addChild(label1)
     
-    local label2 = cc.Label:createWithSystemFont("4000词","",20)
+    local label2 = cc.Label:createWithSystemFont(bookWordCount.."词","",20)
     label2:setColor(cc.c4b(255,255,255,255))
     label2:setPosition(container:getContentSize().width/2, 320)
     container:addChild(label2)
     
-    local label3 = cc.Label:createWithSystemFont("今日学习3词","",34)
+    local label3 = cc.Label:createWithSystemFont("学习"..studyWordNum.."词","",34)
     label3:setColor(cc.c4b(255,255,255,255))
     label3:setPosition(container:getContentSize().width/2, 210)
     container:addChild(label3)
     
-    local label4 = cc.Label:createWithSystemFont("今日掌握1词","",34)
+    local label4 = cc.Label:createWithSystemFont("掌握"..graspWordNum.."词","",34)
     label4:setColor(cc.c4b(255,255,255,255))
     label4:setPosition(container:getContentSize().width/2, 150)
     container:addChild(label4)
@@ -143,7 +154,7 @@ function HomeLayer.create()
     button_change:addTouchEventListener(button_change_clicked)
     container:addChild(button_change)
     
-    local label = cc.Label:createWithSystemFont("第一章 拉斯维加斯 第5关","",28)
+    local label = cc.Label:createWithSystemFont(levelName,"",28)
     label:setColor(cc.c4b(0,0,0,255))
     label:setPosition(bigWidth/2, 300)
     backImage:addChild(label)
@@ -186,6 +197,13 @@ function HomeLayer.create()
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
                 print(label_name[i])
+                if label_name[i] == "选择书籍" then
+                    s_CorePlayManager.enterBookLayer()
+                elseif label_name[i] == "登出游戏" then
+                    
+                else
+                    
+                end
             end
         end
 
@@ -235,7 +253,6 @@ function HomeLayer.create()
         local location = layer:convertToNodeSpace(touch:getLocation())
         local now_x = location.x
         if now_x - moveLength > start_x then
-            print("right")
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
@@ -249,7 +266,6 @@ function HomeLayer.create()
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             end
         elseif now_x + moveLength < start_x then
-            print("left")
             if viewIndex == 2 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
