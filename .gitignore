@@ -27,6 +27,9 @@ BeiBei2DXLua/runtime/mac
 
 BeiBei2DXLua/publish
 
+raw/tmp
+raw/tmp_xxtea
+
 userconf.ini
 
 DerivedData

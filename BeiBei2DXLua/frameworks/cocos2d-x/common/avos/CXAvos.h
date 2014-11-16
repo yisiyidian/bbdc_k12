@@ -19,6 +19,7 @@ public:
     static CXAvos* getInstance();
     
     void downloadFile(const char* objectId, const char* savepath, CXLUAFUNC nHandler);
+    void downloadWordSoundFiles(const char* prefix, const char* wordsList, const char* subfix, const char* path);
     void invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved);
     
     void signUp(const char* username, const char* password, CXLUAFUNC nHandler);

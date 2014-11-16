@@ -5,13 +5,9 @@
 -- @parent_module cx
 
 --------------------------------
--- @function [parent=#CXUtils] xxteaDecrypt 
+-- @function [parent=#CXUtils] decryptXxteaFile 
 -- @param self
 -- @param #char char
--- @param #unsigned int int
--- @param #char char
--- @param #unsigned int int
--- @param #unsigned int int
 -- @return char#char ret (return value: char)
         
 --------------------------------
