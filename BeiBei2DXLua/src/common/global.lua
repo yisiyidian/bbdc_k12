@@ -118,6 +118,7 @@ end
 
 local function _initStore()
     s_STORE = require('store.Store')
+    s_STORE.init()
 end
 
 local function _declaration()

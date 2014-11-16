@@ -154,6 +154,31 @@ end
 
 function PopupEnergyBuy:onBuyButtonClicked()
     s_logd('on buy button clicked')
+    s_SCENE:removeAllPopups()
+    local function onBuyResult( code, msg, info )
+        print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
+        if code == 0 then
+            s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + 30
+            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+                function(api,result)
+                    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+                    local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), 30)
+                    s_TIPS_LAYER:showSmall(str)
+                    s_LOADING_CIRCLE_LAYER:hide()
+                end,
+                function(api, code, message, description)
+                    s_TIPS_LAYER:showSmall(message)
+                    s_LOADING_CIRCLE_LAYER:hide()
+                end) 
+        else
+            s_TIPS_LAYER:showSmall(tostring(code) .. ', ' .. msg)
+            s_LOADING_CIRCLE_LAYER:hide()
+        end
+    end
+    
+    s_LOADING_CIRCLE_LAYER:show()
+    s_STORE.buy(onBuyResult)
 end
 
 return PopupEnergyBuy
