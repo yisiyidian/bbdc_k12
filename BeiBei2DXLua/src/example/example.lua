@@ -24,6 +24,10 @@ function test()
 
     --     downloadFunc()
     -- end
+--    s_SCENE:logIn("yehanjie1", "222222")
+--    for  i = 1, #s_GAME_LAYER.class do
+--    print(s_GAME_LAYER.class[i])
+--    end
 
     local IntroLayer = require("view.hud.RightTopNode")
     local introLayer = IntroLayer.create()

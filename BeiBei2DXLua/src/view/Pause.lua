@@ -78,8 +78,10 @@ end
 
 function Pause:onHelp()
  -- judge normal / review / summary
- --   if  
-    local site = "view.pausehelp.PauseHelpNormal"
+ --   if 
+
+
+    local site  = "view.pausehelp.PauseHelpNormal"
 --    site = "view.pausehelp.PauseHelpSummary"  
 --    site = "view.pausehelp.PauseHelpReview" 
     local IntroLayer = require(site)
