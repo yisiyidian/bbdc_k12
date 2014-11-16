@@ -78,7 +78,11 @@ end
 
 function Pause:onHelp()
  -- judge normal / review / summary
- --   if 
+--    if xx.class.__cname == 
+--    for i=1,5 do
+--        print(tostring(s_GAME_LAYER.class.__cname[i]))
+--
+--   end
 
 
     local site  = "view.pausehelp.PauseHelpNormal"
