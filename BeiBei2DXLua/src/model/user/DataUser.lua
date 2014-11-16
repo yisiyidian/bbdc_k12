@@ -193,10 +193,12 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
     if levelData.stars > 0 then
         levelData.isPassed = 1
     end
+    print('---print stars: levelData.objectId is '..levelData.objectId)
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
     function(api,result)
-        print('call back')
-        print('levelData.objectId'..levelData.objectId..','..levelData.levelKey)
+        print('call back stars')
+        print_lua_table(result)
+        print('levelData.objectId:'..levelData.objectId..','..levelData.levelKey)
     end,
     function(api, code, message, description)
     end)        
@@ -244,6 +246,10 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
     levelData.isLevelUnlocked = unlocked
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
         function (api, result)
+            print('call back unlocked')
+            local callLevelData = self:getUserLevelData(chapterKey, levelKey)
+            callLevelData.objectId = levelData.objectId
+            print('levelData.objectId'..levelData.objectId..','..levelData.levelKey)
             s_DATABASE_MGR.saveDataClassObject(levelData)
             if onSucceed ~= nil then onSucceed(api, result) end
         end,

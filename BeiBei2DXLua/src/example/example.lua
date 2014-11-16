@@ -9,8 +9,8 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 function test()
 
---    local a = ziaoangTest.create()
---    s_SCENE:replaceGameLayer(a)
+    local a = ziaoangTest.create()
+    s_SCENE:replaceGameLayer(a)
     
 
     -- local wordList = {'apple', 'tea', 'many'}
@@ -29,12 +29,9 @@ function test()
     --     downloadFunc()
     -- end
 
-    local IntroLayer = require("view.Pause")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
---    for i=1,5 do
---        print(s_GAME_LAYER.class.__cname[i])
---    end
+--    local IntroLayer = require("view.login.IntroLayer")
+--    local introLayer = IntroLayer.create()
+--    s_SCENE:replaceGameLayer(introLayer)
 
 --    local IntroLayer = require("view.hud.RightTopNode")
 --    local introLayer = IntroLayer.create()

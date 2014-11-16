@@ -171,8 +171,7 @@ function LevelLayer:ctor()
     -- create list view
     local listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
-    listView:setPositionPercent(cc.size(50,50))
-    --listView:setBounceEnabled(true)
+        --listView:setBounceEnabled(true)
     local fullWidth = levelLayerI:getContentSize().width
     listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
     listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
