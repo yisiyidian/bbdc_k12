@@ -25,7 +25,7 @@ function test()
     --     downloadFunc()
     -- end
 
-    local IntroLayer = require("view/pausehelp/PauseHelpSummary")
+    local IntroLayer = require("view.friend.FriendLayer")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
 

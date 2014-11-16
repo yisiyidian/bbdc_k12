@@ -110,7 +110,7 @@ function PersonalInfo:initHead()
     girl:setLocalZOrder(1)
     back_color:addChild(girl)
 
-    local label_hint = cc.Label:createWithSystemFont("tester","",36)
+    local label_hint = cc.Label:createWithSystemFont(s_CURRENT_USER.username,"",36)
     label_hint:ignoreAnchorPointForPosition(false)
     label_hint:setAnchorPoint(0,0)
     label_hint:setColor(cc.c4b(255 , 255, 255 ,255))
@@ -118,7 +118,7 @@ function PersonalInfo:initHead()
     label_hint:setLocalZOrder(2)
     back_color:addChild(label_hint)
 
-    local label_study = cc.Label:createWithSystemFont("CET4","",36)
+    local label_study = cc.Label:createWithSystemFont(string.format("正在学习%s词汇",s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name),"",36)
     label_study:ignoreAnchorPointForPosition(false)
     label_study:setAnchorPoint(0,1)
     label_study:setColor(cc.c4b(255 , 255, 255 ,255))
@@ -130,8 +130,10 @@ end
 
 function PersonalInfo:PLVM()
     local updateTime = 0
-    local learnPercent = 0.6
-    local masterPercent = 0.5
+    local tolearnCount = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
+    local toMasterCount = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+    local learnPercent = tolearnCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local back = self.intro_array[4]
     local circleBack = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_white.png')
     circleBack:setPosition(0.5 * s_DESIGN_WIDTH,0.42 * s_DESIGN_HEIGHT)
@@ -205,7 +207,7 @@ function PersonalInfo:PLVM()
     label_study:setPosition(0.5 * circleBack:getContentSize().width,0.49 * circleBack:getContentSize().height)
     circleBack:addChild(label_study)
     
-    local label_book = cc.Label:createWithSystemFont("高考","",28)
+    local label_book = cc.Label:createWithSystemFont(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name,"",28)
     label_book:ignoreAnchorPointForPosition(false)
     label_book:setAnchorPoint(0.5,1)
     label_book:setColor(cc.c4b(0,0,0 ,255))
@@ -546,6 +548,7 @@ function PersonalInfo:login()
             end
         end
     end
+    self.totalDay = totalDay
     --draw circle 
     for i = 1,7 do
         local str
@@ -742,8 +745,9 @@ function PersonalInfo:login()
 end   
 
 function PersonalInfo:XXTJ()
-   local everydayWord = 20
-   local totalWord = 1000
+    
+   local everydayWord = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey) / self.totalDay
+    local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
    local wordFinished = 100
    local dayToFinish = 0
     local back = self.intro_array[1]

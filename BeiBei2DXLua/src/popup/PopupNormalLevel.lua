@@ -99,7 +99,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on study button clicked')
     if s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
-        s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+        -- s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
         -- download sounds of next level
         local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + 5)
         s_logd(nextLevelKey)
