@@ -36,4 +36,5 @@ int register_all_cx_common(lua_State* tolua_S);
 
 
 
+
 #endif // __cx_common_h__

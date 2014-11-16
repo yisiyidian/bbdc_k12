@@ -34,6 +34,14 @@
 -- @param #int int
         
 --------------------------------
+-- @function [parent=#CXAvos] downloadWordSoundFiles 
+-- @param self
+-- @param #char char
+-- @param #char char
+-- @param #char char
+-- @param #char char
+        
+--------------------------------
 -- @function [parent=#CXAvos] logOut 
 -- @param self
         

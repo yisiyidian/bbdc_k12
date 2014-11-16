@@ -20,13 +20,18 @@ function playSound(filename)
     end
 end
 
-function getWordSoundFileName(word)
+function getWordSoundFileNamePrefix()
     local isAm = 'us' -- us en
     if s_CURRENT_USER ~= nil then 
         if s_CURRENT_USER.isSoundAm == 0 then
             isAm = 'en' 
         end 
     end
+    return isAm
+end
+
+function getWordSoundFileName(word)
+    local isAm = getWordSoundFileNamePrefix()
     local filename = isAm .. '_' .. word .. '.mp3'
     return filename
 end
