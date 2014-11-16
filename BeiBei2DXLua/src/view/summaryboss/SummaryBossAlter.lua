@@ -127,6 +127,7 @@ function SummaryBossAlter:win1()
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
     local isPassed = levelData.isPassed
     if isPassed == 0 then
+        s_CURRENT_USER:addEnergys(1)
         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
     end
