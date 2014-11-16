@@ -40,7 +40,7 @@ local function main()
     
     local time = os.time()
     print(time)
-    local date = os.date("%x","672")
+    local date = os.date("%x",os.time())
     print(date)
     
 -- *************************************
