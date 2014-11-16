@@ -90,9 +90,9 @@ function PopupEnergyBuy:ctor()
 
     local function update(delta)
     -- update timer
-    local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
-    local min = time_betweenServerAndEnergy / 60
-    local sec = time_betweenServerAndEnergy % 60          
+        local time_betweenServerAndEnergy = s_CURRENT_USER.energyLastCoolDownTime + s_energyCoolDownSecs - s_CURRENT_USER.serverTime
+        local min = time_betweenServerAndEnergy / 60
+        local sec = time_betweenServerAndEnergy % 60         
            
         if s_CURRENT_USER.energyCount >= s_energyMaxCount then 
             if json == 'spine/energy/tilizhi_recovery.json'  or json == 'spine/energy/tilizhi_no.json' then

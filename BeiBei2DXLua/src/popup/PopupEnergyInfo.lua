@@ -86,7 +86,7 @@ function PopupEnergyInfo:ctor()
     
     local function update(delta)
     -- update timer
-        local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
+        local time_betweenServerAndEnergy = s_CURRENT_USER.energyLastCoolDownTime + s_energyCoolDownSecs - s_CURRENT_USER.serverTime
         local min = time_betweenServerAndEnergy / 60
         local sec = time_betweenServerAndEnergy % 60
         

@@ -28,14 +28,14 @@ function test()
 
     --     downloadFunc()
     -- end
---    s_SCENE:logIn("yehanjie1", "222222")
---    for  i = 1, #s_GAME_LAYER.class do
---    print(s_GAME_LAYER.class[i])
---    end
 
-    local IntroLayer = require("view.hud.RightTopNode")
+    local IntroLayer = require("view.login.IntroLayer")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
+
+--    local IntroLayer = require("view.hud.RightTopNode")
+--    local introLayer = IntroLayer.create()
+--    s_SCENE:replaceGameLayer(introLayer)
 
  --   playWordSound('apple')
     -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
