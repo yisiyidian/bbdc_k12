@@ -38,11 +38,6 @@ local function main()
 
     s_DATA_MANAGER.loadText()
     
-    local time = os.time()
-    print(time)
-    local date = os.date("%x",os.time())
-    print(date)
-    
 -- *************************************
 -- All test code must in example.example
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
