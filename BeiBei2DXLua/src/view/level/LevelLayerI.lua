@@ -250,6 +250,9 @@ function LevelLayerI:ctor()
     for i = 1, #self.ccbLevelLayerI['levelSet']:getChildren() do
         self.ccbLevelLayerI['levelSet']:getChildren()[i]:setName('level'..(self.ccbLevelLayerI['levelSet']:getChildren()[i]:getTag()-1))
     end
+    contentNode:setContentSize(cc.size(854, 2527))
+    --print('chapter1_--###')
+    --print_lua_table(contentNode:getContentSize())
     self:setContentSize(contentNode:getContentSize())
     self:addChild(contentNode)
 
@@ -332,6 +335,7 @@ end
 
 function LevelLayerI:onLevelButtonClicked(levelKey)
     s_CURRENT_USER.currentSelectedLevelKey = levelKey
+    s_CURRENT_USER.currentChapterKey = 'chapter0'
     --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     -- check level type
