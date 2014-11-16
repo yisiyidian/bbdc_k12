@@ -46,7 +46,6 @@ function ReviewBossAlter.create()
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
-
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)

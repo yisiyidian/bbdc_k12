@@ -186,6 +186,7 @@ function ReviewBossLayer.create()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
                 wordMeaningBeTestedNow:setString(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall)
             else
+                rbCurrentWordIndex = rbCurrentWordIndex + 1
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 
                 local showAlter = function()
@@ -206,7 +207,6 @@ function ReviewBossLayer.create()
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
-
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
