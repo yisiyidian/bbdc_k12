@@ -51,6 +51,10 @@ void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC 
     }];
 }
 
+void CXAvos::downloadWordSoundFiles(const char* prefix, const char* wordsList, const char* subfix, const char* path) {
+    
+}
+
 void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved) {
     if (mLuaHandlerId_dl > 0) {
         auto engine = LuaEngine::getInstance();

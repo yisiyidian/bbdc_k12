@@ -55,7 +55,7 @@ function PopupEnergyInfo:ctor()
     label_buyEnergy:setPosition(0.5 * self.ccbPopupEnergyInfo['buyButton']:getContentSize().width + 20,0.5 * self.ccbPopupEnergyInfo['buyButton']:getContentSize().height)
     self.ccbPopupEnergyInfo['buyButton']:addChild(label_buyEnergy)
     
-    
+    --animation init
     if s_CURRENT_USER.energyCount >= s_energyMaxCount then
     json = 'spine/energy/tilizhi_full.json'
     atlas = 'spine/energy/tilizhi_full.atlas'
@@ -75,7 +75,7 @@ function PopupEnergyInfo:ctor()
     heart:setName("heart_animation")
     self.ccbPopupEnergyInfo['popupWindow']:addChild(heart) 
     
-
+    -- number on heart
     local label_energyNumber = cc.Label:createWithSystemFont( "","",36)
     label_energyNumber:setColor(cc.c4b(255,255,255 ,255))
     label_energyNumber:setPosition(0.5 * heart:getContentSize().width ,0.5 * heart:getContentSize().height )
@@ -85,6 +85,7 @@ function PopupEnergyInfo:ctor()
     
     
     local function update(delta)
+    -- update timer
         local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
         local min = time_betweenServerAndEnergy / 60
         local sec = time_betweenServerAndEnergy % 60
@@ -108,6 +109,7 @@ function PopupEnergyInfo:ctor()
                 if label ~= nil then
                 label:setString("")
                 end   
+                -- xx:xx => full
                 self.ccbPopupEnergyInfo['energyNumber']:setString("full")                 
         elseif  s_CURRENT_USER.energyCount > 0 then 
             if json == 'spine/energy/tilizhi_no.json' then
@@ -120,14 +122,20 @@ function PopupEnergyInfo:ctor()
                 replace:setAnchorPoint(0.5,0.5)
                 replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
                 replace:setName("heart_animation")
-                self.ccbPopupEnergyInfo['popupWindow']:addChild(replace)  
-            
+                self.ccbPopupEnergyInfo['popupWindow']:addChild(replace)
+                
+                -- xx:xx 
+                self.ccbPopupEnergyInfo['energyNumber']:setString(string.format("%d",min) ..":"..string.format("%d",sec))
             end
         else
+            -- s_CURRENT_USER.energyCount == 0
+            -- xx:xx
             self.ccbPopupEnergyInfo['energyNumber']:setString(string.format("%d",min) ..":"..string.format("%d",sec))
             local animation = self.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
             local label = animation:getChildByName("energyNumber")
-            label:setString(s_CURRENT_USER.energyCount)     
+            if label ~= nil then
+                label:setString("")
+            end       
         end
     end
 

@@ -42,7 +42,7 @@ function Pause:ctor()
 
     local proxy = cc.CCBProxy:create()
     local node  = CCBReaderLoad("res/ccb/pause.ccbi", proxy, ccbPause, self.ccb)
-    node:setPosition(0,600)
+    node:setPosition(0,0)
     self:addChild(node)
     
     ccbPause['soundOff']:setVisible(false)
@@ -77,7 +77,14 @@ function Pause:onContinue()
 end
 
 function Pause:onHelp()
-
+ -- judge normal / review / summary
+ --   if  
+    local site = "view.pausehelp.PauseHelpNormal"
+--    site = "view.pausehelp.PauseHelpSummary"  
+--    site = "view.pausehelp.PauseHelpReview" 
+    local IntroLayer = require(site)
+    local introLayer = IntroLayer.create()
+    s_SCENE:popup(introLayer)
 end
 
 function Pause:onSoundOn()

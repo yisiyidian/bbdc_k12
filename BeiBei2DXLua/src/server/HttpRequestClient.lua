@@ -48,8 +48,8 @@ local function getWordObject(word, onSucceed, onFailed)
 end
 function HttpRequestClient.downloadWordSoundFile(word, onDownloaded)
     local localPath = getWordSoundFilePath(word)
-    --s_logd(localPath)
-    if cc.FileUtils:getInstance():isFileExist(localPath) then
+    s_logd('downloadWordSoundFile:' .. localPath)
+    if localPath == nil or string.len(localPath) <= 0 or cc.FileUtils:getInstance():isFileExist(localPath) then
         if onDownloaded ~= nil then onDownloaded(nil, localPath, nil, true) end
     else
         getWordObject(word, 
@@ -71,6 +71,39 @@ function HttpRequestClient.downloadWordSoundFile(word, onDownloaded)
             function (api, code, message, description)
                 if onDownloaded ~= nil then onDownloaded(nil, localPath, message, false) end
             end)
+    end
+end
+
+function HttpRequestClient.downloadSoundsOfNext5thLevel(levelKey)
+    local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + 5)
+    s_logd(string.format('downloadSoundsOfNext5thLevel: %s, %s, %s', s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey))
+    local nextLevelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey)
+    if nextLevelConfig == nil or string.len(nextLevelConfig.word_content) <= 0 then
+        return
+    end
+
+    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        cx.CXAvos:getInstance():downloadWordSoundFiles(
+            getWordSoundFileNamePrefix() .. '_', 
+            nextLevelConfig.word_content, 
+            '.mp3', 
+            cc.FileUtils:getInstance():getWritablePath())
+    else
+        local wordList = split(nextLevelConfig.word_content, "|")
+        local index = 1
+        local total = #wordList
+        if total > 0 then
+            local downloadFunc
+            downloadFunc = function ()
+                s_HttpRequestClient.downloadWordSoundFile(wordList[index], function (objectId, filename, err, isSaved) 
+                    s_logd(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
+                    index = index + 1
+                    if index <= total then downloadFunc() end 
+                end)
+            end
+
+            downloadFunc(handleFunc)
+        end
     end
 end
 

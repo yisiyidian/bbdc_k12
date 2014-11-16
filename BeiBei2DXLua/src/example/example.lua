@@ -9,6 +9,10 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 function test()
 
+    local a = ziaoangTest.create()
+    s_SCENE:replaceGameLayer(a)
+    
+
     -- local wordList = {'apple', 'tea', 'many'}
     -- local index = 1
     -- local total = #wordList
@@ -25,7 +29,7 @@ function test()
     --     downloadFunc()
     -- end
 
-    local IntroLayer = require("view/pausehelp/PauseHelpSummary")
+    local IntroLayer = require("view.hud.RightTopNode")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
 

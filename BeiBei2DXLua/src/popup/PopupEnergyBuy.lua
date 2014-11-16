@@ -8,7 +8,7 @@ function PopupEnergyBuy.create()
     return layer
 end
 
-local label_energyNumber
+
 
 function PopupEnergyBuy:ctor()
  --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -80,10 +80,16 @@ function PopupEnergyBuy:ctor()
     self.ccbPopupEnergyBuy['popupWindow']:addChild(heart) 
     
 
+    local   label_energyNumber = cc.Label:createWithSystemFont(s_CURRENT_USER.energyCount,"",36)
+    label_energyNumber:setColor(cc.c4b(255,255,255 ,255))
+    label_energyNumber:setPosition(0.5 * heart:getContentSize().width ,0.5 * heart:getContentSize().height )
+    label_energyNumber:setName("energyNumber")
+    heart:addChild(label_energyNumber,1)
+
 
 
     local function update(delta)
-    
+    -- update timer
     local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
     local min = time_betweenServerAndEnergy / 60
     local sec = time_betweenServerAndEnergy % 60          
@@ -106,10 +112,12 @@ function PopupEnergyBuy:ctor()
             if label ~= nil then
                 label:setString("")
             end   
-            self.ccbPopupEnergyBuy['energyNumber']:setString("full") 
+
             
        elseif s_CURRENT_USER.energyCount > 0 then       
-            label_energyNumber:setString(s_CURRENT_USER.energyCount )      
+            --heartnumber
+            label_energyNumber:setString(s_CURRENT_USER.energyCount ) 
+                 
             if json == 'spine/energy/tilizhi_no.json' then
                 local change = self.ccbPopupEnergyBuy['popupWindow']:removeChildByName("heart_animation")   
                 json = 'spine/energy/tilizhi_recovery.json'
@@ -122,21 +130,19 @@ function PopupEnergyBuy:ctor()
                 replace:setName("heart_animation")
                 self.ccbPopupEnergyBuy['popupWindow']:addChild(replace)  
             end
-            
+        else
+            local animation = self.ccbPopupEnergyBuy['popupWindow']:getChildByName("heart_animation")
+            local label = animation:getChildByName("energyNumber")
+            if label ~= nil then
+                label:setString("")
+            end   
+        
         end
      end           
 
 
     self:scheduleUpdateWithPriorityLua(update, 0) 
 
-    if self.energy_number > 0 and self.energy_number < 4 then
-        label_energyNumber = cc.Label:createWithSystemFont(energy_number,"",36)
-        label_energyNumber:setColor(cc.c4b(255,255,255 ,255))
-        label_energyNumber:setPosition(0.5 * heart:getContentSize().width ,0.5 * heart:getContentSize().height )
-        label_energyNumber:setName("energyNumber")
-        heart:addChild(label_energyNumber,1)
-        --      print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    end
 end
 
 

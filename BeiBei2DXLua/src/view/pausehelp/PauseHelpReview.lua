@@ -25,7 +25,7 @@ function PauseHelpReview:ctor()
     
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('ccb/pause_help_review.ccbi', proxy, self.ccbPauseHelpReview, self.ccb)
-    node:setPosition(-400,0)
+    node:setPosition(0,600)
     self:addChild(node)
     
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
@@ -43,8 +43,17 @@ function PauseHelpReview:ctor()
     end
 
     function PauseHelpReview:onBlueButtonClicked()
-        s_logd('on collect button clicked')
-        s_SCENE:removeAllPopups()
+    s_logd('on collect button clicked')
+    local action1 = cc.MoveTo:create(0.3, cc.p(-400,0))      
+    self:runAction(action1) 
+
+
+    s_SCENE:callFuncWithDelay(0.3,function()
+        
+        local IntroLayer = require("view.pausehelp.PauseHelpReviewSecond")
+        local introLayer = IntroLayer.create()
+         s_SCENE:popup(introLayer)
+    end)
 
 
     end

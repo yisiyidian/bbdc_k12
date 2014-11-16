@@ -18,13 +18,23 @@ CXUtils* CXUtils::m_pInstance = nullptr;
 CXUtils* CXUtils::getInstance() {
     if (!m_pInstance) {
         m_pInstance = new CXUtils();
-        m_pInstance->autorelease();
     }
     return m_pInstance;
 }
 
 CXUtils::CXUtils() {
+    m_xxteaKeyLen = 10;
+    m_xxteaKey = (char*)malloc(m_xxteaKeyLen);
+    memcpy(m_xxteaKey, "fuck2dxLua", m_xxteaKeyLen);
     
+    m_xxteaSignLen = 9;
+    m_xxteaSign = (char*)malloc(m_xxteaSignLen);
+    memcpy(m_xxteaSign, "fuckXXTEA", m_xxteaSignLen);
+}
+
+CXUtils::~CXUtils() {
+    free(m_xxteaKey); m_xxteaKey = nullptr;
+    free(m_xxteaSign); m_xxteaSign = nullptr;
 }
 
 int toMD5(char* dest, const char* src)
@@ -50,25 +60,16 @@ std::string& CXUtils::md5(const char* in, std::string& out)
     return out;
 }
 
-uint32_t g_ngFileXXTEAkey[4] = {0x0839042f, 0xa98f0ce1, 0x430c8bef, 0x765bc1f0};
-const char * CXUtils::xxteaDecrypt(const char *data, uint32_t data_len, const char *key, uint32_t key_len, uint32_t *ret_length) {
-    uint32_t ret_length2 = 0;
-    return (const char *)xxtea_decrypt((unsigned char*)data, data_len, (unsigned char*)g_ngFileXXTEAkey, 4, &ret_length2);
-    
-//    xxtea_long ret_length3 = 0;
-//    unsigned char* d = (unsigned char*)"xxtea is really good";
-//    unsigned char* e = (unsigned char*)"xxtea is good";
-//    unsigned char* r = xxtea_encrypt(d, 40, e, 13, &ret_length3);
-//    printf("%s", (const char*)r);
-//    
-//    xxtea_long ret_length4 = 0;
-//    unsigned char* r2 = xxtea_decrypt(r, ret_length3, (unsigned char*)e, 13, &ret_length4);
-//    printf("%s", (const char*)r2);
-//    
-//    string s("f5d7212a3cb3c386403ff7314e32489dad444dff");
-//    string k("xxtea is good");
-//    data_len = s.length();
-//    key_len = k.length();
-//    uint32_t ret_length2 = 0;
-//    return (const char *)xxtea_decrypt((unsigned char*)s.c_str(), data_len, (unsigned char*)k.c_str(), key_len, &ret_length2);
+const char* CXUtils::decryptXxteaFile(const char* filePath) {
+    Data data = FileUtils::getInstance()->getDataFromFile(filePath);
+    if (data.isNull() == false) {
+        unsigned char* buf = data.getBytes();
+        size_t size = data.getSize();
+        
+        uint32_t ret_length;
+        const char * ret = (const char *)xxtea_decrypt(buf + m_xxteaSignLen, uint32_t(size - m_xxteaSignLen), (unsigned char*)m_xxteaKey, m_xxteaKeyLen, &ret_length);
+        return ret;
+    } else {
+        return nullptr;
+    }
 }

@@ -347,20 +347,34 @@ end
 
 
 
-function Manager.getStudyWordsNum(bookKey)
+function Manager.getStudyWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
     local user = s_CURRENT_USER.objectId
     local sum = 0
     for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
-        sum = sum + 1
+        if day then
+            local record_date = os.date("%x",row.lastUpdate)
+            if record_date == day then
+                sum = sum + 1
+            end
+        else
+            sum = sum + 1
+        end
     end
     return sum
 end
 
-function Manager.getGraspWordsNum(bookKey)
+function Manager.getGraspWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
     local user = s_CURRENT_USER.objectId
     local sum = 0
     for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
-        sum = sum + 1
+        if day then
+            local record_date = os.date("%x",row.lastUpdate)
+            if record_date == day then
+                sum = sum + 1
+            end
+        else
+            sum = sum + 1
+        end
     end
     return sum
 end
@@ -420,7 +434,8 @@ function Manager.updateReviewBossRecord(bossId)
         local wordName = row1.wordName
         print("update word name:"..wordName)
         for row2 in Manager.database:nrows("SELECT * FROM Word_Prociency where userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'") do
-            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
+--            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
+            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1).." WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
             Manager.database:exec(command)
             print(command)
         end
