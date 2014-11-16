@@ -30,6 +30,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
@@ -52,9 +53,12 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.GetDataCallback;
+import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SignUpCallback;
 import com.avos.avoscloud.LogInCallback;
@@ -236,6 +240,75 @@ public class AppActivity extends Cocos2dxActivity {
 				}
 			}
 		});
+	}
+	
+	public static class DWSF {
+		
+		public DWSF(String[] words, int index, int count, String prefix, String subfix, String path) {
+			_words = words;
+			_index = index;
+			_count = count;
+			_prefix = prefix;
+			_subfix = subfix;
+			_path = path;
+		}
+		
+		public void search() {
+			if (_index >= _count) return;
+			String filename = _prefix + _words[_index] + _subfix;
+			
+			AVQuery<AVObject> query = new AVQuery<AVObject>("_File");
+			query.whereEqualTo("name", filename);
+			query.findInBackground(new FindCallback<AVObject>() {
+				@Override
+				public void done(List<AVObject> obj, AVException e) {
+					if (e == null && obj != null && obj.size() > 0) {						
+						download(obj.get(0).getObjectId());						
+					} else {
+						gotoNext();
+					}
+				}
+			});
+		}
+		
+		private void download(String objectId) {
+			AVFile.withObjectIdInBackground(objectId, new GetFileCallback<AVFile>() {
+				@Override
+				public void done(final AVFile file, AVException e) {
+					if (file == null || e != null) {
+						gotoNext();
+					} else {
+						file.getDataInBackground(new GetDataCallback() {
+							@Override
+							public void done(byte[] data, AVException err) {
+								if (err == null) {
+									saveFile(_path, file.getName(), data);
+								}
+								gotoNext();
+							}
+						});
+					}
+				}
+			});
+		}
+		
+		private void gotoNext() {
+			DWSF next = new DWSF(_words, _index + 1, _count, _prefix, _subfix, _path);
+			next.search();
+		}
+		
+		private String[] _words;
+		private int _index;
+		private int _count;
+		
+		private String _prefix;
+		private String _subfix;
+		private String _path;
+	}
+	public static void downloadWordSoundFiles(final String prefix, final String wordsList, final String subfix, final String path) {
+		String[] words = wordsList.split("\\|");
+		DWSF first = new DWSF(words, 0, words.length, prefix, subfix, path);
+		first.search();
 	}
 	
 	private static boolean saveFile(String savepath, String filename, byte[] data) {

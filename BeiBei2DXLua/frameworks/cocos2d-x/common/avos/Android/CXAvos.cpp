@@ -42,6 +42,24 @@ void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC 
     }
 }
 
+void CXAvos::downloadWordSoundFiles(const char* prefix, const char* wordsList, const char* subfix, const char* path) {
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "downloadWordSoundFiles", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V")) {
+        jstring stringArg_prefix = t.env->NewStringUTF(prefix);
+        jstring stringArg_wordsList = t.env->NewStringUTF(wordsList);
+        jstring stringArg_subfix = t.env->NewStringUTF(subfix);
+        jstring stringArg_path = t.env->NewStringUTF(path);
+
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, stringArg_prefix, stringArg_wordsList, stringArg_subfix, stringArg_path);
+
+        t.env->DeleteLocalRef(stringArg_prefix);
+        t.env->DeleteLocalRef(stringArg_wordsList);
+        t.env->DeleteLocalRef(stringArg_subfix);
+        t.env->DeleteLocalRef(stringArg_path);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved)
 {
     if (mLuaHandlerId_dl > 0)
