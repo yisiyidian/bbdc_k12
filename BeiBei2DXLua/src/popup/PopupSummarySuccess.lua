@@ -52,8 +52,11 @@ end
 function PopupSummarySuccess:onGoButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on go button clicked')
-    if s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
-        s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
+    if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
+        if levelData.isPassed ~= 1 then
+            s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
+        end
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
         local summaryboss = require('view/summaryboss/SummaryBossLayer')
         local layer = summaryboss.create(levelConfig)
