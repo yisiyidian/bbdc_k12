@@ -61,25 +61,31 @@ function Store.buy(onResult)
         end
 
         local user_plugin = agent:getUserPlugin()
-        local userID = user_plugin:getUserID()
+
         local info = {
             Product_Id=productId,  
             Product_Name="贝贝体力值30点",  
             Product_Price="6", 
             Product_Count="1",  
 
-            Role_Id=userID,  
-            Role_Name='Test',--s_CURRENT_USER.username,
-            Role_Grade='1', -- s_CURRENT_USER.currentLevelIndex,
+            Role_Name=s_CURRENT_USER.username,
+            Role_Grade=s_CURRENT_USER.currentLevelIndex,
             Role_Balance="0",
 
             Server_Id="1"
         }
-        print('DDDDDDDDDDDDDDDDDD')
+        if user_plugin ~= nil then
+            local userID = user_plugin:getUserID()
+            info.Role_Id = userID
+        else
+            info.Role_Id = s_CURRENT_USER.username
+        end
+
+        s_logd('Store.buy')
         print_lua_table(info)
-        print('DDDDDDDDDDDDDDDDDD')
+        s_logd('Store.buy')
         print_lua_table(iap_plugin_maps)
-        print('DDDDDDDDDDDDDDDDDD')
+        s_logd('Store.buy')
         for key, value in pairs(iap_plugin_maps) do
             value:payForProduct(info)
         end
