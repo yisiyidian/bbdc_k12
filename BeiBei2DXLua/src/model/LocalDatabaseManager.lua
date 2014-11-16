@@ -434,7 +434,8 @@ function Manager.updateReviewBossRecord(bossId)
         local wordName = row1.wordName
         print("update word name:"..wordName)
         for row2 in Manager.database:nrows("SELECT * FROM Word_Prociency where userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'") do
-            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
+--            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
+            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1).." WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
             Manager.database:exec(command)
             print(command)
         end
