@@ -1,61 +1,52 @@
+require("Cocos2d")
+require("Cocos2dConstants")
+require("common.global")
 
+local FlipNode = require("view.mat.FlipNode")
 
--- magic number
 local dir_up    = 1
 local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-local FlipNode = require("view.mat.FlipNode")
-
 local FlipMat = class("FlipMat", function()
-return cc.Layer:create()
+    return cc.Layer:create()
 end)
 
 function FlipMat.create(word, m ,n, isNewPlayerModel)
-    local spineName = nil
+    local nameList = {}
+    nameList["chapter0"] = "coconut_light"
+    nameList["chapter2"] = "coin"
+    local spineName = nameList[s_CURRENT_USER.currentChapterKey]
 
-    if s_CorePlayManager.chapterIndex == 1 then
-        spineName = "coconut_light"
-    elseif s_CorePlayManager.chapterIndex == 3 then
-        spineName = "coin"
-    else
-        spineName = "coconut_light"    
-    end
-
+    local main_width    = 640
+    local main_height   = 640
+    
     local main = FlipMat.new()
-    main:setContentSize(640,640)
+    main:setContentSize(main_width, main_height)
     main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
     
-    -- block function
-    main.success = function()
-    end
-    main.fail = function()
-    end
-    
+    main.success    = function()end
+    main.fail       = function()end
     main.globalLock = false
-    main.rightLock = false
-    main.wrongLock = false
+    main.rightLock  = false
+    main.wrongLock  = false
     main.answerPath = {}
     for i = 1, string.len(word) do
         main.answerPath[i] = {x=0, y=0}
     end
     
-
-    -- system function
     math.randomseed(os.time())
     
-    -- location function
     local onTouchBegan
     local onTouchMoved
     local fakeTouchMoved
     local onTouchEnded
 
-    -- local variate
     local main_word = word
-    local main_m = m
-    local main_n = n
+    local main_m    = m
+    local main_n    = n
     
     local current_node_x
     local current_node_y
@@ -74,18 +65,16 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         local char = string.char(96+i)
         if string.find(main_word, char) == nil then
             table.insert(charaster_set_filtered, char)
-            --charaster_set_filtered[#charaster_set_filtered+1] = char
         end
     end
 
-    local gap = 132
-    local left = (s_DESIGN_WIDTH - (main_m-1)*gap) / 2
-    local bottom = left
+    local gap       = 132
+    local left      = (main_width - (main_m-1)*gap) / 2
+    local bottom    = left
     
     local main_logic_mat = randomMat(main_m, main_n)
     local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
 
-    
     local main_mat = {}
     local firstFlipNode = nil
     for i = 1, main_m do
@@ -163,7 +152,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
     end
     --main.finger_action()
     
-    
     local back_box = cc.Layer:create()
     local back_box_num = 0
     local updateSelectWord = function()
@@ -224,13 +212,24 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         onNode = false
     end
     
-    -- handing touch events
+    
+    local hasTouched = false
+    
     onTouchBegan = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
+            return false
+        end
+        
+        if hasTouched then
+            return false
+        else
+            hasTouched = true
+        end
+    
         if main.globalLock then
             return true
         end
-        
-        local location = main:convertToNodeSpace(touch:getLocation())
         
         startTouchLocation = location
         lastTouchLocation = location
@@ -255,13 +254,16 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
     end
 
     onTouchMoved = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
+            return
+        end
+    
         if main.globalLock then
             return
         end
     
         local length_gap = 3.0
-
-        local location = main:convertToNodeSpace(touch:getLocation())
 
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
@@ -356,6 +358,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
     end
 
     onTouchEnded = function(touch, event)
+        hasTouched = false
+    
+        local location = main:convertToNodeSpace(touch:getLocation())
+    
         if main.globalLock then
             return
         end
@@ -363,8 +369,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         if #selectStack < 1 then
             return
         end
-    
-        local location = main:convertToNodeSpace(touch:getLocation())
 
         local selectWord = ""
         for i = 1, #selectStack do
@@ -401,11 +405,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
-    --listener:setSwallowTouches(true)
-    
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+--    listener:setSwallowTouches(true)
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
     
