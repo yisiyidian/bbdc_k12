@@ -9,6 +9,7 @@ end)
 
 local player
 local levelLayerI
+local levelLayerII
 
 function LevelLayer.create()
     local layer = LevelLayer.new()
@@ -109,8 +110,9 @@ end
 function LevelLayer:ctor()
     
     local levelStypeI = require('view.level.LevelLayerI')
+    local levelStypeII = require('view.level.LevelLayerII')
     levelLayerI = levelStypeI.create()
-    levelLayerII = levelStypeI.create()
+    levelLayerII = levelStypeII.create()
     
     -- plot player position
     local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
@@ -176,9 +178,16 @@ function LevelLayer:ctor()
     item1:setContentSize(levelLayerI:getContentSize())    
     levelLayerI:setPosition(cc.p(0, 0))
     item1:addChild(levelLayerI)
-    --item1:setPositionPercent(cc.p(20, 10))
     listView:pushBackCustomItem(item1)
     
+    -- add list view item2
+    local item2 = ccui.Layout:create()
+    item2:setTouchEnabled(true)
+    item2:setContentSize(levelLayerII:getContentSize())    
+    levelLayerII:setPosition(cc.p(0, 0))
+    item2:addChild(levelLayerII)
+    --listView:insertCustomItem(item2,2)
+    listView:pushBackCustomItem(item2)
 --    local item1_2 = ccui.Layout:create()
 --    local connection1_2 = cc.Scale9Sprite:create('ccb/ccbResources/chapter_level/connection/connection_xuanxiaoguan1-2_background.png')
 --    item1_2:setContentSize(connection1_2:getContentSize())
@@ -191,7 +200,7 @@ function LevelLayer:ctor()
 --    local item2 = ccui.Layout:create()
 --    item2:setTouchEnabled(true)
 --    item2:setContentSize(levelLayerII:getContentSize())    
---    levelLayerII:setPosition(cc.p(0, 0))
+--    levelLayerII:setPosition(cc.p(item2:getContentSize().width/2, item2:getContentSize().height/2))
 --    item2:addChild(levelLayerII)
 --    listView:pushBackCustomItem(item2)
 --    --listView:insertCustomItem(item1, 0)
