@@ -55,9 +55,9 @@ function InputNode.create(type)
             cursor:stopAllActions()
             cursor:setVisible(false)
             if type == "username" then
-                main.textField:setPlaceHolder("用户名")
+                main.textField:setPlaceHolder("请输入用户名")
             else
-                main.textField:setPlaceHolder("密码")
+                main.textField:setPlaceHolder("请输入密码")
             end
         elseif eventType == ccui.TextFiledEventType.insert_text then
             cursorShowUp()
@@ -68,16 +68,16 @@ function InputNode.create(type)
 
     main.textField = ccui.TextField:create()
     main.textField:setTouchEnabled(true)
-    main.textField:setTouchSize(cc.size(width,height))
-    main.textField:setTouchAreaEnabled(true)
+--    main.textField:setTouchSize(cc.size(width,height))
+--    main.textField:setTouchAreaEnabled(true)
     main.textField:setFontSize(30)
     main.textField:setMaxLengthEnabled(true)
     main.textField:setMaxLength(16)
     main.textField:setColor(cc.c4b(0,0,0,255))
     if type == "username" then
-        main.textField:setPlaceHolder("用户名")
+        main.textField:setPlaceHolder("请输入用户名")
     else
-        main.textField:setPlaceHolder("密码")
+        main.textField:setPlaceHolder("请输入密码")
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
     end
