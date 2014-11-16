@@ -272,6 +272,7 @@ function SummaryBossLayer.create(levelConfig)
                     killedCrabCount = killedCrabCount + 1
                     layer.hintTime = 0
                     match = true
+                    layer.globalLock = true
                     layer.crabOnView[i] = false
                     layer.currentBlood = layer.currentBlood - #selectStack
                     layer.boss.blood:setPercentage(100 * layer.currentBlood / layer.totalBlood)
@@ -310,6 +311,7 @@ function SummaryBossLayer.create(levelConfig)
                         bullet:runAction(cc.Sequence:create(hit,attacked,hide,resume))
                         local recover = cc.CallFunc:create(
                             function()
+                                layer.globalLock = false
                                 node.normal()
                                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                                     node.firstStyle()

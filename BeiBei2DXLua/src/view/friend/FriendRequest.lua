@@ -110,22 +110,58 @@ function FriendRequest:ctor()
 
         local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
         head:setScale(0.8)
-        head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
+        head:setPosition(0.26 * button:getContentSize().width,0.6 * button:getContentSize().height)
         button:addChild(head)
 
-        local fri_name = cc.Label:createWithSystemFont('Name','',32)
+        local fri_name = cc.Label:createWithSystemFont('Name','',28)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
         fri_name:setAnchorPoint(0,0)
-        fri_name:setPosition(0.42 * button:getContentSize().width,0.52 * button:getContentSize().height)
+        fri_name:setPosition(0.42 * button:getContentSize().width,0.62 * button:getContentSize().height)
         button:addChild(fri_name)
-
-        local fri_word = cc.Label:createWithSystemFont('已学单词总数：300','',24)
+        
+        local request_label = cc.Label:createWithSystemFont(' 请求添加您为好友','',20)
+        request_label:setColor(cc.c3b(0,0,0))
+        request_label:ignoreAnchorPointForPosition(false)
+        request_label:setAnchorPoint(0,0)
+        request_label:setPosition(fri_name:getPositionX() + fri_name:getContentSize().width,fri_name:getPositionY() + 2)
+        button:addChild(request_label)
+        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',i),'',20)
         fri_word:setColor(cc.c3b(0,0,0))
         fri_word:ignoreAnchorPointForPosition(false)
         fri_word:setAnchorPoint(0,1)
-        fri_word:setPosition(0.42 * button:getContentSize().width,0.48 * button:getContentSize().height)
+        fri_word:setPosition(0.42 * button:getContentSize().width,0.58 * button:getContentSize().height)
         button:addChild(fri_word)
+        
+        local agree = ccui.Button:create("image/friend/fri_button_blue.png","image/friend/fri_button_blue.png","image/friend/fri_button_blue.png")
+        agree:setPosition(0.3 * button:getContentSize().width,0.2 * button:getContentSize().height)
+        button:addChild(agree)
+        local agree_label = cc.Label:createWithSystemFont("同意",'',24)
+        agree_label:setPosition(0.5 * agree:getContentSize().width,0.5 * agree:getContentSize().height)
+        agree:addChild(agree_label)
+        
+        local function onAgree(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                listView:removeChild(item)
+            end
+        end
+        agree:addTouchEventListener(onAgree)
+        
+        local refuse = ccui.Button:create("image/friend/fri_button_grey.png","image/friend/fri_button_grey.png","image/friend/fri_button_grey.png")
+        refuse:setPosition(0.7 * button:getContentSize().width,0.2 * button:getContentSize().height)
+        button:addChild(refuse)
+        local refuse_label = cc.Label:createWithSystemFont("拒绝",'',24)
+        refuse_label:setPosition(0.5 * refuse:getContentSize().width,0.5 * refuse:getContentSize().height)
+        refuse:addChild(refuse_label)
+        
+        local function onRefuse(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                listView:removeChild(item)
+            end
+        end
+        refuse:addTouchEventListener(onRefuse)
+        
+        
     end
 
     -- remove last item
