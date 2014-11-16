@@ -281,9 +281,9 @@ end
 
 function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFailed)
     local s = function (api, result)
-        for i, v in ipairs(result) do
-            parseServerDataToUserData(v, dataObject)
-        end
+        --for i, v in ipairs(result) do
+            parseServerDataToUserData(result, dataObject)
+        --end
         if onSucceed ~= nil then onSucceed(api, result) end
     end
     
