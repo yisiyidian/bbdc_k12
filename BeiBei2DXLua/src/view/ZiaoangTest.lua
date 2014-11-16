@@ -17,24 +17,6 @@ function ZiaoangTest.create()
     sub_colorBlock:setPosition(100,100)
     sub_colorBlock:ignoreAnchorPointForPosition(false)
     colorBlock:addChild(sub_colorBlock)
-
-    s_logd(main:getContentSize().height)
-    s_logd(main:getContentSize().width)
-    s_logd(main:getPosition())
-    s_logd(main:getAnchorPoint().x)
-    s_logd(main:getAnchorPoint().y)
-    
-    s_logd(colorBlock:getContentSize().height) 
-    s_logd(colorBlock:getContentSize().width)
-    s_logd(colorBlock:getPosition())
-    s_logd(colorBlock:getAnchorPoint().x)
-    s_logd(colorBlock:getAnchorPoint().y)
-    
-    s_logd(sub_colorBlock:getContentSize().height) 
-    s_logd(sub_colorBlock:getContentSize().width)
-    s_logd(sub_colorBlock:getPosition())
-    s_logd(sub_colorBlock:getAnchorPoint().x)
-    s_logd(sub_colorBlock:getAnchorPoint().y)
     
     onTouchBegan1 = function(touch, event)
         s_logd("touch 1")
@@ -43,11 +25,21 @@ function ZiaoangTest.create()
         return true
     end
     
+    local hasTouched = false
     onTouchBegan2 = function(touch, event)
-        s_logd("touch 2")
-
-        -- CCTOUCHBEGAN event must return true
-        return true
+    
+        if hasTouched then
+            return false
+        else
+            hasTouched = true
+            s_logd("touch 2")
+            return true
+        end
+    end
+    
+    onTouchEnded2 = function(touch, event)
+        s_logd("ended 2")
+        hasTouched = false
     end
     
     local listener1 = cc.EventListenerTouchOneByOne:create()
@@ -59,6 +51,7 @@ function ZiaoangTest.create()
     
     local listener2 = cc.EventListenerTouchOneByOne:create()
     listener2:registerScriptHandler(onTouchBegan2, cc.Handler.EVENT_TOUCH_BEGAN )
+    listener2:registerScriptHandler(onTouchEnded2, cc.Handler.EVENT_TOUCH_ENDED )
     listener2:setSwallowTouches(true)
     local eventDispatcher2 = sub_colorBlock:getEventDispatcher()
     eventDispatcher2:addEventListenerWithSceneGraphPriority(listener2, sub_colorBlock)
