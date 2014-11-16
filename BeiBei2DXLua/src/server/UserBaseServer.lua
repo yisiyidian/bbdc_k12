@@ -14,8 +14,8 @@ function validateUsername(s)
     local ord = c:byte()
     if (ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then 
         local i = 1
-        local len = 1
-        while i < length do
+        local len = 0
+        while i <= length do
             local c = s:sub(i, i)
             local ord = c:byte()
             if (ord >= 48 and ord <= 57) or(ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then
@@ -32,7 +32,7 @@ function validateUsername(s)
             len = len + 1
         end
 
-        if len < 4 or len > 16 then 
+        if len < 4 or len > 10 then 
           s_logd(string.format('%s, %d, %d', s, length, len))
           return false 
         end

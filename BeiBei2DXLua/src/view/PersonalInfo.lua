@@ -130,8 +130,8 @@ end
 
 function PersonalInfo:PLVM()
     local updateTime = 0
-    local tolearnCount = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
-    local toMasterCount = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+    local tolearnCount = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
+    local toMasterCount = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,nil)
     local learnPercent = tolearnCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local back = self.intro_array[4]
@@ -233,8 +233,16 @@ end
 
 function PersonalInfo:PLVI()
     local back = self.intro_array[3]
+    local to = os.time()
+--    local from = os.time({year = tonumber(os.date("%Y", s_CURRENT_USER.localTime),10), 
+--                         month = tonumber(os.date("%Y", s_CURRENT_USER.localTime),10),  
+--                          date = tonumber(os.date("%Y", s_CURRENT_USER.localTime),10),
+--                        hour = 0,
+--                         min = 0})
+    local from = s_CURRENT_USER.localTime - s_CURRENT_USER.localTime % (24 * 3600)
+    local sub = to - from
     
-    local dayCount = 18
+    local dayCount = math.floor(sub / (24 * 3600)) + 1
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setPosition(s_DESIGN_WIDTH * 0.55, s_DESIGN_HEIGHT * 0.53)
@@ -248,8 +256,11 @@ function PersonalInfo:PLVI()
     local countArray = {}
     local dateArray = {}
     math.random(0,20)
+    local selectDate = s_CURRENT_USER.localTime
     for i = 1 , dayCount do 
-        countArray[i] = math.random(0,20)
+        local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%Y',selectDate))
+        selectDate = selectDate + 24 * 3600
+        countArray[i] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
         s_logd(countArray[i])
         dateArray[i] = string.format('%d',i)
         if i > 1 then
@@ -473,7 +484,7 @@ function PersonalInfo:PLVI()
             end
             button[rightButton]:setVisible(false)
             button[rightButton + 4]:setVisible(true)
-            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *s_DESIGN_WIDTH,0) ))
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 * s_DESIGN_WIDTH,0) ))
             rightButton = rightButton + 1
             
             drawXYLabel(xArray,yArray)
@@ -746,7 +757,7 @@ end
 
 function PersonalInfo:XXTJ()
     
-   local everydayWord = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey) / self.totalDay
+   local everydayWord = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / self.totalDay
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
    local wordFinished = 100
    local dayToFinish = 0
