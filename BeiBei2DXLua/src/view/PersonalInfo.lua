@@ -130,8 +130,8 @@ end
 
 function PersonalInfo:PLVM()
     local updateTime = 0
-    local tolearnCount = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
-    local toMasterCount = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+    local tolearnCount = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
+    local toMasterCount = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,nil)
     local learnPercent = tolearnCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local back = self.intro_array[4]
@@ -233,8 +233,15 @@ end
 
 function PersonalInfo:PLVI()
     local back = self.intro_array[3]
+    local to = os.time()
+    local from = os.time({year = os.date("%Y", s_CURRENT_USER.localTime), 
+                       month = os.date("%m", s_CURRENT_USER.localTime),  
+                        date = os.date("%d", s_CURRENT_USER.localTime),
+                        hour = 0,
+                         min = 0})
+    local sub = to - from
     
-    local dayCount = 18
+    local dayCount = math.floor(sub / (24 * 3600))
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setPosition(s_DESIGN_WIDTH * 0.55, s_DESIGN_HEIGHT * 0.53)
@@ -473,7 +480,7 @@ function PersonalInfo:PLVI()
             end
             button[rightButton]:setVisible(false)
             button[rightButton + 4]:setVisible(true)
-            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *s_DESIGN_WIDTH,0) ))
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 * s_DESIGN_WIDTH,0) ))
             rightButton = rightButton + 1
             
             drawXYLabel(xArray,yArray)
@@ -746,7 +753,7 @@ end
 
 function PersonalInfo:XXTJ()
     
-   local everydayWord = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey) / self.totalDay
+   local everydayWord = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / self.totalDay
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
    local wordFinished = 100
    local dayToFinish = 0
