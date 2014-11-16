@@ -48,8 +48,8 @@ local function getWordObject(word, onSucceed, onFailed)
 end
 function HttpRequestClient.downloadWordSoundFile(word, onDownloaded)
     local localPath = getWordSoundFilePath(word)
-    --s_logd(localPath)
-    if cc.FileUtils:getInstance():isFileExist(localPath) then
+    s_logd('downloadWordSoundFile:' .. localPath)
+    if localPath == nil or string.len(localPath) <= 0 or cc.FileUtils:getInstance():isFileExist(localPath) then
         if onDownloaded ~= nil then onDownloaded(nil, localPath, nil, true) end
     else
         getWordObject(word, 
