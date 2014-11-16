@@ -36,7 +36,7 @@ function PauseHelpNormal:ctor()
 
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('ccb/pause_help_normal.ccbi', proxy, self.ccbPauseHelpNormal, self.ccb)
-    node:setPosition(-400,0)
+    node:setPosition(0,600)
     self:addChild(node)
 
 
@@ -58,7 +58,14 @@ end
 
 function PauseHelpNormal:onBlueButtonClicked()
     s_logd('on collect button clicked')
+    local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
+    self:runAction(action1) 
+
+
+    s_SCENE:callFuncWithDelay(0.3,function()
     s_SCENE:removeAllPopups()
+    end)
+
 
 
 end

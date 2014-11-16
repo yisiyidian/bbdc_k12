@@ -129,8 +129,8 @@ function PopupEnergyBuy:ctor()
 
     self:scheduleUpdateWithPriorityLua(update, 0) 
 
-    if self.energy_number > 0 and self.energy_number < 4 then
-        label_energyNumber = cc.Label:createWithSystemFont(energy_number,"",36)
+    if s_CURRENT_USER.energyCount > 0 and s_CURRENT_USER.energyCount < 4 then
+        label_energyNumber = cc.Label:createWithSystemFont(s_CURRENT_USER.energyCount,"",36)
         label_energyNumber:setColor(cc.c4b(255,255,255 ,255))
         label_energyNumber:setPosition(0.5 * heart:getContentSize().width ,0.5 * heart:getContentSize().height )
         label_energyNumber:setName("energyNumber")
