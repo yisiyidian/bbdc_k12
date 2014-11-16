@@ -15,17 +15,24 @@
 
 class CXUtils : public cocos2d::Ref {
 public:
+    ~CXUtils();
+    
     static CXUtils* getInstance();
     
     static void showMail(const char* mailTitle, const char* userName);
     static std::string& md5(const char* in, std::string& out);
     
-    static const char *xxteaDecrypt(const char *data, uint32_t data_len, const char *key, uint32_t key_len, uint32_t *ret_length);
+    const char* decryptXxteaFile(const char* filePath);
     
 private:
     CXUtils();
     
     static CXUtils* m_pInstance;
+    
+    char* m_xxteaKey;
+    int m_xxteaKeyLen;
+    char* m_xxteaSign;
+    int m_xxteaSignLen;
 };
 
 #endif /* defined(__BeiBei2DXLua__CXUtils__) */

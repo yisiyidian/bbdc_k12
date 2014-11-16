@@ -3,6 +3,7 @@ local DataManager = {}
 require('common.text')
 
 ---------------------------------------------------------------------------
+local s_USE_XXTEA = true
 
 s_BOOK_KEY_NCEE  = 'ncee'
 s_BOOK_KEY_CET4  = 'cet4'
@@ -42,21 +43,25 @@ s_review_boos = 'cfg/review_boss.json'
 s_starRule = 'cfg/starRule.json'
 s_text = 'cfg/text.json'
 
-function loadXxteaFile(filepath)
-    local path = cc.FileUtils:getInstance():fullPathForFilename(filepath)
-    local data = cc.FileUtils:getInstance():getStringFromFile(path)
-    local key = 'mycrush42mycrush42'
-    local retLen = 0
-    local str = cx.CXUtils:xxteaDecrypt(data, string.len(data), key, string.len(key), retLen)
-    local jsonObj = s_JSON.decode(str)
-    return jsonObj
+local function loadXxteaFile(filepath)
+    local str = cx.CXUtils:getInstance():decryptXxteaFile(filepath)
+    if str ~= nil then
+        local jsonObj = s_JSON.decode(str)
+        return jsonObj
+    else
+        return {}
+    end
 end
 
 local function loadJsonFile(filepath)
-    local path = cc.FileUtils:getInstance():fullPathForFilename(filepath)
-    local data = cc.FileUtils:getInstance():getStringFromFile(path)
-    local jsonObj = s_JSON.decode(data)
-    return jsonObj
+    if s_USE_XXTEA then
+        return loadXxteaFile(filepath)
+    else
+        local path = cc.FileUtils:getInstance():fullPathForFilename(filepath)
+        local data = cc.FileUtils:getInstance():getStringFromFile(path)
+        local jsonObj = s_JSON.decode(data)
+        return jsonObj
+    end
 end
 
 -- text -------------------------------------------------------------------
@@ -90,7 +95,12 @@ end
 
 function DataManager.loadAllWords()
     local wordInfo = {}
-    local content = cc.FileUtils:getInstance():getStringFromFile(s_allwords)
+    local content
+    if s_USE_XXTEA then
+        content = cx.CXUtils:getInstance():decryptXxteaFile(s_allwords)
+    else
+        content = cc.FileUtils:getInstance():getStringFromFile(s_allwords)
+    end
     local lines = split(content, "\n")
     local MetaWord = require("model.meta.MetaWord")
 

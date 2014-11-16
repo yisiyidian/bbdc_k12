@@ -544,45 +544,51 @@ int lua_register_cx_common_CXAnalytics(lua_State* tolua_S)
     return 1;
 }
 
-int lua_cx_common_CXUtils_xxteaDecrypt(lua_State* tolua_S)
+int lua_cx_common_CXUtils_decryptXxteaFile(lua_State* tolua_S)
 {
     int argc = 0;
+    CXUtils* cobj = nullptr;
     bool ok  = true;
 
 #if COCOS2D_DEBUG >= 1
     tolua_Error tolua_err;
 #endif
 
+
 #if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertable(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
+    if (!tolua_isusertype(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
 #endif
 
-    argc = lua_gettop(tolua_S) - 1;
+    cobj = (CXUtils*)tolua_tousertype(tolua_S,1,0);
 
-    if (argc == 5)
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXUtils_decryptXxteaFile'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
     {
         const char* arg0;
-        unsigned int arg1;
-        const char* arg2;
-        unsigned int arg3;
-        unsigned int* arg4;
+
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
-        ok &= luaval_to_uint32(tolua_S, 3,&arg1);
-        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp); arg2 = arg2_tmp.c_str();
-        ok &= luaval_to_uint32(tolua_S, 5,&arg3);
-        #pragma warning NO CONVERSION TO NATIVE FOR unsigned int*;
         if(!ok)
             return 0;
-        const char* ret = CXUtils::xxteaDecrypt(arg0, arg1, arg2, arg3, arg4);
+        const char* ret = cobj->decryptXxteaFile(arg0);
         tolua_pushstring(tolua_S,(const char*)ret);
         return 1;
     }
-    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "xxteaDecrypt",argc, 5);
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d \n", "decryptXxteaFile",argc, 1);
     return 0;
+
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_xxteaDecrypt'.",&tolua_err);
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_decryptXxteaFile'.",&tolua_err);
 #endif
+
     return 0;
 }
 int lua_cx_common_CXUtils_showMail(lua_State* tolua_S)
@@ -697,7 +703,7 @@ int lua_register_cx_common_CXUtils(lua_State* tolua_S)
     tolua_cclass(tolua_S,"CXUtils","CXUtils","cc.Ref",nullptr);
 
     tolua_beginmodule(tolua_S,"CXUtils");
-        tolua_function(tolua_S,"xxteaDecrypt", lua_cx_common_CXUtils_xxteaDecrypt);
+        tolua_function(tolua_S,"decryptXxteaFile",lua_cx_common_CXUtils_decryptXxteaFile);
         tolua_function(tolua_S,"showMail", lua_cx_common_CXUtils_showMail);
         tolua_function(tolua_S,"getInstance", lua_cx_common_CXUtils_getInstance);
         tolua_function(tolua_S,"md5", lua_cx_common_CXUtils_md5);
