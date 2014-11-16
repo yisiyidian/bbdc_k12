@@ -74,7 +74,6 @@ function BookLayer.create()
         smallBack:addTouchEventListener(func_array[i])
         smallBack:setAnchorPoint(0.5,0)
         if i%2 == 0 then
-     --       smallBack:setPosition(s_DESIGN_WIDTH/2 + 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
             smallBack:setPosition((s_RIGHT_X - s_LEFT_X)/2 + 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
         else
             smallBack:setPosition((s_RIGHT_X - s_LEFT_X)/2 - 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
