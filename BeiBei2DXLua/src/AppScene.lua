@@ -64,7 +64,7 @@ end
 local function update(dt)
     if s_CURRENT_USER.sessionToken ~= '' and  s_CURRENT_USER.serverTime >= 0 then
         s_CURRENT_USER.serverTime = s_CURRENT_USER.serverTime + dt
-        --print('serverTime:'..s_CURRENT_USER.serverTime..',energyCount:'..s_CURRENT_USER.energyCount)
+        print('serverTime:'..s_CURRENT_USER.serverTime..',energyCount:'..s_CURRENT_USER.energyCount..',lastCool:'..s_CURRENT_USER.energyLastCoolDownTime)
         if s_CURRENT_USER.energyCount <= s_energyMaxCount then
             if s_CURRENT_USER.energyLastCoolDownTime < 0 then
                 s_CURRENT_USER.energyLastCoolDownTime = s_CURRENT_USER.serverTime;
