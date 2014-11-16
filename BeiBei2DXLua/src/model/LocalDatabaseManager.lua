@@ -347,20 +347,36 @@ end
 
 
 
-function Manager.getStudyWordsNum(bookKey)
+function Manager.getStudyWordsNum(bookKey, isForToday)
     local user = s_CURRENT_USER.objectId
     local sum = 0
     for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
-        sum = sum + 1
+        if isForToday then
+            local record_date = os.date("%x",row.lastUpdate)
+            local today_date  = os.date("%x",os.time())
+            if record_date == today_date then
+                sum = sum + 1
+            end
+        else
+            sum = sum + 1
+        end
     end
     return sum
 end
 
-function Manager.getGraspWordsNum(bookKey)
+function Manager.getGraspWordsNum(bookKey, isForToday)
     local user = s_CURRENT_USER.objectId
     local sum = 0
     for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
-        sum = sum + 1
+        if isForToday then
+            local record_date = os.date("%x",row.lastUpdate)
+            local today_date  = os.date("%x",os.time())
+            if record_date == today_date then
+                sum = sum + 1
+            end
+        else
+            sum = sum + 1
+        end
     end
     return sum
 end
