@@ -25,9 +25,9 @@ function test()
     --     downloadFunc()
     -- end
 
-    local IntroLayer = require("view/pausehelp/PauseHelpSummary")
+    local IntroLayer = require("view.pausehelp.PauseHelpSummary")
     local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+    s_SCENE:popup(introLayer)
 
  --   playWordSound('apple')
     -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
