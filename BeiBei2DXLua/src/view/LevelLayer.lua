@@ -10,6 +10,7 @@ end)
 local player
 local levelLayerI
 local levelLayerII
+local connection1_2
 
 function LevelLayer.create()
     local layer = LevelLayer.new()
@@ -111,8 +112,10 @@ function LevelLayer:ctor()
     
     local levelStypeI = require('view.level.LevelLayerI')
     local levelStypeII = require('view.level.LevelLayerII')
+    local connectionLayer1_2 = require('view.level.connection.Connection1_2')
     levelLayerI = levelStypeI.create()
     levelLayerII = levelStypeII.create()
+    connection1_2 = connectionLayer1_2.create()
     
     -- plot player position
     local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
@@ -152,6 +155,9 @@ function LevelLayer:ctor()
     local function listViewEvent(sender, eventType)
         if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
             print("select child index = ",sender:getCurSelectedIndex())
+            if sender:getCurSelectedIndex() == 2 then
+                connection1_2:plotUnlockChapterAnimation()
+            end
         end
     end
 
@@ -178,7 +184,15 @@ function LevelLayer:ctor()
     item1:setContentSize(levelLayerI:getContentSize())    
     levelLayerI:setPosition(cc.p(0, 0))
     item1:addChild(levelLayerI)
-    listView:pushBackCustomItem(item1)
+    listView:pushBackCustomItem(item1)    
+
+    -- add list view connection 
+    local item1_2 = ccui.Layout:create()
+    item1_2:setTouchEnabled(true)
+    item1_2:setContentSize(connection1_2:getContentSize())
+    connection1_2:setPosition(cc.p(0,0))
+    item1_2:addChild(connection1_2)
+    listView:pushBackCustomItem(item1_2)
     
     -- add list view item2
     local item2 = ccui.Layout:create()
@@ -188,6 +202,7 @@ function LevelLayer:ctor()
     item2:addChild(levelLayerII)
     --listView:insertCustomItem(item2,2)
     listView:pushBackCustomItem(item2)
+
 --    local item1_2 = ccui.Layout:create()
 --    local connection1_2 = cc.Scale9Sprite:create('ccb/ccbResources/chapter_level/connection/connection_xuanxiaoguan1-2_background.png')
 --    item1_2:setContentSize(connection1_2:getContentSize())

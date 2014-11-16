@@ -133,15 +133,7 @@ function RightTopNode:ctor()
     label_star:setPosition(95,30)
     label_star:setLocalZOrder(1)
     star_back:addChild(label_star)
-
-    -- changing number (30 min)
-    
-    
-    -- click heart
-    local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
-    local min = time_betweenServerAndEnergy / 60
-    local sec = time_betweenServerAndEnergy % 60
-     
+  
 --    s_CURRENT_USER.addEnergys(10)
 
 
@@ -149,26 +141,18 @@ function RightTopNode:ctor()
     
     local function update(delta)
     
-        if heartNumber >= 4 then
+        local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
+        local min = time_betweenServerAndEnergy / 60
+        local sec = time_betweenServerAndEnergy % 60
+        
+        if s_CURRENT_USER.energyCount >= s_energyMaxCount then
            heartShow = "full"
         else     
-            sec = sec - delta
-            heartShow = string.format("%d",min) ..":"..string.format("%d",sec)   
-            
-            if sec < 0 then
-                sec = 59
-                min = min - 1
-            end
-
-            if min < 0 then 
-                min = 29
-                heartNumber = s_CURRENT_USER.energyCount 
-                
-            end    
-                    
+            heartShow = string.format("%d",min) ..":"..string.format("%d",sec)                       
         end           
-       heartExist:setString(heartNumber)  
-       label_heart:setString(heartShow)
+        heartExist:setString(s_CURRENT_USER.energyCount)  
+        label_heart:setString(heartShow)
+        label_star:setString(starNumber)
        -- update data  
 
 --       --show full or time
