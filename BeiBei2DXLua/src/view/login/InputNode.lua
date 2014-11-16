@@ -72,14 +72,15 @@ function InputNode.create(type)
 --    main.textField:setTouchAreaEnabled(true)
     main.textField:setFontSize(30)
     main.textField:setMaxLengthEnabled(true)
-    main.textField:setMaxLength(16)
     main.textField:setColor(cc.c4b(0,0,0,255))
     if type == "username" then
         main.textField:setPlaceHolder("请输入用户名")
+        main.textField:setMaxLength(10)
     else
         main.textField:setPlaceHolder("请输入密码")
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
+        main.textField:setMaxLength(16)
     end
     main.textField:setPosition(cc.p(backImage:getContentSize().width / 2.0, backImage:getContentSize().height / 2.0))
     main.textField:addEventListener(eventHandle)

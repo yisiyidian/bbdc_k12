@@ -32,7 +32,7 @@ function validateUsername(s)
             len = len + 1
         end
 
-        if len < 4 or len > 16 then 
+        if len < 4 or len > 10 then 
           s_logd(string.format('%s, %d, %d', s, length, len))
           return false 
         end
