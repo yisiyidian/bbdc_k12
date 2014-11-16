@@ -86,7 +86,7 @@ function PopupEnergyInfo:ctor()
     
     local function update(delta)
     -- update timer
-        local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
+        local time_betweenServerAndEnergy = s_CURRENT_USER.energyLastCoolDownTime + s_energyCoolDownSecs - s_CURRENT_USER.serverTime
         local min = time_betweenServerAndEnergy / 60
         local sec = time_betweenServerAndEnergy % 60
         
@@ -123,10 +123,16 @@ function PopupEnergyInfo:ctor()
                 replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
                 replace:setName("heart_animation")
                 self.ccbPopupEnergyInfo['popupWindow']:addChild(replace)
-                
+            end      
+            
+               local animation = self.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
+               local label = animation:getChildByName("energyNumber")
+               if label ~= nil then
+                label:setString(s_CURRENT_USER.energyCount )
+               end             
                 -- xx:xx 
                 self.ccbPopupEnergyInfo['energyNumber']:setString(string.format("%d",min) ..":"..string.format("%d",sec))
-            end
+
         else
             -- s_CURRENT_USER.energyCount == 0
             -- xx:xx
