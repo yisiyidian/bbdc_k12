@@ -52,6 +52,10 @@ function PopupEnergyBuy:ctor()
     node:setPosition(0,600)
     self:addChild(node)
 
+    local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
+    local action2 = cc.EaseBackOut:create(action1)
+    node:runAction(action2)
+    
     local label_buyEnergy = cc.Label:createWithSystemFont("￥6.00","",36)
     label_buyEnergy:setPosition(0.5 * self.ccbPopupEnergyBuy['buyButton']:getContentSize().width ,0.5 * self.ccbPopupEnergyBuy['buyButton']:getContentSize().height)
     self.ccbPopupEnergyBuy['buyButton']:addChild(label_buyEnergy)
@@ -75,46 +79,52 @@ function PopupEnergyBuy:ctor()
     heart:setPosition(0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().height  + 30)
     self.ccbPopupEnergyBuy['popupWindow']:addChild(heart) 
     
+
+
+
+    local function update(delta)
+    
     local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
     local min = time_betweenServerAndEnergy / 60
-    local sec = time_betweenServerAndEnergy % 60
-
-    
-    local function update(delta)
+    local sec = time_betweenServerAndEnergy % 60          
            
-              
-        if self.energy_number  < 4 then  
-            label_energyNumber:setString(s_CURRENT_USER.energyCount )  
-            sec = sec - delta     
-            
-        if sec < 0 then
-            sec = 59
-            min = min - 1
-        end
-
-        if min < 0 then 
-            min = 29
-            self.energy_number = s_CURRENT_USER.energyCount 
-            
-            if self.energy_number == 4 then 
-            local remove = self.ccbPopupEnergyBuy['popupWindow']:removeChildByName("heart_animation")
-            local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
-            replace:setAnimation(0,'animation',true)
-            replace:ignoreAnchorPointForPosition(false)
-            replace:setAnchorPoint(0.5,0.5)
+        if s_CURRENT_USER.energyCount >= s_energyMaxCount then 
+            if json == 'spine/energy/tilizhi_recovery.json'  or json == 'spine/energy/tilizhi_no.json' then
+                local change = self.ccbPopupEnergyBuy['popupWindow']:removeChildByName("heart_animation")   
+                json = 'spine/energy/tilizhi_full.json'
+                atlas = 'spine/energy/tilizhi_full.atlas'
+                local replace = sp.SkeletonAnimation:create(json,atlas, 1)
+                replace:setAnimation(0,'animation',true)
+                replace:ignoreAnchorPointForPosition(false)
+                replace:setAnchorPoint(0.5,0.5)
                 replace:setPosition(0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().height  + 30)
-            replace:setName("heart_animation")
-                self.ccbPopupEnergyBuy['popupWindow']:addChild(replace) 
+                replace:setName("heart_animation")
+                self.ccbPopupEnergyBuy['popupWindow']:addChild(replace)  
             end
+            local animation = self.ccbPopupEnergyBuy['popupWindow']:getChildByName("heart_animation")
+            local label = animation:getChildByName("energyNumber")
+            if label ~= nil then
+                label:setString("")
+            end   
+            self.ccbPopupEnergyBuy['energyNumber']:setString("full") 
+            
+       elseif s_CURRENT_USER.energyCount > 0 then       
+            label_energyNumber:setString(s_CURRENT_USER.energyCount )      
+            if json == 'spine/energy/tilizhi_no.json' then
+                local change = self.ccbPopupEnergyBuy['popupWindow']:removeChildByName("heart_animation")   
+                json = 'spine/energy/tilizhi_recovery.json'
+                atlas = 'spine/energy/tilizhi_recovery.atlas'
+                local replace = sp.SkeletonAnimation:create(json,atlas, 1)
+                replace:setAnimation(0,'animation',true)
+                replace:ignoreAnchorPointForPosition(false)
+                replace:setAnchorPoint(0.5,0.5)
+                replace:setPosition(0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyBuy['popupWindow']:getContentSize().height  + 30)
+                replace:setName("heart_animation")
+                self.ccbPopupEnergyBuy['popupWindow']:addChild(replace)  
+            end
+            
         end
-        end           
-
-
-        
-        
-
-
-    end
+     end           
 
 
     self:scheduleUpdateWithPriorityLua(update, 0) 

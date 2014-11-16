@@ -46,6 +46,11 @@ function PopupStarInfo:ctor()
     node:setPosition(0,600)
     self:addChild(node)
 
+
+    local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
+    local action2 = cc.EaseBackOut:create(action1)
+    node:runAction(action2)
+    
     local label_collect  = cc.Label:createWithSystemFont("继续收集","",36)
     label_collect:setPosition(0.5 * self.ccbPopupStarInfo['collectButton']:getContentSize().width ,0.5 * self.ccbPopupStarInfo['collectButton']:getContentSize().height)
     self.ccbPopupStarInfo['collectButton']:addChild(label_collect)

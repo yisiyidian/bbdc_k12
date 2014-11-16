@@ -82,26 +82,48 @@ function PopupEnergyInfo:ctor()
     label_energyNumber:setName("energyNumber")
     heart:addChild(label_energyNumber,1)
     
+    
+    
     local function update(delta)
         local time_betweenServerAndEnergy = s_CURRENT_USER.serverTime - s_CURRENT_USER.energyLastCoolDownTime
         local min = time_betweenServerAndEnergy / 60
         local sec = time_betweenServerAndEnergy % 60
         
         if s_CURRENT_USER.energyCount >= s_energyMaxCount then 
-                local change = self.ccbPopupEnergyInfo['popupWindow']:removeChildByName("heart_animation")
-                local replace = sp.SkeletonAnimation:create('spine/energy/tilizhi_full.json','spine/energy/tilizhi_full.atlas', 1)
+                if json == 'spine/energy/tilizhi_recovery.json'  or json == 'spine/energy/tilizhi_no.json' then
+                local change = self.ccbPopupEnergyInfo['popupWindow']:removeChildByName("heart_animation")   
+                json = 'spine/energy/tilizhi_full.json'
+                atlas = 'spine/energy/tilizhi_full.atlas'
+                local replace = sp.SkeletonAnimation:create(json,atlas, 1)
                 replace:setAnimation(0,'animation',true)
                 replace:ignoreAnchorPointForPosition(false)
                 replace:setAnchorPoint(0.5,0.5)
                 replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
                 replace:setName("heart_animation")
                 self.ccbPopupEnergyInfo['popupWindow']:addChild(replace)  
+                end
                 
                 local animation = self.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
                 local label = animation:getChildByName("energyNumber")
-                label:setString("")   
+                if label ~= nil then
+                label:setString("")
+                end   
                 self.ccbPopupEnergyInfo['energyNumber']:setString("full")                 
-        else 
+        elseif  s_CURRENT_USER.energyCount > 0 then 
+            if json == 'spine/energy/tilizhi_no.json' then
+                local change = self.ccbPopupEnergyInfo['popupWindow']:removeChildByName("heart_animation")   
+                json = 'spine/energy/tilizhi_recovery.json'
+                atlas = 'spine/energy/tilizhi_recovery.atlas'
+                local replace = sp.SkeletonAnimation:create(json,atlas, 1)
+                replace:setAnimation(0,'animation',true)
+                replace:ignoreAnchorPointForPosition(false)
+                replace:setAnchorPoint(0.5,0.5)
+                replace:setPosition(0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().width ,0.5 * self.ccbPopupEnergyInfo['popupWindow']:getContentSize().height  + 30)
+                replace:setName("heart_animation")
+                self.ccbPopupEnergyInfo['popupWindow']:addChild(replace)  
+            
+            end
+        else
             self.ccbPopupEnergyInfo['energyNumber']:setString(string.format("%d",min) ..":"..string.format("%d",sec))
             local animation = self.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
             local label = animation:getChildByName("energyNumber")
@@ -137,8 +159,8 @@ function PopupEnergyInfo:onBuyButtonClicked()
         local introLayer = IntroLayer.create()  
         s_SCENE:popup(introLayer)
 
-        local action2 = cc.MoveTo:create(0.3, cc.p(0,-600))          
-        introLayer:runAction(action2)
+--        local action2 = cc.MoveTo:create(0.3, cc.p(0,-600))          
+--        introLayer:runAction(action2)
     end)
 
     

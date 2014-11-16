@@ -25,13 +25,15 @@ function test()
     --     downloadFunc()
     -- end
 
-    -- s_SCENE:logIn("yehanjie1", "222222")
+    local IntroLayer = require("view/pausehelp/PauseHelpSummary")
+    local introLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(introLayer)
 
-    -- playWordSound('apple')
+ --   playWordSound('apple')
     -- s_HttpRequestClient.downloadWordSoundFile('great', function (objectId, filename, err, isSaved) 
     --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
     -- end)
-    print(loadXxteaFile('cfg/books.json'))
+    -- print(loadXxteaFile('cfg/books.bin'))
 
     -- s_HttpRequestClient.downloadFileFromAVOSWithObjectId('5430b806e4b0c0d48049e293', 
     --     function (objectId, filename, err, isSaved) 

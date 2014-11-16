@@ -39,8 +39,7 @@ function RightTopNode:ctor()
             introLayer_star = IntroLayer.create()  
             s_SCENE:popup(introLayer_star)
             
-            local action1 = cc.MoveTo:create(0.3, cc.p(0,-600))          
-            introLayer_star:runAction(action1)
+
         end
     end
 
@@ -51,10 +50,6 @@ function RightTopNode:ctor()
             local IntroLayer = require("popup/PopupEnergyInfo")
             introLayer_heart = IntroLayer.create()  
             s_SCENE:popup(introLayer_heart)
-
-            
-            local action1 = cc.MoveTo:create(0.3, cc.p(0,-600))          
-            introLayer_heart:runAction(action1)
             
 
         end 
