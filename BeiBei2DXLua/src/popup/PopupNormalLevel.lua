@@ -98,20 +98,10 @@ end
 function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on study button clicked')
-    if s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
-        -- s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
-
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-        s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
-        s_CorePlayManager.initStudyTestState()
-        s_CorePlayManager.enterStudyLayer()
-    else 
-        --s_CURRENT_USER:useEnergys(2)
-        local energyInfoLayer = require('popup.PopupEnergyInfo')
-        local layer = energyInfoLayer.create()
-        s_SCENE:popup(layer)
-    end
-
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+    s_CorePlayManager.initStudyTestState()
+    s_CorePlayManager.enterStudyLayer()
     -- download sounds of next 5th level
     s_HttpRequestClient.downloadSoundsOfNext5thLevel(levelKey)
 end
@@ -119,11 +109,20 @@ end
 function PopupNormalLevel:onTestButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
-    
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
-    s_CorePlayManager.initStudyTestState()
-    s_CorePlayManager.enterTestLayer()
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
+    if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
+        if levelData.isPassed ~= 1 then
+            s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+        end
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+        s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+        s_CorePlayManager.initStudyTestState()
+        s_CorePlayManager.enterTestLayer()
+    else 
+        local energyInfoLayer = require('popup.PopupEnergyInfo')
+        local layer = energyInfoLayer.create()
+        s_SCENE:popup(layer)
+    end
 end
 
 return PopupNormalLevel

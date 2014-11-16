@@ -40,12 +40,25 @@ function TestLayer.create()
     local button_detail
     local button_detail_clicked
     
+    local mat
+    local progress_back
+    
     local playOver = false
+    
+    local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
+    label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
+    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 896)
+    layer:addChild(label_wordmeaningSmall)
+    
+    local cloud_up_y1   = 936
+    local cloud_up_y2   = 1014
+    local cloud_down_y1 = 900
+    local cloud_down_y2 = 771
 
     local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
     cloud_up:ignoreAnchorPointForPosition(false)
     cloud_up:setAnchorPoint(0.5, 1)
-    cloud_up:setPosition(s_DESIGN_WIDTH/2, 1014)
+    cloud_up:setPosition(s_DESIGN_WIDTH/2, cloud_up_y1)
     layer:addChild(cloud_up)
 
     local cloud_up_tail = cc.LayerColor:create(cc.c4b(38,158,220,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
@@ -57,14 +70,19 @@ function TestLayer.create()
     local cloud_down = cc.Sprite:create("image/studyscene/studyscene_cloud_white_down.png")
     cloud_down:ignoreAnchorPointForPosition(false)
     cloud_down:setAnchorPoint(0.5, 0)
-    cloud_down:setPosition(s_DESIGN_WIDTH/2, 771)
+    cloud_down:setPosition(s_DESIGN_WIDTH/2, cloud_down_y1)
     layer:addChild(cloud_down)
-
+    
     local cloud_down_tail = cc.LayerColor:create(cc.c4b(213,243,255,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     cloud_down_tail:setAnchorPoint(0.5,1)
     cloud_down_tail:ignoreAnchorPointForPosition(false)  
     cloud_down_tail:setPosition(cloud_up:getContentSize().width/2,0)
     cloud_down:addChild(cloud_down_tail)
+    
+    local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, cloud_up_y2))
+    local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, cloud_down_y2))
+    cloud_up:runAction(action1)
+    cloud_down:runAction(action2)
 
     local beach = cc.Sprite:create("image/studyscene/studyscene_beach_down.png")
     beach:ignoreAnchorPointForPosition(false)
@@ -78,11 +96,6 @@ function TestLayer.create()
     progressBar:setPositionY(1038)
     layer:addChild(progressBar)
     
-    local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
-    label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
-    label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 896)
-    layer:addChild(label_wordmeaningSmall)
-
     local success = function()
         playOver = true
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -94,9 +107,6 @@ function TestLayer.create()
         showAnswerStateBack:setPosition(-s_DESIGN_WIDTH/2, 768)
         layer:addChild(showAnswerStateBack)
         
-        local action = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 768))
-        showAnswerStateBack:runAction(action)
-
         local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
         sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
         showAnswerStateBack:addChild(sign)
@@ -106,7 +116,9 @@ function TestLayer.create()
         right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
         right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
         showAnswerStateBack:addChild(right_wordname)
-    
+        
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 768))
+        showAnswerStateBack:runAction(action1)
         
         local changeLayer = function()
             if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wordList then
@@ -114,17 +126,34 @@ function TestLayer.create()
                 s_CorePlayManager.enterTestLayer()
             else
                 s_SCENE.touchEventBlockLayer.unlockTouch()
-                
+
                 local alter = TestAlter.createFromFirstAlter()
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
             end
         end
+        
+        local endEffect = function()
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, cloud_up_y1))
+            cloud_up:runAction(action1)
+            
+            local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, cloud_down_y1))
+            cloud_down:runAction(action2)
+            
+            local action3 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2*3, 768))
+            showAnswerStateBack:runAction(action3)
+            
+            local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
+            mat:runAction(action4)
+            
+            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
+            local action6 = cc.CallFunc:create(changeLayer)
+            progress_back:runAction(cc.Sequence:create(action5,action6))
+        end
 
-        local action1 = cc.DelayTime:create(1)
-        local action2 = cc.CallFunc:create(changeLayer)
-        local action3 = cc.Sequence:create(action1,action2)
-        layer:runAction(action3) 
+        local action2 = cc.DelayTime:create(1)
+        local action3 = cc.CallFunc:create(endEffect)
+        layer:runAction(cc.Sequence:create(action2, action3))
     end
 
     local fail = function()   
@@ -174,7 +203,7 @@ function TestLayer.create()
         layer:runAction(action3) 
     end
 
-    local mat = FlipMat.create(wordName,4,4,false)
+    mat = FlipMat.create(wordName,4,4,false)
     mat:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(mat)
 
@@ -183,7 +212,7 @@ function TestLayer.create()
     mat.rightLock = true
     mat.wrongLock = false
 
-    local progress_back = cc.Sprite:create("image/progress/progressB1.png")
+    progress_back = cc.Sprite:create("image/progress/progressB1.png")
     progress_back:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(progress_back)
     
@@ -191,9 +220,9 @@ function TestLayer.create()
     progress:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     progress:setMidpoint(cc.p(0, 0))
     progress:setBarChangeRate(cc.p(1, 0))
-    progress:setPosition(progress_back:getPosition())
+    progress:setPosition(progress_back:getContentSize().width/2, progress_back:getContentSize().height/2)
     progress:setPercentage(100)
-    layer:addChild(progress)
+    progress_back:addChild(progress)
     
     
     if s_CorePlayManager.currentWordIndex == 1 then
@@ -213,13 +242,9 @@ function TestLayer.create()
     local button_donotknow = nil
 
     local time = 0
-    local update = function()
---        time = time + 0.05
---        print(time)
-    
+    local update = function()    
         if playOver == false then
             local loss = 5.0/(15+0.5*string.len(s_CorePlayManager.currentWord.wordName))
-            --local loss = 5.0/5
             local current_percentage = progress:getPercentage()
             current_percentage = current_percentage - loss
             if current_percentage > 0 then
@@ -248,11 +273,6 @@ function TestLayer.create()
     end
     
     schedule(layer,update,0.05)
-    
-    --local scheduler = cc.Director:getInstance():getScheduler()
-    --local schedulerEntry = scheduler:scheduleScriptFunc(update, 0.05, false)
-    
-    
      
     return layer
 end

@@ -24,7 +24,7 @@ DataManager.reviewBoos = nil
 DataManager.starRules = nil
 DataManager.dailyCheckIn = nil
 
-s_energyMaxCount = 4
+s_energyMaxCount = 8
 s_energyCoolDownSecs = 1800
 s_normal_level_energy_cost = 1
 s_summary_boss_energy_cost = 1

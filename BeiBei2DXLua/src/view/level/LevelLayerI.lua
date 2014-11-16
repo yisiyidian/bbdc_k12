@@ -175,7 +175,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
             levelButton:addChild(boat)
         end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
-        if levelData.stars > 0 and s_CURRENT_USER.currentLevelKey ~= levelData.levelKey then
+        if levelData.stars > 0 and s_CURRENT_USER.currentLevelKey ~= levelData.levelKey and levelConfig['type'] ~= 1 then
             self:plotLevelStar(levelButton, levelData.stars)
         end
         if levelConfig['type'] == 1 then

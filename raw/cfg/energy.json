@@ -1,5 +1,5 @@
 {
-    "energyMaxCount": 4,
+    "energyMaxCount": 8,
     "energyCoolDownSecs": 1800,
     "normal_level_energy_cost":1,
     "summary_boss_energy_cost":1,

@@ -68,13 +68,15 @@ end
 
 function DataUser:parseServerLevelData(results)
     local DataLevel = require('model.user.DataLevel')
+    print('--------before server level--------')
     self.levels = {}
     for i, v in ipairs(results) do
         local data = DataLevel.create()
         parseServerDataToUserData(v, data)
         self.levels[i] = data
-        print_lua_table(data)
+        --print_lua_table(data)
     end
+    print('-------server level size:'..#self.levels)
 end
 
 function DataUser:parseServerDailyCheckInData(results)
@@ -122,7 +124,7 @@ end
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked)
+        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == s_CURRENT_USER.bookKey then
             return v
         end
@@ -133,6 +135,7 @@ end
 
 function DataUser:getUserCurrentChapterObtainedStarCount()
     local count = 0
+    print('self.levels size:'..#self.levels)
     for i, v in ipairs(self.levels) do
         print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
         if v.chapterKey == self.currentChapterKey then
@@ -192,6 +195,8 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
     end
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
     function(api,result)
+        print('call back')
+        print('levelData.objectId'..levelData.objectId..','..levelData.levelKey)
     end,
     function(api, code, message, description)
     end)        
