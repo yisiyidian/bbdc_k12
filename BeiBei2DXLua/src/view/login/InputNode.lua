@@ -15,6 +15,8 @@ function InputNode.create(type)
     
     local backImage
     local cursor
+    local hint1 = "请输入账号                        "
+    local hint2 = "请输入密码                        "
     main.textField = nil
     
     local cursorShowUp
@@ -28,68 +30,58 @@ function InputNode.create(type)
     backImage:setPosition(width/2, height/2)
     main:addChild(backImage)
       
-    cursorShowUp = function()
-        cursor:stopAllActions()
-        cursor:setVisible(false)
-        local action1 = cc.DelayTime:create(0.1)
-        local action2 = cc.CallFunc:create(
-            function()
-                cursor:setPosition(main.textField:getContentSize().width,main.textField:getContentSize().height/2)
-                cursor:setVisible(true)
-            end
-        )
-        local action3 = cc.FadeIn:create(0.5)
-        local action4 = cc.FadeOut:create(0.5)
-        local action5 = cc.RepeatForever:create(cc.Sequence:create(action3,action4))
-        cursor:runAction(cc.Sequence:create(action1, action2))
-        cursor:runAction(action5)
-    end
 
     eventHandle = function(sender, eventType)
         if eventType == ccui.TextFiledEventType.attach_with_ime then   
-            print("in text field")
+--            print("in text field")
             main.textField:setPlaceHolder("")
-            cursorShowUp()
+            cursor:setVisible(true)
         elseif eventType == ccui.TextFiledEventType.detach_with_ime then
-            print("out text field")
-            cursor:stopAllActions()
-            cursor:setVisible(false)
+--            print("out text field")
             if type == "username" then
-                main.textField:setPlaceHolder("请输入用户名")
+                main.textField:setPlaceHolder(hint1)
             else
-                main.textField:setPlaceHolder("请输入密码")
+                main.textField:setPlaceHolder(hint2)
             end
+            cursor:setVisible(false)
         elseif eventType == ccui.TextFiledEventType.insert_text then
-            cursorShowUp()
+            cursor:setVisible(true)
         elseif eventType == ccui.TextFiledEventType.delete_backward then
-            cursorShowUp()
+            cursor:setVisible(true)
         end
     end
 
     main.textField = ccui.TextField:create()
-    main.textField:setTouchEnabled(true)
 --    main.textField:setTouchSize(cc.size(width,height))
 --    main.textField:setTouchAreaEnabled(true)
     main.textField:setFontSize(30)
     main.textField:setMaxLengthEnabled(true)
     main.textField:setColor(cc.c4b(0,0,0,255))
     if type == "username" then
-        main.textField:setPlaceHolder("请输入用户名")
+        main.textField:setPlaceHolder(hint1)
         main.textField:setMaxLength(10)
     else
-        main.textField:setPlaceHolder("请输入密码")
+        main.textField:setPlaceHolder(hint2)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
         main.textField:setMaxLength(16)
     end
-    main.textField:setPosition(cc.p(backImage:getContentSize().width / 2.0, backImage:getContentSize().height / 2.0))
+    main.textField:setAnchorPoint(0,0.5)
+    main.textField:setPosition(cc.p(40, backImage:getContentSize().height / 2.0))
     main.textField:addEventListener(eventHandle)
     backImage:addChild(main.textField)
 
     cursor = cc.Label:createWithSystemFont("|","",30)
     cursor:setColor(cc.c4b(0,0,0,255))
     cursor:setVisible(false)
-    main.textField:addChild(cursor)
+    cursor:setPosition(main.textField:getContentSize().width,main.textField:getContentSize().height/2)
+    cursor:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.FadeIn:create(0.5),cc.FadeOut:create(0.5))))
+    main:addChild(cursor)
+    
+    local update = function(dt)
+        cursor:setPosition(40+main.textField:getContentSize().width, height/2)
+    end
+    main:scheduleUpdateWithPriorityLua(update, 0)
 
     return main    
 end
