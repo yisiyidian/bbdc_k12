@@ -1,4 +1,6 @@
 
+local RELEASE_APP = false
+
 require "Cocos2d"
 
 -- cclog
@@ -29,6 +31,26 @@ local function main()
 
     require("common.global")
     initApp()
+
+    if RELEASE_APP then
+        -- remove print debug info when release app
+        function print ( ... )
+        end
+
+        s_debugger.configLog(false, false)
+        DEBUG_PRINT_LUA_TABLE = false
+        s_SERVER.debugLocalHost   = false
+        s_SERVER.isAppStoreServer = false -- TODO
+        s_SERVER.production       = 1
+        s_APP_VERSION = 150000
+    else
+        s_debugger.configLog(true, true)
+        DEBUG_PRINT_LUA_TABLE = true
+        s_SERVER.debugLocalHost   = false
+        s_SERVER.isAppStoreServer = false
+        s_SERVER.production       = 0
+        s_APP_VERSION = 150000
+    end
     
     if cc.Director:getInstance():getRunningScene() then
         cc.Director:getInstance():replaceScene(s_SCENE)
@@ -43,7 +65,7 @@ local function main()
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- |||||||||||||||||||||||||||||||||||||
 -- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-local test_code = 1
+local test_code = 0
 -- *************************************
 if test_code == 0 then
    local startApp = function ()
