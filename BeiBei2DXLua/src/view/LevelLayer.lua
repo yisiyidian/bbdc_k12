@@ -19,7 +19,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    --s_SCENE.levelLayerState = s_normal_level_state
+    s_SCENE.levelLayerState = s_review_boss_pass_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -83,7 +83,7 @@ function LevelLayer:levelStateManager()
      elseif s_SCENE.levelLayerState == s_review_boss_appear_state then
         levelLayerI:plotReviewBossAppearOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
      elseif s_SCENE.levelLayerState == s_review_boss_pass_state then
-
+        levelLayerI:plotReviewBossPassOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
         -- save and update level data
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
@@ -116,7 +116,7 @@ function LevelLayer:ctor()
     levelLayerI = levelStypeI.create()
     levelLayerII = levelStypeII.create()
     connection1_2 = connectionLayer1_2.create()
-    
+    --s_CURRENT_USER:initChapterLevelAfterLogin()
     -- plot player position
     local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
     local image = 'image/chapter_level/gril_head.png'
@@ -207,13 +207,10 @@ function LevelLayer:ctor()
     item2:addChild(levelLayerII)
     --listView:insertCustomItem(item2,2)
     listView:pushBackCustomItem(item2)
-    print('inner isze:')
     listView:setInnerContainerSize(cc.size(item1:getContentSize().width,item1:getContentSize().height+item2:getContentSize().height))
     print_lua_table(listView:getInnerContainerSize())
     --s_CURRENT_USER.currentLevelKey = 'level12'
     local currentVerticalPercent = string.sub(s_CURRENT_USER.currentSelectedLevelKey,6)/12.0 * 30+1
-
-    print('current'..currentVerticalPercent)
     listView:scrollToPercentVertical(currentVerticalPercent,0,false)
     
     --listView:scrollToPercentVertical(50,0,false)

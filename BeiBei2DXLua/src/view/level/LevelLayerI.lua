@@ -144,7 +144,9 @@ function LevelLayerI:getPlayerPositionForLevel(levelKey)
     --print(levelButton:getPositionX()..','..levelButton:getPositionY())
     local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
     if levelConfig['type'] == 1 then
-          position.y = position.y - 50
+        position.y = position.y - 50
+    else
+        position.y = position.y - 20
     end
     
     return position
@@ -159,7 +161,16 @@ function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
 end
 
 function LevelLayerI:plotReviewBossPassOnLevel(levelKey)
-
+--    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+--    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzls  xuanxiaoguan  diaoluo.json', 'spine/3fxzls  xuanxiaoguan  diaoluo.atlas', 1)
+--    reviewBoss:addAnimation(0, 'animation', true)
+--    reviewBoss:setPosition(0, 0)
+--    levelButton:addChild(reviewBoss)
+--    local action1 = cc.RotateBy:create(0.5, 180)
+--    local action2 = cc.MoveBy:create(0.5, cc.p(300, 500))
+--    local action3 = cc.FadeOut:create(0.8)
+--    local action = cc.Spawn:create(action1, action2, action3, nil)
+--    reviewBoss:runAction(action)
 end
 
 function LevelLayerI:plotLevelDecoration(levelKey)
@@ -175,6 +186,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
             levelButton:addChild(boat)
         end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
+        --print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey)
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
             if s_CURRENT_USER.currentLevelKey ~= levelData.levelKey or s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_pass_state then
                 self:plotLevelStar(levelButton, levelData.stars)
