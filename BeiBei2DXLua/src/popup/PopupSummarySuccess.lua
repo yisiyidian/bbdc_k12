@@ -27,7 +27,7 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     self.ccbPopupSummarySuccess['summary_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_NORMAL_START_PLAY_SUMMARY_BOSS))
     -- add summary boss
     local boss = sp.SkeletonAnimation:create('spine/klschongshangdaoxia.json', 'spine/klschongshangdaoxia.atlas',1)
-    boss:addAnimation(0, 'animation', true)
+    boss:addAnimation(0, 'jianxiao', true)
     boss:setPosition(node:getContentSize().width/3, node:getContentSize().height/3)
     node:addChild(boss, 10)
     

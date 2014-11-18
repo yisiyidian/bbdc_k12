@@ -98,11 +98,11 @@ function LevelLayer:levelStateManager()
         end)
 
         -- update level state and plot popup(call on level button clicked)
-        if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
+        --if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
             s_SCENE:callFuncWithDelay(3,function()
                 levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
             end)
-        end
+        --end
         s_SCENE.levelLayerState = s_normal_level_state
      end
      s_CURRENT_USER:updateDataToServer()
