@@ -11,6 +11,7 @@ s_BOOK_KEY_CET6  = 'cet6'
 s_BOOK_KEY_IELTS = 'ielts'
 s_BOOK_KEY_TOEFL = 'toefl'
 
+DataManager.configs = nil
 DataManager.text = nil
 DataManager.books = nil
 DataManager.chapters = nil
@@ -32,7 +33,7 @@ s_review_boss_energy_cost = 1
 s_friend_request_max_count = 30
 s_friend_max_count = 50
 
-s_allwords = "cfg/allwords"
+s_allwords = "cfg/allwords.json"
 s_books = 'cfg/books.json'
 s_chapters = 'cfg/chapters.json'
 s_daily = 'cfg/dailyCheckIn.json'

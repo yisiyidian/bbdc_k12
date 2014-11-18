@@ -204,7 +204,7 @@ s_UserBaseServer.getDailyCheckInOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
-    s_SERVER.search('classes/WMAV_DailyCheckInData?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
+    s_SERVER.search('classes/DataDailyCheckIn?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
 end
 
 ----
@@ -254,7 +254,7 @@ end
 ----
 
 function UserBaseServer.getDataLogIn(userId, week, onSucceed, onFailed)
-    s_SERVER.search('classes/WMAV_LogInDateData?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
+    s_SERVER.search('classes/DataLogIn?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
 end
 
 ----
@@ -269,7 +269,7 @@ s_UserBaseServer.getLevelsOfCurrentUser(
 )
 ]]--
 local function getLevels(userId, bookKey, onSucceed, onFailed)
-    s_SERVER.search('classes/WMAV_LevelData?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
+    s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
 end
 function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
     getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)

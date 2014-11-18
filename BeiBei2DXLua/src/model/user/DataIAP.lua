@@ -10,7 +10,7 @@ function DataIAP.create()
 end
 
 function DataIAP:ctor()
-    self.className = 'WMAV_IAPData'
+    self.className = 'DataIAP'
     
     self.pid = ''
     self.paymentInfo = 0

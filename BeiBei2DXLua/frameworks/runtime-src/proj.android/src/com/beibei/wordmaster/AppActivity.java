@@ -74,16 +74,23 @@ public class AppActivity extends Cocos2dxActivity {
 	private static Context context = null;
 	private static AppActivity instance = null;
 	
+	private static String LEAN_CLOUD_ID_TEST  =  "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn";
+	private static String LEAN_CLOUD_KEY_TEST =  "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3";
+
+	private static String LEAN_CLOUD_ID       =  "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp";
+	private static String LEAN_CLOUD_KEY      =  "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		if(nativeIsDebug()) {
+		if (nativeIsDebug()) {
 			// test server
-			AVOSCloud.initialize(this, "9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l", "8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg");
+			AVOSCloud.initialize(this, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
+			AVOSCloud.setDebugLogEnabled(true);
 		} else {
 			// app store server
-			AVOSCloud.initialize(this, "eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw", "9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6");
+			AVOSCloud.initialize(this, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
 		}
 		
 		AVAnalytics.trackAppOpened(getIntent());
@@ -103,10 +110,10 @@ public class AppActivity extends Cocos2dxActivity {
 		//2.Set the format of window
 		
 		// Check the wifi is opened when the native is debug.
-		if(nativeIsDebug())
+		if (nativeIsDebug())
 		{
 			getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-			if(!isNetworkConnected())
+			if (!isNetworkConnected())
 			{
 				AlertDialog.Builder builder=new AlertDialog.Builder(this);
 				builder.setTitle("Warning");

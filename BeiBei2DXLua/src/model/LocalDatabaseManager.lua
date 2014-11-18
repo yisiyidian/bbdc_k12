@@ -25,9 +25,9 @@ function Manager.open()
     
     -- TODO
     -- check version update
-    if s_APP_VERSION == 151 then
-        updateLocalDatabase()
-    end
+    -- if s_APP_VERSION == 150000 then
+    --     updateLocalDatabase()
+    -- end
 end
 
 -- close local sqlite
@@ -67,7 +67,7 @@ function Manager.initTables()
    
     -- CREATE table Word Prociency
     Manager.database:exec[[
-        create table if not exists Word_Prociency(
+        create table if not exists DataWordProciency(
             userId TEXT,
             bookKey TEXT,
             wordName TEXT,
@@ -78,7 +78,7 @@ function Manager.initTables()
    
     -- CREATE table Review boss Control
     Manager.database:exec[[
-        create table if not exists RB_control(
+        create table if not exists DataReviewBossControl(
             userId TEXT,
             bookKey TEXT,
             bossId INTEGER,
@@ -90,44 +90,13 @@ function Manager.initTables()
 
     -- create table Review boss Record
     Manager.database:exec[[
-        create table if not exists RB_record(
+        create table if not exists DataReviewBossRecord(
             userId TEXT,
             bookKey TEXT,
             bossId INTEGER,
             wordId INTEGER,
             wordName TEXT,
             lastUpdate TEXT
-        );
-    ]]
-
-    -- create table database game design configuration
-    Manager.database:exec[[
-        create table if not exists DB_gameDesignConfiguration(
-            books TEXT,
-            booksV INTEGER,
-            chapters TEXT,
-            chaptersV INTEGER,
-            dailyCheckIn TEXT,
-            dailyCheckInV INTEGER,
-            energy TEXT,
-            energyV INTEGER,
-            iaps TEXT,
-            iapsV INTEGER,
-            items TEXT,
-            itemsV INTEGER,
-            lv_cet4 TEXT,
-            lv_cet4V INTEGER,
-            lv_cet6 TEXT,
-            lv_cet6V INTEGER,
-            lv_ielts TEXT,
-            lv_ieltsV INTEGER,
-            lv_ncee TEXT,
-            lv_nceeV INTEGER,
-            lv_toefl TEXT,
-            lv_toeflV INTEGER,
-            review_boss TEXT,
-            revew_bossV INTEGER,
-            starRule TEXT
         );
     ]]
 
@@ -138,7 +107,8 @@ function Manager.initTables()
         require('model.user.DataLevel'),
         require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
         require('model.user.DataStatistics'),      -- IC_word_day same as DataStatistics
-        require('model.user.DataUser')             -- db_userInfo same as DataUser
+        require('model.user.DataUser'),            -- db_userInfo same as DataUser
+        require('model.user.DataConfigs')
     }
     for i = 1, #userDataClasses do
         Manager.createTable(userDataClasses[i].create())
@@ -252,60 +222,74 @@ function Manager.getUserDataFromLocalDB(objectOfDataClass)
     return false
 end
 
-function Manager.insertTable_Word_Prociency(wordName, wordProciency)
+function Manager.getDataConfigsFromLocalDB(objectOfDataClass)
+    local data = nil
+    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
+        data = row
+    end
+
+    if data ~= nil then
+        parseLocalDatabaseToUserData(data, objectOfDataClass)     
+        return true
+    end
+
+    return false
+end
+
+function Manager.insertTable_DataWordProciency(wordName, wordProciency)
     local user = s_CURRENT_USER.objectId
     local book = s_CURRENT_USER.bookKey
 
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..book.."' and wordName = '"..wordName.."'") do
+    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..book.."' and wordName = '"..wordName.."'") do
         num = num + 1
     end
     
     if num == 0 then
         local time = os.time()
-        local query = "INSERT INTO Word_Prociency VALUES ('"..user.."', '"..book.."', '"..wordName.."', "..wordProciency..", '"..time.."');"
+        local query = "INSERT INTO DataWordProciency VALUES ('"..user.."', '"..book.."', '"..wordName.."', "..wordProciency..", '"..time.."');"
         Manager.database:exec(query)
         
         if wordProciency == 0 then
-            Manager.insertTable_RB_record(wordName)
+            Manager.insertTable_DataReviewBossRecord(wordName)
         end
     else
         print("word exists")
     end
     
-    Manager.showTable_Word_Prociency()
+    Manager.showTable_DataWordProciency()
 end
 
-function Manager.showTable_Word_Prociency()
-    s_logd("Word_Prociency --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency") do
+function Manager.showTable_DataWordProciency()
+    s_logd("DataWordProciency --------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM DataWordProciency") do
         s_logd(row.wordName .. ',' .. row.wordProciency)
     end
-    s_logd("Word_Prociency --------------------------- end")
+    s_logd("DataWordProciency --------------------------- end")
 end
 
-function Manager.insertTable_RB_control(bossID)
+function Manager.insertTable_DataReviewBossControl(bossID)
     local user = s_CURRENT_USER.objectId
     local book = s_CURRENT_USER.bookKey
     local time = os.time()
-    local query = "INSERT INTO RB_control VALUES ('"..user.."', '"..book.."', "..bossID..", "..RBWORDNUM..", 0, '"..time.."');"
+    local query = "INSERT INTO DataReviewBossControl VALUES ('"..user.."', '"..book.."', "..bossID..", "..RBWORDNUM..", 0, '"..time.."');"
     Manager.database:exec(query)
 end
 
-function Manager.showTable_RB_control()
-    s_logd("RB_control ------------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM RB_control") do
+function Manager.showTable_DataReviewBossControl()
+    s_logd("DataReviewBossControl ------------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM DataReviewBossControl") do
         s_logd("bossID:"..row.bossId..' appearCount:'..row.appearCount)
     end
-    s_logd("RB_control ------------------------------- end")
+    s_logd("DataReviewBossControl ------------------------------- end")
 end
 
-function Manager.insertTable_RB_record(wordName)
+function Manager.insertTable_DataReviewBossRecord(wordName)
     local user = s_CURRENT_USER.objectId
     local book = s_CURRENT_USER.bookKey
     
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM RB_record WHERE userId = '"..user.."' and bookKey = '"..book.."'") do
+    for row in Manager.database:nrows("SELECT * FROM DataReviewBossRecord WHERE userId = '"..user.."' and bookKey = '"..book.."'") do
         num = num + 1
     end
     
@@ -313,33 +297,33 @@ function Manager.insertTable_RB_record(wordName)
     local bossID = math.floor((wordID - 1) / RBWORDNUM) + 1
     
     local time = os.time()
-    local query = "INSERT INTO RB_record VALUES ('"..user.."', '"..book.."', "..bossID..", "..wordID..", '"..wordName.."', '"..time.."');"
+    local query = "INSERT INTO DataReviewBossRecord VALUES ('"..user.."', '"..book.."', "..bossID..", "..wordID..", '"..wordName.."', '"..time.."');"
     print(query)
     Manager.database:exec(query)
     
     s_logd("insert word "..wordName.." into review boss")
-    Manager.showTable_RB_record()
+    Manager.showTable_DataReviewBossRecord()
     
     if wordID % RBWORDNUM == 0 then
-        Manager.insertTable_RB_control(bossID)
+        Manager.insertTable_DataReviewBossControl(bossID)
         s_logd("generate a new review boss")
-        Manager.showTable_RB_control()
+        Manager.showTable_DataReviewBossControl()
     end
 end
 
-function Manager.showTable_RB_record()
-    s_logd("RB_record -------------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM RB_record") do
+function Manager.showTable_DataReviewBossRecord()
+    s_logd("DataReviewBossRecord -------------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM DataReviewBossRecord") do
         s_logd("bossID:"..row.bossId..' wordID:' .. row.wordId .. ' wordName:' .. row.wordName)
     end
-    s_logd("RB_record -------------------------------- end")
+    s_logd("DataReviewBossRecord -------------------------------- end")
 end
 
 function Manager.getRBWordList(bossID)
     local user = s_CURRENT_USER.objectId
     local book = s_CURRENT_USER.bookKey
     local wordList = {}
-    for row in Manager.database:nrows("SELECT * FROM RB_record WHERE userId = '"..user.."' and bookKey = '"..book.."' and bossId = '"..bossID.."'") do
+    for row in Manager.database:nrows("SELECT * FROM DataReviewBossRecord WHERE userId = '"..user.."' and bookKey = '"..book.."' and bossId = '"..bossID.."'") do
         table.insert(wordList, row.wordName)
     end
     return wordList
@@ -350,7 +334,7 @@ end
 function Manager.getStudyWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
     local user = s_CURRENT_USER.objectId
     local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
+    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
         if day then
             local record_date = os.date("%x",row.lastUpdate)
             if record_date == day then
@@ -366,7 +350,7 @@ end
 function Manager.getGraspWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
     local user = s_CURRENT_USER.objectId
     local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM Word_Prociency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
+    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
         if day then
             local record_date = os.date("%x",row.lastUpdate)
             if record_date == day then
@@ -382,7 +366,7 @@ end
 -- return current valid review bossId
 function Manager:getCurrentReviewBossID()
     local bossId = -1
-    for row in Manager.database:nrows('SELECT * FROM RB_control') do
+    for row in Manager.database:nrows('SELECT * FROM DataReviewBossControl') do
         if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
             -- TODO check the boss appear time
             local currentTime = os.time()
@@ -421,26 +405,26 @@ function Manager.updateReviewBossRecord(bossId)
     local user = s_CURRENT_USER.objectId
     local book = s_CURRENT_USER.bookKey
 
-    for row in Manager.database:nrows('SELECT * FROM RB_control where bossId = '..bossId) do
+    for row in Manager.database:nrows('SELECT * FROM DataReviewBossControl where bossId = '..bossId) do
         if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
             -- update
-            local command = 'UPDATE RB_control SET appearCount = '..(row.appearCount+1)..' , lastUpdate = '..(os.time())
+            local command = 'UPDATE DataReviewBossControl SET appearCount = '..(row.appearCount+1)..' , lastUpdate = '..(os.time())
             Manager.database:exec(command)
         end
     end
-    Manager.showTable_RB_control()
+    Manager.showTable_DataReviewBossControl()
     
-    for row1 in Manager.database:nrows("SELECT * FROM RB_record where userId='"..user.."' and bookKey='"..book.."' and bossId = "..bossId) do
+    for row1 in Manager.database:nrows("SELECT * FROM DataReviewBossRecord where userId='"..user.."' and bookKey='"..book.."' and bossId = "..bossId) do
         local wordName = row1.wordName
         print("update word name:"..wordName)
-        for row2 in Manager.database:nrows("SELECT * FROM Word_Prociency where userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'") do
---            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
-            local command = "UPDATE Word_Prociency SET wordProciency="..(row2.wordProciency+1).." WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
+        for row2 in Manager.database:nrows("SELECT * FROM DataWordProciency where userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'") do
+--            local command = "UPDATE DataWordProciency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
+            local command = "UPDATE DataWordProciency SET wordProciency="..(row2.wordProciency+1).." WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
             Manager.database:exec(command)
             print(command)
         end
     end
-    Manager.showTable_Word_Prociency()
+    Manager.showTable_DataWordProciency()
 end
 
 

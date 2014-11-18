@@ -1,0 +1,81 @@
+{
+"skeleton": { "hash": "MaHqCrZYpa2gPNdWFmY8Evy1B4Y", "spine": "2.1.03", "width": 461.25, "height": 551.71, "images": "" },
+"bones": [
+	{ "name": "root", "rotation": 0.34 },
+	{ "name": "bone", "parent": "root", "length": 381.49, "x": -180.05, "y": 63.18 },
+	{ "name": "bone2", "parent": "root", "x": 8.52, "y": 320.22 }
+],
+"slots": [
+	{ "name": "BJ", "bone": "root" },
+	{ "name": "book_back_whiteblue", "bone": "bone2", "attachment": "book_back_whiteblue" },
+	{ "name": "book_front_blue", "bone": "bone", "attachment": "book_front_blue" }
+],
+"skins": {
+	"default": {
+		"book_back_whiteblue": {
+			"book_back_whiteblue": { "x": 1.47, "y": -247.22, "width": 458, "height": 549 }
+		},
+		"book_front_blue": {
+			"book_front_blue": {
+				"type": "mesh",
+				"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+				"triangles": [ 1, 2, 3, 1, 3, 0 ],
+				"vertices": [ 400.05, -244.68, -0.94, -244.68, -0.94, 238.31, 400.05, 238.31 ],
+				"hull": 4,
+				"edges": [ 0, 2, 2, 4, 4, 6, 0, 6 ],
+				"width": 401,
+				"height": 483
+			}
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 1.3333, "x": -276.65, "y": -55.66 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 1.3333, "x": 0.064, "y": 2.39 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			},
+			"bone2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 1.3333, "x": -13.88, "y": 301.06 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 1.3333, "x": 2.39, "y": 2.39 }
+				]
+			}
+		},
+		"ffd": {
+			"default": {
+				"book_front_blue": {
+					"book_front_blue": [
+						{ "time": 0 },
+						{
+							"time": 1.3333,
+							"vertices": [ -27.02, -174.31, 0, 0, 0, 0, 0, -178.7 ]
+						}
+					]
+				}
+			}
+		}
+	}
+}
+}

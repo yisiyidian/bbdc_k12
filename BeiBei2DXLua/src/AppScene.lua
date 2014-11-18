@@ -155,7 +155,7 @@ function AppScene:signUp(username, password)
             s_TIPS_LAYER:showSmall(e)
             s_LOADING_CIRCLE_LAYER:hide()
         else
-            s_SCENE:gotoChooseBook()
+            s_SCENE:getConfigs(true)
         end
     end
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
@@ -169,7 +169,7 @@ function AppScene:logIn(username, password)
             s_LOADING_CIRCLE_LAYER:hide()
         else
             if s_CURRENT_USER.bookKey == '' then
-                s_SCENE:gotoChooseBook()
+                s_SCENE:getConfigs(true)
             else
                 s_SCENE:getDailyCheckIn()
             end
@@ -184,15 +184,24 @@ function AppScene:getDailyCheckIn()
     s_UserBaseServer.getDailyCheckInOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerDailyCheckInData(result.results)
-            self:getFollowees()
+            s_SCENE:getConfigs(false)
         end,
         function (api, code, message, description) 
-            self:getFollowees()
+            s_SCENE:getConfigs(false)
         end
     )
 end
 
--- TODO : configs
+function AppScene:getConfigs(isNewUser)
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_CONFIG_DATA))
+    s_HttpRequestClient.getConfigs(function ()
+        if isNewUser then
+            s_SCENE:gotoChooseBook()
+        else
+            s_SCENE:getFollowees()
+        end
+    end)
+end
 
 function AppScene:getFollowees()
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
@@ -257,14 +266,15 @@ function AppScene:saveSignUpAndLogInData(onSaved)
         end
         data.week = week
         data:setWeekDay(os.time())
-        s_DATABASE_MGR.saveDataClassObject(data)
         s_UserBaseServer.saveDataObjectOfCurrentUser(data, 
             function (api, result)
                 onSaved()
+                s_DATABASE_MGR.saveDataClassObject(data)
                 s_LOADING_CIRCLE_LAYER:hide()
             end,
             function (api, code, message, description)
                 onSaved()
+                s_DATABASE_MGR.saveDataClassObject(data)
                 s_LOADING_CIRCLE_LAYER:hide()
             end)
     end
