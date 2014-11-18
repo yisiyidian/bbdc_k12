@@ -171,6 +171,9 @@ function DataUser:initLevels()
 end
 
 function DataUser:initChapterLevelAfterLogin()
+    self.currentChapterKey = 'chapter0'
+    self.currentLevelKey = 'level0'
+    self.currentSelectedLevelKey = 'level0'
     local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
     for i, v in ipairs(levelConfig) do
         local levelData = self:getUserLevelData(v['chapter_key'],v['level_key'])
