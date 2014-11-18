@@ -19,12 +19,6 @@ function ZiaoangTest.create()
 --    local b = InputNode.create("password")
 --    b:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2-200)
 --    main:addChild(b)
-        
-
-
-
-
-
 
 --    local back = cc.LayerColor:create(cc.c4b(255,255,0,255),400,400)
 --    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)

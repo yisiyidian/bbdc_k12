@@ -48,6 +48,7 @@ function InputNode.create(type)
             cursor:setVisible(true)
         elseif eventType == ccui.TextFiledEventType.delete_backward then
             cursor:setVisible(true)
+            main.textField:resignFirstResponder()
         end
     end
 
@@ -62,9 +63,9 @@ function InputNode.create(type)
         main.textField:setMaxLength(10)
     else
         main.textField:setPlaceHolder(hint2)
+        main.textField:setMaxLength(16)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
-        main.textField:setMaxLength(16)
     end
     main.textField:setAnchorPoint(0,0.5)
     main.textField:setPosition(cc.p(40, backImage:getContentSize().height / 2.0))
