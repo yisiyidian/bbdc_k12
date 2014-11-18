@@ -312,6 +312,7 @@ end
 function AppScene:onUserServerDatasCompleted()    
     self:saveSignUpAndLogInData(function ()
         s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+        s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
         s_CorePlayManager.enterHomeLayer()
     end)
 end

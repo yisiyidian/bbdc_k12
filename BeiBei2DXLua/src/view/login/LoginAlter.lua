@@ -133,12 +133,15 @@ showLogin = function()
         end
     end
     
-    local submit = ccui.Button:create("image/login/sl_button_confirm.png","","")
+    local submit = ccui.Button:create("image/login/sl_button_confirm.png","image/login/sl_button_confirm.png","")
     submit:setPosition(back_width/2, 350)
-    submit:setTitleText("登陆")
-    submit:setTitleFontSize(30)
     submit:addTouchEventListener(submit_clicked)
     back_login:addChild(submit)
+    
+    local label_name = cc.Label:createWithSystemFont("登陆","",30)
+    label_name:setColor(cc.c4b(255,255,255,255))
+    label_name:setPosition(70, submit:getContentSize().height/2)
+    submit:addChild(label_name)
     
     local button_toggle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -247,12 +250,15 @@ showRegister = function()
         end
     end
 
-    local submit = ccui.Button:create("image/login/sl_button_confirm.png","","")
+    local submit = ccui.Button:create("image/login/sl_button_confirm.png","image/login/sl_button_confirm.png","")
     submit:setPosition(back_width/2, 350)
-    submit:setTitleText("注册")
-    submit:setTitleFontSize(30)
     submit:addTouchEventListener(submit_clicked)
     back_register:addChild(submit)
+    
+    local label_name = cc.Label:createWithSystemFont("注册","",30)
+    label_name:setColor(cc.c4b(255,255,255,255))
+    label_name:setPosition(70, submit:getContentSize().height/2)
+    submit:addChild(label_name)
 
     local button_toggle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

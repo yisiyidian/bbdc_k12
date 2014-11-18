@@ -1,0 +1,20 @@
+
+book.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+book_back_whiteblue
+  rotate: false
+  xy: 2, 314
+  size: 458, 549
+  orig: 458, 549
+  offset: 0, 0
+  index: -1
+book_front_blue
+  rotate: false
+  xy: 462, 380
+  size: 401, 483
+  orig: 401, 483
+  offset: 0, 0
+  index: -1

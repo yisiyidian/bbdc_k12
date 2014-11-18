@@ -19,7 +19,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    --s_SCENE.levelLayerState = s_normal_level_state
+    --s_SCENE.levelLayerState = s_review_boss_pass_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -83,7 +83,7 @@ function LevelLayer:levelStateManager()
      elseif s_SCENE.levelLayerState == s_review_boss_appear_state then
         levelLayerI:plotReviewBossAppearOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
      elseif s_SCENE.levelLayerState == s_review_boss_pass_state then
-
+        --levelLayerI:plotReviewBossPassOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
         -- save and update level data
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
@@ -98,11 +98,11 @@ function LevelLayer:levelStateManager()
         end)
 
         -- update level state and plot popup(call on level button clicked)
-        if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
+        --if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state then
             s_SCENE:callFuncWithDelay(3,function()
                 levelLayerI:onLevelButtonClicked(s_CURRENT_USER.currentLevelKey)
             end)
-        end
+        --end
         s_SCENE.levelLayerState = s_normal_level_state
      end
      s_CURRENT_USER:updateDataToServer()
@@ -116,7 +116,7 @@ function LevelLayer:ctor()
     levelLayerI = levelStypeI.create()
     levelLayerII = levelStypeII.create()
     connection1_2 = connectionLayer1_2.create()
-    
+    --s_CURRENT_USER:initChapterLevelAfterLogin()
     -- plot player position
     local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
     local image = 'image/chapter_level/gril_head.png'
@@ -129,9 +129,7 @@ function LevelLayer:ctor()
     -- level layer state manager
     self:levelStateManager()
 --    local scrollViewNode = ccui.ScrollView:create()    
---    print('-----current user=====')
---    print_lua_table(s_CURRENT_USER)
-    -- scroll view scroll
+-- -- scroll view scroll
 --    local function scrollViewDidScroll()
 --        print 'scrollview did scroll'
 --        print(scrollViewNode:getPosition())
@@ -144,30 +142,34 @@ function LevelLayer:ctor()
 --    if nil ~= scrollViewNode then
 --        local fullWidth = levelLayerI:getContentSize().width
 --        scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
---        --scrollViewNode:scrollToPercentVertical(15,0,false)
 --        scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
 --        scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
 --        scrollViewNode:addChild(levelLayerI) 
 --        scrollViewNode:setTouchEnabled(true)
+--        scrollViewNode:scrollToPercentVertical(90,1, true)
 --        self:addChild(scrollViewNode)
 --    end
 --
     local function listViewEvent(sender, eventType)
         if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
             print("select child index = ",sender:getCurSelectedIndex())
+            local item1 = sender:getItem(0)
+            
             if sender:getCurSelectedIndex() == 2 then
                 connection1_2:plotUnlockChapterAnimation()
             end
         end
     end
 
---    local function scrollViewEvent(sender, evenType)
---        if evenType == ccui.ScrollviewEventType.scrollToBottom then
---            print("SCROLL_TO_BOTTOM")
---        elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
---            print("SCROLL_TO_TOP")
---        end
---    end  
+    local function scrollViewEvent(sender, evenType)
+        if evenType == ccui.ScrollviewEventType.scrollToBottom then
+            print("SCROLL_TO_BOTTOM")
+        elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
+            print("SCROLL_TO_TOP")
+        elseif evenType == ccui.ScrollviewEventType.scrolling then
+            --print('SCROLLING:'..sender:getPosition())
+        end
+    end  
     -- create list view
     local listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
@@ -176,7 +178,9 @@ function LevelLayer:ctor()
     listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
     listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
     listView:addEventListener(listViewEvent)
+    listView:addScrollViewEventListener(scrollViewEvent)
     self:addChild(listView)
+    
     
     -- add list view item1
     local item1 = ccui.Layout:create()
@@ -184,7 +188,8 @@ function LevelLayer:ctor()
     item1:setContentSize(levelLayerI:getContentSize())    
     levelLayerI:setPosition(cc.p(0, 0))
     item1:addChild(levelLayerI)
-    listView:pushBackCustomItem(item1)    
+    item1:setPosition(cc.p(100, 1000))
+    listView:pushBackCustomItem(item1)     
 
     -- add list view connection 
     local item1_2 = ccui.Layout:create()
@@ -202,7 +207,13 @@ function LevelLayer:ctor()
     item2:addChild(levelLayerII)
     --listView:insertCustomItem(item2,2)
     listView:pushBackCustomItem(item2)
-
+    listView:setInnerContainerSize(cc.size(item1:getContentSize().width,item1:getContentSize().height+item2:getContentSize().height))
+    print_lua_table(listView:getInnerContainerSize())
+    --s_CURRENT_USER.currentLevelKey = 'level12'
+    local currentVerticalPercent = string.sub(s_CURRENT_USER.currentSelectedLevelKey,6)/12.0 * 30+1
+    listView:scrollToPercentVertical(currentVerticalPercent,0,false)
+    
+    --listView:scrollToPercentVertical(50,0,false)
 --    local item1_2 = ccui.Layout:create()
 --    local connection1_2 = cc.Scale9Sprite:create('ccb/ccbResources/chapter_level/connection/connection_xuanxiaoguan1-2_background.png')
 --    item1_2:setContentSize(connection1_2:getContentSize())
@@ -219,7 +230,7 @@ function LevelLayer:ctor()
 --    item2:addChild(levelLayerII)
 --    listView:pushBackCustomItem(item2)
 --    --listView:insertCustomItem(item1, 0)
---    playMusic(s_sound_bgm1,true)
+    playMusic(s_sound_bgm1,true)
 
     -- right top node
 

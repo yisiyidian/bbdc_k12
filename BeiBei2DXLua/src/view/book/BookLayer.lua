@@ -43,10 +43,12 @@ function BookLayer.create()
                     end
                     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
 
-                    s_CURRENT_USER.currentChapterKey = 'chapter0'
-                    s_CURRENT_USER.currentLevelKey = 'level0'
-                    s_CURRENT_USER.currentSelectedLevelKey = 'level0'
-
+--                    s_CURRENT_USER.currentChapterKey = 'chapter0'
+--                    s_CURRENT_USER.currentLevelKey = 'level0'
+--                    s_CURRENT_USER.currentSelectedLevelKey = 'level0'
+                    
+                    s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
+                    
                     s_LOADING_CIRCLE_LAYER:show()
                     s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
                         function (api, result)
