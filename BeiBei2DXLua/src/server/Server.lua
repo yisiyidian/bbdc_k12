@@ -5,6 +5,8 @@ local Server = {}
 Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
 Server.production = 0
+Server.appId = ''
+Server.appKey = ''
 Server.sessionToken = ''
 
 local function getURL()
@@ -18,14 +20,8 @@ end
 local function getAppData()
     local timestamp = os.time()
 
-    -- test server
-    local appId = '9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l'
-    local appKey = '8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg'
-
-    if Server.isAppStoreServer then
-        appId = 'eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw'
-        appKey = '9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6'
-    end
+    local appId = Server.appId
+    local appKey = Server.appKey
 
     local xmd5 = ''
     xmd5 = cx.CXUtils:md5(timestamp .. appKey, xmd5)

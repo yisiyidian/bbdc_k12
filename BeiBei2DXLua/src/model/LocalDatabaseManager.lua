@@ -100,38 +100,6 @@ function Manager.initTables()
         );
     ]]
 
-    -- TODO
-    -- create table database game design configuration
-    -- Manager.database:exec[[
-    --     create table if not exists DB_gameDesignConfiguration(
-    --         books TEXT,
-    --         booksV INTEGER,
-    --         chapters TEXT,
-    --         chaptersV INTEGER,
-    --         dailyCheckIn TEXT,
-    --         dailyCheckInV INTEGER,
-    --         energy TEXT,
-    --         energyV INTEGER,
-    --         iaps TEXT,
-    --         iapsV INTEGER,
-    --         items TEXT,
-    --         itemsV INTEGER,
-    --         lv_cet4 TEXT,
-    --         lv_cet4V INTEGER,
-    --         lv_cet6 TEXT,
-    --         lv_cet6V INTEGER,
-    --         lv_ielts TEXT,
-    --         lv_ieltsV INTEGER,
-    --         lv_ncee TEXT,
-    --         lv_nceeV INTEGER,
-    --         lv_toefl TEXT,
-    --         lv_toeflV INTEGER,
-    --         review_boss TEXT,
-    --         revew_bossV INTEGER,
-    --         starRule TEXT
-    --     );
-    -- ]]
-
     local userDataClasses = {
         require('model.user.DataDailyCheckIn'),
         require('model.user.DataDailyWord'),
@@ -139,7 +107,8 @@ function Manager.initTables()
         require('model.user.DataLevel'),
         require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
         require('model.user.DataStatistics'),      -- IC_word_day same as DataStatistics
-        require('model.user.DataUser')             -- db_userInfo same as DataUser
+        require('model.user.DataUser'),            -- db_userInfo same as DataUser
+        require('model.user.DataConfigs')
     }
     for i = 1, #userDataClasses do
         Manager.createTable(userDataClasses[i].create())
@@ -243,6 +212,20 @@ function Manager.getUserDataFromLocalDB(objectOfDataClass)
             lastLogIn = row.updatedAt
             data = row
         end
+    end
+
+    if data ~= nil then
+        parseLocalDatabaseToUserData(data, objectOfDataClass)     
+        return true
+    end
+
+    return false
+end
+
+function Manager.getDataConfigsFromLocalDB(objectOfDataClass)
+    local data = nil
+    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
+        data = row
     end
 
     if data ~= nil then

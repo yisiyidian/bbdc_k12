@@ -2,6 +2,54 @@ local HttpRequestClient = {}
 
 ---------------------------------------------------------------------------------------------------------------------
 
+local function dl(fileObjectId)
+    HttpRequestClient.downloadFileFromAVOSWithObjectId(fileObjectId, function (objectId, filename, err, isSaved) end)
+end
+
+function HttpRequestClient.getConfigs(onCompleted)
+    s_SERVER.search('classes/DataConfigs',
+        function (api, result)
+            print_lua_table (result)
+
+            local DataConfigs = require('model.user.DataConfigs')
+            s_DATA_MANAGER.configs = DataConfigs.create()
+            for i, v in ipairs(result.results) do
+                parseServerDataToUserData(v, s_DATA_MANAGER.configs)
+                break
+            end
+
+            local newFiles = {}
+            local dataLocal = DataConfigs.create()
+            if s_DATABASE_MGR.getDataConfigsFromLocalDB(dataLocal) then
+                if s_DATA_MANAGER.configs.version > dataLocal.version then
+                    for i, v in ipairs(DataConfigs.getKeys()) do
+                        if s_DATA_MANAGER.configs[v] ~= dataLocal[v] then
+                            table.insert(newFiles, v)
+                        end
+                    end
+                end
+            else
+                s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
+                if s_DATA_MANAGER.configs.version > s_CONFIG_VERSION then
+                end
+            end
+
+            if #newFiles > 0 then
+                -- TODO
+                print_lua_table (newFiles)
+                if onCompleted ~= nil then onCompleted() end
+            else
+                if onCompleted ~= nil then onCompleted() end
+            end
+        end, 
+        function (api, code, message, description)
+            if onCompleted ~= nil then onCompleted() end
+        end
+    )
+end
+
+---------------------------------------------------------------------------------------------------------------------
+
 -- callbackFunc: function (index, title, content)
 function HttpRequestClient.getBulletinBoard(callbackFunc)
     local retIdx = -1
