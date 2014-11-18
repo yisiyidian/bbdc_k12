@@ -17,6 +17,13 @@ function __G__TRACKBACK__(msg)
     return msg
 end
 
+-- remove print debug info when release app
+local sysPrint = print
+print = function ( ... )
+    if RELEASE_APP then return end
+    sysPrint('BEIBEI:' .. string.format(...))
+end
+
 local function main()
     collectgarbage("collect")
     -- avoid memory leak
@@ -33,10 +40,6 @@ local function main()
     initApp()
 
     if RELEASE_APP then
-        -- remove print debug info when release app
-        function print ( ... )
-        end
-
         s_debugger.configLog(false, false)
         DEBUG_PRINT_LUA_TABLE = false
         s_SERVER.debugLocalHost   = false
