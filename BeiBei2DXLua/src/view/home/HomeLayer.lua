@@ -152,9 +152,14 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             if isDataShow then
                 isDataShow = false
-                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0)))
+                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+                local action2 = cc.CallFunc:create(function()
+                    button_data:setLocalZOrder(0)
+                end)
+                button_data:runAction(cc.Sequence:create(action1, action2))
             else
                 isDataShow = true
+                button_data:setLocalZOrder(2)
                 button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-300)))
             end
         end
