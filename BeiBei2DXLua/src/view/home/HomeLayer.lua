@@ -81,65 +81,52 @@ function HomeLayer.create()
     button_right:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
     button_right:addTouchEventListener(button_right_clicked)
     backColor:addChild(button_right)   
-
-    local book_back = cc.Sprite:create("image/homescene/book_back_whiteblue.png")
-    book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2+30)
-    backColor:addChild(book_back)
     
-    local book_face = cc.Sprite:create("image/homescene/book_front_blue.png")
-    book_face:setPosition(237.78, 261.17)
-    book_back:addChild(book_face)
-
+    local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
+    book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+    backColor:addChild(book_back,1)
+    
     local has_study = cc.ProgressTimer:create(cc.Sprite:create("image/homescene/book_front_blue_xuexi.png"))
     has_study:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     has_study:setMidpoint(cc.p(1, 0))
     has_study:setBarChangeRate(cc.p(0, 1))
-    has_study:setPosition(book_face:getContentSize().width/2, book_face:getContentSize().height/2)
-    has_study:setPercentage(100 * studyWordNum / bookWordCount)
---    has_study:setPercentage(40)
-    book_face:addChild(has_study)
+    has_study:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
+--    has_study:setPercentage(100 * studyWordNum / bookWordCount)
+    has_study:setPercentage(40)
+    book_back:addChild(has_study)
     
     local has_grasp = cc.ProgressTimer:create(cc.Sprite:create("image/homescene/book_front_blue_zhangwo.png"))
     has_grasp:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     has_grasp:setMidpoint(cc.p(1, 0))
     has_grasp:setBarChangeRate(cc.p(0, 1))
-    has_grasp:setPosition(book_face:getContentSize().width/2, book_face:getContentSize().height/2)
-    has_grasp:setPercentage(100 * graspWordNum / bookWordCount)
---    has_grasp:setPercentage(30)
-    book_face:addChild(has_grasp)
+    has_grasp:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
+--    has_grasp:setPercentage(100 * graspWordNum / bookWordCount)
+    has_grasp:setPercentage(30)
+    book_back:addChild(has_grasp)
     
     local book_back_width = book_back:getContentSize().width
     
     local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",28)
     label1:setColor(cc.c4b(255,255,255,255))
-    label1:setPosition(book_back_width/2, 350)
+    label1:setPosition(book_back_width/2, 200)
     book_back:addChild(label1)
     
     local label2 = cc.Label:createWithSystemFont(bookWordCount.."词","",20)
     label2:setColor(cc.c4b(255,255,255,255))
-    label2:setPosition(book_back_width/2, 320)
+    label2:setPosition(book_back_width/2, 170)
     book_back:addChild(label2)
     
     local label3 = cc.Label:createWithSystemFont("学习"..studyWordNum.."词","",34)
     label3:setColor(cc.c4b(255,255,255,255))
-    label3:setPosition(book_back_width/2, 210)
+    label3:setPosition(book_back_width/2, 60)
     book_back:addChild(label3)
     
     local label4 = cc.Label:createWithSystemFont("掌握"..graspWordNum.."词","",34)
     label4:setColor(cc.c4b(255,255,255,255))
-    label4:setPosition(book_back_width/2, 150)
+    label4:setPosition(book_back_width/2, 0)
     book_back:addChild(label4)
     
---    local button_change_clicked = function(sender, eventType)
---        if eventType == ccui.TouchEventType.began then
---
---        end
---    end
---    
---    local button_change = ccui.Button:create("image/homescene/main_switchbutton.png","image/homescene/main_switchbutton.png","")
---    button_change:setPosition(10, container:getContentSize().height/2)
---    button_change:addTouchEventListener(button_change_clicked)
---    container:addChild(button_change)
+
     
     local label = cc.Label:createWithSystemFont(levelName,"",28)
     label:setColor(cc.c4b(0,0,0,255))
@@ -197,7 +184,6 @@ function HomeLayer.create()
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
     
-    
     local logo_name = {"head","book","photo","feedback","information","logout"}
     local label_name = {"游客1234","选择书籍", "拍摄头像", "用户反馈", "完善个人信息", "登出游戏"}
     for i = 1, 6 do
@@ -246,6 +232,14 @@ function HomeLayer.create()
     local moved = false
     local start_x = nil
     local onTouchBegan = function(touch, event)
+        if has_study then
+            local location_book = has_study:convertToNodeSpace(touch:getLocation())
+            if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
+                book_back:removeAllChildren()
+                book_back:addAnimation(0, 'animation', false)
+            end
+        end
+
         local location = layer:convertToNodeSpace(touch:getLocation())
         start_x = location.x
         moved = false
