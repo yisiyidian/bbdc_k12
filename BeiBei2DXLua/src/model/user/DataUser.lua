@@ -18,6 +18,7 @@ function DataUser:ctor()
     self.nickName                          = ''
     self.password                          = ''
     self.sessionToken                      = ''
+    self.isGuest                           = 1
 
     self.appVersion                        = s_APP_VERSION 
     self.tutorialStep                      = 0 

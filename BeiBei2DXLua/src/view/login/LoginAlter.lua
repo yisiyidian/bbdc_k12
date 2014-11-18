@@ -242,6 +242,7 @@ showRegister = function()
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
+            s_CURRENT_USER.isGuest = 0
             s_SCENE:signUp(username.textField:getStringValue(), password.textField:getStringValue())
         end
     end
