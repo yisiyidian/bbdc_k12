@@ -136,10 +136,10 @@ function CorePlayManager.recordWordProciency()
     for i = 1, #CorePlayManager.wordList do
         if CorePlayManager.wordProficiency[i] == 0 then
             s_logd("word: "..CorePlayManager.wordList[i].." pro:0")
-            s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 0)
+            s_DATABASE_MGR.insertTable_DataWordProciency(CorePlayManager.wordList[i], 0)
         else
             s_logd("word: "..CorePlayManager.wordList[i].." pro:5")
-            s_DATABASE_MGR.insertTable_Word_Prociency(CorePlayManager.wordList[i], 5)
+            s_DATABASE_MGR.insertTable_DataWordProciency(CorePlayManager.wordList[i], 5)
         end
     end
 end

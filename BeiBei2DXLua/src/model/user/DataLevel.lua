@@ -10,7 +10,7 @@ function DataLevel.create()
 end
 
 function DataLevel:ctor()
-    self.className = 'WMAV_LevelData'
+    self.className = 'DataLevel'
     
     self.chapterKey = ''
 --    self.chapterIndex = 0

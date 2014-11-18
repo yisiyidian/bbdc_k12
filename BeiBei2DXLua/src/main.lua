@@ -49,7 +49,7 @@ local function main()
     else
         s_debugger.configLog(true, true)
         DEBUG_PRINT_LUA_TABLE = true
-        s_SERVER.debugLocalHost   = false
+        s_SERVER.debugLocalHost   = true
         s_SERVER.isAppStoreServer = false
         s_SERVER.production       = 0
         s_APP_VERSION = 150000

@@ -23,7 +23,7 @@ function HttpRequestClient.getBulletinBoard(callbackFunc)
     local onFailed = function (api, code, message, description)
         if callbackFunc ~= nil then callbackFunc(retIdx, retTitle, retContent) end
     end
-    s_SERVER.search('classes/WMAV_BulletinBoard', onSucceed, onFailed)
+    s_SERVER.search('classes/DataBulletinBoard', onSucceed, onFailed)
 end
 
 ---------------------------------------------------------------------------------------------------------------------
