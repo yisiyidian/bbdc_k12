@@ -76,6 +76,7 @@ function IntroLayer.create()
         s_LOADING_CIRCLE_LAYER:show()
         s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
             if result.count <= 0 then -- not exist the user name
+                s_CURRENT_USER.isGuest = 1
                 s_SCENE:signUp(randomUserName, "bbdc123#")
             else -- exist the user name
                 visitLogin()
