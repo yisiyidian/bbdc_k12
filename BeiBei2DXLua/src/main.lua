@@ -52,7 +52,7 @@ local function main()
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false
         s_SERVER.production       = 0
-        s_APP_VERSION = 150001
+        s_APP_VERSION = 150002
     end
     
     if cc.Director:getInstance():getRunningScene() then

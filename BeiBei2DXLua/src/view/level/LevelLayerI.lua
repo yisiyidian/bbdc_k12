@@ -12,7 +12,38 @@ function LevelLayerI.create()
     return layer
 end
 
-
+function LevelLayerI:plotLevelNumber(levelKey)
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData('chapter0', levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelNumber = levelIndex + 1
+    if  levelData ~= nil and levelData.isLevelUnlocked == 1 then
+        if levelConfig['type'] == 1 then -- summary boss
+            local summaryboss = levelButton:getChildByName('summaryboss'..string.sub(levelKey,6))
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_straight.fnt')
+            number:setScale(1.6)
+            number:setString(levelNumber)
+            number:setPosition(125, 100)
+            summaryboss:addChild(number)
+        else 
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_inclined.fnt')
+            number:setString(levelNumber)
+            number:setPosition(levelButton:getContentSize().width/2-8, levelButton:getContentSize().height/2+3)
+            levelButton:addChild(number)
+        end
+    else
+        local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+        local lockNumber = ccui.TextBMFont:create()        
+        lockNumber:setFntFile('font/number_brown.fnt')
+        lockNumber:setString(levelNumber)
+        lockNumber:setPosition(lockSprite:getContentSize().width/2, lockSprite:getContentSize().height/2-6)
+        lockSprite:addChild(lockNumber)
+    end
+    
+end
 
 function LevelLayerI:plotLevelStar(levelButton, heart)
     local star1, star2, star3
@@ -196,7 +227,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
             -- add summary boss
             local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
             summaryboss:setPosition(0,10)
-            --summaryboss:addAnimation(0, 'animation',false)
+            summaryboss:setName('summaryboss'..string.sub(levelKey, 6))
             summaryboss:addAnimation(0, 'jianxiao', true)
             summaryboss:setScale(0.7)
             levelButton:addChild(summaryboss, 3)
@@ -327,7 +358,8 @@ function LevelLayerI:ctor()
                     levelButton:addChild(lockSprite)               
                 end
             end
-        end
+            self:plotLevelNumber(levelConfig[i]['level_key'])
+        end  
     end
     
     -- register touch event
