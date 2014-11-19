@@ -99,7 +99,6 @@ end
 
 -- function (user data, error description, error code)
 function UserBaseServer.signup(username, password, onResponse)
-    -- s_SERVER.request('apiSignUp', {['username']=username, ['password']=password}, onSucceed, onFailed)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():signUp(username, password, function (objectjson, e, code)
@@ -109,7 +108,6 @@ end
 
 -- function (user data, error description, error code)
 function UserBaseServer.login(username, password, onResponse)
-    -- s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
