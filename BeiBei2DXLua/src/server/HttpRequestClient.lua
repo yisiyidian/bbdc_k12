@@ -27,6 +27,18 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
     end
 
     if #newFiles > 0 then
+        if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+            local ids = ''
+            for i, v in ipairs(newFiles) do
+                ids = ids .. v
+                if i < #newFiles then ids = ids .. '|' end
+            end
+            cx.CXAvos:getInstance():downloadConfigFiles(ids, cc.FileUtils:getInstance():getWritablePath())
+            s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
+            if onCompleted ~= nil then onCompleted() end
+            return
+        end
+
         -- download new configs
         local index = 1
         local co
@@ -44,12 +56,6 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
         end)
         print_lua_table (newFiles)
         print('start downloading configs: ' .. tostring(co))
-
-        if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID and onCompleted ~= nil then
-            onCompleted()
-            onCompleted = nil
-        end
-
         coroutine.resume(co)
     else
         s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)

@@ -49,6 +49,10 @@ import android.provider.Settings;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import c.bb.dc.BBConfigsDownloader;
+import c.bb.dc.BBUtils;
+import c.bb.dc.BBWordSoundFileDownloader;
+
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVOSCloud;
@@ -232,7 +236,7 @@ public class AppActivity extends Cocos2dxActivity {
 							if (arg1 != null) {
 								invokeLuaCallbackFunctionDL(objectId, file != null ? file.getOriginalName() : "", arg1.getLocalizedMessage(), 0);
 							} else {
-								if (data != null && data.length > 0 && saveFile(savepath, file.getOriginalName(), data)) {
+								if (data != null && data.length > 0 && BBUtils.saveFile(savepath, file.getOriginalName(), data)) {
 									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file succeed", 1);
 								} else {
 									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file error", 0);
@@ -249,92 +253,16 @@ public class AppActivity extends Cocos2dxActivity {
 		});
 	}
 	
-	public static class DWSF {
-		
-		public DWSF(String[] words, int index, int count, String prefix, String subfix, String path) {
-			_words = words;
-			_index = index;
-			_count = count;
-			_prefix = prefix;
-			_subfix = subfix;
-			_path = path;
-		}
-		
-		public void search() {
-			if (_index >= _count) return;
-			String filename = _prefix + _words[_index] + _subfix;
-			
-			AVQuery<AVObject> query = new AVQuery<AVObject>("_File");
-			query.whereEqualTo("name", filename);
-			query.findInBackground(new FindCallback<AVObject>() {
-				@Override
-				public void done(List<AVObject> obj, AVException e) {
-					if (e == null && obj != null && obj.size() > 0) {						
-						download(obj.get(0).getObjectId());						
-					} else {
-						gotoNext();
-					}
-				}
-			});
-		}
-		
-		private void download(String objectId) {
-			AVFile.withObjectIdInBackground(objectId, new GetFileCallback<AVFile>() {
-				@Override
-				public void done(final AVFile file, AVException e) {
-					if (file == null || e != null) {
-						gotoNext();
-					} else {
-						file.getDataInBackground(new GetDataCallback() {
-							@Override
-							public void done(byte[] data, AVException err) {
-								if (err == null) {
-									saveFile(_path, file.getOriginalName(), data);
-								}
-								gotoNext();
-							}
-						});
-					}
-				}
-			});
-		}
-		
-		private void gotoNext() {
-			DWSF next = new DWSF(_words, _index + 1, _count, _prefix, _subfix, _path);
-			next.search();
-		}
-		
-		private String[] _words;
-		private int _index;
-		private int _count;
-		
-		private String _prefix;
-		private String _subfix;
-		private String _path;
-	}
 	public static void downloadWordSoundFiles(final String prefix, final String wordsList, final String subfix, final String path) {
 		String[] words = wordsList.split("\\|");
-		DWSF first = new DWSF(words, 0, words.length, prefix, subfix, path);
-		first.search();
+		BBWordSoundFileDownloader first = new BBWordSoundFileDownloader(words, 0, words.length, prefix, subfix, path);
+		first.start();
 	}
 	
 	public static void downloadConfigFiles(final String objectIds, final String path) {
-		
-	}
-	
-	private static boolean saveFile(String savepath, String filename, byte[] data) {
-        try {
-        	File file = new File(savepath , filename);
-			file.createNewFile();
-			FileOutputStream out = new FileOutputStream(file);
-			out.write(data);
-			out.close();
-			
-			return true;
-		} catch (IOException e) {
-			e.printStackTrace();
-			return false;
-		}
+		String[] ids = objectIds.split("\\|");
+		BBConfigsDownloader o = new BBConfigsDownloader(ids, 0, ids.length, path);
+		o.start();
 	}
 	
 	private static String AVUserToJsonStr(AVUser user) {

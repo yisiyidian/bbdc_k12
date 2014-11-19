@@ -42,6 +42,12 @@
 -- @param #char char
         
 --------------------------------
+-- @function [parent=#CXAvos] downloadConfigFiles 
+-- @param self
+-- @param #char char
+-- @param #char char
+        
+--------------------------------
 -- @function [parent=#CXAvos] logOut 
 -- @param self
         
