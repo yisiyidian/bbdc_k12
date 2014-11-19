@@ -26,7 +26,7 @@ function DataUser:ctor()
     self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
     self.energyLastCoolDownTime            = -1 
-    self.energyCount                       = 7
+    self.energyCount                       = s_energyMaxCount
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
 

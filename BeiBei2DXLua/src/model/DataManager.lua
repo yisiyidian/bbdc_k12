@@ -55,6 +55,13 @@ local function loadXxteaFile(filepath)
 end
 
 local function loadJsonFile(filepath)
+    local filename = string.gsub(filepath, 'cfg/', '')
+    local downloadpath = cc.FileUtils:getInstance():getWritablePath() .. filename
+    if cc.FileUtils:getInstance():isFileExist(downloadpath) then
+        filepath = downloadpath
+        print ('downloadpath:' .. downloadpath)
+    end
+
     if s_USE_XXTEA then
         return loadXxteaFile(filepath)
     else
