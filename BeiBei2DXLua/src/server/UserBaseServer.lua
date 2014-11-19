@@ -52,12 +52,11 @@ function validatePassword(s)
     return numberOfSubstitutions >= 6 and numberOfSubstitutions <= 16 and numberOfSubstitutions == length
 end
 
-local function onResponse_signup_login(objectjson, e, code, onResponse)
+local function onResponse_signUp_logIn(objectjson, e, code, onResponse)
     if e ~= nil then 
         s_logd('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
-        -- TODO: Android unknown error
         if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
             local sessionToken = objectjson
             s_logd('signup/logIn:' .. sessionToken)
@@ -98,20 +97,20 @@ end
 -- https://cn.avoscloud.com/docs/error_code.html
 
 -- function (user data, error description, error code)
-function UserBaseServer.signup(username, password, onResponse)
+function UserBaseServer.signUp(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():signUp(username, password, function (objectjson, e, code)
-        onResponse_signup_login(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(objectjson, e, code, onResponse)
     end)
 end
 
 -- function (user data, error description, error code)
-function UserBaseServer.login(username, password, onResponse)
+function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
-        onResponse_signup_login(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(objectjson, e, code, onResponse)
     end)
 end
 

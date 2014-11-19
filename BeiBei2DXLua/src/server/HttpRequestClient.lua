@@ -16,17 +16,14 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
     -- local database
     local newFiles = {}
     local dataLocal = DataConfigs.create()
-    if s_DATABASE_MGR.getDataConfigsFromLocalDB(dataLocal) then
-        if s_DATA_MANAGER.configs.version > dataLocal.version then
-            for i, v in ipairs(DataConfigs.getKeys()) do
-                if s_DATA_MANAGER.configs[v] ~= dataLocal[v] then
-                    table.insert(newFiles, v)
-                end
+    local hasDataLocal = s_DATABASE_MGR.getDataConfigsFromLocalDB(dataLocal)
+    print ('hasDataLocal:' .. tostring(hasDataLocal))
+    if (hasDataLocal and s_DATA_MANAGER.configs.version > dataLocal.version) 
+        or (hasDataLocal == false and s_DATA_MANAGER.configs.version > s_CONFIG_VERSION) then
+        for i, v in ipairs(DataConfigs.getKeys()) do
+            if s_DATA_MANAGER.configs[v] ~= dataLocal[v] then
+                table.insert(newFiles, s_DATA_MANAGER.configs[v])
             end
-        end
-    else
-        s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
-        if s_DATA_MANAGER.configs.version > s_CONFIG_VERSION then
         end
     end
 
@@ -43,14 +40,15 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
                 coroutine.yield()
                 index = index + 1
             end 
-
+            s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
             if onCompleted ~= nil then onCompleted() end
         end)
         print_lua_table (newFiles)
         print('start downloading configs: ' .. tostring(co))
         coroutine.resume(co)
-    elseif onCompleted ~= nil then 
-        onCompleted()
+    else
+        s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
+        if onCompleted ~= nil then onCompleted() end
     end
 end
 

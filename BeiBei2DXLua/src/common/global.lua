@@ -131,6 +131,7 @@ end
 function initApp()
     -- versions
     s_APP_VERSION = 150000
+    s_CONFIG_VERSION = 150000
 
     _initConstant()
     _initTool()
