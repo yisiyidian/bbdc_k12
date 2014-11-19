@@ -224,18 +224,18 @@ public class AppActivity extends Cocos2dxActivity {
 			@Override
 			public void done(final AVFile file, AVException e) {
 				if (file == null || e != null) {
-					invokeLuaCallbackFunctionDL(objectId, file != null ? file.getName() : "", e != null ? e.getLocalizedMessage() : "get file object error", 0);
+					invokeLuaCallbackFunctionDL(objectId, file != null ? file.getOriginalName() : "", e != null ? e.getLocalizedMessage() : "get file object error", 0);
 				} else {
 					file.getDataInBackground(new GetDataCallback() {
 						@Override
 						public void done(byte[] data, AVException arg1) {
 							if (arg1 != null) {
-								invokeLuaCallbackFunctionDL(objectId, file != null ? file.getName() : "", arg1.getLocalizedMessage(), 0);
+								invokeLuaCallbackFunctionDL(objectId, file != null ? file.getOriginalName() : "", arg1.getLocalizedMessage(), 0);
 							} else {
-								if (saveFile(savepath, file.getName(), data)) {
-									invokeLuaCallbackFunctionDL(objectId, file.getName(), "save file succeed", 1);
+								if (data != null && data.length > 0 && saveFile(savepath, file.getOriginalName(), data)) {
+									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file succeed", 1);
 								} else {
-									invokeLuaCallbackFunctionDL(objectId, file.getName(), "save file error", 0);
+									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file error", 0);
 								}
 							}
 						}
@@ -289,7 +289,7 @@ public class AppActivity extends Cocos2dxActivity {
 							@Override
 							public void done(byte[] data, AVException err) {
 								if (err == null) {
-									saveFile(_path, file.getName(), data);
+									saveFile(_path, file.getOriginalName(), data);
 								}
 								gotoNext();
 							}
@@ -318,13 +318,18 @@ public class AppActivity extends Cocos2dxActivity {
 		first.search();
 	}
 	
+	public static void downloadConfigFiles(final String objectIds, final String path) {
+		
+	}
+	
 	private static boolean saveFile(String savepath, String filename, byte[] data) {
-		File file = new File(savepath , filename);
         try {
+        	File file = new File(savepath , filename);
 			file.createNewFile();
 			FileOutputStream out = new FileOutputStream(file);
 			out.write(data);
 			out.close();
+			
 			return true;
 		} catch (IOException e) {
 			e.printStackTrace();

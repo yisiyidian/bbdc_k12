@@ -20,11 +20,13 @@ function playSound(filename)
     end
 end
 
+WORD_SOUND_US = 'us'
+WORD_SOUND_EN = 'en'
 function getWordSoundFileNamePrefix()
-    local isAm = 'us' -- us en
+    local isAm = WORD_SOUND_US
     if s_CURRENT_USER ~= nil then 
         if s_CURRENT_USER.isSoundAm == 0 then
-            isAm = 'en' 
+            isAm = WORD_SOUND_EN
         end 
     end
     return isAm

@@ -102,8 +102,13 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
     s_CorePlayManager.initStudyTestState()
     s_CorePlayManager.enterStudyLayer()
+    
+    -- download sounds of current level
+    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 0, WORD_SOUND_US)
+    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 0, WORD_SOUND_EN)
     -- download sounds of next 5th level
-    s_HttpRequestClient.downloadSoundsOfNext5thLevel(levelKey)
+    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_US)
+    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_EN)
     
     -- energy cost "cost"
     playSound(s_sound_cost)

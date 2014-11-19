@@ -3,8 +3,6 @@ local HttpRequestClient = {}
 ---------------------------------------------------------------------------------------------------------------------
 
 local function onGetDataConfigsSucceed(api, result, onCompleted)
-    print_lua_table (result)
-
     -- server data
     local DataConfigs = require('model.user.DataConfigs')
     s_DATA_MANAGER.configs = DataConfigs.create()
@@ -17,7 +15,8 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
     local newFiles = {}
     local dataLocal = DataConfigs.create()
     local hasDataLocal = s_DATABASE_MGR.getDataConfigsFromLocalDB(dataLocal)
-    print ('hasDataLocal:' .. tostring(hasDataLocal))
+    print_lua_table (s_DATA_MANAGER.configs)
+    print_lua_table (dataLocal)
     if (hasDataLocal and s_DATA_MANAGER.configs.version > dataLocal.version) 
         or (hasDataLocal == false and s_DATA_MANAGER.configs.version > s_CONFIG_VERSION) then
         for i, v in ipairs(DataConfigs.getKeys()) do
@@ -45,6 +44,12 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
         end)
         print_lua_table (newFiles)
         print('start downloading configs: ' .. tostring(co))
+
+        if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID and onCompleted ~= nil then
+            onCompleted()
+            onCompleted = nil
+        end
+
         coroutine.resume(co)
     else
         s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
@@ -92,7 +97,7 @@ end
 function HttpRequestClient.downloadFileFromAVOSWithObjectId(fileObjectId, onDownloaded)
     cx.CXAvos:getInstance():downloadFile(fileObjectId, cc.FileUtils:getInstance():getWritablePath(), 
         function (objectId, filename, err, isSaved)
-            s_logd('objectId:' .. fileObjectId .. ', filename:' .. cc.FileUtils:getInstance():getWritablePath() .. filename .. ', error:' .. err .. ', isSaved:' .. tostring(isSaved))
+            s_logd('objectId:' .. fileObjectId .. ', filename:' .. cc.FileUtils:getInstance():getWritablePath() .. filename .. ', error:' .. tostring(err) .. ', isSaved:' .. tostring(isSaved))
             if onDownloaded ~= nil then onDownloaded(objectId, filename, err, isSaved) end
     end)
 end
@@ -133,8 +138,8 @@ function HttpRequestClient.downloadWordSoundFile(word, onDownloaded)
     end
 end
 
-function HttpRequestClient.downloadSoundsOfNext5thLevel(levelKey)
-    local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + 5)
+function HttpRequestClient.downloadSoundsOfLevel(levelKey, idOffset, prefix)
+    local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + idOffset)
     s_logd(string.format('downloadSoundsOfNext5thLevel: %s, %s, %s', s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey))
     local nextLevelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey)
     if nextLevelConfig == nil or string.len(nextLevelConfig.word_content) <= 0 then
@@ -143,7 +148,7 @@ function HttpRequestClient.downloadSoundsOfNext5thLevel(levelKey)
 
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         cx.CXAvos:getInstance():downloadWordSoundFiles(
-            getWordSoundFileNamePrefix() .. '_', 
+            prefix .. '_', 
             nextLevelConfig.word_content, 
             '.mp3', 
             cc.FileUtils:getInstance():getWritablePath())
