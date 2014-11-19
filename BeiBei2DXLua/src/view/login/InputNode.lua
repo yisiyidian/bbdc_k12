@@ -48,7 +48,6 @@ function InputNode.create(type)
             cursor:setVisible(true)
         elseif eventType == ccui.TextFiledEventType.delete_backward then
             cursor:setVisible(true)
-            main.textField:resignFirstResponder()
         end
     end
 
