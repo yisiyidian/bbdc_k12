@@ -15,6 +15,10 @@ function Pause.create()
 end
 
 function Pause:ctor()
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
     -- Pause actions
     local director = cc.Director:getInstance()
     self.targets = director:getActionManager():pauseAllRunningActions()

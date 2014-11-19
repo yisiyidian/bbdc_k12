@@ -12,6 +12,10 @@ end
 
 function PopupStarInfo:ctor()
     --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
     local  starNumber = s_CURRENT_USER:getUserCurrentChapterObtainedStarCount()
     local  totalNumber = 255
     
@@ -61,12 +65,19 @@ end
 function PopupStarInfo:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupStarInfo:onContinueButtonClicked()
     s_logd('on collect button clicked')
     local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
     self:runAction(action1) 
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    
     s_SCENE:callFuncWithDelay(0.3,function()
     s_SCENE:removeAllPopups()
     end)

@@ -11,6 +11,10 @@ function PopupNormalLevel.create(levelKey)
 end
 
 function PopupNormalLevel:plotStar(node, starCount)
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
     local star1, star2, star3
     if starCount == 0 then
         star1 = cc.Sprite:create('image/chapter_level/greyStar.png')
@@ -93,6 +97,9 @@ end
 function PopupNormalLevel:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupNormalLevel:onStudyButtonClicked(levelKey)
@@ -112,6 +119,10 @@ end
 function PopupNormalLevel:onTestButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
         if levelData.isPassed ~= 1 then

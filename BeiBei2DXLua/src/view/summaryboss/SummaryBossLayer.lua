@@ -34,6 +34,15 @@ function SummaryBossLayer.create(levelConfig)
     layer.isPaused = false
     layer.isHinting = false
     
+    -- slide coco
+    local slideCoco = {}
+    slideCoco[1] = s_sound_slideCoconut
+    slideCoco[2] = s_sound_slideCoconut1
+    slideCoco[3] = s_sound_slideCoconut2
+    slideCoco[4] = s_sound_slideCoconut3
+    slideCoco[5] = s_sound_slideCoconut4
+    slideCoco[6] = s_sound_slideCoconut5
+    slideCoco[7] = s_sound_slideCoconut6
     
     local startAtNode
 
@@ -198,6 +207,12 @@ function SummaryBossLayer.create(levelConfig)
                             stackTop.removeSelectStyle()
                             table.remove(selectStack)
                         end
+                        -- slide coco "s_sound_slideCoconut"
+                        if #selectStack <= 7 then
+                            playSound(slideCoco[#selectStack])
+                        else
+                            playSound(slideCoco[7])
+                        end
                     end
                 else
                     if #selectStack == 0 then
@@ -212,6 +227,8 @@ function SummaryBossLayer.create(levelConfig)
                         end
                         currentNode.hasSelected = true
                         selectStack[#selectStack+1] = currentNode
+                        --slide coco
+                        playSound(s_sound_slideCoconut)
                     else
                         local stackTop = selectStack[#selectStack]
                         if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
@@ -283,6 +300,15 @@ function SummaryBossLayer.create(levelConfig)
                     layer.ccbcrab[i]['legBig']:setVisible(false)
                     layer.ccbcrab[i]['legSmall']:setVisible(true)
                     layer.crab[i]:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT * 0.2))))
+                    
+                    -- slide true
+                    playSound(s_sound_learn_true)
+                    -- beat boss sound
+                    s_SCENE:callFuncWithDelay(0.3,function()
+                    playSound(s_sound_FightBoss)       
+                    end)
+
+                    
                     local delaytime = 0
                     for j = 1, #selectStack do
                         local node = selectStack[j]
@@ -396,6 +422,9 @@ function SummaryBossLayer.create(levelConfig)
                 end
             end
             selectStack = {}
+            
+            --slide wrong
+            playSound(s_sound_learn_false)
         end
     end
 
@@ -830,6 +859,9 @@ function SummaryBossLayer:win()
     local alter = SummaryBossAlter.create(true)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
+    
+    -- win sound
+    playSound(s_sound_win)
 end
 
 function SummaryBossLayer:lose()
@@ -838,6 +870,9 @@ function SummaryBossLayer:lose()
     local alter = SummaryBossAlter.create(false)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
+    
+    -- lose sound
+    playSound(s_sound_fail)    
 end
 
 function SummaryBossLayer:hint()

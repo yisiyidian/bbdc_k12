@@ -112,16 +112,28 @@ function LevelLayerI:plotStarAnimation(levelKey, starCount)
             star1:setVisible(true)
             local action = cc.ScaleTo:create(0.4, 1.0)
             star1:runAction(action)
+--            -- star sound
+--            if starCount >= 1 then
+--                playSound(s_sound_star1)
+--            end
         end)
         s_SCENE:callFuncWithDelay(0.6,function()
             star2:setVisible(true)
             local action = cc.ScaleTo:create(0.4, 1.0)
             star2:runAction(action)
+--            --star sound
+--            if starCount >= 2 then
+--                playSound(s_sound_star2)
+--            end
         end)
         s_SCENE:callFuncWithDelay(0.9,function()
             star3:setVisible(true)
             local action = cc.ScaleTo:create(0.4, 1.0)
             star3:runAction(action)
+--            --star sound
+--            if starCount >= 3 then
+--                playSound(s_sound_star3)
+--            end
         end)
     end
 end
@@ -397,6 +409,8 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelData == nil or levelData.isLevelUnlocked == 0 then
         self:clickLockedLevelAnmation(levelKey)
+        --locked sound
+        playSound(s_sound_clickLocked)
     elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
         local layer = popupNormal.create(levelKey)

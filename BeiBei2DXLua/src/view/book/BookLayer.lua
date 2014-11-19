@@ -28,7 +28,9 @@ function BookLayer.create()
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then          
+            if eventType == ccui.TouchEventType.began then    
+                -- button sound
+                playSound(s_sound_buttonEffect)   
                 local affirm = function()
                     if i == 1 then
                         s_CURRENT_USER.bookKey = s_BOOK_KEY_NCEE
@@ -68,6 +70,8 @@ function BookLayer.create()
                         end)
                 end      
                 s_TIPS_LAYER:showSmall("选择"..full_name_array[i].."课程", affirm)
+                -- popup sound "Aluminum Can Open "
+                playSound(s_sound_Aluminum_Can_Open)
             end
         end
         table.insert(func_array, click)

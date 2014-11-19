@@ -135,7 +135,9 @@ function HomeLayer.create()
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            s_CorePlayManager.enterLevelLayer()
+            s_CorePlayManager.enterLevelLayer()  
+              -- button sound
+             playSound(s_sound_buttonEffect)  
         end
     end
 
@@ -145,6 +147,7 @@ function HomeLayer.create()
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
+
 
     local button_data
     local isDataShow = false

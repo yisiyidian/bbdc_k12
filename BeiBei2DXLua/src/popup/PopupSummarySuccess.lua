@@ -9,6 +9,11 @@ function PopupSummarySuccess.create(levelKey, current_star, total_star)
 end
 
 function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
+    
     self.ccbPopupSummarySuccess = {}
     self.ccbPopupSummarySuccess['onCloseButtonClicked'] = function()
         self:onCloseButtonClicked()
@@ -47,6 +52,9 @@ end
 function PopupSummarySuccess:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupSummarySuccess:onGoButtonClicked(levelKey)

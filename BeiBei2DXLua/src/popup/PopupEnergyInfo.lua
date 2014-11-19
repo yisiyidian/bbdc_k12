@@ -10,6 +10,9 @@ function PopupEnergyInfo.create()
 end
 
 function PopupEnergyInfo:ctor()  
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+
     local json = ''
     local atlas = ''
 --    local min = time_betweenServerAndEnergy / 60
@@ -157,6 +160,9 @@ end
 function PopupEnergyInfo:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupEnergyInfo:onBuyButtonClicked()
@@ -167,7 +173,9 @@ function PopupEnergyInfo:onBuyButtonClicked()
     local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
     self:runAction(action1) 
 
- 
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    
     s_SCENE:callFuncWithDelay(0.3,function()
         local IntroLayer = require("popup/PopupEnergyBuy")
         local introLayer = IntroLayer.create()  
