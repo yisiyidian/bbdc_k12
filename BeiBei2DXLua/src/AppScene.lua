@@ -158,6 +158,7 @@ function AppScene:signUp(username, password)
             s_SCENE:getConfigs(true)
         end
     end
+    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
     s_UserBaseServer.signup(username, password, onResponse)
 end
@@ -175,6 +176,7 @@ function AppScene:logIn(username, password)
             end
         end
     end
+    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
     s_UserBaseServer.login(username, password, onResponse)
 end

@@ -9,14 +9,29 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 function test()
 
+    -- local arr = {1,2,3}
+    -- local index = 1
+    -- local co
+    -- co = coroutine.create(function()
+    --     while index <= #arr do
+    --         local function onSucceed (api, result) 
+    --             print_lua_table (result) 
+    --             coroutine.resume(co)
+    --         end
+    --         local function onFailed (api, code, message, description) 
+    --             print (message) 
+    --             coroutine.resume(co)
+    --         end
+    --         s_SERVER.searchCount('_User', '{"username":"' .. 'yehanjie1' .. '"}', onSucceed, onFailed)
+    --         coroutine.yield()
+    --         index = index + 1
+    --     end 
+    -- end)
+    -- print(tostring(co))
+    -- coroutine.resume(co)
 
-
-    local IntroLayer = require("view.login.IntroLayer")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
-    
---    local a = ziaoangTest.create()
---    s_SCENE:replaceGameLayer(a)
+    -- local a = ziaoangTest.create()
+    -- s_SCENE:replaceGameLayer(a)
     
 
     -- local wordList = {'apple', 'tea', 'many'}
