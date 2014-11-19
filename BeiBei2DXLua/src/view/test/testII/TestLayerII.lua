@@ -158,6 +158,9 @@ function TestLayerII.create()
         readygo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
         layer:addChild(readygo)
         readygo:addAnimation(0, 'animation', false)
+        
+        -- ready go "s_sound_ReadyGo"
+        playSound(s_sound_ReadyGo)
     end
     
     local progress_back = cc.Sprite:create("image/progress/progressB1.png")

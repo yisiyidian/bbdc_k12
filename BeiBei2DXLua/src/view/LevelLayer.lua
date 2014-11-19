@@ -230,7 +230,7 @@ function LevelLayer:ctor()
 --    item2:addChild(levelLayerII)
 --    listView:pushBackCustomItem(item2)
 --    --listView:insertCustomItem(item1, 0)
-    playMusic(s_sound_bgm1,true)
+
 
     -- right top node
 
@@ -261,7 +261,7 @@ function LevelLayer:ctor()
 --    pauseButton:setLocalZOrder(1)
 --    self:addChild(pauseButton)
 
-
+    -- level select "s_sound_bgm1"
     playMusic(s_sound_bgm1,true)
     
     

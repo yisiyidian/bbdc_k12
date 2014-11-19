@@ -338,10 +338,12 @@ function SummaryBossLayer.create(levelConfig)
                     else
                         selectStack = {}
                         if layer.girlAfraid then
-                            s = 'girl-afraid'
+                            s = 'girl-afraid' 
                         else 
                             s = 'girl-stand'
                         end
+
+                        
                         layer.girl:setAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,s,true)
                         if killedCrabCount == #layer.wordPool[layer.currentIndex] then
@@ -404,7 +406,8 @@ function SummaryBossLayer.create(levelConfig)
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
-    
+    -- boss "s_sound_Get_Outside"
+    playMusic(s_sound_Get_Outside,true)
     
     return layer  
 end
@@ -445,6 +448,8 @@ function SummaryBossLayer:initBossLayer(levelConfig)
         if self.currentBlood > 0 then
             self.girlAfraid = true
             self.girl:setAnimation(0,'girl-afraid',true)
+            -- deadline "Mechanical Clock Ring "
+            playSound(s_sound_Mechanical_Clock_Ring)
         end
     end,{})
     local blinkIn = cc.FadeTo:create(0.5,50)
@@ -486,6 +491,9 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     readyGo:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.5)
     readyGo:addAnimation(0,'animation',false)
     self:addChild(readyGo,100)
+    
+    -- ready go "ReadyGo"
+    playSound(s_sound_ReadyGo)
     
     --add boss
     local bossNode = cc.Node:create()

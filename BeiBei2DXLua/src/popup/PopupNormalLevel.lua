@@ -104,6 +104,9 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     s_CorePlayManager.enterStudyLayer()
     -- download sounds of next 5th level
     s_HttpRequestClient.downloadSoundsOfNext5thLevel(levelKey)
+    
+    -- energy cost "cost"
+    playSound(s_sound_cost)
 end
 
 function PopupNormalLevel:onTestButtonClicked(levelKey)
