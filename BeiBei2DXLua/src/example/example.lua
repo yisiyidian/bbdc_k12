@@ -9,8 +9,14 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 function test()
 
-    local a = ziaoangTest.create()
-    s_SCENE:replaceGameLayer(a)
+
+
+    local IntroLayer = require("view.login.IntroLayer")
+    local introLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(introLayer)
+    
+--    local a = ziaoangTest.create()
+--    s_SCENE:replaceGameLayer(a)
     
 
     -- local wordList = {'apple', 'tea', 'many'}

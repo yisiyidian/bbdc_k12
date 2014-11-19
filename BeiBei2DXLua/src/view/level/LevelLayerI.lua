@@ -276,6 +276,10 @@ local onTouchBegan = function(touch, event)
     local touchPosition = touch:getLocation()
     -- plot shark
     --print(touchPosition.x..','..touchPosition.y)
+    
+    -- click wave "s_sound_clickWave"
+    playSound(s_sound_clickWave)
+    
 end
 
 function LevelLayerI:ctor()

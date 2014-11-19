@@ -15,7 +15,7 @@ function playSound(filename)
     if db.isSoundOn() then
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
         if cc.FileUtils:getInstance():isFileExist(localPath) then
-            cc.SimpleAudioEngine:getInstance():preloadEffect(localPath)
+            cc.SimpleAudioEngine:getInstance():playEffect(localPath)
         end
     end
 end
@@ -46,7 +46,7 @@ function playWordSound(word)
     if db.isSoundOn() then
         local localPath = getWordSoundFilePath(word)
         if cc.FileUtils:getInstance():isFileExist(localPath) then
-            cc.SimpleAudioEngine:getInstance():playMusic(localPath, false)
+            cc.SimpleAudioEngine:getInstance():playEffect(localPath, false)
         end
     end
 end

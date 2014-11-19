@@ -292,6 +292,9 @@ function HomeLayer.create()
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+    
+    -- main pape  "First_Noel_pluto" 
+    playMusic(s_sound_First_Noel_pluto,true)
 
     return layer
 end

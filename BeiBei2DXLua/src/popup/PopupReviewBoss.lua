@@ -46,6 +46,9 @@ end
 function PopupReviewBoss:onGoButtonClicked()
     s_logd('on go button clicked')
     
+    -- energy cost "cost"
+    playSound(s_sound_cost)
+    
     self:onCloseButtonClicked()
     --local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if s_CURRENT_USER.energyCount >= s_review_boss_energy_cost then

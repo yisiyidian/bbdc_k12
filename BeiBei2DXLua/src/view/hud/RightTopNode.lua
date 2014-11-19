@@ -57,7 +57,9 @@ function RightTopNode:ctor()
 
     local click_word = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then    
-
+            local IntroLayer = require("popup/PopupLoginSignup")
+            introLayer_heart = IntroLayer.create()  
+            s_SCENE:popup(introLayer_heart)
         end
     end
 
