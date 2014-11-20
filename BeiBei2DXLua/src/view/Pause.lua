@@ -80,11 +80,15 @@ function Pause:onRetry()
     
     --button sound
     playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function Pause:onBack()
     --button sound
     playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function Pause:onContinue()
@@ -92,6 +96,8 @@ function Pause:onContinue()
     
     --button sound
     playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function Pause:onHelp()

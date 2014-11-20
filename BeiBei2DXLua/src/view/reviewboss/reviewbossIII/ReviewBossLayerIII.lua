@@ -114,6 +114,8 @@ function ReviewBossLayerIII.create()
         local logic_location = checkTouchIndex(location)
 
         if logic_location.x == rbCurrentWordIndex then
+            -- button sound
+            playSound(s_sound_buttonEffect)
             if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][logic_location.y].character then
                 rbProgressBar.addOne()
                 sprite_array[logic_location.x][logic_location.y].right()

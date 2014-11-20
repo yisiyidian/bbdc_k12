@@ -198,6 +198,8 @@ function StudyLayerIV.create()
 
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_changeview:getTitleText() == "去划单词" then
                 button_changeview:setTitleText("再看一次")

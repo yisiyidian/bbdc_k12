@@ -1,4 +1,5 @@
 local DataClassBase = require('model/user/DataClassBase')
+local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 
 local DataUser = class("DataUser", function()
     return DataClassBase.new()
@@ -54,7 +55,7 @@ function DataUser:ctor()
 
     self.needToUnlockNextChapter           = 0
 
-    self.dailyCheckInData                  = {}
+    self.dailyCheckInData                  = DataDailyCheckIn.create()
     self.levels                            = {}
     self.logInDatas                        = {}
 end
@@ -81,14 +82,13 @@ function DataUser:parseServerLevelData(results)
 end
 
 function DataUser:parseServerDailyCheckInData(results)
-    local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
-   self.dailyCheckInData = {}
-   for i, v in ipairs(results) do
-       local data = DataDailyCheckIn.create()
-       parseServerDataToUserData(v, data)
-       self.dailyCheckInData[i] = data
-       print_lua_table(data)
-   end 
+    for i, v in ipairs(results) do
+        local data = DataDailyCheckIn.create()
+        parseServerDataToUserData(v, data)
+        self.dailyCheckInData = data
+        print_lua_table(data)
+        break
+    end 
 end
 
 function DataUser:parseServerDataLogIn(results)

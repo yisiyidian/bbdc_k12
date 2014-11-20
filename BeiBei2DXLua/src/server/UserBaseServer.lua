@@ -204,6 +204,21 @@ function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
     s_SERVER.search('classes/DataDailyCheckIn?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
 end
 
+function UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, onSucceed, onFailed)
+    s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards = lastCheckInAward
+    UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData,
+        function (api, result) 
+            if lastCheckInAward <= #s_DATA_MANAGER.dailyCheckIn then
+                local metaDailyCheckIn = s_DATA_MANAGER.dailyCheckIn[lastCheckInAward]
+                s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + metaDailyCheckIn.count
+                UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
+            end
+            if onSucceed ~= nil then onSucceed(api, result) end
+        end, 
+        onFailed
+    )
+end
+
 ----
 
 -- who I follow
@@ -278,9 +293,7 @@ end
 
 function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFailed)
     local s = function (api, result)
-        --for i, v in ipairs(result) do
-            parseServerDataToUserData(result, dataObject)
-        --end
+        parseServerDataToUserData(result, dataObject)
         if onSucceed ~= nil then onSucceed(api, result) end
     end
     

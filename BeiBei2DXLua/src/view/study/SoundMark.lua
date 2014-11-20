@@ -22,6 +22,8 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
 
     local changeCountry = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
             if button_country:getTitleText() == "US" then
                 s_CURRENT_USER.isSoundAm = 0
                 button_country:setTitleText("EN")

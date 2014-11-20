@@ -180,6 +180,8 @@ function TestLayerII.create()
     local button_donotknow_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             timeOut()   
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
 

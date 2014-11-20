@@ -120,6 +120,8 @@ function LevelLayerII:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelData == nil or levelData.isLevelUnlocked == 0 then
         self:clickLockedLevelAnmation(levelKey)
+        --locked sound
+        playSound(s_sound_clickLocked)
     elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
         local layer = popupNormal.create(levelKey)

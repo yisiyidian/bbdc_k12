@@ -183,13 +183,35 @@ end
 
 function AppScene:getDailyCheckIn()
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
+    local co
+    co = coroutine.create(function(results)
+        if (results ~= nil) and (#results > 0) then
+            print ('getDailyCheckInOfCurrentUser: 02')
+            s_CURRENT_USER:parseServerDailyCheckInData(results)
+            s_SCENE:getConfigs(false)
+        else
+            print ('getDailyCheckInOfCurrentUser: 03')
+            s_CURRENT_USER.dailyCheckInData.userId = s_CURRENT_USER.objectId
+            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData, 
+                function (api, result)
+                    print_lua_table (s_CURRENT_USER.dailyCheckInData)
+                    coroutine.resume(co, {})
+                end,
+                function (api, code, message, description)
+                    coroutine.resume(co, {})
+                end)
+            coroutine.yield()
+            s_SCENE:getConfigs(false)
+        end    
+    end)
     s_UserBaseServer.getDailyCheckInOfCurrentUser( 
         function (api, result)
-            s_CURRENT_USER:parseServerDailyCheckInData(result.results)
-            s_SCENE:getConfigs(false)
+            print ('getDailyCheckInOfCurrentUser: 00')
+            coroutine.resume(co, result.results)
         end,
         function (api, code, message, description) 
-            s_SCENE:getConfigs(false)
+            print ('getDailyCheckInOfCurrentUser: 01')
+            coroutine.resume(co, {}) -- can not pass nil value
         end
     )
 end
@@ -210,10 +232,10 @@ function AppScene:getFollowees()
     s_UserBaseServer.getFolloweesOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerFolloweesData(result.results)
-            self:getFollowers()
+            s_SCENE:getFollowers()
         end,
         function (api, code, message, description)
-            self:getFollowers()
+            s_SCENE:getFollowers()
         end
     )
 end
@@ -223,10 +245,10 @@ function AppScene:getFollowers()
     s_UserBaseServer.getFollowersOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerFollowersData(result.results)
-            self:getLevels()
+            s_SCENE:getLevels()
         end,
         function (api, code, message, description)
-            self:getLevels()
+            s_SCENE:getLevels()
         end
     )
 end
@@ -236,10 +258,10 @@ function AppScene:getLevels()
     s_UserBaseServer.getLevelsOfCurrentUser(
         function (api, result)
             s_CURRENT_USER:parseServerLevelData(result.results)
-            self:onUserServerDatasCompleted()            
+            s_SCENE:onUserServerDatasCompleted()            
         end,
         function (api, code, message, description)
-            self:onUserServerDatasCompleted()
+            s_SCENE:onUserServerDatasCompleted()
         end
     )
 end
@@ -260,11 +282,14 @@ end
 
 function AppScene:saveSignUpAndLogInData(onSaved)
     self:loadConfigs()
+
     local friends = {}
-    for follower in s_CURRENT_USER.followers do
+    print_lua_table (s_CURRENT_USER.followers)
+    print_lua_table (s_CURRENT_USER.followees)
+    for key, follower in pairs(s_CURRENT_USER.followers) do
     	friends[follower] = 1
     end
-    for followee in s_CURRENT_USER.followees do
+    for key, followee in pairs(s_CURRENT_USER.followees) do
         if friends[followee] then
             friends[followee] = 2
         end
