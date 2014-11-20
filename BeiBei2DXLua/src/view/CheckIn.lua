@@ -24,6 +24,19 @@ local letterArray = {}
 
 function CheckInNode:ctor()
 
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+
+    -- sound
+    local slideCoco = {}
+    slideCoco[1] = s_sound_slideCoconut
+    slideCoco[2] = s_sound_slideCoconut1
+    slideCoco[3] = s_sound_slideCoconut2
+    slideCoco[4] = s_sound_slideCoconut3
+    slideCoco[5] = s_sound_slideCoconut4
+    slideCoco[6] = s_sound_slideCoconut5
+    slideCoco[7] = s_sound_slideCoconut6
+
     self.ccb = {}
 
     self.ccb['CCB_checkInNode'] = ccbCheckInNode
@@ -185,6 +198,9 @@ function CheckInNode:ctor()
             startNode.hasSelected = true
             startAtNode = true
             updateWord()
+            
+            -- slide coco
+            playSound(s_sound_slideCoconut)
         else
             startAtNode = false
         end
@@ -253,6 +269,14 @@ function CheckInNode:ctor()
                             updateWord()
                         end
                     end
+                    
+                    -- slide coco "s_sound_slideCoconut"
+                    if #selectStack <= 7 then
+                        playSound(slideCoco[#selectStack])
+                    else
+                        playSound(slideCoco[7])
+                    end
+                    
                 else
                     if #selectStack == 0 then
                         currentNode.hasSelected = true
@@ -380,6 +404,12 @@ function CheckInNode:onClose()
     end
     ,{})
     ccbCheckInNode['_checkInBack']:runAction(cc.Sequence:create(moveOut,remove))
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function CheckInNode:onSucceedClose()
@@ -389,6 +419,12 @@ function CheckInNode:onSucceedClose()
     end
     ,{})
     ccbCheckInNode['_succeedBack']:runAction(cc.Sequence:create(moveOut,remove))
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 return CheckInNode

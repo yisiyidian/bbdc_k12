@@ -40,6 +40,8 @@ function HomeLayer.create()
    
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
@@ -73,7 +75,8 @@ function HomeLayer.create()
     
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
     
@@ -153,6 +156,8 @@ function HomeLayer.create()
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
             if isDataShow then
                 isDataShow = false
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
@@ -198,6 +203,8 @@ function HomeLayer.create()
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
                 print(label_name[i])
+                -- button sound
+                playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "登出游戏" then
@@ -243,6 +250,8 @@ function HomeLayer.create()
         if has_study then
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
+                -- button sound
+                playSound(s_sound_buttonEffect)
                 book_back:removeAllChildren()
                 book_back:addAnimation(0, 'animation', false)
             end
