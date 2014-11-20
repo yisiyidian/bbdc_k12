@@ -10,7 +10,7 @@ function DataLogIn.create()
 end
 
 function DataLogIn:ctor()
-    self.className = 'WMAV_LogInDateData'
+    self.className = 'DataLogIn'
     
     self.Monday = 0
     self.Tuesday = 0

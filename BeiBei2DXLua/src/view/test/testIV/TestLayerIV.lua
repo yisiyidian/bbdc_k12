@@ -183,6 +183,9 @@ function TestLayerIV.create()
         readygo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
         layer:addChild(readygo)
         readygo:addAnimation(0, 'animation', false)
+        
+        -- ready go "s_sound_ReadyGo"
+        playSound(s_sound_ReadyGo)
     end
 
     local button_donotknow_clicked = function(sender, eventType)

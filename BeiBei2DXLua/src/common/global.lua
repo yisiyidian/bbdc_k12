@@ -105,6 +105,8 @@ local function _initServer()
     -- user base server
     s_UserBaseServer          = require('server.UserBaseServer')
     s_HttpRequestClient       = require('server.HttpRequestClient')
+
+    require('server.Analytics')
 end
 
 local function _initData()
@@ -128,7 +130,8 @@ end
 
 function initApp()
     -- versions
-    s_APP_VERSION = 151
+    s_APP_VERSION = 150000
+    s_CONFIG_VERSION = 150000
 
     _initConstant()
     _initTool()

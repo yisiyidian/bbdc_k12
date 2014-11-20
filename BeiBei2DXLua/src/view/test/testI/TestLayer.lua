@@ -104,7 +104,7 @@ function TestLayer.create()
         progressBar.rightStyle()
     
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
-        showAnswerStateBack:setPosition(-s_DESIGN_WIDTH/2, 768)
+        showAnswerStateBack:setPosition(s_DESIGN_WIDTH/2-bigWidth, 768)
         layer:addChild(showAnswerStateBack)
         
         local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
@@ -140,7 +140,7 @@ function TestLayer.create()
             local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, cloud_down_y1))
             cloud_down:runAction(action2)
             
-            local action3 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2*3, 768))
+            local action3 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2+bigWidth, 768))
             showAnswerStateBack:runAction(action3)
             
             local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
@@ -168,7 +168,7 @@ function TestLayer.create()
         s_CorePlayManager.unfamiliarWord()
         
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
-        showAnswerStateBack:setPosition(s_DESIGN_WIDTH/2*3, 768)
+        showAnswerStateBack:setPosition(s_DESIGN_WIDTH/2+bigWidth, 768)
         layer:addChild(showAnswerStateBack)
         
         local action = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 768))
@@ -196,9 +196,27 @@ function TestLayer.create()
                 layer:addChild(alter)
             end
         end
+        
+        local endEffect = function()
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, cloud_up_y1))
+            cloud_up:runAction(action1)
+
+            local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, cloud_down_y1))
+            cloud_down:runAction(action2)
+
+            local action3 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2-bigWidth, 768))
+            showAnswerStateBack:runAction(action3)
+
+            local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
+            mat:runAction(action4)
+
+            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
+            local action6 = cc.CallFunc:create(changeLayer)
+            progress_back:runAction(cc.Sequence:create(action5,action6))
+        end
 
         local action1 = cc.DelayTime:create(1)
-        local action2 = cc.CallFunc:create(changeLayer)
+        local action2 = cc.CallFunc:create(endEffect)
         local action3 = cc.Sequence:create(action1,action2)
         layer:runAction(action3) 
     end
@@ -230,6 +248,9 @@ function TestLayer.create()
         readygo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
         layer:addChild(readygo)
         readygo:addAnimation(0, 'animation', false)
+        
+        -- ready go "s_sound_ReadyGo"
+        playSound(s_sound_ReadyGo)
     end
     
     local button_donotknow_clicked = function(sender, eventType)

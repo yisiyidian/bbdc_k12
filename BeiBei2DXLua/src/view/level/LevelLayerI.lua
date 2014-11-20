@@ -12,7 +12,38 @@ function LevelLayerI.create()
     return layer
 end
 
-
+function LevelLayerI:plotLevelNumber(levelKey)
+    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData('chapter0', levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelNumber = levelIndex + 1
+    if  levelData ~= nil and levelData.isLevelUnlocked == 1 then
+        if levelConfig['type'] == 1 then -- summary boss
+            local summaryboss = levelButton:getChildByName('summaryboss'..string.sub(levelKey,6))
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_straight.fnt')
+            number:setScale(1.6)
+            number:setString(levelNumber)
+            number:setPosition(125, 100)
+            summaryboss:addChild(number)
+        else 
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_inclined.fnt')
+            number:setString(levelNumber)
+            number:setPosition(levelButton:getContentSize().width/2-8, levelButton:getContentSize().height/2+3)
+            levelButton:addChild(number)
+        end
+    else
+        local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+        local lockNumber = ccui.TextBMFont:create()        
+        lockNumber:setFntFile('font/number_brown.fnt')
+        lockNumber:setString(levelNumber)
+        lockNumber:setPosition(lockSprite:getContentSize().width/2, lockSprite:getContentSize().height/2-6)
+        lockSprite:addChild(lockNumber)
+    end
+    
+end
 
 function LevelLayerI:plotLevelStar(levelButton, heart)
     local star1, star2, star3
@@ -81,16 +112,28 @@ function LevelLayerI:plotStarAnimation(levelKey, starCount)
             star1:setVisible(true)
             local action = cc.ScaleTo:create(0.4, 1.0)
             star1:runAction(action)
+--            -- star sound
+--            if starCount >= 1 then
+--                playSound(s_sound_star1)
+--            end
         end)
         s_SCENE:callFuncWithDelay(0.6,function()
             star2:setVisible(true)
             local action = cc.ScaleTo:create(0.4, 1.0)
             star2:runAction(action)
+--            --star sound
+--            if starCount >= 2 then
+--                playSound(s_sound_star2)
+--            end
         end)
         s_SCENE:callFuncWithDelay(0.9,function()
             star3:setVisible(true)
             local action = cc.ScaleTo:create(0.4, 1.0)
             star3:runAction(action)
+--            --star sound
+--            if starCount >= 3 then
+--                playSound(s_sound_star3)
+--            end
         end)
     end
 end
@@ -144,7 +187,9 @@ function LevelLayerI:getPlayerPositionForLevel(levelKey)
     --print(levelButton:getPositionX()..','..levelButton:getPositionY())
     local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
     if levelConfig['type'] == 1 then
-          position.y = position.y - 50
+        position.y = position.y - 50
+    else
+        position.y = position.y - 20
     end
     
     return position
@@ -159,7 +204,16 @@ function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
 end
 
 function LevelLayerI:plotReviewBossPassOnLevel(levelKey)
-
+--    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+--    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzls  xuanxiaoguan  diaoluo.json', 'spine/3fxzls  xuanxiaoguan  diaoluo.atlas', 1)
+--    reviewBoss:addAnimation(0, 'animation', true)
+--    reviewBoss:setPosition(0, 0)
+--    levelButton:addChild(reviewBoss)
+--    local action1 = cc.RotateBy:create(0.5, 180)
+--    local action2 = cc.MoveBy:create(0.5, cc.p(300, 500))
+--    local action3 = cc.FadeOut:create(0.8)
+--    local action = cc.Spawn:create(action1, action2, action3, nil)
+--    reviewBoss:runAction(action)
 end
 
 function LevelLayerI:plotLevelDecoration(levelKey)
@@ -175,6 +229,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
             levelButton:addChild(boat)
         end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
+        --print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey)
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
             if s_CURRENT_USER.currentLevelKey ~= levelData.levelKey or s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_pass_state then
                 self:plotLevelStar(levelButton, levelData.stars)
@@ -184,7 +239,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
             -- add summary boss
             local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
             summaryboss:setPosition(0,10)
-            --summaryboss:addAnimation(0, 'animation',false)
+            summaryboss:setName('summaryboss'..string.sub(levelKey, 6))
             summaryboss:addAnimation(0, 'jianxiao', true)
             summaryboss:setScale(0.7)
             levelButton:addChild(summaryboss, 3)
@@ -233,6 +288,10 @@ local onTouchBegan = function(touch, event)
     local touchPosition = touch:getLocation()
     -- plot shark
     --print(touchPosition.x..','..touchPosition.y)
+    
+    -- click wave "s_sound_clickWave"
+    playSound(s_sound_clickWave)
+    
 end
 
 function LevelLayerI:ctor()
@@ -315,7 +374,8 @@ function LevelLayerI:ctor()
                     levelButton:addChild(lockSprite)               
                 end
             end
-        end
+            self:plotLevelNumber(levelConfig[i]['level_key'])
+        end  
     end
     
     -- register touch event
@@ -349,6 +409,8 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelData == nil or levelData.isLevelUnlocked == 0 then
         self:clickLockedLevelAnmation(levelKey)
+        --locked sound
+        playSound(s_sound_clickLocked)
     elseif levelConfig['type'] == 0 then  -- normal level
         local popupNormal = require('popup.PopupNormalLevel')
         local layer = popupNormal.create(levelKey)

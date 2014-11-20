@@ -9,6 +9,10 @@ function PopupReviewBoss:create()
 end
 
 function PopupReviewBoss:ctor()
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
     self.ccbPopupReviewBoss = {}
     self.ccbPopupReviewBoss['onCloseButtonClicked'] = function()
         self:onCloseButtonClicked()
@@ -41,10 +45,16 @@ end
 function PopupReviewBoss:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupReviewBoss:onGoButtonClicked()
     s_logd('on go button clicked')
+    
+    -- energy cost "cost"
+    playSound(s_sound_cost)
     
     self:onCloseButtonClicked()
     --local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)

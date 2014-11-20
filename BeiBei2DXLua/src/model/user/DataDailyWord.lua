@@ -10,7 +10,7 @@ function DataDailyWord.create()
 end
 
 function DataDailyWord:ctor()
-    self.className = 'WMAV_ICDailyWordData'
+    self.className = 'DataDailyWord'
     
     self.bookKey = ''
     self.learnedDate = 0

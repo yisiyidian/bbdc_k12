@@ -1,4 +1,6 @@
 
+local RELEASE_APP = false
+
 require "Cocos2d"
 
 -- cclog
@@ -15,6 +17,13 @@ function __G__TRACKBACK__(msg)
     return msg
 end
 
+-- remove print debug info when release app
+local sysPrint = print
+print = function ( ... )
+    if RELEASE_APP then return end
+    sysPrint('BEIBEI:' .. string.format(...))
+end
+
 local function main()
     collectgarbage("collect")
     -- avoid memory leak
@@ -29,6 +38,40 @@ local function main()
 
     require("common.global")
     initApp()
+
+    local LEAN_CLOUD_ID_TEST   = "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
+    local LEAN_CLOUD_KEY_TEST  = "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
+
+    local LEAN_CLOUD_ID        = "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
+    local LEAN_CLOUD_KEY       = "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
+
+    if RELEASE_APP then
+        s_debugger.configLog(false, false)
+        DEBUG_PRINT_LUA_TABLE = false
+        s_SERVER.debugLocalHost   = false
+        s_SERVER.isAppStoreServer = false -- TODO
+        s_SERVER.production       = 1
+
+        s_APP_VERSION = 150000
+        s_CONFIG_VERSION = 150000
+
+        s_SERVER.appId = LEAN_CLOUD_ID
+        s_SERVER.appKey = LEAN_CLOUD_KEY
+
+    else
+        s_debugger.configLog(true, true)
+        DEBUG_PRINT_LUA_TABLE = true
+        s_SERVER.debugLocalHost   = false
+        s_SERVER.isAppStoreServer = false
+        s_SERVER.production       = 0
+
+
+        s_APP_VERSION = 150003
+        s_CONFIG_VERSION = 150000
+
+        s_SERVER.appId = LEAN_CLOUD_ID_TEST
+        s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
+    end
     
     if cc.Director:getInstance():getRunningScene() then
         cc.Director:getInstance():replaceScene(s_SCENE)
@@ -43,7 +86,7 @@ local function main()
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- |||||||||||||||||||||||||||||||||||||
 -- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-local test_code = 1
+local test_code = 0
 -- *************************************
 if test_code == 0 then
    local startApp = function ()

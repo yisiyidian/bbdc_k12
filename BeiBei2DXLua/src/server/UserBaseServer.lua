@@ -14,8 +14,8 @@ function validateUsername(s)
     local ord = c:byte()
     if (ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then 
         local i = 1
-        local len = 1
-        while i < length do
+        local len = 0
+        while i <= length do
             local c = s:sub(i, i)
             local ord = c:byte()
             if (ord >= 48 and ord <= 57) or(ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then
@@ -32,7 +32,7 @@ function validateUsername(s)
             len = len + 1
         end
 
-        if len < 4 or len > 16 then 
+        if len < 4 or len > 10 then 
           s_logd(string.format('%s, %d, %d', s, length, len))
           return false 
         end
@@ -52,12 +52,11 @@ function validatePassword(s)
     return numberOfSubstitutions >= 6 and numberOfSubstitutions <= 16 and numberOfSubstitutions == length
 end
 
-local function onResponse_signup_login(objectjson, e, code, onResponse)
+local function onResponse_signUp_logIn(objectjson, e, code, onResponse)
     if e ~= nil then 
         s_logd('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
-        -- TODO: Android unknown error
         if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
             local sessionToken = objectjson
             s_logd('signup/logIn:' .. sessionToken)
@@ -98,22 +97,20 @@ end
 -- https://cn.avoscloud.com/docs/error_code.html
 
 -- function (user data, error description, error code)
-function UserBaseServer.signup(username, password, onResponse)
-    -- s_SERVER.request('apiSignUp', {['username']=username, ['password']=password}, onSucceed, onFailed)
+function UserBaseServer.signUp(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():signUp(username, password, function (objectjson, e, code)
-        onResponse_signup_login(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(objectjson, e, code, onResponse)
     end)
 end
 
 -- function (user data, error description, error code)
-function UserBaseServer.login(username, password, onResponse)
-    -- s_SERVER.request('apiLogIn', {['username']=username, ['password']=password}, onSucceed, onFailed)
+function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
-        onResponse_signup_login(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(objectjson, e, code, onResponse)
     end)
 end
 
@@ -204,7 +201,7 @@ s_UserBaseServer.getDailyCheckInOfCurrentUser(
 )
 ]]--
 function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
-    s_SERVER.search('classes/WMAV_DailyCheckInData?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
+    s_SERVER.search('classes/DataDailyCheckIn?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
 end
 
 ----
@@ -254,7 +251,7 @@ end
 ----
 
 function UserBaseServer.getDataLogIn(userId, week, onSucceed, onFailed)
-    s_SERVER.search('classes/WMAV_LogInDateData?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
+    s_SERVER.search('classes/DataLogIn?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
 end
 
 ----
@@ -269,7 +266,7 @@ s_UserBaseServer.getLevelsOfCurrentUser(
 )
 ]]--
 local function getLevels(userId, bookKey, onSucceed, onFailed)
-    s_SERVER.search('classes/WMAV_LevelData?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
+    s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
 end
 function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
     getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)

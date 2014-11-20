@@ -9,6 +9,11 @@ function PopupSummarySuccess.create(levelKey, current_star, total_star)
 end
 
 function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
+    
     self.ccbPopupSummarySuccess = {}
     self.ccbPopupSummarySuccess['onCloseButtonClicked'] = function()
         self:onCloseButtonClicked()
@@ -27,7 +32,7 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     self.ccbPopupSummarySuccess['summary_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_NORMAL_START_PLAY_SUMMARY_BOSS))
     -- add summary boss
     local boss = sp.SkeletonAnimation:create('spine/klschongshangdaoxia.json', 'spine/klschongshangdaoxia.atlas',1)
-    boss:addAnimation(0, 'animation', true)
+    boss:addAnimation(0, 'jianxiao', true)
     boss:setPosition(node:getContentSize().width/3, node:getContentSize().height/3)
     node:addChild(boss, 10)
     
@@ -47,11 +52,18 @@ end
 function PopupSummarySuccess:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupSummarySuccess:onGoButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on go button clicked')
+    
+    -- energy cost "cost"
+    playSound(s_sound_cost)
+    
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
         if levelData.isPassed ~= 1 then

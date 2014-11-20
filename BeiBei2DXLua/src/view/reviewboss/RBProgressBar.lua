@@ -60,6 +60,9 @@ function RBProgressBar.create(totalIndex, color)
         progress:runAction(action2)
     end
 
+    -- boss ""
+    playMusic(s_sound_Get_Outside,true)
+    
     return main
 end
 

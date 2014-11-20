@@ -21,7 +21,7 @@ else
     mkdir ${TMP_XXTEA_DIR}
 fi
 
-python exportCfg_allwords.py ${RAW_CONFIGS}/allword.json ${TMP_DIR}/allwords
+python exportCfg_allwords.py ${RAW_CONFIGS}/allword.json ${TMP_DIR}/allwords.json
 
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'ncee'
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'cet4'

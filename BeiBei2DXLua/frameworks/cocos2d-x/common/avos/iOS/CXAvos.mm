@@ -51,6 +51,10 @@ void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC 
     }];
 }
 
+void CXAvos::downloadConfigFiles(const char* objectIds, const char* path) {
+    
+}
+
 void CXAvos::downloadWordSoundFiles(const char* prefix, const char* wordsList, const char* subfix, const char* path) {
     
 }

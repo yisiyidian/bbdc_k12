@@ -5,6 +5,8 @@ local Server = {}
 Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
 Server.production = 0
+Server.appId = ''
+Server.appKey = ''
 Server.sessionToken = ''
 
 local function getURL()
@@ -18,14 +20,8 @@ end
 local function getAppData()
     local timestamp = os.time()
 
-    -- test server
-    local appId = '9xbbmdasvu56yv1wkg05xgwewvys8a318x655ejuay6yw38l'
-    local appKey = '8985fsy50arzouq9l74txc25akvjluygt83qvlcvi46xsagg'
-
-    if Server.isAppStoreServer then
-        appId = 'eowk9vvvcfzeoqd646sz1n3ml13ly735gsg7f3xstoutaozw'
-        appKey = '9qzx8oyd30q40so5tc4g0kgu171y7wg28v7gg59q4rn1xgv6'
-    end
+    local appId = Server.appId
+    local appKey = Server.appKey
 
     local xmd5 = ''
     xmd5 = cx.CXUtils:md5(timestamp .. appKey, xmd5)
@@ -132,13 +128,13 @@ end
 --     results - 查询结果的 AV.Object 列表
 --     count - 如果使用了 select count(*) 的查询语法，返回符合查询条件的记录数目。
 --     className - 查询的 class name
-function Server.CloudQueryLanguage(cql, onSucceed, onFailed)
-    Server.requestFunction('apiCQL', {['cql']=cql}, onSucceed, onFailed)
-end
+-- function Server.CloudQueryLanguage(cql, onSucceed, onFailed)
+--     Server.requestFunction('apiCQL', {['cql']=cql}, onSucceed, onFailed)
+-- end
 
-function Server.CloudQueryLanguageExtend(cat, cql, onSucceed, onFailed)
-    Server.requestFunction('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
-end
+-- function Server.CloudQueryLanguageExtend(cat, cql, onSucceed, onFailed)
+--     Server.requestFunction('apiCQLExtend', {['cat']=cat, ['cql']=cql}, onSucceed, onFailed)
+-- end
 -- CQL <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
@@ -162,7 +158,7 @@ end
 --     count - 
 --     className - 查询的 class name
 --
--- s_SERVER.search('classes/WMAV_BulletinBoard,
+-- s_SERVER.search('classes/DataBulletinBoard,
 --     function (api, result)
 --         print_lua_table (result)
 --     end, 
@@ -176,8 +172,8 @@ function Server.search(restSQL, onSucceed, onFailed)
     Server.requestFunction('apiRestSearch', {['path']='/1.1/' .. restSQL}, onSucceed, onFailed)
 end
 
--- s_SERVER.searchCount('WMAV_DeviceData', 
---     '{"country":"US"}', 
+-- s_SERVER.searchCount('DataBulletinBoard', 
+--     '{"index":1}', 
 --     function (api, result) 
 --       print (result.count)
 --     end, 

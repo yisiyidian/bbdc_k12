@@ -8,9 +8,32 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
+    local IntroLayer = require("view.login.IntroLayer")
+    local introLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(introLayer)
+    -- local arr = {1,2,3}
+    -- local index = 1
+    -- local co
+    -- co = coroutine.create(function()
+    --     while index <= #arr do
+    --         local function onSucceed (api, result) 
+    --             print_lua_table (result) 
+    --             coroutine.resume(co)
+    --         end
+    --         local function onFailed (api, code, message, description) 
+    --             print (message) 
+    --             coroutine.resume(co)
+    --         end
+    --         s_SERVER.searchCount('_User', '{"username":"' .. 'yehanjie1' .. '"}', onSucceed, onFailed)
+    --         coroutine.yield()
+    --         index = index + 1
+    --     end 
+    -- end)
+    -- print(tostring(co))
+    -- coroutine.resume(co)
 
-    local a = ziaoangTest.create()
-    s_SCENE:replaceGameLayer(a)
+    -- local a = ziaoangTest.create()
+    -- s_SCENE:replaceGameLayer(a)
     
 
     -- local wordList = {'apple', 'tea', 'many'}
@@ -29,9 +52,9 @@ function test()
     --     downloadFunc()
     -- end
 
-    local IntroLayer = require("view.login.IntroLayer")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+--    local IntroLayer = require("view.login.IntroLayer")
+--    local introLayer = IntroLayer.create()
+--    s_SCENE:replaceGameLayer(introLayer)
 
 --    local IntroLayer = require("view.hud.RightTopNode")
 --    local introLayer = IntroLayer.create()
@@ -53,8 +76,7 @@ function test()
 -- local function onFailed (api, code, message, description) print (message) end
 -- local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', '54128e44e4b080380a47debc')
 --     s_SERVER.searchRelations('_Followee', sql, 'followee', onSucceed, onFailed)
--- s_SERVER.search('classes/WMAV_LevelData?where={"userId":"' .. '54128e44e4b080380a47debc' .. '","bookKey":"' .. 'ncee' .. '"}', onSucceed, onFailed)
--- -- s_SERVER.searchCount('WMAV_DeviceData', '{"country":"US"}', onSucceed, onFailed)
+-- s_SERVER.search('classes/LevelData?where={"userId":"' .. '54128e44e4b080380a47debc' .. '","bookKey":"' .. 'ncee' .. '"}', onSucceed, onFailed)
 -- s_SERVER.searchCount('_User', '{"username":"' .. 'yehanjie1' .. '"}', onSucceed, onFailed)
 
 --local a = ziaoangTest.create()
@@ -171,8 +193,8 @@ function test()
 --    s_localSqlite = require("model.LocalDatabaseManager")
 --    s_localSqlite.open()
 --    s_localSqlite.initTables()
---    s_localSqlite.insertTable_Word_Prociency('apple', '4')
---    s_localSqlite.showTable_Word_Prociency()
+--    s_localSqlite.insertTable_DataWordProciency('apple', '4')
+--    s_localSqlite.showTable_DataWordProciency()
 --    s_localSqlite.close()
 
 --    local function onBuyResult( code, msg, info )

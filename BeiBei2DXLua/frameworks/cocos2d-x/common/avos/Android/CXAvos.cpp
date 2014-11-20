@@ -10,6 +10,8 @@
 #include "CCLuaEngine.h"
 #include "platform/android/jni/JniHelper.h"
 
+#define JAVA_PKG "com/beibei/wordmaster/AppActivity"
+
 using namespace cocos2d;
 
 CXAvos* CXAvos::m_pInstance = nullptr;
@@ -30,7 +32,7 @@ void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC 
     mLuaHandlerId_dl = nHandler;
 
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "downloadFile", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "downloadFile", "(Ljava/lang/String;Ljava/lang/String;)V")) {
         jstring stringArg_objectId = t.env->NewStringUTF(objectId);
         jstring stringArg_savepath = t.env->NewStringUTF(savepath);
 
@@ -42,9 +44,23 @@ void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC 
     }
 }
 
+void CXAvos::downloadConfigFiles(const char* objectIds, const char* path) {
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "downloadConfigFiles", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+        jstring stringArg_objectIds = t.env->NewStringUTF(objectIds);
+        jstring stringArg_path = t.env->NewStringUTF(path);
+
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, stringArg_objectIds, stringArg_path);
+
+        t.env->DeleteLocalRef(stringArg_objectIds);
+        t.env->DeleteLocalRef(stringArg_path);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 void CXAvos::downloadWordSoundFiles(const char* prefix, const char* wordsList, const char* subfix, const char* path) {
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "downloadWordSoundFiles", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "downloadWordSoundFiles", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V")) {
         jstring stringArg_prefix = t.env->NewStringUTF(prefix);
         jstring stringArg_wordsList = t.env->NewStringUTF(wordsList);
         jstring stringArg_subfix = t.env->NewStringUTF(subfix);
@@ -78,7 +94,7 @@ void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* file
 void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_signUp = nHandler;
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "signUp", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "signUp", "(Ljava/lang/String;Ljava/lang/String;)V")) {
         jstring stringArg_username = t.env->NewStringUTF(username);
         jstring stringArg_password = t.env->NewStringUTF(password);
 
@@ -105,7 +121,7 @@ void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* er
 void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_logIn = nHandler;
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "logIn", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "logIn", "(Ljava/lang/String;Ljava/lang/String;)V")) {
         jstring stringArg_username = t.env->NewStringUTF(username);
         jstring stringArg_password = t.env->NewStringUTF(password);
 
@@ -131,7 +147,7 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
 
 void CXAvos::logOut() {
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "logOut", "()V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "logOut", "()V")) {
         t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
     }

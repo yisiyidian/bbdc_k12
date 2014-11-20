@@ -9,6 +9,10 @@ function PopupSummaryFail.create(current_star, total_star)
 end
 
 function PopupSummaryFail:ctor(current_star, total_star)
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
     self.ccbPopupSummaryFail = {}
     self.ccbPopupSummaryFail['onCloseButtonClicked'] = self.onCloseButtonClicked
     self.ccbPopupSummaryFail['onContinueButtonClicked'] = self.onContinueButtonClicked
@@ -40,10 +44,16 @@ end
 function PopupSummaryFail:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupSummaryFail:onContinueButtonClicked()
     s_logd('on continue button clicked')
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 return PopupSummaryFail

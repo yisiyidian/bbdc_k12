@@ -15,6 +15,10 @@ function Pause.create()
 end
 
 function Pause:ctor()
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
     -- Pause actions
     local director = cc.Director:getInstance()
     self.targets = director:getActionManager():pauseAllRunningActions()
@@ -78,7 +82,11 @@ end
 
 function Pause:onHelp()
  -- judge normal / review / summary
- --   if 
+--    if xx.class.__cname == 
+--    for i=1,5 do
+--        print(tostring(s_GAME_LAYER.class.__cname[i]))
+--
+--   end
 
 
     local site  = "view.pausehelp.PauseHelpNormal"

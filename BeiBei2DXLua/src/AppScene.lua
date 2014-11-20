@@ -149,34 +149,36 @@ end
 
 ---- sign up & log in
 
-function AppScene:signUp(username, password)
-    local function onResponse(u, e, code)
-        if e then
-            s_TIPS_LAYER:showSmall(e)
-            s_LOADING_CIRCLE_LAYER:hide()
-        else
-            s_SCENE:gotoChooseBook()
-        end
+function AppScene:startLoadingData(hasAccount, username, password)
+    local getAccount
+    if hasAccount then 
+        getAccount = s_UserBaseServer.logIn
+    else
+        getAccount = s_UserBaseServer.signUp
     end
-    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
-    s_UserBaseServer.signup(username, password, onResponse)
-end
 
-function AppScene:logIn(username, password)
     local function onResponse(u, e, code)
         if e then                  
             s_TIPS_LAYER:showSmall(e)
             s_LOADING_CIRCLE_LAYER:hide()
+        elseif s_CURRENT_USER.bookKey == '' then
+            s_SCENE:getConfigs(true)
         else
-            if s_CURRENT_USER.bookKey == '' then
-                s_SCENE:gotoChooseBook()
-            else
-                s_SCENE:getDailyCheckIn()
-            end
+            s_SCENE:getDailyCheckIn()
         end
     end
+
+    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
-    s_UserBaseServer.login(username, password, onResponse)
+    getAccount(username, password, onResponse)
+end
+
+function AppScene:signUp(username, password)
+    self:startLoadingData(false, username, password)
+end
+
+function AppScene:logIn(username, password)
+    self:startLoadingData(true, username, password)
 end
 
 function AppScene:getDailyCheckIn()
@@ -184,15 +186,24 @@ function AppScene:getDailyCheckIn()
     s_UserBaseServer.getDailyCheckInOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerDailyCheckInData(result.results)
-            self:getFollowees()
+            s_SCENE:getConfigs(false)
         end,
         function (api, code, message, description) 
-            self:getFollowees()
+            s_SCENE:getConfigs(false)
         end
     )
 end
 
--- TODO : configs
+function AppScene:getConfigs(noBookKey)
+    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_CONFIG_DATA))
+    s_HttpRequestClient.getConfigs(function ()
+        if noBookKey then
+            s_SCENE:gotoChooseBook()
+        else
+            s_SCENE:getFollowees()
+        end
+    end)
+end
 
 function AppScene:getFollowees()
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
@@ -257,14 +268,15 @@ function AppScene:saveSignUpAndLogInData(onSaved)
         end
         data.week = week
         data:setWeekDay(os.time())
-        s_DATABASE_MGR.saveDataClassObject(data)
         s_UserBaseServer.saveDataObjectOfCurrentUser(data, 
             function (api, result)
                 onSaved()
+                s_DATABASE_MGR.saveDataClassObject(data)
                 s_LOADING_CIRCLE_LAYER:hide()
             end,
             function (api, code, message, description)
                 onSaved()
+                s_DATABASE_MGR.saveDataClassObject(data)
                 s_LOADING_CIRCLE_LAYER:hide()
             end)
     end
@@ -302,6 +314,7 @@ end
 function AppScene:onUserServerDatasCompleted()    
     self:saveSignUpAndLogInData(function ()
         s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+        s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
         s_CorePlayManager.enterHomeLayer()
     end)
 end

@@ -76,6 +76,7 @@ function IntroLayer.create()
         s_LOADING_CIRCLE_LAYER:show()
         s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
             if result.count <= 0 then -- not exist the user name
+                s_CURRENT_USER.isGuest = 1
                 s_SCENE:signUp(randomUserName, "bbdc123#")
             else -- exist the user name
                 visitLogin()
@@ -90,6 +91,8 @@ function IntroLayer.create()
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             visitLogin()
+            --button sound
+            playSound(s_sound_buttonEffect)
         end
     end
     
@@ -221,7 +224,8 @@ function IntroLayer.create()
                         loginAlter:setTag(1)
                         loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(loginAlter)
-                --        playSound(s_sound_buttonEffect)
+                        -- button sound
+                        playSound(s_sound_buttonEffect)
                         loginAlter.close = function()
                             layer:removeChildByTag(1)
                         end
@@ -234,7 +238,8 @@ function IntroLayer.create()
                         loginAlter:setTag(2)
                         loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(loginAlter)
-               --         playSound(s_sound_buttonEffect)
+                        -- button sound
+                        playSound(s_sound_buttonEffect)
                         loginAlter.close = function()
                             layer:removeChildByTag(2)
                         end
