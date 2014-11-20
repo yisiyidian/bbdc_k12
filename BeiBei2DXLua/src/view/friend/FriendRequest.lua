@@ -107,7 +107,7 @@ function FriendRequest:ctor()
         local item = listView:getItem(i - 1)
         local button = item:getChildByName("Title Button")
         local index = listView:getIndex(item)
-
+        
         local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
         head:setScale(0.8)
         head:setPosition(0.26 * button:getContentSize().width,0.6 * button:getContentSize().height)
