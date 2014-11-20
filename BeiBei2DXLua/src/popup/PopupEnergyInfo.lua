@@ -12,6 +12,8 @@ end
 function PopupEnergyInfo:ctor()  
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
 
     local json = ''
     local atlas = ''
@@ -163,6 +165,8 @@ function PopupEnergyInfo:onCloseButtonClicked()
     
     -- button sound
     playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function PopupEnergyInfo:onBuyButtonClicked()
