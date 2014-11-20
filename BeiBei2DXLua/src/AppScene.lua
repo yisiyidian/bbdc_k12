@@ -260,7 +260,23 @@ end
 
 function AppScene:saveSignUpAndLogInData(onSaved)
     self:loadConfigs()
-
+    local friends = {}
+    for follower in s_CURRENT_USER.followers do
+    	friends[follower] = 1
+    end
+    for followee in s_CURRENT_USER.followees do
+        if friends[followee] then
+            friends[followee] = 2
+        end
+    end
+    for key, var in pairs(friends) do
+    	if var == 2 then
+    	   s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = key
+    	elseif var == 1 then
+            s_CURRENT_USER.fans[#s_CURRENT_USER.fans + 1] = key
+    	end
+    end
+    
     local DataLogIn = require('model/user/DataLogIn')
     local function updateWeek(data, week)
         if data == nil then 

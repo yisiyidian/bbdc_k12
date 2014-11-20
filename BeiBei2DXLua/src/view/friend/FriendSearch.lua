@@ -13,6 +13,7 @@ function FriendSearch.create()
 end
 
 function FriendSearch:ctor()
+
     local inputBack = cc.Sprite:create('image/friend/fri_inputback.png')
     inputBack:setPosition(0.5 * s_DESIGN_WIDTH,0.805 * s_DESIGN_HEIGHT)
     self:addChild(inputBack)
