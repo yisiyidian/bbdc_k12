@@ -232,10 +232,10 @@ function AppScene:getFollowees()
     s_UserBaseServer.getFolloweesOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerFolloweesData(result.results)
-            self:getFollowers()
+            s_SCENE:getFollowers()
         end,
         function (api, code, message, description)
-            self:getFollowers()
+            s_SCENE:getFollowers()
         end
     )
 end
@@ -245,10 +245,10 @@ function AppScene:getFollowers()
     s_UserBaseServer.getFollowersOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerFollowersData(result.results)
-            self:getLevels()
+            s_SCENE:getLevels()
         end,
         function (api, code, message, description)
-            self:getLevels()
+            s_SCENE:getLevels()
         end
     )
 end
@@ -258,10 +258,10 @@ function AppScene:getLevels()
     s_UserBaseServer.getLevelsOfCurrentUser(
         function (api, result)
             s_CURRENT_USER:parseServerLevelData(result.results)
-            self:onUserServerDatasCompleted()            
+            s_SCENE:onUserServerDatasCompleted()            
         end,
         function (api, code, message, description)
-            self:onUserServerDatasCompleted()
+            s_SCENE:onUserServerDatasCompleted()
         end
     )
 end
@@ -282,11 +282,14 @@ end
 
 function AppScene:saveSignUpAndLogInData(onSaved)
     self:loadConfigs()
+
     local friends = {}
-    for follower in s_CURRENT_USER.followers do
+    print_lua_table (s_CURRENT_USER.followers)
+    print_lua_table (s_CURRENT_USER.followees)
+    for key, follower in pairs(s_CURRENT_USER.followers) do
     	friends[follower] = 1
     end
-    for followee in s_CURRENT_USER.followees do
+    for key, followee in pairs(s_CURRENT_USER.followees) do
         if friends[followee] then
             friends[followee] = 2
         end
