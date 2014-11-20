@@ -505,6 +505,10 @@ function SummaryBossLayer:initBossLayer(levelConfig)
         self:addChild(pauseLayer,1000)
         self.layerPaused = true
         --director:getActionManager():resumeTargets(pausedTargets)
+        
+        --button sound
+        playSound(s_sound_buttonEffect)
+        
     end
     pauseBtn:registerScriptTapHandler(pauseScene)
     

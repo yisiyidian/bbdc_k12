@@ -155,6 +155,10 @@ showLogin = function()
             local action3 = cc.CallFunc:create(showRegister)
             local action4 = cc.Sequence:create(action1, action2, action3)
             main:runAction(action4)   
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
+            
         end
     end
     
@@ -271,7 +275,10 @@ showRegister = function()
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(showLogin)
             local action4 = cc.Sequence:create(action1, action2, action3)
-            main:runAction(action4)   
+            main:runAction(action4)  
+            
+            -- button sound
+            playSound(s_sound_buttonEffect) 
         end
     end
 

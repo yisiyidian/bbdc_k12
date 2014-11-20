@@ -116,14 +116,13 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     -- download sounds of next 5th level
     s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_US)
     s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_EN)
-    
-    -- energy cost "cost"
-    playSound(s_sound_cost)
+
 end
 
 function PopupNormalLevel:onTestButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
+    
     
     -- button sound
     playSound(s_sound_buttonEffect)
@@ -132,6 +131,13 @@ function PopupNormalLevel:onTestButtonClicked(levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
         if levelData.isPassed ~= 1 then
             s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+
+--            -- energy cost "cost"
+--            s_SCENE:callFuncWithDelay(0.3,function()
+--            playSound(s_sound_cost)
+--            
+--            end)
+
         end
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
         s_CorePlayManager.wordList = split(levelConfig.word_content, "|")

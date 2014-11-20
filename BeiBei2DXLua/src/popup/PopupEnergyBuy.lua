@@ -15,6 +15,8 @@ function PopupEnergyBuy:ctor()
     
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
     
     self.energy_number =  s_CURRENT_USER.energyCount 
     
@@ -156,6 +158,8 @@ function PopupEnergyBuy:onCloseButtonClicked()
     
     -- button sound
     playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function PopupEnergyBuy:onBuyButtonClicked()

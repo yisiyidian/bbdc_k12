@@ -118,6 +118,21 @@ showGirlAndStar = function()
         
         s_CorePlayManager.currentScore = starCount
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey, starCount)
+        
+        --star sound
+        if starCount > 0 then
+           playSound(s_sound_star1)
+           if starCount > 1 then
+               s_SCENE:callFuncWithDelay(0.3,function()
+               playSound(s_sound_star2)
+               end)
+               if starCount > 2 then
+                    s_SCENE:callFuncWithDelay(0.6,function()
+                        playSound(s_sound_star3)
+                    end)
+               end
+           end
+        end 
     end
     
     local action1 = cc.DelayTime:create(0.5)
@@ -140,6 +155,9 @@ showGirlAndStar = function()
             local action4 = cc.Sequence:create(action1, action2, action3)
             
             main:runAction(action4)       
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
 
@@ -231,6 +249,9 @@ showDetailInfo = function()
     local button_replayall_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then            
             s_CorePlayManager.leaveTestLayer_replay()
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
     
@@ -238,12 +259,18 @@ showDetailInfo = function()
         if eventType == ccui.TouchEventType.began then
             s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
     
     local button_continue_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_CorePlayManager.leaveTestLayer()
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
     
