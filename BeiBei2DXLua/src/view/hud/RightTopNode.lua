@@ -151,7 +151,7 @@ function RightTopNode:ctor()
 
     
     local function update(delta)
-    
+        -- timer from 1800 sec
         local time_betweenServerAndEnergy = s_CURRENT_USER.energyLastCoolDownTime + s_energyCoolDownSecs - s_CURRENT_USER.serverTime
         local min = math.floor(time_betweenServerAndEnergy / 60)
         local sec = math.floor(time_betweenServerAndEnergy % 60)
@@ -181,11 +181,16 @@ function RightTopNode:ctor()
         
 
          
---       --show number
---          introLayer.ccbPopupEnergyInfo['energy_number'] = heartNumber
---          local animation = introLayer.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
---         local label = animation:getChildByName("energyNumber")
---         label:setString(heartShow)
+        --judge is2TimeInSameDay
+
+        local lastCheckTime = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
+        local nowTime = s_CURRENT_USER.serverTime
+
+        if is2TimeInSameDay(lastCheckTime,nowTime) then
+            wordAday.setVisible(false)
+        else
+            wordAday.setVisible(true)
+        end
             
            
 
