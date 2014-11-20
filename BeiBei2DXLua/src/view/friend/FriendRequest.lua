@@ -13,15 +13,10 @@ function FriendRequest.create()
 end
 
 function FriendRequest:ctor()
---    local function listViewEvent(sender, eventType)
---        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
---            print("select child index = ",sender:getCurSelectedIndex())
---        end
---    end
 
-    local array = {}
-    for i = 1,20 do
-        array[i] = string.format("ListView_item_%d",i - 1)
+    local array = s_CURRENT_USER.fans
+    for i = 1,#array do
+        --array[i] = string.format("ListView_item_%d",i - 1)
     end
 
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
@@ -58,11 +53,11 @@ function FriendRequest:ctor()
 
     --add default item
     local count = table.getn(array)
-    for i = 1,math.floor(count / 4) do
+    for i = 1,math.floor(count) do
         listView:pushBackDefaultItem()
     end
     --insert default item
-    for i = 1,math.floor(count / 4) do
+    for i = 1,math.floor(count) do
         listView:insertDefaultItem(0)
     end
 
@@ -113,7 +108,7 @@ function FriendRequest:ctor()
         head:setPosition(0.26 * button:getContentSize().width,0.6 * button:getContentSize().height)
         button:addChild(head)
 
-        local fri_name = cc.Label:createWithSystemFont('Name','',28)
+        local fri_name = cc.Label:createWithSystemFont(s_CURRENT_USER.fans[i].username,'',28)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
         fri_name:setAnchorPoint(0,0)
@@ -126,7 +121,7 @@ function FriendRequest:ctor()
         request_label:setAnchorPoint(0,0)
         request_label:setPosition(fri_name:getPositionX() + fri_name:getContentSize().width,fri_name:getPositionY() + 2)
         button:addChild(request_label)
-        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',i),'',20)
+        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',s_CURRENT_USER.fans[i].wordsCount),'',20)
         fri_word:setColor(cc.c3b(0,0,0))
         fri_word:ignoreAnchorPointForPosition(false)
         fri_word:setAnchorPoint(0,1)
@@ -142,7 +137,21 @@ function FriendRequest:ctor()
         
         local function onAgree(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                listView:removeChild(item)
+                
+                s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
+                    function(api,result)
+                        listView:removeChild(item)
+                        s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1]
+                        table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+                            function(api,result)
+                            end,
+                            function(api, code, message, description)
+                            end)
+                    end,
+                    function(api, code, message, description)
+                    end
+                )
             end
         end
         agree:addTouchEventListener(onAgree)
@@ -156,23 +165,26 @@ function FriendRequest:ctor()
         
         local function onRefuse(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                listView:removeChild(item)
+                
+                s_UserBaseServer.removeFan(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
+                    function(api,result)
+                        listView:removeChild(item)
+                        table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+                            function(api,result)
+                            end,
+                            function(api, code, message, description)
+                            end)
+                    end,
+                    function(api, code, message, description)
+                    end
+                )
             end
         end
         refuse:addTouchEventListener(onRefuse)
         
         
     end
-
-    -- remove last item
-    listView:removeChildByTag(1)
-
-    -- remove item by index
-    items_count = table.getn(listView:getItems())
-    listView:removeItem(items_count - 1)
-
-    -- set all items layout gravity
-    listView:setGravity(ccui.ListViewGravity.centerVertical)
 
     --set items margin
     listView:setItemsMargin(2.0)

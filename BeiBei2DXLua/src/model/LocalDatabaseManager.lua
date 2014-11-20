@@ -256,7 +256,6 @@ function Manager.insertTable_DataWordProciency(wordName, wordProciency)
     else
         print("word exists")
     end
-    
     Manager.showTable_DataWordProciency()
 end
 

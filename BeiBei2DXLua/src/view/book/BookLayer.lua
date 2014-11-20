@@ -23,8 +23,8 @@ function BookLayer.create()
     hint:setColor(cc.c4b(100,100,100,255))
     backColor:addChild(hint) 
     
-    local name_array = {'CEE', 'CET4', 'CET6', 'IELTF', 'TOEFL'}
-    local full_name_array = {'NCEE', 'CET4', 'CET6', 'IELTF', 'TOEFL'}
+    local name_array = {'CEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
+    local full_name_array = {'NCEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)

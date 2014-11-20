@@ -302,8 +302,7 @@ function CheckInNode:ctor()
 
     onTouchEnded = function(touch, event)
         s_logd('touchEnd')
-        self.pNode.checkIn:setVisible(false)
-        s_CURRENT_USER:addEnergys(1)
+        
         if globalLock then
             return true
         end
@@ -320,6 +319,8 @@ function CheckInNode:ctor()
         end
 
         if selectWord == "apple" then
+            self.pNode.checkIn:setVisible(false)
+            s_CURRENT_USER:addEnergys(1)
             globalLock = true
 --            for i = 1, #selectStack do
 --                local node = selectStack[i]
