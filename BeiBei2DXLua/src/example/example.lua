@@ -9,6 +9,8 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 function test()
 
+    is2TimeInSameDay(906000490, 916010490)
+
     -- local arr = {1,2,3}
     -- local index = 1
     -- local co

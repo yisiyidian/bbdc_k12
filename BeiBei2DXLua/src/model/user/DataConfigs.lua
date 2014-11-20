@@ -26,12 +26,15 @@ function DataConfigs.getKeys()
     'allwords'}
 end
 
+DataConfigsVer = '_ver'
+
 function DataConfigs:ctor()
     self.className = 'DataConfigs'
 
     self.version = s_CONFIG_VERSION
     for i, v in ipairs(DataConfigs.getKeys()) do
         self[v] = ''
+        self[v .. DataConfigsVer] = s_CONFIG_VERSION
     end
 end
 

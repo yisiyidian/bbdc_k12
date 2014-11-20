@@ -183,13 +183,35 @@ end
 
 function AppScene:getDailyCheckIn()
     s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
+    local co
+    co = coroutine.create(function(results)
+        if (results ~= nil) and (#results > 0) then
+            print ('getDailyCheckInOfCurrentUser: 02')
+            s_CURRENT_USER:parseServerDailyCheckInData(results)
+            s_SCENE:getConfigs(false)
+        else
+            print ('getDailyCheckInOfCurrentUser: 03')
+            s_CURRENT_USER.dailyCheckInData.userId = s_CURRENT_USER.objectId
+            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData, 
+                function (api, result)
+                    print_lua_table (s_CURRENT_USER.dailyCheckInData)
+                    coroutine.resume(co, {})
+                end,
+                function (api, code, message, description)
+                    coroutine.resume(co, {})
+                end)
+            coroutine.yield()
+            s_SCENE:getConfigs(false)
+        end    
+    end)
     s_UserBaseServer.getDailyCheckInOfCurrentUser( 
         function (api, result)
-            s_CURRENT_USER:parseServerDailyCheckInData(result.results)
-            s_SCENE:getConfigs(false)
+            print ('getDailyCheckInOfCurrentUser: 00')
+            coroutine.resume(co, result.results)
         end,
         function (api, code, message, description) 
-            s_SCENE:getConfigs(false)
+            print ('getDailyCheckInOfCurrentUser: 01')
+            coroutine.resume(co, {}) -- can not pass nil value
         end
     )
 end

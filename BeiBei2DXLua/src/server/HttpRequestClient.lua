@@ -4,34 +4,40 @@ local HttpRequestClient = {}
 
 local function onGetDataConfigsSucceed(api, result, onCompleted)
     -- server data
+    local hasServerData = false
     local DataConfigs = require('model.user.DataConfigs')
     s_DATA_MANAGER.configs = DataConfigs.create()
     for i, v in ipairs(result.results) do
         parseServerDataToUserData(v, s_DATA_MANAGER.configs)
+        hasServerData = true
         break
     end
 
+    if not hasServerData then
+        if onCompleted ~= nil then onCompleted() end
+        return
+    end
+
     -- local database
-    local newFiles = {}
+    local newObjectIds = {}
+    local keys = {}
     local dataLocal = DataConfigs.create()
     local hasDataLocal = s_DATABASE_MGR.getDataConfigsFromLocalDB(dataLocal)
-    print_lua_table (s_DATA_MANAGER.configs)
-    print_lua_table (dataLocal)
-    if (hasDataLocal and s_DATA_MANAGER.configs.version > dataLocal.version) 
-        or (hasDataLocal == false and s_DATA_MANAGER.configs.version > s_CONFIG_VERSION) then
-        for i, v in ipairs(DataConfigs.getKeys()) do
-            if s_DATA_MANAGER.configs[v] ~= dataLocal[v] then
-                table.insert(newFiles, s_DATA_MANAGER.configs[v])
-            end
+    for i, v in ipairs(DataConfigs.getKeys()) do
+        if s_DATA_MANAGER.configs[v .. DataConfigsVer] > dataLocal[v .. DataConfigsVer] then
+            table.insert(newObjectIds, s_DATA_MANAGER.configs[v])
+            table.insert(keys, v)
         end
     end
 
-    if #newFiles > 0 then
+    if #newObjectIds > 0 then
+
+        -- Android download new configs
         if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
             local ids = ''
-            for i, v in ipairs(newFiles) do
+            for i, v in ipairs(newObjectIds) do
                 ids = ids .. v
-                if i < #newFiles then ids = ids .. '|' end
+                if i < #newObjectIds then ids = ids .. '|' end
             end
             cx.CXAvos:getInstance():downloadConfigFiles(ids, cc.FileUtils:getInstance():getWritablePath())
             s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
@@ -39,22 +45,29 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
             return
         end
 
-        -- download new configs
+        -- iOS download new configs
         local index = 1
         local co
         co = coroutine.create(function()
-            while index <= #newFiles do
-                HttpRequestClient.downloadFileFromAVOSWithObjectId(newFiles[index], 
+            while index <= #newObjectIds do
+                HttpRequestClient.downloadFileFromAVOSWithObjectId(newObjectIds[index], 
                     function (objectId, filename, err, isSaved) 
+                        if isSaved then
+                            -- save to local db
+                            local key = keys[index]
+                            dataLocal[key] = s_DATA_MANAGER.configs[key]
+                            dataLocal[key .. DataConfigsVer] = s_DATA_MANAGER.configs[key .. DataConfigsVer]
+                            s_DATABASE_MGR.saveDataClassObject(dataLocal)                
+                        end
                         coroutine.resume(co)
                     end)
                 coroutine.yield()
                 index = index + 1
             end 
-            s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
+            s_DATABASE_MGR.saveDataClassObject(dataLocal)
             if onCompleted ~= nil then onCompleted() end
         end)
-        print_lua_table (newFiles)
+        print_lua_table (newObjectIds)
         print('start downloading configs: ' .. tostring(co))
         coroutine.resume(co)
     else
