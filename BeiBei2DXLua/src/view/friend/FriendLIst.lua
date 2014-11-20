@@ -23,7 +23,7 @@ function FriendList:ctor()
     
     self.array = s_CURRENT_USER.friends
     self.array[#self.array + 1] = s_CURRENT_USER
-    
+    self.selectIndex = -2
     for i = 1,#self.array do
         for j = i, #self.array do
             if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
@@ -42,11 +42,11 @@ function FriendList:ctor()
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
     
-    self:addList(200)
+    self:addList()
     
 end
 
-function FriendList:addList(index_list)
+function FriendList:addList()
     self:removeChildByName('listView',true)
     local listView = ccui.ListView:create()
     -- set list view ex direction
@@ -75,18 +75,18 @@ function FriendList:addList(index_list)
     --add default item
     local count = #self.array
     s_logd("count = %d",count)
-    for i = 1,math.floor(count) do
+    for i = 1,count do
         listView:pushBackDefaultItem()
     end
     --insert default item
-    for i = 1,math.floor(count) do
+    for i = 1,count do
         listView:insertDefaultItem(0)
     end
 
     listView:removeAllChildren()
 
     --add custom item
-    for i = 1,math.floor(count) do
+    for i = 1,count do
         local custom_button = ccui.Button:create("image/friend/friendRankButton.png", "image/friend/friendRankButton.png")
         custom_button:setName("Title Button")
         custom_button:setScale9Enabled(true)
@@ -125,19 +125,33 @@ function FriendList:addList(index_list)
 --        end
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                local custom_button = ccui.Button:create("image/friend/delete_friend_back.png", "image/friend/delete_friend_back.png")
-                custom_button:setName("Title Button")
-                custom_button:setScale9Enabled(true)
-                custom_button:setContentSize(default_button:getContentSize())
-    
-                local custom_item = ccui.Layout:create()
-                custom_item:setContentSize(custom_button:getContentSize())
-                custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
-                custom_item:addChild(custom_button)
-                listView:insertCustomItem(custom_item,listView:getCurSelectedIndex() + 1)
-                local delete = cc.Sprite:create('image/friend/fri_delete.png')
-                delete:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
-                custom_button:addChild(delete)
+                if self.selectIndex ~= listView:getCurSelectedIndex() and self.selectIndex ~= listView:getCurSelectedIndex() - 1 then
+                    if self.selectIndex > -1 then
+                        listView:removeItem(self.selectIndex + 1)
+                    end
+                    local custom_button = ccui.Button:create("image/friend/delete_friend_back.png", "image/friend/delete_friend_back.png")
+                    custom_button:setName("Title Button")
+                    custom_button:setScale9Enabled(true)
+                    custom_button:setContentSize(default_button:getContentSize())
+        
+                    local custom_item = ccui.Layout:create()
+                    custom_item:setContentSize(custom_button:getContentSize())
+                    custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+                    custom_item:addChild(custom_button)
+                    listView:insertCustomItem(custom_item,listView:getCurSelectedIndex() + 1)
+                    local delete = cc.Sprite:create('image/friend/fri_delete.png')
+                    delete:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+                    custom_button:addChild(delete)
+                    self.selectIndex = listView:getCurSelectedIndex()
+                elseif self.selectIndex == listView:getCurSelectedIndex() - 1 then
+                    listView:removeItem(listView:getCurSelectedIndex())
+                    listView:removeItem(self.selectIndex)
+                    self.selectIndex = -2
+                else
+                    listView:removeItem(listView:getCurSelectedIndex() + 1)
+                    self.selectIndex = -2
+                end
+                
             end
         end
     
@@ -189,6 +203,7 @@ function FriendList:addList(index_list)
         button:addChild(arrow)
         
     end
+    
     
     listView:setItemsMargin(2.0)
 end
