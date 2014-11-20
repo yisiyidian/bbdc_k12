@@ -138,7 +138,7 @@ function FriendRequest:ctor()
         local function onAgree(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 
-                s_UserBaseServer:follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
+                s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function(api,result)
                         listView:removeChild(item)
                         s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1]
@@ -166,7 +166,7 @@ function FriendRequest:ctor()
         local function onRefuse(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 
-                s_UserBaseServer:removeFan(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
+                s_UserBaseServer.removeFan(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function(api,result)
                         listView:removeChild(item)
                         table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
