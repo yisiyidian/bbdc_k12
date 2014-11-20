@@ -357,6 +357,23 @@ function AppScene:onUserServerDatasCompleted()
         s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
         s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
         s_CorePlayManager.enterHomeLayer()
+
+        s_LOADING_CIRCLE_LAYER:show()
+        s_HttpRequestClient.getBulletinBoard(function (index, title, content)
+            local showBB = (s_CURRENT_USER.bulletinBoardMask <= 0 and index >= 0)
+                       or (s_CURRENT_USER.bulletinBoardMask > 0 and math["and"](s_CURRENT_USER.bulletinBoardMask, (2 ^ index)) == 0)
+            if showBB then
+                local BulletinBoard = require('view.BulletinBoard')
+                local bb = BulletinBoard.create() 
+                bb:updateValue(index, title, content)
+                s_SCENE:popup(bb)
+
+                s_CURRENT_USER.bulletinBoardTime = s_CURRENT_USER.serverTime
+            end
+
+            s_LOADING_CIRCLE_LAYER:hide()
+        end)
+
     end)
 end
 

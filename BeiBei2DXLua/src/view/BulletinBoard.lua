@@ -15,6 +15,7 @@ end
 
 function BulletinBoard:ctor()
     self.ccb = {}
+
     ccbBulletinBoard['onClose'] = self.onClose
     self.ccb['bullet_in_board'] = ccbBulletinBoard
     ccbBulletinBoard['Layer'] = self
@@ -33,17 +34,35 @@ function BulletinBoard:ctor()
     
     local function onClick(sender)
         ccbBulletinBoard['effect']:setVisible(not ccbBulletinBoard['effect']:isVisible())
+        if self.index >= 0 then
+            local b = math["and"](s_CURRENT_USER.bulletinBoardMask, (2 ^ self.index)) ~= 0
+            if ccbBulletinBoard['effect']:isVisible() and not b then
+                s_CURRENT_USER.bulletinBoardMask = s_CURRENT_USER.bulletinBoardMask + (2 ^ self.index)
+            elseif not ccbBulletinBoard['effect']:isVisible() and b then
+                s_CURRENT_USER.bulletinBoardMask = s_CURRENT_USER.bulletinBoardMask - (2 ^ self.index)
+            end
+        
+            if s_CURRENT_USER.bulletinBoardMask < 0 then
+                s_CURRENT_USER.bulletinBoardMask = 0
+            end
+        end
     end
     click:registerScriptTapHandler(onClick)
 end
 
+function BulletinBoard:updateValue(index, title, content)
+    self.index = index
+    ccbBulletinBoard["labelTitle"]:setString(title)
+    ccbBulletinBoard["labelContent"]:setString(content)
+end
+
 function BulletinBoard:onClose()
+    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
     local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)))
     local remove = cc.CallFunc:create(function() 
-        ccbBulletinBoard['Layer']:removeFromParent()
+        s_SCENE:removeAllPopups()
     end,{})
     ccbBulletinBoard['board']:runAction(cc.Sequence:create(move,remove))
 end
-
 
 return BulletinBoard
