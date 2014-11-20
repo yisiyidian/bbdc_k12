@@ -23,12 +23,14 @@ function BookLayer.create()
     hint:setColor(cc.c4b(100,100,100,255))
     backColor:addChild(hint) 
     
-    local name_array = {'CEE', 'CET4', 'CET6', 'IELTF', 'TOEFL'}
-    local full_name_array = {'NCEE', 'CET4', 'CET6', 'IELTF', 'TOEFL'}
+    local name_array = {'CEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
+    local full_name_array = {'NCEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then          
+            if eventType == ccui.TouchEventType.began then    
+                -- button sound
+                playSound(s_sound_buttonEffect)   
                 local affirm = function()
                     if i == 1 then
                         s_CURRENT_USER.bookKey = s_BOOK_KEY_NCEE
@@ -68,6 +70,8 @@ function BookLayer.create()
                         end)
                 end      
                 s_TIPS_LAYER:showSmall("选择"..full_name_array[i].."课程", affirm)
+                -- popup sound "Aluminum Can Open "
+                playSound(s_sound_Aluminum_Can_Open)
             end
         end
         table.insert(func_array, click)

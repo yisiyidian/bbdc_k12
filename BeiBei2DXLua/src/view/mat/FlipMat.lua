@@ -58,6 +58,15 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
     local startTouchLocation
     local lastTouchLocation
     
+    local slideCoco = {}
+    slideCoco[1] = s_sound_slideCoconut
+    slideCoco[2] = s_sound_slideCoconut1
+    slideCoco[3] = s_sound_slideCoconut2
+    slideCoco[4] = s_sound_slideCoconut3
+    slideCoco[5] = s_sound_slideCoconut4
+    slideCoco[6] = s_sound_slideCoconut5
+    slideCoco[7] = s_sound_slideCoconut6
+        
     local selectStack = {}
 
     local charaster_set_filtered = {}
@@ -245,6 +254,9 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
             startNode.bigSize()
 
             startAtNode = true
+            -- slide coco "s_sound_slideCoconut"
+            playSound(s_sound_slideCoconut)
+            
         else
             startAtNode = false
         end
@@ -314,6 +326,12 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
                             table.remove(selectStack)
+                        end
+                        -- slide coco "s_sound_slideCoconut"
+                        if #selectStack <= 7 then
+                        playSound(slideCoco[#selectStack])
+                        else
+                        playSound(slideCoco[7])
                         end
                     end
                 else
@@ -387,6 +405,9 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
             selectStack = {}
             
             main.success()
+            
+            -- slide true
+            playSound(s_sound_learn_true)
         else
             if main.wrongLock then
                 main.globalLock = true
@@ -401,6 +422,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
             firstFlipNode.firstStyle()
             
             main.fail()
+            
+            --slide wrong
+            playSound(s_sound_learn_false)
+            
         end
     end
 

@@ -12,6 +12,7 @@ end
 
 local introLayer_star
 local introLayer_heart
+local introLayer_day
 local heartNumber 
 local starNumber
 local time_betweenServerAndEnergy
@@ -38,6 +39,8 @@ function RightTopNode:ctor()
             local IntroLayer = require("popup/PopupStarInfo")
             introLayer_star = IntroLayer.create()  
             s_SCENE:popup(introLayer_star)
+            -- button sound
+            playSound(s_sound_buttonEffect)
             
 
         end
@@ -51,15 +54,20 @@ function RightTopNode:ctor()
             introLayer_heart = IntroLayer.create()  
             s_SCENE:popup(introLayer_heart)
             
+            -- button sound
+            playSound(s_sound_buttonEffect)
 
         end 
     end
 
     local click_word = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then    
-            local IntroLayer = require("popup/PopupLoginSignup")
-            introLayer_heart = IntroLayer.create()  
-            s_SCENE:popup(introLayer_heart)
+            local IntroLayer = require("view/CheckIn")
+            introLayer_day = IntroLayer.create(self)  
+            s_SCENE:popup(introLayer_day)
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
 
@@ -102,6 +110,7 @@ function RightTopNode:ctor()
     wordAday:setLocalZOrder(1)
     wordAday:setScale(0.5);
     self:addChild(wordAday)
+    self.checkIn = wordAday
 
     local wordAday_back = cc.Sprite:create("image/chapter_level/checkInGlow.png")
     wordAday_back:setPosition(0.5 * wordAday:getContentSize().width,0.5 * wordAday:getContentSize().height)

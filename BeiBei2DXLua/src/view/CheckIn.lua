@@ -7,14 +7,15 @@ require("common.global")
 --ccb['signup_login'] = ccbLogInSignUpLayer
 
 ccbCheckInNode = ccbCheckInNode or {}
-ccb['CCB_checkInNode'] = ccbCheckInNode
+
 
 local CheckInNode = class("CheckInNode", function ()
     return cc.Node:create()
 end)
 
-function CheckInNode.create()
+function CheckInNode.create(pNode)
     local node = CheckInNode.new()
+    node.pNode = pNode
     return node
 end
 
@@ -22,12 +23,34 @@ local globalLock = false
 local letterArray = {}
 
 function CheckInNode:ctor()
+
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+
+    -- sound
+    local slideCoco = {}
+    slideCoco[1] = s_sound_slideCoconut
+    slideCoco[2] = s_sound_slideCoconut1
+    slideCoco[3] = s_sound_slideCoconut2
+    slideCoco[4] = s_sound_slideCoconut3
+    slideCoco[5] = s_sound_slideCoconut4
+    slideCoco[6] = s_sound_slideCoconut5
+    slideCoco[7] = s_sound_slideCoconut6
+
+    self.ccb = {}
+
+    self.ccb['CCB_checkInNode'] = ccbCheckInNode
+    
     ccbCheckInNode['onClose'] = self.onClose
     ccbCheckInNode['onSucceedClose'] = self.onSucceedClose
     ccbCheckInNode['Layer'] = self
+    
     local proxy = cc.CCBProxy:create()
-    local node  = CCBReaderLoad("ccb/checkIn.ccbi", proxy, ccbCheckInNode)
+    local node  = CCBReaderLoad("ccb/checkIn.ccbi", proxy, ccbCheckInNode, self.ccb)
+    node:setPosition(0,0)
     self:addChild(node)
+
+    ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(0.5 * s_DESIGN_WIDTH,0.56 * s_DESIGN_HEIGHT))))
     
     local checkInDay = 1
     local checkInWord = "apple"
@@ -175,6 +198,9 @@ function CheckInNode:ctor()
             startNode.hasSelected = true
             startAtNode = true
             updateWord()
+            
+            -- slide coco
+            playSound(s_sound_slideCoconut)
         else
             startAtNode = false
         end
@@ -243,6 +269,14 @@ function CheckInNode:ctor()
                             updateWord()
                         end
                     end
+                    
+                    -- slide coco "s_sound_slideCoconut"
+                    if #selectStack <= 7 then
+                        playSound(slideCoco[#selectStack])
+                    else
+                        playSound(slideCoco[7])
+                    end
+                    
                 else
                     if #selectStack == 0 then
                         currentNode.hasSelected = true
@@ -285,6 +319,8 @@ function CheckInNode:ctor()
         end
 
         if selectWord == "apple" then
+            self.pNode.checkIn:setVisible(false)
+            s_CURRENT_USER:addEnergys(1)
             globalLock = true
 --            for i = 1, #selectStack do
 --                local node = selectStack[i]
@@ -298,7 +334,7 @@ function CheckInNode:ctor()
                     local action1 = cc.ScaleTo:create(0.3,1.1)
                     local action2 = cc.ScaleTo:create(0.3,1.0)
                     local action3 = cc.RotateTo:create(0.0,math.random(-90,90))
-                    local action4 = cc.EaseBackOut:create(cc.MoveBy:create(1.5,cc.p(0,-0.7 * s_SCREEN_HEIGHT)))
+                    local action4 = cc.EaseBackOut:create(cc.MoveBy:create(1.5,cc.p(0,-0.7 * s_DESIGN_HEIGHT)))
                     local action5 = cc.CallFunc:create(
                         function()
                             letterArray[i][j]:removeFromParentAndCleanup(true)    	
@@ -323,8 +359,8 @@ function CheckInNode:ctor()
             local ac7 = cc.ScaleTo:create(0.4,0.9)
             local ac8 = cc.CallFunc:create(
                 function()
-                    ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(0,s_SCREEN_HEIGHT))))
-                    ccbCheckInNode['_succeedBack']:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveBy:create(0.3,cc.p(0,-s_SCREEN_HEIGHT)))))
+                    ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(0,s_DESIGN_HEIGHT))))
+                    ccbCheckInNode['_succeedBack']:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT)))))
                 end,{}
             )
             heart:runAction(cc.Sequence:create(ac1,ac2,ac3,cc.Spawn:create(ac4,ac5),ac6,ac7,ac8))
@@ -359,25 +395,37 @@ function CheckInNode:onClose()
     if globalLock then
         for i = 1,4 do
             for j = 1,4 do
-                letterArray[i][j]:removeFromParentAndCleanup(true)
+                letterArray[i][j]:removeFromParent()
             end
         end
     end
-    local moveOut = cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(0,s_SCREEN_HEIGHT))) 
+    local moveOut = cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(0,s_DESIGN_HEIGHT))) 
     local remove = cc.CallFunc:create(function()
-        ccbCheckInNode['Layer']:removeFromParentAndCleanup(true)
+        s_SCENE:removeAllPopups()
     end
     ,{})
     ccbCheckInNode['_checkInBack']:runAction(cc.Sequence:create(moveOut,remove))
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function CheckInNode:onSucceedClose()
-    local moveOut = cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(0,s_SCREEN_HEIGHT))) 
+    local moveOut = cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(0,s_DESIGN_HEIGHT))) 
     local remove = cc.CallFunc:create(function()
-        ccbCheckInNode['Layer']:removeFromParentAndCleanup(true)
+        s_SCENE:removeAllPopups()
     end
     ,{})
     ccbCheckInNode['_succeedBack']:runAction(cc.Sequence:create(moveOut,remove))
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 return CheckInNode

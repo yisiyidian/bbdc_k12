@@ -5,6 +5,7 @@ local db = require('model.LocalDatabaseManager')
 function playMusic(filename, isLoop)
     if db.isMusicOn() then
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename) 
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
         if cc.FileUtils:getInstance():isFileExist(localPath) then
             cc.SimpleAudioEngine:getInstance():playMusic(localPath, isLoop)
         end
@@ -14,6 +15,7 @@ end
 function playSound(filename)
     if db.isSoundOn() then
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
+        cc.SimpleAudioEngine:getInstance():setEffectsVolume(1.0)
         if cc.FileUtils:getInstance():isFileExist(localPath) then
             cc.SimpleAudioEngine:getInstance():playEffect(localPath)
         end

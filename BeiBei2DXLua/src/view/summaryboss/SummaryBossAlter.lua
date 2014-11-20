@@ -176,6 +176,9 @@ function SummaryBossAlter:win1()
        --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
        --end
        s_SCENE:replaceGameLayer(layer)
+       
+        -- button sound
+        playSound(s_sound_buttonEffect)
     end
     continue:registerScriptTapHandler(backToLevelScene)
     

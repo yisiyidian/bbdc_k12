@@ -21,9 +21,16 @@ function FriendList:ctor()
         end
     end
     
-    self.array = {}
-    for i = 1,5 do
-        self.array[i] = string.format("ListView_item_%d",i - 1)
+    self.array = s_CURRENT_USER.friends
+    self.array[#self.array + 1] = s_CURRENT_USER
+    for i = 1,#self.array do
+        for j = i, #self.array do
+            if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
+                local temp = self.array[i]
+                self.array[i] = self.array[j]
+                self.array[j] = temp
+            end
+        end
     end
     
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
@@ -34,12 +41,6 @@ function FriendList:ctor()
     
     self:addList(200)
     
-    local function update(delta)
-
-    end
-
-
-    self:scheduleUpdateWithPriorityLua(update, 0)
 end
 
 function FriendList:addList(index_list)
@@ -52,7 +53,13 @@ function FriendList:addList(index_list)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))
     listView:setPosition(0,0)
     self:addChild(listView,0,'listView')
-
+    
+    local function update(delta)
+        s_logd(listView:getPositionY())
+    end
+    
+    --listView:add
+    
     -- create model
     local default_button = ccui.Button:create('image/friend/friendRankButton.png', 'image/friend/friendRankButton.png')
     default_button:setName("Title Button")
@@ -173,14 +180,14 @@ function FriendList:addList(index_list)
         head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(head)
         
-        local fri_name = cc.Label:createWithSystemFont('Name','',32)
+        local fri_name = cc.Label:createWithSystemFont(self.array[i].username,'',32)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
         fri_name:setAnchorPoint(0,0)
         fri_name:setPosition(0.42 * button:getContentSize().width,0.52 * button:getContentSize().height)
         button:addChild(fri_name)
         
-        local fri_word = cc.Label:createWithSystemFont('已学单词总数：300','',24)
+        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',self.array[i].wordsCount),'',24)
         fri_word:setColor(cc.c3b(0,0,0))
         fri_word:ignoreAnchorPointForPosition(false)
         fri_word:setAnchorPoint(0,1)

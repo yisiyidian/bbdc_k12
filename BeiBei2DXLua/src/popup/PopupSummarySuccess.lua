@@ -9,6 +9,11 @@ function PopupSummarySuccess.create(levelKey, current_star, total_star)
 end
 
 function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
+    
     self.ccbPopupSummarySuccess = {}
     self.ccbPopupSummarySuccess['onCloseButtonClicked'] = function()
         self:onCloseButtonClicked()
@@ -47,19 +52,26 @@ end
 function PopupSummarySuccess:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupSummarySuccess:onGoButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on go button clicked')
     
-    -- energy cost "cost"
-    playSound(s_sound_cost)
+    -- button sound
+    playSound(s_sound_buttonEffect)
     
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
         if levelData.isPassed ~= 1 then
             s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
+            -- energy cost "cost"
+            s_SCENE:callFuncWithDelay(0.3,function()
+                playSound(s_sound_cost)
+            end)
         end
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
         local summaryboss = require('view/summaryboss/SummaryBossLayer')

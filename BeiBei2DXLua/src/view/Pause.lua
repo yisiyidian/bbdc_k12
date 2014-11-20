@@ -15,6 +15,12 @@ function Pause.create()
 end
 
 function Pause:ctor()
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    
     -- Pause actions
     local director = cc.Director:getInstance()
     self.targets = director:getActionManager():pauseAllRunningActions()
@@ -61,19 +67,37 @@ function Pause:onClose()
     end,{})
     ccbPause['mask']:runAction(cc.Sequence:create(move,remove))
     s_SCENE:removeAllPopups()
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function Pause:onRetry()
     
     ccbPause['Layer']:onBack()
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function Pause:onBack()
-
+    --button sound
+    playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function Pause:onContinue()
     ccbPause['Layer']:onClose()
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function Pause:onHelp()
@@ -91,26 +115,41 @@ function Pause:onHelp()
     local IntroLayer = require(site)
     local introLayer = IntroLayer.create()
     s_SCENE:popup(introLayer)
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function Pause:onSoundOn()
     ccbPause['soundOn']:setVisible(false)
     ccbPause['soundOff']:setVisible(true)
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function Pause:onSoundOff()
     ccbPause['soundOn']:setVisible(true)
     ccbPause['soundOff']:setVisible(false)
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function Pause:onMusicOn()
     ccbPause['musicOn']:setVisible(false)
     ccbPause['musicOff']:setVisible(true)
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function Pause:onMusicOff()
     ccbPause['musicOn']:setVisible(true)
     ccbPause['musicOff']:setVisible(false)
+    
+    --button sound
+    playSound(s_sound_buttonEffect)
 end
 
 return Pause

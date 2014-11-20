@@ -29,6 +29,9 @@ function ReviewBossAlter.create()
     local button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_CorePlayManager.leaveReviewBossLayer()
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
 

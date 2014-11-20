@@ -1,11 +1,5 @@
 {
-"skeleton": {
-	"hash": "kbxi4zyeNoWWN+PyY8H8NXBueSQ",
-	"spine": "2.0.22",
-	"width": 963.03,
-	"height": 1221.23,
-	"images": "/Users/wangsiyu/Desktop/ /单词游戏/第一关/总结boss背景动画"
-},
+"skeleton": { "hash": "JtIqZI/jHfkt7azfPgUVKuGjhWE", "spine": "2.1.03", "width": 963.03, "height": 1221.64, "images": "" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "bone", "parent": "root", "x": 1.26, "y": 674.59 },
@@ -26,8 +20,6 @@
 		"bone": "bone",
 		"attachment": "background_zongjieboss_guanqia1_weaveblue_you1"
 	},
-	{ "name": "background_zongjieboss_guanqia1_di_zuo2", "bone": "root", "attachment": "background_zongjieboss_guanqia1_di_zuo2" },
-	{ "name": "background_zongjieboss_guanqia1_di_you2", "bone": "root", "attachment": "background_zongjieboss_guanqia1_di_you2" },
 	{ "name": "background_zongjieboss_guanqia1_di_zuo1", "bone": "root", "attachment": "background_zongjieboss_guanqia1_di_zuo1" },
 	{ "name": "background_zongjieboss_guanqia1_di_you1", "bone": "root", "attachment": "background_zongjieboss_guanqia1_di_you1" },
 	{
@@ -45,21 +37,19 @@
 		"name": "background_zongjieboss_guanqia1_haioooooo2",
 		"bone": "bone5",
 		"attachment": "background_zongjieboss_guanqia1_haioooooo"
-	}
+	},
+	{ "name": "background_zongjieboss_guanqia1_di_zuo", "bone": "root", "attachment": "background_zongjieboss_guanqia1_di_zuo" }
 ],
 "skins": {
 	"default": {
 		"background_zongjieboss_guanqia1_di_you1": {
 			"background_zongjieboss_guanqia1_di_you1": { "x": 256, "y": 104, "width": 342, "height": 512 }
 		},
-		"background_zongjieboss_guanqia1_di_you2": {
-			"background_zongjieboss_guanqia1_di_you2": { "x": 256, "y": -360, "width": 342, "height": 416 }
+		"background_zongjieboss_guanqia1_di_zuo": {
+			"background_zongjieboss_guanqia1_di_zuo": { "y": -106.9, "width": 854, "height": 923 }
 		},
 		"background_zongjieboss_guanqia1_di_zuo1": {
 			"background_zongjieboss_guanqia1_di_zuo1": { "x": -171, "y": 104, "width": 512, "height": 512 }
-		},
-		"background_zongjieboss_guanqia1_di_zuo2": {
-			"background_zongjieboss_guanqia1_di_zuo2": { "x": -171, "y": -360, "width": 512, "height": 416 }
 		},
 		"background_zongjieboss_guanqia1_haioooooo": {
 			"background_zongjieboss_guanqia1_haioooooo": { "x": 1.43, "y": -5.73, "rotation": -150.1, "width": 47, "height": 27 }

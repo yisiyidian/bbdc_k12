@@ -142,6 +142,14 @@ function CorePlayManager.recordWordProciency()
             s_DATABASE_MGR.insertTable_DataWordProciency(CorePlayManager.wordList[i], 5)
         end
     end
+    
+    s_CURRENT_USER.wordsCount = s_DATABASE_MGR:getStudyWordsNum(s_CURRENT_USER.bookKey)
+    s_CURRENT_USER.masterCount = s_DATABASE_MGR:getGraspWordsNum(s_CURRENT_USER.bookKey)
+    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end)
 end
 
 function CorePlayManager.enterReviewBossLayer()

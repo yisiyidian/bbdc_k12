@@ -12,7 +12,12 @@ end
 
 function PopupEnergyBuy:ctor()
  --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
- 
+    
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    
     self.energy_number =  s_CURRENT_USER.energyCount 
     
     local json = ''
@@ -150,11 +155,19 @@ end
 function PopupEnergyBuy:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
+    --control volune
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
 end
 
 function PopupEnergyBuy:onBuyButtonClicked()
     s_logd('on buy button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
     local function onBuyResult( code, msg, info )
         print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
         if code == 0 then

@@ -38,6 +38,9 @@ function StudyAlter.create()
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             s_CorePlayManager.enterLevelLayer()
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
     
@@ -55,6 +58,11 @@ function StudyAlter.create()
             if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
                 if levelData.isPassed ~= 1 then
                     s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+                    
+                    -- energy cost "cost"
+                    s_SCENE:callFuncWithDelay(0.3,function()
+                    playSound(s_sound_cost)
+                    end)
                 end
                 s_CorePlayManager.enterTestLayer()
             else 
@@ -62,6 +70,9 @@ function StudyAlter.create()
                 local layer = energyInfoLayer.create()
                 s_SCENE:popup(layer)
             end
+            
+            -- button sound
+            playSound(s_sound_buttonEffect)
         end
     end
     

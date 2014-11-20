@@ -9,6 +9,10 @@ function PopupReviewBoss:create()
 end
 
 function PopupReviewBoss:ctor()
+
+    -- popup sound "Aluminum Can Open "
+    playSound(s_sound_Aluminum_Can_Open)
+    
     self.ccbPopupReviewBoss = {}
     self.ccbPopupReviewBoss['onCloseButtonClicked'] = function()
         self:onCloseButtonClicked()
@@ -41,19 +45,28 @@ end
 function PopupReviewBoss:onCloseButtonClicked()
     s_logd('on close button clicked')
     s_SCENE:removeAllPopups()
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 function PopupReviewBoss:onGoButtonClicked()
     s_logd('on go button clicked')
     
-    -- energy cost "cost"
-    playSound(s_sound_cost)
-    
+
+    -- button sound
+    playSound(s_sound_buttonEffect)
+       
     self:onCloseButtonClicked()
     --local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if s_CURRENT_USER.energyCount >= s_review_boss_energy_cost then
         s_CURRENT_USER:useEnergys(s_review_boss_energy_cost)
-        s_CorePlayManager.enterReviewBossLayer()
+        s_CorePlayManager.enterReviewBossLayer()  
+        
+        -- energy cost "cost"
+        s_SCENE:callFuncWithDelay(0.3,function()
+            playSound(s_sound_cost)
+        end)
     else 
         local energyInfoLayer = require('popup.PopupEnergyInfo')
         local layer = energyInfoLayer.create()

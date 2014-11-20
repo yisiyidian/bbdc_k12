@@ -120,7 +120,10 @@ showLogin = function()
     back_login:addChild(password)
     
     local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.began then 
+            -- button sound
+            playSound(s_sound_buttonEffect)
+            
             if validateUsername(username.textField:getStringValue()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
@@ -144,7 +147,9 @@ showLogin = function()
     submit:addChild(label_name)
     
     local button_toggle_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.began then            
+            -- button sound
+            playSound(s_sound_buttonEffect)
             local remove = function()
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
@@ -154,7 +159,7 @@ showLogin = function()
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(showRegister)
             local action4 = cc.Sequence:create(action1, action2, action3)
-            main:runAction(action4)   
+            main:runAction(action4)             
         end
     end
     
@@ -167,20 +172,52 @@ showLogin = function()
     button_toggle:setTitleColor(cc.c4b(115,197,243,255))
     back_login:addChild(button_toggle)  
     
+    local button_qq_clicked = function(sender, eventType)
+
+        if eventType == ccui.TouchEventType.began then
+            print("qq click")  
+                  -- button sound
+        playSound(s_sound_buttonEffect)
+        end
+    end
+    
     local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
     button_qq:setPosition(back_width/2,100)
+    button_qq:addTouchEventListener(button_qq_clicked)
     back_login:addChild(button_qq)
+    
+    local button_weixin_clicked = function(sender, eventType)
+
+        if eventType == ccui.TouchEventType.began then
+            print("weixin click") 
+                   -- button sound
+        playSound(s_sound_buttonEffect)
+        end
+    end
 
     local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weixin:setPosition(back_width/2-100,100)
+    button_weixin:addTouchEventListener(button_weixin_clicked)
     back_login:addChild(button_weixin)
+    
+    local button_weibo_clicked = function(sender, eventType)
+
+        if eventType == ccui.TouchEventType.began then
+            print("weibo click")  
+                  -- button sound
+            playSound(s_sound_buttonEffect)
+        end
+    end
 
     local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weibo:setPosition(back_width/2+100,100)
+    button_weibo:addTouchEventListener(button_weibo_clicked)
     back_login:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
             main.close()
         end
     end
@@ -237,6 +274,9 @@ showRegister = function()
     
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then       
+        
+            -- button sound
+            playSound(s_sound_buttonEffect)
             if validateUsername(username.textField:getStringValue()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
@@ -271,7 +311,10 @@ showRegister = function()
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(showLogin)
             local action4 = cc.Sequence:create(action1, action2, action3)
-            main:runAction(action4)   
+            main:runAction(action4)  
+            
+            -- button sound
+            playSound(s_sound_buttonEffect) 
         end
     end
 
@@ -284,21 +327,56 @@ showRegister = function()
     button_toggle:setTitleColor(cc.c4b(115,197,243,255))
     back_register:addChild(button_toggle) 
     
+    local button_qq_clicked = function(sender, eventType)
+
+        if eventType == ccui.TouchEventType.began then
+            print("qq click")  
+                  -- button sound
+        playSound(s_sound_buttonEffect)
+        end
+    end
+    
     local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
     button_qq:setPosition(back_width/2,100)
+    button_qq:addTouchEventListener(button_qq_clicked)
     back_register:addChild(button_qq)
+    
+    local button_weixin_clicked = function(sender, eventType)
+
+        if eventType == ccui.TouchEventType.began then
+            print("weixin click") 
+                   -- button sound
+        playSound(s_sound_buttonEffect)
+        end
+    end   
+    
     
     local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weixin:setPosition(back_width/2-100,100)
+    button_weixin:addTouchEventListener(button_weixin_clicked)
     back_register:addChild(button_weixin)
 
+
+    local button_weibo_clicked = function(sender, eventType)
+
+        if eventType == ccui.TouchEventType.began then
+            print("weibo click")  
+                  -- button sound
+        playSound(s_sound_buttonEffect)
+        end
+    end   
+    
     local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weibo:setPosition(back_width/2+100,100)
+    button_weibo:addTouchEventListener(button_weibo_clicked)    
     back_register:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
+
         if eventType == ccui.TouchEventType.began then
-            main.close()
+            main.close()      
+              -- button sound
+        playSound(s_sound_buttonEffect)
         end
     end
     local button_close = ccui.Button:create("image/button/button_close.png")

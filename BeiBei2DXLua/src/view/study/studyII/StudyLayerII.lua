@@ -106,6 +106,8 @@ function StudyLayerII.create()
 
     button_changeview_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             if button_changeview:getTitleText() == "去划单词" then
                 local change = function()
