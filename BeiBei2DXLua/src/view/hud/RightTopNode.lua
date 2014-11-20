@@ -63,7 +63,7 @@ function RightTopNode:ctor()
     local click_word = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then    
             local IntroLayer = require("view/CheckIn")
-            introLayer_day = IntroLayer.create()  
+            introLayer_day = IntroLayer.create(self)  
             s_SCENE:popup(introLayer_day)
             
             -- button sound
@@ -110,6 +110,7 @@ function RightTopNode:ctor()
     wordAday:setLocalZOrder(1)
     wordAday:setScale(0.5);
     self:addChild(wordAday)
+    self.checkIn = wordAday
 
     local wordAday_back = cc.Sprite:create("image/chapter_level/checkInGlow.png")
     wordAday_back:setPosition(0.5 * wordAday:getContentSize().width,0.5 * wordAday:getContentSize().height)
