@@ -3,6 +3,7 @@ require("Cocos2dConstants")
 require("CCBReaderLoad")
 require("common.global")
 
+
 --ccbLogInSignUpLayer = ccbLogInSignUpLayer or {}
 --ccb['signup_login'] = ccbLogInSignUpLayer
 
@@ -426,6 +427,12 @@ function CheckInNode:onSucceedClose()
     
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    
+    -- after success write down time right now
+    local lastCheckInAward = s_CURRENT_USER.serverTime
+    s_UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, true, false) 
+    lastCheckInAward = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
+--    is2TimeInSameDay(secondsA, secondsB) 
 end
 
 return CheckInNode
