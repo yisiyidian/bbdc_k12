@@ -23,6 +23,7 @@ function FriendList:ctor()
     
     self.array = s_CURRENT_USER.friends
     self.array[#self.array + 1] = s_CURRENT_USER
+    self.selectIndex = -2
     for i = 1,#self.array do
         for j = i, #self.array do
             if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
@@ -33,17 +34,19 @@ function FriendList:ctor()
         end
     end
     
+    self.array = {1,2,3,4,5}
+    
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
     
-    self:addList(200)
+    self:addList()
     
 end
 
-function FriendList:addList(index_list)
+function FriendList:addList()
     self:removeChildByName('listView',true)
     local listView = ccui.ListView:create()
     -- set list view ex direction
@@ -53,10 +56,6 @@ function FriendList:addList(index_list)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))
     listView:setPosition(0,0)
     self:addChild(listView,0,'listView')
-    
-    local function update(delta)
-        s_logd(listView:getPositionY())
-    end
     
     --listView:add
     
@@ -76,18 +75,18 @@ function FriendList:addList(index_list)
     --add default item
     local count = #self.array
     s_logd("count = %d",count)
-    for i = 1,math.floor(count) do
+    for i = 1,count do
         listView:pushBackDefaultItem()
     end
     --insert default item
-    for i = 1,math.floor(count) do
+    for i = 1,count do
         listView:insertDefaultItem(0)
     end
 
     listView:removeAllChildren()
 
     --add custom item
-    for i = 1,math.floor(count) do
+    for i = 1,count do
         local custom_button = ccui.Button:create("image/friend/friendRankButton.png", "image/friend/friendRankButton.png")
         custom_button:setName("Title Button")
         custom_button:setScale9Enabled(true)
@@ -101,48 +100,63 @@ function FriendList:addList(index_list)
         listView:addChild(custom_item)
         --array[i] = listView:getIndex(custom_item)
         
-        if(i == index_list + 1) then
-            local custom_button = ccui.Button:create("image/friend/delete_friend_back.png", "image/friend/delete_friend_back.png")
-            custom_button:setName("Title Button")
-            custom_button:setScale9Enabled(true)
-            custom_button:setContentSize(default_button:getContentSize())
-
-            local custom_item = ccui.Layout:create()
-            custom_item:setContentSize(custom_button:getContentSize())
-            custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
-            custom_item:addChild(custom_button)
-            listView:addChild(custom_item)
-            local delete = cc.Sprite:create('image/friend/fri_delete.png')
-            delete:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
-            custom_button:addChild(delete)
-            local function touchEvent(sender,eventType)
-                if eventType == ccui.TouchEventType.ended then
-                    table.remove(self.array,listView:getCurSelectedIndex() + 1)
-                    s_logd(self.array[listView:getCurSelectedIndex()])
-                    self:addList(200)
-                end
-            end
-
-            custom_button:addTouchEventListener(touchEvent)
-            
-        end
+--        if(i == index_list + 1) then
+--            local custom_button = ccui.Button:create("image/friend/delete_friend_back.png", "image/friend/delete_friend_back.png")
+--            custom_button:setName("Title Button")
+--            custom_button:setScale9Enabled(true)
+--            custom_button:setContentSize(default_button:getContentSize())
+--
+--            local custom_item = ccui.Layout:create()
+--            custom_item:setContentSize(custom_button:getContentSize())
+--            custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+--            custom_item:addChild(custom_button)
+--            listView:addChild(custom_item)
+--            local delete = cc.Sprite:create('image/friend/fri_delete.png')
+--            delete:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+--            custom_button:addChild(delete)
+--            local function touchEvent(sender,eventType)
+--                if eventType == ccui.TouchEventType.ended then
+--                
+--                end
+--            end
+--
+--            custom_button:addTouchEventListener(touchEvent)
+--            
+--        end
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                s_logd(listView:getCurSelectedIndex())
-                if(index_list == listView:getCurSelectedIndex()) then
-                    self:addList(200)
-                elseif(index_list > listView:getCurSelectedIndex()) then
-                    self:addList(listView:getCurSelectedIndex())
+                if self.selectIndex ~= listView:getCurSelectedIndex() and self.selectIndex ~= listView:getCurSelectedIndex() - 1 then
+                    if self.selectIndex > -1 then
+                        listView:removeItem(self.selectIndex + 1)
+                    end
+                    local custom_button = ccui.Button:create("image/friend/delete_friend_back.png", "image/friend/delete_friend_back.png")
+                    custom_button:setName("Title Button")
+                    custom_button:setScale9Enabled(true)
+                    custom_button:setContentSize(default_button:getContentSize())
+        
+                    local custom_item = ccui.Layout:create()
+                    custom_item:setContentSize(custom_button:getContentSize())
+                    custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+                    custom_item:addChild(custom_button)
+                    listView:insertCustomItem(custom_item,listView:getCurSelectedIndex() + 1)
+                    local delete = cc.Sprite:create('image/friend/fri_delete.png')
+                    delete:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+                    custom_button:addChild(delete)
+                    self.selectIndex = listView:getCurSelectedIndex()
+                elseif self.selectIndex == listView:getCurSelectedIndex() - 1 then
+                    listView:removeItem(listView:getCurSelectedIndex())
+                    listView:removeItem(self.selectIndex)
+                    self.selectIndex = -2
                 else
-                    self:addList(listView:getCurSelectedIndex() - 1)
+                    listView:removeItem(listView:getCurSelectedIndex() + 1)
+                    self.selectIndex = -2
                 end
+                
             end
         end
     
         custom_button:addTouchEventListener(touchEvent)
-        
-        
-        
+            
     end
 
 --    -- set item data
@@ -151,27 +165,17 @@ function FriendList:addList(index_list)
         local item = listView:getItem(i - 1)
         local button = item:getChildByName("Title Button")
         local index = listView:getIndex(item)
-        if (i ~= index_list + 2) then
+        
         local str = 'n'
-        local x = 3
-        s_logd(index_list)
-        if index_list < 2 then 
-            x = 4 
-        end
-        local rankIndex = {}
-        if index > index_list and index_list ~= 200 then
-            rankIndex[i] = index
-        else
-            rankIndex[i] = index + 1
-        end
-        if index < x then
-            str = string.format('%d',rankIndex[i])
+        
+        if i < 4 then
+            str = string.format('%d',i)
         end
         local rankIcon = cc.Sprite:create(string.format('image/friend/fri_rank_%s.png',str))
         rankIcon:setPosition(0.08 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(rankIcon)
         
-        local rankLabel = cc.Label:createWithSystemFont(string.format('%d',rankIndex[i]),'',36)
+        local rankLabel = cc.Label:createWithSystemFont(string.format('%d',i),'',36)
         rankLabel:setPosition(rankIcon:getContentSize().width / 2,rankIcon:getContentSize().width / 2)
         rankIcon:addChild(rankLabel)
         
@@ -180,30 +184,26 @@ function FriendList:addList(index_list)
         head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(head)
         
-        local fri_name = cc.Label:createWithSystemFont(self.array[i].username,'',32)
+        local fri_name = cc.Label:createWithSystemFont('name','',32)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
         fri_name:setAnchorPoint(0,0)
         fri_name:setPosition(0.42 * button:getContentSize().width,0.52 * button:getContentSize().height)
         button:addChild(fri_name)
         
-        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',self.array[i].wordsCount),'',24)
+        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',self.array[i]),'',24)
         fri_word:setColor(cc.c3b(0,0,0))
         fri_word:ignoreAnchorPointForPosition(false)
         fri_word:setAnchorPoint(0,1)
         fri_word:setPosition(0.42 * button:getContentSize().width,0.48 * button:getContentSize().height)
         button:addChild(fri_word)
         local str = 'image/friend/fri_jiantouxia.png'
-        if (i == index_list + 1) then
-            str = 'image/friend/fri_jiantoushang.png'
-        end
         local arrow = cc.Sprite:create(str)
         arrow:setPosition(0.9 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(arrow)
         
-        --button:setTitleText(array[index + 1])
-        end
     end
+    
     
     listView:setItemsMargin(2.0)
 end
