@@ -16,6 +16,7 @@ end
 function PersonalInfo:ctor()
     self:initHead()
     math.randomseed(os.time())
+    self.totalDay = 1
     local currentIndex = 4
     local moved = false
     local start_y = nil
@@ -120,8 +121,11 @@ function PersonalInfo:initHead()
     girl:setPosition(0.3 * back_color:getContentSize().width,0.5 * back_color:getContentSize().height)
     girl:setLocalZOrder(1)
     back_color:addChild(girl)
-
-    local label_hint = cc.Label:createWithSystemFont(s_CURRENT_USER.username,"",36)
+    local name_str = s_CURRENT_USER.username
+    if s_CURRENT_USER.isGuest then
+        name_str = "游客"
+    end
+    local label_hint = cc.Label:createWithSystemFont(name_str,"",44)
     label_hint:ignoreAnchorPointForPosition(false)
     label_hint:setAnchorPoint(0,0)
     label_hint:setColor(cc.c4b(255 , 255, 255 ,255))
@@ -129,7 +133,7 @@ function PersonalInfo:initHead()
     label_hint:setLocalZOrder(2)
     back_color:addChild(label_hint)
 
-    local label_study = cc.Label:createWithSystemFont(string.format("正在学习%s词汇",s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name),"",36)
+    local label_study = cc.Label:createWithSystemFont(string.format("正在学习%s词汇",s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name),"",32)
     label_study:ignoreAnchorPointForPosition(false)
     label_study:setAnchorPoint(0,1)
     label_study:setColor(cc.c4b(255 , 255, 255 ,255))
@@ -584,7 +588,7 @@ function PersonalInfo:login()
         local str
         if loginArray[1][i] == 1 then
             str = 'res/image/PersonalInfo/PLVI/login.png'
-        elseif i < 6 then
+        elseif i <= isWeek  then
             str = 'res/image/PersonalInfo/PLVI/not_login.png'
         else
             str = 'res/image/PersonalInfo/PLVI/not_coming.png'
@@ -625,7 +629,7 @@ function PersonalInfo:login()
     back:addChild(center,1)
     --add button
     local menu = cc.Node:create()
-    menu:setPosition(0 - s_LEFT_X, 0.2 * s_DESIGN_HEIGHT)
+    menu:setPosition(0, 0.2 * s_DESIGN_HEIGHT)
     back:addChild(menu)
     local selectButton = 1
     local rightButton = 1
@@ -691,7 +695,7 @@ function PersonalInfo:login()
                     local str
                     if loginArray[i][j] == 1 then
                         str = 'res/image/PersonalInfo/PLVI/login.png'
-                    elseif j < 6 then
+                    elseif i < weekCount or j <= isWeek then
                         str = 'res/image/PersonalInfo/PLVI/not_login.png'
                     else
                         str = 'res/image/PersonalInfo/PLVI/not_coming.png'
