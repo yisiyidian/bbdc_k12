@@ -147,7 +147,16 @@ function RightTopNode:ctor()
   
 --    s_CURRENT_USER.addEnergys(10)
 
+    --judge is2TimeInSameDay
 
+    local lastCheckTime = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
+    local nowTime = s_CURRENT_USER.serverTime
+
+    if is2TimeInSameDay(lastCheckTime,nowTime) then
+        wordAday:setVisible(false)
+    else
+        wordAday:setVisible(true)
+    end
 
     
     local function update(delta)
@@ -177,22 +186,7 @@ function RightTopNode:ctor()
 --            label:setString(heartNumber)
 --            end
 --            end     
---        end
-        
-
-         
-        --judge is2TimeInSameDay
-
-        local lastCheckTime = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
-        local nowTime = s_CURRENT_USER.serverTime
-
-        if is2TimeInSameDay(lastCheckTime,nowTime) then
-            wordAday:setVisible(false)
-        else
-            wordAday:setVisible(true)
-        end
-            
-           
+--        end    
 
 
     end
