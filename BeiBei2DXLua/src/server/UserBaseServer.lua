@@ -212,6 +212,7 @@ function UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, onSuccee
                 local metaDailyCheckIn = s_DATA_MANAGER.dailyCheckIn[lastCheckInAward]
                 s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + metaDailyCheckIn.count
                 UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
+                AnalyticsDailyCheckIn(lastCheckInAward)
             end
             if onSucceed ~= nil then onSucceed(api, result) end
         end, 

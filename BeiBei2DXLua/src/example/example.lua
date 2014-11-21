@@ -8,9 +8,14 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
-    local IntroLayer = require("view.login.IntroLayer")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+--    local IntroLayer = require("view.login.IntroLayer")
+--    local introLayer = IntroLayer.create()
+--    s_SCENE:replaceGameLayer(introLayer)
+
+    local wordList = require('view.wordlist.WordMenu')
+    local layer = wordList.create()
+    s_SCENE:replaceGameLayer(layer)
+
     -- local arr = {1,2,3}
     -- local index = 1
     -- local co
@@ -52,9 +57,9 @@ function test()
     --     downloadFunc()
     -- end
 
---    local IntroLayer = require("view.friend.FriendLayer")
---    local introLayer = IntroLayer.create()
---    s_SCENE:replaceGameLayer(introLayer)
+    local IntroLayer = require("view.friend.FriendLayer")
+    local introLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(introLayer)
 
 --    local IntroLayer = require("view.hud.RightTopNode")
 --    local introLayer = IntroLayer.create()
