@@ -52,9 +52,9 @@ function test()
     --     downloadFunc()
     -- end
 
-    local IntroLayer = require("view.friend.FriendLayer")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer)
+    local personalInfo = require("view.PersonalInfo")
+    local personalInfoLayer = personalInfo.create()
+    s_SCENE:replaceGameLayer(personalInfoLayer)
 
 --    local IntroLayer = require("view.hud.RightTopNode")
 --    local introLayer = IntroLayer.create()

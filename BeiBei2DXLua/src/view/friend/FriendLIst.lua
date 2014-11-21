@@ -189,8 +189,9 @@ function FriendList:addList()
                 
             end
         end
-    
-        custom_button:addTouchEventListener(touchEvent)
+        if self.array[custom_button.index].username ~= s_CURRENT_USER.username then
+            custom_button:addTouchEventListener(touchEvent) 
+        end
             
     end
 

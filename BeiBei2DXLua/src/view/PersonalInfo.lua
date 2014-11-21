@@ -24,7 +24,7 @@ function PersonalInfo:ctor()
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
     pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT))
-    pageView:setPosition(0,0)
+    pageView:setPosition(s_LEFT_X,0)
     
     for i = 1 , 4 do
         local layout = ccui.Layout:create()
