@@ -20,11 +20,11 @@ function CheckInNode.create(pNode)
     return node
 end
 
-local globalLock = false
+
 local letterArray = {}
 
 function CheckInNode:ctor()
-
+    self.globalLock = false
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
 
@@ -203,7 +203,7 @@ function CheckInNode:ctor()
     onTouchBegan = function(touch, event)
         s_logd('touchBegin')
         
-        if globalLock then
+        if self.globalLock then
             return true
         end
         
@@ -236,7 +236,7 @@ function CheckInNode:ctor()
     onTouchMoved = function(touch, event)
         s_logd('touchMove')
         
-        if globalLock then
+        if self.globalLock then
             return true
         end
         
@@ -264,7 +264,7 @@ function CheckInNode:ctor()
     
    fakeTouchMoved = function(location)
    
-        if globalLock then
+        if self.globalLock then
             return
         end
         
@@ -328,7 +328,7 @@ function CheckInNode:ctor()
     onTouchEnded = function(touch, event)
         s_logd('touchEnd')
         
-        if globalLock then
+        if self.globalLock then
             return true
         end
         
@@ -355,7 +355,7 @@ function CheckInNode:ctor()
             
             -- add heart
             s_CURRENT_USER:addEnergys(1)
-            globalLock = true
+            self.globalLock = true
 --            for i = 1, #selectStack do
 --                local node = selectStack[i]
 --                node.hasSelected = false
@@ -428,7 +428,7 @@ function CheckInNode:ctor()
 end
 
 function CheckInNode:onClose()
-    if globalLock then
+    if self.globalLock then
         for i = 1,4 do
             for j = 1,4 do
                 letterArray[i][j]:removeFromParent()
