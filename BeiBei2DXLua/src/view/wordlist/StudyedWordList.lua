@@ -42,7 +42,10 @@ function StudyedWordList:ctor()
     default_button:setPosition(cc.p(default_item:getContentSize().width / 2.0, default_item:getContentSize().height / 2.0))
     default_item:addChild(default_button)
     listView:setItemModel(default_item)
-    self.array = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    
+    -- get data
+    local levelConfig = s_DATA_MANAGER.getLevelConfig('ncee','chapter0','level0')
+--    self.array = levelConfig['word_content']
 
     print('array count:'..#self.array)
     local count = 2 * #self.array - 1
@@ -54,6 +57,15 @@ function StudyedWordList:ctor()
         listView:insertDefaultItem(0)
     end
     listView:removeAllChildren()
+    
+--    local title = cc.Label:createWithSystemFont('好友列表','',28)
+--    title:setPosition(cc.p(50,15))
+--    local tem = ccui.Layout:create()
+--    tem:setContentSize(cc.size(100,30))
+--    
+--    --custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+--    tem:addChild(title)
+--    listView:addChild(tem)
     
     for i = 1,count do
         if i ~= count then   -- add split item
@@ -70,15 +82,13 @@ function StudyedWordList:ctor()
         custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
         custom_item:addChild(custom_button)
         custom_item:setName('item'..i)
-
         listView:addChild(custom_item)
     end
     
     local items_count = table.getn(listView:getItems())
     print('items_count'..items_count)
-    for i = 1,count do
+    for i = 2,count do
         local item = listView:getItem(i - 1)
-        print('item name:'..item:getName())
         local button = item:getChildByName("Title")
         local index = listView:getIndex(item)
         button.index = i
