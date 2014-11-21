@@ -80,9 +80,7 @@ function HomeLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
             
-            local IntroLayer = require("view.friend.FriendLayer")
-            local introLayer = IntroLayer.create()
-            s_SCENE:replaceGameLayer(introLayer)
+            s_CorePlayManager.enterFriendLayer()
         end
     end
     
