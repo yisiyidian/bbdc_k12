@@ -53,7 +53,10 @@ function CheckInNode:ctor()
 
     ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(0.5 * s_DESIGN_WIDTH,0.56 * s_DESIGN_HEIGHT))))
     
+    -- checkin day
+    
     local checkInDay = 1
+
     
     
     --checkinword @ chaochao
@@ -349,6 +352,8 @@ function CheckInNode:ctor()
             playSound(s_sound_learn_true)
         
             self.pNode.checkIn:setVisible(false)
+            
+            -- add heart
             s_CURRENT_USER:addEnergys(1)
             globalLock = true
 --            for i = 1, #selectStack do
