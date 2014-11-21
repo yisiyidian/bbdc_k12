@@ -158,18 +158,22 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-            if isDataShow then
-                isDataShow = false
-                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
-                local action2 = cc.CallFunc:create(function()
-                    button_data:setLocalZOrder(0)
-                end)
-                button_data:runAction(cc.Sequence:create(action1, action2))
-            else
-                isDataShow = true
-                button_data:setLocalZOrder(2)
-                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-300)))
-            end
+--            if isDataShow then
+--                isDataShow = false
+--                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+--                local action2 = cc.CallFunc:create(function()
+--                    button_data:setLocalZOrder(0)
+--                end)
+--                button_data:runAction(cc.Sequence:create(action1, action2))
+--            else
+--                isDataShow = true
+--                button_data:setLocalZOrder(2)
+--                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-300)))
+--            end
+
+            local PersonalInfo = require("view.PersonalInfo")
+            local personalInfoLayer = PersonalInfo.create()
+            s_SCENE:replaceGameLayer(personalInfoLayer) 
         end
     end
 
@@ -197,9 +201,9 @@ function HomeLayer.create()
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
     
-    local logo_name = {"head","book","photo","feedback","information","logout"}
-    local label_name = {"游客1234","选择书籍", "拍摄头像", "用户反馈", "完善个人信息", "登出游戏"}
-    for i = 1, 6 do
+    local logo_name = {"head","book","feedback","information","logout"}
+    local label_name = {"游客1234","选择书籍", "用户反馈", "完善个人信息", "登出游戏"}
+    for i = 1, 5 do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
                 print(label_name[i])
@@ -250,10 +254,20 @@ function HomeLayer.create()
         if has_study then
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                
                 -- button sound
                 playSound(s_sound_buttonEffect)
+                
                 book_back:removeAllChildren()
                 book_back:addAnimation(0, 'animation', false)
+                
+                local action1 = cc.DelayTime:create(1)
+                local action2 = cc.CallFunc:create(function()
+                    s_CorePlayManager.enterWordLayer()
+                    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                end)
+                layer:runAction(cc.Sequence:create(action1, action2))
             end
         end
 
