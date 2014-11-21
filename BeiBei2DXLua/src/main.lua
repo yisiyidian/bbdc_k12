@@ -17,13 +17,6 @@ function __G__TRACKBACK__(msg)
     return msg
 end
 
--- remove print debug info when release app
-local sysPrint = print
-print = function ( ... )
-    if RELEASE_APP then return end
-    sysPrint('BEIBEI:' .. string.format(...))
-end
-
 local function main()
     collectgarbage("collect")
     -- avoid memory leak
@@ -46,6 +39,10 @@ local function main()
     local LEAN_CLOUD_KEY       = "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
 
     if RELEASE_APP then
+        -- remove print debug info when release app
+        print = function ( ... )
+        end
+
         s_debugger.configLog(false, false)
         DEBUG_PRINT_LUA_TABLE = false
         s_SERVER.debugLocalHost   = false

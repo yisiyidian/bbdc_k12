@@ -16,6 +16,8 @@ local HomeLayer             = require("view.home.HomeLayer")
 local LevelLayer            = require("view.LevelLayer")
 local BookLayer             = require("view.book.BookLayer")
 local WordLayer             = require("view.word.WordLayer")
+local FriendLayer           = require("view.friend.FriendLayer")
+
 
 
 local CorePlayManager = {}
@@ -153,13 +155,20 @@ function CorePlayManager.recordWordProciency()
         end)
 end
 
+function CorePlayManager.enterReviewBossLayer_special()
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,"level0")
+    CorePlayManager.rbWordList = split(levelConfig.word_content, "|")
+    local reviewBossLayer = ReviewBossLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossLayer)
+end
+
 function CorePlayManager.enterReviewBossLayer()
     local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
     CorePlayManager.rbWordList = s_DATABASE_MGR.getRBWordList(bossID)
     if #CorePlayManager.rbWordList < 3 then
         return
     end
-    
+
     if s_CURRENT_USER.currentChapterKey == "chapter0" then
         local reviewBossLayer = ReviewBossLayer.create()
         s_SCENE:replaceGameLayer(reviewBossLayer)
@@ -203,6 +212,11 @@ end
 function CorePlayManager.enterWordLayer()
     local wordLayer = WordLayer.create()
     s_SCENE:replaceGameLayer(wordLayer)
+end
+
+function CorePlayManager.enterFriendLayer()
+    local friendLayer = FriendLayer.create()
+    s_SCENE:replaceGameLayer(friendLayer)
 end
 
 return CorePlayManager

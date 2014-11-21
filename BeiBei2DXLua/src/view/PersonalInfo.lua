@@ -2,6 +2,8 @@ require("Cocos2d")
 require("Cocos2dConstants")
 require("common.global")
 
+local HomeLayer = require('view.home.HomeLayer')
+
 local PersonalInfo = class("PersonalInfo", function()
     return cc.Layer:create()
 end)
@@ -24,7 +26,7 @@ function PersonalInfo:ctor()
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
     pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT))
-    pageView:setPosition(0,0)
+    pageView:setPosition(s_LEFT_X,0)
     
     for i = 1 , 4 do
         local layout = ccui.Layout:create()
@@ -33,21 +35,21 @@ function PersonalInfo:ctor()
         local intro = cc.LayerColor:create(colorArray[5-i], s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
         intro:ignoreAnchorPointForPosition(false)
         intro:setAnchorPoint(0.5,0.5) 
-        intro:setPosition(s_DESIGN_WIDTH/2  ,s_DESIGN_HEIGHT/2)
+        intro:setPosition(s_DESIGN_WIDTH/2 - s_LEFT_X ,s_DESIGN_HEIGHT/2)
         layout:addChild(intro,0,string.format('back%d',i))
         if i > 1 then
             local scrollButton = cc.Sprite:create("image/PersonalInfo/scrollHintButton.png")
-            scrollButton:setPosition(s_DESIGN_WIDTH/2  ,s_DESIGN_HEIGHT * 0.05)
+            scrollButton:setPosition(s_DESIGN_WIDTH/2 - s_LEFT_X  ,s_DESIGN_HEIGHT * 0.05)
             scrollButton:setLocalZOrder(1)
-            intro:addChild(scrollButton)
+            layout:addChild(scrollButton)
             local move = cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-20)),cc.MoveBy:create(0.5,cc.p(0,20)))
             scrollButton:runAction(cc.RepeatForever:create(move))
 
         end
         local title = cc.Label:createWithSystemFont(titleArray[5-i],'',36)
-        title:setPosition(0.5 * s_DESIGN_WIDTH,0.75 * s_DESIGN_HEIGHT)
+        title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.75 * s_DESIGN_HEIGHT)
         title:setColor(cc.c3b(255,255,255))
-        intro:addChild(title)
+        layout:addChild(title)
         table.insert(self.intro_array, intro)
 
         pageView:addPage(layout)
@@ -98,12 +100,21 @@ function PersonalInfo:initHead()
 
     --local node = self:getChildByName(string.format('back%d',1))
 
-    local backButton = cc.Sprite:create("image/PersonalInfo/backButtonInPersonalInfo.png")
+    local backButton = ccui.Button:create("image/PersonalInfo/backButtonInPersonalInfo.png",'','')
     backButton:ignoreAnchorPointForPosition(false)
     backButton:setAnchorPoint(0,0.5)
     backButton:setPosition(0 ,0.5 * back_color:getContentSize().height)
     backButton:setLocalZOrder(1)
     back_color:addChild(backButton)
+    
+    local function onBack(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local homeLayer = HomeLayer.create()
+            s_SCENE:replaceGameLayer(homeLayer)
+        end
+    end
+
+    backButton:addTouchEventListener(onBack)
 
     local girl = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
     girl:setPosition(0.3 * back_color:getContentSize().width,0.5 * back_color:getContentSize().height)
@@ -136,7 +147,7 @@ function PersonalInfo:PLVM()
     local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local back = self.intro_array[4]
     local circleBack = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_white.png')
-    circleBack:setPosition(0.5 * s_DESIGN_WIDTH,0.42 * s_DESIGN_HEIGHT)
+    circleBack:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.42 * s_DESIGN_HEIGHT)
     back:addChild(circleBack)
     
     local toLearn = cc.ProgressTo:create(learnPercent,learnPercent * 100)
@@ -243,15 +254,19 @@ function PersonalInfo:PLVI()
     local sub = to - from
     
     local dayCount = math.floor(sub / (24 * 3600)) + 1
+    local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
     
-    local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
-    gezi:setPosition(s_DESIGN_WIDTH * 0.55, s_DESIGN_HEIGHT * 0.53)
-    back:addChild(gezi)
-
     local yBar = cc.Sprite:create("image/PersonalInfo/PLVI/lv_information_zuobiantiao_1.png")
+    yBar:setScaleX(scale)
     yBar:setAnchorPoint(0, 1)
     yBar:setPosition(0, s_DESIGN_HEIGHT * 0.8)
     back:addChild(yBar)
+    
+    local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
+    gezi:setScaleX(scale)
+    gezi:setAnchorPoint(0.0,0.5)
+    gezi:setPosition(yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.53)
+    back:addChild(gezi)
     
     local countArray = {}
     local dateArray = {}
@@ -259,10 +274,11 @@ function PersonalInfo:PLVI()
     local selectDate = s_CURRENT_USER.localTime
     for i = 1 , dayCount do 
         local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%Y',selectDate))
-        selectDate = selectDate + 24 * 3600
+        
         countArray[i] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
         s_logd(countArray[i])
-        dateArray[i] = string.format('%d',i)
+        dateArray[i] = string.format("%s/%s",os.date('%m',selectDate),os.date('%d',selectDate))
+        selectDate = selectDate + 24 * 3600
         if i > 1 then
             countArray[i] = countArray[i - 1] + countArray[i]
         end
@@ -299,12 +315,14 @@ function PersonalInfo:PLVI()
             point[i] = cc.p(x,y)
             s_logd('x= %f,y = %f',x,y)
             local x_i = cc.Label:createWithSystemFont(xLabel[i],'',24)
+            x_i:setScaleX(1/ scale)
             x_i:setPosition(x * tableWidth , 0)
             gezi:addChild(x_i)
         end
         for i = 1, 5 do
             yLabel[i] = min + (max - min) * (i - 1) / (5 - 1)
             local y_i = cc.Label:createWithSystemFont(math.ceil(yLabel[i]),'',24)
+            y_i:setScaleX(1/ scale)
             y_i:setColor(cc.c3b(201,43,44))
             y_i:setAlignment(cc.TEXT_ALIGNMENT_RIGHT)
             y_i:setPosition(0.5 * yBar:getContentSize().width , (0.2 + 0.58 * (i - 1) / 4) * tableHeight)
@@ -339,6 +357,7 @@ function PersonalInfo:PLVI()
             end
         end
         selectPoint = cc.Sprite:create('image/PersonalInfo/login/wsy_suanzhong.png')
+        selectPoint:setScaleX(1 / scale)
         selectPoint:ignoreAnchorPointForPosition(false)
         selectPoint:setAnchorPoint(0.5,0.5)
         selectPoint:setPosition(point[#count].x * tableWidth ,point[#count].y * tableHeight+ (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
@@ -426,9 +445,9 @@ function PersonalInfo:PLVI()
         sun:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height)
         button[i]:addChild(sun,0,'sun')
         if dayCount > 3 then
-            button[i]:setPosition((5-i)/5 * s_DESIGN_WIDTH,0)  
+            button[i]:setPosition((5-i)/5 * (s_RIGHT_X - s_LEFT_X),0)  
         else
-            button[i]:setPosition((dayCount + 1 - i)/5 * s_DESIGN_WIDTH,0)
+            button[i]:setPosition((dayCount + 1 - i)/5 * (s_RIGHT_X - s_LEFT_X),0)
         end  
         menu:addChild(button[i])
         date = date - 24 * 3600
@@ -463,12 +482,12 @@ function PersonalInfo:PLVI()
 
         local frontButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/front_button.png','','')
         --frontButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
-        frontButton:setPosition(0.95 * s_DESIGN_WIDTH,0.16 * s_DESIGN_HEIGHT)
+        frontButton:setPosition(0.95 * (s_RIGHT_X - s_LEFT_X),0.16 * s_DESIGN_HEIGHT)
         --frontButton:setVisible(false)
         menu1:addChild(frontButton,0,'front')
         local backButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','','')
         --backButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
-        backButton:setPosition(0.05 * s_DESIGN_WIDTH,0.16 * s_DESIGN_HEIGHT)
+        backButton:setPosition(0.05 * (s_RIGHT_X - s_LEFT_X),0.16 * s_DESIGN_HEIGHT)
         backButton:setVisible(false)
         menu1:addChild(backButton)
 
@@ -484,7 +503,7 @@ function PersonalInfo:PLVI()
             end
             button[rightButton]:setVisible(false)
             button[rightButton + 4]:setVisible(true)
-            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 * s_DESIGN_WIDTH,0) ))
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 * (s_RIGHT_X - s_LEFT_X),0) ))
             rightButton = rightButton + 1
             
             drawXYLabel(xArray,yArray)
@@ -515,7 +534,7 @@ function PersonalInfo:PLVI()
             drawXYLabel(xArray,yArray)
             button[rightButton + 3]:setVisible(false)
             button[rightButton - 1]:setVisible(true)
-            menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *s_DESIGN_WIDTH,0) ))
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *(s_RIGHT_X - s_LEFT_X),0) ))
             rightButton = rightButton - 1
             
             if rightButton <= 1 then
@@ -536,7 +555,7 @@ end
 function PersonalInfo:login()
     local back = self.intro_array[2]
     local loginData = s_CURRENT_USER.logInDatas
-    
+    s_logd("weekcount = %d",#loginData)
     math.randomseed(os.time()) 
     local loginArray = {}
     local weekCount = #loginData
@@ -571,7 +590,7 @@ function PersonalInfo:login()
             str = 'res/image/PersonalInfo/PLVI/not_coming.png'
         end
         local dayRing = cc.ProgressTimer:create(cc.Sprite:create(str))
-        dayRing:setPosition(0.5 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
+        dayRing:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.5 * s_DESIGN_HEIGHT)
         dayRing:setScale(1.0)
         dayRing:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
         dayRing:setReverseDirection(false)
@@ -580,7 +599,7 @@ function PersonalInfo:login()
         back:addChild(dayRing,0,string.format('day%d',i))
     end
     local center = cc.Sprite:create('res/image/PersonalInfo/PLVI/center.png')
-    center:setPosition(0.5 * s_DESIGN_WIDTH,0.5 * s_DESIGN_HEIGHT)
+    center:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.5 * s_DESIGN_HEIGHT)
     center:setScale(1.0)
     
     local line = cc.LayerColor:create(cc.c4b(0,0,0,255),center:getContentSize().width * 0.8,1)
@@ -606,7 +625,7 @@ function PersonalInfo:login()
     back:addChild(center,1)
     --add button
     local menu = cc.Node:create()
-    menu:setPosition(0, 0.2 * s_DESIGN_HEIGHT)
+    menu:setPosition(0 - s_LEFT_X, 0.2 * s_DESIGN_HEIGHT)
     back:addChild(menu)
     local selectButton = 1
     local rightButton = 1
@@ -646,9 +665,9 @@ function PersonalInfo:login()
         sun:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height)
         button[i]:addChild(sun,0,'sun')
         if weekCount > 3 then
-            button[i]:setPosition((5-i)/5 * s_DESIGN_WIDTH,0)  
+            button[i]:setPosition((5-i)/5 * (s_RIGHT_X - s_LEFT_X),0)  
         else
-            button[i]:setPosition((weekCount + 1 - i)/5 * s_DESIGN_WIDTH,0)
+            button[i]:setPosition((weekCount + 1 - i)/5 * (s_RIGHT_X - s_LEFT_X),0)
         end
         menu:addChild(button[i])
         
@@ -700,12 +719,12 @@ function PersonalInfo:login()
 
         local frontButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/front_button.png','','')
         --frontButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
-        frontButton:setPosition(0.95 * s_DESIGN_WIDTH,0.2 * s_DESIGN_HEIGHT)
+        frontButton:setPosition(0.95 * (s_RIGHT_X - s_LEFT_X),0.2 * s_DESIGN_HEIGHT)
         --frontButton:setVisible(false)
         menu1:addChild(frontButton,0,'front')
         local backButton = cc.MenuItemImage:create('res/image/PersonalInfo/login/back_button.png','','')
         --backButton:loadTextures('res/image/PersonalInfo/login/back_button.png','res/image/PersonalInfo/login/back_button.png','')
-        backButton:setPosition(0.05 * s_DESIGN_WIDTH,0.2 * s_DESIGN_HEIGHT)
+        backButton:setPosition(0.05 * (s_RIGHT_X - s_LEFT_X),0.2 * s_DESIGN_HEIGHT)
         backButton:setVisible(false)
         menu1:addChild(backButton)
 
@@ -715,7 +734,7 @@ function PersonalInfo:login()
             --if eventType == ccui.TouchEventType.ended then
             button[rightButton]:setVisible(false)
             button[rightButton + 4]:setVisible(true)
-            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *s_DESIGN_WIDTH,0) ))
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(0.2 *(s_RIGHT_X - s_LEFT_X),0) ))
             rightButton = rightButton + 1
 
             if rightButton >= weekCount - 3 and frontButton:isVisible() then
@@ -738,7 +757,7 @@ function PersonalInfo:login()
             --if eventType == ccui.TouchEventType.ended then
             button[rightButton + 3]:setVisible(false)
             button[rightButton - 1]:setVisible(true)
-            menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *s_DESIGN_WIDTH,0) ))
+            menu:runAction(cc.MoveBy:create(0.2,cc.p(-0.2 *(s_RIGHT_X - s_LEFT_X),0) ))
             rightButton = rightButton - 1
             if rightButton <= 1 then
                 backButton:setVisible(false)
@@ -759,7 +778,7 @@ function PersonalInfo:XXTJ()
     
    local everydayWord = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / self.totalDay
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-   local wordFinished = 100
+    local wordFinished = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
    local dayToFinish = 0
     local back = self.intro_array[1]
    local positionX =  0.5 * s_DESIGN_WIDTH + 150
@@ -769,7 +788,7 @@ function PersonalInfo:XXTJ()
    local string_dayToFinish = "X天"
    local label_dayToFinish = ""
    
-   if numberWord == 0 then 
+   if everydayWord == 0 then 
         dayToFinish = 99
         mark = 1
    else
@@ -796,33 +815,33 @@ function PersonalInfo:XXTJ()
     girl:setAnimation(0,'animation',true)
     girl:ignoreAnchorPointForPosition(false)
     girl:setAnchorPoint(0.5,0.5)
-    girl:setPosition(0.5 * s_DESIGN_WIDTH - 150,0.5 * s_DESIGN_HEIGHT - 250)
+    girl:setPosition(0.5 * s_DESIGN_WIDTH - 150 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 250)
     back:addChild(girl)
    
    
     local label_everydayWord = cc.Label:createWithSystemFont(everydayWord,"",60)
     label_everydayWord:ignoreAnchorPointForPosition(false)
-    label_everydayWord:setPosition(positionX - 50,0.5 * s_DESIGN_HEIGHT + 50)
+    label_everydayWord:setPosition(positionX - 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 50)
     label_everydayWord:setAnchorPoint(0.5,0.5)
     label_everydayWord:setColor(cc.c4b(255,255,255 ,255))
     back:addChild(label_everydayWord)
     
     local label_ge = cc.Label:createWithSystemFont("个","",36)
     label_ge:ignoreAnchorPointForPosition(false)
-    label_ge:setPosition(positionX + 50,0.5 * s_DESIGN_HEIGHT + 50)
+    label_ge:setPosition(positionX + 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 50)
     label_ge:setAnchorPoint(0.5,0.5)
     label_ge:setColor(cc.c4b(255,255,255 ,255))
     back:addChild(label_ge)
     
-    local line_up = cc.LayerColor:create(cc.c4b(255,255,255,255),200,1)
+    local line_up = cc.LayerColor:create(cc.c4b(255,255,255,255),200,2)
     line_up:ignoreAnchorPointForPosition(false)
     line_up:setAnchorPoint(0.5,0.5)
-    line_up:setPosition(positionX,0.5 * s_DESIGN_HEIGHT )
-    back:addChild(line_up)  
+    line_up:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT )
+    back:addChild(line_up,1)  
     
     local label_everyday = cc.Label:createWithSystemFont("每日平均","",36)
     label_everyday:ignoreAnchorPointForPosition(false)
-    label_everyday:setPosition(positionX,0.5 * s_DESIGN_HEIGHT - 50)
+    label_everyday:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 50)
     label_everyday:setAnchorPoint(0.5,0.5)
     label_everyday:setColor(cc.c4b(255,255,255 ,255))
     back:addChild(label_everyday)
@@ -831,50 +850,50 @@ function PersonalInfo:XXTJ()
     if mark == 0 then
     label_dayToFinish = cc.Label:createWithSystemFont(dayToFinish,"",60)
     label_dayToFinish:ignoreAnchorPointForPosition(false)
-    label_dayToFinish:setPosition(positionX - 50,0.5 * s_DESIGN_HEIGHT - 150)
+        label_dayToFinish:setPosition(positionX - 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
     label_dayToFinish:setAnchorPoint(0.5,0.5)
     label_dayToFinish:setColor(cc.c4b(255,255,255 ,255))
     back:addChild(label_dayToFinish)
     
     local label_tian = cc.Label:createWithSystemFont("天","",36)
     label_tian:ignoreAnchorPointForPosition(false)
-    label_tian:setPosition(positionX + 50,0.5 * s_DESIGN_HEIGHT - 150)
+        label_tian:setPosition(positionX + 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
     label_tian:setAnchorPoint(0.5,0.5)
     label_tian:setColor(cc.c4b(255,255,255 ,255))
     back:addChild(label_tian)
     else
         local label_dayu = cc.Label:createWithSystemFont("大于","",36)
         label_dayu:ignoreAnchorPointForPosition(false)
-        label_dayu:setPosition(positionX - 100,0.5 * s_DESIGN_HEIGHT - 150)
+        label_dayu:setPosition(positionX - 100 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
         label_dayu:setAnchorPoint(0.5,0.5)
         label_dayu:setColor(cc.c4b(255,255,255 ,255))
         back:addChild(label_dayu)
         
          label_dayToFinish = cc.Label:createWithSystemFont(dayToFinish,"",60)
         label_dayToFinish:ignoreAnchorPointForPosition(false)
-        label_dayToFinish:setPosition(positionX + 10 ,0.5 * s_DESIGN_HEIGHT - 150)
+        label_dayToFinish:setPosition(positionX + 10 - s_LEFT_X ,0.5 * s_DESIGN_HEIGHT - 150)
         label_dayToFinish:setAnchorPoint(0.5,0.5)
         label_dayToFinish:setColor(cc.c4b(255,255,255 ,255))
         back:addChild(label_dayToFinish)
 
         local label_tian = cc.Label:createWithSystemFont("天","",36)
         label_tian:ignoreAnchorPointForPosition(false)
-        label_tian:setPosition(positionX + 100,0.5 * s_DESIGN_HEIGHT - 150)
+        label_tian:setPosition(positionX + 100 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
         label_tian:setAnchorPoint(0.5,0.5)
         label_tian:setColor(cc.c4b(255,255,255 ,255))
         back:addChild(label_tian)   
     end
     
     
-    local line_down = cc.LayerColor:create(cc.c4b(255,255,255,255),200,1)
+    local line_down = cc.LayerColor:create(cc.c4b(255,255,255,255),200,2)
     line_down:ignoreAnchorPointForPosition(false)
     line_down:setAnchorPoint(0.5,0.5)
-    line_down:setPosition(positionX,0.5 * s_DESIGN_HEIGHT - 200)
+    line_down:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 200)
     back:addChild(line_down) 
     
     local label_finishday = cc.Label:createWithSystemFont("完成还需","",36)
     label_finishday:ignoreAnchorPointForPosition(false)
-    label_finishday:setPosition(positionX,0.5 * s_DESIGN_HEIGHT - 250)
+    label_finishday:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 250)
     label_finishday:setAnchorPoint(0.5,0.5)
     label_finishday:setColor(cc.c4b(255,255,255 ,255))
     back:addChild(label_finishday)
@@ -894,13 +913,16 @@ function PersonalInfo:XXTJ()
                 back:unscheduleUpdate()           
              end
         else
-            label_everydayWord:setString(i / 5)
-                if mark == 0 then 
-                label_dayToFinish:setString(math.ceil(99 - (99 -dayToFinish ) / 100 * i))
-                end
-            if i / 5 == everydayWord then
+            
+            
+            if i / 5 >= everydayWord then
                 label_dayToFinish:setString(dayToFinish)
-                back:unscheduleUpdate()           
+                back:unscheduleUpdate()   
+                return        
+            end
+            label_everydayWord:setString(i / 5)
+            if mark == 0 then 
+                label_dayToFinish:setString(math.ceil(99 - (99 -dayToFinish ) / 100 * i))
             end
         end
         
