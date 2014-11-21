@@ -1,5 +1,6 @@
 local DataClassBase = require('model/user/DataClassBase')
 local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
+local DataLogIn = require('model/user/DataLogIn')
 
 local DataUser = class("DataUser", function()
     return DataClassBase.new()
