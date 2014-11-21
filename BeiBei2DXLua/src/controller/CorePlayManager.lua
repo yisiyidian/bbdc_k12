@@ -16,6 +16,8 @@ local HomeLayer             = require("view.home.HomeLayer")
 local LevelLayer            = require("view.LevelLayer")
 local BookLayer             = require("view.book.BookLayer")
 local WordLayer             = require("view.word.WordLayer")
+local FriendLayer           = require("view.friend.FriendLayer")
+
 
 
 local CorePlayManager = {}
@@ -210,6 +212,11 @@ end
 function CorePlayManager.enterWordLayer()
     local wordLayer = WordLayer.create()
     s_SCENE:replaceGameLayer(wordLayer)
+end
+
+function CorePlayManager.enterFriendLayer()
+    local friendLayer = FriendLayer.create()
+    s_SCENE:replaceGameLayer(friendLayer)
 end
 
 return CorePlayManager
