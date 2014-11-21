@@ -65,7 +65,11 @@ function CheckInNode:ctor()
     -- checkin day
     
     local checkInDay = 1
+    
+--    checkInDay = s_CURRENT_USER.dailyCheckInData.
+    
 
+    
     
     
     --checkinword @ chaochao
@@ -73,7 +77,13 @@ function CheckInNode:ctor()
     -- whether currentWord == nil
     if currentWord == nil then
     currentWord = s_DATABASE_MGR.getRandomWord()
+--test
+--    print("random")
+    else
+    --test
+--    print("current")
     end
+    
     
     -- example n.apple
     
@@ -490,7 +500,8 @@ function CheckInNode:onSucceedClose()
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
     
     -- after success write down time right now
-    local lastCheckInAward = s_CURRENT_USER.serverTime
+    --   local lastCheckInAward = s_CURRENT_USER.serverTime
+    local lastCheckInAward = 1
     s_UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, true, false) 
 --    lastCheckInAward = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
 --    is2TimeInSameDay(secondsA, secondsB) 

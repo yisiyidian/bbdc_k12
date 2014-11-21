@@ -149,13 +149,19 @@ function RightTopNode:ctor()
 
     --judge is2TimeInSameDay
 
-    local lastCheckTime = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
-    local nowTime = s_CURRENT_USER.serverTime
-
-    if is2TimeInSameDay(lastCheckTime,nowTime) then
-        --wordAday:setVisible(false)
-    else
+    local lastCheckTime = 0
+    lastCheckTime = s_CURRENT_USER.checkInWordUpdateDate
+    if lastCheckTime == 0 then
         wordAday:setVisible(true)
+    else
+        local nowTime = s_CURRENT_USER.serverTime
+
+        if is2TimeInSameDay(lastCheckTime,nowTime) then
+             --wordAday:setVisible(false)
+        else
+             wordAday:setVisible(true)
+        end
+    
     end
 
     

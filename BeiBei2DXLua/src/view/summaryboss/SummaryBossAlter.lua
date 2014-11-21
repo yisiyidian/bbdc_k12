@@ -4,8 +4,10 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(win)
+function SummaryBossAlter.create(win,wordCount,blood)
     local layer = SummaryBossAlter.new()
+    layer.wordCount = wordCount
+    layer.blood = blood
     layer.win = win
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
@@ -74,7 +76,7 @@ function SummaryBossAlter:lose2()
     label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
     self.loseBoard2:addChild(label)
 
-    local label1 = cc.Label:createWithSystemFont("还需要找出3个单词！\n做好准备再来",'',40)
+    local label1 = cc.Label:createWithSystemFont(string.format("还需要找出%d个单词！\n做好准备再来",math.ceil(self.blood / 5)),'',40)
     label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     label1:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.55)
     label1:setColor(cc.c4b(52,177,241,255))
@@ -147,7 +149,7 @@ function SummaryBossAlter:win1()
     label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
     self.winBoard:addChild(label)
     
-    local label1 = cc.Label:createWithSystemFont("已经找到了4个单词\n击败了恐老师！",'',40)
+    local label1 = cc.Label:createWithSystemFont(string.format("已经找到了%d个单词\n击败了恐老师！",self.wordCount),'',40)
     label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     label1:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.55)
     label1:setColor(cc.c4b(52,177,241,255))

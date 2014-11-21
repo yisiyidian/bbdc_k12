@@ -871,7 +871,7 @@ end
 function SummaryBossLayer:win()
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
@@ -882,7 +882,7 @@ end
 function SummaryBossLayer:lose()
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
