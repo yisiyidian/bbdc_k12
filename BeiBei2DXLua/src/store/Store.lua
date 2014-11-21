@@ -65,8 +65,8 @@ function Store.buy(onResult)
 
         local info = {
             Product_Id=productId,  
-            Product_Name="贝贝体力值30点",  
-            Product_Price="6", 
+            Product_Name="贝贝体力值10点",  
+            Product_Price="1", 
             Product_Count="1",  
 
             Role_Name=s_CURRENT_USER.username,

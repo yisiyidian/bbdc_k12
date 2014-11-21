@@ -52,7 +52,7 @@ function PopupEnergyBuy:ctor()
       self.ccbPopupEnergyBuy['title']:setString('购买贝贝体力！')
       self.ccbPopupEnergyBuy['subtitle']:setString('体力会用在挑战新关卡处')
     self.ccbPopupEnergyBuy['subsubtitle']:setString('每30分钟回复一点')
-    self.ccbPopupEnergyBuy['energyNumber']:setString('+30')
+    self.ccbPopupEnergyBuy['energyNumber']:setString('+10')
     self.ccbPopupEnergyBuy['energyNumber']:setScale(2)
     node:setPosition(0,600)
     self:addChild(node)
@@ -61,7 +61,7 @@ function PopupEnergyBuy:ctor()
     local action2 = cc.EaseBackOut:create(action1)
     node:runAction(action2)
     
-    local label_buyEnergy = cc.Label:createWithSystemFont("￥6.00","",36)
+    local label_buyEnergy = cc.Label:createWithSystemFont("￥1.00","",36)
     label_buyEnergy:setPosition(0.5 * self.ccbPopupEnergyBuy['buyButton']:getContentSize().width ,0.5 * self.ccbPopupEnergyBuy['buyButton']:getContentSize().height)
     self.ccbPopupEnergyBuy['buyButton']:addChild(label_buyEnergy)
     
@@ -167,16 +167,17 @@ function PopupEnergyBuy:onBuyButtonClicked()
     s_SCENE:removeAllPopups()
     
     -- button sound
+    local energyCountBought = 10
     playSound(s_sound_buttonEffect)
     local function onBuyResult( code, msg, info )
         print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
         if code == 0 then
-            s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + 30
+            s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + energyCountBought
             s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                 function(api,result)
                     s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-                    local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), 30)
+                    local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), energyCountBought)
                     s_TIPS_LAYER:showSmall(str)
                     s_LOADING_CIRCLE_LAYER:hide()
                 end,
