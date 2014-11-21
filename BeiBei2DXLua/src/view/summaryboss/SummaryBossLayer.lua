@@ -205,14 +205,15 @@ function SummaryBossLayer.create(levelConfig)
                         local secondStackTop = selectStack[#selectStack-1]
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
-                            table.remove(selectStack)
+                            table.remove(selectStack)    
+                            -- slide coco "s_sound_slideCoconut"
+                            if #selectStack <= 7 then
+                                playSound(slideCoco[#selectStack])
+                            else
+                                playSound(slideCoco[7])
+                            end
                         end
-                        -- slide coco "s_sound_slideCoconut"
-                        if #selectStack <= 7 then
-                            playSound(slideCoco[#selectStack])
-                        else
-                            playSound(slideCoco[7])
-                        end
+
                     end
                 else
                     if #selectStack == 0 then
@@ -233,6 +234,14 @@ function SummaryBossLayer.create(levelConfig)
                         local stackTop = selectStack[#selectStack]
                         if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                             selectStack[#selectStack+1] = currentNode
+                            
+                            -- slide coco "s_sound_slideCoconut"
+                            if #selectStack <= 7 then
+                                playSound(slideCoco[#selectStack])
+                            else
+                                playSound(slideCoco[7])
+                            end
+                            
                             currentNode.addSelectStyle()
                             currentNode.bigSize()
                             if layer.current_dir == dir_up then

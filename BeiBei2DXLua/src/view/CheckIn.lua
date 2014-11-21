@@ -28,15 +28,15 @@ function CheckInNode:ctor()
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
 
-    -- sound
-    local slideCoco = {}
-    slideCoco[1] = s_sound_slideCoconut
-    slideCoco[2] = s_sound_slideCoconut1
-    slideCoco[3] = s_sound_slideCoconut2
-    slideCoco[4] = s_sound_slideCoconut3
-    slideCoco[5] = s_sound_slideCoconut4
-    slideCoco[6] = s_sound_slideCoconut5
-    slideCoco[7] = s_sound_slideCoconut6
+--    -- sound
+--    local slideCoco = {}
+--    slideCoco[1] = s_sound_slideCoconut
+--    slideCoco[2] = s_sound_slideCoconut1
+--    slideCoco[3] = s_sound_slideCoconut2
+--    slideCoco[4] = s_sound_slideCoconut3
+--    slideCoco[5] = s_sound_slideCoconut4
+--    slideCoco[6] = s_sound_slideCoconut5
+--    slideCoco[7] = s_sound_slideCoconut6
 
     self.ccb = {}
 
@@ -54,7 +54,28 @@ function CheckInNode:ctor()
     ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(0.5 * s_DESIGN_WIDTH,0.56 * s_DESIGN_HEIGHT))))
     
     local checkInDay = 1
+    
+    
+    --checkinword @ chaochao
+    
+    
+    --    function findCheckInWord(s_CURRENT_USER)
+    --    end
+
     local checkInWord = "apple"
+    
+    -- if s_CURRENT_USER is a new one
+    -- checkinword = apple or many or tea
+    -- 
+    -- if s_CURRENT_USER havs any mistake
+    -- checkinword = mistake
+    --
+    -- if s_CURRENT_USER has no mistake
+    -- checkinword = all
+    
+    
+    --checkinword @ chaochao
+    
     local main_logic_mat = randomMat(4, 4)
     local randomStartIndex = math.random(1, 4*4-string.len(checkInWord)+1)
     local charaster_set_filtered = {}
@@ -200,8 +221,8 @@ function CheckInNode:ctor()
             startAtNode = true
             updateWord()
             
-            -- slide coco
-            playSound(s_sound_slideCoconut)
+--            -- slide coco
+--            playSound(s_sound_slideCoconut)
         else
             startAtNode = false
         end
@@ -271,12 +292,12 @@ function CheckInNode:ctor()
                         end
                     end
                     
-                    -- slide coco "s_sound_slideCoconut"
-                    if #selectStack <= 7 then
-                        playSound(slideCoco[#selectStack])
-                    else
-                        playSound(slideCoco[7])
-                    end
+--                    -- slide coco "s_sound_slideCoconut"
+--                    if #selectStack <= 7 then
+--                        playSound(slideCoco[#selectStack])
+--                    else
+--                        playSound(slideCoco[7])
+--                    end
                     
                 else
                     if #selectStack == 0 then
@@ -319,7 +340,14 @@ function CheckInNode:ctor()
             selectWord = selectWord .. selectStack[i].character
         end
 
+
+        -- checkinword @chaochao
         if selectWord == "apple" then
+        -- checkinword @chaochao
+        
+        --learn true
+            playSound(s_sound_learn_true)
+        
             self.pNode.checkIn:setVisible(false)
             s_CURRENT_USER:addEnergys(1)
             globalLock = true
@@ -366,6 +394,8 @@ function CheckInNode:ctor()
             )
             heart:runAction(cc.Sequence:create(ac1,ac2,ac3,cc.Spawn:create(ac4,ac5),ac6,ac7,ac8))
         else
+           --learn false
+            playSound(s_sound_learn_false)
 
             for i = 1, #selectStack do
                 local node = selectStack[i]

@@ -238,6 +238,25 @@ function LevelLayer:ctor()
     local introLayer = IntroLayer.create()
     self:addChild(introLayer)
     
+    local click_home = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            local IntroLayer = require("view.home.HomeLayer")
+            local introLayer = IntroLayer.create()  
+            s_SCENE:replaceGameLayer(introLayer)
+        end
+    end
+    
+    
+    -- return to homepage button
+    local homeButton = ccui.Button:create("image/chapter_level/button_home_book.png","image/chapter_level/button_home_book.png","")
+    homeButton:addTouchEventListener(click_home)
+    homeButton:ignoreAnchorPointForPosition(false)
+    homeButton:setAnchorPoint(0,1)
+    homeButton:setPosition(s_LEFT_X + 50  , s_DESIGN_HEIGHT - 50 )
+    homeButton:setLocalZOrder(1)
+    self:addChild(homeButton)
+    
+    
 --    -- pause call
 --    
 --    local click_pause = function(sender, eventType)

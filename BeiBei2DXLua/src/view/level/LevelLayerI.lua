@@ -383,6 +383,8 @@ function LevelLayerI:ctor()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+    
+    
 end
 
 --function LevelLayerI:initHead()
