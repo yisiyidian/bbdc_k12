@@ -167,16 +167,17 @@ function PopupEnergyBuy:onBuyButtonClicked()
     s_SCENE:removeAllPopups()
     
     -- button sound
+    local energyCountBought = 10
     playSound(s_sound_buttonEffect)
     local function onBuyResult( code, msg, info )
         print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
         if code == 0 then
-            s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + 30
+            s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + energyCountBought
             s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                 function(api,result)
                     s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-                    local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), 30)
+                    local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), energyCountBought)
                     s_TIPS_LAYER:showSmall(str)
                     s_LOADING_CIRCLE_LAYER:hide()
                 end,
