@@ -4,3 +4,15 @@ function AnalyticsChannel(channelId)
         cx.CXAnalytics:logEventAndLabel('Channel', channelId)
     end
 end
+
+function AnalyticsTutorial(step)
+    cx.CXAnalytics:logEventAndLabel('TutorialStep', tostring(step))
+end
+
+function AnalyticsReviewBossTutorial(step)
+    cx.CXAnalytics:logEventAndLabel('ReviewBossTutorialStep', tostring(step))
+end
+
+function AnalyticsDailyCheckIn(day)
+    cx.CXAnalytics:logEventAndLabel('DailyCheckIn', tostring(day))
+end
