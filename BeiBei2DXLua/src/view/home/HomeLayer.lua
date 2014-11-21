@@ -2,6 +2,8 @@ require("Cocos2d")
 require("Cocos2dConstants")
 require("common.global")
 
+local AlterI = require("view.alter.AlterI")
+
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
@@ -77,6 +79,10 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+            local IntroLayer = require("view.friend.FriendLayer")
+            local introLayer = IntroLayer.create()
+            s_SCENE:replaceGameLayer(introLayer)
         end
     end
     
@@ -208,8 +214,12 @@ function HomeLayer.create()
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     s_CorePlayManager.enterBookLayer()
+                elseif label_name[i] == "用户反馈" then
+                    local alter = AlterI.create("用户反馈")
+                    alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(alter)
                 elseif label_name[i] == "登出游戏" then
-                    
+                
                 else
                     
                 end
