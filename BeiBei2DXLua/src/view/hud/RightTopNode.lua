@@ -187,9 +187,9 @@ function RightTopNode:ctor()
         local nowTime = s_CURRENT_USER.serverTime
 
         if is2TimeInSameDay(lastCheckTime,nowTime) then
-            wordAday.setVisible(false)
+            wordAday:setVisible(false)
         else
-            wordAday.setVisible(true)
+            wordAday:setVisible(true)
         end
             
            

@@ -326,13 +326,17 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
                             table.remove(selectStack)
+                            
+                            
+                            -- slide coco "s_sound_slideCoconut"
+                            if #selectStack <= 7 then
+                                playSound(slideCoco[#selectStack])
+                            else
+                                playSound(slideCoco[7])
+                            end  
                         end
-                        -- slide coco "s_sound_slideCoconut"
-                        if #selectStack <= 7 then
-                        playSound(slideCoco[#selectStack])
-                        else
-                        playSound(slideCoco[7])
-                        end
+                      
+
                     end
                 else
                     if #selectStack == 0 then
@@ -353,6 +357,14 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
                         local stackTop = selectStack[#selectStack]
                         if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                             table.insert(selectStack, currentNode)
+                            
+                            
+                            -- slide coco "s_sound_slideCoconut"
+                            if #selectStack <= 7 then
+                                playSound(slideCoco[#selectStack])
+                            else
+                                playSound(slideCoco[7])
+                            end    
                             updateSelectWord()
                             --selectStack[#selectStack+1] = currentNode
                             currentNode.addSelectStyle()
@@ -391,6 +403,12 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         local selectWord = ""
         for i = 1, #selectStack do
             selectWord = selectWord .. selectStack[i].main_character_content
+            -- slide coco "s_sound_slideCoconut"
+--            if #selectStack <= 7 then
+--                playSound(slideCoco[#selectStack])
+--            else
+--                playSound(slideCoco[7])
+--            end
         end
 
         if selectWord == main_word then
