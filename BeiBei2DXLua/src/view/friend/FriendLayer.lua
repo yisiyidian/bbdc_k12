@@ -24,8 +24,23 @@ function FriendLayer:ctor()
     self:addChild(topline)
     
     local usrname = cc.Label:createWithSystemFont(s_CURRENT_USER.username,'',32)
-    usrname:setPosition(0.25 * topline:getContentSize().width,0.5 * topline:getContentSize().height)
+    usrname:setAnchorPoint(0,0.5)
+    usrname:setPosition(0.2 * topline:getContentSize().width,0.5 * topline:getContentSize().height)
     topline:addChild(usrname)
+    
+    local backBtn = ccui.Button:create('image/PersonalInfo/backButtonInPersonalInfo.png','image/PersonalInfo/backButtonInPersonalInfo.png','')
+    backBtn:setAnchorPoint(0,0.5)
+    backBtn:setPosition(0,0.5 * topline:getContentSize().height)
+    topline:addChild(backBtn)
+    
+    local function onBack(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local HomeLayer = require('view.home.HomeLayer')
+            local homeLayer = HomeLayer.create()
+            s_SCENE:replaceGameLayer(homeLayer)
+        end
+    end
+    backBtn:addTouchEventListener(onBack)
     
     local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
     

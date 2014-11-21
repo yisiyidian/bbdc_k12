@@ -22,7 +22,7 @@ function FriendList:ctor()
     end
     
     self.array = {}
-    for f in s_CURRENT_USER.friends do
+    for i,f in ipairs(s_CURRENT_USER.friends) do
         self.array[#self.array + 1] = f
     end
     s_logd('friend = %d',#s_CURRENT_USER.friends)
@@ -58,9 +58,9 @@ function FriendList:addList()
     listView:setBounceEnabled(false)
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))
-    listView:setPosition(0,0)
+    listView:setPosition(s_LEFT_X,0)
     self:addChild(listView,0,'listView')
-    
+    local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
     --listView:add
     
     -- create model
@@ -69,8 +69,8 @@ function FriendList:addList()
 
     local default_item = ccui.Layout:create()
     default_item:setTouchEnabled(true)
-    default_item:setContentSize(default_button:getContentSize())
-    default_button:setPosition(cc.p(default_item:getContentSize().width / 2.0, default_item:getContentSize().height / 2.0))
+    default_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X, default_button:getContentSize().height))
+    default_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) / 2.0, default_item:getContentSize().height / 2.0))
     default_item:addChild(default_button)
 
     --set model
@@ -96,13 +96,16 @@ function FriendList:addList()
             nameStr = "image/friend/friendRankSelfButton.png"
         end
         local custom_button = ccui.Button:create(nameStr,nameStr,'')
+        custom_button:setScaleX(scale)
+        custom_button:ignoreAnchorPointForPosition(false)
+        custom_button:setAnchorPoint(0,0)
         custom_button:setName("Title Button")
         custom_button:setScale9Enabled(true)
         custom_button:setContentSize(default_button:getContentSize())
         custom_button.index = i
         local custom_item = ccui.Layout:create()
-        custom_item:setContentSize(custom_button:getContentSize())
-        custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+        custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,custom_button:getContentSize().height))
+        custom_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) * 0, custom_item:getContentSize().height * 0))
         custom_item:addChild(custom_button)
 
         listView:addChild(custom_item)
@@ -124,15 +127,17 @@ function FriendList:addList()
                     custom_button:setName("Title Button")
                     custom_button:setScale9Enabled(true)
                     custom_button:setContentSize(default_button:getContentSize())
+                    custom_button:setScaleX(scale)
                     custom_button.index = 0
                     custom_button:addTouchEventListener(touchEvent)
                     local custom_item = ccui.Layout:create()
                     custom_item:setContentSize(custom_button:getContentSize())
-                    custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+                    custom_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) / 2.0, custom_item:getContentSize().height / 2.0))
                     custom_item:addChild(custom_button)
                     listView:insertCustomItem(custom_item,listView:getCurSelectedIndex() + 1)
                     local delete = cc.Sprite:create('image/friend/fri_delete.png')
-                    delete:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+                    delete:setScaleX(1 / scale)
+                    delete:setPosition(cc.p(custom_button:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
                     custom_button:addChild(delete)
                     if self.selectIndex > -1 then
                         if self.selectIndex > sender.index then
@@ -212,21 +217,25 @@ function FriendList:addList()
             str = string.format('%d',i)
         end
         local rankIcon = cc.Sprite:create(string.format('image/friend/fri_rank_%s.png',str))
+        rankIcon:setScaleX(1 / scale)
         rankIcon:setPosition(0.08 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(rankIcon)
         rankIcon:setName('rankIcon')
         
         local rankLabel = cc.Label:createWithSystemFont(string.format('%d',i),'',36)
+        rankLabel:setScaleX(1 / scale)
         rankLabel:setPosition(rankIcon:getContentSize().width / 2,rankIcon:getContentSize().width / 2)
         rankIcon:addChild(rankLabel)
         rankLabel:setName('rankLabel')
         
         local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
-        head:setScale(0.8)
+        head:setScaleX(1 / scale * 0.8)
+        head:setScaleY(0.8)
         head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(head)
         
         local fri_name = cc.Label:createWithSystemFont(self.array[i].username,'',32)
+        fri_name:setScaleX(1 / scale)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
         fri_name:setAnchorPoint(0,0)
@@ -234,6 +243,7 @@ function FriendList:addList()
         button:addChild(fri_name)
         
         local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',self.array[i].wordsCount),'',24)
+        fri_word:setScaleX(1 / scale)
         fri_word:setColor(cc.c3b(0,0,0))
         fri_word:ignoreAnchorPointForPosition(false)
         fri_word:setAnchorPoint(0,1)
@@ -241,6 +251,7 @@ function FriendList:addList()
         button:addChild(fri_word)
         local str = 'image/friend/fri_jiantouxia.png'
         local arrow = cc.Sprite:create(str)
+        arrow:setScaleX(1 / scale)
         arrow:setPosition(0.9 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(arrow,0,'arrow')
         

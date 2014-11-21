@@ -79,22 +79,6 @@ function FriendRequest:ctor()
         listView:addChild(custom_item) 
     end
 
-    --insert custom item
---    local items = listView:getItems()
---    local items_count = table.getn(items)
---    for i = 1, math.floor(count / 4) do
---        local custom_button = ccui.Button:create("image/friend/friendRankButton.png", "image/friend/friendRankButton.png")
---        custom_button:setName("Title Button")
---        custom_button:setContentSize(default_button:getContentSize())
---
---        local custom_item = ccui.Layout:create()
---        custom_item:setContentSize(custom_button:getContentSize())
---        custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
---        custom_item:addChild(custom_button)
---        custom_item:setTag(1)
---
---        listView:insertCustomItem(custom_item, items_count)
---    end
 
     -- set item data
     local items_count = table.getn(listView:getItems())
