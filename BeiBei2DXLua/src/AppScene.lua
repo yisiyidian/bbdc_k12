@@ -324,8 +324,10 @@ function AppScene:saveSignUpAndLogInData(onSaved)
 
     if s_CURRENT_USER.localTime == 0 then
         s_CURRENT_USER.localTime = os.time()
+        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         updateWeek(nil, 1)
     else
+        print ('%d , %d', os.time(), s_CURRENT_USER.localTime)
         local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
         s_UserBaseServer.getDataLogIn(s_CURRENT_USER.objectId, currentWeeks,
             function (api, result)

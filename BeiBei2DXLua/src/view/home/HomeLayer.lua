@@ -2,6 +2,8 @@ require("Cocos2d")
 require("Cocos2dConstants")
 require("common.global")
 
+local AlterI = require("view.alter.AlterI")
+
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
@@ -77,6 +79,8 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+            s_CorePlayManager.enterFriendLayer()
         end
     end
     
@@ -94,8 +98,7 @@ function HomeLayer.create()
     has_study:setMidpoint(cc.p(1, 0))
     has_study:setBarChangeRate(cc.p(0, 1))
     has_study:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
---    has_study:setPercentage(100 * studyWordNum / bookWordCount)
-    has_study:setPercentage(40)
+    has_study:setPercentage(100 * studyWordNum / bookWordCount)
     book_back:addChild(has_study)
     
     local has_grasp = cc.ProgressTimer:create(cc.Sprite:create("image/homescene/book_front_blue_zhangwo.png"))
@@ -103,8 +106,7 @@ function HomeLayer.create()
     has_grasp:setMidpoint(cc.p(1, 0))
     has_grasp:setBarChangeRate(cc.p(0, 1))
     has_grasp:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
---    has_grasp:setPercentage(100 * graspWordNum / bookWordCount)
-    has_grasp:setPercentage(30)
+    has_grasp:setPercentage(100 * graspWordNum / bookWordCount)
     book_back:addChild(has_grasp)
     
     local book_back_width = book_back:getContentSize().width
@@ -150,7 +152,6 @@ function HomeLayer.create()
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
-
 
     local button_data
     local isDataShow = false
@@ -211,8 +212,12 @@ function HomeLayer.create()
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     s_CorePlayManager.enterBookLayer()
+                elseif label_name[i] == "用户反馈" then
+                    local alter = AlterI.create("用户反馈")
+                    alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(alter)
                 elseif label_name[i] == "登出游戏" then
-                    
+                
                 else
                     
                 end

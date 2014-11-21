@@ -29,7 +29,7 @@ function getWeekDay(secondsFrom1970)
 end
 
 function getCurrentLogInWeek(offsetSeconds_1stPlay_now)
-    local ret = offsetSeconds_1stPlay_now / 7 * 24 * 60 * 60.0
+    local ret = offsetSeconds_1stPlay_now / (7 * 24 * 60 * 60.0)
     return math.ceil(ret)
 end
 

@@ -296,6 +296,7 @@ function SummaryBossLayer.create(levelConfig)
             if layer.crabOnView[i] then
                 if selectWord == layer.wordPool[layer.currentIndex][i] then
                     killedCrabCount = killedCrabCount + 1
+                    layer.rightWord = layer.rightWord + 1
                     layer.hintTime = 0
                     match = true
                     layer.globalLock = true
@@ -463,6 +464,7 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     self.girlAfraid = false
     self.totalBlood = levelConfig.summary_boss_hp
     self.currentBlood = self.totalBlood
+    self.rightWord = 0
     self.totalTime = levelConfig.summary_boss_time
     self.onCrab = 0
     self.isLose = false
@@ -712,8 +714,8 @@ function SummaryBossLayer:initCrab()
             delaytime = 1.5
         end
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
-        self.ccbcrab[i]['meaningSmall']:setString(self.wordPool[self.currentIndex][i])
-        self.ccbcrab[i]['meaningBig']:setString(self.wordPool[self.currentIndex][i])
+        self.ccbcrab[i]['meaningSmall']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
+        self.ccbcrab[i]['meaningBig']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
     end
 end
 

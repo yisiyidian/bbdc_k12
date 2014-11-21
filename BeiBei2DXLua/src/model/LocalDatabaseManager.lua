@@ -328,7 +328,33 @@ function Manager.getRBWordList(bossID)
     return wordList
 end
 
-
+function Manager.getRandomWord()
+    local user = s_CURRENT_USER.objectId
+    local book = s_CURRENT_USER.bookKey
+    local wrongWords = {}
+    local studyWords = {}
+    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..book.."'") do
+        if row.wordProciency < 5 then
+            table.insert(wrongWords, row.wordName)
+        end
+        table.insert(studyWords, row.wordName)
+    end
+    
+    math.randomseed(os.time())
+    if #wrongWords ~= 0 then
+        local randomIndex = math.random(1, #wrongWords)
+        return wrongWords[randomIndex]
+    end
+    
+    if #studyWords ~= 0 then
+        local randomIndex = math.random(1, #studyWords)
+        return studyWords[randomIndex]
+    end
+    
+    local candidate = {"apple", "many", "tea"}
+    local randomIndex = math.random(1, 3)
+    return candidate[randomIndex]
+end
 
 function Manager.getStudyWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
     local user = s_CURRENT_USER.objectId

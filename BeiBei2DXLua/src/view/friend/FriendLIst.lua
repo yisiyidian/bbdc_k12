@@ -21,7 +21,11 @@ function FriendList:ctor()
         end
     end
     
-    self.array = s_CURRENT_USER.friends
+    self.array = {}
+    for f in s_CURRENT_USER.friends do
+        self.array[#self.array + 1] = f
+    end
+    s_logd('friend = %d',#s_CURRENT_USER.friends)
     self.array[#self.array + 1] = s_CURRENT_USER
     self.selectIndex = -2
     for i = 1,#self.array do
@@ -95,7 +99,7 @@ function FriendList:addList()
         custom_button:setName("Title Button")
         custom_button:setScale9Enabled(true)
         custom_button:setContentSize(default_button:getContentSize())
-        
+        custom_button.index = i
         local custom_item = ccui.Layout:create()
         custom_item:setContentSize(custom_button:getContentSize())
         custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
@@ -189,8 +193,9 @@ function FriendList:addList()
                 
             end
         end
-    
-        custom_button:addTouchEventListener(touchEvent)
+        if self.array[custom_button.index].username ~= s_CURRENT_USER.username then
+            custom_button:addTouchEventListener(touchEvent) 
+        end
             
     end
 
@@ -200,7 +205,7 @@ function FriendList:addList()
         local item = listView:getItem(i - 1)
         local button = item:getChildByName("Title Button")
         local index = listView:getIndex(item)
-        button.index = i
+        --button.index = i
         local str = 'n'
         
         if i < 4 then

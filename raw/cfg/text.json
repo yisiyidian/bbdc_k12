@@ -14,11 +14,11 @@
     },
     {
       "key": "feedback_mail_suggestion",
-      "cn": "用户建议:%s"
+      "cn": "用户建议"
     },
     {
       "key": "feedback_mail_bug",
-      "cn": "用户 Bug :%s"
+      "cn": "用户 Bug"
     },
     {
       "key": "word_learned",

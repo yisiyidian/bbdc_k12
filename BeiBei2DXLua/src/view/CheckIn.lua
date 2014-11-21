@@ -9,6 +9,7 @@ require("common.global")
 
 ccbCheckInNode = ccbCheckInNode or {}
 
+local currentWord
 
 local CheckInNode = class("CheckInNode", function ()
     return cc.Node:create()
@@ -20,11 +21,11 @@ function CheckInNode.create(pNode)
     return node
 end
 
-local globalLock = false
+
 local letterArray = {}
 
 function CheckInNode:ctor()
-
+    self.globalLock = false
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
 
@@ -46,6 +47,14 @@ function CheckInNode:ctor()
     ccbCheckInNode['onSucceedClose'] = self.onSucceedClose
     ccbCheckInNode['Layer'] = self
     
+    --meaning
+    ccbCheckInNode['_wordMeaing'] = self._wordMeaing
+    
+    --win window
+    ccbCheckInNode['_meaning'] = self._meaning
+    ccbCheckInNode['_pronounce'] = self._pronounce
+    ccbCheckInNode['_sentence'] = self._sentence
+    
     local proxy = cc.CCBProxy:create()
     local node  = CCBReaderLoad("ccb/checkIn.ccbi", proxy, ccbCheckInNode, self.ccb)
     node:setPosition(0,0)
@@ -53,16 +62,36 @@ function CheckInNode:ctor()
 
     ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(0.5 * s_DESIGN_WIDTH,0.56 * s_DESIGN_HEIGHT))))
     
+    -- checkin day
+    
     local checkInDay = 1
+
     
     
     --checkinword @ chaochao
     
+    -- whether currentWord == nil
+    if currentWord == nil then
+    currentWord = s_DATABASE_MGR.getRandomWord()
+    end
     
-    --    function findCheckInWord(s_CURRENT_USER)
-    --    end
-
-    local checkInWord = "apple"
+    -- example n.apple
+    
+    local checkInWord = currentWord
+    local exampleWordMeaning = s_WordPool[checkInWord].wordMeaningSmall
+    ccbCheckInNode['_wordMeaing']:setString(exampleWordMeaning)
+    
+    local checkInWordInAnotherWindow = checkInWord
+    ccbCheckInNode['_meaning']:setString(exampleWordMeaning)
+    
+    --example / ’bla/
+    local wordPronounce = s_WordPool[checkInWord].wordSoundMarkEn
+    ccbCheckInNode['_pronounce']:setString(wordPronounce)
+    
+    --example an apple keep blablablalal
+    local sentenceExample = s_WordPool[checkInWord].sentenceEn
+    ccbCheckInNode['_sentence']:setString(sentenceExample)
+    
     
     -- if s_CURRENT_USER is a new one
     -- checkinword = apple or many or tea
@@ -200,7 +229,7 @@ function CheckInNode:ctor()
     onTouchBegan = function(touch, event)
         s_logd('touchBegin')
         
-        if globalLock then
+        if self.globalLock then
             return true
         end
         
@@ -233,7 +262,7 @@ function CheckInNode:ctor()
     onTouchMoved = function(touch, event)
         s_logd('touchMove')
         
-        if globalLock then
+        if self.globalLock then
             return true
         end
         
@@ -261,7 +290,7 @@ function CheckInNode:ctor()
     
    fakeTouchMoved = function(location)
    
-        if globalLock then
+        if self.globalLock then
             return
         end
         
@@ -325,7 +354,7 @@ function CheckInNode:ctor()
     onTouchEnded = function(touch, event)
         s_logd('touchEnd')
         
-        if globalLock then
+        if self.globalLock then
             return true
         end
         
@@ -342,15 +371,17 @@ function CheckInNode:ctor()
 
 
         -- checkinword @chaochao
-        if selectWord == "apple" then
+        if selectWord == checkInWord then
         -- checkinword @chaochao
         
         --learn true
             playSound(s_sound_learn_true)
         
             self.pNode.checkIn:setVisible(false)
+            
+            -- add heart
             s_CURRENT_USER:addEnergys(1)
-            globalLock = true
+            self.globalLock = true
 --            for i = 1, #selectStack do
 --                local node = selectStack[i]
 --                node.hasSelected = false
@@ -423,7 +454,7 @@ function CheckInNode:ctor()
 end
 
 function CheckInNode:onClose()
-    if globalLock then
+    if self.globalLock then
         for i = 1,4 do
             for j = 1,4 do
                 letterArray[i][j]:removeFromParent()
@@ -461,8 +492,10 @@ function CheckInNode:onSucceedClose()
     -- after success write down time right now
     local lastCheckInAward = s_CURRENT_USER.serverTime
     s_UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, true, false) 
-    lastCheckInAward = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
+--    lastCheckInAward = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
 --    is2TimeInSameDay(secondsA, secondsB) 
+
+    currentWord = nil
 end
 
 return CheckInNode
