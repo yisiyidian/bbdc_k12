@@ -36,6 +36,13 @@ function LevelLayer:levelStateManager()
             end
         end
     end
+    
+    -- CHECK tutorial review boss
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+    if s_CURRENT_USER.currentLevelKey == 'level0' and levelData.stars > 0 and s_SCENE.levelLayer ~= s_review_boss_pass_state and s_CURRENT_USER.reviewBossTutorialStep == 0 then
+        s_SCENE.levelLayerState = s_review_boss_appear_state
+    end
+    -- 
     -- TODO switch state
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
@@ -104,12 +111,15 @@ function LevelLayer:levelStateManager()
             end)
         --end
         s_SCENE.levelLayerState = s_normal_level_state
+        if s_CURRENT_USER.reviewBossTutorialStep == 0 then
+            s_CURRENT_USER.reviewBossTutorialStep = 1
+        end
      end
      s_CURRENT_USER:updateDataToServer()
 end
 
 function LevelLayer:ctor()
-    
+    --print('---levelSceneState:'..(s_SCENE.levelLayerState == s_review_boss_pass_state))
     local levelStypeI = require('view.level.LevelLayerI')
     local levelStypeII = require('view.level.LevelLayerII')
     local connectionLayer1_2 = require('view.level.connection.Connection1_2')

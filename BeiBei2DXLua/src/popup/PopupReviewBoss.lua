@@ -59,18 +59,23 @@ function PopupReviewBoss:onGoButtonClicked()
        
     self:onCloseButtonClicked()
     --local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
-    if s_CURRENT_USER.energyCount >= s_review_boss_energy_cost then
-        s_CURRENT_USER:useEnergys(s_review_boss_energy_cost)
-        s_CorePlayManager.enterReviewBossLayer()  
-        
-        -- energy cost "cost"
-        s_SCENE:callFuncWithDelay(0.3,function()
-            playSound(s_sound_cost)
-        end)
-    else 
-        local energyInfoLayer = require('popup.PopupEnergyInfo')
-        local layer = energyInfoLayer.create()
-        s_SCENE:popup(layer)
+    
+    if s_CURRENT_USER.currentLevelKey == 'level0' and s_CURRENT_USER.reviewBossTutorialStep == 0 then
+        s_CorePlayManager.enterReviewBossLayer_special()
+    else
+        if s_CURRENT_USER.energyCount >= s_review_boss_energy_cost then
+            s_CURRENT_USER:useEnergys(s_review_boss_energy_cost)
+            s_CorePlayManager.enterReviewBossLayer()  
+            
+            -- energy cost "cost"
+            s_SCENE:callFuncWithDelay(0.3,function()
+                playSound(s_sound_cost)
+            end)
+        else 
+            local energyInfoLayer = require('popup.PopupEnergyInfo')
+            local layer = energyInfoLayer.create()
+            s_SCENE:popup(layer)
+        end
     end
 end
 
