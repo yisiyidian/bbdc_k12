@@ -8,8 +8,6 @@ end)
 
 
 function HomeLayer.create()
-    print("ziaoang"..s_DATABASE_MGR.getRandomWord())
-
     -- data begin
     local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
