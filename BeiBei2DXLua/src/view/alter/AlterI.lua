@@ -34,13 +34,13 @@ function AlterI.create(info)
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect)
-            -- TODO
+            cx.CXUtils:showMail(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION), s_CURRENT_USER.username)
         end
     end
 
     local button_left = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
     button_left:setPosition(backWidth/2, backHeight/2)
-    button_left:setTitleText("提个意见")
+    button_left:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_SUGGESTION))
     button_left:setTitleFontSize(30)
     button_left:addTouchEventListener(button_left_clicked)
     back:addChild(button_left)
@@ -48,14 +48,13 @@ function AlterI.create(info)
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect)
-            -- TODO
-            
+            cx.CXUtils:showMail(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_BUG), s_CURRENT_USER.username)
         end
     end
 
     local button_right = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
     button_right:setPosition(backWidth/2, backHeight/2-100)
-    button_right:setTitleText("提个bug")
+    button_right:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_BUG))
     button_right:setTitleFontSize(30)
     button_right:addTouchEventListener(button_right_clicked)
     back:addChild(button_right)
