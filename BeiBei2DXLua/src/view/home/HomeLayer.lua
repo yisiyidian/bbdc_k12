@@ -207,12 +207,12 @@ function HomeLayer.create()
     local username = "游客"
     local logo_name = {"head","book","feedback","information","logout"}
     local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
-    if not s_CURRENT_USER.isGuest then
+    if s_CURRENT_USER.isGuest == 0 then
         username = s_CURRENT_USER.username
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
     end
-    for i = 1, 5 do
+    for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
                 playSound(s_sound_buttonEffect)
@@ -223,18 +223,18 @@ function HomeLayer.create()
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 elseif label_name[i] == "完善个人信息" then
-                    local ImproveInfo = ImproveInfo.create()
-                    ImproveInfo:setTag(1)
-                    ImproveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    layer:addChild(ImproveInfo)
+                    local improveInfo = ImproveInfo.create()
+                    improveInfo:setTag(1)
+                    improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(improveInfo)
                     
-                    ImproveInfo.close = function()
+                    improveInfo.close = function()
                         layer:removeChildByTag(1)
-                        print(s_CURRENT_USER.username)
-                        
-                        list[1].label:setString(s_CURRENT_USER.username)
-                        list[5].button_back:setPosition(0, s_DESIGN_HEIGHT-list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                        list[4].button_back:removeFromParentAndCleanup()
+                        if s_CURRENT_USER.isGuest == 0 then
+                            list[1].label:setString(s_CURRENT_USER.username)
+                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT-list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                            list[4].button_back:removeFromParentAndCleanup()
+                        end
                     end
                 elseif label_name[i] == "登出游戏" then
                     -- logout

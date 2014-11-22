@@ -10,7 +10,7 @@
 #include "CCLuaEngine.h"
 #include "platform/android/jni/JniHelper.h"
 
-#define JAVA_PKG "com/beibei/wordmaster/AppActivity"
+#define JAVA_PKG "c/bb/dc/BBNDK"
 
 using namespace cocos2d;
 

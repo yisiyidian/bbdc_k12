@@ -19,13 +19,25 @@ function StudyedWordList:addMasteredPlots(button, proficiency)
         sprite3 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
         sprite4 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
     elseif proficiency == 3 then
-    
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
     elseif proficiency == 2 then
-    
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
     elseif profiency == 1 then
-    
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
     else  -- 
-    
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
     end
     sprite1:setPosition(cc.p(0.9 * button:getContentSize().width,0.6 * button:getContentSize().height))
     sprite2:setPosition(cc.p(0.85 * button:getContentSize().width,0.6 * button:getContentSize().height))
@@ -101,10 +113,18 @@ function StudyedWordList:ctor()
         titleContainner:addChild(title)
         listView:addChild(titleContainner)
         
+        -- define more info button clicked event
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+            
+            end
+        end
         -- add word list
+        local studyWords = s_DATABASE_MGR.getStudyWords(s_CURRENT_USER.bookKey)
         for i = 1, #self.levelArray[indexConfig] do
             local word = self.levelArray[indexConfig][i]
-            
+            local wordInfo = s_WordPool[word]
+            --print_lua_table(wordInfo)
             local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
             custom_button:setName("custom_button")
             custom_button:setTitleText('123')
@@ -125,7 +145,7 @@ function StudyedWordList:ctor()
             word_name:setPosition(0.12 * custom_button:getContentSize().width,0.52 * custom_button:getContentSize().height)
             custom_button:addChild(word_name)
 
-            local word_meaning = cc.Label:createWithSystemFont('点击查看单词意思','',24)
+            local word_meaning = cc.Label:createWithSystemFont(wordInfo['wordMeaningSmall'],'',24)
             word_meaning:setColor(cc.c3b(0,0,0))
             word_meaning:ignoreAnchorPointForPosition(false)
             word_meaning:setAnchorPoint(0,1)
@@ -140,7 +160,8 @@ function StudyedWordList:ctor()
             arrow:addChild(more_label)
             custom_button:addChild(arrow,0,'arrow')        
             -- add mastered count
-            self:addMasteredPlots(custom_button, 4)
+            print('study:'..studyWords[word])
+            self:addMasteredPlots(custom_button, studyWords[word])
         end
         indexConfig = indexConfig + 1
     end
@@ -148,7 +169,7 @@ function StudyedWordList:ctor()
     --self.array = {'word', 'sunny', 'test', 'hard','nice','best','hello','world','well'}
     --
 
-    local count = #self.array
+    --local count = #self.array
 --    for i = 1,count do
 --        listView:pushBackDefaultItem()
 --    end
