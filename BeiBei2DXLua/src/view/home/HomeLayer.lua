@@ -255,7 +255,6 @@ function HomeLayer.create()
     setting_shadow:setPosition(setting_back:getContentSize().width, setting_back:getContentSize().height/2)
     setting_back:addChild(setting_shadow)
     
-   
     local moveLength = 100
     local moved = false
     local start_x = nil
@@ -273,7 +272,7 @@ function HomeLayer.create()
                 
                 local action1 = cc.DelayTime:create(1)
                 local action2 = cc.CallFunc:create(function()
-                    s_CorePlayManager.enterWordLayer()
+                    s_CorePlayManager.enterWordListLayer()
                     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)
                 layer:runAction(cc.Sequence:create(action1, action2))
