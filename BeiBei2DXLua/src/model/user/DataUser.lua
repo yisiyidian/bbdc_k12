@@ -126,7 +126,7 @@ end
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     --print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
+        --s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == s_CURRENT_USER.bookKey then
             return v
         end
@@ -137,9 +137,9 @@ end
 
 function DataUser:getUserCurrentChapterObtainedStarCount()
     local count = 0
-    print('self.levels size:'..#self.levels)
+    --print('self.levels size:'..#self.levels)
     for i, v in ipairs(self.levels) do
-        print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
+        --print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
         if v.chapterKey == self.currentChapterKey then
             count = count + v.stars
         end
