@@ -121,6 +121,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
             s_SERVER.updatePassword(s_CURRENT_USER.password, password, s_CURRENT_USER.objectId, 
                 function (api, result) 
                     s_CURRENT_USER.password = password
+                    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
                     onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
                 end, 
                 function (api, code, message, description) 
@@ -128,6 +129,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                 end)
         else
             s_CURRENT_USER.password = password
+            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
             onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
         end
     end
@@ -140,6 +142,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                 UserBaseServer.saveDataObjectOfCurrentUser(obj, 
                     function (api, result) 
                         s_CURRENT_USER.username = username
+                        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
                         change_password(password, onResponse)
                     end, 
                     function (api, code, message, description) 
