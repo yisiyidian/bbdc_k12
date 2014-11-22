@@ -306,6 +306,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
     local function updateWeek(data, week)
         if data == nil then 
             data = DataLogIn.create()
+            s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
         end
         data.week = week
         data:setWeekDay(os.time())

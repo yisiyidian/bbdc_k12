@@ -63,8 +63,8 @@ local function main()
         s_SERVER.production       = 0
 
 
-        s_APP_VERSION = 150003
-        s_CONFIG_VERSION = 150000
+        s_APP_VERSION = 150005
+        s_CONFIG_VERSION = 150005
 
         s_SERVER.appId = LEAN_CLOUD_ID_TEST
         s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
