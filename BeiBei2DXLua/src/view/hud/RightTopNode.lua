@@ -165,40 +165,40 @@ function RightTopNode:ctor()
     end
 
     
-    local function update(delta)
-        -- timer from 1800 sec
-        local time_betweenServerAndEnergy = s_CURRENT_USER.energyLastCoolDownTime + s_energyCoolDownSecs - s_CURRENT_USER.serverTime
-        local min = math.floor(time_betweenServerAndEnergy / 60)
-        local sec = math.floor(time_betweenServerAndEnergy % 60)
-        
-        if s_CURRENT_USER.energyCount >= s_energyMaxCount then
-           heartShow = "full"
-        else     
-            heartShow = string.format("%d",min) ..":"..string.format("%d",sec)   
-
-        end           
-  --      heartExist:setString(s_CURRENT_USER.energyCount)  
-        label_heart:setString(heartShow)
-        label_star:setString(starNumber)
-       -- update data  
-
---       --show full or time
---        if introLayer_heart ~= nil then
---            if introLayer_heart.ccbPopupEnergyInfo ~= nil then
---            introLayer_heart.ccbPopupEnergyInfo['energyNumber']:setString(heartShow)
---            local animation = introLayer_heart.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
---            local label = animation:getChildByName("energyNumber")
---            if label ~= nil then
---            label:setString(heartNumber)
---            end
---            end     
---        end    
-
-
-    end
-
-
-    self:scheduleUpdateWithPriorityLua(update, 0)  
+--    local function update(delta)
+--        -- timer from 1800 sec
+--        local time_betweenServerAndEnergy = s_CURRENT_USER.energyLastCoolDownTime + s_energyCoolDownSecs - s_CURRENT_USER.serverTime
+--        local min = math.floor(time_betweenServerAndEnergy / 60)
+--        local sec = math.floor(time_betweenServerAndEnergy % 60)
+--        
+--        if s_CURRENT_USER.energyCount >= s_energyMaxCount then
+--           heartShow = "full"
+--        else     
+--            heartShow = string.format("%d",min) ..":"..string.format("%d",sec)   
+--
+--        end           
+--  --      heartExist:setString(s_CURRENT_USER.energyCount)  
+--        label_heart:setString(heartShow)
+--        label_star:setString(starNumber)
+--       -- update data  
+--
+----       --show full or time
+----        if introLayer_heart ~= nil then
+----            if introLayer_heart.ccbPopupEnergyInfo ~= nil then
+----            introLayer_heart.ccbPopupEnergyInfo['energyNumber']:setString(heartShow)
+----            local animation = introLayer_heart.ccbPopupEnergyInfo['popupWindow']:getChildByName("heart_animation")
+----            local label = animation:getChildByName("energyNumber")
+----            if label ~= nil then
+----            label:setString(heartNumber)
+----            end
+----            end     
+----        end    
+--
+--
+--    end
+--
+--
+--    self:scheduleUpdateWithPriorityLua(update, 0)  
     
     
     --    -- popupwindow
