@@ -26,11 +26,7 @@ THE SOFTWARE.
 ****************************************************************************/
 package com.beibei.wordmaster;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
@@ -44,39 +40,18 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.Settings;
 import android.view.WindowManager;
-import android.widget.Toast;
+import c.bb.dc.BBNDK;
 
-import c.bb.dc.BBConfigsDownloader;
-import c.bb.dc.BBUtils;
-import c.bb.dc.BBWordSoundFileDownloader;
-
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVFile;
-import com.avos.avoscloud.AVOSCloud;
-import com.avos.avoscloud.AVAnalytics;
-import com.avos.avoscloud.AVObject;
-import com.avos.avoscloud.AVQuery;
-import com.avos.avoscloud.AVUser;
-import com.avos.avoscloud.GetFileCallback;
-import com.avos.avoscloud.GetDataCallback;
-import com.avos.avoscloud.FindCallback;
-import com.avos.avoscloud.ProgressCallback;
-import com.avos.avoscloud.SignUpCallback;
-import com.avos.avoscloud.LogInCallback;
-import com.alibaba.fastjson.JSONObject;
 import com.anysdk.framework.PluginWrapper;
+import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVOSCloud;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
 
 public class AppActivity extends Cocos2dxActivity {
-
-	static String hostIPAdress="0.0.0.0";
-	private static Context context = null;
-	private static AppActivity instance = null;
 	
 	private static String LEAN_CLOUD_ID_TEST  =  "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn";
 	private static String LEAN_CLOUD_KEY_TEST =  "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3";
@@ -88,7 +63,9 @@ public class AppActivity extends Cocos2dxActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		if (nativeIsDebug()) {
+		BBNDK.setup(getApplicationContext(), this);
+		
+		if (BBNDK.nativeIsDebug()) {
 			// test server
 			AVOSCloud.initialize(this, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
 			AVOSCloud.setDebugLogEnabled(true);
@@ -100,12 +77,9 @@ public class AppActivity extends Cocos2dxActivity {
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);
 		
-		context = getApplicationContext();
-		instance = this;
-		
 		PluginWrapper.init(this);
 		
-		if(nativeIsLandScape()) {
+		if(BBNDK.nativeIsLandScape()) {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
 		} else {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
@@ -114,7 +88,7 @@ public class AppActivity extends Cocos2dxActivity {
 		//2.Set the format of window
 		
 		// Check the wifi is opened when the native is debug.
-		if (nativeIsDebug())
+		if (BBNDK.nativeIsDebug())
 		{
 			getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 			if (!isNetworkConnected())
@@ -135,7 +109,7 @@ public class AppActivity extends Cocos2dxActivity {
 				builder.show();
 			}
 		}
-		hostIPAdress = getHostIpAddress();
+		BBNDK.setHostIPAdress( getHostIpAddress() );
 	}
 
 	@Override
@@ -191,122 +165,4 @@ public class AppActivity extends Cocos2dxActivity {
 		int ip = wifiInfo.getIpAddress();
 		return ((ip & 0xFF) + "." + ((ip >>>= 8) & 0xFF) + "." + ((ip >>>= 8) & 0xFF) + "." + ((ip >>>= 8) & 0xFF));
 	}
-	
-	public static String getLocalIpAddress() {
-		return hostIPAdress;
-	}
-	
-	public static String getSDCardPath() {
-		if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-			String strSDCardPathString = Environment.getExternalStorageDirectory().getPath();
-           return  strSDCardPathString;
-		}
-		return null;
-	}
-	
-	public static void onEvent(String eventName, String  tag) {  
-		if (context != null) {
-			AVAnalytics.onEvent(context, eventName, tag);
-		}
-	} 
-	
-	public static void showMail(String mailTitle, String username) {
-		Intent i = new Intent(Intent.ACTION_SEND);
-		i.setType("message/rfc822");
-		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"beibeidanci@qq.com"});
-		i.putExtra(Intent.EXTRA_SUBJECT, mailTitle + ":" + username);
-		// i.putExtra(Intent.EXTRA_TEXT   , "(发送反馈邮件)");
-		try {
-			instance.startActivity(Intent.createChooser(i, "发送反馈邮件"));
-		} catch (android.content.ActivityNotFoundException ex) {
-		    Toast.makeText(instance, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
-		}
-	}
-	
-	public static void downloadFile(final String objectId, final String savepath) {
-		AVFile.withObjectIdInBackground(objectId, new GetFileCallback<AVFile>() {
-			@Override
-			public void done(final AVFile file, AVException e) {
-				if (file == null || e != null) {
-					invokeLuaCallbackFunctionDL(objectId, file != null ? file.getOriginalName() : "", e != null ? e.getLocalizedMessage() : "get file object error", 0);
-				} else {
-					file.getDataInBackground(new GetDataCallback() {
-						@Override
-						public void done(byte[] data, AVException arg1) {
-							if (arg1 != null) {
-								invokeLuaCallbackFunctionDL(objectId, file != null ? file.getOriginalName() : "", arg1.getLocalizedMessage(), 0);
-							} else {
-								if (data != null && data.length > 0 && BBUtils.saveFile(savepath, file.getOriginalName(), data)) {
-									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file succeed", 1);
-								} else {
-									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file error", 0);
-								}
-							}
-						}
-					}, new ProgressCallback() {
-						@Override
-						public void done(Integer arg0) {
-						}						
-					});
-				}
-			}
-		});
-	}
-	
-	public static void downloadWordSoundFiles(final String prefix, final String wordsList, final String subfix, final String path) {
-		String[] words = wordsList.split("\\|");
-		BBWordSoundFileDownloader first = new BBWordSoundFileDownloader(words, 0, words.length, prefix, subfix, path);
-		first.start();
-	}
-	
-	public static void downloadConfigFiles(final String objectIds, final String path) {
-		String[] ids = objectIds.split("\\|");
-		BBConfigsDownloader o = new BBConfigsDownloader(ids, 0, ids.length, path);
-		o.start();
-	}
-	
-	private static String AVUserToJsonStr(AVUser user) {
-//		TODO: Android unknown error
-//		org.json.JSONObject json = user.toJSONObject();
-//		return json.toString();
-		
-		return user.getSessionToken();
-	}
-	
-	public static void signUp(String username, String password) {
-		final AVUser user = new AVUser();
-		user.setUsername(username);
-		user.setPassword(password);
-		user.signUpInBackground(new SignUpCallback() {
-		    public void done(AVException e) {
-		        if (e == null) {
-		        	invokeLuaCallbackFunctionSU(AVUserToJsonStr(user), null, 0);
-		        } else {
-		        	invokeLuaCallbackFunctionSU(null, e.getLocalizedMessage(), e.getCode());
-		        }
-		    }
-		});
-	}
-	
-	public static void logIn(String username, String password) {
-		AVUser.logInInBackground(username, password, new LogInCallback<AVUser>() {
-			public void done(AVUser user, AVException e) {
-		        if (e == null) {
-		        	invokeLuaCallbackFunctionLI(AVUserToJsonStr(user), null, 0);
-		        } else {
-		        	invokeLuaCallbackFunctionLI(null, e.getLocalizedMessage(), e.getCode());
-		        }
-		    }
-		});
-	}
-	
-	public static void logOut() {
-		AVUser.logOut();
-	}
-	
-	private static native boolean nativeIsLandScape();
-	private static native boolean nativeIsDebug();
-	private static native void invokeLuaCallbackFunctionDL(String objectId, String filename, String error, int isSaved);
-	private static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
-	private static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
 }
