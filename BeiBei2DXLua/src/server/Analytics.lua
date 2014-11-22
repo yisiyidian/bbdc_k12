@@ -16,3 +16,7 @@ end
 function AnalyticsDailyCheckIn(day)
     cx.CXAnalytics:logEventAndLabel('DailyCheckIn', tostring(day))
 end
+
+function AnalyticsLogOut(userObjectId)
+    cx.CXAnalytics:logEventAndLabel('LogOut', tostring(userObjectId))
+end

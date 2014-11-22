@@ -217,7 +217,11 @@ function HomeLayer.create()
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 elseif label_name[i] == "登出游戏" then
-                
+                    -- logout
+                    AnalyticsLogOut(s_CURRENT_USER.objectId)
+                    cx.CXAvos:getInstance():logOut()
+                    s_DATABASE_MGR.setLogOut(true)
+                    s_START_FUNCTION()
                 else
                     
                 end

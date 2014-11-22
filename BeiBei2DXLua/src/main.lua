@@ -22,20 +22,10 @@ function __G__TRACKBACK__(msg)
     return msg
 end
 
-local function main()
-    collectgarbage("collect")
-    -- avoid memory leak
-    collectgarbage("setpause", 100)
-    collectgarbage("setstepmul", 5000)
-    
-    cc.FileUtils:getInstance():addSearchPath("src")
-    cc.FileUtils:getInstance():addSearchPath("res")
-    cc.Director:getInstance():setDisplayStats(false)
-
-    --------------------------------------------------------------------------------
-
+local start
+start = function ()
     require("common.global")
-    initApp()
+    initApp(start)
 
     local LEAN_CLOUD_ID_TEST   = "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
     local LEAN_CLOUD_KEY_TEST  = "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
@@ -78,8 +68,8 @@ local function main()
     saveLuaError = function (msg)
         local errorObj = {}
         errorObj['className'] = 'LuaError'
-        local a = string.gsub(msg, ":", "..") 
-        local b = string.gsub(a,   '"', "'") 
+        local a = string.gsub(msg, ":",  "..") 
+        local b = string.gsub(a,   '"',  "'") 
         local c = string.gsub(b,   "\n", "___") 
         local d = string.gsub(c,   "\t", "___") 
         errorObj['msg'] = d
@@ -103,7 +93,7 @@ local test_code = 0
 -- *************************************
 if test_code == 0 then
    local startApp = function ()
-       if s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+       if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
        else
            local IntroLayer = require("view.login.IntroLayer")
@@ -129,6 +119,18 @@ end
 
 end
 
+local function main()
+    collectgarbage("collect")
+    -- avoid memory leak
+    collectgarbage("setpause", 100)
+    collectgarbage("setstepmul", 5000)
+    
+    cc.FileUtils:getInstance():addSearchPath("src")
+    cc.FileUtils:getInstance():addSearchPath("res")
+    cc.Director:getInstance():setDisplayStats(false)
+
+    start()
+end
 
 local status, msg = xpcall(main, __G__TRACKBACK__)
 if not status then

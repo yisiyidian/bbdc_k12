@@ -456,6 +456,10 @@ end
 
 ---- UserDefault -----------------------------------------------------------
 
+local is_log_out_key = 'log_out'
+function Manager.isLogOut() return cc.UserDefault:getInstance():getBoolForKey(is_log_out_key, false) end
+function Manager.setLogOut(b) cc.UserDefault:getInstance():setBoolForKey(is_log_out_key, b) end
+
 local is_sound_on_key = 'sound'
 function Manager.isSoundOn() return cc.UserDefault:getInstance():getBoolForKey(is_sound_on_key, true) end
 function Manager.setSoundOn(b) cc.UserDefault:getInstance():setBoolForKey(is_sound_on_key, b) end
