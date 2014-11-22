@@ -85,7 +85,8 @@ showLogin = function()
     back_login:addChild(password)
 
     local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then       
+        if eventType == ccui.TouchEventType.began then    
+            cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)   
 
             -- button sound
             playSound(s_sound_buttonEffect)
@@ -101,7 +102,7 @@ showLogin = function()
             
             s_LOADING_CIRCLE_LAYER:show()
             
-            print(s_CURRENT_USER.username)
+
             s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
             function(username, password, errordescription, errorcode )
 
@@ -109,11 +110,10 @@ showLogin = function()
                     if errordescription then                  
                         s_TIPS_LAYER:showSmall(errordescription)
                     else        
-                        s_CURRENT_USER.isGuest = 0
                         main.close()                    
                     end     
                     s_LOADING_CIRCLE_LAYER:hide()
-                    print(s_CURRENT_USER.username)
+
 
                     
                     
@@ -135,6 +135,7 @@ showLogin = function()
 
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)   
             -- button sound
             playSound(s_sound_buttonEffect)
             main.close()

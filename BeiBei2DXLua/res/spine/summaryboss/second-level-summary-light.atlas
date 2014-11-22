@@ -1,0 +1,27 @@
+
+second-level-summary-light.png
+size: 692,692
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+light1
+  rotate: false
+  xy: 2, 546
+  size: 603, 63
+  orig: 603, 63
+  offset: 0, 0
+  index: -1
+light2
+  rotate: false
+  xy: 2, 611
+  size: 690, 81
+  orig: 690, 81
+  offset: 0, 0
+  index: -1
+light_blue
+  rotate: false
+  xy: 2, 440
+  size: 554, 104
+  orig: 554, 104
+  offset: 0, 0
+  index: -1
