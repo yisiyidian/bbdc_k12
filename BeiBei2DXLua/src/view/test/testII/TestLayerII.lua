@@ -16,6 +16,27 @@ function TestLayerII.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
     local layer = TestLayerII.new()
+    
+    --add pause button
+    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    pauseBtn:ignoreAnchorPointForPosition(false)
+    pauseBtn:setAnchorPoint(0,1)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    layer:addChild(pauseBtn,100)
+    local Pause = require('view.Pause')
+    local function pauseScene(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local pauseLayer = Pause.create()
+            pauseLayer:setPosition(s_LEFT_X, 0)
+            layer:addChild(pauseLayer,1000)
+            layer.layerPaused = true
+            --director:getActionManager():resumeTargets(pausedTargets)
+
+            --button sound
+            playSound(s_sound_buttonEffect)
+        end
+    end
+    pauseBtn:addTouchEventListener(pauseScene)
 
     local word = s_CorePlayManager.currentWord
     local wordName = word.wordName
