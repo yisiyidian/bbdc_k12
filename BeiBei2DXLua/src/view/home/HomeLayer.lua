@@ -224,10 +224,15 @@ function HomeLayer.create()
                     ImproveInfo:setTag(1)
                     ImproveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(ImproveInfo)
-                    -- button sound
-                    playSound(s_sound_buttonEffect)
+                    
                     ImproveInfo.close = function()
                         layer:removeChildByTag(1)
+                        --TODO @chaochao
+                        
+                        print(s_CURRENT_USER.username)
+                        
+                        --TODO @chaochao
+
                     end
                 elseif label_name[i] == "登出游戏" then
                     -- logout

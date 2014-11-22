@@ -14,30 +14,27 @@ function PersonalInfo.create()
 end
 
 function PersonalInfo:ctor()
-
-    local backButton = ccui.Button:create("image/PersonalInfo/backButtonInPersonalInfo.png",'','')
+    local menu = cc.Menu:create()
+    menu:setPosition(s_LEFT_X,0)
+    self:addChild(menu,100)
+    
+    local backButton = cc.MenuItemImage:create("image/PersonalInfo/backButtonInPersonalInfo.png",'','')
     backButton:ignoreAnchorPointForPosition(false)
     backButton:setAnchorPoint(0,0.5)
-    backButton:setPosition(s_LEFT_X ,0.9 * s_DESIGN_HEIGHT)
+    backButton:setPosition(0 ,0.9 * s_DESIGN_HEIGHT)
     --backButton:setLocalZOrder(100)
-    self:addChild(backButton,100)
+    menu:addChild(backButton,100)
 
-    local function onBack(sender,eventType)
-    s_logd('buttonClick')
-        if eventType == ccui.TouchEventType.began then
-            
-            return true
-        end
-        
-        if eventType == ccui.TouchEventType.ended then
+    local function onBack(sender)
+        --if eventType == ccui.TouchEventType.ended then
             s_logd('buttonClick')
             local HomeLayer = require('view.home.HomeLayer')
             local homeLayer = HomeLayer.create()
             s_SCENE:replaceGameLayer(homeLayer)
-        end
+        --end
     end
 
-    backButton:addTouchEventListener(onBack)
+    backButton:registerScriptTapHandler(onBack)
     
     self:initHead()
     math.randomseed(os.time())
