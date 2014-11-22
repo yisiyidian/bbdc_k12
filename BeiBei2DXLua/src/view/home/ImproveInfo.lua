@@ -109,7 +109,6 @@ showLogin = function()
                     if errordescription then                  
                         s_TIPS_LAYER:showSmall(errordescription)
                     else        
-                        s_CURRENT_USER.isGuest = 0
                         main.close()                    
                     end     
                     s_LOADING_CIRCLE_LAYER:hide()

@@ -53,7 +53,7 @@ public class BBNDK {
 		i.setType("message/rfc822");
 		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"beibeidanci@qq.com"});
 		i.putExtra(Intent.EXTRA_SUBJECT, mailTitle + ":" + username);
-		// i.putExtra(Intent.EXTRA_TEXT   , "(发送反馈邮件)");
+		i.putExtra(Intent.EXTRA_TEXT   , "这是我的反馈，贝贝请认真看哦!\n");
 		try {
 			_instance.startActivity(Intent.createChooser(i, "发送反馈邮件"));
 		} catch (android.content.ActivityNotFoundException ex) {

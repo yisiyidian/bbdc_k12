@@ -116,21 +116,25 @@ end
 
 -- function (username, password, error description, error code)
 function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
+    local onCompleted = function ()
+        s_CURRENT_USER.password = password
+        s_CURRENT_USER.isGuest = 0
+        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+        onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
+    end
+
     local change_password = function (password, onResponse)
         if s_CURRENT_USER.password ~= password then
             s_SERVER.updatePassword(s_CURRENT_USER.password, password, s_CURRENT_USER.objectId, 
                 function (api, result) 
-                    s_CURRENT_USER.password = password
-                    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-                    onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
+                    onCompleted()
                 end, 
                 function (api, code, message, description) 
                     onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
                 end)
         else
-            s_CURRENT_USER.password = password
-            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-            onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
+            onCompleted()
         end
     end
 
