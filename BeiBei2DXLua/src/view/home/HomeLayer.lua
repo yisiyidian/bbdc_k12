@@ -207,12 +207,12 @@ function HomeLayer.create()
     local username = "游客"
     local logo_name = {"head","book","feedback","information","logout"}
     local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
-    if not s_CURRENT_USER.isGuest then
+    if s_CURRENT_USER.isGuest == 0 then
         username = s_CURRENT_USER.username
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
     end
-    for i = 1, 5 do
+    for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
                 playSound(s_sound_buttonEffect)
