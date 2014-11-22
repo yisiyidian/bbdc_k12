@@ -58,6 +58,7 @@ function StudyedWordList:ctor()
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6.5))  -- TODO set dynamic
     listView:setPosition(0,0)
+    listView:addEventListener(listViewEvent)
     self:addChild(listView,0,'listView')
     
     --set model
@@ -71,20 +72,42 @@ function StudyedWordList:ctor()
     listView:setItemModel(default_item)
     
     -- get data
-    --local levelConfig = s_DATA_MANAGER.getLevelConfig('ncee','chapter0','level0')
+    local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
+    --print('-----config:'..#levelConfig)
+    self.levelArray = {}
+    
+    local indexConfig = #levelConfig
+    while indexConfig >= 1 do
+        local levelKey = levelConfig[indexConfig]['level_key']
+        local chapterKey = levelConfig[indexConfig]['chapter_key']
+        local levelData = s_CURRENT_USER:getUserLevelData(chapterKey,levelKey)
+        if levelData ~= nil then
+            local key = chapterKey..' '..levelKey
+            print('key:'..key)
+            self.levelArray[key] = split(levelConfig[indexConfig]['word_content'],'|')
+            print_lua_table(self.levelArray[key])
+            print('size1:'..table.getn(self.levelArray))
+        end
+        indexConfig = indexConfig - 1 
+    end
+    local count = 0
+    for i,v in pairs(self.levelArray) do
+        
+        count = count + 1
+    end
+
     self.array = {'word', 'sunny', 'test', 'hard','nice','best','hello','world','well'}
     --
 
-    print('array count:'..#self.array)
     local count = #self.array
-    for i = 1,count do
-        listView:pushBackDefaultItem()
-    end
-    --insert default item
-    for i = 1,count do
-        listView:insertDefaultItem(0)
-    end
-    listView:removeAllChildren()
+--    for i = 1,count do
+--        listView:pushBackDefaultItem()
+--    end
+--    --insert default item
+--    for i = 1,count do
+--        listView:insertDefaultItem(0)
+--    end
+--    listView:removeAllChildren()
     
 --    local title = cc.Label:createWithSystemFont('好友列表','',28)
 --    title:setPosition(cc.p(50,15))
@@ -111,38 +134,30 @@ function StudyedWordList:ctor()
         custom_item:addChild(custom_button)
         custom_item:setName('item'..i)
         listView:addChild(custom_item)
-    end
-    
-    local items_count = table.getn(listView:getItems())
-    for i = 1,count do
-        local item = listView:getItem(i - 1)
-        local button = item:getChildByName("custom_button")
-        local index = listView:getIndex(item)
-
+        
         local word_name = cc.Label:createWithSystemFont('test','',32)
         word_name:setColor(cc.c3b(0,0,0))
         word_name:ignoreAnchorPointForPosition(false)
         word_name:setAnchorPoint(0,0)
-        word_name:setPosition(0.12 * button:getContentSize().width,0.52 * button:getContentSize().height)
-        button:addChild(word_name)
+        word_name:setPosition(0.12 * custom_button:getContentSize().width,0.52 * custom_button:getContentSize().height)
+        custom_button:addChild(word_name)
 
         local word_meaning = cc.Label:createWithSystemFont('点击查看单词意思','',24)
         word_meaning:setColor(cc.c3b(0,0,0))
         word_meaning:ignoreAnchorPointForPosition(false)
         word_meaning:setAnchorPoint(0,1)
-        word_meaning:setPosition(0.12 * button:getContentSize().width,0.3 * button:getContentSize().height)
-        button:addChild(word_meaning, 0,'clickToCheck')
+        word_meaning:setPosition(0.12 * custom_button:getContentSize().width,0.3 * custom_button:getContentSize().height)
+        custom_button:addChild(word_meaning, 0,'clickToCheck')
 
         local arrow = cc.Sprite:create('image/friend/fri_jiantouxia.png')
-        arrow:setPosition(0.85 * button:getContentSize().width,0.25 * button:getContentSize().height)
+        arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
         local more_label = cc.Label:createWithSystemFont('更多','',24)
         more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
         more_label:setColor(cc.c3b(0,0,0))
         arrow:addChild(more_label)
-        button:addChild(arrow,0,'arrow')
-        
+        custom_button:addChild(arrow,0,'arrow')        
         -- add mastered count
-        self:addMasteredPlots(button, 4)
+        self:addMasteredPlots(custom_button, 4)
     end
     listView:setItemsMargin(2.0)
 end
