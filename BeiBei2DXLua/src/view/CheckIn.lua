@@ -62,9 +62,18 @@ function CheckInNode:ctor()
 
     ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(0.5 * s_DESIGN_WIDTH,0.56 * s_DESIGN_HEIGHT))))
     
-    -- checkin day
+    -- checkin day lasttime
     
-    local checkInDay = 1
+    
+    local checkInDay = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
+    
+    if  checkInDay == nil then
+      checkInDay = 0
+    elseif checkInDay == 7 then
+      checkInDay = 0
+    end
+    
+    checkInDay = checkInDay + 1
     
 --    checkInDay = s_CURRENT_USER.dailyCheckInData.
     

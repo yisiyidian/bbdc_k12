@@ -2,7 +2,10 @@ require("Cocos2d")
 require("Cocos2dConstants")
 require("common.global")
 
+
 local AlterI = require("view.alter.AlterI")
+local ImproveInfo = require("view.home.ImproveInfo")
+
 
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
@@ -216,6 +219,14 @@ function HomeLayer.create()
                     local alter = AlterI.create("用户反馈")
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
+                elseif label_name[i] == "完善个人信息" then
+                     local ImproveInfo = ImproveInfo.create()
+                     ImproveInfo:setTag(2)
+                     ImproveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                     layer:addChild(ImproveInfo)
+                     ImproveInfo.close = function()
+                     layer:removeChildByTag(2)
+                     end
                 elseif label_name[i] == "登出游戏" then
                 
                 else
