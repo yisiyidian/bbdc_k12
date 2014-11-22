@@ -221,6 +221,7 @@ function HomeLayer.create()
                     AnalyticsLogOut(s_CURRENT_USER.objectId)
                     cx.CXAvos:getInstance():logOut()
                     s_DATABASE_MGR.setLogOut(true)
+                    s_DATABASE_MGR.close()
                     s_START_FUNCTION()
                 else
                     
