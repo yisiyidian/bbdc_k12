@@ -504,11 +504,15 @@ function SummaryBossLayerIII:initBossLayer(levelConfig)
     blueBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     self:addChild(blueBack)
 
-    local back = sp.SkeletonAnimation:create("res/spine/summaryboss/zongjieboss_diyiguan_background.json", "res/spine/summaryboss/zongjieboss_diyiguan_background.atlas", 1)
+    local back = cc.Sprite:create('image/summarybossscene/third_level_summary_boss_background.png')
     back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
     self:addChild(back)
-    back:addAnimation(0, 'animation', true)
-
+    
+    local light = sp.SkeletonAnimation:create("spine/summaryboss/third-level-summary-boss-background.json","spine/summaryboss/third-level-summary-boss-background.atlas",1)
+    light:setPosition(-80-s_LEFT_X,s_DESIGN_HEIGHT * 0.73)
+    back:addChild(light)
+    light:addAnimation(0,'animation',true)
+    
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     self:addChild(blinkBack,0)
@@ -618,7 +622,7 @@ function SummaryBossLayerIII:initBossLayer(levelConfig)
     for i = 1, 5 do
         hole[i] = {}
         for j = 1, 5 do
-            hole[i][j] = cc.Sprite:create("image/summarybossscene/summaryboss_chapter1_hole.png")
+            hole[i][j] = cc.Sprite:create("image/summarybossscene/summaryboss_hole_III.png")
             hole[i][j]:setScale(0.92)
             hole[i][j]:setPosition(left + gap * (i - 1), bottom + gap * (j - 1))
             self:addChild(hole[i][j],0)
@@ -778,7 +782,7 @@ function SummaryBossLayerIII:initMap()
             if #self.wordPool[self.currentIndex] == 1 then
                 local diff = main_logic_mat[i][j] - self.startIndexPool[1]
                 if diff >= 0 and diff < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
                     self.isCrab[i][j] = 1
                     if diff == 0 then
                         self.coconut[i][j].firstStyle()
@@ -786,20 +790,20 @@ function SummaryBossLayerIII:initMap()
                     end
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", charaster_set_filtered[randomIndex], i, j)
                 end
             elseif #self.wordPool[self.currentIndex] == 2 then
                 local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
                 local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
                     self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
                     self.isCrab[i][j] = 2
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", charaster_set_filtered[randomIndex], i, j)
                 end
                 if diff1 * diff2 == 0 then
                     self.coconut[i][j].firstStyle()
@@ -814,17 +818,17 @@ function SummaryBossLayerIII:initMap()
                 local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                 local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
                     self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
                     self.isCrab[i][j] = 2
                 elseif diff3 >= 0 and diff3 < string.len(self.wordPool[self.currentIndex][3]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
                     self.isCrab[i][j] = 3
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                    self.coconut[i][j] = FlipNode.create("coin", charaster_set_filtered[randomIndex], i, j)
                 end
 
                 if diff1 * diff2 * diff3 == 0 then
@@ -839,7 +843,7 @@ function SummaryBossLayerIII:initMap()
                 end
 
             end
-            self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/zongjieboss_2_douzi_zhuan.json","spine/summaryboss/zongjieboss_2_douzi_zhuan.atlas",1)
+            self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/third-level-summary-boss-coin-effect.json","spine/summaryboss/third-level-summary-boss-coin-effect.atlas",1)
             self.coconut[i][j].bullet:setPosition(self.hole[i][j]:getPosition())
             self.coconut[i][j].bullet:setVisible(false)
             self.coconut[i][j].bullet:setAnimation(0,'animation',true)
