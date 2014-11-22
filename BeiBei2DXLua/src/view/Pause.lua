@@ -86,9 +86,18 @@ end
 
 function Pause:onBack()
     --button sound
+    
     playSound(s_sound_buttonEffect)
+    
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    
+    local level = require('view.LevelLayer')
+    local layer = level.create()
+    --if self.win and isPassed == 0 then
+    --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    --end
+    s_SCENE:replaceGameLayer(layer)
 end
 
 function Pause:onContinue()

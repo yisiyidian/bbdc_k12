@@ -226,8 +226,8 @@ function CheckInNode:ctor()
         wordStack = {}
         
         local count = #selectStack
-        local gap = 20;
-        local left = (ccbCheckInNode['_checkInBack']:getContentSize().width - (count-1)*gap)/2;
+        local gap = 20
+        local left = (ccbCheckInNode['_checkInBack']:getContentSize().width - (count-1)*gap)/2
         
         local wordBack = cc.Sprite:create("ccb/ccbResources/checkIn/checkin_wordback.png")
         wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
