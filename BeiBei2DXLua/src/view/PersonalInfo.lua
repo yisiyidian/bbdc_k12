@@ -130,7 +130,7 @@ function PersonalInfo:initHead()
     girl:setLocalZOrder(1)
     back_color:addChild(girl)
     local name_str = s_CURRENT_USER.username
-    if s_CURRENT_USER.isGuest then
+    if s_CURRENT_USER.isGuest == 1 then
         name_str = "游客"
     end
     local label_hint = cc.Label:createWithSystemFont(name_str,"",44)
