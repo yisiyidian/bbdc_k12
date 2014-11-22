@@ -56,7 +56,7 @@ function test()
 
     --     downloadFunc()
     -- end
-    local IntroLayer = require("view.login.IntroLayer")
+    local IntroLayer = require("view.login.VisitorRegister")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
 
