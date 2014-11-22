@@ -115,7 +115,9 @@ function StudyedWordList:ctor()
         
         -- define more info button clicked event
         local function touchEvent(sender,eventType)
-        
+            if eventType == ccui.TouchEventType.ended then
+            
+            end
         end
         -- add word list
         local studyWords = s_DATABASE_MGR.getStudyWords(s_CURRENT_USER.bookKey)
