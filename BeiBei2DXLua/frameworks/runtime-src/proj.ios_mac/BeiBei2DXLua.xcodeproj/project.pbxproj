@@ -77,8 +77,6 @@
 		B887DBC219DF8EEA00A04441 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B887DBC119DF8EEA00A04441 /* Images.xcassets */; };
 		B89AB3CB19F245EE003EA22A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3CA19F245EE003EA22A /* MediaPlayer.framework */; };
 		B89AB3CD19F245F3003EA22A /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3CC19F245F3003EA22A /* GameController.framework */; };
-		B89AB3DA19F24ADF003EA22A /* libPluginIAP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3D319F24A6B003EA22A /* libPluginIAP.a */; };
-		B89AB3DB19F24AE5003EA22A /* libPluginProtocol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3D919F24A76003EA22A /* libPluginProtocol.a */; };
 		B8F6490219E657DE00E55CE0 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490019E657DE00E55CE0 /* md5.c */; };
 		B8F6490519E6580600E55CE0 /* CXUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490319E6580600E55CE0 /* CXUtils.cpp */; };
 		B8FEC35819F37569004509FB /* CXStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8FEC35619F37569004509FB /* CXStore.cpp */; };
@@ -247,20 +245,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = A07A4FB4178387730073F6A7;
 			remoteInfo = "CocosDenshion iOS";
-		};
-		B89AB3D219F24A6B003EA22A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B89AB3CE19F24A6B003EA22A /* PluginIAP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 05A9357E19260E2E00F08DC0;
-			remoteInfo = PluginIAP;
-		};
-		B89AB3D819F24A76003EA22A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B89AB3D419F24A76003EA22A /* PluginProtocol.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA09A321168ADBC2008C1C7B;
-			remoteInfo = PluginProtocol;
 		};
 		C03781B318BF654500FE4F13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -442,8 +426,6 @@
 		B887DBC119DF8EEA00A04441 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "BeiBei2DXLua iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		B89AB3CA19F245EE003EA22A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		B89AB3CC19F245F3003EA22A /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
-		B89AB3CE19F24A6B003EA22A /* PluginIAP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PluginIAP.xcodeproj; path = "../../cocos2d-x/plugin/plugins/iosiap/proj.ios/PluginIAP.xcodeproj"; sourceTree = "<group>"; };
-		B89AB3D419F24A76003EA22A /* PluginProtocol.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PluginProtocol.xcodeproj; path = "../../cocos2d-x/plugin/protocols/proj.ios/PluginProtocol.xcodeproj"; sourceTree = "<group>"; };
 		B8F6490019E657DE00E55CE0 /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md5.c; sourceTree = "<group>"; };
 		B8F6490119E657DE00E55CE0 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
 		B8F6490319E6580600E55CE0 /* CXUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXUtils.cpp; sourceTree = "<group>"; };
@@ -541,8 +523,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B89AB3DB19F24AE5003EA22A /* libPluginProtocol.a in Frameworks */,
-				B89AB3DA19F24ADF003EA22A /* libPluginIAP.a in Frameworks */,
 				B89AB3CD19F245F3003EA22A /* GameController.framework in Frameworks */,
 				B89AB3CB19F245EE003EA22A /* MediaPlayer.framework in Frameworks */,
 				B80E072D19F106A2006EDBCF /* MessageUI.framework in Frameworks */,
@@ -778,22 +758,6 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		B89AB3CF19F24A6B003EA22A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B89AB3D319F24A6B003EA22A /* libPluginIAP.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B89AB3D519F24A76003EA22A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B89AB3D919F24A76003EA22A /* libPluginProtocol.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B8F648FF19E657DE00E55CE0 /* md5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -834,8 +798,6 @@
 		F293B3BD15EB7BE500256477 = {
 			isa = PBXGroup;
 			children = (
-				B89AB3D419F24A76003EA22A /* PluginProtocol.xcodeproj */,
-				B89AB3CE19F24A6B003EA22A /* PluginIAP.xcodeproj */,
 				B851469D19E4EBD50027372E /* common */,
 				C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */,
 				15A8A4031834BDA200142BE0 /* cocos2d_libs.xcodeproj */,
@@ -1009,14 +971,6 @@
 					ProductGroup = C03781AF18BF654500FE4F13 /* Products */;
 					ProjectRef = C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */;
 				},
-				{
-					ProductGroup = B89AB3CF19F24A6B003EA22A /* Products */;
-					ProjectRef = B89AB3CE19F24A6B003EA22A /* PluginIAP.xcodeproj */;
-				},
-				{
-					ProductGroup = B89AB3D519F24A76003EA22A /* Products */;
-					ProjectRef = B89AB3D419F24A76003EA22A /* PluginProtocol.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1095,20 +1049,6 @@
 			fileType = archive.ar;
 			path = "libCocosDenshion iOS.a";
 			remoteRef = 15A8A42C1834BDA200142BE0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B89AB3D319F24A6B003EA22A /* libPluginIAP.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libPluginIAP.a;
-			remoteRef = B89AB3D219F24A6B003EA22A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B89AB3D919F24A76003EA22A /* libPluginProtocol.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libPluginProtocol.a;
-			remoteRef = B89AB3D819F24A76003EA22A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C03781B418BF654500FE4F13 /* libluabindings Mac.a */ = {
