@@ -26,7 +26,7 @@ void cocos_android_app_init (JNIEnv* env, jobject thiz) {
 
 extern "C"
 {
-	bool Java_com_beibei_wordmaster_AppActivity_nativeIsLandScape(JNIEnv *env, jobject thisz)
+	bool Java_c_bb_dc_BBNDK_nativeIsLandScape(JNIEnv *env, jobject thisz)
 	{
 		if (!ConfigParser::getInstance()->isInit())
 		{
@@ -35,7 +35,7 @@ extern "C"
 		return ConfigParser::getInstance()->isLanscape();
 	}
 
-	bool Java_com_beibei_wordmaster_AppActivity_nativeIsDebug(JNIEnv *env, jobject thisz)
+	bool Java_c_bb_dc_BBNDK_nativeIsDebug(JNIEnv *env, jobject thisz)
 	{
 		#ifdef NDEBUG 
     		return false;
@@ -44,7 +44,7 @@ extern "C"
 		#endif
 	}
 
-	void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionDL(JNIEnv *env, jobject thisz,
+	void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionDL(JNIEnv *env, jobject thisz,
 			jstring objectId, jstring filename, jstring error, jint isSaved)
 	{
 		const char *nativeString_objectId = objectId ? env->GetStringUTFChars(objectId, 0) : 0;
@@ -58,7 +58,7 @@ extern "C"
 		if (error) env->ReleaseStringUTFChars(error, nativeString_error);
 	}
 
-    void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionSU(JNIEnv *env, jobject thisz,
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionSU(JNIEnv *env, jobject thisz,
             jstring objectjson, jstring error, jint errorcode)
     {
         const char *nativeString_objectjson = objectjson ? env->GetStringUTFChars(objectjson, 0) : 0;
@@ -70,7 +70,7 @@ extern "C"
         if (error) env->ReleaseStringUTFChars(error, nativeString_error);
     }
 
-    void Java_com_beibei_wordmaster_AppActivity_invokeLuaCallbackFunctionLI(JNIEnv *env, jobject thisz,
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionLI(JNIEnv *env, jobject thisz,
             jstring objectjson, jstring error, jint errorcode)
     {
         const char *nativeString_objectjson = objectjson ? env->GetStringUTFChars(objectjson, 0) : 0;

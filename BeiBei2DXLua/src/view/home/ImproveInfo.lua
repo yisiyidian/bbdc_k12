@@ -101,18 +101,23 @@ showLogin = function()
             
             s_LOADING_CIRCLE_LAYER:show()
             
+            print(s_CURRENT_USER.username)
             s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
             function(username, password, errordescription, errorcode )
+
+                    
                     if errordescription then                  
                         s_TIPS_LAYER:showSmall(errordescription)
                     else        
-                        s_CURRENT_USER.isGuest = 0
                         main.close()                    
                     end     
-                    s_LOADING_CIRCLE_LAYER:hide()             
+                    s_LOADING_CIRCLE_LAYER:hide()
+                    print(s_CURRENT_USER.username)
+
+                    
+                    
             end)
 
-            cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
         end
     end
 
@@ -132,8 +137,6 @@ showLogin = function()
             -- button sound
             playSound(s_sound_buttonEffect)
             main.close()
-            
-            cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
         end
     end
     local button_close = ccui.Button:create("image/button/button_close.png")

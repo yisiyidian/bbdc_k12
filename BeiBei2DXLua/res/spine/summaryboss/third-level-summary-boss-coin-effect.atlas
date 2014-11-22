@@ -1,0 +1,97 @@
+
+third-level-summary-boss-coin-effect.png
+size: 468,468
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coin1
+  rotate: false
+  xy: 2, 352
+  size: 115, 116
+  orig: 115, 116
+  offset: 0, 0
+  index: -1
+coin10
+  rotate: false
+  xy: 116, 206
+  size: 110, 73
+  orig: 110, 73
+  offset: 0, 0
+  index: -1
+coin11
+  rotate: false
+  xy: 119, 281
+  size: 113, 73
+  orig: 113, 73
+  offset: 0, 0
+  index: -1
+coin12
+  rotate: true
+  xy: 2, 233
+  size: 117, 112
+  orig: 117, 112
+  offset: 0, 0
+  index: -1
+coin13
+  rotate: false
+  xy: 119, 356
+  size: 117, 112
+  orig: 117, 112
+  offset: 0, 0
+  index: -1
+coin2
+  rotate: true
+  xy: 346, 380
+  size: 88, 119
+  orig: 88, 119
+  offset: 0, 0
+  index: -1
+coin3
+  rotate: false
+  xy: 113, 111
+  size: 100, 93
+  orig: 100, 93
+  offset: 0, 0
+  index: -1
+coin4
+  rotate: false
+  xy: 113, 5
+  size: 83, 104
+  orig: 83, 104
+  offset: 0, 0
+  index: -1
+coin5
+  rotate: false
+  xy: 238, 360
+  size: 106, 108
+  orig: 106, 108
+  offset: 0, 0
+  index: -1
+coin6
+  rotate: false
+  xy: 2, 113
+  size: 109, 118
+  orig: 109, 118
+  offset: 0, 0
+  index: -1
+coin7
+  rotate: false
+  xy: 2, 7
+  size: 109, 104
+  orig: 109, 104
+  offset: 0, 0
+  index: -1
+coin8
+  rotate: true
+  xy: 198, 2
+  size: 107, 83
+  orig: 107, 83
+  offset: 0, 0
+  index: -1
+coin9
+  rotate: false
+  xy: 346, 330
+  size: 116, 48
+  orig: 116, 48
+  offset: 0, 0
+  index: -1

@@ -19,7 +19,7 @@ void CXUtils::showMail(const char* mailTitle, const char* userName)
         return;
 
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "com/beibei/wordmaster/AppActivity", "showMail", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, "c/bb/dc/BBNDK", "showMail", "(Ljava/lang/String;Ljava/lang/String;)V")) {
         jstring stringArg_mailTitle = t.env->NewStringUTF(mailTitle);
         jstring stringArg_userName = t.env->NewStringUTF(userName);
 
