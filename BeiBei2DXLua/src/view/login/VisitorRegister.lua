@@ -1,14 +1,13 @@
+-- need repair
+
+
 require("common.global")
 
-local BigAlter      = require("view.alter.BigAlter")
-local SmallAlter    = require("view.alter.SmallAlter")
-local ImproveInfoNode     = require("view.home.ImproveInfoNode")
-
-local ImproveInfo = class("ImproveInfo", function()
+local VisitorRegister = class("VisitorRegister", function()
     return cc.Layer:create()
 end)
 
-local showLogin = nil
+local showWindow = nil
 local showRegister = nil
 
 local back_login = nil
@@ -17,7 +16,7 @@ local back_register = nil
 local main = nil
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
-function ImproveInfo.create()
+function VisitorRegister.create()
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
@@ -28,7 +27,7 @@ function ImproveInfo.create()
     back_login = nil    
     back_register = nil
 
-    showLogin()
+    showWindow()
 
     local onTouchBegan = function(touch, event)
         --s_logd("touch began on block layer")
@@ -46,21 +45,22 @@ function ImproveInfo.create()
 end
 
 
-showLogin = function()
-    if back_login then
-        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
-        local action2 = cc.EaseBackOut:create(action1)
-        back_login:runAction(action2)
-        return
-    end
+showWindow = function()
+--    if back_login then
+--        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
+--        local action2 = cc.EaseBackOut:create(action1)
+--        back_login:runAction(action2)
+--        return
+--    end
 
     back_login = cc.Sprite:create("image/login/background_white_login.png")
-    back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3) 
+ --   back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3) 
+    back_login:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2) 
     main:addChild(back_login)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
-    local action2 = cc.EaseBackOut:create(action1)
-    back_login:runAction(action2)
+--    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
+--    local action2 = cc.EaseBackOut:create(action1)
+--    back_login:runAction(action2)
 
     local back_width = back_login:getContentSize().width
     local back_height = back_login:getContentSize().height
@@ -76,46 +76,13 @@ showLogin = function()
     label2:setPosition(back_width/2,640)
     back_login:addChild(label2)
 
-    local username = ImproveInfoNode.create("username")
+    local username = VisitorRegisterNode.create("username")
     username:setPosition(back_width/2, 550)
     back_login:addChild(username)
 
-    local password = ImproveInfoNode.create("password")
+    local password = VisitorRegisterNode.create("password")
     password:setPosition(back_width/2, 450)
     back_login:addChild(password)
-
-    local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then       
-
-            -- button sound
-            playSound(s_sound_buttonEffect)
-            if validateUsername(username.textField:getStringValue()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
-                return
-            end
-            if validatePassword(password.textField:getStringValue()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
-                return
-            end
-            
-            s_CURRENT_USER.isGuest = 0
-            
-            s_LOADING_CIRCLE_LAYER:show()
-            
-            s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
-            function(username, password, errordescription, errorcode )
-                    if errordescription then                  
-                        s_TIPS_LAYER:showSmall(errordescription)
-                    end             
-                    s_LOADING_CIRCLE_LAYER:hide()
-                    
-                    main.close()
-                    
-                    
-            end)
-
-        end
-    end
 
     local submit = ccui.Button:create("image/login/sl_button_confirm.png","image/login/sl_button_confirm.png","")
     submit:setPosition(back_width/2, 350)
@@ -142,11 +109,4 @@ showLogin = function()
 end
 
 
-return ImproveInfo
-
-
-
-
-
-
-
+return VisitorRegister
