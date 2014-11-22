@@ -2,7 +2,7 @@ require("Cocos2d")
 require("Cocos2dConstants")
 require("common.global")
 
-local HomeLayer = require('view.home.HomeLayer')
+
 
 local PersonalInfo = class("PersonalInfo", function()
     return cc.Layer:create()
@@ -14,6 +14,31 @@ function PersonalInfo.create()
 end
 
 function PersonalInfo:ctor()
+
+    local backButton = ccui.Button:create("image/PersonalInfo/backButtonInPersonalInfo.png",'','')
+    backButton:ignoreAnchorPointForPosition(false)
+    backButton:setAnchorPoint(0,0.5)
+    backButton:setPosition(s_LEFT_X ,0.9 * s_DESIGN_HEIGHT)
+    --backButton:setLocalZOrder(100)
+    self:addChild(backButton,100)
+
+    local function onBack(sender,eventType)
+    s_logd('buttonClick')
+        if eventType == ccui.TouchEventType.began then
+            
+            return true
+        end
+        
+        if eventType == ccui.TouchEventType.ended then
+            s_logd('buttonClick')
+            local HomeLayer = require('view.home.HomeLayer')
+            local homeLayer = HomeLayer.create()
+            s_SCENE:replaceGameLayer(homeLayer)
+        end
+    end
+
+    backButton:addTouchEventListener(onBack)
+    
     self:initHead()
     math.randomseed(os.time())
     self.totalDay = 1
@@ -26,7 +51,7 @@ function PersonalInfo:ctor()
     
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
-    pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT))
+    pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT * 1.0))
     pageView:setPosition(s_LEFT_X,0)
     
     for i = 1 , 4 do
@@ -57,14 +82,14 @@ function PersonalInfo:ctor()
 
     end 
 
-    local function pageViewEvent(sender, eventType)
-        if eventType == ccui.PageViewEventType.turning then
-            local pageView = sender
-            s_logd("page %d " , pageView:getCurPageIndex() + 1)
-        end
-    end 
-
-    pageView:addEventListener(pageViewEvent)
+--    local function pageViewEvent(sender, eventType)
+--        if eventType == ccui.PageViewEventType.turning then
+--            local pageView = sender
+--            s_logd("page %d " , pageView:getCurPageIndex() + 1)
+--        end
+--    end 
+--
+--    pageView:addEventListener(pageViewEvent)
     self:addChild(pageView)
     local lastPage = -1
     local function update(delta)
@@ -92,30 +117,16 @@ function PersonalInfo:ctor()
 end
 
 function PersonalInfo:initHead()
-    local back_color = cc.LayerColor:create(cc.c4b(255,255,255,150 ), s_RIGHT_X - s_LEFT_X, 0.2 * s_DESIGN_HEIGHT)
+    local back_color = cc.LayerColor:create(cc.c4b(255,255,255,150), s_RIGHT_X - s_LEFT_X, 0.2 * s_DESIGN_HEIGHT)
     back_color:ignoreAnchorPointForPosition(false)
     back_color:setAnchorPoint(0.5,1)
     back_color:setPosition(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT)
-    back_color:setLocalZOrder(1)
-    self:addChild(back_color) 
+    --back_color:setLocalZOrder(1)
+    self:addChild(back_color,10) 
 
     --local node = self:getChildByName(string.format('back%d',1))
 
-    local backButton = ccui.Button:create("image/PersonalInfo/backButtonInPersonalInfo.png",'','')
-    backButton:ignoreAnchorPointForPosition(false)
-    backButton:setAnchorPoint(0,0.5)
-    backButton:setPosition(0 ,0.5 * back_color:getContentSize().height)
-    backButton:setLocalZOrder(1)
-    back_color:addChild(backButton)
-    
-    local function onBack(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local homeLayer = HomeLayer.create()
-            s_SCENE:replaceGameLayer(homeLayer)
-        end
-    end
 
-    backButton:addTouchEventListener(onBack)
 
     local girl = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
     girl:setPosition(0.3 * back_color:getContentSize().width,0.5 * back_color:getContentSize().height)
@@ -128,7 +139,7 @@ function PersonalInfo:initHead()
     local label_hint = cc.Label:createWithSystemFont(name_str,"",44)
     label_hint:ignoreAnchorPointForPosition(false)
     label_hint:setAnchorPoint(0,0)
-    label_hint:setColor(cc.c4b(255 , 255, 255 ,255))
+    label_hint:setColor(cc.c4b(0,0,0 ,255))
     label_hint:setPosition(0.5 * back_color:getContentSize().width,0.5 * back_color:getContentSize().height)
     label_hint:setLocalZOrder(2)
     back_color:addChild(label_hint)
@@ -136,7 +147,7 @@ function PersonalInfo:initHead()
     local label_study = cc.Label:createWithSystemFont(string.format("正在学习%s词汇",s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name),"",32)
     label_study:ignoreAnchorPointForPosition(false)
     label_study:setAnchorPoint(0,1)
-    label_study:setColor(cc.c4b(255 , 255, 255 ,255))
+    label_study:setColor(cc.c4b(0,0,0 ,255))
     label_study:setPosition(0.5 * back_color:getContentSize().width,0.5 * back_color:getContentSize().height)
     label_study:setLocalZOrder(2)
     back_color:addChild(label_study)
