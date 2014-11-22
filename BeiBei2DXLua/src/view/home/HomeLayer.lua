@@ -194,21 +194,23 @@ function HomeLayer.create()
     data_name:setColor(cc.c4b(0,0,0,255))
     data_name:setPosition(button_data:getContentSize().width/2+30, button_data:getContentSize().height/2-5)
     button_data:addChild(data_name)
-    
-    
+
     -- setting ui
     setting_back = cc.Sprite:create("image/homescene/setup_background.png")
     setting_back:setAnchorPoint(1,0.5)
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
     
+    
+    local username = "游客"
+    if not s_CURRENT_USER.isGuest then
+        username = s_CURRENT_USER.username
+    end
     local logo_name = {"head","book","feedback","information","logout"}
-    local label_name = {"游客1234","选择书籍", "用户反馈", "完善个人信息", "登出游戏"}
+    local label_name = {username,"选择书籍", "用户反馈", "完善个人信息", "登出游戏"}
     for i = 1, 5 do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
-                print(label_name[i])
-                -- button sound
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     s_CorePlayManager.enterBookLayer()
@@ -216,10 +218,12 @@ function HomeLayer.create()
                     local alter = AlterI.create("用户反馈")
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
-                elseif label_name[i] == "登出游戏" then
-                
-                else
+                elseif label_name[i] == "完善个人信息" then
                     
+                elseif label_name[i] == "登出游戏" then
+                    
+                else
+                    -- do nothing
                 end
             end
         end
