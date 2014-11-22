@@ -177,7 +177,7 @@ function RightTopNode:ctor()
             heartShow = string.format("%d",min) ..":"..string.format("%d",sec)   
 
         end           
-        heartExist:setString(s_CURRENT_USER.energyCount)  
+  --      heartExist:setString(s_CURRENT_USER.energyCount)  
         label_heart:setString(heartShow)
         label_star:setString(starNumber)
        -- update data  
