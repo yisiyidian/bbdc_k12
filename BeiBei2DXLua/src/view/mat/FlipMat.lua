@@ -221,19 +221,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         onNode = false
     end
     
-    
-    local hasTouched = false
-    
     onTouchBegan = function(touch, event)
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
             return false
-        end
-        
-        if hasTouched then
-            return false
-        else
-            hasTouched = true
         end
     
         if main.globalLock then
@@ -249,19 +240,15 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
             startNode = main_mat[current_node_x][current_node_y]
             table.insert(selectStack, startNode)
             updateSelectWord()
-            --selectStack[#selectStack+1] = startNode
             startNode.addSelectStyle()
             startNode.bigSize()
 
             startAtNode = true
-            -- slide coco "s_sound_slideCoconut"
             playSound(s_sound_slideCoconut)
             
         else
             startAtNode = false
         end
-        
-        -- CCTOUCHBEGAN event must return true
         return true
     end
 
@@ -326,17 +313,12 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
                             table.remove(selectStack)
-                            
-                            
-                            -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
                                 playSound(slideCoco[#selectStack])
                             else
                                 playSound(slideCoco[7])
                             end  
                         end
-                      
-
                     end
                 else
                     if #selectStack == 0 then
@@ -352,13 +334,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
                         currentNode.hasSelected = true
                         table.insert(selectStack, currentNode)
                         updateSelectWord()
-                        --selectStack[#selectStack+1] = currentNode
                     else
                         local stackTop = selectStack[#selectStack]
                         if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                             table.insert(selectStack, currentNode)
-                            
-                            
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
                                 playSound(slideCoco[#selectStack])
@@ -366,7 +345,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
                                 playSound(slideCoco[7])
                             end    
                             updateSelectWord()
-                            --selectStack[#selectStack+1] = currentNode
                             currentNode.addSelectStyle()
                             currentNode.bigSize()
                             if current_dir == dir_up then
@@ -388,10 +366,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
     end
 
     onTouchEnded = function(touch, event)
-        hasTouched = false
-    
-        local location = main:convertToNodeSpace(touch:getLocation())
-    
         if main.globalLock then
             return
         end
@@ -399,6 +373,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
         if #selectStack < 1 then
             return
         end
+        
+        local location = main:convertToNodeSpace(touch:getLocation())
 
         local selectWord = ""
         for i = 1, #selectStack do
