@@ -5,6 +5,7 @@ require("common.global")
 
 local LoginAlter = require("view.login.LoginAlter")
 local VisitorRegister = require("view.login.VisitorRegister")
+local ImproveInfo = require("view.home.ImproveInfo")
 
 local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
@@ -239,7 +240,7 @@ function IntroLayer.create()
                 
                 local button_register_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then
-                    --TODO
+                    
                         if s_CURRENT_USER.username == nil then
                             local loginAlter = LoginAlter.createRegister()
                             loginAlter:setTag(2)
@@ -261,7 +262,28 @@ function IntroLayer.create()
                                 -- which = register,improve,close
                             layer:removeChildByTag(2)   
                             
-                            
+                                if which == "register" then
+                                   local loginAlter = LoginAlter.createRegister()
+                                   loginAlter:setTag(2)
+                                   loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                    layer:addChild(loginAlter)
+                                   -- button sound
+                                   playSound(s_sound_buttonEffect)
+                                   loginAlter.close = function()
+                                   layer:removeChildByTag(2)   
+                                    end
+                                    
+                                elseif which == "improve" then
+                                    local improveInfo = ImproveInfo.create()
+                                    improveInfo:setTag(1)
+                                    improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                    layer:addChild(improveInfo)
+
+                                    improveInfo.close = function()
+                                        layer:removeChildByTag(1)
+
+                                    end
+                                end
                                                 
                             end 
                         end
