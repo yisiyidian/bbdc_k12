@@ -15,7 +15,7 @@ local IntroLayer            = require("view.login.IntroLayer")
 local HomeLayer             = require("view.home.HomeLayer")
 local LevelLayer            = require("view.LevelLayer")
 local BookLayer             = require("view.book.BookLayer")
-local WordLayer             = require("view.word.WordLayer")
+local WordListLayer         = require("view.wordlist.WordMenu")
 local FriendLayer           = require("view.friend.FriendLayer")
 
 
@@ -209,9 +209,9 @@ function CorePlayManager.enterBookLayer()
     s_SCENE:replaceGameLayer(bookLayer)
 end
 
-function CorePlayManager.enterWordLayer()
-    local wordLayer = WordLayer.create()
-    s_SCENE:replaceGameLayer(wordLayer)
+function CorePlayManager.enterWordListLayer()
+    local wordListlayer = WordListLayer.create()
+    s_SCENE:replaceGameLayer(wordListlayer)
 end
 
 function CorePlayManager.enterFriendLayer()

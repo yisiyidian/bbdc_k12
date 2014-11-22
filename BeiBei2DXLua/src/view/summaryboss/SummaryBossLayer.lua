@@ -512,7 +512,7 @@ function SummaryBossLayer:initBossLayer(levelConfig)
             return
         end
         local pauseLayer = Pause.create()
-        pauseLayer:setPosition(s_LEFT_X, 0)
+        pauseLayer:setPosition(0, 0)
         self:addChild(pauseLayer,1000)
         self.layerPaused = true
         --director:getActionManager():resumeTargets(pausedTargets)
