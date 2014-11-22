@@ -4,7 +4,7 @@ require("Cocos2dConstants")
 require("common.global")
 
 local LoginAlter = require("view.login.LoginAlter")
-
+local VisitorRegister = require("view.login.VisitorRegister")
 
 local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
@@ -239,14 +239,31 @@ function IntroLayer.create()
                 
                 local button_register_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then
-                        local loginAlter = LoginAlter.createRegister()
-                        loginAlter:setTag(2)
-                        loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                        layer:addChild(loginAlter)
-                        -- button sound
-                        playSound(s_sound_buttonEffect)
-                        loginAlter.close = function()
-                            layer:removeChildByTag(2)
+                    --TODO
+                        if s_CURRENT_USER.username == nil then
+                            local loginAlter = LoginAlter.createRegister()
+                            loginAlter:setTag(2)
+                            loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                            layer:addChild(loginAlter)
+                            -- button sound
+                             playSound(s_sound_buttonEffect)
+                            loginAlter.close = function()
+                            layer:removeChildByTag(2)                       
+                            end 
+                        else
+                            local visitorRegister = VisitorRegister.create()
+                            visitorRegister:setTag(2)
+                            visitorRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                            layer:addChild(visitorRegister)
+                            -- button sound
+                            playSound(s_sound_buttonEffect)
+                            visitorRegister.close = function(which)
+                                -- which = register,improve,close
+                            layer:removeChildByTag(2)   
+                            
+                            
+                                                
+                            end 
                         end
                     end
                 end

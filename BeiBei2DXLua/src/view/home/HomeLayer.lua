@@ -223,18 +223,18 @@ function HomeLayer.create()
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 elseif label_name[i] == "完善个人信息" then
-                    local ImproveInfo = ImproveInfo.create()
-                    ImproveInfo:setTag(1)
-                    ImproveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    layer:addChild(ImproveInfo)
+                    local improveInfo = ImproveInfo.create()
+                    improveInfo:setTag(1)
+                    improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(improveInfo)
                     
-                    ImproveInfo.close = function()
+                    improveInfo.close = function()
                         layer:removeChildByTag(1)
-                        print(s_CURRENT_USER.username)
-                        
+                        if not s_CURRENT_USER.isGuest  then
                         list[1].label:setString(s_CURRENT_USER.username)
                         list[5].button_back:setPosition(0, s_DESIGN_HEIGHT-list[5].button_back:getContentSize().height * (4 - 1) - 20)
                         list[4].button_back:removeFromParentAndCleanup()
+                        end
                     end
                 elseif label_name[i] == "登出游戏" then
                     -- logout
