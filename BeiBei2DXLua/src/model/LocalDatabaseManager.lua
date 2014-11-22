@@ -9,13 +9,6 @@ local Manager = {}
 -- define Manager's variables
 Manager.database = nil
 
--- update local database when app version changes
-function updateLocalDatabase()
-    Manager.database:exec[[
-        -- ALTER TABLE XXX ADD XXX DEFAULT XX;
-    ]]
-end
-
 -- connect local sqlite
 function Manager.open()
     local sqlite3 = require("sqlite3")
@@ -33,6 +26,63 @@ end
 -- close local sqlite
 function Manager.close()
     Manager.database:close()
+end
+
+-- add new column
+-- ALTER TABLE table_name ADD column_name datatype
+function Manager.alterLocalDatabase(objectOfDataClass)
+    local function createData (col, type, isAlreadyInDB)
+        local data = {}
+        data.col = col
+        data.type = type
+        data.isAlreadyInDB = isAlreadyInDB
+        return data
+    end
+
+    local dataCols = {}
+    for key, value in pairs(objectOfDataClass) do  
+        if (key == 'sessionToken'  
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
+            local data = nil
+            if (type(value) == 'string') then
+                data = createData(key, 'TEXT', false)
+            elseif (type(value) == 'boolean') then
+                data = createData(key, 'Boolean', false)
+            elseif (type(value) == 'number') then
+                data = createData(key, 'INTEGER', false)
+            end 
+            if data ~= nil then
+                dataCols[ key ] = data
+            end
+        end
+    end
+
+    Manager.database:exec('PRAGMA table_info(' .. objectOfDataClass.className .. ')', 
+        function (udata, cols, values, names)
+            local n = nil
+            local t = nil
+            for i = 1, cols do 
+                if names[i] == 'name' then
+                    n = values[i]
+                elseif names[i] == 'type' then
+                    t = values[i]
+                end
+            end
+
+            if n ~= nil and t ~= nil then
+                dataCols[ n ] = nil
+            end
+
+            return 0
+        end)
+
+    for k, v in pairs(dataCols) do
+        if v ~= nil then
+            Manager.database:exec('ALTER TABLE ' .. objectOfDataClass.className .. ' ADD ' .. v.col .. ' ' .. v.type)
+        end
+    end
 end
 
 function Manager.createTable(objectOfDataClass)
@@ -58,8 +108,10 @@ function Manager.createTable(objectOfDataClass)
     end
 
     sql = sql .. str .. '\n);'
-    print (sql)
+    -- print (sql)
     Manager.database:exec(sql)
+
+    Manager.alterLocalDatabase(objectOfDataClass)
 end
 
 -- init data structure
@@ -120,6 +172,8 @@ end
 --
 -- ALTER TABLE table_name ADD column_name datatype
 function Manager.saveDataClassObject(objectOfDataClass)
+    Manager.alterLocalDatabase(objectOfDataClass)
+    
     local num = 0
     for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'") do
         num = num + 1
@@ -388,6 +442,30 @@ function Manager.getGraspWordsNum(bookKey, day) -- day must be a string like "11
     return sum
 end
 
+function Manager.getStudyWords(bookKey)
+    local user = s_CURRENT_USER.objectId
+    local wordList = {}
+    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
+        local t = {}
+        t.wordName = row.wordName
+        t.value    = row.wordProciency
+        table.insert(wordList, t)
+    end
+    return wordList
+end
+
+function Manager.getGraspWords(bookKey)
+    local user = s_CURRENT_USER.objectId
+    local wordList = {}
+    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
+        local t = {}
+        t.wordName = row.wordName
+        t.value    = row.wordProciency
+        table.insert(wordList, t)
+    end
+    return wordList
+end
+
 -- return current valid review bossId
 function Manager:getCurrentReviewBossID()
     local bossId = -1
@@ -455,6 +533,10 @@ end
 
 
 ---- UserDefault -----------------------------------------------------------
+
+local is_log_out_key = 'log_out'
+function Manager.isLogOut() return cc.UserDefault:getInstance():getBoolForKey(is_log_out_key, false) end
+function Manager.setLogOut(b) cc.UserDefault:getInstance():setBoolForKey(is_log_out_key, b) end
 
 local is_sound_on_key = 'sound'
 function Manager.isSoundOn() return cc.UserDefault:getInstance():getBoolForKey(is_sound_on_key, true) end

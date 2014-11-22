@@ -128,7 +128,9 @@ local function _declaration()
     s_CorePlayManager = nil
 end
 
-function initApp()
+function initApp(start)
+    s_START_FUNCTION = start
+
     -- versions
     s_APP_VERSION = 150000
     s_CONFIG_VERSION = 150000

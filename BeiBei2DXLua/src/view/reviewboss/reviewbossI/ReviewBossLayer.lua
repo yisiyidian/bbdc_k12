@@ -18,6 +18,27 @@ function ReviewBossLayer.create()
 
     local layer = ReviewBossLayer.new()
     
+    --add pause button
+    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    pauseBtn:ignoreAnchorPointForPosition(false)
+    pauseBtn:setAnchorPoint(0,1)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    layer:addChild(pauseBtn,100)
+    local Pause = require('view.Pause')
+    local function pauseScene(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local pauseLayer = Pause.create()
+            pauseLayer:setPosition(s_LEFT_X, 0)
+            layer:addChild(pauseLayer,1000)
+            layer.layerPaused = true
+            --director:getActionManager():resumeTargets(pausedTargets)
+
+            --button sound
+            playSound(s_sound_buttonEffect)
+        end
+    end
+    pauseBtn:addTouchEventListener(pauseScene)
+    
     local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 263)
     fillColor1:setAnchorPoint(0.5,0)
     fillColor1:ignoreAnchorPointForPosition(false)

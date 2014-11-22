@@ -7,7 +7,7 @@ local Pause = require("view.Pause")
 
 local FlipNode = require("view.mat.FlipNode")
 
-local SummaryBossLayer = class("SummaryBosslayer", function ()
+local SummaryBossLayerII = class("SummaryBossLayerII", function ()
     return cc.Layer:create()
 end)
 
@@ -17,9 +17,9 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-function SummaryBossLayer.create(levelConfig)   
+function SummaryBossLayerII.create(levelConfig)   
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    local layer = SummaryBossLayer.new()
+    local layer = SummaryBossLayerII.new()
     math.randomseed(os.time())
     --add coconut
     --layer.levelConfig = levelConfig
@@ -43,7 +43,7 @@ function SummaryBossLayer.create(levelConfig)
     slideCoco[5] = s_sound_slideCoconut4
     slideCoco[6] = s_sound_slideCoconut5
     slideCoco[7] = s_sound_slideCoconut6
-    
+
     local startAtNode
 
     local startTouchLocation
@@ -60,18 +60,18 @@ function SummaryBossLayer.create(levelConfig)
     local onTouchMoved
     local fakeTouchMoved
     local onTouchEnded
-    
+
     layer:initWordList(levelConfig)
     layer:initBossLayer(levelConfig)
     layer:initMap()
-    
+
     --update
     local function update(delta)
-        
+
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
             return
         end
-        
+
         --s_logd(layer.hintTime)
         if layer.hintTime < 10 or layer.isPaused then
             if layer.hintTime >= 8 and layer.isPaused then
@@ -80,25 +80,25 @@ function SummaryBossLayer.create(levelConfig)
                 layer.hintTime = layer.hintTime + delta
             end
         elseif not layer.isPaused and not layer.isHinting then
-            
+
             layer:hint()
         end
     end
     layer:scheduleUpdateWithPriorityLua(update, 0)
-    
+
     -- handing touch events
     onTouchBegan = function(touch, event)
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
             return true
         end
-        
+
         local location = layer:convertToNodeSpace(touch:getLocation())
-        
+
         startTouchLocation = location
         lastTouchLocation = location
-        
+
         layer:checkTouchLocation(location)
-        
+
         if layer.onNode then
             layer.isPaused = true
             for i = 1, 5 do
@@ -123,7 +123,7 @@ function SummaryBossLayer.create(levelConfig)
         else
             startAtNode = false
         end
-        
+
         for i = 1,#layer.wordPool[layer.currentIndex] do
             if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) then
                 layer.isPaused = true
@@ -153,7 +153,7 @@ function SummaryBossLayer.create(levelConfig)
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
             return true
         end
-    
+
         local length_gap = 3.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
@@ -173,12 +173,12 @@ function SummaryBossLayer.create(levelConfig)
 
         lastTouchLocation = location
     end
-    
+
     fakeTouchMoved = function(location)
         if layer.globalLock then
             return
         end
-    
+
         layer:checkTouchLocation(location)
 
         if startAtNode then
@@ -243,7 +243,7 @@ function SummaryBossLayer.create(levelConfig)
                             else
                                 playSound(slideCoco[7])
                             end
-                            
+
                             currentNode.addSelectStyle()
                             currentNode.bigSize()
                             if layer.current_dir == dir_up then
@@ -266,12 +266,12 @@ function SummaryBossLayer.create(levelConfig)
     end
 
     onTouchEnded = function(touch, event)
-        
+
         layer.isPaused = false
         if layer.globalLock then
             return
         end
-        
+
         --s_logd(layer.onCrab)
         if layer.onCrab > 0 then
 
@@ -281,12 +281,12 @@ function SummaryBossLayer.create(levelConfig)
             layer.ccbcrab[layer.onCrab]['legSmall']:setVisible(true)
             layer.onCrab = 0
         end
-        
+
         if #selectStack < 1 then
             return
         end
-        
-    
+
+
         local location = layer:convertToNodeSpace(touch:getLocation())
 
         local selectWord = ""
@@ -313,15 +313,15 @@ function SummaryBossLayer.create(levelConfig)
                     layer.ccbcrab[i]['legBig']:setVisible(false)
                     layer.ccbcrab[i]['legSmall']:setVisible(true)
                     layer.crab[i]:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT * 0.2))))
-                    
+
                     -- slide true
                     playSound(s_sound_learn_true)
                     -- beat boss sound
                     s_SCENE:callFuncWithDelay(0.3,function()
-                    playSound(s_sound_FightBoss)       
+                        playSound(s_sound_FightBoss)       
                     end)
 
-                    
+
                     local delaytime = 0
                     for j = 1, #selectStack do
                         local node = selectStack[j]
@@ -368,12 +368,12 @@ function SummaryBossLayer.create(levelConfig)
                         local rotate = cc.RotateBy:create(0.5,360)
                         local fly = cc.Spawn:create(move,rotate)
                         local win = cc.CallFunc:create(function()
-                            
-                            --layer.boss:removeFromParent()
-                            layer:win()
+
+                                --layer.boss:removeFromParent()
+                                layer:win()
                         end,{})
                         layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
-                        
+
                     else
                         selectStack = {}
                         if layer.girlAfraid then
@@ -382,11 +382,11 @@ function SummaryBossLayer.create(levelConfig)
                             s = 'girl-stand'
                         end
 
-                        
+
                         layer.girl:setAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,s,true)
                         if killedCrabCount == #layer.wordPool[layer.currentIndex] then
-                        --next group
+                            --next group
                             layer.globalLock = true
                             layer.currentIndex = layer.currentIndex + 1
                             killedCrabCount = 0
@@ -408,7 +408,7 @@ function SummaryBossLayer.create(levelConfig)
                 end
             end
         end
-        
+
         if not match then
             local s
             if layer.girlAfraid then
@@ -435,7 +435,7 @@ function SummaryBossLayer.create(levelConfig)
                 end
             end
             selectStack = {}
-            
+
             --slide wrong
             playSound(s_sound_learn_false)
         end
@@ -447,27 +447,27 @@ function SummaryBossLayer.create(levelConfig)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
-    
+
     -- boss "s_sound_Get_Outside"
     playMusic(s_sound_Get_Outside,true)
-    
+
     return layer  
 end
 
-function SummaryBossLayer:updateWord(selectStack)
+function SummaryBossLayerII:updateWord(selectStack)
     for i = 1, #self.wordStack do
-            self.wordStack[i]:stopAllActions()
-            self.wordStack[i]:removeFromParent()
+        self.wordStack[i]:stopAllActions()
+        self.wordStack[i]:removeFromParent()
     end
     self.wordStack = {}
-        
+
     local count = #selectStack
     local gap = 32
     local left = (s_DESIGN_WIDTH - (count-1)*gap)/2
-        
+
     for i = 1, #selectStack do
         local wordBack = cc.Sprite:create("image/button/USButton1.png")
-            --wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
+        --wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
         wordBack:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
         wordBack:setScale(0.7)
         self:addChild(wordBack)
@@ -480,15 +480,15 @@ function SummaryBossLayer:updateWord(selectStack)
     end
 end
 
-function SummaryBossLayer:initBossLayer(levelConfig)
+function SummaryBossLayerII:initBossLayer(levelConfig)
     self.globalLock = true
---    local unlock = cc.CallFunc:create(function() 
---        
---        self:initMap()
---    end,{})
---    self:runAction(cc.Sequence:create(cc.DelayTime:create(1.5),unlock))
-    
-    
+    --    local unlock = cc.CallFunc:create(function() 
+    --        
+    --        self:initMap()
+    --    end,{})
+    --    self:runAction(cc.Sequence:create(cc.DelayTime:create(1.5),unlock))
+
+
     --stage info
     self.girlAfraid = false
     self.totalBlood = levelConfig.summary_boss_hp
@@ -508,7 +508,7 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
     self:addChild(back)
     back:addAnimation(0, 'animation', true)
-    
+
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     self:addChild(blinkBack,0)
@@ -545,29 +545,29 @@ function SummaryBossLayer:initBossLayer(levelConfig)
         self:addChild(pauseLayer,1000)
         self.layerPaused = true
         --director:getActionManager():resumeTargets(pausedTargets)
-        
+
         --button sound
         playSound(s_sound_buttonEffect)
-        
+
     end
     pauseBtn:registerScriptTapHandler(pauseScene)
-    
+
     --add girl
     local girl = sp.SkeletonAnimation:create("spine/summaryboss/girl-stand.json","spine/summaryboss/girl-stand.atlas",1)
     girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)
     self:addChild(girl)
     girl:setAnimation(0,'girl-stand',true)
     self.girl = girl
-    
+
     --add readyGo
     local readyGo = sp.SkeletonAnimation:create("spine/summaryboss/readygo_diyiguan.json","spine/summaryboss/readygo_diyiguan.atlas",1)
     readyGo:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.5)
     readyGo:addAnimation(0,'animation',false)
     self:addChild(readyGo,100)
-    
+
     -- ready go "ReadyGo"
     playSound(s_sound_ReadyGo)
-    
+
     --add boss
     local bossNode = cc.Node:create()
     bossNode:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
@@ -627,10 +627,10 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     self.hole = hole
 end
 
-function SummaryBossLayer:initWordList(levelConfig)
+function SummaryBossLayerII:initWordList(levelConfig)
     local wordList = split(levelConfig.word_content,'|')
     local index = 1
-    
+
     for i = 1, #wordList do
         local randomIndex = math.random(1,#wordList)
         local tmp = wordList[i]
@@ -665,7 +665,7 @@ function SummaryBossLayer:initWordList(levelConfig)
     end
 end
 
-function SummaryBossLayer:initStartIndex()
+function SummaryBossLayerII:initStartIndex()
     self.startIndexPool = {}
     if #self.wordPool[self.currentIndex] == 1 then
         local localgap = 25 - string.len(self.wordPool[self.currentIndex][1])
@@ -691,7 +691,7 @@ function SummaryBossLayer:initStartIndex()
     end
 end
 
-function SummaryBossLayer:initCrab()
+function SummaryBossLayerII:initCrab()
     local proxy = cc.CCBProxy:create()
     self.ccb = {}
     if #self.wordPool[self.currentIndex] ==1 then
@@ -708,7 +708,7 @@ function SummaryBossLayer:initCrab()
         self.crab[1] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[1],self.ccb[1])
         self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.3, -s_DESIGN_HEIGHT * 0.1)
         self:addChild(self.crab[1])
-        
+
         self.ccbcrab[2] = {} 
         self.ccb[2] = {}
         self.ccb[2]['CCB_crab'] = self.ccbcrab[2]
@@ -748,7 +748,7 @@ function SummaryBossLayer:initCrab()
     end
 end
 
-function SummaryBossLayer:initMap()
+function SummaryBossLayerII:initMap()
     self:initStartIndex()
     self.coconut = {}
     self.isFirst = {}
@@ -865,7 +865,7 @@ function SummaryBossLayer:initMap()
     self:initCrab()
 end
 
-function SummaryBossLayer:checkTouchLocation(location)
+function SummaryBossLayerII:checkTouchLocation(location)
     for i = 1, 5 do
         for j = 1, 5 do
             local node = self.coconut[i][j]
@@ -897,29 +897,29 @@ function SummaryBossLayer:checkTouchLocation(location)
     self.onNode = false
 end
 
-function SummaryBossLayer:win()
+function SummaryBossLayerII:win()
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
     local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
-    
+
     -- win sound
     playSound(s_sound_win)
 end
 
-function SummaryBossLayer:lose()
+function SummaryBossLayerII:lose()
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
     local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
-    
+
     -- lose sound
     playSound(s_sound_fail)    
 end
 
-function SummaryBossLayer:hint()
+function SummaryBossLayerII:hint()
     self.isHinting = true
     local num = math.random(1,#self.wordPool[self.currentIndex])
     local index = 1
@@ -937,7 +937,7 @@ function SummaryBossLayer:hint()
             end
         end
     end
-    
+
 end
 
-return SummaryBossLayer
+return SummaryBossLayerII

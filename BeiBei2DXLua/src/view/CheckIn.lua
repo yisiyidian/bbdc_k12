@@ -62,9 +62,18 @@ function CheckInNode:ctor()
 
     ccbCheckInNode['_checkInBack']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(0.5 * s_DESIGN_WIDTH,0.56 * s_DESIGN_HEIGHT))))
     
-    -- checkin day
+    -- checkin day lasttime
     
-    local checkInDay = 1
+    
+    local checkInDay = s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards
+    
+    if  checkInDay == nil then
+      checkInDay = 0
+    elseif checkInDay == 7 then
+      checkInDay = 0
+    end
+    
+    checkInDay = checkInDay + 1
     
 --    checkInDay = s_CURRENT_USER.dailyCheckInData.
     
@@ -217,8 +226,8 @@ function CheckInNode:ctor()
         wordStack = {}
         
         local count = #selectStack
-        local gap = 20;
-        local left = (ccbCheckInNode['_checkInBack']:getContentSize().width - (count-1)*gap)/2;
+        local gap = 20
+        local left = (ccbCheckInNode['_checkInBack']:getContentSize().width - (count-1)*gap)/2
         
         local wordBack = cc.Sprite:create("ccb/ccbResources/checkIn/checkin_wordback.png")
         wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)

@@ -27,7 +27,7 @@ function Pause:ctor()
     s_logd(#self.targets)
     
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+    back:setPosition(0, 0)
     self:addChild(back)
     
     self.ccb = {}
@@ -53,12 +53,12 @@ function Pause:ctor()
     
     ccbPause['soundOff']:setVisible(false)
     ccbPause['musicOff']:setVisible(false)
-    ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
+    ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p((s_RIGHT_X - s_LEFT_X) * 0.5,s_DESIGN_HEIGHT * 0.5))))
     
 end
 
 function Pause:onClose()
-    local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)))
+    local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p((s_RIGHT_X - s_LEFT_X) * 0.5,s_DESIGN_HEIGHT * 1.3)))
     local remove = cc.CallFunc:create(function() 
         local director = cc.Director:getInstance()
         director:getActionManager():resumeTargets(ccbPause['Layer'].targets)
@@ -86,9 +86,18 @@ end
 
 function Pause:onBack()
     --button sound
+    
     playSound(s_sound_buttonEffect)
+    
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    
+    local level = require('view.LevelLayer')
+    local layer = level.create()
+    --if self.win and isPassed == 0 then
+    --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    --end
+    s_SCENE:replaceGameLayer(layer)
 end
 
 function Pause:onContinue()

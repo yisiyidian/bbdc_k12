@@ -90,7 +90,12 @@ function IntroLayer.create()
     
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            visitLogin()
+            local hasGuest = s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER)
+            if hasGuest and s_CURRENT_USER.isGuest == 1 then
+                s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+            else
+                visitLogin()
+            end
             --button sound
             playSound(s_sound_buttonEffect)
         end

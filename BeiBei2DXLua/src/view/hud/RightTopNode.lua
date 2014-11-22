@@ -91,7 +91,7 @@ function RightTopNode:ctor()
     heart:setAnchorPoint(1,0.5)
     heart:setPosition(s_RIGHT_X   , s_DESIGN_HEIGHT - 70 )
     heart:setLocalZOrder(1)
-    self:addChild(heart)
+    --self:addChild(heart)
 
     local heartExist = cc.Label:createWithSystemFont(heartNumber,"",36)
     heartExist:setPosition(75,38)
@@ -109,7 +109,7 @@ function RightTopNode:ctor()
     wordAday:setPosition(s_RIGHT_X - 15 , s_DESIGN_HEIGHT - 230 )
     wordAday:setLocalZOrder(1)
     wordAday:setScale(0.5);
-    self:addChild(wordAday)
+    --self:addChild(wordAday)
     self.checkIn = wordAday
 
     local wordAday_back = cc.Sprite:create("image/chapter_level/checkInGlow.png")
@@ -177,7 +177,7 @@ function RightTopNode:ctor()
             heartShow = string.format("%d",min) ..":"..string.format("%d",sec)   
 
         end           
-        heartExist:setString(s_CURRENT_USER.energyCount)  
+  --      heartExist:setString(s_CURRENT_USER.energyCount)  
         label_heart:setString(heartShow)
         label_star:setString(starNumber)
        -- update data  

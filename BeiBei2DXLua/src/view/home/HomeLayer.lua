@@ -3,6 +3,7 @@ require("Cocos2dConstants")
 require("common.global")
 
 local AlterI = require("view.alter.AlterI")
+local ImproveInfo = require("view.home.ImproveInfo")
 
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
@@ -219,9 +220,27 @@ function HomeLayer.create()
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 elseif label_name[i] == "完善个人信息" then
+                    local ImproveInfo = ImproveInfo.create()
+                    ImproveInfo:setTag(1)
+                    ImproveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(ImproveInfo)
                     
+                    ImproveInfo.close = function()
+                        layer:removeChildByTag(1)
+                        --TODO @chaochao
+                        
+                        print(s_CURRENT_USER.username)
+                        
+                        --TODO @chaochao
+
+                    end
                 elseif label_name[i] == "登出游戏" then
-                    
+                    -- logout
+                    AnalyticsLogOut(s_CURRENT_USER.objectId)
+                    cx.CXAvos:getInstance():logOut()
+                    s_DATABASE_MGR.setLogOut(true)
+                    s_DATABASE_MGR.close()
+                    s_START_FUNCTION()
                 else
                     -- do nothing
                 end
