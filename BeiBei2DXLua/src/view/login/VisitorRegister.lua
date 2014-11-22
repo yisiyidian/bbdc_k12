@@ -1,7 +1,8 @@
--- need repair
-
-
 require("common.global")
+
+local BigAlter      = require("view.alter.BigAlter")
+local SmallAlter    = require("view.alter.SmallAlter")
+
 
 local VisitorRegister = class("VisitorRegister", function()
     return cc.Layer:create()
@@ -54,10 +55,9 @@ showWindow = function()
 --    end
 
     back_login = cc.Sprite:create("image/login/background_white_login.png")
- --   back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3) 
-    back_login:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2) 
+    back_login:setPosition(s_DESIGN_WIDTH, s_DESIGN_HEIGHT) 
     main:addChild(back_login)
-
+--
 --    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
 --    local action2 = cc.EaseBackOut:create(action1)
 --    back_login:runAction(action2)
@@ -66,25 +66,26 @@ showWindow = function()
     local back_height = back_login:getContentSize().height
 
 
-    local label1 = cc.Label:createWithSystemFont("游客信息完善","",40)
+    local label1 = cc.Label:createWithSystemFont("注册账号","",40)
     label1:setColor(cc.c4b(115,197,243,255))
     label1:setPosition(back_width/2,680)
     back_login:addChild(label1)
 
-    local label2 = cc.Label:createWithSystemFont("注：您的学习进度不会丢失","",24)
+    local label2 = cc.Label:createWithSystemFont("  您已经登陆游客账号\n建议您完善自己的信息即可\n注册新号码会删除已有进度","",24)
     label2:setColor(cc.c4b(100,100,100,255))
-    label2:setPosition(back_width/2,640)
+    label2:setPosition(back_width/2,540)
     back_login:addChild(label2)
 
-    local username = VisitorRegisterNode.create("username")
-    username:setPosition(back_width/2, 550)
-    back_login:addChild(username)
 
-    local password = VisitorRegisterNode.create("password")
-    password:setPosition(back_width/2, 450)
-    back_login:addChild(password)
 
-    local submit = ccui.Button:create("image/login/sl_button_confirm.png","image/login/sl_button_confirm.png","")
+    local submit_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then       
+
+
+        end
+    end
+
+    local submit = ccui.Button:create("image/button/button_blue_147x79.png","image/button/button_blue_147x79.png","")
     submit:setPosition(back_width/2, 350)
     submit:addTouchEventListener(submit_clicked)
     back_login:addChild(submit)
@@ -110,3 +111,4 @@ end
 
 
 return VisitorRegister
+
