@@ -446,10 +446,7 @@ function Manager.getStudyWords(bookKey)
     local user = s_CURRENT_USER.objectId
     local wordList = {}
     for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
-        local t = {}
-        t.wordName = row.wordName
-        t.value    = row.wordProciency
-        table.insert(wordList, t)
+        wordList[row.wordName] = row.wordProciency
     end
     return wordList
 end
@@ -458,10 +455,7 @@ function Manager.getGraspWords(bookKey)
     local user = s_CURRENT_USER.objectId
     local wordList = {}
     for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
-        local t = {}
-        t.wordName = row.wordName
-        t.value    = row.wordProciency
-        table.insert(wordList, t)
+        wordList[row.wordName] = row.wordProciency
     end
     return wordList
 end
