@@ -7,7 +7,10 @@
 //
 
 #include "CXStore.h"
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+
+#define USE_ENERGY 0
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS && USE_ENERGY == 1)
 #include "CCLuaEngine.h"
 #include "PluginManager.h"
 #include "ProtocolIAP.h"
@@ -108,7 +111,7 @@ CXStore::CXStore()
 
 void CXStore::requestProducts(const char* productIds, int nHandler)
 {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS && USE_ENERGY == 1)
     mLuaHandlerId_requestProducts = nHandler;
     _IAP::getInstance()->requestProducts(productIds);
 #endif
@@ -116,7 +119,7 @@ void CXStore::requestProducts(const char* productIds, int nHandler)
 
 void CXStore::invokeLuaCallbackFunction_requestProducts(int code, const char* json)
 {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS && USE_ENERGY == 1)
     if (mLuaHandlerId_requestProducts > 0)
     {
         auto engine = LuaEngine::getInstance();
@@ -131,7 +134,7 @@ void CXStore::invokeLuaCallbackFunction_requestProducts(int code, const char* js
 
 void CXStore::payForProduct(const char* productId, int nHandler)
 {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS && USE_ENERGY == 1)
     mLuaHandlerId_payResult = nHandler;
     _IAP::getInstance()->payForProduct(productId);
 #endif
@@ -139,7 +142,7 @@ void CXStore::payForProduct(const char* productId, int nHandler)
 
 void CXStore::invokeLuaCallbackFunction_payForProduct(int code, const char* msg, const char* json)
 {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS && USE_ENERGY == 1)
     if (mLuaHandlerId_payResult > 0)
     {
         auto engine = LuaEngine::getInstance();

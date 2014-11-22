@@ -203,12 +203,15 @@ function HomeLayer.create()
     layer:addChild(setting_back)
     
     
+    local list = {}
     local username = "游客"
+    local logo_name = {"head","book","feedback","information","logout"}
+    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
     if not s_CURRENT_USER.isGuest then
         username = s_CURRENT_USER.username
+        logo_name = {"head","book","feedback","logout"}
+        label_name = {username,"选择书籍","用户反馈","登出游戏"}
     end
-    local logo_name = {"head","book","feedback","information","logout"}
-    local label_name = {username,"选择书籍", "用户反馈", "完善个人信息", "登出游戏"}
     for i = 1, 5 do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.began then
@@ -227,15 +230,19 @@ function HomeLayer.create()
                     
                     ImproveInfo.close = function()
                         layer:removeChildByTag(1)
-                        --TODO @chaochao
-                        
                         print(s_CURRENT_USER.username)
                         
-                        --TODO @chaochao
-
+                        list[1].label:setString(s_CURRENT_USER.username)
+                        list[5].button_back:setPosition(0, s_DESIGN_HEIGHT-list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                        list[4].button_back:removeFromParentAndCleanup()
                     end
                 elseif label_name[i] == "登出游戏" then
-                    
+                    -- logout
+                    AnalyticsLogOut(s_CURRENT_USER.objectId)
+                    cx.CXAvos:getInstance():logOut()
+                    s_DATABASE_MGR.setLogOut(true)
+                    s_DATABASE_MGR.close()
+                    s_START_FUNCTION()
                 else
                     -- do nothing
                 end
@@ -262,6 +269,13 @@ function HomeLayer.create()
         split:setAnchorPoint(0.5,0)
         split:setPosition(button_back:getContentSize().width/2, 0)
         button_back:addChild(split)
+
+        local t = {}
+        t.button_back = button_back
+        t.logo = logo
+        t.label = label
+        t.split = split
+        table.insert(list, t)
     end
     
     local setting_shadow = cc.Sprite:create("image/homescene/setup_shadow.png")

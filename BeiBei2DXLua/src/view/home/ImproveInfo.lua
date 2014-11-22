@@ -98,18 +98,23 @@ showLogin = function()
                 return
             end
             
-            s_CURRENT_USER.isGuest = 0
             
             s_LOADING_CIRCLE_LAYER:show()
             
+            print(s_CURRENT_USER.username)
             s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
             function(username, password, errordescription, errorcode )
+
+                    
                     if errordescription then                  
                         s_TIPS_LAYER:showSmall(errordescription)
-                    end             
+                    else        
+                        s_CURRENT_USER.isGuest = 0
+                        main.close()                    
+                    end     
                     s_LOADING_CIRCLE_LAYER:hide()
-                    
-                    main.close()
+                    print(s_CURRENT_USER.username)
+
                     
                     
             end)
