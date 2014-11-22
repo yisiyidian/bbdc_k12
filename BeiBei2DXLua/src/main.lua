@@ -8,12 +8,17 @@ local cclog = function(...)
     print(string.format(...))
 end
 
+local saveLuaError = function (msg)
+    
+end
+
 -- for CCLuaEngine traceback
 function __G__TRACKBACK__(msg)
     cclog("----------------------------------------")
     cclog("LUA ERROR: " .. tostring(msg) .. "\n")
     cclog(debug.traceback())
     cclog("----------------------------------------")
+    saveLuaError("LUA ERROR: " .. tostring(msg) .. '. ' .. tostring(debug.traceback()))
     return msg
 end
 
@@ -68,6 +73,17 @@ local function main()
 
         s_SERVER.appId = LEAN_CLOUD_ID_TEST
         s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
+    end
+
+    saveLuaError = function (msg)
+        local errorObj = {}
+        errorObj['className'] = 'LuaError'
+        local a = string.gsub(msg, ":", "..") 
+        local b = string.gsub(a,   '"', "'") 
+        local c = string.gsub(b,   "\n", "___") 
+        local d = string.gsub(c,   "\t", "___") 
+        errorObj['msg'] = d
+        s_SERVER.createData(errorObj)
     end
     
     if cc.Director:getInstance():getRunningScene() then
