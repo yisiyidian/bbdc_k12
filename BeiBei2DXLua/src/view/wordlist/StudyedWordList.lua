@@ -12,17 +12,17 @@ function StudyedWordList.create()
 end
 
 function StudyedWordList:addMasteredPlots(proficiency)
---    if proficiency >= 4 then
---    
---    elseif proficiency == 3 then
---    
---    elseif proficiency == 2 then
---    
---    else profiency == 1 then
---    
---    else  -- 
---    
---    end
+    if proficiency >= 4 then
+    
+    elseif proficiency == 3 then
+    
+    elseif proficiency == 2 then
+    
+    elseif profiency == 1 then
+    
+    else  -- 
+    
+    end
 end
 
 function StudyedWordList:ctor()
