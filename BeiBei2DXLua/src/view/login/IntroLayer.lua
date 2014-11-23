@@ -240,16 +240,21 @@ function IntroLayer.create()
                 
                 local button_register_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then
-                        if s_CURRENT_USER.username == nil then
+
+                        local gotoRegistNewAccount = function ()
                             local loginAlter = LoginAlter.createRegister()
                             loginAlter:setTag(2)
                             loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                             layer:addChild(loginAlter)
                             -- button sound
-                             playSound(s_sound_buttonEffect)
-                            loginAlter.close = function()
-                            layer:removeChildByTag(2)                       
-                            end 
+                            playSound(s_sound_buttonEffect)
+                            loginAlter.close = function() layer:removeChildByTag(2) end 
+                        end
+
+                        local hasAccount = s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER)
+                        
+                        if not (hasAccount and s_CURRENT_USER.isGuest == 1) then
+                            gotoRegistNewAccount()
                         else
                             local visitorRegister = VisitorRegister.create()
                             visitorRegister:setTag(2)
@@ -259,46 +264,18 @@ function IntroLayer.create()
                             playSound(s_sound_buttonEffect)
                             visitorRegister.close = function(which)
                                 -- which = register,improve,close
-                            layer:removeChildByTag(2)   
+                                layer:removeChildByTag(2)   
                             
                                 if which == "register" then
-                                   local loginAlter = LoginAlter.createRegister()
-                                   loginAlter:setTag(2)
-                                   loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                                    layer:addChild(loginAlter)
-                                   -- button sound
-                                   playSound(s_sound_buttonEffect)
-                                   loginAlter.close = function()
-                                   layer:removeChildByTag(2)   
-                                    end
+                                    gotoRegistNewAccount()
                                     
                                 elseif which == "improve" then
-                                
+                                    playSound(s_sound_buttonEffect)
 
-                                    
-                                    local improveInfo = ImproveInfo.create()
+                                    local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER)
                                     improveInfo:setTag(1)
                                     improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                                     layer:addChild(improveInfo)
-
-                                    -- button sound
-                                    playSound(s_sound_buttonEffect)
-                                    
-                                    improveInfo.close = function()                           
-                                        local hasGuest = s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER)
-
-                                        if hasGuest  then
---                                            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-                                            print(s_CURRENT_USER.username)
-                                            print(s_CURRENT_USER.password)
-                                            s_UserBaseServer.logIn(s_CURRENT_USER.username, s_CURRENT_USER.password, function(objectjson, e, code)
-                                               
-                                            
-                                            end)
-                                            
-                                        end     
-                                        layer:removeChildByTag(1)                                  
-                                    end
                                 end
                                                 
                             end 
