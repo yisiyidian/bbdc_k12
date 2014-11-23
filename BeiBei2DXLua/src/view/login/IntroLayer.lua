@@ -279,6 +279,9 @@ function IntroLayer.create()
                                     improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                                     layer:addChild(improveInfo)
 
+                                    -- button sound
+                                    playSound(s_sound_buttonEffect)
+                                    
                                     improveInfo.close = function()
                                         layer:removeChildByTag(1)
 

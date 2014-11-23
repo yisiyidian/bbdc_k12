@@ -904,8 +904,8 @@ function SummaryBossLayerII:win()
     alter:setPosition(0,0)
     self:addChild(alter,1000)
 
-    -- win sound
-    playSound(s_sound_win)
+--    -- win sound
+--    playSound(s_sound_win)
 end
 
 function SummaryBossLayerII:lose()
@@ -914,9 +914,9 @@ function SummaryBossLayerII:lose()
     local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
-
-    -- lose sound
-    playSound(s_sound_fail)    
+--
+--    -- lose sound
+--    playSound(s_sound_fail)    
 end
 
 function SummaryBossLayerII:hint()

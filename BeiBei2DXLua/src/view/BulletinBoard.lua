@@ -22,7 +22,12 @@ function BulletinBoard:ctor()
     local proxy = cc.CCBProxy:create()
     local node  = CCBReaderLoad("res/ccb/bullet_in_board.ccbi", proxy, ccbBulletinBoard, self.ccb)
     self:addChild(node)
+
+    ccbBulletinBoard['board']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.0,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+
     ccbBulletinBoard['board']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
+
+
     --click effect
     local menu = cc.Menu:create()
     menu:setPosition(cc.p(ccbBulletinBoard['effect']:getPosition()))

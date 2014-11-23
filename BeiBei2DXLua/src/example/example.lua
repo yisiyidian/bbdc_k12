@@ -11,6 +11,8 @@ function test()
     local IntroLayer = require("view.login.IntroLayer")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
+    
+
 
 --    local wordList = require('view.wordlist.WordMenu')
 --    local layer = wordList.create()

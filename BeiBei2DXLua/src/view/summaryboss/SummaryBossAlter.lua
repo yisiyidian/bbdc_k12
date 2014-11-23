@@ -22,6 +22,12 @@ function SummaryBossAlter.create(win,wordCount,blood)
 end
 
 function SummaryBossAlter:lose()
+    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    s_SCENE:callFuncWithDelay(0.3,function()
+        -- lose sound
+        playSound(s_sound_fail)   
+    end)
+    
     --add board
     self.loseBoard = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
@@ -52,6 +58,11 @@ function SummaryBossAlter:lose()
 
     local function nextBoard(sender)
         self:lose2()
+        
+        -- stop effect
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
+        -- button sound
+        playSound(s_sound_buttonEffect)
     end
     continue:registerScriptTapHandler(nextBoard)
     
@@ -59,6 +70,12 @@ function SummaryBossAlter:lose()
 end
 
 function SummaryBossAlter:lose2()
+    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    s_SCENE:callFuncWithDelay(0.3,function()
+        -- lose sound
+        playSound(s_sound_fail)   
+    end)
+    
     self.loseBoard2 = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
     self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
     self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
@@ -112,6 +129,11 @@ function SummaryBossAlter:lose2()
         local level = require('view.LevelLayer')
         local layer = level.create()
         s_SCENE:replaceGameLayer(layer)
+        
+        -- stop effect
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
+        -- button sound
+        playSound(s_sound_buttonEffect)
     end
     continue:registerScriptTapHandler(backToLevelScene)
     
@@ -120,12 +142,25 @@ function SummaryBossAlter:lose2()
         local level = require('view.LevelLayer')
         local layer = level.create()
         s_SCENE:replaceGameLayer(layer) 
+        
+        -- stop effect
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()        
+        -- button sound
+        playSound(s_sound_buttonEffect)
+
     end
     again:registerScriptTapHandler(challengeAgain)
     
 end
 
 function SummaryBossAlter:win1()
+    cc.SimpleAudioEngine:getInstance():pauseMusic()
+
+    s_SCENE:callFuncWithDelay(0.3,function()
+        -- win sound
+        playSound(s_sound_win)
+    end)
+    
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
     local isPassed = levelData.isPassed
     if isPassed == 0 then
@@ -178,7 +213,8 @@ function SummaryBossAlter:win1()
        --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
        --end
        s_SCENE:replaceGameLayer(layer)
-       
+       -- stop effect
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
         -- button sound
         playSound(s_sound_buttonEffect)
     end
