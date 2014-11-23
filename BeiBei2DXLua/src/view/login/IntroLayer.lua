@@ -276,6 +276,9 @@ function IntroLayer.create()
                                     improveInfo:setTag(1)
                                     improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                                     layer:addChild(improveInfo)
+                                    improveInfo.close = function()
+                                        layer:removeChildByTag(1)   
+                                    end                                  
                                 end
                                                 
                             end 

@@ -126,6 +126,7 @@ showLogin = function()
                         s_LOADING_CIRCLE_LAYER:hide()
                     else
                         updateUserNameAndPassword()
+                        s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
                     end
                 end)
             end

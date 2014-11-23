@@ -130,6 +130,8 @@ function Pause:onHelp()
 end
 
 function Pause:onSoundOn()
+    cc.SimpleAudioEngine:getInstance():setEffectsVolume(1) 
+
     ccbPause['soundOn']:setVisible(false)
     ccbPause['soundOff']:setVisible(true)
     
@@ -138,6 +140,8 @@ function Pause:onSoundOn()
 end
 
 function Pause:onSoundOff()
+    cc.SimpleAudioEngine:getInstance():setEffectsVolume(0) 
+
     ccbPause['soundOn']:setVisible(true)
     ccbPause['soundOff']:setVisible(false)
     
@@ -146,6 +150,8 @@ function Pause:onSoundOff()
 end
 
 function Pause:onMusicOn()
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    
     ccbPause['musicOn']:setVisible(false)
     ccbPause['musicOff']:setVisible(true)
     
@@ -154,6 +160,8 @@ function Pause:onMusicOn()
 end
 
 function Pause:onMusicOff()
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0) 
+    
     ccbPause['musicOn']:setVisible(true)
     ccbPause['musicOff']:setVisible(false)
     
