@@ -2,17 +2,17 @@ require("Cocos2d")
 require("Cocos2dConstants")
 require("common.global")
 
-local StudyedWordList = class('StudyedWordList', function()
+local MasteredWordList = class('MasteredWordList', function()
     return cc.Layer:create()
 end)
 
-function StudyedWordList.create()
-    local layer = StudyedWordList.new()
+function MasteredWordList.create()
+    local layer = MasteredWordList.new()
     return layer
 end
 
 
-function StudyedWordList:removeItemByName(listView, name)
+function MasteredWordList:removeItemByName(listView, name)
     local items = listView:getItems()
     for i = 1, #items do
         --print('items:'..items[i]:getName())
@@ -22,7 +22,7 @@ function StudyedWordList:removeItemByName(listView, name)
     end
 end
 
-function StudyedWordList:getItemByName(listView, name)
+function MasteredWordList:getItemByName(listView, name)
     local items = listView:getItems()
     for i = 1, #items do
         if items[i]:getName() == name then
@@ -32,7 +32,7 @@ function StudyedWordList:getItemByName(listView, name)
     return nil
 end
 
-function StudyedWordList:addMasteredPlots(button, proficiency)
+function MasteredWordList:addMasteredPlots(button, proficiency)
     local sprite1, sprite2, sprite3, sprite4
     if proficiency >= 4 then
         sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
@@ -70,20 +70,20 @@ function StudyedWordList:addMasteredPlots(button, proficiency)
     button:addChild(sprite4)
 end
 
-function StudyedWordList:ctor()
+function MasteredWordList:ctor()
 
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
-    
+
     local function listViewEvent(sender, eventType)
         if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
             print("select child index = ",sender:getCurSelectedIndex())
         end
     end
-    
+
     -- add chapter list view
     local listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
@@ -93,7 +93,7 @@ function StudyedWordList:ctor()
     listView:setPosition(0,0)
     listView:addEventListener(listViewEvent)
     self:addChild(listView,0,'listView')
-    
+
     --set model
     local default_item = ccui.Layout:create()
     default_item:setTouchEnabled(true)
@@ -108,7 +108,7 @@ function StudyedWordList:ctor()
     local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
     --print('-----config:'..#levelConfig)
     self.levelArray = {}
-    
+
     local indexConfig = 1
     local level_count = 0
     while indexConfig <= #levelConfig do
@@ -133,7 +133,7 @@ function StudyedWordList:ctor()
         titleContainner:setContentSize(cc.size(s_DESIGN_WIDTH, 40))
         titleContainner:addChild(title)
         listView:addChild(titleContainner)
---        listView:
+        --        listView:
         -- define more info button clicked event
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
@@ -143,16 +143,16 @@ function StudyedWordList:ctor()
                 if control[2] == '0' then  -- insert a item of word info
                     local wordTitle = cc.Label:createWithSystemFont(wordInfo['wordMeaning']..'\n'..wordInfo['sentenceEn']..'\n'..wordInfo['sentenceCn'], '' ,28)
                     wordTitle:setColor(cc.c3b(0,0,0))
---                    print('wordInfo:'..wordInfo['wordMeaning'])
---                    local splita = string.gsub(wordInfo['wordMeaning'],'[a-zA-Z]','')
---                    print('----split')
---                    print(splita)
---                    print_lua_table(splita)
-                    
+                    --                    print('wordInfo:'..wordInfo['wordMeaning'])
+                    --                    local splita = string.gsub(wordInfo['wordMeaning'],'[a-zA-Z]','')
+                    --                    print('----split')
+                    --                    print(splita)
+                    --                    print_lua_table(splita)
+
                     local back = cc.LayerColor:create(cc.c4b(52,177,241,255),s_DESIGN_WIDTH,200)
                     back:ignoreAnchorPointForPosition(false)
                     back:setAnchorPoint(0.5,0.5)
-          
+
                     local wordContainer = ccui.Layout:create()
                     wordContainer:setContentSize(cc.size(s_DESIGN_WIDTH, 200))
                     back:setPosition(wordContainer:getContentSize().width/2, wordContainer:getContentSize().height/2)
@@ -160,10 +160,10 @@ function StudyedWordList:ctor()
                     wordTitle:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
                     wordContainer:addChild(wordTitle,2)
                     wordContainer:setName('moreWordInfo'..control[1])
-                    
+
                     -- set more info
-                    
-                    
+
+
                     local wordItem = self:getItemByName(listView,control[1])
                     local index = listView:getIndex(wordItem)
                     listView:insertCustomItem(wordContainer,index+1)
@@ -175,120 +175,64 @@ function StudyedWordList:ctor()
             end
         end
         -- add word list
-        local studyWords = s_DATABASE_MGR.getStudyWords(s_CURRENT_USER.bookKey)
+        local masterWords = s_DATABASE_MGR.getGraspWords(s_CURRENT_USER.bookKey)
         for i = 1, #self.levelArray[indexConfig] do
             local word = self.levelArray[indexConfig][i]
             local wordInfo = s_WordPool[word]
-            --print_lua_table(wordInfo)
-            local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
-            custom_button:setName("custom_button")
-            custom_button:setTitleText('123')
-            custom_button:setScale9Enabled(true)
-            custom_button:setContentSize(default_button:getContentSize())
+            print('grasp word is '..word)
+            print_lua_table(masterWords)
+            --print('masterWords:'..masterWords[word])
+            for i, v in pairs(masterWords) do 
+                if i == word then
+                    --print_lua_table(wordInfo)
+                    local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
+                    custom_button:setName("custom_button")
+                    custom_button:setTitleText('123')
+                    custom_button:setScale9Enabled(true)
+                    custom_button:setContentSize(default_button:getContentSize())
 
-            local custom_item = ccui.Layout:create()
-            custom_item:setContentSize(custom_button:getContentSize())
-            custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
-            custom_item:addChild(custom_button)
-            custom_item:setName(word)
-            listView:addChild(custom_item)
-            local word_name = cc.Label:createWithSystemFont(word,'',32)
-            word_name:setColor(cc.c3b(0,0,0))
-            word_name:ignoreAnchorPointForPosition(false)
-            word_name:setAnchorPoint(0,0)
-            word_name:setPosition(0.12 * custom_button:getContentSize().width,0.52 * custom_button:getContentSize().height)
-            custom_button:addChild(word_name)
+                    local custom_item = ccui.Layout:create()
+                    custom_item:setContentSize(custom_button:getContentSize())
+                    custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+                    custom_item:addChild(custom_button)
+                    custom_item:setName(word)
+                    listView:addChild(custom_item)
+                    local word_name = cc.Label:createWithSystemFont(word,'',32)
+                    word_name:setColor(cc.c3b(0,0,0))
+                    word_name:ignoreAnchorPointForPosition(false)
+                    word_name:setAnchorPoint(0,0)
+                    word_name:setPosition(0.12 * custom_button:getContentSize().width,0.52 * custom_button:getContentSize().height)
+                    custom_button:addChild(word_name)
 
-            local word_meaning = cc.Label:createWithSystemFont(wordInfo['wordMeaningSmall'],'',24)
-            word_meaning:setColor(cc.c3b(0,0,0))
-            word_meaning:ignoreAnchorPointForPosition(false)
-            word_meaning:setAnchorPoint(0,1)
-            word_meaning:setPosition(0.12 * custom_button:getContentSize().width,0.3 * custom_button:getContentSize().height)
-            custom_button:addChild(word_meaning, 0,'clickToCheck')
+                    local word_meaning = cc.Label:createWithSystemFont(wordInfo['wordMeaningSmall'],'',24)
+                    word_meaning:setColor(cc.c3b(0,0,0))
+                    word_meaning:ignoreAnchorPointForPosition(false)
+                    word_meaning:setAnchorPoint(0,1)
+                    word_meaning:setPosition(0.12 * custom_button:getContentSize().width,0.3 * custom_button:getContentSize().height)
+                    custom_button:addChild(word_meaning, 0,'clickToCheck')
 
-            local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
-            arrow:setScale9Enabled(true)
-            arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
-            local more_label = cc.Label:createWithSystemFont('更多','',24)
-            more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
-            more_label:setColor(cc.c3b(0,0,0))
-            arrow:addChild(more_label)
-            arrow:setName(word..'|0')
-           
-            --print('arrow:'..arrow:getName())
-            arrow:addTouchEventListener(touchEvent)
-            custom_button:addChild(arrow)        
-            -- add mastered count
-            --print('study:'..studyWords[word])
-            self:addMasteredPlots(custom_button, studyWords[word])
+                    local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
+                    arrow:setScale9Enabled(true)
+                    arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
+                    local more_label = cc.Label:createWithSystemFont('更多','',24)
+                    more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
+                    more_label:setColor(cc.c3b(0,0,0))
+                    arrow:addChild(more_label)
+                    arrow:setName(word..'|0')
+
+                    --print('arrow:'..arrow:getName())
+                    arrow:addTouchEventListener(touchEvent)
+                    custom_button:addChild(arrow)        
+                    -- add mastered count
+                    --print('study:'..studyWords[word])
+                    self:addMasteredPlots(custom_button, masterWords[word])
+                end
+            end
         end
         indexConfig = indexConfig + 1
     end
 
-    --self.array = {'word', 'sunny', 'test', 'hard','nice','best','hello','world','well'}
-    --
-
-    --local count = #self.array
---    for i = 1,count do
---        listView:pushBackDefaultItem()
---    end
---    --insert default item
---    for i = 1,count do
---        listView:insertDefaultItem(0)
---    end
---    listView:removeAllChildren()
-    
---    local title = cc.Label:createWithSystemFont('好友列表','',28)
---    title:setPosition(cc.p(50,15))
---    local tem = ccui.Layout:create()
---    tem:setContentSize(cc.size(100,30))
---    
---    --custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
---    tem:addChild(title)
---    listView:addChild(tem)
-    
---    for i = 1,count do
---        if i ~= count then   -- add split item
---            
---        end
---        local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
---        custom_button:setName("custom_button")
---        custom_button:setTitleText('123')
---        custom_button:setScale9Enabled(true)
---        custom_button:setContentSize(default_button:getContentSize())
---        
---        local custom_item = ccui.Layout:create()
---        custom_item:setContentSize(custom_button:getContentSize())
---        custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
---        custom_item:addChild(custom_button)
---        custom_item:setName('item'..i)
---        listView:addChild(custom_item)
---        
---        local word_name = cc.Label:createWithSystemFont('test','',32)
---        word_name:setColor(cc.c3b(0,0,0))
---        word_name:ignoreAnchorPointForPosition(false)
---        word_name:setAnchorPoint(0,0)
---        word_name:setPosition(0.12 * custom_button:getContentSize().width,0.52 * custom_button:getContentSize().height)
---        custom_button:addChild(word_name)
---
---        local word_meaning = cc.Label:createWithSystemFont('点击查看单词意思','',24)
---        word_meaning:setColor(cc.c3b(0,0,0))
---        word_meaning:ignoreAnchorPointForPosition(false)
---        word_meaning:setAnchorPoint(0,1)
---        word_meaning:setPosition(0.12 * custom_button:getContentSize().width,0.3 * custom_button:getContentSize().height)
---        custom_button:addChild(word_meaning, 0,'clickToCheck')
---
---        local arrow = cc.Sprite:create('image/friend/fri_jiantouxia.png')
---        arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
---        local more_label = cc.Label:createWithSystemFont('更多','',24)
---        more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
---        more_label:setColor(cc.c3b(0,0,0))
---        arrow:addChild(more_label)
---        custom_button:addChild(arrow,0,'arrow')        
---        -- add mastered count
---        self:addMasteredPlots(custom_button, 4)
---    end
     listView:setItemsMargin(2.0)
 end
 
-return StudyedWordList
+return MasteredWordList

@@ -325,23 +325,23 @@ function LevelLayerI:ctor()
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
             if string.format('%s',levelConfig[i]['type']) == '1' then
                
-                if i == 2 then 
+--                if i == 2 then 
 
-                -- add back to book select
-                local button_goon_clicked = function(sender, eventType)
-                    if eventType == ccui.TouchEventType.began then
-                        local book = require('view.book.BookLayer')
-                        local layer = book.create()
-                        s_SCENE:replaceGameLayer(layer)
-                    end
-                end
-                local button_goon = ccui.Button:create("image/button/studyscene_blue_button.png","","")
-                button_goon:setPosition(levelButton:getContentSize().width/2,350)
-                button_goon:setTitleText("回到选书界面")
-                button_goon:setTitleFontSize(30)
-                button_goon:addTouchEventListener(button_goon_clicked)
-                levelButton:addChild(button_goon)
-                end
+--                -- add back to book select
+--                local button_goon_clicked = function(sender, eventType)
+--                    if eventType == ccui.TouchEventType.began then
+--                        local book = require('view.book.BookLayer')
+--                        local layer = book.create()
+--                        s_SCENE:replaceGameLayer(layer)
+--                    end
+--                end
+--                local button_goon = ccui.Button:create("image/button/studyscene_blue_button.png","","")
+--                button_goon:setPosition(levelButton:getContentSize().width/2,350)
+--                button_goon:setTitleText("回到选书界面")
+--                button_goon:setTitleFontSize(30)
+--                button_goon:addTouchEventListener(button_goon_clicked)
+--                levelButton:addChild(button_goon)
+--                end
                 
                 
                 if s_CURRENT_USER:getIsLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
