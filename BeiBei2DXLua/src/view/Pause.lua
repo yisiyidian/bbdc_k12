@@ -118,9 +118,16 @@ function Pause:onHelp()
 --   end
 
 
-    local site  = "view.pausehelp.PauseHelpNormal"
---    site = "view.pausehelp.PauseHelpSummary"  
---    site = "view.pausehelp.PauseHelpReview" 
+    local site = ""
+    if  s_SCENE.gameLayerState == s_review_boss_game_state then
+        site = "view.pausehelp.PauseHelpReview" 
+    elseif s_SCENE.gameLayerState == s_summary_boss_game_state then
+        site = "view.pausehelp.PauseHelpSummary"  
+    else
+        site = "view.pausehelp.PauseHelpNormal"
+    end
+   
+
     local IntroLayer = require(site)
     local introLayer = IntroLayer.create()
     s_SCENE:popup(introLayer)
@@ -130,6 +137,8 @@ function Pause:onHelp()
 end
 
 function Pause:onSoundOn()
+    cc.SimpleAudioEngine:getInstance():setEffectsVolume(1) 
+
     ccbPause['soundOn']:setVisible(false)
     ccbPause['soundOff']:setVisible(true)
     
@@ -138,6 +147,8 @@ function Pause:onSoundOn()
 end
 
 function Pause:onSoundOff()
+    cc.SimpleAudioEngine:getInstance():setEffectsVolume(0) 
+
     ccbPause['soundOn']:setVisible(true)
     ccbPause['soundOff']:setVisible(false)
     
@@ -146,6 +157,8 @@ function Pause:onSoundOff()
 end
 
 function Pause:onMusicOn()
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    
     ccbPause['musicOn']:setVisible(false)
     ccbPause['musicOff']:setVisible(true)
     
@@ -154,6 +167,8 @@ function Pause:onMusicOn()
 end
 
 function Pause:onMusicOff()
+    cc.SimpleAudioEngine:getInstance():setMusicVolume(0) 
+    
     ccbPause['musicOn']:setVisible(true)
     ccbPause['musicOff']:setVisible(false)
     

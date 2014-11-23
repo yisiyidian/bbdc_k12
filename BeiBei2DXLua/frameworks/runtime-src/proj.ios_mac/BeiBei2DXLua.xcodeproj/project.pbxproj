@@ -79,6 +79,8 @@
 		B89AB3CD19F245F3003EA22A /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3CC19F245F3003EA22A /* GameController.framework */; };
 		B8F6490219E657DE00E55CE0 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490019E657DE00E55CE0 /* md5.c */; };
 		B8F6490519E6580600E55CE0 /* CXUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8F6490319E6580600E55CE0 /* CXUtils.cpp */; };
+		B8FA56F61A2170A80043E12F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FA56F51A2170A80043E12F /* MBProgressHUD.m */; };
+		B8FA56FC1A2174770043E12F /* CXProgressHUD.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8FA56FA1A2174770043E12F /* CXProgressHUD.mm */; };
 		B8FEC35819F37569004509FB /* CXStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8FEC35619F37569004509FB /* CXStore.cpp */; };
 		C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
 		C00FD4931938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
@@ -430,6 +432,10 @@
 		B8F6490119E657DE00E55CE0 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
 		B8F6490319E6580600E55CE0 /* CXUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXUtils.cpp; sourceTree = "<group>"; };
 		B8F6490419E6580600E55CE0 /* CXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXUtils.h; sourceTree = "<group>"; };
+		B8FA56F41A2170A80043E12F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B8FA56F51A2170A80043E12F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B8FA56FA1A2174770043E12F /* CXProgressHUD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXProgressHUD.mm; sourceTree = "<group>"; };
+		B8FA56FD1A21A4C00043E12F /* CXProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgressHUD.h; sourceTree = "<group>"; };
 		B8FEC35619F37569004509FB /* CXStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXStore.cpp; sourceTree = "<group>"; };
 		B8FEC35719F37569004509FB /* CXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXStore.h; sourceTree = "<group>"; };
 		C00FD48A1938512100C6382D /* Landscape_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Landscape_png.cpp; sourceTree = "<group>"; };
@@ -718,6 +724,8 @@
 		B80E072619F10314006EDBCF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B8FA56FA1A2174770043E12F /* CXProgressHUD.mm */,
+				B8FA56F31A2170A80043E12F /* MBProgressHUD */,
 				B80E072819F10314006EDBCF /* CXMailFeedBack.mm */,
 			);
 			path = iOS;
@@ -727,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				B851469E19E4EBD50027372E /* avos */,
+				B8FA56FD1A21A4C00043E12F /* CXProgressHUD.h */,
 				B8FEC35619F37569004509FB /* CXStore.cpp */,
 				B8FEC35719F37569004509FB /* CXStore.h */,
 				B8F6490319E6580600E55CE0 /* CXUtils.cpp */,
@@ -751,9 +760,9 @@
 		B85146A619E4EBD50027372E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B85146A719E4EBD50027372E /* AVOSCloud.framework */,
 				B85146C619E4F7490027372E /* CXAnalytics.mm */,
 				B85146C819E4F7490027372E /* CXAvos.mm */,
-				B85146A719E4EBD50027372E /* AVOSCloud.framework */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -765,6 +774,15 @@
 				B8F6490119E657DE00E55CE0 /* md5.h */,
 			);
 			path = md5;
+			sourceTree = "<group>";
+		};
+		B8FA56F31A2170A80043E12F /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B8FA56F41A2170A80043E12F /* MBProgressHUD.h */,
+				B8FA56F51A2170A80043E12F /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		C00FD4891938512100C6382D /* runtime */ = {
@@ -1221,6 +1239,7 @@
 				C00FD4981938512100C6382D /* Portrait_png.cpp in Sources */,
 				B8FEC35819F37569004509FB /* CXStore.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
+				B8FA56F61A2170A80043E12F /* MBProgressHUD.m in Sources */,
 				C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
 				C00FD49A1938512100C6382D /* Runtime.cpp in Sources */,
@@ -1235,6 +1254,7 @@
 				3EB515641952865D006966AA /* repeated_field.cc in Sources */,
 				B80E072919F10314006EDBCF /* CXMailFeedBack.mm in Sources */,
 				C00FD4941938512100C6382D /* PlayDisable_png.cpp in Sources */,
+				B8FA56FC1A2174770043E12F /* CXProgressHUD.mm in Sources */,
 				C00FD49C1938512100C6382D /* Shine_png.cpp in Sources */,
 				3EB5156E1952865D006966AA /* wire_format_lite.cc in Sources */,
 				3EB515581952865D006966AA /* extension_set.cc in Sources */,
@@ -1451,7 +1471,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios $(SRCROOT)/../../cocos2d-x/plugin/protocols/include";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
 			};
 			name = Debug;
 		};
@@ -1482,7 +1502,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios $(SRCROOT)/../../cocos2d-x/plugin/protocols/include";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
 			};
 			name = Release;
 		};

@@ -66,6 +66,15 @@ function FlipMat.create(word, m ,n, isNewPlayerModel)
     slideCoco[5] = s_sound_slideCoconut4
     slideCoco[6] = s_sound_slideCoconut5
     slideCoco[7] = s_sound_slideCoconut6
+    
+--    local slideCoin = {}
+--    slideCoin[1] = s_sound_slideCoin
+--    slideCoin[2] = s_sound_slideCoin1
+--    slideCoin[3] = s_sound_slideCoin2
+--    slideCoin[4] = s_sound_slideCoin3
+--    slideCoin[5] = s_sound_slideCoin4
+--    slideCoin[6] = s_sound_slideCoin5
+--    slideCoin[7] = s_sound_slideCoin6
         
     local selectStack = {}
 

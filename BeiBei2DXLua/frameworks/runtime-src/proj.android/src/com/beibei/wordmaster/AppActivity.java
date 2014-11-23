@@ -79,7 +79,7 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		PluginWrapper.init(this);
 		
-		if(BBNDK.nativeIsLandScape()) {
+		if (BBNDK.nativeIsLandScape()) {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
 		} else {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
@@ -88,11 +88,9 @@ public class AppActivity extends Cocos2dxActivity {
 		//2.Set the format of window
 		
 		// Check the wifi is opened when the native is debug.
-		if (BBNDK.nativeIsDebug())
-		{
+		if (BBNDK.nativeIsDebug()) {
 			getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-			if (!isNetworkConnected())
-			{
+			if (!isNetworkConnected()) {
 				AlertDialog.Builder builder=new AlertDialog.Builder(this);
 				builder.setTitle("Warning");
 				builder.setMessage("Open Wifi for debuging...");

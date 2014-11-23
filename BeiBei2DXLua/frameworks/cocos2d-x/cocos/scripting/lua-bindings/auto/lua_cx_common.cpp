@@ -3,6 +3,7 @@
 #include "CXAnalytics.h"
 #include "CXUtils.h"
 #include "CXStore.h"
+#include "CXProgressHUD.h"
 #include "tolua_fix.h"
 #include "LuaBasicConversions.h"
 
@@ -1073,6 +1074,122 @@ int lua_register_cx_common_CXStore(lua_State* tolua_S)
     g_typeCast["CXStore"] = "CXStore";
     return 1;
 }
+
+int lua_cx_common_CXProgressHUD_hide(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"CXProgressHUD",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 0)
+    {
+        if(!ok)
+            return 0;
+        CXProgressHUD::hide();
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "hide",argc, 0);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXProgressHUD_hide'.",&tolua_err);
+#endif
+    return 0;
+}
+int lua_cx_common_CXProgressHUD_setupWindow(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"CXProgressHUD",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 1)
+    {
+        void* arg0;
+        #pragma warning NO CONVERSION TO NATIVE FOR void*;
+        if(!ok)
+            return 0;
+        CXProgressHUD::setupWindow(arg0);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "setupWindow",argc, 1);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXProgressHUD_setupWindow'.",&tolua_err);
+#endif
+    return 0;
+}
+int lua_cx_common_CXProgressHUD_show(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"CXProgressHUD",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 1)
+    {
+        const char* arg0;
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp); arg0 = arg0_tmp.c_str();
+        if(!ok)
+            return 0;
+        CXProgressHUD::show(arg0);
+        return 0;
+    }
+    CCLOG("%s has wrong number of arguments: %d, was expecting %d\n ", "show",argc, 1);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXProgressHUD_show'.",&tolua_err);
+#endif
+    return 0;
+}
+static int lua_cx_common_CXProgressHUD_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (CXProgressHUD)");
+    return 0;
+}
+
+int lua_register_cx_common_CXProgressHUD(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"CXProgressHUD");
+    tolua_cclass(tolua_S,"CXProgressHUD","CXProgressHUD","",nullptr);
+
+    tolua_beginmodule(tolua_S,"CXProgressHUD");
+        tolua_function(tolua_S,"hide", lua_cx_common_CXProgressHUD_hide);
+        tolua_function(tolua_S,"setupWindow", lua_cx_common_CXProgressHUD_setupWindow);
+        tolua_function(tolua_S,"show", lua_cx_common_CXProgressHUD_show);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(CXProgressHUD).name();
+    g_luaType[typeName] = "CXProgressHUD";
+    g_typeCast["CXProgressHUD"] = "CXProgressHUD";
+    return 1;
+}
 TOLUA_API int register_all_cx_common(lua_State* tolua_S)
 {
 	tolua_open(tolua_S);
@@ -1080,10 +1197,11 @@ TOLUA_API int register_all_cx_common(lua_State* tolua_S)
 	tolua_module(tolua_S,"cx",0);
 	tolua_beginmodule(tolua_S,"cx");
 
-	lua_register_cx_common_CXAvos(tolua_S);
-	lua_register_cx_common_CXAnalytics(tolua_S);
 	lua_register_cx_common_CXUtils(tolua_S);
+	lua_register_cx_common_CXAnalytics(tolua_S);
+	lua_register_cx_common_CXProgressHUD(tolua_S);
 	lua_register_cx_common_CXStore(tolua_S);
+	lua_register_cx_common_CXAvos(tolua_S);
 
 	tolua_endmodule(tolua_S);
 	return 1;

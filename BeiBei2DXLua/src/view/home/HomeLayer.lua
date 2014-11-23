@@ -223,7 +223,7 @@ function HomeLayer.create()
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 elseif label_name[i] == "完善个人信息" then
-                    local improveInfo = ImproveInfo.create()
+                    local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER)
                     improveInfo:setTag(1)
                     improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(improveInfo)

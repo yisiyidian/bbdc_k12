@@ -61,6 +61,7 @@ end
 function PopupSummarySuccess:onGoButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on go button clicked')
+    s_SCENE.gameLayerState = s_summary_boss_game_state
     
     -- button sound
     playSound(s_sound_buttonEffect)
@@ -78,7 +79,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
         local summaryboss = require('view.summaryboss.SummaryBossLayer')
         local layer = summaryboss.create(levelConfig)
         layer:setAnchorPoint(0.5,0)
-        s_SCENE.gameLayerState = s_boss_game_state
+
         s_SCENE:replaceGameLayer(layer)
 --    else 
 --        local energyInfoLayer = require('popup.PopupEnergyInfo')

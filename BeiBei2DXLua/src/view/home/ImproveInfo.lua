@@ -4,9 +4,7 @@ local BigAlter      = require("view.alter.BigAlter")
 local SmallAlter    = require("view.alter.SmallAlter")
 local ImproveInfoNode     = require("view.home.ImproveInfoNode")
 
-local ImproveInfo = class("ImproveInfo", function()
-    return cc.Layer:create()
-end)
+local ImproveInfo = {}
 
 local showLogin = nil
 local showRegister = nil
@@ -17,10 +15,15 @@ local back_register = nil
 local main = nil
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
-function ImproveInfo.create()
+ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER  = 'ImproveInfoUpdateNamePwd_FROM_HOME_LAYER'
+ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER = 'ImproveInfoUpdateNamePwd_FROM_INTRO_LAYER'
+
+function ImproveInfo.create(layerType)
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
+
+    main.layerType = layerType
 
     main.close = function()
     end
@@ -100,24 +103,33 @@ showLogin = function()
             end
             
             
+            local updateUserNameAndPassword = function ()
+                s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
+                function(username, password, errordescription, errorcode )                        
+                        if errordescription then                  
+                            s_TIPS_LAYER:showSmall(errordescription)
+                        else        
+                            main.close()                    
+                        end     
+                        s_LOADING_CIRCLE_LAYER:hide()
+                end)
+            end
+
             s_LOADING_CIRCLE_LAYER:show()
             
-
-            s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
-            function(username, password, errordescription, errorcode )
-
-                    
-                    if errordescription then                  
+            if main.layerType == ImproveInfoUpdateNamePwd_FROM_HOME_LAYER then
+                updateUserNameAndPassword()
+            else
+                s_UserBaseServer.logIn(s_CURRENT_USER.username, s_CURRENT_USER.password, function (userdata, errordescription, errorcode)
+                    if errordescription ~= nil then
                         s_TIPS_LAYER:showSmall(errordescription)
-                    else        
-                        main.close()                    
-                    end     
-                    s_LOADING_CIRCLE_LAYER:hide()
-
-
-                    
-                    
-            end)
+                        s_LOADING_CIRCLE_LAYER:hide()
+                    else
+                        updateUserNameAndPassword()
+                        s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+                    end
+                end)
+            end
 
         end
     end

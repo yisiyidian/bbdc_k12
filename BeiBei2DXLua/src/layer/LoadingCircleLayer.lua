@@ -64,18 +64,30 @@ function LoadingCircleLayer:ctor()
 end
 
 function LoadingCircleLayer:show(info)
+if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+-- TODO    
     if info == nil then 
-        self.label_info:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING)) 
-    else
-        self.label_info:setString(info)
+        info = s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING)
     end
+
+    self.label_info:setString(info)
     self.listener:setSwallowTouches(true)
     self:setVisible(true)
+
+else
+
+    cx.CXProgressHUD:show(info)
+end
 end
 
 function LoadingCircleLayer:hide()
+if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+-- TODO    
     self.listener:setSwallowTouches(false)
     self:setVisible(false)
+else
+    cx.CXProgressHUD:hide()
+end
 end
 
 return LoadingCircleLayer
