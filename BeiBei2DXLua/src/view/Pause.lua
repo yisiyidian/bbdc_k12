@@ -118,9 +118,16 @@ function Pause:onHelp()
 --   end
 
 
-    local site  = "view.pausehelp.PauseHelpNormal"
---    site = "view.pausehelp.PauseHelpSummary"  
---    site = "view.pausehelp.PauseHelpReview" 
+    local site = ""
+    if  s_SCENE.gameLayerState == s_review_boss_game_state then
+        site = "view.pausehelp.PauseHelpReview" 
+    elseif s_SCENE.gameLayerState == s_summary_boss_game_state then
+        site = "view.pausehelp.PauseHelpSummary"  
+    else
+        site = "view.pausehelp.PauseHelpNormal"
+    end
+   
+
     local IntroLayer = require(site)
     local introLayer = IntroLayer.create()
     s_SCENE:popup(introLayer)
