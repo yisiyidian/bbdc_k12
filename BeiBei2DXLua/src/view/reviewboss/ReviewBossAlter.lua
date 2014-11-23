@@ -5,6 +5,14 @@ local ReviewBossAlter = class("ReviewBossAlter", function()
 end)
 
 function ReviewBossAlter.create()
+
+    cc.SimpleAudioEngine:getInstance():pauseMusic()
+
+    s_SCENE:callFuncWithDelay(0.3,function()
+        -- win sound
+        playSound(s_sound_win)
+    end)
+    
     local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
     s_DATABASE_MGR.updateReviewBossRecord(bossID)
     
@@ -30,6 +38,8 @@ function ReviewBossAlter.create()
         if eventType == ccui.TouchEventType.began then
             s_CorePlayManager.leaveReviewBossLayer()
             
+            -- stop effect
+            cc.SimpleAudioEngine:getInstance():stopAllEffects()
             -- button sound
             playSound(s_sound_buttonEffect)
         end

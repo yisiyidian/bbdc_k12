@@ -4,11 +4,15 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(win,wordCount,blood)
+function SummaryBossAlter.create(win,wordCount,blood,index)
     local layer = SummaryBossAlter.new()
     layer.wordCount = wordCount
     layer.blood = blood
     layer.win = win
+    layer.index = index
+    if layer.index > 3 then
+        layer.index = 3
+    end
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
@@ -23,7 +27,7 @@ end
 
 function SummaryBossAlter:lose()
     --add board
-    self.loseBoard = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
+    self.loseBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.loseBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
     self:addChild(self.loseBoard)
@@ -59,7 +63,7 @@ function SummaryBossAlter:lose()
 end
 
 function SummaryBossAlter:lose2()
-    self.loseBoard2 = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
+    self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
     self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
     self.loseBoard2:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5)))))
@@ -133,7 +137,7 @@ function SummaryBossAlter:win1()
         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
     end
-    self.winBoard = cc.Sprite:create("image/summarybossscene/summaryboss_board.png")
+    self.winBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.winBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.winBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
     self:addChild(self.winBoard)
