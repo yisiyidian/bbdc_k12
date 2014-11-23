@@ -13,6 +13,7 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     
+
     
     self.ccbPopupSummarySuccess = {}
     self.ccbPopupSummarySuccess['onCloseButtonClicked'] = function()
@@ -67,7 +68,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
         if levelData.isPassed ~= 1 then
-            s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
+--            s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
             -- energy cost "cost"
             s_SCENE:callFuncWithDelay(0.3,function()
                 playSound(s_sound_cost)
@@ -78,10 +79,10 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
         local layer = summaryboss.create(levelConfig)
         layer:setAnchorPoint(0.5,0)
         s_SCENE:replaceGameLayer(layer)
-    else 
-        local energyInfoLayer = require('popup.PopupEnergyInfo')
-        local layer = energyInfoLayer.create()
-        s_SCENE:popup(layer)
+--    else 
+--        local energyInfoLayer = require('popup.PopupEnergyInfo')
+--        local layer = energyInfoLayer.create()
+--        s_SCENE:popup(layer)
     end
 end
 
