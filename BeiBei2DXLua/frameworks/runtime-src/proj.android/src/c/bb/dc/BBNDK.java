@@ -21,10 +21,18 @@ public class BBNDK {
 	private static Context _context = null;
 	private static Activity _instance = null;
 	
+	public static Activity getActivity() {
+		return _instance;
+	}
+
 	public static void setup(Context context, Activity instance) {
 		_context = context;
 		_instance = instance;
 	}
+	
+	// ***************************************************************************************************************************
+	// cocos2d-x runtime
+	// ***************************************************************************************************************************
 	
 	public static void setHostIPAdress(String hostIPAdress) {
 		_hostIPAdress = hostIPAdress;
@@ -40,13 +48,11 @@ public class BBNDK {
            return  strSDCardPathString;
 		}
 		return null;
-	}
-	
-	public static void onEvent(String eventName, String  tag) {  
-		if (_context != null) {
-			AVAnalytics.onEvent(_context, eventName, tag);
-		}
 	} 
+	
+	// ***************************************************************************************************************************
+	// feedback
+	// ***************************************************************************************************************************
 	
 	public static void showMail(String mailTitle, String username) {
 		Intent i = new Intent(Intent.ACTION_SEND);
@@ -55,11 +61,25 @@ public class BBNDK {
 		i.putExtra(Intent.EXTRA_SUBJECT, mailTitle + ":" + username);
 		i.putExtra(Intent.EXTRA_TEXT   , "这是我的反馈，贝贝请认真看哦!\n");
 		try {
-			_instance.startActivity(Intent.createChooser(i, "发送反馈邮件"));
+			getActivity().startActivity(Intent.createChooser(i, "发送反馈邮件"));
 		} catch (android.content.ActivityNotFoundException ex) {
-		    Toast.makeText(_instance, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+		    Toast.makeText(getActivity(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 		}
 	}
+	
+	// ***************************************************************************************************************************
+	// LeanCloud AVAnalytics
+	// ***************************************************************************************************************************
+	
+	public static void onEvent(String eventName, String  tag) {  
+		if (_context != null) {
+			AVAnalytics.onEvent(_context, eventName, tag);
+		}
+	}
+	
+	// ***************************************************************************************************************************
+	// LeanCloud download
+	// ***************************************************************************************************************************
 	
 	public static void downloadFile(final String objectId, final String savepath) {
 		AVFile.withObjectIdInBackground(objectId, new GetFileCallback<AVFile>() {
@@ -103,6 +123,10 @@ public class BBNDK {
 		o.start();
 	}
 	
+	// ***************************************************************************************************************************
+	// LeanCloud sign up, log in, log out
+	// ***************************************************************************************************************************
+	
 	private static String AVUserToJsonStr(AVUser user) {
 //		TODO: Android unknown error
 //		org.json.JSONObject json = user.toJSONObject();
@@ -141,6 +165,30 @@ public class BBNDK {
 	public static void logOut() {
 		AVUser.logOut();
 	}
+	
+	// ***************************************************************************************************************************
+	// loading circle
+	// ***************************************************************************************************************************
+	
+	private static BBProgressHUD _cxph = null;
+	
+	public static void showCXProgressHUD(String content) {
+//		if (_cxph == null) {
+//			_cxph = new BBProgressHUD();
+//			_cxph.setContent(content);
+//		}
+//		_cxph.execute();
+	}
+	
+	public static void hideCXProgressHUD() {
+//		if (_cxph == null) {
+//			_cxph.hide();
+//		}
+	}
+	
+	// ***************************************************************************************************************************
+	// native
+	// ***************************************************************************************************************************
 	
 	public static native boolean nativeIsLandScape();
 	public static native boolean nativeIsDebug();

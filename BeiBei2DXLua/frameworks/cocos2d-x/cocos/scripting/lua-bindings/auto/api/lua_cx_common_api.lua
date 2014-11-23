@@ -21,4 +21,9 @@
 -- @field [parent=#cx] CXStore#CXStore CXStore preloaded module
 
 
+--------------------------------------------------------
+-- the cx CXProgressHUD
+-- @field [parent=#cx] CXProgressHUD#CXProgressHUD CXProgressHUD preloaded module
+
+
 return nil

@@ -33,6 +33,7 @@
 #include "ConfigParser.h"
 
 #import <AVOSCloud/AVOSCloud.h>
+#include "CXProgressHUD.h"
 
 @implementation AppController
 
@@ -81,6 +82,9 @@ static AppDelegate s_sharedApplication;
                                  numberOfSamples: 0 ];
 
     [eaglView setMultipleTouchEnabled:NO];
+    
+    // 
+    CXProgressHUD::setupWindow(window);
     
     // Use RootViewController manage CCEAGLView
     viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
