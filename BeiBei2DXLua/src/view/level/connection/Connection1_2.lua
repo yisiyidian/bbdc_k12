@@ -17,12 +17,7 @@ function Connection1_2:ctor()
     self.ccb = {}
     self.ccb['connection1_2'] = self.ccbConnection1_2
     local proxy = cc.CCBProxy:create()
-    local contentNode = CCBReaderLoad('ccb/connection1_2.ccbi',proxy,self.ccbConnection1_2,self.ccb)
-    --self.ccbConnection1_2['contentNode'] = contentNode;
-    
---    print('------position----------')
---    print(self.ccbConnection1_2['connection_left_cloud']:getPosition())
-    
+    local contentNode = CCBReaderLoad('ccb/connection1_2.ccbi',proxy,self.ccbConnection1_2,self.ccb)  
     self:setContentSize(cc.size(854,402))
     self:addChild(contentNode)
 end

@@ -197,8 +197,9 @@ end
 
 function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
-    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzls  xuanxiaoguan  diaoluo.json', 'spine/3fxzls  xuanxiaoguan  diaoluo.atlas', 1)
-    reviewBoss:addAnimation(0, 'animation', true)
+    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
+    reviewBoss:addAnimation(0, '1', false)
+    reviewBoss:addAnimation(1, '2', true)
     reviewBoss:setPosition(0, 0)
     levelButton:addChild(reviewBoss)
 end

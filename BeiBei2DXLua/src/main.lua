@@ -58,7 +58,7 @@ start = function ()
         s_SERVER.production       = 0
 
 
-        s_APP_VERSION = 150005
+        s_APP_VERSION = 150006
         s_CONFIG_VERSION = 150000 -- do NOT change this
 
         s_SERVER.appId = LEAN_CLOUD_ID_TEST
