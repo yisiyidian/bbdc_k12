@@ -115,6 +115,7 @@ function LevelLayer:levelStateManager()
             s_CURRENT_USER.reviewBossTutorialStep = 1
         end
      end
+     s_SCENE.gameLayerState = s_normal_game_state
      s_CURRENT_USER:updateDataToServer()
 end
 

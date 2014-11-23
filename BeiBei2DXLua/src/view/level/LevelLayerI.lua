@@ -222,6 +222,8 @@ end
 function LevelLayerI:plotLevelDecoration(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    print('####################'..s_CURRENT_USER.bookKey..','..s_CURRENT_USER.currentChapterKey)
+    print_lua_table(levelConfig)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
     local levelIndex = string.sub(levelKey, 6)
 
