@@ -43,22 +43,22 @@ function MasteredWordList:addMasteredPlots(button, proficiency)
         sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
         sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
         sprite3 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
     elseif proficiency == 2 then
         sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
         sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
-        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
+        sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
     elseif profiency == 1 then
         sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
-        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
-        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite2 = cc.Sprite:create('image/word_list/libruary_quan1.png')
+        sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
+        sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
     else  -- 
-        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
-        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
-        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
-        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite1 = cc.Sprite:create('image/word_list/libruary_quan1.png')
+        sprite2 = cc.Sprite:create('image/word_list/libruary_quan1.png')
+        sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
+        sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
     end
     sprite1:setPosition(cc.p(0.9 * button:getContentSize().width,0.6 * button:getContentSize().height))
     sprite2:setPosition(cc.p(0.85 * button:getContentSize().width,0.6 * button:getContentSize().height))
@@ -106,8 +106,8 @@ function MasteredWordList:ctor()
     listView:removeAllChildren()
     -- get data
     local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
-    --print('-----config:'..#levelConfig)
     self.levelArray = {}
+    self.levelKey = {}
 
     local indexConfig = 1
     local level_count = 0
@@ -115,18 +115,20 @@ function MasteredWordList:ctor()
         local levelKey = levelConfig[indexConfig]['level_key']
         local chapterKey = levelConfig[indexConfig]['chapter_key']
         local levelData = s_CURRENT_USER:getUserLevelData(chapterKey,levelKey)
-        if levelData ~= nil then   
+        if levelData ~= nil and levelConfig[indexConfig]['type'] ~= 1 then   
             level_count = level_count + 1
+            self.levelKey[level_count] = chapterKey..levelKey
             self.levelArray[level_count] = split(levelConfig[indexConfig]['word_content'],'|')
             --print_lua_table(self.levelArray[key])
         end
         indexConfig = indexConfig + 1 
     end
-
+    
     indexConfig = 1
     while indexConfig <= level_count do
         -- add title
-        local title = cc.Label:createWithSystemFont('关卡'..indexConfig, '' ,28)
+        local levelNum = split(self.levelKey[indexConfig],'level')
+        local title = cc.Label:createWithSystemFont('关卡'..(levelNum[2]+1), '' ,28)
         title:setColor(cc.c3b(45,176,244))
         title:setPosition(cc.p(100, 20))
         local titleContainner = ccui.Layout:create()
@@ -138,9 +140,8 @@ function MasteredWordList:ctor()
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 local control = split(sender:getName(),'|')
-                local wordInfo = s_WordPool[control[1]]
-                print_lua_table(wordInfo)
-                if control[2] == '0' then  -- insert a item of word info
+                local wordInfo = s_WordPool[control[2]]
+                if control[3] == '0' then  -- insert a item of word info
                     local wordTitle = cc.Label:createWithSystemFont(wordInfo['wordMeaning']..'\n'..wordInfo['sentenceEn']..'\n'..wordInfo['sentenceCn'], '' ,28)
                     wordTitle:setColor(cc.c3b(0,0,0))
                     --                    print('wordInfo:'..wordInfo['wordMeaning'])
@@ -159,18 +160,15 @@ function MasteredWordList:ctor()
                     wordContainer:addChild(back)
                     wordTitle:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
                     wordContainer:addChild(wordTitle,2)
-                    wordContainer:setName('moreWordInfo'..control[1])
-
-                    -- set more info
-
-
-                    local wordItem = self:getItemByName(listView,control[1])
+                    wordContainer:setName('moreWordInfo'..control[1]..control[2])
+                    
+                    local wordItem = self:getItemByName(listView,control[1]..'|'..control[2])
                     local index = listView:getIndex(wordItem)
                     listView:insertCustomItem(wordContainer,index+1)
-                    sender:setName(control[1]..'|1')
+                    sender:setName(control[1]..'|'..control[2]..'|1')
                 else -- remove a item
-                    self:removeItemByName(listView,'moreWordInfo'..control[1])
-                    sender:setName(control[1]..'|0')
+                    self:removeItemByName(listView,'moreWordInfo'..control[1]..control[2])
+                    sender:setName(control[1]..'|'..control[2]..'|0')
                 end
             end
         end
@@ -178,8 +176,9 @@ function MasteredWordList:ctor()
         local masterWords = s_DATABASE_MGR.getGraspWords(s_CURRENT_USER.bookKey)
         for i = 1, #self.levelArray[indexConfig] do
             local word = self.levelArray[indexConfig][i]
+            local wordKey = self.levelKey[indexConfig]..'|'..word
             local wordInfo = s_WordPool[word]
-            print('grasp word is '..word)
+            --print('grasp word is '..word)
             print_lua_table(masterWords)
             --print('masterWords:'..masterWords[word])
             for i, v in pairs(masterWords) do 
@@ -195,7 +194,7 @@ function MasteredWordList:ctor()
                     custom_item:setContentSize(custom_button:getContentSize())
                     custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
                     custom_item:addChild(custom_button)
-                    custom_item:setName(word)
+                    custom_item:setName(wordKey)
                     listView:addChild(custom_item)
                     local word_name = cc.Label:createWithSystemFont(word,'',32)
                     word_name:setColor(cc.c3b(0,0,0))
@@ -218,7 +217,7 @@ function MasteredWordList:ctor()
                     more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
                     more_label:setColor(cc.c3b(0,0,0))
                     arrow:addChild(more_label)
-                    arrow:setName(word..'|0')
+                    arrow:setName(wordKey..'|0')
 
                     --print('arrow:'..arrow:getName())
                     arrow:addTouchEventListener(touchEvent)
