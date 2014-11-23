@@ -20,7 +20,8 @@ s_review_boss_pass_state = 'reviewBossPassState'
 
 s_normal_game_state = 'normalGameState'
 s_test_game_state = 'testGameState'
-s_boss_game_state = 'bossGameState'
+s_review_boss_game_state = 'reviewBossGameState'
+s_summary_boss_game_state = 'summaryBossGameState'
 
 local AppScene = class("AppScene", function()
     return cc.Scene:create()

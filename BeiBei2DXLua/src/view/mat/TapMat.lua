@@ -50,6 +50,15 @@ function TapMat.create(word, m ,n)
     local onNode
     local lastTouchLocation
     
+    local slideCoco = {}
+    slideCoco[1] = s_sound_slideCoconut
+    slideCoco[2] = s_sound_slideCoconut1
+    slideCoco[3] = s_sound_slideCoconut2
+    slideCoco[4] = s_sound_slideCoconut3
+    slideCoco[5] = s_sound_slideCoconut4
+    slideCoco[6] = s_sound_slideCoconut5
+    slideCoco[7] = s_sound_slideCoconut6
+    
     
     local selectStack = {}
 
@@ -221,6 +230,11 @@ function TapMat.create(word, m ,n)
                         stackTop.removeSelectStyle()
                         table.remove(selectStack)
                         updateSelectWord()
+                        if #selectStack <= 7 then
+                            playSound(slideCoco[#selectStack])
+                        else
+                            playSound(slideCoco[7])
+                        end 
                     end
                 end
             else
@@ -228,12 +242,19 @@ function TapMat.create(word, m ,n)
                     currentNode.addSelectStyle()
                     table.insert(selectStack, currentNode)
                     updateSelectWord()
+                    playSound(slideCoco[#selectStack])
+
                 else
                     local stackTop = selectStack[#selectStack]
                     if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                         currentNode.addSelectStyle()
                         table.insert(selectStack, currentNode)
                         updateSelectWord()
+                        if #selectStack <= 7 then
+                            playSound(slideCoco[#selectStack])
+                        else
+                            playSound(slideCoco[7])
+                        end 
                     end
                 end
             end

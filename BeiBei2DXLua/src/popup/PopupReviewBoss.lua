@@ -52,7 +52,7 @@ end
 
 function PopupReviewBoss:onGoButtonClicked()
     s_logd('on go button clicked')
-    
+    s_SCENE.gameLayerState = s_review_boss_game_state
 
     -- button sound
     playSound(s_sound_buttonEffect)

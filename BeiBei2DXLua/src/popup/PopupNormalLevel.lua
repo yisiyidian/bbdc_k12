@@ -103,7 +103,9 @@ function PopupNormalLevel:onCloseButtonClicked()
 end
 
 function PopupNormalLevel:onStudyButtonClicked(levelKey)
-    self:onCloseButtonClicked()
+    self:onCloseButtonClicked()   
+    s_SCENE.gameLayerState = s_normal_game_state
+
     s_logd('on study button clicked')
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
@@ -122,7 +124,7 @@ end
 function PopupNormalLevel:onTestButtonClicked(levelKey)
     self:onCloseButtonClicked()
     s_logd('on test button clicked')
-    
+    s_SCENE.gameLayerState = s_test_game_state
     
     -- button sound
     playSound(s_sound_buttonEffect)

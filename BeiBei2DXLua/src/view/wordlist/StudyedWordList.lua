@@ -121,7 +121,7 @@ function StudyedWordList:ctor()
         end
         indexConfig = indexConfig + 1 
     end
-    print('levelCount:'..level_count)
+    --print('levelCount:'..level_count)
 
     indexConfig = 1
     while indexConfig <= level_count do
@@ -135,6 +135,12 @@ function StudyedWordList:ctor()
         titleContainner:addChild(title)
         listView:addChild(titleContainner)
         -- define more info button clicked event
+        local function testEvent(sender, eventType)
+            if eventType == ccui.TouchEventType.ended then
+                print('button clicked of custom')
+            end
+        end
+        
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 local control = split(sender:getName(),'|')
@@ -172,13 +178,14 @@ function StudyedWordList:ctor()
             local word = self.levelArray[indexConfig][i]
             local wordKey = self.levelKey[indexConfig]..'|'..word
             local wordInfo = s_WordPool[word]
-            print('wordInfo..'..word..',')
+            --print('wordInfo..'..word..',')
             if studyWords[word] ~= nil then
                 local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
                 custom_button:setName("custom_button")
                 custom_button:setTitleText('123')
                 custom_button:setScale9Enabled(true)
                 custom_button:setContentSize(default_button:getContentSize())
+                custom_button:addTouchEventListener(testEvent)
     
                 local custom_item = ccui.Layout:create()
                 custom_item:setContentSize(custom_button:getContentSize())

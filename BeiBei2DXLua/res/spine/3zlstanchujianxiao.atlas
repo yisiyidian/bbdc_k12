@@ -32,16 +32,9 @@ foot
   orig: 269, 130
   offset: 0, 0
   index: -1
-gunzi
-  rotate: false
-  xy: 163, 94
-  size: 22, 147
-  orig: 22, 147
-  offset: 0, 0
-  index: -1
 lift eye
   rotate: false
-  xy: 419, 429
+  xy: 115, 38
   size: 43, 44
   orig: 43, 44
   offset: 0, 0
@@ -54,15 +47,15 @@ liuhai副本
   offset: 0, 0
   index: -1
 moutch
-  rotate: false
-  xy: 419, 475
+  rotate: true
+  xy: 163, 175
   size: 66, 28
   orig: 66, 28
   offset: 0, 0
   index: -1
 right
   rotate: false
-  xy: 115, 38
+  xy: 419, 459
   size: 44, 44
   orig: 44, 44
   offset: 0, 0

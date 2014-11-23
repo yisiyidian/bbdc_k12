@@ -89,7 +89,7 @@ end
 
 function CorePlayManager.enterTestLayer()
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
-    s_SCENE.gameLayerState = s_test_game_state
+--    s_SCENE.gameLayerState = s_test_game_state
     if s_CURRENT_USER.currentChapterKey == "chapter0" then
         local testLayer = TestLayer.create()
         s_SCENE:replaceGameLayer(testLayer)
@@ -109,7 +109,7 @@ function CorePlayManager.enterTestLayer()
 end
 
 function CorePlayManager.leaveTestLayer()
-    s_SCENE.gameLayerState = s_normal_game_state
+--    s_SCENE.gameLayerState = s_normal_game_state
     if s_CURRENT_USER.currentLevelKey == s_CURRENT_USER.currentSelectedLevelKey then
         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     end
@@ -159,7 +159,7 @@ function CorePlayManager.recordWordProciency()
 end
 
 function CorePlayManager.enterReviewBossLayer_special()
-    s_SCENE.gameLayerState = s_boss_game_state
+--    s_SCENE.gameLayerState = s_boss_game_state
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,"level0")
     CorePlayManager.rbWordList = split(levelConfig.word_content, "|")
     local reviewBossLayer = ReviewBossLayer.create()
@@ -167,7 +167,7 @@ function CorePlayManager.enterReviewBossLayer_special()
 end
 
 function CorePlayManager.enterReviewBossLayer()
-    s_SCENE.gameLayerState = s_boss_game_state
+--    s_SCENE.gameLayerState = s_boss_game_state
     local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
     CorePlayManager.rbWordList = s_DATABASE_MGR.getRBWordList(bossID)
     if #CorePlayManager.rbWordList < 3 then
@@ -190,7 +190,7 @@ function CorePlayManager.enterReviewBossLayer()
 end
 
 function CorePlayManager.leaveReviewBossLayer()
-    s_SCENE.gameLayerState = s_normal_game_state
+--    s_SCENE.gameLayerState = s_normal_game_state
     s_SCENE.levelLayerState = s_review_boss_pass_state
     CorePlayManager.enterLevelLayer()
 end

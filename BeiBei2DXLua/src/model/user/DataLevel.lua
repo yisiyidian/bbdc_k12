@@ -11,7 +11,6 @@ end
 
 function DataLevel:ctor()
     self.className = 'DataLevel'
-    
     self.chapterKey = ''
 --    self.chapterIndex = 0
     self.levelKey = ''
