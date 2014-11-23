@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "imccmzbD7QVp7dn6Td9jRCtlgPU", "spine": "2.0.23", "width": 269.49, "height": 304.7, "images": "./3zlstanchujianxiao/" },
+"skeleton": { "hash": "ee94Z49Z68oHMh0dE6vEhoHzasg", "spine": "2.0.23", "width": 269.49, "height": 304.7, "images": "./3zlstanchujianxiao/" },
 "bones": [
 	{ "name": "root", "x": 1.16, "y": 10.47, "rotation": 0.47 },
 	{ "name": "bone", "parent": "root", "length": 103.6, "x": 158.94, "y": 17.28, "rotation": -89.54 },
@@ -21,7 +21,7 @@
 	{ "name": "liuhai副本", "bone": "bone" },
 	{ "name": "toufa副本", "bone": "bone" },
 	{ "name": "bizi2", "bone": "bone" },
-	{ "name": "gunzi", "bone": "bone", "attachment": "gunzi" },
+	{ "name": "gunzi", "bone": "bone" },
 	{ "name": "mozi2", "bone": "bone" },
 	{ "name": "erduo副本2", "bone": "erduo", "attachment": "erduo副本" },
 	{ "name": "liuhai副本2", "bone": "bone", "attachment": "liuhai副本" },
@@ -40,9 +40,6 @@
 		},
 		"foot": {
 			"foot": { "x": -34.26, "y": -1.92, "rotation": 89.27, "width": 269, "height": 130 }
-		},
-		"gunzi": {
-			"gunzi": { "x": -48.88, "y": 99.78, "rotation": 89.54, "width": 22, "height": 147 }
 		},
 		"lift eye": {
 			"lift eye": { "x": -143.06, "y": 29.11, "rotation": 89.27, "width": 43, "height": 44 }

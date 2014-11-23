@@ -4,7 +4,7 @@ require('common.global')
 require('CCBReaderLoad')
 
 local LevelLayerI = class('LevelLayerI', function()
-    return cc.Layer:create()
+    return ccui.Button:create('image/chapter_level/chapter1_back.png','image/chapter_level/chapter1_back.png','image/chapter_level/chapter1_back.png')
 end)
 
 function LevelLayerI.create()
@@ -13,7 +13,7 @@ function LevelLayerI.create()
 end
 
 function LevelLayerI:plotLevelNumber(levelKey)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelButton = self:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData('chapter0', levelKey)
     local levelIndex = string.sub(levelKey, 6)
@@ -73,7 +73,7 @@ function LevelLayerI:plotLevelStar(levelButton, heart)
 end
 
 function LevelLayerI:plotStarAnimation(levelKey, starCount)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelButton = self:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     if levelConfig['type'] == 0 then
         local star1, star2, star3
@@ -140,7 +140,7 @@ end
 
 function LevelLayerI:plotUnlockLevelAnimation(levelKey)
     local levelIndex = string.sub(levelKey, 6)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelButton = self:getChildByName(levelKey)
     local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
     local lockLayer = levelButton:getChildByName('lockLayer'..levelIndex)
 
@@ -164,7 +164,7 @@ end
 
 function LevelLayerI:clickLockedLevelAnmation(levelKey)
     local clickedIndex = string.sub(levelKey, 6)
-    local clickedButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local clickedButton = self:getChildByName(levelKey)
     local lockSprite = clickedButton:getChildByName('lockSprite'..clickedIndex)
     local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
     local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
@@ -181,7 +181,7 @@ function LevelLayerI:clickLockedLevelAnmation(levelKey)
 end
 
 function LevelLayerI:getPlayerPositionForLevel(levelKey)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelButton = self:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
     --print(levelButton:getPositionX()..','..levelButton:getPositionY())
@@ -196,7 +196,7 @@ function LevelLayerI:getPlayerPositionForLevel(levelKey)
 end
 
 function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelButton = self:getChildByName(levelKey)
     local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
     reviewBoss:addAnimation(0, '1', false)
     s_SCENE:callFuncWithDelay(1,function()
@@ -207,7 +207,7 @@ function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
 end
 
 function LevelLayerI:plotReviewBossPassOnLevel(levelKey)
---    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+--    local levelButton = self:getChildByName(levelKey)
 --    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzls  xuanxiaoguan  diaoluo.json', 'spine/3fxzls  xuanxiaoguan  diaoluo.atlas', 1)
 --    reviewBoss:addAnimation(0, 'animation', true)
 --    reviewBoss:setPosition(0, 0)
@@ -220,19 +220,23 @@ function LevelLayerI:plotReviewBossPassOnLevel(levelKey)
 end
 
 function LevelLayerI:plotLevelDecoration(levelKey)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelButton = self:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     --print('####################'..s_CURRENT_USER.bookKey..','..s_CURRENT_USER.currentChapterKey)
     --print_lua_table(levelConfig)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
     local levelIndex = string.sub(levelKey, 6)
 
-        if i == 3 or i == 10 then  -- plot boat animation
-            local boat = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
-            boat:addAnimation(0, 'anmiation', true)
-            boat:setPosition(levelButton:getContentSize().width/2, -400)
-            levelButton:addChild(boat)
+    if levelKey == 'level3' or levelKey == 'level10' then  -- plot boat animation
+        local boat = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
+        boat:addAnimation(0, 'anmiation', true)
+        if levelKey == 'level3' then
+            boat:setPosition(levelButton:getContentSize().width/2, -300)
+        else
+            boat:setPosition(levelButton:getContentSize().width/2-50, -150)
         end
+        levelButton:addChild(boat)
+    end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
         --print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey)
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
@@ -302,10 +306,10 @@ end
 function LevelLayerI:ctor()
 --    self:initHead()
     self.ccbLevelLayerI = {}
-    self.ccbLevelLayerI['onLevelButtonClicked'] = 
-    function(levelTag)
-        self:onLevelButtonClicked('level'..(levelTag-1))
-    end
+--    self.ccbLevelLayerI['onLevelButtonClicked'] = 
+--    function(levelTag)
+--        self:onLevelButtonClicked('level'..(levelTag-1))
+--    end
     self.ccb = {}
     self.ccb['chapter1'] = self.ccbLevelLayerI
     
@@ -314,57 +318,61 @@ function LevelLayerI:ctor()
     self.ccbLevelLayerI['contentNode'] = contentNode
     self.ccbLevelLayerI['levelSet'] = contentNode:getChildByTag(5)
     for i = 1, #self.ccbLevelLayerI['levelSet']:getChildren() do
-        self.ccbLevelLayerI['levelSet']:getChildren()[i]:setName('level'..(self.ccbLevelLayerI['levelSet']:getChildren()[i]:getTag()-1))
+        self.ccbLevelLayerI['levelSet']:getChildren()[i]:setName('level'..(self.ccbLevelLayerI['levelSet']:getChildren()[i]:getTag()-1)..'Container')
     end
     contentNode:setContentSize(cc.size(854, 2527))
-    --print('chapter1_--###')
-    --print_lua_table(contentNode:getContentSize())
     self:setContentSize(contentNode:getContentSize())
+    self:setAnchorPoint(0, 0)
+--    print('I:contentSize')
+--    print_lua_table(self:getContentSize())
     self:addChild(contentNode)
+
+    -- level button touch event
+    local function touchEvent(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local levelKey = sender:getName()
+            print('button clicked')
+            self:onLevelButtonClicked(levelKey)
+        end
+    end
 
     -- replot levelbutton ui based on the configuration file
     local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
     for i = 1, #levelConfig do
         if levelConfig[i]['chapter_key'] == 'chapter0' then
             -- change button image
-            local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
+            local levelContainer = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key']..'Container')
             if string.format('%s',levelConfig[i]['type']) == '1' then
-               
---                if i == 2 then 
-
---                -- add back to book select
---                local button_goon_clicked = function(sender, eventType)
---                    if eventType == ccui.TouchEventType.began then
---                        local book = require('view.book.BookLayer')
---                        local layer = book.create()
---                        s_SCENE:replaceGameLayer(layer)
---                    end
---                end
---                local button_goon = ccui.Button:create("image/button/studyscene_blue_button.png","","")
---                button_goon:setPosition(levelButton:getContentSize().width/2,350)
---                button_goon:setTitleText("回到选书界面")
---                button_goon:setTitleFontSize(30)
---                button_goon:addTouchEventListener(button_goon_clicked)
---                levelButton:addChild(button_goon)
---                end
-                
-                
+                local levelImageName = 'ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'
+                local levelButton = ccui.Button:create(levelImageName, levelImageName, levelImageName)
+                levelButton:setPosition(levelContainer:getPositionX(),levelContainer:getPositionY())
+                levelButton:setName(levelConfig[i]['level_key'])
+                levelButton:setScale9Enabled(true)
+                self:addChild(levelButton) 
+                levelButton:addTouchEventListener(touchEvent)  
                 if s_CURRENT_USER:getIsLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     self:plotLevelDecoration(levelConfig[i]['level_key'])
-                    levelButton:setNormalImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
-                    levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
+                    --levelButton:setNormalImage(cc.Sprite:create())
+                    --levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
                 else
                     local lockLayer = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_locked.png')
                     lockLayer:setPosition(levelButton:getContentSize().width/2 - 11, levelButton:getContentSize().height/2 + 5)
                     lockLayer:setName('lockLayer'..string.sub(levelButton:getName(),6))
                     levelButton:addChild(lockLayer)
+                    levelButton:setScale9Enabled(true)
                     
                     local lockSprite = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_locked_zongjieboss.png')
                     lockSprite:setPosition(levelButton:getContentSize().width/2 - 11, levelButton:getContentSize().height/2 + 5)
                     lockSprite:setName('lockSprite'..string.sub(levelButton:getName(),6))
                     levelButton:addChild(lockSprite)
                 end
-            else                 
+            else   
+                local levelImageName = 'ccb/ccbResources/chapter_level/button_xuanxiaoguan1_level_unlocked.png'
+                local levelButton = ccui.Button:create(levelImageName, levelImageName, levelImageName) 
+                levelButton:setPosition(levelContainer:getPositionX(),levelContainer:getPositionY())
+                levelButton:setName(levelConfig[i]['level_key'])
+                self:addChild(levelButton)   
+                levelButton:addTouchEventListener(touchEvent)            
                 if  s_CURRENT_USER:getIsLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then  
                     self:plotLevelDecoration(levelConfig[i]['level_key'])
                 else       
@@ -392,21 +400,11 @@ function LevelLayerI:ctor()
     
 end
 
---function LevelLayerI:initHead()
---    local girl = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
---    girl:ignoreAnchorPointForPosition(false)
---    girl:setAnchorPoint(0,0)
---    girl:setPosition(0  , 0)
---    girl:setLocalZOrder(1)
---    self:addChild(girl)
---end
-
-
 function LevelLayerI:onLevelButtonClicked(levelKey)
     s_CURRENT_USER.currentSelectedLevelKey = levelKey
     s_CURRENT_USER.currentChapterKey = 'chapter0'
     --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
-    local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
+    local levelButton = self:getChildByName(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)

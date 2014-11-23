@@ -19,7 +19,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-    --s_SCENE.levelLayerState = s_review_boss_appear_state
+    --s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -60,7 +60,7 @@ function LevelLayer:levelStateManager()
         -- save and update level data
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
-        --s_CURRENT_USER.currentLevelKey = 'level1'
+        s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
         -- plot unlock next level animation
         levelLayerI:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
@@ -82,7 +82,7 @@ function LevelLayer:levelStateManager()
         -- TODO CHECK level index valid
         
         s_SCENE:callFuncWithDelay(3,function()
-            local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
+            local currentLevelButton = levelLayerI:getChildByName(s_CURRENT_USER.currentLevelKey)
             local action = cc.MoveTo:create(1, cc.p(currentLevelButton:getPosition()))
             player:runAction(action)
         end
@@ -94,6 +94,7 @@ function LevelLayer:levelStateManager()
         -- save and update level data
         s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
+        s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
         -- plot unlock level animation
         levelLayerI:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
@@ -129,13 +130,13 @@ function LevelLayer:ctor()
     connection1_2 = connectionLayer1_2.create()
     --s_CURRENT_USER:initChapterLevelAfterLogin()
     -- plot player position
-    local currentLevelButton = levelLayerI.ccbLevelLayerI['levelSet']:getChildByName(s_CURRENT_USER.currentLevelKey)
+    local currentLevelButton = levelLayerI:getChildByName(s_CURRENT_USER.currentLevelKey)
     local image = 'image/chapter_level/gril_head.png'
     player = cc.MenuItemImage:create(image,image,image)
     player:setEnabled(false)
     player:setPosition(currentLevelButton:getPosition())
     player:setScale(0.4)
-    levelLayerI.ccbLevelLayerI['levelSet']:addChild(player, 5)
+    levelLayerI:addChild(player, 5)
     
     -- level layer state manager
     self:levelStateManager()
@@ -178,29 +179,57 @@ function LevelLayer:ctor()
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
         elseif evenType == ccui.ScrollviewEventType.scrolling then
-            --print('SCROLLING:'..sender:getPosition())
+            print('SCROLLING:'..sender:getPosition())
         end
     end  
     -- create list view
     local listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
-        --listView:setBounceEnabled(true)
+    listView:setBounceEnabled(false)
+    listView:setBackGroundImageScale9Enabled(true)
     local fullWidth = levelLayerI:getContentSize().width
     listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
     listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
     listView:addEventListener(listViewEvent)
     listView:addScrollViewEventListener(scrollViewEvent)
+    listView:removeAllChildren()
     self:addChild(listView)
     
+--    local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
+--    custom_button:setName("custom_button")
+--    custom_button:setTitleText('123')
+--    custom_button:setScale9Enabled(true)
+--    --custom_button:setContentSize(default_button:getContentSize())
+--    --custom_button:addTouchEventListener(testEvent)
+--    local function touchEvent(sender,eventType)
+--        if eventType == ccui.TouchEventType.ended then
+--            print('button clicked')
+--
+--        end
+--    end
+    --custom_button:addTouchEventListener(touchEvent)
+--    local levelImageName = 'ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'
+--    local levelButton = ccui.Button:create(levelImageName, levelImageName, levelImageName)
+--    levelButton:setPosition(100,100)
+--    levelButton:setName('123')
+--    levelButton:setScale9Enabled(true)
+--    
+--    custom_button:setContentSize(cc.size(856,1000))
+--    custom_button:addChild(levelLayerI) 
+--    local custom_item = ccui.Layout:create()
+--    custom_item:setContentSize(custom_button:getContentSize())
+--    custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+--    custom_item:addChild(custom_button)
+--    custom_item:setName('123')
+--    listView:addChild(custom_item)
     
     -- add list view item1
     local item1 = ccui.Layout:create()
-    item1:setTouchEnabled(true)
     item1:setContentSize(levelLayerI:getContentSize())    
+    print('item1:contentSize'..item1:getContentSize().width..','..item1:getContentSize().height)
     levelLayerI:setPosition(cc.p(0, 0))
     item1:addChild(levelLayerI)
-    item1:setPosition(cc.p(100, 1000))
-    listView:pushBackCustomItem(item1)     
+    listView:addChild(item1)     
 
     -- add list view connection 
     local item1_2 = ccui.Layout:create()
@@ -208,7 +237,7 @@ function LevelLayer:ctor()
     item1_2:setContentSize(connection1_2:getContentSize())
     connection1_2:setPosition(cc.p(0,0))
     item1_2:addChild(connection1_2)
-    listView:pushBackCustomItem(item1_2)
+    listView:addChild(item1_2)
     
     -- add list view item2
     local item2 = ccui.Layout:create()
@@ -217,7 +246,7 @@ function LevelLayer:ctor()
     levelLayerII:setPosition(cc.p(0, 0))
     item2:addChild(levelLayerII)
     --listView:insertCustomItem(item2,2)
-    listView:pushBackCustomItem(item2)
+    listView:addChild(item2)
     listView:setInnerContainerSize(cc.size(item1:getContentSize().width,item1:getContentSize().height+item2:getContentSize().height))
     print_lua_table(listView:getInnerContainerSize())
     --s_CURRENT_USER.currentLevelKey = 'level12'
@@ -225,22 +254,22 @@ function LevelLayer:ctor()
     listView:scrollToPercentVertical(currentVerticalPercent,0,false)
     
     --listView:scrollToPercentVertical(50,0,false)
---    local item1_2 = ccui.Layout:create()
---    local connection1_2 = cc.Scale9Sprite:create('ccb/ccbResources/chapter_level/connection/connection_xuanxiaoguan1-2_background.png')
---    item1_2:setContentSize(connection1_2:getContentSize())
---    connection1_2:setPosition(cc.p(item1_2:getContentSize().width/2, item1_2:getContentSize().height/2))
---    local chapterImage = cc.Sprite:create('image/chapter_level/tittle_xuanxiaoguan2_losangles.png')
---    chapterImage:setPosition(connection1_2:getContentSize().width/2, connection1_2:getContentSize().height/2)
---    connection1_2:addChild(chapterImage)
---    item1_2:addChild(connection1_2)
---    listView:pushBackCustomItem(item1_2)
+    local item1_2 = ccui.Layout:create()
+    local connection1_2 = cc.Scale9Sprite:create('ccb/ccbResources/chapter_level/connection/connection_xuanxiaoguan1-2_background.png')
+    item1_2:setContentSize(connection1_2:getContentSize())
+    connection1_2:setPosition(cc.p(item1_2:getContentSize().width/2, item1_2:getContentSize().height/2))
+    local chapterImage = cc.Sprite:create('image/chapter_level/tittle_xuanxiaoguan2_losangles.png')
+    chapterImage:setPosition(connection1_2:getContentSize().width/2, connection1_2:getContentSize().height/2)
+    connection1_2:addChild(chapterImage)
+    item1_2:addChild(connection1_2)
+    listView:pushBackCustomItem(item1_2)
 --    local item2 = ccui.Layout:create()
 --    item2:setTouchEnabled(true)
 --    item2:setContentSize(levelLayerII:getContentSize())    
 --    levelLayerII:setPosition(cc.p(item2:getContentSize().width/2, item2:getContentSize().height/2))
 --    item2:addChild(levelLayerII)
 --    listView:pushBackCustomItem(item2)
---    --listView:insertCustomItem(item1, 0)
+    --listView:insertCustomItem(item1, 0)
 
 
     -- right top node
