@@ -1,56 +1,53 @@
 package c.bb.dc;
 
+//import com.walnutlabs.android.ProgressHUD;
+
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.os.AsyncTask;
-
-import com.walnutlabs.android.ProgressHUD;
+import android.app.ProgressDialog;
 
 public class BBProgressHUD extends AsyncTask<Void, String, Void> implements OnCancelListener {
-//	ProgressHUD mProgressHUD = null;
-	boolean mIsShowing = false;
-	String mContent = "";
+	public enum state {STATE_INIT, STATE_ING, STATE_DONE};
 	
-	public BBProgressHUD() {
-		super();
-	}
+	private state mState = state.STATE_INIT;
+	private String mContent = "";
+	private ProgressDialog mProgressHUD = null;
 	
 	public void setContent(String content) {
 		mContent = content;
 	}
 	
 	public void hide() {
-		mIsShowing = false;
+		mState = state.STATE_DONE;
 	}
 	
 	@Override
 	protected void onPreExecute() {
-		mIsShowing = true;
-//    	mProgressHUD = ProgressHUD.show(BBNDK.getActivity(), "Loading", true, true, this);
+		mState = state.STATE_ING;
+		mProgressHUD = ProgressDialog.show(BBNDK.getContext(), "Loading", "", true);
 		super.onPreExecute();
 	}
 	
 	@Override
 	protected void onPostExecute(Void result) {
-//		mProgressHUD.dismiss();
+		mProgressHUD.dismiss();
 		super.onPostExecute(result);
 	}
 	
 	@Override
 	public void onCancel(DialogInterface dialog) {
 		this.cancel(true);
-//		mProgressHUD.dismiss();
+		mProgressHUD.dismiss();
 	}
 
 	@Override
 	protected Void doInBackground(Void... params) {
-		
-		while (mIsShowing) {
+		while (mState != state.STATE_DONE) {
 			
 		}
 		
 		return null;
 	}
-	
-}
 
+}
