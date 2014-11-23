@@ -171,20 +171,26 @@ public class BBNDK {
 	// loading circle
 	// ***************************************************************************************************************************
 	
-	private static BBProgressHUD _cxph = null;
+	private static ProgressDialog _loadingView = null;
 	
-	public static void showCXProgressHUD(String content) {
-//		if (_cxph == null) {
-//			_cxph = new BBProgressHUD();
-//			_cxph.setContent(content);
-//		}
-//		_cxph.execute();
+	public static void showCXProgressHUD(final String content) {
+		hideCXProgressHUD();
+		
+		_instance.runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				_loadingView = ProgressDialog.show(_instance, "", content, true);
+			}
+			
+		});
 	}
 	
 	public static void hideCXProgressHUD() {
-//		if (_cxph != null) {
-//			_cxph.hide();
-//		}
+		if (_loadingView != null) {
+			_loadingView.dismiss();
+		}
+		_loadingView = null;
 	}
 	
 	// ***************************************************************************************************************************

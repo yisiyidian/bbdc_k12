@@ -1,3 +1,22 @@
+------------------------------------------------------------------------------------------------------------
+
+-- split(szFullString, szSeparator)
+
+-- randomMat(m, n)
+
+-- print_lua_table (lua_table, indent)
+
+-- is2TimeInSameDay(secondsA, secondsB)
+
+-- math["not"](y,z)
+-- math["and"](x,y,z)
+-- math["or"](x,y,z)
+-- math["xor"](x,y,z)
+
+-- showProgressHUD(info)
+-- hideProgressHUD()
+
+------------------------------------------------------------------------------------------------------------
 
 function split(szFullString, szSeparator)
     local nFindStartIndex = 1
@@ -183,3 +202,13 @@ end
 math["xor"]=function(x,y,z)
     return math["and"](nand(x,y,z),math["or"](x,y,z),z)
 end
+
+function showProgressHUD(info)
+    if info == '' then info = 'loading' end
+    cx.CXProgressHUD:show(info)
+end
+
+function hideProgressHUD()
+    cx.CXProgressHUD:hide()
+end
+

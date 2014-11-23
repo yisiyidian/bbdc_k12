@@ -179,19 +179,19 @@ function PopupEnergyBuy:onBuyButtonClicked()
                     s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
                     local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), energyCountBought)
                     s_TIPS_LAYER:showSmall(str)
-                    s_LOADING_CIRCLE_LAYER:hide()
+                    hideProgressHUD()
                 end,
                 function(api, code, message, description)
                     s_TIPS_LAYER:showSmall(message)
-                    s_LOADING_CIRCLE_LAYER:hide()
+                    hideProgressHUD()
                 end) 
         else
             s_TIPS_LAYER:showSmall(tostring(code) .. ', ' .. msg)
-            s_LOADING_CIRCLE_LAYER:hide()
+            hideProgressHUD()
         end
     end
     
-    s_LOADING_CIRCLE_LAYER:show()
+    showProgressHUD()
     s_STORE.buy(onBuyResult)
 end
 

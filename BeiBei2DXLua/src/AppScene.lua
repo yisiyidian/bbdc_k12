@@ -7,7 +7,6 @@ local HudLayer = require("layer.HudLayer")
 local PopupLayer = require("layer.PopupLayer")
 local TipsLayer = require("layer.TipsLayer")
 local TouchEventBlockLayer = require("layer.TouchEventBlockLayer")
-local LoadingCircleLayer = require('layer.LoadingCircleLayer')
 local DebugLayer = require("layer.DebugLayer")
 
 -- define level layer state constant
@@ -51,9 +50,6 @@ function AppScene.create()
 
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
-
-    scene.loadingCircleLayer = LoadingCircleLayer.create()
-    scene.rootLayer:addChild(scene.loadingCircleLayer)
 
     scene.debugLayer = DebugLayer.create()
     scene.rootLayer:addChild(scene.debugLayer)
@@ -132,11 +128,11 @@ end
 --     local customEventHandle = function (event)
 --         if event:getEventName() == CUSTOM_EVENT_SIGNUP then 
 --             s_SCENE:gotoChooseBook()
---             s_LOADING_CIRCLE_LAYER:hide()
+--             hideProgressHUD()
 --         elseif event:getEventName() == CUSTOM_EVENT_LOGIN then 
 --             if s_CURRENT_USER.bookKey == '' then
 --                 s_SCENE:gotoChooseBook()
---                 s_LOADING_CIRCLE_LAYER:hide()
+--                 hideProgressHUD()
 --             else
 --                 s_SCENE:getDailyCheckIn()
 --             end
@@ -164,7 +160,7 @@ function AppScene:startLoadingData(hasAccount, username, password)
     local function onResponse(u, e, code)
         if e then                  
             s_TIPS_LAYER:showSmall(e)
-            s_LOADING_CIRCLE_LAYER:hide()
+            hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
             s_SCENE:getConfigs(true)
         else
@@ -173,7 +169,7 @@ function AppScene:startLoadingData(hasAccount, username, password)
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
-    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
+    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
     getAccount(username, password, onResponse)
 end
 
@@ -186,7 +182,7 @@ function AppScene:logIn(username, password)
 end
 
 function AppScene:getDailyCheckIn()
-    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
+    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
     local co
     co = coroutine.create(function(results)
         if (results ~= nil) and (#results > 0) then
@@ -221,7 +217,7 @@ function AppScene:getDailyCheckIn()
 end
 
 function AppScene:getConfigs(noBookKey)
-    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_CONFIG_DATA))
+    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_CONFIG_DATA))
     s_HttpRequestClient.getConfigs(function ()
         if noBookKey then
             s_SCENE:gotoChooseBook()
@@ -232,7 +228,7 @@ function AppScene:getConfigs(noBookKey)
 end
 
 function AppScene:getFollowees()
-    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
+    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
     s_UserBaseServer.getFolloweesOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerFolloweesData(result.results)
@@ -245,7 +241,7 @@ function AppScene:getFollowees()
 end
 
 function AppScene:getFollowers()
-    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
+    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
     s_UserBaseServer.getFollowersOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:parseServerFollowersData(result.results)
@@ -258,7 +254,7 @@ function AppScene:getFollowers()
 end
 
 function AppScene:getLevels()
-    s_LOADING_CIRCLE_LAYER:show(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_LEVEL_DATA))
+    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_LEVEL_DATA))
     s_UserBaseServer.getLevelsOfCurrentUser(
         function (api, result)
             s_CURRENT_USER:parseServerLevelData(result.results)
@@ -320,12 +316,12 @@ function AppScene:saveSignUpAndLogInData(onSaved)
             function (api, result)
                 onSaved()
                 s_DATABASE_MGR.saveDataClassObject(data)
-                s_LOADING_CIRCLE_LAYER:hide()
+                hideProgressHUD()
             end,
             function (api, code, message, description)
                 onSaved()
                 s_DATABASE_MGR.saveDataClassObject(data)
-                s_LOADING_CIRCLE_LAYER:hide()
+                hideProgressHUD()
             end)
     end
 
@@ -348,7 +344,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
             end,
             function (api, code, message, description)
                 onSaved()
-                s_LOADING_CIRCLE_LAYER:hide()
+                hideProgressHUD()
             end)
     end
 end
@@ -367,7 +363,7 @@ function AppScene:onUserServerDatasCompleted()
         s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
         s_CorePlayManager.enterHomeLayer()
 
-        s_LOADING_CIRCLE_LAYER:show()
+        showProgressHUD()
         s_HttpRequestClient.getBulletinBoard(function (index, title, content)
             local showBB = (s_CURRENT_USER.bulletinBoardMask <= 0 and index >= 0)
                        or (s_CURRENT_USER.bulletinBoardMask > 0 and math["and"](s_CURRENT_USER.bulletinBoardMask, (2 ^ index)) == 0)
@@ -380,7 +376,7 @@ function AppScene:onUserServerDatasCompleted()
                 s_CURRENT_USER.bulletinBoardTime = s_CURRENT_USER.serverTime
             end
 
-            s_LOADING_CIRCLE_LAYER:hide()
+            hideProgressHUD()
         end)
 
     end)
