@@ -19,6 +19,10 @@ s_unlock_normal_notPlotInfo_state = 'unlockNormalNotPlotInfoState'
 s_review_boss_appear_state = 'reviewBossAppearState'
 s_review_boss_pass_state = 'reviewBossPassState'
 
+s_normal_game_state = 'normalGameState'
+s_test_game_state = 'testGameState'
+s_boss_game_state = 'bossGameState'
+
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
 end)
@@ -56,7 +60,7 @@ function AppScene.create()
     
     -- scene global variables
     scene.levelLayerState = s_normal_level_state
-    
+    scene.gameLayerState = s_normal_game_state
     return scene
 end
 

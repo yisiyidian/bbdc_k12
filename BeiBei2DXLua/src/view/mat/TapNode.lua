@@ -62,7 +62,7 @@ function TapNode.create(back, character, x, y)
         main.hasSelected = false
         
         main.main_back:addAnimation(0, 'normal', false)
-        
+        main.main_character_label:setVisible(true)
 --        local tmp = cc.Sprite:create(normalName)
 --        local w = tmp:getContentSize().width
 --        local h = tmp:getContentSize().height

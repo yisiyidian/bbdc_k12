@@ -137,11 +137,13 @@ end
 
 function DataUser:getUserCurrentChapterObtainedStarCount()
     local count = 0
-    --print('self.levels size:'..#self.levels)
     for i, v in ipairs(self.levels) do
         --print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
         if v.chapterKey == self.currentChapterKey then
-            count = count + v.stars
+            local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,self.currentChapterKey,v.levelKey)
+            if levelConfig['type'] == 0 then
+                count = count + v.stars
+            end
         end
     end
     --print('starCount:'..count)
@@ -233,11 +235,7 @@ function DataUser:setUserLevelDataOfIsPlayed(chapterKey, levelKey, isPlayed)
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.isPlayed = isPlayed
-        --print('------ before insert table-----')
-        --print_lua_table(levelData)
         table.insert(self.levels,levelData)
-        --print('-------- after insert table -----')
-        --print('levels_count:'..#self.levels)
     end
     levelData.isPlayed = isPlayed
     s_UserBaseServer.saveDataObjectOfCurrentUser(levelData,
@@ -256,11 +254,7 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.isLevelUnlocked = unlocked
-        --print('------ before insert table-----')
-        --print_lua_table(levelData)
         table.insert(self.levels,levelData)
-        --print('-------- after insert table -----')
-        --print('levels_count:'..#self.levels)
     end
 
     levelData.isLevelUnlocked = unlocked

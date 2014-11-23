@@ -75,9 +75,10 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
             end)
         end
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-        local summaryboss = require('view/summaryboss/SummaryBossLayer')
+        local summaryboss = require('view.summaryboss.SummaryBossLayer')
         local layer = summaryboss.create(levelConfig)
         layer:setAnchorPoint(0.5,0)
+        s_SCENE.gameLayerState = s_boss_game_state
         s_SCENE:replaceGameLayer(layer)
 --    else 
 --        local energyInfoLayer = require('popup.PopupEnergyInfo')

@@ -181,6 +181,46 @@ function PersonalInfo:PLVM()
     circleBackSmall:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     circleBack:addChild(circleBackSmall)
     
+    local learnStr = string.format('已学习%d',tolearnCount)
+    local masterStr = string.format('已掌握%d',toMasterCount)
+    for i = 1,#learnStr - 9 do
+        s_logd(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i))
+        local label = cc.Label:createWithSystemFont(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i),'',28)
+        label:setRotation(- i * 5)
+        label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBackBig:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + 5 * i / 180)),circleBackBig:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + 5 * i / 180)))
+        circleBackBig:addChild(label,1)
+    end
+    
+    for i = 1,3 do
+        s_logd(string.sub(learnStr,3 * (i - 1) + 1,3 * i))
+        local label = cc.Label:createWithSystemFont(string.sub(learnStr,3 * (i - 1) + 1,3 * i),'',28)
+        local angle = (#learnStr - 9) * 5 + (4 - i) * 7
+        label:setRotation(-angle)
+        label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBackBig:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + angle / 180)),circleBackBig:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + angle / 180)))
+        circleBackBig:addChild(label,1)
+    end
+    
+    for i = 1,#masterStr - 9 do
+        s_logd(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i))
+        local label = cc.Label:createWithSystemFont(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i),'',28)
+        label:setRotation(- i * 6)
+        label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBackBig:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * i / 180)),circleBackBig:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * i / 180)))
+        circleBackBig:addChild(label,1)
+    end
+
+    for i = 1,3 do
+        s_logd(string.sub(masterStr,3 * (i - 1) + 1,3 * i))
+        local label = cc.Label:createWithSystemFont(string.sub(masterStr,3 * (i - 1) + 1,3 * i),'',28)
+        local angle = (#masterStr - 9) * 6 + (4 - i) * 9
+        label:setRotation(-angle)
+        label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBackBig:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBackBig:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
+        circleBackBig:addChild(label,1)
+    end
+    
     local learnProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_big_dark.png'))
     learnProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     learnProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)

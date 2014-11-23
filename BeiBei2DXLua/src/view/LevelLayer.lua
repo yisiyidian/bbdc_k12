@@ -19,7 +19,7 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-   --s_SCENE.levelLayerState = s_review_boss_pass_state
+    --s_SCENE.levelLayerState = s_review_boss_appear_state
     --s_CURRENT_USER:initLevels()
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
@@ -115,6 +115,7 @@ function LevelLayer:levelStateManager()
             s_CURRENT_USER.reviewBossTutorialStep = 1
         end
      end
+     s_SCENE.gameLayerState = s_normal_game_state
      s_CURRENT_USER:updateDataToServer()
 end
 
