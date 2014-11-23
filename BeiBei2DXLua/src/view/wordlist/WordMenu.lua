@@ -81,7 +81,7 @@ function WordMenu:ctor()
         self.studyedListButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
         self:removeChildByName('studyed',true)
         if not self:getChildByName('mastered') then
-            local request = require('view.friend.FriendLIst')
+            local request = require('view/wordlist/MasteredWordList')
             local layer = request.create()
             layer:setAnchorPoint(0.5,0)
             self:addChild(layer,0,'mastered')
