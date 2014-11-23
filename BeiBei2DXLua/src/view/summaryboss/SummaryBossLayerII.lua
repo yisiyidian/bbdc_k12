@@ -34,6 +34,10 @@ function SummaryBossLayerII.create(levelConfig)
     layer.isPaused = false
     layer.isHinting = false
     layer.wordStack = {}
+    local fingerLight = cc.Sprite:create('image/studyscene/long_light.png')
+    fingerLight:setVisible(false)
+    fingerLight:setAnchorPoint(0.5,0.05)
+    layer:addChild(fingerLight,10)
     -- slide coco
     local slideCoco = {}
     slideCoco[1] = s_sound_slideCoconut
@@ -93,7 +97,8 @@ function SummaryBossLayerII.create(levelConfig)
         end
 
         local location = layer:convertToNodeSpace(touch:getLocation())
-
+        fingerLight:setPosition(location)
+        fingerLight:setVisible(true)
         startTouchLocation = location
         lastTouchLocation = location
 
@@ -111,13 +116,13 @@ function SummaryBossLayerII.create(levelConfig)
             selectStack[#selectStack+1] = startNode
             layer:updateWord(selectStack)
             startNode.addSelectStyle()
-            startNode.bigSize()
+            --startNode.bigSize()
             if startNode.isFirst > 0 and layer.crabOnView[startNode.isFirst] then
                 s_logd(startNode.isFirst)
                 layer.ccbcrab[startNode.isFirst]['boardBig']:setVisible(true)
                 layer.ccbcrab[startNode.isFirst]['boardSmall']:setVisible(false)
-                layer.ccbcrab[startNode.isFirst]['legBig']:setVisible(true)
-                layer.ccbcrab[startNode.isFirst]['legSmall']:setVisible(false)
+--                layer.ccbcrab[startNode.isFirst]['legBig']:setVisible(true)
+--                layer.ccbcrab[startNode.isFirst]['legSmall']:setVisible(false)
             end
             startAtNode = true
         else
@@ -129,8 +134,8 @@ function SummaryBossLayerII.create(levelConfig)
                 layer.isPaused = true
                 layer.ccbcrab[i]['boardBig']:setVisible(true)
                 layer.ccbcrab[i]['boardSmall']:setVisible(false)
-                layer.ccbcrab[i]['legBig']:setVisible(true)
-                layer.ccbcrab[i]['legSmall']:setVisible(false)
+--                layer.ccbcrab[i]['legBig']:setVisible(true)
+--                layer.ccbcrab[i]['legSmall']:setVisible(false)
                 layer.onCrab = i
                 for m = 1, 5 do
                     for n = 1,5 do
@@ -157,7 +162,7 @@ function SummaryBossLayerII.create(levelConfig)
         local length_gap = 3.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
-
+        fingerLight:setPosition(location)
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
             fakeTouchMoved(location)
@@ -246,14 +251,14 @@ function SummaryBossLayerII.create(levelConfig)
         if layer.globalLock then
             return
         end
-
+        fingerLight:setVisible(false)
         --s_logd(layer.onCrab)
         if layer.onCrab > 0 then
 
             layer.ccbcrab[layer.onCrab]['boardBig']:setVisible(false)
             layer.ccbcrab[layer.onCrab]['boardSmall']:setVisible(true)
-            layer.ccbcrab[layer.onCrab]['legBig']:setVisible(false)
-            layer.ccbcrab[layer.onCrab]['legSmall']:setVisible(true)
+--            layer.ccbcrab[layer.onCrab]['legBig']:setVisible(false)
+--            layer.ccbcrab[layer.onCrab]['legSmall']:setVisible(true)
             layer.onCrab = 0
         end
 
@@ -285,8 +290,8 @@ function SummaryBossLayerII.create(levelConfig)
                     layer.boss:addAnimation(0,'a2',false)
                     layer.ccbcrab[i]['boardBig']:setVisible(false)
                     layer.ccbcrab[i]['boardSmall']:setVisible(true)
-                    layer.ccbcrab[i]['legBig']:setVisible(false)
-                    layer.ccbcrab[i]['legSmall']:setVisible(true)
+--                    layer.ccbcrab[i]['legBig']:setVisible(false)
+--                    layer.ccbcrab[i]['legSmall']:setVisible(true)
                     layer.crab[i]:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT * 0.2))))
 
                     -- slide true
@@ -326,7 +331,7 @@ function SummaryBossLayerII.create(levelConfig)
                         local recover = cc.CallFunc:create(
                             function()
                                 layer.globalLock = false
-                                node.normal()
+                                node.removeSelectStyle()
                                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                                     node.firstStyle()
                                 end
@@ -403,8 +408,8 @@ function SummaryBossLayerII.create(levelConfig)
                     local small = cc.CallFunc:create(function() 
                         layer.ccbcrab[node.isFirst]['boardBig']:setVisible(false)
                         layer.ccbcrab[node.isFirst]['boardSmall']:setVisible(true)
-                        layer.ccbcrab[node.isFirst]['legBig']:setVisible(false)
-                        layer.ccbcrab[node.isFirst]['legSmall']:setVisible(true)   
+--                        layer.ccbcrab[node.isFirst]['legBig']:setVisible(false)
+--                        layer.ccbcrab[node.isFirst]['legSmall']:setVisible(true)   
                     end,{})
                     layer.crab[node.isFirst]:runAction(cc.Sequence:create(shake,small))
                 end
@@ -832,10 +837,10 @@ function SummaryBossLayerII:initMap()
                 end
 
             end
-            self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/zongjieboss_2_douzi_zhuan.json","spine/summaryboss/zongjieboss_2_douzi_zhuan.atlas",1)
+            self.coconut[i][j].bullet = cc.Sprite:create('image/summarybossscene/bullet_popcorn.png')
             self.coconut[i][j].bullet:setPosition(self.hole[i][j]:getPosition())
             self.coconut[i][j].bullet:setVisible(false)
-            self.coconut[i][j].bullet:setAnimation(0,'animation',true)
+            --self.coconut[i][j].bullet:setAnimation(0,'animation',true)
             self:addChild(self.coconut[i][j].bullet,2)
             self.coconut[i][j]:setScale(0)
             self.coconut[i][j]:setPosition(self.hole[i][j]:getPosition())
@@ -893,7 +898,7 @@ end
 function SummaryBossLayerII:win()
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,2)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
 
@@ -904,7 +909,7 @@ end
 function SummaryBossLayerII:lose()
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,2)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
 
