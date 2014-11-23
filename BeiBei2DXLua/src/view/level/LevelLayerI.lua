@@ -153,7 +153,7 @@ function LevelLayerI:plotUnlockLevelAnimation(levelKey)
     local action = cc.Sequence:create(action1, action4, action5, action6, nil)
     lockSprite:runAction(action)
     
-    local action7 = cc.DelayTime:create(1)
+    local action7 = cc.DelayTime:create(0.6)
     local action8 = cc.FadeOut:create(0.1)
     lockLayer:runAction(cc.Sequence:create(action7, action8))
     
@@ -197,8 +197,11 @@ end
 
 function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
-    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzls  xuanxiaoguan  diaoluo.json', 'spine/3fxzls  xuanxiaoguan  diaoluo.atlas', 1)
-    reviewBoss:addAnimation(0, 'animation', true)
+    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
+    reviewBoss:addAnimation(0, '1', false)
+    s_SCENE:callFuncWithDelay(1,function()
+        reviewBoss:addAnimation(1, '2', true)
+    end)
     reviewBoss:setPosition(0, 0)
     levelButton:addChild(reviewBoss)
 end
@@ -219,6 +222,8 @@ end
 function LevelLayerI:plotLevelDecoration(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    --print('####################'..s_CURRENT_USER.bookKey..','..s_CURRENT_USER.currentChapterKey)
+    --print_lua_table(levelConfig)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
     local levelIndex = string.sub(levelKey, 6)
 
@@ -325,23 +330,23 @@ function LevelLayerI:ctor()
             local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelConfig[i]['level_key'])
             if string.format('%s',levelConfig[i]['type']) == '1' then
                
-                if i == 2 then 
+--                if i == 2 then 
 
-                -- add back to book select
-                local button_goon_clicked = function(sender, eventType)
-                    if eventType == ccui.TouchEventType.began then
-                        local book = require('view.book.BookLayer')
-                        local layer = book.create()
-                        s_SCENE:replaceGameLayer(layer)
-                    end
-                end
-                local button_goon = ccui.Button:create("image/button/studyscene_blue_button.png","","")
-                button_goon:setPosition(levelButton:getContentSize().width/2,350)
-                button_goon:setTitleText("回到选书界面")
-                button_goon:setTitleFontSize(30)
-                button_goon:addTouchEventListener(button_goon_clicked)
-                levelButton:addChild(button_goon)
-                end
+--                -- add back to book select
+--                local button_goon_clicked = function(sender, eventType)
+--                    if eventType == ccui.TouchEventType.began then
+--                        local book = require('view.book.BookLayer')
+--                        local layer = book.create()
+--                        s_SCENE:replaceGameLayer(layer)
+--                    end
+--                end
+--                local button_goon = ccui.Button:create("image/button/studyscene_blue_button.png","","")
+--                button_goon:setPosition(levelButton:getContentSize().width/2,350)
+--                button_goon:setTitleText("回到选书界面")
+--                button_goon:setTitleFontSize(30)
+--                button_goon:addTouchEventListener(button_goon_clicked)
+--                levelButton:addChild(button_goon)
+--                end
                 
                 
                 if s_CURRENT_USER:getIsLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then

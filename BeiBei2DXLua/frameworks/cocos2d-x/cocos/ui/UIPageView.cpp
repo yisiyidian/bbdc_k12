@@ -463,7 +463,7 @@ void PageView::handleReleaseLogic(Touch *touch)
         ssize_t pageCount = this->getPageCount();
         float curPageLocation = curPagePos.y;
         float pageWidth = getContentSize().height;
-        float boundary = pageWidth/2.0f;
+        float boundary = pageWidth/4.0f;
         if (curPageLocation <= -boundary)
         {
             if (_curPageIdx >= pageCount-1)

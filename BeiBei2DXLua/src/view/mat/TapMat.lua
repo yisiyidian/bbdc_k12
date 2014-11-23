@@ -31,7 +31,6 @@ function TapMat.create(word, m ,n)
     main.rightLock = false
     main.wrongLock = false
 
-
     -- system function
     math.randomseed(os.time())
 
@@ -297,7 +296,12 @@ function TapMat.create(word, m ,n)
                 main:addChild(light_end)
                 light_end:runAction(cc.Sequence:create(actionArray2))
             end
-              
+            
+            
+            for i = 1, #selectStack do
+                local node = selectStack[i]
+                node.win()
+            end
             selectStack = {}
 
             main.success()

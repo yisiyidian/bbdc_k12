@@ -466,9 +466,9 @@ function SummaryBossLayerIII:updateWord(selectStack)
     local left = (s_DESIGN_WIDTH - (count-1)*gap)/2
 
     for i = 1, #selectStack do
-        local wordBack = cc.Sprite:create("image/button/USButton1.png")
+        local wordBack = cc.Sprite:create("image/summarybossscene/global_zongjiebossdancixianshi_third.png")
         --wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
-        wordBack:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
+        wordBack:setPosition(left + gap*(i - 1), 0.7*s_DESIGN_HEIGHT)
         wordBack:setScale(0.7)
         self:addChild(wordBack)
         self.wordStack[i] = wordBack
@@ -564,7 +564,7 @@ function SummaryBossLayerIII:initBossLayer(levelConfig)
     self.girl = girl
 
     --add readyGo
-    local readyGo = sp.SkeletonAnimation:create("spine/summaryboss/readygo_diyiguan.json","spine/summaryboss/readygo_diyiguan.atlas",1)
+    local readyGo = sp.SkeletonAnimation:create("spine/summaryboss/readygo_disanguan.json","spine/summaryboss/readygo_disanguan.atlas",1)
     readyGo:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.5)
     readyGo:addAnimation(0,'animation',false)
     self:addChild(readyGo,100)
@@ -605,7 +605,7 @@ function SummaryBossLayerIII:initBossLayer(levelConfig)
     local bloodBack = cc.Sprite:create("image/summarybossscene/summaryboss_blood_back.png")
     bloodBack:setPosition(100,215)
     boss:addChild(bloodBack)
-    boss.blood = cc.ProgressTimer:create(cc.Sprite:create("image/summarybossscene/summaryboss_blood_front.png"))
+    boss.blood = cc.ProgressTimer:create(cc.Sprite:create("image/summarybossscene/global_zongjieboss_bossdexietiao_third.png"))
     boss.blood:setPosition(100,215)
     boss.blood:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     boss.blood:setMidpoint(cc.p(0,0))
@@ -904,23 +904,23 @@ end
 function SummaryBossLayerIII:win()
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,3)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
 
-    -- win sound
-    playSound(s_sound_win)
+--    -- win sound
+--    playSound(s_sound_win)
 end
 
 function SummaryBossLayerIII:lose()
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,3)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
-
-    -- lose sound
-    playSound(s_sound_fail)    
+--
+--    -- lose sound
+--    playSound(s_sound_fail)    
 end
 
 function SummaryBossLayerIII:hint()

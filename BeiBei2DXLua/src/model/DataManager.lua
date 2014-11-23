@@ -263,6 +263,7 @@ function DataManager.getLevels( bookkey )
 end
 
 function DataManager.getLevelConfig(bookKey, chapterKey, levelKey)
+    --print('getLeveLConfig:'..bookKey..chapterKey..levelKey..s_BOOK_KEY_IELTS)
     if bookKey == s_BOOK_KEY_NCEE then
         for i = 1, #DataManager.level_ncee do
             if DataManager.level_ncee[i]['chapter_key'] == chapterKey and DataManager.level_ncee[i]['level_key'] == levelKey then
@@ -282,7 +283,7 @@ function DataManager.getLevelConfig(bookKey, chapterKey, levelKey)
                 return DataManager.level_cet6[i]
             end
         end
-    elseif bookkey == s_BOOK_KEY_IELTS then
+    elseif bookKey == s_BOOK_KEY_IELTS then
         for i = 1, #DataManager.level_ielts do
             if DataManager.level_ielts[i]['chapter_key'] == chapterKey and DataManager.level_ielts[i]['level_key'] == levelKey then
                 return DataManager.level_ielts[i]

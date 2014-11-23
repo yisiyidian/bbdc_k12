@@ -240,7 +240,6 @@ function IntroLayer.create()
                 
                 local button_register_clicked = function(sender, eventType)
                     if eventType == ccui.TouchEventType.began then
-                    
                         if s_CURRENT_USER.username == nil then
                             local loginAlter = LoginAlter.createRegister()
                             loginAlter:setTag(2)
@@ -274,14 +273,31 @@ function IntroLayer.create()
                                     end
                                     
                                 elseif which == "improve" then
+                                
+
+                                    
                                     local improveInfo = ImproveInfo.create()
                                     improveInfo:setTag(1)
                                     improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                                     layer:addChild(improveInfo)
 
-                                    improveInfo.close = function()
-                                        layer:removeChildByTag(1)
+                                    -- button sound
+                                    playSound(s_sound_buttonEffect)
+                                    
+                                    improveInfo.close = function()                           
+                                        local hasGuest = s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER)
 
+                                        if hasGuest  then
+--                                            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+                                            print(s_CURRENT_USER.username)
+                                            print(s_CURRENT_USER.password)
+                                            s_UserBaseServer.logIn(s_CURRENT_USER.username, s_CURRENT_USER.password, function(objectjson, e, code)
+                                               
+                                            
+                                            end)
+                                            
+                                        end     
+                                        layer:removeChildByTag(1)                                  
                                     end
                                 end
                                                 

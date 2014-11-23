@@ -1,0 +1,90 @@
+
+popcorn.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+popcorn_bomb1
+  rotate: false
+  xy: 2, 649
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb2
+  rotate: false
+  xy: 2, 477
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb3
+  rotate: false
+  xy: 174, 649
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb4
+  rotate: false
+  xy: 2, 305
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb5
+  rotate: false
+  xy: 174, 477
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb6
+  rotate: false
+  xy: 346, 649
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb7
+  rotate: false
+  xy: 2, 133
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb8
+  rotate: false
+  xy: 174, 305
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_bomb9
+  rotate: false
+  xy: 346, 477
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+popcorn_first
+  rotate: false
+  xy: 518, 665
+  size: 144, 154
+  orig: 144, 154
+  offset: 0, 0
+  index: -1
+popcorn_normal
+  rotate: false
+  xy: 174, 186
+  size: 106, 117
+  orig: 106, 117
+  offset: 0, 0
+  index: -1
+popcorn_select
+  rotate: false
+  xy: 2, 2
+  size: 118, 129
+  orig: 118, 129
+  offset: 0, 0
+  index: -1

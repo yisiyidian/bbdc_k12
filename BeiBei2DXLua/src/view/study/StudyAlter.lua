@@ -57,7 +57,7 @@ function StudyAlter.create()
             local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
             if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
                 if levelData.isPassed ~= 1 then
-                    s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
+--                    s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
                     
                     -- energy cost "cost"
                     s_SCENE:callFuncWithDelay(0.3,function()
@@ -65,10 +65,10 @@ function StudyAlter.create()
                     end)
                 end
                 s_CorePlayManager.enterTestLayer()
-            else 
-                local energyInfoLayer = require('popup.PopupEnergyInfo')
-                local layer = energyInfoLayer.create()
-                s_SCENE:popup(layer)
+--            else 
+--                local energyInfoLayer = require('popup.PopupEnergyInfo')
+--                local layer = energyInfoLayer.create()
+--                s_SCENE:popup(layer)
             end
             
             -- button sound

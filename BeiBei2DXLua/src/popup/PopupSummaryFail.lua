@@ -13,6 +13,8 @@ function PopupSummaryFail:ctor(current_star, total_star)
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     
+
+    
     self.ccbPopupSummaryFail = {}
     self.ccbPopupSummaryFail['onCloseButtonClicked'] = self.onCloseButtonClicked
     self.ccbPopupSummaryFail['onContinueButtonClicked'] = self.onContinueButtonClicked
