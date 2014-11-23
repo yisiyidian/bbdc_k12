@@ -141,7 +141,7 @@ function DataUser:getUserCurrentChapterObtainedStarCount()
         --print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
         if v.chapterKey == self.currentChapterKey then
             local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,self.currentChapterKey,v.levelKey)
-            if levelConfig['type'] == 1 then
+            if levelConfig['type'] == 0 then
                 count = count + v.stars
             end
         end
