@@ -153,7 +153,7 @@ function LevelLayerI:plotUnlockLevelAnimation(levelKey)
     local action = cc.Sequence:create(action1, action4, action5, action6, nil)
     lockSprite:runAction(action)
     
-    local action7 = cc.DelayTime:create(1)
+    local action7 = cc.DelayTime:create(0.6)
     local action8 = cc.FadeOut:create(0.1)
     lockLayer:runAction(cc.Sequence:create(action7, action8))
     
@@ -222,8 +222,8 @@ end
 function LevelLayerI:plotLevelDecoration(levelKey)
     local levelButton = self.ccbLevelLayerI['levelSet']:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    print('####################'..s_CURRENT_USER.bookKey..','..s_CURRENT_USER.currentChapterKey)
-    print_lua_table(levelConfig)
+    --print('####################'..s_CURRENT_USER.bookKey..','..s_CURRENT_USER.currentChapterKey)
+    --print_lua_table(levelConfig)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
     local levelIndex = string.sub(levelKey, 6)
 

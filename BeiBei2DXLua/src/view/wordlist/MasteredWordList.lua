@@ -35,22 +35,22 @@ end
 function MasteredWordList:addMasteredPlots(button, proficiency)
     local sprite1, sprite2, sprite3, sprite4
     if proficiency >= 4 then
-        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite4 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
     elseif proficiency == 3 then
-        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite3 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
         sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
     elseif proficiency == 2 then
-        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
-        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
+        sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
         sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
         sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
     elseif profiency == 1 then
-        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
+        sprite1 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
         sprite2 = cc.Sprite:create('image/word_list/libruary_quan1.png')
         sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
         sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
