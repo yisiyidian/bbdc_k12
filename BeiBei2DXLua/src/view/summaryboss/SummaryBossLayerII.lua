@@ -779,7 +779,7 @@ function SummaryBossLayerII:initMap()
                     self.coconut[i][j] = TapNode.create("popcorn", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
                     self.isCrab[i][j] = 1
                     if diff == 0 then
-                        --self.coconut[i][j].firstStyle()
+                        self.coconut[i][j].firstStyle()
                         self.isFirst[i][j] = 1
                     end
                 else
@@ -800,7 +800,7 @@ function SummaryBossLayerII:initMap()
                     self.coconut[i][j] = TapNode.create("popcorn", charaster_set_filtered[randomIndex], i, j)
                 end
                 if diff1 * diff2 == 0 then
-                    --self.coconut[i][j].firstStyle()
+                    self.coconut[i][j].firstStyle()
                     if diff1 == 0 then
                         self.isFirst[i][j] = 1
                     else
@@ -826,7 +826,7 @@ function SummaryBossLayerII:initMap()
                 end
 
                 if diff1 * diff2 * diff3 == 0 then
-                    --self.coconut[i][j].firstStyle()
+                    self.coconut[i][j].firstStyle()
                     if diff1 == 0 then
                         self.isFirst[i][j] = 1
                     elseif diff2 == 0 then

@@ -397,6 +397,9 @@ function StudyLayer.create()
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
+            if layer.layerPaused then
+                return
+            end
             local pauseLayer = Pause.create()
             pauseLayer:setPosition(s_LEFT_X, 0)
             layer:addChild(pauseLayer,1000)
