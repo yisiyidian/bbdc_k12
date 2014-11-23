@@ -68,6 +68,9 @@ function BulletinBoard:onClose()
         s_SCENE:removeAllPopups()
     end,{})
     ccbBulletinBoard['board']:runAction(cc.Sequence:create(move,remove))
+    
+    -- button sound
+    playSound(s_sound_buttonEffect)
 end
 
 return BulletinBoard

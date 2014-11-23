@@ -5,6 +5,9 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
 end)
 
 function SummaryBossAlter.create(win,wordCount,blood,index)
+
+
+    
     local layer = SummaryBossAlter.new()
     layer.wordCount = wordCount
     layer.blood = blood
@@ -17,9 +20,22 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     if win then
-        layer:win1()
+        layer:win1()    
+        cc.SimpleAudioEngine:getInstance():pauseMusic()
+
+        s_SCENE:callFuncWithDelay(0.3,function()
+        -- win sound
+        playSound(s_sound_win)
+        end)
     else
         layer:lose()
+        
+        cc.SimpleAudioEngine:getInstance():pauseMusic()
+
+        s_SCENE:callFuncWithDelay(0.3,function()
+            -- win sound
+            playSound(s_sound_fail)
+        end)
     end
     
     return layer
@@ -56,6 +72,7 @@ function SummaryBossAlter:lose()
 
     local function nextBoard(sender)
         self:lose2()
+
     end
     continue:registerScriptTapHandler(nextBoard)
     
@@ -116,6 +133,11 @@ function SummaryBossAlter:lose2()
         local level = require('view.LevelLayer')
         local layer = level.create()
         s_SCENE:replaceGameLayer(layer)
+        
+        -- stop effect
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
+        -- button sound
+        playSound(s_sound_buttonEffect)
     end
     continue:registerScriptTapHandler(backToLevelScene)
     
@@ -124,6 +146,11 @@ function SummaryBossAlter:lose2()
         local level = require('view.LevelLayer')
         local layer = level.create()
         s_SCENE:replaceGameLayer(layer) 
+        
+        -- stop effect
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
+        -- button sound
+        playSound(s_sound_buttonEffect)
     end
     again:registerScriptTapHandler(challengeAgain)
     
@@ -183,6 +210,8 @@ function SummaryBossAlter:win1()
        --end
        s_SCENE:replaceGameLayer(layer)
        
+        -- stop effect
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
         -- button sound
         playSound(s_sound_buttonEffect)
     end

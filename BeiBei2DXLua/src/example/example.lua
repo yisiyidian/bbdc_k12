@@ -8,21 +8,21 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 
 function test()
-    local layer = cc.Layer:create()
+--    local layer = cc.Layer:create()
     
 
-    local TapMat = require("view.mat.TapMat")
-    local mat = TapMat.create("apple",4,4)
-    mat:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    
-    layer:addChild(mat)
-    return layer
+--    local TapMat = require("view.mat.TapMat")
+--    local mat = TapMat.create("apple",4,4)
+--    mat:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+--    
+--    layer:addChild(mat)
+--    return layer
     
     
 
---    local IntroLayer = require("view.login.IntroLayer")
---    local introLayer = IntroLayer.create()
---    s_SCENE:replaceGameLayer(introLayer)
+    local IntroLayer = require("view.login.IntroLayer")
+    local introLayer = IntroLayer.create()
+    s_SCENE:replaceGameLayer(introLayer)
 
 --    local wordList = require('view.wordlist.WordMenu')
 --    local layer = wordList.create()
