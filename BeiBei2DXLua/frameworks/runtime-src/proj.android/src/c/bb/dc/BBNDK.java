@@ -144,11 +144,10 @@ public class BBNDK {
 	// ***************************************************************************************************************************
 	
 	private static String AVUserToJsonStr(AVUser user) {
-//		TODO: Android unknown error
-//		org.json.JSONObject json = user.toJSONObject();
-//		return json.toString();
+		org.json.JSONObject json = user.toJSONObject();
+		return json.toString();
 		
-		return user.getSessionToken();
+//		return user.getSessionToken();
 	}
 	
 	public static void signUp(String username, String password) {
@@ -158,11 +157,22 @@ public class BBNDK {
 		user.signUpInBackground(new SignUpCallback() {
 		    public void done(AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionSU(AVUserToJsonStr(user), null, 0);
+		        	onSignUp(AVUserToJsonStr(user), null, 0);
 		        } else {
-		        	invokeLuaCallbackFunctionSU(null, e.getLocalizedMessage(), e.getCode());
+		        	onSignUp(null, e.getLocalizedMessage(), e.getCode());
 		        }
 		    }
+		});
+	}
+	
+	private static void onSignUp(final String objectjson, final String error, final int errorcode) {
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionSU(objectjson, error, errorcode);
+			}
+			
 		});
 	}
 	
@@ -170,11 +180,22 @@ public class BBNDK {
 		AVUser.logInInBackground(username, password, new LogInCallback<AVUser>() {
 			public void done(AVUser user, AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionLI(AVUserToJsonStr(user), null, 0);
+		        	onLogIn(AVUserToJsonStr(user), null, 0);
 		        } else {
-		        	invokeLuaCallbackFunctionLI(null, e.getLocalizedMessage(), e.getCode());
+		        	onLogIn(null, e.getLocalizedMessage(), e.getCode());
 		        }
 		    }
+		});
+	}
+	
+	private static void onLogIn(final String objectjson, final String error, final int errorcode) {
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionLI(objectjson, error, errorcode);
+			}
+			
 		});
 	}
 	
