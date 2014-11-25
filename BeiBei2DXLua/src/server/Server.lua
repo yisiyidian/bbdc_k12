@@ -73,7 +73,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
     -- Cloud Code
         -- {'code': error.code, 'message': error.message, 'description':error.description}
         if xhr.status ~= 200 then
-            onFailed(api, xhr.status, xhr.statusText, '')
+            if onFailed then onFailed(api, xhr.status, xhr.statusText, '') end
         elseif xhr.response ~= nil then
             local data = s_JSON.decode(xhr.response)
             local result
