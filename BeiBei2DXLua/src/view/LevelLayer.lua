@@ -66,7 +66,7 @@ function LevelLayer:levelStateManager()
     end
 
     -- TODO switch state
-    s_SCENE.levelLayerState = s_unlock_next_chapter_state
+    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
     print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
