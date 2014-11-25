@@ -13,6 +13,53 @@ function LevelLayerII.create()
     return layer
 end
 
+function LevelLayerII:plotUnlockLevelAnimation(levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelButton = self:getChildByName(levelKey)
+    local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+    local lockLayer = levelButton:getChildByName('lockLayer'..levelIndex)
+
+    local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
+    local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
+    local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),4)
+    local action5 = cc.MoveBy:create(0.1, cc.p(5,0))  
+    local action6 = cc.FadeOut:create(0.1)
+    local action = cc.Sequence:create(action1, action4, action5, action6, nil)
+    lockSprite:runAction(action)
+
+    local action7 = cc.DelayTime:create(0.6)
+    local action8 = cc.FadeOut:create(0.1)
+    lockLayer:runAction(cc.Sequence:create(action7, action8))
+
+    s_SCENE:callFuncWithDelay(1.1,function()
+        self:plotLevelDecoration(levelKey)
+    end)
+end
+
+function LevelLayerII:plotLevelDecoration(levelKey)
+    local levelButton = self:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData('chapter1', levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
+        if levelData.stars > 0 and levelConfig['type'] ~= 1 then
+            if s_CURRENT_USER.currentLevelKey ~= levelData.levelKey or s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_pass_state then
+                self:plotLevelStar(levelButton, levelData.stars)
+            end 
+    end
+    if levelConfig['type'] == 1 then
+        -- add summary boss
+        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+        summaryboss:setPosition(0,10)
+        summaryboss:setName('summaryboss'..string.sub(levelKey, 6))
+        summaryboss:addAnimation(0, 'jianxiao', true)
+        summaryboss:setScale(0.7)
+        levelButton:addChild(summaryboss, 3)
+    end
+    end
+end
+
 function LevelLayerII:plotLevelNumber(levelKey)
     local levelButton = self:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)

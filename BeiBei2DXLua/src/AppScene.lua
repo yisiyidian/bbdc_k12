@@ -13,6 +13,7 @@ local DebugLayer = require("layer.DebugLayer")
 s_normal_level_state = 'normalLevelState'
 s_normal_next_state = 'normalNextState'
 s_normal_retry_state = 'normalRetryState'
+s_unlock_next_chapter_state = 'unlockNextChapterState'
 s_unlock_normal_plotInfo_state = 'unlockNormalPlotInfoState'
 s_unlock_normal_notPlotInfo_state = 'unlockNormalNotPlotInfoState'
 s_review_boss_appear_state = 'reviewBossAppearState'
