@@ -174,23 +174,33 @@ public class BBNDK {
 	private static ProgressDialog _loadingView = null;
 	
 	public static void showCXProgressHUD(final String content) {
-		hideCXProgressHUD();
-		
 		_instance.runOnUiThread(new Runnable() {
 
 			@Override
 			public void run() {
+				_hideCXProgressHUD();
 				_loadingView = ProgressDialog.show(_instance, "", content, true);
 			}
 			
 		});
 	}
 	
-	public static void hideCXProgressHUD() {
+	private static void _hideCXProgressHUD() {
 		if (_loadingView != null) {
 			_loadingView.dismiss();
 		}
 		_loadingView = null;
+	}
+	
+	public static void hideCXProgressHUD() {
+		_instance.runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				_hideCXProgressHUD();
+			}
+			
+		});
 	}
 	
 	// ***************************************************************************************************************************

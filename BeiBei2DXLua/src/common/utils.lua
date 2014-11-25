@@ -204,7 +204,7 @@ math["xor"]=function(x,y,z)
 end
 
 function showProgressHUD(info)
-    if info == '' then info = 'loading' end
+    if info == '' or info == nil then info = 'loading' end
     cx.CXProgressHUD:show(info)
 end
 
