@@ -147,7 +147,7 @@ function LevelLayer:ctor()
             
             if sender:getCurSelectedIndex() == 2 then
                 connection1_2:plotUnlockChapterAnimation()
-                
+                --listView:removeItem(0)
             end
         end
     end
