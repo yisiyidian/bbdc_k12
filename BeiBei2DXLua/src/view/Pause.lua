@@ -54,8 +54,7 @@ function Pause:ctor()
     ccbPause['soundOff']:setVisible(false)
     ccbPause['musicOff']:setVisible(false)
     ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p((s_RIGHT_X - s_LEFT_X) * 0.5,s_DESIGN_HEIGHT * 0.5))))
-    
-end
+ end
 
 function Pause:onClose()
     local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p((s_RIGHT_X - s_LEFT_X) * 0.5,s_DESIGN_HEIGHT * 1.3)))
@@ -174,6 +173,15 @@ function Pause:onMusicOff()
     
     --button sound
     playSound(s_sound_buttonEffect)
+end
+
+function createPauseLayerWhenTestOrBoss()   
+    if s_SCENE.gameLayerState == s_test_game_state
+    or s_SCENE.gameLayerState == s_review_boss_game_state
+    or s_SCENE.gameLayerState == s_summary_boss_game_state then
+        local pauseLayer = Pause:create()
+        s_SCENE:popup(pauseLayer)	
+    end
 end
 
 return Pause

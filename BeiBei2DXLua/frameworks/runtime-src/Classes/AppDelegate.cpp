@@ -102,6 +102,11 @@ void AppDelegate::applicationDidEnterBackground()
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground()
 {
+    auto engine = LuaEngine::getInstance();
+    engine->executeScriptFile("view/Pause.lua");
+    
+    engine->executeGlobalFunction("createPauseLayerWhenTestOrBoss");
+    
     Director::getInstance()->startAnimation();
 
     SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
