@@ -233,7 +233,7 @@ function DataManager.loadLevels(bookkey)
                                     data['level_key'])
         levels[i] = lv
     end
-
+   
     if bookkey == s_BOOK_KEY_NCEE then
         DataManager.level_ncee = levels
     elseif bookkey == s_BOOK_KEY_CET4 then
@@ -296,6 +296,48 @@ function DataManager.getLevelConfig(bookKey, chapterKey, levelKey)
             end
         end
     end
+end
+
+function DataManager.getChapterConfig(bookKey, chapterKey)
+    local chapterConfig = {}
+    local index = 0
+    if bookKey == s_BOOK_KEY_NCEE then
+        for i = 1, #DataManager.level_ncee do
+            if DataManager.level_ncee[i]['chapter_key'] == chapterKey then
+                index = index + 1
+                chapterConfig[index] = DataManager.level_ncee[i]
+            end
+        end
+    elseif bookKey == s_BOOK_KEY_CET4 then
+        for i = 1, #DataManager.level_cet4 do
+            if DataManager.level_cet4[i]['chapter_key'] == chapterKey then
+                index = index + 1
+                chapterConfig[index] = DataManager.level_cet4[i]
+            end
+        end
+    elseif bookKey == s_BOOK_KEY_CET6 then
+        for i = 1, #DataManager.level_cet6 do
+            if DataManager.level_cet6[i]['chapter_key'] == chapterKey then
+                index = index + 1
+                chapterConfig[index] = DataManager.level_cet6[i]
+            end
+        end
+    elseif bookKey == s_BOOK_KEY_IELTS then
+        for i = 1, #DataManager.level_ielts do
+            if DataManager.level_ielts[i]['chapter_key'] == chapterKey then
+                index = index + 1
+                chapterConfig[index] = DataManager.level_ielts[i]
+            end
+        end
+    elseif bookKey == s_BOOK_KEY_TOEFL then
+        for i = 1, #DataManager.level_toefl do
+            if DataManager.level_toefl[i]['chapter_key'] == chapterKey then
+                index = index + 1
+                chapterConfig[index] = DataManager.level_toefl[i]
+            end
+        end
+    end
+    return chapterConfig
 end
 
 -- review boss -------------------------------------------------------------------
