@@ -121,9 +121,31 @@ function LevelLayer:levelStateManager()
      s_CURRENT_USER:updateDataToServer()
 end
 
-function LevelLayer:addChapterIntoListView(chapterKey)
+function LevelLayer:updateChapter0OfListView(command)
+    if command == 'add' then       
+        local item1 = ccui.Layout:create()
+        item1:setContentSize(levelLayerI:getContentSize())    
+        levelLayerI:setPosition(cc.p(0, 0))
+        item1:addChild(levelLayerI)
+        listView:addChild(item1)     
+    
+        -- add list view connection 
+        local item1_2 = ccui.Layout:create()
+        item1_2:setTouchEnabled(true)
+        item1_2:setContentSize(connection1_2:getContentSize())
+        connection1_2:setPosition(cc.p(0,0))
+        item1_2:addChild(connection1_2)
+        listView:addChild(item1_2)
+    end
+end
+
+function LevelLayer:updateChapter1OfListView(command)
+
+end
+
+function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
     local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
-    print('chapterConfig----------------'..#chapterConfig)
+    --print('chapterConfig----------------'..#chapterConfig)
     for i = 1, #chapterConfig / 10 do
         local levelStyle3 = require('view.level.RepeatLevelLayer')
         local levelLayer3 = levelStyle3.create(chapterKey,'level'..((i-1)*10))
@@ -155,13 +177,13 @@ function LevelLayer:ctor()
     -- level layer state manager
     self:levelStateManager()
     local function listViewEvent(sender, eventType)
-        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
+        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_END then
             print("select child index = ",sender:getCurSelectedIndex())
             local item1 = sender:getItem(0)
             
-            if sender:getCurSelectedIndex() == 2 then
+            if sender:getCurSelectedIndex() == 3 then
                 connection1_2:plotUnlockChapterAnimation()
-                --listView:removeItem(0)
+                listView:removeItem(0)
             end
         end
     end
@@ -192,7 +214,6 @@ function LevelLayer:ctor()
     -- add list view item1
     local item1 = ccui.Layout:create()
     item1:setContentSize(levelLayerI:getContentSize())    
-    --print('item1:contentSize'..item1:getContentSize().width..','..item1:getContentSize().height)
     levelLayerI:setPosition(cc.p(0, 0))
     item1:addChild(levelLayerI)
     listView:addChild(item1)     
@@ -231,6 +252,9 @@ function LevelLayer:ctor()
 --    item3:addChild(levelLayer3)
 --    listView:addChild(item3)
     self:addChapterIntoListView('chapter2')
+    self:addChapterIntoListView('chapter3')
+    self:addChapterIntoListView('chapter4')
+    self:addChapterIntoListView('chapter5')
     
     local innerHeight = item1:getContentSize().height+item2:getContentSize().height+item1_2:getContentSize().height
     listView:setInnerContainerSize(cc.size(item1:getContentSize().width,innerHeight))

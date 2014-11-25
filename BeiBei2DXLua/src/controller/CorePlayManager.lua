@@ -86,6 +86,7 @@ function CorePlayManager.leaveStudyLayer()
 end
 
 function CorePlayManager.enterTestLayer()
+    s_SCENE.gameLayerState = s_test_game_state
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
 --    s_SCENE.gameLayerState = s_test_game_state
     if s_CURRENT_USER.currentChapterKey == "chapter0" then

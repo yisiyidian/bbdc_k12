@@ -209,7 +209,7 @@ end
 function LevelLayerI:plotReviewBossPassOnLevel(levelKey)
 --    local levelButton = self:getChildByName(levelKey)
 --    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzls  xuanxiaoguan  diaoluo.json', 'spine/3fxzls  xuanxiaoguan  diaoluo.atlas', 1)
---    reviewBoss:addAnimation(0, 'animation', true)
+--    reviewBoss:addAnimation(0, '2', true)
 --    reviewBoss:setPosition(0, 0)
 --    levelButton:addChild(reviewBoss)
 --    local action1 = cc.RotateBy:create(0.5, 180)
