@@ -247,12 +247,12 @@ function Manager.saveDataClassObject(objectOfDataClass)
     if num == 0 then
         local keys, values = insert()
         local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
-        s_logd(query)
-        Manager.database:exec(query)
+        local ret = Manager.database:exec(query)
+        s_logd('[sql result:' .. tostring(ret) .. ']: ' .. query)
     else
         local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
-        s_logd(query)
-        Manager.database:exec(query)
+        local ret = Manager.database:exec(query)
+        s_logd('[sql result:' .. tostring(ret) .. ']: ' .. query)
     end
 end
 
@@ -260,17 +260,20 @@ local function getUserDataFromLocalDB(objectOfDataClass, isJustNeedToFindGuest)
     local lastLogIn = 0
     local data = nil
     for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
-        -- print_lua_table(row)
-        if row.updatedAt > lastLogIn then
+        print ('sql result:')
+        print_lua_table(row)
+        local rowTime = row.updatedAt
+        if rowTime <= 0 then rowTime = row.createdAt end
+        if rowTime > lastLogIn then
             s_logd(string.format('getUserDataFromLocalDB updatedAt: %s, %f, %f', row.objectId, row.updatedAt, lastLogIn))
 
             if isJustNeedToFindGuest then
                 if row.isGuest == 1 then
-                    lastLogIn = row.updatedAt
+                    lastLogIn = rowTime
                     data = row
                 end
             else
-                lastLogIn = row.updatedAt
+                lastLogIn = rowTime
                 data = row
             end
         
