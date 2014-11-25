@@ -93,7 +93,7 @@ local test_code = 0
 -- *************************************
 if test_code == 0 then
    local startApp = function ()
-       if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+       if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
        else
            local IntroLayer = require("view.login.IntroLayer")

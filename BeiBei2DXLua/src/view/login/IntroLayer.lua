@@ -91,8 +91,8 @@ function IntroLayer.create()
     
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            local hasGuest = s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER)
-            if hasGuest and s_CURRENT_USER.isGuest == 1 then
+            local hasGuest = s_DATABASE_MGR.getLastLogInGuest(s_CURRENT_USER)
+            if hasGuest then
                 s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
             else
                 visitLogin()
@@ -251,7 +251,7 @@ function IntroLayer.create()
                             loginAlter.close = function() layer:removeChildByTag(2) end 
                         end
 
-                        local hasAccount = s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER)
+                        local hasAccount = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER)
                         
                         if not (hasAccount and s_CURRENT_USER.isGuest == 1) then
                             gotoRegistNewAccount()

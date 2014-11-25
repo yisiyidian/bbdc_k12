@@ -256,15 +256,24 @@ function Manager.saveDataClassObject(objectOfDataClass)
     end
 end
 
-function Manager.getUserDataFromLocalDB(objectOfDataClass)
+local function getUserDataFromLocalDB(objectOfDataClass, isJustNeedToFindGuest)
     local lastLogIn = 0
     local data = nil
     for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
         -- print_lua_table(row)
         if row.updatedAt > lastLogIn then
             s_logd(string.format('getUserDataFromLocalDB updatedAt: %s, %f, %f', row.objectId, row.updatedAt, lastLogIn))
-            lastLogIn = row.updatedAt
-            data = row
+
+            if isJustNeedToFindGuest then
+                if row.isGuest == 1 then
+                    lastLogIn = row.updatedAt
+                    data = row
+                end
+            else
+                lastLogIn = row.updatedAt
+                data = row
+            end
+        
         end
     end
 
@@ -274,6 +283,14 @@ function Manager.getUserDataFromLocalDB(objectOfDataClass)
     end
 
     return false
+end
+
+function Manager.getLastLogInUser(objectOfDataClass)
+    return getUserDataFromLocalDB(objectOfDataClass, false)
+end
+
+function Manager.getLastLogInGuest(objectOfDataClass)
+    return getUserDataFromLocalDB(objectOfDataClass, true)
 end
 
 function Manager.getDataConfigsFromLocalDB(objectOfDataClass)

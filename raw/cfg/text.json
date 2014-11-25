@@ -578,23 +578,23 @@
     },
     {
         "key": "loading_update_user_data",
-        "cn": "10%，正在更新用户数据，请稍等"
+        "cn": "15%，正在更新用户数据，请稍等"
     },
     {
         "key": "loading_update_daily_login_data",
-        "cn": "18%，正在获取每日一词信息，请稍等"
+        "cn": "39%，正在获取每日一词信息，请稍等"
     },
     {
         "key": "loading_update_config_data",
-        "cn": "50%，正在更新配置，请稍等"
+        "cn": "66%，正在更新配置，请稍等"
     },
     {
         "key": "loading_update_friend_data",
-        "cn": "72%，正在获取好友数据，请稍等"
+        "cn": "83%，正在获取好友数据，请稍等"
     },
     {
         "key": "loading_level_data",
-        "cn": "88%，正在同步关卡数据，请稍等"
+        "cn": "91%，正在同步关卡数据，请稍等"
     },
     {
         "key": "BulletinBoard",
