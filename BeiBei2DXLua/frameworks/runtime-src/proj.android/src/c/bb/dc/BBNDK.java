@@ -1,9 +1,12 @@
 package c.bb.dc;
 
+import org.cocos2dx.lib.Cocos2dxActivity;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
 
@@ -56,13 +59,14 @@ public class BBNDK {
 	// ***************************************************************************************************************************
 	
 	public static void showMail(String mailTitle, String username) {
-		Intent i = new Intent(Intent.ACTION_SEND);
-		i.setType("message/rfc822");
-		i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"beibeidanci@qq.com"});
-		i.putExtra(Intent.EXTRA_SUBJECT, mailTitle + ":" + username);
-		i.putExtra(Intent.EXTRA_TEXT   , "这是我的反馈，贝贝请认真看哦!\n");
+		Intent intent = new Intent(Intent.ACTION_SENDTO);
+		intent.setData(Uri.parse("mailto:beibeidanci@qq.com"));
+//		intent.setType("message/rfc822");
+//		intent.putExtra(Intent.EXTRA_EMAIL  , new String[]{"beibeidanci@qq.com"});
+		intent.putExtra(Intent.EXTRA_SUBJECT, mailTitle + ":" + username);
+		intent.putExtra(Intent.EXTRA_TEXT   , "这是我的反馈，贝贝请认真看哦!\n");
 		try {
-			_instance.startActivity(Intent.createChooser(i, "发送反馈邮件"));
+			_instance.startActivity(Intent.createChooser(intent, "发送反馈邮件"));
 		} catch (android.content.ActivityNotFoundException ex) {
 		    Toast.makeText(_instance, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 		}
@@ -87,18 +91,18 @@ public class BBNDK {
 			@Override
 			public void done(final AVFile file, AVException e) {
 				if (file == null || e != null) {
-					invokeLuaCallbackFunctionDL(objectId, file != null ? file.getOriginalName() : "", e != null ? e.getLocalizedMessage() : "get file object error", 0);
+					onDownloadFile(objectId, file != null ? file.getOriginalName() : "", e != null ? e.getLocalizedMessage() : "get file object error", 0);
 				} else {
 					file.getDataInBackground(new GetDataCallback() {
 						@Override
 						public void done(byte[] data, AVException arg1) {
 							if (arg1 != null) {
-								invokeLuaCallbackFunctionDL(objectId, file != null ? file.getOriginalName() : "", arg1.getLocalizedMessage(), 0);
+								onDownloadFile(objectId, file != null ? file.getOriginalName() : "", arg1.getLocalizedMessage(), 0);
 							} else {
 								if (data != null && data.length > 0 && BBUtils.saveFile(savepath, file.getOriginalName(), data)) {
-									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file succeed", 1);
+									onDownloadFile(objectId, file.getOriginalName(), "save file succeed", 1);
 								} else {
-									invokeLuaCallbackFunctionDL(objectId, file.getOriginalName(), "save file error", 0);
+									onDownloadFile(objectId, file.getOriginalName(), "save file error", 0);
 								}
 							}
 						}
@@ -109,6 +113,17 @@ public class BBNDK {
 					});
 				}
 			}
+		});
+	}
+	
+	private static void onDownloadFile(final String objectId, final String filename, final String error, final int isSaved) {
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionDL(objectId, filename, error, isSaved);
+			}
+			
 		});
 	}
 	
@@ -129,11 +144,10 @@ public class BBNDK {
 	// ***************************************************************************************************************************
 	
 	private static String AVUserToJsonStr(AVUser user) {
-//		TODO: Android unknown error
-//		org.json.JSONObject json = user.toJSONObject();
-//		return json.toString();
+		org.json.JSONObject json = user.toJSONObject();
+		return json.toString();
 		
-		return user.getSessionToken();
+//		return user.getSessionToken();
 	}
 	
 	public static void signUp(String username, String password) {
@@ -143,11 +157,22 @@ public class BBNDK {
 		user.signUpInBackground(new SignUpCallback() {
 		    public void done(AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionSU(AVUserToJsonStr(user), null, 0);
+		        	onSignUp(AVUserToJsonStr(user), null, 0);
 		        } else {
-		        	invokeLuaCallbackFunctionSU(null, e.getLocalizedMessage(), e.getCode());
+		        	onSignUp(null, e.getLocalizedMessage(), e.getCode());
 		        }
 		    }
+		});
+	}
+	
+	private static void onSignUp(final String objectjson, final String error, final int errorcode) {
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionSU(objectjson, error, errorcode);
+			}
+			
 		});
 	}
 	
@@ -155,11 +180,22 @@ public class BBNDK {
 		AVUser.logInInBackground(username, password, new LogInCallback<AVUser>() {
 			public void done(AVUser user, AVException e) {
 		        if (e == null) {
-		        	invokeLuaCallbackFunctionLI(AVUserToJsonStr(user), null, 0);
+		        	onLogIn(AVUserToJsonStr(user), null, 0);
 		        } else {
-		        	invokeLuaCallbackFunctionLI(null, e.getLocalizedMessage(), e.getCode());
+		        	onLogIn(null, e.getLocalizedMessage(), e.getCode());
 		        }
 		    }
+		});
+	}
+	
+	private static void onLogIn(final String objectjson, final String error, final int errorcode) {
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionLI(objectjson, error, errorcode);
+			}
+			
 		});
 	}
 	
@@ -179,7 +215,9 @@ public class BBNDK {
 			@Override
 			public void run() {
 				_hideCXProgressHUD();
-				_loadingView = ProgressDialog.show(_instance, "", content, true);
+				if (_loadingView == null) {
+					_loadingView = ProgressDialog.show(_instance, "", content, true);
+				}
 			}
 			
 		});
