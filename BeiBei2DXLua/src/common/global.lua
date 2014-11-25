@@ -43,6 +43,7 @@ end
 
 local function _initTool()
     require("CCBReaderLoad")
+    require('GuiConstants')
     
     -- tools
     s_JSON = require("common/json")

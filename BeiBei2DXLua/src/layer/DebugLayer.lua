@@ -14,10 +14,21 @@ function DebugLayer.create()
     layer.debugInfo:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
     layer:addChild(layer.debugInfo)
 
+    layer.debugInfo2 = cc.Label:createWithSystemFont("DEBUG:V:"..s_APP_VERSION, "Helvetica", 24)
+    layer.debugInfo2:setTextColor(cc.c4b(0, 0, 0, 255))
+    layer.debugInfo2:setAnchorPoint(cc.p(0, 1))
+    layer.debugInfo2:setPosition(s_LEFT_X + 1, s_DESIGN_HEIGHT - 1)
+    layer:addChild(layer.debugInfo2)
+
     layer:scheduleUpdateWithPriorityLua(function (dt)
+        local str = ''
         if AgentManager ~= nil then
-            layer.debugInfo:setString('channel:' .. AgentManager:getInstance():getChannelId()..',V:'..s_APP_VERSION)
+            str  = 'channel:' .. AgentManager:getInstance():getChannelId() .. ',V:' .. s_APP_VERSION .. ', name:' .. s_CURRENT_USER.username
+        else
+            str = 'channel:UN' .. ',V:' .. s_APP_VERSION .. ', name:' .. s_CURRENT_USER.username
         end
+        layer.debugInfo:setString(str)
+        layer.debugInfo2:setString(str)
     end, 0)
     
     return layer

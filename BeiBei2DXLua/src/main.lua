@@ -27,8 +27,8 @@ start = function ()
     require("common.global")
     initApp(start)
 
-    local LEAN_CLOUD_ID_TEST   = "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
-    local LEAN_CLOUD_KEY_TEST  = "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
+    local LEAN_CLOUD_ID_TEST   = "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp" -- "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
+    local LEAN_CLOUD_KEY_TEST  = "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz" -- "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
 
     local LEAN_CLOUD_ID        = "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
     local LEAN_CLOUD_KEY       = "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
@@ -93,7 +93,7 @@ local test_code = 0
 -- *************************************
 if test_code == 0 then
    local startApp = function ()
-       if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getUserDataFromLocalDB(s_CURRENT_USER) then
+       if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
        else
            local IntroLayer = require("view.login.IntroLayer")
