@@ -165,7 +165,8 @@ function AppScene:startLoadingData(hasAccount, username, password)
         elseif s_CURRENT_USER.bookKey == '' then
             s_SCENE:getConfigs(true)
         else
-            s_SCENE:getDailyCheckIn()
+            -- s_SCENE:getDailyCheckIn()
+            s_SCENE:getConfigs(false)
         end
     end
 
@@ -182,40 +183,40 @@ function AppScene:logIn(username, password)
     self:startLoadingData(true, username, password)
 end
 
-function AppScene:getDailyCheckIn()
-    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
-    local co
-    co = coroutine.create(function(results)
-        if (results ~= nil) and (#results > 0) then
-            print ('getDailyCheckInOfCurrentUser: 02')
-            s_CURRENT_USER:parseServerDailyCheckInData(results)
-            s_SCENE:getConfigs(false)
-        else
-            print ('getDailyCheckInOfCurrentUser: 03')
-            s_CURRENT_USER.dailyCheckInData.userId = s_CURRENT_USER.objectId
-            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData, 
-                function (api, result)
-                    print_lua_table (s_CURRENT_USER.dailyCheckInData)
-                    coroutine.resume(co, {})
-                end,
-                function (api, code, message, description)
-                    coroutine.resume(co, {})
-                end)
-            coroutine.yield()
-            s_SCENE:getConfigs(false)
-        end    
-    end)
-    s_UserBaseServer.getDailyCheckInOfCurrentUser( 
-        function (api, result)
-            print ('getDailyCheckInOfCurrentUser: 00')
-            coroutine.resume(co, result.results)
-        end,
-        function (api, code, message, description) 
-            print ('getDailyCheckInOfCurrentUser: 01')
-            coroutine.resume(co, {}) -- can not pass nil value
-        end
-    )
-end
+-- function AppScene:getDailyCheckIn()
+--     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
+--     local co
+--     co = coroutine.create(function(results)
+--         if (results ~= nil) and (#results > 0) then
+--             print ('getDailyCheckInOfCurrentUser: 02')
+--             s_CURRENT_USER:parseServerDailyCheckInData(results)
+--             s_SCENE:getConfigs(false)
+--         else
+--             print ('getDailyCheckInOfCurrentUser: 03')
+--             s_CURRENT_USER.dailyCheckInData.userId = s_CURRENT_USER.objectId
+--             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData, 
+--                 function (api, result)
+--                     print_lua_table (s_CURRENT_USER.dailyCheckInData)
+--                     coroutine.resume(co, {})
+--                 end,
+--                 function (api, code, message, description)
+--                     coroutine.resume(co, {})
+--                 end)
+--             coroutine.yield()
+--             s_SCENE:getConfigs(false)
+--         end    
+--     end)
+--     s_UserBaseServer.getDailyCheckInOfCurrentUser( 
+--         function (api, result)
+--             print ('getDailyCheckInOfCurrentUser: 00')
+--             coroutine.resume(co, result.results)
+--         end,
+--         function (api, code, message, description) 
+--             print ('getDailyCheckInOfCurrentUser: 01')
+--             coroutine.resume(co, {}) -- can not pass nil value
+--         end
+--     )
+-- end
 
 function AppScene:getConfigs(noBookKey)
     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_CONFIG_DATA))
@@ -331,7 +332,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         updateWeek(nil, 1)
     else
-        print ('%d , %d', os.time(), s_CURRENT_USER.localTime)
+        print ('os time, local time:', os.time(), s_CURRENT_USER.localTime)
         local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
         s_UserBaseServer.getDataLogIn(s_CURRENT_USER.objectId, currentWeeks,
             function (api, result)
