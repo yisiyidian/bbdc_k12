@@ -74,7 +74,7 @@ function IntroLayer.create()
         local randomUserName = genRandomUserName()
         s_logd("randomUserName: "..randomUserName)
 
-        s_LOADING_CIRCLE_LAYER:show()
+        showProgressHUD()
         s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
             if result.count <= 0 then -- not exist the user name
                 s_CURRENT_USER.isGuest = 1
@@ -85,7 +85,7 @@ function IntroLayer.create()
         end,
         function (api, code, message, description)
             s_TIPS_LAYER:showSmall(message)
-            s_LOADING_CIRCLE_LAYER:hide()
+            hideProgressHUD()
         end)
     end
     

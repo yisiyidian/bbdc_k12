@@ -1,6 +1,7 @@
 package c.bb.dc;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Environment;
@@ -21,8 +22,8 @@ public class BBNDK {
 	private static Context _context = null;
 	private static Activity _instance = null;
 	
-	public static Activity getActivity() {
-		return _instance;
+	public static Context getContext() {
+		return _context;
 	}
 
 	public static void setup(Context context, Activity instance) {
@@ -61,9 +62,9 @@ public class BBNDK {
 		i.putExtra(Intent.EXTRA_SUBJECT, mailTitle + ":" + username);
 		i.putExtra(Intent.EXTRA_TEXT   , "这是我的反馈，贝贝请认真看哦!\n");
 		try {
-			getActivity().startActivity(Intent.createChooser(i, "发送反馈邮件"));
+			_instance.startActivity(Intent.createChooser(i, "发送反馈邮件"));
 		} catch (android.content.ActivityNotFoundException ex) {
-		    Toast.makeText(getActivity(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+		    Toast.makeText(_instance, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 		}
 	}
 	
@@ -170,20 +171,36 @@ public class BBNDK {
 	// loading circle
 	// ***************************************************************************************************************************
 	
-	private static BBProgressHUD _cxph = null;
+	private static ProgressDialog _loadingView = null;
 	
-	public static void showCXProgressHUD(String content) {
-//		if (_cxph == null) {
-//			_cxph = new BBProgressHUD();
-//			_cxph.setContent(content);
-//		}
-//		_cxph.execute();
+	public static void showCXProgressHUD(final String content) {
+		_instance.runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				_hideCXProgressHUD();
+				_loadingView = ProgressDialog.show(_instance, "", content, true);
+			}
+			
+		});
+	}
+	
+	private static void _hideCXProgressHUD() {
+		if (_loadingView != null) {
+			_loadingView.dismiss();
+		}
+		_loadingView = null;
 	}
 	
 	public static void hideCXProgressHUD() {
-//		if (_cxph == null) {
-//			_cxph.hide();
-//		}
+		_instance.runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				_hideCXProgressHUD();
+			}
+			
+		});
 	}
 	
 	// ***************************************************************************************************************************

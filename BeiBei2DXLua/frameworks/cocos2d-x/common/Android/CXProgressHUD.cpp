@@ -14,8 +14,6 @@ void CXProgressHUD::setupWindow(void* uiWindow) {
 }
 
 void CXProgressHUD::show(const char* content) {
-    CXProgressHUD::hide();
-
     cocos2d::JniMethodInfo t;
     if (cocos2d::JniHelper::getStaticMethodInfo(t, "c/bb/dc/BBNDK", "showCXProgressHUD", "(Ljava/lang/String;)V")) {
         jstring stringArg_content = t.env->NewStringUTF(content ? content : "Loading");

@@ -111,11 +111,11 @@ showLogin = function()
                         else        
                             main.close()                    
                         end     
-                        s_LOADING_CIRCLE_LAYER:hide()
+                        hideProgressHUD()
                 end)
             end
 
-            s_LOADING_CIRCLE_LAYER:show()
+            showProgressHUD()
             
             if main.layerType == ImproveInfoUpdateNamePwd_FROM_HOME_LAYER then
                 updateUserNameAndPassword()
@@ -123,7 +123,7 @@ showLogin = function()
                 s_UserBaseServer.logIn(s_CURRENT_USER.username, s_CURRENT_USER.password, function (userdata, errordescription, errorcode)
                     if errordescription ~= nil then
                         s_TIPS_LAYER:showSmall(errordescription)
-                        s_LOADING_CIRCLE_LAYER:hide()
+                        hideProgressHUD()
                     else
                         updateUserNameAndPassword()
                         s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)

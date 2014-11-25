@@ -51,22 +51,22 @@ function BookLayer.create()
                     
                     s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
                     
-                    s_LOADING_CIRCLE_LAYER:show()
+                    showProgressHUD()
                     s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
                         function (api, result)
                             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
                                 function (api, result)
                                     s_CorePlayManager.enterHomeLayer()
-                                    s_LOADING_CIRCLE_LAYER:hide()
+                                    hideProgressHUD()
                                 end,
                                 function (api, code, message, description)
                                     s_TIPS_LAYER:showSmall(message)
-                                    s_LOADING_CIRCLE_LAYER:hide()
+                                    hideProgressHUD()
                                 end)
                         end,
                         function (api, code, message, description)
                             s_TIPS_LAYER:showSmall(message)
-                            s_LOADING_CIRCLE_LAYER:hide()
+                            hideProgressHUD()
                         end)
                 end      
                 s_TIPS_LAYER:showSmall("选择"..full_name_array[i].."课程", affirm)

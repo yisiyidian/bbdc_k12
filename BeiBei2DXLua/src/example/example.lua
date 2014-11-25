@@ -24,6 +24,8 @@ function test()
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
 
+    -- cx.CXProgressHUD:show('info')
+
 --    local wordList = require('view.wordlist.WordMenu')
 --    local layer = wordList.create()
 --    s_SCENE:replaceGameLayer(layer)

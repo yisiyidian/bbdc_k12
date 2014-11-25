@@ -175,9 +175,9 @@ function StudyLayerIII.create()
     --s_logd("new wrong")
     end
     if s_CorePlayManager.newPlayerState then
-        mat = FlipMat.create(wordName,4,4,true)
+        mat = FlipMat.create(wordName,4,4,true,false)
     else
-        mat = FlipMat.create(wordName,4,4,false)
+        mat = FlipMat.create(wordName,4,4,false,false)
     end
     mat:setPosition(s_DESIGN_WIDTH/2*3, 120)
     layer:addChild(mat)

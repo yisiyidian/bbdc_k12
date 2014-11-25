@@ -188,7 +188,7 @@ function TestLayerIII.create()
         layer:runAction(action3) 
     end
 
-    local mat = FlipMat.create(wordName,4,4,false)
+    local mat = FlipMat.create(wordName,4,4,false,false)
     mat:setPosition(bigWidth/2, 100)
     back_down:addChild(mat)
 
