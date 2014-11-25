@@ -74,7 +74,7 @@ end
 
 function LevelLayerI:plotStarAnimation(levelKey, starCount)
     local levelButton = self:getChildByName(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
     if levelConfig['type'] == 0 then
         local star1, star2, star3
         if starCount >= 3 then
@@ -182,7 +182,7 @@ end
 
 function LevelLayerI:getPlayerPositionForLevel(levelKey)
     local levelButton = self:getChildByName(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
     local levelIndex = string.sub(levelKey, 6)
     --print(levelButton:getPositionX()..','..levelButton:getPositionY())
     local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
@@ -221,10 +221,8 @@ end
 
 function LevelLayerI:plotLevelDecoration(levelKey)
     local levelButton = self:getChildByName(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    --print('####################'..s_CURRENT_USER.bookKey..','..s_CURRENT_USER.currentChapterKey)
-    --print_lua_table(levelConfig)
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData('chapter0', levelKey)
     local levelIndex = string.sub(levelKey, 6)
 
     if levelKey == 'level3' or levelKey == 'level10' then  -- plot boat animation
@@ -304,12 +302,7 @@ local onTouchBegan = function(touch, event)
 end
 
 function LevelLayerI:ctor()
---    self:initHead()
     self.ccbLevelLayerI = {}
---    self.ccbLevelLayerI['onLevelButtonClicked'] = 
---    function(levelTag)
---        self:onLevelButtonClicked('level'..(levelTag-1))
---    end
     self.ccb = {}
     self.ccb['chapter1'] = self.ccbLevelLayerI
     
@@ -323,8 +316,6 @@ function LevelLayerI:ctor()
     contentNode:setContentSize(cc.size(854, 2527))
     self:setContentSize(contentNode:getContentSize())
     self:setAnchorPoint(0, 0)
---    print('I:contentSize')
---    print_lua_table(self:getContentSize())
     self:addChild(contentNode)
 
     -- level button touch event
@@ -352,8 +343,6 @@ function LevelLayerI:ctor()
                 levelButton:addTouchEventListener(touchEvent)  
                 if s_CURRENT_USER:getIsLevelUnlocked(levelConfig[i]['chapter_key'],levelConfig[i]['level_key']) then
                     self:plotLevelDecoration(levelConfig[i]['level_key'])
-                    --levelButton:setNormalImage(cc.Sprite:create())
-                    --levelButton:setSelectedImage(cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'))
                 else
                     local lockLayer = cc.Sprite:create('ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_locked.png')
                     lockLayer:setPosition(levelButton:getContentSize().width/2 - 11, levelButton:getContentSize().height/2 + 5)
@@ -406,8 +395,8 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
     --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
     local levelButton = self:getChildByName(levelKey)
     -- check level type
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData('chapter0', levelKey)
     if s_SCENE.levelLayerState == s_review_boss_appear_state and levelKey == 'level'..(string.sub(s_CURRENT_USER.currentLevelKey,6)+1)then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()

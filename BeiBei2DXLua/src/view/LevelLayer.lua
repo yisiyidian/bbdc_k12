@@ -7,6 +7,7 @@ local LevelLayer = class("LevelLayer", function()
     return cc.Layer:create()
 end)
 
+local listView
 local player
 local levelLayerI
 local levelLayerII
@@ -121,7 +122,6 @@ function LevelLayer:levelStateManager()
 end
 
 function LevelLayer:ctor()
-    --print('---levelSceneState:'..(s_SCENE.levelLayerState == s_review_boss_pass_state))
     local levelStypeI = require('view.level.LevelLayerI')
     local levelStypeII = require('view.level.LevelLayerII')
     local connectionLayer1_2 = require('view.level.connection.Connection1_2')
@@ -140,28 +140,6 @@ function LevelLayer:ctor()
     
     -- level layer state manager
     self:levelStateManager()
---    local scrollViewNode = ccui.ScrollView:create()    
--- -- scroll view scroll
---    local function scrollViewDidScroll()
---        print 'scrollview did scroll'
---        print(scrollViewNode:getPosition())
---    end
---    
---    local function scrollViewDidZoom()
---        print 'scrollview did zoom'
---    end
---    
---    if nil ~= scrollViewNode then
---        local fullWidth = levelLayerI:getContentSize().width
---        scrollViewNode:setPosition((s_DESIGN_WIDTH - fullWidth) / 2, 0)
---        scrollViewNode:setContentSize(fullWidth, s_DESIGN_HEIGHT)
---        scrollViewNode:setInnerContainerSize(cc.size(fullWidth, levelLayerI:getContentSize().height))  
---        scrollViewNode:addChild(levelLayerI) 
---        scrollViewNode:setTouchEnabled(true)
---        scrollViewNode:scrollToPercentVertical(90,1, true)
---        self:addChild(scrollViewNode)
---    end
---
     local function listViewEvent(sender, eventType)
         if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
             print("select child index = ",sender:getCurSelectedIndex())
@@ -169,6 +147,7 @@ function LevelLayer:ctor()
             
             if sender:getCurSelectedIndex() == 2 then
                 connection1_2:plotUnlockChapterAnimation()
+                --listView:removeItem(0)
             end
         end
     end
@@ -179,11 +158,11 @@ function LevelLayer:ctor()
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
         elseif evenType == ccui.ScrollviewEventType.scrolling then
-            print('SCROLLING:'..sender:getPosition())
+            --print('SCROLLING:'..sender:getPosition())
         end
     end  
     -- create list view
-    local listView = ccui.ListView:create()
+    listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(false)
     listView:setBackGroundImageScale9Enabled(true)
@@ -195,38 +174,11 @@ function LevelLayer:ctor()
     listView:removeAllChildren()
     self:addChild(listView)
     
---    local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
---    custom_button:setName("custom_button")
---    custom_button:setTitleText('123')
---    custom_button:setScale9Enabled(true)
---    --custom_button:setContentSize(default_button:getContentSize())
---    --custom_button:addTouchEventListener(testEvent)
---    local function touchEvent(sender,eventType)
---        if eventType == ccui.TouchEventType.ended then
---            print('button clicked')
---
---        end
---    end
-    --custom_button:addTouchEventListener(touchEvent)
---    local levelImageName = 'ccb/ccbResources/chapter_level/button_xuanxiaoguan1_bosslevel_unlocked.png'
---    local levelButton = ccui.Button:create(levelImageName, levelImageName, levelImageName)
---    levelButton:setPosition(100,100)
---    levelButton:setName('123')
---    levelButton:setScale9Enabled(true)
---    
---    custom_button:setContentSize(cc.size(856,1000))
---    custom_button:addChild(levelLayerI) 
---    local custom_item = ccui.Layout:create()
---    custom_item:setContentSize(custom_button:getContentSize())
---    custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
---    custom_item:addChild(custom_button)
---    custom_item:setName('123')
---    listView:addChild(custom_item)
     
     -- add list view item1
     local item1 = ccui.Layout:create()
     item1:setContentSize(levelLayerI:getContentSize())    
-    print('item1:contentSize'..item1:getContentSize().width..','..item1:getContentSize().height)
+    --print('item1:contentSize'..item1:getContentSize().width..','..item1:getContentSize().height)
     levelLayerI:setPosition(cc.p(0, 0))
     item1:addChild(levelLayerI)
     listView:addChild(item1)     
@@ -239,37 +191,37 @@ function LevelLayer:ctor()
     item1_2:addChild(connection1_2)
     listView:addChild(item1_2)
     
+    -- add chapter2 upGap Layer
+    local item2_upGap = ccui.Layout:create()
+    local GapLayer = require('view.level.GapLayer')
+    local chapter2_upGap = GapLayer.create()
+    item2_upGap:setContentSize(chapter2_upGap:getContentSize())
+    item2_upGap:setTouchEnabled(true)
+    chapter2_upGap:setPosition(cc.p(0,0))
+    item2_upGap:addChild(chapter2_upGap)
+    listView:addChild(item2_upGap)
+    
     -- add list view item2
     local item2 = ccui.Layout:create()
     item2:setTouchEnabled(true)
-    item2:setContentSize(levelLayerII:getContentSize())    
+    item2:setContentSize(levelLayerII:getContentSize())  
     levelLayerII:setPosition(cc.p(0, 0))
     item2:addChild(levelLayerII)
-    --listView:insertCustomItem(item2,2)
     listView:addChild(item2)
-    listView:setInnerContainerSize(cc.size(item1:getContentSize().width,item1:getContentSize().height+item2:getContentSize().height))
-    print_lua_table(listView:getInnerContainerSize())
-    --s_CURRENT_USER.currentLevelKey = 'level12'
+    -- add chapter3
+    local levelStyle3 = require('view.level.RepeatLevelLayer')
+    local levelLayer3 = levelStyle3.create('chapter3','level0')
+    levelLayer3:setPosition(cc.p(0,0))
+    local item3 = ccui.Layout:create()
+    item3:setContentSize(levelLayer3:getContentSize())
+    item3:addChild(levelLayer3)
+    listView:addChild(item3)
+    
+    local innerHeight = item1:getContentSize().height+item2:getContentSize().height+item1_2:getContentSize().height
+    listView:setInnerContainerSize(cc.size(item1:getContentSize().width,innerHeight))
+    --print_lua_table(listView:getInnerContainerSize())
     local currentVerticalPercent = string.sub(s_CURRENT_USER.currentSelectedLevelKey,6)/12.0 * 30+1
     listView:scrollToPercentVertical(currentVerticalPercent,0,false)
-    
-    --listView:scrollToPercentVertical(50,0,false)
-    local item1_2 = ccui.Layout:create()
-    local connection1_2 = cc.Scale9Sprite:create('ccb/ccbResources/chapter_level/connection/connection_xuanxiaoguan1-2_background.png')
-    item1_2:setContentSize(connection1_2:getContentSize())
-    connection1_2:setPosition(cc.p(item1_2:getContentSize().width/2, item1_2:getContentSize().height/2))
-    local chapterImage = cc.Sprite:create('image/chapter_level/tittle_xuanxiaoguan2_losangles.png')
-    chapterImage:setPosition(connection1_2:getContentSize().width/2, connection1_2:getContentSize().height/2)
-    connection1_2:addChild(chapterImage)
-    item1_2:addChild(connection1_2)
-    listView:pushBackCustomItem(item1_2)
---    local item2 = ccui.Layout:create()
---    item2:setTouchEnabled(true)
---    item2:setContentSize(levelLayerII:getContentSize())    
---    levelLayerII:setPosition(cc.p(item2:getContentSize().width/2, item2:getContentSize().height/2))
---    item2:addChild(levelLayerII)
---    listView:pushBackCustomItem(item2)
-    --listView:insertCustomItem(item1, 0)
 
 
     -- right top node

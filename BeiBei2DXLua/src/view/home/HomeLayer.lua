@@ -141,9 +141,11 @@ function HomeLayer.create()
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            showProgressHUD()
+            -- button sound
+            playSound(s_sound_buttonEffect)  
             s_CorePlayManager.enterLevelLayer()  
-              -- button sound
-             playSound(s_sound_buttonEffect)  
+            hideProgressHUD()
         end
     end
 
