@@ -33,17 +33,17 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
     if #newObjectIds > 0 then
 
         -- Android download new configs
-        if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-            local ids = ''
-            for i, v in ipairs(newObjectIds) do
-                ids = ids .. v
-                if i < #newObjectIds then ids = ids .. '|' end
-            end
-            cx.CXAvos:getInstance():downloadConfigFiles(ids, cc.FileUtils:getInstance():getWritablePath())
-            s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
-            if onCompleted ~= nil then onCompleted() end
-            return
-        end
+        -- if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        --     local ids = ''
+        --     for i, v in ipairs(newObjectIds) do
+        --         ids = ids .. v
+        --         if i < #newObjectIds then ids = ids .. '|' end
+        --     end
+        --     cx.CXAvos:getInstance():downloadConfigFiles(ids, cc.FileUtils:getInstance():getWritablePath())
+        --     s_DATABASE_MGR.saveDataClassObject(s_DATA_MANAGER.configs)
+        --     if onCompleted ~= nil then onCompleted() end
+        --     return
+        -- end
 
         -- iOS download new configs
         local index = 1
@@ -61,8 +61,10 @@ local function onGetDataConfigsSucceed(api, result, onCompleted)
                         end
                         coroutine.resume(co)
                     end)
+                print ('newObjectIds:', index, newObjectIds[index])
                 coroutine.yield()
                 index = index + 1
+                print ('newObjectIds 2:', index)
             end 
             s_DATABASE_MGR.saveDataClassObject(dataLocal)
             if onCompleted ~= nil then onCompleted() end
@@ -114,6 +116,7 @@ end
 -- test: '5430b806e4b0c0d48049e293'
 -- onDownloaded: function (objectId, filename, err, isSaved)
 function HttpRequestClient.downloadFileFromAVOSWithObjectId(fileObjectId, onDownloaded)
+    print ('downloadFileFromAVOSWithObjectId:', fileObjectId)
     cx.CXAvos:getInstance():downloadFile(fileObjectId, cc.FileUtils:getInstance():getWritablePath(), 
         function (objectId, filename, err, isSaved)
             s_logd('objectId:' .. fileObjectId .. ', filename:' .. cc.FileUtils:getInstance():getWritablePath() .. filename .. ', error:' .. tostring(err) .. ', isSaved:' .. tostring(isSaved))
