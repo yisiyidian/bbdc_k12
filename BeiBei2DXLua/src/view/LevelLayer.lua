@@ -121,6 +121,20 @@ function LevelLayer:levelStateManager()
      s_CURRENT_USER:updateDataToServer()
 end
 
+function LevelLayer:addChapterIntoListView(chapterKey)
+    local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
+    print('chapterConfig----------------'..#chapterConfig)
+    for i = 1, #chapterConfig / 10 do
+        local levelStyle3 = require('view.level.RepeatLevelLayer')
+        local levelLayer3 = levelStyle3.create(chapterKey,'level'..((i-1)*10))
+        levelLayer3:setPosition(cc.p(0,0))
+        local item3 = ccui.Layout:create()
+        item3:setContentSize(levelLayer3:getContentSize())
+        item3:addChild(levelLayer3)
+        listView:addChild(item3)
+    end
+end
+
 function LevelLayer:ctor()
     local levelStypeI = require('view.level.LevelLayerI')
     local levelStypeII = require('view.level.LevelLayerII')
@@ -209,13 +223,14 @@ function LevelLayer:ctor()
     item2:addChild(levelLayerII)
     listView:addChild(item2)
     -- add chapter3
-    local levelStyle3 = require('view.level.RepeatLevelLayer')
-    local levelLayer3 = levelStyle3.create('chapter3','level0')
-    levelLayer3:setPosition(cc.p(0,0))
-    local item3 = ccui.Layout:create()
-    item3:setContentSize(levelLayer3:getContentSize())
-    item3:addChild(levelLayer3)
-    listView:addChild(item3)
+--    local levelStyle3 = require('view.level.RepeatLevelLayer')
+--    local levelLayer3 = levelStyle3.create('chapter3','level0')
+--    levelLayer3:setPosition(cc.p(0,0))
+--    local item3 = ccui.Layout:create()
+--    item3:setContentSize(levelLayer3:getContentSize())
+--    item3:addChild(levelLayer3)
+--    listView:addChild(item3)
+    self:addChapterIntoListView('chapter2')
     
     local innerHeight = item1:getContentSize().height+item2:getContentSize().height+item1_2:getContentSize().height
     listView:setInnerContainerSize(cc.size(item1:getContentSize().width,innerHeight))
