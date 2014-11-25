@@ -204,17 +204,22 @@ function LevelLayer:ctor()
     -- add list view item2
     local item2 = ccui.Layout:create()
     item2:setTouchEnabled(true)
-    item2:setContentSize(levelLayerII:getContentSize()) 
-    print('item2:getContentSize:')
-    print_lua_table(item2:getContentSize())   
+    item2:setContentSize(levelLayerII:getContentSize())  
     levelLayerII:setPosition(cc.p(0, 0))
     item2:addChild(levelLayerII)
-    --listView:insertCustomItem(item2,2)
     listView:addChild(item2)
+    -- add chapter3
+    local levelStyle3 = require('view.level.RepeatLevelLayer')
+    local levelLayer3 = levelStyle3.create('chapter3','level0')
+    levelLayer3:setPosition(cc.p(0,0))
+    local item3 = ccui.Layout:create()
+    item3:setContentSize(levelLayer3:getContentSize())
+    item3:addChild(levelLayer3)
+    listView:addChild(item3)
+    
     local innerHeight = item1:getContentSize().height+item2:getContentSize().height+item1_2:getContentSize().height
     listView:setInnerContainerSize(cc.size(item1:getContentSize().width,innerHeight))
-    print_lua_table(listView:getInnerContainerSize())
-    --s_CURRENT_USER.currentLevelKey = 'level12'
+    --print_lua_table(listView:getInnerContainerSize())
     local currentVerticalPercent = string.sub(s_CURRENT_USER.currentSelectedLevelKey,6)/12.0 * 30+1
     listView:scrollToPercentVertical(currentVerticalPercent,0,false)
 
