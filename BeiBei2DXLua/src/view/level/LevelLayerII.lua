@@ -13,6 +13,38 @@ function LevelLayerII.create()
     return layer
 end
 
+function LevelLayerII:plotLevelNumber(levelKey)
+    local levelButton = self:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData('chapter1', levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelNumber = levelIndex + 1
+    if  levelData ~= nil and levelData.isLevelUnlocked == 1 then
+        if levelConfig['type'] == 1 then -- summary boss
+            local summaryboss = levelButton:getChildByName('summaryboss'..string.sub(levelKey,6))
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_straight.fnt')
+            number:setScale(1.6)
+            number:setString(levelNumber)
+            number:setPosition(125, 100)
+            summaryboss:addChild(number)
+        else 
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_inclined.fnt')
+            number:setString(levelNumber)
+            number:setPosition(levelButton:getContentSize().width/2-8, levelButton:getContentSize().height/2+3)
+            levelButton:addChild(number)
+        end
+    else
+        local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+        local lockNumber = ccui.TextBMFont:create()        
+        lockNumber:setFntFile('font/number_brown.fnt')
+        lockNumber:setString(levelNumber)
+        lockNumber:setPosition(lockSprite:getContentSize().width/2, lockSprite:getContentSize().height/2-6)
+        lockSprite:addChild(lockNumber)
+    end
+end
+
 -- define touch event
 local onTouchBegan = function(touch, event) 
     local touchPosition = touch:getLocation()
@@ -120,6 +152,7 @@ function LevelLayerII:ctor()
                     levelButton:addChild(lockSprite)               
                 end
             end
+            self:plotLevelNumber(levelConfig[i]['level_key'])
         end
     end
 
