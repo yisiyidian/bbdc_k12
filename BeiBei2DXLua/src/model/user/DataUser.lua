@@ -139,7 +139,7 @@ function DataUser:getUserCurrentChapterObtainedStarCount()
     local count = 0
     for i, v in ipairs(self.levels) do
         --print(v.chapterKey..','..v.levelKey..','..v.stars..','..v.isLevelUnlocked)
-        if v.chapterKey == self.currentChapterKey then
+        if v.chapterKey == self.currentChapterKey and v.bookKey == self.bookKey then
             local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,self.currentChapterKey,v.levelKey)
             if levelConfig['type'] == 0 then
                 count = count + v.stars
