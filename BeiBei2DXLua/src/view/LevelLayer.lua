@@ -16,6 +16,7 @@ local connection1_2
 local item2
 local connection2_3
 local item3
+local currentChapterLayer
 
 function LevelLayer.create()
     local layer = LevelLayer.new()
@@ -24,16 +25,9 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
+
     --s_CURRENT_USER:initLevels()
     -- check current chapter
-    local currentChapterLayer
-    if s_CURRENT_USER.currentChapterKey == 'chapter0' then
-        currentChapterLayer = levelLayerI
-    elseif s_CURRENT_USER.currentChapterKey == 'chapter1' then
-        currentChapterLayer = levelLayerII
-    elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
-        --currentChapterLayer = 
-    end
 
     -- CHECK unlock chapter state
     if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
@@ -207,20 +201,32 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
 end
 
 function LevelLayer:ctor()
+
     local levelStypeI = require('view.level.LevelLayerI')
     local levelStypeII = require('view.level.LevelLayerII')
     local connectionLayer1_2 = require('view.level.connection.Connection1_2')
     levelLayerI = levelStypeI.create()
     levelLayerII = levelStypeII.create()
     connection1_2 = connectionLayer1_2.create()
+    
+--    s_CURRENT_USER.currentChapterKey = 'chapter1'
+--    s_CURRENT_USER.currentLevelKey = 'level3'
+--    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    if s_CURRENT_USER.currentChapterKey == 'chapter0' then
+        currentChapterLayer = levelLayerI
+    elseif s_CURRENT_USER.currentChapterKey == 'chapter1' then
+        currentChapterLayer = levelLayerII
+    elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
+    --currentChapterLayer = 
+    end
     -- plot player position
-    local currentLevelButton = levelLayerI:getChildByName(s_CURRENT_USER.currentLevelKey)
+    local currentLevelButton = currentChapterLayer:getChildByName(s_CURRENT_USER.currentLevelKey)
     local image = 'image/chapter_level/gril_head.png'
     player = cc.MenuItemImage:create(image,image,image)
     player:setEnabled(false)
     player:setPosition(currentLevelButton:getPosition())
     player:setScale(0.4)
-    levelLayerI:addChild(player, 5)
+    currentChapterLayer:addChild(player, 5)
     
     -- level layer state manager
     self:levelStateManager()
