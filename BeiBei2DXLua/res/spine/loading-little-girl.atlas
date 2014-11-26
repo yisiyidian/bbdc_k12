@@ -1,0 +1,41 @@
+
+loading-little-girl.png
+size: 505,505
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+little_girl_arm
+  rotate: false
+  xy: 199, 464
+  size: 128, 41
+  orig: 128, 41
+  offset: 0, 0
+  index: -1
+little_girl_body
+  rotate: true
+  xy: 2, 88
+  size: 245, 107
+  orig: 245, 107
+  offset: 0, 0
+  index: -1
+little_girl_head
+  rotate: false
+  xy: 2, 335
+  size: 195, 170
+  orig: 195, 170
+  offset: 0, 0
+  index: -1
+little_girl_mouth
+  rotate: false
+  xy: 111, 311
+  size: 19, 22
+  orig: 19, 22
+  offset: 0, 0
+  index: -1
+little_girl_yawn
+  rotate: false
+  xy: 2, 2
+  size: 84, 84
+  orig: 84, 84
+  offset: 0, 0
+  index: -1

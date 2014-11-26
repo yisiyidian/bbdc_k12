@@ -177,7 +177,6 @@ function StudyLayerII.create()
         end
         
         local endEffect = function()
-        
         end
 
         local action1 = cc.DelayTime:create(1)

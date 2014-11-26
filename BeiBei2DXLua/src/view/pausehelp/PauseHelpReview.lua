@@ -39,6 +39,7 @@ function PauseHelpReview:ctor()
  end   
     function PauseHelpReview:onCloseButtonClicked()
         s_logd('on close button clicked')
+
         s_SCENE:removeAllPopups()
     end
 

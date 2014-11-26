@@ -9,6 +9,7 @@ local showGirlAndStar
 
 local main = nil
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+local button_goon_clicked_mark = 0
 
 function TestAlter.createFromFirstAlter()
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
@@ -18,6 +19,7 @@ function TestAlter.createFromFirstAlter()
     s_CorePlayManager.recordWordProciency()
     
     showGirlAndStar()
+    button_goon_clicked_mark = 0
     
     local onTouchBegan = function(touch, event)
         --s_logd("touch began on block layer")
@@ -60,6 +62,7 @@ end
 showGirlAndStar = function()
     local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
+--    s_SCENE:popup(back)
     main:addChild(back)
     
     local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
@@ -141,7 +144,7 @@ showGirlAndStar = function()
     back:runAction(action3)
     
     local button_goon_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended and button_goon_clicked_mark == 0 then
         
             local removeFirstAlter = function()
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
@@ -152,10 +155,10 @@ showGirlAndStar = function()
             local action1 = cc.CallFunc:create(removeFirstAlter)
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(showDetailInfo)
-            local action4 = cc.Sequence:create(action1, action2, action3)
-            
-            main:runAction(action4)       
-            
+            local action4 = cc.Sequence:create(action1, action2 , action3)
+            main:runAction(action4)   
+          
+            button_goon_clicked_mark = 1
             -- button sound
             playSound(s_sound_buttonEffect)
         end
@@ -173,6 +176,8 @@ showDetailInfo = function()
     local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
+
+
     
     local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
