@@ -18,11 +18,14 @@ function test()
 --    layer:addChild(mat)
 --    return layer
     
-    
 
     local IntroLayer = require("view.login.IntroLayer")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer)
+
+    local BulletinBoard = require('view.BulletinBoard')
+    local bb = BulletinBoard.create() 
+    s_SCENE:popup(bb)
 
     -- cx.CXProgressHUD:show('info')
 
