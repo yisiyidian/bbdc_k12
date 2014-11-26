@@ -211,7 +211,7 @@ function LevelLayer:ctor()
     
 --    s_CURRENT_USER.currentChapterKey = 'chapter1'
 --    s_CURRENT_USER.currentLevelKey = 'level3'
-    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+--    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     if s_CURRENT_USER.currentChapterKey == 'chapter0' then
         currentChapterLayer = levelLayerI
     elseif s_CURRENT_USER.currentChapterKey == 'chapter1' then
