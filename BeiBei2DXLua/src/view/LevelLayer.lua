@@ -112,7 +112,7 @@ function LevelLayer:levelStateManager()
         end
         )
      elseif s_SCENE.levelLayerState == s_review_boss_appear_state then
-        currentChapterLayer:plotReviewBossAppearOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
+        currentChapterLayer.plotReviewBossAppearOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
      elseif s_SCENE.levelLayerState == s_review_boss_pass_state then
         --currentChapterLayer:plotReviewBossPassOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
         -- save and update level data
