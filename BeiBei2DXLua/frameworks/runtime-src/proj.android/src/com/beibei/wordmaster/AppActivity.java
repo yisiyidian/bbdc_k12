@@ -70,7 +70,7 @@ public class AppActivity extends Cocos2dxActivity {
 			AVOSCloud.initialize(this, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
 			AVOSCloud.setDebugLogEnabled(true);
 		} else {
-			// app store server
+			// server
 			AVOSCloud.initialize(this, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
 		}
 		
