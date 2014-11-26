@@ -7,8 +7,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import org.cocos2dx.lib.Cocos2dxActivity;
-
+import com.beibei.wordmaster.AppActivity;
 import com.beibei.wordmaster.R;
 
 public class BBPushNotificationService extends Service {
@@ -35,7 +34,7 @@ public class BBPushNotificationService extends Service {
 		super.onStart(intent, startId);
 
 		mManager = (NotificationManager) this.getApplicationContext().getSystemService(this.getApplicationContext().NOTIFICATION_SERVICE);
-		Intent intent1 = new Intent(this.getApplicationContext(), Cocos2dxActivity.class);
+		Intent intent1 = new Intent(this.getApplicationContext(), AppActivity.class);
 
 		Notification notification = new Notification(R.drawable.icon, content, System.currentTimeMillis());
 
