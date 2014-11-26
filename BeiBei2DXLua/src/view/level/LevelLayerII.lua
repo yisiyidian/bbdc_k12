@@ -13,6 +13,126 @@ function LevelLayerII.create()
     return layer
 end
 
+function LevelLayerII:plotReviewBossAppearOnLevel(levelKey)
+    local levelButton = self:getChildByName(levelKey)
+    local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
+    reviewBoss:addAnimation(0, '1', false)
+    s_SCENE:callFuncWithDelay(1,function()
+        reviewBoss:addAnimation(1, '2', true)
+    end)
+    reviewBoss:setPosition(0, 0)
+    levelButton:addChild(reviewBoss)
+end
+
+function LevelLayerII:getPlayerPositionForLevel(levelKey)
+    local levelButton = self:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    --print(levelButton:getPositionX()..','..levelButton:getPositionY())
+    local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
+    if levelConfig['type'] == 1 then
+        position.y = position.y - 50
+    else
+        position.y = position.y - 20
+    end
+
+    return position
+end
+
+function LevelLayerII:plotLevelStar(levelButton, heart)
+    local star1, star2, star3
+    if heart >= 3 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star3 = cc.Sprite:create('image/chapter_level/starFull.png')
+    elseif heart == 2 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    elseif heart == 1 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    else
+        star1 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    end
+    star1:setPosition(50,30)
+    star2:setPosition(100,10)
+    star3:setPosition(150,30)
+    levelButton:addChild(star1, 5)
+    levelButton:addChild(star2, 5)
+    levelButton:addChild(star3, 5)
+end
+
+function LevelLayerII:plotStarAnimation(levelKey, starCount)
+    local levelButton = self:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    if levelConfig['type'] == 0 then
+        local star1, star2, star3
+        if starCount >= 3 then
+            star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star3 = cc.Sprite:create('image/chapter_level/starFull.png')
+        elseif starCount == 2 then
+            star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        elseif starCount == 1 then
+            star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+            star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        else
+            star1 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+            star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+            star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        end
+        star1:setPosition(50,30)
+        star2:setPosition(100,10)
+        star3:setPosition(150,30)
+        star1:setScale(2)
+        star2:setScale(2)
+        star3:setScale(2)
+
+        levelButton:addChild(star1, 5)
+        levelButton:addChild(star2, 5)
+        levelButton:addChild(star3, 5)
+        star1:setVisible(false)
+        star2:setVisible(false)
+        star3:setVisible(false)
+
+        s_SCENE:callFuncWithDelay(0.3,function()
+            star1:setVisible(true)
+            local action = cc.ScaleTo:create(0.4, 1.0)
+            star1:runAction(action)
+            --            -- star sound
+            --            if starCount >= 1 then
+            --                playSound(s_sound_star1)
+            --            end
+        end)
+        s_SCENE:callFuncWithDelay(0.6,function()
+            star2:setVisible(true)
+            local action = cc.ScaleTo:create(0.4, 1.0)
+            star2:runAction(action)
+            --            --star sound
+            --            if starCount >= 2 then
+            --                playSound(s_sound_star2)
+            --            end
+        end)
+        s_SCENE:callFuncWithDelay(0.9,function()
+            star3:setVisible(true)
+            local action = cc.ScaleTo:create(0.4, 1.0)
+            star3:runAction(action)
+            --            --star sound
+            --            if starCount >= 3 then
+            --                playSound(s_sound_star3)
+            --            end
+        end)
+    end
+end
+
+
 function LevelLayerII:plotUnlockLevelAnimation(levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelButton = self:getChildByName(levelKey)
@@ -51,7 +171,7 @@ function LevelLayerII:plotLevelDecoration(levelKey)
     if levelConfig['type'] == 1 then
         -- add summary boss
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-        summaryboss:setPosition(0,10)
+        summaryboss:setPosition(40,40)
         summaryboss:setName('summaryboss'..string.sub(levelKey, 6))
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
