@@ -63,9 +63,9 @@ function Pause:onClose()
         director:getActionManager():resumeTargets(ccbPause['Layer'].targets)
         ccbPause['Layer']:getParent().layerPaused = false
         ccbPause['Layer']:removeFromParent()
+        s_SCENE:removeAllPopups()
     end,{})
     ccbPause['mask']:runAction(cc.Sequence:create(move,remove))
-    s_SCENE:removeAllPopups()
     
     --button sound
     playSound(s_sound_buttonEffect)

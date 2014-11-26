@@ -70,7 +70,7 @@ public class AppActivity extends Cocos2dxActivity {
 			AVOSCloud.initialize(this, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
 			AVOSCloud.setDebugLogEnabled(true);
 		} else {
-			// app store server
+			// server
 			AVOSCloud.initialize(this, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
 		}
 		
@@ -118,6 +118,8 @@ public class AppActivity extends Cocos2dxActivity {
 	
 	@Override
 	protected void onPause() {
+		BBNDK.pushNotification();
+		
 		PluginWrapper.onPause();
 		AVAnalytics.onPause(this);
         super.onPause();
@@ -125,6 +127,8 @@ public class AppActivity extends Cocos2dxActivity {
 
 	@Override
     protected void onResume() {
+		BBNDK.cancelNotification();
+		
         super.onResume();
         AVAnalytics.onResume(this);
         PluginWrapper.onResume();

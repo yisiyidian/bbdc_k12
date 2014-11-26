@@ -1,14 +1,24 @@
 package c.bb.dc;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
+
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
+
+import c.bb.dc.notification.*;
 
 import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVException;
@@ -24,6 +34,7 @@ public class BBNDK {
 	private static String _hostIPAdress = "0.0.0.0";
 	private static Context _context = null;
 	private static Activity _instance = null;
+	private static PendingIntent _pendingIntent = null;
 	
 	public static Context getContext() {
 		return _context;
@@ -241,6 +252,56 @@ public class BBNDK {
 		});
 	}
 	
+	// ***************************************************************************************************************************
+	// push Notification
+	// ***************************************************************************************************************************	
+	private static ArrayList<BBPushNotification> notis = new ArrayList<BBPushNotification>();
+	
+	public static void pushNotification() {
+		long ms = 1 * 60 * 60 * 1000;
+		long hourNow = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+		long offsetTomorrow12 = (12 - hourNow + 24) * ms;
+		long offsetTomorrow20 = (20 - hourNow + 24) * ms;
+		long offsetDayAfterTomorrow20 = (20 - hourNow + 48) * ms;
+		
+		Class<?> a[] = {BBPushNotificationReceiverA.class, BBPushNotificationReceiverB.class};
+		Class<?> b[] = {BBPushNotificationReceiverC.class, BBPushNotificationReceiverA.class};
+		Class<?> c[] = {BBPushNotificationReceiverB.class, BBPushNotificationReceiverC.class};
+		Random random = new Random(System.currentTimeMillis());
+		int r = random.nextInt() % 300;
+		Class<?> ran[] = a;
+		if (r < -100) ran = b;
+		if (r > 100) ran = c;
+		
+		BBPushNotification n = null;
+		
+//		n = new BBPushNotification();
+//		n.pushNotification(System.currentTimeMillis() + 3000, _instance, BBPushNotificationReceiverA.class);
+//		notis.add(n);
+		
+		n = new BBPushNotification();
+		n.pushNotification(System.currentTimeMillis() + offsetTomorrow12, _instance, ran[0]);
+		notis.add(n);
+		
+		n = new BBPushNotification();
+		n.pushNotification(System.currentTimeMillis() + offsetTomorrow20, _instance, ran[1]);
+		notis.add(n);
+		
+		n = new BBPushNotification();
+		n.pushNotification(System.currentTimeMillis() + offsetDayAfterTomorrow20, _instance, BBPushNotificationReceiverD.class);
+		notis.add(n);
+	}
+	
+	public static void cancelNotification() {
+//		AlarmManager alarmManager = (AlarmManager)_instance.getSystemService(android.content.Context.ALARM_SERVICE);
+//	    alarmManager.cancel(_pendingIntent);
+//	    return alarmManager;
+		
+		for (BBPushNotification obj : notis) {
+			obj.cancelNotification(_instance);
+		}
+		notis.clear();
+	}
 	// ***************************************************************************************************************************
 	// native
 	// ***************************************************************************************************************************

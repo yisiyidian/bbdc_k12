@@ -106,6 +106,14 @@ static AppDelegate s_sharedApplication;
     [window makeKeyAndVisible];
 
     [[UIApplication sharedApplication] setStatusBarHidden: YES];
+    
+    // Notifications
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
+    }
 
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
     cocos2d::GLView *glview = cocos2d::GLView::createWithEAGLView(eaglView);
@@ -137,6 +145,8 @@ static AppDelegate s_sharedApplication;
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
     cocos2d::Application::getInstance()->applicationDidEnterBackground();
+    
+    [self pushNotification:application];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -173,6 +183,112 @@ static AppDelegate s_sharedApplication;
 
 -(RootViewController*) getViewController {
     return viewController;
+}
+
+#pragma mark - push notification
+
+NSInteger getCurrentCalendarHour(NSDate* d)
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *componets = [calendar components: NSHourCalendarUnit fromDate: d];
+    return componets.hour;
+}
+
+-(void)pushNotification:(UIApplication *)application
+{
+    int ONE_HOUR_SECONDS = 60 * 60;
+    int applicationIconBadgeNumber = 0;
+    
+    NSDate * now = [NSDate date];
+    NSInteger hourNow = getCurrentCalendarHour(now);
+    NSInteger offsetTomorrow12 = 12 - hourNow + 24;
+
+    NSInteger offsetTomorrow20 = 20 - hourNow + 24;
+    NSInteger offsetDayAfterTomorrow20 = 20 - hourNow + 48;
+    
+    NSString* TEXT_ID_PUSH_A = @"救命啊！有怪兽！";
+    NSString* TEXT_ID_PUSH_B = @"又在刷朋友圈，还不赶紧来贝贝单词？";
+    NSString* TEXT_ID_PUSH_C = @"没时间解释了！快点来帮帮我！";
+    NSString* TEXT_ID_PUSH_2DAYS = @"好久不见啦，贝贝想你啦！";
+    
+    NSString* textsA[] = {TEXT_ID_PUSH_A, TEXT_ID_PUSH_C};
+    NSString* textsB[] = {TEXT_ID_PUSH_B, TEXT_ID_PUSH_A};
+    NSString* textsC[] = {TEXT_ID_PUSH_C, TEXT_ID_PUSH_B};
+    
+    NSString* * texts = textsA;
+    int value = (arc4random() % 300) + 1;
+    if (value > 200)
+    {
+        texts = textsB;
+    }
+    else if (value > 100 && value <= 200)
+    {
+        texts = textsC;
+    }
+    
+#define DEBUG_PUSH 1
+#if DEBUG_PUSH == 1
+    ONE_HOUR_SECONDS = 1;
+    offsetTomorrow12 = 1;
+
+    offsetTomorrow20 = 3;
+    offsetDayAfterTomorrow20 = 4;
+#endif
+    
+    //
+    BOOL fired = [self fireNotification:application
+                                fromNow:now
+                           afterSeconds:ONE_HOUR_SECONDS * offsetTomorrow12
+                            badgeNumber:applicationIconBadgeNumber + 1
+                              alertBody:texts[0]
+                                   info:@"not_login_today_12_00"];
+    if (fired)
+        applicationIconBadgeNumber++;
+    else
+        return;
+    
+    //
+    fired = [self fireNotification:application
+                           fromNow:now
+                      afterSeconds:ONE_HOUR_SECONDS * offsetTomorrow20
+                       badgeNumber:applicationIconBadgeNumber + 1
+                         alertBody:texts[1]
+                              info:@"not_login_today_20_00"];
+    if (fired)
+        applicationIconBadgeNumber++;
+    
+    //
+    fired = [self fireNotification:application
+                           fromNow:now
+                      afterSeconds:ONE_HOUR_SECONDS * offsetDayAfterTomorrow20
+                       badgeNumber:applicationIconBadgeNumber + 1
+                         alertBody:TEXT_ID_PUSH_2DAYS
+                              info:@"not_login_2_days"];
+    if (fired)
+        applicationIconBadgeNumber++;
+}
+
+- (BOOL)fireNotification:(UIApplication *)application
+                 fromNow:(NSDate*)now
+            afterSeconds:(NSTimeInterval)seconds
+             badgeNumber:(int)num
+               alertBody:(NSString*)alertBody
+                    info:(NSString*)info
+{
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    if (!notification) return NO;
+    
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    notification.fireDate = [now dateByAddingTimeInterval:seconds];
+    notification.applicationIconBadgeNumber = num;
+    notification.alertBody = alertBody;
+    
+//    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:info forKey:NOTIFICATION_USERINFO_KEY];
+//    notification.userInfo = infoDict;
+    
+    [application scheduleLocalNotification:notification];
+    
+    return YES;
 }
 
 @end

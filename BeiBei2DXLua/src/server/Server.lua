@@ -169,7 +169,7 @@ end
 --     end
 -- )
 function Server.search(restSQL, onSucceed, onFailed)
-    Server.requestFunction('apiRestSearch', {['path']='/1.1/' .. restSQL}, onSucceed, onFailed)
+    Server.requestFunction('apiRestSearch', {['path']='/1.1/' .. restSQL, ['limit']=999}, onSucceed, onFailed)
 end
 
 -- s_SERVER.searchCount('DataBulletinBoard', 

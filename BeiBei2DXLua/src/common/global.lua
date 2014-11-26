@@ -43,6 +43,10 @@ end
 
 local function _initTool()
     require("CCBReaderLoad")
+    require('Deprecated')
+    require('DeprecatedClass')
+    require('DeprecatedEnum')
+    require('DeprecatedOpenglEnum')
     require('GuiConstants')
     
     -- tools
