@@ -27,7 +27,7 @@ function LevelLayer:levelStateManager()
     -- test
     --s_CURRENT_USER:initLevels()
     -- check current chapter
-
+    self:updateCurrentChapterLayer()
     -- CHECK unlock chapter state
     if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
         local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey)
@@ -54,12 +54,13 @@ function LevelLayer:levelStateManager()
     
     -- CHECK tutorial review boss
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
-    if s_CURRENT_USER.currentLevelKey == 'level0' and levelData.stars > 0 and s_SCENE.levelLayerState ~= s_review_boss_pass_state and s_CURRENT_USER.reviewBossTutorialStep == 0 then
+    if levelData ~= nil and s_CURRENT_USER.currentLevelKey == 'level0' and levelData.stars > 0 and s_SCENE.levelLayerState ~= s_review_boss_pass_state and s_CURRENT_USER.reviewBossTutorialStep == 0 then
         s_SCENE.levelLayerState = s_review_boss_appear_state
     end
 
     -- TODO switch state
-    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
+--    s_SCENE.levelLayerState = s_unlock_next_chapter_state
+--    s_CURRENT_USER.currentChapterKey = 'chapter1'
     print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
@@ -75,11 +76,12 @@ function LevelLayer:levelStateManager()
         currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
         
         -- save and update level data
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
         s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
         -- plot unlock next level animation
+        self:updateCurrentChapterLayer()
         currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
         -- plot player animation
         s_SCENE:callFuncWithDelay(1.3,function()
@@ -109,11 +111,12 @@ function LevelLayer:levelStateManager()
      elseif s_SCENE.levelLayerState == s_review_boss_pass_state then
         --currentChapterLayer:plotReviewBossPassOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
         -- save and update level data
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentLevelKey = 'level'..(string.sub(s_CURRENT_USER.currentLevelKey, 6) + 1)
         s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
         -- plot unlock level animation
+        self:updateCurrentChapterLayer()
         currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
         -- plot player animation
         s_SCENE:callFuncWithDelay(1.3,function()
@@ -133,6 +136,7 @@ function LevelLayer:levelStateManager()
             s_CURRENT_USER.reviewBossTutorialStep = 1
         end
      elseif s_SCENE.levelLayerState == s_unlock_next_chapter_state then
+        print('s_levelLayerState'..s_unlock_next_chapter_state)
         -- lock screen and plot animation
         s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
         s_SCENE:callFuncWithDelay(3.9, function()
@@ -143,26 +147,39 @@ function LevelLayer:levelStateManager()
         currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
 
         -- save and update level data
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentChapterKey = 'chapter'..(string.sub(s_CURRENT_USER.currentChapterKey,8)+1)
         s_CURRENT_USER.currentLevelKey = 'level0'
         s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
         -- plot unlock next level animation
         if s_CURRENT_USER.currentChapterKey == 'chapter1' then
-            currentChapterLayer = levelLayerII
-            connection1_2:plotUnlockChapterAnimation()
-            --currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
-            -- plot player animation
-            s_SCENE:callFuncWithDelay(1.3,function()
-                local targetPosition = currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
-                local action = cc.MoveTo:create(0.8, targetPosition)
-                player:runAction(action)      
-            end)
+            self.chapterDic['connection0_1']:plotUnlockChapterAnimation()
+        elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
+            --self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
         end
+        self:updateCurrentChapterLayer()
+        currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
+        -- player animation
+        s_SCENE:callFuncWithDelay(1.3,function()
+            local targetPosition = currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
+            local action = cc.MoveTo:create(0.8, targetPosition)
+            player:runAction(action)      
+        end)
      end
      s_SCENE.gameLayerState = s_normal_game_state
      s_CURRENT_USER:updateDataToServer()
+end
+
+function LevelLayer:updateCurrentChapterLayer()
+    if s_CURRENT_USER.currentChapterKey == 'chapter0' then
+        currentChapterLayer = self.chapterDic['chapter0']
+    elseif s_CURRENT_USER.currentChapterKey == 'chapter1' then
+        currentChapterLayer = self.chapterDic['chapter1']
+    elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
+        chapterDicKey = 'chapter2_'..(math.floor(string.sub(s_CURRENT_USER.currentLevelKey, 6) / 10))
+        currentChapterLayer = self.chapterDic[chapterDicKey]
+    end
 end
 
 function LevelLayer:manageListViewItem(itemName, command)
@@ -190,11 +207,12 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
     for i = 1, #chapterConfig / 10 do
         local levelStyle3 = require('view.level.RepeatLevelLayer')
         local levelLayer3 = levelStyle3.create(chapterKey,'level'..((i-1)*10))
+        self.chapterDic[chapterKey..'_'..(i-1)] = levelLayer3
         levelLayer3:setPosition(cc.p(0,0))
         local item3 = ccui.Layout:create()
         item3:setContentSize(levelLayer3:getContentSize())
         item3:addChild(levelLayer3)
-        item3:setName(chapterKey..'_'..i)
+        item3:setName(chapterKey..'_'..(i-1))
         listView:addChild(item3)
     end
 end
@@ -205,15 +223,18 @@ function LevelLayer:ctor()
     local levelStypeI = require('view.level.LevelLayerI')
     local levelStypeII = require('view.level.LevelLayerII')
     local connectionLayer1_2 = require('view.level.connection.Connection1_2')
+    local connectionLayer2_3 = require('view.level.connection.Connection2_3')
     levelLayerI = levelStypeI.create()
     levelLayerII = levelStypeII.create()
     connection1_2 = connectionLayer1_2.create()
+    connection2_3 = connectionLayer2_3.create()
     self.chapterDic['chapter0'] = levelLayerI
     self.chapterDic['chapter1'] = levelLayerII
     self.chapterDic['connection0_1'] = connection1_2
+    self.chapterDic['connection1_2'] = connection2_3
 --    s_CURRENT_USER.currentChapterKey = 'chapter1'
 --    s_CURRENT_USER.currentLevelKey = 'level3'
---    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
 
     local function listViewEvent(sender, eventType)
         if eventType == ccui.ListViewEventType.ONSELECTEDITEM_END then
@@ -258,8 +279,6 @@ function LevelLayer:ctor()
     local item1_2 = ccui.Layout:create()
     item1_2:setTouchEnabled(true)
     item1_2:setContentSize(connection1_2:getContentSize())
-    print('connection1_2########')
-    print_lua_table(connection1_2:getContentSize())
     connection1_2:setPosition(cc.p(0,0))
     item1_2:addChild(connection1_2)
     listView:addChild(item1_2)
@@ -291,8 +310,6 @@ function LevelLayer:ctor()
 --    item3:addChild(levelLayer3)
 --    listView:addChild(item3)
     -- add list view connection 
-    local connectionLayer2_3 = require('view.level.connection.Connection2_3')
-    connection2_3 = connectionLayer2_3.create()
     local item2_3 = ccui.Layout:create()
     item2_3:setTouchEnabled(true)
     item2_3:setContentSize(connection2_3:getContentSize())
@@ -310,14 +327,9 @@ function LevelLayer:ctor()
     --print_lua_table(listView:getInnerContainerSize())
     local currentVerticalPercent = string.sub(s_CURRENT_USER.currentSelectedLevelKey,6)/12.0 * 30+1
     listView:scrollToPercentVertical(currentVerticalPercent,0,false)
-
-    if s_CURRENT_USER.currentChapterKey == 'chapter0' then
-        currentChapterLayer = levelLayerI
-    elseif s_CURRENT_USER.currentChapterKey == 'chapter1' then
-        currentChapterLayer = levelLayerII
-    elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
-    --currentChapterLayer = 
-    end
+    
+    self:updateCurrentChapterLayer()
+    
     -- plot player position
     local currentLevelButton = currentChapterLayer:getChildByName(s_CURRENT_USER.currentLevelKey)
     local image = 'image/chapter_level/gril_head.png'
