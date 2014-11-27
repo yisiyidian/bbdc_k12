@@ -226,7 +226,7 @@ NSInteger getCurrentCalendarHour(NSDate* d)
         texts = textsC;
     }
     
-#define DEBUG_PUSH 1
+#define DEBUG_PUSH 0
 #if DEBUG_PUSH == 1
     ONE_HOUR_SECONDS = 1;
     offsetTomorrow12 = 1;
