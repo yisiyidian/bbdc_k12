@@ -20,7 +20,9 @@ function Pause:ctor()
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    if s_DATABASE_MGR.isMusicOn() then
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    end
 
     -- Pause actions
     local director = cc.Director:getInstance()
@@ -72,7 +74,9 @@ function Pause:onClose()
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    if s_DATABASE_MGR.isSoundOn() then
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    end
 end
 
 function Pause:onRetry()
@@ -82,7 +86,9 @@ function Pause:onRetry()
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    if s_DATABASE_MGR.isSoundOn() then
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    end
 end
 
 function Pause:onBack()
@@ -91,7 +97,9 @@ function Pause:onBack()
     playSound(s_sound_buttonEffect)
     
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    if s_DATABASE_MGR.isSoundOn() then
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    end
     
     local level = require('view.LevelLayer')
     local layer = level.create()
@@ -109,7 +117,10 @@ function Pause:onContinue()
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    if s_DATABASE_MGR.isSoundOn() then
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    end
+
 end
 
 function Pause:onHelp()
@@ -139,7 +150,7 @@ function Pause:onHelp()
 end
 
 function Pause:onSoundOn()
-    cc.SimpleAudioEngine:getInstance():setEffectsVolume(1) 
+    s_DATABASE_MGR.setSoundOn(false)
 
     ccbPause['soundOn']:setVisible(false)
     ccbPause['soundOff']:setVisible(true)
@@ -149,7 +160,7 @@ function Pause:onSoundOn()
 end
 
 function Pause:onSoundOff()
-    cc.SimpleAudioEngine:getInstance():setEffectsVolume(0) 
+    s_DATABASE_MGR.setSoundOn(true)
 
     ccbPause['soundOn']:setVisible(true)
     ccbPause['soundOff']:setVisible(false)
@@ -159,7 +170,7 @@ function Pause:onSoundOff()
 end
 
 function Pause:onMusicOn()
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    s_DATABASE_MGR.setMusicOn(false)
     
     ccbPause['musicOn']:setVisible(false)
     ccbPause['musicOff']:setVisible(true)
@@ -169,7 +180,7 @@ function Pause:onMusicOn()
 end
 
 function Pause:onMusicOff()
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0) 
+    s_DATABASE_MGR.setMusicOn(true)
     
     ccbPause['musicOn']:setVisible(true)
     ccbPause['musicOff']:setVisible(false)

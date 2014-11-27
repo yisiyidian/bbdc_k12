@@ -11,14 +11,15 @@ end
 
 
 function PopupEnergyBuy:ctor()
- --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
-    
-    self.energy_number =  s_CURRENT_USER.energyCount 
+    if s_DATABASE_MGR.isMusicOn() then
+      cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25)
+    end
+
+    self.energy_number =  s_CURRENT_USER.energyCount
     
     local json = ''
     local atlas = ''
@@ -159,7 +160,9 @@ function PopupEnergyBuy:onCloseButtonClicked()
     -- button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    if s_DATABASE_MGR.isMusicOn() then
+       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
+    end
 end
 
 function PopupEnergyBuy:onBuyButtonClicked()

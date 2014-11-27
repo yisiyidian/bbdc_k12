@@ -27,7 +27,9 @@ local letterArray = {}
 function CheckInNode:ctor()
     self.globalLock = false
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    if s_DATABASE_MGR.isMusicOn() then
+       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25)
+    end
 
 --    -- sound
 --    local slideCoco = {}
@@ -491,7 +493,9 @@ function CheckInNode:onClose()
     playSound(s_sound_buttonEffect)
     
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    if s_DATABASE_MGR.isMusicOn() then
+      cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
+    end
 end
 
 function CheckInNode:onSucceedClose()
@@ -506,8 +510,10 @@ function CheckInNode:onSucceedClose()
     playSound(s_sound_buttonEffect)
     
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
-    
+    if s_DATABASE_MGR.isMusicOn() then
+       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
+    end
+
     -- after success write down time right now
     --   local lastCheckInAward = s_CURRENT_USER.serverTime
     local lastCheckInAward = 1

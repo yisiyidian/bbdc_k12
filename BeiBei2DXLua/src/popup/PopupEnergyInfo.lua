@@ -13,13 +13,15 @@ function PopupEnergyInfo:ctor()
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+    if s_DATABASE_MGR.isMusicOn() then
+      cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25)
+    end
 
     local json = ''
     local atlas = ''
 --    local min = time_betweenServerAndEnergy / 60
 --    local sec = time_betweenServerAndEnergy % 60
-  --  print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
      self.ccbPopupEnergyInfo = {}
         
     self.ccbPopupEnergyInfo['onCloseButtonClicked'] = function()
@@ -166,7 +168,9 @@ function PopupEnergyInfo:onCloseButtonClicked()
     -- button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+    if s_DATABASE_MGR.isMusicOn() then
+       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
+    end
 end
 
 function PopupEnergyInfo:onBuyButtonClicked()
