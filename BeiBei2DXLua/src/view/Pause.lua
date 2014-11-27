@@ -11,6 +11,7 @@ ccbPause = ccbPause or {}
 function Pause.create()
     local layer = Pause.new()
     s_SCENE.popupLayer.pauseLayer = layer
+    s_SCENE.popupLayer.layerpaused = true
     return layer
 end
 
@@ -20,7 +21,7 @@ function Pause:ctor()
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
-   
+
     -- Pause actions
     local director = cc.Director:getInstance()
     self.targets = director:getActionManager():pauseAllRunningActions()
@@ -61,6 +62,8 @@ function Pause:onClose()
     local remove = cc.CallFunc:create(function() 
         local director = cc.Director:getInstance()
         director:getActionManager():resumeTargets(ccbPause['Layer'].targets)
+        s_SCENE.popupLayer.layerpaused = false
+        s_SCENE.popupLayer.listener:setSwallowTouches(false)
         ccbPause['Layer']:removeFromParent()
         s_SCENE:removeAllPopups()
     end,{})
