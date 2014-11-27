@@ -72,7 +72,6 @@ function SummaryBossLayer.create(levelConfig)
             return
         end
         
-        --s_logd(layer.hintTime)
         if layer.hintTime < 10 or layer.isPaused then
             if layer.hintTime >= 8 and layer.isPaused then
                 layer.hintTime = 8
@@ -113,7 +112,6 @@ function SummaryBossLayer.create(levelConfig)
             startNode.addSelectStyle()
             startNode.bigSize()
             if startNode.isFirst > 0 and layer.crabOnView[startNode.isFirst] then
-                s_logd(startNode.isFirst)
                 layer.ccbcrab[startNode.isFirst]['boardBig']:setVisible(true)
                 layer.ccbcrab[startNode.isFirst]['boardSmall']:setVisible(false)
                 layer.ccbcrab[startNode.isFirst]['legBig']:setVisible(true)
@@ -271,8 +269,6 @@ function SummaryBossLayer.create(levelConfig)
         if layer.globalLock then
             return
         end
-        
-        --s_logd(layer.onCrab)
         if layer.onCrab > 0 then
 
             layer.ccbcrab[layer.onCrab]['boardBig']:setVisible(false)
@@ -329,11 +325,8 @@ function SummaryBossLayer.create(levelConfig)
                         local bullet = node.bullet
                         bullet:setVisible(true)
                         local bossPos = cc.p(layer.bossNode:getPosition())
-                        s_logd("boss %f %f",bossPos.x,bossPos.y)
                         local bulletPos = cc.p(bullet:getPosition())
-                        s_logd("bullet %f %f",bulletPos.x,bulletPos.y)
                         bossPos = cc.p(bossPos.x + 50 - bulletPos.x, bossPos.y + 50 - bulletPos.y)
-                        s_logd("moveby %f %f",bossPos.x,bossPos.y)
                         local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / 1200
                         if time > 0.5 then
                             time = 0.5
@@ -350,7 +343,9 @@ function SummaryBossLayer.create(levelConfig)
                         bullet:runAction(cc.Sequence:create(hit,attacked,hide,resume))
                         local recover = cc.CallFunc:create(
                             function()
-                                layer.globalLock = false
+                                if killedCrabCount > 0 and layer.globalLock then
+                                    layer.globalLock = false
+                                end
                                 node.normal()
                                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                                     node.firstStyle()
@@ -529,12 +524,13 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
     self.blink = blinkBack
     --add pauseButton
-
+    local menu = cc.Menu:create()
+    self:addChild(menu,100)
     local pauseBtn = cc.MenuItemImage:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
-    self:addChild(pauseBtn,100)
+    menu:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    menu:addChild(pauseBtn,100)
 
     local function pauseScene(sender)
         if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
@@ -635,9 +631,6 @@ function SummaryBossLayer:initWordList(levelConfig)
         local tmp = wordList[i]
         wordList[i] = wordList[randomIndex]
         wordList[randomIndex] = tmp
-        --for j = 1, #wordList do
-        s_logd(randomIndex)
-        --end
     end
 
 
@@ -646,7 +639,6 @@ function SummaryBossLayer:initWordList(levelConfig)
         local tmp = {}
         for i = 1, 3 do
             local w = wordList[index]
-            s_logd(#wordList)
             if(totalLength + string.len(w) <= 25) then
                 tmp[#tmp + 1] = w
                 totalLength = totalLength + string.len(w)
@@ -929,7 +921,6 @@ function SummaryBossLayer:hint()
             break
         end
     end
-    s_logd('x = %d',index)
     for i = 1, 5 do
         for j = 1, 5 do
             if self.isCrab[i][j] == index then

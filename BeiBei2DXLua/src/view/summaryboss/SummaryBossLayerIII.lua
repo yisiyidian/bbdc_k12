@@ -200,6 +200,9 @@ function SummaryBossLayerIII.create(levelConfig)
                         local secondStackTop = selectStack[#selectStack-1]
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
+                            if stackTop.isFirst > 0 then
+                                stackTop.firstStyle()
+                            end
                             table.remove(selectStack)    
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
@@ -338,7 +341,9 @@ function SummaryBossLayerIII.create(levelConfig)
                         bullet:runAction(cc.Sequence:create(hit,attacked,hide,resume))
                         local recover = cc.CallFunc:create(
                             function()
-                                layer.globalLock = false
+                                if killedCrabCount > 0 and layer.globalLock then
+                                    layer.globalLock = false
+                                end
                                 node.normal()
                                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                                     node.firstStyle()
@@ -523,7 +528,7 @@ function SummaryBossLayerIII:initBossLayer(levelConfig)
     local pauseBtn = cc.MenuItemImage:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    menu:setPosition(0, s_DESIGN_HEIGHT)
+    menu:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
     menu:addChild(pauseBtn)
 
     local function pauseScene(sender)
