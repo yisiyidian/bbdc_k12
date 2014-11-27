@@ -69,12 +69,9 @@ function PauseHelpReviewSecond:onBlueButtonClicked()
     s_SCENE:callFuncWithDelay(0.3,function()
         local IntroLayer = require("view.pausehelp.PauseHelpReviewThird")
         local introLayer = IntroLayer.create()
+        s_SCENE.popupLayer:removeAllChildren()
         s_SCENE.popupLayer:addChild(introLayer)
     end)
-
-
 end
-
-
 
 return PauseHelpReviewSecond
