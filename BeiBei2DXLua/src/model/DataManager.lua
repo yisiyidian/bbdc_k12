@@ -11,19 +11,21 @@ s_BOOK_KEY_CET6  = 'cet6'
 s_BOOK_KEY_IELTS = 'ielts'
 s_BOOK_KEY_TOEFL = 'toefl'
 
-DataManager.configs = nil
-DataManager.text = nil
-DataManager.books = nil
-DataManager.chapters = nil
-DataManager.items = nil
-DataManager.level_ncee = nil
-DataManager.level_cet4 = nil
-DataManager.level_cet6 = nil
-DataManager.level_ielts = nil
-DataManager.level_toefl = nil
-DataManager.reviewBoos = nil
-DataManager.starRules = nil
-DataManager.dailyCheckIn = nil
+function DataManager.clear()
+    DataManager.configs = nil
+    DataManager.text = nil
+    DataManager.books = nil
+    DataManager.chapters = nil
+    DataManager.items = nil
+    DataManager.level_ncee = nil
+    DataManager.level_cet4 = nil
+    DataManager.level_cet6 = nil
+    DataManager.level_ielts = nil
+    DataManager.level_toefl = nil
+    DataManager.reviewBoos = nil
+    DataManager.starRules = nil
+    DataManager.dailyCheckIn = nil
+end
 
 s_energyMaxCount = 8
 s_energyCoolDownSecs = 1800
