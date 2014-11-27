@@ -230,7 +230,7 @@ function StudyLayerIII.create()
                     local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))
                     mat:runAction(action2)
 
-                    local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+60, 930))
+                    local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+60, 900))
                     button_detail:runAction(action3)
 
                     local action4 = cc.DelayTime:create(0.5)
@@ -266,7 +266,7 @@ function StudyLayerIII.create()
                 local action2 = cc.MoveTo:create(0.5,cc.p(bigWidth/2*3, 120))
                 mat:runAction(action2)
 
-                local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width-60, 930))
+                local action3 = cc.MoveTo:create(0.5,cc.p(backImage:getContentSize().width/2+200, 900))
                 button_detail:runAction(action3)
 
                 local action4 = cc.DelayTime:create(0.5)
@@ -286,10 +286,8 @@ function StudyLayerIII.create()
                 soundMark:setPosition(bigWidth/2, 550)
                 back_down:addChild(soundMark)
 
-                button_detail = ccui.Button:create()
-                button_detail:setTouchEnabled(true)
-                button_detail:loadTextures("image/button/button_zhuwanfa_disnaguan.png", "", "")
-                button_detail:setPosition(cc.p(s_DESIGN_WIDTH-60, 900))
+                button_detail = ccui.Button:create("image/button/button_zhuwanfa_disnaguan.png", "image/button/button_zhuwanfa_disnaguan.png", "")
+                button_detail:setPosition(cc.p(backImage:getContentSize().width/2+200, 900))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backImage:addChild(button_detail)
                 
