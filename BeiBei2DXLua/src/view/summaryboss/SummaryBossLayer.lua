@@ -72,7 +72,6 @@ function SummaryBossLayer.create(levelConfig)
             return
         end
         
-        --s_logd(layer.hintTime)
         if layer.hintTime < 10 or layer.isPaused then
             if layer.hintTime >= 8 and layer.isPaused then
                 layer.hintTime = 8
@@ -89,6 +88,7 @@ function SummaryBossLayer.create(levelConfig)
     -- handing touch events
     onTouchBegan = function(touch, event)
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
+            s_logd('touchUnable')
             return true
         end
         
@@ -113,7 +113,6 @@ function SummaryBossLayer.create(levelConfig)
             startNode.addSelectStyle()
             startNode.bigSize()
             if startNode.isFirst > 0 and layer.crabOnView[startNode.isFirst] then
-                s_logd(startNode.isFirst)
                 layer.ccbcrab[startNode.isFirst]['boardBig']:setVisible(true)
                 layer.ccbcrab[startNode.isFirst]['boardSmall']:setVisible(false)
                 layer.ccbcrab[startNode.isFirst]['legBig']:setVisible(true)
@@ -206,6 +205,9 @@ function SummaryBossLayer.create(levelConfig)
                         local secondStackTop = selectStack[#selectStack-1]
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
+                            if stackTop.isFirst > 0 then
+                                stackTop.firstStyle()
+                            end
                             table.remove(selectStack)    
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
@@ -272,7 +274,6 @@ function SummaryBossLayer.create(levelConfig)
             return
         end
         
-        --s_logd(layer.onCrab)
         if layer.onCrab > 0 then
 
             layer.ccbcrab[layer.onCrab]['boardBig']:setVisible(false)
@@ -329,11 +330,8 @@ function SummaryBossLayer.create(levelConfig)
                         local bullet = node.bullet
                         bullet:setVisible(true)
                         local bossPos = cc.p(layer.bossNode:getPosition())
-                        s_logd("boss %f %f",bossPos.x,bossPos.y)
                         local bulletPos = cc.p(bullet:getPosition())
-                        s_logd("bullet %f %f",bulletPos.x,bulletPos.y)
                         bossPos = cc.p(bossPos.x + 50 - bulletPos.x, bossPos.y + 50 - bulletPos.y)
-                        s_logd("moveby %f %f",bossPos.x,bossPos.y)
                         local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / 1200
                         if time > 0.5 then
                             time = 0.5
@@ -350,7 +348,9 @@ function SummaryBossLayer.create(levelConfig)
                         bullet:runAction(cc.Sequence:create(hit,attacked,hide,resume))
                         local recover = cc.CallFunc:create(
                             function()
-                                layer.globalLock = false
+                                if killedCrabCount < #layer.wordPool[layer.currentIndex] then
+                                    layer.globalLock = false
+                                end
                                 node.normal()
                                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                                     node.firstStyle()
@@ -381,8 +381,6 @@ function SummaryBossLayer.create(levelConfig)
                         else 
                             s = 'girl-stand'
                         end
-
-                        
                         layer.girl:setAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,s,true)
@@ -637,9 +635,6 @@ function SummaryBossLayer:initWordList(levelConfig)
         local tmp = wordList[i]
         wordList[i] = wordList[randomIndex]
         wordList[randomIndex] = tmp
-        --for j = 1, #wordList do
-        s_logd(randomIndex)
-        --end
     end
 
 
@@ -648,7 +643,6 @@ function SummaryBossLayer:initWordList(levelConfig)
         local tmp = {}
         for i = 1, 3 do
             local w = wordList[index]
-            s_logd(#wordList)
             if(totalLength + string.len(w) <= 25) then
                 tmp[#tmp + 1] = w
                 totalLength = totalLength + string.len(w)
@@ -931,7 +925,6 @@ function SummaryBossLayer:hint()
             break
         end
     end
-    s_logd('x = %d',index)
     for i = 1, 5 do
         for j = 1, 5 do
             if self.isCrab[i][j] == index then

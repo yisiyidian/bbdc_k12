@@ -197,6 +197,9 @@ function SummaryBossLayerII.create(levelConfig)
                         local secondStackTop = selectStack[#selectStack-1]
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
+                            if stackTop.isFirst > 0 then
+                                stackTop.firstStyle()
+                            end
                             table.remove(selectStack)    
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
@@ -318,7 +321,9 @@ function SummaryBossLayerII.create(levelConfig)
                         bullet:runAction(cc.Sequence:create(hit,attacked,hide,resume))
                         local recover = cc.CallFunc:create(
                             function()
-                                layer.globalLock = false
+                                if killedCrabCount < #layer.wordPool[layer.currentIndex] then
+                                    layer.globalLock = false
+                                end
                                 node.removeSelectStyle()
                                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                                     node.firstStyle()
