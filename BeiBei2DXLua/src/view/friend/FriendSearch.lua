@@ -55,9 +55,9 @@ function FriendSearch:ctor()
                 function(api,result)
                     if #result.results > 0 then
                         for i, user in ipairs(result.results) do
-                            local button = ccui.Button:create("image/friend/friendRankButton.png", "image/friend/friendRankButton.png")
+                            local button = cc.Sprite:create("image/friend/friendRankButton.png")
                             button:setPosition(0.5 * s_DESIGN_WIDTH, 0.65 * s_DESIGN_HEIGHT)
-                            button:setScale9Enabled(true)
+                            --button:setScale9Enabled(true)
                             self:addChild(button,0,'searchResult')
         
                             local line = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,button:getContentSize().height + 4)
@@ -85,7 +85,10 @@ function FriendSearch:ctor()
                             fri_word:setPosition(0.42 * button:getContentSize().width,0.48 * button:getContentSize().height)
                             button:addChild(fri_word)
                             local isFriend = 0
-                            self.array = s_CURRENT_USER.friends
+                            self.array = {}
+                            for i = 1,#s_CURRENT_USER.friends do
+                                self.array[i] = s_CURRENT_USER.friends[i]
+                            end
                             self.array[#self.array + 1] = s_CURRENT_USER
                             for i = 1,#self.array do
                                 for j = i, #self.array do
@@ -102,10 +105,10 @@ function FriendSearch:ctor()
                                     break
                                 end
                             end
-                            local arrow = cc.Sprite:create('image/friend/fri_button_gou.png','image/friend/fri_button_gou.png','')
+                            local arrow = cc.Sprite:create('image/friend/fri_button_gou.png')
                             arrow:setPosition(0.9 * button:getContentSize().width,0.5 * button:getContentSize().height)
                             button:addChild(arrow)
-                            if i > 0 then
+                            if isFriend > 0 then
                                 arrow:setVisible(true)
                                 local str = 'n'
                                 if i < 4 then
@@ -155,7 +158,7 @@ function FriendSearch:ctor()
                                         )
                                     end
                                 end
-                                button:addTouchEventListener(onAdd)
+                                add:addTouchEventListener(onAdd)
                             end
                             
                             break
