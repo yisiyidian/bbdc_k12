@@ -21,6 +21,31 @@ local onTouchBegan = function(touch, event)
     playSound(s_sound_clickWave)
 end
 
+function RepeatLevelLayer:plotUnlockLevelAnimation(levelKey)
+    print('startLevelKey:'..self.startLevelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelButton = self:getChildByName(levelKey)
+    local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+    local lockLayer = levelButton:getChildByName('lockLayer'..levelIndex)
+
+    local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
+    local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
+    local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),4)
+    local action5 = cc.MoveBy:create(0.1, cc.p(5,0))  
+    local action6 = cc.FadeOut:create(0.1)
+    local action = cc.Sequence:create(action1, action4, action5, action6, nil)
+    lockSprite:runAction(action)
+
+    local action7 = cc.DelayTime:create(0.6)
+    local action8 = cc.FadeOut:create(0.1)
+    lockLayer:runAction(cc.Sequence:create(action7, action8))
+
+    s_SCENE:callFuncWithDelay(1.1,function()
+        self:plotLevelDecoration(levelKey)
+    end)
+end
+
 function RepeatLevelLayer:clickLockedLevelAnmation(levelKey)
     local clickedIndex = string.sub(levelKey, 6)
     local clickedButton = self:getChildByName(levelKey)
