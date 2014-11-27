@@ -31,11 +31,33 @@ function StudyLayerIII.create()
     local sentenceCn = word.sentenceCn
 
     local viewIndex = 1
+    
+    -- time
+    local time = 0
+    local view1_time = 0
+    local view2_time = 0
+    local view3_time = 0
+    local update = function()
+        time = time + 1
+        if viewIndex == 1 then
+            view1_time = view1_time + 1
+        elseif viewIndex == 2 then
+            view2_time = view2_time + 1
+            if view2_time >= 5 then
+                s_CorePlayManager.unfamiliarWord()
+            end
+        elseif viewIndex == 3 then
+            view3_time = view3_time + 1
+        end
+    end
+    schedule(layer,update,1)
 
     local button_changeview
     local button_changeview_clicked
     local button_detail
     local button_detail_clicked
+    local button_reddot
+    local button_reddot_clicked
 
     local soundMark
     local mat
@@ -96,6 +118,11 @@ function StudyLayerIII.create()
         if eventType == ccui.TouchEventType.began then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_detail:getRotation() == 0 then
+                if button_reddot then
+                    button_detail:removeChild(button_reddot,true)
+                    s_CorePlayManager.unfamiliarWord()
+                end
+            
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, -700))
                 back_down:runAction(action1)
 
@@ -172,7 +199,7 @@ function StudyLayerIII.create()
     end
 
     local fail = function()
-    --s_logd("new wrong")
+        s_CorePlayManager.unfamiliarWord()
     end
     if s_CorePlayManager.newPlayerState then
         mat = FlipMat.create(wordName,4,4,true,false)
@@ -195,6 +222,7 @@ function StudyLayerIII.create()
             if button_changeview:getTitleText() == "去划单词" then
                 local change = function()
                     button_changeview:setTitleText("再看一次")
+                    viewIndex = 3
 
                     local action1 = cc.MoveTo:create(0.5,cc.p(-bigWidth/2, 550))
                     soundMark:runAction(action1)
@@ -227,7 +255,10 @@ function StudyLayerIII.create()
                     change()
                 end
             else
+                s_CorePlayManager.unfamiliarWord()
+            
                 button_changeview:setTitleText("去划单词")
+                viewIndex = 2
 
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 550))
                 soundMark:runAction(action1)
@@ -261,6 +292,14 @@ function StudyLayerIII.create()
                 button_detail:setPosition(cc.p(s_DESIGN_WIDTH-60, 900))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backImage:addChild(button_detail)
+                
+                button_reddot = ccui.Button:create()
+                button_reddot:setTouchEnabled(true)
+                button_reddot:loadTextures("image/button/dot_red.png", "", "")
+                button_reddot:setPosition(button_detail:getContentSize().width, button_detail:getContentSize().height)
+                button_reddot:setTitleText("1")
+                button_reddot:setTitleFontSize(24)
+                button_detail:addChild(button_reddot)
 
                 button_changeview = ccui.Button:create()
                 button_changeview:setTouchEnabled(true)

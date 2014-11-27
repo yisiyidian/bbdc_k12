@@ -41,6 +41,26 @@ function StudyLayerII.create()
     
     local viewIndex= 1
     
+    -- time
+    local time = 0
+    local view1_time = 0
+    local view2_time = 0
+    local view3_time = 0
+    local update = function()
+        time = time + 1
+        if viewIndex == 1 then
+            view1_time = view1_time + 1
+        elseif viewIndex == 2 then
+            view2_time = view2_time + 1
+            if view2_time >= 5 then
+                s_CorePlayManager.unfamiliarWord()
+            end
+        elseif viewIndex == 3 then
+            view3_time = view3_time + 1
+        end
+    end
+    schedule(layer,update,1)
+    
     local back = cc.Sprite:create("image/studyscene/studyII_back.png")
     back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2 - 800)
     back:setScale(2.7)
@@ -79,6 +99,7 @@ function StudyLayerII.create()
             if button_detail:getRotation() == 0 then
                 if button_reddot then
                     button_detail:removeChild(button_reddot,true)
+                    s_CorePlayManager.unfamiliarWord()
                 end
             
                 local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, -600))
@@ -112,6 +133,7 @@ function StudyLayerII.create()
             if button_changeview:getTitleText() == "去划单词" then
                 local change = function()
                     button_changeview:setTitleText("再看一次")
+                    viewIndex = 3
 
                     local action1 = cc.MoveTo:create(0.5,cc.p(-bigWidth/2, 500))
                     soundMark:runAction(action1)
@@ -128,7 +150,10 @@ function StudyLayerII.create()
                 end
                 change()
             else
+                s_CorePlayManager.unfamiliarWord()
+            
                 button_changeview:setTitleText("去划单词")
+                viewIndex = 2
 
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 500))
                 soundMark:runAction(action1)
@@ -190,6 +215,7 @@ function StudyLayerII.create()
     end
 
     local fail = function()
+        s_CorePlayManager.unfamiliarWord()
     end
     
     mat = TapMat.create(wordName,4,4)
