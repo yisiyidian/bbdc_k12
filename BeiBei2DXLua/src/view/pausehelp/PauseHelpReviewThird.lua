@@ -67,9 +67,6 @@ function PauseHelpReviewThird:onBlueButtonClicked()
        s_SCENE:removeAllPopups()
     end)
 
-
 end
-
-
 
 return PauseHelpReviewThird
