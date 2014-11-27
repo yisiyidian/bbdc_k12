@@ -51,7 +51,8 @@ function WordMenu:ctor()
     local list = require('view.wordlist.StudyedWordList')
     local layer = list.create()
     layer:setAnchorPoint(0.5,0)
-    self:addChild(layer,0,'studyed')
+    layer:setName('studyed')
+    self:addChild(layer,0)
 
     local function onBack(sender)
         --self.backButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
@@ -71,7 +72,8 @@ function WordMenu:ctor()
             local list = require('view.wordlist.StudyedWordList')
             local layer = list.create()
             layer:setAnchorPoint(0.5,0)
-            self:addChild(layer,0,'studyed')
+            layer:setName('studyed')
+            self:addChild(layer,0)
         end
     end
 
@@ -84,7 +86,8 @@ function WordMenu:ctor()
             local request = require('view/wordlist/MasteredWordList')
             local layer = request.create()
             layer:setAnchorPoint(0.5,0)
-            self:addChild(layer,0,'mastered')
+            layer:setName('mastered')
+            self:addChild(layer,0)
         end
     end
 
