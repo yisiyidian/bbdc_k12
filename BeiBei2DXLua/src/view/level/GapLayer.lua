@@ -2,8 +2,12 @@ require('common.global')
 require('Cocos2d')
 require('Cocos2dConstants')
 
+local s_layerHeight = 540
+
 local GapLayer = class('GapLayer', function()
-    return ccui.Button:create('image/chapter_level/chapter2_upGap.png','image/chapter_level/chapter2_upGap.png','image/chapter_level/chapter2_upGap.png')
+    local widget = ccui.Widget:create()
+    widget:setContentSize(cc.size(s_MAX_WIDTH, s_layerHeight))
+    return widget
 end)
 
 function GapLayer.create()

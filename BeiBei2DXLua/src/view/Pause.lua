@@ -10,7 +10,7 @@ ccbPause = ccbPause or {}
 
 function Pause.create()
     local layer = Pause.new()
-    
+    s_SCENE.popupLayer.pauseLayer = layer
     return layer
 end
 
@@ -20,15 +20,15 @@ function Pause:ctor()
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
     cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
-    
+   
     -- Pause actions
     local director = cc.Director:getInstance()
     self.targets = director:getActionManager():pauseAllRunningActions()
     s_logd(#self.targets)
     
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    back:setPosition(0, 0)
-    self:addChild(back)
+    -- local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    -- back:setPosition(0, 0)
+    -- self:addChild(back)
     
     self.ccb = {}
     
@@ -61,7 +61,6 @@ function Pause:onClose()
     local remove = cc.CallFunc:create(function() 
         local director = cc.Director:getInstance()
         director:getActionManager():resumeTargets(ccbPause['Layer'].targets)
-        ccbPause['Layer']:getParent().layerPaused = false
         ccbPause['Layer']:removeFromParent()
         s_SCENE:removeAllPopups()
     end,{})
@@ -125,11 +124,10 @@ function Pause:onHelp()
     else
         site = "view.pausehelp.PauseHelpNormal"
     end
-   
 
     local IntroLayer = require(site)
     local introLayer = IntroLayer.create()
-    s_SCENE:popup(introLayer)
+    s_SCENE.popupLayer:addChild(introLayer) 
     
     --button sound
     playSound(s_sound_buttonEffect)
@@ -180,7 +178,10 @@ function createPauseLayerWhenTestOrBoss()
     or s_SCENE.gameLayerState == s_review_boss_game_state
     or s_SCENE.gameLayerState == s_summary_boss_game_state then
         local pauseLayer = Pause:create()
-        s_SCENE:popup(pauseLayer)	
+        s_SCENE.popupLayer.listener:setSwallowTouches(true)
+        s_SCENE.popupLayer.layerPaused = true
+        s_SCENE.popupLayer:removeAllChildren()
+        s_SCENE.popupLayer:addChild(pauseLayer) 
     end
 end
 

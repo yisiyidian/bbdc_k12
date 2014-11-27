@@ -11,8 +11,6 @@ end
 
 
 function PauseHelpNormal:ctor()
-    --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
 
     self.ccbPauseHelpNormal = {}
 
@@ -52,22 +50,20 @@ end
 
 
 function PauseHelpNormal:onCloseButtonClicked()
-    s_logd('on close button clicked')
+
+    cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     s_SCENE:removeAllPopups()
 end
 
 function PauseHelpNormal:onBlueButtonClicked()
-    s_logd('on collect button clicked')
+
     local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
     self:runAction(action1) 
 
-
+    cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     s_SCENE:callFuncWithDelay(0.3,function()
     s_SCENE:removeAllPopups()
     end)
-
-
-
 end
 
 return PauseHelpNormal

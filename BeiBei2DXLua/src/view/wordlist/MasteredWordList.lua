@@ -49,7 +49,7 @@ function MasteredWordList:addMasteredPlots(button, proficiency)
         sprite2 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
         sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
         sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
-    elseif profiency == 1 then
+    elseif proficiency == 1 then
         sprite1 = cc.Sprite:create('image/word_list/button_wordbook_green.png')
         sprite2 = cc.Sprite:create('image/word_list/libruary_quan1.png')
         sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
@@ -149,7 +149,42 @@ function MasteredWordList:ctor()
                     --                    print('----split')
                     --                    print(splita)
                     --                    print_lua_table(splita)
-
+                    
+--                    local richText = ccui.RichText:create()
+--                    richText:ignoreContentAdaptWithSize(false)
+--                    richText:setContentSize(cc.size(550, -600))
+--
+--                    local re1 = ccui.RichElementText:create(1, cc.c3b(0, 0, 0), 255, wordInfo['wordMeaning'], "Helvetica", 28)
+--                    local re2 = ccui.RichElementText:create(2, cc.c3b(0, 0, 0), 255, wordInfo['sentenceEn'] , "Helvetica", 28)
+--                    local re3 = ccui.RichElementText:create(3, cc.c3b(0, 0, 0), 255, wordInfo['sentenceCn'], "Helvetica", 28)
+--
+--                    richText:pushBackElement(re1)
+--                    richText:pushBackElement(re2)
+--                    richText:pushBackElement(re3)
+--
+--                    richText:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
+--                    richText:setLocalZOrder(10)
+                  
+--                    local richText = ccui.RichText:create()
+--                    richText:ignoreContentAdaptWithSize(false)
+--                    richText:setContentSize(cc.size(550, -600))  
+--                    
+--                    local label_wordMeaning = cc.Label:createWithTTF(wordInfo['wordMeaning'],"Helvetica",28)
+--                    label_wordMeaning:setColor(cc.c3b(0, 0, 0))
+--                    local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,label_wordMeaning)
+--                    
+--                    local label_sentenceEn = cc.Label:createWithTTF(wordInfo['sentenceEn'],"Helvetica",28)
+--                    label_sentenceEn:setColor(cc.c3b(0, 0, 0))
+--                    local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,label_sentenceEn)
+--                    
+--                    local label_sentenceCn = cc.Label:createWithTTF(wordInfo['wordMeaning'],"Helvetica",28)
+--                    label_sentenceCn:setColor(cc.c3b(0, 0, 0))                    
+--                    local richElement3 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,label_sentenceCn)
+--                    
+--                    richText:pushBackElement(richElement1)
+--                    richText:pushBackElement(richElement2)
+--                    richText:pushBackElement(richElement3)
+                    
                     local back = cc.LayerColor:create(cc.c4b(52,177,241,255),s_DESIGN_WIDTH,200)
                     back:ignoreAnchorPointForPosition(false)
                     back:setAnchorPoint(0.5,0.5)
@@ -159,7 +194,9 @@ function MasteredWordList:ctor()
                     back:setPosition(wordContainer:getContentSize().width/2, wordContainer:getContentSize().height/2)
                     wordContainer:addChild(back)
                     wordTitle:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
-                    wordContainer:addChild(wordTitle,2)
+--                    wordContainer:addChild(wordTitle,2)
+                    
+--                    wordContainer:addChild(richText,2)
                     wordContainer:setName('moreWordInfo'..control[1]..control[2])
                     
                     local wordItem = self:getItemByName(listView,control[1]..'|'..control[2])

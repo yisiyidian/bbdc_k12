@@ -43,7 +43,7 @@ end
 
 local function _initTool()
     require("CCBReaderLoad")
-    require('Deprecated')
+    -- require('Deprecated')
     require('DeprecatedClass')
     require('DeprecatedEnum')
     require('DeprecatedOpenglEnum')
@@ -73,6 +73,8 @@ local function _initScene()
     -- ********************** --
     s_DESIGN_WIDTH  = 640.0
     s_DESIGN_HEIGHT = 1136.0
+
+    s_MAX_WIDTH     = 854.0
     -- ********************** --
 
     local _HEIGHT        = _SCREEN_HEIGHT
