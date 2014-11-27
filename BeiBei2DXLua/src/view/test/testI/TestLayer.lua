@@ -27,13 +27,10 @@ function TestLayer.create()
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            if layer.layerPaused then
-                return
-            end
             local pauseLayer = Pause.create()
             pauseLayer:setPosition(s_LEFT_X, 0)
-            layer:addChild(pauseLayer,1000)
-            layer.layerPaused = true
+            s_SCENE.popupLayer:addChild(pauseLayer)
+            s_SCENE.popupLayer.listener:setSwallowTouches(true)
             --director:getActionManager():resumeTargets(pausedTargets)
 
             --button sound
