@@ -384,6 +384,7 @@ function SummaryBossLayer.create(levelConfig)
 
                         
                         layer.girl:setAnimation(0,'girl_happy',false)
+                        layer.girl:addAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,s,true)
                         if killedCrabCount == #layer.wordPool[layer.currentIndex] then
                         --next group
@@ -778,7 +779,7 @@ function SummaryBossLayer:initMap()
             if #self.wordPool[self.currentIndex] == 1 then
                 local diff = main_logic_mat[i][j] - self.startIndexPool[1]
                 if diff >= 0 and diff < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
                     self.isCrab[i][j] = 1
                     if diff == 0 then
                         self.coconut[i][j].firstStyle()
@@ -786,20 +787,20 @@ function SummaryBossLayer:initMap()
                     end
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
                 end
             elseif #self.wordPool[self.currentIndex] == 2 then
                 local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
                 local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
                     self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
                     self.isCrab[i][j] = 2
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
                 end
                 if diff1 * diff2 == 0 then
                     self.coconut[i][j].firstStyle()
@@ -814,17 +815,17 @@ function SummaryBossLayer:initMap()
                 local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                 local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
                     self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
                     self.isCrab[i][j] = 2
                 elseif diff3 >= 0 and diff3 < string.len(self.wordPool[self.currentIndex][3]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_light", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
                     self.isCrab[i][j] = 3
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_light", charaster_set_filtered[randomIndex], i, j)
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
                 end
 
                 if diff1 * diff2 * diff3 == 0 then
