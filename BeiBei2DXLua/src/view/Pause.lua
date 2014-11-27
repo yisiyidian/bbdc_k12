@@ -98,6 +98,8 @@ function Pause:onBack()
     --if self.win and isPassed == 0 then
     --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     --end
+    s_SCENE.popupLayer.listener:setSwallowTouches(false)
+    s_SCENE.popupLayer:removeAllChildren()
     s_SCENE:replaceGameLayer(layer)
 end
 
