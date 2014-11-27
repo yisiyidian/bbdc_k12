@@ -364,6 +364,7 @@ function SummaryBossLayerII.create(levelConfig)
 
 
                         layer.girl:setAnimation(0,'girl_happy',false)
+                        layer.girl:addAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,s,true)
                         if killedCrabCount == #layer.wordPool[layer.currentIndex] then
                             --next group
