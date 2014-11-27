@@ -926,7 +926,6 @@ function PersonalInfo:XXTJ()
     local i = 0
     local function update(delta)
         i = i+5
-        if everydayWord > 10 then
         -- 0 up to everydayWord
         label_everydayWord:setString( math.ceil(everydayWord / 100 * i))
         -- 99 down to dayToFinish
@@ -936,19 +935,6 @@ function PersonalInfo:XXTJ()
              if i >= 100 then
                 back:unscheduleUpdate()           
              end
-        else
-            
-            
-            if i / 5 >= everydayWord then
-                label_dayToFinish:setString(dayToFinish)
-                back:unscheduleUpdate()   
-                return        
-            end
-            label_everydayWord:setString(i / 5)
-            if mark == 0 then 
-                label_dayToFinish:setString(math.ceil(99 - (99 -dayToFinish ) / 100 * i))
-            end
-        end
         
 
         

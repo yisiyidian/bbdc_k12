@@ -46,7 +46,7 @@ function FriendList:ctor()
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
     
-    self:addList()
+    --self:addList()
     
 end
 
