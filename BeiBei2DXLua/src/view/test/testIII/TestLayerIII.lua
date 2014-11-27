@@ -139,7 +139,7 @@ function TestLayerIII.create()
     end
 
     local fail = function()   
-
+        s_CorePlayManager.unfamiliarWord()
     end
 
     local timeOut = function()
@@ -147,6 +147,7 @@ function TestLayerIII.create()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
         progressBar.wrongStyle()
+        s_CorePlayManager.unfamiliarWord()
 
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
         showAnswerStateBack:setPosition(s_DESIGN_WIDTH/2*3, 768)
