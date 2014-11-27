@@ -49,7 +49,7 @@ function StudyedWordList:addMasteredPlots(button, proficiency)
         sprite2 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
         sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
         sprite4 = cc.Sprite:create('image/word_list/libruary_quan1.png')
-    elseif profiency == 1 then
+    elseif proficiency == 1 then
         sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
         sprite2 = cc.Sprite:create('image/word_list/libruary_quan1.png')
         sprite3 = cc.Sprite:create('image/word_list/libruary_quan1.png')
