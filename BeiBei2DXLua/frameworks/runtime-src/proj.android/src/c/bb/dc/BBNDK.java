@@ -225,9 +225,11 @@ public class BBNDK {
 
 			@Override
 			public void run() {
-				_hideCXProgressHUD();
+//				_hideCXProgressHUD();
 				if (_loadingView == null) {
 					_loadingView = ProgressDialog.show(_instance, "", content, true);
+				} else {
+					_loadingView.setMessage(content);
 				}
 			}
 			

@@ -260,8 +260,9 @@ function AppScene:getLevels()
     local co
     co = coroutine.create(function(results)
         if (results ~= nil) and (#results > 0) then
-            s_CURRENT_USER:parseServerLevelData(result.results)
-            coroutine.resume(co, {})
+            s_CURRENT_USER:parseServerLevelData(results)
+            s_SCENE:onUserServerDatasCompleted() 
+            return
         else
             -- when got no level datas from server
             s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
@@ -277,9 +278,9 @@ function AppScene:getLevels()
                 function (api, code, message, description)
                     coroutine.resume(co, {})
                 end)
+            coroutine.yield()
+            s_SCENE:onUserServerDatasCompleted() 
         end
-        coroutine.yield()
-        s_SCENE:onUserServerDatasCompleted() 
     end)
 
     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_LEVEL_DATA))
