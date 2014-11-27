@@ -234,8 +234,8 @@ function HomeLayer.create()
                         layer:removeChildByTag(1)
                         if s_CURRENT_USER.isGuest == 0 then
                             list[1].label:setString(s_CURRENT_USER.username)
-                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT-list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                            list[4].button_back:removeFromParentAndCleanup()
+                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                            if list[4].button_back ~= nil then list[4].button_back:removeFromParentAndCleanup() end
                         end
                     end
                 elseif label_name[i] == "登出游戏" then

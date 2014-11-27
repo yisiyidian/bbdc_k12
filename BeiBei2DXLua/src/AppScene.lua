@@ -257,14 +257,38 @@ function AppScene:getFollowers()
 end
 
 function AppScene:getLevels()
+    local co
+    co = coroutine.create(function(results)
+        if (results ~= nil) and (#results > 0) then
+            s_CURRENT_USER:parseServerLevelData(result.results)
+            coroutine.resume(co, {})
+        else
+            -- when got no level datas from server
+            s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
+                function (api, result)
+                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+                        function (api, result)
+                            coroutine.resume(co, {})
+                        end,
+                        function (api, code, message, description)
+                            coroutine.resume(co, {})
+                        end)
+                end,
+                function (api, code, message, description)
+                    coroutine.resume(co, {})
+                end)
+        end
+        coroutine.yield()
+        s_SCENE:onUserServerDatasCompleted() 
+    end)
+
     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_LEVEL_DATA))
     s_UserBaseServer.getLevelsOfCurrentUser(
         function (api, result)
-            s_CURRENT_USER:parseServerLevelData(result.results)
-            s_SCENE:onUserServerDatasCompleted()            
+            coroutine.resume(co, result.results)
         end,
         function (api, code, message, description)
-            s_SCENE:onUserServerDatasCompleted()
+            coroutine.resume(co, {}) -- can not pass nil value
         end
     )
 end
