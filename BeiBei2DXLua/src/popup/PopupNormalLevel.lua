@@ -10,6 +10,8 @@ function PopupNormalLevel.create(levelKey)
     return layer
 end
 
+local width = s_RIGHT_X-s_LEFT_X
+
 function PopupNormalLevel:plotStar(node, starCount)
 
     -- popup sound "Aluminum Can Open "
@@ -33,10 +35,10 @@ function PopupNormalLevel:plotStar(node, starCount)
         star2 = cc.Sprite:create('image/chapter_level/yellowStar.png')
         star3 = cc.Sprite:create('image/chapter_level/yellowStar.png')
     end
-    
-    star1:setPosition(node:getContentSize().width*0.3, node:getContentSize().height*0.67)
-    star2:setPosition(node:getContentSize().width*0.5, node:getContentSize().height*0.71)
-    star3:setPosition(node:getContentSize().width*0.7, node:getContentSize().height*0.67)
+
+    star1:setPosition(s_LEFT_X + width * 0.3, node:getContentSize().height*0.67) 
+    star2:setPosition(s_LEFT_X + width * 0.5, node:getContentSize().height*0.71)
+    star3:setPosition(s_LEFT_X + width * 0.7, node:getContentSize().height*0.67)
     node:addChild(star1)
     node:addChild(star2)
     node:addChild(star3)
@@ -79,7 +81,7 @@ function PopupNormalLevel:ctor(levelKey)
     
     -- add girl hello animation
     local girl_hello = sp.SkeletonAnimation:create('spine/bb_hello_public.json', 'spine/bb_hello_public.atlas',1)
-    girl_hello:setPosition(node:getContentSize().width/3, node:getContentSize().height*0.28)
+    girl_hello:setPosition(s_LEFT_X + width * 0.4, node:getContentSize().height*0.28)
     girl_hello:addAnimation(0, 'animation', true)
     node:addChild(girl_hello, 5)
     

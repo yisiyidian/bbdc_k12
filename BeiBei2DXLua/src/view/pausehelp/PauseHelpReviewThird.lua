@@ -50,7 +50,8 @@ function PauseHelpReviewThird:ctor()
 
 end   
 function PauseHelpReviewThird:onCloseButtonClicked()
-    s_logd('on close button clicked')
+    s_SCENE.popupLayer.layerpaused = false
+    cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     s_SCENE:removeAllPopups()
 end
 
@@ -61,12 +62,11 @@ function PauseHelpReviewThird:onBlueButtonClicked()
 
 
     s_SCENE:callFuncWithDelay(0.3,function()
-        s_SCENE:removeAllPopups()
+       s_SCENE.popupLayer.layerpaused = false
+       cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
+       s_SCENE:removeAllPopups()
     end)
 
-
 end
-
-
 
 return PauseHelpReviewThird

@@ -11,8 +11,6 @@ end
 
 
 function PauseHelpSummary:ctor()
-    --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
 
     self.ccbPauseHelpSummary = {}
 
@@ -51,20 +49,22 @@ end
 
 
 function PauseHelpSummary:onCloseButtonClicked()
-    s_logd('on close button clicked')
+
+    cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     s_SCENE:removeAllPopups()
+    s_SCENE.popupLayer.layerpaused = false
 end
 
 function PauseHelpSummary:onBlueButtonClicked()
-    s_logd('on collect button clicked')
+
+    cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
     self:runAction(action1) 
 
-
     s_SCENE:callFuncWithDelay(0.3,function()
         s_SCENE:removeAllPopups()
+        s_SCENE.popupLayer.layerpaused = false
     end)
-
 
 end
 

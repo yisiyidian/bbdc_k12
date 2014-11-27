@@ -3,6 +3,8 @@ local PopupSummarySuccess = class('PopupSummarySuccess', function()
     return cc.Layer:create()
 end)
 
+local width = s_RIGHT_X-s_LEFT_X
+
 function PopupSummarySuccess.create(levelKey, current_star, total_star)
     local layer = PopupSummarySuccess.new(levelKey, current_star, total_star)
     return layer
@@ -34,7 +36,7 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     -- add summary boss
     local boss = sp.SkeletonAnimation:create('spine/klschongshangdaoxia.json', 'spine/klschongshangdaoxia.atlas',1)
     boss:addAnimation(0, 'jianxiao', true)
-    boss:setPosition(node:getContentSize().width/3, node:getContentSize().height/3)
+    boss:setPosition(s_LEFT_X + width * 0.35, node:getContentSize().height/3)
     node:addChild(boss, 10)
     
     -- set stars
@@ -76,7 +78,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
             end)
         end
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-        local summaryboss = require('view.summaryboss.SummaryBossLayerI')
+        local summaryboss = require('view.summaryboss.SummaryBossLayer')
         local layer = summaryboss.create(levelConfig)
         layer:setAnchorPoint(0.5,0)
 
