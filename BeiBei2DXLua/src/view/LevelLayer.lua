@@ -25,7 +25,6 @@ end
 
 function LevelLayer:levelStateManager()
     -- test
-
     --s_CURRENT_USER:initLevels()
     -- check current chapter
 
@@ -195,41 +194,27 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         local item3 = ccui.Layout:create()
         item3:setContentSize(levelLayer3:getContentSize())
         item3:addChild(levelLayer3)
-        item3:setName('chapter2')
+        item3:setName(chapterKey..'_'..i)
         listView:addChild(item3)
     end
 end
 
 function LevelLayer:ctor()
-
+    self.chapterDic = {}  -- container of chapter layers
+    
     local levelStypeI = require('view.level.LevelLayerI')
     local levelStypeII = require('view.level.LevelLayerII')
     local connectionLayer1_2 = require('view.level.connection.Connection1_2')
     levelLayerI = levelStypeI.create()
     levelLayerII = levelStypeII.create()
     connection1_2 = connectionLayer1_2.create()
-    
+    self.chapterDic['chapter0'] = levelLayerI
+    self.chapterDic['chapter1'] = levelLayerII
+    self.chapterDic['connection0_1'] = connection1_2
 --    s_CURRENT_USER.currentChapterKey = 'chapter1'
 --    s_CURRENT_USER.currentLevelKey = 'level3'
 --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-    if s_CURRENT_USER.currentChapterKey == 'chapter0' then
-        currentChapterLayer = levelLayerI
-    elseif s_CURRENT_USER.currentChapterKey == 'chapter1' then
-        currentChapterLayer = levelLayerII
-    elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
-    --currentChapterLayer = 
-    end
-    -- plot player position
-    local currentLevelButton = currentChapterLayer:getChildByName(s_CURRENT_USER.currentLevelKey)
-    local image = 'image/chapter_level/gril_head.png'
-    player = cc.MenuItemImage:create(image,image,image)
-    player:setEnabled(false)
-    player:setPosition(currentLevelButton:getPosition())
-    player:setScale(0.4)
-    currentChapterLayer:addChild(player, 5)
-    
-    -- level layer state manager
-    self:levelStateManager()
+
     local function listViewEvent(sender, eventType)
         if eventType == ccui.ListViewEventType.ONSELECTEDITEM_END then
             print("select child index = ",sender:getCurSelectedIndex())
@@ -266,32 +251,28 @@ function LevelLayer:ctor()
     listView:addScrollViewEventListener(scrollViewEvent)
     listView:removeAllChildren()
     self:addChild(listView)
-    
-    -- add list view item1
---    local item1 = ccui.Layout:create()
---    item1:setContentSize(levelLayerI:getContentSize())    
---    levelLayerI:setPosition(cc.p(0, 0))
---    item1:addChild(levelLayerI)
---    listView:addChild(item1)   
+  
     self:manageListViewItem('chapter0','add')
 
     -- add list view connection 
     local item1_2 = ccui.Layout:create()
     item1_2:setTouchEnabled(true)
     item1_2:setContentSize(connection1_2:getContentSize())
+    print('connection1_2########')
+    print_lua_table(connection1_2:getContentSize())
     connection1_2:setPosition(cc.p(0,0))
     item1_2:addChild(connection1_2)
     listView:addChild(item1_2)
     
-    -- add chapter2 upGap Layer
-    local item2_upGap = ccui.Layout:create()
-    local GapLayer = require('view.level.GapLayer')
-    local chapter2_upGap = GapLayer.create()
-    item2_upGap:setContentSize(chapter2_upGap:getContentSize())
-    item2_upGap:setTouchEnabled(true)
-    chapter2_upGap:setPosition(cc.p(0,0))
-    item2_upGap:addChild(chapter2_upGap)
-    listView:addChild(item2_upGap)
+--    -- add chapter2 upGap Layer
+--    local item2_upGap = ccui.Layout:create()
+--    local GapLayer = require('view.level.GapLayer')
+--    local chapter2_upGap = GapLayer.create()
+--    item2_upGap:setContentSize(chapter2_upGap:getContentSize())
+--    item2_upGap:setTouchEnabled(true)
+--    chapter2_upGap:setPosition(cc.p(0,0))
+--    item2_upGap:addChild(chapter2_upGap)
+--    listView:addChild(item2_upGap)
     
     -- add list view item2
     local item2 = ccui.Layout:create()
@@ -330,6 +311,24 @@ function LevelLayer:ctor()
     local currentVerticalPercent = string.sub(s_CURRENT_USER.currentSelectedLevelKey,6)/12.0 * 30+1
     listView:scrollToPercentVertical(currentVerticalPercent,0,false)
 
+    if s_CURRENT_USER.currentChapterKey == 'chapter0' then
+        currentChapterLayer = levelLayerI
+    elseif s_CURRENT_USER.currentChapterKey == 'chapter1' then
+        currentChapterLayer = levelLayerII
+    elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
+    --currentChapterLayer = 
+    end
+    -- plot player position
+    local currentLevelButton = currentChapterLayer:getChildByName(s_CURRENT_USER.currentLevelKey)
+    local image = 'image/chapter_level/gril_head.png'
+    player = cc.MenuItemImage:create(image,image,image)
+    player:setEnabled(false)
+    player:setPosition(currentLevelButton:getPosition())
+    player:setScale(0.4)
+    currentChapterLayer:addChild(player, 5)
+
+    -- level layer state manager
+    self:levelStateManager()
 
     -- right top node
 
