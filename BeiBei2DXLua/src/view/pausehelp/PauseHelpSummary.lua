@@ -11,8 +11,6 @@ end
 
 
 function PauseHelpSummary:ctor()
-    --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
 
     self.ccbPauseHelpSummary = {}
 

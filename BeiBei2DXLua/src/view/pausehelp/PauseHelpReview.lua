@@ -54,6 +54,7 @@ function PauseHelpReview:ctor()
         
         local IntroLayer = require("view.pausehelp.PauseHelpReviewSecond")
         local introLayer = IntroLayer.create()
+        s_SCENE.popupLayer:removeAllChildren()
         s_SCENE.popupLayer:addChild(introLayer)
     end)
 
