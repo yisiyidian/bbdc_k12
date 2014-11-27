@@ -92,7 +92,8 @@ function MasteredWordList:ctor()
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))  -- TODO set dynamic
     listView:setPosition(0,0)
     listView:addEventListener(listViewEvent)
-    self:addChild(listView,0,'listView')
+    listView:setName('listView')
+    self:addChild(listView,0)
 
     --set model
     local default_item = ccui.Layout:create()

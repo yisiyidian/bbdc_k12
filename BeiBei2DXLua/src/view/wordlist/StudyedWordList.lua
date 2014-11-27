@@ -92,7 +92,8 @@ function StudyedWordList:ctor()
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))  -- TODO set dynamic
     listView:setPosition(0,0)
     listView:addEventListener(listViewEvent)
-    self:addChild(listView,0,'listView')
+    listView:setName('listView')
+    self:addChild(listView, 0)
     
     --set model
     local default_item = ccui.Layout:create()
@@ -225,7 +226,8 @@ function StudyedWordList:ctor()
                 word_meaning:ignoreAnchorPointForPosition(false)
                 word_meaning:setAnchorPoint(0,1)
                 word_meaning:setPosition(0.12 * custom_button:getContentSize().width,0.3 * custom_button:getContentSize().height)
-                custom_button:addChild(word_meaning, 0,'clickToCheck')
+                word_meaning:setName('clickToCheck')
+                custom_button:addChild(word_meaning, 0)
     
                 local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
                 arrow:setScale9Enabled(true)
