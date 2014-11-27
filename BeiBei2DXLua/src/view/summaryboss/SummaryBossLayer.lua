@@ -736,6 +736,7 @@ function SummaryBossLayer:initCrab()
         self.crab[3] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[3],self.ccb[3])
         self.crab[3]:setPosition(s_DESIGN_WIDTH * 0.8, -s_DESIGN_HEIGHT * 0.1)
         self:addChild(self.crab[3])
+        
     end
     for i = 1,#self.crab do
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
