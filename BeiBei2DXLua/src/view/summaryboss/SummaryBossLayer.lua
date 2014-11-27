@@ -529,13 +529,12 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
     self.blink = blinkBack
     --add pauseButton
-    local menu = cc.Menu:create()
-    self:addChild(menu)
+
     local pauseBtn = cc.MenuItemImage:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    menu:setPosition(0, s_DESIGN_HEIGHT)
-    menu:addChild(pauseBtn)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    self:addChild(pauseBtn,100)
 
     local function pauseScene(sender)
         if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
