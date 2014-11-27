@@ -68,7 +68,7 @@ function SummaryBossLayer.create(levelConfig)
     --update
     local function update(delta)
         
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return
         end
         
@@ -88,7 +88,7 @@ function SummaryBossLayer.create(levelConfig)
     
     -- handing touch events
     onTouchBegan = function(touch, event)
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return true
         end
         
@@ -150,7 +150,7 @@ function SummaryBossLayer.create(levelConfig)
     end
 
     onTouchMoved = function(touch, event)
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or layer.layerPaused then
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return true
         end
     
@@ -498,7 +498,7 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     self.totalTime = levelConfig.summary_boss_time
     self.onCrab = 0
     self.isLose = false
-    self.layerPaused = false 
+    s_SCENE.popupLayer.layerpaused = false 
 
     --add back
     local blueBack = cc.LayerColor:create(cc.c4b(52, 177, 240, 255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
@@ -538,14 +538,13 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     menu:addChild(pauseBtn)
 
     local function pauseScene(sender)
-        if self.currentBlood <= 0 or self.isLose or self.globalLock or self.layerPaused then
+        if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
             return
         end
         local pauseLayer = Pause.create()
         pauseLayer:setPosition(s_LEFT_X, 0)
-        self:addChild(pauseLayer,1000)
-        self.layerPaused = true
-        --director:getActionManager():resumeTargets(pausedTargets)
+        s_SCENE.popupLayer:addChild(pauseLayer)
+        s_SCENE.popupLayer.listener:setSwallowTouches(true)
         
         --button sound
         playSound(s_sound_buttonEffect)

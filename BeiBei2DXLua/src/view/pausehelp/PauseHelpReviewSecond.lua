@@ -55,20 +55,21 @@ function PauseHelpReviewSecond:ctor()
 
 end   
 function PauseHelpReviewSecond:onCloseButtonClicked()
-    s_logd('on close button clicked')
+
+    s_SCENE.popupLayer.layerpaused = false
+    cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     s_SCENE:removeAllPopups()
 end
 
 function PauseHelpReviewSecond:onBlueButtonClicked()
-    s_logd('on collect button clicked')
+
     local action1 = cc.MoveTo:create(0.3, cc.p(-400,0))      
     self:runAction(action1) 
-
 
     s_SCENE:callFuncWithDelay(0.3,function()
         local IntroLayer = require("view.pausehelp.PauseHelpReviewThird")
         local introLayer = IntroLayer.create()
-        s_SCENE:popup(introLayer)
+        s_SCENE.popupLayer:addChild(introLayer)
     end)
 
 
