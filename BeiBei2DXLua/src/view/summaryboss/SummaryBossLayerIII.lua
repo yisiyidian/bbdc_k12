@@ -341,7 +341,7 @@ function SummaryBossLayerIII.create(levelConfig)
                         bullet:runAction(cc.Sequence:create(hit,attacked,hide,resume))
                         local recover = cc.CallFunc:create(
                             function()
-                                if killedCrabCount < #layer.wordPool[layer.currentIndex] then
+                                if killedCrabCount > 0 and layer.globalLock then
                                     layer.globalLock = false
                                 end
                                 node.normal()

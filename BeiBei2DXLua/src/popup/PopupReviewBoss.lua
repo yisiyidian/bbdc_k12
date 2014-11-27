@@ -3,6 +3,8 @@ local PopupReviewBoss = class('PopupReviewBoss', function()
     return cc.Layer:create()
 end)
 
+local width = s_RIGHT_X-s_LEFT_X
+
 function PopupReviewBoss:create()
     local layer = PopupReviewBoss.new()
     return layer
@@ -32,7 +34,9 @@ function PopupReviewBoss:ctor()
     -- add review boss
     local reviewBoss = sp.SkeletonAnimation:create('spine/3zlstanchujianxiao.json', 'spine/3zlstanchujianxiao.atlas',1)
     reviewBoss:addAnimation(0,'animation',true)
-    reviewBoss:setPosition(node:getContentSize().width/3-30, node:getContentSize().height/3+50)
+    reviewBoss:ignoreAnchorPointForPosition(false)
+    reviewBoss:setAnchorPoint(0.5,0.5)
+    reviewBoss:setPosition(s_LEFT_X + width * 0.32, node:getContentSize().height/3+50)
     node:addChild(reviewBoss)
     
     -- run action
