@@ -3,9 +3,12 @@ require('Cocos2dConstants')
 require('common.global')
 require('CCBReaderLoad')
 
+local s_layerHeight = 4540
+
 local LevelLayerII = class('LevelLayerII', function()
-    --return ccui.Button:create('image/chapter_level/chapter2_back.png','image/chapter_level/chapter2_back.png','image/chapter_level/chapter2_back.png')
-    return ccui.ImageView:create('image/chapter_level/chapter2_back.png',0)
+    local widget = ccui.Widget:create()
+    widget:setContentSize(cc.size(s_MAX_WIDTH, s_layerHeight))
+    return widget
 end)
 
 function LevelLayerII.create()
@@ -252,7 +255,7 @@ function LevelLayerII:ctor()
     for i = 1, #self.ccbLevelLayerII['levelSet']:getChildren() do
         self.ccbLevelLayerII['levelSet']:getChildren()[i]:setName('level'..(self.ccbLevelLayerII['levelSet']:getChildren()[i]:getTag()-1)..'Container')
     end
-    contentNode:setContentSize(cc.size(854,4540))
+    contentNode:setContentSize(cc.size(s_MAX_WIDTH, s_layerHeight))
     self:setContentSize(contentNode:getContentSize())
     self:setAnchorPoint(0,0)
     self:addChild(contentNode)

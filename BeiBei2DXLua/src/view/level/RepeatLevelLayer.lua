@@ -3,8 +3,12 @@ require('Cocos2dConstants')
 require('common.global')
 require('CCBReaderLoad')
 
+local s_layerHeight = 2038
+
 local RepeatLevelLayer = class('RepeatLevelLayer', function()
-    return ccui.Button:create('image/chapter_level/repeat_back.png','image/chapter_level/repeat_back.png','image/chapter_level/repeat_back.png')
+    local widget = ccui.Widget:create()
+    widget:setContentSize(cc.size(s_MAX_WIDTH, s_layerHeight))
+    return widget
 end)
 
 function RepeatLevelLayer.create(chapterKey, startLevelKey)  -- repeat the chapter and level dynamicly
