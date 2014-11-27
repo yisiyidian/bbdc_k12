@@ -26,12 +26,9 @@ function PersonalInfo:ctor()
     menu:addChild(backButton,100)
 
     local function onBack(sender)
-        --if eventType == ccui.TouchEventType.ended then
-            s_logd('buttonClick')
-            local HomeLayer = require('view.home.HomeLayer')
-            local homeLayer = HomeLayer.create()
-            s_SCENE:replaceGameLayer(homeLayer)
-        --end
+        local HomeLayer = require('view.home.HomeLayer')
+        local homeLayer = HomeLayer.create()
+        s_SCENE:replaceGameLayer(homeLayer)
     end
 
     backButton:registerScriptTapHandler(onBack)
@@ -78,22 +75,13 @@ function PersonalInfo:ctor()
         pageView:addPage(layout)
 
     end 
-
---    local function pageViewEvent(sender, eventType)
---        if eventType == ccui.PageViewEventType.turning then
---            local pageView = sender
---            s_logd("page %d " , pageView:getCurPageIndex() + 1)
---        end
---    end 
---
---    pageView:addEventListener(pageViewEvent)
+    
     self:addChild(pageView)
     local lastPage = -1
     local function update(delta)
         local curPage = pageView:getCurPageIndex()
         
         if curPage ~= lastPage then
-            s_logd("%d,%d",lastPage,curPage)
             if lastPage >= 0 then
                 self.intro_array[curPage+1]:removeAllChildren()
             end
@@ -184,7 +172,6 @@ function PersonalInfo:PLVM()
     local learnStr = string.format('已学习%d',tolearnCount)
     local masterStr = string.format('已掌握%d',toMasterCount)
     for i = 1,#learnStr - 9 do
-        s_logd(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i))
         local label = cc.Label:createWithSystemFont(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i),'',28)
         label:setRotation(- i * 5)
         label:setColor(cc.c3b(0,0,0))
@@ -193,7 +180,6 @@ function PersonalInfo:PLVM()
     end
     
     for i = 1,3 do
-        s_logd(string.sub(learnStr,3 * (i - 1) + 1,3 * i))
         local label = cc.Label:createWithSystemFont(string.sub(learnStr,3 * (i - 1) + 1,3 * i),'',28)
         local angle = (#learnStr - 9) * 5 + (4 - i) * 7
         label:setRotation(-angle)
@@ -203,22 +189,20 @@ function PersonalInfo:PLVM()
     end
     
     for i = 1,#masterStr - 9 do
-        s_logd(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i))
         local label = cc.Label:createWithSystemFont(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i),'',28)
         label:setRotation(- i * 6)
         label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBackBig:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * i / 180)),circleBackBig:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * i / 180)))
-        circleBackBig:addChild(label,1)
+        label:setPosition(circleBackSmall:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * i / 180)),circleBackSmall:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * i / 180)))
+        circleBackSmall:addChild(label,1)
     end
 
     for i = 1,3 do
-        s_logd(string.sub(masterStr,3 * (i - 1) + 1,3 * i))
         local label = cc.Label:createWithSystemFont(string.sub(masterStr,3 * (i - 1) + 1,3 * i),'',28)
         local angle = (#masterStr - 9) * 6 + (4 - i) * 9
         label:setRotation(-angle)
         label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBackBig:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBackBig:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
-        circleBackBig:addChild(label,1)
+        label:setPosition(circleBackSmall:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBackSmall:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
+        circleBackSmall:addChild(label,1)
     end
     
     local learnProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_big_dark.png'))
@@ -325,10 +309,8 @@ function PersonalInfo:PLVI()
     math.random(0,20)
     local selectDate = s_CURRENT_USER.localTime
     for i = 1 , dayCount do 
-        local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%Y',selectDate))
-        
+        local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%y',selectDate))
         countArray[i] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
-        s_logd(countArray[i])
         dateArray[i] = string.format("%s/%s",os.date('%m',selectDate),os.date('%d',selectDate))
         selectDate = selectDate + 24 * 3600
         if i > 1 then
@@ -343,6 +325,9 @@ function PersonalInfo:PLVI()
     local function drawXYLabel(date,count)
         local max = count[#count]
         local min = count[1]
+        if max == min then
+            min = 0
+        end
         local yLabel = {}
         local xLabel = date
         point = {}
@@ -365,25 +350,29 @@ function PersonalInfo:PLVI()
                 y = 0.2              
             end
             point[i] = cc.p(x,y)
-            s_logd('x= %f,y = %f',x,y)
             local x_i = cc.Label:createWithSystemFont(xLabel[i],'',24)
             x_i:setScaleX(1/ scale)
             x_i:setPosition(x * tableWidth , 0)
             gezi:addChild(x_i)
         end
+        local y = {}
         for i = 1, 5 do
             yLabel[i] = min + (max - min) * (i - 1) / (5 - 1)
-            local y_i = cc.Label:createWithSystemFont(math.ceil(yLabel[i]),'',24)
-            y_i:setScaleX(1/ scale)
-            y_i:setColor(cc.c3b(201,43,44))
-            y_i:setAlignment(cc.TEXT_ALIGNMENT_RIGHT)
-            y_i:setPosition(0.5 * yBar:getContentSize().width , (0.2 + 0.58 * (i - 1) / 4) * tableHeight)
-            yBar:addChild(y_i)
+            y[i] = cc.Label:createWithSystemFont(math.ceil(yLabel[i]),'',24)
+            y[i]:setScaleX(1/ scale)
+            y[i]:setColor(cc.c3b(201,43,44))
+            y[i]:setAlignment(cc.TEXT_ALIGNMENT_RIGHT)
+            y[i]:setPosition(0.5 * yBar:getContentSize().width , (0.2 + 0.58 * (i - 1) / 4) * tableHeight)
+            yBar:addChild(y[i])
+        end
+        if max == 0 then
+            for i = 1, 5 do
+                y[i]:setString(string.format('%d',10 * (i - 1)))
+            end
         end
         local length = {}
         if #count > 0 then
             for i = 1,#count - 1 do
-                --s_logd(count[i])
                  length[i] = math.sqrt( math.pow((point[i + 1].x - point[i].x) * tableWidth,2) + math.pow((point[i + 1].y - point[i].y) * tableHeight,2))
                 local angle = math.acos((point[i + 1].x - point[i].x) * tableWidth / length[i])
                 local line = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVI/chart_line.png'))
@@ -512,7 +501,6 @@ function PersonalInfo:PLVI()
                 button[selectButton]:getChildByName('month'):setColor(cc.c3b(255,255,255))
                 button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_hongseban.png", "res/image/PersonalInfo/login/wsy_hongseban.png", "")
                 selectButton = i
-                s_logd(i)
                 button[selectButton]:getChildByName('sun'):setVisible(true)
                 button[selectButton]:getChildByName('date'):setColor(cc.c3b(201,43,44))
                 button[selectButton]:getChildByName('year'):setColor(cc.c3b(201,43,44))
@@ -560,14 +548,7 @@ function PersonalInfo:PLVI()
             
             drawXYLabel(xArray,yArray)
             if rightButton >= dayCount - 3 and frontButton:isVisible() then
-                s_logd(rightButton)
                 frontButton:setVisible(false)
-                if frontButton:isVisible() then
-                    s_logd('true')
-                else 
-                    s_logd('false')
-                end
-                --frontButton:setScale(2)
             end
             if rightButton > 1 and  backButton:isVisible() == false then
                 backButton:setVisible(true)
@@ -607,7 +588,6 @@ end
 function PersonalInfo:login()
     local back = self.intro_array[2]
     local loginData = s_CURRENT_USER.logInDatas
-    s_logd("weekcount = %d",#loginData)
     math.randomseed(os.time()) 
     local loginArray = {}
     local weekCount = #loginData
@@ -732,7 +712,6 @@ function PersonalInfo:login()
                 button[selectButton]:getChildByName('week'):setColor(cc.c3b(255,255,255))
                 button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_chengseban.png", "res/image/PersonalInfo/login/wsy_chengseban.png", "")
                 selectButton = i
-                s_logd(i)
                 button[selectButton]:getChildByName('sun'):setVisible(true)
                 button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,103,0))
                 button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,103,0))
@@ -790,14 +769,7 @@ function PersonalInfo:login()
             rightButton = rightButton + 1
 
             if rightButton >= weekCount - 3 and frontButton:isVisible() then
-                s_logd(rightButton)
                 frontButton:setVisible(false)
-                if frontButton:isVisible() then
-                    s_logd('true')
-                else 
-                    s_logd('false')
-                end
-                --frontButton:setScale(2)
             end
             if rightButton > 1 and  backButton:isVisible() == false then
                 backButton:setVisible(true)
