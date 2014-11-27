@@ -59,7 +59,8 @@ function FriendList:addList()
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))
     listView:setPosition(s_LEFT_X,0)
-    self:addChild(listView,0,'listView')
+    listView:setName('listView')
+    self:addChild(listView)
     local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
     --listView:add
     
