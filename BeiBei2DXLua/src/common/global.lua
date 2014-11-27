@@ -39,6 +39,7 @@ local function _initConstant()
     CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
 
     s_DATA_MANAGER = require('model.DataManager')
+    s_DATA_MANAGER.clear()
 end
 
 local function _initTool()
@@ -108,6 +109,8 @@ local function _initServer()
     s_SERVER.debugLocalHost   = false -- 'http://localhost:3000/avos/'
     s_SERVER.isAppStoreServer = false
     s_SERVER.production       = 0
+    s_SERVER.sessionToken     = ''
+
     -- user base server
     s_UserBaseServer          = require('server.UserBaseServer')
     s_HttpRequestClient       = require('server.HttpRequestClient')

@@ -28,10 +28,6 @@ function PauseHelpNormal:ctor()
     self.ccb['blueButton'] = self.ccbPauseHelpNormal_blueButton
     self.ccb['popupWindow'] = self.ccbPauseHelpNormal_popupWindow
 
-
-
-
-
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('ccb/pause_help_normal.ccbi', proxy, self.ccbPauseHelpNormal, self.ccb)
     node:setPosition(0,600)
@@ -51,6 +47,7 @@ end
 
 function PauseHelpNormal:onCloseButtonClicked()
 
+    s_SCENE.popupLayer.layerpaused = false
     cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     s_SCENE:removeAllPopups()
 end
@@ -60,6 +57,7 @@ function PauseHelpNormal:onBlueButtonClicked()
     local action1 = cc.MoveTo:create(0.3, cc.p(0,600))      
     self:runAction(action1) 
 
+    s_SCENE.popupLayer.layerpaused = false
     cc.Director:getInstance():getActionManager():resumeTargets(s_SCENE.popupLayer.pauseLayer.targets)
     s_SCENE:callFuncWithDelay(0.3,function()
     s_SCENE:removeAllPopups()

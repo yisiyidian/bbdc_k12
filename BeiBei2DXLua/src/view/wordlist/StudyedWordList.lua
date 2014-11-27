@@ -147,21 +147,26 @@ function StudyedWordList:ctor()
                 local wordInfo = s_WordPool[control[2]]
                 --print_lua_table(wordInfo)
                 if control[3] == '0' then  -- insert a item of word info
---                    local wordTitle = cc.Label:createWithSystemFont(wordInfo['wordMeaning']..'\n'..wordInfo['sentenceEn']..'\n'..wordInfo['sentenceCn'], '' ,28)
---                    wordTitle:setColor(cc.c3b(0,0,0))
                     
+                    local wordTitle = cc.Label:createWithSystemFont(wordInfo['wordMeaning']..'\n'..wordInfo['sentenceEn']..'\n'..wordInfo['sentenceCn'], '' ,28)
+                    wordTitle:setColor(cc.c3b(0,0,0))
+
                     local richText = ccui.RichText:create()
+
                     richText:ignoreContentAdaptWithSize(false)
-                    richText:setContentSize(cc.size(550, -600))
+                    richText:ignoreAnchorPointForPosition(false)
+                    richText:setAnchorPoint(0.5,0.5)
 
-                    local re1 = ccui.RichElementText:create(1, cc.c3b(0, 0, 0), 255, wordInfo['wordMeaning'], "Helvetica", 28)
-                    local re2 = ccui.RichElementText:create(2, cc.c3b(0, 0, 0), 255, wordInfo['sentenceEn'] , "Helvetica", 28)
-                    local re3 = ccui.RichElementText:create(3, cc.c3b(0, 0, 0), 255, wordInfo['sentenceCn'], "Helvetica", 28)
+                    richText:setContentSize(cc.size(600, -600))  
 
-                    richText:pushBackElement(re1)
-                    richText:pushBackElement(re2)
-                    richText:pushBackElement(re3)
-                    
+
+                    local label_word = CCLabelTTF:create (wordInfo['wordMeaning']..wordInfo['sentenceEn']..wordInfo['sentenceCn'],
+                        "Helvetica",28, cc.size(600, 200), cc.TEXT_ALIGNMENT_LEFT)
+
+                    label_word:setColor(cc.c3b(0, 0, 0))
+
+                    local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,label_word)                           
+                    richText:pushBackElement(richElement1)                   
                     richText:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
                     richText:setLocalZOrder(10)
                     
@@ -174,10 +179,7 @@ function StudyedWordList:ctor()
                     back:setPosition(wordContainer:getContentSize().width/2, wordContainer:getContentSize().height/2)
                     wordContainer:addChild(back)
                     
-                    wordContainer:addChild(richText,2)
-                    
---                    wordTitle:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
-                   -- wordContainer:addChild(wordTitle,2)
+                    wordContainer:addChild(richText,2)                    
                     wordContainer:setName('moreWordInfo'..control[1]..control[2])
   
                     local wordItem = self:getItemByName(listView,control[1]..'|'..control[2])
