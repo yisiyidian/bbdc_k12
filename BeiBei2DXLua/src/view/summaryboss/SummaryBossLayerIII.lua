@@ -114,10 +114,7 @@ function SummaryBossLayerIII.create(levelConfig)
             startNode.bigSize()
             if startNode.isFirst > 0 and layer.crabOnView[startNode.isFirst] then
                 s_logd(startNode.isFirst)
-                layer.ccbcrab[startNode.isFirst]['boardBig']:setVisible(true)
-                layer.ccbcrab[startNode.isFirst]['boardSmall']:setVisible(false)
-                layer.ccbcrab[startNode.isFirst]['legBig']:setVisible(true)
-                layer.ccbcrab[startNode.isFirst]['legSmall']:setVisible(false)
+                layer.crab[startNode.isFirst]:setScale(1.2)
             end
             startAtNode = true
         else
@@ -127,10 +124,7 @@ function SummaryBossLayerIII.create(levelConfig)
         for i = 1,#layer.wordPool[layer.currentIndex] do
             if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) then
                 layer.isPaused = true
-                layer.ccbcrab[i]['boardBig']:setVisible(true)
-                layer.ccbcrab[i]['boardSmall']:setVisible(false)
-                layer.ccbcrab[i]['legBig']:setVisible(true)
-                layer.ccbcrab[i]['legSmall']:setVisible(false)
+                layer.crab[i]:setScale(1.2)
                 layer.onCrab = i
                 for m = 1, 5 do
                     for n = 1,5 do
@@ -275,10 +269,7 @@ function SummaryBossLayerIII.create(levelConfig)
         --s_logd(layer.onCrab)
         if layer.onCrab > 0 then
 
-            layer.ccbcrab[layer.onCrab]['boardBig']:setVisible(false)
-            layer.ccbcrab[layer.onCrab]['boardSmall']:setVisible(true)
-            layer.ccbcrab[layer.onCrab]['legBig']:setVisible(false)
-            layer.ccbcrab[layer.onCrab]['legSmall']:setVisible(true)
+            layer.crab[layer.onCrab]:setScale(1.0)
             layer.onCrab = 0
         end
 
@@ -308,10 +299,7 @@ function SummaryBossLayerIII.create(levelConfig)
                     layer.boss.blood:setPercentage(100 * layer.currentBlood / layer.totalBlood)
                     --layer.boss:setAnimation(0,'a3',false)
                     layer.boss:addAnimation(0,'a2',false)
-                    layer.ccbcrab[i]['boardBig']:setVisible(false)
-                    layer.ccbcrab[i]['boardSmall']:setVisible(true)
-                    layer.ccbcrab[i]['legBig']:setVisible(false)
-                    layer.ccbcrab[i]['legSmall']:setVisible(true)
+                    layer.crab[i]:setScale(1.0)
                     layer.crab[i]:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT * 0.2))))
 
                     -- slide true
@@ -427,10 +415,7 @@ function SummaryBossLayerIII.create(levelConfig)
                     local shakeOnce = cc.Sequence:create(cc.RotateBy:create(0.05,9),cc.RotateBy:create(0.05,-18),cc.RotateBy:create(0.05,9))
                     local shake = cc.Repeat:create(shakeOnce,2)
                     local small = cc.CallFunc:create(function() 
-                        layer.ccbcrab[node.isFirst]['boardBig']:setVisible(false)
-                        layer.ccbcrab[node.isFirst]['boardSmall']:setVisible(true)
-                        layer.ccbcrab[node.isFirst]['legBig']:setVisible(false)
-                        layer.ccbcrab[node.isFirst]['legSmall']:setVisible(true)   
+                        layer.crab[node.isFirst]:setScale(1.0) 
                     end,{})
                     layer.crab[node.isFirst]:runAction(cc.Sequence:create(shake,small))
                 end
@@ -697,59 +682,55 @@ function SummaryBossLayerIII:initStartIndex()
 end
 
 function SummaryBossLayerIII:initCrab()
-    local proxy = cc.CCBProxy:create()
-    self.ccb = {}
     if #self.wordPool[self.currentIndex] ==1 then
-        self.ccbcrab[1] = {} 
-        self.ccb[1] = {}
-        self.ccb[1]['CCB_crab'] = self.ccbcrab[1]
-        self.crab[1] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[1],self.ccb[1])
-        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.5, -s_DESIGN_HEIGHT * 0.1)
+        self.crab[1] = cc.Sprite:create('image/summarybossscene/crab_3_board_1.png')
+        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.3, -s_DESIGN_HEIGHT * 0.17)
         self:addChild(self.crab[1])
     elseif #self.wordPool[self.currentIndex] ==2 then
-        self.ccbcrab[1] = {} 
-        self.ccb[1] = {}
-        self.ccb[1]['CCB_crab'] = self.ccbcrab[1]
-        self.crab[1] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[1],self.ccb[1])
-        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.3, -s_DESIGN_HEIGHT * 0.1)
+        self.crab[1] = cc.Sprite:create('image/summarybossscene/crab_3_board_1.png')
+        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.3, -s_DESIGN_HEIGHT * 0.17)
         self:addChild(self.crab[1])
-
-        self.ccbcrab[2] = {} 
-        self.ccb[2] = {}
-        self.ccb[2]['CCB_crab'] = self.ccbcrab[2]
-        self.crab[2] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[2],self.ccb[2])
-        self.crab[2]:setPosition(s_DESIGN_WIDTH * 0.7, -s_DESIGN_HEIGHT * 0.1)
+        self.crab[2] = cc.Sprite:create('image/summarybossscene/crab_3_board_3.png')
+        self.crab[2]:setPosition(s_DESIGN_WIDTH * 0.7, -s_DESIGN_HEIGHT * 0.17)
         self:addChild(self.crab[2])
     elseif #self.wordPool[self.currentIndex] ==3 then
-        self.ccbcrab[1] = {} 
-        self.ccb[1] = {}
-        self.ccb[1]['CCB_crab'] = self.ccbcrab[1]
-        self.crab[1] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[1],self.ccb[1])
-        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.2, -s_DESIGN_HEIGHT * 0.1)
-        self.crab[1]:setRotation(5)
-        self:addChild(self.crab[1])
-        self.ccbcrab[2] = {} 
-        self.ccb[2] = {}
-        self.ccb[2]['CCB_crab'] = self.ccbcrab[2]
-        self.crab[2] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[2],self.ccb[2])
-        self.crab[2]:setPosition(s_DESIGN_WIDTH * 0.5, -s_DESIGN_HEIGHT * 0.1 - 10)
-        self:addChild(self.crab[2])
-        self.ccbcrab[3] = {} 
-        self.ccb[3] = {}
-        self.ccb[3]['CCB_crab'] = self.ccbcrab[3]
-        self.crab[3] = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab[3],self.ccb[3])
-        self.crab[3]:setPosition(s_DESIGN_WIDTH * 0.8, -s_DESIGN_HEIGHT * 0.1)
-        self:addChild(self.crab[3])
+        for i = 1,3 do
+            self.crab[i] = cc.Sprite:create(string.format('image/summarybossscene/crab_3_board_%d.png',i))
+            self:addChild(self.crab[i])
+        end
+        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.2, -s_DESIGN_HEIGHT * 0.17)
+        self.crab[2]:setPosition(s_DESIGN_WIDTH * 0.5, -s_DESIGN_HEIGHT * 0.17 - 10)
+        self.crab[3]:setPosition(s_DESIGN_WIDTH * 0.8, -s_DESIGN_HEIGHT * 0.17)   
     end
     for i = 1,#self.crab do
+        local hand = cc.Sprite:create('image/summarybossscene/crab_3.png')
+        hand:setAnchorPoint(0.5,0.7)
+        hand:setPosition(0.5 * self.crab[i]:getContentSize().width,-10)
+        self.crab[i]:addChild(hand)
+        local meaning = cc.Label:createWithSystemFont(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall,'',28)
+        meaning:setPosition(0.5 * self.crab[i]:getContentSize().width,0.5 * self.crab[i]:getContentSize().height)
+        meaning:setColor(cc.c3b(0,0,0))
+        self.crab[i]:addChild(meaning)
+        if #self.crab == 3 then 
+            if i == 1 then
+                self.crab[i]:setRotation(6.6)
+            elseif i == 3 then
+                self.crab[i]:setRotation(-3.12)
+            end
+        elseif #self.crab == 2 then
+            if i == 1 then
+                self.crab[i]:setRotation(6.6)
+            elseif i == 2 then
+                self.crab[i]:setRotation(-3.12)
+            end
+        end
+        self.crab[i]:setAnchorPoint(0.5,0)
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
         local delaytime = 0
         if self.currentIndex == 1 then
             delaytime = 1.5
         end
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
-        self.ccbcrab[i]['meaningSmall']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
-        self.ccbcrab[i]['meaningBig']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
     end
 end
 
