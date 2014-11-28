@@ -18,6 +18,51 @@ function BookLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)    
     
+    local click_back = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            --whether bookKey == nil
+            s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+            s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
+
+            showProgressHUD()
+            s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
+                function (api, result)
+                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+                        function (api, result)
+                            s_CorePlayManager.enterHomeLayer()
+                            hideProgressHUD()
+                        end,
+                        function (api, code, message, description)
+                            s_TIPS_LAYER:showSmall(message)
+                            hideProgressHUD()
+                        end)
+                end,
+                function (api, code, message, description)
+                    s_TIPS_LAYER:showSmall(message)
+                    hideProgressHUD()
+                end)
+           
+            -- button sound
+            playSound(s_sound_buttonEffect)
+        end
+    end
+    
+    local backButton = ccui.Button:create("image/PersonalInfo/backButtonInPersonalInfo.png","image/PersonalInfo/backButtonInPersonalInfo.png","")
+    backButton:ignoreAnchorPointForPosition(false)
+    backButton:setAnchorPoint(0.5 , 0.5)
+    backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 250, s_DESIGN_HEIGHT - 100)
+    backButton:addTouchEventListener(click_back)
+    backColor:addChild(backButton)
+    
+    --whether bookKey == nil
+    
+    if s_CURRENT_USER.bookKey == '' then 
+       backButton:setVisible(false)
+    else
+       backButton:setVisible(true)
+    end
+    
+    
     local hint = cc.Label:createWithSystemFont("学英语就像翻越大山，开始挑战吧","",28)
     hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT-100)
     hint:setColor(cc.c4b(100,100,100,255))

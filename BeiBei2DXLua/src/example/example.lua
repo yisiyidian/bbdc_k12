@@ -17,27 +17,27 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
-    local IntroLayer = require("view.LoadingView")
+    local IntroLayer = require("view.friend.FriendPopup")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer) 
     
-    local startApp = function ()
-        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)           
-        else
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create()
-            s_SCENE:replaceGameLayer(introLayer)
-        end
-    end
-    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-        local SplashView = require("view.SplashView")
-        local sv = SplashView.create()
-        s_SCENE:replaceGameLayer(sv)
-        sv:setOnFinished(startApp)
-    else
-        startApp()
-    end
+--    local startApp = function ()
+--        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
+--            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)           
+--        else
+--            local IntroLayer = require("view.login.IntroLayer")
+--            local introLayer = IntroLayer.create()
+--            s_SCENE:replaceGameLayer(introLayer)
+--        end
+--    end
+--    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+--        local SplashView = require("view.SplashView")
+--        local sv = SplashView.create()
+--        s_SCENE:replaceGameLayer(sv)
+--        sv:setOnFinished(startApp)
+--    else
+--        startApp()
+--    end
 
 --    local BulletinBoard = require('view.BulletinBoard')
 --    local bb = BulletinBoard.create() 
