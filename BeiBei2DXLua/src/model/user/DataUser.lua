@@ -104,6 +104,11 @@ function DataUser:parseServerDataLogIn(results)
    end 
 end
 
+function DataUser:setTutorialStep(step)
+    self.tutorialStep = step
+    self:updateDataToServer()
+end
+
 -- who I follow
 function DataUser:parseServerFolloweesData(results)
     self.followees = {}
@@ -271,10 +276,10 @@ function DataUser:initChapterLevelAfterLogin()
             break
         end
     end
---    self.currentLevelKey = 'level0'
---    self.currentSelectedLevelKey = 'level0'
---    self.currentChapterKey = 'chapter2'
-    --s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
+--    self.currentLevelKey = 'level11'
+--    self.currentSelectedLevelKey = 'level11'
+--    self.currentChapterKey = 'chapter0'
+--    s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
     --s_SCENE.levelLayerState = s_unlock_next_chapter_state
 end
 

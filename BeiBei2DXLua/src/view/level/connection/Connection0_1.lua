@@ -15,7 +15,7 @@ end
 function Connection0_1:ctor()
     self.ccbConnection0_1 = {}
     self.ccb = {}
-    self.ccb['connection0_1'] = self.ccbConnection0_1
+    self.ccb['connection1_2'] = self.ccbConnection0_1
     local proxy = cc.CCBProxy:create()
     local contentNode = CCBReaderLoad('ccb/connection1_2.ccbi',proxy,self.ccbConnection0_1,self.ccb)  
     self:setContentSize(cc.size(s_MAX_WIDTH,402))

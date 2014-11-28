@@ -6,6 +6,8 @@ local ImproveInfo = require("view.home.ImproveInfo")
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 function FriendPopup.create()
+    local layer = FriendPopup.new()
+
 
     local reason = ''
     local solution = ''
@@ -14,19 +16,22 @@ function FriendPopup.create()
         reason = "游客身份无法使用好友系统\n请完善您的账号信息"
         solution = "完善个人信息"
     else
-        reason = "你至少得在任意一本书内玩到\n20关才能解锁此功能"
+        reason = "你至少得在任意一本书内玩到\n10关才能解锁此功能"
         solution = "继续闯关"
     end
-
-    local backColor = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
-    backColor:setAnchorPoint(0.5,0.5)
-    backColor:ignoreAnchorPointForPosition(false)
+    
+    layer.update = function()
+    end
     
     local popup_friend = cc.Sprite:create("image/friend/broad.png")
     popup_friend:setAnchorPoint(0.5,0.5)
     popup_friend:ignoreAnchorPointForPosition(false)
-    popup_friend:setPosition(s_LEFT_X + bigWidth , s_DESIGN_HEIGHT)
-    backColor:addChild(popup_friend)
+    popup_friend:setPosition(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3)
+    layer:addChild(popup_friend)
+    
+    local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2))
+    local action2 = cc.EaseBackOut:create(action1)
+    popup_friend:runAction(action2)
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -60,27 +65,36 @@ function FriendPopup.create()
             -- button sound
             playSound(s_sound_buttonEffect)
             
+            local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
+            local action2 = cc.EaseBackOut:create(action1)
+            popup_friend:runAction(action2) 
+                        
             if s_CURRENT_USER.isGuest == 1 then
-            
+              
                 local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
                 improveInfo:setTag(1)
                 improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                backColor:addChild(improveInfo)
-                improveInfo.close = function()
-                    backColor:removeChildByTag(1)   
-                end  
-            else
+                s_SCENE:callFuncWithDelay(0.3,function()
+                    layer:addChild(improveInfo)
+                    improveInfo.close = function()
+                        layer:removeChildByTag(1)  
+                        layer.update()  
+                        s_SCENE:removeAllPopups()
+                    end  
+                end)
 
+            else                
                 showProgressHUD()
                 -- button sound
-                playSound(s_sound_buttonEffect)  
-                s_CorePlayManager.enterLevelLayer()  
-                hideProgressHUD()
+                playSound(s_sound_buttonEffect) 
+                
+                s_SCENE:callFuncWithDelay(0.3,function() 
+                    s_CorePlayManager.enterLevelLayer()  
+                    hideProgressHUD()   
+                    s_SCENE:removeAllPopups()          
+                end)
 
             end
-            
-            
-            s_SCENE:removeAllPopups()
         end
     end
     
@@ -94,7 +108,7 @@ function FriendPopup.create()
     label_button:setPosition(button_solution:getContentSize().width / 2 ,button_solution:getContentSize().height / 2)
     button_solution:addChild(label_button)
     
-    return backColor
+    return layer
 end
 
 

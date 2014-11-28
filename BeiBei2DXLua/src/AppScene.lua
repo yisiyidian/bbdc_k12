@@ -19,11 +19,23 @@ s_unlock_normal_notPlotInfo_state = 'unlockNormalNotPlotInfoState'
 s_review_boss_retry_state = 'reviewBossRetryState'
 s_review_boss_appear_state = 'reviewBossAppearState'
 s_review_boss_pass_state = 'reviewBossPassState'
-
+-- define game layer state
 s_normal_game_state = 'normalGameState'
 s_test_game_state = 'testGameState'
 s_review_boss_game_state = 'reviewBossGameState'
 s_summary_boss_game_state = 'summaryBossGameState'
+
+-- define tutorial state
+s_tutorial_start = 0
+s_tutorial_book_select = 1
+s_tutorial_home = 2
+s_tutorial_level_select = 3
+s_tutorial_study = 4
+s_tutuorial_test = 5
+s_tutorial_review_boss = 6
+s_tutorial_summary_boss = 7
+s_tutorial_complete = 8
+
 
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
