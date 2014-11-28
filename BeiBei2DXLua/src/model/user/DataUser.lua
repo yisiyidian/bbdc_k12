@@ -123,6 +123,12 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
+function DataUser:parseServerFollowData(obj)
+    if obj ~= nil then
+        table.insert(self.followees, obj)
+    end
+end
+
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     --print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
