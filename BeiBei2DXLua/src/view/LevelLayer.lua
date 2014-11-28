@@ -333,6 +333,25 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
             item:setName(chapterKey..'_'..(i-1))
             listView:insertCustomItem(item,3+i)
         end
+    else
+        local chapterIndex = string.sub(chapterKey, 8)
+        local connectionLayer_repeat = require('view.level.connection.Connection_repeat')
+        self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)] = connectionLayer_repeat.create()
+        local item_connection = ccui.Layout:create()
+        item_connection:setContentSize(self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:getContentSize())
+        self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:setPosition(cc.p(0,0))
+        item_connection:addChild(self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)])
+        listView:addChild(item_connection)
+        for i = 1, #chapterConfig / 10 do
+            local levelStyle3 = require('view.level.RepeatLevelLayer')
+            self.chapterDic[chapterKey..'_'..(i-1)] = levelStyle3.create(chapterKey,'level'..((i-1)*10))
+            self.chapterDic[chapterKey..'_'..(i-1)]:setPosition(cc.p(0,0))
+            local item = ccui.Layout:create()
+            item:setContentSize(self.chapterDic[chapterKey..'_'..(i-1)]:getContentSize())
+            item:addChild(self.chapterDic[chapterKey..'_'..(i-1)])
+            item:setName(chapterKey..'_'..(i-1))
+            listView:addChild(item)
+        end
     end
     
 end
@@ -399,6 +418,7 @@ function LevelLayer:ctor()
     self:addChapterIntoListView('chapter0')
     self:addChapterIntoListView('chapter1')
     self:addChapterIntoListView('chapter2')
+    self:addChapterIntoListView('chapter3')
     local fullWidth = self.chapterDic['chapter0']:getContentSize().width
     listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
     listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
