@@ -98,11 +98,11 @@ function Pause:onRetry()
     
     local sceneState = ""
     if  s_SCENE.gameLayerState == s_review_boss_game_state then
-        s_SCENE.levelLayerState = "reviewBossRetryState" 
+        s_SCENE.levelLayerState = s_review_boss_retry_state 
     elseif s_SCENE.gameLayerState == s_summary_boss_game_state then
-        s_SCENE.levelLayerState = "reviewBossAppearState"  
+        s_SCENE.levelLayerState = s_normal_retry_state  
     else
-        s_SCENE.levelLayerState = "reviewBossPassState"
+        s_SCENE.levelLayerState = s_normal_retry_state
     end
     
     ccbPause['Layer']:onBack()
@@ -215,12 +215,15 @@ function createPauseLayerWhenTestOrBoss()
     if s_SCENE.gameLayerState == s_test_game_state
     or s_SCENE.gameLayerState == s_review_boss_game_state
     or s_SCENE.gameLayerState == s_summary_boss_game_state then
-        local pauseLayer = Pause:create()
-        s_SCENE.popupLayer.listener:setSwallowTouches(true)
-        pauseLayer:setPosition(s_LEFT_X, 0)
-        s_SCENE.popupLayer.layerPaused = true
-        s_SCENE.popupLayer:removeAllChildren()
-        s_SCENE.popupLayer:addChild(pauseLayer) 
+    
+        if s_SCENE.popupLayer.layerpaused == false then
+            local pauseLayer = Pause:create()
+            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+            pauseLayer:setPosition(s_LEFT_X, 0)
+            s_SCENE.popupLayer.layerPaused = true
+            s_SCENE.popupLayer:removeAllChildren()
+            s_SCENE.popupLayer:addChild(pauseLayer) 
+        end
     end
 end
 
