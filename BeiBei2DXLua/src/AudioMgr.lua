@@ -1,8 +1,10 @@
 require("Cocos2d")
 require("Cocos2dConstants")
 local db = require('model.LocalDatabaseManager')
+currentBGM = ""
 
 function playMusic(filename, isLoop)
+    currentBGM = filename
     if db.isMusicOn() then
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename) 
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
