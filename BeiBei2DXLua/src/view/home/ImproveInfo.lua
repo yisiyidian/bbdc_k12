@@ -17,6 +17,7 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER  = 'FROM_HOME_LAYER'
 ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER = 'FROM_INTRO_LAYER'
+ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER = 'FROM_FRIEND_LAYER'
 
 function ImproveInfo.create(layerType)
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
@@ -117,7 +118,8 @@ showLogin = function()
 
             showProgressHUD()
             
-            if main.layerType == ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER then
+            if main.layerType == ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER
+                or main.layerType == ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER then
                 updateUserNameAndPassword()
             else
                 s_UserBaseServer.logIn(s_CURRENT_USER.username, s_CURRENT_USER.password, function (userdata, errordescription, errorcode)
