@@ -54,8 +54,22 @@ function Pause:ctor()
     node:setPosition(0,0)
     self:addChild(node)
     
-    ccbPause['soundOff']:setVisible(false)
-    ccbPause['musicOff']:setVisible(false)
+    if s_DATABASE_MGR.isSoundOn() then
+        ccbPause['soundOn']:setVisible(true)
+        ccbPause['soundOff']:setVisible(false)
+    else
+        ccbPause['soundOn']:setVisible(false)
+        ccbPause['soundOff']:setVisible(true)
+    end
+    
+    if s_DATABASE_MGR.isMusicOn() then
+        ccbPause['musicOn']:setVisible(true)
+        ccbPause['musicOff']:setVisible(false)
+    else
+        ccbPause['musicOn']:setVisible(false)
+        ccbPause['musicOff']:setVisible(true)        
+    end
+
 
     ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p((s_RIGHT_X - s_LEFT_X) * 0.5,s_DESIGN_HEIGHT * 0.5))))
  end
@@ -75,19 +89,28 @@ function Pause:onClose()
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isSoundOn() then
+    if s_DATABASE_MGR.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
     end
 end
 
 function Pause:onRetry()
     
-    ccbPause['Layer']:onBack()
+    local sceneState = ""
+    if  s_SCENE.gameLayerState == s_review_boss_game_state then
+        s_SCENE.levelLayerState = "reviewBossRetryState" 
+    elseif s_SCENE.gameLayerState == s_summary_boss_game_state then
+        s_SCENE.levelLayerState = "reviewBossAppearState"  
+    else
+        s_SCENE.levelLayerState = "reviewBossPassState"
+    end
     
+    ccbPause['Layer']:onBack()
+
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isSoundOn() then
+    if s_DATABASE_MGR.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
     end
 end
@@ -98,7 +121,7 @@ function Pause:onBack()
     playSound(s_sound_buttonEffect)
     
     --control volune
-    if s_DATABASE_MGR.isSoundOn() then
+    if s_DATABASE_MGR.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
     end
     
@@ -118,7 +141,7 @@ function Pause:onContinue()
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isSoundOn() then
+    if s_DATABASE_MGR.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
     end
 
@@ -155,9 +178,6 @@ function Pause:onSoundOn()
 
     ccbPause['soundOn']:setVisible(false)
     ccbPause['soundOff']:setVisible(true)
-    
-    --button sound
-    playSound(s_sound_buttonEffect)
 end
 
 function Pause:onSoundOff()
@@ -176,8 +196,7 @@ function Pause:onMusicOn()
     ccbPause['musicOn']:setVisible(false)
     ccbPause['musicOff']:setVisible(true)
     
-    --button sound
-    playSound(s_sound_buttonEffect)
+    cc.SimpleAudioEngine:getInstance():stopMusic()
 end
 
 function Pause:onMusicOff()
@@ -187,7 +206,9 @@ function Pause:onMusicOff()
     ccbPause['musicOff']:setVisible(false)
     
     --button sound
-    playSound(s_sound_buttonEffect)
+    if currentBGM ~="" then
+        playMusic(currentBGM,true)
+    end
 end
 
 function createPauseLayerWhenTestOrBoss()   

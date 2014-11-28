@@ -2,6 +2,7 @@ local FriendPopup = class ("FriendPopup",function ()
 	return cc.Layer:create()
 end)
 
+local ImproveInfo = require("view.home.ImproveInfo")
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 function FriendPopup.create()
@@ -9,11 +10,13 @@ function FriendPopup.create()
     local reason = ''
     local solution = ''
     
-    reason = "游客身份无法使用好友系统\n请完善您的账号信息"
-    reason = "你至少得在任意一本书内玩到\n20关才能解锁此功能"
-    
-    solution = "完善个人信息"
-    solution = "继续闯关"
+    if s_CURRENT_USER.isGuest == 1 then
+        reason = "游客身份无法使用好友系统\n请完善您的账号信息"
+        solution = "完善个人信息"
+    else
+        reason = "你至少得在任意一本书内玩到\n20关才能解锁此功能"
+        solution = "继续闯关"
+    end
 
     local backColor = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     backColor:setAnchorPoint(0.5,0.5)
@@ -56,6 +59,27 @@ function FriendPopup.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+            if s_CURRENT_USER.isGuest == 1 then
+            
+                local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
+                improveInfo:setTag(1)
+                improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(improveInfo)
+                improveInfo.close = function()
+                    backColor:removeChildByTag(1)   
+                end  
+            else
+
+                showProgressHUD()
+                -- button sound
+                playSound(s_sound_buttonEffect)  
+                s_CorePlayManager.enterLevelLayer()  
+                hideProgressHUD()
+
+            end
+            
+            
             s_SCENE:removeAllPopups()
         end
     end

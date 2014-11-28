@@ -76,6 +76,7 @@ function HomeLayer.create()
     button_main:addTouchEventListener(button_left_clicked)
     backColor:addChild(button_main)
     
+   
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
@@ -86,10 +87,19 @@ function HomeLayer.create()
             local cet6_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
             local ielts_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
             local toefl_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
+            
+            
+            function judge_Whether_nil(mark)
+                if mark == nil then
+                    return 0
+                else
+                    return mark.isLevelUnlocked
+                end
+            end
 
-            if ncee_date.isLevelUnlocked == 1 or cet4_date.isLevelUnlocked == 1 or 
-                cet6_date.isLevelUnlocked == 1 or ielts_date.isLevelUnlocked == 1 or 
-                toefl_date.isLevelUnlocked == 1 then
+            if ( judge_Whether_nil(ncee_date) or judge_Whether_nil(cet4_date) or 
+                judge_Whether_nil(cet6_date) or judge_Whether_nil(cet6_date) or 
+                judge_Whether_nil(toefl_date) ) and s_CURRENT_USER.isGuest == 0 then
 
                 s_CorePlayManager.enterFriendLayer()
 
