@@ -16,6 +16,7 @@ s_normal_retry_state = 'normalRetryState'
 s_unlock_next_chapter_state = 'unlockNextChapterState'
 s_unlock_normal_plotInfo_state = 'unlockNormalPlotInfoState'
 s_unlock_normal_notPlotInfo_state = 'unlockNormalNotPlotInfoState'
+s_review_boss_retry_state = 'reviewBossRetryState'
 s_review_boss_appear_state = 'reviewBossAppearState'
 s_review_boss_pass_state = 'reviewBossPassState'
 

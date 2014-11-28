@@ -123,6 +123,12 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
+function DataUser:parseServerFollowData(obj)
+    if obj ~= nil then
+        table.insert(self.followees, obj)
+    end
+end
+
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     --print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
@@ -132,6 +138,15 @@ function DataUser:getUserLevelData(chapterKey, levelKey)
         end
     end
     --print('end get user level data')
+    return nil
+end
+
+function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
+    for i,v in ipairs(self.levels) do
+        if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
+            return v
+        end
+    end
     return nil
 end
 
