@@ -65,28 +65,35 @@ function FriendPopup.create()
             -- button sound
             playSound(s_sound_buttonEffect)
             
+            local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
+            local action2 = cc.EaseBackOut:create(action1)
+            popup_friend:runAction(action2) 
+                        
             if s_CURRENT_USER.isGuest == 1 then
-                
-                local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
-                local action2 = cc.EaseBackOut:create(action1)
-                popup_friend:runAction(action2)                
-                
+              
                 local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
                 improveInfo:setTag(1)
                 improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                layer:addChild(improveInfo)
-                improveInfo.close = function()
-                    layer:removeChildByTag(1)  
-                    layer.update()  
-                     s_SCENE:removeAllPopups()
-                end  
+                s_SCENE:callFuncWithDelay(0.3,function()
+                    layer:addChild(improveInfo)
+                    improveInfo.close = function()
+                        layer:removeChildByTag(1)  
+                        layer.update()  
+                        s_SCENE:removeAllPopups()
+                    end  
+                end)
+
             else                
                 showProgressHUD()
                 -- button sound
-                playSound(s_sound_buttonEffect)  
-                s_CorePlayManager.enterLevelLayer()  
-                hideProgressHUD()
-                s_SCENE:removeAllPopups()
+                playSound(s_sound_buttonEffect) 
+                
+                s_SCENE:callFuncWithDelay(0.3,function() 
+                    s_CorePlayManager.enterLevelLayer()  
+                    hideProgressHUD()   
+                    s_SCENE:removeAllPopups()          
+                end)
+
             end
         end
     end

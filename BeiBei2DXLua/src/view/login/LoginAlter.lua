@@ -184,7 +184,7 @@ showLogin = function()
     local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
     button_qq:setPosition(back_width/2,100)
     button_qq:addTouchEventListener(button_qq_clicked)
-    back_login:addChild(button_qq)
+ --   back_login:addChild(button_qq)
     
     local button_weixin_clicked = function(sender, eventType)
 
@@ -198,7 +198,7 @@ showLogin = function()
     local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weixin:setPosition(back_width/2-100,100)
     button_weixin:addTouchEventListener(button_weixin_clicked)
-    back_login:addChild(button_weixin)
+ --   back_login:addChild(button_weixin)
     
     local button_weibo_clicked = function(sender, eventType)
 
@@ -212,7 +212,7 @@ showLogin = function()
     local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weibo:setPosition(back_width/2+100,100)
     button_weibo:addTouchEventListener(button_weibo_clicked)
-    back_login:addChild(button_weibo)
+ --   back_login:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -339,7 +339,7 @@ showRegister = function()
     local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
     button_qq:setPosition(back_width/2,100)
     button_qq:addTouchEventListener(button_qq_clicked)
-    back_register:addChild(button_qq)
+--    back_register:addChild(button_qq)
     
     local button_weixin_clicked = function(sender, eventType)
 
@@ -354,7 +354,7 @@ showRegister = function()
     local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weixin:setPosition(back_width/2-100,100)
     button_weixin:addTouchEventListener(button_weixin_clicked)
-    back_register:addChild(button_weixin)
+--    back_register:addChild(button_weixin)
 
 
     local button_weibo_clicked = function(sender, eventType)
@@ -369,7 +369,7 @@ showRegister = function()
     local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
     button_weibo:setPosition(back_width/2+100,100)
     button_weibo:addTouchEventListener(button_weibo_clicked)    
-    back_register:addChild(button_weibo)
+--    back_register:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
 

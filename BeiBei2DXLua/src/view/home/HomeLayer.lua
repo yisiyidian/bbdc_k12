@@ -195,7 +195,7 @@ function HomeLayer.create()
     backColor:addChild(label)
     
     local button_play_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
@@ -214,7 +214,7 @@ function HomeLayer.create()
     local button_data
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
             -- button sound
             playSound(s_sound_buttonEffect)
 --            if isDataShow then
@@ -344,7 +344,7 @@ function HomeLayer.create()
     local moved = false
     local start_x = nil
     local onTouchBegan = function(touch, event)
-        if has_study then
+        if has_study and viewIndex == 1 then
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
