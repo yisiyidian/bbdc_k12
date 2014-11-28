@@ -163,8 +163,8 @@ function StudyLayerIV.create()
         end
 
         local endEffect = function()
-            label_wordmeaningSmall:removeFromParentAndCleanup()
-            wordDetailInfo:removeFromParentAndCleanup()
+            label_wordmeaningSmall:removeFromParent()
+            wordDetailInfo:removeFromParent()
         
             local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,mountain_y1))
             mountain:runAction(action5)

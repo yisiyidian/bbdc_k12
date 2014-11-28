@@ -37,6 +37,12 @@ function FriendLayer:ctor()
     
     local function onBack(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
+            s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
+            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+                function(api,result)
+                end,
+                function(api, code, message, description)
+                end)
             local HomeLayer = require('view.home.HomeLayer')
             local homeLayer = HomeLayer.create()
             s_SCENE:replaceGameLayer(homeLayer)
@@ -75,6 +81,17 @@ function FriendLayer:ctor()
     title3:setPosition(self.friendRequestButton:getContentSize().width / 2,self.friendRequestButton:getContentSize().height / 2)
     self.friendRequestButton:addChild(title3,1)
     menu:addChild(self.friendRequestButton)
+    s_CURRENT_USER:getFriendsInfo()
+    local redHint = nil
+    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+        redHint = cc.Sprite:create('image/friend/fri_infor.png')
+        redHint:setPosition(self.friendRequestButton:getContentSize().width * 0.8,self.friendRequestButton:getContentSize().height * 0.9)
+        redHint:setScaleX(1 / scale)
+        self.friendRequestButton:addChild(redHint)
+        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+        self.friendRequestButton:addChild(num)
+    end
     
     local list = require('view.friend.FriendList')
     local layer = list.create()
@@ -109,6 +126,9 @@ function FriendLayer:ctor()
     end
     
     local function onFriendRequest(sender)
+        if redHint then
+            redHint:setVisible(false)
+        end
         self.friendListButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
         self.friendRequestButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
         self.friendSearchButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))

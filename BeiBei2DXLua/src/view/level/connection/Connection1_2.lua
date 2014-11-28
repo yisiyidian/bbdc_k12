@@ -15,18 +15,18 @@ end
 function Connection1_2:ctor()
     self.ccbConnection1_2 = {}
     self.ccb = {}
-    self.ccb['connection1_2'] = self.ccbConnection1_2
+    self.ccb['connection2_3'] = self.ccbConnection1_2
     local proxy = cc.CCBProxy:create()
-    local contentNode = CCBReaderLoad('ccb/connection1_2.ccbi',proxy,self.ccbConnection1_2,self.ccb)  
-    self:setContentSize(cc.size(s_MAX_WIDTH,402))
+    local contentNode = CCBReaderLoad('ccb/connection2_3.ccbi',proxy,self.ccbConnection1_2,self.ccb)  
+    self:setContentSize(cc.size(s_MAX_WIDTH,400))
     self:addChild(contentNode)
 end
 
 function Connection1_2:plotUnlockChapterAnimation()
-    local leftCloud = self.ccbConnection1_2['connection_left_cloud']
-    local rightCloud = self.ccbConnection1_2['connection_right_cloud']
+    local leftCloud = self.ccbConnection1_2['left']
+    local rightCloud = self.ccbConnection1_2['right']
     local action1 = cc.MoveBy:create(0.5, cc.p(-leftCloud:getContentSize().width,leftCloud:getPositionY()))
-    local action2 = cc.MoveBy:create(0.5, cc.p(leftCloud:getContentSize().width, rightCloud:getPositionY()))
+    local action2 = cc.MoveBy:create(0.5, cc.p(rightCloud:getContentSize().width, rightCloud:getPositionY()))
     leftCloud:runAction(action1)
     rightCloud:runAction(action2)
 end

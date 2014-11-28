@@ -11,12 +11,12 @@ function SmallAlter.create(info)
     main:ignoreAnchorPointForPosition(false)
 
     main.affirm = function()
---        main:removeFromParentAndCleanup()
+--        main:removeFromParent()
         
     end
 
     main.close = function()
-        main:removeFromParentAndCleanup()
+        main:removeFromParent()
     end
 
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
