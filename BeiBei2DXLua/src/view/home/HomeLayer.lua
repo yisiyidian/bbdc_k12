@@ -22,6 +22,13 @@ function HomeLayer.create()
     local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
     -- data end
     
+    local list = {}
+    local username = "游客"
+    local logo_name = {"head","book","feedback","information","logout"}
+    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
+    
+    
+    
     local layer = HomeLayer.new()
     
     local offset = 500
@@ -82,11 +89,11 @@ function HomeLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
 
-            local ncee_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level10')
-            local cet4_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level10')
-            local cet6_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
-            local ielts_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
-            local toefl_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
+            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level10')
+            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level10')
+            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
+            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
+            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
             
             
             function judge_Whether_nil(mark)
@@ -97,16 +104,26 @@ function HomeLayer.create()
                 end
             end
 
-            if ( judge_Whether_nil(ncee_date) or judge_Whether_nil(cet4_date) or 
-                judge_Whether_nil(cet6_date) or judge_Whether_nil(cet6_date) or 
-                judge_Whether_nil(toefl_date) ) and s_CURRENT_USER.isGuest == 0 then
+            if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
+                judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
+                judge_Whether_nil(toefl_date)  == 1) and s_CURRENT_USER.isGuest == 0 then
 
                 s_CorePlayManager.enterFriendLayer()
 
             else
                 local Friend_popup = require("view/friend/FriendPopup")
                 local friend_popup = Friend_popup.create()  
+                
+                friend_popup.update = function()
+                    if s_CURRENT_USER.isGuest == 0 then
+                        list[1].label:setString(s_CURRENT_USER.username)
+                        list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                        if list[4].button_back ~= nil then list[4].button_back:removeFromParentAndCleanup() end
+                    end
+                end
+                
                 s_SCENE:popup(friend_popup)
+                
             end
           
         end
@@ -116,6 +133,17 @@ function HomeLayer.create()
     button_friend:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
     button_friend:addTouchEventListener(button_right_clicked)
     backColor:addChild(button_friend)   
+    
+    s_CURRENT_USER:getFriendsInfo()
+    local redHint = nil
+    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+        redHint = cc.Sprite:create('image/friend/fri_infor.png')
+        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+        button_friend:addChild(redHint)
+        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+        button_friend:addChild(num)
+    end
     
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
     book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
@@ -231,11 +259,11 @@ function HomeLayer.create()
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
     
-    
-    local list = {}
-    local username = "游客"
-    local logo_name = {"head","book","feedback","information","logout"}
-    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
+--    
+--    local list = {}
+--    local username = "游客"
+--    local logo_name = {"head","book","feedback","information","logout"}
+--    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
     if s_CURRENT_USER.isGuest == 0 then
         username = s_CURRENT_USER.username
         logo_name = {"head","book","feedback","logout"}
@@ -262,7 +290,7 @@ function HomeLayer.create()
                         if s_CURRENT_USER.isGuest == 0 then
                             list[1].label:setString(s_CURRENT_USER.username)
                             list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                            if list[4].button_back ~= nil then list[4].button_back:removeFromParentAndCleanup() end
+                            if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
                         end
                     end
                 elseif label_name[i] == "登出游戏" then
