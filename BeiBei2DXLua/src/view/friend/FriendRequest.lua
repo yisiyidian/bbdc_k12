@@ -13,6 +13,23 @@ function FriendRequest.create()
 end
 
 function FriendRequest:ctor()
+    s_UserBaseServer.getFolloweesOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerFolloweesData(result.results)
+            s_UserBaseServer.getFollowersOfCurrentUser( 
+                function (api, result)
+                    self:main()
+                end,
+                function (api, code, message, description)
+                end
+            )
+        end,
+        function (api, code, message, description)
+        end
+    )
+end
+
+function FriendRequest:main()
     s_CURRENT_USER:getFriendsInfo() 
     local array = s_CURRENT_USER.fans
     for i = 1,#array do
