@@ -242,7 +242,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
         levelButton:addChild(boat)
     end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
-        print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey..',starCount:'..levelData.stars..'state:'..s_SCENE.levelLayerState)
+        --print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey..',starCount:'..levelData.stars..'state:'..s_SCENE.levelLayerState)
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
             if s_CURRENT_USER.currentLevelKey ~= levelData.levelKey or s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_pass_state then
                 self:plotLevelStar(levelButton, levelData.stars)
@@ -403,7 +403,7 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData('chapter0', levelKey)
-    if s_SCENE.levelLayerState == s_review_boss_appear_state and levelKey == 'level'..(string.sub(s_CURRENT_USER.currentLevelKey,6)+1)then -- review boss appear
+    if (s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_retry_state) and levelKey == 'level'..(string.sub(s_CURRENT_USER.currentLevelKey,6)+1)then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
         local layer = popupReview.create()
         s_SCENE:popup(layer)

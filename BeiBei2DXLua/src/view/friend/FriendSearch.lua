@@ -58,6 +58,7 @@ function FriendSearch:ctor()
                 s_SCENE.popupLayer:addChild(smallAlter)
                 return
             end
+            local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
             s_UserBaseServer.searchUserByUserName(username,
                 function(api,result)
                     if #result.results > 0 then
@@ -91,6 +92,11 @@ function FriendSearch:ctor()
                             fri_word:setAnchorPoint(0,1)
                             fri_word:setPosition(0.42 * button:getContentSize().width,0.48 * button:getContentSize().height)
                             button:addChild(fri_word)
+                            button:setScaleX(scale)
+                            head:setScaleX(0.8 / scale)
+                            fri_name:setScaleX(1 / scale)
+                            fri_word:setScaleX(1 / scale)
+                            
                             local isFriend = 0
                             self.array = {}
                             for i = 1,#s_CURRENT_USER.friends do
@@ -115,25 +121,26 @@ function FriendSearch:ctor()
                             local arrow = cc.Sprite:create('image/friend/fri_button_gou.png')
                             arrow:setPosition(0.9 * button:getContentSize().width,0.5 * button:getContentSize().height)
                             button:addChild(arrow)
+                            arrow:setScaleX(1 / scale)
                             if isFriend > 0 then
                                 arrow:setVisible(true)
                                 local str = 'n'
-                                if i < 4 then
-                                    str = string.format('%d',i)
+                                if isFriend < 4 then
+                                    str = string.format('%d',isFriend)
                                 end
                                 local rankIcon = cc.Sprite:create(string.format('image/friend/fri_rank_%s.png',str))
                                 rankIcon:setPosition(0.08 * button:getContentSize().width,0.5 * button:getContentSize().height)
                                 button:addChild(rankIcon)
-                                local rankLabel = cc.Label:createWithSystemFont(string.format('%d',i),'',36)
+                                rankIcon:setScaleX(1 / scale)
+                                local rankLabel = cc.Label:createWithSystemFont(string.format('%d',isFriend),'',36)
                                 rankLabel:setPosition(rankIcon:getContentSize().width / 2,rankIcon:getContentSize().width / 2)
                                 rankIcon:addChild(rankLabel)
-
                             else 
                                 arrow:setVisible(false)
                                 local add = ccui.Button:create('image/friend/fri_button_add.png','image/friend/fri_button_add.png','')
                                 add:setPosition(0.9 * button:getContentSize().width,0.5 * button:getContentSize().height)
                                 button:addChild(add)
-                                
+                                add:setScaleX(1 / scale)
                                 local function onAdd(sender,eventType)
                                     if eventType == ccui.TouchEventType.ended then
 

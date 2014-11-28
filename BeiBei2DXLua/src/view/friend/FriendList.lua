@@ -224,7 +224,7 @@ function FriendList:addList()
         rankIcon:setName('rankIcon')
         
         local rankLabel = cc.Label:createWithSystemFont(string.format('%d',i),'',36)
-        rankLabel:setScaleX(1 / scale)
+        --rankLabel:setScaleX(scale)
         rankLabel:setPosition(rankIcon:getContentSize().width / 2,rankIcon:getContentSize().width / 2)
         rankIcon:addChild(rankLabel)
         rankLabel:setName('rankLabel')
