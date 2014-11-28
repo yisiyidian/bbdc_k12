@@ -144,7 +144,7 @@ function FriendSearch:ctor()
                                 add:setScaleX(1 / scale)
                                 local function onAdd(sender,eventType)
                                     if eventType == ccui.TouchEventType.ended then
-                                        if user >= s_friend_max_count then
+                                        if user.friendsCount >= s_friend_max_count then
                                             local SmallAlter = require('view.friend.HintAlter')
                                             local smallAlter = SmallAlter.create('您的好友数已达上限')
                                             smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
