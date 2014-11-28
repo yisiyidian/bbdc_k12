@@ -31,7 +31,6 @@ function TestLayer.create()
             pauseLayer:setPosition(s_LEFT_X, 0)
             s_SCENE.popupLayer:addChild(pauseLayer)
             s_SCENE.popupLayer.listener:setSwallowTouches(true)
-            --director:getActionManager():resumeTargets(pausedTargets)
 
             --button sound
             playSound(s_sound_buttonEffect)
