@@ -337,6 +337,14 @@ function AppScene:saveSignUpAndLogInData(onSaved)
         end
     end
     
+    s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
+    s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
+    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end)
+    
     local DataLogIn = require('model/user/DataLogIn')
     local function updateWeek(data, week)
         if data == nil then 

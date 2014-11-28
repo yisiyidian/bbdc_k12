@@ -81,23 +81,23 @@ function HomeLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
 
-            local ncee_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level10')
-            local cet4_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level10')
-            local cet6_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
-            local ielts_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
-            local toefl_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
-
-            if ncee_date.isLevelUnlocked == 1 or cet4_date.isLevelUnlocked == 1 or 
-                cet6_date.isLevelUnlocked == 1 or ielts_date.isLevelUnlocked == 1 or 
-                toefl_date.isLevelUnlocked == 1 then
-
-                s_CorePlayManager.enterFriendLayer()
-
-            else
+--            local ncee_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level10')
+--            local cet4_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level10')
+--            local cet6_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
+--            local ielts_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
+--            local toefl_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
+--
+--            if ncee_date.isLevelUnlocked == 1 or cet4_date.isLevelUnlocked == 1 or 
+--                cet6_date.isLevelUnlocked == 1 or ielts_date.isLevelUnlocked == 1 or 
+--                toefl_date.isLevelUnlocked == 1 then
+--
+--                s_CorePlayManager.enterFriendLayer()
+--
+--            else
                 local Friend_popup = require("view/friend/FriendPopup")
                 local friend_popup = Friend_popup.create()  
                 s_SCENE:popup(friend_popup)
-            end
+--            end
           
         end
     end
@@ -105,7 +105,17 @@ function HomeLayer.create()
     local button_friend = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
     button_friend:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
     button_friend:addTouchEventListener(button_right_clicked)
-    backColor:addChild(button_friend)   
+    backColor:addChild(button_friend) 
+    --add friend request hint
+    s_CURRENT_USER:getFriendsInfo()
+    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+        local redHint = cc.Sprite:create('image/friend/fri_infor.png')
+        redHint:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height)
+        button_friend:addChild(redHint)
+        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+        button_friend:addChild(num)
+    end
     
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
     book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)

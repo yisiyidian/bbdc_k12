@@ -13,47 +13,7 @@ function FriendRequest.create()
 end
 
 function FriendRequest:ctor()
---    s_UserBaseServer.getFolloweesOfCurrentUser( 
---        function (api, result)
---            s_CURRENT_USER:parseServerFolloweesData(result.results)
---        end,
---        function (api, code, message, description)
---        end
---    )
---
---    s_UserBaseServer.getFollowersOfCurrentUser( 
---        function (api, result)
---            s_CURRENT_USER:parseServerFollowersData(result.results)
---        end,
---        function (api, code, message, description)
---        end
---    )
-    s_CURRENT_USER.friends = {}
-    s_CURRENT_USER.fans = {}
-    local friendsObjId = {}
-    local friends = {}
-    print_lua_table (s_CURRENT_USER.followers)
-    print_lua_table (s_CURRENT_USER.followees)
-    for key, follower in pairs(s_CURRENT_USER.followers) do
-        friendsObjId[follower.objectId] = 1
-        friends[follower.objectId] = follower
-    end
-
-    for key, followee in pairs(s_CURRENT_USER.followees) do
-        print(friendsObjId[followee.objectId])
-        if friendsObjId[followee.objectId] == 1 then
-            friendsObjId[followee.objectId] = 2
-            friends[followee.objectId] = followee
-        end
-    end
-    for key, var in pairs(friends) do
-        if friendsObjId[key] == 2 then
-            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = var
-        elseif friendsObjId[key] == 1 then
-            s_CURRENT_USER.fans[#s_CURRENT_USER.fans + 1] = var
-        end
-    end
-
+    s_CURRENT_USER:getFriendsInfo() 
     local array = s_CURRENT_USER.fans
     for i = 1,#array do
         --array[i] = string.format("ListView_item_%d",i - 1)
@@ -123,6 +83,7 @@ function FriendRequest:ctor()
     -- set item data
     local items_count = table.getn(listView:getItems())
     for i = 1,items_count do
+        local j = items_count + 1 - i
         local item = listView:getItem(i - 1)
         local button = item:getChildByName("Title Button")
         local index = listView:getIndex(item)
@@ -132,7 +93,7 @@ function FriendRequest:ctor()
         head:setPosition(0.26 * button:getContentSize().width,0.6 * button:getContentSize().height)
         button:addChild(head)
 
-        local fri_name = cc.Label:createWithSystemFont(s_CURRENT_USER.fans[i].username,'',28)
+        local fri_name = cc.Label:createWithSystemFont(s_CURRENT_USER.fans[j].username,'',28)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
         fri_name:setAnchorPoint(0,0)
@@ -145,7 +106,7 @@ function FriendRequest:ctor()
         request_label:setAnchorPoint(0,0)
         request_label:setPosition(fri_name:getPositionX() + fri_name:getContentSize().width,fri_name:getPositionY() + 2)
         button:addChild(request_label)
-        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',s_CURRENT_USER.fans[i].wordsCount),'',20)
+        local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',s_CURRENT_USER.fans[j].wordsCount),'',20)
         fri_word:setColor(cc.c3b(0,0,0))
         fri_word:ignoreAnchorPointForPosition(false)
         fri_word:setAnchorPoint(0,1)
@@ -161,23 +122,32 @@ function FriendRequest:ctor()
         
         local function onAgree(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                if s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1].friendsCount >= s_friend_max_count then
+                if s_CURRENT_USER.fans[items_count - listView:getCurSelectedIndex()].friendsCount >= s_friend_max_count then
                     local SmallAlter = require('view.friend.HintAlter')
                     local smallAlter = SmallAlter.create('对方好友数已达上限')
                     smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     s_SCENE.popupLayer:addChild(smallAlter)
                     return
                 end
-                s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
+                if s_CURRENT_USER.friendsCount >= s_friend_max_count then
+                    local SmallAlter = require('view.friend.HintAlter')
+                    local smallAlter = SmallAlter.create('您的好友数已达上限')
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    s_SCENE.popupLayer:addChild(smallAlter)
+                    return
+                end
+                s_UserBaseServer.follow(s_CURRENT_USER.fans[items_count - listView:getCurSelectedIndex()],
                     function(api,result)
-                        s_CURRENT_USER:parseServerFollowData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
-                        s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1]
-                        table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        s_CURRENT_USER:parseServerFollowData(s_CURRENT_USER.fans[items_count - listView:getCurSelectedIndex()])
+                        s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[items_count - listView:getCurSelectedIndex()]
+                        table.remove(s_CURRENT_USER.fans,items_count - listView:getCurSelectedIndex())
                         listView:removeChild(item)
                         local SmallAlter = require('view.friend.HintAlter')
                         local smallAlter = SmallAlter.create('已同意好友请求')
                         smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         s_SCENE.popupLayer:addChild(smallAlter) 
+                        s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
+                        s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
                         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                             function(api,result)
                             end,
@@ -202,15 +172,17 @@ function FriendRequest:ctor()
         local function onRefuse(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 
-                s_UserBaseServer.removeFan(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
+                s_UserBaseServer.removeFan(s_CURRENT_USER.fans[items_count - listView:getCurSelectedIndex()],
                     function(api,result)
-                        s_CURRENT_USER:parseServerRemoveFanData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
+                        s_CURRENT_USER:parseServerRemoveFanData(s_CURRENT_USER.fans[items_count - listView:getCurSelectedIndex()])
                         listView:removeChild(item)
-                        table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        table.remove(s_CURRENT_USER.fans,items_count - listView:getCurSelectedIndex())
                         local SmallAlter = require('view.friend.HintAlter')
                         local smallAlter = SmallAlter.create('已拒绝好友请求')
                         smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         s_SCENE.popupLayer:addChild(smallAlter) 
+                        s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
+                        s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
                         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                             function(api,result)
                             end,
