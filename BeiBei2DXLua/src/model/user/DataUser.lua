@@ -208,7 +208,9 @@ function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
     print("getBookChapterLevelData")
     print(self.levels)
     for i,v in ipairs(self.levels) do
+        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
+
             return v
         end
     end
@@ -305,8 +307,8 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         --print('------ before insert table-----')
         print_lua_table(levelData)
         table.insert(self.levels,levelData)
-        --print('-------- after insert table -----')
-        --print('levels_count:'..#self.levels)
+--        print('-------- after insert table -----')
+--        print('levels_count:'..#self.levels)
     end
     if levelData.stars < stars then
         levelData.stars = stars

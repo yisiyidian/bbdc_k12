@@ -35,7 +35,7 @@ function HintAlter.create(info)
             s_SCENE.popupLayer.listener:setSwallowTouches(false)
             local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
             local remove = cc.CallFunc:create(function() 
-                main:removeFromParentAndCleanup() 
+                main:removeFromParent() 
             end,{})
             back:runAction(cc.Sequence:create(move,remove))
         end
