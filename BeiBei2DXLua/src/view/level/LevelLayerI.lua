@@ -79,6 +79,8 @@ end
 function LevelLayerI:plotStarAnimation(levelKey, starCount)
     local levelButton = self:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
+    print('--------plot star animation----------')
+    print('levelKey'..levelKey..',starCount'..starCount)
     if levelConfig['type'] == 0 then
         local star1, star2, star3
         if starCount >= 3 then
@@ -228,7 +230,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData('chapter0', levelKey)
     local levelIndex = string.sub(levelKey, 6)
-
+    --print('levelKey:'..levelKey)
     if levelKey == 'level3' or levelKey == 'level10' then  -- plot boat animation
         local boat = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
         boat:addAnimation(0, 'anmiation', true)
@@ -240,7 +242,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
         levelButton:addChild(boat)
     end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
-        --print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey)
+        print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey..',starCount:'..levelData.stars..'state:'..s_SCENE.levelLayerState)
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
             if s_CURRENT_USER.currentLevelKey ~= levelData.levelKey or s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_pass_state then
                 self:plotLevelStar(levelButton, levelData.stars)
