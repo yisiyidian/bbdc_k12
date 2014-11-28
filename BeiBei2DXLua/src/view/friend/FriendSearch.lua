@@ -14,6 +14,48 @@ end
 
 function FriendSearch:ctor()
 
+--    s_UserBaseServer.getFolloweesOfCurrentUser( 
+--        function (api, result)
+--            s_CURRENT_USER:parseServerFolloweesData(result.results)
+--        end,
+--        function (api, code, message, description)
+--        end
+--    )
+--    
+--    s_UserBaseServer.getFollowersOfCurrentUser( 
+--        function (api, result)
+--            s_CURRENT_USER:parseServerFollowersData(result.results)
+--        end,
+--        function (api, code, message, description)
+--        end
+--    )
+    
+    s_CURRENT_USER.friends = {}
+    s_CURRENT_USER.fans = {}
+    local friendsObjId = {}
+    local friends = {}
+    --    print_lua_table (s_CURRENT_USER.followers)
+    --    print_lua_table (s_CURRENT_USER.followees)
+    for key, follower in pairs(s_CURRENT_USER.followers) do
+        friendsObjId[follower.objectId] = 1
+        friends[follower.objectId] = follower
+    end
+
+    for key, followee in pairs(s_CURRENT_USER.followees) do
+        print(friendsObjId[followee.objectId])
+        if friendsObjId[followee.objectId] == 1 then
+            friendsObjId[followee.objectId] = 2
+            friends[followee.objectId] = followee
+        end
+    end
+    for key, var in pairs(friends) do
+        if friendsObjId[key] == 2 then
+            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = var
+        elseif friendsObjId[key] == 1 then
+            s_CURRENT_USER.fans[#s_CURRENT_USER.fans + 1] = var
+        end
+    end
+    
     local inputBack = cc.Sprite:create('image/friend/fri_inputback.png')
     inputBack:setPosition(0.5 * s_DESIGN_WIDTH,0.805 * s_DESIGN_HEIGHT)
     self:addChild(inputBack)
@@ -155,8 +197,10 @@ function FriendSearch:ctor()
                                                         break
                                                     end
                                                 end
+                                                
                                                 if fan then
                                                 s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = user
+                                                    s_CURRENT_USER.followees[#s_CURRENT_USER.followees + 1] = user
                                                 table.remove(s_CURRENT_USER.fans,key)
                                                 s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                                                     function(api,result)

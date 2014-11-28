@@ -43,6 +43,10 @@ function FriendPopup.create()
     label_friend_forbidden:setPosition(popup_friend:getContentSize().width / 2 ,680)
     popup_friend:addChild(label_friend_forbidden)
     
+    local picture_friend = cc.Sprite:create("image/homescene/setup_information.png")
+    picture_friend:setPosition(popup_friend:getContentSize().width / 2 ,500)
+    popup_friend:addChild(picture_friend)
+    
     local label_friend_reason = cc.Label:createWithSystemFont(reason,"",28)
     label_friend_reason:setColor(cc.c4b(0,0,0,255))
     label_friend_reason:setPosition(popup_friend:getContentSize().width / 2 ,380)

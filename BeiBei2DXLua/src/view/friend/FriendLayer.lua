@@ -12,31 +12,7 @@ function FriendLayer.create()
 end
 
 function FriendLayer:ctor()
-    s_CURRENT_USER.friends = {}
-    s_CURRENT_USER.fans = {}
-    local friendsObjId = {}
-    local friends = {}
---    print_lua_table (s_CURRENT_USER.followers)
---    print_lua_table (s_CURRENT_USER.followees)
-    for key, follower in pairs(s_CURRENT_USER.followers) do
-        friendsObjId[follower.objectId] = 1
-        friends[follower.objectId] = follower
-    end
     
-    for key, followee in pairs(s_CURRENT_USER.followees) do
-        print(friendsObjId[followee.objectId])
-        if friendsObjId[followee.objectId] == 1 then
-            friendsObjId[followee.objectId] = 2
-            friends[followee.objectId] = followee
-        end
-    end
-    for key, var in pairs(friends) do
-        if friendsObjId[key] == 2 then
-            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = var
-        elseif friendsObjId[key] == 1 then
-            s_CURRENT_USER.fans[#s_CURRENT_USER.fans + 1] = var
-        end
-    end
 
     local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     back:ignoreAnchorPointForPosition(false)
@@ -103,19 +79,24 @@ function FriendLayer:ctor()
     local list = require('view.friend.FriendList')
     local layer = list.create()
     layer:setAnchorPoint(0.5,0)
-    self:addChild(layer,0,'list')
+    self:addChild(layer,1,'list')
+    
+    local search = require('view.friend.FriendSearch')
+    local layer = search.create()
+    layer:setAnchorPoint(0.5,0)
+    self:addChild(layer,0,'search')
     
     local function onFriendList(sender)
         self.friendListButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
         self.friendRequestButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
         self.friendSearchButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
-        self:removeChildByName('search',true)
+        --self:removeChildByName('search',true)
         self:removeChildByName('request',true)
         if not self:getChildByName('list') then
             local list = require('view.friend.FriendList')
             local layer = list.create()
             layer:setAnchorPoint(0.5,0)
-            self:addChild(layer,0,'list')
+            self:addChild(layer,1,'list')
         end
     end
     
@@ -125,25 +106,19 @@ function FriendLayer:ctor()
         self.friendSearchButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
         self:removeChildByName('list',true)
         self:removeChildByName('request',true)
-        if not self:getChildByName('search') then
-            local search = require('view.friend.FriendSearch')
-            local layer = search.create()
-            layer:setAnchorPoint(0.5,0)
-            self:addChild(layer,0,'search')
-        end
     end
     
     local function onFriendRequest(sender)
         self.friendListButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
         self.friendRequestButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
         self.friendSearchButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
-        self:removeChildByName('search',true)
+        --self:removeChildByName('search',true)
         self:removeChildByName('list',true)
         if not self:getChildByName('request') then
             local request = require('view.friend.FriendRequest')
             local layer = request.create()
             layer:setAnchorPoint(0.5,0)
-            self:addChild(layer,0,'request')
+            self:addChild(layer,1,'request')
         end
     end
         
