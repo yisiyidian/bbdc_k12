@@ -24,6 +24,13 @@ function LevelLayer.create()
 end
 
 function LevelLayer:levelStateManager()
+    -- set levelState if relogin after logout
+    if s_SCENE.levelLayerState == s_normal_level_state then
+        local currentLevelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+        if currentLevelData.stars > 0 then  -- set unlock next level state
+            s_SCENE.levelLayerState = s_unlock_normal_notPlotInfo_state
+        end
+    end
     -- test
     --s_CURRENT_USER:initLevels()
     -- check current chapter
@@ -65,7 +72,7 @@ function LevelLayer:levelStateManager()
     end
 
     -- TODO switch state
-    --     s_SCENE.levelLayerState = s_normal_retry_state
+--         s_SCENE.levelLayerState = s_unlock_next_chapter_state
     --    s_CURRENT_USER.currentChapterKey = 'chapter1'
     --    print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then
@@ -174,7 +181,9 @@ function LevelLayer:levelStateManager()
         if s_CURRENT_USER.currentChapterKey == 'chapter1' then
             self.chapterDic['connection0_1']:plotUnlockChapterAnimation()
         elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
-            --self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
+            self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
+        elseif s_CURRENT_USER.currentChapterKey == 'chapter3' then
+            self.chapterDic['connection2_3']:plotUnlockChapterAnimation()
         end
         self:updateCurrentChapterLayer()
         currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
@@ -217,8 +226,8 @@ end
 
 -- scroll listview to show current level
 function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
---    chapterKey = 'chapter2'
---    levelKey = 'level29'
+--    chapterKey = 'chapter0'
+--    levelKey = 'level8'
     -- compute listView inner height
     local itemList = listView:getItems()
     local innerHeight = 0
@@ -231,7 +240,7 @@ function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
     local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
     if chapterKey == 'chapter0' then
         local item0 = self.chapterDic['chapter0']
-        local currentVerticalPercent = (string.sub(levelKey,6)+1)/#chapterConfig * item0:getContentSize().height / innerHeight * 100 - 5
+        local currentVerticalPercent = (string.sub(levelKey,6)+1)/#chapterConfig * item0:getContentSize().height / innerHeight * 100 -2
         print('currentScroll Percent:'..currentVerticalPercent)
         listView:scrollToPercentVertical(currentVerticalPercent,0,false)
         listView:setInertiaScrollEnabled(true)
