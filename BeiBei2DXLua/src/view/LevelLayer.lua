@@ -234,6 +234,8 @@ function LevelLayer:ctor()
     levelLayerII = levelStypeII.create()
     connection1_2 = connectionLayer1_2.create()
     connection2_3 = connectionLayer2_3.create()
+    connection1_2:plotUnlockChapterAnimation()
+    connection2_3:plotUnlockChapterAnimation()
     self.chapterDic['chapter0'] = levelLayerI
     self.chapterDic['chapter1'] = levelLayerII
     self.chapterDic['connection0_1'] = connection1_2
