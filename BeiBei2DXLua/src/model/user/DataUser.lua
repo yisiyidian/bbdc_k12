@@ -188,7 +188,12 @@ function DataUser:initChapterLevelAfterLogin()
         else 
             break
         end
-    end
+--    end
+--    self.currentLevelKey = 'level0'
+--    self.currentSelectedLevelKey = 'level0'
+--    self.currentChapterKey = 'chapter2'
+    --s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
+    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
