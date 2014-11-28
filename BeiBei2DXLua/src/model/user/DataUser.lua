@@ -38,6 +38,7 @@ function DataUser:ctor()
     self.friends                           = {}
     self.followees                         = {} -- who I follow
     self.followers                         = {} -- who follow me
+    self.seenFansCount                     = 0
 
     self.currentWordsIndex                 = 0 
 --    self.currentChapterIndex               = 0 
@@ -150,8 +151,62 @@ function DataUser:parseServerRemoveFanData(obj)
         end
     end
 end
+function DataUser:getFriendsInfo()
+    s_UserBaseServer.getFolloweesOfCurrentUser( 
+        function (api, result)
+            self:parseServerFolloweesData(result.results)
+        end,
+        function (api, code, message, description)
+        end
+    )
+
+    s_UserBaseServer.getFollowersOfCurrentUser( 
+        function (api, result)
+            self:parseServerFollowersData(result.results)
+        end,
+        function (api, code, message, description)
+        end
+    )
+    self.friends = {}
+    self.fans = {}
+    local friendsObjId = {}
+    local friends = {}
+    --    print_lua_table (s_CURRENT_USER.followers)
+    --    print_lua_table (s_CURRENT_USER.followees)
+    for key, follower in pairs(self.followers) do
+        friendsObjId[follower.objectId] = 1
+        friends[follower.objectId] = follower
+    end
+
+    for key, followee in pairs(self.followees) do
+        print(friendsObjId[followee.objectId])
+        if friendsObjId[followee.objectId] == 1 then
+            friendsObjId[followee.objectId] = 2
+            friends[followee.objectId] = followee
+        end
+    end
+    for key, var in pairs(friends) do
+        if friendsObjId[key] == 2 then
+            self.friends[#self.friends + 1] = var
+        elseif friendsObjId[key] == 1 then
+            self.fans[#self.fans + 1] = var
+            if #self.fans > s_friend_request_max_count then
+                table.remove(self.fans,1)
+            end
+        end
+    end
+    self.friendsCount = #self.friends
+    self.fansCount = #self.fans
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end)
+end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
+    print("getBookChapterLevelData")
+    print(self.levels)
     for i,v in ipairs(self.levels) do
         s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then

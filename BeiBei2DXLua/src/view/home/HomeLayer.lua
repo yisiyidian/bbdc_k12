@@ -134,6 +134,17 @@ function HomeLayer.create()
     button_friend:addTouchEventListener(button_right_clicked)
     backColor:addChild(button_friend)   
     
+    s_CURRENT_USER:getFriendsInfo()
+    local redHint = nil
+    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+        redHint = cc.Sprite:create('image/friend/fri_infor.png')
+        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+        button_friend:addChild(redHint)
+        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+        button_friend:addChild(num)
+    end
+    
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
     book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     backColor:addChild(book_back,1)
@@ -279,7 +290,7 @@ function HomeLayer.create()
                         if s_CURRENT_USER.isGuest == 0 then
                             list[1].label:setString(s_CURRENT_USER.username)
                             list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                            if list[4].button_back ~= nil then list[4].button_back:removeFromParentAndCleanup() end
+                            if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
                         end
                     end
                 elseif label_name[i] == "登出游戏" then
