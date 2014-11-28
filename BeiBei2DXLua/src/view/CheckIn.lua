@@ -223,7 +223,7 @@ function CheckInNode:ctor()
         
         for i = 1, #wordStack do
             wordStack[i]:stopAllActions()
-            wordStack[i]:removeFromParentAndCleanup(true)
+            wordStack[i]:removeFromParent()
         end
         wordStack = {}
         
@@ -418,7 +418,7 @@ function CheckInNode:ctor()
                     local action4 = cc.EaseBackOut:create(cc.MoveBy:create(1.5,cc.p(0,-0.7 * s_DESIGN_HEIGHT)))
                     local action5 = cc.CallFunc:create(
                         function()
-                            letterArray[i][j]:removeFromParentAndCleanup(true)    	
+                            letterArray[i][j]:removeFromParent()    	
                         end,{}
                     )
                     letterArray[i][j]:runAction(cc.Sequence:create(action1,action2,action3,action4,action5))
