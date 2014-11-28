@@ -38,7 +38,7 @@ function FriendLayer:ctor()
     local function onBack(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
-            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                 function(api,result)
                 end,
                 function(api, code, message, description)
@@ -90,7 +90,7 @@ function FriendLayer:ctor()
         self.friendRequestButton:addChild(redHint)
         local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
         num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-        self.friendRequestButton:addChild(num)
+        redHint:addChild(num)
     end
     
     local list = require('view.friend.FriendList')

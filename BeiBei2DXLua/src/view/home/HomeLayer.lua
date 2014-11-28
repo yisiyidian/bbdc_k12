@@ -125,7 +125,7 @@ function HomeLayer.create()
         button_friend:addChild(redHint)
         local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
         num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-        button_friend:addChild(num)
+        redHint:addChild(num)
     end
     
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
