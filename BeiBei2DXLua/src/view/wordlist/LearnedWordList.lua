@@ -2,17 +2,17 @@ require("Cocos2d")
 require("Cocos2dConstants")
 require("common.global")
 
-local StudyedWordList = class('StudyedWordList', function()
+local LearnedWordList = class('LearnedWordList', function()
     return cc.Layer:create()
 end)
 
-function StudyedWordList.create()
-    local layer = StudyedWordList.new()
+function LearnedWordList.create()
+    local layer = LearnedWordList.new()
     return layer
 end
 
 
-function StudyedWordList:removeItemByName(listView, name)
+function LearnedWordList:removeItemByName(listView, name)
     local items = listView:getItems()
     for i = 1, #items do
         --print('items:'..items[i]:getName())
@@ -22,7 +22,7 @@ function StudyedWordList:removeItemByName(listView, name)
     end
 end
 
-function StudyedWordList:getItemByName(listView, name)
+function LearnedWordList:getItemByName(listView, name)
     local items = listView:getItems()
     for i = 1, #items do
         if items[i]:getName() == name then
@@ -32,7 +32,7 @@ function StudyedWordList:getItemByName(listView, name)
     return nil
 end
 
-function StudyedWordList:addMasteredPlots(button, proficiency)
+function LearnedWordList:addMasteredPlots(button, proficiency)
     local sprite1, sprite2, sprite3, sprite4
     if proficiency >= 4 then
         sprite1 = cc.Sprite:create('image/word_list/button_wordbook_blue.png')
@@ -70,7 +70,7 @@ function StudyedWordList:addMasteredPlots(button, proficiency)
     button:addChild(sprite4)
 end
 
-function StudyedWordList:ctor()
+function LearnedWordList:ctor()
 
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
@@ -251,4 +251,4 @@ function StudyedWordList:ctor()
     listView:setItemsMargin(2.0)
 end
 
-return StudyedWordList
+return LearnedWordList
