@@ -194,25 +194,14 @@ function FriendList:addList()
                             s_UserBaseServer.removeFan(self.array[self.selectIndex],
                                 function(api,result)
                                     for i = 1,#s_CURRENT_USER.friends do
-                                        if s_CURRENT_USER.friends[i].username == self.array[self.selectIndex] then
+                                        if s_CURRENT_USER.friends[i].username == self.array[self.selectIndex].username then
                                             table.remove(s_CURRENT_USER.friends,i)
                                             break
                                         end
                                     end
                                     
-                                    for i = 1,#s_CURRENT_USER.followers do
-                                        if s_CURRENT_USER.followers[i].username == self.array[self.selectIndex] then
-                                            table.remove(s_CURRENT_USER.friends,i)
-                                            break
-                                        end
-                                    end
-                                    
-                                    for i = 1,#s_CURRENT_USER.followees do
-                                        if s_CURRENT_USER.followees[i].username == self.array[self.selectIndex] then
-                                            table.remove(s_CURRENT_USER.friends,i)
-                                            break
-                                        end
-                                    end
+                                    s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
+                                    s_CURRENT_USER:parseServerRemoveFanData(self.array[self.selectIndex])
                                     
                                     listView:removeItem(listView:getCurSelectedIndex())
                                     listView:removeItem(self.selectIndex - 1)

@@ -123,6 +123,47 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
+function DataUser:parseServerFollowData(obj)
+    if obj ~= nil then
+        table.insert(self.followees, obj)
+    end
+end
+
+function DataUser:parseServerUnFollowData(obj)
+    if obj ~= nil then
+        for i = 1,#s_CURRENT_USER.followees do
+            if s_CURRENT_USER.followees[i].username == obj.username then
+                table.remove(s_CURRENT_USER.followees,i)
+                break
+            end
+        end
+    end
+end
+
+function DataUser:parseServerRemoveFanData(obj)
+    if obj ~= nil then
+        for i = 1,#s_CURRENT_USER.followees do
+            if s_CURRENT_USER.followers[i].username == obj.username then
+                table.remove(s_CURRENT_USER.followees,i)
+                break
+            end
+        end
+    end
+end
+
+function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
+    for i,v in ipairs(self.levels) do
+        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
+        if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
+
+            return v
+        end
+    end
+    return nil
+end
+
+
+
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     --print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
@@ -211,8 +252,8 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         --print('------ before insert table-----')
         print_lua_table(levelData)
         table.insert(self.levels,levelData)
-        --print('-------- after insert table -----')
-        --print('levels_count:'..#self.levels)
+--        print('-------- after insert table -----')
+--        print('levels_count:'..#self.levels)
     end
     if levelData.stars < stars then
         levelData.stars = stars

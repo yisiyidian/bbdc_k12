@@ -185,7 +185,13 @@ function FriendSearch:ctor()
                                 add:setScaleX(1 / scale)
                                 local function onAdd(sender,eventType)
                                     if eventType == ccui.TouchEventType.ended then
-
+                                        if user >= s_friend_max_count then
+                                            local SmallAlter = require('view.friend.HintAlter')
+                                            local smallAlter = SmallAlter.create('您的好友数已达上限')
+                                            smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                            s_SCENE.popupLayer:addChild(smallAlter)
+                                            return
+                                        end
                                         s_UserBaseServer.follow(user,
                                             function(api,result)
                                                 local fan = nil
@@ -200,7 +206,7 @@ function FriendSearch:ctor()
                                                 
                                                 if fan then
                                                 s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = user
-                                                    s_CURRENT_USER.followees[#s_CURRENT_USER.followees + 1] = user
+                                                s_CURRENT_USER:parseServerFollowData(user)
                                                 table.remove(s_CURRENT_USER.fans,key)
                                                 s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                                                     function(api,result)
@@ -210,8 +216,17 @@ function FriendSearch:ctor()
                                                 end
                                                 arrow:setVisible(true)
                                                 add:setVisible(false)
+                                                
+                                                local SmallAlter = require('view.friend.HintAlter')
+                                                local smallAlter = SmallAlter.create('好友请求发送成功')
+                                                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                                s_SCENE.popupLayer:addChild(smallAlter) 
                                             end,
                                             function(api, code, message, description)
+                                                local SmallAlter = require('view.friend.HintAlter')
+                                                local smallAlter = SmallAlter.create('好友请求发送失败')
+                                                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                                s_SCENE.popupLayer:addChild(smallAlter) 
                                             end
                                         )
                                     end
