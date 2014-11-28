@@ -163,15 +163,6 @@ function DataUser:getUserLevelData(chapterKey, levelKey)
     return nil
 end
 
-function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
-    for i,v in ipairs(self.levels) do
-        if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
-            return v
-        end
-    end
-    return nil
-end
-
 function DataUser:getUserCurrentChapterObtainedStarCount()
     local count = 0
     for i, v in ipairs(self.levels) do
@@ -226,6 +217,11 @@ function DataUser:initChapterLevelAfterLogin()
             break
         end
     end
+--    self.currentLevelKey = 'level0'
+--    self.currentSelectedLevelKey = 'level0'
+--    self.currentChapterKey = 'chapter2'
+    --s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
+    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
