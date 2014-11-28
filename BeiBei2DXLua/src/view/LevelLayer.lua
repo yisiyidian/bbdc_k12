@@ -65,12 +65,17 @@ function LevelLayer:levelStateManager()
     end
 
     -- TODO switch state
-      --  s_SCENE.levelLayerState = s_unlock_next_chapter_state
+      s_SCENE.levelLayerState = s_normal_retry_state
 --    s_CURRENT_USER.currentChapterKey = 'chapter1'
 --    print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
-       
+    elseif s_SCENE.levelLayerState == s_normal_retry_state then
+        s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
+        s_SCENE:callFuncWithDelay(0.3,function()
+            currentChapterLayer:onLevelButtonClicked(s_CURRENT_USER.currentSelectedLevelKey) 
+            s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
+        end)
     elseif s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
         -- lock screen and plot animation
         s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
@@ -114,6 +119,13 @@ function LevelLayer:levelStateManager()
         )
      elseif s_SCENE.levelLayerState == s_review_boss_appear_state then
         currentChapterLayer:plotReviewBossAppearOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
+     elseif s_SCENE.levelLayerState == s_review_boss_retry_state then
+        currentChapterLayer:plotReviewBossAppearOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
+        s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
+        s_SCENE:callFuncWithDelay(1.5,function()
+            currentChapterLayer:onLevelButtonClicked('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
+            s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
+        end)
      elseif s_SCENE.levelLayerState == s_review_boss_pass_state then
         --currentChapterLayer:plotReviewBossPassOnLevel('level'..(string.sub(s_CURRENT_USER.currentLevelKey,6) + 1))
         -- save and update level data
