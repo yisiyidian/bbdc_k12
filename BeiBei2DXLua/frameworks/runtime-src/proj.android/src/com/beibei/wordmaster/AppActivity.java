@@ -29,6 +29,7 @@ package com.beibei.wordmaster;
 import java.util.ArrayList;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+import org.cocos2dx.lib.Cocos2dxGLSurfaceView;  
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -59,6 +60,14 @@ public class AppActivity extends Cocos2dxActivity {
 	private static String LEAN_CLOUD_ID       =  "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp";
 	private static String LEAN_CLOUD_KEY      =  "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz";
 	
+    public Cocos2dxGLSurfaceView onCreateView() {  
+        Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);  
+        // TestCpp should create stencil buffer  
+        glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);  
+
+        return glSurfaceView;  
+    }  
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
