@@ -161,17 +161,29 @@ function FriendRequest:ctor()
         
         local function onAgree(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                
+                if s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1].friendsCount >= s_friend_max_count then
+                    local SmallAlter = require('view.friend.HintAlter')
+                    local smallAlter = SmallAlter.create('对方好友数已达上限')
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    s_SCENE.popupLayer:addChild(smallAlter)
+                    return
+                end
                 s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function(api,result)
-                        listView:removeChild(item)
+                        s_CURRENT_USER:parseServerFollowData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
                         s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1]
                         table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        listView:removeChild(item)
+                        local SmallAlter = require('view.friend.HintAlter')
+                        local smallAlter = SmallAlter.create('已同意好友请求')
+                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        s_SCENE.popupLayer:addChild(smallAlter) 
                         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                             function(api,result)
                             end,
                             function(api, code, message, description)
                             end)
+                         
                     end,
                     function(api, code, message, description)
                     end
@@ -192,8 +204,13 @@ function FriendRequest:ctor()
                 
                 s_UserBaseServer.removeFan(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function(api,result)
+                        s_CURRENT_USER:parseServerRemoveFanData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
                         listView:removeChild(item)
                         table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        local SmallAlter = require('view.friend.HintAlter')
+                        local smallAlter = SmallAlter.create('已拒绝好友请求')
+                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        s_SCENE.popupLayer:addChild(smallAlter) 
                         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                             function(api,result)
                             end,

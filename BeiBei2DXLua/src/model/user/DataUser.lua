@@ -129,6 +129,28 @@ function DataUser:parseServerFollowData(obj)
     end
 end
 
+function DataUser:parseServerUnFollowData(obj)
+    if obj ~= nil then
+        for i = 1,#s_CURRENT_USER.followees do
+            if s_CURRENT_USER.followees[i].username == obj.username then
+                table.remove(s_CURRENT_USER.followees,i)
+                break
+            end
+        end
+    end
+end
+
+function DataUser:parseServerRemoveFanData(obj)
+    if obj ~= nil then
+        for i = 1,#s_CURRENT_USER.followees do
+            if s_CURRENT_USER.followers[i].username == obj.username then
+                table.remove(s_CURRENT_USER.followees,i)
+                break
+            end
+        end
+    end
+end
+
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     --print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
