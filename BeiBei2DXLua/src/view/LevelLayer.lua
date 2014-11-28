@@ -36,16 +36,19 @@ function LevelLayer:levelStateManager()
         end
     end
     
+--    print('state0:'..s_SCENE.levelLayerState)
     -- TODO Check Review boss state
     local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
     if reviewBossId ~= -1 then
         -- check whether current level is passed
         local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+--        print('levelData.stars'..levelData.stars)
         if levelData.stars > 0 then
             if s_SCENE.levelLayerState ~= s_review_boss_appear_state 
                 and s_SCENE.levelLayerState ~= s_review_boss_pass_state then
                 if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
                     currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
+--                    print('plot stars')
                 end
                 s_SCENE.levelLayerState = s_review_boss_appear_state
             end
@@ -54,14 +57,17 @@ function LevelLayer:levelStateManager()
     
     -- CHECK tutorial review boss
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+--    print('tutuorial step:'..s_CURRENT_USER.reviewBossTutorialStep)
+--    print_lua_table(levelData)
     if levelData ~= nil and s_CURRENT_USER.currentLevelKey == 'level0' and levelData.stars > 0 and s_SCENE.levelLayerState ~= s_review_boss_pass_state and s_CURRENT_USER.reviewBossTutorialStep == 0 then
         s_SCENE.levelLayerState = s_review_boss_appear_state
+        currentChapterLayer:plotLevelDecoration(s_CURRENT_USER.currentLevelKey)
     end
 
     -- TODO switch state
 --    s_SCENE.levelLayerState = s_unlock_next_chapter_state
 --    s_CURRENT_USER.currentChapterKey = 'chapter1'
-    print('state:'..s_SCENE.levelLayerState)
+--    print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
        
