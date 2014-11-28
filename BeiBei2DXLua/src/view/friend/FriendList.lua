@@ -224,7 +224,7 @@ function FriendList:addList()
         rankIcon:setName('rankIcon')
         
         local rankLabel = cc.Label:createWithSystemFont(string.format('%d',i),'',36)
-        rankLabel:setScaleX(1 / scale)
+        --rankLabel:setScaleX(scale)
         rankLabel:setPosition(rankIcon:getContentSize().width / 2,rankIcon:getContentSize().width / 2)
         rankIcon:addChild(rankLabel)
         rankLabel:setName('rankLabel')
@@ -250,11 +250,13 @@ function FriendList:addList()
         fri_word:setAnchorPoint(0,1)
         fri_word:setPosition(0.42 * button:getContentSize().width,0.48 * button:getContentSize().height)
         button:addChild(fri_word)
-        local str = 'image/friend/fri_jiantouxia.png'
-        local arrow = cc.Sprite:create(str)
-        arrow:setScaleX(1 / scale)
-        arrow:setPosition(0.9 * button:getContentSize().width,0.5 * button:getContentSize().height)
-        button:addChild(arrow,0,'arrow')
+        if self.array[i].username ~= s_CURRENT_USER.username then
+            local str = 'image/friend/fri_jiantouxia.png'
+            local arrow = cc.Sprite:create(str)
+            arrow:setScaleX(1 / scale)
+            arrow:setPosition(0.9 * button:getContentSize().width,0.5 * button:getContentSize().height)
+            button:addChild(arrow,0,'arrow')
+        end
         
     end
     

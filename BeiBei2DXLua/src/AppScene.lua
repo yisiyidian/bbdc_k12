@@ -313,23 +313,27 @@ function AppScene:saveSignUpAndLogInData(onSaved)
     
     self:loadConfigs()
 
+    local friendsObjId = {}
     local friends = {}
-    print_lua_table (s_CURRENT_USER.followers)
-    print_lua_table (s_CURRENT_USER.followees)
+    --    print_lua_table (s_CURRENT_USER.followers)
+    --    print_lua_table (s_CURRENT_USER.followees)
     for key, follower in pairs(s_CURRENT_USER.followers) do
-    	friends[follower] = 1
+        friendsObjId[follower.objectId] = 1
+        friends[follower.objectId] = follower
     end
+
     for key, followee in pairs(s_CURRENT_USER.followees) do
-        if friends[followee] then
-            friends[followee] = 2
+        if friendsObjId[followee.objectId] == 1 then
+            friendsObjId[followee.objectId] = 2
+            friends[followee.objectId] = followee
         end
     end
     for key, var in pairs(friends) do
-    	if var == 2 then
-    	   s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = key
-    	elseif var == 1 then
-            s_CURRENT_USER.fans[#s_CURRENT_USER.fans + 1] = key
-    	end
+        if friendsObjId[key] == 2 then
+            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = var
+        elseif friendsObjId[key] == 1 then
+            s_CURRENT_USER.fans[#s_CURRENT_USER.fans + 1] = var
+        end
     end
     
     local DataLogIn = require('model/user/DataLogIn')

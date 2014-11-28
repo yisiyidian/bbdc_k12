@@ -38,12 +38,12 @@ function AlterI.create(info)
         end
     end
 
-    local button_left = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
-    button_left:setPosition(backWidth/2, backHeight/2)
-    button_left:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_SUGGESTION))
-    button_left:setTitleFontSize(30)
-    button_left:addTouchEventListener(button_left_clicked)
-    back:addChild(button_left)
+    local button_up = ccui.Button:create("image/button/bigBlueButton.png","image/button/bigBlueButton.png","")
+    button_up:setPosition(backWidth/2, backHeight/2)
+    button_up:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_SUGGESTION))
+    button_up:setTitleFontSize(30)
+    button_up:addTouchEventListener(button_left_clicked)
+    back:addChild(button_up)
 
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -52,12 +52,12 @@ function AlterI.create(info)
         end
     end
 
-    local button_right = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
-    button_right:setPosition(backWidth/2, backHeight/2-100)
-    button_right:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_BUG))
-    button_right:setTitleFontSize(30)
-    button_right:addTouchEventListener(button_right_clicked)
-    back:addChild(button_right)
+    local button_down = ccui.Button:create("image/button/bigBlueButton.png","image/button/bigBlueButton.png","")
+    button_down:setPosition(backWidth/2, backHeight/2-100)
+    button_down:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_BUG))
+    button_down:setTitleFontSize(30)
+    button_down:addTouchEventListener(button_right_clicked)
+    back:addChild(button_down)
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
