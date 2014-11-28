@@ -117,6 +117,17 @@ function HomeLayer.create()
     button_friend:addTouchEventListener(button_right_clicked)
     backColor:addChild(button_friend)   
     
+    s_CURRENT_USER:getFriendsInfo()
+    local redHint = nil
+    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+        redHint = cc.Sprite:create('image/friend/fri_infor.png')
+        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+        button_friend:addChild(redHint)
+        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+        button_friend:addChild(num)
+    end
+    
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
     book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     backColor:addChild(book_back,1)
