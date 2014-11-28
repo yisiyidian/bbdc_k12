@@ -71,24 +71,41 @@ function HomeLayer.create()
         end
     end
 
-    local button_left = ccui.Button:create("image/homescene/main_set.png","image/homescene/main_set.png","")
-    button_left:setPosition((bigWidth-s_DESIGN_WIDTH)/2+50, s_DESIGN_HEIGHT-120)
-    button_left:addTouchEventListener(button_left_clicked)
-    backColor:addChild(button_left)
+    local button_main = ccui.Button:create("image/homescene/main_set.png","image/homescene/main_set.png","")
+    button_main:setPosition((bigWidth-s_DESIGN_WIDTH)/2+50, s_DESIGN_HEIGHT-120)
+    button_main:addTouchEventListener(button_left_clicked)
+    backColor:addChild(button_main)
     
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-            
-            s_CorePlayManager.enterFriendLayer()
+
+            local ncee_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level10')
+            local cet4_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level10')
+            local cet6_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
+            local ielts_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
+            local toefl_date = s_CURRENT_USER.getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
+
+            if ncee_date.isLevelUnlocked == 1 or cet4_date.isLevelUnlocked == 1 or 
+                cet6_date.isLevelUnlocked == 1 or ielts_date.isLevelUnlocked == 1 or 
+                toefl_date.isLevelUnlocked == 1 then
+
+                s_CorePlayManager.enterFriendLayer()
+
+            else
+                local Friend_popup = require("view/friend/FriendPopup")
+                local friend_popup = Friend_popup.create()  
+                s_SCENE:popup(friend_popup)
+            end
+          
         end
     end
     
-    local button_right = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
-    button_right:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
-    button_right:addTouchEventListener(button_right_clicked)
-    backColor:addChild(button_right)   
+    local button_friend = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
+    button_friend:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
+    button_friend:addTouchEventListener(button_right_clicked)
+    backColor:addChild(button_friend)   
     
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
     book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)

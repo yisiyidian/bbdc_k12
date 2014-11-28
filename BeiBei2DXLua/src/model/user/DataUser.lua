@@ -141,6 +141,15 @@ function DataUser:getUserLevelData(chapterKey, levelKey)
     return nil
 end
 
+function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
+    for i,v in ipairs(self.levels) do
+        if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
+            return v
+        end
+    end
+    return nil
+end
+
 function DataUser:getUserCurrentChapterObtainedStarCount()
     local count = 0
     for i, v in ipairs(self.levels) do
