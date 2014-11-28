@@ -31,7 +31,7 @@ function FriendRequest:ctor()
     listView:setBounceEnabled(false)
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))
-    listView:setPosition(0,0)
+    listView:setPosition(s_LEFT_X,0)
     --listView:addEventListener(listViewEvent)
     self:addChild(listView)
 

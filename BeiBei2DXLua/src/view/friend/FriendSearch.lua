@@ -51,6 +51,13 @@ function FriendSearch:ctor()
         if eventType == ccui.TouchEventType.ended then
             self:removeChildByName('searchResult',true)
             local username = textField:getStringValue()
+            if username == s_CURRENT_USER.username then
+                local SmallAlter = require('view.friend.HintAlter')
+                local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')
+                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                s_SCENE.popupLayer:addChild(smallAlter)
+                return
+            end
             s_UserBaseServer.searchUserByUserName(username,
                 function(api,result)
                     if #result.results > 0 then
@@ -164,7 +171,10 @@ function FriendSearch:ctor()
                             break
                         end
                     else --not find user
-                        
+                        local SmallAlter = require('view.friend.HintAlter')
+                        local smallAlter = SmallAlter.create('未找到相应用户')
+                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        s_SCENE.popupLayer:addChild(smallAlter) 
                     end
                 end,
                 function(api, code, message, description)

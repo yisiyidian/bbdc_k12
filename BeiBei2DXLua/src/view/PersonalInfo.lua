@@ -173,34 +173,34 @@ function PersonalInfo:PLVM()
     local masterStr = string.format('已掌握%d',toMasterCount)
     for i = 1,#learnStr - 9 do
         local label = cc.Label:createWithSystemFont(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i),'',28)
-        label:setRotation(- i * 5)
-        label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBackBig:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + 5 * i / 180)),circleBackBig:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + 5 * i / 180)))
+        label:setRotation((1 - i) * 5)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBackBig:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + 5 * (i - 1) / 180)),circleBackBig:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + 5 * (i - 1) / 180)))
         circleBackBig:addChild(label,1)
     end
     
     for i = 1,3 do
         local label = cc.Label:createWithSystemFont(string.sub(learnStr,3 * (i - 1) + 1,3 * i),'',28)
-        local angle = (#learnStr - 9) * 5 + (4 - i) * 7
+        local angle = (#learnStr - 10) * 5 + (4 - i) * 8
         label:setRotation(-angle)
-        label:setColor(cc.c3b(0,0,0))
+        --label:setColor(cc.c3b(0,0,0))
         label:setPosition(circleBackBig:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + angle / 180)),circleBackBig:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + angle / 180)))
         circleBackBig:addChild(label,1)
     end
     
     for i = 1,#masterStr - 9 do
         local label = cc.Label:createWithSystemFont(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i),'',28)
-        label:setRotation(- i * 6)
-        label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBackSmall:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * i / 180)),circleBackSmall:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * i / 180)))
+        label:setRotation((1 - i) * 6)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBackSmall:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * (i - 1) / 180)),circleBackSmall:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * (i - 1) / 180)))
         circleBackSmall:addChild(label,1)
     end
 
     for i = 1,3 do
         local label = cc.Label:createWithSystemFont(string.sub(masterStr,3 * (i - 1) + 1,3 * i),'',28)
-        local angle = (#masterStr - 9) * 6 + (4 - i) * 9
+        local angle = (#masterStr - 10) * 6 + (4 - i) * 10
         label:setRotation(-angle)
-        label:setColor(cc.c3b(0,0,0))
+        --label:setColor(cc.c3b(0,0,0))
         label:setPosition(circleBackSmall:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBackSmall:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
         circleBackSmall:addChild(label,1)
     end
@@ -235,11 +235,18 @@ function PersonalInfo:PLVM()
     smallCircleTail:setScale(1,42 / 41)
     smallCircleTail:setPosition(0.5 * circleBackBig:getContentSize().width + 220 * math.cos((0.5 + 2 * 0) * math.pi),0.5 * circleBackBig:getContentSize().height + 220 * math.sin((0.5 + 2 * 0) * math.pi))
     circleBackBig:addChild(smallCircleTail)
+    if tolearnCount == 0 then
+        smallCircleTail:setVisible(false)
+    end
     
     local smallCircleTail2 = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_smallcircle_blue2.png')
     smallCircleTail2:setScale(1,42 / 41)
     smallCircleTail2:setPosition(0.5 * circleBackSmall:getContentSize().width + 161 * math.cos((0.5 + 2 * 0) * math.pi),0.5 * circleBackSmall:getContentSize().height + 161 * math.sin((0.5 + 2 * 0) * math.pi))
     circleBackSmall:addChild(smallCircleTail2)
+    
+    if toMasterCount == 0 then
+        smallCircleTail2:setVisible(false)
+    end
     
     local line = cc.LayerColor:create(cc.c4b(0,0,0,255),200,1)
     line:ignoreAnchorPointForPosition(false)
