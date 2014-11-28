@@ -124,6 +124,22 @@ function BookLayer.create()
         local smallBack = ccui.Button:create("image/book/button_choose_book_"..name_array[i]..".png", "image/book/button_choose_book_"..name_array[i]..".png", "")
         smallBack:addTouchEventListener(func_array[i])
         smallBack:setAnchorPoint(0.5,0)
+        if i == 1 then
+            if s_CURRENT_USER.tutorialStep == s_tutorial_start then
+                local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, s_DESIGN_HEIGHT-150)
+                backColor:addChild(tutorial_text,120)
+                
+                local text = cc.Label:createWithSystemFont('请选择你的书籍','',25)
+                text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+                tutorial_text:addChild(text)
+                
+                local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+                finger:addAnimation(0, 'anmiation', true)
+                finger:setPosition(50,0)
+                smallBack:addChild(finger)
+            end
+        end
         if i%2 == 0 then
             smallBack:setPosition((s_RIGHT_X - s_LEFT_X)/2 + 150, s_DESIGN_HEIGHT-100 - 300*(math.ceil(i/2)))
         else

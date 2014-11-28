@@ -104,6 +104,11 @@ function DataUser:parseServerDataLogIn(results)
    end 
 end
 
+function DataUser:setTutorialStep(step)
+    self.tutorialStep = step
+    self:updateDataToServer()
+end
+
 -- who I follow
 function DataUser:parseServerFolloweesData(results)
     self.followees = {}
