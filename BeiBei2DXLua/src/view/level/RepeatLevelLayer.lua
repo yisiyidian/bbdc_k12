@@ -21,6 +21,21 @@ local onTouchBegan = function(touch, event)
     playSound(s_sound_clickWave)
 end
 
+function RepeatLevelLayer:getPlayerPositionForLevel(levelKey)
+    local levelButton = self:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    --print(levelButton:getPositionX()..','..levelButton:getPositionY())
+    local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
+    if levelConfig['type'] == 1 then
+        position.y = position.y - 50
+    else
+        position.y = position.y - 20
+    end
+
+    return position
+end
+
 function RepeatLevelLayer:plotUnlockLevelAnimation(levelKey)
     print('startLevelKey:'..self.startLevelKey)
     local levelIndex = string.sub(levelKey, 6)

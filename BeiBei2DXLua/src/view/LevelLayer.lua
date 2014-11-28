@@ -65,7 +65,7 @@ function LevelLayer:levelStateManager()
     end
 
     -- TODO switch state
---    s_SCENE.levelLayerState = s_unlock_next_chapter_state
+      --  s_SCENE.levelLayerState = s_unlock_next_chapter_state
 --    s_CURRENT_USER.currentChapterKey = 'chapter1'
 --    print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then
@@ -167,11 +167,16 @@ function LevelLayer:levelStateManager()
         self:updateCurrentChapterLayer()
         currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
         -- player animation
-        s_SCENE:callFuncWithDelay(1.3,function()
-            local targetPosition = currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
-            local action = cc.MoveTo:create(0.8, targetPosition)
-            player:runAction(action)      
-        end)
+--        s_SCENE:callFuncWithDelay(1.3,function()
+--            local targetPosition = currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
+--            local action = cc.MoveTo:create(0.8, targetPosition)
+--            player:runAction(action)      
+--        end)
+        player:removeFromParentAndCleanup(true)
+        player = cc.Sprite:create('image/chapter_level/gril_head.png')
+        player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
+        player:setScale(0.4)
+        currentChapterLayer:addChild(player, 5)
      end
      s_SCENE.gameLayerState = s_normal_game_state
      s_CURRENT_USER:updateDataToServer()
@@ -188,6 +193,68 @@ function LevelLayer:updateCurrentChapterLayer()
     end
 end
 
+function LevelLayer:getItemByName(listView, itemName)
+    local itemList = listView:getItems()
+    for i = 1,#itemList do
+        if itemList[i]:getName() == itemName then
+            return itemList[i]
+        end
+    end
+    return nil
+end
+
+-- scroll listview to show current level
+function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
+--    chapterKey = 'chapter2'
+--    levelKey = 'level29'
+    -- compute listView inner height
+    local itemList = listView:getItems()
+    local innerHeight = 0
+    for i = 1,#itemList do
+        innerHeight = innerHeight + itemList[i]:getContentSize().height
+    end
+--    print('innerHeight:'..innerHeight)
+    listView:setInnerContainerSize(cc.size(itemList[1]:getContentSize().width, innerHeight))
+    
+    local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
+    if chapterKey == 'chapter0' then
+        local item0 = self.chapterDic['chapter0']
+        local currentVerticalPercent = (string.sub(levelKey,6)+1)/#chapterConfig * item0:getContentSize().height / innerHeight * 100 - 5
+        print('currentScroll Percent:'..currentVerticalPercent)
+        listView:scrollToPercentVertical(currentVerticalPercent,0,false)
+        listView:setInertiaScrollEnabled(true)
+    elseif chapterKey == 'chapter1' then
+        local item0 = self.chapterDic['chapter0']
+        local connection0_1 = self.chapterDic['connection0_1']
+        local item1 = self.chapterDic['chapter1']
+        local currentVerticalPercent =(item0:getContentSize().height+connection0_1:getContentSize().height+ (string.sub(levelKey,6)+1)/#chapterConfig * item1:getContentSize().height) / innerHeight * 100
+        
+        print('currentScroll Percent:'..currentVerticalPercent)
+        listView:scrollToPercentVertical(currentVerticalPercent,0,false)
+        listView:setInertiaScrollEnabled(true)
+    elseif chapterKey == 'chapter2' then
+        local item0 = self.chapterDic['chapter0']
+        local connection0_1 = self.chapterDic['connection0_1']
+        local item1 = self.chapterDic['chapter1']
+        local connection1_2 = self.chapterDic['connection1_2']
+        local upHeight = item0:getContentSize().height+connection0_1:getContentSize().height+item1:getContentSize().height+connection1_2:getContentSize().height
+        -- update upHeight seperately (chapter2 is splited into 3 parts)
+        local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,'chapter2')
+--        for i = 1, math.floor(string.sub(levelKey, 6) / 10)  do
+--            local item = self.chapterDic['chapter2_'..(i-1)]
+--            upHeight = upHeight + item:getContentSize().height
+--        end
+        
+        local item2 = self.chapterDic['chapter2_'..math.floor(string.sub(levelKey, 6) / 10)]
+        local currentVerticalPercent =(upHeight+ (string.sub(levelKey,6)+1)/#chapterConfig * item2:getContentSize().height * #chapterConfig/10) / innerHeight * 100
+
+        print('currentScroll Percent:'..currentVerticalPercent)
+        listView:scrollToPercentVertical(currentVerticalPercent,0,false)
+        listView:setInertiaScrollEnabled(true)
+    
+    end
+end
+
 function LevelLayer:manageListViewItem(itemName, command)
     if itemName == 'chapter0' then
         if command == 'add' then       
@@ -195,7 +262,8 @@ function LevelLayer:manageListViewItem(itemName, command)
             --levelLayerI = levelStypeI.create()
             -- add list view item1
             item1 = ccui.Layout:create()
-            item1:setContentSize(levelLayerI:getContentSize())    
+            item1:setContentSize(levelLayerI:getContentSize())  
+            item1:setName('chapter0')  
             levelLayerI:setPosition(cc.p(0, 0))
             listView:insertCustomItem(levelLayerI,0)
             --listView:insert
@@ -330,23 +398,15 @@ function LevelLayer:ctor()
     --self:addChapterIntoListView('chapter4')
     --self:addChapterIntoListView('chapter5')
     
-    local innerHeight = item1:getContentSize().height+item2:getContentSize().height+item1_2:getContentSize().height
-    listView:setInnerContainerSize(cc.size(item1:getContentSize().width,innerHeight))
-    --print_lua_table(listView:getInnerContainerSize())
-    local currentVerticalPercent = string.sub(s_CURRENT_USER.currentSelectedLevelKey,6)/12.0 * 30+1
-    listView:scrollToPercentVertical(currentVerticalPercent,0,false)
-    
     self:updateCurrentChapterLayer()
+    self:scrollLevelLayer(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
     
     -- plot player position
-    local currentLevelButton = currentChapterLayer:getChildByName(s_CURRENT_USER.currentLevelKey)
-    local image = 'image/chapter_level/gril_head.png'
-    player = cc.MenuItemImage:create(image,image,image)
-    player:setEnabled(false)
-    player:setPosition(currentLevelButton:getPosition())
+    player = cc.Sprite:create('image/chapter_level/gril_head.png')
+    player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
     player:setScale(0.4)
     currentChapterLayer:addChild(player, 5)
-
+    
     -- level layer state manager
     self:levelStateManager()
 
