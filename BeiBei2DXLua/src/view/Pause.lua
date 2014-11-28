@@ -56,6 +56,7 @@ function Pause:ctor()
     
     ccbPause['soundOff']:setVisible(false)
     ccbPause['musicOff']:setVisible(false)
+
     ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p((s_RIGHT_X - s_LEFT_X) * 0.5,s_DESIGN_HEIGHT * 0.5))))
  end
 
@@ -195,6 +196,7 @@ function createPauseLayerWhenTestOrBoss()
     or s_SCENE.gameLayerState == s_summary_boss_game_state then
         local pauseLayer = Pause:create()
         s_SCENE.popupLayer.listener:setSwallowTouches(true)
+        pauseLayer:setPosition(s_LEFT_X, 0)
         s_SCENE.popupLayer.layerPaused = true
         s_SCENE.popupLayer:removeAllChildren()
         s_SCENE.popupLayer:addChild(pauseLayer) 
