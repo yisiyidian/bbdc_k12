@@ -63,7 +63,7 @@ function PopupReviewBoss:onGoButtonClicked()
        
     self:onCloseButtonClicked()
     --local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
-    
+    print('----review tutorial step:'..s_CURRENT_USER.reviewBossTutorialStep)
     if s_CURRENT_USER.currentLevelKey == 'level0' and s_CURRENT_USER.reviewBossTutorialStep == 0 then
         s_CorePlayManager.enterReviewBossLayer_special()
     else

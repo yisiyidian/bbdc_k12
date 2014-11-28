@@ -123,25 +123,56 @@ function DataUser:parseServerFollowersData(results)
     end
 end
 
+function DataUser:parseServerFollowData(obj)
+    if obj ~= nil then
+        table.insert(self.followees, obj)
+    end
+end
+
+function DataUser:parseServerUnFollowData(obj)
+    if obj ~= nil then
+        for i = 1,#s_CURRENT_USER.followees do
+            if s_CURRENT_USER.followees[i].username == obj.username then
+                table.remove(s_CURRENT_USER.followees,i)
+                break
+            end
+        end
+    end
+end
+
+function DataUser:parseServerRemoveFanData(obj)
+    if obj ~= nil then
+        for i = 1,#s_CURRENT_USER.followees do
+            if s_CURRENT_USER.followers[i].username == obj.username then
+                table.remove(s_CURRENT_USER.followees,i)
+                break
+            end
+        end
+    end
+end
+
+function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
+    for i,v in ipairs(self.levels) do
+        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
+        if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
+
+            return v
+        end
+    end
+    return nil
+end
+
+
+
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     --print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
+        --s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == s_CURRENT_USER.bookKey then
             return v
         end
     end
     --print('end get user level data')
-    return nil
-end
-
-function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
-    print('levelCount:'..#self.levels)
-    for i,v in ipairs(self.levels) do
-        if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
-            return v
-        end
-    end
     return nil
 end
 
@@ -199,6 +230,11 @@ function DataUser:initChapterLevelAfterLogin()
             break
         end
     end
+--    self.currentLevelKey = 'level0'
+--    self.currentSelectedLevelKey = 'level0'
+--    self.currentChapterKey = 'chapter2'
+    --s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
+    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)

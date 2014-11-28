@@ -13,6 +13,46 @@ function FriendRequest.create()
 end
 
 function FriendRequest:ctor()
+--    s_UserBaseServer.getFolloweesOfCurrentUser( 
+--        function (api, result)
+--            s_CURRENT_USER:parseServerFolloweesData(result.results)
+--        end,
+--        function (api, code, message, description)
+--        end
+--    )
+--
+--    s_UserBaseServer.getFollowersOfCurrentUser( 
+--        function (api, result)
+--            s_CURRENT_USER:parseServerFollowersData(result.results)
+--        end,
+--        function (api, code, message, description)
+--        end
+--    )
+    s_CURRENT_USER.friends = {}
+    s_CURRENT_USER.fans = {}
+    local friendsObjId = {}
+    local friends = {}
+    print_lua_table (s_CURRENT_USER.followers)
+    print_lua_table (s_CURRENT_USER.followees)
+    for key, follower in pairs(s_CURRENT_USER.followers) do
+        friendsObjId[follower.objectId] = 1
+        friends[follower.objectId] = follower
+    end
+
+    for key, followee in pairs(s_CURRENT_USER.followees) do
+        print(friendsObjId[followee.objectId])
+        if friendsObjId[followee.objectId] == 1 then
+            friendsObjId[followee.objectId] = 2
+            friends[followee.objectId] = followee
+        end
+    end
+    for key, var in pairs(friends) do
+        if friendsObjId[key] == 2 then
+            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = var
+        elseif friendsObjId[key] == 1 then
+            s_CURRENT_USER.fans[#s_CURRENT_USER.fans + 1] = var
+        end
+    end
 
     local array = s_CURRENT_USER.fans
     for i = 1,#array do
@@ -121,17 +161,29 @@ function FriendRequest:ctor()
         
         local function onAgree(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                
+                if s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1].friendsCount >= s_friend_max_count then
+                    local SmallAlter = require('view.friend.HintAlter')
+                    local smallAlter = SmallAlter.create('对方好友数已达上限')
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    s_SCENE.popupLayer:addChild(smallAlter)
+                    return
+                end
                 s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function(api,result)
-                        listView:removeChild(item)
+                        s_CURRENT_USER:parseServerFollowData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
                         s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1]
                         table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        listView:removeChild(item)
+                        local SmallAlter = require('view.friend.HintAlter')
+                        local smallAlter = SmallAlter.create('已同意好友请求')
+                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        s_SCENE.popupLayer:addChild(smallAlter) 
                         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                             function(api,result)
                             end,
                             function(api, code, message, description)
                             end)
+                         
                     end,
                     function(api, code, message, description)
                     end
@@ -152,8 +204,13 @@ function FriendRequest:ctor()
                 
                 s_UserBaseServer.removeFan(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function(api,result)
+                        s_CURRENT_USER:parseServerRemoveFanData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
                         listView:removeChild(item)
                         table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                        local SmallAlter = require('view.friend.HintAlter')
+                        local smallAlter = SmallAlter.create('已拒绝好友请求')
+                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        s_SCENE.popupLayer:addChild(smallAlter) 
                         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                             function(api,result)
                             end,

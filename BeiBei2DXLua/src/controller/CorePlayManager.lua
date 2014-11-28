@@ -190,6 +190,7 @@ end
 
 function CorePlayManager.leaveReviewBossLayer()
 --    s_SCENE.gameLayerState = s_normal_game_state
+    --s_DATABASE_MGR.updateReviewBossRecord(s_DATABASE_MGR.getCurrentReviewBossID())
     s_SCENE.levelLayerState = s_review_boss_pass_state
     CorePlayManager.enterLevelLayer()
 end

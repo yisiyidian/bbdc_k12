@@ -65,7 +65,7 @@ function LevelLayer:levelStateManager()
     end
 
     -- TODO switch state
-      s_SCENE.levelLayerState = s_normal_retry_state
+ --     s_SCENE.levelLayerState = s_normal_retry_state
 --    s_CURRENT_USER.currentChapterKey = 'chapter1'
 --    print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then

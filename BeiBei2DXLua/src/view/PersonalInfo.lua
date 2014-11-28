@@ -16,7 +16,7 @@ end
 function PersonalInfo:ctor()
     local menu = cc.Menu:create()
     menu:setPosition(s_LEFT_X,0)
-    self:addChild(menu,100)
+    s_SCENE.popupLayer:addChild(menu,100,'ICMenu')
     
     local backButton = cc.MenuItemImage:create("image/PersonalInfo/backButtonInPersonalInfo.png",'','')
     backButton:ignoreAnchorPointForPosition(false)
@@ -26,9 +26,11 @@ function PersonalInfo:ctor()
     menu:addChild(backButton,100)
 
     local function onBack(sender)
+        s_SCENE.popupLayer:removeChildByName('ICMenu')
         local HomeLayer = require('view.home.HomeLayer')
         local homeLayer = HomeLayer.create()
         s_SCENE:replaceGameLayer(homeLayer)
+        
     end
 
     backButton:registerScriptTapHandler(onBack)
