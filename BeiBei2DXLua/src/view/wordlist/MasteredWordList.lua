@@ -74,8 +74,8 @@ function MasteredWordList:ctor()
 
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
-    back:setAnchorPoint(0.5,0.5)
-    back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
+    back:setAnchorPoint(0,0.5)
+    back:setPosition(s_LEFT_X , 162 * 3)
     self:addChild(back)
 
     local function listViewEvent(sender, eventType)

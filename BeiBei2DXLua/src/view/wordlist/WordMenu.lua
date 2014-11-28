@@ -6,6 +6,9 @@ local WordMenu = class('WordMenu', function()
     return cc.Layer:create()
 end)
 
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
+
 function WordMenu.create()
     local layer = WordMenu.new()
     return layer
@@ -25,26 +28,42 @@ function WordMenu:ctor()
 
     local menu = cc.Menu:create()
     self:addChild(menu)
+    menu:setPosition(s_LEFT_X ,  s_DESIGN_HEIGHT)
+    
     self.backButton = cc.MenuItemImage:create('image/friend/fri_titleback_unselect.png','image/friend/fri_titleback_select.png','')
-    self.backButton:setAnchorPoint(0,0.5)
+    self.backButton:ignoreAnchorPointForPosition(false)
+    self.backButton:setAnchorPoint(0,1)
     self.backButton:setPosition(0,0)
-    menu:setPosition(0,1.0 * s_DESIGN_HEIGHT-0.5*self.backButton:getContentSize().height)
+    self.backButton:setScale(scale)
+    
     local title1 = cc.Sprite:create('image/word_list/button_wordbook_back.png')
     title1:setPosition(self.backButton:getContentSize().width / 2,self.backButton:getContentSize().height / 2)
+    title1:setScale(1 / scale)
     self.backButton:addChild(title1,1)
     menu:addChild(self.backButton)
     
     self.studyedListButton = cc.MenuItemImage:create('image/friend/fri_titleback_select.png','image/friend/fri_titleback_unselect.png','')
-    self.studyedListButton:setPosition(s_DESIGN_WIDTH / 2,0)
+    self.studyedListButton:setPosition(bigWidth / 2,0)
+    self.studyedListButton:ignoreAnchorPointForPosition(false)
+    self.studyedListButton:setAnchorPoint(0.5,1)
+    self.studyedListButton:setScale(scale)
+
     local title2 = cc.Label:createWithSystemFont('已学习','',28)
     title2:setPosition(self.studyedListButton:getContentSize().width / 2,self.studyedListButton:getContentSize().height / 2)
+    title2:setScale(1 / scale)
     self.studyedListButton:addChild(title2,1)
     menu:addChild(self.studyedListButton)
+    
+    
     self.masteredListButton = cc.MenuItemImage:create('image/friend/fri_titleback_unselect.png','image/friend/fri_titleback_unselect.png','')
-    self.masteredListButton:setAnchorPoint(1,0.5)
-    self.masteredListButton:setPosition(s_DESIGN_WIDTH,0)
+    self.masteredListButton:ignoreAnchorPointForPosition(false)
+    self.masteredListButton:setPosition(bigWidth,0)
+    self.masteredListButton:setAnchorPoint(1,1)
+    self.masteredListButton:setScale(scale)
+        
     local title3 = cc.Label:createWithSystemFont('已掌握','',28)
     title3:setPosition(self.masteredListButton:getContentSize().width / 2,self.masteredListButton:getContentSize().height / 2)
+    title3:setScale(1 / scale)
     self.masteredListButton:addChild(title3,1)
     menu:addChild(self.masteredListButton)
 
