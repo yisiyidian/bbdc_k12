@@ -64,12 +64,37 @@ function SummaryBossLayer.create(levelConfig)
     local onTouchEnded
     
     layer:initWordList(levelConfig)
-    layer:initBossLayer(levelConfig)
-    layer:initMapInfo()
-    layer:initMap()
+    layer:initBossLayer_back(levelConfig)
     
+    local loadingTime = 0
+    local loadingState = 0
     --update
     local function update(delta)
+        if loadingTime > delta and loadingState < 2 then
+            loadingState = 2
+        elseif loadingTime > 1.5 and loadingState < 4 then
+            loadingState = 4
+        elseif loadingTime > 2.0 and loadingState < 6 then
+            loadingState = 6    
+        end       
+        if loadingState == 0 then
+            loadingState = 1
+            layer:initBossLayer_girl(levelConfig)
+        elseif loadingState == 2 then
+            loadingState = 3
+            
+            layer:initMapInfo()
+        elseif loadingState == 4 then
+            loadingState = 5
+            layer:initBossLayer_boss(levelConfig)
+        elseif loadingState == 6 then
+            loadingState = 7
+            
+            layer:initMap()
+        end
+        if loadingTime < 5 then
+            loadingTime = loadingTime + delta
+        end
         
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return
@@ -478,7 +503,7 @@ function SummaryBossLayer:updateWord(selectStack)
     end
 end
 
-function SummaryBossLayer:initBossLayer(levelConfig)
+function SummaryBossLayer:initBossLayer_back(levelConfig)
     self.globalLock = true
     --stage info
     self.girlAfraid = false
@@ -501,24 +526,25 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     self:addChild(back)
     back:addAnimation(0, 'animation', true)
     
-    local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
-    self:addChild(blinkBack,0)
-    local wait = cc.DelayTime:create(2.3 + self.totalTime * 0.9)
-    local afraid = cc.CallFunc:create(function() 
-        if self.currentBlood > 0 then
-            self.girlAfraid = true
-            self.girl:setAnimation(0,'girl-afraid',true)
-            -- deadline "Mechanical Clock Ring "
-            playSound(s_sound_Mechanical_Clock_Ring)
+    
+    --add hole
+    local hole = {}    
+    local gap = 120
+    local left = (s_DESIGN_WIDTH - (5 - 1)*gap)/2
+    local bottom = 220
+    for i = 1, 5 do
+        hole[i] = {}
+        for j = 1, 5 do
+            hole[i][j] = cc.Sprite:create("image/summarybossscene/summaryboss_chapter1_hole.png")
+            hole[i][j]:setScale(0.92)
+            hole[i][j]:setPosition(left + gap * (i - 1), bottom + gap * (j - 1))
+            self:addChild(hole[i][j],0)
         end
-    end,{})
-    local blinkIn = cc.FadeTo:create(0.5,50)
-    local blinkOut = cc.FadeTo:create(0.5,0.0)
-    local blink = cc.Sequence:create(blinkIn,blinkOut)
-    local repeatBlink = cc.Repeat:create(blink,math.ceil(self.totalTime * 0.1))
-    blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
-    self.blink = blinkBack
+    end
+    self.hole = hole
+end
+
+function SummaryBossLayer:initBossLayer_girl(levelConfig)
     --add pauseButton
     local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
@@ -542,7 +568,6 @@ function SummaryBossLayer:initBossLayer(levelConfig)
         end
     end
     pauseBtn:addTouchEventListener(pauseScene)
-    
     --add girl
     local girl = sp.SkeletonAnimation:create("spine/summaryboss/girl-stand.json","spine/summaryboss/girl-stand.atlas",1)
     girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)
@@ -557,7 +582,30 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     self:addChild(readyGo,100)
     
     -- ready go "ReadyGo"
-    playSound(s_sound_ReadyGo)
+    
+end
+
+function SummaryBossLayer:initBossLayer_boss(levelConfig)
+    
+    local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+    self:addChild(blinkBack,0)
+    local wait = cc.DelayTime:create(0.0 + self.totalTime * 0.9)
+    local afraid = cc.CallFunc:create(function() 
+        if self.currentBlood > 0 then
+            self.girlAfraid = true
+            self.girl:setAnimation(0,'girl-afraid',true)
+            -- deadline "Mechanical Clock Ring "
+            playSound(s_sound_Mechanical_Clock_Ring)
+        end
+    end,{})
+    local blinkIn = cc.FadeTo:create(0.5,50)
+    local blinkOut = cc.FadeTo:create(0.5,0.0)
+    local blink = cc.Sequence:create(blinkIn,blinkOut)
+    local repeatBlink = cc.Repeat:create(blink,math.ceil(self.totalTime * 0.1))
+    blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
+    self.blink = blinkBack
+
     
     --add boss
     local bossNode = cc.Node:create()
@@ -568,7 +616,7 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     bossNode:addChild(boss)
     boss:setAnimation(0,'a2',true)
     local bossAction = {}
-    bossAction[1] = cc.DelayTime:create(2.3)
+    bossAction[1] = cc.DelayTime:create(0.0)
     bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75)))
     for i = 1, 10 do
         local stop = cc.DelayTime:create(self.totalTime / 10 * 0.8)
@@ -601,21 +649,6 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     boss:addChild(boss.blood) 
     self.boss = boss
     self.bossNode = bossNode
-    --add hole
-    local hole = {}    
-    local gap = 120
-    local left = (s_DESIGN_WIDTH - (5 - 1)*gap)/2
-    local bottom = 220
-    for i = 1, 5 do
-        hole[i] = {}
-        for j = 1, 5 do
-            hole[i][j] = cc.Sprite:create("image/summarybossscene/summaryboss_chapter1_hole.png")
-            hole[i][j]:setScale(0.92)
-            hole[i][j]:setPosition(left + gap * (i - 1), bottom + gap * (j - 1))
-            self:addChild(hole[i][j],0)
-        end
-    end
-    self.hole = hole
 end
 
 function SummaryBossLayer:initWordList(levelConfig)
@@ -730,7 +763,7 @@ function SummaryBossLayer:initCrab()
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
         local delaytime = 0
         if self.currentIndex == 1 then
-            delaytime = 1.5
+            --delaytime = 1.5
         end
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
         self.ccbcrab[i]['meaningSmall']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
@@ -870,7 +903,7 @@ function SummaryBossLayer:initMap()
             
             local delaytime = 0
             if self.currentIndex == 1 then
-                delaytime = 1.5
+                --delaytime = 1.5
             end
             if i == 5 and j == 1 then
                 local unlock = cc.CallFunc:create(function() 
