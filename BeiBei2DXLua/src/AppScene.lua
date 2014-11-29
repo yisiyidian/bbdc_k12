@@ -172,7 +172,7 @@ function AppScene:startLoadingData(hasAccount, username, password)
     end
 
     local function onResponse(u, e, code)
-        if e then                  
+        if e ~= nil then                  
             s_TIPS_LAYER:showSmall(e)
             hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
