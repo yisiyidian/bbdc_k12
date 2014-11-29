@@ -1,4 +1,4 @@
-local  PopupEnergyInfo = class("PopupEnergyInfo", function()
+local PopupEnergyInfo = class("PopupEnergyInfo", function()
     return cc.Layer:create()
 end)
 

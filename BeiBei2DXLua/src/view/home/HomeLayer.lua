@@ -89,11 +89,12 @@ function HomeLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
 
-            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level10')
-            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level10')
-            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
-            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
-            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
+            -- level 10
+            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
+            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
+            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
+            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
+            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
             
             
             function judge_Whether_nil(mark)
