@@ -260,7 +260,7 @@ function StudyLayerII.create()
                 button_reddot:setTitleFontSize(24)
                 button_detail:addChild(button_reddot)
 
-                button_changeview = ccui.Button:create("image/button/button_huadanci__dianji.png", "image/button/button_huadanci__dianji.png", "")
+                button_changeview = ccui.Button:create("image/button/button_changeview21.png", "image/button/button_changeview22.png", "")
                 button_changeview:setTitleText("去划单词")
                 button_changeview:setTitleFontSize(30)
                 button_changeview:setPosition(bigWidth/2, 50)
