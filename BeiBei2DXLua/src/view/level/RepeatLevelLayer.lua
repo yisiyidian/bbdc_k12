@@ -18,7 +18,7 @@ end
 -- define touch event
 local onTouchBegan = function(touch, event) 
     local touchPosition = touch:getLocation()
-    playSound(s_sound_clickWave)
+    --playSound(s_sound_clickWave)
 end
 
 function RepeatLevelLayer:getPlayerPositionForLevel(levelKey)
