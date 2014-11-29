@@ -23,6 +23,7 @@ function TestLayerIII.create()
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
     layer:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
@@ -247,9 +248,9 @@ function TestLayerIII.create()
                 end
             end
 
-            if current_percentage <= 90 then
+            if current_percentage <= 70 then
                 if button_donotknow == nil then
-                    button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
+                    button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw3.png","image/testscene/testscene_donotkonw3.png","")
                     button_donotknow:setAnchorPoint(1,0.5)
                     button_donotknow:setPosition(offset+s_DESIGN_WIDTH+button_donotknow:getContentSize().width,910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
@@ -263,10 +264,7 @@ function TestLayerIII.create()
     end
 
     schedule(layer,update,0.05)
-
-    --local scheduler = cc.Director:getInstance():getScheduler()
-    --local schedulerEntry = scheduler:scheduleScriptFunc(update, 0.05, false)
-
+    
     return layer
 end
 

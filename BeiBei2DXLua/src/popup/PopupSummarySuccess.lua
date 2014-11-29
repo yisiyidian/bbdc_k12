@@ -67,7 +67,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
     
     -- button sound
     playSound(s_sound_buttonEffect)
-    
+    showProgressHUD()
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
         if levelData.isPassed ~= 1 then
@@ -81,8 +81,9 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
         local summaryboss = require('view.summaryboss.SummaryBossLayer')
         local layer = summaryboss.create(levelConfig)
         layer:setAnchorPoint(0.5,0)
-
+        
         s_SCENE:replaceGameLayer(layer)
+        hideProgressHUD()
 --    else 
 --        local energyInfoLayer = require('popup.PopupEnergyInfo')
 --        local layer = energyInfoLayer.create()

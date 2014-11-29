@@ -50,7 +50,7 @@ function ZiaoangTest.create()
 --        end
 --    end
 --    
---    local button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
+--    local button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw1.png","","")
 --    button_donotknow:setAnchorPoint(1,0.5)
 --    button_donotknow:setPosition(s_DESIGN_WIDTH,896)
 --    button_donotknow:addTouchEventListener(button_donotknow_clicked)

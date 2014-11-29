@@ -9,6 +9,9 @@ Server.appId = ''
 Server.appKey = ''
 Server.sessionToken = ''
 
+CONTENT_TYPE_JSON = 'application/json'
+CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
+
 local function getURL()
     if Server.debugLocalHost then
         return 'http://localhost:3000/avos/'
@@ -75,6 +78,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
         if xhr.status ~= 200 then
             if onFailed then onFailed(api, xhr.status, xhr.statusText, '') end
         elseif xhr.response ~= nil then
+            -- TODO: different API has different response data
             local data = s_JSON.decode(xhr.response)
             local result
             if Server.debugLocalHost then 
@@ -113,10 +117,16 @@ end
 
 function Server.requestFunction(api, parameters, onSucceed, onFailed)
     if Server.debugLocalHost then
-        __request__(api, 'POST', 'application/x-www-form-urlencoded; charset=UTF-8', parameters, onSucceed, onFailed)
+        __request__(api,                 'POST', CONTENT_TYPE_FORM, parameters, onSucceed, onFailed)
     else
-        __request__('functions/' .. api, 'POST', 'application/x-www-form-urlencoded; charset=UTF-8', parameters, onSucceed, onFailed)
+        __request__('functions/' .. api, 'POST', CONTENT_TYPE_FORM, parameters, onSucceed, onFailed)
     end
+end
+
+-- return {followers: [粉丝列表], followees: [关注用户列表]}
+-- TODO:
+function Server.requestFollowersAndFollowees(userObjectId, onSucceed, onFailed)
+    __request__('users/' .. userObjectId .. '/followersAndFollowees?include=followee', 'GET', CONTENT_TYPE_JSON, nil, onSucceed, onFailed)
 end
 
 ---------------------------------------------------------------

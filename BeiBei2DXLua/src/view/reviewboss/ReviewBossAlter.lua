@@ -7,6 +7,11 @@ end)
 function ReviewBossAlter.create()
 
     cc.SimpleAudioEngine:getInstance():pauseMusic()
+    
+    if s_SCENE.popupLayer~=nil then
+        s_SCENE.popupLayer:setPauseBtnEnabled(false)
+        s_SCENE.popupLayer.isOtherAlter = true
+    end
 
     s_SCENE:callFuncWithDelay(0.3,function()
         -- win sound
@@ -36,6 +41,7 @@ function ReviewBossAlter.create()
 
     local button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.leaveReviewBossLayer()
             
             -- stop effect

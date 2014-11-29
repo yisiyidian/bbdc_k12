@@ -47,8 +47,6 @@ function TestLayerII.create()
     local sentenceCn = word.sentenceCn
 
     local bigWidth
-    
-    local screenWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
     local mat
     local playOver = false
@@ -228,9 +226,11 @@ function TestLayerII.create()
                 end
             end
 
-            if current_percentage <= 90 then
+            if current_percentage <= 70 then
                 if button_donotknow == nil then
-                    button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
+                    local screenWidth = bigWidth/2 + s_DESIGN_WIDTH/2
+                    
+                    button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw2.png","image/testscene/testscene_donotkonw2.png","")
                     button_donotknow:setAnchorPoint(1,0.5)
                     button_donotknow:setPosition(screenWidth+button_donotknow:getContentSize().width,910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
@@ -244,7 +244,6 @@ function TestLayerII.create()
     end
 
     schedule(layer,update,0.05)
-    
 
     return layer
 end

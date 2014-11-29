@@ -277,7 +277,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
             return
         end
     
-        local length_gap = 3.0
+        local length_gap = 5.0
 
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
