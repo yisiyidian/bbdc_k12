@@ -32,7 +32,6 @@ function LevelLayer:levelStateManager()
             s_SCENE.levelLayerState = s_unlock_normal_notPlotInfo_state
         end
     end
-    print('s_SCENE.state1:'..s_SCENE.levelLayerState)
     -- test
     --s_CURRENT_USER:initLevels()
     -- check current chapter
@@ -44,7 +43,6 @@ function LevelLayer:levelStateManager()
             s_SCENE.levelLayerState = s_unlock_next_chapter_state
         end
     end
-    print('s_SCENE.state2:'..s_SCENE.levelLayerState)
     
 --    print('state0:'..s_SCENE.levelLayerState)
     -- TODO Check Review boss state
@@ -58,13 +56,13 @@ function LevelLayer:levelStateManager()
                 and s_SCENE.levelLayerState ~= s_review_boss_pass_state then
                 if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
                     currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
---                    print('plot stars')
+                    s_SCENE.levelLayerState = s_review_boss_appear_state
                 end
-                s_SCENE.levelLayerState = s_review_boss_appear_state
+                
             end
         end
     end
-    print('s_SCENE.state3:'..s_SCENE.levelLayerState)
+
     
     -- CHECK tutorial review boss
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
@@ -178,7 +176,7 @@ function LevelLayer:levelStateManager()
         -- save and update level data
         --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentChapterKey = 'chapter'..(string.sub(s_CURRENT_USER.currentChapterKey,8)+1)
-        s_CURRENt_USEr.currentSelectedChapterKey = s_CURRENT_USER.currentChapterkey
+        s_CURRENT_USER.currentSelectedChapterKey = s_CURRENT_USER.currentChapterkey
         s_CURRENT_USER.currentLevelKey = 'level0'
         s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
@@ -192,12 +190,6 @@ function LevelLayer:levelStateManager()
         end
         self:updateCurrentChapterLayer()
         currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
-        -- player animation
---        s_SCENE:callFuncWithDelay(1.3,function()
---            local targetPosition = currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
---            local action = cc.MoveTo:create(0.8, targetPosition)
---            player:runAction(action)      
---        end)
         player:removeFromParent()
         player = cc.Sprite:create('image/chapter_level/gril_head.png')
         player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
@@ -205,7 +197,6 @@ function LevelLayer:levelStateManager()
         currentChapterLayer:addChild(player, 5)
      end
      s_SCENE.gameLayerState = s_normal_game_state
-        print('s_SCENE.state4:'..s_SCENE.levelLayerState)
      s_CURRENT_USER:updateDataToServer()
 end
 
