@@ -9,6 +9,14 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
+function judge_Whether_nil(mark)
+    if mark == nil then
+        return 0
+    else
+        return mark.isLevelUnlocked
+    end
+end
+
 
 function HomeLayer.create()
     -- data begin
@@ -96,14 +104,6 @@ function HomeLayer.create()
             local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
             local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
             
-            
-            function judge_Whether_nil(mark)
-                if mark == nil then
-                    return 0
-                else
-                    return mark.isLevelUnlocked
-                end
-            end
 
             if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
                 judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
@@ -112,21 +112,26 @@ function HomeLayer.create()
                 s_CorePlayManager.enterFriendLayer()
 
             else
-                local Friend_popup = require("view/friend/FriendPopup")
-                local friend_popup = Friend_popup.create()  
-                
-                friend_popup.update = function()
-                    if s_CURRENT_USER.isGuest == 0 then
-                        list[1].label:setString(s_CURRENT_USER.username)
-                        list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                        if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                if s_CURRENT_USER.isGuest == 1 then
+                    local Item_popup = require("popup/PopupModel")
+                    local item_popup = Item_popup.create(Site_From_Friend_Guest)  
+                    
+                    item_popup.update = function()
+                        if s_CURRENT_USER.isGuest == 0 then
+                            list[1].label:setString(s_CURRENT_USER.username)
+                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                            if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                        end
                     end
-                end
-                
-                s_SCENE:popup(friend_popup)
-                
-            end
-          
+                    
+                    s_SCENE:popup(item_popup)
+                else
+                    local Item_popup = require("popup/PopupModel")
+                    local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
+
+                    s_SCENE:popup(item_popup)
+                end                
+            end          
         end
     end
     
@@ -240,6 +245,32 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began and viewIndex == 1 then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+            ----todo
+            --
+            -- level 7
+            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
+            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
+            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
+            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
+            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
+
+            if   ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
+                judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
+                judge_Whether_nil(toefl_date)  == 1) then
+
+                local PersonalInfo = require("view.PersonalInfo")
+                local personalInfoLayer = PersonalInfo.create()
+                s_SCENE:replaceGameLayer(personalInfoLayer) 
+
+            else
+
+                local Item_popup = require("popup/PopupModel")
+                local item_popup = Item_popup.create(Site_From_Information)  
+                s_SCENE:popup(item_popup)
+
+            end 
+            
 --            if isDataShow then
 --                isDataShow = false
 --                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
@@ -253,9 +284,6 @@ function HomeLayer.create()
 --                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-300)))
 --            end
 
-            local PersonalInfo = require("view.PersonalInfo")
-            local personalInfoLayer = PersonalInfo.create()
-            s_SCENE:replaceGameLayer(personalInfoLayer) 
         end
     end
 
@@ -370,20 +398,41 @@ function HomeLayer.create()
         if has_study and viewIndex == 1 then
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
-                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+                --level 4
+                local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
+                local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
+                local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
+                local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
+                local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
                 
-                -- button sound
-                playSound(s_sound_buttonEffect)
-                
-                book_back:removeAllChildren()
-                book_back:addAnimation(0, 'animation', false)
-                
-                local action1 = cc.DelayTime:create(1)
-                local action2 = cc.CallFunc:create(function()
-                    s_CorePlayManager.enterWordListLayer()
-                    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-                end)
-                layer:runAction(cc.Sequence:create(action1, action2))
+                if   ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
+                    judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
+                    judge_Whether_nil(toefl_date)  == 1) then
+                    
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+                    -- button sound
+                    playSound(s_sound_buttonEffect)
+
+                    book_back:removeAllChildren()
+                    book_back:addAnimation(0, 'animation', false)
+
+
+                    local action1 = cc.DelayTime:create(1)
+                    local action2 = cc.CallFunc:create(function()
+                        s_CorePlayManager.enterWordListLayer()
+                        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                    end)
+                    layer:runAction(cc.Sequence:create(action1, action2))
+
+                else
+
+                    local Item_popup = require("popup/PopupModel")
+                    local item_popup = Item_popup.create(Site_From_Book)  
+                    s_SCENE:popup(item_popup)
+
+                end 
             end
         end
 
