@@ -115,7 +115,7 @@ function StudyLayerIII.create()
     layer:addChild(label_wordmeaningSmall)
 
     button_detail_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_detail:getRotation() == 0 then
                 if button_reddot then
@@ -215,7 +215,7 @@ function StudyLayerIII.create()
     mat.wrongLock = false
 
     button_changeview_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             s_SCENE.touchEventBlockLayer.lockTouch()
@@ -286,7 +286,7 @@ function StudyLayerIII.create()
                 soundMark:setPosition(bigWidth/2, 550)
                 back_down:addChild(soundMark)
 
-                button_detail = ccui.Button:create("image/button/button_zhuwanfa_disnaguan.png", "image/button/button_zhuwanfa_disnaguan.png", "")
+                button_detail = ccui.Button:create("image/button/button_arrow3.png", "image/button/button_arrow3.png", "")
                 button_detail:setPosition(cc.p(backImage:getContentSize().width/2+200, 900))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backImage:addChild(button_detail)

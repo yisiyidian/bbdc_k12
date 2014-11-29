@@ -94,7 +94,7 @@ function StudyLayerII.create()
     layer:addChild(label_wordmeaningSmall)
 
     button_detail_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             if button_detail:getRotation() == 0 then
                 if button_reddot then
@@ -126,7 +126,7 @@ function StudyLayerII.create()
     end
 
     button_changeview_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -249,7 +249,7 @@ function StudyLayerII.create()
                 soundMark:setPosition(bigWidth/2, 500)
                 back_bigchair:addChild(soundMark)
                 
-                button_detail = ccui.Button:create("image/button/button_arrow.png", "image/button/button_arrow.png", "")
+                button_detail = ccui.Button:create("image/button/button_arrow2.png", "image/button/button_arrow2.png", "")
                 button_detail:setPosition(cc.p(layer:getContentSize().width/2+140, 920))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 layer:addChild(button_detail)

@@ -124,9 +124,18 @@ function Server.requestFunction(api, parameters, onSucceed, onFailed)
 end
 
 -- return {followers: [粉丝列表], followees: [关注用户列表]}
--- TODO:
+-- TODO: status
+
 function Server.requestFollowersAndFollowees(userObjectId, onSucceed, onFailed)
     __request__('users/' .. userObjectId .. '/followersAndFollowees?include=followee', 'GET', CONTENT_TYPE_JSON, nil, onSucceed, onFailed)
+end
+
+function Server.follow(userObjectId, targetObjectId, onSucceed, onFailed)
+    __request__('users/' .. userObjectId .. '/friendship/' .. targetObjectId, 'POST', CONTENT_TYPE_JSON, nil, onSucceed, onFailed)
+end
+
+function Server.unfollow(userObjectId, targetObjectId, onSucceed, onFailed)
+    __request__('users/' .. userObjectId .. '/friendship/' .. targetObjectId, 'DELETE', CONTENT_TYPE_JSON, nil, onSucceed, onFailed)
 end
 
 ---------------------------------------------------------------
