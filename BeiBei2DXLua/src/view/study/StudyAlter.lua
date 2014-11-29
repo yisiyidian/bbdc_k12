@@ -41,7 +41,7 @@ function StudyAlter.create()
     end
     
     local button_left_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.enterLevelLayer()
             
@@ -58,7 +58,7 @@ function StudyAlter.create()
     back:addChild(button_left)
     
     local button_right_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.popupLayer.isOtherAlter = false
             if s_CURRENT_USER.tutorialStep == s_tutorial_study then
                 s_CURRENT_USER:setTutorialStep(s_tutorial_study+1)

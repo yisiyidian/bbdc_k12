@@ -319,7 +319,7 @@ function StudyLayer.create()
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
             local addWordDetailInfo = function()
-                soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
+                soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn, 1)
                 soundMark:setPosition(size_big.width/2, -200)
                 cloud_down:addChild(soundMark)
                 
