@@ -65,10 +65,10 @@ function CorePlayManager.enterStudyLayer()
     end
     
     if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
---        local studyLayer = StudyLayer.create()
---        s_SCENE:replaceGameLayer(studyLayer)
-        local studyLayerII = StudyLayerII.create()
-        s_SCENE:replaceGameLayer(studyLayerII)
+        local studyLayer = StudyLayer.create()
+        s_SCENE:replaceGameLayer(studyLayer)
+--        local studyLayerII = StudyLayerII.create()
+--        s_SCENE:replaceGameLayer(studyLayerII)
 --        local studyLayerIII = StudyLayerIII.create()
 --        s_SCENE:replaceGameLayer(studyLayerIII)
     elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then

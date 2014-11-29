@@ -7,16 +7,7 @@ local TapMat = class("TapMat", function()
 end)
 
 function TapMat.create(word, m ,n)
-    local spriteName
---    if s_CorePlayManager.chapterIndex == "chapter1" then
---        spriteName = "popcorn"
---    elseif s_CorePlayManager.chapterIndex == "chapter3" then
---        spriteName = "snowball"
---    else
---        spriteName = "popcorn"
---    end
-    
-    spriteName = "popcorn"
+    local spriteName = "popcorn"
 
     local main = TapMat.new()
     main:setContentSize(640,640)

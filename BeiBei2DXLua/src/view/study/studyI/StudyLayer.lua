@@ -243,7 +243,7 @@ function StudyLayer.create()
     if s_CorePlayManager.newPlayerState then
         mat = FlipMat.create(wordName,4,4,true,false)
     else
-        mat = FlipMat.create(wordName,5,5,false,false)
+        mat = FlipMat.create(wordName,4,4,false,false)
     end
     mat:setPosition(size_big.width/2*3, 120)
     layer:addChild(mat)
