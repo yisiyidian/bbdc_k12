@@ -15,8 +15,8 @@ function ImproveInfoNode.create(type)
 
     local backImage
     local cursor
-    local hint1 = "请输入新的用户名                      "
-    local hint2 = "请输入新的密码                       "
+    local hint1 = "请输入新的用户名"
+    local hint2 = "请输入新的密码"
     main.textField = nil
 
     local cursorShowUp
@@ -66,8 +66,7 @@ function ImproveInfoNode.create(type)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
     end
-    main.textField:setAnchorPoint(0,0.5)
-    main.textField:setPosition(cc.p(40, backImage:getContentSize().height / 2.0))
+    main.textField:setPosition(cc.p(backImage:getContentSize().width / 2, backImage:getContentSize().height / 2))
     main.textField:addEventListener(eventHandle)
     backImage:addChild(main.textField)
 
@@ -79,7 +78,7 @@ function ImproveInfoNode.create(type)
     main:addChild(cursor)
 
     local update = function(dt)
-        cursor:setPosition(40+main.textField:getContentSize().width, height/2)
+        cursor:setPosition(backImage:getContentSize().width/2+main.textField:getContentSize().width/2, height/2)
     end
     main:scheduleUpdateWithPriorityLua(update, 0)
 

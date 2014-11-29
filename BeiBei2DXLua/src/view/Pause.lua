@@ -22,7 +22,7 @@ function Pause:ctor()
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25) 
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.1) 
     end
 
     -- Pause actions
@@ -91,7 +91,7 @@ function Pause:onClose()
     playSound(s_sound_buttonEffect)
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
 end
 
@@ -112,7 +112,7 @@ function Pause:onRetry()
     playSound(s_sound_buttonEffect)
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
 end
 
@@ -123,7 +123,7 @@ function Pause:onBack()
     
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
     
     local level = require('view.LevelLayer')
@@ -143,7 +143,7 @@ function Pause:onContinue()
     playSound(s_sound_buttonEffect)
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
 
 end
