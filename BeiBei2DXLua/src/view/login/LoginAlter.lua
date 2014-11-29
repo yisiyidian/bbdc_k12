@@ -143,7 +143,7 @@ showLogin = function()
     
     local label_name = cc.Label:createWithSystemFont("登陆","",30)
     label_name:setColor(cc.c4b(255,255,255,255))
-    label_name:setPosition(70, submit:getContentSize().height/2)
+    label_name:setPosition(submit:getContentSize().width/2, submit:getContentSize().height/2)
     submit:addChild(label_name)
     
     local button_toggle_clicked = function(sender, eventType)
@@ -274,7 +274,6 @@ showRegister = function()
     
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then       
-        
             -- button sound
             playSound(s_sound_buttonEffect)
             if validateUsername(username.textField:getStringValue()) == false then
@@ -297,7 +296,7 @@ showRegister = function()
     
     local label_name = cc.Label:createWithSystemFont("注册","",30)
     label_name:setColor(cc.c4b(255,255,255,255))
-    label_name:setPosition(70, submit:getContentSize().height/2)
+    label_name:setPosition(submit:getContentSize().width/2, submit:getContentSize().height/2)
     submit:addChild(label_name)
 
     local button_toggle_clicked = function(sender, eventType)

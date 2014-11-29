@@ -12,7 +12,7 @@ local IntroLayer = class("IntroLayer", function ()
 end)
 
 
-function IntroLayer.create()
+function IntroLayer.create(directOnLogin)
     local layer = IntroLayer.new()
     
     local currentIndex = 1
@@ -112,12 +112,96 @@ function IntroLayer.create()
     
     local button_login
     local button_register
+    local button_login_clicked
+    local button_register_clicked
 
     local cloud = cc.Sprite:create("image/login/cloud_denglu.png")
     cloud:setAnchorPoint(0.5,0)
     cloud:setPosition(s_DESIGN_WIDTH/2,-200)
     layer:addChild(cloud)
     
+    button_login_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then                        
+            local loginAlter = LoginAlter.createLogin()
+            loginAlter:setTag(1)
+            loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+            layer:addChild(loginAlter)
+            -- button sound
+            playSound(s_sound_buttonEffect)
+            loginAlter.close = function()
+                layer:removeChildByTag(1)
+            end
+        end
+    end
+    
+    button_register_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+
+            local gotoRegistNewAccount = function ()
+                local loginAlter = LoginAlter.createRegister()
+                loginAlter:setTag(2)
+                loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                layer:addChild(loginAlter)
+                -- button sound
+                playSound(s_sound_buttonEffect)
+                loginAlter.close = function() layer:removeChildByTag(2) end 
+            end
+
+            local hasAccount = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER)
+
+            if not (hasAccount and s_CURRENT_USER.isGuest == 1) then
+                gotoRegistNewAccount()
+            else
+                local visitorRegister = VisitorRegister.create()
+                visitorRegister:setTag(2)
+                visitorRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                layer:addChild(visitorRegister)
+                -- button sound
+                playSound(s_sound_buttonEffect)
+                visitorRegister.close = function(which)
+                    -- which = register,improve,close
+                    layer:removeChildByTag(2)   
+
+                    if which == "register" then
+                        gotoRegistNewAccount()
+
+                    elseif which == "improve" then
+                        playSound(s_sound_buttonEffect)
+
+                        local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER)
+                        improveInfo:setTag(1)
+                        improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        layer:addChild(improveInfo)
+                        improveInfo.close = function()
+                            layer:removeChildByTag(1)   
+                        end                                  
+                    end
+
+                end 
+            end
+        end
+    end
+    
+    button_login = ccui.Button:create()
+    button_login:loadTextures("image/button/studyscene_blue_button.png", "", "")
+    button_login:addTouchEventListener(button_login_clicked)
+    button_login:setPosition(cloud:getContentSize().width/2-150, 200)
+    button_login:setTitleFontSize(36)
+    button_login:setTitleText("登陆")
+    button_login:setTitleColor(cc.c4b(255,255,255,255))
+    button_login:setVisible(false)
+    cloud:addChild(button_login)
+    
+    button_register = ccui.Button:create()
+    button_register:loadTextures("image/button/button_white_denglu.png", "", "")
+    button_register:addTouchEventListener(button_register_clicked)
+    button_register:setPosition(cloud:getContentSize().width/2+150, 200)
+    button_register:setTitleFontSize(36)
+    button_register:setTitleText("注册")
+    button_register:setTitleColor(cc.c4b(115,197,243,255))
+    button_register:setVisible(false)
+    cloud:addChild(button_register)
+
     local label_hint_array = {}
     table.insert(label_hint_array, "一关一城市 贝贝带你游美国")
     table.insert(label_hint_array, "随时随地 消消记记")
@@ -153,6 +237,31 @@ function IntroLayer.create()
         end
     end
     
+    
+    -- special handle the location
+    if directOnLogin then
+        print("ziaoang - Test")
+        currentIndex = 4
+        
+        circle_back_array[1]:setVisible(true)
+        circle_font_array[1]:setVisible(false)
+        circle_back_array[currentIndex]:setVisible(false)
+        circle_font_array[currentIndex]:setVisible(true)
+        print(currentIndex)
+        
+        intro_array[1]:setPosition(-s_DESIGN_WIDTH,s_DESIGN_HEIGHT/2)
+        intro_array[2]:setPosition(-s_DESIGN_WIDTH,s_DESIGN_HEIGHT/2)
+        intro_array[3]:setPosition(-s_DESIGN_WIDTH,s_DESIGN_HEIGHT/2)
+        intro_array[4]:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
+        
+        label_hint:setString(label_hint_array[currentIndex])  
+        
+        cloud:setPosition(s_DESIGN_WIDTH/2, 0)
+
+        button_login:setVisible(true)
+        button_register:setVisible(true)
+    end
+        
     local moved = false
     local start_x = nil
     
@@ -169,17 +278,18 @@ function IntroLayer.create()
         local location = layer:convertToNodeSpace(touch:getLocation())
         local now_x = location.x
         if now_x - moveLength > start_x then
-            if currentIndex == 4 then
-                button_login:setVisible(false)
-                button_register:setVisible(false)
-            
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
-                cloud:runAction(action2)
-            end
-        
-            if currentIndex > 1 then
+            print("move right")
+            if currentIndex > 1 and currentIndex <= 4 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
+                
+                if currentIndex == 4 then
+                    button_login:setVisible(false)
+                    button_register:setVisible(false)
+
+                    local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
+                    cloud:runAction(action2)
+                end
 
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*2,s_DESIGN_HEIGHT/2))
                 intro_array[currentIndex]:runAction(action1)
@@ -196,8 +306,10 @@ function IntroLayer.create()
                 
                 label_hint:setString(label_hint_array[currentIndex])             
             end
+            print(currentIndex)
         elseif now_x + moveLength < start_x then
-            if currentIndex < 4 then
+            print("move left")
+            if currentIndex < 4 and currentIndex >= 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 moved = true
                 
@@ -208,6 +320,15 @@ function IntroLayer.create()
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 intro_array[currentIndex+1]:runAction(cc.Sequence:create(action2, action3))
                 
+                if currentIndex == 3 then            
+                    local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
+                    local action3 = cc.CallFunc:create(function()
+                        button_login:setVisible(true)
+                        button_register:setVisible(true)
+                    end)
+                    cloud:runAction(cc.Sequence:create(action2, action3))
+                end
+                
                 circle_back_array[currentIndex]:setVisible(true)
                 circle_font_array[currentIndex]:setVisible(false)
                 currentIndex = currentIndex + 1
@@ -215,101 +336,8 @@ function IntroLayer.create()
                 circle_font_array[currentIndex]:setVisible(true)
                 
                 label_hint:setString(label_hint_array[currentIndex])   
-            end
-            if currentIndex == 4 then                
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
-                local action3 = cc.CallFunc:create(function()
-                    button_login:setVisible(true)
-                    button_register:setVisible(true)
-                end)
-                cloud:runAction(cc.Sequence:create(action2, action3))
-                                
-                local button_login_clicked = function(sender, eventType)
-                    if eventType == ccui.TouchEventType.began then                        
-                        local loginAlter = LoginAlter.createLogin()
-                        loginAlter:setTag(1)
-                        loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                        layer:addChild(loginAlter)
-                        -- button sound
-                        playSound(s_sound_buttonEffect)
-                        loginAlter.close = function()
-                            layer:removeChildByTag(1)
-                        end
-                    end
-                end
-                
-                local button_register_clicked = function(sender, eventType)
-                    if eventType == ccui.TouchEventType.began then
-
-                        local gotoRegistNewAccount = function ()
-                            local loginAlter = LoginAlter.createRegister()
-                            loginAlter:setTag(2)
-                            loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                            layer:addChild(loginAlter)
-                            -- button sound
-                            playSound(s_sound_buttonEffect)
-                            loginAlter.close = function() layer:removeChildByTag(2) end 
-                        end
-
-                        local hasAccount = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER)
-                        
-                        if not (hasAccount and s_CURRENT_USER.isGuest == 1) then
-                            gotoRegistNewAccount()
-                        else
-                            local visitorRegister = VisitorRegister.create()
-                            visitorRegister:setTag(2)
-                            visitorRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                            layer:addChild(visitorRegister)
-                            -- button sound
-                            playSound(s_sound_buttonEffect)
-                            visitorRegister.close = function(which)
-                                -- which = register,improve,close
-                                layer:removeChildByTag(2)   
-                            
-                                if which == "register" then
-                                    gotoRegistNewAccount()
-                                    
-                                elseif which == "improve" then
-                                    playSound(s_sound_buttonEffect)
-
-                                    local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER)
-                                    improveInfo:setTag(1)
-                                    improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                                    layer:addChild(improveInfo)
-                                    improveInfo.close = function()
-                                        layer:removeChildByTag(1)   
-                                    end                                  
-                                end
-                                                
-                            end 
-                        end
-                    end
-                end
-
-                if not button_login then
-                    button_login = ccui.Button:create()
-                    button_login:loadTextures("image/button/studyscene_blue_button.png", "", "")
-                    button_login:addTouchEventListener(button_login_clicked)
-                    button_login:setPosition(cloud:getContentSize().width/2-150, 200)
-                    button_login:setTitleFontSize(36)
-                    button_login:setTitleText("登陆")
-                    button_login:setTitleColor(cc.c4b(255,255,255,255))
-                    button_login:setVisible(false)
-                    cloud:addChild(button_login)
-                end
-                
-                if not button_register then
-                    button_register = ccui.Button:create()
-                    button_register:loadTextures("image/button/button_white_denglu.png", "", "")
-                    button_register:addTouchEventListener(button_register_clicked)
-                    button_register:setPosition(cloud:getContentSize().width/2+150, 200)
-                    button_register:setTitleFontSize(36)
-                    button_register:setTitleText("注册")
-                    button_register:setTitleColor(cc.c4b(115,197,243,255))
-                    button_register:setVisible(false)
-                    cloud:addChild(button_register)
-                end
-            end
+            end 
+            print(currentIndex)
         end
     end
 

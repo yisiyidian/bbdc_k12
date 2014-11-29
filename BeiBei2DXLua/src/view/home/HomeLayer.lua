@@ -107,7 +107,7 @@ function HomeLayer.create()
             if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
                 judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
                 judge_Whether_nil(toefl_date)  == 1) and s_CURRENT_USER.isGuest == 0 then
-
+--             if true then
                 s_CorePlayManager.enterFriendLayer()
 
             else
@@ -118,7 +118,7 @@ function HomeLayer.create()
                     if s_CURRENT_USER.isGuest == 0 then
                         list[1].label:setString(s_CURRENT_USER.username)
                         list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                        if list[4].button_back ~= nil then list[4].button_back:removeFromParentAndCleanup() end
+                        if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
                     end
                 end
                 
@@ -139,9 +139,9 @@ function HomeLayer.create()
             s_UserBaseServer.getFollowersOfCurrentUser( 
                 function (api, result)
                     s_CURRENT_USER:parseServerFollowersData(result.results)
-                    print("seenFansCount = %d, fansCount = %d",#s_CURRENT_USER.seenFansCount,#s_CURRENT_USER.fansCount)
+                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
                     s_CURRENT_USER:getFriendsInfo()
-                    print("seenFansCount = %d, fansCount = %d",#s_CURRENT_USER.seenFansCount,#s_CURRENT_USER.fansCount)
+                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
                     local redHint = nil
                     if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
                         redHint = cc.Sprite:create('image/friend/fri_infor.png')

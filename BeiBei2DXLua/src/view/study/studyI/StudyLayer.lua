@@ -215,8 +215,6 @@ function StudyLayer.create()
             end
         end
         
-        
-        
         local endEffect = function()
             local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,936))
             local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,900))
