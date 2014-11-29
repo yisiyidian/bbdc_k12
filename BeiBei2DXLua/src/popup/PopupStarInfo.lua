@@ -19,7 +19,7 @@ function PopupStarInfo:ctor()
       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.1)
    end
 
-    local  starNumber = s_CURRENT_USER:getUserCurrentChapterObtainedStarCount()
+    local  starNumber = s_CURRENT_USER:getUserBookObtainedStarCount()
     local  totalNumber = 255
     
     self.ccbPopupStarInfo = {}

@@ -331,7 +331,7 @@ end
 
 function RepeatLevelLayer:onLevelButtonClicked(levelKey)
     s_CURRENT_USER.currentSelectedLevelKey = levelKey
-    s_CURRENT_USER.currentChapterKey = self.chapterKey
+    s_CURRENT_USER.currentSelectedChapterKey = self.chapterKey
     local levelButton = self:getChildByName(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
@@ -350,13 +350,13 @@ function RepeatLevelLayer:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        if s_CURRENT_USER:getUserCurrentChapterObtainedStarCount() >= levelConfig['summary_boss_stars'] then
+        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserCurrentChapterObtainedStarCount(),levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         else
             local popupSummary = require('popup.PopupSummaryFail')
-            local layer = popupSummary.create(s_CURRENT_USER:getUserCurrentChapterObtainedStarCount(),levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         end
     end

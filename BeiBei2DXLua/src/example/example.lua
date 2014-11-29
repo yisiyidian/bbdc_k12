@@ -17,7 +17,7 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
-    local IntroLayer = require("view.friend.FriendPopup")
+    local IntroLayer = require("popup.PopupModel")
     local introLayer = IntroLayer.create()
     s_SCENE:replaceGameLayer(introLayer) 
     
