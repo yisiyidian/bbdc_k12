@@ -104,9 +104,9 @@ function FriendLayer:ctor()
     self:addChild(layer,1,'list')
     
     local search = require('view.friend.FriendSearch')
-    local layer = search.create()
-    layer:setAnchorPoint(0.5,0)
-    self:addChild(layer,0,'search')
+    local searchlayer = search.create()
+    searchlayer:setAnchorPoint(0.5,0)
+    self:addChild(searchlayer,0,'search')
     
     local function onFriendList(sender)
         self.friendListButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
@@ -119,6 +119,7 @@ function FriendLayer:ctor()
             local layer = list.create()
             layer:setAnchorPoint(0.5,0)
             self:addChild(layer,1,'list')
+            searchlayer:setLocalZOrder(-1)
         end
     end
     
@@ -128,6 +129,7 @@ function FriendLayer:ctor()
         self.friendSearchButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
         self:removeChildByName('list',true)
         self:removeChildByName('request',true)
+        searchlayer:setLocalZOrder(0)
     end
     
     local function onFriendRequest(sender)
@@ -144,6 +146,7 @@ function FriendLayer:ctor()
             local layer = request.create()
             layer:setAnchorPoint(0.5,0)
             self:addChild(layer,1,'request')
+            searchlayer:setLocalZOrder(-1)
         end
     end
         

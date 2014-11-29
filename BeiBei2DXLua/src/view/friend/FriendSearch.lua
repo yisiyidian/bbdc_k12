@@ -59,8 +59,10 @@ function FriendSearch:ctor()
                 return
             end
             local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
+            showProgressHUD('正在搜索相应用户')
             s_UserBaseServer.searchUserByUserName(username,
                 function(api,result)
+                    hideProgressHUD()
                     if #result.results > 0 then
                         s_CURRENT_USER:getFriendsInfo() 
                         for i, user in ipairs(result.results) do
@@ -151,11 +153,14 @@ function FriendSearch:ctor()
                                             s_SCENE.popupLayer:addChild(smallAlter)
                                             return
                                         end
+                                        showProgressHUD('正在发送好友请求')
                                         s_UserBaseServer.unfollow(user,
                                             function(api,result)
+                                                
                                                 s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
                                                 s_UserBaseServer.follow(user,
                                                     function(api,result)
+                                                        hideProgressHUD()
                                                         local fan = nil
                                                         local key = 0
                                                         for i,f in ipairs(s_CURRENT_USER.fans) do
@@ -185,6 +190,7 @@ function FriendSearch:ctor()
                                                         s_SCENE.popupLayer:addChild(smallAlter) 
                                                     end,
                                                     function(api, code, message, description)
+                                                        hideProgressHUD()
                                                         local SmallAlter = require('view.friend.HintAlter')
                                                         local smallAlter = SmallAlter.create('好友请求发送失败')
                                                         smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
@@ -193,6 +199,7 @@ function FriendSearch:ctor()
                                                 )
                                             end,
                                             function(api, code, message, description)
+                                                hideProgressHUD()
                                             end)
                                         
                                     end
@@ -210,6 +217,7 @@ function FriendSearch:ctor()
                     end
                 end,
                 function(api, code, message, description)
+                    hideProgressHUD()
                 end)
             
             
