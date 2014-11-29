@@ -151,7 +151,7 @@ function StudyLayer.create()
     backColor:addChild(label_wordmeaningSmall)
     
     button_detail_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             s_SCENE.touchEventBlockLayer.lockTouch()
@@ -253,7 +253,7 @@ function StudyLayer.create()
     mat.wrongLock = false
     
     button_changeview_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             s_SCENE.touchEventBlockLayer.lockTouch()
