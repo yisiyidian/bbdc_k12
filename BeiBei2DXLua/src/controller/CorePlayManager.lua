@@ -170,6 +170,10 @@ function CorePlayManager.enterReviewBossLayer_special()
     CorePlayManager.rbWordList = split(levelConfig.word_content, "|")
     local reviewBossLayer = ReviewBossLayer.create()
     s_SCENE:replaceGameLayer(reviewBossLayer)
+--        local reviewBossLayerII = ReviewBossLayerII.create()
+--        s_SCENE:replaceGameLayer(reviewBossLayerII)
+--        local reviewBossLayerIII = ReviewBossLayerIII.create()
+--        s_SCENE:replaceGameLayer(reviewBossLayerIII)
 end
 
 function CorePlayManager.enterReviewBossLayer()
@@ -181,10 +185,10 @@ function CorePlayManager.enterReviewBossLayer()
     end
 
     if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
---        local reviewBossLayer = ReviewBossLayer.create()
---        s_SCENE:replaceGameLayer(reviewBossLayer)
-        local reviewBossLayerII = ReviewBossLayerII.create()
-        s_SCENE:replaceGameLayer(reviewBossLayerII)
+        local reviewBossLayer = ReviewBossLayer.create()
+        s_SCENE:replaceGameLayer(reviewBossLayer)
+--        local reviewBossLayerII = ReviewBossLayerII.create()
+--        s_SCENE:replaceGameLayer(reviewBossLayerII)
 --        local reviewBossLayerIII = ReviewBossLayerIII.create()
 --        s_SCENE:replaceGameLayer(reviewBossLayerIII)
     elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then

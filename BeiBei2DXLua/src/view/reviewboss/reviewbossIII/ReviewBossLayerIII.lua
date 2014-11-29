@@ -112,9 +112,9 @@ function ReviewBossLayerIII.create()
     effect1:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(effect1)   
 
-    local effect2 = cc.Sprite:create("image/reviewbossscene/reviewbossIII_effect2.png")
-    effect2:setPosition(s_DESIGN_WIDTH - 50, 100)
-    layer:addChild(effect2)   
+--    local effect2 = cc.Sprite:create("image/reviewbossscene/reviewbossIII_effect2.png")
+--    effect2:setPosition(s_DESIGN_WIDTH - 50, 100)
+--    layer:addChild(effect2)   
 
     local checkTouchIndex = function(location)
         for i = 1, #wordToBeTested do
