@@ -309,6 +309,9 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         -- add connection 
         local connectionLayer0_1 = require('view.level.connection.Connection0_1')
         self.chapterDic['connection0_1'] = connectionLayer0_1.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+            self.chapterDic['connection0_1']:plotUnlockChapterAnimation()
+        end
         local item0_1 = ccui.Layout:create()
         item0_1:setContentSize(self.chapterDic['connection0_1']:getContentSize())
         self.chapterDic['connection0_1']:setPosition(cc.p(0,0))
@@ -324,6 +327,9 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
     elseif chapterKey == 'chapter2' then
         local connectionLayer1_2 = require('view.level.connection.Connection1_2')
         self.chapterDic['connection1_2'] = connectionLayer1_2.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+            self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
+        end
         local item1_2 = ccui.Layout:create()
         item1_2:setContentSize(self.chapterDic['connection1_2']:getContentSize())
         self.chapterDic['connection1_2']:setPosition(cc.p(0,0))
@@ -343,6 +349,9 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         local chapterIndex = string.sub(chapterKey, 8)
         local connectionLayer_repeat = require('view.level.connection.Connection_repeat')
         self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)] = connectionLayer_repeat.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+            self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:plotUnlockChapterAnimation()
+        end
         local item_connection = ccui.Layout:create()
         item_connection:setContentSize(self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:getContentSize())
         self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:setPosition(cc.p(0,0))
