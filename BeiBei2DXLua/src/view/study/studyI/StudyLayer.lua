@@ -323,7 +323,7 @@ function StudyLayer.create()
                 soundMark:setPosition(size_big.width/2, -200)
                 cloud_down:addChild(soundMark)
                 
-                button_detail = ccui.Button:create("image/button/button_arrow.png", "image/button/button_arrow.png", "")
+                button_detail = ccui.Button:create("image/button/button_arrow1.png", "image/button/button_arrow1.png", "")
                 button_detail:setPosition(cc.p(layer:getContentSize().width-60, 930))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backColor:addChild(button_detail)

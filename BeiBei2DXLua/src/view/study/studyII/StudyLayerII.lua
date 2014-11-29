@@ -249,7 +249,7 @@ function StudyLayerII.create()
                 soundMark:setPosition(bigWidth/2, 500)
                 back_bigchair:addChild(soundMark)
                 
-                button_detail = ccui.Button:create("image/button/button_arrow.png", "image/button/button_arrow.png", "")
+                button_detail = ccui.Button:create("image/button/button_arrow2.png", "image/button/button_arrow2.png", "")
                 button_detail:setPosition(cc.p(layer:getContentSize().width/2+140, 920))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 layer:addChild(button_detail)
