@@ -20,6 +20,8 @@ local dir_right = 4
 function SummaryBossLayer.create(levelConfig)   
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
+    
+    
     math.randomseed(os.time())
     --add coconut
     --layer.levelConfig = levelConfig
@@ -389,13 +391,12 @@ function SummaryBossLayer.create(levelConfig)
                             for m = 1, 5 do
                                 for n = 1, 5 do
                                     local remove = cc.CallFunc:create(function() 
-                                        layer.coconut[m][n]:removeFromParent(true)    
+--                                        layer.coconut[m][n]:removeFromParent(true)    
                                     end,{})
                                     layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
                                 end
                             end
                             layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
-                                layer.coconut = {}
                                 layer:initMap()
                             end,{})))
                         end
@@ -478,15 +479,9 @@ end
 
 function SummaryBossLayer:initBossLayer(levelConfig)
     self.globalLock = true
---    local unlock = cc.CallFunc:create(function() 
---        
---        self:initMap()
---    end,{})
---    self:runAction(cc.Sequence:create(cc.DelayTime:create(1.5),unlock))
-    
-    
     --stage info
     self.girlAfraid = false
+    self.hasMap = false
     self.totalBlood = levelConfig.summary_boss_hp
     self.currentBlood = self.totalBlood
     self.rightWord = 0
@@ -742,7 +737,6 @@ end
 
 function SummaryBossLayer:initMap()
     self:initStartIndex()
-    self.coconut = {}
     self.isFirst = {}
     self.isCrab = {}
     for i = 1, #self.crab do
@@ -760,7 +754,9 @@ function SummaryBossLayer:initMap()
 
     local main_logic_mat = randomMat(5, 5)
     for i = 1, 5 do
-        self.coconut[i] = {}
+        if self.currentIndex == 1 then
+            self.coconut[i] = {}
+        end
         self.isFirst[i] = {}
         self.isCrab[i] = {}
         for j = 1, 5 do
@@ -770,7 +766,12 @@ function SummaryBossLayer:initMap()
             if #self.wordPool[self.currentIndex] == 1 then
                 local diff = main_logic_mat[i][j] - self.startIndexPool[1]
                 if diff >= 0 and diff < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1)
+                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1))
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
+                    end
                     self.isCrab[i][j] = 1
                     if diff == 0 then
                         self.coconut[i][j].firstStyle()
@@ -778,20 +779,41 @@ function SummaryBossLayer:initMap()
                     end
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = charaster_set_filtered[randomIndex]
+                        self.coconut[i][j].main_character_label:setString(charaster_set_filtered[randomIndex])
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
+                    end
+                    
                 end
             elseif #self.wordPool[self.currentIndex] == 2 then
                 local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
                 local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1)
+                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1))
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    end
                     self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1)
+                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1))
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    end
                     self.isCrab[i][j] = 2
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = charaster_set_filtered[randomIndex]
+                        self.coconut[i][j].main_character_label:setString(charaster_set_filtered[randomIndex])
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
+                    end
                 end
                 if diff1 * diff2 == 0 then
                     self.coconut[i][j].firstStyle()
@@ -806,17 +828,37 @@ function SummaryBossLayer:initMap()
                 local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                 local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
                 if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1)
+                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1))
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
+                    end
                     self.isCrab[i][j] = 1
                 elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1)
+                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1))
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
+                    end
                     self.isCrab[i][j] = 2
                 elseif diff3 >= 0 and diff3 < string.len(self.wordPool[self.currentIndex][3]) then
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1)
+                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1))
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
+                    end
                     self.isCrab[i][j] = 3
                 else
                     local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
+                    if self.currentIndex > 1 then
+                        self.coconut[i][j].main_character_content = charaster_set_filtered[randomIndex]
+                        self.coconut[i][j].main_character_label:setString(charaster_set_filtered[randomIndex])
+                    else
+                        self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
+                    end
                 end
 
                 if diff1 * diff2 * diff3 == 0 then
@@ -831,14 +873,19 @@ function SummaryBossLayer:initMap()
                 end
 
             end
-            self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/zongjieboss_2_douzi_zhuan.json","spine/summaryboss/zongjieboss_2_douzi_zhuan.atlas",1)
+            if self.currentIndex == 1 then
+                self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/zongjieboss_2_douzi_zhuan.json","spine/summaryboss/zongjieboss_2_douzi_zhuan.atlas",1)
+                self:addChild(self.coconut[i][j],1)
+                self.coconut[i][j].bullet:setAnimation(0,'animation',true)
+                self:addChild(self.coconut[i][j].bullet,2)
+            else
+                self.coconut[i][j].bullet:stopAllActions()  
+            end
             self.coconut[i][j].bullet:setPosition(self.hole[i][j]:getPosition())
             self.coconut[i][j].bullet:setVisible(false)
-            self.coconut[i][j].bullet:setAnimation(0,'animation',true)
-            self:addChild(self.coconut[i][j].bullet,2)
             self.coconut[i][j]:setScale(0)
             self.coconut[i][j]:setPosition(self.hole[i][j]:getPosition())
-            self:addChild(self.coconut[i][j],1)
+            
             local delaytime = 0
             if self.currentIndex == 1 then
                 delaytime = 1.5
