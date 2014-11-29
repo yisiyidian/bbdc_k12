@@ -529,6 +529,7 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     local pauseBtn = cc.MenuItemImage:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
     menu:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
     menu:addChild(pauseBtn,100)
 

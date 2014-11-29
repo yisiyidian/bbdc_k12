@@ -5,14 +5,20 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
 end)
 
 function SummaryBossAlter.create(win,wordCount,blood,index)
-
-
     
     local layer = SummaryBossAlter.new()
     layer.wordCount = wordCount
     layer.blood = blood
     layer.win = win
     layer.index = index
+    
+    --disable pauseBtn
+    if s_SCENE.popupLayer~=nil then
+        s_SCENE.popupLayer:setPauseBtnEnabled(false)
+        if s_SCENE.popupLayer.pauseLayer~=nil then
+            s_SCENE.popupLayer.pauseLayer.isOtherAlter = true
+        end
+    end    
     if layer.index > 3 then
         layer.index = 3
     end
