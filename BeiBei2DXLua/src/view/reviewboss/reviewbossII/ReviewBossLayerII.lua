@@ -189,6 +189,7 @@ function ReviewBossLayerII.create()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
                 wordMeaningBeTestedNow:setString(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall)
             else
+                rbCurrentWordIndex = rbCurrentWordIndex + 1
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
                 local showAlter = function()

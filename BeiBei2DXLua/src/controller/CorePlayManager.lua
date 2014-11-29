@@ -181,8 +181,12 @@ function CorePlayManager.enterReviewBossLayer()
     end
 
     if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
-        local reviewBossLayer = ReviewBossLayer.create()
-        s_SCENE:replaceGameLayer(reviewBossLayer)
+--        local reviewBossLayer = ReviewBossLayer.create()
+--        s_SCENE:replaceGameLayer(reviewBossLayer)
+        local reviewBossLayerII = ReviewBossLayerII.create()
+        s_SCENE:replaceGameLayer(reviewBossLayerII)
+--        local reviewBossLayerIII = ReviewBossLayerIII.create()
+--        s_SCENE:replaceGameLayer(reviewBossLayerIII)
     elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then
         local reviewBossLayerII = ReviewBossLayerII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerII)
