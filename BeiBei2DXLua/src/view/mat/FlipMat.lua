@@ -23,7 +23,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
         spineName = "coconut_dark"
     end
     
-    spineName = "coin"
+--    spineName = "coin"
     
     local main_width    = 640
     local main_height   = 640
