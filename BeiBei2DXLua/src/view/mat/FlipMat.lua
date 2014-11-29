@@ -222,7 +222,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
                     elseif y < x and y < -x then
                         current_dir = dir_down
                     elseif y > x and y < -x then
-                        current_dir = dir_left
+                        current_dir = dir_leftw
                     else
                         current_dir = dir_right
                     end
@@ -232,7 +232,37 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
                 end
             end
         end
-        
+        onNode = false
+    end
+    
+    local checkTouchLocation_opt = function(location)
+        for i = 1, main_m do
+            for j = 1, main_n do
+                local node = main_mat[i][j]
+                local node_position = cc.p(node:getPosition())
+                local node_size = node:getContentSize()
+
+                if cc.rectContainsPoint(node:getBoundingBox(), location) then
+                    current_node_x = i
+                    current_node_y = j
+
+                    local x = location.x - node_position.x
+                    local y = location.y - node_position.y
+                    if y > x and y > -x then
+                        current_dir = dir_up
+                    elseif y < x and y < -x then
+                        current_dir = dir_down
+                    elseif y > x and y < -x then
+                        current_dir = dir_left
+                    else
+                        current_dir = dir_right
+                    end
+
+                    onNode = true
+                    return
+                end
+            end
+        end
         onNode = false
     end
     
