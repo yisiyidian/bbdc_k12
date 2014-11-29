@@ -6,6 +6,11 @@ local MasteredWordList = class('MasteredWordList', function()
     return cc.Layer:create()
 end)
 
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
+local mid = (s_RIGHT_X - s_LEFT_X) /2 + s_LEFT_X
+local width = (s_RIGHT_X - s_LEFT_X) /2
+
 function MasteredWordList.create()
     local layer = MasteredWordList.new()
     return layer
@@ -142,6 +147,11 @@ function MasteredWordList:ctor()
             if eventType == ccui.TouchEventType.ended then
                 local control = split(sender:getName(),'|')
                 local wordInfo = s_WordPool[control[2]]
+                
+                local arrow = sender:getChildByName('arrow'..control[2])
+                print('arrowName:'..'arrow'..control[2])
+                print('name:'..arrow:getName())
+                
                 if control[3] == '0' then  -- insert a item of word info
                     local wordTitle = cc.Label:createWithSystemFont(wordInfo['wordMeaning']..'\n'..wordInfo['sentenceEn']..'\n'..wordInfo['sentenceCn'], '' ,28)
                     wordTitle:setColor(cc.c3b(0,0,0))
@@ -182,9 +192,13 @@ function MasteredWordList:ctor()
                     local index = listView:getIndex(wordItem)
                     listView:insertCustomItem(wordContainer,index+1)
                     sender:setName(control[1]..'|'..control[2]..'|1')
+                    local action = cc.RotateTo:create(0.5,180)
+                    arrow:runAction(action)
                 else -- remove a item
                     self:removeItemByName(listView,'moreWordInfo'..control[1]..control[2])
                     sender:setName(control[1]..'|'..control[2]..'|0')
+                    local action = cc.RotateTo:create(0.5,360)
+                    arrow:runAction(action)
                 end
             end
         end
@@ -205,6 +219,7 @@ function MasteredWordList:ctor()
                     custom_button:setTitleText('123')
                     custom_button:setScale9Enabled(true)
                     custom_button:setContentSize(default_button:getContentSize())
+
 
                     local custom_item = ccui.Layout:create()
                     custom_item:setContentSize(custom_button:getContentSize())
@@ -233,10 +248,13 @@ function MasteredWordList:ctor()
                     more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
                     more_label:setColor(cc.c3b(0,0,0))
                     arrow:addChild(more_label)
-                    arrow:setName(wordKey..'|0')
+                    --arrow:setName(wordKey..'|0')
+                    arrow:setName('arrow'..word)
 
                     --print('arrow:'..arrow:getName())
-                    arrow:addTouchEventListener(touchEvent)
+                    --arrow:addTouchEventListener(touchEvent)
+                    custom_button:setName(wordKey..'|0')
+                    custom_button:addTouchEventListener(touchEvent)
                     custom_button:addChild(arrow)        
                     -- add mastered count
                     --print('study:'..studyWords[word])

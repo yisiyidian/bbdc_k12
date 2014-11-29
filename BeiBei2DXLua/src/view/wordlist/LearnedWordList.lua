@@ -6,6 +6,11 @@ local LearnedWordList = class('LearnedWordList', function()
     return cc.Layer:create()
 end)
 
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
+local mid = (s_RIGHT_X - s_LEFT_X) /2 + s_LEFT_X
+local width = (s_RIGHT_X - s_LEFT_X) /2
+
 function LearnedWordList.create()
     local layer = LearnedWordList.new()
     return layer
@@ -74,8 +79,8 @@ function LearnedWordList:ctor()
 
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
-    back:setAnchorPoint(0.5,0)
-    back:setPosition(0.5 * s_DESIGN_WIDTH,0)
+    back:setAnchorPoint(0,0.5)
+    back:setPosition(s_LEFT_X,162 * 3)
     self:addChild(back)
     
     local function listViewEvent(sender, eventType)
@@ -90,9 +95,10 @@ function LearnedWordList:ctor()
     listView:setBounceEnabled(false)
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))  -- TODO set dynamic
-    listView:setPosition(s_LEFT_X,0)
+    listView:setPosition(0,0)
     listView:addEventListener(listViewEvent)
     listView:setName('listView')
+    listView:ignoreAnchorPointForPosition(false)
     self:addChild(listView, 0)
     
     --set model
@@ -100,8 +106,10 @@ function LearnedWordList:ctor()
     default_item:setTouchEnabled(true)
     local default_button = ccui.Button:create('image/friend/friendRankButton.png', 'image/friend/friendRankButton.png')
     ----todo
+--    default_button:setScaleX(scale)
     default_item:setContentSize(default_button:getContentSize())
-    default_button:setPosition(cc.p(default_item:getContentSize().width / 2.0, default_item:getContentSize().height / 2.0))
+    default_button:setPosition(default_item:getContentSize().width / 2.0, default_item:getContentSize().height / 2.0)
+    default_button:ignoreAnchorPointForPosition(false)
     default_item:addChild(default_button)
     listView:setItemModel(default_item)
     listView:removeAllChildren()
@@ -152,6 +160,7 @@ function LearnedWordList:ctor()
                     
                     local wordTitle = cc.Label:createWithSystemFont(wordInfo['wordMeaning']..'\n'..wordInfo['sentenceEn']..'\n'..wordInfo['sentenceCn'], '' ,28)
                     wordTitle:setColor(cc.c3b(0,0,0))
+--                    wordTitle:setScaleX(1/scale)
 
                     local richText = ccui.RichText:create()
 
@@ -159,7 +168,8 @@ function LearnedWordList:ctor()
                     richText:ignoreAnchorPointForPosition(false)
                     richText:setAnchorPoint(0.5,0.5)
 
-                    richText:setContentSize(cc.size(600, -600))  
+                    richText:setContentSize(cc.size(width, -600))  
+--                    richText:setScaleX(1/scale)
 
 
                     local label_word = CCLabelTTF:create (wordInfo['wordMeaning']..wordInfo['sentenceEn']..wordInfo['sentenceCn'],
@@ -167,21 +177,24 @@ function LearnedWordList:ctor()
 
                     label_word:setColor(cc.c3b(0, 0, 0))
 
+                    local back_blue = cc.LayerColor:create(cc.c4b(52,177,241,255),s_DESIGN_WIDTH,200)
+                    back_blue:ignoreAnchorPointForPosition(false)
+                    back_blue:setAnchorPoint(0.5,0.5)
+
+
                     local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,label_word)                           
                     richText:pushBackElement(richElement1)                   
-                    richText:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
+                    richText:setPosition(width * 0.53, back:getContentSize().height*0.5)
                     richText:setLocalZOrder(10)
                     
-                    local back = cc.LayerColor:create(cc.c4b(52,177,241,255),s_DESIGN_WIDTH,200)
-                    back:ignoreAnchorPointForPosition(false)
-                    back:setAnchorPoint(0.5,0.5)
-          
                     local wordContainer = ccui.Layout:create()
                     wordContainer:setContentSize(cc.size(s_DESIGN_WIDTH, 200))
-                    back:setPosition(wordContainer:getContentSize().width/2, wordContainer:getContentSize().height/2)
-                    wordContainer:addChild(back)
+                    back_blue:setPosition(wordContainer:getContentSize().width/2, wordContainer:getContentSize().height/2)
+
+                    wordContainer:addChild(back_blue)
                     
-                    wordContainer:addChild(richText,2)                    
+                    wordContainer:addChild(richText,2)  
+      --              wordContainer:setScaleX(scale)                  
                     wordContainer:setName('moreWordInfo'..control[1]..control[2])
   
                     local wordItem = self:getItemByName(listView,control[1]..'|'..control[2])
@@ -203,6 +216,7 @@ function LearnedWordList:ctor()
             --print('wordInfo..'..word..',')
             if studyWords[word] ~= nil then
                 local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
+                custom_button:setScaleX(s_DESIGN_WIDTH/custom_button:getContentSize().width)
                 custom_button:setName("custom_button")
                 custom_button:setTitleText('123')
                 custom_button:setScale9Enabled(true)
@@ -233,6 +247,8 @@ function LearnedWordList:ctor()
                 local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
                 arrow:setScale9Enabled(true)
                 arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
+
+                
                 local more_label = cc.Label:createWithSystemFont('更多','',24)
                 more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
                 more_label:setColor(cc.c3b(0,0,0))
