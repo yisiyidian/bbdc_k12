@@ -263,7 +263,6 @@ function TestLayer.create()
     progress:setPercentage(100)
     progress_back:addChild(progress)
     
-    
     if s_CorePlayManager.currentWordIndex == 1 then
         local readygo = sp.SkeletonAnimation:create("res/spine/readygo_diyiguan.json", "res/spine/readygo_diyiguan.atlas", 1)
         readygo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)

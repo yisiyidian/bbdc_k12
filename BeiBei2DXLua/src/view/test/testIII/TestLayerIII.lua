@@ -53,7 +53,6 @@ function TestLayerIII.create()
     layer:addChild(backImage)
     
     local bigWidth = backImage:getContentSize().width
-    local offset = (bigWidth - s_DESIGN_WIDTH)/2
 
     local button_changeview
     local button_changeview_clicked
@@ -195,18 +194,17 @@ function TestLayerIII.create()
     mat.rightLock = true
     mat.wrongLock = false
 
-    local progress_back = cc.Sprite:create("image/progress/progressB1.png")
+    local progress_back = cc.Sprite:create("image/progress/progressB2.png")
     progress_back:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(progress_back)
 
-    local progress = cc.ProgressTimer:create(cc.Sprite:create("image/progress/progressF1.png"))
+    local progress = cc.ProgressTimer:create(cc.Sprite:create("image/progress/progressF2.png"))
     progress:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     progress:setMidpoint(cc.p(0, 0))
     progress:setBarChangeRate(cc.p(1, 0))
     progress:setPosition(progress_back:getPosition())
     progress:setPercentage(100)
     layer:addChild(progress)
-
 
     if s_CorePlayManager.currentWordIndex == 1 then
         local readygo = sp.SkeletonAnimation:create("res/spine/readygo_diyiguan.json", "res/spine/readygo_diyiguan.atlas", 1)
@@ -252,11 +250,11 @@ function TestLayerIII.create()
                 if button_donotknow == nil then
                     button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw3.png","image/testscene/testscene_donotkonw3.png","")
                     button_donotknow:setAnchorPoint(1,0.5)
-                    button_donotknow:setPosition(offset+s_DESIGN_WIDTH+button_donotknow:getContentSize().width,910)
+                    button_donotknow:setPosition((bigWidth + s_DESIGN_WIDTH)/2+s_DESIGN_OFFSET_WIDTH+button_donotknow:getContentSize().width,910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
                     backImage:addChild(button_donotknow)
 
-                    local action = cc.MoveTo:create(0.5,cc.p(offset+s_DESIGN_WIDTH,910))
+                    local action = cc.MoveTo:create(0.5,cc.p((bigWidth + s_DESIGN_WIDTH)/2+s_DESIGN_OFFSET_WIDTH, 910))
                     button_donotknow:runAction(action)
                 end
             end
