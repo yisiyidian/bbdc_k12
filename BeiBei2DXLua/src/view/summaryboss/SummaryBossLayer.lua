@@ -65,6 +65,7 @@ function SummaryBossLayer.create(levelConfig)
     
     layer:initWordList(levelConfig)
     layer:initBossLayer(levelConfig)
+    layer:initMapInfo()
     layer:initMap()
     
     --update
@@ -627,6 +628,8 @@ function SummaryBossLayer:initWordList(levelConfig)
         wordList[i] = wordList[randomIndex]
         wordList[randomIndex] = tmp
     end
+    
+    self.maxCount = #wordList
 
 
     while true do
@@ -651,29 +654,29 @@ function SummaryBossLayer:initWordList(levelConfig)
     end
 end
 
-function SummaryBossLayer:initStartIndex()
+function SummaryBossLayer:initStartIndex(index)
     self.startIndexPool = {}
-    if #self.wordPool[self.currentIndex] == 1 then
-        local localgap = 25 - string.len(self.wordPool[self.currentIndex][1])
+    if #self.wordPool[index] == 1 then
+        local localgap = 25 - string.len(self.wordPool[index][1])
         local randomStart = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart + 1
-    elseif #self.wordPool[self.currentIndex] == 2 then
-        local localgap = 25 - string.len(self.wordPool[self.currentIndex][1]) - string.len(self.wordPool[self.currentIndex][2])
+    elseif #self.wordPool[index] == 2 then
+        local localgap = 25 - string.len(self.wordPool[index][1]) - string.len(self.wordPool[index][2])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[self.currentIndex][1]) + randomStart2 + 1
-    elseif #self.wordPool[self.currentIndex] == 3 then
-        local localgap = 25 - string.len(self.wordPool[self.currentIndex][1]) - string.len(self.wordPool[self.currentIndex][2]) - string.len(self.wordPool[self.currentIndex][3])
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + 1
+    elseif #self.wordPool[index] == 3 then
+        local localgap = 25 - string.len(self.wordPool[index][1]) - string.len(self.wordPool[index][2]) - string.len(self.wordPool[index][3])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         localgap = localgap - randomStart2
         local randomStart3 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[self.currentIndex][1]) + randomStart2 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[self.currentIndex][1]) + randomStart2 + string.len(self.wordPool[self.currentIndex][2]) + randomStart3 + 1        
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + 1
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + string.len(self.wordPool[index][2]) + randomStart3 + 1        
     end
 end
 
@@ -735,10 +738,99 @@ function SummaryBossLayer:initCrab()
     end
 end
 
-function SummaryBossLayer:initMap()
-    self:initStartIndex()
+function SummaryBossLayer:initMapInfo()
     self.isFirst = {}
     self.isCrab = {}
+    self.character = {}
+    for k = 1,#self.wordPool do
+        self:initStartIndex(k)
+        self.character[k] = {}
+        self.isFirst[k] = {}
+        self.isCrab[k] = {}
+        local charaster_set_filtered = {}
+        for i = 1, 26 do
+            local char = string.char(96+i)
+            charaster_set_filtered[#charaster_set_filtered+1] = char
+        end
+
+        local main_logic_mat = randomMat(5, 5)
+        for i = 1, 5 do
+            self.character[k][i] = {}
+            self.isFirst[k][i] = {}
+            self.isCrab[k][i] = {}
+            for j = 1, 5 do
+                local randomIndex = math.random(1, #charaster_set_filtered)
+                self.isFirst[k][i][j] = 0
+                self.isCrab[k][i][j] = 0
+                if #self.wordPool[k] == 1 then
+                    local diff = main_logic_mat[i][j] - self.startIndexPool[1]
+                    if diff >= 0 and diff < string.len(self.wordPool[k][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff+1,diff+1)
+                        self.isCrab[k][i][j] = 1
+                        if diff == 0 then
+                            self.isFirst[k][i][j] = 1
+                        end
+                    else
+                        local randomIndex = math.random(1, #charaster_set_filtered)
+                        self.character[k][i][j] = charaster_set_filtered[randomIndex]
+
+                    end
+                elseif #self.wordPool[k] == 2 then
+                    local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
+                    local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
+                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff1+1,diff1+1)
+                        self.isCrab[k][i][j] = 1
+                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][2],diff2+1,diff2+1)
+                        self.isCrab[k][i][j] = 2
+                    else
+                        local randomIndex = math.random(1, #charaster_set_filtered)
+                        self.character[k][i][j] = charaster_set_filtered[randomIndex]
+                    end
+                    if diff1 * diff2 == 0 then
+                        if diff1 == 0 then
+                            self.isFirst[k][i][j] = 1
+                        else
+                            self.isFirst[k][i][j] = 2
+                        end
+                    end
+                elseif #self.wordPool[k] == 3 then
+                    local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
+                    local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
+                    local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
+                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff1+1,diff1+1)
+                        self.isCrab[k][i][j] = 1
+                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][2],diff2+1,diff2+1)
+                        self.isCrab[k][i][j] = 2
+                    elseif diff3 >= 0 and diff3 < string.len(self.wordPool[k][3]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][3],diff3+1,diff3+1)
+                        self.isCrab[k][i][j] = 3
+                    else
+                        local randomIndex = math.random(1, #charaster_set_filtered)
+                        self.character[k][i][j] = charaster_set_filtered[randomIndex]
+                    end
+
+                    if diff1 * diff2 * diff3 == 0 then
+                        if diff1 == 0 then
+                            self.isFirst[k][i][j] = 1
+                        elseif diff2 == 0 then
+                            self.isFirst[k][i][j] = 2
+                        else
+                            self.isFirst[k][i][j] = 3
+                        end
+                    end
+
+                end
+            end
+        end
+    end
+end
+
+function SummaryBossLayer:initMap()
+
     for i = 1, #self.crab do
         self.crab[i]:removeFromParent()
     end
@@ -746,133 +838,23 @@ function SummaryBossLayer:initMap()
     for i = 1, #self.wordPool[self.currentIndex] do
         self.crabOnView[i] = true
     end
-    local charaster_set_filtered = {}
-    for i = 1, 26 do
-        local char = string.char(96+i)
-        charaster_set_filtered[#charaster_set_filtered+1] = char
-    end
-
-    local main_logic_mat = randomMat(5, 5)
+    
     for i = 1, 5 do
         if self.currentIndex == 1 then
             self.coconut[i] = {}
         end
-        self.isFirst[i] = {}
-        self.isCrab[i] = {}
         for j = 1, 5 do
-            local randomIndex = math.random(1, #charaster_set_filtered)
-            self.isFirst[i][j] = 0
-            self.isCrab[i][j] = 0
-            if #self.wordPool[self.currentIndex] == 1 then
-                local diff = main_logic_mat[i][j] - self.startIndexPool[1]
-                if diff >= 0 and diff < string.len(self.wordPool[self.currentIndex][1]) then
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1)
-                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1))
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
-                    end
-                    self.isCrab[i][j] = 1
-                    if diff == 0 then
-                        self.coconut[i][j].firstStyle()
-                        self.isFirst[i][j] = 1
-                    end
-                else
-                    local randomIndex = math.random(1, #charaster_set_filtered)
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = charaster_set_filtered[randomIndex]
-                        self.coconut[i][j].main_character_label:setString(charaster_set_filtered[randomIndex])
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
-                    end
-                    
-                end
-            elseif #self.wordPool[self.currentIndex] == 2 then
-                local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
-                local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
-                if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1)
-                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1))
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
-                    end
-                    self.isCrab[i][j] = 1
-                elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1)
-                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1))
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
-                    end
-                    self.isCrab[i][j] = 2
-                else
-                    local randomIndex = math.random(1, #charaster_set_filtered)
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = charaster_set_filtered[randomIndex]
-                        self.coconut[i][j].main_character_label:setString(charaster_set_filtered[randomIndex])
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
-                    end
-                end
-                if diff1 * diff2 == 0 then
-                    self.coconut[i][j].firstStyle()
-                    if diff1 == 0 then
-                        self.isFirst[i][j] = 1
-                    else
-                        self.isFirst[i][j] = 2
-                    end
-                end
-            elseif #self.wordPool[self.currentIndex] == 3 then
-                local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
-                local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
-                local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
-                if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1)
-                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1))
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
-                    end
-                    self.isCrab[i][j] = 1
-                elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1)
-                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1))
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
-                    end
-                    self.isCrab[i][j] = 2
-                elseif diff3 >= 0 and diff3 < string.len(self.wordPool[self.currentIndex][3]) then
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1)
-                        self.coconut[i][j].main_character_label:setString(string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1))
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
-                    end
-                    self.isCrab[i][j] = 3
-                else
-                    local randomIndex = math.random(1, #charaster_set_filtered)
-                    if self.currentIndex > 1 then
-                        self.coconut[i][j].main_character_content = charaster_set_filtered[randomIndex]
-                        self.coconut[i][j].main_character_label:setString(charaster_set_filtered[randomIndex])
-                    else
-                        self.coconut[i][j] = FlipNode.create("coconut_dark", charaster_set_filtered[randomIndex], i, j)
-                    end
-                end
-
-                if diff1 * diff2 * diff3 == 0 then
-                    self.coconut[i][j].firstStyle()
-                    if diff1 == 0 then
-                        self.isFirst[i][j] = 1
-                    elseif diff2 == 0 then
-                        self.isFirst[i][j] = 2
-                    else
-                        self.isFirst[i][j] = 3
-                    end
-                end
-
-            end
+            
+             if self.currentIndex > 1 then
+                self.coconut[i][j].main_character_content = self.character[self.currentIndex][i][j]
+                self.coconut[i][j].main_character_label:setString(self.character[self.currentIndex][i][j])
+             else
+                self.coconut[i][j] = FlipNode.create("coconut_dark", self.character[self.currentIndex][i][j], i, j)
+             end
+             if self.isFirst[self.currentIndex][i][j] == 1 or self.isFirst[self.currentIndex][i][j] == 2 or self.isFirst[self.currentIndex][i][j] == 3 then
+                self.coconut[i][j].firstStyle()
+             end
+           
             if self.currentIndex == 1 then
                 self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/zongjieboss_2_douzi_zhuan.json","spine/summaryboss/zongjieboss_2_douzi_zhuan.atlas",1)
                 self:addChild(self.coconut[i][j],1)
@@ -898,7 +880,7 @@ function SummaryBossLayer:initMap()
             else
                 self.coconut[i][j]:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j) + delaytime),cc.ScaleTo:create(0.1, scale)))
             end
-            self.coconut[i][j].isFirst = self.isFirst[i][j]
+            self.coconut[i][j].isFirst = self.isFirst[self.currentIndex][i][j]
         end
     end
     self:initCrab()
@@ -970,7 +952,7 @@ function SummaryBossLayer:hint()
     end
     for i = 1, 5 do
         for j = 1, 5 do
-            if self.isCrab[i][j] == index then
+            if self.isCrab[self.currentIndex][i][j] == index then
                 self.coconut[i][j]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
             end
         end

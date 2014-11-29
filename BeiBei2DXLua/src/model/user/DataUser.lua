@@ -180,7 +180,13 @@ function DataUser:getFriendsInfo()
         else
             table.insert(self.fans,1,follower)
             if #self.fans > s_friend_request_max_count then
-                table.remove(self.fans,#self.fans)
+                s_UserBaseServer.removeFan(self.fans[#self.fans],
+                    function(api,result)
+                        table.remove(self.fans,#self.fans)
+                    end,
+                    function(api, code, message, description)
+                    end)
+                
             end
         end
     end
