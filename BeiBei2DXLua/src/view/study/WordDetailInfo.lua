@@ -41,7 +41,7 @@ function WordDetailInfo.create(word)
     main:addChild(sprite_split)
     index_y = index_y - sprite_split:getContentSize().height - 10
     
-    label_wordmeaning = cc.Label:createWithSystemFont(word.wordMeaning,"",40)
+    label_wordmeaning = cc.Label:createWithSystemFont(word.wordMeaning,"",28)
     label_wordmeaning:setAnchorPoint(0,1)
     label_wordmeaning:setColor(cc.c4b(0,0,0,255))
     label_wordmeaning:setDimensions(text_length,0)
@@ -50,7 +50,7 @@ function WordDetailInfo.create(word)
     main:addChild(label_wordmeaning)
     index_y = index_y - label_wordmeaning:getContentSize().height - 10  
     
-    label_sentenceen = cc.Label:createWithSystemFont(word.sentenceEn,"",40)
+    label_sentenceen = cc.Label:createWithSystemFont(word.sentenceEn,"",28)
     label_sentenceen:setAnchorPoint(0,1)
     label_sentenceen:setColor(cc.c4b(0,0,0,255))
     label_sentenceen:setDimensions(text_length,0)
@@ -59,7 +59,7 @@ function WordDetailInfo.create(word)
     main:addChild(label_sentenceen)
     index_y = index_y - label_sentenceen:getContentSize().height - 10
     
-    label_sentencecn = cc.Label:createWithSystemFont(word.sentenceCn,"",40)
+    label_sentencecn = cc.Label:createWithSystemFont(word.sentenceCn,"",28)
     label_sentencecn:setAnchorPoint(0,1)
     label_sentencecn:setColor(cc.c4b(0,0,0,255))
     label_sentencecn:setDimensions(text_length,0)

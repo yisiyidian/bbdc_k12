@@ -18,10 +18,7 @@ local BookLayer             = require("view.book.BookLayer")
 local WordListLayer         = require("view.wordlist.WordMenu")
 local FriendLayer           = require("view.friend.FriendLayer")
 
-
-
 local CorePlayManager = {}
-
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
