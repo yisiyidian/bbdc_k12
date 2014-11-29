@@ -7,9 +7,15 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 Site_From_Information = "Site_From_Information"
 Site_From_Book = "Site_From_Book"
+Site_From_Friend_Guest = "Site_From_Friend_Guest"
+Site_From_Friend_Not_Enough_Level = "Site_From_Friend_Not_Enough_Level"
+
 
 function PopupModel.create(site)
     local layer = PopupModel.new()
+    
+    layer.update = function()
+    end
 
     local title = ''
     local reason = ''
@@ -20,6 +26,28 @@ function PopupModel.create(site)
     reason = "你至少得在任意一本书内玩到\n10关才能解锁此功能"
     solution = "继续闯关"
     picture_site = "image/homescene/setup_information.png"
+    
+    if site == Site_From_Book then
+        title = "书库功能已锁定"
+        reason = "你至少得在任意一本书内玩到\n4关才能解锁此功能"
+        solution = "继续闯关"
+        picture_site = "image/popupwindow/book.png"
+    elseif site == Site_From_Information then
+        title = "信息功能已锁定"
+        reason = "你至少得在任意一本书内玩到\n7关才能解锁此功能"
+        solution = "继续闯关"
+        picture_site = "image/popupwindow/yuan.png"
+    elseif site == Site_From_Friend_Not_Enough_Level then
+        title = "好友功能已锁定"
+        reason = "你至少得在任意一本书内玩到\n10关才能解锁此功能"
+        solution = "继续闯关"
+        picture_site = "image/homescene/setup_information.png"
+    elseif site == Site_From_Friend_Guest then
+        title = "好友功能已锁定"
+        reason = "游客身份无法使用好友系统\n请完善您的账号信息"
+        solution = "完善个人信息"
+        picture_site = "image/homescene/setup_information.png"
+    end
 
     local popup_window = cc.Sprite:create("image/friend/broad.png")
     popup_window:setAnchorPoint(0.5,0.5)
@@ -63,20 +91,41 @@ function PopupModel.create(site)
             -- button sound
             playSound(s_sound_buttonEffect)
 
-            local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
-            local action2 = cc.EaseBackOut:create(action1)
-            popup_window:runAction(action2) 
+            if site == Site_From_Friend_Guest then
             
-            showProgressHUD()
-            -- button sound
-            playSound(s_sound_buttonEffect) 
+                local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
+                local action2 = cc.EaseBackOut:create(action1)
+                popup_window:runAction(action2) 
+                
+                s_SCENE:callFuncWithDelay(0.3,function()
+                    local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
+                    improveInfo:setTag(1)
+                    improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
 
-            s_SCENE:callFuncWithDelay(0.3,function() 
-                s_CorePlayManager.enterLevelLayer()  
-                hideProgressHUD()   
-                s_SCENE:removeAllPopups()          
-            end)
+                    layer:addChild(improveInfo)   
+                    improveInfo.close = function()
+                        layer:removeChildByTag(1)  
+                        layer.update()  
+                        s_SCENE:removeAllPopups()
+                    end  
+                end)
+                
+            else
 
+                local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
+                local action2 = cc.EaseBackOut:create(action1)
+                popup_window:runAction(action2) 
+
+                showProgressHUD()
+                -- button sound
+                playSound(s_sound_buttonEffect) 
+
+                s_SCENE:callFuncWithDelay(0.3,function() 
+                    s_CorePlayManager.enterLevelLayer()  
+                    hideProgressHUD()   
+                    s_SCENE:removeAllPopups()          
+                end)
+            end
 
         end
     end
