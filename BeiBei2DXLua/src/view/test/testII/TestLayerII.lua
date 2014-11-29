@@ -22,6 +22,7 @@ function TestLayerII.create()
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
     layer:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
@@ -46,15 +47,14 @@ function TestLayerII.create()
     local sentenceEn = word.sentenceEn
     local sentenceCn = word.sentenceCn
 
-    local bigWidth
-
     local mat
     local playOver = false
 
     local back = cc.Sprite:create("image/studyscene/studyII_back.png")
     back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
     layer:addChild(back)
-    bigWidth = back:getContentSize().width
+    
+    local bigWidth = back:getContentSize().width
 
     local back_bigchair = cc.Sprite:create("image/studyscene/studyII_back_bigchair.png")
     back_bigchair:setAnchorPoint(0.5,0)
@@ -185,11 +185,11 @@ function TestLayerII.create()
         playSound(s_sound_ReadyGo)
     end
     
-    local progress_back = cc.Sprite:create("image/progress/progressB1.png")
+    local progress_back = cc.Sprite:create("image/progress/progressB2.png")
     progress_back:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(progress_back)
     
-    local progress = cc.ProgressTimer:create(cc.Sprite:create("image/progress/progressF1.png"))
+    local progress = cc.ProgressTimer:create(cc.Sprite:create("image/progress/progressF2.png"))
     progress:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     progress:setMidpoint(cc.p(0, 0))
     progress:setBarChangeRate(cc.p(1, 0))
@@ -227,16 +227,14 @@ function TestLayerII.create()
             end
 
             if current_percentage <= 70 then
-                if button_donotknow == nil then
-                    local screenWidth = bigWidth/2 + s_DESIGN_WIDTH/2
-                    
+                if button_donotknow == nil then                                        
                     button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw2.png","image/testscene/testscene_donotkonw2.png","")
                     button_donotknow:setAnchorPoint(1,0.5)
-                    button_donotknow:setPosition(screenWidth+button_donotknow:getContentSize().width,910)
+                    button_donotknow:setPosition((bigWidth + s_DESIGN_WIDTH)/2+s_DESIGN_OFFSET_WIDTH+button_donotknow:getContentSize().width, 910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
                     back:addChild(button_donotknow)
                     
-                    local action = cc.MoveTo:create(0.5,cc.p(screenWidth,910))
+                    local action = cc.MoveTo:create(0.5,cc.p((bigWidth + s_DESIGN_WIDTH)/2+s_DESIGN_OFFSET_WIDTH, 910))
                     button_donotknow:runAction(action)
                 end
             end

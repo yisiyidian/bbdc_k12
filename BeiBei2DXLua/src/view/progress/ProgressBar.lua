@@ -29,7 +29,7 @@ function ProgressBar.create(isWrongStateShow)
         end
     end
     for i = currentIndex, totalIndex do
-        imageNameList[i] = "image/ProgressBar/blue_middle.png"  
+        imageNameList[i] = "image/ProgressBar/grey_middle.png"  
     end
     
     if totalIndex > 1 then
@@ -38,7 +38,7 @@ function ProgressBar.create(isWrongStateShow)
         else if imageNameList[1] == "image/ProgressBar/red_middle.png" then
             imageNameList[1] = "image/ProgressBar/red_left.png"
         else
-            imageNameList[1] = "image/ProgressBar/blue_left.png"
+            imageNameList[1] = "image/ProgressBar/grey_left.png"
         end
         end
 --        
@@ -47,7 +47,7 @@ function ProgressBar.create(isWrongStateShow)
         else if imageNameList[totalIndex] == "image/ProgressBar/red_middle.png" then
             imageNameList[totalIndex] = "image/ProgressBar/red_right.png"
         else
-            imageNameList[totalIndex] = "image/ProgressBar/blue_right.png"
+            imageNameList[totalIndex] = "image/ProgressBar/grey_right.png"
         end
         end
     end
@@ -82,9 +82,9 @@ function ProgressBar.create(isWrongStateShow)
     -- add right and wrong animation
     main.rightStyle = function()
         local name = nil
-        if imageNameList[currentIndex] == "image/ProgressBar/blue_left.png" then
+        if imageNameList[currentIndex] == "image/ProgressBar/grey_left.png" then
             name = "image/ProgressBar/yellow_left.png"
-        else if imageNameList[currentIndex] == "image/ProgressBar/blue_middle.png" then
+        else if imageNameList[currentIndex] == "image/ProgressBar/grey_middle.png" then
             name = "image/ProgressBar/yellow_middle.png"
         else
             name = "image/ProgressBar/yellow_right.png"
@@ -108,9 +108,9 @@ function ProgressBar.create(isWrongStateShow)
     
     main.wrongStyle = function()
         local name = nil
-        if imageNameList[currentIndex] == "image/ProgressBar/blue_left.png" then
+        if imageNameList[currentIndex] == "image/ProgressBar/grey_left.png" then
             name = "image/ProgressBar/red_left.png"
-        else if imageNameList[currentIndex] == "image/ProgressBar/blue_middle.png" then
+        else if imageNameList[currentIndex] == "image/ProgressBar/grey_middle.png" then
             name = "image/ProgressBar/red_middle.png"
         else
             name = "image/ProgressBar/red_right.png"

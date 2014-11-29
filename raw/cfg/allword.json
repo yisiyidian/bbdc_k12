@@ -4618,7 +4618,7 @@
 "distance":{"sound_en":"['dɪst(ə)ns]", "sound_us":"['dɪstəns]", "meaning":"n.距离；远方；疏远；间隔 vt.疏远；把…远远甩在后面 ", "small_meaning":"n.距离", "sentence_en":"I make the distance about 70 kilometres .", "sentence_cn":"我估计这段距离约有70公里。"},
 "anxiety":{"sound_en":"[æŋ'zaɪətɪ]", "sound_us":"[æŋ'zaɪəti]", "meaning":"n.焦虑；渴望；挂念；令人焦虑的事 ", "small_meaning":"n.焦虑", "sentence_en":"He was distracted by anxiety .", "sentence_cn":"他因忧虑而心烦意乱。"},
 "affront":{"sound_en":"[ə'frʌnt]", "sound_us":"[ə'frʌnt]", "meaning":"vt.冒犯，有意冒犯；面对；公开侮辱 n.轻蔑；公开侮辱 n.(Affront)人名；(英)阿弗龙特 ", "small_meaning":"vt.冒犯", "sentence_en":"I will pouch up no such affront .", "sentence_cn":"我决不能容忍这种公开侮辱。"},
-"dredge":{"sound_en":"[dredʒ]", "sound_us":"[drɛdʒ]", "meaning":"vt. vi.疏浚，挖掘；采捞 n.挖泥船，疏浚机；拖捞网 ", "small_meaning":"vt.", "sentence_en":"There is a sandy bottom to dredge .", "sentence_cn":"有一个沙底要疏浚。"},
+"dredge":{"sound_en":"[dredʒ]", "sound_us":"[drɛdʒ]", "meaning":"vt. vi.疏浚，挖掘；采捞 n.挖泥船，疏浚机；拖捞网 ", "small_meaning":"vi.疏浚", "sentence_en":"There is a sandy bottom to dredge .", "sentence_cn":"有一个沙底要疏浚。"},
 "divert":{"sound_en":"[daɪ'vɜːt;dɪ-]", "sound_us":"[dɪˈvɚt]", "meaning":"vt.转移；使…欢娱；使…转向 vi.转移 n.(Divert)人名；(法)迪韦尔 ", "small_meaning":"vt.转移", "sentence_en":"Otherwise it will divert resources where they’re needed .", "sentence_cn":"否则它会将资源转移到需要的地方。"},
 "bitterness":{"sound_en":"[bɪtənəs]", "sound_us":"['bɪtɚnɪs]", "meaning":"n.苦味；苦难；怨恨 ", "small_meaning":"n.苦味", "sentence_en":"His heart was overflowing with bitterness .", "sentence_cn":"他的心中充满了苦涩。"},
 "preparation":{"sound_en":"[,prepə'reɪʃ(ə)n]", "sound_us":"[,prɛpə'reʃən]", "meaning":"n.预备；准备 ", "small_meaning":"n.预备", "sentence_en":"I have no adequate preparation .", "sentence_cn":"我没有充分的准备。"},
