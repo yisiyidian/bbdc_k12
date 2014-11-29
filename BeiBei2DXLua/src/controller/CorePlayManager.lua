@@ -67,25 +67,25 @@ function CorePlayManager.enterStudyLayer()
         CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
     end
     
-    if s_CURRENT_USER.currentChapterKey == "chapter0" then
+    if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
         local studyLayer = StudyLayer.create()
         s_SCENE:replaceGameLayer(studyLayer)
 --        local studyLayerII = StudyLayerII.create()
 --        s_SCENE:replaceGameLayer(studyLayerII)
 --        local studyLayerIII = StudyLayerIII.create()
 --        s_SCENE:replaceGameLayer(studyLayerIII)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then
         local studyLayerII = StudyLayerII.create()
         s_SCENE:replaceGameLayer(studyLayerII)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter2" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter2" then
         local studyLayerIII = StudyLayerIII.create()
         s_SCENE:replaceGameLayer(studyLayerIII)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter3" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter3" then
         local studyLayerIV = StudyLayerIV.create()
         s_SCENE:replaceGameLayer(studyLayerIV)
     else
         s_logd("system error")
-        s_logd(s_CURRENT_USER.currentChapterKey)
+        s_logd(s_CURRENT_USER.currentSelectedChapterKey)
     end
 end
 
@@ -97,25 +97,25 @@ function CorePlayManager.enterTestLayer()
     s_SCENE.gameLayerState = s_test_game_state
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
 --    s_SCENE.gameLayerState = s_test_game_state
-    if s_CURRENT_USER.currentChapterKey == "chapter0" then
+    if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
         local testLayer = TestLayer.create()
         s_SCENE:replaceGameLayer(testLayer)
 --        local testLayerII = TestLayerII.create()
 --        s_SCENE:replaceGameLayer(testLayerII)
 --        local testLayerIII = TestLayerIII.create()
 --        s_SCENE:replaceGameLayer(testLayerIII)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then
         local testLayerII = TestLayerII.create()
         s_SCENE:replaceGameLayer(testLayerII)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter2" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter2" then
         local testLayerIII = TestLayerIII.create()
         s_SCENE:replaceGameLayer(testLayerIII)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter3" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter3" then
         local testLayerIV = TestLayerIV.create()
         s_SCENE:replaceGameLayer(testLayerIV)
     else
         s_logd("system error")
-        s_logd(s_CURRENT_USER.currentChapterKey)
+        s_logd(s_CURRENT_USER.currentSelectedChapterKey)
     end
 end
 
@@ -171,7 +171,7 @@ end
 
 function CorePlayManager.enterReviewBossLayer_special()
 --    s_SCENE.gameLayerState = s_boss_game_state
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,"level0")
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,"level0")
     CorePlayManager.rbWordList = split(levelConfig.word_content, "|")
     local reviewBossLayer = ReviewBossLayer.create()
     s_SCENE:replaceGameLayer(reviewBossLayer)
@@ -185,18 +185,18 @@ function CorePlayManager.enterReviewBossLayer()
         return
     end
 
-    if s_CURRENT_USER.currentChapterKey == "chapter0" then
+    if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
         local reviewBossLayer = ReviewBossLayer.create()
         s_SCENE:replaceGameLayer(reviewBossLayer)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then
         local reviewBossLayerII = ReviewBossLayerII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerII)
-    elseif s_CURRENT_USER.currentChapterKey == "chapter2" then
+    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter2" then
         local reviewBossLayerIII = ReviewBossLayerIII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerIII)
     else
         s_logd("system error")
-        s_logd(s_CURRENT_USER.currentChapterKey)
+        s_logd(s_CURRENT_USER.currentSelectedChapterKey)
     end
 end
 
