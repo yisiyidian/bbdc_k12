@@ -149,8 +149,8 @@ function MasteredWordList:ctor()
                 local wordInfo = s_WordPool[control[2]]
                 
                 local arrow = sender:getChildByName('arrow'..control[2])
-                print('arrowName:'..'arrow'..control[2])
-                print('name:'..arrow:getName())
+                -- print('arrowName:'..'arrow'..control[2])
+                -- print('name:'..arrow:getName())
                 
                 if control[3] == '0' then  -- insert a item of word info
                     local wordTitle = cc.Label:createWithSystemFont(wordInfo['wordMeaning']..'\n'..wordInfo['sentenceEn']..'\n'..wordInfo['sentenceCn'], '' ,28)
@@ -162,7 +162,7 @@ function MasteredWordList:ctor()
                     richText:ignoreAnchorPointForPosition(false)
                     richText:setAnchorPoint(0.5,0.5)
                     
-                    richText:setContentSize(cc.size(600, -600))  
+                    richText:setContentSize(cc.size(width, -600))  
                     
 
                     local label_word = CCLabelTTF:create (wordInfo['wordMeaning']..wordInfo['sentenceEn']..wordInfo['sentenceCn'],
@@ -172,7 +172,7 @@ function MasteredWordList:ctor()
                     
                     local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,label_word)                           
                     richText:pushBackElement(richElement1)                   
-                    richText:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.5)
+                    richText:setPosition(width * 0.53,back:getContentSize().height*0.5)
                     richText:setLocalZOrder(10)
                     
                     local back = cc.LayerColor:create(cc.c4b(52,177,241,255),s_DESIGN_WIDTH,200)
@@ -241,15 +241,18 @@ function MasteredWordList:ctor()
                     word_meaning:setPosition(0.12 * custom_button:getContentSize().width,0.3 * custom_button:getContentSize().height)
                     custom_button:addChild(word_meaning, 0,'clickToCheck')
 
-                    local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
-                    arrow:setScale9Enabled(true)
-                    arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
+--                    local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
+                    local arrow = cc.Sprite:create('image/friend/fri_jiantouxia.png')
+--                    arrow:setScale9Enabled(true)
+                    arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height) 
+                    arrow:setName('arrow'..word) 
+                    
                     local more_label = cc.Label:createWithSystemFont('更多','',24)
-                    more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
+                    more_label:setPosition(0.78 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
                     more_label:setColor(cc.c3b(0,0,0))
-                    arrow:addChild(more_label)
+                    custom_button:addChild(more_label)
                     --arrow:setName(wordKey..'|0')
-                    arrow:setName('arrow'..word)
+
 
                     --print('arrow:'..arrow:getName())
                     --arrow:addTouchEventListener(touchEvent)

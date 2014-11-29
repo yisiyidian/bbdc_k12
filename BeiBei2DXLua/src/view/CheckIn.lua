@@ -28,7 +28,7 @@ function CheckInNode:ctor()
     self.globalLock = false
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25)
+       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.1)
     end
 
 --    -- sound
@@ -494,7 +494,7 @@ function CheckInNode:onClose()
     
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-      cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
+      cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2)
     end
 end
 
@@ -511,7 +511,7 @@ function CheckInNode:onSucceedClose()
     
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
+       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2)
     end
 
     -- after success write down time right now

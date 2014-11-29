@@ -55,6 +55,12 @@ function CorePlayManager.initStudyTestState()
 end
 
 function CorePlayManager.enterStudyLayer()
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study then
+        CorePlayManager.newPlayerState = true
+    else
+        CorePlayManager.newPlayerState = false
+    end
+    
     if CorePlayManager.replayWrongWordState then
         CorePlayManager.currentWord = s_WordPool[CorePlayManager.wrongWordList[CorePlayManager.currentWordIndex]]
     else
@@ -62,10 +68,10 @@ function CorePlayManager.enterStudyLayer()
     end
     
     if s_CURRENT_USER.currentChapterKey == "chapter0" then
---        local studyLayer = StudyLayer.create()
---        s_SCENE:replaceGameLayer(studyLayer)
-        local studyLayerII = StudyLayerII.create()
-        s_SCENE:replaceGameLayer(studyLayerII)
+        local studyLayer = StudyLayer.create()
+        s_SCENE:replaceGameLayer(studyLayer)
+--        local studyLayerII = StudyLayerII.create()
+--        s_SCENE:replaceGameLayer(studyLayerII)
 --        local studyLayerIII = StudyLayerIII.create()
 --        s_SCENE:replaceGameLayer(studyLayerIII)
     elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
@@ -85,8 +91,6 @@ end
 
 function CorePlayManager.leaveStudyLayer()
     s_logd("leave")
-    
-    
 end
 
 function CorePlayManager.enterTestLayer()
@@ -94,10 +98,10 @@ function CorePlayManager.enterTestLayer()
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
 --    s_SCENE.gameLayerState = s_test_game_state
     if s_CURRENT_USER.currentChapterKey == "chapter0" then
---        local testLayer = TestLayer.create()
---        s_SCENE:replaceGameLayer(testLayer)
-        local testLayerII = TestLayerII.create()
-        s_SCENE:replaceGameLayer(testLayerII)
+        local testLayer = TestLayer.create()
+        s_SCENE:replaceGameLayer(testLayer)
+--        local testLayerII = TestLayerII.create()
+--        s_SCENE:replaceGameLayer(testLayerII)
 --        local testLayerIII = TestLayerIII.create()
 --        s_SCENE:replaceGameLayer(testLayerIII)
     elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
