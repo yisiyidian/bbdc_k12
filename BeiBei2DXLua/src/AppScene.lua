@@ -26,15 +26,14 @@ s_review_boss_game_state = 'reviewBossGameState'
 s_summary_boss_game_state = 'summaryBossGameState'
 
 -- define tutorial state
-s_tutorial_start = 0
-s_tutorial_book_select = 1
-s_tutorial_home = 2
-s_tutorial_level_select = 3
-s_tutorial_study = 4
-s_tutuorial_test = 5
-s_tutorial_review_boss = 6
-s_tutorial_summary_boss = 7
-s_tutorial_complete = 8
+s_tutorial_book_select = 0
+s_tutorial_home = 1
+s_tutorial_level_select = 2
+s_tutorial_study = 3
+s_tutuorial_test = 4
+s_tutorial_review_boss = 5
+s_tutorial_summary_boss = 6
+s_tutorial_complete = 7
 
 
 local AppScene = class("AppScene", function()
