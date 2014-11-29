@@ -222,7 +222,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
                     elseif y < x and y < -x then
                         current_dir = dir_down
                     elseif y > x and y < -x then
-                        current_dir = dir_leftw
+                        current_dir = dir_left
                     else
                         current_dir = dir_right
                     end
