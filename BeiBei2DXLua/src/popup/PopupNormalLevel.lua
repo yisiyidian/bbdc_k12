@@ -111,6 +111,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     s_logd('on study button clicked')
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+--    s_CorePlayManager.newPlayerState = true 
     s_CorePlayManager.initStudyTestState()
     s_CorePlayManager.enterStudyLayer()
     

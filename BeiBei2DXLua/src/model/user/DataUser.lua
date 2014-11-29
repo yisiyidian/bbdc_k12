@@ -106,6 +106,7 @@ end
 
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
+    AnalyticsTutorial(step)
     self:updateDataToServer()
 end
 
@@ -210,10 +211,8 @@ function DataUser:getFriendsInfo()
 end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
-    print("getBookChapterLevelData")
-    print(self.levels)
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
+        --s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
 
             return v
