@@ -108,7 +108,7 @@ function StudyLayer.create()
     local newPlayerGuideInit = function()
         if s_CorePlayManager.newPlayerState then
             newplayerHintBack = cc.Sprite:create("image/studyscene/global_jianjieyindaobeijing_chuxian.png")
-            newplayerHintBack:setPosition(-s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+            newplayerHintBack:setPosition(-bigWidth/2, s_DESIGN_HEIGHT/2)
             layer:addChild(newplayerHintBack)
 
             newplayerHintLabel = cc.Label:createWithSystemFont("点击云层，查看英文","",36)
@@ -279,7 +279,7 @@ function StudyLayer.create()
                 
                 if s_CorePlayManager.newPlayerState then
                     if not guideOver then
-                        local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, 300))
+                        local action1 = cc.MoveTo:create(0.5, cc.p(-bigWidth/2, 300))
                         newplayerHintBack:runAction(action1)
                     
                         local action2 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 10))
@@ -359,8 +359,8 @@ function StudyLayer.create()
             end
             
             if s_CorePlayManager.newPlayerState then
-                local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
-                local action2 = cc.Place:create(cc.p(-s_DESIGN_WIDTH/2, 300))
+                local action1 = cc.MoveTo:create(0.5, cc.p(-bigWidth/2, s_DESIGN_HEIGHT/2))
+                local action2 = cc.Place:create(cc.p(-bigWidth/2, 300))
                 local action3 = cc.DelayTime:create(0.5)
                 local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 300))
                 newplayerHintBack:runAction(cc.Sequence:create(action1, action2, action3, action4))
