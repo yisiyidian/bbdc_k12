@@ -62,8 +62,12 @@ function CorePlayManager.enterStudyLayer()
     end
     
     if s_CURRENT_USER.currentChapterKey == "chapter0" then
-        local studyLayer = StudyLayer.create()
-        s_SCENE:replaceGameLayer(studyLayer)
+--        local studyLayer = StudyLayer.create()
+--        s_SCENE:replaceGameLayer(studyLayer)
+        local studyLayerII = StudyLayerII.create()
+        s_SCENE:replaceGameLayer(studyLayerII)
+--        local studyLayerIII = StudyLayerIII.create()
+--        s_SCENE:replaceGameLayer(studyLayerIII)
     elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
         local studyLayerII = StudyLayerII.create()
         s_SCENE:replaceGameLayer(studyLayerII)
@@ -90,8 +94,12 @@ function CorePlayManager.enterTestLayer()
     CorePlayManager.currentWord = s_WordPool[CorePlayManager.wordList[CorePlayManager.currentWordIndex]]
 --    s_SCENE.gameLayerState = s_test_game_state
     if s_CURRENT_USER.currentChapterKey == "chapter0" then
-        local testLayer = TestLayer.create()
-        s_SCENE:replaceGameLayer(testLayer)
+--        local testLayer = TestLayer.create()
+--        s_SCENE:replaceGameLayer(testLayer)
+        local testLayerII = TestLayerII.create()
+        s_SCENE:replaceGameLayer(testLayerII)
+--        local testLayerIII = TestLayerIII.create()
+--        s_SCENE:replaceGameLayer(testLayerIII)
     elseif s_CURRENT_USER.currentChapterKey == "chapter1" then
         local testLayerII = TestLayerII.create()
         s_SCENE:replaceGameLayer(testLayerII)
@@ -196,7 +204,7 @@ function CorePlayManager.leaveReviewBossLayer()
 end
 
 function CorePlayManager.enterIntroLayer()
-    local IntroLayer = IntroLayer.create()
+    local IntroLayer = IntroLayer.create(false)
     s_SCENE:replaceGameLayer(IntroLayer)
 end
 

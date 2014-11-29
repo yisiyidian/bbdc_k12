@@ -14,39 +14,54 @@ end
 
 function FriendList:ctor()
     --local friendCount = #self.friend
-    s_CURRENT_USER:getFriendsInfo() 
-    local function listViewEvent(sender, eventType)
-        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
-            print("select child index = ",sender:getCurSelectedIndex())
-        end
-    end
-    
-    self.array = {}
-    for i,f in ipairs(s_CURRENT_USER.friends) do
-        self.array[#self.array + 1] = f
-    end
-    s_logd('friend = %d',#s_CURRENT_USER.friends)
-    self.array[#self.array + 1] = s_CURRENT_USER
-    self.selectIndex = -2
-    for i = 1,#self.array do
-        for j = i, #self.array do
-            if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
-                local temp = self.array[i]
-                self.array[i] = self.array[j]
-                self.array[j] = temp
-            end
-        end
-    end
-    
-    --self.array = {1,2,3,4,5}
-    
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
+    showProgressHUD('正在加载好友列表')
+    s_UserBaseServer.getFolloweesOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerFolloweesData(result.results)
+            s_UserBaseServer.getFollowersOfCurrentUser( 
+                function (api, result)
+                    hideProgressHUD()
+                    s_CURRENT_USER:parseServerFollowersData(result.results)
+                    s_CURRENT_USER:getFriendsInfo() 
+                    local function listViewEvent(sender, eventType)
+                        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
+                            print("select child index = ",sender:getCurSelectedIndex())
+                        end
+                    end
+
+                    self.array = {}
+                    for i,f in ipairs(s_CURRENT_USER.friends) do
+                        self.array[#self.array + 1] = f
+                    end
+                    self.array[#self.array + 1] = s_CURRENT_USER
+                    self.selectIndex = -2
+                    for i = 1,#self.array do
+                        for j = i, #self.array do
+                            if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
+                                local temp = self.array[i]
+                                self.array[i] = self.array[j]
+                                self.array[j] = temp
+                            end
+                        end
+                    end
+                    self:addList()
+                end,
+                function (api, code, message, description)
+                    hideProgressHUD()
+                end
+            )
+        end,
+        function (api, code, message, description)
+            hideProgressHUD()
+        end
+    )
     
-    self:addList()
+    
     
 end
 
@@ -79,7 +94,6 @@ function FriendList:addList()
     --local array = {}
     --add default item
     local count = #self.array
-    s_logd("count = %d",count)
     for i = 1,count do
         listView:pushBackDefaultItem()
     end
@@ -113,8 +127,8 @@ function FriendList:addList()
         
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                s_logd(sender.index)
                 if self.selectIndex ~= sender.index and sender.index ~= 0 then
+                    
                     local arrow = sender:getChildByName('arrow')
                     arrow:setTexture('image/friend/fri_jiantoushang.png')
                     if self.selectIndex > -1 then
@@ -149,55 +163,122 @@ function FriendList:addList()
                     end
                     self.selectIndex = sender.index
                 elseif sender.index == 0 then --delete friend
-                    s_UserBaseServer.unfollow(self.array[self.selectIndex],
-                        function(api,result)
-                            s_UserBaseServer.removeFan(self.array[self.selectIndex],
-                                function(api,result)
-                                    for i = 1,#s_CURRENT_USER.friends do
-                                        if s_CURRENT_USER.friends[i].username == self.array[self.selectIndex].username then
-                                            table.remove(s_CURRENT_USER.friends,i)
-                                            break
+                    local function deleteFriend()
+                        showProgressHUD('正在删除好友')
+                        s_UserBaseServer.unfollow(self.array[self.selectIndex],
+                            function(api,result)
+                                s_UserBaseServer.removeFan(self.array[self.selectIndex],
+                                    function(api,result)
+                                        hideProgressHUD()
+                                        local SmallAlter = require('view.friend.HintAlter')
+                                        local smallAlter = SmallAlter.create('已删除该好友')
+                                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                        s_SCENE.popupLayer:addChild(smallAlter)
+                                        for i = 1,#s_CURRENT_USER.friends do
+                                            if s_CURRENT_USER.friends[i].username == self.array[self.selectIndex].username then
+                                                table.remove(s_CURRENT_USER.friends,i)
+                                                break
+                                            end
                                         end
-                                    end
-                                    
-                                    s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
-                                    s_CURRENT_USER:parseServerRemoveFanData(self.array[self.selectIndex])
-                                    s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
-                                    s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
-                                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-                                        function(api,result)
-                                        end,
-                                        function(api, code, message, description)
-                                        end) 
-                                    listView:removeItem(listView:getCurSelectedIndex())
-                                    listView:removeItem(self.selectIndex - 1)
 
-                                    for i = 1,table.getn(listView:getItems()) do
-                                        local item = listView:getItem(i - 1)
-                                        local button = item:getChildByName("Title Button")
-                                        button.index = i   
-                                        local str = 'n'
+                                        s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
+                                        s_CURRENT_USER:parseServerRemoveFanData(self.array[self.selectIndex])
+                                        s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
+                                        s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
+                                        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+                                            function(api,result)
+                                            end,
+                                            function(api, code, message, description)
+                                            end) 
+                                        listView:removeItem(listView:getCurSelectedIndex())
+                                        listView:removeItem(self.selectIndex - 1)
 
-                                        if i < 4 then
-                                            str = string.format('%d',i)
+                                        for i = 1,table.getn(listView:getItems()) do
+                                            local item = listView:getItem(i - 1)
+                                            local button = item:getChildByName("Title Button")
+                                            button.index = i   
+                                            local str = 'n'
+
+                                            if i < 4 then
+                                                str = string.format('%d',i)
+                                            end
+                                            local rankIcon = button:getChildByName('rankIcon')
+                                            rankIcon:setTexture(string.format('image/friend/fri_rank_%s.png',str))
+
+                                            local rankLabel = rankIcon:getChildByName('rankLabel')
+                                            rankLabel:setString(string.format('%d',i))
+                                            --                        
                                         end
-                                        local rankIcon = button:getChildByName('rankIcon')
-                                        rankIcon:setTexture(string.format('image/friend/fri_rank_%s.png',str))
 
-                                        local rankLabel = rankIcon:getChildByName('rankLabel')
-                                        rankLabel:setString(string.format('%d',i))
-                                        --                        
-                                    end
+                                        self.selectIndex = -2
+                                    end,
+                                    function(api, code, message, description)
+                                        hideProgressHUD()
+                                    end)
+                            end,
+                            function(api, code, message, description)
+                                hideProgressHUD()
+                            end)
 
-                                    self.selectIndex = -2
-                                end,
-                                function(api, code, message, description)
-
-                                end)
-                        end,
-                        function(api, code, message, description)
-                            
-                        end)
+                    end
+                    
+                    local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
+                    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
+                    s_SCENE.popupLayer:addChild(back)
+                    s_SCENE.popupLayer.listener:setSwallowTouches(true)
+                    back:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))))
+                
+                    local label_info = cc.Label:createWithSystemFont('确认删除好友？',"",28)
+                    label_info:setColor(cc.c4b(0,0,0,255))
+                    label_info:setDimensions(back:getContentSize().width*4/5,0)
+                    label_info:setPosition(back:getContentSize().width/2, back:getContentSize().height/2+50)
+                    back:addChild(label_info)
+                    
+                    local button_left_clicked = function(sender, eventType)
+                        if eventType == ccui.TouchEventType.began then
+                            -- button sound
+                            playSound(s_sound_buttonEffect)
+                --            main.close()
+                        elseif eventType == ccui.TouchEventType.ended then
+                            s_SCENE.popupLayer.listener:setSwallowTouches(false)
+--                            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
+--                            local remove = cc.CallFunc:create(function() 
+--                                back:removeFromParent() 
+--                            end,{})
+--                            back:runAction(cc.Sequence:create(move,remove))
+                            deleteFriend()
+                            back:removeFromParent()
+                        end
+                    end
+                
+                    local button_left = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
+                    button_left:setPosition(back:getContentSize().width/2-120, back:getContentSize().height/2-70)
+                    button_left:setTitleText("确定")
+                    button_left:setTitleFontSize(30)
+                    button_left:addTouchEventListener(button_left_clicked)
+                    back:addChild(button_left)
+                    
+                    local button_right_clicked = function(sender, eventType)
+                        if eventType == ccui.TouchEventType.began then
+                            -- button sound
+                            playSound(s_sound_buttonEffect)
+                --            main.close()
+                        elseif eventType == ccui.TouchEventType.ended then
+                            s_SCENE.popupLayer.listener:setSwallowTouches(false)
+                            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
+                            local remove = cc.CallFunc:create(function() 
+                                back:removeFromParent() 
+                            end,{})
+                            back:runAction(cc.Sequence:create(move,remove))
+                        end
+                    end
+                
+                    local button_right = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
+                    button_right:setPosition(back:getContentSize().width/2+120, back:getContentSize().height/2-70)
+                    button_right:setTitleText("取消")
+                    button_right:setTitleFontSize(30)
+                    button_right:addTouchEventListener(button_right_clicked)
+                    back:addChild(button_right)
                     
                 else
                     local arrow = sender:getChildByName('arrow')

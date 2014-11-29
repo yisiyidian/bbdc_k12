@@ -7,7 +7,7 @@ end)
 function WordDetailInfo.create(word)
     -- system variate
 
-    local height = 750
+    local height = 700
 
     local main = WordDetailInfo.new()
     main:setContentSize(s_DESIGN_WIDTH, height)

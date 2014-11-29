@@ -47,6 +47,8 @@ function TestLayerII.create()
     local sentenceCn = word.sentenceCn
 
     local bigWidth
+    
+    local screenWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
     local mat
     local playOver = false
@@ -230,11 +232,11 @@ function TestLayerII.create()
                 if button_donotknow == nil then
                     button_donotknow = ccui.Button:create("image/testscene/testscene_donotkonw.png","","")
                     button_donotknow:setAnchorPoint(1,0.5)
-                    button_donotknow:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH+button_donotknow:getContentSize().width,910)
+                    button_donotknow:setPosition(screenWidth+button_donotknow:getContentSize().width,910)
                     button_donotknow:addTouchEventListener(button_donotknow_clicked)
                     back:addChild(button_donotknow)
                     
-                    local action = cc.MoveTo:create(0.5,cc.p((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH,910))
+                    local action = cc.MoveTo:create(0.5,cc.p(screenWidth,910))
                     button_donotknow:runAction(action)
                 end
             end

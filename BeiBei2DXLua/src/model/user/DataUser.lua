@@ -158,51 +158,35 @@ function DataUser:parseServerRemoveFanData(obj)
     end
 end
 function DataUser:getFriendsInfo()
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
-        function (api, result)
-            self:parseServerFolloweesData(result.results)
-        end,
-        function (api, code, message, description)
-        end
-    )
-
-    s_UserBaseServer.getFollowersOfCurrentUser( 
-        function (api, result)
-            self:parseServerFollowersData(result.results)
-        end,
-        function (api, code, message, description)
-        end
-    )
+    
     self.friends = {}
     self.fans = {}
     local friendsObjId = {}
     local friends = {}
-    --    print_lua_table (s_CURRENT_USER.followers)
-    --    print_lua_table (s_CURRENT_USER.followees)
-    for key, follower in pairs(self.followers) do
-        friendsObjId[follower.objectId] = 1
-        friends[follower.objectId] = follower
+--    print_lua_table (s_CURRENT_USER.followers)
+--    print_lua_table (s_CURRENT_USER.followees)
+    for key, followee in pairs(self.followees) do
+        friendsObjId[followee.objectId] = 1
+        friends[followee.objectId] = followee
     end
 
-    for key, followee in pairs(self.followees) do
-        print(friendsObjId[followee.objectId])
-        if friendsObjId[followee.objectId] == 1 then
-            friendsObjId[followee.objectId] = 2
-            friends[followee.objectId] = followee
-        end
-    end
-    for key, var in pairs(friends) do
-        if friendsObjId[key] == 2 then
-            self.friends[#self.friends + 1] = var
-        elseif friendsObjId[key] == 1 then
-            self.fans[#self.fans + 1] = var
+    for key, follower in pairs(self.followers) do
+        print(friendsObjId[follower.objectId])
+        if friendsObjId[follower.objectId] == 1 then
+            friendsObjId[follower.objectId] = 2
+            friends[follower.objectId] = follower
+            self.friends[#self.friends + 1] = follower
+        else
+            table.insert(self.fans,1,follower)
             if #self.fans > s_friend_request_max_count then
-                table.remove(self.fans,1)
+                table.remove(self.fans,#self.fans)
             end
         end
     end
+
     self.friendsCount = #self.friends
     self.fansCount = #self.fans
+    print_lua_table (s_CURRENT_USER.fans)
     s_UserBaseServer.saveDataObjectOfCurrentUser(self,
         function(api,result)
         end,

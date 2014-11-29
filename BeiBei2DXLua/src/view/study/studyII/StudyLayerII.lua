@@ -161,7 +161,7 @@ function StudyLayerII.create()
                 local action2 = cc.MoveTo:create(0.5,cc.p(bigWidth/2*3, 120))
                 mat:runAction(action2)
 
-                local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width-60, 930))
+                local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width/2+140, 920))
                 button_detail:runAction(action3)
 
                 local action4 = cc.DelayTime:create(0.5)
@@ -202,6 +202,21 @@ function StudyLayerII.create()
         end
         
         local endEffect = function()
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2 - 800))
+            local action2 = cc.ScaleTo:create(0.5, 2.7)
+            local action3 = cc.Spawn:create(action1, action2)
+            back:runAction(action3)
+            
+            local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, -290))
+            back_bigchair:runAction(action4)
+            
+            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, -s_DESIGN_HEIGHT))
+            mat:runAction(action5)
+            
+            local action6 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
+            button_changeview:runAction(action6)
+            
+            label_wordmeaningSmall:setVisible(false)
         end
 
         local action1 = cc.DelayTime:create(1)
@@ -209,9 +224,7 @@ function StudyLayerII.create()
         local action3 = cc.DelayTime:create(0.5)
         local action4 = cc.CallFunc:create(changeLayer)
         local action5 = cc.Sequence:create(action1,action2,action3,action4)
-        layer:runAction(action5)
-
-        
+        layer:runAction(action5) 
     end
 
     local fail = function()
@@ -236,24 +249,18 @@ function StudyLayerII.create()
                 soundMark:setPosition(bigWidth/2, 500)
                 back_bigchair:addChild(soundMark)
                 
-                button_detail = ccui.Button:create()
-                button_detail:setTouchEnabled(true)
-                button_detail:loadTextures("image/button/button_arrow.png", "", "")
-                button_detail:setPosition(cc.p(layer:getContentSize().width-75, 920))
+                button_detail = ccui.Button:create("image/button/button_arrow.png", "image/button/button_arrow.png", "")
+                button_detail:setPosition(cc.p(layer:getContentSize().width/2+140, 920))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 layer:addChild(button_detail)
                 
-                button_reddot = ccui.Button:create()
-                button_reddot:setTouchEnabled(true)
-                button_reddot:loadTextures("image/button/dot_red.png", "", "")
+                button_reddot = ccui.Button:create("image/button/dot_red.png", "image/button/dot_red.png", "")
                 button_reddot:setPosition(button_detail:getContentSize().width, button_detail:getContentSize().height)
                 button_reddot:setTitleText("1")
                 button_reddot:setTitleFontSize(24)
                 button_detail:addChild(button_reddot)
 
-                button_changeview = ccui.Button:create()
-                button_changeview:setTouchEnabled(true)
-                button_changeview:loadTextures("image/button/button_huadanci__dianji.png", "", "")
+                button_changeview = ccui.Button:create("image/button/button_huadanci__dianji.png", "image/button/button_huadanci__dianji.png", "")
                 button_changeview:setTitleText("去划单词")
                 button_changeview:setTitleFontSize(30)
                 button_changeview:setPosition(bigWidth/2, 50)
