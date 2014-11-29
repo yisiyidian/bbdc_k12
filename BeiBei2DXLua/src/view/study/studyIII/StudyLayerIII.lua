@@ -206,7 +206,7 @@ function StudyLayerIII.create()
     else
         mat = FlipMat.create(wordName,4,4,false,false)
     end
-    mat:setPosition(s_DESIGN_WIDTH/2*3, 120)
+    mat:setPosition((s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH)/2*3, 120)
     layer:addChild(mat)
 
     mat.success = success
@@ -263,7 +263,7 @@ function StudyLayerIII.create()
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 550))
                 soundMark:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5,cc.p(bigWidth/2*3, 120))
+                local action2 = cc.MoveTo:create(0.5,cc.p((s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH)/2*3, 120))
                 mat:runAction(action2)
 
                 local action3 = cc.MoveTo:create(0.5,cc.p(backImage:getContentSize().width/2+200, 900))
@@ -291,17 +291,13 @@ function StudyLayerIII.create()
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backImage:addChild(button_detail)
                 
-                button_reddot = ccui.Button:create()
-                button_reddot:setTouchEnabled(true)
-                button_reddot:loadTextures("image/button/dot_red.png", "", "")
+                button_reddot = ccui.Button:create("image/button/dot_red.png", "image/button/dot_red.png", "")
                 button_reddot:setPosition(button_detail:getContentSize().width, button_detail:getContentSize().height)
                 button_reddot:setTitleText("1")
                 button_reddot:setTitleFontSize(24)
                 button_detail:addChild(button_reddot)
 
-                button_changeview = ccui.Button:create()
-                button_changeview:setTouchEnabled(true)
-                button_changeview:loadTextures("image/button/button_zhuwanfa_disnaguan_another.png", "", "")
+                button_changeview = ccui.Button:create("image/button/button_zhuwanfa_disnaguan_another.png", "image/button/button_zhuwanfa_disnaguan_another.png", "")
                 button_changeview:setTitleText("去划单词")
                 button_changeview:setTitleFontSize(30)
                 button_changeview:setPosition(bigWidth/2, 50)
