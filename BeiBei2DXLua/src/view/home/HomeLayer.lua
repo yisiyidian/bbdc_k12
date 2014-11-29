@@ -28,7 +28,7 @@ function HomeLayer.create()
     local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
     
     
-    
+    s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
     
     local offset = 500

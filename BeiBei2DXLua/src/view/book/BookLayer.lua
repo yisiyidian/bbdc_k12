@@ -62,7 +62,6 @@ function BookLayer.create()
        backButton:setVisible(true)
     end
     
-    
     local hint = cc.Label:createWithSystemFont("学英语就像翻越大山，开始挑战吧","",28)
     hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT-100)
     hint:setColor(cc.c4b(100,100,100,255))
@@ -113,6 +112,7 @@ function BookLayer.create()
                             s_TIPS_LAYER:showSmall(message)
                             hideProgressHUD()
                         end)
+                    s_SCENE.touchEventBlockLayer.lockTouch()
                 end      
                 s_TIPS_LAYER:showSmall("选择"..full_name_array[i].."课程", affirm)
                 -- popup sound "Aluminum Can Open "

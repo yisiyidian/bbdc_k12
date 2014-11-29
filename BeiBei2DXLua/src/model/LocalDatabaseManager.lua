@@ -1,5 +1,5 @@
 
-local RBWORDNUM = 3
+local RBWORDNUM = 10
 
 require("lsqlite3")
 
