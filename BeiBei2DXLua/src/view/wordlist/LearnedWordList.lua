@@ -99,6 +99,7 @@ function LearnedWordList:ctor()
     local default_item = ccui.Layout:create()
     default_item:setTouchEnabled(true)
     local default_button = ccui.Button:create('image/friend/friendRankButton.png', 'image/friend/friendRankButton.png')
+    ----todo
     default_item:setContentSize(default_button:getContentSize())
     default_button:setPosition(cc.p(default_item:getContentSize().width / 2.0, default_item:getContentSize().height / 2.0))
     default_item:addChild(default_button)
