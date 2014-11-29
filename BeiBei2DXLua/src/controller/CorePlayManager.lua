@@ -91,8 +91,6 @@ end
 
 function CorePlayManager.leaveStudyLayer()
     s_logd("leave")
-    
-    
 end
 
 function CorePlayManager.enterTestLayer()
