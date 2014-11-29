@@ -151,43 +151,50 @@ function FriendSearch:ctor()
                                             s_SCENE.popupLayer:addChild(smallAlter)
                                             return
                                         end
-                                        s_UserBaseServer.follow(user,
+                                        s_UserBaseServer.unfollow(user,
                                             function(api,result)
-                                                local fan = nil
-                                                local key = 0
-                                                for i,f in ipairs(s_CURRENT_USER.fans) do
-                                                    if f.username == user.username then
-                                                        fan = f
-                                                        key = i
-                                                        break
-                                                    end
-                                                end
-                                                
-                                                if fan then
-                                                s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = user
-                                                s_CURRENT_USER:parseServerFollowData(user)
-                                                table.remove(s_CURRENT_USER.fans,key)
-                                                s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+                                                s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
+                                                s_UserBaseServer.follow(user,
                                                     function(api,result)
+                                                        local fan = nil
+                                                        local key = 0
+                                                        for i,f in ipairs(s_CURRENT_USER.fans) do
+                                                            if f.username == user.username then
+                                                                fan = f
+                                                                key = i
+                                                                break
+                                                            end
+                                                        end
+
+                                                        if fan then
+                                                            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = user
+                                                            s_CURRENT_USER:parseServerFollowData(user)
+                                                            table.remove(s_CURRENT_USER.fans,key)
+                                                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+                                                                function(api,result)
+                                                                end,
+                                                                function(api, code, message, description)
+                                                                end)
+                                                        end
+                                                        arrow:setVisible(true)
+                                                        add:setVisible(false)
+
+                                                        local SmallAlter = require('view.friend.HintAlter')
+                                                        local smallAlter = SmallAlter.create('好友请求发送成功')
+                                                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                                        s_SCENE.popupLayer:addChild(smallAlter) 
                                                     end,
                                                     function(api, code, message, description)
-                                                    end)
-                                                end
-                                                arrow:setVisible(true)
-                                                add:setVisible(false)
-                                                
-                                                local SmallAlter = require('view.friend.HintAlter')
-                                                local smallAlter = SmallAlter.create('好友请求发送成功')
-                                                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                                                s_SCENE.popupLayer:addChild(smallAlter) 
+                                                        local SmallAlter = require('view.friend.HintAlter')
+                                                        local smallAlter = SmallAlter.create('好友请求发送失败')
+                                                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                                        s_SCENE.popupLayer:addChild(smallAlter) 
+                                                    end
+                                                )
                                             end,
                                             function(api, code, message, description)
-                                                local SmallAlter = require('view.friend.HintAlter')
-                                                local smallAlter = SmallAlter.create('好友请求发送失败')
-                                                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                                                s_SCENE.popupLayer:addChild(smallAlter) 
-                                            end
-                                        )
+                                            end)
+                                        
                                     end
                                 end
                                 add:addTouchEventListener(onAdd)

@@ -161,7 +161,7 @@ function StudyLayerII.create()
                 local action2 = cc.MoveTo:create(0.5,cc.p(bigWidth/2*3, 120))
                 mat:runAction(action2)
 
-                local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width-60, 930))
+                local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width/2+140, 920))
                 button_detail:runAction(action3)
 
                 local action4 = cc.DelayTime:create(0.5)
@@ -239,7 +239,7 @@ function StudyLayerII.create()
                 button_detail = ccui.Button:create()
                 button_detail:setTouchEnabled(true)
                 button_detail:loadTextures("image/button/button_arrow.png", "", "")
-                button_detail:setPosition(cc.p(layer:getContentSize().width-75, 920))
+                button_detail:setPosition(cc.p(layer:getContentSize().width/2+140, 920))
                 button_detail:addTouchEventListener(button_detail_clicked)
                 layer:addChild(button_detail)
                 

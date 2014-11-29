@@ -21,6 +21,7 @@ function PopupLayer:ctor()
     local onTouchEnded = function(touch, event)
     end
     
+    self.layerpaused = false
     self.listener = cc.EventListenerTouchOneByOne:create()
     
     self.listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )

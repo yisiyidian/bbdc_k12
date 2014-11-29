@@ -133,18 +133,33 @@ function HomeLayer.create()
     button_friend:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
     button_friend:addTouchEventListener(button_right_clicked)
     backColor:addChild(button_friend)   
-    
-    s_CURRENT_USER:getFriendsInfo()
-    local redHint = nil
-    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
-        redHint = cc.Sprite:create('image/friend/fri_infor.png')
-        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
-        button_friend:addChild(redHint)
-        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
-        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-        button_friend:addChild(num)
-    end
-    
+    s_UserBaseServer.getFolloweesOfCurrentUser( 
+        function (api, result)
+            s_CURRENT_USER:parseServerFolloweesData(result.results)
+            s_UserBaseServer.getFollowersOfCurrentUser( 
+                function (api, result)
+                    s_CURRENT_USER:parseServerFollowersData(result.results)
+                    print("seenFansCount = %d, fansCount = %d",#s_CURRENT_USER.seenFansCount,#s_CURRENT_USER.fansCount)
+                    s_CURRENT_USER:getFriendsInfo()
+                    print("seenFansCount = %d, fansCount = %d",#s_CURRENT_USER.seenFansCount,#s_CURRENT_USER.fansCount)
+                    local redHint = nil
+                    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+                        redHint = cc.Sprite:create('image/friend/fri_infor.png')
+                        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+                        button_friend:addChild(redHint)
+                        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+                        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+                        redHint:addChild(num)
+                    end
+                end,
+                function (api, code, message, description)
+                end
+            )
+        end,
+        function (api, code, message, description)
+        end
+    )
+
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
     book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     backColor:addChild(book_back,1)

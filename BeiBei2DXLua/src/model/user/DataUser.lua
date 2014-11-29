@@ -104,6 +104,11 @@ function DataUser:parseServerDataLogIn(results)
    end 
 end
 
+function DataUser:setTutorialStep(step)
+    self.tutorialStep = step
+    self:updateDataToServer()
+end
+
 -- who I follow
 function DataUser:parseServerFolloweesData(results)
     self.followees = {}
@@ -152,21 +157,7 @@ function DataUser:parseServerRemoveFanData(obj)
     end
 end
 function DataUser:getFriendsInfo()
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
-        function (api, result)
-            self:parseServerFolloweesData(result.results)
-        end,
-        function (api, code, message, description)
-        end
-    )
-
-    s_UserBaseServer.getFollowersOfCurrentUser( 
-        function (api, result)
-            self:parseServerFollowersData(result.results)
-        end,
-        function (api, code, message, description)
-        end
-    )
+    
     self.friends = {}
     self.fans = {}
     local friendsObjId = {}
