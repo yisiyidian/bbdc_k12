@@ -231,7 +231,7 @@ function StudyLayerII.create()
         s_CorePlayManager.unfamiliarWord()
     end
     
-    mat = TapMat.create(wordName,4,4)
+    mat = TapMat.create(wordName,5,5)
     mat:setPosition(bigWidth/2*3, 100)
     layer:addChild(mat)
 

@@ -118,7 +118,6 @@ function TapMat.create(word, m ,n)
     light:setPosition(firstTapNode:getPosition())
     main:addChild(light)
     
-
     -- local function
     local checkTouchLocation = function(location)
         for i = 1, main_m do
@@ -165,7 +164,8 @@ function TapMat.create(word, m ,n)
 
     -- handing touch events
     onTouchBegan = function(touch, event)
-        if not cc.rectContainsPoint(main:getBoundingBox(), touch:getLocation()) then
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
             return false
         end
     
@@ -173,7 +173,7 @@ function TapMat.create(word, m ,n)
             return true
         end
         
-        local location = main:convertToNodeSpace(touch:getLocation())
+        
         
         light:setVisible(true)
         

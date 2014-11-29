@@ -243,7 +243,7 @@ function StudyLayer.create()
     if s_CorePlayManager.newPlayerState then
         mat = FlipMat.create(wordName,4,4,true,false)
     else
-        mat = FlipMat.create(wordName,4,4,false,false)
+        mat = FlipMat.create(wordName,5,5,false,false)
     end
     mat:setPosition(size_big.width/2*3, 120)
     layer:addChild(mat)
@@ -318,7 +318,7 @@ function StudyLayer.create()
     local onTouchBegan = function(touch, event)
         if viewIndex == 1 then     
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                   
+            
             local addWordDetailInfo = function()
                 soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
                 soundMark:setPosition(size_big.width/2, -200)
