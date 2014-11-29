@@ -11,16 +11,15 @@ end
 
 
 function PopupStarInfo:ctor()
-    --   print("213215111111!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
    if s_DATABASE_MGR.isMusicOn() then
-      cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25)
+      cc.SimpleAudioEngine:getInstance():setMusicVolume(0.1)
    end
 
-    local  starNumber = s_CURRENT_USER:getUserCurrentChapterObtainedStarCount()
+    local  starNumber = s_CURRENT_USER:getUserBookObtainedStarCount()
     local  totalNumber = 255
     
     self.ccbPopupStarInfo = {}
@@ -83,7 +82,7 @@ function PopupStarInfo:onContinueButtonClicked()
     playSound(s_sound_buttonEffect)
     --control volune
     if s_DATABASE_MGR.isMusicOn() then
-       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
+       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2)
     end
     s_SCENE:callFuncWithDelay(0.3,function()
     s_SCENE:removeAllPopups()

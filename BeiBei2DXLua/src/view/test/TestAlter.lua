@@ -12,10 +12,16 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local button_goon_clicked_mark = 0
 
 function TestAlter.createFromFirstAlter()
+    
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
-    main:ignoreAnchorPointForPosition(false)
+    main:ignoreAnchorPointForPosition(false) 
     
+    if s_SCENE.popupLayer~=nil then
+        s_SCENE.popupLayer:setPauseBtnEnabled(false)
+        s_SCENE.popupLayer.isOtherAlter = true
+    end
+
     s_CorePlayManager.recordWordProciency()
     
     showGirlAndStar()
@@ -40,6 +46,11 @@ function TestAlter.createFromSecondAlter()
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
+
+    if s_SCENE.popupLayer~=nil then
+        s_SCENE.popupLayer:setPauseBtnEnabled(false)
+        s_SCENE.popupLayer.isOtherAlter = true
+    end
 
     showDetailInfo()
     
@@ -145,7 +156,7 @@ showGirlAndStar = function()
     
     local button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and button_goon_clicked_mark == 0 then
-        
+        s_SCENE.popupLayer.isOtherAlter = false
             local removeFirstAlter = function()
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
@@ -176,8 +187,8 @@ showDetailInfo = function()
     local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
-
-
+    
+    s_SCENE.popupLayer.isOtherAlter = true
     
     local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
@@ -254,7 +265,7 @@ showDetailInfo = function()
     local button_replayall_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then            
             s_CorePlayManager.leaveTestLayer_replay()
-            
+            s_SCENE.popupLayer.isOtherAlter = false
             -- button sound
             playSound(s_sound_buttonEffect)
         end
@@ -262,6 +273,7 @@ showDetailInfo = function()
     
     local button_replaywrong_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()
             
@@ -272,6 +284,7 @@ showDetailInfo = function()
     
     local button_continue_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.leaveTestLayer()
             
             -- button sound

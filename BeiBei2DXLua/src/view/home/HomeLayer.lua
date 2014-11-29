@@ -26,9 +26,8 @@ function HomeLayer.create()
     local username = "游客"
     local logo_name = {"head","book","feedback","information","logout"}
     local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
-    
-    
-    
+
+    s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
     
     local offset = 500
@@ -89,11 +88,12 @@ function HomeLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
 
-            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level10')
-            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level10')
-            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level10')
-            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level10')
-            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level10')
+            -- level 10
+            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
+            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
+            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
+            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
+            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
             
             
             function judge_Whether_nil(mark)
@@ -225,6 +225,13 @@ function HomeLayer.create()
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_home then
+        local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+        finger:addAnimation(0, 'animation', true)
+        finger:setPosition(button_play:getContentSize().width/2+20,-30)
+        button_play:addChild(finger,10)
+        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
+    end
 
     local button_data
     local isDataShow = false

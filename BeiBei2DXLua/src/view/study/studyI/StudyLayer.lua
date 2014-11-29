@@ -104,11 +104,10 @@ function StudyLayer.create()
     beach:setPosition(s_DESIGN_WIDTH/2, 0)
     layer:addChild(beach)
     
-    
     local newPlayerGuideInit = function()
         if s_CorePlayManager.newPlayerState then
             newplayerHintBack = cc.Sprite:create("image/studyscene/global_jianjieyindaobeijing_chuxian.png")
-            newplayerHintBack:setPosition(-s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+            newplayerHintBack:setPosition(-bigWidth/2, s_DESIGN_HEIGHT/2)
             layer:addChild(newplayerHintBack)
 
             newplayerHintLabel = cc.Label:createWithSystemFont("点击云层，查看英文","",36)
@@ -279,7 +278,7 @@ function StudyLayer.create()
                 
                 if s_CorePlayManager.newPlayerState then
                     if not guideOver then
-                        local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, 300))
+                        local action1 = cc.MoveTo:create(0.5, cc.p(-bigWidth/2, 300))
                         newplayerHintBack:runAction(action1)
                     
                         local action2 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 10))
@@ -318,7 +317,7 @@ function StudyLayer.create()
     local onTouchBegan = function(touch, event)
         if viewIndex == 1 then     
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                   
+            
             local addWordDetailInfo = function()
                 soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
                 soundMark:setPosition(size_big.width/2, -200)
@@ -335,7 +334,7 @@ function StudyLayer.create()
                 button_reddot:setTitleFontSize(24)
                 button_detail:addChild(button_reddot)
                 
-                button_changeview = ccui.Button:create("image/button/button_huadanci__dianji.png", "image/button/button_huadanci__dianji.png", "")
+                button_changeview = ccui.Button:create("image/button/button_changeview11.png", "image/button/button_changeview12.png", "")
                 button_changeview:setTitleText("去划单词")
                 button_changeview:setTitleFontSize(30)
                 button_changeview:setPosition(size_big.width/2, -660)
@@ -359,8 +358,8 @@ function StudyLayer.create()
             end
             
             if s_CorePlayManager.newPlayerState then
-                local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
-                local action2 = cc.Place:create(cc.p(-s_DESIGN_WIDTH/2, 300))
+                local action1 = cc.MoveTo:create(0.5, cc.p(-bigWidth/2, s_DESIGN_HEIGHT/2))
+                local action2 = cc.Place:create(cc.p(-bigWidth/2, 300))
                 local action3 = cc.DelayTime:create(0.5)
                 local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 300))
                 newplayerHintBack:runAction(cc.Sequence:create(action1, action2, action3, action4))
@@ -391,6 +390,7 @@ function StudyLayer.create()
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
     layer:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)

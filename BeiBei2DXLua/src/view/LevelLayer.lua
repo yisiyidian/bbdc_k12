@@ -24,6 +24,7 @@ function LevelLayer.create()
 end
 
 function LevelLayer:levelStateManager()
+    print('s_SCENE.state0:'..s_SCENE.levelLayerState)
     -- set levelState if relogin after logout
     if s_SCENE.levelLayerState == s_normal_level_state then
         local currentLevelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
@@ -55,12 +56,13 @@ function LevelLayer:levelStateManager()
                 and s_SCENE.levelLayerState ~= s_review_boss_pass_state then
                 if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
                     currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
---                    print('plot stars')
+                    s_SCENE.levelLayerState = s_review_boss_appear_state
                 end
-                s_SCENE.levelLayerState = s_review_boss_appear_state
+                
             end
         end
     end
+
     
     -- CHECK tutorial review boss
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
@@ -161,10 +163,10 @@ function LevelLayer:levelStateManager()
             s_CURRENT_USER.reviewBossTutorialStep = 1
         end
      elseif s_SCENE.levelLayerState == s_unlock_next_chapter_state then
-        print('s_levelLayerState'..s_unlock_next_chapter_state)
+        s_SCENE.levelLayerState = s_normal_level_state
         -- lock screen and plot animation
         s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
-        s_SCENE:callFuncWithDelay(3.9, function()
+        s_SCENE:callFuncWithDelay(1.5, function()
             s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
         end)
         -- plot star animation
@@ -174,6 +176,7 @@ function LevelLayer:levelStateManager()
         -- save and update level data
         --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
         s_CURRENT_USER.currentChapterKey = 'chapter'..(string.sub(s_CURRENT_USER.currentChapterKey,8)+1)
+        s_CURRENT_USER.currentSelectedChapterKey = s_CURRENT_USER.currentChapterkey
         s_CURRENT_USER.currentLevelKey = 'level0'
         s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
         s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
@@ -187,12 +190,6 @@ function LevelLayer:levelStateManager()
         end
         self:updateCurrentChapterLayer()
         currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
-        -- player animation
---        s_SCENE:callFuncWithDelay(1.3,function()
---            local targetPosition = currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey)
---            local action = cc.MoveTo:create(0.8, targetPosition)
---            player:runAction(action)      
---        end)
         player:removeFromParent()
         player = cc.Sprite:create('image/chapter_level/gril_head.png')
         player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
@@ -312,6 +309,9 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         -- add connection 
         local connectionLayer0_1 = require('view.level.connection.Connection0_1')
         self.chapterDic['connection0_1'] = connectionLayer0_1.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+            self.chapterDic['connection0_1']:plotUnlockChapterAnimation()
+        end
         local item0_1 = ccui.Layout:create()
         item0_1:setContentSize(self.chapterDic['connection0_1']:getContentSize())
         self.chapterDic['connection0_1']:setPosition(cc.p(0,0))
@@ -327,6 +327,9 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
     elseif chapterKey == 'chapter2' then
         local connectionLayer1_2 = require('view.level.connection.Connection1_2')
         self.chapterDic['connection1_2'] = connectionLayer1_2.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+            self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
+        end
         local item1_2 = ccui.Layout:create()
         item1_2:setContentSize(self.chapterDic['connection1_2']:getContentSize())
         self.chapterDic['connection1_2']:setPosition(cc.p(0,0))
@@ -346,6 +349,9 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         local chapterIndex = string.sub(chapterKey, 8)
         local connectionLayer_repeat = require('view.level.connection.Connection_repeat')
         self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)] = connectionLayer_repeat.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+            self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:plotUnlockChapterAnimation()
+        end
         local item_connection = ccui.Layout:create()
         item_connection:setContentSize(self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:getContentSize())
         self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:setPosition(cc.p(0,0))

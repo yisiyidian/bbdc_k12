@@ -207,6 +207,13 @@ function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
     reviewBoss:addAnimation(0, '1', false)
     s_SCENE:callFuncWithDelay(1,function()
         reviewBoss:addAnimation(1, '2', true)
+        if s_CURRENT_USER.tutorialStep == s_tutorial_review_boss then
+            local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+            finger:addAnimation(0, 'animation', true)
+            finger:setPosition(levelButton:getContentSize().width/2+20,-30)
+            levelButton:addChild(finger,10)
+            s_CURRENT_USER:setTutorialStep(s_tutorial_review_boss+1)
+        end
     end)
     reviewBoss:setPosition(0, 0)
     levelButton:addChild(reviewBoss)
@@ -241,8 +248,15 @@ function LevelLayerI:plotLevelDecoration(levelKey)
         end
         levelButton:addChild(boat)
     end
+    --print('levelIndex..'..levelIndex..',tutorial:'..s_CURRENT_USER.tutorialStep..','..s_tutorial_home)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_level_select and levelKey == 'level0' then
+        local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+        finger:addAnimation(0, 'animation', true)
+        finger:setPosition(levelButton:getContentSize().width/2+20,-30)
+        levelButton:addChild(finger,10)
+        s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+    end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
-        --print('@@@@@@@@@###levelKey:'..levelData.levelKey..',currentKey'..s_CURRENT_USER.currentLevelKey..',starCount:'..levelData.stars..'state:'..s_SCENE.levelLayerState)
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
             if s_CURRENT_USER.currentLevelKey ~= levelData.levelKey or s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_pass_state then
                 self:plotLevelStar(levelButton, levelData.stars)
@@ -256,6 +270,14 @@ function LevelLayerI:plotLevelDecoration(levelKey)
             summaryboss:addAnimation(0, 'jianxiao', true)
             summaryboss:setScale(0.7)
             levelButton:addChild(summaryboss, 3)
+            if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
+                local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+                finger:addAnimation(0, 'animation', true)
+                finger:setPosition(levelButton:getContentSize().width/2+20,-30)
+                levelButton:addChild(finger,10)
+                s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss+1)
+            end
+            
         elseif levelIndex % 8 == 0 then
             local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
             deco:addAnimation(0,'animation',true)
@@ -300,10 +322,10 @@ end
 local onTouchBegan = function(touch, event) 
     local touchPosition = touch:getLocation()
     -- plot shark
-    --print(touchPosition.x..','..touchPosition.y)
+    print(touchPosition.x..','..touchPosition.y)
     
     -- click wave "s_sound_clickWave"
-    playSound(s_sound_clickWave)
+--    playSound(s_sound_clickWave)
     
 end
 
@@ -397,8 +419,8 @@ end
 
 function LevelLayerI:onLevelButtonClicked(levelKey)
     s_CURRENT_USER.currentSelectedLevelKey = levelKey
-    s_CURRENT_USER.currentChapterKey = 'chapter0'
-    --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
+    s_CURRENT_USER.currentSelectedChapterKey = 'chapter0'
+    s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
     local levelButton = self:getChildByName(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
@@ -417,13 +439,13 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        if s_CURRENT_USER:getUserCurrentChapterObtainedStarCount() >= levelConfig['summary_boss_stars'] then
+        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserCurrentChapterObtainedStarCount(),levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         else
             local popupSummary = require('popup.PopupSummaryFail')
-            local layer = popupSummary.create(s_CURRENT_USER:getUserCurrentChapterObtainedStarCount(),levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
             s_SCENE:popup(layer)
         end
     end

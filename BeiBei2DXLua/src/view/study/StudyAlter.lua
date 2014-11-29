@@ -6,6 +6,11 @@ end)
 
 function StudyAlter.create()
     s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey,1)
+    
+    if s_SCENE.popupLayer~=nil then
+        s_SCENE.popupLayer:setPauseBtnEnabled(false)
+        s_SCENE.popupLayer.isOtherAlter = true
+    end
 
     -- system variate
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
@@ -37,6 +42,7 @@ function StudyAlter.create()
     
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.enterLevelLayer()
             
             -- button sound
@@ -53,6 +59,11 @@ function StudyAlter.create()
     
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            s_SCENE.popupLayer.isOtherAlter = false
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study then
+                s_CURRENT_USER:setTutorialStep(s_tutorial_study+1)
+            end
+        
             s_CorePlayManager.currentWordIndex = 1
             local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
             if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
