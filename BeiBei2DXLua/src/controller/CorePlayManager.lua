@@ -200,7 +200,7 @@ function CorePlayManager.leaveReviewBossLayer()
 end
 
 function CorePlayManager.enterIntroLayer()
-    local IntroLayer = IntroLayer.create()
+    local IntroLayer = IntroLayer.create(false)
     s_SCENE:replaceGameLayer(IntroLayer)
 end
 
