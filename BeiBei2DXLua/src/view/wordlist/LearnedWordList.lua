@@ -155,6 +155,7 @@ function LearnedWordList:ctor()
             if eventType == ccui.TouchEventType.ended then
                 local control = split(sender:getName(),'|')
                 local wordInfo = s_WordPool[control[2]]
+                local arrow = sender:getChildByName('arrow'..control[2])
                 --print_lua_table(wordInfo)
                 if control[3] == '0' then  -- insert a item of word info
                     
@@ -191,19 +192,21 @@ function LearnedWordList:ctor()
                     wordContainer:setContentSize(cc.size(s_DESIGN_WIDTH, 200))
                     back_blue:setPosition(wordContainer:getContentSize().width/2, wordContainer:getContentSize().height/2)
 
-                    wordContainer:addChild(back_blue)
-                    
-                    wordContainer:addChild(richText,2)  
-      --              wordContainer:setScaleX(scale)                  
+                    wordContainer:addChild(back_blue)                  
+                    wordContainer:addChild(richText,2)                   
                     wordContainer:setName('moreWordInfo'..control[1]..control[2])
   
                     local wordItem = self:getItemByName(listView,control[1]..'|'..control[2])
                     local index = listView:getIndex(wordItem)
                     listView:insertCustomItem(wordContainer,index+1)
                     sender:setName(control[1]..'|'..control[2]..'|1')
+                    local action = cc.RotateTo:create(0.5,180)
+                    arrow:runAction(action)
                 else -- remove a item
                     self:removeItemByName(listView,'moreWordInfo'..control[1]..control[2])
                     sender:setName(control[1]..'|'..control[2]..'|0')
+                    local action = cc.RotateTo:create(0.5,360)
+                    arrow:runAction(action)
                 end
             end
         end
@@ -216,12 +219,11 @@ function LearnedWordList:ctor()
             --print('wordInfo..'..word..',')
             if studyWords[word] ~= nil then
                 local custom_button = ccui.Button:create('image/friend/friendRankButton.png','image/friend/friendRankButton.png','')
-                custom_button:setScaleX(s_DESIGN_WIDTH/custom_button:getContentSize().width)
                 custom_button:setName("custom_button")
                 custom_button:setTitleText('123')
                 custom_button:setScale9Enabled(true)
                 custom_button:setContentSize(default_button:getContentSize())
-                custom_button:addTouchEventListener(testEvent)
+
     
                 local custom_item = ccui.Layout:create()
                 custom_item:setContentSize(custom_button:getContentSize())
@@ -244,19 +246,20 @@ function LearnedWordList:ctor()
                 word_meaning:setName('clickToCheck')
                 custom_button:addChild(word_meaning, 0)
     
-                local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
-                arrow:setScale9Enabled(true)
+                -- local arrow = ccui.Button:create('image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png','image/friend/fri_jiantouxia.png')
+                local arrow = cc.Sprite:create('image/friend/fri_jiantouxia.png')
                 arrow:setPosition(0.85 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
-
+                arrow:setName('arrow'..word)
                 
                 local more_label = cc.Label:createWithSystemFont('更多','',24)
-                more_label:setPosition(-arrow:getContentSize().width, more_label:getContentSize().height/2)
+                more_label:setPosition(0.78 * custom_button:getContentSize().width,0.25 * custom_button:getContentSize().height)
                 more_label:setColor(cc.c3b(0,0,0))
-                arrow:addChild(more_label)
-                arrow:setName(wordKey..'|0')
+                custom_button:addChild(more_label)
+
                
                 --print('arrow:'..arrow:getName())
-                arrow:addTouchEventListener(touchEvent)
+                custom_button:setName(wordKey..'|0')
+                custom_button:addTouchEventListener(touchEvent)
                 custom_button:addChild(arrow)        
                 -- add mastered count
                 --print('study:'..studyWords[word])
