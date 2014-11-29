@@ -13,7 +13,8 @@ end
 function PopupLayer:ctor()
     local onTouchBegan = function(touch, event)
         return true
-    end
+    end    
+    self.isOtherAlter = false
     
     local onTouchMoved = function(touch, event)
     end
@@ -39,4 +40,9 @@ function PopupLayer:addBackground()
     self:addChild(bg)
 end
 
+function PopupLayer:setPauseBtnEnabled(var)
+    if self.pauseBtn ~=nil then
+        self.pauseBtn:setTouchEnabled(var)
+    end
+end
 return PopupLayer

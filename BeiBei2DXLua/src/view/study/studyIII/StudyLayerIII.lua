@@ -354,6 +354,7 @@ function StudyLayerIII.create()
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
     layer:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
