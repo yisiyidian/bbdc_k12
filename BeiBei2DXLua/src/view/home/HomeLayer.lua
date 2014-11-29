@@ -28,7 +28,7 @@ function HomeLayer.create()
     local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
     
     
-    
+    s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
     
     local offset = 500
@@ -225,6 +225,13 @@ function HomeLayer.create()
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_home then
+        local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+        finger:addAnimation(0, 'animation', true)
+        finger:setPosition(button_play:getContentSize().width/2+20,-30)
+        button_play:addChild(finger,10)
+        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
+    end
 
     local button_data
     local isDataShow = false

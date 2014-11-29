@@ -106,6 +106,7 @@ end
 
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
+    AnalyticsTutorial(step)
     self:updateDataToServer()
 end
 
@@ -194,10 +195,8 @@ function DataUser:getFriendsInfo()
 end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
-    print("getBookChapterLevelData")
-    print(self.levels)
     for i,v in ipairs(self.levels) do
-        s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
+        --s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
 
             return v
@@ -278,7 +277,8 @@ function DataUser:initChapterLevelAfterLogin()
 --    self.currentSelectedLevelKey = 'level11'
 --    self.currentChapterKey = 'chapter0'
 --    s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
-    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
+--    s_CURRENT_USER:setUserLevelDataOfStars(self.currentChapterKey,self.currentLevelKey,3)
+    --s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)

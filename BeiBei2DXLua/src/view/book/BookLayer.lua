@@ -62,7 +62,6 @@ function BookLayer.create()
        backButton:setVisible(true)
     end
     
-    
     local hint = cc.Label:createWithSystemFont("学英语就像翻越大山，开始挑战吧","",28)
     hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT-100)
     hint:setColor(cc.c4b(100,100,100,255))
@@ -113,6 +112,7 @@ function BookLayer.create()
                             s_TIPS_LAYER:showSmall(message)
                             hideProgressHUD()
                         end)
+                    s_SCENE.touchEventBlockLayer.lockTouch()
                 end      
                 s_TIPS_LAYER:showSmall("选择"..full_name_array[i].."课程", affirm)
                 -- popup sound "Aluminum Can Open "
@@ -125,19 +125,22 @@ function BookLayer.create()
         smallBack:addTouchEventListener(func_array[i])
         smallBack:setAnchorPoint(0.5,0)
         if i == 1 then
-            if s_CURRENT_USER.tutorialStep == s_tutorial_start then
+            if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                 local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, s_DESIGN_HEIGHT-150)
+                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, s_DESIGN_HEIGHT-180)
                 backColor:addChild(tutorial_text,120)
+                --tutorial_text:setColor(cc.c3b(255,255,255))
                 
-                local text = cc.Label:createWithSystemFont('请选择你的书籍','',25)
+                local text = cc.Label:createWithSystemFont(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_TUTORIAL_BOOK_SELECT),'',28)
                 text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+                text:setColor(cc.c3b(0,0,0))
                 tutorial_text:addChild(text)
                 
                 local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
-                finger:addAnimation(0, 'anmiation', true)
+                finger:addAnimation(0, 'animation', true)
                 finger:setPosition(50,0)
-                smallBack:addChild(finger)
+                smallBack:addChild(finger,10)
+                s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
             end
         end
         if i%2 == 0 then
