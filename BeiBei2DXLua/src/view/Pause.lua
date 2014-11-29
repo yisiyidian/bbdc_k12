@@ -12,11 +12,12 @@ function Pause.create()
     local layer = Pause.new()
     s_SCENE.popupLayer.pauseLayer = layer
     s_SCENE.popupLayer.layerpaused = true
+    layer.pauseBtn = nil
     return layer
 end
 
 function Pause:ctor()
-
+        
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
@@ -148,14 +149,6 @@ function Pause:onContinue()
 end
 
 function Pause:onHelp()
- -- judge normal / review / summary
---    if xx.class.__cname == 
---    for i=1,5 do
---        print(tostring(s_GAME_LAYER.class.__cname[i]))
---
---   end
-
-
     local site = ""
     if  s_SCENE.gameLayerState == s_review_boss_game_state then
         site = "view.pausehelp.PauseHelpReview" 
@@ -215,8 +208,8 @@ function createPauseLayerWhenTestOrBoss()
     if s_SCENE.gameLayerState == s_test_game_state
     or s_SCENE.gameLayerState == s_review_boss_game_state
     or s_SCENE.gameLayerState == s_summary_boss_game_state then
-    
-        if s_SCENE.popupLayer.layerpaused == false then
+
+        if s_SCENE.popupLayer.layerpaused == false and s_SCENE.popupLayer.isOtherAlter == false then
             local pauseLayer = Pause:create()
             s_SCENE.popupLayer.listener:setSwallowTouches(true)
             pauseLayer:setPosition(s_LEFT_X, 0)

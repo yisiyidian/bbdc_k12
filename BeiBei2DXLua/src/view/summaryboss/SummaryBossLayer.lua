@@ -524,28 +524,28 @@ function SummaryBossLayer:initBossLayer(levelConfig)
     blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
     self.blink = blinkBack
     --add pauseButton
-    local menu = cc.Menu:create()
-    self:addChild(menu,100)
-    local pauseBtn = cc.MenuItemImage:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    menu:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
-    menu:addChild(pauseBtn,100)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
+    self:addChild(pauseBtn,100)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
 
-    local function pauseScene(sender)
-        if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
-            return
-        end
-        local pauseLayer = Pause.create()
-        pauseLayer:setPosition(s_LEFT_X, 0)
-        s_SCENE.popupLayer:addChild(pauseLayer)
-        s_SCENE.popupLayer.listener:setSwallowTouches(true)
+    local function pauseScene(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
+                return
+            end
+            local pauseLayer = Pause.create()
+            pauseLayer:setPosition(s_LEFT_X, 0)
+            s_SCENE.popupLayer:addChild(pauseLayer)
+            s_SCENE.popupLayer.listener:setSwallowTouches(true)
         
         --button sound
-        playSound(s_sound_buttonEffect)
-        
+            playSound(s_sound_buttonEffect)
+        end
     end
-    pauseBtn:registerScriptTapHandler(pauseScene)
+    pauseBtn:addTouchEventListener(pauseScene)
     
     --add girl
     local girl = sp.SkeletonAnimation:create("spine/summaryboss/girl-stand.json","spine/summaryboss/girl-stand.atlas",1)

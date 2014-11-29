@@ -26,8 +26,7 @@ function HomeLayer.create()
     local username = "游客"
     local logo_name = {"head","book","feedback","information","logout"}
     local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
-    
-    
+
     s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
     
