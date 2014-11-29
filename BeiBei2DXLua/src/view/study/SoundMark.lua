@@ -4,7 +4,7 @@ local SoundMark = class("SoundMark", function()
     return cc.Layer:create()
 end)
 
-function SoundMark.create(wordname, soundmarkus, soundmarken)
+function SoundMark.create(wordname, soundmarkus, soundmarken, typeIndex)
     -- system variate
     
     local gap = 115
@@ -19,9 +19,14 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local button_country
     local button_soundmark_en
     local button_soundmark_us
+    
+    local button_pronounce_name1    =   "image/button/button_sound"..typeIndex.."1.png"
+    local button_pronounce_name2    =   "image/button/button_sound"..typeIndex.."2.png"
+    local button_country_name1      =   "image/button/button_mark"..typeIndex.."1.png"
+    local button_country_name2      =   "image/button/button_mark"..typeIndex.."2.png"
 
     local changeCountry = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             if button_country:getTitleText() == "US" then
@@ -39,18 +44,18 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     end
     
     local pronounce = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             playWordSound(wordname)
     	end
     end
 
-    button_pronounce = ccui.Button:create("image/button/soundButton1.png", "image/button/soundButton1.png", "")
+    button_pronounce = ccui.Button:create(button_pronounce_name1, button_pronounce_name2, "")
     button_pronounce:addTouchEventListener(pronounce)
         
     button_wordname = cc.Label:createWithSystemFont(wordname,"",80)
     button_wordname:setColor(cc.c4b(0,0,0,255))
     
-    button_country = ccui.Button:create("image/button/USButton1.png", "image/button/USButton1.png", "")
+    button_country = ccui.Button:create(button_country_name1, button_country_name2, "")
     button_country:setTitleText("US")
     button_country:setTitleFontSize(30)
     button_country:addTouchEventListener(changeCountry)
