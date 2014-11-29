@@ -143,7 +143,7 @@ showLogin = function()
 
     local label_name = cc.Label:createWithSystemFont("完善信息","",30)
     label_name:setColor(cc.c4b(255,255,255,255))
-    label_name:setPosition(100, submit:getContentSize().height/2)
+    label_name:setPosition(submit:getContentSize().width/2, submit:getContentSize().height/2)
     submit:addChild(label_name)
 
 

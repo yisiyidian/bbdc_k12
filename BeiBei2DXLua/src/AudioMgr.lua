@@ -7,7 +7,7 @@ function playMusic(filename, isLoop)
     currentBGM = filename
     if db.isMusicOn() then
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename) 
-        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5) 
+        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
         if cc.FileUtils:getInstance():isFileExist(localPath) then
             cc.SimpleAudioEngine:getInstance():playMusic(localPath, isLoop)
         end
