@@ -15,9 +15,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
         s_SCENE.popupLayer:setPauseBtnEnabled(false)
-        if s_SCENE.popupLayer.pauseLayer~=nil then
-            s_SCENE.popupLayer.pauseLayer.isOtherAlter = true
-        end
+        s_SCENE.popupLayer.isOtherAlter = true
     end    
     if layer.index > 3 then
         layer.index = 3
