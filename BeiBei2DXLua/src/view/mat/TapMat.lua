@@ -221,8 +221,6 @@ function TapMat.create(word, m ,n)
             return true
         end
         
-        
-        
         light:setVisible(true)
         
         fakeTouchMoved(location)
