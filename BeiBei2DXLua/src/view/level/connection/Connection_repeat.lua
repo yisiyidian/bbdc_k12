@@ -18,7 +18,7 @@ function Connection_repeat:ctor()
     self.ccb['connection_repeat'] = self.ccbConnection_repeat
     local proxy = cc.CCBProxy:create()
     local contentNode = CCBReaderLoad('ccb/connection_repeat.ccbi',proxy,self.ccbConnection_repeat,self.ccb)  
-    self:setContentSize(cc.size(s_MAX_WIDTH,402))
+    self:setContentSize(cc.size(s_MAX_WIDTH,400))
     self:addChild(contentNode)
 end
 
