@@ -65,24 +65,17 @@ function CorePlayManager.enterStudyLayer()
     end
     
     if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
---        local studyLayer = StudyLayer.create()
---        s_SCENE:replaceGameLayer(studyLayer)
---        local studyLayerII = StudyLayerII.create()
---        s_SCENE:replaceGameLayer(studyLayerII)
-        local studyLayerIII = StudyLayerIII.create()
-        s_SCENE:replaceGameLayer(studyLayerIII)
+        local studyLayer = StudyLayer.create()
+        s_SCENE:replaceGameLayer(studyLayer)
     elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then
         local studyLayerII = StudyLayerII.create()
         s_SCENE:replaceGameLayer(studyLayerII)
     elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter2" then
         local studyLayerIII = StudyLayerIII.create()
         s_SCENE:replaceGameLayer(studyLayerIII)
-    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter3" then
-        local studyLayerIV = StudyLayerIV.create()
-        s_SCENE:replaceGameLayer(studyLayerIV)
     else
-        s_logd("system error")
-        s_logd(s_CURRENT_USER.currentSelectedChapterKey)
+        local studyLayerIII = StudyLayerIII.create()
+        s_SCENE:replaceGameLayer(studyLayerIII)
     end
 end
 
@@ -97,22 +90,15 @@ function CorePlayManager.enterTestLayer()
     if s_CURRENT_USER.currentSelectedChapterKey == "chapter0" then
         local testLayer = TestLayer.create()
         s_SCENE:replaceGameLayer(testLayer)
---        local testLayerII = TestLayerII.create()
---        s_SCENE:replaceGameLayer(testLayerII)
---        local testLayerIII = TestLayerIII.create()
---        s_SCENE:replaceGameLayer(testLayerIII)
     elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter1" then
         local testLayerII = TestLayerII.create()
         s_SCENE:replaceGameLayer(testLayerII)
     elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter2" then
         local testLayerIII = TestLayerIII.create()
         s_SCENE:replaceGameLayer(testLayerIII)
-    elseif s_CURRENT_USER.currentSelectedChapterKey == "chapter3" then
-        local testLayerIV = TestLayerIV.create()
-        s_SCENE:replaceGameLayer(testLayerIV)
     else
-        s_logd("system error")
-        s_logd(s_CURRENT_USER.currentSelectedChapterKey)
+        local testLayerIII = TestLayerIII.create()
+        s_SCENE:replaceGameLayer(testLayerIII)
     end
 end
 

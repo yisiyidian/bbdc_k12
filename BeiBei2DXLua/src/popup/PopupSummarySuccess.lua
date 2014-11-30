@@ -75,7 +75,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
     
     -- button sound
     playSound(s_sound_buttonEffect)
-    showProgressHUD()
+    showProgressHUD('正在加载关卡')
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
         if levelData.isPassed ~= 1 then

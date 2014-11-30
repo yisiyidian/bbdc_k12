@@ -148,7 +148,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
     local finger = nil
     main.finger_action = function()
         if finger then
-             finger:removeFromParentAndCleanup()
+             finger:removeFromParent()
         end 
         
         finger = cc.Sprite:create("image/studyscene/global_finger.png")
