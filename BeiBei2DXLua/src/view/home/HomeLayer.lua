@@ -207,8 +207,6 @@ function HomeLayer.create()
     label4:setPosition(book_back_width/2, 0)
     book_back:addChild(label4)
     
-
-    
     local label = cc.Label:createWithSystemFont(levelName,"",28)
     label:setColor(cc.c4b(0,0,0,255))
     label:setPosition(bigWidth/2, 280)
@@ -418,7 +416,7 @@ function HomeLayer.create()
                     book_back:addAnimation(0, 'animation', false)
 
 
-                    local action1 = cc.DelayTime:create(1)
+                    local action1 = cc.DelayTime:create(1.5)
                     local action2 = cc.CallFunc:create(function()
                         s_CorePlayManager.enterWordListLayer()
                         s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
