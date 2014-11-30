@@ -355,13 +355,13 @@ function LevelLayerII:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] then
+        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter1') then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter1'))
             s_SCENE:popup(layer)
     else
         local popupSummary = require('popup.PopupSummaryFail')
-        local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
+        local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter1'))
         s_SCENE:popup(layer)
     end
     end

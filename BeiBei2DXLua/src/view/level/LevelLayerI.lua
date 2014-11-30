@@ -420,7 +420,7 @@ end
 function LevelLayerI:onLevelButtonClicked(levelKey)
     s_CURRENT_USER.currentSelectedLevelKey = levelKey
     s_CURRENT_USER.currentSelectedChapterKey = 'chapter0'
-    s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
+    --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
     local levelButton = self:getChildByName(levelKey)
     -- check level type
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
@@ -439,13 +439,13 @@ function LevelLayerI:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] then
+        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter0') then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter0'))
             s_SCENE:popup(layer)
         else
             local popupSummary = require('popup.PopupSummaryFail')
-            local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'])
+        local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter0'))
             s_SCENE:popup(layer)
         end
     end

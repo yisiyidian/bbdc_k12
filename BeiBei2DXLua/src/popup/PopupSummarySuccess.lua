@@ -30,6 +30,7 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     self.ccb['popup_summary_success'] = self.ccbPopupSummarySuccess
     local proxy = cc.CCBProxy:create()
     local node
+
     if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
         node = CCBReaderLoad('res/ccb/popup_summary_success.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
     elseif s_CURRENT_USER.currentSelectedChapterKey == 'chapter1' then
