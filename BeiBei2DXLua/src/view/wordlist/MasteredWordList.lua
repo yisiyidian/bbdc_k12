@@ -134,9 +134,15 @@ function MasteredWordList:ctor()
     while indexConfig <= level_count do
         -- add title
         local levelNum = split(self.levelKey[indexConfig],'level')
-        local title = cc.Label:createWithSystemFont('关卡'..(levelNum[2]+1), '' ,28)
+        local levelIndex        = levelNum[2] + 1
+        local chapterNum = split(levelNum[1],'chapter')
+        local chapterIndex = chapterNum[2]+1
+        local chapterName       = s_DATA_MANAGER.chapters[chapterIndex]["Name"]
+        local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
+        
+        local title = cc.Label:createWithSystemFont(levelName, '' ,28)
         title:setColor(cc.c3b(45,176,244))
-        title:setPosition(cc.p(100, 20))
+        title:setPosition(cc.p(s_LEFT_X+175, 20))
         local titleContainner = ccui.Layout:create()
         titleContainner:setContentSize(cc.size(s_DESIGN_WIDTH, 40))
         titleContainner:addChild(title)
@@ -209,8 +215,9 @@ function MasteredWordList:ctor()
             local wordKey = self.levelKey[indexConfig]..'|'..word
             local wordInfo = s_WordPool[word]
             --print('grasp word is '..word)
-            print_lua_table(masterWords)
+            --print_lua_table(masterWords)
             --print('masterWords:'..masterWords[word])
+            
             for i, v in pairs(masterWords) do 
                 if i == word then
                     --print_lua_table(wordInfo)
