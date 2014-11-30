@@ -52,8 +52,9 @@ function SummaryBossAlter:lose()
     self.loseBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
     self:addChild(self.loseBoard)
     
-    local boss = sp.SkeletonAnimation:create("spine/summaryboss/klschongshangdaoxia.json","spine/summaryboss/klschongshangdaoxia.atlas",1)
+    local boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
     boss:setAnimation(0,'animation',false)
+    boss:addAnimation(0,'jianxiao',true)
     boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height / 3)
     self.loseBoard:addChild(boss)
     
@@ -90,8 +91,9 @@ function SummaryBossAlter:lose2()
     self.loseBoard2:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5)))))
     self:addChild(self.loseBoard2)
     
-    local boss = sp.SkeletonAnimation:create("spine/summaryboss/klschongshangdaoxia.json","spine/summaryboss/klschongshangdaoxia.atlas",1)
-    boss:setAnimation(0,'animation',true)
+    local boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+    boss:setAnimation(0,'animation',false)
+    boss:addAnimation(0,'jianxiao',true)
     boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height * 0.22)
     self.loseBoard2:addChild(boss)
     
