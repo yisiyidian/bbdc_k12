@@ -68,6 +68,8 @@ function SummaryBossLayer.create(levelConfig)
     
     local loadingTime = 0
     local loadingState = 0
+    layer:initMapInfo()
+    
     --update
     local function update(delta)
         if loadingTime > delta and loadingState < 2 then
@@ -83,7 +85,7 @@ function SummaryBossLayer.create(levelConfig)
         elseif loadingState == 2 then
             loadingState = 3
             
-            layer:initMapInfo()
+            
         elseif loadingState == 4 then
             loadingState = 5
             layer:initBossLayer_boss(levelConfig)
@@ -773,6 +775,7 @@ function SummaryBossLayer:initCrab()
 end
 
 function SummaryBossLayer:initMapInfo()
+    local start = os.time()
     self.isFirst = {}
     self.isCrab = {}
     self.character = {}
@@ -861,6 +864,8 @@ function SummaryBossLayer:initMapInfo()
             end
         end
     end
+    local finish = os.time()
+    s_logd('time = %d',finish - start)
 end
 
 function SummaryBossLayer:initMap()
