@@ -90,7 +90,7 @@ function TestLayerIII.create()
     layer:addChild(progressBar)
 
     local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
-    label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
+    label_wordmeaningSmall:setColor(cc.c4b(255,255,255,255))
     label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 896)
     layer:addChild(label_wordmeaningSmall)
 
@@ -185,7 +185,7 @@ function TestLayerIII.create()
         layer:runAction(action3) 
     end
 
-    local mat = FlipMat.create(wordName,4,4,false,false)
+    local mat = FlipMat.create(wordName,4,4,false,"coin")
     mat:setPosition(bigWidth/2, 100)
     back_down:addChild(mat)
 
@@ -217,7 +217,7 @@ function TestLayerIII.create()
     end
 
     local button_donotknow_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             timeOut()   
             -- button sound
             playSound(s_sound_buttonEffect)

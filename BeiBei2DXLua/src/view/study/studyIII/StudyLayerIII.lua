@@ -61,11 +61,10 @@ function StudyLayerIII.create()
 
     local soundMark
     local mat
+    local wordDetailInfo
 
     local fingerClick
-    local newplayerHintBack
     local label_wordmeaningSmall
-    local guideOver = false
 
     local backImage = cc.Sprite:create("image/studyscene/background_zhuwanfa_disnaguan.png") 
     backImage:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
@@ -82,7 +81,7 @@ function StudyLayerIII.create()
     local back_down = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_green.png")
     back_down:ignoreAnchorPointForPosition(false)
     back_down:setAnchorPoint(0.5, 0)
-    back_down:setPosition(s_DESIGN_WIDTH/2, 0)
+    back_down:setPosition(s_DESIGN_WIDTH/2, -400)
     layer:addChild(back_down)
 
     local money1 = cc.Sprite:create("image/studyscene/frongground_zhuwanfa_disanguan_money1.png")
@@ -97,19 +96,12 @@ function StudyLayerIII.create()
     money2:setPosition(bigWidth-(bigWidth-s_DESIGN_WIDTH)/2, 0)
     layer:addChild(money2)
 
---    local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 1014))
---    local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 360))
---    local action3 = cc.CallFunc:create(newPlayerGuideInit)
---
---    back_up:runAction(action1)
---    back_down:runAction(cc.Sequence:create(action2, action3))
-
     local progressBar = ProgressBar.create(false)
     progressBar:setPositionY(1038)
     layer:addChild(progressBar)
 
-    local label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
-    label_wordmeaningSmall:setColor(cc.c4b(0,0,0,255))
+    label_wordmeaningSmall = cc.Label:createWithSystemFont(word.wordMeaningSmall,"",48)
+    label_wordmeaningSmall:setColor(cc.c4b(255,255,255,255))
     label_wordmeaningSmall:setPosition(s_DESIGN_WIDTH/2, 696)
     label_wordmeaningSmall:setScale(math.min(560/label_wordmeaningSmall:getContentSize().width, 1.5))
     layer:addChild(label_wordmeaningSmall)
@@ -177,9 +169,11 @@ function StudyLayerIII.create()
         end
 
         local endEffect = function()
-            local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,936))
-            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,900))
-            back_up:runAction(action4)
+            label_wordmeaningSmall:setVisible(false)
+            wordDetailInfo:setVisible(false)
+            
+        
+            local action5 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-400))
             back_down:runAction(action5)
 
             local action6 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,-s_DESIGN_HEIGHT))
@@ -201,11 +195,8 @@ function StudyLayerIII.create()
     local fail = function()
         s_CorePlayManager.unfamiliarWord()
     end
-    if s_CorePlayManager.newPlayerState then
-        mat = FlipMat.create(wordName,4,4,true,false)
-    else
-        mat = FlipMat.create(wordName,4,4,false,false)
-    end
+    
+    mat = FlipMat.create(wordName,4,4,false,"coin")
     mat:setPosition((s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH)/2*3, 120)
     layer:addChild(mat)
 
@@ -237,23 +228,7 @@ function StudyLayerIII.create()
                     local action5 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
                     layer:runAction(cc.Sequence:create(action4, action5))
                 end
-
-                if s_CorePlayManager.newPlayerState then
-                    if not guideOver then
-                        local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, 300))
-                        newplayerHintBack:runAction(action1)
-
-                        local action2 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 10))
-                        local action3 = cc.CallFunc:create(change)
-                        fingerClick:runAction(cc.Sequence:create(action2, action3))
-                    else
-                        change()
-                    end
-
-                    guideOver = true
-                else
-                    change()
-                end
+                change()
             else
                 s_CorePlayManager.unfamiliarWord()
             
@@ -304,7 +279,7 @@ function StudyLayerIII.create()
                 button_changeview:addTouchEventListener(button_changeview_clicked)
                 back_down:addChild(button_changeview)
 
-                local wordDetailInfo = WordDetailInfo.create(word)
+                wordDetailInfo = WordDetailInfo.create(word)
                 wordDetailInfo:setPosition(bigWidth/2, 0)
                 backImage:addChild(wordDetailInfo)
             end
@@ -320,26 +295,10 @@ function StudyLayerIII.create()
                 label_wordmeaningSmall:runAction(cc.Spawn:create(action3, action4))
             end
 
-            if s_CorePlayManager.newPlayerState then
-                local action1 = cc.MoveTo:create(0.5, cc.p(-s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
-                local action2 = cc.Place:create(cc.p(-s_DESIGN_WIDTH/2, 300))
-                local action3 = cc.DelayTime:create(0.5)
-                local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 300))
-                newplayerHintBack:runAction(cc.Sequence:create(action1, action2, action3, action4))
-
-                local action5 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 50))
-                local action6 = cc.CallFunc:create(moveBack)
-                local action7 = cc.Place:create(cc.p(2*s_DESIGN_WIDTH-200, 10))
-                local action8 = cc.DelayTime:create(0.5)
-                local action9 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 10))
-                local action10 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                fingerClick:runAction(cc.Sequence:create(action5, action6, action7, action8,action9,action10))  
-            else
-                local action1 = cc.CallFunc:create(moveBack)
-                local action2 = cc.DelayTime:create(0.5)
-                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                layer:runAction(cc.Sequence:create(action1, action2, action3))
-            end 
+            local action1 = cc.CallFunc:create(moveBack)
+            local action2 = cc.DelayTime:create(0.5)
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            layer:runAction(cc.Sequence:create(action1, action2, action3))
         end
     end
 

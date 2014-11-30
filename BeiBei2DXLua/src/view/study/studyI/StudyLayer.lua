@@ -240,9 +240,9 @@ function StudyLayer.create()
         s_CorePlayManager.unfamiliarWord()
     end
     if s_CorePlayManager.newPlayerState then
-        mat = FlipMat.create(wordName,4,4,true,false)
+        mat = FlipMat.create(wordName,4,4,true,"coconut_light")
     else
-        mat = FlipMat.create(wordName,4,4,false,false)
+        mat = FlipMat.create(wordName,4,4,false,"coconut_light")
     end
     mat:setPosition(size_big.width/2*3, 120)
     layer:addChild(mat)
@@ -265,8 +265,14 @@ function StudyLayer.create()
                     local action1 = cc.MoveTo:create(0.5,cc.p(-size_big.width/2, -200))
                     soundMark:runAction(action1)
             
-                    local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))
-                    mat:runAction(action2)
+                    if s_CorePlayManager.newPlayerState then
+                        local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))
+                        local action3 = cc.CallFunc:create(mat.finger_action())
+                        mat:runAction(cc.Sequence:create(action2, action3))
+                    else
+                        local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))
+                        mat:runAction(action2)
+                    end
                 
                     local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+60, 930))
                     button_detail:runAction(action3)

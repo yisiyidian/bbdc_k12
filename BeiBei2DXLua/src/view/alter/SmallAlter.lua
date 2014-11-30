@@ -36,11 +36,8 @@ function SmallAlter.create(info)
     
 
     local button_left_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
+        if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect)
---            main.close()
-        elseif eventType == ccui.TouchEventType.ended then
             main.affirm()
         end
     end
@@ -53,12 +50,9 @@ function SmallAlter.create(info)
     back:addChild(button_left)
     
     local button_right_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
-            playSound(s_sound_buttonEffect)
---            main.close()
-        elseif eventType == ccui.TouchEventType.ended then
+        if eventType == ccui.TouchEventType.ended then
             main.close()
+            playSound(s_sound_buttonEffect)
         end
     end
 

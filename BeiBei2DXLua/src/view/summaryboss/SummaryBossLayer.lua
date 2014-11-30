@@ -582,6 +582,7 @@ function SummaryBossLayer:initBossLayer_girl(levelConfig)
     self:addChild(readyGo,100)
     
     -- ready go "ReadyGo"
+    playSound(s_sound_ReadyGo)
     
 end
 
@@ -920,35 +921,51 @@ function SummaryBossLayer:initMap()
 end
 
 function SummaryBossLayer:checkTouchLocation(location)
-    for i = 1, 5 do
-        for j = 1, 5 do
-            local node = self.coconut[i][j]
-            local node_position = cc.p(node:getPosition())
-            local node_size = node:getContentSize()
+    local main_width    = 640
+    
+    local gap       = 120
+    local left      = (main_width - (5-1)*gap) / 2
+    local main_height   = 220 * 2 + 4 * gap
+    local bottom    = 220
+    local i = 0
+    local j = 0
 
-            if cc.rectContainsPoint(node:getBoundingBox(), location) then
-                self.current_node_x = i
-                self.current_node_y = j
+    local node_example = self.coconut[1][1]
+    local node_example_size = node_example:getContentSize()
 
-                local x = location.x - node_position.x
-                local y = location.y - node_position.y
-                if y > x and y > -x then
-                    self.current_dir = dir_up
-                elseif y < x and y < -x then
-                    self.current_dir = dir_down
-                elseif y > x and y < -x then
-                    self.current_dir = dir_left
-                else
-                    self.current_dir = dir_right
-                end
+    if location.x < (left - node_example_size.width / 2) or location.x > (main_width - (left - node_example_size.width / 2)) or
+        location.y < (bottom - node_example_size.height / 2) or location.y > (main_height - (bottom - node_example_size.height / 2)) then
+        self.onNode = false
+    elseif  ((gap - node_example_size.width )/2) < ((location.x - (left - node_example_size.width / 2)) % gap) and
+        ((gap + node_example_size.width )/2) > ((location.x - (left - node_example_size.width / 2)) % gap) and
+        ((gap - node_example_size.height )/2) < ((location.y - (bottom - node_example_size.height / 2)) % gap) and
+        ((gap + node_example_size.height )/2) > ((location.y - (bottom - node_example_size.height / 2)) % gap) then
 
-                self.onNode = true
-                return
-            end
+        i = math.ceil((location.x - (left - node_example_size.width / 2)) / gap)
+        j = math.ceil((location.y - (bottom - node_example_size.height / 2)) / gap)
+
+        self.current_node_x = i
+        self.current_node_y = j
+
+        local node = self.coconut[i][j]
+        local node_position = cc.p(node:getPosition())
+
+        local x = location.x - node_position.x
+        local y = location.y - node_position.y
+
+        if y > x and y > -x then
+            self.current_dir = dir_up
+        elseif y < x and y < -x then
+            self.current_dir = dir_down
+        elseif y > x and y < -x then
+            self.current_dir = dir_left
+        else
+            self.current_dir = dir_right
         end
+        self.onNode = true
+    else
+        self.onNode = false
     end
-
-    self.onNode = false
 end
 
 function SummaryBossLayer:win()

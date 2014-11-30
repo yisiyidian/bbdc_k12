@@ -22,7 +22,10 @@ function TestAlter.createFromFirstAlter()
         s_SCENE.popupLayer.isOtherAlter = true
     end
 
-    s_CorePlayManager.recordWordProciency()
+    local isTested = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isTested
+    if isTested == 0 then
+        s_CorePlayManager.recordWordProciency()
+    end
     
     showGirlAndStar()
     button_goon_clicked_mark = 0
@@ -207,7 +210,7 @@ showDetailInfo = function()
     local button_array = {}
     local lastSelectIndex = nil
     local showSelectWordInfo = function(sender,eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             selectWordMeaning:setString(s_WordPool[s_CorePlayManager.wordList[sender.tag]].wordMeaningSmall)
             
             if button_array[lastSelectIndex].name == "right" then
@@ -259,11 +262,10 @@ showDetailInfo = function()
     if lastSelectIndex == nil then
         lastSelectIndex = 1
     end
-    showSelectWordInfo(button_array[lastSelectIndex], ccui.TouchEventType.began)
-    
+    showSelectWordInfo(button_array[lastSelectIndex], ccui.TouchEventType.ended)
     
     local button_replayall_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then            
+        if eventType == ccui.TouchEventType.ended then
             s_CorePlayManager.leaveTestLayer_replay()
             s_SCENE.popupLayer.isOtherAlter = false
             -- button sound
@@ -272,7 +274,7 @@ showDetailInfo = function()
     end
     
     local button_replaywrong_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()
@@ -283,7 +285,7 @@ showDetailInfo = function()
     end
     
     local button_continue_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.leaveTestLayer()
             
@@ -344,8 +346,8 @@ showDetailInfo = function()
             -- no this situation
         end
     else
-        local passed = false
-        if passed then
+        local isPassed = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isPassed
+        if isPassed then
             if s_CorePlayManager.currentScore > 0 then
                 if wrong_num > 0 then
                     button_replayall:setVisible(true)
@@ -398,7 +400,6 @@ showDetailInfo = function()
             end
         end
     end
-    
 end
 
 return TestAlter

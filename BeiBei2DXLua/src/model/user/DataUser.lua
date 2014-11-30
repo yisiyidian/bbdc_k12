@@ -231,7 +231,7 @@ function DataUser:getUserBookObtainedStarCount()
     for i, v in ipairs(self.levels) do
         if v.bookKey == self.bookKey then
             local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
-            if levelConfig['type'] == 0 then
+            if levelConfig ~= nil and levelConfig['type'] == 0 then
                 count = count + v.stars
             end
         end

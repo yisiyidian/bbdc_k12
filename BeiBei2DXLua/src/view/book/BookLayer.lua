@@ -19,7 +19,7 @@ function BookLayer.create()
     layer:addChild(backColor)    
     
     local click_back = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             --whether bookKey == nil
             s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
             s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
@@ -47,7 +47,7 @@ function BookLayer.create()
         end
     end
     
-    local backButton = ccui.Button:create("image/PersonalInfo/backButtonInPersonalInfo.png","image/PersonalInfo/backButtonInPersonalInfo.png","")
+    local backButton = ccui.Button:create("image/button/button_back_begin.png","image/button/button_back_end.png","")
     backButton:ignoreAnchorPointForPosition(false)
     backButton:setAnchorPoint(0.5 , 0.5)
     backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 250, s_DESIGN_HEIGHT - 100)
@@ -72,7 +72,7 @@ function BookLayer.create()
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then    
+            if eventType == ccui.TouchEventType.ended then
                 -- button sound
                 playSound(s_sound_buttonEffect)   
                 local affirm = function()

@@ -114,15 +114,72 @@ function TapMat.create(word, m ,n)
         for i = 1, main_m do
             for j = 1, main_n do
                 local node = main_mat[i][j]
+                local node_position = cc.p(node:getPosition())
+                local node_position_size = node:getContentSize()
                 if cc.rectContainsPoint(node:getBoundingBox(), location) then
                     current_node_x = i
                     current_node_y = j
                     onNode = true
+                    
+--                    print("i="..i)
+--                    print("j="..j)
+--                    print("node_position.x="..node_position.x)
+--                    print("node_position.y="..node_position.y)    
+--                    print("location.x="..location.x)
+--                    print("location.y="..location.y) 
+--                    
+--                    print("node_example_size.width="..node_position_size.width)
+                    
                     return
                 end
             end
         end
         onNode = false
+    end
+    
+    local checkTouchLocation_opt = function(location)
+        local i = 0
+        local j = 0
+
+        local node_example = main_mat[1][1]
+        local node_example_size = node_example:getContentSize()
+
+        if location.x < (left - node_example_size.width / 2) or location.x > (s_DESIGN_WIDTH - (left - node_example_size.width / 2)) or
+            location.y < (bottom - node_example_size.height / 2) or location.y > (s_DESIGN_WIDTH - (bottom - node_example_size.height / 2)) then
+            onNode = false
+        elseif  ((gap - node_example_size.width )/2) < ((location.x - (left - node_example_size.width / 2)) % gap) and
+            ((gap + node_example_size.width )/2) > ((location.x - (left - node_example_size.width / 2)) % gap) and
+            ((gap - node_example_size.height )/2) < ((location.y - (bottom - node_example_size.height / 2)) % gap) and
+            ((gap + node_example_size.height )/2) > ((location.y - (bottom - node_example_size.height / 2)) % gap) then
+
+            i = math.ceil((location.x - (left - node_example_size.width / 2)) / gap)
+            j = math.ceil((location.y - (bottom - node_example_size.height / 2)) / gap)
+
+            current_node_x = i
+            current_node_y = j
+
+            local node = main_mat[i][j]
+            local node_position = cc.p(node:getPosition())
+
+
+
+
+--            print("i="..i)
+--            print("j="..j)
+--            print("node_position.x="..node_position.x)
+--            print("node_position.y="..node_position.y)    
+--            print("location.x="..location.x)
+--            print("location.y="..location.y) 
+--
+--
+--            print("node_example_size.width="..node_example_size.width)
+--            print("left="..left)
+
+
+            onNode = true
+        else
+            onNode = false
+        end
     end
     
     
@@ -205,7 +262,8 @@ function TapMat.create(word, m ,n)
         
         light:setPosition(location)
 
-        checkTouchLocation(location)
+    --    checkTouchLocation(location)
+        checkTouchLocation_opt(location)
 
         if onNode then
             local currentNode = main_mat[current_node_x][current_node_y]
