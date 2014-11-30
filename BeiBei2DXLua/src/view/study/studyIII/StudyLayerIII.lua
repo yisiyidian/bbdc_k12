@@ -221,7 +221,7 @@ function StudyLayerIII.create()
                     local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))
                     mat:runAction(action2)
 
-                    local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+60, 900))
+                    local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+600, 900))
                     button_detail:runAction(action3)
 
                     local action4 = cc.DelayTime:create(0.5)
