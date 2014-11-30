@@ -203,7 +203,6 @@ end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
     for i,v in ipairs(self.levels) do
-        --s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == bookKey then
 
             return v
@@ -217,6 +216,7 @@ end
 function DataUser:getUserLevelData(chapterKey, levelKey)  
     --print('begin get user level data: size--'..#self.levels) 
     for i,v in ipairs(self.levels) do
+        --s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..'tested:'..v.isTested)
         --s_logd('getUserLevelData: '..v.bookKey .. v.chapterKey .. ', ' .. v.levelKey..',star:'..v.stars..',unlocked:'..v.isLevelUnlocked..','..v.userId..','..v.objectId)
         if v.chapterKey == chapterKey and v.levelKey == levelKey and v.bookKey == s_CURRENT_USER.bookKey then
             return v
@@ -298,6 +298,7 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
         levelData.chapterKey = chapterKey
         levelData.levelKey = levelKey
         levelData.stars = stars
+        levelData.isTested = 1
         if levelData.stars > 0 then
             levelData.isPassed = 1
         end
@@ -307,6 +308,7 @@ function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)
 --        print('-------- after insert table -----')
 --        print('levels_count:'..#self.levels)
     end
+    levelData.isTested = 1
     if levelData.stars < stars then
         levelData.stars = stars
     end
