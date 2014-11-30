@@ -63,6 +63,7 @@ function PopupModel.create(site)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
         end
     end
@@ -90,6 +91,7 @@ function PopupModel.create(site)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
 
             if site == Site_From_Friend_Guest then
             

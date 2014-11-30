@@ -76,7 +76,7 @@ function LevelLayer:levelStateManager()
     -- TODO switch state
 --         s_SCENE.levelLayerState = s_unlock_next_chapter_state
     --    s_CURRENT_USER.currentChapterKey = 'chapter1'
-    --    print('state:'..s_SCENE.levelLayerState)
+    print('state:'..s_SCENE.levelLayerState)
     if s_SCENE.levelLayerState == s_normal_level_state then
         print(s_SCENE.levelLayerState)
     elseif s_SCENE.levelLayerState == s_normal_retry_state then
@@ -208,6 +208,9 @@ function LevelLayer:updateCurrentChapterLayer()
     elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
         chapterDicKey = 'chapter2_'..(math.floor(string.sub(s_CURRENT_USER.currentLevelKey, 6) / 10))
         currentChapterLayer = self.chapterDic[chapterDicKey]
+    elseif s_CURRENT_USER.currentChapterKey == 'chapter3' then
+        chapterDicKey = 'chapter3_'..(math.floor(string.sub(s_CURRENT_USER.currentLevelKey, 6) / 10))
+        currentChapterLayer = self.chapterDic[chapterDicKey]
     end
 end
 
@@ -223,8 +226,8 @@ end
 
 -- scroll listview to show current level
 function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
---    chapterKey = 'chapter0'
---    levelKey = 'level8'
+--    chapterKey = 'chapter2'
+--    levelKey = 'level25'
     -- compute listView inner height
     local itemList = listView:getItems()
     local innerHeight = 0
@@ -258,10 +261,6 @@ function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
         local upHeight = item0:getContentSize().height+connection0_1:getContentSize().height+item1:getContentSize().height+connection1_2:getContentSize().height
         -- update upHeight seperately (chapter2 is splited into 3 parts)
         local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,'chapter2')
---        for i = 1, math.floor(string.sub(levelKey, 6) / 10)  do
---            local item = self.chapterDic['chapter2_'..(i-1)]
---            upHeight = upHeight + item:getContentSize().height
---        end
         
         local item2 = self.chapterDic['chapter2_'..math.floor(string.sub(levelKey, 6) / 10)]
         local currentVerticalPercent =(upHeight+ (string.sub(levelKey,6)+1)/#chapterConfig * item2:getContentSize().height * #chapterConfig/10) / innerHeight * 100
@@ -269,7 +268,21 @@ function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
         print('currentScroll Percent:'..currentVerticalPercent)
         listView:scrollToPercentVertical(currentVerticalPercent,0,false)
         listView:setInertiaScrollEnabled(true)
-    
+    elseif chapterKey == 'chapter3' then
+        local item0 = self.chapterDic['chapter0']
+        local connection0_1 = self.chapterDic['connection0_1']
+        local item1 = self.chapterDic['chapter1']
+        local connection1_2 = self.chapterDic['connection1_2']
+        local upHeight = item0:getContentSize().height+connection0_1:getContentSize().height+item1:getContentSize().height+connection1_2:getContentSize().height
+        local chapterConfig2 = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,'chapter2')
+        upHeight = upHeight + self.chapterDic['chapter2_0']:getContentSize().height * #chapterConfig2 / 10
+        local chapterConfig3 = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,'chapter3')
+
+        local item3 = self.chapterDic['chapter3_'..math.floor(string.sub(levelKey, 6) / 10)]
+        local currentVerticalPercent =(upHeight+ (string.sub(levelKey,6)+1)/#chapterConfig3 * item3:getContentSize().height * #chapterConfig3/10) / innerHeight * 100 + 3
+        print('currentScroll Percent:'..currentVerticalPercent)
+        listView:scrollToPercentVertical(currentVerticalPercent,0,false)
+        listView:setInertiaScrollEnabled(true)
     end
 end
 
@@ -345,17 +358,17 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
             item:setName(chapterKey..'_'..(i-1))
             listView:insertCustomItem(item,3+i)
         end
-    else
+    else -- chapter3
         local chapterIndex = string.sub(chapterKey, 8)
         local connectionLayer_repeat = require('view.level.connection.Connection_repeat')
-        self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)] = connectionLayer_repeat.create()
+        self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex] = connectionLayer_repeat.create()
         if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
-            self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:plotUnlockChapterAnimation()
+            self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex]:plotUnlockChapterAnimation()
         end
         local item_connection = ccui.Layout:create()
-        item_connection:setContentSize(self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:getContentSize())
-        self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)]:setPosition(cc.p(0,0))
-        item_connection:addChild(self.chapterDic['connection'..chapterIndex..'_'..(chapterIndex+1)])
+        item_connection:setContentSize(self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex]:getContentSize())
+        self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex]:setPosition(cc.p(0,0))
+        item_connection:addChild(self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex])
         listView:addChild(item_connection)
         for i = 1, #chapterConfig / 10 do
             local levelStyle3 = require('view.level.RepeatLevelLayer')
@@ -491,7 +504,7 @@ function LevelLayer:ctor()
     self:addChild(introLayer)
     
     local click_home = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             local IntroLayer = require("view.home.HomeLayer")
             local introLayer = IntroLayer.create()  
             s_SCENE:replaceGameLayer(introLayer)

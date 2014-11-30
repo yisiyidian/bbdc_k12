@@ -117,7 +117,7 @@ function TestLayerIV.create()
             else
                 s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                local alter = TestAlter.createFromFirstAlter()
+                local alter = TestAlter.createFromFirstAlter(1)
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
             end
@@ -164,7 +164,7 @@ function TestLayerIV.create()
             else
                 s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                local alter = TestAlter.createFromFirstAlter()
+                local alter = TestAlter.createFromFirstAlter(1)
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
             end
@@ -209,7 +209,7 @@ function TestLayerIV.create()
     end
 
     local button_donotknow_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             timeOut()   
             -- button sound
             playSound(s_sound_buttonEffect)

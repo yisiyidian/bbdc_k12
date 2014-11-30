@@ -36,38 +36,40 @@ function RightTopNode:ctor()
 
     local click_star = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)        
+        elseif eventType == ccui.TouchEventType.ended then
             local IntroLayer = require("popup/PopupStarInfo")
             introLayer_star = IntroLayer.create()  
             s_SCENE:popup(introLayer_star)
-            -- button sound
-            playSound(s_sound_buttonEffect)
-            
-
         end
     end
 
     local click_heart = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- click
+            -- button sound
+            playSound(s_sound_buttonEffect)  
+            
+        elseif eventType == ccui.TouchEventType.ended then
+                  -- click
             
             local IntroLayer = require("popup/PopupEnergyInfo")
             introLayer_heart = IntroLayer.create()  
             s_SCENE:popup(introLayer_heart)
-            
-            -- button sound
-            playSound(s_sound_buttonEffect)
 
         end 
     end
 
     local click_word = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then    
+        if eventType == ccui.TouchEventType.began then 
+             -- button sound
+            playSound(s_sound_buttonEffect)    
+        elseif eventType == ccui.TouchEventType.ended then      
             local IntroLayer = require("view/CheckIn")
             introLayer_day = IntroLayer.create(self)  
             s_SCENE:popup(introLayer_day)
             
-            -- button sound
-            playSound(s_sound_buttonEffect)
+
         end
     end
 

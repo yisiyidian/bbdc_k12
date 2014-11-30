@@ -28,6 +28,7 @@ function HomeLayer.create()
     local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
     local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
     local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+    local redHint = nil
     -- data end
     
     local list = {}
@@ -59,6 +60,8 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+        elseif eventType == ccui.TouchEventType.ended then
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
@@ -95,6 +98,8 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+            elseif eventType == ccui.TouchEventType.ended then
 
             -- level 10
             local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
@@ -111,6 +116,7 @@ function HomeLayer.create()
                 s_CorePlayManager.enterFriendLayer()
 
             else
+            
                 if s_CURRENT_USER.isGuest == 1 then
                     local Item_popup = require("popup/PopupModel")
                     local item_popup = Item_popup.create(Site_From_Friend_Guest)  
@@ -147,11 +153,33 @@ function HomeLayer.create()
                     print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
                     s_CURRENT_USER:getFriendsInfo()
                     print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
-                    local redHint = nil
+
                     if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
                         redHint = cc.Sprite:create('image/friend/fri_infor.png')
                         redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
                         button_friend:addChild(redHint)
+                        
+                        -- level 10
+                        local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
+                        local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
+                        local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
+                        local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
+                        local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
+
+
+                        if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
+                            judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
+                            judge_Whether_nil(toefl_date)  == 1) and s_CURRENT_USER.isGuest == 0 then
+
+                            if redHint ~= nil then
+                                redHint:setVisible(false)
+                            end
+                        else
+                            if redHint ~= nil then
+                                redHint:setVisible(true)
+                            end
+                        end
+                       
                         local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
                         num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
                         redHint:addChild(num)
@@ -213,7 +241,7 @@ function HomeLayer.create()
     backColor:addChild(label)
     
     local button_play_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
+        if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
@@ -239,7 +267,7 @@ function HomeLayer.create()
     local button_data
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
+        if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
             -- button sound
             playSound(s_sound_buttonEffect)
             
@@ -319,7 +347,7 @@ function HomeLayer.create()
     end
     for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then
+            if eventType == ccui.TouchEventType.ended then
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     s_CorePlayManager.enterBookLayer()

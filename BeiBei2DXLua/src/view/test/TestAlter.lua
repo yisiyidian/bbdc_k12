@@ -10,8 +10,10 @@ local showGirlAndStar
 local main = nil
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local button_goon_clicked_mark = 0
+local main_index = nil
 
-function TestAlter.createFromFirstAlter()
+function TestAlter.createFromFirstAlter(index)
+    main_index = index
     
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
@@ -45,7 +47,9 @@ function TestAlter.createFromFirstAlter()
     return main
 end
 
-function TestAlter.createFromSecondAlter()
+function TestAlter.createFromSecondAlter(index)
+    main_index = index
+
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
@@ -74,7 +78,7 @@ end
 
 
 showGirlAndStar = function()
-    local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
+    local back = cc.Sprite:create("image/alter/alter_test"..main_index..".png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
 --    s_SCENE:popup(back)
     main:addChild(back)
@@ -187,7 +191,7 @@ showGirlAndStar = function()
 end
 
 showDetailInfo = function()
-    local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
+    local back = cc.Sprite:create("image/alter/alter_test"..main_index..".png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
     
@@ -210,7 +214,7 @@ showDetailInfo = function()
     local button_array = {}
     local lastSelectIndex = nil
     local showSelectWordInfo = function(sender,eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             selectWordMeaning:setString(s_WordPool[s_CorePlayManager.wordList[sender.tag]].wordMeaningSmall)
             
             if button_array[lastSelectIndex].name == "right" then
@@ -262,10 +266,10 @@ showDetailInfo = function()
     if lastSelectIndex == nil then
         lastSelectIndex = 1
     end
-    showSelectWordInfo(button_array[lastSelectIndex], ccui.TouchEventType.began)
+    showSelectWordInfo(button_array[lastSelectIndex], ccui.TouchEventType.ended)
     
     local button_replayall_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then            
+        if eventType == ccui.TouchEventType.ended then
             s_CorePlayManager.leaveTestLayer_replay()
             s_SCENE.popupLayer.isOtherAlter = false
             -- button sound
@@ -274,7 +278,7 @@ showDetailInfo = function()
     end
     
     local button_replaywrong_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()
@@ -285,7 +289,7 @@ showDetailInfo = function()
     end
     
     local button_continue_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.leaveTestLayer()
             

@@ -19,7 +19,7 @@ function BookLayer.create()
     layer:addChild(backColor)    
     
     local click_back = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             --whether bookKey == nil
             s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
             s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
@@ -72,7 +72,7 @@ function BookLayer.create()
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then    
+            if eventType == ccui.TouchEventType.ended then
                 -- button sound
                 playSound(s_sound_buttonEffect)   
                 local affirm = function()
