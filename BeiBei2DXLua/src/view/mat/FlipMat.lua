@@ -227,6 +227,14 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
                         current_dir = dir_right
                     end
                     
+
+--                    print("i="..i)
+--                    print("j="..j)
+--                    print("node_position.x="..node_position.x)
+--                    print("node_position.y="..node_position.y)    
+--                    print("location.x="..location.x)
+--                    print("location.y="..location.y) 
+                    
                     onNode = true
                     return
                 end
@@ -234,36 +242,66 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
         end
         onNode = false
     end
+--    local gap       = 132
+--    local left      = (main_width - (main_m-1)*gap) / 2
+--    local bottom    = left
+    
     
     local checkTouchLocation_opt = function(location)
-        for i = 1, main_m do
-            for j = 1, main_n do
-                local node = main_mat[i][j]
-                local node_position = cc.p(node:getPosition())
-                local node_size = node:getContentSize()
-
-                if cc.rectContainsPoint(node:getBoundingBox(), location) then
-                    current_node_x = i
-                    current_node_y = j
-
-                    local x = location.x - node_position.x
-                    local y = location.y - node_position.y
-                    if y > x and y > -x then
-                        current_dir = dir_up
-                    elseif y < x and y < -x then
-                        current_dir = dir_down
-                    elseif y > x and y < -x then
-                        current_dir = dir_left
-                    else
-                        current_dir = dir_right
-                    end
-
-                    onNode = true
-                    return
-                end
+        local i = 0
+        local j = 0
+        
+        local node_example = main_mat[1][1]
+        local node_example_size = node_example:getContentSize()
+    
+        if location.x < (left - node_example_size.width / 2) or location.x > (main_width - (left - node_example_size.width / 2)) or
+            location.y < (bottom - node_example_size.height / 2) or location.y > (main_height - (bottom - node_example_size.height / 2)) then
+              onNode = false
+        elseif  ((gap - node_example_size.width )/2) < ((location.x - (left - node_example_size.width / 2)) % gap) and
+            ((gap + node_example_size.width )/2) > ((location.x - (left - node_example_size.width / 2)) % gap) and
+            ((gap - node_example_size.height )/2) < ((location.y - (bottom - node_example_size.height / 2)) % gap) and
+            ((gap + node_example_size.height )/2) > ((location.y - (bottom - node_example_size.height / 2)) % gap) then
+        
+            i = math.ceil((location.x - (left - node_example_size.width / 2)) / gap)
+            j = math.ceil((location.y - (bottom - node_example_size.height / 2)) / gap)
+            
+            current_node_x = i
+            current_node_y = j
+            
+            local node = main_mat[i][j]
+            local node_position = cc.p(node:getPosition())
+            
+            local x = location.x - node_position.x
+            local y = location.y - node_position.y
+            
+            if y > x and y > -x then
+                current_dir = dir_up
+            elseif y < x and y < -x then
+                current_dir = dir_down
+            elseif y > x and y < -x then
+                current_dir = dir_left
+            else
+                current_dir = dir_right
             end
+            
+--            print("i="..i)
+--            print("j="..j)
+--            print("node_position.x="..node_position.x)
+--            print("node_position.y="..node_position.y)    
+--            print("location.x="..location.x)
+--            print("location.y="..location.y) 
+--            
+--            
+--            print("node_example_size.width="..node_example_size.width)
+--            print("main_width="..main_width)
+--            print("left="..left)
+               
+                  
+            onNode = true
+        else
+            onNode = false
         end
-        onNode = false
+
     end
     
     onTouchBegan = function(touch, event)
@@ -278,8 +316,9 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
         
         startTouchLocation = location
         lastTouchLocation = location
-        
-        checkTouchLocation(location)
+
+ --      checkTouchLocation(location)
+        checkTouchLocation_opt(location)   
         
         if onNode then
             startNode = main_mat[current_node_x][current_node_y]
@@ -330,7 +369,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
             return
         end
     
-        checkTouchLocation(location)
+ --      checkTouchLocation(location)
+        checkTouchLocation_opt(location)  
 
         if startAtNode then
             local x = location.x - startTouchLocation.x
