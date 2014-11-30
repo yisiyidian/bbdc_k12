@@ -63,6 +63,7 @@ function SummaryBossLayerIII.create(levelConfig)
 
     layer:initWordList(levelConfig)
     layer:initBossLayer_back(levelConfig)
+    layer:initMapInfo()
 
     local loadingTime = 0
     local loadingState = 0
@@ -74,7 +75,7 @@ function SummaryBossLayerIII.create(levelConfig)
             loadingState = 2
         elseif loadingTime > 1.5 and loadingState < 4 then
             loadingState = 4
-        elseif loadingTime > 2.0 and loadingState < 6 then
+        elseif loadingTime > 1.8 and loadingState < 6 then
             loadingState = 6    
         end       
         if loadingState == 0 then
@@ -83,7 +84,7 @@ function SummaryBossLayerIII.create(levelConfig)
         elseif loadingState == 2 then
             loadingState = 3
 
-            layer:initMapInfo()
+            
         elseif loadingState == 4 then
             loadingState = 5
             layer:initBossLayer_boss(levelConfig)
