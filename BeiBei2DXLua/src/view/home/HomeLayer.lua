@@ -59,6 +59,8 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+        elseif eventType == ccui.TouchEventType.ended then
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
@@ -95,6 +97,8 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+            elseif eventType == ccui.TouchEventType.ended then
 
             -- level 10
             local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
@@ -213,7 +217,7 @@ function HomeLayer.create()
     backColor:addChild(label)
     
     local button_play_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
+        if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
@@ -239,7 +243,7 @@ function HomeLayer.create()
     local button_data
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
+        if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
             -- button sound
             playSound(s_sound_buttonEffect)
             
@@ -319,7 +323,7 @@ function HomeLayer.create()
     end
     for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then
+            if eventType == ccui.TouchEventType.ended then
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     s_CorePlayManager.enterBookLayer()

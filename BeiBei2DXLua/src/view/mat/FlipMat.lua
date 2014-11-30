@@ -273,8 +273,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
             current_node_x = i
             current_node_y = j
             
-            local node = main_mat[i][j]
-            local node_position = cc.p(node:getPosition())
+            local node_choose = main_mat[i][j]
+            local node_position = cc.p(node_choose:getPosition())
             
             local x = location.x - node_position.x
             local y = location.y - node_position.y

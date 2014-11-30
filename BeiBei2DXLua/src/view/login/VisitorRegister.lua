@@ -96,6 +96,7 @@ showWindow = function()
         if eventType == ccui.TouchEventType.began then       
             -- button sound
             playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
             main.close("register")
         end
     end
@@ -115,6 +116,7 @@ showWindow = function()
         if eventType == ccui.TouchEventType.began then       
             -- button sound
             playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
             main.close("improve")
 
         end
@@ -135,6 +137,7 @@ showWindow = function()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
             main.close("close")
         end
     end
