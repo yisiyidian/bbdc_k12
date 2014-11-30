@@ -20,7 +20,20 @@ function PopupStarInfo:ctor()
    end
 
     local  starNumber = s_CURRENT_USER:getUserBookObtainedStarCount()
-    local  totalNumber = 255
+    
+    local index = 0
+    local sum = 0
+    while index < 4 do
+        local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey, 'chapter'..index)
+        for i = 1, #chapterConfig do
+            if chapterConfig[i]['type'] ~= 1 then
+                sum = sum + 3
+            end
+        end
+        index = index + 1
+    end
+
+    local  totalNumber = sum
     
     self.ccbPopupStarInfo = {}
 
