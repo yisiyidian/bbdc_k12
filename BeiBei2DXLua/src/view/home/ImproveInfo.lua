@@ -89,11 +89,14 @@ showLogin = function()
     back_login:addChild(password)
 
     local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then    
+        if eventType == ccui.TouchEventType.began then          
             cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)   
 
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+        elseif eventType == ccui.TouchEventType.ended then
+            
             if validateUsername(username.textField:getStringValue()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
@@ -152,6 +155,7 @@ showLogin = function()
             cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)   
             -- button sound
             playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
             main.close()
         end
     end

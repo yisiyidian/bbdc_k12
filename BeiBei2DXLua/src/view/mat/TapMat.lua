@@ -158,8 +158,8 @@ function TapMat.create(word, m ,n)
             current_node_x = i
             current_node_y = j
 
-            local node = main_mat[i][j]
-            local node_position = cc.p(node:getPosition())
+--            local node = main_mat[i][j]
+--            local node_position = cc.p(node:getPosition())
 
 
 

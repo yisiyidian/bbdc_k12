@@ -37,6 +37,7 @@ function FriendPopup.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
+        elseif   eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
         end
     end
@@ -64,7 +65,7 @@ function FriendPopup.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-            
+        elseif   eventType == ccui.TouchEventType.ended then    
             local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
             local action2 = cc.EaseBackOut:create(action1)
             popup_friend:runAction(action2) 

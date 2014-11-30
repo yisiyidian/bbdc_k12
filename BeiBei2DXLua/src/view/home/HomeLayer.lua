@@ -59,6 +59,8 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+        elseif eventType == ccui.TouchEventType.ended then
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
@@ -95,6 +97,8 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
+            
+            elseif eventType == ccui.TouchEventType.ended then
 
             -- level 10
             local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
