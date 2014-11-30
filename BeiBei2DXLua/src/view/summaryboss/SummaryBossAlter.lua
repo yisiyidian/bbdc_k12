@@ -149,6 +149,7 @@ function SummaryBossAlter:lose2()
     
     local function challengeAgain(sender)
         s_logd("again")
+        s_SCENE.levelLayerState = s_normal_retry_state
         local level = require('view.LevelLayer')
         local layer = level.create()
         s_SCENE:replaceGameLayer(layer) 
