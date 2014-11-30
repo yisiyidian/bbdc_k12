@@ -23,8 +23,8 @@ function Connection_repeat:ctor()
 end
 
 function Connection_repeat:plotUnlockChapterAnimation()
-    local leftCloud = self.ccbConnection_repeat['connection_left_cloud']
-    local rightCloud = self.ccbConnection_repeat['connection_right_cloud']
+    local leftCloud = self.ccbConnection_repeat['left']
+    local rightCloud = self.ccbConnection_repeat['right']
     local action1 = cc.MoveBy:create(0.5, cc.p(-leftCloud:getContentSize().width,leftCloud:getPositionY()))
     local action2 = cc.MoveBy:create(0.5, cc.p(leftCloud:getContentSize().width, rightCloud:getPositionY()))
     leftCloud:runAction(action1)
