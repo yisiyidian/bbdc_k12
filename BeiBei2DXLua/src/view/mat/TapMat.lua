@@ -121,14 +121,14 @@ function TapMat.create(word, m ,n)
                     current_node_y = j
                     onNode = true
                     
-                    print("i="..i)
-                    print("j="..j)
-                    print("node_position.x="..node_position.x)
-                    print("node_position.y="..node_position.y)    
-                    print("location.x="..location.x)
-                    print("location.y="..location.y) 
-                    
-                    print("node_example_size.width="..node_position_size.width)
+--                    print("i="..i)
+--                    print("j="..j)
+--                    print("node_position.x="..node_position.x)
+--                    print("node_position.y="..node_position.y)    
+--                    print("location.x="..location.x)
+--                    print("location.y="..location.y) 
+--                    
+--                    print("node_example_size.width="..node_position_size.width)
                     
                     return
                 end
@@ -164,16 +164,16 @@ function TapMat.create(word, m ,n)
 
 
 
-            print("i="..i)
-            print("j="..j)
-            print("node_position.x="..node_position.x)
-            print("node_position.y="..node_position.y)    
-            print("location.x="..location.x)
-            print("location.y="..location.y) 
-
-
-            print("node_example_size.width="..node_example_size.width)
-            print("left="..left)
+--            print("i="..i)
+--            print("j="..j)
+--            print("node_position.x="..node_position.x)
+--            print("node_position.y="..node_position.y)    
+--            print("location.x="..location.x)
+--            print("location.y="..location.y) 
+--
+--
+--            print("node_example_size.width="..node_example_size.width)
+--            print("left="..left)
 
 
             onNode = true
@@ -262,8 +262,8 @@ function TapMat.create(word, m ,n)
         
         light:setPosition(location)
 
-        checkTouchLocation(location)
-
+    --    checkTouchLocation(location)
+        checkTouchLocation_opt(location)
 
         if onNode then
             local currentNode = main_mat[current_node_x][current_node_y]
