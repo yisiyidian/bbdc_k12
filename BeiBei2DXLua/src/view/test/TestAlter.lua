@@ -22,15 +22,10 @@ function TestAlter.createFromFirstAlter()
         s_SCENE.popupLayer.isOtherAlter = true
     end
 
---    local isPassed = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isPassed
---    
---    print(isPassed)
---    if isPassed == 0 then
---        print("ziaoang insert db")
---        s_CorePlayManager.recordWordProciency()
---    else
---        print("do not insert db")
---    end
+    local isTested = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isTested
+    if isTested == 0 then
+        s_CorePlayManager.recordWordProciency()
+    end
     
     showGirlAndStar()
     button_goon_clicked_mark = 0

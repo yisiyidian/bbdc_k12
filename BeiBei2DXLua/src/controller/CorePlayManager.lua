@@ -148,10 +148,12 @@ end
 
 function CorePlayManager.recordWordProciency()
     for i = 1, #CorePlayManager.wordList do
+        s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + 1
         if CorePlayManager.wordProficiency[i] == 0 then
             s_logd("word: "..CorePlayManager.wordList[i].." pro:0")
             s_DATABASE_MGR.insertTable_DataWordProciency(CorePlayManager.wordList[i], 0)
         else
+            s_CURRENT_USER.masterCount = s_CURRENT_USER.masterCount + 1
             s_logd("word: "..CorePlayManager.wordList[i].." pro:5")
             s_DATABASE_MGR.insertTable_DataWordProciency(CorePlayManager.wordList[i], 5)
         end
