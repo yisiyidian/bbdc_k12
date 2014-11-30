@@ -72,9 +72,9 @@ function PopupReviewBoss:onGoButtonClicked()
             s_CorePlayManager.enterReviewBossLayer()  
             
             -- energy cost "cost"
-            s_SCENE:callFuncWithDelay(0.3,function()
-                playSound(s_sound_cost)
-            end)
+--            s_SCENE:callFuncWithDelay(0.3,function()
+--                playSound(s_sound_cost)
+--            end)
 --        else 
 --            local energyInfoLayer = require('popup.PopupEnergyInfo')
 --            local layer = energyInfoLayer.create()
