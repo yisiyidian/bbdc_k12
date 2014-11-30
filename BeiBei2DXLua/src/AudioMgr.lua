@@ -43,9 +43,14 @@ function getWordSoundFileName(word)
 end
 
 function getWordSoundFilePath(word)
-    local filename = 'res/words/' .. getWordSoundFileName(word)
-    local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
-    return localPath
+    local filename = getWordSoundFileName(word)
+    local localPath = cc.FileUtils:getInstance():fullPathForFilename('res/words/' .. filename)
+    if cc.FileUtils:getInstance():isFileExist(localPath) then
+        return localPath
+    end
+
+    local downloadPath = cc.FileUtils:getInstance():getWritablePath() .. filename
+    return downloadPath
 end
 
 function playWordSound(word)

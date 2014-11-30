@@ -29,7 +29,15 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     self.ccb['levelKey'] = levelKey
     self.ccb['popup_summary_success'] = self.ccbPopupSummarySuccess
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('res/ccb/popup_summary_success.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
+    local node
+
+    if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
+        node = CCBReaderLoad('res/ccb/popup_summary_success.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
+    elseif s_CURRENT_USER.currentSelectedChapterKey == 'chapter1' then
+        node = CCBReaderLoad('res/ccb/popup_summary_success2.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
+    else
+        node = CCBReaderLoad('res/ccb/popup_summary_success3.ccbi',proxy,self.ccbPopupSummarySuccess, self.ccb)
+    end
     
     -- set title
     self.ccbPopupSummarySuccess['summary_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_NORMAL_START_PLAY_SUMMARY_BOSS))
@@ -67,7 +75,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
     
     -- button sound
     playSound(s_sound_buttonEffect)
-    showProgressHUD()
+    showProgressHUD('正在加载关卡')
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
         if levelData.isPassed ~= 1 then

@@ -90,6 +90,12 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, typeIndex)
     else
         button_soundmark_us:setVisible(false)
     end
+    
+    if typeIndex == 2 or typeIndex == 3 then
+        button_wordname:setColor(cc.c4b(255,255,255,255))
+        button_soundmark_us:setColor(cc.c4b(255,255,255,255))
+        button_soundmark_en:setColor(cc.c4b(255,255,255,255))
+    end
 
     return main    
 end

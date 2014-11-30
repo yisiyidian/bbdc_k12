@@ -26,7 +26,14 @@ function PopupReviewBoss:ctor()
     self.ccb = {}
     self.ccb['popup_review_boss'] = self.ccbPopupReviewBoss
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('ccb/popup_review_boss.ccbi',proxy,self.ccbPopupReviewBoss,self.ccb)
+    local node
+    if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
+        node = CCBReaderLoad('ccb/popup_review_boss.ccbi',proxy,self.ccbPopupReviewBoss,self.ccb)
+    elseif s_CURRENT_USER.currentSelectedChapterKey == 'chapter1' then
+        node = CCBReaderLoad('ccb/popup_review_boss2.ccbi',proxy,self.ccbPopupReviewBoss,self.ccb)
+    else
+        node = CCBReaderLoad('ccb/popup_review_boss3.ccbi',proxy,self.ccbPopupReviewBoss,self.ccb)
+    end
     self:addChild(node)
     
     -- set title

@@ -300,6 +300,24 @@ function DataManager.getLevelConfig(bookKey, chapterKey, levelKey)
     end
 end
 
+function DataManager.getSummaryBossIncrementsOfChapter(chapterKey)
+    local chapterIndex = string.sub(chapterKey, 8)
+    local index = 0
+    local increments = 0
+    while index - chapterIndex < 0 do
+        local chapterConfig = DataManager.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
+        local lastBossStar = 0
+        for i = 1, #chapterConfig do
+            if chapterConfig[i]['type'] == 1 then
+                lastBossStar = chapterConfig[i]['summary_boss_stars']
+            end     
+        end
+        increments = increments + lastBossStar
+        index = index + 1
+    end
+    return increments
+end
+
 function DataManager.getChapterConfig(bookKey, chapterKey)
     local chapterConfig = {}
     local index = 0

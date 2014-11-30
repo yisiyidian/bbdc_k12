@@ -39,6 +39,9 @@ function StudyLayerII.create()
     local mat
     local soundMark
     
+    local label_word_huadanci
+    local label_word_zaikanci
+    
     local viewIndex= 1
     
     -- time
@@ -130,9 +133,10 @@ function StudyLayerII.create()
             -- button sound
             playSound(s_sound_buttonEffect)
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            if button_changeview:getTitleText() == "去划单词" then
+            if label_word_huadanci:isVisible() then
                 local change = function()
-                    button_changeview:setTitleText("再看一次")
+                    label_word_huadanci:setVisible(false)
+                    label_word_zaikanci:setVisible(true)
                     viewIndex = 3
 
                     local action1 = cc.MoveTo:create(0.5,cc.p(-bigWidth/2, 500))
@@ -152,7 +156,8 @@ function StudyLayerII.create()
             else
                 s_CorePlayManager.unfamiliarWord()
             
-                button_changeview:setTitleText("去划单词")
+                label_word_huadanci:setVisible(true)
+                label_word_zaikanci:setVisible(false)
                 viewIndex = 2
 
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 500))
@@ -183,7 +188,7 @@ function StudyLayerII.create()
                 else
                     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
-                    local alter = TestAlter.createFromSecondAlter()
+                    local alter = TestAlter.createFromSecondAlter(2)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end
@@ -261,13 +266,28 @@ function StudyLayerII.create()
                 button_detail:addChild(button_reddot)
 
                 button_changeview = ccui.Button:create("image/button/button_changeview21.png", "image/button/button_changeview22.png", "")
-                button_changeview:setTitleText("去划单词")
                 button_changeview:setTitleFontSize(30)
                 button_changeview:setPosition(bigWidth/2, 50)
                 button_changeview:addTouchEventListener(button_changeview_clicked)
+                
+                local buttonSize = button_changeview:getContentSize()
+
+                label_word_huadanci = cc.Label:createWithSystemFont("去划单词", "宋体", 30, buttonSize,cc.TEXT_ALIGNMENT_CENTER,cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
+                label_word_huadanci:setColor(cc.c3b(255, 255, 255))
+                label_word_huadanci:setAnchorPoint(0,0)
+                label_word_huadanci:setVisible(true)
+
+                label_word_zaikanci = cc.Label:createWithSystemFont("再看一次", "宋体", 30, buttonSize,cc.TEXT_ALIGNMENT_CENTER,cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
+                label_word_zaikanci:setColor(cc.c3b(255, 255, 255))
+                label_word_zaikanci:setAnchorPoint(0,0)
+                label_word_zaikanci:setVisible(false)
+
+                button_changeview:addChild(label_word_huadanci)
+                button_changeview:addChild(label_word_zaikanci)
+
                 back_bigchair:addChild(button_changeview)
                 
-                local wordDetailInfo = WordDetailInfo.create(word)
+                local wordDetailInfo = WordDetailInfo.create(word, 2)
                 wordDetailInfo:setPosition(back:getContentSize().width/2, 0)
                 back:addChild(wordDetailInfo)
             end
