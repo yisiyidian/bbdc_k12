@@ -32,7 +32,6 @@ function ReviewBossLayerIII.create()
             pauseLayer:setPosition(s_LEFT_X, 0)
             s_SCENE.popupLayer:addChild(pauseLayer)
             s_SCENE.popupLayer.listener:setSwallowTouches(true)
-
             --button sound
             playSound(s_sound_buttonEffect)
         end
@@ -56,7 +55,6 @@ function ReviewBossLayerIII.create()
                 currentWordIndex = i
             end
         end
-
         table.remove(tmp, currentWordIndex)
 
         local randomIndex = math.random(1, #tmp)
@@ -114,9 +112,9 @@ function ReviewBossLayerIII.create()
     effect1:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(effect1)   
 
-    local effect2 = cc.Sprite:create("image/reviewbossscene/reviewbossIII_effect2.png")
-    effect2:setPosition(s_DESIGN_WIDTH - 50, 100)
-    layer:addChild(effect2)   
+--    local effect2 = cc.Sprite:create("image/reviewbossscene/reviewbossIII_effect2.png")
+--    effect2:setPosition(s_DESIGN_WIDTH - 50, 100)
+--    layer:addChild(effect2)   
 
     local checkTouchIndex = function(location)
         for i = 1, #wordToBeTested do
@@ -195,6 +193,7 @@ function ReviewBossLayerIII.create()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
                 wordMeaningBeTestedNow:setString(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall)
             else
+                rbCurrentWordIndex = rbCurrentWordIndex + 1
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
                 local showAlter = function()

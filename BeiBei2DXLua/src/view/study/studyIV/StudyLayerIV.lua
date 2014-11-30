@@ -104,7 +104,7 @@ function StudyLayerIV.create()
     layer:addChild(label_wordmeaningSmall)
 
     button_detail_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.touchEventBlockLayer.lockTouch()
             if button_detail:getRotation() == 0 then
                 s_CorePlayManager.unfamiliarWord()
@@ -197,7 +197,7 @@ function StudyLayerIV.create()
     layer:addChild(mat)
 
     button_changeview_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             s_SCENE.touchEventBlockLayer.lockTouch()
@@ -244,7 +244,7 @@ function StudyLayerIV.create()
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
             local addWordDetailInfo = function()
-                soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
+                soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn, 1)
                 soundMark:setPosition(bigWidth/2, soundMark_y)
                 mountain:addChild(soundMark)
                 

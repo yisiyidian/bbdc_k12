@@ -63,6 +63,17 @@ function PopupNormalLevel:ctor(levelKey)
     local proxy = cc.CCBProxy:create()
     local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
     node:setPosition(0,200)
+--    local content = self.ccbPopupNormalLevel['_content']   -- get panel
+--    -- set popup style 
+--    if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
+--        local topIcon = cc.Sprite:create('ccb/ccbResources/popup/tanchu_hawaii_head.png')
+--        topIcon:setPosition(content:getContentSize().width/2,content:getContentSize().height)
+--        content:addChild(topIcon)
+--        local bottomIcon = cc.Sprite:create('ccb/ccbResources/popup/tanchu_hawaii_background.png')
+--        bottomIcon:setPosition(content:getContentSize().width/2,content:getContentSize().height*0.1)
+--        content:addChild(bottomIcon)
+--    end
+    
     --s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,levelKey,1)
     -- plot stars
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)

@@ -77,18 +77,29 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
                 playSound(s_sound_cost)
             end)
         end
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
-        local summaryboss = require('view.summaryboss.SummaryBossLayer')
-        local layer = summaryboss.create(levelConfig)
-        layer:setAnchorPoint(0.5,0)
-        
-        s_SCENE:replaceGameLayer(layer)
-        hideProgressHUD()
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
+        if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
+            local summaryboss = require('view.summaryboss.SummaryBossLayer')
+            local layer = summaryboss.create(levelConfig)
+            layer:setAnchorPoint(0.5,0)
+            s_SCENE:replaceGameLayer(layer)
+        elseif s_CURRENT_USER.currentSelectedChapterKey == 'chapter1' then
+            local summaryboss = require('view.summaryboss.SummaryBossLayerII')
+            local layer = summaryboss.create(levelConfig)
+            layer:setAnchorPoint(0.5,0)
+            s_SCENE:replaceGameLayer(layer)
+        else
+            local summaryboss = require('view.summaryboss.SummaryBossLayerIII')
+            local layer = summaryboss.create(levelConfig)
+            layer:setAnchorPoint(0.5,0)
+            s_SCENE:replaceGameLayer(layer)
+        end
 --    else 
 --        local energyInfoLayer = require('popup.PopupEnergyInfo')
 --        local layer = energyInfoLayer.create()
 --        s_SCENE:popup(layer)
     end
+    hideProgressHUD()
 end
 
 return PopupSummarySuccess

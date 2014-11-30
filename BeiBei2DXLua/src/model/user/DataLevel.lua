@@ -17,6 +17,7 @@ function DataLevel:ctor()
 --    self.levelIndex = 0
     self.isLevelUnlocked = 0
     self.isPlayed = 0
+    self.isTested = 0
     self.isPassed = 0
     self.stars = 0
 --    self.hearts = 0

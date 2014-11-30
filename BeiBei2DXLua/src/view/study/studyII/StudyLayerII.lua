@@ -245,7 +245,7 @@ function StudyLayerII.create()
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
             local addWordDetailInfo = function()
-                soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn)
+                soundMark = SoundMark.create(wordName, wordSoundMarkAm, wordSoundMarkEn, 2)
                 soundMark:setPosition(bigWidth/2, 500)
                 back_bigchair:addChild(soundMark)
                 

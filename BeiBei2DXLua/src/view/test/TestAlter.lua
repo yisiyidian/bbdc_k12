@@ -22,7 +22,10 @@ function TestAlter.createFromFirstAlter()
         s_SCENE.popupLayer.isOtherAlter = true
     end
 
-    s_CorePlayManager.recordWordProciency()
+    local isTested = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isTested
+    if isTested == 0 then
+        s_CorePlayManager.recordWordProciency()
+    end
     
     showGirlAndStar()
     button_goon_clicked_mark = 0
@@ -261,7 +264,6 @@ showDetailInfo = function()
     end
     showSelectWordInfo(button_array[lastSelectIndex], ccui.TouchEventType.began)
     
-    
     local button_replayall_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then            
             s_CorePlayManager.leaveTestLayer_replay()
@@ -344,8 +346,8 @@ showDetailInfo = function()
             -- no this situation
         end
     else
-        local passed = false
-        if passed then
+        local isPassed = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isPassed
+        if isPassed then
             if s_CorePlayManager.currentScore > 0 then
                 if wrong_num > 0 then
                     button_replayall:setVisible(true)
@@ -398,7 +400,6 @@ showDetailInfo = function()
             end
         end
     end
-    
 end
 
 return TestAlter

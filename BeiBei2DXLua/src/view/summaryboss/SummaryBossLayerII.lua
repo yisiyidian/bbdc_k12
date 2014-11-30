@@ -66,12 +66,40 @@ function SummaryBossLayerII.create(levelConfig)
     local onTouchEnded
 
     layer:initWordList(levelConfig)
-    layer:initBossLayer(levelConfig)
-    layer:initMap()
+    layer:initBossLayer_back(levelConfig)
 
+    local loadingTime = 0
+    local loadingState = 0
+    
     --update
     local function update(delta)
+        
+        if loadingTime > delta and loadingState < 2 then
+            loadingState = 2
+        elseif loadingTime > 1.5 and loadingState < 4 then
+            loadingState = 4
+        elseif loadingTime > 2.0 and loadingState < 6 then
+            loadingState = 6    
+        end       
+        if loadingState == 0 then
+            loadingState = 1
+            layer:initBossLayer_girl(levelConfig)
+        elseif loadingState == 2 then
+            loadingState = 3
 
+            layer:initMapInfo()
+        elseif loadingState == 4 then
+            loadingState = 5
+            layer:initBossLayer_boss(levelConfig)
+        elseif loadingState == 6 then
+            loadingState = 7
+
+            layer:initMap()
+        end
+        if loadingTime < 5 then
+            loadingTime = loadingTime + delta
+        end
+        
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return
         end
@@ -366,14 +394,10 @@ function SummaryBossLayerII.create(levelConfig)
                             killedCrabCount = 0
                             for m = 1, 5 do
                                 for n = 1, 5 do
-                                    local remove = cc.CallFunc:create(function() 
-                                        layer.coconut[m][n]:removeFromParent(true)    
-                                    end,{})
-                                    layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
+                                    layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7))))
                                 end
                             end
                             layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
-                                layer.coconut = {}
                                 layer:initMap()
                             end,{})))
                         end
@@ -451,14 +475,8 @@ function SummaryBossLayerII:updateWord(selectStack)
     end
 end
 
-function SummaryBossLayerII:initBossLayer(levelConfig)
+function SummaryBossLayerII:initBossLayer_back(levelConfig)
     self.globalLock = true
-    --    local unlock = cc.CallFunc:create(function() 
-    --        
-    --        self:initMap()
-    --    end,{})
-    --    self:runAction(cc.Sequence:create(cc.DelayTime:create(1.5),unlock))
-
 
     --stage info
     self.girlAfraid = false
@@ -478,37 +496,38 @@ function SummaryBossLayerII:initBossLayer(levelConfig)
     local back = cc.Sprite:create("image/summarybossscene/summaryboss_dierguan_back.png")    
     back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
     self:addChild(back)
-    
+
     local backEffect = sp.SkeletonAnimation:create('spine/summaryboss/second-level-summary-light.json','spine/summaryboss/second-level-summary-light.atlas',1)
     backEffect:setPosition(-30 - s_LEFT_X,0.675 * back:getContentSize().height)
     backEffect:setAnimation(0,'animation',true)
     back:addChild(backEffect)
 
-    local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
-    self:addChild(blinkBack,0)
-    local wait = cc.DelayTime:create(2.3 + self.totalTime * 0.9)
-    local afraid = cc.CallFunc:create(function() 
-        if self.currentBlood > 0 then
-            self.girlAfraid = true
-            self.girl:setAnimation(0,'girl-afraid',true)
-            -- deadline "Mechanical Clock Ring "
-            playSound(s_sound_Mechanical_Clock_Ring)
+
+    --add hole
+    local hole = {}    
+    local gap = 120
+    local left = (s_DESIGN_WIDTH - (5 - 1)*gap)/2
+    local bottom = 220
+    for i = 1, 5 do
+        hole[i] = {}
+        for j = 1, 5 do
+            hole[i][j] = cc.Sprite:create("image/summarybossscene/hole_II.png")
+            hole[i][j]:setScale(0.92)
+            hole[i][j]:setPosition(left + gap * (i - 1), bottom + gap * (j - 1))
+            self:addChild(hole[i][j],0)
         end
-    end,{})
-    local blinkIn = cc.FadeTo:create(0.5,50)
-    local blinkOut = cc.FadeTo:create(0.5,0.0)
-    local blink = cc.Sequence:create(blinkIn,blinkOut)
-    local repeatBlink = cc.Repeat:create(blink,math.ceil(self.totalTime * 0.1))
-    blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
-    self.blink = blinkBack
+    end
+    self.hole = hole
+end
+
+function SummaryBossLayerII:initBossLayer_girl(levelConfig)
     --add pauseButton
     local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
+    self:addChild(pauseBtn,100)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
-    self:addChild(pauseBtn)
 
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -520,7 +539,7 @@ function SummaryBossLayerII:initBossLayer(levelConfig)
             s_SCENE.popupLayer:addChild(pauseLayer)
             s_SCENE.popupLayer.listener:setSwallowTouches(true)
 
-        --button sound
+            --button sound
             playSound(s_sound_buttonEffect)
         end
     end
@@ -532,7 +551,7 @@ function SummaryBossLayerII:initBossLayer(levelConfig)
     self:addChild(girl)
     girl:setAnimation(0,'girl-stand',true)
     self.girl = girl
-    
+
     local light_girl = cc.Sprite:create('image/summarybossscene/global_zongjiebosshuangshubeibei_dierguan.png')
     light_girl:setAnchorPoint(0.08,0.1)
     light_girl:setPosition(0,0)
@@ -547,6 +566,32 @@ function SummaryBossLayerII:initBossLayer(levelConfig)
     -- ready go "ReadyGo"
     playSound(s_sound_ReadyGo)
 
+end
+
+function SummaryBossLayerII:initBossLayer_boss(levelConfig)
+
+    local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+    self:addChild(blinkBack,0)
+    local wait = cc.DelayTime:create(0.0 + self.totalTime * 0.9)
+    local afraid = cc.CallFunc:create(function() 
+        if self.currentBlood > 0 then
+            self.girlAfraid = true
+            self.girl:setAnimation(0,'girl-afraid',true)
+            -- deadline "Mechanical Clock Ring "
+            playSound(s_sound_Mechanical_Clock_Ring)
+        end
+    end,{})
+    local blinkIn = cc.FadeTo:create(0.5,50)
+    local blinkOut = cc.FadeTo:create(0.5,0.0)
+    local blink = cc.Sequence:create(blinkIn,blinkOut)
+    local repeatBlink = cc.Repeat:create(blink,math.ceil(self.totalTime * 0.1))
+    blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
+    self.blink = blinkBack
+
+
+    --add boss
+
     --add boss
     local bossNode = cc.Node:create()
     bossNode:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
@@ -555,17 +600,17 @@ function SummaryBossLayerII:initBossLayer(levelConfig)
     boss:setPosition(0,0)
     bossNode:addChild(boss,1)
     boss:setAnimation(0,'a2',true)
-    
+
     --boss light
     local light_boss = cc.Sprite:create('image/summarybossscene/global_zongjiebosshuangshuboss_dierguan.png')
     light_boss:setAnchorPoint(0,0)
     light_boss:setPosition(0,0)
     bossNode:addChild(light_boss)
     light_boss:setVisible(false)
-    light_boss:runAction(cc.Sequence:create(cc.DelayTime:create(2.6),cc.Show:create()))
-    
+    light_boss:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.Show:create()))
+
     local bossAction = {}
-    bossAction[1] = cc.DelayTime:create(2.3)
+    bossAction[1] = cc.DelayTime:create(0.0)
     bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.76)))
     for i = 1, 10 do
         local stop = cc.DelayTime:create(self.totalTime / 10 * 0.8)
@@ -598,21 +643,6 @@ function SummaryBossLayerII:initBossLayer(levelConfig)
     boss:addChild(boss.blood) 
     self.boss = boss
     self.bossNode = bossNode
-    --add hole
-    local hole = {}    
-    local gap = 120
-    local left = (s_DESIGN_WIDTH - (5 - 1)*gap)/2
-    local bottom = 220
-    for i = 1, 5 do
-        hole[i] = {}
-        for j = 1, 5 do
-            hole[i][j] = cc.Sprite:create("image/summarybossscene/hole_II.png")
-            hole[i][j]:setScale(0.92)
-            hole[i][j]:setPosition(left + gap * (i - 1), bottom + gap * (j - 1))
-            self:addChild(hole[i][j],0)
-        end
-    end
-    self.hole = hole
 end
 
 function SummaryBossLayerII:initWordList(levelConfig)
@@ -653,29 +683,29 @@ function SummaryBossLayerII:initWordList(levelConfig)
     end
 end
 
-function SummaryBossLayerII:initStartIndex()
+function SummaryBossLayerII:initStartIndex(index)
     self.startIndexPool = {}
-    if #self.wordPool[self.currentIndex] == 1 then
-        local localgap = 25 - string.len(self.wordPool[self.currentIndex][1])
+    if #self.wordPool[index] == 1 then
+        local localgap = 25 - string.len(self.wordPool[index][1])
         local randomStart = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart + 1
-    elseif #self.wordPool[self.currentIndex] == 2 then
-        local localgap = 25 - string.len(self.wordPool[self.currentIndex][1]) - string.len(self.wordPool[self.currentIndex][2])
+    elseif #self.wordPool[index] == 2 then
+        local localgap = 25 - string.len(self.wordPool[index][1]) - string.len(self.wordPool[index][2])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[self.currentIndex][1]) + randomStart2 + 1
-    elseif #self.wordPool[self.currentIndex] == 3 then
-        local localgap = 25 - string.len(self.wordPool[self.currentIndex][1]) - string.len(self.wordPool[self.currentIndex][2]) - string.len(self.wordPool[self.currentIndex][3])
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + 1
+    elseif #self.wordPool[index] == 3 then
+        local localgap = 25 - string.len(self.wordPool[index][1]) - string.len(self.wordPool[index][2]) - string.len(self.wordPool[index][3])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         localgap = localgap - randomStart2
         local randomStart3 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[self.currentIndex][1]) + randomStart2 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[self.currentIndex][1]) + randomStart2 + string.len(self.wordPool[self.currentIndex][2]) + randomStart3 + 1        
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + 1
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + string.len(self.wordPool[index][2]) + randomStart3 + 1        
     end
 end
 
@@ -725,17 +755,105 @@ function SummaryBossLayerII:initCrab()
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
         local delaytime = 0
         if self.currentIndex == 1 then
-            delaytime = 1.5
+            --delaytime = 1.5
         end
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
     end
 end
 
-function SummaryBossLayerII:initMap()
-    self:initStartIndex()
-    self.coconut = {}
+function SummaryBossLayerII:initMapInfo()
     self.isFirst = {}
     self.isCrab = {}
+    self.character = {}
+    for k = 1,#self.wordPool do
+        self:initStartIndex(k)
+        self.character[k] = {}
+        self.isFirst[k] = {}
+        self.isCrab[k] = {}
+        local charaster_set_filtered = {}
+        for i = 1, 26 do
+            local char = string.char(96+i)
+            charaster_set_filtered[#charaster_set_filtered+1] = char
+        end
+
+        local main_logic_mat = randomMat(5, 5)
+        for i = 1, 5 do
+            self.character[k][i] = {}
+            self.isFirst[k][i] = {}
+            self.isCrab[k][i] = {}
+            for j = 1, 5 do
+                local randomIndex = math.random(1, #charaster_set_filtered)
+                self.isFirst[k][i][j] = 0
+                self.isCrab[k][i][j] = 0
+                if #self.wordPool[k] == 1 then
+                    local diff = main_logic_mat[i][j] - self.startIndexPool[1]
+                    if diff >= 0 and diff < string.len(self.wordPool[k][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff+1,diff+1)
+                        self.isCrab[k][i][j] = 1
+                        if diff == 0 then
+                            self.isFirst[k][i][j] = 1
+                        end
+                    else
+                        local randomIndex = math.random(1, #charaster_set_filtered)
+                        self.character[k][i][j] = charaster_set_filtered[randomIndex]
+
+                    end
+                elseif #self.wordPool[k] == 2 then
+                    local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
+                    local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
+                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff1+1,diff1+1)
+                        self.isCrab[k][i][j] = 1
+                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][2],diff2+1,diff2+1)
+                        self.isCrab[k][i][j] = 2
+                    else
+                        local randomIndex = math.random(1, #charaster_set_filtered)
+                        self.character[k][i][j] = charaster_set_filtered[randomIndex]
+                    end
+                    if diff1 * diff2 == 0 then
+                        if diff1 == 0 then
+                            self.isFirst[k][i][j] = 1
+                        else
+                            self.isFirst[k][i][j] = 2
+                        end
+                    end
+                elseif #self.wordPool[k] == 3 then
+                    local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
+                    local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
+                    local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
+                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff1+1,diff1+1)
+                        self.isCrab[k][i][j] = 1
+                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][2],diff2+1,diff2+1)
+                        self.isCrab[k][i][j] = 2
+                    elseif diff3 >= 0 and diff3 < string.len(self.wordPool[k][3]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][3],diff3+1,diff3+1)
+                        self.isCrab[k][i][j] = 3
+                    else
+                        local randomIndex = math.random(1, #charaster_set_filtered)
+                        self.character[k][i][j] = charaster_set_filtered[randomIndex]
+                    end
+
+                    if diff1 * diff2 * diff3 == 0 then
+                        if diff1 == 0 then
+                            self.isFirst[k][i][j] = 1
+                        elseif diff2 == 0 then
+                            self.isFirst[k][i][j] = 2
+                        else
+                            self.isFirst[k][i][j] = 3
+                        end
+                    end
+
+                end
+            end
+        end
+    end
+end
+
+function SummaryBossLayerII:initMap()
+
     for i = 1, #self.crab do
         self.crab[i]:removeFromParent()
     end
@@ -743,96 +861,38 @@ function SummaryBossLayerII:initMap()
     for i = 1, #self.wordPool[self.currentIndex] do
         self.crabOnView[i] = true
     end
-    local charaster_set_filtered = {}
-    for i = 1, 26 do
-        local char = string.char(96+i)
-        charaster_set_filtered[#charaster_set_filtered+1] = char
-    end
 
-    local main_logic_mat = randomMat(5, 5)
     for i = 1, 5 do
-        self.coconut[i] = {}
-        self.isFirst[i] = {}
-        self.isCrab[i] = {}
+        if self.currentIndex == 1 then
+            self.coconut[i] = {}
+        end
         for j = 1, 5 do
-            local randomIndex = math.random(1, #charaster_set_filtered)
-            self.isFirst[i][j] = 0
-            self.isCrab[i][j] = 0
-            if #self.wordPool[self.currentIndex] == 1 then
-                local diff = main_logic_mat[i][j] - self.startIndexPool[1]
-                if diff >= 0 and diff < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = TapNode.create("popcorn", string.sub(self.wordPool[self.currentIndex][1],diff+1,diff+1), i, j)
-                    self.isCrab[i][j] = 1
-                    if diff == 0 then
-                        self.coconut[i][j].firstStyle()
-                        self.isFirst[i][j] = 1
-                    end
-                else
-                    local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = TapNode.create("popcorn", charaster_set_filtered[randomIndex], i, j)
-                end
-            elseif #self.wordPool[self.currentIndex] == 2 then
-                local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
-                local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
-                if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = TapNode.create("popcorn", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
-                    self.isCrab[i][j] = 1
-                elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = TapNode.create("popcorn", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
-                    self.isCrab[i][j] = 2
-                else
-                    local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = TapNode.create("popcorn", charaster_set_filtered[randomIndex], i, j)
-                end
-                if diff1 * diff2 == 0 then
-                    self.coconut[i][j].firstStyle()
-                    if diff1 == 0 then
-                        self.isFirst[i][j] = 1
-                    else
-                        self.isFirst[i][j] = 2
-                    end
-                end
-            elseif #self.wordPool[self.currentIndex] == 3 then
-                local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
-                local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
-                local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
-                if diff1 >= 0 and diff1 < string.len(self.wordPool[self.currentIndex][1]) then
-                    self.coconut[i][j] = TapNode.create("popcorn", string.sub(self.wordPool[self.currentIndex][1],diff1+1,diff1+1), i, j)
-                    self.isCrab[i][j] = 1
-                elseif diff2 >= 0 and diff2 < string.len(self.wordPool[self.currentIndex][2]) then
-                    self.coconut[i][j] = TapNode.create("popcorn", string.sub(self.wordPool[self.currentIndex][2],diff2+1,diff2+1), i, j)
-                    self.isCrab[i][j] = 2
-                elseif diff3 >= 0 and diff3 < string.len(self.wordPool[self.currentIndex][3]) then
-                    self.coconut[i][j] = TapNode.create("popcorn", string.sub(self.wordPool[self.currentIndex][3],diff3+1,diff3+1), i, j)
-                    self.isCrab[i][j] = 3
-                else
-                    local randomIndex = math.random(1, #charaster_set_filtered)
-                    self.coconut[i][j] = TapNode.create("popcorn", charaster_set_filtered[randomIndex], i, j)
-                end
 
-                if diff1 * diff2 * diff3 == 0 then
-                    self.coconut[i][j].firstStyle()
-                    if diff1 == 0 then
-                        self.isFirst[i][j] = 1
-                    elseif diff2 == 0 then
-                        self.isFirst[i][j] = 2
-                    else
-                        self.isFirst[i][j] = 3
-                    end
-                end
-
+            if self.currentIndex > 1 then
+                self.coconut[i][j].main_character_content = self.character[self.currentIndex][i][j]
+                self.coconut[i][j].main_character_label:setString(self.character[self.currentIndex][i][j])
+            else
+                self.coconut[i][j] = TapNode.create("popcorn", self.character[self.currentIndex][i][j], i, j)
             end
-            self.coconut[i][j].bullet = cc.Sprite:create('image/summarybossscene/bullet_popcorn.png')
+            if self.isFirst[self.currentIndex][i][j] == 1 or self.isFirst[self.currentIndex][i][j] == 2 or self.isFirst[self.currentIndex][i][j] == 3 then
+                self.coconut[i][j].firstStyle()
+            end
+
+            if self.currentIndex == 1 then
+                self.coconut[i][j].bullet = cc.Sprite:create('image/summarybossscene/bullet_popcorn.png')
+                self:addChild(self.coconut[i][j],1)
+                self:addChild(self.coconut[i][j].bullet,2)
+            else
+                self.coconut[i][j].bullet:stopAllActions()  
+            end
             self.coconut[i][j].bullet:setPosition(self.hole[i][j]:getPosition())
             self.coconut[i][j].bullet:setVisible(false)
-            --self.coconut[i][j].bullet:setAnimation(0,'animation',true)
-            self:addChild(self.coconut[i][j].bullet,2)
             self.coconut[i][j]:setScale(0)
             self.coconut[i][j]:setPosition(self.hole[i][j]:getPosition())
-            self:addChild(self.coconut[i][j],1)
+
             local delaytime = 0
             if self.currentIndex == 1 then
-                delaytime = 1.5
+            --delaytime = 1.5
             end
             if i == 5 and j == 1 then
                 local unlock = cc.CallFunc:create(function() 
@@ -842,9 +902,10 @@ function SummaryBossLayerII:initMap()
             else
                 self.coconut[i][j]:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j) + delaytime),cc.ScaleTo:create(0.1, scale)))
             end
-            self.coconut[i][j].isFirst = self.isFirst[i][j]
+            self.coconut[i][j].isFirst = self.isFirst[self.currentIndex][i][j]
         end
     end
+    
     self:initCrab()
 end
 
@@ -915,7 +976,7 @@ function SummaryBossLayerII:hint()
     s_logd('x = %d',index)
     for i = 1, 5 do
         for j = 1, 5 do
-            if self.isCrab[i][j] == index then
+            if self.isCrab[self.currentIndex][i][j] == index then
                 self.coconut[i][j]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
             end
         end
