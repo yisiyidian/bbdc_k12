@@ -126,7 +126,7 @@ function TestLayerIII.create()
             else
                 s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                local alter = TestAlter.createFromFirstAlter()
+                local alter = TestAlter.createFromFirstAlter(3)
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
             end
@@ -173,7 +173,7 @@ function TestLayerIII.create()
             else
                 s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                local alter = TestAlter.createFromFirstAlter()
+                local alter = TestAlter.createFromFirstAlter(3)
                 alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(alter)
             end
