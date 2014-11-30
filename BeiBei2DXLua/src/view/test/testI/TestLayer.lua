@@ -242,7 +242,7 @@ function TestLayer.create()
         layer:runAction(action3) 
     end
 
-    mat = FlipMat.create(wordName,4,4,false,false)
+    mat = FlipMat.create(wordName,4,4,false,"coconut_light")
     mat:setPosition(s_DESIGN_WIDTH/2, 100)
     layer:addChild(mat)
 

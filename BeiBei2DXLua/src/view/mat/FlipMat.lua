@@ -13,17 +13,10 @@ local FlipMat = class("FlipMat", function()
     return cc.Layer:create()
 end)
 
-function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
-    local nameList = {}
-    nameList["chapter0"] = "coconut_light"
-    nameList["chapter2"] = "coin"
-    local spineName = nameList[s_CURRENT_USER.currentChapterKey]
-
-    if s_CURRENT_USER.currentChapterKey == "chapter0" and isDarkStyle then
-        spineName = "coconut_dark"
+function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
+    if spineName == nil then
+        spineName = "coconut_light"
     end
-    
---    spineName = "coin"
     
     local main_width    = 640
     local main_height   = 640

@@ -240,9 +240,9 @@ function StudyLayer.create()
         s_CorePlayManager.unfamiliarWord()
     end
     if s_CorePlayManager.newPlayerState then
-        mat = FlipMat.create(wordName,4,4,true,false)
+        mat = FlipMat.create(wordName,4,4,true,"coconut_light")
     else
-        mat = FlipMat.create(wordName,4,4,false,false)
+        mat = FlipMat.create(wordName,4,4,false,"coconut_light")
     end
     mat:setPosition(size_big.width/2*3, 120)
     layer:addChild(mat)
