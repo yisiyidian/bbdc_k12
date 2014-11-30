@@ -188,7 +188,7 @@ function StudyLayerII.create()
                 else
                     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
-                    local alter = TestAlter.createFromSecondAlter()
+                    local alter = TestAlter.createFromSecondAlter(2)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end
@@ -287,7 +287,7 @@ function StudyLayerII.create()
 
                 back_bigchair:addChild(button_changeview)
                 
-                local wordDetailInfo = WordDetailInfo.create(word)
+                local wordDetailInfo = WordDetailInfo.create(word, 2)
                 wordDetailInfo:setPosition(back:getContentSize().width/2, 0)
                 back:addChild(wordDetailInfo)
             end

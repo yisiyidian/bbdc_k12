@@ -61,7 +61,14 @@ function PopupNormalLevel:ctor(levelKey)
     self.ccb['levelKey'] = 1
     self.ccb['popup_normal_level'] = self.ccbPopupNormalLevel
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
+    local node 
+    if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
+        node = CCBReaderLoad('res/ccb/popup_normal_level.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
+    elseif s_CURRENT_USER.currentSelectedChapterKey == 'chapter1' then
+        node = CCBReaderLoad('res/ccb/popup_normal_level2.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
+    else
+        node = CCBReaderLoad('res/ccb/popup_normal_level3.ccbi', proxy, self.ccbPopupNormalLevel, self.ccb)
+    end
     node:setPosition(0,200)
 --    local content = self.ccbPopupNormalLevel['_content']   -- get panel
 --    -- set popup style 

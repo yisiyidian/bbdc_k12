@@ -22,7 +22,15 @@ function PopupSummaryFail:ctor(current_star, total_star)
     self.ccb = {}
     self.ccb['popup_summary_fail'] = self.ccbPopupSummaryFail
     local proxy = cc.CCBProxy:create()
-    local node = CCBReaderLoad('res/ccb/popup_summary_fail.ccbi',proxy,self.ccbPopupSummaryFail,self.ccb)
+    local node
+    if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
+        node = CCBReaderLoad('res/ccb/popup_summary_fail.ccbi',proxy,self.ccbPopupSummaryFail,self.ccb)
+    elseif s_CURRENT_USER.currentSelectedChapterKey == 'chapter1' then
+        node = CCBReaderLoad('res/ccb/popup_summary_fail2.ccbi',proxy,self.ccbPopupSummaryFail,self.ccb)
+    else
+        node = CCBReaderLoad('res/ccb/popup_summary_fail3.ccbi',proxy,self.ccbPopupSummaryFail,self.ccb)
+    end
+    
     
     -- set title
     self.ccbPopupSummaryFail['summary_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_NEED_XXX_STARS_TO_UNLOCK_LV))
@@ -53,7 +61,7 @@ end
 
 function PopupSummaryFail:onContinueButtonClicked()
     s_logd('on continue button clicked')
-    
+    s_SCENE:removeAllPopups()
     -- button sound
     playSound(s_sound_buttonEffect)
 end

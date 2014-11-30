@@ -153,7 +153,7 @@ function StudyLayerIII.create()
                 else
                     s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                    local alter = TestAlter.createFromSecondAlter()
+                    local alter = TestAlter.createFromSecondAlter(3)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end
@@ -298,7 +298,7 @@ function StudyLayerIII.create()
                 button_changeview:addChild(label_word_zaikanci)
                 back_down:addChild(button_changeview)
 
-                wordDetailInfo = WordDetailInfo.create(word)
+                wordDetailInfo = WordDetailInfo.create(word, 3)
                 wordDetailInfo:setPosition(bigWidth/2, 0)
                 backImage:addChild(wordDetailInfo)
             end

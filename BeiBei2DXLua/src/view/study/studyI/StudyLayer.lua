@@ -199,7 +199,7 @@ function StudyLayer.create()
                 else
                     s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                    local alter = TestAlter.createFromSecondAlter()
+                    local alter = TestAlter.createFromSecondAlter(1)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end
@@ -351,8 +351,7 @@ function StudyLayer.create()
                 button_changeview:setPosition(size_big.width/2, -660)
                 button_changeview:addTouchEventListener(button_changeview_clicked)
                 cloud_down:addChild(button_changeview)
-                
-                local buttonSize = button_changeview:getContentSize()
+                                local buttonSize = button_changeview:getContentSize()
                 
                 label_word_huadanci = cc.Label:createWithSystemFont("去划单词", "宋体", 30, buttonSize,cc.TEXT_ALIGNMENT_CENTER,cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
                 label_word_huadanci:setColor(cc.c3b(255, 255, 255))
@@ -367,7 +366,7 @@ function StudyLayer.create()
                 button_changeview:addChild(label_word_huadanci)
                 button_changeview:addChild(label_word_zaikanci)
                 
-                local wordDetailInfo = WordDetailInfo.create(word)
+                local wordDetailInfo = WordDetailInfo.create(word, 1)
                 wordDetailInfo:setPosition(bigWidth/2, 0)
                 backColor:addChild(wordDetailInfo)
             end

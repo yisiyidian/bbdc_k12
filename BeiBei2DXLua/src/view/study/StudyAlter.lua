@@ -71,9 +71,9 @@ function StudyAlter.create(index)
 --                    s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
                     
                     -- energy cost "cost"
-                    s_SCENE:callFuncWithDelay(0.3,function()
-                    playSound(s_sound_cost)
-                    end)
+--                    s_SCENE:callFuncWithDelay(0.3,function()
+--                    playSound(s_sound_cost)
+--                    end)
                 end
                 s_CorePlayManager.enterTestLayer()
 --            else 
