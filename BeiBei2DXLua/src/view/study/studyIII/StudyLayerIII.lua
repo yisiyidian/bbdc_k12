@@ -161,7 +161,7 @@ function StudyLayerIII.create()
                 else
                     s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                    local alter = StudyAlter.create()
+                    local alter = StudyAlter.create(3)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end

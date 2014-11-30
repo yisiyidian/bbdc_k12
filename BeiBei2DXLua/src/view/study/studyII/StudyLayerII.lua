@@ -194,7 +194,7 @@ function StudyLayerII.create()
                 else
                     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
-                    local alter = StudyAlter.create()
+                    local alter = StudyAlter.create(2)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end

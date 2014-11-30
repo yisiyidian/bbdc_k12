@@ -4,7 +4,7 @@ local StudyAlter = class("StudyAlter", function()
     return cc.Layer:create()
 end)
 
-function StudyAlter.create()
+function StudyAlter.create(index)
     s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey,1)
     
     if s_SCENE.popupLayer~=nil then
@@ -19,7 +19,7 @@ function StudyAlter.create()
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
-    local back = cc.Sprite:create("image/alter/studyscene_summary_back.png")
+    local back = cc.Sprite:create("image/alter/alter_study"..index..".png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
     

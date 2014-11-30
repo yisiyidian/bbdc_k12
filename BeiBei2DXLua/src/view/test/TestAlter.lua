@@ -10,8 +10,10 @@ local showGirlAndStar
 local main = nil
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local button_goon_clicked_mark = 0
+local main_index = nil
 
-function TestAlter.createFromFirstAlter()
+function TestAlter.createFromFirstAlter(index)
+    main_index = index
     
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
@@ -45,7 +47,9 @@ function TestAlter.createFromFirstAlter()
     return main
 end
 
-function TestAlter.createFromSecondAlter()
+function TestAlter.createFromSecondAlter(index)
+    main_index = index
+
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
@@ -74,7 +78,7 @@ end
 
 
 showGirlAndStar = function()
-    local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
+    local back = cc.Sprite:create("image/alter/alter_test"..main_index..".png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
 --    s_SCENE:popup(back)
     main:addChild(back)
@@ -187,7 +191,7 @@ showGirlAndStar = function()
 end
 
 showDetailInfo = function()
-    local back = cc.Sprite:create("image/alter/testscene_resultlist_back_long.png")
+    local back = cc.Sprite:create("image/alter/alter_test"..main_index..".png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
     
