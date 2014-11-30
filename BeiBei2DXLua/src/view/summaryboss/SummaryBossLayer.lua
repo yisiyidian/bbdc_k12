@@ -582,6 +582,7 @@ function SummaryBossLayer:initBossLayer_girl(levelConfig)
     self:addChild(readyGo,100)
     
     -- ready go "ReadyGo"
+    playSound(s_sound_ReadyGo)
     
 end
 
