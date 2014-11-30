@@ -207,7 +207,7 @@ function StudyLayer.create()
                 else
                     s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                    local alter = StudyAlter.create()
+                    local alter = StudyAlter.create(1)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end
@@ -274,7 +274,7 @@ function StudyLayer.create()
                         mat:runAction(action2)
                     end
                 
-                    local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+60, 930))
+                    local action3 = cc.MoveTo:create(0.5,cc.p(layer:getContentSize().width+600, 930))
                     button_detail:runAction(action3)
                 
                     local action4 = cc.DelayTime:create(0.5)

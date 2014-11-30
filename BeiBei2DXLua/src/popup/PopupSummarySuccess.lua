@@ -80,9 +80,9 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
         if levelData.isPassed ~= 1 then
 --            s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
             -- energy cost "cost"
-            s_SCENE:callFuncWithDelay(0.3,function()
-                playSound(s_sound_cost)
-            end)
+--            s_SCENE:callFuncWithDelay(0.3,function()
+--                playSound(s_sound_cost)
+--            end)
         end
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
         if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
