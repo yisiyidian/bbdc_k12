@@ -23,7 +23,7 @@ function BigAlter.create(info)
     back:addChild(label_info)
     
     local button_middle_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
 
         end
     end

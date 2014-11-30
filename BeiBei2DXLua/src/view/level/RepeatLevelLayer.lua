@@ -141,9 +141,11 @@ function RepeatLevelLayer:plotStarAnimation(levelKey, starCount)
 end
 
 function RepeatLevelLayer:plotUnlockLevelAnimation(levelKey)
-    print('startLevelKey:'..self.startLevelKey)
+    --print('startLevelKey:'..self.startLevelKey..',levelKey:'..levelKey)
+    
     local levelIndex = string.sub(levelKey, 6)
     local levelButton = self:getChildByName(levelKey)
+    --print('levelbutton:'..levelButton:getName())
     local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
     local lockLayer = levelButton:getChildByName('lockLayer'..levelIndex)
 

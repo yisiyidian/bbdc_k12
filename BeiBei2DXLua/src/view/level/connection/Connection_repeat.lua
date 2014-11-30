@@ -18,13 +18,13 @@ function Connection_repeat:ctor()
     self.ccb['connection_repeat'] = self.ccbConnection_repeat
     local proxy = cc.CCBProxy:create()
     local contentNode = CCBReaderLoad('ccb/connection_repeat.ccbi',proxy,self.ccbConnection_repeat,self.ccb)  
-    self:setContentSize(cc.size(s_MAX_WIDTH,402))
+    self:setContentSize(cc.size(s_MAX_WIDTH,400))
     self:addChild(contentNode)
 end
 
 function Connection_repeat:plotUnlockChapterAnimation()
-    local leftCloud = self.ccbConnection_repeat['connection_left_cloud']
-    local rightCloud = self.ccbConnection_repeat['connection_right_cloud']
+    local leftCloud = self.ccbConnection_repeat['left']
+    local rightCloud = self.ccbConnection_repeat['right']
     local action1 = cc.MoveBy:create(0.5, cc.p(-leftCloud:getContentSize().width,leftCloud:getPositionY()))
     local action2 = cc.MoveBy:create(0.5, cc.p(leftCloud:getContentSize().width, rightCloud:getPositionY()))
     leftCloud:runAction(action1)

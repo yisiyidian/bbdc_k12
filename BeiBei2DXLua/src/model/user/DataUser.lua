@@ -231,7 +231,7 @@ function DataUser:getUserBookObtainedStarCount()
     for i, v in ipairs(self.levels) do
         if v.bookKey == self.bookKey then
             local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
-            if levelConfig['type'] == 0 then
+            if levelConfig ~= nil and levelConfig['type'] == 0 then
                 count = count + v.stars
             end
         end
@@ -280,13 +280,13 @@ function DataUser:initChapterLevelAfterLogin()
             break
         end
     end
---    self.currentLevelKey = 'level11'
---    self.currentSelectedLevelKey = 'level11'
---    self.currentSelectedChapterKey = 'chapter0'
---    self.currentChapterKey = 'chapter0'
+--    self.currentLevelKey = 'level0'
+--    self.currentSelectedLevelKey = 'level0'
+--    self.currentSelectedChapterKey = 'chapter3'
+--    self.currentChapterKey = 'chapter3'
 --    s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
 --    s_CURRENT_USER:setUserLevelDataOfStars(self.currentChapterKey,self.currentLevelKey,3)
-    --s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+ --s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
 end
 
 function DataUser:setUserLevelDataOfStars(chapterKey, levelKey, stars)

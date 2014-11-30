@@ -120,7 +120,7 @@ showLogin = function()
     back_login:addChild(password)
     
     local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then 
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             
@@ -147,7 +147,7 @@ showLogin = function()
     submit:addChild(label_name)
     
     local button_toggle_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then            
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             local remove = function()
@@ -174,7 +174,7 @@ showLogin = function()
     
     local button_qq_clicked = function(sender, eventType)
 
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             print("qq click")  
                   -- button sound
         playSound(s_sound_buttonEffect)
@@ -188,7 +188,7 @@ showLogin = function()
     
     local button_weixin_clicked = function(sender, eventType)
 
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             print("weixin click") 
                    -- button sound
         playSound(s_sound_buttonEffect)
@@ -202,7 +202,7 @@ showLogin = function()
     
     local button_weibo_clicked = function(sender, eventType)
 
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             print("weibo click")  
                   -- button sound
             playSound(s_sound_buttonEffect)
@@ -215,7 +215,7 @@ showLogin = function()
  --   back_login:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             main.close()
@@ -273,7 +273,7 @@ showRegister = function()
     back_register:addChild(password)
     
     local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then       
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             if validateUsername(username.textField:getStringValue()) == false then
@@ -300,7 +300,7 @@ showRegister = function()
     submit:addChild(label_name)
 
     local button_toggle_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             local remove = function()
                 local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
                 local action2 = cc.EaseBackIn:create(action1)
@@ -328,7 +328,7 @@ showRegister = function()
     
     local button_qq_clicked = function(sender, eventType)
 
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             print("qq click")  
                   -- button sound
         playSound(s_sound_buttonEffect)
@@ -342,7 +342,7 @@ showRegister = function()
     
     local button_weixin_clicked = function(sender, eventType)
 
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             print("weixin click") 
                    -- button sound
         playSound(s_sound_buttonEffect)
@@ -358,7 +358,7 @@ showRegister = function()
 
     local button_weibo_clicked = function(sender, eventType)
 
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             print("weibo click")  
                   -- button sound
         playSound(s_sound_buttonEffect)
@@ -372,7 +372,7 @@ showRegister = function()
     
     local button_close_clicked = function(sender, eventType)
 
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             main.close()      
               -- button sound
         playSound(s_sound_buttonEffect)
