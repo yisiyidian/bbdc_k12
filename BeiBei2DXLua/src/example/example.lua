@@ -9,7 +9,11 @@ local ziaoangTest = require("view.ZiaoangTest")
 
 function test()
 --    local layer = cc.Layer:create()
-    
+    -- s_HttpRequestClient.downloadWordSoundFile('apply', function (objectId, filename, err, isSaved) 
+    --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
+    --     playWordSound('apply')
+    -- end)
+
 
 --    local TapMat = require("view.mat.TapMat")
 --    local mat = TapMat.create("apple",4,4)
@@ -17,9 +21,9 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
-    local IntroLayer = require("popup.PopupModel")
-    local introLayer = IntroLayer.create()
-    s_SCENE:replaceGameLayer(introLayer) 
+    -- local IntroLayer = require("popup.PopupModel")
+    -- local introLayer = IntroLayer.create()
+    -- s_SCENE:replaceGameLayer(introLayer) 
     
 --    local startApp = function ()
 --        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then

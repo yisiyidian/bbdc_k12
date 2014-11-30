@@ -196,7 +196,7 @@ function StudyLayer.create()
                 else
                     s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                    local alter = TestAlter.createFromSecondAlter()
+                    local alter = TestAlter.createFromSecondAlter(1)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end
@@ -347,7 +347,7 @@ function StudyLayer.create()
                 button_changeview:addTouchEventListener(button_changeview_clicked)
                 cloud_down:addChild(button_changeview)
                 
-                local wordDetailInfo = WordDetailInfo.create(word)
+                local wordDetailInfo = WordDetailInfo.create(word, 1)
                 wordDetailInfo:setPosition(bigWidth/2, 0)
                 backColor:addChild(wordDetailInfo)
             end
