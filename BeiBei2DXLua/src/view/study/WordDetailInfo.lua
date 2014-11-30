@@ -4,7 +4,7 @@ local WordDetailInfo = class("WordDetailInfo", function()
     return cc.Layer:create()
 end)
 
-function WordDetailInfo.create(word)
+function WordDetailInfo.create(word, typeIndex)
     -- system variate
 
     local height = 700
@@ -66,6 +66,13 @@ function WordDetailInfo.create(word)
     label_sentencecn:setAlignment(0)
     label_sentencecn:setPosition(left, index_y)
     main:addChild(label_sentencecn)
+
+    if typeIndex == 2 and typeIndex == 3 then
+        label_wordname:setColor(cc.c4b(255,255,255,255))
+        label_wordmeaning:setColor(cc.c4b(255,255,255,255))
+        label_sentenceen:setColor(cc.c4b(255,255,255,255))
+        label_sentencecn:setColor(cc.c4b(255,255,255,255))
+    end
 
     return main
 end
