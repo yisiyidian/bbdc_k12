@@ -47,7 +47,7 @@ function BookLayer.create()
         end
     end
     
-    local backButton = ccui.Button:create("image/PersonalInfo/backButtonInPersonalInfo.png","image/PersonalInfo/backButtonInPersonalInfo.png","")
+    local backButton = ccui.Button:create("image/button/button_back_begin.png","image/button/button_back_end.png","")
     backButton:ignoreAnchorPointForPosition(false)
     backButton:setAnchorPoint(0.5 , 0.5)
     backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 250, s_DESIGN_HEIGHT - 100)
