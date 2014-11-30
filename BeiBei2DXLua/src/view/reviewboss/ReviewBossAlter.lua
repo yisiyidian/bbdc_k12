@@ -40,7 +40,7 @@ function ReviewBossAlter.create()
     boss:addAnimation(0, 'animation', true)
 
     local button_goon_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.leaveReviewBossLayer()
             

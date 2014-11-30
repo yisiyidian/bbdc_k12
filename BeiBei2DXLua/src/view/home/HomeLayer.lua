@@ -56,7 +56,7 @@ function HomeLayer.create()
     backColor:addChild(name)
    
     local button_left_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
             if viewIndex == 1 then
@@ -92,7 +92,7 @@ function HomeLayer.create()
     
    
     local button_right_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
 
@@ -213,7 +213,7 @@ function HomeLayer.create()
     backColor:addChild(label)
     
     local button_play_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
+        if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
@@ -239,7 +239,7 @@ function HomeLayer.create()
     local button_data
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began and viewIndex == 1 then
+        if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
             -- button sound
             playSound(s_sound_buttonEffect)
             
@@ -319,7 +319,7 @@ function HomeLayer.create()
     end
     for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
-            if eventType == ccui.TouchEventType.began then
+            if eventType == ccui.TouchEventType.ended then
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     s_CorePlayManager.enterBookLayer()
