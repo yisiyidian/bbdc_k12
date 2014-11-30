@@ -72,7 +72,7 @@ function BookLayer.create()
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)
-            if eventType == ccui.TouchEventType.ended then    
+            if eventType == ccui.TouchEventType.ended then
                 -- button sound
                 playSound(s_sound_buttonEffect)   
                 local affirm = function()

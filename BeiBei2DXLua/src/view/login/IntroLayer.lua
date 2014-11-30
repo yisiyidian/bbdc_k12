@@ -90,7 +90,7 @@ function IntroLayer.create(directOnLogin)
     end
     
     local button_visitor_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
             local hasGuest = s_DATABASE_MGR.getLastLogInGuest(s_CURRENT_USER)
             if hasGuest then
                 s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
@@ -121,7 +121,7 @@ function IntroLayer.create(directOnLogin)
     layer:addChild(cloud)
     
     button_login_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then                        
+        if eventType == ccui.TouchEventType.ended then
             local loginAlter = LoginAlter.createLogin()
             loginAlter:setTag(1)
             loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
@@ -135,7 +135,7 @@ function IntroLayer.create(directOnLogin)
     end
     
     button_register_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
+        if eventType == ccui.TouchEventType.ended then
 
             local gotoRegistNewAccount = function ()
                 local loginAlter = LoginAlter.createRegister()

@@ -196,7 +196,7 @@ function StudyLayerIII.create()
         s_CorePlayManager.unfamiliarWord()
     end
     
-    mat = FlipMat.create(wordName,4,4,false,false)
+    mat = FlipMat.create(wordName,4,4,false,"coin")
     mat:setPosition((s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH)/2*3, 120)
     layer:addChild(mat)
 

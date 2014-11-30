@@ -36,18 +36,20 @@ def createDataLevel(userId, bookKey, chapterKey, levelKey):
     pass
 
 def createDataLevels(userId, chapter):
-    if chapter >= 0:
-        for x in xrange(0, 12):
-            createDataLevel(userId, bookKey, 'chapter0', 'level' + str(x))
-            pass
-    if chapter >= 1:            
-        for x in xrange(0, 18):
-            createDataLevel(userId, bookKey, 'chapter1', 'level' + str(x))
-            pass
-    if chapter >= 2:            
-        for x in xrange(0, 38):
-            createDataLevel(userId, bookKey, 'chapter2', 'level' + str(x))
-            pass
+    levelCntList = []
+    if chapter == 0:
+        levelCntList = [11]
+    elif chapter == 1:
+        levelCntList = [12, 19]
+    elif chapter == 2:
+        levelCntList = [12, 20, 29]
+    elif chapter == 3:
+        levelCntList = [12, 20, 30, 39]
+
+    for i in range(0, len(levelCntList)):
+        for x in xrange(0, levelCntList[i]):
+            createDataLevel(userId, bookKey, 'chapter' + str(i), 'level' + str(x))
+
     pass
 
 def body_getUserData(buf):
@@ -72,7 +74,7 @@ def getUserData(username):
 
 def updateUser(userId, sessionToken):
     header = [APP_ID, APP_KEY, "X-AVOSCloud-Session-Token: " + sessionToken, "Content-Type: application/json"]
-    data = json.dumps({"isGuest":1})
+    data = json.dumps({"isGuest":0, "tutorialStep":100})
 
     c = pycurl.Curl()
     c.setopt(pycurl.URL,           URL_USER + '/' + userId)
@@ -113,7 +115,7 @@ if __name__ == "__main__":
     bookKey = sys.argv[4]
     for x in xrange(int(sys.argv[1]), int(sys.argv[2]) + 1):
         print ('-----------------')
-        un = 'tster' + str(x)
+        un = 'test00' + str(x)
         print (un)
         createUser(un, 'qwerty')
         print ('-----------------')
