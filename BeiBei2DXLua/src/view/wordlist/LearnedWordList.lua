@@ -139,7 +139,6 @@ function LearnedWordList:ctor()
         local levelNum = split(self.levelKey[indexConfig],'level')
         local levelIndex        = levelNum[2] + 1
         local chapterNum = split(levelNum[1],'chapter')
-        print_lua_table(chapterNum)
         local chapterIndex = chapterNum[2]+1
         local chapterName       = s_DATA_MANAGER.chapters[chapterIndex]["Name"]
         local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"

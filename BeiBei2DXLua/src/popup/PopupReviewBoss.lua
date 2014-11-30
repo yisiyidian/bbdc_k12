@@ -27,7 +27,6 @@ function PopupReviewBoss:ctor()
     self.ccb['popup_review_boss'] = self.ccbPopupReviewBoss
     local proxy = cc.CCBProxy:create()
     local node
-    s_CURRENT_USER.currentSelectedChapterKey = 'chapter2'
     if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
         node = CCBReaderLoad('ccb/popup_review_boss.ccbi',proxy,self.ccbPopupReviewBoss,self.ccb)
     elseif s_CURRENT_USER.currentSelectedChapterKey == 'chapter1' then
