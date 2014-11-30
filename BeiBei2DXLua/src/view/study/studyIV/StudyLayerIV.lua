@@ -144,7 +144,7 @@ function StudyLayerIV.create()
                 else
                     s_SCENE.touchEventBlockLayer.unlockTouch()
 
-                    local alter = TestAlter.createFromSecondAlter()
+                    local alter = TestAlter.createFromSecondAlter(1)
                     alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                     layer:addChild(alter)
                 end
@@ -264,7 +264,7 @@ function StudyLayerIV.create()
                 button_detail:addTouchEventListener(button_detail_clicked)
                 backColor:addChild(button_detail)
 
-                wordDetailInfo = WordDetailInfo.create(word)
+                wordDetailInfo = WordDetailInfo.create(word, 1)
                 wordDetailInfo:setPosition(s_DESIGN_WIDTH/2, 0)
                 backColor:addChild(wordDetailInfo)
             end
