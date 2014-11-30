@@ -76,7 +76,7 @@ function SummaryBossLayer.create(levelConfig)
             loadingState = 2
         elseif loadingTime > 1.5 and loadingState < 4 then
             loadingState = 4
-        elseif loadingTime > 2.0 and loadingState < 6 then
+        elseif loadingTime > 1.8 and loadingState < 6 then
             loadingState = 6    
         end       
         if loadingState == 0 then
