@@ -152,12 +152,17 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
         end
     end
     
+    local finger = nil
     main.finger_action = function()
-        local finger = cc.Sprite:create("image/studyscene/global_finger.png")
+        if finger then
+             finger:removeFromParentAndCleanup()
+        end 
+        
+        finger = cc.Sprite:create("image/studyscene/global_finger.png")
         finger:setAnchorPoint(0,1)
         finger:setPosition(firstFlipNode:getPosition())
-        main:addChild(finger)    
-        
+        main:addChild(finger)
+         
         local actionList = {}
         local action1 = cc.DelayTime:create(0.5)
         table.insert(actionList, action1)
@@ -398,6 +403,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
                             table.remove(selectStack)
+                            updateSelectWord()
                             if #selectStack <= 7 then
                                 playSound(slideCoco[#selectStack])
                             else
@@ -423,13 +429,13 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, isDarkStyle)
                         local stackTop = selectStack[#selectStack]
                         if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                             table.insert(selectStack, currentNode)
+                            updateSelectWord()
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
                                 playSound(slideCoco[#selectStack])
                             else
                                 playSound(slideCoco[7])
-                            end    
-                            updateSelectWord()
+                            end
                             currentNode.addSelectStyle()
                             currentNode.bigSize()
                             if current_dir == dir_up then
