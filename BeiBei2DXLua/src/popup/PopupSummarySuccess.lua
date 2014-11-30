@@ -79,7 +79,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
         end
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
         if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
-            local summaryboss = require('view.summaryboss.SummaryBossLayerIII')
+            local summaryboss = require('view.summaryboss.SummaryBossLayer')
             local layer = summaryboss.create(levelConfig)
             layer:setAnchorPoint(0.5,0)
             s_SCENE:replaceGameLayer(layer)
