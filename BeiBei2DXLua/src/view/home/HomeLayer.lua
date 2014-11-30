@@ -56,7 +56,7 @@ function HomeLayer.create()
     backColor:addChild(name)
    
     local button_left_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
+        if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
             
@@ -94,7 +94,7 @@ function HomeLayer.create()
     
    
     local button_right_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
+        if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
             
