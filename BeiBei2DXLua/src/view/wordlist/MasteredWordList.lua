@@ -142,7 +142,7 @@ function MasteredWordList:ctor()
         
         local title = cc.Label:createWithSystemFont(levelName, '' ,28)
         title:setColor(cc.c3b(45,176,244))
-        title:setPosition(cc.p(s_LEFT_X+175, 20))
+        title:setPosition(cc.p((s_RIGHT_X-s_LEFT_X)/2, 20))
         local titleContainner = ccui.Layout:create()
         titleContainner:setContentSize(cc.size(s_DESIGN_WIDTH, 40))
         titleContainner:addChild(title)

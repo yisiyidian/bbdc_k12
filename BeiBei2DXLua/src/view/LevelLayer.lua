@@ -164,37 +164,39 @@ function LevelLayer:levelStateManager()
         end
      elseif s_SCENE.levelLayerState == s_unlock_next_chapter_state then
         s_SCENE.levelLayerState = s_normal_level_state
-        -- lock screen and plot animation
-        s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
-        s_SCENE:callFuncWithDelay(1.5, function()
-            s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
-        end)
-        -- plot star animation
-        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
-        currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
-
-        -- save and update level data
-        --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
-        s_CURRENT_USER.currentChapterKey = 'chapter'..(string.sub(s_CURRENT_USER.currentChapterKey,8)+1)
-        s_CURRENT_USER.currentSelectedChapterKey = s_CURRENT_USER.currentChapterkey
-        s_CURRENT_USER.currentLevelKey = 'level0'
-        s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
-        s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
-        -- plot unlock next level animation
-        if s_CURRENT_USER.currentChapterKey == 'chapter1' then
-            self.chapterDic['connection0_1']:plotUnlockChapterAnimation()
-        elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
-            self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
-        elseif s_CURRENT_USER.currentChapterKey == 'chapter3' then
-            self.chapterDic['connection2_3']:plotUnlockChapterAnimation()
+        if s_CURRENT_USER.currentChapterKey ~= 'chapter3' then
+            -- lock screen and plot animation
+            s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
+            s_SCENE:callFuncWithDelay(1.5, function()
+                s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
+            end)
+            -- plot star animation
+            local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
+            currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
+    
+            -- save and update level data
+            --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
+            s_CURRENT_USER.currentChapterKey = 'chapter'..(string.sub(s_CURRENT_USER.currentChapterKey,8)+1)
+            s_CURRENT_USER.currentSelectedChapterKey = s_CURRENT_USER.currentChapterkey
+            s_CURRENT_USER.currentLevelKey = 'level0'
+            s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
+            s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
+            -- plot unlock next level animation
+            if s_CURRENT_USER.currentChapterKey == 'chapter1' then
+                self.chapterDic['connection0_1']:plotUnlockChapterAnimation()
+            elseif s_CURRENT_USER.currentChapterKey == 'chapter2' then
+                self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
+            elseif s_CURRENT_USER.currentChapterKey == 'chapter3' then
+                self.chapterDic['connection2_3']:plotUnlockChapterAnimation()
+            end
+            self:updateCurrentChapterLayer()
+            currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
+            player:removeFromParent()
+            player = cc.Sprite:create('image/chapter_level/gril_head.png')
+            player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
+            player:setScale(0.4)
+            currentChapterLayer:addChild(player, 5)
         end
-        self:updateCurrentChapterLayer()
-        currentChapterLayer:plotUnlockLevelAnimation(s_CURRENT_USER.currentLevelKey)
-        player:removeFromParent()
-        player = cc.Sprite:create('image/chapter_level/gril_head.png')
-        player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
-        player:setScale(0.4)
-        currentChapterLayer:addChild(player, 5)
      end
      s_SCENE.gameLayerState = s_normal_game_state
      s_CURRENT_USER:updateDataToServer()
