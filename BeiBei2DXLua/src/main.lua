@@ -1,5 +1,5 @@
 
-local RELEASE_APP = true
+RELEASE_APP = true
 
 require "Cocos2d"
 
