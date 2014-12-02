@@ -102,11 +102,12 @@ function HomeLayer.create()
             elseif eventType == ccui.TouchEventType.ended then
 
             -- level 10
-            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
-            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
-            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
-            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
-            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
+            local levelKey = 'level10'
+            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
+            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
+            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
+            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
+            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
             
 
             if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
@@ -160,11 +161,12 @@ function HomeLayer.create()
                         button_friend:addChild(redHint)
                         
                         -- level 10
-                        local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
-                        local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
-                        local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
-                        local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
-                        local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
+                        local levelKey = 'level10'
+                        local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
+                        local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
+                        local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
+                        local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
+                        local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
 
 
                         if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
@@ -274,11 +276,12 @@ function HomeLayer.create()
             ----todo
             --
             -- level 7
-            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
-            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
-            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
-            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
-            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
+            local levelKey = 'level7'
+            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
+            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
+            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
+            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
+            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
 
             if   ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
                 judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
@@ -425,11 +428,12 @@ function HomeLayer.create()
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
 
                 --level 4
-                local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', 'level2')
-                local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', 'level2')
-                local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', 'level2')
-                local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', 'level2')
-                local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', 'level2')
+                local levelKey = 'level4'
+                local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
+                local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
+                local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
+                local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
+                local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
                 
                 if   ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
                     judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
