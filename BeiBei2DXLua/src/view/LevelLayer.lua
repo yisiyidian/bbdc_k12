@@ -387,6 +387,8 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
 end
 
 function LevelLayer:ctor()
+    print ('LevelLayer:ctor()')
+
     self.chapterDic = {}  -- container of chapter layers
     
     --local levelStypeI = require('view.level.LevelLayerI')
