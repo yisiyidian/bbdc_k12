@@ -321,8 +321,6 @@ function AppScene:loadConfigs()
 end
 
 function AppScene:saveSignUpAndLogInData(onSaved)
-    s_DATABASE_MGR.setLogOut(false)
-    
     self:loadConfigs()
 
     local friendsObjId = {}
