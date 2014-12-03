@@ -10,7 +10,7 @@ local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 function test()
 
 -- new study layer test begin
-    local newStudyLayer = NewStudyLayer.create()
+    local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
     s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
