@@ -4,10 +4,18 @@ local DataExample = require('example.DataExample')
 require("common.global")
 
 
-local ziaoangTest = require("view.ZiaoangTest")
-
+local ziaoangTest       = require("view.ZiaoangTest")
+local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
 function test()
+
+-- new study layer test begin
+    local newStudyLayer = NewStudyLayer.create()
+    s_SCENE:replaceGameLayer(newStudyLayer)
+-- new study layer test end
+
+
+
 --    local layer = cc.Layer:create()
     -- s_HttpRequestClient.downloadWordSoundFile('apply', function (objectId, filename, err, isSaved) 
     --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
