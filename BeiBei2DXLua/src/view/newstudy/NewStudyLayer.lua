@@ -8,6 +8,7 @@ local NewStudyLayer = class("NewStudyLayer", function ()
     return cc.Layer:create()
 end)
 
+--TODO change string to int
 NewStudyLayer_State_Choose = "NewStudyLayer_State_Choose"
 NewStudyLayer_State_True = "NewStudyLayer_State_True"
 NewStudyLayer_State_Wrong = "NewStudyLayer_State_Wrong"
@@ -75,7 +76,7 @@ function NewStudyLayer.create(viewstate)
     
     --NewStudyLayer_State_Choose
     if viewstate == NewStudyLayer_State_Choose then
-    
+        --TODO change content in if to a function
         local word = cc.Label:createWithSystemFont("word","",48)
         word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.9)
         word:setColor(cc.c4b(0,0,0,255))
@@ -357,8 +358,6 @@ function NewStudyLayer.create(viewstate)
         choose_next_text:setAnchorPoint(0.5,0.5)
         choose_next_button:addChild(choose_next_text)
         
-    
-    
     --NewStudyLayer_State_Slide
     elseif viewstate == NewStudyLayer_State_Slide then 
     
@@ -448,10 +447,6 @@ function NewStudyLayer.create(viewstate)
     --NewStudyLayer_State_Reward
     elseif viewstate == NewStudyLayer_State_Reward then
     end
-
-    
-    
-    
     return layer
 end
 
