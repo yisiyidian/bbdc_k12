@@ -22,10 +22,11 @@ function DebugLayer.create()
 
     layer:scheduleUpdateWithPriorityLua(function (dt)
         local str = ''
+        if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username end
         if AgentManager ~= nil then
-            str  = 'channel:' .. AgentManager:getInstance():getChannelId() .. ',V:' .. s_APP_VERSION .. ', name:' .. s_CURRENT_USER.username
+            str  = 'channel:' .. AgentManager:getInstance():getChannelId() .. ',V:' .. s_APP_VERSION .. ', name:' .. str
         else
-            str = 'channel:UN' .. ',V:' .. s_APP_VERSION .. ', name:' .. s_CURRENT_USER.username
+            str = 'channel:UN' .. ',V:' .. s_APP_VERSION .. ', name:' .. str
         end
         layer.debugInfo:setString(str)
         layer.debugInfo2:setString(str)
