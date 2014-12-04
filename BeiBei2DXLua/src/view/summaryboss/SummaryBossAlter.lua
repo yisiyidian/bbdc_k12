@@ -3,6 +3,8 @@ require("common.global")
 local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
+local vertical = 1
+local horizontal = 2
 
 function SummaryBossAlter.create(win,wordCount,blood,index)
     
@@ -11,6 +13,16 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     layer.blood = blood
     layer.win = win
     layer.index = index
+
+    if layer.win then
+        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
+        local isPassed = levelData.isPassed
+        if isPassed == 0 then
+            s_CURRENT_USER:addEnergys(1)
+            s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+            s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
+        end
+    end
     
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
@@ -24,7 +36,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     if win then
-        layer:win1()    
+        layer:result(horizontal)    
         cc.SimpleAudioEngine:getInstance():pauseMusic()
 
         s_SCENE:callFuncWithDelay(0.3,function()
@@ -76,154 +88,172 @@ function SummaryBossAlter:lose()
     continue:addChild(btn_title)
 
     local function nextBoard(sender)
-        self:lose2()
+        
+        local move = cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(s_LEFT_X - s_RIGHT_X , 0)))
+        local summary = cc.CallFunc:create(function ()
+            self:result(vertical)
+        end,{})
+        self.loseBoard:runAction(cc.Sequence:create(move,summary))
 
     end
     continue:registerScriptTapHandler(nextBoard)
+
+    local close = ccui.Button:create('image/button/button_close.png','image/button/button_close.png','')
+    close:setPosition(self.loseBoard:getContentSize().width * 0.94,self.loseBoard:getContentSize().height * 0.82)
+    self.loseBoard:addChild(close)
+
+    local function onClose(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            playSound(s_sound_buttonEffect)
+            self.backToLevel()
+        end
+    end
+
+    close:addTouchEventListener(onClose)
     
     
 end
 
-function SummaryBossAlter:lose2()
-    self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
-    self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
-    self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
-    self.loseBoard2:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5)))))
-    self:addChild(self.loseBoard2)
+
+function SummaryBossAlter:result(direction)
     
-    local boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-    boss:setAnimation(0,'animation',false)
-    boss:addAnimation(0,'jianxiao',true)
-    boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height * 0.22)
-    self.loseBoard2:addChild(boss)
-    
-    local label = cc.Label:createWithSystemFont("挑战失败！",'',40)
-    label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.64)
-    label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
-    self.loseBoard2:addChild(label)
-
-    local label1 = cc.Label:createWithSystemFont(string.format("还需要找出%d个单词！\n做好准备再来",math.ceil(self.blood / 5)),'',40)
-    label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label1:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.55)
-    label1:setColor(cc.c4b(52,177,241,255))
-    self.loseBoard2:addChild(label1)
-
-    local head = cc.Sprite:create("image/summarybossscene/summaryboss_lose_head.png")
-    head:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.75)
-    self.loseBoard2:addChild(head)
-
-    local menu = cc.Menu:create()
-    menu:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.15)
-    self.loseBoard2:addChild(menu)
-    
-    local continue = cc.MenuItemImage:create("image/summarybossscene/summaryboss_blue_button.png","")
-    continue:setPosition(-130,0)
-    menu:addChild(continue)
-
-    local btn_title = cc.Label:createWithSystemFont("返回学习",'',40)
-    btn_title:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    btn_title:setPosition(continue:getContentSize().width / 2,continue:getContentSize().height / 2)
-    continue:addChild(btn_title)
-    local again = cc.MenuItemImage:create("image/summarybossscene/summaryboss_blue_button.png","")
-    again:setPosition(130,0)
-    menu:addChild(again)
-
-    local again_title = cc.Label:createWithSystemFont("再来一次",'',40)
-    again_title:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    again_title:setPosition(again:getContentSize().width / 2,again:getContentSize().height / 2)
-    again:addChild(again_title)
-    
-    local function backToLevelScene(sender)
-        s_logd("back") 
-        local level = require('view.LevelLayer')
-        local layer = level.create()
-        s_SCENE:replaceGameLayer(layer)
+    local board = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
+    if direction == horizontal then
+        board:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
+    else
+        board:setPosition(s_DESIGN_WIDTH * 1.5,s_DESIGN_HEIGHT * 0.5)
+    end
+    board:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
+    self:addChild(board)
+    local boss
+    local label
+    local label1
+    local head
+    if self.win then
+        boss = sp.SkeletonAnimation:create("spine/summaryboss/klsbeidacandonghua.json","spine/summaryboss/klsbeidacandonghua.atlas",1)
+        boss:setAnimation(0,'animation',true)       
+        label = cc.Label:createWithSystemFont("挑战成功！",'',40)        
+        label1 = cc.Label:createWithSystemFont(string.format("已经找到了%d个单词\n击败了恐老师！",self.wordCount),'',40)        
+        head = cc.Sprite:create("image/summarybossscene/summaryboss_win_head.png")
+    else
+        boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)     
+        label = cc.Label:createWithSystemFont("挑战失败！",'',40)
+        label1 = cc.Label:createWithSystemFont(string.format("还需要找出%d个单词！\n做好准备再来",math.ceil(self.blood / 5)),'',40)
+        head = cc.Sprite:create("image/summarybossscene/summaryboss_lose_head.png")
+        boss:setAnimation(0,'animation',false)
+        boss:addAnimation(0,'jianxiao',true)
+    end
+    boss:setPosition(board:getContentSize().width / 4,board:getContentSize().height * 0.22)
+    board:addChild(boss)
         
-        -- stop effect
-        cc.SimpleAudioEngine:getInstance():stopAllEffects()
-        -- button sound
-        playSound(s_sound_buttonEffect)
-    end
-    continue:registerScriptTapHandler(backToLevelScene)
-    
-    local function challengeAgain(sender)
-        s_logd("again")
-        s_SCENE.levelLayerState = s_normal_retry_state
-        local level = require('view.LevelLayer')
-        local layer = level.create()
-        s_SCENE:replaceGameLayer(layer) 
-        
-        -- stop effect
-        cc.SimpleAudioEngine:getInstance():stopAllEffects()
-        -- button sound
-        playSound(s_sound_buttonEffect)
-    end
-    again:registerScriptTapHandler(challengeAgain)
-    
-end
-
-function SummaryBossAlter:win1()
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
-    local isPassed = levelData.isPassed
-    if isPassed == 0 then
-        s_CURRENT_USER:addEnergys(1)
-        s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
-    end
-    self.winBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
-    self.winBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
-    self.winBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
-    self:addChild(self.winBoard)
-    
-    local boss = sp.SkeletonAnimation:create("spine/summaryboss/klsbeidacandonghua.json","spine/summaryboss/klsbeidacandonghua.atlas",1)
-    boss:setAnimation(0,'animation',true)
-    boss:setPosition(self.winBoard:getContentSize().width / 4,self.winBoard:getContentSize().height * 0.22)
-    self.winBoard:addChild(boss)
-    
-    local label = cc.Label:createWithSystemFont("挑战成功！",'',40)
     label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.64)
+    label:setPosition(board:getContentSize().width / 2,board:getContentSize().height * 0.64)
     label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
-    self.winBoard:addChild(label)
-    
-    local label1 = cc.Label:createWithSystemFont(string.format("已经找到了%d个单词\n击败了恐老师！",self.wordCount),'',40)
+    board:addChild(label)
+        
     label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label1:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.55)
+    label1:setPosition(board:getContentSize().width / 2,board:getContentSize().height * 0.55)
     label1:setColor(cc.c4b(52,177,241,255))
-    self.winBoard:addChild(label1)
+    board:addChild(label1)
+        
+    head:setPosition(board:getContentSize().width / 2,board:getContentSize().height * 0.75)
+    board:addChild(head)
     
-    local head = cc.Sprite:create("image/summarybossscene/summaryboss_win_head.png")
-    head:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.75)
-    self.winBoard:addChild(head)
-    
-    local menu = cc.Menu:create()
-    self.winBoard:addChild(menu)
-    local continue = cc.MenuItemImage:create("image/summarybossscene/summaryboss_blue_button.png","")
-    menu:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.15)
-    menu:addChild(continue)
+    local continue = ccui.Button:create("image/summarybossscene/summaryboss_blue_button.png","")
+    continue:setPosition(board:getContentSize().width / 2,board:getContentSize().height * 0.15)
+    board:addChild(continue)
     
     local btn_title = cc.Label:createWithSystemFont("继 续",'',40)
     btn_title:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     btn_title:setPosition(continue:getContentSize().width / 2,continue:getContentSize().height / 2)
     continue:addChild(btn_title)
-    
-    local function backToLevelScene(sender)
-       s_logd("clicked") 
-       local level = require('view.LevelLayer')
-       local layer = level.create()
-       --if self.win and isPassed == 0 then
-       --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-       --end
-       s_SCENE:replaceGameLayer(layer)
-       
-        -- stop effect
-        cc.SimpleAudioEngine:getInstance():stopAllEffects()
-        -- button sound
-        playSound(s_sound_buttonEffect)
+    local close = ccui.Button:create('image/button/button_close.png','image/button/button_close.png','')
+    close:setPosition(board:getContentSize().width * 0.94,board:getContentSize().height * 0.82)
+    board:addChild(close)
+
+    local function onClose(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            playSound(s_sound_buttonEffect)
+            self.backToLevel()
+        end
     end
-    continue:registerScriptTapHandler(backToLevelScene)
+
+    close:addTouchEventListener(onClose)
     
+    local function toSummaryMask(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local move = cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(s_LEFT_X - s_RIGHT_X , 0)))
+            local summary = cc.CallFunc:create(function ()
+                self:summaryMask()
+            end,{})
+            board:runAction(cc.Sequence:create(move,summary))
+        end
+    end
+    continue:addTouchEventListener(toSummaryMask)
+    
+end
+
+function SummaryBossAlter:summaryMask()
+    local boardCount = math.ceil(13 / 10)
+    local summaryBoard = {}
+    for i = 1, boardCount do
+        summaryBoard[i] = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
+        summaryBoard[i]:setPosition(s_DESIGN_WIDTH * 1.5,s_DESIGN_HEIGHT * 0.5)
+        
+        self:addChild(summaryBoard[i])
+        
+        local label = cc.Label:createWithSystemFont("考察到的单词",'',40)
+        label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+        label:setPosition(summaryBoard[i]:getContentSize().width / 2,summaryBoard[i]:getContentSize().height * 0.75)
+        label:setColor(cc.c4b(52,177,241,255))
+        summaryBoard[i]:addChild(label)
+
+        local continue = ccui.Button:create("image/summarybossscene/summaryboss_blue_button.png","")
+        continue:setPosition(summaryBoard[i]:getContentSize().width / 2,summaryBoard[i]:getContentSize().height * 0.22)
+        summaryBoard[i]:addChild(continue)
+
+        local btn_title = cc.Label:createWithSystemFont("继续",'',40)
+        btn_title:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+        btn_title:setPosition(continue:getContentSize().width * 0.6,continue:getContentSize().height / 2)
+        continue:addChild(btn_title)
+
+        local close = ccui.Button:create('image/button/button_close.png','image/button/button_close.png','')
+        close:setPosition(summaryBoard[i]:getContentSize().width * 0.94,summaryBoard[i]:getContentSize().height * 0.82)
+        summaryBoard[i]:addChild(close)
+
+        local function onClose(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                playSound(s_sound_buttonEffect)
+                self.backToLevel()
+            end
+        end
+
+        close:addTouchEventListener(onClose)
+
+        local function nextBoard(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- button sound
+                playSound(s_sound_buttonEffect)
+                if i < boardCount then
+                    summaryBoard[i]:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(s_LEFT_X - s_RIGHT_X , 0))))
+                    summaryBoard[i + 1]:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
+                else
+                    self.backToLevel()
+                end
+            end
+        end
+        continue:addTouchEventListener(nextBoard)
+    end
+
+    summaryBoard[1]:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
+    
+end
+
+function  SummaryBossAlter:backToLevel()
+    local level = require('view.LevelLayer')
+    local layer = level.create()
+    s_SCENE:replaceGameLayer(layer)
+    cc.SimpleAudioEngine:getInstance():stopAllEffects()
 end
 
 return SummaryBossAlter
