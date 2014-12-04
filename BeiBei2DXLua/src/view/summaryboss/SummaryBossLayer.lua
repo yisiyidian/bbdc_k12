@@ -6,6 +6,7 @@ local SummaryBossAlter = require("view.summaryboss.SummaryBossAlter")
 local Pause = require("view.Pause")
 
 local FlipNode = require("view.mat.FlipNode")
+local TapNode = require("view.mat.TapNode")
 
 local SummaryBossLayer = class("SummaryBosslayer", function ()
     return cc.Layer:create()
@@ -17,7 +18,7 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-function SummaryBossLayer.create(levelConfig)   
+function SummaryBossLayer.create(levelConfig,chapter)   
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     
@@ -64,7 +65,7 @@ function SummaryBossLayer.create(levelConfig)
     local onTouchEnded
     
     layer:initWordList(levelConfig)
-    layer:initBossLayer_back(levelConfig)
+    layer:initBossLayer_back(levelConfig,chapter)
     
     local loadingTime = 0
     local loadingState = 0
@@ -81,18 +82,18 @@ function SummaryBossLayer.create(levelConfig)
         end       
         if loadingState == 0 then
             loadingState = 1
-            layer:initBossLayer_girl(levelConfig)
+            layer:initBossLayer_girl(levelConfig,chapter)
         elseif loadingState == 2 then
             loadingState = 3
             
             
         elseif loadingState == 4 then
             loadingState = 5
-            layer:initBossLayer_boss(levelConfig)
+            layer:initBossLayer_boss(levelConfig,chapter)
         elseif loadingState == 6 then
             loadingState = 7
             
-            layer:initMap()
+            layer:initMap(chapter)
         end
         if loadingTime < 5 then
             loadingTime = loadingTime + delta
@@ -138,14 +139,11 @@ function SummaryBossLayer.create(levelConfig)
             end
             startNode = layer.coconut[layer.current_node_x][layer.current_node_y]
             selectStack[#selectStack+1] = startNode
-            layer:updateWord(selectStack)
+            layer:updateWord(selectStack,chapter)
             startNode.addSelectStyle()
             startNode.bigSize()
             if startNode.isFirst > 0 and layer.crabOnView[startNode.isFirst] then
-                layer.ccbcrab[startNode.isFirst]['boardBig']:setVisible(true)
-                layer.ccbcrab[startNode.isFirst]['boardSmall']:setVisible(false)
-                layer.ccbcrab[startNode.isFirst]['legBig']:setVisible(true)
-                layer.ccbcrab[startNode.isFirst]['legSmall']:setVisible(false)
+                layer:crabBig(chapter,startNode.isFirst)
             end
             startAtNode = true
         else
@@ -155,10 +153,7 @@ function SummaryBossLayer.create(levelConfig)
         for i = 1,#layer.wordPool[layer.currentIndex] do
             if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) then
                 layer.isPaused = true
-                layer.ccbcrab[i]['boardBig']:setVisible(true)
-                layer.ccbcrab[i]['boardSmall']:setVisible(false)
-                layer.ccbcrab[i]['legBig']:setVisible(true)
-                layer.ccbcrab[i]['legSmall']:setVisible(false)
+                layer:crabBig(chapter,i)
                 layer.onCrab = i
                 for m = 1, 5 do
                     for n = 1,5 do
@@ -214,14 +209,16 @@ function SummaryBossLayer.create(levelConfig)
             local y = location.y - startTouchLocation.y
 
             if math.abs(x) > 5 or math.abs(y) > 5 then
-                if y > x and y > -x then
-                    startNode:up()
-                elseif y < x and y < -x then
-                    startNode:down()
-                elseif y > x and y < -x then
-                    startNode:left()
-                else
-                    startNode:right()
+                if chapter ~= 2 then
+                    if y > x and y > -x then
+                        startNode:up()
+                    elseif y < x and y < -x then
+                        startNode:down()
+                    elseif y > x and y < -x then
+                        startNode:left()
+                    else
+                        startNode:right()
+                    end
                 end
                 startAtNode = false
             end
@@ -234,6 +231,10 @@ function SummaryBossLayer.create(levelConfig)
                         local secondStackTop = selectStack[#selectStack-1]
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
+                            stackTop:setScale(scale)
+                            if stackTop.isFirst > 0 then
+                                stackTop.firstStyle()
+                            end
                             table.remove(selectStack)    
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
@@ -246,14 +247,16 @@ function SummaryBossLayer.create(levelConfig)
                     end
                 else
                     if #selectStack == 0 then
-                        if layer.current_dir == dir_up then
-                            currentNode.down()
-                        elseif layer.current_dir == dir_down then
-                            currentNode.up()
-                        elseif layer.current_dir == dir_left then
-                            currentNode.right()
-                        else
-                            currentNode.left()
+                        if chapter ~= 2 then
+                            if layer.current_dir == dir_up then
+                                currentNode.down()
+                            elseif layer.current_dir == dir_down then
+                                currentNode.up()
+                            elseif layer.current_dir == dir_left then
+                                currentNode.right()
+                            else
+                                currentNode.left()
+                            end
                         end
                         currentNode.hasSelected = true
                         selectStack[#selectStack+1] = currentNode
@@ -274,14 +277,16 @@ function SummaryBossLayer.create(levelConfig)
                             
                             currentNode.addSelectStyle()
                             currentNode.bigSize()
-                            if layer.current_dir == dir_up then
-                                currentNode.down()
-                            elseif layer.current_dir == dir_down then
-                                currentNode.up()
-                            elseif layer.current_dir == dir_left then
-                                currentNode.right()
-                            else
-                                currentNode.left()
+                            if chapter ~= 2 then
+                                if layer.current_dir == dir_up then
+                                    currentNode.down()
+                                elseif layer.current_dir == dir_down then
+                                    currentNode.up()
+                                elseif layer.current_dir == dir_left then
+                                    currentNode.right()
+                                else
+                                    currentNode.left()
+                                end
                             end
                         end
                     end
@@ -290,7 +295,7 @@ function SummaryBossLayer.create(levelConfig)
 
             end
         end
-        layer:updateWord(selectStack)
+        layer:updateWord(selectStack,chapter)
     end
 
     onTouchEnded = function(touch, event)
@@ -301,10 +306,7 @@ function SummaryBossLayer.create(levelConfig)
         end
         if layer.onCrab > 0 then
 
-            layer.ccbcrab[layer.onCrab]['boardBig']:setVisible(false)
-            layer.ccbcrab[layer.onCrab]['boardSmall']:setVisible(true)
-            layer.ccbcrab[layer.onCrab]['legBig']:setVisible(false)
-            layer.ccbcrab[layer.onCrab]['legSmall']:setVisible(true)
+            layer:crabSmall(chapter,layer.onCrab)
             layer.onCrab = 0
         end
         
@@ -334,10 +336,7 @@ function SummaryBossLayer.create(levelConfig)
                     layer.boss.blood:setPercentage(100 * layer.currentBlood / layer.totalBlood)
                     --layer.boss:setAnimation(0,'a3',false)
                     layer.boss:addAnimation(0,'a2',false)
-                    layer.ccbcrab[i]['boardBig']:setVisible(false)
-                    layer.ccbcrab[i]['boardSmall']:setVisible(true)
-                    layer.ccbcrab[i]['legBig']:setVisible(false)
-                    layer.ccbcrab[i]['legSmall']:setVisible(true)
+                    layer:crabSmall(chapter,i)
                     layer.crab[i]:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT * 0.2))))
                     
                     -- slide true
@@ -376,7 +375,13 @@ function SummaryBossLayer.create(levelConfig)
                                 if killedCrabCount > 0 and layer.globalLock then
                                     layer.globalLock = false
                                 end
-                                node.normal()
+                                if chapter == 2 then
+                                    node.removeSelectStyle()
+                                    node:setScale(scale)
+                                else
+                                    node.normal()
+                                    node:setScale(scale)
+                                end
                                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                                     node.firstStyle()
                                 end
@@ -425,7 +430,7 @@ function SummaryBossLayer.create(levelConfig)
                                 end
                             end
                             layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
-                                layer:initMap()
+                                layer:initMap(chapter)
                             end,{})))
                         end
                         break
@@ -446,15 +451,13 @@ function SummaryBossLayer.create(levelConfig)
             for i = 1, #selectStack do
                 local node = selectStack[i]
                 node.removeSelectStyle()
+                node:setScale(scale)
                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
                     node.firstStyle()
                     local shakeOnce = cc.Sequence:create(cc.RotateBy:create(0.05,9),cc.RotateBy:create(0.05,-18),cc.RotateBy:create(0.05,9))
                     local shake = cc.Repeat:create(shakeOnce,2)
                     local small = cc.CallFunc:create(function() 
-                        layer.ccbcrab[node.isFirst]['boardBig']:setVisible(false)
-                        layer.ccbcrab[node.isFirst]['boardSmall']:setVisible(true)
-                        layer.ccbcrab[node.isFirst]['legBig']:setVisible(false)
-                        layer.ccbcrab[node.isFirst]['legSmall']:setVisible(true)   
+                        layer:crabSmall(chapter,node.isFirst)   
                     end,{})
                     layer.crab[node.isFirst]:runAction(cc.Sequence:create(shake,small))
                 end
@@ -479,7 +482,7 @@ function SummaryBossLayer.create(levelConfig)
     return layer  
 end
 
-function SummaryBossLayer:updateWord(selectStack)
+function SummaryBossLayer:updateWord(selectStack,chapter)
     for i = 1, #self.wordStack do
             self.wordStack[i]:stopAllActions()
             self.wordStack[i]:removeFromParent()
@@ -491,7 +494,7 @@ function SummaryBossLayer:updateWord(selectStack)
     local left = (s_DESIGN_WIDTH - (count-1)*gap)/2
         
     for i = 1, #selectStack do
-        local wordBack = cc.Sprite:create("image/button/USButton1.png")
+        local wordBack = cc.Sprite:create(string.format("image/summarybossscene/global_zongjiebossdancixianshi_%d.png",chapter))
             --wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
         wordBack:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
         wordBack:setScale(0.7)
@@ -505,7 +508,7 @@ function SummaryBossLayer:updateWord(selectStack)
     end
 end
 
-function SummaryBossLayer:initBossLayer_back(levelConfig)
+function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
     self.globalLock = true
     --stage info
     self.girlAfraid = false
@@ -517,17 +520,35 @@ function SummaryBossLayer:initBossLayer_back(levelConfig)
     self.onCrab = 0
     self.isLose = false
     s_SCENE.popupLayer.layerpaused = false 
-
     --add back
-    local blueBack = cc.LayerColor:create(cc.c4b(52, 177, 240, 255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    blueBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
-    self:addChild(blueBack)
-
-    local back = sp.SkeletonAnimation:create("res/spine/summaryboss/zongjieboss_diyiguan_background.json", "res/spine/summaryboss/zongjieboss_diyiguan_background.atlas", 1)
-    back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
-    self:addChild(back)
-    back:addAnimation(0, 'animation', true)
+    if chapter == 1 then
+        local blueBack = cc.LayerColor:create(cc.c4b(52, 177, 240, 255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+        blueBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+        self:addChild(blueBack)
     
+        local back = sp.SkeletonAnimation:create("res/spine/summaryboss/zongjieboss_diyiguan_background.json", "res/spine/summaryboss/zongjieboss_diyiguan_background.atlas", 1)
+        back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
+        self:addChild(back)
+        back:addAnimation(0, 'animation', true)
+    elseif chapter == 2 then
+        local back = cc.Sprite:create("image/summarybossscene/summaryboss_dierguan_back.png")    
+        back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
+        self:addChild(back)
+
+        local backEffect = sp.SkeletonAnimation:create('spine/summaryboss/second-level-summary-light.json','spine/summaryboss/second-level-summary-light.atlas',1)
+        backEffect:setPosition(-30 - s_LEFT_X,0.675 * back:getContentSize().height)
+        backEffect:setAnimation(0,'animation',true)
+        self:addChild(backEffect)
+    else 
+        local back = cc.Sprite:create('image/summarybossscene/third_level_summary_boss_background.png')
+        back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
+        self:addChild(back)
+
+        local light = sp.SkeletonAnimation:create("spine/summaryboss/third-level-summary-boss-background.json","spine/summaryboss/third-level-summary-boss-background.atlas",1)
+        light:setPosition(-80-s_LEFT_X,s_DESIGN_HEIGHT * 0.73)
+        self:addChild(light)
+        light:addAnimation(0,'animation',true)
+    end
     
     --add hole
     local hole = {}    
@@ -537,7 +558,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig)
     for i = 1, 5 do
         hole[i] = {}
         for j = 1, 5 do
-            hole[i][j] = cc.Sprite:create("image/summarybossscene/summaryboss_chapter1_hole.png")
+            hole[i][j] = cc.Sprite:create(string.format("image/summarybossscene/hole_%d.png",chapter))
             hole[i][j]:setScale(0.92)
             hole[i][j]:setPosition(left + gap * (i - 1), bottom + gap * (j - 1))
             self:addChild(hole[i][j],0)
@@ -546,7 +567,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig)
     self.hole = hole
 end
 
-function SummaryBossLayer:initBossLayer_girl(levelConfig)
+function SummaryBossLayer:initBossLayer_girl(levelConfig,chapter)
     --add pauseButton
     local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
@@ -573,12 +594,27 @@ function SummaryBossLayer:initBossLayer_girl(levelConfig)
     --add girl
     local girl = sp.SkeletonAnimation:create("spine/summaryboss/girl-stand.json","spine/summaryboss/girl-stand.atlas",1)
     girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)
+    if chapter == 2 then
+        girl:setPosition(s_DESIGN_WIDTH * 0.07, s_DESIGN_HEIGHT * 0.79)
+        local light_girl = cc.Sprite:create('image/summarybossscene/global_zongjiebosshuangshubeibei_dierguan.png')
+        light_girl:setAnchorPoint(0.08,0.1)
+        light_girl:setPosition(0,0)
+        girl:addChild(light_girl,-1)
+    end
     self:addChild(girl)
     girl:setAnimation(0,'girl-stand',true)
     self.girl = girl
     
     --add readyGo
-    local readyGo = sp.SkeletonAnimation:create("spine/summaryboss/readygo_diyiguan.json","spine/summaryboss/readygo_diyiguan.atlas",1)
+    local readyGoFile 
+    if chapter == 1 then
+        readyGoFile = "spine/summaryboss/readygo_diyiguan"
+    elseif chapter == 2 then
+        readyGoFile = "spine/summaryboss/readygo_dierguan"
+    else
+        readyGoFile = "spine/summaryboss/readygo_disanguan"
+    end
+    local readyGo = sp.SkeletonAnimation:create(string.format("%s.json",readyGoFile),string.format("%s.atlas",readyGoFile),1)
     readyGo:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.5)
     readyGo:addAnimation(0,'animation',false)
     self:addChild(readyGo,100)
@@ -588,7 +624,7 @@ function SummaryBossLayer:initBossLayer_girl(levelConfig)
     
 end
 
-function SummaryBossLayer:initBossLayer_boss(levelConfig)
+function SummaryBossLayer:initBossLayer_boss(levelConfig,chapter)
     
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
@@ -616,11 +652,21 @@ function SummaryBossLayer:initBossLayer_boss(levelConfig)
     self:addChild(bossNode)
     local boss = sp.SkeletonAnimation:create("spine/summaryboss/klswangqianzou.json","spine/summaryboss/klswangqianzou.atlas",1)
     boss:setPosition(0,0)
-    bossNode:addChild(boss)
+    bossNode:addChild(boss,1)
     boss:setAnimation(0,'a2',true)
     local bossAction = {}
     bossAction[1] = cc.DelayTime:create(0.0)
     bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75)))
+    if chapter == 2 then
+        bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.76)))
+        --boss light
+        local light_boss = cc.Sprite:create('image/summarybossscene/global_zongjiebosshuangshuboss_dierguan.png')
+        light_boss:setAnchorPoint(0,0)
+        light_boss:setPosition(0,0)
+        bossNode:addChild(light_boss)
+        light_boss:setVisible(false)
+        light_boss:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.Show:create()))
+    end
     for i = 1, 10 do
         local stop = cc.DelayTime:create(self.totalTime / 10 * 0.8)
         local stopAnimation = cc.CallFunc:create(function() 
@@ -716,7 +762,16 @@ function SummaryBossLayer:initStartIndex(index)
     end
 end
 
-function SummaryBossLayer:initCrab()
+function SummaryBossLayer:initCrab( chapter )
+    if chapter == 1 then
+        self:initCrab1()
+    else
+        self:initCrab2(chapter)
+    end
+
+end
+
+function SummaryBossLayer:initCrab1()
     local proxy = cc.CCBProxy:create()
     self.ccb = {}
     if #self.wordPool[self.currentIndex] ==1 then
@@ -773,6 +828,63 @@ function SummaryBossLayer:initCrab()
         self.ccbcrab[i]['meaningBig']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
     end
 end
+
+function SummaryBossLayer:initCrab2(chapter)
+    if #self.wordPool[self.currentIndex] ==1 then
+        self.crab[1] = cc.Sprite:create(string.format('image/summarybossscene/crab_%d_board_1.png',chapter))
+        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.3, -s_DESIGN_HEIGHT * 0.17)
+        self:addChild(self.crab[1])
+    elseif #self.wordPool[self.currentIndex] ==2 then
+        self.crab[1] = cc.Sprite:create(string.format('image/summarybossscene/crab_%d_board_1.png',chapter))
+        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.3, -s_DESIGN_HEIGHT * 0.17)
+        self:addChild(self.crab[1])
+        self.crab[2] = cc.Sprite:create(string.format('image/summarybossscene/crab_%d_board_3.png',chapter))
+        self.crab[2]:setPosition(s_DESIGN_WIDTH * 0.7, -s_DESIGN_HEIGHT * 0.17)
+        self:addChild(self.crab[2])
+    elseif #self.wordPool[self.currentIndex] ==3 then
+        for i = 1,3 do
+            self.crab[i] = cc.Sprite:create(string.format('image/summarybossscene/crab_%d_board_%d.png',chapter,i))
+            self:addChild(self.crab[i])
+        end
+        self.crab[1]:setPosition(s_DESIGN_WIDTH * 0.2, -s_DESIGN_HEIGHT * 0.17)
+        self.crab[2]:setPosition(s_DESIGN_WIDTH * 0.5, -s_DESIGN_HEIGHT * 0.17 - 10)
+        self.crab[3]:setPosition(s_DESIGN_WIDTH * 0.8, -s_DESIGN_HEIGHT * 0.17)   
+    end
+    for i = 1,#self.crab do
+        local hand = cc.Sprite:create(string.format('image/summarybossscene/crab_%d.png',chapter))
+        hand:setAnchorPoint(0.5,0.7)
+        hand:setPosition(0.5 * self.crab[i]:getContentSize().width,-10)
+        self.crab[i]:addChild(hand)
+        local meaning = cc.Label:createWithSystemFont(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall,'',28)
+        if chapter == 3 then
+            meaning:setColor(cc.c3b(0,0,0))
+        end
+        meaning:setPosition(0.5 * self.crab[i]:getContentSize().width,0.5 * self.crab[i]:getContentSize().height)
+        self.crab[i]:addChild(meaning)
+        if #self.crab == 3 then 
+            if i == 1 then
+                self.crab[i]:setRotation(6.6)
+            elseif i == 3 then
+                self.crab[i]:setRotation(-3.12)
+            end
+        elseif #self.crab == 2 then
+            if i == 1 then
+                self.crab[i]:setRotation(6.6)
+            elseif i == 2 then
+                self.crab[i]:setRotation(-3.12)
+            end
+        end
+        self.crab[i]:setAnchorPoint(0.5,0)
+        local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
+        local delaytime = 0
+        if self.currentIndex == 1 then
+            --delaytime = 1.5
+        end
+        self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
+    end
+end
+
+
 
 function SummaryBossLayer:initMapInfo()
     local start = os.time()
@@ -868,7 +980,7 @@ function SummaryBossLayer:initMapInfo()
     s_logd('time = %d',finish - start)
 end
 
-function SummaryBossLayer:initMap()
+function SummaryBossLayer:initMap(chapter)
 
     for i = 1, #self.crab do
         self.crab[i]:removeFromParent()
@@ -888,16 +1000,29 @@ function SummaryBossLayer:initMap()
                 self.coconut[i][j].main_character_content = self.character[self.currentIndex][i][j]
                 self.coconut[i][j].main_character_label:setString(self.character[self.currentIndex][i][j])
              else
-                self.coconut[i][j] = FlipNode.create("coconut_dark", self.character[self.currentIndex][i][j], i, j)
+                if chapter == 1 then
+                    self.coconut[i][j] = FlipNode.create("coconut_dark", self.character[self.currentIndex][i][j], i, j)
+                elseif chapter == 2 then 
+                    self.coconut[i][j] = TapNode.create("popcorn", self.character[self.currentIndex][i][j], i, j)
+                else
+                    self.coconut[i][j] = FlipNode.create("coin", self.character[self.currentIndex][i][j], i, j)
+                end
              end
              if self.isFirst[self.currentIndex][i][j] == 1 or self.isFirst[self.currentIndex][i][j] == 2 or self.isFirst[self.currentIndex][i][j] == 3 then
                 self.coconut[i][j].firstStyle()
              end
            
             if self.currentIndex == 1 then
-                self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/zongjieboss_2_douzi_zhuan.json","spine/summaryboss/zongjieboss_2_douzi_zhuan.atlas",1)
+                if chapter == 1 then
+                    self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/zongjieboss_2_douzi_zhuan.json","spine/summaryboss/zongjieboss_2_douzi_zhuan.atlas",1)
+                    self.coconut[i][j].bullet:setAnimation(0,'animation',true)
+                elseif chapter == 2 then
+                    self.coconut[i][j].bullet = cc.Sprite:create('image/summarybossscene/bullet_popcorn.png')
+                else
+                    self.coconut[i][j].bullet = sp.SkeletonAnimation:create("spine/summaryboss/third-level-summary-boss-coin-effect.json","spine/summaryboss/third-level-summary-boss-coin-effect.atlas",1)
+                    self.coconut[i][j].bullet:setAnimation(0,'animation',true)
+                end
                 self:addChild(self.coconut[i][j],1)
-                self.coconut[i][j].bullet:setAnimation(0,'animation',true)
                 self:addChild(self.coconut[i][j].bullet,2)
             else
                 self.coconut[i][j].bullet:stopAllActions()  
@@ -922,7 +1047,7 @@ function SummaryBossLayer:initMap()
             self.coconut[i][j].isFirst = self.isFirst[self.currentIndex][i][j]
         end
     end
-    self:initCrab()
+    self:initCrab(chapter)
 end
 
 function SummaryBossLayer:checkTouchLocation(location)
@@ -970,6 +1095,28 @@ function SummaryBossLayer:checkTouchLocation(location)
         self.onNode = true
     else
         self.onNode = false
+    end
+end
+
+function SummaryBossLayer:crabSmall(chapter,index)
+    if chapter == 1 then
+        self.ccbcrab[index]['boardBig']:setVisible(false)
+        self.ccbcrab[index]['boardSmall']:setVisible(true)
+        self.ccbcrab[index]['legBig']:setVisible(false)
+        self.ccbcrab[index]['legSmall']:setVisible(true)
+    else
+        self.crab[index]:setScale(1.0)
+    end
+end
+
+function SummaryBossLayer:crabBig(chapter,index)
+    if chapter == 1 then
+        self.ccbcrab[index]['boardBig']:setVisible(true)
+        self.ccbcrab[index]['boardSmall']:setVisible(false)
+        self.ccbcrab[index]['legBig']:setVisible(true)
+        self.ccbcrab[index]['legSmall']:setVisible(false)
+    else
+        self.crab[index]:setScale(1.2)
     end
 end
 
