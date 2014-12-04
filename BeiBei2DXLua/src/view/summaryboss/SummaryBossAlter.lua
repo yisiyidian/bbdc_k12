@@ -11,6 +11,16 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     layer.blood = blood
     layer.win = win
     layer.index = index
+
+    if self.win then
+        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
+        local isPassed = levelData.isPassed
+        if isPassed == 0 then
+            s_CURRENT_USER:addEnergys(1)
+            s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+            s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
+        end
+    end
     
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
@@ -24,7 +34,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     if win then
-        layer:win1()    
+        layer:win1()  
         cc.SimpleAudioEngine:getInstance():pauseMusic()
 
         s_SCENE:callFuncWithDelay(0.3,function()
@@ -76,6 +86,7 @@ function SummaryBossAlter:lose()
     continue:addChild(btn_title)
 
     local function nextBoard(sender)
+        
         self:lose2()
 
     end
@@ -164,13 +175,6 @@ function SummaryBossAlter:lose2()
 end
 
 function SummaryBossAlter:win1()
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
-    local isPassed = levelData.isPassed
-    if isPassed == 0 then
-        s_CURRENT_USER:addEnergys(1)
-        s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
-    end
     self.winBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.winBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.winBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
