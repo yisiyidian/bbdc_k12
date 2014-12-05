@@ -8,10 +8,18 @@ local ziaoangTest       = require("view.ZiaoangTest")
 local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
 function test()
+    s_UserBaseServer.logIn('tester112', 'qwerty', function (u, e, code) 
+        s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
+        function (api, result, error)
+            print_lua_table (result)
+        end)
+        -- s_SERVER.follow(s_CURRENT_USER.objectId, '54814dc8e4b0413d0555ad30', 
+        --     function (api, result) print_lua_table (result) end, function (api, code, message, description) end)
+    end)
 
 -- new study layer test begin
-    local newStudyLayer = NewStudyLayer.create(1)
-    s_SCENE:replaceGameLayer(newStudyLayer)
+    -- local newStudyLayer = NewStudyLayer.create(1)
+    -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
 
@@ -29,9 +37,9 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
-    -- local IntroLayer = require("popup.PopupModel")
-    -- local introLayer = IntroLayer.create()
-    -- s_SCENE:replaceGameLayer(introLayer) 
+ -- local IntroLayer = require("view.ScrollviewTest")
+ -- local introLayer = IntroLayer.create()
+ -- s_SCENE:replaceGameLayer(introLayer) 
     
 --    local startApp = function ()
 --        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then

@@ -20,25 +20,15 @@ function FriendRequest:ctor()
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
-    
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
+
+    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
         function (api, result)
-            s_CURRENT_USER:parseServerFolloweesData(result.results)
-            s_UserBaseServer.getFollowersOfCurrentUser( 
-                function (api, result)
-                    hideProgressHUD()
-                    s_CURRENT_USER:parseServerFollowersData(result.results)
-                    self:main()
-                end,
-                function (api, code, message, description)
-                    hideProgressHUD()
-                end
-            )
+            self:main()
+            hideProgressHUD()
         end,
         function (api, code, message, description)
             hideProgressHUD()
-        end
-    )
+        end)
 end
 
 function FriendRequest:main()
@@ -168,27 +158,21 @@ function FriendRequest:main()
                     return
                 end
                 s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
-                    function(api,result)
-                    
-                        s_CURRENT_USER:parseServerFollowData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
-                        s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1]
-                        table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
-                        listView:removeChild(item)
-                        local SmallAlter = require('view.friend.HintAlter')
-                        local smallAlter = SmallAlter.create('已同意好友请求')
-                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                        s_SCENE.popupLayer:addChild(smallAlter) 
-                        s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
-                        s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
-                        s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
-                        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-                            function(api,result)
-                            end,
-                            function(api, code, message, description)
-                            end)
-                         
-                    end,
-                    function(api, code, message, description)
+                    function (api, result, err)
+                        if err == nil then
+                            s_CURRENT_USER:parseServerFollowData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
+                            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1]
+                            table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
+                            listView:removeItem(listView:getIndex(item))
+                            local SmallAlter = require('view.friend.HintAlter')
+                            local smallAlter = SmallAlter.create('已同意好友请求')
+                            smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                            s_SCENE.popupLayer:addChild(smallAlter) 
+                            s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
+                            s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
+                            s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
+                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
+                        end
                     end
                 )
             end
@@ -208,7 +192,7 @@ function FriendRequest:main()
                 s_UserBaseServer.removeFan(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function(api,result)
                         s_CURRENT_USER:parseServerRemoveFanData(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1])
-                        listView:removeChild(item)
+                        listView:removeItem(listView:getIndex(item))
                         table.remove(s_CURRENT_USER.fans,listView:getCurSelectedIndex() + 1)
                         local SmallAlter = require('view.friend.HintAlter')
                         local smallAlter = SmallAlter.create('已拒绝好友请求')

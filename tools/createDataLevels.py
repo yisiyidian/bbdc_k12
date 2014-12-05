@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 
 # username subfix range, chapter index, book key
 # python createDataLevels.py 20 29 2 'ncee'
@@ -74,7 +76,7 @@ def getUserData(username):
 
 def updateUser(userId, sessionToken):
     header = [APP_ID, APP_KEY, "X-AVOSCloud-Session-Token: " + sessionToken, "Content-Type: application/json"]
-    data = json.dumps({"isGuest":0, "tutorialStep":100})
+    data = json.dumps({"isGuest":0, "tutorialStep":100, "bookKey":bookKey})
 
     c = pycurl.Curl()
     c.setopt(pycurl.URL,           URL_USER + '/' + userId)
