@@ -32,6 +32,8 @@ local function getAppData()
     return appId, sign
 end
 
+-- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+
 -- api : string
 -- parameters : table
 -- onSucceed(api, result) -- result : json
@@ -81,10 +83,10 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
             -- TODO: different API has different response data
             local data = s_JSON.decode(xhr.response)
             local result
-            if Server.debugLocalHost then 
-                result = data 
-            else
+            if data.result ~= nil then
                 result = data.result
+            else 
+                result = data 
             end
             local code = result.code
             local message = result.message
@@ -115,6 +117,22 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
     s_logd('\n>>>\nrequest: api:' .. api .. ', sessionToken:' .. Server.sessionToken .. ', parameters:' .. str .. '\n<<<\n')
 end
 
+-- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+
+local function create_onSucceed(onResponse)
+    local ret = function (api, result)
+        if onResponse ~= nil then onResponse(api, result, nil) end
+    end
+    return ret
+end
+
+local function create_onFailed(onResponse)
+    local ret = function (api, code, message, description)
+        if onResponse ~= nil then onResponse(api, nil, {['code']=code, ['message']=message, ['description']=description}) end
+    end
+    return ret
+end
+
 function Server.requestFunction(api, parameters, onSucceed, onFailed)
     if Server.debugLocalHost then
         __request__(api,                 'POST', CONTENT_TYPE_FORM, parameters, onSucceed, onFailed)
@@ -126,16 +144,31 @@ end
 -- return {followers: [粉丝列表], followees: [关注用户列表]}
 -- TODO: status
 
-function Server.requestFollowersAndFollowees(userObjectId, onSucceed, onFailed)
-    __request__('users/' .. userObjectId .. '/followersAndFollowees?include=followee', 'GET', CONTENT_TYPE_JSON, nil, onSucceed, onFailed)
+function Server.requestFollowersAndFollowees(userObjectId, onResponse)
+    __request__('users/' .. userObjectId .. '/followersAndFollowees?include=followee', 
+        'GET', 
+        CONTENT_TYPE_JSON, 
+        nil, 
+        create_onSucceed(onResponse),
+        create_onFailed(onResponse))
 end
 
-function Server.follow(userObjectId, targetObjectId, onSucceed, onFailed)
-    __request__('users/' .. userObjectId .. '/friendship/' .. targetObjectId, 'POST', CONTENT_TYPE_JSON, nil, onSucceed, onFailed)
+function Server.follow(userObjectId, targetObjectId, onResponse)
+    __request__('users/' .. userObjectId .. '/friendship/' .. targetObjectId, 
+        'POST', 
+        CONTENT_TYPE_JSON, 
+        nil, 
+        create_onSucceed(onResponse),
+        create_onFailed(onResponse))
 end
 
-function Server.unfollow(userObjectId, targetObjectId, onSucceed, onFailed)
-    __request__('users/' .. userObjectId .. '/friendship/' .. targetObjectId, 'DELETE', CONTENT_TYPE_JSON, nil, onSucceed, onFailed)
+function Server.unfollow(userObjectId, targetObjectId, onResponse)
+    __request__('users/' .. userObjectId .. '/friendship/' .. targetObjectId, 
+        'DELETE', 
+        CONTENT_TYPE_JSON, 
+        nil, 
+        create_onSucceed(onResponse),
+        create_onFailed(onResponse))
 end
 
 ---------------------------------------------------------------

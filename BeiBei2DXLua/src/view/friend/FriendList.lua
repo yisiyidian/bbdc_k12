@@ -20,41 +20,34 @@ function FriendList:ctor()
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
     showProgressHUD('正在加载好友列表')
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
+    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
         function (api, result)
-            s_CURRENT_USER:parseServerFolloweesData(result.results)
-            s_UserBaseServer.getFollowersOfCurrentUser( 
-                function (api, result)
-                    hideProgressHUD()
-                    s_CURRENT_USER:parseServerFollowersData(result.results)
-                    s_CURRENT_USER:getFriendsInfo() 
-                    local function listViewEvent(sender, eventType)
-                        if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
-                            print("select child index = ",sender:getCurSelectedIndex())
-                        end
-                    end
+            s_CURRENT_USER:getFriendsInfo() 
 
-                    self.array = {}
-                    for i,f in ipairs(s_CURRENT_USER.friends) do
-                        self.array[#self.array + 1] = f
-                    end
-                    self.array[#self.array + 1] = s_CURRENT_USER
-                    self.selectIndex = -2
-                    for i = 1,#self.array do
-                        for j = i, #self.array do
-                            if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
-                                local temp = self.array[i]
-                                self.array[i] = self.array[j]
-                                self.array[j] = temp
-                            end
-                        end
-                    end
-                    self:addList()
-                end,
-                function (api, code, message, description)
-                    hideProgressHUD()
+            local function listViewEvent(sender, eventType)
+                if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
+                    print("select child index = ",sender:getCurSelectedIndex())
                 end
-            )
+            end
+
+            self.array = {}
+            for i,f in ipairs(s_CURRENT_USER.friends) do
+                self.array[#self.array + 1] = f
+            end
+            self.array[#self.array + 1] = s_CURRENT_USER
+            self.selectIndex = -2
+            for i = 1,#self.array do
+                for j = i, #self.array do
+                    if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
+                        local temp = self.array[i]
+                        self.array[i] = self.array[j]
+                        self.array[j] = temp
+                    end
+                end
+            end
+            self:addList()
+            
+            hideProgressHUD()
         end,
         function (api, code, message, description)
             hideProgressHUD()

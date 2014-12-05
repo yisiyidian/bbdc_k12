@@ -9,14 +9,27 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
-function judge_Whether_nil(mark)
-    if mark == nil then
-        return 0
-    else
-        return mark.isLevelUnlocked
-    end
-end
+function isFunctionUnlocked(levelKey)
+    local ncee_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE,  'chapter0', levelKey)
+    local cet4_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4,  'chapter0', levelKey)
+    local cet6_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6,  'chapter0', levelKey)
+    local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
+    local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
 
+    local function judge_Whether_nil(mark)
+        if mark == nil then
+            return 0
+        else
+            return mark.isLevelUnlocked
+        end
+    end
+
+    return ( judge_Whether_nil(ncee_date)  == 1 
+          or judge_Whether_nil(cet4_date)  == 1 
+          or judge_Whether_nil(cet6_date)  == 1 
+          or judge_Whether_nil(cet6_date)  == 1 
+          or judge_Whether_nil(toefl_date) == 1)
+end
 
 function HomeLayer.create()
     -- data begin
@@ -101,21 +114,8 @@ function HomeLayer.create()
             
             elseif eventType == ccui.TouchEventType.ended then
 
-            -- level 10
-            local levelKey = 'level10'
-            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
-            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
-            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
-            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
-            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
-            
-
-            if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
-                judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
-                judge_Whether_nil(toefl_date)  == 1) and s_CURRENT_USER.isGuest == 0 then
---             if true then
+            if isFunctionUnlocked('level10') and s_CURRENT_USER.isGuest == 0 then
                 s_CorePlayManager.enterFriendLayer()
-
             else
             
                 if s_CURRENT_USER.isGuest == 1 then
@@ -145,51 +145,31 @@ function HomeLayer.create()
     button_friend:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
     button_friend:addTouchEventListener(button_right_clicked)
     backColor:addChild(button_friend)   
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
+    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
         function (api, result)
-            s_CURRENT_USER:parseServerFolloweesData(result.results)
-            s_UserBaseServer.getFollowersOfCurrentUser( 
-                function (api, result)
-                    s_CURRENT_USER:parseServerFollowersData(result.results)
-                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
-                    s_CURRENT_USER:getFriendsInfo()
-                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+            print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+            s_CURRENT_USER:getFriendsInfo()
+            print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
 
-                    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
-                        redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
-                        button_friend:addChild(redHint)
-                        
-                        -- level 10
-                        local levelKey = 'level10'
-                        local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
-                        local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
-                        local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
-                        local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
-                        local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
-
-
-                        if ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
-                            judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
-                            judge_Whether_nil(toefl_date)  == 1) and s_CURRENT_USER.isGuest == 0 then
-
-                            if redHint ~= nil then
-                                redHint:setVisible(false)
-                            end
-                        else
-                            if redHint ~= nil then
-                                redHint:setVisible(true)
-                            end
-                        end
-                       
-                        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
-                        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-                        redHint:addChild(num)
+            if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+                redHint = cc.Sprite:create('image/friend/fri_infor.png')
+                redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+                button_friend:addChild(redHint)
+                
+                if isFunctionUnlocked('level10') and s_CURRENT_USER.isGuest == 0 then
+                    if redHint ~= nil then
+                        redHint:setVisible(false)
                     end
-                end,
-                function (api, code, message, description)
+                else
+                    if redHint ~= nil then
+                        redHint:setVisible(true)
+                    end
                 end
-            )
+               
+                local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+                num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+                redHint:addChild(num)
+            end
         end,
         function (api, code, message, description)
         end
@@ -274,18 +254,7 @@ function HomeLayer.create()
             playSound(s_sound_buttonEffect)
             
             ----todo
-            --
-            -- level 7
-            local levelKey = 'level7'
-            local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
-            local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
-            local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
-            local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
-            local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
-
-            if   ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
-                judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
-                judge_Whether_nil(toefl_date)  == 1) then
+            if isFunctionUnlocked('level7') then
 
                 local PersonalInfo = require("view.PersonalInfo")
                 local personalInfoLayer = PersonalInfo.create()
@@ -427,17 +396,7 @@ function HomeLayer.create()
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
 
-                --level 4
-                local levelKey = 'level4'
-                local ncee_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE, 'chapter0', levelKey)
-                local cet4_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4, 'chapter0', levelKey)
-                local cet6_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6, 'chapter0', levelKey)
-                local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
-                local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
-                
-                if   ( judge_Whether_nil(ncee_date) == 1 or judge_Whether_nil(cet4_date) == 1 or 
-                    judge_Whether_nil(cet6_date) == 1 or judge_Whether_nil(cet6_date) == 1 or 
-                    judge_Whether_nil(toefl_date)  == 1) then
+                if isFunctionUnlocked('level4') then
                     
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 

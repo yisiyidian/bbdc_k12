@@ -237,35 +237,17 @@ function AppScene:getConfigs(noBookKey)
         if noBookKey then
             s_SCENE:gotoChooseBook()
         else
-            s_SCENE:getFollowees()
+            s_SCENE:getFollowersAndFollowees()
         end
     end)
 end
 
-function AppScene:getFollowees()
+function AppScene:getFollowersAndFollowees()
     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
-        function (api, result)
-            s_CURRENT_USER:parseServerFolloweesData(result.results)
-            s_SCENE:getFollowers()
-        end,
-        function (api, code, message, description)
-            s_SCENE:getFollowers()
-        end
-    )
-end
-
-function AppScene:getFollowers()
-    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
-    s_UserBaseServer.getFollowersOfCurrentUser( 
-        function (api, result)
-            s_CURRENT_USER:parseServerFollowersData(result.results)
+    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
+        function (api, result, err)
             s_SCENE:getLevels()
-        end,
-        function (api, code, message, description)
-            s_SCENE:getLevels()
-        end
-    )
+        end)
 end
 
 function AppScene:getLevels()

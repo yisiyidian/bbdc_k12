@@ -231,33 +231,46 @@ end
 ----
 
 -- who I follow
---[[
-s_UserBaseServer.getFolloweesOfCurrentUser( 
-    function (api, result)
-        parseServerFolloweesData(result.results)
-    end,
-    function (api, code, message, description)
-    end
-)
-]]--
-function UserBaseServer.getFolloweesOfCurrentUser(onSucceed, onFailed)
-    local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
-    s_SERVER.searchRelations('_Followee', sql, 'followee', onSucceed, onFailed)
-end
+-- --[[
+-- s_UserBaseServer.getFolloweesOfCurrentUser( 
+--     function (api, result)
+--         parseServerFolloweesData(result.results)
+--     end,
+--     function (api, code, message, description)
+--     end
+-- )
+-- ]]--
+-- function UserBaseServer.getFolloweesOfCurrentUser(onSucceed, onFailed)
+--     local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
+--     s_SERVER.searchRelations('_Followee', sql, 'followee', onSucceed, onFailed)
+-- end
 
--- who follow me
---[[
-s_UserBaseServer.getFollowersOfCurrentUser( 
-    function (api, result)
-        parseServerFollowersData(result.results)
-    end,
-    function (api, code, message, description)
-    end
-)
-]]--
-function UserBaseServer.getFollowersOfCurrentUser(onSucceed, onFailed)
-    local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
-    s_SERVER.searchRelations('_Follower', sql, 'follower', onSucceed, onFailed)
+-- -- who follow me
+-- --[[
+-- s_UserBaseServer.getFollowersOfCurrentUser( 
+--     function (api, result)
+--         parseServerFollowersData(result.results)
+--     end,
+--     function (api, code, message, description)
+--     end
+-- )
+-- ]]--
+-- function UserBaseServer.getFollowersOfCurrentUser(onSucceed, onFailed)
+--     local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
+--     s_SERVER.searchRelations('_Follower', sql, 'follower', onSucceed, onFailed)
+-- end
+
+-- parseServerFolloweesData(result.followees)
+-- parseServerFollowersData(result.followers)
+function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
+    s_SERVER.requestFollowersAndFollowees(s_CURRENT_USER.objectId, 
+        function (api, result, err)
+            if result ~= nil then
+                s_CURRENT_USER:parseServerFolloweesData(result.followees)
+                s_CURRENT_USER:parseServerFolloweesData(result.followers)
+            end
+            if onResponse ~= nil then onResponse(api, result, err) end
+        end)
 end
 
 function UserBaseServer.follow(targetDataUser, onSucceed, onFailed)
