@@ -29,9 +29,9 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
-    -- local IntroLayer = require("popup.PopupModel")
-    -- local introLayer = IntroLayer.create()
-    -- s_SCENE:replaceGameLayer(introLayer) 
+ local IntroLayer = require("view.ScrollviewTest")
+ local introLayer = IntroLayer.create()
+ s_SCENE:replaceGameLayer(introLayer) 
     
 --    local startApp = function ()
 --        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
