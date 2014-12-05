@@ -80,7 +80,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
         if xhr.status ~= 200 then
             if onFailed then onFailed(api, xhr.status, xhr.statusText, '') end
         elseif xhr.response ~= nil then
-            -- TODO: different API has different response data
+
             local data = s_JSON.decode(xhr.response)
             local result
             if data.result ~= nil then

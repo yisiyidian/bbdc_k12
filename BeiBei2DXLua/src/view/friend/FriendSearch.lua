@@ -155,51 +155,50 @@ function FriendSearch:ctor()
                                         end
                                         showProgressHUD('正在发送好友请求')
                                         s_UserBaseServer.unfollow(user,
-                                            function(api,result)
-                                                
-                                                s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
-                                                s_UserBaseServer.follow(user,
-                                                    function(api,result)
-                                                        hideProgressHUD()
-                                                        local fan = nil
-                                                        local key = 0
-                                                        for i,f in ipairs(s_CURRENT_USER.fans) do
-                                                            if f.username == user.username then
-                                                                fan = f
-                                                                key = i
-                                                                break
+                                            function(api, result, err)
+                                                if err == nil then
+                                                    s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
+                                                    s_UserBaseServer.follow(user,
+                                                        function (api, result, err)
+                                                            if err == nil then
+                                                                local fan = nil
+                                                                local key = 0
+                                                                for i,f in ipairs(s_CURRENT_USER.fans) do
+                                                                    if f.username == user.username then
+                                                                        fan = f
+                                                                        key = i
+                                                                        break
+                                                                    end
+                                                                end
+
+                                                                if fan then
+                                                                    s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = user
+                                                                    s_CURRENT_USER:parseServerFollowData(user)
+                                                                    table.remove(s_CURRENT_USER.fans,key)
+                                                                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+                                                                        function(api,result)
+                                                                        end,
+                                                                        function(api, code, message, description)
+                                                                        end)
+                                                                end
+                                                                arrow:setVisible(true)
+                                                                add:setVisible(false)
+
+                                                                local SmallAlter = require('view.friend.HintAlter')
+                                                                local smallAlter = SmallAlter.create('好友请求发送成功')
+                                                                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                                                s_SCENE.popupLayer:addChild(smallAlter) 
+                                                            else
+                                                                local SmallAlter = require('view.friend.HintAlter')
+                                                                local smallAlter = SmallAlter.create('好友请求发送失败')
+                                                                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                                                s_SCENE.popupLayer:addChild(smallAlter) 
                                                             end
-                                                        end
-
-                                                        if fan then
-                                                            s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = user
-                                                            s_CURRENT_USER:parseServerFollowData(user)
-                                                            table.remove(s_CURRENT_USER.fans,key)
-                                                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-                                                                function(api,result)
-                                                                end,
-                                                                function(api, code, message, description)
-                                                                end)
-                                                        end
-                                                        arrow:setVisible(true)
-                                                        add:setVisible(false)
-
-                                                        local SmallAlter = require('view.friend.HintAlter')
-                                                        local smallAlter = SmallAlter.create('好友请求发送成功')
-                                                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                                                        s_SCENE.popupLayer:addChild(smallAlter) 
-                                                    end,
-                                                    function(api, code, message, description)
-                                                        hideProgressHUD()
-                                                        local SmallAlter = require('view.friend.HintAlter')
-                                                        local smallAlter = SmallAlter.create('好友请求发送失败')
-                                                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                                                        s_SCENE.popupLayer:addChild(smallAlter) 
-                                                    end
-                                                )
-                                            end,
-                                            function(api, code, message, description)
-                                                hideProgressHUD()
+                                                            hideProgressHUD()
+                                                        end)
+                                                else
+                                                    hideProgressHUD()
+                                                end
                                             end)
                                         
                                     end

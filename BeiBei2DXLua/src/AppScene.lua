@@ -237,17 +237,9 @@ function AppScene:getConfigs(noBookKey)
         if noBookKey then
             s_SCENE:gotoChooseBook()
         else
-            s_SCENE:getFollowersAndFollowees()
+            s_SCENE:getLevels()
         end
     end)
-end
-
-function AppScene:getFollowersAndFollowees()
-    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_FRIEND_DATA))
-    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
-        function (api, result, err)
-            s_SCENE:getLevels()
-        end)
 end
 
 function AppScene:getLevels()

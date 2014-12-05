@@ -159,60 +159,50 @@ function FriendList:addList()
                     local function deleteFriend()
                         showProgressHUD('正在删除好友')
                         s_UserBaseServer.unfollow(self.array[self.selectIndex],
-                            function(api,result)
-                                s_UserBaseServer.removeFan(self.array[self.selectIndex],
-                                    function(api,result)
-                                        hideProgressHUD()
-                                        local SmallAlter = require('view.friend.HintAlter')
-                                        local smallAlter = SmallAlter.create('已删除该好友')
-                                        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                                        s_SCENE.popupLayer:addChild(smallAlter)
-                                        for i = 1,#s_CURRENT_USER.friends do
-                                            if s_CURRENT_USER.friends[i].username == self.array[self.selectIndex].username then
-                                                table.remove(s_CURRENT_USER.friends,i)
-                                                break
+                            function(api, result, err)
+                                if err == nil then
+                                    s_UserBaseServer.removeFan(self.array[self.selectIndex],
+                                        function(api,result)
+                                            local SmallAlter = require('view.friend.HintAlter')
+                                            local smallAlter = SmallAlter.create('已删除该好友')
+                                            smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                                            s_SCENE.popupLayer:addChild(smallAlter)
+                                            for i = 1,#s_CURRENT_USER.friends do
+                                                if s_CURRENT_USER.friends[i].username == self.array[self.selectIndex].username then
+                                                    table.remove(s_CURRENT_USER.friends,i)
+                                                    break
+                                                end
                                             end
-                                        end
 
-                                        s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
-                                        s_CURRENT_USER:parseServerRemoveFanData(self.array[self.selectIndex])
-                                        s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
-                                        s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
-                                        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-                                            function(api,result)
-                                            end,
-                                            function(api, code, message, description)
-                                            end) 
-                                        listView:removeItem(listView:getCurSelectedIndex())
-                                        listView:removeItem(self.selectIndex - 1)
+                                            s_CURRENT_USER:parseServerUnFollowData(self.array[self.selectIndex])
+                                            s_CURRENT_USER:parseServerRemoveFanData(self.array[self.selectIndex])
+                                            s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
+                                            s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
+                                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
+                                            listView:removeItem(listView:getCurSelectedIndex())
+                                            listView:removeItem(self.selectIndex - 1)
 
-                                        for i = 1,table.getn(listView:getItems()) do
-                                            local item = listView:getItem(i - 1)
-                                            local button = item:getChildByName("Title Button")
-                                            button.index = i   
-                                            local str = 'n'
+                                            for i = 1,table.getn(listView:getItems()) do
+                                                local item = listView:getItem(i - 1)
+                                                local button = item:getChildByName("Title Button")
+                                                button.index = i   
+                                                local str = 'n'
+                                                if i < 4 then str = string.format('%d',i) end
+                                                local rankIcon = button:getChildByName('rankIcon')
+                                                rankIcon:setTexture(string.format('image/friend/fri_rank_%s.png',str))
 
-                                            if i < 4 then
-                                                str = string.format('%d',i)
+                                                local rankLabel = rankIcon:getChildByName('rankLabel')
+                                                rankLabel:setString(string.format('%d',i))               
                                             end
-                                            local rankIcon = button:getChildByName('rankIcon')
-                                            rankIcon:setTexture(string.format('image/friend/fri_rank_%s.png',str))
 
-                                            local rankLabel = rankIcon:getChildByName('rankLabel')
-                                            rankLabel:setString(string.format('%d',i))
-                                            --                        
-                                        end
-
-                                        self.selectIndex = -2
-                                    end,
-                                    function(api, code, message, description)
-                                        hideProgressHUD()
-                                    end)
-                            end,
-                            function(api, code, message, description)
-                                hideProgressHUD()
+                                            self.selectIndex = -2
+                                            hideProgressHUD()
+                                        end,
+                                        function(api, code, message, description) hideProgressHUD() end)
+                                else
+                                    hideProgressHUD()
+                                end
                             end)
-
                     end
                     
                     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
