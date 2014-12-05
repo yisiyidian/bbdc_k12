@@ -13,20 +13,6 @@ function NewStudyTrueLayer.create()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-
-    local wordList              =   {"apple", "many", "where", "happy", "go", "sad", "at", "moon", "table", "desk"}
-    local currentIndex          =   1
-    local currentWord           =   s_WordPool[wordList[currentIndex]]
-
-    local wordName              =   currentWord.wordName
-    local wordSoundMarkEn       =   currentWord.wordSoundMarkEn
-    local wordSoundMarkAm       =   currentWord.wordSoundMarkAm
-    local wordMeaning           =   currentWord.wordMeaning
-    local wordMeaningSmall      =   currentWord.wordMeaningSmall
-    local sentenceEn            =   currentWord.sentenceEn
-    local sentenceCn            =   currentWord.sentenceCn
-    
     local layer = NewStudyTrueLayer.new()
     
     local font_number
@@ -46,12 +32,22 @@ function NewStudyTrueLayer.create()
     local word_mark 
 
     for i = 1,8 do
-        if i == 1 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-        elseif i == 8 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+        if i >= currentIndex_unfamiliar then
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            end
         else
-            word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
+            end
         end
 
         if word_mark ~= nil then
@@ -63,7 +59,7 @@ function NewStudyTrueLayer.create()
     end
 
     
-    local huge_word = cc.Label:createWithSystemFont(wordName,"",100)
+    local huge_word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",100)
     huge_word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.8)
     huge_word:setColor(cc.c4b(0,0,0,255))
     huge_word:ignoreAnchorPointForPosition(false)
@@ -75,7 +71,7 @@ function NewStudyTrueLayer.create()
     end
 
 
-    local word = cc.Label:createWithSystemFont(wordName,"",40)
+    local word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",40)
     word:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.50)
     word:setColor(cc.c4b(191,181,46,255))
     word:ignoreAnchorPointForPosition(false)
@@ -95,23 +91,23 @@ function NewStudyTrueLayer.create()
     backColor_second:setPosition(backGround:getContentSize().width *0.5,s_DESIGN_HEIGHT*0.25)
     backGround:addChild(backColor_second) 
 
-    local current_word_text = cc.Label:createWithSystemFont("当前单词","",32)
+    local current_word_text = cc.Label:createWithSystemFont("当前单词","",30)
     current_word_text:setPosition(backColor_second:getContentSize().width *0.05,backColor_second:getContentSize().height *0.9)
     current_word_text:setColor(cc.c4b(255,255,255,255))
     current_word_text:ignoreAnchorPointForPosition(false)
     current_word_text:setAnchorPoint(0,0.5)
     backColor_second:addChild(current_word_text) 
 
-    local current_word_name = cc.Label:createWithSystemFont(wordName,"",32)
-    current_word_name:setPosition(backColor_second:getContentSize().width *0.05 + current_word_text:getContentSize().width ,
+    local current_word_name = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",30)
+    current_word_name:setPosition(backColor_second:getContentSize().width *0.05 + current_word_text:getContentSize().width * 1.1,
         backColor_second:getContentSize().height *0.9)
     current_word_name:setColor(cc.c4b(191,181,46,255))
     current_word_name:ignoreAnchorPointForPosition(false)
     current_word_name:setAnchorPoint(0,0.5)
     backColor_second:addChild(current_word_name)   
 
-    local current_word_MarkUs = cc.Label:createWithSystemFont(wordSoundMarkAm,"",32)
-    current_word_MarkUs:setPosition(backColor_second:getContentSize().width *0.05 + current_word_text:getContentSize().width + current_word_name:getContentSize().width,
+    local current_word_MarkUs = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkAm,"",30)
+    current_word_MarkUs:setPosition(backColor_second:getContentSize().width *0.05 + current_word_text:getContentSize().width *1.1+ current_word_name:getContentSize().width *1.1,
         backColor_second:getContentSize().height *0.9)
     current_word_MarkUs:setColor(cc.c4b(255,255,255,255))
     current_word_MarkUs:ignoreAnchorPointForPosition(false)
@@ -127,7 +123,7 @@ function NewStudyTrueLayer.create()
     richtext:setContentSize(cc.size(backColor_second:getContentSize().width *0.95, 
         backColor_second:getContentSize().height *0.5))  
         
-    local current_word_wordMeaning = CCLabelTTF:create (wordMeaning,
+    local current_word_wordMeaning = CCLabelTTF:create (NewStudyLayer_wordList_wordMeaning,
         "Helvetica",32, cc.size(600, 300), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_wordMeaning:setColor(cc.c4b(152,183,227,255))
