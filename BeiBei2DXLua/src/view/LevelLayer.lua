@@ -387,33 +387,13 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
 end
 
 function LevelLayer:ctor()
-    print ('LevelLayer:ctor()')
-
     self.chapterDic = {}  -- container of chapter layers
-    
-    --local levelStypeI = require('view.level.LevelLayerI')
-    --local levelStypeII = require('view.level.LevelLayerII')
-    --local connectionLayer1_2 = require('view.level.connection.Connection1_2')
-    --local connectionLayer2_3 = require('view.level.connection.Connection2_3')
-    --levelLayerI = levelStypeI.create()
-    --levelLayerII = levelStypeII.create()
-    --connection1_2 = connectionLayer1_2.create()
-    --connection2_3 = connectionLayer2_3.create()
-    --connection1_2:plotUnlockChapterAnimation()
-    --connection2_3:plotUnlockChapterAnimation()
-    --self.chapterDic['chapter0'] = levelLayerI
-    --self.chapterDic['chapter1'] = levelLayerII
-    --self.chapterDic['connection0_1'] = connection1_2
-    --self.chapterDic['connection1_2'] = connection2_3
---    s_CURRENT_USER.currentChapterKey = 'chapter1'
---    s_CURRENT_USER.currentLevelKey = 'level3'
-    --s_SCENE.levelLayerState = s_unlock_next_chapter_state
 
     local function listViewEvent(sender, eventType)
         if eventType == ccui.ListViewEventType.ONSELECTEDITEM_END then
-            print("select child index = ",sender:getCurSelectedIndex())
+--            print("select child index = ",sender:getCurSelectedIndex())
             local curItemName = sender:getItem(sender:getCurSelectedIndex()):getName()
-            print('curItemName'..curItemName)
+--            print('curItemName'..curItemName)
             
 --            if curItemName == 'chapter1' then
 --                connection1_2:plotUnlockChapterAnimation()
@@ -425,28 +405,28 @@ function LevelLayer:ctor()
     end
 
     local function scrollViewEvent(sender, evenType)
+        print('began1:'..ccui.TouchEventType.began..',evenType:'..evenType..',scroll:'..ccui.ScrollviewEventType.scrolling)
         if evenType == ccui.ScrollviewEventType.scrollToBottom then
             print("SCROLL_TO_BOTTOM")
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
         elseif evenType == ccui.ScrollviewEventType.scrolling then
             --print('SCROLLING:'..sender:getPosition())
+        elseif evenType == ccui.TouchEventType.began then
+            print('TOUCH BEGAN')
         end
+        
     end  
     -- create list view
     listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(false)
     listView:setBackGroundImageScale9Enabled(true)
---    local fullWidth = levelLayerI:getContentSize().width
---    listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
---    listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
     listView:addEventListener(listViewEvent)
     listView:addScrollViewEventListener(scrollViewEvent)
     listView:removeAllChildren()
     self:addChild(listView)
-  
-    --self:manageListViewItem('chapter0','add')
+
     self:addChapterIntoListView('chapter0')
     self:addChapterIntoListView('chapter1')
     self:addChapterIntoListView('chapter2')
@@ -454,40 +434,7 @@ function LevelLayer:ctor()
     local fullWidth = self.chapterDic['chapter0']:getContentSize().width
     listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
     listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
-    -- add list view connection 
---    local item1_2 = ccui.Layout:create()
---    item1_2:setTouchEnabled(true)
---    item1_2:setContentSize(connection1_2:getContentSize())
---    connection1_2:setPosition(cc.p(0,0))
---    item1_2:addChild(connection1_2)
---    listView:addChild(item1_2)
-    -- add list view item2
---    local item2 = ccui.Layout:create()
---    item2:setTouchEnabled(true)
---    item2:setContentSize(levelLayerII:getContentSize())  
---    levelLayerII:setPosition(cc.p(0, 0))
---    item2:addChild(levelLayerII)
---    item2:setName('chapter1')
---    listView:addChild(item2)
-    -- add chapter3
---    local levelStyle3 = require('view.level.RepeatLevelLayer')
---    local levelLayer3 = levelStyle3.create('chapter3','level0')
---    levelLayer3:setPosition(cc.p(0,0))
---    local item3 = ccui.Layout:create()
---    item3:setContentSize(levelLayer3:getContentSize())
---    item3:addChild(levelLayer3)
---    listView:addChild(item3)
-    -- add list view connection 
---    local item2_3 = ccui.Layout:create()
---    item2_3:setTouchEnabled(true)
---    item2_3:setContentSize(connection2_3:getContentSize())
---    connection2_3:setPosition(cc.p(0,0))
---    item2_3:addChild(connection2_3)
---    listView:addChild(item2_3)
-    
-    --self:addChapterIntoListView('chapter3')
-    --self:addChapterIntoListView('chapter4')
-    --self:addChapterIntoListView('chapter5')
+
     
     self:updateCurrentChapterLayer()
     self:scrollLevelLayer(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
