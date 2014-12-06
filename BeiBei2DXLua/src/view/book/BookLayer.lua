@@ -192,7 +192,7 @@ function BookLayer.create()
         shelf:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height * 0.2))
         custom_item:addChild(shelf)
 
-        listView:addChild(custom_item)
+        listView:insertCustomItem(custom_item,i - 1)
         if i == 1 and #name_array%2 == 1 then
             layer.book[i]:setPosition(0.5 * custom_item:getContentSize().width,custom_item:getContentSize().height * 0.2 + 0.25 * shelf:getContentSize().height)
             custom_item:addChild(layer.book[i])
