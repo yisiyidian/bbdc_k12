@@ -12,7 +12,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     layer.win = win
     layer.index = index
 
-    if self.win then
+    if layer.win then
         local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
         local isPassed = levelData.isPassed
         if isPassed == 0 then
