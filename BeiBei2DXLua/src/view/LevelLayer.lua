@@ -28,7 +28,7 @@ function LevelLayer:levelStateManager()
     -- set levelState if relogin after logout
     if s_SCENE.levelLayerState == s_normal_level_state then
         local currentLevelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
-        if currentLevelData.stars > 0 then  -- set unlock next level state
+        if currentLevelData ~= nil and currentLevelData.stars > 0 then  -- set unlock next level state
             s_SCENE.levelLayerState = s_unlock_normal_notPlotInfo_state
         end
     end
@@ -178,6 +178,7 @@ function LevelLayer:levelStateManager()
             --s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey,2)
             s_CURRENT_USER.currentChapterKey = 'chapter'..(string.sub(s_CURRENT_USER.currentChapterKey,8)+1)
             s_CURRENT_USER.currentSelectedChapterKey = s_CURRENT_USER.currentChapterkey
+            self:addChapterIntoListView(s_CURRENT_USER.currentChapterKey)
             s_CURRENT_USER.currentLevelKey = 'level0'
             s_CURRENT_USER.currentSelectedLevelKey = s_CURRENT_USER.currentLevelKey
             s_CURRENT_USER:setUserLevelDataOfUnlocked(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey, 1)
@@ -319,7 +320,7 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         custom_item:setContentSize(self.chapterDic['chapter0']:getContentSize())  
         custom_item:setName('chapter0')  
         self.chapterDic['chapter0']:setPosition(cc.p(0, 0))
-        listView:insertCustomItem(self.chapterDic['chapter0'],0)
+        listView:addChild(self.chapterDic['chapter0'])
     elseif chapterKey == 'chapter1' then
         -- add connection 
         local connectionLayer0_1 = require('view.level.connection.Connection0_1')
@@ -331,14 +332,14 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         item0_1:setContentSize(self.chapterDic['connection0_1']:getContentSize())
         self.chapterDic['connection0_1']:setPosition(cc.p(0,0))
         item0_1:addChild(self.chapterDic['connection0_1'])
-        listView:insertCustomItem(item0_1,1)
+        listView:addChild(item0_1)
         local levelStypeII = require('view.level.LevelLayerII')
         self.chapterDic['chapter1'] = levelStypeII.create()
         local custom_item = ccui.Layout:create()
         custom_item:setContentSize(self.chapterDic['chapter1']:getContentSize())  
         custom_item:setName('chapter1')  
         self.chapterDic['chapter1']:setPosition(cc.p(0, 0))
-        listView:insertCustomItem(self.chapterDic['chapter1'],2)
+        listView:addChild(self.chapterDic['chapter1'])
     elseif chapterKey == 'chapter2' then
         local connectionLayer1_2 = require('view.level.connection.Connection1_2')
         self.chapterDic['connection1_2'] = connectionLayer1_2.create()
@@ -349,7 +350,7 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         item1_2:setContentSize(self.chapterDic['connection1_2']:getContentSize())
         self.chapterDic['connection1_2']:setPosition(cc.p(0,0))
         item1_2:addChild(self.chapterDic['connection1_2'])
-        listView:insertCustomItem(item1_2,3)
+        listView:addChild(item1_2)
         for i = 1, #chapterConfig / 10 do
             local levelStyle3 = require('view.level.RepeatLevelLayer')
             self.chapterDic[chapterKey..'_'..(i-1)] = levelStyle3.create(chapterKey,'level'..((i-1)*10))
@@ -358,7 +359,7 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
             item:setContentSize(self.chapterDic[chapterKey..'_'..(i-1)]:getContentSize())
             item:addChild(self.chapterDic[chapterKey..'_'..(i-1)])
             item:setName(chapterKey..'_'..(i-1))
-            listView:insertCustomItem(item,3+i)
+            listView:addChild(item)
         end
     else -- chapter3
         local chapterIndex = string.sub(chapterKey, 8)
@@ -411,7 +412,7 @@ function LevelLayer:ctor()
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
         elseif evenType == ccui.ScrollviewEventType.scrolling then
-            print('SCROLLING:'..sender:getPosition())
+            --print('SCROLLING:'..sender:getPosition())
         end
         
     end  
@@ -424,21 +425,27 @@ function LevelLayer:ctor()
     listView:addScrollViewEventListener(scrollViewEvent)
     listView:removeAllChildren()
     self:addChild(listView)
-
     self:addChapterIntoListView('chapter0')
-    if string.sub(s_CURRENT_USER.currentChapter,8) >= 1 then
+    if string.sub(s_CURRENT_USER.currentChapterKey,8) - 1 >= 0 then
         self:addChapterIntoListView('chapter1')
         self.chapterDic['connection0_1']:removeLockedCloud()
     end
-    self:addChapterIntoListView('chapter2')
-    self:addChapterIntoListView('chapter3')
+    if string.sub(s_CURRENT_USER.currentChapterKey, 8) - 2 >= 0 then
+        self:addChapterIntoListView('chapter2')
+        self.chapterDic['connection1_2']:removeLockedCloud()
+    end
+--    self:addChapterIntoListView('chapter2')
+    if string.sub(s_CURRENT_USER.currentChapterKey, 8) - 3 >= 0 then
+        self:addChapterIntoListView('chapter3')
+        self.chapterDic['connection2_3']:removeLockedCloud()
+    end
     local fullWidth = self.chapterDic['chapter0']:getContentSize().width
     listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
     listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
 
     
     self:updateCurrentChapterLayer()
-    self:scrollLevelLayer(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
+    self:scrollLevelLayer(s_CURRENT_USER.currentSelectedChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
     
     -- plot player position
     player = cc.Sprite:create('image/chapter_level/gril_head.png')

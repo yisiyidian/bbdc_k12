@@ -416,11 +416,11 @@ function LevelLayerI:ctor()
     end
     
     -- register touch event
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
-    --listener:registerScriptHandler(onTouchEnd,cc.Handler.EVENT_TOUCH_ENDED)
-    local eventDispatcher = self:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+--    local listener = cc.EventListenerTouchOneByOne:create()
+--    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
+--    --listener:registerScriptHandler(onTouchEnd,cc.Handler.EVENT_TOUCH_ENDED)
+--    local eventDispatcher = self:getEventDispatcher()
+--    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
     
     
 end
