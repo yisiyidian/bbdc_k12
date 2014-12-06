@@ -189,15 +189,8 @@ function PopupEnergyInfo:onBuyButtonClicked()
         local introLayer = IntroLayer.create()  
         s_SCENE:popup(introLayer)
 
---        local action2 = cc.MoveTo:create(0.3, cc.p(0,-600))          
---        introLayer:runAction(action2)
     end)
 
-    
---    local animation = introLayer.ccbPopupEnergyBuy['popupWindow']:getChildByName("heart_animation")
---    local label = animation:getChildByName("energyNumber")
---    label:setString(self.energy_number )
---    introLayer.ccbPopupEnergyBuy['energy_number'] =  self.energy_number 
 
     
 end

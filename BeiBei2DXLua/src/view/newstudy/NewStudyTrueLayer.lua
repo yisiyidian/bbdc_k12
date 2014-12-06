@@ -27,48 +27,13 @@ function NewStudyTrueLayer.create()
     pause_button:setPosition(s_LEFT_X + 150, s_DESIGN_HEIGHT - 50 )
     pause_button:ignoreAnchorPointForPosition(false)
     pause_button:setAnchorPoint(0,1)
-    backGround:addChild(pause_button)    
-
-    local word_mark 
-
-    for i = 1,8 do
-        if i >= currentIndex_unfamiliar then
-            if i == 1 then 
-                word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-            elseif i == 8 then 
-                word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
-            else
-                word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
-            end
-        else
-            if i == 1 then 
-                word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
-            elseif i == 8 then 
-                word_mark = cc.Sprite:create("image/newstudy/green_end.png")
-            else
-                word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
-            end
-        end
-
-        if word_mark ~= nil then
-            word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - 5),s_DESIGN_HEIGHT * 0.95)
-            word_mark:ignoreAnchorPointForPosition(false)
-            word_mark:setAnchorPoint(0,0.5)
-            backGround:addChild(word_mark)
-        end
-    end
+    backGround:addChild(pause_button) 
+       
+    JudgeColorAtTop(backGround)
 
     
-    local huge_word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",100)
-    huge_word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.8)
-    huge_word:setColor(cc.c4b(0,0,0,255))
-    huge_word:ignoreAnchorPointForPosition(false)
-    huge_word:setAnchorPoint(0.5,0.5)
-    backGround:addChild(huge_word)
+    HugeWordUnderColorSquare(backGround)
     
-    if string.len(huge_word:getString()) > 5  then
-    huge_word:setSystemFontSize(24 * backGround:getContentSize().width / huge_word:getContentSize().width)
-    end
 
 
     local word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",40)
@@ -161,6 +126,7 @@ function NewStudyTrueLayer.create()
     choose_study_text:ignoreAnchorPointForPosition(false)
     choose_study_text:setAnchorPoint(0.5,0.5)
     choose_study_button:addChild(choose_study_text)
+    
 
     return layer
 end

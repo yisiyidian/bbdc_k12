@@ -27,37 +27,11 @@ function NewStudyMissionLayer.create()
     pause_button:setAnchorPoint(0,1)
     backGround:addChild(pause_button)    
 
-    local word_mark 
 
-    for i = 1,8 do
-        if i >= currentIndex_unfamiliar then
-            if i == 1 then 
-                word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-            elseif i == 8 then 
-                word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
-            else
-                word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
-            end
-        else
-            if i == 1 then 
-                word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
-            elseif i == 8 then 
-                word_mark = cc.Sprite:create("image/newstudy/green_end.png")
-            else
-                word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
-            end
-        end
-
-        if word_mark ~= nil then
-            word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - 5),s_DESIGN_HEIGHT * 0.95)
-            word_mark:ignoreAnchorPointForPosition(false)
-            word_mark:setAnchorPoint(0,0.5)
-            backGround:addChild(word_mark)
-        end
-    end
+    JudgeColorAtTop(backGround)   
 
 
-    local unfamiliar_label = cc.Label:createWithSystemFont("已完成20个生词","",40)
+    local unfamiliar_label = cc.Label:createWithSystemFont("已完成"..maxWrongWordCount.."个生词","",40)
     unfamiliar_label:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.68)
     unfamiliar_label:setColor(cc.c4b(124,157,208,255))
     unfamiliar_label:ignoreAnchorPointForPosition(false)
@@ -70,7 +44,7 @@ function NewStudyMissionLayer.create()
     yellow_circle:setAnchorPoint(0.5,0.5)
     backGround:addChild(yellow_circle)
 
-    local unfamiliar_number_label = cc.Label:createWithSystemFont("+8","",40)
+    local unfamiliar_number_label = cc.Label:createWithSystemFont("+"..maxWrongWordCount,"",40)
     unfamiliar_number_label:setPosition(yellow_circle:getContentSize().width * 0.5,yellow_circle:getContentSize().height * 0.5)
     unfamiliar_number_label:setColor(cc.c4b(233,228,80,255))
     unfamiliar_number_label:ignoreAnchorPointForPosition(false)
@@ -84,21 +58,26 @@ function NewStudyMissionLayer.create()
     mission_text:setAnchorPoint(0.5,0.5)
     backGround:addChild(mission_text)
 
-    for i=1,3 do
-        local diamond = cc.Sprite:create("image/newstudy/diamond.png")
-        diamond:setPosition(backGround:getContentSize().width * 0.5 + diamond:getContentSize().width*1.1 * (i - 2),
-            backGround:getContentSize().height * 0.2)
-        diamond:ignoreAnchorPointForPosition(false)
-        diamond:setAnchorPoint(0.5,0.5)
-        backGround:addChild(diamond)  
-    end
+    RewardAdd(backGround)
 
     local click_mission_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Reward)
+            
+            current_state_judge = 0
+            
+            NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
+            NewStudyLayer_wordList_wordName              =   NewStudyLayer_wordList_currentWord.wordName
+            NewStudyLayer_wordList_wordSoundMarkEn       =   NewStudyLayer_wordList_currentWord.wordSoundMarkEn
+            NewStudyLayer_wordList_wordSoundMarkAm       =   NewStudyLayer_wordList_currentWord.wordSoundMarkAm
+            NewStudyLayer_wordList_wordMeaning           =   NewStudyLayer_wordList_currentWord.wordMeaning
+            NewStudyLayer_wordList_wordMeaningSmall      =   NewStudyLayer_wordList_currentWord.wordMeaningSmall
+            NewStudyLayer_wordList_sentenceEn            =   NewStudyLayer_wordList_currentWord.sentenceEn
+            NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
+            
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
     end

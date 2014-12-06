@@ -17,12 +17,6 @@ function NewStudyWrongLayer.create()
 
     local layer = NewStudyWrongLayer.new()
     
-    local wordUs
-    local wordEn
-    local word_us_button
-    local word_es_button
-    local word_mark 
-    
     local current_word_sentence_before_wordName 
     local current_word_sentence_after_wordName
     
@@ -39,113 +33,9 @@ function NewStudyWrongLayer.create()
     backGround:addChild(pause_button)    
 
 
+    JudgeColorAtTop(backGround) 
 
-    for i = 1,8 do
-        if i >= currentIndex_unfamiliar then
-            if i == 1 then 
-                word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-            elseif i == 8 then 
-                word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
-            else
-                word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
-            end
-        else
-            if i == 1 then 
-                word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
-            elseif i == 8 then 
-                word_mark = cc.Sprite:create("image/newstudy/green_end.png")
-            else
-                word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
-            end
-        end
-
-        if word_mark ~= nil then
-            word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - 5),s_DESIGN_HEIGHT * 0.95)
-            word_mark:ignoreAnchorPointForPosition(false)
-            word_mark:setAnchorPoint(0,0.5)
-            backGround:addChild(word_mark)
-        end
-    end
-
-    local word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",48)
-    word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.9)
-    word:setColor(cc.c4b(0,0,0,255))
-    word:ignoreAnchorPointForPosition(false)
-    word:setAnchorPoint(0.5,0.5)
-    backGround:addChild(word)
-
-    local click_playsound = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
-            playSound(s_sound_buttonEffect)
-
-        elseif eventType == ccui.TouchEventType.ended then
-
-            playWordSound(wordName)
-
-        end
-    end
-
-    local word_playsound_button = ccui.Button:create("image/newstudy/playsound_begin.png","image/newstudy/playsound_end.png","")
-    word_playsound_button:setPosition(backGround:getContentSize().width /2 + word:getContentSize().width  , s_DESIGN_HEIGHT * 0.9)
-    word_playsound_button:ignoreAnchorPointForPosition(false)
-    word_playsound_button:setAnchorPoint(0.5,0.5)
-    word_playsound_button:addTouchEventListener(click_playsound)
-    backGround:addChild(word_playsound_button) 
-
-    local click_change = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
-            playSound(s_sound_buttonEffect)
-
-        elseif eventType == ccui.TouchEventType.ended then
-            if Pronounce_Mark == 1 then          
-                Pronounce_Mark = 2
-                wordUs:setVisible(false)
-                wordEn:setVisible(true)
-                word_us_button:setVisible(false)
-                word_es_button:setVisible(true)
-            else
-                Pronounce_Mark = 1
-                wordUs:setVisible(true)
-                wordEn:setVisible(false)
-                word_us_button:setVisible(true)
-                word_es_button:setVisible(false)
-            end
-        end
-    end
-
-    wordUs = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkAm,"",42)
-    wordUs:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.85)
-    wordUs:setColor(cc.c4b(0,0,0,255))
-    wordUs:ignoreAnchorPointForPosition(false)
-    wordUs:setAnchorPoint(0.5,0.5)
-    wordUs:setVisible(true)
-    backGround:addChild(wordUs)
-
-    wordEn =  cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkEn,"",42)
-    wordEn:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.85)
-    wordEn:setColor(cc.c4b(0,0,0,255))
-    wordEn:ignoreAnchorPointForPosition(false)
-    wordEn:setAnchorPoint(0.5,0.5)
-    wordEn:setVisible(false)
-    backGround:addChild(wordEn)
-
-    word_us_button = ccui.Button:create("image/newstudy/us_button_begin.png","image/newstudy/us_button_end.png","")
-    word_us_button:setPosition(backGround:getContentSize().width /2 + word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
-    word_us_button:ignoreAnchorPointForPosition(false)
-    word_us_button:setAnchorPoint(0.5,0.5)
-    word_us_button:addTouchEventListener(click_change)
-    word_us_button:setVisible(true)
-    backGround:addChild(word_us_button)  
-
-    word_es_button = ccui.Button:create("image/newstudy/es_button_begin.png","image/newstudy/es_button_end.png","")
-    word_es_button:setPosition(backGround:getContentSize().width /2 + word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
-    word_es_button:ignoreAnchorPointForPosition(false)
-    word_es_button:setAnchorPoint(0.5,0.5)
-    word_es_button:addTouchEventListener(click_change)
-    word_es_button:setVisible(false)
-    backGround:addChild(word_es_button)  
+    PlayWordSoundAndAddSprite(backGround)     
 
 
     local chineseMeaning = cc.Label:createWithSystemFont("中文释义","",40)
@@ -193,19 +83,6 @@ function NewStudyWrongLayer.create()
     local current_word_sentence_before_wordName_label = CCLabelTTF:create (current_word_sentence_before_wordName,
         "Helvetica",32)
     current_word_sentence_before_wordName_label:setColor(cc.c4b(255,255,255,255))
-    
-    
---    local current_word_sentence_before_wordName_label = cc.Label:createWithSystemFont("qwertyuiop","",40)
---    current_word_sentence_before_wordName_label:setColor(cc.c4b(255,255,255,255))
-    
---    local Achar = current_word_sentence_before_wordName_label:getLetter(1)
-    
---    for i =1 , 5 do
---        print("current_word_sentence_before_wordName_label:getLetter"..i..current_word_sentence_before_wordName_label:getLetter(i))
---    end
---    local rotate = cc.RotateBy:create(2, 360)
---    local rot_4ever = cc.RepeatForever:create(rotate)
---    Achar:runAction(rot_4ever)
 
 
     local current_word_sentence_wordName_label = CCLabelTTF:create (NewStudyLayer_wordList_wordName,
@@ -220,8 +97,8 @@ function NewStudyWrongLayer.create()
         "Helvetica",32)
     current_word_sentence_chinese_label:setColor(cc.c4b(255,255,255,255))
     
-    
 
+    
     local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_before_wordName_label)   
     local richElement3 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_wordName_label)   
     local richElement4 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_after_wordName_label)  
@@ -276,6 +153,12 @@ function NewStudyWrongLayer.create()
     spell_drill:setAnchorPoint(0,0.5)
     backGround:addChild(spell_drill)
     
+    local underline = cc.LayerColor:create(cc.c4b(124,157,208,255), spell_drill:getContentSize().width, 2)
+    underline:setPosition(backGround:getContentSize().width *0.13  , s_DESIGN_HEIGHT * 0.3 - spell_drill:getContentSize().height)
+    underline:ignoreAnchorPointForPosition(false)
+    underline:setAnchorPoint(0,0.5)
+    backGround:addChild(underline)
+    
     local spell_position = cc.p(spell_drill:getPosition())
     local spell_size = spell_drill:getContentSize()
     
@@ -299,24 +182,9 @@ function NewStudyWrongLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            currentIndex_unfamiliar = currentIndex_unfamiliar + 1
-            
-            NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unfamiliar]]
-            NewStudyLayer_wordList_wordName              =   NewStudyLayer_wordList_currentWord.wordName
-            NewStudyLayer_wordList_wordSoundMarkEn       =   NewStudyLayer_wordList_currentWord.wordSoundMarkEn
-            NewStudyLayer_wordList_wordSoundMarkAm       =   NewStudyLayer_wordList_currentWord.wordSoundMarkAm
-            NewStudyLayer_wordList_wordMeaning           =   NewStudyLayer_wordList_currentWord.wordMeaning
-            NewStudyLayer_wordList_wordMeaningSmall      =   NewStudyLayer_wordList_currentWord.wordMeaningSmall
-            NewStudyLayer_wordList_sentenceEn            =   NewStudyLayer_wordList_currentWord.sentenceEn
-            NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
+        
+            UpdateCurrentWordFromFalse()
 
-            if currentIndex_unfamiliar ==  9 then
-                local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Mission)
-                s_SCENE:replaceGameLayer(newStudyLayer)
-            else
-                local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
-                s_SCENE:replaceGameLayer(newStudyLayer)
-            end
         end
     end
 
