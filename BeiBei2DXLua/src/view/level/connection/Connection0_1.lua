@@ -31,4 +31,11 @@ function Connection0_1:plotUnlockChapterAnimation()
     rightCloud:runAction(action2)
 end
 
+function Connection0_1:removeLockedCloud()
+    local leftCloud = self.ccbConnection0_1['connection_left_cloud']
+    local rightCloud = self.ccbConnection0_1['connection_right_cloud']
+    leftCloud:setVisible(false)
+    rightCloud:setVisible(false)
+end
+
 return Connection0_1

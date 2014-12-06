@@ -79,8 +79,6 @@ end
 function LevelLayerI:plotStarAnimation(levelKey, starCount)
     local levelButton = self:getChildByName(levelKey)
     local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter0',levelKey)
-    print('--------plot star animation----------')
-    print('levelKey'..levelKey..',starCount'..starCount)
     if levelConfig['type'] == 0 then
         local star1, star2, star3
         if starCount >= 3 then
@@ -323,10 +321,19 @@ local onTouchBegan = function(touch, event)
     local touchPosition = touch:getLocation()
     -- plot shark
     print(touchPosition.x..','..touchPosition.y)
-    
+    return true
     -- click wave "s_sound_clickWave"
 --    playSound(s_sound_clickWave)
     
+end
+local onTouchEnd = function(touch, event) 
+    local touchPosition = touch:getLocation()
+    -- plot shark
+    print('touchEnd:'..touchPosition.x..','..touchPosition.y)
+    return true
+    -- click wave "s_sound_clickWave"
+    --    playSound(s_sound_clickWave)
+
 end
 
 function LevelLayerI:ctor()
@@ -409,10 +416,11 @@ function LevelLayerI:ctor()
     end
     
     -- register touch event
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
-    local eventDispatcher = self:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+--    local listener = cc.EventListenerTouchOneByOne:create()
+--    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
+--    --listener:registerScriptHandler(onTouchEnd,cc.Handler.EVENT_TOUCH_ENDED)
+--    local eventDispatcher = self:getEventDispatcher()
+--    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
     
     
 end
