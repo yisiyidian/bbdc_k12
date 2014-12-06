@@ -24,7 +24,7 @@ function LevelLayer.create()
 end
 
 function LevelLayer:levelStateManager()
-   -- print('s_SCENE.state0:'..s_SCENE.levelLayerState)
+    --print('s_SCENE.state0:'..s_SCENE.levelLayerState..',currentChapter:'..s_CURRENT_USER.currentChapterKey)
     -- set levelState if relogin after logout
     if s_SCENE.levelLayerState == s_normal_level_state then
         local currentLevelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
@@ -321,11 +321,11 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         custom_item:setName('chapter0')  
         self.chapterDic['chapter0']:setPosition(cc.p(0, 0))
         listView:addChild(self.chapterDic['chapter0'])
-    elseif chapterKey == 'chapter1' then
+        
         -- add connection 
         local connectionLayer0_1 = require('view.level.connection.Connection0_1')
         self.chapterDic['connection0_1'] = connectionLayer0_1.create()
-        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 1 then
             self.chapterDic['connection0_1']:plotUnlockChapterAnimation()
         end
         local item0_1 = ccui.Layout:create()
@@ -333,6 +333,8 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         self.chapterDic['connection0_1']:setPosition(cc.p(0,0))
         item0_1:addChild(self.chapterDic['connection0_1'])
         listView:addChild(item0_1)
+    elseif chapterKey == 'chapter1' then
+        
         local levelStypeII = require('view.level.LevelLayerII')
         self.chapterDic['chapter1'] = levelStypeII.create()
         local custom_item = ccui.Layout:create()
@@ -340,10 +342,10 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         custom_item:setName('chapter1')  
         self.chapterDic['chapter1']:setPosition(cc.p(0, 0))
         listView:addChild(self.chapterDic['chapter1'])
-    elseif chapterKey == 'chapter2' then
+        
         local connectionLayer1_2 = require('view.level.connection.Connection1_2')
         self.chapterDic['connection1_2'] = connectionLayer1_2.create()
-        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 1 then
             self.chapterDic['connection1_2']:plotUnlockChapterAnimation()
         end
         local item1_2 = ccui.Layout:create()
@@ -351,6 +353,7 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
         self.chapterDic['connection1_2']:setPosition(cc.p(0,0))
         item1_2:addChild(self.chapterDic['connection1_2'])
         listView:addChild(item1_2)
+    elseif chapterKey == 'chapter2' then
         for i = 1, #chapterConfig / 10 do
             local levelStyle3 = require('view.level.RepeatLevelLayer')
             self.chapterDic[chapterKey..'_'..(i-1)] = levelStyle3.create(chapterKey,'level'..((i-1)*10))
@@ -361,18 +364,19 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
             item:setName(chapterKey..'_'..(i-1))
             listView:addChild(item)
         end
+        
+        local connectionLayer2_3 = require('view.level.connection.Connection_repeat')
+        self.chapterDic['connection2_3'] = connectionLayer2_3.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 1 then
+            self.chapterDic['connection2_3']:plotUnlockChapterAnimation()
+        end
+        local item2_3 = ccui.Layout:create()
+        item2_3:setContentSize(self.chapterDic['connection2_3']:getContentSize())
+        self.chapterDic['connection2_3']:setPosition(cc.p(0,0))
+        item2_3:addChild(self.chapterDic['connection2_3'])
+        listView:addChild(item2_3)
     else -- chapter3
         local chapterIndex = string.sub(chapterKey, 8)
-        local connectionLayer_repeat = require('view.level.connection.Connection_repeat')
-        self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex] = connectionLayer_repeat.create()
-        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 0 then
-            self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex]:plotUnlockChapterAnimation()
-        end
-        local item_connection = ccui.Layout:create()
-        item_connection:setContentSize(self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex]:getContentSize())
-        self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex]:setPosition(cc.p(0,0))
-        item_connection:addChild(self.chapterDic['connection'..(chapterIndex-1)..'_'..chapterIndex])
-        listView:addChild(item_connection)
         for i = 1, #chapterConfig / 10 do
             local levelStyle3 = require('view.level.RepeatLevelLayer')
             self.chapterDic[chapterKey..'_'..(i-1)] = levelStyle3.create(chapterKey,'level'..((i-1)*10))
@@ -383,6 +387,16 @@ function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
             item:setName(chapterKey..'_'..(i-1))
             listView:addChild(item)
         end
+        local connectionLayer_repeat = require('view.level.connection.Connection_repeat')
+        self.chapterDic['connection'..(chapterIndex)..'_'..(chapterIndex+1)] = connectionLayer_repeat.create()
+        if string.sub(s_CURRENT_USER.currentChapterKey,8) - string.sub(chapterKey, 8) >= 1 then
+            self.chapterDic['connection'..(chapterIndex)..'_'..(chapterIndex+1)]:plotUnlockChapterAnimation()
+        end
+        local item_connection = ccui.Layout:create()
+        item_connection:setContentSize(self.chapterDic['connection'..(chapterIndex)..'_'..(chapterIndex+1)]:getContentSize())
+        self.chapterDic['connection'..(chapterIndex)..'_'..(chapterIndex+1)]:setPosition(cc.p(0,0))
+        item_connection:addChild(self.chapterDic['connection'..(chapterIndex)..'_'..(chapterIndex+1)])
+        listView:addChild(item_connection)
     end
     
 end
