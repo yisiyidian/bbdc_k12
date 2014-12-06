@@ -24,7 +24,7 @@ function LevelLayer.create()
 end
 
 function LevelLayer:levelStateManager()
-    print('s_SCENE.state0:'..s_SCENE.levelLayerState)
+   -- print('s_SCENE.state0:'..s_SCENE.levelLayerState)
     -- set levelState if relogin after logout
     if s_SCENE.levelLayerState == s_normal_level_state then
         local currentLevelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
@@ -405,15 +405,13 @@ function LevelLayer:ctor()
     end
 
     local function scrollViewEvent(sender, evenType)
-        print('began1:'..ccui.TouchEventType.began..',evenType:'..evenType..',scroll:'..ccui.ScrollviewEventType.scrolling)
+        --print('began1:'..ccui.TouchEventType.began..',evenType:'..evenType..',scroll:'..ccui.ScrollviewEventType.scrolling)
         if evenType == ccui.ScrollviewEventType.scrollToBottom then
             print("SCROLL_TO_BOTTOM")
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
         elseif evenType == ccui.ScrollviewEventType.scrolling then
-            --print('SCROLLING:'..sender:getPosition())
-        elseif evenType == ccui.TouchEventType.began then
-            print('TOUCH BEGAN')
+            print('SCROLLING:'..sender:getPosition())
         end
         
     end  
@@ -428,7 +426,10 @@ function LevelLayer:ctor()
     self:addChild(listView)
 
     self:addChapterIntoListView('chapter0')
-    self:addChapterIntoListView('chapter1')
+    if string.sub(s_CURRENT_USER.currentChapter,8) >= 1 then
+        self:addChapterIntoListView('chapter1')
+        self.chapterDic['connection0_1']:removeLockedCloud()
+    end
     self:addChapterIntoListView('chapter2')
     self:addChapterIntoListView('chapter3')
     local fullWidth = self.chapterDic['chapter0']:getContentSize().width
