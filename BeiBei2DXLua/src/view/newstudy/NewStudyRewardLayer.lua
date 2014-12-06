@@ -30,12 +30,22 @@ function NewStudyRewardLayer.create()
     local word_mark 
 
     for i = 1,8 do
-        if i == 1 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-        elseif i == 8 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+        if i >= currentIndex_unfamiliar then
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            end
         else
-            word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
+            end
         end
 
         if word_mark ~= nil then

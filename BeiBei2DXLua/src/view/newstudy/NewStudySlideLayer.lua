@@ -4,6 +4,7 @@ require("Cocos2dConstants")
 require("common.global")
 
 local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+local FlipMat = require("view.mat.FlipMat")
 
 local  NewStudySlideLayer = class("NewStudySlideLayer", function ()
     return cc.Layer:create()
@@ -12,9 +13,10 @@ end)
 function NewStudySlideLayer.create()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    local mat
 
     local layer = NewStudySlideLayer.new()
-
+    
     local backGround = cc.Sprite:create("image/newstudy/new_study_background.png")
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
     backGround:ignoreAnchorPointForPosition(false)
@@ -30,12 +32,22 @@ function NewStudySlideLayer.create()
     local word_mark 
 
     for i = 1,8 do
-        if i == 1 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-        elseif i == 8 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+        if i >= currentIndex_unfamiliar then
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            end
         else
-            word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
+            end
         end
 
         if word_mark ~= nil then
@@ -46,37 +58,61 @@ function NewStudySlideLayer.create()
         end
     end
 
-    local huge_word = cc.Label:createWithSystemFont("这里是自适应的字体","",48)
+    local huge_word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",100)
     huge_word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.8)
     huge_word:setColor(cc.c4b(0,0,0,255))
     huge_word:ignoreAnchorPointForPosition(false)
     huge_word:setAnchorPoint(0.5,0.5)
     backGround:addChild(huge_word)
 
-    local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",40)
+    if string.len(huge_word:getString()) > 5  then
+        huge_word:setSystemFontSize(24 * backGround:getContentSize().width / huge_word:getContentSize().width)
+    end
+
+    local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",32)
     slide_word_label:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.68)
     slide_word_label:setColor(cc.c4b(124,157,208,255))
     slide_word_label:ignoreAnchorPointForPosition(false)
     slide_word_label:setAnchorPoint(0,0.5)
     backGround:addChild(slide_word_label)
 
-    for i = 1 , 4 do
-        for k = 1 , 4 do
-            local slide_button = ccui.Button:create("image/newstudy/click_undo.png","image/newstudy/click_do.png","")
-            slide_button:setPosition(backGround:getContentSize().width * 0.5 + slide_button:getContentSize().width*1.1 * (i - 3),
-                backGround:getContentSize().height * 0.5 + slide_button:getContentSize().height * 1.1 * (k - 3))
-            slide_button:ignoreAnchorPointForPosition(false)
-            slide_button:setAnchorPoint(0,0.5)
-            backGround:addChild(slide_button)  
+    local success = function()
+        currentIndex_unfamiliar = currentIndex_unfamiliar + 1
+        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unfamiliar]]
+        NewStudyLayer_wordList_wordName              =   NewStudyLayer_wordList_currentWord.wordName
+        NewStudyLayer_wordList_wordSoundMarkEn       =   NewStudyLayer_wordList_currentWord.wordSoundMarkEn
+        NewStudyLayer_wordList_wordSoundMarkAm       =   NewStudyLayer_wordList_currentWord.wordSoundMarkAm
+        NewStudyLayer_wordList_wordMeaning           =   NewStudyLayer_wordList_currentWord.wordMeaning
+        NewStudyLayer_wordList_wordMeaningSmall      =   NewStudyLayer_wordList_currentWord.wordMeaningSmall
+        NewStudyLayer_wordList_sentenceEn            =   NewStudyLayer_wordList_currentWord.sentenceEn
+        NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
+        
+        if currentIndex_unfamiliar ==  9 then
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Mission)
+            s_SCENE:replaceGameLayer(newStudyLayer)
+        else
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
+            s_SCENE:replaceGameLayer(newStudyLayer)
         end
     end
+    
+    local size_big = backGround:getContentSize()
+
+    mat = FlipMat.create(NewStudyLayer_wordList_wordName,4,4,false,"coconut_light")
+    mat:setPosition(size_big.width/2, 120)
+    backGround:addChild(mat)
+
+    mat.success = success
+--    mat.fail = fail
+    mat.rightLock = true
+    mat.wrongLock = false
 
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Mission)
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
     end

@@ -230,42 +230,23 @@ end
 
 ----
 
--- who I follow
---[[
-s_UserBaseServer.getFolloweesOfCurrentUser( 
-    function (api, result)
-        parseServerFolloweesData(result.results)
-    end,
-    function (api, code, message, description)
-    end
-)
-]]--
-function UserBaseServer.getFolloweesOfCurrentUser(onSucceed, onFailed)
-    local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
-    s_SERVER.searchRelations('_Followee', sql, 'followee', onSucceed, onFailed)
+function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
+    s_SERVER.requestFollowersAndFollowees(s_CURRENT_USER.objectId, 
+        function (api, result, err)
+            if result ~= nil then
+                s_CURRENT_USER:parseServerFolloweesData(result.followees) -- who I follow
+                s_CURRENT_USER:parseServerFolloweesData(result.followers) -- who follow me
+            end
+            if onResponse ~= nil then onResponse(api, result, err) end
+        end)
 end
 
--- who follow me
---[[
-s_UserBaseServer.getFollowersOfCurrentUser( 
-    function (api, result)
-        parseServerFollowersData(result.results)
-    end,
-    function (api, code, message, description)
-    end
-)
-]]--
-function UserBaseServer.getFollowersOfCurrentUser(onSucceed, onFailed)
-    local sql = string.format('{"user":{"__type":"Pointer","className":"_User","objectId":"%s"}}', s_CURRENT_USER.objectId)
-    s_SERVER.searchRelations('_Follower', sql, 'follower', onSucceed, onFailed)
+function UserBaseServer.follow(targetDataUser, onResponse)
+    s_SERVER.follow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
 end
 
-function UserBaseServer.follow(targetDataUser, onSucceed, onFailed)
-    s_SERVER.requestFunction('apiFollow', {['myObjectId']=s_CURRENT_USER.objectId, ['targetObjectId']=targetDataUser.objectId}, onSucceed, onFailed)
-end
-
-function UserBaseServer.unfollow(targetDataUser, onSucceed, onFailed)
-    s_SERVER.requestFunction('apiUnfollow', {['myObjectId']=s_CURRENT_USER.objectId, ['targetObjectId']=targetDataUser.objectId}, onSucceed, onFailed)
+function UserBaseServer.unfollow(targetDataUser, onResponse)
+    s_SERVER.unfollow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
 end
 
 function UserBaseServer.removeFan(fanDataUser, onSucceed, onFailed)

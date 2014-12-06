@@ -13,20 +13,6 @@ function NewStudyChooseLayer.create()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
-    
-    local wordList              =   {"apple", "many", "where", "happy", "go", "sad", "at", "moon", "table", "desk"}
-    local currentIndex          =   1
-    local currentWord           =   s_WordPool[wordList[currentIndex]]
-
-    local wordName              =   currentWord.wordName
-    local wordSoundMarkEn       =   currentWord.wordSoundMarkEn
-    local wordSoundMarkAm       =   currentWord.wordSoundMarkAm
-    local wordMeaning           =   currentWord.wordMeaning
-    local wordMeaningSmall      =   currentWord.wordMeaningSmall
-    local sentenceEn            =   currentWord.sentenceEn
-    local sentenceCn            =   currentWord.sentenceCn
-    
     local layer = NewStudyChooseLayer.new()
     
     local wordUs
@@ -35,6 +21,7 @@ function NewStudyChooseLayer.create()
     local word_es_button
     
     local choose_button
+    
     
     
     local backGround = cc.Sprite:create("image/newstudy/new_study_background.png")
@@ -51,13 +38,24 @@ function NewStudyChooseLayer.create()
 
     local word_mark 
 
+
     for i = 1,8 do
-        if i == 1 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-        elseif i == 8 then 
-            word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+        if i >= currentIndex_unfamiliar then
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            end
         else
-            word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
+            if i == 1 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
+            elseif i == 8 then 
+                word_mark = cc.Sprite:create("image/newstudy/green_end.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
+            end
         end
 
         if word_mark ~= nil then
@@ -68,7 +66,7 @@ function NewStudyChooseLayer.create()
         end
     end
     
-    local word = cc.Label:createWithSystemFont(wordName,"",48)
+    local word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",48)
     word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.9)
     word:setColor(cc.c4b(0,0,0,255))
     word:ignoreAnchorPointForPosition(false)
@@ -116,7 +114,7 @@ function NewStudyChooseLayer.create()
         end
     end
 
-    wordUs = cc.Label:createWithSystemFont(wordSoundMarkAm,"",42)
+    wordUs = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkAm,"",42)
     wordUs:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.85)
     wordUs:setColor(cc.c4b(0,0,0,255))
     wordUs:ignoreAnchorPointForPosition(false)
@@ -124,7 +122,7 @@ function NewStudyChooseLayer.create()
     wordUs:setVisible(true)
     backGround:addChild(wordUs)
     
-    wordEn =  cc.Label:createWithSystemFont(wordSoundMarkEn,"",42)
+    wordEn =  cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkEn,"",42)
     wordEn:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.85)
     wordEn:setColor(cc.c4b(0,0,0,255))
     wordEn:ignoreAnchorPointForPosition(false)
@@ -164,9 +162,9 @@ function NewStudyChooseLayer.create()
 
         elseif eventType == ccui.TouchEventType.ended then
          
-            if sender:getName() == wordMeaningSmall then
-                print("congratulation")
-                print(sender:getName())
+            if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then
+                local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_True)
+                s_SCENE:replaceGameLayer(newStudyLayer)
             end
 
         end
@@ -177,11 +175,11 @@ function NewStudyChooseLayer.create()
         choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.71 - 0.11 * i))
         choose_button:ignoreAnchorPointForPosition(false)
         choose_button:setAnchorPoint(0.5,0.5)
-        choose_button:setName(wordMeaningSmall)
+        choose_button:setName(NewStudyLayer_wordList_wordMeaningSmall)
         choose_button:addTouchEventListener(click_choose)
         backGround:addChild(choose_button)  
 
-        local choose_text = cc.Label:createWithSystemFont(wordMeaningSmall,"",32)
+        local choose_text = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordMeaningSmall,"",32)
         choose_text:setColor(cc.c4b(0,0,0,255))
         choose_text:setPosition(50 ,choose_button:getContentSize().height * 0.5 )
         choose_text:ignoreAnchorPointForPosition(false)
@@ -201,7 +199,7 @@ function NewStudyChooseLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_True)
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
     end

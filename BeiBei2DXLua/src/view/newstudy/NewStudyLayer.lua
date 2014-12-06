@@ -16,25 +16,25 @@ NewStudyLayer_State_Reward = 6
 
 -- s_CURRENT_USER.isSoundAm = 0
 Pronounce_Mark = 1
+currentIndex_unfamiliar = 1
 
+s_WordPool = s_DATA_MANAGER.loadAllWords()
+NewStudyLayer_wordList  =   {"happy", "many", "where", "happy", "happy", "sad", "happy", "moon", "moon", "moon"}
+
+NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unfamiliar]]
+NewStudyLayer_wordList_wordName              =   NewStudyLayer_wordList_currentWord.wordName
+NewStudyLayer_wordList_wordSoundMarkEn       =   NewStudyLayer_wordList_currentWord.wordSoundMarkEn
+NewStudyLayer_wordList_wordSoundMarkAm       =   NewStudyLayer_wordList_currentWord.wordSoundMarkAm
+NewStudyLayer_wordList_wordMeaning           =   NewStudyLayer_wordList_currentWord.wordMeaning
+NewStudyLayer_wordList_wordMeaningSmall      =   NewStudyLayer_wordList_currentWord.wordMeaningSmall
+NewStudyLayer_wordList_sentenceEn            =   NewStudyLayer_wordList_currentWord.sentenceEn
+NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
 
 function NewStudyLayer.create(viewstate)
     local layer = NewStudyLayer.new(viewstate)
 
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
 
     -- fake data, you can add if not enough
-    local wordList              =   {"apple", "many", "where", "happy", "go", "sad", "at", "moon", "table", "desk"}
-    local currentIndex          =   1
-    local currentWord           =   s_WordPool[wordList[currentIndex]]
- 
-    local wordName              =   currentWord.wordName
-    local wordSoundMarkEn       =   currentWord.wordSoundMarkEn
-    local wordSoundMarkAm       =   currentWord.wordSoundMarkAm
-    local wordMeaning           =   currentWord.wordMeaning
-    local wordMeaningSmall      =   currentWord.wordMeaningSmall
-    local sentenceEn            =   currentWord.sentenceEn
-    local sentenceCn            =   currentWord.sentenceCn
     
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
