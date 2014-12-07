@@ -25,7 +25,15 @@ current_state_judge = 1
 s_WordPool = s_DATA_MANAGER.loadAllWords()
 NewStudyLayer_wordList  =   {"happy", "many", "where", "yellow", "shamble", "sad", "narcotic", "sunlit", "lord", "moon",
     "mirage", "woody", "centimeter", "aggression", "regularize", "electricity", "unanswered", "hormone", "gush", "ornamental",
-    "preface", "postpone", "numerical", "pursue", "therefore", "damage", "restriction", "undeveloped", "underfoot", "hypothetical"}
+    "preface", "postpone", "relax", "pursue", "therefore", "damage", "estimate", "undeveloped", "underlie", "hypothetical",
+"pulse", "conversational", "successful", "travel", "vast", "scholar", "restriction", "instruct", "underfoot", "subduction",
+"elegant", "criticism", "numerical", "classify", "admirable", "volcano", "chlorine", "clarity", "architect", "crawl",
+"sterile", "paperwork", "hurl", "modulation", "glorify", "telescope", "piecemeal", "basketball", "bitter", "predictable",
+"inanimate", "topography", "blade", "despondent", "songwriter", "abuse", "purpose", "service", "listen", "wisdom",
+"blouse", "psychological", "artillery", "modest", "enrich", "ameliorate", "shopper", "engagement", "dozen", "trek",
+"elaborate", "strike", "example", "keelboat", "slate", "ring", "wasp", "fabrication", "runner", "collapse",
+"ruthless", "handedness", "validity", "foodstuff", "commemorate", "misfortune", "subtlety", "Incur", "entail", "fibrous",
+"numeral", "cocaine", "absolute", "unforeseen", "silver", "sensory", "wash", "escalator", "icicle", "convention",}
 
 if current_state_judge == 1 then
     NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]

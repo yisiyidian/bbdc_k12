@@ -246,7 +246,7 @@ function UpdateCurrentWordFromFalse()
             local new_study_popup = New_study_popup.create()  
             s_SCENE:popup(new_study_popup)
 
-            s_SCENE:callFuncWithDelay(3,function()
+            s_SCENE:callFuncWithDelay(2,function()
                 local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Mission)
                 s_SCENE:replaceGameLayer(newStudyLayer)
             end)
@@ -295,4 +295,57 @@ function RewardAdd(backGround)
         diamond:setScale(2)
         backGround:addChild(diamond)  
     end
+end
+
+function ShowAnswerTrueBack(backGround)
+
+   local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
+   showAnswerStateBack:setPosition(backGround:getContentSize().width/2 * (-3), 768)
+   backGround:addChild(showAnswerStateBack)
+
+   local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
+   sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
+   showAnswerStateBack:addChild(sign)
+
+   local right_wordname = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",60)
+   right_wordname:setColor(cc.c4b(130,186,47,255))
+   right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
+   right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
+   showAnswerStateBack:addChild(right_wordname)
+
+   local action1 = cc.MoveTo:create(0.5,cc.p(backGround:getContentSize().width / 2, 768))
+   showAnswerStateBack:runAction(action1)
+end
+
+
+function ShowAnswerFalseBack(backGround)
+    local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
+    showAnswerStateBack:setPosition(backGround:getContentSize().width/2 *3, 768)
+    backGround:addChild(showAnswerStateBack)
+
+    local action = cc.MoveTo:create(0.5,cc.p(backGround:getContentSize().width/2, 768))
+    showAnswerStateBack:runAction(action)
+
+    local sign = cc.Sprite:create("image/testscene/testscene_wrong_x.png")
+    sign:setPosition(showAnswerStateBack:getContentSize().width*0.1, showAnswerStateBack:getContentSize().height*0.45)
+    showAnswerStateBack:addChild(sign)
+
+    local right_wordname = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",60)
+    right_wordname:setColor(cc.c4b(202,66,64,255))
+    right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
+    right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
+    showAnswerStateBack:addChild(right_wordname)	
+end
+
+function CreateRandomWordList(parameters)
+    
+    local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+
+    math.randomseed(number)  
+
+    local randomNumber = math.random(1,table.getn(NewStudyLayer_wordList))
+
+    local randMeaning = s_WordPool[NewStudyLayer_wordList[randomNumber]].wordMeaningSmall
+    
+    
 end

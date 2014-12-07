@@ -22,7 +22,50 @@ function NewStudyChooseLayer.create()
 
     local choose_button
     
-
+    local word_list_table = {}
+    
+    local i = 1
+    
+--    if current_state_judge == 1 then
+--        word_list_table = {currentIndex_unjudge,0,0,0}   
+--        
+--        local case1 = word_list_table[1] - word_list_table[2]
+--        local case2 = word_list_table[2] - word_list_table[3]
+--        local case3 = word_list_table[3] - word_list_table[4]
+--        local case4 = word_list_table[1] - word_list_table[3]
+--        local case5 = word_list_table[2] - word_list_table[4]
+--        local case6 = word_list_table[1] - word_list_table[4]
+--        
+--        while case1 * case2 * case3 * case4 * case5 * case6  == 0 do
+--            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+--
+--            math.randomseed(number)  
+--            
+--            word_list_table[2] = math.random(1,table.getn(NewStudyLayer_wordList))
+--
+--            i = i + 1
+--            
+--            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+--
+--            math.randomseed(number)  
+--
+--            word_list_table[3] = math.random(1,table.getn(NewStudyLayer_wordList))
+--            
+--            i = i + 1
+--            
+--            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+--
+--            math.randomseed(number)  
+--
+--            word_list_table[4] = math.random(1,table.getn(NewStudyLayer_wordList))
+--  
+--            table.foreachi(word_list_table, print)
+--        end     
+--        
+--        
+--    else
+--        word_list_table = {currentIndex_unreview,0,0,0}
+--    end
     
     local backGround = cc.Sprite:create("image/newstudy/new_study_background.png")
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
@@ -56,20 +99,57 @@ function NewStudyChooseLayer.create()
         elseif eventType == ccui.TouchEventType.ended then
             if current_state_judge == 1 then
                 if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then
-                    local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_True)
-                    s_SCENE:replaceGameLayer(newStudyLayer)
+                
+                    ShowAnswerTrueBack(backGround)
+                    
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                    
+                    s_SCENE:callFuncWithDelay(1,function()
+                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_True)
+                        s_SCENE:replaceGameLayer(newStudyLayer)
+                        
+                        s_SCENE.touchEventBlockLayer.unlockTouch()
+                    end)
+                
 
                 else
-                    local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
-                    s_SCENE:replaceGameLayer(newStudyLayer)
+                
+                    ShowAnswerFalseBack(backGround)       
+
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                    
+                    s_SCENE:callFuncWithDelay(1,function()
+                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
+                        s_SCENE:replaceGameLayer(newStudyLayer)
+                        
+                        s_SCENE.touchEventBlockLayer.unlockTouch()
+                    end)
+                    
                 end
             else
                 if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then
-                    UpdateCurrentWordFromTrue()
-
+                
+                    ShowAnswerTrueBack(backGround)
+                    
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                    
+                    s_SCENE:callFuncWithDelay(1,function()
+                        UpdateCurrentWordFromTrue()
+                        
+                        s_SCENE.touchEventBlockLayer.unlockTouch()
+                    end)
                 else
-                    local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
-                    s_SCENE:replaceGameLayer(newStudyLayer)
+                
+                    ShowAnswerFalseBack(backGround)
+                    
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+                    s_SCENE:callFuncWithDelay(1,function()
+                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
+                        s_SCENE:replaceGameLayer(newStudyLayer)
+                        
+                        s_SCENE.touchEventBlockLayer.unlockTouch()
+                    end)
                 end
             end
         end
@@ -119,6 +199,23 @@ function NewStudyChooseLayer.create()
         end
 
     end
+    
+--        for i = 1 , 4 do
+--            choose_button = ccui.Button:create("image/newstudy/white_begin.png","image/newstudy/white_end.png","")
+--            choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.71 - 0.11 * i))
+--            choose_button:ignoreAnchorPointForPosition(false)
+--            choose_button:setAnchorPoint(0.5,0.5)
+--            choose_button:setName(s_WordPool[NewStudyLayer_wordList[word_list_table[i]]].wordMeaningSmall)
+--            choose_button:addTouchEventListener(click_choose)
+--            backGround:addChild(choose_button)  
+--
+--            local choose_text = cc.Label:createWithSystemFont(s_WordPool[NewStudyLayer_wordList[word_list_table[i]]].wordMeaningSmall,"",32)
+--            choose_text:setColor(cc.c4b(0,0,0,255))
+--            choose_text:setPosition(50 ,choose_button:getContentSize().height * 0.5 )
+--            choose_text:ignoreAnchorPointForPosition(false)
+--            choose_text:setAnchorPoint(0,0.5)
+--            choose_button:addChild(choose_text)  
+--        end
 
     local illustrate_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",32)
     illustrate_dontknow:setPosition(backGround:getContentSize().width *0.15,s_DESIGN_HEIGHT * 0.18)

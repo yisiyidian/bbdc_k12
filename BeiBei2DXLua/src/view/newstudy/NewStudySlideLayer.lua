@@ -31,7 +31,27 @@ function NewStudySlideLayer.create()
 
     JudgeColorAtTop(backGround)  
 
-    HugeWordUnderColorSquare(backGround)
+    local richtext = ccui.RichText:create()
+
+    richtext:ignoreContentAdaptWithSize(false)
+    richtext:ignoreAnchorPointForPosition(false)
+    richtext:setAnchorPoint(0.5,0.5)
+
+    richtext:setContentSize(cc.size(backGround:getContentSize().width *0.65, 
+        backGround:getContentSize().height *0.3))  
+
+    local current_word_wordMeaning = CCLabelTTF:create (NewStudyLayer_wordList_wordMeaning,
+        "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
+
+    current_word_wordMeaning:setColor(cc.c4b(255,255,255,255))
+
+    local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
+    richtext:pushBackElement(richElement1)                   
+    richtext:setPosition(backGround:getContentSize().width *0.5, 
+        backGround:getContentSize().height *0.7)
+    richtext:setLocalZOrder(10)
+    
+    backGround:addChild(richtext) 
 
     local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",32)
     slide_word_label:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.68)
