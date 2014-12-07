@@ -513,10 +513,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
     --stage info
     self.girlAfraid = false
     self.hasMap = false
-    self.totalBlood = levelConfig.summary_boss_hp
-    self.currentBlood = self.totalBlood
     self.rightWord = 0
-    self.totalTime = levelConfig.summary_boss_time
     self.onCrab = 0
     self.isLose = false
     s_SCENE.popupLayer.layerpaused = false 
@@ -703,16 +700,23 @@ end
 function SummaryBossLayer:initWordList(levelConfig)
     local wordList = split(levelConfig.word_content,'|')
     local index = 1
-    
+
     for i = 1, #wordList do
         local randomIndex = math.random(1,#wordList)
         local tmp = wordList[i]
         wordList[i] = wordList[randomIndex]
         wordList[randomIndex] = tmp
+
+    end
+
+    self.totalBlood = 0
+    for i = 1,#wordList do
+        self.totalBlood = self.totalBlood + string.len(wordList[i])
     end
     
     self.maxCount = #wordList
-
+    self.currentBlood = self.totalBlood
+    self.totalTime = math.ceil(self.totalBlood / 7) * 10 
 
     while true do
         local totalLength = 0
