@@ -31,8 +31,8 @@ function NewStudyRewardLayer.create()
 
 
     local familiar_label = cc.Label:createWithSystemFont("已完成"..maxWrongWordCount.."个生词","",40)
-    familiar_label:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.68)
-    familiar_label:setColor(cc.c4b(124,157,208,255))
+    familiar_label:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.68)
+    familiar_label:setColor(SilverFont)
     familiar_label:ignoreAnchorPointForPosition(false)
     familiar_label:setAnchorPoint(0,0.5)
     backGround:addChild(familiar_label)

@@ -2,7 +2,9 @@ require("Cocos2d")
 require("Cocos2dConstants")
 
 require("common.global")
+
 require("view.newstudy.NewStudyFunction")
+require("view.newstudy.NewStudyConfigure")
 
 local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
@@ -41,7 +43,7 @@ function NewStudyChooseLayer.create()
 
     local illustrate_know = cc.Label:createWithSystemFont("如果认识该单词请选出正确释义","",32)
     illustrate_know:setPosition(backGround:getContentSize().width *0.15,s_DESIGN_HEIGHT * 0.68)
-    illustrate_know:setColor(cc.c4b(124,157,208,255))
+    illustrate_know:setColor(SilverFont)
     illustrate_know:ignoreAnchorPointForPosition(false)
     illustrate_know:setAnchorPoint(0 ,0.5)
     backGround:addChild(illustrate_know)
@@ -120,7 +122,7 @@ function NewStudyChooseLayer.create()
 
     local illustrate_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",32)
     illustrate_dontknow:setPosition(backGround:getContentSize().width *0.15,s_DESIGN_HEIGHT * 0.18)
-    illustrate_dontknow:setColor(cc.c4b(124,157,208,255))
+    illustrate_dontknow:setColor(SilverFont)
     illustrate_dontknow:ignoreAnchorPointForPosition(false)
     illustrate_dontknow:setAnchorPoint(0 ,0.5)
     backGround:addChild(illustrate_dontknow)

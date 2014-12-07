@@ -79,11 +79,10 @@ function PlayWordSoundAndAddSprite(backGround)
     local click_playsound = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
-            playSound(s_sound_buttonEffect)
 
         elseif eventType == ccui.TouchEventType.ended then
 
-            playWordSound(wordName)
+            playWordSound(NewStudyLayer_wordList_wordName)
 
         end
     end

@@ -37,20 +37,20 @@ function NewStudyTrueLayer.create()
 
 
     local word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",40)
-    word:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.50)
+    word:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.50)
     word:setColor(cc.c4b(191,181,46,255))
     word:ignoreAnchorPointForPosition(false)
     word:setAnchorPoint(0,0.5)
     backGround:addChild(word)
 
-    local illustrate_word = cc.Label:createWithSystemFont("这个单词对你而言太熟悉了，所以你希\n望放弃对他的复习，如果确实如此，\n请点击单词将它收入你的词库吧","",36)
-    illustrate_word:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.40)
+    local illustrate_word = cc.Label:createWithSystemFont("这个单词对你而言太熟悉了，所以你希\n望放弃对他的复习，如果确实如此，\n请点击单词将它收入你的词库吧","",32)
+    illustrate_word:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.40)
     illustrate_word:setColor(cc.c4b(255,255,255,255))
     illustrate_word:ignoreAnchorPointForPosition(false)
     illustrate_word:setAnchorPoint(0,0.5)
     backGround:addChild(illustrate_word)
 
-    local backColor_second = cc.LayerColor:create(cc.c4b(131,162,206,255), backGround:getContentSize().width *0.7,200)  
+    local backColor_second = cc.LayerColor:create(cc.c4b(131,162,206,255), backGround:getContentSize().width *0.65,200)  
     backColor_second:setAnchorPoint(0.5,0.5)
     backColor_second:ignoreAnchorPointForPosition(false)
     backColor_second:setPosition(backGround:getContentSize().width *0.5,s_DESIGN_HEIGHT*0.25)
@@ -89,9 +89,9 @@ function NewStudyTrueLayer.create()
         backColor_second:getContentSize().height *0.5))  
         
     local current_word_wordMeaning = CCLabelTTF:create (NewStudyLayer_wordList_wordMeaning,
-        "Helvetica",32, cc.size(600, 300), cc.TEXT_ALIGNMENT_LEFT)
+        "Helvetica",32, cc.size(550, 300), cc.TEXT_ALIGNMENT_LEFT)
 
-    current_word_wordMeaning:setColor(cc.c4b(152,183,227,255))
+    current_word_wordMeaning:setColor(LightBlueFont)
     
     local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
     richtext:pushBackElement(richElement1)                   

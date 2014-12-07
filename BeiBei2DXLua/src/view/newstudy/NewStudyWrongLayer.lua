@@ -38,9 +38,9 @@ function NewStudyWrongLayer.create()
     PlayWordSoundAndAddSprite(backGround)     
 
 
-    local chineseMeaning = cc.Label:createWithSystemFont("中文释义","",40)
-    chineseMeaning:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.68)
-    chineseMeaning:setColor(cc.c4b(124,157,208,255))
+    local chineseMeaning = cc.Label:createWithSystemFont("中文释义","",32)
+    chineseMeaning:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.68)
+    chineseMeaning:setColor(SilverFont)
     chineseMeaning:ignoreAnchorPointForPosition(false)
     chineseMeaning:setAnchorPoint(0,0.5)
     backGround:addChild(chineseMeaning)
@@ -51,11 +51,11 @@ function NewStudyWrongLayer.create()
     richtext:ignoreAnchorPointForPosition(false)
     richtext:setAnchorPoint(0.5,0.5)
 
-    richtext:setContentSize(cc.size(backGround:getContentSize().width *0.7, 
+    richtext:setContentSize(cc.size(backGround:getContentSize().width *0.65, 
         backGround:getContentSize().height *0.3))  
 
     local current_word_wordMeaning = CCLabelTTF:create (NewStudyLayer_wordList_wordMeaning,
-        "Helvetica",32, cc.size(625, 200), cc.TEXT_ALIGNMENT_LEFT)
+        "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_wordMeaning:setColor(cc.c4b(255,255,255,255))
 
@@ -65,72 +65,81 @@ function NewStudyWrongLayer.create()
         backGround:getContentSize().height *0.5)
     richtext:setLocalZOrder(10)
 
-    local exampleSentence = cc.Label:createWithSystemFont("例句","",40)
-    exampleSentence:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.5)
-    exampleSentence:setColor(cc.c4b(124,157,208,255))
+    local exampleSentence = cc.Label:createWithSystemFont("例句","",32)
+    exampleSentence:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.5)
+    exampleSentence:setColor(SilverFont)
     exampleSentence:ignoreAnchorPointForPosition(false)
     exampleSentence:setAnchorPoint(0,0.5)
     backGround:addChild(exampleSentence)
-
     
-    local sentence_length = string.len(NewStudyLayer_wordList_sentenceEn)
-    local wordName_begin_position,wordName_end_position = string.find(string.upper(NewStudyLayer_wordList_sentenceEn),string.upper(NewStudyLayer_wordList_wordName))
-    
-    current_word_sentence_before_wordName = string.sub(NewStudyLayer_wordList_sentenceEn,1,wordName_begin_position - 1)
-    current_word_sentence_after_wordName = string.sub(NewStudyLayer_wordList_sentenceEn,wordName_end_position + 1,sentence_length)
+    local current_word_sentence = CCLabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
+        "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
+    current_word_sentence:setColor(cc.c4b(255,255,255,255))
 
-    local current_word_sentence_before_wordName_label = CCLabelTTF:create (current_word_sentence_before_wordName,
-        "Helvetica",32)
-    current_word_sentence_before_wordName_label:setColor(cc.c4b(255,255,255,255))
-
-
-    local current_word_sentence_wordName_label = CCLabelTTF:create (NewStudyLayer_wordList_wordName,
-        "Helvetica",32)
-    current_word_sentence_wordName_label:setColor(cc.c4b(196,143,85,255))  
-
-    local current_word_sentence_after_wordName_label = CCLabelTTF:create (current_word_sentence_after_wordName,
-        "Helvetica",32)
-    current_word_sentence_after_wordName_label:setColor(cc.c4b(255,255,255,255))
-
-    local current_word_sentence_chinese_label = CCLabelTTF:create (NewStudyLayer_wordList_sentenceCn,
-        "Helvetica",32)
-    current_word_sentence_chinese_label:setColor(cc.c4b(255,255,255,255))
-    
-
-    
-    local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_before_wordName_label)   
-    local richElement3 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_wordName_label)   
-    local richElement4 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_after_wordName_label)  
-    local richElement5 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_chinese_label)  
+    local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence)                           
+    richtext:pushBackElement(richElement2) 
    
+   ----need improvement
     
-
-
-    if wordName_begin_position ~= 1 and wordName_end_position ~= sentence_length then
-        
-        richtext:pushBackElement(richElement2)      
-        richtext:pushBackElement(richElement3)   
-        richtext:pushBackElement(richElement4)    
-        richtext:pushBackElement(richElement5)     
-          
-    elseif wordName_begin_position == 1 and wordName_end_position ~= sentence_length then
-    
-        richtext:pushBackElement(richElement3)   
-        richtext:pushBackElement(richElement4)    
-        richtext:pushBackElement(richElement5) 
-            
-    elseif wordName_begin_position ~= 1 and wordName_end_position == sentence_length then
-
-        richtext:pushBackElement(richElement2)      
-        richtext:pushBackElement(richElement3)      
-        richtext:pushBackElement(richElement5)    
-        
-    elseif wordName_begin_position == 1 and wordName_end_position == sentence_length then
-         
-        richtext:pushBackElement(richElement3)      
-        richtext:pushBackElement(richElement5) 
-    end
+--    local sentence_length = string.len(NewStudyLayer_wordList_sentenceEn)
+--    local wordName_begin_position,wordName_end_position = string.find(string.upper(NewStudyLayer_wordList_sentenceEn),string.upper(NewStudyLayer_wordList_wordName))
+--    
+--    current_word_sentence_before_wordName = string.sub(NewStudyLayer_wordList_sentenceEn,1,wordName_begin_position - 1)
+--    current_word_sentence_after_wordName = string.sub(NewStudyLayer_wordList_sentenceEn,wordName_end_position + 1,sentence_length)
+--
+--
+--    local current_word_sentence_before_wordName_label = CCLabelTTF:create (current_word_sentence_before_wordName,
+--        "Helvetica",32)
+--    current_word_sentence_before_wordName_label:setColor(cc.c4b(255,255,255,255))
+--
+--
+--    local current_word_sentence_wordName_label = CCLabelTTF:create (NewStudyLayer_wordList_wordName,
+--        "Helvetica",32)
+--    current_word_sentence_wordName_label:setColor(cc.c4b(196,143,85,255))  
+--
+--    local current_word_sentence_after_wordName_label = CCLabelTTF:create (current_word_sentence_after_wordName,
+--        "Helvetica",32)
+--    current_word_sentence_after_wordName_label:setColor(cc.c4b(255,255,255,255))
+--
+--    local current_word_sentence_chinese_label = CCLabelTTF:create (NewStudyLayer_wordList_sentenceCn,
+--        "Helvetica",32)
+--    current_word_sentence_chinese_label:setColor(cc.c4b(255,255,255,255))
+--    
+--
+--    
+--    local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_before_wordName_label)   
+--    local richElement3 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_wordName_label)   
+--    local richElement4 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_after_wordName_label)  
+--    local richElement5 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_chinese_label)  
+--   
+--    
+--
+--
+--    if wordName_begin_position ~= 1 and wordName_end_position ~= sentence_length then
+--        
+--        richtext:pushBackElement(richElement2)      
+--        richtext:pushBackElement(richElement3)   
+--        richtext:pushBackElement(richElement4)    
+--        richtext:pushBackElement(richElement5)     
+--          
+--    elseif wordName_begin_position == 1 and wordName_end_position ~= sentence_length then
+--    
+--        richtext:pushBackElement(richElement3)   
+--        richtext:pushBackElement(richElement4)    
+--        richtext:pushBackElement(richElement5) 
+--            
+--    elseif wordName_begin_position ~= 1 and wordName_end_position == sentence_length then
+--
+--        richtext:pushBackElement(richElement2)      
+--        richtext:pushBackElement(richElement3)      
+--        richtext:pushBackElement(richElement5)    
+--        
+--    elseif wordName_begin_position == 1 and wordName_end_position == sentence_length then
+--         
+--        richtext:pushBackElement(richElement3)      
+--        richtext:pushBackElement(richElement5) 
+--    end
     
     backGround:addChild(richtext) 
 
@@ -146,15 +155,15 @@ function NewStudyWrongLayer.create()
 
 
 
-    local spell_drill = cc.Label:createWithSystemFont("拼写强化训练>","",40)
-    spell_drill:setPosition(backGround:getContentSize().width *0.13  , s_DESIGN_HEIGHT * 0.3)
-    spell_drill:setColor(cc.c4b(124,157,208,255))
+    local spell_drill = cc.Label:createWithSystemFont("拼写强化训练>","",32)
+    spell_drill:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.3)
+    spell_drill:setColor(SilverFont)
     spell_drill:ignoreAnchorPointForPosition(false)
     spell_drill:setAnchorPoint(0,0.5)
     backGround:addChild(spell_drill)
     
     local underline = cc.LayerColor:create(cc.c4b(124,157,208,255), spell_drill:getContentSize().width, 2)
-    underline:setPosition(backGround:getContentSize().width *0.13  , s_DESIGN_HEIGHT * 0.3 - spell_drill:getContentSize().height)
+    underline:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.3 - spell_drill:getContentSize().height * 0.5)
     underline:ignoreAnchorPointForPosition(false)
     underline:setAnchorPoint(0,0.5)
     backGround:addChild(underline)

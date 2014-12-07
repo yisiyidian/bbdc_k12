@@ -35,7 +35,7 @@ function NewStudySlideLayer.create()
 
     local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",32)
     slide_word_label:setPosition(backGround:getContentSize().width *0.13,s_DESIGN_HEIGHT * 0.68)
-    slide_word_label:setColor(cc.c4b(124,157,208,255))
+    slide_word_label:setColor(SilverFont)
     slide_word_label:ignoreAnchorPointForPosition(false)
     slide_word_label:setAnchorPoint(0,0.5)
     backGround:addChild(slide_word_label)
