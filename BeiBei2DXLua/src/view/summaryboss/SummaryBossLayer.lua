@@ -400,7 +400,7 @@ function SummaryBossLayer.create(levelConfig,chapter)
                         local win = cc.CallFunc:create(function()
                             
                             --layer.boss:removeFromParent()
-                            layer:win()
+                            layer:win(chapter)
                         end,{})
                         layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
                         
@@ -682,7 +682,7 @@ function SummaryBossLayer:initBossLayer_boss(levelConfig,chapter)
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
         if self.currentBlood > 0 then
             self.isLose = true
-            self:lose()
+            self:lose(chapter)
         end
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
@@ -1120,10 +1120,10 @@ function SummaryBossLayer:crabBig(chapter,index)
     end
 end
 
-function SummaryBossLayer:win()
+function SummaryBossLayer:win(chapter)
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,1)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
@@ -1131,10 +1131,10 @@ function SummaryBossLayer:win()
 --    playSound(s_sound_win)
 end
 
-function SummaryBossLayer:lose()
+function SummaryBossLayer:lose(chapter)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,1)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
