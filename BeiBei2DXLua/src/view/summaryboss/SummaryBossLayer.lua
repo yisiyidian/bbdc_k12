@@ -70,7 +70,10 @@ function SummaryBossLayer.create(levelConfig,chapter)
     local loadingTime = 0
     local loadingState = 0
     layer:initMapInfo()
-    
+    local light = cc.Sprite:create('image/studyscene/long_light.png')
+    light:setAnchorPoint(0.5,0.05)
+    layer:addChild(light,10)
+    light:setVisible(false)    
     --update
     local function update(delta)
         if loadingTime > delta and loadingState < 2 then
@@ -128,7 +131,10 @@ function SummaryBossLayer.create(levelConfig,chapter)
         lastTouchLocation = location
         
         layer:checkTouchLocation(location)
-        
+        if chapter == 2 then
+            light:setPosition(location)
+            light:setVisible(true)
+        end
         if layer.onNode then
             layer.isPaused = true
             for i = 1, 5 do
@@ -180,6 +186,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
         local length_gap = 3.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
+        if chapter == 2 then
+            light:setPosition(location)
+        end
 
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
@@ -203,6 +212,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
         end
     
         layer:checkTouchLocation(location)
+        if chapter == 2 then
+            light:setPosition(location)
+        end
 
         if startAtNode then
             local x = location.x - startTouchLocation.x
@@ -258,6 +270,8 @@ function SummaryBossLayer.create(levelConfig,chapter)
                                 currentNode.left()
                             end
                         end
+                        currentNode.addSelectStyle()
+                        currentNode.bigSize()
                         currentNode.hasSelected = true
                         selectStack[#selectStack+1] = currentNode
                         --layer:updateWord(selectStack)
@@ -309,7 +323,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
             layer:crabSmall(chapter,layer.onCrab)
             layer.onCrab = 0
         end
-        
+        if chapter == 2 then
+            light:setVisible(false)
+        end
         if #selectStack < 1 then
             return
         end
@@ -536,7 +552,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
         self:addChild(back)
 
         local backEffect = sp.SkeletonAnimation:create('spine/summaryboss/second-level-summary-light.json','spine/summaryboss/second-level-summary-light.atlas',1)
-        backEffect:setPosition(-30 - s_LEFT_X,0.675 * back:getContentSize().height)
+        backEffect:setPosition(-30,0.675 * back:getContentSize().height)
         backEffect:setAnimation(0,'animation',true)
         self:addChild(backEffect)
     else 
@@ -545,7 +561,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
         self:addChild(back)
 
         local light = sp.SkeletonAnimation:create("spine/summaryboss/third-level-summary-boss-background.json","spine/summaryboss/third-level-summary-boss-background.atlas",1)
-        light:setPosition(-80-s_LEFT_X,s_DESIGN_HEIGHT * 0.73)
+        light:setPosition(-80,s_DESIGN_HEIGHT * 0.73)
         self:addChild(light)
         light:addAnimation(0,'animation',true)
     end
