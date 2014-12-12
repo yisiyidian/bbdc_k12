@@ -7,5 +7,5 @@ cocos run \
     -m release \
     --compile-script 1 \
     --lua-encrypt --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA" \
-    --sign-identity "com.beibei.wordmaster"
+    --sign-identity "com.BeiBeiDanCiX"
     
