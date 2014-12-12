@@ -113,23 +113,6 @@ protected:
 	float _timeScale;
 	bool _debugSlots;
 	bool _debugBones;
-    
-    //////////////////////////////////////////////////////////////
-public:
-    cocos2d::Node* getNodeForSlot(const char* slotName);
-    
-private:
-    void updateNodeForSlot();
-    
-    struct sSlotNode
-    {
-        spSlot* slot;
-        cocos2d::Node* node;
-    };
-    
-    typedef std::map<const char*, sSlotNode> SlotNodeMap;
-    typedef SlotNodeMap::iterator SlotNodeIter;
-    SlotNodeMap m_slotNodes;
 };
 
 }

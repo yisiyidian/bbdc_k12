@@ -31,16 +31,18 @@ namespace ui {
 IMPLEMENT_CLASS_GUI_INFO(PageView)
 
 PageView::PageView():
-_curPageIdx(100),
+_isAutoScrolling(false),
+_autoScrollDistance(0.0f),
+_autoScrollSpeed(0.0f),
+_autoScrollDirection(AutoScrollDirection::LEFT),
+_curPageIdx(0),
 _touchMoveDirection(TouchDirection::LEFT),
 _leftBoundaryChild(nullptr),
 _rightBoundaryChild(nullptr),
 _leftBoundary(0.0f),
 _rightBoundary(0.0f),
-_isAutoScrolling(false),
-_autoScrollDistance(0.0f),
-_autoScrollSpeed(0.0f),
-_autoScrollDirection(AutoScrollDirection::LEFT),
+_customScrollThreshold(0.0),
+_usingCustomScrollThreshold(false),
 _childFocusCancelOffset(5.0f),
 _pageViewEventListener(nullptr),
 _pageViewEventSelector(nullptr),
@@ -57,7 +59,7 @@ PageView::~PageView()
 
 PageView* PageView::create()
 {
-    PageView* widget = new PageView();
+    PageView* widget = new (std::nothrow) PageView();
     if (widget && widget->init())
     {
         widget->autorelease();
@@ -213,13 +215,13 @@ ssize_t PageView::getPageCount()const
 
 float PageView::getPositionXByIndex(ssize_t idx)const
 {
-    return (getContentSize().height * (idx-_curPageIdx));
+    return (getContentSize().width * (idx-_curPageIdx));
 }
 
 void PageView::onSizeChanged()
 {
     Layout::onSizeChanged();
-    _rightBoundary = getContentSize().height;
+    _rightBoundary = getContentSize().width;
     
     _doLayoutDirty = true;
 }
@@ -248,11 +250,11 @@ void PageView::updateAllPagesPosition()
         _curPageIdx = pageCount-1;
     }
     
-    float pageWidth = getContentSize().height;
+    float pageWidth = getContentSize().width;
     for (int i=0; i<pageCount; i++)
     {
         Layout* page = _pages.at(i);
-        page->setPosition(Vec2(0,(i-_curPageIdx) * pageWidth));
+        page->setPosition(Vec2((i-_curPageIdx) * pageWidth, 0));
         
     }
 }
@@ -266,7 +268,7 @@ void PageView::scrollToPage(ssize_t idx)
     }
     _curPageIdx = idx;
     Layout* curPage = _pages.at(idx);
-    _autoScrollDistance = -(curPage->getPosition().y);
+    _autoScrollDistance = -(curPage->getPosition().x);
     _autoScrollSpeed = fabs(_autoScrollDistance)/0.2f;
     _autoScrollDirection = _autoScrollDistance > 0 ? AutoScrollDirection::RIGHT : AutoScrollDirection::LEFT;
     _isAutoScrolling = true;
@@ -341,25 +343,31 @@ bool PageView::onTouchBegan(Touch *touch, Event *unusedEvent)
 
 void PageView::onTouchMoved(Touch *touch, Event *unusedEvent)
 {
-    handleMoveLogic(touch);
-    Widget* widgetParent = getWidgetParent();
-    if (widgetParent)
+    Layout::onTouchMoved(touch, unusedEvent);
+    if (!_isInterceptTouch)
     {
-        widgetParent->interceptTouchEvent(TouchEventType::MOVED,this,touch);
+        handleMoveLogic(touch);
     }
-    moveEvent();
 }
 
 void PageView::onTouchEnded(Touch *touch, Event *unusedEvent)
 {
     Layout::onTouchEnded(touch, unusedEvent);
-    handleReleaseLogic(touch);
+    if (!_isInterceptTouch)
+    {
+        handleReleaseLogic(touch);
+    }
+    _isInterceptTouch = false;
 }
     
 void PageView::onTouchCancelled(Touch *touch, Event *unusedEvent)
 {
     Layout::onTouchCancelled(touch, unusedEvent);
-    handleReleaseLogic(touch);
+    if (!_isInterceptTouch)
+    {
+        handleReleaseLogic(touch);
+    }
+    _isInterceptTouch = false;
 }
 
 void PageView::doLayout()
@@ -381,10 +389,8 @@ void PageView::movePages(float offset)
 {
     for (auto& page : this->getPages())
     {
-        //printf("before = %f %f",page->getPositionX(),page->getPositionY());
-        page->setPosition(Vec2(page->getPosition().x ,
-                               page->getPosition().y + offset));
-        //printf("before = %f %f",page->getPositionX(),page->getPositionY());
+        page->setPosition(Vec2(page->getPosition().x + offset,
+                               page->getPosition().y));
     }
 }
 
@@ -406,9 +412,9 @@ bool PageView::scrollPages(float touchOffset)
     {
         case TouchDirection::LEFT: // left
 
-            if (_rightBoundaryChild->getTopBoundary() + touchOffset <= _rightBoundary)
+            if (_rightBoundaryChild->getRightBoundary() + touchOffset <= _rightBoundary)
             {
-                realOffset = _rightBoundary - _rightBoundaryChild->getTopBoundary();
+                realOffset = _rightBoundary - _rightBoundaryChild->getRightBoundary();
                 movePages(realOffset);
                 return false;
             }
@@ -416,9 +422,9 @@ bool PageView::scrollPages(float touchOffset)
             
         case TouchDirection::RIGHT: // right
 
-            if (_leftBoundaryChild->getBottomBoundary() + touchOffset >= _leftBoundary)
+            if (_leftBoundaryChild->getLeftBoundary() + touchOffset >= _leftBoundary)
             {
-                realOffset = _leftBoundary - _leftBoundaryChild->getBottomBoundary();
+                realOffset = _leftBoundary - _leftBoundaryChild->getLeftBoundary();
                 movePages(realOffset);
                 return false;
             }
@@ -437,7 +443,7 @@ void PageView::handleMoveLogic(Touch *touch)
     Vec2 touchPoint = touch->getLocation();
     
     float offset = 0.0;
-    offset = touchPoint.y - touch->getPreviousLocation().y;
+    offset = touchPoint.x - touch->getPreviousLocation().x;
     
     if (offset < 0)
     {
@@ -448,6 +454,28 @@ void PageView::handleMoveLogic(Touch *touch)
         _touchMoveDirection = TouchDirection::RIGHT;
     }
     scrollPages(offset);
+}
+    
+void PageView::setCustomScrollThreshold(float threshold)
+{
+    CCASSERT(threshold > 0, "Invalid threshold!");
+    _customScrollThreshold = threshold;
+    this->setUsingCustomScrollThreshold(true);
+}
+
+float PageView::getCustomScrollThreshold()const
+{
+    return _customScrollThreshold;
+}
+    
+void PageView::setUsingCustomScrollThreshold(bool flag)
+{
+    _usingCustomScrollThreshold = flag;
+}
+    
+bool PageView::isUsingCustomScrollThreshold()const
+{
+    return _usingCustomScrollThreshold;
 }
 
 void PageView::handleReleaseLogic(Touch *touch)
@@ -461,9 +489,12 @@ void PageView::handleReleaseLogic(Touch *touch)
     {
         Vec2 curPagePos = curPage->getPosition();
         ssize_t pageCount = this->getPageCount();
-        float curPageLocation = curPagePos.y;
-        float pageWidth = getContentSize().height;
-        float boundary = pageWidth/4.0f;
+        float curPageLocation = curPagePos.x;
+        float pageWidth = getContentSize().width;
+        if (!_usingCustomScrollThreshold) {
+            _customScrollThreshold = pageWidth / 2.0;
+        }
+        float boundary = _customScrollThreshold;
         if (curPageLocation <= -boundary)
         {
             if (_curPageIdx >= pageCount-1)
@@ -501,12 +532,16 @@ void PageView::interceptTouchEvent(TouchEventType event, Widget *sender, Touch *
     switch (event)
     {
         case TouchEventType::BEGAN:
-            //no-op
+        {
+            _touchBeganPosition = touch->getLocation();
+            _isInterceptTouch = true;
+        }
             break;
         case TouchEventType::MOVED:
         {
             float offset = 0;
-            offset = fabs(sender->getTouchBeganPosition().y - touchPoint.y);
+            offset = fabs(sender->getTouchBeganPosition().x - touchPoint.x);
+            _touchMovePosition = touch->getLocation();
             if (offset > _childFocusCancelOffset)
             {
                 sender->setHighlighted(false);
@@ -516,13 +551,21 @@ void PageView::interceptTouchEvent(TouchEventType event, Widget *sender, Touch *
             break;
         case TouchEventType::CANCELED:
         case TouchEventType::ENDED:
+        {
+            _touchEndPosition = touch->getLocation();
             handleReleaseLogic(touch);
+            if (sender->isSwallowTouches())
+            {
+                _isInterceptTouch = false;
+            }
+        }
             break;
     }
 }
 
 void PageView::pageTurningEvent()
 {
+    this->retain();
     if (_pageViewEventListener && _pageViewEventSelector)
     {
         (_pageViewEventListener->*_pageViewEventSelector)(this, PAGEVIEW_EVENT_TURNING);
@@ -530,6 +573,11 @@ void PageView::pageTurningEvent()
     if (_eventCallback) {
         _eventCallback(this,EventType::TURNING);
     }
+    if (_ccEventCallback)
+    {
+        _ccEventCallback(this, static_cast<int>(EventType::TURNING));
+    }
+    this->release();
 }
 
 void PageView::addEventListenerPageView(Ref *target, SEL_PageViewEvent selector)
@@ -588,8 +636,11 @@ void PageView::copySpecialProperties(Widget *widget)
     {
         Layout::copySpecialProperties(widget);
         _eventCallback = pageView->_eventCallback;
+        _ccEventCallback = pageView->_ccEventCallback;
         _pageViewEventListener = pageView->_pageViewEventListener;
         _pageViewEventSelector = pageView->_pageViewEventSelector;
+        _usingCustomScrollThreshold = pageView->_usingCustomScrollThreshold;
+        _customScrollThreshold = pageView->_customScrollThreshold;
     }
 }
 
