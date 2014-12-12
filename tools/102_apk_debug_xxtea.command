@@ -4,6 +4,6 @@ cd ${baseDirForScriptSelf}/../BeiBei2DXLua
 cocos run \
     -p android \
     -j 4 \
-    --ap 17 \
+    -ap 17 \
     --compile-script 1 \
     --lua-encrypt --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA"
