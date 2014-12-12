@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 local dir_up    = 1
 local dir_down  = 2

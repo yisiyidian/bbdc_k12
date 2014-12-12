@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 local PopupLayer = class("PopupLayer", function ()
     return cc.Layer:create()

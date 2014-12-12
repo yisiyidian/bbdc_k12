@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 require("common.global")
 
 local BigAlter = require("view.alter.BigAlter")
@@ -135,7 +134,7 @@ function BookLayer.create()
     
         richtext:ignoreContentAdaptWithSize(false)
         richtext:ignoreAnchorPointForPosition(false)
-        richtext:setAnchorPoint(0.5,0.5)
+        richtext:setAnchorPoint(cc.p(0.5,0.5))
         
         richtext:setContentSize(cc.size(smallBack:getContentSize().width *0.95, 
             smallBack:getContentSize().height *0.2))  
@@ -212,7 +211,7 @@ function BookLayer.create()
     backBar:setPosition(0.97 * backColor:getContentSize().width,0.5 * backColor:getContentSize().height)
     backColor:addChild(backBar)  
 
-    local progressBar = cc.Scale9Sprite:create('image/book/process_button_dark_color.png',cc.rect(0,0,15,856),cc.rect(0, 10, 15, 836))
+    local progressBar = ccui.Scale9Sprite:create('image/book/process_button_dark_color.png',cc.rect(0,0,15,856),cc.rect(0, 10, 15, 836))
     --backBar:setContentSize(cc.size(15,1000))
     local percent = 0.85 / (count * 0.26)
     if percent > 1 then

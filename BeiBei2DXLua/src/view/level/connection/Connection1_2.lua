@@ -1,7 +1,5 @@
-require('Cocos2d')
-require('Cocos2dConstants')
+require("cocos.init")
 require('common.global')
-require('CCBReaderLoad')
 
 local Connection1_2 = class('Connection1_2', function()
     return cc.Layer:create()

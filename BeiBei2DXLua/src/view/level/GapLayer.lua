@@ -1,6 +1,5 @@
+require("cocos.init")
 require('common.global')
-require('Cocos2d')
-require('Cocos2dConstants')
 
 local s_layerHeight = 540
 

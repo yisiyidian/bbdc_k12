@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 require("common.global")
 
 local FriendSearch = class("FriendSearch", function()
@@ -50,7 +49,7 @@ function FriendSearch:ctor()
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             self:removeChildByName('searchResult',true)
-            local username = textField:getStringValue()
+            local username = textField:getString()
             if username == s_CURRENT_USER.username then
                 local SmallAlter = require('view.friend.HintAlter')
                 local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')

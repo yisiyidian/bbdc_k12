@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 require("common.global")
 
@@ -83,12 +82,12 @@ function NewStudyTrueLayer.create()
     
     richtext:ignoreContentAdaptWithSize(false)
     richtext:ignoreAnchorPointForPosition(false)
-    richtext:setAnchorPoint(0.5,0.5)
+    richtext:setAnchorPoint(cc.p(0.5,0.5))
     
     richtext:setContentSize(cc.size(backColor_second:getContentSize().width *0.95, 
         backColor_second:getContentSize().height *0.5))  
         
-    local current_word_wordMeaning = CCLabelTTF:create (NewStudyLayer_wordList_wordMeaning,
+    local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
         "Helvetica",32, cc.size(550, 300), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_wordMeaning:setColor(LightBlueFont)

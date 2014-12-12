@@ -1,4 +1,4 @@
-require "Cocos2d"
+require('cocos.init')
 
 local DataExample = require('example.DataExample')
 require("common.global")

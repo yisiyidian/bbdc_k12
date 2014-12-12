@@ -124,15 +124,15 @@ showLogin = function()
             -- button sound
             playSound(s_sound_buttonEffect)
             
-            if validateUsername(username.textField:getStringValue()) == false then
+            if validateUsername(username.textField:getString()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
-            if validatePassword(password.textField:getStringValue()) == false then
+            if validatePassword(password.textField:getString()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
-            s_SCENE:logIn(username.textField:getStringValue(), password.textField:getStringValue())
+            s_SCENE:logIn(username.textField:getString(), password.textField:getString())
         end
     end
     
@@ -276,16 +276,16 @@ showRegister = function()
         if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
-            if validateUsername(username.textField:getStringValue()) == false then
+            if validateUsername(username.textField:getString()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
-            if validatePassword(password.textField:getStringValue()) == false then
+            if validatePassword(password.textField:getString()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
             s_CURRENT_USER.isGuest = 0
-            s_SCENE:signUp(username.textField:getStringValue(), password.textField:getStringValue())
+            s_SCENE:signUp(username.textField:getString(), password.textField:getString())
         end
     end
 

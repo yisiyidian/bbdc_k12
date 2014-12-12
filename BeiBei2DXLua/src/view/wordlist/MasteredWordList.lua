@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 require("common.global")
 
 local MasteredWordList = class('MasteredWordList', function()
@@ -166,12 +165,12 @@ function MasteredWordList:ctor()
                     
                     richText:ignoreContentAdaptWithSize(false)
                     richText:ignoreAnchorPointForPosition(false)
-                    richText:setAnchorPoint(0.5,0.5)
+                    richText:setAnchorPoint(cc.p(0.5,0.5))
                     
                     richText:setContentSize(cc.size(width, -600))  
                     
 
-                    local label_word = CCLabelTTF:create (wordInfo['wordMeaning']..wordInfo['sentenceEn']..wordInfo['sentenceCn'],
+                    local label_word = cc.LabelTTF:create (wordInfo['wordMeaning']..wordInfo['sentenceEn']..wordInfo['sentenceCn'],
                        "Helvetica",28, cc.size(600, 200), cc.TEXT_ALIGNMENT_LEFT)
 
                     label_word:setColor(cc.c3b(0, 0, 0))

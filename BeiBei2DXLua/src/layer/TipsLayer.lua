@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 local BigAlter = require("view.alter.BigAlter")
 local SmallAlter = require("view.alter.SmallAlter")

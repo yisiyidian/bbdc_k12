@@ -1,6 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
-require("CCBReaderLoad")
+require("cocos.init")
 require("common.global")
 
 local LevelLayer = class("LevelLayer", function()
