@@ -97,18 +97,18 @@ showLogin = function()
             
         elseif eventType == ccui.TouchEventType.ended then
             
-            if validateUsername(username.textField:getStringValue()) == false then
+            if validateUsername(username.textField:getString()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
-            if validatePassword(password.textField:getStringValue()) == false then
+            if validatePassword(password.textField:getString()) == false then
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
             
             
             local updateUserNameAndPassword = function ()
-                s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
+                s_UserBaseServer.updateUsernameAndPassword(username.textField:getString(), password.textField:getString(), 
                 function(username, password, errordescription, errorcode )                        
                         if errordescription then                  
                             s_TIPS_LAYER:showSmall(errordescription)

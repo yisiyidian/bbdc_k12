@@ -43,12 +43,8 @@ local function _initConstant()
 end
 
 local function _initTool()
-    require("CCBReaderLoad")
+    require("cocos.init")
     -- require('Deprecated')
-    require('DeprecatedClass')
-    require('DeprecatedEnum')
-    require('DeprecatedOpenglEnum')
-    require('GuiConstants')
     
     -- tools
     s_JSON = require("common/json")

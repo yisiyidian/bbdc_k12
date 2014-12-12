@@ -1,7 +1,6 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 require("common.global")
-
+CC_USE_DEPRECATED_API = true
 
 
 local PersonalInfo = class("PersonalInfo", function()
@@ -49,6 +48,9 @@ function PersonalInfo:ctor()
     pageView:setTouchEnabled(true)
     pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT * 1.0))
     pageView:setPosition(s_LEFT_X,0)
+    pageView:setLayoutType(ccui.LayoutType.VERTICAL)
+    print("pageView getLayoutType is :", pageView:getLayoutType())
+    
     
     for i = 1 , 4 do
         local layout = ccui.Layout:create()

@@ -108,9 +108,9 @@ function PopupNormalLevel:ctor(levelKey)
     
     -- change the test button
     if levelData.isPlayed == 1 then
-        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('res/ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_NORMAL)
-        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_HIGH_LIGHTED)
-        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(cc.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_SELECTED)
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(ccui.Scale9Sprite:create('res/ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_NORMAL)
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(ccui.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_HIGH_LIGHTED)
+        self.ccbPopupNormalLevel['_test']:setBackgroundSpriteForState(ccui.Scale9Sprite:create('ccb/ccbResources/popup_normal_level/Level_blueButton.png'),cc.CONTROL_STATE_SELECTED)
     else 
         self.ccbPopupNormalLevel['_test']:setVisible(false)
     end

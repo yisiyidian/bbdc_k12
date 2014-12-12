@@ -1,7 +1,10 @@
 
 RELEASE_APP = false
 
-require "Cocos2d"
+cc.FileUtils:getInstance():addSearchPath("src")
+cc.FileUtils:getInstance():addSearchPath("res")
+
+require("cocos.init")
 
 -- cclog
 local cclog = function(...)
@@ -131,8 +134,6 @@ local function main()
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
     
-    cc.FileUtils:getInstance():addSearchPath("src")
-    cc.FileUtils:getInstance():addSearchPath("res")
     cc.Director:getInstance():setDisplayStats(false)
 
     start()

@@ -30,7 +30,7 @@
 
 NS_CC_BEGIN
 
-class EventKeyboard : public Event
+class CC_DLL EventKeyboard : public Event
 {
 public:
     /**
@@ -202,6 +202,12 @@ public:
         KEY_DPAD_CENTER,
         KEY_ENTER,
         KEY_PLAY,
+        KEY_LEFT_CTRL,
+        KEY_RIGHT_CTRL,
+        KEY_LEFT_ALT,
+        KEY_RIGHT_ALT,
+        KEY_LEFT_SHIFT,
+        KEY_RIGHT_SHIFT
     };
     
     EventKeyboard(KeyCode keyCode, bool isPressed);

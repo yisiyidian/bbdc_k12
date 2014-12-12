@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 local BackgroundLayer = class("BackgroundLayer", function ()
 	return cc.Layer:create()

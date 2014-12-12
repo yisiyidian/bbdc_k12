@@ -2,8 +2,10 @@
 #include "CCLuaEngine.h"
 #include "SimpleAudioEngine.h"
 #include "cocos2d.h"
+#include "CodeIDESupport.h"
 #include "Runtime.h"
 #include "ConfigParser.h"
+#include "lua_module_register.h"
 #include "lua_cx_common.hpp"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
@@ -27,41 +29,56 @@ AppDelegate::AppDelegate()
 AppDelegate::~AppDelegate()
 {
     SimpleAudioEngine::end();
+
+#if (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0)
+	// NOTE:Please don't remove this call if you want to debug with Cocos Code IDE
+	endRuntime();
+#endif
+
+	ConfigParser::purge();
+}
+
+//if you want a different context,just modify the value of glContextAttrs
+//it will takes effect on all platforms
+void AppDelegate::initGLContextAttrs()
+{
+    //set OpenGL context attributions,now can only set six attributions:
+    //red,green,blue,alpha,depth,stencil
+    GLContextAttrs glContextAttrs = {8, 8, 8, 8, 24, 8};
+
+    GLView::setGLContextAttrs(glContextAttrs);
 }
 
 bool AppDelegate::applicationDidFinishLaunching()
 {
-    
-#if (COCOS2D_DEBUG>0 && DEBUG_RUNTIME > 0)
+#if (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0 && DEBUG_RUNTIME > 0)
+    // NOTE:Please don't remove this call if you want to debug with Cocos Code IDE
     initRuntime();
 #endif
     
-    if (!ConfigParser::getInstance()->isInit()) {
-        ConfigParser::getInstance()->readConfig();
-    }
-
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();    
     if(!glview) {
         Size viewSize = ConfigParser::getInstance()->getInitViewSize();
         string title = ConfigParser::getInstance()->getInitViewName();
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
-        extern void createSimulator(const char* viewName, float width, float height,bool isLandscape = true, float frameZoomFactor = 1.0f);
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC) && (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0)
+        extern void createSimulator(const char* viewName, float width, float height, bool isLandscape = true, float frameZoomFactor = 1.0f);
         bool isLanscape = ConfigParser::getInstance()->isLanscape();
-        createSimulator(title.c_str(),viewSize.width,viewSize.height,isLanscape);
+        createSimulator(title.c_str(),viewSize.width,viewSize.height, isLanscape);
 #else
-        glview = GLView::createWithRect(title.c_str(), Rect(0,0,viewSize.width,viewSize.height));
+        glview = cocos2d::GLViewImpl::createWithRect(title.c_str(), Rect(0, 0, viewSize.width, viewSize.height));
         director->setOpenGLView(glview);
 #endif
     }
-
-   
-    // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
    
     auto engine = LuaEngine::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
+    lua_State* L = engine->getLuaStack()->getLuaState();
+    lua_module_register(L);
+
+    // If you want to use Quick-Cocos2d-X, please uncomment below code
+    // register_all_quick_manual(L);
 
     LuaStack* stack = engine->getLuaStack();
     stack->setXXTEAKeyAndSign("fuck2dxLua", strlen("fuck2dxLua"), "fuckXXTEA", strlen("fuckXXTEA"));
@@ -74,20 +91,21 @@ bool AppDelegate::applicationDidFinishLaunching()
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     {
-    LuaStack* stack = engine->getLuaStack();
-    lua_getglobal(stack->getLuaState(), "_G");
-    tolua_anysdk_open(stack->getLuaState());
-    tolua_anysdk_manual_open(stack->getLuaState());
-    lua_pop(stack->getLuaState(), 1);
+        LuaStack* stack = engine->getLuaStack();
+        lua_getglobal(stack->getLuaState(), "_G");
+        tolua_anysdk_open(stack->getLuaState());
+        tolua_anysdk_manual_open(stack->getLuaState());
+        lua_pop(stack->getLuaState(), 1);
     }
 #endif
     
-#if (COCOS2D_DEBUG>0 && DEBUG_RUNTIME > 0)
-    if (startRuntime())
-        return true;
+#if (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0 && DEBUG_RUNTIME > 0)
+    // NOTE:Please don't remove this call if you want to debug with Cocos Code IDE
+    startRuntime();
+#else
+    engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
 #endif
 
-    engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
     return true;
 }
 
@@ -103,12 +121,16 @@ void AppDelegate::applicationDidEnterBackground()
 void AppDelegate::applicationWillEnterForeground()
 {
     Director::getInstance()->startAnimation();
-    
-    auto engine = LuaEngine::getInstance();
-    engine->executeScriptFile("view/Pause.lua");
-    
-    engine->executeGlobalFunction("createPauseLayerWhenTestOrBoss");
-    
-    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
-}
 
+    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    
+    #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    {
+        auto engine = LuaEngine::getInstance();
+        engine->executeScriptFile("view/Pause.lua");
+        
+        engine->executeGlobalFunction("createPauseLayerWhenTestOrBoss");
+        
+    }
+    #endif
+}

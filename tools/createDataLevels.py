@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: UTF-8 -*-
 
 # username subfix range, chapter index, book key
 # python createDataLevels.py 20 29 2 'ncee'

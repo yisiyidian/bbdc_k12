@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 require("common.global")
 
@@ -44,12 +43,12 @@ function NewStudyWrongLayer.create()
 
     richtext:ignoreContentAdaptWithSize(false)
     richtext:ignoreAnchorPointForPosition(false)
-    richtext:setAnchorPoint(0.5,0.5)
+    richtext:setAnchorPoint(cc.p(0.5,0.5))
 
     richtext:setContentSize(cc.size(backGround:getContentSize().width *0.65, 
         backGround:getContentSize().height *0.3))  
 
-    local current_word_wordMeaning = CCLabelTTF:create (NewStudyLayer_wordList_wordMeaning,
+    local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
         "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_wordMeaning:setColor(cc.c4b(255,255,255,255))
@@ -67,7 +66,7 @@ function NewStudyWrongLayer.create()
     exampleSentence:setAnchorPoint(0,0.5)
     backGround:addChild(exampleSentence)
     
-    local current_word_sentence = CCLabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
+    local current_word_sentence = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
         "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_sentence:setColor(cc.c4b(255,255,255,255))
@@ -84,20 +83,20 @@ function NewStudyWrongLayer.create()
 --    current_word_sentence_after_wordName = string.sub(NewStudyLayer_wordList_sentenceEn,wordName_end_position + 1,sentence_length)
 --
 --
---    local current_word_sentence_before_wordName_label = CCLabelTTF:create (current_word_sentence_before_wordName,
+    --    local current_word_sentence_before_wordName_label = cc.LabelTTF:create (current_word_sentence_before_wordName,
 --        "Helvetica",32)
 --    current_word_sentence_before_wordName_label:setColor(cc.c4b(255,255,255,255))
 --
 --
---    local current_word_sentence_wordName_label = CCLabelTTF:create (NewStudyLayer_wordList_wordName,
+    --    local current_word_sentence_wordName_label = cc.LabelTTF:create (NewStudyLayer_wordList_wordName,
 --        "Helvetica",32)
 --    current_word_sentence_wordName_label:setColor(cc.c4b(196,143,85,255))  
 --
---    local current_word_sentence_after_wordName_label = CCLabelTTF:create (current_word_sentence_after_wordName,
+    --    local current_word_sentence_after_wordName_label = cc.LabelTTF:create (current_word_sentence_after_wordName,
 --        "Helvetica",32)
 --    current_word_sentence_after_wordName_label:setColor(cc.c4b(255,255,255,255))
 --
---    local current_word_sentence_chinese_label = CCLabelTTF:create (NewStudyLayer_wordList_sentenceCn,
+    --    local current_word_sentence_chinese_label = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceCn,
 --        "Helvetica",32)
 --    current_word_sentence_chinese_label:setColor(cc.c4b(255,255,255,255))
 --    

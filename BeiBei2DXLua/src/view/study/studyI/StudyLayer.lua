@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 require("common.global")
 
@@ -272,7 +271,7 @@ function StudyLayer.create()
             
                     if s_CorePlayManager.newPlayerState then
                         local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))
-                        local action3 = cc.CallFunc:create(mat.finger_action())
+                        local action3 = cc.CallFunc:create(mat.finger_action)
                         mat:runAction(cc.Sequence:create(action2, action3))
                     else
                         local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 120))

@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 require('anysdkConst')
 
 local DebugLayer = class("DebugLayer", function ()

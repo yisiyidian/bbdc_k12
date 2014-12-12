@@ -1,5 +1,4 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 
 require("common.global")
 
@@ -31,12 +30,12 @@ function NewStudySlideLayer.create()
 
     richtext:ignoreContentAdaptWithSize(false)
     richtext:ignoreAnchorPointForPosition(false)
-    richtext:setAnchorPoint(0.5,0.5)
+    richtext:setAnchorPoint(cc.p(0.5,0.5))
 
     richtext:setContentSize(cc.size(backGround:getContentSize().width *0.65, 
         backGround:getContentSize().height *0.3))  
 
-    local current_word_wordMeaning = CCLabelTTF:create (NewStudyLayer_wordList_wordMeaning,
+    local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
         "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_wordMeaning:setColor(cc.c4b(255,255,255,255))

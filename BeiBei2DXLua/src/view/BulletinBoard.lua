@@ -1,7 +1,6 @@
-require("Cocos2d")
-require("Cocos2dConstants")
+require("cocos.init")
 require("common.global")
-require("CCBReaderLoad")
+
 local BulletinBoard = class("BulletinBoard", function()
     return cc.Layer:create()
 end)
