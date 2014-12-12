@@ -74,6 +74,7 @@
 		B85146C919E4F7490027372E /* CXAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85146C619E4F7490027372E /* CXAnalytics.mm */; };
 		B85146CA19E4F7490027372E /* CXAvos.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85146C819E4F7490027372E /* CXAvos.mm */; };
 		B872A28919F228FF0081FBE5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B872A28819F228FF0081FBE5 /* StoreKit.framework */; };
+		B87E8FD31A3AB394006E58BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B87E8FD51A3AB394006E58BE /* InfoPlist.strings */; };
 		B887DBC219DF8EEA00A04441 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B887DBC119DF8EEA00A04441 /* Images.xcassets */; };
 		B89AB3CB19F245EE003EA22A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3CA19F245EE003EA22A /* MediaPlayer.framework */; };
 		B89AB3CD19F245F3003EA22A /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AB3CC19F245F3003EA22A /* GameController.framework */; };
@@ -425,6 +426,9 @@
 		B85146CC19E501C10027372E /* CXAvos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAvos.h; sourceTree = "<group>"; };
 		B85146CE19E501E60027372E /* CXAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAnalytics.h; sourceTree = "<group>"; };
 		B872A28819F228FF0081FBE5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		B87E8FD41A3AB394006E58BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B87E8FD61A3AB397006E58BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B87E8FD71A3AB398006E58BE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		B887DBC119DF8EEA00A04441 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "BeiBei2DXLua iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		B89AB3CA19F245EE003EA22A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		B89AB3CC19F245F3003EA22A /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
@@ -816,6 +820,7 @@
 		F293B3BD15EB7BE500256477 = {
 			isa = PBXGroup;
 			children = (
+				B87E8FD51A3AB394006E58BE /* InfoPlist.strings */,
 				B851469D19E4EBD50027372E /* common */,
 				C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */,
 				15A8A4031834BDA200142BE0 /* cocos2d_libs.xcodeproj */,
@@ -976,6 +981,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				"zh-Hans",
 			);
 			mainGroup = F293B3BD15EB7BE500256477;
 			productRefGroup = F293B3C915EB7BE500256477 /* Products */;
@@ -1161,6 +1168,7 @@
 				C05D1C121923449100B808A4 /* config.json in Resources */,
 				C03781DD18BF656A00FE4F13 /* DeprecatedEnum.lua in Resources */,
 				C03781E318BF656A00FE4F13 /* extern.lua in Resources */,
+				B87E8FD31A3AB394006E58BE /* InfoPlist.strings in Resources */,
 				C03781D918BF656A00FE4F13 /* Deprecated.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1335,6 +1343,19 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		B87E8FD51A3AB394006E58BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B87E8FD41A3AB394006E58BE /* Base */,
+				B87E8FD61A3AB397006E58BE /* en */,
+				B87E8FD71A3AB398006E58BE /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		5023816917EBBCE400990C9B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1468,7 +1489,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "7a623c22-0c54-4d2d-9e04-b223627cf8aa";
+				PROVISIONING_PROFILE = "d79e8d76-4240-4863-8c7e-41d3a8ec89c9";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
@@ -1499,7 +1520,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "2cd30ea4-3634-40a7-8f37-4a2197533cec";
+				PROVISIONING_PROFILE = "5A962F18-60EE-4B85-817A-DFD7D817299C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
