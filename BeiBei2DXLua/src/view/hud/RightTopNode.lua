@@ -52,10 +52,22 @@ function RightTopNode:ctor()
             
         elseif eventType == ccui.TouchEventType.ended then
                   -- click
+                  
+
+--            local count = 0
+--            for i, v in ipairs(self.levels) do
+--                if v.bookKey == self.bookKey then
+--                    local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
+--                    if levelConfig ~= nil and levelConfig['type'] == 0 then
+--                        print("split(levelConfig.word_content,'|' is "..split(levelConfig.word_content,'|'))
+--                    end
+--                end
+--            end
+
             
-            local IntroLayer = require("popup/PopupEnergyInfo")
-            introLayer_heart = IntroLayer.create()  
-            s_SCENE:popup(introLayer_heart)
+            local NewStudyLayer = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(1)
+            s_SCENE:replaceGameLayer(newStudyLayer)
 
         end 
     end
@@ -93,9 +105,9 @@ function RightTopNode:ctor()
     heart:setAnchorPoint(1,0.5)
     heart:setPosition(s_RIGHT_X   , s_DESIGN_HEIGHT - 150 )
     heart:setLocalZOrder(1)
-    --self:addChild(heart)
+--    self:addChild(heart)
 
-    local heartExist = cc.Label:createWithSystemFont(heartNumber,"",36)
+    local heartExist = cc.Label:createWithSystemFont("测试中","",36)
     heartExist:setPosition(75,38)
     heart:addChild(heartExist)
 

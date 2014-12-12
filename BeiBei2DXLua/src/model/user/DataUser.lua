@@ -415,5 +415,20 @@ function DataUser:updateDataToServer()
         end) 
 end
 
+-- get word in one book 
+function DataUser:getUserBookWord()
+    local wordTable = {}
+    local wordTableOp = {}
+    for i, v in ipairs(self.levels) do
+        if v.bookKey == self.bookKey then
+            local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
+            if levelConfig ~= nil and levelConfig['type'] == 0 then
+                table.insert(wordTable,split(levelConfig.word_content,'|'))
+            end
+        end
+    end
+    table.foreachi(wordTable, function(i, v) table.foreachi(v, function(i, v)  table.insert(wordTableOp,v) end) end)
+    table.foreachi(wordTableOp, function(i, v)  print(i ,v)  end)
+end
 
 return DataUser

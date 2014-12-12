@@ -108,6 +108,7 @@ function NewStudyTrueLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end

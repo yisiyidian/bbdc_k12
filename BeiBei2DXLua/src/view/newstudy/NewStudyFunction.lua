@@ -5,11 +5,11 @@ function JudgeColorAtTop(backGround)
     local word_mark 
 
     if current_state_judge == 1 then
-        for i = 1,8 do
+        for i = 1,maxWrongWordCount do
             if i > table.getn(wrongWordList) then
                 if i == 1 then 
                     word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-                elseif i == 8 then 
+                elseif i == maxWrongWordCount then 
                     word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
                 else
                     word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
@@ -17,7 +17,7 @@ function JudgeColorAtTop(backGround)
             else
                 if i == 1 then 
                     word_mark = cc.Sprite:create("image/newstudy/yellow_begin.png")
-                elseif i == 8 then 
+                elseif i == maxWrongWordCount then 
                     word_mark = cc.Sprite:create("image/newstudy/yellow_end.png")
                 else
                     word_mark = cc.Sprite:create("image/newstudy/yellow_mid.png")
@@ -25,18 +25,18 @@ function JudgeColorAtTop(backGround)
             end
 
             if word_mark ~= nil then
-                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - 5),s_DESIGN_HEIGHT * 0.95)
+                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.95)
                 word_mark:ignoreAnchorPointForPosition(false)
                 word_mark:setAnchorPoint(0,0.5)
                 backGround:addChild(word_mark)
             end
         end
     else
-        for i = 1,8 do
+        for i = 1,maxWrongWordCount do
             if i > table.getn(wrongWordList_success_review) then
                 if i == 1 then 
                     word_mark = cc.Sprite:create("image/newstudy/yellow_begin.png")
-                elseif i == 8 then 
+                elseif i == maxWrongWordCount then 
                     word_mark = cc.Sprite:create("image/newstudy/yellow_end.png")
                 else
                     word_mark = cc.Sprite:create("image/newstudy/yellow_mid.png")
@@ -44,7 +44,7 @@ function JudgeColorAtTop(backGround)
             else
                 if i == 1 then 
                     word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
-                elseif i == 8 then 
+                elseif i == maxWrongWordCount then 
                     word_mark = cc.Sprite:create("image/newstudy/green_end.png")
                 else
                     word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
@@ -52,7 +52,7 @@ function JudgeColorAtTop(backGround)
             end
 
             if word_mark ~= nil then
-                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - 5),s_DESIGN_HEIGHT * 0.95)
+                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.95)
                 word_mark:ignoreAnchorPointForPosition(false)
                 word_mark:setAnchorPoint(0,0.5)
                 backGround:addChild(word_mark)
@@ -66,8 +66,8 @@ function PlayWordSoundAndAddSprite(backGround)
 
     local wordUs
     local wordEn
-    local word_us_button
-    local word_es_button
+    local change_mark_button
+    local label_in_change_button
 
     local word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",48)
     word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.9)
@@ -79,21 +79,24 @@ function PlayWordSoundAndAddSprite(backGround)
     local click_playsound = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
-
         elseif eventType == ccui.TouchEventType.ended then
-
             playWordSound(NewStudyLayer_wordList_wordName)
-
         end
     end
 
 
-    local word_playsound_button = ccui.Button:create("image/newstudy/playsound_begin.png","image/newstudy/playsound_end.png","")
-    word_playsound_button:setPosition(backGround:getContentSize().width /2 + word:getContentSize().width  , s_DESIGN_HEIGHT * 0.9)
+    local word_playsound_button = ccui.Button:create("image/newstudy/light_orange.png","image/newstudy/deep_orange.png","")
+    word_playsound_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.9)
     word_playsound_button:ignoreAnchorPointForPosition(false)
     word_playsound_button:setAnchorPoint(0.5,0.5)
     word_playsound_button:addTouchEventListener(click_playsound)
     backGround:addChild(word_playsound_button) 
+    
+    local horn_on_button = cc.Sprite:create("image/newstudy/horn.png")
+    horn_on_button:setPosition(word_playsound_button:getContentSize().width * 0.5,word_playsound_button:getContentSize().height * 0.5)
+    word_playsound_button:addChild(horn_on_button)
+    
+    
 
     local click_change = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -105,14 +108,12 @@ function PlayWordSoundAndAddSprite(backGround)
                 Pronounce_Mark_US = 0
                 wordUs:setVisible(false)
                 wordEn:setVisible(true)
-                word_us_button:setVisible(false)
-                word_es_button:setVisible(true)
+                label_in_change_button:setString("ES")
             else
                 Pronounce_Mark_US = 1
                 wordUs:setVisible(true)
                 wordEn:setVisible(false)
-                word_us_button:setVisible(true)
-                word_es_button:setVisible(false)
+                label_in_change_button:setString("US")
             end
         end
     end
@@ -133,34 +134,26 @@ function PlayWordSoundAndAddSprite(backGround)
     wordEn:setVisible(false)
     backGround:addChild(wordEn)
 
-    word_us_button = ccui.Button:create("image/newstudy/us_button_begin.png","image/newstudy/us_button_end.png","")
-    word_us_button:setPosition(backGround:getContentSize().width /2 + word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
-    word_us_button:ignoreAnchorPointForPosition(false)
-    word_us_button:setAnchorPoint(0.5,0.5)
-    word_us_button:addTouchEventListener(click_change)
-    word_us_button:setVisible(true)
-    backGround:addChild(word_us_button)  
+    change_mark_button = ccui.Button:create("image/newstudy/light_green.png","image/newstudy/deep_green.png","")
+    change_mark_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
+    change_mark_button:ignoreAnchorPointForPosition(false)
+    change_mark_button:setAnchorPoint(0.5,0.5)
+    change_mark_button:addTouchEventListener(click_change)
+    backGround:addChild(change_mark_button)  
 
-    word_es_button = ccui.Button:create("image/newstudy/es_button_begin.png","image/newstudy/es_button_end.png","")
-    word_es_button:setPosition(backGround:getContentSize().width /2 + word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
-    word_es_button:ignoreAnchorPointForPosition(false)
-    word_es_button:setAnchorPoint(0.5,0.5)
-    word_es_button:addTouchEventListener(click_change)
-    word_es_button:setVisible(false)
-    backGround:addChild(word_es_button)  
+    label_in_change_button = cc.Label:createWithSystemFont("US","",30)
+    label_in_change_button:setPosition(change_mark_button:getContentSize().width /2  , change_mark_button:getContentSize().height /2 )
+    label_in_change_button:setColor(cc.c4b(255,255,255,255))
+    change_mark_button:addChild(label_in_change_button)
 
     if Pronounce_Mark_US == 0 then          
-
         wordUs:setVisible(false)
         wordEn:setVisible(true)
-        word_us_button:setVisible(false)
-        word_es_button:setVisible(true)
+        label_in_change_button:setString("ES")
     else
-
         wordUs:setVisible(true)
         wordEn:setVisible(false)
-        word_us_button:setVisible(true)
-        word_es_button:setVisible(false)
+        label_in_change_button:setString("US")
     end
 end
 
@@ -199,6 +192,9 @@ end
 
 function UpdateCurrentWordFromTrue()
     if current_state_judge == 1 then
+    
+        s_DATABASE_MGR.insertNewStudyLayerFamiliarTables(NewStudyLayer_wordList_wordName)
+        
         table.insert(rightWordList,NewStudyLayer_wordList_wordName)
         currentIndex_unjudge = currentIndex_unjudge + 1
 
