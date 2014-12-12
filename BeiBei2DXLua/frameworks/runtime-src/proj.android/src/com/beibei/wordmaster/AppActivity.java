@@ -47,6 +47,7 @@ import c.bb.dc.BBNDK;
 
 import com.anysdk.framework.PluginWrapper;
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
@@ -82,6 +83,9 @@ public class AppActivity extends Cocos2dxActivity {
 			// server
 			AVOSCloud.initialize(this, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
 		}
+	    // server
+//	    AVOSCloud.initialize(this, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
+//	    AVCloud.setProductionMode(true);
 		
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);

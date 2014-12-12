@@ -8,9 +8,9 @@ using namespace cocos2d;
 
 string getSDCardPath()
 {
-	JniMethodInfo t;
+    JniMethodInfo t;
     string sdcardPath("");
-
+    
     if (JniHelper::getStaticMethodInfo(t, "c/bb/dc/BBNDK", "getSDCardPath", "()Ljava/lang/String;")) {
         jstring str = (jstring)t.env->CallStaticObjectMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
@@ -18,7 +18,7 @@ string getSDCardPath()
         t.env->DeleteLocalRef(str);
     }
     return sdcardPath;
-
+    
 }
 
 string getIPAddress()

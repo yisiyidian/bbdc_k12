@@ -24,10 +24,6 @@
     ],
     "must_copy_resources": [
         {
-            "from": "../../cocos2d-x/cocos/scripting/lua-bindings/script",
-            "to": ""
-        },
-        {
             "from": "../../../config.json",
             "to": ""
         },
