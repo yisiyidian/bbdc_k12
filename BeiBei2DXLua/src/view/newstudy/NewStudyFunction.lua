@@ -7,25 +7,13 @@ function JudgeColorAtTop(backGround)
     if current_state_judge == 1 then
         for i = 1,maxWrongWordCount do
             if i > table.getn(wrongWordList) then
-                if i == 1 then 
-                    word_mark = cc.Sprite:create("image/newstudy/blue_begin.png")
-                elseif i == maxWrongWordCount then 
-                    word_mark = cc.Sprite:create("image/newstudy/blue_end.png")
-                else
-                    word_mark = cc.Sprite:create("image/newstudy/blue_mid.png")
-                end
+                    word_mark = cc.Sprite:create("image/newstudy/blueball.png")
             else
-                if i == 1 then 
-                    word_mark = cc.Sprite:create("image/newstudy/yellow_begin.png")
-                elseif i == maxWrongWordCount then 
-                    word_mark = cc.Sprite:create("image/newstudy/yellow_end.png")
-                else
-                    word_mark = cc.Sprite:create("image/newstudy/yellow_mid.png")
-                end 
+                    word_mark = cc.Sprite:create("image/newstudy/yellowball.png")
             end
 
             if word_mark ~= nil then
-                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.95)
+                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.9)
                 word_mark:ignoreAnchorPointForPosition(false)
                 word_mark:setAnchorPoint(0,0.5)
                 backGround:addChild(word_mark)
@@ -34,25 +22,13 @@ function JudgeColorAtTop(backGround)
     else
         for i = 1,maxWrongWordCount do
             if i > table.getn(wrongWordList_success_review) then
-                if i == 1 then 
-                    word_mark = cc.Sprite:create("image/newstudy/yellow_begin.png")
-                elseif i == maxWrongWordCount then 
-                    word_mark = cc.Sprite:create("image/newstudy/yellow_end.png")
-                else
-                    word_mark = cc.Sprite:create("image/newstudy/yellow_mid.png")
-                end 
+                word_mark = cc.Sprite:create("image/newstudy/yellowball.png")
             else
-                if i == 1 then 
-                    word_mark = cc.Sprite:create("image/newstudy/green_begin.png")
-                elseif i == maxWrongWordCount then 
-                    word_mark = cc.Sprite:create("image/newstudy/green_end.png")
-                else
-                    word_mark = cc.Sprite:create("image/newstudy/green_mid.png")
-                end 
+                word_mark = cc.Sprite:create("image/newstudy/greenball.png")
             end
 
             if word_mark ~= nil then
-                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.95)
+                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.9)
                 word_mark:ignoreAnchorPointForPosition(false)
                 word_mark:setAnchorPoint(0,0.5)
                 backGround:addChild(word_mark)
@@ -70,7 +46,7 @@ function PlayWordSoundAndAddSprite(backGround)
     local label_in_change_button
 
     local word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",48)
-    word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.9)
+    word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.85)
     word:setColor(cc.c4b(0,0,0,255))
     word:ignoreAnchorPointForPosition(false)
     word:setAnchorPoint(0.5,0.5)
@@ -86,7 +62,7 @@ function PlayWordSoundAndAddSprite(backGround)
 
 
     local word_playsound_button = ccui.Button:create("image/newstudy/light_orange.png","image/newstudy/deep_orange.png","")
-    word_playsound_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.9)
+    word_playsound_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
     word_playsound_button:ignoreAnchorPointForPosition(false)
     word_playsound_button:setAnchorPoint(0.5,0.5)
     word_playsound_button:addTouchEventListener(click_playsound)
@@ -119,7 +95,7 @@ function PlayWordSoundAndAddSprite(backGround)
     end
 
     wordUs = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkAm,"",42)
-    wordUs:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.85)
+    wordUs:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.8)
     wordUs:setColor(cc.c4b(0,0,0,255))
     wordUs:ignoreAnchorPointForPosition(false)
     wordUs:setAnchorPoint(0.5,0.5)
@@ -127,7 +103,7 @@ function PlayWordSoundAndAddSprite(backGround)
     backGround:addChild(wordUs)
 
     wordEn =  cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkEn,"",42)
-    wordEn:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.85)
+    wordEn:setPosition(backGround:getContentSize().width /2 ,s_DESIGN_HEIGHT * 0.8)
     wordEn:setColor(cc.c4b(0,0,0,255))
     wordEn:ignoreAnchorPointForPosition(false)
     wordEn:setAnchorPoint(0.5,0.5)
@@ -135,7 +111,7 @@ function PlayWordSoundAndAddSprite(backGround)
     backGround:addChild(wordEn)
 
     change_mark_button = ccui.Button:create("image/newstudy/light_green.png","image/newstudy/deep_green.png","")
-    change_mark_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
+    change_mark_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.8)
     change_mark_button:ignoreAnchorPointForPosition(false)
     change_mark_button:setAnchorPoint(0.5,0.5)
     change_mark_button:addTouchEventListener(click_change)
@@ -159,7 +135,7 @@ end
 
 function HugeWordUnderColorSquare(backGround)
 	local huge_word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",100)
-    huge_word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.9)
+    huge_word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.85)
     huge_word:setColor(cc.c4b(0,0,0,255))
     huge_word:ignoreAnchorPointForPosition(false)
     huge_word:setAnchorPoint(0.5,0.5)
@@ -333,15 +309,11 @@ function ShowAnswerFalseBack(backGround)
     showAnswerStateBack:addChild(right_wordname)	
 end
 
-function CreateRandomWordList(parameters)
-    
-    local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-
-    math.randomseed(number)  
-
-    local randomNumber = math.random(1,table.getn(NewStudyLayer_wordList))
-
-    local randMeaning = s_WordPool[NewStudyLayer_wordList[randomNumber]].wordMeaningSmall
-    
-    
+function AddPauseButton(backGround)
+    local pause_button = ccui.Button:create("image/newstudy/pause_button_begin.png","image/newstudy/pause_button_end.png","")
+    pause_button:setPosition(s_LEFT_X + 150, s_DESIGN_HEIGHT - 25 )
+    pause_button:ignoreAnchorPointForPosition(false)
+    pause_button:setAnchorPoint(0,1)
+    backGround:addChild(pause_button) 	
 end
+

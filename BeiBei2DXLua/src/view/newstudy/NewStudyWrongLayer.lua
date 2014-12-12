@@ -26,12 +26,7 @@ function NewStudyWrongLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
 
-    local pause_button = ccui.Button:create("image/newstudy/pause_button_begin.png","image/newstudy/pause_button_end.png","")
-    pause_button:setPosition(s_LEFT_X + 150, s_DESIGN_HEIGHT - 50 )
-    pause_button:ignoreAnchorPointForPosition(false)
-    pause_button:setAnchorPoint(0,1)
-    backGround:addChild(pause_button)    
-
+    AddPauseButton(backGround)  
 
     JudgeColorAtTop(backGround) 
 

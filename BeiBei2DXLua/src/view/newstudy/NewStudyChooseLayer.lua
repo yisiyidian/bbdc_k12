@@ -120,17 +120,13 @@ function NewStudyChooseLayer.create()
     
     JudgeColorAtTop(backGround)
 
-    local pause_button = ccui.Button:create("image/newstudy/pause_button_begin.png","image/newstudy/pause_button_end.png","")
-    pause_button:setPosition(s_LEFT_X + 150, s_DESIGN_HEIGHT - 50 )
-    pause_button:ignoreAnchorPointForPosition(false)
-    pause_button:setAnchorPoint(0,1)
-    backGround:addChild(pause_button) 
+    AddPauseButton(backGround)
     
     PlayWordSoundAndAddSprite(backGround)     
 
 
-    local illustrate_know = cc.Label:createWithSystemFont("如果认识该单词请选出正确释义","",32)
-    illustrate_know:setPosition(backGround:getContentSize().width *0.5,s_DESIGN_HEIGHT * 0.68)
+    local illustrate_know = cc.Label:createWithSystemFont("如果认识该单词请选出正确释义","",26)
+    illustrate_know:setPosition(backGround:getContentSize().width *0.5,s_DESIGN_HEIGHT * 0.7)
     illustrate_know:setColor(WhiteFont)
     illustrate_know:ignoreAnchorPointForPosition(false)
     illustrate_know:setAnchorPoint(0.5 ,0.5)
@@ -248,7 +244,7 @@ function NewStudyChooseLayer.create()
     
        for i = 1 , 4 do
            choose_button = ccui.Button:create("image/newstudy/white_begin.png","image/newstudy/white_end.png","")
-           choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.71 - 0.11 * i))
+           choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.75 - 0.12 * i))
            choose_button:ignoreAnchorPointForPosition(false)
            choose_button:setAnchorPoint(0.5,0.5)
            choose_button:setName(word_meaning_table[i])
@@ -256,14 +252,14 @@ function NewStudyChooseLayer.create()
            backGround:addChild(choose_button)  
 
            local choose_text = cc.Label:createWithSystemFont(word_meaning_table[i],"",32)
-           choose_text:setColor(cc.c4b(0,0,0,255))
+           choose_text:setColor(LightBlueFont)
            choose_text:setPosition(50 ,choose_button:getContentSize().height * 0.5 )
            choose_text:ignoreAnchorPointForPosition(false)
            choose_text:setAnchorPoint(0,0.5)
            choose_button:addChild(choose_text)  
        end
 
-    local illustrate_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",32)
+    local illustrate_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",26)
     illustrate_dontknow:setPosition(backGround:getContentSize().width * 0.5 ,s_DESIGN_HEIGHT * 0.18)
     illustrate_dontknow:setColor(WhiteFont)
     illustrate_dontknow:ignoreAnchorPointForPosition(false)
@@ -281,20 +277,20 @@ function NewStudyChooseLayer.create()
         end
     end
 
-    --image/newstudy/brown_end.png
-    local choose_dontknow_button = ccui.Button:create("image/newstudy/brown_begin.png","image/newstudy/brown_end.png","")
+
+    local choose_dontknow_button = ccui.Button:create("image/newstudy/orange_begin.png","image/newstudy/orange_end.png","")
 --    choose_dontknow_button:setScale9Enabled(true)
-    choose_dontknow_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * 0.1)
+    choose_dontknow_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * 0.12)
     choose_dontknow_button:ignoreAnchorPointForPosition(false)
     choose_dontknow_button:setAnchorPoint(0.5,0.5)
     choose_dontknow_button:addTouchEventListener(click_dontknow_button)
     backGround:addChild(choose_dontknow_button)  
 
-    local choose_dontknow_text = cc.Label:createWithSystemFont("不认识","",32)
-    choose_dontknow_text:setPosition(50,choose_dontknow_button:getContentSize().height * 0.5)
-    choose_dontknow_text:setColor(cc.c4b(255,255,255,255))
+    local choose_dontknow_text = cc.Label:createWithSystemFont("不认识","",40)
+    choose_dontknow_text:setPosition(choose_dontknow_button:getContentSize().width * 0.5,choose_dontknow_button:getContentSize().height * 0.5)
+    choose_dontknow_text:setColor(DeepBlueFont)
     choose_dontknow_text:ignoreAnchorPointForPosition(false)
-    choose_dontknow_text:setAnchorPoint(0 ,0.5)
+    choose_dontknow_text:setAnchorPoint(0.5 ,0.5)
     choose_dontknow_button:addChild(choose_dontknow_text)
     
     return layer

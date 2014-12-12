@@ -23,11 +23,7 @@ function NewStudyTrueLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
 
-    local pause_button = ccui.Button:create("image/newstudy/pause_button_begin.png","image/newstudy/pause_button_end.png","")
-    pause_button:setPosition(s_LEFT_X + 150, s_DESIGN_HEIGHT - 50 )
-    pause_button:ignoreAnchorPointForPosition(false)
-    pause_button:setAnchorPoint(0,1)
-    backGround:addChild(pause_button) 
+    AddPauseButton(backGround)
        
     JudgeColorAtTop(backGround)
 
@@ -114,14 +110,14 @@ function NewStudyTrueLayer.create()
         end
     end
 
-    local choose_study_button = ccui.Button:create("image/newstudy/brown_begin.png","image/newstudy/brown_end.png","")
-    choose_study_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * 0.1)
+    local choose_study_button = ccui.Button:create("image/newstudy/orange_begin.png","image/newstudy/orange_end.png","")
+    choose_study_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * 0.12)
     choose_study_button:ignoreAnchorPointForPosition(false)
     choose_study_button:setAnchorPoint(0.5,0.5)
     choose_study_button:addTouchEventListener(click_study_button)
     backGround:addChild(choose_study_button)  
 
-    local choose_study_text = cc.Label:createWithSystemFont("我依然想复习该单词","",32)
+    local choose_study_text = cc.Label:createWithSystemFont("依然复习","",40)
     choose_study_text:setPosition(choose_study_button:getContentSize().width * 0.5,choose_study_button:getContentSize().height * 0.5)
     choose_study_text:setColor(cc.c4b(255,255,255,255))
     choose_study_text:ignoreAnchorPointForPosition(false)
