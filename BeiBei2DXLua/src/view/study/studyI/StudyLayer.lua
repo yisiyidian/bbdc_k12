@@ -20,6 +20,7 @@ function StudyLayer.create()
 
     local layer = StudyLayer.new()
     
+    
     local viewIndex = 1
     
     -- time

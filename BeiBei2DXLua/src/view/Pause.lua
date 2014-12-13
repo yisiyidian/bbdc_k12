@@ -131,6 +131,7 @@ function Pause:onBack()
     --end
     s_SCENE.popupLayer.listener:setSwallowTouches(false)
     s_SCENE.popupLayer:removeAllChildren()
+    s_SCENE.popupLayer.layerpaused = false
     s_SCENE:replaceGameLayer(layer)
 end
 
@@ -205,7 +206,7 @@ end
 function createPauseLayerWhenTestOrBoss()   
     if s_SCENE.gameLayerState == s_test_game_state
     or s_SCENE.gameLayerState == s_review_boss_game_state
-    or s_SCENE.gameLayerState == s_summary_boss_game_state then
+    or s_SCENE.gameLayerState == s_summary_boss_game_state then 
 
         if s_SCENE.popupLayer.layerpaused == false and s_SCENE.popupLayer.isOtherAlter == false then
             local pauseLayer = Pause:create()

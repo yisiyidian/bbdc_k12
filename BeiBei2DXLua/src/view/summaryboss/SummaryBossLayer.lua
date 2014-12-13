@@ -69,7 +69,10 @@ function SummaryBossLayer.create(levelConfig,chapter)
     local loadingTime = 0
     local loadingState = 0
     layer:initMapInfo()
-    
+    local light = cc.Sprite:create('image/studyscene/long_light.png')
+    light:setAnchorPoint(0.5,0.05)
+    layer:addChild(light,10)
+    light:setVisible(false)    
     --update
     local function update(delta)
         if loadingTime > delta and loadingState < 2 then
@@ -127,7 +130,10 @@ function SummaryBossLayer.create(levelConfig,chapter)
         lastTouchLocation = location
         
         layer:checkTouchLocation(location)
-        
+        if chapter == 2 then
+            light:setPosition(location)
+            light:setVisible(true)
+        end
         if layer.onNode then
             layer.isPaused = true
             for i = 1, 5 do
@@ -179,6 +185,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
         local length_gap = 3.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
+        if chapter == 2 then
+            light:setPosition(location)
+        end
 
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
@@ -202,6 +211,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
         end
     
         layer:checkTouchLocation(location)
+        if chapter == 2 then
+            light:setPosition(location)
+        end
 
         if startAtNode then
             local x = location.x - startTouchLocation.x
@@ -257,6 +269,8 @@ function SummaryBossLayer.create(levelConfig,chapter)
                                 currentNode.left()
                             end
                         end
+                        currentNode.addSelectStyle()
+                        currentNode.bigSize()
                         currentNode.hasSelected = true
                         selectStack[#selectStack+1] = currentNode
                         --layer:updateWord(selectStack)
@@ -308,7 +322,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
             layer:crabSmall(chapter,layer.onCrab)
             layer.onCrab = 0
         end
-        
+        if chapter == 2 then
+            light:setVisible(false)
+        end
         if #selectStack < 1 then
             return
         end
@@ -399,7 +415,7 @@ function SummaryBossLayer.create(levelConfig,chapter)
                         local win = cc.CallFunc:create(function()
                             
                             --layer.boss:removeFromParent()
-                            layer:win()
+                            layer:win(chapter)
                         end,{})
                         layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
                         
@@ -532,7 +548,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
         self:addChild(back)
 
         local backEffect = sp.SkeletonAnimation:create('spine/summaryboss/second-level-summary-light.json','spine/summaryboss/second-level-summary-light.atlas',1)
-        backEffect:setPosition(-30 - s_LEFT_X,0.675 * back:getContentSize().height)
+        backEffect:setPosition(-30,0.675 * back:getContentSize().height)
         backEffect:setAnimation(0,'animation',true)
         self:addChild(backEffect)
     else 
@@ -541,7 +557,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
         self:addChild(back)
 
         local light = sp.SkeletonAnimation:create("spine/summaryboss/third-level-summary-boss-background.json","spine/summaryboss/third-level-summary-boss-background.atlas",1)
-        light:setPosition(-80-s_LEFT_X,s_DESIGN_HEIGHT * 0.73)
+        light:setPosition(-80,s_DESIGN_HEIGHT * 0.73)
         self:addChild(light)
         light:addAnimation(0,'animation',true)
     end
@@ -678,7 +694,7 @@ function SummaryBossLayer:initBossLayer_boss(levelConfig,chapter)
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
         if self.currentBlood > 0 then
             self.isLose = true
-            self:lose()
+            self:lose(chapter)
         end
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
@@ -708,14 +724,19 @@ function SummaryBossLayer:initWordList(levelConfig)
 
     end
 
-    self.totalBlood = 0
-    for i = 1,#wordList do
-        self.totalBlood = self.totalBlood + string.len(wordList[i])
-    end
-    
     self.maxCount = #wordList
+
+    -- self.totalBlood = 0
+    -- for i = 1,#wordList do
+    --     self.totalBlood = self.totalBlood + string.len(wordList[i])
+    -- end
+    -- self.currentBlood = self.totalBlood
+    -- self.totalTime = math.ceil(self.totalBlood / 7) * 10 
+
+    self.totalBlood = levelConfig.summary_boss_hp
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 10 
+    self.totalTime = levelConfig.summary_boss_time
+
 
     while true do
         local totalLength = 0
@@ -1123,10 +1144,10 @@ function SummaryBossLayer:crabBig(chapter,index)
     end
 end
 
-function SummaryBossLayer:win()
+function SummaryBossLayer:win(chapter)
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,1)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
@@ -1134,10 +1155,10 @@ function SummaryBossLayer:win()
 --    playSound(s_sound_win)
 end
 
-function SummaryBossLayer:lose()
+function SummaryBossLayer:lose(chapter)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,1)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
