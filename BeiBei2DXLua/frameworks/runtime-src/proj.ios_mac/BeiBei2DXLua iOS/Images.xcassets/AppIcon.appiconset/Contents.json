@@ -3,31 +3,43 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Icon-29.png",
+      "filename" : "Icon-Small.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Icon-58.png",
+      "filename" : "Icon-Small@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "Icon-87.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "Icon-Spotlight-iOS7@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Icon-80.png",
-      "scale" : "2x"
+      "filename" : "Icon-120-1.png",
+      "scale" : "3x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "Icon-57.png",
+      "filename" : "Icon.png",
       "scale" : "1x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "Icon-114.png",
+      "filename" : "Icon@2x.png",
       "scale" : "2x"
     },
     {
@@ -45,37 +57,37 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Icon-29.png",
+      "filename" : "Icon-Small.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Icon-58.png",
+      "filename" : "Icon-Small@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Icon-40.png",
+      "filename" : "Icon-Spotlight-iOS7.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Icon-80.png",
+      "filename" : "Icon-Spotlight-iOS7@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "Icon-50.png",
+      "filename" : "Icon-Small-50.png",
       "scale" : "1x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "Icon-100.png",
+      "filename" : "Icon-iPad-Spotlight-iOS7@2x.png",
       "scale" : "2x"
     },
     {
@@ -87,7 +99,7 @@
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "Icon-144.png",
+      "filename" : "Icon-72@2x.png",
       "scale" : "2x"
     },
     {
@@ -99,7 +111,7 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Icon-152.png",
+      "filename" : "Icon-76@2x.png",
       "scale" : "2x"
     }
   ],

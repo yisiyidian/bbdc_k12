@@ -69,7 +69,10 @@ function SummaryBossLayer.create(levelConfig,chapter)
     local loadingTime = 0
     local loadingState = 0
     layer:initMapInfo()
-    
+    local light = cc.Sprite:create('image/studyscene/long_light.png')
+    light:setAnchorPoint(0.5,0.05)
+    layer:addChild(light,10)
+    light:setVisible(false)    
     --update
     local function update(delta)
         if loadingTime > delta and loadingState < 2 then
@@ -127,7 +130,10 @@ function SummaryBossLayer.create(levelConfig,chapter)
         lastTouchLocation = location
         
         layer:checkTouchLocation(location)
-        
+        if chapter == 2 then
+            light:setPosition(location)
+            light:setVisible(true)
+        end
         if layer.onNode then
             layer.isPaused = true
             for i = 1, 5 do
@@ -179,6 +185,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
         local length_gap = 3.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
+        if chapter == 2 then
+            light:setPosition(location)
+        end
 
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
@@ -202,6 +211,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
         end
     
         layer:checkTouchLocation(location)
+        if chapter == 2 then
+            light:setPosition(location)
+        end
 
         if startAtNode then
             local x = location.x - startTouchLocation.x
@@ -257,6 +269,8 @@ function SummaryBossLayer.create(levelConfig,chapter)
                                 currentNode.left()
                             end
                         end
+                        currentNode.addSelectStyle()
+                        currentNode.bigSize()
                         currentNode.hasSelected = true
                         selectStack[#selectStack+1] = currentNode
                         --layer:updateWord(selectStack)
@@ -308,7 +322,9 @@ function SummaryBossLayer.create(levelConfig,chapter)
             layer:crabSmall(chapter,layer.onCrab)
             layer.onCrab = 0
         end
-        
+        if chapter == 2 then
+            light:setVisible(false)
+        end
         if #selectStack < 1 then
             return
         end

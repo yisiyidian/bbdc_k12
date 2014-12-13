@@ -1,7 +1,8 @@
 {
-  "has_native": true,
-  "project_type": "lua",
-  "assets": {
-    "ignores": []
-  }
+    "assets": {
+        "ignores": []
+    }, 
+    "has_native": true, 
+    "ios_sign_id": "com.BeiBeiDanCiX", 
+    "project_type": "lua"
 }

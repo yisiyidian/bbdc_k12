@@ -8,7 +8,4 @@ cocos run \
     --compile-script 1 \
     --lua-encrypt --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA" \
     --sign-identity "com.BeiBeiDanCiX"
-
-xcrun   -sdk iphoneos PackageApplication \
-        -v ${baseDirForScriptSelf}/../BeiBei2DXLua/runtime/ios/BeiBei2DXLua.app \
-        -o ${baseDirForScriptSelf}/../BeiBei2DXLua/runtime/ios/BeiBei2DXLua.ipa
+    
