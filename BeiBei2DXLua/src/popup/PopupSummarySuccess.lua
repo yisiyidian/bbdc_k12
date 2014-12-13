@@ -56,7 +56,6 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
     local action2 = cc.EaseBackOut:create(action1)
     node:runAction(action2)
-
     self:addChild(node)
 end
 
@@ -76,7 +75,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
     -- button sound
     playSound(s_sound_buttonEffect)
     showProgressHUD('正在加载关卡')
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_summary_boss_energy_cost then
         if levelData.isPassed ~= 1 then
 --            s_CURRENT_USER:useEnergys(s_summary_boss_energy_cost)
