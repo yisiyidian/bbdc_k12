@@ -708,14 +708,19 @@ function SummaryBossLayer:initWordList(levelConfig)
 
     end
 
-    self.totalBlood = 0
-    for i = 1,#wordList do
-        self.totalBlood = self.totalBlood + string.len(wordList[i])
-    end
-    
     self.maxCount = #wordList
+
+    -- self.totalBlood = 0
+    -- for i = 1,#wordList do
+    --     self.totalBlood = self.totalBlood + string.len(wordList[i])
+    -- end
+    -- self.currentBlood = self.totalBlood
+    -- self.totalTime = math.ceil(self.totalBlood / 7) * 10 
+
+    self.totalBlood = levelConfig.summary_boss_hp
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 10 
+    self.totalTime = levelConfig.summary_boss_time
+
 
     while true do
         local totalLength = 0
