@@ -188,8 +188,10 @@ function CorePlayManager.enterReviewBossLayer()
         local reviewBossLayerIII = ReviewBossLayerIII.create()
         s_SCENE:replaceGameLayer(reviewBossLayerIII)
     else
-        s_logd("system error")
-        s_logd(s_CURRENT_USER.currentSelectedChapterKey)
+        -- s_logd("system error")
+        -- s_logd(s_CURRENT_USER.currentSelectedChapterKey)
+        local reviewBossLayerIII = ReviewBossLayerIII.create()
+        s_SCENE:replaceGameLayer(reviewBossLayerIII)
     end
 end
 
