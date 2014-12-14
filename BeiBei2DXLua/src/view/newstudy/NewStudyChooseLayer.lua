@@ -72,6 +72,10 @@ function NewStudyChooseLayer.create()
             
 --        print_lua_table(word_meaning_table)    
    else
+        local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
+
+        local testIndex =  FindIndex(testTableIsNil)
+
         word_list_table = {currentIndex_unreview,1,1,1}      
         while  case[1] *  case[2] * case[3] *case[4] * case[5] *case[6] == 0 do
             

@@ -29,7 +29,7 @@ end
 --rightWordList         = {}
 wrongWordList         = {}
 wrongWordList_success_review = {}
-maxWrongWordCount     = 20
+maxWrongWordCount     = 3
 
 SilverFont = cc.c4b(134,167,218,255)
 LightBlueFont = cc.c4b(39,127,182,255)

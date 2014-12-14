@@ -934,13 +934,16 @@ function Manager.selectFormerNewStudyLayerTestTables()
 end
 
 ----NewStudyLayer_test_from_suffer_over----
-----drop_table----
---    Manager.database:exec[[
---                DROP TABLE DataNewStudyLayerSuffer
---                DROP TABLE DataNewStudyLayerFamiliar
---                DROP TABLE DataNewStudyLayerUnfamiliar
---                DROP TABLE DataNewStudyLayerTest
---            ]]
+------drop_table----
+function Manager.dropTables()
+
+    Manager.database:exec[[
+                DROP TABLE DataNewStudyLayerSuffer
+                DROP TABLE DataNewStudyLayerFamiliar
+                DROP TABLE DataNewStudyLayerUnfamiliar
+                DROP TABLE DataNewStudyLayerTest
+            ]]
+end         
 ----drop_table_over----
 ---- UserDefault -----------------------------------------------------------
 
