@@ -173,10 +173,8 @@ function BookLayer.create()
     -- set list view ex direction
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(true)
-    --listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,0.85 * s_DESIGN_HEIGHT))
     listView:setPosition(s_LEFT_X,0)
-    --listView:addEventListener(listViewEvent)
     layer:addChild(listView)
     local count = 4
     for i = 1, count do 
@@ -188,7 +186,7 @@ function BookLayer.create()
         custom_item:setTouchEnabled(true)
         custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,0.26 * s_DESIGN_HEIGHT))
         shelf:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height * 0.2))
-        custom_item:addChild(shelf)
+        custom_item:addChild(shelf,0,'shelf')
 
         listView:insertCustomItem(custom_item,i - 1)
         if i == 1 and #name_array%2 == 1 then
@@ -223,42 +221,29 @@ function BookLayer.create()
     progressBar:setPosition(0.5 * backBar:getContentSize().width,backBar:getContentSize().height)
     backBar:addChild(progressBar)    
     backBar:setVisible(false)
-    
-    -- local function listViewEvent(sender, eventType)
-    --     if eventType == ccui.TouchEventType.began then
-    --         print('touch began')
-    --         return true
-    --     end
-    --     if eventType == ccui.TouchEventType.moved then
-    --         print('touch moved')
-    --         backBar:setVisible(false)
-    --     end
-    -- end
 
-    -- listView:addEventListener(listViewEvent)
     local isScrolling = false
     local isTouched = false
     local time = 0
     local overtime = 0
     local scrollY = listView:getInnerContainer():getPositionY()
+    
     local onTouchBegan = function(touch, event) 
         isTouched = true
-        --print('touch began'..listView:getCurSelectedIndex())
         return true  
     end
 
     local onTouchEnded = function(touch, event) 
         isTouched = false
         return true
-    
     end
-    for i = 1 , count do
-        local listener = cc.EventListenerTouchOneByOne:create()
-        listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
-        listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED)
-        local eventDispatcher = listView:getItem(i - 1):getEventDispatcher()
-        eventDispatcher:addEventListenerWithSceneGraphPriority(listener, listView:getItem(i - 1))
-    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED)
+    local eventDispatcher = listView:getItem(count - 1):getChildByName('shelf'):getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, listView:getItem(count - 1):getChildByName('shelf'))
+
     local function update(delta)
         local h = listView:getInnerContainer():getPositionY()
         if h == scrollY and not isTouched or time < 0.5 then
