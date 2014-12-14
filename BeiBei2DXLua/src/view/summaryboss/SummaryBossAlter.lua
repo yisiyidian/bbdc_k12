@@ -146,7 +146,6 @@ function SummaryBossAlter:lose2()
     again:addChild(again_title)
     
     local function backToLevelScene(sender)
-        s_logd("back") 
         local level = require('view.LevelLayer')
         local layer = level.create()
         s_SCENE:replaceGameLayer(layer)
@@ -159,7 +158,6 @@ function SummaryBossAlter:lose2()
     continue:registerScriptTapHandler(backToLevelScene)
     
     local function challengeAgain(sender)
-        s_logd("again")
         s_SCENE.levelLayerState = s_normal_retry_state
         local level = require('view.LevelLayer')
         local layer = level.create()
@@ -213,7 +211,6 @@ function SummaryBossAlter:win1()
     continue:addChild(btn_title)
     
     local function backToLevelScene(sender)
-       s_logd("clicked") 
        local level = require('view.LevelLayer')
        local layer = level.create()
        --if self.win and isPassed == 0 then
