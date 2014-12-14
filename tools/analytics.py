@@ -9,8 +9,8 @@ bookKey = 'ncee'
 LEAN_URL      = 'https://leancloud.cn/1.1/'
 LEAN_URL_CLS  = LEAN_URL + 'classes/'
 LEAN_URL_USER = LEAN_URL + 'users'
-LEAN_APP_ID   = "X-AVOSCloud-Application-Id: gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
-LEAN_APP_KEY  = "X-AVOSCloud-Application-Key: x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
+LEAN_APP_ID   = "X-AVOSCloud-Application-Id: 94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
+LEAN_APP_KEY  = "X-AVOSCloud-Application-Key: lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
 
 def getDataLevel(levelKey, dateCondition):
     def callback(buf):
@@ -28,14 +28,16 @@ def getDataLevel(levelKey, dateCondition):
     pass
 
 def getUserTutorialStep(step, dateCondition):
+    url = LEAN_URL_CLS + '_User?where={"tutorialStep":%d%s}&count=1&limit=0' % (step, dateCondition)
+
     def callback(buf):
         # sys.stdout.write(buf)
         data = json.loads(buf)
-        print step, data["count"]
+        print ('step:%d, count:%d' % (step, data["count"]))
         pass
 
     c = pycurl.Curl()
-    c.setopt(pycurl.URL,           LEAN_URL_CLS + '_User?where={"tutorialStep":%d%s}&count=1&limit=0' % (step, dateCondition))
+    c.setopt(pycurl.URL,           url)
     c.setopt(pycurl.HTTPHEADER,    [LEAN_APP_ID, LEAN_APP_KEY]) 
     c.setopt(pycurl.WRITEFUNCTION, callback)
     c.perform()
@@ -69,5 +71,11 @@ def getUpdatedAt(date):
     return ',"updatedAt":%s' % date
 
 # getDataLevel('level0', ',"createdAt":{"$gte":{"__type":"Date","iso":"2014-12-01T00:00:00.000Z"}}')
-# getUserTutorialStep(0, getUpdatedAt( createDatesWith2Condition('$gte', 2014, 9, 20, '$lte', 2014, 12, 21) ))
+# getUserTutorialStep(0, '') # getCreatedAt( createDatesWith2Condition('$gte', 2014, 12, 8, '$lt', 2014, 12, 14) ))
+# getUserTutorialStep(1, '')
+# getUserTutorialStep(2, '')
+# getUserTutorialStep(3, '')
+# getUserTutorialStep(4, '')
+# getUserTutorialStep(5, '')
+# getUserTutorialStep(6, '')
 
