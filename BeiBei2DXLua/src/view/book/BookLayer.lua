@@ -136,10 +136,10 @@ function BookLayer.create()
                 text:setColor(cc.c3b(0,0,0))
                 tutorial_text:addChild(text)
                 
-                local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
-                finger:addAnimation(0, 'animation', true)
-                finger:setPosition(50,0)
-                smallBack:addChild(finger,10)
+--                local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+--                finger:addAnimation(0, 'animation', true)
+--                finger:setPosition(50,0)
+--                smallBack:addChild(finger,10)
                 s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
             end
         end
