@@ -1,6 +1,8 @@
 require("cocos.init")
 
 require("common.global")
+require("view.newstudy.NewStudyFunction")
+require("view.newstudy.NewStudyConfigure")
 
 local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
@@ -33,8 +35,8 @@ function NewStudyWrongLayer.create()
 
 
     local chineseMeaning = cc.Label:createWithSystemFont("中文释义","",32)
-    chineseMeaning:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.68)
-    chineseMeaning:setColor(SilverFont)
+    chineseMeaning:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.63)
+    chineseMeaning:setColor(BlackFont)
     chineseMeaning:ignoreAnchorPointForPosition(false)
     chineseMeaning:setAnchorPoint(0,0.5)
     backGround:addChild(chineseMeaning)
@@ -51,17 +53,21 @@ function NewStudyWrongLayer.create()
     local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
         "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
-    current_word_wordMeaning:setColor(cc.c4b(255,255,255,255))
+    current_word_wordMeaning:setColor(BlackFont)
 
     local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
     richtext:pushBackElement(richElement1)                   
     richtext:setPosition(backGround:getContentSize().width *0.5, 
-        backGround:getContentSize().height *0.5)
+        backGround:getContentSize().height *0.45)
     richtext:setLocalZOrder(10)
+    
+    local line = cc.Sprite:create("image/newstudy/line.png")
+    line:setPosition(backGround:getContentSize().width *0.5,s_DESIGN_HEIGHT * 0.5)
+    backGround:addChild(line)
 
     local exampleSentence = cc.Label:createWithSystemFont("例句","",32)
-    exampleSentence:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.5)
-    exampleSentence:setColor(SilverFont)
+    exampleSentence:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.45)
+    exampleSentence:setColor(BlackFont)
     exampleSentence:ignoreAnchorPointForPosition(false)
     exampleSentence:setAnchorPoint(0,0.5)
     backGround:addChild(exampleSentence)
@@ -69,7 +75,7 @@ function NewStudyWrongLayer.create()
     local current_word_sentence = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
         "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
-    current_word_sentence:setColor(cc.c4b(255,255,255,255))
+    current_word_sentence:setColor(BlackFont)
 
     local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence)                           
     richtext:pushBackElement(richElement2) 
@@ -142,7 +148,8 @@ function NewStudyWrongLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Slide)
+            NewStudyLayer_State = NewStudyLayer_State_Slide
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
     end
@@ -150,17 +157,11 @@ function NewStudyWrongLayer.create()
 
 
     local spell_drill = cc.Label:createWithSystemFont("拼写强化训练>","",32)
-    spell_drill:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.3)
-    spell_drill:setColor(SilverFont)
+    spell_drill:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.25)
+    spell_drill:setColor(DeepRedFont)
     spell_drill:ignoreAnchorPointForPosition(false)
     spell_drill:setAnchorPoint(0,0.5)
     backGround:addChild(spell_drill)
-    
-    local underline = cc.LayerColor:create(cc.c4b(124,157,208,255), spell_drill:getContentSize().width, 2)
-    underline:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.3 - spell_drill:getContentSize().height * 0.5)
-    underline:ignoreAnchorPointForPosition(false)
-    underline:setAnchorPoint(0,0.5)
-    backGround:addChild(underline)
     
     local spell_position = cc.p(spell_drill:getPosition())
     local spell_size = spell_drill:getContentSize()
@@ -174,7 +175,8 @@ function NewStudyWrongLayer.create()
     local onTouchEnded = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(spell_drill:getBoundingBox(), location) then
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Slide)
+            NewStudyLayer_State = NewStudyLayer_State_Slide
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
     end
@@ -191,8 +193,8 @@ function NewStudyWrongLayer.create()
         end
     end
 
-    local choose_next_button = ccui.Button:create("image/newstudy/brown_begin.png","image/newstudy/brown_end.png","")
-    choose_next_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * 0.1)
+    local choose_next_button = ccui.Button:create("image/newstudy/orange_begin.png","image/newstudy/orange_end.png","")
+    choose_next_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * 0.12)
     choose_next_button:ignoreAnchorPointForPosition(false)
     choose_next_button:setAnchorPoint(0.5,0.5)
     choose_next_button:addTouchEventListener(click_next_button)
@@ -200,7 +202,7 @@ function NewStudyWrongLayer.create()
 
     local choose_next_text = cc.Label:createWithSystemFont("下一个","",32)
     choose_next_text:setPosition(choose_next_button:getContentSize().width * 0.5,choose_next_button:getContentSize().height * 0.5)
-    choose_next_text:setColor(cc.c4b(255,255,255,255))
+    choose_next_text:setColor(DeepBlueFont)
     choose_next_text:ignoreAnchorPointForPosition(false)
     choose_next_text:setAnchorPoint(0.5,0.5)
     choose_next_button:addChild(choose_next_text)

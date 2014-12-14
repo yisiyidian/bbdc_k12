@@ -51,6 +51,8 @@ function DataUser:ctor()
     self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
+    
+    self.newstudytruelayerMask             = 0
 
     self.checkInWord                       = ''
     self.checkInWordUpdateDate             = 0
@@ -419,16 +421,22 @@ end
 function DataUser:getUserBookWord()
     local wordTable = {}
     local wordTableOp = {}
-    for i, v in ipairs(self.levels) do
-        if v.bookKey == self.bookKey then
-            local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
-            if levelConfig ~= nil and levelConfig['type'] == 0 then
+    local chapterIndex = 0
+    while chapterIndex < 4 do
+        local levelIndex = 0
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter'..chapterIndex,'level'..levelIndex)
+        while levelConfig ~= nil do
+            if levelConfig['type'] == 0 then
                 table.insert(wordTable,split(levelConfig.word_content,'|'))
-            end
+            end      
+                levelIndex = levelIndex + 1
+                levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter'..chapterIndex,'level'..levelIndex)
         end
+        chapterIndex = chapterIndex + 1
     end
     table.foreachi(wordTable, function(i, v) table.foreachi(v, function(i, v)  table.insert(wordTableOp,v) end) end)
-    table.foreachi(wordTableOp, function(i, v)  print(i ,v)  end)
+--    table.foreachi(wordTableOp, function(i, v)  print(i ,v)  end)
+    return wordTableOp
 end
 
 return DataUser

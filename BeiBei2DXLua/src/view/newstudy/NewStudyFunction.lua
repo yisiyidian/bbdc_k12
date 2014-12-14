@@ -1,6 +1,3 @@
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
-
-
 function JudgeColorAtTop(backGround)
     local word_mark 
 
@@ -13,7 +10,7 @@ function JudgeColorAtTop(backGround)
             end
 
             if word_mark ~= nil then
-                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.9)
+                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.93)
                 word_mark:ignoreAnchorPointForPosition(false)
                 word_mark:setAnchorPoint(0,0.5)
                 backGround:addChild(word_mark)
@@ -28,7 +25,7 @@ function JudgeColorAtTop(backGround)
             end
 
             if word_mark ~= nil then
-                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.9)
+                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.93)
                 word_mark:ignoreAnchorPointForPosition(false)
                 word_mark:setAnchorPoint(0,0.5)
                 backGround:addChild(word_mark)
@@ -111,7 +108,7 @@ function PlayWordSoundAndAddSprite(backGround)
     backGround:addChild(wordEn)
 
     change_mark_button = ccui.Button:create("image/newstudy/light_green.png","image/newstudy/deep_green.png","")
-    change_mark_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.8)
+    change_mark_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width , s_DESIGN_HEIGHT * 0.8)
     change_mark_button:ignoreAnchorPointForPosition(false)
     change_mark_button:setAnchorPoint(0.5,0.5)
     change_mark_button:addTouchEventListener(click_change)
@@ -134,19 +131,18 @@ function PlayWordSoundAndAddSprite(backGround)
 end
 
 function HugeWordUnderColorSquare(backGround)
-	local huge_word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",100)
+	local huge_word = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",48)
     huge_word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.85)
     huge_word:setColor(cc.c4b(0,0,0,255))
     huge_word:ignoreAnchorPointForPosition(false)
     huge_word:setAnchorPoint(0.5,0.5)
     backGround:addChild(huge_word)
         
-    if string.len(huge_word:getString()) > 5  then
-    huge_word:setSystemFontSize(24 * backGround:getContentSize().width / huge_word:getContentSize().width)
-    end
+--    if string.len(huge_word:getString()) > 5  then
+--    huge_word:setSystemFontSize(24 * backGround:getContentSize().width / huge_word:getContentSize().width)
+--    end
     
     local onTouchBegan = function(touch, event)
-
         return true
     end
 
@@ -167,21 +163,26 @@ function HugeWordUnderColorSquare(backGround)
 end
 
 function UpdateCurrentWordFromTrue()
-    if current_state_judge == 1 then
-    
+    local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
+
+    if testTableIsNil == 0 then
         s_DATABASE_MGR.insertNewStudyLayerFamiliarTables(NewStudyLayer_wordList_wordName)
         
-        table.insert(rightWordList,NewStudyLayer_wordList_wordName)
-        currentIndex_unjudge = currentIndex_unjudge + 1
-
-        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
-        UpdateCurrentWordContent()
+--        table.insert(rightWordList,NewStudyLayer_wordList_wordName)
+--        currentIndex_unjudge = currentIndex_unjudge + 1
+--
+--        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
+--        UpdateCurrentWordContent()
 
         if table.getn(wrongWordList) ==  maxWrongWordCount then
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Mission)
+            NewStudyLayer_State = NewStudyLayer_State_Mission
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         else
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
+            NewStudyLayer_State = NewStudyLayer_State_Choose
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
 
@@ -191,12 +192,16 @@ function UpdateCurrentWordFromTrue()
         currentIndex_unreview = currentIndex_unreview + 1
 
         if table.getn(wrongWordList_success_review) ==  maxWrongWordCount then
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Reward)
+            NewStudyLayer_State = NewStudyLayer_State_Reward
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         else
             NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
             UpdateCurrentWordContent()
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
+            NewStudyLayer_State = NewStudyLayer_State_Choose
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
 
@@ -204,27 +209,33 @@ function UpdateCurrentWordFromTrue()
 end
 
 function UpdateCurrentWordFromFalse()
-    if current_state_judge == 1 then
+    local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
+
+    if testTableIsNil == 0 then
     
         table.insert(wrongWordList,NewStudyLayer_wordList_wordName)
-        currentIndex_unjudge = currentIndex_unjudge + 1
-
-        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
-
-        UpdateCurrentWordContent()
+--        currentIndex_unjudge = currentIndex_unjudge + 1
+--
+--        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
+--
+--        UpdateCurrentWordContent()
 
         if table.getn(wrongWordList) == maxWrongWordCount  then
             local New_study_popup = require("view.newstudy.NewStudyPopup")
             local new_study_popup = New_study_popup.create()  
             s_SCENE:popup(new_study_popup)
 
-            s_SCENE:callFuncWithDelay(2,function()
-                local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Mission)
+            s_SCENE:callFuncWithDelay(2.5,function()
+                NewStudyLayer_State = NewStudyLayer_State_Mission
+                local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+                local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
                 s_SCENE:replaceGameLayer(newStudyLayer)
             end)
 
         else
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
+            NewStudyLayer_State = NewStudyLayer_State_Choose
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
     else
@@ -236,11 +247,14 @@ function UpdateCurrentWordFromFalse()
         UpdateCurrentWordContent()
 
         if table.getn(wrongWordList) == maxWrongWordCount  then
-
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Reward)
+            NewStudyLayer_State = NewStudyLayer_State
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         else
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Choose)
+            NewStudyLayer_State =NewStudyLayer_State_Choose
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
 
@@ -259,9 +273,9 @@ end
 
 function RewardAdd(backGround)
     for i=1,3 do
-        local diamond = cc.Sprite:create("image/newstudy/diamond.png")
+        local diamond = cc.Sprite:create("image/newstudy/bean.png")
         diamond:setPosition(backGround:getContentSize().width * 0.5 + diamond:getContentSize().width*3 * (i - 2),
-            backGround:getContentSize().height * 0.2)
+            backGround:getContentSize().height * 0.28)
         diamond:ignoreAnchorPointForPosition(false)
         diamond:setAnchorPoint(0.5,0.5)
         diamond:setScale(2)
@@ -269,51 +283,53 @@ function RewardAdd(backGround)
     end
 end
 
-function ShowAnswerTrueBack(backGround)
+function ShowAnswerTrueBack(sender)
 
-   local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
-   showAnswerStateBack:setPosition(backGround:getContentSize().width/2 * (-3), 768)
-   backGround:addChild(showAnswerStateBack)
+   local showAnswerStateBack = cc.Sprite:create("image/newstudy/righttip.png")
+    showAnswerStateBack:setPosition(sender:getContentSize().width/2 * (-3), sender:getContentSize().height/2)
+   sender:addChild(showAnswerStateBack)
 
-   local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
-   sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
-   showAnswerStateBack:addChild(sign)
+--   local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
+--   sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
+--   showAnswerStateBack:addChild(sign)
+--
+--   local right_wordname = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",60)
+--   right_wordname:setColor(cc.c4b(130,186,47,255))
+--   right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
+--   right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
+--   showAnswerStateBack:addChild(right_wordname)
 
-   local right_wordname = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",60)
-   right_wordname:setColor(cc.c4b(130,186,47,255))
-   right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
-   right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
-   showAnswerStateBack:addChild(right_wordname)
-
-   local action1 = cc.MoveTo:create(0.5,cc.p(backGround:getContentSize().width / 2, 768))
-   showAnswerStateBack:runAction(action1)
+    local action = cc.MoveTo:create(0.5,cc.p(sender:getContentSize().width *0.8, sender:getContentSize().height/2))
+    showAnswerStateBack:runAction(action)
 end
 
 
-function ShowAnswerFalseBack(backGround)
-    local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_wrong_back.png")
-    showAnswerStateBack:setPosition(backGround:getContentSize().width/2 *3, 768)
-    backGround:addChild(showAnswerStateBack)
+function ShowAnswerFalseBack(sender)
+    local showAnswerStateBack = cc.Sprite:create("image/newstudy/wrongtip.png")
+    showAnswerStateBack:setPosition(sender:getContentSize().width/2 *3, sender:getContentSize().height/2 )
+    sender:addChild(showAnswerStateBack)
 
-    local action = cc.MoveTo:create(0.5,cc.p(backGround:getContentSize().width/2, 768))
+    local action = cc.MoveTo:create(0.5,cc.p(sender:getContentSize().width *0.8, sender:getContentSize().height/2))
     showAnswerStateBack:runAction(action)
 
-    local sign = cc.Sprite:create("image/testscene/testscene_wrong_x.png")
-    sign:setPosition(showAnswerStateBack:getContentSize().width*0.1, showAnswerStateBack:getContentSize().height*0.45)
-    showAnswerStateBack:addChild(sign)
-
-    local right_wordname = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",60)
-    right_wordname:setColor(cc.c4b(202,66,64,255))
-    right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
-    right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
-    showAnswerStateBack:addChild(right_wordname)	
+--    local sign = cc.Sprite:create("image/testscene/testscene_wrong_x.png")
+--    sign:setPosition(showAnswerStateBack:getContentSize().width*0.1, showAnswerStateBack:getContentSize().height*0.45)
+--    showAnswerStateBack:addChild(sign)
+--
+--    local right_wordname = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordName,"",60)
+--    right_wordname:setColor(cc.c4b(202,66,64,255))
+--    right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
+--    right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
+--    showAnswerStateBack:addChild(right_wordname)	
 end
 
 function AddPauseButton(backGround)
     local pause_button = ccui.Button:create("image/newstudy/pause_button_begin.png","image/newstudy/pause_button_end.png","")
-    pause_button:setPosition(s_LEFT_X + 150, s_DESIGN_HEIGHT - 25 )
+    pause_button:setPosition(s_LEFT_X + 150, s_DESIGN_HEIGHT  )
     pause_button:ignoreAnchorPointForPosition(false)
     pause_button:setAnchorPoint(0,1)
     backGround:addChild(pause_button) 	
 end
+
+
 
