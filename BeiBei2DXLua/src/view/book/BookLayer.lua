@@ -69,6 +69,7 @@ function BookLayer.create()
     
     local name_array = {'CEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
     local full_name_array = {'NCEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
+    local chinese_name_array = {'高考','四级','六级','雅思','托福'}
     local func_array = {}
     for i = 1, 5 do
         local click = function(sender, eventType)
@@ -158,7 +159,7 @@ function BookLayer.create()
         smallButton:setPosition(smallBack:getContentSize().width/2,0)
         smallBack:addChild(smallButton)
         
-        local name = cc.Label:createWithSystemFont(full_name_array[i],"",28)
+        local name = cc.Label:createWithSystemFont(chinese_name_array[i],"",28)
         name:setPosition(smallButton:getContentSize().width/2,smallButton:getContentSize().height/2)
         smallButton:addChild(name)
     end
