@@ -90,7 +90,7 @@ static float static_getEffectsVolume()
      
 static void static_setEffectsVolume(float volume)
 {
-    volume = MAX( MIN(volume, 1.0), 0 );
+    volume = MAX( MIN(volume, 10.0), 0 );
     [SimpleAudioEngine sharedEngine].effectsVolume = volume;
 }
 
