@@ -331,5 +331,18 @@ function AddPauseButton(backGround)
     backGround:addChild(pause_button) 	
 end
 
+function FindIndex(word)
+    if word == 0 then
+        return 0
+    else
+        local index
+        table.foreachi(NewStudyLayer_wordList, function(i, v) 
+            if v == word then
+                index = i
+            end                
+        end)  
+        return index
+    end
+end
 
 

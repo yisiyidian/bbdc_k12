@@ -65,6 +65,7 @@ end)
 function NewStudyLayer.create(NewStudyLayer_State)
     local layer = NewStudyLayer.new(NewStudyLayer_State)
     
+--    s_DATABASE_MGR.dropTables()
     s_DATABASE_MGR:initNewStudyLayerSufferTables()
     s_DATABASE_MGR:initNewStudyLayerFamiliarTables()
     s_DATABASE_MGR:initNewStudyLayerUnfamiliarTables()
@@ -106,23 +107,9 @@ function NewStudyLayer.create(NewStudyLayer_State)
             local lastSufferWord = s_DATABASE_MGR:selectLastNewStudyLayerSufferTables()
             print("lastSufferWord is "..lastSufferWord.."over")
 
-            local function FindMax(word)
-                if word == 0 then
-                    return 0
-                else
-                    local index
-                    table.foreachi(NewStudyLayer_wordList, function(i, v) 
-                        if v == word then
-                            index = i
-                        end                
-                    end)  
-                    return index
-                end
-            end
-
-            local lastFamiliarIndex =  FindMax(lastFamiliarWord)
-            local lastUnfamiliarIndex = FindMax(lastUnfamiliarWord)
-            local lastSufferIndex = FindMax(lastSufferWord)
+            local lastFamiliarIndex =  FindIndex(lastFamiliarWord)
+            local lastUnfamiliarIndex = FindIndex(lastUnfamiliarWord)
+            local lastSufferIndex = FindIndex(lastSufferWord)
 
             print("lastFamiliarIndex is "..lastFamiliarIndex.."over")
             print("lastUnfamiliarIndex is "..lastUnfamiliarIndex.."over")
