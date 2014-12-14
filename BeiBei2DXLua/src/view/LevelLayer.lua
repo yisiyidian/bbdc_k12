@@ -488,7 +488,7 @@ function LevelLayer:ctor()
     --self:addChapterIntoListView('chapter5')
     
     self:updateCurrentChapterLayer()
-    self:scrollLevelLayer(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
+    self:scrollLevelLayer(s_CURRENT_USER.currentSelectedChapterKey,s_CURRENT_USER.currentSelectedLevelKey)
     
     -- plot player position
     player = cc.Sprite:create('image/chapter_level/gril_head.png')

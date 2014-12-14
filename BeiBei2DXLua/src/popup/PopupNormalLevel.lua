@@ -83,14 +83,14 @@ function PopupNormalLevel:ctor(levelKey)
     
     --s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,levelKey,1)
     -- plot stars
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     
     --print_lua_table(s_CURRENT_USER.levels)
     --print('chapteKey:'..s_CURRENT_USER.currentChapterKey..','..levelKey)
     self:plotStar(node, levelData.stars)
     
     -- plot word count
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     self.ccbPopupNormalLevel['_wordCount']:setString(levelConfig['word_num'])
     -- run action --
     local action1 = cc.MoveTo:create(0.3, cc.p(0,0))
@@ -127,7 +127,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     s_SCENE.gameLayerState = s_normal_game_state
 
     s_logd('on study button clicked')
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
 --    s_CorePlayManager.newPlayerState = true 
     s_CorePlayManager.initStudyTestState()
@@ -150,7 +150,7 @@ function PopupNormalLevel:onTestButtonClicked(levelKey)
     -- button sound
     playSound(s_sound_buttonEffect)
     
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     if levelData.isPassed == 1 or s_CURRENT_USER.energyCount >= s_normal_level_energy_cost then
         if levelData.isPassed ~= 1 then
 --            s_CURRENT_USER:useEnergys(s_normal_level_energy_cost)
@@ -162,7 +162,7 @@ function PopupNormalLevel:onTestButtonClicked(levelKey)
 --            end)
 
         end
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey,levelKey)
+        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
         s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
         s_CorePlayManager.initStudyTestState()
         s_CorePlayManager.enterTestLayer()
