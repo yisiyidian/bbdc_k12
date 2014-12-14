@@ -224,6 +224,8 @@ function RepeatLevelLayer:plotLevelDecoration(levelKey)
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
             if s_CURRENT_USER.currentLevelKey ~= levelData.levelKey or s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_pass_state then
                 self:plotLevelStar(levelButton, levelData.stars)
+            elseif s_CURRENT_USER.currentLevelKey == levelData.levelKey and s_CURRENT_USER.currentChapterKey ~= self.chapterKey then
+                self:plotLevelStar(levelButton, levelData.stars)
             end 
         end
         if levelConfig['type'] == 1 then
