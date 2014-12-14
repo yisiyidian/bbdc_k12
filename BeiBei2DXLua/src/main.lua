@@ -46,7 +46,7 @@ start = function ()
         s_SERVER.isAppStoreServer = false -- TODO
         s_SERVER.production       = 1
 
-        s_APP_VERSION = 150000
+        s_APP_VERSION = 160000
         s_CONFIG_VERSION = 150000
 
         s_SERVER.appId = LEAN_CLOUD_ID
@@ -59,7 +59,7 @@ start = function ()
         s_SERVER.isAppStoreServer = false
         s_SERVER.production       = 0
 
-        s_APP_VERSION = 150006
+        s_APP_VERSION = 160000
         s_CONFIG_VERSION = 150000 -- do NOT change this
 
         s_SERVER.appId = LEAN_CLOUD_ID_TEST
