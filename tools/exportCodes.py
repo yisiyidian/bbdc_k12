@@ -26,7 +26,7 @@ end
 ''' % (appVersionInfo, appVersionInfo)
     else:
         appVersionInfoLua = appVersionInfoLua + '''
-RELEASE_APP = false
+RELEASE_APP = true
 
 function getAppVersionDebugInfo() return '' end
 '''
