@@ -112,6 +112,16 @@ lua 简明教程: http://coolshell.cn/articles/10739.html
 代码中打印日志请使用全局函数 s_logd
 
 ----------------------------------------------------------------------------------------
+发布或者开发 DEBUG 或者 RELEASE 版本之前需要准备的代码
+
+DEBUG 需要运行  tools/002_exportCodes_debug.comman 生成对应的 lua/objective-c/java 代码
+RELEASE 需要运行  tools/003_exportCodes_release.command 生成对应的 lua/objective-c/java 代码
+
+BeiBei2DXLua/src/AppVersionInfo.lua
+BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/ios/AppVersionInfo.h
+BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/AppVersionInfo.java
+
+----------------------------------------------------------------------------------------
 代码复审
 
 每天有15分钟的代码复审的任务，关于代码复审：http://coolshell.cn/articles/1302.html
