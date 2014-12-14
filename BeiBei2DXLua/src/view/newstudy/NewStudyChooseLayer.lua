@@ -65,10 +65,12 @@ function NewStudyChooseLayer.create()
             case[6] = word_list_table[1] - word_list_table[4]
        end       
        
-        word_meaning_table = {s_WordPool[NewStudyLayer_wordList[word_list_table[1]]].wordMeaningSmall,
+        word_meaning_table = {NewStudyLayer_wordList_wordMeaningSmall,
             s_WordPool[NewStudyLayer_wordList[word_list_table[2]]].wordMeaningSmall,
             s_WordPool[NewStudyLayer_wordList[word_list_table[3]]].wordMeaningSmall,
-            s_WordPool[NewStudyLayer_wordList[word_list_table[4]]].wordMeaningSmall}           
+            s_WordPool[NewStudyLayer_wordList[word_list_table[4]]].wordMeaningSmall}       
+            
+--        print_lua_table(word_meaning_table)    
    else
         word_list_table = {currentIndex_unreview,1,1,1}      
         while  case[1] *  case[2] * case[3] *case[4] * case[5] *case[6] == 0 do
@@ -101,10 +103,11 @@ function NewStudyChooseLayer.create()
             case[6] = word_list_table[1] - word_list_table[4]
        end
 
-        word_meaning_table = {s_WordPool[wrongWordList[word_list_table[1]]].wordMeaningSmall,
+        word_meaning_table = {NewStudyLayer_wordList_wordMeaningSmall,
             s_WordPool[NewStudyLayer_wordList[word_list_table[2]]].wordMeaningSmall,
             s_WordPool[NewStudyLayer_wordList[word_list_table[3]]].wordMeaningSmall,
             s_WordPool[NewStudyLayer_wordList[word_list_table[4]]].wordMeaningSmall,}
+
    end
    
    
@@ -138,57 +141,49 @@ function NewStudyChooseLayer.create()
 
         elseif eventType == ccui.TouchEventType.ended then
             if current_state_judge == 1 then
-                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then
-                
-                    ShowAnswerTrueBack(backGround)
-                    
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                    
-                    s_SCENE:callFuncWithDelay(1,function()
-                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_True)
-                        s_SCENE:replaceGameLayer(newStudyLayer)
-                        
-                        s_SCENE.touchEventBlockLayer.unlockTouch()
-                    end)
-                
-
+                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then                
+                    ShowAnswerTrueBack(sender)
+                    if s_CURRENT_USER.newstudytruelayerMask == 1 then
+                        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                  
+                        s_SCENE:callFuncWithDelay(1,function()
+                            UpdateCurrentWordFromTrue()                     
+                            s_SCENE.touchEventBlockLayer.unlockTouch()
+                        end)
+                    else
+                        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                        s_SCENE:callFuncWithDelay(1,function()
+                            NewStudyLayer_State = NewStudyLayer_State_True
+                            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+                            s_SCENE:replaceGameLayer(newStudyLayer)
+                            s_SCENE.touchEventBlockLayer.unlockTouch()
+                        end)
+                    end
                 else
-                    s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
-                    
-                    ShowAnswerFalseBack(backGround)       
-
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                    
+                    s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)               
+                    ShowAnswerFalseBack(sender)       
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                    
                     s_SCENE:callFuncWithDelay(1,function()
-                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
-                        s_SCENE:replaceGameLayer(newStudyLayer)
-                        
+                        NewStudyLayer_State = NewStudyLayer_State_Wrong
+                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+                        s_SCENE:replaceGameLayer(newStudyLayer)                       
                         s_SCENE.touchEventBlockLayer.unlockTouch()
-                    end)
-                    
+                    end)               
                 end
             else
-                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then
-                
-                    ShowAnswerTrueBack(backGround)
-                    
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                    
+                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then               
+                    ShowAnswerTrueBack(sender)                   
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                  
                     s_SCENE:callFuncWithDelay(1,function()
-                        UpdateCurrentWordFromTrue()
-                        
+                        UpdateCurrentWordFromTrue()                     
                         s_SCENE.touchEventBlockLayer.unlockTouch()
                     end)
-                else
-                
-                    ShowAnswerFalseBack(backGround)
-                    
+                else            
+                    ShowAnswerFalseBack(sender)                    
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
                     s_SCENE:callFuncWithDelay(1,function()
-                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
-                        s_SCENE:replaceGameLayer(newStudyLayer)
-                        
+                        NewStudyLayer_State = NewStudyLayer_State_Wrong
+                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+                        s_SCENE:replaceGameLayer(newStudyLayer)                        
                         s_SCENE.touchEventBlockLayer.unlockTouch()
                     end)
                 end
@@ -270,15 +265,15 @@ function NewStudyChooseLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            NewStudyLayer_State = NewStudyLayer_State_Wrong
             s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State_Wrong)
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
     end
 
-
     local choose_dontknow_button = ccui.Button:create("image/newstudy/orange_begin.png","image/newstudy/orange_end.png","")
---    choose_dontknow_button:setScale9Enabled(true)
+    --    choose_dontknow_button:setScale9Enabled(true)
     choose_dontknow_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * 0.12)
     choose_dontknow_button:ignoreAnchorPointForPosition(false)
     choose_dontknow_button:setAnchorPoint(0.5,0.5)
@@ -291,6 +286,7 @@ function NewStudyChooseLayer.create()
     choose_dontknow_text:ignoreAnchorPointForPosition(false)
     choose_dontknow_text:setAnchorPoint(0.5 ,0.5)
     choose_dontknow_button:addChild(choose_dontknow_text)
+
     
     return layer
 end

@@ -614,9 +614,7 @@ function Manager.insertNewStudyLayerSufferTables(wordName)
                 Manager.insertNewStudyLayerUnfamiliarTables(row.wordName)
                 Manager.insertNewStudyLayerTestTables(row.wordName)
             end
-
-            
-            
+  
             --delete suffer
             local delete = Manager.database:exec(" delete from  DataNewStudyLayerSuffer where lastUpdate = " .. minlastUpdate..";")
             Manager.database:exec(delete) 
@@ -732,6 +730,10 @@ end
 ----NewStudyLayer_unfamiliar------
 
 function Manager.initNewStudyLayerUnfamiliarTables()
+
+--    Manager.database:exec[[
+--                DROP TABLE DataNewStudyLayerUnfamiliar
+--            ]]
     Manager.database:exec[[
         create table if not exists DataNewStudyLayerUnfamiliar(
             userId TEXT,
@@ -828,6 +830,10 @@ end
 ----NewStudyLayer_test_from_suffer----
 
 function Manager.initNewStudyLayerTestTables()
+
+--    Manager.database:exec[[
+--                DROP TABLE DataNewStudyLayerTest
+--            ]]
     Manager.database:exec[[
         create table if not exists DataNewStudyLayerTest(
             userId TEXT,
@@ -896,12 +902,12 @@ function Manager.deleteNewStudyLayerTestTables(wordName)
 
 end
 
-function Manager.selectLastNewStudyLayerTestTables()
+function Manager.selectFormerNewStudyLayerTestTables()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local lasttime
     local i = 1
-    print("selectLastNewStudyLayerTestTables")
+    print("selectFormerNewStudyLayerTestTables")
     for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
         if i == 1 then
             s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
@@ -924,11 +930,18 @@ function Manager.selectLastNewStudyLayerTestTables()
         end
     end
 
-    print("selectLastNewStudyLayerTestTables over")
+    print("selectFormerNewStudyLayerTestTables over")
 end
 
 ----NewStudyLayer_test_from_suffer_over----
-
+----drop_table----
+--    Manager.database:exec[[
+--                DROP TABLE DataNewStudyLayerSuffer
+--                DROP TABLE DataNewStudyLayerFamiliar
+--                DROP TABLE DataNewStudyLayerUnfamiliar
+--                DROP TABLE DataNewStudyLayerTest
+--            ]]
+----drop_table_over----
 ---- UserDefault -----------------------------------------------------------
 
 local is_log_out_key = 'log_out'
