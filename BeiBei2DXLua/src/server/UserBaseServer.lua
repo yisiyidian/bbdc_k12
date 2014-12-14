@@ -235,7 +235,7 @@ function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
         function (api, result, err)
             if result ~= nil then
                 s_CURRENT_USER:parseServerFolloweesData(result.followees) -- who I follow
-                s_CURRENT_USER:parseServerFolloweesData(result.followers) -- who follow me
+                s_CURRENT_USER:parseServerFollowersData(result.followers) -- who follow me
             end
             if onResponse ~= nil then onResponse(api, result, err) end
         end)

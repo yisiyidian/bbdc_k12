@@ -34,6 +34,8 @@ function LevelLayer:levelStateManager()
     --s_CURRENT_USER:initLevels()
     -- check current chapter
     self:updateCurrentChapterLayer()
+    
+
     -- CHECK unlock chapter state
     if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
         local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey)

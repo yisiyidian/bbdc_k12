@@ -1,6 +1,4 @@
 
-RELEASE_APP = false
-
 cc.FileUtils:getInstance():addSearchPath("src")
 cc.FileUtils:getInstance():addSearchPath("res")
 
@@ -28,6 +26,7 @@ end
 local start
 start = function ()
     require("common.global")
+    require("AppVersionInfo")
     initApp(start)
 
     local LEAN_CLOUD_ID_TEST   = "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"

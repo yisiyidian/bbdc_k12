@@ -270,24 +270,28 @@ function DataUser:initChapterLevelAfterLogin()
     self.currentLevelKey = 'level0'
     self.currentSelectedLevelKey = 'level0'
     s_SCENE.levelLayerState = s_normal_level_state
+    
     local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
-    for i, v in ipairs(levelConfig) do
-        local levelData = self:getUserLevelData(v['chapter_key'],v['level_key'])
-        if levelData ~= nil and levelData.isLevelUnlocked == 1 then
-            self.currentChapterKey = v['chapter_key']
-            self.currentSelectedChapterKey = v['chapter_key']
-            self.currentLevelKey = v['level_key']
-            self.currentSeletedLevelKey = v['levelKey']
-        else 
-            break
+    if levelConfig ~= nil then
+        for i, v in ipairs(levelConfig) do
+            local levelData = self:getUserLevelData(v['chapter_key'],v['level_key'])
+            if levelData ~= nil and levelData.isLevelUnlocked == 1 then
+                self.currentChapterKey = v['chapter_key']
+                self.currentSelectedChapterKey = v['chapter_key']
+                self.currentLevelKey = v['level_key']
+                self.currentSeletedLevelKey = v['levelKey']
+            else 
+                break
+            end
         end
     end
---    self.currentLevelKey = 'level0'
---    self.currentSelectedLevelKey = 'level0'
---    self.currentSelectedChapterKey = 'chapter1'
---    self.currentChapterKey = 'chapter1'
+
+--    self.currentLevelKey = 'level39'
+--    self.currentSelectedLevelKey = 'level39'
+--    self.currentSelectedChapterKey = 'chapter3'
+--    self.currentChapterKey = 'chapter3'
 --    s_CURRENT_USER:setUserLevelDataOfUnlocked(self.currentChapterKey,self.currentLevelKey,1)
-    --s_CURRENT_USER:setUserLevelDataOfStars(self.currentChapterKey,self.currentLevelKey,3)
+--    s_CURRENT_USER:setUserLevelDataOfStars(self.currentChapterKey,self.currentLevelKey,3)
  --s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
 end
 

@@ -5,6 +5,8 @@ local SoundMark = class("SoundMark", function()
 end)
 
 function SoundMark.create(wordname, soundmarkus, soundmarken, typeIndex)
+    playWordSound(wordname)
+
     -- system variate
     
     local gap = 115

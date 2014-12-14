@@ -43,12 +43,11 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.WindowManager;
+import c.bb.dc.AppVersionInfo;
 import c.bb.dc.BBNDK;
 
 import com.anysdk.framework.PluginWrapper;
 import com.avos.avoscloud.AVAnalytics;
-import com.avos.avoscloud.AVCloud;
-import com.avos.avoscloud.AVOSCloud;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -75,17 +74,7 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		BBNDK.setup(getApplicationContext(), this);
 		
-		if (BBNDK.nativeIsDebug()) {
-			// test server
-			AVOSCloud.initialize(this, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
-			AVOSCloud.setDebugLogEnabled(true);
-		} else {
-			// server
-			AVOSCloud.initialize(this, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
-		}
-	    // server
-//	    AVOSCloud.initialize(this, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
-//	    AVCloud.setProductionMode(true);
+		AppVersionInfo.initServer(this, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
 		
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);

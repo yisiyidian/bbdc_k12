@@ -33,6 +33,7 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 #include "CXProgressHUD.h"
+#import "AppVersionInfo.h"
 
 @implementation AppController
 
@@ -50,25 +51,7 @@ static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-#ifdef DEBUG
-#if DEBUG_APPSTORE_SERVER == 0
-    [AVOSCloud setApplicationId:LEAN_CLOUD_ID_TEST
-                      clientKey:LEAN_CLOUD_KEY_TEST];
-#else
-    [AVOSCloud setApplicationId:LEAN_CLOUD_ID
-                      clientKey:LEAN_CLOUD_KEY];
-#endif
-    [AVCloud setProductionMode:NO];
-#else
-    [AVOSCloud setApplicationId:LEAN_CLOUD_ID
-                      clientKey:LEAN_CLOUD_KEY];
-    [AVCloud setProductionMode:YES];
-#endif
-    
-//    [AVOSCloud setApplicationId:LEAN_CLOUD_ID
-//                      clientKey:LEAN_CLOUD_KEY];
-//    [AVCloud setProductionMode:YES];
-    
+    INIT_SERVER
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
     cocos2d::Application *app = cocos2d::Application::getInstance();

@@ -83,7 +83,7 @@ function PopupNormalLevel:ctor(levelKey)
     
     --s_CURRENT_USER:setUserLevelDataOfIsPlayed(s_CURRENT_USER.currentChapterKey,levelKey,1)
     -- plot stars
-    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     
     --print_lua_table(s_CURRENT_USER.levels)
     --print('chapteKey:'..s_CURRENT_USER.currentChapterKey..','..levelKey)

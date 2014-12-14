@@ -52,6 +52,8 @@ function CorePlayManager.initStudyTestState()
 end
 
 function CorePlayManager.enterStudyLayer()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
+    
     if s_CURRENT_USER.tutorialStep == s_tutorial_study then
         CorePlayManager.newPlayerState = true
     else
