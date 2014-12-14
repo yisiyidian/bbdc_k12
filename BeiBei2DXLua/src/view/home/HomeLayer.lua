@@ -41,9 +41,6 @@ function HomeLayer.create()
     local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
     local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
 
-    studyWordNum = 1000
-    graspWordNum = 800
-
     local redHint = nil
     -- data end
     
@@ -223,49 +220,32 @@ function HomeLayer.create()
     end
     local book_back_width = book_back:getContentSize().width
 
-    local button_bg = cc.Sprite:create('image/homescene/button_down.png')
+    local button_bg = ccui.Button:create('image/homescene/button_down.png','image/homescene/button_down.png','')
     button_bg:setPosition(book_back_width/2, 120)
     book_back:addChild(button_bg)
 
     local button_today = ccui.Button:create('image/homescene/button_today.png','','')
     button_today:setScale9Enabled(true)
     button_today:setAnchorPoint(1,0.5)
-    button_today:setPosition(button_bg:getContentSize().width/2,button_bg:getContentSize().height / 2)
-    button_bg:addChild(button_today)
+    button_today:setPosition(button_bg:getPositionX(),button_bg:getPositionY())
+    book_back:addChild(button_today)
 
     local label_today = cc.Label:createWithSystemFont("今","",32)
     label_today:setColor(cc.c4b(255,255,255,255))
-    label_today:setPosition(button_bg:getContentSize().width/4,button_bg:getContentSize().height / 2)
-    button_bg:addChild(label_today,2)
+    label_today:setPosition(button_bg:getPositionX() - button_bg:getContentSize().width/4,button_bg:getPositionY())
+    book_back:addChild(label_today,2)
 
     local button_total = ccui.Button:create('image/homescene/button_total.png','','')
     button_total:setScale9Enabled(true)
     button_total:setAnchorPoint(0,0.5)
-    button_total:setPosition(button_bg:getContentSize().width/2,button_bg:getContentSize().height / 2)
-    button_bg:addChild(button_total)
-    button_total:setVisible(false)
+    button_total:setPosition(button_bg:getPositionX(),button_bg:getPositionY())
+    book_back:addChild(button_total)
+    
 
     local label_total = cc.Label:createWithSystemFont("总","",32)
     label_total:setColor(cc.c4b(255,255,255,255))
-    label_total:setPosition(button_bg:getContentSize().width*3/4,button_bg:getContentSize().height / 2)
-    button_bg:addChild(label_total,2)
-
-    local function onToday(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-            sender:setVisible(false)
-            button_total:setVisible(true)
-        end
-    end
-
-    local function onTotal(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-            sender:setVisible(false)
-            button_today:setVisible(true)
-        end
-    end
-
-    button_today:addTouchEventListener(onToday)
-    button_total:addTouchEventListener(onTotal)
+    label_total:setPosition(button_bg:getPositionX() + button_bg:getContentSize().width/4,button_bg:getPositionY())
+    book_back:addChild(label_total,2)
 
     local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",32)
     label1:setColor(cc.c4b(240,221,135,255))
@@ -291,6 +271,39 @@ function HomeLayer.create()
     label:setColor(cc.c4b(0,0,0,255))
     label:setPosition(bigWidth/2, 280)
     backColor:addChild(label)
+
+    if s_CURRENT_USER.clientData[1] == 0 then
+        button_total:setVisible(false)
+    else
+        button_today:setVisible(false)
+        local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
+        label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
+        label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+    end
+
+    local function onToday(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            sender:setVisible(false)
+            button_total:setVisible(true)
+            local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
+            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            s_CURRENT_USER.clientData[1] = 1
+        end
+    end
+
+    local function onTotal(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            sender:setVisible(false)
+            button_today:setVisible(true)
+            label3:setString("学习"..studyWordNum.."词")
+            label4:setString("掌握"..graspWordNum.."词")
+            s_CURRENT_USER.clientData[1] = 0
+        end
+    end
+
+    button_today:addTouchEventListener(onToday)
+    button_total:addTouchEventListener(onTotal)
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
@@ -301,10 +314,29 @@ function HomeLayer.create()
             hideProgressHUD()
         end
     end
+    local ACCUMULATING_WORD = 1
+    local LEARNING_WORD = 2
+    local REVIEWING_WORD = 3
+    local COMPLETE_MISSION = 4
+    local state = ACCUMULATING_WORD
 
-    local button_play = ccui.Button:create("image/homescene/main_play.png","image/homescene/main_play.png","")
-    button_play:setTitleText("继续闯关   》")
-    button_play:setTitleFontSize(30)
+    local playImg = 'image/homescene/bigbutton.png'
+    if state == COMPLETE_MISSION then
+        playImg = 'image/homescene/buttonfinish.png'
+    end
+    local state_str
+    if state == ACCUMULATING_WORD then
+        state_str = '积累生词'
+    elseif state == LEARNING_WORD then
+        state_str = '学习生词'
+    elseif state == REVIEWING_WORD then
+        state_str = '复习旧词'
+    else
+        state_str = '  完成  '
+    end
+
+    local button_play = ccui.Button:create(playImg,'','')
+    button_play:setScale9Enabled(true)
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
@@ -315,6 +347,18 @@ function HomeLayer.create()
         button_play:addChild(finger,10)
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
     end
+
+    local state_label = cc.Label:createWithSystemFont('当前状态：','',24)
+    state_label:setPosition(button_play:getContentSize().width * 0.25,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label)
+
+    local state_label2 = cc.Label:createWithSystemFont(state_str,'',40)
+    state_label2:setPosition(button_play:getContentSize().width * 0.6,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label2)
+
+    local state_label3 = cc.Label:createWithSystemFont('>>','',24)
+    state_label3:setPosition(button_play:getContentSize().width * 0.9,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label3)   
 
     local button_data
     local isDataShow = false

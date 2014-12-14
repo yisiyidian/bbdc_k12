@@ -26,7 +26,6 @@ function Pause:ctor()
     -- Pause actions
     local director = cc.Director:getInstance()
     self.targets = director:getActionManager():pauseAllRunningActions()
-    s_logd(#self.targets)
     
     -- local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     -- back:setPosition(0, 0)
