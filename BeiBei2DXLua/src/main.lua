@@ -1,6 +1,4 @@
 
-RELEASE_APP = true
-
 require "Cocos2d"
 
 -- cclog
@@ -25,6 +23,7 @@ end
 local start
 start = function ()
     require("common.global")
+    require("AppVersionInfo")
     initApp(start)
 
     local LEAN_CLOUD_ID_TEST   = "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"

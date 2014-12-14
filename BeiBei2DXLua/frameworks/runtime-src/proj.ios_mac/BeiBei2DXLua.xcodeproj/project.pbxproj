@@ -413,6 +413,7 @@
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		B80E072819F10314006EDBCF /* CXMailFeedBack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXMailFeedBack.mm; sourceTree = "<group>"; };
 		B80E072C19F106A2006EDBCF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		B8246CAE1A3D41D90087AB9B /* AppVersionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionInfo.h; sourceTree = "<group>"; };
 		B85146A719E4EBD50027372E /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		B85146B119E4EC690027372E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		B85146B319E4EC740027372E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
@@ -699,6 +700,7 @@
 		5023810617EBBCAC00990C9B /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				B8246CAE1A3D41D90087AB9B /* AppVersionInfo.h */,
 				B887DBC119DF8EEA00A04441 /* Images.xcassets */,
 				5023810717EBBCAC00990C9B /* AppController.h */,
 				5023810817EBBCAC00990C9B /* AppController.mm */,

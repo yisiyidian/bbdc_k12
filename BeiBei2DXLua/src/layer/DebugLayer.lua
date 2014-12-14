@@ -21,13 +21,7 @@ function DebugLayer.create()
     layer:addChild(layer.debugInfo2)
 
     layer:scheduleUpdateWithPriorityLua(function (dt)
-        local str = tostring(RELEASE_APP)
-        if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username end
-        if AgentManager ~= nil then
-            str = str .. '. channel:' .. AgentManager:getInstance():getChannelId() .. ',V:' .. s_APP_VERSION .. ', name:'
-        else
-            str = str .. '. channel:UN' .. ',V:' .. s_APP_VERSION .. ', name:'
-        end
+        local str = getAppVersionDebugInfo()
         layer.debugInfo:setString(str)
         layer.debugInfo2:setString(str)
     end, 0)
