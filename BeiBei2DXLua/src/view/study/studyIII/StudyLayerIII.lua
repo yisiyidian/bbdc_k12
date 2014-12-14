@@ -144,6 +144,7 @@ function StudyLayerIII.create()
     local success = function()
         s_SCENE.touchEventBlockLayer.lockTouch()
         progressBar.rightStyle()
+        playWordSound(wordName)
 
         local changeLayer = function()
             if s_CorePlayManager.replayWrongWordState then
