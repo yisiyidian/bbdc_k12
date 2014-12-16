@@ -24,6 +24,7 @@ function DataUser:ctor()
 
     self.appVersion                        = s_APP_VERSION 
     self.tutorialStep                      = 0 
+    self.tutorialSmallStep                 = 0 
     self.isSoundAm                         = 1 
     self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
@@ -107,7 +108,11 @@ end
 
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
-    AnalyticsTutorial(step)
+    self:updateDataToServer()
+end
+
+function DataUser:setTutorialSmallStep(step)
+    self.tutorialSmallStep = step
     self:updateDataToServer()
 end
 
