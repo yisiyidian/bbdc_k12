@@ -48,9 +48,7 @@ function PersonalInfo:ctor()
     pageView:setTouchEnabled(true)
     pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT * 1.0))
     pageView:setPosition(s_LEFT_X,0)
-    pageView:setLayoutType(ccui.LayoutType.VERTICAL)
-    print("pageView getLayoutType is :", pageView:getLayoutType())
-    
+    pageView:setVertical(true)    
     
     for i = 1 , 4 do
         local layout = ccui.Layout:create()

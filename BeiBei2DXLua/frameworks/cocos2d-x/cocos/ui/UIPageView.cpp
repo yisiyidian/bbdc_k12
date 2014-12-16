@@ -49,6 +49,7 @@ _pageViewEventSelector(nullptr),
 _eventCallback(nullptr)
 {
     this->setTouchEnabled(true);
+    isVertical = false;
 }
 
 PageView::~PageView()
@@ -442,18 +443,36 @@ void PageView::handleMoveLogic(Touch *touch)
 {
     Vec2 touchPoint = touch->getLocation();
     
-    float offset = 0.0;
-    offset = touchPoint.x - touch->getPreviousLocation().x;
+    if (isVertical) {
+        
+        float offset = 0.0;
+        offset = touchPoint.y-touch->getPreviousLocation().y;
     
-    if (offset < 0)
-    {
-        _touchMoveDirection = TouchDirection::LEFT;
-    }
-    else if (offset > 0)
-    {
+        if (offset < 0)
+        {
+            _touchMoveDirection = TouchDirection::LEFT;
+        }
+        else if (offset > 0)
+        {
         _touchMoveDirection = TouchDirection::RIGHT;
+        }
+    
+        scrollPages(offset);
+    }else{
+        
+        float offset = 0.0;
+        offset = touchPoint.x - touch->getPreviousLocation().x;
+        
+        if (offset < 0)
+        {
+            _touchMoveDirection = TouchDirection::LEFT;
+        }
+        else if (offset > 0)
+        {
+            _touchMoveDirection = TouchDirection::RIGHT;
+        }
+        scrollPages(offset);
     }
-    scrollPages(offset);
 }
     
 void PageView::setCustomScrollThreshold(float threshold)
@@ -643,7 +662,11 @@ void PageView::copySpecialProperties(Widget *widget)
         _customScrollThreshold = pageView->_customScrollThreshold;
     }
 }
-
+ 
+void PageView::setVertical(bool v){
+    isVertical = v;
+}
+    
 }
 
 NS_CC_END

@@ -190,11 +190,13 @@ function StudyLayer.create()
     local success = function()
         s_SCENE.touchEventBlockLayer.lockTouch()
         progressBar.rightStyle()
-    
+        playWordSound(wordName)
+        
         local changeLayer = function()
             if s_CorePlayManager.replayWrongWordState then
                 if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wrongWordList then
                     s_CorePlayManager.currentWordIndex = s_CorePlayManager.currentWordIndex + 1
+
                     s_CorePlayManager.enterStudyLayer()
                 else
                     s_SCENE.touchEventBlockLayer.unlockTouch()
