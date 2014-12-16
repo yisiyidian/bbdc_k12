@@ -178,7 +178,8 @@ function StudyLayerII.create()
     local success = function()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         progressBar.rightStyle()
-
+        playWordSound(wordName)
+        
         local changeLayer = function()
             if s_CorePlayManager.replayWrongWordState then
                 if s_CorePlayManager.currentWordIndex < #s_CorePlayManager.wrongWordList then
