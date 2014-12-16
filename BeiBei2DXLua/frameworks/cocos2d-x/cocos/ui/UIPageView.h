@@ -46,6 +46,7 @@ class CC_GUI_DLL PageView : public Layout
     DECLARE_CLASS_GUI_INFO
     
 public:
+    
     enum class EventType
     {
         TURNING
@@ -185,6 +186,7 @@ public:
      *@brief Query whether we are using user defined scroll page threshold or not
      */
     bool isUsingCustomScrollThreshold()const;
+    void setVertical(bool v);
 
 CC_CONSTRUCTOR_ACCESS:
     virtual bool init() override;
@@ -224,6 +226,7 @@ protected:
     bool _isAutoScrolling;
     float _autoScrollDistance;
     float _autoScrollSpeed;
+    bool isVertical;
     AutoScrollDirection _autoScrollDirection;
     
     ssize_t _curPageIdx;
