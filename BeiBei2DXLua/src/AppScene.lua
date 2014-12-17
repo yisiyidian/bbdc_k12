@@ -197,6 +197,12 @@ function AppScene:startLoadingData(hasAccount, username, password)
     end
 
     local function onResponse(u, e, code)
+
+        if not hasAccount then 
+            AnalyticsTutorial(0)
+            AnalyticsSmallTutorial(0)
+        end
+
         if e ~= nil then                  
             s_TIPS_LAYER:showSmall(e)
             hideProgressHUD()
@@ -206,6 +212,7 @@ function AppScene:startLoadingData(hasAccount, username, password)
             -- s_SCENE:getDailyCheckIn()
             s_SCENE:getConfigs(false)
         end
+        
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
