@@ -45,6 +45,8 @@ function FriendSearch:ctor()
     textField:setPosition(cc.p(inputBack:getContentSize().width / 2.0, inputBack:getContentSize().height / 2.0))
     textField:addEventListener(textFieldEvent) 
     inputBack:addChild(textField) 
+    textField:setTouchSize(inputBack:getContentSize())
+    textField:setTouchAreaEnabled(true)
     
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then

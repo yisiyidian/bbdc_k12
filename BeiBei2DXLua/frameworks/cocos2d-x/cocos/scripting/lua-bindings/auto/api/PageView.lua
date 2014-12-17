@@ -11,6 +11,12 @@
 -- @return float#float ret (return value: float)
         
 --------------------------------
+-- 
+-- @function [parent=#PageView] setVertical 
+-- @param self
+-- @param #bool v
+        
+--------------------------------
 -- Gets current page index.<br>
 -- return current page index.
 -- @function [parent=#PageView] getCurPageIndex 

@@ -52,8 +52,8 @@ function InputNode.create(type)
     end
 
     main.textField = ccui.TextField:create()
-   main.textField:setTouchSize(backImage:getContentSize())
-   main.textField:setTouchAreaEnabled(true)
+    main.textField:setTouchSize(backImage:getContentSize())
+    main.textField:setTouchAreaEnabled(true)
     main.textField:setFontSize(30)
     main.textField:setMaxLengthEnabled(true)
     main.textField:setColor(cc.c4b(0,0,0,255))
