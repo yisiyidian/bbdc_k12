@@ -33,7 +33,24 @@ s_tutorial_study = 3
 s_tutorial_review_boss = 4
 s_tutorial_summary_boss = 5
 s_tutorial_complete = 6
+-- define small tutorial state
+s_smalltutorial_book_select = 0
+s_smalltutorial_home = 1
+s_smalltutorial_level_select = 2
+s_smalltutorial_studyRepeat1_1 = 3
+s_smalltutorial_studyRepeat1_2 = 4
+s_smalltutorial_studyRepeat1_3 = 5
+s_smalltutorial_studyRepeat2_1 = 6
+s_smalltutorial_studyRepeat2_2 = 7
+s_smalltutorial_studyRepeat2_3 = 8
+s_smalltutorial_studyRepeat3_1 = 9
+s_smalltutorial_studyRepeat3_2 = 10
+s_smalltutorial_studyRepeat3_3 = 11
+s_smalltutorial_review_boss = 12
+s_smalltutorial_summary_boss = 13
+s_smalltutorial_complete = 14
 
+-- define review boss tutorial
 
 local AppScene = class("AppScene", function()
     return cc.Scene:create()

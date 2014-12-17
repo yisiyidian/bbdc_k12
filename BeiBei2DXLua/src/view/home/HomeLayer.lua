@@ -264,6 +264,7 @@ function HomeLayer.create()
         finger:setPosition(button_play:getContentSize().width/2+20,-30)
         button_play:addChild(finger,10)
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_home+1)
     end
 
     local button_data

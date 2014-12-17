@@ -142,6 +142,7 @@ function BookLayer.create()
 --                finger:setPosition(50,0)
 --                smallBack:addChild(finger,10)
                 s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
             end
         end
         if i%2 == 0 then

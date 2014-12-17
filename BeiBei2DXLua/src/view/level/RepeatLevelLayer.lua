@@ -238,7 +238,7 @@ function RepeatLevelLayer:plotLevelDecoration(levelKey)
             summaryboss:addAnimation(0, 'jianxiao', true)
             summaryboss:setScale(0.7)
             levelButton:addChild(summaryboss, 3)
-        end
+        end 
     end
 end
 
