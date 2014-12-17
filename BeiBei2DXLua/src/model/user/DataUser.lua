@@ -109,11 +109,13 @@ end
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
     self:updateDataToServer()
+    AnalyticsTutorial(step)
 end
 
 function DataUser:setTutorialSmallStep(step)
     self.tutorialSmallStep = step
     self:updateDataToServer()
+    AnalyticsSmallTutorial(step)
 end
 
 -- who I follow

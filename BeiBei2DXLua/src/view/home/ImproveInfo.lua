@@ -108,15 +108,19 @@ showLogin = function()
             
             
             local updateUserNameAndPassword = function ()
-                s_UserBaseServer.updateUsernameAndPassword(username.textField:getStringValue(), password.textField:getStringValue(), 
-                function(username, password, errordescription, errorcode )                        
+                s_UserBaseServer.updateUsernameAndPassword(
+                    username.textField:getStringValue(), 
+                    password.textField:getStringValue(), 
+                    function(username, password, errordescription, errorcode )  
+                        AnalyticsAccountBind()                      
                         if errordescription then                  
                             s_TIPS_LAYER:showSmall(errordescription)
                         else        
                             main.close()                    
                         end     
                         hideProgressHUD()
-                end)
+                    end
+                )
             end
 
             showProgressHUD()

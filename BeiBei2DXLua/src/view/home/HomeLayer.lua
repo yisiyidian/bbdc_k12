@@ -96,6 +96,8 @@ function HomeLayer.create()
    
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            AnalyticsFriend()
+
             -- button sound
             playSound(s_sound_buttonEffect)
             
@@ -244,6 +246,8 @@ function HomeLayer.create()
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
+            AnalyticsEnterLevelLayer()
+            
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
@@ -271,6 +275,8 @@ function HomeLayer.create()
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
+            AnalyticsDataCenter()
+
             -- button sound
             playSound(s_sound_buttonEffect)
             
@@ -354,6 +360,7 @@ function HomeLayer.create()
             if eventType == ccui.TouchEventType.ended then
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
+                    AnalyticsChangeBook()
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
                     local alter = AlterI.create("用户反馈")
@@ -375,7 +382,7 @@ function HomeLayer.create()
                     end
                 elseif label_name[i] == "登出游戏" then
                     -- logout
-                    AnalyticsLogOut(s_CURRENT_USER.objectId)
+                    AnalyticsLogOut()
                     cx.CXAvos:getInstance():logOut()
                     s_DATABASE_MGR.setLogOut(true)
                     s_DATABASE_MGR.close()
@@ -425,6 +432,8 @@ function HomeLayer.create()
     local start_x = nil
     local onTouchBegan = function(touch, event)
         if has_study and viewIndex == 1 then
+            AnalyticsLib()
+
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
 

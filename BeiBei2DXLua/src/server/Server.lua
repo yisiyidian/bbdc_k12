@@ -123,6 +123,11 @@ function Server.requestFunction(api, parameters, onSucceed, onFailed)
     end
 end
 
+-- 计数器
+function Server.increment(key, userId)
+    Server.requestFunction('increment', {['className']='DataCounter', ['key']=key, ['userId']=userId}, nil, nil)
+end
+
 -- return {followers: [粉丝列表], followees: [关注用户列表]}
 -- TODO: status
 

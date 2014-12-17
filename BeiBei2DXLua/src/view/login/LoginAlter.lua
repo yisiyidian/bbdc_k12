@@ -286,6 +286,7 @@ showRegister = function()
             end
             s_CURRENT_USER.isGuest = 0
             s_SCENE:signUp(username.textField:getStringValue(), password.textField:getStringValue())
+            AnalyticsSignUp_Normal()
         end
     end
 

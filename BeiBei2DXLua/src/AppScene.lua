@@ -59,6 +59,8 @@ end)
 function AppScene.create()
     local scene = AppScene.new()
 
+    scene.currentGameLayerName = 'unknown'
+
     scene.rootLayer = cc.Layer:create()
     scene.rootLayer:setPosition(s_DESIGN_OFFSET_WIDTH, 0)
     scene:addChild(scene.rootLayer)
@@ -127,6 +129,12 @@ end
 function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
+
+    if newLayer.class ~= nil and newLayer.class.__cname ~= nil then 
+        self.currentGameLayerName = newLayer.class.__cname
+    else
+        self.currentGameLayerName = 'unknown'
+    end
 end
 
 function AppScene:popup(popupNode)
@@ -447,6 +455,10 @@ function AppScene:onUserServerDatasCompleted()
         end)
 
     end)
+end
+
+function applicationDidEnterBackgroundLua()
+    Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end
 
 return AppScene

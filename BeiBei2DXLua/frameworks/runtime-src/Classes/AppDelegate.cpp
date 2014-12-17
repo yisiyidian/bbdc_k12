@@ -94,6 +94,10 @@ bool AppDelegate::applicationDidFinishLaunching()
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
 void AppDelegate::applicationDidEnterBackground()
 {
+    auto engine = LuaEngine::getInstance();
+    engine->executeScriptFile("AppScene.lua");
+    engine->executeGlobalFunction("applicationDidEnterBackgroundLua");
+    
     Director::getInstance()->stopAnimation();
 
     SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
