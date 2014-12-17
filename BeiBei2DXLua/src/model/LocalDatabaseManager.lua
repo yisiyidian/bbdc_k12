@@ -331,6 +331,8 @@ function Manager.insertTable_DataWordProciency(wordName, wordProciency)
         print("word exists")
     end
     Manager.showTable_DataWordProciency()
+
+    s_UserBaseServer.saveWordProciencyOfCurrentUser(book, wordName, wordProciency, nil, nil)
 end
 
 function Manager.showTable_DataWordProciency()
