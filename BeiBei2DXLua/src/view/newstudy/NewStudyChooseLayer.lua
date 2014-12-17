@@ -15,7 +15,7 @@ end)
 
 function NewStudyChooseLayer.create()
 
-
+    NewStudyLayer_wordList = s_CURRENT_USER:getUserBookWord()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
@@ -42,18 +42,26 @@ function NewStudyChooseLayer.create()
        while case[1] *  case[2] * case[3] *case[4] * case[5] *case[6] == 0 do
 
             word_list_table = {currentIndex_unjudge,1,1,1}  
+            
+            local lastFamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerFamiliarTables()
+            local lastUnfamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerUnfamiliarTables()
+            local lastSufferWord = s_DATABASE_MGR:selectLastNewStudyLayerSufferTables()
+
+            local lastFamiliarIndex =  FindIndex(lastFamiliarWord)
+            local lastUnfamiliarIndex = FindIndex(lastUnfamiliarWord)
+            local lastSufferIndex = FindIndex(lastSufferWord)
              
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+            local number = tostring(os.time() * i * (lastFamiliarIndex + 1) * (lastUnfamiliarIndex + 1) * (lastSufferIndex + 1))
             math.randomseed(number)  
             word_list_table[2] = math.random(1,table.getn(NewStudyLayer_wordList))
             i = i + 1
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+            local number = tostring(os.time() * i * (lastFamiliarIndex + 1) * (lastUnfamiliarIndex + 1) * (lastSufferIndex + 1))
 
             math.randomseed(number)  
             word_list_table[3] = math.random(1,table.getn(NewStudyLayer_wordList))
             i = i + 1
 
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+            local number = tostring(os.time()  * i * (lastFamiliarIndex + 1) * (lastUnfamiliarIndex + 1) * (lastSufferIndex + 1))
             math.randomseed(number)  
             word_list_table[4] = math.random(1,table.getn(NewStudyLayer_wordList))
 
@@ -76,26 +84,28 @@ function NewStudyChooseLayer.create()
 
         local testIndex =  FindIndex(testTableIsNil)
 
-        word_list_table = {currentIndex_unreview,1,1,1}      
+        word_list_table = {testIndex,1,1,1}      
         while  case[1] *  case[2] * case[3] *case[4] * case[5] *case[6] == 0 do
             
-            word_list_table = {table.foreachi(NewStudyLayer_wordList, function(i, v) 
-                if s_WordPool[wrongWordList[currentIndex_unreview]].wordMeaningSmall == s_WordPool[NewStudyLayer_wordList[i]].wordMeaningSmall then
-                    return i
-                end 
-            end) ,1,1,1}   
+--            word_list_table = {table.foreachi(NewStudyLayer_wordList, function(i, v) 
+--                print("s_WordPool[NewStudyLayer_wordList_currentWord].wordMeaningSmall is "..s_WordPool[NewStudyLayer_wordList_currentWord].wordMeaningSmall)
+--                print("s_WordPool[NewStudyLayer_wordList[i]].wordMeaningSmall is "..s_WordPool[NewStudyLayer_wordList[i]].wordMeaningSmall )
+--                if s_WordPool[NewStudyLayer_wordList_currentWord].wordMeaningSmall == s_WordPool[NewStudyLayer_wordList[i]].wordMeaningSmall then
+--                    return i
+--                end 
+--            end) ,1,1,1}   
 
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+            local number = tostring(os.time()  * (testIndex + 1) * i)
             math.randomseed(number)  
             word_list_table[2] = math.random(1,table.getn(NewStudyLayer_wordList))
             i = i + 1
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+            local number = tostring(os.time() * (testIndex + 2) * i)
 
             math.randomseed(number)  
             word_list_table[3] = math.random(1,table.getn(NewStudyLayer_wordList))
             i = i + 1
 
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
+            local number = tostring(os.time() * (testIndex + 3) * i)
             math.randomseed(number)  
             word_list_table[4] = math.random(1,table.getn(NewStudyLayer_wordList))
 
@@ -138,6 +148,8 @@ function NewStudyChooseLayer.create()
     illustrate_know:setAnchorPoint(0.5 ,0.5)
     backGround:addChild(illustrate_know)
     
+    FindWord()
+    
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
@@ -163,7 +175,8 @@ function NewStudyChooseLayer.create()
                         end)
                     end
                 else
-                    s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)               
+                    s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)   
+                    s_DATABASE_MGR.insertNewStudyLayerGroupTables(NewStudyLayer_wordList_wordName)            
                     ShowAnswerFalseBack(sender)       
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                    
                     s_SCENE:callFuncWithDelay(1,function()
@@ -271,6 +284,7 @@ function NewStudyChooseLayer.create()
         elseif eventType == ccui.TouchEventType.ended then
             NewStudyLayer_State = NewStudyLayer_State_Wrong
             s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
+            s_DATABASE_MGR.insertNewStudyLayerGroupTables(NewStudyLayer_wordList_wordName)
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end

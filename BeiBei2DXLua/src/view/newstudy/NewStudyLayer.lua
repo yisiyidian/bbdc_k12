@@ -65,11 +65,11 @@ end)
 function NewStudyLayer.create(NewStudyLayer_State)
     local layer = NewStudyLayer.new(NewStudyLayer_State)
     
---    s_DATABASE_MGR.dropTables()
     s_DATABASE_MGR:initNewStudyLayerSufferTables()
     s_DATABASE_MGR:initNewStudyLayerFamiliarTables()
     s_DATABASE_MGR:initNewStudyLayerUnfamiliarTables()
     s_DATABASE_MGR:initNewStudyLayerTestTables()
+    s_DATABASE_MGR:initNewStudyLayerGroupTables()
     
     NewStudyLayer_wordList = s_CURRENT_USER:getUserBookWord()
 --    print_lua_table(NewStudyLayer_wordList)
@@ -91,56 +91,72 @@ function NewStudyLayer.create(NewStudyLayer_State)
 --        NewStudyLayer_wordList_sentenceEn            =   NewStudyLayer_wordList_currentWord.sentenceEn
 --        NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
 --    end
-
-    local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
-
-    if testTableIsNil == 0 then
-        if NewStudyLayer_State == 1 then
-            -- test table = nil
-
-            local lastFamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerFamiliarTables()
-            print("lastFamiliarWord is "..lastFamiliarWord.."over")
-
-            local lastUnfamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerUnfamiliarTables()
-            print("lastUnfamiliarWord is "..lastUnfamiliarWord.."over")
-
-            local lastSufferWord = s_DATABASE_MGR:selectLastNewStudyLayerSufferTables()
-            print("lastSufferWord is "..lastSufferWord.."over")
-
-            local lastFamiliarIndex =  FindIndex(lastFamiliarWord)
-            local lastUnfamiliarIndex = FindIndex(lastUnfamiliarWord)
-            local lastSufferIndex = FindIndex(lastSufferWord)
-
-            print("lastFamiliarIndex is "..lastFamiliarIndex.."over")
-            print("lastUnfamiliarIndex is "..lastUnfamiliarIndex.."over")
-            print("lastSufferIndex is "..lastSufferIndex.."over")
-
-            local lastIndex = lastFamiliarIndex
-
-            if lastIndex < lastUnfamiliarIndex then
-                lastIndex = lastUnfamiliarIndex
-            end
-
-            if lastIndex < lastSufferIndex then
-                lastIndex = lastSufferIndex
-            end
-
-            print("lastIndex is "..lastIndex)
-
-            local nowIndex = lastIndex + 1
-            currentIndex_unjudge = nowIndex
-            NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[nowIndex]]
-        end
-
-    else
+    FindWord()
     
-        NewStudyLayer_wordList_currentWord           =   s_WordPool[testTableIsNil]
---        NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
-    end
-
-    if NewStudyLayer_wordList_currentWord ~= nil then
-        UpdateCurrentWordContent()
-    end
+--    local testunfamiliar = s_DATABASE_MGR.selectLastNewStudyLayerUnfamiliarTables()
+--    local table_testunfamiliar = {}
+--    table.insert(table_testunfamiliar,split(testunfamiliar,'|'))
+--    print("testunfamiliar is "..testunfamiliar)
+--    print_lua_table(table_testunfamiliar)
+    
+--    local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
+--    print("testTableIsNil is "..testTableIsNil)
+--
+--    if testTableIsNil == 0 then
+--        if NewStudyLayer_State == 1 then
+--            -- test table = nil
+--
+--            local lastFamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerFamiliarTables()
+--            print("lastFamiliarWord is "..lastFamiliarWord.."over")
+--
+--            local lastUnfamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerUnfamiliarTables()
+--            print("lastUnfamiliarWord is "..lastUnfamiliarWord.."over")
+--
+--            local lastSufferWord = s_DATABASE_MGR:selectLastNewStudyLayerSufferTables()
+--            print("lastSufferWord is "..lastSufferWord.."over")
+--
+--            local lastFamiliarIndex =  FindIndex(lastFamiliarWord)
+--            local lastUnfamiliarIndex = FindIndex(lastUnfamiliarWord)
+--            local lastSufferIndex = FindIndex(lastSufferWord)
+--
+--            print("lastFamiliarIndex is "..lastFamiliarIndex.."over")
+--            print("lastUnfamiliarIndex is "..lastUnfamiliarIndex.."over")
+--            print("lastSufferIndex is "..lastSufferIndex.."over")
+--
+--            local lastIndex = lastFamiliarIndex
+--
+--            if lastIndex < lastUnfamiliarIndex then
+--                lastIndex = lastUnfamiliarIndex
+--            end
+--
+--            if lastIndex < lastSufferIndex then
+--                lastIndex = lastSufferIndex
+--            end
+--
+--            print("lastIndex is "..lastIndex)
+--
+--            local nowIndex = lastIndex + 1
+--            currentIndex_unjudge = nowIndex
+--            NewStudyLayer_wordList_currentWord     =   s_WordPool[NewStudyLayer_wordList[nowIndex]]
+--
+--        end
+--
+--    else
+--        if NewStudyLayer_State == 1 then
+--            --update current_state_judge = study
+--            current_state_judge = 0
+--            local formerIndex = FindIndex(testTableIsNil)
+--            print("formerIndex is "..formerIndex.." over")
+--            local nowIndex = formerIndex
+--            NewStudyLayer_wordList_currentWord     =   s_WordPool[NewStudyLayer_wordList[nowIndex]]
+--
+--            --        NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
+--        end
+--    end
+--
+--    if NewStudyLayer_wordList_currentWord ~= nil then
+--        UpdateCurrentWordContent()
+--    end
 
     
     -- fake data, you can add if not enough

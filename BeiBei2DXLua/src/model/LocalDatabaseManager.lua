@@ -560,6 +560,8 @@ function Manager.initNewStudyLayerSufferTables()
             lastUpdate TEXT
         );
     ]]    
+    
+--    print("initNewStudyLayerSufferTables over")
 end
 
 function Manager.insertNewStudyLayerSufferTables(wordName)
@@ -569,12 +571,12 @@ function Manager.insertNewStudyLayerSufferTables(wordName)
 
     local query = "INSERT INTO DataNewStudyLayerSuffer VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."' ,'"..lastUpdate.."');"
     Manager.database:exec(query)
-    
+
     local minlastUpdate
     local i = 1
-    
-    s_logd("DataNewStudyLayerSuffer --------------------------- begin")
-    
+
+    s_logd("<<DataNewStudyLayerSuffer --------------------------- begin")
+
     for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
         if i == 1 then
             s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
@@ -590,9 +592,11 @@ function Manager.insertNewStudyLayerSufferTables(wordName)
             end
         end
     end
-    
-    s_logd("DataNewStudyLayerSuffer --------------------------- end")
-    
+
+    s_logd("DataNewStudyLayerSuffer --------------------------- end>>")
+
+    local unfamiliarWord = '' 
+    local currentWord = ''
     local loop_judge_min = 0
     local loop_delete_min = 0
     if i > maxWrongWordCount then
@@ -608,20 +612,39 @@ function Manager.insertNewStudyLayerSufferTables(wordName)
                 end
                 loop_judge_min = loop_judge_min + 1
             end
-            
+
             --insert unfamiliar
             for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  lastUpdate = " .. minlastUpdate..";") do
-                Manager.insertNewStudyLayerUnfamiliarTables(row.wordName)
+                --                Manager.insertNewStudyLayerUnfamiliarTables(row.wordName)
                 Manager.insertNewStudyLayerTestTables(row.wordName)
+
+--                currentWord = row.wordName
             end
-  
+            
+--            if loop_delete_min + 1 < maxWrongWordCount then
+--               unfamiliarWord = unfamiliarWord .. currentWord.."|"
+--            else
+--                unfamiliarWord = unfamiliarWord .. currentWord
+--            end
             --delete suffer
             local delete = Manager.database:exec(" delete from  DataNewStudyLayerSuffer where lastUpdate = " .. minlastUpdate..";")
             Manager.database:exec(delete) 
             loop_delete_min = loop_delete_min +1
+
+            --        s_logd("DataNewStudyLayerSuffer --------------------------- begin")
+            --
+            --        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+            --                s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
+            --        end
+            --
+            --        s_logd("DataNewStudyLayerSuffer --------------------------- end")
         end
+        --insert 
+--        Manager.insertNewStudyLayerUnfamiliarTables(unfamiliarWord)
     end    
-    
+
+
+
     --    Manager.database:exec[[
     --                DROP TABLE DataNewStudyLayerSuffer
     --            ]]
@@ -658,6 +681,17 @@ function Manager.selectLastNewStudyLayerSufferTables()
 
     print("selectLastNewStudyLayerSufferTables over")
 end
+
+function Manager.countLastNewStudyLayerSufferTables()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local lasttime
+    local i = 0
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        i = i + 1
+    end
+    return i
+end
 ----NewStudyLayer_suffer_over------
 ----NewStudyLayer_familiar------
 function Manager.initNewStudyLayerFamiliarTables()
@@ -672,6 +706,8 @@ function Manager.initNewStudyLayerFamiliarTables()
             lastUpdate TEXT
         );
     ]]    
+    
+--    print("initNewStudyLayerFamiliarTables over")
 end
 
 function Manager.insertNewStudyLayerFamiliarTables(wordName)
@@ -683,16 +719,16 @@ function Manager.insertNewStudyLayerFamiliarTables(wordName)
     Manager.database:exec(query)
 
     local i = 1
-    s_logd("DataNewStudyLayerFamiliar --------------------------- begin")
+    s_logd("<<DataNewStudyLayerFamiliar --------------------------- begin")
     for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerFamiliar") do
         s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName .. ',' ..row.lastUpdate)
         print ("i is "..i)
         i = i + 1
     end
-    s_logd("DataNewStudyLayerFamiliar --------------------------- end")
---    Manager.database:exec[[
---                DROP TABLE DataNewStudyLayerSuffer
---            ]]
+    s_logd("DataNewStudyLayerFamiliar --------------------------- end>>")
+    Manager.database:exec[[
+                DROP TABLE DataNewStudyLayerSuffer
+            ]]
     
 end
 
@@ -743,6 +779,8 @@ function Manager.initNewStudyLayerUnfamiliarTables()
             lastUpdate TEXT            
         );
     ]]    
+--    print("initNewStudyLayerUnfamiliarTables over")
+    
 end
 
 function Manager.insertNewStudyLayerUnfamiliarTables(wordName)
@@ -755,13 +793,13 @@ function Manager.insertNewStudyLayerUnfamiliarTables(wordName)
     Manager.database:exec(query)
 
     local i = 1
-    s_logd("DataNewStudyLayerUnfamiliar --------------------------- begin")
+    s_logd("<<DataNewStudyLayerUnfamiliar --------------------------- begin")
     for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerUnfamiliar") do
         s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.wordType.. ',' ..row.lastUpdate)
         print ("i is "..i)
         i = i + 1
     end
-    s_logd("DataNewStudyLayerUnfamiliar --------------------------- end")
+    s_logd("DataNewStudyLayerUnfamiliar --------------------------- end>>")
 	
 end
 
@@ -805,15 +843,15 @@ function Manager.updateLastNewStudyLayerUnfamiliarTables(wordName)
 
     print("updateLastNewStudyLayerUnfamiliarTables")
     
-    for row in Manager.database:nrows('SELECT * FROM DataNewStudyLayerUnfamiliar where wordName = '..wordName) do
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerUnfamiliar where wordName = '"..wordName.."'") do
         if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
             -- update
             if row.wordType > 3 then
-                local command = " delete from  DataNewStudyLayerUnfamiliar where wordName = " .. wordName..";"
+                local command = "DELETE FROM DataNewStudyLayerUnfamiliar where wordName = '"..wordName.."'"
                 Manager.database:exec(command)
                 Manager.insertNewStudyLayerFamiliarTables(wordName)
             else
-                local command = 'UPDATE DataNewStudyLayerUnfamiliar SET wordType = '..(row.wordType+1)..' , lastUpdate = '..(os.time())
+                local command = "UPDATE DataNewStudyLayerUnfamiliar SET wordType = "..(row.wordType+1)..", lastUpdate = "..(os.time()).." where wordName = '"..wordName.."'"
                 Manager.database:exec(command)
             end
 
@@ -841,7 +879,9 @@ function Manager.initNewStudyLayerTestTables()
             wordName TEXT,
             lastUpdate TEXT            
         );
-    ]]    
+    ]]   
+    
+--    print("initNewStudyLayerTestTables over") 
 end
 
 
@@ -854,13 +894,13 @@ function Manager.insertNewStudyLayerTestTables(wordName)
     Manager.database:exec(query)
 
     local i = 1
-    s_logd("DataNewStudyLayerTest --------------------------- begin")
+    s_logd("<<DataNewStudyLayerTest --------------------------- begin")
     for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest") do
         s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
         print ("i is "..i)
         i = i + 1
     end
-    s_logd("DataNewStudyLayerTest --------------------------- end")
+    s_logd("DataNewStudyLayerTest --------------------------- end>>")
 
 end
 
@@ -871,13 +911,13 @@ function Manager.updateNewStudyLayerTestTables(wordName)
     
     print("updateDataNewStudyLayerTests")
 
-    for row in Manager.database:nrows('SELECT * FROM DataNewStudyLayerTest where wordName = '..wordName) do
-        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
+--    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where wordName = '"..wordName.."'") do
+--        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
             -- update
-            local command = 'UPDATE DataNewStudyLayerTest SET lastUpdate = '..(os.time())
+            local command = "UPDATE DataNewStudyLayerTest SET lastUpdate = "..(os.time()).." where wordName = '"..wordName.."'"
             Manager.database:exec(command)
-        end
-    end
+--        end
+--    end
 
     print("updateDataNewStudyLayerTests over")
 
@@ -889,14 +929,15 @@ function Manager.deleteNewStudyLayerTestTables(wordName)
     local lastUpdate = os.time()
 
     print("deleteDataNewStudyLayerTests")
+    local delete = Manager.database:exec("DELETE FROM DataNewStudyLayerTest where wordName = '"..wordName.."'")
+    Manager.database:exec(delete) 
+    
+--    print("wordName is "..wordName )
 
-    for row in Manager.database:nrows('SELECT * FROM DataNewStudyLayerTest where wordName = '..wordName) do
-        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
-            -- update
-            local command = " delete from DataNewStudyLayerUnfamiliar where wordName = " .. wordName..";"
-            Manager.database:exec(command)
-        end
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest") do
+        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
     end
+
 
     print("deleteDataNewStudyLayerTests over")
 
@@ -932,19 +973,77 @@ function Manager.selectFormerNewStudyLayerTestTables()
 
     print("selectFormerNewStudyLayerTestTables over")
 end
-
+function Manager.countFormerNewStudyLayerTestTables()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local lasttime
+    local i = 0
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        i = i + 1
+    end
+    return i
+end
 ----NewStudyLayer_test_from_suffer_over----
-------drop_table----
-function Manager.dropTables()
+----NewStudyLayer_group_word_table----
+function Manager.initNewStudyLayerGroupTables()
 
     Manager.database:exec[[
-                DROP TABLE DataNewStudyLayerSuffer
-                DROP TABLE DataNewStudyLayerFamiliar
-                DROP TABLE DataNewStudyLayerUnfamiliar
-                DROP TABLE DataNewStudyLayerTest
-            ]]
-end         
-----drop_table_over----
+        create table if not exists DataNewStudyLayerGroupTables(
+            userId TEXT,
+            bookKey TEXT,
+            wordName TEXT         
+        );
+    ]]    
+
+end
+
+function Manager.insertNewStudyLayerGroupTables(wordName)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local query = "INSERT INTO DataNewStudyLayerGroupTables VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."');"
+    Manager.database:exec(query)
+
+    local i = 1
+
+    s_logd("<<DataNewStudyLayerGroupTables --------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerGroupTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+
+        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName)
+        i = i + 1
+    end
+
+    s_logd("DataNewStudyLayerGroupTables --------------------------- end>>")
+
+    local unfamiliarWord = '' 
+    local currentWord = ''
+    local loop_delete_min = 0
+    if i > maxWrongWordCount then
+        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerGroupTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+            currentWord = row.wordName
+            if loop_delete_min + 1 < maxWrongWordCount then
+                unfamiliarWord = unfamiliarWord .. currentWord.."|"
+            else
+                unfamiliarWord = unfamiliarWord .. currentWord
+            end    
+            loop_delete_min = loop_delete_min +1
+        end
+        --delete suffer
+        local delete = Manager.database:exec(" delete from  DataNewStudyLayerGroupTables ;")
+        Manager.database:exec(delete) 
+
+        --insert 
+        Manager.insertNewStudyLayerUnfamiliarTables(unfamiliarWord)
+    end    
+
+
+
+    --    Manager.database:exec[[
+    --                DROP TABLE DataNewStudyLayerSuffer
+    --            ]]
+
+end 
+----NewStudyLayer_group_word_table_over----
 ---- UserDefault -----------------------------------------------------------
 
 local is_log_out_key = 'log_out'
