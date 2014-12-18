@@ -165,7 +165,7 @@ function BookLayer.create()
                 tutorial_text:addChild(text)
                 
                 s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-
+                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
             end
         end
         layer.book[i] = smallBack
