@@ -56,6 +56,7 @@ function LevelLayer:levelStateManager()
                 if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
                     currentChapterLayer:plotStarAnimation(s_CURRENT_USER.currentLevelKey, levelData.stars)
                     s_SCENE.levelLayerState = s_review_boss_appear_state
+                    Analytics_reviewBoss()
                 end
                 
             end

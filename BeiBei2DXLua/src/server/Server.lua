@@ -124,8 +124,12 @@ function Server.requestFunction(api, parameters, onSucceed, onFailed)
 end
 
 -- 计数器
-function Server.increment(key, userId)
-    Server.requestFunction('increment', {['className']='DataCounter', ['key']=key, ['userId']=userId}, nil, nil)
+function Server.increment(key, userId, appVersion)
+    Server.requestFunction('increment', {['className']='DataCounter', ['key']=key, ['userId']=userId, ['appVersion']=appVersion}, nil, nil)
+end
+
+function Server.incrementPerDay(key, currentDay, appVersion)
+    Server.requestFunction('incrementPerDay', {['className']='DataCounterPerDay' .. key, ['key']=key, ['currentDay']=currentDay, ['appVersion']=appVersion}, nil, nil)
 end
 
 -- return {followers: [粉丝列表], followees: [关注用户列表]}
