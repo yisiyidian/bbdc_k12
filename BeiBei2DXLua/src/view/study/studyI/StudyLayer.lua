@@ -189,6 +189,16 @@ function StudyLayer.create()
     end
     
     local success = function()
+        if s_CorePlayManager.newPlayerState then
+            if s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_3 then
+                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_3 + 1)
+            elseif s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_3 then
+                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_3 + 1)
+            elseif s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat3_3 then
+                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat3_3 + 1)
+            end
+        end
+
         s_SCENE.touchEventBlockLayer.lockTouch()
         progressBar.rightStyle()
         playWordSound(wordName)
@@ -298,6 +308,14 @@ function StudyLayer.create()
                         local action2 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 10))
                         local action3 = cc.CallFunc:create(change)
                         fingerClick:runAction(cc.Sequence:create(action2, action3))
+
+                        if s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_2 then
+                            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_2 + 1)
+                        elseif s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_2 then
+                            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_2 + 1)
+                        elseif s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat3_2 then
+                            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat3_2 + 1)
+                        end
                     else
                         change()
                     end
@@ -388,9 +406,10 @@ function StudyLayer.create()
             if s_CorePlayManager.newPlayerState then
                 local action1 = cc.MoveTo:create(0.5, cc.p(-bigWidth/2, s_DESIGN_HEIGHT/2))
                 local action2 = cc.Place:create(cc.p(-bigWidth/2, 300))
-                local action3 = cc.DelayTime:create(0.5)
-                local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 300))
-                newplayerHintBack:runAction(cc.Sequence:create(action1, action2, action3, action4))
+                -- local action3 = cc.DelayTime:create(0.5)
+                -- local action4 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 300))
+                -- newplayerHintBack:runAction(cc.Sequence:create(action1, action2, action3, action4))
+                newplayerHintBack:runAction(cc.Sequence:create(action1, action2))
                 
                 local action5 = cc.MoveTo:create(0.5, cc.p(2*s_DESIGN_WIDTH-200, 50))
                 local action6 = cc.CallFunc:create(moveCloud)
@@ -399,6 +418,14 @@ function StudyLayer.create()
                 local action9 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2, 10))
                 local action10 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 fingerClick:runAction(cc.Sequence:create(action5, action6, action7, action8,action9,action10))  
+
+                if s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_1 then
+                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1 + 1)
+                elseif s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_1 then
+                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_1 + 1)
+                elseif s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat3_1 then
+                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat3_1 + 1)
+                end
             else
                 local action1 = cc.CallFunc:create(moveCloud)
                 local action2 = cc.DelayTime:create(0.5)
