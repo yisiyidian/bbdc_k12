@@ -78,6 +78,7 @@ function IntroLayer.create(directOnLogin)
             if result.count <= 0 then -- not exist the user name
                 s_CURRENT_USER.isGuest = 1
                 s_SCENE:signUp(randomUserName, "bbdc123#")
+                AnalyticsSignUp_Guest()
             else -- exist the user name
                 visitLogin()
             end

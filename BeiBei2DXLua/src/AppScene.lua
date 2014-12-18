@@ -32,7 +32,27 @@ s_tutorial_study = 3
 s_tutorial_review_boss = 4
 s_tutorial_summary_boss = 5
 s_tutorial_complete = 6
+-- define small tutorial state
+s_smalltutorial_book_select = 0
+s_smalltutorial_home = 1
+s_smalltutorial_level_select = 2
+s_smalltutorial_studyRepeat1_1 = 3 -- touch cloud
+s_smalltutorial_studyRepeat1_2 = 4 -- 去划单词
+s_smalltutorial_studyRepeat1_3 = 5 -- 划完
+s_smalltutorial_studyRepeat2_1 = 6
+s_smalltutorial_studyRepeat2_2 = 7
+s_smalltutorial_studyRepeat2_3 = 8
+s_smalltutorial_studyRepeat3_1 = 9
+s_smalltutorial_studyRepeat3_2 = 10
+s_smalltutorial_studyRepeat3_3 = 11
+s_smalltutorial_review_boss = 12
+s_smalltutorial_summary_boss = 13
+s_smalltutorial_complete = 14
+s_smalltutorial_complete_win = 100
+s_smalltutorial_complete_lose = 101
+s_smalltutorial_complete_timeout = 102
 
+-- define review boss tutorial
 
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
@@ -40,6 +60,8 @@ end)
 
 function AppScene.create()
     local scene = AppScene.new()
+
+    scene.currentGameLayerName = 'unknown'
 
     scene.rootLayer = cc.Layer:create()
     scene.rootLayer:setPosition(s_DESIGN_OFFSET_WIDTH, 0)
@@ -109,6 +131,12 @@ end
 function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
+
+    if newLayer.class ~= nil and newLayer.class.__cname ~= nil then 
+        self.currentGameLayerName = newLayer.class.__cname
+    else
+        self.currentGameLayerName = 'unknown'
+    end
 end
 
 function AppScene:popup(popupNode)
@@ -171,6 +199,12 @@ function AppScene:startLoadingData(hasAccount, username, password)
     end
 
     local function onResponse(u, e, code)
+
+        if not hasAccount then 
+            AnalyticsTutorial(0)
+            AnalyticsSmallTutorial(0)
+        end
+
         if e ~= nil then                  
             s_TIPS_LAYER:showSmall(e)
             hideProgressHUD()
@@ -180,6 +214,7 @@ function AppScene:startLoadingData(hasAccount, username, password)
             -- s_SCENE:getDailyCheckIn()
             s_SCENE:getConfigs(false)
         end
+        
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
@@ -403,6 +438,10 @@ function AppScene:onUserServerDatasCompleted()
         end)
 
     end)
+end
+
+function applicationDidEnterBackgroundLua()
+    Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end
 
 return AppScene

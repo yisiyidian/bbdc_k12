@@ -56,6 +56,11 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
 end
 
 function SummaryBossAlter:lose()
+    if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
+    end
+
     --add board
     self.loseBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
@@ -96,6 +101,11 @@ function SummaryBossAlter:lose()
 end
 
 function SummaryBossAlter:lose2()
+    if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_lose)
+    end
+
     self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
     self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
@@ -173,6 +183,11 @@ function SummaryBossAlter:lose2()
 end
 
 function SummaryBossAlter:win1()
+    if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_win)
+    end
+
     self.winBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.winBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.winBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))

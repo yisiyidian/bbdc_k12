@@ -279,6 +279,8 @@ showDetailInfo = function()
     
     local button_replaywrong_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
+            AnalyticsReplayerWrongWords()
+            
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()
