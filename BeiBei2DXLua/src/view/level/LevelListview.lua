@@ -7,41 +7,41 @@ end)
 
 local oceanBlue = cc.c4b(61,191,244,255)
 local blueSectionSize = cc.size(854,512)
-local blueLayoutCount = 6
+local level1LayoutCount = 6
+local level2LayoutCount = 12
+local level3LayoutCount = 18
+local level4LayoutCount = 24
 local layoutTable ={}
 local objectsTable = {}
-local listViewOcenaHeight
 local islandTag = 1
 
 --Sprite = {path, anchor point, position, layout table index,island tag}
-local leftIslandFirstTable = {"image/levelLayer/left1.png",cc.p(0,1),cc.p(0,blueSectionSize.height+blueSectionSize.height*(blueLayoutCount-1))}
-local rightIslandFirstTable = {"image/levelLayer/right1.png",cc.p(1,1),cc.p(blueSectionSize.width,2004.7)}
-local sunkenShipTable = {"image/levelLayer/sunkenShip.png",cc.p(0.5,0.5),cc.p(352,1444.9)}
-local crabTable = {"image/levelLayer/crab.png",cc.p(0.5,0.5),cc.p(584.3,1907.3)}
-local leftIslandSecondTable ={"image/levelLayer/left2.png",cc.p(0,1),cc.p(0,1584.1)}
-local whaleTable = {"image/levelLayer/whale.png", cc.p(0.5,0.5),cc.p(128.7,808.2)}
-local rightIslandSecondTable = {"image/levelLayer/right2.png", cc.p(1,1),cc.p(blueSectionSize.width,505.2)}
-local umbrella1Table = {"image/levelLayer/umbrella1.png",cc.p(1,0),cc.p(451.9, 2726.0)}
-local umbrella2Table = {"image/levelLayer/umbrella2.png", cc.p(0.5,0.5),cc.p(182.0,268.8)}
-
---trees
-local tree1Table = {"image/levelLayer/tree1.png",cc.p(1,1),cc.p(blueSectionSize.width,2091.4)}
-local tree2Table = {"image/levelLayer/tree2.png",cc.p(0,1),cc.p(0,2829.3)}
-local tree3Table = {"image/levelLayer/tree3.png",cc.p(1,1),cc.p(blueSectionSize.width,1898.5)}
-local tree4Table = {"image/levelLayer/tree4.png",cc.p(0.5,0.5),cc.p(602.7,2471.4)}
-local tree5Table = {"image/levelLayer/tree5.png",cc.p(0.5,0.5),cc.p(667.1,1391)}
-local tree6Table = {"image/levelLayer/tree1.png",cc.p(0.5,0.5),cc.p(804.3,403.9)}
---islands
-local island1Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(364, 2792),"island"}
-local island2Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(510.6, 2464.4),"island"}
-local island3Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(203.1, 2243.5),"island"}
-local island4Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(111.8, 1901.3),"island"}
-local island5Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(319.2, 1654),"island"}
-local island6Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(538.6, 1397.2),"island"}
-local island7Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(180.5, 1119.5),"island"}
-local island8Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(480, 909.8),"island"}
-local island9Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(163.5, 729.1),"island"}
-local island10Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(128.6,292.2),"island"}
+--level1ResTable
+local level1ResTable ={island1Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(364, 2792),"island"}
+    ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(510.6, 2464.4),"island"}
+    ,island3Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(203.1, 2243.5),"island"}
+    ,island4Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(111.8, 1901.3),"island"}
+    ,island5Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(319.2, 1654),"island"}
+    ,island6Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(538.6, 1397.2),"island"}
+    ,island7Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(180.5, 1119.5),"island"}
+    ,island8Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(480, 909.8),"island"}
+    ,island9Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(163.5, 729.1),"island"}
+    ,island10Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(128.6,292.2),"island"}
+    ,leftIslandFirstTable   = {"image/levelLayer/left1.png",cc.p(0,1),cc.p(0,blueSectionSize.height*6)}
+    ,rightIslandFirstTable  = {"image/levelLayer/right1.png",cc.p(1,1),cc.p(blueSectionSize.width,2004.7)}
+    ,sunkenShipTable        = {"image/levelLayer/sunkenShip.png",cc.p(0.5,0.5),cc.p(352,1444.9)}
+    ,crabTable              = {"image/levelLayer/crab.png",cc.p(0.5,0.5),cc.p(584.3,1907.3)}
+    ,leftIslandSecondTable  = {"image/levelLayer/left2.png",cc.p(0,1),cc.p(0,1584.1)}
+    ,whaleTable             = {"image/levelLayer/whale.png", cc.p(0.5,0.5),cc.p(128.7,808.2)}
+    ,rightIslandSecondTable = {"image/levelLayer/right2.png", cc.p(1,1),cc.p(blueSectionSize.width,505.2)}
+    ,umbrella1Table         = {"image/levelLayer/umbrella1.png",cc.p(1,0),cc.p(451.9, 2726.0)}
+    ,umbrella2Table         = {"image/levelLayer/umbrella2.png", cc.p(0.5,0.5),cc.p(182.0,268.8)}
+    ,tree1Table = {"image/levelLayer/tree1.png",cc.p(1,1),cc.p(blueSectionSize.width,2091.4)}
+    ,tree2Table = {"image/levelLayer/tree2.png",cc.p(0,1),cc.p(0,2829.3)}
+    ,tree3Table = {"image/levelLayer/tree3.png",cc.p(1,1),cc.p(blueSectionSize.width,1898.5)}
+    ,tree4Table = {"image/levelLayer/tree4.png",cc.p(0.5,0.5),cc.p(602.7,2471.4)}
+    ,tree5Table = {"image/levelLayer/tree5.png",cc.p(0.5,0.5),cc.p(667.1,1391)}
+    ,tree6Table = {"image/levelLayer/tree1.png",cc.p(0.5,0.5),cc.p(804.3,403.9)}} 
 
 --t[1]: res
 --t[2]: anchorPoint
@@ -70,77 +70,82 @@ function LevelListview:createObject(t)
     return object
 end
 
-function LevelListview:initBlueLayout()
+function LevelListview:initLayout(level)
     
-    for i=0, blueLayoutCount-1 do
-                
-        local layout = ccui.Widget:create()
-        layout:setContentSize(blueSectionSize.width,blueSectionSize.height)
-        layout:ignoreAnchorPointForPosition(false)
-        layout:setAnchorPoint(0,1)
-        layout:setPosition(0,s_DESIGN_HEIGHT-blueSectionSize.height*i)
+    if level == "level1" then
+        for i=0, level1LayoutCount-1 do        
+            local layout = ccui.Widget:create()
+            layout:setContentSize(blueSectionSize.width,blueSectionSize.height)
+            layout:ignoreAnchorPointForPosition(false)
+            layout:setAnchorPoint(0,1)
+            layout:setPosition(0,s_DESIGN_HEIGHT-blueSectionSize.height*i)
 
-        local blueLayerColor = cc.LayerColor:create(oceanBlue,blueSectionSize.width,blueSectionSize.height)
-        blueLayerColor:ignoreAnchorPointForPosition(false)
-        blueLayerColor:setAnchorPoint(0,1)
-        blueLayerColor:setPosition(0,blueSectionSize.height)
-        layout:addChild(blueLayerColor)
+            local blueLayerColor = cc.LayerColor:create(oceanBlue,blueSectionSize.width,blueSectionSize.height)
+            blueLayerColor:ignoreAnchorPointForPosition(false)
+            blueLayerColor:setAnchorPoint(0,1)
+            blueLayerColor:setPosition(0,blueSectionSize.height)
+            layout:addChild(blueLayerColor)
         
-        layoutTable[i+1] = layout
+            layoutTable[i+1] = layout
         
-        self:pushBackCustomItem(layout)
+            self:pushBackCustomItem(layout)
+        end
     end
 end
 
-function LevelListview:initObjects()
+function LevelListview:initObjects(level)
 
-    table.insert(objectsTable,self:createObject(island1Table)) 
-    table.insert(objectsTable,self:createObject(island2Table)) 
-    table.insert(objectsTable,self:createObject(island3Table)) 
-    table.insert(objectsTable,self:createObject(island4Table)) 
-    table.insert(objectsTable,self:createObject(island5Table)) 
-    table.insert(objectsTable,self:createObject(island6Table)) 
-    table.insert(objectsTable,self:createObject(island7Table)) 
-    table.insert(objectsTable,self:createObject(island8Table)) 
-    table.insert(objectsTable,self:createObject(island9Table)) 
-    table.insert(objectsTable,self:createObject(island10Table)) 
-
-    table.insert(objectsTable,self:createObject(leftIslandFirstTable)) 
-    table.insert(objectsTable,self:createObject(rightIslandFirstTable)) 
-    table.insert(objectsTable,self:createObject(sunkenShipTable)) 
-    table.insert(objectsTable,self:createObject(crabTable)) 
-    table.insert(objectsTable,self:createObject(leftIslandSecondTable)) 
-    table.insert(objectsTable,self:createObject(whaleTable)) 
-    table.insert(objectsTable,self:createObject(rightIslandSecondTable)) 
-    table.insert(objectsTable,self:createObject(umbrella1Table)) 
-    table.insert(objectsTable,self:createObject(umbrella2Table)) 
-
-    table.insert(objectsTable,self:createObject(tree1Table)) 
-    table.insert(objectsTable,self:createObject(tree2Table)) 
-    table.insert(objectsTable,self:createObject(tree3Table)) 
-    table.insert(objectsTable,self:createObject(tree4Table)) 
-    table.insert(objectsTable,self:createObject(tree5Table)) 
-    table.insert(objectsTable,self:createObject(tree6Table)) 
+    if level == "level1" then
+        for key, var in pairs(level1ResTable) do
+            table.insert(objectsTable,self:createObject(var))
+        end
+    end
 end
 
-function LevelListview.create()
-    local listview = LevelListview.new()
+function LevelListview:setListViewPosition(level)
+	if level == "level1" then
+        self:setPosition((s_DESIGN_WIDTH-blueSectionSize.width)/2, s_DESIGN_HEIGHT)
+	end
+	
+    if level == "level2" then
+        self:setPosition((s_DESIGN_WIDTH-blueSectionSize.width)/2, s_DESIGN_HEIGHT)
+    end
+
+end
+
+function LevelListview.create(level)
+    local listview = LevelListview.new(level)
     return listview
 end
 
-function LevelListview:ctor()
+function LevelListview:ctor(level)
     
+    self.level = level
     self:setGravity(ccui.ListViewGravity.centerVertical)
     self:setDirection(ccui.ScrollViewDir.vertical)
     self:setTouchEnabled(true)
-    self:setBounceEnabled(false)
+    self:setBounceEnabled(true)
     self:setContentSize(blueSectionSize.width, s_DESIGN_HEIGHT)
-    self:initBlueLayout()
-    self:initObjects()
+    self:initLayout(level)
+    self:initObjects(level)
     self:setTouchEnabled(true)
-    local xOffset = (s_DESIGN_WIDTH-blueSectionSize.width)/2
-    self:setPosition(xOffset, s_DESIGN_HEIGHT)
+    self:setListViewPosition(level)
     self:setAnchorPoint(cc.p(0,1))
+end
+
+function LevelListview:addTopBounce()
+
+    if self.level == "level1" then
+        local blueLayerColor = cc.LayerColor:create(oceanBlue,blueSectionSize.width,blueSectionSize.height)
+        blueLayerColor:ignoreAnchorPointForPosition(false)
+        blueLayerColor:setAnchorPoint(0,1)
+        blueLayerColor:setPosition((s_DESIGN_WIDTH-blueSectionSize.width)/2,s_DESIGN_HEIGHT)
+        self:getParent():addChild(blueLayerColor,-1)
+    end
+end
+
+function LevelListview:addBottomBounce()
+
 end
 
 return LevelListview

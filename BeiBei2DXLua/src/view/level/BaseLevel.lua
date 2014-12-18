@@ -12,19 +12,9 @@ end
 
 function BaseLevel:ctor()
 
-	local levelListview = require("view.level.LevelListview").create()
-    self:addChild(levelListview)
+	local level1 = require("view.level.LevelListview").create("level1")
+    self:addChild(level1)
+    level1:addTopBounce();    
 end
-
-function BaseLevel.setBackGround(color,size,index)
-end
-
-function BaseLevel.setObjects()
-
-end
-
-function BaseLevel.initObject(t)
-
-end    
 
 return BaseLevel
