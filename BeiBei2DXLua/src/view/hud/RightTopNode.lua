@@ -83,7 +83,7 @@ function RightTopNode:ctor()
             
             
             local NewReviewBossLayer = require("view.newreviewboss.NewReviewBossLayer")
-            local newReviewBossLayer = NewReviewBossLayer.create(1)
+            local newReviewBossLayer = NewReviewBossLayer.create(4)
             s_SCENE:replaceGameLayer(newReviewBossLayer)
 
         end
@@ -109,7 +109,7 @@ function RightTopNode:ctor()
     heart:setAnchorPoint(1,0.5)
     heart:setPosition(s_RIGHT_X   , s_DESIGN_HEIGHT - 150 )
     heart:setLocalZOrder(1)
-    --self:addChild(heart)
+    self:addChild(heart)
 
     local heartExist = cc.Label:createWithSystemFont("测试中","",36)
     heartExist:setPosition(75,38)
@@ -127,7 +127,7 @@ function RightTopNode:ctor()
     wordAday:setPosition(s_RIGHT_X - 15 , s_DESIGN_HEIGHT - 230 )
     wordAday:setLocalZOrder(1)
     wordAday:setScale(0.5);
-    --self:addChild(wordAday)
+    self:addChild(wordAday)
     self.checkIn = wordAday
     
     local wordAdaylabel = cc.Label:createWithSystemFont("测试中","",36)
