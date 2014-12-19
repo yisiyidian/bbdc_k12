@@ -6,29 +6,15 @@ filter: Linear,Linear
 repeat: none
 book_back_whiteblue
   rotate: false
-  xy: 2, 418
-  size: 457, 550
-  orig: 457, 550
+  xy: 2, 314
+  size: 458, 549
+  orig: 458, 549
   offset: 0, 0
   index: -1
 book_front_blue
   rotate: false
-  xy: 461, 486
-  size: 406, 482
-  orig: 406, 482
-  offset: 0, 0
-  index: -1
-book_title-page1
-  rotate: true
-  xy: 2, 33
-  size: 383, 482
-  orig: 383, 482
-  offset: 0, 0
-  index: -1
-book_title-page2
-  rotate: false
-  xy: 486, 2
-  size: 383, 482
-  orig: 383, 482
+  xy: 462, 380
+  size: 401, 483
+  orig: 401, 483
   offset: 0, 0
   index: -1
