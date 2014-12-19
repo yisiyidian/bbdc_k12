@@ -48,7 +48,7 @@ function NewReviewBossFailPopup.create()
             back:getContentSize().height / 2 )
         reward:ignoreAnchorPointForPosition(false)
         reward:setAnchorPoint(0.5,0.5)
-        reward:setColor(BlackFont)
+        reward:setColor(WhiteFont)
         back:addChild(reward)  
     end
     

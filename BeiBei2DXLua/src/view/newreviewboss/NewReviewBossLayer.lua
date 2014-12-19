@@ -48,13 +48,21 @@ function NewReviewBossLayer.create(NewReviewBossLayer_State)
     
     if NewReviewBossLayer_State == NewReviewBossLayer_State_Main then
 
-        local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossLayerMain")
+        local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossMainLayer")
         local newReviewBossLayerChange = NewReviewBossLayerChange.create()
         backColor:addChild(newReviewBossLayerChange)
     
-
-        
-
+    elseif NewReviewBossLayer_State == NewReviewBossLayer_State_Hint then
+    
+        local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossHintLayer")
+        local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+        backColor:addChild(newReviewBossLayerChange)
+            
+    elseif NewReviewBossLayer_State ==NewReviewBossLayer_State_Summary then
+    
+        local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSummaryLayer")
+        local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+        backColor:addChild(newReviewBossLayerChange)
     end
 
 

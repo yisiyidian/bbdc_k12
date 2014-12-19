@@ -8,16 +8,16 @@ require("view.newstudy.NewStudyConfigure")
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local RBProgressBar = require("view.newreviewboss.NewReviewBossProgressBar")
 
-local  NewReviewBossLayerMain = class("NewReviewBossLayerMain", function ()
+local  NewReviewBossMainLayer = class("NewReviewBossMainLayer", function ()
     return cc.Layer:create()
 end)
 
 
-function NewReviewBossLayerMain.create()
+function NewReviewBossMainLayer.create()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
-    local layer = NewReviewBossLayerMain.new()
+    local layer = NewReviewBossMainLayer.new()
     
     local backGround = cc.Sprite:create("image/newreviewboss/newreviewboss_background.png")
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
@@ -52,9 +52,13 @@ function NewReviewBossLayerMain.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
-            local newReviewBossLayerChange = NewReviewBossLayerChange.create()
-            s_SCENE:popup(newReviewBossLayerChange)
+--            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
+--            local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+--            s_SCENE:popup(newReviewBossLayerChange)
+
+            local NewReviewBossLayer = require("view.newreviewboss.NewReviewBossLayer")
+            local newReviewBossLayer = NewReviewBossLayer.create(NewReviewBossLayer_State_Hint)
+            s_SCENE:replaceGameLayer(newReviewBossLayer)
 
         end
     end
@@ -236,4 +240,4 @@ function NewReviewBossLayerMain.create()
     return layer
 end
 
-return NewReviewBossLayerMain
+return NewReviewBossMainLayer
