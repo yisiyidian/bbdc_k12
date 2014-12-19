@@ -198,9 +198,10 @@ function NewStudyChooseLayer.create()
                     ShowAnswerFalseBack(sender)                    
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                     s_SCENE:callFuncWithDelay(1,function()
-                        NewStudyLayer_State = NewStudyLayer_State_Wrong
-                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-                        s_SCENE:replaceGameLayer(newStudyLayer)                        
+--                        NewStudyLayer_State = NewStudyLayer_State_Wrong
+--                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+--                        s_SCENE:replaceGameLayer(newStudyLayer) 
+                        UpdateCurrentWordFromFalse()                       
                         s_SCENE.touchEventBlockLayer.unlockTouch()
                     end)
                 end

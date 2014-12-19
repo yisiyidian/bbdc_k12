@@ -728,9 +728,7 @@ function Manager.insertNewStudyLayerFamiliarTables(wordName)
         i = i + 1
     end
     s_logd("DataNewStudyLayerFamiliar --------------------------- end>>")
-    Manager.database:exec[[
-                DROP TABLE DataNewStudyLayerSuffer
-            ]]
+
     
 end
 
