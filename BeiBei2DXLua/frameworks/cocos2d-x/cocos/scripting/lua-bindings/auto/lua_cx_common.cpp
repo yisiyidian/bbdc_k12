@@ -152,13 +152,13 @@ int lua_cx_common_CXAvos_signUp(lua_State* tolua_S)
     {
         const char* arg0;
         const char* arg1;
-        int arg2;
+        CXLUAFUNC arg2;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:signUp"); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:signUp"); arg1 = arg1_tmp.c_str();
 
-        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "CXAvos:signUp");
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
         if(!ok)
         {
             tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_signUp'", nullptr);
@@ -207,13 +207,13 @@ int lua_cx_common_CXAvos_downloadFile(lua_State* tolua_S)
     {
         const char* arg0;
         const char* arg1;
-        int arg2;
+        CXLUAFUNC arg2;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:downloadFile"); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:downloadFile"); arg1 = arg1_tmp.c_str();
 
-        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "CXAvos:downloadFile");
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
         if(!ok)
         {
             tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_downloadFile'", nullptr);
@@ -418,13 +418,13 @@ int lua_cx_common_CXAvos_logIn(lua_State* tolua_S)
     {
         const char* arg0;
         const char* arg1;
-        int arg2;
+        CXLUAFUNC arg2;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:logIn"); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:logIn"); arg1 = arg1_tmp.c_str();
 
-        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "CXAvos:logIn");
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
         if(!ok)
         {
             tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logIn'", nullptr);
@@ -953,11 +953,11 @@ int lua_cx_common_CXStore_payForProduct(lua_State* tolua_S)
     if (argc == 2) 
     {
         const char* arg0;
-        int arg1;
+        CXLUAFUNC arg1;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXStore:payForProduct"); arg0 = arg0_tmp.c_str();
 
-        ok &= luaval_to_int32(tolua_S, 3,(int *)&arg1, "CXStore:payForProduct");
+        arg1 = (  toluafix_ref_function(tolua_S,3,0));
         if(!ok)
         {
             tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXStore_payForProduct'", nullptr);
@@ -1005,11 +1005,11 @@ int lua_cx_common_CXStore_requestProducts(lua_State* tolua_S)
     if (argc == 2) 
     {
         const char* arg0;
-        int arg1;
+        CXLUAFUNC arg1;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXStore:requestProducts"); arg0 = arg0_tmp.c_str();
 
-        ok &= luaval_to_int32(tolua_S, 3,(int *)&arg1, "CXStore:requestProducts");
+        arg1 = (  toluafix_ref_function(tolua_S,3,0));
         if(!ok)
         {
             tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXStore_requestProducts'", nullptr);
