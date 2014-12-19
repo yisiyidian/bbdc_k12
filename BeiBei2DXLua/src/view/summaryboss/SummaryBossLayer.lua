@@ -183,7 +183,7 @@ function SummaryBossLayer.create(levelConfig,chapter)
             return true
         end
     
-        local length_gap = 3.0
+        local length_gap = 5.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
         if chapter == 2 then
