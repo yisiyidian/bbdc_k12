@@ -57,8 +57,8 @@ LOCAL_SRC_FILES := ../manual/CCLuaBridge.cpp \
           ../auto/lua_cocos2dx_audioengine_auto.cpp \
           ../manual/audioengine/lua_cocos2dx_audioengine_manual.cpp \
           ../auto/lua_cx_common.cpp \
-          ../../../../common/avos/Android/CXAnalytics.cpp \
-          ../../../../common/avos/Android/CXAvos.cpp \
+          ../../../../common/Android/CXAnalytics.cpp \
+          ../../../../common/Android/CXAvos.cpp \
           ../../../../common/md5/md5.c \
           ../../../../common/Android/CXMailFeedBack.cpp \
           ../../../../common/Android/CXProgressHUD.cpp \
@@ -69,7 +69,6 @@ LOCAL_SRC_FILES := ../manual/CCLuaBridge.cpp \
           ../../../../external/lua/cjson/fpconv.c \
           ../../../../external/lua/cjson/strbuf.c \
           ../../../../external/lua/cjson/lua_cjson.c
-
 
 #3d
 LOCAL_SRC_FILES += ../manual/3d/lua_cocos2dx_3d_manual.cpp \
@@ -163,8 +162,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../../../../external/lua \
                     $(LOCAL_PATH)/../../../../external/lua/quick \
                     $(LOCAL_PATH)/../../../../common \
-                    $(LOCAL_PATH)/../../../../common/md5 \
-                    $(LOCAL_PATH)/../../../../common/avos
+                    $(LOCAL_PATH)/../../../../common/md5 
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                            $(LOCAL_PATH)/../../../../external/lua/luajit/include \
