@@ -64,6 +64,8 @@ function DataUser:ctor()
     self.dailyCheckInData                  = DataDailyCheckIn.create()
     self.levels                            = {}
     self.logInDatas                        = {}
+
+    self.clientData                        = {0}
 end
 
 function DataUser:parseServerData(data)

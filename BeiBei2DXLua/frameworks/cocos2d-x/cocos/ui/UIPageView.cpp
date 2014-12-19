@@ -216,14 +216,21 @@ ssize_t PageView::getPageCount()const
 
 float PageView::getPositionXByIndex(ssize_t idx)const
 {
+    if (isVertical) {
+        return (getContentSize().height * (idx-_curPageIdx));
+    }
     return (getContentSize().width * (idx-_curPageIdx));
 }
 
 void PageView::onSizeChanged()
 {
     Layout::onSizeChanged();
-    _rightBoundary = getContentSize().width;
-    
+    if (isVertical) {
+        _rightBoundary = getContentSize().height;
+    }
+    else {
+        _rightBoundary = getContentSize().width;
+    }
     _doLayoutDirty = true;
 }
 
@@ -250,13 +257,23 @@ void PageView::updateAllPagesPosition()
     {
         _curPageIdx = pageCount-1;
     }
-    
-    float pageWidth = getContentSize().width;
-    for (int i=0; i<pageCount; i++)
-    {
-        Layout* page = _pages.at(i);
-        page->setPosition(Vec2((i-_curPageIdx) * pageWidth, 0));
+    if (isVertical) {
+        float pageHeight = getContentSize().height;
+        for (int i=0; i<pageCount; i++)
+        {
+            Layout* page = _pages.at(i);
+            page->setPosition(Vec2(0, (i-_curPageIdx) * pageHeight));
+            
+        }
+    }
+    else {
+        float pageWidth = getContentSize().width;
+        for (int i=0; i<pageCount; i++)
+        {
+            Layout* page = _pages.at(i);
+            page->setPosition(Vec2((i-_curPageIdx) * pageWidth, 0));
         
+        }
     }
 }
 
@@ -269,7 +286,12 @@ void PageView::scrollToPage(ssize_t idx)
     }
     _curPageIdx = idx;
     Layout* curPage = _pages.at(idx);
-    _autoScrollDistance = -(curPage->getPosition().x);
+    if (isVertical) {
+        _autoScrollDistance = -(curPage->getPosition().y);
+    }
+    else {
+        _autoScrollDistance = -(curPage->getPosition().x);
+    }
     _autoScrollSpeed = fabs(_autoScrollDistance)/0.2f;
     _autoScrollDirection = _autoScrollDistance > 0 ? AutoScrollDirection::RIGHT : AutoScrollDirection::LEFT;
     _isAutoScrolling = true;
@@ -390,8 +412,15 @@ void PageView::movePages(float offset)
 {
     for (auto& page : this->getPages())
     {
-        page->setPosition(Vec2(page->getPosition().x + offset,
+        if (isVertical) {
+            page->setPosition(Vec2(page->getPosition().x,
+                                   page->getPosition().y + offset));
+        }
+        else {
+            page->setPosition(Vec2(page->getPosition().x + offset,
                                page->getPosition().y));
+        }
+        
     }
 }
 
@@ -408,32 +437,59 @@ bool PageView::scrollPages(float touchOffset)
     }
     
     float realOffset = touchOffset;
-    
-    switch (_touchMoveDirection)
-    {
-        case TouchDirection::LEFT: // left
+    if (isVertical) {
+        switch (_touchMoveDirection)
+        {
+            case TouchDirection::LEFT: // left
+                
+                if (_rightBoundaryChild->getTopBoundary() + touchOffset <= _rightBoundary)
+                {
+                    realOffset = _rightBoundary - _rightBoundaryChild->getTopBoundary();
+                    movePages(realOffset);
+                    return false;
+                }
+                break;
+                
+            case TouchDirection::RIGHT: // right
+                
+                if (_leftBoundaryChild->getBottomBoundary() + touchOffset >= _leftBoundary)
+                {
+                    realOffset = _leftBoundary - _leftBoundaryChild->getBottomBoundary();
+                    movePages(realOffset);
+                    return false;
+                }
+                break;
+            default:
+                break;
+        }
 
-            if (_rightBoundaryChild->getRightBoundary() + touchOffset <= _rightBoundary)
-            {
-                realOffset = _rightBoundary - _rightBoundaryChild->getRightBoundary();
-                movePages(realOffset);
-                return false;
-            }
-            break;
-            
-        case TouchDirection::RIGHT: // right
-
-            if (_leftBoundaryChild->getLeftBoundary() + touchOffset >= _leftBoundary)
-            {
-                realOffset = _leftBoundary - _leftBoundaryChild->getLeftBoundary();
-                movePages(realOffset);
-                return false;
-            }
-            break;
-        default:
-            break;
     }
-    
+    else {
+        switch (_touchMoveDirection)
+        {
+            case TouchDirection::LEFT: // left
+
+                if (_rightBoundaryChild->getRightBoundary() + touchOffset <= _rightBoundary)
+                {
+                    realOffset = _rightBoundary - _rightBoundaryChild->getRightBoundary();
+                    movePages(realOffset);
+                    return false;
+                }
+                break;
+            
+            case TouchDirection::RIGHT: // right
+
+                if (_leftBoundaryChild->getLeftBoundary() + touchOffset >= _leftBoundary)
+                {
+                    realOffset = _leftBoundary - _leftBoundaryChild->getLeftBoundary();
+                    movePages(realOffset);
+                    return false;
+                }
+                break;
+            default:
+                break;
+        }
+    }
     movePages(realOffset);
     return true;
 }
@@ -510,6 +566,10 @@ void PageView::handleReleaseLogic(Touch *touch)
         ssize_t pageCount = this->getPageCount();
         float curPageLocation = curPagePos.x;
         float pageWidth = getContentSize().width;
+        if (isVertical) {
+            curPageLocation = curPagePos.y;
+            pageWidth = getContentSize().height;
+        }
         if (!_usingCustomScrollThreshold) {
             _customScrollThreshold = pageWidth / 2.0;
         }
@@ -559,7 +619,12 @@ void PageView::interceptTouchEvent(TouchEventType event, Widget *sender, Touch *
         case TouchEventType::MOVED:
         {
             float offset = 0;
-            offset = fabs(sender->getTouchBeganPosition().x - touchPoint.x);
+            if (isVertical) {
+                offset = fabs(sender->getTouchBeganPosition().y - touchPoint.y);
+            }
+            else {
+                offset = fabs(sender->getTouchBeganPosition().x - touchPoint.x);
+            }
             _touchMovePosition = touch->getLocation();
             if (offset > _childFocusCancelOffset)
             {
@@ -665,6 +730,9 @@ void PageView::copySpecialProperties(Widget *widget)
  
 void PageView::setVertical(bool v){
     isVertical = v;
+    if (v) {
+        _curPageIdx = 100;
+    }
 }
     
 }

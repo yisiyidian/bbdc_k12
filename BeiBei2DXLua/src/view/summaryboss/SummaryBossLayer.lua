@@ -1001,7 +1001,6 @@ function SummaryBossLayer:initMapInfo()
         end
     end
     local finish = os.time()
-    s_logd('time = %d',finish - start)
 end
 
 function SummaryBossLayer:initMap(chapter)

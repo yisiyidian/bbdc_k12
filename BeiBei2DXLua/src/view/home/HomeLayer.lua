@@ -40,6 +40,7 @@ function HomeLayer.create()
     local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
     local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
     local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+
     local redHint = nil
     -- data end
     
@@ -179,12 +180,25 @@ function HomeLayer.create()
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
     book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     backColor:addChild(book_back,1)
+
+    local side_progress_study = cc.LayerColor:create(cc.c4b(0,154,209,255),31,480 * studyWordNum / bookWordCount)
+    side_progress_study:setAnchorPoint(1,0)
+    side_progress_study:setSkewY(-58)
+    side_progress_study:setPosition(-219,-182)
+    book_back:addChild(side_progress_study)
+
+    local side_progress_master = cc.LayerColor:create(cc.c4b(55,177,223,255),31,480 * graspWordNum / bookWordCount)
+    side_progress_master:setAnchorPoint(1,0)
+    side_progress_master:setSkewY(-58)
+    side_progress_master:setPosition(-219,-182)
+    book_back:addChild(side_progress_master)
+
     
     local has_study = cc.ProgressTimer:create(cc.Sprite:create("image/homescene/book_front_blue_xuexi.png"))
     has_study:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     has_study:setMidpoint(cc.p(1, 0))
     has_study:setBarChangeRate(cc.p(0, 1))
-    has_study:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
+    has_study:setPosition(book_back:getContentSize().width/2+15, book_back:getContentSize().height/2+58)
     has_study:setPercentage(100 * studyWordNum / bookWordCount)
     book_back:addChild(has_study)
     
@@ -192,36 +206,106 @@ function HomeLayer.create()
     has_grasp:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     has_grasp:setMidpoint(cc.p(1, 0))
     has_grasp:setBarChangeRate(cc.p(0, 1))
-    has_grasp:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
+    has_grasp:setPosition(book_back:getContentSize().width/2+15, book_back:getContentSize().height/2+58)
     has_grasp:setPercentage(100 * graspWordNum / bookWordCount)
     book_back:addChild(has_grasp)
-    
+
+    local medal = nil 
+    if graspWordNum == bookWordCount then
+        medal = cc.Sprite:create('image/homescene/gold_medal.png')
+    elseif studyWordNum == bookWordCount then
+        medal = cc.Sprite:create('image/homescene/silver_medal.png')
+    end
+    if medal then
+        medal:setPosition(150,220)
+        book_back:addChild(medal)
+    end
     local book_back_width = book_back:getContentSize().width
+
+    local button_bg = ccui.Button:create('image/homescene/button_down.png','image/homescene/button_down.png','')
+    button_bg:setPosition(book_back_width/2, 120)
+    book_back:addChild(button_bg)
+
+    local button_today = ccui.Button:create('image/homescene/button_today.png','','')
+    button_today:setScale9Enabled(true)
+    button_today:setAnchorPoint(1,0.5)
+    button_today:setPosition(button_bg:getPositionX(),button_bg:getPositionY())
+    book_back:addChild(button_today)
+
+    local label_today = cc.Label:createWithSystemFont("今","",32)
+    label_today:setColor(cc.c4b(255,255,255,255))
+    label_today:setPosition(button_bg:getPositionX() - button_bg:getContentSize().width/4,button_bg:getPositionY())
+    book_back:addChild(label_today,2)
+
+    local button_total = ccui.Button:create('image/homescene/button_total.png','','')
+    button_total:setScale9Enabled(true)
+    button_total:setAnchorPoint(0,0.5)
+    button_total:setPosition(button_bg:getPositionX(),button_bg:getPositionY())
+    book_back:addChild(button_total)
     
-    local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",28)
-    label1:setColor(cc.c4b(255,255,255,255))
-    label1:setPosition(book_back_width/2, 200)
+
+    local label_total = cc.Label:createWithSystemFont("总","",32)
+    label_total:setColor(cc.c4b(255,255,255,255))
+    label_total:setPosition(button_bg:getPositionX() + button_bg:getContentSize().width/4,button_bg:getPositionY())
+    book_back:addChild(label_total,2)
+
+    local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",32)
+    label1:setColor(cc.c4b(240,221,135,255))
+    label1:setPosition(book_back_width/2, 240)
     book_back:addChild(label1)
     
-    local label2 = cc.Label:createWithSystemFont(bookWordCount.."词","",20)
-    label2:setColor(cc.c4b(255,255,255,255))
-    label2:setPosition(book_back_width/2, 170)
+    local label2 = cc.Label:createWithSystemFont(bookWordCount.."词","",24)
+    label2:setColor(cc.c4b(240,221,135,255))
+    label2:setPosition(book_back_width/2, 210)
     book_back:addChild(label2)
     
     local label3 = cc.Label:createWithSystemFont("学习"..studyWordNum.."词","",34)
     label3:setColor(cc.c4b(255,255,255,255))
-    label3:setPosition(book_back_width/2, 60)
+    label3:setPosition(book_back_width/2, -0)
     book_back:addChild(label3)
     
     local label4 = cc.Label:createWithSystemFont("掌握"..graspWordNum.."词","",34)
     label4:setColor(cc.c4b(255,255,255,255))
-    label4:setPosition(book_back_width/2, 0)
+    label4:setPosition(book_back_width/2, -100)
     book_back:addChild(label4)
     
     local label = cc.Label:createWithSystemFont(levelName,"",28)
     label:setColor(cc.c4b(0,0,0,255))
     label:setPosition(bigWidth/2, 280)
     backColor:addChild(label)
+
+    if s_CURRENT_USER.clientData[1] == 0 then
+        button_total:setVisible(false)
+    else
+        button_today:setVisible(false)
+        local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
+        label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
+        label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+    end
+
+    local function onToday(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            sender:setVisible(false)
+            button_total:setVisible(true)
+            local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
+            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            s_CURRENT_USER.clientData[1] = 1
+        end
+    end
+
+    local function onTotal(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            sender:setVisible(false)
+            button_today:setVisible(true)
+            label3:setString("学习"..studyWordNum.."词")
+            label4:setString("掌握"..graspWordNum.."词")
+            s_CURRENT_USER.clientData[1] = 0
+        end
+    end
+
+    button_today:addTouchEventListener(onToday)
+    button_total:addTouchEventListener(onTotal)
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
@@ -234,10 +318,29 @@ function HomeLayer.create()
             hideProgressHUD()
         end
     end
+    local ACCUMULATING_WORD = 1
+    local LEARNING_WORD = 2
+    local REVIEWING_WORD = 3
+    local COMPLETE_MISSION = 4
+    local state = ACCUMULATING_WORD
 
-    local button_play = ccui.Button:create("image/homescene/main_play.png","image/homescene/main_play.png","")
-    button_play:setTitleText("继续闯关   》")
-    button_play:setTitleFontSize(30)
+    local playImg = 'image/homescene/bigbutton.png'
+    if state == COMPLETE_MISSION then
+        playImg = 'image/homescene/buttonfinish.png'
+    end
+    local state_str
+    if state == ACCUMULATING_WORD then
+        state_str = '积累生词'
+    elseif state == LEARNING_WORD then
+        state_str = '学习生词'
+    elseif state == REVIEWING_WORD then
+        state_str = '复习旧词'
+    else
+        state_str = '  完成  '
+    end
+
+    local button_play = ccui.Button:create(playImg,'','')
+    button_play:setScale9Enabled(true)
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
@@ -249,6 +352,18 @@ function HomeLayer.create()
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_home+1)
     end
+
+    local state_label = cc.Label:createWithSystemFont('当前状态：','',24)
+    state_label:setPosition(button_play:getContentSize().width * 0.25,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label)
+
+    local state_label2 = cc.Label:createWithSystemFont(state_str,'',40)
+    state_label2:setPosition(button_play:getContentSize().width * 0.6,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label2)
+
+    local state_label3 = cc.Label:createWithSystemFont('>>','',24)
+    state_label3:setPosition(button_play:getContentSize().width * 0.9,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label3)   
 
     local button_data
     local isDataShow = false

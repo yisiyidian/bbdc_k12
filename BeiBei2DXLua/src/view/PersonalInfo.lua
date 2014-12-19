@@ -48,7 +48,8 @@ function PersonalInfo:ctor()
     pageView:setTouchEnabled(true)
     pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT * 1.0))
     pageView:setPosition(s_LEFT_X,0)
-    pageView:setVertical(true)    
+    pageView:setVertical(true)   
+    pageView:setCustomScrollThreshold(s_DESIGN_HEIGHT / 4) 
     
     for i = 1 , 4 do
         local layout = ccui.Layout:create()
@@ -853,7 +854,34 @@ function PersonalInfo:XXTJ()
     girl:setAnchorPoint(0.5,0.5)
     girl:setPosition(0.5 * s_DESIGN_WIDTH - 150 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 250)
     back:addChild(girl)
-   
+
+    local dayLabel = function()
+        local label_daycount = cc.Label:createWithSystemFont(self.totalDay,"",60)
+        label_daycount:ignoreAnchorPointForPosition(false)
+        label_daycount:setPosition(positionX - 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 250)
+        label_daycount:setAnchorPoint(0.5,0.5)
+        back:addChild(label_daycount)
+        
+        local label_day = cc.Label:createWithSystemFont("天","",36)
+        label_day:ignoreAnchorPointForPosition(false)
+        label_day:setPosition(positionX + 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 250)
+        label_day:setAnchorPoint(0.5,0.5)
+        back:addChild(label_day)
+        
+        local line = cc.LayerColor:create(cc.c4b(255,255,255,255),200,2)
+        line:ignoreAnchorPointForPosition(false)
+        line:setAnchorPoint(0.5,0.5)
+        line:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 200)
+        back:addChild(line,1)  
+        
+        local label_chn = cc.Label:createWithSystemFont("已经学习","",36)
+        label_chn:ignoreAnchorPointForPosition(false)
+        label_chn:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 150)
+        label_chn:setAnchorPoint(0.5,0.5)
+        back:addChild(label_chn)
+    end
+
+    dayLabel()
    
     local label_everydayWord = cc.Label:createWithSystemFont(everydayWord,"",60)
     label_everydayWord:ignoreAnchorPointForPosition(false)
