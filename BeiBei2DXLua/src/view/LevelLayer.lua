@@ -3,6 +3,11 @@ require("Cocos2dConstants")
 require("CCBReaderLoad")
 require("common.global")
 
+require("view.level.LevelLayerI")
+require("view.level.LevelLayerII")
+require("view.level.RepeatLevelLayer")
+
+
 local LevelLayer = class("LevelLayer", function()
     return cc.Layer:create()
 end)
