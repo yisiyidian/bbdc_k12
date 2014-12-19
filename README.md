@@ -1,6 +1,9 @@
 BeiBeiDanCiX
 ============
 
+BeiBei2DXLua/frameworks/cocos2d-x/tools/bindings-generator/targets/lua/conversions.yaml
+line: # lua to native
+    CXLUAFUNC: "${out_value} = (  toluafix_ref_function(tolua_S,${arg_idx},0))"    
 ----------------------------------------------------------------------------------------
 开发环境
 

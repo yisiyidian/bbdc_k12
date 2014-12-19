@@ -59,12 +59,6 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
-		6602244A1A370E4B00233788 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660224311A370E4B00233788 /* AVOSCloud.framework */; };
-		6602244B1A370E4B00233788 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660224311A370E4B00233788 /* AVOSCloud.framework */; };
-		6602244C1A370E4B00233788 /* CXAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 660224321A370E4B00233788 /* CXAnalytics.mm */; };
-		6602244D1A370E4B00233788 /* CXAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 660224321A370E4B00233788 /* CXAnalytics.mm */; };
-		6602244E1A370E4B00233788 /* CXAvos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 660224331A370E4B00233788 /* CXAvos.mm */; };
-		6602244F1A370E4B00233788 /* CXAvos.mm in Sources */ = {isa = PBXBuildFile; fileRef = 660224331A370E4B00233788 /* CXAvos.mm */; };
 		660224501A370E4B00233788 /* CXStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224351A370E4B00233788 /* CXStore.cpp */; };
 		660224511A370E4B00233788 /* CXStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224351A370E4B00233788 /* CXStore.cpp */; };
 		660224521A370E4B00233788 /* CXUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224371A370E4B00233788 /* CXUtils.cpp */; };
@@ -95,6 +89,10 @@
 		AB6CB6F51A1F275E009C2562 /* ConsoleCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EE1A1F275E009C2562 /* ConsoleCommand.cpp */; };
 		AB6CB6F61A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
 		AB6CB6F71A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
+		B8C5C35B1A44218E00593E15 /* CXAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8C5C3591A44218E00593E15 /* CXAnalytics.mm */; };
+		B8C5C35C1A44218E00593E15 /* CXAvos.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8C5C35A1A44218E00593E15 /* CXAvos.mm */; };
+		B8C5C3611A44224200593E15 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C5C35F1A44224100593E15 /* AVOSCloud.framework */; };
+		B8C5C3621A44224200593E15 /* AVOSCloudSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C5C3601A44224200593E15 /* AVOSCloudSNS.framework */; };
 		B8E98D9B1A3C37F500CE3119 /* string.strings in Resources */ = {isa = PBXBuildFile; fileRef = B8E98D9D1A3C37F500CE3119 /* string.strings */; };
 		C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
 		C00FD4931938512100C6382D /* Landscape_png.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C00FD48A1938512100C6382D /* Landscape_png.cpp */; };
@@ -257,11 +255,6 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		6602242E1A370E4B00233788 /* CXAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAnalytics.h; sourceTree = "<group>"; };
-		6602242F1A370E4B00233788 /* CXAvos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAvos.h; sourceTree = "<group>"; };
-		660224311A370E4B00233788 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
-		660224321A370E4B00233788 /* CXAnalytics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAnalytics.mm; sourceTree = "<group>"; };
-		660224331A370E4B00233788 /* CXAvos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAvos.mm; sourceTree = "<group>"; };
 		660224341A370E4B00233788 /* CXProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgressHUD.h; sourceTree = "<group>"; };
 		660224351A370E4B00233788 /* CXStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXStore.cpp; sourceTree = "<group>"; };
 		660224361A370E4B00233788 /* CXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXStore.h; sourceTree = "<group>"; };
@@ -292,6 +285,12 @@
 		AB6CB6F01A1F275E009C2562 /* FileServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileServer.cpp; sourceTree = "<group>"; };
 		AB6CB6F11A1F275E009C2562 /* FileServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileServer.h; sourceTree = "<group>"; };
 		B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionInfo.h; sourceTree = "<group>"; };
+		B8C5C3591A44218E00593E15 /* CXAnalytics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAnalytics.mm; sourceTree = "<group>"; };
+		B8C5C35A1A44218E00593E15 /* CXAvos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAvos.mm; sourceTree = "<group>"; };
+		B8C5C35D1A44219A00593E15 /* CXAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAnalytics.h; sourceTree = "<group>"; };
+		B8C5C35E1A44219A00593E15 /* CXAvos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAvos.h; sourceTree = "<group>"; };
+		B8C5C35F1A44224100593E15 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = "frameworks/release-v2.6.9.1/AVOSCloud.framework"; sourceTree = "<group>"; };
+		B8C5C3601A44224200593E15 /* AVOSCloudSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloudSNS.framework; path = "frameworks/release-v2.6.9.1/AVOSCloudSNS.framework"; sourceTree = "<group>"; };
 		B8E98D9C1A3C37F500CE3119 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/string.strings; sourceTree = "<group>"; };
 		C00FD48A1938512100C6382D /* Landscape_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Landscape_png.cpp; sourceTree = "<group>"; };
 		C00FD48B1938512100C6382D /* PlayDisable_png.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayDisable_png.cpp; sourceTree = "<group>"; };
@@ -338,7 +337,6 @@
 				15A8A4881834C90F00142BE0 /* libcurl.dylib in Frameworks */,
 				50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */,
 				50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */,
-				6602244B1A370E4B00233788 /* AVOSCloud.framework in Frameworks */,
 				50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */,
 				5023813717EBBCE400990C9B /* libz.dylib in Frameworks */,
 				5023813E17EBBCE400990C9B /* QuartzCore.framework in Frameworks */,
@@ -369,7 +367,6 @@
 				3EEEDB61197107C0006A9FF8 /* MediaPlayer.framework in Frameworks */,
 				D6B061351803AC000077942B /* CoreMotion.framework in Frameworks */,
 				1AF4C403178663F200122817 /* libz.dylib in Frameworks */,
-				6602244A1A370E4B00233788 /* AVOSCloud.framework in Frameworks */,
 				50805AAF17EBBEAA004CFAD3 /* UIKit.framework in Frameworks */,
 				5023817A17EBBE8300990C9B /* OpenGLES.framework in Frameworks */,
 				F293B3CD15EB7BE500256477 /* QuartzCore.framework in Frameworks */,
@@ -378,6 +375,8 @@
 				F293B3D515EB7BE500256477 /* AVFoundation.framework in Frameworks */,
 				F293B3D915EB7BE500256477 /* Foundation.framework in Frameworks */,
 				F293B3DB15EB7BE500256477 /* CoreGraphics.framework in Frameworks */,
+				B8C5C3611A44224200593E15 /* AVOSCloud.framework in Frameworks */,
+				B8C5C3621A44224200593E15 /* AVOSCloudSNS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +502,8 @@
 		660224261A370E4B00233788 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				6602242A1A370E4B00233788 /* avos */,
+				B8C5C35D1A44219A00593E15 /* CXAnalytics.h */,
+				B8C5C35E1A44219A00593E15 /* CXAvos.h */,
 				660224341A370E4B00233788 /* CXProgressHUD.h */,
 				660224351A370E4B00233788 /* CXStore.cpp */,
 				660224361A370E4B00233788 /* CXStore.h */,
@@ -516,29 +516,11 @@
 			path = "../../cocos2d-x/common";
 			sourceTree = "<group>";
 		};
-		6602242A1A370E4B00233788 /* avos */ = {
-			isa = PBXGroup;
-			children = (
-				6602242E1A370E4B00233788 /* CXAnalytics.h */,
-				6602242F1A370E4B00233788 /* CXAvos.h */,
-				660224301A370E4B00233788 /* iOS */,
-			);
-			path = avos;
-			sourceTree = "<group>";
-		};
-		660224301A370E4B00233788 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				660224311A370E4B00233788 /* AVOSCloud.framework */,
-				660224321A370E4B00233788 /* CXAnalytics.mm */,
-				660224331A370E4B00233788 /* CXAvos.mm */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
 		660224391A370E4B00233788 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B8C5C3591A44218E00593E15 /* CXAnalytics.mm */,
+				B8C5C35A1A44218E00593E15 /* CXAvos.mm */,
 				6602243A1A370E4B00233788 /* CXMailFeedBack.mm */,
 				6602243B1A370E4B00233788 /* CXProgressHUD.mm */,
 				6602243C1A370E4B00233788 /* MBProgressHUD */,
@@ -628,6 +610,8 @@
 		F293B3CB15EB7BE500256477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8C5C35F1A44224100593E15 /* AVOSCloud.framework */,
+				B8C5C3601A44224200593E15 /* AVOSCloudSNS.framework */,
 				660224741A370FDA00233788 /* StoreKit.framework */,
 				660224721A370FC800233788 /* SystemConfiguration.framework */,
 				660224701A370FBB00233788 /* MobileCoreServices.framework */,
@@ -853,7 +837,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB6CB6F31A1F275E009C2562 /* ConnectWaitLayer.cpp in Sources */,
-				6602244F1A370E4B00233788 /* CXAvos.mm in Sources */,
 				C07828FA18B4D72E00BD2287 /* SimulatorApp.mm in Sources */,
 				5023813317EBBCE400990C9B /* AppDelegate.cpp in Sources */,
 				C00FD4971938512100C6382D /* PlayEnable_png.cpp in Sources */,
@@ -877,7 +860,6 @@
 				3EB515631952865D006966AA /* message_lite.cc in Sources */,
 				C00FD49B1938512100C6382D /* Runtime.cpp in Sources */,
 				3EB515591952865D006966AA /* extension_set.cc in Sources */,
-				6602244D1A370E4B00233788 /* CXAnalytics.mm in Sources */,
 				660224531A370E4B00233788 /* CXUtils.cpp in Sources */,
 				3EB5155B1952865D006966AA /* generated_message_util.cc in Sources */,
 				C0619CD81896894800872C26 /* Runtime_ios-mac.mm in Sources */,
@@ -903,9 +885,9 @@
 				660224501A370E4B00233788 /* CXStore.cpp in Sources */,
 				C00FD4981938512100C6382D /* Portrait_png.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
-				6602244E1A370E4B00233788 /* CXAvos.mm in Sources */,
 				C00FD4921938512100C6382D /* Landscape_png.cpp in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
+				B8C5C35B1A44218E00593E15 /* CXAnalytics.mm in Sources */,
 				C00FD49A1938512100C6382D /* Runtime.cpp in Sources */,
 				3EB515621952865D006966AA /* message_lite.cc in Sources */,
 				C06C3796191A1D1E00617BED /* ConfigParser.cpp in Sources */,
@@ -921,7 +903,6 @@
 				AB6CB6F21A1F275E009C2562 /* ConnectWaitLayer.cpp in Sources */,
 				3EB515581952865D006966AA /* extension_set.cc in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
-				6602244C1A370E4B00233788 /* CXAnalytics.mm in Sources */,
 				3EB5156C1952865D006966AA /* stringprintf.cc in Sources */,
 				3EB515681952865D006966AA /* common.cc in Sources */,
 				C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */,
@@ -932,6 +913,7 @@
 				660224581A370E4B00233788 /* MBProgressHUD.m in Sources */,
 				3EB5155C1952865D006966AA /* coded_stream.cc in Sources */,
 				C0619CD71896894800872C26 /* Runtime_ios-mac.mm in Sources */,
+				B8C5C35C1A44218E00593E15 /* CXAvos.mm in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,
 				AB6CB6F41A1F275E009C2562 /* ConsoleCommand.cpp in Sources */,
 			);
@@ -1109,7 +1091,8 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../cocos2d-x/common/avos/iOS",
+					"$(SRCROOT)/frameworks/release-v2.6.9.1",
+					"$(PROJECT_DIR)/frameworks/release-v2.6.9.1",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1143,7 +1126,8 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../cocos2d-x/common/avos/iOS",
+					"$(SRCROOT)/frameworks/release-v2.6.9.1",
+					"$(PROJECT_DIR)/frameworks/release-v2.6.9.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
