@@ -20,6 +20,7 @@ function __G__TRACKBACK__(msg)
     cclog(debug.traceback())
     cclog("----------------------------------------")
     saveLuaError("LUA ERROR: " .. tostring(msg) .. '. ' .. tostring(debug.traceback()))
+    LUA_ERROR = LUA_ERROR .. '\n' .. tostring(msg) .. '\n' .. tostring(debug.traceback())
     return msg
 end
 

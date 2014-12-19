@@ -12,6 +12,7 @@ def exportLua(isRelease, appVersionInfo, fullpathLua):
     if isRelease == '0':
         appVersionInfoLua = appVersionInfoLua + '''
 RELEASE_APP = false
+LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
     local str = ''
@@ -21,12 +22,14 @@ function getAppVersionDebugInfo()
     else
         str = 'name:' .. str .. ', channel:' .. 'unknown' .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
     end
+    str = str .. '\\n' .. LUA_ERROR
     return str
 end
 ''' % (appVersionInfo, appVersionInfo)
     else:
         appVersionInfoLua = appVersionInfoLua + '''
 RELEASE_APP = true
+LUA_ERROR = ''
 
 function getAppVersionDebugInfo() return '' end
 '''

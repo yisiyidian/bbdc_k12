@@ -1,9 +1,13 @@
 function JudgeColorAtTop(backGround)
     local word_mark 
-
-    if current_state_judge == 1 then
+    local sufferNumber = s_DATABASE_MGR.countLastNewStudyLayerSufferTables()
+    local testNumber = s_DATABASE_MGR.countFormerNewStudyLayerTestTables()
+    local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
+    local testIndex =  FindIndex(testTableIsNil)
+    
+    if testIndex == 0 then
         for i = 1,maxWrongWordCount do
-            if i > table.getn(wrongWordList) then
+            if i >  sufferNumber then
                     word_mark = cc.Sprite:create("image/newstudy/blueball.png")
             else
                     word_mark = cc.Sprite:create("image/newstudy/yellowball.png")
@@ -18,14 +22,14 @@ function JudgeColorAtTop(backGround)
         end
     else
         for i = 1,maxWrongWordCount do
-            if i > table.getn(wrongWordList_success_review) then
-                word_mark = cc.Sprite:create("image/newstudy/yellowball.png")
-            else
+            if i > testNumber then
                 word_mark = cc.Sprite:create("image/newstudy/greenball.png")
+            else
+                word_mark = cc.Sprite:create("image/newstudy/yellowball.png")
             end
 
             if word_mark ~= nil then
-                word_mark:setPosition(backGround:getContentSize().width * 0.5 + word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 - 1),s_DESIGN_HEIGHT * 0.93)
+                word_mark:setPosition(backGround:getContentSize().width * 0.5 - word_mark:getContentSize().width*1.1 * (i - maxWrongWordCount / 2 ),s_DESIGN_HEIGHT * 0.93)
                 word_mark:ignoreAnchorPointForPosition(false)
                 word_mark:setAnchorPoint(0,0.5)
                 backGround:addChild(word_mark)
@@ -163,6 +167,7 @@ function HugeWordUnderColorSquare(backGround)
 end
 
 function UpdateCurrentWordFromTrue()
+    FindWord()
     local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
 
     if testTableIsNil == 0 then
@@ -187,40 +192,59 @@ function UpdateCurrentWordFromTrue()
         end
 
     else
-
-        table.insert(wrongWordList_success_review,NewStudyLayer_wordList_wordName)
+        s_DATABASE_MGR.deleteNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)
+--        table.insert(wrongWordList_success_review,NewStudyLayer_wordList_wordName)
         currentIndex_unreview = currentIndex_unreview + 1
-
-        if table.getn(wrongWordList_success_review) ==  maxWrongWordCount then
+        local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables() 
+        if  testTableIsNil == 0 then
             NewStudyLayer_State = NewStudyLayer_State_Reward
             local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         else
-            NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
-            UpdateCurrentWordContent()
+--            NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
+--            UpdateCurrentWordContent()
             NewStudyLayer_State = NewStudyLayer_State_Choose
             local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
+--        if table.getn(wrongWordList_success_review) ==  maxWrongWordCount then
+--            NewStudyLayer_State = NewStudyLayer_State_Reward
+--            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+--            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+--            s_SCENE:replaceGameLayer(newStudyLayer)
+--        else
+--            NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
+--            UpdateCurrentWordContent()
+--            NewStudyLayer_State = NewStudyLayer_State_Choose
+--            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+--            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+--            s_SCENE:replaceGameLayer(newStudyLayer)
+--        end
 
     end
 end
 
 function UpdateCurrentWordFromFalse()
+    FindWord()
     local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
 
-    if testTableIsNil == 0 then
-    
-        table.insert(wrongWordList,NewStudyLayer_wordList_wordName)
---        currentIndex_unjudge = currentIndex_unjudge + 1
---
---        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
---
---        UpdateCurrentWordContent()
+    if current_state_judge == 1 then
 
-        if table.getn(wrongWordList) == maxWrongWordCount  then
+        --        table.insert(wrongWordList,NewStudyLayer_wordList_wordName)
+        --        currentIndex_unjudge = currentIndex_unjudge + 1
+        --
+        --        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
+
+        --        UpdateCurrentWordContent()
+        --
+        if testTableIsNil == 0  then
+            NewStudyLayer_State = NewStudyLayer_State_Choose
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+            s_SCENE:replaceGameLayer(newStudyLayer) 
+        else
             local New_study_popup = require("view.newstudy.NewStudyPopup")
             local new_study_popup = New_study_popup.create()  
             s_SCENE:popup(new_study_popup)
@@ -232,22 +256,19 @@ function UpdateCurrentWordFromFalse()
                 s_SCENE:replaceGameLayer(newStudyLayer)
             end)
 
-        else
-            NewStudyLayer_State = NewStudyLayer_State_Choose
-            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
         end
     else
-        table.insert(wrongWordList,NewStudyLayer_wordList_wordName)
-        currentIndex_unreview = currentIndex_unreview + 1
+--        table.insert(wrongWordList,NewStudyLayer_wordList_wordName)
+        --update time
+        s_DATABASE_MGR.updateNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)           
+--        currentIndex_unreview = currentIndex_unreview + 1
 
-        NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
+--        NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
 
         UpdateCurrentWordContent()
 
-        if table.getn(wrongWordList) == maxWrongWordCount  then
-            NewStudyLayer_State = NewStudyLayer_State
+       if testTableIsNil == 0  then  
+            NewStudyLayer_State = NewStudyLayer_State_Reward
             local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
@@ -342,6 +363,62 @@ function FindIndex(word)
             end                
         end)  
         return index
+    end
+end
+
+function FindWord()
+    local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
+    print("testTableIsNil is "..testTableIsNil)
+
+    if testTableIsNil == 0 then
+        if NewStudyLayer_State == 1 then
+            -- test table = nil
+
+            local lastFamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerFamiliarTables()
+            local lastUnfamiliarWord = s_DATABASE_MGR:selectLastNewStudyLayerUnfamiliarTables()
+            local lastSufferWord = s_DATABASE_MGR:selectLastNewStudyLayerSufferTables()
+
+            local lastFamiliarIndex =  FindIndex(lastFamiliarWord)
+            local lastUnfamiliarIndex = FindIndex(lastUnfamiliarWord)
+            local lastSufferIndex = FindIndex(lastSufferWord)
+
+            print("lastFamiliarIndex is "..lastFamiliarIndex.."over")
+            print("lastUnfamiliarIndex is "..lastUnfamiliarIndex.."over")
+            print("lastSufferIndex is "..lastSufferIndex.."over")
+
+            local lastIndex = lastFamiliarIndex
+
+            if lastIndex < lastUnfamiliarIndex then
+                lastIndex = lastUnfamiliarIndex
+            end
+
+            if lastIndex < lastSufferIndex then
+                lastIndex = lastSufferIndex
+            end
+
+            print("lastIndex is "..lastIndex)
+
+            local nowIndex = lastIndex + 1
+            currentIndex_unjudge = nowIndex
+            NewStudyLayer_wordList_currentWord     =   s_WordPool[NewStudyLayer_wordList[nowIndex]]
+
+        end
+
+    else
+        if NewStudyLayer_State == 1 then
+            --update current_state_judge = study
+            current_state_judge = 0
+            local formerIndex = FindIndex(testTableIsNil)
+            print("formerIndex is "..formerIndex.." over")
+            local nowIndex = formerIndex
+            NewStudyLayer_wordList_currentWord     =   s_WordPool[NewStudyLayer_wordList[nowIndex]]
+
+            --        NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
+        end
+    end
+
+    if NewStudyLayer_wordList_currentWord ~= nil then
+        UpdateCurrentWordContent()
     end
 end
 
