@@ -324,6 +324,10 @@ end
 function PersonalInfo:login()
     local back = self.intro_array[2]
     local loginData = s_CURRENT_USER.logInDatas
+    local loginData_array = {}
+    for i = 1,#loginData do
+        loginData_array[i] = loginData[i]:getDays()
+    end
     local calendar = {}
     local weekDay = {'SUN','MON','TUE','WED','THU','FRI','SAT'}
     local year_begin = tonumber(os.date('%Y',s_CURRENT_USER.localTime),10)
@@ -332,10 +336,14 @@ function PersonalInfo:login()
     local month_today = tonumber(os.date('%m',os.time()),10)
     local monthCount = (year_today - year_begin) * 12 + (month_today - month_begin) + 1
     local showMonth = monthCount
-    local showDate = os.time()
-
-    
-
+    local nowDate = os.time()
+    local nowWeekDay = tonumber(os.date('%w',nowDate),10)
+    if nowWeekDay == 0 then
+        nowWeekDay = 7
+    end
+    nowDate = nowDate + 8 * 3600
+    nowDate = nowDate - nowDate % (24 * 3600)
+    local firstDate = nowDate - (7 * (#loginData_array - 1) + nowWeekDay - 1) * 24 * 3600
     local title = cc.Label:createWithSystemFont(string.format('%d，%d',year_today,month_today),'',36)
     title:setColor(cc.c4b(251,166,24,255))
     title:setPosition(0.5 * (s_RIGHT_X - s_LEFT_X), 0.8 * back:getContentSize().height)
@@ -367,7 +375,45 @@ function PersonalInfo:login()
             local label = cc.Label:createWithSystemFont(string.format('%d',date),'',28)
             label:setColor(cc.c4b(150,150,150,255))
             label:setPosition((week + 1) / 8 * s_DESIGN_WIDTH - s_LEFT_X, (0.68 - 0.08 * math.ceil((date + offset) / 7)) * back:getContentSize().height)
-            calendar[index]:addChild(label)
+            calendar[index]:addChild(label,2)
+
+            --login circle
+            local sDate = (selectDate - selectDate % (24 * 3600))
+            if nowDate == sDate then
+                local circle = cc.Sprite:create('image/PersonalInfo/login/circle_today.png')
+                circle:setPosition(cc.p(label:getPosition()))
+                calendar[index]:addChild(circle,1)
+            end
+
+            local weekIndex = math.floor((sDate - firstDate) / (7 * 24 * 3600)) + 1
+            local dayIndex = ((sDate - firstDate) % (7 * 24 * 3600)) / (24 * 3600) + 1
+            if weekIndex > 0 and weekIndex <= #loginData_array and dayIndex > 0 and dayIndex <= 7 then
+                if loginData_array[weekIndex][dayIndex] == 1 then
+                    if dayIndex < 7 then
+                        if loginData_array[weekIndex][dayIndex + 1] == 0 then
+                            local length = 1
+                            for i = 1,dayIndex - 1 do
+                                if loginData_array[weekIndex][dayIndex - i] == 0 then
+                                    break
+                                end
+                                length = length + 1
+                            end
+                            if length == 1 then
+                                local circle = cc.Sprite:create('image/PersonalInfo/login/circle_login_days.png')
+                                circle:setPosition(cc.p(label:getPosition()))
+                                calendar[index]:addChild(circle)
+                            else
+                                local circle = ccui.Scale9Sprite:create('image/PersonalInfo/login/continious_login.png',cc.rect(0,0,72,55),cc.rect(30,0,12,55))
+                                circle:setContentSize(cc.size(55 + s_DESIGN_WIDTH / 8 * (length - 1),55))
+                                circle:setAnchorPoint(1 - 27.5 / circle:getContentSize().width,0.5)
+                                circle:setPosition(cc.p(label:getPosition()))
+                                calendar[index]:addChild(circle)
+                            end
+                        end
+                    end
+                end
+            end
+
             selectDate = selectDate + 24 * 3600
             if tonumber(os.date('%d',selectDate),10) == 1 then
                 nextDate = selectDate
