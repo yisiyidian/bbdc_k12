@@ -18,22 +18,22 @@ function PersonalInfo:ctor()
     self.totalDay = 1
     local moved = false
     local start_y = nil
-    local colorArray = {cc.c4b(56,182,236,255 ),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(143,197,46,255 )}
-    local titleArray = {'单词掌握统计','单词学习增长','登陆贝贝天数','学习效率统计'}
+    local colorArray = {cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
+    local titleArray = {'单词学习增长','登陆贝贝天数','学习效率统计'}
     self.intro_array = {}
     
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
     pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT - 280))
     pageView:setPosition(s_LEFT_X,0)
-    --pageView:setVertical(false)   
-    pageView:setCustomScrollThreshold(s_DESIGN_WIDTH / 4) 
+    pageView:setVertical(true)   
+    pageView:setCustomScrollThreshold(s_DESIGN_HEIGHT / 4) 
     
     for i = 1 , 3 do
         local layout = ccui.Layout:create()
         layout:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT))
 
-        local intro = cc.LayerColor:create(colorArray[i + 1], s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT - 280)
+        local intro = cc.LayerColor:create(cc.c4b(255,255,255,255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT - 280)
         intro:ignoreAnchorPointForPosition(false)
         intro:setAnchorPoint(0.5,0) 
         intro:setPosition(s_DESIGN_WIDTH/2 - s_LEFT_X ,0)
@@ -47,9 +47,9 @@ function PersonalInfo:ctor()
             scrollButton:runAction(cc.RepeatForever:create(move))
 
         end
-        local title = cc.Label:createWithSystemFont(titleArray[i + 1],'',36)
-        title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.75 * s_DESIGN_HEIGHT)
-        title:setColor(cc.c3b(255,255,255))
+        local title = cc.Label:createWithSystemFont(titleArray[4 - i],'',30)
+        title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.95 * intro:getContentSize().height)
+        title:setColor(colorArray[4 - i])
         layout:addChild(title)
         table.insert(self.intro_array, intro)
 
@@ -67,7 +67,7 @@ function PersonalInfo:ctor()
                 self.intro_array[curPage+1]:removeAllChildren()
             end
             lastPage = curPage
-            if curPage == 0 then
+            if curPage == 2 then
                 self:PLVI()
             elseif curPage == 1 then
                 self:login()
@@ -82,7 +82,7 @@ end
 
 
 function PersonalInfo:PLVI()
-    local back = self.intro_array[1]
+    local back = self.intro_array[3]
     local to = os.time()
 --    local from = os.time({year = tonumber(os.date("%Y", s_CURRENT_USER.localTime),10), 
 --                         month = tonumber(os.date("%Y", s_CURRENT_USER.localTime),10),  
@@ -602,178 +602,84 @@ function PersonalInfo:login()
 end   
 
 function PersonalInfo:XXTJ()
-    
-   local everydayWord = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / self.totalDay
+
+    local totalDay = 6
+    local everydayWord = math.floor(s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / totalDay)
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local wordFinished = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
-   local dayToFinish = 0
-    local back = self.intro_array[3]
-   local positionX =  0.5 * s_DESIGN_WIDTH + 150
-   -- > 99(mark 1) or not (mark 0)
-   local mark = 0
-   local string_everydayWord = "X个"
-   local string_dayToFinish = "X天"
-   local label_dayToFinish = ""
+    local dayToFinish = 100
+    if everydayWord > 0 then
+        dayToFinish = math.ceil((totalWord - s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)) / everydayWord)
+    end
+    local back = self.intro_array[1]
+
+    local drawLabel = function(label,count,unit,y)
    
-   if everydayWord == 0 then 
+        local speedLabel = cc.Label:createWithSystemFont(string.format('%s ',label),'',36)
+        speedLabel:setAnchorPoint(0,0)
+        speedLabel:setColor(cc.c4b(128,172,20,255))
+        back:addChild(speedLabel)
+
+        local speed = cc.Label:createWithSystemFont(string.format('%d',count),'',80)
+        speed:setAnchorPoint(0,0.1)
+        speed:setColor(cc.c4b(128,172,20,255))
+        back:addChild(speed)
+
+        local unit1 = cc.Label:createWithSystemFont(string.format(' %s',unit),'',36)
+        unit1:setAnchorPoint(1,0)
+        unit1:setColor(cc.c4b(128,172,20,255))
+        back:addChild(unit1)
+
+        local length = speed:getContentSize().width + speedLabel:getContentSize().width + unit1:getContentSize().width
+        speedLabel:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X - length / 2,y)
+        speed:setPosition(speedLabel:getPositionX() + speedLabel:getContentSize().width,y)
+        unit1:setPosition(speedLabel:getPositionX() + length,y)
+    end
+
+    drawLabel('日均学习',everydayWord,'个',0.5 * back:getContentSize().width)
+    local dayLabel = '还需学习'
+    if dayToFinish > 99 then
         dayToFinish = 99
-        mark = 1
-   else
-        dayToFinish = math.ceil((totalWord - wordFinished) / everydayWord)
-        
-        mark = 0
-        if dayToFinish > 99 then 
+        dayLabel = '还需学习大于'
+    end
+    drawLabel(dayLabel,dayToFinish,'天',0.75 * back:getContentSize().width)
+
+    if dayToFinish > 99 then
         dayToFinish = 99
-        mark = 1
-        end
-   end
-   
-    string_everydayWord = string.format("%s%s", tostring(everydayWord) , "个") 
-    
-    
-    if mark == 0 then
-        string_dayToFinish = string.format("%s%s", tostring(dayToFinish) , "天") 
-    else
-        string_dayToFinish = string.format("%s%s%s", "大于",tostring(dayToFinish) , "天") 
     end
-    
-   
-    local girl = sp.SkeletonAnimation:create('spine/personalInfo/bb_zhuanquan_public.json','spine/personalInfo/bb_zhuanquan_public.atlas', 1)
-    girl:setAnimation(0,'animation',true)
-    girl:ignoreAnchorPointForPosition(false)
-    girl:setAnchorPoint(0.5,0.5)
-    girl:setPosition(0.5 * s_DESIGN_WIDTH - 150 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 250)
-    back:addChild(girl)
+    local finishTime = os.time() + dayToFinish * 24 * 3600
 
-    local dayLabel = function()
-        local label_daycount = cc.Label:createWithSystemFont(self.totalDay,"",60)
-        label_daycount:ignoreAnchorPointForPosition(false)
-        label_daycount:setPosition(positionX - 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 250)
-        label_daycount:setAnchorPoint(0.5,0.5)
-        back:addChild(label_daycount)
-        
-        local label_day = cc.Label:createWithSystemFont("天","",36)
-        label_day:ignoreAnchorPointForPosition(false)
-        label_day:setPosition(positionX + 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 250)
-        label_day:setAnchorPoint(0.5,0.5)
-        back:addChild(label_day)
-        
-        local line = cc.LayerColor:create(cc.c4b(255,255,255,255),200,2)
-        line:ignoreAnchorPointForPosition(false)
-        line:setAnchorPoint(0.5,0.5)
-        line:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 200)
-        back:addChild(line,1)  
-        
-        local label_chn = cc.Label:createWithSystemFont("已经学习","",36)
-        label_chn:ignoreAnchorPointForPosition(false)
-        label_chn:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 150)
-        label_chn:setAnchorPoint(0.5,0.5)
-        back:addChild(label_chn)
-    end
+        local speedLabel = cc.Label:createWithSystemFont(string.format('完成日期预测%s年 ',os.date('%y',finishTime)),'',36)
+        speedLabel:setAnchorPoint(0,0)
+        speedLabel:setColor(cc.c4b(128,172,20,255))
+        back:addChild(speedLabel)
 
-    dayLabel()
-   
-    local label_everydayWord = cc.Label:createWithSystemFont(everydayWord,"",60)
-    label_everydayWord:ignoreAnchorPointForPosition(false)
-    label_everydayWord:setPosition(positionX - 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 50)
-    label_everydayWord:setAnchorPoint(0.5,0.5)
-    label_everydayWord:setColor(cc.c4b(255,255,255 ,255))
-    back:addChild(label_everydayWord)
-    
-    local label_ge = cc.Label:createWithSystemFont("个","",36)
-    label_ge:ignoreAnchorPointForPosition(false)
-    label_ge:setPosition(positionX + 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT + 50)
-    label_ge:setAnchorPoint(0.5,0.5)
-    label_ge:setColor(cc.c4b(255,255,255 ,255))
-    back:addChild(label_ge)
-    
-    local line_up = cc.LayerColor:create(cc.c4b(255,255,255,255),200,2)
-    line_up:ignoreAnchorPointForPosition(false)
-    line_up:setAnchorPoint(0.5,0.5)
-    line_up:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT )
-    back:addChild(line_up,1)  
-    
-    local label_everyday = cc.Label:createWithSystemFont("每日平均","",36)
-    label_everyday:ignoreAnchorPointForPosition(false)
-    label_everyday:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 50)
-    label_everyday:setAnchorPoint(0.5,0.5)
-    label_everyday:setColor(cc.c4b(255,255,255 ,255))
-    back:addChild(label_everyday)
+        local month = cc.Label:createWithSystemFont(string.format('%s',tonumber(os.date('%m',finishTime),10)),'',76)
+        month:setAnchorPoint(0,0.1)
+        month:setColor(cc.c4b(128,172,20,255))
+        back:addChild(month)
 
+        local unit1 = cc.Label:createWithSystemFont(' 月 ','',36)
+        unit1:setAnchorPoint(0,0)
+        unit1:setColor(cc.c4b(128,172,20,255))
+        back:addChild(unit1)
 
-    if mark == 0 then
-    label_dayToFinish = cc.Label:createWithSystemFont(dayToFinish,"",60)
-    label_dayToFinish:ignoreAnchorPointForPosition(false)
-        label_dayToFinish:setPosition(positionX - 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
-    label_dayToFinish:setAnchorPoint(0.5,0.5)
-    label_dayToFinish:setColor(cc.c4b(255,255,255 ,255))
-    back:addChild(label_dayToFinish)
-    
-    local label_tian = cc.Label:createWithSystemFont("天","",36)
-    label_tian:ignoreAnchorPointForPosition(false)
-        label_tian:setPosition(positionX + 50 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
-    label_tian:setAnchorPoint(0.5,0.5)
-    label_tian:setColor(cc.c4b(255,255,255 ,255))
-    back:addChild(label_tian)
-    else
-        local label_dayu = cc.Label:createWithSystemFont("大于","",36)
-        label_dayu:ignoreAnchorPointForPosition(false)
-        label_dayu:setPosition(positionX - 100 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
-        label_dayu:setAnchorPoint(0.5,0.5)
-        label_dayu:setColor(cc.c4b(255,255,255 ,255))
-        back:addChild(label_dayu)
-        
-         label_dayToFinish = cc.Label:createWithSystemFont(dayToFinish,"",60)
-        label_dayToFinish:ignoreAnchorPointForPosition(false)
-        label_dayToFinish:setPosition(positionX + 10 - s_LEFT_X ,0.5 * s_DESIGN_HEIGHT - 150)
-        label_dayToFinish:setAnchorPoint(0.5,0.5)
-        label_dayToFinish:setColor(cc.c4b(255,255,255 ,255))
-        back:addChild(label_dayToFinish)
+        local day = cc.Label:createWithSystemFont(string.format('%s',tonumber(os.date('%d',finishTime),10)),'',76)
+        day:setAnchorPoint(0,0.1)
+        day:setColor(cc.c4b(128,172,20,255))
+        back:addChild(day)
 
-        local label_tian = cc.Label:createWithSystemFont("天","",36)
-        label_tian:ignoreAnchorPointForPosition(false)
-        label_tian:setPosition(positionX + 100 - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 150)
-        label_tian:setAnchorPoint(0.5,0.5)
-        label_tian:setColor(cc.c4b(255,255,255 ,255))
-        back:addChild(label_tian)   
-    end
-    
-    
-    local line_down = cc.LayerColor:create(cc.c4b(255,255,255,255),200,2)
-    line_down:ignoreAnchorPointForPosition(false)
-    line_down:setAnchorPoint(0.5,0.5)
-    line_down:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 200)
-    back:addChild(line_down) 
-    
-    local label_finishday = cc.Label:createWithSystemFont("完成还需","",36)
-    label_finishday:ignoreAnchorPointForPosition(false)
-    label_finishday:setPosition(positionX - s_LEFT_X,0.5 * s_DESIGN_HEIGHT - 250)
-    label_finishday:setAnchorPoint(0.5,0.5)
-    label_finishday:setColor(cc.c4b(255,255,255 ,255))
-    back:addChild(label_finishday)
+        local unit2 = cc.Label:createWithSystemFont(' 日','',36)
+        unit2:setAnchorPoint(1,0)
+        unit2:setColor(cc.c4b(128,172,20,255))
+        back:addChild(unit2)
 
-    -- changing number
-    local i = 0
-    local function update(delta)
-        i = i+5
-        -- 0 up to everydayWord
-        label_everydayWord:setString( math.ceil(everydayWord / 100 * i))
-        -- 99 down to dayToFinish
-             if mark == 0 then 
-                 label_dayToFinish:setString(math.ceil(99 - (99 -dayToFinish ) / 100 * i))
-             end
-             if i >= 100 then
-                back:unscheduleUpdate()           
-             end
-        
-
-        
-    end
-    
-
-    back:scheduleUpdateWithPriorityLua(update, 0)
-
-    
+        local length = month:getContentSize().width + day:getContentSize().width + speedLabel:getContentSize().width + unit1:getContentSize().width + unit2:getContentSize().width
+        speedLabel:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X - length / 2,1.0 * back:getContentSize().width)
+        month:setPosition(speedLabel:getPositionX() + speedLabel:getContentSize().width,1.0 * back:getContentSize().width)
+        unit1:setPosition(month:getPositionX() + month:getContentSize().width,1.0 * back:getContentSize().width)
+        day:setPosition(unit1:getPositionX() + unit1:getContentSize().width,1.0 * back:getContentSize().width)
+        unit2:setPosition(speedLabel:getPositionX() + length,1.0 * back:getContentSize().width)    
 	
 end
 
