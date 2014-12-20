@@ -32,8 +32,11 @@
 #import "platform/ios/CCEAGLView-ios.h"
 
 #import <AVOSCloud/AVOSCloud.h>
-#include "CXProgressHUD.h"
+
+#import <TencentOpenAPI/TencentOAuth.h>
+
 #import "AppVersionInfo.h"
+#include "CXProgressHUD.h"
 
 @implementation AppController
 
@@ -152,6 +155,13 @@ static AppDelegate s_sharedApplication;
      */
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [TencentOAuth HandleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [TencentOAuth HandleOpenURL:url];
+}
 
 #pragma mark -
 #pragma mark Memory management

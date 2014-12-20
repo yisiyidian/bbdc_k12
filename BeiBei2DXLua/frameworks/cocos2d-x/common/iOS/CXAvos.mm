@@ -7,8 +7,12 @@
 //
 
 #include "CXAvos.h"
-#import <AVOSCloud/AVOSCloud.h>
 #include "CCLuaEngine.h"
+
+#import <AVOSCloud/AVOSCloud.h>
+// #import "CXTencentSDKCall.h"
+// [[CXTencentSDKCall getinstance] login];
+
 using namespace cocos2d;
 
 CXAvos* CXAvos::m_pInstance = nullptr;
@@ -112,7 +116,7 @@ void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandl
         if (user && user.objectId) {
             objson = AVUserToJsonStr(user).UTF8String;
         }
-        invokeLuaCallbackFunction_su(objson, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
+        invokeLuaCallbackFunction_su(objson, error ? error.localizedDescription.UTF8String : nullptr, error ? (int)error.code : 0);
     }];
 }
 
@@ -131,7 +135,7 @@ void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* er
 void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_logIn = nHandler;
     [AVUser logInWithUsernameInBackground:[NSString stringWithUTF8String:username] password:[NSString stringWithUTF8String:password] block:^(AVUser *user, NSError *error) {
-        invokeLuaCallbackFunction_li(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? error.code : 0);
+        invokeLuaCallbackFunction_li(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? (int)error.code : 0);
     }];
 }
 
