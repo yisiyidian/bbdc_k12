@@ -10,11 +10,40 @@
 #include "CCLuaEngine.h"
 
 #import <AVOSCloud/AVOSCloud.h>
-// #import "CXTencentSDKCall.h"
-// [[CXTencentSDKCall getinstance] login];
+#import "CXTencentSDKCall.h"
+
+#pragma mark -
+
+@interface CXTencentSDKCallObserver : NSObject 
+@end
+
+@implementation CXTencentSDKCallObserver
+
+- (id) init {
+    if (self = [super init]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessed) name:kLoginSuccessed object:[CXTencentSDKCall getinstance]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginFailed) name:kLoginFailed object:[CXTencentSDKCall getinstance]];
+    }
+    return self;
+}
+
+- (void)loginSuccessed {
+    TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
+    NSLog(@"");
+}
+
+- (void)loginFailed {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"结果" message:@"登录失败" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil];
+    [alertView show];
+}
+
+@end
+
+#pragma mark -
 
 using namespace cocos2d;
 
+static CXTencentSDKCallObserver* cxTencentSDKCallObserver = nil;
 CXAvos* CXAvos::m_pInstance = nullptr;
 
 CXAvos* CXAvos::getInstance() {
@@ -27,8 +56,11 @@ CXAvos* CXAvos::getInstance() {
 CXAvos::CXAvos()
 : mLuaHandlerId_dl(0)
 , mLuaHandlerId_signUp(0)
-, mLuaHandlerId_logIn(0) {
-    
+, mLuaHandlerId_logIn(0)
+, mLuaHandlerId_logInByQQ(0) {
+    if (cxTencentSDKCallObserver == nil) {
+        cxTencentSDKCallObserver = [[CXTencentSDKCallObserver alloc] init];
+    }
 }
 
 void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC nHandler) {
@@ -147,6 +179,23 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
         stack->pushString(error);
         stack->pushInt(errorcode);
         stack->executeFunctionByHandler(mLuaHandlerId_logIn, 3);
+        stack->clean();
+    }
+}
+
+void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
+    mLuaHandlerId_logInByQQ = nHandler;
+    [[CXTencentSDKCall getinstance] login];
+}
+
+void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* error, int errorcode) {
+    if (mLuaHandlerId_logInByQQ > 0) {
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(objectjson);
+        stack->pushString(error);
+        stack->pushInt(errorcode);
+        stack->executeFunctionByHandler(mLuaHandlerId_logInByQQ, 3);
         stack->clean();
     }
 }
