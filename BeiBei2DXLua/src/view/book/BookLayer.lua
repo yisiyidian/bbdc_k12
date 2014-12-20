@@ -174,10 +174,6 @@ function BookLayer.create()
         smallButton:addTouchEventListener(func_array[i])
         smallButton:setPosition(smallBack:getContentSize().width/2,0)
         smallBack:addChild(smallButton)
-        
-        local name = cc.Label:createWithSystemFont(chinese_name_array[i],"",28)
-        name:setPosition(smallButton:getContentSize().width/2,smallButton:getContentSize().height/2)
-        smallButton:addChild(name)
     end
 
    local listView = ccui.ListView:create()
