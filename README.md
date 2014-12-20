@@ -4,6 +4,10 @@ BeiBeiDanCiX
 BeiBei2DXLua/frameworks/cocos2d-x/tools/bindings-generator/targets/lua/conversions.yaml
 line: # lua to native
     CXLUAFUNC: "${out_value} = (  toluafix_ref_function(tolua_S,${arg_idx},0))"    
+
+BeiBei2DXLua/frameworks/cocos2d-x/tools/tolua/genbindings.py
+BeiBei2DXLua/frameworks/cocos2d-x/tools/tolua/cx_common_genbindings.py
+
 ----------------------------------------------------------------------------------------
 开发环境
 
@@ -17,10 +21,17 @@ line: # lua to native
 
    - 打开 .zshrc
        - # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+
+       - ### cocos2d-x-3.2
        - export COCOS_CONSOLE_ROOT=XXX/cocos2d-x-3.2/tools/cocos2d-console/bin
+       - export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d
+
+       - ### cocos2d-x-3.3
+       - export COCOS_CONSOLE_ROOT=XXX/cocos2d-x-3.3/tools/cocos2d-console/bin
+       - export NDK_ROOT=/usr/local/Cellar/android-ndk/r10c
+
        - export ANT_ROOT=/usr/local/bin
        - export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/23.0.2
-       - export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d
        - export PATH=$ANT_ROOT:$ANDROID_SDK_ROOT:$NDK_ROOT:$COCOS_CONSOLE_ROOT:$PATH
 
 3. android sdk
