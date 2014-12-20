@@ -120,7 +120,7 @@ public class AppActivity extends Cocos2dxActivity {
 	
 	@Override
 	protected void onPause() {
-		BBNDK.pushNotification();
+//		BBNDK.pushNotification();
 		
 		PluginWrapper.onPause();
 		AVAnalytics.onPause(this);
@@ -129,7 +129,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 	@Override
     protected void onResume() {
-		BBNDK.cancelNotification();
+//		BBNDK.cancelNotification();
 		
         super.onResume();
         AVAnalytics.onResume(this);
