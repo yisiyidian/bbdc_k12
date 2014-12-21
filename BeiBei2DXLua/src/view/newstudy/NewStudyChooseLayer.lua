@@ -86,7 +86,6 @@ function NewStudyChooseLayer.create()
     illustrate_know:setAnchorPoint(0.5 ,0.5)
     backGround:addChild(illustrate_know)
     
-    
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound

@@ -22,6 +22,12 @@ function ScrollViewTest:ctor()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT)
     sliderView.scrollView:addChild(backColor) 
     
+    local cloud_up = cc.Sprite:create("image/studyscene/studyscene_cloud_white_top.png")
+    cloud_up:ignoreAnchorPointForPosition(false)
+    cloud_up:setAnchorPoint(0.5, 1)
+    cloud_up:setPosition(s_DESIGN_WIDTH/2, 936)
+    backColor:addChild(cloud_up)
+    
     
 end
 
