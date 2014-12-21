@@ -194,7 +194,7 @@ function UpdateCurrentWordFromTrue()
     else
         s_DATABASE_MGR.deleteNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)
 --        table.insert(wrongWordList_success_review,NewStudyLayer_wordList_wordName)
-        currentIndex_unreview = currentIndex_unreview + 1
+--        currentIndex_unreview = currentIndex_unreview + 1
         local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables() 
         if  testTableIsNil == 0 then
             NewStudyLayer_State = NewStudyLayer_State_Reward

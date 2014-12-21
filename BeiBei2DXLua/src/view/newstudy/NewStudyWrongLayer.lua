@@ -49,7 +49,7 @@ function NewStudyWrongLayer.create()
         backGround:getContentSize().height *0.3))  
 
     local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
-        "Helvetica",30, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
+        "Helvetica",28, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_wordMeaning:setColor(BlackFont)
 
@@ -71,7 +71,7 @@ function NewStudyWrongLayer.create()
     backGround:addChild(exampleSentence)
     
     local current_word_sentence = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
-        "Helvetica",30, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
+        "Helvetica",28, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
     current_word_sentence:setColor(BlackFont)
 

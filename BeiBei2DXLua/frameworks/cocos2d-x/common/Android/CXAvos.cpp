@@ -145,6 +145,23 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
     }
 }
 
+void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
+    mLuaHandlerId_logInByQQ = nHandler;
+
+}
+
+void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* error, int errorcode) {
+    if (mLuaHandlerId_logInByQQ > 0) {
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(objectjson);
+        stack->pushString(error);
+        stack->pushInt(errorcode);
+        stack->executeFunctionByHandler(mLuaHandlerId_logInByQQ, 3);
+        stack->clean();
+    }
+}
+
 void CXAvos::logOut() {
     cocos2d::JniMethodInfo t;
     if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "logOut", "()V")) {

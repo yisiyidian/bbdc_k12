@@ -29,6 +29,9 @@ public:
     void logIn(const char* username, const char* password, CXLUAFUNC nHandler);
     void invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode);
     
+    void logInByQQ(CXLUAFUNC nHandler);
+    void invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* error, int errorcode);
+    
     void logOut();
     
 private:
@@ -38,6 +41,7 @@ private:
     int mLuaHandlerId_dl;
     int mLuaHandlerId_signUp;
     int mLuaHandlerId_logIn;
+    int mLuaHandlerId_logInByQQ;
 };
 
 #endif /* defined(__BeiBei2DXLua__CXAvos__) */

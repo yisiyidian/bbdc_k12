@@ -44,7 +44,7 @@ s_review_boss_energy_cost = 1
 s_friend_request_max_count = 30
 s_friend_max_count = 50
 
-s_allwords = "cfg/allwords.json"
+s_allwords = "cfg/newwords.json"
 s_books = 'cfg/books.json'
 s_chapters = 'cfg/chapters.json'
 s_daily = 'cfg/dailyCheckIn.json'
@@ -130,6 +130,22 @@ function DataManager.loadAllWords()
     end
 
     return wordInfo
+end
+
+function DataManager.loadBookWords()
+    local bookWord = {}
+    local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+    for i = 1, #bookName do
+        bookWord[bookName[i]] = {}
+        content = cc.FileUtils:getInstance():getStringFromFile("book/"..bookName[i]..".book")
+        local lines = split(content, "\n")
+        for j = 1, #lines do
+            if lines[j] ~= "" then
+                table.insert(bookWord[bookName[i]], lines[j])
+            end
+        end
+    end
+    return bookWord
 end
 
 -- book -------------------------------------------------------------------

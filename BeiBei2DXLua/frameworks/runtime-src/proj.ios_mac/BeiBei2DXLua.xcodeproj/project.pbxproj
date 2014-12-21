@@ -89,6 +89,12 @@
 		AB6CB6F51A1F275E009C2562 /* ConsoleCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EE1A1F275E009C2562 /* ConsoleCommand.cpp */; };
 		AB6CB6F61A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
 		AB6CB6F71A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
+		B89B86901A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		B89B86911A454C3C00E596E0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */; };
+		B89B86931A454CFC00E596E0 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B86921A454CFC00E596E0 /* libiconv.dylib */; };
+		B89B86951A454D0800E596E0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B86941A454D0800E596E0 /* libsqlite3.dylib */; };
+		B89B86971A454D1C00E596E0 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B86961A454D1C00E596E0 /* libstdc++.dylib */; };
+		B89B86A21A45636C00E596E0 /* CXTencentSDKCall.m in Sources */ = {isa = PBXBuildFile; fileRef = B89B86A11A45636C00E596E0 /* CXTencentSDKCall.m */; };
 		B8C5C35B1A44218E00593E15 /* CXAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8C5C3591A44218E00593E15 /* CXAnalytics.mm */; };
 		B8C5C35C1A44218E00593E15 /* CXAvos.mm in Sources */ = {isa = PBXBuildFile; fileRef = B8C5C35A1A44218E00593E15 /* CXAvos.mm */; };
 		B8C5C3611A44224200593E15 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C5C35F1A44224100593E15 /* AVOSCloud.framework */; };
@@ -285,6 +291,13 @@
 		AB6CB6F01A1F275E009C2562 /* FileServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileServer.cpp; sourceTree = "<group>"; };
 		AB6CB6F11A1F275E009C2562 /* FileServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileServer.h; sourceTree = "<group>"; };
 		B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionInfo.h; sourceTree = "<group>"; };
+		B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = frameworks/TencentOpenAPI/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		B89B86921A454CFC00E596E0 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
+		B89B86941A454D0800E596E0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		B89B86961A454D1C00E596E0 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libstdc++.dylib"; sourceTree = DEVELOPER_DIR; };
+		B89B86A01A45636C00E596E0 /* CXTencentSDKCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXTencentSDKCall.h; sourceTree = "<group>"; };
+		B89B86A11A45636C00E596E0 /* CXTencentSDKCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXTencentSDKCall.m; sourceTree = "<group>"; };
 		B8C5C3591A44218E00593E15 /* CXAnalytics.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAnalytics.mm; sourceTree = "<group>"; };
 		B8C5C35A1A44218E00593E15 /* CXAvos.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAvos.mm; sourceTree = "<group>"; };
 		B8C5C35D1A44219A00593E15 /* CXAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAnalytics.h; sourceTree = "<group>"; };
@@ -352,6 +365,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89B86971A454D1C00E596E0 /* libstdc++.dylib in Frameworks */,
+				B89B86951A454D0800E596E0 /* libsqlite3.dylib in Frameworks */,
+				B89B86931A454CFC00E596E0 /* libiconv.dylib in Frameworks */,
 				660224751A370FDA00233788 /* StoreKit.framework in Frameworks */,
 				660224731A370FC800233788 /* SystemConfiguration.framework in Frameworks */,
 				660224711A370FBB00233788 /* MobileCoreServices.framework in Frameworks */,
@@ -362,6 +378,7 @@
 				660224671A370F6300233788 /* Security.framework in Frameworks */,
 				660224651A370F5D00233788 /* MessageUI.framework in Frameworks */,
 				660224611A370F4100233788 /* GameController.framework in Frameworks */,
+				B89B86911A454C3C00E596E0 /* TencentOpenAPI.framework in Frameworks */,
 				15427CD5198F222200DC375D /* libluacocos2d iOS.a in Frameworks */,
 				15427CD3198F221400DC375D /* libcocos2d iOS.a in Frameworks */,
 				3EEEDB61197107C0006A9FF8 /* MediaPlayer.framework in Frameworks */,
@@ -481,6 +498,8 @@
 				5023811517EBBCAC00990C9B /* Prefix.pch */,
 				5023811617EBBCAC00990C9B /* RootViewController.h */,
 				5023811717EBBCAC00990C9B /* RootViewController.mm */,
+				B89B86A01A45636C00E596E0 /* CXTencentSDKCall.h */,
+				B89B86A11A45636C00E596E0 /* CXTencentSDKCall.m */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -610,6 +629,11 @@
 		F293B3CB15EB7BE500256477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B89B86961A454D1C00E596E0 /* libstdc++.dylib */,
+				B89B86941A454D0800E596E0 /* libsqlite3.dylib */,
+				B89B86921A454CFC00E596E0 /* libiconv.dylib */,
+				B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */,
+				B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */,
 				B8C5C35F1A44224100593E15 /* AVOSCloud.framework */,
 				B8C5C3601A44224200593E15 /* AVOSCloudSNS.framework */,
 				660224741A370FDA00233788 /* StoreKit.framework */,
@@ -805,6 +829,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89B86901A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				C03781B918BF655400FE4F13 /* res in Resources */,
 				66E529101A37EEA600D1FBB1 /* Images.xcassets in Resources */,
 				B8E98D9B1A3C37F500CE3119 /* string.strings in Resources */,
@@ -893,6 +918,7 @@
 				C06C3796191A1D1E00617BED /* ConfigParser.cpp in Sources */,
 				3EB515601952865D006966AA /* zero_copy_stream_impl_lite.cc in Sources */,
 				C00FD4961938512100C6382D /* PlayEnable_png.cpp in Sources */,
+				B89B86A21A45636C00E596E0 /* CXTencentSDKCall.m in Sources */,
 				3EB5152C19528284006966AA /* Protos.pb.cc in Sources */,
 				3EB515661952865D006966AA /* atomicops_internals_x86_msvc.cc in Sources */,
 				3EB515641952865D006966AA /* repeated_field.cc in Sources */,
@@ -1091,8 +1117,8 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/frameworks/release-v2.6.9.1",
 					"$(PROJECT_DIR)/frameworks/release-v2.6.9.1",
+					"$(PROJECT_DIR)/frameworks/TencentOpenAPI",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1105,7 +1131,10 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-fobjc-arc",
+				);
 				PROVISIONING_PROFILE = "1231d5be-5930-497a-96c0-82032240c162";
 				"PROVISIONING_PROFILE[sdk=*]" = "1231d5be-5930-497a-96c0-82032240c162";
 				SDKROOT = iphoneos;
@@ -1126,8 +1155,8 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/frameworks/release-v2.6.9.1",
 					"$(PROJECT_DIR)/frameworks/release-v2.6.9.1",
+					"$(PROJECT_DIR)/frameworks/TencentOpenAPI",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -1139,7 +1168,10 @@
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-fobjc-arc",
+				);
 				PROVISIONING_PROFILE = "95a38e0c-707e-4cb7-9e99-b7ad5ebf8780";
 				"PROVISIONING_PROFILE[sdk=*]" = "95a38e0c-707e-4cb7-9e99-b7ad5ebf8780";
 				SDKROOT = iphoneos;

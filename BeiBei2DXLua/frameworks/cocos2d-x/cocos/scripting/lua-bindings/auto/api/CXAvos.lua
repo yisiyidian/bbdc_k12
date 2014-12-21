@@ -39,6 +39,12 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXAvos] logInByQQ 
+-- @param self
+-- @param #int nHandler
+        
+--------------------------------
+-- 
 -- @function [parent=#CXAvos] downloadWordSoundFiles 
 -- @param self
 -- @param #char prefix
@@ -69,6 +75,14 @@
 --------------------------------
 -- 
 -- @function [parent=#CXAvos] invokeLuaCallbackFunction_li 
+-- @param self
+-- @param #char objectjson
+-- @param #char error
+-- @param #int errorcode
+        
+--------------------------------
+-- 
+-- @function [parent=#CXAvos] invokeLuaCallbackFunction_logInByQQ 
 -- @param self
 -- @param #char objectjson
 -- @param #char error
