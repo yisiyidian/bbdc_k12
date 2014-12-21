@@ -5,11 +5,20 @@ require('common.text')
 ---------------------------------------------------------------------------
 local s_USE_XXTEA = true
 
-s_BOOK_KEY_NCEE  = 'ncee'
-s_BOOK_KEY_CET4  = 'cet4'
-s_BOOK_KEY_CET6  = 'cet6'
-s_BOOK_KEY_IELTS = 'ielts'
-s_BOOK_KEY_TOEFL = 'toefl'
+s_BOOK_KEY_CET4     = 'cet4'
+s_BOOK_KEY_CET6     = 'cet6'
+s_BOOK_KEY_GMAT     = 'gmat'
+s_BOOK_KEY_GRE      = 'gre'
+s_BOOK_KEY_GSE      = 'gse'
+s_BOOK_KEY_IELTS    = 'ielts'
+s_BOOK_KEY_MIDDLE   = 'middle'
+s_BOOK_KEY_NCEE     = 'ncee'
+s_BOOK_KEY_PRIMARY  = 'primary'
+s_BOOK_KEY_PRO4     = 'pro4'
+s_BOOK_KEY_PRO8     = 'pro8'
+s_BOOK_KEY_SAT      = 'sat'
+s_BOOK_KEY_TOEFL    = 'toefl'
+
 
 function DataManager.clear()
     DataManager.configs = nil

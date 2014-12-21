@@ -71,9 +71,8 @@ function BookLayer.create()
     
     local name_array = {'CEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
     local full_name_array = {'NCEE', 'CET4', 'CET6', 'IELTS', 'TOEFL'}
-    local chinese_name_array = {'高考','四级','六级','雅思','托福'}
     local func_array = {}
-    
+    print_lua_table(s_DATA_MANAGER.books)
     for i = 1, 5 do
         local key = nil
         if i == 1 then
@@ -170,10 +169,6 @@ function BookLayer.create()
         end
         layer.book[i] = smallBack
         
-        local smallButton = ccui.Button:create("image/book/button_choose_book_"..name_array[i].."_click.png","image/book/button_choose_book_"..name_array[i].."_click.png","")
-        smallButton:addTouchEventListener(func_array[i])
-        smallButton:setPosition(smallBack:getContentSize().width/2,0)
-        smallBack:addChild(smallButton)
     end
 
    local listView = ccui.ListView:create()
