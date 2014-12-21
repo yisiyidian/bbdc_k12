@@ -18,10 +18,25 @@ local BookLayer             = require("view.book.BookLayer")
 local WordListLayer         = require("view.wordlist.WordMenu")
 local FriendLayer           = require("view.friend.FriendLayer")
 
+local NewStudyLayer         = require("view.newstudy.NewStudyLayer")
+
+
+
+
 local CorePlayManager = {}
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
+
+function CorePlayManager.enterNewStudyLayer()
+    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_Book_CET4]
+    CorePlayManager.currentIndex = 1
+
+    local newStudyLayer = NewStudyLayer.create(1)
+    s_SCENE:replaceGameLayer(newStudyLayer)
+end
+
+
 
 function CorePlayManager.loadConfiguration()
     -- reviewboss scene variate
