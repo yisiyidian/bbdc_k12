@@ -673,7 +673,7 @@ function Manager.selectLastNewStudyLayerSufferTables()
         end
     end
 
-    if lasttime == nil then 
+    if i == 1 then 
         return 0
     else
         for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  lastUpdate = " .. lasttime..";") do
@@ -728,9 +728,7 @@ function Manager.insertNewStudyLayerFamiliarTables(wordName)
         i = i + 1
     end
     s_logd("DataNewStudyLayerFamiliar --------------------------- end>>")
-    Manager.database:exec[[
-                DROP TABLE DataNewStudyLayerSuffer
-            ]]
+
     
 end
 
@@ -754,7 +752,7 @@ function Manager.selectLastNewStudyLayerFamiliarTables()
         end
     end
    
-    if lasttime == nil then 
+    if i == 1 then 
         return 0
     else
         for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerFamiliar where  lastUpdate = " .. lasttime..";") do
@@ -825,7 +823,7 @@ function Manager.selectLastNewStudyLayerUnfamiliarTables()
         end
     end
 
-    if lasttime == nil then 
+    if i == 1 then 
         return 0
     else
         for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerUnfamiliar where  lastUpdate = " .. lasttime..";") do
@@ -965,7 +963,7 @@ function Manager.selectFormerNewStudyLayerTestTables()
         end
     end
 
-    if lasttime == nil then 
+    if i == 1 then 
         return 0
     else
         for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where  lastUpdate = " .. lasttime..";") do

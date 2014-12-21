@@ -129,20 +129,21 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()   
     s_SCENE.gameLayerState = s_normal_game_state
 
-    s_logd('on study button clicked')
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
-    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
---    s_CorePlayManager.newPlayerState = true 
-    s_CorePlayManager.initStudyTestState()
-    s_CorePlayManager.enterStudyLayer()
-    
-    -- download sounds of current level
-    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 0, WORD_SOUND_US)
-    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 0, WORD_SOUND_EN)
-    -- download sounds of next 5th level
-    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_US)
-    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_EN)
+    s_CorePlayManager.enterNewStudyLayer()
 
+--    s_logd('on study button clicked')
+--    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
+--    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
+----    s_CorePlayManager.newPlayerState = true 
+--    s_CorePlayManager.initStudyTestState()
+--    s_CorePlayManager.enterStudyLayer()
+--     
+--    -- download sounds of current level
+--    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 0, WORD_SOUND_US)
+--    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 0, WORD_SOUND_EN)
+--    -- download sounds of next 5th level
+--    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_US)
+--    s_HttpRequestClient.downloadSoundsOfLevel(levelKey, 5, WORD_SOUND_EN)
 end
 
 function PopupNormalLevel:onTestButtonClicked(levelKey)

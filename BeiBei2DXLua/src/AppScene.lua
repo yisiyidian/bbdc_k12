@@ -315,6 +315,36 @@ function AppScene:getLevels()
 end
 
 function AppScene:loadConfigs()
+    -- new books
+    s_Book_CET4     = 'cet4'
+    s_Book_CET6     = 'cet6'
+    s_Book_GMAT     = 'gmat'
+    s_Book_GRE      = 'gre'
+    s_Book_GSE      = 'gse'
+    s_Book_IELTS    = 'ielts'
+    s_Book_MIDDLE   = 'middle'
+    s_Book_NCEE     = 'ncee'
+    s_Book_PRIMARY  = 'primary'
+    s_Book_PRO4     = 'pro4'
+    s_Book_PRO8     = 'pro8'
+    s_Book_SAT      = 'sat'
+    s_Book_TOEFL    = 'toefl'
+    s_BookWord = s_DATA_MANAGER.loadBookWords()
+    print('cet4     book word num: '..#s_BookWord[s_Book_CET4])
+    print('cet6     book word num: '..#s_BookWord[s_Book_CET6])
+    print('gamt     book word num: '..#s_BookWord[s_Book_GMAT])
+    print('gre      book word num: '..#s_BookWord[s_Book_GRE])
+    print('gse      book word num: '..#s_BookWord[s_Book_GSE])
+    print('ielts    book word num: '..#s_BookWord[s_Book_IELTS])
+    print('middle   book word num: '..#s_BookWord[s_Book_MIDDLE])
+    print('ncee     book word num: '..#s_BookWord[s_Book_NCEE])
+    print('primary  book word num: '..#s_BookWord[s_Book_PRIMARY])
+    print('pro4     book word num: '..#s_BookWord[s_Book_PRO4])
+    print('pro8     book word num: '..#s_BookWord[s_Book_PRO8])
+    print('sat      book word num: '..#s_BookWord[s_Book_SAT])
+    print('toefl    book word num: '..#s_BookWord[s_Book_TOEFL])
+    --
+
     s_DATA_MANAGER.loadBooks()
     s_DATA_MANAGER.loadChapters()
     s_DATA_MANAGER.loadDailyCheckIns()

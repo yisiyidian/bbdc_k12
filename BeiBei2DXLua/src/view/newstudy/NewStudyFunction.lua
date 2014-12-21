@@ -55,7 +55,8 @@ function PlayWordSoundAndAddSprite(backGround)
 
     local click_playsound = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
+        -- button sound          
+          playSound(s_sound_buttonEffect) 
         elseif eventType == ccui.TouchEventType.ended then
             playWordSound(NewStudyLayer_wordList_wordName)
         end
@@ -63,7 +64,7 @@ function PlayWordSoundAndAddSprite(backGround)
 
 
     local word_playsound_button = ccui.Button:create("image/newstudy/light_orange.png","image/newstudy/deep_orange.png","")
-    word_playsound_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width  , s_DESIGN_HEIGHT * 0.85)
+    word_playsound_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width / 2  - 40  , s_DESIGN_HEIGHT * 0.85)
     word_playsound_button:ignoreAnchorPointForPosition(false)
     word_playsound_button:setAnchorPoint(0.5,0.5)
     word_playsound_button:addTouchEventListener(click_playsound)
@@ -112,13 +113,13 @@ function PlayWordSoundAndAddSprite(backGround)
     backGround:addChild(wordEn)
 
     change_mark_button = ccui.Button:create("image/newstudy/light_green.png","image/newstudy/deep_green.png","")
-    change_mark_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width , s_DESIGN_HEIGHT * 0.8)
+    change_mark_button:setPosition(backGround:getContentSize().width /2 - word:getContentSize().width / 2  - 40, s_DESIGN_HEIGHT * 0.8)
     change_mark_button:ignoreAnchorPointForPosition(false)
     change_mark_button:setAnchorPoint(0.5,0.5)
     change_mark_button:addTouchEventListener(click_change)
     backGround:addChild(change_mark_button)  
 
-    label_in_change_button = cc.Label:createWithSystemFont("US","",30)
+    label_in_change_button = cc.Label:createWithSystemFont("US","",20)
     label_in_change_button:setPosition(change_mark_button:getContentSize().width /2  , change_mark_button:getContentSize().height /2 )
     label_in_change_button:setColor(cc.c4b(255,255,255,255))
     change_mark_button:addChild(label_in_change_button)
@@ -147,6 +148,10 @@ function HugeWordUnderColorSquare(backGround)
 --    end
     
     local onTouchBegan = function(touch, event)
+        local location = backGround:convertToNodeSpace(touch:getLocation())
+        if cc.rectContainsPoint(huge_word:getBoundingBox(), location) then
+        playSound(s_sound_buttonEffect) 
+        end
         return true
     end
 
@@ -154,6 +159,7 @@ function HugeWordUnderColorSquare(backGround)
     local onTouchEnded = function(touch, event)
         local location = backGround:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(huge_word:getBoundingBox(), location) then
+            s_DATABASE_MGR.insertNewStudyLayerFamiliarTables(NewStudyLayer_wordList_wordName)
             UpdateCurrentWordFromTrue()
         end
     end
@@ -170,59 +176,23 @@ function UpdateCurrentWordFromTrue()
     FindWord()
     local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
 
-    if testTableIsNil == 0 then
-        s_DATABASE_MGR.insertNewStudyLayerFamiliarTables(NewStudyLayer_wordList_wordName)
-        
---        table.insert(rightWordList,NewStudyLayer_wordList_wordName)
---        currentIndex_unjudge = currentIndex_unjudge + 1
---
---        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
---        UpdateCurrentWordContent()
-
-        if table.getn(wrongWordList) ==  maxWrongWordCount then
-            NewStudyLayer_State = NewStudyLayer_State_Mission
-            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
-        else
-            NewStudyLayer_State = NewStudyLayer_State_Choose
-            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
-        end
-
+    if current_state_judge == 1 then
+        NewStudyLayer_State = NewStudyLayer_State_Choose
+        local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+        s_SCENE:replaceGameLayer(newStudyLayer)
     else
-        s_DATABASE_MGR.deleteNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)
---        table.insert(wrongWordList_success_review,NewStudyLayer_wordList_wordName)
-        currentIndex_unreview = currentIndex_unreview + 1
-        local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables() 
         if  testTableIsNil == 0 then
             NewStudyLayer_State = NewStudyLayer_State_Reward
             local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         else
---            NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
---            UpdateCurrentWordContent()
             NewStudyLayer_State = NewStudyLayer_State_Choose
             local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
---        if table.getn(wrongWordList_success_review) ==  maxWrongWordCount then
---            NewStudyLayer_State = NewStudyLayer_State_Reward
---            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
---            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
---            s_SCENE:replaceGameLayer(newStudyLayer)
---        else
---            NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
---            UpdateCurrentWordContent()
---            NewStudyLayer_State = NewStudyLayer_State_Choose
---            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
---            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
---            s_SCENE:replaceGameLayer(newStudyLayer)
---        end
-
     end
 end
 
@@ -232,13 +202,6 @@ function UpdateCurrentWordFromFalse()
 
     if current_state_judge == 1 then
 
-        --        table.insert(wrongWordList,NewStudyLayer_wordList_wordName)
-        --        currentIndex_unjudge = currentIndex_unjudge + 1
-        --
-        --        NewStudyLayer_wordList_currentWord           =   s_WordPool[NewStudyLayer_wordList[currentIndex_unjudge]]
-
-        --        UpdateCurrentWordContent()
-        --
         if testTableIsNil == 0  then
             NewStudyLayer_State = NewStudyLayer_State_Choose
             local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
@@ -249,23 +212,8 @@ function UpdateCurrentWordFromFalse()
             local new_study_popup = New_study_popup.create()  
             s_SCENE:popup(new_study_popup)
 
-            s_SCENE:callFuncWithDelay(2.5,function()
-                NewStudyLayer_State = NewStudyLayer_State_Mission
-                local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
-                local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-                s_SCENE:replaceGameLayer(newStudyLayer)
-            end)
-
         end
     else
---        table.insert(wrongWordList,NewStudyLayer_wordList_wordName)
-        --update time
-        s_DATABASE_MGR.updateNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)           
---        currentIndex_unreview = currentIndex_unreview + 1
-
---        NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
-
-        UpdateCurrentWordContent()
 
        if testTableIsNil == 0  then  
             NewStudyLayer_State = NewStudyLayer_State_Reward
@@ -273,7 +221,7 @@ function UpdateCurrentWordFromFalse()
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         else
-            NewStudyLayer_State =NewStudyLayer_State_Choose
+            NewStudyLayer_State = NewStudyLayer_State_Choose
             local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
@@ -362,7 +310,11 @@ function FindIndex(word)
                 index = i
             end                
         end)  
+        if index == nil then
+        return 0
+        else
         return index
+        end
     end
 end
 
