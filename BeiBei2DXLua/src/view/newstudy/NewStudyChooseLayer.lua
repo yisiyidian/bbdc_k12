@@ -12,6 +12,10 @@ end)
 
 
 function NewStudyChooseLayer.create()
+    --pause music
+    cc.SimpleAudioEngine:getInstance():pauseMusic()
+
+
     -- word info
     local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
     local currentWord       = s_WordPool[currentWordName]
@@ -26,6 +30,8 @@ function NewStudyChooseLayer.create()
     local sentenceCn2       = currentWord.sentenceCn2
 
     local totalWordNum      = #s_CorePlayManager.NewStudyLayerWordList
+    
+
     
     math.randomseed(os.time())
     local randomIndexArray  = {}
@@ -86,19 +92,34 @@ function NewStudyChooseLayer.create()
     illustrate_know:setAnchorPoint(0.5 ,0.5)
     backGround:addChild(illustrate_know)
     
+    local feedback_after_click = function (sender)
+        local feedback 
+        if sender.tag == 1 then
+            feedback = cc.Sprite:create("image/newstudy/righttip.png")
+        else
+            feedback = cc.Sprite:create("image/newstudy/falsetip.png")
+        end    
+        feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
+        feedback:ignoreAnchorPointForPosition(false)
+        feedback:setAnchorPoint(0.5,0.5)
+        sender:addChild(feedback)
+    end
     
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            if sender.tag == 1 then
-                s_CorePlayManager.updateRightWordList(wordname)
-                s_CorePlayManager.enterNewStudyRightLayer()
-            else
-                s_CorePlayManager.updateWrongWordList(wordname)
-                s_CorePlayManager.enterNewStudyWrongLayer()
-            end
+        elseif eventType == ccui.TouchEventType.ended then  
+            feedback_after_click(sender) 
+            s_SCENE:callFuncWithDelay(0.5,function()  
+                    if sender.tag == 1 then
+                        s_CorePlayManager.updateRightWordList(wordname)     
+                        s_CorePlayManager.enterNewStudyRightLayer()
+                    else
+                        s_CorePlayManager.updateWrongWordList(wordname)
+                        s_CorePlayManager.enterNewStudyWrongLayer()
+                    end   
+            end)
         end
     end
 

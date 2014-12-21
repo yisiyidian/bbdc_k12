@@ -872,7 +872,7 @@ function Manager.initNewStudyLayerTestTables()
 --                DROP TABLE DataNewStudyLayerTest
 --            ]]
     Manager.database:exec[[
-        create table if not exists DataNewStudyLayerTest(
+        create table if not exists DataNewStudyLayerTestTables(
             userId TEXT,
             bookKey TEXT,
             wordName TEXT,
@@ -889,12 +889,12 @@ function Manager.insertNewStudyLayerTestTables(wordName)
     local bookKey = s_CURRENT_USER.bookKey
     local lastUpdate = os.time()
 
-    local query = "INSERT INTO DataNewStudyLayerTest VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."','"..lastUpdate.."');"
+    local query = "INSERT INTO DataNewStudyLayerTestTables VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."','"..lastUpdate.."');"
     Manager.database:exec(query)
 
     local i = 1
     s_logd("<<DataNewStudyLayerTest --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest") do
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables") do
         s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
         print ("i is "..i)
         i = i + 1
@@ -913,7 +913,7 @@ function Manager.updateNewStudyLayerTestTables(wordName)
 --    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where wordName = '"..wordName.."'") do
 --        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
             -- update
-            local command = "UPDATE DataNewStudyLayerTest SET lastUpdate = "..(os.time()).." where wordName = '"..wordName.."'"
+    local command = "UPDATE DataNewStudyLayerTestTables SET lastUpdate = "..(os.time()).." where wordName = '"..wordName.."'"
             Manager.database:exec(command)
 --        end
 --    end
@@ -928,12 +928,12 @@ function Manager.deleteNewStudyLayerTestTables(wordName)
     local lastUpdate = os.time()
 
     print("deleteDataNewStudyLayerTests")
-    local delete = Manager.database:exec("DELETE FROM DataNewStudyLayerTest where wordName = '"..wordName.."'")
+    local delete = Manager.database:exec("DELETE FROM DataNewStudyLayerTestTables where wordName = '"..wordName.."'")
     Manager.database:exec(delete) 
     
 --    print("wordName is "..wordName )
 
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest") do
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables") do
         s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
     end
 
@@ -948,7 +948,7 @@ function Manager.selectFormerNewStudyLayerTestTables()
     local lasttime
     local i = 1
     print("selectFormerNewStudyLayerTestTables")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
         if i == 1 then
             s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
             i = i + 1
@@ -965,7 +965,7 @@ function Manager.selectFormerNewStudyLayerTestTables()
     if i == 1 then 
         return 0
     else
-        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where  lastUpdate = " .. lasttime..";") do
+        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables where  lastUpdate = " .. lasttime..";") do
             return row.wordName
         end
     end
@@ -977,7 +977,7 @@ function Manager.countFormerNewStudyLayerTestTables()
     local bookKey = s_CURRENT_USER.bookKey
     local lasttime
     local i = 0
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
         i = i + 1
     end
     return i
@@ -1043,6 +1043,37 @@ function Manager.insertNewStudyLayerGroupTables(wordName)
 
 end 
 ----NewStudyLayer_group_word_table_over----
+----NewStudyLayer_data_table----
+function Manager.initNewStudyLayerDataTables()
+
+    Manager.database:exec[[
+        create table if not exists DataNewStudyLayerDataTables(
+            userId TEXT,
+            bookKey TEXT,
+            numberKey INTEGER         
+        );
+    ]]    
+
+end
+
+function Manager.insertNewStudyLayerDataTables(numberKey)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local query = "INSERT INTO DataNewStudyLayerDataTables VALUES ('"..userId.."', '"..bookKey.."', '"..numberKey.."');"
+    Manager.database:exec(query)
+
+    local i = 1
+    s_logd("<<DataNewStudyLayerTest --------------------------- begin")
+    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerDataTables") do
+        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.numberKey)
+        print ("i is "..i)
+        i = i + 1
+    end
+    s_logd("DataNewStudyLayerTest --------------------------- end>>")
+
+end
+----NewStudyLayer_data_table_over----
 ---- UserDefault -----------------------------------------------------------
 
 local is_log_out_key = 'log_out'

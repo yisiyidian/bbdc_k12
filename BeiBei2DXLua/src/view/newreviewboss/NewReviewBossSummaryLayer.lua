@@ -22,8 +22,6 @@ function NewReviewBossSummaryLayer.create()
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
-
-    AddPauseButton(backGround)
     
     local summary_label = cc.Label:createWithSystemFont("小结（4/4）","",48)
     summary_label:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.95)
