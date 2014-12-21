@@ -2,8 +2,10 @@ require("cocos.init")
 require("common.global")
 require("view.newstudy.NewStudyConfigure")
 
+local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local DetailInfo        = require("view.newstudy.NewStudyDetailInfo")
+
 
 local  NewStudyWrongLayer = class("NewStudyWrongLayer", function ()
     return cc.Layer:create()
@@ -37,6 +39,10 @@ function NewStudyWrongLayer.create()
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
+
+    local progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "red")
+    progressBar:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.95)
+    backGround:addChild(progressBar)
 
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
     soundMark:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.8)  

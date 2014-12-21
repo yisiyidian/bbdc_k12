@@ -3,6 +3,7 @@ require("common.global")
 require("view.newstudy.NewStudyConfigure")
 
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
+local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
 
 
 local  NewStudyChooseLayer = class("NewStudyChooseLayer", function ()
@@ -69,6 +70,10 @@ function NewStudyChooseLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
     
+    local progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "red")
+    progressBar:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.95)
+    backGround:addChild(progressBar)
+    
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
     soundMark:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.8)  
     backGround:addChild(soundMark)
@@ -86,9 +91,7 @@ function NewStudyChooseLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-
         elseif eventType == ccui.TouchEventType.ended then
-            print("i am tag: "..sender.tag)
             if sender.tag == 1 then
                 s_CorePlayManager.updateRightWordList(wordname)
                 s_CorePlayManager.enterNewStudyRightLayer()
