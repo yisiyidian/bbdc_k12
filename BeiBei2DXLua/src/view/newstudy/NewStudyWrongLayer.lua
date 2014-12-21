@@ -46,17 +46,6 @@ function NewStudyWrongLayer.create()
     detailInfo:setPosition(backGround:getContentSize().width *0.5, 0)  
     backGround:addChild(detailInfo)
 
-    local click_improve_button = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
-            playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            NewStudyLayer_State = NewStudyLayer_State_Slide
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
-        end
-    end
-
     local spell_drill = cc.Label:createWithSystemFont("拼写强化训练>","",32)
     spell_drill:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.25)
     spell_drill:setColor(cc.c4b(243,27,26,255))
@@ -75,9 +64,7 @@ function NewStudyWrongLayer.create()
     local onTouchEnded = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(spell_drill:getBoundingBox(), location) then
-            NewStudyLayer_State = NewStudyLayer_State_Slide
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
+            s_CorePlayManager.enterNewStudySlideLayer()
         end
     end
 

@@ -1,5 +1,4 @@
 require("cocos.init")
-
 require("common.global")
 require("view.newstudy.NewStudyConfigure")
 
@@ -10,6 +9,17 @@ local  NewStudySlideLayer = class("NewStudySlideLayer", function ()
 end)
 
 function NewStudySlideLayer.create()
+    local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+    local currentWord       = s_WordPool[currentWordName]
+    local wordname          = currentWord.wordName
+    local wordSoundMarkEn   = currentWord.wordSoundMarkEn
+    local wordSoundMarkAm   = currentWord.wordSoundMarkAm
+    local wordMeaningSmall  = currentWord.wordMeaningSmall
+    local wordMeaning       = currentWord.wordMeaning
+    local sentenceEn        = currentWord.sentenceEn
+    local sentenceCn        = currentWord.sentenceCn
+    local sentenceEn2       = currentWord.sentenceEn2
+    local sentenceCn2       = currentWord.sentenceCn2
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local mat
@@ -21,28 +31,6 @@ function NewStudySlideLayer.create()
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround) 
-
---    local richtext = ccui.RichText:create()
---
---    richtext:ignoreContentAdaptWithSize(false)
---    richtext:ignoreAnchorPointForPosition(false)
---    richtext:setAnchorPoint(cc.p(0.5,0.5))
---
---    richtext:setContentSize(cc.size(backGround:getContentSize().width *0.65, 
---        backGround:getContentSize().height *0.3))  
---
---    local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
---        "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
---
---    current_word_wordMeaning:setColor(cc.c4b(255,255,255,255))
---
---    local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
---    richtext:pushBackElement(richElement1)                   
---    richtext:setPosition(backGround:getContentSize().width *0.5, 
---        backGround:getContentSize().height *0.7)
---    richtext:setLocalZOrder(10)
---    
---    backGround:addChild(richtext) 
 
     local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",32)
     slide_word_label:setPosition(backGround:getContentSize().width *0.22,s_DESIGN_HEIGHT * 0.68)
@@ -74,13 +62,14 @@ function NewStudySlideLayer.create()
         showAnswerStateBack:runAction(action1)
                         
         s_SCENE:callFuncWithDelay(0.4,function()
-           UpdateCurrentWordFromFalse()
+            s_CorePlayManager.updateCurrentIndex()
+            s_CorePlayManager.enterNewStudyChooseLayer()
         end)
     end
 
     local size_big = backGround:getContentSize()
 
-    mat = FlipMat.create(NewStudyLayer_wordList_wordName,4,4,false,"coconut_light")
+    mat = FlipMat.create(wordname,4,4,false,"coconut_light")
     mat:setPosition(size_big.width/2, 160)
     backGround:addChild(mat)
 
@@ -94,9 +83,7 @@ function NewStudySlideLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            NewStudyLayer_State = NewStudyLayer_State_Wrong
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
+            s_CorePlayManager.enterNewStudyWrongLayer()
         end
     end
 

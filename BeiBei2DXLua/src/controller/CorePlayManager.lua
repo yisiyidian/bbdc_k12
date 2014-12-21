@@ -21,6 +21,7 @@ local FriendLayer           = require("view.friend.FriendLayer")
 local NewStudyChooseLayer   = require("view.newstudy.NewStudyChooseLayer")
 local NewStudyTrueLayer     = require("view.newstudy.NewStudyTrueLayer")
 local NewStudyWrongLayer    = require("view.newstudy.NewStudyWrongLayer")
+local NewStudySlideLayer    = require("view.newstudy.NewStudySlideLayer")
 
 
 local CorePlayManager = {}
@@ -39,6 +40,11 @@ end
 function CorePlayManager.enterNewStudyChooseLayer()
     local newStudyChooseLayer = NewStudyChooseLayer.create()
     s_SCENE:replaceGameLayer(newStudyChooseLayer)
+end
+
+function CorePlayManager.enterNewStudySlideLayer()
+    local newStudySlideLayer = NewStudySlideLayer.create()
+    s_SCENE:replaceGameLayer(newStudySlideLayer)
 end
 
 function CorePlayManager.enterNewStudyTrueLayer()
