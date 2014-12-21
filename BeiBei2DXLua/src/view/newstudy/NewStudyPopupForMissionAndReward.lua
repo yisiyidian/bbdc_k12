@@ -114,15 +114,6 @@ function NewStudyPopupForMissionAndReward.create()
             if NewStudyLayer_State == NewStudyLayer_State_Mission then
                 current_state_judge = 0
 
---                NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
---                NewStudyLayer_wordList_wordName              =   NewStudyLayer_wordList_currentWord.wordName
---                NewStudyLayer_wordList_wordSoundMarkEn       =   NewStudyLayer_wordList_currentWord.wordSoundMarkEn
---                NewStudyLayer_wordList_wordSoundMarkAm       =   NewStudyLayer_wordList_currentWord.wordSoundMarkAm
---                NewStudyLayer_wordList_wordMeaning           =   NewStudyLayer_wordList_currentWord.wordMeaning
---                NewStudyLayer_wordList_wordMeaningSmall      =   NewStudyLayer_wordList_currentWord.wordMeaningSmall
---                NewStudyLayer_wordList_sentenceEn            =   NewStudyLayer_wordList_currentWord.sentenceEn
---                NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
-
                 NewStudyLayer_State = NewStudyLayer_State_Choose
                 local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
                 s_SCENE:replaceGameLayer(newStudyLayer)

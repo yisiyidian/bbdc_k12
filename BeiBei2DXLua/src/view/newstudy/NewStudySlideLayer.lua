@@ -32,6 +32,14 @@ function NewStudySlideLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround) 
 
+    
+    local word_meaning_label = cc.Label:createWithSystemFont(wordMeaningSmall,"",50)
+    word_meaning_label:setPosition(backGround:getContentSize().width * 0.5,s_DESIGN_HEIGHT * 0.9)
+    word_meaning_label:setColor(cc.c4b(246,207,105,255))
+    word_meaning_label:ignoreAnchorPointForPosition(false)
+    word_meaning_label:setAnchorPoint(0.5,0.5)
+    backGround:addChild(word_meaning_label)
+
     local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",32)
     slide_word_label:setPosition(backGround:getContentSize().width *0.22,s_DESIGN_HEIGHT * 0.68)
     slide_word_label:setColor(cc.c4b(255,255,255,255))

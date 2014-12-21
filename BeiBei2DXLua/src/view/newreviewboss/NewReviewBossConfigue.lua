@@ -4,5 +4,3 @@ NewReviewBossLayer_State_Hint       = 3
 NewReviewBossLayer_State_Summary    = 4
 NewReviewBossLayer_State_Success_Popup   = 5
 NewReviewBossLayer_State = 1
-
-GrayColor = cc.c4b(118,218,240,100)
