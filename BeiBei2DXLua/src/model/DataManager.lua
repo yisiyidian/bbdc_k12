@@ -35,7 +35,7 @@ s_review_boss_energy_cost = 1
 s_friend_request_max_count = 30
 s_friend_max_count = 50
 
-s_allwords = "cfg/allwords.json"
+s_allwords = "cfg/newwords.json"
 s_books = 'cfg/books.json'
 s_chapters = 'cfg/chapters.json'
 s_daily = 'cfg/dailyCheckIn.json'
