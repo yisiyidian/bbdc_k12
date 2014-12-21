@@ -10,6 +10,14 @@ local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
 end)
 
+local function button_qq_clicked(sender, eventType)
+    if eventType == ccui.TouchEventType.ended then
+        playSound(s_sound_buttonEffect)
+        cx.CXAvos:getInstance():logInByQQ(function (objectjson, e, code)
+            -- onResponse_signUp_logIn(objectjson, e, code, onResponse)
+        end)
+    end
+end
 
 function IntroLayer.create(directOnLogin)
     local layer = IntroLayer.new()
@@ -101,6 +109,11 @@ function IntroLayer.create(directOnLogin)
             playSound(s_sound_buttonEffect)
         end
     end
+
+    local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
+    button_qq:setPosition(s_DESIGN_WIDTH/2, 800)
+    button_qq:addTouchEventListener(button_qq_clicked)
+    intro:addChild(button_qq)
     
     local button_visitor = ccui.Button:create()
     button_visitor:loadTextures("image/button/button_white2_denglu.png", "", "")

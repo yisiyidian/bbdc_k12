@@ -178,7 +178,7 @@ function HomeLayer.create()
     )
 
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
-    book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+    book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 - 40)
     backColor:addChild(book_back,1)
 
     local side_progress_study = cc.LayerColor:create(cc.c4b(0,154,209,255),31,480 * studyWordNum / bookWordCount)
@@ -269,10 +269,10 @@ function HomeLayer.create()
     label4:setPosition(book_back_width/2, -100)
     book_back:addChild(label4)
     
-    local label = cc.Label:createWithSystemFont(levelName,"",28)
-    label:setColor(cc.c4b(0,0,0,255))
-    label:setPosition(bigWidth/2, 280)
-    backColor:addChild(label)
+    -- local label = cc.Label:createWithSystemFont(levelName,"",28)
+    -- label:setColor(cc.c4b(0,0,0,255))
+    -- label:setPosition(bigWidth/2, 280)
+    -- backColor:addChild(label)
 
     if s_CURRENT_USER.clientData[1] == 0 then
         button_total:setVisible(false)
@@ -366,6 +366,7 @@ function HomeLayer.create()
     button_play:addChild(state_label3)   
 
     local button_data
+    local data_back
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
@@ -375,32 +376,42 @@ function HomeLayer.create()
             playSound(s_sound_buttonEffect)
             
             ----todo
-            if isFunctionUnlocked('level7') then
+            -- if isFunctionUnlocked('level7') then
 
-                local PersonalInfo = require("view.PersonalInfo")
-                local personalInfoLayer = PersonalInfo.create()
-                s_SCENE:replaceGameLayer(personalInfoLayer) 
+            --     local PersonalInfo = require("view.PersonalInfo")
+            --     local personalInfoLayer = PersonalInfo.create()
+            --     s_SCENE:replaceGameLayer(personalInfoLayer) 
 
-            else
+            -- else
 
-                local Item_popup = require("popup/PopupModel")
-                local item_popup = Item_popup.create(Site_From_Information)  
-                s_SCENE:popup(item_popup)
+            --     local Item_popup = require("popup/PopupModel")
+            --     local item_popup = Item_popup.create(Site_From_Information)  
+            --     s_SCENE:popup(item_popup)
 
-            end 
+            -- end 
             
---            if isDataShow then
---                isDataShow = false
---                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
---                local action2 = cc.CallFunc:create(function()
---                    button_data:setLocalZOrder(0)
---                end)
---                button_data:runAction(cc.Sequence:create(action1, action2))
---            else
---                isDataShow = true
---                button_data:setLocalZOrder(2)
---                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-300)))
---            end
+           if isDataShow then
+               isDataShow = false
+               local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+               local action2 = cc.CallFunc:create(function()
+                   button_data:setLocalZOrder(0)
+                   data_back:removeChildByName('PersonalInfo')
+               end)
+               button_data:runAction(cc.Sequence:create(action1, action2))
+           else
+               isDataShow = true
+               button_data:setLocalZOrder(2)
+               button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
+               if isFunctionUnlocked('level7') then
+                   local PersonalInfo = require("view.PersonalInfo")
+                   local personalInfoLayer = PersonalInfo.create()
+                   data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
+               else
+                   local Item_popup = require("popup/PopupModel")
+                   local item_popup = Item_popup.create(Site_From_Information)  
+                   s_SCENE:popup(item_popup)
+               end 
+           end
 
         end
     end
@@ -411,7 +422,7 @@ function HomeLayer.create()
     button_data:addTouchEventListener(button_data_clicked)
     backColor:addChild(button_data)
     
-    local data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT)  
+    data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT - 280)  
     data_back:setAnchorPoint(0.5,1)
     data_back:ignoreAnchorPointForPosition(false)  
     data_back:setPosition(button_data:getContentSize().width/2, 0)

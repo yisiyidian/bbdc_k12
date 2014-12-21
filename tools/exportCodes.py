@@ -45,6 +45,8 @@ def exportObjc(isRelease, appVersionInfo, fullpath):
 
     if isRelease == '0':
         appVersionInfoLua = appVersionInfoLua + '''
+// DEBUG
+        
 #define INIT_SERVER \\
     [AVOSCloud setApplicationId:LEAN_CLOUD_ID_TEST \\
                       clientKey:LEAN_CLOUD_KEY_TEST]; \\
@@ -52,6 +54,8 @@ def exportObjc(isRelease, appVersionInfo, fullpath):
 '''
     else:
         appVersionInfoLua = appVersionInfoLua + '''
+// RELEASE
+
 #define INIT_SERVER \\        
     [AVOSCloud setApplicationId:LEAN_CLOUD_ID \\
                       clientKey:LEAN_CLOUD_KEY]; \\
@@ -73,6 +77,8 @@ package c.bb.dc;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
 import android.app.Activity;
+
+// DEBUG
 public class AppVersionInfo {
     public static void initServer(Activity a, String LEAN_CLOUD_ID_TEST, String LEAN_CLOUD_KEY_TEST, String LEAN_CLOUD_ID, String LEAN_CLOUD_KEY) {
         AVOSCloud.initialize(a, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
@@ -87,6 +93,8 @@ package c.bb.dc;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
 import android.app.Activity;
+
+// RELEASE
 public class AppVersionInfo {
     public static void initServer(Activity a, String LEAN_CLOUD_ID_TEST, String LEAN_CLOUD_KEY_TEST, String LEAN_CLOUD_ID, String LEAN_CLOUD_KEY) {
         AVOSCloud.initialize(a, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
