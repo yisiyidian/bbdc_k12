@@ -1,5 +1,6 @@
 local RBWORDNUM = 10
 
+
 require("lsqlite3")
 
 -- define Manager

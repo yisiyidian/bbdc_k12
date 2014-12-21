@@ -30,11 +30,17 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.initNewStudyLayer()
+    CorePlayManager.maxWrongWordCount = 20
+
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_Book_CET4]
     -- read k from db
     CorePlayManager.currentIndex = 1
     CorePlayManager.rightWordList = {}
     CorePlayManager.wrongWordList = {}
+    CorePlayManager.rightWordNum  = 0
+    CorePlayManager.wrongWordNum  = 0
+    
+    
 end
 
 function CorePlayManager.enterNewStudyChooseLayer()
@@ -63,10 +69,12 @@ end
 
 function CorePlayManager.updateRightWordList(wordname)
     table.insert(CorePlayManager.rightWordList, wordname)
+    CorePlayManager.rightWordNum = CorePlayManager.rightWordNum + 1
 end
 
 function CorePlayManager.updateWrongWordList(wordname)
     table.insert(CorePlayManager.wrongWordList, wordname)
+    CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
 end
 
 
