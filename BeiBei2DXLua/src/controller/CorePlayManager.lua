@@ -19,7 +19,7 @@ local WordListLayer         = require("view.wordlist.WordMenu")
 local FriendLayer           = require("view.friend.FriendLayer")
 
 local NewStudyChooseLayer   = require("view.newstudy.NewStudyChooseLayer")
-local NewStudyTrueLayer     = require("view.newstudy.NewStudyTrueLayer")
+local NewStudyRightLayer     = require("view.newstudy.NewStudyRightLayer")
 local NewStudyWrongLayer    = require("view.newstudy.NewStudyWrongLayer")
 local NewStudySlideLayer    = require("view.newstudy.NewStudySlideLayer")
 
@@ -53,9 +53,9 @@ function CorePlayManager.enterNewStudySlideLayer()
     s_SCENE:replaceGameLayer(newStudySlideLayer)
 end
 
-function CorePlayManager.enterNewStudyTrueLayer()
-    local newStudyTrueLayer = NewStudyTrueLayer.create()
-    s_SCENE:replaceGameLayer(newStudyTrueLayer)
+function CorePlayManager.enterNewStudyRightLayer()
+    local newStudyRightLayer = NewStudyRightLayer.create()
+    s_SCENE:replaceGameLayer(newStudyRightLayer)
 end
 
 function CorePlayManager.enterNewStudyWrongLayer()
