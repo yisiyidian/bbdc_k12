@@ -1,7 +1,9 @@
 require("cocos.init")
-
 require("common.global")
 require("view.newstudy.NewStudyConfigure")
+
+local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
+local SoundMark         = require("view.newstudy.NewStudySoundMark")
 
 
 local  NewStudyRightLayer = class("NewStudyRightLayer", function ()
@@ -9,7 +11,20 @@ local  NewStudyRightLayer = class("NewStudyRightLayer", function ()
 end)
 
 function NewStudyRightLayer.create()
+    -- word info
+    local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+    local currentWord       = s_WordPool[currentWordName]
+    local wordname          = currentWord.wordName
+    local wordSoundMarkEn   = currentWord.wordSoundMarkEn
+    local wordSoundMarkAm   = currentWord.wordSoundMarkAm
+    local wordMeaningSmall  = currentWord.wordMeaningSmall
+    local wordMeaning       = currentWord.wordMeaning
+    local sentenceEn        = currentWord.sentenceEn
+    local sentenceCn        = currentWord.sentenceCn
+    local sentenceEn2       = currentWord.sentenceEn2
+    local sentenceCn2       = currentWord.sentenceCn2
 
+    -- ui
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local layer = NewStudyRightLayer.new()
@@ -21,6 +36,14 @@ function NewStudyRightLayer.create()
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
+    
+    local progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "red")
+    progressBar:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.95)
+    backGround:addChild(progressBar)
+
+    local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
+    soundMark:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.8)  
+    backGround:addChild(soundMark)
 
     
     local illustrate_word = cc.Label:createWithSystemFont("这个词太熟悉了，如果希望放弃复习\n点击单词将它收入你的词库吧","",32)
