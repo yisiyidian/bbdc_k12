@@ -159,6 +159,7 @@ function StudyLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
             s_SCENE.touchEventBlockLayer.lockTouch()
+            playWordSound(wordName)
             if button_detail:getRotation() == 0 then
                 if button_reddot then
                     button_detail:removeChild(button_reddot,true)

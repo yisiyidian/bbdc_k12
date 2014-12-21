@@ -99,6 +99,7 @@ function StudyLayerII.create()
     button_detail_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            playWordSound(wordName)
             if button_detail:getRotation() == 0 then
                 if button_reddot then
                     button_detail:removeChild(button_reddot,true)
