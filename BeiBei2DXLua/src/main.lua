@@ -94,6 +94,8 @@ start = function ()
 local test_code = 0
 -- *************************************
 if test_code == 0 then
+    print("ziaoang")
+    
     local startApp = function ()
         if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
             local LoadingView = require("view.LoadingView")
