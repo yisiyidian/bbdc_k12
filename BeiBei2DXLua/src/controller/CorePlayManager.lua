@@ -18,9 +18,10 @@ local BookLayer             = require("view.book.BookLayer")
 local WordListLayer         = require("view.wordlist.WordMenu")
 local FriendLayer           = require("view.friend.FriendLayer")
 
-local NewStudyLayer         = require("view.newstudy.NewStudyLayer")
-
-
+local NewStudyChooseLayer   = require("view.newstudy.NewStudyChooseLayer")
+local NewStudyTrueLayer     = require("view.newstudy.NewStudyTrueLayer")
+local NewStudyWrongLayer    = require("view.newstudy.NewStudyWrongLayer")
+local NewStudySlideLayer    = require("view.newstudy.NewStudySlideLayer")
 
 
 local CorePlayManager = {}
@@ -28,13 +29,55 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
-function CorePlayManager.enterNewStudyLayer()
-    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_Book_CET4]
-    CorePlayManager.currentIndex = 1
+function CorePlayManager.initNewStudyLayer()
+    CorePlayManager.maxWrongWordCount = 20
 
-    local newStudyLayer = NewStudyLayer.create(1)
-    s_SCENE:replaceGameLayer(newStudyLayer)
+    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_Book_CET4]
+    -- read k from db
+    CorePlayManager.currentIndex = 1
+    CorePlayManager.rightWordList = {}
+    CorePlayManager.wrongWordList = {}
+    CorePlayManager.rightWordNum  = 0
+    CorePlayManager.wrongWordNum  = 0
+    
+    
 end
+
+function CorePlayManager.enterNewStudyChooseLayer()
+    local newStudyChooseLayer = NewStudyChooseLayer.create()
+    s_SCENE:replaceGameLayer(newStudyChooseLayer)
+end
+
+function CorePlayManager.enterNewStudySlideLayer()
+    local newStudySlideLayer = NewStudySlideLayer.create()
+    s_SCENE:replaceGameLayer(newStudySlideLayer)
+end
+
+function CorePlayManager.enterNewStudyTrueLayer()
+    local newStudyTrueLayer = NewStudyTrueLayer.create()
+    s_SCENE:replaceGameLayer(newStudyTrueLayer)
+end
+
+function CorePlayManager.enterNewStudyWrongLayer()
+    local newStudyWrongLayer = NewStudyWrongLayer.create()
+    s_SCENE:replaceGameLayer(newStudyWrongLayer)
+end
+
+function CorePlayManager.updateCurrentIndex()
+    CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+end
+
+function CorePlayManager.updateRightWordList(wordname)
+    table.insert(CorePlayManager.rightWordList, wordname)
+    CorePlayManager.rightWordNum = CorePlayManager.rightWordNum + 1
+end
+
+function CorePlayManager.updateWrongWordList(wordname)
+    table.insert(CorePlayManager.wrongWordList, wordname)
+    CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+end
+
+
 
 
 

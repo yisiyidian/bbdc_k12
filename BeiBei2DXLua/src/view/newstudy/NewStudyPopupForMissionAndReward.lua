@@ -1,7 +1,7 @@
-require("view.newstudy.NewStudyFunction")
+require("cocos.init")
+require("common.global")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
 local NewStudyPopupForMissionAndReward = class ("NewStudyPopupForMissionAndReward",function ()
     return cc.Layer:create()
