@@ -29,6 +29,9 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.enterNewStudyLayer()
+    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_Book_CET4]
+    CorePlayManager.currentIndex = 1
+
     local newStudyLayer = NewStudyLayer.create(1)
     s_SCENE:replaceGameLayer(newStudyLayer)
 end
