@@ -39,8 +39,11 @@ function CorePlayManager.initNewStudyLayer()
     CorePlayManager.wrongWordList = {}
     CorePlayManager.rightWordNum  = 0
     CorePlayManager.wrongWordNum  = 0
-    
-    
+end
+
+function CorePlayManager.recordWrongWordList()
+    -- for houqi
+    -- record the wrong word into the db
 end
 
 function CorePlayManager.enterNewStudyChooseLayer()

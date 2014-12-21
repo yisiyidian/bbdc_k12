@@ -12,14 +12,16 @@ end
 
 function ScrollViewTest:ctor()
 
-    local back = cc.Sprite:create("image/summarybossscene/summaryboss_dierguan_back.png")    
-    back:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
-    self:addChild(back)
+    local SliderView = require("view.SliderView")
+    local sliderView = SliderView.create(s_DESIGN_WIDTH,s_DESIGN_HEIGHT,2 * s_DESIGN_HEIGHT)
+    self:addChild(sliderView) 
 
-    local backEffect = sp.SkeletonAnimation:create('spine/summaryboss/second-level-summary-light.json','spine/summaryboss/second-level-summary-light.atlas',1)
-    backEffect:setPosition(-30 - s_LEFT_X,0.675 * back:getContentSize().height)
-    backEffect:setAnimation(0,'animation',true)
-    self:addChild(backEffect)
+    local backColor = cc.LayerColor:create(cc.c4b(190,220,209,255), s_DESIGN_WIDTH, 2 * s_DESIGN_HEIGHT)  
+    backColor:setAnchorPoint(0.5,0.5)
+    backColor:ignoreAnchorPointForPosition(false)  
+    backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT)
+    sliderView.scrollView:addChild(backColor) 
+    
     
 end
 
