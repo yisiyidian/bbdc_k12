@@ -22,7 +22,7 @@ function ZiaoangTest.create()
     local scrollViewTest = ScrollViewTest.create()
     scrollViewTest:setAnchorPoint(0.5,0.5)
     scrollViewTest:ignoreAnchorPointForPosition(false) 
-    scrollViewTest:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
+    scrollViewTest:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2*1.5)
     layer:addChild(scrollViewTest)
     
 
