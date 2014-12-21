@@ -7,7 +7,7 @@ end)
 function SoundMark.create(wordname, soundmarkus, soundmarken)
     playWordSound(wordname)
 
-    local height = 50
+    local height = 60
 
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)
