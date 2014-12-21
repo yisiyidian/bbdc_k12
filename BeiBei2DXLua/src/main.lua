@@ -91,7 +91,7 @@ start = function ()
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- |||||||||||||||||||||||||||||||||||||
 -- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-local test_code = 0
+local test_code = 1
 -- *************************************
 if test_code == 0 then
     print("ziaoang")

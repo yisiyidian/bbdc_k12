@@ -18,8 +18,8 @@ function test()
 --    end)
 
 -- new study layer test begin
- local newStudyLayer = NewStudyLayer.create(1)
- s_SCENE:replaceGameLayer(newStudyLayer)
+ -- local newStudyLayer = NewStudyLayer.create(1)
+ -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
 
@@ -37,9 +37,9 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
- -- local IntroLayer = require("view.ScrollviewTest")
- -- local introLayer = IntroLayer.create()
- -- s_SCENE:replaceGameLayer(introLayer) 
+ local IntroLayer = require("view.ScrollviewTest")
+ local introLayer = IntroLayer.create(s_DESIGN_WIDTH,s_DESIGN_HEIGHT,2 * s_DESIGN_HEIGHT)
+ s_SCENE:replaceGameLayer(introLayer) 
     
 --    local startApp = function ()
 --        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
