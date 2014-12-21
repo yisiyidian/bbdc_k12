@@ -15,6 +15,14 @@ end)
 
 function NewReviewBossMainLayer.create()
 
+    s_DATABASE_MGR:initNewStudyLayerUnfamiliarTables()
+    local unfamiliarTableIsNil = s_DATABASE_MGR:selectLastNewStudyLayerUnfamiliarTables()
+    if unfamiliarTableIsNil == 0 then
+    	
+    else
+        print("unfamiliarTableIsNil is "..unfamiliarTableIsNil)
+    end
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local layer = NewReviewBossMainLayer.new()
@@ -73,7 +81,7 @@ function NewReviewBossMainLayer.create()
 
     local hint_label = cc.Label:createWithSystemFont("提示","",24)
     hint_label:setPosition(hint_button:getContentSize().width / 2,hint_button:getContentSize().height / 2)
-    hint_label:setColor(WhiteFont)
+    hint_label:setColor(cc.c4b(255,255,255,255))
     hint_label:ignoreAnchorPointForPosition(false)
     hint_label:setAnchorPoint(0.5,0.5)
     hint_button:addChild(hint_label)

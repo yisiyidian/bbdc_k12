@@ -50,12 +50,12 @@ function NewReviewBossHintLayer.create()
     
     local hint_label = cc.Label:createWithSystemFont("提示","",24)
     hint_label:setPosition(hint_button:getContentSize().width / 2,hint_button:getContentSize().height / 2)
-    hint_label:setColor(WhiteFont)
+    hint_label:setColor(cc.c4b(255,255,255,255))
     hint_label:ignoreAnchorPointForPosition(false)
     hint_label:setAnchorPoint(0.5,0.5)
     hint_button:addChild(hint_label)
     
-    local blue_line = cc.LayerColor:create(BlueLine, 10, 300)  
+    local blue_line = cc.LayerColor:create(cc.c4b(49,188,251,255), 10, 300)  
     blue_line:setAnchorPoint(0.5,1)
     blue_line:ignoreAnchorPointForPosition(false)
     blue_line:setPosition(hint_button:getContentSize().width/2,hint_button:getContentSize().height/2)
@@ -70,14 +70,14 @@ function NewReviewBossHintLayer.create()
     
     local wordSoundMarkAm = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordSoundMarkAm,"",32)
     wordSoundMarkAm:setPosition(blue_back:getContentSize().width *0.1,blue_back:getContentSize().height * 0.9)
-    wordSoundMarkAm:setColor(BlackFont)
+    wordSoundMarkAm:setColor(cc.c4b(0,0,0,255))
     wordSoundMarkAm:ignoreAnchorPointForPosition(false)
     wordSoundMarkAm:setAnchorPoint(0,0.5)
     blue_back:addChild(wordSoundMarkAm)
     
     local chineseMeaning = cc.Label:createWithSystemFont("中文释义","",32)
     chineseMeaning:setPosition(blue_back:getContentSize().width *0.1,blue_back:getContentSize().height * 0.8)
-    chineseMeaning:setColor(BlackFont)
+    chineseMeaning:setColor(cc.c4b(0,0,0,255))
     chineseMeaning:ignoreAnchorPointForPosition(false)
     chineseMeaning:setAnchorPoint(0,0.5)
     blue_back:addChild(chineseMeaning)
@@ -87,13 +87,13 @@ function NewReviewBossHintLayer.create()
     local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
         "Helvetica",30, cc.size(blue_back:getContentSize().width *0.8, 200), cc.TEXT_ALIGNMENT_LEFT)
 
-    current_word_wordMeaning:setColor(BlackFont)
+    current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
 
     local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
 
     local exampleSentence = cc.Label:createWithSystemFont("例句","",32)
     exampleSentence:setPosition(blue_back:getContentSize().width *0.1,blue_back:getContentSize().height * 0.5)
-    exampleSentence:setColor(BlackFont)
+    exampleSentence:setColor(cc.c4b(0,0,0,255))
     exampleSentence:ignoreAnchorPointForPosition(false)
     exampleSentence:setAnchorPoint(0,0.5)
     blue_back:addChild(exampleSentence)
@@ -101,7 +101,7 @@ function NewReviewBossHintLayer.create()
     local current_word_sentence = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
         "Helvetica",30, cc.size(blue_back:getContentSize().width *0.8, 200), cc.TEXT_ALIGNMENT_LEFT)
 
-    current_word_sentence:setColor(BlackFont)
+    current_word_sentence:setColor(cc.c4b(0,0,0,255))
 
     local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence)       
     

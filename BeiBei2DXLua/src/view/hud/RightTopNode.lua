@@ -83,7 +83,7 @@ function RightTopNode:ctor()
             
             
             local NewReviewBossLayer = require("view.newreviewboss.NewReviewBossLayer")
-            local newReviewBossLayer = NewReviewBossLayer.create(4)
+            local newReviewBossLayer = NewReviewBossLayer.create(1)
             s_SCENE:replaceGameLayer(newReviewBossLayer)
 
         end

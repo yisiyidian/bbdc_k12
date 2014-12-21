@@ -77,7 +77,7 @@ function NewReviewBossSummaryLayer.create()
         local current_word_wordMeaning = cc.LabelTTF:create (meaning[i],
             "Helvetica",24, cc.size(custom_sprite:getContentSize().width *0.8, 200), cc.TEXT_ALIGNMENT_LEFT)
 
-        current_word_wordMeaning:setColor(BlackFont)
+        current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
 
         local richElement = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
 
@@ -130,7 +130,7 @@ function NewReviewBossSummaryLayer.create()
     
     local nextButton_label = cc.Label:createWithSystemFont("下一组","",30)
     nextButton_label:setPosition(nextButton:getContentSize().width / 2,nextButton: getContentSize().height / 2)
-    nextButton_label:setColor(WhiteFont)
+    nextButton_label:setColor(cc.c4b(255,255,255,255))
     nextButton_label:ignoreAnchorPointForPosition(false)
     nextButton_label:setAnchorPoint(0.5,0.5)
     nextButton:addChild(nextButton_label)
