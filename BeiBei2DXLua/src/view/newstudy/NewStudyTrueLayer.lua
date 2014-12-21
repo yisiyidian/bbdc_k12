@@ -138,6 +138,7 @@ function NewStudyTrueLayer.create()
     choose_study_button:addChild(choose_study_text)
     
     local onTouchBegan = function(touch, event)
+        playSound(s_sound_buttonEffect) 
         return true
     end
 

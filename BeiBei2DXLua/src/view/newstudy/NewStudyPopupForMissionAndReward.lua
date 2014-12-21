@@ -135,7 +135,14 @@ function NewStudyPopupForMissionAndReward.create()
                     s_SCENE:removeAllPopups()           
                 end)
             elseif NewStudyLayer_State == NewStudyLayer_State_Reward then
-                print("congratulation")
+
+                        local level = require('view.LevelLayer')
+                        local layer = level.create()
+                        s_SCENE.popupLayer:removeAllChildren()
+                        s_SCENE:replaceGameLayer(layer)
+
+              
+
             end              
         end
     end
@@ -151,6 +158,7 @@ function NewStudyPopupForMissionAndReward.create()
         choose_mission_text = cc.Label:createWithSystemFont("趁热打铁","",32)
     elseif NewStudyLayer_State == NewStudyLayer_State_Reward then
         choose_mission_text = cc.Label:createWithSystemFont("完成任务","",32)
+        current_state_judge = 1
     end
 
     choose_mission_text:setPosition(choose_mission_button:getContentSize().width * 0.5,choose_mission_button:getContentSize().height * 0.5)

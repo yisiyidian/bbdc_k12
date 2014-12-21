@@ -165,7 +165,7 @@ function NewStudyWrongLayer.create()
     local spell_size = spell_drill:getContentSize()
     
     local onTouchBegan = function(touch, event)
-
+        playSound(s_sound_buttonEffect) 
         return true
     end
     

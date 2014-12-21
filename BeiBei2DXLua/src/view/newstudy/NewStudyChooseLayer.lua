@@ -162,6 +162,7 @@ function NewStudyChooseLayer.create()
                     if s_CURRENT_USER.newstudytruelayerMask == 1 then
                         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                  
                         s_SCENE:callFuncWithDelay(1,function()
+                            s_DATABASE_MGR.insertNewStudyLayerFamiliarTables(NewStudyLayer_wordList_wordName)
                             UpdateCurrentWordFromTrue()                     
                             s_SCENE.touchEventBlockLayer.unlockTouch()
                         end)
@@ -187,21 +188,24 @@ function NewStudyChooseLayer.create()
                     end)               
                 end
             else
-                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then               
+                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then  
+                    s_DATABASE_MGR.deleteNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)               
                     ShowAnswerTrueBack(sender)                   
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                  
                     s_SCENE:callFuncWithDelay(1,function()
+         
                         UpdateCurrentWordFromTrue()                     
                         s_SCENE.touchEventBlockLayer.unlockTouch()
                     end)
                 else            
+                    s_DATABASE_MGR.updateNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)
                     ShowAnswerFalseBack(sender)                    
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                     s_SCENE:callFuncWithDelay(1,function()
---                        NewStudyLayer_State = NewStudyLayer_State_Wrong
---                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
---                        s_SCENE:replaceGameLayer(newStudyLayer) 
-                        UpdateCurrentWordFromFalse()                       
+                        NewStudyLayer_State = NewStudyLayer_State_Wrong
+                        local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+                        s_SCENE:replaceGameLayer(newStudyLayer)                      
                         s_SCENE.touchEventBlockLayer.unlockTouch()
                     end)
                 end
@@ -283,9 +287,14 @@ function NewStudyChooseLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            NewStudyLayer_State = NewStudyLayer_State_Wrong
+            if current_state_judge == 1 then
             s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
             s_DATABASE_MGR.insertNewStudyLayerGroupTables(NewStudyLayer_wordList_wordName)
+            else
+            s_DATABASE_MGR.updateNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)           
+            end
+            NewStudyLayer_State = NewStudyLayer_State_Wrong
+            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end

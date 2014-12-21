@@ -53,12 +53,26 @@ function NewReviewBossSuccessPopup.create()
     girl:addAnimation(0, 'animation', true)
     girl:setPosition(back:getContentSize().width *0.33,back:getContentSize().height * 0.25)
     back:addChild(girl)
+    
+    local button_goon_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
+
+            local level = require('view.LevelLayer')
+            local layer = level.create()
+            s_SCENE.popupLayer:removeAllChildren()
+            s_SCENE:replaceGameLayer(layer)
+
+        end
+    end
 
     local button_goon = ccui.Button:create("image/newreviewboss/nextgroupbegin.png","image/newreviewboss/nextgroupend.png","")
     button_goon:setPosition(back:getContentSize().width * 0.5,back:getContentSize().height * 0.2)
     button_goon:setTitleText("确定")
     button_goon:setTitleFontSize(30)
---    button_goon:addTouchEventListener(button_goon_clicked)
+    button_goon:addTouchEventListener(button_goon_clicked)
     back:addChild(button_goon)
 
 

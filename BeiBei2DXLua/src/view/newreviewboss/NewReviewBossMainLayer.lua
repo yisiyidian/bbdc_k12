@@ -15,6 +15,14 @@ end)
 
 function NewReviewBossMainLayer.create()
 
+    s_DATABASE_MGR:initNewStudyLayerUnfamiliarTables()
+    local unfamiliarTableIsNil = s_DATABASE_MGR:selectLastNewStudyLayerUnfamiliarTables()
+    if unfamiliarTableIsNil == 0 then
+    	
+    else
+        print("unfamiliarTableIsNil is "..unfamiliarTableIsNil)
+    end
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local layer = NewReviewBossMainLayer.new()

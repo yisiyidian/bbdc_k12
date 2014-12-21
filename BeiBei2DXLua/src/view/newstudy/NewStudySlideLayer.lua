@@ -58,6 +58,7 @@ function NewStudySlideLayer.create()
     backGround:addChild(slide_word_label)
 
     local success = function()   
+        playSound(s_sound_learn_true) 
     
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
         showAnswerStateBack:setPosition(backGround:getContentSize().width *1.5, 768)
@@ -99,7 +100,7 @@ function NewStudySlideLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            NewStudyLayer_State = NewStudyLayer_State_Choose
+            NewStudyLayer_State = NewStudyLayer_State_Wrong
             local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
             s_SCENE:replaceGameLayer(newStudyLayer)
         end
