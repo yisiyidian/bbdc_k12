@@ -32,7 +32,7 @@ end
 function CorePlayManager.initNewStudyLayer()
     CorePlayManager.maxWrongWordCount = 20
 
-    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_Book_CET4]
+    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_BOOK_KEY_CET4]
     -- read k from db
     CorePlayManager.currentIndex = 1
     CorePlayManager.rightWordList = {}
