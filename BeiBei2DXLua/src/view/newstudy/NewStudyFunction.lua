@@ -148,7 +148,10 @@ function HugeWordUnderColorSquare(backGround)
 --    end
     
     local onTouchBegan = function(touch, event)
+        local location = backGround:convertToNodeSpace(touch:getLocation())
+        if cc.rectContainsPoint(huge_word:getBoundingBox(), location) then
         playSound(s_sound_buttonEffect) 
+        end
         return true
     end
 
@@ -208,13 +211,6 @@ function UpdateCurrentWordFromFalse()
             local New_study_popup = require("view.newstudy.NewStudyPopup")
             local new_study_popup = New_study_popup.create()  
             s_SCENE:popup(new_study_popup)
-
-            s_SCENE:callFuncWithDelay(2.5,function()
-                NewStudyLayer_State = NewStudyLayer_State_Mission
-                local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
-                local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-                s_SCENE:replaceGameLayer(newStudyLayer)
-            end)
 
         end
     else

@@ -34,7 +34,7 @@ function NewStudyWrongLayer.create()
 
     local chineseMeaning = cc.Label:createWithSystemFont("中文释义","",32)
     chineseMeaning:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.63)
-    chineseMeaning:setColor(BlackFont)
+    chineseMeaning:setColor(cc.c4b(0,0,0,255))
     chineseMeaning:ignoreAnchorPointForPosition(false)
     chineseMeaning:setAnchorPoint(0,0.5)
     backGround:addChild(chineseMeaning)
@@ -51,7 +51,7 @@ function NewStudyWrongLayer.create()
     local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
         "Helvetica",28, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
-    current_word_wordMeaning:setColor(BlackFont)
+    current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
 
     local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
     richtext:pushBackElement(richElement1)                   
@@ -65,7 +65,7 @@ function NewStudyWrongLayer.create()
 
     local exampleSentence = cc.Label:createWithSystemFont("例句","",32)
     exampleSentence:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.45)
-    exampleSentence:setColor(BlackFont)
+    exampleSentence:setColor(cc.c4b(0,0,0,255))
     exampleSentence:ignoreAnchorPointForPosition(false)
     exampleSentence:setAnchorPoint(0,0.5)
     backGround:addChild(exampleSentence)
@@ -73,7 +73,7 @@ function NewStudyWrongLayer.create()
     local current_word_sentence = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
         "Helvetica",28, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
 
-    current_word_sentence:setColor(BlackFont)
+    current_word_sentence:setColor(cc.c4b(0,0,0,255))
 
     local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence)                           
     richtext:pushBackElement(richElement2) 
@@ -156,7 +156,7 @@ function NewStudyWrongLayer.create()
 
     local spell_drill = cc.Label:createWithSystemFont("拼写强化训练>","",32)
     spell_drill:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.25)
-    spell_drill:setColor(DeepRedFont)
+    spell_drill:setColor(cc.c4b(243,27,26,255))
     spell_drill:ignoreAnchorPointForPosition(false)
     spell_drill:setAnchorPoint(0,0.5)
     backGround:addChild(spell_drill)
@@ -200,7 +200,7 @@ function NewStudyWrongLayer.create()
 
     local choose_next_text = cc.Label:createWithSystemFont("下一个","",32)
     choose_next_text:setPosition(choose_next_button:getContentSize().width * 0.5,choose_next_button:getContentSize().height * 0.5)
-    choose_next_text:setColor(DeepBlueFont)
+    choose_next_text:setColor(cc.c4b(31,70,102,255))
     choose_next_text:ignoreAnchorPointForPosition(false)
     choose_next_text:setAnchorPoint(0.5,0.5)
     choose_next_button:addChild(choose_next_text)

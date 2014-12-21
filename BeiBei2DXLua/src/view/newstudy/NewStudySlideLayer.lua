@@ -52,7 +52,7 @@ function NewStudySlideLayer.create()
 
     local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",32)
     slide_word_label:setPosition(backGround:getContentSize().width *0.22,s_DESIGN_HEIGHT * 0.68)
-    slide_word_label:setColor(WhiteFont)
+    slide_word_label:setColor(cc.c4b(255,255,255,255))
     slide_word_label:ignoreAnchorPointForPosition(false)
     slide_word_label:setAnchorPoint(0,0.5)
     backGround:addChild(slide_word_label)
@@ -76,10 +76,10 @@ function NewStudySlideLayer.create()
         right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
         showAnswerStateBack:addChild(right_wordname)
 
-        local action1 = cc.MoveTo:create(0.5,cc.p(backGround:getContentSize().width /2, 768))
+        local action1 = cc.MoveTo:create(0.2,cc.p(backGround:getContentSize().width /2, 768))
         showAnswerStateBack:runAction(action1)
                         
-        s_SCENE:callFuncWithDelay(1,function()
+        s_SCENE:callFuncWithDelay(0.4,function()
            UpdateCurrentWordFromFalse()
         end)
     end

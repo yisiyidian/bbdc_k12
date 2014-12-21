@@ -26,18 +26,6 @@ if NewStudyLayer_wordList_currentWord ~= nil then
     NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
 end
 
---rightWordList         = {}
-wrongWordList         = {}
-wrongWordList_success_review = {}
-maxWrongWordCount     = 3
 
-SilverFont = cc.c4b(134,167,218,255)
-LightBlueFont = cc.c4b(39,127,182,255)
-DeepBlueFont = cc.c4b(31,70,102,255)
-BlueLine = cc.c4b(49,188,251,255)
-BlueInButtonFont = cc.c4b(22,116,173,255)
-DeepRedFont = cc.c4b(243,27,26,255)
-LightRedFont = cc.c4b(255,72,76,255)
-WhiteFont = cc.c4b(255,255,255,255)
-BlackFont = cc.c4b(0,0,0,255)
-YellowFont = cc.c4b(227,236,82,255)
+maxWrongWordCount     = 20
+
