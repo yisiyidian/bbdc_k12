@@ -46,12 +46,6 @@
 // cocos2d application instance
 static AppDelegate s_sharedApplication;
 
-#define LEAN_CLOUD_ID_TEST   @"gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
-#define LEAN_CLOUD_KEY_TEST  @"x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
-
-#define LEAN_CLOUD_ID        @"94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
-#define LEAN_CLOUD_KEY       @"lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     INIT_SERVER

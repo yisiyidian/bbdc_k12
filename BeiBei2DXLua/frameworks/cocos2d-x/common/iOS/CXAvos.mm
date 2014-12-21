@@ -10,7 +10,39 @@
 #include "CCLuaEngine.h"
 
 #import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloudSNS/AVOSCloudSNS.h>
+#import <AVOSCloudSNS/AVUser+SNS.h>
 #import "CXTencentSDKCall.h"
+
+NSString* AVUserToJsonStr(AVUser* user) {
+    NSMutableDictionary* json = [NSMutableDictionary dictionary];
+    
+    json[@"objectId"] = user.objectId;
+    json[@"username"] = user.username;
+    json[@"sessionToken"] = user.sessionToken;
+    json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
+    json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
+    for (NSString* key in user.allKeys) {
+        id obj = [user objectForKey:key];
+        if ([obj isKindOfClass:[NSString class]]) {
+            json[key] = ((NSString*)obj);
+        } else if ([obj isKindOfClass:[NSNumber class]]) {
+            json[key] = ((NSNumber*)obj);
+        }
+    }
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
+                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    if (! jsonData) {
+        CCLOG("AVUserToJsonStr Got an error: %s", error.localizedDescription.UTF8String);
+        return @"{}";
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        return jsonString;
+    }
+}
 
 #pragma mark -
 
@@ -23,18 +55,30 @@
     if (self = [super init]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessed) name:kLoginSuccessed object:[CXTencentSDKCall getinstance]];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginFailed) name:kLoginFailed object:[CXTencentSDKCall getinstance]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserInfo) name:kGetUserInfoResponse object:[CXTencentSDKCall getinstance]];
     }
     return self;
 }
 
 - (void)loginSuccessed {
     TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
-    NSLog(@"");
+    BOOL isGotUserInfo = [oauth getUserInfo];
 }
 
 - (void)loginFailed {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"结果" message:@"登录失败" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil];
     [alertView show];
+}
+
+- (void)getUserInfo:(NSNotification*)info {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
+        [AVUser loginWithAuthData:@{@"openid":oauth.openId, @"access_token":oauth.accessToken, @"expires_in":[NSString stringWithFormat:@"%ld", (long)oauth.expirationDate.timeIntervalSince1970]}
+                         platform:AVOSCloudSNSPlatformQQ
+                            block:^(AVUser *user, NSError *error) {
+            CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? (int)error.code : 0);
+        }];
+    });
 }
 
 @end
@@ -105,36 +149,6 @@ void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* file
         stack->pushBoolean(isSaved);
         stack->executeFunctionByHandler(mLuaHandlerId_dl, 4);
         stack->clean();
-    }
-}
-
-NSString* AVUserToJsonStr(AVUser* user) {
-    NSMutableDictionary* json = [NSMutableDictionary dictionary];
-    
-    json[@"objectId"] = user.objectId;
-    json[@"username"] = user.username;
-    json[@"sessionToken"] = user.sessionToken;
-    json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
-    json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
-    for (NSString* key in user.allKeys) {
-        id obj = [user objectForKey:key];
-        if ([obj isKindOfClass:[NSString class]]) {
-            json[key] = ((NSString*)obj);
-        } else if ([obj isKindOfClass:[NSNumber class]]) {
-            json[key] = ((NSNumber*)obj);
-        }
-    }
-    
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
-                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
-                                                         error:&error];
-    if (! jsonData) {
-        CCLOG("AVUserToJsonStr Got an error: %s", error.localizedDescription.UTF8String);
-        return @"{}";
-    } else {
-        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        return jsonString;
     }
 }
 
