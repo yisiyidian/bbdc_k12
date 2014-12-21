@@ -390,10 +390,18 @@ function PersonalInfo:login()
             if weekIndex > 0 and weekIndex <= #loginData_array and dayIndex > 0 and dayIndex <= 7 then
                 if loginData_array[weekIndex][dayIndex] == 1 then
                     if dayIndex < 7 then
-                        if loginData_array[weekIndex][dayIndex + 1] == 0 then
+                        if loginData_array[weekIndex][dayIndex + 1] == 0 or dayIndex == 6 then
                             local length = 1
-                            for i = 1,dayIndex - 1 do
-                                if loginData_array[weekIndex][dayIndex - i] == 0 then
+                            for i = 1,dayIndex do
+                                if i < dayIndex then
+                                    if loginData_array[weekIndex][dayIndex - i] == 0 then
+                                        break
+                                    end
+                                elseif i == dayIndex and weekIndex > 1 then
+                                    if loginData_array[weekIndex - 1][7] == 0 then
+                                        break
+                                    end
+                                else
                                     break
                                 end
                                 length = length + 1
@@ -410,6 +418,10 @@ function PersonalInfo:login()
                                 calendar[index]:addChild(circle)
                             end
                         end
+                    elseif dayIndex == 7 and weekIndex < #loginData_array and loginData_array[weekIndex + 1][1] == 0 then
+                        local circle = cc.Sprite:create('image/PersonalInfo/login/circle_login_days.png')
+                        circle:setPosition(cc.p(label:getPosition()))
+                        calendar[index]:addChild(circle)
                     end
                 end
             end
