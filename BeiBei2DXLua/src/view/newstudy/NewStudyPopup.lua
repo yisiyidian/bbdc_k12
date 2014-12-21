@@ -35,7 +35,7 @@ function NewStudyPopup.create()
 
     end)
     
-    local popup_text = cc.Label:createWithSystemFont("哦也，已经成功收集到"..maxWrongWordCount.."个生词了！","",26)
+    local popup_text = cc.Label:createWithSystemFont("哦也，已经成功收集到"..s_CorePlayManager.maxWrongWordCount.."个生词了！","",26)
     popup_text:setPosition(popup_window:getContentSize().width / 2,popup_window:getContentSize().height *0.3)
     popup_text:setColor(cc.c4b(0,0,0,255))
     popup_text:ignoreAnchorPointForPosition(false)

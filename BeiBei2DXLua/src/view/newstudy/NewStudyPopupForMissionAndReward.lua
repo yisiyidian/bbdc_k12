@@ -43,11 +43,11 @@ function NewStudyPopupForMissionAndReward.create()
    
     if NewStudyLayer_State == NewStudyLayer_State_Mission then
         firstparttitle = cc.LabelTTF:create ("已完成","Helvetica",35)
-        secondparttitle = cc.LabelTTF:create (maxWrongWordCount,"Helvetica",35)  
+        secondparttitle = cc.LabelTTF:create (s_CorePlayManager.maxWrongWordCount,"Helvetica",35)  
         thirdparttitle = cc.LabelTTF:create ("个生单词","Helvetica",35)
     elseif NewStudyLayer_State == NewStudyLayer_State_Reward then
         firstparttitle = cc.LabelTTF:create ("新学习单词：","Helvetica",35)
-        secondparttitle = cc.LabelTTF:create (maxWrongWordCount,"Helvetica",35)  
+        secondparttitle = cc.LabelTTF:create (s_CorePlayManager.maxWrongWordCount,"Helvetica",35)
         thirdparttitle = cc.LabelTTF:create ("个","Helvetica",35)
     end
     
@@ -83,7 +83,7 @@ function NewStudyPopupForMissionAndReward.create()
     circle:setAnchorPoint(0.5,0.5)
     popup_window:addChild(circle)
 
-    local unfamiliar_number_label = cc.Label:createWithSystemFont("+"..maxWrongWordCount,"",55)
+    local unfamiliar_number_label = cc.Label:createWithSystemFont("+"..s_CorePlayManager.maxWrongWordCount,"",55)
     unfamiliar_number_label:setPosition(circle:getContentSize().width * 0.5,circle:getContentSize().height * 0.5)
     unfamiliar_number_label:setColor(cc.c4b(243,27,26,255))
     unfamiliar_number_label:ignoreAnchorPointForPosition(false)

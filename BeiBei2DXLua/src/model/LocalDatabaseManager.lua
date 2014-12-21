@@ -1,4 +1,5 @@
 local RBWORDNUM = 10
+local MAXWRONGWORDCOUNT = 20
 
 
 require("lsqlite3")
@@ -599,8 +600,8 @@ function Manager.insertNewStudyLayerSufferTables(wordName)
     local currentWord = ''
     local loop_judge_min = 0
     local loop_delete_min = 0
-    if i > maxWrongWordCount then
-        while loop_delete_min < maxWrongWordCount do
+    if i > MAXWRONGWORDCOUNT then
+        while loop_delete_min < MAXWRONGWORDCOUNT do
             loop_judge_min = 0
             for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
                 if loop_judge_min == 0 then
@@ -621,7 +622,7 @@ function Manager.insertNewStudyLayerSufferTables(wordName)
 --                currentWord = row.wordName
             end
             
---            if loop_delete_min + 1 < maxWrongWordCount then
+--            if loop_delete_min + 1 < MAXWRONGWORDCOUNT then
 --               unfamiliarWord = unfamiliarWord .. currentWord.."|"
 --            else
 --                unfamiliarWord = unfamiliarWord .. currentWord
@@ -1016,10 +1017,10 @@ function Manager.insertNewStudyLayerGroupTables(wordName)
     local unfamiliarWord = '' 
     local currentWord = ''
     local loop_delete_min = 0
-    if i > maxWrongWordCount then
+    if i > MAXWRONGWORDCOUNT then
         for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerGroupTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
             currentWord = row.wordName
-            if loop_delete_min + 1 < maxWrongWordCount then
+            if loop_delete_min + 1 < MAXWRONGWORDCOUNT then
                 unfamiliarWord = unfamiliarWord .. currentWord.."|"
             else
                 unfamiliarWord = unfamiliarWord .. currentWord

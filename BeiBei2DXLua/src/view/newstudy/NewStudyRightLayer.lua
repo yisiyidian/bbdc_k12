@@ -4,15 +4,15 @@ require("common.global")
 require("view.newstudy.NewStudyConfigure")
 
 
-local  NewStudyTrueLayer = class("NewStudyTrueLayer", function ()
+local  NewStudyRightLayer = class("NewStudyRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function NewStudyTrueLayer.create()
+function NewStudyRightLayer.create()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
-    local layer = NewStudyTrueLayer.new()
+    local layer = NewStudyRightLayer.new()
     
     local font_number
 
@@ -44,7 +44,7 @@ function NewStudyTrueLayer.create()
     right_sign:setAnchorPoint(0.5,0.5)
     square:addChild(right_sign)
     
-    if s_CURRENT_USER.newstudytruelayerMask == 1 then
+    if s_CURRENT_USER.newStudyRightLayerMask == 1 then
         right_sign:setVisible(true)
     else
         right_sign:setVisible(false)
@@ -134,11 +134,11 @@ function NewStudyTrueLayer.create()
     local onTouchEnded = function(touch, event)
         local location = backGround:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(square:getBoundingBox(), location) then   
-            if s_CURRENT_USER.newstudytruelayerMask == 1 then
-                s_CURRENT_USER.newstudytruelayerMask = 0
+            if s_CURRENT_USER.newStudyRightLayerMask == 1 then
+                s_CURRENT_USER.newStudyRightLayerMask = 0
                right_sign:setVisible(false)
             else
-                s_CURRENT_USER.newstudytruelayerMask = 1
+                s_CURRENT_USER.newStudyRightLayerMask = 1
                 right_sign:setVisible(true)
             end
         end
@@ -154,4 +154,4 @@ function NewStudyTrueLayer.create()
     return layer
 end
 
-return NewStudyTrueLayer
+return NewStudyRightLayer
