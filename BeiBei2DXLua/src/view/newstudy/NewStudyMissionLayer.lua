@@ -1,11 +1,6 @@
 require("cocos.init")
-
 require("common.global")
-
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
-
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
 local  NewStudyMissionLayer = class("NewStudyMissionLayer", function ()
     return cc.Layer:create()
@@ -26,8 +21,7 @@ function NewStudyMissionLayer.create()
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
-
-    JudgeColorAtTop(backGround)   
+  
 
 
 --    local unfamiliar_label = cc.Label:createWithSystemFont("已完成"..maxWrongWordCount.."个生词","",40)

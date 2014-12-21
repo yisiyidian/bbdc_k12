@@ -64,11 +64,6 @@ function RightTopNode:ctor()
 --                end
 --            end
 
-            
-            local NewStudyLayer = require("view.newstudy.NewStudyLayer")
-            local newStudyLayer = NewStudyLayer.create(1)
-            s_SCENE:replaceGameLayer(newStudyLayer)
-
         end 
     end
 

@@ -18,9 +18,9 @@ local BookLayer             = require("view.book.BookLayer")
 local WordListLayer         = require("view.wordlist.WordMenu")
 local FriendLayer           = require("view.friend.FriendLayer")
 
-local NewStudyLayer         = require("view.newstudy.NewStudyLayer")
-
-
+local NewStudyChooseLayer   = require("view.newstudy.NewStudyChooseLayer")
+local NewStudyTrueLayer     = require("view.newstudy.NewStudyTrueLayer")
+local NewStudyWrongLayer    = require("view.newstudy.NewStudyWrongLayer")
 
 
 local CorePlayManager = {}
@@ -28,13 +28,42 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
-function CorePlayManager.enterNewStudyLayer()
+function CorePlayManager.initNewStudyLayer()
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_Book_CET4]
+    -- read k from db
     CorePlayManager.currentIndex = 1
-
-    local newStudyLayer = NewStudyLayer.create(1)
-    s_SCENE:replaceGameLayer(newStudyLayer)
+    CorePlayManager.rightWordList = {}
+    CorePlayManager.wrongWordList = {}
 end
+
+function CorePlayManager.enterNewStudyChooseLayer()
+    local newStudyChooseLayer = NewStudyChooseLayer.create()
+    s_SCENE:replaceGameLayer(newStudyChooseLayer)
+end
+
+function CorePlayManager.enterNewStudyTrueLayer()
+    local newStudyTrueLayer = NewStudyTrueLayer.create()
+    s_SCENE:replaceGameLayer(newStudyTrueLayer)
+end
+
+function CorePlayManager.enterNewStudyWrongLayer()
+    local newStudyWrongLayer = NewStudyWrongLayer.create()
+    s_SCENE:replaceGameLayer(newStudyWrongLayer)
+end
+
+function CorePlayManager.updateCurrentIndex()
+    CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+end
+
+function CorePlayManager.updateRightWordList(wordname)
+    table.insert(CorePlayManager.rightWordList, wordname)
+end
+
+function CorePlayManager.updateWrongWordList(wordname)
+    table.insert(CorePlayManager.wrongWordList, wordname)
+end
+
+
 
 
 

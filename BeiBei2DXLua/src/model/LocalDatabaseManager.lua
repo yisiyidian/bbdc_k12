@@ -1,6 +1,3 @@
-require("view.newstudy.NewStudyLayer")
-
-
 local RBWORDNUM = 10
 
 require("lsqlite3")

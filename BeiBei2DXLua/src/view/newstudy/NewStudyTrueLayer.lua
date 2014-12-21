@@ -1,10 +1,8 @@
 require("cocos.init")
 
 require("common.global")
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
 local  NewStudyTrueLayer = class("NewStudyTrueLayer", function ()
     return cc.Layer:create()
@@ -24,11 +22,6 @@ function NewStudyTrueLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
 
-    AddPauseButton(backGround)
-       
-    JudgeColorAtTop(backGround)
-  
-    HugeWordUnderColorSquare(backGround)
     
     local illustrate_word = cc.Label:createWithSystemFont("这个词太熟悉了，如果希望放弃复习\n点击单词将它收入你的词库吧","",32)
     illustrate_word:setPosition(backGround:getContentSize().width *0.2,s_DESIGN_HEIGHT * 0.65)

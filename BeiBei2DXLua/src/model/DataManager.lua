@@ -116,7 +116,7 @@ function DataManager.loadAllWords()
 
     for i = 1, #lines do
         local terms = split(lines[i], "\t")
-        local word = MetaWord.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7])
+        local word = MetaWord.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7], terms[8], terms[9])
         wordInfo[word.wordName] = word
     end
 

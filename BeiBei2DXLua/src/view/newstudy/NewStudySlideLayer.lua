@@ -1,10 +1,8 @@
 require("cocos.init")
 
 require("common.global")
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 local FlipMat = require("view.mat.FlipMat")
 
 local  NewStudySlideLayer = class("NewStudySlideLayer", function ()
@@ -22,11 +20,7 @@ function NewStudySlideLayer.create()
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
-    layer:addChild(backGround)
-
-    AddPauseButton(backGround)    
-
-    JudgeColorAtTop(backGround)  
+    layer:addChild(backGround) 
 
 --    local richtext = ccui.RichText:create()
 --
