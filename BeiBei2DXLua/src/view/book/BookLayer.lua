@@ -95,34 +95,25 @@ function BookLayer.create()
                         s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
                     end
                     s_CURRENT_USER.bookKey = key
-                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+                    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+                    s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
+                    showProgressHUD()
+                    s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
                         function (api, result)
-                            s_CorePlayManager.enterHomeLayer()
-                            hideProgressHUD()
+                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+                                function (api, result)
+                                    s_CorePlayManager.enterHomeLayer()
+                                    hideProgressHUD()
+                                end,
+                                function (api, code, message, description)
+                                    s_TIPS_LAYER:showSmall(message)
+                                    hideProgressHUD()
+                                end)
                         end,
                         function (api, code, message, description)
                             s_TIPS_LAYER:showSmall(message)
                             hideProgressHUD()
                         end)
-                    --s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-                    -- s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
-                    -- showProgressHUD()
-                    -- s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
-                    --     function (api, result)
-                    --         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
-                    --             function (api, result)
-                    --                 s_CorePlayManager.enterHomeLayer()
-                    --                 hideProgressHUD()
-                    --             end,
-                    --             function (api, code, message, description)
-                    --                 s_TIPS_LAYER:showSmall(message)
-                    --                 hideProgressHUD()
-                    --             end)
-                    --     end,
-                    --     function (api, code, message, description)
-                    --         s_TIPS_LAYER:showSmall(message)
-                    --         hideProgressHUD()
-                    --     end)
                     s_SCENE.touchEventBlockLayer.lockTouch()
                 end      
                 s_TIPS_LAYER:showSmall("选择"..name_array[i].."课程", affirm)
