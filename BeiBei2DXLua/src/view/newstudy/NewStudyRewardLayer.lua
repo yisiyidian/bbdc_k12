@@ -1,10 +1,8 @@
 require("cocos.init")
 
 require("common.global")
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
 local  NewStudyRewardLayer = class("NewStudyRewardLayer", function ()
     return cc.Layer:create()

@@ -1,16 +1,31 @@
 require("cocos.init")
-
 require("common.global")
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
+local SoundMark         = require("view.newstudy.NewStudySoundMark")
+local DetailInfo        = require("view.newstudy.NewStudyDetailInfo")
+
 
 local  NewStudyWrongLayer = class("NewStudyWrongLayer", function ()
     return cc.Layer:create()
 end)
 
 function NewStudyWrongLayer.create()
+    -- word info
+    local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+    local currentWord       = s_WordPool[currentWordName]
+    local wordname          = currentWord.wordName
+    local wordSoundMarkEn   = currentWord.wordSoundMarkEn
+    local wordSoundMarkAm   = currentWord.wordSoundMarkAm
+    local wordMeaningSmall  = currentWord.wordMeaningSmall
+    local wordMeaning       = currentWord.wordMeaning
+    local sentenceEn        = currentWord.sentenceEn
+    local sentenceCn        = currentWord.sentenceCn
+    local sentenceEn2       = currentWord.sentenceEn2
+    local sentenceCn2       = currentWord.sentenceCn2
+
+    local totalWordNum      = #s_CorePlayManager.NewStudyLayerWordList
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -25,134 +40,17 @@ function NewStudyWrongLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
 
-    AddPauseButton(backGround)  
+    local progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "red")
+    progressBar:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.95)
+    backGround:addChild(progressBar)
 
-    JudgeColorAtTop(backGround) 
-
-    PlayWordSoundAndAddSprite(backGround)     
-
-
-    local chineseMeaning = cc.Label:createWithSystemFont("中文释义","",32)
-    chineseMeaning:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.63)
-    chineseMeaning:setColor(cc.c4b(0,0,0,255))
-    chineseMeaning:ignoreAnchorPointForPosition(false)
-    chineseMeaning:setAnchorPoint(0,0.5)
-    backGround:addChild(chineseMeaning)
-
-    local richtext = ccui.RichText:create()
-
-    richtext:ignoreContentAdaptWithSize(false)
-    richtext:ignoreAnchorPointForPosition(false)
-    richtext:setAnchorPoint(cc.p(0.5,0.5))
-
-    richtext:setContentSize(cc.size(backGround:getContentSize().width *0.65, 
-        backGround:getContentSize().height *0.3))  
-
-    local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
-        "Helvetica",28, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
-
-    current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
-
-    local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
-    richtext:pushBackElement(richElement1)                   
-    richtext:setPosition(backGround:getContentSize().width *0.5, 
-        backGround:getContentSize().height *0.45)
-    richtext:setLocalZOrder(10)
+    local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
+    soundMark:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.8)  
+    backGround:addChild(soundMark)
     
-    local line = cc.Sprite:create("image/newstudy/line.png")
-    line:setPosition(backGround:getContentSize().width *0.5,s_DESIGN_HEIGHT * 0.5)
-    backGround:addChild(line)
-
-    local exampleSentence = cc.Label:createWithSystemFont("例句","",32)
-    exampleSentence:setPosition(backGround:getContentSize().width *0.18,s_DESIGN_HEIGHT * 0.45)
-    exampleSentence:setColor(cc.c4b(0,0,0,255))
-    exampleSentence:ignoreAnchorPointForPosition(false)
-    exampleSentence:setAnchorPoint(0,0.5)
-    backGround:addChild(exampleSentence)
-    
-    local current_word_sentence = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceEn..NewStudyLayer_wordList_sentenceCn,
-        "Helvetica",28, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
-
-    current_word_sentence:setColor(cc.c4b(0,0,0,255))
-
-    local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence)                           
-    richtext:pushBackElement(richElement2) 
-   
-   ----need improvement
-    
---    local sentence_length = string.len(NewStudyLayer_wordList_sentenceEn)
---    local wordName_begin_position,wordName_end_position = string.find(string.upper(NewStudyLayer_wordList_sentenceEn),string.upper(NewStudyLayer_wordList_wordName))
---    
---    current_word_sentence_before_wordName = string.sub(NewStudyLayer_wordList_sentenceEn,1,wordName_begin_position - 1)
---    current_word_sentence_after_wordName = string.sub(NewStudyLayer_wordList_sentenceEn,wordName_end_position + 1,sentence_length)
---
---
-    --    local current_word_sentence_before_wordName_label = cc.LabelTTF:create (current_word_sentence_before_wordName,
---        "Helvetica",32)
---    current_word_sentence_before_wordName_label:setColor(cc.c4b(255,255,255,255))
---
---
-    --    local current_word_sentence_wordName_label = cc.LabelTTF:create (NewStudyLayer_wordList_wordName,
---        "Helvetica",32)
---    current_word_sentence_wordName_label:setColor(cc.c4b(196,143,85,255))  
---
-    --    local current_word_sentence_after_wordName_label = cc.LabelTTF:create (current_word_sentence_after_wordName,
---        "Helvetica",32)
---    current_word_sentence_after_wordName_label:setColor(cc.c4b(255,255,255,255))
---
-    --    local current_word_sentence_chinese_label = cc.LabelTTF:create (NewStudyLayer_wordList_sentenceCn,
---        "Helvetica",32)
---    current_word_sentence_chinese_label:setColor(cc.c4b(255,255,255,255))
---    
---
---    
---    local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_before_wordName_label)   
---    local richElement3 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_wordName_label)   
---    local richElement4 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_after_wordName_label)  
---    local richElement5 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_chinese_label)  
---   
---    
---
---
---    if wordName_begin_position ~= 1 and wordName_end_position ~= sentence_length then
---        
---        richtext:pushBackElement(richElement2)      
---        richtext:pushBackElement(richElement3)   
---        richtext:pushBackElement(richElement4)    
---        richtext:pushBackElement(richElement5)     
---          
---    elseif wordName_begin_position == 1 and wordName_end_position ~= sentence_length then
---    
---        richtext:pushBackElement(richElement3)   
---        richtext:pushBackElement(richElement4)    
---        richtext:pushBackElement(richElement5) 
---            
---    elseif wordName_begin_position ~= 1 and wordName_end_position == sentence_length then
---
---        richtext:pushBackElement(richElement2)      
---        richtext:pushBackElement(richElement3)      
---        richtext:pushBackElement(richElement5)    
---        
---    elseif wordName_begin_position == 1 and wordName_end_position == sentence_length then
---         
---        richtext:pushBackElement(richElement3)      
---        richtext:pushBackElement(richElement5) 
---    end
-    
-    backGround:addChild(richtext) 
-
-    local click_improve_button = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
-            playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            NewStudyLayer_State = NewStudyLayer_State_Slide
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
-        end
-    end
-
-
+    local detailInfo = DetailInfo.create(currentWord)
+    detailInfo:setPosition(backGround:getContentSize().width *0.5, 0)  
+    backGround:addChild(detailInfo)
 
     local spell_drill = cc.Label:createWithSystemFont("拼写强化训练>","",32)
     spell_drill:setPosition(backGround:getContentSize().width *0.18  , s_DESIGN_HEIGHT * 0.25)
@@ -169,25 +67,24 @@ function NewStudyWrongLayer.create()
         return true
     end
     
-    
     local onTouchEnded = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(spell_drill:getBoundingBox(), location) then
-            NewStudyLayer_State = NewStudyLayer_State_Slide
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
+            s_CorePlayManager.enterNewStudySlideLayer()
         end
     end
-
 
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-        
-            UpdateCurrentWordFromFalse()
-
+            if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
+                s_CorePlayManager.enterLevelLayer()
+            else
+                s_CorePlayManager.updateCurrentIndex()
+                s_CorePlayManager.enterNewStudyChooseLayer()
+            end
         end
     end
 

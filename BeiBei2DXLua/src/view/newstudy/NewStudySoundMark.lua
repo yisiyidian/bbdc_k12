@@ -7,7 +7,7 @@ end)
 function SoundMark.create(wordname, soundmarkus, soundmarken)
     playWordSound(wordname)
 
-    local height = 50
+    local height = 60
 
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)
@@ -20,10 +20,10 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local button_soundmark_en
     local button_soundmark_us
 
-    local button_pronounce_name1    =   "image/newstudy/light_orange.png"
-    local button_pronounce_name2    =   "image/newstudy/deep_orange.png"
-    local button_country_name1      =   "image/newstudy/light_green.png"
-    local button_country_name2      =   "image/newstudy/deep_green.png"
+    local button_pronounce_name1    =   "image/newstudy/wordsound_begin.png"
+    local button_pronounce_name2    =   "image/newstudy/wordsound_end.png"
+    local button_country_name1      =   "image/newstudy/changemark_begin.png"
+    local button_country_name2      =   "image/newstudy/changemark_end.png"
 
     local changeCountry = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then

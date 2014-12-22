@@ -1,20 +1,33 @@
 require("cocos.init")
-
 require("common.global")
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
+local SoundMark         = require("view.newstudy.NewStudySoundMark")
 
-local  NewStudyTrueLayer = class("NewStudyTrueLayer", function ()
+
+local  NewStudyRightLayer = class("NewStudyRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function NewStudyTrueLayer.create()
+function NewStudyRightLayer.create()
+    -- word info
+    local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+    local currentWord       = s_WordPool[currentWordName]
+    local wordname          = currentWord.wordName
+    local wordSoundMarkEn   = currentWord.wordSoundMarkEn
+    local wordSoundMarkAm   = currentWord.wordSoundMarkAm
+    local wordMeaningSmall  = currentWord.wordMeaningSmall
+    local wordMeaning       = currentWord.wordMeaning
+    local sentenceEn        = currentWord.sentenceEn
+    local sentenceCn        = currentWord.sentenceCn
+    local sentenceEn2       = currentWord.sentenceEn2
+    local sentenceCn2       = currentWord.sentenceCn2
 
+    -- ui
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
-    local layer = NewStudyTrueLayer.new()
+    local layer = NewStudyRightLayer.new()
     
     local font_number
 
@@ -23,12 +36,15 @@ function NewStudyTrueLayer.create()
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
+    
+    local progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "red")
+    progressBar:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.95)
+    backGround:addChild(progressBar)
 
-    AddPauseButton(backGround)
-       
-    JudgeColorAtTop(backGround)
-  
-    HugeWordUnderColorSquare(backGround)
+    local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
+    soundMark:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.8)  
+    backGround:addChild(soundMark)
+
     
     local illustrate_word = cc.Label:createWithSystemFont("这个词太熟悉了，如果希望放弃复习\n点击单词将它收入你的词库吧","",32)
     illustrate_word:setPosition(backGround:getContentSize().width *0.2,s_DESIGN_HEIGHT * 0.65)
@@ -51,7 +67,7 @@ function NewStudyTrueLayer.create()
     right_sign:setAnchorPoint(0.5,0.5)
     square:addChild(right_sign)
     
-    if s_CURRENT_USER.newstudytruelayerMask == 1 then
+    if s_CURRENT_USER.newStudyRightLayerMask == 1 then
         right_sign:setVisible(true)
     else
         right_sign:setVisible(false)
@@ -115,11 +131,7 @@ function NewStudyTrueLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
-            s_DATABASE_MGR.insertNewStudyLayerGroupTables(NewStudyLayer_wordList_wordName)
-            NewStudyLayer_State = NewStudyLayer_State_Wrong
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
+            s_CorePlayManager.enterNewStudyWrongLayer()
         end
     end
 
@@ -145,11 +157,11 @@ function NewStudyTrueLayer.create()
     local onTouchEnded = function(touch, event)
         local location = backGround:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(square:getBoundingBox(), location) then   
-            if s_CURRENT_USER.newstudytruelayerMask == 1 then
-                s_CURRENT_USER.newstudytruelayerMask = 0
+            if s_CURRENT_USER.newStudyRightLayerMask == 1 then
+                s_CURRENT_USER.newStudyRightLayerMask = 0
                right_sign:setVisible(false)
             else
-                s_CURRENT_USER.newstudytruelayerMask = 1
+                s_CURRENT_USER.newStudyRightLayerMask = 1
                 right_sign:setVisible(true)
             end
         end
@@ -165,4 +177,4 @@ function NewStudyTrueLayer.create()
     return layer
 end
 
-return NewStudyTrueLayer
+return NewStudyRightLayer

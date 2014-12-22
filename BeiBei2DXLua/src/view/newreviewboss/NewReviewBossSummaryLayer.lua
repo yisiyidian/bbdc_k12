@@ -22,8 +22,6 @@ function NewReviewBossSummaryLayer.create()
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
-
-    AddPauseButton(backGround)
     
     local summary_label = cc.Label:createWithSystemFont("小结（4/4）","",48)
     summary_label:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.95)
@@ -104,7 +102,7 @@ function NewReviewBossSummaryLayer.create()
     
     listView:setItemsMargin(2.0)
     
-    local bottomColor = cc.LayerColor:create(GrayColor, backGround:getContentSize().width ,s_DESIGN_HEIGHT * 0.2)  
+    local bottomColor = cc.LayerColor:create(cc.c4b(118,218,240,100), backGround:getContentSize().width ,s_DESIGN_HEIGHT * 0.2)  
     bottomColor:setAnchorPoint(0.5,0)
     bottomColor:ignoreAnchorPointForPosition(false)
     bottomColor:setPosition(s_DESIGN_WIDTH/2,0)

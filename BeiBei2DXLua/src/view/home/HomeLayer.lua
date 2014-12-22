@@ -8,36 +8,32 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
-function isFunctionUnlocked(levelKey)
-    local ncee_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE,  'chapter0', levelKey)
-    local cet4_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4,  'chapter0', levelKey)
-    local cet6_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6,  'chapter0', levelKey)
-    local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
-    local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
+-- function isFunctionUnlocked(levelKey)
+--     local ncee_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE,  'chapter0', levelKey)
+--     local cet4_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4,  'chapter0', levelKey)
+--     local cet6_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6,  'chapter0', levelKey)
+--     local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
+--     local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
 
-    local function judge_Whether_nil(mark)
-        if mark == nil then
-            return 0
-        else
-            return mark.isLevelUnlocked
-        end
-    end
+--     local function judge_Whether_nil(mark)
+--         if mark == nil then
+--             return 0
+--         else
+--             return mark.isLevelUnlocked
+--         end
+--     end
 
-    return ( judge_Whether_nil(ncee_date)  == 1 
-          or judge_Whether_nil(cet4_date)  == 1 
-          or judge_Whether_nil(cet6_date)  == 1 
-          or judge_Whether_nil(cet6_date)  == 1 
-          or judge_Whether_nil(toefl_date) == 1)
-end
+--     return ( judge_Whether_nil(ncee_date)  == 1 
+--           or judge_Whether_nil(cet4_date)  == 1 
+--           or judge_Whether_nil(cet6_date)  == 1 
+--           or judge_Whether_nil(cet6_date)  == 1 
+--           or judge_Whether_nil(toefl_date) == 1)
+-- end
 
 function HomeLayer.create()
     -- data begin
     local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local chapterIndex      = string.sub(s_CURRENT_USER.currentChapterKey,8,8)+1
-    local chapterName       = s_DATA_MANAGER.chapters[chapterIndex].Name
-    local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6,6)+1
-    local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
     local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
     local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
 
@@ -116,7 +112,7 @@ function HomeLayer.create()
             
             elseif eventType == ccui.TouchEventType.ended then
 
-            if isFunctionUnlocked('level10') and s_CURRENT_USER.isGuest == 0 then
+            if s_CURRENT_USER.isGuest == 0 then
                 s_CorePlayManager.enterFriendLayer()
             else
             
@@ -157,16 +153,6 @@ function HomeLayer.create()
                 redHint = cc.Sprite:create('image/friend/fri_infor.png')
                 redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
                 button_friend:addChild(redHint)
-                
-                if isFunctionUnlocked('level10') and s_CURRENT_USER.isGuest == 0 then
-                    if redHint ~= nil then
-                        redHint:setVisible(false)
-                    end
-                else
-                    if redHint ~= nil then
-                        redHint:setVisible(true)
-                    end
-                end
                
                 local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
                 num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
@@ -402,7 +388,7 @@ function HomeLayer.create()
                isDataShow = true
                button_data:setLocalZOrder(2)
                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
-               if isFunctionUnlocked('level7') then
+               if true then
                    local PersonalInfo = require("view.PersonalInfo")
                    local personalInfoLayer = PersonalInfo.create()
                    data_back:addChild(personalInfoLayer,0,'PersonalInfo') 

@@ -53,7 +53,7 @@ function DataUser:ctor()
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
     
-    self.newstudytruelayerMask             = 0
+    self.newStudyRightLayerMask             = 0
 
     self.checkInWord                       = ''
     self.checkInWordUpdateDate             = 0
