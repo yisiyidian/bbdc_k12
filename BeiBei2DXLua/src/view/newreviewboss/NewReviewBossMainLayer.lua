@@ -1,7 +1,6 @@
 require("cocos.init")
 
 require("common.global")
-require("view.newstudy.NewStudyFunction")
 require("view.newreviewboss.NewReviewBossFunction")
 require("view.newstudy.NewStudyConfigure")
 
