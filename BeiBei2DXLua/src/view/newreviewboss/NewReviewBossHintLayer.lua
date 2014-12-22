@@ -1,4 +1,3 @@
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
 local RBProgressBar = require("view.newreviewboss.NewReviewBossProgressBar")

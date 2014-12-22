@@ -1,4 +1,3 @@
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 require("view.newreviewboss.NewReviewBossConfigue")
 
