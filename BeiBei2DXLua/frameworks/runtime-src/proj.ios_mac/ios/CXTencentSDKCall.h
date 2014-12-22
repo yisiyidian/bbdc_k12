@@ -26,6 +26,8 @@
 #define kLoginSuccessed @"loginSuccessed"
 #define kLoginFailed    @"loginFailed"
 
+#define kLogLogOut @"logOut"
+
 //qzone
 #define kGetUserInfoResponse @"getUserInfoResponse"
 #define kAddShareResponse @"addShareResponse"
@@ -65,5 +67,6 @@
 + (void)showInvalidTokenOrOpenIDMessage;
 
 - (void)login;
+- (void)logout;
 
 @end

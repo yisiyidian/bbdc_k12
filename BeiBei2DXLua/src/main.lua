@@ -64,10 +64,10 @@ start = function ()
     saveLuaError = function (msg)
         local errorObj = {}
         errorObj['className'] = 'LuaError'
-        local a = string.gsub(msg, ":",  "..") 
+        local a = string.gsub(msg, ":",  "    ") 
         local b = string.gsub(a,   '"',  "'") 
-        local c = string.gsub(b,   "\n", "___") 
-        local d = string.gsub(c,   "\t", "___") 
+        local c = string.gsub(b,   "\n", "    ") 
+        local d = string.gsub(c,   "\t", "    ") 
         errorObj['msg'] = d
         s_SERVER.createData(errorObj)
     end

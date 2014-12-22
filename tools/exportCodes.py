@@ -30,11 +30,11 @@ LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
     local str = ''
-    if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username end
+    if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
     if AgentManager ~= nil then
-        str = 'name:' .. str .. ', channel:' .. AgentManager:getInstance():getChannelId() .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
+        str = 'name:' .. str .. '\\nchannel:' .. AgentManager:getInstance():getChannelId() .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
     else
-        str = 'name:' .. str .. ', channel:' .. 'unknown' .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
+        str = 'name:' .. str .. '\\nchannel:' .. 'unknown' .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
     end
     str = str .. '\\n' .. LUA_ERROR
     return str
