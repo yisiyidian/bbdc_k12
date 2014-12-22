@@ -150,14 +150,16 @@ void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
 
 }
 
-void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* error, int errorcode) {
+void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* qqjson, const char* authjson, const char* error, int errorcode) {
     if (mLuaHandlerId_logInByQQ > 0) {
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();
         stack->pushString(objectjson);
+        stack->pushString(qqjson);
+        stack->pushString(authjson);
         stack->pushString(error);
         stack->pushInt(errorcode);
-        stack->executeFunctionByHandler(mLuaHandlerId_logInByQQ, 3);
+        stack->executeFunctionByHandler(mLuaHandlerId_logInByQQ, 5);
         stack->clean();
     }
 }

@@ -112,16 +112,16 @@ function HomeLayer.create()
             
             elseif eventType == ccui.TouchEventType.ended then
 
-            if s_CURRENT_USER.isGuest == 0 then
+            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                 s_CorePlayManager.enterFriendLayer()
             else
             
-                if s_CURRENT_USER.isGuest == 1 then
+                if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
                     local Item_popup = require("popup/PopupModel")
                     local item_popup = Item_popup.create(Site_From_Friend_Guest)  
                     
                     item_popup.update = function()
-                        if s_CURRENT_USER.isGuest == 0 then
+                        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                             list[1].label:setString(s_CURRENT_USER.username)
                             list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
                             if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
@@ -134,7 +134,8 @@ function HomeLayer.create()
                     local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
 
                     s_SCENE:popup(item_popup)
-                end                
+                end              
+                  
             end          
         end
     end
@@ -430,7 +431,7 @@ function HomeLayer.create()
 --    local username = "游客"
 --    local logo_name = {"head","book","feedback","information","logout"}
 --    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
-    if s_CURRENT_USER.isGuest == 0 then
+    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER.username
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
@@ -454,7 +455,7 @@ function HomeLayer.create()
                     
                     improveInfo.close = function()
                         layer:removeChildByTag(1)
-                        if s_CURRENT_USER.isGuest == 0 then
+                        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                             list[1].label:setString(s_CURRENT_USER.username)
                             list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
                             if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end

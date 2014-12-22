@@ -14,6 +14,20 @@
 #import <AVOSCloudSNS/AVUser+SNS.h>
 #import "CXTencentSDKCall.h"
 
+NSString* NSDictionaryToJSONString(NSDictionary* json) {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
+                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    if (! jsonData) {
+        CCLOG("AVUserToJsonStr Got an error: %s", error.localizedDescription.UTF8String);
+        return @"{}";
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        return jsonString;
+    }
+}
+
 NSString* AVUserToJsonStr(AVUser* user) {
     NSMutableDictionary* json = [NSMutableDictionary dictionary];
     
@@ -31,17 +45,7 @@ NSString* AVUserToJsonStr(AVUser* user) {
         }
     }
     
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
-                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
-                                                         error:&error];
-    if (! jsonData) {
-        CCLOG("AVUserToJsonStr Got an error: %s", error.localizedDescription.UTF8String);
-        return @"{}";
-    } else {
-        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        return jsonString;
-    }
+    return NSDictionaryToJSONString(json);
 }
 
 #pragma mark -
@@ -51,11 +55,22 @@ NSString* AVUserToJsonStr(AVUser* user) {
 
 @implementation CXTencentSDKCallObserver
 
+static CXTencentSDKCallObserver* cxTencentSDKCallObserver = nil;
+
++ (CXTencentSDKCallObserver*)getInstance {
+    @synchronized([CXTencentSDKCallObserver class]) {
+        if (cxTencentSDKCallObserver == nil) {
+            cxTencentSDKCallObserver = [[self alloc] init];
+        }
+    }
+    return cxTencentSDKCallObserver;
+}
+
 - (id) init {
     if (self = [super init]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessed) name:kLoginSuccessed object:[CXTencentSDKCall getinstance]];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginFailed) name:kLoginFailed object:[CXTencentSDKCall getinstance]];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserInfo) name:kGetUserInfoResponse object:[CXTencentSDKCall getinstance]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserInfo:) name:kGetUserInfoResponse object:[CXTencentSDKCall getinstance]];
     }
     return self;
 }
@@ -63,6 +78,9 @@ NSString* AVUserToJsonStr(AVUser* user) {
 - (void)loginSuccessed {
     TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
     BOOL isGotUserInfo = [oauth getUserInfo];
+    if (isGotUserInfo == NO) {
+        CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(nullptr, nullptr, nullptr, "QQ log in error", 0);
+    }
 }
 
 - (void)loginFailed {
@@ -71,14 +89,21 @@ NSString* AVUserToJsonStr(AVUser* user) {
 }
 
 - (void)getUserInfo:(NSNotification*)info {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
-        [AVUser loginWithAuthData:@{@"openid":oauth.openId, @"access_token":oauth.accessToken, @"expires_in":[NSString stringWithFormat:@"%ld", (long)oauth.expirationDate.timeIntervalSince1970]}
-                         platform:AVOSCloudSNSPlatformQQ
-                            block:^(AVUser *user, NSError *error) {
-            CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? (int)error.code : 0);
-        }];
-    });
+    NSDictionary* userinfo = [info userInfo];
+    APIResponse* response = userinfo != nil ? userinfo[kResponse] : nil;
+    TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
+    NSDictionary* authData = @{@"openid":oauth.openId,
+                               @"access_token":oauth.accessToken,
+                               @"expires_in":[NSString stringWithFormat:@"%ld", (long)oauth.expirationDate.timeIntervalSince1970]};
+    [AVUser loginWithAuthData:authData
+                     platform:AVOSCloudSNSPlatformQQ
+                        block:^(AVUser *user, NSError *error) {
+                            CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(user ? AVUserToJsonStr(user).UTF8String : nullptr,
+                                                                                       response ? [response message].UTF8String : nullptr,
+                                                                                       NSDictionaryToJSONString(authData).UTF8String,
+                                                                                       error ? error.localizedDescription.UTF8String : nullptr,
+                                                                                       error ? (int)error.code : 0);
+    }];
 }
 
 @end
@@ -87,7 +112,6 @@ NSString* AVUserToJsonStr(AVUser* user) {
 
 using namespace cocos2d;
 
-static CXTencentSDKCallObserver* cxTencentSDKCallObserver = nil;
 CXAvos* CXAvos::m_pInstance = nullptr;
 
 CXAvos* CXAvos::getInstance() {
@@ -102,9 +126,7 @@ CXAvos::CXAvos()
 , mLuaHandlerId_signUp(0)
 , mLuaHandlerId_logIn(0)
 , mLuaHandlerId_logInByQQ(0) {
-    if (cxTencentSDKCallObserver == nil) {
-        cxTencentSDKCallObserver = [[CXTencentSDKCallObserver alloc] init];
-    }
+    [CXTencentSDKCallObserver getInstance];
 }
 
 void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC nHandler) {
@@ -202,14 +224,16 @@ void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
     [[CXTencentSDKCall getinstance] login];
 }
 
-void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* error, int errorcode) {
+void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* qqjson, const char* authjson, const char* error, int errorcode) {
     if (mLuaHandlerId_logInByQQ > 0) {
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();
         stack->pushString(objectjson);
+        stack->pushString(qqjson);
+        stack->pushString(authjson);
         stack->pushString(error);
         stack->pushInt(errorcode);
-        stack->executeFunctionByHandler(mLuaHandlerId_logInByQQ, 3);
+        stack->executeFunctionByHandler(mLuaHandlerId_logInByQQ, 5);
         stack->clean();
     }
 }

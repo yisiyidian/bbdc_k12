@@ -190,17 +190,14 @@ end
 
 ---- sign up & log in
 
-function AppScene:startLoadingData(hasAccount, username, password)
-    local getAccount
-    if hasAccount then 
-        getAccount = s_UserBaseServer.logIn
-    else
-        getAccount = s_UserBaseServer.signUp
-    end
+local USER_START_TYPE_NEW = 0
+local USER_START_TYPE_OLD = 1
+local USER_START_TYPE_QQ  = 2
 
+function AppScene:startLoadingData(userStartType, username, password)
     local function onResponse(u, e, code)
 
-        if not hasAccount then 
+        if e == nil and s_CURRENT_USER.tutorialStep == 0 then 
             AnalyticsTutorial(0)
             AnalyticsSmallTutorial(0)
         end
@@ -219,15 +216,25 @@ function AppScene:startLoadingData(hasAccount, username, password)
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
-    getAccount(username, password, onResponse)
+    if userStartType == USER_START_TYPE_OLD then 
+        s_UserBaseServer.logIn(username, password, onResponse)
+    elseif userStartType == USER_START_TYPE_QQ then 
+        s_UserBaseServer.onLogInByQQ(onResponse)
+    else
+        s_UserBaseServer.signUp(username, password, onResponse)
+    end
 end
 
 function AppScene:signUp(username, password)
-    self:startLoadingData(false, username, password)
+    self:startLoadingData(USER_START_TYPE_NEW, username, password)
 end
 
 function AppScene:logIn(username, password)
-    self:startLoadingData(true, username, password)
+    self:startLoadingData(USER_START_TYPE_OLD, username, password)
+end
+
+function AppScene:logInByQQ()
+    self:startLoadingData(USER_START_TYPE_QQ, nil, nil) 
 end
 
 -- function AppScene:getDailyCheckIn()

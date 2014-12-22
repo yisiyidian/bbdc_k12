@@ -89,12 +89,23 @@ local test_code = 0
 -- *************************************
 if test_code == 0 then
     local startApp = function ()
-        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
+        if s_CURRENT_USER.usertype == USER_TYPE_QQ then
+            local IntroLayer = require("view.login.IntroLayer")
+            local introLayer = IntroLayer.create(false)
+            s_SCENE:replaceGameLayer(introLayer)
+            return -- TODO
+        end
+
+        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local LoadingView = require("view.LoadingView")
             local loadingView = LoadingView.create()
             s_SCENE:replaceGameLayer(loadingView) 
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
+            if s_CURRENT_USER.usertype == USER_TYPE_QQ then
+                -- TODO
+            else
+                s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+            end
+        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local IntroLayer = require("view.login.IntroLayer")
             local introLayer = IntroLayer.create(true)
             s_SCENE:replaceGameLayer(introLayer)

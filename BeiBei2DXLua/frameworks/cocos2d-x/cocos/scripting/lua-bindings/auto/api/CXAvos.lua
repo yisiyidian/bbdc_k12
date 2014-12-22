@@ -85,6 +85,8 @@
 -- @function [parent=#CXAvos] invokeLuaCallbackFunction_logInByQQ 
 -- @param self
 -- @param #char objectjson
+-- @param #char qqjson
+-- @param #char authjson
 -- @param #char error
 -- @param #int errorcode
         

@@ -257,7 +257,7 @@ function Manager.saveDataClassObject(objectOfDataClass)
     end
 end
 
-local function getUserDataFromLocalDB(objectOfDataClass, isJustNeedToFindGuest)
+local function getUserDataFromLocalDB(objectOfDataClass, usertype)
     local lastLogIn = 0
     local data = nil
     for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
@@ -268,8 +268,13 @@ local function getUserDataFromLocalDB(objectOfDataClass, isJustNeedToFindGuest)
         if rowTime > lastLogIn then
             s_logd(string.format('getUserDataFromLocalDB updatedAt: %s, %f, %f', row.objectId, row.updatedAt, lastLogIn))
 
-            if isJustNeedToFindGuest then
-                if row.isGuest == 1 then
+            if usertype == USER_TYPE_GUEST then
+                if (row.isGuest == 1 and row.usertype == nil) or row.usertype == USER_TYPE_GUEST then
+                    lastLogIn = rowTime
+                    data = row
+                end
+            elseif usertype == USER_TYPE_QQ then
+                if row.usertype == USER_TYPE_QQ then
                     lastLogIn = rowTime
                     data = row
                 end
@@ -282,6 +287,13 @@ local function getUserDataFromLocalDB(objectOfDataClass, isJustNeedToFindGuest)
     end
 
     if data ~= nil then
+        if data.usertype == nil then
+            if data.isGuest == 1 then 
+                data.usertype = USER_TYPE_GUEST
+            else
+                data.usertype = USER_TYPE_MANUAL
+            end
+        end
         parseLocalDatabaseToUserData(data, objectOfDataClass)     
         return true
     end
@@ -289,12 +301,8 @@ local function getUserDataFromLocalDB(objectOfDataClass, isJustNeedToFindGuest)
     return false
 end
 
-function Manager.getLastLogInUser(objectOfDataClass)
-    return getUserDataFromLocalDB(objectOfDataClass, false)
-end
-
-function Manager.getLastLogInGuest(objectOfDataClass)
-    return getUserDataFromLocalDB(objectOfDataClass, true)
+function Manager.getLastLogInUser(objectOfDataClass, usertype)
+    return getUserDataFromLocalDB(objectOfDataClass, usertype)
 end
 
 function Manager.getDataConfigsFromLocalDB(objectOfDataClass)

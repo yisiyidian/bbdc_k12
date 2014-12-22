@@ -573,26 +573,32 @@ int lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ(lua_State* tolua_S)
 #endif
 
     argc = lua_gettop(tolua_S)-1;
-    if (argc == 3) 
+    if (argc == 5) 
     {
         const char* arg0;
         const char* arg1;
-        int arg2;
+        const char* arg2;
+        const char* arg3;
+        int arg4;
 
         std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg0 = arg0_tmp.c_str();
 
         std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg1 = arg1_tmp.c_str();
 
-        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "CXAvos:invokeLuaCallbackFunction_logInByQQ");
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg2 = arg2_tmp.c_str();
+
+        std::string arg3_tmp; ok &= luaval_to_std_string(tolua_S, 5, &arg3_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg3 = arg3_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 6,(int *)&arg4, "CXAvos:invokeLuaCallbackFunction_logInByQQ");
         if(!ok)
         {
             tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ'", nullptr);
             return 0;
         }
-        cobj->invokeLuaCallbackFunction_logInByQQ(arg0, arg1, arg2);
+        cobj->invokeLuaCallbackFunction_logInByQQ(arg0, arg1, arg2, arg3, arg4);
         return 0;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_logInByQQ",argc, 3);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_logInByQQ",argc, 5);
     return 0;
 
 #if COCOS2D_DEBUG >= 1
