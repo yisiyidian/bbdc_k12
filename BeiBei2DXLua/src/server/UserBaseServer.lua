@@ -68,7 +68,7 @@ local function onResponse_signUp_logIn(objectjson, e, code, onResponse)
 
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         
-        -- if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
+        if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
     else
         s_logd('signup/logIn:no sessionToken') 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, 'no sessionToken', code) end
@@ -93,6 +93,14 @@ function UserBaseServer.logIn(username, password, onResponse)
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
         onResponse_signUp_logIn(objectjson, e, code, onResponse)
     end)
+end
+
+function UserBaseServer.logInByQQAuthData(onResponse)
+    cx.CXAvos:getInstance():logInByQQAuthData(s_CURRENT_USER.openid, s_CURRENT_USER.access_token, s_CURRENT_USER.expires_in,
+        function (objectjson, qqjson, authjson, e, code)
+            onResponse_signUp_logIn(objectjson, e, code, onResponse)
+        end
+    )
 end
 
 function UserBaseServer.onLogInByQQ(onResponse)
@@ -134,7 +142,7 @@ function UserBaseServer.onLogInByQQ(onResponse)
             s_CURRENT_USER.access_token = s_CURRENT_USER.localAuthData.access_token
             s_CURRENT_USER.openid = s_CURRENT_USER.localAuthData.openid
             s_CURRENT_USER.expires_in = s_CURRENT_USER.localAuthData.expires_in
-            print_lua_table (s_CURRENT_USER)
+            -- print_lua_table (s_CURRENT_USER)
 
         end
 

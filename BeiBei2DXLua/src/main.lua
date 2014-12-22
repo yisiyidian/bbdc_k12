@@ -89,19 +89,12 @@ local test_code = 0
 -- *************************************
 if test_code == 0 then
     local startApp = function ()
-        if s_CURRENT_USER.usertype == USER_TYPE_QQ then
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create(false)
-            s_SCENE:replaceGameLayer(introLayer)
-            return -- TODO
-        end
-
         if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local LoadingView = require("view.LoadingView")
             local loadingView = LoadingView.create()
             s_SCENE:replaceGameLayer(loadingView) 
             if s_CURRENT_USER.usertype == USER_TYPE_QQ then
-                -- TODO
+                s_SCENE:logInByQQAuthData()
             else
                 s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
             end

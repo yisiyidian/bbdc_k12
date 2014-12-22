@@ -145,6 +145,10 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
     }
 }
 
+void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler) {
+    mLuaHandlerId_logInByQQ = nHandler;
+}
+
 void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
     mLuaHandlerId_logInByQQ = nHandler;
 
