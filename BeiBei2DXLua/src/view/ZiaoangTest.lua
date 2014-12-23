@@ -44,6 +44,10 @@ function ZiaoangTest.create()
     print("rich text content size: "..richText:getContentSize().width.." "..richText:getContentSize().height)
     print("rich text content size: "..richText:getVirtualRendererSize().width.." "..richText:getVirtualRendererSize().height)
     
+    print("rich text content top location: "..richText:getTopBoundary())
+    print("rich text content bottom location: "..richText:getBottomBoundary())
+    
+    
     return layer
 end
 

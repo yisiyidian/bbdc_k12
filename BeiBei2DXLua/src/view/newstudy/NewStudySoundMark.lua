@@ -7,7 +7,7 @@ end)
 function SoundMark.create(wordname, soundmarkus, soundmarken)
     playWordSound(wordname)
 
-    local height = 60
+    local height = 80
 
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)
@@ -52,19 +52,23 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     button_pronounce = ccui.Button:create(button_pronounce_name1, button_pronounce_name2, "")
     button_pronounce:addTouchEventListener(pronounce)
 
+
+
     button_wordname = cc.Label:createWithSystemFont(wordname,"",44)
-    button_wordname:setColor(cc.c4b(0,0,0,255))
+    button_wordname:setColor(cc.c4b(31,68,102,255))
 
     button_country = ccui.Button:create(button_country_name1, button_country_name2, "")
     button_country:setTitleText("US")
     button_country:setTitleFontSize(24)
     button_country:addTouchEventListener(changeCountry)
 
+
+
     button_soundmark_us = cc.Label:createWithSystemFont(soundmarkus,"",24)
-    button_soundmark_us:setColor(cc.c4b(0,0,0,255))
+    button_soundmark_us:setColor(cc.c4b(41,109,146,255))
 
     button_soundmark_en = cc.Label:createWithSystemFont(soundmarken,"",24)
-    button_soundmark_en:setColor(cc.c4b(0,0,0,255))
+    button_soundmark_en:setColor(cc.c4b(41,109,146,255))
 
     -- handle position
     local max_text_length = math.max(button_wordname:getContentSize().width, button_soundmark_en:getContentSize().width, button_soundmark_us:getContentSize().width)
