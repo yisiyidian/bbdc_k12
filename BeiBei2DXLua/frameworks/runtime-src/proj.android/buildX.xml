@@ -717,7 +717,7 @@
 
     <!--  add 3rd jars  -->
     <path id="lib_classpath">
-        <fileset dir="../../cocos2d-x/common/avos/Android/">
+        <fileset dir="../../cocos2d-x/common/Android/">
             <include name="*.jar"/>
         </fileset>
     </path>

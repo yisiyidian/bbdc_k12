@@ -5,7 +5,7 @@
 #include <android/log.h>
 #include "ConfigParser.h"
 #include "PluginJniHelper.h"
-#include "../../../cocos2d-x/common/avos/CXAvos.h"
+#include "../../../cocos2d-x/common/CXAvos.h"
 
 using namespace anysdk::framework;
 
