@@ -124,8 +124,8 @@ public class AppVersionInfo {
         AVOSCloud.setDebugLogEnabled(true);
         AVCloud.setProductionMode(false);
 
-        AnalyticsConfig.setAppkey(%s);
-        AnalyticsConfig.setChannel(%s);
+        AnalyticsConfig.setAppkey("%s");
+        AnalyticsConfig.setChannel("%s");
     }
 }
 ''' % (appVersionInfoLua, UMENG_INFO[0], UMENG_INFO[1])
@@ -146,8 +146,8 @@ public class AppVersionInfo {
         AVOSCloud.setDebugLogEnabled(false);
         AVCloud.setProductionMode(true);
 
-        AnalyticsConfig.setAppkey(%s);
-        AnalyticsConfig.setChannel(%s);
+        AnalyticsConfig.setAppkey("%s");
+        AnalyticsConfig.setChannel("%s");
     }
 }
 ''' % (appVersionInfoLua, UMENG_INFO[0], UMENG_INFO[1])
