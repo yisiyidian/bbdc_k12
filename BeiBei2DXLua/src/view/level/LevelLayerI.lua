@@ -5,12 +5,13 @@ local s_layerHeight = 2527
 
 local LevelLayerI = class('LevelLayerI', function()
     local widget = ccui.Widget:create()
-    widget:setContentSize(cc.size(s_MAX_WIDTH, s_layerHeight))
+    --widget:setContentSize(cc.size(s_MAX_WIDTH, s_layerHeight))
     return widget
 end)
 
 function LevelLayerI.create()
     local layer = LevelLayerI.new()
+    layer:setContentSize(cc.size(s_MAX_WIDTH, s_layerHeight))
     return layer
 end
 
