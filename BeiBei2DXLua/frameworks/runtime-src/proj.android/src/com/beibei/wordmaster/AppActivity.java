@@ -48,6 +48,7 @@ import c.bb.dc.BBNDK;
 
 import com.anysdk.framework.PluginWrapper;
 import com.avos.avoscloud.AVAnalytics;
+import com.umeng.analytics.MobclickAgent;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -123,8 +124,9 @@ public class AppActivity extends Cocos2dxActivity {
 //		BBNDK.pushNotification();
 		
 		PluginWrapper.onPause();
-		AVAnalytics.onPause(this);
         super.onPause();
+        AVAnalytics.onPause(this);
+        MobclickAgent.onPause(this);
     }
 
 	@Override
@@ -133,6 +135,7 @@ public class AppActivity extends Cocos2dxActivity {
 		
         super.onResume();
         AVAnalytics.onResume(this);
+        MobclickAgent.onResume(this);
         PluginWrapper.onResume();
     }
     

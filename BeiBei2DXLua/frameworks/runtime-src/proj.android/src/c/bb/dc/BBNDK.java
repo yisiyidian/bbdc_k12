@@ -3,6 +3,7 @@ package c.bb.dc;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Random;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
@@ -29,6 +30,7 @@ import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SignUpCallback;
+import com.umeng.analytics.MobclickAgent;
 
 public class BBNDK {
 	private static String _hostIPAdress = "0.0.0.0";
@@ -90,6 +92,9 @@ public class BBNDK {
 	public static void onEvent(String eventName, String  tag) {  
 		if (_context != null) {
 			AVAnalytics.onEvent(_context, eventName, tag);
+			HashMap<String,String> map = new HashMap<String,String>();
+			map.put("tag", tag);
+			MobclickAgent.onEvent(_context, eventName, map); 
 		}
 	}
 	

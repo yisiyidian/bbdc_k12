@@ -72,12 +72,16 @@ def exportJava(isRelease, appVersionInfo, fullpath):
 package c.bb.dc;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
+import com.umeng.analytics.AnalyticsConfig;
 import android.app.Activity;
 public class AppVersionInfo {
     public static void initServer(Activity a, String LEAN_CLOUD_ID_TEST, String LEAN_CLOUD_KEY_TEST, String LEAN_CLOUD_ID, String LEAN_CLOUD_KEY) {
         AVOSCloud.initialize(a, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
         AVOSCloud.setDebugLogEnabled(true);
         AVCloud.setProductionMode(false);
+
+        AnalyticsConfig.setAppkey("5498fc3afd98c56b4200075d");
+        AnalyticsConfig.setChannel("xiao-mi");
     }
 }
 '''
@@ -86,12 +90,16 @@ public class AppVersionInfo {
 package c.bb.dc;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
+import com.umeng.analytics.AnalyticsConfig;
 import android.app.Activity;
 public class AppVersionInfo {
     public static void initServer(Activity a, String LEAN_CLOUD_ID_TEST, String LEAN_CLOUD_KEY_TEST, String LEAN_CLOUD_ID, String LEAN_CLOUD_KEY) {
         AVOSCloud.initialize(a, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
         AVOSCloud.setDebugLogEnabled(false);
         AVCloud.setProductionMode(true);
+
+        AnalyticsConfig.setAppkey("5498fc3afd98c56b4200075d");
+        AnalyticsConfig.setChannel("xiao-mi");
     }
 }
 '''
