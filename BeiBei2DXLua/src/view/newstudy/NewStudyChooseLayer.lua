@@ -1,11 +1,9 @@
 require("cocos.init")
-
 require("common.global")
-
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+local SoundMark         = require("view.newstudy.NewStudySoundMark")
+local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
 
 
 local  NewStudyChooseLayer = class("NewStudyChooseLayer", function ()
@@ -14,109 +12,63 @@ end)
 
 
 function NewStudyChooseLayer.create()
+    --pause music
+    cc.SimpleAudioEngine:getInstance():pauseMusic()
 
 
+    -- word info
+    local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+    local currentWord       = s_WordPool[currentWordName]
+    local wordname          = currentWord.wordName
+    local wordSoundMarkEn   = currentWord.wordSoundMarkEn
+    local wordSoundMarkAm   = currentWord.wordSoundMarkAm
+    local wordMeaningSmall  = currentWord.wordMeaningSmall
+    local wordMeaning       = currentWord.wordMeaning
+    local sentenceEn        = currentWord.sentenceEn
+    local sentenceCn        = currentWord.sentenceCn
+    local sentenceEn2       = currentWord.sentenceEn2
+    local sentenceCn2       = currentWord.sentenceCn2
 
+    local totalWordNum      = #s_CorePlayManager.NewStudyLayerWordList
+    
+
+    
+    math.randomseed(os.time())
+    local randomIndexArray  = {}
+    table.insert(randomIndexArray, s_CorePlayManager.currentIndex)
+    while 1 do
+        if #randomIndexArray >= 4 then
+            break
+        end
+        local randomIndex = math.random(1, totalWordNum)
+        local isIn = 0
+        for i = 1, #randomIndexArray do
+            if randomIndexArray[i] == randomIndex then
+                isIn = 1
+                break
+            end
+        end
+        if isIn == 0 then
+            table.insert(randomIndexArray, randomIndex)
+        end
+    end
+    
+    local wordMeaningTable= {}
+    for i = 1, 4 do
+        local name = s_CorePlayManager.NewStudyLayerWordList[randomIndexArray[i]]
+        local meaning = s_WordPool[name].wordMeaningSmall
+        table.insert(wordMeaningTable, meaning)
+    end
+    
+    local rightIndex = math.random(1, 4)
+    local tmp = wordMeaningTable[1]
+    wordMeaningTable[1] = wordMeaningTable[rightIndex]
+    wordMeaningTable[rightIndex] = tmp
+        
+    -- ui 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    
     local layer = NewStudyChooseLayer.new()
-
     local choose_button
-    
-    local word_list_table = {}
-    word_list_table = {currentIndex_unjudge,1,1,1}
-
-    local case = {}
-    case = {word_list_table[1] - word_list_table[2],
-    word_list_table[2] - word_list_table[3],
-    word_list_table[3] - word_list_table[4],
-    word_list_table[1] - word_list_table[3],
-    word_list_table[2] - word_list_table[4],
-    word_list_table[1] - word_list_table[4]}
-    
-    local word_meaning_table = {}
-    
-    local i = 1
-    
-   if current_state_judge == 1 then
-       while case[1] *  case[2] * case[3] *case[4] * case[5] *case[6] == 0 do
-
-            word_list_table = {currentIndex_unjudge,1,1,1}  
-             
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-            math.randomseed(number)  
-            word_list_table[2] = math.random(1,table.getn(NewStudyLayer_wordList))
-            i = i + 1
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-
-            math.randomseed(number)  
-            word_list_table[3] = math.random(1,table.getn(NewStudyLayer_wordList))
-            i = i + 1
-
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-            math.randomseed(number)  
-            word_list_table[4] = math.random(1,table.getn(NewStudyLayer_wordList))
-
-            case[1] = word_list_table[1] - word_list_table[2]
-            case[2] = word_list_table[2] - word_list_table[3]
-            case[3] = word_list_table[3] - word_list_table[4]
-            case[4] = word_list_table[1] - word_list_table[3]
-            case[5] = word_list_table[2] - word_list_table[4]
-            case[6] = word_list_table[1] - word_list_table[4]
-       end       
-       
-        word_meaning_table = {NewStudyLayer_wordList_wordMeaningSmall,
-            s_WordPool[NewStudyLayer_wordList[word_list_table[2]]].wordMeaningSmall,
-            s_WordPool[NewStudyLayer_wordList[word_list_table[3]]].wordMeaningSmall,
-            s_WordPool[NewStudyLayer_wordList[word_list_table[4]]].wordMeaningSmall}       
-            
---        print_lua_table(word_meaning_table)    
-   else
-        local testTableIsNil =   s_DATABASE_MGR:selectFormerNewStudyLayerTestTables()   
-
-        local testIndex =  FindIndex(testTableIsNil)
-
-        word_list_table = {currentIndex_unreview,1,1,1}      
-        while  case[1] *  case[2] * case[3] *case[4] * case[5] *case[6] == 0 do
-            
-            word_list_table = {table.foreachi(NewStudyLayer_wordList, function(i, v) 
-                if s_WordPool[wrongWordList[currentIndex_unreview]].wordMeaningSmall == s_WordPool[NewStudyLayer_wordList[i]].wordMeaningSmall then
-                    return i
-                end 
-            end) ,1,1,1}   
-
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-            math.randomseed(number)  
-            word_list_table[2] = math.random(1,table.getn(NewStudyLayer_wordList))
-            i = i + 1
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-
-            math.randomseed(number)  
-            word_list_table[3] = math.random(1,table.getn(NewStudyLayer_wordList))
-            i = i + 1
-
-            local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-            math.randomseed(number)  
-            word_list_table[4] = math.random(1,table.getn(NewStudyLayer_wordList))
-
-            case[1] = word_list_table[1] - word_list_table[2]
-            case[2] = word_list_table[2] - word_list_table[3]
-            case[3] = word_list_table[3] - word_list_table[4]
-            case[4] = word_list_table[1] - word_list_table[3]
-            case[5] = word_list_table[2] - word_list_table[4]
-            case[6] = word_list_table[1] - word_list_table[4]
-       end
-
-        word_meaning_table = {NewStudyLayer_wordList_wordMeaningSmall,
-            s_WordPool[NewStudyLayer_wordList[word_list_table[2]]].wordMeaningSmall,
-            s_WordPool[NewStudyLayer_wordList[word_list_table[3]]].wordMeaningSmall,
-            s_WordPool[NewStudyLayer_wordList[word_list_table[4]]].wordMeaningSmall,}
-
-   end
-   
-   
-   local sortFunc = function(a, b) return b < a end
-   table.sort(word_meaning_table, sortFunc)
     
     local backGround = cc.Sprite:create("image/newstudy/new_study_background.png")
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
@@ -124,142 +76,80 @@ function NewStudyChooseLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
     
-    JudgeColorAtTop(backGround)
-
-    AddPauseButton(backGround)
+    local progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "red")
+    progressBar:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.95)
+    backGround:addChild(progressBar)
     
-    PlayWordSoundAndAddSprite(backGround)     
+    local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
+    soundMark:setPosition(backGround:getContentSize().width *0.5, s_DESIGN_HEIGHT * 0.8)  
+    backGround:addChild(soundMark)
 
 
     local illustrate_know = cc.Label:createWithSystemFont("如果认识该单词请选出正确释义","",26)
     illustrate_know:setPosition(backGround:getContentSize().width *0.5,s_DESIGN_HEIGHT * 0.7)
-    illustrate_know:setColor(WhiteFont)
+    illustrate_know:setColor(cc.c4b(255,255,255,255))
     illustrate_know:ignoreAnchorPointForPosition(false)
     illustrate_know:setAnchorPoint(0.5 ,0.5)
     backGround:addChild(illustrate_know)
     
+
+    local feedback_after_click = function (sender)
+        local feedback 
+        if sender.tag == 1 then
+            feedback = cc.Sprite:create("image/newstudy/righttip.png")
+        else
+            feedback = cc.Sprite:create("image/newstudy/falsetip.png")
+        end    
+        feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
+        feedback:ignoreAnchorPointForPosition(false)
+        feedback:setAnchorPoint(0.5,0.5)
+        sender:addChild(feedback)
+    end
+    
+
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-
-        elseif eventType == ccui.TouchEventType.ended then
-            if current_state_judge == 1 then
-                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then                
-                    ShowAnswerTrueBack(sender)
-                    if s_CURRENT_USER.newstudytruelayerMask == 1 then
-                        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                  
-                        s_SCENE:callFuncWithDelay(1,function()
-                            UpdateCurrentWordFromTrue()                     
-                            s_SCENE.touchEventBlockLayer.unlockTouch()
-                        end)
+        elseif eventType == ccui.TouchEventType.ended then  
+            feedback_after_click(sender) 
+            s_SCENE:callFuncWithDelay(0.5,function()  
+                    if sender.tag == 1 then
+                        s_CorePlayManager.updateRightWordList(wordname)     
+                        s_CorePlayManager.enterNewStudyRightLayer()
                     else
-                        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                        s_SCENE:callFuncWithDelay(1,function()
-                            NewStudyLayer_State = NewStudyLayer_State_True
-                            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-                            s_SCENE:replaceGameLayer(newStudyLayer)
-                            s_SCENE.touchEventBlockLayer.unlockTouch()
-                        end)
-                    end
-                else
-                    s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)               
-                    ShowAnswerFalseBack(sender)       
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                    
-                    s_SCENE:callFuncWithDelay(1,function()
-                        NewStudyLayer_State = NewStudyLayer_State_Wrong
-                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-                        s_SCENE:replaceGameLayer(newStudyLayer)                       
-                        s_SCENE.touchEventBlockLayer.unlockTouch()
-                    end)               
-                end
-            else
-                if sender:getName() == NewStudyLayer_wordList_wordMeaningSmall then               
-                    ShowAnswerTrueBack(sender)                   
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()                  
-                    s_SCENE:callFuncWithDelay(1,function()
-                        UpdateCurrentWordFromTrue()                     
-                        s_SCENE.touchEventBlockLayer.unlockTouch()
-                    end)
-                else            
-                    ShowAnswerFalseBack(sender)                    
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                    s_SCENE:callFuncWithDelay(1,function()
-                        NewStudyLayer_State = NewStudyLayer_State_Wrong
-                        local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-                        s_SCENE:replaceGameLayer(newStudyLayer)                        
-                        s_SCENE.touchEventBlockLayer.unlockTouch()
-                    end)
-                end
-            end
+                        s_CorePlayManager.updateWrongWordList(wordname)
+                        s_CorePlayManager.enterNewStudyWrongLayer()
+                    end   
+            end)
         end
     end
 
---     for i = 1 , 4 do
---         if i == 1 then
---             choose_button = ccui.Button:create("image/newstudy/white_begin.png","image/newstudy/white_end.png","")
---             choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.71 - 0.11 * i))
---             choose_button:ignoreAnchorPointForPosition(false)
---             choose_button:setAnchorPoint(0.5,0.5)
---             choose_button:setName(NewStudyLayer_wordList_wordMeaningSmall)
---             choose_button:addTouchEventListener(click_choose)
---             backGround:addChild(choose_button)  
-
---             local choose_text = cc.Label:createWithSystemFont(NewStudyLayer_wordList_wordMeaningSmall,"",32)
---             choose_text:setColor(cc.c4b(0,0,0,255))
---             choose_text:setPosition(50 ,choose_button:getContentSize().height * 0.5 )
---             choose_text:ignoreAnchorPointForPosition(false)
---             choose_text:setAnchorPoint(0,0.5)
---             choose_button:addChild(choose_text)  
---         else
---             local number = tostring(os.time() * currentIndex_unjudge * currentIndex_unreview * i)
-
---             math.randomseed(number)  
-            
---             local randomNumber = math.random(1,table.getn(NewStudyLayer_wordList))
--- --            print("randomNumber is"..randomNumber)
-            
---             local randMeaning = s_WordPool[NewStudyLayer_wordList[randomNumber]].wordMeaningSmall
--- --            print("randMeaaning is"..randMeaning)
-            
---             choose_button = ccui.Button:create("image/newstudy/white_begin.png","image/newstudy/white_end.png","")
---             choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.71 - 0.11 * i))
---             choose_button:ignoreAnchorPointForPosition(false)
---             choose_button:setAnchorPoint(0.5,0.5)
---             choose_button:setName(randMeaning)
---             choose_button:addTouchEventListener(click_choose)
---             backGround:addChild(choose_button)  
-
---             local choose_text = cc.Label:createWithSystemFont(randMeaning,"",32)
---             choose_text:setColor(cc.c4b(0,0,0,255))
---             choose_text:setPosition(50 ,choose_button:getContentSize().height * 0.5 )
---             choose_text:ignoreAnchorPointForPosition(false)
---             choose_text:setAnchorPoint(0,0.5)
---             choose_button:addChild(choose_text)  
---         end
-
---     end
     
-       for i = 1 , 4 do
-           choose_button = ccui.Button:create("image/newstudy/white_begin.png","image/newstudy/white_end.png","")
-           choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.75 - 0.12 * i))
-           choose_button:ignoreAnchorPointForPosition(false)
-           choose_button:setAnchorPoint(0.5,0.5)
-           choose_button:setName(word_meaning_table[i])
-           choose_button:addTouchEventListener(click_choose)
-           backGround:addChild(choose_button)  
-
-           local choose_text = cc.Label:createWithSystemFont(word_meaning_table[i],"",32)
-           choose_text:setColor(LightBlueFont)
-           choose_text:setPosition(50 ,choose_button:getContentSize().height * 0.5 )
-           choose_text:ignoreAnchorPointForPosition(false)
-           choose_text:setAnchorPoint(0,0.5)
-           choose_button:addChild(choose_text)  
-       end
+    for i = 1 , 4 do
+        choose_button = ccui.Button:create("image/newstudy/white_begin.png","image/newstudy/white_end.png","")
+        choose_button:setPosition(backGround:getContentSize().width /2  , s_DESIGN_HEIGHT * (0.75 - 0.12 * i))
+        choose_button:ignoreAnchorPointForPosition(false)
+        choose_button:setAnchorPoint(0.5,0.5)
+        if i == rightIndex then
+            choose_button.tag = 1
+        else
+            choose_button.tag = 0
+        end
+        choose_button:addTouchEventListener(click_choose)
+        backGround:addChild(choose_button)  
+        
+        local choose_text = cc.Label:createWithSystemFont(wordMeaningTable[i],"",32)
+        choose_text:setColor(cc.c4b(39,127,182,255))
+        choose_text:setPosition(50 ,choose_button:getContentSize().height * 0.5 )
+        choose_text:ignoreAnchorPointForPosition(false)
+        choose_text:setAnchorPoint(0,0.5)
+        choose_button:addChild(choose_text)  
+    end
 
     local illustrate_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",26)
     illustrate_dontknow:setPosition(backGround:getContentSize().width * 0.5 ,s_DESIGN_HEIGHT * 0.18)
-    illustrate_dontknow:setColor(WhiteFont)
+    illustrate_dontknow:setColor(cc.c4b(255,255,255,255))
     illustrate_dontknow:ignoreAnchorPointForPosition(false)
     illustrate_dontknow:setAnchorPoint(0.5 ,0.5)
     backGround:addChild(illustrate_dontknow)
@@ -269,10 +159,19 @@ function NewStudyChooseLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            NewStudyLayer_State = NewStudyLayer_State_Wrong
-            s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
+--            if current_state_judge == 1 then
+--            s_DATABASE_MGR.insertNewStudyLayerSufferTables(NewStudyLayer_wordList_wordName)
+--            s_DATABASE_MGR.insertNewStudyLayerGroupTables(NewStudyLayer_wordList_wordName)
+--            else
+--            s_DATABASE_MGR.updateNewStudyLayerTestTables(NewStudyLayer_wordList_wordName)           
+--            end
+--            NewStudyLayer_State = NewStudyLayer_State_Wrong
+--            local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
+--            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
+--            s_SCENE:replaceGameLayer(newStudyLayer)
+
+            s_CorePlayManager.updateWrongWordList(wordname)
+            s_CorePlayManager.enterNewStudyWrongLayer()
         end
     end
 
@@ -286,7 +185,7 @@ function NewStudyChooseLayer.create()
 
     local choose_dontknow_text = cc.Label:createWithSystemFont("不认识","",40)
     choose_dontknow_text:setPosition(choose_dontknow_button:getContentSize().width * 0.5,choose_dontknow_button:getContentSize().height * 0.5)
-    choose_dontknow_text:setColor(DeepBlueFont)
+    choose_dontknow_text:setColor(cc.c4b(31,70,102,255))
     choose_dontknow_text:ignoreAnchorPointForPosition(false)
     choose_dontknow_text:setAnchorPoint(0.5 ,0.5)
     choose_dontknow_button:addChild(choose_dontknow_text)

@@ -182,7 +182,7 @@ function SummaryBossLayer.create(levelConfig,chapter)
             return true
         end
     
-        local length_gap = 3.0
+        local length_gap = 5.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
         if chapter == 2 then
@@ -1001,7 +1001,6 @@ function SummaryBossLayer:initMapInfo()
         end
     end
     local finish = os.time()
-    s_logd('time = %d',finish - start)
 end
 
 function SummaryBossLayer:initMap(chapter)

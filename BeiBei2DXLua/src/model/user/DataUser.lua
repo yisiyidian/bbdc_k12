@@ -2,6 +2,12 @@ local DataClassBase = require('model/user/DataClassBase')
 local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 local DataLogIn = require('model/user/DataLogIn')
 
+USER_TYPE_MANUAL = 0
+USER_TYPE_GUEST  = 1
+USER_TYPE_BIND   = 2
+USER_TYPE_QQ     = 3
+USER_TYPE_ALL    = 100
+
 local DataUser = class("DataUser", function()
     return DataClassBase.new()
 end)
@@ -20,10 +26,11 @@ function DataUser:ctor()
     self.nickName                          = ''
     self.password                          = ''
     self.sessionToken                      = ''
-    self.isGuest                           = 1
+    self.usertype                          = USER_TYPE_GUEST
 
     self.appVersion                        = s_APP_VERSION 
     self.tutorialStep                      = 0 
+    self.tutorialSmallStep                 = 0 
     self.isSoundAm                         = 1 
     self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
@@ -41,9 +48,6 @@ function DataUser:ctor()
     self.seenFansCount                     = 0
 
     self.currentWordsIndex                 = 0 
---    self.currentChapterIndex               = 0 
---    self.currentLevelIndex                 = 0 
---    self.currentSelectedLevelIndex         = 0 
     self.currentChapterKey                 = ''
     self.currentSelectedChapterKey         = ''
     self.currentLevelKey                   = ''
@@ -52,7 +56,7 @@ function DataUser:ctor()
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
     
-    self.newstudytruelayerMask             = 0
+    self.newStudyRightLayerMask            = 0
 
     self.checkInWord                       = ''
     self.checkInWordUpdateDate             = 0
@@ -63,6 +67,9 @@ function DataUser:ctor()
     self.dailyCheckInData                  = DataDailyCheckIn.create()
     self.levels                            = {}
     self.logInDatas                        = {}
+    self.localAuthData                     = nil
+    self.snsUserInfo                       = nil
+    self.clientData                        = {0}
 end
 
 function DataUser:parseServerData(data)
@@ -109,8 +116,14 @@ end
 
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
-    AnalyticsTutorial(step)
     self:updateDataToServer()
+    AnalyticsTutorial(step)
+end
+
+function DataUser:setTutorialSmallStep(step)
+    self.tutorialSmallStep = step
+    self:updateDataToServer()
+    AnalyticsSmallTutorial(step)
 end
 
 -- who I follow

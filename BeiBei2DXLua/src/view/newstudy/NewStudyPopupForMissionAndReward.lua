@@ -1,7 +1,7 @@
-require("view.newstudy.NewStudyFunction")
+require("cocos.init")
+require("common.global")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 
 local NewStudyPopupForMissionAndReward = class ("NewStudyPopupForMissionAndReward",function ()
     return cc.Layer:create()
@@ -43,17 +43,17 @@ function NewStudyPopupForMissionAndReward.create()
    
     if NewStudyLayer_State == NewStudyLayer_State_Mission then
         firstparttitle = cc.LabelTTF:create ("已完成","Helvetica",35)
-        secondparttitle = cc.LabelTTF:create (maxWrongWordCount,"Helvetica",35)  
+        secondparttitle = cc.LabelTTF:create (s_CorePlayManager.maxWrongWordCount,"Helvetica",35)  
         thirdparttitle = cc.LabelTTF:create ("个生单词","Helvetica",35)
     elseif NewStudyLayer_State == NewStudyLayer_State_Reward then
         firstparttitle = cc.LabelTTF:create ("新学习单词：","Helvetica",35)
-        secondparttitle = cc.LabelTTF:create (maxWrongWordCount,"Helvetica",35)  
+        secondparttitle = cc.LabelTTF:create (s_CorePlayManager.maxWrongWordCount,"Helvetica",35)
         thirdparttitle = cc.LabelTTF:create ("个","Helvetica",35)
     end
     
-    firstparttitle:setColor(LightBlueFont)
-    secondparttitle:setColor(DeepRedFont)  
-    thirdparttitle:setColor(LightBlueFont)
+    firstparttitle:setColor(cc.c4b(39,127,182,255))
+    secondparttitle:setColor(cc.c4b(243,27,26,255))
+    thirdparttitle:setColor(cc.c4b(39,127,182,255))
     
     local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,firstparttitle)   
     local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,secondparttitle)   
@@ -83,9 +83,9 @@ function NewStudyPopupForMissionAndReward.create()
     circle:setAnchorPoint(0.5,0.5)
     popup_window:addChild(circle)
 
-    local unfamiliar_number_label = cc.Label:createWithSystemFont("+"..maxWrongWordCount,"",55)
+    local unfamiliar_number_label = cc.Label:createWithSystemFont("+"..s_CorePlayManager.maxWrongWordCount,"",55)
     unfamiliar_number_label:setPosition(circle:getContentSize().width * 0.5,circle:getContentSize().height * 0.5)
-    unfamiliar_number_label:setColor(DeepRedFont)
+    unfamiliar_number_label:setColor(cc.c4b(243,27,26,255))
     unfamiliar_number_label:ignoreAnchorPointForPosition(false)
     unfamiliar_number_label:setAnchorPoint(0.5,0.5)
     circle:addChild(unfamiliar_number_label)
@@ -99,7 +99,7 @@ function NewStudyPopupForMissionAndReward.create()
     end
 
     mission_text:setPosition(popup_window:getContentSize().width / 2,popup_window:getContentSize().height *0.4)
-    mission_text:setColor(BlackFont)
+    mission_text:setColor(cc.c4b(0,0,0,255))
     mission_text:ignoreAnchorPointForPosition(false)
     mission_text:setAnchorPoint(0.5,0.5)
     popup_window:addChild(mission_text)
@@ -114,28 +114,26 @@ function NewStudyPopupForMissionAndReward.create()
             if NewStudyLayer_State == NewStudyLayer_State_Mission then
                 current_state_judge = 0
 
-                NewStudyLayer_wordList_currentWord           =   s_WordPool[wrongWordList[currentIndex_unreview]]
-                NewStudyLayer_wordList_wordName              =   NewStudyLayer_wordList_currentWord.wordName
-                NewStudyLayer_wordList_wordSoundMarkEn       =   NewStudyLayer_wordList_currentWord.wordSoundMarkEn
-                NewStudyLayer_wordList_wordSoundMarkAm       =   NewStudyLayer_wordList_currentWord.wordSoundMarkAm
-                NewStudyLayer_wordList_wordMeaning           =   NewStudyLayer_wordList_currentWord.wordMeaning
-                NewStudyLayer_wordList_wordMeaningSmall      =   NewStudyLayer_wordList_currentWord.wordMeaningSmall
-                NewStudyLayer_wordList_sentenceEn            =   NewStudyLayer_wordList_currentWord.sentenceEn
-                NewStudyLayer_wordList_sentenceCn            =   NewStudyLayer_wordList_currentWord.sentenceCn
-
                 NewStudyLayer_State = NewStudyLayer_State_Choose
                 local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
                 s_SCENE:replaceGameLayer(newStudyLayer)
 
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
+                local action1 = cc.MoveTo:create(0.2, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
                 local action2 = cc.EaseBackOut:create(action1)
                 popup_window:runAction(action2)
 
-                s_SCENE:callFuncWithDelay(0.8,function()
+                s_SCENE:callFuncWithDelay(0.7,function()
                     s_SCENE:removeAllPopups()           
                 end)
             elseif NewStudyLayer_State == NewStudyLayer_State_Reward then
-                print("congratulation")
+
+                local level = require('view.LevelLayer')
+                local layer = level.create()
+                s_SCENE:removeAllPopups()   
+                s_SCENE:replaceGameLayer(layer)
+
+              
+
             end              
         end
     end
@@ -151,10 +149,11 @@ function NewStudyPopupForMissionAndReward.create()
         choose_mission_text = cc.Label:createWithSystemFont("趁热打铁","",32)
     elseif NewStudyLayer_State == NewStudyLayer_State_Reward then
         choose_mission_text = cc.Label:createWithSystemFont("完成任务","",32)
+        current_state_judge = 1
     end
 
     choose_mission_text:setPosition(choose_mission_button:getContentSize().width * 0.5,choose_mission_button:getContentSize().height * 0.5)
-    choose_mission_text:setColor(YellowFont)
+    choose_mission_text:setColor(cc.c4b(227,236,82,255))
     choose_mission_text:ignoreAnchorPointForPosition(false)
     choose_mission_text:setAnchorPoint(0.5,0.5)
     choose_mission_button:addChild(choose_mission_text) 

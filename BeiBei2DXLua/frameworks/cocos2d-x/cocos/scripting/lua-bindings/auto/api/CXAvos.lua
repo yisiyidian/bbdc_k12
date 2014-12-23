@@ -6,6 +6,15 @@
 
 --------------------------------
 -- 
+-- @function [parent=#CXAvos] logInByQQAuthData 
+-- @param self
+-- @param #char openid
+-- @param #char access_token
+-- @param #char expires_in
+-- @param #int nHandler
+        
+--------------------------------
+-- 
 -- @function [parent=#CXAvos] invokeLuaCallbackFunction_dl 
 -- @param self
 -- @param #char objectId
@@ -35,6 +44,12 @@
 -- @param self
 -- @param #char objectId
 -- @param #char savepath
+-- @param #int nHandler
+        
+--------------------------------
+-- 
+-- @function [parent=#CXAvos] logInByQQ 
+-- @param self
 -- @param #int nHandler
         
 --------------------------------
@@ -71,6 +86,16 @@
 -- @function [parent=#CXAvos] invokeLuaCallbackFunction_li 
 -- @param self
 -- @param #char objectjson
+-- @param #char error
+-- @param #int errorcode
+        
+--------------------------------
+-- 
+-- @function [parent=#CXAvos] invokeLuaCallbackFunction_logInByQQ 
+-- @param self
+-- @param #char objectjson
+-- @param #char qqjson
+-- @param #char authjson
 -- @param #char error
 -- @param #int errorcode
         

@@ -181,10 +181,10 @@ showLogin = function()
         end
     end
     
-    local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
-    button_qq:setPosition(back_width/2,100)
-    button_qq:addTouchEventListener(button_qq_clicked)
- --   back_login:addChild(button_qq)
+    -- local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
+    -- button_qq:setPosition(back_width/2,100)
+    -- button_qq:addTouchEventListener(button_qq_clicked)
+    -- back_login:addChild(button_qq)
     
     local button_weixin_clicked = function(sender, eventType)
 
@@ -195,9 +195,9 @@ showLogin = function()
         end
     end
 
-    local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
-    button_weixin:setPosition(back_width/2-100,100)
-    button_weixin:addTouchEventListener(button_weixin_clicked)
+    -- local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
+    -- button_weixin:setPosition(back_width/2-100,100)
+    -- button_weixin:addTouchEventListener(button_weixin_clicked)
  --   back_login:addChild(button_weixin)
     
     local button_weibo_clicked = function(sender, eventType)
@@ -209,9 +209,9 @@ showLogin = function()
         end
     end
 
-    local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
-    button_weibo:setPosition(back_width/2+100,100)
-    button_weibo:addTouchEventListener(button_weibo_clicked)
+    -- local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
+    -- button_weibo:setPosition(back_width/2+100,100)
+    -- button_weibo:addTouchEventListener(button_weibo_clicked)
  --   back_login:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
@@ -284,8 +284,9 @@ showRegister = function()
                 s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
-            s_CURRENT_USER.isGuest = 0
+            s_CURRENT_USER.usertype = USER_TYPE_MANUAL
             s_SCENE:signUp(username.textField:getString(), password.textField:getString())
+            AnalyticsSignUp_Normal()
         end
     end
 
@@ -335,9 +336,9 @@ showRegister = function()
         end
     end
     
-    local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
-    button_qq:setPosition(back_width/2,100)
-    button_qq:addTouchEventListener(button_qq_clicked)
+    -- local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
+    -- button_qq:setPosition(back_width/2,100)
+    -- button_qq:addTouchEventListener(button_qq_clicked)
 --    back_register:addChild(button_qq)
     
     local button_weixin_clicked = function(sender, eventType)
@@ -350,9 +351,9 @@ showRegister = function()
     end   
     
     
-    local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
-    button_weixin:setPosition(back_width/2-100,100)
-    button_weixin:addTouchEventListener(button_weixin_clicked)
+    -- local button_weixin = ccui.Button:create("image/login/button_login_signupwechat.png")
+    -- button_weixin:setPosition(back_width/2-100,100)
+    -- button_weixin:addTouchEventListener(button_weixin_clicked)
 --    back_register:addChild(button_weixin)
 
 
@@ -365,9 +366,9 @@ showRegister = function()
         end
     end   
     
-    local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
-    button_weibo:setPosition(back_width/2+100,100)
-    button_weibo:addTouchEventListener(button_weibo_clicked)    
+    -- local button_weibo = ccui.Button:create("image/login/button_login_signupwechat.png")
+    -- button_weibo:setPosition(back_width/2+100,100)
+    -- button_weibo:addTouchEventListener(button_weibo_clicked)    
 --    back_register:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)

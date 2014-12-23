@@ -12,7 +12,7 @@ function FriendPopup.create()
     local reason = ''
     local solution = ''
     
-    if s_CURRENT_USER.isGuest == 1 then
+    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
         reason = "游客身份无法使用好友系统\n请完善您的账号信息"
         solution = "完善个人信息"
     else
@@ -70,7 +70,7 @@ function FriendPopup.create()
             local action2 = cc.EaseBackOut:create(action1)
             popup_friend:runAction(action2) 
                         
-            if s_CURRENT_USER.isGuest == 1 then
+            if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
 
             s_SCENE:callFuncWithDelay(0.3,function()
                     local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)

@@ -20,6 +20,7 @@ function __G__TRACKBACK__(msg)
     cclog(debug.traceback())
     cclog("----------------------------------------")
     saveLuaError("LUA ERROR: " .. tostring(msg) .. '. ' .. tostring(debug.traceback()))
+    LUA_ERROR = LUA_ERROR .. '\n' .. tostring(msg) .. '\n' .. tostring(debug.traceback())
     return msg
 end
 
@@ -28,12 +29,6 @@ start = function ()
     require("common.global")
     require("AppVersionInfo")
     initApp(start)
-
-    local LEAN_CLOUD_ID_TEST   = "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
-    local LEAN_CLOUD_KEY_TEST  = "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
-
-    local LEAN_CLOUD_ID        = "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
-    local LEAN_CLOUD_KEY       = "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
 
     if RELEASE_APP then
         -- remove print debug info when release app
@@ -69,10 +64,10 @@ start = function ()
     saveLuaError = function (msg)
         local errorObj = {}
         errorObj['className'] = 'LuaError'
-        local a = string.gsub(msg, ":",  "..") 
+        local a = string.gsub(msg, ":",  "    ") 
         local b = string.gsub(a,   '"',  "'") 
-        local c = string.gsub(b,   "\n", "___") 
-        local d = string.gsub(c,   "\t", "___") 
+        local c = string.gsub(b,   "\n", "    ") 
+        local d = string.gsub(c,   "\t", "    ") 
         errorObj['msg'] = d
         s_SERVER.createData(errorObj)
     end
@@ -94,12 +89,16 @@ local test_code = 0
 -- *************************************
 if test_code == 0 then
     local startApp = function ()
-        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
+        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local LoadingView = require("view.LoadingView")
             local loadingView = LoadingView.create()
             s_SCENE:replaceGameLayer(loadingView) 
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
+            if s_CURRENT_USER.usertype == USER_TYPE_QQ then
+                s_SCENE:logInByQQAuthData()
+            else
+                s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+            end
+        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local IntroLayer = require("view.login.IntroLayer")
             local introLayer = IntroLayer.create(true)
             s_SCENE:replaceGameLayer(introLayer)

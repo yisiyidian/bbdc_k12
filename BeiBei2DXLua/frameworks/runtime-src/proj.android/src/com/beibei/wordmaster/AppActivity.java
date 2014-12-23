@@ -54,12 +54,6 @@ import com.avos.avoscloud.AVAnalytics;
 
 public class AppActivity extends Cocos2dxActivity {
 	
-	private static String LEAN_CLOUD_ID_TEST  =  "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn";
-	private static String LEAN_CLOUD_KEY_TEST =  "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3";
-
-	private static String LEAN_CLOUD_ID       =  "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp";
-	private static String LEAN_CLOUD_KEY      =  "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz";
-	
     public Cocos2dxGLSurfaceView onCreateView() {  
         Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);  
         // TestCpp should create stencil buffer  
@@ -74,7 +68,7 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		BBNDK.setup(getApplicationContext(), this);
 		
-		AppVersionInfo.initServer(this, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
+		AppVersionInfo.initServer(this);
 		
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);
@@ -120,7 +114,7 @@ public class AppActivity extends Cocos2dxActivity {
 	
 	@Override
 	protected void onPause() {
-		BBNDK.pushNotification();
+//		BBNDK.pushNotification();
 		
 		PluginWrapper.onPause();
 		AVAnalytics.onPause(this);
@@ -129,7 +123,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 	@Override
     protected void onResume() {
-		BBNDK.cancelNotification();
+//		BBNDK.cancelNotification();
 		
         super.onResume();
         AVAnalytics.onResume(this);

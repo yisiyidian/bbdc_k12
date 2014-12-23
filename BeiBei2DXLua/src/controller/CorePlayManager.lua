@@ -1,27 +1,106 @@
 require "common.global"
 
-local StudyLayer            = require("view.study.studyI.StudyLayer")
-local StudyLayerII          = require("view.study.studyII.StudyLayerII")
-local StudyLayerIII         = require("view.study.studyIII.StudyLayerIII")
-local StudyLayerIV          = require("view.study.studyIV.StudyLayerIV")
-local TestLayer             = require("view.test.testI.TestLayer")
-local TestLayerII           = require("view.test.testII.TestLayerII")
-local TestLayerIII          = require("view.test.testIII.TestLayerIII")
-local TestLayerIV           = require("view.test.testIV.TestLayerIV")
-local ReviewBossLayer       = require("view.reviewboss.reviewbossI.ReviewBossLayer")
-local ReviewBossLayerII     = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
-local ReviewBossLayerIII    = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
-local IntroLayer            = require("view.login.IntroLayer")
-local HomeLayer             = require("view.home.HomeLayer")
-local LevelLayer            = require("view.LevelLayer")
-local BookLayer             = require("view.book.BookLayer")
-local WordListLayer         = require("view.wordlist.WordMenu")
-local FriendLayer           = require("view.friend.FriendLayer")
+local StudyLayer             = require("view.study.studyI.StudyLayer")
+local StudyLayerII           = require("view.study.studyII.StudyLayerII")
+local StudyLayerIII          = require("view.study.studyIII.StudyLayerIII")
+local StudyLayerIV           = require("view.study.studyIV.StudyLayerIV")
+local TestLayer              = require("view.test.testI.TestLayer")
+local TestLayerII            = require("view.test.testII.TestLayerII")
+local TestLayerIII           = require("view.test.testIII.TestLayerIII")
+local TestLayerIV            = require("view.test.testIV.TestLayerIV")
+local ReviewBossLayer        = require("view.reviewboss.reviewbossI.ReviewBossLayer")
+local ReviewBossLayerII      = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
+local ReviewBossLayerIII     = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
+local IntroLayer             = require("view.login.IntroLayer")
+local HomeLayer              = require("view.home.HomeLayer")
+local LevelLayer             = require("view.LevelLayer")
+local BookLayer              = require("view.book.BookLayer")
+local WordListLayer          = require("view.wordlist.WordMenu")
+local FriendLayer            = require("view.friend.FriendLayer") 
+
+local NewStudyChooseLayer    = require("view.newstudy.NewStudyChooseLayer")
+local NewStudyRightLayer     = require("view.newstudy.NewStudyRightLayer")
+local NewStudyWrongLayer     = require("view.newstudy.NewStudyWrongLayer")
+local NewStudySlideLayer     = require("view.newstudy.NewStudySlideLayer")
+
+local ReviewBossMainLayer    = require("view.newreviewboss.NewReviewBossMainLayer")
+local ReviewBossHintLayer    = require("view.newreviewboss.NewReviewBossHintLayer")
+local ReviewBossSummaryLayer = require("view.newreviewboss.NewReviewBossSummaryLayer")
 
 local CorePlayManager = {}
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
+
+function CorePlayManager.initNewStudyLayer()
+    CorePlayManager.maxWrongWordCount = 20
+
+    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_BOOK_KEY_CET4]
+    -- read k from db
+    CorePlayManager.currentIndex = 1
+    CorePlayManager.rightWordList = {}
+    CorePlayManager.wrongWordList = {}
+    CorePlayManager.rightWordNum  = 0
+    CorePlayManager.wrongWordNum  = 0
+end
+
+function CorePlayManager.recordWrongWordList()
+    -- for houqi
+    -- record the wrong word into the db
+end
+
+function CorePlayManager.enterReviewBossMainLayer()
+    local reviewBossMainLayer = ReviewBossMainLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossMainLayer)
+end
+
+function CorePlayManager.enterReviewBossHintLayer()
+    local reviewBossHintLayer = ReviewBossHintLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossHintLayer)
+end
+
+function CorePlayManager.enterReviewBossSummaryLayer()
+    local reviewBossSummaryLayer = ReviewBossSummaryLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossSummaryLayer)
+end
+
+function CorePlayManager.enterNewStudyChooseLayer()
+    local newStudyChooseLayer = NewStudyChooseLayer.create()
+    s_SCENE:replaceGameLayer(newStudyChooseLayer)
+end
+
+function CorePlayManager.enterNewStudySlideLayer()
+    local newStudySlideLayer = NewStudySlideLayer.create()
+    s_SCENE:replaceGameLayer(newStudySlideLayer)
+end
+
+function CorePlayManager.enterNewStudyRightLayer()
+    local newStudyRightLayer = NewStudyRightLayer.create()
+    s_SCENE:replaceGameLayer(newStudyRightLayer)
+end
+
+function CorePlayManager.enterNewStudyWrongLayer()
+    local newStudyWrongLayer = NewStudyWrongLayer.create()
+    s_SCENE:replaceGameLayer(newStudyWrongLayer)
+end
+
+function CorePlayManager.updateCurrentIndex()
+    CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+end
+
+function CorePlayManager.updateRightWordList(wordname)
+    table.insert(CorePlayManager.rightWordList, wordname)
+    CorePlayManager.rightWordNum = CorePlayManager.rightWordNum + 1
+end
+
+function CorePlayManager.updateWrongWordList(wordname)
+    table.insert(CorePlayManager.wrongWordList, wordname)
+    CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+end
+
+
+
+
 
 function CorePlayManager.loadConfiguration()
     -- reviewboss scene variate

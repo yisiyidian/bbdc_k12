@@ -64,11 +64,6 @@ function RightTopNode:ctor()
 --                end
 --            end
 
-            
-            local NewStudyLayer = require("view.newstudy.NewStudyLayer")
-            local newStudyLayer = NewStudyLayer.create(1)
-            s_SCENE:replaceGameLayer(newStudyLayer)
-
         end 
     end
 
@@ -76,11 +71,15 @@ function RightTopNode:ctor()
         if eventType == ccui.TouchEventType.began then 
              -- button sound
             playSound(s_sound_buttonEffect)    
-        elseif eventType == ccui.TouchEventType.ended then      
-            local IntroLayer = require("view/CheckIn")
-            introLayer_day = IntroLayer.create(self)  
-            s_SCENE:popup(introLayer_day)
+--        elseif eventType == ccui.TouchEventType.ended then      
+--            local IntroLayer = require("view/CheckIn")
+--            introLayer_day = IntroLayer.create(self)  
+--            s_SCENE:popup(introLayer_day)
             
+            
+            local NewReviewBossLayer = require("view.newreviewboss.NewReviewBossLayer")
+            local newReviewBossLayer = NewReviewBossLayer.create(1)
+            s_SCENE:replaceGameLayer(newReviewBossLayer)
 
         end
     end
@@ -123,8 +122,12 @@ function RightTopNode:ctor()
     wordAday:setPosition(s_RIGHT_X - 15 , s_DESIGN_HEIGHT - 230 )
     wordAday:setLocalZOrder(1)
     wordAday:setScale(0.5);
-    --self:addChild(wordAday)
+    self:addChild(wordAday)
     self.checkIn = wordAday
+    
+    local wordAdaylabel = cc.Label:createWithSystemFont("测试中","",36)
+    wordAdaylabel:setPosition(75,38)
+    wordAday:addChild(wordAdaylabel)
 
     local wordAday_back = cc.Sprite:create("image/chapter_level/checkInGlow.png")
     wordAday_back:setPosition(0.5 * wordAday:getContentSize().width,0.5 * wordAday:getContentSize().height)

@@ -24,10 +24,17 @@ function TestAlter.createFromFirstAlter(index)
         s_SCENE.popupLayer.isOtherAlter = true
     end
 
-    local isTested = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isTested
-    if isTested == 0 then
-        s_CorePlayManager.recordWordProciency()
+--    local isTested = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey).isTested
+    local getLevelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
+    local isTested
+    if getLevelData ~= nil then
+        isTested = getLevelData.isTested
+        if isTested == 0 then
+            s_CorePlayManager.recordWordProciency()
+        end
     end
+    
+
     
     showGirlAndStar()
     button_goon_clicked_mark = 0
@@ -279,6 +286,8 @@ showDetailInfo = function()
     
     local button_replaywrong_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
+            AnalyticsReplayerWrongWords()
+            
             s_SCENE.popupLayer.isOtherAlter = false
             s_CorePlayManager.generateWrongWordList()
             s_CorePlayManager.enterStudyLayer()

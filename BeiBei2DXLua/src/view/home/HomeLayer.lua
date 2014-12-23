@@ -8,27 +8,27 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
-function isFunctionUnlocked(levelKey)
-    local ncee_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE,  'chapter0', levelKey)
-    local cet4_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4,  'chapter0', levelKey)
-    local cet6_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6,  'chapter0', levelKey)
-    local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
-    local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
+-- function isFunctionUnlocked(levelKey)
+--     local ncee_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_NCEE,  'chapter0', levelKey)
+--     local cet4_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET4,  'chapter0', levelKey)
+--     local cet6_date  = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_CET6,  'chapter0', levelKey)
+--     local ielts_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_IELTS, 'chapter0', levelKey)
+--     local toefl_date = s_CURRENT_USER:getBookChapterLevelData(s_BOOK_KEY_TOEFL, 'chapter0', levelKey)
 
-    local function judge_Whether_nil(mark)
-        if mark == nil then
-            return 0
-        else
-            return mark.isLevelUnlocked
-        end
-    end
+--     local function judge_Whether_nil(mark)
+--         if mark == nil then
+--             return 0
+--         else
+--             return mark.isLevelUnlocked
+--         end
+--     end
 
-    return ( judge_Whether_nil(ncee_date)  == 1 
-          or judge_Whether_nil(cet4_date)  == 1 
-          or judge_Whether_nil(cet6_date)  == 1 
-          or judge_Whether_nil(cet6_date)  == 1 
-          or judge_Whether_nil(toefl_date) == 1)
-end
+--     return ( judge_Whether_nil(ncee_date)  == 1 
+--           or judge_Whether_nil(cet4_date)  == 1 
+--           or judge_Whether_nil(cet6_date)  == 1 
+--           or judge_Whether_nil(cet6_date)  == 1 
+--           or judge_Whether_nil(toefl_date) == 1)
+-- end
 
 function HomeLayer.create()
     -- data begin
@@ -38,8 +38,10 @@ function HomeLayer.create()
     local chapterName       = s_DATA_MANAGER.chapters[chapterIndex].Name
     local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6)+1
     local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
+
     local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
     local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+
     local redHint = nil
     -- data end
     
@@ -108,21 +110,23 @@ function HomeLayer.create()
    
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
+            AnalyticsFriend()
+
             -- button sound
             playSound(s_sound_buttonEffect)
             
             elseif eventType == ccui.TouchEventType.ended then
 
-            if isFunctionUnlocked('level10') and s_CURRENT_USER.isGuest == 0 then
+            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                 s_CorePlayManager.enterFriendLayer()
             else
             
-                if s_CURRENT_USER.isGuest == 1 then
+                if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
                     local Item_popup = require("popup/PopupModel")
                     local item_popup = Item_popup.create(Site_From_Friend_Guest)  
                     
                     item_popup.update = function()
-                        if s_CURRENT_USER.isGuest == 0 then
+                        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                             list[1].label:setString(s_CURRENT_USER.username)
                             list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
                             if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
@@ -135,7 +139,8 @@ function HomeLayer.create()
                     local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
 
                     s_SCENE:popup(item_popup)
-                end                
+                end              
+                  
             end          
         end
     end
@@ -154,16 +159,6 @@ function HomeLayer.create()
                 redHint = cc.Sprite:create('image/friend/fri_infor.png')
                 redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
                 button_friend:addChild(redHint)
-                
-                if isFunctionUnlocked('level10') and s_CURRENT_USER.isGuest == 0 then
-                    if redHint ~= nil then
-                        redHint:setVisible(false)
-                    end
-                else
-                    if redHint ~= nil then
-                        redHint:setVisible(true)
-                    end
-                end
                
                 local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
                 num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
@@ -175,14 +170,27 @@ function HomeLayer.create()
     )
 
     local book_back = sp.SkeletonAnimation:create("res/spine/book.json", "res/spine/book.atlas", 1)
-    book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+    book_back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 - 40)
     backColor:addChild(book_back,1)
+
+    local side_progress_study = cc.LayerColor:create(cc.c4b(0,154,209,255),31,480 * studyWordNum / bookWordCount)
+    side_progress_study:setAnchorPoint(1,0)
+    side_progress_study:setSkewY(-58)
+    side_progress_study:setPosition(-219,-182)
+    book_back:addChild(side_progress_study)
+
+    local side_progress_master = cc.LayerColor:create(cc.c4b(55,177,223,255),31,480 * graspWordNum / bookWordCount)
+    side_progress_master:setAnchorPoint(1,0)
+    side_progress_master:setSkewY(-58)
+    side_progress_master:setPosition(-219,-182)
+    book_back:addChild(side_progress_master)
+
     
     local has_study = cc.ProgressTimer:create(cc.Sprite:create("image/homescene/book_front_blue_xuexi.png"))
     has_study:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     has_study:setMidpoint(cc.p(1, 0))
     has_study:setBarChangeRate(cc.p(0, 1))
-    has_study:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
+    has_study:setPosition(book_back:getContentSize().width/2+15, book_back:getContentSize().height/2+58)
     has_study:setPercentage(100 * studyWordNum / bookWordCount)
     book_back:addChild(has_study)
     
@@ -190,39 +198,111 @@ function HomeLayer.create()
     has_grasp:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     has_grasp:setMidpoint(cc.p(1, 0))
     has_grasp:setBarChangeRate(cc.p(0, 1))
-    has_grasp:setPosition(book_back:getContentSize().width/2+20, book_back:getContentSize().height/2+58)
+    has_grasp:setPosition(book_back:getContentSize().width/2+15, book_back:getContentSize().height/2+58)
     has_grasp:setPercentage(100 * graspWordNum / bookWordCount)
     book_back:addChild(has_grasp)
-    
+
+    local medal = nil 
+    if graspWordNum == bookWordCount then
+        medal = cc.Sprite:create('image/homescene/gold_medal.png')
+    elseif studyWordNum == bookWordCount then
+        medal = cc.Sprite:create('image/homescene/silver_medal.png')
+    end
+    if medal then
+        medal:setPosition(150,220)
+        book_back:addChild(medal)
+    end
     local book_back_width = book_back:getContentSize().width
+
+    local button_bg = ccui.Button:create('image/homescene/button_down.png','image/homescene/button_down.png','')
+    button_bg:setPosition(book_back_width/2, 120)
+    book_back:addChild(button_bg)
+
+    local button_today = ccui.Button:create('image/homescene/button_today.png','','')
+    button_today:setScale9Enabled(true)
+    button_today:setAnchorPoint(1,0.5)
+    button_today:setPosition(button_bg:getPositionX(),button_bg:getPositionY())
+    book_back:addChild(button_today)
+
+    local label_today = cc.Label:createWithSystemFont("今","",32)
+    label_today:setColor(cc.c4b(255,255,255,255))
+    label_today:setPosition(button_bg:getPositionX() - button_bg:getContentSize().width/4,button_bg:getPositionY())
+    book_back:addChild(label_today,2)
+
+    local button_total = ccui.Button:create('image/homescene/button_total.png','','')
+    button_total:setScale9Enabled(true)
+    button_total:setAnchorPoint(0,0.5)
+    button_total:setPosition(button_bg:getPositionX(),button_bg:getPositionY())
+    book_back:addChild(button_total)
     
-    local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",28)
-    label1:setColor(cc.c4b(255,255,255,255))
-    label1:setPosition(book_back_width/2, 200)
+
+    local label_total = cc.Label:createWithSystemFont("总","",32)
+    label_total:setColor(cc.c4b(255,255,255,255))
+    label_total:setPosition(button_bg:getPositionX() + button_bg:getContentSize().width/4,button_bg:getPositionY())
+    book_back:addChild(label_total,2)
+
+    local label1 = cc.Label:createWithSystemFont(bookName.."词汇","",32)
+    label1:setColor(cc.c4b(240,221,135,255))
+    label1:setPosition(book_back_width/2, 240)
     book_back:addChild(label1)
     
-    local label2 = cc.Label:createWithSystemFont(bookWordCount.."词","",20)
-    label2:setColor(cc.c4b(255,255,255,255))
-    label2:setPosition(book_back_width/2, 170)
+    local label2 = cc.Label:createWithSystemFont(bookWordCount.."词","",24)
+    label2:setColor(cc.c4b(240,221,135,255))
+    label2:setPosition(book_back_width/2, 210)
     book_back:addChild(label2)
     
     local label3 = cc.Label:createWithSystemFont("学习"..studyWordNum.."词","",34)
     label3:setColor(cc.c4b(255,255,255,255))
-    label3:setPosition(book_back_width/2, 60)
+    label3:setPosition(book_back_width/2, -0)
     book_back:addChild(label3)
     
     local label4 = cc.Label:createWithSystemFont("掌握"..graspWordNum.."词","",34)
     label4:setColor(cc.c4b(255,255,255,255))
-    label4:setPosition(book_back_width/2, 0)
+    label4:setPosition(book_back_width/2, -100)
     book_back:addChild(label4)
     
-    local label = cc.Label:createWithSystemFont(levelName,"",28)
-    label:setColor(cc.c4b(0,0,0,255))
-    label:setPosition(bigWidth/2, 280)
-    backColor:addChild(label)
+    -- local label = cc.Label:createWithSystemFont(levelName,"",28)
+    -- label:setColor(cc.c4b(0,0,0,255))
+    -- label:setPosition(bigWidth/2, 280)
+    -- backColor:addChild(label)
+
+    if s_CURRENT_USER.clientData[1] == 0 then
+        button_total:setVisible(false)
+    else
+        button_today:setVisible(false)
+        local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
+        label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
+        label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+    end
+
+    local function onToday(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            sender:setVisible(false)
+            button_total:setVisible(true)
+            local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
+            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            s_CURRENT_USER.clientData[1] = 1
+        end
+    end
+
+    local function onTotal(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            sender:setVisible(false)
+            button_today:setVisible(true)
+            label3:setString("学习"..studyWordNum.."词")
+            label4:setString("掌握"..graspWordNum.."词")
+            s_CURRENT_USER.clientData[1] = 0
+        end
+    end
+
+    button_today:addTouchEventListener(onToday)
+    button_total:addTouchEventListener(onTotal)
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
+            AnalyticsEnterLevelLayer()
+            
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
@@ -230,10 +310,29 @@ function HomeLayer.create()
             hideProgressHUD()
         end
     end
+    local ACCUMULATING_WORD = 1
+    local LEARNING_WORD = 2
+    local REVIEWING_WORD = 3
+    local COMPLETE_MISSION = 4
+    local state = ACCUMULATING_WORD
 
-    local button_play = ccui.Button:create("image/homescene/main_play.png","image/homescene/main_play.png","")
-    button_play:setTitleText("继续闯关   》")
-    button_play:setTitleFontSize(30)
+    local playImg = 'image/homescene/bigbutton.png'
+    if state == COMPLETE_MISSION then
+        playImg = 'image/homescene/buttonfinish.png'
+    end
+    local state_str
+    if state == ACCUMULATING_WORD then
+        state_str = '积累生词'
+    elseif state == LEARNING_WORD then
+        state_str = '学习生词'
+    elseif state == REVIEWING_WORD then
+        state_str = '复习旧词'
+    else
+        state_str = '  完成  '
+    end
+
+    local button_play = ccui.Button:create(playImg,'','')
+    button_play:setScale9Enabled(true)
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
@@ -243,42 +342,68 @@ function HomeLayer.create()
         finger:setPosition(button_play:getContentSize().width/2+20,-30)
         button_play:addChild(finger,10)
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_home+1)
     end
 
+    local state_label = cc.Label:createWithSystemFont('当前状态：','',24)
+    state_label:setPosition(button_play:getContentSize().width * 0.25,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label)
+
+    local state_label2 = cc.Label:createWithSystemFont(state_str,'',40)
+    state_label2:setPosition(button_play:getContentSize().width * 0.6,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label2)
+
+    local state_label3 = cc.Label:createWithSystemFont('>>','',24)
+    state_label3:setPosition(button_play:getContentSize().width * 0.9,button_play:getContentSize().height / 2)
+    button_play:addChild(state_label3)   
+
     local button_data
+    local data_back
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
+            AnalyticsDataCenter()
+
             -- button sound
             playSound(s_sound_buttonEffect)
             
             ----todo
-            if isFunctionUnlocked('level7') then
+            -- if isFunctionUnlocked('level7') then
 
-                local PersonalInfo = require("view.PersonalInfo")
-                local personalInfoLayer = PersonalInfo.create()
-                s_SCENE:replaceGameLayer(personalInfoLayer) 
+            --     local PersonalInfo = require("view.PersonalInfo")
+            --     local personalInfoLayer = PersonalInfo.create()
+            --     s_SCENE:replaceGameLayer(personalInfoLayer) 
 
-            else
+            -- else
 
-                local Item_popup = require("popup/PopupModel")
-                local item_popup = Item_popup.create(Site_From_Information)  
-                s_SCENE:popup(item_popup)
+            --     local Item_popup = require("popup/PopupModel")
+            --     local item_popup = Item_popup.create(Site_From_Information)  
+            --     s_SCENE:popup(item_popup)
 
-            end 
+            -- end 
             
---            if isDataShow then
---                isDataShow = false
---                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
---                local action2 = cc.CallFunc:create(function()
---                    button_data:setLocalZOrder(0)
---                end)
---                button_data:runAction(cc.Sequence:create(action1, action2))
---            else
---                isDataShow = true
---                button_data:setLocalZOrder(2)
---                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-300)))
---            end
+           if isDataShow then
+               isDataShow = false
+               local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+               local action2 = cc.CallFunc:create(function()
+                   button_data:setLocalZOrder(0)
+                   data_back:removeChildByName('PersonalInfo')
+               end)
+               button_data:runAction(cc.Sequence:create(action1, action2))
+           else
+               isDataShow = true
+               button_data:setLocalZOrder(2)
+               button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
+               if true then
+                   local PersonalInfo = require("view.PersonalInfo")
+                   local personalInfoLayer = PersonalInfo.create()
+                   data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
+               else
+                   local Item_popup = require("popup/PopupModel")
+                   local item_popup = Item_popup.create(Site_From_Information)  
+                   s_SCENE:popup(item_popup)
+               end 
+           end
 
         end
     end
@@ -289,7 +414,7 @@ function HomeLayer.create()
     button_data:addTouchEventListener(button_data_clicked)
     backColor:addChild(button_data)
     
-    local data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT)  
+    data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT - 280)  
     data_back:setAnchorPoint(0.5,1)
     data_back:ignoreAnchorPointForPosition(false)  
     data_back:setPosition(button_data:getContentSize().width/2, 0)
@@ -311,7 +436,7 @@ function HomeLayer.create()
 --    local username = "游客"
 --    local logo_name = {"head","book","feedback","information","logout"}
 --    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
-    if s_CURRENT_USER.isGuest == 0 then
+    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER.username
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
@@ -321,6 +446,7 @@ function HomeLayer.create()
             if eventType == ccui.TouchEventType.ended then
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
+                    AnalyticsChangeBook()
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
                     local alter = AlterI.create("用户反馈")
@@ -334,7 +460,7 @@ function HomeLayer.create()
                     
                     improveInfo.close = function()
                         layer:removeChildByTag(1)
-                        if s_CURRENT_USER.isGuest == 0 then
+                        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                             list[1].label:setString(s_CURRENT_USER.username)
                             list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
                             if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
@@ -342,7 +468,7 @@ function HomeLayer.create()
                     end
                 elseif label_name[i] == "登出游戏" then
                     -- logout
-                    AnalyticsLogOut(s_CURRENT_USER.objectId)
+                    AnalyticsLogOut()
                     cx.CXAvos:getInstance():logOut()
                     s_DATABASE_MGR.setLogOut(true)
                     s_DATABASE_MGR.close()
@@ -392,6 +518,8 @@ function HomeLayer.create()
     local start_x = nil
     local onTouchBegan = function(touch, event)
         if has_study and viewIndex == 1 then
+            AnalyticsLib()
+
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
 

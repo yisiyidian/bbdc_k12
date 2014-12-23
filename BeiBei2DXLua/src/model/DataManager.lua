@@ -5,11 +5,20 @@ require('common.text')
 ---------------------------------------------------------------------------
 local s_USE_XXTEA = true
 
-s_BOOK_KEY_NCEE  = 'ncee'
-s_BOOK_KEY_CET4  = 'cet4'
-s_BOOK_KEY_CET6  = 'cet6'
-s_BOOK_KEY_IELTS = 'ielts'
-s_BOOK_KEY_TOEFL = 'toefl'
+s_BOOK_KEY_CET4     = 'cet4'
+s_BOOK_KEY_CET6     = 'cet6'
+s_BOOK_KEY_GMAT     = 'gmat'
+s_BOOK_KEY_GRE      = 'gre'
+s_BOOK_KEY_GSE      = 'gse'
+s_BOOK_KEY_IELTS    = 'ielts'
+s_BOOK_KEY_MIDDLE   = 'middle'
+s_BOOK_KEY_NCEE     = 'ncee'
+s_BOOK_KEY_PRIMARY  = 'primary'
+s_BOOK_KEY_PRO4     = 'pro4'
+s_BOOK_KEY_PRO8     = 'pro8'
+s_BOOK_KEY_SAT      = 'sat'
+s_BOOK_KEY_TOEFL    = 'toefl'
+
 
 function DataManager.clear()
     DataManager.configs = nil
@@ -35,7 +44,7 @@ s_review_boss_energy_cost = 1
 s_friend_request_max_count = 30
 s_friend_max_count = 50
 
-s_allwords = "cfg/allwords.json"
+s_allwords = "cfg/newwords.json"
 s_books = 'cfg/books.json'
 s_chapters = 'cfg/chapters.json'
 s_daily = 'cfg/dailyCheckIn.json'
@@ -116,11 +125,27 @@ function DataManager.loadAllWords()
 
     for i = 1, #lines do
         local terms = split(lines[i], "\t")
-        local word = MetaWord.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7])
+        local word = MetaWord.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7], terms[8], terms[9])
         wordInfo[word.wordName] = word
     end
 
     return wordInfo
+end
+
+function DataManager.loadBookWords()
+    local bookWord = {}
+    local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+    for i = 1, #bookName do
+        bookWord[bookName[i]] = {}
+        content = cc.FileUtils:getInstance():getStringFromFile("book/"..bookName[i]..".book")
+        local lines = split(content, "\n")
+        for j = 1, #lines do
+            if lines[j] ~= "" then
+                table.insert(bookWord[bookName[i]], lines[j])
+            end
+        end
+    end
+    return bookWord
 end
 
 -- book -------------------------------------------------------------------

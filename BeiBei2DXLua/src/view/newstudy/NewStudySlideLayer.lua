@@ -1,10 +1,7 @@
 require("cocos.init")
-
 require("common.global")
-require("view.newstudy.NewStudyFunction")
 require("view.newstudy.NewStudyConfigure")
 
-local NewStudyLayer     = require("view.newstudy.NewStudyLayer")
 local FlipMat = require("view.mat.FlipMat")
 
 local  NewStudySlideLayer = class("NewStudySlideLayer", function ()
@@ -12,6 +9,17 @@ local  NewStudySlideLayer = class("NewStudySlideLayer", function ()
 end)
 
 function NewStudySlideLayer.create()
+    local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+    local currentWord       = s_WordPool[currentWordName]
+    local wordname          = currentWord.wordName
+    local wordSoundMarkEn   = currentWord.wordSoundMarkEn
+    local wordSoundMarkAm   = currentWord.wordSoundMarkAm
+    local wordMeaningSmall  = currentWord.wordMeaningSmall
+    local wordMeaning       = currentWord.wordMeaning
+    local sentenceEn        = currentWord.sentenceEn
+    local sentenceCn        = currentWord.sentenceCn
+    local sentenceEn2       = currentWord.sentenceEn2
+    local sentenceCn2       = currentWord.sentenceCn2
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local mat
@@ -22,42 +30,25 @@ function NewStudySlideLayer.create()
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
-    layer:addChild(backGround)
+    layer:addChild(backGround) 
 
-    AddPauseButton(backGround)    
-
-    JudgeColorAtTop(backGround)  
-
---    local richtext = ccui.RichText:create()
---
---    richtext:ignoreContentAdaptWithSize(false)
---    richtext:ignoreAnchorPointForPosition(false)
---    richtext:setAnchorPoint(cc.p(0.5,0.5))
---
---    richtext:setContentSize(cc.size(backGround:getContentSize().width *0.65, 
---        backGround:getContentSize().height *0.3))  
---
---    local current_word_wordMeaning = cc.LabelTTF:create (NewStudyLayer_wordList_wordMeaning,
---        "Helvetica",32, cc.size(550, 200), cc.TEXT_ALIGNMENT_LEFT)
---
---    current_word_wordMeaning:setColor(cc.c4b(255,255,255,255))
---
---    local richElement1 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
---    richtext:pushBackElement(richElement1)                   
---    richtext:setPosition(backGround:getContentSize().width *0.5, 
---        backGround:getContentSize().height *0.7)
---    richtext:setLocalZOrder(10)
---    
---    backGround:addChild(richtext) 
+    
+    local word_meaning_label = cc.Label:createWithSystemFont(wordMeaningSmall,"",50)
+    word_meaning_label:setPosition(backGround:getContentSize().width * 0.5,s_DESIGN_HEIGHT * 0.9)
+    word_meaning_label:setColor(cc.c4b(246,207,105,255))
+    word_meaning_label:ignoreAnchorPointForPosition(false)
+    word_meaning_label:setAnchorPoint(0.5,0.5)
+    backGround:addChild(word_meaning_label)
 
     local slide_word_label = cc.Label:createWithSystemFont("回忆并划出刚才的单词","",32)
     slide_word_label:setPosition(backGround:getContentSize().width *0.22,s_DESIGN_HEIGHT * 0.68)
-    slide_word_label:setColor(WhiteFont)
+    slide_word_label:setColor(cc.c4b(255,255,255,255))
     slide_word_label:ignoreAnchorPointForPosition(false)
     slide_word_label:setAnchorPoint(0,0.5)
     backGround:addChild(slide_word_label)
 
     local success = function()   
+        playSound(s_sound_learn_true) 
     
         local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
         showAnswerStateBack:setPosition(backGround:getContentSize().width *1.5, 768)
@@ -75,17 +66,18 @@ function NewStudySlideLayer.create()
         right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
         showAnswerStateBack:addChild(right_wordname)
 
-        local action1 = cc.MoveTo:create(0.5,cc.p(backGround:getContentSize().width /2, 768))
+        local action1 = cc.MoveTo:create(0.2,cc.p(backGround:getContentSize().width /2, 768))
         showAnswerStateBack:runAction(action1)
                         
-        s_SCENE:callFuncWithDelay(1,function()
-           UpdateCurrentWordFromFalse()
+        s_SCENE:callFuncWithDelay(0.4,function()
+            s_CorePlayManager.updateCurrentIndex()
+            s_CorePlayManager.enterNewStudyChooseLayer()
         end)
     end
 
     local size_big = backGround:getContentSize()
 
-    mat = FlipMat.create(NewStudyLayer_wordList_wordName,4,4,false,"coconut_light")
+    mat = FlipMat.create(wordname,4,4,false,"coconut_light")
     mat:setPosition(size_big.width/2, 160)
     backGround:addChild(mat)
 
@@ -99,9 +91,7 @@ function NewStudySlideLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            NewStudyLayer_State = NewStudyLayer_State_Choose
-            local newStudyLayer = NewStudyLayer.create(NewStudyLayer_State)
-            s_SCENE:replaceGameLayer(newStudyLayer)
+            s_CorePlayManager.enterNewStudyWrongLayer()
         end
     end
 

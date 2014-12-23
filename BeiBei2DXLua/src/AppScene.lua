@@ -32,7 +32,27 @@ s_tutorial_study = 3
 s_tutorial_review_boss = 4
 s_tutorial_summary_boss = 5
 s_tutorial_complete = 6
+-- define small tutorial state
+s_smalltutorial_book_select = 0
+s_smalltutorial_home = 1
+s_smalltutorial_level_select = 2
+s_smalltutorial_studyRepeat1_1 = 3 -- touch cloud
+s_smalltutorial_studyRepeat1_2 = 4 -- 去划单词
+s_smalltutorial_studyRepeat1_3 = 5 -- 划完
+s_smalltutorial_studyRepeat2_1 = 6
+s_smalltutorial_studyRepeat2_2 = 7
+s_smalltutorial_studyRepeat2_3 = 8
+s_smalltutorial_studyRepeat3_1 = 9
+s_smalltutorial_studyRepeat3_2 = 10
+s_smalltutorial_studyRepeat3_3 = 11
+s_smalltutorial_review_boss = 12
+s_smalltutorial_summary_boss = 13
+s_smalltutorial_complete = 14
+s_smalltutorial_complete_win = 100
+s_smalltutorial_complete_lose = 101
+s_smalltutorial_complete_timeout = 102
 
+-- define review boss tutorial
 
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
@@ -40,6 +60,8 @@ end)
 
 function AppScene.create()
     local scene = AppScene.new()
+
+    scene.currentGameLayerName = 'unknown'
 
     scene.rootLayer = cc.Layer:create()
     scene.rootLayer:setPosition(s_DESIGN_OFFSET_WIDTH, 0)
@@ -109,6 +131,12 @@ end
 function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
+
+    if newLayer.class ~= nil and newLayer.class.__cname ~= nil then 
+        self.currentGameLayerName = newLayer.class.__cname
+    else
+        self.currentGameLayerName = 'unknown'
+    end
 end
 
 function AppScene:popup(popupNode)
@@ -162,15 +190,19 @@ end
 
 ---- sign up & log in
 
-function AppScene:startLoadingData(hasAccount, username, password)
-    local getAccount
-    if hasAccount then 
-        getAccount = s_UserBaseServer.logIn
-    else
-        getAccount = s_UserBaseServer.signUp
-    end
+local USER_START_TYPE_NEW         = 0
+local USER_START_TYPE_OLD         = 1
+local USER_START_TYPE_QQ          = 2
+local USER_START_TYPE_QQ_AUTHDATA = 3
 
+function AppScene:startLoadingData(userStartType, username, password)
     local function onResponse(u, e, code)
+
+        if e == nil and s_CURRENT_USER.tutorialStep == 0 then 
+            AnalyticsTutorial(0)
+            AnalyticsSmallTutorial(0)
+        end
+
         if e ~= nil then                  
             s_TIPS_LAYER:showSmall(e)
             hideProgressHUD()
@@ -180,19 +212,36 @@ function AppScene:startLoadingData(hasAccount, username, password)
             -- s_SCENE:getDailyCheckIn()
             s_SCENE:getConfigs(false)
         end
+        
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
-    getAccount(username, password, onResponse)
+    if userStartType == USER_START_TYPE_OLD then 
+        s_UserBaseServer.logIn(username, password, onResponse)
+    elseif userStartType == USER_START_TYPE_QQ then 
+        s_UserBaseServer.onLogInByQQ(onResponse)
+    elseif userStartType == USER_START_TYPE_QQ_AUTHDATA then 
+        s_UserBaseServer.logInByQQAuthData(onResponse)
+    else
+        s_UserBaseServer.signUp(username, password, onResponse)
+    end
 end
 
 function AppScene:signUp(username, password)
-    self:startLoadingData(false, username, password)
+    self:startLoadingData(USER_START_TYPE_NEW, username, password)
 end
 
 function AppScene:logIn(username, password)
-    self:startLoadingData(true, username, password)
+    self:startLoadingData(USER_START_TYPE_OLD, username, password)
+end
+
+function AppScene:logInByQQ()
+    self:startLoadingData(USER_START_TYPE_QQ, nil, nil) 
+end
+
+function AppScene:logInByQQAuthData()
+    self:startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
 
 -- function AppScene:getDailyCheckIn()
@@ -280,6 +329,10 @@ function AppScene:getLevels()
 end
 
 function AppScene:loadConfigs()
+    -- new books
+    s_BookWord = s_DATA_MANAGER.loadBookWords()
+    --
+
     s_DATA_MANAGER.loadBooks()
     s_DATA_MANAGER.loadChapters()
     s_DATA_MANAGER.loadDailyCheckIns()
@@ -403,6 +456,10 @@ function AppScene:onUserServerDatasCompleted()
         end)
 
     end)
+end
+
+function applicationDidEnterBackgroundLua()
+    Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end
 
 return AppScene

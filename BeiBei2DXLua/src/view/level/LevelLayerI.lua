@@ -209,6 +209,7 @@ function LevelLayerI:plotReviewBossAppearOnLevel(levelKey)
             finger:setPosition(levelButton:getContentSize().width/2+20,-30)
             levelButton:addChild(finger,10)
             s_CURRENT_USER:setTutorialStep(s_tutorial_review_boss+1)
+            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss+1)
         end
     end)
     reviewBoss:setPosition(0, 0)
@@ -251,6 +252,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
         finger:setPosition(levelButton:getContentSize().width/2+20,-30)
         levelButton:addChild(finger,10)
         s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
     end
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
         if levelData.stars > 0 and levelConfig['type'] ~= 1 then
@@ -274,6 +276,7 @@ function LevelLayerI:plotLevelDecoration(levelKey)
                 finger:setPosition(levelButton:getContentSize().width/2+20,-30)
                 levelButton:addChild(finger,10)
                 s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss+1)
+                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_summary_boss+1)
             end
             
         elseif levelIndex % 8 == 0 then

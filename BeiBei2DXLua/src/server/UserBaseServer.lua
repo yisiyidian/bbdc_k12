@@ -57,38 +57,18 @@ local function onResponse_signUp_logIn(objectjson, e, code, onResponse)
         s_logd('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
-        -- if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-        --     local sessionToken = objectjson
-        --     s_logd('signup/logIn:' .. sessionToken)
-        --     s_CURRENT_USER.sessionToken = sessionToken
-        --     s_SERVER.sessionToken = sessionToken
-        --     UserBaseServer.searchUserByUserName(s_CURRENT_USER.username, function (api, result)
-        --         for i, v in ipairs(result.results) do
-                   
-        --            parseServerDataToUserData(v, s_CURRENT_USER)
-        --            s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-        --            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+        s_logd('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
+        local user = s_JSON.decode(objectjson)
+        s_CURRENT_USER.sessionToken = user.sessionToken
+        s_SERVER.sessionToken = user.sessionToken
+        parseServerDataToUserData(user, s_CURRENT_USER)
+        s_CURRENT_USER.userId = s_CURRENT_USER.objectId
+        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+        s_DATABASE_MGR.setLogOut(false)
 
-        --            if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
-        --            print_lua_table(s_CURRENT_USER)
-        --            break
-        --        end
-        --     end,
-        --     function (api, code, message, description)
-        --         if onResponse ~= nil then onResponse(s_CURRENT_USER, description, code) end
-        --     end)
-        -- else
-            s_logd('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
-            local user = s_JSON.decode(objectjson)
-            s_CURRENT_USER.sessionToken = user.sessionToken
-            s_SERVER.sessionToken = user.sessionToken
-            parseServerDataToUserData(user, s_CURRENT_USER)
-            s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-            s_DATABASE_MGR.setLogOut(false)
-            
-            if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
-        -- end
+        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+        
+        if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
     else
         s_logd('signup/logIn:no sessionToken') 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, 'no sessionToken', code) end
@@ -115,11 +95,66 @@ function UserBaseServer.logIn(username, password, onResponse)
     end)
 end
 
+function UserBaseServer.logInByQQAuthData(onResponse)
+    cx.CXAvos:getInstance():logInByQQAuthData(s_CURRENT_USER.openid, s_CURRENT_USER.access_token, s_CURRENT_USER.expires_in,
+        function (objectjson, qqjson, authjson, e, code)
+            onResponse_signUp_logIn(objectjson, e, code, onResponse)
+        end
+    )
+end
+
+function UserBaseServer.onLogInByQQ(onResponse)
+    s_CURRENT_USER.usertype = USER_TYPE_QQ
+    cx.CXAvos:getInstance():logInByQQ(function (objectjson, qqjson, authjson, e, code)
+        if e == nil and qqjson ~= nil and authjson ~= nil then
+            local qqUserInfo = s_JSON.decode(qqjson)
+            local authData = s_JSON.decode(authjson)
+            s_CURRENT_USER.localAuthData = authData
+            s_CURRENT_USER.snsUserInfo = qqUserInfo
+
+            -- print ('QQ USER INFO')
+            -- print_lua_table (authData)
+            -- print_lua_table (qqUserInfo)
+            -- ["access_token"] = "F24DE9192D4FB7E96594D33AEAD3E848",
+            -- ["openid"] = "4736E8D1D0A42BF6DF94F7A972CDD933",
+            -- ["expires_in"] = "1427014567",
+
+            -- ["yellow_vip_level"] = "0",
+            -- ["figureurl_1"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/50",
+            -- ["figureurl_qq_2"] = "http://q.qlogo.cn/qqapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/100",
+            -- ["city"] = "深圳",
+            -- ["level"] = "0",
+            -- ["figureurl_qq_1"] = "http://q.qlogo.cn/qqapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/40",
+            -- ["is_lost"] = 0,
+            -- ["nickname"] = "qzuser",
+            -- ["figureurl"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/30",
+            -- ["is_yellow_year_vip"] = "0",
+            -- ["ret"] = 0,
+            -- ["vip"] = "0",
+            -- ["year"] = "1990",
+            -- ["gender"] = "男",
+            -- ["figureurl_2"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/100",
+            -- ["msg"] = "",
+            -- ["is_yellow_vip"] = "0",
+            -- ["province"] = "广东",
+
+            s_CURRENT_USER.nickName = s_CURRENT_USER.snsUserInfo.nickname
+            s_CURRENT_USER.access_token = s_CURRENT_USER.localAuthData.access_token
+            s_CURRENT_USER.openid = s_CURRENT_USER.localAuthData.openid
+            s_CURRENT_USER.expires_in = s_CURRENT_USER.localAuthData.expires_in
+            -- print_lua_table (s_CURRENT_USER)
+
+        end
+
+        onResponse_signUp_logIn(objectjson, e, code, onResponse)
+    end)
+end
+
 -- function (username, password, error description, error code)
 function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
     local onCompleted = function ()
         s_CURRENT_USER.password = password
-        s_CURRENT_USER.isGuest = 0
+        s_CURRENT_USER.usertype = USER_TYPE_BIND
         s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
@@ -294,6 +329,34 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
     else
         s_SERVER.updateData(dataObject, s, onFailed)
     end
+end
+
+function UserBaseServer.saveWordProciencyOfCurrentUser(bookKey, wordName, prociencyValue, onSucceed, onFailed)
+    local DataWordProciency = require('model/user/DataWordProciency')
+
+    local dataObject = DataWordProciency.create()
+    dataObject.userId = s_CURRENT_USER.objectId
+    dataObject.bookKey = bookKey
+    dataObject.wordName = wordName
+    dataObject.prociencyValue = prociencyValue
+
+    local s = function (api, result)
+        if #result.results > 0 then
+            for i, data in ipairs(result.results) do
+                data.prociencyValue = dataObject.prociencyValue
+                parseServerDataToUserData(data, dataObject)
+                s_SERVER.updateData(dataObject, onSucceed, onFailed)
+                break
+            end
+        else
+            s_SERVER.createData(dataObject, onSucceed, onFailed)
+        end
+    end
+    local f = function (api, result)
+        s_SERVER.createData(dataObject, onSucceed, onFailed)        
+    end
+
+    s_SERVER.search('classes/DataWordProciency?where={"userId":"' .. dataObject.userId .. '","bookKey":"' .. dataObject.bookKey .. '","wordName":"' .. dataObject.wordName .. '"}', s, f)
 end
 
 return UserBaseServer

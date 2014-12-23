@@ -10,6 +10,12 @@ local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
 end)
 
+local function button_qq_clicked(sender, eventType)
+    if eventType == ccui.TouchEventType.ended then
+        playSound(s_sound_buttonEffect)
+        s_SCENE:logInByQQ()
+    end
+end
 
 function IntroLayer.create(directOnLogin)
     local layer = IntroLayer.new()
@@ -76,8 +82,9 @@ function IntroLayer.create(directOnLogin)
         showProgressHUD()
         s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
             if result.count <= 0 then -- not exist the user name
-                s_CURRENT_USER.isGuest = 1
+                s_CURRENT_USER.usertype = USER_TYPE_GUEST
                 s_SCENE:signUp(randomUserName, "bbdc123#")
+                AnalyticsSignUp_Guest()
             else -- exist the user name
                 visitLogin()
             end
@@ -90,7 +97,7 @@ function IntroLayer.create(directOnLogin)
     
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local hasGuest = s_DATABASE_MGR.getLastLogInGuest(s_CURRENT_USER)
+            local hasGuest = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_GUEST)
             if hasGuest then
                 s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
             else
@@ -100,6 +107,11 @@ function IntroLayer.create(directOnLogin)
             playSound(s_sound_buttonEffect)
         end
     end
+
+    local button_qq = ccui.Button:create("image/login/button_login_signup_qq.png")
+    button_qq:setPosition(s_DESIGN_WIDTH/2, 800)
+    button_qq:addTouchEventListener(button_qq_clicked)
+    intro:addChild(button_qq)
     
     local button_visitor = ccui.Button:create()
     button_visitor:loadTextures("image/button/button_white2_denglu.png", "", "")
@@ -146,9 +158,9 @@ function IntroLayer.create(directOnLogin)
                 loginAlter.close = function() layer:removeChildByTag(2) end 
             end
 
-            local hasAccount = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER)
+            local hasAccount = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
 
-            if not (hasAccount and s_CURRENT_USER.isGuest == 1) then
+            if not (hasAccount and s_CURRENT_USER.usertype == USER_TYPE_GUEST) then
                 gotoRegistNewAccount()
             else
                 local visitorRegister = VisitorRegister.create()

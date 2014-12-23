@@ -22,6 +22,7 @@ else
 fi
 
 python exportCfg_allwords.py ${RAW_CONFIGS}/allword.json ${TMP_DIR}/allwords.json
+python exportCfg_newwords.py ${RAW_CONFIGS}/newword.json ${TMP_DIR}/newwords.json
 
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'ncee'
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'cet4'
