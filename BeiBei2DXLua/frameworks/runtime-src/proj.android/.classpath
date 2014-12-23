@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="libs/avoscloud-android-sdk-v2.6.9.2/httpmime-4.2.4.jar"/>
 	<classpathentry kind="lib" path="libs/avoscloud-android-sdk-v2.6.9.2/qq.sdk.1.6.1.jar"/>
 	<classpathentry kind="lib" path="libs/avoscloud-android-sdk-v2.6.9.2/weibo.sdk.android.sso.jar"/>
+	<classpathentry kind="lib" path="libs/open_sdk_r4346_lite.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
