@@ -6,18 +6,49 @@ import os, os.path, errno
 import sys
 import shutil
 
-LEAN_CLOUD_ID_TEST   = "gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
-LEAN_CLOUD_KEY_TEST  = "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
+DEBUG_FOR_TEST       = '0'
+RELEASE_FOR_APPSTORE = '1'
+RELEASE_FOR_TEST     = '2'
 
-LEAN_CLOUD_ID        = "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
-LEAN_CLOUD_KEY       = "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
+LEAN_CLOUD_TEST = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"]
 
-UMENG_APP_KEY_XIAOMI = ["5498fc3afd98c56b4200075d", "xiao-mi"]
+LEAN_CLOUD_XIAOMI = ["94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp", "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"]
 
-UMENG_INFO           = UMENG_APP_KEY_XIAOMI
+UMENG_APP_XIAOMI = ["5498fc3afd98c56b4200075d", "xiao-mi"]
 
-def exportLua(isRelease, appVersionInfo, fullpathLua):
-    appVersionInfoLua = '''
+TENCENT_APP = ["1103783596", "n7vXdt6eDIggSsa6"]
+
+# ---------------------------------------------------------
+
+LEAN_CLOUD_RELEASE = LEAN_CLOUD_XIAOMI
+UMENG_APP = UMENG_APP_XIAOMI
+
+# ---------------------------------------------------------
+
+def getCodeTypeDes(codeType):
+    if codeType == DEBUG_FOR_TEST:
+        return 'debug'
+    elif codeType == RELEASE_FOR_APPSTORE:
+        return 'release'
+    elif codeType == RELEASE_FOR_TEST:
+        return 'release for test'
+
+def getLeanCloudAppId(codeType):
+    lean_cloud_id = LEAN_CLOUD_RELEASE[0]
+    if codeType == DEBUG_FOR_TEST:
+        lean_cloud_id = LEAN_CLOUD_TEST[0]
+    return lean_cloud_id
+
+def getLeanCloudAppKey(codeType):
+    lean_cloud_key = LEAN_CLOUD_RELEASE[1]
+    if codeType == DEBUG_FOR_TEST:
+        lean_cloud_key = LEAN_CLOUD_TEST[1]        
+    return lean_cloud_key
+
+# ---------------------------------------------------------
+
+def exportLua(codeType, appVersionInfo, fullpathLua):
+    appVersionInfoLua = '''-- %s
 
 LEAN_CLOUD_ID_TEST   = "%s"
 LEAN_CLOUD_KEY_TEST  = "%s"
@@ -25,14 +56,16 @@ LEAN_CLOUD_KEY_TEST  = "%s"
 LEAN_CLOUD_ID        = "%s"
 LEAN_CLOUD_KEY       = "%s"
 
-''' % (LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST, LEAN_CLOUD_ID, LEAN_CLOUD_KEY)
+DEBUG_FOR_TEST       = '0'
+RELEASE_FOR_APPSTORE = '1'
+RELEASE_FOR_TEST     = '2'
 
-    if isRelease == '0':
-        appVersionInfoLua = appVersionInfoLua + '''
-RELEASE_APP = false
+RELEASE_APP = %s
 LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
+    if RELEASE_FOR_APPSTORE == RELEASE_APP then return end
+
     local str = ''
     if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
     if AgentManager ~= nil then
@@ -40,17 +73,11 @@ function getAppVersionDebugInfo()
     else
         str = 'name:' .. str .. '\\nchannel:' .. 'unknown' .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
     end
-    str = str .. '\\n' .. LUA_ERROR
+    str = '%s' .. '\\n' .. str .. '\\n' .. LUA_ERROR
     return str
 end
-''' % (appVersionInfo, appVersionInfo)
-    else:
-        appVersionInfoLua = appVersionInfoLua + '''
-RELEASE_APP = true
-LUA_ERROR = ''
 
-function getAppVersionDebugInfo() return '' end
-'''
+''' % (getCodeTypeDes(codeType), LEAN_CLOUD_TEST[0], LEAN_CLOUD_TEST[1], LEAN_CLOUD_RELEASE[0], LEAN_CLOUD_RELEASE[1], codeType, appVersionInfo, appVersionInfo, getCodeTypeDes(codeType))
 
     appVersionInfoLuaFile = open(fullpathLua, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
@@ -58,37 +85,21 @@ function getAppVersionDebugInfo() return '' end
 
     pass
 
-def exportObjc(isRelease, appVersionInfo, fullpath):
-    appVersionInfoLua = '''
+def exportObjc(codeType, appVersionInfo, fullpath):
+    isProduction = 'NO'
+    if codeType == RELEASE_FOR_APPSTORE:
+        isProduction = 'YES'
 
-#define LEAN_CLOUD_ID_TEST   @"%s"
-#define LEAN_CLOUD_KEY_TEST  @"%s"
+    appVersionInfoLua = ''' // %s
 
-#define LEAN_CLOUD_ID        @"%s"
-#define LEAN_CLOUD_KEY       @"%s"
+#define TENCENT_APP_ID @"%s"
 
-''' % (LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST, LEAN_CLOUD_ID, LEAN_CLOUD_KEY)
-
-    if isRelease == '0':
-        appVersionInfoLua = '''
-// DEBUG
-%s
-        
 #define INIT_SERVER \\
-    [AVOSCloud setApplicationId:LEAN_CLOUD_ID_TEST \\
-                      clientKey:LEAN_CLOUD_KEY_TEST]; \\
-    [AVCloud setProductionMode:NO];
-''' % appVersionInfoLua
-    else:
-        appVersionInfoLua = '''
-// RELEASE
-%s
+    [AVOSCloud setApplicationId:@"%s" \\
+                      clientKey:@"%s"]; \\
+    [AVCloud setProductionMode:%s];
 
-#define INIT_SERVER \\        
-    [AVOSCloud setApplicationId:LEAN_CLOUD_ID \\
-                      clientKey:LEAN_CLOUD_KEY]; \\
-    [AVCloud setProductionMode:YES];
-''' % appVersionInfoLua
+''' % (getCodeTypeDes(codeType), TENCENT_APP[0], getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
@@ -96,61 +107,54 @@ def exportObjc(isRelease, appVersionInfo, fullpath):
 
     pass
 
-def exportJava(isRelease, appVersionInfo, fullpath):
+def exportJava(codeType, appVersionInfo, fullpath):
+    macro_type = getCodeTypeDes(codeType)
+    lean_cloud_id = getLeanCloudAppId(codeType)
+    lean_cloud_key = getLeanCloudAppKey(codeType)
+    umeng_app_key = UMENG_APP[0]
+    umeng_app_channel = UMENG_APP[1]
+    qq_app_id = TENCENT_APP[0]
+    qq_app_key = TENCENT_APP[1]
+
+    isDebugLogEnabled = 'true'
+    isProduction = 'false'
+    if codeType == RELEASE_FOR_APPSTORE:
+        isDebugLogEnabled = 'false'
+        isProduction = 'true'
+
     appVersionInfoLua = '''
-
-    private static String LEAN_CLOUD_ID_TEST   = "%s";
-    private static String LEAN_CLOUD_KEY_TEST  = "%s";
-
-    private static String LEAN_CLOUD_ID        = "%s";
-    private static String LEAN_CLOUD_KEY       = "%s";
-
-''' % (LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST, LEAN_CLOUD_ID, LEAN_CLOUD_KEY)
-
-    if isRelease == '0':
-        appVersionInfoLua = '''
+// ----------
+// %s
+// ----------
 package c.bb.dc;
+
 import com.avos.avoscloud.AVCloud;
+import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVOSCloud;
+import com.avos.sns.*;
+
 import com.umeng.analytics.AnalyticsConfig;
+
 import android.app.Activity;
 
-// DEBUG
 public class AppVersionInfo {
-    %s
 
     public static void initServer(Activity a) {
-        AVOSCloud.initialize(a, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
-        AVOSCloud.setDebugLogEnabled(true);
-        AVCloud.setProductionMode(false);
+        AVOSCloud.initialize(a, "%s", "%s");
+        AVOSCloud.setDebugLogEnabled(%s);
+        AVCloud.setProductionMode(%s);
 
         AnalyticsConfig.setAppkey("%s");
         AnalyticsConfig.setChannel("%s");
+
+        try {
+            SNS.setupPlatform(SNSType.AVOSCloudSNSQQ, "%s", "%s", null);
+        } catch (AVException e) {
+            e.printStackTrace();
+        }
     }
 }
-''' % (appVersionInfoLua, UMENG_INFO[0], UMENG_INFO[1])
-    else:
-        appVersionInfoLua = appVersionInfoLua + '''
-package c.bb.dc;
-import com.avos.avoscloud.AVCloud;
-import com.avos.avoscloud.AVOSCloud;
-import com.umeng.analytics.AnalyticsConfig;
-import android.app.Activity;
-
-// RELEASE
-public class AppVersionInfo {
-    %s
-
-    public static void initServer(Activity a) {
-        AVOSCloud.initialize(a, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
-        AVOSCloud.setDebugLogEnabled(false);
-        AVCloud.setProductionMode(true);
-
-        AnalyticsConfig.setAppkey("%s");
-        AnalyticsConfig.setChannel("%s");
-    }
-}
-''' % (appVersionInfoLua, UMENG_INFO[0], UMENG_INFO[1])
+''' % (macro_type, lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel, qq_app_id, qq_app_key)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
@@ -158,10 +162,10 @@ public class AppVersionInfo {
 
     pass
 
-def export(isRelease, appVersionInfo, fullpathLua, fullpathObjc, fullpathJava):
-    exportLua(isRelease, appVersionInfo, fullpathLua)
-    exportObjc(isRelease, appVersionInfo, fullpathObjc)
-    exportJava(isRelease, appVersionInfo, fullpathJava)
+def export(codeType, appVersionInfo, fullpathLua, fullpathObjc, fullpathJava):
+    exportLua(codeType, appVersionInfo, fullpathLua)
+    exportObjc(codeType, appVersionInfo, fullpathObjc)
+    exportJava(codeType, appVersionInfo, fullpathJava)
     pass
                 
 if __name__ == "__main__":

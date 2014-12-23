@@ -6,12 +6,14 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="libs/android-async-http-1.4.6.jar"/>
-	<classpathentry kind="lib" path="libs/avoscloud-v2.6.7.jar"/>
-	<classpathentry kind="lib" path="libs/avosfeedback-v2.6.7.zip"/>
-	<classpathentry kind="lib" path="libs/avosstatistics-v2.6.7.jar"/>
+	<classpathentry kind="lib" path="libs/avoscloud-v2.6.9.2.jar"/>
+	<classpathentry kind="lib" path="libs/avossns-v2.6.9.2.jar"/>
+	<classpathentry kind="lib" path="libs/avosstatistics-v2.6.9.2.jar"/>
 	<classpathentry kind="lib" path="libs/fastjson.jar"/>
 	<classpathentry kind="lib" path="libs/httpmime-4.2.4.jar"/>
 	<classpathentry kind="lib" path="libs/libPluginProtocol.jar"/>
+	<classpathentry kind="lib" path="libs/qq.sdk.1.6.1.jar"/>
 	<classpathentry kind="lib" path="libs/umeng-analytics-v5.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/weibo.sdk.android.sso.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

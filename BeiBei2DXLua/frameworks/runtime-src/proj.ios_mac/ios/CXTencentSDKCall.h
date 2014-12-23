@@ -11,7 +11,7 @@
 #import <TencentOpenAPI/TencentOAuthObject.h>
 #import <TencentOpenAPI/TencentApiInterface.h>
 
-#define TENCENT_APP_ID @"1103783596"
+#import "AppVersionInfo.h"
 
 //response
 #define kCGIRequest @"kTencentCGIRequest"

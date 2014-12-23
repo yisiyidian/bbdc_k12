@@ -30,7 +30,7 @@ start = function ()
     require("AppVersionInfo")
     initApp(start)
 
-    if RELEASE_APP then
+    if RELEASE_APP == RELEASE_FOR_APPSTORE then
         -- remove print debug info when release app
         print = function ( ... )
         end
@@ -57,8 +57,13 @@ start = function ()
         s_APP_VERSION = 160000
         s_CONFIG_VERSION = 150000 -- do NOT change this
 
-        s_SERVER.appId = LEAN_CLOUD_ID_TEST
-        s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
+        if RELEASE_APP == RELEASE_FOR_TEST then
+            s_SERVER.appId = LEAN_CLOUD_ID
+            s_SERVER.appKey = LEAN_CLOUD_KEY
+        else
+            s_SERVER.appId = LEAN_CLOUD_ID_TEST
+            s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
+        end
     end
 
     saveLuaError = function (msg)

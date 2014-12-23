@@ -22,6 +22,8 @@ local NewStudyChooseLayer    = require("view.newstudy.NewStudyChooseLayer")
 local NewStudyRightLayer     = require("view.newstudy.NewStudyRightLayer")
 local NewStudyWrongLayer     = require("view.newstudy.NewStudyWrongLayer")
 local NewStudySlideLayer     = require("view.newstudy.NewStudySlideLayer")
+local NewStudyMiddleLayer    = require("view.newstudy.NewStudyMiddleLayer")
+local NewStudySuccessLayer   = require("view.newstudy.NewStudySuccessLayer")
 
 local ReviewBossMainLayer    = require("view.newreviewboss.NewReviewBossMainLayer")
 local ReviewBossHintLayer    = require("view.newreviewboss.NewReviewBossHintLayer")
@@ -33,15 +35,61 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.initNewStudyLayer()
-    CorePlayManager.maxWrongWordCount = 20
+    CorePlayManager.maxWrongWordCount = 1
 
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_BOOK_KEY_CET4]
     -- read k from db
-    CorePlayManager.currentIndex = 1
-    CorePlayManager.rightWordList = {}
-    CorePlayManager.wrongWordList = {}
+    CorePlayManager.currentIndex  = 1
     CorePlayManager.rightWordNum  = 0
     CorePlayManager.wrongWordNum  = 0
+    CorePlayManager.rightWordList = {}
+    CorePlayManager.wrongWordList = {}
+    
+    CorePlayManager.playModel     = 0 -- 0 for study and 1 for review
+    
+    CorePlayManager.wordCandidate = {}
+    CorePlayManager.candidateNum  = 0
+end
+
+function CorePlayManager.checkInStudyModel()
+    CorePlayManager.playModel = 0
+end
+
+function CorePlayManager.checkInReviewModel()
+    CorePlayManager.playModel = 1
+end
+
+function CorePlayManager.isStudyModel()
+    if CorePlayManager.playModel == 0 then
+        return true
+    else
+        return false
+    end
+end
+
+function CorePlayManager.isReviewModel()
+    if CorePlayManager.playModel == 1 then
+        return true
+    else
+        return false
+    end
+end
+
+function CorePlayManager.initWordCandidate()
+    for i = 1, CorePlayManager.wrongWordNum do
+        table.insert(CorePlayManager.wordCandidate, CorePlayManager.wrongWordList[i])
+    end
+    CorePlayManager.candidateNum = CorePlayManager.wrongWordNum
+end
+
+function CorePlayManager.updateWordCandidate(isInsertTail)
+    if isInsertTail then
+        table.insert(CorePlayManager.wordCandidate, CorePlayManager.wordCandidate[1])
+        table.remove(CorePlayManager.wordCandidate, 1)
+    else
+        table.remove(CorePlayManager.wordCandidate, 1)
+        CorePlayManager.candidateNum = CorePlayManager.candidateNum - 1
+    end
 end
 
 function CorePlayManager.recordWrongWordList()
@@ -82,6 +130,16 @@ end
 function CorePlayManager.enterNewStudyWrongLayer()
     local newStudyWrongLayer = NewStudyWrongLayer.create()
     s_SCENE:replaceGameLayer(newStudyWrongLayer)
+end
+
+function CorePlayManager.enterNewStudyMiddleLayer()
+    local newStudyMiddleLayer = NewStudyMiddleLayer.create()
+    s_SCENE:replaceGameLayer(newStudyMiddleLayer)
+end
+
+function CorePlayManager.enterNewStudySuccessLayer()
+    local newStudySuccessLayer = NewStudySuccessLayer.create()
+    s_SCENE:replaceGameLayer(newStudySuccessLayer)
 end
 
 function CorePlayManager.updateCurrentIndex()

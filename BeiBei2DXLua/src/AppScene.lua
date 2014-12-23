@@ -85,8 +85,12 @@ function AppScene.create()
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
-    scene.debugLayer = DebugLayer.create()
-    if RELEASE_APP then scene.debugLayer:setVisible(false) end
+    if RELEASE_APP == RELEASE_FOR_APPSTORE then 
+        cc.Layer:create()
+        scene.debugLayer:setVisible(false) 
+    else
+        scene.debugLayer = DebugLayer.create()
+    end
     scene.rootLayer:addChild(scene.debugLayer)
     
     -- scene global variables
