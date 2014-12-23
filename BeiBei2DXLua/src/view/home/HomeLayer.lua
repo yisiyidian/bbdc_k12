@@ -34,9 +34,9 @@ function HomeLayer.create()
     -- data begin
     local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local chapterIndex      = string.sub(s_CURRENT_USER.currentChapterKey,8,8)+1
+    local chapterIndex      = string.sub(s_CURRENT_USER.currentChapterKey,8)+1
     local chapterName       = s_DATA_MANAGER.chapters[chapterIndex].Name
-    local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6,6)+1
+    local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6)+1
     local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
     local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
     local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
