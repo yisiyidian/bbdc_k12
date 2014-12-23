@@ -12,6 +12,10 @@ LEAN_CLOUD_KEY_TEST  = "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
 LEAN_CLOUD_ID        = "94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
 LEAN_CLOUD_KEY       = "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
 
+UMENG_APP_KEY_XIAOMI = ["5498fc3afd98c56b4200075d", "xiao-mi"]
+
+UMENG_INFO           = UMENG_APP_KEY_XIAOMI
+
 def exportLua(isRelease, appVersionInfo, fullpathLua):
     appVersionInfoLua = '''
 
@@ -108,6 +112,7 @@ def exportJava(isRelease, appVersionInfo, fullpath):
 package c.bb.dc;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
+import com.umeng.analytics.AnalyticsConfig;
 import android.app.Activity;
 
 // DEBUG
@@ -118,14 +123,18 @@ public class AppVersionInfo {
         AVOSCloud.initialize(a, LEAN_CLOUD_ID_TEST, LEAN_CLOUD_KEY_TEST);
         AVOSCloud.setDebugLogEnabled(true);
         AVCloud.setProductionMode(false);
+
+        AnalyticsConfig.setAppkey(%s);
+        AnalyticsConfig.setChannel(%s);
     }
 }
-''' % appVersionInfoLua
+''' % (appVersionInfoLua, UMENG_INFO[0], UMENG_INFO[1])
     else:
         appVersionInfoLua = appVersionInfoLua + '''
 package c.bb.dc;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
+import com.umeng.analytics.AnalyticsConfig;
 import android.app.Activity;
 
 // RELEASE
@@ -136,9 +145,12 @@ public class AppVersionInfo {
         AVOSCloud.initialize(a, LEAN_CLOUD_ID, LEAN_CLOUD_KEY);
         AVOSCloud.setDebugLogEnabled(false);
         AVCloud.setProductionMode(true);
+
+        AnalyticsConfig.setAppkey(%s);
+        AnalyticsConfig.setChannel(%s);
     }
 }
-''' % appVersionInfoLua
+''' % (appVersionInfoLua, UMENG_INFO[0], UMENG_INFO[1])
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
