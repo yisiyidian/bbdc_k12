@@ -45,7 +45,7 @@ function CorePlayManager.initNewStudyLayer()
     CorePlayManager.rightWordList = {}
     CorePlayManager.wrongWordList = {}
     
-    CorePlayManager.playModel     = 0 -- 0 for study and 1 for review
+    CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
     
     CorePlayManager.wordCandidate = {}
     CorePlayManager.candidateNum  = 0

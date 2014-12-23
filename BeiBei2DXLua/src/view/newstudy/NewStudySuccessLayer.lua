@@ -87,7 +87,7 @@ function NewStudySuccessLayer.create()
     local button_go_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
-            playSound(s_sound_buttonEffect)        
+            playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             s_CorePlayManager.enterLevelLayer()
         end
