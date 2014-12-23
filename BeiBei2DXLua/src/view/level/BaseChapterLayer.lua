@@ -57,6 +57,7 @@ function BaseChapterLayer:ctor(chapterKey, startLevelKey)
             local levelContainer = self.ccbRepeatLevelLayer['levelSet']:getChildByName(levelConfig[i]['level_key']..'Container')
             if levelContainer ~= nil then
                 if string.format('%s',levelConfig[i]['type']) == '1' then
+                    --TODO change chapter ui
                     local levelImageName = 'image/chapter_level/chapter3_level_button_unlock.png'
                     local levelButton = ccui.Button:create(levelImageName, levelImageName, levelImageName)
                     levelButton:setPosition(levelContainer:getPositionX(),levelContainer:getPositionY())
@@ -109,6 +110,123 @@ function BaseChapterLayer:ctor(chapterKey, startLevelKey)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN)
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+end
+
+function BaseChapterLayer:plotLevelStar(levelButton, heart)
+    local star1, star2, star3
+    if heart >= 3 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star3 = cc.Sprite:create('image/chapter_level/starFull.png')
+    elseif heart == 2 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    elseif heart == 1 then
+        star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+        star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    else
+        star1 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+    end
+    star1:setPosition(30,30)
+    star2:setPosition(80,10)
+    star3:setPosition(130,30)
+    levelButton:addChild(star1, 5)
+    levelButton:addChild(star2, 5)
+    levelButton:addChild(star3, 5)
+end
+
+function BaseChapterLayer:plotStarAnimation(levelKey, starCount)
+    local levelButton = self:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    if levelConfig['type'] == 0 then
+        local star1, star2, star3
+        if starCount >= 3 then
+            star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star3 = cc.Sprite:create('image/chapter_level/starFull.png')
+        elseif starCount == 2 then
+            star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star2 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        elseif starCount == 1 then
+            star1 = cc.Sprite:create('image/chapter_level/starFull.png')
+            star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+            star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        else
+            star1 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+            star2 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+            star3 = cc.Sprite:create('image/chapter_level/starEmpty.png')
+        end
+        star1:setPosition(30,30)
+        star2:setPosition(80,10)
+        star3:setPosition(130,30)
+        star1:setScale(2)
+        star2:setScale(2)
+        star3:setScale(2)
+
+        levelButton:addChild(star1, 5)
+        levelButton:addChild(star2, 5)
+        levelButton:addChild(star3, 5)
+        star1:setVisible(false)
+        star2:setVisible(false)
+        star3:setVisible(false)
+
+        s_SCENE:callFuncWithDelay(0.3,function()
+            star1:setVisible(true)
+            local action = cc.ScaleTo:create(0.4, 1.0)
+            star1:runAction(action)
+            --            -- star sound
+            --            if starCount >= 1 then
+            --                playSound(s_sound_star1)
+            --            end
+        end)
+        s_SCENE:callFuncWithDelay(0.6,function()
+            star2:setVisible(true)
+            local action = cc.ScaleTo:create(0.4, 1.0)
+            star2:runAction(action)
+            --            --star sound
+            --            if starCount >= 2 then
+            --                playSound(s_sound_star2)
+            --            end
+        end)
+        s_SCENE:callFuncWithDelay(0.9,function()
+            star3:setVisible(true)
+            local action = cc.ScaleTo:create(0.4, 1.0)
+            star3:runAction(action)
+            --            --star sound
+            --            if starCount >= 3 then
+            --                playSound(s_sound_star3)
+            --            end
+        end)
+    end
+end
+
+function BaseChapterLayer:plotUnlockLevelAnimation(levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelButton = self:getChildByName(levelKey)
+    local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+    local lockLayer = levelButton:getChildByName('lockLayer'..levelIndex)
+
+    local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
+    local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
+    local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),4)
+    local action5 = cc.MoveBy:create(0.1, cc.p(5,0))  
+    local action6 = cc.FadeOut:create(0.1)
+    local action = cc.Sequence:create(action1, action4, action5, action6, nil)
+    lockSprite:runAction(action)
+
+    local action7 = cc.DelayTime:create(0.6)
+    local action8 = cc.FadeOut:create(0.1)
+    lockLayer:runAction(cc.Sequence:create(action7, action8))
+
+    s_SCENE:callFuncWithDelay(1.1,function()
+        self:plotLevelDecoration(levelKey)
+    end)
 end
 
 return BaseChapterLayer
