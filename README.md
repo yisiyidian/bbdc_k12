@@ -19,9 +19,12 @@ BeiBei2DXLua/frameworks/runtime-src/proj.android/buildX.xml
 BeiBei2DXLua/frameworks/runtime-src/proj.android/jni/lua/main.cpp
   #include "../../../cocos2d-x/common/CXAvos.h"
 
-If you check out other branch, 
-/BeiBei2DXLua/frameworks/cocos2d-x/cocos/platform/android/java
-/BeiBei2DXLua/frameworks/runtime-src/proj.android
+If you check out other branch, remove folders below
+/BeiBei2DXLua/frameworks/cocos2d-x/cocos/platform/android/java/bin
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/assets
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/bin
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/libs/armeabi
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/obj
 
 ----------------------------------------------------------------------------------------
 开发环境

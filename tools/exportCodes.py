@@ -136,6 +136,8 @@ import com.avos.sns.*;
 
 import com.umeng.analytics.AnalyticsConfig;
 
+import c.bb.dc.sns.CXTencentSDKCall;
+
 import android.app.Activity;
 
 public class AppVersionInfo {
@@ -148,6 +150,7 @@ public class AppVersionInfo {
         AnalyticsConfig.setAppkey("%s");
         AnalyticsConfig.setChannel("%s");
 
+        CXTencentSDKCall.getInstance().init("%s", a);
         try {
             SNS.setupPlatform(SNSType.AVOSCloudSNSQQ, "%s", "%s", null);
         } catch (AVException e) {
@@ -155,7 +158,7 @@ public class AppVersionInfo {
         }
     }
 }
-''' % (macro_type, lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel, qq_app_id, qq_app_key)
+''' % (macro_type, lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel, qq_app_id, qq_app_id, qq_app_key)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)

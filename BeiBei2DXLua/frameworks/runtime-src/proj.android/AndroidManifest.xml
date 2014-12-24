@@ -84,7 +84,12 @@
     			<data android:scheme="tencent1103783596" />
 			</intent-filter>
 		</activity>
-            
+		<activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
     </application>
     
 </manifest> 

@@ -66,6 +66,8 @@ start = function ()
         end
     end
 
+    s_CURRENT_USER.appVersion = s_APP_VERSION
+
     saveLuaError = function (msg)
         local errorObj = {}
         errorObj['className'] = 'LuaError'

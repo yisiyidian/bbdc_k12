@@ -21,6 +21,7 @@ import android.os.Environment;
 import android.widget.Toast;
 
 import c.bb.dc.notification.*;
+import c.bb.dc.sns.CXTencentSDKCall;
 
 import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVException;
@@ -161,7 +162,7 @@ public class BBNDK {
 	// LeanCloud sign up, log in, log out
 	// ***************************************************************************************************************************
 	
-	private static String AVUserToJsonStr(AVUser user) {
+	public static String AVUserToJsonStr(AVUser user) {
 		org.json.JSONObject json = user.toJSONObject();
 		return json.toString();
 		
@@ -217,38 +218,36 @@ public class BBNDK {
 		});
 	}
 	
-	public static void logInByQQAuthData(String openid, String access_token, String expires_in) {
-		Map<String, Object> authData = new HashMap<String, Object>();
-		authData.put("openid", openid);
-		authData.put("access_token", access_token);
-		authData.put("expires_in", expires_in);
-		SNS.loginWithAuthData(authData, new LogInCallback<AVUser>() {
-		    @Override
-		    public void done(AVUser avUser, AVException e) {
-		        if (e == null) {
-		            
-		        } else {
-		        	invokeLuaCallbackFunction_logInByQQ(null, null, null, e.getLocalizedMessage(), e.getCode());
-		        }
-		    }
+	public static void logInByQQAuthData(final String openid, final String access_token, final String expires_in) {
+		_instance.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				CXTencentSDKCall.getInstance().logInByAuthData(access_token, expires_in, null);
+			}
 		});
 	}
 	
 	public static void logInByQQ() {
-		final SNSCallback logInByQQCallback = new SNSCallback() {
-            @Override
-            public void done(SNSBase object, SNSException e) {
-                if (e == null) {
-                	
-                } else {
-                	invokeLuaCallbackFunction_logInByQQ(null, null, null, e.getLocalizedMessage(), e.getCode());
-                }
-            }
-        };
-		SNS.loginWithCallback(_instance, SNSType.AVOSCloudSNSQQ, logInByQQCallback);
+		_instance.runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				CXTencentSDKCall.getInstance().logIn();
+			}
+			
+		});
 	}
 	
-	
+	public static void onLogInByQQ(final String objectjson, final String qqjson, final String authjson, final String error, final int errorcode) {
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionLIQQ(objectjson, qqjson, authjson, error, errorcode);
+			}
+			
+		});
+	}
 	
 	public static void logOut() {
 		AVUser.logOut();
@@ -353,5 +352,5 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionDL(String objectId, String filename, String error, int isSaved);
 	public static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
-	public static native void invokeLuaCallbackFunction_logInByQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
+	public static native void invokeLuaCallbackFunctionLIQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
 }
