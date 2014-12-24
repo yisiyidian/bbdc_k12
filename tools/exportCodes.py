@@ -15,13 +15,14 @@ LEAN_CLOUD_TEST = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40k
 LEAN_CLOUD_XIAOMI = ["94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp", "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"]
 
 UMENG_APP_XIAOMI = ["5498fc3afd98c56b4200075d", "xiao-mi"]
+UMENG_APP_ANDROID = ['549a5eb9fd98c5b2ac00144e', 'android']
 
 TENCENT_APP = ["1103783596", "n7vXdt6eDIggSsa6"]
 
 # ---------------------------------------------------------
 
 LEAN_CLOUD_RELEASE = LEAN_CLOUD_XIAOMI
-UMENG_APP = UMENG_APP_XIAOMI
+UMENG_APP = UMENG_APP_ANDROID
 
 # ---------------------------------------------------------
 

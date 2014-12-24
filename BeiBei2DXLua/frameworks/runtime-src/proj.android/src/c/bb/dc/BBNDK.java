@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
@@ -30,6 +31,7 @@ import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SignUpCallback;
+import com.avos.sns.*;
 import com.umeng.analytics.MobclickAgent;
 
 public class BBNDK {
@@ -215,6 +217,39 @@ public class BBNDK {
 		});
 	}
 	
+	public static void logInByQQAuthData(String openid, String access_token, String expires_in) {
+		Map<String, Object> authData = new HashMap<String, Object>();
+		authData.put("openid", openid);
+		authData.put("access_token", access_token);
+		authData.put("expires_in", expires_in);
+		SNS.loginWithAuthData(authData, new LogInCallback<AVUser>() {
+		    @Override
+		    public void done(AVUser avUser, AVException e) {
+		        if (e == null) {
+		            
+		        } else {
+		        	invokeLuaCallbackFunction_logInByQQ(null, null, null, e.getLocalizedMessage(), e.getCode());
+		        }
+		    }
+		});
+	}
+	
+	public static void logInByQQ() {
+		final SNSCallback logInByQQCallback = new SNSCallback() {
+            @Override
+            public void done(SNSBase object, SNSException e) {
+                if (e == null) {
+                	
+                } else {
+                	invokeLuaCallbackFunction_logInByQQ(null, null, null, e.getLocalizedMessage(), e.getCode());
+                }
+            }
+        };
+		SNS.loginWithCallback(_instance, SNSType.AVOSCloudSNSQQ, logInByQQCallback);
+	}
+	
+	
+	
 	public static void logOut() {
 		AVUser.logOut();
 	}
@@ -318,4 +353,5 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionDL(String objectId, String filename, String error, int isSaved);
 	public static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
+	public static native void invokeLuaCallbackFunction_logInByQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
 }

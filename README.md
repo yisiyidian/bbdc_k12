@@ -19,6 +19,10 @@ BeiBei2DXLua/frameworks/runtime-src/proj.android/buildX.xml
 BeiBei2DXLua/frameworks/runtime-src/proj.android/jni/lua/main.cpp
   #include "../../../cocos2d-x/common/CXAvos.h"
 
+If you check out other branch, 
+/BeiBei2DXLua/frameworks/cocos2d-x/cocos/platform/android/java
+/BeiBei2DXLua/frameworks/runtime-src/proj.android
+
 ----------------------------------------------------------------------------------------
 开发环境
 

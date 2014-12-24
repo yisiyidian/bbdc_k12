@@ -211,10 +211,10 @@ function AppScene:startLoadingData(userStartType, username, password)
             s_TIPS_LAYER:showSmall(e)
             hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
-            s_SCENE:getConfigs(true)
+            s_SCENE:gotoChooseBook()
         else
             -- s_SCENE:getDailyCheckIn()
-            s_SCENE:getConfigs(false)
+            s_SCENE:getLevels()
         end
         
     end
@@ -282,17 +282,6 @@ end
 --         end
 --     )
 -- end
-
-function AppScene:getConfigs(noBookKey)
-    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_CONFIG_DATA))
-    s_HttpRequestClient.getConfigs(function ()
-        if noBookKey then
-            s_SCENE:gotoChooseBook()
-        else
-            s_SCENE:getLevels()
-        end
-    end)
-end
 
 function AppScene:getLevels()
     local co
