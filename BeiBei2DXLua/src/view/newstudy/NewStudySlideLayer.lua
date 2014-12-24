@@ -91,6 +91,7 @@ function NewStudySlideLayer.create()
         s_SCENE:callFuncWithDelay(0.4,function()
             if s_CorePlayManager.isStudyModel() then
                 if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
+                    s_CorePlayManager.updateCurrentIndex()
                     s_CorePlayManager.enterNewStudyMiddleLayer()
                 else
                     s_CorePlayManager.updateCurrentIndex()

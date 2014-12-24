@@ -88,13 +88,28 @@ function NewStudyChooseLayer.create()
     back_tail:setPosition(bigWidth/2, 0)
     backColor:addChild(back_tail)
     
+    local button_pause_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)        
+        elseif eventType == ccui.TouchEventType.ended then            
+            s_CorePlayManager.recordStudyStateIntoDB()
+            s_CorePlayManager.enterLevelLayer()
+        end
+    end
+
+    local button_pause = ccui.Button:create("image/newstudy/zanting_chapter1.png","image/newstudy/zanting_chapter1.png","")
+    button_pause:setPosition(bigWidth/2-276, 1099)
+    button_pause:addTouchEventListener(button_pause_clicked)
+    backColor:addChild(button_pause)
+    
     local progressBar
     if s_CorePlayManager.isStudyModel() then
         progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "yellow")
     else
         progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.maxWrongWordCount-s_CorePlayManager.candidateNum, "yellow")
     end
-    progressBar:setPosition(bigWidth/2, 1092)
+    progressBar:setPosition(bigWidth/2+44, 1099)
     backColor:addChild(progressBar)
     
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
@@ -123,6 +138,7 @@ function NewStudyChooseLayer.create()
                         s_CorePlayManager.updateWordCandidate(false)
                         
                         if s_CorePlayManager.candidateNum == 0 then
+                            s_CorePlayManager.checkInOverModel()
                             s_CorePlayManager.enterNewStudySuccessLayer()
                         else
                             s_CorePlayManager.enterNewStudyChooseLayer()

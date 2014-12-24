@@ -1098,7 +1098,7 @@ function Manager.printCurrentIndex()
 
     print("<currentIndex>")
     for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        print("current book word index: "..row.currentIndex.." time: "..row.lastupdate)
+        print("current book word index: "..row.currentIndex.." time: "..row.lastUpdate)
     end
     print("</currentIndex>")
 end
@@ -1147,7 +1147,7 @@ function Manager.printNewPlayState()
     local bookKey = s_CURRENT_USER.bookKey
 
     print("<newPlayState>")
-    for row in Manager.database:nrows("SELECT * FROM NewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
         print("<item>")
         print("current playModel: "..row.playModel)
         print("current rightWordList: "..row.rightWordList)
@@ -1161,16 +1161,17 @@ end
 
 function Manager.getNewPlayState()
     local newPlayState = {}
+    newPlayState.lastUpdate = nil
 
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
 
     for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        state.playModel     = row.playModel
-        state.rightWordList = row.rightWordList
-        state.wrongWordList = row.wrongWordList
-        state.wordCandidate = row.wordCandidate
-        state.lastUpdate    = row.lastUpdate
+        newPlayState.playModel     = row.playModel
+        newPlayState.rightWordList = row.rightWordList
+        newPlayState.wrongWordList = row.wrongWordList
+        newPlayState.wordCandidate = row.wordCandidate
+        newPlayState.lastUpdate    = row.lastUpdate
     end
     
     return newPlayState

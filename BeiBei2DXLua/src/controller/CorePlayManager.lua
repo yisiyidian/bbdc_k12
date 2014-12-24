@@ -36,20 +36,79 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.initNewStudyLayer()
-    CorePlayManager.maxWrongWordCount = 1
+    CorePlayManager.maxWrongWordCount = 3
+    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
+    CorePlayManager.currentIndex = s_DATABASE_MGR.getCurrentIndex()
+    print("currentBookWordIndex is "..CorePlayManager.currentIndex)
+    
+    local lastPlayState = s_DATABASE_MGR.getNewPlayState()
+    if lastPlayState.lastUpdate == nil then
+        print("lastPlayStateRecord not exist...")
+        CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
+        CorePlayManager.rightWordList = {}
+        CorePlayManager.wrongWordList = {}
+        CorePlayManager.wordCandidate = {}
+        CorePlayManager.rightWordNum  = 0
+        CorePlayManager.wrongWordNum  = 0
+        CorePlayManager.candidateNum  = 0
+        CorePlayManager.enterNewStudyChooseLayer()
+    else
+        -- day format is a string like "11/16/14", as month + day + year
+        local lastupdate              = lastPlayState.lastUpdate
+        local lastupdate_day          = os.date("%x", lastupdate)
+        local current_day             = os.date("%x", os.time())
+        if lastupdate_day == current_day then
+            print("lastPlayStateRecord is today...")
+            CorePlayManager.playModel     = lastPlayState.playModel
+            if CorePlayManager.playModel == 2 then
+                print("lastPlayStateRecord is today but over...")
+                CorePlayManager.enterNewStudyOverLayer()
+            else
+                print("lastPlayStateRecord is today and not over...")
+                if lastPlayState.rightWordList == "" then
+                    CorePlayManager.rightWordList = {}
+                else
+                    CorePlayManager.rightWordList = split(lastPlayState.rightWordList, "|")
+                end
+                if lastPlayState.wrongWordList == "" then
+                    CorePlayManager.wrongWordList = {}
+                else
+                    CorePlayManager.wrongWordList = split(lastPlayState.wrongWordList, "|")
+                end
+                if lastPlayState.wordCandidate == "" then
+                    CorePlayManager.wordCandidate = {}
+                else
+                    CorePlayManager.wordCandidate = split(lastPlayState.wordCandidate, "|")
+                end
+                CorePlayManager.rightWordNum  = #CorePlayManager.rightWordList
+                CorePlayManager.wrongWordNum  = #CorePlayManager.wrongWordList
+                CorePlayManager.candidateNum  = #CorePlayManager.wordCandidate
+                CorePlayManager.enterNewStudyChooseLayer()
+            end
+        else
+            print("lastPlayStateRecord is before today...")
+            CorePlayManager.playModel     = 0
+            CorePlayManager.rightWordList = {}
+            CorePlayManager.wrongWordList = {}
+            CorePlayManager.wordCandidate = {}
+            CorePlayManager.rightWordNum  = 0
+            CorePlayManager.wrongWordNum  = 0
+            CorePlayManager.candidateNum  = 0
+            CorePlayManager.enterNewStudyChooseLayer()
+        end
+    end
+end
 
-    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_BOOK_KEY_CET4]
-    -- read k from db
-    CorePlayManager.currentIndex  = 1
-    CorePlayManager.rightWordNum  = 0
-    CorePlayManager.wrongWordNum  = 0
-    CorePlayManager.rightWordList = {}
-    CorePlayManager.wrongWordList = {}
+function CorePlayManager.recordStudyStateIntoDB()
+    s_DATABASE_MGR.setCurrentIndex(CorePlayManager.currentIndex)
+    s_DATABASE_MGR.printCurrentIndex()
+
+    local rightWordListString = changeTableToString(CorePlayManager.rightWordList)
+    local wrongWordListString = changeTableToString(CorePlayManager.wrongWordList)
+    local wordCandidateString = changeTableToString(CorePlayManager.wordCandidate)
     
-    CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
-    
-    CorePlayManager.wordCandidate = {}
-    CorePlayManager.candidateNum  = 0
+    s_DATABASE_MGR.setNewPlayState(CorePlayManager.playModel, rightWordListString, wrongWordListString, wordCandidateString)
+    s_DATABASE_MGR.printNewPlayState()
 end
 
 function CorePlayManager.checkInStudyModel()
@@ -58,6 +117,10 @@ end
 
 function CorePlayManager.checkInReviewModel()
     CorePlayManager.playModel = 1
+end
+
+function CorePlayManager.checkInOverModel()
+    CorePlayManager.playModel = 2
 end
 
 function CorePlayManager.isStudyModel()
@@ -70,6 +133,14 @@ end
 
 function CorePlayManager.isReviewModel()
     if CorePlayManager.playModel == 1 then
+        return true
+    else
+        return false
+    end
+end
+
+function CorePlayManager.isOverModel()
+    if CorePlayManager.playModel == 2 then
         return true
     else
         return false
