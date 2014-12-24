@@ -1,5 +1,3 @@
-require("view.newstudy.NewStudyConfigure")
-
 
 local NewReviewBossFailPopup = class ("NewReviewBossFailPopup",function ()
     return cc.Layer:create()
