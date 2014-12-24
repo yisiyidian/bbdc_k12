@@ -17,17 +17,26 @@ function BaseChapterLayer:ctor(chapterKey, startLevelKey)
     self.chapterKey = chapterKey
     self.startLevelKey = startLevelKey
     if self.chapterKey == 'chapter0' then
-    
+        local proxy = cc.CCBProxy:create()
+        local contentNode = CCBReaderLoad('ccb/chapter1.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)
     elseif self.chapterKey == 'chapter1' then
-    
+        local proxy = cc.CCBProxy:create()
+        local contentNode = CCBReaderLoad('ccb/chapter2.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)  
     elseif self.chapterKey == 'chapter2' then
-    
+        local proxy = cc.CCBProxy:create()
+        local contentNode = CCBReaderLoad('ccb/chapter3.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)
     elseif self.chapterKey == 'chapter3' then
         self.ccb['chapter3'] = self.ccbRepeatLevelLayer
         local proxy = cc.CCBProxy:create()
-        local contentNode = CCBReaderLoad('ccb/chapter3.ccbi',proxy,self.ccbRepeatLevelLayer,self.ccb)
-        self.ccbRepeatLevelLayer['contentNode'] = contentNode
-        self.ccbRepeatLevelLayer['levelSet'] = contentNode:getChildByTag(5)
+        local contentNode = CCBReaderLoad('ccb/chapter3.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)
     end
     
     -- init level container name
