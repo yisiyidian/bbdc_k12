@@ -1,6 +1,5 @@
 require("cocos.init")
 require("common.global")
-require("view.newstudy.NewStudyConfigure")
 
 local  NewStudyMiddleLayer = class("NewStudyMiddleLayer", function ()
     return cc.Layer:create()

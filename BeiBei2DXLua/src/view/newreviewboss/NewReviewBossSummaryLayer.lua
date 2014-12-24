@@ -1,4 +1,3 @@
-require("view.newstudy.NewStudyConfigure")
 require("view.newreviewboss.NewReviewBossConfigue")
 
 local  NewReviewBossSummaryLayer = class("NewReviewBossSummaryLayer", function ()

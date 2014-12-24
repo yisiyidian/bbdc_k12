@@ -2,7 +2,6 @@ require("cocos.init")
 
 require("common.global")
 require("view.newreviewboss.NewReviewBossFunction")
-require("view.newstudy.NewStudyConfigure")
 
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local RBProgressBar = require("view.newreviewboss.NewReviewBossProgressBar")

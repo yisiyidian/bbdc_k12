@@ -1,6 +1,5 @@
 require("cocos.init")
 require("common.global")
-require("view.newstudy.NewStudyConfigure")
 
 local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
 
@@ -87,7 +86,7 @@ function NewStudySuccessLayer.create()
     local button_go_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
-            playSound(s_sound_buttonEffect)        
+            playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             s_CorePlayManager.enterLevelLayer()
         end

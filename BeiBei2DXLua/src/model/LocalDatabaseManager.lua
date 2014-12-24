@@ -117,6 +117,29 @@ end
 
 -- init data structure
 function Manager.initTables()
+    
+    -- CREATE table Current Index
+    Manager.database:exec[[
+        create table if not exists DataCurrentIndex(
+            userId TEXT,
+            bookKey TEXT,
+            currentIndex INTEGER,
+            lastUpdate TEXT
+        );
+    ]]
+    
+    -- CREATE table NewPlay State
+    Manager.database:exec[[
+        create table if not exists DataNewPlayState(
+            userId TEXT,
+            bookKey TEXT,
+            playModel INTEGER,
+            rightWordList TEXT,
+            wrongWordList TEXT,
+            wordCandidate TEXT,
+            lastUpdate TEXT
+        );
+    ]]
    
     -- CREATE table Word Prociency
     Manager.database:exec[[
@@ -1067,6 +1090,113 @@ function Manager.insertNewStudyLayerDataTables(numberKey)
 
 end
 ----NewStudyLayer_data_table_over----
+
+
+function Manager.printCurrentIndex()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    print("<currentIndex>")
+    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        print("current book word index: "..row.currentIndex.." time: "..row.lastupdate)
+    end
+    print("</currentIndex>")
+end
+
+function Manager.getCurrentIndex()
+    local currentIndex = nil
+
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    
+    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        currentIndex = row.currentIndex
+    end
+    
+    if currentIndex == nil then
+        currentIndex = 1
+        local time = os.time()
+        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", '"..time.."');"
+        Manager.database:exec(query)
+    end
+    
+    return currentIndex
+end
+
+function Manager.setCurrentIndex(currentIndex)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        num = num + 1
+    end
+
+    if num == 0 then
+        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", '"..time.."');"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataCurrentIndex SET currentIndex = "..currentIndex..", lastUpdate = '"..time.."' WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
+        Manager.database:exec(query)
+    end
+end
+
+function Manager.printNewPlayState()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    print("<newPlayState>")
+    for row in Manager.database:nrows("SELECT * FROM NewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        print("<item>")
+        print("current playModel: "..row.playModel)
+        print("current rightWordList: "..row.rightWordList)
+        print("current wrongWordList: "..row.wrongWordList)
+        print("current wordCandidate: "..row.wordCandidate)
+        print("current lastUpdate: "..row.lastUpdate)
+        print("</item>")
+    end
+    print("</newPlayState>")
+end
+
+function Manager.getNewPlayState()
+    local newPlayState = {}
+
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        state.playModel     = row.playModel
+        state.rightWordList = row.rightWordList
+        state.wrongWordList = row.wrongWordList
+        state.wordCandidate = row.wordCandidate
+        state.lastUpdate    = row.lastUpdate
+    end
+    
+    return newPlayState
+end
+
+function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        num = num + 1
+    end
+    
+    if num == 0 then
+        local query = "INSERT INTO DataNewPlayState VALUES ('"..userId.."', '"..bookKey.."', "..playModel..", '"..rightWordList.."', '"..wrongWordList.."', '"..wordCandidate.."', '"..time.."');"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataNewPlayState SET playModel = "..playModel..", rightWordList = '"..rightWordList.."', wrongWordList = '"..wrongWordList.."', wordCandidate = '"..wordCandidate.."', lastUpdate = '"..time.."' WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
+        Manager.database:exec(query)
+    end
+end
+
+
+
 ---- UserDefault -----------------------------------------------------------
 
 local is_log_out_key = 'log_out'

@@ -24,6 +24,7 @@ local NewStudyWrongLayer     = require("view.newstudy.NewStudyWrongLayer")
 local NewStudySlideLayer     = require("view.newstudy.NewStudySlideLayer")
 local NewStudyMiddleLayer    = require("view.newstudy.NewStudyMiddleLayer")
 local NewStudySuccessLayer   = require("view.newstudy.NewStudySuccessLayer")
+local NewStudyOverLayer      = require("view.newstudy.NewStudyOverLayer")
 
 local ReviewBossMainLayer    = require("view.newreviewboss.NewReviewBossMainLayer")
 local ReviewBossHintLayer    = require("view.newreviewboss.NewReviewBossHintLayer")
@@ -45,7 +46,7 @@ function CorePlayManager.initNewStudyLayer()
     CorePlayManager.rightWordList = {}
     CorePlayManager.wrongWordList = {}
     
-    CorePlayManager.playModel     = 0 -- 0 for study and 1 for review
+    CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
     
     CorePlayManager.wordCandidate = {}
     CorePlayManager.candidateNum  = 0
@@ -140,6 +141,11 @@ end
 function CorePlayManager.enterNewStudySuccessLayer()
     local newStudySuccessLayer = NewStudySuccessLayer.create()
     s_SCENE:replaceGameLayer(newStudySuccessLayer)
+end
+
+function CorePlayManager.enterNewStudyOverLayer()
+    local newStudyOverLayer = NewStudyOverLayer.create()
+    s_SCENE:replaceGameLayer(newStudyOverLayer)
 end
 
 function CorePlayManager.updateCurrentIndex()
