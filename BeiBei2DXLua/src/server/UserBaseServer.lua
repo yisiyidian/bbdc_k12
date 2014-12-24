@@ -52,16 +52,22 @@ function validatePassword(s)
     return numberOfSubstitutions >= 6 and numberOfSubstitutions <= 16 and numberOfSubstitutions == length
 end
 
-local function onResponse_signUp_logIn(objectjson, e, code, onResponse)
+local function parseServerUser( objectjson )
+    local user = s_JSON.decode(objectjson)
+    s_CURRENT_USER.sessionToken = user.sessionToken
+    s_SERVER.sessionToken = user.sessionToken
+    parseServerDataToUserData(user, s_CURRENT_USER)
+    return true
+end
+
+local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
     if e ~= nil then 
         s_logd('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
         s_logd('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
-        local user = s_JSON.decode(objectjson)
-        s_CURRENT_USER.sessionToken = user.sessionToken
-        s_SERVER.sessionToken = user.sessionToken
-        parseServerDataToUserData(user, s_CURRENT_USER)
+        if hasParsed == false then parseServerUser( objectjson ) end
+
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
         s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
         s_DATABASE_MGR.setLogOut(false)
@@ -80,7 +86,7 @@ function UserBaseServer.signUp(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():signUp(username, password, function (objectjson, e, code)
-        onResponse_signUp_logIn(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
     end)
 end
 
@@ -89,14 +95,14 @@ function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
-        onResponse_signUp_logIn(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
     end)
 end
 
 function UserBaseServer.logInByQQAuthData(onResponse)
     cx.CXAvos:getInstance():logInByQQAuthData(s_CURRENT_USER.openid, s_CURRENT_USER.access_token, s_CURRENT_USER.expires_in,
         function (objectjson, qqjson, authjson, e, code)
-            onResponse_signUp_logIn(objectjson, e, code, onResponse)
+            onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
         end
     )
 end
@@ -125,8 +131,15 @@ end
 -- ["province"] = "广东",
 function UserBaseServer.onLogInByQQ(onResponse)
     s_CURRENT_USER.usertype = USER_TYPE_QQ
+    local isParsed = false
     cx.CXAvos:getInstance():logInByQQ(function (objectjson, qqjson, authjson, e, code)
         if e == nil and qqjson ~= nil and authjson ~= nil then
+            if objectjson ~= nil then 
+                isParsed = parseServerUser( objectjson ) 
+                print ('---- QQ USER INFO ----')
+                print_lua_table (s_CURRENT_USER)
+            end
+
             local qqUserInfo = s_JSON.decode(qqjson)
             local authData = s_JSON.decode(authjson)
             s_CURRENT_USER.localAuthData = authData
@@ -145,21 +158,23 @@ function UserBaseServer.onLogInByQQ(onResponse)
                 print ('---- QQ USER INFO qqUserInfo ----')
                 print_lua_table (qqUserInfo)
 
+                s_CURRENT_USER.nickName = s_CURRENT_USER.snsUserInfo.nickname
                 -- save nick name
                 local obj = {['className']=s_CURRENT_USER.className, 
                              ['objectId']=s_CURRENT_USER.objectId, 
-                             ['nickName']=s_CURRENT_USER.snsUserInfo.nickname}
+                             ['nickName']=s_CURRENT_USER.snsUserInfo.nickname,
+                             ['usertype']=USER_TYPE_QQ}
                 UserBaseServer.saveDataObjectOfCurrentUser(obj, 
                     function (api, result) 
-                        onResponse_signUp_logIn(objectjson, e, code, onResponse)
+                        onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
                     end, 
                     function (api, code, message, description) 
-                        onResponse_signUp_logIn(objectjson, e, code, onResponse)
+                        onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
                     end
                 )
             end
         else
-            onResponse_signUp_logIn(objectjson, e, code, onResponse)
+            onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
         end
     end)
 end

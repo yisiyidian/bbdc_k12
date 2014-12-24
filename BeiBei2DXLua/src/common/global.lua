@@ -136,10 +136,6 @@ end
 function initApp(start)
     s_START_FUNCTION = start
 
-    -- versions
-    s_APP_VERSION = 150000
-    s_CONFIG_VERSION = 150000
-
     _initConstant()
     _initTool()
     _initScene()

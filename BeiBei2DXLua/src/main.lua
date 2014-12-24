@@ -26,6 +26,8 @@ end
 
 local start
 start = function ()
+    s_APP_VERSION = 160000
+    
     require("common.global")
     require("AppVersionInfo")
     initApp(start)
@@ -42,7 +44,6 @@ start = function ()
         s_SERVER.production       = 1
 
         s_APP_VERSION = 160000
-        s_CONFIG_VERSION = 150000
 
         s_SERVER.appId = LEAN_CLOUD_ID
         s_SERVER.appKey = LEAN_CLOUD_KEY
@@ -55,7 +56,6 @@ start = function ()
         s_SERVER.production       = 0
 
         s_APP_VERSION = 160000
-        s_CONFIG_VERSION = 150000 -- do NOT change this
 
         if RELEASE_APP == RELEASE_FOR_TEST then
             s_SERVER.appId = LEAN_CLOUD_ID

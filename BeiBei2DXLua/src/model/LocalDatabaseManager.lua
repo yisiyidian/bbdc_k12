@@ -160,8 +160,7 @@ function Manager.initTables()
         require('model.user.DataLevel'),
         require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
         require('model.user.DataStatistics'),      -- IC_word_day same as DataStatistics
-        require('model.user.DataUser'),            -- db_userInfo same as DataUser
-        require('model.user.DataConfigs')
+        require('model.user.DataUser')             -- db_userInfo same as DataUser
     }
     for i = 1, #userDataClasses do
         Manager.createTable(userDataClasses[i].create())
@@ -303,20 +302,6 @@ end
 
 function Manager.getLastLogInUser(objectOfDataClass, usertype)
     return getUserDataFromLocalDB(objectOfDataClass, usertype)
-end
-
-function Manager.getDataConfigsFromLocalDB(objectOfDataClass)
-    local data = nil
-    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
-        data = row
-    end
-
-    if data ~= nil then
-        parseLocalDatabaseToUserData(data, objectOfDataClass)     
-        return true
-    end
-
-    return false
 end
 
 function Manager.insertTable_DataWordProciency(wordName, wordProciency)
