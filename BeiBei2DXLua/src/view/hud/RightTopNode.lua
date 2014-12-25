@@ -71,15 +71,10 @@ function RightTopNode:ctor()
         if eventType == ccui.TouchEventType.began then 
              -- button sound
             playSound(s_sound_buttonEffect)    
---        elseif eventType == ccui.TouchEventType.ended then      
---            local IntroLayer = require("view/CheckIn")
---            introLayer_day = IntroLayer.create(self)  
---            s_SCENE:popup(introLayer_day)
-            
-            
-            local NewReviewBossLayer = require("view.newreviewboss.NewReviewBossLayer")
-            local newReviewBossLayer = NewReviewBossLayer.create(1)
-            s_SCENE:replaceGameLayer(newReviewBossLayer)
+        elseif eventType == ccui.TouchEventType.ended then   
+           
+            s_CorePlayManager.initNewReviewBossLayer()
+            s_CorePlayManager.enterReviewBossMainLayer()
 
         end
     end

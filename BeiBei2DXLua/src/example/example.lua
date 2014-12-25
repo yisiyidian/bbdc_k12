@@ -41,8 +41,8 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
--- local IntroLayer = require("view.ScrollviewTest")
--- local introLayer = IntroLayer.create(s_DESIGN_WIDTH,s_DESIGN_HEIGHT,2 * s_DESIGN_HEIGHT)
--- s_SCENE:replaceGameLayer(introLayer) 
+local IntroLayer = require("view.ScrollviewTest")
+local introLayer = IntroLayer.create(s_DESIGN_WIDTH,s_DESIGN_HEIGHT,2 * s_DESIGN_HEIGHT)
+s_SCENE:replaceGameLayer(introLayer) 
     
 end

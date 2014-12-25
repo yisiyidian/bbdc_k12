@@ -52,21 +52,25 @@ function validatePassword(s)
     return numberOfSubstitutions >= 6 and numberOfSubstitutions <= 16 and numberOfSubstitutions == length
 end
 
-local function onResponse_signUp_logIn(objectjson, e, code, onResponse)
+local function parseServerUser( objectjson )
+    local user = s_JSON.decode(objectjson)
+    s_CURRENT_USER.sessionToken = user.sessionToken
+    s_SERVER.sessionToken = user.sessionToken
+    parseServerDataToUserData(user, s_CURRENT_USER)
+    return true
+end
+
+local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
     if e ~= nil then 
         s_logd('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
         s_logd('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
-        local user = s_JSON.decode(objectjson)
-        s_CURRENT_USER.sessionToken = user.sessionToken
-        s_SERVER.sessionToken = user.sessionToken
-        parseServerDataToUserData(user, s_CURRENT_USER)
+        if hasParsed == false then parseServerUser( objectjson ) end
+
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
         s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
         s_DATABASE_MGR.setLogOut(false)
-
-        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         
         if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
     else
@@ -82,7 +86,7 @@ function UserBaseServer.signUp(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():signUp(username, password, function (objectjson, e, code)
-        onResponse_signUp_logIn(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
     end)
 end
 
@@ -91,62 +95,89 @@ function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
-        onResponse_signUp_logIn(objectjson, e, code, onResponse)
+        onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
     end)
 end
 
 function UserBaseServer.logInByQQAuthData(onResponse)
     cx.CXAvos:getInstance():logInByQQAuthData(s_CURRENT_USER.openid, s_CURRENT_USER.access_token, s_CURRENT_USER.expires_in,
         function (objectjson, qqjson, authjson, e, code)
-            onResponse_signUp_logIn(objectjson, e, code, onResponse)
+            onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
         end
     )
 end
 
+-- ["access_token"] = "F24DE9192D4FB7E96594D33AEAD3E848",
+-- ["openid"] = "4736E8D1D0A42BF6DF94F7A972CDD933",
+-- ["expires_in"] = "1427014567",
+
+-- ["yellow_vip_level"] = "0",
+-- ["figureurl_1"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/50",
+-- ["figureurl_qq_2"] = "http://q.qlogo.cn/qqapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/100",
+-- ["city"] = "深圳",
+-- ["level"] = "0",
+-- ["figureurl_qq_1"] = "http://q.qlogo.cn/qqapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/40",
+-- ["is_lost"] = 0,
+-- ["nickname"] = "qzuser",
+-- ["figureurl"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/30",
+-- ["is_yellow_year_vip"] = "0",
+-- ["ret"] = 0,
+-- ["vip"] = "0",
+-- ["year"] = "1990",
+-- ["gender"] = "男",
+-- ["figureurl_2"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/100",
+-- ["msg"] = "",
+-- ["is_yellow_vip"] = "0",
+-- ["province"] = "广东",
 function UserBaseServer.onLogInByQQ(onResponse)
     s_CURRENT_USER.usertype = USER_TYPE_QQ
+    local isParsed = false
     cx.CXAvos:getInstance():logInByQQ(function (objectjson, qqjson, authjson, e, code)
         if e == nil and qqjson ~= nil and authjson ~= nil then
+            if objectjson ~= nil then 
+                isParsed = parseServerUser( objectjson ) 
+                print ('---- QQ USER INFO ----')
+                print_lua_table (s_CURRENT_USER)
+            end
+
             local qqUserInfo = s_JSON.decode(qqjson)
             local authData = s_JSON.decode(authjson)
             s_CURRENT_USER.localAuthData = authData
             s_CURRENT_USER.snsUserInfo = qqUserInfo
 
-            -- print ('QQ USER INFO')
-            -- print_lua_table (authData)
-            -- print_lua_table (qqUserInfo)
-            -- ["access_token"] = "F24DE9192D4FB7E96594D33AEAD3E848",
-            -- ["openid"] = "4736E8D1D0A42BF6DF94F7A972CDD933",
-            -- ["expires_in"] = "1427014567",
+            if authData ~= nil and qqUserInfo ~= nil then 
+                print ('---- QQ USER INFO authData ----')
+                print_lua_table (authData)
 
-            -- ["yellow_vip_level"] = "0",
-            -- ["figureurl_1"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/50",
-            -- ["figureurl_qq_2"] = "http://q.qlogo.cn/qqapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/100",
-            -- ["city"] = "深圳",
-            -- ["level"] = "0",
-            -- ["figureurl_qq_1"] = "http://q.qlogo.cn/qqapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/40",
-            -- ["is_lost"] = 0,
-            -- ["nickname"] = "qzuser",
-            -- ["figureurl"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/30",
-            -- ["is_yellow_year_vip"] = "0",
-            -- ["ret"] = 0,
-            -- ["vip"] = "0",
-            -- ["year"] = "1990",
-            -- ["gender"] = "男",
-            -- ["figureurl_2"] = "http://qzapp.qlogo.cn/qzapp/111111/942FEA70050EEAFBD4DCE2C1FC775E56/100",
-            -- ["msg"] = "",
-            -- ["is_yellow_vip"] = "0",
-            -- ["province"] = "广东",
+                s_CURRENT_USER.access_token = s_CURRENT_USER.localAuthData.access_token
+                s_CURRENT_USER.openid = s_CURRENT_USER.localAuthData.openid
+                s_CURRENT_USER.expires_in = s_CURRENT_USER.localAuthData.expires_in
+    
+                print ('')
 
-            s_CURRENT_USER.nickName = s_CURRENT_USER.snsUserInfo.nickname
-            s_CURRENT_USER.access_token = s_CURRENT_USER.localAuthData.access_token
-            s_CURRENT_USER.openid = s_CURRENT_USER.localAuthData.openid
-            s_CURRENT_USER.expires_in = s_CURRENT_USER.localAuthData.expires_in
-            -- print_lua_table (s_CURRENT_USER)
+                print ('---- QQ USER INFO qqUserInfo ----')
+                print_lua_table (qqUserInfo)
 
+                s_CURRENT_USER.nickName = s_CURRENT_USER.snsUserInfo.nickname
+                -- save nick name
+                local obj = {['className']=s_CURRENT_USER.className, 
+                             ['objectId']=s_CURRENT_USER.objectId, 
+                             ['nickName']=s_CURRENT_USER.snsUserInfo.nickname,
+                             ['access_token']=s_CURRENT_USER.localAuthData.access_token,
+                             ['openid']=s_CURRENT_USER.localAuthData.openid,
+                             ['usertype']=USER_TYPE_QQ}
+                UserBaseServer.saveDataObjectOfCurrentUser(obj, 
+                    function (api, result) 
+                        onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
+                    end, 
+                    function (api, code, message, description) 
+                        onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
+                    end
+                )
+            end
+        else
+            onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
         end
-
-        onResponse_signUp_logIn(objectjson, e, code, onResponse)
     end)
 end
 

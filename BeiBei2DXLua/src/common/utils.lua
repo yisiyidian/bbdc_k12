@@ -18,6 +18,18 @@
 
 ------------------------------------------------------------------------------------------------------------
 
+function changeTableToString(wordTable)
+    if #wordTable == 0 then
+        return ""
+    else
+        local ans = wordTable[1]
+        for i = 2, #wordTable do
+            ans = ans .. '|' .. wordTable[i]
+        end
+        return ans
+    end
+end
+
 function split(szFullString, szSeparator)
     local nFindStartIndex = 1
     local nSplitIndex = 1

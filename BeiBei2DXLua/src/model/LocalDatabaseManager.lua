@@ -1,7 +1,8 @@
 local RBWORDNUM = 10
-local MAXWRONGWORDCOUNT = 20
+local MAXWRONGWORDCOUNT = 3
+local MAXTYPEINDEX = 4
 
-
+require("common.global")
 require("lsqlite3")
 
 -- define Manager
@@ -124,7 +125,7 @@ function Manager.initTables()
             userId TEXT,
             bookKey TEXT,
             currentIndex INTEGER,
-            lastUpdate TEXT
+            lastUpdate INTEGER
         );
     ]]
     
@@ -137,42 +138,30 @@ function Manager.initTables()
             rightWordList TEXT,
             wrongWordList TEXT,
             wordCandidate TEXT,
-            lastUpdate TEXT
+            lastUpdate INTEGER
         );
     ]]
-   
-    -- CREATE table Word Prociency
+    
+    -- CREATE table Wrong Word Buffer
     Manager.database:exec[[
-        create table if not exists DataWordProciency(
+        create table if not exists DataWrongWordBuffer(
             userId TEXT,
             bookKey TEXT,
-            wordName TEXT,
-            wordProciency INTEGER,
-            lastUpdate TEXT
+            wordNum INTEGER,
+            wordBuffer TEXT,
+            lastUpdate INTEGER
         );
     ]]
-   
-    -- CREATE table Review boss Control
+    
+    -- CREATE table Boss Word
     Manager.database:exec[[
-        create table if not exists DataReviewBossControl(
+        create table if not exists DataBossWord(
             userId TEXT,
             bookKey TEXT,
-            bossId INTEGER,
-            wordCount INTEGER,
-            appearCount INTEGER,
-            lastUpdate TEXT
-        ); 
-    ]]
-
-    -- create table Review boss Record
-    Manager.database:exec[[
-        create table if not exists DataReviewBossRecord(
-            userId TEXT,
-            bookKey TEXT,
-            bossId INTEGER,
-            wordId INTEGER,
-            wordName TEXT,
-            lastUpdate TEXT
+            bossID INTEGER,
+            typeIndex INTEGER,
+            wordList TEXT,
+            lastUpdate INTEGER
         );
     ]]
 
@@ -183,8 +172,7 @@ function Manager.initTables()
         require('model.user.DataLevel'),
         require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
         require('model.user.DataStatistics'),      -- IC_word_day same as DataStatistics
-        require('model.user.DataUser'),            -- db_userInfo same as DataUser
-        require('model.user.DataConfigs')
+        require('model.user.DataUser')             -- db_userInfo same as DataUser
     }
     for i = 1, #userDataClasses do
         Manager.createTable(userDataClasses[i].create())
@@ -328,792 +316,36 @@ function Manager.getLastLogInUser(objectOfDataClass, usertype)
     return getUserDataFromLocalDB(objectOfDataClass, usertype)
 end
 
-function Manager.getDataConfigsFromLocalDB(objectOfDataClass)
-    local data = nil
-    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
-        data = row
-    end
 
-    if data ~= nil then
-        parseLocalDatabaseToUserData(data, objectOfDataClass)     
-        return true
-    end
-
-    return false
-end
-
-function Manager.insertTable_DataWordProciency(wordName, wordProciency)
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..book.."' and wordName = '"..wordName.."'") do
-        num = num + 1
-    end
-    
-    if num == 0 then
-        local time = os.time()
-        local query = "INSERT INTO DataWordProciency VALUES ('"..user.."', '"..book.."', '"..wordName.."', "..wordProciency..", '"..time.."');"
-        Manager.database:exec(query)
-        
-        if wordProciency == 0 then
-            Manager.insertTable_DataReviewBossRecord(wordName)
-        end
-    else
-        print("word exists")
-    end
-    Manager.showTable_DataWordProciency()
-
-    s_UserBaseServer.saveWordProciencyOfCurrentUser(book, wordName, wordProciency, nil, nil)
-end
-
-function Manager.showTable_DataWordProciency()
-    s_logd("DataWordProciency --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataWordProciency") do
-        s_logd(row.wordName .. ',' .. row.wordProciency)
-    end
-    s_logd("DataWordProciency --------------------------- end")
-end
-
-function Manager.insertTable_DataReviewBossControl(bossID)
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local query = "INSERT INTO DataReviewBossControl VALUES ('"..user.."', '"..book.."', "..bossID..", "..RBWORDNUM..", 0, '"..time.."');"
-    Manager.database:exec(query)
-end
-
-function Manager.showTable_DataReviewBossControl()
-    s_logd("DataReviewBossControl ------------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataReviewBossControl") do
-        s_logd("bossID:"..row.bossId..' appearCount:'..row.appearCount)
-    end
-    s_logd("DataReviewBossControl ------------------------------- end")
-end
-
-function Manager.insertTable_DataReviewBossRecord(wordName)
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-    
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataReviewBossRecord WHERE userId = '"..user.."' and bookKey = '"..book.."'") do
-        num = num + 1
-    end
-    
-    local wordID = num + 1
-    local bossID = math.floor((wordID - 1) / RBWORDNUM) + 1
-    
-    local time = os.time()
-    local query = "INSERT INTO DataReviewBossRecord VALUES ('"..user.."', '"..book.."', "..bossID..", "..wordID..", '"..wordName.."', '"..time.."');"
-    print(query)
-    Manager.database:exec(query)
-    
-    s_logd("insert word "..wordName.." into review boss")
-    Manager.showTable_DataReviewBossRecord()
-    
-    if wordID % RBWORDNUM == 0 then
-        Manager.insertTable_DataReviewBossControl(bossID)
-        s_logd("generate a new review boss")
-        Manager.showTable_DataReviewBossControl()
-    end
-end
-
-function Manager.showTable_DataReviewBossRecord()
-    s_logd("DataReviewBossRecord -------------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataReviewBossRecord") do
-        s_logd("bossID:"..row.bossId..' wordID:' .. row.wordId .. ' wordName:' .. row.wordName)
-    end
-    s_logd("DataReviewBossRecord -------------------------------- end")
-end
-
-function Manager.getRBWordList(bossID)
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-    local wordList = {}
-    for row in Manager.database:nrows("SELECT * FROM DataReviewBossRecord WHERE userId = '"..user.."' and bookKey = '"..book.."' and bossId = '"..bossID.."'") do
-        table.insert(wordList, row.wordName)
-    end
-    return wordList
-end
-
+-- show word info
 function Manager.getRandomWord()
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-    local wrongWords = {}
-    local studyWords = {}
-    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..book.."'") do
-        if row.wordProciency < 5 then
-            table.insert(wrongWords, row.wordName)
-        end
-        table.insert(studyWords, row.wordName)
-    end
-    
-    math.randomseed(os.time())
-    if #wrongWords ~= 0 then
-        local randomIndex = math.random(1, #wrongWords)
-        return wrongWords[randomIndex]
-    end
-    
-    if #studyWords ~= 0 then
-        local randomIndex = math.random(1, #studyWords)
-        return studyWords[randomIndex]
-    end
-    
-    local candidate = {"apple", "many", "tea"}
-    local randomIndex = math.random(1, 3)
-    return candidate[randomIndex]
+    return "apple"
 end
 
 function Manager.getStudyWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
-    local user = s_CURRENT_USER.objectId
-    local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
-        if day then
-            local record_date = os.date("%x",row.lastUpdate)
-            if record_date == day then
-                sum = sum + 1
-            end
-        else
-            sum = sum + 1
-        end
-    end
-    return sum
+    return 0
 end
 
 function Manager.getGraspWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
-    local user = s_CURRENT_USER.objectId
-    local sum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
-        if day then
-            local record_date = os.date("%x",row.lastUpdate)
-            if record_date == day then
-                sum = sum + 1
-            end
-        else
-            sum = sum + 1
-        end
-    end
-    return sum
+    return 0
 end
 
 function Manager.getStudyWords(bookKey)
-    local user = s_CURRENT_USER.objectId
-    local wordList = {}
-    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."'") do
-        wordList[row.wordName] = row.wordProciency
-    end
-    return wordList
+    return {}
 end
 
 function Manager.getGraspWords(bookKey)
-    local user = s_CURRENT_USER.objectId
-    local wordList = {}
-    for row in Manager.database:nrows("SELECT * FROM DataWordProciency WHERE userId = '"..user.."' and bookKey = '"..bookKey.."' and wordProciency = 5") do
-        wordList[row.wordName] = row.wordProciency
-    end
-    return wordList
+    return {}
 end
 
--- return current valid review bossId
-function Manager:getCurrentReviewBossID()
-    local bossId = -1
-    for row in Manager.database:nrows('SELECT * FROM DataReviewBossControl') do
-        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
-            -- TODO check the boss appear time
-            local currentTime = os.time()
-            local diffTime = os.time() - row.lastUpdate
-            if row.appearCount == 0 then
-                bossId = row.bossId
-                break
-            elseif row.appearCount == 1 then
-                if diffTime >= 24 * 3600 then
-                    bossId = row.bossId
-                    break
-                end
-            elseif row.appearCount == 2 then
-                if diffTime >= 24 * 3 * 3600 then
-                    bossId = row.bossId
-                    break
-                end
-            elseif row.appearCount == 3 then
-                if diffTime >= 24 * 3 * 3600 then
-                    bossId = row.bossId
-                    break
-                end
-            elseif row.appearCount == 4 then
-                if diffTime >= 24 * 7 * 3600 then
-                    bossId = row.bossId
-                    break
-                end 
-            end
-        end
-    end
-    return bossId
-end
-
--- update review boss after played
-function Manager.updateReviewBossRecord(bossId)
-    local user = s_CURRENT_USER.objectId
-    local book = s_CURRENT_USER.bookKey
-
-    for row in Manager.database:nrows('SELECT * FROM DataReviewBossControl where bossId = '..bossId) do
-        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
-            -- update
-            local command = 'UPDATE DataReviewBossControl SET appearCount = '..(row.appearCount+1)..' , lastUpdate = '..(os.time())
-            Manager.database:exec(command)
-        end
-    end
-    Manager.showTable_DataReviewBossControl()
-    
-    for row1 in Manager.database:nrows("SELECT * FROM DataReviewBossRecord where userId='"..user.."' and bookKey='"..book.."' and bossId = "..bossId) do
-        local wordName = row1.wordName
-        print("update word name:"..wordName)
-        for row2 in Manager.database:nrows("SELECT * FROM DataWordProciency where userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'") do
---            local command = "UPDATE DataWordProciency SET wordProciency="..(row2.wordProciency+1)..", lastUpdate='"..(os.time()).."' WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
-            local command = "UPDATE DataWordProciency SET wordProciency="..(row2.wordProciency+1).." WHERE userId='"..user.."' and bookKey='"..book.."' and wordName = '"..wordName.."'"
-            Manager.database:exec(command)
-            print(command)
-        end
-    end
-    Manager.showTable_DataWordProciency()
-end
-
-
-----NewStudyLayer_suffer------
-function Manager.initNewStudyLayerSufferTables()
---    Manager.database:exec[[
---                DROP TABLE DataNewStudyLayerSuffer
---            ]]
-    Manager.database:exec[[
-        create table if not exists DataNewStudyLayerSuffer(
-            userId TEXT,
-            bookKey TEXT,
-            wordName TEXT,
-            lastUpdate TEXT
-        );
-    ]]    
-    
---    print("initNewStudyLayerSufferTables over")
-end
-
-function Manager.insertNewStudyLayerSufferTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lastUpdate = os.time()
-
-    local query = "INSERT INTO DataNewStudyLayerSuffer VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."' ,'"..lastUpdate.."');"
-    Manager.database:exec(query)
-
-    local minlastUpdate
-    local i = 1
-
-    s_logd("<<DataNewStudyLayerSuffer --------------------------- begin")
-
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        if i == 1 then
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            print ("i is "..i)
-            i = i + 1
-            minlastUpdate = row.lastUpdate
-        else
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            print ("i is "..i)
-            i = i + 1
-            if minlastUpdate > row.lastUpdate then
-                minlastUpdate = row.lastUpdate
-            end
-        end
-    end
-
-    s_logd("DataNewStudyLayerSuffer --------------------------- end>>")
-
-    local unfamiliarWord = '' 
-    local currentWord = ''
-    local loop_judge_min = 0
-    local loop_delete_min = 0
-    if i > MAXWRONGWORDCOUNT then
-        while loop_delete_min < MAXWRONGWORDCOUNT do
-            loop_judge_min = 0
-            for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-                if loop_judge_min == 0 then
-                    minlastUpdate = row.lastUpdate
-                else
-                    if minlastUpdate > row.lastUpdate then
-                        minlastUpdate = row.lastUpdate
-                    end
-                end
-                loop_judge_min = loop_judge_min + 1
-            end
-
-            --insert unfamiliar
-            for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  lastUpdate = " .. minlastUpdate..";") do
-                --                Manager.insertNewStudyLayerUnfamiliarTables(row.wordName)
-                Manager.insertNewStudyLayerTestTables(row.wordName)
-
---                currentWord = row.wordName
-            end
-            
---            if loop_delete_min + 1 < MAXWRONGWORDCOUNT then
---               unfamiliarWord = unfamiliarWord .. currentWord.."|"
---            else
---                unfamiliarWord = unfamiliarWord .. currentWord
---            end
-            --delete suffer
-            local delete = Manager.database:exec(" delete from  DataNewStudyLayerSuffer where lastUpdate = " .. minlastUpdate..";")
-            Manager.database:exec(delete) 
-            loop_delete_min = loop_delete_min +1
-
-            --        s_logd("DataNewStudyLayerSuffer --------------------------- begin")
-            --
-            --        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-            --                s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            --        end
-            --
-            --        s_logd("DataNewStudyLayerSuffer --------------------------- end")
-        end
-        --insert 
---        Manager.insertNewStudyLayerUnfamiliarTables(unfamiliarWord)
-    end    
-
-
-
-    --    Manager.database:exec[[
-    --                DROP TABLE DataNewStudyLayerSuffer
-    --            ]]
-
-end
-
-function Manager.selectLastNewStudyLayerSufferTables()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lasttime
-    local i = 1
-    print("selectLastNewStudyLayerSufferTables")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        if i == 1 then
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            lasttime = row.lastUpdate
-        else
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            if lasttime < row.lastUpdate then
-                lasttime = row.lastUpdate
-            end
-        end
-    end
-
-    if i == 1 then 
-        return 0
-    else
-        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  lastUpdate = " .. lasttime..";") do
-            return row.wordName
-        end
-    end
-
-    print("selectLastNewStudyLayerSufferTables over")
-end
-
-function Manager.countLastNewStudyLayerSufferTables()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lasttime
-    local i = 0
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerSuffer where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        i = i + 1
-    end
-    return i
-end
-----NewStudyLayer_suffer_over------
-----NewStudyLayer_familiar------
-function Manager.initNewStudyLayerFamiliarTables()
---    Manager.database:exec[[
---                DROP TABLE DataNewStudyLayerFamiliar
---            ]]
-    Manager.database:exec[[
-        create table if not exists DataNewStudyLayerFamiliar(
-            userId TEXT,
-            bookKey TEXT,
-            wordName TEXT,
-            lastUpdate TEXT
-        );
-    ]]    
-    
---    print("initNewStudyLayerFamiliarTables over")
-end
-
-function Manager.insertNewStudyLayerFamiliarTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lastUpdate = os.time()
-
-    local query = "INSERT INTO DataNewStudyLayerFamiliar VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."' ,'"..lastUpdate.."');"
-    Manager.database:exec(query)
-
-    local i = 1
-    s_logd("<<DataNewStudyLayerFamiliar --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerFamiliar") do
-        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName .. ',' ..row.lastUpdate)
-        print ("i is "..i)
-        i = i + 1
-    end
-    s_logd("DataNewStudyLayerFamiliar --------------------------- end>>")
-
-    
-end
-
-function Manager.selectLastNewStudyLayerFamiliarTables()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lasttime
-    local i = 1
-    print("selectLastNewStudyLayerFamiliarTables")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerFamiliar where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        if i == 1 then
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            lasttime = row.lastUpdate
-        else
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            if lasttime < row.lastUpdate then
-                lasttime = row.lastUpdate
-            end
-        end
-    end
-   
-    if i == 1 then 
-        return 0
-    else
-        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerFamiliar where  lastUpdate = " .. lasttime..";") do
-            return row.wordName
-        end
-    end
-    print("selectLastNewStudyLayerFamiliarTables over")
-end
-
-----NewStudyLayer_familiar_over------
-----NewStudyLayer_unfamiliar------
-
-function Manager.initNewStudyLayerUnfamiliarTables()
-
---    Manager.database:exec[[
---                DROP TABLE DataNewStudyLayerUnfamiliar
---            ]]
-    Manager.database:exec[[
-        create table if not exists DataNewStudyLayerUnfamiliar(
-            userId TEXT,
-            bookKey TEXT,
-            wordName TEXT,
-            wordType INTEGER,
-            lastUpdate TEXT            
-        );
-    ]]    
---    print("initNewStudyLayerUnfamiliarTables over")
-    
-end
-
-function Manager.insertNewStudyLayerUnfamiliarTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local wordType = 1
-    local lastUpdate = os.time()
-
-    local query = "INSERT INTO DataNewStudyLayerUnfamiliar VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."','"..wordType.."','"..lastUpdate.."');"
-    Manager.database:exec(query)
-
-    local i = 1
-    s_logd("<<DataNewStudyLayerUnfamiliar --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerUnfamiliar") do
-        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.wordType.. ',' ..row.lastUpdate)
-        print ("i is "..i)
-        i = i + 1
-    end
-    s_logd("DataNewStudyLayerUnfamiliar --------------------------- end>>")
-	
-end
-
-function Manager.selectLastNewStudyLayerUnfamiliarTables()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lasttime
-    local i = 1
-    print("selectLastNewStudyLayerUnfamiliarTables")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerUnfamiliar where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        if i == 1 then
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            lasttime = row.lastUpdate
-        else
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            if lasttime < row.lastUpdate then
-                lasttime = row.lastUpdate
-            end
-        end
-    end
-
-    if i == 1 then 
-        return 0
-    else
-        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerUnfamiliar where  lastUpdate = " .. lasttime..";") do
-            return row.wordName
-        end
-    end
-    
-    print("selectLastNewStudyLayerUnfamiliarTables over")
-end
-
---not finish test
-function Manager.updateLastNewStudyLayerUnfamiliarTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lastUpdate = os.time()
-    
-
-    print("updateLastNewStudyLayerUnfamiliarTables")
-    
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerUnfamiliar where wordName = '"..wordName.."'") do
-        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
-            -- update
-            if row.wordType > 3 then
-                local command = "DELETE FROM DataNewStudyLayerUnfamiliar where wordName = '"..wordName.."'"
-                Manager.database:exec(command)
-                Manager.insertNewStudyLayerFamiliarTables(wordName)
-            else
-                local command = "UPDATE DataNewStudyLayerUnfamiliar SET wordType = "..(row.wordType+1)..", lastUpdate = "..(os.time()).." where wordName = '"..wordName.."'"
-                Manager.database:exec(command)
-            end
-
-        end
-    end
-
-    print("updateLastNewStudyLayerUnfamiliarTables over")
-end
-
-
-
-----NewStudyLayer_unfamiliar_over------
-
-----NewStudyLayer_test_from_suffer----
-
-function Manager.initNewStudyLayerTestTables()
-
---    Manager.database:exec[[
---                DROP TABLE DataNewStudyLayerTest
---            ]]
-    Manager.database:exec[[
-        create table if not exists DataNewStudyLayerTestTables(
-            userId TEXT,
-            bookKey TEXT,
-            wordName TEXT,
-            lastUpdate TEXT            
-        );
-    ]]   
-    
---    print("initNewStudyLayerTestTables over") 
-end
-
-
-function Manager.insertNewStudyLayerTestTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lastUpdate = os.time()
-
-    local query = "INSERT INTO DataNewStudyLayerTestTables VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."','"..lastUpdate.."');"
-    Manager.database:exec(query)
-
-    local i = 1
-    s_logd("<<DataNewStudyLayerTest --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables") do
-        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-        print ("i is "..i)
-        i = i + 1
-    end
-    s_logd("DataNewStudyLayerTest --------------------------- end>>")
-
-end
-
-function Manager.updateNewStudyLayerTestTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lastUpdate = os.time()
-    
-    print("updateDataNewStudyLayerTests")
-
---    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTest where wordName = '"..wordName.."'") do
---        if row.bookKey == s_CURRENT_USER.bookKey and row.userId == s_CURRENT_USER.objectId then
-            -- update
-    local command = "UPDATE DataNewStudyLayerTestTables SET lastUpdate = "..(os.time()).." where wordName = '"..wordName.."'"
-            Manager.database:exec(command)
---        end
---    end
-
-    print("updateDataNewStudyLayerTests over")
-
-end
-
-function Manager.deleteNewStudyLayerTestTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lastUpdate = os.time()
-
-    print("deleteDataNewStudyLayerTests")
-    local delete = Manager.database:exec("DELETE FROM DataNewStudyLayerTestTables where wordName = '"..wordName.."'")
-    Manager.database:exec(delete) 
-    
---    print("wordName is "..wordName )
-
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables") do
-        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-    end
-
-
-    print("deleteDataNewStudyLayerTests over")
-
-end
-
-function Manager.selectFormerNewStudyLayerTestTables()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lasttime
-    local i = 1
-    print("selectFormerNewStudyLayerTestTables")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        if i == 1 then
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            lasttime = row.lastUpdate
-        else
-            s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName.. ',' ..row.lastUpdate)
-            i = i + 1
-            if lasttime > row.lastUpdate then
-                lasttime = row.lastUpdate
-            end
-        end
-    end
-
-    if i == 1 then 
-        return 0
-    else
-        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables where  lastUpdate = " .. lasttime..";") do
-            return row.wordName
-        end
-    end
-
-    print("selectFormerNewStudyLayerTestTables over")
-end
-function Manager.countFormerNewStudyLayerTestTables()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local lasttime
-    local i = 0
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerTestTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        i = i + 1
-    end
-    return i
-end
-----NewStudyLayer_test_from_suffer_over----
-----NewStudyLayer_group_word_table----
-function Manager.initNewStudyLayerGroupTables()
-
-    Manager.database:exec[[
-        create table if not exists DataNewStudyLayerGroupTables(
-            userId TEXT,
-            bookKey TEXT,
-            wordName TEXT         
-        );
-    ]]    
-
-end
-
-function Manager.insertNewStudyLayerGroupTables(wordName)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    local query = "INSERT INTO DataNewStudyLayerGroupTables VALUES ('"..userId.."', '"..bookKey.."', '"..wordName.."');"
-    Manager.database:exec(query)
-
-    local i = 1
-
-    s_logd("<<DataNewStudyLayerGroupTables --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerGroupTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-
-        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.wordName)
-        i = i + 1
-    end
-
-    s_logd("DataNewStudyLayerGroupTables --------------------------- end>>")
-
-    local unfamiliarWord = '' 
-    local currentWord = ''
-    local loop_delete_min = 0
-    if i > MAXWRONGWORDCOUNT then
-        for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerGroupTables where  userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-            currentWord = row.wordName
-            if loop_delete_min + 1 < MAXWRONGWORDCOUNT then
-                unfamiliarWord = unfamiliarWord .. currentWord.."|"
-            else
-                unfamiliarWord = unfamiliarWord .. currentWord
-            end    
-            loop_delete_min = loop_delete_min +1
-        end
-        --delete suffer
-        local delete = Manager.database:exec(" delete from  DataNewStudyLayerGroupTables ;")
-        Manager.database:exec(delete) 
-
-        --insert 
-        Manager.insertNewStudyLayerUnfamiliarTables(unfamiliarWord)
-    end    
-
-
-
-    --    Manager.database:exec[[
-    --                DROP TABLE DataNewStudyLayerSuffer
-    --            ]]
-
-end 
-----NewStudyLayer_group_word_table_over----
-----NewStudyLayer_data_table----
-function Manager.initNewStudyLayerDataTables()
-
-    Manager.database:exec[[
-        create table if not exists DataNewStudyLayerDataTables(
-            userId TEXT,
-            bookKey TEXT,
-            numberKey INTEGER         
-        );
-    ]]    
-
-end
-
-function Manager.insertNewStudyLayerDataTables(numberKey)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    local query = "INSERT INTO DataNewStudyLayerDataTables VALUES ('"..userId.."', '"..bookKey.."', '"..numberKey.."');"
-    Manager.database:exec(query)
-
-    local i = 1
-    s_logd("<<DataNewStudyLayerTest --------------------------- begin")
-    for row in Manager.database:nrows("SELECT * FROM DataNewStudyLayerDataTables") do
-        s_logd(row.userId .. ','..row.bookKey .. ',' ..row.numberKey)
-        print ("i is "..i)
-        i = i + 1
-    end
-    s_logd("DataNewStudyLayerTest --------------------------- end>>")
-
-end
-----NewStudyLayer_data_table_over----
-
-
+-- record word info
 function Manager.printCurrentIndex()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
 
     print("<currentIndex>")
     for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        print("current book word index: "..row.currentIndex.." time: "..row.lastupdate)
+        print("current book word index: "..row.currentIndex.." time: "..row.lastUpdate)
     end
     print("</currentIndex>")
 end
@@ -1131,7 +363,7 @@ function Manager.getCurrentIndex()
     if currentIndex == nil then
         currentIndex = 1
         local time = os.time()
-        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", '"..time.."');"
+        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", "..time..");"
         Manager.database:exec(query)
     end
     
@@ -1149,10 +381,10 @@ function Manager.setCurrentIndex(currentIndex)
     end
 
     if num == 0 then
-        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", '"..time.."');"
+        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", "..time..");"
         Manager.database:exec(query)
     else
-        local query = "UPDATE DataCurrentIndex SET currentIndex = "..currentIndex..", lastUpdate = '"..time.."' WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
+        local query = "UPDATE DataCurrentIndex SET currentIndex = "..currentIndex..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
         Manager.database:exec(query)
     end
 end
@@ -1162,7 +394,7 @@ function Manager.printNewPlayState()
     local bookKey = s_CURRENT_USER.bookKey
 
     print("<newPlayState>")
-    for row in Manager.database:nrows("SELECT * FROM NewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
         print("<item>")
         print("current playModel: "..row.playModel)
         print("current rightWordList: "..row.rightWordList)
@@ -1176,16 +408,17 @@ end
 
 function Manager.getNewPlayState()
     local newPlayState = {}
+    newPlayState.lastUpdate = nil
 
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
 
     for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        state.playModel     = row.playModel
-        state.rightWordList = row.rightWordList
-        state.wrongWordList = row.wrongWordList
-        state.wordCandidate = row.wordCandidate
-        state.lastUpdate    = row.lastUpdate
+        newPlayState.playModel     = row.playModel
+        newPlayState.rightWordList = row.rightWordList
+        newPlayState.wrongWordList = row.wrongWordList
+        newPlayState.wordCandidate = row.wordCandidate
+        newPlayState.lastUpdate    = row.lastUpdate
     end
     
     return newPlayState
@@ -1202,15 +435,141 @@ function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCa
     end
     
     if num == 0 then
-        local query = "INSERT INTO DataNewPlayState VALUES ('"..userId.."', '"..bookKey.."', "..playModel..", '"..rightWordList.."', '"..wrongWordList.."', '"..wordCandidate.."', '"..time.."');"
+        local query = "INSERT INTO DataNewPlayState VALUES ('"..userId.."', '"..bookKey.."', "..playModel..", '"..rightWordList.."', '"..wrongWordList.."', '"..wordCandidate.."', "..time..");"
         Manager.database:exec(query)
     else
-        local query = "UPDATE DataNewPlayState SET playModel = "..playModel..", rightWordList = '"..rightWordList.."', wrongWordList = '"..wrongWordList.."', wordCandidate = '"..wordCandidate.."', lastUpdate = '"..time.."' WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
+        local query = "UPDATE DataNewPlayState SET playModel = "..playModel..", rightWordList = '"..rightWordList.."', wrongWordList = '"..wrongWordList.."', wordCandidate = '"..wordCandidate.."', lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
         Manager.database:exec(query)
     end
 end
 
 
+function Manager.printWrongWordBuffer()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    print("<wrongWordBuffer>")
+    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        print("<item>")
+        print("wordNum: "..row.wordNum)
+        print("wordBuffer: "..row.wordBuffer)
+        print("lastUpdate: "..row.lastUpdate)
+        print("</item>")
+    end
+    print("</wrongWordBuffer>")
+end
+
+function Manager.addWrongWordBuffer(wrongWord)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    
+    local num = 0
+    local oldWordBuffer = ""
+    local oldWordNum = 0
+    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        num = num + 1
+        oldWordBuffer = row.wordBuffer
+        oldWordNum = row.wordNum
+    end
+    
+    if num == 0 then
+        local wordNum = 1
+        local query = "INSERT INTO DataWrongWordBuffer VALUES ('"..userId.."', '"..bookKey.."', "..wordNum..", '"..wrongWord.."', "..time..");"
+        Manager.database:exec(query)
+    else
+        local wordNum = nil
+        local wordBuffer = nil
+        if oldWordNum + 1 >= MAXWRONGWORDCOUNT then
+            local bossWordListString = oldWordBuffer.."|"..wrongWord
+            Manager.addBossWord(bossWordListString)
+            
+            wordNum = 0
+            wordBuffer = ""
+        else
+            wordNum = oldWordNum + 1
+            wordBuffer = oldWordBuffer.."|"..wrongWord
+        end
+        
+        local query = "UPDATE DataWrongWordBuffer SET wordNum = "..wordNum..", wordBuffer = '"..wordBuffer.."', lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
+        Manager.database:exec(query)
+    end
+end
+
+function Manager.printBossWord()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    print("<bossWord>")
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        print("<item>")
+        print("bossID: "..row.bossID)
+        print("typeIndex: "..row.typeIndex)
+        print("wordList: "..row.wordList)
+        print("lastUpdate: "..row.lastUpdate)
+        print("</item>")
+    end
+    print("</bossWord>")
+end
+
+function Manager.addBossWord(bossWordList)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    
+    local maxBossID = 0
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        if row.bossID > maxBossID then
+            maxBossID = row.bossID
+        end
+    end
+    
+    local bossID = maxBossID + 1
+    local typeIndex = 0
+    
+    local query = "INSERT INTO DataBossWord VALUES ('"..userId.."', '"..bookKey.."', "..bossID..", "..typeIndex..", '"..bossWordList.."', "..time..");"
+    Manager.database:exec(query)
+end
+
+function Manager.getBossWord()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
+    
+    local candidate = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate LIMIT 0, 1 ;") do
+        local lastUpdate = tostring(row.lastUpdate)
+        local lastUpdateDay = os.date("%x", lastUpdate)
+--        if lastUpdateDay ~= today then
+            candidate           = {}
+            candidate.bossID    = row.bossID
+            candidate.typeIndex = row.typeIndex
+            candidate.wordList  = row.wordList
+--        end
+    end
+    
+    return candidate
+end
+
+function Manager.updateBossWord(bossID)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    
+    local typeIndex = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
+        typeIndex = row.typeIndex
+    end
+    
+    if typeIndex + 1 == MAXTYPEINDEX then
+        local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataBossWord SET typeIndex = "..(typeIndex+1)..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    
+        Manager.database:exec(query)
+    end
+end
 
 ---- UserDefault -----------------------------------------------------------
 

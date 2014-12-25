@@ -129,8 +129,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     self:onCloseButtonClicked()   
     s_SCENE.gameLayerState = s_normal_game_state
 
-    s_CorePlayManager.initNewStudyLayer()
-    s_CorePlayManager.enterNewStudyChooseLayer()
+    s_CorePlayManager.initTotalPlay()
 
 --    s_logd('on study button clicked')
 --    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)

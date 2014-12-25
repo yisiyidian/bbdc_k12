@@ -1,4 +1,4 @@
-require("view.newreviewboss.NewReviewBossConfigue")
+
 
 local  NewReviewBossSummaryLayer = class("NewReviewBossSummaryLayer", function ()
     return cc.Layer:create()
@@ -31,8 +31,8 @@ function NewReviewBossSummaryLayer.create()
     local word = {}
     local meaning = {}
     for i = 1,20 do
-        word[i] = s_WordPool[NewReviewBossLayer_wordList[i]].wordName
-        meaning[i] = s_WordPool[NewReviewBossLayer_wordList[i]].wordMeaning
+        word[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordName
+        meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaning
     end
 
     local listView = ccui.ListView:create()

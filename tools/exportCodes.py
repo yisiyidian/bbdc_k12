@@ -10,18 +10,20 @@ DEBUG_FOR_TEST       = '0'
 RELEASE_FOR_APPSTORE = '1'
 RELEASE_FOR_TEST     = '2'
 
-LEAN_CLOUD_TEST = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"]
+LEAN_CLOUD_TEST   = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"]
 
 LEAN_CLOUD_XIAOMI = ["94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp", "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"]
+LEAN_CLOUD_X_0    = ['2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq', 'gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc']
 
-UMENG_APP_XIAOMI = ["5498fc3afd98c56b4200075d", "xiao-mi"]
+UMENG_APP_XIAOMI  = ["5498fc3afd98c56b4200075d", "xiao-mi"]
+UMENG_APP_ANDROID = ['549a5eb9fd98c5b2ac00144e', 'android']
 
 TENCENT_APP = ["1103783596", "n7vXdt6eDIggSsa6"]
 
 # ---------------------------------------------------------
 
 LEAN_CLOUD_RELEASE = LEAN_CLOUD_XIAOMI
-UMENG_APP = UMENG_APP_XIAOMI
+UMENG_APP = UMENG_APP_ANDROID
 
 # ---------------------------------------------------------
 
@@ -60,7 +62,7 @@ DEBUG_FOR_TEST       = '0'
 RELEASE_FOR_APPSTORE = '1'
 RELEASE_FOR_TEST     = '2'
 
-RELEASE_APP = %s
+RELEASE_APP = '%s'
 LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
@@ -135,6 +137,8 @@ import com.avos.sns.*;
 
 import com.umeng.analytics.AnalyticsConfig;
 
+import c.bb.dc.sns.CXTencentSDKCall;
+
 import android.app.Activity;
 
 public class AppVersionInfo {
@@ -147,6 +151,7 @@ public class AppVersionInfo {
         AnalyticsConfig.setAppkey("%s");
         AnalyticsConfig.setChannel("%s");
 
+        CXTencentSDKCall.getInstance().init("%s", a);
         try {
             SNS.setupPlatform(SNSType.AVOSCloudSNSQQ, "%s", "%s", null);
         } catch (AVException e) {
@@ -154,7 +159,7 @@ public class AppVersionInfo {
         }
     }
 }
-''' % (macro_type, lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel, qq_app_id, qq_app_key)
+''' % (macro_type, lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel, qq_app_id, qq_app_id, qq_app_key)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)

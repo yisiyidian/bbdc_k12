@@ -51,7 +51,7 @@ function LevelLayer:levelStateManager()
     
 --    print('state0:'..s_SCENE.levelLayerState)
     -- TODO Check Review boss state
-    local reviewBossId = s_DATABASE_MGR.getCurrentReviewBossID()
+    local reviewBossId = -1
     if reviewBossId ~= -1 then
         -- check whether current level is passed
         local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)

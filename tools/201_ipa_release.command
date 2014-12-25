@@ -5,7 +5,6 @@ cocos run \
     -p ios \
     -j 4 \
     -m release \
-    --compile-script 1 \
     --lua-encrypt --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA" \
     --sign-identity "com.BeiBeiDanCiX"
     

@@ -16,13 +16,15 @@ function SliderView.create(width,screen_height,content_height)
     --scrollView:setPosition()
     layer:addChild(scrollView)
     layer.scrollView = scrollView
-    local backBar = cc.Sprite:create('image/book/process_button_light_color.png')
-    backBar:setPosition(0.97 * width,0.5 * screen_height)
-    layer:addChild(backBar)  
 
     local length = 836 * screen_height / s_DESIGN_HEIGHT
 
-    local progressBar = ccui.Scale9Sprite:create('image/book/process_button_dark_color.png',cc.rect(0,0,15,20 + length),cc.rect(0, 10, 15, length))
+    local backBar = ccui.Scale9Sprite:create('image/book/process_button_light_color.png',cc.rect(0,0,15,856),cc.rect(0, 10, 15, 836))
+    backBar:setContentSize(cc.size(15,20 + length))
+    backBar:setPosition(0.97 * width,0.5 * screen_height)
+    layer:addChild(backBar)  
+    
+    local progressBar = ccui.Scale9Sprite:create('image/book/process_button_dark_color.png',cc.rect(0,0,15,856),cc.rect(0, 10, 15, 836))
     --backBar:setContentSize(cc.size(15,1000))
     local percent = screen_height / content_height
     if percent > 1 then
