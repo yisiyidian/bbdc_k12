@@ -48,7 +48,7 @@ function NewReviewBossSummaryLayer.create()
     
     local word = {}
     local meaning = {}
-    for i = 1,20 do
+    for i = 1,s_CorePlayManager.maxReviewWordCount  do
         word[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordName
         meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaning
     end
