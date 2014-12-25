@@ -9,6 +9,64 @@
 
 
 
+int lua_cx_common_CXAvos_logInByQQAuthData(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_logInByQQAuthData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 4) 
+    {
+        const char* arg0;
+        const char* arg1;
+        const char* arg2;
+        CXLUAFUNC arg3;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:logInByQQAuthData"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:logInByQQAuthData"); arg1 = arg1_tmp.c_str();
+
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:logInByQQAuthData"); arg2 = arg2_tmp.c_str();
+
+        arg3 = (  toluafix_ref_function(tolua_S,5,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logInByQQAuthData'", nullptr);
+            return 0;
+        }
+        cobj->logInByQQAuthData(arg0, arg1, arg2, arg3);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:logInByQQAuthData",argc, 4);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logInByQQAuthData'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl(lua_State* tolua_S)
 {
     int argc = 0;
@@ -654,6 +712,7 @@ int lua_register_cx_common_CXAvos(lua_State* tolua_S)
     tolua_cclass(tolua_S,"CXAvos","CXAvos","cc.Ref",nullptr);
 
     tolua_beginmodule(tolua_S,"CXAvos");
+        tolua_function(tolua_S,"logInByQQAuthData",lua_cx_common_CXAvos_logInByQQAuthData);
         tolua_function(tolua_S,"invokeLuaCallbackFunction_dl",lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl);
         tolua_function(tolua_S,"invokeLuaCallbackFunction_su",lua_cx_common_CXAvos_invokeLuaCallbackFunction_su);
         tolua_function(tolua_S,"signUp",lua_cx_common_CXAvos_signUp);

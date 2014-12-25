@@ -39,6 +39,24 @@ public class CXTencentSDKCall {
 		}
 	}
 	
+	public void logInByAuthData(String openid, String access_token, String expires_in, final Object response) {
+		AVUser.AVThirdPartyUserAuth userAuth = new AVUser.AVThirdPartyUserAuth(access_token, expires_in, "qq", openid);
+		AVUser.loginWithAuthData(userAuth, new LogInCallback<AVUser>() {
+			public void done(AVUser user, AVException e) {
+		        if (e == null) {
+		        	BBNDK.onLogInByQQ(
+		        			BBNDK.AVUserToJsonStr(user), 
+		        			response != null ? response.toString() : null, 
+		        			mAuthData != null ? mAuthData.toString() : null, 
+		        			null, 
+		        			0);
+		        } else {
+		        	BBNDK.onLogInByQQ(null, null, null, e.getLocalizedMessage(), e.getCode());
+		        }
+		    }
+		});
+	}
+
 	// ------------------------------------------------------------------------------
 	class LogInListener implements IUiListener {
 
