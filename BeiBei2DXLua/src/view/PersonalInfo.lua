@@ -19,7 +19,7 @@ function PersonalInfo:ctor()
     local moved = false
     local start_y = nil
     local colorArray = {cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
-    local titleArray = {'单词学习增长','登陆贝贝天数','学习效率统计'}
+    local titleArray = {'单词学习日增长','登陆贝贝天数','学习效率统计'}
     self.intro_array = {}
     
     local pageView = ccui.PageView:create()
