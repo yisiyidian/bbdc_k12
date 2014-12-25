@@ -36,24 +36,13 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
-function CorePlayManager.initNewReviewBossLayer()
-    CorePlayManager.maxReviewWordCount = 20
-    CorePlayManager.NewReviewLayerWordList = s_BookWord[s_BOOK_KEY_CET4]
-    CorePlayManager.currentReviewIndex = 1
-    CorePlayManager.currentReward = 3
-    CorePlayManager.ReviewWordList = {"quotation","drama","critical","observer","open",
-        "progress","entitle","blank","honourable","single",
-        "namely","perfume","matter","lump","thousand",
-        "recorder","great","guest","spy","cousin"}
-    CorePlayManager.rightReviewWordNum  = 0
-end
-
-function CorePlayManager.updateCurrentReviewIndex()
-    CorePlayManager.currentReviewIndex = CorePlayManager.currentReviewIndex + 1
-end
-
-function  CorePlayManager.insertReviewList(wordName)
-    table.insert(CorePlayManager.ReviewWordList,wordName)
+function CorePlayManager.initTotalPlay()
+    local candidate = CorePlayManager.getReviewBossCandidate()
+    if candidate == nil then
+        CorePlayManager.initNewStudyLayer()
+    else
+        CorePlayManager.initNewReviewBossLayer(candidate)
+    end
 end
 
 function CorePlayManager.initNewStudyLayer()
@@ -230,12 +219,66 @@ function CorePlayManager.updateRightWordList(wordname)
 end
 
 function CorePlayManager.updateWrongWordList(wordname)
+    s_DATABASE_MGR.addWrongWordBuffer(wordname)
+    s_DATABASE_MGR.printWrongWordBuffer()
+    s_DATABASE_MGR.printBossWord()
+    
     table.insert(CorePlayManager.wrongWordList, wordname)
     CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
 end
 
 
 -- new review boss
+function CorePlayManager.getReviewBossCandidate() -- if not exist candidate will return nil
+    return s_DATABASE_MGR.getBossWord()
+end
+
+function CorePlayManager.updateReviewBoss(bossID)
+    if bossID > 0 then
+        s_DATABASE_MGR.updateBossWord(bossID)
+        s_DATABASE_MGR.printBossWord()
+    end
+end
+
+function CorePlayManager.initNewReviewBossLayer(candidate)
+    if candidate == nil then
+        CorePlayManager.bossID                  = -1
+            
+        CorePlayManager.NewReviewLayerWordList  = s_BookWord[s_CURRENT_USER.bookKey]
+        CorePlayManager.currentReviewIndex      = 1
+        CorePlayManager.currentReward           = 3
+        CorePlayManager.ReviewWordList          = {
+            "quotation","drama","critical","observer","open",
+            "progress","entitle","blank","honourable","single",
+            "namely","perfume","matter","lump","thousand",
+            "recorder","great","guest","spy","cousin"
+                                                  }
+        CorePlayManager.maxReviewWordCount      = #CorePlayManager.ReviewWordList
+        CorePlayManager.rightReviewWordNum      = 0
+    else
+        CorePlayManager.bossID                  = candidate.bossID
+        CorePlayManager.typeIndex               = candidate.typeIndex -- from 0 to 3
+        CorePlayManager.wordList                = candidate.wordList -- wordlist format is like 'apple|pear|orange'
+
+        CorePlayManager.NewReviewLayerWordList  = s_BookWord[s_CURRENT_USER.bookKey]
+        CorePlayManager.currentReviewIndex      = 1
+        CorePlayManager.currentReward           = 3
+        CorePlayManager.ReviewWordList          = split(CorePlayManager.wordList, "|")
+        CorePlayManager.maxReviewWordCount      = #CorePlayManager.ReviewWordList
+        CorePlayManager.rightReviewWordNum      = 0
+    end
+    
+    CorePlayManager.enterReviewBossMainLayer()
+end
+
+function CorePlayManager.updateCurrentReviewIndex()
+    CorePlayManager.currentReviewIndex = CorePlayManager.currentReviewIndex + 1
+end
+
+function  CorePlayManager.insertReviewList(wordName)
+    table.insert(CorePlayManager.ReviewWordList,wordName)
+end
+
 function CorePlayManager.enterReviewBossMainLayer()
     local reviewBossMainLayer = ReviewBossMainLayer.create()
     s_SCENE:replaceGameLayer(reviewBossMainLayer)
