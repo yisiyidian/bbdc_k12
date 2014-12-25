@@ -219,22 +219,6 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
     }
 }
 
-void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler) {
-    mLuaHandlerId_logInByQQ = nHandler;
-    NSDictionary* authData = @{@"openid":[NSString stringWithUTF8String:openid],
-                               @"access_token":[NSString stringWithUTF8String:access_token],
-                               @"expires_in":[NSString stringWithUTF8String:expires_in]};
-    [AVUser loginWithAuthData:authData
-                     platform:AVOSCloudSNSPlatformQQ
-                        block:^(AVUser *user, NSError *error) {
-        invokeLuaCallbackFunction_logInByQQ(user ? AVUserToJsonStr(user).UTF8String : nullptr,
-                                            nullptr,
-                                            nullptr,
-                                            error ? error.localizedDescription.UTF8String : nullptr,
-                                            error ? (int)error.code : 0);
-    }];
-}
-
 void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
     mLuaHandlerId_logInByQQ = nHandler;
     [[CXTencentSDKCall getinstance] login];

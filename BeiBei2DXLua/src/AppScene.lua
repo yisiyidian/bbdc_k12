@@ -197,7 +197,6 @@ end
 local USER_START_TYPE_NEW         = 0
 local USER_START_TYPE_OLD         = 1
 local USER_START_TYPE_QQ          = 2
-local USER_START_TYPE_QQ_AUTHDATA = 3
 
 function AppScene:startLoadingData(userStartType, username, password)
     local function onResponse(u, e, code)
@@ -229,8 +228,6 @@ function AppScene:startLoadingData(userStartType, username, password)
         s_UserBaseServer.logIn(username, password, onResponse)
     elseif userStartType == USER_START_TYPE_QQ then 
         s_UserBaseServer.onLogInByQQ(onResponse)
-    elseif userStartType == USER_START_TYPE_QQ_AUTHDATA then 
-        s_UserBaseServer.logInByQQAuthData(onResponse)
     else
         s_UserBaseServer.signUp(username, password, onResponse)
     end
@@ -246,10 +243,6 @@ end
 
 function AppScene:logInByQQ()
     self:startLoadingData(USER_START_TYPE_QQ, nil, nil) 
-end
-
-function AppScene:logInByQQAuthData()
-    self:startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
 
 -- function AppScene:getDailyCheckIn()

@@ -145,16 +145,16 @@ function UserBaseServer.onLogInByQQ(onResponse)
             s_CURRENT_USER.localAuthData = authData
             s_CURRENT_USER.snsUserInfo = qqUserInfo
 
-            if authData ~= nil then 
+            if authData ~= nil and qqUserInfo ~= nil then 
                 print ('---- QQ USER INFO authData ----')
                 print_lua_table (authData)
 
                 s_CURRENT_USER.access_token = s_CURRENT_USER.localAuthData.access_token
                 s_CURRENT_USER.openid = s_CURRENT_USER.localAuthData.openid
                 s_CURRENT_USER.expires_in = s_CURRENT_USER.localAuthData.expires_in
-            end
-            print ('')
-            if qqUserInfo ~= nil then 
+    
+                print ('')
+
                 print ('---- QQ USER INFO qqUserInfo ----')
                 print_lua_table (qqUserInfo)
 
@@ -163,6 +163,8 @@ function UserBaseServer.onLogInByQQ(onResponse)
                 local obj = {['className']=s_CURRENT_USER.className, 
                              ['objectId']=s_CURRENT_USER.objectId, 
                              ['nickName']=s_CURRENT_USER.snsUserInfo.nickname,
+                             ['access_token']=s_CURRENT_USER.localAuthData.access_token,
+                             ['openid']=s_CURRENT_USER.localAuthData.openid,
                              ['usertype']=USER_TYPE_QQ}
                 UserBaseServer.saveDataObjectOfCurrentUser(obj, 
                     function (api, result) 

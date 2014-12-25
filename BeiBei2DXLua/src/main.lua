@@ -101,7 +101,7 @@ if test_code == 0 then
             local loadingView = LoadingView.create()
             s_SCENE:replaceGameLayer(loadingView) 
             if s_CURRENT_USER.usertype == USER_TYPE_QQ then
-                s_SCENE:logInByQQAuthData()
+                s_SCENE:logInByQQ()
             else
                 s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
             end
