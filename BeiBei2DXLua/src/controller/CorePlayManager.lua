@@ -185,27 +185,6 @@ function CorePlayManager.updateWordCandidate(isInsertTail)
     end
 end
 
-
-function CorePlayManager.recordWrongWordList()
-    -- for houqi
-    -- record the wrong word into the db
-end
-
-function CorePlayManager.enterReviewBossMainLayer()
-    local reviewBossMainLayer = ReviewBossMainLayer.create()
-    s_SCENE:replaceGameLayer(reviewBossMainLayer)
-end
-
-function CorePlayManager.enterReviewBossHintLayer()
-    local reviewBossHintLayer = ReviewBossHintLayer.create()
-    s_SCENE:replaceGameLayer(reviewBossHintLayer)
-end
-
-function CorePlayManager.enterReviewBossSummaryLayer()
-    local reviewBossSummaryLayer = ReviewBossSummaryLayer.create()
-    s_SCENE:replaceGameLayer(reviewBossSummaryLayer)
-end
-
 function CorePlayManager.enterNewStudyChooseLayer()
     local newStudyChooseLayer = NewStudyChooseLayer.create()
     s_SCENE:replaceGameLayer(newStudyChooseLayer)
@@ -256,6 +235,21 @@ function CorePlayManager.updateWrongWordList(wordname)
 end
 
 
+-- new review boss
+function CorePlayManager.enterReviewBossMainLayer()
+    local reviewBossMainLayer = ReviewBossMainLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossMainLayer)
+end
+
+function CorePlayManager.enterReviewBossHintLayer()
+    local reviewBossHintLayer = ReviewBossHintLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossHintLayer)
+end
+
+function CorePlayManager.enterReviewBossSummaryLayer()
+    local reviewBossSummaryLayer = ReviewBossSummaryLayer.create()
+    s_SCENE:replaceGameLayer(reviewBossSummaryLayer)
+end
 
 
 
