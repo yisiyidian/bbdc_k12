@@ -217,16 +217,7 @@ public class BBNDK {
 			
 		});
 	}
-	
-	public static void logInByQQAuthData(final String openid, final String access_token, final String expires_in) {
-		_instance.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				CXTencentSDKCall.getInstance().logInByAuthData(access_token, expires_in, null);
-			}
-		});
-	}
-	
+		
 	public static void logInByQQ() {
 		_instance.runOnUiThread(new Runnable() {
 
@@ -235,6 +226,15 @@ public class BBNDK {
 				CXTencentSDKCall.getInstance().logIn();
 			}
 			
+		});
+	}
+	
+	public static void logInByQQAuthData(final String openid, final String access_token, final String expires_in) {
+		_instance.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				CXTencentSDKCall.getInstance().logInByAuthData(openid, access_token, expires_in, null);
+			}
 		});
 	}
 	

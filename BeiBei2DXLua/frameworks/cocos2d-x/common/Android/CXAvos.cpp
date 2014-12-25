@@ -145,6 +145,15 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
     }
 }
 
+void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
+    mLuaHandlerId_logInByQQ = nHandler;
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "logInByQQ", "()V")) {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler) {
     mLuaHandlerId_logInByQQ = nHandler;
     cocos2d::JniMethodInfo t;
@@ -158,15 +167,6 @@ void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, con
         t.env->DeleteLocalRef(stringArg_openid);
         t.env->DeleteLocalRef(stringArg_access_token);
         t.env->DeleteLocalRef(stringArg_expires_in);
-        t.env->DeleteLocalRef(t.classID);
-    }
-}
-
-void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
-    mLuaHandlerId_logInByQQ = nHandler;
-    cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "logInByQQ", "()V")) {
-        t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
     }
 }

@@ -219,6 +219,11 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
     }
 }
 
+void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
+    mLuaHandlerId_logInByQQ = nHandler;
+    [[CXTencentSDKCall getinstance] login];
+}
+
 void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler) {
     mLuaHandlerId_logInByQQ = nHandler;
     NSDictionary* authData = @{@"openid":[NSString stringWithUTF8String:openid],
@@ -233,11 +238,6 @@ void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, con
                                             error ? error.localizedDescription.UTF8String : nullptr,
                                             error ? (int)error.code : 0);
     }];
-}
-
-void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
-    mLuaHandlerId_logInByQQ = nHandler;
-    [[CXTencentSDKCall getinstance] login];
 }
 
 void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* qqjson, const char* authjson, const char* error, int errorcode) {
