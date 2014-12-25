@@ -541,12 +541,12 @@ function Manager.getBossWord()
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate LIMIT 0, 1 ;") do
         local lastUpdate = tostring(row.lastUpdate)
         local lastUpdateDay = os.date("%x", lastUpdate)
-        if lastUpdateDay ~= today then
+--        if lastUpdateDay ~= today then
             candidate           = {}
             candidate.bossID    = row.bossID
             candidate.typeIndex = row.typeIndex
             candidate.wordList  = row.wordList
-        end
+--        end
     end
     
     return candidate
