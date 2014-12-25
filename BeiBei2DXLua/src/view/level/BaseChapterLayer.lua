@@ -17,17 +17,26 @@ function BaseChapterLayer:ctor(chapterKey, startLevelKey)
     self.chapterKey = chapterKey
     self.startLevelKey = startLevelKey
     if self.chapterKey == 'chapter0' then
-    
+        local proxy = cc.CCBProxy:create()
+        local contentNode = CCBReaderLoad('ccb/chapter1.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)
     elseif self.chapterKey == 'chapter1' then
-    
+        local proxy = cc.CCBProxy:create()
+        local contentNode = CCBReaderLoad('ccb/chapter2.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)  
     elseif self.chapterKey == 'chapter2' then
-    
+        local proxy = cc.CCBProxy:create()
+        local contentNode = CCBReaderLoad('ccb/chapter3.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)
     elseif self.chapterKey == 'chapter3' then
         self.ccb['chapter3'] = self.ccbRepeatLevelLayer
         local proxy = cc.CCBProxy:create()
-        local contentNode = CCBReaderLoad('ccb/chapter3.ccbi',proxy,self.ccbRepeatLevelLayer,self.ccb)
-        self.ccbRepeatLevelLayer['contentNode'] = contentNode
-        self.ccbRepeatLevelLayer['levelSet'] = contentNode:getChildByTag(5)
+        local contentNode = CCBReaderLoad('ccb/chapter3.ccbi',proxy,self.ccbBaseChapterLayer,self.ccb)
+        self.ccbBaseChapterLayer['contentNode'] = contentNode
+        self.ccbBaseChapterLayer['levelSet'] = contentNode:getChildByTag(5)
     end
     
     -- init level container name
@@ -228,5 +237,71 @@ function BaseChapterLayer:plotUnlockLevelAnimation(levelKey)
         self:plotLevelDecoration(levelKey)
     end)
 end
+
+function BaseChapterLayer:plotLevelNumber(levelKey)
+    local levelButton = self:getChildByName(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData(self.chapterKey, levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelNumber = levelIndex + 1
+    if  levelData ~= nil and levelData.isLevelUnlocked == 1 then
+        if levelConfig['type'] == 1 then -- summary boss
+--            local summaryboss = levelButton:getChildByName('summaryboss'..string.sub(levelKey,6))
+--            local number = ccui.TextBMFont:create()
+--            number:setFntFile('font/number_straight.fnt')
+--            number:setScale(1.6)
+--            number:setString(levelNumber)
+--            number:setPosition(125, 100)
+--            summaryboss:addChild(number)
+        else 
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_inclined.fnt')
+            number:setString(levelNumber)
+            number:setPosition(levelButton:getContentSize().width/2-8, levelButton:getContentSize().height/2+3)
+            levelButton:addChild(number)
+        end
+    else
+        local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+        local lockNumber = ccui.TextBMFont:create()        
+        lockNumber:setFntFile('font/number_brown.fnt')
+        lockNumber:setString(levelNumber)
+        lockNumber:setPosition(lockSprite:getContentSize().width/2, lockSprite:getContentSize().height/2-6)
+        lockSprite:addChild(lockNumber)
+    end
+end
+
+function BaseChapterLayer:onLevelButtonClicked(levelKey)
+    s_CURRENT_USER.currentSelectedLevelKey = levelKey
+    s_CURRENT_USER.currentSelectedChapterKey = self.chapterKey
+    local levelButton = self:getChildByName(levelKey)
+    -- check level type
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    local levelData = s_CURRENT_USER:getUserLevelData(self.chapterKey, levelKey)
+    if (s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_retry_state) and levelKey == 'level'..(string.sub(s_CURRENT_USER.currentLevelKey,6)+1) then -- review boss appear
+        local popupReview = require('popup.PopupReviewBoss')
+        local layer = popupReview.create()
+        s_SCENE:popup(layer)
+    elseif levelData == nil or levelData.isLevelUnlocked == 0 then
+        self:clickLockedLevelAnmation(levelKey)
+        --locked sound
+        playSound(s_sound_clickLocked)
+    elseif levelConfig['type'] == 0 then  -- normal level
+        local popupNormal = require('popup.PopupNormalLevel')
+        local layer = popupNormal.create(levelKey)
+        s_SCENE:popup(layer)
+    elseif levelConfig['type'] == 1 then -- summaryboss level
+        -- check whether summary boss level can be played (starcount)
+        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter(self.chapterKey) then
+            local popupSummary = require('popup.PopupSummarySuccess')
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter(self.chapterKey))
+            s_SCENE:popup(layer)
+    else
+        local popupSummary = require('popup.PopupSummaryFail')
+        local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter(self.chapterKey))
+        s_SCENE:popup(layer)
+    end
+    end
+end
+
 
 return BaseChapterLayer
