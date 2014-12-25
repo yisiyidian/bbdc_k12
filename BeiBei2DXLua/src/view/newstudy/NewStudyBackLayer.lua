@@ -8,6 +8,10 @@ local BackLayer = class("BackLayer", function()
 end)
 
 function BackLayer.create(offset)   -- offset is 97 or 45 or 0
+    if offset == nil then
+        offset = 45
+    end
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT)  
 
