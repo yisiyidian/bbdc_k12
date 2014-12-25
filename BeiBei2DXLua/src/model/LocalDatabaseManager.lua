@@ -1,5 +1,6 @@
 local RBWORDNUM = 10
-local MAXWRONGWORDCOUNT = 20
+local MAXWRONGWORDCOUNT = 3
+local MAXTYPEINDEX = 4
 
 require("common.global")
 require("lsqlite3")
@@ -146,6 +147,7 @@ function Manager.initTables()
         create table if not exists DataWrongWordBuffer(
             userId TEXT,
             bookKey TEXT,
+            wordNum INTEGER,
             wordBuffer TEXT,
             lastUpdate INTEGER
         );
@@ -441,76 +443,74 @@ function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCa
     end
 end
 
----- CREATE table Wrong Word Buffer
---Manager.database:exec[[
---        create table if not exists DataWrongWordBuffer(
---            userId TEXT,
---            bookKey TEXT,
---            wordBuffer TEXT,
---            lastUpdate TEXT
---        );
---    ]]
 
-function Manager.addWrongWordBuffer(newWordBuffer) -- newWordBuffer's format is like 'apple|pear|orange'
+function Manager.printWrongWordBuffer()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    print("<wrongWordBuffer>")
+    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        print("<item>")
+        print("wordNum: "..row.wordNum)
+        print("wordBuffer: "..row.wordBuffer)
+        print("lastUpdate: "..row.lastUpdate)
+        print("</item>")
+    end
+    print("</wrongWordBuffer>")
+end
+
+function Manager.addWrongWordBuffer(wrongWord)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local time = os.time()
     
     local num = 0
     local oldWordBuffer = ""
+    local oldWordNum = 0
     for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
         num = num + 1
         oldWordBuffer = row.wordBuffer
+        oldWordNum = row.wordNum
     end
     
-    local wordList = {}
-    if oldWordBuffer ~= "" then
-        local oldWordList = split(oldWordBuffer, "|")
-        for i = 1, #oldWordList do
-            table.insert(wordList, oldWordList[i])
-        end
-    end
-    if newWordBuffer ~= "" then
-        local newWordList = split(newWordBuffer, "|")
-        for i = 1, #newWordList do
-            table.insert(wordList, newWordList[i])
-        end
-    end
-    
-    if #wordList >= MAXWRONGWORDCOUNT then
-        local bossWordList = {}
-        for i = 1, MAXWRONGWORDCOUNT do
-            table.insert(bossWordList, wordList[1])
-            table.remove(wordList, 1)
-        end
-
-        local bossWordListString = changeTableToString(bossWordList)
-        Manager.addBossWord(bossWordListString)
-    end
-    
-    local wordBufferString = changeTableToString(wordList)
     if num == 0 then
-        local query = "INSERT INTO DataWrongWordBuffer VALUES ('"..userId.."', '"..bookKey.."', '"..wordBufferString.."', "..time..");"
+        local wordNum = 1
+        local query = "INSERT INTO DataWrongWordBuffer VALUES ('"..userId.."', '"..bookKey.."', "..wordNum..", '"..wrongWord.."', "..time..");"
         Manager.database:exec(query)
     else
-        local query = "UPDATE DataWrongWordBuffer SET wordBuffer = '"..wordBufferString.."', lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
+        local wordNum = nil
+        local wordBuffer = nil
+        if oldWordNum + 1 >= MAXWRONGWORDCOUNT then
+            local bossWordListString = oldWordBuffer.."|"..wrongWord
+            Manager.addBossWord(bossWordListString)
+            
+            wordNum = 0
+            wordBuffer = ""
+        else
+            wordNum = oldWordNum + 1
+            wordBuffer = oldWordBuffer.."|"..wrongWord
+        end
+        
+        local query = "UPDATE DataWrongWordBuffer SET wordNum = "..wordNum..", wordBuffer = '"..wordBuffer.."', lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
         Manager.database:exec(query)
     end
 end
 
+function Manager.printBossWord()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
 
----- CREATE table Boss Word
---Manager.database:exec[[
---        create table if not exists DataBossWord(
---            userId TEXT,
---            bookKey TEXT,
---            bossID INTEGER,
---            typeIndex INTEGER,
---            wordList TEXT,
---            lastUpdate TEXT
---        );
---    ]]
-
+    print("<bossWord>")
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        print("<item>")
+        print("bossID: "..row.bossID)
+        print("typeIndex: "..row.typeIndex)
+        print("wordList: "..row.wordList)
+        print("lastUpdate: "..row.lastUpdate)
+        print("</item>")
+    end
+    print("</bossWord>")
+end
 
 function Manager.addBossWord(bossWordList)
     local userId = s_CURRENT_USER.objectId
@@ -531,24 +531,45 @@ function Manager.addBossWord(bossWordList)
     Manager.database:exec(query)
 end
 
-
 function Manager.getBossWord()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local time = os.time()
+    local today = os.date("%x", time)
     
-    local candidate = {}
-    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-
+    local candidate = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate LIMIT 0, 1 ;") do
+        local lastUpdate = tostring(row.lastUpdate)
+        local lastUpdateDay = os.date("%x", lastUpdate)
+        if lastUpdateDay ~= today then
+            candidate           = {}
+            candidate.bossID    = row.bossID
+            candidate.typeIndex = row.typeIndex
+            candidate.wordList  = row.wordList
+        end
     end
+    
+    return candidate
 end
 
-
-
-
-
-
-
+function Manager.updateBossWord(bossID)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    
+    local typeIndex = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
+        typeIndex = row.typeIndex
+    end
+    
+    if typeIndex + 1 == MAXTYPEINDEX then
+        local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataBossWord SET typeIndex = "..(typeIndex+1)..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    
+        Manager.database:exec(query)
+    end
+end
 
 ---- UserDefault -----------------------------------------------------------
 
