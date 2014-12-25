@@ -19,7 +19,7 @@ function PersonalInfo:ctor()
     local moved = false
     local start_y = nil
     local colorArray = {cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
-    local titleArray = {'单词学习增长','登陆贝贝天数','学习效率统计'}
+    local titleArray = {'单词学习日增长','登陆贝贝天数','学习效率统计'}
     self.intro_array = {}
     
     local pageView = ccui.PageView:create()
@@ -92,32 +92,34 @@ function PersonalInfo:PLVI()
     local from = s_CURRENT_USER.localTime - s_CURRENT_USER.localTime % (24 * 3600)
     local sub = to - from
     
-    local dayCount = math.floor(sub / (24 * 3600)) + 1
+    --local dayCount = math.floor(sub / (24 * 3600)) + 1
+    local dayCount = 6
     local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
     
     local yBar = cc.Sprite:create("image/PersonalInfo/PLVI/lv_information_zuobiantiao_1.png")
     yBar:setScaleX(scale)
     yBar:setAnchorPoint(0, 1)
-    yBar:setPosition(0, s_DESIGN_HEIGHT * 0.8)
+    yBar:setPosition(0, s_DESIGN_HEIGHT * 0.77)
     back:addChild(yBar)
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setScaleX(scale)
     gezi:setAnchorPoint(0.0,0.5)
-    gezi:setPosition(yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.53)
+    gezi:setPosition(yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.5)
     back:addChild(gezi)
     
     local countArray = {}
-    local dateArray = {}
+    countArray[1] = 0
+    local dateArray = {'周一','周二','周三','周四','周五','周六','周日'}
     math.random(0,20)
     local selectDate = s_CURRENT_USER.localTime
-    for i = 1 , dayCount do 
+    for i = 1 , 6 do 
         local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%y',selectDate))
-        countArray[i] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
-        dateArray[i] = string.format("%s/%s",os.date('%m',selectDate),os.date('%d',selectDate))
+        --countArray[i + 1] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
+        countArray[i + 1] = 10 + i
         selectDate = selectDate + 24 * 3600
         if i > 1 then
-            countArray[i] = countArray[i - 1] + countArray[i]
+            countArray[i + 1] = countArray[i] + countArray[i + 1]
         end
     end
     local point = {}
@@ -125,95 +127,118 @@ function PersonalInfo:PLVI()
     local countLabel
     local tableHeight = gezi:getContentSize().height
     local tableWidth = gezi:getContentSize().width
-    local function drawXYLabel(date,count)
-        local max = count[#count]
+    local function drawXYLabel(count)
+        local max = count[#count] + 10
         local min = count[1]
+        print_lua_table(count)
         if max == min then
             min = 0
         end
         local yLabel = {}
-        local xLabel = date
+        local xLabel = dateArray
         point = {}
-        
         for i = 1, #count do
             local x
             local y
-            if #count > 1 then
-                --yLabel[i] = min + (max - min) * (i - 1) / (#count - 1)
-                x = (i - 0.5) / (#count + 1)
-            else 
-                --yLabel[i] = min
-                x = 0.5 / 5
-            end
+            x = (i - 1.3) / 7.5
+            
             if max > min then
-                y = (count[i] - min) / (max - min) * 0.58 + 0.2
+                y = (count[i] - min) / (max - min) * 0.8
             elseif max > 0 then
-                y = 0.78
+                y = 0.8 
             else 
-                y = 0.2              
+                y = 0              
             end
             point[i] = cc.p(x,y)
+            
+        end
+        for i = 1,#xLabel do
             local x_i = cc.Label:createWithSystemFont(xLabel[i],'',24)
             x_i:setScaleX(1/ scale)
-            x_i:setPosition(x * tableWidth , 0)
+            x_i:setColor(cc.c4b(238,75,74,255 ))
+            x_i:setPosition((i - 0.3) / 7.5 * tableWidth , - 0.2 * tableHeight)
             gezi:addChild(x_i)
+            local line = cc.LayerColor:create(cc.c4b(150,150,150,255),1, 0.8 * tableHeight)
+            line:setAnchorPoint(0.5,0)
+            line:setPosition((i - 0.3) / 7.5 * tableWidth , - 0.1 * tableHeight)
+            gezi:addChild(line)
+
         end
         local y = {}
-        for i = 1, 5 do
-            yLabel[i] = min + (max - min) * (i - 1) / (5 - 1)
+        for i = 1, 7 do
+            yLabel[i] = min + (max - min) * (i - 1) / (7 - 1)
             y[i] = cc.Label:createWithSystemFont(math.ceil(yLabel[i]),'',24)
             y[i]:setScaleX(1/ scale)
-            y[i]:setColor(cc.c3b(201,43,44))
+            y[i]:setColor(cc.c4b(238,75,74,255))
             y[i]:setAlignment(cc.TEXT_ALIGNMENT_RIGHT)
-            y[i]:setPosition(0.5 * yBar:getContentSize().width , (0.2 + 0.58 * (i - 1) / 4) * tableHeight)
+            y[i]:setPosition(0.4 * yBar:getContentSize().width , (0.0 + 0.8 * (i - 1) / 6) * tableHeight)
             yBar:addChild(y[i])
         end
         if max == 0 then
-            for i = 1, 5 do
+            for i = 1, 7 do
                 y[i]:setString(string.format('%d',10 * (i - 1)))
             end
         end
         local length = {}
-        if #count > 0 then
+        local time = 0
+        local curLine = 1
+        local curLength = 0
+        local drawSpeed = 500
+        if #count > 1 then
             for i = 1,#count - 1 do
-                 length[i] = math.sqrt( math.pow((point[i + 1].x - point[i].x) * tableWidth,2) + math.pow((point[i + 1].y - point[i].y) * tableHeight,2))
+                length[i] = math.sqrt( math.pow((point[i + 1].x - point[i].x) * tableWidth,2) + math.pow((point[i + 1].y - point[i].y) * tableHeight,2))
                 local angle = math.acos((point[i + 1].x - point[i].x) * tableWidth / length[i])
-                local line = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVI/chart_line.png'))
-                line:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+                local line = ccui.Scale9Sprite:create('image/PersonalInfo/PLVI/spot_message_red.png',cc.rect(0,0,17,15),cc.rect(7.5,0,2,15))
+                line:setScale9Enabled(true)
+                --line:setContentSize(cc.size(15 + length[i] , 15))
+                line:setContentSize(cc.size(0,0))
                 line:ignoreAnchorPointForPosition(false)
-                line:setAnchorPoint(0.02,0.5)
+                line:setAnchorPoint(7.5 / (15 + length[i]),0.5)
                 line:setPosition(point[i].x * tableWidth ,point[i].y * tableHeight+ (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
-                line:setScale(length[i] / (line:getContentSize().width*0.98),1)
                 line:setRotation(-angle * 180 / math.pi)
-                line:setPercentage(0)
-                line:setMidpoint(cc.p(0,0))
-                line:setBarChangeRate(cc.p(1,0))
-                local to = cc.ProgressTo:create(length[i] / 500, 100)
-                local delayTime = 0
-                if i > 1 then
-                    for j = 1,i - 1 do
-                	   delayTime = delayTime + length[j] / 500
-                    end
-                end
-                
-                line:runAction(cc.Sequence:create(cc.DelayTime:create(delayTime),to))
                 gezi:addChild(line)
+                line:setName(string.format('line%d',i))
             end
         end
-        selectPoint = cc.Sprite:create('image/PersonalInfo/login/wsy_suanzhong.png')
+        selectPoint = cc.Sprite:create('image/PersonalInfo/PLVI/spot2_message_red_white.png')
         selectPoint:setScaleX(1 / scale)
         selectPoint:ignoreAnchorPointForPosition(false)
         selectPoint:setAnchorPoint(0.5,0.5)
-        selectPoint:setPosition(point[#count].x * tableWidth ,point[#count].y * tableHeight+ (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
+        selectPoint:setPosition(point[#count].x * tableWidth ,point[#count].y * tableHeight + (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
+        s_logd(string.format('selectPoint = %d, %d',selectPoint:getPositionX(),#count))
         gezi:addChild(selectPoint)
         selectPoint:setVisible(false)
-        local time = 0
-        for i = 1,#count - 1 do
-            time = time + length[i] / 200
-        end
-        selectPoint:runAction(cc.Sequence:create(cc.DelayTime:create(time),cc.Show:create()))
+        selectPoint:setScale(0.8)
         
-        local board = cc.Sprite:create('image/PersonalInfo/PLVI/learnedCountBoard_IC.png')
+        local function update( delta )
+            if curLine > #length then
+                selectPoint:setVisible(true)
+            else
+                curLength = curLength + delta * drawSpeed
+                if curLength <= length[curLine] then
+                    local line = gezi:getChildByName(string.format('line%d',curLine))
+                    line:setContentSize(cc.size(15 + curLength , 15))
+                    line:setAnchorPoint(7.5 / (15 + curLength),0.5)
+                else
+                    local line = gezi:getChildByName(string.format('line%d',curLine))
+                    line:setContentSize(cc.size(15 + length[curLine] , 15))
+                    line:setAnchorPoint(7.5 / (15 + length[curLine]),0.5)
+                    curLength = curLength - length[curLine]
+                    curLine = curLine + 1
+                    if curLine > #length then
+                        selectPoint:setVisible(true)
+                        return
+                    else
+                        local line = gezi:getChildByName(string.format('line%d',curLine))
+                        line:setContentSize(cc.size(15 + curLength , 15))
+                        line:setAnchorPoint(7.5 / (15 + curLength),0.5)
+                    end
+                end
+            end
+        end
+        back:scheduleUpdateWithPriorityLua(update,0)
+        
+        local board = cc.Sprite:create('image/PersonalInfo/PLVI/back_message_red.png')
         board:ignoreAnchorPointForPosition(false)
         board:setAnchorPoint(0.5,0)
         board:setPosition(0.5 * selectPoint:getContentSize().width,selectPoint:getContentSize().height)
@@ -238,86 +263,11 @@ function PersonalInfo:PLVI()
     if dayCount < 4 then
         labelCount = dayCount
     end
-    for i = 1, labelCount do
+    for i = 1, labelCount + 1 do
         yArray[i] = countArray[dayCount - labelCount + i]
         xArray[i] = dateArray[dayCount - labelCount + i]
     end
-    drawXYLabel(xArray,yArray)
-    
-    local menu = cc.Node:create()
-    menu:setPosition(0, 0.16 * s_DESIGN_HEIGHT)
-    back:addChild(menu)
-    local selectButton = 1
-    local rightButton = 1
-    local button = {}
-    local date = os.time()
-    for i = 1, dayCount do
-    
-        button[i] = ccui.Button:create()
-        if i > 4 then
-            button[i]:setVisible(false)
-        end
-        button[i]:setTouchEnabled(true)
-        --add label on button
-        local dateLabel = cc.Label:createWithSystemFont(os.date("%d", date),'',40)
-        local yearLabel = cc.Label:createWithSystemFont(os.date("%Y", date),'',24)
-        local monthLabel = cc.Label:createWithSystemFont(string.upper(os.date("%b", date)),'',28)
-        local sun = cc.Sprite:create('res/image/PersonalInfo/login/wsy_suanzhong.png')
-
-        if i > 1 then
-            button[i]:loadTextures("res/image/PersonalInfo/login/wsy_hongseban.png", "res/image/PersonalInfo/login/wsy_hongseban.png", "")
-            sun:setVisible(false)
-        else 
-            button[i]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
-            dateLabel:setString('今天')
-            dateLabel:setSystemFontSize(30)
-            monthLabel:setString('today')
-            yearLabel:setString(' ')
-            monthLabel:setColor(cc.c3b(201,43,44))
-            dateLabel:setColor(cc.c3b(201,43,44))
-            yearLabel:setColor(cc.c3b(201,43,44))
-        end
-        monthLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.4)
-        button[i]:addChild(monthLabel,0,'month')
-        yearLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.2)
-        button[i]:addChild(yearLabel,0,'year')
-        dateLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.7)
-        if i == 1 then
-            dateLabel:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height * 0.6)
-        end
-        button[i]:addChild(dateLabel,0,'date')
-        sun:setPosition(0.5 * button[i]:getContentSize().width,button[i]:getContentSize().height)
-        button[i]:addChild(sun,0,'sun')
-        if dayCount > 3 then
-            button[i]:setPosition((5-i)/5 * (s_RIGHT_X - s_LEFT_X),0)  
-        else
-            button[i]:setPosition((dayCount + 1 - i)/5 * (s_RIGHT_X - s_LEFT_X),0)
-        end  
-        menu:addChild(button[i])
-        date = date - 24 * 3600
-        --button event
-        local function touchEvent(sender,eventType)
-            if eventType == ccui.TouchEventType.ended  and selectButton ~= i then
-                button[selectButton]:getChildByName('sun'):setVisible(false)
-                button[selectButton]:getChildByName('date'):setColor(cc.c3b(255,255,255))
-                button[selectButton]:getChildByName('year'):setColor(cc.c3b(255,255,255))
-                button[selectButton]:getChildByName('month'):setColor(cc.c3b(255,255,255))
-                button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_hongseban.png", "res/image/PersonalInfo/login/wsy_hongseban.png", "")
-                selectButton = i
-                button[selectButton]:getChildByName('sun'):setVisible(true)
-                button[selectButton]:getChildByName('date'):setColor(cc.c3b(201,43,44))
-                button[selectButton]:getChildByName('year'):setColor(cc.c3b(201,43,44))
-                button[selectButton]:getChildByName('month'):setColor(cc.c3b(201,43,44))
-                button[selectButton]:loadTextures("res/image/PersonalInfo/login/wsy_baiban.png", "res/image/PersonalInfo/login/wsy_baiban.png", "")
-                --selectPoint:setVisible(true)
-                selectPoint:setPosition(point[#point - selectButton + rightButton].x * tableWidth ,point[#point - selectButton + rightButton].y * tableHeight+ (yBar:getPositionY() - (yBar:getContentSize().height - gezi:getContentSize().height * 0.5 ) - gezi:getPositionY()))
-                countLabel:setString(string.format('%d',countArray[#countArray + 1 - selectButton]))
-            end
-        end      
-        button[i]:addTouchEventListener(touchEvent)
-           
-    end
-    
+    drawXYLabel(countArray)
     
 end
 

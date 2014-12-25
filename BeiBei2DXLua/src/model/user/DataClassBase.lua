@@ -55,8 +55,6 @@ function dataToJSONString(dataObj)
             or key == 'createdAt' 
             or key == 'updatedAt' 
             or key == 'className' 
-            or key == 'access_token' 
-            or key == 'openid' 
             or key == 'expires_in' 
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
