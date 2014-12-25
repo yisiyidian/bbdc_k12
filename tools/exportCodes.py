@@ -62,7 +62,7 @@ DEBUG_FOR_TEST       = '0'
 RELEASE_FOR_APPSTORE = '1'
 RELEASE_FOR_TEST     = '2'
 
-RELEASE_APP = %s
+RELEASE_APP = '%s'
 LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
