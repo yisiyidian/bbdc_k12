@@ -1,6 +1,6 @@
 require("cocos.init")
 require("common.global")
-require("view.newstudy.NewStudyConfigure")
+
 
 
 local NewStudyPopupForMissionAndReward = class ("NewStudyPopupForMissionAndReward",function ()

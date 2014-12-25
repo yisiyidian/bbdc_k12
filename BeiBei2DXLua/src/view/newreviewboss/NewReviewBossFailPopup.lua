@@ -1,4 +1,4 @@
-require("view.newstudy.NewStudyConfigure")
+
 
 
 local NewReviewBossFailPopup = class ("NewReviewBossFailPopup",function ()
@@ -56,12 +56,23 @@ function NewReviewBossFailPopup.create()
     girl:addAnimation(0, 'animation', true)
     girl:setPosition(back:getContentSize().width *0.33,back:getContentSize().height * 0.1)
     back:addChild(girl)
+    
+    local button_goon_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
+            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
+            local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+            s_SCENE:popup(newReviewBossLayerChange)
+        end
+    end
 
     local button_goon = ccui.Button:create("image/newreviewboss/playagainbegin.png","image/newreviewboss/playagainend.png","")
     button_goon:setPosition(back:getContentSize().width * 0.2,back:getContentSize().height * 0.2)
     button_goon:setTitleText("重玩")
     button_goon:setTitleFontSize(30)
---    button_goon:addTouchEventListener(button_goon_clicked)
+    button_goon:addTouchEventListener(button_goon_clicked)
     back:addChild(button_goon)
 
     

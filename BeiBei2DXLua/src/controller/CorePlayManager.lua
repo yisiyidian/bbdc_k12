@@ -28,8 +28,29 @@ local ReviewBossHintLayer    = require("view.newreviewboss.NewReviewBossHintLaye
 local ReviewBossSummaryLayer = require("view.newreviewboss.NewReviewBossSummaryLayer")
 
 local CorePlayManager = {}
+
 function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
+end
+
+function CorePlayManager.initNewReviewBossLayer()
+    CorePlayManager.maxReviewWordCount = 20
+    CorePlayManager.NewReviewLayerWordList = s_BookWord[s_BOOK_KEY_CET4]
+    CorePlayManager.currentReviewIndex = 1
+    CorePlayManager.currentReward = 3
+    CorePlayManager.ReviewWordList = {"quotation","drama","critical","observer","open",
+        "progress","entitle","blank","honourable","single",
+        "namely","perfume","matter","lump","thousand",
+        "recorder","great","guest","spy","cousin"}
+    CorePlayManager.rightReviewWordNum  = 0
+end
+
+function CorePlayManager.updateCurrentReviewIndex()
+    CorePlayManager.currentReviewIndex = CorePlayManager.currentReviewIndex + 1
+end
+
+function  CorePlayManager.insertReviewList(wordName)
+    table.insert(CorePlayManager.ReviewWordList,wordName)
 end
 
 function CorePlayManager.initNewStudyLayer()
@@ -43,6 +64,7 @@ function CorePlayManager.initNewStudyLayer()
     CorePlayManager.rightWordNum  = 0
     CorePlayManager.wrongWordNum  = 0
 end
+
 
 function CorePlayManager.recordWrongWordList()
     -- for houqi

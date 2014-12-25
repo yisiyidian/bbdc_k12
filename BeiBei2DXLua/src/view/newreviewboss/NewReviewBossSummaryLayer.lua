@@ -1,6 +1,4 @@
-require("view.newstudy.NewStudyFunction")
-require("view.newstudy.NewStudyConfigure")
-require("view.newreviewboss.NewReviewBossConfigue")
+
 
 local  NewReviewBossSummaryLayer = class("NewReviewBossSummaryLayer", function ()
     return cc.Layer:create()
@@ -33,8 +31,8 @@ function NewReviewBossSummaryLayer.create()
     local word = {}
     local meaning = {}
     for i = 1,20 do
-        word[i] = s_WordPool[NewReviewBossLayer_wordList[i]].wordName
-        meaning[i] = s_WordPool[NewReviewBossLayer_wordList[i]].wordMeaning
+        word[i] = s_WordPool[s_CorePlayManager.NewReviewLayerWordList[i]].wordName
+        meaning[i] = s_WordPool[s_CorePlayManager.NewReviewLayerWordList[i]].wordMeaning
     end
 
     local listView = ccui.ListView:create()
@@ -42,7 +40,7 @@ function NewReviewBossSummaryLayer.create()
     listView:setBounceEnabled(false)
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(bigWidth, s_DESIGN_HEIGHT * 0.7))
-    listView:setPosition(bigWidth / 2 - listView:getContentSize().width / 2.0,
+    listView:setPosition(bigWidth / 2 - listView:getContentSize().width / 2.0 + 5,
         s_DESIGN_HEIGHT *0.5 - listView:getContentSize().height / 2.0)
     layer:addChild(listView,backGround:getLocalZOrder()+1)
 
@@ -113,7 +111,7 @@ function NewReviewBossSummaryLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
+            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
             local newReviewBossLayerChange = NewReviewBossLayerChange.create()
             s_SCENE:popup(newReviewBossLayerChange)
         end

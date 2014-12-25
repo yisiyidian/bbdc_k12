@@ -1,7 +1,7 @@
 require("cocos.init")
 
 require("common.global")
-require("view.newstudy.NewStudyConfigure")
+
 
 
 local  NewStudyRewardLayer = class("NewStudyRewardLayer", function ()

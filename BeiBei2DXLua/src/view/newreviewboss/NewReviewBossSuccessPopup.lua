@@ -1,4 +1,4 @@
-require("view.newstudy.NewStudyConfigure")
+
 
 
 local NewReviewBossSuccessPopup = class ("NewReviewBossSuccessPopup",function ()
@@ -62,6 +62,7 @@ function NewReviewBossSuccessPopup.create()
 
             local level = require('view.LevelLayer')
             local layer = level.create()
+            s_SCENE.popupLayer.listener:setSwallowTouches(false)
             s_SCENE.popupLayer:removeAllChildren()
             s_SCENE:replaceGameLayer(layer)
 
