@@ -85,8 +85,12 @@ function AppScene.create()
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
-    scene.debugLayer = DebugLayer.create()
-    if RELEASE_APP then scene.debugLayer:setVisible(false) end
+    if RELEASE_APP == RELEASE_FOR_APPSTORE then 
+        cc.Layer:create()
+        scene.debugLayer:setVisible(false) 
+    else
+        scene.debugLayer = DebugLayer.create()
+    end
     scene.rootLayer:addChild(scene.debugLayer)
     
     -- scene global variables
@@ -190,17 +194,15 @@ end
 
 ---- sign up & log in
 
-function AppScene:startLoadingData(hasAccount, username, password)
-    local getAccount
-    if hasAccount then 
-        getAccount = s_UserBaseServer.logIn
-    else
-        getAccount = s_UserBaseServer.signUp
-    end
+local USER_START_TYPE_NEW         = 0
+local USER_START_TYPE_OLD         = 1
+local USER_START_TYPE_QQ          = 2
+local USER_START_TYPE_QQ_AUTHDATA = 3
 
+function AppScene:startLoadingData(userStartType, username, password)
     local function onResponse(u, e, code)
 
-        if not hasAccount then 
+        if e == nil and s_CURRENT_USER.tutorialStep == 0 then 
             AnalyticsTutorial(0)
             AnalyticsSmallTutorial(0)
         end
@@ -209,25 +211,41 @@ function AppScene:startLoadingData(hasAccount, username, password)
             s_TIPS_LAYER:showSmall(e)
             hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
-            s_SCENE:getConfigs(true)
+            s_SCENE:gotoChooseBook()
         else
             -- s_SCENE:getDailyCheckIn()
-            s_SCENE:getConfigs(false)
+            s_SCENE:getLevels()
         end
         
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
-    getAccount(username, password, onResponse)
+    if userStartType == USER_START_TYPE_OLD then 
+        s_UserBaseServer.logIn(username, password, onResponse)
+    elseif userStartType == USER_START_TYPE_QQ then 
+        s_UserBaseServer.onLogInByQQ(onResponse)
+    elseif userStartType == USER_START_TYPE_QQ_AUTHDATA then 
+        s_UserBaseServer.logInByQQAuthData(onResponse)
+    else
+        s_UserBaseServer.signUp(username, password, onResponse)
+    end
 end
 
 function AppScene:signUp(username, password)
-    self:startLoadingData(false, username, password)
+    self:startLoadingData(USER_START_TYPE_NEW, username, password)
 end
 
 function AppScene:logIn(username, password)
-    self:startLoadingData(true, username, password)
+    self:startLoadingData(USER_START_TYPE_OLD, username, password)
+end
+
+function AppScene:logInByQQ()
+    self:startLoadingData(USER_START_TYPE_QQ, nil, nil) 
+end
+
+function AppScene:logInByQQAuthData()
+    self:startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
 
 -- function AppScene:getDailyCheckIn()
@@ -264,17 +282,6 @@ end
 --         end
 --     )
 -- end
-
-function AppScene:getConfigs(noBookKey)
-    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_CONFIG_DATA))
-    s_HttpRequestClient.getConfigs(function ()
-        if noBookKey then
-            s_SCENE:gotoChooseBook()
-        else
-            s_SCENE:getLevels()
-        end
-    end)
-end
 
 function AppScene:getLevels()
     local co

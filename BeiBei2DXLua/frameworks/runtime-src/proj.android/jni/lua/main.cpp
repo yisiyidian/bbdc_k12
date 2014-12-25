@@ -5,7 +5,7 @@
 #include <android/log.h>
 #include "ConfigParser.h"
 #include "PluginJniHelper.h"
-#include "../../../cocos2d-x/common/avos/CXAvos.h"
+#include "../../../cocos2d-x/common/CXAvos.h"
 
 using namespace anysdk::framework;
 
@@ -75,6 +75,31 @@ extern "C"
         CXAvos::getInstance()->invokeLuaCallbackFunction_li(nativeString_objectjson, nativeString_error, errorcode);
     
         if (objectjson) env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
+        if (error) env->ReleaseStringUTFChars(error, nativeString_error);
+    }
+
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionLIQQ(JNIEnv *env, jobject thisz,
+                                                    jstring objectjson, 
+                                                    jstring qqjson,
+                                                    jstring authjson,
+                                                    jstring error, 
+                                                    jint errorcode)
+    {
+        const char *nativeString_objectjson = objectjson ? env->GetStringUTFChars(objectjson, 0) : 0;
+        const char *nativeString_qqjson = qqjson ? env->GetStringUTFChars(qqjson, 0) : 0;
+        const char *nativeString_authjson = authjson ? env->GetStringUTFChars(authjson, 0) : 0;
+        const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
+    
+        CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(
+        		nativeString_objectjson,
+        		nativeString_qqjson,
+        		nativeString_authjson,
+        		nativeString_error,
+        		errorcode);
+    
+        if (objectjson) env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
+        if (qqjson) env->ReleaseStringUTFChars(qqjson, nativeString_qqjson);
+        if (authjson) env->ReleaseStringUTFChars(authjson, nativeString_authjson);
         if (error) env->ReleaseStringUTFChars(error, nativeString_error);
     }
 }

@@ -26,11 +26,13 @@ end
 
 local start
 start = function ()
+    s_APP_VERSION = 160000
+    
     require("common.global")
     require("AppVersionInfo")
     initApp(start)
 
-    if RELEASE_APP then
+    if RELEASE_APP == RELEASE_FOR_APPSTORE then
         -- remove print debug info when release app
         print = function ( ... )
         end
@@ -42,7 +44,6 @@ start = function ()
         s_SERVER.production       = 1
 
         s_APP_VERSION = 160000
-        s_CONFIG_VERSION = 150000
 
         s_SERVER.appId = LEAN_CLOUD_ID
         s_SERVER.appKey = LEAN_CLOUD_KEY
@@ -55,19 +56,25 @@ start = function ()
         s_SERVER.production       = 0
 
         s_APP_VERSION = 160000
-        s_CONFIG_VERSION = 150000 -- do NOT change this
 
-        s_SERVER.appId = LEAN_CLOUD_ID_TEST
-        s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
+        if RELEASE_APP == RELEASE_FOR_TEST then
+            s_SERVER.appId = LEAN_CLOUD_ID
+            s_SERVER.appKey = LEAN_CLOUD_KEY
+        else
+            s_SERVER.appId = LEAN_CLOUD_ID_TEST
+            s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
+        end
     end
+
+    s_CURRENT_USER.appVersion = s_APP_VERSION
 
     saveLuaError = function (msg)
         local errorObj = {}
         errorObj['className'] = 'LuaError'
-        local a = string.gsub(msg, ":",  "..") 
+        local a = string.gsub(msg, ":",  "    ") 
         local b = string.gsub(a,   '"',  "'") 
-        local c = string.gsub(b,   "\n", "___") 
-        local d = string.gsub(c,   "\t", "___") 
+        local c = string.gsub(b,   "\n", "    ") 
+        local d = string.gsub(c,   "\t", "    ") 
         errorObj['msg'] = d
         s_SERVER.createData(errorObj)
     end
@@ -89,12 +96,16 @@ local test_code = 0
 -- *************************************
 if test_code == 0 then
     local startApp = function ()
-        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
+        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local LoadingView = require("view.LoadingView")
             local loadingView = LoadingView.create()
             s_SCENE:replaceGameLayer(loadingView) 
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER) then
+            if s_CURRENT_USER.usertype == USER_TYPE_QQ then
+                s_SCENE:logInByQQAuthData()
+            else
+                s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+            end
+        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local IntroLayer = require("view.login.IntroLayer")
             local introLayer = IntroLayer.create(true)
             s_SCENE:replaceGameLayer(introLayer)

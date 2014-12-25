@@ -8,6 +8,24 @@ line: # lua to native
 BeiBei2DXLua/frameworks/cocos2d-x/tools/tolua/genbindings.py
 BeiBei2DXLua/frameworks/cocos2d-x/tools/tolua/cx_common_genbindings.py
 
+BeiBei2DXLua/frameworks/runtime-src/proj.android/buildX.xml
+     <!--  add 3rd jars  -->
+     <path id="lib_classpath">
+        <fileset dir="../../cocos2d-x/common/Android/">
+             <include name="*.jar"/>
+         </fileset>
+     </path>
+
+BeiBei2DXLua/frameworks/runtime-src/proj.android/jni/lua/main.cpp
+  #include "../../../cocos2d-x/common/CXAvos.h"
+
+If you check out other branch, remove folders below
+/BeiBei2DXLua/frameworks/cocos2d-x/cocos/platform/android/java/bin
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/assets
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/bin
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/libs/armeabi
+/BeiBei2DXLua/frameworks/runtime-src/proj.android/obj
+
 ----------------------------------------------------------------------------------------
 开发环境
 

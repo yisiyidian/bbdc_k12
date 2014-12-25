@@ -91,6 +91,8 @@ function WordDetailInfo.create(word)
     label_sentencecn2:setPosition(left, index_y)
     main:addChild(label_sentencecn2)
     index_y = index_y - label_sentencecn2:getContentSize().height - 10
+    
+    
 
     return main
 end

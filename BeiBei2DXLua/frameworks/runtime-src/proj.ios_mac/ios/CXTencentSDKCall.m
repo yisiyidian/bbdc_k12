@@ -81,6 +81,10 @@ static CXTencentSDKCall *g_instance = nil;
     [_oauth authorize:permissions inSafari:NO];
 }
 
+- (void)logout {
+    [_oauth logout:self];
+}
+
 #pragma mark -
 
 - (void)tencentDidLogin {
@@ -100,7 +104,7 @@ static CXTencentSDKCall *g_instance = nil;
 }
 
 - (void)tencentDidLogout {
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kLogLogOut object:self];
 }
 
 - (BOOL)tencentNeedPerformIncrAuth:(TencentOAuth *)tencentOAuth withPermissions:(NSArray *)permissions {

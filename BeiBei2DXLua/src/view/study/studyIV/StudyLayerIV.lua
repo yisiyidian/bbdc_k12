@@ -105,6 +105,7 @@ function StudyLayerIV.create()
     button_detail_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             s_SCENE.touchEventBlockLayer.lockTouch()
+            playWordSound(wordName)
             if button_detail:getRotation() == 0 then
                 s_CorePlayManager.unfamiliarWord()
                 
