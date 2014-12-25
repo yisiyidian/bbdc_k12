@@ -108,7 +108,6 @@ function NewStudyChooseLayer.create()
                     end
                 else
                     if s_CorePlayManager.isStudyModel() then
-                        s_CorePlayManager.updateWrongWordList(wordname)
                         s_CorePlayManager.enterNewStudyWrongLayer()
                     else
                         s_CorePlayManager.enterNewStudyWrongLayer()
@@ -147,7 +146,6 @@ function NewStudyChooseLayer.create()
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then            
             if s_CorePlayManager.isStudyModel() then
-                s_CorePlayManager.updateWrongWordList(wordname)
                 s_CorePlayManager.enterNewStudyWrongLayer()
             else
                 s_CorePlayManager.enterNewStudyWrongLayer()

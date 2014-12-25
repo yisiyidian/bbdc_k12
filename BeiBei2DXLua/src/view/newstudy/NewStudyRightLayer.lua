@@ -46,7 +46,6 @@ function NewStudyRightLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.updateWrongWordList(wordname)
             s_CorePlayManager.enterNewStudyWrongLayer()
         end
     end

@@ -30,7 +30,7 @@ function NewStudySuccessLayer.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local layer = NewStudySuccessLayer.new()
 
-    local backColor = BackLayer.create(0) 
+    local backColor = BackLayer.create(0)
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
