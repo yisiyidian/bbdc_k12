@@ -71,6 +71,7 @@ function NewStudySlideLayer.create()
                     s_CorePlayManager.updateCurrentIndex()
                     s_CorePlayManager.enterNewStudyMiddleLayer()
                 else
+                    s_CorePlayManager.updateWrongWordList(wordname)
                     s_CorePlayManager.updateCurrentIndex()
                     s_CorePlayManager.enterNewStudyChooseLayer()
                 end
