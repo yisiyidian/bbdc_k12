@@ -129,11 +129,16 @@ function NewReviewBossSummaryLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
---            s_CorePlayManager.initNewReviewBossLayer()
---            s_CorePlayManager.enterReviewBossMainLayer()
-            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
-            local newReviewBossLayerChange = NewReviewBossLayerChange.create()
-            s_SCENE:popup(newReviewBossLayerChange)
+            s_CorePlayManager.updateReviewBoss(s_CorePlayManager.bossID)
+            local candidate = s_CorePlayManager.getReviewBossCandidate() 
+            if candidate == nil then
+                local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
+                local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+                s_SCENE:popup(newReviewBossLayerChange)
+            else
+                s_CorePlayManager.initNewReviewBossLayer(candidate)
+                s_CorePlayManager.enterReviewBossMainLayer()
+            end
         end
     end
     
