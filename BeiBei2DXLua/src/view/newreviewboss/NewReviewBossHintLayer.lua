@@ -1,6 +1,3 @@
-
-
-
 local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
 
 local  NewReviewBossHintLayer = class("NewReviewBossHintLayer", function ()
@@ -26,6 +23,24 @@ function NewReviewBossHintLayer.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local layer = NewReviewBossHintLayer.new()
+    
+    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    pauseBtn:ignoreAnchorPointForPosition(false)
+    pauseBtn:setAnchorPoint(0,1)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
+    layer:addChild(pauseBtn,100)
+    local Pause = require('view.Pause')
+    local function pauseScene(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local pauseLayer = Pause.create()
+            pauseLayer:setPosition(s_LEFT_X, 0)
+            s_SCENE.popupLayer:addChild(pauseLayer)
+            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+            playSound(s_sound_buttonEffect)
+        end
+    end
+    pauseBtn:addTouchEventListener(pauseScene)
 
     layer.close  = function ()
     	
@@ -49,25 +64,26 @@ function NewReviewBossHintLayer.create()
         end
     end
 
-    for i=1,3 do
+    for i=1,s_CorePlayManager.currentReward do
         local reward = cc.Sprite:create("image/newstudy/bean.png")
-        reward:setPosition(backGround:getContentSize().width - reward:getContentSize().width * (i + 2),
-            backGround:getContentSize().height)
+        reward:setPosition(s_RIGHT_X - reward:getContentSize().width * i,
+            s_DESIGN_HEIGHT)
         reward:ignoreAnchorPointForPosition(false)
         reward:setAnchorPoint(0.5,1)
-        backGround:addChild(reward)  
+        reward:setTag(i)
+        layer:addChild(reward)  
     end
     
-    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.currentReviewIndex - 1,"red")
-    rbProgressBar:setPosition(backGround:getContentSize().width/2, s_DESIGN_HEIGHT * 0.95)
-    backGround:addChild(rbProgressBar)
+    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"red")
+    rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
+    layer:addChild(rbProgressBar)
     
     local huge_word = cc.Label:createWithSystemFont(wordname,"",48)
-    huge_word:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.85)
+    huge_word:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT * 0.8)
     huge_word:setColor(cc.c4b(0,0,0,255))
     huge_word:ignoreAnchorPointForPosition(false)
     huge_word:setAnchorPoint(0.5,0.5)
-    backGround:addChild(huge_word)
+    layer:addChild(huge_word)
     
     local hint_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -78,26 +94,25 @@ function NewReviewBossHintLayer.create()
         end
     end
     
-    local hint_button = ccui.Button:create("image/newreviewboss/hintbuttonbegin.png","image/newreviewboss/hintbuttonend.png","")
-    hint_button:setPosition(backGround:getContentSize().width - 150, s_DESIGN_HEIGHT * 0.85 )
+    local hint_button = ccui.Button:create("image/newreviewboss/buttontip.png","image/newreviewboss/buttontip.png","")
+    hint_button:setPosition(s_RIGHT_X , s_DESIGN_HEIGHT * 0.8 )
     hint_button:ignoreAnchorPointForPosition(false)
-    hint_button:setAnchorPoint(1,0.5)
+    hint_button:setAnchorPoint(0.5,0.5)
     hint_button:addTouchEventListener(hint_click)
-    backGround:addChild(hint_button) 
-    
-    local hint_label = cc.Label:createWithSystemFont("提示","",24)
-    hint_label:setPosition(hint_button:getContentSize().width / 2,hint_button:getContentSize().height / 2)
+    layer:addChild(hint_button) 
+
+    local hint_label = cc.Label:createWithSystemFont("提示","",36)
+    hint_label:setPosition(hint_button:getContentSize().width * 0.3,hint_button:getContentSize().height * 0.5)
     hint_label:setColor(cc.c4b(255,255,255,255))
     hint_label:ignoreAnchorPointForPosition(false)
     hint_label:setAnchorPoint(0.5,0.5)
     hint_button:addChild(hint_label)
-    
-    local blue_line = cc.LayerColor:create(cc.c4b(49,188,251,255), 10, 300)  
-    blue_line:setAnchorPoint(0.5,1)
-    blue_line:ignoreAnchorPointForPosition(false)
-    blue_line:setPosition(hint_button:getContentSize().width/2,hint_button:getContentSize().height/2)
-    blue_line:setLocalZOrder(hint_button:getLocalZOrder() - 1)
-    hint_button:addChild(blue_line)
+
+    local hint_arrow = cc.Sprite:create("image/newreviewboss/buttonarrow.png")
+    hint_arrow:setPosition(hint_button:getContentSize().width * 0.6,hint_button:getContentSize().height * 0.5)
+    hint_arrow:ignoreAnchorPointForPosition(false)
+    hint_arrow:setAnchorPoint(0.5,0.5)
+    hint_button:addChild(hint_arrow)
     
     local blue_back = cc.Sprite:create("image/newreviewboss/blueback.png")
     blue_back:setPosition(backGround:getContentSize().width / 2,backGround:getContentSize().height * 0.38)

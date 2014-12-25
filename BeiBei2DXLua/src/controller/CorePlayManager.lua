@@ -41,11 +41,11 @@ function CorePlayManager.initNewReviewBossLayer()
     CorePlayManager.NewReviewLayerWordList = s_BookWord[s_BOOK_KEY_CET4]
     CorePlayManager.currentReviewIndex = 1
     CorePlayManager.currentReward = 3
+    CorePlayManager.rightReviewWordNum  = 0    
     CorePlayManager.ReviewWordList = {"quotation","drama","critical","observer","open",
         "progress","entitle","blank","honourable","single",
         "namely","perfume","matter","lump","thousand",
         "recorder","great","guest","spy","cousin"}
-    CorePlayManager.rightReviewWordNum  = 0
 end
 
 function CorePlayManager.updateCurrentReviewIndex()
