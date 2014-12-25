@@ -117,7 +117,7 @@ function RightTopNode:ctor()
     wordAday:setPosition(s_RIGHT_X - 15 , s_DESIGN_HEIGHT - 230 )
     wordAday:setLocalZOrder(1)
     wordAday:setScale(0.5);
---    self:addChild(wordAday)
+    self:addChild(wordAday)
     self.checkIn = wordAday
     
     local wordAdaylabel = cc.Label:createWithSystemFont("测试中","",36)
