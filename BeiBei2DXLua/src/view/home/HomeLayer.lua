@@ -384,6 +384,8 @@ function HomeLayer.create()
             
            if isDataShow then
                isDataShow = false
+               button_friend:setEnabled(true)
+               button_main:setEnabled(true)
                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
                local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
@@ -392,6 +394,8 @@ function HomeLayer.create()
                button_data:runAction(cc.Sequence:create(action1, action2))
            else
                isDataShow = true
+               button_friend:setEnabled(false)
+               button_main:setEnabled(false)
                button_data:setLocalZOrder(2)
                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
                if true then
@@ -592,10 +596,29 @@ function HomeLayer.create()
             end
         end
     end
+
+    local onTouchEnded = function(touch,event)
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        if not isDataShow then
+            return
+        elseif location.y >  s_DESIGN_HEIGHT-280 then
+            isDataShow = false
+            button_friend:setEnabled(true)
+            button_main:setEnabled(true)
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+            local action2 = cc.CallFunc:create(function()
+               button_data:setLocalZOrder(0)
+               data_back:removeChildByName('PersonalInfo')
+            end)
+            button_data:runAction(cc.Sequence:create(action1, action2))
+
+        end
+    end
  
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
