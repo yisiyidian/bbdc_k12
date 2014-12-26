@@ -126,8 +126,11 @@ if test_code == 0 then
 else    
    -- *************************************
    --for test
-   require("example.example")
-   test()
+   --require("example.example")
+    local testLayer = require('view.ChapterLayer')
+    local chapterLayer = testLayer.create()
+    s_SCENE:replaceGameLayer(chapterLayer)
+   --test()
    -- *************************************
 end
 
