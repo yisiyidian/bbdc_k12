@@ -76,6 +76,7 @@ start = function ()
     end
 
     s_CURRENT_USER.appVersion = s_APP_VERSION
+    if AgentManager ~= nil then s_CURRENT_USER.channelId = AgentManager:getInstance():getChannelId() end
 
     saveLuaError = function (msg)
         local errorObj = {}
