@@ -8,8 +8,10 @@ local ziaoangTest       = require("view.ZiaoangTest")
 local ScrollViewTest    = require("view.ScrollviewTest")
 
 function test()
-    local test = ziaoangTest.create()
-    s_SCENE:replaceGameLayer(test)
+    --local test = ziaoangTest.create()
+    --s_SCENE:replaceGameLayer(test)
+    local testLayer = require('view/level/BaseChapterLayer')
+    local chapter0 = testLayer.create('chapter0','level0')
     
 
 --    s_UserBaseServer.logIn('tester112', 'qwerty', function (u, e, code) 
