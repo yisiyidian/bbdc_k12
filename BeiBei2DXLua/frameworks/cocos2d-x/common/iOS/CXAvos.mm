@@ -68,15 +68,15 @@ static CXTencentSDKCallObserver* cxTencentSDKCallObserver = nil;
 
 - (id) init {
     if (self = [super init]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessed) name:kLoginSuccessed object:[CXTencentSDKCall getinstance]];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginFailed) name:kLoginFailed object:[CXTencentSDKCall getinstance]];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserInfo:) name:kGetUserInfoResponse object:[CXTencentSDKCall getinstance]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessed) name:kLoginSuccessed object:[CXTencentSDKCall getInstance]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginFailed) name:kLoginFailed object:[CXTencentSDKCall getInstance]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserInfo:) name:kGetUserInfoResponse object:[CXTencentSDKCall getInstance]];
     }
     return self;
 }
 
 - (void)loginSuccessed {
-    TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
+    TencentOAuth* oauth = [CXTencentSDKCall getInstance].oauth;
     BOOL isGotUserInfo = [oauth getUserInfo];
     if (isGotUserInfo == NO) {
         CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(nullptr, nullptr, nullptr, "QQ log in error", 0);
@@ -91,7 +91,7 @@ static CXTencentSDKCallObserver* cxTencentSDKCallObserver = nil;
 - (void)getUserInfo:(NSNotification*)info {
     NSDictionary* userinfo = [info userInfo];
     APIResponse* response = userinfo != nil ? userinfo[kResponse] : nil;
-    TencentOAuth* oauth = [CXTencentSDKCall getinstance].oauth;
+    TencentOAuth* oauth = [CXTencentSDKCall getInstance].oauth;
     NSDictionary* authData = @{@"openid":oauth.openId,
                                @"access_token":oauth.accessToken,
                                @"expires_in":[NSString stringWithFormat:@"%ld", (long)oauth.expirationDate.timeIntervalSince1970]};
@@ -219,9 +219,13 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
     }
 }
 
+void CXAvos::initTencentQQ(const char* appId, const char* appKey) {
+    [[CXTencentSDKCall getInstance] setAppId:[NSString stringWithUTF8String:appId] appKey:[NSString stringWithUTF8String:appKey]];
+}
+
 void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
     mLuaHandlerId_logInByQQ = nHandler;
-    [[CXTencentSDKCall getinstance] login];
+    [[CXTencentSDKCall getInstance] login];
 }
 
 void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler) {

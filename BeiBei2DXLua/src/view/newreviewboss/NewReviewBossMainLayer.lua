@@ -1,10 +1,8 @@
 require("cocos.init")
-
 require("common.global")
 
-
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
-local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
+local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
 
 
 local  NewReviewBossMainLayer = class("NewReviewBossMainLayer", function ()
@@ -30,6 +28,10 @@ function NewReviewBossMainLayer.create()
     local sentenceCn        
     local sentenceEn2       
     local sentenceCn2    
+    
+    local type = s_CorePlayManager.typeIndex
+    local answer
+    
       
     local rbCurrentWordIndex = 1
     local wordToBeTested = {}
@@ -61,7 +63,7 @@ function NewReviewBossMainLayer.create()
     local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     layer:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
@@ -106,16 +108,16 @@ function NewReviewBossMainLayer.create()
     back:addAnimation(0, 'animation', true)
 
     for i=1,s_CorePlayManager.currentReward do
-        local reward = cc.Sprite:create("image/newstudy/bean.png")
+        local reward = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
         reward:setPosition(s_RIGHT_X - reward:getContentSize().width * i,
-            s_DESIGN_HEIGHT)
+            s_DESIGN_HEIGHT * 0.95)
         reward:ignoreAnchorPointForPosition(false)
-        reward:setAnchorPoint(0.5,1)
+        reward:setAnchorPoint(0.5,0.5)
         reward:setTag(i)
         layer:addChild(reward)  
     end
 
-    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"red")
+    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"yellow")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
 
@@ -125,30 +127,43 @@ function NewReviewBossMainLayer.create()
     huge_word:ignoreAnchorPointForPosition(false)
     huge_word:setAnchorPoint(0.5,0.5)
     layer:addChild(huge_word)
+    
+    if type % 2 == 0 then
+        huge_word:setString(wordMeaningSmall)
+    else
+        huge_word:setString(wordname)
+    end
 
 
     local getRandomWordForRightWord = function(wordName)
 
-        local tmp =  {"quotation","drama","critical","observer","open",
-            "progress","entitle","blank","honourable","single",
-            "namely","perfume","matter","lump","thousand",
-            "recorder","great","guest","spy","cousin"}
-
+        local tmp =  {}            
+        table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v) tmp[i] = s_CorePlayManager.ReviewWordList[i]  end)     
         local wordNumber
         table.foreachi(tmp, function(i, v) if v == wordName then  wordNumber = i end end)               
 
-        local randomIndex = (wordNumber + 5)%20 + 1 
+        local randomIndex = (wordNumber )%s_CorePlayManager.maxReviewWordCount + 1 
         local word1 = tmp[randomIndex]
-        local randomIndex = (wordNumber + 10)%20 + 1 
+        local randomIndex = (wordNumber + 1)%s_CorePlayManager.maxReviewWordCount + 1 
         local word2 = tmp[randomIndex]
 
         local rightIndex = math.random(1,1024)%3 + 1
-        local ans = {}
-        ans[rightIndex] = wordName
-        if rightIndex == 1 then  ans[2] = word1 ans[3] = word2
-        elseif rightIndex == 2 then ans[3] = word1 ans[1] = word2
-        else ans[1] = word1 ans[2] = word2        end
-        return ans
+        
+        if type%2 == 0 then    
+            local ans = {}
+            ans[rightIndex] = wordName
+            if rightIndex == 1 then  ans[2] = word1 ans[3] = word2
+            elseif rightIndex == 2 then ans[3] = word1 ans[1] = word2
+            else ans[1] = word1 ans[2] = word2        end
+            return ans
+        else
+            local ans = {}
+            ans[rightIndex]  = s_WordPool[wordName].wordMeaningSmall
+            if rightIndex == 1 then  ans[2] = s_WordPool[word1].wordMeaningSmall ans[3] = s_WordPool[word2].wordMeaningSmall
+            elseif rightIndex == 2 then ans[3] = s_WordPool[word1].wordMeaningSmall  ans[1] = s_WordPool[word2].wordMeaningSmall
+            else ans[1] = s_WordPool[word1].wordMeaningSmall ans[2] = s_WordPool[word2].wordMeaningSmall    end
+            return ans
+        end
     end
     
     local rightWordFuntion = function ()
@@ -192,14 +207,18 @@ function NewReviewBossMainLayer.create()
         s_CorePlayManager.updateCurrentReviewIndex()
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
-        huge_word:setString(wordname)
+        if type % 2 == 0 then
+            huge_word:setString(wordMeaningSmall)
+        else
+            huge_word:setString(wordname)
+        end
     end
     
     local wrongWordFunction = function ()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-        s_CorePlayManager.insertReviewList(wordToBeTested[rbCurrentWordIndex])
-        table.insert(wordToBeTested, wordToBeTested[rbCurrentWordIndex])
-        local words = getRandomWordForRightWord(wordToBeTested[rbCurrentWordIndex])
+        s_CorePlayManager.insertReviewList(wordname)
+        table.insert(wordToBeTested, wordname)
+        local words = getRandomWordForRightWord(wordname)
         local index_x, index_y = sprite_array[#sprite_array][1]:getPosition()
         local tmp = {}
         for j = 1, 3 do
@@ -244,7 +263,11 @@ function NewReviewBossMainLayer.create()
         s_CorePlayManager.updateCurrentReviewIndex()
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
-        huge_word:setString(wordname)
+        if type % 2 == 0 then
+            huge_word:setString(wordMeaningSmall)
+        else
+            huge_word:setString(wordname)
+        end
     end
 
     local hint_click = function(sender, eventType)
@@ -263,13 +286,17 @@ function NewReviewBossMainLayer.create()
     end
 
     local hint_button = ccui.Button:create("image/newreviewboss/buttontip.png","image/newreviewboss/buttontip.png","")
-    hint_button:setPosition(s_RIGHT_X , s_DESIGN_HEIGHT * 0.8 )
+    hint_button:setPosition(s_RIGHT_X + 100 , s_DESIGN_HEIGHT * 0.81 )
     hint_button:ignoreAnchorPointForPosition(false)
     hint_button:setAnchorPoint(0.5,0.5)
     hint_button:addTouchEventListener(hint_click)
     layer:addChild(hint_button) 
+    
+    local action1 = cc.MoveTo:create(0.4, cc.p(s_RIGHT_X,s_DESIGN_HEIGHT * 0.81 ))
+    hint_button:runAction(action1)
+    
 
-    local hint_label = cc.Label:createWithSystemFont("提示","",36)
+    local hint_label = cc.Label:createWithSystemFont("偷看","",36)
     hint_label:setPosition(hint_button:getContentSize().width * 0.3,hint_button:getContentSize().height * 0.5)
     hint_label:setColor(cc.c4b(255,255,255,255))
     hint_label:ignoreAnchorPointForPosition(false)
@@ -320,12 +347,17 @@ function NewReviewBossMainLayer.create()
         local logic_location = checkTouchIndex(location)
         if logic_location.x == rbCurrentWordIndex then
             playSound(s_sound_buttonEffect)
-            if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][logic_location.y].character then
+            if type % 2 == 0 then
+                answer = wordToBeTested[logic_location.x]
+            else
+                answer = s_WordPool[wordToBeTested[logic_location.x]].wordMeaningSmall
+            end
+            if answer == sprite_array[logic_location.x][logic_location.y].character then
                 sprite_array[logic_location.x][logic_location.y].right()
             else
                 sprite_array[logic_location.x][logic_location.y].wrong()             
                 for j = 1, 3 do
-                    if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][j].character then
+                    if answer == sprite_array[logic_location.x][j].character then
                         sprite_array[logic_location.x][j].right()
                 	end
                 end
@@ -341,13 +373,17 @@ function NewReviewBossMainLayer.create()
 
             if rbCurrentWordIndex < #wordToBeTested then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                if wordToBeTested[logic_location.x] == sprite_array[logic_location.x][logic_location.y].character then
-                   rightWordFuntion()
+                if answer == sprite_array[logic_location.x][logic_location.y].character then
+                    rightWordFuntion()
+                    rbProgressBar.addOne()
                 end
             else
+                rbProgressBar.addOne()
+                s_SCENE:callFuncWithDelay(0.5,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
                 s_CorePlayManager.enterReviewBossSummaryLayer()
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                end)
             end            
         end
 

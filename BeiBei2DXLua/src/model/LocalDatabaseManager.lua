@@ -331,18 +331,6 @@ end
 
 -- show word info
 
----- CREATE table Daily Study Info
---Manager.database:exec[[
---        create table if not exists DataDailyStudyInfo(
---            userId TEXT,
---            bookKey TEXT,
---            dayString TEXT,
---            studyNum INTEGER,
---            graspNum INTEGER,
---            lastUpdate INTEGER
---        );
---    ]]
-
 function Manager.getRandomWord()
     return "apple"
 end
@@ -438,11 +426,35 @@ end
 
 
 function Manager.getStudyWords(bookKey)
-    return {}
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local wordList = s_BookWord[bookKey]
+
+    local currentIndex = Manager.getCurrentIndex()
+    
+    local wordPool = {}
+    for i = 1, currentIndex-1 do
+        table.insert(wordList[i])
+    end
+
+    return wordPool
 end
 
 function Manager.getGraspWords(bookKey)
-    return {}
+    -- TODO
+
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local wordList = s_BookWord[bookKey]
+
+    local currentIndex = Manager.getCurrentIndex()
+
+    local wordPool = {}
+    for i = 1, currentIndex-1 do
+        table.insert(wordList[i])
+    end
+
+    return wordPool
 end
 
 -- record word info

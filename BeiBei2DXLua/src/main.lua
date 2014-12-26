@@ -31,6 +31,7 @@ start = function ()
     require("common.global")
     require("AppVersionInfo")
     initApp(start)
+    cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY)
 
     if RELEASE_APP == RELEASE_FOR_APPSTORE then
         -- remove print debug info when release app

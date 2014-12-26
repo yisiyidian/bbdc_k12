@@ -15,6 +15,9 @@ function NewReviewBossSummaryLayer.create()
 
     local layer = NewReviewBossSummaryLayer.new()
     
+    local totol_boss_number = s_DATABASE_MGR:getTodayTotalBossNum()
+    local current_boss_number = totol_boss_number - s_DATABASE_MGR:getTodayRemainBossNum() + 1
+    
     local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
@@ -39,7 +42,7 @@ function NewReviewBossSummaryLayer.create()
     backGround:setAnchorPoint(0.5,0.5)
     layer:addChild(backGround)
     
-    local summary_label = cc.Label:createWithSystemFont("小结（4/4）","",48)
+    local summary_label = cc.Label:createWithSystemFont("小结（"..current_boss_number.."/"..totol_boss_number..")","",48)
     summary_label:setPosition(backGround:getContentSize().width / 2,s_DESIGN_HEIGHT * 0.95)
     summary_label:setColor(cc.c4b(0,0,0,255))
     summary_label:ignoreAnchorPointForPosition(false)

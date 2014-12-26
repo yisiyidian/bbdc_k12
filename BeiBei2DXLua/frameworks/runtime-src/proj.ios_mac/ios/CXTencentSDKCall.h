@@ -61,11 +61,12 @@
 
 @property (nonatomic, retain)TencentOAuth *oauth;
 
-+ (CXTencentSDKCall *)getinstance;
++ (CXTencentSDKCall *)getInstance;
 + (void)resetSDK;
 
 + (void)showInvalidTokenOrOpenIDMessage;
 
+- (void)setAppId:(NSString*)appid appKey:(NSString*)appKey;
 - (void)login;
 - (void)logout;
 

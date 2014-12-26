@@ -18,7 +18,7 @@ LEAN_CLOUD_X_0    = ['2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq', 'gycctm
 UMENG_APP_XIAOMI  = ["5498fc3afd98c56b4200075d", "xiao-mi"]
 UMENG_APP_ANDROID = ['549a5eb9fd98c5b2ac00144e', 'android']
 
-TENCENT_APP = ["1103783596", "n7vXdt6eDIggSsa6"]
+TENCENT_APP = ['package name', "1103783596", "n7vXdt6eDIggSsa6"]
 
 # ---------------------------------------------------------
 
@@ -52,17 +52,30 @@ def getLeanCloudAppKey(codeType):
 def exportLua(codeType, appVersionInfo, fullpathLua):
     appVersionInfoLua = '''-- %s
 
+--------------------------------------------------------------------------------
+
+-- PACKAGE NAME : %s
+SNS_QQ_APPID  = '%s'
+SNS_QQ_APPKEY = '%s'
+
+--------------------------------------------------------------------------------
+
 LEAN_CLOUD_ID_TEST   = "%s"
 LEAN_CLOUD_KEY_TEST  = "%s"
 
 LEAN_CLOUD_ID        = "%s"
 LEAN_CLOUD_KEY       = "%s"
 
+--------------------------------------------------------------------------------
+
 DEBUG_FOR_TEST       = '0'
 RELEASE_FOR_APPSTORE = '1'
 RELEASE_FOR_TEST     = '2'
 
-RELEASE_APP = '%s'
+RELEASE_APP = '%s' -- DEBUG_FOR_TEST, RELEASE_FOR_APPSTORE, RELEASE_FOR_TEST
+
+--------------------------------------------------------------------------------
+
 LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
@@ -71,15 +84,18 @@ function getAppVersionDebugInfo()
     local str = ''
     if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
     if AgentManager ~= nil then
-        str = 'name:' .. str .. '\\nchannel:' .. AgentManager:getInstance():getChannelId() .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
+        str = 'name:' .. str .. '\\nchannel:' .. AgentManager:getInstance():getChannelId() .. ' v:' .. s_APP_VERSION .. '\\n%s'
     else
-        str = 'name:' .. str .. '\\nchannel:' .. 'unknown' .. '\\nv:' .. s_APP_VERSION .. '\\n%s'
+        str = 'name:' .. str .. '\\nchannel:' .. 'unknown' .. ' v:' .. s_APP_VERSION .. '\\n%s'
     end
     str = '%s' .. '\\n' .. str .. '\\n' .. LUA_ERROR
     return str
 end
 
-''' % (getCodeTypeDes(codeType), LEAN_CLOUD_TEST[0], LEAN_CLOUD_TEST[1], LEAN_CLOUD_RELEASE[0], LEAN_CLOUD_RELEASE[1], codeType, appVersionInfo, appVersionInfo, getCodeTypeDes(codeType))
+''' % (getCodeTypeDes(codeType), \
+    TENCENT_APP[0], TENCENT_APP[1], TENCENT_APP[2], \
+    LEAN_CLOUD_TEST[0], LEAN_CLOUD_TEST[1], LEAN_CLOUD_RELEASE[0], LEAN_CLOUD_RELEASE[1], \
+    codeType, appVersionInfo, appVersionInfo, getCodeTypeDes(codeType))
 
     appVersionInfoLuaFile = open(fullpathLua, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
@@ -94,14 +110,12 @@ def exportObjc(codeType, appVersionInfo, fullpath):
 
     appVersionInfoLua = ''' // %s
 
-#define TENCENT_APP_ID @"%s"
-
 #define INIT_SERVER \\
     [AVOSCloud setApplicationId:@"%s" \\
                       clientKey:@"%s"]; \\
     [AVCloud setProductionMode:%s];
 
-''' % (getCodeTypeDes(codeType), TENCENT_APP[0], getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction)
+''' % (getCodeTypeDes(codeType), getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
@@ -115,8 +129,6 @@ def exportJava(codeType, appVersionInfo, fullpath):
     lean_cloud_key = getLeanCloudAppKey(codeType)
     umeng_app_key = UMENG_APP[0]
     umeng_app_channel = UMENG_APP[1]
-    qq_app_id = TENCENT_APP[0]
-    qq_app_key = TENCENT_APP[1]
 
     isDebugLogEnabled = 'true'
     isProduction = 'false'
@@ -130,16 +142,11 @@ def exportJava(codeType, appVersionInfo, fullpath):
 // ----------
 package c.bb.dc;
 
-import com.avos.avoscloud.AVCloud;
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVOSCloud;
-import com.avos.sns.*;
-
-import com.umeng.analytics.AnalyticsConfig;
-
-import c.bb.dc.sns.CXTencentSDKCall;
-
 import android.app.Activity;
+
+import com.avos.avoscloud.AVCloud;
+import com.avos.avoscloud.AVOSCloud;
+import com.umeng.analytics.AnalyticsConfig;
 
 public class AppVersionInfo {
 
@@ -150,16 +157,9 @@ public class AppVersionInfo {
 
         AnalyticsConfig.setAppkey("%s");
         AnalyticsConfig.setChannel("%s");
-
-        CXTencentSDKCall.getInstance().init("%s", a);
-        try {
-            SNS.setupPlatform(SNSType.AVOSCloudSNSQQ, "%s", "%s", null);
-        } catch (AVException e) {
-            e.printStackTrace();
-        }
     }
 }
-''' % (macro_type, lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel, qq_app_id, qq_app_id, qq_app_key)
+''' % (macro_type, lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
