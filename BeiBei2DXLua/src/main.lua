@@ -1,17 +1,23 @@
 
+-- *************************************
+
+local app_version_debug   = 160000
+local app_version_release = 160000
+
+-- All test code must in example.example
+local test_code = 0
+
+-- *************************************
+
 cc.FileUtils:getInstance():addSearchPath("src")
 cc.FileUtils:getInstance():addSearchPath("res")
 
 require("cocos.init")
 
 -- cclog
-local cclog = function(...)
-    print(string.format(...))
-end
+local cclog = function(...) print(string.format(...)) end
 
-local saveLuaError = function (msg)
-    
-end
+local saveLuaError = function (msg) end
 
 -- for CCLuaEngine traceback
 function __G__TRACKBACK__(msg)
@@ -26,25 +32,25 @@ end
 
 local start
 start = function ()
-    s_APP_VERSION = 160000
+    s_APP_VERSION = app_version_release
     
     require("common.global")
     require("AppVersionInfo")
     initApp(start)
-    cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY)
+    if IS_SNS_QQ_LOGIN_AVAILABLE then cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY) end
 
     if RELEASE_APP == RELEASE_FOR_APPSTORE then
         -- remove print debug info when release app
         print = function ( ... )
         end
 
+        test_code = 0
+
         s_debugger.configLog(false, false)
         DEBUG_PRINT_LUA_TABLE = false
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false -- TODO
         s_SERVER.production       = 1
-
-        s_APP_VERSION = 160000
 
         s_SERVER.appId = LEAN_CLOUD_ID
         s_SERVER.appKey = LEAN_CLOUD_KEY
@@ -56,12 +62,14 @@ start = function ()
         s_SERVER.isAppStoreServer = false
         s_SERVER.production       = 0
 
-        s_APP_VERSION = 160000
-
         if RELEASE_APP == RELEASE_FOR_TEST then
+            test_code = 0
+
             s_SERVER.appId = LEAN_CLOUD_ID
             s_SERVER.appKey = LEAN_CLOUD_KEY
         else
+            s_APP_VERSION = app_version_debug
+
             s_SERVER.appId = LEAN_CLOUD_ID_TEST
             s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
         end
@@ -77,6 +85,8 @@ start = function ()
         local c = string.gsub(b,   "\n", "    ") 
         local d = string.gsub(c,   "\t", "    ") 
         errorObj['msg'] = d
+        errorObj['appVersion'] = s_APP_VERSION
+        errorObj['RA'] = RELEASE_APP
         s_SERVER.createData(errorObj)
     end
     
@@ -88,12 +98,6 @@ start = function ()
 
     s_DATA_MANAGER.loadText()
     
--- *************************************
--- All test code must in example.example
--- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
--- |||||||||||||||||||||||||||||||||||||
--- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-local test_code = 0
 -- *************************************
 if test_code == 0 then
     local startApp = function ()
