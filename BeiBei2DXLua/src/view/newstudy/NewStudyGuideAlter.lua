@@ -28,6 +28,13 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
+    main.cancel = function()end
+    main.sure = function()end
+    main.know = function()end
+    
+    local box_tag = 0
+    local box = nil
+
     local back = cc.Sprite:create(backImageName)
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
@@ -57,7 +64,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     if type == 0 then
         local button_know_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-    
+                main.know()
             end
         end
     
@@ -66,7 +73,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         button_know:addTouchEventListener(button_know_clicked)
         back:addChild(button_know)
     else
-        local box = cc.Sprite:create("image/newstudy/guide_box.png")
+        box = cc.Sprite:create("image/newstudy/guide_box.png")
         box:setPosition(maxWidth/2, 160)
         back:addChild(box)
     
@@ -78,7 +85,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     
         local button_cancel_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-                
+                main.cancel()
             end
         end
     
@@ -89,7 +96,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     
         local button_sure_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-                
+                main.sure()
             end
         end
     
@@ -101,6 +108,15 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
 
     -- touch lock
     local onTouchBegan = function(touch, event)
+        if box ~= nil then
+            local location = box:convertToNodeSpace(touch:getLocation())
+            print("touch location: "..location.x.." "..location.y)
+--            if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
+--                return false
+--            end
+        end
+        
+        
         print("touch began on block layer")
         return true
     end
