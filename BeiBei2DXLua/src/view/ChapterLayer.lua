@@ -48,12 +48,13 @@ function ChapterLayer:ctor()
     -- add bounce
     self:addTopBounce()
     self:addBottomBounce()
-    
     -- add chapter node
     self:addChapterIntoListView('chapter0')
+    self:addChapterIntoListView('chapter1')
 end
 
 function ChapterLayer:addChapterIntoListView(chapterKey)
+    print('chapterKey:'..chapterKey)
     if chapterKey == 'chapter0' then    
         local ChapterLayer0 = require('view.level.ChapterLayer0')
         self.chapterDic['chapter0'] = ChapterLayer0.create("start")
@@ -63,7 +64,16 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         custom_item:setName('chapter0')  
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
         listView:addChild(self.chapterDic['chapter0'])
-        
+   else    
+        local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
+        self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
+        self.chapterDic[chapterKey]:setPosition(cc.p(0,0))
+        print('contentSize:'..self.chapterDic[chapterKey]:getContentSize().height)
+        local custom_item = ccui.Layout:create()
+        custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
+        custom_item:setName(chapterKey)  
+        --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
+        listView:addChild(self.chapterDic[chapterKey]) 
         -- add connection 
 --        local connectionLayer0_1 = require('view.level.connection.Connection0_1')
 --        self.chapterDic['connection0_1'] = connectionLayer0_1.create()

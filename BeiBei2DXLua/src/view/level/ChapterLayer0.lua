@@ -2,7 +2,6 @@ local ChapterLayerBase = require('view.level.ChapterLayerBase')
 
 local s_chapterKey = 'chapter0'
 local s_startLevelKey = 'level0'
-local s_chapter0_base_height = 3014
 
 local ChapterLayer0 = class("ChapterLayer0",function()
     return ChapterLayerBase.create(s_chapterKey, s_startLevelKey)
@@ -10,10 +9,20 @@ end)
 
 local Chapter0ResTable = {
     back1_1 = {'res/image/chapter/chapter0/1_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height)},
-    back1_2 = {'res/image/chapter/chapter0/1_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height)},
+    back1_2 = {'res/image/chapter/chapter0/1_2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height)},
     back2 = {'res/image/chapter/chapter0/2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-970)},
     back3_1 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
-    back3_2 = {'res/image/chapter/chapter0/3_2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)}
+    back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
+    island1Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(364, 2792),"island"}
+    ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(510.6, 2464.4),"island"}
+    ,island3Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(203.1, 2243.5),"island"}
+    ,island4Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(111.8, 1901.3),"island"}
+    ,island5Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(319.2, 1654),"island"}
+    ,island6Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(538.6, 1397.2),"island"}
+    ,island7Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(180.5, 1119.5),"island"}
+    ,island8Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(480, 909.8),"island"}
+    ,island9Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(163.5, 729.1),"island"}
+    ,island10Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(128.6,292.2),"island"}
 }
 -- resourceType "start" / "middle" / "end"
 function ChapterLayer0.create(resourceType)
@@ -27,15 +36,19 @@ function ChapterLayer0:ctor(resourceType)
     self:loadResource()
 end
 
+function ChapterLayer0:loadLevelPosition()
+    self.levelPos = {}
+    for i in 1, 10 do
+        local levelKey = string.sub(self.startLevelKey,6) + (i-1)
+--        self.levelPos[]['island'..i..'Table']
+    end
+end
+
 function ChapterLayer0:loadResource()
     if self.resourceType == s_chapter_resource_start_type then
         self:createObjectForResource(Chapter0ResTable['back1_1'])
         self:createObjectForResource(Chapter0ResTable['back2'])
-        self:createObjectForResource(Chapter0ResTable['back3_2'])
-    elseif self.resourceType == s_chapter_resource_middle_type then
-        self:createObjectForResource(Chapter0ResTable['back1_2'])
-        self:createObjectForResource(Chapter0ResTable['back2'])
-        self:createObjectForResource(Chapter0ResTable['back3_2'])
+        self:createObjectForResource(Chapter0ResTable['back3_1'])
     elseif self.resourceType == s_chapter_resource_end_type then
         self:createObjectForResource(Chapter0ResTable['back1_2'])
         self:createObjectForResource(Chapter0ResTable['back2'])

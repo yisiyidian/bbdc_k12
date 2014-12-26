@@ -92,7 +92,7 @@ start = function ()
 -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 -- |||||||||||||||||||||||||||||||||||||
 -- vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-local test_code = 1
+local test_code = 0
 -- *************************************
 if test_code == 0 then
     local startApp = function ()
