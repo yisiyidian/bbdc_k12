@@ -331,18 +331,6 @@ end
 
 -- show word info
 
----- CREATE table Daily Study Info
---Manager.database:exec[[
---        create table if not exists DataDailyStudyInfo(
---            userId TEXT,
---            bookKey TEXT,
---            dayString TEXT,
---            studyNum INTEGER,
---            graspNum INTEGER,
---            lastUpdate INTEGER
---        );
---    ]]
-
 function Manager.getRandomWord()
     return "apple"
 end
