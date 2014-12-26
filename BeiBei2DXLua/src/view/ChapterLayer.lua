@@ -8,7 +8,7 @@ end)
 local listView
 local s_chapter_layer_width = 854
 local oceanBlue = cc.c4b(61,191,244,255)
-local blueSectionSize = cc.size(854,512)
+local bounceSectionSize = cc.size(854,512)
 
 function ChapterLayer.create()
     local layer = ChapterLayer.new()
@@ -47,6 +47,7 @@ function ChapterLayer:ctor()
     listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
     -- add bounce
     self:addTopBounce()
+    self:addBottomBounce()
     
     -- add chapter node
     self:addChapterIntoListView('chapter0')
@@ -79,12 +80,24 @@ end
 
 function ChapterLayer:addTopBounce()
     --if s_CURRENT_USER.currentChapterKey == 'chapter0' then
-        local blueLayerColor = cc.LayerColor:create(oceanBlue,blueSectionSize.width,blueSectionSize.height)
+        --local blueLayerColor = cc.LayerColor:create(oceanBlue,bounceSectionSize.width,bounceSectionSize.height)
+        local blueLayerColor = cc.LayerColor:create(oceanBlue,s_chapter_layer_width,s_DESIGN_HEIGHT)
         blueLayerColor:ignoreAnchorPointForPosition(false)
         blueLayerColor:setAnchorPoint(0,1)
-        blueLayerColor:setPosition((s_DESIGN_WIDTH-blueSectionSize.width)/2,s_DESIGN_HEIGHT)
+        blueLayerColor:setPosition((s_DESIGN_WIDTH-bounceSectionSize.width)/2,s_DESIGN_HEIGHT)
         self:addChild(blueLayerColor,-1)
     --end
+end
+
+function ChapterLayer:addBottomBounce()
+    self.chapterDic['leftCloud'] = cc.Sprite:create('image/chapter/leftCloud.png')
+    self.chapterDic['rightCloud'] = cc.Sprite:create('image/chapter/rightCloud.png')
+    self.chapterDic['leftCloud']:setAnchorPoint(0, 1)
+    self.chapterDic['rightCloud']:setAnchorPoint(0, 1)
+    self.chapterDic['leftCloud']:setPosition((s_DESIGN_WIDTH-bounceSectionSize.width)/2,100)
+    self.chapterDic['rightCloud']:setPosition((s_DESIGN_WIDTH-bounceSectionSize.width)/2,100)
+    listView:addChild(self.chapterDic['leftCloud'],100)
+    listView:addChild(self.chapterDic['rightCloud'],100)
 end
 
 return ChapterLayer
