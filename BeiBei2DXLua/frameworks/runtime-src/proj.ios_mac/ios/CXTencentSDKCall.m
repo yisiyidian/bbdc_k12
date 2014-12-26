@@ -13,7 +13,7 @@
 static CXTencentSDKCall *g_instance = nil;
 @synthesize oauth = _oauth;
 
-+ (CXTencentSDKCall *)getinstance {
++ (CXTencentSDKCall *)getInstance {
     @synchronized(self) {
         if (nil == g_instance) {
             g_instance = [[super allocWithZone:nil] init];
@@ -24,7 +24,7 @@ static CXTencentSDKCall *g_instance = nil;
 }
 
 + (id)allocWithZone:(NSZone *)zone {
-    return [[self getinstance] retain];
+    return [[self getInstance] retain];
 }
 
 + (void)showInvalidTokenOrOpenIDMessage {
@@ -46,10 +46,12 @@ static CXTencentSDKCall *g_instance = nil;
 
 - (id)init {
     if (self = [super init]) {
-        NSString *appid = TENCENT_APP_ID;
-        _oauth = [[TencentOAuth alloc] initWithAppId:appid andDelegate:self];
     }
     return self;
+}
+
+- (void)setAppId:(NSString*)appid appKey:(NSString*)appKey {
+    _oauth = [[TencentOAuth alloc] initWithAppId:appid andDelegate:self];
 }
 
 - (void)login {

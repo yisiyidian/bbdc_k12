@@ -27,6 +27,7 @@ function DataUser:ctor()
     self.password                          = ''
     self.sessionToken                      = ''
     self.usertype                          = USER_TYPE_GUEST
+    self.channelId                         = ''
 
     self.appVersion                        = s_APP_VERSION 
     self.tutorialStep                      = 0 
@@ -70,6 +71,12 @@ function DataUser:ctor()
     self.localAuthData                     = nil
     self.snsUserInfo                       = nil
     self.clientData                        = {0}
+end
+
+function DataUser:getNameForDisplay()
+    if s_CURRENT_USER.usertype == USER_TYPE_QQ then return self.nickName end
+    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then return '游客' end
+    return self.username
 end
 
 function DataUser:parseServerData(data)

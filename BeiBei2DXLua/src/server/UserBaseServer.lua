@@ -261,6 +261,10 @@ function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
     s_SERVER.search('classes/_User?where={"username":"' .. username .. '"}', onSucceed, onFailed)
 end
 
+function UserBaseServer.searchUserByNickName(nickName, onSucceed, onFailed)
+    s_SERVER.search('classes/_User?where={"nickName":"' .. nickName .. '"}', onSucceed, onFailed)
+end
+
 function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
     s_SERVER.searchCount('_User', '{"username":"' .. username .. '"}', onSucceed, onFailed)
 end
@@ -336,12 +340,12 @@ s_UserBaseServer.getLevelsOfCurrentUser(
     end
 )
 ]]--
-local function getLevels(userId, bookKey, onSucceed, onFailed)
-    s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
-end
-function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
-    getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
-end
+-- local function getLevels(userId, bookKey, onSucceed, onFailed)
+--     s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
+-- end
+-- function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
+--     getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
+-- end
 
 ----
 

@@ -246,7 +246,7 @@ end
 function CorePlayManager.initNewReviewBossLayer(candidate)
     if candidate == nil then
         CorePlayManager.bossID                  = -1
-            
+        CorePlayManager.typeIndex               = 0
         CorePlayManager.NewReviewLayerWordList  = s_BookWord[s_CURRENT_USER.bookKey]
         CorePlayManager.currentReviewIndex      = 1
         CorePlayManager.currentReward           = 3

@@ -219,6 +219,15 @@ public class BBNDK {
 			
 		});
 	}
+	
+	public static void initTencentQQ(String appId, String appKey) {
+		CXTencentSDKCall.getInstance().init(appId, _instance);
+        try {
+            SNS.setupPlatform(SNSType.AVOSCloudSNSQQ, appId, appKey, null);
+        } catch (AVException e) {
+            e.printStackTrace();
+        }
+	}
 		
 	public static void logInByQQ() {
 		_instance.runOnUiThread(new Runnable() {

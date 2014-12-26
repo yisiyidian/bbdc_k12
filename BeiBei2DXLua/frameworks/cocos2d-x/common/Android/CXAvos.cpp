@@ -145,6 +145,20 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
     }
 }
 
+void CXAvos::initTencentQQ(const char* appId, const char* appKey) {
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "initTencentQQ", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+        jstring jappId = t.env->NewStringUTF(appId);
+        jstring jappKey = t.env->NewStringUTF(appKey);
+
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, jappId, jappKey);
+
+        t.env->DeleteLocalRef(jappId);
+        t.env->DeleteLocalRef(jappKey);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 void CXAvos::logInByQQ(CXLUAFUNC nHandler) {
     mLuaHandlerId_logInByQQ = nHandler;
     cocos2d::JniMethodInfo t;

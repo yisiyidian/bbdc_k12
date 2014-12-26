@@ -15,6 +15,8 @@ import com.tencent.tauth.UiError;
 
 //TODO : just log in
 public class CXTencentSDKCall {
+	public static String SNSTYPE = "qq";
+	
 	private static CXTencentSDKCall mInstance = null;
 	
 	private Tencent mTencent = null;
@@ -62,7 +64,7 @@ public class CXTencentSDKCall {
 
 		@Override
 		public void onCancel() {
-			
+			BBNDK.onLogInByQQ(null, null, null, "User cancels QQ log in", 0);
 		}
 
 		@Override
@@ -88,7 +90,7 @@ public class CXTencentSDKCall {
 
 		@Override
 		public void onCancel() {
-			
+			BBNDK.onLogInByQQ(null, null, null, "User cancels QQ log in", 0);
 		}
 
 		@Override
@@ -96,7 +98,7 @@ public class CXTencentSDKCall {
 			AVUser.AVThirdPartyUserAuth userAuth = new AVUser.AVThirdPartyUserAuth(
 					mTencent.getQQToken().getAccessToken(), 
 					String.valueOf(mTencent.getQQToken().getExpireTimeInSecond()), 
-					"qq", 
+					SNSTYPE, 
 					mTencent.getQQToken().getOpenId());
 			AVUser.loginWithAuthData(userAuth, new LogInCallback<AVUser>() {
 				public void done(AVUser user, AVException e) {

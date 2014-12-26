@@ -29,6 +29,7 @@ public:
     void logIn(const char* username, const char* password, CXLUAFUNC nHandler);
     void invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode);
     
+    void initTencentQQ(const char* appId, const char* appKey);
     void logInByQQ(CXLUAFUNC nHandler);
     void logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler);
     void invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* qqjson, const char* authjson, const char* error, int errorcode);

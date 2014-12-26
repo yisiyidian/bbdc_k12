@@ -101,6 +101,13 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXAvos] initTencentQQ 
+-- @param self
+-- @param #char appId
+-- @param #char appKey
+        
+--------------------------------
+-- 
 -- @function [parent=#CXAvos] getInstance 
 -- @param self
 -- @return CXAvos#CXAvos ret (return value: CXAvos)
