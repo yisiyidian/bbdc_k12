@@ -14,6 +14,24 @@ function NewReviewBossSummaryLayer.create()
     custom_sprite_site[3] = "image/newreviewboss/endtext.png"
 
     local layer = NewReviewBossSummaryLayer.new()
+    
+    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    pauseBtn:ignoreAnchorPointForPosition(false)
+    pauseBtn:setAnchorPoint(0,1)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
+    layer:addChild(pauseBtn,100)
+    local Pause = require('view.Pause')
+    local function pauseScene(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local pauseLayer = Pause.create()
+            pauseLayer:setPosition(s_LEFT_X, 0)
+            s_SCENE.popupLayer:addChild(pauseLayer)
+            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+            playSound(s_sound_buttonEffect)
+        end
+    end
+    pauseBtn:addTouchEventListener(pauseScene)
 
     local backGround = cc.Sprite:create("image/newreviewboss/newreviewboss_background.png")
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
@@ -30,7 +48,7 @@ function NewReviewBossSummaryLayer.create()
     
     local word = {}
     local meaning = {}
-    for i = 1,20 do
+    for i = 1,s_CorePlayManager.maxReviewWordCount  do
         word[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordName
         meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaning
     end
@@ -40,7 +58,7 @@ function NewReviewBossSummaryLayer.create()
     listView:setBounceEnabled(false)
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(bigWidth, s_DESIGN_HEIGHT * 0.7))
-    listView:setPosition(bigWidth / 2 - listView:getContentSize().width / 2.0,
+    listView:setPosition(bigWidth / 2 - listView:getContentSize().width / 2.0 + 5,
         s_DESIGN_HEIGHT *0.5 - listView:getContentSize().height / 2.0)
     layer:addChild(listView,backGround:getLocalZOrder()+1)
 
@@ -111,9 +129,16 @@ function NewReviewBossSummaryLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
-            local newReviewBossLayerChange = NewReviewBossLayerChange.create()
-            s_SCENE:popup(newReviewBossLayerChange)
+            s_CorePlayManager.updateReviewBoss(s_CorePlayManager.bossID)
+            local candidate = s_CorePlayManager.getReviewBossCandidate() 
+            if candidate == nil then
+                local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
+                local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+                s_SCENE:popup(newReviewBossLayerChange)
+            else
+                s_CorePlayManager.initNewReviewBossLayer(candidate)
+                s_CorePlayManager.enterReviewBossMainLayer()
+            end
         end
     end
     

@@ -244,17 +244,23 @@ function PersonalInfo:PLVI()
         board:setPosition(0.5 * selectPoint:getContentSize().width,selectPoint:getContentSize().height)
         selectPoint:addChild(board)
         
-        local label = cc.Label:createWithSystemFont('个','',24)
-        label:setColor(cc.c3b(0,0,0))
-        label:setAnchorPoint(0,0.5)
-        label:setPosition(0.65 * board:getContentSize().width,0.5 * board:getContentSize().height)
+        local label = cc.Label:createWithSystemFont('+','',36)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setAnchorPoint(0.5,0.5)
+        label:setPosition(0.3 * board:getContentSize().width,0.75 * board:getContentSize().height)
         board:addChild(label)
-        countLabel = cc.Label:createWithSystemFont(string.format('%d',count[#count]),'',52)
-        countLabel:ignoreAnchorPointForPosition(false)
-        countLabel:setAnchorPoint(0.7,0.5)
-        countLabel:setColor(cc.c3b(0,0,0))
-        countLabel:setPosition(0.5 * board:getContentSize().width,0.55 * board:getContentSize().height)
+
+        countLabel = cc.Label:createWithSystemFont(string.format('%d',count[#count] - count[#count - 1]),'',52)
+        countLabel:setAnchorPoint(0.5,0.5)
+        countLabel:setPosition(0.6 * board:getContentSize().width,0.7 * board:getContentSize().height)
         board:addChild(countLabel,0,'count')
+
+        local totalLabel = cc.Label:createWithSystemFont(string.format('共%d个',count[#count]),'',26)
+        totalLabel:setAnchorPoint(0.5,0.5)
+        totalLabel:setColor(cc.c3b(0,0,0))
+        totalLabel:setOpacity(150)
+        totalLabel:setPosition(0.5 * board:getContentSize().width,0.35 * board:getContentSize().height)
+        board:addChild(totalLabel,0,'count')
     end
     
     local xArray = {}

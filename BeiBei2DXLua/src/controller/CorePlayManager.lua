@@ -210,10 +210,13 @@ function CorePlayManager.enterNewStudyOverLayer()
 end
 
 function CorePlayManager.updateCurrentIndex()
+    s_DATABASE_MGR.addStudyWordsNum()
     CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
 end
 
 function CorePlayManager.updateRightWordList(wordname)
+    s_DATABASE_MGR.addGraspWordsNum(1)
+
     table.insert(CorePlayManager.rightWordList, wordname)
     CorePlayManager.rightWordNum = CorePlayManager.rightWordNum + 1
 end

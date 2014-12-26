@@ -1,6 +1,3 @@
-
-
-
 local NewReviewBossSuccessPopup = class ("NewReviewBossSuccessPopup",function ()
     return cc.Layer:create()
 end)
