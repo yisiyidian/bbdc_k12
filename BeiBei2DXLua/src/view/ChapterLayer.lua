@@ -56,7 +56,7 @@ end
 function ChapterLayer:addChapterIntoListView(chapterKey)
     if chapterKey == 'chapter0' then    
         local ChapterLayer0 = require('view.level.ChapterLayer0')
-        self.chapterDic['chapter0'] = ChapterLayer0.create()
+        self.chapterDic['chapter0'] = ChapterLayer0.create("start")
         self.chapterDic['chapter0']:setPosition(cc.p(0,0))
         local custom_item = ccui.Layout:create()
         custom_item:setContentSize(self.chapterDic['chapter0']:getContentSize())  

@@ -1,7 +1,9 @@
 require("cocos.init")
 require('common.global')
 
-
+s_chapter_resource_start_type = "start"
+s_chapter_resource_middle_type = "middle" 
+s_chapter_resource_end_type = "end"
 
 local ChapterLayerBase = class('ChapterLayerBase',function() 
     return ccui.Widget:create()
@@ -17,7 +19,6 @@ end
 function ChapterLayerBase:ctor(chapterKey, startLevelKey)
     self.chapterKey = chapterKey
     self.startLevelKey = startLevelKey
-    self:loadResource()
 end
 
 
