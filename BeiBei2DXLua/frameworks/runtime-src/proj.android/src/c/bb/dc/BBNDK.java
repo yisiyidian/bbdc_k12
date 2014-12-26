@@ -16,6 +16,8 @@ import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
@@ -276,7 +278,7 @@ public class BBNDK {
 	}
 	
 	private static void _hideCXProgressHUD() {
-		if (_loadingView != null) {
+		if (_loadingView != null && _loadingView.isShowing()) {
 			_loadingView.dismiss();
 		}
 		_loadingView = null;
@@ -296,6 +298,7 @@ public class BBNDK {
 	// ***************************************************************************************************************************
 	// push Notification
 	// ***************************************************************************************************************************	
+	
 	private static ArrayList<BBPushNotification> notis = new ArrayList<BBPushNotification>();
 	
 	public static void pushNotification() {
@@ -343,6 +346,46 @@ public class BBNDK {
 		}
 		notis.clear();
 	}
+	
+	// ***************************************************************************************************************************
+	// network state
+	// ***************************************************************************************************************************	
+		
+	public static boolean isNetworkConnected() {  
+		if (_context != null) {  
+			ConnectivityManager connectivityManager = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);  
+			NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();  
+		    if (networkInfo != null) {  
+		    	return networkInfo.isAvailable();  
+		    }  
+		}  
+		return false;  
+	}  
+	
+	// ConnectivityManager.TYPE_WIFI
+	// ConnectivityManager.TYPE_MOBILE
+	public static boolean isNetworkConnectedWithConnectType(int type) {  
+	    if (_context != null) {  
+	        ConnectivityManager connectivityManager = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);  
+	        NetworkInfo networkInfo = connectivityManager.getNetworkInfo(type);  
+	        if (networkInfo != null) {  
+	            return networkInfo.isAvailable();  
+	        }  
+	    }  
+	    return false;  
+	}
+	
+	public static int getConnectedType() {  
+	    if (_context != null) {  
+	        ConnectivityManager connectivityManager = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);  
+	        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();  
+	        if (networkInfo != null && networkInfo.isAvailable()) {  
+	            return networkInfo.getType();  
+	        }  
+	    }  
+	    return -1;  
+	}
+	
 	// ***************************************************************************************************************************
 	// native
 	// ***************************************************************************************************************************

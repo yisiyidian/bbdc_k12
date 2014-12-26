@@ -39,8 +39,8 @@ function HomeLayer.create()
     local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6)+1
     local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
 
-    local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
-    local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+    local studyWordNum      = s_DATABASE_MGR.getTotalStudyWordsNum()
+    local graspWordNum      = s_DATABASE_MGR.getTotalGraspWordsNum()
 
     local redHint = nil
     -- data end
@@ -280,8 +280,8 @@ function HomeLayer.create()
             sender:setVisible(false)
             button_total:setVisible(true)
             local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
-            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
-            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(str).."词")
+            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(str).."词")
             s_CURRENT_USER.clientData[1] = 1
         end
     end
