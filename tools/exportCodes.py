@@ -49,6 +49,29 @@ def getLeanCloudAppKey(codeType):
 
 # ---------------------------------------------------------
 
+def init(channelName, channelConfigs, androidManifest, androidManifestTarget):
+    configs = open(channelConfigs).read()
+    jsonStr = json.loads(configs)
+    channels = jsonStr['channels']
+    for c in channels:
+        if c['name'] == channelName:
+            am = open(androidManifest).read()
+            am = am.replace('1103783596', str(c['QQAppId']))
+            print str(json.dumps(c, indent=4))
+
+            LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey'])]
+            UMENG_APP = [str(c['umengAppKey']), (c['umengAppName'])]
+            TENCENT_APP = [str(c['isQQLogInAvailable']), str(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
+
+            amt = open(androidManifestTarget, 'w')
+            amt.write(am)
+            amt.close()
+
+            return
+    
+
+# ---------------------------------------------------------
+
 def exportLua(codeType, appVersionInfo, fullpathLua):
     appVersionInfoLua = '''-- %s
 
@@ -175,4 +198,6 @@ def export(codeType, appVersionInfo, fullpathLua, fullpathObjc, fullpathJava):
     pass
                 
 if __name__ == "__main__":
+    if len(sys.argv) > 6:
+        init(sys.argv[6], sys.argv[7], sys.argv[8], sys.argv[9])
     export(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
