@@ -438,11 +438,35 @@ end
 
 
 function Manager.getStudyWords(bookKey)
-    return {}
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local wordList = s_BookWord[bookKey]
+
+    local currentIndex = Manager.getCurrentIndex()
+    
+    local wordPool = {}
+    for i = 1, currentIndex-1 do
+        table.insert(wordList[i])
+    end
+
+    return wordPool
 end
 
 function Manager.getGraspWords(bookKey)
-    return {}
+    -- TODO
+
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local wordList = s_BookWord[bookKey]
+
+    local currentIndex = Manager.getCurrentIndex()
+
+    local wordPool = {}
+    for i = 1, currentIndex-1 do
+        table.insert(wordList[i])
+    end
+
+    return wordPool
 end
 
 -- record word info
