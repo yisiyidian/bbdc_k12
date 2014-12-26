@@ -39,8 +39,8 @@ function HomeLayer.create()
     local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6)+1
     local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
 
-    local studyWordNum      = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey)
-    local graspWordNum      = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey)
+    local studyWordNum      = s_DATABASE_MGR.getTotalStudyWordsNum()
+    local graspWordNum      = s_DATABASE_MGR.getTotalGraspWordsNum()
 
     local redHint = nil
     -- data end
@@ -280,8 +280,8 @@ function HomeLayer.create()
             sender:setVisible(false)
             button_total:setVisible(true)
             local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
-            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
-            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(str).."词")
+            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(str).."词")
             s_CURRENT_USER.clientData[1] = 1
         end
     end
@@ -384,6 +384,8 @@ function HomeLayer.create()
             
            if isDataShow then
                isDataShow = false
+               button_friend:setEnabled(true)
+               button_main:setEnabled(true)
                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
                local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
@@ -392,6 +394,8 @@ function HomeLayer.create()
                button_data:runAction(cc.Sequence:create(action1, action2))
            else
                isDataShow = true
+               button_friend:setEnabled(false)
+               button_main:setEnabled(false)
                button_data:setLocalZOrder(2)
                button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
                if true then
@@ -592,10 +596,29 @@ function HomeLayer.create()
             end
         end
     end
+
+    local onTouchEnded = function(touch,event)
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        if not isDataShow then
+            return
+        elseif location.y >  s_DESIGN_HEIGHT-280 then
+            isDataShow = false
+            button_friend:setEnabled(true)
+            button_main:setEnabled(true)
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+            local action2 = cc.CallFunc:create(function()
+               button_data:setLocalZOrder(0)
+               data_back:removeChildByName('PersonalInfo')
+            end)
+            button_data:runAction(cc.Sequence:create(action1, action2))
+
+        end
+    end
  
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     

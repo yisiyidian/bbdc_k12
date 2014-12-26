@@ -70,7 +70,7 @@ function BookLayer.create()
     backColor:addChild(hint) 
     local name_array = {}
     local full_name_array = {}
-    local key_array = {'cet4','cet6','toefl','ielts','ncee','gre','gmat','gse','middle','primary','pro4','pro8','sat'}
+    local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
     for i = 1, #key_array do
         name_array[i] = string.upper(key_array[i])
         full_name_array[i] = string.upper(key_array[1])
@@ -123,7 +123,7 @@ function BookLayer.create()
         end
         table.insert(func_array, click)
     
-        local smallBack = ccui.Button:create("image/book/button_choose_book_"..full_name_array[index]..".png", "", "")
+        local smallBack = ccui.Button:create("image/book/"..name_array[i]..".png", "", "")
         smallBack:setTouchEnabled(true)
         smallBack:setScale9Enabled(true)
 

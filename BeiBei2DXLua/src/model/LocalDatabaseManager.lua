@@ -164,6 +164,18 @@ function Manager.initTables()
             lastUpdate INTEGER
         );
     ]]
+    
+    -- CREATE table Daily Study Info
+    Manager.database:exec[[
+        create table if not exists DataDailyStudyInfo(
+            userId TEXT,
+            bookKey TEXT,
+            dayString TEXT,
+            studyNum INTEGER,
+            graspNum INTEGER,
+            lastUpdate INTEGER
+        );
+    ]]
 
     local userDataClasses = {
         require('model.user.DataDailyCheckIn'),
@@ -318,17 +330,112 @@ end
 
 
 -- show word info
+
+---- CREATE table Daily Study Info
+--Manager.database:exec[[
+--        create table if not exists DataDailyStudyInfo(
+--            userId TEXT,
+--            bookKey TEXT,
+--            dayString TEXT,
+--            studyNum INTEGER,
+--            graspNum INTEGER,
+--            lastUpdate INTEGER
+--        );
+--    ]]
+
 function Manager.getRandomWord()
     return "apple"
 end
 
-function Manager.getStudyWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
-    return 0
+function Manager.addStudyWordsNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
+
+    local num = 0
+    local oldStudyNum = nil
+    local oldGraspNum = nil
+    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
+        num = num + 1
+        oldStudyNum = row.studyNum
+        oldGraspNum = row.graspNum
+    end
+    
+    if num == 0 then
+        local studyNum = 1
+        local graspNum = 0
+        local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local newStudyNum = oldStudyNum + 1
+        local query = "UPDATE DataDailyStudyInfo SET studyNum = "..newStudyNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
+        Manager.database:exec(query)
+    end
 end
 
-function Manager.getGraspWordsNum(bookKey, day) -- day must be a string like "11/16/14", as month + day + year
-    return 0
+function Manager.addGraspWordsNum(addNum)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
+
+    local num = 0
+    local oldStudyNum = nil
+    local oldGraspNum = nil
+    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
+        num = num + 1
+        oldStudyNum = row.studyNum
+        oldGraspNum = row.graspNum
+    end
+
+    if num == 0 then
+        local studyNum = 0
+        local graspNum = addNum
+        local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local newGraspNum = oldGraspNum + addNum
+        local query = "UPDATE DataDailyStudyInfo SET graspNum = "..newGraspNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
+        Manager.database:exec(query)
+    end
 end
+
+function Manager.getStudyWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    
+    local studyNum = 0
+    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
+        studyNum = row.studyNum
+    end
+    
+    return studyNum
+end
+
+function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local graspNum = 0
+    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
+        graspNum = row.graspNum
+    end
+
+    return graspNum
+end
+
+function Manager.getTotalStudyWordsNum()
+    return Manager.getCurrentIndex() - 1
+end
+
+function Manager.getTotalGraspWordsNum()
+    local totalStudyWordsNum = Manager.getTotalStudyWordsNum()
+    local wrongWordBufferNum = Manager.getWrongWordBufferNum()
+    local bossWordNum = Manager.getBossWordNum()
+    return totalStudyWordsNum - wrongWordBufferNum - bossWordNum
+end
+
 
 function Manager.getStudyWords(bookKey)
     return {}
@@ -459,6 +566,18 @@ function Manager.printWrongWordBuffer()
     print("</wrongWordBuffer>")
 end
 
+function Manager.getWrongWordBufferNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local wrongWordBufferNum = 0
+    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        wrongWordBufferNum = wrongWordBufferNum + row.wordNum
+    end
+    
+    return wrongWordBufferNum
+end
+
 function Manager.addWrongWordBuffer(wrongWord)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
@@ -531,6 +650,18 @@ function Manager.addBossWord(bossWordList)
     Manager.database:exec(query)
 end
 
+function Manager.getBossWordNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local bossWordNum = 0
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+        bossWordNum = bossWordNum + MAXWRONGWORDCOUNT
+    end
+
+    return bossWordNum
+end
+
 function Manager.getBossWord()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
@@ -541,12 +672,12 @@ function Manager.getBossWord()
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate LIMIT 0, 1 ;") do
         local lastUpdate = tostring(row.lastUpdate)
         local lastUpdateDay = os.date("%x", lastUpdate)
-        if lastUpdateDay ~= today then
+--        if lastUpdateDay ~= today then
             candidate           = {}
             candidate.bossID    = row.bossID
             candidate.typeIndex = row.typeIndex
             candidate.wordList  = row.wordList
-        end
+--        end
     end
     
     return candidate
@@ -563,6 +694,8 @@ function Manager.updateBossWord(bossID)
     end
     
     if typeIndex + 1 == MAXTYPEINDEX then
+        Manager.addGraspWordsNum(MAXWRONGWORDCOUNT)
+        
         local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
         Manager.database:exec(query)
     else
@@ -570,6 +703,9 @@ function Manager.updateBossWord(bossID)
         Manager.database:exec(query)
     end
 end
+
+
+
 
 ---- UserDefault -----------------------------------------------------------
 

@@ -1,4 +1,3 @@
-
 local NewReviewBossFailPopup = class ("NewReviewBossFailPopup",function ()
     return cc.Layer:create()
 end)
@@ -50,6 +49,18 @@ function NewReviewBossFailPopup.create()
         back:addChild(reward)  
     end
     
+    local button_goon_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
+            s_SCENE:removeAllPopups()
+            s_CorePlayManager.initNewReviewBossLayer()
+            s_CorePlayManager.enterReviewBossMainLayer()
+        end
+    end
+    
+    
     local girl = sp.SkeletonAnimation:create("spine/bb_unhappy_public.json","spine/bb_unhappy_public.atlas",1)
     girl:addAnimation(0, 'animation', true)
     girl:setPosition(back:getContentSize().width *0.33,back:getContentSize().height * 0.1)
@@ -59,7 +70,7 @@ function NewReviewBossFailPopup.create()
     button_goon:setPosition(back:getContentSize().width * 0.2,back:getContentSize().height * 0.2)
     button_goon:setTitleText("重玩")
     button_goon:setTitleFontSize(30)
---    button_goon:addTouchEventListener(button_goon_clicked)
+    button_goon:addTouchEventListener(button_goon_clicked)
     back:addChild(button_goon)
 
     
