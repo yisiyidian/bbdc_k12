@@ -261,6 +261,10 @@ function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
     s_SERVER.search('classes/_User?where={"username":"' .. username .. '"}', onSucceed, onFailed)
 end
 
+function UserBaseServer.searchUserByNickName(nickName, onSucceed, onFailed)
+    s_SERVER.search('classes/_User?where={"nickName":"' .. nickName .. '"}', onSucceed, onFailed)
+end
+
 function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
     s_SERVER.searchCount('_User', '{"username":"' .. username .. '"}', onSucceed, onFailed)
 end
