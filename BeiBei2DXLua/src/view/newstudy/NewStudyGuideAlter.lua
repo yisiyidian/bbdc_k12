@@ -34,6 +34,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     
     local box_tag = 0
     local box = nil
+    local box_right = nil
 
     local back = cc.Sprite:create(backImageName)
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
@@ -76,7 +77,12 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         box = cc.Sprite:create("image/newstudy/guide_box.png")
         box:setPosition(maxWidth/2, 160)
         back:addChild(box)
-    
+        
+        box_right = cc.Sprite:create("image/newstudy/guide_right.png")
+        box_right:setPosition(maxWidth/2, 160)
+        box_right:setVisible(false)
+        back:addChild(box_right)
+        
         local label_box = cc.Label:createWithSystemFont("不再出现此提示","",24)
         label_box:setAnchorPoint(0, 0.5)
         label_box:setColor(cc.c4b(0,0,0,255))
@@ -110,14 +116,17 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     local onTouchBegan = function(touch, event)
         if box ~= nil then
             local location = box:convertToNodeSpace(touch:getLocation())
-            print("touch location: "..location.x.." "..location.y)
---            if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
---                return false
---            end
+            if cc.rectContainsPoint({x=0,y=0,width=box:getBoundingBox().width,height=box:getBoundingBox().height}, location) then
+                if box_tag == 0 then
+                    box_tag = 1
+                    box_right:setVisible(true)
+                else
+                    box_tag = 0
+                    box_right:setVisible(false)
+                end
+            end
         end
         
-        
-        print("touch began on block layer")
         return true
     end
 

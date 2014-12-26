@@ -301,13 +301,15 @@ function HomeLayer.create()
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
-            AnalyticsEnterLevelLayer()
+--            AnalyticsEnterLevelLayer()
+--            
+--            showProgressHUD()
+--            -- button sound
+--            playSound(s_sound_buttonEffect)  
+--            s_CorePlayManager.enterLevelLayer()  
+--            hideProgressHUD()
             
-            showProgressHUD()
-            -- button sound
-            playSound(s_sound_buttonEffect)  
-            s_CorePlayManager.enterLevelLayer()  
-            hideProgressHUD()
+            s_CorePlayManager.initTotalPlay()
         end
     end
     local ACCUMULATING_WORD = 1
