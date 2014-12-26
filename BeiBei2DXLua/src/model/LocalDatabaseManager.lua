@@ -683,6 +683,38 @@ function Manager.getBossWord()
     return candidate
 end
 
+function Manager.getTodayTotalBossNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+        num = num + 1
+    end
+
+    return num
+end
+
+function Manager.getTodayRemainBossNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+        local lastUpdate = tostring(row.lastUpdate)
+        local lastUpdateDay = os.date("%x", lastUpdate)
+        if lastUpdateDay ~= today then
+            num = num + 1
+        end
+    end
+
+    return num
+end
+
 function Manager.updateBossWord(bossID)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey

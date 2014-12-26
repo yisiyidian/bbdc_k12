@@ -146,14 +146,12 @@ public class AppActivity extends Cocos2dxActivity {
 			ArrayList<Integer> networkTypes = new ArrayList<Integer>();
 			networkTypes.add(ConnectivityManager.TYPE_WIFI);
 			try {
-				networkTypes.add(ConnectivityManager.class.getDeclaredField(
-						"TYPE_ETHERNET").getInt(null));
+				networkTypes.add(ConnectivityManager.class.getDeclaredField("TYPE_ETHERNET").getInt(null));
 			} catch (NoSuchFieldException nsfe) {
 			} catch (IllegalAccessException iae) {
 				throw new RuntimeException(iae);
 			}
-			if (networkInfo != null
-					&& networkTypes.contains(networkInfo.getType())) {
+			if (networkInfo != null && networkTypes.contains(networkInfo.getType())) {
 				return true;
 			}
 		}
