@@ -340,12 +340,12 @@ s_UserBaseServer.getLevelsOfCurrentUser(
     end
 )
 ]]--
-local function getLevels(userId, bookKey, onSucceed, onFailed)
-    s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
-end
-function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
-    getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
-end
+-- local function getLevels(userId, bookKey, onSucceed, onFailed)
+--     s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
+-- end
+-- function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
+--     getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
+-- end
 
 ----
 
