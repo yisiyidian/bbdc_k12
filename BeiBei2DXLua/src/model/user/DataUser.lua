@@ -1,6 +1,7 @@
 local DataClassBase = require('model/user/DataClassBase')
 local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 local DataLogIn = require('model/user/DataLogIn')
+local DataBookProgress = require('model.user.DataBookProgress')
 
 USER_TYPE_MANUAL = 0
 USER_TYPE_GUEST  = 1

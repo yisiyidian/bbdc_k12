@@ -394,7 +394,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
                 saveuser()
             end,
             function(api, code, message, description)
-                onErrorHappend(description)
+                onErrorHappend(message)
                 hideProgressHUD()
             end)
     else
@@ -404,7 +404,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
                 saveuser()
             end, 
             function(api, code, message, description)
-                onErrorHappend(description)
+                onErrorHappend(message)
                 hideProgressHUD()
             end
         )
