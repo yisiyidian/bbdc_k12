@@ -28,11 +28,20 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
-    main.cancel = function()end
-    main.sure = function()end
-    main.know = function()end
+    main.cancel = function()
+        main:removeFromParent()
+    end
     
-    local box_tag = 0
+    main.sure = function()
+        
+    end
+    
+    main.know = function()
+        main:removeFromParent()
+    end
+    
+    main.box_tag = 0
+    
     local box = nil
     local box_right = nil
 
@@ -117,11 +126,11 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         if box ~= nil then
             local location = box:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=box:getBoundingBox().width,height=box:getBoundingBox().height}, location) then
-                if box_tag == 0 then
-                    box_tag = 1
+                if main.box_tag == 0 then
+                    main.box_tag = 1
                     box_right:setVisible(true)
                 else
-                    box_tag = 0
+                    main.box_tag = 0
                     box_right:setVisible(false)
                 end
             end

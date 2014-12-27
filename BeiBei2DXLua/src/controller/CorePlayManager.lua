@@ -46,7 +46,7 @@ function CorePlayManager.initTotalPlay()
 end
 
 function CorePlayManager.initNewStudyLayer()
-    CorePlayManager.maxWrongWordCount = 3
+    CorePlayManager.maxWrongWordCount = s_max_wrong_num_everyday
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex = s_DATABASE_MGR.getCurrentIndex()
     print("currentBookWordIndex is "..CorePlayManager.currentIndex)

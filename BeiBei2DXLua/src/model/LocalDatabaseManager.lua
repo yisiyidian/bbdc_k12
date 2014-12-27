@@ -1,5 +1,5 @@
 local RBWORDNUM = 10
-local MAXWRONGWORDCOUNT = 3
+local MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
 local MAXTYPEINDEX = 4
 
 require("common.global")
@@ -173,6 +173,15 @@ function Manager.initTables()
             dayString TEXT,
             studyNum INTEGER,
             graspNum INTEGER,
+            lastUpdate INTEGER
+        );
+    ]]
+    
+    -- CREATE table New Study Configuration
+    Manager.database:exec[[
+        create table if not exists DataStudyConfiguration(
+            userId TEXT,
+            isAlterOn INTEGER,
             lastUpdate INTEGER
         );
     ]]
@@ -748,6 +757,45 @@ function Manager.updateBossWord(bossID)
     end
 end
 
+
+-- newstudy configuration
+---- CREATE table New Study Configuration
+--Manager.database:exec[[
+--        create table if not exists DataStudyConfiguration(
+--            userId TEXT,
+--            isAlterOn INTEGER,
+--            lastUpdate INTEGER
+--        );
+--    ]]
+
+function Manager.getIsAlterOn()
+    local userId = s_CURRENT_USER.objectId
+
+    local isAlterOn = 1 -- default value is 1 which means on
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        isAlterOn = row.isAlterOn
+    end
+    
+    return isAlterOn
+end
+
+function Manager.setIsAlterOn(isAlterOn)
+    local userId = s_CURRENT_USER.objectId
+    local time = os.time()
+    
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        num = num + 1
+    end
+    
+    if num == 0 then
+        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataStudyConfiguration SET isAlterOn = "..isAlterOn..", lastUpdate = "..time.." WHERE userId = '"..userId.."' ;"    
+        Manager.database:exec(query)
+    end
+end
 
 
 
