@@ -446,7 +446,45 @@ function Manager.getTotalGraspWordsNum()
 end
 
 
-function Manager.getStudyWords(bookKey)
+function Manager.getSummaryBossWordCandidate()
+    local wordPool = Manager.getStudyWords()
+    
+    if #wordPool < 9 then
+        return wordPool
+    end
+    
+    math.randomseed(os.time())
+    
+    local randomIndexPool = {}
+    while true do
+        if #randomPool >= 9 then
+            break
+        end
+        
+        local randomIndex = math.random(1, #wordPool)
+        local isIn = false
+        for i = 1, #randomIndexPool do
+            if randomIndexPool[i] == randomIndex then
+                isIn = true
+                break
+            end
+        end
+        
+        if not isIn then
+            table.insert(randomIndexPool, randomIndex)
+        end
+    end
+    
+    local randomWordPool = {}
+    for i = 1, #randomIndexPool do
+        table.insert(randomWordPool, wordPool[randomIndexPool[i]])
+    end
+    
+    return randomWordPool
+end
+
+
+function Manager.getStudyWords()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local wordList = s_BookWord[bookKey]
@@ -461,7 +499,7 @@ function Manager.getStudyWords(bookKey)
     return wordPool
 end
 
-function Manager.getGraspWords(bookKey)
+function Manager.getGraspWords()
     -- TODO
 
     local userId = s_CURRENT_USER.objectId
@@ -705,12 +743,12 @@ function Manager.getBossWord()
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate LIMIT 0, 1 ;") do
         local lastUpdate = tostring(row.lastUpdate)
         local lastUpdateDay = os.date("%x", lastUpdate)
---        if lastUpdateDay ~= today then
+        if lastUpdateDay ~= today then
             candidate           = {}
             candidate.bossID    = row.bossID
             candidate.typeIndex = row.typeIndex
             candidate.wordList  = row.wordList
---        end
+        end
     end
     
     return candidate
