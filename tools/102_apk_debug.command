@@ -5,3 +5,5 @@ cocos run \
     -p android \
     -j 4 \
     -ap 17
+
+# /BeiBei2DXLua/runtime/android/BeiBei2DXLua-debug.apk

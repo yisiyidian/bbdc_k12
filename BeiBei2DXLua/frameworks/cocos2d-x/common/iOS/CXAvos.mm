@@ -84,8 +84,9 @@ static CXTencentSDKCallObserver* cxTencentSDKCallObserver = nil;
 }
 
 - (void)loginFailed {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"结果" message:@"登录失败" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil];
-    [alertView show];
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"结果" message:@"登录失败" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil];
+//    [alertView show];
+    CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(nullptr, nullptr, nullptr, "登录失败", 0);
 }
 
 - (void)getUserInfo:(NSNotification*)info {
