@@ -10,6 +10,7 @@ end)
 function DownloadLayer.create(bookKey)
     local bookImageName = "image/download/big_"..string.upper(bookKey)..".png"
     local total_size = s_DATA_MANAGER.books[bookKey].music
+    local download_state = 0 -- 0 for no download, 1 for downloading and 2 for downloaded
 
     local layer = DownloadLayer.new()
 
@@ -45,7 +46,13 @@ function DownloadLayer.create(bookKey)
     
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.enterBookLayer()
+            if download_state == 1 then
+                local downloadAlter = DownloadAlter.create("正在下载，取消下载方可返回上一个界面。")
+                downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(downloadAlter)
+            else
+                s_CorePlayManager.enterBookLayer()
+            end
         end
     end
     
@@ -90,8 +97,7 @@ function DownloadLayer.create(bookKey)
     button_choose:addTouchEventListener(button_choose_clicked)
     backColor:addChild(button_choose)
     
-    
-    local download_state = 0 -- 0 for no download, 1 for downloading and 2 for downloaded
+   
     local progress
     local progress_clicked
     local button_title
