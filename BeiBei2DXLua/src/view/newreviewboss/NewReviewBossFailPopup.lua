@@ -5,8 +5,8 @@ end)
 function NewReviewBossFailPopup.create()
     local layer = NewReviewBossFailPopup.new()
     
-    local currentchapter
-    local totalchapter
+    local totol_boss_number = s_DATABASE_MGR:getTodayTotalBossNum()
+    local current_boss_number = totol_boss_number - s_DATABASE_MGR:getTodayRemainBossNum() + 1
     
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
@@ -25,7 +25,7 @@ function NewReviewBossFailPopup.create()
     popup_title:setAnchorPoint(0.5,0.5)
     back:addChild(popup_title)
     
-    local popup_progress = cc.Label:createWithSystemFont("小结（4/4）","",32)
+    local popup_progress = cc.Label:createWithSystemFont("小结（"..current_boss_number.."/"..totol_boss_number..")","",32)
     popup_progress:setPosition(back:getContentSize().width / 2,back:getContentSize().height *0.7)
     popup_progress:setColor(cc.c4b(39,127,182,255))
     popup_progress:ignoreAnchorPointForPosition(false)
@@ -40,7 +40,7 @@ function NewReviewBossFailPopup.create()
     back:addChild(popup_text)
     
     for i=1,3 do
-        local reward = cc.Sprite:create("image/newstudy/bean.png")
+        local reward = cc.Sprite:create("image/newreviewboss/beibeidou1.png")
         reward:setPosition(back:getContentSize().width / 2 - reward:getContentSize().width * 2 * (i - 2),
             back:getContentSize().height / 2 )
         reward:ignoreAnchorPointForPosition(false)
@@ -55,7 +55,8 @@ function NewReviewBossFailPopup.create()
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
-            s_CorePlayManager.initNewReviewBossLayer()
+            local candidate = s_CorePlayManager.getReviewBossCandidate()
+            s_CorePlayManager.initNewReviewBossLayer(candidate)
             s_CorePlayManager.enterReviewBossMainLayer()
         end
     end

@@ -76,8 +76,8 @@ function NewStudySuccessLayer.create()
     button_go:setTitleColor(cc.c4b(255,255,255,255))
     button_go:setTitleFontSize(32)
     button_go:addTouchEventListener(button_go_click)
-    backColor:addChild(button_go) 
-
+    backColor:addChild(button_go)
+    
     return layer
 end
 

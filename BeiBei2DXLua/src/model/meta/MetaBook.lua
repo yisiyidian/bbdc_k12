@@ -12,7 +12,8 @@ function MetaBook.create(key,
                         figureName,
                         progressColor_r,
                         progressColor_g,
-                        progressColor_b)
+                        progressColor_b,
+                        music)
 
     local obj = MetaBook.new()
 
@@ -26,6 +27,7 @@ function MetaBook.create(key,
     obj.progressColor_r = progressColor_r
     obj.progressColor_g = progressColor_r
     obj.progressColor_b = progressColor_g
+    obj.music = music
     
     return obj
 end

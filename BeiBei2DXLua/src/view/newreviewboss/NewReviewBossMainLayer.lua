@@ -113,9 +113,14 @@ function NewReviewBossMainLayer.create()
             s_DESIGN_HEIGHT * 0.95)
         reward:ignoreAnchorPointForPosition(false)
         reward:setAnchorPoint(0.5,0.5)
-        reward:setTag(i)
+        reward:setTag(i)       
+        local action1 = cc.ScaleTo:create(2,1)
         layer:addChild(reward)  
+        reward:runAction(action1)
+        reward:setScale(0)
     end
+    
+    
 
     local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"yellow")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
@@ -229,17 +234,39 @@ function NewReviewBossMainLayer.create()
             tmp[j] = sprite
         end
         table.insert(sprite_array, tmp)
+        if type % 2 == 0 then
+            answer = wordToBeTested[rbCurrentWordIndex]
+        else
+            answer = s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall
+        end
         for i = 1, #wordToBeTested do
             for j = 1, 3 do
                 local sprite = sprite_array[i][j]
                 if i <= rbCurrentWordIndex-1 then
-
-                elseif i == rbCurrentWordIndex then
                     local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,-260))
+                    local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,260))
                     local action2 = cc.ScaleTo:create(0.4, 0)
                     local action3 = cc.Spawn:create(action1, action2)
                     sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.visible(false)
+                elseif i == rbCurrentWordIndex then
+                
+                    if answer == sprite_array[i][j].character then
+                        local action0 = cc.DelayTime:create(0.1)
+                        local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,260))
+                        local action2 = cc.ScaleTo:create(0.4, 0.8)
+                        local action3 = cc.Spawn:create(action1, action2)
+                        sprite:runAction(cc.Sequence:create(action0, action3))
+                        sprite.right()
+                        sprite.visible(false)
+                    else
+                        local action0 = cc.DelayTime:create(0.1)
+                        local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,-260))
+                        local action2 = cc.ScaleTo:create(0.4, 0)
+                        local action3 = cc.Spawn:create(action1, action2)
+                        sprite:runAction(cc.Sequence:create(action0, action3))
+                    end
+
                 elseif i == rbCurrentWordIndex + 1 then
                     local action0 = cc.DelayTime:create(0.1)
                     local action1 = cc.MoveBy:create(0.4, cc.p(40*j-80,260))
@@ -354,6 +381,16 @@ function NewReviewBossMainLayer.create()
             end
             if answer == sprite_array[logic_location.x][logic_location.y].character then
                 sprite_array[logic_location.x][logic_location.y].right()
+                
+                local x = rbProgressBar:getPos()
+                local true_mark = cc.Sprite:create("image/testscene/testscene_right_v.png")
+                true_mark:setPosition(sprite_array[logic_location.x][logic_location.y]:getContentSize().width/2,
+                    sprite_array[logic_location.x][logic_location.y]:getContentSize().height/2)
+                sprite_array[logic_location.x][logic_location.y]:addChild(true_mark) 
+                local action1 = cc.MoveTo:create(0.1,cc.p(x - 25 ,500))
+                local action2 = cc.ScaleTo:create(0.1,0)
+                true_mark:runAction(cc.Sequence:create(action1, action2))
+                
             else
                 sprite_array[logic_location.x][logic_location.y].wrong()             
                 for j = 1, 3 do
@@ -361,14 +398,23 @@ function NewReviewBossMainLayer.create()
                         sprite_array[logic_location.x][j].right()
                 	end
                 end
-                layer:removeChildByTag(s_CorePlayManager.currentReward)
+                
+                local sprite = layer:getChildByTag(s_CorePlayManager.currentReward)
+                local reward_miss = sp.SkeletonAnimation:create('spine/fuxiboss_bea_dispare.json', 'spine/fuxiboss_bea_dispare.atlas',1)
+                reward_miss:setPosition(sprite:getContentSize().width * 0.5, -10)
+                reward_miss:addAnimation(0, 'oudupus3', false)
+                sprite:addChild(reward_miss, 5)             
+                s_SCENE:callFuncWithDelay(0.2,function()
+                layer:removeChildByTag(s_CorePlayManager.currentReward + 1)
+                end)                   
                 s_CorePlayManager.currentReward = s_CorePlayManager.currentReward - 1             
                 if s_CorePlayManager.currentReward <= 0 then
                     local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
                     local newReviewBossLayerChange = NewReviewBossLayerChange.create()
                     s_SCENE:popup(newReviewBossLayerChange)
                 end
-                wrongWordFunction()
+                wrongWordFunction()  
+                return true              
             end
 
             if rbCurrentWordIndex < #wordToBeTested then
@@ -377,9 +423,28 @@ function NewReviewBossMainLayer.create()
                     rightWordFuntion()
                     rbProgressBar.addOne()
                 end
-            else
+            else            
                 rbProgressBar.addOne()
+                
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            
                 s_SCENE:callFuncWithDelay(0.5,function()
+                    local action1 = cc.MoveBy:create(0.5,cc.p(0,200))
+                    rbProgressBar:runAction(action1)   
+                    for i = 1, #wordToBeTested do
+                        for j = 1, 3 do
+                            local sprite = sprite_array[i][j]
+                            local action1 = cc.ScaleTo:create(0.5, 0)
+                            sprite:runAction(action1)
+                        end
+                    end
+                end)
+                
+                local action1 = cc.DelayTime:create(1)
+                local action2 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
+                layer:runAction(cc.Sequence:create(action1, action2))
+
+                s_SCENE:callFuncWithDelay(1,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
                 s_CorePlayManager.enterReviewBossSummaryLayer()
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()

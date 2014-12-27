@@ -173,7 +173,8 @@ function DataManager.loadBooks()
                                     data['figureName'],
                                     data['progressColor_r'],
                                     data['progressColor_g'],
-                                    data['progressColor_b'])
+                                    data['progressColor_b'],
+                                    data['music'])
         DataManager.books[data['key']] = book
     end
 end
