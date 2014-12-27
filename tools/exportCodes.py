@@ -74,7 +74,7 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget):
             print getJsonObjToStr(c)
 
             am = open(androidManifest).read()
-            if str(c['isQQLogInAvailable']) == 'true':
+            if len( str(c['QQAppId']) ) > 0:
                 am = am.replace('1103783596', str(c['QQAppId']))
             else:
                 am = am.replace('<!-- tencent start -->', '<!-- tencent start ')
