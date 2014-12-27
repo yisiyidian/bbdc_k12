@@ -42,7 +42,7 @@ function DynamicUpdate.updateCompleted()
     end
 end
 
-function DynamicUpdate.beginUpdate(updateInfo)
+function DynamicUpdate.beginLoginUpdate(updateInfo)
     
     local am
     if RELEASE_APP==DEBUG_FOR_TEST or RELEASE_APP==RELEASE_FOR_TEST   then
@@ -61,24 +61,23 @@ function DynamicUpdate.beginUpdate(updateInfo)
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
                 
                 updateInfo:setString("No local manifest file found, skip assets update.")
+                DynamicUpdate.updateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
                                 
-                local percent = event:getPercent()
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
                     updateInfo:setString("Version file updating.")
                 elseif assetId==cc.AssetsManagerExStatic.MANIFEST_ID then
                     updateInfo:setString("Manifest updating")   
-                    print("The project manifest file: "..percent.."%")   
                 else
-                    percent = event:getPercentByFile()            
+                    percent = string.format("%.2f",event:getPercent())
                     updateInfo:setString("Updating: "..percent.."%")   
-                    print("Updating: "..percent.."%")   
                 end                
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_DOWNLOAD_MANIFEST or 
                 eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_PARSE_MANIFEST then
                 
                 updateInfo:setString("Fail to download manifest file, update skipped.")                
                 print("Fail to download manifest file, update skipped.")                
+                DynamicUpdate.updateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
             
                 updateInfo:setString("Already up to date")  
@@ -92,6 +91,7 @@ function DynamicUpdate.beginUpdate(updateInfo)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
             
                 updateInfo:setString("Asset ", event:getAssetId(), ", ", event:getMessage())                                                
+                DynamicUpdate.updateCompleted()                              
             end
         end
 
