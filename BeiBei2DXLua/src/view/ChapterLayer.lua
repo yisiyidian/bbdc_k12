@@ -53,8 +53,16 @@ function ChapterLayer:ctor()
     self:addChapterIntoListView('chapter1')
 end
 
+function ChapterLayer:addPlayer()
+    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
+    self.player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
+    player:setScale(0.4)
+    currentChapterLayer:addChild(player, 5)
+end
+
 function ChapterLayer:addChapterIntoListView(chapterKey)
-    print('chapterKey:'..chapterKey)
+--    print('chapterKey:'..chapterKey)
     if chapterKey == 'chapter0' then    
         local ChapterLayer0 = require('view.level.ChapterLayer0')
         self.chapterDic['chapter0'] = ChapterLayer0.create("start")

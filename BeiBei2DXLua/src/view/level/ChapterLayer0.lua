@@ -38,7 +38,6 @@ end
 
 function ChapterLayer0:loadLevelPosition(startLevelKey)
     self.startLevelKey = startLevelKey
-    self.levelPos = {}
     for i= 1, 10 do
         local levelIndex = string.sub(self.startLevelKey,6) + (i-1)
         self.levelPos[levelIndex] = Chapter0ResTable['island'..(i-1)..'Table'][3]
