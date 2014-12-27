@@ -52,7 +52,7 @@ function BookLayer.create()
     backButton:setTouchEnabled(true)
     backButton:ignoreAnchorPointForPosition(false)
     backButton:setAnchorPoint(0.5 , 0.5)
-    backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 250, s_DESIGN_HEIGHT - 100)
+    backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 238, 1073)
     backButton:addTouchEventListener(click_back)
     backColor:addChild(backButton)
     
@@ -65,7 +65,7 @@ function BookLayer.create()
     end
     
     local hint = cc.Label:createWithSystemFont("书山有路勤为径，开启哪本看水平","",24)
-    hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT-100)
+    hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,1073)
     hint:setColor(cc.c4b(66,66,62,255))
     backColor:addChild(hint) 
     local name_array = {}
@@ -156,7 +156,7 @@ function BookLayer.create()
         if i == 1 then
             if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                 local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, s_DESIGN_HEIGHT-100)
+                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, 1073)
                 backColor:addChild(tutorial_text,120)
                 --tutorial_text:setColor(cc.c3b(255,255,255))
                 
