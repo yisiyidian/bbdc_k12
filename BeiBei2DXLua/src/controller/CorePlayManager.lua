@@ -490,8 +490,9 @@ function CorePlayManager.enterHomeLayer()
 end
 
 function CorePlayManager.enterLevelLayer()
-    local levelLayer = LevelLayer.create()
-    s_SCENE:replaceGameLayer(levelLayer)
+    CorePlayManager.enterHomeLayer()
+--    local levelLayer = LevelLayer.create()
+--    s_SCENE:replaceGameLayer(levelLayer)
 end
 
 function CorePlayManager.enterBookLayer()

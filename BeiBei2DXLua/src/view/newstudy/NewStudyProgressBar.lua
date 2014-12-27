@@ -60,7 +60,7 @@ function ProgressBar.create(totalIndex, currentIndex, color)
             return true
         end
 
-        return true
+        return false
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
