@@ -383,12 +383,14 @@ function NewReviewBossMainLayer.create()
                 sprite_array[logic_location.x][logic_location.y].right()
                 
                 local x = rbProgressBar:getPos()
+                
+                local position_X,position_Y = sprite_array[logic_location.x][logic_location.y]:getPosition()
                 local true_mark = cc.Sprite:create("image/testscene/testscene_right_v.png")
-                true_mark:setPosition(sprite_array[logic_location.x][logic_location.y]:getContentSize().width/2,
-                    sprite_array[logic_location.x][logic_location.y]:getContentSize().height/2)
-                sprite_array[logic_location.x][logic_location.y]:addChild(true_mark) 
-                local action1 = cc.MoveTo:create(0.1,cc.p(x - 25 ,500))
-                local action2 = cc.ScaleTo:create(0.1,0)
+                true_mark:setPosition(position_X,position_Y)
+                layer:addChild(true_mark) 
+                
+                local action1 = cc.MoveTo:create(0.5,cc.p(x ,990))
+                local action2 = cc.ScaleTo:create(0.5,0)
                 true_mark:runAction(cc.Sequence:create(action1, action2))
                 
             else

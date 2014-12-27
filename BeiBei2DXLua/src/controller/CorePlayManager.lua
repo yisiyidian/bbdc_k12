@@ -42,6 +42,7 @@ function CorePlayManager.initTotalPlay()
     if candidate == nil then
         CorePlayManager.initNewStudyLayer()
     else
+        CorePlayManager.initReviewRewardAndTotalWord()
         CorePlayManager.initNewReviewBossLayer(candidate)
     end
 end
@@ -273,6 +274,16 @@ function CorePlayManager.initNewReviewBossLayer(candidate)
     end
     
     CorePlayManager.enterReviewBossMainLayer()
+end
+
+function CorePlayManager.initReviewRewardAndTotalWord()
+    CorePlayManager.reward = 0
+    CorePlayManager.totalWord = 0
+end
+
+function CorePlayManager.updateReviewRewardAndTotalWord()
+    CorePlayManager.reward = CorePlayManager.reward + CorePlayManager.currentReward 
+    CorePlayManager.totalWord = CorePlayManager.totalWord + CorePlayManager.maxReviewWordCount
 end
 
 function CorePlayManager.updateCurrentReviewIndex()
