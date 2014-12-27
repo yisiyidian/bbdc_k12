@@ -15,6 +15,7 @@ local IntroLayer             = require("view.login.IntroLayer")
 local HomeLayer              = require("view.home.HomeLayer")
 local LevelLayer             = require("view.LevelLayer")
 local BookLayer              = require("view.book.BookLayer")
+local DownloadLayer          = require("view.book.DownloadLayer")
 local WordListLayer          = require("view.wordlist.WordMenu")
 local FriendLayer            = require("view.friend.FriendLayer") 
 
@@ -46,7 +47,7 @@ function CorePlayManager.initTotalPlay()
 end
 
 function CorePlayManager.initNewStudyLayer()
-    CorePlayManager.maxWrongWordCount = 3
+    CorePlayManager.maxWrongWordCount = s_max_wrong_num_everyday
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex = s_DATABASE_MGR.getCurrentIndex()
     print("currentBookWordIndex is "..CorePlayManager.currentIndex)
@@ -489,13 +490,19 @@ function CorePlayManager.enterHomeLayer()
 end
 
 function CorePlayManager.enterLevelLayer()
-    local levelLayer = LevelLayer.create()
-    s_SCENE:replaceGameLayer(levelLayer)
+    CorePlayManager.enterHomeLayer()
+--    local levelLayer = LevelLayer.create()
+--    s_SCENE:replaceGameLayer(levelLayer)
 end
 
 function CorePlayManager.enterBookLayer()
     local bookLayer = BookLayer.create()
     s_SCENE:replaceGameLayer(bookLayer)
+end
+
+function CorePlayManager.enterDownloadLayer(bookKey)
+    local downloadLayer = DownloadLayer.create(bookKey)
+    s_SCENE:replaceGameLayer(downloadLayer)
 end
 
 function CorePlayManager.enterWordListLayer()

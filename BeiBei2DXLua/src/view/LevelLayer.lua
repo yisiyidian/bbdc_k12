@@ -27,7 +27,6 @@ function LevelLayer.create()
 end
 
 function LevelLayer:levelStateManager()
-    --print('s_SCENE.state0:'..s_SCENE.levelLayerState..',currentChapter:'..s_CURRENT_USER.currentChapterKey)
     -- set levelState if relogin after logout
     if s_SCENE.levelLayerState == s_normal_level_state then
         local currentLevelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)

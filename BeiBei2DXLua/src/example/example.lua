@@ -8,9 +8,11 @@ local ziaoangTest       = require("view.ZiaoangTest")
 local ScrollViewTest    = require("view.ScrollviewTest")
 
 function test()
-    local test = ziaoangTest.create()
-    s_SCENE:replaceGameLayer(test)
-    
+    --local test = ziaoangTest.create()
+    --s_SCENE:replaceGameLayer(test)
+    local testLayer = require('view.level.ChapterLayerBase')
+    local chapterLayer = testLayer.create('chapter0','level0')
+    s_SCENE.replaceGameLayer(chapterLayer)
 
 --    s_UserBaseServer.logIn('tester112', 'qwerty', function (u, e, code) 
 --        s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(

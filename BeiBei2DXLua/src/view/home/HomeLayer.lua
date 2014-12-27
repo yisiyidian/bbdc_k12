@@ -301,13 +301,15 @@ function HomeLayer.create()
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
-            AnalyticsEnterLevelLayer()
+--            AnalyticsEnterLevelLayer()
+--            
+--            showProgressHUD()
+--            -- button sound
+--            playSound(s_sound_buttonEffect)  
+--            s_CorePlayManager.enterLevelLayer()  
+--            hideProgressHUD()
             
-            showProgressHUD()
-            -- button sound
-            playSound(s_sound_buttonEffect)  
-            s_CorePlayManager.enterLevelLayer()  
-            hideProgressHUD()
+            s_CorePlayManager.initTotalPlay()
         end
     end
     local ACCUMULATING_WORD = 1
@@ -441,7 +443,7 @@ function HomeLayer.create()
 --    local logo_name = {"head","book","feedback","information","logout"}
 --    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-        username = s_CURRENT_USER.username
+        username = s_CURRENT_USER:getNameForDisplay()
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
     end
