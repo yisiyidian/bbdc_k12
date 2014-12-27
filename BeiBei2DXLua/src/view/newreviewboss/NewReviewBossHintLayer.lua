@@ -27,6 +27,7 @@ function NewReviewBossHintLayer.create()
     local layer = NewReviewBossHintLayer.new()
     
     local hint_button
+    local white_back
     local line_y
     
     local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
@@ -86,17 +87,17 @@ function NewReviewBossHintLayer.create()
     layer:addChild(back)      
     back:addAnimation(0, 'animation', true)
     
-    local onTouchBegan = function(touch, event)
-        playSound(s_sound_buttonEffect) 
-        return true
-    end
-
-    local onTouchEnded = function(touch, event)
-        local location = layer:convertToNodeSpace(touch:getLocation())
-        if cc.rectContainsPoint(backGround:getBoundingBox(), location) then
-           layer.close()
-        end
-    end
+--    local onTouchBegan = function(touch, event)
+--        playSound(s_sound_buttonEffect) 
+--        return true
+--    end
+--
+--    local onTouchEnded = function(touch, event)
+--        local location = layer:convertToNodeSpace(touch:getLocation())
+--        if cc.rectContainsPoint(backGround:getBoundingBox(), location) then
+--           layer.close()
+--        end
+--    end
 
     for i=1,s_CorePlayManager.currentReward do
         local reward = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
@@ -132,6 +133,8 @@ function NewReviewBossHintLayer.create()
         elseif eventType == ccui.TouchEventType.ended then
             local action1 = cc.MoveTo:create(0.2, cc.p(s_RIGHT_X ,s_DESIGN_HEIGHT * 0.81 ))
             hint_button:runAction(action1)
+            local action2 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.4))
+            white_back:runAction(action2)
             s_SCENE:callFuncWithDelay(0.3,function()
              layer.close()    
             end)
@@ -162,11 +165,15 @@ function NewReviewBossHintLayer.create()
     hint_arrow:setAnchorPoint(0.5,0.5)
     hint_button:addChild(hint_arrow)
     
-    local white_back = cc.Sprite:create("image/newreviewboss/backgroundreviewboss1tishi.png")
-    white_back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.4)
+    white_back = cc.Sprite:create("image/newreviewboss/backgroundreviewboss1tishi.png")
+    white_back:setPosition(s_DESIGN_WIDTH/2*2, s_DESIGN_HEIGHT * 0.4)
     white_back:ignoreAnchorPointForPosition(false)
     white_back:setAnchorPoint(0.5,0.5)
     layer:addChild(white_back)
+    
+    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.4))
+    local action2 = cc.EaseBackOut:create(action1)
+    white_back:runAction(action2)
     
     local meaning_table = split(wordMeaning,"|||")
     table.foreachi(meaning_table, function(i, v) 
@@ -211,11 +218,11 @@ function NewReviewBossHintLayer.create()
     white_back:addChild(richtext) 
     
     
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-    local eventDispatcher = layer:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backGround)
+--    local listener = cc.EventListenerTouchOneByOne:create()
+--    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+--    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+--    local eventDispatcher = layer:getEventDispatcher()
+--    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backGround)
     
     return layer
 end

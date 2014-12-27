@@ -42,6 +42,10 @@ function NewReviewBossProgressBar.create(totalIndex, currentIndex ,color)
     label_number:setPosition(index:getContentSize().width/2, index:getContentSize().height*0.4)
     index:addChild(label_number)
     
+    main.getPos = function ()
+        return left + gap* (currentIndex)
+    end
+    
     main.addOne = function()
         currentIndex = currentIndex + 1
         label_number:setString(currentIndex)
