@@ -315,8 +315,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
         startTouchLocation = location
         lastTouchLocation = location
 
- --      checkTouchLocation(location)
-        checkTouchLocation_opt(location)   
+        checkTouchLocation(location)
+--        checkTouchLocation_opt(location)   
         
         if onNode then
             startNode = main_mat[current_node_x][current_node_y]
@@ -367,8 +367,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
             return
         end
     
- --      checkTouchLocation(location)
-        checkTouchLocation_opt(location)  
+        checkTouchLocation(location)
+--        checkTouchLocation_opt(location)  
 
         if startAtNode then
             local x = location.x - startTouchLocation.x
