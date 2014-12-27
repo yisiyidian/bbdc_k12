@@ -47,7 +47,7 @@ function BookLayer.create()
         end
     end
     
-    local backButton = ccui.Button:create("image/book/back_choose_book_button.png","","")
+    local backButton = ccui.Button:create("image/book/choose_book_back.png","","")
     backButton:setScale9Enabled(true)
     backButton:setTouchEnabled(true)
     backButton:ignoreAnchorPointForPosition(false)
