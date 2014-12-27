@@ -42,7 +42,6 @@ function DownloadLayer.create(bookKey)
     
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            
             s_CorePlayManager.enterBookLayer()
         end
     end
@@ -81,7 +80,7 @@ function DownloadLayer.create(bookKey)
         end
     end
 
-    local button_choose = ccui.Button:create("image/download/button_onebutton_size.png","image/download/button_onebutton_size_clicked.png","")
+    local button_choose = ccui.Button:create("image/download/button_blue.png","image/download/button_blue_clicked.png","")
     button_choose:setTitleText("选择此书")
     button_choose:setTitleFontSize(40)
     button_choose:setPosition(bigWidth/2, 333)
@@ -89,19 +88,70 @@ function DownloadLayer.create(bookKey)
     backColor:addChild(button_choose)
     
     
+    local download_state = 0 -- 0 for no download, 1 for downloading and 2 for downloaded
+    local progress
+    local progress_clicked
+    local button_title
+    local title1 = "下载音频(12MB)"
+    local title2 = "取消下载(1.1M/12M)"
+    local title3 = "删除音频(12MB)"
+
     local button_download_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
+        if eventType == ccui.TouchEventType.began then
+            if download_state == 0 then
+
+            elseif download_state == 1 then
+                progress:setVisible(false)
+                progress_clicked:setVisible(true)
+            else
             
+            end
+        elseif eventType == ccui.TouchEventType.ended then
+            if download_state == 0 then
+                button_title:setString(title2)
+                download_state = 1
+                progress:setVisible(true)
+                progress_clicked:setVisible(false)
+            elseif download_state == 1 then
+                button_title:setString(title1)
+                download_state = 0
+                progress:setVisible(false)
+                progress_clicked:setVisible(false)
+            else
+                button_title:setString(title1)
+                progress:setVisible(false)
+                progress_clicked:setVisible(false)
+            end
         end
     end
 
-    local button_download = ccui.Button:create("image/download/button_onebutton_size.png","image/download/button_onebutton_size_clicked.png","")
-    button_download:setTitleText("下载音频(12MB)")
-    button_download:setTitleFontSize(40)
+    local button_download = ccui.Button:create("image/download/button_yellow.png","image/download/button_yellow_clicked.png","")
     button_download:setPosition(bigWidth/2, 222)
     button_download:addTouchEventListener(button_download_clicked)
     backColor:addChild(button_download)
-    
+
+    progress = cc.ProgressTimer:create(cc.Sprite:create("image/download/button_download.png"))
+    progress:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+    progress:setMidpoint(cc.p(0, 0))
+    progress:setBarChangeRate(cc.p(1, 0))
+    progress:setPosition(button_download:getPosition())
+    progress:setPercentage(30)
+    progress:setVisible(false)
+    backColor:addChild(progress)
+
+    progress_clicked = cc.ProgressTimer:create(cc.Sprite:create("image/download/button_download_clicked.png"))
+    progress_clicked:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+    progress_clicked:setMidpoint(cc.p(0, 0))
+    progress_clicked:setBarChangeRate(cc.p(1, 0))
+    progress_clicked:setPosition(button_download:getPosition())
+    progress_clicked:setPercentage(30)
+    progress_clicked:setVisible(false)
+    backColor:addChild(progress_clicked)
+
+    button_title = cc.Label:createWithSystemFont(title1,"",40)
+    button_title:setPosition(bigWidth/2, 222)
+    backColor:addChild(button_title)
+
     return layer
 end
 
