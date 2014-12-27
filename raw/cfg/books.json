@@ -10,7 +10,8 @@
               "figureName": "button_choose_book_college_entrance_examination.png",
               "progressColor_r": 127,
               "progressColor_g": 229,
-              "progressColor_b": 255
+              "progressColor_b": 255,
+              "music": "17M"
               },
               {
               "key": "cet4",
@@ -22,7 +23,8 @@
               "figureName": "button_choose_book_CET4.png",
               "progressColor_r": 179,
               "progressColor_g": 224,
-              "progressColor_b": 28
+              "progressColor_b": 28,
+              "music": "21M"
               },
               {
               "key": "cet6",
@@ -34,7 +36,8 @@
               "figureName": "button_choose_book_CET6.png",
               "progressColor_r": 77,
               "progressColor_g": 200,
-              "progressColor_b": 103
+              "progressColor_b": 103,
+              "music": "10M"
               },
               {
               "key": "ielts",
@@ -46,8 +49,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 195,
               "progressColor_g": 121,
-              "progressColor_b": 212
-              
+              "progressColor_b": 212,
+              "music": "11M"  
               },
               {
               "key": "toefl",
@@ -59,7 +62,8 @@
               "figureName": "button_choose_book_IELTS.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "23M"
               },
               {
               "key": "gmat",
@@ -71,7 +75,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "11M"
               },
               {
               "key": "gre",
@@ -83,7 +88,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "30M"
               },
               {
               "key": "gse",
@@ -95,7 +101,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "27M"
               },
               {
               "key": "middle",
@@ -107,7 +114,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "8.2M"
               },
               {
               "key": "primary",
@@ -119,7 +127,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "2.9M"
               },
               {
               "key": "pro4",
@@ -131,7 +140,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "15M"
               },
               {
               "key": "pro8",
@@ -143,7 +153,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "14M"
               },
               {
               "key": "sat",
@@ -155,7 +166,8 @@
               "figureName": "button_choose_book_TOEFL.png",
               "progressColor_r": 234,
               "progressColor_g": 125,
-              "progressColor_b": 157
+              "progressColor_b": 157,
+              "music": "19M"
               }
               ]
 }

@@ -204,6 +204,14 @@ local _TEXT_ID_USER        = 1
 local _TEXT_ID_CFG         = 2
 local _TEXT_ID_UPDATE_USER = 3
 
+local function onErrorHappend(e)
+    local function onError()
+        s_DATABASE_MGR.close()
+        s_START_FUNCTION()
+    end
+    s_TIPS_LAYER:showSmall(e, onError, onError)
+end
+
 function AppScene:startLoadingData(userStartType, username, password)
     local function onResponse(u, e, code)
 
@@ -213,11 +221,7 @@ function AppScene:startLoadingData(userStartType, username, password)
         end
 
         if e ~= nil then
-            local function onError()
-                s_DATABASE_MGR.close()
-                s_START_FUNCTION()
-            end
-            s_TIPS_LAYER:showSmall(e, onError, onError)
+            onErrorHappend(e)
             hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
             s_SCENE:gotoChooseBook()
@@ -375,11 +379,36 @@ function AppScene:saveSignUpAndLogInData(onSaved)
     
     s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
     s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
-    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end)
+    
+    local saveuser = function ()
+        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
+            function(api,result)
+            end,
+            function(api, code, message, description)
+            end)
+    end
+    if s_CURRENT_USER.bookProgressObjectId == '' then
+        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.bookProgress,
+            function(api,result)
+                s_CURRENT_USER.bookProgressObjectId = s_CURRENT_USER.bookProgress.objectId
+                saveuser()
+            end,
+            function(api, code, message, description)
+                onErrorHappend(message)
+                hideProgressHUD()
+            end)
+    else
+        s_UserBaseServer.getDataBookProgress(s_CURRENT_USER.bookProgressObjectId,
+            function(api,result)
+                s_CURRENT_USER:parseServerDataBookProgress(result, s_CURRENT_USER.bookProgress)
+                saveuser()
+            end, 
+            function(api, code, message, description)
+                onErrorHappend(message)
+                hideProgressHUD()
+            end
+        )
+    end
     
     local DataLogIn = require('model/user/DataLogIn')
     local function updateWeek(data, week)

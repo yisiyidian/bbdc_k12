@@ -5,7 +5,7 @@ local app_version_debug   = 160000
 local app_version_release = 160000
 
 -- All test code must in example.example
-local test_code = 0
+local test_code = 1
 
 -- *************************************
 
@@ -100,7 +100,7 @@ start = function ()
     s_DATA_MANAGER.loadText()
     
 -- *************************************
-if test_code == 0 then
+if test_code == 1 then
     local startApp = function ()
         if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
             local LoadingView = require("view.LoadingView")

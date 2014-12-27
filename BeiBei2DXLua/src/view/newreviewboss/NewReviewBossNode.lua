@@ -26,7 +26,7 @@ function NewReviewBossNode.create(character)
     main.main_character_label:setColor(cc.c4b(0,0,0,255))
     main.main_character_label:setPosition(mainSize.width/2, mainSize.height*0.6)
     main:addChild(main.main_character_label)
-    
+   
     main.visible = function(bool)
         main.main_character_label:setVisible(bool)
     end
