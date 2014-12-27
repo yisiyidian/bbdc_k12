@@ -37,7 +37,7 @@ function PersonalInfo:ctor()
         local intro = cc.LayerColor:create(cc.c4b(255,255,255,255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT - 280)
         intro:ignoreAnchorPointForPosition(false)
         intro:setAnchorPoint(0.5,0) 
-        intro:setPosition(s_DESIGN_WIDTH/2 - s_LEFT_X ,0)
+        intro:setPosition((s_RIGHT_X - s_LEFT_X) / 2 ,0)
         layout:addChild(intro,0,string.format('back%d',i))
         if i > 1 then
             local scrollButton = cc.Sprite:create("image/PersonalInfo/scrollHintButton.png")
@@ -118,18 +118,18 @@ function PersonalInfo:PLVI()
     
     --local dayCount = math.floor(sub / (24 * 3600)) + 1
     local dayCount = 6
-    local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
+    local scale = 1
     
     local yBar = cc.Sprite:create("image/PersonalInfo/PLVI/lv_information_zuobiantiao_1.png")
     yBar:setScaleX(scale)
     yBar:setAnchorPoint(0, 1)
-    yBar:setPosition(0, s_DESIGN_HEIGHT * 0.77)
+    yBar:setPosition(-s_LEFT_X, s_DESIGN_HEIGHT * 0.77)
     back:addChild(yBar)
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setScaleX(scale)
     gezi:setAnchorPoint(0.0,0.5)
-    gezi:setPosition(yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.5)
+    gezi:setPosition(-s_LEFT_X + yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.5)
     back:addChild(gezi)
     
     local countArray = {}
@@ -522,13 +522,13 @@ function PersonalInfo:XXTJ()
         unit1:setPosition(speedLabel:getPositionX() + length,y)
     end
 
-    drawLabel('日均学习',everydayWord,'个',0.5 * back:getContentSize().width)
+    drawLabel('日均学习',everydayWord,'个',0.3 * back:getContentSize().height)
     local dayLabel = '还需学习'
     if dayToFinish > 99 then
         dayToFinish = 99
         dayLabel = '还需学习大于'
     end
-    drawLabel(dayLabel,dayToFinish,'天',0.75 * back:getContentSize().width)
+    drawLabel(dayLabel,dayToFinish,'天',0.7 * back:getContentSize().height)
 
     if dayToFinish > 99 then
         dayToFinish = 99
@@ -561,11 +561,12 @@ function PersonalInfo:XXTJ()
         back:addChild(unit2)
 
         local length = month:getContentSize().width + day:getContentSize().width + speedLabel:getContentSize().width + unit1:getContentSize().width + unit2:getContentSize().width
-        speedLabel:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X - length / 2,1.0 * back:getContentSize().width)
-        month:setPosition(speedLabel:getPositionX() + speedLabel:getContentSize().width,1.0 * back:getContentSize().width)
-        unit1:setPosition(month:getPositionX() + month:getContentSize().width,1.0 * back:getContentSize().width)
-        day:setPosition(unit1:getPositionX() + unit1:getContentSize().width,1.0 * back:getContentSize().width)
-        unit2:setPosition(speedLabel:getPositionX() + length,1.0 * back:getContentSize().width)    
+        speedLabel:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X - length / 2,0.5 * back:getContentSize().height)
+        month:setPosition(speedLabel:getPositionX() + speedLabel:getContentSize().width,0.5 * back:getContentSize().height)
+        unit1:setPosition(month:getPositionX() + month:getContentSize().width,0.5 * back:getContentSize().height)
+        day:setPosition(unit1:getPositionX() + unit1:getContentSize().width,0.5 * back:getContentSize().height)
+        unit2:setPosition(speedLabel:getPositionX() + length,0.5 * back:getContentSize().height)  
+        --speedLabel:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)  
 	
 end
 
