@@ -78,6 +78,29 @@ function PersonalInfo:ctor()
         end
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
+
+    -- local onTouchBegan = function ( touch,event )
+    --     return true
+    -- end
+
+    -- local onTouchEnded = function ( touch,event )
+    --     print_lua_table(pageView:getPages())
+    --     local location = s_SCENE.popupLayer:convertToNodeSpace(touch:getLocation())
+    --     local curPage = pageView:getCurPageIndex()
+    --     if location.y < 0.1 * s_DESIGN_HEIGHT and curPage >= 1 then
+    --         s_logd(pageView:getPage(curPage - 1):getPositionY()..'touchend'..pageView:getPage(curPage):getPositionY())
+    --         pageView:scrollToPage(curPage - 2)
+    --     elseif location.y < 0.1 * s_DESIGN_HEIGHT and curPage == 1 then
+    --         s_logd('touchend'..curPage)
+    --         pageView:scrollToPage(0)
+    --     end
+    -- end
+
+    -- local listener = cc.EventListenerTouchOneByOne:create()
+    -- listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    -- listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    -- local eventDispatcher = s_SCENE.popupLayer:getEventDispatcher()
+    -- eventDispatcher:addEventListenerWithSceneGraphPriority(listener, s_SCENE.popupLayer)
     
 end
 

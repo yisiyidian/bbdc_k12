@@ -42,6 +42,7 @@ function CorePlayManager.initTotalPlay()
     if candidate == nil then
         CorePlayManager.initNewStudyLayer()
     else
+        CorePlayManager.initReviewRewardAndTotalWord()
         CorePlayManager.initNewReviewBossLayer(candidate)
     end
 end
@@ -124,14 +125,17 @@ end
 
 function CorePlayManager.checkInStudyModel()
     CorePlayManager.playModel = 0
+    CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.checkInReviewModel()
     CorePlayManager.playModel = 1
+    CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.checkInOverModel()
     CorePlayManager.playModel = 2
+    CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.isStudyModel()
@@ -173,6 +177,8 @@ function CorePlayManager.updateWordCandidate(isInsertTail)
         table.remove(CorePlayManager.wordCandidate, 1)
         CorePlayManager.candidateNum = CorePlayManager.candidateNum - 1
     end
+    
+    s_CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.enterNewStudyChooseLayer()
@@ -213,6 +219,8 @@ end
 function CorePlayManager.updateCurrentIndex()
     s_DATABASE_MGR.addStudyWordsNum()
     CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+    
+    s_CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.updateRightWordList(wordname)
@@ -220,6 +228,8 @@ function CorePlayManager.updateRightWordList(wordname)
 
     table.insert(CorePlayManager.rightWordList, wordname)
     CorePlayManager.rightWordNum = CorePlayManager.rightWordNum + 1
+    
+    s_CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.updateWrongWordList(wordname)
@@ -229,6 +239,8 @@ function CorePlayManager.updateWrongWordList(wordname)
     
     table.insert(CorePlayManager.wrongWordList, wordname)
     CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+    
+    s_CorePlayManager.recordStudyStateIntoDB()
 end
 
 
@@ -273,6 +285,16 @@ function CorePlayManager.initNewReviewBossLayer(candidate)
     end
     
     CorePlayManager.enterReviewBossMainLayer()
+end
+
+function CorePlayManager.initReviewRewardAndTotalWord()
+    CorePlayManager.reward = 0
+    CorePlayManager.totalWord = 0
+end
+
+function CorePlayManager.updateReviewRewardAndTotalWord()
+    CorePlayManager.reward = CorePlayManager.reward + CorePlayManager.currentReward 
+    CorePlayManager.totalWord = CorePlayManager.totalWord + CorePlayManager.maxReviewWordCount
 end
 
 function CorePlayManager.updateCurrentReviewIndex()

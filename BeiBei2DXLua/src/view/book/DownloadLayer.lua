@@ -10,7 +10,12 @@ end)
 function DownloadLayer.create(bookKey)
     local bookImageName = "image/download/big_"..string.upper(bookKey)..".png"
     local total_size = s_DATA_MANAGER.books[bookKey].music
+    
     local download_state = 0 -- 0 for no download, 1 for downloading and 2 for downloaded
+    if s_DATABASE_MGR.getDownloadState(bookKey) == 1 then
+        download_state = 2
+    end
+    download_state = 2
 
     local layer = DownloadLayer.new()
 
@@ -101,6 +106,7 @@ function DownloadLayer.create(bookKey)
     local progress
     local progress_clicked
     local button_title
+    local percent = 30
     local title1 = "下载音频("..total_size..")"
     local title2 = "取消下载(1.1M/"..total_size..")"
     local title3 = "删除音频("..total_size..")"
@@ -124,6 +130,11 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
             
                 downloadAlter.sure = function()
+                    percent = 30
+                    progress:setPercentage(percent)
+                    progress_clicked:setPercentage(percent)
+                    progress:setVisible(true)
+                    
                     button_title:setString(title2)
                     download_state = 1
                     progress:setVisible(true)
@@ -141,9 +152,16 @@ function DownloadLayer.create(bookKey)
                     progress_clicked:setVisible(false)
                 end
             else
-                button_title:setString(title1)
-                progress:setVisible(false)
-                progress_clicked:setVisible(false)
+                local downloadAlter = DownloadAlter.create("删除之后您需要重新下载，确定删除？")
+                downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(downloadAlter)
+
+                downloadAlter.sure = function()
+                    button_title:setString(title1)
+                    download_state = 0
+                    progress:setVisible(false)
+                    progress_clicked:setVisible(false)
+                end
             end
         end
     end
@@ -158,7 +176,7 @@ function DownloadLayer.create(bookKey)
     progress:setMidpoint(cc.p(0, 0))
     progress:setBarChangeRate(cc.p(1, 0))
     progress:setPosition(button_download:getPosition())
-    progress:setPercentage(30)
+    progress:setPercentage(percent)
     progress:setVisible(false)
     backColor:addChild(progress)
 
@@ -167,13 +185,32 @@ function DownloadLayer.create(bookKey)
     progress_clicked:setMidpoint(cc.p(0, 0))
     progress_clicked:setBarChangeRate(cc.p(1, 0))
     progress_clicked:setPosition(button_download:getPosition())
-    progress_clicked:setPercentage(30)
+    progress_clicked:setPercentage(percent)
     progress_clicked:setVisible(false)
     backColor:addChild(progress_clicked)
 
-    button_title = cc.Label:createWithSystemFont(title1,"",34)
-    button_title:setPosition(bigWidth/2, 222)
-    backColor:addChild(button_title)
+    if download_state == 0 then
+        button_title = cc.Label:createWithSystemFont(title1,"",34)
+        button_title:setPosition(bigWidth/2, 222)
+        backColor:addChild(button_title)
+    else
+        percent = 100
+        progress:setPercentage(percent)
+        progress_clicked:setPercentage(percent)
+        progress:setVisible(true)
+        
+        
+        button_title = cc.Label:createWithSystemFont(title3,"",34)
+        button_title:setPosition(bigWidth/2, 222)
+        backColor:addChild(button_title)
+        
+        
+        
+    end
+
+    
+    
+    
 
     return layer
 end

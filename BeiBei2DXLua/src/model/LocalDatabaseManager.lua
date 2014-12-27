@@ -186,6 +186,15 @@ function Manager.initTables()
             lastUpdate INTEGER
         );
     ]]
+    
+    -- CREATE table Download State
+    Manager.database:exec[[
+        create table if not exists DataDownloadState(
+            bookKey TEXT,
+            isDownloaded INTEGER,
+            lastUpdate INTEGER
+        );
+    ]]
 
     local userDataClasses = {
         require('model.user.DataDailyCheckIn'),
@@ -315,7 +324,6 @@ local function getUserDataFromLocalDB(objectOfDataClass, usertype)
                 lastLogIn = rowTime
                 data = row
             end
-        
         end
     end
 
@@ -431,6 +439,9 @@ function Manager.getTotalGraspWordsNum()
     local totalStudyWordsNum = Manager.getTotalStudyWordsNum()
     local wrongWordBufferNum = Manager.getWrongWordBufferNum()
     local bossWordNum = Manager.getBossWordNum()
+    print("totalStudyWordsNum: "..totalStudyWordsNum)
+    print("wrongWordBufferNum: "..wrongWordBufferNum)
+    print("bossWordNum: "..bossWordNum)
     return totalStudyWordsNum - wrongWordBufferNum - bossWordNum
 end
 
@@ -832,7 +843,40 @@ function Manager.updateSlideNum()
     end
 end
 
+-- download state
+---- CREATE table Download State
+--Manager.database:exec[[
+--        create table if not exists DataDownloadState(
+--            bookKey TEXT,
+--            isDownloaded INTEGER,
+--            lastUpdate INTEGER
+--        );
+--    ]]
 
+function Manager.getDownloadState(bookKey)
+    local isDownloaded = 0
+    for row in Manager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
+        isDownloaded = row.isDownloaded
+    end
+    return isDownloaded
+end
+
+function Manager.updateDownloadState(bookKey, isDownloaded)
+    local time = os.time()
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
+        num = num + 1
+    end
+    
+    if num == 0 then
+        local query = "INSERT INTO DataDownloadState VALUES ('"..bookKey.."', "..isDownloaded..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataDownloadState SET isDownloaded = "..isDownloaded..", lastUpdate = "..time.." WHERE bookKey = '"..bookKey.."' ;"    
+        Manager.database:exec(query)
+    end
+end
 
 ---- UserDefault -----------------------------------------------------------
 

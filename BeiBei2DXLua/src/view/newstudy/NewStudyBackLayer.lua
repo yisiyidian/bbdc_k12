@@ -31,7 +31,6 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then            
-            s_CorePlayManager.recordStudyStateIntoDB()
             s_CorePlayManager.enterLevelLayer()
         end
     end

@@ -267,6 +267,7 @@ function NewReviewBossSummaryLayer.create()
                     local newReviewBossLayerChange = NewReviewBossLayerChange.create()
                     s_SCENE:popup(newReviewBossLayerChange)
                 else
+                    s_CorePlayManager.updateReviewRewardAndTotalWord()
                     s_CorePlayManager.initNewReviewBossLayer(candidate)
                     s_CorePlayManager.enterReviewBossMainLayer()
                 end
