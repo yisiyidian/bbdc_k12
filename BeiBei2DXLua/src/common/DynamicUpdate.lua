@@ -2,12 +2,12 @@ require("cocos.init")
 DynamicUpdate = {}
 
 local storagePath = cc.FileUtils:getInstance():getWritablePath().."AssetsManager"
-local searchPath = storagePath.."ServerAssets/src"
+local searchPath = storagePath.."/ServerAssets"
 
 function DynamicUpdate.initUpdateLabel()
 
     local updateInfo = cc.Label:create()
-    updateInfo:setSystemFontSize(20)
+    updateInfo:setSystemFontSize(25)
     updateInfo:setString(app_version_debug)
     updateInfo:setAnchorPoint(0,0)
     updateInfo:setPosition(s_LEFT_X,0)
@@ -22,20 +22,28 @@ local function reloadModule( moduleName )
     return require(moduleName)
 end
 
-function DynamicUpdate.updateCompleted()
+function DynamicUpdate.loginUpdateCompleted()
 
-    cc.FileUtils:getInstance():addSearchPath(searchPath,true)
     if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
+        cc.FileUtils:getInstance():addSearchPath(searchPath,true)
+        print("The storagePath is "..storagePath)
+        print("The searchPath is "..searchPath)
         if s_CURRENT_USER.usertype == USER_TYPE_QQ then
             s_SCENE:logInByQQAuthData()
         else
             s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
         end
     elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
+        cc.FileUtils:getInstance():addSearchPath(searchPath,true)
+        print("The storagePath is "..storagePath)
+        print("The searchPath is "..searchPath)
         local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(true)
         s_SCENE:replaceGameLayer(introLayer)
     else
+        cc.FileUtils:getInstance():addSearchPath(searchPath,true)
+        print("The storagePath is "..storagePath)
+        print("The searchPath is "..searchPath)
         local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(false)
         s_SCENE:replaceGameLayer(introLayer)
@@ -61,7 +69,7 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
                 
                 updateInfo:setString("No local manifest file found, skip assets update.")
-                DynamicUpdate.updateCompleted()                              
+                DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
                                 
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
@@ -77,21 +85,21 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
                 
                 updateInfo:setString("Fail to download manifest file, update skipped.")                
                 print("Fail to download manifest file, update skipped.")                
-                DynamicUpdate.updateCompleted()                              
+                DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
             
                 updateInfo:setString("Already up to date")  
                 print("Already up to date")  
-                DynamicUpdate.updateCompleted()                              
+                DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
             
                 updateInfo:setString("Update completed")     
                 print("Update completed")     
-                DynamicUpdate.updateCompleted()                           
+                DynamicUpdate.loginUpdateCompleted()                           
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
             
                 updateInfo:setString("Asset ", event:getAssetId(), ", ", event:getMessage())                                                
-                DynamicUpdate.updateCompleted()                              
+                DynamicUpdate.loginUpdateCompleted()                              
             end
         end
 

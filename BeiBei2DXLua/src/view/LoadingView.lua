@@ -1,3 +1,5 @@
+require("common.DynamicUpdate")
+
 local LoadingView = class ("LoadingView", function()
     return cc.Layer:create()
 end)
@@ -27,6 +29,10 @@ function LoadingView.create()
     sleep_girl:setAnchorPoint(0.5,0.5)
     sleep_girl:setPosition(leaf:getContentSize().width * 0.2 ,leaf:getContentSize().height * 0.3)    
     leaf:addChild(sleep_girl)
+    
+    local updateInfoLabel =DynamicUpdate.initUpdateLabel()
+    layer:addChild(updateInfoLabel,1000)
+    DynamicUpdate.beginLoginUpdate(updateInfoLabel)
     
     return layer
 end

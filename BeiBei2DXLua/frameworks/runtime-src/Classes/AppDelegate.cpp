@@ -103,6 +103,18 @@ bool AppDelegate::applicationDidFinishLaunching()
     // NOTE:Please don't remove this call if you want to debug with Cocos Code IDE
     startRuntime();
 #else
+    
+
+    auto fileUtil = FileUtils::getInstance();
+    std::string path1("AssetsManager/ServerAssets/src");
+    std::string path2("AssetsManager/ServerAssets/res");
+    std::string path3 = fileUtil->getWritablePath()+path1;
+    std::string path4 = fileUtil->getWritablePath()+path2;
+    fileUtil->addSearchPath(path3);
+    fileUtil->addSearchPath(path4);
+    engine->addSearchPath(path3.c_str());
+    CCLOG("the path3 of cpp is %s", path3.c_str());
+    
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
 #endif
 
