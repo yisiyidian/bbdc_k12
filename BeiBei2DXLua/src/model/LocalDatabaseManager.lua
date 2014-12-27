@@ -1,5 +1,5 @@
 local RBWORDNUM = 10
-local MAXWRONGWORDCOUNT = 3
+local MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
 local MAXTYPEINDEX = 4
 
 require("common.global")
@@ -176,6 +176,25 @@ function Manager.initTables()
             lastUpdate INTEGER
         );
     ]]
+    
+    -- CREATE table New Study Configuration
+    Manager.database:exec[[
+        create table if not exists DataStudyConfiguration(
+            userId TEXT,
+            isAlterOn INTEGER,
+            slideNum INTEGER,
+            lastUpdate INTEGER
+        );
+    ]]
+    
+    -- CREATE table Download State
+    Manager.database:exec[[
+        create table if not exists DataDownloadState(
+            bookKey TEXT,
+            isDownloaded INTEGER,
+            lastUpdate INTEGER
+        );
+    ]]
 
     local userDataClasses = {
         require('model.user.DataDailyCheckIn'),
@@ -305,7 +324,6 @@ local function getUserDataFromLocalDB(objectOfDataClass, usertype)
                 lastLogIn = rowTime
                 data = row
             end
-        
         end
     end
 
@@ -421,6 +439,9 @@ function Manager.getTotalGraspWordsNum()
     local totalStudyWordsNum = Manager.getTotalStudyWordsNum()
     local wrongWordBufferNum = Manager.getWrongWordBufferNum()
     local bossWordNum = Manager.getBossWordNum()
+    print("totalStudyWordsNum: "..totalStudyWordsNum)
+    print("wrongWordBufferNum: "..wrongWordBufferNum)
+    print("bossWordNum: "..bossWordNum)
     return totalStudyWordsNum - wrongWordBufferNum - bossWordNum
 end
 
@@ -749,7 +770,113 @@ function Manager.updateBossWord(bossID)
 end
 
 
+-- newstudy configuration
+--Manager.database:exec[[
+--        create table if not exists DataStudyConfiguration(
+--            userId TEXT,
+--            isAlterOn INTEGER,
+--            slideNum INTEGER,
+--            lastUpdate INTEGER
+--        );
+--    ]]
 
+function Manager.getIsAlterOn()
+    local userId = s_CURRENT_USER.objectId
+
+    local isAlterOn = 1 -- default value is 1 which means on
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        isAlterOn = row.isAlterOn
+    end
+    
+    return isAlterOn
+end
+
+function Manager.setIsAlterOn(isAlterOn)
+    local userId = s_CURRENT_USER.objectId
+    local time = os.time()
+    
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        num = num + 1
+    end
+    
+    if num == 0 then
+        local slideNum = 0
+        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..slideNum..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataStudyConfiguration SET isAlterOn = "..isAlterOn..", lastUpdate = "..time.." WHERE userId = '"..userId.."' ;"    
+        Manager.database:exec(query)
+    end
+end
+
+function Manager.getSlideNum()
+    local userId = s_CURRENT_USER.objectId
+
+    local slideNum = 0 -- default value is 0
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        slideNum = row.slideNum
+    end
+
+    return slideNum
+end
+
+function Manager.updateSlideNum()
+    local userId = s_CURRENT_USER.objectId
+    local time = os.time()
+
+    local num = 0
+    local slideNum = 0
+    local isAlterOn = 1
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        num = num + 1
+        slideNum = row.slideNum
+        isAlterOn = row.isAlterOn
+    end
+
+    if num == 0 then
+        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..(slideNum+1)..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataStudyConfiguration SET slideNum = "..(slideNum+1)..", lastUpdate = "..time.." WHERE userId = '"..userId.."' ;"    
+        Manager.database:exec(query)
+    end
+end
+
+-- download state
+---- CREATE table Download State
+--Manager.database:exec[[
+--        create table if not exists DataDownloadState(
+--            bookKey TEXT,
+--            isDownloaded INTEGER,
+--            lastUpdate INTEGER
+--        );
+--    ]]
+
+function Manager.getDownloadState(bookKey)
+    local isDownloaded = 0
+    for row in Manager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
+        isDownloaded = row.isDownloaded
+    end
+    return isDownloaded
+end
+
+function Manager.updateDownloadState(bookKey, isDownloaded)
+    local time = os.time()
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
+        num = num + 1
+    end
+    
+    if num == 0 then
+        local query = "INSERT INTO DataDownloadState VALUES ('"..bookKey.."', "..isDownloaded..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataDownloadState SET isDownloaded = "..isDownloaded..", lastUpdate = "..time.." WHERE bookKey = '"..bookKey.."' ;"    
+        Manager.database:exec(query)
+    end
+end
 
 ---- UserDefault -----------------------------------------------------------
 

@@ -3,7 +3,8 @@ require("common.global")
 
 local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
-local FlipMat = require("view.mat.FlipMat")
+local FlipMat           = require("view.mat.FlipMat")
+local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 
 local  NewStudySlideLayer = class("NewStudySlideLayer", function ()
     return cc.Layer:create()
@@ -43,53 +44,75 @@ function NewStudySlideLayer.create()
     word_meaning_label:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(word_meaning_label)
 
-    local success = function()   
-        playSound(s_sound_learn_true) 
+    local success = function()
+        local normal = function()  
+            -- db
+            s_DATABASE_MGR.updateSlideNum()
+        
+            playSound(s_sound_learn_true) 
+        
+            local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
+            showAnswerStateBack:setPosition(backColor:getContentSize().width *1.5, 768)
+            showAnswerStateBack:ignoreAnchorPointForPosition(false)
+            showAnswerStateBack:setAnchorPoint(0.5,0.5)
+            backColor:addChild(showAnswerStateBack)
     
-        local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
-        showAnswerStateBack:setPosition(backColor:getContentSize().width *1.5, 768)
-        showAnswerStateBack:ignoreAnchorPointForPosition(false)
-        showAnswerStateBack:setAnchorPoint(0.5,0.5)
-        backColor:addChild(showAnswerStateBack)
-
-        local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
-        sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
-        showAnswerStateBack:addChild(sign)
-
-        local right_wordname = cc.Label:createWithSystemFont(wordname,"",60)
-        right_wordname:setColor(cc.c4b(130,186,47,255))
-        right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
-        right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
-        showAnswerStateBack:addChild(right_wordname)
-
-        local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
-        showAnswerStateBack:runAction(action1)
-                        
-        s_SCENE:callFuncWithDelay(0.4,function()
-            if s_CorePlayManager.isStudyModel() then
-                s_CorePlayManager.updateWrongWordList(wordname)
-                if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
-                    s_CorePlayManager.updateCurrentIndex()
-                    s_CorePlayManager.enterNewStudyMiddleLayer()
+            local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
+            sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
+            showAnswerStateBack:addChild(sign)
+    
+            local right_wordname = cc.Label:createWithSystemFont(wordname,"",60)
+            right_wordname:setColor(cc.c4b(130,186,47,255))
+            right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
+            right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
+            showAnswerStateBack:addChild(right_wordname)
+    
+            local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
+            showAnswerStateBack:runAction(action1)
+    
+            s_SCENE:callFuncWithDelay(0.4,function()
+                if s_CorePlayManager.isStudyModel() then
+                    s_CorePlayManager.updateWrongWordList(wordname)
+                    if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
+                        s_CorePlayManager.updateCurrentIndex()
+                        s_CorePlayManager.enterNewStudyMiddleLayer()
+                    else
+                        s_CorePlayManager.updateCurrentIndex()
+                        s_CorePlayManager.enterNewStudyChooseLayer()
+                    end
                 else
-                    s_CorePlayManager.updateCurrentIndex()
+                    s_CorePlayManager.updateWordCandidate(true)
                     s_CorePlayManager.enterNewStudyChooseLayer()
                 end
-            else
-                s_CorePlayManager.updateWordCandidate(true)
-                s_CorePlayManager.enterNewStudyChooseLayer()
+            end)
+        end
+    
+        if s_DATABASE_MGR.getSlideNum() == 1 then
+            local guideAlter = GuideAlter.create(0, "划词加强记忆", "划词这一步是专门用来加强用户记忆的步骤，通过划词可以强化你对生词的印象。")
+            guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            backColor:addChild(guideAlter)
+            
+            guideAlter.know = function()
+                normal()
             end
-        end)
+        else
+            normal()
+        end
     end
 
     local size_big = backColor:getContentSize()
 
-    mat = FlipMat.create(wordname,4,4,false,"coconut_light")
+    if s_DATABASE_MGR.getSlideNum() == 0 then
+        mat = FlipMat.create(wordname,4,4,true,"coconut_light")
+        mat.finger_action()
+    else
+        mat = FlipMat.create(wordname,4,4,false,"coconut_light")
+    end
+    
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
 
     mat.success = success
---    mat.fail = fail
     mat.rightLock = true
     mat.wrongLock = false
 

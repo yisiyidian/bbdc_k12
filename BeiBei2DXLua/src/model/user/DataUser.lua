@@ -1,6 +1,7 @@
 local DataClassBase = require('model/user/DataClassBase')
 local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 local DataLogIn = require('model/user/DataLogIn')
+local DataBookProgress = require('model.user.DataBookProgress')
 
 USER_TYPE_MANUAL = 0
 USER_TYPE_GUEST  = 1
@@ -50,9 +51,9 @@ function DataUser:ctor()
 
     self.currentWordsIndex                 = 0 
     self.currentChapterKey                 = ''
-    self.currentSelectedChapterKey         = ''
+    --self.currentSelectedChapterKey         = ''
     self.currentLevelKey                   = ''
-    self.currentSelectedLevelKey           = ''
+    --self.currentSelectedLevelKey           = ''
     self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
@@ -71,6 +72,8 @@ function DataUser:ctor()
     self.localAuthData                     = nil
     self.snsUserInfo                       = nil
     self.clientData                        = {0}
+    self.bookProgress                      = DataBookProgress.create()
+    self.bookProgressObjectId              = ''
 end
 
 function DataUser:getNameForDisplay()
@@ -119,6 +122,13 @@ function DataUser:parseServerDataLogIn(results)
        self.logInDatas[i] = data
        print_lua_table(data)
    end 
+end
+
+function DataUser:parseServerDataBookProgress(results)
+    for i, v in ipairs(results) do
+        parseServerDataToUserData(v, self.bookProgress)
+        return self.bookProgress
+    end 
 end
 
 function DataUser:setTutorialStep(step)

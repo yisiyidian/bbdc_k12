@@ -50,3 +50,6 @@ org.eclipse.ltk.core.refactoring.prefs
 BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/AppVersionInfo.java
 BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/ios/AppVersionInfo.h
 BeiBei2DXLua/src/AppVersionInfo.lua
+BeiBei2DXLua/frameworks/runtime-src/proj.android/AndroidManifest.xml
+
+tmp_apk

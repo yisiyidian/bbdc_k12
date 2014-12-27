@@ -47,12 +47,12 @@ function BookLayer.create()
         end
     end
     
-    local backButton = ccui.Button:create("image/book/back_choose_book_button.png","","")
+    local backButton = ccui.Button:create("image/book/choose_book_back.png","","")
     backButton:setScale9Enabled(true)
     backButton:setTouchEnabled(true)
     backButton:ignoreAnchorPointForPosition(false)
     backButton:setAnchorPoint(0.5 , 0.5)
-    backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 250, s_DESIGN_HEIGHT - 100)
+    backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 238, 1073)
     backButton:addTouchEventListener(click_back)
     backColor:addChild(backButton)
     
@@ -65,7 +65,7 @@ function BookLayer.create()
     end
     
     local hint = cc.Label:createWithSystemFont("书山有路勤为径，开启哪本看水平","",24)
-    hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT-100)
+    hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,1073)
     hint:setColor(cc.c4b(66,66,62,255))
     backColor:addChild(hint) 
     local name_array = {}
@@ -88,37 +88,39 @@ function BookLayer.create()
         local key = key_array[i]
         local click = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-                -- button sound
-                playSound(s_sound_buttonEffect)   
-                local affirm = function()
-                    if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
-                        s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-                    end
-                    s_CURRENT_USER.bookKey = key
-                    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-                    s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
-                    showProgressHUD()
-                    s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
-                        function (api, result)
-                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
-                                function (api, result)
-                                    s_CorePlayManager.enterHomeLayer()
-                                    hideProgressHUD()
-                                end,
-                                function (api, code, message, description)
-                                    s_TIPS_LAYER:showSmall(message)
-                                    hideProgressHUD()
-                                end)
-                        end,
-                        function (api, code, message, description)
-                            s_TIPS_LAYER:showSmall(message)
-                            hideProgressHUD()
-                        end)
-                    s_SCENE.touchEventBlockLayer.lockTouch()
-                end      
-                s_TIPS_LAYER:showSmall("选择"..name_array[i].."课程", affirm)
-                -- popup sound "Aluminum Can Open "
-                playSound(s_sound_Aluminum_Can_Open)
+                s_CorePlayManager.enterDownloadLayer(key)
+            
+--                -- button sound
+--                playSound(s_sound_buttonEffect)   
+--                local affirm = function()
+--                    if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
+--                        s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+--                    end
+--                    s_CURRENT_USER.bookKey = key
+--                    s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
+--                    s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
+--                    showProgressHUD()
+--                    s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
+--                        function (api, result)
+--                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+--                                function (api, result)
+--                                    s_CorePlayManager.enterHomeLayer()
+--                                    hideProgressHUD()
+--                                end,
+--                                function (api, code, message, description)
+--                                    s_TIPS_LAYER:showSmall(message)
+--                                    hideProgressHUD()
+--                                end)
+--                        end,
+--                        function (api, code, message, description)
+--                            s_TIPS_LAYER:showSmall(message)
+--                            hideProgressHUD()
+--                        end)
+--                    s_SCENE.touchEventBlockLayer.lockTouch()
+--                end
+--                s_TIPS_LAYER:showSmall("选择"..name_array[i].."课程", affirm)
+--                -- popup sound "Aluminum Can Open "
+--                playSound(s_sound_Aluminum_Can_Open)
             end
         end
         table.insert(func_array, click)
@@ -154,7 +156,7 @@ function BookLayer.create()
         if i == 1 then
             if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                 local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, s_DESIGN_HEIGHT-100)
+                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, 1073)
                 backColor:addChild(tutorial_text,120)
                 --tutorial_text:setColor(cc.c3b(255,255,255))
                 

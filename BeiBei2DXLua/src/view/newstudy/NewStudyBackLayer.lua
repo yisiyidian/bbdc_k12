@@ -2,6 +2,7 @@ require("cocos.init")
 require("common.global")
 
 local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
+local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 
 local BackLayer = class("BackLayer", function()
     return cc.Layer:create()
@@ -30,7 +31,6 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then            
-            s_CorePlayManager.recordStudyStateIntoDB()
             s_CorePlayManager.enterLevelLayer()
         end
     end
@@ -48,7 +48,13 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     end
     progressBar:setPosition(bigWidth/2+44, 1099)
     backColor:addChild(progressBar)
-
+    
+    progressBar.hint = function()
+        local guideAlter = GuideAlter.create(0, "生词进度条", "生词进度条代表的时你今天的生词积攒任务的完成进度")
+        guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+        backColor:addChild(guideAlter)
+    end
+    
     return backColor
 end
 
