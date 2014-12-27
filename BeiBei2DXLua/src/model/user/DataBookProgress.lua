@@ -14,7 +14,6 @@ function DataBookProgress:ctor()
     self.bookKey = ''
     self.chapterKey = ''
     self.levelKey = ''
-
     self.version = 0
 end
 
