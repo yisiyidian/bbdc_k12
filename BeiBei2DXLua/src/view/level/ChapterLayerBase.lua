@@ -46,7 +46,13 @@ function ChapterLayerBase:createObjectForResource(t)
     return object
 end
 
-
+function ChapterLayerBase:plotDecoration()
+    for k, v in pairs(self.levelPos) do
+        local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland.png')
+        lockIsland:setPosition(v)
+        self:addChild(lockIsland,120)
+    end
+end
 
 function ChapterLayerBase:loadResource()
     if self.chapterKey == 'chapter0' then
