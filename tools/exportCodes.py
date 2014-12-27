@@ -71,9 +71,14 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget):
     channels = jsonObj['channels']
     for c in channels:
         if c['name'] == channelName:
-            am = open(androidManifest).read()
-            am = am.replace('1103783596', str(c['QQAppId']))
             print getJsonObjToStr(c)
+
+            am = open(androidManifest).read()
+            if str(c['isQQLogInAvailable']) == 'true':
+                am = am.replace('1103783596', str(c['QQAppId']))
+            else:
+                am = am.replace('<!-- tencent start -->', '<!-- tencent start ')
+                am = am.replace('<!-- tencent end -->', ' tencent end -->')
 
             LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey']), getJsonObjToStr(c['leanCloudAppName'])]
             UMENG_APP = [str(c['umengAppKey']), getJsonObjToStr(c['umengAppName'])]

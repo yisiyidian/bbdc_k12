@@ -1,7 +1,13 @@
-echo "Enter < NUMBER > of app type (Debug: 0, Release: 1, Release for test: 2):"   #参数-n的作用是不换行，echo默认是换行
+echo ""
+echo "1st -------------------------------"
+echo "Enter < NUMBER > of app type"
+echo "Debug:            \033[31m0\033[0m"
+echo "Release:          \033[31m1\033[0m"
+echo "Release for test: \033[31m2\033[0m"
+
 read APPTYPE 
 
-if [ $APPTYPE = "0" ] ; then     #如果是linux的话打印linux字符串
+if [ $APPTYPE = "0" ] ; then
     echo "Debug" 
 elif [ $APPTYPE = "1" ] ; then   
     echo "Release" 
@@ -12,10 +18,29 @@ else
     exit 0
 fi
 
+echo ""
+echo "2nd -------------------------------"
+echo "Enter < NUMBER > of channel"
+echo "xiao mi:          \033[31m0\033[0m"
+echo "other androids:   \033[31m1\033[0m"
+
+read CHANNEL_NAME_ID
+
+CHANNEL_NAME="xiaomi"
+if [ $CHANNEL_NAME_ID = "0" ] ; then
+    CHANNEL_NAME="xiaomi" 
+elif [ $CHANNEL_NAME_ID = "1" ] ; then   
+    CHANNEL_NAME="android" 
+# elif [ $APPTYPE = "2" ] ; then 
+    # echo "Release for test" 
+else 
+    echo "Wrong channel id" 
+    exit 0
+fi
+
 BASE_DIR_FOR_SCRIPT_SELF=$(cd "$(dirname "$0")"; pwd)
 cd ${BASE_DIR_FOR_SCRIPT_SELF}/
 
-CHANNEL_NAME="xiaomi"
 CHANNEL_CONFIGS=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/configs.json
 ANDROID_MANIFEST=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/AndroidManifest.xml
 ANDROID_MANIFEST_TARGET=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/AndroidManifest.xml
