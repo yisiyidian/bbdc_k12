@@ -1,12 +1,21 @@
 require("cocos.init")
 require("common.global")
 
+local DownloadAlter        = require("view.book.DownloadAlter")
+
 local DownloadLayer = class("DownloadLayer", function()
     return cc.Layer:create()
 end)
 
 function DownloadLayer.create(bookKey)
     local bookImageName = "image/download/big_"..string.upper(bookKey)..".png"
+    local total_size = s_DATA_MANAGER.books[bookKey].music
+    
+    local download_state = 0 -- 0 for no download, 1 for downloading and 2 for downloaded
+    if s_DATABASE_MGR.getDownloadState(bookKey) == 1 then
+        download_state = 2
+    end
+    download_state = 2
 
     local layer = DownloadLayer.new()
 
@@ -42,8 +51,13 @@ function DownloadLayer.create(bookKey)
     
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            
-            s_CorePlayManager.enterBookLayer()
+            if download_state == 1 then
+                local downloadAlter = DownloadAlter.create("正在下载，取消下载方可返回上一个界面。")
+                downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(downloadAlter)
+            else
+                s_CorePlayManager.enterBookLayer()
+            end
         end
     end
     
@@ -81,27 +95,123 @@ function DownloadLayer.create(bookKey)
         end
     end
 
-    local button_choose = ccui.Button:create("image/download/button_onebutton_size.png","image/download/button_onebutton_size_clicked.png","")
+    local button_choose = ccui.Button:create("image/download/button_blue.png","image/download/button_blue_clicked.png","")
     button_choose:setTitleText("选择此书")
-    button_choose:setTitleFontSize(40)
+    button_choose:setTitleFontSize(34)
     button_choose:setPosition(bigWidth/2, 333)
     button_choose:addTouchEventListener(button_choose_clicked)
     backColor:addChild(button_choose)
     
-    
+   
+    local progress
+    local progress_clicked
+    local button_title
+    local percent = 30
+    local title1 = "下载音频("..total_size..")"
+    local title2 = "取消下载(1.1M/"..total_size..")"
+    local title3 = "删除音频("..total_size..")"
+
     local button_download_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
+        if eventType == ccui.TouchEventType.began then
+            if download_state == 0 then
+                
+                
+                
+            elseif download_state == 1 then
+                progress:setVisible(false)
+                progress_clicked:setVisible(true)
+            else
             
+            end
+        elseif eventType == ccui.TouchEventType.ended then
+            if download_state == 0 then
+                local downloadAlter = DownloadAlter.create("需要消耗流量"..total_size.."，确定下载？")
+                downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(downloadAlter)
+            
+                downloadAlter.sure = function()
+                    percent = 30
+                    progress:setPercentage(percent)
+                    progress_clicked:setPercentage(percent)
+                    progress:setVisible(true)
+                    
+                    button_title:setString(title2)
+                    download_state = 1
+                    progress:setVisible(true)
+                    progress_clicked:setVisible(false)
+                end
+            elseif download_state == 1 then
+                local downloadAlter = DownloadAlter.create("取消之后您需要重新下载，确定取消？")
+                downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(downloadAlter)
+                
+                downloadAlter.sure = function()
+                    button_title:setString(title1)
+                    download_state = 0
+                    progress:setVisible(false)
+                    progress_clicked:setVisible(false)
+                end
+            else
+                local downloadAlter = DownloadAlter.create("删除之后您需要重新下载，确定删除？")
+                downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(downloadAlter)
+
+                downloadAlter.sure = function()
+                    button_title:setString(title1)
+                    download_state = 0
+                    progress:setVisible(false)
+                    progress_clicked:setVisible(false)
+                end
+            end
         end
     end
 
-    local button_download = ccui.Button:create("image/download/button_onebutton_size.png","image/download/button_onebutton_size_clicked.png","")
-    button_download:setTitleText("下载音频(12MB)")
-    button_download:setTitleFontSize(40)
+    local button_download = ccui.Button:create("image/download/button_yellow.png","image/download/button_yellow_clicked.png","")
     button_download:setPosition(bigWidth/2, 222)
     button_download:addTouchEventListener(button_download_clicked)
     backColor:addChild(button_download)
+
+    progress = cc.ProgressTimer:create(cc.Sprite:create("image/download/button_download.png"))
+    progress:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+    progress:setMidpoint(cc.p(0, 0))
+    progress:setBarChangeRate(cc.p(1, 0))
+    progress:setPosition(button_download:getPosition())
+    progress:setPercentage(percent)
+    progress:setVisible(false)
+    backColor:addChild(progress)
+
+    progress_clicked = cc.ProgressTimer:create(cc.Sprite:create("image/download/button_download_clicked.png"))
+    progress_clicked:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+    progress_clicked:setMidpoint(cc.p(0, 0))
+    progress_clicked:setBarChangeRate(cc.p(1, 0))
+    progress_clicked:setPosition(button_download:getPosition())
+    progress_clicked:setPercentage(percent)
+    progress_clicked:setVisible(false)
+    backColor:addChild(progress_clicked)
+
+    if download_state == 0 then
+        button_title = cc.Label:createWithSystemFont(title1,"",34)
+        button_title:setPosition(bigWidth/2, 222)
+        backColor:addChild(button_title)
+    else
+        percent = 100
+        progress:setPercentage(percent)
+        progress_clicked:setPercentage(percent)
+        progress:setVisible(true)
+        
+        
+        button_title = cc.Label:createWithSystemFont(title3,"",34)
+        button_title:setPosition(bigWidth/2, 222)
+        backColor:addChild(button_title)
+        
+        
+        
+    end
+
     
+    
+    
+
     return layer
 end
 

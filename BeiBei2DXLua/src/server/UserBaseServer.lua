@@ -330,6 +330,10 @@ function UserBaseServer.getDataLogIn(userId, week, onSucceed, onFailed)
 end
 
 ----
+function UserBaseServer.getDataBookProgress(objectId, onSucceed, onFailed)
+    s_SERVER.search('classes/DataBookProgress?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
+end
+----
 
 --[[
 s_UserBaseServer.getLevelsOfCurrentUser(

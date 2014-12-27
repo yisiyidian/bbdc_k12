@@ -79,7 +79,9 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
             end
         end
     
-        local button_know = ccui.Button:create("image/newstudy/button_know.png","image/newstudy/button_know.png","")
+        local button_know = ccui.Button:create("image/download/button_blue_small.png","image/download/button_blue_small_clicked.png","")
+        button_know:setTitleText("知道了")
+        button_know:setTitleFontSize(30)
         button_know:setPosition(maxWidth/2,80)
         button_know:addTouchEventListener(button_know_clicked)
         back:addChild(button_know)
@@ -106,7 +108,9 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
             end
         end
     
-        local button_cancel = ccui.Button:create("image/newstudy/button_cancel.png","image/newstudy/button_cancel.png","")
+        local button_cancel = ccui.Button:create("image/download/button_blue_small.png","image/download/button_blue_small_clicked.png","")
+        button_cancel:setTitleText("取消")
+        button_cancel:setTitleFontSize(30)
         button_cancel:setPosition(maxWidth/2-110,80)
         button_cancel:addTouchEventListener(button_cancel_clicked)
         back:addChild(button_cancel)
@@ -117,7 +121,9 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
             end
         end
     
-        local button_sure = ccui.Button:create("image/newstudy/button_sure.png","image/newstudy/button_sure.png","")
+        local button_sure = ccui.Button:create("image/download/button_blue_small.png","image/download/button_blue_small_clicked.png","")
+        button_sure:setTitleText("确定")
+        button_sure:setTitleFontSize(30)
         button_sure:setPosition(maxWidth/2+110,80)
         button_sure:addTouchEventListener(button_sure_clicked)
         back:addChild(button_sure)
