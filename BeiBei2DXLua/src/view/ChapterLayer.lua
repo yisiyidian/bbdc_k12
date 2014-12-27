@@ -50,7 +50,17 @@ function ChapterLayer:ctor()
     self:addBottomBounce()
     -- add chapter node
     self:addChapterIntoListView('chapter0')
-    self:addChapterIntoListView('chapter1')
+    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    
+    if string.sub(bookProgress['chapter'],8) - 1 >= 0 then
+        self:addChapterIntoListView('chapter1')
+    end
+    if string.sub(bookProgress['chapter'], 8) - 2 >= 0 then
+        self:addChapterIntoListView('chapter2')
+    end
+    if string.sub(bookProgress['chapter'], 8) - 3 >= 0 then
+        self:addChapterIntoListView('chapter3')
+    end
 end
 
 function ChapterLayer:addPlayer()
@@ -96,6 +106,13 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
 --        item0_1:addChild(self.chapterDic['connection0_1'])
 --        listView:addChild(item0_1)
     end
+end
+
+function ChapterLayer:plotUnlockCloudAnimation()
+    local action1 = cc.MoveBy:create(0.5, cc.p(-s_DESIGN_WIDTH,0))
+    local action2 = cc.MoveBy:create(0.5, cc.p(s_DESIGN_WIDTH,0))
+    self.chapterDic['leftCloud']:runAction(action1)
+    self.chapterDic['rightCloud']:runAction(action2)
 end
 
 function ChapterLayer:addTopBounce()
