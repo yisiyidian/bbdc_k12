@@ -102,9 +102,9 @@ start = function ()
 -- *************************************
 if test_code == 0 then
     local startApp = function ()
-            local LoadingView = require("view.LoadingView")
-            local loadingView = LoadingView.create()
-            s_SCENE:replaceGameLayer(loadingView) 
+        local LoadingView = require("view.LoadingView")
+        local loadingView = LoadingView.create()
+        s_SCENE:replaceGameLayer(loadingView) 
     end
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         local SplashView = require("view.SplashView")
