@@ -24,7 +24,7 @@ function ChapterLayerBase:ctor(chapterKey, startLevelKey)
 end
 
 function ChapterLayerBase:getLevelPosition(levelKey)
-    for k, v in self.levelPos do
+    for k, v in pairs(self.levelPos) do
         if string.sub(levelKey, 6) - k == 0 then
             return v
         end
@@ -54,6 +54,7 @@ function ChapterLayerBase:createObjectForResource(t)
     return object
 end
 
+
 function ChapterLayerBase:plotDecoration()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentLevelIndex = string.sub(bookProgress['level'],6)
@@ -62,13 +63,18 @@ function ChapterLayerBase:plotDecoration()
     for levelIndex, levelPosition in pairs(self.levelPos) do
         local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
 --        print('!!!!!levelConfigType:'..levelConfig)
-        print_lua_table(levelConfig)
+--        print_lua_table(levelConfig)
         -- is locked
         if levelIndex - currentLevelIndex > 0 or chapterIndex - currentChapterIndex > 0 then
             local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
+            local lock = cc.Sprite:create('image/chapter/chapter0/lock.png')
             lockIsland:setPosition(levelPosition)
+            lock:setPosition(levelPosition)
             self:addChild(lockIsland,120)
+            self:addChild(lock,130)
         else
+            -- plot level number
+            self:plotLevelNumber('level'..levelIndex)
             -- check summary boss
             if levelConfig['type'] == 1 then
                 local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -120,6 +126,45 @@ function ChapterLayerBase:plotDecoration()
         -- decoration
         
     end
+end
+
+function ChapterLayerBase:plotLevelNumber(levelKey)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local levelPosition = self:getLevelPosition(levelKey)
+    local chapterIndex = string.sub(self.chapterKey, 8)
+    local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
+
+    
+    local levelNumber = (chapterIndex * 10 + levelIndex + 1) * avgWordCount
+    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    if bookProgress['level'] == 'level39' and bookProgress['chapter'] == 'chapter3' then
+        levelNumber = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    end
+        if levelConfig['type'] == 1 then -- summary boss
+--            local summaryboss = levelButton:getChildByName('summaryboss'..string.sub(levelKey,6))
+--            local number = ccui.TextBMFont:create()
+--            number:setFntFile('font/number_straight.fnt')
+--            number:setScale(1.6)
+--            number:setString(levelNumber)
+--            number:setPosition(125, 100)
+--            summaryboss:addChild(number)
+        else 
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_inclined.fnt')
+            number:setString(levelNumber)
+            number:setPosition(levelPosition.x, levelPosition.y+3)
+            self:addChild(number,130)
+        end
+--    else
+--        local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
+--        local lockNumber = ccui.TextBMFont:create()        
+--        lockNumber:setFntFile('font/number_brown.fnt')
+--        lockNumber:setString(levelNumber)
+--        lockNumber:setPosition(lockSprite:getContentSize().width/2, lockSprite:getContentSize().height/2-6)
+--        lockSprite:addChild(lockNumber)
+--    end
+
 end
 
 function ChapterLayerBase:loadResource()
