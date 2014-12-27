@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://yisiyidian.com/AssetsManagerRelease/",
+	"remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerRelease/project_server_release.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerRelease/version_release.manifest", 
+	"version" : "1.6.0.0", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : {	
+		"ServerAssets/src/view.zip" : {
+			"md5" : "4e94d705112d8ab4b077cebaa318bbf8",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}

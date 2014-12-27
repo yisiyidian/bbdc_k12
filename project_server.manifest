@@ -1,0 +1,110 @@
+{ 
+	"packageUrl" : "http://yisiyidian.com/ASSETSUPDATE/",
+	"remoteManifestUrl" : "http://yisiyidian.com/ASSETSUPDATE/project_server.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/ASSETSUPDATE/version.manifest", 
+	"version" : "1.5.3.1", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : { 
+		"ServerAssets/src/anysdkConst.luac" : {
+			"md5" : "e30d49e862810da9492f575079c7957b",
+			"compressed" : true
+		},
+		"ServerAssets/src/AppScene.luac" : {
+			"md5" : "80aa7733fc3b7c41df499e1256487df8",
+			"compressed" : true
+		},
+		"ServerAssets/src/AppVersionInfo.luac" : {
+			"md5" : "5658bcf4ecdc1c7bb618b022ce834920",
+			"compressed" : true
+		},
+		"ServerAssets/src/AudioMgr.luac" : {
+			"md5" : "3033eadd59243e4f4bd1547bb021f6d5",
+			"compressed" : true
+		},
+		"ServerAssets/src/main.luac" : {
+			"md5" : "e5497bac2ed6df41cfff313c8761a1e0",
+			"compressed" : true
+		},
+		"ServerAssets/src/cocos.zip" : {
+			"md5" : "ecfc4b7941b6d6d9be25639b178b352d",
+			"compressed" : true
+		},
+		"ServerAssets/src/common.zip" : {
+			"md5" : "35f2dcd1e58155ffb3385ce86d860b3b",
+			"compressed" : true
+		},		
+		"ServerAssets/src/controller.zip" : {
+			"md5" : "5d8151a8168a7cefb1d5b6a66c882e75",
+			"compressed" : true
+		},		
+		"ServerAssets/src/example.zip" : {
+			"md5" : "b8c1235887f851130b035817c57d578e",
+			"compressed" : true
+		},		
+		"ServerAssets/src/layer.zip" : {
+			"md5" : "7a236f0e0d51da953bd39572be002c13",
+			"compressed" : true
+		},		
+		"ServerAssets/src/model.zip" : {
+			"md5" : "62ada6c821997e0508f752f0d0fb8ff0",
+			"compressed" : true
+		},		
+		"ServerAssets/src/popup.zip" : {
+			"md5" : "d2da09274d6901cd1ee6de9801bd0de8",
+			"compressed" : true
+		},		
+		"ServerAssets/src/server.zip" : {
+			"md5" : "9380ad12f552a75ddb5e6d50007641e6",
+			"compressed" : true
+		},		
+		"ServerAssets/src/store.zip" : {
+			"md5" : "d9ae45edd6fac572831ab9bd9d8dc080",
+			"compressed" : true
+		},		
+		"ServerAssets/src/view.zip" : {
+			"md5" : "c1e629d2fb32e7c1b76806871585aaa0",
+			"compressed" : true
+		},	
+		"ServerAssets/res/ccb.zip" : {
+			"md5" : "413c5777e16e8773181679ebe9d7e6f7",
+			"compressed" : true
+		},	
+		"ServerAssets/res/book.zip" : {
+			"md5" : "c145e0e1540a89d5edc6771e7a4724a6",
+			"compressed" : true
+		},	
+		"ServerAssets/res/cfg.zip" : {
+			"md5" : "579b886f0588a19259a09d9c42e8d4d4",
+			"compressed" : true
+		},	
+		"ServerAssets/res/font.zip" : {
+			"md5" : "657d0a96a8310af134b607fbf9abc864",
+			"compressed" : true
+		},	
+		"ServerAssets/res/image.zip" : {
+			"md5" : "4f6cae2ce9cd22424dad41f134352332",
+			"compressed" : true
+		},	
+		"ServerAssets/res/manifest.zip" : {
+			"md5" : "da515dce2020604afeeb46da119786b5",
+			"compressed" : true
+		},	
+		"ServerAssets/res/sound.zip" : {
+			"md5" : "d3dea75bd52cdb28ee8a392f9afe03b3",
+			"compressed" : true
+		},	
+		"ServerAssets/res/spine.zip" : {
+			"md5" : "fc379ff970c674bd9922fd8caf52f7a5",
+			"compressed" : true
+		},	
+		"ServerAssets/res/words.zip" : {
+			"md5" : "8ae0111cac1c4d1cb48f0417367cd697",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+    	"ServerAssets/res/",
+    	"ServerAssets/src/"
+    ] 
+}
