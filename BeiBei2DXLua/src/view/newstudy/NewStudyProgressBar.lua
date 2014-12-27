@@ -15,6 +15,8 @@ function ProgressBar.create(totalIndex, currentIndex, color)
     main:setContentSize(s_DESIGN_WIDTH, 10)
     main:ignoreAnchorPointForPosition(false)
     main:setAnchorPoint(0.5,0.5)
+    
+    main.hint = function()end
 
     local local_size = main:getContentSize()
 
@@ -43,6 +45,29 @@ function ProgressBar.create(totalIndex, currentIndex, color)
     label_number:setColor(cc.c4b(255,255,255,255))
     label_number:setPosition(index:getContentSize().width/2, index:getContentSize().height*0.4)
     index:addChild(label_number)
+    
+    -- touch lock
+    local onTouchBegan = function(touch, event)    
+        local location = progress_back:convertToNodeSpace(touch:getLocation())
+        if cc.rectContainsPoint({x=0,y=0,width=progress_back:getBoundingBox().width,height=progress_back:getBoundingBox().height}, location) then
+            main.hint()
+            return true
+        end
+        
+        local location = index:convertToNodeSpace(touch:getLocation())
+        if cc.rectContainsPoint({x=0,y=0,width=index:getBoundingBox().width,height=index:getBoundingBox().height}, location) then
+            main.hint()
+            return true
+        end
+
+        return true
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    local eventDispatcher = main:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
     return main
 end

@@ -29,7 +29,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     main:ignoreAnchorPointForPosition(false)
 
     main.cancel = function()
-        main:removeFromParent()
+
     end
     
     main.sure = function()
@@ -37,7 +37,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     end
     
     main.know = function()
-        main:removeFromParent()
+        
     end
     
     main.box_tag = 0
@@ -75,6 +75,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         local button_know_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 main.know()
+                main:removeFromParent()
             end
         end
     
@@ -101,6 +102,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         local button_cancel_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 main.cancel()
+                main:removeFromParent()
             end
         end
     

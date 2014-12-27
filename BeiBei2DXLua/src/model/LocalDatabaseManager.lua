@@ -182,6 +182,7 @@ function Manager.initTables()
         create table if not exists DataStudyConfiguration(
             userId TEXT,
             isAlterOn INTEGER,
+            slideNum INTEGER,
             lastUpdate INTEGER
         );
     ]]
@@ -759,11 +760,11 @@ end
 
 
 -- newstudy configuration
----- CREATE table New Study Configuration
 --Manager.database:exec[[
 --        create table if not exists DataStudyConfiguration(
 --            userId TEXT,
 --            isAlterOn INTEGER,
+--            slideNum INTEGER,
 --            lastUpdate INTEGER
 --        );
 --    ]]
@@ -789,10 +790,44 @@ function Manager.setIsAlterOn(isAlterOn)
     end
     
     if num == 0 then
-        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..time..");"
+        local slideNum = 0
+        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..slideNum..", "..time..");"
         Manager.database:exec(query)
     else
         local query = "UPDATE DataStudyConfiguration SET isAlterOn = "..isAlterOn..", lastUpdate = "..time.." WHERE userId = '"..userId.."' ;"    
+        Manager.database:exec(query)
+    end
+end
+
+function Manager.getSlideNum()
+    local userId = s_CURRENT_USER.objectId
+
+    local slideNum = 0 -- default value is 0
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        slideNum = row.slideNum
+    end
+
+    return slideNum
+end
+
+function Manager.updateSlideNum()
+    local userId = s_CURRENT_USER.objectId
+    local time = os.time()
+
+    local num = 0
+    local slideNum = 0
+    local isAlterOn = 1
+    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
+        num = num + 1
+        slideNum = row.slideNum
+        isAlterOn = row.isAlterOn
+    end
+
+    if num == 0 then
+        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..(slideNum+1)..", "..time..");"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataStudyConfiguration SET slideNum = "..(slideNum+1)..", lastUpdate = "..time.." WHERE userId = '"..userId.."' ;"    
         Manager.database:exec(query)
     end
 end
