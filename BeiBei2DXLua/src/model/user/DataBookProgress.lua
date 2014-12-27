@@ -10,11 +10,19 @@ function DataBookProgress.create()
 end
 
 function DataBookProgress:ctor()
-    self.className = 'DataBookProgress'
-    self.bookKey = ''
-    self.chapterKey = ''
-    self.levelKey = ''
-    self.version = 0
+    self.CET4 = 'cet4|chapter0|level0'
+    self.CET6 = 'cet6|chapter0|level0'
+    self.GMAT = 'gmat|chapter0|level0'
+    self.GRE = 'gre|chapter0|level0'
+    self.GSE = 'gse|chapter0|level0'
+    self.IELTS = 'ielts|chapter0|level0'
+    self.MIDDLE = 'middle|chapter0|level0'
+    self.NCEE = 'ncee|chapter0|level0'
+    self.PRIMARY = 'primary|chapter0|level0'
+    self.PRO4 = 'pro4|chapter0|level0'
+    self.PRO8 = 'pro8|chapter0|level0'
+    self.SAT = 'sat|chapter0|level0'
+    self.TOEFL = 'toefl|chapter0|level0'
 end
 
 return DataBookProgress
