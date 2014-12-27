@@ -64,7 +64,7 @@ public class CXTencentSDKCall {
 
 		@Override
 		public void onCancel() {
-			
+			BBNDK.onLogInByQQ(null, null, null, "User cancels QQ log in", 0);
 		}
 
 		@Override
@@ -90,7 +90,7 @@ public class CXTencentSDKCall {
 
 		@Override
 		public void onCancel() {
-			
+			BBNDK.onLogInByQQ(null, null, null, "User cancels QQ log in", 0);
 		}
 
 		@Override

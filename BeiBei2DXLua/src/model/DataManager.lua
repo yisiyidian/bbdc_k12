@@ -137,7 +137,14 @@ function DataManager.loadBookWords()
     local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
     for i = 1, #bookName do
         bookWord[bookName[i]] = {}
-        content = cc.FileUtils:getInstance():getStringFromFile("book/"..bookName[i]..".book")
+        local filepath = "cfg/" .. bookName[i] .. ".book"
+        print (filepath)
+        local content = ''
+        -- if s_USE_XXTEA then -- too slow
+        --     content = loadXxteaFile(filepath)
+        -- else
+            content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+        -- end
         local lines = split(content, "\n")
         for j = 1, #lines do
             if lines[j] ~= "" then

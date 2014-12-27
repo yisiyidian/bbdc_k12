@@ -441,7 +441,7 @@ function HomeLayer.create()
 --    local logo_name = {"head","book","feedback","information","logout"}
 --    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-        username = s_CURRENT_USER.username
+        username = s_CURRENT_USER:getNameForDisplay()
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
     end

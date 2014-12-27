@@ -199,6 +199,11 @@ local USER_START_TYPE_OLD         = 1
 local USER_START_TYPE_QQ          = 2
 local USER_START_TYPE_QQ_AUTHDATA = 3
 
+local LOADING_TEXTS = {'用户登录中 30%', '加载配置中 70%', '保存用户信息中 80%'}
+local _TEXT_ID_USER        = 1
+local _TEXT_ID_CFG         = 2
+local _TEXT_ID_UPDATE_USER = 3
+
 function AppScene:startLoadingData(userStartType, username, password)
     local function onResponse(u, e, code)
 
@@ -218,13 +223,13 @@ function AppScene:startLoadingData(userStartType, username, password)
             s_SCENE:gotoChooseBook()
         else
             -- s_SCENE:getDailyCheckIn()
-            s_SCENE:getLevels()
+            s_SCENE:onUserServerDatasCompleted() 
         end
         
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
-    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_USER_DATA))
+    showProgressHUD(LOADING_TEXTS[_TEXT_ID_USER])
     if userStartType == USER_START_TYPE_OLD then 
         s_UserBaseServer.logIn(username, password, onResponse)
     elseif userStartType == USER_START_TYPE_QQ then 
@@ -287,56 +292,55 @@ end
 --     )
 -- end
 
-function AppScene:getLevels()
-    local co
-    co = coroutine.create(function(results)
-        if (results ~= nil) and (#results > 0) then
-            s_CURRENT_USER:parseServerLevelData(results)
-            s_SCENE:onUserServerDatasCompleted() 
-            return
-        else
-            -- when got no level datas from server
-            s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
-                function (api, result)
-                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
-                        function (api, result)
-                            coroutine.resume(co, {})
-                        end,
-                        function (api, code, message, description)
-                            coroutine.resume(co, {})
-                        end)
-                end,
-                function (api, code, message, description)
-                    coroutine.resume(co, {})
-                end)
-            coroutine.yield()
-            s_SCENE:onUserServerDatasCompleted() 
-        end
-    end)
+-- function AppScene:getLevels()
+--     local co
+--     co = coroutine.create(function(results)
+--         if (results ~= nil) and (#results > 0) then
+--             s_CURRENT_USER:parseServerLevelData(results)
+--             s_SCENE:onUserServerDatasCompleted() 
+--             return
+--         else
+--             -- when got no level datas from server
+--             s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
+--                 function (api, result)
+--                     s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
+--                         function (api, result)
+--                             coroutine.resume(co, {})
+--                         end,
+--                         function (api, code, message, description)
+--                             coroutine.resume(co, {})
+--                         end)
+--                 end,
+--                 function (api, code, message, description)
+--                     coroutine.resume(co, {})
+--                 end)
+--             coroutine.yield()
+--             s_SCENE:onUserServerDatasCompleted() 
+--         end
+--     end)
 
-    showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_LEVEL_DATA))
-    s_UserBaseServer.getLevelsOfCurrentUser(
-        function (api, result)
-            coroutine.resume(co, result.results)
-        end,
-        function (api, code, message, description)
-            coroutine.resume(co, {}) -- can not pass nil value
-        end
-    )
-end
+--     showProgressHUD(LOADING_TEXTS[_TEXT_ID_LV])
+--     s_UserBaseServer.getLevelsOfCurrentUser(
+--         function (api, result)
+--             coroutine.resume(co, result.results)
+--         end,
+--         function (api, code, message, description)
+--             coroutine.resume(co, {}) -- can not pass nil value
+--         end
+--     )
+-- end
 
 function AppScene:loadConfigs()
-    -- new books
-    s_BookWord = s_DATA_MANAGER.loadBookWords()
-    --
-
+    showProgressHUD(LOADING_TEXTS[_TEXT_ID_CFG])
+    
     s_DATA_MANAGER.loadBooks()
+    s_BookWord = s_DATA_MANAGER.loadBookWords()
     s_DATA_MANAGER.loadChapters()
-    s_DATA_MANAGER.loadDailyCheckIns()
-    s_DATA_MANAGER.loadEnergy()
-    s_DATA_MANAGER.loadItems()
+    -- s_DATA_MANAGER.loadDailyCheckIns()
+    -- s_DATA_MANAGER.loadEnergy()
+    -- s_DATA_MANAGER.loadItems()
     s_DATA_MANAGER.loadReviewBoss()
-    s_DATA_MANAGER.loadStarRules()
+    -- s_DATA_MANAGER.loadStarRules()
 
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
@@ -404,6 +408,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
         updateWeek(nil, 1)
     else
         print ('os time, local time:', os.time(), s_CURRENT_USER.localTime)
+        showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_USER])
         local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
         s_UserBaseServer.getDataLogIn(s_CURRENT_USER.objectId, currentWeeks,
             function (api, result)

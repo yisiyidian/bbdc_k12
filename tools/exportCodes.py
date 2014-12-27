@@ -10,15 +10,15 @@ DEBUG_FOR_TEST       = '0'
 RELEASE_FOR_APPSTORE = '1'
 RELEASE_FOR_TEST     = '2'
 
-LEAN_CLOUD_TEST   = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"]
+LEAN_CLOUD_TEST      = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"]
 
-LEAN_CLOUD_XIAOMI = ["94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp", "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"]
-LEAN_CLOUD_X_0    = ['2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq', 'gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc']
+LEAN_CLOUD_XIAOMI    = ["94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp", "lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"]
+LEAN_CLOUD_X_0       = ['2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq', 'gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc']
 
-UMENG_APP_XIAOMI  = ["5498fc3afd98c56b4200075d", "xiao-mi"]
-UMENG_APP_ANDROID = ['549a5eb9fd98c5b2ac00144e', 'android']
+UMENG_APP_XIAOMI     = ["5498fc3afd98c56b4200075d", "xiao-mi"]
+UMENG_APP_ANDROID    = ['549a5eb9fd98c5b2ac00144e', 'android']
 
-TENCENT_APP = ['package name', "1103783596", "n7vXdt6eDIggSsa6"]
+TENCENT_APP          = ['true', 'package name', "1103783596", "n7vXdt6eDIggSsa6"]
 
 # ---------------------------------------------------------
 
@@ -49,11 +49,35 @@ def getLeanCloudAppKey(codeType):
 
 # ---------------------------------------------------------
 
+def init(channelName, channelConfigs, androidManifest, androidManifestTarget):
+    configs = open(channelConfigs).read()
+    jsonStr = json.loads(configs)
+    channels = jsonStr['channels']
+    for c in channels:
+        if c['name'] == channelName:
+            am = open(androidManifest).read()
+            am = am.replace('1103783596', str(c['QQAppId']))
+            print str(json.dumps(c, indent=4))
+
+            LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey'])]
+            UMENG_APP = [str(c['umengAppKey']), (c['umengAppName'])]
+            TENCENT_APP = [str(c['isQQLogInAvailable']), str(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
+
+            amt = open(androidManifestTarget, 'w')
+            amt.write(am)
+            amt.close()
+
+            return
+    
+
+# ---------------------------------------------------------
+
 def exportLua(codeType, appVersionInfo, fullpathLua):
     appVersionInfoLua = '''-- %s
 
 --------------------------------------------------------------------------------
 
+IS_SNS_QQ_LOGIN_AVAILABLE = %s
 -- PACKAGE NAME : %s
 SNS_QQ_APPID  = '%s'
 SNS_QQ_APPKEY = '%s'
@@ -88,12 +112,12 @@ function getAppVersionDebugInfo()
     else
         str = 'name:' .. str .. '\\nchannel:' .. 'unknown' .. ' v:' .. s_APP_VERSION .. '\\n%s'
     end
-    str = '%s' .. '\\n' .. str .. '\\n' .. LUA_ERROR
+    str = '%s' .. ' ' .. str .. '\\n' .. LUA_ERROR
     return str
 end
 
 ''' % (getCodeTypeDes(codeType), \
-    TENCENT_APP[0], TENCENT_APP[1], TENCENT_APP[2], \
+    TENCENT_APP[0], TENCENT_APP[1], TENCENT_APP[2], TENCENT_APP[3], \
     LEAN_CLOUD_TEST[0], LEAN_CLOUD_TEST[1], LEAN_CLOUD_RELEASE[0], LEAN_CLOUD_RELEASE[1], \
     codeType, appVersionInfo, appVersionInfo, getCodeTypeDes(codeType))
 
@@ -174,4 +198,6 @@ def export(codeType, appVersionInfo, fullpathLua, fullpathObjc, fullpathJava):
     pass
                 
 if __name__ == "__main__":
+    if len(sys.argv) > 6:
+        init(sys.argv[6], sys.argv[7], sys.argv[8], sys.argv[9])
     export(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
