@@ -65,7 +65,6 @@ function NewStudySuccessLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.recordStudyStateIntoDB()
             s_CorePlayManager.enterLevelLayer()
         end
     end
