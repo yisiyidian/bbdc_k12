@@ -85,7 +85,7 @@ function LevelListview:initLayout(level)
             blueLayerColor:setAnchorPoint(0,1)
             blueLayerColor:setPosition(0,blueSectionSize.height)
             layout:addChild(blueLayerColor)
-        
+            
             layoutTable[i+1] = layout
         
             self:pushBackCustomItem(layout)
