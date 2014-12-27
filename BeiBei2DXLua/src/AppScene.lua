@@ -199,10 +199,11 @@ local USER_START_TYPE_OLD         = 1
 local USER_START_TYPE_QQ          = 2
 local USER_START_TYPE_QQ_AUTHDATA = 3
 
-local LOADING_TEXTS = {'用户登录中 30%', '加载配置中 70%', '保存用户信息中 80%'}
+local LOADING_TEXTS = {'用户登录中 30%', '加载配置中 70%', '保存用户信息中 80%', '更新单词信息中 90%'}
 local _TEXT_ID_USER        = 1
 local _TEXT_ID_CFG         = 2
 local _TEXT_ID_UPDATE_USER = 3
+local _TEXT_ID_UPDATE_BP   = 4
 
 local function onErrorHappend(e)
     local function onError()
@@ -380,6 +381,11 @@ function AppScene:saveSignUpAndLogInData(onSaved)
     s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
     s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
     
+    showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_BP])
+    self:getDataBookProgress(onSaved)
+end
+
+function AppScene:getDataBookProgress(onSaved)
     local saveuser = function ()
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
             function(api,result)
@@ -392,6 +398,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
             function(api,result)
                 s_CURRENT_USER.bookProgressObjectId = s_CURRENT_USER.bookProgress.objectId
                 saveuser()
+                s_SCENE:getDataLogIn(onSaved)
             end,
             function(api, code, message, description)
                 onErrorHappend(message)
@@ -402,6 +409,7 @@ function AppScene:saveSignUpAndLogInData(onSaved)
             function(api,result)
                 s_CURRENT_USER:parseServerDataBookProgress(result, s_CURRENT_USER.bookProgress)
                 saveuser()
+                s_SCENE:getDataLogIn(onSaved)
             end, 
             function(api, code, message, description)
                 onErrorHappend(message)
@@ -409,7 +417,9 @@ function AppScene:saveSignUpAndLogInData(onSaved)
             end
         )
     end
-    
+end
+
+function AppScene:getDataLogIn(onSaved)
     local DataLogIn = require('model/user/DataLogIn')
     local function updateWeek(data, week)
         if data == nil then 

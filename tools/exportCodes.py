@@ -138,7 +138,7 @@ function getAppVersionDebugInfo()
     else
         str = 'name:' .. str .. '\\nchannel:' .. 'unknown' .. ' v:' .. s_APP_VERSION .. '\\n%s'
     end
-    str = '%s' .. ' ' .. str .. '\\n' .. LUA_ERROR
+    str = '[%s]' .. ' ' .. str .. '\\n' .. LUA_ERROR
     return str
 end
 
