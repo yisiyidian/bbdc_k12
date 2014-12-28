@@ -632,6 +632,18 @@ function Manager.printNewPlayState()
     print("</newPlayState>")
 end
 
+function Manager.getPlayModel()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local playModel = 0
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        playModel = row.playModel
+    end
+    
+    return playModel
+end
+
 function Manager.getNewPlayState()
     local newPlayState = {}
     newPlayState.lastUpdate = nil
@@ -943,6 +955,21 @@ function Manager.updateDownloadState(bookKey, isDownloaded)
     else
         local query = "UPDATE DataDownloadState SET isDownloaded = "..isDownloaded..", lastUpdate = "..time.." WHERE bookKey = '"..bookKey.."' ;"    
         Manager.database:exec(query)
+    end
+end
+
+function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
+    if Manager.getTodayRemainBossNum() > 0 then
+        return 1
+    end
+    
+    local playModel = Manager.getPlayModel()
+    if playModel == 0 then
+        return 2
+    elseif playModel == 1 then
+        return 3
+    else
+        return 4
     end
 end
 

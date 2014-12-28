@@ -64,14 +64,54 @@ function ChapterLayer:ctor()
     -- add player
     self:addPlayer()
     self:plotDecoration()
+    
+    -- check unlock level
+    self:checkUnlockLevel()
+end
+
+function ChapterLayer:checkUnlockLevel()
+    local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
+    if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- unlock chapter
+    
+    elseif currentProgress['level'] ~= oldProgress['level'] then   -- unlock level
+        local oldLevelIndex = string.sub(oldProgress['level'], 6)
+        local currentLevelIndex = string.sub(currentProgress['level'],6)
+        local delayTime = 0
+        for index = 1, (currentLevelIndex - oldLevelIndex) do
+            s_SCENE:callFuncWithDelay(delayTime,function()
+                self.chapterDic[oldProgress['chapter']]:plotUnlockLevelAnimation('level'..(oldLevelIndex+index))
+                -- move player
+                s_SCENE:callFuncWithDelay(0.3,function()
+                    local nextLevelPosition = self.chapterDic[oldProgress['chapter']]:getLevelPosition('level'..(oldLevelIndex+index))
+                    local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+                    self.player:runAction(action)
+                end)
+            end)
+            delayTime = delayTime + 1
+        end
+        s_SCENE:callFuncWithDelay(delayTime, function()
+           self:addPlayerNotification("normal") 
+        end)   
+        
+    end
+end
+
+function ChapterLayer:addPlayerNotification(type)  -- notification
+    self.player:removeAllChildren()
+    local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
+    notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height+80)
+    self.player:addChild(notification, 100)
+    -- TODO show message according to type
 end
 
 function ChapterLayer:addPlayer()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
+    --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
+    self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
     local position = self.chapterDic[bookProgress['chapter']]:getLevelPosition(bookProgress['level'])
     self.player:setPosition(position.x+100,position.y)
-    self.player:setScale(0.4)
+    --self.player:setScale(0.4)
     self.chapterDic[bookProgress['chapter']]:addChild(self.player, 130)
 end
 
@@ -112,6 +152,18 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
     end
 end
 
+-- scroll listview to show the specific chapter and level
+function ChapterLayer:scrollLevelLayer(chapterKey, levelKey)
+    -- compute listView inner height
+    local itemList = listView:getItems()
+    local innerHeight = 0
+    for i = 1,#itemList do
+        innerHeight = innerHeight + itemList[i]:getContentSize().height
+    end
+    listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
+    
+end
+
 function ChapterLayer:plotUnlockCloudAnimation()
     local action1 = cc.MoveBy:create(0.5, cc.p(-s_DESIGN_WIDTH,0))
     local action2 = cc.MoveBy:create(0.5, cc.p(s_DESIGN_WIDTH,0))
@@ -144,7 +196,7 @@ function ChapterLayer:plotDecoration()
     self.chapterDic['chapter0']:addChild(boat, 130)
     self.chapterDic['chapter0']:addChild(fan,130)
     self.chapterDic['chapter0']:addChild(beibei,130)
-    print('chapter0: '..self.chapterDic['chapter0']:getPosition())
+    --print('chapter0: '..self.chapterDic['chapter0']:getPosition())
 --    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
     --print('fanPosition:'..fanPosition)
 end

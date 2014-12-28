@@ -29,7 +29,7 @@ function NewReviewBossSuccessPopup.create()
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
     
-    local boss_sprite = cc.Sprite:create("image/reviewbossscene/rb_success.png")
+    local boss_sprite = cc.Sprite:create("image/newreviewboss/bosscry.png")
     boss_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height * 0.78)
     boss_sprite:ignoreAnchorPointForPosition(false)
     boss_sprite:setAnchorPoint(0.5,0.5)
