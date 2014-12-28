@@ -407,6 +407,18 @@ function Manager.addGraspWordsNum(addNum)
     end
 end
 
+function Manager.getStudyDayNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+        num = num + 1
+    end
+    
+    return num
+end
+
 function Manager.getStudyWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
