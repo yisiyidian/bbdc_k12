@@ -31,6 +31,8 @@ local ReviewBossMainLayer    = require("view.newreviewboss.NewReviewBossMainLaye
 local ReviewBossHintLayer    = require("view.newreviewboss.NewReviewBossHintLayer")
 local ReviewBossSummaryLayer = require("view.newreviewboss.NewReviewBossSummaryLayer")
 
+local ZiaoangTestLayer       = require("view.ZiaoangTest")
+
 local CorePlayManager = {}
 
 function CorePlayManager.create()
@@ -38,6 +40,10 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.initTotalPlay()
+--    local ziaoangTestLayer       = ZiaoangTestLayer.create()
+--    s_SCENE:replaceGameLayer(ziaoangTestLayer)
+    
+
     local candidate = CorePlayManager.getReviewBossCandidate()
     if candidate == nil then
         CorePlayManager.initNewStudyLayer()
