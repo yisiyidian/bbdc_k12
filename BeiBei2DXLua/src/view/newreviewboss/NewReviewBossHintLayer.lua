@@ -177,31 +177,48 @@ function NewReviewBossHintLayer.create(currentWordName)
     white_back:runAction(action2)
     
     local  word_label = cc.Label:createWithSystemFont(wordname,"",32)  
-    word_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.9 - 0.06 ))
+    word_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.9  ))
     word_label:setColor(cc.c4b(0,0,0,255))
     word_label:ignoreAnchorPointForPosition(false)
     word_label:setAnchorPoint(0,0.5)
     white_back:addChild(word_label)
-
     
-    local meaning_table = split(wordMeaning,"|||")
-    table.foreachi(meaning_table, function(i, v) 
-        local meaning_label = cc.Label:createWithSystemFont(meaning_table[i],"",26)  
-        meaning_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.8 - 0.06 * i))
-        meaning_label:setColor(cc.c4b(0,0,0,255))
-        meaning_label:ignoreAnchorPointForPosition(false)
-        meaning_label:setAnchorPoint(0,0.5)
-        white_back:addChild(meaning_label)
-        line_y = 0.8 - 0.06 * i
-        end)     
+    local richtext1 = ccui.RichText:create()
+    local opt_meaning = string.gsub(wordMeaning,"|||","\n")
+    local current_word_wordMeaning = cc.LabelTTF:create (opt_meaning,
+        "Helvetica",26, cc.size(white_back:getContentSize().width *0.9, 200), cc.TEXT_ALIGNMENT_LEFT)
+    current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
+    local richElement = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_wordMeaning)                           
+    richtext1:pushBackElement(richElement) 
+    richtext1:setContentSize(cc.size(white_back:getContentSize().width *0.9, 
+        white_back:getContentSize().height *0.3)) 
+    richtext1:ignoreContentAdaptWithSize(false)
+    richtext1:ignoreAnchorPointForPosition(false)
+    richtext1:setAnchorPoint(cc.p(0.5,0.5))
+    richtext1:setPosition(white_back:getContentSize().width *0.5,white_back:getContentSize().height *0.7)
+    richtext1:setLocalZOrder(10)       
+    white_back:addChild(richtext1)
+    
+    line_y =  richtext1:getPositionY() 
+    
+--    local meaning_table = split(wordMeaning,"|||")
+--    table.foreachi(meaning_table, function(i, v) 
+--        local meaning_label = cc.Label:createWithSystemFont(meaning_table[i],"",26)  
+--        meaning_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.8 - 0.06 * i))
+--        meaning_label:setColor(cc.c4b(0,0,0,255))
+--        meaning_label:ignoreAnchorPointForPosition(false)
+--        meaning_label:setAnchorPoint(0,0.5)
+--        white_back:addChild(meaning_label)
+--        line_y = 0.8 - 0.06 * i
+--        end)     
         
     local gray_line = cc.LayerColor:create(cc.c4b(202,212,219,255),white_back:getContentSize().width *0.8,2)
     gray_line:ignoreAnchorPointForPosition(false)
     gray_line:setAnchorPoint(0.5,0.5)
-    gray_line:setPosition(white_back:getContentSize().width *0.5,white_back:getContentSize().height * line_y - 50)
+    gray_line:setPosition(white_back:getContentSize().width *0.5,line_y - 50 )
     white_back:addChild(gray_line)
 
-    local richtext = ccui.RichText:create()                        
+    local richtext2 = ccui.RichText:create()                        
 
     local current_word_sentence_En = cc.LabelTTF:create (sentenceEn,
         "Helvetica",30, cc.size(white_back:getContentSize().width *0.8, 150), cc.TEXT_ALIGNMENT_LEFT)
@@ -213,18 +230,18 @@ function NewReviewBossHintLayer.create(currentWordName)
     current_word_sentence_CN:setColor(cc.c4b(0,0,0,255))
     local richElement2 = ccui.RichElementCustomNode:create(1,cc.c3b(0, 0, 0),255,current_word_sentence_CN)       
     
-    richtext:pushBackElement(richElement1) 
-    richtext:pushBackElement(richElement2)
-    richtext:setContentSize(cc.size(white_back:getContentSize().width *0.8, 
+    richtext2:pushBackElement(richElement1) 
+    richtext2:pushBackElement(richElement2)
+    richtext2:setContentSize(cc.size(white_back:getContentSize().width *0.8, 
         white_back:getContentSize().height *0.2)) 
-    richtext:ignoreContentAdaptWithSize(false)
-    richtext:ignoreAnchorPointForPosition(false)
-    richtext:setAnchorPoint(cc.p(0.5,1))
-    richtext:setPosition(white_back:getContentSize().width *0.5, 
-        white_back:getContentSize().height * line_y)
-    richtext:setLocalZOrder(10)                    
+    richtext2:ignoreContentAdaptWithSize(false)
+    richtext2:ignoreAnchorPointForPosition(false)
+    richtext2:setAnchorPoint(cc.p(0.5,1))
+    richtext2:setPosition(white_back:getContentSize().width *0.5, 
+        line_y - 25 )
+    richtext2:setLocalZOrder(10)                    
 
-    white_back:addChild(richtext) 
+    white_back:addChild(richtext2) 
     
     
     local listener = cc.EventListenerTouchOneByOne:create()
