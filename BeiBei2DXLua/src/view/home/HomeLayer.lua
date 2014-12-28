@@ -312,9 +312,9 @@ function HomeLayer.create()
             s_CorePlayManager.initTotalPlay()
         end
     end
-    local ACCUMULATING_WORD = 1
-    local LEARNING_WORD = 2
-    local REVIEWING_WORD = 3
+    local ACCUMULATING_WORD = 2
+    local LEARNING_WORD = 3
+    local REVIEWING_WORD = 1
     local COMPLETE_MISSION = 4
     local state = ACCUMULATING_WORD
 
@@ -322,11 +322,11 @@ function HomeLayer.create()
     if state == COMPLETE_MISSION then
         playImg = 'image/homescene/buttonfinish.png'
     end
-    local state_str
+    local state_str = s_DATABASE_MGR.getGameState()
     if state == ACCUMULATING_WORD then
         state_str = '积累生词'
     elseif state == LEARNING_WORD then
-        state_str = '学习生词'
+        state_str = '趁热打铁'
     elseif state == REVIEWING_WORD then
         state_str = '复习旧词'
     else
