@@ -18,7 +18,7 @@ function PersonalInfo:ctor()
     self.totalDay = 1
     local moved = false
     local start_y = nil
-    local colorArray = {cc.c4b(238,75,74,255),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
+    local colorArray = {cc.c4b(56,182,236,255),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
     local titleArray = {'单词学习日增长','登陆贝贝天数','学习效率统计'}
     self.intro_array = {}
 
