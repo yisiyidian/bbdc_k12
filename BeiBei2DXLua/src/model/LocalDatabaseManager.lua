@@ -455,7 +455,7 @@ function Manager.getStudyWords(bookKey)
     
     local wordPool = {}
     for i = 1, currentIndex-1 do
-        table.insert(wordList[i])
+        table.insert(wordPool,wordList[i])
     end
 
     return wordPool
@@ -472,7 +472,7 @@ function Manager.getGraspWords(bookKey)
 
     local wordPool = {}
     for i = 1, currentIndex-1 do
-        table.insert(wordList[i])
+        table.insert(wordPool,wordList[i])
     end
 
     return wordPool

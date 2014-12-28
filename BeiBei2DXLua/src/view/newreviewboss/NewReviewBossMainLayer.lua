@@ -304,11 +304,11 @@ function NewReviewBossMainLayer.create()
         elseif eventType == ccui.TouchEventType.ended then
             local HintView = require("view.newreviewboss.NewReviewBossHintLayer")
             local hintView = HintView.create()
-            layer:addChild(hintView)           
-            hintView.close = function ()
+            layer:addChild(hintView)          
+            hintView.close = function ()          
                 hintView:removeFromParent()
                 wrongWordFunction()
-            end
+            end   
         end
     end
 
@@ -395,21 +395,24 @@ function NewReviewBossMainLayer.create()
                 
             else
                 sprite_array[logic_location.x][logic_location.y].wrong()             
-                for j = 1, 3 do
-                    if answer == sprite_array[logic_location.x][j].character then
-                        sprite_array[logic_location.x][j].right()
-                	end
-                end
+--                for j = 1, 3 do
+--                    if answer == sprite_array[logic_location.x][j].character then
+--                        sprite_array[logic_location.x][j].right()
+--                	end
+--                end
                 
+
                 local sprite = layer:getChildByTag(s_CorePlayManager.currentReward)
                 local reward_miss = sp.SkeletonAnimation:create('spine/fuxiboss_bea_dispare.json', 'spine/fuxiboss_bea_dispare.atlas',1)
                 reward_miss:setPosition(sprite:getContentSize().width * 0.5, -10)
                 reward_miss:addAnimation(0, 'oudupus3', false)
                 sprite:addChild(reward_miss, 5)             
                 s_SCENE:callFuncWithDelay(0.2,function()
-                layer:removeChildByTag(s_CorePlayManager.currentReward + 1)
-                end)                   
-                s_CorePlayManager.currentReward = s_CorePlayManager.currentReward - 1             
+                    layer:removeChildByTag(s_CorePlayManager.currentReward + 1)
+                end)                    
+                s_CorePlayManager.minusReviewReward() 
+               
+
                 if s_CorePlayManager.currentReward <= 0 then
                     local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
                     local newReviewBossLayerChange = NewReviewBossLayerChange.create()

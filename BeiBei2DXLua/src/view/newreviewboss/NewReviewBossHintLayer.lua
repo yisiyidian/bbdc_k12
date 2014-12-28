@@ -130,15 +130,12 @@ function NewReviewBossHintLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
             local action1 = cc.MoveTo:create(0.2, cc.p(s_RIGHT_X ,s_DESIGN_HEIGHT * 0.81 ))
             hint_button:runAction(action1)
             local action2 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.4))
             white_back:runAction(action2)
-            s_SCENE:callFuncWithDelay(0.3,function()
-             layer.close()    
-            end)
-                      
+        elseif eventType == ccui.TouchEventType.ended then
+            layer.close()                          
         end
     end
     

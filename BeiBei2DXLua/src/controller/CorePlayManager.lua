@@ -297,6 +297,14 @@ function CorePlayManager.updateReviewRewardAndTotalWord()
     CorePlayManager.totalWord = CorePlayManager.totalWord + CorePlayManager.maxReviewWordCount
 end
 
+function CorePlayManager.minusReviewReward()
+    CorePlayManager.currentReward = CorePlayManager.currentReward  - 1
+end
+
+function CorePlayManager.initReviewReward()
+	CorePlayManager.currentReward = 3
+end
+
 function CorePlayManager.updateCurrentReviewIndex()
     CorePlayManager.currentReviewIndex = CorePlayManager.currentReviewIndex + 1
 end

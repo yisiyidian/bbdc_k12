@@ -528,32 +528,17 @@ function HomeLayer.create()
 
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then
-
-                if isFunctionUnlocked('level4') then
-                    
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-                    -- button sound
-                    playSound(s_sound_buttonEffect)
-
-                    book_back:removeAllChildren()
-                    book_back:addAnimation(0, 'animation', false)
-
-
-                    local action1 = cc.DelayTime:create(1.5)
-                    local action2 = cc.CallFunc:create(function()
-                        s_CorePlayManager.enterWordListLayer()
-                        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-                    end)
-                    layer:runAction(cc.Sequence:create(action1, action2))
-
-                else
-
-                    local Item_popup = require("popup/PopupModel")
-                    local item_popup = Item_popup.create(Site_From_Book)  
-                    s_SCENE:popup(item_popup)
-
-                end 
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                -- button sound
+                playSound(s_sound_buttonEffect)
+                book_back:removeAllChildren()
+                book_back:addAnimation(0, 'animation', false)
+                local action1 = cc.DelayTime:create(1.5)
+                local action2 = cc.CallFunc:create(function()
+                    s_CorePlayManager.enterWordListLayer()
+                    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                end)
+                layer:runAction(cc.Sequence:create(action1, action2))
             end
         end
 

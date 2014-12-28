@@ -81,6 +81,7 @@ function NewReviewBossFailPopup.create()
             s_SCENE:removeAllPopups()
             local candidate = s_CorePlayManager.getReviewBossCandidate()
             s_CorePlayManager.initNewReviewBossLayer(candidate)
+            s_CorePlayManager.initReviewReward()
             s_CorePlayManager.enterReviewBossMainLayer()
         end
     end
