@@ -74,6 +74,10 @@ function DataUser:ctor()
     self.clientData                        = {0}
     self.bookProgress                      = DataBookProgress.create()
     self.bookProgressObjectId              = ''
+
+    self.lastUpdateSummaryBossTime         = 0
+    self.summaryBossList                   = ''
+
 end
 
 function DataUser:addBeans(count)
