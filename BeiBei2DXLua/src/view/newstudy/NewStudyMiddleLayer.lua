@@ -61,7 +61,6 @@ function NewStudyMiddleLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.checkInReviewModel()
             s_CorePlayManager.enterNewStudyChooseLayer()
         end
     end

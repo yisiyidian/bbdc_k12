@@ -76,6 +76,7 @@ function NewStudySlideLayer.create()
                     if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
                         s_CorePlayManager.updateCurrentIndex()
                         s_CorePlayManager.initWordCandidate()
+                        s_CorePlayManager.checkInReviewModel()
                         s_CorePlayManager.enterNewStudyMiddleLayer()
                     else
                         s_CorePlayManager.updateCurrentIndex()
