@@ -34,10 +34,14 @@ function HomeLayer.create()
     -- data begin
     local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local chapterIndex      = string.sub(s_CURRENT_USER.currentChapterKey,8)+1
-    local chapterName       = s_DATA_MANAGER.chapters[chapterIndex].Name
-    local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6)+1
-    local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
+    
+    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    local currentChapterKey = bookProgress['chapter']
+    local currentLevelKey   = bookProgress['level']
+    
+    local chapterIndex      = string.sub(currentChapterKey, 8)+1
+    local levelIndex        = string.sub(currentLevelKey, 6)+1
+    local levelName         = "第"..chapterIndex.."章  第"..levelIndex.."关"
 
     local studyWordNum      = s_DATABASE_MGR.getTotalStudyWordsNum()
     local graspWordNum      = s_DATABASE_MGR.getTotalGraspWordsNum()
@@ -261,10 +265,10 @@ function HomeLayer.create()
     label4:setPosition(book_back_width/2, -100)
     book_back:addChild(label4)
     
-    -- local label = cc.Label:createWithSystemFont(levelName,"",28)
-    -- label:setColor(cc.c4b(0,0,0,255))
-    -- label:setPosition(bigWidth/2, 280)
-    -- backColor:addChild(label)
+    local label = cc.Label:createWithSystemFont(levelName,"",28)
+    label:setColor(cc.c4b(0,0,0,255))
+    label:setPosition(bigWidth/2, 280)
+    backColor:addChild(label)
 
     if s_CURRENT_USER.clientData[1] == 0 then
         button_total:setVisible(false)
