@@ -1,19 +1,19 @@
 
 
+local SliderView        = require("view.SliderView")
+local ScrollViewTest    = require("view.ScrollviewTest")
+
 local WordDetailInfo = class("WordDetailInfo", function()
     return cc.Layer:create()
 end)
 
 function WordDetailInfo.create(word)
-    -- system variate
+    local height = 520
 
-    local height = 750
-
-    local main = WordDetailInfo.new()
+    local main = cc.Layer:create()
     main:setContentSize(s_DESIGN_WIDTH, height)
-    main:setAnchorPoint(0.5,0)
+    main:setAnchorPoint(0.5,1)
     main:ignoreAnchorPointForPosition(false)
-
 
     local label_wordname
     local label_wordmeaning
@@ -92,9 +92,39 @@ function WordDetailInfo.create(word)
     main:addChild(label_sentencecn2)
     index_y = index_y - label_sentencecn2:getContentSize().height - 10
     
-    print("detail info layer height: "..index_y)
+    local realHeight = height-index_y
+    local layer
+    if realHeight <= height then
+        layer = WordDetailInfo.new()
+        layer:setContentSize(s_DESIGN_WIDTH, height)
+        
+        main:setPosition(s_DESIGN_WIDTH/2, height)
+        layer:addChild(main)
+    else
+        layer = WordDetailInfo.new()
+    
+        local tmp = cc.Layer:create()
 
-    return main
+        local sliderView = SliderView.create(s_DESIGN_WIDTH, height, realHeight)
+        tmp:addChild(sliderView)
+
+        local backColor = cc.Layer:create()
+        backColor:setContentSize(s_DESIGN_WIDTH, realHeight)  
+        backColor:setAnchorPoint(0.5,0.5)
+        backColor:ignoreAnchorPointForPosition(false)
+        backColor:setPosition(s_DESIGN_WIDTH/2,realHeight/2)
+        sliderView.scrollView:addChild(backColor)
+
+        main:setPosition(s_DESIGN_WIDTH/2, realHeight)
+        backColor:addChild(main)
+
+        tmp:setAnchorPoint(0.5,0.5)
+        tmp:ignoreAnchorPointForPosition(false) 
+        tmp:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2*1.5)
+        layer:addChild(tmp)
+    end
+    
+    return layer
 end
 
 
