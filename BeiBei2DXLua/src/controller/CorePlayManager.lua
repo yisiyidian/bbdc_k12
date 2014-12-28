@@ -39,16 +39,13 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
-function CorePlayManager.initTotalPlay()
---    local ziaoangTestLayer       = ZiaoangTestLayer.create()
---    s_SCENE:replaceGameLayer(ziaoangTestLayer)
-    
-    local candidate = CorePlayManager.getReviewBossCandidate()
-    if candidate == nil then
-        CorePlayManager.initNewStudyLayer()
-    else
-        CorePlayManager.initReviewRewardAndTotalWord()
+function CorePlayManager.initTotalPlay()  
+    local gameState = s_DATABASE_MGR.getGameState()
+    if gameState == s_gamestate_reviewbossmodel then
+        local candidate = CorePlayManager.getReviewBossCandidate()
         CorePlayManager.initNewReviewBossLayer(candidate)
+    elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel then
+        CorePlayManager.initNewStudyLayer()
     end
 end
 
@@ -267,6 +264,9 @@ function CorePlayManager.updateReviewBoss(bossID)
 end
 
 function CorePlayManager.initNewReviewBossLayer(candidate)
+    CorePlayManager.reward = 0
+    CorePlayManager.totalWord = 0
+    
     if candidate == nil then
         CorePlayManager.bossID                  = -1
         CorePlayManager.typeIndex               = 0
@@ -297,10 +297,6 @@ function CorePlayManager.initNewReviewBossLayer(candidate)
     CorePlayManager.enterReviewBossMainLayer()
 end
 
-function CorePlayManager.initReviewRewardAndTotalWord()
-    CorePlayManager.reward = 0
-    CorePlayManager.totalWord = 0
-end
 
 function CorePlayManager.updateReviewRewardAndTotalWord()
     CorePlayManager.reward = CorePlayManager.reward + CorePlayManager.currentReward 
