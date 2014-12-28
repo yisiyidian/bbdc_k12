@@ -17,7 +17,7 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-function SummaryBossLayer.create(levelConfig,chapter)   
+function SummaryBossLayer.create(chapter)   
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     
@@ -63,8 +63,8 @@ function SummaryBossLayer.create(levelConfig,chapter)
     local fakeTouchMoved
     local onTouchEnded
     
-    layer:initWordList(levelConfig)
-    layer:initBossLayer_back(levelConfig,chapter)
+    layer:initWordList()
+    layer:initBossLayer_back(chapter)
     
     local loadingTime = 0
     local loadingState = 0
@@ -84,14 +84,14 @@ function SummaryBossLayer.create(levelConfig,chapter)
         end       
         if loadingState == 0 then
             loadingState = 1
-            layer:initBossLayer_girl(levelConfig,chapter)
+            layer:initBossLayer_girl(chapter)
         elseif loadingState == 2 then
             loadingState = 3
             
             
         elseif loadingState == 4 then
             loadingState = 5
-            layer:initBossLayer_boss(levelConfig,chapter)
+            layer:initBossLayer_boss(chapter)
         elseif loadingState == 6 then
             loadingState = 7
             
@@ -523,7 +523,7 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
     end
 end
 
-function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
+function SummaryBossLayer:initBossLayer_back(chapter)
     self.globalLock = true
     --stage info
     self.girlAfraid = false
@@ -579,7 +579,7 @@ function SummaryBossLayer:initBossLayer_back(levelConfig,chapter)
     self.hole = hole
 end
 
-function SummaryBossLayer:initBossLayer_girl(levelConfig,chapter)
+function SummaryBossLayer:initBossLayer_girl(chapter)
     --add pauseButton
     local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
@@ -636,7 +636,7 @@ function SummaryBossLayer:initBossLayer_girl(levelConfig,chapter)
     
 end
 
-function SummaryBossLayer:initBossLayer_boss(levelConfig,chapter)
+function SummaryBossLayer:initBossLayer_boss(chapter)
     
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
@@ -712,8 +712,8 @@ function SummaryBossLayer:initBossLayer_boss(levelConfig,chapter)
     self.bossNode = bossNode
 end
 
-function SummaryBossLayer:initWordList(levelConfig)
-    local wordList = split(levelConfig.word_content,'|')
+function SummaryBossLayer:initWordList()
+    local wordList = s_DATABASE_MGR.getSummaryBossWordCandidate()
     local index = 1
 
     for i = 1, #wordList do
@@ -726,16 +726,16 @@ function SummaryBossLayer:initWordList(levelConfig)
 
     self.maxCount = #wordList
 
-    -- self.totalBlood = 0
-    -- for i = 1,#wordList do
-    --     self.totalBlood = self.totalBlood + string.len(wordList[i])
-    -- end
-    -- self.currentBlood = self.totalBlood
-    -- self.totalTime = math.ceil(self.totalBlood / 7) * 10 
-
-    self.totalBlood = levelConfig.summary_boss_hp
+    self.totalBlood = 0
+    for i = 1,#wordList do
+        self.totalBlood = self.totalBlood + string.len(wordList[i])
+    end
     self.currentBlood = self.totalBlood
-    self.totalTime = levelConfig.summary_boss_time
+    self.totalTime = math.ceil(self.totalBlood / 7) * 10 
+
+    -- self.totalBlood = levelConfig.summary_boss_hp
+    -- self.currentBlood = self.totalBlood
+    -- self.totalTime = levelConfig.summary_boss_time
 
 
     while true do

@@ -15,13 +15,15 @@ function RepeatChapterLayer.create(chapterKey)
 end
 
 function RepeatChapterLayer:ctor()
+--    print('repeateChapter: ')
+--    print_lua_table(s_CURRENT_USER)
     local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,self.chapterKey)
-    local s_layer_height = s_chapter0_base_height * 2--#chapterConfig / 10
+    local s_layer_height = s_chapter0_base_height * #chapterConfig / 10
     self:setContentSize(cc.size(s_MAX_WIDTH, s_layer_height))
-    self.levelPos = {}
-    for i = 1, 2 do
+    for i = 1, #chapterConfig / 10 do
         local ChapterLayer0 = require('view.level.ChapterLayer0')
         local chapterLayer = ChapterLayer0.create("end")
+        chapterLayer.chapterKey = self.chapterKey
         -- load level position
         local startLevelKey = 'level'..(i-1)*10
         chapterLayer:loadLevelPosition(startLevelKey)

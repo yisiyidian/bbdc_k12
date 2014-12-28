@@ -92,7 +92,7 @@ function WordDetailInfo.create(word)
     main:addChild(label_sentencecn2)
     index_y = index_y - label_sentencecn2:getContentSize().height - 10
     
-    
+    print("detail info layer height: "..index_y)
 
     return main
 end
