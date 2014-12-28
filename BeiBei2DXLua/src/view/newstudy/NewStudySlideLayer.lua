@@ -45,6 +45,9 @@ function NewStudySlideLayer.create()
     backColor:addChild(word_meaning_label)
 
     local success = function()
+        
+        playWordSound(wordname)
+    
         local normal = function()  
             -- db
             s_DATABASE_MGR.updateSlideNum()

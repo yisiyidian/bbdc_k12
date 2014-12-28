@@ -83,7 +83,7 @@ function WordDetailInfo.create(word)
     main:addChild(label_sentenceen2)
     index_y = index_y - label_sentenceen2:getContentSize().height - 10
 
-    label_sentencecn2 = cc.Label:createWithSystemFont(word.sentenceCn2,"",28)
+    label_sentencecn2 = cc.Label:createWithSystemFont(word.sentenceCn2.."这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试","",28)
     label_sentencecn2:setAnchorPoint(0,1)
     label_sentencecn2:setColor(cc.c4b(0,0,0,255))
     label_sentencecn2:setDimensions(text_length,0)
@@ -102,8 +102,10 @@ function WordDetailInfo.create(word)
         layer:addChild(main)
     else
         layer = WordDetailInfo.new()
+        layer:setContentSize(s_DESIGN_WIDTH, height)
     
         local tmp = cc.Layer:create()
+        tmp:setContentSize(s_DESIGN_WIDTH, height)
 
         local sliderView = SliderView.create(s_DESIGN_WIDTH, height, realHeight)
         tmp:addChild(sliderView)
@@ -119,8 +121,8 @@ function WordDetailInfo.create(word)
         backColor:addChild(main)
 
         tmp:setAnchorPoint(0.5,0.5)
-        tmp:ignoreAnchorPointForPosition(false) 
-        tmp:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2*1.5)
+        tmp:ignoreAnchorPointForPosition(false)
+        tmp:setPosition(s_DESIGN_WIDTH/2,height/2)
         layer:addChild(tmp)
     end
     

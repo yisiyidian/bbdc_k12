@@ -26,7 +26,7 @@ function NewReviewBossSummaryLayer.create()
     local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     layer:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
@@ -67,16 +67,16 @@ function NewReviewBossSummaryLayer.create()
     layer:addChild(fillColor4)
     
     local backGround = cc.Sprite:create("image/newreviewboss/weavebackgroundblue.png")
-    backGround:setPosition(bigWidth / 2,-200)
+    backGround:setPosition(s_DESIGN_WIDTH / 2,-200)
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0)
     layer:addChild(backGround)
     
-    local action1 = cc.MoveTo:create(0.4, cc.p(bigWidth / 2,0))
+    local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,0))
     backGround:runAction(action1)
     
     local summary_label = cc.Label:createWithSystemFont("小结（"..current_boss_number.."/"..totol_boss_number..")","",48)
-    summary_label:setPosition(bigWidth / 2,s_DESIGN_HEIGHT * 0.95 + 200)
+    summary_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.95 + 200)
     summary_label:setColor(cc.c4b(0,0,0,255))
     summary_label:ignoreAnchorPointForPosition(false)
     summary_label:setAnchorPoint(0.5,0.5)
@@ -86,12 +86,12 @@ function NewReviewBossSummaryLayer.create()
     summary_label:runAction(action1)
     
     local summury_back = cc.Sprite:create("image/newreviewboss/backgroundreviewboss1.png")
-    summury_back:setPosition(bigWidth / 2,-100)
+    summury_back:setPosition(s_DESIGN_WIDTH / 2,-100)
     summury_back:ignoreAnchorPointForPosition(false)
     summury_back:setAnchorPoint(0.5,0)
     layer:addChild(summury_back)
     
-    local action1 = cc.MoveTo:create(0.4, cc.p(bigWidth / 2,0))
+    local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,0))
     summury_back:runAction(action1)
     
     
@@ -125,8 +125,8 @@ function NewReviewBossSummaryLayer.create()
     listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBackGroundImageScale9Enabled(true)
-    listView:setContentSize(cc.size(bigWidth, s_DESIGN_HEIGHT * 0.7))
-    listView:setPosition(bigWidth / 2 - listView:getContentSize().width / 2.0 + 5,
+    listView:setContentSize(cc.size(s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.7))
+    listView:setPosition(s_DESIGN_WIDTH / 2 - listView:getContentSize().width / 2.0 + 5,
         s_DESIGN_HEIGHT *0.5 - listView:getContentSize().height / 2.0 - 25)
     listView:addScrollViewEventListener(scrollViewEvent)
     listView:setBounceEnabled(true)
@@ -247,39 +247,36 @@ function NewReviewBossSummaryLayer.create()
     local next_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.4, cc.p(bigWidth / 2,-200))
+            playSound(s_sound_buttonEffect)    
+            local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-200))
             backGround:runAction(action1)
-            
+
             local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,0,"yellow")
             rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9 + 200)
             layer:addChild(rbProgressBar)
             local action1 = cc.MoveBy:create(0.5,cc.p(0,-200))
             rbProgressBar:runAction(action1)   
-            
-            local action1 = cc.MoveTo:create(0.4, cc.p(bigWidth / 2,-400))
+
+            local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-400))
             summury_back:runAction(action1)
-            
-            s_SCENE:callFuncWithDelay(0.4,function()      
-                s_CorePlayManager.updateReviewBoss(s_CorePlayManager.bossID)
-                local candidate = s_CorePlayManager.getReviewBossCandidate() 
-                if candidate == nil then
-                    local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
-                    local newReviewBossLayerChange = NewReviewBossLayerChange.create()
-                    s_SCENE:popup(newReviewBossLayerChange)
-                else
-                    s_CorePlayManager.updateReviewRewardAndTotalWord()
-                    s_CorePlayManager.initNewReviewBossLayer(candidate)
-                    s_CorePlayManager.enterReviewBossMainLayer()
-                end
-            end)
+        elseif eventType == ccui.TouchEventType.ended then   
+            s_CorePlayManager.updateReviewBoss(s_CorePlayManager.bossID)  
+            s_CorePlayManager.updateReviewRewardAndTotalWord()  
+            local candidate = s_CorePlayManager.getReviewBossCandidate() 
+            s_CorePlayManager.initNewReviewBossLayer(candidate)
+            if candidate == nil then
+                local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
+                local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+                s_SCENE:popup(newReviewBossLayerChange)
+            else
+                s_CorePlayManager.enterReviewBossMainLayer()
+            end
         end
     end
     
     local nextButton = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","image/newreviewboss/buttonreviewboss1nextend.png","")
     nextButton:setScale9Enabled(true)
-    nextButton:setPosition(bigWidth / 2, 50)
+    nextButton:setPosition(s_DESIGN_WIDTH / 2, 50)
     nextButton:ignoreAnchorPointForPosition(false)
     nextButton:setAnchorPoint(0.5,0)
     nextButton:addTouchEventListener(next_click)
@@ -294,7 +291,7 @@ function NewReviewBossSummaryLayer.create()
     nextButton:addChild(nextButton_label)
     
     local seagrass = cc.Sprite:create("image/newreviewboss/frontgroundyellow1.png")
-    seagrass:setPosition(bigWidth / 2,0)
+    seagrass:setPosition(s_DESIGN_WIDTH / 2,0)
     seagrass:ignoreAnchorPointForPosition(false)
     seagrass:setAnchorPoint(0.5,0)
     layer:addChild(seagrass)
@@ -324,8 +321,8 @@ function NewReviewBossSummaryLayer.create()
 
     layer:scheduleUpdateWithPriorityLua(update, 0)
     
-    print("reward .."..s_CorePlayManager.currentReward)
-    print("total .."..s_CorePlayManager.reward)
+--    print("reward .."..s_CorePlayManager.currentReward)
+--    print("total .."..s_CorePlayManager.reward)
     
     return layer
 end
