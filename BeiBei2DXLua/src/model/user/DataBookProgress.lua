@@ -111,7 +111,7 @@ function DataBookProgress:getBookProgress(bookKey)
 end
 
 function DataBookProgress:computeCurrentProgress()
-    
+--    local bookWordTotalCount = 
 end
 
 return DataBookProgress
