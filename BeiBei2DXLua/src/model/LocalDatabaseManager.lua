@@ -644,6 +644,21 @@ function Manager.getPlayModel()
     return playModel
 end
 
+function Manager.getwrongWordListSize()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local size = 0
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        local wrongWordList =  row.wrongWordList
+        if wrongWordList ~= "" then
+            local tmp = split(wrongWordList, "|")
+            size = #tmp
+        end
+    end
+    return size
+end
+
 function Manager.getNewPlayState()
     local newPlayState = {}
     newPlayState.lastUpdate = nil

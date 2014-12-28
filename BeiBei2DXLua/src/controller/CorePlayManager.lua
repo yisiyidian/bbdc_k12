@@ -39,10 +39,7 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
-function CorePlayManager.initTotalPlay()
---    local ziaoangTestLayer       = ZiaoangTestLayer.create()
---    s_SCENE:replaceGameLayer(ziaoangTestLayer)
-    
+function CorePlayManager.initTotalPlay()    
     local candidate = CorePlayManager.getReviewBossCandidate()
     if candidate == nil then
         CorePlayManager.initNewStudyLayer()
