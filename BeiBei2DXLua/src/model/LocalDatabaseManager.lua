@@ -632,13 +632,19 @@ function Manager.printNewPlayState()
     print("</newPlayState>")
 end
 
-function Manager.getPlayModel()
+function Manager.getTodayPlayModel()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
 
     local playModel = 0
     for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        playModel = row.playModel
+        local lastUpdate = tostring(row.lastUpdate)
+        local lastUpdateDay = os.date("%x", lastUpdate)
+        if lastUpdateDay == today then
+            playModel = row.playModel
+        end
     end
     
     return playModel
@@ -983,7 +989,7 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
         return s_gamestate_reviewbossmodel
     end
     
-    local playModel = Manager.getPlayModel()
+    local playModel = Manager.getTodayPlayModel()
     if playModel == 0 then
         return s_gamestate_studymodel
     elseif playModel == 1 then

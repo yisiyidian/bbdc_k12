@@ -83,7 +83,7 @@ function WordDetailInfo.create(word)
     main:addChild(label_sentenceen2)
     index_y = index_y - label_sentenceen2:getContentSize().height - 10
 
-    label_sentencecn2 = cc.Label:createWithSystemFont(word.sentenceCn2.."这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试","",28)
+    label_sentencecn2 = cc.Label:createWithSystemFont(word.sentenceCn2,"",28)
     label_sentencecn2:setAnchorPoint(0,1)
     label_sentencecn2:setColor(cc.c4b(0,0,0,255))
     label_sentencecn2:setDimensions(text_length,0)
