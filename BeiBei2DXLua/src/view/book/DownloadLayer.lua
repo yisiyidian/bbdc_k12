@@ -72,26 +72,7 @@ function DownloadLayer.create(bookKey)
                s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
            end
            s_CURRENT_USER.bookKey = bookKey
-           s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-           s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
-           showProgressHUD()
-           s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
-               function (api, result)
-                   s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
-                       function (api, result)
-                           s_CorePlayManager.enterHomeLayer()
-                           hideProgressHUD()
-                       end,
-                       function (api, code, message, description)
-                           s_TIPS_LAYER:showSmall(message)
-                           hideProgressHUD()
-                       end)
-               end,
-               function (api, code, message, description)
-                   s_TIPS_LAYER:showSmall(message)
-                   hideProgressHUD()
-               end)
-           s_SCENE.touchEventBlockLayer.lockTouch()
+           s_CorePlayManager.enterHomeLayer()
         end
     end
 

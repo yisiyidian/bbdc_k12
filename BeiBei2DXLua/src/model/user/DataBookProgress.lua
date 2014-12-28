@@ -29,7 +29,7 @@ end
 
 function DataBookProgress:getBookCurrentLevelIndex()
     local progress = self:getBookProgress(s_CURRENT_USER.bookKey)
-    local levelIndex = progress['level']+0
+    local levelIndex = string.sub(progress['level'],6)+0
     if progress['chapter'] == 'chapter1' then
         levelIndex = levelIndex + 10
     elseif progress['chapter'] == 'chapter2' then
