@@ -576,7 +576,7 @@ function HomeLayer.create()
         local now_y = location.y
         
         if start_y < 0.1 * s_DESIGN_HEIGHT and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 1.0 then
-            if now_y - moveLength > start_y and not isDataShow then         
+            if now_y - moveLength > start_y and not isDataShow and viewIndex == 1 then         
                    isDataShow = true
                    button_friend:setEnabled(false)
                    button_main:setEnabled(false)
@@ -597,7 +597,7 @@ function HomeLayer.create()
             
         end
         if start_y > s_DESIGN_HEIGHT - 280 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 1.0 then
-            if now_y + moveLength < start_y and isDataShow then
+            if now_y + moveLength < start_y and isDataShow and viewIndex == 1 then
                 isDataShow = false
                 button_friend:setEnabled(true)
                 button_main:setEnabled(true)
@@ -646,7 +646,7 @@ function HomeLayer.create()
         if not isDataShow then
             if location.y ~= start_y or location.x ~= start_x then
                 return
-            else
+            elseif viewIndex == 1 then
                 isDataShow = true
                    button_friend:setEnabled(false)
                    button_main:setEnabled(false)
@@ -664,7 +664,7 @@ function HomeLayer.create()
                    end 
             end
 
-        elseif location.y >  s_DESIGN_HEIGHT-280 or (location.y == start_y and location.x == start_x) then
+        elseif location.y >  s_DESIGN_HEIGHT-280 or (location.y == start_y and location.x == start_x) and viewIndex == 1 then
             isDataShow = false
             button_friend:setEnabled(true)
             button_main:setEnabled(true)
