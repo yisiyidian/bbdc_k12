@@ -447,40 +447,42 @@ end
 
 
 function Manager.getSummaryBossWordCandidate()
-    local wordPool = Manager.getStudyWords()
+    local wrongWordPool = Manager.getWrongWords()
+    local graspWordPool = Manager.getGraspWords()
+
+    local wrongWordPoolSize = #wrongWordPool
+    local graspWordPoolSize = #graspWordPool
     
-    if #wordPool < 9 then
+    local wordPool = {}
+    if wrongWordPoolSize + graspWordPoolSize < 9 then
         return wordPool
     end
     
-    math.randomseed(os.time())
+    local tureWrongWordNum = 0
+    local tureGraspWordNum = 0
     
-    local randomIndexPool = {}
-    while true do
-        if #randomPool >= 9 then
-            break
-        end
-        
-        local randomIndex = math.random(1, #wordPool)
-        local isIn = false
-        for i = 1, #randomIndexPool do
-            if randomIndexPool[i] == randomIndex then
-                isIn = true
-                break
-            end
-        end
-        
-        if not isIn then
-            table.insert(randomIndexPool, randomIndex)
-        end
+    if wrongWordPoolSize < 3 then
+        tureWrongWordNum = wrongWordPoolSize
+        tureGraspWordNum = 9 - tureWrongWordNum
     end
     
-    local randomWordPool = {}
-    for i = 1, #randomIndexPool do
-        table.insert(randomWordPool, wordPool[randomIndexPool[i]])
+    if graspWordPoolSize < 6 then
+        tureGraspWordNum = graspWordPoolSize
+        tureWrongWordNum = 9 - tureGraspWordNum
     end
     
-    return randomWordPool
+    local index1 = randomMinN(tureWrongWordNum, wrongWordPoolSize)
+    local index2 = randomMinN(tureGraspWordNum, graspWordPoolSize)
+    
+    for i = 1, #index1 do
+        table.insert(wordPool, wrongWordPool[index1[i]])
+    end
+    
+    for i = 1, #index2 do
+        table.insert(wordPool, graspWordPool[index2[i]])
+    end
+    
+    return wordPool
 end
 
 
@@ -493,28 +495,62 @@ function Manager.getStudyWords()
     
     local wordPool = {}
     for i = 1, currentIndex-1 do
-        table.insert(wordList[i])
+        table.insert(wordPool, wordList[i])
     end
 
     return wordPool
 end
 
-function Manager.getGraspWords()
-    -- TODO
 
+function Manager.getWrongWords()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
-    local wordList = s_BookWord[bookKey]
-
-    local currentIndex = Manager.getCurrentIndex()
-
+    
     local wordPool = {}
-    for i = 1, currentIndex-1 do
-        table.insert(wordList[i])
+    
+    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        if row.wordBuffer ~= "" then
+            local wordList = split(row.wordBuffer, "|")
+            for i = 1, #wordList do
+                table.insert(wordPool, wordList[i])
+            end
+        end
+    end
+    
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        if row.wordList ~= "" then
+            local wordList = split(row.wordList, "|")
+            for i = 1, #wordList do
+                table.insert(wordPool, wordList[i])
+            end
+        end
+    end
+    
+    return wordPool
+end
+
+
+function Manager.getGraspWords()
+    local studyWordPool = Manager.getStudyWords()
+    local wrongWordPool = Manager.getWrongWords()
+    
+    local dict = {}
+    for i = 1, #wrongWordPool do
+        local wordname = wrongWordPool[i]
+        dict[wordname] = 1
+    end
+    
+    local wordPool = {}
+    for i = 1, #studyWordPool do
+        local wordname = studyWordPool[i]
+        if dict[wordname] == nil then
+            table.insert(wordPool, wordname)
+        end
     end
 
     return wordPool
 end
+
 
 -- record word info
 function Manager.printCurrentIndex()
@@ -809,15 +845,6 @@ end
 
 
 -- newstudy configuration
---Manager.database:exec[[
---        create table if not exists DataStudyConfiguration(
---            userId TEXT,
---            isAlterOn INTEGER,
---            slideNum INTEGER,
---            lastUpdate INTEGER
---        );
---    ]]
-
 function Manager.getIsAlterOn()
     local userId = s_CURRENT_USER.objectId
 
@@ -882,15 +909,6 @@ function Manager.updateSlideNum()
 end
 
 -- download state
----- CREATE table Download State
---Manager.database:exec[[
---        create table if not exists DataDownloadState(
---            bookKey TEXT,
---            isDownloaded INTEGER,
---            lastUpdate INTEGER
---        );
---    ]]
-
 function Manager.getDownloadState(bookKey)
     local isDownloaded = 0
     for row in Manager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
