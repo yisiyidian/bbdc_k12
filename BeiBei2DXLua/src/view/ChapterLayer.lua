@@ -64,7 +64,9 @@ function ChapterLayer:ctor()
     -- add player
     self:addPlayer()
     self:plotDecoration()
-    
+    -- scroll to current chapter level
+    local progress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    self:scrollLevelLayer(progress['chapter'],progress['level'],0)
     -- check unlock level
     self:checkUnlockLevel()
 end
@@ -153,7 +155,8 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
 end
 
 -- scroll listview to show the specific chapter and level
-function ChapterLayer:scrollLevelLayer(chapterKey, levelKey)
+function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
+    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     -- compute listView inner height
     local itemList = listView:getItems()
     local innerHeight = 0
@@ -161,7 +164,35 @@ function ChapterLayer:scrollLevelLayer(chapterKey, levelKey)
         innerHeight = innerHeight + itemList[i]:getContentSize().height
     end
     listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
-    
+    local levelIndex = string.sub(levelKey, 6)
+    local currentLevelCount = levelIndex + 1
+    local totalLevelCount = 0
+    if bookProgress['chapter'] == 'chapter0' then
+        totalLevelCount = 10
+    elseif bookProgress['chapter'] == 'chapter1' then
+        totalLevelCount = 30
+    elseif bookProgress['chapter'] == 'chapter2' then
+        totalLevelCount = 60
+    else
+        totalLevelCount = 100
+    end
+    if chapterKey == 'chapter0' then
+        currentLevelCount = currentLevelCount
+    elseif chapterKey == 'chapter1' then
+        currentLevelCount = currentLevelCount + 10
+    elseif chapterKey == 'chapter2' then
+        currentLevelCount = currentLevelCount + 30
+    elseif chapterKey == 'chapter3' then
+        currentLevelCount = currentLevelCount + 60
+    end
+    local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
+    print('currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
+    if scrollTime - 0 == 0 then
+        listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
+    else
+        listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,true)
+    end
+    listView:setInertiaScrollEnabled(true)
 end
 
 function ChapterLayer:plotUnlockCloudAnimation()
