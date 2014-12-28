@@ -268,7 +268,10 @@ function PersonalInfo:PLVI()
     local sub = to - from
     
     --local dayCount = math.floor(sub / (24 * 3600)) + 1
-    local dayCount = 6
+    local dayCount = tonumber(os.date('%w',os.time()))
+    if dayCount == 0 then
+        dayCount = 7
+    end
     local scale = 1
     
     local yBar = cc.Sprite:create("image/PersonalInfo/PLVI/lv_information_zuobiantiao_1.png")
@@ -285,17 +288,27 @@ function PersonalInfo:PLVI()
     
     local countArray = {}
     countArray[1] = 0
+    local loginData = s_CURRENT_USER.logInDatas
+    local daytime = os.time() - dayCount * 24 * 3600
+    if #loginData > 1 then
+        --local time = os.time() - dayCount * 24 * 3600
+        local time =daytime
+        for i = 1,#loginData - 1 do
+            for j = 1,7 do
+                local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
+                countArray[1] = countArray[1] + s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
+                time = time - 24 * 3600
+            end
+        end
+    end
     local dateArray = {'周一','周二','周三','周四','周五','周六','周日'}
     math.random(0,20)
-    local selectDate = s_CURRENT_USER.localTime
-    for i = 1 , 6 do 
+    local selectDate = daytime
+    for i = 2 , dayCount + 1 do 
         local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%y',selectDate))
-        --countArray[i + 1] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
-        countArray[i + 1] = 10 + i
+        countArray[i] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
         selectDate = selectDate + 24 * 3600
-        if i > 1 then
-            countArray[i + 1] = countArray[i] + countArray[i + 1]
-        end
+        countArray[i] = countArray[i - 1] + countArray[i]
     end
     local point = {}
     local selectPoint
@@ -640,7 +653,10 @@ end
 
 function PersonalInfo:XXTJ()
 
-    local totalDay = 6
+    local totalDay = s_DATABASE_MGR.getStudyDayNum()
+    if totalDay < 1 then
+        totalDay = 1
+    end
     local everydayWord = math.floor(s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / totalDay)
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local wordFinished = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)

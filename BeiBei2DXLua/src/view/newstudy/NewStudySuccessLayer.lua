@@ -56,7 +56,7 @@ function NewStudySuccessLayer.create()
     backColor:addChild(label_hint2)
 
     local girl = sp.SkeletonAnimation:create("res/spine/bb_happy_public.json", "res/spine/bb_happy_public.atlas", 1)
-    girl:setPosition(220, 250)
+    girl:setPosition(bigWidth/2 - 80, 250)
     backColor:addChild(girl)      
     girl:addAnimation(0, 'animation', true)
 

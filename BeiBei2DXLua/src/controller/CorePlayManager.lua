@@ -43,7 +43,6 @@ function CorePlayManager.initTotalPlay()
 --    local ziaoangTestLayer       = ZiaoangTestLayer.create()
 --    s_SCENE:replaceGameLayer(ziaoangTestLayer)
     
-
     local candidate = CorePlayManager.getReviewBossCandidate()
     if candidate == nil then
         CorePlayManager.initNewStudyLayer()
@@ -101,6 +100,9 @@ function CorePlayManager.initNewStudyLayer()
                 CorePlayManager.rightWordNum  = #CorePlayManager.rightWordList
                 CorePlayManager.wrongWordNum  = #CorePlayManager.wrongWordList
                 CorePlayManager.candidateNum  = #CorePlayManager.wordCandidate
+                print("right word list: "..lastPlayState.rightWordList)
+                print("wrong word list: "..lastPlayState.wrongWordList)
+                print("candidate word list: "..lastPlayState.wordCandidate)
                 CorePlayManager.enterNewStudyChooseLayer()
             end
         else
@@ -173,6 +175,8 @@ function CorePlayManager.initWordCandidate()
         table.insert(CorePlayManager.wordCandidate, CorePlayManager.wrongWordList[i])
     end
     CorePlayManager.candidateNum = CorePlayManager.wrongWordNum
+    
+    s_CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.updateWordCandidate(isInsertTail)
@@ -301,6 +305,14 @@ end
 function CorePlayManager.updateReviewRewardAndTotalWord()
     CorePlayManager.reward = CorePlayManager.reward + CorePlayManager.currentReward 
     CorePlayManager.totalWord = CorePlayManager.totalWord + CorePlayManager.maxReviewWordCount
+end
+
+function CorePlayManager.minusReviewReward()
+    CorePlayManager.currentReward = CorePlayManager.currentReward  - 1
+end
+
+function CorePlayManager.initReviewReward()
+	CorePlayManager.currentReward = 3
 end
 
 function CorePlayManager.updateCurrentReviewIndex()
