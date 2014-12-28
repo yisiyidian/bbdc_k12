@@ -403,6 +403,7 @@ function HomeLayer.create()
                if true then
                    local PersonalInfo = require("view.PersonalInfo")
                    local personalInfoLayer = PersonalInfo.create()
+                   personalInfoLayer:setPosition(-s_LEFT_X,0)
                    data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
                else
                    local Item_popup = require("popup/PopupModel")
