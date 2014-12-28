@@ -5,10 +5,10 @@ local  NewReviewBossHintLayer = class("NewReviewBossHintLayer", function ()
 end)
 
 
-function NewReviewBossHintLayer.create()
+function NewReviewBossHintLayer.create(currentWordName)
 
     -- word info
-    local currentWordName   = s_CorePlayManager.ReviewWordList[s_CorePlayManager.currentReviewIndex]
+--    local currentWordName   = s_CorePlayManager.ReviewWordList[s_CorePlayManager.currentReviewIndex]
     local currentWord       = s_WordPool[currentWordName]
     local wordname          = currentWord.wordName
     local wordSoundMarkEn   = currentWord.wordSoundMarkEn
@@ -30,10 +30,10 @@ function NewReviewBossHintLayer.create()
     local white_back
     local line_y
     
-    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     layer:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
@@ -176,15 +176,23 @@ function NewReviewBossHintLayer.create()
     local action2 = cc.EaseBackOut:create(action1)
     white_back:runAction(action2)
     
+    local  word_label = cc.Label:createWithSystemFont(wordname,"",32)  
+    word_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.9 - 0.06 ))
+    word_label:setColor(cc.c4b(0,0,0,255))
+    word_label:ignoreAnchorPointForPosition(false)
+    word_label:setAnchorPoint(0,0.5)
+    white_back:addChild(word_label)
+
+    
     local meaning_table = split(wordMeaning,"|||")
     table.foreachi(meaning_table, function(i, v) 
         local meaning_label = cc.Label:createWithSystemFont(meaning_table[i],"",26)  
-        meaning_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.9 - 0.06 * i))
+        meaning_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.8 - 0.06 * i))
         meaning_label:setColor(cc.c4b(0,0,0,255))
         meaning_label:ignoreAnchorPointForPosition(false)
         meaning_label:setAnchorPoint(0,0.5)
         white_back:addChild(meaning_label)
-        line_y = 0.9 - 0.06 * i
+        line_y = 0.8 - 0.06 * i
         end)     
         
     local gray_line = cc.LayerColor:create(cc.c4b(202,212,219,255),white_back:getContentSize().width *0.8,2)
