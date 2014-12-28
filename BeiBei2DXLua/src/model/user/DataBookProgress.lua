@@ -128,7 +128,7 @@ function DataBookProgress:computeCurrentProgress()
     local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
     local bookWordCurrentCount =  s_DATABASE_MGR.getCurrentIndex()-1
     local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
-    currentLevelIndex = 6
+    currentLevelIndex = 11
     local progress = {}
     if currentLevelIndex < 10 then
         progress['chapter'] = 'chapter0'
@@ -147,8 +147,9 @@ function DataBookProgress:computeCurrentProgress()
     return progress 
 end
 
-function DataBookProgress:updateDataToServer(bookKey)
+function DataBookProgress:updateDataToServer()
     local currentProgress = self:computeCurrentProgress()
+    bookKey = s_CURRENT_USER.bookKey
     if bookKey == s_BOOK_KEY_CET4 then
         self.CET4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
     elseif bookKey == s_BOOK_KEY_CET6 then
