@@ -46,7 +46,9 @@ function NewStudyWrongLayer.create()
     backColor:addChild(soundMark)
     
     local detailInfo = DetailInfo.create(currentWord)
-    detailInfo:setPosition(bigWidth/2, 0)  
+    detailInfo:setAnchorPoint(0.5,0.5)
+    detailInfo:ignoreAnchorPointForPosition(false)
+    detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
     local click_next_button = function(sender, eventType)

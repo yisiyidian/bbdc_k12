@@ -75,6 +75,8 @@ function NewStudySlideLayer.create()
                     s_CorePlayManager.updateWrongWordList(wordname)
                     if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
                         s_CorePlayManager.updateCurrentIndex()
+                        s_CorePlayManager.initWordCandidate()
+                        s_CorePlayManager.checkInReviewModel()
                         s_CorePlayManager.enterNewStudyMiddleLayer()
                     else
                         s_CorePlayManager.updateCurrentIndex()
@@ -88,7 +90,7 @@ function NewStudySlideLayer.create()
         end
     
         if s_DATABASE_MGR.getSlideNum() == 1 then
-            local guideAlter = GuideAlter.create(0, "划词加强记忆", "划词这一步是专门用来加强用户记忆的步骤，通过划词可以强化你对生词的印象。")
+            local guideAlter = GuideAlter.create(0, "划词加强记忆", "用来加强用户记忆的步骤，可以强化你对生词的印象。")
             guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
             backColor:addChild(guideAlter)
             

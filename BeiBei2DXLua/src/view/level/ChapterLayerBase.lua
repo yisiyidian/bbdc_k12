@@ -54,6 +54,88 @@ function ChapterLayerBase:createObjectForResource(t)
     return object
 end
 
+function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
+    local levelIndex = string.sub(levelKey, 6)
+    local lockSprite = self:getChildByName('lock'..levelIndex)
+    local lockLayer = self:getChildByName('lockLayer'..levelIndex)
+
+    local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
+    local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
+    local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),2)
+    local action5 = cc.MoveBy:create(0.1, cc.p(5,0))  
+    local action6 = cc.FadeOut:create(0.1)
+    local action = cc.Sequence:create(action1, action4, action5, action6, nil)
+    lockSprite:runAction(action)
+
+    local action7 = cc.DelayTime:create(0.6)
+    local action8 = cc.FadeOut:create(0.1)
+    lockLayer:runAction(cc.Sequence:create(action7, action8))
+    s_SCENE:callFuncWithDelay(0.7,function()
+        self:plotDecorationOfLevel(levelIndex-'0')
+    end)
+end
+
+
+function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
+    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
+    local levelPosition = self.levelPos[levelIndex]
+--    print('######decoration level position########')
+--    print('levelIndex:'..levelIndex)
+--    print('chapterKey'..self.chapterKey)
+--    print_lua_table(self.levelPos)
+--    print(self.levelPos[0])
+--    print(levelPosition)
+    -- plot level number
+    self:plotLevelNumber('level'..levelIndex)
+    -- check summary boss
+    if levelConfig['type'] == 1 then
+        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+        summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
+--                summaryboss:setAnchorPoint(1,1)
+        print('summaryboss position:'..summaryboss:getPosition())
+        summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
+        summaryboss:addAnimation(0, 'jianxiao', true)
+        summaryboss:setScale(0.7)
+        self:addChild(summaryboss, 125)
+    elseif levelIndex % 8 == 0 then
+        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
+        deco:addAnimation(0,'animation',true)
+        deco:setPosition(levelPosition.x+10,levelPosition.y+20)
+        self:addChild(deco, 130)
+    elseif levelIndex % 8 == 1 then
+        local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yezi.png')
+        deco:setPosition(levelPosition.x+10, levelPosition.y-30)
+        self:addChild(deco, 130)    
+    elseif levelIndex % 8 == 2 then
+        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
+        deco:addAnimation(0,'animation',true)
+        deco:setPosition(levelPosition.x-85,levelPosition.y)
+        self:addChild(deco, 130)    
+    elseif levelIndex % 8 == 3 then
+            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_pangxie.png')
+        deco:setPosition(levelPosition.x+50, levelPosition.y)
+        self:addChild(deco, 130)    
+    elseif levelIndex % 8 == 4 then
+        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
+        deco:addAnimation(0,'animation',true)
+        deco:setPosition(levelPosition.x-30,levelPosition.y+10)
+        self:addChild(deco, 130)    
+    elseif levelIndex % 8 == 5 then
+        local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yinliao.png')
+        deco:setPosition(levelPosition.x+70,levelPosition.y+ 40)
+        self:addChild(deco, 130)    
+    elseif levelIndex % 8 == 6 then
+        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
+        deco:addAnimation(0,'animation',true)
+        deco:setPosition(levelPosition.x+60,levelPosition.y+40)
+        self:addChild(deco, 130)    
+    elseif levelIndex % 8 == 7 then
+        local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
+        deco:setPosition(levelPosition.x+100,levelPosition.y+ 40)
+        self:addChild(deco, 130)       
+    end
+end
 
 function ChapterLayerBase:plotDecoration()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
@@ -65,63 +147,17 @@ function ChapterLayerBase:plotDecoration()
 --        print('!!!!!levelConfigType:'..levelConfig)
 --        print_lua_table(levelConfig)
         -- is locked
-        if levelIndex - currentLevelIndex > 0 or chapterIndex - currentChapterIndex > 0 then
+        if (levelIndex - currentLevelIndex > 0 and chapterIndex == currentChapterIndex)  or chapterIndex - currentChapterIndex > 0 then
             local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
+            lockIsland:setName('lockLayer'..levelIndex)
             local lock = cc.Sprite:create('image/chapter/chapter0/lock.png')
+            lock:setName('lock'..levelIndex)
             lockIsland:setPosition(levelPosition)
             lock:setPosition(levelPosition)
             self:addChild(lockIsland,120)
             self:addChild(lock,130)
         else
-            -- plot level number
-            self:plotLevelNumber('level'..levelIndex)
-            -- check summary boss
-            if levelConfig['type'] == 1 then
-                local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-                summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
---                summaryboss:setAnchorPoint(1,1)
-                print('summaryboss position:'..summaryboss:getPosition())
-                summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
-                summaryboss:addAnimation(0, 'jianxiao', true)
-                summaryboss:setScale(0.7)
-                self:addChild(summaryboss, 125)
-            elseif levelIndex % 8 == 0 then
-                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
-                deco:addAnimation(0,'animation',true)
-                deco:setPosition(levelPosition.x+10,levelPosition.y+20)
-                self:addChild(deco, 130)
-            elseif levelIndex % 8 == 1 then
-                local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yezi.png')
-                deco:setPosition(levelPosition.x+10, levelPosition.y-30)
-                self:addChild(deco, 130)    
-            elseif levelIndex % 8 == 2 then
-                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
-                deco:addAnimation(0,'animation',true)
-                deco:setPosition(levelPosition.x-85,levelPosition.y)
-                self:addChild(deco, 130)    
-            elseif levelIndex % 8 == 3 then
-                    local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_pangxie.png')
-                deco:setPosition(levelPosition.x+50, levelPosition.y)
-                self:addChild(deco, 130)    
-            elseif levelIndex % 8 == 4 then
-                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
-                deco:addAnimation(0,'animation',true)
-                deco:setPosition(levelPosition.x-30,levelPosition.y+10)
-                self:addChild(deco, 130)    
-            elseif levelIndex % 8 == 5 then
-                local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yinliao.png')
-                deco:setPosition(levelPosition.x+70,levelPosition.y+ 40)
-                self:addChild(deco, 130)    
-            elseif levelIndex % 8 == 6 then
-                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
-                deco:addAnimation(0,'animation',true)
-                deco:setPosition(levelPosition.x+60,levelPosition.y+40)
-                self:addChild(deco, 130)    
-            elseif levelIndex % 8 == 7 then
-                local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
-                deco:setPosition(levelPosition.x+100,levelPosition.y+ 40)
-                self:addChild(deco, 130)       
-            end
+            self:plotDecorationOfLevel(levelIndex)
         end
         -- decoration
         

@@ -12,7 +12,7 @@ end
 
 function DataBookProgress:ctor()
     self.className = 'DataBookProgress'
-    self.CET4 = 'cet4|chapter0|level9'
+    self.CET4 = 'cet4|chapter1|level3'
     self.CET6 = 'cet6|chapter0|level0'
     self.GMAT = 'gmat|chapter0|level0'
     self.GRE = 'gre|chapter0|level0'
@@ -108,6 +108,31 @@ function DataBookProgress:getBookProgress(bookKey)
         progressData['level'] = data[3]
         return progressData
     end
+end
+
+function DataBookProgress:computeCurrentProgress()
+    local bookWordTotalCount = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
+    local bookWordCurrentCount =  s_DATABASE_MGR.getCurrentIndex()-1
+    local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
+    currentLevelIndex = 6
+    local progress = {}
+    if currentLevelIndex < 10 then
+        progress['chapter'] = 'chapter0'
+        progress['level'] = 'level'..currentLevelIndex
+--        progress['']
+    elseif currentLevelIndex < 30 then 
+        progress['chapter'] = 'chapter1'
+        progress['level'] = 'level'..(currentLevelIndex-10)
+    elseif currentLevelIndex < 60 then
+        progress['chapter'] = 'chapter2'
+        progress['level'] = 'level'..(currentLevelIndex-30)
+    else
+        progress['chapter'] = 'chapter3'
+        progress['level'] = 'level'..(currentLevelIndex-60)
+    end
+    return progress
+    
 end
 
 return DataBookProgress
