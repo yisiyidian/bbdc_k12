@@ -74,7 +74,7 @@ end
 function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
-    if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- unlock chapter
+    if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- TODO unlock chapter
     
     elseif currentProgress['level'] ~= oldProgress['level'] then   -- unlock level
         local oldLevelIndex = string.sub(oldProgress['level'], 6)
@@ -94,7 +94,7 @@ function ChapterLayer:checkUnlockLevel()
         end
         s_SCENE:callFuncWithDelay(1, function()
             self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime)
-            
+            s_CURRENT_USER.bookProgress:updateDataToServer(s_CURRENT_USER.bookKey)
         end)
         s_SCENE:callFuncWithDelay(delayTime, function()
            self:addPlayerNotification("normal") 
@@ -109,6 +109,20 @@ function ChapterLayer:addPlayerNotification(type)  -- notification
     notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height+80)
     self.player:addChild(notification, 100)
     -- TODO show message according to type
+    if type == 'normal' then
+        local title = cc.Label:createWithSystemFont('当前任务:','',20)
+        title:setColor(cc.c3b(0,0,0))
+        title:ignoreAnchorPointForPosition(false)
+        title:setAnchorPoint(0,0)
+        title:setPosition(50,100)
+        notification:addChild(title)
+        local task_name = cc.Label:createWithSystemFont('当前任务:','',20)
+        task_name:setColor(cc.c3b(0,0,0))
+        task_name:ignoreAnchorPointForPosition(false)
+        task_name:setAnchorPoint(0,0)
+        task_name:setPosition(50,100)
+        notification:addChild(task_name)
+    end
 end
 
 function ChapterLayer:addPlayer()
@@ -231,6 +245,7 @@ function ChapterLayer:plotDecoration()
     self.chapterDic['chapter0']:addChild(boat, 130)
     self.chapterDic['chapter0']:addChild(fan,130)
     self.chapterDic['chapter0']:addChild(beibei,130)
+    
     --print('chapter0: '..self.chapterDic['chapter0']:getPosition())
 --    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
     --print('fanPosition:'..fanPosition)
