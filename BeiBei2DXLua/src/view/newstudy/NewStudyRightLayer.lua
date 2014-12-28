@@ -51,7 +51,7 @@ function NewStudyRightLayer.create()
                 s_CorePlayManager.enterNewStudyWrongLayer()
             end
             if s_DATABASE_MGR.getIsAlterOn() == 1 then
-                local guideAlter = GuideAlter.create(1, "依然复习？", "看来你和"..wordname.."还需要加深一下了解，我们会将它放入你的生词库中，并安排它接下来的复习。")
+                local guideAlter = GuideAlter.create(1, "依然复习？", "看来你对“"..wordname.."”还不熟，贝贝将把“"..wordname.."”放入生词库中，接下来的复习中，你们还会再见哦！")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter)
                 
@@ -88,9 +88,7 @@ function NewStudyRightLayer.create()
             end
         
             if s_DATABASE_MGR.getIsAlterOn() == 1 then
-                local guideAlter = GuideAlter.create(1, "不再复习？", "看来"..wordname.."对你来说太简单了，我们会将它放入你的熟词库中，该词以后不会在复习中出现。")
-                --    local guideAlter = GuideAlter.create(0, "划词加强记忆", "划词这一步是专门用来加强用户记忆的步骤，通过划词可以强化你对生词的印象。")
-                --    local guideAlter = GuideAlter.create(0, "生词进度条", "生词进度条代表的时你今天的生词积攒任务的完成进度")
+                local guideAlter = GuideAlter.create(1, "不再复习？", "看来你对“"..wordname.."”很熟悉，贝贝将把“"..wordname.."”放入熟词库中，该词以后不再出现！")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter)
                 
