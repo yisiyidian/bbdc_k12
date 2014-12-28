@@ -173,7 +173,7 @@ function BookLayer.create()
         
     end
 
-   local listView = ccui.ListView:create()
+    local listView = ccui.ListView:create()
     -- set list view ex direction
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(true)
