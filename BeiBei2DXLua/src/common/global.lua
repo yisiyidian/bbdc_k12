@@ -2,7 +2,11 @@
 local function _initConstant()
     -- number
     s_max_wrong_num_everyday  = 5
-
+    s_gamestate_reviewbossmodel = 1
+    s_gamestate_studymodel      = 2
+    s_gamestate_reviewmodel     = 3
+    s_gamestate_overmodel       = 4
+    
     --
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
     s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
