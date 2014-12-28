@@ -310,10 +310,11 @@ function HomeLayer.create()
 --            hideProgressHUD()
             local isSameDate = (os.date('%x',s_CURRENT_USER.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
             local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
-            local index = 100
-            if not isSameDate and #summaryBossList < 3 and index > 1 + #summaryBossList then
+            local index = self.bookProgress:getBookCurrentLevelIndex()
+            if not isSameDate and #summaryBossList < 3 and index > #summaryBossList then
+                s_CURRENT_USER.lastUpdateSummaryBossTime = os.time()
                 if #summaryBossList == 0 then
-                    s_CURRENT_USER.summaryBossList = tostring(math.random(1,index - 1)) 
+                    s_CURRENT_USER.summaryBossList = tostring(math.random(0,index - 1)) 
                 else
                     local id = math.random(1,index - 1 - #summaryBossList)
                     for i = 1,#summaryBossList do
@@ -333,8 +334,14 @@ function HomeLayer.create()
                     end
                 end
             end
+            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+                function(api,result)
+                    s_CorePlayManager.initTotalPlay()
+                end,
+                function(api, code, message, description)
+                    s_CorePlayManager.initTotalPlay()
+                end)
             
-            s_CorePlayManager.initTotalPlay()
         end
     end
     -- local ACCUMULATING_WORD = 2

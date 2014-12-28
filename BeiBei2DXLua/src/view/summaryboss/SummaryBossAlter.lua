@@ -4,7 +4,7 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(win,wordCount,blood,index)
+function SummaryBossAlter.create(win,wordCount,blood,index,levelIndex)
     
     local layer = SummaryBossAlter.new()
     layer.wordCount = wordCount
@@ -13,6 +13,29 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     layer.index = index
 
     if layer.win then
+
+        local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
+        for i = 1,#summaryBossList do
+            if tonumber(summaryBossList[i]) == levelIndex then
+                table.remove(summaryBossList,i)
+                break
+            end
+        end
+        s_CURRENT_USER.summaryBossList = ''
+        if #summaryBossList > 0 then
+            s_CURRENT_USER.summaryBossList = summaryBossList[1]
+                    
+        end
+        if #summaryBossList > 1 then
+            for i = 2,#summaryBossList do
+                s_CURRENT_USER.summaryBossList = s_CURRENT_USER.summaryBossList..'|'..summaryBossList[i]
+            end
+        end
+        s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end)
         -- local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
         -- s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
         -- if levelData then
