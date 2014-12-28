@@ -334,7 +334,7 @@ function NewReviewBossMainLayer.create()
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             local HintView = require("view.newreviewboss.NewReviewBossHintLayer")
-            local hintView = HintView.create()
+            local hintView = HintView.create(currentWordName)
             layer:addChild(hintView,2)          
             hintView.close = function ()          
                 hintView:removeFromParent()

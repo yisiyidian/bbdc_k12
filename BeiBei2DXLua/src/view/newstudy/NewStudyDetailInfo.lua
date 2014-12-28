@@ -102,8 +102,10 @@ function WordDetailInfo.create(word)
         layer:addChild(main)
     else
         layer = WordDetailInfo.new()
+        layer:setContentSize(s_DESIGN_WIDTH, height)
     
         local tmp = cc.Layer:create()
+        tmp:setContentSize(s_DESIGN_WIDTH, height)
 
         local sliderView = SliderView.create(s_DESIGN_WIDTH, height, realHeight)
         tmp:addChild(sliderView)
@@ -119,8 +121,8 @@ function WordDetailInfo.create(word)
         backColor:addChild(main)
 
         tmp:setAnchorPoint(0.5,0.5)
-        tmp:ignoreAnchorPointForPosition(false) 
-        tmp:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2*1.5)
+        tmp:ignoreAnchorPointForPosition(false)
+        tmp:setPosition(s_DESIGN_WIDTH/2,height/2)
         layer:addChild(tmp)
     end
     

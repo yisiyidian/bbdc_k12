@@ -632,6 +632,39 @@ function Manager.printNewPlayState()
     print("</newPlayState>")
 end
 
+function Manager.getTodayPlayModel()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
+
+    local playModel = 0
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        local lastUpdate = tostring(row.lastUpdate)
+        local lastUpdateDay = os.date("%x", lastUpdate)
+        if lastUpdateDay == today then
+            playModel = row.playModel
+        end
+    end
+    
+    return playModel
+end
+
+function Manager.getwrongWordListSize()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+
+    local size = 0
+    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        local wrongWordList =  row.wrongWordList
+        if wrongWordList ~= "" then
+            local tmp = split(wrongWordList, "|")
+            size = #tmp
+        end
+    end
+    return size
+end
+
 function Manager.getNewPlayState()
     local newPlayState = {}
     newPlayState.lastUpdate = nil
@@ -943,6 +976,26 @@ function Manager.updateDownloadState(bookKey, isDownloaded)
     else
         local query = "UPDATE DataDownloadState SET isDownloaded = "..isDownloaded..", lastUpdate = "..time.." WHERE bookKey = '"..bookKey.."' ;"    
         Manager.database:exec(query)
+    end
+end
+
+--s_gamestate_reviewbossmodel = 1
+--s_gamestate_studymodel      = 2
+--s_gamestate_reviewmodel     = 3
+--s_gamestate_overmodel       = 4
+
+function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
+    if Manager.getTodayRemainBossNum() > 0 then
+        return s_gamestate_reviewbossmodel
+    end
+    
+    local playModel = Manager.getTodayPlayModel()
+    if playModel == 0 then
+        return s_gamestate_studymodel
+    elseif playModel == 1 then
+        return s_gamestate_reviewmodel
+    else
+        return s_gamestate_overmodel
     end
 end
 

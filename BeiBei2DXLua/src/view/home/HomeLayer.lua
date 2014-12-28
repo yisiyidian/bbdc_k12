@@ -312,22 +312,22 @@ function HomeLayer.create()
             s_CorePlayManager.initTotalPlay()
         end
     end
-    local ACCUMULATING_WORD = 1
-    local LEARNING_WORD = 2
-    local REVIEWING_WORD = 3
-    local COMPLETE_MISSION = 4
-    local state = ACCUMULATING_WORD
+    -- local ACCUMULATING_WORD = 2
+    -- local LEARNING_WORD = 3
+    -- local REVIEWING_WORD = 1
+    -- local COMPLETE_MISSION = 4
+    local state = s_DATABASE_MGR.getGameState()
 
     local playImg = 'image/homescene/bigbutton.png'
-    if state == COMPLETE_MISSION then
+    if state == s_gamestate_overmodel then
         playImg = 'image/homescene/buttonfinish.png'
     end
     local state_str
-    if state == ACCUMULATING_WORD then
+    if state == s_gamestate_studymodel then
         state_str = '积累生词'
-    elseif state == LEARNING_WORD then
-        state_str = '学习生词'
-    elseif state == REVIEWING_WORD then
+    elseif state == s_gamestate_reviewmodel then
+        state_str = '趁热打铁'
+    elseif state == s_gamestate_reviewbossmodel then
         state_str = '复习旧词'
     else
         state_str = '  完成  '

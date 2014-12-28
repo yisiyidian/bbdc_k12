@@ -306,8 +306,11 @@ function FriendList:addList()
         head:setScaleY(0.8)
         head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(head)
-        
-        local fri_name = cc.Label:createWithSystemFont(self.array[i].username,'',32)
+        local name = self.array[i].username
+        if self.array[i].userType == USER_TYPE_QQ then
+            name = self.array[i].nickName
+        end
+        local fri_name = cc.Label:createWithSystemFont(name,'',32)
         fri_name:setScaleX(1 / scale)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
