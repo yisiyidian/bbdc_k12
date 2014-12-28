@@ -415,10 +415,10 @@ function HomeLayer.create()
         end
     end
 
-    button_data = ccui.Button:create("image/homescene/main_bottom.png","image/homescene/main_bottom.png","")
+    button_data = cc.Sprite:create("image/homescene/main_bottom.png")
     button_data:setAnchorPoint(0.5,0)
     button_data:setPosition(bigWidth/2, 0)
-    button_data:addTouchEventListener(button_data_clicked)
+    --button_data:addTouchEventListener(button_data_clicked)
     backColor:addChild(button_data)
     
     data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT - 280)  
@@ -523,6 +523,7 @@ function HomeLayer.create()
     local moveLength = 100
     local moved = false
     local start_x = nil
+    local start_y = nil
     local onTouchBegan = function(touch, event)
         if has_study and viewIndex == 1 then
             AnalyticsLib()
@@ -560,6 +561,7 @@ function HomeLayer.create()
 
         local location = layer:convertToNodeSpace(touch:getLocation())
         start_x = location.x
+        start_y = location.y
         moved = false
         return true
     end
@@ -571,6 +573,45 @@ function HomeLayer.create()
     
         local location = layer:convertToNodeSpace(touch:getLocation())
         local now_x = location.x
+        local now_y = location.y
+        
+        if start_y < 0.1 * s_DESIGN_HEIGHT and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 1.0 then
+            if now_y - moveLength > start_y and not isDataShow then         
+                   isDataShow = true
+                   button_friend:setEnabled(false)
+                   button_main:setEnabled(false)
+                   button_data:setLocalZOrder(2)
+                   button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
+                   if true then
+                       local PersonalInfo = require("view.PersonalInfo")
+                       local personalInfoLayer = PersonalInfo.create()
+                       personalInfoLayer:setPosition(-s_LEFT_X,0)
+                       data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
+                   else
+                       local Item_popup = require("popup/PopupModel")
+                       local item_popup = Item_popup.create(Site_From_Information)  
+                       s_SCENE:popup(item_popup)
+                   end 
+                   return
+            end
+            
+        end
+        if start_y > s_DESIGN_HEIGHT - 280 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 1.0 then
+            if now_y + moveLength < start_y and isDataShow then
+                isDataShow = false
+                button_friend:setEnabled(true)
+                button_main:setEnabled(true)
+                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+                local action2 = cc.CallFunc:create(function()
+                   button_data:setLocalZOrder(0)
+                   data_back:removeChildByName('PersonalInfo')
+                end)
+                button_data:runAction(cc.Sequence:create(action1, action2))
+                return
+            end
+            
+        end
+
         if now_x - moveLength > start_x then
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -603,8 +644,27 @@ function HomeLayer.create()
     local onTouchEnded = function(touch,event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if not isDataShow then
-            return
-        elseif location.y >  s_DESIGN_HEIGHT-280 then
+            if location.y ~= start_y or location.x ~= start_x then
+                return
+            else
+                isDataShow = true
+                   button_friend:setEnabled(false)
+                   button_main:setEnabled(false)
+                   button_data:setLocalZOrder(2)
+                   button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
+                   if true then
+                       local PersonalInfo = require("view.PersonalInfo")
+                       local personalInfoLayer = PersonalInfo.create()
+                       personalInfoLayer:setPosition(-s_LEFT_X,0)
+                       data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
+                   else
+                       local Item_popup = require("popup/PopupModel")
+                       local item_popup = Item_popup.create(Site_From_Information)  
+                       s_SCENE:popup(item_popup)
+                   end 
+            end
+
+        elseif location.y >  s_DESIGN_HEIGHT-280 or (location.y == start_y and location.x == start_x) then
             isDataShow = false
             button_friend:setEnabled(true)
             button_main:setEnabled(true)
