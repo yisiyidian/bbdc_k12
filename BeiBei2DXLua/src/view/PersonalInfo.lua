@@ -653,7 +653,10 @@ end
 
 function PersonalInfo:XXTJ()
 
-    local totalDay = 6
+    local totalDay = s_DATABASE_MGR.getStudyDayNum()
+    if totalDay < 1 then
+        totalDay = 1
+    end
     local everydayWord = math.floor(s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / totalDay)
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local wordFinished = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
