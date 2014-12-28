@@ -110,4 +110,8 @@ function DataBookProgress:getBookProgress(bookKey)
     end
 end
 
+function DataBookProgress:computeCurrentProgress()
+    
+end
+
 return DataBookProgress
