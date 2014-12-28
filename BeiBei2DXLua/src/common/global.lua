@@ -1,7 +1,7 @@
 
 local function _initConstant()
     -- number
-    s_max_wrong_num_everyday  = 5
+    s_max_wrong_num_everyday  = 20
 
     --
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
