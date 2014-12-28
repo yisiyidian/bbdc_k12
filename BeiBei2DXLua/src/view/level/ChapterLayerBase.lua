@@ -128,7 +128,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     elseif levelIndex % 8 == 6 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
         deco:addAnimation(0,'animation',true)
-        deco:setPosition(levelPosition.x+60,levelPosition.y+40)
+        deco:setPosition(levelPosition.x,levelPosition.y-20)
         self:addChild(deco, 130)    
     elseif levelIndex % 8 == 7 then
         local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
