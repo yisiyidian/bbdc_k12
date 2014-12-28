@@ -13,14 +13,15 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     layer.index = index
 
     if layer.win then
-        local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
-        s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
-        if levelData then
-            local isPassed = levelData.isPassed
-            if isPassed == 0 then
-                s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-            end
-        end
+        -- local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
+        -- s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
+        -- if levelData then
+        --     local isPassed = levelData.isPassed
+        --     if isPassed == 0 then
+        --         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+        --     end
+        -- end
+        
     end
     
     --disable pauseBtn

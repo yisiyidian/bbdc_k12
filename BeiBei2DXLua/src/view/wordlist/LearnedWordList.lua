@@ -215,7 +215,7 @@ function LearnedWordList:ctor()
             end
         end
         -- add word list
-        local studyWords = s_DATABASE_MGR.getStudyWords(s_CURRENT_USER.bookKey)
+        local studyWords = s_DATABASE_MGR.getStudyWords()
         for i = 1, #self.levelArray[indexConfig] do
             local word = self.levelArray[indexConfig][i]
             local wordKey = self.levelKey[indexConfig]..'|'..word

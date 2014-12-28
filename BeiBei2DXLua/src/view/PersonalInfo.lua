@@ -18,7 +18,7 @@ function PersonalInfo:ctor()
     self.totalDay = 1
     local moved = false
     local start_y = nil
-    local colorArray = {cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
+    local colorArray = {cc.c4b(56,182,236,255),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
     local titleArray = {'单词学习日增长','登陆贝贝天数','学习效率统计'}
     self.intro_array = {}
 
@@ -30,7 +30,7 @@ function PersonalInfo:ctor()
     pageView:setVertical(true)   
     pageView:setCustomScrollThreshold(s_DESIGN_HEIGHT / 4) 
     
-    for i = 1 , 3 do
+    for i = 1 , 4 do
         local layout = ccui.Layout:create()
         layout:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT))
 
@@ -48,9 +48,9 @@ function PersonalInfo:ctor()
             scrollButton:runAction(cc.RepeatForever:create(move))
 
         end
-        local title = cc.Label:createWithSystemFont(titleArray[4 - i],'',30)
+        local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
         title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
-        title:setColor(colorArray[4 - i])
+        title:setColor(colorArray[5 - i])
         layout:addChild(title)
         table.insert(self.intro_array, intro)
 
@@ -68,7 +68,9 @@ function PersonalInfo:ctor()
                 self.intro_array[curPage+1]:removeAllChildren()
             end
             lastPage = curPage
-            if curPage == 2 then
+            if curPage == 3 then
+                self:PLVM()
+            elseif curPage == 2 then
                 self:PLVI()
             elseif curPage == 1 then
                 self:login()
@@ -102,6 +104,155 @@ function PersonalInfo:ctor()
     -- local eventDispatcher = s_SCENE.popupLayer:getEventDispatcher()
     -- eventDispatcher:addEventListenerWithSceneGraphPriority(listener, s_SCENE.popupLayer)
     
+end
+
+function PersonalInfo:PLVM()
+    local updateTime = 0
+    local tolearnCount = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
+    local toMasterCount = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,nil)
+    local learnPercent = tolearnCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    
+    local back = self.intro_array[4]
+    local circleBack = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_white.png')
+    circleBack:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.42 * s_DESIGN_HEIGHT)
+    back:addChild(circleBack)
+    
+    local toLearn = cc.ProgressTo:create(learnPercent,learnPercent * 100)
+    local toMaster = cc.ProgressTo:create(masterPercent,masterPercent * 100)
+
+    local backProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_ligheblue.png'))
+    backProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
+    backProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    backProgress:setReverseDirection(true)
+    backProgress:setPercentage(0)
+    backProgress:runAction(toLearn)
+    circleBack:addChild(backProgress)
+    
+    local circleBackBig = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_big.png')
+    circleBackBig:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
+    circleBack:addChild(circleBackBig)
+    
+    local circleBackSmall = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_small.png')
+    circleBackSmall:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
+    circleBack:addChild(circleBackSmall)
+    
+    local learnStr = string.format('已学习%d',tolearnCount)
+    local masterStr = string.format('已掌握%d',toMasterCount)
+    for i = 1,#learnStr - 9 do
+        local label = cc.Label:createWithSystemFont(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i),'',28)
+        label:setRotation((1 - i) * 5)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + 5 * (i - 1) / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + 5 * (i - 1) / 180)))
+        circleBack:addChild(label,100)
+    end
+    
+    for i = 1,3 do
+        local label = cc.Label:createWithSystemFont(string.sub(learnStr,3 * (i - 1) + 1,3 * i),'',28)
+        local angle = (#learnStr - 10) * 5 + (4 - i) * 8
+        label:setRotation(-angle)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + angle / 180)))
+        circleBack:addChild(label,100)
+    end
+    
+    for i = 1,#masterStr - 9 do
+        local label = cc.Label:createWithSystemFont(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i),'',28)
+        label:setRotation((1 - i) * 6)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * (i - 1) / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * (i - 1) / 180)))
+        circleBack:addChild(label,100)
+    end
+
+    for i = 1,3 do
+        local label = cc.Label:createWithSystemFont(string.sub(masterStr,3 * (i - 1) + 1,3 * i),'',28)
+        local angle = (#masterStr - 10) * 6 + (4 - i) * 10
+        label:setRotation(-angle)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
+        circleBack:addChild(label,100)
+    end
+    
+    local learnProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_big_dark.png'))
+    learnProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
+    learnProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    learnProgress:setReverseDirection(true)
+    learnProgress:setPercentage(0)
+    learnProgress:runAction(cc.ProgressTo:create(learnPercent,learnPercent * 100))
+    circleBack:addChild(learnProgress)
+    
+    local masterProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_small_dark.png'))
+    masterProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
+    masterProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    masterProgress:setReverseDirection(true)
+    masterProgress:setPercentage(0)
+    masterProgress:runAction(toMaster)
+    circleBack:addChild(masterProgress)
+    
+    local smallCircle1 = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_smallcircle_blue1.png')
+    smallCircle1:setScale(1,42 / 41)
+    smallCircle1:setPosition(0.5 * circleBackBig:getContentSize().width,461.5)
+    circleBackBig:addChild(smallCircle1)
+    
+    local smallCircle2 = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_smallcircle_blue2.png')
+    smallCircle2:setScale(1,42 / 41)
+    smallCircle2:setPosition(0.5 * circleBackSmall:getContentSize().width,344)
+    circleBackSmall:addChild(smallCircle2)
+    
+    local smallCircleTail = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_smallcircle_blue1.png')
+    smallCircleTail:setScale(1,42 / 41)
+    smallCircleTail:setPosition(0.5 * circleBackBig:getContentSize().width + 220 * math.cos((0.5 + 2 * 0) * math.pi),0.5 * circleBackBig:getContentSize().height + 220 * math.sin((0.5 + 2 * 0) * math.pi))
+    circleBackBig:addChild(smallCircleTail)
+    if tolearnCount == 0 then
+        smallCircleTail:setVisible(false)
+        smallCircle1:setVisible(false)
+    end
+    
+    local smallCircleTail2 = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_smallcircle_blue2.png')
+    smallCircleTail2:setScale(1,42 / 41)
+    smallCircleTail2:setPosition(0.5 * circleBackSmall:getContentSize().width + 161 * math.cos((0.5 + 2 * 0) * math.pi),0.5 * circleBackSmall:getContentSize().height + 161 * math.sin((0.5 + 2 * 0) * math.pi))
+    circleBackSmall:addChild(smallCircleTail2)
+    
+    if toMasterCount == 0 then
+        smallCircleTail2:setVisible(false)
+        smallCircle2:setVisible(false)
+    end
+    
+    local line = cc.LayerColor:create(cc.c4b(0,0,0,255),200,1)
+    line:ignoreAnchorPointForPosition(false)
+    line:setAnchorPoint(0.5,0.5)
+    line:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
+    circleBack:addChild(line)
+    
+    local label_study = cc.Label:createWithSystemFont("已学单词","",36)
+    label_study:ignoreAnchorPointForPosition(false)
+    label_study:setAnchorPoint(0.5,1)
+    label_study:setColor(cc.c4b(0,0,0 ,255))
+    label_study:setPosition(0.5 * circleBack:getContentSize().width,0.49 * circleBack:getContentSize().height)
+    circleBack:addChild(label_study)
+    
+    local label_book = cc.Label:createWithSystemFont(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name,"",28)
+    label_book:ignoreAnchorPointForPosition(false)
+    label_book:setAnchorPoint(0.5,1)
+    label_book:setColor(cc.c4b(0,0,0 ,255))
+    label_book:setPosition(0.5 * circleBack:getContentSize().width,0.4 * circleBack:getContentSize().height)
+    circleBack:addChild(label_book)
+    
+    local label_percent = cc.Label:createWithSystemFont("0%","",48)
+    label_percent:ignoreAnchorPointForPosition(false)
+    label_percent:setAnchorPoint(0.5,0)
+    label_percent:setColor(cc.c4b(0,0,0 ,255))
+    label_percent:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
+    circleBack:addChild(label_percent)
+    
+    local function update(delta)
+        local per = '%'
+        local str = string.format("%.1f%s",learnProgress:getPercentage(),per)
+        label_percent:setString(str)
+        smallCircleTail:setPosition(0.5 * circleBackBig:getContentSize().width + 220 * math.cos((0.5 + 0.02 * learnProgress:getPercentage()) * math.pi),0.5 * circleBackBig:getContentSize().height + 220 * math.sin((0.5 + 0.02 * learnProgress:getPercentage()) * math.pi))
+        smallCircleTail2:setPosition(0.5 * circleBackSmall:getContentSize().width + 161 * math.cos((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi),0.5 * circleBackSmall:getContentSize().height + 161 * math.sin((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi))
+    end
+    back:scheduleUpdateWithPriorityLua(update, 0)
 end
 
 

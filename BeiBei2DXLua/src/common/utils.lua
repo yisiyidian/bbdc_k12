@@ -18,6 +18,30 @@
 
 ------------------------------------------------------------------------------------------------------------
 
+function randomMinN(M, N) -- random M numbers from 1 to N, N must >= M
+    if N < M then
+        return {}
+    end
+    
+    math.randomseed(os.time())
+    
+    local randomPool = {}
+    local randomPoolSize = N
+    for i = 1, N do
+        table.insert(randomPool, i)
+    end
+    
+    local indexPool = {} 
+    for i = 1, M do
+        local randomIndex = math.random(1, randomPoolSize)
+        table.insert(indexPool, randomPool[randomIndex])
+        table.remove(randomPool, randomIndex)
+        randomPoolSize = randomPoolSize - 1
+    end
+    
+    return indexPool
+end
+
 function changeTableToString(wordTable)
     if #wordTable == 0 then
         return ""
