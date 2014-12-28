@@ -631,7 +631,7 @@ function HomeLayer.create()
         if not isDataShow then
             if location.y ~= start_y or location.x ~= start_x then
                 return
-            elseif viewIndex == 1 then
+            elseif viewIndex == 1 and location.y < 0.1 * s_DESIGN_HEIGHT then
                 isDataShow = true
                    button_friend:setEnabled(false)
                    button_main:setEnabled(false)
