@@ -92,6 +92,10 @@ function ChapterLayer:checkUnlockLevel()
             end)
             delayTime = delayTime + 1
         end
+        s_SCENE:callFuncWithDelay(1, function()
+            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime)
+            
+        end)
         s_SCENE:callFuncWithDelay(delayTime, function()
            self:addPlayerNotification("normal") 
         end)   
@@ -134,7 +138,7 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
         self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
         self.chapterDic[chapterKey]:setPosition(cc.p(0,0))
-        print('contentSize:'..self.chapterDic[chapterKey]:getContentSize().height)
+        --print('contentSize:'..self.chapterDic[chapterKey]:getContentSize().height)
         local custom_item = ccui.Layout:create()
         custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
         custom_item:setName(chapterKey)  
@@ -186,7 +190,7 @@ function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
         currentLevelCount = currentLevelCount + 60
     end
     local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
-    print('currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
+    --print('currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
     if scrollTime - 0 == 0 then
         listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
     else
