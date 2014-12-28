@@ -99,7 +99,7 @@ function NewReviewBossSummaryLayer.create()
     local meaning = {}
     for i = 1,s_CorePlayManager.maxReviewWordCount  do
         word[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordName
-        meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaningSmall
+        meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaning
     end
     
 --    for i = 1,20  do
@@ -108,16 +108,16 @@ function NewReviewBossSummaryLayer.create()
 --    end
 
     local scrollViewEvent = function (sender, evenType)
-        local current_y = (0 - sender:getInnerContainer():getPositionY())
-        local current_height = sender:getInnerContainerSize().height
-        local current_percent = current_y / current_height + 0.2
-        local top_y = summury_back:getContentSize().height * 0.98
-        local bottom_y = summury_back:getContentSize().height * 0.28
-        local changetoposition_y = bottom_y + (top_y - bottom_y) * current_percent
-        
-        local action1 = cc.MoveTo:create(0.02,cc.p(summury_back:getContentSize().width * 0.98,changetoposition_y))
-        percentBar:stopAllActions()
-        percentBar:runAction(action1)
+--        local current_y = (0 - sender:getInnerContainer():getPositionY())
+--        local current_height = sender:getInnerContainerSize().height
+--        local current_percent = current_y / current_height + 0.2
+--        local top_y = summury_back:getContentSize().height * 0.98
+--        local bottom_y = summury_back:getContentSize().height * 0.28
+--        local changetoposition_y = bottom_y + (top_y - bottom_y) * current_percent
+--        
+--        local action1 = cc.MoveTo:create(0.02,cc.p(summury_back:getContentSize().width * 0.98,changetoposition_y))
+--        percentBar:stopAllActions()
+--        percentBar:runAction(action1)
     end
 
 
@@ -167,7 +167,9 @@ function NewReviewBossSummaryLayer.create()
         
         local richtext = ccui.RichText:create()
 
-        local current_word_wordMeaning = cc.LabelTTF:create (meaning[i],
+        local opt_meaning = string.gsub(meaning[i],"|||","\n")
+
+        local current_word_wordMeaning = cc.LabelTTF:create (opt_meaning,
             "Helvetica",24, cc.size(summury_back:getContentSize().width *0.9, 200), cc.TEXT_ALIGNMENT_LEFT)
 
         current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
@@ -256,7 +258,7 @@ function NewReviewBossSummaryLayer.create()
             local action1 = cc.MoveBy:create(0.5,cc.p(0,-200))
             rbProgressBar:runAction(action1)   
             
-            local action1 = cc.MoveTo:create(0.4, cc.p(bigWidth / 2,-200))
+            local action1 = cc.MoveTo:create(0.4, cc.p(bigWidth / 2,-400))
             summury_back:runAction(action1)
             
             s_SCENE:callFuncWithDelay(0.4,function()      
@@ -302,6 +304,28 @@ function NewReviewBossSummaryLayer.create()
     else
         nextButton_label:setString("下一组")
     end
+    
+    local timer = 0
+    local function update(delta)
+        local current_y = (0 - listView:getInnerContainer():getPositionY())
+        local current_height = listView:getInnerContainerSize().height
+        local current_percent = current_y / current_height + 0.2
+        local top_y = summury_back:getContentSize().height * 0.98
+        local bottom_y = summury_back:getContentSize().height * 0.28
+        local changetoposition_y = bottom_y + (top_y - bottom_y) * current_percent
+
+        timer = timer +  delta
+        if timer > 0.2 then
+            local action1 = cc.MoveTo:create(timer,cc.p(summury_back:getContentSize().width * 0.98,changetoposition_y))
+            percentBar:runAction(action1)
+        timer = 0
+        end
+    end
+
+    layer:scheduleUpdateWithPriorityLua(update, 0)
+    
+    print("reward .."..s_CorePlayManager.currentReward)
+    print("total .."..s_CorePlayManager.reward)
     
     return layer
 end

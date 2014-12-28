@@ -61,14 +61,18 @@ function ChapterLayer:ctor()
     if string.sub(bookProgress['chapter'], 8) - 3 >= 0 then
         self:addChapterIntoListView('chapter3')
     end
+    -- add player
+    self:addPlayer()
+    self:plotDecoration()
 end
 
 function ChapterLayer:addPlayer()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    self.player:setPosition(currentChapterLayer:getPlayerPositionForLevel(s_CURRENT_USER.currentLevelKey))
-    player:setScale(0.4)
-    currentChapterLayer:addChild(player, 5)
+    local position = self.chapterDic[bookProgress['chapter']]:getLevelPosition(bookProgress['level'])
+    self.player:setPosition(position.x+100,position.y)
+    self.player:setScale(0.4)
+    self.chapterDic[bookProgress['chapter']]:addChild(self.player, 130)
 end
 
 function ChapterLayer:addChapterIntoListView(chapterKey)
@@ -124,6 +128,25 @@ function ChapterLayer:addTopBounce()
         blueLayerColor:setPosition((s_DESIGN_WIDTH-bounceSectionSize.width)/2,s_DESIGN_HEIGHT)
         self:addChild(blueLayerColor,-1)
     --end
+end
+
+function ChapterLayer:plotDecoration()
+    -- plot user and boat
+    local boat = cc.Sprite:create('image/chapter/chapter0/boat.png')
+    local fan = cc.Sprite:create('image/chapter/chapter0/fan.png')
+    local beibei = cc.Sprite:create('image/chapter/chapter0/startPlayer.png')
+    local level0Position = self.chapterDic['chapter0']:getLevelPosition('level0')
+    local boatPosition = cc.p(level0Position.x, level0Position.y+150)
+    local fanPosition = cc.p(boatPosition.x+40, boatPosition.y+80)
+    boat:setPosition(boatPosition)
+    fan:setPosition(fanPosition)
+    beibei:setPosition(cc.p(fanPosition.x-40,fanPosition.y-50))
+    self.chapterDic['chapter0']:addChild(boat, 130)
+    self.chapterDic['chapter0']:addChild(fan,130)
+    self.chapterDic['chapter0']:addChild(beibei,130)
+    print('chapter0: '..self.chapterDic['chapter0']:getPosition())
+--    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
+    --print('fanPosition:'..fanPosition)
 end
 
 function ChapterLayer:addBottomBounce()
