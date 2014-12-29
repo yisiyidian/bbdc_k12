@@ -73,32 +73,33 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
                                 
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
-                    updateInfo:setString("Version file updating.")
+                    updateInfo:setString("检查版本中")
                 elseif assetId==cc.AssetsManagerExStatic.MANIFEST_ID then
-                    updateInfo:setString("Manifest updating")   
+                    updateInfo:setString("获取更新列表中")   
                 else
                     percent = string.format("%.2f",event:getPercent())
-                    updateInfo:setString("Updating: "..percent.."%")   
+                    updateInfo:setString("文件更新中: "..percent.."%")   
                 end                
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_DOWNLOAD_MANIFEST or 
                 eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_PARSE_MANIFEST then
                 
-                updateInfo:setString("Fail to download manifest file, update skipped.")                
-                print("Fail to download manifest file, update skipped.")                
+                updateInfo:setString("获取更新列表失败，跳过更新")                
+                print("获取更新列表失败，跳过更新")                
                 DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
             
-                updateInfo:setString("Already up to date")  
-                print("Already up to date")  
+                updateInfo:setString("已是最新版本")  
+                print("已是最新版本")  
                 DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
             
-                updateInfo:setString("Update completed")     
-                print("Update completed")     
+                updateInfo:setString("更新完成")     
+                print("更新完成")     
                 DynamicUpdate.loginUpdateCompleted()                           
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
             
-                updateInfo:setString("Asset ", event:getAssetId(), ", ", event:getMessage())                                                
+                updateInfo:setString("文件更新失败，失败文件: "..event:getAssetId()..", 失败信息为"..event:getMessage())                                                
+                print("文件更新失败，失败文件: "..event:getAssetId()..", 失败信息为"..event:getMessage())     
                 DynamicUpdate.loginUpdateCompleted()                              
             end
         end

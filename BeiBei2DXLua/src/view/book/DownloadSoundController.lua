@@ -88,4 +88,9 @@ function DownloadSoundController.getBookSoundsPath(bookType)
     return storagePath.."/"..bookType
 end
 
+function DownloadSoundController.getDownloadPercent()
+
+    return downloadPercent 
+
+end
 return DownloadSoundController

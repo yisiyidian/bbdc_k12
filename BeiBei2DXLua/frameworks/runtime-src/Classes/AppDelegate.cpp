@@ -99,20 +99,21 @@ bool AppDelegate::applicationDidFinishLaunching()
     }
 #endif
     
+    std::string writablePath = FileUtils::getInstance()->getWritablePath();
+    std::string pathSrc= writablePath + ("AssetsManager/ServerAssets/src");
+    std::string pathRes= writablePath + ("AssetsManager/ServerAssets/res");
+    std::string bookSoundRes = writablePath + ("BookSounds");
+    FileUtils::getInstance()->addSearchPath(pathSrc,true);
+    FileUtils::getInstance()->addSearchPath(pathRes,true);
+    FileUtils::getInstance()->addSearchPath(bookSoundRes,true);
+    engine->addSearchPath(pathSrc.c_str());
+    engine->addSearchPath(pathRes.c_str());
+    CCLOG("the pathSrc of cpp is %s", pathSrc.c_str());
+    
 #if (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0 && DEBUG_RUNTIME > 0)
     // NOTE:Please don't remove this call if you want to debug with Cocos Code IDE
     startRuntime();
 #else
-    
-
-    std::string writablePath = FileUtils::getInstance()->getWritablePath();
-    std::string pathSrc= writablePath + ("AssetsManager/ServerAssets/src");
-    std::string pathRes= writablePath + ("AssetsManager/ServerAssets/res");
-    FileUtils::getInstance()->addSearchPath(pathSrc,true);
-    FileUtils::getInstance()->addSearchPath(pathRes,true);
-    engine->addSearchPath(pathSrc.c_str());
-    engine->addSearchPath(pathRes.c_str());
-    CCLOG("the pathSrc of cpp is %s", pathSrc.c_str());
     
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
 #endif
