@@ -102,24 +102,9 @@ start = function ()
 -- *************************************
 if test_code == 1 then
     local startApp = function ()
-        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
-            local LoadingView = require("view.LoadingView")
-            local loadingView = LoadingView.create()
-            s_SCENE:replaceGameLayer(loadingView) 
-            if s_CURRENT_USER.usertype == USER_TYPE_QQ then
-                s_SCENE:logInByQQAuthData()
-            else
-                s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-            end
-        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create(true)
-            s_SCENE:replaceGameLayer(introLayer)
-        else
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create(false)
-            s_SCENE:replaceGameLayer(introLayer)
-        end
+        local LoadingView = require("view.LoadingView")
+        local loadingView = LoadingView.create()
+        s_SCENE:replaceGameLayer(loadingView) 
     end
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         local SplashView = require("view.SplashView")

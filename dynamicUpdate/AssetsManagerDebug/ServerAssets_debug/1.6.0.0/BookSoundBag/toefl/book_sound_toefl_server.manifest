@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://yisiyidian.com/BookSoundBag/",
+	"remoteManifestUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_toelf_server.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_toelf_version.manifest", 
+	"version" : "1.6.0.0", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : {	
+		"toelf.zip" : {
+			"md5" : "bf14ff41bf78710d1bc57081a25372e2",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}
