@@ -105,15 +105,14 @@ bool AppDelegate::applicationDidFinishLaunching()
 #else
     
 
-    auto fileUtil = FileUtils::getInstance();
-    std::string path1("AssetsManager/ServerAssets/src");
-    std::string path2("AssetsManager/ServerAssets/res");
-    std::string path3 = fileUtil->getWritablePath()+path1;
-    std::string path4 = fileUtil->getWritablePath()+path2;
-    fileUtil->addSearchPath(path3);
-    fileUtil->addSearchPath(path4);
-    engine->addSearchPath(path3.c_str());
-    CCLOG("the path3 of cpp is %s", path3.c_str());
+    std::string writablePath = FileUtils::getInstance()->getWritablePath();
+    std::string pathSrc= writablePath + ("AssetsManager/ServerAssets/src");
+    std::string pathRes= writablePath + ("AssetsManager/ServerAssets/res");
+    FileUtils::getInstance()->addSearchPath(pathSrc,true);
+    FileUtils::getInstance()->addSearchPath(pathRes,true);
+    engine->addSearchPath(pathSrc.c_str());
+    engine->addSearchPath(pathRes.c_str());
+    CCLOG("the pathSrc of cpp is %s", pathSrc.c_str());
     
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
 #endif
