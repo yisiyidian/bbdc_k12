@@ -392,4 +392,9 @@ function ChapterLayer:addBottomBounce()
     listView:addChild(self.chapterDic['rightCloud'],100)
 end
 
+function ChapterLayer:addBeansUI()
+    self.beans = cc.Sprite:create('image/chapter/chapter0/top.png')
+    
+end
+
 return ChapterLayer
