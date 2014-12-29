@@ -110,6 +110,44 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
 --                summaryboss:setAnchorPoint(1,1)
+        -- chapter layer
+        local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
+        notification:setPosition(summaryboss:getContentSize().width/2,summaryboss:getContentSize().height+80)
+        summaryboss:addChild(notification, 100)
+        local title = cc.Label:createWithSystemFont('当前任务','',28)
+        title:setColor(cc.c3b(0,0,0))
+        title:ignoreAnchorPointForPosition(false)
+        title:setAnchorPoint(0,0)
+        title:setPosition(30,110)
+        notification:addChild(title)
+        local task_name = cc.Label:createWithSystemFont('打败总结boss ','',25)
+        task_name:setColor(cc.c3b(0,0,0))
+        task_name:ignoreAnchorPointForPosition(false)
+        task_name:setAnchorPoint(0,0)
+        task_name:setPosition(30,80)
+        notification:addChild(task_name)
+        -- define touchEvent
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO go to summaryboss
+--                s_CorePlayManager.initTotalPlay()
+            end
+        end
+        local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
+        start:setScale9Enabled(true)
+        start:setPosition(50,40)
+        start:setAnchorPoint(0,0)
+        notification:addChild(start)
+        start:addTouchEventListener(touchEvent)
+        
+        -- add button title
+        local button_title = cc.Label:createWithSystemFont('继续学习','',20)
+        --button_title:setColor(cc.c3b(0,0,0))
+        button_title:ignoreAnchorPointForPosition(false)
+        button_title:setAnchorPoint(0.5,0.5)
+        button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
+        start:addChild(button_title)
+        -- !!!
         print('summaryboss position:'..summaryboss:getPosition())
         summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
         summaryboss:addAnimation(0, 'jianxiao', true)
