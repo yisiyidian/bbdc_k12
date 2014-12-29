@@ -7,6 +7,9 @@ DownloadSoundController = {}
 --
 local storagePath = cc.FileUtils:getInstance():getWritablePath().."BookSounds"
 local downloadMes = ""
+local downloadState = false
+local am = nil
+local listener
 local downloadPercent = 0
 
 local function initAssetsManagerByBookType(bookType)
@@ -41,56 +44,90 @@ local function initAssetsManagerByBookType(bookType)
 end
 
 function DownloadSoundController.beginSoundDownloadUpdate(bookType)
-    local am = initAssetsManagerByBookType(bookType)
+
+    storagePath = storagePath.."/"..bookType
+    am = initAssetsManagerByBookType(bookType)
+    am:retain()
+    
+    print("Booksound storagePath is "..storagePath)
     if not am:getLocalManifest():isLoaded() then
-        updateInfo:setString("Fail to update assets, step skipped.")
+        downloadMes = "找不到下载配置文件，下载失败"
+        downloadState = false
     else
         local function onUpdateEvent(event)
             local eventCode = event:getEventCode()
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
 
-                downloadMes = "No local manifest file found, skip assets update."
+                downloadMes = "找不到本地单词包清单配置文件，下载取消"
+                downloadState = false
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
 
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
-                    downloadMes = "Version file updating."
+                    downloadMes = "单词包版本文件更新中"
                 elseif assetId==cc.AssetsManagerExStatic.MANIFEST_ID then
-                    downloadMes = "Manifest updating"
+                    downloadMes = "获取单词包清单文件"
                 else
                     downloadPercent = string.format("%.2f",event:getPercent())
-                    downloadMes = "Updating: "..downloadPercent.."%"   
+                    downloadMes = "下载中: "..downloadPercent.."%"   
                 end                
+                
+                downloadState = false
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_DOWNLOAD_MANIFEST or 
                 eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_PARSE_MANIFEST then
 
-                downloadMes = "Fail to download manifest file, update skipped."                
+                downloadMes = "获取单词包清单文件失败, 下载取消." 
+                downloadState = false               
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
 
-                downloadMes = "Already up to date"  
+                downloadMes = "已是最新单词包"  
+                downloadState = true
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
 
-                downloadMes = "Update completed"     
+                downloadMes = "下载完成"     
+                downloadState = true
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
 
-                downloadMes = "Asset ", event:getAssetId(), ", ", event:getMessage()                                                
-            end
-            
+                downloadMes = "文件: "..event:getAssetId()..", 下载失败，失败信息为"..event:getMessage()  
+                downloadState = false                                              
+            end  
             print(downloadMes)
         end
 
-        local listerner = cc.EventListenerAssetsManagerEx:create(am,onUpdateEvent)
-        cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listerner,1)
+        listener = cc.EventListenerAssetsManagerEx:create(am,onUpdateEvent)
+        cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listener,1)
         am:update()
     end
 end
 
-function DownloadSoundController.getBookSoundsPath(bookType)
-    return storagePath.."/"..bookType
+function DownloadSoundController.getDownloadMessage()
+    return downloadMes
 end
+
+function DownloadSoundController.getDownloadState()
+    return downloadState
+end 
 
 function DownloadSoundController.getDownloadPercent()
-
-    return downloadPercent 
-
+    return downloadPercent
 end
+
+function DownloadSoundController.killDownload(bookType)
+    if listener ~= nil then
+        cc.Director:getInstance():getEventDispatcher():removeEventListener(listener)
+    end
+    
+    if am ~= nil then
+        am:release()
+    end
+    
+    DownloadSoundController.deleteBookSound(bookType)    
+end
+
+
+function DownloadSoundController.deleteBookSound(bookType)
+
+    cc.FileUtils:getInstance():removeDirectory(cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookType.."/")
+    print("删除单词包成功")
+end
+
 return DownloadSoundController

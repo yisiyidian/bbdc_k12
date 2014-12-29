@@ -1,5 +1,6 @@
 require("cocos.init")
 require("common.global")
+require("view.book.DownloadSoundController")
 
 local DownloadAlter        = require("view.book.DownloadAlter")
 
@@ -111,7 +112,9 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
             
                 downloadAlter.sure = function()
-                    percent = 30
+                    print("bookKey is "..bookKey)
+--                    DownloadSoundController.beginSoundDownloadUpdate(bookKey)
+                    percent = DownloadSoundController.getDownloadPercent()
                     progress:setPercentage(percent)
                     progress_clicked:setPercentage(percent)
                     progress:setVisible(true)
@@ -127,6 +130,7 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
                 
                 downloadAlter.sure = function()
+--                    DownloadSoundController.killDownload(bookKey)
                     button_title:setString(title1)
                     download_state = 0
                     progress:setVisible(false)
@@ -138,6 +142,7 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
 
                 downloadAlter.sure = function()
+--                    DownloadSoundController.deleteBookSound(bookKey)
                     button_title:setString(title1)
                     download_state = 0
                     progress:setVisible(false)

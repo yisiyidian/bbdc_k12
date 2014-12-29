@@ -3,6 +3,8 @@ DynamicUpdate = {}
 
 local storagePath = cc.FileUtils:getInstance():getWritablePath().."AssetsManager"
 local searchPath = storagePath.."/ServerAssets"
+local am = nil
+local listener = nil
 
 function DynamicUpdate.initUpdateLabel()
 
@@ -52,7 +54,6 @@ end
 
 function DynamicUpdate.beginLoginUpdate(updateInfo)
     
-    local am
     if RELEASE_APP==DEBUG_FOR_TEST or RELEASE_APP==RELEASE_FOR_TEST   then
         am = cc.AssetsManagerEx:create("manifest/project_debug.manifest",storagePath)
         am:retain()
@@ -104,10 +105,20 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
             end
         end
 
-        local listerner = cc.EventListenerAssetsManagerEx:create(am,onUpdateEvent)
-        cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listerner,1)
+        listener = cc.EventListenerAssetsManagerEx:create(am,onUpdateEvent)
+        cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listener,1)
         am:update()
     end
+end
+
+function DynamicUpdate.killUpdate()
+    if listener ~= nil then
+        cc.Director:getInstance():getEventDispatcher():removeEventListener(listener)
+    end
+
+    if am ~= nil then
+        am:release()
+    end    
 end
 
 return DynamicUpdate
