@@ -88,8 +88,25 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 --    print(levelPosition)
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
-    -- check summary boss
-    if levelConfig['type'] == 1 then
+    -- check random summary boss
+    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+    local currentIndex = levelIndex
+    if self.chapterKey == 'chapter1' then
+        currentIndex = currentIndex + 10
+    elseif self.chapterKey == 'chapter2' then
+        currentIndex = currentIndex + 30
+    elseif self.chapterKey == 'chapter3' then
+        currentIndex = currentIndex + 60
+    end
+    local checkSummaryBoss = false
+    for i = 1, #summaryboss do
+        if summaryboss[i] - currentIndex == 0 then
+            checkSummaryBoss = true
+            break
+        end
+    end
+--    if levelConfig['type'] == 1 then
+    if checkSummaryBoss then
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
 --                summaryboss:setAnchorPoint(1,1)
