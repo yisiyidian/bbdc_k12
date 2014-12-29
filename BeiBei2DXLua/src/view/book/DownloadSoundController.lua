@@ -51,24 +51,24 @@ function DownloadSoundController.beginSoundDownloadUpdate(bookType)
     
     print("Booksound storagePath is "..storagePath)
     if not am:getLocalManifest():isLoaded() then
-        downloadMes = "找不到下载配置文件，下载失败"
+        downloadMes = "贝贝找不到下载配置文件，下载失败"
         downloadState = false
     else
         local function onUpdateEvent(event)
             local eventCode = event:getEventCode()
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
 
-                downloadMes = "找不到本地单词包清单配置文件，下载取消"
+                downloadMes = "贝贝找不到本地单词包清单配置文件，下载取消"
                 downloadState = false
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
 
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
-                    downloadMes = "单词包版本文件更新中"
+                    downloadMes = "贝贝正在挑选新的单词包版本文件"
                 elseif assetId==cc.AssetsManagerExStatic.MANIFEST_ID then
-                    downloadMes = "获取单词包清单文件"
+                    downloadMes = "贝贝正在获取新的单词包清单文件"
                 else
                     downloadPercent = string.format("%.2f",event:getPercent())
-                    downloadMes = "下载中: "..downloadPercent.."%"   
+                    downloadMes = "单词打包运送中: "..downloadPercent.."%"   
                 end                
                 
                 downloadState = false
@@ -83,7 +83,7 @@ function DownloadSoundController.beginSoundDownloadUpdate(bookType)
                 downloadState = true
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
 
-                downloadMes = "下载完成"     
+                downloadMes = "最新的单词包到货了"     
                 downloadState = true
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
 

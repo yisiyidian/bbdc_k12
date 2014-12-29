@@ -63,23 +63,23 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
     end
 
     if not am:getLocalManifest():isLoaded() then
-        updateInfo:setString("Fail to update assets, step skipped.")
+        updateInfo:setString("找不到贝贝的新东东，使用旧装备")
     else
         local function onUpdateEvent(event)
             local eventCode = event:getEventCode()
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
                 
-                updateInfo:setString("No local manifest file found, skip assets update.")
+                updateInfo:setString("找不到贝贝的新东东，使用旧装备")
                 DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
                                 
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
-                    updateInfo:setString("检查版本中")
+                    updateInfo:setString("贝贝正在检查新版本")
                 elseif assetId==cc.AssetsManagerExStatic.MANIFEST_ID then
-                    updateInfo:setString("获取更新列表中")   
+                    updateInfo:setString("贝贝正在获取新的版本资源列表")   
                 else
                     percent = string.format("%.2f",event:getPercent())
-                    updateInfo:setString("文件更新中: "..percent.."%")   
+                    updateInfo:setString("贝贝正在给新版本添料: "..percent.."%")   
                 end                
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_DOWNLOAD_MANIFEST or 
                 eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_PARSE_MANIFEST then
@@ -89,13 +89,13 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
                 DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
             
-                updateInfo:setString("已是最新版本")  
-                print("已是最新版本")  
+                updateInfo:setString("贝贝登场")  
+                print("贝贝登场")  
                 DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
             
-                updateInfo:setString("更新完成")     
-                print("更新完成")     
+                updateInfo:setString("天空一个巨响，贝贝最新版登场")     
+                print("天空一个巨响，贝贝最新版登场")     
                 DynamicUpdate.loginUpdateCompleted()                           
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
             

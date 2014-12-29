@@ -108,7 +108,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     FileUtils::getInstance()->addSearchPath(bookSoundRes,true);
     engine->addSearchPath(pathSrc.c_str());
     engine->addSearchPath(pathRes.c_str());
-    CCLOG("the pathSrc of cpp is %s", pathSrc.c_str());
     
 #if (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0 && DEBUG_RUNTIME > 0)
     // NOTE:Please don't remove this call if you want to debug with Cocos Code IDE

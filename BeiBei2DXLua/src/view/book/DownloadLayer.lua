@@ -112,7 +112,6 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
             
                 downloadAlter.sure = function()
-                    print("bookKey is "..bookKey)
 --                    DownloadSoundController.beginSoundDownloadUpdate(bookKey)
                     percent = DownloadSoundController.getDownloadPercent()
                     progress:setPercentage(percent)
