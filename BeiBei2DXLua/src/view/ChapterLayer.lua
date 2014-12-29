@@ -300,6 +300,8 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
         listView:addChild(self.chapterDic[chapterKey]) 
     end
+    
+
 end
 
 -- scroll listview to show the specific chapter and level
@@ -375,7 +377,7 @@ function ChapterLayer:plotDecoration()
     self.chapterDic['chapter0']:addChild(boat, 130)
     self.chapterDic['chapter0']:addChild(fan,130)
     self.chapterDic['chapter0']:addChild(beibei,130)
-    
+    self:addBeansUI()
     --print('chapter0: '..self.chapterDic['chapter0']:getPosition())
 --    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
     --print('fanPosition:'..fanPosition)
@@ -394,7 +396,14 @@ end
 
 function ChapterLayer:addBeansUI()
     self.beans = cc.Sprite:create('image/chapter/chapter0/top.png')
-    
+    self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
+    self:addChild(self.beans,150)
+    local beanCount = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',28)
+    beanCount:setColor(cc.c3b(0, 0, 0))
+    beanCount:ignoreAnchorPointForPosition(false)
+    beanCount:setAnchorPoint(0,0)
+    beanCount:setPosition(70,3)
+    self.beans:addChild(beanCount,10)
 end
 
 return ChapterLayer
