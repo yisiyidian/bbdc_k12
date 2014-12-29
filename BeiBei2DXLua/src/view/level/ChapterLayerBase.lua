@@ -106,7 +106,17 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end
     end
 --    if levelConfig['type'] == 1 then
-    if checkSummaryBoss then
+    local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
+    if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
+        -- plot review boss
+        local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
+        reviewBoss:addAnimation(0, '1', false)
+        s_SCENE:callFuncWithDelay(1,function()
+            reviewBoss:addAnimation(1, '2', true)
+        end)
+        reviewBoss:setPosition(levelPosition.x, levelPosition.y)
+        self:addChild(reviewBoss)
+    elseif checkSummaryBoss then
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
 --                summaryboss:setAnchorPoint(1,1)
