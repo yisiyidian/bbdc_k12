@@ -84,6 +84,8 @@ function DownloadLayer.create(bookKey)
     button_choose:addTouchEventListener(button_choose_clicked)
     backColor:addChild(button_choose)
     
+    
+    
    
     local progress
     local progress_clicked
@@ -92,12 +94,26 @@ function DownloadLayer.create(bookKey)
     local title1 = "下载音频("..total_size..")"
     local title2 = "取消下载(1.1M/"..total_size..")"
     local title3 = "删除音频("..total_size..")"
+    
+    local updatePercent = function(currentPercent)
+        percent = currentPercent
+        progress:setPercentage(percent)
+        progress_clicked:setPercentage(percent)
+    end
+    
+    local downloadState = function(state)
+        
+        if state == true then
+            print("download sound successful")
+        else
+            print("download sound fail")
+        end
+    end
+    
 
     local button_download_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             if download_state == 0 then
-                
-                
                 
             elseif download_state == 1 then
                 progress:setVisible(false)
@@ -112,7 +128,7 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
             
                 downloadAlter.sure = function()
---                    DownloadSoundController.beginSoundDownloadUpdate(bookKey)
+--                    DownloadSoundController.beginSoundDownloadUpdate(bookKey, )
                     percent = DownloadSoundController.getDownloadPercent()
                     progress:setPercentage(percent)
                     progress_clicked:setPercentage(percent)
@@ -184,18 +200,11 @@ function DownloadLayer.create(bookKey)
         progress_clicked:setPercentage(percent)
         progress:setVisible(true)
         
-        
         button_title = cc.Label:createWithSystemFont(title3,"",34)
         button_title:setPosition(bigWidth/2, 222)
         backColor:addChild(button_title)
-        
-        
-        
     end
 
-    
-    
-    
 
     return layer
 end
