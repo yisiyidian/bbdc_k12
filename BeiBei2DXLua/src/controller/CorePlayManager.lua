@@ -541,18 +541,18 @@ function CorePlayManager.enterIntroLayer()
 end
 
 function CorePlayManager.enterHomeLayer()
---    local testLayer = require('view.ChapterLayer')
---    local chapterLayer = testLayer.create()
---    s_SCENE:replaceGameLayer(chapterLayer)
-    local homeLayer = HomeLayer.create()
-    s_SCENE:replaceGameLayer(homeLayer)
+    local testLayer = require('view.ChapterLayer')
+    local chapterLayer = testLayer.create()
+    s_SCENE:replaceGameLayer(chapterLayer)
+--    local homeLayer = HomeLayer.create()
+--    s_SCENE:replaceGameLayer(homeLayer)
 end
 
 function CorePlayManager.enterLevelLayer()
-    CorePlayManager.enterHomeLayer()
---    local testLayer = require('view.ChapterLayer')
---    local chapterLayer = testLayer.create()
---    s_SCENE:replaceGameLayer(chapterLayer)
+--    CorePlayManager.enterHomeLayer()
+    local testLayer = require('view.ChapterLayer')
+    local chapterLayer = testLayer.create()
+    s_SCENE:replaceGameLayer(chapterLayer)
 --    local levelLayer = LevelLayer.create()
 --    s_SCENE:replaceGameLayer(levelLayer)
 end
