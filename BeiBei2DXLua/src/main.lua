@@ -5,9 +5,9 @@ local app_version_debug   = 160000
 local app_version_release = 160000
 
 -- All test code must in example.example
-local TEST_CODE   = 1
-local NORMAL_CODE = 0
-local test_code = NORMAL_CODE
+local TEST_CODE   = 1 -- constant value
+local NORMAL_CODE = 0 -- constant value
+local test_code = NORMAL_CODE -- switch normal or test in this line
 
 -- *************************************
 
@@ -102,7 +102,7 @@ start = function ()
     s_DATA_MANAGER.loadText()
     
 -- *************************************
-if test_code == NORMAL_CODE then
+if test_code == NORMAL_CODE then -- do NOT change this line
     local startApp = function ()
         local LoadingView = require("view.LoadingView")
         local loadingView = LoadingView.create()
@@ -118,12 +118,12 @@ if test_code == NORMAL_CODE then
     end
 else    
    -- *************************************
-   --for test
-   --require("example.example")
-    local testLayer = require('view.ChapterLayer')
-    local chapterLayer = testLayer.create()
-    s_SCENE:replaceGameLayer(chapterLayer)
-   --test()
+   -- for test
+   -- all test codes MUST be written in example.example.lua
+   -- do NOT write any test codes in here
+   -- do NOT change these lines below
+   require("example.example")
+   test()
    -- *************************************
 end
 
