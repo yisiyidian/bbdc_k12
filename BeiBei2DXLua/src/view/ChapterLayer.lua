@@ -153,7 +153,10 @@ function ChapterLayer:checkUnlockLevel()
         s_SCENE:callFuncWithDelay(delayTime, function()
             -- add notification
            self:addPlayerNotification() 
-        end)   
+        end)  
+    else
+        -- add notification
+        self:addPlayerNotification() 
     end
 end
 
