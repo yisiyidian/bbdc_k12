@@ -86,8 +86,7 @@ function AppScene.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
     if RELEASE_APP == RELEASE_FOR_APPSTORE then 
-    
-        cc.Layer:create()
+        scene.debugLayer = cc.Layer:create()
         scene.debugLayer:setVisible(false) 
     else
         scene.debugLayer = DebugLayer.create()

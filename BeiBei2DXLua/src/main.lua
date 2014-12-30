@@ -5,7 +5,9 @@ local app_version_debug   = 160000
 local app_version_release = 160000
 
 -- All test code must in example.example
-local test_code = 1
+local TEST_CODE   = 1
+local NORMAL_CODE = 0
+local test_code = NORMAL_CODE
 
 -- *************************************
 
@@ -44,7 +46,7 @@ start = function ()
         print = function ( ... )
         end
 
-        test_code = 0
+        test_code = NORMAL_CODE
 
         s_debugger.configLog(false, false)
         DEBUG_PRINT_LUA_TABLE = false
@@ -63,7 +65,7 @@ start = function ()
         s_SERVER.production       = 0
 
         if RELEASE_APP == RELEASE_FOR_TEST then
-            test_code = 0
+            test_code = NORMAL_CODE
 
             s_SERVER.appId = LEAN_CLOUD_ID
             s_SERVER.appKey = LEAN_CLOUD_KEY
@@ -100,7 +102,7 @@ start = function ()
     s_DATA_MANAGER.loadText()
     
 -- *************************************
-if test_code == 1 then
+if test_code == NORMAL_CODE then
     local startApp = function ()
         local LoadingView = require("view.LoadingView")
         local loadingView = LoadingView.create()
