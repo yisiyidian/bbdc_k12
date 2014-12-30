@@ -177,13 +177,16 @@ function ChapterLayer:addPlayerNotification()  -- notification
 --        type = 'study'
     elseif s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
         type = 'complete'
-    else
+    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
         type = 'study'
+    else
+        type = 'review'
     end
 --    type = 'reviewboss'
     local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
     notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height+80)
     self.player:addChild(notification, 100)
+--    type = 'review'
     -- TODO show message according to type
     if type == 'study' then
         local title = cc.Label:createWithSystemFont('当前任务','',28)
@@ -193,6 +196,40 @@ function ChapterLayer:addPlayerNotification()  -- notification
         title:setPosition(30,110)
         notification:addChild(title)
         local task_name = cc.Label:createWithSystemFont('积累生词: '..s_DATABASE_MGR.getwrongWordListSize()..'/'..s_max_wrong_num_everyday,'',25)
+        task_name:setColor(cc.c3b(0,0,0))
+        task_name:ignoreAnchorPointForPosition(false)
+        task_name:setAnchorPoint(0,0)
+        task_name:setPosition(30,80)
+        notification:addChild(task_name)
+        -- define touchEvent
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO go to study
+                s_CorePlayManager.initTotalPlay()
+            end
+        end
+        local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
+        start:setScale9Enabled(true)
+        start:setPosition(50,40)
+        start:setAnchorPoint(0,0)
+        notification:addChild(start)
+        start:addTouchEventListener(touchEvent)
+        
+        -- add button title
+        local button_title = cc.Label:createWithSystemFont('继续积累','',20)
+        --button_title:setColor(cc.c3b(0,0,0))
+        button_title:ignoreAnchorPointForPosition(false)
+        button_title:setAnchorPoint(0.5,0.5)
+        button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
+        start:addChild(button_title)
+    elseif type == 'review' then
+        local title = cc.Label:createWithSystemFont('当前任务','',28)
+        title:setColor(cc.c3b(0,0,0))
+        title:ignoreAnchorPointForPosition(false)
+        title:setAnchorPoint(0,0)
+        title:setPosition(30,110)
+        notification:addChild(title)
+        local task_name = cc.Label:createWithSystemFont('学习生词: '..s_DATABASE_MGR.getwrongWordListSize()..'/'..s_max_wrong_num_everyday,'',25)
         task_name:setColor(cc.c3b(0,0,0))
         task_name:ignoreAnchorPointForPosition(false)
         task_name:setAnchorPoint(0,0)
