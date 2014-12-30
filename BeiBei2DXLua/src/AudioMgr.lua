@@ -49,7 +49,7 @@ function getWordSoundFilePath(word)
         return localPath
     end
 
-    local downloadPath = cc.FileUtils:getInstance():getWritablePath() .. filename
+    local downloadPath = cc.FileUtils:getInstance():getWritablePath() .. "BookSounds/"..word.."/"..word..filename
     return downloadPath
 end
 
