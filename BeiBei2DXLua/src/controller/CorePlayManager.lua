@@ -123,8 +123,7 @@ function CorePlayManager.initNewStudyLayer()
 end
 
 function CorePlayManager.bookOver()
---    if CorePlayManager.currentIndex > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
-    if CorePlayManager.currentIndex > 20 then
+    if CorePlayManager.currentIndex > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
         return true
     else
         return false

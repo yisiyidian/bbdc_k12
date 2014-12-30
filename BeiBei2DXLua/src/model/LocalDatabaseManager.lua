@@ -1019,8 +1019,7 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
         return s_gamestate_reviewbossmodel
     end
     
---    if Manager.getCurrentIndex() > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
-    if Manager.getCurrentIndex() > 20 then
+    if Manager.getCurrentIndex() > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
         return s_gamestate_overmodel
     end
     
