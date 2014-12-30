@@ -43,7 +43,7 @@ local function initAssetsManagerByBookType(bookType)
     end
 end
 
-function DownloadSoundController.beginSoundDownloadUpdate(bookType)
+function DownloadSoundController.beginSoundDownloadUpdate(bookType, setPercentCallback, setStateCallback)
 
     storagePath = storagePath.."/"..bookType
     am = initAssetsManagerByBookType(bookType)
@@ -60,6 +60,7 @@ function DownloadSoundController.beginSoundDownloadUpdate(bookType)
 
                 downloadMes = "贝贝找不到本地单词包清单配置文件，下载取消"
                 downloadState = false
+                setStateCallback(downloadState)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
 
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
@@ -68,6 +69,7 @@ function DownloadSoundController.beginSoundDownloadUpdate(bookType)
                     downloadMes = "贝贝正在获取新的单词包清单文件"
                 else
                     downloadPercent = string.format("%.2f",event:getPercent())
+                    setPercentCallback(downloadPercent)
                     downloadMes = "单词打包运送中: "..downloadPercent.."%"   
                 end                
                 
@@ -77,18 +79,22 @@ function DownloadSoundController.beginSoundDownloadUpdate(bookType)
 
                 downloadMes = "获取单词包清单文件失败, 下载取消." 
                 downloadState = false               
+                setStateCallback(downloadState)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
 
                 downloadMes = "已是最新单词包"  
                 downloadState = true
+                setStateCallback(downloadState)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
 
                 downloadMes = "最新的单词包到货了"     
                 downloadState = true
+                setStateCallback(downloadState)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
 
                 downloadMes = "文件: "..event:getAssetId()..", 下载失败，失败信息为"..event:getMessage()  
                 downloadState = false                                              
+                setStateCallback(downloadState)
             end  
             print(downloadMes)
         end
@@ -111,15 +117,19 @@ function DownloadSoundController.getDownloadPercent()
     return downloadPercent
 end
 
-function DownloadSoundController.killDownload(bookType)
+function DownloadSoundController.releaseDownload()
     if listener ~= nil then
         cc.Director:getInstance():getEventDispatcher():removeEventListener(listener)
     end
-    
+
     if am ~= nil then
         am:release()
     end
+end
+
+function DownloadSoundController.killDownload(bookType)
     
+    DownloadSoundController.releaseDownload()
     DownloadSoundController.deleteBookSound(bookType)    
 end
 
