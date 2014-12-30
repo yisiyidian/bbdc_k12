@@ -45,19 +45,22 @@ end
 function getWordSoundFilePath(word)
     local filename = getWordSoundFileName(word)
     local localPath = cc.FileUtils:getInstance():fullPathForFilename('res/words/' .. filename)
+    print("The localpath is founded or not :",cc.FileUtils:getInstance():isFileExist(localPath))
     if cc.FileUtils:getInstance():isFileExist(localPath) then
         return localPath
     end
 
-    local downloadPath = cc.FileUtils:getInstance():getWritablePath() .. "BookSounds/"..word.."/"..word..filename
+    local downloadPath = cc.FileUtils:getInstance():getWritablePath() .. filename
     return downloadPath
 end
 
 function playWordSound(word)
     if db.isSoundOn() then
-        local localPath = getWordSoundFilePath(word)
-        if cc.FileUtils:getInstance():isFileExist(localPath) then
-            cc.SimpleAudioEngine:getInstance():playEffect(localPath, false)
-        end
+        local filename = getWordSoundFileName(word)
+--        local localPath = getWordSoundFilePath(word)
+--        print("The current localPath is: ",localPath)
+--        if cc.FileUtils:getInstance():isFileExist(localPath) then
+        cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
+--        end
     end
 end
