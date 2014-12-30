@@ -225,7 +225,9 @@ function AppScene:startLoadingData(userStartType, username, password)
             onErrorHappend(e)
             hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
-            s_SCENE:gotoChooseBook()
+            self:getDataBookProgress(function ()
+                s_SCENE:gotoChooseBook()
+            end)
         else
             -- s_SCENE:getDailyCheckIn()
             s_SCENE:onUserServerDatasCompleted() 
@@ -382,10 +384,12 @@ function AppScene:saveSignUpAndLogInData(onSaved)
     s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
     
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_BP])
-    self:getDataBookProgress(onSaved)
+    self:getDataBookProgress(function ()
+        s_SCENE:getDataLogIn(onSaved)
+    end)
 end
 
-function AppScene:getDataBookProgress(onSaved)
+function AppScene:getDataBookProgress(oncompleted)
     local saveuser = function ()
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
             function(api,result)
@@ -398,7 +402,7 @@ function AppScene:getDataBookProgress(onSaved)
             function(api,result)
                 s_CURRENT_USER.bookProgressObjectId = s_CURRENT_USER.bookProgress.objectId
                 saveuser()
-                s_SCENE:getDataLogIn(onSaved)
+                oncompleted()
             end,
             function(api, code, message, description)
                 onErrorHappend(message)
@@ -409,7 +413,7 @@ function AppScene:getDataBookProgress(onSaved)
             function(api,result)
                 s_CURRENT_USER:parseServerDataBookProgress(result, s_CURRENT_USER.bookProgress)
                 saveuser()
-                s_SCENE:getDataLogIn(onSaved)
+                oncompleted()
             end, 
             function(api, code, message, description)
                 onErrorHappend(message)
