@@ -78,7 +78,7 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
+    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
     local levelPosition = self.levelPos[levelIndex]
 --    print('######decoration level position########')
 --    print('levelIndex:'..levelIndex)
@@ -212,7 +212,7 @@ function ChapterLayerBase:plotDecoration()
     local currentChapterIndex = string.sub(bookProgress['chapter'],8)
     local chapterIndex = string.sub(self.chapterKey, 8)
     for levelIndex, levelPosition in pairs(self.levelPos) do
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
+        --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
 --        print('!!!!!levelConfigType:'..levelConfig)
 --        print_lua_table(levelConfig)
         -- is locked
@@ -234,7 +234,7 @@ function ChapterLayerBase:plotDecoration()
 end
 
 function ChapterLayerBase:plotLevelNumber(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
