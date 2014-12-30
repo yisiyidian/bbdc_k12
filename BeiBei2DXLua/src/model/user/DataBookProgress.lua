@@ -12,7 +12,7 @@ end
 
 function DataBookProgress:ctor()
     self.className = 'DataBookProgress'
-    self.CET4 = 'cet4|chapter0|level9'
+    self.CET4 = 'cet4|chapter0|level0'
     self.CET6 = 'cet6|chapter0|level0'
     self.GMAT = 'gmat|chapter0|level0'
     self.GRE = 'gre|chapter0|level0'
