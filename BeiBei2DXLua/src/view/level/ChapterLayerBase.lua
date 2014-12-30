@@ -90,6 +90,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     self:plotLevelNumber('level'..levelIndex)
     -- check random summary boss
     local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+    --print('summarybossList:'..s_CURRENT_USER.summaryBossList)
+    --print('lensummba:'..#summaryboss)
     local currentIndex = levelIndex
     if self.chapterKey == 'chapter1' then
         currentIndex = currentIndex + 10
@@ -100,6 +102,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
+        print('summarybossIndex:'..summaryboss[i])
+        if summaryboss[i] == '' then break end
         if summaryboss[i] - currentIndex == 0 then
             checkSummaryBoss = true
             break
