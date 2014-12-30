@@ -74,11 +74,11 @@ end
 function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
-    print('########old progress:')
-    print_lua_table(oldProgress)
-    print_lua_table(currentProgress)
-    print_lua_table(s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey))
-    s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
+--    print('########old progress:')
+--    print_lua_table(oldProgress)
+--    print_lua_table(currentProgress)
+--    print_lua_table(s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey))
+    --s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
     if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- TODO unlock chapter
         -- add next chapter
         self:addChapterIntoListView(currentProgress['chapter'])
@@ -108,28 +108,34 @@ function ChapterLayer:checkUnlockLevel()
             end)
             delayTime = delayTime + 1
         end 
---        self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
---        -- unlock chapter
---        s_SCENE:callFuncWithDelay(delayTime, function()
---            self:plotUnlockCloudAnimation()
---            local delay_t = 0
---            -- plot player
---            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
---            self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
---            for index = 1, (currentLevelIndex - 0) do
---                s_SCENE:callFuncWithDelay(delayTime,function()
---                    self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
---                    -- move player
---                    s_SCENE:callFuncWithDelay(0.3,function()
---                        local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
---                        local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
---                        self.player:runAction(action)
---                    end)
---                end)
---                delay_t = delay_t + 1
---            end
---            
---        end)
+       
+        s_SCENE:callFuncWithDelay(0.5, function()
+            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
+        end)
+        -- unlock chapter
+        s_SCENE:callFuncWithDelay(delayTime, function()
+            --self:plotUnlockCloudAnimation()
+            local delay_t = 0
+            -- plot player
+            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
+            self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
+            for index = 1, (currentLevelIndex - 0) do
+                s_SCENE:callFuncWithDelay(delayTime,function()
+                    self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
+                    -- move player
+                    s_SCENE:callFuncWithDelay(0.3,function()
+                        local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
+                        local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+                        self.player:runAction(action)
+                    end)
+                end)
+                delay_t = delay_t + 1
+            end
+            s_SCENE:callFuncWithDelay(delay_t+1, function()
+                -- add notification
+                self:addPlayerNotification() 
+            end) 
+        end)
     elseif currentProgress['level'] ~= oldProgress['level'] then   -- unlock level
         local oldLevelIndex = string.sub(oldProgress['level'], 6)
         local currentLevelIndex = string.sub(currentProgress['level'],6)
@@ -275,13 +281,15 @@ end
 
 function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:removeFromParent()
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+--    local bookProgress = s_CURRENT_USER.bookProgress:computeCu
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
     self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
     local position = self.chapterDic[chapterKey]:getLevelPosition(levelKey)
+--    print('!!!!!!!!!!player position!!!!!!')
+--    print(position)
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
-    self.chapterDic[bookProgress['chapter']]:addChild(self.player, 130)
+    self.chapterDic[chapterKey]:addChild(self.player, 150)
 end
 
 function ChapterLayer:addChapterIntoListView(chapterKey)
@@ -313,7 +321,7 @@ end
 
 -- scroll listview to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    local bookProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     -- compute listView inner height
     local itemList = listView:getItems()
     local innerHeight = 0

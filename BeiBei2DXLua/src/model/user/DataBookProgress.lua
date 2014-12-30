@@ -128,7 +128,7 @@ function DataBookProgress:computeCurrentProgress()
     local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
     local bookWordCurrentCount =  s_DATABASE_MGR.getCurrentIndex()-1
     local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
-    --currentLevelIndex =11
+--    currentLevelIndex =11
     local progress = {}
     if currentLevelIndex < 10 then
         progress['chapter'] = 'chapter0'
