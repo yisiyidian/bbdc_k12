@@ -266,7 +266,7 @@ function ChapterLayer:addPlayer()
     local position = self.chapterDic[bookProgress['chapter']]:getLevelPosition(bookProgress['level'])
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
-    self.chapterDic[bookProgress['chapter']]:addChild(self.player, 130)
+    self.chapterDic[bookProgress['chapter']]:addChild(self.player, 150)
 end
 
 function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
