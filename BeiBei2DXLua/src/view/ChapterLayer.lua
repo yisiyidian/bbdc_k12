@@ -164,13 +164,17 @@ end
 function ChapterLayer:addPlayerNotification()  -- notification
     self.player:removeAllChildren()
     local type
+    print('gameState:'..s_DATABASE_MGR.getGameState())
     if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel then
         type = 'reviewboss'
-    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel or s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
-        type = 'study'
+--    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel or s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
+--        type = 'study'
     elseif s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
         type = 'complete'
+    else
+        type = 'study'
     end
+--    type = 'reviewboss'
     local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
     notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height+80)
     self.player:addChild(notification, 100)
