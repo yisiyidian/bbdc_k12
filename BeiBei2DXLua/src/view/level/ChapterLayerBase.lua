@@ -102,7 +102,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
-        print('summarybossIndex:'..summaryboss[i])
+        --print('summarybossIndex:'..summaryboss[i])
         if summaryboss[i] == '' then break end
         if summaryboss[i] - currentIndex == 0 then
             checkSummaryBoss = true
@@ -246,30 +246,31 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     if bookProgress['level'] == 'level39' and bookProgress['chapter'] == 'chapter3' then
         levelNumber = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     end
-        if levelConfig['type'] == 1 then -- summary boss
---            local summaryboss = levelButton:getChildByName('summaryboss'..string.sub(levelKey,6))
---            local number = ccui.TextBMFont:create()
---            number:setFntFile('font/number_straight.fnt')
---            number:setScale(1.6)
---            number:setString(levelNumber)
---            number:setPosition(125, 100)
---            summaryboss:addChild(number)
-        else 
-            local number = ccui.TextBMFont:create()
-            number:setFntFile('font/number_inclined.fnt')
-            number:setString(levelNumber)
-            number:setPosition(levelPosition.x, levelPosition.y+3)
-            self:addChild(number,130)
+    -- check random summary boss
+    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+    local currentIndex = levelIndex
+    if self.chapterKey == 'chapter1' then
+        currentIndex = currentIndex + 10
+    elseif self.chapterKey == 'chapter2' then
+        currentIndex = currentIndex + 30
+    elseif self.chapterKey == 'chapter3' then
+        currentIndex = currentIndex + 60
+    end
+    local checkSummaryBoss = false
+    for i = 1, #summaryboss do
+        if summaryboss[i] == '' then break end
+        if summaryboss[i] - currentIndex == 0 then
+            checkSummaryBoss = true
+            break
         end
---    else
---        local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
---        local lockNumber = ccui.TextBMFont:create()        
---        lockNumber:setFntFile('font/number_brown.fnt')
---        lockNumber:setString(levelNumber)
---        lockNumber:setPosition(lockSprite:getContentSize().width/2, lockSprite:getContentSize().height/2-6)
---        lockSprite:addChild(lockNumber)
---    end
-
+    end
+    if not checkSummaryBoss then
+        local number = ccui.TextBMFont:create()
+        number:setFntFile('font/number_inclined.fnt')
+        number:setString(levelNumber)
+        number:setPosition(levelPosition.x, levelPosition.y+3)
+        self:addChild(number,130)
+    end
 end
 
 function ChapterLayerBase:loadResource()
