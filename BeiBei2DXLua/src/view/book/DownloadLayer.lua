@@ -68,12 +68,16 @@ function DownloadLayer.create(bookKey)
     
     local button_choose_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-           if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
-               s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-           end
+            if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
+                s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+            end
            
-           s_CURRENT_USER.bookKey = bookKey
-           s_CorePlayManager.enterHomeLayer()
+            s_CURRENT_USER.bookKey = bookKey
+            AnalyticsBook(bookKey)
+            playSound(s_sound_buttonEffect)
+            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+
+            s_CorePlayManager.enterHomeLayer()
         end
     end
 
