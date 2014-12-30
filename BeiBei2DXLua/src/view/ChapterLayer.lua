@@ -69,6 +69,7 @@ function ChapterLayer:ctor()
     -- check unlock level
     self:checkUnlockLevel()
     self:addBottomBounce()
+    self:addBackToHome()
 end
 
 function ChapterLayer:checkUnlockLevel()
@@ -444,6 +445,26 @@ function ChapterLayer:addBottomBounce()
     self.chapterDic['rightCloud']:setPosition((s_DESIGN_WIDTH-bounceSectionSize.width)/2,100)
     listView:addChild(self.chapterDic['leftCloud'],100)
     listView:addChild(self.chapterDic['rightCloud'],100)
+end
+
+function ChapterLayer:addBackToHome()
+    local click_home = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local IntroLayer = require("view.home.HomeLayer")
+            local introLayer = IntroLayer.create()  
+            s_SCENE:replaceGameLayer(introLayer)
+        end
+    end
+
+
+    -- return to homepage button
+    local homeButton = ccui.Button:create("image/chapter_level/button_home_book.png","image/chapter_level/button_home_book.png","")
+    homeButton:addTouchEventListener(click_home)
+    homeButton:ignoreAnchorPointForPosition(false)
+    homeButton:setAnchorPoint(0,1)
+    homeButton:setPosition(s_LEFT_X + 50  , s_DESIGN_HEIGHT - 50 )
+    homeButton:setLocalZOrder(1)
+    self:addChild(homeButton,200)
 end
 
 function ChapterLayer:addBeansUI()
