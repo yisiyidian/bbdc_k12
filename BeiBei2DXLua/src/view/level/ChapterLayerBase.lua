@@ -49,7 +49,7 @@ function ChapterLayerBase:createObjectForResource(t)
             object:setTag(islandTag)
             islandTag=islandTag+1
         end
-        self:addChild(object,100)
+        self:addChild(object,50)
     end
     return object
 end
@@ -100,6 +100,9 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     elseif self.chapterKey == 'chapter3' then
         currentIndex = currentIndex + 60
     end
+    
+    --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
+    
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
         --print('summarybossIndex:'..summaryboss[i])
