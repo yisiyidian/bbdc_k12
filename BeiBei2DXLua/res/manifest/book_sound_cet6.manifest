@@ -6,7 +6,7 @@
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"cet6.zip" : {
-			"md5" : "6377496ee0bf52330db9a18f29332a5c",
+			"md5" : "6377496ee0bf52330db9a18f29332a5e",
 			"compressed" : true
 		}
 	}, 

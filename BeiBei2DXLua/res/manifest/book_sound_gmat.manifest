@@ -6,7 +6,7 @@
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"gmat.zip" : {
-			"md5" : "f8c70d47d8c7c250075e57358774e850",
+			"md5" : "f8c70d47d8c7c250075e57358774e85e",
 			"compressed" : true
 		}
 	}, 

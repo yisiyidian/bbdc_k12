@@ -6,7 +6,7 @@
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"ncee.zip" : {
-			"md5" : "0d4c9e8705ea07793049373cf8ad0bda",
+			"md5" : "0d4c9e8705ea07793049373cf8ad0bde",
 			"compressed" : true
 		}
 	}, 

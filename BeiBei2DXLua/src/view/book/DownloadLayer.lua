@@ -113,7 +113,7 @@ function DownloadLayer.create(bookKey)
             download_state = 2
             s_DATABASE_MGR.updateDownloadState(bookKey, 1)
             
-            local downloadAlter = DownloadAlter.create("下载成功！")
+            local downloadAlter = DownloadAlter.create("贝贝提醒您，最新的单词包到货了 ^_^")
             downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
             backColor:addChild(downloadAlter)
             
