@@ -2,6 +2,8 @@ require("cocos.init")
 require("common.global")
 
 local BackLayer         = require("view.newstudy.NewStudyBackLayer")
+local ProgressBar       = require("view.newstudy.NewStudyProgressBar")
+local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 
 local  NewStudyMiddleLayer = class("NewStudyMiddleLayer", function ()
     return cc.Layer:create()
@@ -36,8 +38,21 @@ function NewStudyMiddleLayer.create()
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
+    
+    backColor.progressBar:removeFromParent()
+    backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "yellow")
+    backColor.progressBar:setPosition(bigWidth/2+44, 1099)
+    backColor:addChild(backColor.progressBar)
+    
+    backColor.progressBar.hint = function()
+        local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
+        guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+        backColor:addChild(guideAlter)
+    end
 
-    local label_hint = cc.Label:createWithSystemFont("20个生词get!","",50)
+    local wrongWordNum = s_CorePlayManager.wrongWordNum
+
+    local label_hint = cc.Label:createWithSystemFont(wrongWordNum.."个生词get!","",50)
     label_hint:setPosition(bigWidth/2, 1000)
     label_hint:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(label_hint)
@@ -46,7 +61,7 @@ function NewStudyMiddleLayer.create()
     circle:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     backColor:addChild(circle)
     
-    local number = cc.Label:createWithSystemFont("+20","",60)
+    local number = cc.Label:createWithSystemFont("+"..wrongWordNum,"",60)
     number:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
     number:setColor(cc.c4b(98,124,148,255))
     circle:addChild(number)

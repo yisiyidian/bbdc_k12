@@ -84,7 +84,17 @@ function NewStudyRightLayer.create()
             local normal = function()
                 s_CorePlayManager.updateRightWordList(wordname)
                 s_CorePlayManager.updateCurrentIndex()
-                s_CorePlayManager.enterNewStudyChooseLayer()
+                if s_CorePlayManager.bookOver() then
+                    if s_CorePlayManager.wrongWordNum == 0 then
+                        s_CorePlayManager.enterNewStudyBookOverLayer()
+                    else
+                        s_CorePlayManager.initWordCandidate()
+                        s_CorePlayManager.checkInReviewModel()
+                        s_CorePlayManager.enterNewStudyMiddleLayer()
+                    end
+                else
+                    s_CorePlayManager.enterNewStudyChooseLayer()
+                end
             end
         
             if s_DATABASE_MGR.getIsAlterOn() == 1 then

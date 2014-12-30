@@ -40,16 +40,15 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     button_pause:addTouchEventListener(button_pause_clicked)
     backColor:addChild(button_pause)
 
-    local progressBar
     if s_CorePlayManager.isStudyModel() then
-        progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "yellow")
+        backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "yellow")
     else
-        progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.maxWrongWordCount-s_CorePlayManager.candidateNum, "yellow")
+        backColor.progressBar = ProgressBar.create(s_CorePlayManager.wrongWordNum, s_CorePlayManager.wrongWordNum-s_CorePlayManager.candidateNum, "yellow")
     end
-    progressBar:setPosition(bigWidth/2+44, 1099)
-    backColor:addChild(progressBar)
+    backColor.progressBar:setPosition(bigWidth/2+44, 1099)
+    backColor:addChild(backColor.progressBar)
     
-    progressBar.hint = function()
+    backColor.progressBar.hint = function()
         local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
         guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
         backColor:addChild(guideAlter)

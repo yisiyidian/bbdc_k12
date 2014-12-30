@@ -26,6 +26,7 @@ local NewStudySlideLayer     = require("view.newstudy.NewStudySlideLayer")
 local NewStudyMiddleLayer    = require("view.newstudy.NewStudyMiddleLayer")
 local NewStudySuccessLayer   = require("view.newstudy.NewStudySuccessLayer")
 local NewStudyOverLayer      = require("view.newstudy.NewStudyOverLayer")
+local NewStudyBookOverLayer  = require("view.newstudy.NewStudyBookOverLayer")
 
 local ReviewBossMainLayer    = require("view.newreviewboss.NewReviewBossMainLayer")
 local ReviewBossHintLayer    = require("view.newreviewboss.NewReviewBossHintLayer")
@@ -54,6 +55,11 @@ function CorePlayManager.initNewStudyLayer()
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex = s_DATABASE_MGR.getCurrentIndex()
     print("currentBookWordIndex is "..CorePlayManager.currentIndex)
+    
+    if CorePlayManager.bookOver() then
+        CorePlayManager.enterNewStudyBookOverLayer()
+        return
+    end
     
     local lastPlayState = s_DATABASE_MGR.getNewPlayState()
     if lastPlayState.lastUpdate == nil then
@@ -113,6 +119,15 @@ function CorePlayManager.initNewStudyLayer()
             CorePlayManager.candidateNum  = 0
             CorePlayManager.enterNewStudyChooseLayer()
         end
+    end
+end
+
+function CorePlayManager.bookOver()
+--    if CorePlayManager.currentIndex > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
+    if CorePlayManager.currentIndex > 3 then
+        return true
+    else
+        return false
     end
 end
 
@@ -221,6 +236,11 @@ end
 function CorePlayManager.enterNewStudyOverLayer()
     local newStudyOverLayer = NewStudyOverLayer.create()
     s_SCENE:replaceGameLayer(newStudyOverLayer)
+end
+
+function CorePlayManager.enterNewStudyBookOverLayer()
+    local newStudyBookOverLayer = NewStudyBookOverLayer.create()
+    s_SCENE:replaceGameLayer(newStudyBookOverLayer)
 end
 
 function CorePlayManager.updateCurrentIndex()
