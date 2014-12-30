@@ -305,41 +305,45 @@ function HomeLayer.create()
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
-            s_CorePlayManager.initTotalPlay()
+--            s_CorePlayManager.initTotalPlay()
             
---            AnalyticsEnterLevelLayer()
---            
---            showProgressHUD()
---            -- button sound
---            playSound(s_sound_buttonEffect)  
---            s_CorePlayManager.enterLevelLayer()  
---            hideProgressHUD()
---            local isSameDate = (os.date('%x',s_CURRENT_USER.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
---            local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
---            local index = self.bookProgress:getBookCurrentLevelIndex()
---            if not isSameDate and #summaryBossList < 3 and index > #summaryBossList then
---                s_CURRENT_USER.lastUpdateSummaryBossTime = os.time()
---                if #summaryBossList == 0 then
---                    s_CURRENT_USER.summaryBossList = tostring(math.random(0,index - 1)) 
---                else
---                    local id = math.random(1,index - 1 - #summaryBossList)
---                    for i = 1,#summaryBossList do
---                        if id < summaryBossList[i] then
---                            table.insert(summaryBossList,i,tostring(id))
---                            break
---                        else
---                            id = id + 1
---                        end
---                    end
---                    if id > summaryBossList[#summaryBossList] then
---                        table.insert(summaryBossList,#summaryBossList + 1,tostring(id))
---                    end
---                    s_CURRENT_USER.summaryBossList = summaryBossList[1]
---                    for i = 2,#summaryBossList do
---                        s_CURRENT_USER.summaryBossList = s_CURRENT_USER.summaryBossList..'|'..summaryBossList[i]
---                    end
---                end
---            end
+            AnalyticsEnterLevelLayer()
+            
+            showProgressHUD()
+            -- button sound
+            playSound(s_sound_buttonEffect)  
+            s_CorePlayManager.enterLevelLayer()  
+            hideProgressHUD()
+            local isSameDate = (os.date('%x',s_CURRENT_USER.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
+            local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
+            local index = s_CURRENT_USER.bookProgress:getBookCurrentLevelIndex()
+            if not isSameDate and #summaryBossList < 3 and index > #summaryBossList then
+                s_CURRENT_USER.lastUpdateSummaryBossTime = os.time()
+                if #summaryBossList == 0 then
+                    s_CURRENT_USER.summaryBossList = tostring(math.random(0,index - 1)) 
+                else
+                    local id = math.random(1,index - 1 - #summaryBossList)
+                    for i = 1,#summaryBossList do
+                        if summaryBossList[i] == '' then
+                            break
+                        end
+                        if id - summaryBossList[i] < 0 then
+                            table.insert(summaryBossList,i,tostring(id))
+                            break
+                        else
+                            id = id + 1
+                        end
+                    end
+                    --print('summarybossLisst:'..summaryBossList[#summaryBossList])
+                    if summaryBossList[#summaryBossList] ~= '' and id - summaryBossList[#summaryBossList] > 0 then
+                        table.insert(summaryBossList,#summaryBossList + 1,tostring(id))
+                    end
+                    s_CURRENT_USER.summaryBossList = summaryBossList[1]
+                    for i = 2,#summaryBossList do
+                        s_CURRENT_USER.summaryBossList = s_CURRENT_USER.summaryBossList..'|'..summaryBossList[i]
+                    end
+                end
+            end
 --            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
 --                function(api,result)
 --                    s_CorePlayManager.initTotalPlay()
