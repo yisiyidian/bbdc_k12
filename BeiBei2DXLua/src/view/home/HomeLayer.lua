@@ -489,7 +489,7 @@ function HomeLayer.create()
             if eventType == ccui.TouchEventType.ended then
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
-                    AnalyticsChangeBook()
+                    AnalyticsChangeBookBtn()
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
                     local alter = AlterI.create("用户反馈")

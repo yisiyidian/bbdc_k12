@@ -88,6 +88,11 @@ function BookLayer.create()
         local key = key_array[i]
         local click = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
+                AnalyticsBook(key)
+                playSound(s_sound_buttonEffect)
+                s_CURRENT_USER.bookKey = key
+                s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+
                 s_CorePlayManager.enterDownloadLayer(key)
             
 --                -- button sound

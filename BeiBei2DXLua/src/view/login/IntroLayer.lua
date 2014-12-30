@@ -14,6 +14,7 @@ local function button_qq_clicked(sender, eventType)
     if eventType == ccui.TouchEventType.ended then
         playSound(s_sound_buttonEffect)
         s_SCENE:logInByQQ()
+        AnalyticsSignUp_QQ()
     end
 end
 
