@@ -73,6 +73,10 @@ function AnalyticsDataCenterBtn()
     cx.CXAnalytics:logEventAndLabel('DataCenter', 'TOUCH')
 end
 
+function AnalyticsDataCenterPage(pageName)
+    cx.CXAnalytics:logEventAndLabel('DataCenter', pageName)
+end
+
 ----------------------------------------------------------------------------------------
 
 function AnalyticsChangeBookBtn()
@@ -80,17 +84,17 @@ function AnalyticsChangeBookBtn()
 end
 
 function AnalyticsBook(bookname)
-    cx.CXAnalytics:logEventAndLabel('Book', 'selected ' .. bookname)
+    cx.CXAnalytics:logEventAndLabel('Book', 'selected_' .. bookname)
 end
 
 function AnalyticsDownloadBook(bookname)
-    cx.CXAnalytics:logEventAndLabel('Book', 'download ' .. bookname)
+    cx.CXAnalytics:logEventAndLabel('Book', 'download_' .. bookname)
 end
 
 ----------------------------------------------------------------------------------------
 
 function AnalyticsEnterLevelLayerBtn()
-    cx.CXAnalytics:logEventAndLabel('Enter Level Layer', 'TOUCH')
+    cx.CXAnalytics:logEventAndLabel('EnterLevelLayer', 'TOUCH')
 end
 
 function AnalyticsTasksBtn()
@@ -101,70 +105,82 @@ end
 
 -- 点击 重玩错词
 function AnalyticsReplayWrongWordsBtn()
-    cx.CXAnalytics:logEventAndLabel('Replay Wrong Words', 'TOUCH')
+    cx.CXAnalytics:logEventAndLabel('ReplayWrongWords', 'TOUCH')
 end
 
 -- 点击 依然复习
 function AnalyticsContinueReviewBtn()
-    cx.CXAnalytics:logEventAndLabel('Continue Review', 'TOUCH')
+    cx.CXAnalytics:logEventAndLabel('ContinueReview', 'TOUCH')
 end
 
 -- 点击 下一步
 function AnalyticsStudyNextBtn()
-    cx.CXAnalytics:logEventAndLabel('Study Next', 'TOUCH')
+    cx.CXAnalytics:logEventAndLabel('StudyNext', 'TOUCH')
 end
 
 -- 猜错
 function AnalyticsStudyGuessWrong()
-    cx.CXAnalytics:logEventAndLabel('answer word meaning', 'Guess Wrong')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'GuessWrong')
 end
 
 -- 答对
 function AnalyticsStudyAnswerRight()
-    cx.CXAnalytics:logEventAndLabel('answer word meaning', 'Answer Right')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'AnswerRight')
 end
 
 -- 不会
 function AnalyticsStudyDontKnowAnswer()
-    cx.CXAnalytics:logEventAndLabel('answer word meaning', 'Dont Know Answer')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'DontKnowAnswer')
 end
 
 -- 猜错
 function AnalyticsStudyGuessWrong_strikeWhileHot()
-    cx.CXAnalytics:logEventAndLabel('answer word meaning HOT', 'Guess Wrong')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'GuessWrong')
 end
 
 -- 答对
 function AnalyticsStudyAnswerRight_strikeWhileHot()
-    cx.CXAnalytics:logEventAndLabel('answer word meaning HOT', 'Answer Right')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'AnswerRight')
 end
 
 -- 不会
 function AnalyticsStudyDontKnowAnswer_strikeWhileHot()
-    cx.CXAnalytics:logEventAndLabel('answer word meaning HOT', 'Dont Know Answer')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'DontKnowAnswer')
 end
 
 -- 点击 跳过划单词步骤
 function AnalyticsStudySkipSwipeWord()
-    cx.CXAnalytics:logEventAndLabel('Skip Swipe Word', 'TOUCH')
+    cx.CXAnalytics:logEventAndLabel('SkipSwipeWord', 'TOUCH')
 end
 
 -- 点击 生词回看
 function AnalyticsStudyLookBackWord()
-    cx.CXAnalytics:logEventAndLabel('Look Back Word', 'TOUCH')
+    cx.CXAnalytics:logEventAndLabel('LookBackWord', 'TOUCH')
 end
 
 ----------------------------------------------------------------------------------------
 
 function AnalyticsReviewBoss()
-    cx.CXAnalytics:logEventAndLabel('Review Boss', 'SHOW')
+    cx.CXAnalytics:logEventAndLabel('ReviewBoss', 'SHOW')
 end
+
+----------------------------------------------------------------------------------------
 
 function AnalyticsSummaryBoss()
-    cx.CXAnalytics:logEventAndLabel('Summary Boss', 'SHOW')
+    cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'SHOW')
 end
 
+function AnalyticsSummaryBossWordCount(cnt)
+    cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'wordsCount_' .. tostring(cnt))
+end
+
+function AnalyticsSummaryBossResult(result)
+    cx.CXAnalytics:logEventAndLabel('SummaryBoss', result)
+end
+
+----------------------------------------------------------------------------------------
+
 function Analytics_applicationDidEnterBackground(layerName)
-    cx.CXAnalytics:logEventAndLabel('App Enter Background', layerName)
+    cx.CXAnalytics:logEventAndLabel('AppEnterBackground', layerName)
 end
 

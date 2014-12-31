@@ -8,6 +8,8 @@ local  NewStudySuccessLayer = class("NewStudySuccessLayer", function ()
 end)
 
 function NewStudySuccessLayer.create()
+    s_CURRENT_USER:addBeans(3)
+
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
 
