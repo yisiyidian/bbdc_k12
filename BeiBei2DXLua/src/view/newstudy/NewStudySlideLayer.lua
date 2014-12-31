@@ -135,6 +135,8 @@ function NewStudySlideLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            AnalyticsStudyLookBackWord()
+            
             s_CorePlayManager.enterNewStudyWrongLayer()
         end
     end
