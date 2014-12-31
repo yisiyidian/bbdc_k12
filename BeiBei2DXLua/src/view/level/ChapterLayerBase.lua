@@ -83,7 +83,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
     -- check random summary boss
-    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+
     local currentIndex = levelIndex
     if self.chapterKey == 'chapter1' then
         currentIndex = currentIndex + 10
@@ -94,7 +94,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
     
     --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
-    
+    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
         --print('summarybossIndex:'..summaryboss[i])
@@ -106,8 +106,16 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
     
     -- chest
-    local checkChest = true
-    
+    local chestList = split(s_CURRENT_USER.chestList, '|')
+    local checkChest = false
+    for i = 1, #chestList do
+        --print('summarybossIndex:'..summaryboss[i])
+        if chestList[i] == '' then break end
+        if chestList[i] - currentIndex == 0 then
+            checkChest = true
+            break
+        end
+    end
     
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
@@ -170,11 +178,12 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     elseif checkChest then
         -- define touchEvent
         local function touchEvent(sender,eventType)
-            if eventType == ccui.TouchEventType.ended then
-                
-                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
-                deco:addAnimation(0,'animation',true)
+            if eventType == ccui.TouchEventType.ended then                
+                local deco = sp.SkeletonAnimation:create('spine/baoxiangdakai.json','spine/baoxiangdakai.atlas',1)
+                deco:addAnimation(0,'animation',false)
                 deco:setPosition(sender:getPosition())
+                local i = string.sub(sender:getName(), 6)
+                s_CURRENT_USER:removeChest(i)
                 sender:setVisible(false)
                 self:addChild(deco, 130)
             end

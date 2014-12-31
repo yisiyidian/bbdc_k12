@@ -4,14 +4,14 @@ size: 256,256
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-baoxiang 
+baoxiang
   rotate: false
   xy: 2, 124
   size: 173, 130
   orig: 173, 130
   offset: 0, 0
   index: -1
-dakai 
+dakai
   rotate: true
   xy: 177, 106
   size: 148, 77

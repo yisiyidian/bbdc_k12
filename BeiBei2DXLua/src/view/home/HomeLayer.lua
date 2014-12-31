@@ -314,36 +314,11 @@ function HomeLayer.create()
             playSound(s_sound_buttonEffect)  
             s_CorePlayManager.enterLevelLayer()  
             hideProgressHUD()
-            local isSameDate = (os.date('%x',s_CURRENT_USER.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
-            local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
-            local index = s_CURRENT_USER.bookProgress:getBookCurrentLevelIndex()
-            if not isSameDate and #summaryBossList < 3 and index > #summaryBossList then
-                s_CURRENT_USER.lastUpdateSummaryBossTime = os.time()
-                if #summaryBossList == 0 then
-                    s_CURRENT_USER.summaryBossList = tostring(math.random(0,index - 1)) 
-                else
-                    local id = math.random(1,index - 1 - #summaryBossList)
-                    for i = 1,#summaryBossList do
-                        if summaryBossList[i] == '' then
-                            break
-                        end
-                        if id - summaryBossList[i] < 0 then
-                            table.insert(summaryBossList,i,tostring(id))
-                            break
-                        else
-                            id = id + 1
-                        end
-                    end
-                    --print('summarybossLisst:'..summaryBossList[#summaryBossList])
-                    if summaryBossList[#summaryBossList] ~= '' and id - summaryBossList[#summaryBossList] > 0 then
-                        table.insert(summaryBossList,#summaryBossList + 1,tostring(id))
-                    end
-                    s_CURRENT_USER.summaryBossList = summaryBossList[1]
-                    for i = 2,#summaryBossList do
-                        s_CURRENT_USER.summaryBossList = s_CURRENT_USER.summaryBossList..'|'..summaryBossList[i]
-                    end
-                end
-            end
+            
+            -- generate random list
+            s_CURRENT_USER:generateSummaryBossList()
+            s_CURRENT_USER:generateChestList()
+            s_CURRENT_USER:updateDataToServer()
 --            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
 --                function(api,result)
 --                    s_CorePlayManager.initTotalPlay()
