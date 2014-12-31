@@ -172,6 +172,8 @@ function DownloadLayer.create(bookKey)
                     progress_clicked:setPercentage(percent)
                     progress:setVisible(true)
                     progress_clicked:setVisible(false)            
+
+                    AnalyticsDownloadBook(bookKey)
                 end
             elseif download_state == 1 then
                 progress:setVisible(true)
