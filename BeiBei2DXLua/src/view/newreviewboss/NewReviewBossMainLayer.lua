@@ -71,7 +71,7 @@ function NewReviewBossMainLayer.create()
         end
     end
     
-    for i = 1,  s_CorePlayManager.maxReviewWordCount do
+    for i = 1,  s_CorePlayManager.maxReviewWordCount do   
         table.insert(wordToBeTested,s_CorePlayManager.ReviewWordList[i])
         local words = getRandomWordForRightWord(s_CorePlayManager.ReviewWordList[i])
         local tmp = {}
