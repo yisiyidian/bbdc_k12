@@ -78,14 +78,8 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
+    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
     local levelPosition = self.levelPos[levelIndex]
---    print('######decoration level position########')
---    print('levelIndex:'..levelIndex)
---    print('chapterKey'..self.chapterKey)
---    print_lua_table(self.levelPos)
---    print(self.levelPos[0])
---    print(levelPosition)
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
     -- check random summary boss
@@ -112,11 +106,15 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             break
         end
     end
+    
+    -- chest
+    local checkChest = true
+    
+    
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
         -- plot review boss
---        print('plot review boss####')
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
         s_SCENE:callFuncWithDelay(1,function()
@@ -172,6 +170,20 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
         self:addChild(summaryboss, 150)
+    elseif checkChest then
+        -- define touchEvent
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- 
+                print('on check clicked')
+            end
+        end
+        local start = ccui.Button:create('image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png')
+        start:setScale9Enabled(true)
+        start:setPosition(levelPosition.x-90, levelPosition.y-70)
+        start:setAnchorPoint(0,0)
+        self:addChild(start,150)
+        start:addTouchEventListener(touchEvent)
     elseif levelIndex % 8 == 0 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
         deco:addAnimation(0,'animation',true)
