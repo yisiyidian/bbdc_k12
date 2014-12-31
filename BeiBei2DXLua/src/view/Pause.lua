@@ -27,10 +27,6 @@ function Pause:ctor()
     local director = cc.Director:getInstance()
     self.targets = director:getActionManager():pauseAllRunningActions()
     
-    -- local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    -- back:setPosition(0, 0)
-    -- self:addChild(back)
-    
     self.ccb = {}
     
     ccbPause['onClose'] = self.onClose
@@ -123,15 +119,13 @@ function Pause:onBack()
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
     
-    local level = require('view.LevelLayer')
-    local layer = level.create()
-    --if self.win and isPassed == 0 then
-    --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-    --end
     s_SCENE.popupLayer.listener:setSwallowTouches(false)
     s_SCENE.popupLayer:removeAllChildren()
     s_SCENE.popupLayer.layerpaused = false
-    s_SCENE:replaceGameLayer(layer)
+    s_CorePlayManager.enterLevelLayer()
+    --if self.win and isPassed == 0 then
+    --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
+    --end
 end
 
 function Pause:onContinue()
