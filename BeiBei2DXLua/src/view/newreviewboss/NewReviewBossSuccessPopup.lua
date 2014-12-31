@@ -9,15 +9,7 @@ function NewReviewBossSuccessPopup.create()
     local totalchapter
     
     local reward = s_CorePlayManager.reward
-    local totalWord = s_CorePlayManager.totalWord
-    
-    if reward == nil then
-    reward = 12
-    end
-    
-    if totalWord == nil then 
-    totalWord = 80
-    end
+    local totalWord = s_CorePlayManager.totalWord        
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -117,7 +109,7 @@ function NewReviewBossSuccessPopup.create()
         end
     end
 
-    local button_goon = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","image/newreviewboss/buttonreviewboss1nextend.png","")
+    local button_goon = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","","")
     button_goon:setScale9Enabled(true)
     button_goon:setPosition(back:getContentSize().width * 0.5,back:getContentSize().height * 0.1)
     button_goon:setTitleText("完成复习")

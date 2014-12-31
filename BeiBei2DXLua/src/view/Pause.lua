@@ -31,6 +31,8 @@ function Pause:ctor()
     
     ccbPause['onClose'] = self.onClose
     ccbPause['onRetry'] = self.onRetry
+    --temp
+    self.onRetry:setVisible(false)
     ccbPause['onBack'] = self.onBack
     ccbPause['onContinue'] = self.onContinue
     ccbPause['onHelp'] = self.onHelp
