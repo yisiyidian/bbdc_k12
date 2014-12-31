@@ -167,9 +167,9 @@ function NewReviewBossSummaryLayer.create()
         
         local richtext = ccui.RichText:create()
 
-        local opt_meaning = string.gsub(meaning[i],"|||","\n")
+--        local opt_meaning = string.gsub(meaning[i],"|||","\n")
 
-        local current_word_wordMeaning = cc.LabelTTF:create (opt_meaning,
+        local current_word_wordMeaning = cc.LabelTTF:create (meaning[i],
             "Helvetica",24, cc.size(summury_back:getContentSize().width *0.9, 200), cc.TEXT_ALIGNMENT_LEFT)
 
         current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
@@ -226,9 +226,9 @@ function NewReviewBossSummaryLayer.create()
         local action1 = cc.ScaleTo:create(0.5,1)
         animation:runAction(cc.Sequence:create(action0, action1))
         
-        s_SCENE:callFuncWithDelay(2,function()      
-            if type == 3 then
-                for j = 0,3 do
+      
+        if type == 3 then
+            for j = 0,3 do
                 local animation = cc.Sprite:create("image/word_list/button_wordbook_green.png")
                 local sprite = custom_sprite[i]:getChildByTag(j)
                 animation:setPosition(sprite:getContentSize().width/2,sprite:getContentSize().height/2)
@@ -238,15 +238,14 @@ function NewReviewBossSummaryLayer.create()
                 local action0 = cc.ScaleTo:create(1,1.2)
                 local action1 = cc.ScaleTo:create(0.5,1)
                 animation:runAction(cc.Sequence:create(action0, action1))
-                end
             end
-        end)
+        end
+
     end
     
     
     local next_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)    
             local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-200))
             backGround:runAction(action1)
@@ -258,10 +257,14 @@ function NewReviewBossSummaryLayer.create()
             rbProgressBar:runAction(action1)   
 
             local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-400))
-            summury_back:runAction(action1)
-        elseif eventType == ccui.TouchEventType.ended then   
+            summury_back:runAction(action1)    
+
             s_CorePlayManager.updateReviewBoss(s_CorePlayManager.bossID)  
             s_CorePlayManager.updateReviewRewardAndTotalWord()  
+            
+--            print("reward .."..s_CorePlayManager.currentReward)
+--            print("total .."..s_CorePlayManager.reward)
+            
             local candidate = s_CorePlayManager.getReviewBossCandidate() 
             s_CorePlayManager.initNewReviewBossLayer(candidate)
             if candidate == nil then
@@ -271,6 +274,8 @@ function NewReviewBossSummaryLayer.create()
             else
                 s_CorePlayManager.enterReviewBossMainLayer()
             end
+        elseif eventType == ccui.TouchEventType.ended then   
+
         end
     end
     
@@ -321,8 +326,6 @@ function NewReviewBossSummaryLayer.create()
 
     layer:scheduleUpdateWithPriorityLua(update, 0)
     
---    print("reward .."..s_CorePlayManager.currentReward)
---    print("total .."..s_CorePlayManager.reward)
     
     return layer
 end

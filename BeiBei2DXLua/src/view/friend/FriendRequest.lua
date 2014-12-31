@@ -161,6 +161,9 @@ function FriendRequest:main()
                     s_SCENE.popupLayer:addChild(smallAlter)
                     return
                 end
+                
+                AnalyticsFriendAccept()
+
                 s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function (api, result, err)
                         if err == nil then

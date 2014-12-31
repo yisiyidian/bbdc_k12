@@ -92,7 +92,7 @@ function NewReviewBossFailPopup.create()
     girl:setPosition(back:getContentSize().width *0.33,back:getContentSize().height * 0.15)
     back:addChild(girl)
 
-    local button_goon = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","image/newreviewboss/buttonreviewboss1nextend.png","")
+    local button_goon = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","","")
     button_goon:setScale9Enabled(true)
     button_goon:setPosition(back:getContentSize().width * 0.5,back:getContentSize().height * 0.1)
     button_goon:setTitleText("重新挑战")
