@@ -148,7 +148,7 @@ function DataUser:generateSummaryBossList()
             end
         end
     end
---    self.summaryBossList = '0'
+
 end
 
 function DataUser:removeChest(index)
