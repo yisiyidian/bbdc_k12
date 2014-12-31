@@ -4,6 +4,9 @@ local DownloadAlter = class("DownloadAlter", function()
     return cc.Layer:create()
 end)
 
+local button_cancel
+local button_sure
+
 function DownloadAlter.create(content)
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
@@ -46,7 +49,7 @@ function DownloadAlter.create(content)
         end
     end
 
-    local button_cancel = ccui.Button:create("image/download/button_blue_small.png","image/download/button_blue_small_clicked.png","")
+    button_cancel = ccui.Button:create("image/download/button_blue_small.png","image/download/button_blue_small_clicked.png","")
     button_cancel:setTitleText("取消")
     button_cancel:setTitleFontSize(30)
     button_cancel:setPosition(maxWidth/2-110,80)
@@ -59,10 +62,11 @@ function DownloadAlter.create(content)
         end
     end
 
-    local button_sure = ccui.Button:create("image/download/button_blue_small.png","image/download/button_blue_small_clicked.png","")
+    button_sure = ccui.Button:create("image/download/button_blue_small.png","image/download/button_blue_small_clicked.png","")
     button_sure:setTitleText("确定")
     button_sure:setTitleFontSize(30)
     button_sure:setPosition(maxWidth/2+110,80)
+
     button_sure:addTouchEventListener(button_sure_clicked)
     back:addChild(button_sure)
 
@@ -77,15 +81,12 @@ function DownloadAlter.create(content)
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
+    main.setOneButtonMode = function()
+        button_sure:setPosition(maxWidth/2,80)
+        button_cancel:setVisible(false)
+    end    
+
     return main
 end
 
-
 return DownloadAlter
-
-
-
-
-
-
-

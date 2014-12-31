@@ -145,6 +145,7 @@ function DownloadLayer.create(bookKey)
             
             local downloadAlter = DownloadAlter.create("贝贝提醒您，最新的单词包到货了 ^_^")
             downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            downloadAlter.setOneButtonMode()            
             backColor:addChild(downloadAlter)
             
             local finish = function()
@@ -171,12 +172,17 @@ function DownloadLayer.create(bookKey)
             DownloadSoundController.killDownload(bookKey)
             local downloadAlter = DownloadAlter.create("下载失败，请稍后重试！")
             downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            downloadAlter.setOneButtonMode()
             backColor:addChild(downloadAlter)
             
-            download_state = 0
-            button_title:setString(title1)
-            progress:setVisible(false)
-            progress_clicked:setVisible(false)
+            downloadAlter.sure =function()
+                downloadAlter:removeFromParent()
+                download_state = 0
+                button_title:setString(title1)
+                progress:setVisible(false)
+                progress_clicked:setVisible(false)
+            end
+            
         end
     end
     
