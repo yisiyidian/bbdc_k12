@@ -76,11 +76,7 @@ end
 function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
---    print('########old progress:')
---    print_lua_table(oldProgress)
---    print_lua_table(currentProgress)
---    print_lua_table(s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey))
-    --s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
+    s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
     if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- TODO unlock chapter
         -- add next chapter
         self:addChapterIntoListView(currentProgress['chapter'])
