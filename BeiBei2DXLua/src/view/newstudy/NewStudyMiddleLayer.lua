@@ -10,6 +10,8 @@ local  NewStudyMiddleLayer = class("NewStudyMiddleLayer", function ()
 end)
 
 function NewStudyMiddleLayer.create()
+    s_CURRENT_USER:addBeans(3)
+    
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
 
