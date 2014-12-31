@@ -84,11 +84,11 @@ function AnalyticsChangeBookBtn()
 end
 
 function AnalyticsBook(bookname)
-    cx.CXAnalytics:logEventAndLabel('Book', 'selected ' .. bookname)
+    cx.CXAnalytics:logEventAndLabel('Book', 'selected_' .. bookname)
 end
 
 function AnalyticsDownloadBook(bookname)
-    cx.CXAnalytics:logEventAndLabel('Book', 'download ' .. bookname)
+    cx.CXAnalytics:logEventAndLabel('Book', 'download_' .. bookname)
 end
 
 ----------------------------------------------------------------------------------------
@@ -120,32 +120,32 @@ end
 
 -- 猜错
 function AnalyticsStudyGuessWrong()
-    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'Guess Wrong')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'GuessWrong')
 end
 
 -- 答对
 function AnalyticsStudyAnswerRight()
-    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'Answer Right')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'AnswerRight')
 end
 
 -- 不会
 function AnalyticsStudyDontKnowAnswer()
-    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'Dont Know Answer')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'DontKnowAnswer')
 end
 
 -- 猜错
 function AnalyticsStudyGuessWrong_strikeWhileHot()
-    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'Guess Wrong')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'GuessWrong')
 end
 
 -- 答对
 function AnalyticsStudyAnswerRight_strikeWhileHot()
-    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'Answer Right')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'AnswerRight')
 end
 
 -- 不会
 function AnalyticsStudyDontKnowAnswer_strikeWhileHot()
-    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'Dont Know Answer')
+    cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'DontKnowAnswer')
 end
 
 -- 点击 跳过划单词步骤
@@ -164,9 +164,21 @@ function AnalyticsReviewBoss()
     cx.CXAnalytics:logEventAndLabel('ReviewBoss', 'SHOW')
 end
 
+----------------------------------------------------------------------------------------
+
 function AnalyticsSummaryBoss()
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'SHOW')
 end
+
+function AnalyticsSummaryBossWordCount(cnt)
+    cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'wordsCount_' .. tostring(cnt))
+end
+
+function AnalyticsSummaryBossResult(result)
+    cx.CXAnalytics:logEventAndLabel('SummaryBoss', result)
+end
+
+----------------------------------------------------------------------------------------
 
 function Analytics_applicationDidEnterBackground(layerName)
     cx.CXAnalytics:logEventAndLabel('AppEnterBackground', layerName)

@@ -727,6 +727,7 @@ function SummaryBossLayer:initWordList()
     end
 
     self.maxCount = #wordList
+    AnalyticsSummaryBossWordCount(self.maxCount)
 
     self.totalBlood = 0
     for i = 1,#wordList do
@@ -1154,6 +1155,8 @@ function SummaryBossLayer:win(levelIndex,chapter)
     
 --    -- win sound
 --    playSound(s_sound_win)
+
+    AnalyticsSummaryBossResult('win')
 end
 
 function SummaryBossLayer:lose(chapter)
@@ -1165,6 +1168,7 @@ function SummaryBossLayer:lose(chapter)
     
 --    -- lose sound
 --    playSound(s_sound_fail)    
+    AnalyticsSummaryBossResult('lose')
 end
 
 function SummaryBossLayer:hint()

@@ -202,6 +202,8 @@ function SummaryBossAlter:lose2()
         cc.SimpleAudioEngine:getInstance():stopAllEffects()
         -- button sound
         playSound(s_sound_buttonEffect)
+
+        AnalyticsSummaryBossResult('again')
     end
     again:registerScriptTapHandler(challengeAgain)
     
