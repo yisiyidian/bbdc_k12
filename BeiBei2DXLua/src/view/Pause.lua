@@ -30,9 +30,7 @@ function Pause:ctor()
     self.ccb = {}
     
     ccbPause['onClose'] = self.onClose
-    ccbPause['onRetry'] = self.onRetry
-    --temp
-    self.onRetry:setVisible(false)
+    ccbPause['onRetry'] = self.onRetry    
     ccbPause['onBack'] = self.onBack
     ccbPause['onContinue'] = self.onContinue
     ccbPause['onHelp'] = self.onHelp
@@ -47,6 +45,11 @@ function Pause:ctor()
 
     local proxy = cc.CCBProxy:create()
     local node  = CCBReaderLoad("res/ccb/pause.ccbi", proxy, ccbPause, self.ccb)
+    --temp
+    ccbPause['retry']:setVisible(false)
+    ccbPause['back']:setPositionX(ccbPause['back']:getPositionX()+80)
+    ccbPause['continue']:setPositionX(ccbPause['continue']:getPositionX()+80)
+    
     node:setPosition(0,0)
     self:addChild(node)
     
@@ -92,23 +95,23 @@ end
 
 function Pause:onRetry()
     
-    local sceneState = ""
-    if  s_SCENE.gameLayerState == s_review_boss_game_state then
-        s_SCENE.levelLayerState = s_review_boss_retry_state 
-    elseif s_SCENE.gameLayerState == s_summary_boss_game_state then
-        s_SCENE.levelLayerState = s_normal_retry_state  
-    else
-        s_SCENE.levelLayerState = s_normal_retry_state
-    end
-    
-    ccbPause['Layer']:onBack()
-
-    --button sound
-    playSound(s_sound_buttonEffect)
-    --control volune
-    if s_DATABASE_MGR.isMusicOn() then
-        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
-    end
+--    local sceneState = ""
+--    if  s_SCENE.gameLayerState == s_review_boss_game_state then
+--        s_SCENE.levelLayerState = s_review_boss_retry_state 
+--    elseif s_SCENE.gameLayerState == s_summary_boss_game_state then
+--        s_SCENE.levelLayerState = s_normal_retry_state  
+--    else
+--        s_SCENE.levelLayerState = s_normal_retry_state
+--    end
+--    
+--    ccbPause['Layer']:onBack()
+--
+--    --button sound
+--    playSound(s_sound_buttonEffect)
+--    --control volune
+--    if s_DATABASE_MGR.isMusicOn() then
+--        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
+--    end
 end
 
 function Pause:onBack()
