@@ -6,7 +6,7 @@
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"sat.zip" : {
-			"md5" : "06c2bad76264798495f2d18be6ef651e",
+			"md5" : "06c2bad76264798495f2d18be6ef651f",
 			"compressed" : true
 		}
 	}, 

@@ -6,7 +6,7 @@
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"gse.zip" : {
-			"md5" : "c1800bab97608887ffefedde6f066ca2",
+			"md5" : "c1800bab97608887ffefedde6f066cae",
 			"compressed" : true
 		}
 	}, 

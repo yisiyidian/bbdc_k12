@@ -2,6 +2,6 @@
 	"packageUrl" : "http://yisiyidian.com/BookSoundBag/",
 	"remoteManifestUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_gse_server.manifest", 
 	"remoteVersionUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_gse_version.manifest", 
-	"version" : "1.6.0.0", 
+	"version" : "1.6.0.1", 
 	"engineVersion" : "3.3 rc2" 
 }

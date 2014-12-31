@@ -69,16 +69,17 @@ function ChapterLayer:ctor()
     -- check unlock level
     self:checkUnlockLevel()
     self:addBottomBounce()
+    self:addBackToHome()
 end
 
 function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
-    print('########old progress:')
-    print_lua_table(oldProgress)
-    print_lua_table(currentProgress)
-    print_lua_table(s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey))
-    s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
+--    print('########old progress:')
+--    print_lua_table(oldProgress)
+--    print_lua_table(currentProgress)
+--    print_lua_table(s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey))
+    --s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
     if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- TODO unlock chapter
         -- add next chapter
         self:addChapterIntoListView(currentProgress['chapter'])
@@ -108,28 +109,34 @@ function ChapterLayer:checkUnlockLevel()
             end)
             delayTime = delayTime + 1
         end 
---        self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
---        -- unlock chapter
---        s_SCENE:callFuncWithDelay(delayTime, function()
---            self:plotUnlockCloudAnimation()
---            local delay_t = 0
---            -- plot player
---            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
---            self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
---            for index = 1, (currentLevelIndex - 0) do
---                s_SCENE:callFuncWithDelay(delayTime,function()
---                    self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
---                    -- move player
---                    s_SCENE:callFuncWithDelay(0.3,function()
---                        local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
---                        local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
---                        self.player:runAction(action)
---                    end)
---                end)
---                delay_t = delay_t + 1
---            end
---            
---        end)
+       
+        s_SCENE:callFuncWithDelay(0.5, function()
+            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
+        end)
+        -- unlock chapter
+        s_SCENE:callFuncWithDelay(delayTime, function()
+            --self:plotUnlockCloudAnimation()
+            local delay_t = 0
+            -- plot player
+            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
+            self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
+            for index = 1, (currentLevelIndex - 0) do
+                s_SCENE:callFuncWithDelay(delayTime,function()
+                    self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
+                    -- move player
+                    s_SCENE:callFuncWithDelay(0.3,function()
+                        local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
+                        local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+                        self.player:runAction(action)
+                    end)
+                end)
+                delay_t = delay_t + 1
+            end
+            s_SCENE:callFuncWithDelay(delay_t+1, function()
+                -- add notification
+                self:addPlayerNotification() 
+            end) 
+        end)
     elseif currentProgress['level'] ~= oldProgress['level'] then   -- unlock level
         local oldLevelIndex = string.sub(oldProgress['level'], 6)
         local currentLevelIndex = string.sub(currentProgress['level'],6)
@@ -164,16 +171,23 @@ end
 function ChapterLayer:addPlayerNotification()  -- notification
     self.player:removeAllChildren()
     local type
+    print('gameState:'..s_DATABASE_MGR.getGameState())
     if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel then
         type = 'reviewboss'
-    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel or s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
-        type = 'study'
+--    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel or s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
+--        type = 'study'
     elseif s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
         type = 'complete'
+    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
+        type = 'study'
+    else
+        type = 'review'
     end
+--    type = 'reviewboss'
     local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
     notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height+80)
     self.player:addChild(notification, 100)
+--    type = 'review'
     -- TODO show message according to type
     if type == 'study' then
         local title = cc.Label:createWithSystemFont('当前任务','',28)
@@ -183,6 +197,40 @@ function ChapterLayer:addPlayerNotification()  -- notification
         title:setPosition(30,110)
         notification:addChild(title)
         local task_name = cc.Label:createWithSystemFont('积累生词: '..s_DATABASE_MGR.getwrongWordListSize()..'/'..s_max_wrong_num_everyday,'',25)
+        task_name:setColor(cc.c3b(0,0,0))
+        task_name:ignoreAnchorPointForPosition(false)
+        task_name:setAnchorPoint(0,0)
+        task_name:setPosition(30,80)
+        notification:addChild(task_name)
+        -- define touchEvent
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO go to study
+                s_CorePlayManager.initTotalPlay()
+            end
+        end
+        local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
+        start:setScale9Enabled(true)
+        start:setPosition(50,40)
+        start:setAnchorPoint(0,0)
+        notification:addChild(start)
+        start:addTouchEventListener(touchEvent)
+        
+        -- add button title
+        local button_title = cc.Label:createWithSystemFont('继续积累','',20)
+        --button_title:setColor(cc.c3b(0,0,0))
+        button_title:ignoreAnchorPointForPosition(false)
+        button_title:setAnchorPoint(0.5,0.5)
+        button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
+        start:addChild(button_title)
+    elseif type == 'review' then
+        local title = cc.Label:createWithSystemFont('当前任务','',28)
+        title:setColor(cc.c3b(0,0,0))
+        title:ignoreAnchorPointForPosition(false)
+        title:setAnchorPoint(0,0)
+        title:setPosition(30,110)
+        notification:addChild(title)
+        local task_name = cc.Label:createWithSystemFont('学习生词: '..s_DATABASE_MGR.getwrongWordListSize()..'/'..s_max_wrong_num_everyday,'',25)
         task_name:setColor(cc.c3b(0,0,0))
         task_name:ignoreAnchorPointForPosition(false)
         task_name:setAnchorPoint(0,0)
@@ -266,18 +314,20 @@ function ChapterLayer:addPlayer()
     local position = self.chapterDic[bookProgress['chapter']]:getLevelPosition(bookProgress['level'])
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
-    self.chapterDic[bookProgress['chapter']]:addChild(self.player, 130)
+    self.chapterDic[bookProgress['chapter']]:addChild(self.player, 150)
 end
 
 function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:removeFromParent()
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+--    local bookProgress = s_CURRENT_USER.bookProgress:computeCu
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
     self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
     local position = self.chapterDic[chapterKey]:getLevelPosition(levelKey)
+--    print('!!!!!!!!!!player position!!!!!!')
+--    print(position)
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
-    self.chapterDic[bookProgress['chapter']]:addChild(self.player, 130)
+    self.chapterDic[chapterKey]:addChild(self.player, 150)
 end
 
 function ChapterLayer:addChapterIntoListView(chapterKey)
@@ -309,7 +359,7 @@ end
 
 -- scroll listview to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    local bookProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     -- compute listView inner height
     local itemList = listView:getItems()
     local innerHeight = 0
@@ -397,12 +447,32 @@ function ChapterLayer:addBottomBounce()
     listView:addChild(self.chapterDic['rightCloud'],100)
 end
 
+function ChapterLayer:addBackToHome()
+    local click_home = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local IntroLayer = require("view.home.HomeLayer")
+            local introLayer = IntroLayer.create()  
+            s_SCENE:replaceGameLayer(introLayer)
+        end
+    end
+
+
+    -- return to homepage button
+    local homeButton = ccui.Button:create("image/chapter_level/button_home_book.png","image/chapter_level/button_home_book.png","")
+    homeButton:addTouchEventListener(click_home)
+    homeButton:ignoreAnchorPointForPosition(false)
+    homeButton:setAnchorPoint(0,1)
+    homeButton:setPosition(s_LEFT_X + 50  , s_DESIGN_HEIGHT - 50 )
+    homeButton:setLocalZOrder(1)
+    self:addChild(homeButton,200)
+end
+
 function ChapterLayer:addBeansUI()
     self.beans = cc.Sprite:create('image/chapter/chapter0/top.png')
     self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans,150)
     local beanCount = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',28)
-    beanCount:setColor(cc.c3b(0, 0, 0))
+    beanCount:setColor(cc.c3b(0, 255, 0))
     beanCount:ignoreAnchorPointForPosition(false)
     beanCount:setAnchorPoint(0,0)
     beanCount:setPosition(70,3)

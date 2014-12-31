@@ -7,7 +7,7 @@ cocos compile \
     -ap 17 \
     -m release \
     --luacompile \
-    --lua-encrypt --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA"
+    --lua-encrypt true --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA"
     —disable-compile true
     
 # BeiBei2DXLua/publish/android/BeiBei2DXLua-release-signed.apk    

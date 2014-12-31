@@ -6,7 +6,7 @@
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"primary.zip" : {
-			"md5" : "ee02d3cb4de8a322056a618ae9fd4cf7",
+			"md5" : "ee02d3cb4de8a322056a618ae9fd4cfe",
 			"compressed" : true
 		}
 	}, 

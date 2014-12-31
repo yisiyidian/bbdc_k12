@@ -49,7 +49,7 @@ function ChapterLayerBase:createObjectForResource(t)
             object:setTag(islandTag)
             islandTag=islandTag+1
         end
-        self:addChild(object,100)
+        self:addChild(object,50)
     end
     return object
 end
@@ -100,6 +100,9 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     elseif self.chapterKey == 'chapter3' then
         currentIndex = currentIndex + 60
     end
+    
+    --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
+    
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
         --print('summarybossIndex:'..summaryboss[i])
@@ -113,28 +116,30 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
         -- plot review boss
+--        print('plot review boss####')
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
         s_SCENE:callFuncWithDelay(1,function()
             reviewBoss:addAnimation(1, '2', true)
         end)
-        reviewBoss:setPosition(levelPosition.x, levelPosition.y)
-        self:addChild(reviewBoss)
+        reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
+        self:addChild(reviewBoss, 140)
     elseif checkSummaryBoss then
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
 --                summaryboss:setAnchorPoint(1,1)
         -- chapter layer
         local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
-        notification:setPosition(summaryboss:getContentSize().width/2,summaryboss:getContentSize().height+80)
+        notification:setPosition(summaryboss:getContentSize().width+130,summaryboss:getContentSize().height+320)
         summaryboss:addChild(notification, 100)
+        summaryboss:setName('summaryboss'..currentIndex)
         local title = cc.Label:createWithSystemFont('当前任务','',28)
         title:setColor(cc.c3b(0,0,0))
         title:ignoreAnchorPointForPosition(false)
         title:setAnchorPoint(0,0)
         title:setPosition(30,110)
         notification:addChild(title)
-        local task_name = cc.Label:createWithSystemFont('打败总结boss ','',25)
+        local task_name = cc.Label:createWithSystemFont('打败鲶鱼boss','',25)
         task_name:setColor(cc.c3b(0,0,0))
         task_name:ignoreAnchorPointForPosition(false)
         task_name:setAnchorPoint(0,0)
@@ -155,7 +160,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         start:addTouchEventListener(touchEvent)
         
         -- add button title
-        local button_title = cc.Label:createWithSystemFont('继续学习','',20)
+        local button_title = cc.Label:createWithSystemFont('开始挑战','',20)
         --button_title:setColor(cc.c3b(0,0,0))
         button_title:ignoreAnchorPointForPosition(false)
         button_title:setAnchorPoint(0.5,0.5)
@@ -166,7 +171,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
-        self:addChild(summaryboss, 125)
+        self:addChild(summaryboss, 150)
     elseif levelIndex % 8 == 0 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
         deco:addAnimation(0,'animation',true)
