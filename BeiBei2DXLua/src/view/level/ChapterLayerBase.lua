@@ -84,8 +84,6 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     self:plotLevelNumber('level'..levelIndex)
     -- check random summary boss
     local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
-    --print('summarybossList:'..s_CURRENT_USER.summaryBossList)
-    --print('lensummba:'..#summaryboss)
     local currentIndex = levelIndex
     if self.chapterKey == 'chapter1' then
         currentIndex = currentIndex + 10
@@ -164,8 +162,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         button_title:setAnchorPoint(0.5,0.5)
         button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
         start:addChild(button_title)
-        -- !!!
-        print('summaryboss position:'..summaryboss:getPosition())
+--        print('summaryboss position:'..summaryboss:getPosition())
         summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
@@ -174,16 +171,21 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         -- define touchEvent
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                -- 
-                print('on check clicked')
+                
+                local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
+                deco:addAnimation(0,'animation',true)
+                deco:setPosition(sender:getPosition())
+                sender:setVisible(false)
+                self:addChild(deco, 130)
             end
         end
-        local start = ccui.Button:create('image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png')
-        start:setScale9Enabled(true)
-        start:setPosition(levelPosition.x-90, levelPosition.y-70)
-        start:setAnchorPoint(0,0)
-        self:addChild(start,150)
-        start:addTouchEventListener(touchEvent)
+        local chestButton = ccui.Button:create('image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png')
+        chestButton:setScale9Enabled(true)
+        chestButton:setPosition(levelPosition.x-90, levelPosition.y-70)
+        chestButton:setAnchorPoint(0,0)
+        chestButton:setName('chest'..currentIndex)
+        self:addChild(chestButton,150)
+        chestButton:addTouchEventListener(touchEvent)
     elseif levelIndex % 8 == 0 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
         deco:addAnimation(0,'animation',true)
@@ -229,10 +231,6 @@ function ChapterLayerBase:plotDecoration()
     local currentChapterIndex = string.sub(bookProgress['chapter'],8)
     local chapterIndex = string.sub(self.chapterKey, 8)
     for levelIndex, levelPosition in pairs(self.levelPos) do
-        --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
---        print('!!!!!levelConfigType:'..levelConfig)
---        print_lua_table(levelConfig)
-        -- is locked
         if (levelIndex - currentLevelIndex > 0 and chapterIndex == currentChapterIndex)  or chapterIndex - currentChapterIndex > 0 then
             local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
             lockIsland:setName('lockLayer'..levelIndex)
