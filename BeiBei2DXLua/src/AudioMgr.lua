@@ -59,8 +59,8 @@ function playWordSound(word)
         local filename = getWordSoundFileName(word)
 --        local localPath = getWordSoundFilePath(word)
 --        print("The current localPath is: ",localPath)
---        if cc.FileUtils:getInstance():isFileExist(localPath) then
-        cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
---        end
+        if cc.FileUtils:getInstance():isFileExist(filename) then
+            cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
+        end
     end
 end

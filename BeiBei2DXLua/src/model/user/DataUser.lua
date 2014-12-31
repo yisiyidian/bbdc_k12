@@ -2,6 +2,7 @@ local DataClassBase = require('model/user/DataClassBase')
 local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 local DataLogIn = require('model/user/DataLogIn')
 local DataBookProgress = require('model.user.DataBookProgress')
+local DataDailyStudyInfo = require('model/user/DataDailyStudyInfo')
 
 USER_TYPE_MANUAL = 0
 USER_TYPE_GUEST  = 1
@@ -79,6 +80,7 @@ function DataUser:ctor()
     self.summaryBossList                   = ''
     self.chestList                         = ''
     self.lastUpdateChestTime               = 0
+    self.dailyStudyInfo                    = DataDailyStudyInfo.create()
 end
 
 function DataUser:addBeans(count)

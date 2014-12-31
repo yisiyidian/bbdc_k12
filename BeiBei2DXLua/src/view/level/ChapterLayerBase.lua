@@ -143,6 +143,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         title:setAnchorPoint(0,0)
         title:setPosition(30,110)
         notification:addChild(title)
+        
+        
         local task_name = cc.Label:createWithSystemFont('打败鲶鱼boss','',25)
         task_name:setColor(cc.c3b(0,0,0))
         task_name:ignoreAnchorPointForPosition(false)

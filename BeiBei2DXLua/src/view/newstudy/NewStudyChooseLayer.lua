@@ -84,9 +84,9 @@ function NewStudyChooseLayer.create()
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then            
             local feedback 
-            if sender.tag == 1 then
+            if sender.tag == 1 then  
                 feedback = cc.Sprite:create("image/newstudy/righttip.png")
-            else
+            else  
                 feedback = cc.Sprite:create("image/newstudy/falsetip.png")
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
@@ -95,8 +95,12 @@ function NewStudyChooseLayer.create()
             s_SCENE:callFuncWithDelay(0.5,function()  
                 if sender.tag == 1 then
                     if s_CorePlayManager.isStudyModel() then
+                        AnalyticsStudyAnswerRight()
+                        
                         s_CorePlayManager.enterNewStudyRightLayer()
                     else
+                        AnalyticsStudyAnswerRight_strikeWhileHot()
+                        
                         s_CorePlayManager.updateWordCandidate(false)
                         
                         if s_CorePlayManager.candidateNum == 0 then
@@ -108,8 +112,12 @@ function NewStudyChooseLayer.create()
                     end
                 else
                     if s_CorePlayManager.isStudyModel() then
+                        AnalyticsStudyGuessWrong()
+                        
                         s_CorePlayManager.enterNewStudyWrongLayer()
                     else
+                        AnalyticsStudyGuessWrong_strikeWhileHot()
+                        
                         s_CorePlayManager.enterNewStudyWrongLayer()
                     end
                 end   
@@ -144,10 +152,14 @@ function NewStudyChooseLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then            
+        elseif eventType == ccui.TouchEventType.ended then  
             if s_CorePlayManager.isStudyModel() then
+                AnalyticsStudyDontKnowAnswer()  
+                
                 s_CorePlayManager.enterNewStudyWrongLayer()
             else
+                AnalyticsStudyDontKnowAnswer_strikeWhileHot()
+            
                 s_CorePlayManager.enterNewStudyWrongLayer()
             end
         end

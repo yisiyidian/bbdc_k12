@@ -398,4 +398,36 @@ function UserBaseServer.saveWordProciencyOfCurrentUser(bookKey, wordName, procie
     s_SERVER.search('classes/DataWordProciency?where={"userId":"' .. dataObject.userId .. '","bookKey":"' .. dataObject.bookKey .. '","wordName":"' .. dataObject.wordName .. '"}', s, f)
 end
 
+function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
+    local dataObject = s_CURRENT_USER.dailyStudyInfo    
+
+    local function update()
+        dataObject.objectId  = ''
+        dataObject.userId    = s_CURRENT_USER.objectId
+        dataObject.bookKey   = bookKey
+        dataObject.dayString = dayString
+        dataObject.studyNum  = studyNum
+        dataObject.graspNum  = graspNum
+    end
+
+    local s = function (api, result)
+        update()
+        if #result.results > 0 then
+            for i, data in ipairs(result.results) do
+                dataObject.objectId = data.objectId
+                s_SERVER.updateData(dataObject, nil, nil)
+                break
+            end
+        else
+            s_SERVER.createData(dataObject, nil, nil)
+        end
+    end
+    local f = function (api, result) 
+        update()
+        s_SERVER.createData(dataObject, nil, nil) 
+    end
+
+    s_SERVER.search('classes/DataDailyStudyInfo?where={"userId":"' .. s_CURRENT_USER.userId .. '","bookKey":"' .. bookKey .. '","dayString":"' .. dayString .. '"}', s, f)
+end 
+
 return UserBaseServer

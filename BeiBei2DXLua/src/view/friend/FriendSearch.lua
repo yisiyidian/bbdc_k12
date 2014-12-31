@@ -182,6 +182,7 @@ function FriendSearch:ctor()
                                                     return
                                                 end
                                                 showProgressHUD('正在发送好友请求')
+                                                AnalyticsFriendRequest()
                                                 s_UserBaseServer.unfollow(user,
                                                     function(api, result, err)
                                                         if err == nil then

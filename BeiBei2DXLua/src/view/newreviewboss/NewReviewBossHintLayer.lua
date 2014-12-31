@@ -30,6 +30,14 @@ function NewReviewBossHintLayer.create(currentWordName)
     local white_back
     local line_y
     
+    local wordList = {}
+    table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)
+        if  s_CorePlayManager.ReviewWordList[i] ~= "" then
+            table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
+        end
+    end) 
+    local wordListLen  
+    
     local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
@@ -39,11 +47,11 @@ function NewReviewBossHintLayer.create(currentWordName)
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            local pauseLayer = Pause.create()
-            pauseLayer:setPosition(s_LEFT_X, 0)
-            s_SCENE.popupLayer:addChild(pauseLayer)
-            s_SCENE.popupLayer.listener:setSwallowTouches(true)
-            playSound(s_sound_buttonEffect)
+--            local pauseLayer = Pause.create()
+--            pauseLayer:setPosition(s_LEFT_X, 0)
+--            s_SCENE.popupLayer:addChild(pauseLayer)
+--            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+--            playSound(s_sound_buttonEffect)
         end
     end
     pauseBtn:addTouchEventListener(pauseScene)
@@ -56,7 +64,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
     backGround:ignoreAnchorPointForPosition(false)
     backGround:setAnchorPoint(0.5,0.5)
---    layer:addChild(backGround)
+    layer:addChild(backGround)
     
     local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 263)
     fillColor1:setAnchorPoint(0.5,0)
@@ -76,7 +84,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     fillColor3:setPosition(s_DESIGN_WIDTH/2,542)
     layer:addChild(fillColor3)
 
-    local fillColor4 = cc.LayerColor:create(cc.c4b(213,243,255,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-776)
+    local fillColor4 = cc.LayerColor:create(cc.c4b(213,243,255,0), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-776)
     fillColor4:setAnchorPoint(0.5,0)
     fillColor4:ignoreAnchorPointForPosition(false)
     fillColor4:setPosition(s_DESIGN_WIDTH/2,776)
@@ -113,7 +121,7 @@ function NewReviewBossHintLayer.create(currentWordName)
         layer:addChild(reward)  
     end
     
-    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"yellow")
+    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"yellow")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
     
@@ -245,6 +253,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     
     
     local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
