@@ -361,6 +361,9 @@ end
 
 -- scroll listview to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
+    if chapterKey == 'chapter0' and levelKey == 'level0' then
+        return
+    end
     local bookProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     -- compute listView inner height
     local itemList = listView:getItems()
