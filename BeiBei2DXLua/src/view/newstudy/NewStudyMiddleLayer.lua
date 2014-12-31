@@ -68,10 +68,24 @@ function NewStudyMiddleLayer.create()
     number:setColor(cc.c4b(98,124,148,255))
     circle:addChild(number)
     
-    local label_hint2 = cc.Label:createWithSystemFont("快速过一遍这些生词\n可以得到任务奖励哦","",36)
-    label_hint2:setPosition(bigWidth/2, 300)
+    local label_hint2 = cc.Label:createWithSystemFont("获得奖励：","",36)
+    label_hint2:setPosition(170, 320)
     label_hint2:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(label_hint2)
+    
+    local bean1 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+    bean1:setPosition(bigWidth/2-100, 250)
+    backColor:addChild(bean1)
+    
+    local bean2 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+    bean2:setPosition(bigWidth/2, 250)
+    backColor:addChild(bean2)
+    
+    local bean3 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+    bean3:setPosition(bigWidth/2+100, 250)
+    backColor:addChild(bean3)
+    
+    
     
     local button_go_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
