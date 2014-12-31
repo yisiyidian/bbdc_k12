@@ -94,6 +94,14 @@ function AnalyticsReplayerWrongWords()
     -- s_SERVER.increment('ReplayerWrongWords', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
+function AnalyticsContinueReview()
+    cx.CXAnalytics:logEventAndLabel('Continue Review', 'TOUCH')
+end
+
+function AnalyticsStudyNext()
+    cx.CXAnalytics:logEventAndLabel('Study Next', 'TOUCH')
+end
+
 ----------------------------------------------------------------------------------------
 
 function AnalyticsReviewBoss()

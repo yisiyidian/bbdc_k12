@@ -47,6 +47,8 @@ function NewStudyRightLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            AnalyticsContinueReview()
+
             local normal = function()
                 s_CorePlayManager.enterNewStudyWrongLayer()
             end
@@ -81,6 +83,8 @@ function NewStudyRightLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            AnalyticsStudyNext()
+            
             local normal = function()
                 s_CorePlayManager.updateRightWordList(wordname)
                 s_CorePlayManager.updateCurrentIndex()
