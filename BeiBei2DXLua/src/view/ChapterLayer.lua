@@ -205,6 +205,8 @@ function ChapterLayer:addPlayerNotification()  -- notification
         -- define touchEvent
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
+                AnalyticsTouchTasks()
+                
                 -- TODO go to study
                 s_CorePlayManager.initTotalPlay()
             end

@@ -410,8 +410,8 @@ function AppScene:getDataBookProgress(oncompleted)
             end)
     else
         s_UserBaseServer.getDataBookProgress(s_CURRENT_USER.bookProgressObjectId,
-            function(api,result)
-                s_CURRENT_USER:parseServerDataBookProgress(result, s_CURRENT_USER.bookProgress)
+            function(api, result)
+                s_CURRENT_USER:parseServerDataBookProgress(result.results)
                 saveuser()
                 oncompleted()
             end, 
