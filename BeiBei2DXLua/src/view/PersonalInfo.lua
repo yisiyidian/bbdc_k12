@@ -70,12 +70,16 @@ function PersonalInfo:ctor()
             lastPage = curPage
             if curPage == 3 then
                 self:PLVM()
+                AnalyticsDataCenterPage('PLVM')
             elseif curPage == 2 then
                 self:PLVI()
+                AnalyticsDataCenterPage('PLVI')
             elseif curPage == 1 then
                 self:login()
+                AnalyticsDataCenterPage('LOGIN')
             else
                 self:XXTJ()
+                AnalyticsDataCenterPage('XXTJ')
             end
         end
     end
