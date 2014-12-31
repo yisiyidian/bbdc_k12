@@ -240,7 +240,7 @@ function NewReviewBossMainLayer.create()
         layer:runAction(cc.Sequence:create(action1, action2))
 
         rbCurrentWordIndex = rbCurrentWordIndex + 1                
---        s_CorePlayManager.updateCurrentReviewIndex()
+        s_CorePlayManager.updateRightReviewWordNum()
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
         if type % 2 == 0 then

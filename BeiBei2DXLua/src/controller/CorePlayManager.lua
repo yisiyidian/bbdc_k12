@@ -42,6 +42,7 @@ end
 function CorePlayManager.initTotalPlay()  
     local gameState = s_DATABASE_MGR.getGameState()
     if gameState == s_gamestate_reviewbossmodel then
+        CorePlayManager.initNewReviewBossRewardAndTotalWord()
         local candidate = CorePlayManager.getReviewBossCandidate()
         CorePlayManager.initNewReviewBossLayer(candidate)
     elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel then
@@ -263,9 +264,13 @@ function CorePlayManager.updateReviewBoss(bossID)
     end
 end
 
-function CorePlayManager.initNewReviewBossLayer(candidate)
+function CorePlayManager.initNewReviewBossRewardAndTotalWord()
     CorePlayManager.reward = 0
     CorePlayManager.totalWord = 0
+end
+
+function CorePlayManager.initNewReviewBossLayer(candidate)
+
     
     if candidate == nil then
         CorePlayManager.bossID                  = -1
@@ -311,8 +316,8 @@ function CorePlayManager.initReviewReward()
 	CorePlayManager.currentReward = 3
 end
 
-function CorePlayManager.updateCurrentReviewIndex()
-    CorePlayManager.currentReviewIndex = CorePlayManager.currentReviewIndex + 1
+function CorePlayManager.updateRightReviewWordNum()
+    CorePlayManager.rightReviewWordNum = CorePlayManager.rightReviewWordNum + 1
 end
 
 function  CorePlayManager.insertReviewList(wordName)
