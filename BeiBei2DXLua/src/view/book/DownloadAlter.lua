@@ -56,7 +56,6 @@ function DownloadAlter.create(content)
     local button_sure_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             main.sure()
-            main:removeFromParent()
         end
     end
 

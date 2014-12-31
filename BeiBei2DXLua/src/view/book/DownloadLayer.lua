@@ -52,9 +52,17 @@ function DownloadLayer.create(bookKey)
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             if download_state == 1 then
-                local downloadAlter = DownloadAlter.create("正在下载，取消下载方可返回上一个界面。")
+                local downloadAlter = DownloadAlter.create("贝贝正在卖力地运送新的单词包，确定要取消下载吗? >_<")
                 downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(downloadAlter)
+                
+                downloadAlter.sure = function()
+                    download_state = 0
+                    DownloadSoundController.killDownload(bookKey)
+                    s_DATABASE_MGR.updateDownloadState(bookKey, 0)
+
+                    s_CorePlayManager.enterBookLayer()
+                end
             else
                 s_CorePlayManager.enterBookLayer()
             end
@@ -68,16 +76,38 @@ function DownloadLayer.create(bookKey)
     
     local button_choose_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
-                s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-            end
-           
-            s_CURRENT_USER.bookKey = bookKey
-            AnalyticsBook(bookKey)
-            playSound(s_sound_buttonEffect)
-            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+            if download_state == 1 then
+                local downloadAlter = DownloadAlter.create("贝贝正在卖力地运送新的单词包，确定要放弃下载吗? >_<")
+                downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(downloadAlter)
+                
+                downloadAlter.sure = function()
+                    download_state = 0
+                    DownloadSoundController.killDownload(bookKey)
+                    s_DATABASE_MGR.updateDownloadState(bookKey, 0)
+                    
+                    if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
+                        s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+                    end
 
-            s_CorePlayManager.enterHomeLayer()
+                    s_CURRENT_USER.bookKey = bookKey
+                    AnalyticsBook(bookKey)
+                    playSound(s_sound_buttonEffect)
+                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+                    
+                    s_CorePlayManager.enterHomeLayer()
+                end
+            else
+                if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
+                    s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+                end
+
+                s_CURRENT_USER.bookKey = bookKey
+                AnalyticsBook(bookKey)
+                playSound(s_sound_buttonEffect)
+                s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+                s_CorePlayManager.enterHomeLayer()
+            end
         end
     end
 
@@ -129,10 +159,12 @@ function DownloadLayer.create(bookKey)
             
             downloadAlter.sure = function()
                 finish()
+                downloadAlter:removeFromParent()
             end
             
             downloadAlter.cancel = function()
                 finish()
+                downloadAlter:removeFromParent()
             end
         else
             print("download sound fail")
@@ -175,6 +207,7 @@ function DownloadLayer.create(bookKey)
                     progress_clicked:setVisible(false)            
 
                     AnalyticsDownloadBook(bookKey)
+                    downloadAlter:removeFromParent()
                 end
             elseif download_state == 1 then
                 progress:setVisible(true)
@@ -191,6 +224,7 @@ function DownloadLayer.create(bookKey)
                     button_title:setString(title1)
                     progress:setVisible(false)
                     progress_clicked:setVisible(false)
+                    downloadAlter:removeFromParent()
                 end
             elseif download_state == 2 then
                 local downloadAlter = DownloadAlter.create("删除之后您需要重新下载，确定删除？")
@@ -205,6 +239,7 @@ function DownloadLayer.create(bookKey)
                     button_title:setString(title1)
                     progress:setVisible(false)
                     progress_clicked:setVisible(false)
+                    downloadAlter:removeFromParent()
                 end
             end
         end
