@@ -212,7 +212,6 @@ function Manager.initTables()
         require('model.user.DataIAP'),
         require('model.user.DataLevel'),
         require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
-        require('model.user.DataStatistics'),      -- IC_word_day same as DataStatistics
         require('model.user.DataUser')             -- db_userInfo same as DataUser
     }
     for i = 1, #userDataClasses do
@@ -383,10 +382,12 @@ function Manager.addStudyWordsNum()
         local graspNum = 0
         local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
         Manager.database:exec(query)
+        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
     else
         local newStudyNum = oldStudyNum + 1
         local query = "UPDATE DataDailyStudyInfo SET studyNum = "..newStudyNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
         Manager.database:exec(query)
+        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, newStudyNum, oldGraspNum)
     end
 end
 
@@ -410,10 +411,12 @@ function Manager.addGraspWordsNum(addNum)
         local graspNum = addNum
         local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
         Manager.database:exec(query)
+        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
     else
         local newGraspNum = oldGraspNum + addNum
         local query = "UPDATE DataDailyStudyInfo SET graspNum = "..newGraspNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
         Manager.database:exec(query)
+        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, oldStudyNum, newGraspNum)
     end
 end
 
@@ -576,6 +579,8 @@ end
 
 -- record word info
 function Manager.printCurrentIndex()
+    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
+
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
 
@@ -626,6 +631,8 @@ function Manager.setCurrentIndex(currentIndex)
 end
 
 function Manager.printNewPlayState()
+    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
+
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
 
@@ -714,6 +721,8 @@ end
 
 
 function Manager.printWrongWordBuffer()
+    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
+
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
 
@@ -778,6 +787,8 @@ function Manager.addWrongWordBuffer(wrongWord)
 end
 
 function Manager.printBossWord()
+    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
+
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
 
@@ -846,6 +857,14 @@ function Manager.getBossWord()
 end
 
 
+local function saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
+    local data = {}
+    data.userId = userId
+    data.bookKey = bookKey
+    data.today = today
+    data.reviewBossNum = reviewBossNum
+    s_SERVER.createData(data)
+end
 function Manager.getTodayTotalBossNum()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
@@ -865,6 +884,7 @@ function Manager.getTodayTotalBossNum()
         local reviewBossNum = Manager.getTodayRemainBossNum()
         local query = "INSERT INTO DataTodayReviewBossNum VALUES ('"..userId.."', '"..bookKey.."', "..reviewBossNum..", "..time..");"
         Manager.database:exec(query)
+        saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
         return reviewBossNum
     else
         local lastUpdateDay = os.date("%x", lastUpdate)
@@ -874,6 +894,7 @@ function Manager.getTodayTotalBossNum()
             local reviewBossNum = Manager.getTodayRemainBossNum()
             local query = "UPDATE DataTodayReviewBossNum SET bossNum = "..reviewBossNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;"    
             Manager.database:exec(query)
+            saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
             return reviewBossNum
         end
     end
