@@ -219,7 +219,7 @@ function DownloadLayer.create(bookKey)
                 progress:setVisible(true)
                 progress_clicked:setVisible(false)
             
-                local downloadAlter = DownloadAlter.create("取消之后您需要重新下载，确定取消？")
+                local downloadAlter = DownloadAlter.create("取消之后您需要重新下载，确定放弃？")
                 downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(downloadAlter)
                 
