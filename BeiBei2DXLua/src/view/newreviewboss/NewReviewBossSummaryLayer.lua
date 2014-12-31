@@ -167,9 +167,9 @@ function NewReviewBossSummaryLayer.create()
         
         local richtext = ccui.RichText:create()
 
-        local opt_meaning = string.gsub(meaning[i],"|||","\n")
+--        local opt_meaning = string.gsub(meaning[i],"|||","\n")
 
-        local current_word_wordMeaning = cc.LabelTTF:create (opt_meaning,
+        local current_word_wordMeaning = cc.LabelTTF:create (meaning[i],
             "Helvetica",24, cc.size(summury_back:getContentSize().width *0.9, 200), cc.TEXT_ALIGNMENT_LEFT)
 
         current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
