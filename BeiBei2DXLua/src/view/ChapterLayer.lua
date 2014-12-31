@@ -202,6 +202,16 @@ function ChapterLayer:addPlayerNotification()  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,80)
         notification:addChild(task_name)
+        
+        if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+            local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+            finger:addAnimation(0, 'animation', true)
+            finger:setPosition(notification:getContentSize().width/2+20,-30)
+            notification:addChild(finger,10)
+            s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+        end
+        
         -- define touchEvent
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then

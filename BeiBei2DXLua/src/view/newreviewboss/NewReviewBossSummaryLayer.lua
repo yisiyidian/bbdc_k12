@@ -94,30 +94,32 @@ function NewReviewBossSummaryLayer.create()
     local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,0))
     summury_back:runAction(action1)
     
+    local wordList = {}
+    table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)
+        if  s_CorePlayManager.ReviewWordList[i] ~= "" then
+            table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
+        end
+    end) 
+    local wordListLen  
+    
+--    local word = {}
+--    local meaning = {}
+--    for i = 1,s_CorePlayManager.maxReviewWordCount  do
+--        word[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordName
+--        meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaning
+--    end
     
     local word = {}
     local meaning = {}
-    for i = 1,s_CorePlayManager.maxReviewWordCount  do
-        word[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordName
-        meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaning
+    for i = 1,wordListLen  do
+        word[i] = s_WordPool[wordList[i]].wordName
+        meaning[i] = s_WordPool[wordList[i]].wordMeaning
     end
     
---    for i = 1,20  do
---        word[i] = i
---        meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[1]].wordMeaning
---    end
+
 
     local scrollViewEvent = function (sender, evenType)
---        local current_y = (0 - sender:getInnerContainer():getPositionY())
---        local current_height = sender:getInnerContainerSize().height
---        local current_percent = current_y / current_height + 0.2
---        local top_y = summury_back:getContentSize().height * 0.98
---        local bottom_y = summury_back:getContentSize().height * 0.28
---        local changetoposition_y = bottom_y + (top_y - bottom_y) * current_percent
---        
---        local action1 = cc.MoveTo:create(0.02,cc.p(summury_back:getContentSize().width * 0.98,changetoposition_y))
---        percentBar:stopAllActions()
---        percentBar:runAction(action1)
+
     end
 
 
@@ -250,7 +252,7 @@ function NewReviewBossSummaryLayer.create()
             local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-200))
             backGround:runAction(action1)
 
-            local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,0,"yellow")
+            local rbProgressBar = ProgressBar.create(20,0,"yellow")
             rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9 + 200)
             layer:addChild(rbProgressBar)
             local action1 = cc.MoveBy:create(0.5,cc.p(0,-200))

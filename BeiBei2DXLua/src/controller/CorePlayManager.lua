@@ -324,8 +324,15 @@ end
 
 
 function CorePlayManager.updateReviewRewardAndTotalWord()
+    local wordList = {}
+    table.foreachi(CorePlayManager.ReviewWordList, function(i, v)
+        if CorePlayManager.ReviewWordList[i] ~= "" then
+            table.insert(wordList,CorePlayManager.ReviewWordList[i] )
+        end
+    end) 
+    local wordListLen  
     CorePlayManager.reward = CorePlayManager.reward + CorePlayManager.currentReward 
-    CorePlayManager.totalWord = CorePlayManager.totalWord + CorePlayManager.maxReviewWordCount
+    CorePlayManager.totalWord = CorePlayManager.totalWord + wordListLen
 end
 
 function CorePlayManager.minusReviewReward()

@@ -380,6 +380,8 @@ function HomeLayer.create()
     button_play:setPosition(bigWidth/2, 200)
     button_play:addTouchEventListener(button_play_clicked)
     backColor:addChild(button_play)
+    
+    --guide new player
     if s_CURRENT_USER.tutorialStep == s_tutorial_home then
         local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
         finger:addAnimation(0, 'animation', true)

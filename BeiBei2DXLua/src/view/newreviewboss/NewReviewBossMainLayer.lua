@@ -35,21 +35,60 @@ function NewReviewBossMainLayer.create()
     local type = s_CorePlayManager.typeIndex
     local answer
     
+    local wordList = {}
+    table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)
+        if  s_CorePlayManager.ReviewWordList[i] ~= "" then
+            table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
+        end
+    end) 
+    local wordListLen  
+    
       
     local rbCurrentWordIndex = 1
     local wordToBeTested = {}
     local sprite_array = {}
     
+--    local getRandomWordForRightWord = function(wordName)
+--
+--        local tmp =  {}            
+--        table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)  tmp[i] = s_CorePlayManager.ReviewWordList[i]  end)     
+--        local wordNumber
+--        table.foreachi(tmp, function(i, v) if v == wordName then  wordNumber = i end end)               
+--
+--        local randomIndex = (wordNumber )%s_CorePlayManager.maxReviewWordCount + 1 
+--        local word1 = tmp[randomIndex]
+--        local randomIndex = (wordNumber + 1)%s_CorePlayManager.maxReviewWordCount + 1 
+--        local word2 = tmp[randomIndex]
+--
+--        local rightIndex = math.random(1,1024)%3 + 1
+--
+--        if type%2 == 0 then    
+--            local ans = {}
+--            ans[rightIndex] = wordName
+--            if rightIndex == 1 then  ans[2] = word1 ans[3] = word2
+--            elseif rightIndex == 2 then ans[3] = word1 ans[1] = word2
+--            else ans[1] = word1 ans[2] = word2        end
+--            return ans
+--        else
+--            local ans = {}
+--            ans[rightIndex]  = s_WordPool[wordName].wordMeaningSmall
+--            if rightIndex == 1 then  ans[2] = s_WordPool[word1].wordMeaningSmall ans[3] = s_WordPool[word2].wordMeaningSmall
+--            elseif rightIndex == 2 then ans[3] = s_WordPool[word1].wordMeaningSmall  ans[1] = s_WordPool[word2].wordMeaningSmall
+--            else ans[1] = s_WordPool[word1].wordMeaningSmall ans[2] = s_WordPool[word2].wordMeaningSmall    end
+--            return ans
+--        end
+--    end
+
     local getRandomWordForRightWord = function(wordName)
 
         local tmp =  {}            
-        table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)  tmp[i] = s_CorePlayManager.ReviewWordList[i]  end)     
+        table.foreachi(wordList, function(i, v)  tmp[i] = wordList[i]  end)     
         local wordNumber
         table.foreachi(tmp, function(i, v) if v == wordName then  wordNumber = i end end)               
 
-        local randomIndex = (wordNumber )%s_CorePlayManager.maxReviewWordCount + 1 
+        local randomIndex = (wordNumber )%wordListLen + 1 
         local word1 = tmp[randomIndex]
-        local randomIndex = (wordNumber + 1)%s_CorePlayManager.maxReviewWordCount + 1 
+        local randomIndex = (wordNumber + 1)%wordListLen + 1 
         local word2 = tmp[randomIndex]
 
         local rightIndex = math.random(1,1024)%3 + 1
@@ -71,9 +110,29 @@ function NewReviewBossMainLayer.create()
         end
     end
     
-    for i = 1,  s_CorePlayManager.maxReviewWordCount do   
-        table.insert(wordToBeTested,s_CorePlayManager.ReviewWordList[i])
-        local words = getRandomWordForRightWord(s_CorePlayManager.ReviewWordList[i])
+--    for i = 1,  s_CorePlayManager.maxReviewWordCount do   
+--        table.insert(wordToBeTested,s_CorePlayManager.ReviewWordList[i])
+--        local words = getRandomWordForRightWord(s_CorePlayManager.ReviewWordList[i])
+--        local tmp = {}
+--        for j = 1, 3 do
+--            local sprite = NewReviewBossNode.create(words[j])
+--            if i == 1 then
+--                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 850 - 260*i - 260))
+--                sprite.visible(true)
+--            else
+--                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 260*i - 260))
+--                sprite:setScale(0.8)
+--                sprite.visible(false)
+--            end
+--            layer:addChild(sprite,1)
+--            tmp[j] = sprite
+--        end
+--        sprite_array[i] = tmp
+--    end
+
+    for i = 1,  wordListLen do   
+        table.insert(wordToBeTested,wordList[i])
+        local words = getRandomWordForRightWord(wordList[i])
         local tmp = {}
         for j = 1, 3 do
             local sprite = NewReviewBossNode.create(words[j])
@@ -185,10 +244,14 @@ function NewReviewBossMainLayer.create()
     
     
 
-    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"yellow")
+--    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"yellow")
+--    rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
+--    layer:addChild(rbProgressBar)
+
+    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"yellow")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
-
+    
     local huge_word = cc.Label:createWithSystemFont(wordname,"",48)
     huge_word:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT * 0.8)
     huge_word:setColor(cc.c4b(0,0,0,255))
@@ -318,7 +381,6 @@ function NewReviewBossMainLayer.create()
         layer:runAction(cc.Sequence:create(action1, action2))
 
         rbCurrentWordIndex = rbCurrentWordIndex + 1                
---        s_CorePlayManager.updateCurrentReviewIndex()
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
         if type % 2 == 0 then
