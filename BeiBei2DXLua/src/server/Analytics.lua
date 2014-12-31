@@ -85,12 +85,32 @@ function AnalyticsEnterLevelLayer()
     -- s_SERVER.increment('EnterLevelLayer', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
+function AnalyticsTouchTasks()
+    cx.CXAnalytics:logEventAndLabel('Tasks', 'TOUCH')
+end
+
 function AnalyticsReplayerWrongWords()
     cx.CXAnalytics:logEventAndLabel('ReplayerWrongWords', 'TOUCH')
     -- s_SERVER.increment('ReplayerWrongWords', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
+function AnalyticsContinueReview()
+    cx.CXAnalytics:logEventAndLabel('Continue Review', 'TOUCH')
+end
+
+function AnalyticsStudyNext()
+    cx.CXAnalytics:logEventAndLabel('Study Next', 'TOUCH')
+end
+
 ----------------------------------------------------------------------------------------
+
+function AnalyticsReviewBoss()
+    cx.CXAnalytics:logEventAndLabel('Review Boss', 'SHOW')
+end
+
+function AnalyticsSummaryBoss()
+    cx.CXAnalytics:logEventAndLabel('Summary Boss', 'SHOW')
+end
 
 function Analytics_applicationDidEnterBackground(layerName)
     cx.CXAnalytics:logEventAndLabel('applicationDidEnterBackground', layerName)

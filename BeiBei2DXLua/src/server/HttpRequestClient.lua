@@ -34,7 +34,7 @@ function HttpRequestClient.downloadFileFromAVOSWithObjectId(fileObjectId, onDown
     print ('downloadFileFromAVOSWithObjectId:', fileObjectId)
     cx.CXAvos:getInstance():downloadFile(fileObjectId, cc.FileUtils:getInstance():getWritablePath(), 
         function (objectId, filename, err, isSaved)
-            s_logd('objectId:' .. fileObjectId .. ', filename:' .. cc.FileUtils:getInstance():getWritablePath() .. filename .. ', error:' .. tostring(err) .. ', isSaved:' .. tostring(isSaved))
+            print('objectId:' .. fileObjectId .. ', filename:' .. cc.FileUtils:getInstance():getWritablePath() .. filename .. ', error:' .. tostring(err) .. ', isSaved:' .. tostring(isSaved))
             if onDownloaded ~= nil then onDownloaded(objectId, filename, err, isSaved) end
     end)
 end
@@ -49,7 +49,7 @@ local function getWordObject(word, onSucceed, onFailed)
 end
 function HttpRequestClient.downloadWordSoundFile(word, onDownloaded)
     local localPath = getWordSoundFilePath(word)
-    s_logd('downloadWordSoundFile:' .. localPath)
+    print('downloadWordSoundFile:' .. localPath)
     if localPath == nil or string.len(localPath) <= 0 or cc.FileUtils:getInstance():isFileExist(localPath) then
         if onDownloaded ~= nil then onDownloaded(nil, localPath, nil, true) end
     else
@@ -77,7 +77,7 @@ end
 
 function HttpRequestClient.downloadSoundsOfLevel(levelKey, idOffset, prefix)
     local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + idOffset)
-    s_logd(string.format('downloadSoundsOfNext5thLevel: %s, %s, %s', s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey))
+    print(string.format('downloadSoundsOfNext5thLevel: %s, %s, %s', s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey))
     local nextLevelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey)
     if nextLevelConfig == nil or string.len(nextLevelConfig.word_content) <= 0 then
         return
@@ -97,7 +97,7 @@ function HttpRequestClient.downloadSoundsOfLevel(levelKey, idOffset, prefix)
             local downloadFunc
             downloadFunc = function ()
                 s_HttpRequestClient.downloadWordSoundFile(wordList[index], function (objectId, filename, err, isSaved) 
-                    s_logd(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
+                    print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))
                     index = index + 1
                     if index <= total then downloadFunc() end 
                 end)

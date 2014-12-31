@@ -45,6 +45,7 @@ function CorePlayManager.initTotalPlay()
     if gameState == s_gamestate_reviewbossmodel then
         local candidate = CorePlayManager.getReviewBossCandidate()
         CorePlayManager.initNewReviewBossLayer(candidate)
+        AnalyticsReviewBoss()
     elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel then
         CorePlayManager.initNewStudyLayer()
     end

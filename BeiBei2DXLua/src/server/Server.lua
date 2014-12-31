@@ -57,9 +57,9 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
         -- * xhr.status：服务器返回的状态码，等于200表示一切正常
         -- * xhr.responseText：服务器返回的文本数据
         -- * xhr.statusText：服务器返回的状态文本
-        s_logd('\n>>>\nresponse api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
+        print('\n>>>\nresponse api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
         if parameters ~= nil then print_lua_table(parameters) end
-        s_logd('response data: \n\n' .. xhr.response .. '\n\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
+        print('response data: \n\n' .. xhr.response .. '\n\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
         
         -- readyState == 4
         
@@ -114,7 +114,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
     else 
         xhr:send()
     end
-    s_logd('\n>>>\nrequest: api:' .. api .. ', sessionToken:' .. Server.sessionToken .. ', parameters:' .. str .. '\n<<<\n')
+    print('\n>>>\nrequest: api:' .. api .. ', sessionToken:' .. Server.sessionToken .. ', parameters:' .. str .. '\n<<<\n')
 end
 
 -- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
