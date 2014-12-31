@@ -192,6 +192,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                 deco:setPosition(sender:getPosition())
                 local i = string.sub(sender:getName(), 6)
                 s_CURRENT_USER:removeChest(i)
+                -- add beans
+                s_CURRENT_USER:addBeans(2)
                 sender:setVisible(false)
                 self:addChild(deco, 130)
             end
