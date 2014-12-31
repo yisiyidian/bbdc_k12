@@ -20,14 +20,7 @@ function BookLayer.create()
     
     local click_back = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            --whether bookKey == nil
-            -- if s_CURRENT_USER.bookKey ~= '' and s_CURRENT_USER.bookKey ~= nil then
-            --     s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-            --     s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
-            -- end
-           
             s_CorePlayManager.enterHomeLayer()
-            -- button sound
             playSound(s_sound_buttonEffect)
         end
     end

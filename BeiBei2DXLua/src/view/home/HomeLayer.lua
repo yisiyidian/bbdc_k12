@@ -114,7 +114,7 @@ function HomeLayer.create()
    
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            AnalyticsFriend()
+            AnalyticsFriendBtn()
 
             -- button sound
             playSound(s_sound_buttonEffect)
@@ -307,7 +307,7 @@ function HomeLayer.create()
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
 --            s_CorePlayManager.initTotalPlay()
             
-            AnalyticsEnterLevelLayer()
+            AnalyticsEnterLevelLayerBtn()
             
             showProgressHUD()
             -- button sound
@@ -406,7 +406,7 @@ function HomeLayer.create()
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
-            AnalyticsDataCenter()
+            AnalyticsDataCenterBtn()
 
             -- button sound
             playSound(s_sound_buttonEffect)
@@ -568,7 +568,7 @@ function HomeLayer.create()
     local start_y = nil
     local onTouchBegan = function(touch, event)
         if has_study and viewIndex == 1 then
-            AnalyticsLib()
+            AnalyticsWordsLibBtn()
 
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then

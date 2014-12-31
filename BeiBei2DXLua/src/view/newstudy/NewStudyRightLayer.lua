@@ -47,7 +47,7 @@ function NewStudyRightLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            AnalyticsContinueReview()
+            AnalyticsContinueReviewBtn()
 
             local normal = function()
                 s_CorePlayManager.enterNewStudyWrongLayer()
@@ -80,10 +80,9 @@ function NewStudyRightLayer.create()
     
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            AnalyticsStudyNext()
+            AnalyticsStudyNextBtn()
             
             local normal = function()
                 s_CorePlayManager.updateRightWordList(wordname)
