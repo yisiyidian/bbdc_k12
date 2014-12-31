@@ -96,6 +96,9 @@ function DataUser:generateChestList()
     if timePass >= 3600 * 24 * 2 then   -- two days
         s_CURRENT_USER.lastUpdateChestTime = os.time()
         local currentIndex = s_CURRENT_USER.bookProgress:getBookCurrentLevelIndex()
+        if currentIndex == 0 then
+            return 
+        end
         local chest1 = math.random(0, currentIndex - 1) + 0
         local chest2 = math.random(0, currentIndex - 1) + 0
 --        print('chest1:'..chest1)
@@ -112,10 +115,13 @@ function DataUser:generateChestList()
     end
 end
 
-function DataUser:generateSummaryBossList()
+function DataUser:generateSummaryBossList() 
     local isSameDate = (os.date('%x',self.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
     local summaryBossList = split(self.summaryBossList,'|')
     local index = self.bookProgress:getBookCurrentLevelIndex()
+    if index == 0 then
+        return
+    end
     if not isSameDate and #summaryBossList < 3 and index - #summaryBossList > 0 then
         self.lastUpdateSummaryBossTime = os.time()
         if #summaryBossList == 0 then
