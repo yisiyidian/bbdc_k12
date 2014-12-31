@@ -10,6 +10,7 @@ local  NewStudyMiddleLayer = class("NewStudyMiddleLayer", function ()
 end)
 
 function NewStudyMiddleLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     s_CURRENT_USER:addBeans(3)
     
     --pause music

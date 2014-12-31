@@ -11,6 +11,8 @@ local  NewStudyWrongLayer = class("NewStudyWrongLayer", function ()
 end)
 
 function NewStudyWrongLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     -- word info
     local currentWordName
     if s_CorePlayManager.isStudyModel() then
@@ -56,6 +58,8 @@ function NewStudyWrongLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            
             s_CorePlayManager.enterNewStudySlideLayer()
         end
     end
