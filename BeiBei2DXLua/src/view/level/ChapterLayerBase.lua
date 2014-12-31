@@ -156,6 +156,12 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             if eventType == ccui.TouchEventType.ended then
                 -- TODO go to summaryboss
 --                s_CorePlayManager.initTotalPlay()
+--                    local index = string.sub(sender:getName(),12)
+--                    local summaryboss = require('view.summaryboss.SummaryBossLayer')
+--                    local layer = summaryboss.create(index,1)
+--                    
+--                    layer:setAnchorPoint(0.5,0)
+--                    s_SCENE:replaceGameLayer(layer)
             end
         end
         local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
