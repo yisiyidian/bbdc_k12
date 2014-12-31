@@ -50,8 +50,11 @@ function AnalyticsLogOut()
 end
 
 function AnalyticsBook(bookname)
-    cx.CXAnalytics:logEventAndLabel('Book', bookname)
-    -- s_SERVER.increment('ChangeBook', s_CURRENT_USER.objectId, s_APP_VERSION)
+    cx.CXAnalytics:logEventAndLabel('Book', 'selected ' .. bookname)
+end
+
+function AnalyticsDownloadBook(bookname)
+    cx.CXAnalytics:logEventAndLabel('Book', 'download ' .. bookname)
 end
 
 ----------------------------------------------------------------------------------------
