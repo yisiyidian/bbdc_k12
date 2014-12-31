@@ -113,7 +113,12 @@ function FriendRequest:main()
         head:setPosition(0.26 * button:getContentSize().width,0.6 * button:getContentSize().height)
         button:addChild(head)
 
-        local fri_name = cc.Label:createWithSystemFont(s_CURRENT_USER.fans[i].username,'',28)
+        local name = s_CURRENT_USER.fans[i].username
+        if s_CURRENT_USER.fans[i].userType == USER_TYPE_QQ then
+            name = s_CURRENT_USER.fans[i].nickName
+        end
+
+        local fri_name = cc.Label:createWithSystemFont(name,'',28)
         fri_name:setColor(cc.c3b(0,0,0))
         fri_name:ignoreAnchorPointForPosition(false)
         fri_name:setAnchorPoint(0,0)
@@ -156,6 +161,9 @@ function FriendRequest:main()
                     s_SCENE.popupLayer:addChild(smallAlter)
                     return
                 end
+                
+                AnalyticsFriendAccept()
+
                 s_UserBaseServer.follow(s_CURRENT_USER.fans[listView:getCurSelectedIndex() + 1],
                     function (api, result, err)
                         if err == nil then

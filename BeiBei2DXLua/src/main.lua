@@ -5,7 +5,9 @@ local app_version_debug   = 160000
 local app_version_release = 160000
 
 -- All test code must in example.example
-local test_code = 1
+local TEST_CODE   = 1 -- constant value
+local NORMAL_CODE = 0 -- constant value
+local test_code = NORMAL_CODE -- switch normal or test in this line
 
 -- *************************************
 
@@ -44,7 +46,7 @@ start = function ()
         print = function ( ... )
         end
 
-        test_code = 0
+        test_code = NORMAL_CODE
 
         s_debugger.configLog(false, false)
         DEBUG_PRINT_LUA_TABLE = false
@@ -63,7 +65,7 @@ start = function ()
         s_SERVER.production       = 0
 
         if RELEASE_APP == RELEASE_FOR_TEST then
-            test_code = 0
+            test_code = NORMAL_CODE
 
             s_SERVER.appId = LEAN_CLOUD_ID
             s_SERVER.appKey = LEAN_CLOUD_KEY
@@ -100,26 +102,11 @@ start = function ()
     s_DATA_MANAGER.loadText()
     
 -- *************************************
-if test_code == 1 then
+if test_code == NORMAL_CODE then -- do NOT change this line
     local startApp = function ()
-        if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
-            local LoadingView = require("view.LoadingView")
-            local loadingView = LoadingView.create()
-            s_SCENE:replaceGameLayer(loadingView) 
-            if s_CURRENT_USER.usertype == USER_TYPE_QQ then
-                s_SCENE:logInByQQAuthData()
-            else
-                s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-            end
-        elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create(true)
-            s_SCENE:replaceGameLayer(introLayer)
-        else
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create(false)
-            s_SCENE:replaceGameLayer(introLayer)
-        end
+        local LoadingView = require("view.LoadingView")
+        local loadingView = LoadingView.create()
+        s_SCENE:replaceGameLayer(loadingView) 
     end
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         local SplashView = require("view.SplashView")
@@ -131,12 +118,12 @@ if test_code == 1 then
     end
 else    
    -- *************************************
-   --for test
-   --require("example.example")
-    local testLayer = require('view.ChapterLayer')
-    local chapterLayer = testLayer.create()
-    s_SCENE:replaceGameLayer(chapterLayer)
-   --test()
+   -- for test
+   -- all test codes MUST be written in example.example.lua
+   -- do NOT write any test codes in here
+   -- do NOT change these lines below
+   require("example.example")
+   test()
    -- *************************************
 end
 

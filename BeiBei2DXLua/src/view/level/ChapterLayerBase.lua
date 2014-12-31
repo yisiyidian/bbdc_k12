@@ -49,7 +49,7 @@ function ChapterLayerBase:createObjectForResource(t)
             object:setTag(islandTag)
             islandTag=islandTag+1
         end
-        self:addChild(object,100)
+        self:addChild(object,50)
     end
     return object
 end
@@ -78,7 +78,7 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
+    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
     local levelPosition = self.levelPos[levelIndex]
 --    print('######decoration level position########')
 --    print('levelIndex:'..levelIndex)
@@ -88,16 +88,90 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 --    print(levelPosition)
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
-    -- check summary boss
-    if levelConfig['type'] == 1 then
+    -- check random summary boss
+    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+    --print('summarybossList:'..s_CURRENT_USER.summaryBossList)
+    --print('lensummba:'..#summaryboss)
+    local currentIndex = levelIndex
+    if self.chapterKey == 'chapter1' then
+        currentIndex = currentIndex + 10
+    elseif self.chapterKey == 'chapter2' then
+        currentIndex = currentIndex + 30
+    elseif self.chapterKey == 'chapter3' then
+        currentIndex = currentIndex + 60
+    end
+    
+    --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
+    
+    local checkSummaryBoss = false
+    for i = 1, #summaryboss do
+        --print('summarybossIndex:'..summaryboss[i])
+        if summaryboss[i] == '' then break end
+        if summaryboss[i] - currentIndex == 0 then
+            checkSummaryBoss = true
+            break
+        end
+    end
+--    if levelConfig['type'] == 1 then
+    local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
+    if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
+        -- plot review boss
+--        print('plot review boss####')
+        local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
+        reviewBoss:addAnimation(0, '1', false)
+        s_SCENE:callFuncWithDelay(1,function()
+            reviewBoss:addAnimation(1, '2', true)
+        end)
+        reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
+        self:addChild(reviewBoss, 140)
+    elseif checkSummaryBoss then
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
 --                summaryboss:setAnchorPoint(1,1)
+        -- chapter layer
+        local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
+        notification:setPosition(summaryboss:getContentSize().width+130,summaryboss:getContentSize().height+320)
+        summaryboss:addChild(notification, 100)
+        summaryboss:setName('summaryboss'..currentIndex)
+        local title = cc.Label:createWithSystemFont('当前任务','',28)
+        title:setColor(cc.c3b(0,0,0))
+        title:ignoreAnchorPointForPosition(false)
+        title:setAnchorPoint(0,0)
+        title:setPosition(30,110)
+        notification:addChild(title)
+        local task_name = cc.Label:createWithSystemFont('打败鲶鱼boss','',25)
+        task_name:setColor(cc.c3b(0,0,0))
+        task_name:ignoreAnchorPointForPosition(false)
+        task_name:setAnchorPoint(0,0)
+        task_name:setPosition(30,80)
+        notification:addChild(task_name)
+        -- define touchEvent
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO go to summaryboss
+--                s_CorePlayManager.initTotalPlay()
+            end
+        end
+        local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
+        start:setScale9Enabled(true)
+        start:setPosition(50,40)
+        start:setAnchorPoint(0,0)
+        notification:addChild(start)
+        start:addTouchEventListener(touchEvent)
+        
+        -- add button title
+        local button_title = cc.Label:createWithSystemFont('开始挑战','',20)
+        --button_title:setColor(cc.c3b(0,0,0))
+        button_title:ignoreAnchorPointForPosition(false)
+        button_title:setAnchorPoint(0.5,0.5)
+        button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
+        start:addChild(button_title)
+        -- !!!
         print('summaryboss position:'..summaryboss:getPosition())
         summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
-        self:addChild(summaryboss, 125)
+        self:addChild(summaryboss, 150)
     elseif levelIndex % 8 == 0 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
         deco:addAnimation(0,'animation',true)
@@ -128,7 +202,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     elseif levelIndex % 8 == 6 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
         deco:addAnimation(0,'animation',true)
-        deco:setPosition(levelPosition.x+60,levelPosition.y+40)
+        deco:setPosition(levelPosition.x,levelPosition.y-20)
         self:addChild(deco, 130)    
     elseif levelIndex % 8 == 7 then
         local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
@@ -143,7 +217,7 @@ function ChapterLayerBase:plotDecoration()
     local currentChapterIndex = string.sub(bookProgress['chapter'],8)
     local chapterIndex = string.sub(self.chapterKey, 8)
     for levelIndex, levelPosition in pairs(self.levelPos) do
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
+        --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
 --        print('!!!!!levelConfigType:'..levelConfig)
 --        print_lua_table(levelConfig)
         -- is locked
@@ -165,7 +239,7 @@ function ChapterLayerBase:plotDecoration()
 end
 
 function ChapterLayerBase:plotLevelNumber(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
@@ -177,30 +251,31 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     if bookProgress['level'] == 'level39' and bookProgress['chapter'] == 'chapter3' then
         levelNumber = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     end
-        if levelConfig['type'] == 1 then -- summary boss
---            local summaryboss = levelButton:getChildByName('summaryboss'..string.sub(levelKey,6))
---            local number = ccui.TextBMFont:create()
---            number:setFntFile('font/number_straight.fnt')
---            number:setScale(1.6)
---            number:setString(levelNumber)
---            number:setPosition(125, 100)
---            summaryboss:addChild(number)
-        else 
-            local number = ccui.TextBMFont:create()
-            number:setFntFile('font/number_inclined.fnt')
-            number:setString(levelNumber)
-            number:setPosition(levelPosition.x, levelPosition.y+3)
-            self:addChild(number,130)
+    -- check random summary boss
+    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+    local currentIndex = levelIndex
+    if self.chapterKey == 'chapter1' then
+        currentIndex = currentIndex + 10
+    elseif self.chapterKey == 'chapter2' then
+        currentIndex = currentIndex + 30
+    elseif self.chapterKey == 'chapter3' then
+        currentIndex = currentIndex + 60
+    end
+    local checkSummaryBoss = false
+    for i = 1, #summaryboss do
+        if summaryboss[i] == '' then break end
+        if summaryboss[i] - currentIndex == 0 then
+            checkSummaryBoss = true
+            break
         end
---    else
---        local lockSprite = levelButton:getChildByName('lockSprite'..levelIndex)
---        local lockNumber = ccui.TextBMFont:create()        
---        lockNumber:setFntFile('font/number_brown.fnt')
---        lockNumber:setString(levelNumber)
---        lockNumber:setPosition(lockSprite:getContentSize().width/2, lockSprite:getContentSize().height/2-6)
---        lockSprite:addChild(lockNumber)
---    end
-
+    end
+    if not checkSummaryBoss then
+        local number = ccui.TextBMFont:create()
+        number:setFntFile('font/number_inclined.fnt')
+        number:setString(levelNumber)
+        number:setPosition(levelPosition.x, levelPosition.y+3)
+        self:addChild(number,130)
+    end
 end
 
 function ChapterLayerBase:loadResource()

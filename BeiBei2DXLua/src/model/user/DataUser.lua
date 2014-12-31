@@ -40,7 +40,7 @@ function DataUser:ctor()
     self.energyCount                       = s_energyMaxCount
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
-
+    
     self.fansCount                         = 0 
     self.friendsCount                      = 0 
     self.fans                              = {}
@@ -57,7 +57,7 @@ function DataUser:ctor()
     self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
-    
+    self.beans                             = 0
     self.newStudyRightLayerMask            = 0
 
     self.checkInWord                       = ''
@@ -74,6 +74,15 @@ function DataUser:ctor()
     self.clientData                        = {0}
     self.bookProgress                      = DataBookProgress.create()
     self.bookProgressObjectId              = ''
+
+    self.lastUpdateSummaryBossTime         = 0
+    self.summaryBossList                   = ''
+
+end
+
+function DataUser:addBeans(count)
+    self.beans = self.beans + count
+    self:updateDataToServer()
 end
 
 function DataUser:getNameForDisplay()
@@ -450,6 +459,7 @@ function DataUser:updateDataToServer()
         function(api, code, message, description)
         end) 
 end
+
 
 -- get word in one book 
 function DataUser:getUserBookWord()

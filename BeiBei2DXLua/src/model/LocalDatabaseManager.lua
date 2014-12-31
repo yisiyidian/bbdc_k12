@@ -165,6 +165,16 @@ function Manager.initTables()
         );
     ]]
     
+    -- CREATE table Today Review Boss Num
+    Manager.database:exec[[
+        create table if not exists DataTodayReviewBossNum(
+            userId TEXT,
+            bookKey TEXT,
+            bossNum INTEGER,
+            lastUpdate INTEGER
+        );
+    ]]
+    
     -- CREATE table Daily Study Info
     Manager.database:exec[[
         create table if not exists DataDailyStudyInfo(
@@ -632,13 +642,19 @@ function Manager.printNewPlayState()
     print("</newPlayState>")
 end
 
-function Manager.getPlayModel()
+function Manager.getTodayPlayModel()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
 
     local playModel = 0
     for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        playModel = row.playModel
+        local lastUpdate = tostring(row.lastUpdate)
+        local lastUpdateDay = os.date("%x", lastUpdate)
+        if lastUpdateDay == today then
+            playModel = row.playModel
+        end
     end
     
     return playModel
@@ -829,6 +845,7 @@ function Manager.getBossWord()
     return candidate
 end
 
+
 function Manager.getTodayTotalBossNum()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
@@ -836,11 +853,30 @@ function Manager.getTodayTotalBossNum()
     local today = os.date("%x", time)
 
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+    local bossNum = 0
+    local lastUpdate = nil
+    for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
         num = num + 1
+        bossNum = row.bossNum 
+        lastUpdate = row.lastUpdate
     end
-
-    return num
+    
+    if num == 0 then
+        local reviewBossNum = Manager.getTodayRemainBossNum()
+        local query = "INSERT INTO DataTodayReviewBossNum VALUES ('"..userId.."', '"..bookKey.."', "..reviewBossNum..", "..time..");"
+        Manager.database:exec(query)
+        return reviewBossNum
+    else
+        local lastUpdateDay = os.date("%x", lastUpdate)
+        if lastUpdate == today then
+            return bossNum
+        else
+            local reviewBossNum = Manager.getTodayRemainBossNum()
+            local query = "UPDATE DataTodayReviewBossNum SET bossNum = "..reviewBossNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;"    
+            Manager.database:exec(query)
+            return reviewBossNum
+        end
+    end
 end
 
 function Manager.getTodayRemainBossNum()
@@ -983,7 +1019,11 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
         return s_gamestate_reviewbossmodel
     end
     
-    local playModel = Manager.getPlayModel()
+    if Manager.getCurrentIndex() > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
+        return s_gamestate_overmodel
+    end
+    
+    local playModel = Manager.getTodayPlayModel()
     if playModel == 0 then
         return s_gamestate_studymodel
     elseif playModel == 1 then

@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://yisiyidian.com/BookSoundBag/",
+	"remoteManifestUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_ielts_server.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_ielts_version.manifest", 
+	"version" : "1.6.0.1", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : {	
+		"ielts.zip" : {
+			"md5" : "3dbc0d40533997a37eb4391c8540c857",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}

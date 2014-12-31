@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://yisiyidian.com/BookSoundBag/",
+	"remoteManifestUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_gre_server.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_gre_version.manifest", 
+	"version" : "1.6.0.0", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : {	
+		"cet4.zip" : {
+			"md5" : "ad3836e5d880276f660a922ed7b76bde",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}

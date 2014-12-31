@@ -86,7 +86,7 @@ function AppScene.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
 
     if RELEASE_APP == RELEASE_FOR_APPSTORE then 
-        cc.Layer:create()
+        scene.debugLayer = cc.Layer:create()
         scene.debugLayer:setVisible(false) 
     else
         scene.debugLayer = DebugLayer.create()
@@ -199,11 +199,11 @@ local USER_START_TYPE_OLD         = 1
 local USER_START_TYPE_QQ          = 2
 local USER_START_TYPE_QQ_AUTHDATA = 3
 
-local LOADING_TEXTS = {'用户登录中 30%', '加载配置中 70%', '保存用户信息中 80%', '更新单词信息中 90%'}
+local LOADING_TEXTS = {'用户登录中 30%', '加载配置中 70%', '更新单词信息中 80%', '保存用户信息中 90%'}
 local _TEXT_ID_USER        = 1
 local _TEXT_ID_CFG         = 2
-local _TEXT_ID_UPDATE_USER = 3
-local _TEXT_ID_UPDATE_BP   = 4
+local _TEXT_ID_UPDATE_BP   = 3
+local _TEXT_ID_UPDATE_USER = 4
 
 local function onErrorHappend(e)
     local function onError()
@@ -225,7 +225,9 @@ function AppScene:startLoadingData(userStartType, username, password)
             onErrorHappend(e)
             hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
-            s_SCENE:gotoChooseBook()
+            self:getDataBookProgress(function ()
+                s_SCENE:gotoChooseBook()
+            end)
         else
             -- s_SCENE:getDailyCheckIn()
             s_SCENE:onUserServerDatasCompleted() 
@@ -382,10 +384,12 @@ function AppScene:saveSignUpAndLogInData(onSaved)
     s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
     
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_BP])
-    self:getDataBookProgress(onSaved)
+    self:getDataBookProgress(function ()
+        s_SCENE:getDataLogIn(onSaved)
+    end)
 end
 
-function AppScene:getDataBookProgress(onSaved)
+function AppScene:getDataBookProgress(oncompleted)
     local saveuser = function ()
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
             function(api,result)
@@ -398,7 +402,7 @@ function AppScene:getDataBookProgress(onSaved)
             function(api,result)
                 s_CURRENT_USER.bookProgressObjectId = s_CURRENT_USER.bookProgress.objectId
                 saveuser()
-                s_SCENE:getDataLogIn(onSaved)
+                oncompleted()
             end,
             function(api, code, message, description)
                 onErrorHappend(message)
@@ -406,10 +410,10 @@ function AppScene:getDataBookProgress(onSaved)
             end)
     else
         s_UserBaseServer.getDataBookProgress(s_CURRENT_USER.bookProgressObjectId,
-            function(api,result)
-                s_CURRENT_USER:parseServerDataBookProgress(result, s_CURRENT_USER.bookProgress)
+            function(api, result)
+                s_CURRENT_USER:parseServerDataBookProgress(result.results)
                 saveuser()
-                s_SCENE:getDataLogIn(onSaved)
+                oncompleted()
             end, 
             function(api, code, message, description)
                 onErrorHappend(message)

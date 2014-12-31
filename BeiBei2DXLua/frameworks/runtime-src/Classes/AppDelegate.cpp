@@ -99,10 +99,40 @@ bool AppDelegate::applicationDidFinishLaunching()
     }
 #endif
     
+    std::string writablePath = FileUtils::getInstance()->getWritablePath();
+    std::string pathSrc= writablePath + ("AssetsManager/ServerAssets/src");
+    std::string pathRes= writablePath + ("AssetsManager/ServerAssets/res");
+    FileUtils::getInstance()->addSearchPath(pathSrc,true);
+    FileUtils::getInstance()->addSearchPath(pathRes,true);
+    engine->addSearchPath(pathSrc.c_str());
+    engine->addSearchPath(pathRes.c_str());
+
+    std::vector<std::string> soundRes;
+    soundRes.push_back(writablePath + "BookSounds"+"/cet4/cet4");
+    soundRes.push_back(writablePath + "BookSounds"+"/cet6/cet6");
+    soundRes.push_back(writablePath + "BookSounds"+"/gmat/gmat");
+    soundRes.push_back(writablePath + "BookSounds"+"/gre/gre");
+    soundRes.push_back(writablePath + "BookSounds"+"/gse/gse");
+    soundRes.push_back(writablePath + "BookSounds"+"/ielts/ielts");
+    soundRes.push_back(writablePath + "BookSounds"+"/middle/middle");
+    soundRes.push_back(writablePath + "BookSounds"+"/ncee/ncee");
+    soundRes.push_back(writablePath + "BookSounds"+"/primary/primary");
+    soundRes.push_back(writablePath + "BookSounds"+"/pro4/pro4");
+    soundRes.push_back(writablePath + "BookSounds"+"/pro8/pro8");
+    soundRes.push_back(writablePath + "BookSounds"+"/sat/sat");
+    soundRes.push_back(writablePath + "BookSounds"+"/toefl/toefl");
+    
+    for (std::vector<std::string>::iterator it = soundRes.begin(); it!=soundRes.end(); ++it) {
+        FileUtils::getInstance()->addSearchPath(*it,true);
+        engine->addSearchPath(it->c_str());
+        CCLOG("Add search path of %s", it->c_str());
+    }
+   
 #if (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0 && DEBUG_RUNTIME > 0)
     // NOTE:Please don't remove this call if you want to debug with Cocos Code IDE
     startRuntime();
 #else
+    
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
 #endif
 

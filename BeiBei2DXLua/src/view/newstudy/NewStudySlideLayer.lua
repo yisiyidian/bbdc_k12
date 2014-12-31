@@ -76,14 +76,23 @@ function NewStudySlideLayer.create()
             s_SCENE:callFuncWithDelay(0.4,function()
                 if s_CorePlayManager.isStudyModel() then
                     s_CorePlayManager.updateWrongWordList(wordname)
-                    if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
-                        s_CorePlayManager.updateCurrentIndex()
-                        s_CorePlayManager.initWordCandidate()
-                        s_CorePlayManager.checkInReviewModel()
-                        s_CorePlayManager.enterNewStudyMiddleLayer()
+                    s_CorePlayManager.updateCurrentIndex()
+                    if s_CorePlayManager.bookOver() then
+                        if s_CorePlayManager.wrongWordNum == 0 then
+                            s_CorePlayManager.enterNewStudyBookOverLayer()
+                        else
+                            s_CorePlayManager.initWordCandidate()
+                            s_CorePlayManager.checkInReviewModel()
+                            s_CorePlayManager.enterNewStudyMiddleLayer()
+                        end
                     else
-                        s_CorePlayManager.updateCurrentIndex()
-                        s_CorePlayManager.enterNewStudyChooseLayer()
+                        if s_CorePlayManager.wrongWordNum >= s_CorePlayManager.maxWrongWordCount then
+                            s_CorePlayManager.initWordCandidate()
+                            s_CorePlayManager.checkInReviewModel()
+                            s_CorePlayManager.enterNewStudyMiddleLayer()
+                        else
+                            s_CorePlayManager.enterNewStudyChooseLayer()
+                        end
                     end
                 else
                     s_CorePlayManager.updateWordCandidate(true)

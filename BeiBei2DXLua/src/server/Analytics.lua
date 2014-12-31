@@ -5,84 +5,166 @@ function AnalyticsChannel(channelId)
     end
 end
 
+----------------------------------------------------------------------------------------
+
 function AnalyticsTutorial(step)
     cx.CXAnalytics:logEventAndLabel('TutorialStep', tostring(step))
-    s_SERVER.increment('TutorialStep_' .. tostring(step), s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
 function AnalyticsSmallTutorial(step)
     cx.CXAnalytics:logEventAndLabel('TutorialSmallStep', tostring(step))
-    s_SERVER.increment('TutorialSmallStep_' .. tostring(step), s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
 function AnalyticsReviewBossTutorial(step)
     cx.CXAnalytics:logEventAndLabel('ReviewBossTutorialStep', tostring(step))
-    s_SERVER.increment('ReviewBossTutorialStep_' .. tostring(step), s_CURRENT_USER.objectId, s_APP_VERSION)
 end
+
+----------------------------------------------------------------------------------------
 
 function AnalyticsDailyCheckIn(day)
     cx.CXAnalytics:logEventAndLabel('DailyCheckIn', tostring(day))
-    s_SERVER.increment('DailyCheckIn_' .. tostring(day), s_CURRENT_USER.objectId, s_APP_VERSION)
 end
+
+----------------------------------------------------------------------------------------
 
 function AnalyticsSignUp_Guest()
     cx.CXAnalytics:logEventAndLabel('SignUp', 'Guest')
-    s_SERVER.increment('SignUp_Guest')
 end
 
 function AnalyticsSignUp_Normal()
     cx.CXAnalytics:logEventAndLabel('SignUp', 'Normal')
-    s_SERVER.increment('SignUp_Normal')
+end
+
+function AnalyticsSignUp_QQ()
+    cx.CXAnalytics:logEventAndLabel('SignUp', 'QQ')
 end
 
 function AnalyticsAccountBind()
     cx.CXAnalytics:logEventAndLabel('AccountBind', 'YES')
-    s_SERVER.increment('AccountBind', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
 function AnalyticsLogOut()
     cx.CXAnalytics:logEventAndLabel('LogOut', 'YES')
-    s_SERVER.increment('LogOut', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
-function AnalyticsLib()
+----------------------------------------------------------------------------------------
+
+function AnalyticsWordsLibBtn()
     cx.CXAnalytics:logEventAndLabel('WordsLib', 'TOUCH')
-    s_SERVER.increment('WordsLib', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
-function AnalyticsFriend()
+----------------------------------------------------------------------------------------
+
+function AnalyticsFriendBtn()
     cx.CXAnalytics:logEventAndLabel('Friend', 'TOUCH')
-    s_SERVER.increment('Friend', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
-function AnalyticsDataCenter()
+function AnalyticsFriendRequest()
+    cx.CXAnalytics:logEventAndLabel('Friend', 'Request')
+end
+
+function AnalyticsFriendAccept()
+    cx.CXAnalytics:logEventAndLabel('Friend', 'Accept')
+end
+
+----------------------------------------------------------------------------------------
+
+function AnalyticsDataCenterBtn()
     cx.CXAnalytics:logEventAndLabel('DataCenter', 'TOUCH')
-    s_SERVER.increment('DataCenter', s_CURRENT_USER.objectId, s_APP_VERSION)
 end
 
-function AnalyticsChangeBook()
-    cx.CXAnalytics:logEventAndLabel('ChangeBook', 'TOUCH')
-    s_SERVER.increment('ChangeBook', s_CURRENT_USER.objectId, s_APP_VERSION)
+----------------------------------------------------------------------------------------
+
+function AnalyticsChangeBookBtn()
+    cx.CXAnalytics:logEventAndLabel('Book', 'TOUCH')
 end
 
-function AnalyticsEnterLevelLayer()
-    cx.CXAnalytics:logEventAndLabel('EnterLevelLayer', 'TOUCH')
-    s_SERVER.increment('EnterLevelLayer', s_CURRENT_USER.objectId, s_APP_VERSION)
+function AnalyticsBook(bookname)
+    cx.CXAnalytics:logEventAndLabel('Book', 'selected ' .. bookname)
 end
 
-function AnalyticsReplayerWrongWords()
-    cx.CXAnalytics:logEventAndLabel('ReplayerWrongWords', 'TOUCH')
-    s_SERVER.increment('ReplayerWrongWords', s_CURRENT_USER.objectId, s_APP_VERSION)
+function AnalyticsDownloadBook(bookname)
+    cx.CXAnalytics:logEventAndLabel('Book', 'download ' .. bookname)
+end
+
+----------------------------------------------------------------------------------------
+
+function AnalyticsEnterLevelLayerBtn()
+    cx.CXAnalytics:logEventAndLabel('Enter Level Layer', 'TOUCH')
+end
+
+function AnalyticsTasksBtn()
+    cx.CXAnalytics:logEventAndLabel('Tasks', 'TOUCH')
+end
+
+----------------------------------------------------------------------------------------
+
+-- 点击 重玩错词
+function AnalyticsReplayWrongWordsBtn()
+    cx.CXAnalytics:logEventAndLabel('Replay Wrong Words', 'TOUCH')
+end
+
+-- 点击 依然复习
+function AnalyticsContinueReviewBtn()
+    cx.CXAnalytics:logEventAndLabel('Continue Review', 'TOUCH')
+end
+
+-- 点击 下一步
+function AnalyticsStudyNextBtn()
+    cx.CXAnalytics:logEventAndLabel('Study Next', 'TOUCH')
+end
+
+-- 猜错
+function AnalyticsStudyGuessWrong()
+    cx.CXAnalytics:logEventAndLabel('answer word meaning', 'Guess Wrong')
+end
+
+-- 答对
+function AnalyticsStudyAnswerRight()
+    cx.CXAnalytics:logEventAndLabel('answer word meaning', 'Answer Right')
+end
+
+-- 不会
+function AnalyticsStudyDontKnowAnswer()
+    cx.CXAnalytics:logEventAndLabel('answer word meaning', 'Dont Know Answer')
+end
+
+-- 猜错
+function AnalyticsStudyGuessWrong_strikeWhileHot()
+    cx.CXAnalytics:logEventAndLabel('answer word meaning HOT', 'Guess Wrong')
+end
+
+-- 答对
+function AnalyticsStudyAnswerRight_strikeWhileHot()
+    cx.CXAnalytics:logEventAndLabel('answer word meaning HOT', 'Answer Right')
+end
+
+-- 不会
+function AnalyticsStudyDontKnowAnswer_strikeWhileHot()
+    cx.CXAnalytics:logEventAndLabel('answer word meaning HOT', 'Dont Know Answer')
+end
+
+-- 点击 跳过划单词步骤
+function AnalyticsStudySkipSwipeWord()
+    cx.CXAnalytics:logEventAndLabel('Skip Swipe Word', 'TOUCH')
+end
+
+-- 点击 生词回看
+function AnalyticsStudyLookBackWord()
+    cx.CXAnalytics:logEventAndLabel('Look Back Word', 'TOUCH')
+end
+
+----------------------------------------------------------------------------------------
+
+function AnalyticsReviewBoss()
+    cx.CXAnalytics:logEventAndLabel('Review Boss', 'SHOW')
+end
+
+function AnalyticsSummaryBoss()
+    cx.CXAnalytics:logEventAndLabel('Summary Boss', 'SHOW')
 end
 
 function Analytics_applicationDidEnterBackground(layerName)
-    cx.CXAnalytics:logEventAndLabel('applicationDidEnterBackground', layerName)
-    s_SERVER.increment('applicationDidEnterBackground_' .. layerName, s_CURRENT_USER.objectId, s_APP_VERSION)
+    cx.CXAnalytics:logEventAndLabel('App Enter Background', layerName)
 end
 
-function Analytics_reviewBoss()
-    cx.CXAnalytics:logEventAndLabel('reviewBoss', 'show')
-    local ut = os.date("!*t")
-    currentDay = string.format('%d_%d_%d', ut.year, ut.month, ut.day)
-    s_SERVER.incrementPerDay('reviewBossShow', currentDay, s_APP_VERSION)
-end

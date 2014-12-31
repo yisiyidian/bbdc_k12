@@ -35,8 +35,10 @@ function NewStudySuccessLayer.create()
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
+    
+    local wrongWordNum = s_CorePlayManager.wrongWordNum
 
-    local label_hint = cc.Label:createWithSystemFont("新学习单词20个","",34)
+    local label_hint = cc.Label:createWithSystemFont("新学习单词"..wrongWordNum.."个","",34)
     label_hint:setPosition(bigWidth/2, 1050)
     label_hint:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(label_hint)
@@ -45,7 +47,7 @@ function NewStudySuccessLayer.create()
     circle:setPosition(bigWidth/2, 900)
     backColor:addChild(circle)
 
-    local number = cc.Label:createWithSystemFont("+20","",60)
+    local number = cc.Label:createWithSystemFont("+"..wrongWordNum,"",60)
     number:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
     number:setColor(cc.c4b(248,227,106,255))
     circle:addChild(number)

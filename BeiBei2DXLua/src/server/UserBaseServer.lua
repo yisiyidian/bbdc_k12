@@ -8,7 +8,7 @@ local UserBaseServer = {}
 function validateUsername(s)
     local length = string.len(s)
     if length < 1 then return false end
-    s_logd(string.format('%s, %d', s, length))
+    print(string.format('%s, %d', s, length))
 
     local c = s:sub(1, 1)
     local ord = c:byte()
@@ -25,7 +25,7 @@ function validateUsername(s)
                     i = i + 1
                 end
             else
-                s_logd(string.format('%s, %d, %s', s, length, c))
+                print(string.format('%s, %d, %s', s, length, c))
                 return false
             end
 
@@ -33,7 +33,7 @@ function validateUsername(s)
         end
 
         if len < 4 or len > 10 then 
-          s_logd(string.format('%s, %d, %d', s, length, len))
+          print(string.format('%s, %d, %d', s, length, len))
           return false 
         end
     else
@@ -48,7 +48,7 @@ function validatePassword(s)
     if length < 6 or length > 16 then return false end
 
     local modifiedString, numberOfSubstitutions = string.gsub(s, '[0-9a-zA-Z]', '')
-    s_logd(string.format('%s, %d, %s, %d', s, length, modifiedString, numberOfSubstitutions))
+    print(string.format('%s, %d, %s, %d', s, length, modifiedString, numberOfSubstitutions))
     return numberOfSubstitutions >= 6 and numberOfSubstitutions <= 16 and numberOfSubstitutions == length
 end
 
@@ -62,10 +62,10 @@ end
 
 local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
     if e ~= nil then 
-        s_logd('signup/logIn:' .. e) 
+        print('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
-        s_logd('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
+        print('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
         if hasParsed == false then parseServerUser( objectjson ) end
 
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
@@ -74,7 +74,7 @@ local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onRespons
         
         if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
     else
-        s_logd('signup/logIn:no sessionToken') 
+        print('signup/logIn:no sessionToken') 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, 'no sessionToken', code) end
     end
 end

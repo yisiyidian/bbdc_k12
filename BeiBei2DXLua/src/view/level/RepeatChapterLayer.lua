@@ -10,17 +10,26 @@ end)
 function RepeatChapterLayer.create(chapterKey)
     local layer = RepeatChapterLayer.new(chapterKey)
     --layer:setContentSize(cc.size(s_MAX_WIDTH, s_chapter1_base_height))
-    layer.chapterKey = chapterKey
+--    layer.chapterKey = chapterKey
     return layer
 end
 
-function RepeatChapterLayer:ctor()
+function RepeatChapterLayer:ctor(chapterKey)
+    self.chapterKey = chapterKey
 --    print('repeateChapter: ')
 --    print_lua_table(s_CURRENT_USER)
-    local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,self.chapterKey)
-    local s_layer_height = s_chapter0_base_height * #chapterConfig / 10
+--    local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,self.chapterKey)
+    local chapterSize = 1
+    if self.chapterKey == 'chapter1' then
+        chapterSize = 2
+    elseif self.chapterKey == 'chapter2' then
+        chapterSize = 3
+    elseif self.chapterKey == 'chapter3' then
+        chapterSize = 4
+    end
+    local s_layer_height = s_chapter0_base_height * chapterSize
     self:setContentSize(cc.size(s_MAX_WIDTH, s_layer_height))
-    for i = 1, #chapterConfig / 10 do
+    for i = 1, chapterSize do
         local ChapterLayer0 = require('view.level.ChapterLayer0')
         local chapterLayer = ChapterLayer0.create("end")
         chapterLayer.chapterKey = self.chapterKey

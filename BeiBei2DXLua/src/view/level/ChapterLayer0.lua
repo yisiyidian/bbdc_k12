@@ -23,6 +23,8 @@ local Chapter0ResTable = {
     ,island7Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(300, 652),"island"}
     ,island8Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(223, 315),"island"}
     ,island9Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(382,80),"island"}
+    ,whale1 = {"image/chapter/chapter0/whale.png",cc.p(0,1),cc.p(220,1100),"whale1"}
+    ,whale2 = {"image/chapter/chapter0/whale.png",cc.p(0,1),cc.p(500,2100),"whale2"}
 }
 -- resourceType "start" / "middle" / "end"
 function ChapterLayer0.create(resourceType)
@@ -54,6 +56,19 @@ function ChapterLayer0:loadResource()
         self:createObjectForResource(Chapter0ResTable['back2'])
         self:createObjectForResource(Chapter0ResTable['back3_1'])
     end
+    
+    -- add whale
+    self:createObjectForResource(Chapter0ResTable['whale1'])
+    self:createObjectForResource(Chapter0ResTable['whale2'])
+    -- plot boat
+    local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
+    boat1:addAnimation(0, 'anmiation', true)
+    boat1:setPosition(250, 2380)
+    self:addChild(boat1, 140)
+    local boat2 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
+    boat2:addAnimation(0, 'anmiation', true)
+    boat2:setPosition(550, 690)
+    self:addChild(boat2, 140)
 end
 
 return ChapterLayer0

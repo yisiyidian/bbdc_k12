@@ -24,7 +24,7 @@ function FriendLayer:ctor()
     topline:setPosition(0.5 * s_DESIGN_WIDTH,0.89 * s_DESIGN_HEIGHT + 87)
     self:addChild(topline)
     
-    local usrname = cc.Label:createWithSystemFont(s_CURRENT_USER.username,'',32)
+    local usrname = cc.Label:createWithSystemFont(s_CURRENT_USER:getNameForDisplay(),'',32)
     usrname:setAnchorPoint(0,0.5)
     usrname:setPosition(0.2 * topline:getContentSize().width,0.5 * topline:getContentSize().height)
     topline:addChild(usrname)

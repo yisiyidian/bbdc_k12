@@ -34,10 +34,14 @@ function HomeLayer.create()
     -- data begin
     local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local chapterIndex      = string.sub(s_CURRENT_USER.currentChapterKey,8)+1
-    local chapterName       = s_DATA_MANAGER.chapters[chapterIndex].Name
-    local levelIndex        = string.sub(s_CURRENT_USER.currentLevelKey,6)+1
-    local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
+    
+    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    local currentChapterKey = bookProgress['chapter']
+    local currentLevelKey   = bookProgress['level']
+    
+    local chapterIndex      = string.sub(currentChapterKey, 8)+1
+    local levelIndex        = string.sub(currentLevelKey, 6)+1
+    local levelName         = "第"..chapterIndex.."章  第"..levelIndex.."关"
 
     local studyWordNum      = s_DATABASE_MGR.getTotalStudyWordsNum()
     local graspWordNum      = s_DATABASE_MGR.getTotalGraspWordsNum()
@@ -110,7 +114,7 @@ function HomeLayer.create()
    
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            AnalyticsFriend()
+            AnalyticsFriendBtn()
 
             -- button sound
             playSound(s_sound_buttonEffect)
@@ -261,10 +265,10 @@ function HomeLayer.create()
     label4:setPosition(book_back_width/2, -100)
     book_back:addChild(label4)
     
-    -- local label = cc.Label:createWithSystemFont(levelName,"",28)
-    -- label:setColor(cc.c4b(0,0,0,255))
-    -- label:setPosition(bigWidth/2, 280)
-    -- backColor:addChild(label)
+    local label = cc.Label:createWithSystemFont(levelName,"",28)
+    label:setColor(cc.c4b(0,0,0,255))
+    label:setPosition(bigWidth/2, 280)
+    backColor:addChild(label)
 
     if s_CURRENT_USER.clientData[1] == 0 then
         button_total:setVisible(false)
@@ -301,33 +305,71 @@ function HomeLayer.create()
     
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
---            AnalyticsEnterLevelLayer()
---            
---            showProgressHUD()
---            -- button sound
---            playSound(s_sound_buttonEffect)  
---            s_CorePlayManager.enterLevelLayer()  
---            hideProgressHUD()
+--            s_CorePlayManager.initTotalPlay()
             
-            s_CorePlayManager.initTotalPlay()
+            AnalyticsEnterLevelLayerBtn()
+            
+            showProgressHUD()
+            -- button sound
+            playSound(s_sound_buttonEffect)  
+            s_CorePlayManager.enterLevelLayer()  
+            hideProgressHUD()
+            local isSameDate = (os.date('%x',s_CURRENT_USER.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
+            local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
+            local index = s_CURRENT_USER.bookProgress:getBookCurrentLevelIndex()
+            if not isSameDate and #summaryBossList < 3 and index > #summaryBossList then
+                s_CURRENT_USER.lastUpdateSummaryBossTime = os.time()
+                if #summaryBossList == 0 then
+                    s_CURRENT_USER.summaryBossList = tostring(math.random(0,index - 1)) 
+                else
+                    local id = math.random(1,index - 1 - #summaryBossList)
+                    for i = 1,#summaryBossList do
+                        if summaryBossList[i] == '' then
+                            break
+                        end
+                        if id - summaryBossList[i] < 0 then
+                            table.insert(summaryBossList,i,tostring(id))
+                            break
+                        else
+                            id = id + 1
+                        end
+                    end
+                    --print('summarybossLisst:'..summaryBossList[#summaryBossList])
+                    if summaryBossList[#summaryBossList] ~= '' and id - summaryBossList[#summaryBossList] > 0 then
+                        table.insert(summaryBossList,#summaryBossList + 1,tostring(id))
+                    end
+                    s_CURRENT_USER.summaryBossList = summaryBossList[1]
+                    for i = 2,#summaryBossList do
+                        s_CURRENT_USER.summaryBossList = s_CURRENT_USER.summaryBossList..'|'..summaryBossList[i]
+                    end
+                end
+            end
+--            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+--                function(api,result)
+--                    s_CorePlayManager.initTotalPlay()
+--                end,
+--                function(api, code, message, description)
+--                    s_CorePlayManager.initTotalPlay()
+--                end)
+            
         end
     end
-    local ACCUMULATING_WORD = 1
-    local LEARNING_WORD = 2
-    local REVIEWING_WORD = 3
-    local COMPLETE_MISSION = 4
-    local state = ACCUMULATING_WORD
+    -- local ACCUMULATING_WORD = 2
+    -- local LEARNING_WORD = 3
+    -- local REVIEWING_WORD = 1
+    -- local COMPLETE_MISSION = 4
+    local state = s_DATABASE_MGR.getGameState()
 
     local playImg = 'image/homescene/bigbutton.png'
-    if state == COMPLETE_MISSION then
+    if state == s_gamestate_overmodel then
         playImg = 'image/homescene/buttonfinish.png'
     end
     local state_str
-    if state == ACCUMULATING_WORD then
+    if state == s_gamestate_studymodel then
         state_str = '积累生词'
-    elseif state == LEARNING_WORD then
-        state_str = '学习生词'
-    elseif state == REVIEWING_WORD then
+    elseif state == s_gamestate_reviewmodel then
+        state_str = '趁热打铁'
+    elseif state == s_gamestate_reviewbossmodel then
         state_str = '复习旧词'
     else
         state_str = '  完成  '
@@ -364,7 +406,7 @@ function HomeLayer.create()
     local isDataShow = false
     local button_data_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
-            AnalyticsDataCenter()
+            AnalyticsDataCenterBtn()
 
             -- button sound
             playSound(s_sound_buttonEffect)
@@ -453,7 +495,7 @@ function HomeLayer.create()
             if eventType == ccui.TouchEventType.ended then
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
-                    AnalyticsChangeBook()
+                    AnalyticsChangeBookBtn()
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
                     local alter = AlterI.create("用户反馈")
@@ -526,7 +568,7 @@ function HomeLayer.create()
     local start_y = nil
     local onTouchBegan = function(touch, event)
         if has_study and viewIndex == 1 then
-            AnalyticsLib()
+            AnalyticsWordsLibBtn()
 
             local location_book = has_study:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint({x=0,y=0,width=has_study:getContentSize().width,height=has_study:getContentSize().height}, location_book) then

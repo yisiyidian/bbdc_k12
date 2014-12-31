@@ -12,7 +12,7 @@ end
 
 function DataBookProgress:ctor()
     self.className = 'DataBookProgress'
-    self.CET4 = 'cet4|chapter1|level3'
+    self.CET4 = 'cet4|chapter0|level0'
     self.CET6 = 'cet6|chapter0|level0'
     self.GMAT = 'gmat|chapter0|level0'
     self.GRE = 'gre|chapter0|level0'
@@ -25,6 +25,19 @@ function DataBookProgress:ctor()
     self.PRO8 = 'pro8|chapter0|level0'
     self.SAT = 'sat|chapter0|level0'
     self.TOEFL = 'toefl|chapter0|level0'
+end
+
+function DataBookProgress:getBookCurrentLevelIndex()
+    local progress = self:getBookProgress(s_CURRENT_USER.bookKey)
+    local levelIndex = string.sub(progress['level'],6)+0
+    if progress['chapter'] == 'chapter1' then
+        levelIndex = levelIndex + 10
+    elseif progress['chapter'] == 'chapter2' then
+        levelIndex = levelIndex + 30
+    elseif progress['chapter'] == 'chapter3' then
+        levelIndex = levelIndex + 60
+    end
+    return levelIndex
 end
 
 function DataBookProgress:getBookProgress(bookKey)
@@ -115,7 +128,7 @@ function DataBookProgress:computeCurrentProgress()
     local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
     local bookWordCurrentCount =  s_DATABASE_MGR.getCurrentIndex()-1
     local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
-    currentLevelIndex = 6
+--    currentLevelIndex =11
     local progress = {}
     if currentLevelIndex < 10 then
         progress['chapter'] = 'chapter0'
@@ -131,8 +144,45 @@ function DataBookProgress:computeCurrentProgress()
         progress['chapter'] = 'chapter3'
         progress['level'] = 'level'..(currentLevelIndex-60)
     end
-    return progress
-    
+    return progress 
+end
+
+function DataBookProgress:updateDataToServer()
+    local currentProgress = self:computeCurrentProgress()
+    bookKey = s_CURRENT_USER.bookKey
+    if bookKey == s_BOOK_KEY_CET4 then
+        self.CET4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_CET6 then
+        self.CET6 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        return progressData
+    elseif bookKey == s_BOOK_KEY_GMAT then
+        self.GMAT = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_GRE then
+        self.GRE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_GSE then
+        self.GSE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_IELTS then
+        self.IELTS = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_MIDDLE then
+        self.MIDDLE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_NCEE then
+        self.NCEE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']    
+    elseif bookKey == s_BOOK_KEY_PRIMARY then
+        self.PRIMARY = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_PRO4 then
+        self.PRO4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_PRO8 then
+        self.PRO8 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_SAT then
+        self.SAT = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    elseif bookKey == s_BOOK_KEY_TOEFL then
+        self.TOEFL = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+    end
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end) 
 end
 
 return DataBookProgress

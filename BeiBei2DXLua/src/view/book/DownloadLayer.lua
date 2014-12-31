@@ -1,5 +1,6 @@
 require("cocos.init")
 require("common.global")
+require("view.book.DownloadSoundController")
 
 local DownloadAlter        = require("view.book.DownloadAlter")
 
@@ -7,7 +8,7 @@ local DownloadLayer = class("DownloadLayer", function()
     return cc.Layer:create()
 end)
 
-function DownloadLayer.create(bookKey)
+function DownloadLayer.create(bookKey)    
     local bookImageName = "image/download/big_"..string.upper(bookKey)..".png"
     local total_size = s_DATA_MANAGER.books[bookKey].music
     
@@ -15,7 +16,6 @@ function DownloadLayer.create(bookKey)
     if s_DATABASE_MGR.getDownloadState(bookKey) == 1 then
         download_state = 2
     end
-    download_state = 2
 
     local layer = DownloadLayer.new()
 
@@ -68,30 +68,16 @@ function DownloadLayer.create(bookKey)
     
     local button_choose_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-           if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
-               s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-           end
-           s_CURRENT_USER.bookKey = bookKey
-           s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-           s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
-           showProgressHUD()
-           s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
-               function (api, result)
-                   s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
-                       function (api, result)
-                           s_CorePlayManager.enterHomeLayer()
-                           hideProgressHUD()
-                       end,
-                       function (api, code, message, description)
-                           s_TIPS_LAYER:showSmall(message)
-                           hideProgressHUD()
-                       end)
-               end,
-               function (api, code, message, description)
-                   s_TIPS_LAYER:showSmall(message)
-                   hideProgressHUD()
-               end)
-           s_SCENE.touchEventBlockLayer.lockTouch()
+            if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
+                s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+            end
+           
+            s_CURRENT_USER.bookKey = bookKey
+            AnalyticsBook(bookKey)
+            playSound(s_sound_buttonEffect)
+            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+
+            s_CorePlayManager.enterHomeLayer()
         end
     end
 
@@ -102,26 +88,72 @@ function DownloadLayer.create(bookKey)
     button_choose:addTouchEventListener(button_choose_clicked)
     backColor:addChild(button_choose)
     
-   
     local progress
     local progress_clicked
     local button_title
-    local percent = 30
+    local percent = 0
+    local current_size = 0
     local title1 = "下载音频("..total_size..")"
-    local title2 = "取消下载(1.1M/"..total_size..")"
+    local title2 = "取消下载("..current_size.."M/"..total_size..")"
     local title3 = "删除音频("..total_size..")"
+    
+    local updatePercent = function(currentPercent)
+        percent = currentPercent
+        progress:setPercentage(percent)
+        progress_clicked:setPercentage(percent)
+        
+        current_size = tonumber(string.sub(total_size, 1, -2)) * percent/100
+        title2 = "取消下载("..string.format("%.1f", current_size).."M/"..total_size..")"
+        button_title:setString(title2)
+    end
+    
+    local downloadState = function(state)
+        if state == true then
+            print("download sound successful")
+            download_state = 2
+            s_DATABASE_MGR.updateDownloadState(bookKey, 1)
+            
+            local downloadAlter = DownloadAlter.create("贝贝提醒您，最新的单词包到货了 ^_^")
+            downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            backColor:addChild(downloadAlter)
+            
+            local finish = function()
+                percent = 100
+                progress:setPercentage(percent)
+                progress_clicked:setPercentage(percent)
+                progress:setVisible(true)
+                progress_clicked:setVisible(false)
+
+                button_title:setString(title3)
+            end
+            
+            downloadAlter.sure = function()
+                finish()
+            end
+            
+            downloadAlter.cancel = function()
+                finish()
+            end
+        else
+            print("download sound fail")
+            DownloadSoundController.killDownload(bookKey)
+            local downloadAlter = DownloadAlter.create("下载失败，请稍后重试！")
+            downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            backColor:addChild(downloadAlter)
+            
+            download_state = 0
+            button_title:setString(title1)
+            progress:setVisible(false)
+            progress_clicked:setVisible(false)
+        end
+    end
+    
 
     local button_download_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            if download_state == 0 then
-                
-                
-                
-            elseif download_state == 1 then
+            if download_state == 1 then
                 progress:setVisible(false)
-                progress_clicked:setVisible(true)
-            else
-            
+                progress_clicked:setVisible(true)           
             end
         elseif eventType == ccui.TouchEventType.ended then
             if download_state == 0 then
@@ -130,35 +162,47 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
             
                 downloadAlter.sure = function()
-                    percent = 30
+                    download_state = 1
+                    DownloadSoundController.beginSoundDownloadUpdate(bookKey, updatePercent, downloadState)
+                    
+                    title2 = "取消下载(0M/"..total_size..")"
+                    button_title:setString(title2)     
+                
+                    percent = 0
                     progress:setPercentage(percent)
                     progress_clicked:setPercentage(percent)
                     progress:setVisible(true)
-                    
-                    button_title:setString(title2)
-                    download_state = 1
-                    progress:setVisible(true)
-                    progress_clicked:setVisible(false)
+                    progress_clicked:setVisible(false)            
+
+                    AnalyticsDownloadBook(bookKey)
                 end
             elseif download_state == 1 then
+                progress:setVisible(true)
+                progress_clicked:setVisible(false)
+            
                 local downloadAlter = DownloadAlter.create("取消之后您需要重新下载，确定取消？")
                 downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(downloadAlter)
                 
                 downloadAlter.sure = function()
-                    button_title:setString(title1)
                     download_state = 0
+                    DownloadSoundController.killDownload(bookKey)
+                    
+                    button_title:setString(title1)
                     progress:setVisible(false)
                     progress_clicked:setVisible(false)
                 end
-            else
+            elseif download_state == 2 then
                 local downloadAlter = DownloadAlter.create("删除之后您需要重新下载，确定删除？")
                 downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(downloadAlter)
 
                 downloadAlter.sure = function()
-                    button_title:setString(title1)
                     download_state = 0
+                    DownloadSoundController.deleteBookSound(bookKey)
+                    s_DATABASE_MGR.updateDownloadState(bookKey, 0)
+                    
+                    button_title:setString(title1)
                     progress:setVisible(false)
                     progress_clicked:setVisible(false)
                 end
@@ -193,34 +237,19 @@ function DownloadLayer.create(bookKey)
         button_title = cc.Label:createWithSystemFont(title1,"",34)
         button_title:setPosition(bigWidth/2, 222)
         backColor:addChild(button_title)
-    else
+    elseif download_state == 2 then
         percent = 100
         progress:setPercentage(percent)
         progress_clicked:setPercentage(percent)
         progress:setVisible(true)
-        
+        progress_clicked:setVisible(false)
         
         button_title = cc.Label:createWithSystemFont(title3,"",34)
         button_title:setPosition(bigWidth/2, 222)
         backColor:addChild(button_title)
-        
-        
-        
     end
-
-    
-    
-    
 
     return layer
 end
 
-
 return DownloadLayer
-
-
-
-
-
-
-
