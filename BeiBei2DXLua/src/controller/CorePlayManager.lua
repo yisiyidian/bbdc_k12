@@ -347,10 +347,6 @@ function CorePlayManager.updateRightReviewWordNum()
     CorePlayManager.rightReviewWordNum = CorePlayManager.rightReviewWordNum + 1
 end
 
-function  CorePlayManager.insertReviewList(wordName)
-    table.insert(CorePlayManager.ReviewWordList,wordName)
-end
-
 function CorePlayManager.enterReviewBossMainLayer()
     local reviewBossMainLayer = ReviewBossMainLayer.create()
     s_SCENE:replaceGameLayer(reviewBossMainLayer)

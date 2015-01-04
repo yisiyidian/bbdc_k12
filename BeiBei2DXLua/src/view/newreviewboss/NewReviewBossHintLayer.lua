@@ -38,19 +38,10 @@ function NewReviewBossHintLayer.create(currentWordName)
         end
     end) 
     local wordListLen = table.getn(wordList)
-    
-    local pauseButton = Pause.create()
-    layer:addChild(pauseButton,100)
 
     layer.close  = function ()
     	
     end
-
-    local backGround = cc.Sprite:create("image/newreviewboss/newreviewboss_background.png")
-    backGround:setPosition(bigWidth / 2,s_DESIGN_HEIGHT / 2)
-    backGround:ignoreAnchorPointForPosition(false)
-    backGround:setAnchorPoint(0.5,0.5)
-    layer:addChild(backGround)
     
     local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 263)
     fillColor1:setAnchorPoint(0.5,0)
@@ -70,7 +61,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     fillColor3:setPosition(s_DESIGN_WIDTH/2,542)
     layer:addChild(fillColor3)
 
-    local fillColor4 = cc.LayerColor:create(cc.c4b(213,243,255,0), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-776)
+    local fillColor4 = cc.LayerColor:create(cc.c4b(213,243,255,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-776)
     fillColor4:setAnchorPoint(0.5,0)
     fillColor4:ignoreAnchorPointForPosition(false)
     fillColor4:setPosition(s_DESIGN_WIDTH/2,776)
@@ -91,10 +82,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     end
 
     local onTouchEnded = function(touch, event)
-        local location = layer:convertToNodeSpace(touch:getLocation())
-        if cc.rectContainsPoint(backGround:getBoundingBox(), location) then
            layer.close()
-        end
     end
 
     for i=1,s_CorePlayManager.currentReward do
@@ -193,18 +181,8 @@ function NewReviewBossHintLayer.create(currentWordName)
     richtext1:setLocalZOrder(10)       
     white_back:addChild(richtext1)
     
-    line_y =  richtext1:getPositionY() 
-    
---    local meaning_table = split(wordMeaning,"|||")
---    table.foreachi(meaning_table, function(i, v) 
---        local meaning_label = cc.Label:createWithSystemFont(meaning_table[i],"",26)  
---        meaning_label:setPosition(white_back:getContentSize().width *0.1,white_back:getContentSize().height * (0.8 - 0.06 * i))
---        meaning_label:setColor(cc.c4b(0,0,0,255))
---        meaning_label:ignoreAnchorPointForPosition(false)
---        meaning_label:setAnchorPoint(0,0.5)
---        white_back:addChild(meaning_label)
---        line_y = 0.8 - 0.06 * i
---        end)     
+    line_y =  richtext1:getPositionY() - 50
+       
         
     local gray_line = cc.LayerColor:create(cc.c4b(202,212,219,255),white_back:getContentSize().width *0.8,2)
     gray_line:ignoreAnchorPointForPosition(false)
@@ -243,7 +221,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backGround)
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
     return layer
 end
