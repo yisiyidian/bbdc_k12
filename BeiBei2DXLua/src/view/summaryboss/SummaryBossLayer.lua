@@ -19,7 +19,6 @@ local dir_right = 4
 
 function SummaryBossLayer.create(levelIndex,chapter)   
     AnalyticsSummaryBoss()
-    
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     

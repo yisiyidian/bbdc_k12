@@ -14,28 +14,8 @@ function SummaryBossAlter.create(win,wordCount,blood,index,levelIndex)
 
     if layer.win then
         s_CURRENT_USER:addBeans(2)
-        local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
-        for i = 1,#summaryBossList do
-            if tonumber(summaryBossList[i]) == levelIndex then
-                table.remove(summaryBossList,i)
-                break
-            end
-        end
-        s_CURRENT_USER.summaryBossList = ''
-        if #summaryBossList > 0 then
-            s_CURRENT_USER.summaryBossList = summaryBossList[1]
-                    
-        end
-        if #summaryBossList > 1 then
-            for i = 2,#summaryBossList do
-                s_CURRENT_USER.summaryBossList = s_CURRENT_USER.summaryBossList..'|'..summaryBossList[i]
-            end
-        end
-        s_UserBaseServer.saveDataObjectOfCurrentUser(self,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end)
+        s_CURRENT_USER:removeSummaryBoss(levelIndex)
+        s_CURRENT_USER:updateDataToServer()
         -- local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
         -- s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
         -- if levelData then
@@ -231,7 +211,7 @@ function SummaryBossAlter:win1()
     label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
     self.winBoard:addChild(label)
     
-    local label1 = cc.Label:createWithSystemFont(string.format("已经找到了%d个单词\n击败了恐老师！获得2个贝贝豆！",self.wordCount),'',40)
+    local label1 = cc.Label:createWithSystemFont(string.format("已经找到了%d个单词!击败了\n恐老师！获得2个贝贝豆！",self.wordCount),'',40)
     label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     label1:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.55)
     label1:setColor(cc.c4b(52,177,241,255))
@@ -253,12 +233,7 @@ function SummaryBossAlter:win1()
     continue:addChild(btn_title)
     
     local function backToLevelScene(sender)
-       local level = require('view.LevelLayer')
-       local layer = level.create()
-       --if self.win and isPassed == 0 then
-       --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-       --end
-       s_SCENE:replaceGameLayer(layer)
+       s_CorePlayManager.enterLevelLayer() 
        
         -- stop effect
         cc.SimpleAudioEngine:getInstance():stopAllEffects()
