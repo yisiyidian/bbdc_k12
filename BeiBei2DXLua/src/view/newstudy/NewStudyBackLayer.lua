@@ -38,7 +38,8 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     local pauseBtn = ccui.Button:create("image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+
+    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     backColor:addChild(pauseBtn,100)
     local Pause = require('view.Pause')

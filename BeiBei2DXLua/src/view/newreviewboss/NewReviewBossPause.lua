@@ -7,7 +7,7 @@ function NewReviewBossPause.create()
     local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
+    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT *0.99)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
