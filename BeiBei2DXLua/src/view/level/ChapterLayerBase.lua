@@ -100,7 +100,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
     --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
     --print('currentUser bossList:'..s_CURRENT_USER.summaryBossList)
-    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+    local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)
+    local summaryboss = split(bossList,'|')
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
 --        print('summarybossIndex:'..summaryboss[i])
@@ -333,7 +334,8 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
         levelNumber = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     end
     -- check random summary boss
-    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
+    local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)
+    local summaryboss = split(bossList,'|')
     local currentIndex = levelIndex
     if self.chapterKey == 'chapter1' then
         currentIndex = currentIndex + 10

@@ -117,22 +117,27 @@ function DataUser:generateChestList()
 end
 
 function DataUser:generateSummaryBossList() 
-    local isSameDate = (os.date('%x',self.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
-    local summaryBossList = split(self.summaryBossList,'|')
-    if self.summaryBossList == '' then
+
+    local updateTime = self.bookProgress:getUpdateBossTime(self.bookKey)
+    print(os.date('%x',updateTime))
+    local list = self.bookProgress:getBossList(self.bookKey)
+    local isSameDate = (os.date('%x',updateTime) == os.date('%x',os.time()))
+    local summaryBossList = split(list,'|')
+    if list == '' then
         summaryBossList = {}
     end
     local index = self.bookProgress:getBookCurrentLevelIndex()
+    print('index : '..index)
     if index == 0 then
         return
     end
     --print('currentIndex:'..index)
     --print('summaryBossList'..#summaryBossList)
     if (not isSameDate) and #summaryBossList < 3 and index - #summaryBossList > 0 then
-        self.lastUpdateSummaryBossTime = os.time()
+        updateTime = os.time()
         --print('currentIndex:'..index)
         if #summaryBossList == 0 then
-            self.summaryBossList = tostring(math.random(0,index - 1)) 
+            list = tostring(math.random(0,index - 1)) 
         else
             local id = math.random(1,index - 1 - #summaryBossList)
             for i = 1,#summaryBossList do
@@ -151,10 +156,14 @@ function DataUser:generateSummaryBossList()
             end
             self.summaryBossList = summaryBossList[1]
             for i = 2,#summaryBossList do
-                self.summaryBossList = self.summaryBossList..'|'..summaryBossList[i]
+                list = list..'|'..summaryBossList[i]
             end
         end
+        print('updateTime'..os.date('%x',updateTime))
+        self.bookProgress:updateBossList(self.bookKey,list)
+        
     end
+    self.bookProgress:updateTime(self.bookKey,os.time())
     --print("summaryBossList:"..self.summaryBossList.."lastUpdate:"..os.date('%x',self.lastUpdateSummaryBossTime))
 end
 
@@ -180,7 +189,8 @@ function DataUser:removeChest(index)
 end
 
 function DataUser:removeSummaryBoss(index)
-    local list = split(self.summaryBossList,'|')
+    local bosslist = self.bookProgress:getBossList(self.bookKey)
+    local list = split(bosslist,'|')
     local tempList = ''
     for i = 1, #list do 
         if list[i] ~= index then
@@ -191,7 +201,7 @@ function DataUser:removeSummaryBoss(index)
             end
         end
     end
-    self.summaryBossList = tempList
+    self.bookProgress:updateBossList(self.bookKey,tempList)
 end
 
 function DataUser:getNameForDisplay()

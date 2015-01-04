@@ -25,6 +25,34 @@ function DataBookProgress:ctor()
     self.PRO8 = 'pro8|chapter0|level0'
     self.SAT = 'sat|chapter0|level0'
     self.TOEFL = 'toefl|chapter0|level0'
+
+    self.CET4BossList = ''
+    self.CET6BossList = ''
+    self.GMATBossList = ''
+    self.GREBossList = ''
+    self.GSEBossList = ''
+    self.IELTSBossList = ''
+    self.MIDDLEBossList = ''
+    self.NCEEBossList = ''
+    self.PRIMARYBossList = ''
+    self.PRO4BossList = ''
+    self.PRO8BossList = ''
+    self.SATBossList = ''
+    self.TOEFLBossList = ''
+
+    self.CET4UpdateBossTime = 0
+    self.CET6UpdateBossTime = 0
+    self.GMATUpdateBossTime = 0
+    self.GREUpdateBossTime = 0
+    self.GSEUpdateBossTime = 0
+    self.IELTSUpdateBossTime = 0
+    self.MIDDLEUpdateBossTime = 0
+    self.NCEEUpdateBossTime = 0
+    self.PRIMARYUpdateBossTime = 0
+    self.PRO4UpdateBossTime = 0
+    self.PRO8UpdateBossTime = 0
+    self.SATUpdateBossTime = 0
+    self.TOEFLUpdateBossTime = 0    
 end
 
 function DataBookProgress:getBookCurrentLevelIndex()
@@ -38,6 +66,137 @@ function DataBookProgress:getBookCurrentLevelIndex()
         levelIndex = levelIndex + 60
     end
     return levelIndex
+end
+
+function DataBookProgress:getBossList(bookKey)
+    if bookKey == s_BOOK_KEY_CET4 then
+        return self.CET4BossList
+    elseif bookKey == s_BOOK_KEY_CET6 then
+        return self.CET6BossList
+    elseif bookKey == s_BOOK_KEY_GMAT then
+        return self.GMATBossList
+    elseif bookKey == s_BOOK_KEY_GRE then
+        return self.GREBossList
+    elseif bookKey == s_BOOK_KEY_GSE then
+        return self.GSEBossList
+    elseif bookKey == s_BOOK_KEY_IELTS then
+        return self.IELTSBossList
+    elseif bookKey == s_BOOK_KEY_MIDDLE then
+        return self.MIDDLEBossList
+    elseif bookKey == s_BOOK_KEY_NCEE then
+        return self.NCEEBossList    
+    elseif bookKey == s_BOOK_KEY_PRIMARY then
+        return self.PRIMARYBossList 
+    elseif bookKey == s_BOOK_KEY_PRO4 then
+        return self.PRO4BossList
+    elseif bookKey == s_BOOK_KEY_PRO8 then
+        return self.PRO8BossList
+    elseif bookKey == s_BOOK_KEY_SAT then
+        return self.SATBossList
+    elseif bookKey == s_BOOK_KEY_TOEFL then
+        return self.TOEFLBossList
+    end
+end
+
+function DataBookProgress:getUpdateBossTime(bookKey)
+    print('bookKey'..bookKey)
+    if bookKey == s_BOOK_KEY_CET4 then
+        return self.CET4UpdateBossTime
+    elseif bookKey == s_BOOK_KEY_CET6 then
+        return self.CET6UpdateBossTime
+    elseif bookKey == s_BOOK_KEY_GMAT then
+        return self.GMATUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_GRE then
+        return self.GREUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_GSE then
+        return self.GSEUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_IELTS then
+        return self.IELTSUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_MIDDLE then
+        return self.MIDDLEUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_NCEE then
+        return self.NCEEUpdateBossTime 
+    elseif bookKey == s_BOOK_KEY_PRIMARY then
+        return self.PRIMARYUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_PRO4 then
+        return self.PRO4UpdateBossTime
+    elseif bookKey == s_BOOK_KEY_PRO8 then
+        return self.PRO8UpdateBossTime
+    elseif bookKey == s_BOOK_KEY_SAT then
+        return self.SATUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_TOEFL then
+        return self.TOEFLUpdateBossTime
+    end
+end
+
+function DataBookProgress:updateBossList(bookKey,bossList)
+    if bookKey == s_BOOK_KEY_CET4 then
+        self.CET4BossList = bossList
+    elseif bookKey == s_BOOK_KEY_CET6 then
+        self.CET6BossList = bossList
+    elseif bookKey == s_BOOK_KEY_GMAT then
+        self.GMATBossList = bossList
+    elseif bookKey == s_BOOK_KEY_GRE then
+        self.GREBossList = bossList
+    elseif bookKey == s_BOOK_KEY_GSE then
+        self.GSEBossList = bossList
+    elseif bookKey == s_BOOK_KEY_IELTS then
+        self.IELTSBossList = bossList
+    elseif bookKey == s_BOOK_KEY_MIDDLE then
+        self.MIDDLEBossList = bossList
+    elseif bookKey == s_BOOK_KEY_NCEE then
+        self.NCEEBossList = bossList 
+    elseif bookKey == s_BOOK_KEY_PRIMARY then
+        self.PRIMARYBossList = bossList
+    elseif bookKey == s_BOOK_KEY_PRO4 then
+        self.PRO4BossList = bossList
+    elseif bookKey == s_BOOK_KEY_PRO8 then
+        self.PRO8BossList = bossList
+    elseif bookKey == s_BOOK_KEY_SAT then
+        self.SATBossList = bossList
+    elseif bookKey == s_BOOK_KEY_TOEFL then
+        self.TOEFLBossList = bossList
+    end
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end) 
+end
+
+function DataBookProgress:updateTime(bookKey,updateTime)
+    if bookKey == s_BOOK_KEY_CET4 then
+        self.CET4UpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_CET6 then
+        self.CET6UpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_GMAT then
+        self.GMATUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_GRE then
+        self.GREUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_GSE then
+        self.GSEUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_IELTS then
+        self.IELTSUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_MIDDLE then
+        self.MIDDLEUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_NCEE then
+        self.NCEEUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_PRIMARY then
+        self.PRIMARYUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_PRO4 then
+        self.PRO4UpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_PRO8 then
+        self.PRO8UpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_SAT then
+        self.SATUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_TOEFL then
+        self.TOEFLUpdateBossTime = updateTime
+    end
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
+        function(api,result)
+        end,
+        function(api, code, message, description)
+        end) 
 end
 
 function DataBookProgress:getBookProgress(bookKey)
