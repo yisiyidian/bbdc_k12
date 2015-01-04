@@ -47,6 +47,8 @@ function Pause:ctor()
     local node  = CCBReaderLoad("res/ccb/pause.ccbi", proxy, ccbPause, self.ccb)
     --temp
     ccbPause['retry']:setVisible(false)
+    ccbPause['help']:setVisible(false)
+    ccbPause['title']:setPositionX(ccbPause['title']:getPositionX()+25)
     ccbPause['back']:setPositionX(ccbPause['back']:getPositionX()+80)
     ccbPause['continue']:setPositionX(ccbPause['continue']:getPositionX()+80)
     
