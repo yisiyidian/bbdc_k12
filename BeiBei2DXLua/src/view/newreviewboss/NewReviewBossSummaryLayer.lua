@@ -18,6 +18,7 @@ function NewReviewBossSummaryLayer.create()
     
     local totol_boss_number = s_DATABASE_MGR:getTodayTotalBossNum()
     local current_boss_number = totol_boss_number - s_DATABASE_MGR:getTodayRemainBossNum() + 1
+    
     local type = s_CorePlayManager.typeIndex
     local custom_sprite = {}
     local percentBar 

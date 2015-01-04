@@ -99,6 +99,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
     
     --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
+    --print('currentUser bossList:'..s_CURRENT_USER.summaryBossList)
     local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
@@ -177,7 +178,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         start:setAnchorPoint(0,0)
         notification:addChild(start)
         start:addTouchEventListener(touchEvent)
-        
+        start:setName('summaryboss'..string.sub('level'..levelIndex, 6))
         -- add button title
         local button_title = cc.Label:createWithSystemFont('开始挑战','',20)
         --button_title:setColor(cc.c3b(0,0,0))
@@ -186,7 +187,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
         start:addChild(button_title)
 --        print('summaryboss position:'..summaryboss:getPosition())
-        summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
+        
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
         self:addChild(summaryboss, 150)

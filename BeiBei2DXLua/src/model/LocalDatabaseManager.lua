@@ -889,7 +889,7 @@ function Manager.getTodayTotalBossNum()
         return reviewBossNum
     else
         local lastUpdateDay = os.date("%x", lastUpdate)
-        if lastUpdate == today then
+        if lastUpdateDay == today then
             return bossNum
         else
             local reviewBossNum = Manager.getTodayRemainBossNum()

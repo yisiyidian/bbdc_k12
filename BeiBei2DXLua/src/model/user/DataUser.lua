@@ -119,12 +119,18 @@ end
 function DataUser:generateSummaryBossList() 
     local isSameDate = (os.date('%x',self.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
     local summaryBossList = split(self.summaryBossList,'|')
+    if self.summaryBossList == '' then
+        summaryBossList = {}
+    end
     local index = self.bookProgress:getBookCurrentLevelIndex()
     if index == 0 then
         return
     end
-    if not isSameDate and #summaryBossList < 3 and index - #summaryBossList > 0 then
+    --print('currentIndex:'..index)
+    --print('summaryBossList'..#summaryBossList)
+    if (not isSameDate) and #summaryBossList < 3 and index - #summaryBossList > 0 then
         self.lastUpdateSummaryBossTime = os.time()
+        --print('currentIndex:'..index)
         if #summaryBossList == 0 then
             self.summaryBossList = tostring(math.random(0,index - 1)) 
         else
@@ -149,7 +155,7 @@ function DataUser:generateSummaryBossList()
             end
         end
     end
-
+    --print("summaryBossList:"..self.summaryBossList.."lastUpdate:"..os.date('%x',self.lastUpdateSummaryBossTime))
 end
 
 function DataUser:removeChest(index)
@@ -177,7 +183,7 @@ function DataUser:removeSummaryBoss(index)
     local list = split(self.summaryBossList,'|')
     local tempList = ''
     for i = 1, #list do 
-        if list[i] - index ~= 0 then
+        if list[i] ~= index then
             if tempList == '' then
                 tempList = list[i]
             else
