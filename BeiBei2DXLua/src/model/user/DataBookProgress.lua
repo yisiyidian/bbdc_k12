@@ -128,7 +128,7 @@ function DataBookProgress:computeCurrentProgress()
     local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
     local bookWordCurrentCount =  s_DATABASE_MGR.getCurrentIndex()-1
     local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
---    currentLevelIndex =11
+--    currentLevelIndex =2
     local progress = {}
     if currentLevelIndex < 10 then
         progress['chapter'] = 'chapter0'
@@ -144,11 +144,37 @@ function DataBookProgress:computeCurrentProgress()
         progress['chapter'] = 'chapter3'
         progress['level'] = 'level'..(currentLevelIndex-60)
     end
+    
+    -- avoid complete state
+    if progress['chapter'] == 'chapter3' and string.sub(progress['level'],6)-39 > 0 then
+        progress['level'] = 'level39'
+    end
+    
     return progress 
 end
 
 function DataBookProgress:updateDataToServer()
     local currentProgress = self:computeCurrentProgress()
+    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey)
+    -- compute add beans count --
+    local increments = 0
+    local oldLevelIndex = string.sub(oldProgress['level'],  6)
+    local currentLevelIndex = string.sub(currentProgress['level'],6)
+    if oldProgress['chapter'] == currentProgress['chapter'] then
+        increments = currentLevelIndex - oldLevelIndex
+    else
+        if oldProgress['chapter'] == 'chapter0' then
+            increments = 10 - oldLevelIndex + currentLevelIndex
+        elseif oldProgress['chapter'] == 'chapter1' then
+            increments = 20 - oldLevelIndex + currentLevelIndex
+        elseif oldProgress['chapter'] == 'chapter2' then
+            increments = 30 - oldLevelIndex + currentLevelIndex
+        elseif oldProgress['chapter'] == 'chapter3' then
+            increments = 40 - oldLevelIndex + currentLevelIndex
+        end
+    end
+    s_CURRENT_USER:addBeans(increments)
+    -----------------------------
     bookKey = s_CURRENT_USER.bookKey
     if bookKey == s_BOOK_KEY_CET4 then
         self.CET4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']

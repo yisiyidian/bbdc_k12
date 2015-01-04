@@ -79,13 +79,110 @@ function DataUser:ctor()
 
     self.lastUpdateSummaryBossTime         = 0
     self.summaryBossList                   = ''
-
+    self.chestList                         = ''
+    self.lastUpdateChestTime               = 0
     self.dailyStudyInfo                    = DataDailyStudyInfo.create()
 end
 
 function DataUser:addBeans(count)
     self.beans = self.beans + count
     self:updateDataToServer()
+end
+
+function DataUser:generateChestList()
+    --print("###########start generate chest########")
+    local timePass = os.time() - s_CURRENT_USER.lastUpdateChestTime
+--    print('osTime:'..os.time())
+--    print('lastUpdate:'..s_CURRENT_USER.lastUpdateChestTime)
+    if timePass >= 3600 * 24 * 2 then   -- two days
+        s_CURRENT_USER.lastUpdateChestTime = os.time()
+        local currentIndex = s_CURRENT_USER.bookProgress:getBookCurrentLevelIndex()
+        if currentIndex == 0 then
+            return 
+        end
+        local chest1 = math.random(0, currentIndex - 1) + 0
+        local chest2 = math.random(0, currentIndex - 1) + 0
+--        print('chest1:'..chest1)
+--        print('chest2:'..chest2)
+--        while (chest2 - chest1) == 0 do
+--            print('chest1:'..chest1)
+--            print('chest2:'..chest2)
+--            chest2 = math.random(0, currentIndex - 1)
+--            print('diff'..(chest2-chest1)..'###')
+--        end
+        self.chestList = chest1..'|'..chest2
+--        self.chestList = '0'
+--        print('chestList:'..self.chestList)
+    end
+end
+
+function DataUser:generateSummaryBossList() 
+    local isSameDate = (os.date('%x',self.lastUpdateSummaryBossTime) == os.date('%x',os.time()))
+    local summaryBossList = split(self.summaryBossList,'|')
+    local index = self.bookProgress:getBookCurrentLevelIndex()
+    if index == 0 then
+        return
+    end
+    if not isSameDate and #summaryBossList < 3 and index - #summaryBossList > 0 then
+        self.lastUpdateSummaryBossTime = os.time()
+        if #summaryBossList == 0 then
+            self.summaryBossList = tostring(math.random(0,index - 1)) 
+        else
+            local id = math.random(1,index - 1 - #summaryBossList)
+            for i = 1,#summaryBossList do
+                if summaryBossList[i] == '' then
+                    break
+                end
+                if id - summaryBossList[i] < 0 then
+                    table.insert(summaryBossList,i,tostring(id))
+                    break
+                else
+                    id = id + 1
+                end
+            end
+            if summaryBossList[#summaryBossList] ~= '' and id - summaryBossList[#summaryBossList] > 0 then
+                table.insert(summaryBossList,#summaryBossList + 1,tostring(id))
+            end
+            self.summaryBossList = summaryBossList[1]
+            for i = 2,#summaryBossList do
+                self.summaryBossList = self.summaryBossList..'|'..summaryBossList[i]
+            end
+        end
+    end
+
+end
+
+function DataUser:removeChest(index)
+--    print('###### remove chest ######')
+--    print(self.chestList..','..index)
+    local list = split(self.chestList,'|')
+    local tempList = ''
+    for i = 1, #list do 
+        if list[i] - index ~= 0 then
+            if tempList == '' then
+                tempList = list[i]
+            else
+                tempList = tempList..'|'..list[i]
+            end
+        end
+    end
+--    print('temp:'..tempList)
+    self.chestList = tempList
+end
+
+function DataUser:removeSummaryBoss(index)
+    local list = split(self.summaryBossList,'|')
+    local tempList = ''
+    for i = 1, #list do 
+        if list[i] - index ~= 0 then
+            if tempList == '' then
+                tempList = list[i]
+            else
+                tempList = tempList..'|'..list[i]
+            end
+        end
+    end
+    self.summaryBossList = tempList
 end
 
 function DataUser:getNameForDisplay()
@@ -482,7 +579,7 @@ function DataUser:getUserBookWord()
         chapterIndex = chapterIndex + 1
     end
     table.foreachi(wordTable, function(i, v) table.foreachi(v, function(i, v)  table.insert(wordTableOp,v) end) end)
---    table.foreachi(wordTableOp, function(i, v)  print(i ,v)  end)
+    table.foreachi(wordTableOp, function(i, v)  print(i ,v)  end)
     return wordTableOp
 end
 

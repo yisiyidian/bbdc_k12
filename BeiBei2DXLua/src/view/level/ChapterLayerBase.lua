@@ -78,20 +78,12 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
+    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
     local levelPosition = self.levelPos[levelIndex]
---    print('######decoration level position########')
---    print('levelIndex:'..levelIndex)
---    print('chapterKey'..self.chapterKey)
---    print_lua_table(self.levelPos)
---    print(self.levelPos[0])
---    print(levelPosition)
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
     -- check random summary boss
-    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
-    --print('summarybossList:'..s_CURRENT_USER.summaryBossList)
-    --print('lensummba:'..#summaryboss)
+
     local currentIndex = levelIndex
     if self.chapterKey == 'chapter1' then
         currentIndex = currentIndex + 10
@@ -102,21 +94,33 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
     
     --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
-    
+    local summaryboss = split(s_CURRENT_USER.summaryBossList,'|')
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
-        --print('summarybossIndex:'..summaryboss[i])
+--        print('summarybossIndex:'..summaryboss[i])
         if summaryboss[i] == '' then break end
         if summaryboss[i] - currentIndex == 0 then
             checkSummaryBoss = true
             break
         end
     end
+    
+    -- chest
+    local chestList = split(s_CURRENT_USER.chestList, '|')
+    local checkChest = false
+    for i = 1, #chestList do
+        --print('summarybossIndex:'..summaryboss[i])
+        if chestList[i] == '' then break end
+        if chestList[i] - currentIndex == 0 then
+            checkChest = true
+            break
+        end
+    end
+    
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
         -- plot review boss
---        print('plot review boss####')
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
         s_SCENE:callFuncWithDelay(1,function()
@@ -139,6 +143,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         title:setAnchorPoint(0,0)
         title:setPosition(30,110)
         notification:addChild(title)
+        
+        
         local task_name = cc.Label:createWithSystemFont('打败鲶鱼boss','',25)
         task_name:setColor(cc.c3b(0,0,0))
         task_name:ignoreAnchorPointForPosition(false)
@@ -150,6 +156,12 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             if eventType == ccui.TouchEventType.ended then
                 -- TODO go to summaryboss
 --                s_CorePlayManager.initTotalPlay()
+                    local index = string.sub(sender:getName(),12)
+                    local summaryboss = require('view.summaryboss.SummaryBossLayer')
+                    local layer = summaryboss.create(index,1)
+                    
+                    layer:setAnchorPoint(0.5,0)
+                    s_SCENE:replaceGameLayer(layer)
             end
         end
         local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
@@ -166,12 +178,33 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         button_title:setAnchorPoint(0.5,0.5)
         button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
         start:addChild(button_title)
-        -- !!!
-        print('summaryboss position:'..summaryboss:getPosition())
+--        print('summaryboss position:'..summaryboss:getPosition())
         summaryboss:setName('summaryboss'..string.sub('level'..levelIndex, 6))
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
         self:addChild(summaryboss, 150)
+    elseif checkChest then
+        -- define touchEvent
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then                
+                local deco = sp.SkeletonAnimation:create('spine/baoxiangdakai.json','spine/baoxiangdakai.atlas',1)
+                deco:addAnimation(0,'animation',false)
+                deco:setPosition(sender:getPosition())
+                local i = string.sub(sender:getName(), 6)
+                s_CURRENT_USER:removeChest(i)
+                -- add beans
+                s_CURRENT_USER:addBeans(2)
+                sender:setVisible(false)
+                self:addChild(deco, 130)
+            end
+        end
+        local chestButton = ccui.Button:create('image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png')
+        chestButton:setScale9Enabled(true)
+        chestButton:setPosition(levelPosition.x-90, levelPosition.y-70)
+        chestButton:setAnchorPoint(0,0)
+        chestButton:setName('chest'..currentIndex)
+        self:addChild(chestButton,150)
+        chestButton:addTouchEventListener(touchEvent)
     elseif levelIndex % 8 == 0 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
         deco:addAnimation(0,'animation',true)
@@ -217,10 +250,6 @@ function ChapterLayerBase:plotDecoration()
     local currentChapterIndex = string.sub(bookProgress['chapter'],8)
     local chapterIndex = string.sub(self.chapterKey, 8)
     for levelIndex, levelPosition in pairs(self.levelPos) do
-        --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex)
---        print('!!!!!levelConfigType:'..levelConfig)
---        print_lua_table(levelConfig)
-        -- is locked
         if (levelIndex - currentLevelIndex > 0 and chapterIndex == currentChapterIndex)  or chapterIndex - currentChapterIndex > 0 then
             local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
             lockIsland:setName('lockLayer'..levelIndex)

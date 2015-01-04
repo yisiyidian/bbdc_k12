@@ -717,7 +717,7 @@ end
 function SummaryBossLayer:initWordList()
     local wordList = s_DATABASE_MGR.getSummaryBossWordCandidate()
     local index = 1
-
+    
     for i = 1, #wordList do
         local randomIndex = math.random(1,#wordList)
         local tmp = wordList[i]

@@ -70,16 +70,13 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBottomBounce()
     self:addBackToHome()
+    self:addBeansUI()
 end
 
 function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
---    print('########old progress:')
---    print_lua_table(oldProgress)
---    print_lua_table(currentProgress)
---    print_lua_table(s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey))
-    --s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
+    s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
     if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- TODO unlock chapter
         -- add next chapter
         self:addChapterIntoListView(currentProgress['chapter'])
@@ -202,6 +199,16 @@ function ChapterLayer:addPlayerNotification()  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,80)
         notification:addChild(task_name)
+        
+        if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+            local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+            finger:addAnimation(0, 'animation', true)
+            finger:setPosition(notification:getContentSize().width/2+20,-30)
+            notification:addChild(finger,10)
+            s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+        end
+        
         -- define touchEvent
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
@@ -362,6 +369,9 @@ end
 
 -- scroll listview to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
+    if chapterKey == 'chapter0' and levelKey == 'level0' then
+        return
+    end
     local bookProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     -- compute listView inner height
     local itemList = listView:getItems()
@@ -433,7 +443,7 @@ function ChapterLayer:plotDecoration()
     self.chapterDic['chapter0']:addChild(boat, 130)
     self.chapterDic['chapter0']:addChild(fan,130)
     self.chapterDic['chapter0']:addChild(beibei,130)
-    self:addBeansUI()
+--    self:addBeansUI()
     --print('chapter0: '..self.chapterDic['chapter0']:getPosition())
 --    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
     --print('fanPosition:'..fanPosition)
@@ -471,14 +481,18 @@ function ChapterLayer:addBackToHome()
 end
 
 function ChapterLayer:addBeansUI()
-    self.beans = cc.Sprite:create('image/chapter/chapter0/top.png')
+    self.beans = cc.Sprite:create('image/chapter/chapter0/beanBack.png')
     self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans,150)
-    local beanCount = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',28)
-    beanCount:setColor(cc.c3b(0, 255, 0))
+    local bean = cc.Sprite:create('image/chapter/chapter0/bean.png')
+    bean:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
+    self.beans:addChild(bean)
+    
+    local beanCount = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',33)
+    beanCount:setColor(cc.c3b(13, 95, 156))
     beanCount:ignoreAnchorPointForPosition(false)
     beanCount:setAnchorPoint(0,0)
-    beanCount:setPosition(70,3)
+    beanCount:setPosition(53,2)
     self.beans:addChild(beanCount,10)
 end
 
