@@ -11,12 +11,13 @@ function NewReviewBossPause.create()
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
+        if eventType == ccui.TouchEventType.began then
+            playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
             local pauseLayer = Pause.create()
             pauseLayer:setPosition(s_LEFT_X, 0)
             s_SCENE.popupLayer:addChild(pauseLayer)
             s_SCENE.popupLayer.listener:setSwallowTouches(true)
-            playSound(s_sound_buttonEffect)
         end
     end
     pauseBtn:addTouchEventListener(pauseScene)

@@ -154,9 +154,9 @@ function NewReviewBossSummaryLayer.create()
         
         local richtext = ccui.RichText:create()
 
---        local opt_meaning = string.gsub(meaning[i],"|||","\n")
+        local opt_meaning = string.gsub(meaning[i],"|||"," ")
 
-        local current_word_wordMeaning = cc.LabelTTF:create (meaning[i],
+        local current_word_wordMeaning = cc.LabelTTF:create (opt_meaning,
             "Helvetica",24, cc.size(summury_back:getContentSize().width *0.9, 200), cc.TEXT_ALIGNMENT_LEFT)
 
         current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
@@ -251,6 +251,7 @@ function NewReviewBossSummaryLayer.create()
             
 --            print("reward .."..s_CorePlayManager.currentReward)
 --            print("total .."..s_CorePlayManager.reward)
+            s_CURRENT_USER:addBeans(s_CorePlayManager.currentReward)
             
             local candidate = s_CorePlayManager.getReviewBossCandidate() 
             s_CorePlayManager.initNewReviewBossLayer(candidate)
