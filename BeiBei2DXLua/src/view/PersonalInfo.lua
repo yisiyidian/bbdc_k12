@@ -126,6 +126,8 @@ function PersonalInfo:PLVM()
     local toMaster = cc.ProgressTo:create(masterPercent,masterPercent * 100)
 
     local backProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_ligheblue.png'))
+    backProgress:setScaleX(483 / 526)
+    backProgress:setScaleY(483 / 527)
     backProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     backProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
     backProgress:setReverseDirection(true)

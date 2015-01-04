@@ -580,7 +580,7 @@ function HomeLayer.create()
         local now_x = location.x
         local now_y = location.y
         
-        if start_y < 0.1 * s_DESIGN_HEIGHT and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 1.0 then
+        if start_y < 0.1 * s_DESIGN_HEIGHT and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
             if now_y - moveLength > start_y and not isDataShow and viewIndex == 1 then         
                    isDataShow = true
                    button_friend:setEnabled(false)
@@ -601,7 +601,7 @@ function HomeLayer.create()
             end
             
         end
-        if start_y > s_DESIGN_HEIGHT - 280 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 1.0 then
+        if start_y > s_DESIGN_HEIGHT - 280 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
             if now_y + moveLength < start_y and isDataShow and viewIndex == 1 then
                 isDataShow = false
                 button_friend:setEnabled(true)
@@ -617,7 +617,7 @@ function HomeLayer.create()
             
         end
 
-        if now_x - moveLength > start_x then
+        if now_x - moveLength > start_x and not isDataShow then
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
@@ -630,7 +630,7 @@ function HomeLayer.create()
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             end
-        elseif now_x + moveLength < start_x then
+        elseif now_x + moveLength < start_x and not isDataShow then
             if viewIndex == 2 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
@@ -669,7 +669,7 @@ function HomeLayer.create()
                    end 
             end
 
-        elseif location.y >  s_DESIGN_HEIGHT-280 or (location.y == start_y and location.x == start_x) and viewIndex == 1 then
+        elseif location.y >  s_DESIGN_HEIGHT-280 and (location.y == start_y and location.x == start_x) and viewIndex == 1 then
             isDataShow = false
             button_friend:setEnabled(true)
             button_main:setEnabled(true)
