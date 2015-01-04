@@ -188,17 +188,24 @@ function ChapterLayer:addPlayerNotification()  -- notification
     -- TODO show message according to type
     if type == 'study' then
         local title = cc.Label:createWithSystemFont('当前任务','',25)
-        title:setColor(cc.c3b(0,0,0))
+        title:setColor(cc.c3b(56,26,23))
         title:ignoreAnchorPointForPosition(false)
         title:setAnchorPoint(0,0)
-        title:setPosition(30,110)
+        title:setPosition(60,120)
         notification:addChild(title)
-        local task_name = cc.Label:createWithSystemFont('积累生词\n'..s_DATABASE_MGR.getwrongWordListSize()..'/'..s_max_wrong_num_everyday,'',20)
-        task_name:setColor(cc.c3b(0,0,0))
+        local task_name = cc.Label:createWithSystemFont('积累生词','',18)
+        task_name:setColor(cc.c3b(56,26,23))
         task_name:ignoreAnchorPointForPosition(false)
         task_name:setAnchorPoint(0,0)
-        task_name:setPosition(30,80)
+        task_name:setPosition(65,100)
         notification:addChild(task_name)
+        local number = cc.Label:createWithSystemFont(s_DATABASE_MGR.getwrongWordListSize()..'/'..s_max_wrong_num_everyday,'',23)
+        number:setColor(cc.c3b(165,55,80))
+        number:ignoreAnchorPointForPosition(false)
+        number:setAnchorPoint(0,0)
+        number:setPosition(75,70)
+        notification:addChild(number)
+        
         
         if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
             local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)

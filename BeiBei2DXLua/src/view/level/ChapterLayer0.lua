@@ -87,11 +87,11 @@ function ChapterLayer0:loadResource()
     self:createObjectForResource(Chapter0ResTable['whale2'])
     -- plot boat
     local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
-    boat1:addAnimation(0, 'anmiation', true)
+    boat1:addAnimation(0, 'animation', true)
     boat1:setPosition(250, 2380)
     self:addChild(boat1, 140)
     local boat2 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
-    boat2:addAnimation(0, 'anmiation', true)
+    boat2:addAnimation(0, 'animation', true)
     boat2:setPosition(550, 690)
     self:addChild(boat2, 140)
     
