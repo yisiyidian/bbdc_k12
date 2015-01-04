@@ -11,6 +11,8 @@ local  NewStudyRightLayer = class("NewStudyRightLayer", function ()
 end)
 
 function NewStudyRightLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     -- word info
     local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
     local currentWord       = s_WordPool[currentWordName]
@@ -65,6 +67,7 @@ function NewStudyRightLayer.create()
                     normal()
                 end
             else
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 normal()
             end
         end
@@ -127,6 +130,7 @@ function NewStudyRightLayer.create()
                     end
                 end
             else
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 normal()
             end
         end

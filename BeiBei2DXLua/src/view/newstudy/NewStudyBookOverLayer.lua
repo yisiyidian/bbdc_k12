@@ -8,6 +8,8 @@ local  NewStudyBookOverLayer = class("NewStudyBookOverLayer", function ()
 end)
 
 function NewStudyBookOverLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
 

@@ -26,7 +26,7 @@ function NewReviewBossProgressBar.create(totalIndex, currentIndex ,color)
     progress:setMidpoint(cc.p(0, 0))
     progress:setBarChangeRate(cc.p(1, 0))
     progress:setPosition(progress_back:getPosition())
-    progress:setPercentage(100*currentIndex/totalIndex)
+    progress:setPercentage(100 * currentIndex / totalIndex)
     main:addChild(progress)
 
     local left = (local_size.width - progress_back:getContentSize().width) / 2

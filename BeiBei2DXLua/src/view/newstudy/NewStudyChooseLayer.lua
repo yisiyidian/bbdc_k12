@@ -9,6 +9,8 @@ local  NewStudyChooseLayer = class("NewStudyChooseLayer", function ()
 end)
 
 function NewStudyChooseLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
 
@@ -82,7 +84,9 @@ function NewStudyChooseLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then            
+        elseif eventType == ccui.TouchEventType.ended then  
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                      
             local feedback 
             if sender.tag == 1 then  
                 feedback = cc.Sprite:create("image/newstudy/righttip.png")
@@ -152,8 +156,10 @@ function NewStudyChooseLayer.create()
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then  
-            
+
+        elseif eventType == ccui.TouchEventType.ended then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+          
             if s_CorePlayManager.isStudyModel() then
                 AnalyticsStudyDontKnowAnswer()  
                 AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
