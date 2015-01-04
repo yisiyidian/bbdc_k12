@@ -3,6 +3,8 @@ local NewReviewBossFailPopup = class ("NewReviewBossFailPopup",function ()
 end)
 
 function NewReviewBossFailPopup.create()
+    AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS_RESULT, 'fail')
+
     local layer = NewReviewBossFailPopup.new()
     
     local totol_boss_number = s_DATABASE_MGR:getTodayTotalBossNum()

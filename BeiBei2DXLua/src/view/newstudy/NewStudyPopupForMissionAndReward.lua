@@ -150,6 +150,7 @@ function NewStudyPopupForMissionAndReward.create()
     elseif NewStudyLayer_State == NewStudyLayer_State_Reward then
         choose_mission_text = cc.Label:createWithSystemFont("完成任务","",32)
         current_state_judge = 1
+        AnalyticsTasksFinished('NewStudyPopupForMissionAndReward')
     end
 
     choose_mission_text:setPosition(choose_mission_button:getContentSize().width * 0.5,choose_mission_button:getContentSize().height * 0.5)

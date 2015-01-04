@@ -10,6 +10,7 @@ local  NewStudyMiddleLayer = class("NewStudyMiddleLayer", function ()
 end)
 
 function NewStudyMiddleLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     s_CURRENT_USER:addBeans(3)
     
     --pause music
@@ -59,6 +60,8 @@ function NewStudyMiddleLayer.create()
     label_hint:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(label_hint)
 
+    AnalyticsFirst(ANALYTICS_FIRST_GOT_ENOUGH_UNKNOWN_WORDS, tostring(wrongWordNum))
+
     local circle = cc.Sprite:create("image/newstudy/yellow_circle.png")
     circle:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     backColor:addChild(circle)
@@ -92,6 +95,7 @@ function NewStudyMiddleLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            AnalyticsFirst(ANALYTICS_FIRST_STUDY_STRIKEWHILEHOT, 'TOUCH')
             s_CorePlayManager.enterNewStudyChooseLayer()
         end
     end

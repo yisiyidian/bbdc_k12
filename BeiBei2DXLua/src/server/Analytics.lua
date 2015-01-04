@@ -101,6 +101,10 @@ function AnalyticsTasksBtn()
     cx.CXAnalytics:logEventAndLabel('Tasks', 'TOUCH')
 end
 
+function AnalyticsTasksFinished(layerName)
+    cx.CXAnalytics:logEventAndLabel('TasksFinished', layerName)
+end
+
 ----------------------------------------------------------------------------------------
 
 -- 点击 重玩错词
@@ -180,17 +184,46 @@ end
 
 ----------------------------------------------------------------------------------------
 
+function AnalyticsChestGeneratedCnt(cnt)
+    cx.CXAnalytics:logEventAndLabel('ChestGeneratedCnt', tostring(cnt))
+end
+
+function AnalyticsChestCollectedCnt(name)
+    cx.CXAnalytics:logEventAndLabel('ChestCollectedCnt', name)
+end
+
 function Analytics_applicationDidEnterBackground(layerName)
     cx.CXAnalytics:logEventAndLabel('AppEnterBackground', layerName)
 end
 
 ----------------------------------------------------------------------------------------
 -- first
-ANALYTICS_FIRST_BOOK  = 0
+ANALYTICS_FIRST_BOOK = 0
 ANALYTICS_FIRST_LEVEL = 1
-ANALYTICS_FIRST_STUDY = 2
 
-local ANALYTICS_FIRST_EVENTS = {'firstBook', 'firstLevelScene', 'firstStudy'}
+ANALYTICS_FIRST_STUDY = 2
+ANALYTICS_FIRST_SKIP_REVIEW = 3
+ANALYTICS_FIRST_DONT_KNOW = 4
+ANALYTICS_FIRST_SWIPE_WORD = 5
+
+ANALYTICS_FIRST_GOT_ENOUGH_UNKNOWN_WORDS = 6
+
+ANALYTICS_FIRST_STUDY_STRIKEWHILEHOT = 7
+ANALYTICS_FIRST_SKIP_REVIEW_STRIKEWHILEHOT = 8
+ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT = 9
+ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT = 10
+ANALYTICS_FIRST_FINISH = 11
+
+ANALYTICS_FIRST_REVIEW_BOSS = 12
+ANALYTICS_FIRST_REVIEW_BOSS_RESULT = 13
+
+local ANALYTICS_FIRST_EVENTS = {
+    'firstBook', 'firstLevelScene', 
+    'firstStudy', 'firstSkipReview', 'firstDontKnow', 'firstSwipeWord', 
+    'firstGotEnoughUnknownWords', 
+    'firstStudyStrikeWhileHot', 'firstSkipReviewStrikeWhileHot', 'firstDontKnowStrikeWhileHot', 'firstSwipeWordStrikeWhileHot', 'firstFinish',
+    'firstReviewBoss', 'firstReviewBossResult'
+}
 
 function AnalyticsFirst(eventindex, eventDes)
     if math["and"](s_CURRENT_USER.statsMask, (2 ^ eventindex)) == 0 then

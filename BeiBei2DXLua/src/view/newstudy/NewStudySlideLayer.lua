@@ -11,6 +11,8 @@ local  NewStudySlideLayer = class("NewStudySlideLayer", function ()
 end)
 
 function NewStudySlideLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     -- word info
     local currentWordName
     if s_CorePlayManager.isStudyModel() then
