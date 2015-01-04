@@ -13,7 +13,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,levelIndex)
     layer.index = index
 
     if layer.win then
-
+        s_CURRENT_USER:addBeans(2)
         local summaryBossList = split(s_CURRENT_USER.summaryBossList,'|')
         for i = 1,#summaryBossList do
             if tonumber(summaryBossList[i]) == levelIndex then

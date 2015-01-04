@@ -3,6 +3,7 @@ require("common.global")
 
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
+local Pause             = require("view.newreviewboss.NewReviewBossPause")
 
 
 local  NewReviewBossMainLayer = class("NewReviewBossMainLayer", function ()
@@ -179,25 +180,9 @@ function NewReviewBossMainLayer.create()
     
     currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
             sentenceEn2,sentenceCn2 =  updateWord()
-            
-    
-    local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
-    pauseBtn:ignoreAnchorPointForPosition(false)
-    pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
-    s_SCENE.popupLayer.pauseBtn = pauseBtn
-    layer:addChild(pauseBtn,100)
-    local Pause = require('view.Pause')
-    local function pauseScene(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local pauseLayer = Pause.create()
-            pauseLayer:setPosition(s_LEFT_X, 0)
-            s_SCENE.popupLayer:addChild(pauseLayer)
-            s_SCENE.popupLayer.listener:setSwallowTouches(true)
-            playSound(s_sound_buttonEffect)
-        end
-    end
-    pauseBtn:addTouchEventListener(pauseScene)
+
+    local pauseButton = Pause.create()
+    layer:addChild(pauseButton,100)
     
     local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 263)
     fillColor1:setAnchorPoint(0.5,0)
@@ -240,12 +225,6 @@ function NewReviewBossMainLayer.create()
         reward:runAction(action1)
         reward:setScale(0)
     end
-    
-    
-
---    local rbProgressBar = ProgressBar.create(s_CorePlayManager.maxReviewWordCount,s_CorePlayManager.rightReviewWordNum,"yellow")
---    rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
---    layer:addChild(rbProgressBar)
 
     local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"yellow")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
@@ -314,7 +293,6 @@ function NewReviewBossMainLayer.create()
     
     local wrongWordFunction = function ()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
---        s_CorePlayManager.insertReviewList(wordname)
         table.insert(wordToBeTested, wordname)
         local words = getRandomWordForRightWord(wordname)
         local index_x, index_y = sprite_array[#sprite_array][1]:getPosition()
@@ -394,12 +372,17 @@ function NewReviewBossMainLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
+            local action1 = cc.MoveBy:create(0.4,cc.p(0,200))
+            pauseButton:runAction(action1)
             local HintView = require("view.newreviewboss.NewReviewBossHintLayer")
             local hintView = HintView.create(currentWordName)
             layer:addChild(hintView,2)          
             hintView.close = function ()          
                 hintView:removeFromParent()
                 wrongWordFunction()
+                
+                local action2 = cc.MoveBy:create(0.4,cc.p(0,-200))
+                pauseButton:runAction(action2)
             end   
         end
     end
@@ -454,14 +437,7 @@ function NewReviewBossMainLayer.create()
                 true_mark:runAction(cc.Sequence:create(action1, action2))
                 
             else
-                sprite_array[logic_location.x][logic_location.y].wrong()             
---                for j = 1, 3 do
---                    if answer == sprite_array[logic_location.x][j].character then
---                        sprite_array[logic_location.x][j].right()
---                	end
---                end
-                
-
+                sprite_array[logic_location.x][logic_location.y].wrong()                        
                 local sprite = layer:getChildByTag(s_CorePlayManager.currentReward)
                 local reward_miss = sp.SkeletonAnimation:create('spine/fuxiboss_bea_dispare.json', 'spine/fuxiboss_bea_dispare.atlas',1)
                 reward_miss:setPosition(sprite:getContentSize().width * 0.5, -10)
