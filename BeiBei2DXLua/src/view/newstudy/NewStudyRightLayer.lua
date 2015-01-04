@@ -11,6 +11,8 @@ local  NewStudyRightLayer = class("NewStudyRightLayer", function ()
 end)
 
 function NewStudyRightLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     -- word info
     local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
     local currentWord       = s_WordPool[currentWordName]
@@ -65,6 +67,7 @@ function NewStudyRightLayer.create()
                     normal()
                 end
             else
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 normal()
             end
         end
@@ -111,8 +114,23 @@ function NewStudyRightLayer.create()
                         s_DATABASE_MGR.setIsAlterOn(0)
                     end
                     normal()
+
+                    if s_CorePlayManager.isStudyModel() then
+                        AnalyticsFirst(ANALYTICS_FIRST_SKIP_REVIEW, 'sure')
+                    else
+                        AnalyticsFirst(ANALYTICS_FIRST_SKIP_REVIEW_STRIKEWHILEHOT, 'sure')
+                    end
+                end
+
+                guideAlter.cancel = function()
+                    if s_CorePlayManager.isStudyModel() then
+                        AnalyticsFirst(ANALYTICS_FIRST_SKIP_REVIEW, 'cancel')
+                    else
+                        AnalyticsFirst(ANALYTICS_FIRST_SKIP_REVIEW_STRIKEWHILEHOT, 'cancel')
+                    end
                 end
             else
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 normal()
             end
         end

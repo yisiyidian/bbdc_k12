@@ -116,6 +116,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             break
         end
     end
+
+    AnalyticsChestGeneratedCnt(#chestList)
     
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
@@ -196,6 +198,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                 s_CURRENT_USER:addBeans(2)
                 sender:setVisible(false)
                 self:addChild(deco, 130)
+
+                AnalyticsChestCollectedCnt(sender:getName())
             end
         end
         local chestButton = ccui.Button:create('image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png')

@@ -8,6 +8,11 @@ local  NewStudySuccessLayer = class("NewStudySuccessLayer", function ()
 end)
 
 function NewStudySuccessLayer.create()
+
+    AnalyticsFirst(ANALYTICS_FIRST_FINISH, 'SHOW')
+
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     s_CURRENT_USER:addBeans(3)
 
     --pause music
@@ -80,6 +85,8 @@ function NewStudySuccessLayer.create()
     button_go:setTitleFontSize(32)
     button_go:addTouchEventListener(button_go_click)
     backColor:addChild(button_go)
+
+    AnalyticsTasksFinished('NewStudySuccessLayer')
     
     return layer
 end

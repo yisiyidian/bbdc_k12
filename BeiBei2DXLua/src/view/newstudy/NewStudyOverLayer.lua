@@ -8,6 +8,8 @@ local  NewStudyOverLayer = class("NewStudyOverLayer", function ()
 end)
 
 function NewStudyOverLayer.create()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
 
@@ -56,6 +58,8 @@ function NewStudyOverLayer.create()
     button_go:setTitleFontSize(32)
     button_go:addTouchEventListener(button_go_click)
     backColor:addChild(button_go) 
+
+    AnalyticsTasksFinished('NewStudyOverLayer')
 
     return layer
 end
