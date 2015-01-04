@@ -11,6 +11,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,levelIndex)
     layer.blood = blood
     layer.win = win
     layer.index = index
+    layer.levelIndex = levelIndex
 
     if layer.win then
         s_CURRENT_USER:addBeans(2)
@@ -173,7 +174,7 @@ function SummaryBossAlter:lose2()
     local function challengeAgain(sender)
         
         local summaryboss = require('view.summaryboss.SummaryBossLayer')
-        local layer = summaryboss.create(index,1)
+        local layer = summaryboss.create(self.levelIndex,1)
         layer:setAnchorPoint(0.5,0)
         s_SCENE:replaceGameLayer(layer)
         
