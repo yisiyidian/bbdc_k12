@@ -184,3 +184,24 @@ function Analytics_applicationDidEnterBackground(layerName)
     cx.CXAnalytics:logEventAndLabel('AppEnterBackground', layerName)
 end
 
+----------------------------------------------------------------------------------------
+-- first
+ANALYTICS_FIRST_BOOK  = 0
+ANALYTICS_FIRST_LEVEL = 1
+ANALYTICS_FIRST_STUDY = 2
+
+local ANALYTICS_FIRST_EVENTS = {'firstBook', 'firstLevelScene', 'firstStudy'}
+
+function AnalyticsFirst(eventindex, eventDes)
+    if math["and"](s_CURRENT_USER.statsMask, (2 ^ eventindex)) == 0 then
+        local event = ANALYTICS_FIRST_EVENTS[eventindex + 1]
+        cx.CXAnalytics:logEventAndLabel(event, eventDes)
+
+        s_CURRENT_USER.statsMask = s_CURRENT_USER.statsMask + (2 ^ eventindex)
+        local obj = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['statsMask']=s_CURRENT_USER.statsMask}
+        s_SERVER.updateData({['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, nil, nil)
+    end
+end
+
+----------------------------------------------------------------------------------------
+

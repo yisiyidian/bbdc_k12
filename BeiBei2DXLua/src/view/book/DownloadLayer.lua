@@ -91,7 +91,10 @@ function DownloadLayer.create(bookKey)
                     end
 
                     s_CURRENT_USER.bookKey = bookKey
+
                     AnalyticsBook(bookKey)
+                    AnalyticsFirst(ANALYTICS_FIRST_BOOK, bookKey)
+
                     playSound(s_sound_buttonEffect)
                     s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
                     
@@ -103,7 +106,10 @@ function DownloadLayer.create(bookKey)
                 end
 
                 s_CURRENT_USER.bookKey = bookKey
+                
                 AnalyticsBook(bookKey)
+                AnalyticsFirst(ANALYTICS_FIRST_BOOK, bookKey)
+
                 playSound(s_sound_buttonEffect)
                 s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
                 s_CorePlayManager.enterHomeLayer()

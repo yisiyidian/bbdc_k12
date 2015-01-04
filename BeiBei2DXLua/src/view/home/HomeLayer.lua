@@ -308,7 +308,8 @@ function HomeLayer.create()
 --            s_CorePlayManager.initTotalPlay()
             
             AnalyticsEnterLevelLayerBtn()
-            
+            AnalyticsFirst(ANALYTICS_FIRST_LEVEL, 'TOUCH')
+
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
