@@ -1,4 +1,5 @@
 local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
+local Pause             = require("view.newreviewboss.NewReviewBossPause")
 
 local  NewReviewBossHintLayer = class("NewReviewBossHintLayer", function ()
     return cc.Layer:create()
@@ -38,23 +39,8 @@ function NewReviewBossHintLayer.create(currentWordName)
     end) 
     local wordListLen = table.getn(wordList)
     
-    local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
-    pauseBtn:ignoreAnchorPointForPosition(false)
-    pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
-    s_SCENE.popupLayer.pauseBtn = pauseBtn
-    layer:addChild(pauseBtn,100)
-    local Pause = require('view.Pause')
-    local function pauseScene(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local pauseLayer = Pause.create()
-            pauseLayer:setPosition(s_LEFT_X, 0)
-            s_SCENE.popupLayer:addChild(pauseLayer)
-            s_SCENE.popupLayer.listener:setSwallowTouches(true)
-            playSound(s_sound_buttonEffect)
-        end
-    end
-    pauseBtn:addTouchEventListener(pauseScene)
+    local pauseButton = Pause.create()
+    layer:addChild(pauseButton,100)
 
     layer.close  = function ()
     	

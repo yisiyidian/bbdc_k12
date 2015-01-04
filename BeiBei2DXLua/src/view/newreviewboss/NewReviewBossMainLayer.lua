@@ -3,6 +3,7 @@ require("common.global")
 
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
+local Pause             = require("view.newreviewboss.NewReviewBossPause")
 
 
 local  NewReviewBossMainLayer = class("NewReviewBossMainLayer", function ()
@@ -181,23 +182,26 @@ function NewReviewBossMainLayer.create()
             sentenceEn2,sentenceCn2 =  updateWord()
             
     
-    local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
-    pauseBtn:ignoreAnchorPointForPosition(false)
-    pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
-    s_SCENE.popupLayer.pauseBtn = pauseBtn
-    layer:addChild(pauseBtn,100)
-    local Pause = require('view.Pause')
-    local function pauseScene(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local pauseLayer = Pause.create()
-            pauseLayer:setPosition(s_LEFT_X, 0)
-            s_SCENE.popupLayer:addChild(pauseLayer)
-            s_SCENE.popupLayer.listener:setSwallowTouches(true)
-            playSound(s_sound_buttonEffect)
-        end
-    end
-    pauseBtn:addTouchEventListener(pauseScene)
+--    local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
+--    pauseBtn:ignoreAnchorPointForPosition(false)
+--    pauseBtn:setAnchorPoint(0,1)
+--    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
+--    s_SCENE.popupLayer.pauseBtn = pauseBtn
+--    layer:addChild(pauseBtn,100)
+--    local Pause = require('view.Pause')
+--    local function pauseScene(sender,eventType)
+--        if eventType == ccui.TouchEventType.ended then
+--            local pauseLayer = Pause.create()
+--            pauseLayer:setPosition(s_LEFT_X, 0)
+--            s_SCENE.popupLayer:addChild(pauseLayer)
+--            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+--            playSound(s_sound_buttonEffect)
+--        end
+--    end
+--    pauseBtn:addTouchEventListener(pauseScene)
+
+    local pauseButton = Pause.create()
+    layer:addChild(pauseButton,100)
     
     local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 263)
     fillColor1:setAnchorPoint(0.5,0)
