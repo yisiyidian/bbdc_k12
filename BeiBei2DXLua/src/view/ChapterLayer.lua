@@ -185,7 +185,7 @@ function ChapterLayer:addPlayerNotification()  -- notification
     local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
     notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height+80)
     self.player:addChild(notification, 100)
-    type = 'complete'
+--    type = 'complete'
     -- TODO show message according to type
     if type == 'study' then
         local title = cc.Label:createWithSystemFont('当前任务','',28)
