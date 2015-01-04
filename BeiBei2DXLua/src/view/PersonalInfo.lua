@@ -112,8 +112,8 @@ end
 
 function PersonalInfo:PLVM()
     local updateTime = 0
-    local tolearnCount = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
-    local toMasterCount = s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,nil)
+    local tolearnCount = s_DATABASE_MGR.getTotalStudyWordsNum()
+    local toMasterCount = s_DATABASE_MGR.getTotalGraspWordsNum()
     local learnPercent = tolearnCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     
@@ -300,7 +300,7 @@ function PersonalInfo:PLVI()
         for i = 1,#loginData - 1 do
             for j = 1,7 do
                 local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
-                countArray[1] = countArray[1] + s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
+                countArray[1] = countArray[1] + s_DATABASE_MGR.getStudyWordsNum(str)
                 time = time - 24 * 3600
             end
         end
@@ -310,7 +310,7 @@ function PersonalInfo:PLVI()
     local selectDate = daytime
     for i = 2 , dayCount + 1 do 
         local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%y',selectDate))
-        countArray[i] = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str)
+        countArray[i] = s_DATABASE_MGR.getStudyWordsNum(str)
         selectDate = selectDate + 24 * 3600
         countArray[i] = countArray[i - 1] + countArray[i]
     end
@@ -661,12 +661,12 @@ function PersonalInfo:XXTJ()
     if totalDay < 1 then
         totalDay = 1
     end
-    local everydayWord = math.floor(s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil) / totalDay)
+    local everydayWord = math.floor(s_DATABASE_MGR.getTotalStudyWordsNum() / totalDay)
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local wordFinished = s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)
+    local wordFinished = s_DATABASE_MGR.getTotalStudyWordsNum()
     local dayToFinish = 100
     if everydayWord > 0 then
-        dayToFinish = math.ceil((totalWord - s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,nil)) / everydayWord)
+        dayToFinish = math.ceil((totalWord - s_DATABASE_MGR.getTotalStudyWordsNum()) / everydayWord)
     end
     local back = self.intro_array[1]
 
