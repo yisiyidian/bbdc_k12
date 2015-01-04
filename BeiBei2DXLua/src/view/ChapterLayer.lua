@@ -317,16 +317,16 @@ function ChapterLayer:addPlayerNotification()  -- notification
         button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
         start:addChild(button_title)
     elseif type == 'complete' then
-        local title = cc.Label:createWithSystemFont('今日目标已达\n成，明天要再\n接再厉哦','',28)
-        title:setColor(cc.c3b(56,26,23))
+        local title = cc.Label:createWithSystemFont(' 今日目标已达成\n明天要再接再厉哦','',22)
+        title:setColor(cc.c3b(74,136,184))
         title:ignoreAnchorPointForPosition(false)
         title:setAnchorPoint(0,0)
-        title:setPosition(30,50)
+        title:setPosition(20,60)
         notification:addChild(title)
-        local head = cc.Sprite:create('image/newstudy/head.png')
-        head:setScale(0.5)
-        head:setPosition(notification:getContentSize().width-20,40)
-        notification:addChild(head)
+--        local head = cc.Sprite:create('image/newstudy/head.png')
+--        head:setScale(0.5)
+--        head:setPosition(notification:getContentSize().width-20,40)
+--        notification:addChild(head)
     end
 end
 
@@ -334,7 +334,12 @@ function ChapterLayer:addPlayer()
 --    self.player:removeFromParent()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
+    --if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
+    if true then
+        self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
+    else
+        self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
+    end
     local position = self.chapterDic[bookProgress['chapter']]:getLevelPosition(bookProgress['level'])
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
@@ -345,7 +350,11 @@ function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:removeFromParent()
 --    local bookProgress = s_CURRENT_USER.bookProgress:computeCu
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
+    if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
+        self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
+    else
+        self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
+    end
     local position = self.chapterDic[chapterKey]:getLevelPosition(levelKey)
 --    print('!!!!!!!!!!player position!!!!!!')
 --    print(position)
@@ -468,8 +477,8 @@ function ChapterLayer:addBottomBounce()
     self.chapterDic['rightCloud'] = cc.Sprite:create('image/chapter/rightCloud.png')
     self.chapterDic['leftCloud']:setAnchorPoint(0, 1)
     self.chapterDic['rightCloud']:setAnchorPoint(0, 1)
-    self.chapterDic['leftCloud']:setPosition((s_DESIGN_WIDTH-bounceSectionSize.width)/2,100)
-    self.chapterDic['rightCloud']:setPosition((s_DESIGN_WIDTH-bounceSectionSize.width)/2,100)
+    self.chapterDic['leftCloud']:setPosition((s_chapter_layer_width-s_LEFT_X)/2,100)
+    self.chapterDic['rightCloud']:setPosition((s_chapter_layer_width-s_LEFT_X)/2,100)
     listView:addChild(self.chapterDic['leftCloud'],100)
     listView:addChild(self.chapterDic['rightCloud'],100)
 end
