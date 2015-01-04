@@ -473,7 +473,7 @@ end
 
 function Manager.getSummaryBossWordCandidate()
     local wrongWordPool = Manager.getWrongWords()
-    local graspWordPool = Manager.getGraspWords()
+    local graspWordPool = Manager.getGraspWords() 
 
     local wrongWordPoolSize = #wrongWordPool
     local graspWordPoolSize = #graspWordPool
@@ -483,15 +483,15 @@ function Manager.getSummaryBossWordCandidate()
         return wordPool
     end
     
-    local tureWrongWordNum = 0
-    local tureGraspWordNum = 0
+    local tureWrongWordNum = 4
+    local tureGraspWordNum = 5
     
-    if wrongWordPoolSize < 3 then
+    if wrongWordPoolSize < 4 then
         tureWrongWordNum = wrongWordPoolSize
         tureGraspWordNum = 9 - tureWrongWordNum
     end
     
-    if graspWordPoolSize < 6 then
+    if graspWordPoolSize < 5 then
         tureGraspWordNum = graspWordPoolSize
         tureWrongWordNum = 9 - tureGraspWordNum
     end
@@ -506,7 +506,6 @@ function Manager.getSummaryBossWordCandidate()
     for i = 1, #index2 do
         table.insert(wordPool, graspWordPool[index2[i]])
     end
-    
     return wordPool
 end
 
