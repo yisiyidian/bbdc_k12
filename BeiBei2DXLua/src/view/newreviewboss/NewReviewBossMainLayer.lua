@@ -12,6 +12,7 @@ end)
 
 
 function NewReviewBossMainLayer.create()
+    AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS, 'SHOW')
 
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()    

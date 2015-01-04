@@ -863,6 +863,7 @@ local function saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
     data.bookKey = bookKey
     data.today = today
     data.reviewBossNum = reviewBossNum
+    data.className = 'DataTodayReviewBossNum'
     s_SERVER.createData(data)
 end
 function Manager.getTodayTotalBossNum()

@@ -82,6 +82,8 @@ function NewStudySuccessLayer.create()
     button_go:setTitleFontSize(32)
     button_go:addTouchEventListener(button_go_click)
     backColor:addChild(button_go)
+
+    AnalyticsTasksFinished('NewStudySuccessLayer')
     
     return layer
 end

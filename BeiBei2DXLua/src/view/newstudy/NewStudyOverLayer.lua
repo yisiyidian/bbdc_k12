@@ -57,6 +57,8 @@ function NewStudyOverLayer.create()
     button_go:addTouchEventListener(button_go_click)
     backColor:addChild(button_go) 
 
+    AnalyticsTasksFinished('NewStudyOverLayer')
+
     return layer
 end
 

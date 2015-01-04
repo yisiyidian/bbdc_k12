@@ -101,6 +101,10 @@ function AnalyticsTasksBtn()
     cx.CXAnalytics:logEventAndLabel('Tasks', 'TOUCH')
 end
 
+function AnalyticsTasksFinished(layerName)
+    cx.CXAnalytics:logEventAndLabel('TasksFinished', layerName)
+end
+
 ----------------------------------------------------------------------------------------
 
 -- 点击 重玩错词
@@ -180,6 +184,14 @@ end
 
 ----------------------------------------------------------------------------------------
 
+function AnalyticsChestGeneratedCnt(cnt)
+    cx.CXAnalytics:logEventAndLabel('ChestGeneratedCnt', tostring(cnt))
+end
+
+function AnalyticsChestCollectedCnt(name)
+    cx.CXAnalytics:logEventAndLabel('ChestCollectedCnt', name)
+end
+
 function Analytics_applicationDidEnterBackground(layerName)
     cx.CXAnalytics:logEventAndLabel('AppEnterBackground', layerName)
 end
@@ -202,10 +214,15 @@ ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT = 9
 ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT = 10
 ANALYTICS_FIRST_FINISH = 11
 
+ANALYTICS_FIRST_REVIEW_BOSS = 12
+ANALYTICS_FIRST_REVIEW_BOSS_RESULT = 13
+
 local ANALYTICS_FIRST_EVENTS = {
-    'firstBook', 'firstLevelScene', 'firstStudy', 'firstSkipReview', 'firstDontKnow', 
-    'firstSwipeWord', 'firstGotEnoughUnknownWords', 'firstStudyStrikeWhileHot', 'firstSkipReviewStrikeWhileHot', 'firstDontKnowStrikeWhileHot',
-    'firstSwipeWordStrikeWhileHot', 'firstFinish'
+    'firstBook', 'firstLevelScene', 
+    'firstStudy', 'firstSkipReview', 'firstDontKnow', 'firstSwipeWord', 
+    'firstGotEnoughUnknownWords', 
+    'firstStudyStrikeWhileHot', 'firstSkipReviewStrikeWhileHot', 'firstDontKnowStrikeWhileHot', 'firstSwipeWordStrikeWhileHot', 'firstFinish',
+    'firstReviewBoss', 'firstReviewBossResult'
 }
 
 function AnalyticsFirst(eventindex, eventDes)

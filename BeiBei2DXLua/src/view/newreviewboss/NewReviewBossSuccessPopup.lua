@@ -3,6 +3,8 @@ local NewReviewBossSuccessPopup = class ("NewReviewBossSuccessPopup",function ()
 end)
 
 function NewReviewBossSuccessPopup.create()
+    AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS_RESULT, 'Success')
+
     local layer = NewReviewBossSuccessPopup.new()
 
     local currentchapter
