@@ -273,9 +273,18 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
     local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
-
+    print('####levelIndex:',levelIndex,',',chapterIndex)
+    if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
+        local title = cc.Label:createWithSystemFont('Start','',40)
+        title:setColor(cc.c3b(255,255,255))
+        title:ignoreAnchorPointForPosition(false)
+        title:setAnchorPoint(0,0)
+        title:setPosition(levelPosition.x, levelPosition.y)
+        self:addChild(title, 130)
+        return 
+    end
     
-    local levelNumber = (chapterIndex * 10 + levelIndex + 1) * avgWordCount
+    local levelNumber = (chapterIndex * 10 + levelIndex) * avgWordCount
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     if bookProgress['level'] == 'level39' and bookProgress['chapter'] == 'chapter3' then
         levelNumber = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
@@ -301,6 +310,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     if not checkSummaryBoss then
         local number = ccui.TextBMFont:create()
         number:setFntFile('font/number_inclined.fnt')
+        --number:setColor(cc.c3b(56,26,23))
         number:setString(levelNumber)
         number:setPosition(levelPosition.x, levelPosition.y+3)
         self:addChild(number,130)
