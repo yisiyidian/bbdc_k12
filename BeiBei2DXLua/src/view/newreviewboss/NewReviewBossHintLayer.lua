@@ -36,7 +36,7 @@ function NewReviewBossHintLayer.create(currentWordName)
             table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
         end
     end) 
-    local wordListLen  
+    local wordListLen = table.getn(wordList)
     
     local pauseBtn = ccui.Button:create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
     pauseBtn:ignoreAnchorPointForPosition(false)
@@ -47,11 +47,11 @@ function NewReviewBossHintLayer.create(currentWordName)
     local Pause = require('view.Pause')
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
---            local pauseLayer = Pause.create()
---            pauseLayer:setPosition(s_LEFT_X, 0)
---            s_SCENE.popupLayer:addChild(pauseLayer)
---            s_SCENE.popupLayer.listener:setSwallowTouches(true)
---            playSound(s_sound_buttonEffect)
+            local pauseLayer = Pause.create()
+            pauseLayer:setPosition(s_LEFT_X, 0)
+            s_SCENE.popupLayer:addChild(pauseLayer)
+            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+            playSound(s_sound_buttonEffect)
         end
     end
     pauseBtn:addTouchEventListener(pauseScene)

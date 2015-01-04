@@ -41,8 +41,7 @@ function NewReviewBossMainLayer.create()
             table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
         end
     end) 
-    local wordListLen  
-    
+    local wordListLen = table.getn(wordList)
       
     local rbCurrentWordIndex = 1
     local wordToBeTested = {}
