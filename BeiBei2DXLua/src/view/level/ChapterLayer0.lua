@@ -55,8 +55,8 @@ function ChapterLayer0:addWaveAnimation(position)
     local scale = math.random(4, 10) / 10 + 0.7
     wave1:setScale(scale)
     
-    local action1 = cc.MoveBy:create(5, cc.p(-100, 0))
-    local action2 = cc.MoveBy:create(5, cc.p(100, 0))
+    local action1 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(-100, 0)))
+    local action2 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(100, 0)))
     local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
     wave1:runAction(action3)
     -- wave 2

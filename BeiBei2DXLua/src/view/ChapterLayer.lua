@@ -334,8 +334,8 @@ function ChapterLayer:addPlayer()
 --    self.player:removeFromParent()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    --if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
-    if true then
+    if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
+--    if true then
         self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
     else
         self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
@@ -474,7 +474,16 @@ function ChapterLayer:plotDecoration()
     boat:setPosition(level0Position.x-200, level0Position.y+100)
     self.chapterDic['chapter0']:addChild(boat,130)
     
-
+    -- add wave
+    local wave = cc.Sprite:create('image/chapter/chapter0/shuibolang.png')
+    wave:setPosition(level0Position.x-130, level0Position.y+80)
+    self.chapterDic['chapter0']:addChild(wave,130)
+    local action1 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(-50, 0)))
+    local action2 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(50, 0)))
+    local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
+    wave:runAction(action3)
+--    local action1 = 
+    
 --    self:addBeansUI()
     --print('chapter0: '..self.chapterDic['chapter0']:getPosition())
 --    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
