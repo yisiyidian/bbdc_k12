@@ -58,7 +58,6 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local lockSprite = self:getChildByName('lock'..levelIndex)
     local lockLayer = self:getChildByName('lockLayer'..levelIndex)
-
     local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
     local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
     local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
@@ -66,14 +65,20 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
     local action5 = cc.MoveBy:create(0.1, cc.p(5,0))  
     local action6 = cc.FadeOut:create(0.1)
     local action = cc.Sequence:create(action1, action4, action5, action6, nil)
-    lockSprite:runAction(action)
+    if lockSprite ~= nil then
+        lockSprite:runAction(action)
+    end
 
     local action7 = cc.DelayTime:create(0.6)
     local action8 = cc.FadeOut:create(0.1)
-    lockLayer:runAction(cc.Sequence:create(action7, action8))
-    s_SCENE:callFuncWithDelay(0.7,function()
-        self:plotDecorationOfLevel(levelIndex-'0')
-    end)
+    if lockLayer ~= nil then
+        lockLayer:runAction(cc.Sequence:create(action7, action8))
+    end
+    if lockSprite ~= nil or lockLayer ~= nil then
+        s_SCENE:callFuncWithDelay(0.7,function()
+            self:plotDecorationOfLevel(levelIndex-'0')
+        end)
+    end
 end
 
 
@@ -107,7 +112,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
     -- chest
     local chestList = split(s_CURRENT_USER.chestList, '|')
-    local checkChest = false
+    local checkChest = true
     for i = 1, #chestList do
         --print('summarybossIndex:'..summaryboss[i])
         if chestList[i] == '' then break end
@@ -189,16 +194,37 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         -- define touchEvent
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then                
-                local deco = sp.SkeletonAnimation:create('spine/baoxiangdakai.json','spine/baoxiangdakai.atlas',1)
-                deco:addAnimation(0,'animation',false)
-                deco:setPosition(sender:getPosition())
+--                local deco = sp.SkeletonAnimation:create('spine/baoxiangdakai.json','spine/baoxiangdakai.atlas',1)
+--                deco:addAnimation(0,'animation',false)
+--                deco:setPosition(sender:getPosition())
+--                self:addChild(deco, 130)
                 local i = string.sub(sender:getName(), 6)
                 s_CURRENT_USER:removeChest(i)
                 -- add beans
                 s_CURRENT_USER:addBeans(2)
                 sender:setVisible(false)
-                self:addChild(deco, 130)
 
+
+                local box
+                local callback1 = function()
+                    box = sp.SkeletonAnimation:create("spine/baoxiangdakai.json", 'spine/baoxiangdakai.atlas',1)
+                    box:addAnimation(0, 'animation', false)
+                    box:setPosition(sender:getPosition())
+                    self:addChild(box,130)
+--                    box:setScale(0.25)
+                end
+
+                local partical
+                local callback2 = function()
+                    partical = cc.ParticleSystemQuad:create('image/chapter/chapter0/chest.plist')
+                    partical:setPositionX(box:getPositionX()+20)
+                    partical:setPositionY(box:getPositionY()+22)
+--                    partical:setScale(0.2)
+                    self:addChild(partical,130)
+                end
+
+                local sequence = cc.Sequence:create(cc.CallFunc:create(callback1),cc.DelayTime:create(1),cc.CallFunc:create(callback2))
+                self:runAction(sequence)
                 AnalyticsChestCollectedCnt(sender:getName())
             end
         end

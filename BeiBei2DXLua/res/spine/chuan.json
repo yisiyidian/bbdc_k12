@@ -1,9 +1,9 @@
 {
 "skeleton": {
-	"hash": "L/nUOuGbXlBNB6cpb0pF8OlPChs",
+	"hash": "7s1OJVW1yB70WA+JGqOPG3+GhZ8",
 	"spine": "2.1.07",
-	"width": 204.04,
-	"height": 197.53,
+	"width": 205.36,
+	"height": 197.8,
 	"images": "/Users/yehanjie/Desktop/spine/chuan"
 },
 "bones": [
@@ -59,7 +59,8 @@
 			"ziti": {
 				"color": [
 					{ "time": 0, "color": "ffffffff", "curve": "stepped" },
-					{ "time": 0.1, "color": "ffffffff" },
+					{ "time": 0.1333, "color": "ffffffff" },
+					{ "time": 1.7, "color": "ffffffc5" },
 					{ "time": 2.5, "color": "ffffff00" }
 				]
 			}
@@ -108,14 +109,14 @@
 			},
 			"bone4": {
 				"translate": [
-					{ "time": 0, "x": 2.7, "y": -37.01, "curve": "stepped" },
-					{ "time": 0.1, "x": 2.7, "y": -37.01 },
-					{ "time": 2.5, "x": -7.11, "y": 6.03 }
+					{ "time": 0, "x": -25.46, "y": -37.46, "curve": "stepped" },
+					{ "time": 0.1333, "x": -25.46, "y": -37.46 },
+					{ "time": 2.5, "x": -26.25, "y": 63.58 }
 				],
 				"scale": [
-					{ "time": 0, "x": 0.358, "y": 0.366, "curve": "stepped" },
-					{ "time": 0.1, "x": 0.358, "y": 0.366 },
-					{ "time": 2.5, "x": 0.838, "y": 0.838 }
+					{ "time": 0, "x": 1.034, "y": 1.057, "curve": "stepped" },
+					{ "time": 0.1333, "x": 1.034, "y": 1.057 },
+					{ "time": 2.5, "x": 3.356, "y": 3.356 }
 				]
 			},
 			"bone5": {

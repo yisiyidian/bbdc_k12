@@ -155,8 +155,10 @@ end
 function DataUser:removeChest(index)
 --    print('###### remove chest ######')
 --    print(self.chestList..','..index)
+--    self.chestList = '0'
     local list = split(self.chestList,'|')
     local tempList = ''
+    print_lua_table(list)
     for i = 1, #list do 
         if list[i] - index ~= 0 then
             if tempList == '' then
@@ -168,6 +170,7 @@ function DataUser:removeChest(index)
     end
 --    print('temp:'..tempList)
     self.chestList = tempList
+
 end
 
 function DataUser:removeSummaryBoss(index)

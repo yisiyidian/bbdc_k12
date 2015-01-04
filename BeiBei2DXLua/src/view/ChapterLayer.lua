@@ -334,8 +334,8 @@ function ChapterLayer:addPlayer()
 --    self.player:removeFromParent()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    --if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
-    if true then
+    if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
+--    if true then
         self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
     else
         self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
