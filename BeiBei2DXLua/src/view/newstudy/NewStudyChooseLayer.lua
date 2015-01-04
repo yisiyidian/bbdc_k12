@@ -153,12 +153,15 @@ function NewStudyChooseLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then  
+            
             if s_CorePlayManager.isStudyModel() then
                 AnalyticsStudyDontKnowAnswer()  
+                AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
                 
                 s_CorePlayManager.enterNewStudyWrongLayer()
             else
                 AnalyticsStudyDontKnowAnswer_strikeWhileHot()
+                AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
             
                 s_CorePlayManager.enterNewStudyWrongLayer()
             end

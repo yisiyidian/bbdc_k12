@@ -8,6 +8,8 @@ local  NewStudySuccessLayer = class("NewStudySuccessLayer", function ()
 end)
 
 function NewStudySuccessLayer.create()
+    AnalyticsFirst(ANALYTICS_FIRST_FINISH, 'SHOW')
+
     s_CURRENT_USER:addBeans(3)
 
     --pause music
