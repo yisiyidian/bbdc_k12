@@ -30,6 +30,7 @@ function DataUser:ctor()
     self.sessionToken                      = ''
     self.usertype                          = USER_TYPE_GUEST
     self.channelId                         = ''
+    self.statsMask                         = 0
 
     self.appVersion                        = s_APP_VERSION 
     self.tutorialStep                      = 0 
