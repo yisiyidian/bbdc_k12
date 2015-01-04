@@ -218,13 +218,22 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                 local partical
                 local callback2 = function()
                     partical = cc.ParticleSystemQuad:create('image/chapter/chapter0/chest.plist')
-                    partical:setPositionX(box:getPositionX()+20)
-                    partical:setPositionY(box:getPositionY()+22)
+                    partical:setPositionX(box:getPositionX()+70)
+                    partical:setPositionY(box:getPositionY()+82)
 --                    partical:setScale(0.2)
                     self:addChild(partical,130)
                 end
-
-                local sequence = cc.Sequence:create(cc.CallFunc:create(callback1),cc.DelayTime:create(1),cc.CallFunc:create(callback2))
+                
+                -- add beans
+                local bean
+                local callback3 = function()
+                    bean = cc.Sprite:create('image/chapter/chapter0/bean.png')
+                    bean:setPosition(box:getPositionX()+80, box:getPositionY()+150)
+                    self:addChild(bean,130)
+                    local action = cc.FadeOut:create(2)
+                    bean:runAction(action)
+                end
+                local sequence = cc.Sequence:create(cc.CallFunc:create(callback1),cc.DelayTime:create(1),cc.CallFunc:create(callback2),cc.DelayTime:create(1.5),cc.CallFunc:create(callback3))
                 self:runAction(sequence)
                 AnalyticsChestCollectedCnt(sender:getName())
             end
