@@ -330,7 +330,7 @@ function CorePlayManager.updateReviewRewardAndTotalWord()
             table.insert(wordList,CorePlayManager.ReviewWordList[i] )
         end
     end) 
-    local wordListLen  
+    local wordListLen = table.getn(wordList)  
     CorePlayManager.reward = CorePlayManager.reward + CorePlayManager.currentReward 
     CorePlayManager.totalWord = CorePlayManager.totalWord + wordListLen
 end
