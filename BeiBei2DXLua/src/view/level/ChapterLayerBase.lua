@@ -113,7 +113,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
     -- chest
     local chestList = split(s_CURRENT_USER.chestList, '|')
-    local checkChest = true
+    local checkChest = false
     for i = 1, #chestList do
         --print('summarybossIndex:'..summaryboss[i])
         if chestList[i] == '' then break end
