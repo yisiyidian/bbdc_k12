@@ -309,9 +309,9 @@ function PersonalInfo:PLVI()
     math.random(0,20)
     local selectDate = daytime
     for i = 2 , dayCount + 1 do 
+        selectDate = selectDate + 24 * 3600
         local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%y',selectDate))
         countArray[i] = s_DATABASE_MGR.getStudyWordsNum(str)
-        selectDate = selectDate + 24 * 3600
         countArray[i] = countArray[i - 1] + countArray[i]
     end
     local point = {}
