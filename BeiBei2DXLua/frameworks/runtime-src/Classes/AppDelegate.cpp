@@ -106,6 +106,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     FileUtils::getInstance()->addSearchPath(pathRes,true);
     engine->addSearchPath(pathSrc.c_str());
     engine->addSearchPath(pathRes.c_str());
+    CCLOG("the cpp path is %s",pathSrc.c_str());
 
     std::vector<std::string> soundRes;
     soundRes.push_back(writablePath + "BookSounds"+"/cet4/cet4");
@@ -125,7 +126,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     for (std::vector<std::string>::iterator it = soundRes.begin(); it!=soundRes.end(); ++it) {
         FileUtils::getInstance()->addSearchPath(*it,true);
         engine->addSearchPath(it->c_str());
-        CCLOG("Add search path of %s", it->c_str());
     }
    
 #if (COCOS2D_DEBUG > 0 && CC_CODE_IDE_DEBUG_SUPPORT > 0 && DEBUG_RUNTIME > 0)

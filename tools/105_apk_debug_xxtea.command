@@ -6,5 +6,5 @@ cocos run \
     -j 4 \
     -ap 17 \
     --luacompile \
-    --lua-encrypt true --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA" \
-    —disable-compile true
+    --lua-encrypt True --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA" \
+    --disable-compile True

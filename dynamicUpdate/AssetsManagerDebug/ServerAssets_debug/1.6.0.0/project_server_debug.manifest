@@ -2,7 +2,7 @@
 	"packageUrl" : "http://yisiyidian.com/AssetsManagerDebug/",
 	"remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerDebug/project_server_debug.manifest", 
 	"remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerDebug/version_debug.manifest", 
-	"version" : "1.6.0.0", 
+	"version" : "1.6.0.1", 
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"ServerAssets/src/anysdkConst.luac" : {
@@ -62,7 +62,7 @@
 			"compressed" : true
 		},		
 		"ServerAssets/src/view.zip" : {
-			"md5" : "a8185c323fbfdaf3c650674c803600ac",
+			"md5" : "785470cab1b22f329260c2cf40bea25c",
 			"compressed" : true
 		},			
 		"ServerAssets/res/ccb.zip" : {
