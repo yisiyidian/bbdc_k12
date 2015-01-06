@@ -5,6 +5,7 @@ local storagePath = cc.FileUtils:getInstance():getWritablePath().."AssetsManager
 local searchPath = storagePath.."/ServerAssets"
 local am = nil
 local listener = nil
+local message = ""
 
 function DynamicUpdate.initUpdateLabel()
 
@@ -52,53 +53,63 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
     if RELEASE_APP==DEBUG_FOR_TEST or RELEASE_APP==RELEASE_FOR_TEST   then
         am = cc.AssetsManagerEx:create("manifest/project_debug.manifest",storagePath)
         am:retain()
+        print("debug version")
     else 
         am = cc.AssetsManagerEx:create("manifest/project_release.manifest",storagePath)
         am:retain()        
+        print("release version")
     end
 
     if not am:getLocalManifest():isLoaded() then
-        updateInfo:setString("找不到贝贝的新东东，使用旧装备")
+        message = "找不到贝贝的新东东，使用旧装备"
     else
         local function onUpdateEvent(event)
             local eventCode = event:getEventCode()
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
                 
-                updateInfo:setString("找不到贝贝的新东东，使用旧装备")
+                message = "找不到贝贝的新东东，使用旧装备"
                 DynamicUpdate.loginUpdateCompleted()                              
+                updateInfo:setString(message)
+                print(message)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
                                 
                 if assetId==cc.AssetsManagerExStatic.VERSION_ID then
-                    updateInfo:setString("贝贝正在检查新版本")
+                    message = "贝贝正在检查新版本"
                 elseif assetId==cc.AssetsManagerExStatic.MANIFEST_ID then
-                    updateInfo:setString("贝贝正在获取新的版本资源列表")   
+                    message = "贝贝正在获取新的版本资源列表"
                 else
                     percent = string.format("%.2f",event:getPercent())
-                    updateInfo:setString("贝贝正在给新版本添料: "..percent.."%")   
-                end                
+                    message = "贝贝正在给新版本添料: "..percent.."%"
+                end            
+                updateInfo:setString(message)
+                print(message)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_DOWNLOAD_MANIFEST or 
                 eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_PARSE_MANIFEST then
                 
-                updateInfo:setString("获取更新列表失败，跳过更新")                
-                print("获取更新列表失败，跳过更新")                
+                message = "获取更新列表失败，跳过更新"
+                updateInfo:setString(message)
+                print(message)
                 DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
-            
-                updateInfo:setString("贝贝登场")  
-                print("贝贝登场")  
+                
+                message = "贝贝登场"
+                updateInfo:setString(message)
+                print(message)
                 DynamicUpdate.loginUpdateCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
             
-                updateInfo:setString("天空一个巨响，贝贝最新版登场")     
-                print("天空一个巨响，贝贝最新版登场")     
+                message = "天空一个巨响，贝贝最新版登场"
+                updateInfo:setString(message)
+                print(message)
                 DynamicUpdate.loginUpdateCompleted()                           
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
-            
-                updateInfo:setString("文件更新失败，失败文件: "..event:getAssetId()..", 失败信息为"..event:getMessage())                                                
-                print("文件更新失败，失败文件: "..event:getAssetId()..", 失败信息为"..event:getMessage())     
+                
+                message = "文件更新失败，失败文件: "..event:getAssetId()..", 失败信息为"..event:getMessage()
+                updateInfo:setString(message)
+                print(message)
                 DynamicUpdate.loginUpdateCompleted()                              
             end
-        end
+         end
 
         listener = cc.EventListenerAssetsManagerEx:create(am,onUpdateEvent)
         cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listener,1)
