@@ -2,6 +2,6 @@
 	"packageUrl" : "http://yisiyidian.com/AssetsManagerDebug/",
 	"remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerDebug/project_server_debug.manifest", 
 	"remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerDebug/version_debug.manifest", 
-	"version" : "1.6.0.1", 
+	"version" : "1.6.0.0", 
 	"engineVersion" : "3.3 rc2" 
 }

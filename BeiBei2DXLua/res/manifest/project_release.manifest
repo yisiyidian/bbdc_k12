@@ -1,7 +1,7 @@
 { 
-	"packageUrl" : "http://yisiyidian.com/AssetsManagerRelease/",
-	"remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerRelease/project_server_release.manifest", 
-	"remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerRelease/version_release.manifest", 
+	"packageUrl" : "http://yisiyidian.com/AssetsManagerRelease/1.6.0",
+	"remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerRelease/1.6.0/project_server_release.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerRelease/1.6.0/version_release.manifest", 
 	"version" : "1.6.0.0", 
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
