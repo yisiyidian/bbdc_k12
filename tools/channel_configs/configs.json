@@ -32,7 +32,7 @@
     },
     {
       "name": "tencent_myapp",
-      "packageName": "com.beibei.wordmaster (tencent_myapp)",
+      "packageName": "com.beibei.wordmaster.tencentmyapp)",
       
       "leanCloudAppName":"贝贝单词X_0",
       "leanCloudAppId": "2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq",
