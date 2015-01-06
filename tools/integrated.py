@@ -36,6 +36,7 @@ echo "input Channel Id"
 echo "Enter < NUMBER > of channel"
 echo "xiao mi:          \\033[31m0\\033[0m"
 echo "other androids:   \\033[31m1\\033[0m"
+echo "360 zhushou:      \\033[31m2\\033[0m"
 
 read CHANNEL_NAME_ID
 
@@ -44,8 +45,8 @@ if [ $CHANNEL_NAME_ID = "0" ] ; then
     CHANNEL_NAME="xiaomi" 
 elif [ $CHANNEL_NAME_ID = "1" ] ; then   
     CHANNEL_NAME="android" 
-# elif [ $APPTYPE = "2" ] ; then 
-    # echo "Release for test" 
+elif [ $CHANNEL_NAME_ID = "2" ] ; then 
+    CHANNEL_NAME="360_zhushou" 
 else 
     echo "Wrong channel id" 
     exit 0
