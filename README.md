@@ -160,9 +160,17 @@ BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/AppVersionInfo.java
 
 ----------------------------------------------------------------------------------------
 
-TODO:
-layer 替换模块
-每条数据加上 appVersion 字段和被存储的次数 recordCnt 来保证单机和联网的数据同步
-资源代码加密
-在线更新代码
+http://docs.anysdk.com/ToolForCommand
+
+如果要打release包，请在你自己的引擎的以下文件做此修改，否则会导致64位的机器Assetsmanager失效的问题。
+
+project_compile.py->_check_custom_options->
+
+        if args.compile_script is not None:
+            self._compile_script = bool(args.compile_script)
+        else:
+            self._compile_script = (self._mode == "release")
+
+在后加一句self._compile_script  = False
+
 
