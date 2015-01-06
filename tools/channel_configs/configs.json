@@ -23,6 +23,21 @@
       "leanCloudAppId": "2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq",
       "leanCloudAppKey": "gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc",
 
+      "QQAppId": "",
+      "QQAppKey": "",
+      "isQQLogInAvailable": "false",
+
+      "umengAppName":"贝贝单词-android",
+      "umengAppKey": "549a5eb9fd98c5b2ac00144e"
+    },
+    {
+      "name": "tencent_myapp",
+      "packageName": "com.beibei.wordmaster (tencent_myapp)",
+      
+      "leanCloudAppName":"贝贝单词X_0",
+      "leanCloudAppId": "2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq",
+      "leanCloudAppKey": "gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc",
+
       "QQAppId": "1103783596",
       "QQAppKey": "n7vXdt6eDIggSsa6",
       "isQQLogInAvailable": "true",
