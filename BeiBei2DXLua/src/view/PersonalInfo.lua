@@ -90,11 +90,11 @@ function PersonalInfo:ctor()
     end
 
     local onTouchEnded = function ( touch,event )
-         print_lua_table(pageView:getPages())
+--         print_lua_table(pageView:getPages())
 --        local location = s_SCENE.popupLayer:convertToNodeSpace(touch:getLocation())
-        local curPage = pageView:getCurPageIndex()
-        curPage=curPage+1
-        pageView:scrollToPage(pageView:getCurPageIndex())
+--        local curPage = pageView:getCurPageIndex()
+--        curPage=curPage+1
+--        pageView:scrollToPage(pageView:getCurPageIndex())
 --        if location.y < 0.1 * s_DESIGN_HEIGHT and curPage >= 1 then
 --             s_logd(pageView:getPage(curPage - 1):getPositionY()..'touchend'..pageView:getPage(curPage):getPositionY())
 --            pageView:scrollToPage(curPage - 2)

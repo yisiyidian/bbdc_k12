@@ -5,14 +5,13 @@ DownloadSoundController = {}
 ----These Codes below is for downloading sounds---- 
 ----Booktypes are cet4, cet6, gmat, gre,gse ,ielts, middle, ncee, primary, pro4, pro8,sat, toefl
 --
-local storagePath = cc.FileUtils:getInstance():getWritablePath().."BookSounds"
 local downloadMes = ""
 local downloadState = false
 local am = nil
 local listener
 local downloadPercent = 0
 
-local function initAssetsManagerByBookType(bookType)
+local function initAssetsManagerByBookType(bookType,storagePath)
         
     if bookType == "cet4" then
         return cc.AssetsManagerEx:create("manifest/book_sound_cet4.manifest",storagePath)   
@@ -45,8 +44,9 @@ end
 
 function DownloadSoundController.beginSoundDownloadUpdate(bookType, setPercentCallback, setStateCallback)
 
-    storagePath = storagePath.."/"..bookType
-    am = initAssetsManagerByBookType(bookType)
+    print("bookType is: ",bookType)
+    local storagePath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookType
+    am = initAssetsManagerByBookType(bookType,storagePath)
     am:retain()
     
     print("Booksound storagePath is "..storagePath)
@@ -85,11 +85,13 @@ function DownloadSoundController.beginSoundDownloadUpdate(bookType, setPercentCa
                 downloadMes = "已是最新单词包"  
                 downloadState = true
                 setStateCallback(downloadState)
+                DownloadSoundController.releaseDownload()
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
 
                 downloadMes = "最新的单词包到货了"     
                 downloadState = true
                 setStateCallback(downloadState)
+                DownloadSoundController.releaseDownload()
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
 
                 downloadMes = "文件: "..event:getAssetId()..", 下载失败，失败信息为"..event:getMessage()  
