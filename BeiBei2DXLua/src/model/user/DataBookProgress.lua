@@ -131,7 +131,7 @@ end
 
 
 function DataBookProgress:updateBossList(bookKey,bossList)
-    print('update boss List:'..bookKey..','..bossList)
+--    print('update boss List:'..bookKey..','..bossList)
     if bookKey == s_BOOK_KEY_CET4 then
         self.CET4BossList = bossList
     elseif bookKey == s_BOOK_KEY_CET6 then

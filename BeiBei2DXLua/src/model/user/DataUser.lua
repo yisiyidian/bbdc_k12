@@ -127,10 +127,6 @@ function DataUser:generateSummaryBossList()
         summaryBossList = {}
     end
     local index = self.bookProgress:getBookCurrentLevelIndex()
---    print('#########index : '..index)
---    print('currentIndex:'..index)
---    print('summaryBossList'..#summaryBossList)
---    self.bookProgress:updateBossList(self.bookKey,'0') -- test code
     if index == 0 then
         return
     end
@@ -161,8 +157,7 @@ function DataUser:generateSummaryBossList()
                 list = list..'|'..summaryBossList[i]
             end
         end
-        print('updateTime'..os.date('%x',updateTime))
-        
+   
         self.bookProgress:updateBossList(self.bookKey,list)
         
     end
@@ -171,9 +166,7 @@ function DataUser:generateSummaryBossList()
 end
 
 function DataUser:removeChest(index)
---    print('###### remove chest ######')
---    print(self.chestList..','..index)
---    self.chestList = '0'
+
     local list = split(self.chestList,'|')
     local tempList = ''
     print_lua_table(list)
@@ -186,7 +179,6 @@ function DataUser:removeChest(index)
             end
         end
     end
---    print('temp:'..tempList)
     self.chestList = tempList
 
 end
