@@ -99,10 +99,10 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
     
     --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
-    --print('currentUser bossList:'..s_CURRENT_USER.summaryBossList)
+    print('currentUser bossList:'..s_CURRENT_USER.summaryBossList)
     local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)
     local summaryboss = split(bossList,'|')
-    local checkSummaryBoss = false
+    local checkSummaryBoss = true
     for i = 1, #summaryboss do
 --        print('summarybossIndex:'..summaryboss[i])
         if summaryboss[i] == '' then break end
@@ -111,8 +111,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             break
         end
     end
-    print('######check summaryboss#####')
-    print(bossList)
+--    print('######check summaryboss#####')
+--    print(bossList)
     
     -- chest
     local chestList = split(s_CURRENT_USER.chestList, '|')
@@ -168,12 +168,12 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                 -- TODO go to summaryboss
 --                s_CorePlayManager.initTotalPlay()
                     local index = string.sub(sender:getName(),12)
-                    local summaryboss = require('view.summaryboss.SummaryBossLayer')
-                    local layer = summaryboss.create(index,1)
-                    
-                    layer:setAnchorPoint(0.5,0)
-                    s_SCENE:replaceGameLayer(layer)
---                    s_CURRENT_USER:removeSummaryBoss(index)
+--                    local summaryboss = require('view.summaryboss.SummaryBossLayer')
+--                    local layer = summaryboss.create(index,1)
+--                    
+--                    layer:setAnchorPoint(0.5,0)
+--                    s_SCENE:replaceGameLayer(layer)
+                    s_CURRENT_USER:removeSummaryBoss(index)
             end
         end
         local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
