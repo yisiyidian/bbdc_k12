@@ -70,7 +70,10 @@ function DownloadSoundController.beginSoundDownloadUpdate(bookType, setPercentCa
                 else
                     downloadPercent = string.format("%.2f",event:getPercent())
                     setPercentCallback(downloadPercent)
-                    downloadMes = "单词打包运送中: "..downloadPercent.."%"   
+                    downloadMes = "单词打包运送中: "..downloadPercent.."%"
+                    if event:getPercent() >= 100 then
+                        setStateCallback("DECOMPRESS")
+                    end   
                 end                
                 
                 downloadState = false
