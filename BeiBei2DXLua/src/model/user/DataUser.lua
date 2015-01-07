@@ -119,7 +119,7 @@ end
 function DataUser:generateSummaryBossList() 
 
     local updateTime = self.bookProgress:getUpdateBossTime(self.bookKey)
-    print(os.date('%x',updateTime))
+    --print('!!!!updatetime:'..os.date('%x',updateTime))
     local list = self.bookProgress:getBossList(self.bookKey)
     local isSameDate = (os.date('%x',updateTime) == os.date('%x',os.time()))
     local summaryBossList = split(list,'|')
@@ -127,12 +127,14 @@ function DataUser:generateSummaryBossList()
         summaryBossList = {}
     end
     local index = self.bookProgress:getBookCurrentLevelIndex()
-    print('index : '..index)
+--    print('#########index : '..index)
+--    print('currentIndex:'..index)
+--    print('summaryBossList'..#summaryBossList)
+--    self.bookProgress:updateBossList(self.bookKey,'0') -- test code
     if index == 0 then
         return
     end
-    --print('currentIndex:'..index)
-    --print('summaryBossList'..#summaryBossList)
+    
     if (not isSameDate) and #summaryBossList < 3 and index - #summaryBossList > 0 then
         updateTime = os.time()
         --print('currentIndex:'..index)
@@ -160,6 +162,7 @@ function DataUser:generateSummaryBossList()
             end
         end
         print('updateTime'..os.date('%x',updateTime))
+        
         self.bookProgress:updateBossList(self.bookKey,list)
         
     end
@@ -193,7 +196,7 @@ function DataUser:removeSummaryBoss(index)
     local list = split(bosslist,'|')
     local tempList = ''
     for i = 1, #list do 
-        if list[i] ~= index then
+        if list[i] - index ~= 0 then
             if tempList == '' then
                 tempList = list[i]
             else

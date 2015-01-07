@@ -111,6 +111,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             break
         end
     end
+    print('######check summaryboss#####')
+    print(bossList)
     
     -- chest
     local chestList = split(s_CURRENT_USER.chestList, '|')
@@ -171,6 +173,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                     
                     layer:setAnchorPoint(0.5,0)
                     s_SCENE:replaceGameLayer(layer)
+--                    s_CURRENT_USER:removeSummaryBoss(index)
             end
         end
         local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
