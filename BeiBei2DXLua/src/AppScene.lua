@@ -222,7 +222,11 @@ function AppScene:startLoadingData(userStartType, username, password)
         end
 
         if e ~= nil then
-            onErrorHappend(e)
+            if code == 202 then -- Username has already been taken [https://leancloud.cn/docs/error_code.html]
+                s_TIPS_LAYER:showSmall(e)
+            else
+                onErrorHappend(e)
+            end
             hideProgressHUD()
         elseif s_CURRENT_USER.bookKey == '' then
             self:getDataBookProgress(function ()
