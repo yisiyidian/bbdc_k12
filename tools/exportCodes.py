@@ -62,7 +62,7 @@ def getJsonObjToStr(jsonObj):
         ret = ret[1:l-1]
     return ret
 
-def init(channelName, channelConfigs, androidManifest, androidManifestTarget):
+def init(channelName, channelConfigs, androidManifest, androidManifestTarget, channelConfigsDir, AppActivityJava, javaSrcDir):
     global LEAN_CLOUD_RELEASE
     global UMENG_APP
     global TENCENT_APP
@@ -80,13 +80,28 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget):
                 am = am.replace('<!-- tencent start -->', '<!-- tencent start ')
                 am = am.replace('<!-- tencent end -->', ' tencent end -->')
 
-            LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey']), getJsonObjToStr(c['leanCloudAppName'])]
-            UMENG_APP = [str(c['umengAppKey']), getJsonObjToStr(c['umengAppName'])]
-            TENCENT_APP = [str(c['isQQLogInAvailable']), getJsonObjToStr(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
+            # TODO
+            # aaj = open(channelConfigsDir + AppActivityJava).read()
+            # packageName = str(c['packageName'])
+            # if packageName == "com.beibei.wordmaster.tencentmyapp":
+            #     am = am.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
+            #     aaj = aaj.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
 
             amt = open(androidManifestTarget, 'w')
             amt.write(am)
             amt.close()
+
+            # newJavaSrcDir = javaSrcDir + packageName.replace('.', '/') + '/'
+            # if os.path.exists(javaSrcDir + 'com/beibei/wordmaster'):
+            #     shutil.rmtree(javaSrcDir + 'com/beibei/wordmaster')
+            #     os.makedirs(newJavaSrcDir)
+            # newAppActivityJava = open(newJavaSrcDir + AppActivityJava, 'w')
+            # newAppActivityJava.write(aaj)
+            # newAppActivityJava.close()
+
+            LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey']), getJsonObjToStr(c['leanCloudAppName'])]
+            UMENG_APP = [str(c['umengAppKey']), getJsonObjToStr(c['umengAppName'])]
+            TENCENT_APP = [str(c['isQQLogInAvailable']), getJsonObjToStr(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
 
             print getJsonObjToStr(c['umengAppName'])
             print TENCENT_APP
@@ -228,7 +243,8 @@ def export(codeType, appVersionInfo, fullpathLua, fullpathObjc, fullpathJava):
                 
 if __name__ == "__main__":
     if len(sys.argv) > 6:
-        init(sys.argv[6], sys.argv[7], sys.argv[8], sys.argv[9])
+        # channelName, channelConfigs, androidManifest, androidManifestTarget, channelConfigsDir, AppActivityJava, javaSrcDir
+        init(sys.argv[6], sys.argv[7], sys.argv[8], sys.argv[9], sys.argv[10], sys.argv[11], sys.argv[12])
     export(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
 
 # channelConfigs = '/Users/bmo/Dev/YiSiYiDian/BeiBeiDanCiX/tools/channel_configs/configs.json'
