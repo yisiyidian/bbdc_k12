@@ -392,7 +392,19 @@ public class BBNDK {
 	            return networkInfo.getType();  
 	        }  
 	    }  
-	    return -1;  
+	    return getConnectedType_NONE();  
+	}
+	
+	public static int getConnectedType_WIFI() {
+		return ConnectivityManager.TYPE_WIFI;
+	}
+	
+	public static int getConnectedType_MOBILE() {
+		return ConnectivityManager.TYPE_MOBILE;
+	}
+	
+	public static int getConnectedType_NONE() {
+		return -1;
 	}
 	
 	// ***************************************************************************************************************************

@@ -39,6 +39,7 @@ public:
 private:
     static CXAvos* m_pInstance;
     CXAvos();
+    void init();
     
     int mLuaHandlerId_dl;
     int mLuaHandlerId_signUp;

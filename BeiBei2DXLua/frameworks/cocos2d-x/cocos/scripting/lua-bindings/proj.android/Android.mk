@@ -57,6 +57,7 @@ LOCAL_SRC_FILES := ../manual/CCLuaBridge.cpp \
           ../auto/lua_cocos2dx_audioengine_auto.cpp \
           ../manual/audioengine/lua_cocos2dx_audioengine_manual.cpp \
           ../auto/lua_cx_common.cpp \
+          ../../../../common/CXAvosCommon.cpp \
           ../../../../common/Android/CXAnalytics.cpp \
           ../../../../common/Android/CXAvos.cpp \
           ../../../../common/md5/md5.c \

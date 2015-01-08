@@ -89,6 +89,8 @@
 		AB6CB6F51A1F275E009C2562 /* ConsoleCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EE1A1F275E009C2562 /* ConsoleCommand.cpp */; };
 		AB6CB6F61A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
 		AB6CB6F71A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
+		B85077501A5E664D00A66723 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B850774F1A5E664D00A66723 /* Reachability.m */; };
+		B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077511A5E67E900A66723 /* CXAvosCommon.cpp */; };
 		B89B86901A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		B89B86911A454C3C00E596E0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */; };
 		B89B86931A454CFC00E596E0 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B86921A454CFC00E596E0 /* libiconv.dylib */; };
@@ -291,6 +293,9 @@
 		AB6CB6F01A1F275E009C2562 /* FileServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileServer.cpp; sourceTree = "<group>"; };
 		AB6CB6F11A1F275E009C2562 /* FileServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileServer.h; sourceTree = "<group>"; };
 		B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionInfo.h; sourceTree = "<group>"; };
+		B850774E1A5E664D00A66723 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../Classes/Reachability.h; sourceTree = "<group>"; };
+		B850774F1A5E664D00A66723 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../Classes/Reachability.m; sourceTree = "<group>"; };
+		B85077511A5E67E900A66723 /* CXAvosCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXAvosCommon.cpp; sourceTree = "<group>"; };
 		B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = frameworks/TencentOpenAPI/TencentOpenAPI.framework; sourceTree = "<group>"; };
 		B89B86921A454CFC00E596E0 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
@@ -489,17 +494,19 @@
 		5023810617EBBCAC00990C9B /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				66E5290F1A37EEA600D1FBB1 /* Images.xcassets */,
-				B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */,
 				5023810717EBBCAC00990C9B /* AppController.h */,
 				5023810817EBBCAC00990C9B /* AppController.mm */,
+				B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */,
+				B89B86A01A45636C00E596E0 /* CXTencentSDKCall.h */,
+				B89B86A11A45636C00E596E0 /* CXTencentSDKCall.m */,
+				66E5290F1A37EEA600D1FBB1 /* Images.xcassets */,
 				5023811317EBBCAC00990C9B /* Info.plist */,
 				5023811417EBBCAC00990C9B /* main.m */,
 				5023811517EBBCAC00990C9B /* Prefix.pch */,
+				B850774E1A5E664D00A66723 /* Reachability.h */,
+				B850774F1A5E664D00A66723 /* Reachability.m */,
 				5023811617EBBCAC00990C9B /* RootViewController.h */,
 				5023811717EBBCAC00990C9B /* RootViewController.mm */,
-				B89B86A01A45636C00E596E0 /* CXTencentSDKCall.h */,
-				B89B86A11A45636C00E596E0 /* CXTencentSDKCall.m */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -523,6 +530,7 @@
 			children = (
 				B8C5C35D1A44219A00593E15 /* CXAnalytics.h */,
 				B8C5C35E1A44219A00593E15 /* CXAvos.h */,
+				B85077511A5E67E900A66723 /* CXAvosCommon.cpp */,
 				660224341A370E4B00233788 /* CXProgressHUD.h */,
 				660224351A370E4B00233788 /* CXStore.cpp */,
 				660224361A370E4B00233788 /* CXStore.h */,
@@ -932,11 +940,13 @@
 				3EB5156C1952865D006966AA /* stringprintf.cc in Sources */,
 				3EB515681952865D006966AA /* common.cc in Sources */,
 				C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */,
+				B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */,
 				3EB5155A1952865D006966AA /* generated_message_util.cc in Sources */,
 				660224561A370E4B00233788 /* CXProgressHUD.mm in Sources */,
 				AB6CB6F61A1F275E009C2562 /* FileServer.cpp in Sources */,
 				3EB5155E1952865D006966AA /* zero_copy_stream.cc in Sources */,
 				660224581A370E4B00233788 /* MBProgressHUD.m in Sources */,
+				B85077501A5E664D00A66723 /* Reachability.m in Sources */,
 				3EB5155C1952865D006966AA /* coded_stream.cc in Sources */,
 				C0619CD71896894800872C26 /* Runtime_ios-mac.mm in Sources */,
 				B8C5C35C1A44218E00593E15 /* CXAvos.mm in Sources */,
@@ -1137,7 +1147,7 @@
 					"-fobjc-arc",
 				);
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=*]" = "1231d5be-5930-497a-96c0-82032240c162";
+				"PROVISIONING_PROFILE[sdk=*]" = "566768c0-d417-4156-84b0-9c5907c16069";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
