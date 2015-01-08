@@ -306,6 +306,10 @@ function HomeLayer.create()
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
 --            s_CorePlayManager.initTotalPlay()
+            -- generate random list
+            s_CURRENT_USER:generateSummaryBossList()
+            s_CURRENT_USER:generateChestList()
+            s_CURRENT_USER:updateDataToServer()
             
             AnalyticsEnterLevelLayerBtn()
             AnalyticsFirst(ANALYTICS_FIRST_LEVEL, 'TOUCH')
@@ -316,10 +320,7 @@ function HomeLayer.create()
             s_CorePlayManager.enterLevelLayer()  
             hideProgressHUD()
             
-            -- generate random list
-            s_CURRENT_USER:generateSummaryBossList()
-            s_CURRENT_USER:generateChestList()
-            s_CURRENT_USER:updateDataToServer()
+
 --            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
 --                function(api,result)
 --                    s_CorePlayManager.initTotalPlay()

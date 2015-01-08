@@ -98,8 +98,6 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         currentIndex = currentIndex + 60
     end
     
-    --if levelIndex == '3' or levelIndex == '9' then  -- plot boat animation
-    --print('currentUser bossList:'..s_CURRENT_USER.summaryBossList)
     local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)
     local summaryboss = split(bossList,'|')
     local checkSummaryBoss = false
@@ -111,6 +109,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             break
         end
     end
+--    print('######check summaryboss#####')
+--    print(bossList)
     
     -- chest
     local chestList = split(s_CURRENT_USER.chestList, '|')

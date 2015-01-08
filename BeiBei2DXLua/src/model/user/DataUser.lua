@@ -119,7 +119,7 @@ end
 function DataUser:generateSummaryBossList() 
 
     local updateTime = self.bookProgress:getUpdateBossTime(self.bookKey)
-    print(os.date('%x',updateTime))
+    --print('!!!!updatetime:'..os.date('%x',updateTime))
     local list = self.bookProgress:getBossList(self.bookKey)
     local isSameDate = (os.date('%x',updateTime) == os.date('%x',os.time()))
     local summaryBossList = split(list,'|')
@@ -127,12 +127,10 @@ function DataUser:generateSummaryBossList()
         summaryBossList = {}
     end
     local index = self.bookProgress:getBookCurrentLevelIndex()
-    print('index : '..index)
     if index == 0 then
         return
     end
-    --print('currentIndex:'..index)
-    --print('summaryBossList'..#summaryBossList)
+    
     if (not isSameDate) and #summaryBossList < 3 and index - #summaryBossList > 0 then
         updateTime = os.time()
         --print('currentIndex:'..index)
@@ -159,7 +157,7 @@ function DataUser:generateSummaryBossList()
                 list = list..'|'..summaryBossList[i]
             end
         end
-        print('updateTime'..os.date('%x',updateTime))
+   
         self.bookProgress:updateBossList(self.bookKey,list)
         
     end
@@ -168,9 +166,7 @@ function DataUser:generateSummaryBossList()
 end
 
 function DataUser:removeChest(index)
---    print('###### remove chest ######')
---    print(self.chestList..','..index)
---    self.chestList = '0'
+
     local list = split(self.chestList,'|')
     local tempList = ''
     print_lua_table(list)
@@ -183,7 +179,6 @@ function DataUser:removeChest(index)
             end
         end
     end
---    print('temp:'..tempList)
     self.chestList = tempList
 
 end
@@ -193,7 +188,7 @@ function DataUser:removeSummaryBoss(index)
     local list = split(bosslist,'|')
     local tempList = ''
     for i = 1, #list do 
-        if list[i] ~= index then
+        if list[i] - index ~= 0 then
             if tempList == '' then
                 tempList = list[i]
             else

@@ -132,6 +132,7 @@ function DownloadLayer.create(bookKey)
     local title1 = "下载音频("..total_size..")"
     local title2 = "取消下载("..current_size.."M/"..total_size..")"
     local title3 = "删除音频("..total_size..")"
+    local title4 = "单词包解压中..."
     
     local updatePercent = function(currentPercent)
         percent = currentPercent
@@ -173,6 +174,9 @@ function DownloadLayer.create(bookKey)
                 finish()
                 downloadAlter:removeFromParent()
             end
+        elseif state =="DECOMPRESS" then
+        
+            button_title:setString(title4)
         else
             print("download sound fail")
             DownloadSoundController.killDownload(bookKey)

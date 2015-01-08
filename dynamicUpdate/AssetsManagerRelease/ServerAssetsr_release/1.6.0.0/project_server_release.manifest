@@ -2,7 +2,7 @@
 	"packageUrl" : "http://yisiyidian.com/AssetsManagerRelease/1.6.0",
 	"remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerRelease/1.6.0/project_server_release.manifest", 
 	"remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerRelease/1.6.0/version_release.manifest", 
-	"version" : "1.6.0.2", 
+	"version" : "1.6.0.0", 
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"ServerAssets/src/anysdkConst.luac" : {
@@ -62,7 +62,7 @@
 			"compressed" : true
 		},		
 		"ServerAssets/src/view.zip" : {
-			"md5" : "c7431226e0abc7423c120c4f1fe1182f",
+			"md5" : "0d86e47003dc49a85b1f1334e55f2873",
 			"compressed" : true
 		},			
 		"ServerAssets/res/ccb.zip" : {
