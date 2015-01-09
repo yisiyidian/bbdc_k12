@@ -8,7 +8,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     playWordSound(wordname)
 
     local height = 80
-    local offLine = s_SERVER:isOnline() 
+    local onLine = s_SERVER.isOnline() 
     
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)
@@ -50,7 +50,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playWordSound(wordname)
-            if offLine == false then
+            if onLine == false then
             offLineTip.setTrue()
             end
         end
@@ -104,7 +104,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     
     --add offline
     offLineTip = OfflineTip.create()
-    if offLine == false then
+    if onLine == false then
         main:addChild(offLineTip,2)
     end
 
