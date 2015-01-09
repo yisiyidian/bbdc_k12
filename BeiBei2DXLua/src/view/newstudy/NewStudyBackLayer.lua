@@ -73,7 +73,7 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     backColor.progressBar.hint = function()
         local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
         guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-        backColor:addChild(guideAlter)
+        backColor:addChild(guideAlter,pauseBtn:getLocalZOrder() + 1)
     end
     
     return backColor

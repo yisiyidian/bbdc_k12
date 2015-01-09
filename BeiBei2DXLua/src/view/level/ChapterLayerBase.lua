@@ -203,6 +203,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                 s_CURRENT_USER:addBeans(beansCount)
                 sender:setVisible(false)
 
+                local parent = self:getParent():getParent():getParent()
+
                 local box
                 local callback1 = function()
                     box = sp.SkeletonAnimation:create("spine/baoxiangdakai.json", 'spine/baoxiangdakai.atlas',1)
@@ -236,6 +238,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                     if bean ~=nil then
                         bean:removeFromParent() 
                     end
+                    
+                    parent:shakeBeansUI(1)
                 end
 
                 local callback3 = function()
@@ -259,13 +263,13 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                         local moveAct2 = cc.MoveBy:create(0.1,cc.p(0,-4))
                         bean:runAction(cc.Sequence:create(moveAct1,
                                                           moveAct2,
-                                                          cc.DelayTime:create(0.4),
+                                                          cc.DelayTime:create(0.4+var*0.3),
                                                           cc.CallFunc:create(callback4,{bean}),
                                                           cc.DelayTime:create(0.05),
-                                                          cc.CallFunc:create(callback5,{bean})))
+                                                          cc.CallFunc:create(callback5,{bean,parent})))
                     end
                 end
-
+                
                 local sequence =  cc.Sequence:create(cc.CallFunc:create(callback1),
                                                      cc.DelayTime:create(0.6),
                                                      cc.CallFunc:create(callback2),

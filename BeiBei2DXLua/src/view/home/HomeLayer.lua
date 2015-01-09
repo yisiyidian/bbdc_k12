@@ -74,9 +74,10 @@ function HomeLayer.create()
     local setting_back
     
     --add offline
-    local offLine = s_SERVER:isOnline() 
+    local onLine = s_SERVER.isOnline() 
+--    local onLine = false
     local offLineTip = OfflineTip.create()
-    if offLine == false then
+    if onLine == false then
         layer:addChild(offLineTip,2)
     end
 
@@ -92,9 +93,6 @@ function HomeLayer.create()
             playSound(s_sound_buttonEffect)
             
         elseif eventType == ccui.TouchEventType.ended then
-            if  offLine == false then
-            offLineTip.set()
-            end
             
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -139,32 +137,38 @@ function HomeLayer.create()
             playSound(s_sound_buttonEffect)
             
             elseif eventType == ccui.TouchEventType.ended then
-
-            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                s_CorePlayManager.enterFriendLayer()
-            else
             
-                if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
-                    local Item_popup = require("popup/PopupModel")
-                    local item_popup = Item_popup.create(Site_From_Friend_Guest)  
-                    
-                    item_popup.update = function()
-                        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                            list[1].label:setString(s_CURRENT_USER.username)
-                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                            if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
-                        end
-                    end
-                    
-                    s_SCENE:popup(item_popup)
+            if  onLine == false then
+                offLineTip.setTrue(OffLineTipForHome_Friend)
+            else
+                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                    s_CorePlayManager.enterFriendLayer()
                 else
-                    local Item_popup = require("popup/PopupModel")
-                    local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
 
-                    s_SCENE:popup(item_popup)
-                end              
-                  
-            end          
+                    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
+                        local Item_popup = require("popup/PopupModel")
+                        local item_popup = Item_popup.create(Site_From_Friend_Guest)  
+
+                        item_popup.update = function()
+                            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                                list[1].label:setString(s_CURRENT_USER.username)
+                                list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                                if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                            end
+                        end
+
+                        s_SCENE:popup(item_popup)
+                    else
+                        local Item_popup = require("popup/PopupModel")
+                        local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
+
+                        s_SCENE:popup(item_popup)
+                    end              
+
+                end   
+            end
+
+       
         end
     end
     
@@ -500,30 +504,42 @@ function HomeLayer.create()
                     AnalyticsChangeBookBtn()
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
-                    local alter = AlterI.create("用户反馈")
-                    alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    layer:addChild(alter)
+                    if  onLine == false then
+                        offLineTip.setTrue(OffLineTipForHome_Feedback)
+                    else
+                        local alter = AlterI.create("用户反馈")
+                        alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        layer:addChild(alter)
+                    end
                 elseif label_name[i] == "完善个人信息" then
-                    local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER)
-                    improveInfo:setTag(1)
-                    improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    layer:addChild(improveInfo)
-                    
-                    improveInfo.close = function()
-                        layer:removeChildByTag(1)
-                        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                            list[1].label:setString(s_CURRENT_USER.username)
-                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                            if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                    if  onLine == false then
+                        offLineTip.setTrue(OffLineTipForHome_ImproveInformation)
+                    else
+                        local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER)
+                        improveInfo:setTag(1)
+                        improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                        layer:addChild(improveInfo)
+
+                        improveInfo.close = function()
+                            layer:removeChildByTag(1)
+                            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                                list[1].label:setString(s_CURRENT_USER.username)
+                                list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                                if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                            end
                         end
                     end
                 elseif label_name[i] == "登出游戏" then
-                    -- logout
-                    AnalyticsLogOut()
-                    cx.CXAvos:getInstance():logOut()
-                    s_DATABASE_MGR.setLogOut(true)
-                    s_DATABASE_MGR.close()
-                    s_START_FUNCTION()
+                    if  onLine == false then
+                        offLineTip.setTrue(OffLineTipForHome_Logout)
+                    else
+                        -- logout
+                        AnalyticsLogOut()
+                        cx.CXAvos:getInstance():logOut()
+                        s_DATABASE_MGR.setLogOut(true)
+                        s_DATABASE_MGR.close()
+                        s_START_FUNCTION()
+                    end
                 else
                     -- do nothing
                 end
@@ -552,9 +568,9 @@ function HomeLayer.create()
         button_back:addChild(split)
         
         --add offline 
-        if i == #logo_name then
-            local offLine = s_SERVER:isOnline()
-            if offLine == false then
+        if i == 1 or i == 2 then
+        else
+            if onLine == false then
                label:setColor(cc.c4b(157,157,157,255))
             end
         end

@@ -25,7 +25,7 @@ function IntroLayer.create(directOnLogin)
     local currentIndex = 1
     local moveLength = 100
     local offLineTip
-    local offLine = s_SERVER:isOnline()  
+    local onLine = s_SERVER.isOnline()  
         
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
@@ -82,7 +82,11 @@ function IntroLayer.create(directOnLogin)
         button_qq:setPosition(s_DESIGN_WIDTH/2, 590)
         button_qq:setTitleFontSize(36)
         button_qq:setTitleText("QQ登陆")
-        intro:addChild(button_qq)
+        if  onLine == false then
+
+        else
+            intro:addChild(button_qq)
+        end
     end
     
     local button_visitor = ccui.Button:create()
@@ -173,7 +177,11 @@ function IntroLayer.create(directOnLogin)
     button_login:setTitleText("登陆")
     button_login:setTitleColor(cc.c4b(255,255,255,255))
     button_login:setVisible(false)
-    cloud:addChild(button_login)
+    if  onLine == false then
+
+    else
+        cloud:addChild(button_login)
+    end
     
     button_register = ccui.Button:create()
     button_register:loadTextures("image/button/button_white_denglu.png", "", "")
@@ -183,7 +191,11 @@ function IntroLayer.create(directOnLogin)
     button_register:setTitleText("注册")
     button_register:setTitleColor(cc.c4b(115,197,243,255))
     button_register:setVisible(false)
-    cloud:addChild(button_register)
+    if  onLine == false then
+
+    else
+        cloud:addChild(button_register)
+    end
 
     local label_hint_array = {}
     table.insert(label_hint_array, "一关一城市 贝贝带你游美国")
@@ -241,8 +253,10 @@ function IntroLayer.create(directOnLogin)
         
         cloud:setPosition(s_DESIGN_WIDTH/2, 0)
 
-        button_login:setVisible(true)
-        button_register:setVisible(true)
+        if  onLine == true then
+            button_login:setVisible(true)
+            button_register:setVisible(true)
+        end
     end
         
     local moved = false
@@ -268,8 +282,10 @@ function IntroLayer.create(directOnLogin)
                 moved = true
                 
                 if currentIndex == 4 then
-                    button_login:setVisible(false)
-                    button_register:setVisible(false)
+                    if  onLine == true then
+                        button_login:setVisible(false)
+                        button_register:setVisible(false)
+                    end
 
                     local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
                     cloud:runAction(action2)
@@ -307,8 +323,10 @@ function IntroLayer.create(directOnLogin)
                 if currentIndex == 3 then            
                     local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
                     local action3 = cc.CallFunc:create(function()
-                        button_login:setVisible(true)
-                        button_register:setVisible(true)
+                        if  onLine == true then
+                            button_login:setVisible(true)
+                            button_register:setVisible(true)
+                        end
                     end)
                     cloud:runAction(cc.Sequence:create(action2, action3))
                 end
@@ -324,7 +342,7 @@ function IntroLayer.create(directOnLogin)
             print(currentIndex)
         end
         
-        if offLine == false then
+        if onLine == false then
             if currentIndex == 4 then
                 offLineTip.setTrue()
             elseif currentIndex == 3 then
@@ -335,8 +353,11 @@ function IntroLayer.create(directOnLogin)
     
     --add offline        
     offLineTip = OffLine.create()
-    if offLine == false then
+    if onLine == false then
         layer:addChild(offLineTip)
+        if currentIndex == 4 then
+            offLineTip.setTrue()
+        end
     end
     
     local listener = cc.EventListenerTouchOneByOne:create()
