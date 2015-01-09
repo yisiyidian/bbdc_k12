@@ -483,15 +483,15 @@ function Manager.getSummaryBossWordCandidate()
         return wordPool
     end
     
-    local tureWrongWordNum = 4
-    local tureGraspWordNum = 5
+    local tureWrongWordNum = 3
+    local tureGraspWordNum = 6
     
-    if wrongWordPoolSize < 4 then
+    if wrongWordPoolSize < 3 then
         tureWrongWordNum = wrongWordPoolSize
         tureGraspWordNum = 9 - tureWrongWordNum
     end
     
-    if graspWordPoolSize < 5 then
+    if graspWordPoolSize < 6 then
         tureGraspWordNum = graspWordPoolSize
         tureWrongWordNum = 9 - tureGraspWordNum
     end
