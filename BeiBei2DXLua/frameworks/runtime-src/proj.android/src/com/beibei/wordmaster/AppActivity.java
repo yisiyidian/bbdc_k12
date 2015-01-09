@@ -85,25 +85,25 @@ public class AppActivity extends Cocos2dxActivity {
 		//2.Set the format of window
 		
 		// Check the wifi is opened when the native is debug.
-		if (BBNDK.nativeIsDebug()) {
-			getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-			if (!isNetworkConnected()) {
-				AlertDialog.Builder builder=new AlertDialog.Builder(this);
-				builder.setTitle("Warning");
-				builder.setMessage("Open Wifi for debuging...");
-				builder.setPositiveButton("OK",new DialogInterface.OnClickListener() {
-					
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
-						finish();
-						System.exit(0);
-					}
-				});
-				builder.setCancelable(false);
-				builder.show();
-			}
-		}
+//		if (BBNDK.nativeIsDebug()) {
+//			getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+//			if (!isNetworkConnected()) {
+//				AlertDialog.Builder builder=new AlertDialog.Builder(this);
+//				builder.setTitle("Warning");
+//				builder.setMessage("Open Wifi for debuging...");
+//				builder.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+//					
+//					@Override
+//					public void onClick(DialogInterface dialog, int which) {
+//						startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
+//						finish();
+//						System.exit(0);
+//					}
+//				});
+//				builder.setCancelable(false);
+//				builder.show();
+//			}
+//		}
 		BBNDK.setHostIPAdress( getHostIpAddress() );
 	}
 
