@@ -282,13 +282,30 @@ end
 NETWORK_STATUS_NONE = -1
 NETWORK_STATUS_WIFI = 1
 NETWORK_STATUS_MOBILE = 2
+Server.networkStatus = NETWORK_STATUS_NONE
+Server.isInited = false
 
 function Server.initNetworkStatus()
-    cx.CXNetworkStatus:getInstance():start()
+    if Server.isInited == false then
+        Server.isInited = true
+        Server.networkStatus = cx.CXNetworkStatus:getInstance():start()
+    else
+        Server.updateNetworkStatus()
+    end      
+
+    if Server.isOnline() then
+        print ('Server initNetworkStatus isOnline')
+    else
+        print ('Server initNetworkStatus isOffline')
+    end
+end
+
+function Server.updateNetworkStatus()
+    Server.networkStatus = cx.CXNetworkStatus:getInstance():getStatus()
 end
 
 function Server.isOnline()
-    local status = cx.CXNetworkStatus:getInstance():getStatus()
+    local status = Server.networkStatus
     if status == NETWORK_STATUS_WIFI then
         return true
     elseif status == NETWORK_STATUS_MOBILE then

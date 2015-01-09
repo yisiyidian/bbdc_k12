@@ -28,20 +28,19 @@ end
 function DynamicUpdate.loginUpdateCompleted()
 
     print("The storagePath is "..storagePath)
-    if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
-        cc.FileUtils:getInstance():addSearchPath(searchPath,true)
+    cc.FileUtils:getInstance():addSearchPath(searchPath,true)
+
+    if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then    
         if s_CURRENT_USER.usertype == USER_TYPE_QQ then
             s_SCENE:logInByQQAuthData()
         else
             s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
         end
     elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
-        cc.FileUtils:getInstance():addSearchPath(searchPath,true)
         local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(true)
         s_SCENE:replaceGameLayer(introLayer)
     else
-        cc.FileUtils:getInstance():addSearchPath(searchPath,true)
         local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(false)
         s_SCENE:replaceGameLayer(introLayer)

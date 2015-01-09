@@ -525,16 +525,41 @@ function ChapterLayer:addBeansUI()
     self.beans = cc.Sprite:create('image/chapter/chapter0/beanBack.png')
     self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans,150)
-    local bean = cc.Sprite:create('image/chapter/chapter0/bean.png')
-    bean:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
-    self.beans:addChild(bean)
+    self.beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
+    self.beanLabel:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
+    self.beans:addChild(self.beanLabel)
     
-    local beanCount = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',33)
-    beanCount:setColor(cc.c3b(13, 95, 156))
-    beanCount:ignoreAnchorPointForPosition(false)
-    beanCount:setAnchorPoint(0,0)
-    beanCount:setPosition(53,2)
-    self.beans:addChild(beanCount,10)
+    self.beanCount = s_CURRENT_USER.beans
+    self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',33)
+    self.beanCountLabel:setColor(cc.c3b(13, 95, 156))
+    self.beanCountLabel:ignoreAnchorPointForPosition(false)
+    self.beanCountLabel:setAnchorPoint(1,0)
+    self.beanCountLabel:setPosition(108,2)
+    self.beans:addChild(self.beanCountLabel,10)
+end
+
+function ChapterLayer:shakeBeansUI(beansIncrement)
+
+    if self.beanLabel ~= nil and self.beanCountLabel~=nil and self.beanCount ~=nil then
+        local beanLabelPostionX = self.beanLabel:getPositionX()
+        local beanLabelPostionY = self.beanLabel:getPositionY()
+        local beanLabelAct1 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY+10))
+        local beanLabelAct2 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY-10))
+        local beanLabelAct3 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY))
+        self.beanLabel:runAction(cc.Sequence:create(beanLabelAct1,beanLabelAct2,beanLabelAct3))
+
+        self.beanCount = self.beanCount + beansIncrement
+        self.beanCountLabel:setString(self.beanCount)
+        
+        local addBeanLabel = cc.Label:createWithSystemFont("+豆豆",'',20)
+        addBeanLabel:setPosition(self.beanCountLabel:getPositionX()-20,self.beanCountLabel:getPositionY()+50)
+        addBeanLabel:setColor(cc.c3b(0,0,0))
+        self.beans:addChild(addBeanLabel)
+        
+        local addBeanLabelAct1 = cc.MoveTo:create(0.2,cc.p(addBeanLabel:getPositionX(),addBeanLabel:getPositionY()+10))
+        local addBeanLabelAct12 = cc.FadeOut:create(0.3)
+        addBeanLabel:runAction(cc.Spawn:create(addBeanLabelAct1,addBeanLabelAct12))
+    end
 end
 
 return ChapterLayer

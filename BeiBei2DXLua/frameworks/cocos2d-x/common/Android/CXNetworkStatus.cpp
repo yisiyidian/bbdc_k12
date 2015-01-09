@@ -32,8 +32,8 @@ jint getConnectedType_jint(const char* javaFuncName) {
     return ret;
 }
 
-void CXNetworkStatus::start() {
-    getStatus();
+int CXNetworkStatus::start() {
+    return getStatus();
 }
 
 int CXNetworkStatus::getStatus() { 

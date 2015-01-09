@@ -20,7 +20,7 @@ public:
     };
 
     static CXNetworkStatus* getInstance();
-    void start();
+    int start();
 
     int getStatus();
     void setStatus(int s) { m_status = s; }
