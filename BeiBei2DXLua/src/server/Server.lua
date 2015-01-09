@@ -276,4 +276,11 @@ end
 
 -- AssetsManager: download http://ac-eowk9vvv.qiniudn.com/WJZJ2GGKNsFjPDlv.bin
 
+
+-- network status >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+function Server.isOnline()
+    return true
+end
+
 return Server

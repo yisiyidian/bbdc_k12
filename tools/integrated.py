@@ -67,13 +67,16 @@ echo ""
 BASE_DIR_FOR_SCRIPT_SELF=%s
 cd ${BASE_DIR_FOR_SCRIPT_SELF}/
 
+APP_ACTIVITY_NAME=AppActivity.java
+APP_ACTIVITY=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/
 CHANNEL_CONFIGS=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/configs.json
 ANDROID_MANIFEST=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/AndroidManifest.xml
 ANDROID_MANIFEST_TARGET=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/AndroidManifest.xml
 
+JAVA_SRC=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/src/
 LUA_CODE=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/src/AppVersionInfo.lua 
 OBJC_CODE=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/ios/AppVersionInfo.h
-JAVA_CODE=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/AppVersionInfo.java
+JAVA_CODE=${JAVA_SRC}/c/bb/dc/AppVersionInfo.java
 
 DATE=$(date +%%Y_%%m%%d_%%H%%M)
 echo $DATE
@@ -88,7 +91,7 @@ echo $VER
 VER=$DATE"_"$BRANCH"_"$VER"_"$(git rev-list HEAD -n 1 | cut -c 1-7)
 echo $VER
 
-python exportCodes.py $APPTYPE $VER ${LUA_CODE} ${OBJC_CODE} ${JAVA_CODE} $CHANNEL_NAME $CHANNEL_CONFIGS $ANDROID_MANIFEST $ANDROID_MANIFEST_TARGET
+python exportCodes.py $APPTYPE $VER ${LUA_CODE} ${OBJC_CODE} ${JAVA_CODE} $CHANNEL_NAME $CHANNEL_CONFIGS $ANDROID_MANIFEST $ANDROID_MANIFEST_TARGET $APP_ACTIVITY $APP_ACTIVITY_NAME $JAVA_SRC
 ''' % os.getcwd()
     return cmd
 

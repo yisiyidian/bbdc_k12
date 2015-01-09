@@ -196,16 +196,12 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         -- define touchEvent
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then                
---                local deco = sp.SkeletonAnimation:create('spine/baoxiangdakai.json','spine/baoxiangdakai.atlas',1)
---                deco:addAnimation(0,'animation',false)
---                deco:setPosition(sender:getPosition())
---                self:addChild(deco, 130)
+                local beansCount = 3
                 local i = string.sub(sender:getName(), 6)
                 s_CURRENT_USER:removeChest(i)
                 -- add beans
-                s_CURRENT_USER:addBeans(2)
+                s_CURRENT_USER:addBeans(beansCount)
                 sender:setVisible(false)
-
 
                 local box
                 local callback1 = function()
@@ -213,37 +209,78 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
                     box:addAnimation(0, 'animation', false)
                     box:setPosition(sender:getPosition())
                     self:addChild(box,130)
---                    box:setScale(0.25)
+                    box:setScale(0.9)
                 end
 
                 local partical
                 local callback2 = function()
                     partical = cc.ParticleSystemQuad:create('image/chapter/chapter0/chest.plist')
-                    partical:setPositionX(box:getPositionX()+70)
-                    partical:setPositionY(box:getPositionY()+82)
---                    partical:setScale(0.2)
+                    partical:setPositionX(box:getPositionX()+80)
+                    partical:setPositionY(box:getPositionY()+80)
+                    partical:setScale(0.8)
                     self:addChild(partical,130)
                 end
                 
                 -- add beans
-                local bean
-                local callback3 = function()
-                    bean = cc.Sprite:create('image/chapter/chapter0/bean.png')
-                    bean:setPosition(box:getPositionX()+80, box:getPositionY()+150)
-                    self:addChild(bean,130)
-                    local action = cc.FadeOut:create(2)
-                    bean:runAction(action)
+                local beanParticle
+                local callback4 = function(sender,table)
+                    local bean = table[1]
+                    beanParticle = cc.ParticleSystemQuad:create("image/chapter/chapter0/beanParticle.plist")
+                    beanParticle:setPosition(bean:getPosition())
+                    beanParticle:setScale(0.4)
+                    self:addChild(beanParticle,140)
                 end
-                local sequence = cc.Sequence:create(cc.CallFunc:create(callback1),cc.DelayTime:create(1),cc.CallFunc:create(callback2),cc.DelayTime:create(1.5),cc.CallFunc:create(callback3))
+
+                local callback5 = function(sender,table)
+                    local bean = table[1]
+                    if bean ~=nil then
+                        bean:removeFromParent() 
+                    end
+                end
+
+                local callback3 = function()
+                    for var=0, beansCount-1 do
+
+                        local offsetHeight
+                        if var%2 ==0 then
+                            offsetHeight = -20
+                        else
+                            offsetHeight = 20
+                        end
+
+                        bean = cc.Sprite:create('image/chapter/chapter0/bean.png')
+                        bean:setScale(0.9)
+                        local beanWidth = bean:getContentSize().width * bean:getScale() *4/(beansCount-1)
+                        bean:setPosition(box:getPositionX()+60, box:getPositionY()+50)
+                        self:addChild(bean,130)
+
+                        local offsetWidth = beanWidth * var
+                        local moveAct1 = cc.MoveTo:create(0.3,cc.p(box:getPositionX()+offsetWidth,bean:getPositionY()+120+offsetHeight))
+                        local moveAct2 = cc.MoveBy:create(0.1,cc.p(0,-4))
+                        bean:runAction(cc.Sequence:create(moveAct1,
+                                                          moveAct2,
+                                                          cc.DelayTime:create(0.4),
+                                                          cc.CallFunc:create(callback4,{bean}),
+                                                          cc.DelayTime:create(0.05),
+                                                          cc.CallFunc:create(callback5,{bean})))
+                    end
+                end
+
+                local sequence =  cc.Sequence:create(cc.CallFunc:create(callback1),
+                                                     cc.DelayTime:create(0.6),
+                                                     cc.CallFunc:create(callback2),
+                                                     cc.DelayTime:create(0.1),
+                                                     cc.CallFunc:create(callback3))
                 self:runAction(sequence)
                 AnalyticsChestCollectedCnt(sender:getName())
             end
         end
         local chestButton = ccui.Button:create('image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png','image/chapter/chapter0/chest.png')
         chestButton:setScale9Enabled(true)
-        chestButton:setPosition(levelPosition.x-90, levelPosition.y-70)
+        chestButton:setPosition(levelPosition.x-75, levelPosition.y-55)
         chestButton:setAnchorPoint(0,0)
         chestButton:setName('chest'..currentIndex)
+        chestButton:setScale(0.9)
         self:addChild(chestButton,150)
         chestButton:addTouchEventListener(touchEvent)
     elseif levelIndex % 8 == 0 then

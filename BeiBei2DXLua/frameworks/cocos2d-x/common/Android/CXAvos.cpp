@@ -14,18 +14,7 @@
 
 using namespace cocos2d;
 
-CXAvos* CXAvos::m_pInstance = nullptr;
-
-CXAvos* CXAvos::getInstance() {
-    if (!m_pInstance) {
-        m_pInstance = new CXAvos();
-    }
-    return m_pInstance;
-}
-
-CXAvos::CXAvos()
-: mLuaHandlerId_dl(0) {
-    
+void CXAvos::init() {
 }
 
 void CXAvos::downloadFile(const char* objectId, const char* savepath, CXLUAFUNC nHandler) {
@@ -76,21 +65,6 @@ void CXAvos::downloadWordSoundFiles(const char* prefix, const char* wordsList, c
     }
 }
 
-void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* filename, const char* error, bool isSaved)
-{
-    if (mLuaHandlerId_dl > 0)
-    {
-        auto engine = LuaEngine::getInstance();
-        LuaStack* stack = engine->getLuaStack();
-        stack->pushString(objectId);
-        stack->pushString(filename);
-        stack->pushString(error);
-        stack->pushBoolean(isSaved);
-        stack->executeFunctionByHandler(mLuaHandlerId_dl, 4);
-        stack->clean();
-    }
-}
-
 void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_signUp = nHandler;
     cocos2d::JniMethodInfo t;
@@ -106,18 +80,6 @@ void CXAvos::signUp(const char* username, const char* password, CXLUAFUNC nHandl
     }
 }
 
-void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* error, int errorcode) {
-    if (mLuaHandlerId_signUp > 0) {
-        auto engine = LuaEngine::getInstance();
-        LuaStack* stack = engine->getLuaStack();
-        stack->pushString(objectjson);
-        stack->pushString(error);
-        stack->pushInt(errorcode);
-        stack->executeFunctionByHandler(mLuaHandlerId_signUp, 3);
-        stack->clean();
-    }
-}
-
 void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandler) {
     mLuaHandlerId_logIn = nHandler;
     cocos2d::JniMethodInfo t;
@@ -130,18 +92,6 @@ void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandle
         t.env->DeleteLocalRef(stringArg_username);
         t.env->DeleteLocalRef(stringArg_password);
         t.env->DeleteLocalRef(t.classID);
-    }
-}
-
-void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode) {
-    if (mLuaHandlerId_logIn > 0) {
-        auto engine = LuaEngine::getInstance();
-        LuaStack* stack = engine->getLuaStack();
-        stack->pushString(objectjson);
-        stack->pushString(error);
-        stack->pushInt(errorcode);
-        stack->executeFunctionByHandler(mLuaHandlerId_logIn, 3);
-        stack->clean();
     }
 }
 
@@ -182,20 +132,6 @@ void CXAvos::logInByQQAuthData(const char* openid, const char* access_token, con
         t.env->DeleteLocalRef(stringArg_access_token);
         t.env->DeleteLocalRef(stringArg_expires_in);
         t.env->DeleteLocalRef(t.classID);
-    }
-}
-
-void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* qqjson, const char* authjson, const char* error, int errorcode) {
-    if (mLuaHandlerId_logInByQQ > 0) {
-        auto engine = LuaEngine::getInstance();
-        LuaStack* stack = engine->getLuaStack();
-        stack->pushString(objectjson);
-        stack->pushString(qqjson);
-        stack->pushString(authjson);
-        stack->pushString(error);
-        stack->pushInt(errorcode);
-        stack->executeFunctionByHandler(mLuaHandlerId_logInByQQ, 5);
-        stack->clean();
     }
 }
 
