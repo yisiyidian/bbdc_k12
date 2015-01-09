@@ -20,6 +20,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
+import android.provider.*;
 import android.widget.Toast;
 
 import c.bb.dc.notification.*;
@@ -405,6 +406,20 @@ public class BBNDK {
 	
 	public static int getConnectedType_NONE() {
 		return -1;
+	}
+	
+	public static String getDeviceUDID() {
+		if (_context != null) {
+			return Settings.Secure.getString(_context.getContentResolver(), Settings.Secure.ANDROID_ID);
+		} else {
+			long currentTimeMillis = System.currentTimeMillis();
+			return String.valueOf(currentTimeMillis);
+		}
+	}
+	
+	public static long getCurrentTimeMillis() {
+		long currentTimeMillis = System.currentTimeMillis();
+		return currentTimeMillis;
 	}
 	
 	// ***************************************************************************************************************************

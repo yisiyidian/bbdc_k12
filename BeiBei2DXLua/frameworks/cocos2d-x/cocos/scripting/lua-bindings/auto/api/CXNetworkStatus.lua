@@ -17,6 +17,18 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXNetworkStatus] getDeviceUDID 
+-- @param self
+-- @return char#char ret (return value: char)
+        
+--------------------------------
+-- 
+-- @function [parent=#CXNetworkStatus] getCurrentTimeMillis 
+-- @param self
+-- @return long#long ret (return value: long)
+        
+--------------------------------
+-- 
 -- @function [parent=#CXNetworkStatus] setStatus 
 -- @param self
 -- @param #int s

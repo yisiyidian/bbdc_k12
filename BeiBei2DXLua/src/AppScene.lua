@@ -507,6 +507,21 @@ function AppScene:onUserServerDatasCompleted()
     end)
 end
 
+function AppScene:signUpOffline(name, password)
+
+end
+
+function AppScene:logInOffline()
+    if s_CURRENT_USER.bookKey == '' then
+        self:getDataBookProgress(function ()
+            s_SCENE:gotoChooseBook()
+        end)
+    else
+        -- s_SCENE:getDailyCheckIn()
+        s_SCENE:onUserServerDatasCompleted() 
+    end
+end
+
 function applicationDidEnterBackgroundLua()
     Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end

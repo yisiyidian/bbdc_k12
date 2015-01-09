@@ -1586,6 +1586,100 @@ int lua_cx_common_CXNetworkStatus_getStatus(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cx_common_CXNetworkStatus_getDeviceUDID(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXNetworkStatus* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXNetworkStatus",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXNetworkStatus*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXNetworkStatus_getDeviceUDID'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXNetworkStatus_getDeviceUDID'", nullptr);
+            return 0;
+        }
+        const char* ret = cobj->getDeviceUDID();
+        tolua_pushstring(tolua_S,(const char*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXNetworkStatus:getDeviceUDID",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXNetworkStatus_getDeviceUDID'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXNetworkStatus_getCurrentTimeMillis(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXNetworkStatus* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXNetworkStatus",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXNetworkStatus*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXNetworkStatus_getCurrentTimeMillis'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXNetworkStatus_getCurrentTimeMillis'", nullptr);
+            return 0;
+        }
+        long ret = cobj->getCurrentTimeMillis();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXNetworkStatus:getCurrentTimeMillis",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXNetworkStatus_getCurrentTimeMillis'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXNetworkStatus_setStatus(lua_State* tolua_S)
 {
     int argc = 0;
@@ -1683,6 +1777,8 @@ int lua_register_cx_common_CXNetworkStatus(lua_State* tolua_S)
     tolua_beginmodule(tolua_S,"CXNetworkStatus");
         tolua_function(tolua_S,"start",lua_cx_common_CXNetworkStatus_start);
         tolua_function(tolua_S,"getStatus",lua_cx_common_CXNetworkStatus_getStatus);
+        tolua_function(tolua_S,"getDeviceUDID",lua_cx_common_CXNetworkStatus_getDeviceUDID);
+        tolua_function(tolua_S,"getCurrentTimeMillis",lua_cx_common_CXNetworkStatus_getCurrentTimeMillis);
         tolua_function(tolua_S,"setStatus",lua_cx_common_CXNetworkStatus_setStatus);
         tolua_function(tolua_S,"getInstance", lua_cx_common_CXNetworkStatus_getInstance);
     tolua_endmodule(tolua_S);

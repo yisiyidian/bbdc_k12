@@ -54,3 +54,35 @@ int CXNetworkStatus::getStatus() {
     return m_status; 
 }
 
+const char* CXNetworkStatus::getDeviceUDID() {
+    cocos2d::JniMethodInfo t;
+    bool b = cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "getDeviceUDID", "()Ljava/lang/String;");
+    if (b) {
+        jstring judid = (jstring)(t.env->CallStaticObjectMethod(t.classID, t.methodID));
+        const char *udid = judid ? t.env->GetStringUTFChars(judid, 0) : 0;
+        if (judid) {
+            std::string ret(udid);
+            t.env->ReleaseStringUTFChars(judid, udid);
+            ALOGD("CXNetworkStatus::getDeviceUDID done")  
+            return ret.c_str();
+        } else {
+            ALOGD("CXNetworkStatus::getDeviceUDID none")  
+            return "";
+        }
+        t.env->DeleteLocalRef(t.classID);
+    }
+    return "";
+}
+
+long CXNetworkStatus::getCurrentTimeMillis() {
+    cocos2d::JniMethodInfo t;
+    bool b = cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "getCurrentTimeMillis", "()J");
+    if (b) {
+        jlong ret = t.env->CallStaticLongMethod(t.classID, t.methodID);
+        t.env->DeleteLocalRef(t.classID);
+        return (long)ret;
+    }
+    return 0;
+}
+
+

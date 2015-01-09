@@ -103,20 +103,8 @@ start = function ()
     
 -- *************************************
 if test_code == NORMAL_CODE then -- do NOT change this line
-    s_SERVER.initNetworkStatus()
     local startApp = function ()
-        if s_SERVER.isOnline() == false then
-            local hasUserInLocalDB = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
-
-            local IntroLayer = require("view.login.IntroLayer")
-            local introLayer = IntroLayer.create(hasUserInLocalDB)
-            s_SCENE:replaceGameLayer(introLayer)
-            return
-        else
-            local LoadingView = require("view.LoadingView")
-            local loadingView = LoadingView.create()
-            s_SCENE:replaceGameLayer(loadingView) 
-        end
+        s_O2OController.start()
     end
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         local SplashView = require("view.SplashView")

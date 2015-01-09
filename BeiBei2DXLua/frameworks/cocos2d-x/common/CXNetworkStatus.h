@@ -24,6 +24,10 @@ public:
 
     int getStatus();
     void setStatus(int s) { m_status = s; }
+
+    // iOS is a random MD5
+    const char* getDeviceUDID();
+    long getCurrentTimeMillis();
     
 private:
     CXNetworkStatus();
