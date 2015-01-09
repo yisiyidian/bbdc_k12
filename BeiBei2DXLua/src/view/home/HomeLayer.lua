@@ -4,6 +4,7 @@ require("common.global")
 local AlterI = require("view.alter.AlterI")
 local ImproveInfo = require("view.home.ImproveInfo")
 local MissionProgress = require("view.home.MissionProgressLayer")
+local OfflineTip = require("view.offlinetip.OffLineTipForHome")
 
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
@@ -60,6 +61,7 @@ function HomeLayer.create()
     
     local offset = 500
     local viewIndex = 1
+   
     
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
@@ -71,6 +73,15 @@ function HomeLayer.create()
     
     local setting_back
     
+    --add offline
+    local offLine = s_SERVER:isOnline() 
+    local offLineTip = OfflineTip.create()
+    if offLine == false then
+        layer:addChild(offLineTip,2)
+    end
+
+
+    
     local name = cc.Sprite:create("image/homescene/title_shouye_name.png")
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-120)
     backColor:addChild(name)
@@ -81,6 +92,10 @@ function HomeLayer.create()
             playSound(s_sound_buttonEffect)
             
         elseif eventType == ccui.TouchEventType.ended then
+            if  offLine == false then
+            offLineTip.set()
+            end
+            
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
@@ -92,6 +107,9 @@ function HomeLayer.create()
                 local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
+                
+                --offline tip
+                
             else
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 
@@ -462,6 +480,7 @@ function HomeLayer.create()
     setting_back:setAnchorPoint(1,0.5)
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
+
     
 --    
 --    local list = {}
@@ -531,6 +550,14 @@ function HomeLayer.create()
         split:setAnchorPoint(0.5,0)
         split:setPosition(button_back:getContentSize().width/2, 0)
         button_back:addChild(split)
+        
+        --add offline 
+        if i == #logo_name then
+            local offLine = s_SERVER:isOnline()
+            if offLine == false then
+               label:setColor(cc.c4b(157,157,157,255))
+            end
+        end
 
         local t = {}
         t.button_back = button_back

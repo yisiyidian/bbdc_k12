@@ -5,6 +5,7 @@ require("common.DynamicUpdate")
 local LoginAlter = require("view.login.LoginAlter")
 local VisitorRegister = require("view.login.VisitorRegister")
 local ImproveInfo = require("view.home.ImproveInfo")
+local OffLine = require("view.offlinetip.OffLineTipForLogin")
 
 local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
@@ -23,6 +24,8 @@ function IntroLayer.create(directOnLogin)
     
     local currentIndex = 1
     local moveLength = 100
+    local offLineTip
+    local offLine = s_SERVER:isOnline()  
         
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
@@ -292,6 +295,7 @@ function IntroLayer.create(directOnLogin)
         if moved then
             return
         end
+        
         local location = layer:convertToNodeSpace(touch:getLocation())
         local now_x = location.x
         if now_x - moveLength > start_x then
@@ -356,13 +360,29 @@ function IntroLayer.create(directOnLogin)
             end 
             print(currentIndex)
         end
+        
+        if offLine == false then
+            if currentIndex == 4 then
+                offLineTip.setTrue()
+            elseif currentIndex == 3 then
+                offLineTip.setFalse()
+            end
+        end
     end
-
+    
+    --add offline        
+    offLineTip = OffLine.create()
+    if offLine == false then
+        layer:addChild(offLineTip)
+    end
+    
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+    
+
     
 --    playMusic(s_sound_Pluto,true)
     return layer
