@@ -4,6 +4,7 @@ require("common.global")
 local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 
+
 local  NewStudyChooseLayer = class("NewStudyChooseLayer", function ()
     return cc.Layer:create()
 end)

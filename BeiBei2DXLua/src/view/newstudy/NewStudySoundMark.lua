@@ -1,4 +1,4 @@
-
+local OfflineTip        = require("view.offlinetip.OffLineTipForStudy")
 
 local SoundMark = class("SoundMark", function()
     return cc.Layer:create()
@@ -8,7 +8,8 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     playWordSound(wordname)
 
     local height = 80
-
+    local offLine = s_SERVER:isOnline() 
+    
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)
     main:setAnchorPoint(0.5,0.5)
@@ -24,6 +25,9 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local button_pronounce_name2    =   "image/newstudy/wordsound_end.png"
     local button_country_name1      =   "image/newstudy/changemark_begin.png"
     local button_country_name2      =   "image/newstudy/changemark_end.png"
+    
+    local offLineTip
+    
 
     local changeCountry = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -46,6 +50,9 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playWordSound(wordname)
+            if offLine == false then
+            offLineTip.setTrue()
+            end
         end
     end
 
@@ -94,6 +101,13 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     else
         button_soundmark_us:setVisible(false)
     end
+    
+    --add offline
+    offLineTip = OfflineTip.create()
+    if offLine == false then
+        main:addChild(offLineTip,2)
+    end
+
 
     return main    
 end
