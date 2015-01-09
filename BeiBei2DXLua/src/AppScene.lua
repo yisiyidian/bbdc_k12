@@ -434,28 +434,34 @@ function AppScene:signUpOffline(username, password)
 
     self:loadConfigs()
 
-    local DataLogIn = require('model.user.DataLogIn')
-    local data = DataLogIn.create()
-    data.week = week
-    data:setWeekDay(os.time())
-    s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
-    s_DATABASE_MGR.saveDataClassObject(data)
+    -- TODO: get local data and save new data
+    -- local DataLogIn = require('model.user.DataLogIn')
+    -- local data = DataLogIn.create()
+    -- data.week = week
+    -- data:setWeekDay(os.time())
+    -- s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
+    -- s_DATABASE_MGR.saveDataClassObject(data)
 
     s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER.bookProgress)
-
+    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+    
     s_CorePlayManager.enterBookLayer()
 
     hideProgressHUD()
 end
 
 function AppScene:logInOffline()
+    self:loadConfigs()
+    
+    -- TODO: get local data and save new data
+    -- log in and bookProgress
     if s_CURRENT_USER.bookKey == '' then
-        self:getDataBookProgress(function ()
-            s_SCENE:gotoChooseBook()
-        end)
+        s_CorePlayManager.enterBookLayer()
     else
-        s_SCENE:onUserServerDatasCompleted() 
+        s_CorePlayManager.enterHomeLayer()
     end
+
+    hideProgressHUD()
 end
 
 function applicationDidEnterBackgroundLua()
