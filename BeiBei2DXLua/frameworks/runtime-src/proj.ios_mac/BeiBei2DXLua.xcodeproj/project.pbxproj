@@ -91,6 +91,8 @@
 		AB6CB6F71A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
 		B85077501A5E664D00A66723 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B850774F1A5E664D00A66723 /* Reachability.m */; };
 		B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077511A5E67E900A66723 /* CXAvosCommon.cpp */; };
+		B85077581A5F7CC400A66723 /* CXNetworkStatusCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */; };
+		B850775A1A5F7CD500A66723 /* CXNetworkStatus.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */; };
 		B89B86901A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		B89B86911A454C3C00E596E0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */; };
 		B89B86931A454CFC00E596E0 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B86921A454CFC00E596E0 /* libiconv.dylib */; };
@@ -296,6 +298,9 @@
 		B850774E1A5E664D00A66723 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../Classes/Reachability.h; sourceTree = "<group>"; };
 		B850774F1A5E664D00A66723 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../Classes/Reachability.m; sourceTree = "<group>"; };
 		B85077511A5E67E900A66723 /* CXAvosCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXAvosCommon.cpp; sourceTree = "<group>"; };
+		B85077561A5F7CC400A66723 /* CXNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkStatus.h; sourceTree = "<group>"; };
+		B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXNetworkStatusCommon.cpp; sourceTree = "<group>"; };
+		B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXNetworkStatus.mm; sourceTree = "<group>"; };
 		B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = frameworks/TencentOpenAPI/TencentOpenAPI.framework; sourceTree = "<group>"; };
 		B89B86921A454CFC00E596E0 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
@@ -531,6 +536,8 @@
 				B8C5C35D1A44219A00593E15 /* CXAnalytics.h */,
 				B8C5C35E1A44219A00593E15 /* CXAvos.h */,
 				B85077511A5E67E900A66723 /* CXAvosCommon.cpp */,
+				B85077561A5F7CC400A66723 /* CXNetworkStatus.h */,
+				B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */,
 				660224341A370E4B00233788 /* CXProgressHUD.h */,
 				660224351A370E4B00233788 /* CXStore.cpp */,
 				660224361A370E4B00233788 /* CXStore.h */,
@@ -546,6 +553,7 @@
 		660224391A370E4B00233788 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */,
 				B8C5C3591A44218E00593E15 /* CXAnalytics.mm */,
 				B8C5C35A1A44218E00593E15 /* CXAvos.mm */,
 				6602243A1A370E4B00233788 /* CXMailFeedBack.mm */,
@@ -914,6 +922,7 @@
 				6602245A1A370E4B00233788 /* md5.c in Sources */,
 				15AA9648199B6D4600725633 /* lua_debugger.c in Sources */,
 				3EB5156A1952865D006966AA /* once.cc in Sources */,
+				B850775A1A5F7CD500A66723 /* CXNetworkStatus.mm in Sources */,
 				660224541A370E4B00233788 /* CXMailFeedBack.mm in Sources */,
 				660224501A370E4B00233788 /* CXStore.cpp in Sources */,
 				C00FD4981938512100C6382D /* Portrait_png.cpp in Sources */,
@@ -941,6 +950,7 @@
 				3EB515681952865D006966AA /* common.cc in Sources */,
 				C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */,
 				B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */,
+				B85077581A5F7CC400A66723 /* CXNetworkStatusCommon.cpp in Sources */,
 				3EB5155A1952865D006966AA /* generated_message_util.cc in Sources */,
 				660224561A370E4B00233788 /* CXProgressHUD.mm in Sources */,
 				AB6CB6F61A1F275E009C2562 /* FileServer.cpp in Sources */,

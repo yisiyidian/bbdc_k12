@@ -26,4 +26,9 @@
 -- @field [parent=#cx] CXProgressHUD#CXProgressHUD CXProgressHUD preloaded module
 
 
+--------------------------------------------------------
+-- the cx CXNetworkStatus
+-- @field [parent=#cx] CXNetworkStatus#CXNetworkStatus CXNetworkStatus preloaded module
+
+
 return nil

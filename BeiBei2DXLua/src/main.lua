@@ -103,6 +103,10 @@ start = function ()
     
 -- *************************************
 if test_code == NORMAL_CODE then -- do NOT change this line
+    s_SERVER.initNetworkStatus()
+    if s_SERVER.isOnline() then
+        print ('s_SERVER.isOnline')
+    end
     local startApp = function ()
         local LoadingView = require("view.LoadingView")
         local loadingView = LoadingView.create()

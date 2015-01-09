@@ -279,8 +279,23 @@ end
 
 -- network status >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+NETWORK_STATUS_NONE = -1
+NETWORK_STATUS_WIFI = 1
+NETWORK_STATUS_MOBILE = 2
+
+function Server.initNetworkStatus()
+    cx.CXNetworkStatus:getInstance():start()
+end
+
 function Server.isOnline()
-    return true
+    local status = cx.CXNetworkStatus:getInstance():getStatus()
+    if status == NETWORK_STATUS_WIFI then
+        return true
+    elseif status == NETWORK_STATUS_MOBILE then
+        return true
+    else
+        return false
+    end
 end
 
 return Server

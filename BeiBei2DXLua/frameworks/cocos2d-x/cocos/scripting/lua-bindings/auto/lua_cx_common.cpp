@@ -4,6 +4,7 @@
 #include "CXUtils.h"
 #include "CXStore.h"
 #include "CXProgressHUD.h"
+#include "CXNetworkStatus.h"
 #include "tolua_fix.h"
 #include "LuaBasicConversions.h"
 
@@ -1490,6 +1491,205 @@ int lua_register_cx_common_CXProgressHUD(lua_State* tolua_S)
     g_typeCast["CXProgressHUD"] = "CXProgressHUD";
     return 1;
 }
+
+int lua_cx_common_CXNetworkStatus_start(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXNetworkStatus* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXNetworkStatus",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXNetworkStatus*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXNetworkStatus_start'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXNetworkStatus_start'", nullptr);
+            return 0;
+        }
+        cobj->start();
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXNetworkStatus:start",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXNetworkStatus_start'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXNetworkStatus_getStatus(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXNetworkStatus* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXNetworkStatus",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXNetworkStatus*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXNetworkStatus_getStatus'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXNetworkStatus_getStatus'", nullptr);
+            return 0;
+        }
+        int ret = cobj->getStatus();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXNetworkStatus:getStatus",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXNetworkStatus_getStatus'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXNetworkStatus_setStatus(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXNetworkStatus* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXNetworkStatus",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXNetworkStatus*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXNetworkStatus_setStatus'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        int arg0;
+
+        ok &= luaval_to_int32(tolua_S, 2,(int *)&arg0, "CXNetworkStatus:setStatus");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXNetworkStatus_setStatus'", nullptr);
+            return 0;
+        }
+        cobj->setStatus(arg0);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXNetworkStatus:setStatus",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXNetworkStatus_setStatus'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXNetworkStatus_getInstance(lua_State* tolua_S)
+{
+    int argc = 0;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertable(tolua_S,1,"CXNetworkStatus",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    argc = lua_gettop(tolua_S) - 1;
+
+    if (argc == 0)
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXNetworkStatus_getInstance'", nullptr);
+            return 0;
+        }
+        CXNetworkStatus* ret = CXNetworkStatus::getInstance();
+        object_to_luaval<CXNetworkStatus>(tolua_S, "CXNetworkStatus",(CXNetworkStatus*)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "CXNetworkStatus:getInstance",argc, 0);
+    return 0;
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXNetworkStatus_getInstance'.",&tolua_err);
+#endif
+    return 0;
+}
+static int lua_cx_common_CXNetworkStatus_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (CXNetworkStatus)");
+    return 0;
+}
+
+int lua_register_cx_common_CXNetworkStatus(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"CXNetworkStatus");
+    tolua_cclass(tolua_S,"CXNetworkStatus","CXNetworkStatus","",nullptr);
+
+    tolua_beginmodule(tolua_S,"CXNetworkStatus");
+        tolua_function(tolua_S,"start",lua_cx_common_CXNetworkStatus_start);
+        tolua_function(tolua_S,"getStatus",lua_cx_common_CXNetworkStatus_getStatus);
+        tolua_function(tolua_S,"setStatus",lua_cx_common_CXNetworkStatus_setStatus);
+        tolua_function(tolua_S,"getInstance", lua_cx_common_CXNetworkStatus_getInstance);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(CXNetworkStatus).name();
+    g_luaType[typeName] = "CXNetworkStatus";
+    g_typeCast["CXNetworkStatus"] = "CXNetworkStatus";
+    return 1;
+}
 TOLUA_API int register_all_cx_common(lua_State* tolua_S)
 {
 	tolua_open(tolua_S);
@@ -1497,6 +1697,7 @@ TOLUA_API int register_all_cx_common(lua_State* tolua_S)
 	tolua_module(tolua_S,"cx",0);
 	tolua_beginmodule(tolua_S,"cx");
 
+	lua_register_cx_common_CXNetworkStatus(tolua_S);
 	lua_register_cx_common_CXUtils(tolua_S);
 	lua_register_cx_common_CXAnalytics(tolua_S);
 	lua_register_cx_common_CXProgressHUD(tolua_S);
