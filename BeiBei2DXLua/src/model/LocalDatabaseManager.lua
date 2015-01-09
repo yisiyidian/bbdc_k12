@@ -17,12 +17,6 @@ function Manager.open()
     local databasePath = cc.FileUtils:getInstance():getWritablePath() .. "localDB.sqlite"
     Manager.database = sqlite3.open(databasePath)
     s_logd('databasePath:' .. databasePath)
-    
-    -- TODO
-    -- check version update
-    -- if s_APP_VERSION == 150000 then
-    --     updateLocalDatabase()
-    -- end
 end
 
 -- close local sqlite
@@ -46,6 +40,8 @@ function Manager.alterLocalDatabase(objectOfDataClass)
         if (key == 'sessionToken'  
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
+
+            if key == 'PRIMARY' then key = 'fuckprimary' end
 
             local data = nil
             if (type(value) == 'string') then
@@ -96,6 +92,8 @@ function Manager.createTable(objectOfDataClass)
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
+            if key == 'PRIMARY' then key = 'fuckprimary' end
+
             if (type(value) == 'string') then
                 if string.len(str) > 1 then str = str .. ',\n' end
                 str = str .. key .. ' TEXT'
@@ -110,8 +108,12 @@ function Manager.createTable(objectOfDataClass)
     end
 
     sql = sql .. str .. '\n);'
-    -- print (sql)
-    Manager.database:exec(sql)
+    local ret = Manager.database:exec(sql)
+    print ('Manager.createTable: ' .. objectOfDataClass.className .. ', ' .. tostring(ret))
+    if ret ~= 0 then
+        print (sql)
+        print_lua_table (objectOfDataClass)
+    end
 
     Manager.alterLocalDatabase(objectOfDataClass)
 end
@@ -211,8 +213,9 @@ function Manager.initTables()
         require('model.user.DataDailyWord'),
         require('model.user.DataIAP'),
         require('model.user.DataLevel'),
-        require('model.user.DataLogIn'),           -- IC_loginDate same as DataLogIn
-        require('model.user.DataUser')             -- db_userInfo same as DataUser
+        require('model.user.DataLogIn'),
+        require('model.user.DataUser'),
+        require('model.user.DataBookProgress')
     }
     for i = 1, #userDataClasses do
         Manager.createTable(userDataClasses[i].create())
@@ -238,6 +241,8 @@ function Manager.saveDataClassObject(objectOfDataClass)
             if (key == 'sessionToken'  
                 or string.find(key, '__') ~= nil 
                 or value == nil) == false then 
+
+                if key == 'PRIMARY' then key = 'fuckprimary' end
 
                 if (type(value) == 'string') then
                     if string.len(keys) > 0 then keys = keys .. ',' end
@@ -275,6 +280,8 @@ function Manager.saveDataClassObject(objectOfDataClass)
             if (key == 'sessionToken'  
                 or string.find(key, '__') ~= nil 
                 or value == nil) == false then 
+
+                if key == 'PRIMARY' then key = 'fuckprimary' end
 
                 if (type(value) == 'string') then
                     if string.len(str) > 0 then str = str .. ',' end
