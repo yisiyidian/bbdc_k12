@@ -98,8 +98,9 @@ static CXNS *g_instance = nil;
 
 @end
 
-void CXNetworkStatus::start() {
+int CXNetworkStatus::start() {
     [[CXNS getInstance] start];
+    return m_status; 
 }
 
 int CXNetworkStatus::getStatus() { 

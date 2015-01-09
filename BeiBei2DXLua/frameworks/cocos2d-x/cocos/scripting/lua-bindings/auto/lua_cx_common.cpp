@@ -1525,8 +1525,9 @@ int lua_cx_common_CXNetworkStatus_start(lua_State* tolua_S)
             tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXNetworkStatus_start'", nullptr);
             return 0;
         }
-        cobj->start();
-        return 0;
+        int ret = cobj->start();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
     }
     luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXNetworkStatus:start",argc, 0);
     return 0;

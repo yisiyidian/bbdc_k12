@@ -7,6 +7,7 @@
 -- 
 -- @function [parent=#CXNetworkStatus] start 
 -- @param self
+-- @return int#int ret (return value: int)
         
 --------------------------------
 -- 
