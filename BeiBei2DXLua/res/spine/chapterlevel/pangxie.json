@@ -1,0 +1,89 @@
+{
+"skeleton": { "hash": "R12tq8S41I/D0hqw68iXv+8xCj4", "spine": "2.1.07", "width": 79.36, "height": 53.32, "images": "./spine/pangxie/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 52.47, "x": 60.88, "y": 27.68, "rotation": -87.29 },
+	{ "name": "bone2", "parent": "bone", "length": 18.36, "x": -25.91, "y": 7.1, "rotation": -12.43 },
+	{ "name": "bone3", "parent": "bone2", "length": 23.12, "x": -0.47, "y": -8.31, "rotation": 12.43 }
+],
+"slots": [
+	{ "name": "pangxiezhuazi", "bone": "bone", "attachment": "pangxiezhuazi" },
+	{ "name": "zuozhuazi", "bone": "bone", "attachment": "zuozhuazi" },
+	{ "name": "eye", "bone": "bone", "attachment": "eye" },
+	{ "name": "ke", "bone": "bone", "attachment": "ke" },
+	{ "name": "youqianshou", "bone": "bone3", "attachment": "youqianshou" },
+	{ "name": "youqianzha", "bone": "bone2", "attachment": "youqianzha" },
+	{ "name": "zuoqiandakai", "bone": "bone2", "attachment": "zuoqiandakai" },
+	{ "name": "zuoqianshou", "bone": "bone3", "attachment": "zuoqianshou" }
+],
+"skins": {
+	"default": {
+		"eye": {
+			"eye": { "x": -11.73, "y": 4.55, "rotation": 85.41, "width": 20, "height": 8 }
+		},
+		"ke": {
+			"ke": { "x": 6.52, "y": 0.27, "rotation": 87.29, "width": 42, "height": 35 }
+		},
+		"pangxiezhuazi": {
+			"pangxiezhuazi": { "x": 13.79, "y": 23.42, "rotation": 86.87, "width": 31, "height": 23 }
+		},
+		"youqianshou": {
+			"youqianshou": { "x": 21.09, "y": 21.66, "rotation": 87.29, "width": 18, "height": 32 }
+		},
+		"youqianzha": {
+			"youqianzha": { "x": 13.47, "y": 21.64, "rotation": 99.72, "width": 21, "height": 32 }
+		},
+		"zuoqiandakai": {
+			"zuoqiandakai": { "x": 16.86, "y": -17.45, "rotation": 99.72, "width": 21, "height": 33 }
+		},
+		"zuoqianshou": {
+			"zuoqianshou": { "x": 15.7, "y": -13.1, "rotation": 87.29, "width": 16, "height": 32 }
+		},
+		"zuozhuazi": {
+			"zuozhuazi": { "x": 2.2, "y": -24.86, "rotation": 87.29, "width": 30, "height": 21 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"youqianshou": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.2666, "name": "youqianshou" },
+					{ "time": 1.5, "name": null },
+					{ "time": 1.8666, "name": "youqianshou" },
+					{ "time": 2.3, "name": null }
+				]
+			},
+			"youqianzha": {
+				"attachment": [
+					{ "time": 0, "name": "youqianzha" },
+					{ "time": 1.2666, "name": null },
+					{ "time": 1.5, "name": "youqianzha" },
+					{ "time": 1.8666, "name": null },
+					{ "time": 2.3, "name": "youqianzha" }
+				]
+			},
+			"zuoqiandakai": {
+				"attachment": [
+					{ "time": 0, "name": "zuoqiandakai" },
+					{ "time": 1.2666, "name": null },
+					{ "time": 1.5, "name": "zuoqiandakai" },
+					{ "time": 1.8666, "name": null },
+					{ "time": 2.3, "name": "zuoqiandakai" }
+				]
+			},
+			"zuoqianshou": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.2666, "name": "zuoqianshou" },
+					{ "time": 1.5, "name": null },
+					{ "time": 1.8666, "name": "zuoqianshou" },
+					{ "time": 2.3, "name": null }
+				]
+			}
+		}
+	}
+}
+}
