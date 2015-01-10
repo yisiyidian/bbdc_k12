@@ -77,9 +77,36 @@ function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
-    if currentProgress['chapter'] ~= oldProgress['chapter'] then   -- TODO unlock chapter
-        -- add next chapter
-        self:addChapterIntoListView(currentProgress['chapter'])
+    if currentProgress['chapter'] ~= oldProgress['chapter'] then
+        -- unlock chapter
+        s_SCENE:callFuncWithDelay(delayTime, function()
+--            self:plotUnlockCloudAnimation()
+            local delay_t = 0
+            -- plot player
+            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
+            self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
+            for index = 1, (currentLevelIndex - 0) do
+                s_SCENE:callFuncWithDelay(delayTime,function()
+                    self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
+                    -- move player
+                    s_SCENE:callFuncWithDelay(0.3,function()
+                        local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
+                        local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+                        self.player:runAction(action)
+                    end)
+                end)
+                delay_t = delay_t + 1
+            end
+            s_SCENE:callFuncWithDelay(delay_t+1, function()
+                -- add notification
+                self:addPlayerNotification(false) 
+            end) 
+            
+            s_Scene:callFuncWithDelay(delay_t+2,function()            
+                -- add next chapter
+                self:addChapterIntoListView(currentProgress['chapter'])
+            end)
+        end)
         -- unlock level first 
         local oldLevelIndex = string.sub(oldProgress['level'], 6)
         local currentLevelIndex = string.sub(currentProgress['level'],6)
@@ -99,9 +126,18 @@ function ChapterLayer:checkUnlockLevel()
                 self.chapterDic[oldProgress['chapter']]:plotUnlockLevelAnimation('level'..(oldLevelIndex+index))
                 -- move player
                 s_SCENE:callFuncWithDelay(0.3,function()
+                    local notification = self.player:getChildByTag(100)
                     local nextLevelPosition = self.chapterDic[oldProgress['chapter']]:getLevelPosition('level'..(oldLevelIndex+index))
-                    local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
-                    self.player:runAction(action)
+                    local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+                    local notificationAction1 = function()
+                        if index == currentLevelIndex - oldLevelIndex then
+                            local notificationAct = cc.ScaleTo:create(0.4,1)
+                            notification:runAction(notificationAct)
+                        end
+                    end
+                    self.player:runAction(cc.Sequence:create(playerAction,
+                        cc.DelayTime:create(0.6),
+                        cc.CallFunc:create(notificationAction1)))
                 end)
             end)
             delayTime = delayTime + 1
@@ -110,42 +146,34 @@ function ChapterLayer:checkUnlockLevel()
         s_SCENE:callFuncWithDelay(0.5, function()
             self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
         end)
-        -- unlock chapter
-        s_SCENE:callFuncWithDelay(delayTime, function()
-            --self:plotUnlockCloudAnimation()
-            local delay_t = 0
-            -- plot player
-            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
-            self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
-            for index = 1, (currentLevelIndex - 0) do
-                s_SCENE:callFuncWithDelay(delayTime,function()
-                    self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
-                    -- move player
-                    s_SCENE:callFuncWithDelay(0.3,function()
-                        local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
-                        local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
-                        self.player:runAction(action)
-                    end)
-                end)
-                delay_t = delay_t + 1
-            end
-            s_SCENE:callFuncWithDelay(delay_t+1, function()
-                -- add notification
-                self:addPlayerNotification() 
-            end) 
-        end)
     elseif currentProgress['level'] ~= oldProgress['level'] then   -- unlock level
         local oldLevelIndex = string.sub(oldProgress['level'], 6)
         local currentLevelIndex = string.sub(currentProgress['level'],6)
         local delayTime = 0
+        s_SCENE:callFuncWithDelay(delayTime, 
+            function()
+                -- add notification
+                self:addPlayerNotification(false) 
+            end
+        )  
+        
         for index = 1, (currentLevelIndex - oldLevelIndex) do
             s_SCENE:callFuncWithDelay(delayTime,function()
                 self.chapterDic[oldProgress['chapter']]:plotUnlockLevelAnimation('level'..(oldLevelIndex+index))
                 -- move player
                 s_SCENE:callFuncWithDelay(0.3,function()
+                    local notification = self.player:getChildByTag(100)
                     local nextLevelPosition = self.chapterDic[oldProgress['chapter']]:getLevelPosition('level'..(oldLevelIndex+index))
-                    local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
-                    self.player:runAction(action)
+                    local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+                    local notificationAction1 = function()
+                        if index == currentLevelIndex - oldLevelIndex then
+                            local notificationAct = cc.ScaleTo:create(0.4,1)
+                            notification:runAction(notificationAct)
+                        end
+                    end
+                    self.player:runAction(cc.Sequence:create(playerAction,
+                                          cc.DelayTime:create(0.6),
+                                          cc.CallFunc:create(notificationAction1)))
                 end)
             end)
             delayTime = delayTime + 1
@@ -154,19 +182,14 @@ function ChapterLayer:checkUnlockLevel()
             self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime)
 --            s_CURRENT_USER.bookProgress:updateDataToServer(s_CURRENT_USER.bookKey)
         end)
-        s_SCENE:callFuncWithDelay(delayTime, function()
-            -- add notification
-            
-           self:addPlayerNotification() 
-        end)  
     else
         -- add notification
-        self:addPlayerNotification() 
+        self:addPlayerNotification(true) 
     end
 end
 
 
-function ChapterLayer:addPlayerNotification()  -- notification
+function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
     local type
     print('gameState:'..s_DATABASE_MGR.getGameState())
@@ -183,7 +206,13 @@ function ChapterLayer:addPlayerNotification()  -- notification
     end
 --    type = 'reviewboss'
     local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
-    notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height+80)
+    notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height)
+    notification:setAnchorPoint(cc.p(0.5,0))
+    notification:setScale(0)
+    if isRunScale == true then
+        notification:runAction(cc.ScaleTo:create(0.4,1))
+    end
+    notification:setTag(100)
     self.player:addChild(notification, 100)
 --    type = 'complete'
     -- TODO show message according to type
@@ -534,7 +563,7 @@ function ChapterLayer:addBeansUI()
     self.beanCountLabel:setColor(cc.c3b(13, 95, 156))
     self.beanCountLabel:ignoreAnchorPointForPosition(false)
     self.beanCountLabel:setAnchorPoint(1,0)
-    self.beanCountLabel:setPosition(108,2)
+    self.beanCountLabel:setPosition(105,2)
     self.beans:addChild(self.beanCountLabel,10)
 end
 
