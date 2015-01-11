@@ -90,43 +90,53 @@ function NewStudyChooseLayer.create()
                       
             local feedback 
             if sender.tag == 1 then  
-                feedback = cc.Sprite:create("image/newstudy/righttip.png")
+                feedback = cc.Sprite:create("image/newstudy/right.png")            
             else  
-                feedback = cc.Sprite:create("image/newstudy/falsetip.png")
+                feedback = cc.Sprite:create("image/newstudy/wrong.png")
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
-            
-            s_SCENE:callFuncWithDelay(0.5,function()  
-                if sender.tag == 1 then
+
+            if sender.tag == 1 then  
                     if s_CorePlayManager.isStudyModel() then
+                        local action1 = cc.DelayTime:create(0.5)
+                        feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                         AnalyticsStudyAnswerRight()
-                        
                         s_CorePlayManager.enterNewStudyRightLayer()
-                    else
+                        end)))
+                    else             
+                        local action1 = cc.MoveTo:create(0.5,cc.p((backColor.getProgressBarIndexPosition()) - 20,1120 - sender:getPositionY()))
+                        local action2 = cc.ScaleTo:create(0.2,0)
+                        feedback:runAction(cc.Sequence:create(action1, action2,cc.CallFunc:create(function() 
                         AnalyticsStudyAnswerRight_strikeWhileHot()
-                        
+
                         s_CorePlayManager.updateWordCandidate(false)
-                        
+
                         if s_CorePlayManager.candidateNum == 0 then
                             s_CorePlayManager.checkInOverModel()
                             s_CorePlayManager.enterNewStudySuccessLayer()
                         else
                             s_CorePlayManager.enterNewStudyChooseLayer()
                         end
+                        end)))
+
                     end
-                else
+
+            else
+                local action1 = cc.DelayTime:create(0.5)
+                feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     if s_CorePlayManager.isStudyModel() then
                         AnalyticsStudyGuessWrong()
-                        
+
                         s_CorePlayManager.enterNewStudyWrongLayer()
                     else
                         AnalyticsStudyGuessWrong_strikeWhileHot()
-                        
+
                         s_CorePlayManager.enterNewStudyWrongLayer()
                     end
-                end   
-            end)
+                end)))
+            end
+          
         end
     end
 
