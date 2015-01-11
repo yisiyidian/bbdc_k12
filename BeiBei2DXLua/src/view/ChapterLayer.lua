@@ -557,8 +557,8 @@ function ChapterLayer:shakeBeansUI(beansIncrement)
         self.beans:addChild(addBeanLabel)
         
         local addBeanLabelAct1 = cc.MoveTo:create(0.2,cc.p(addBeanLabel:getPositionX(),addBeanLabel:getPositionY()+10))
-        local addBeanLabelAct12 = cc.FadeOut:create(0.3)
-        addBeanLabel:runAction(cc.Spawn:create(addBeanLabelAct1,addBeanLabelAct12))
+        local addBeanLabelAct2 = cc.FadeOut:create(0.3)
+        addBeanLabel:runAction(cc.Spawn:create(addBeanLabelAct1,addBeanLabelAct2))
     end
 end
 

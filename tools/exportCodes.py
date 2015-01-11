@@ -147,7 +147,8 @@ function getAppVersionDebugInfo()
     if RELEASE_FOR_APPSTORE == RELEASE_APP then return end
 
     local str = ''
-    if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
+    -- if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
+    str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName
     if AgentManager ~= nil then
         str = 'name:' .. str .. '\\nchannel:' .. AgentManager:getInstance():getChannelId() .. ' v:' .. s_APP_VERSION .. '\\n%s'
     else

@@ -23,8 +23,6 @@ local Chapter0ResTable = {
     ,island7Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(300, 652),"island"}
     ,island8Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(223, 315),"island"}
     ,island9Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(382,80),"island"}
-    ,whale1 = {"image/chapter/chapter0/whale.png",cc.p(0,1),cc.p(220,1200),"whale1"}
-    ,whale2 = {"image/chapter/chapter0/whale.png",cc.p(0,1),cc.p(500,2100),"whale2"}
 }
 -- resourceType "start" / "middle" / "end"
 function ChapterLayer0.create(resourceType)
@@ -52,21 +50,21 @@ function ChapterLayer0:addWaveAnimation(position)
     -- wave 1
     wave1:setPosition(cc.p(position.x-20, position.y+20))
     self:addChild(wave1,120)
-    local scale = math.random(4, 10) / 10 + 0.7
+    local scale = math.random(4, 6) / 10 + 0.7
     wave1:setScale(scale)
     
-    local action1 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(-100, 0)))
-    local action2 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(100, 0)))
+    local action1 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(-20, 0)))
+    local action2 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(20, 0)))
     local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
     wave1:runAction(action3)
     -- wave 2
     wave2:setPosition(cc.p(position.x-20, position.y))
     self:addChild(wave2,130)
-    local action4 = cc.MoveBy:create(5, cc.p(80, 0))
-    local action5 = cc.MoveBy:create(5, cc.p(-80, 0))
+    local action4 = cc.MoveBy:create(5, cc.p(20, 0))
+    local action5 = cc.MoveBy:create(5, cc.p(-20, 0))
     local action6 = cc.RepeatForever:create(cc.Sequence:create(action4, action5))
     wave2:runAction(action6)
-    scale = math.random(4, 10) / 10 + 0.7
+    scale = math.random(4, 6) / 10 + 0.7
     wave2:setScale(scale)
     
 end
@@ -82,9 +80,6 @@ function ChapterLayer0:loadResource()
         self:createObjectForResource(Chapter0ResTable['back3_1'])
     end
     
-    -- add whale
-    self:createObjectForResource(Chapter0ResTable['whale1'])
-    self:createObjectForResource(Chapter0ResTable['whale2'])
     -- plot boat
     local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
     boat1:addAnimation(0, 'animation', true)
@@ -94,15 +89,40 @@ function ChapterLayer0:loadResource()
     boat2:addAnimation(0, 'animation', true)
     boat2:setPosition(550, 690)
     self:addChild(boat2, 140)
+
+    -- whales
+    local whale1 = sp.SkeletonAnimation:create('spine/chapterlevel/jingyu.json', 'spine/chapterlevel/jingyu.atlas',1)
+    whale1:addAnimation(0, 'animation', true)
+    whale1:setPosition(300,1200)
+    self:addChild(whale1, 140)
+
+    local whale2 = sp.SkeletonAnimation:create('spine/chapterlevel/jingyu.json', 'spine/chapterlevel/jingyu.atlas',1)
+    whale2:addAnimation(0, 'animation', true)
+    whale2:setPosition(500,2100)
+    self:addChild(whale2, 140)
+    
+    --crab
+    local crab = sp.SkeletonAnimation:create('spine/chapterlevel/pangxie.json', 'spine/chapterlevel/pangxie.atlas',1)
+    crab:addAnimation(0, 'animation', true)
+    crab:setPosition(500,1800)
+    self:addChild(crab, 140)  
+    local crabAction1 = cc.MoveBy:create(2,cc.p(50,-10))  
+    local crabAction2 = cc.MoveBy:create(2,cc.p(-50,10))  
+    local crabAction3 = cc.RotateBy:create(2,-10)
+    local crabAction4 = cc.RotateBy:create(2,10)
+    local crabAction5 = cc.RepeatForever:create(cc.Sequence:create(crabAction1,crabAction2))
+    local crabAction6 = cc.RepeatForever:create(cc.Sequence:create(crabAction3,crabAction4))
+    crab:runAction(crabAction5)
+    crab:runAction(crabAction6)
     
     -- wave action
+    self:addWaveAnimation(cc.p(400, 200))
+    self:addWaveAnimation(cc.p(600, 600))
     self:addWaveAnimation(cc.p(280, 1050))
+    self:addWaveAnimation(cc.p(380, 1700))
     self:addWaveAnimation(cc.p(600, 2000))
     self:addWaveAnimation(cc.p(300, 2200))
-    self:addWaveAnimation(cc.p(600, 600))
-    self:addWaveAnimation(cc.p(300, 200))
-    self:addWaveAnimation(cc.p(350, 1660))
-    self:addWaveAnimation(cc.p(600, 2500))
+    self:addWaveAnimation(cc.p(520, 2500))
 end
 
 return ChapterLayer0

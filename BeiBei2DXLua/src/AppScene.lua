@@ -268,90 +268,13 @@ function AppScene:logInByQQAuthData()
     self:startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
 
--- function AppScene:getDailyCheckIn()
---     showProgressHUD(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_LOADING_UPDATE_DAILY_LOGIN_DATA))
---     local co
---     co = coroutine.create(function(results)
---         if (results ~= nil) and (#results > 0) then
---             print ('getDailyCheckInOfCurrentUser: 02')
---             s_CURRENT_USER:parseServerDailyCheckInData(results)
---             s_SCENE:getConfigs(false)
---         else
---             print ('getDailyCheckInOfCurrentUser: 03')
---             s_CURRENT_USER.dailyCheckInData.userId = s_CURRENT_USER.objectId
---             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData, 
---                 function (api, result)
---                     print_lua_table (s_CURRENT_USER.dailyCheckInData)
---                     coroutine.resume(co, {})
---                 end,
---                 function (api, code, message, description)
---                     coroutine.resume(co, {})
---                 end)
---             coroutine.yield()
---             s_SCENE:getConfigs(false)
---         end    
---     end)
---     s_UserBaseServer.getDailyCheckInOfCurrentUser( 
---         function (api, result)
---             print ('getDailyCheckInOfCurrentUser: 00')
---             coroutine.resume(co, result.results)
---         end,
---         function (api, code, message, description) 
---             print ('getDailyCheckInOfCurrentUser: 01')
---             coroutine.resume(co, {}) -- can not pass nil value
---         end
---     )
--- end
-
--- function AppScene:getLevels()
---     local co
---     co = coroutine.create(function(results)
---         if (results ~= nil) and (#results > 0) then
---             s_CURRENT_USER:parseServerLevelData(results)
---             s_SCENE:onUserServerDatasCompleted() 
---             return
---         else
---             -- when got no level datas from server
---             s_CURRENT_USER:setUserLevelDataOfUnlocked('chapter0', 'level0', 1, 
---                 function (api, result)
---                     s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
---                         function (api, result)
---                             coroutine.resume(co, {})
---                         end,
---                         function (api, code, message, description)
---                             coroutine.resume(co, {})
---                         end)
---                 end,
---                 function (api, code, message, description)
---                     coroutine.resume(co, {})
---                 end)
---             coroutine.yield()
---             s_SCENE:onUserServerDatasCompleted() 
---         end
---     end)
-
---     showProgressHUD(LOADING_TEXTS[_TEXT_ID_LV])
---     s_UserBaseServer.getLevelsOfCurrentUser(
---         function (api, result)
---             coroutine.resume(co, result.results)
---         end,
---         function (api, code, message, description)
---             coroutine.resume(co, {}) -- can not pass nil value
---         end
---     )
--- end
-
 function AppScene:loadConfigs()
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_CFG])
     
     s_DATA_MANAGER.loadBooks()
     s_BookWord = s_DATA_MANAGER.loadBookWords()
     s_DATA_MANAGER.loadChapters()
-    -- s_DATA_MANAGER.loadDailyCheckIns()
-    -- s_DATA_MANAGER.loadEnergy()
-    -- s_DATA_MANAGER.loadItems()
     s_DATA_MANAGER.loadReviewBoss()
-    -- s_DATA_MANAGER.loadStarRules()
 
     s_WordPool = s_DATA_MANAGER.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
@@ -428,7 +351,7 @@ function AppScene:getDataBookProgress(oncompleted)
 end
 
 function AppScene:getDataLogIn(onSaved)
-    local DataLogIn = require('model/user/DataLogIn')
+    local DataLogIn = require('model.user.DataLogIn')
     local function updateWeek(data, week)
         if data == nil then 
             data = DataLogIn.create()
@@ -484,8 +407,6 @@ end
 -- with book key
 function AppScene:onUserServerDatasCompleted()    
     self:saveSignUpAndLogInData(function ()
-        --s_DATA_MANAGER.loadLevels(s_CURRENT_USER.bookKey)
-        --s_CURRENT_USER:initChapterLevelAfterLogin() -- update user data
         s_CorePlayManager.enterHomeLayer()
 
         showProgressHUD()
@@ -505,6 +426,42 @@ function AppScene:onUserServerDatasCompleted()
         end)
 
     end)
+end
+
+function AppScene:signUpOffline(username, password)
+    s_CURRENT_USER.username = username
+    s_CURRENT_USER.password = password
+
+    self:loadConfigs()
+
+    -- TODO: get local data and save new data
+    -- local DataLogIn = require('model.user.DataLogIn')
+    -- local data = DataLogIn.create()
+    -- data.week = week
+    -- data:setWeekDay(os.time())
+    -- s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
+    -- s_DATABASE_MGR.saveDataClassObject(data)
+
+    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER.bookProgress)
+    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+    
+    s_CorePlayManager.enterBookLayer()
+
+    hideProgressHUD()
+end
+
+function AppScene:logInOffline()
+    self:loadConfigs()
+    
+    -- TODO: get local data and save new data
+    -- log in and bookProgress
+    if s_CURRENT_USER.bookKey == '' then
+        s_CorePlayManager.enterBookLayer()
+    else
+        s_CorePlayManager.enterHomeLayer()
+    end
+
+    hideProgressHUD()
 end
 
 function applicationDidEnterBackgroundLua()

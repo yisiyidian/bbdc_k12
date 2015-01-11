@@ -57,46 +57,9 @@ function IntroLayer.create(directOnLogin)
     head:setPosition(s_DESIGN_WIDTH/2, 800)
     intro:addChild(head)
     
-    local genRandomUserName = function()
-        local userNameLength = 8
-        local userName = ""
-        
-        math.randomseed(os.time())
-        for i = 1, userNameLength do
-            local randomIndex = math.random(0, 25)
-            local randomSmallCharIndex = string.byte('a') + randomIndex
-            local randomBigCharIndex   = string.byte('A') + randomIndex
-            
-            randomIndex = math.random(1, 2)
-            if randomIndex == 1 then
-                userName = userName .. string.char(randomSmallCharIndex)
-            else
-                userName = userName .. string.char(randomBigCharIndex)
-            end
-        end
-        
-        return userName
-    end
-    
     local visitLogin
     visitLogin = function()
-        local randomUserName = genRandomUserName()
-        s_logd("randomUserName: "..randomUserName)
-
-        showProgressHUD()
-        s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
-            if result.count <= 0 then -- not exist the user name
-                s_CURRENT_USER.usertype = USER_TYPE_GUEST
-                s_SCENE:signUp(randomUserName, "bbdc123#")
-                AnalyticsSignUp_Guest()
-            else -- exist the user name
-                visitLogin()
-            end
-        end,
-        function (api, code, message, description)
-            s_TIPS_LAYER:showSmall(message)
-            hideProgressHUD()
-        end)
+        s_O2OController.signUp(visitLogin)
     end
     
     local button_visitor_clicked = function(sender, eventType)

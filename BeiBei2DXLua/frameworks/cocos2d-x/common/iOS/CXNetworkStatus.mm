@@ -8,6 +8,7 @@
 
 #include "CXNetworkStatus.h"
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonDigest.h>
 #import "Reachability.h"
 
 @interface CXNS : NSObject
@@ -15,6 +16,7 @@
 + (CXNS *)getInstance;
 - (void)start;
 - (void)updateInternetReachability;
++ (NSString *) md5:(NSString *) input;
 
 @end
 
@@ -96,6 +98,20 @@ static CXNS *g_instance = nil;
     [self updateInterfaceWithReachability:self.internetReachability];
 }
 
++ (NSString *) md5:(NSString *) input
+{
+    const char *cStr = [input UTF8String];
+    unsigned char digest[16];
+    CC_MD5( cStr, (CC_LONG)strlen(cStr), digest ); // This is the md5 call
+    
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+    
+    return output;
+}
+
 @end
 
 int CXNetworkStatus::start() {
@@ -106,4 +122,16 @@ int CXNetworkStatus::start() {
 int CXNetworkStatus::getStatus() { 
     [[CXNS getInstance] updateInternetReachability];
     return m_status; 
+}
+
+const char* CXNetworkStatus::getDeviceUDID() {
+    NSDate *datenow = [NSDate date];
+    NSString* username = [NSString stringWithFormat: @"%d__%lf__%d", arc4random(), [datenow timeIntervalSince1970], arc4random()];
+    NSString* md5name = [CXNS md5:username];
+    return md5name.UTF8String;
+}
+
+long CXNetworkStatus::getCurrentTimeMillis() {
+    NSDate *datenow = [NSDate date];
+    return [datenow timeIntervalSince1970] * 1000.0;
 }

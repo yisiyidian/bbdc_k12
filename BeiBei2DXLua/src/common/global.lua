@@ -64,6 +64,7 @@ local function _initTool()
 
     require('common.utils')
     require("AudioMgr")
+    s_O2OController = require('controller.O2OController')
 
     DEBUG_PRINT_LUA_TABLE = true
 end

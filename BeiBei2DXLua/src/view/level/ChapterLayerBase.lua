@@ -151,8 +151,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         title:ignoreAnchorPointForPosition(false)
         title:setAnchorPoint(0,0)
         title:setPosition(30,110)
-        notification:addChild(title)
-        
+        notification:addChild(title)        
         
         local task_name = cc.Label:createWithSystemFont('打败鲶鱼boss','',25)
         task_name:setColor(cc.c3b(0,0,0))
@@ -302,9 +301,10 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         deco:setPosition(levelPosition.x-85,levelPosition.y)
         self:addChild(deco, 130)    
     elseif levelIndex % 8 == 3 then
-            local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_pangxie.png')
+        local deco = sp.SkeletonAnimation:create('spine/chapterlevel/pangxie.json', 'spine/chapterlevel/pangxie.atlas',1)
+        deco:addAnimation(0, 'animation', true)
         deco:setPosition(levelPosition.x+50, levelPosition.y)
-        self:addChild(deco, 130)    
+        self:addChild(deco, 150)    
     elseif levelIndex % 8 == 4 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
         deco:addAnimation(0,'animation',true)
