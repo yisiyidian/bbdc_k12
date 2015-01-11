@@ -65,10 +65,13 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     button_wordname:setColor(cc.c4b(31,68,102,255))
 
     button_country = ccui.Button:create(button_country_name1, button_country_name2, "")
-    button_country:setTitleText("US")
     button_country:setTitleFontSize(24)
     button_country:addTouchEventListener(changeCountry)
-
+    if s_CURRENT_USER.isSoundAm == 1 then
+        button_country:setTitleText("US")
+    else
+        button_country:setTitleText("EN")
+    end
 
 
     button_soundmark_us = cc.Label:createWithSystemFont(soundmarkus,"",24)

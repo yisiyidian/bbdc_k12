@@ -40,6 +40,16 @@ function ProgressBar.create(totalIndex, currentIndex, color)
     index:setAnchorPoint(0.5,1)
     index:setPosition(left + gap*currentIndex, 0)
     main:addChild(index)
+    
+    main.indexPosition = function ()
+        return index:getPosition()
+    end
+    
+    main.swell = function ()
+    	local action1 = cc.ScaleTo:create(0.5,1.2)
+    	local action2 = cc.ScaleTo:create(0.5,1)
+    	index:runAction(cc.Sequence:create(action1,action2))
+    end
 
     local label_number = cc.Label:createWithSystemFont(currentIndex,"",24)
     label_number:setColor(cc.c4b(255,255,255,255))
