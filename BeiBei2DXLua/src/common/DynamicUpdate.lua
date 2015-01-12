@@ -18,7 +18,7 @@ function DynamicUpdate.initUpdateLabel()
     return updateInfo
 end
 
-local function reloadModule( moduleName )
+function reloadModule( moduleName )
 
     package.loaded[moduleName] = nil
 

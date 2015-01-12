@@ -231,15 +231,24 @@ end
 function Manager.saveDataClassObject(objectOfDataClass, username)
     Manager.alterLocalDatabase(objectOfDataClass)
     
-    local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
-    if username ~= nil and username ~= '' then
-        searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE username = '".. username .."'"
-    end
-    print ('Manager.saveDataClassObject: ' .. searchSql)
+    local searchSql = ''
     local num = 0
-    for row in Manager.database:nrows(searchSql) do
-        num = num + 1
-        break
+    if objectOfDataClass.objectId ~= '' then
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        print ('Manager.saveDataClassObject: ' .. searchSql)
+        for row in Manager.database:nrows(searchSql) do
+            num = num + 1
+            break
+        end
+    end
+
+    if num == 0 and username ~= nil and username ~= '' then
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE username = '".. username .."'"
+        print ('Manager.saveDataClassObject: ' .. searchSql)
+        for row in Manager.database:nrows(searchSql) do
+            num = num + 1
+            break
+        end
     end
 
     local insert = function ()
@@ -315,6 +324,10 @@ function Manager.saveDataClassObject(objectOfDataClass, username)
         local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
         local ret = Manager.database:exec(query)
         print('[sql result:' .. tostring(ret) .. ']: ' .. query)
+    elseif username ~= nil and username ~= '' then
+        local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE username = '".. username .."'"
+        local ret = Manager.database:exec(query)
+        print('[sql result:' .. tostring(ret) .. ']: ' .. query)
     else
         local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
         local ret = Manager.database:exec(query)
@@ -370,16 +383,23 @@ end
 
 function Manager.getDatas(classNameOfDataClass, userId, username)
     local sql = ''
+    local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s"', classNameOfDataClass, username)
+    local sqlUserId = string.format('SELECT * FROM %s WHERE userId = "%s"', classNameOfDataClass, userId)
     if username ~= '' then
-        sql = string.format('SELECT * FROM %s WHERE username = "%s"', classNameOfDataClass, username)
+        sql = sqlUsername
     elseif userId ~= '' then
-        sql = string.format('SELECT * FROM %s WHERE userId = "%s"', classNameOfDataClass, userId)
+        sql = sqlUserId
     end
     if sql == '' then return {} end
 
     local ret = {}
     for row in Manager.database:nrows(sql) do
         table.insert(ret, row)
+    end
+    if #ret == 0 and sql == sqlUsername and userId ~= '' then
+        for row in Manager.database:nrows(sqlUserId) do
+            table.insert(ret, row)
+        end
     end
     return ret
 end

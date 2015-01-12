@@ -26,6 +26,8 @@ local _TEXT_ID_UPDATE_USER = 4
 
 local function onErrorHappend(e)
     local function onError()
+        cx.CXAvos:getInstance():logOut()
+        s_DATABASE_MGR.setLogOut(true)
         s_DATABASE_MGR.close()
         s_START_FUNCTION()
     end
@@ -66,6 +68,7 @@ function O2OController.start()
 end
 
 function O2OController.onAssetsManagerCompleted()
+    hideProgressHUD()
     -- O2OController.start() : has got user from local database
     if not s_DATABASE_MGR.isLogOut() then    
         if s_CURRENT_USER.usertype == USER_TYPE_QQ then
@@ -158,6 +161,7 @@ function O2OController.startLoadingData(userStartType, username, password)
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_USER])
     if userStartType == USER_START_TYPE_OLD then 
+        print(string.format('startLoadingData: objectId:%s, username:%s, updatedAt:%f, createdAt:%f', tmpUser.objectId, tmpUser.username, tmpUser.updatedAt, tmpUser.createdAt))
         if hasUserInLocalDB and tmpUser.username == username and tmpUser.objectId == '' then
             print(string.format('startLoadingData: objectId:%s, username:%s, updatedAt:%f, createdAt:%f', tmpUser.objectId, tmpUser.username, tmpUser.updatedAt, tmpUser.createdAt))
             isLocalNewerThenServer = true
