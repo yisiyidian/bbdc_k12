@@ -70,13 +70,15 @@ end
 function O2OController.onAssetsManagerCompleted()
     hideProgressHUD()
     -- O2OController.start() : has got user from local database
-    if not s_DATABASE_MGR.isLogOut() then    
+    local hasUserInLocalDB = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
+
+    if not s_DATABASE_MGR.isLogOut() and hasUserInLocalDB then    
         if s_CURRENT_USER.usertype == USER_TYPE_QQ then
             O2OController.logInByQQAuthData()
         else
             O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
         end
-    elseif s_DATABASE_MGR.isLogOut() then
+    elseif s_DATABASE_MGR.isLogOut() and hasUserInLocalDB then
         local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(true)
         s_SCENE:replaceGameLayer(introLayer)
@@ -126,7 +128,7 @@ function O2OController.startLoadingData(userStartType, username, password)
             -- 210 : The username and password mismatch
                 s_TIPS_LAYER:showSmall(e)
             else
-                onErrorHappend(e)
+                onErrorHappend(e .. '\n username: ' .. username)
             end
             hideProgressHUD()
         else -- no error
