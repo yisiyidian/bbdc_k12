@@ -97,6 +97,7 @@ function DataClassBase:ctor()
     self.className = ''
     self.objectId = ''
     self.userId = ''
+    self.username = ''
     self.createdAt = os.time()
     self.updatedAt = 0
 end

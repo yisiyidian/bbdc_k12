@@ -135,7 +135,7 @@ showLogin = function()
                         hideProgressHUD()
                     else
                         updateUserNameAndPassword()
-                        s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+                        s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
                     end
                 end)
             end

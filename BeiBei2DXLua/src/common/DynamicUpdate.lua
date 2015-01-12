@@ -30,21 +30,7 @@ function DynamicUpdate.loginUpdateCompleted()
     print("The storagePath is "..storagePath)
     cc.FileUtils:getInstance():addSearchPath(searchPath,true)
 
-    if not s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then    
-        if s_CURRENT_USER.usertype == USER_TYPE_QQ then
-            s_SCENE:logInByQQAuthData()
-        else
-            s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
-        end
-    elseif s_DATABASE_MGR.isLogOut() and s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL) then
-        local IntroLayer = reloadModule("view.login.IntroLayer")
-        local introLayer = IntroLayer.create(true)
-        s_SCENE:replaceGameLayer(introLayer)
-    else
-        local IntroLayer = reloadModule("view.login.IntroLayer")
-        local introLayer = IntroLayer.create(false)
-        s_SCENE:replaceGameLayer(introLayer)
-    end
+    s_O2OController.onAssetsManagerCompleted()
 end
 
 function DynamicUpdate.beginLoginUpdate(updateInfo)
@@ -59,10 +45,14 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
         print("release version")
     end
 
+    local message = ''
+
     if not am:getLocalManifest():isLoaded() then
         message = "找不到贝贝的新东东，使用旧装备"
     else
         local function onUpdateEvent(event)
+            showProgressHUD(message)
+            
             local eventCode = event:getEventCode()
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
                 
