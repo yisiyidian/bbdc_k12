@@ -28,6 +28,10 @@ local function getSecondsFromString(srcDateTime)
     return t + ms / 1000.0
 end
 
+function getUTCSeconds()
+    return os.time(os.date("!*t", os.time()))
+end
+
 function parseServerDataToUserData(serverdata, userdata)
     for key, value in pairs(userdata) do
         if type(value) ~= 'function' 

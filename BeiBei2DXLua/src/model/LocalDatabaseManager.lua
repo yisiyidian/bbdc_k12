@@ -319,6 +319,7 @@ function Manager.saveDataClassObject(objectOfDataClass, username)
         return str
     end
 
+    if objectOfDataClass.updatedAt < getUTCSeconds() then objectOfDataClass.updatedAt = getUTCSeconds() end
     if num == 0 then
         local keys, values = insert()
         local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
