@@ -20,7 +20,10 @@ function O2OController.start()
     end
 end
 
-function genRandomUserName()
+function O2OController.update(dt)
+end
+
+local function genRandomUserName()
     math.randomseed(os.time())
     local randomIndex = math.random(0, 65535)
 

@@ -1,7 +1,8 @@
 require("cocos.init")
 require("common.global")
 
-local FlipNode = require("view.mat.FlipNode")
+local FlipNode            = require("view.mat.FlipNode")
+local NodeBulletAnimation = require("view.mat.NodeBulletAnimation")
 
 local dir_up    = 1
 local dir_down  = 2
@@ -12,7 +13,7 @@ local FlipMat = class("FlipMat", function()
     return cc.Layer:create()
 end)
 
-function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
+function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
     if spineName == nil then
         spineName = "coconut_light"
     end
@@ -34,6 +35,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
     for i = 1, string.len(word) do
         main.answerPath[i] = {x=0, y=0}
     end
+    main.endPosition = 0
+
     
     math.randomseed(os.time())
     
@@ -52,6 +55,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
     local onNode
     local startAtNode
     local startNode
+    
+    local bullet
     
     local startTouchLocation
     local lastTouchLocation
@@ -101,7 +106,14 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
             if diff >= 0 and diff < string.len(main_word) then
                 node = FlipNode.create(spineName, string.sub(main_word,diff+1,diff+1), i, j)
                 node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
-                main:addChild(node)
+                main:addChild(node) 
+                
+                --add bullet 
+                bullet = NodeBulletAnimation.create()
+                bullet:setPosition(node:getContentSize().width / 2,node:getContentSize().height / 2)
+                bullet:setName("bullet")
+                bullet:setVisible(false)
+                node:addChild(bullet)
                 
                 local tmp = {}
                 tmp.x = i
@@ -110,6 +122,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
             else
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 node = FlipNode.create(spineName, charaster_set_filtered[randomIndex], i, j)
+                 
                 if isNewPlayerModel then
                     node:setPosition(320, -1136)
                     main:addChild(node)
@@ -478,7 +491,17 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
         
             for i = 1, #selectStack do
                 local node = selectStack[i]
+                local bullet = node:getChildByName("bullet")
+
                 node.win()
+                if endPositionX ~= nil then
+                    local startPositionX,startPositionY = node:getPosition()
+                    local endPosition = endPositionX
+                    local action1 = cc.CallFunc:create(function()bullet:setVisible(true) end)
+                    local action2 = cc.MoveTo:create(0.3,cc.p(endPosition - startPositionX + 90,950 - startPositionY))
+                    local action3 = cc.CallFunc:create(function()bullet:setVisible(false) end)
+                    bullet:runAction(cc.Sequence:create(action1,action2,action3))
+                end
             end
             selectStack = {}
             
@@ -506,6 +529,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
             
         end
     end
+    
+
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )

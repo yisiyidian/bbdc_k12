@@ -15,7 +15,7 @@ function MissionProgressLayer.create()
     local taskTotal = 120
     local taskCurrent = 120
     
-    local state = s_DATABASE_MGR.getGameState()
+    local state = s_DATABASE_MGR.getGameState()-- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
 
 --    if state == s_gamestate_studymodel then
 --       taskCurrent =  s_CorePlayManager.wrongWordNum + s_DATABASE_MGR:getTodayTotalBossNum() * 20    
@@ -30,6 +30,14 @@ function MissionProgressLayer.create()
 --    if taskCurrent == nil then
 --        taskCurrent = 0
 --    end
+
+--    print("state = s_DATABASE_MGR.getGameState() .."..tostring(s_DATABASE_MGR.getGameState()))
+--    print("1 for review boss model, 2 for study model, 3 for review model and 4 for over")
+--    print("s_CorePlayManager.wrongWordNum.."..s_CorePlayManager.wrongWordNum)
+--    print("s_CorePlayManager.candidateNum.."..s_CorePlayManager.candidateNum)
+--    print("s_DATABASE_MGR:getTodayTotalBossNum().."..s_DATABASE_MGR:getTodayTotalBossNum())
+--    print("s_DATABASE_MGR:getTodayRemainBossNum().."..s_DATABASE_MGR:getTodayRemainBossNum())
+    
     
     local startTime = 0
 
@@ -37,7 +45,12 @@ function MissionProgressLayer.create()
     local swelling 
     local rollingCircle
     local finishProgress
+    local enterButton
     local anotherEnterButton
+    local anotherSwelling
+    local buttonSpin
+    local circleSpin
+    
     
     local layer = MissionProgressLayer.new()
     
@@ -59,7 +72,23 @@ function MissionProgressLayer.create()
     taskProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
     taskProgress:setReverseDirection(false)
     taskProgress:setPercentage(0)
-    taskProgress:runAction(runProgress)
+    taskProgress:runAction(cc.Sequence:create(runProgress,cc.CallFunc:create(function()
+        if taskTotal == taskCurrent then
+            local action1 = cc.FadeOut:create(1)
+            local action2 = cc.FadeOut:create(2)
+
+            finishProgress:runAction(cc.Sequence:create(cc.ProgressTo:create(taskCurrent / taskTotal ,taskCurrent / taskTotal * 100),cc.CallFunc:create(anotherSwelling)))
+            finishProgress:setVisible(true) 
+            anotherEnterButton:setVisible(true)    
+
+            enterButton:runAction(action1)
+            taskProgress:runAction(action2)     
+
+            
+        else
+            swelling()
+        end
+    end)))
     backProgress:addChild(taskProgress)
     
     local enterGame = function ()
@@ -87,7 +116,7 @@ function MissionProgressLayer.create()
         end
     end
     
-    local enterButton = ccui.Button:create("image/homescene/missionprogress/taskstartbutton.png","image/homescene/missionprogress/taskstartbuttonclick.png","")
+    enterButton = ccui.Button:create("image/homescene/missionprogress/taskstartbutton.png","image/homescene/missionprogress/taskstartbuttonclick.png","")
     enterButton:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
     enterButton:addTouchEventListener(enterButtonClick)
     backProgress:addChild(enterButton)
@@ -125,36 +154,37 @@ function MissionProgressLayer.create()
     tail:setRotation(-10)
     rollingCircle:addChild(tail)
     
---    s_SCENE:callFuncWithDelay(1,function()
---        if taskTotal == taskCurrent then
---            local action1 = cc.FadeOut:create(1)
---            local action2 = cc.FadeOut:create(2)
---            local action3 = cc.ScaleTo:create(0.5,1.1)
---            local action4 = cc.ScaleTo:create(0.5,1)
---            local action5 = cc.Spawn:create(action3,action4)
---
---            finishProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/taskfinishedstartcircleclick.png'))
---            finishProgress:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
---            finishProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
---            finishProgress:setReverseDirection(false)
---            finishProgress:setPercentage(0)
---            finishProgress:runAction(cc.ProgressTo:create(taskCurrent / taskTotal ,taskCurrent / taskTotal * 100))
---            backProgress:addChild(finishProgress)
---
---            anotherEnterButton = ccui.Button:create("image/homescene/missionprogress/taskfinishedstartbutton.png","image/homescene/missionprogress/taskfinishedstartbuttonclick.png","")
---            anotherEnterButton:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
---            anotherEnterButton:addTouchEventListener(enterButtonClick)
---            backProgress:addChild(anotherEnterButton) 
---                                                    
---            enterButton:runAction(action1)
---            taskProgress:runAction(action2)    
---                              
---        else
---           swelling()
---        end
---
---        
---    end)
+    finishProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/taskfinishedstartcircleclick.png'))
+    finishProgress:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
+    finishProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    finishProgress:setReverseDirection(false)
+    finishProgress:setPercentage(0)
+    backProgress:addChild(finishProgress)
+    finishProgress:setVisible(false)
+
+    anotherEnterButton = ccui.Button:create("image/homescene/missionprogress/taskfinishedstartbutton.png","image/homescene/missionprogress/taskfinishedstartbuttonclick.png","")
+    anotherEnterButton:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
+    anotherEnterButton:addTouchEventListener(enterButtonClick)
+    backProgress:addChild(anotherEnterButton) 
+    anotherEnterButton:setVisible(false)
+    
+    anotherSwelling = function ()
+        local action1 = cc.ScaleTo:create(0.5,1.1)
+        local action2 = cc.ScaleTo:create(0.5,1)
+        local action3 = cc.ScaleTo:create(0.5,1.1)
+        local action4 = cc.ScaleTo:create(0.5,1)
+        anotherEnterButton:runAction(cc.Sequence:create(action1,action2,action3,action4,cc.CallFunc:create(buttonSpin)))
+    end
+    
+    buttonSpin = function ()
+    	local action1 = cc.RotateBy:create(2,360)
+    	anotherEnterButton:runAction(cc.Sequence:create(action1,cc.CallFunc:create(circleSpin)))
+    end
+
+    circleSpin = function ()
+        local action1 = cc.RotateBy:create(2,360)
+        finishProgress:runAction(cc.Sequence:create(action1,cc.CallFunc:create(anotherSwelling)))
+    end
     
     local finishLabel = cc.Label:createWithSystemFont("已完成","",24)
     finishLabel:setPosition(bigWidth/2 - 80, s_DESIGN_HEIGHT/2 - 300)

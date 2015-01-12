@@ -40,6 +40,10 @@ function NewStudySlideLayer.create()
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
+    
+    local positionX = backColor.getProgressBarIndexPosition()
+    
+
 
     local word_meaning_label = cc.Label:createWithSystemFont(wordMeaningSmall,"",50)
     word_meaning_label:setPosition(bigWidth/2, 1000)
@@ -74,9 +78,10 @@ function NewStudySlideLayer.create()
     
             local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
             showAnswerStateBack:runAction(action1)
+            
     
-            s_SCENE:callFuncWithDelay(0.4,function()
-                if s_CorePlayManager.isStudyModel() then
+            layer:runAction(cc.Sequence:create(cc.CallFunc:create(function()backColor.indexSwell()end),cc.DelayTime:create(1),cc.CallFunc:create(function()  
+            if s_CorePlayManager.isStudyModel() then
                     s_CorePlayManager.updateWrongWordList(wordname)
                     s_CorePlayManager.updateCurrentIndex()
                     if s_CorePlayManager.bookOver() then
@@ -100,7 +105,7 @@ function NewStudySlideLayer.create()
                     s_CorePlayManager.updateWordCandidate(true)
                     s_CorePlayManager.enterNewStudyChooseLayer()
                 end
-            end)
+                end) ))
         end
     
         if s_DATABASE_MGR.getSlideNum() == 1 then
@@ -118,13 +123,23 @@ function NewStudySlideLayer.create()
 
     local size_big = backColor:getContentSize()
 
-    if s_DATABASE_MGR.getSlideNum() == 0 then
-        mat = FlipMat.create(wordname,4,4,true,"coconut_light")
-        mat.finger_action()
+    if s_CorePlayManager.isStudyModel() then
+        if s_DATABASE_MGR.getSlideNum() == 0 then
+            mat = FlipMat.create(wordname,4,4,true,"coconut_light",positionX)
+            mat.finger_action()
+        else
+            mat = FlipMat.create(wordname,4,4,false,"coconut_light",positionX)
+        end
     else
-        mat = FlipMat.create(wordname,4,4,false,"coconut_light")
+        if s_DATABASE_MGR.getSlideNum() == 0 then
+            mat = FlipMat.create(wordname,4,4,true,"coconut_light")
+            mat.finger_action()
+        else
+            mat = FlipMat.create(wordname,4,4,false,"coconut_light")
+        end
     end
     
+
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
 
