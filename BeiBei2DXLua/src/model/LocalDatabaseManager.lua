@@ -296,7 +296,9 @@ local getUpdateRecord = function (objectOfDataClass)
     return str
 end
 
-local function saveData(objectOfDataClass, userId, username, recordsNum)
+-- recordsNum : 0 or positive integer
+-- conditions : "' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"
+local function saveData(objectOfDataClass, userId, username, recordsNum, conditions)
     Manager.alterLocalDatabase(objectOfDataClass)
     
     print ('\n\nManager saveData:' .. objectOfDataClass.className .. ' == ' .. tostring(getLocalSeconds() - objectOfDataClass.updatedAt) .. ', updatedAt:' .. tostring(objectOfDataClass.updatedAt) .. ', getLocalSeconds:' .. tostring(getLocalSeconds()))
@@ -309,13 +311,13 @@ local function saveData(objectOfDataClass, userId, username, recordsNum)
         query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
         ret = Manager.database:exec(query)
     elseif userId ~= nil and userId ~= '' then
-        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE userId = '".. userId .."'"
+        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE userId = '".. userId .."'" .. conditions
         ret = Manager.database:exec(query)
     elseif username ~= nil and username ~= '' then
-        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE username = '".. username .."'"
+        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE username = '".. username .."'" .. conditions
         ret = Manager.database:exec(query)
     else
-        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE objectId = '".. objectOfDataClass.objectId .."'" .. conditions
         ret = Manager.database:exec(query)
     end
 
@@ -709,20 +711,20 @@ function Manager.setCurrentIndex(currentIndex)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
+    local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
 
     local num = 0
     if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+        for row in Manager.database:nrows("SELECT * FROM " .. data.className .. " WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
         end
     elseif username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
+        for row in Manager.database:nrows("SELECT * FROM " .. data.className .. " WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
         end
     end
 
-    local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
-    saveData(data, userId, username, num)
+    saveData(data, userId, username, num, "' and bookKey = '" .. bookKey .. "';")
 end
 
 ---------------------------------------------------------------------------------------------------------
