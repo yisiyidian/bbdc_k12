@@ -371,7 +371,7 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
 end
 
 function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
-    local dataObject = s_CURRENT_USER.dailyStudyInfo    
+    local dataObject = s_CURRENT_USER.dailyStudyInfo
 
     local function update()
         dataObject.objectId  = ''

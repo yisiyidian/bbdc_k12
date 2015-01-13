@@ -32,6 +32,8 @@ local databaseTables = {
 
 local localdatabaseutils = nil
 local localdatabaseuser = nil
+local localdatabasedailyStudyInfo = nil
+local localdatabasecurrentIndex = nil
 
 -- define Manager
 local Manager = {}
@@ -47,6 +49,8 @@ function Manager.init()
 
     localdatabaseutils = reloadModule('model.localDatabase.utils')
     localdatabaseuser = reloadModule('model.localDatabase.user')
+    localdatabasedailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
+    localdatabasecurrentIndex = reloadModule('model.localDatabase.currentIndex')
 
     Manager.initTables()
 end
@@ -140,6 +144,10 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 
+function Manager.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
+    localdatabaseutils.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
+end
+
 function Manager.getDatas(classNameOfDataClass, userId, username)
     return localdatabaseutils.getDatas(classNameOfDataClass, userId, username)
 end
@@ -148,101 +156,27 @@ end
 -- show word info
 
 function Manager.getRandomWord()
-    return "apple"
+    return localdatabasedailyStudyInfo.getRandomWord()
 end
 
 function Manager.addStudyWordsNum()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local today = os.date("%x", time)
-
-    local num = 0
-    local oldStudyNum = nil
-    local oldGraspNum = nil
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-        num = num + 1
-        oldStudyNum = row.studyNum
-        oldGraspNum = row.graspNum
-    end
-    
-    if num == 0 then
-        local studyNum = 1
-        local graspNum = 0
-        local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
-    else
-        local newStudyNum = oldStudyNum + 1
-        local query = "UPDATE DataDailyStudyInfo SET studyNum = "..newStudyNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, newStudyNum, oldGraspNum)
-    end
+    localdatabasedailyStudyInfo.addStudyWordsNum()
 end
 
 function Manager.addGraspWordsNum(addNum)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local today = os.date("%x", time)
-
-    local num = 0
-    local oldStudyNum = nil
-    local oldGraspNum = nil
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-        num = num + 1
-        oldStudyNum = row.studyNum
-        oldGraspNum = row.graspNum
-    end
-
-    if num == 0 then
-        local studyNum = 0
-        local graspNum = addNum
-        local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
-    else
-        local newGraspNum = oldGraspNum + addNum
-        local query = "UPDATE DataDailyStudyInfo SET graspNum = "..newGraspNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, oldStudyNum, newGraspNum)
-    end
+    localdatabasedailyStudyInfo.addGraspWordsNum(addNum)
 end
 
 function Manager.getStudyDayNum()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
-        num = num + 1
-    end
-    
-    return num
+    return localdatabasedailyStudyInfo.getStudyDayNum()
 end
 
 function Manager.getStudyWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    
-    local studyNum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-        studyNum = row.studyNum
-    end
-    
-    return studyNum
+    return localdatabasedailyStudyInfo.getStudyWordsNum(dayString)
 end
 
 function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    local graspNum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-        graspNum = row.graspNum
-    end
-
-    return graspNum
+    return localdatabasedailyStudyInfo.getGraspWordsNum(dayString)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -369,73 +303,15 @@ end
 -- DataCurrentIndex
 -- record word info
 function Manager.printCurrentIndex()
-    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
-
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    print("<currentIndex>")
-    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        print("current book word index: "..row.currentIndex.." time: "..row.lastUpdate)
-    end
-    print("</currentIndex>")
+    localdatabasecurrentIndex.printCurrentIndex()
 end
 
-local function createDataCurrentIndex(lastUpdate, bookKey, currentIndex)
-    local data = DataCurrentIndex.create()
-    updateDataFromUser(data, s_CURRENT_USER)
-
-    data.lastUpdate = lastUpdate
-    data.bookKey = bookKey
-    data.currentIndex = currentIndex
-
-    return data
-end
-
-function Manager.getCurrentIndex()
-    local currentIndex = nil
-
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local username = s_CURRENT_USER.username
-
-    if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-            currentIndex = row.currentIndex
-        end
-    elseif username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
-            currentIndex = row.currentIndex
-        end
-    end
-    
-    if currentIndex == nil then
-        currentIndex = 1
-        local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
-        saveData(data, userId, username, 0)
-    end
-    
-    return currentIndex
+function Manager.getCurrentIndex()    
+    return localdatabasecurrentIndex.getCurrentIndex()
 end
 
 function Manager.setCurrentIndex(currentIndex)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local username = s_CURRENT_USER.username
-    local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
-
-    local num = 0
-    if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM " .. data.className .. " WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-            num = num + 1
-        end
-    elseif username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM " .. data.className .. " WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
-            num = num + 1
-        end
-    end
-
-    saveData(data, userId, username, num, "' and bookKey = '" .. bookKey .. "';")
+    localdatabasecurrentIndex.setCurrentIndex(currentIndex)
 end
 
 ---------------------------------------------------------------------------------------------------------
