@@ -251,12 +251,12 @@ end
 function O2OController.loadConfigs()
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_CFG])
     
-    s_DATA_MANAGER.loadBooks()
-    s_BookWord = s_DATA_MANAGER.loadBookWords()
-    s_DATA_MANAGER.loadChapters()
-    s_DATA_MANAGER.loadReviewBoss()
+    s_DataManager.loadBooks()
+    s_BookWord = s_DataManager.loadBookWords()
+    s_DataManager.loadChapters()
+    s_DataManager.loadReviewBoss()
 
-    s_WordPool = s_DATA_MANAGER.loadAllWords()
+    s_WordPool = s_DataManager.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
     s_CorePlayManager.create()
 end

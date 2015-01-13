@@ -40,7 +40,7 @@ function PopupSummarySuccess:ctor(levelKey, current_star, total_star)
     end
     
     -- set title
-    self.ccbPopupSummarySuccess['summary_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_NORMAL_START_PLAY_SUMMARY_BOSS))
+    self.ccbPopupSummarySuccess['summary_boss_text']:setString(s_DataManager.getTextWithIndex(TEXT_ID_NORMAL_START_PLAY_SUMMARY_BOSS))
     -- add summary boss
     local boss = sp.SkeletonAnimation:create('spine/klschongshangdaoxia.json', 'spine/klschongshangdaoxia.atlas',1)
     boss:addAnimation(0, 'jianxiao', true)
@@ -84,7 +84,7 @@ function PopupSummarySuccess:onGoButtonClicked(levelKey)
 --                playSound(s_sound_cost)
 --            end)
         end
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
+        local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
         local summaryboss = require('view.summaryboss.SummaryBossLayer')
         if s_CURRENT_USER.currentSelectedChapterKey == 'chapter0' then
             local layer = summaryboss.create(levelConfig,1)

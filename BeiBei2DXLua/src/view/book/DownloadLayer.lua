@@ -10,7 +10,7 @@ end)
 
 function DownloadLayer.create(bookKey)    
     local bookImageName = "image/download/big_"..string.upper(bookKey)..".png"
-    local total_size = s_DATA_MANAGER.books[bookKey].music
+    local total_size = s_DataManager.books[bookKey].music
     
     local download_state = 0 -- 0 for no download, 1 for downloading and 2 for downloaded
     if s_LocalDatabaseManager.getDownloadState(bookKey) == 1 then
@@ -44,7 +44,7 @@ function DownloadLayer.create(bookKey)
     label_hint:setColor(cc.c4b(0,0,0,255))
     backColor:addChild(label_hint)
 
-    local label_num = cc.Label:createWithSystemFont(s_DATA_MANAGER.books[bookKey].words,"",30)
+    local label_num = cc.Label:createWithSystemFont(s_DataManager.books[bookKey].words,"",30)
     label_num:setPosition(bigWidth/2+40, s_DESIGN_HEIGHT/2+70)
     backColor:addChild(label_num)
     

@@ -385,7 +385,7 @@ function DataUser:getUserBookObtainedStarCount()
     local count = 0
     for i, v in ipairs(self.levels) do
         if v.bookKey == self.bookKey then
-            local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
+            local levelConfig = s_DataManager.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
             if levelConfig ~= nil and levelConfig['type'] == 0 then
                 count = count + v.stars
             end
@@ -424,7 +424,7 @@ function DataUser:initChapterLevelAfterLogin()
     self.currentSelectedLevelKey = 'level0'
     s_SCENE.levelLayerState = s_normal_level_state
     
-    local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
+    local levelConfig = s_DataManager.getLevels(s_CURRENT_USER.bookKey)
     if levelConfig ~= nil then
         for i, v in ipairs(levelConfig) do
             local levelData = self:getUserLevelData(v['chapter_key'],v['level_key'])
@@ -582,13 +582,13 @@ function DataUser:getUserBookWord()
     local chapterIndex = 0
     while chapterIndex < 4 do
         local levelIndex = 0
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter'..chapterIndex,'level'..levelIndex)
+        local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,'chapter'..chapterIndex,'level'..levelIndex)
         while levelConfig ~= nil do
             if levelConfig['type'] == 0 then
                 table.insert(wordTable,split(levelConfig.word_content,'|'))
             end      
                 levelIndex = levelIndex + 1
-                levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter'..chapterIndex,'level'..levelIndex)
+                levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,'chapter'..chapterIndex,'level'..levelIndex)
         end
         chapterIndex = chapterIndex + 1
     end

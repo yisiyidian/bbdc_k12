@@ -27,7 +27,7 @@ end
 
 function LevelLayerII:getPlayerPositionForLevel(levelKey)
     local levelButton = self:getChildByName(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
     local levelIndex = string.sub(levelKey, 6)
     --print(levelButton:getPositionX()..','..levelButton:getPositionY())
     local position = cc.p(levelButton:getPositionX(), levelButton:getPositionY())
@@ -69,7 +69,7 @@ end
 
 function LevelLayerII:plotStarAnimation(levelKey, starCount)
     local levelButton = self:getChildByName(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
     if levelConfig['type'] == 0 then
         local star1, star2, star3
         if starCount >= 3 then
@@ -160,7 +160,7 @@ end
 
 function LevelLayerII:plotLevelDecoration(levelKey)
     local levelButton = self:getChildByName(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData('chapter1', levelKey)
     local levelIndex = string.sub(levelKey, 6)
     if  levelData ~= nil and levelData.isLevelUnlocked == 1 then  -- test
@@ -185,7 +185,7 @@ end
 
 function LevelLayerII:plotLevelNumber(levelKey)
     local levelButton = self:getChildByName(levelKey)
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
+    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,'chapter1',levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData('chapter1', levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelNumber = levelIndex + 1
@@ -272,7 +272,7 @@ function LevelLayerII:ctor()
     end
 
     -- replot levelbutton ui based on the configuration file
-    local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
+    local levelConfig = s_DataManager.getLevels(s_CURRENT_USER.bookKey)
     for i = 1, #levelConfig do
         if levelConfig[i]['chapter_key'] == 'chapter1' then
             -- change button image
@@ -339,7 +339,7 @@ function LevelLayerII:onLevelButtonClicked(levelKey)
     --s_logd('LevelLayerI:onLevelButtonClicked: ' .. levelKey .. ', ' .. s_CURRENT_USER.bookKey .. ', ' .. s_CURRENT_USER.currentChapterKey..', selectedKey:'..s_CURRENT_USER.currentSelectedLevelKey)
     local levelButton = self:getChildByName(levelKey)
     -- check level type
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
+    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentSelectedChapterKey, levelKey)
     if (s_SCENE.levelLayerState == s_review_boss_appear_state or s_SCENE.levelLayerState == s_review_boss_retry_state) and levelKey == 'level'..(string.sub(s_CURRENT_USER.currentLevelKey,6)+1)then -- review boss appear
         local popupReview = require('popup.PopupReviewBoss')
@@ -355,13 +355,13 @@ function LevelLayerII:onLevelButtonClicked(levelKey)
         s_SCENE:popup(layer)
     elseif levelConfig['type'] == 1 then -- summaryboss level
         -- check whether summary boss level can be played (starcount)
-        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter1') then
+        if s_CURRENT_USER:getUserBookObtainedStarCount() >= levelConfig['summary_boss_stars'] + s_DataManager.getSummaryBossIncrementsOfChapter('chapter1') then
             local popupSummary = require('popup.PopupSummarySuccess')
-            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter1'))
+            local layer = popupSummary.create(levelKey, s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DataManager.getSummaryBossIncrementsOfChapter('chapter1'))
             s_SCENE:popup(layer)
     else
         local popupSummary = require('popup.PopupSummaryFail')
-        local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DATA_MANAGER.getSummaryBossIncrementsOfChapter('chapter1'))
+        local layer = popupSummary.create(s_CURRENT_USER:getUserBookObtainedStarCount(),levelConfig['summary_boss_stars'] + s_DataManager.getSummaryBossIncrementsOfChapter('chapter1'))
         s_SCENE:popup(layer)
     end
     end

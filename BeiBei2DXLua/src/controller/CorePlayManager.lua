@@ -125,7 +125,7 @@ function CorePlayManager.initNewStudyLayer()
 end
 
 function CorePlayManager.bookOver()
-    if CorePlayManager.currentIndex > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
+    if CorePlayManager.currentIndex > s_DataManager.books[s_CURRENT_USER.bookKey].words then
         return true
     else
         return false
@@ -497,7 +497,7 @@ end
 
 function CorePlayManager.enterReviewBossLayer_special()
 --    s_SCENE.gameLayerState = s_boss_game_state
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,"level0")
+    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,"level0")
     CorePlayManager.rbWordList = split(levelConfig.word_content, "|")
     local reviewBossLayer = ReviewBossLayer.create()
     s_SCENE:replaceGameLayer(reviewBossLayer)

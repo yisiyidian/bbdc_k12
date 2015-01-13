@@ -115,8 +115,8 @@ function PersonalInfo:PLVM()
     local updateTime = 0
     local tolearnCount = s_LocalDatabaseManager.getTotalStudyWordsNum()
     local toMasterCount = s_LocalDatabaseManager.getTotalGraspWordsNum()
-    local learnPercent = tolearnCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local learnPercent = tolearnCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
+    local masterPercent = toMasterCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     
     local back = self.intro_array[4]
     local circleBack = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_white.png')
@@ -238,7 +238,7 @@ function PersonalInfo:PLVM()
     label_study:setPosition(0.5 * circleBack:getContentSize().width,0.49 * circleBack:getContentSize().height)
     circleBack:addChild(label_study)
     
-    local label_book = cc.Label:createWithSystemFont(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name,"",28)
+    local label_book = cc.Label:createWithSystemFont(s_DataManager.books[s_CURRENT_USER.bookKey].name,"",28)
     label_book:ignoreAnchorPointForPosition(false)
     label_book:setAnchorPoint(0.5,1)
     label_book:setColor(cc.c4b(0,0,0 ,255))
@@ -665,7 +665,7 @@ function PersonalInfo:XXTJ()
         totalDay = 1
     end
     local everydayWord = math.floor(s_LocalDatabaseManager.getTotalStudyWordsNum() / totalDay)
-    local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local totalWord = s_DataManager.books[s_CURRENT_USER.bookKey].words
     local wordFinished = s_LocalDatabaseManager.getTotalStudyWordsNum()
     local dayToFinish = 100
     if everydayWord > 0 then

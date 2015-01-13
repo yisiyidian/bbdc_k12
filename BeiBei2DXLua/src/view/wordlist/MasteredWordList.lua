@@ -219,7 +219,7 @@ function MasteredWordList:ctor()
     end
     listView:setItemsMargin(2.0)
     
---    local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
+--    local levelConfig = s_DataManager.getLevels(s_CURRENT_USER.bookKey)
 --    self.levelArray = {}
 --    self.levelKey = {}
 --
@@ -245,7 +245,7 @@ function MasteredWordList:ctor()
 --        local levelIndex        = levelNum[2] + 1
 --        local chapterNum = split(levelNum[1],'chapter')
 --        local chapterIndex = chapterNum[2]+1
---        local chapterName       = s_DATA_MANAGER.chapters[chapterIndex]["Name"]
+--        local chapterName       = s_DataManager.chapters[chapterIndex]["Name"]
 --        local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
 --        
 --        local title = cc.Label:createWithSystemFont(levelName, '' ,28)

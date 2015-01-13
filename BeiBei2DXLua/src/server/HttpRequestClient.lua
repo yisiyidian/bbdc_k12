@@ -78,7 +78,7 @@ end
 function HttpRequestClient.downloadSoundsOfLevel(levelKey, idOffset, prefix)
     local nextLevelKey = string.sub(levelKey, 1, 5) .. tostring(string.sub(levelKey, 6) + idOffset)
     print(string.format('downloadSoundsOfNext5thLevel: %s, %s, %s', s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey))
-    local nextLevelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey)
+    local nextLevelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey, s_CURRENT_USER.currentChapterKey, nextLevelKey)
     if nextLevelConfig == nil or string.len(nextLevelConfig.word_content) <= 0 then
         return
     end

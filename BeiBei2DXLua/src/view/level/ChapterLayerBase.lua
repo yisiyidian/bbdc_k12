@@ -83,7 +83,7 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
+    --local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
     local levelPosition = self.levelPos[levelIndex]
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
@@ -350,11 +350,11 @@ function ChapterLayerBase:plotDecoration()
 end
 
 function ChapterLayerBase:plotLevelNumber(levelKey)
-    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    --local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
-    local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 99)
+    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 99)
     --print('####levelIndex:',levelIndex,',',chapterIndex)
     if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
 --        local title = cc.Label:createWithSystemFont('Start','',40)
@@ -372,7 +372,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     local levelNumber = (chapterIndex * 10 + levelIndex) * avgWordCount
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     if bookProgress['level'] == 'level39' and bookProgress['chapter'] == 'chapter3' then
-        levelNumber = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+        levelNumber = s_DataManager.books[s_CURRENT_USER.bookKey].words
     end
     -- check random summary boss
     local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)

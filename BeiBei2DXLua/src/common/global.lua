@@ -49,8 +49,8 @@ local function _initConstant()
     CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
     CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
 
-    s_DATA_MANAGER = require('model.DataManager')
-    s_DATA_MANAGER.clear()
+    s_DataManager = require('model.DataManager')
+    s_DataManager.clear()
 end
 
 local function _initTool()

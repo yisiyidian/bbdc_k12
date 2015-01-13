@@ -18,7 +18,7 @@ function RepeatChapterLayer:ctor(chapterKey)
     self.chapterKey = chapterKey
     --    print('repeateChapter: ')
     --    print_lua_table(s_CURRENT_USER)
-    --    local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,self.chapterKey)
+    --    local chapterConfig = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,self.chapterKey)
     local chapterSize = 1
     if self.chapterKey == 'chapter1' then
         chapterSize = 2

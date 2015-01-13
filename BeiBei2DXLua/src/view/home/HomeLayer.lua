@@ -34,8 +34,8 @@ end)
 
 function HomeLayer.create()
     -- data begin
-    local bookName          = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].name
-    local bookWordCount     = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+    local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
+    local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
     
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentChapterKey = bookProgress['chapter']

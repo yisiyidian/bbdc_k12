@@ -91,7 +91,7 @@ function PopupNormalLevel:ctor(levelKey)
     
 --    print("self.ccbPopupNormalLevel['_wordCount'] is " ,self.ccbPopupNormalLevel['_wordCount'])
     -- plot word count
-    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
+    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
     self.ccbPopupNormalLevel['_wordCount']:setString(levelConfig['word_num'])
     
     
@@ -132,7 +132,7 @@ function PopupNormalLevel:onStudyButtonClicked(levelKey)
     s_CorePlayManager.initTotalPlay()
 
 --    s_logd('on study button clicked')
---    local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
+--    local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
 --    s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
 ----    s_CorePlayManager.newPlayerState = true 
 --    s_CorePlayManager.initStudyTestState()
@@ -166,7 +166,7 @@ function PopupNormalLevel:onTestButtonClicked(levelKey)
 --            end)
 
         end
-        local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
+        local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentSelectedChapterKey,levelKey)
         s_CorePlayManager.wordList = split(levelConfig.word_content, "|")
         s_CorePlayManager.initStudyTestState()
         s_CorePlayManager.enterTestLayer()

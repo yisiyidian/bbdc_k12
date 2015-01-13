@@ -99,7 +99,7 @@ start = function ()
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
 
-    s_DATA_MANAGER.loadText()
+    s_DataManager.loadText()
     
 -- *************************************
 if test_code == NORMAL_CODE then -- do NOT change this line

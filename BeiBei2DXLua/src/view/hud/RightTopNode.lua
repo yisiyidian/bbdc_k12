@@ -57,7 +57,7 @@ function RightTopNode:ctor()
 --            local count = 0
 --            for i, v in ipairs(self.levels) do
 --                if v.bookKey == self.bookKey then
---                    local levelConfig = s_DATA_MANAGER.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
+--                    local levelConfig = s_DataManager.getLevelConfig(self.bookKey,v.chapterKey,v.levelKey)
 --                    if levelConfig ~= nil and levelConfig['type'] == 0 then
 --                        print("split(levelConfig.word_content,'|' is "..split(levelConfig.word_content,'|'))
 --                    end

@@ -180,7 +180,7 @@ function PopupEnergyBuy:onBuyButtonClicked()
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                 function(api,result)
                     s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
-                    local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), energyCountBought)
+                    local str = string.format(s_DataManager.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), energyCountBought)
                     s_TIPS_LAYER:showSmall(str)
                     hideProgressHUD()
                 end,

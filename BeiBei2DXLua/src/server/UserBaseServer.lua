@@ -221,7 +221,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                     end
                 )
             else
-                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
             end
         end,
         function (api, code, message, description)
@@ -286,8 +286,8 @@ function UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, onSuccee
     s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards = lastCheckInAward
     UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData,
         function (api, result) 
-            if lastCheckInAward <= #s_DATA_MANAGER.dailyCheckIn then
-                local metaDailyCheckIn = s_DATA_MANAGER.dailyCheckIn[lastCheckInAward]
+            if lastCheckInAward <= #s_DataManager.dailyCheckIn then
+                local metaDailyCheckIn = s_DataManager.dailyCheckIn[lastCheckInAward]
                 s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + metaDailyCheckIn.count
                 UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
                 AnalyticsDailyCheckIn(lastCheckInAward)
