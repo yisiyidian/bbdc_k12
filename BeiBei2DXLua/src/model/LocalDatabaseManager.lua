@@ -3,7 +3,18 @@ local MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
 local MAXTYPEINDEX = 4
 
 require("common.global")
-require("lsqlite3")
+local sqlite3 = require("lsqlite3")
+
+-- useless
+local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
+local DataDailyWord = require('model.user.DataDailyWord')
+local DataIAP = require('model.user.DataIAP')
+local DataLevel = require('model.user.DataLevel')
+
+local DataLogIn = require('model.user.DataLogIn')
+local DataUser = require('model.user.DataUser')
+local DataBookProgress = require('model.user.DataBookProgress')
+local DataCurrentIndex = require('model.user.DataCurrentIndex')
 
 -- define Manager
 local Manager = {}
@@ -13,7 +24,6 @@ Manager.database = nil
 
 -- connect local sqlite
 function Manager.open()
-    local sqlite3 = require("sqlite3")
     local databasePath = cc.FileUtils:getInstance():getWritablePath() .. "localDB.sqlite"
     Manager.database = sqlite3.open(databasePath)
     s_logd('databasePath:' .. databasePath)
@@ -123,16 +133,6 @@ end
 -- init data structure
 function Manager.initTables()
     
-    -- CREATE table Current Index
-    Manager.database:exec[[
-        create table if not exists DataCurrentIndex(
-            userId TEXT,
-            bookKey TEXT,
-            currentIndex INTEGER,
-            lastUpdate INTEGER
-        );
-    ]]
-    
     -- CREATE table NewPlay State
     Manager.database:exec[[
         create table if not exists DataNewPlayState(
@@ -192,6 +192,7 @@ function Manager.initTables()
     ]]
     
     -- CREATE table New Study Configuration
+    -- just used in local
     Manager.database:exec[[
         create table if not exists DataStudyConfiguration(
             userId TEXT,
@@ -202,6 +203,7 @@ function Manager.initTables()
     ]]
     
     -- CREATE table Download State
+    -- just used in local
     Manager.database:exec[[
         create table if not exists DataDownloadState(
             bookKey TEXT,
@@ -211,30 +213,138 @@ function Manager.initTables()
     ]]
 
     local userDataClasses = {
-        require('model.user.DataDailyCheckIn'),
-        require('model.user.DataDailyWord'),
-        require('model.user.DataIAP'),
-        require('model.user.DataLevel'),
-        require('model.user.DataLogIn'),
-        require('model.user.DataUser'),
-        require('model.user.DataBookProgress')
+        DataDailyCheckIn,
+        DataDailyWord,
+        DataIAP,
+        DataLevel,
+
+        DataLogIn,
+        DataUser,
+        DataBookProgress,
+        DataCurrentIndex
     }
     for i = 1, #userDataClasses do
         Manager.createTable(userDataClasses[i].create())
     end
 end
 
+local getInsertRecord = function (objectOfDataClass)
+    local keys, values = '', ''
+    for key, value in pairs(objectOfDataClass) do  
+        if (key == 'sessionToken'  
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
+            if key == 'PRIMARY' then key = 'fuckprimary' end
+
+            if (type(value) == 'string') then
+                if string.len(keys) > 0 then keys = keys .. ',' end
+                keys = keys .. "'" .. key .. "'"
+
+                if string.len(values) > 0 then values = values .. ',' end
+                values = values .. "'" .. value .. "'"
+            elseif (type(value) == 'boolean') then
+                if string.len(keys) > 0 then keys = keys .. ',' end
+                if string.len(values) > 0 then values = values .. ',' end
+                    keys = keys .. "'" .. key .. "'"
+                    values = values .. tostring(value)
+                -- if value then
+                --     keys = keys .. "'" .. key .. "'"
+                --     values = values .. '1'
+                -- else
+                --     keys = keys .. "'" .. key .. "'"
+                --     values = values .. '0'
+                -- end
+            elseif (type(value) == 'number') then
+                if string.len(keys) > 0 then keys = keys .. ',' end
+                keys = keys .. "'" .. key .. "'"
+
+                if string.len(values) > 0 then values = values .. ',' end
+                values = values .. value
+            end
+        end
+    end
+    return keys, values
+end
+
+local getUpdateRecord = function (objectOfDataClass)
+    local str = ''
+    for key, value in pairs(objectOfDataClass) do  
+        if (key == 'sessionToken'  
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
+            if key == 'PRIMARY' then key = 'fuckprimary' end
+
+            if (type(value) == 'string') then
+                if string.len(str) > 0 then str = str .. ',' end
+                str = str .. "'" .. key .. "'" .. '=' .. "'" .. value .. "'"
+            elseif (type(value) == 'boolean') then
+                if string.len(str) > 0 then str = str .. ',' end
+                str = str .. "'" .. key .. "'=" .. tostring(value)
+                -- if value then
+                --     str = str .. "'" .. key .. "'=1"
+                -- else
+                --     str = str .. "'" .. key .. "'=0"
+                -- end
+            elseif (type(value) == 'number') then
+                if string.len(str) > 0 then str = str .. ',' end
+                str = str .. "'" .. key .. "'" .. '=' .. value
+            end     
+        end
+    end
+    return str
+end
+
+local function saveData(objectOfDataClass, userId, username, recordsNum)
+    Manager.alterLocalDatabase(objectOfDataClass)
+    
+    print ('\n\nManager saveData:' .. objectOfDataClass.className .. ' == ' .. tostring(getLocalSeconds() - objectOfDataClass.updatedAt) .. ', updatedAt:' .. tostring(objectOfDataClass.updatedAt) .. ', getLocalSeconds:' .. tostring(getLocalSeconds()))
+    if objectOfDataClass.updatedAt > getLocalSeconds() then return end
+    if objectOfDataClass.updatedAt < getLocalSeconds() then objectOfDataClass.updatedAt = getLocalSeconds() end
+    local query = ''
+    local ret = 'nothing saved'
+    if recordsNum == 0 then
+        local keys, values = getInsertRecord(objectOfDataClass)
+        query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
+        ret = Manager.database:exec(query)
+    elseif userId ~= nil and userId ~= '' then
+        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE userId = '".. userId .."'"
+        ret = Manager.database:exec(query)
+    elseif username ~= nil and username ~= '' then
+        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE username = '".. username .."'"
+        ret = Manager.database:exec(query)
+    else
+        query = "UPDATE " .. objectOfDataClass.className .. " SET " .. getUpdateRecord(objectOfDataClass) .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        ret = Manager.database:exec(query)
+    end
+
+    print ('[Manager saveData: result:' .. tostring(ret) .. ']: ' .. query .. '\n\n')
+end
+
+local function addData(objectOfDataClass, userId, username)
+    local hasRecords = 1
+    saveData(objectOfDataClass, userId, username, hasRecords)
+end
+
 -- if record exists then update record
 -- else create record
 --
 -- ALTER TABLE table_name ADD column_name datatype
-function Manager.saveDataClassObject(objectOfDataClass, username)
-    Manager.alterLocalDatabase(objectOfDataClass)
-    
+function Manager.saveDataClassObject(objectOfDataClass, userId, username)
     local searchSql = ''
     local num = 0
     if objectOfDataClass.objectId ~= '' then
         local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        print ('Manager.saveDataClassObject: ' .. searchSql)
+        for row in Manager.database:nrows(searchSql) do
+            num = num + 1
+            break
+        end
+    end
+
+    if num == 0 and userId ~= nil and userId ~= '' then
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE userId = '".. userId .."'"
         print ('Manager.saveDataClassObject: ' .. searchSql)
         for row in Manager.database:nrows(searchSql) do
             num = num + 1
@@ -251,90 +361,7 @@ function Manager.saveDataClassObject(objectOfDataClass, username)
         end
     end
 
-    local insert = function ()
-        local keys, values = '', ''
-        for key, value in pairs(objectOfDataClass) do  
-            if (key == 'sessionToken'  
-                or string.find(key, '__') ~= nil 
-                or value == nil) == false then 
-
-                if key == 'PRIMARY' then key = 'fuckprimary' end
-
-                if (type(value) == 'string') then
-                    if string.len(keys) > 0 then keys = keys .. ',' end
-                    keys = keys .. "'" .. key .. "'"
-
-                    if string.len(values) > 0 then values = values .. ',' end
-                    values = values .. "'" .. value .. "'"
-                elseif (type(value) == 'boolean') then
-                    if string.len(keys) > 0 then keys = keys .. ',' end
-                    if string.len(values) > 0 then values = values .. ',' end
-                        keys = keys .. "'" .. key .. "'"
-                        values = values .. tostring(value)
-                    -- if value then
-                    --     keys = keys .. "'" .. key .. "'"
-                    --     values = values .. '1'
-                    -- else
-                    --     keys = keys .. "'" .. key .. "'"
-                    --     values = values .. '0'
-                    -- end
-                elseif (type(value) == 'number') then
-                    if string.len(keys) > 0 then keys = keys .. ',' end
-                    keys = keys .. "'" .. key .. "'"
-
-                    if string.len(values) > 0 then values = values .. ',' end
-                    values = values .. value
-                end
-            end
-        end
-        return keys, values
-    end
-
-    local update = function ()
-        local str = ''
-        for key, value in pairs(objectOfDataClass) do  
-            if (key == 'sessionToken'  
-                or string.find(key, '__') ~= nil 
-                or value == nil) == false then 
-
-                if key == 'PRIMARY' then key = 'fuckprimary' end
-
-                if (type(value) == 'string') then
-                    if string.len(str) > 0 then str = str .. ',' end
-                    str = str .. "'" .. key .. "'" .. '=' .. "'" .. value .. "'"
-                elseif (type(value) == 'boolean') then
-                    if string.len(str) > 0 then str = str .. ',' end
-                    str = str .. "'" .. key .. "'=" .. tostring(value)
-                    -- if value then
-                    --     str = str .. "'" .. key .. "'=1"
-                    -- else
-                    --     str = str .. "'" .. key .. "'=0"
-                    -- end
-                elseif (type(value) == 'number') then
-                    if string.len(str) > 0 then str = str .. ',' end
-                    str = str .. "'" .. key .. "'" .. '=' .. value
-                end     
-            end
-        end
-        return str
-    end
-
-    if objectOfDataClass.updatedAt > getUTCSeconds() then return end
-    if objectOfDataClass.updatedAt < getUTCSeconds() then objectOfDataClass.updatedAt = getUTCSeconds() end
-    if num == 0 then
-        local keys, values = insert()
-        local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
-        local ret = Manager.database:exec(query)
-        print('[sql result:' .. tostring(ret) .. ']: ' .. query)
-    elseif username ~= nil and username ~= '' then
-        local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE username = '".. username .."'"
-        local ret = Manager.database:exec(query)
-        print('[sql result:' .. tostring(ret) .. ']: ' .. query)
-    else
-        local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
-        local ret = Manager.database:exec(query)
-        print('[sql result:' .. tostring(ret) .. ']: ' .. query)
-    end
+    saveData(objectOfDataClass, nil, username, num)
 end
 
 local function getUserDataFromLocalDB(objectOfDataClass, usertype)
@@ -625,7 +652,8 @@ function Manager.getGraspWords()
     return wordPool
 end
 
-
+---------------------------------------------------------------------------------------------------------
+-- DataCurrentIndex
 -- record word info
 function Manager.printCurrentIndex()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end
@@ -640,21 +668,38 @@ function Manager.printCurrentIndex()
     print("</currentIndex>")
 end
 
+local function createDataCurrentIndex(lastUpdate, bookKey, currentIndex)
+    local data = DataCurrentIndex.create()
+    updateDataFromUser(data, s_CURRENT_USER)
+
+    data.lastUpdate = lastUpdate
+    data.bookKey = bookKey
+    data.currentIndex = currentIndex
+
+    return data
+end
+
 function Manager.getCurrentIndex()
     local currentIndex = nil
 
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
-    
-    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        currentIndex = row.currentIndex
+    local username = s_CURRENT_USER.username
+
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+            currentIndex = row.currentIndex
+        end
+    elseif username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
+            currentIndex = row.currentIndex
+        end
     end
     
     if currentIndex == nil then
         currentIndex = 1
-        local time = os.time()
-        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", "..time..");"
-        Manager.database:exec(query)
+        local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
+        saveData(data, userId, username, 0)
     end
     
     return currentIndex
@@ -663,21 +708,24 @@ end
 function Manager.setCurrentIndex(currentIndex)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
+    local username = s_CURRENT_USER.username
 
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        num = num + 1
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+        end
+    elseif username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+        end
     end
 
-    if num == 0 then
-        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", "..time..");"
-        Manager.database:exec(query)
-    else
-        local query = "UPDATE DataCurrentIndex SET currentIndex = "..currentIndex..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
-        Manager.database:exec(query)
-    end
+    local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
+    saveData(data, userId, username, num)
 end
+
+---------------------------------------------------------------------------------------------------------
 
 function Manager.printNewPlayState()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end

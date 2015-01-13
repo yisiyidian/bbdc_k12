@@ -69,7 +69,7 @@ local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onRespons
         if hasParsed == false then parseServerUser( objectjson ) end
 
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, s_CURRENT_USER.username)
+        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
         s_DATABASE_MGR.setLogOut(false)
         
         if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end

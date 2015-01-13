@@ -1,4 +1,4 @@
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 
 local DataDailyCheckIn = class("DataDailyCheckIn", function()
     return DataClassBase.new()

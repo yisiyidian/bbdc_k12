@@ -1,4 +1,4 @@
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 
 local DataWordProciency = class("DataWordProciency", function()
     return DataClassBase.new()

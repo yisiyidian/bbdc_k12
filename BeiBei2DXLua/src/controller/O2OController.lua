@@ -144,7 +144,7 @@ function O2OController.startLoadingData(userStartType, username, password)
                 print ('\n\n\nisLocalNewerThenServer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print_lua_table (s_CURRENT_USER)
                 print ('isLocalNewerThenServer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n\n')
-                s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, username)
+                s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, nil, username)
                 s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
                     function (api, result) 
                         O2OController.getUserDatasOnline()
@@ -207,7 +207,7 @@ end
 function O2OController.signUpOffline(username, password)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
-    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, username)
+    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, nil, username)
 
     O2OController.loadConfigs()
     O2OController.getDataBookProgress()
@@ -303,7 +303,7 @@ function O2OController.getDataBookProgress(oncompleted)
         if lastLocalData ~= nil and lastLocalData.updatedAt > s_CURRENT_USER.bookProgress.updatedAt then
             -- send local to server
             lastLocalData.objectId = s_CURRENT_USER.bookProgress.objectId
-            lastLocalData:setDatasFromUser(s_CURRENT_USER)
+            updateDataFromUser(lastLocalData, s_CURRENT_USER)
             parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.bookProgress)
         else
@@ -353,7 +353,7 @@ function O2OController.getDataLogIn(onSaved)
             data = DataLogIn.create()
             s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
         end
-        data:setDatasFromUser(s_CURRENT_USER)
+        updateDataFromUser(data, s_CURRENT_USER)
         data.week = week
         data:setWeekDay(os.time())
 
