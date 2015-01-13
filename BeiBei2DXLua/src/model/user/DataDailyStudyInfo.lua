@@ -1,4 +1,4 @@
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 
 local DataDailyStudyInfo = class("DataDailyStudyInfo", function()
     return DataClassBase.new()
@@ -16,6 +16,7 @@ function DataDailyStudyInfo:ctor()
     self.dayString = ''
     self.studyNum = 0
     self.graspNum = 0
+    self.lastUpdate = 0
 end
 
 return DataDailyStudyInfo

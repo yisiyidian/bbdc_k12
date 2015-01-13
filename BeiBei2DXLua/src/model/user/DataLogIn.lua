@@ -1,4 +1,4 @@
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 
 local DataLogIn = class("DataLogIn", function()
     return DataClassBase.new()

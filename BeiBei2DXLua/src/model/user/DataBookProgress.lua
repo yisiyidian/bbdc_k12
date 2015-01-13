@@ -1,6 +1,6 @@
 require("cocos.init")
 require("common.global")
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 
 local DataBookProgress = class("DataBookProgress", function()
     return DataClassBase.new()

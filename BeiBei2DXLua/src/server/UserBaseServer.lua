@@ -69,7 +69,7 @@ local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onRespons
         if hasParsed == false then parseServerUser( objectjson ) end
 
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, s_CURRENT_USER.username)
+        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
         s_DATABASE_MGR.setLogOut(false)
         
         if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
@@ -368,34 +368,6 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
     else
         s_SERVER.updateData(dataObject, s, onFailed)
     end
-end
-
-function UserBaseServer.saveWordProciencyOfCurrentUser(bookKey, wordName, prociencyValue, onSucceed, onFailed)
-    local DataWordProciency = require('model/user/DataWordProciency')
-
-    local dataObject = DataWordProciency.create()
-    dataObject.userId = s_CURRENT_USER.objectId
-    dataObject.bookKey = bookKey
-    dataObject.wordName = wordName
-    dataObject.prociencyValue = prociencyValue
-
-    local s = function (api, result)
-        if #result.results > 0 then
-            for i, data in ipairs(result.results) do
-                data.prociencyValue = dataObject.prociencyValue
-                parseServerDataToUserData(data, dataObject)
-                s_SERVER.updateData(dataObject, onSucceed, onFailed)
-                break
-            end
-        else
-            s_SERVER.createData(dataObject, onSucceed, onFailed)
-        end
-    end
-    local f = function (api, result)
-        s_SERVER.createData(dataObject, onSucceed, onFailed)        
-    end
-
-    s_SERVER.search('classes/DataWordProciency?where={"userId":"' .. dataObject.userId .. '","bookKey":"' .. dataObject.bookKey .. '","wordName":"' .. dataObject.wordName .. '"}', s, f)
 end
 
 function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)

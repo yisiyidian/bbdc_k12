@@ -1,4 +1,4 @@
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 local DataLogIn = require('model/user/DataLogIn')
 local DataBookProgress = require('model.user.DataBookProgress')
