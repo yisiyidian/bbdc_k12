@@ -109,10 +109,12 @@ function Manager.createTable(objectOfDataClass)
 
     sql = sql .. str .. '\n);'
     local ret = Manager.database:exec(sql)
-    print ('Manager.createTable: ' .. objectOfDataClass.className .. ', ' .. tostring(ret))
     if ret ~= 0 then
+        print ('\n\n\nSQLITE ERROR: >>>>>>>>>>>>')
+        print ('Manager.createTable: ' .. objectOfDataClass.className .. ', ' .. tostring(ret))
         print (sql)
         print_lua_table (objectOfDataClass)
+        print ('SQLITE ERROR: <<<<<<<<<<<<\n\n\n')
     end
 
     Manager.alterLocalDatabase(objectOfDataClass)
@@ -226,13 +228,27 @@ end
 -- else create record
 --
 -- ALTER TABLE table_name ADD column_name datatype
-function Manager.saveDataClassObject(objectOfDataClass)
+function Manager.saveDataClassObject(objectOfDataClass, username)
     Manager.alterLocalDatabase(objectOfDataClass)
     
+    local searchSql = ''
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'") do
-        num = num + 1
-        break
+    if objectOfDataClass.objectId ~= '' then
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        print ('Manager.saveDataClassObject: ' .. searchSql)
+        for row in Manager.database:nrows(searchSql) do
+            num = num + 1
+            break
+        end
+    end
+
+    if num == 0 and username ~= nil and username ~= '' then
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE username = '".. username .."'"
+        print ('Manager.saveDataClassObject: ' .. searchSql)
+        for row in Manager.database:nrows(searchSql) do
+            num = num + 1
+            break
+        end
     end
 
     local insert = function ()
@@ -303,15 +319,21 @@ function Manager.saveDataClassObject(objectOfDataClass)
         return str
     end
 
+    if objectOfDataClass.updatedAt > getUTCSeconds() then return end
+    if objectOfDataClass.updatedAt < getUTCSeconds() then objectOfDataClass.updatedAt = getUTCSeconds() end
     if num == 0 then
         local keys, values = insert()
         local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
         local ret = Manager.database:exec(query)
-        s_logd('[sql result:' .. tostring(ret) .. ']: ' .. query)
+        print('[sql result:' .. tostring(ret) .. ']: ' .. query)
+    elseif username ~= nil and username ~= '' then
+        local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE username = '".. username .."'"
+        local ret = Manager.database:exec(query)
+        print('[sql result:' .. tostring(ret) .. ']: ' .. query)
     else
         local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
         local ret = Manager.database:exec(query)
-        s_logd('[sql result:' .. tostring(ret) .. ']: ' .. query)
+        print('[sql result:' .. tostring(ret) .. ']: ' .. query)
     end
 end
 
@@ -319,12 +341,11 @@ local function getUserDataFromLocalDB(objectOfDataClass, usertype)
     local lastLogIn = 0
     local data = nil
     for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
-        print ('sql result:')
-        print_lua_table(row)
+        print ('getUserDataFromLocalDB result:')
         local rowTime = row.updatedAt
         if rowTime <= 0 then rowTime = row.createdAt end
         if rowTime > lastLogIn then
-            s_logd(string.format('getUserDataFromLocalDB updatedAt: %s, %f, %f', row.objectId, row.updatedAt, lastLogIn))
+            print(string.format('getUserDataFromLocalDB updatedAt: %s, %s, %f, %f', row.objectId, row.username, row.updatedAt, lastLogIn))
 
             if usertype == USER_TYPE_GUEST then
                 if (row.isGuest == 1 and row.usertype == nil) or row.usertype == USER_TYPE_GUEST then
@@ -362,6 +383,28 @@ function Manager.getLastLogInUser(objectOfDataClass, usertype)
     return getUserDataFromLocalDB(objectOfDataClass, usertype)
 end
 
+function Manager.getDatas(classNameOfDataClass, userId, username)
+    local sql = ''
+    local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s"', classNameOfDataClass, username)
+    local sqlUserId = string.format('SELECT * FROM %s WHERE userId = "%s"', classNameOfDataClass, userId)
+    if username ~= '' then
+        sql = sqlUsername
+    elseif userId ~= '' then
+        sql = sqlUserId
+    end
+    if sql == '' then return {} end
+
+    local ret = {}
+    for row in Manager.database:nrows(sql) do
+        table.insert(ret, row)
+    end
+    if #ret == 0 and sql == sqlUsername and userId ~= '' then
+        for row in Manager.database:nrows(sqlUserId) do
+            table.insert(ret, row)
+        end
+    end
+    return ret
+end
 
 -- show word info
 
