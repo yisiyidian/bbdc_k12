@@ -370,34 +370,6 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
     end
 end
 
-function UserBaseServer.saveWordProciencyOfCurrentUser(bookKey, wordName, prociencyValue, onSucceed, onFailed)
-    local DataWordProciency = require('model/user/DataWordProciency')
-
-    local dataObject = DataWordProciency.create()
-    dataObject.userId = s_CURRENT_USER.objectId
-    dataObject.bookKey = bookKey
-    dataObject.wordName = wordName
-    dataObject.prociencyValue = prociencyValue
-
-    local s = function (api, result)
-        if #result.results > 0 then
-            for i, data in ipairs(result.results) do
-                data.prociencyValue = dataObject.prociencyValue
-                parseServerDataToUserData(data, dataObject)
-                s_SERVER.updateData(dataObject, onSucceed, onFailed)
-                break
-            end
-        else
-            s_SERVER.createData(dataObject, onSucceed, onFailed)
-        end
-    end
-    local f = function (api, result)
-        s_SERVER.createData(dataObject, onSucceed, onFailed)        
-    end
-
-    s_SERVER.search('classes/DataWordProciency?where={"userId":"' .. dataObject.userId .. '","bookKey":"' .. dataObject.bookKey .. '","wordName":"' .. dataObject.wordName .. '"}', s, f)
-end
-
 function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
     local dataObject = s_CURRENT_USER.dailyStudyInfo    
 

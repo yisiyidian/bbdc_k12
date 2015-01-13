@@ -18,13 +18,6 @@ function DynamicUpdate.initUpdateLabel()
     return updateInfo
 end
 
-function reloadModule( moduleName )
-
-    package.loaded[moduleName] = nil
-
-    return require(moduleName)
-end
-
 function DynamicUpdate.loginUpdateCompleted()
 
     print("The storagePath is "..storagePath)
