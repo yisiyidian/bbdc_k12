@@ -303,8 +303,7 @@ function O2OController.getDataBookProgress(oncompleted)
         if lastLocalData ~= nil and lastLocalData.updatedAt > s_CURRENT_USER.bookProgress.updatedAt then
             -- send local to server
             lastLocalData.objectId = s_CURRENT_USER.bookProgress.objectId
-            lastLocalData.userId = s_CURRENT_USER.bookProgress.userId
-            lastLocalData.username = s_CURRENT_USER.bookProgress.username
+            lastLocalData:setDatasFromUser(s_CURRENT_USER)
             parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.bookProgress)
         else
@@ -340,34 +339,37 @@ function O2OController.getDataBookProgress(oncompleted)
 end -- O2OController.getDataBookProgress(oncompleted)
 
 function O2OController.getDataLogIn(onSaved)
-    -- TODO: get local data and save new data
-    -- local DataLogIn = require('model.user.DataLogIn')
-    -- local data = DataLogIn.create()
-    -- data.week = week
-    -- data:setWeekDay(os.time())
-    -- s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
-    -- s_DATABASE_MGR.saveDataClassObject(data)
-
     local DataLogIn = require('model.user.DataLogIn')
+
+    local function onUpdateWeekCompleted(data)
+        onSaved()
+        s_DATABASE_MGR.saveDataClassObject(data)
+        hideProgressHUD()
+    end
+
+    -- save to local or server
     local function updateWeek(data, week)
         if data == nil then 
             data = DataLogIn.create()
             s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
         end
+        data:setDatasFromUser(s_CURRENT_USER)
         data.week = week
         data:setWeekDay(os.time())
-        s_UserBaseServer.saveDataObjectOfCurrentUser(data, 
-            function (api, result)
-                onSaved()
-                s_DATABASE_MGR.saveDataClassObject(data)
-                hideProgressHUD()
-            end,
-            function (api, code, message, description)
-                onSaved()
-                s_DATABASE_MGR.saveDataClassObject(data)
-                hideProgressHUD()
-            end)
+
+        if s_SERVER.isOnline() == false then
+            onUpdateWeekCompleted(data)
+        else
+            s_UserBaseServer.saveDataObjectOfCurrentUser(
+                data, 
+                function (api, result) onUpdateWeekCompleted(data) end, 
+                function (api, code, message, description) onUpdateWeekCompleted(data) end
+            )
+        end
     end
+
+    local className = 'DataLogIn'
+    local localDatas = s_DATABASE_MGR.getDatas(className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
 
     if s_CURRENT_USER.localTime == 0 then
         s_CURRENT_USER.localTime = os.time()
@@ -376,21 +378,47 @@ function O2OController.getDataLogIn(onSaved)
     else
         print ('os time, local time:', os.time(), s_CURRENT_USER.localTime)
         showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_USER])
+        
         local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
-        s_UserBaseServer.getDataLogIn(s_CURRENT_USER.objectId, currentWeeks,
-            function (api, result)
-                s_CURRENT_USER:parseServerDataLogIn(result.results)
-                if #(result.results) <= 0 then
-                    updateWeek(nil, currentWeeks)
-                else
-                    local data = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
-                    updateWeek(data, data.week)
-                end
-            end,
-            function (api, code, message, description)
-                onSaved()
-                hideProgressHUD()
-            end)
+        -- local database
+        local localCurrentData = nil
+        for i, v in ipairs(localDatas) do
+            if v.week == currentWeeks then
+                localCurrentData = v
+                break
+            end
+        end
+
+        if s_SERVER.isOnline() == false then -- offline
+            if localCurrentData ~= nil then
+                updateWeek(localCurrentData, localCurrentData.week)
+            else
+                updateWeek(nil, currentWeeks)
+            end
+        else -- online
+            s_UserBaseServer.getDataLogIn(s_CURRENT_USER.objectId, currentWeeks,
+                function (api, result)
+                    s_CURRENT_USER:parseServerDataLogIn(result.results)
+                    if #(result.results) <= 0 then
+                        if localCurrentData ~= nil then
+                            updateWeek(localCurrentData, localCurrentData.week)
+                            s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
+                        else
+                            updateWeek(nil, currentWeeks)
+                        end
+                    else
+                        local data = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+                        if localCurrentData ~= nil then
+                            data:updateFrom(localCurrentData)
+                        end
+                        updateWeek(data, data.week)
+                    end
+                end,
+                function (api, code, message, description)
+                    onSaved()
+                    hideProgressHUD()
+                end)
+        end
     end
 end
 

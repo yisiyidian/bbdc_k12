@@ -106,4 +106,9 @@ function DataClassBase:ctor()
     self.updatedAt = 0
 end
 
+function DataClassBase:setDatasFromUser(user)
+    self.userId = user.objectId
+    self.username = user.username
+end
+
 return DataClassBase
