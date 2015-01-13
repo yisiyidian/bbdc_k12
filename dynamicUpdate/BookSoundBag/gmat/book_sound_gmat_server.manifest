@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://yisiyidian.com/BookSoundBag/",
+	"remoteManifestUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_gmat_server.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_gmat_version.manifest", 
+	"version" : "1.6.0.1", 
+	"engineVersion" : "3.3 rc2", 
+	"gmat" : {	
+		"cet4.zip" : {
+			"md5" : "f8c70d47d8c7c250075e57358774e850",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}

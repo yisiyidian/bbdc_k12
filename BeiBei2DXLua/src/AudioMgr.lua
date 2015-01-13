@@ -57,10 +57,11 @@ end
 function playWordSound(word)
     if db.isSoundOn() then
         local filename = getWordSoundFileName(word)
---        local localPath = getWordSoundFilePath(word)
---        print("The current localPath is: ",localPath)
+                
         if cc.FileUtils:getInstance():isFileExist(filename) then
             cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
+        else
+            cc.SimpleAudioEngine:getInstance():playEffect("sound/words/"..filename, false)        
         end
     end
 end

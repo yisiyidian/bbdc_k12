@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://yisiyidian.com/BookSoundBag/",
+	"remoteManifestUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_middle_server.manifest", 
+	"remoteVersionUrl" : "http://yisiyidian.com/BookSoundBag/book_sound_middle_version.manifest", 
+	"version" : "1.6.0.1", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : {	
+		"middle.zip" : {
+			"md5" : "0140608506a2914f910b4f0c38d089f9",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}
