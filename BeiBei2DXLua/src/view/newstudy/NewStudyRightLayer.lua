@@ -54,7 +54,7 @@ function NewStudyRightLayer.create()
             local normal = function()
                 s_CorePlayManager.enterNewStudyWrongLayer()
             end
-            if s_DATABASE_MGR.getIsAlterOn() == 1 then
+            if s_LocalDatabaseManager.getIsAlterOn() == 1 then
                 local guideAlter = GuideAlter.create(1, "依然复习？", "看来你对“"..wordname.."”还不熟，贝贝将把“"..wordname.."”放入生词库中，接下来的复习中，你们还会再见哦！")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter)
@@ -62,7 +62,7 @@ function NewStudyRightLayer.create()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
                     if guideAlter.box_tag == 1 then
-                        s_DATABASE_MGR.setIsAlterOn(0)
+                        s_LocalDatabaseManager.setIsAlterOn(0)
                 	end
                     normal()
                 end
@@ -103,7 +103,7 @@ function NewStudyRightLayer.create()
                 end
             end
         
-            if s_DATABASE_MGR.getIsAlterOn() == 1 then
+            if s_LocalDatabaseManager.getIsAlterOn() == 1 then
                 local guideAlter = GuideAlter.create(1, "不再复习？", "看来你对“"..wordname.."”很熟悉，贝贝将把“"..wordname.."”放入熟词库中，该词以后不再出现！")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter)
@@ -111,7 +111,7 @@ function NewStudyRightLayer.create()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
                     if guideAlter.box_tag == 1 then
-                        s_DATABASE_MGR.setIsAlterOn(0)
+                        s_LocalDatabaseManager.setIsAlterOn(0)
                     end
                     normal()
 

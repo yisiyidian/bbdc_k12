@@ -15,7 +15,7 @@ function PopupStarInfo:ctor()
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
-   if s_DATABASE_MGR.isMusicOn() then
+   if s_LocalDatabaseManager.isMusicOn() then
       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.1)
    end
 
@@ -94,7 +94,7 @@ function PopupStarInfo:onContinueButtonClicked()
     -- button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2)
     end
     s_SCENE:callFuncWithDelay(0.3,function()

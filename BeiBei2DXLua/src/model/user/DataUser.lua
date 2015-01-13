@@ -523,7 +523,7 @@ function DataUser:setUserLevelDataOfUnlocked(chapterKey, levelKey, unlocked, onS
             local callLevelData = self:getUserLevelData(chapterKey, levelKey)
             callLevelData.objectId = levelData.objectId
             --print('levelData.objectId'..levelData.objectId..','..levelData.levelKey)
-            s_DATABASE_MGR.saveDataClassObject(levelData)
+            s_LocalDatabaseManager.saveDataClassObject(levelData)
             if onSucceed ~= nil then onSucceed(api, result) end
         end,
         function (api, code, message, description)

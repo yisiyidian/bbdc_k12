@@ -69,8 +69,8 @@ local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onRespons
         if hasParsed == false then parseServerUser( objectjson ) end
 
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
-        s_DATABASE_MGR.setLogOut(false)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
+        s_LocalDatabaseManager.setLogOut(false)
         
         if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
     else
@@ -186,7 +186,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
     local onCompleted = function ()
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
     end
@@ -213,7 +213,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                 UserBaseServer.saveDataObjectOfCurrentUser(obj, 
                     function (api, result) 
                         s_CURRENT_USER.username = username
-                        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+                        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
                         change_password(password, onResponse)
                     end, 
                     function (api, code, message, description) 

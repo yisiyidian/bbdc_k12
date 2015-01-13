@@ -112,7 +112,7 @@ function LearnedWordList:ctor()
     listView:setItemModel(default_item)
     listView:removeAllChildren()
     -- get data
-    local word = s_DATABASE_MGR:getStudyWords()
+    local word = s_LocalDatabaseManager:getStudyWords()
     local small_meaning = {}
     local meaning = {}
     local sentenceEn = {}
@@ -322,7 +322,7 @@ function LearnedWordList:ctor()
 --            end
 --        end
 --        -- add word list
---        local studyWords = s_DATABASE_MGR.getStudyWords(s_CURRENT_USER.bookKey)
+--        local studyWords = s_LocalDatabaseManager.getStudyWords(s_CURRENT_USER.bookKey)
 --        for i = 1, #self.levelArray[indexConfig] do
 --            local word = self.levelArray[indexConfig][i]
 --            local wordKey = self.levelKey[indexConfig]..'|'..word

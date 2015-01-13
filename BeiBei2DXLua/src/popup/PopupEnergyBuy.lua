@@ -15,7 +15,7 @@ function PopupEnergyBuy:ctor()
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25)
     end
 
@@ -160,7 +160,7 @@ function PopupEnergyBuy:onCloseButtonClicked()
     -- button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
     end
 end
@@ -176,10 +176,10 @@ function PopupEnergyBuy:onBuyButtonClicked()
         print('store onBuyResult: ' .. tostring(code) .. ', ' .. msg)
         if code == 0 then
             s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + energyCountBought
-            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
                 function(api,result)
-                    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+                    s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
                     local str = string.format(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_BOUGHT_ENERGY), energyCountBought)
                     s_TIPS_LAYER:showSmall(str)
                     hideProgressHUD()

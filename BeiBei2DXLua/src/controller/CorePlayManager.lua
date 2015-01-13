@@ -41,7 +41,7 @@ function CorePlayManager.create()
 end
 
 function CorePlayManager.initTotalPlay()  
-    local gameState = s_DATABASE_MGR.getGameState()
+    local gameState = s_LocalDatabaseManager.getGameState()
     if gameState == s_gamestate_reviewbossmodel then
         CorePlayManager.initNewReviewBossRewardAndTotalWord()
         local candidate = CorePlayManager.getReviewBossCandidate()
@@ -55,7 +55,7 @@ end
 function CorePlayManager.initNewStudyLayer()
     CorePlayManager.maxWrongWordCount = s_max_wrong_num_everyday
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
-    CorePlayManager.currentIndex = s_DATABASE_MGR.getCurrentIndex()
+    CorePlayManager.currentIndex = s_LocalDatabaseManager.getCurrentIndex()
     print("currentBookWordIndex is "..CorePlayManager.currentIndex)
     
     if CorePlayManager.bookOver() then
@@ -63,7 +63,7 @@ function CorePlayManager.initNewStudyLayer()
         return
     end
     
-    local lastPlayState = s_DATABASE_MGR.getNewPlayState()
+    local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
     if lastPlayState.lastUpdate == nil then
         print("lastPlayStateRecord not exist...")
         CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
@@ -133,15 +133,15 @@ function CorePlayManager.bookOver()
 end
 
 function CorePlayManager.recordStudyStateIntoDB()
-    s_DATABASE_MGR.setCurrentIndex(CorePlayManager.currentIndex)
-    s_DATABASE_MGR.printCurrentIndex()
+    s_LocalDatabaseManager.setCurrentIndex(CorePlayManager.currentIndex)
+    s_LocalDatabaseManager.printCurrentIndex()
 
     local rightWordListString = changeTableToString(CorePlayManager.rightWordList)
     local wrongWordListString = changeTableToString(CorePlayManager.wrongWordList)
     local wordCandidateString = changeTableToString(CorePlayManager.wordCandidate)
     
-    s_DATABASE_MGR.setNewPlayState(CorePlayManager.playModel, rightWordListString, wrongWordListString, wordCandidateString)
-    s_DATABASE_MGR.printNewPlayState()
+    s_LocalDatabaseManager.setNewPlayState(CorePlayManager.playModel, rightWordListString, wrongWordListString, wordCandidateString)
+    s_LocalDatabaseManager.printNewPlayState()
 end
 
 function CorePlayManager.checkInStudyModel()
@@ -245,14 +245,14 @@ function CorePlayManager.enterNewStudyBookOverLayer()
 end
 
 function CorePlayManager.updateCurrentIndex()
-    s_DATABASE_MGR.addStudyWordsNum()
+    s_LocalDatabaseManager.addStudyWordsNum()
     CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
     
     s_CorePlayManager.recordStudyStateIntoDB()
 end
 
 function CorePlayManager.updateRightWordList(wordname)
-    s_DATABASE_MGR.addGraspWordsNum(1)
+    s_LocalDatabaseManager.addGraspWordsNum(1)
 
     table.insert(CorePlayManager.rightWordList, wordname)
     CorePlayManager.rightWordNum = CorePlayManager.rightWordNum + 1
@@ -261,9 +261,9 @@ function CorePlayManager.updateRightWordList(wordname)
 end
 
 function CorePlayManager.updateWrongWordList(wordname)
-    s_DATABASE_MGR.addWrongWordBuffer(wordname)
-    s_DATABASE_MGR.printWrongWordBuffer()
-    s_DATABASE_MGR.printBossWord()
+    s_LocalDatabaseManager.addWrongWordBuffer(wordname)
+    s_LocalDatabaseManager.printWrongWordBuffer()
+    s_LocalDatabaseManager.printBossWord()
     
     table.insert(CorePlayManager.wrongWordList, wordname)
     CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
@@ -274,13 +274,13 @@ end
 
 -- new review boss
 function CorePlayManager.getReviewBossCandidate() -- if not exist candidate will return nil
-    return s_DATABASE_MGR.getBossWord()
+    return s_LocalDatabaseManager.getBossWord()
 end
 
 function CorePlayManager.updateReviewBoss(bossID)
     if bossID > 0 then
-        s_DATABASE_MGR.updateBossWord(bossID)
-        s_DATABASE_MGR.printBossWord()
+        s_LocalDatabaseManager.updateBossWord(bossID)
+        s_LocalDatabaseManager.printBossWord()
     end
 end
 
@@ -480,11 +480,11 @@ function CorePlayManager.recordWordProciency()
         s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + 1
         if CorePlayManager.wordProficiency[i] == 0 then
             s_logd("word: "..CorePlayManager.wordList[i].." pro:0")
-            s_DATABASE_MGR.insertTable_DataWordProciency(CorePlayManager.wordList[i], 0)
+            s_LocalDatabaseManager.insertTable_DataWordProciency(CorePlayManager.wordList[i], 0)
         else
             s_CURRENT_USER.masterCount = s_CURRENT_USER.masterCount + 1
             s_logd("word: "..CorePlayManager.wordList[i].." pro:5")
-            s_DATABASE_MGR.insertTable_DataWordProciency(CorePlayManager.wordList[i], 5)
+            s_LocalDatabaseManager.insertTable_DataWordProciency(CorePlayManager.wordList[i], 5)
         end
     end
 
@@ -509,8 +509,8 @@ end
 
 function CorePlayManager.enterReviewBossLayer()
 --    s_SCENE.gameLayerState = s_boss_game_state
-    local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
-    CorePlayManager.rbWordList = s_DATABASE_MGR.getRBWordList(bossID)
+    local bossID = s_LocalDatabaseManager.getCurrentReviewBossID()
+    CorePlayManager.rbWordList = s_LocalDatabaseManager.getRBWordList(bossID)
     if #CorePlayManager.rbWordList < 3 then
         return
     end
@@ -538,7 +538,7 @@ end
 
 function CorePlayManager.leaveReviewBossLayer()
 --    s_SCENE.gameLayerState = s_normal_game_state
-    --s_DATABASE_MGR.updateReviewBossRecord(s_DATABASE_MGR.getCurrentReviewBossID())
+    --s_LocalDatabaseManager.updateReviewBossRecord(s_LocalDatabaseManager.getCurrentReviewBossID())
     s_SCENE.levelLayerState = s_review_boss_pass_state
     CorePlayManager.enterLevelLayer()
 end

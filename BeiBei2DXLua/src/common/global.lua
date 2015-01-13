@@ -127,8 +127,8 @@ local function _initServer()
 end
 
 local function _initData()
-    s_DATABASE_MGR = require('model.LocalDatabaseManager')
-    s_DATABASE_MGR.init()
+    s_LocalDatabaseManager = require('model.LocalDatabaseManager')
+    s_LocalDatabaseManager.init()
 
     local DataUser = require('model.user.DataUser')
     s_CURRENT_USER = DataUser.create()

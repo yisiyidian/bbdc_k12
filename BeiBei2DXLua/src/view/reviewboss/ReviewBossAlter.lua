@@ -18,8 +18,8 @@ function ReviewBossAlter.create()
         playSound(s_sound_win)
     end)
     
-    local bossID = s_DATABASE_MGR.getCurrentReviewBossID()
-    s_DATABASE_MGR.updateReviewBossRecord(bossID)
+    local bossID = s_LocalDatabaseManager.getCurrentReviewBossID()
+    s_LocalDatabaseManager.updateReviewBossRecord(bossID)
     
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
     local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)

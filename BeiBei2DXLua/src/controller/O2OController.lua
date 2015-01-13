@@ -27,8 +27,8 @@ local _TEXT_ID_UPDATE_USER = 4
 local function onErrorHappend(e)
     local function onError()
         cx.CXAvos:getInstance():logOut()
-        s_DATABASE_MGR.setLogOut(true)
-        s_DATABASE_MGR.close()
+        s_LocalDatabaseManager.setLogOut(true)
+        s_LocalDatabaseManager.close()
         s_START_FUNCTION()
     end
     s_TIPS_LAYER:showSmall(e, onError, onError)
@@ -49,7 +49,7 @@ end
 function O2OController.start()
     s_SERVER.initNetworkStatus()
 
-    local hasUserInLocalDB = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
+    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
 
     if s_SERVER.isOnline() == false then
         if hasUserInLocalDB then
@@ -70,15 +70,15 @@ end
 function O2OController.onAssetsManagerCompleted()
     hideProgressHUD()
     -- O2OController.start() : has got user from local database
-    local hasUserInLocalDB = s_DATABASE_MGR.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
+    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
 
-    if not s_DATABASE_MGR.isLogOut() and hasUserInLocalDB then    
+    if not s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then    
         if s_CURRENT_USER.usertype == USER_TYPE_QQ then
             O2OController.logInByQQAuthData()
         else
             O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
         end
-    elseif s_DATABASE_MGR.isLogOut() and hasUserInLocalDB then
+    elseif s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then
         local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(true)
         s_SCENE:replaceGameLayer(introLayer)
@@ -111,7 +111,7 @@ end
 function O2OController.startLoadingData(userStartType, username, password)
     local DataUser = require('model.user.DataUser')
     local tmpUser = DataUser.create()
-    local hasUserInLocalDB = s_DATABASE_MGR.getLastLogInUser(tmpUser, USER_TYPE_ALL)
+    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
     local isLocalNewerThenServer = false
 
     local function onResponse(u, e, code)
@@ -144,7 +144,7 @@ function O2OController.startLoadingData(userStartType, username, password)
                 print ('\n\n\nisLocalNewerThenServer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print_lua_table (s_CURRENT_USER)
                 print ('isLocalNewerThenServer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n\n')
-                s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, nil, username)
+                s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, username)
                 s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
                     function (api, result) 
                         O2OController.getUserDatasOnline()
@@ -207,7 +207,7 @@ end
 function O2OController.signUpOffline(username, password)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
-    s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER, nil, username)
+    s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, username)
 
     O2OController.loadConfigs()
     O2OController.getDataBookProgress()
@@ -267,7 +267,7 @@ function O2OController.getDataBookProgress(oncompleted)
     s_CURRENT_USER.bookProgress.userId = s_CURRENT_USER.objectId
     s_CURRENT_USER.bookProgress.username = s_CURRENT_USER.username
 
-    local localDatas = s_DATABASE_MGR.getDatas(s_CURRENT_USER.bookProgress.className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+    local localDatas = s_LocalDatabaseManager.getDatas(s_CURRENT_USER.bookProgress.className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
     local lastLocalData = nil
     local lastTime = 0
     print ('\n\n\ngetDataBookProgress >>>')
@@ -298,7 +298,7 @@ function O2OController.getDataBookProgress(oncompleted)
 
     local afterGetDataBookProgress = function ()
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
 
         if lastLocalData ~= nil and lastLocalData.updatedAt > s_CURRENT_USER.bookProgress.updatedAt then
             -- send local to server
@@ -308,7 +308,7 @@ function O2OController.getDataBookProgress(oncompleted)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.bookProgress)
         else
             -- save server to local
-            s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER.bookProgress)
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.bookProgress)
         end
 
         if oncompleted ~= nil then oncompleted() end
@@ -343,7 +343,7 @@ function O2OController.getDataLogIn(onSaved)
 
     local function onUpdateWeekCompleted(data)
         onSaved()
-        s_DATABASE_MGR.saveDataClassObject(data)
+        s_LocalDatabaseManager.saveDataClassObject(data)
         hideProgressHUD()
     end
 
@@ -369,7 +369,7 @@ function O2OController.getDataLogIn(onSaved)
     end
 
     local className = 'DataLogIn'
-    local localDatas = s_DATABASE_MGR.getDatas(className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+    local localDatas = s_LocalDatabaseManager.getDatas(className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
 
     if s_CURRENT_USER.localTime == 0 then
         s_CURRENT_USER.localTime = os.time()

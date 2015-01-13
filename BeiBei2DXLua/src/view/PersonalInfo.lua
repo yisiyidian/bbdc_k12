@@ -113,8 +113,8 @@ end
 
 function PersonalInfo:PLVM()
     local updateTime = 0
-    local tolearnCount = s_DATABASE_MGR.getTotalStudyWordsNum()
-    local toMasterCount = s_DATABASE_MGR.getTotalGraspWordsNum()
+    local tolearnCount = s_LocalDatabaseManager.getTotalStudyWordsNum()
+    local toMasterCount = s_LocalDatabaseManager.getTotalGraspWordsNum()
     local learnPercent = tolearnCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
     
@@ -303,7 +303,7 @@ function PersonalInfo:PLVI()
         for i = 1,#loginData - 1 do
             for j = 1,7 do
                 local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
-                countArray[1] = countArray[1] + s_DATABASE_MGR.getStudyWordsNum(str)
+                countArray[1] = countArray[1] + s_LocalDatabaseManager.getStudyWordsNum(str)
                 time = time - 24 * 3600
             end
         end
@@ -314,7 +314,7 @@ function PersonalInfo:PLVI()
     for i = 2 , dayCount + 1 do 
         selectDate = selectDate + 24 * 3600
         local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%y',selectDate))
-        countArray[i] = s_DATABASE_MGR.getStudyWordsNum(str)
+        countArray[i] = s_LocalDatabaseManager.getStudyWordsNum(str)
         countArray[i] = countArray[i - 1] + countArray[i]
     end
     local point = {}
@@ -660,16 +660,16 @@ end
 
 function PersonalInfo:XXTJ()
 
-    local totalDay = s_DATABASE_MGR.getStudyDayNum()
+    local totalDay = s_LocalDatabaseManager.getStudyDayNum()
     if totalDay < 1 then
         totalDay = 1
     end
-    local everydayWord = math.floor(s_DATABASE_MGR.getTotalStudyWordsNum() / totalDay)
+    local everydayWord = math.floor(s_LocalDatabaseManager.getTotalStudyWordsNum() / totalDay)
     local totalWord = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local wordFinished = s_DATABASE_MGR.getTotalStudyWordsNum()
+    local wordFinished = s_LocalDatabaseManager.getTotalStudyWordsNum()
     local dayToFinish = 100
     if everydayWord > 0 then
-        dayToFinish = math.ceil((totalWord - s_DATABASE_MGR.getTotalStudyWordsNum()) / everydayWord)
+        dayToFinish = math.ceil((totalWord - s_LocalDatabaseManager.getTotalStudyWordsNum()) / everydayWord)
     end
     local back = self.intro_array[1]
 

@@ -25,7 +25,7 @@ local letterArray = {}
 function CheckInNode:ctor()
     self.globalLock = false
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.1)
     end
 
@@ -85,7 +85,7 @@ function CheckInNode:ctor()
     
     -- whether currentWord == nil
     if currentWord == nil then
-    currentWord = s_DATABASE_MGR.getRandomWord()
+    currentWord = s_LocalDatabaseManager.getRandomWord()
 --test
 --    print("random")
     else
@@ -491,7 +491,7 @@ function CheckInNode:onClose()
     playSound(s_sound_buttonEffect)
     
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2)
     end
 end
@@ -508,7 +508,7 @@ function CheckInNode:onSucceedClose()
     playSound(s_sound_buttonEffect)
     
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2)
     end
 

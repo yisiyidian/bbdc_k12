@@ -1,4 +1,4 @@
-local Manager = s_DATABASE_MGR
+local Manager = s_LocalDatabaseManager
 
 local M = {}
 

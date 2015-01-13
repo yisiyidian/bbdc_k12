@@ -292,14 +292,14 @@ end
 function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
     local type
-    print('gameState:'..s_DATABASE_MGR.getGameState())
-    if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel then
+    print('gameState:'..s_LocalDatabaseManager.getGameState())
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel then
         type = 'reviewboss'
---    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel or s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
+--    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel or s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then
 --        type = 'study'
-    elseif s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
+    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_overmodel then
         type = 'complete'
-    elseif s_DATABASE_MGR.getGameState() == s_gamestate_studymodel then
+    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then
         type = 'study'
     else
         type = 'review'
@@ -329,7 +329,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,85)
         notification:addChild(task_name)
-        local number = cc.Label:createWithSystemFont(s_DATABASE_MGR.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
+        local number = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
         number:setColor(cc.c3b(165,55,80))
         number:ignoreAnchorPointForPosition(false)
         number:setAnchorPoint(0,0)
@@ -383,7 +383,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,85)
         notification:addChild(task_name)
-        local number = cc.Label:createWithSystemFont(s_DATABASE_MGR.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
+        local number = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
         number:setColor(cc.c3b(165,55,80))
         number:ignoreAnchorPointForPosition(false)
         number:setAnchorPoint(0,0)
@@ -463,7 +463,7 @@ function ChapterLayer:addPlayer()
 --    self.player:removeFromParent()
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_overmodel then
 --    if true then
         self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
     else
@@ -479,7 +479,7 @@ function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:removeFromParent()
 --    local bookProgress = s_CURRENT_USER.bookProgress:computeCu
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    if s_DATABASE_MGR.getGameState() == s_gamestate_overmodel then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_overmodel then
         self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
     else
         self.player = cc.Sprite:create('image/chapter/chapter0/player.png')

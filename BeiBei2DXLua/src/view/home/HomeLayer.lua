@@ -45,8 +45,8 @@ function HomeLayer.create()
     local levelIndex        = string.sub(currentLevelKey, 6)+1
     local levelName         = "第"..chapterIndex.."章  第"..levelIndex.."关"
 
-    local studyWordNum      = s_DATABASE_MGR.getTotalStudyWordsNum()
-    local graspWordNum      = s_DATABASE_MGR.getTotalGraspWordsNum()
+    local studyWordNum      = s_LocalDatabaseManager.getTotalStudyWordsNum()
+    local graspWordNum      = s_LocalDatabaseManager.getTotalGraspWordsNum()
 
     local redHint = nil
     -- data end
@@ -301,8 +301,8 @@ function HomeLayer.create()
 --    else
 --        button_today:setVisible(false)
 --        local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
---        label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
---        label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
+--        label3:setString("今日学习"..s_LocalDatabaseManager.getStudyWordsNum(s_CURRENT_USER.bookKey,str).."词")
+--        label4:setString("今日掌握"..s_LocalDatabaseManager.getGraspWordsNum(s_CURRENT_USER.bookKey,str).."词")
 --    end
 --
 --    local function onToday(sender,eventType)
@@ -310,8 +310,8 @@ function HomeLayer.create()
 --            sender:setVisible(false)
 --            button_total:setVisible(true)
 --            local str = string.format("%s/%s/%s",os.date('%m',os.time()),os.date('%d',os.time()),os.date('%y',os.time()))
---            label3:setString("今日学习"..s_DATABASE_MGR.getStudyWordsNum(str).."词")
---            label4:setString("今日掌握"..s_DATABASE_MGR.getGraspWordsNum(str).."词")
+--            label3:setString("今日学习"..s_LocalDatabaseManager.getStudyWordsNum(str).."词")
+--            label4:setString("今日掌握"..s_LocalDatabaseManager.getGraspWordsNum(str).."词")
 --            s_CURRENT_USER.clientData[1] = 1
 --        end
 --    end
@@ -361,7 +361,7 @@ function HomeLayer.create()
     -- local LEARNING_WORD = 3
     -- local REVIEWING_WORD = 1
     -- local COMPLETE_MISSION = 4
-    local state = s_DATABASE_MGR.getGameState()
+    local state = s_LocalDatabaseManager.getGameState()
 
     local playImg = 'image/homescene/bigbutton.png'
     if state == s_gamestate_overmodel then
@@ -536,8 +536,8 @@ function HomeLayer.create()
                         -- logout
                         AnalyticsLogOut()
                         cx.CXAvos:getInstance():logOut()
-                        s_DATABASE_MGR.setLogOut(true)
-                        s_DATABASE_MGR.close()
+                        s_LocalDatabaseManager.setLogOut(true)
+                        s_LocalDatabaseManager.close()
                         s_START_FUNCTION()
                     end
                 else

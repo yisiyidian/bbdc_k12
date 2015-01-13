@@ -13,7 +13,7 @@ function PopupEnergyInfo:ctor()
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
       cc.SimpleAudioEngine:getInstance():setMusicVolume(0.25)
     end
 
@@ -168,7 +168,7 @@ function PopupEnergyInfo:onCloseButtonClicked()
     -- button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.5)
     end
 end

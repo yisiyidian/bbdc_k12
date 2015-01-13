@@ -111,7 +111,7 @@ function MasteredWordList:ctor()
     listView:removeAllChildren()
     -- get data
 
-    local word = s_DATABASE_MGR:getGraspWords()
+    local word = s_LocalDatabaseManager:getGraspWords()
     local small_meaning = {}
     local meaning = {}
     local sentenceEn = {}
@@ -317,7 +317,7 @@ function MasteredWordList:ctor()
 --            end
 --        end
 --        -- add word list
---        local masterWords = s_DATABASE_MGR.getGraspWords(s_CURRENT_USER.bookKey)
+--        local masterWords = s_LocalDatabaseManager.getGraspWords(s_CURRENT_USER.bookKey)
 --        for i = 1, #self.levelArray[indexConfig] do
 --            local word = self.levelArray[indexConfig][i]
 --            local wordKey = self.levelKey[indexConfig]..'|'..word
