@@ -17,8 +17,9 @@ function FriendSearch:ctor()
     inputBack:setPosition(0.5 * s_DESIGN_WIDTH,0.805 * s_DESIGN_HEIGHT)
     self:addChild(inputBack)
     
-    local searchButton = ccui.Button:create('image/friend/fri_button_search.png','image/friend/fri_button_search.png','')
+    local searchButton = ccui.Button:create('image/friend/fri_button_search.png','','')
     searchButton:setPosition(0.9 * inputBack:getContentSize().width,0.5 * inputBack:getContentSize().height)
+    searchButton:setScale9Enabled(true)
     inputBack:addChild(searchButton)
     
     local function textFieldEvent(sender, eventType)
@@ -55,6 +56,13 @@ function FriendSearch:ctor()
             if username == s_CURRENT_USER.username then
                 local SmallAlter = require('view.friend.HintAlter')
                 local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')
+                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                s_SCENE.popupLayer:addChild(smallAlter)
+                return
+            end
+            if  username == "" then
+                local SmallAlter = require('view.friend.HintAlter')
+                local smallAlter = SmallAlter.create('无名氏什么的才没有的说~')
                 smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 s_SCENE.popupLayer:addChild(smallAlter)
                 return
