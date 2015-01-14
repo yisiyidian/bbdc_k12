@@ -39,7 +39,9 @@ function M.getCurrentIndex()
         for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
             currentIndex = row.currentIndex
         end
-    elseif username ~= '' then
+    end
+    
+    if currentIndex == nil and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
             currentIndex = row.currentIndex
         end
@@ -65,7 +67,8 @@ function M.setCurrentIndex(currentIndex)
         for row in Manager.database:nrows("SELECT * FROM " .. data.className .. " WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
         end
-    elseif username ~= '' then
+    end
+    if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM " .. data.className .. " WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
         end
