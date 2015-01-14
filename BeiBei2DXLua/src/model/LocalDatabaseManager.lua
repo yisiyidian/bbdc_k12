@@ -20,6 +20,7 @@ local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 local DataNewPlayState = require('model.user.DataNewPlayState')
 local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
 local DataTodayReviewBossNum = require('model.user.DataTodayReviewBossNum')
+local DataWrongWordBuffer = require('model.user.DataWrongWordBuffer')
 
 local databaseTables = {
         DataDailyCheckIn,
@@ -35,7 +36,8 @@ local databaseTables = {
         DataDailyStudyInfo,
         DataNewPlayState,
         DataStudyConfiguration,
-        DataTodayReviewBossNum
+        DataTodayReviewBossNum,
+        DataWrongWordBuffer
     }
 
 local localdatabase_utils = nil
@@ -46,6 +48,7 @@ local localdatabase_currentIndex = nil
 local localdatabase_newPlayState = nil
 local localdatabase_studyConfiguration = nil
 local localdatabase_todayReviewBossNum = nil
+local localdatabase_wrongWordBuffer = nil
 
 -- define Manager
 local Manager = {}
@@ -67,6 +70,7 @@ function Manager.init()
     localdatabase_newPlayState = reloadModule('model.localDatabase.newPlayState')
     localdatabase_studyConfiguration = reloadModule('model.localDatabase.studyConfiguration')
     localdatabase_todayReviewBossNum = reloadModule('model.localDatabase.todayReviewBossNum')
+    localdatabase_wrongWordBuffer = reloadModule('model.localDatabase.wrongWordBuffer')
 
     Manager.initTables()
 end
@@ -76,17 +80,6 @@ function Manager.close() Manager.database:close() end
 
 -- init data structure
 function Manager.initTables()    
-    -- CREATE table Wrong Word Buffer
-    Manager.database:exec[[
-        create table if not exists DataWrongWordBuffer(
-            userId TEXT,
-            bookKey TEXT,
-            wordNum INTEGER,
-            wordBuffer TEXT,
-            lastUpdate INTEGER
-        );
-    ]]
-    
     -- CREATE table Boss Word
     Manager.database:exec[[
         create table if not exists DataBossWord(
@@ -320,69 +313,15 @@ end
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.printWrongWordBuffer()
-    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
-
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    print("<wrongWordBuffer>")
-    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        print("<item>")
-        print("wordNum: "..row.wordNum)
-        print("wordBuffer: "..row.wordBuffer)
-        print("lastUpdate: "..row.lastUpdate)
-        print("</item>")
-    end
-    print("</wrongWordBuffer>")
+    localdatabase_wrongWordBuffer.printWrongWordBuffer()
 end
 
 function Manager.getWrongWordBufferNum()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    local wrongWordBufferNum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        wrongWordBufferNum = wrongWordBufferNum + row.wordNum
-    end
-    
-    return wrongWordBufferNum
+    return localdatabase_wrongWordBuffer.getWrongWordBufferNum()
 end
 
 function Manager.addWrongWordBuffer(wrongWord)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    
-    local num = 0
-    local oldWordBuffer = ""
-    local oldWordNum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        num = num + 1
-        oldWordBuffer = row.wordBuffer
-        oldWordNum = row.wordNum
-    end
-    
-    if num == 0 then
-        local wordNum = 1
-        local query = "INSERT INTO DataWrongWordBuffer VALUES ('"..userId.."', '"..bookKey.."', "..wordNum..", '"..wrongWord.."', "..time..");"
-        Manager.database:exec(query)
-    else
-        local wordNum = nil
-        local wordBuffer = nil
-        if oldWordNum + 1 >= MAXWRONGWORDCOUNT then
-            local bossWordListString = oldWordBuffer.."|"..wrongWord
-            Manager.addBossWord(bossWordListString)
-            
-            wordNum = 0
-            wordBuffer = ""
-        else
-            wordNum = oldWordNum + 1
-            wordBuffer = oldWordBuffer.."|"..wrongWord
-        end
-        
-        local query = "UPDATE DataWrongWordBuffer SET wordNum = "..wordNum..", wordBuffer = '"..wordBuffer.."', lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
-        Manager.database:exec(query)
-    end
+    localdatabase_wrongWordBuffer.addWrongWordBuffer(wrongWord)
 end
 
 ---------------------------------------------------------------------------------------------------------
