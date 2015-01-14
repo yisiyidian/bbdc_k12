@@ -13,6 +13,8 @@ local function createData(bookKey, lastUpdate, playModel, rightWordList, wrongWo
     data.rightWordList = rightWordList
     data.wrongWordList = wrongWordList
     data.wordCandidate = wordCandidate
+
+    return data
 end
 
 function M.printNewPlayState()
@@ -105,7 +107,7 @@ function M.getNewPlayState()
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
 
-    local newPlayState = createData(bookKey, nil, 0, '', '', '')
+    local newPlayState = createData(bookKey, 0, 0, '', '', '')
 
     local num = 0
     if userId ~= '' then

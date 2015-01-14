@@ -17,6 +17,7 @@ local DataBookProgress = require('model.user.DataBookProgress')
 local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 local DataNewPlayState = require('model.user.DataNewPlayState')
+local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
 
 local databaseTables = {
         DataDailyCheckIn,
@@ -27,16 +28,20 @@ local databaseTables = {
         DataLogIn,
         DataUser,
         DataBookProgress,
+
         DataCurrentIndex,
         DataDailyStudyInfo,
-        DataNewPlayState
+        DataNewPlayState,
+        DataStudyConfiguration
     }
 
 local localdatabaseutils = nil
 local localdatabaseuser = nil
+
 local localdatabasedailyStudyInfo = nil
 local localdatabasecurrentIndex = nil
 local localdatabasenewPlayState = nil
+local localdatabasestudyConfiguration = nil
 
 -- define Manager
 local Manager = {}
@@ -55,6 +60,7 @@ function Manager.init()
     localdatabasedailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
     localdatabasecurrentIndex = reloadModule('model.localDatabase.currentIndex')
     localdatabasenewPlayState = reloadModule('model.localDatabase.newPlayState')
+    localdatabasestudyConfiguration = reloadModule('model.localDatabase.studyConfiguration')
 
     Manager.initTables()
 end
@@ -93,17 +99,6 @@ function Manager.initTables()
             userId TEXT,
             bookKey TEXT,
             bossNum INTEGER,
-            lastUpdate INTEGER
-        );
-    ]]
-    
-    -- CREATE table New Study Configuration
-    -- just used in local
-    Manager.database:exec[[
-        create table if not exists DataStudyConfiguration(
-            userId TEXT,
-            isAlterOn INTEGER,
-            slideNum INTEGER,
             lastUpdate INTEGER
         );
     ]]
@@ -557,66 +552,19 @@ end
 
 -- newstudy configuration
 function Manager.getIsAlterOn()
-    local userId = s_CURRENT_USER.objectId
-
-    local isAlterOn = 1 -- default value is 1 which means on
-    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
-        isAlterOn = row.isAlterOn
-    end
-    
-    return isAlterOn
+    return localdatabasestudyConfiguration.getIsAlterOn()
 end
 
 function Manager.setIsAlterOn(isAlterOn)
-    local userId = s_CURRENT_USER.objectId
-    local time = os.time()
-    
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
-        num = num + 1
-    end
-    
-    if num == 0 then
-        local slideNum = 0
-        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..slideNum..", "..time..");"
-        Manager.database:exec(query)
-    else
-        local query = "UPDATE DataStudyConfiguration SET isAlterOn = "..isAlterOn..", lastUpdate = "..time.." WHERE userId = '"..userId.."' ;"    
-        Manager.database:exec(query)
-    end
+    localdatabasestudyConfiguration.setIsAlterOn(isAlterOn)
 end
 
 function Manager.getSlideNum()
-    local userId = s_CURRENT_USER.objectId
-
-    local slideNum = 0 -- default value is 0
-    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
-        slideNum = row.slideNum
-    end
-
-    return slideNum
+    return localdatabasestudyConfiguration.getSlideNum()
 end
 
 function Manager.updateSlideNum()
-    local userId = s_CURRENT_USER.objectId
-    local time = os.time()
-
-    local num = 0
-    local slideNum = 0
-    local isAlterOn = 1
-    for row in Manager.database:nrows("SELECT * FROM DataStudyConfiguration WHERE userId = '"..userId.."' ;") do
-        num = num + 1
-        slideNum = row.slideNum
-        isAlterOn = row.isAlterOn
-    end
-
-    if num == 0 then
-        local query = "INSERT INTO DataStudyConfiguration VALUES ('"..userId.."', "..isAlterOn..", "..(slideNum+1)..", "..time..");"
-        Manager.database:exec(query)
-    else
-        local query = "UPDATE DataStudyConfiguration SET slideNum = "..(slideNum+1)..", lastUpdate = "..time.." WHERE userId = '"..userId.."' ;"    
-        Manager.database:exec(query)
-    end
+    localdatabasestudyConfiguration.updateSlideNum()
 end
 
 ---------------------------------------------------------------------------------------------------------
