@@ -405,7 +405,7 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
         if onSucceed ~= nil then onSucceed(api, result) end
     end
     
-    dataObject.userId = s_CURRENT_USER.objectId
+    updateDataFromUser(dataObject, s_CURRENT_USER)
     
     if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
         if string.len(dataObject.objectId) <= 0 then

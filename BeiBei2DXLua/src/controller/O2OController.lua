@@ -24,13 +24,14 @@ local _TEXT_ID_CFG         = 2
 local _TEXT_ID_UPDATE_BP   = 3
 local _TEXT_ID_UPDATE_USER = 4
 
+local function onError()
+    if s_SERVER.hasSessionToken() then cx.CXAvos:getInstance():logOut() end
+    s_LocalDatabaseManager.setLogOut(true)
+    s_LocalDatabaseManager.close()
+    s_START_FUNCTION()
+end
+
 local function onErrorHappend(e)
-    local function onError()
-        cx.CXAvos:getInstance():logOut()
-        s_LocalDatabaseManager.setLogOut(true)
-        s_LocalDatabaseManager.close()
-        s_START_FUNCTION()
-    end
     s_TIPS_LAYER:showSmall(e, onError, onError)
 end
 
@@ -39,6 +40,12 @@ end
 local O2OController = {}
 
 function O2OController.update(dt)
+end
+
+function O2OController.showRestartTipWhenOfflineToOnline()
+    if s_SERVER.networkStatusRealtimeMonitor() and (not s_SERVER.isOnlineWhenInited() or not s_SERVER.hasSessionToken()) then
+        s_TIPS_LAYER:showSmall('发现网络链接，您还没有登录，现在需要登录吗？', onError, nil)
+    end
 end
 
 ----------------------------------------------------------------------------------------------------------------

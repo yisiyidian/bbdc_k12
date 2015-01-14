@@ -23,6 +23,7 @@ local currentChapterLayer
 
 function LevelLayer.create()
     local layer = LevelLayer.new()
+    s_O2OController.showRestartTipWhenOfflineToOnline()
     return layer
 end
 
