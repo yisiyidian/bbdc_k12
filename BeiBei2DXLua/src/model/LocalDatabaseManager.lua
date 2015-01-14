@@ -14,10 +14,12 @@ local DataLevel = require('model.user.DataLevel')
 local DataLogIn = require('model.user.DataLogIn')
 local DataUser = require('model.user.DataUser')
 local DataBookProgress = require('model.user.DataBookProgress')
+
 local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 local DataNewPlayState = require('model.user.DataNewPlayState')
 local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
+local DataTodayReviewBossNum = require('model.user.DataTodayReviewBossNum')
 
 local databaseTables = {
         DataDailyCheckIn,
@@ -32,16 +34,18 @@ local databaseTables = {
         DataCurrentIndex,
         DataDailyStudyInfo,
         DataNewPlayState,
-        DataStudyConfiguration
+        DataStudyConfiguration,
+        DataTodayReviewBossNum
     }
 
-local localdatabaseutils = nil
-local localdatabaseuser = nil
+local localdatabase_utils = nil
+local localdatabase_user = nil
 
-local localdatabasedailyStudyInfo = nil
-local localdatabasecurrentIndex = nil
-local localdatabasenewPlayState = nil
-local localdatabasestudyConfiguration = nil
+local localdatabase_dailyStudyInfo = nil
+local localdatabase_currentIndex = nil
+local localdatabase_newPlayState = nil
+local localdatabase_studyConfiguration = nil
+local localdatabase_todayReviewBossNum = nil
 
 -- define Manager
 local Manager = {}
@@ -55,12 +59,14 @@ function Manager.init()
     Manager.database = sqlite3.open(databasePath)
     print ('databasePath:' .. databasePath)
 
-    localdatabaseutils = reloadModule('model.localDatabase.utils')
-    localdatabaseuser = reloadModule('model.localDatabase.user')
-    localdatabasedailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
-    localdatabasecurrentIndex = reloadModule('model.localDatabase.currentIndex')
-    localdatabasenewPlayState = reloadModule('model.localDatabase.newPlayState')
-    localdatabasestudyConfiguration = reloadModule('model.localDatabase.studyConfiguration')
+    localdatabase_utils = reloadModule('model.localDatabase.utils')
+    localdatabase_user = reloadModule('model.localDatabase.user')
+
+    localdatabase_dailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
+    localdatabase_currentIndex = reloadModule('model.localDatabase.currentIndex')
+    localdatabase_newPlayState = reloadModule('model.localDatabase.newPlayState')
+    localdatabase_studyConfiguration = reloadModule('model.localDatabase.studyConfiguration')
+    localdatabase_todayReviewBossNum = reloadModule('model.localDatabase.todayReviewBossNum')
 
     Manager.initTables()
 end
@@ -93,16 +99,6 @@ function Manager.initTables()
         );
     ]]
     
-    -- CREATE table Today Review Boss Num
-    Manager.database:exec[[
-        create table if not exists DataTodayReviewBossNum(
-            userId TEXT,
-            bookKey TEXT,
-            bossNum INTEGER,
-            lastUpdate INTEGER
-        );
-    ]]
-    
     -- CREATE table Download State
     -- just used in local
     Manager.database:exec[[
@@ -114,54 +110,54 @@ function Manager.initTables()
     ]]
 
     for i = 1, #databaseTables do
-        localdatabaseutils.createTable(databaseTables[i].create())
+        localdatabase_utils.createTable(databaseTables[i].create())
     end
 end
 
 function Manager.saveDataClassObject(objectOfDataClass, userId, username)
-    localdatabaseutils.saveDataClassObject(objectOfDataClass, userId, username)
+    localdatabase_utils.saveDataClassObject(objectOfDataClass, userId, username)
 end
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.getLastLogInUser(objectOfDataClass, usertype)
-    return localdatabaseuser.getUserDataFromLocalDB(objectOfDataClass, usertype)
+    return localdatabase_user.getUserDataFromLocalDB(objectOfDataClass, usertype)
 end
 
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
-    localdatabaseutils.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
+    localdatabase_utils.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
 end
 
 function Manager.getDatas(classNameOfDataClass, userId, username)
-    return localdatabaseutils.getDatas(classNameOfDataClass, userId, username)
+    return localdatabase_utils.getDatas(classNameOfDataClass, userId, username)
 end
 
 ---------------------------------------------------------------------------------------------------------
 -- show word info
 
 function Manager.getRandomWord()
-    return localdatabasedailyStudyInfo.getRandomWord()
+    return localdatabase_dailyStudyInfo.getRandomWord()
 end
 
 function Manager.addStudyWordsNum()
-    localdatabasedailyStudyInfo.addStudyWordsNum()
+    localdatabase_dailyStudyInfo.addStudyWordsNum()
 end
 
 function Manager.addGraspWordsNum(addNum)
-    localdatabasedailyStudyInfo.addGraspWordsNum(addNum)
+    localdatabase_dailyStudyInfo.addGraspWordsNum(addNum)
 end
 
 function Manager.getStudyDayNum()
-    return localdatabasedailyStudyInfo.getStudyDayNum()
+    return localdatabase_dailyStudyInfo.getStudyDayNum()
 end
 
 function Manager.getStudyWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
-    return localdatabasedailyStudyInfo.getStudyWordsNum(dayString)
+    return localdatabase_dailyStudyInfo.getStudyWordsNum(dayString)
 end
 
 function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
-    return localdatabasedailyStudyInfo.getGraspWordsNum(dayString)
+    return localdatabase_dailyStudyInfo.getGraspWordsNum(dayString)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -288,37 +284,37 @@ end
 -- DataCurrentIndex
 -- record word info
 function Manager.printCurrentIndex()
-    localdatabasecurrentIndex.printCurrentIndex()
+    localdatabase_currentIndex.printCurrentIndex()
 end
 
 function Manager.getCurrentIndex()    
-    return localdatabasecurrentIndex.getCurrentIndex()
+    return localdatabase_currentIndex.getCurrentIndex()
 end
 
 function Manager.setCurrentIndex(currentIndex)
-    localdatabasecurrentIndex.setCurrentIndex(currentIndex)
+    localdatabase_currentIndex.setCurrentIndex(currentIndex)
 end
 
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.printNewPlayState()
-    localdatabasenewPlayState.printNewPlayState()
+    localdatabase_newPlayState.printNewPlayState()
 end
 
 function Manager.getTodayPlayModel()    
-    return localdatabasenewPlayState.getTodayPlayModel()
+    return localdatabase_newPlayState.getTodayPlayModel()
 end
 
 function Manager.getwrongWordListSize()
-    return localdatabasenewPlayState.getwrongWordListSize()
+    return localdatabase_newPlayState.getwrongWordListSize()
 end
 
 function Manager.getNewPlayState()
-    return localdatabasenewPlayState.getNewPlayState()
+    return localdatabase_newPlayState.getNewPlayState()
 end
 
 function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
-    localdatabasenewPlayState.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
+    localdatabase_newPlayState.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -502,69 +498,27 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 
-local function saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum) -- TODO
-    local data = {}
-    data.userId = userId
-    data.bookKey = bookKey
-    data.today = today
-    data.reviewBossNum = reviewBossNum
-    data.className = 'DataTodayReviewBossNum'
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
-        s_SERVER.createData(data)
-    end
-end
 function Manager.getTodayTotalBossNum()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local today = os.date("%x", time)
-
-    local num = 0
-    local bossNum = 0
-    local lastUpdate = nil
-    for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
-        num = num + 1
-        bossNum = row.bossNum 
-        lastUpdate = row.lastUpdate
-    end
-    
-    if num == 0 then
-        local reviewBossNum = Manager.getTodayRemainBossNum()
-        local query = "INSERT INTO DataTodayReviewBossNum VALUES ('"..userId.."', '"..bookKey.."', "..reviewBossNum..", "..time..");"
-        Manager.database:exec(query)
-        saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
-        return reviewBossNum
-    else
-        local lastUpdateDay = os.date("%x", lastUpdate)
-        if lastUpdateDay == today then
-            return bossNum
-        else
-            local reviewBossNum = Manager.getTodayRemainBossNum()
-            local query = "UPDATE DataTodayReviewBossNum SET bossNum = "..reviewBossNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;"    
-            Manager.database:exec(query)
-            saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
-            return reviewBossNum
-        end
-    end
+    localdatabase_todayReviewBossNum.getTodayTotalBossNum()
 end
 
 ---------------------------------------------------------------------------------------------------------
 
 -- newstudy configuration
 function Manager.getIsAlterOn()
-    return localdatabasestudyConfiguration.getIsAlterOn()
+    return localdatabase_studyConfiguration.getIsAlterOn()
 end
 
 function Manager.setIsAlterOn(isAlterOn)
-    localdatabasestudyConfiguration.setIsAlterOn(isAlterOn)
+    localdatabase_studyConfiguration.setIsAlterOn(isAlterOn)
 end
 
 function Manager.getSlideNum()
-    return localdatabasestudyConfiguration.getSlideNum()
+    return localdatabase_studyConfiguration.getSlideNum()
 end
 
 function Manager.updateSlideNum()
-    localdatabasestudyConfiguration.updateSlideNum()
+    localdatabase_studyConfiguration.updateSlideNum()
 end
 
 ---------------------------------------------------------------------------------------------------------
