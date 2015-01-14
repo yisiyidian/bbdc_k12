@@ -16,8 +16,8 @@ function NewReviewBossSummaryLayer.create()
 
     local layer = NewReviewBossSummaryLayer.new()
     
-    local totol_boss_number = s_DATABASE_MGR:getTodayTotalBossNum()
-    local current_boss_number = totol_boss_number - s_DATABASE_MGR:getTodayRemainBossNum() + 1
+    local totol_boss_number = s_LocalDatabaseManager:getTodayTotalBossNum()
+    local current_boss_number = totol_boss_number - s_LocalDatabaseManager:getTodayRemainBossNum() + 1
    
     
     local type = s_CorePlayManager.typeIndex
@@ -291,7 +291,7 @@ function NewReviewBossSummaryLayer.create()
     seagrass:setAnchorPoint(0.5,0)
     layer:addChild(seagrass)
     
-    if s_DATABASE_MGR:getTodayRemainBossNum()  == 0 then
+    if s_LocalDatabaseManager:getTodayRemainBossNum()  == 0 then
     	nextButton_label:setString("完成复习")
     else
         nextButton_label:setString("下一组")

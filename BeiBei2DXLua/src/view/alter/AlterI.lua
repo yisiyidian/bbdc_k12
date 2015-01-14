@@ -34,13 +34,13 @@ function AlterI.create(info)
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect)
-            cx.CXUtils:showMail(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION), s_CURRENT_USER.username)
+            cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION), s_CURRENT_USER.username)
         end
     end
 
     local button_up = ccui.Button:create("image/button/bigBlueButton.png","image/button/bigBlueButton.png","")
     button_up:setPosition(backWidth/2, backHeight/2)
-    button_up:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_SUGGESTION))
+    button_up:setTitleText(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_SUGGESTION))
     button_up:setTitleFontSize(30)
     button_up:addTouchEventListener(button_left_clicked)
     back:addChild(button_up)
@@ -48,13 +48,13 @@ function AlterI.create(info)
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect)
-            cx.CXUtils:showMail(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_BUG), s_CURRENT_USER.username)
+            cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_BUG), s_CURRENT_USER.username)
         end
     end
 
     local button_down = ccui.Button:create("image/button/bigBlueButton.png","image/button/bigBlueButton.png","")
     button_down:setPosition(backWidth/2, backHeight/2-100)
-    button_down:setTitleText(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_BUG))
+    button_down:setTitleText(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_BUG))
     button_down:setTitleFontSize(30)
     button_down:addTouchEventListener(button_right_clicked)
     back:addChild(button_down)

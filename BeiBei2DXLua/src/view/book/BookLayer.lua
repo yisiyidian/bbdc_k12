@@ -95,7 +95,7 @@ function BookLayer.create()
         richtext:pushBackElement(richElement1)       
 
         
-        local richElement2 = ccui.RichElementText:create(2,cc.c3b(255,255,255),255,string.format('%d',s_DATA_MANAGER.books[key].words),'',22)                           
+        local richElement2 = ccui.RichElementText:create(2,cc.c3b(255,255,255),255,string.format('%d',s_DataManager.books[key].words),'',22)                           
         richtext:pushBackElement(richElement2)               
         richtext:setPosition(smallBack:getContentSize().width *0.63, 
             smallBack:getContentSize().height *0.2)
@@ -109,7 +109,7 @@ function BookLayer.create()
                 backColor:addChild(tutorial_text,120)
                 --tutorial_text:setColor(cc.c3b(255,255,255))
                 
-                local text = cc.Label:createWithSystemFont(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_TUTORIAL_BOOK_SELECT),'',28)
+                local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT_ID_TUTORIAL_BOOK_SELECT),'',28)
                 text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
                 text:setColor(cc.c3b(0,0,0))
                 tutorial_text:addChild(text)

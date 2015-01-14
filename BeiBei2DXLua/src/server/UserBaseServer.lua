@@ -69,8 +69,8 @@ local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onRespons
         if hasParsed == false then parseServerUser( objectjson ) end
 
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
-        s_DATABASE_MGR.setLogOut(false)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
+        s_LocalDatabaseManager.setLogOut(false)
         
         if onResponse ~= nil then onResponse(s_CURRENT_USER, nil, code) end
     else
@@ -186,7 +186,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
     local onCompleted = function ()
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
-        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
     end
@@ -213,7 +213,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                 UserBaseServer.saveDataObjectOfCurrentUser(obj, 
                     function (api, result) 
                         s_CURRENT_USER.username = username
-                        s_DATABASE_MGR.saveDataClassObject(s_CURRENT_USER)
+                        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
                         change_password(password, onResponse)
                     end, 
                     function (api, code, message, description) 
@@ -221,7 +221,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                     end
                 )
             else
-                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
             end
         end,
         function (api, code, message, description)
@@ -286,8 +286,8 @@ function UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, onSuccee
     s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards = lastCheckInAward
     UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData,
         function (api, result) 
-            if lastCheckInAward <= #s_DATA_MANAGER.dailyCheckIn then
-                local metaDailyCheckIn = s_DATA_MANAGER.dailyCheckIn[lastCheckInAward]
+            if lastCheckInAward <= #s_DataManager.dailyCheckIn then
+                local metaDailyCheckIn = s_DataManager.dailyCheckIn[lastCheckInAward]
                 s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + metaDailyCheckIn.count
                 UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
                 AnalyticsDailyCheckIn(lastCheckInAward)
@@ -370,36 +370,8 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
     end
 end
 
-function UserBaseServer.saveWordProciencyOfCurrentUser(bookKey, wordName, prociencyValue, onSucceed, onFailed)
-    local DataWordProciency = require('model/user/DataWordProciency')
-
-    local dataObject = DataWordProciency.create()
-    dataObject.userId = s_CURRENT_USER.objectId
-    dataObject.bookKey = bookKey
-    dataObject.wordName = wordName
-    dataObject.prociencyValue = prociencyValue
-
-    local s = function (api, result)
-        if #result.results > 0 then
-            for i, data in ipairs(result.results) do
-                data.prociencyValue = dataObject.prociencyValue
-                parseServerDataToUserData(data, dataObject)
-                s_SERVER.updateData(dataObject, onSucceed, onFailed)
-                break
-            end
-        else
-            s_SERVER.createData(dataObject, onSucceed, onFailed)
-        end
-    end
-    local f = function (api, result)
-        s_SERVER.createData(dataObject, onSucceed, onFailed)        
-    end
-
-    s_SERVER.search('classes/DataWordProciency?where={"userId":"' .. dataObject.userId .. '","bookKey":"' .. dataObject.bookKey .. '","wordName":"' .. dataObject.wordName .. '"}', s, f)
-end
-
 function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
-    local dataObject = s_CURRENT_USER.dailyStudyInfo    
+    local dataObject = s_CURRENT_USER.dailyStudyInfo
 
     local function update()
         dataObject.objectId  = ''

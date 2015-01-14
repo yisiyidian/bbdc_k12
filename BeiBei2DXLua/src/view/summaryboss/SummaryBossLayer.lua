@@ -714,7 +714,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter)
 end
 
 function SummaryBossLayer:initWordList()
-    local wordList = s_DATABASE_MGR.getSummaryBossWordCandidate()
+    local wordList = s_LocalDatabaseManager.getSummaryBossWordCandidate()
     if #wordList < 1 then
         wordList = {'apple','many','tea'}
     end

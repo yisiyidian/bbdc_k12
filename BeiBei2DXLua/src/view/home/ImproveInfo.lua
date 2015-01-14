@@ -98,11 +98,11 @@ showLogin = function()
         elseif eventType == ccui.TouchEventType.ended then
             
             if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
             if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
             
@@ -135,7 +135,7 @@ showLogin = function()
                         hideProgressHUD()
                     else
                         updateUserNameAndPassword()
-                        s_SCENE:logIn(s_CURRENT_USER.username, s_CURRENT_USER.password)
+                        s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
                     end
                 end)
             end

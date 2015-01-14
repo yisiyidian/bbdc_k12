@@ -689,15 +689,15 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				15427CE2198F237300DC375D /* lua_module_register.h */,
-				C00FD4891938512100C6382D /* runtime */,
-				C033B51A191B337200D06937 /* VisibleRect.cpp */,
-				C033B51B191B337200D06937 /* VisibleRect.h */,
-				C06C3794191A1D1E00617BED /* ConfigParser.cpp */,
-				C06C3795191A1D1E00617BED /* ConfigParser.h */,
-				C0619CD61896894800872C26 /* Runtime_ios-mac.mm */,
 				F293BB7E15EB831F00256477 /* AppDelegate.cpp */,
 				F293BB7F15EB831F00256477 /* AppDelegate.h */,
+				C06C3794191A1D1E00617BED /* ConfigParser.cpp */,
+				C06C3795191A1D1E00617BED /* ConfigParser.h */,
+				15427CE2198F237300DC375D /* lua_module_register.h */,
+				C00FD4891938512100C6382D /* runtime */,
+				C0619CD61896894800872C26 /* Runtime_ios-mac.mm */,
+				C033B51A191B337200D06937 /* VisibleRect.cpp */,
+				C033B51B191B337200D06937 /* VisibleRect.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

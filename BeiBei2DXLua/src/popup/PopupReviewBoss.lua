@@ -37,7 +37,7 @@ function PopupReviewBoss:ctor()
     self:addChild(node)
     
     -- set title
-    self.ccbPopupReviewBoss['review_boss_text']:setString(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_YOUR_NEED_REVIEW))
+    self.ccbPopupReviewBoss['review_boss_text']:setString(s_DataManager.getTextWithIndex(TEXT_ID_YOUR_NEED_REVIEW))
     -- add review boss
     local reviewBoss = sp.SkeletonAnimation:create('spine/3zlstanchujianxiao.json', 'spine/3zlstanchujianxiao.atlas',1)
     reviewBoss:addAnimation(0,'animation',true)

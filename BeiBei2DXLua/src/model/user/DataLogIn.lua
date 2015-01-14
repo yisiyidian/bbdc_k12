@@ -1,4 +1,4 @@
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 
 local DataLogIn = class("DataLogIn", function()
     return DataClassBase.new()
@@ -60,6 +60,15 @@ function DataLogIn:getDays()
     self.Friday,
     self.Saturday,
     self.Sunday}
+end
+
+function DataLogIn:updateFrom(otherDataLogIn)
+    local keys = {'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'}
+    for i, v in ipairs(keys) do
+        if otherDataLogIn[v] > 0 then
+            self[v] = 1
+        end
+    end
 end
 
 return DataLogIn

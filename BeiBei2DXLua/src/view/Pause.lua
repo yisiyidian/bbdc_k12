@@ -19,7 +19,7 @@ function Pause:ctor()
     -- popup sound "Aluminum Can Open "
     playSound(s_sound_Aluminum_Can_Open)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.1) 
     end
 
@@ -55,7 +55,7 @@ function Pause:ctor()
     node:setPosition(0,0)
     self:addChild(node)
     
-    if s_DATABASE_MGR.isSoundOn() then
+    if s_LocalDatabaseManager.isSoundOn() then
         ccbPause['soundOn']:setVisible(true)
         ccbPause['soundOff']:setVisible(false)
     else
@@ -63,7 +63,7 @@ function Pause:ctor()
         ccbPause['soundOff']:setVisible(true)
     end
     
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
         ccbPause['musicOn']:setVisible(true)
         ccbPause['musicOff']:setVisible(false)
     else
@@ -90,7 +90,7 @@ function Pause:onClose()
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
 end
@@ -111,7 +111,7 @@ function Pause:onRetry()
 --    --button sound
 --    playSound(s_sound_buttonEffect)
 --    --control volune
---    if s_DATABASE_MGR.isMusicOn() then
+--    if s_LocalDatabaseManager.isMusicOn() then
 --        cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
 --    end
 end
@@ -122,7 +122,7 @@ function Pause:onBack()
     playSound(s_sound_buttonEffect)
     
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
     
@@ -141,7 +141,7 @@ function Pause:onContinue()
     --button sound
     playSound(s_sound_buttonEffect)
     --control volune
-    if s_DATABASE_MGR.isMusicOn() then
+    if s_LocalDatabaseManager.isMusicOn() then
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
     end
 
@@ -166,14 +166,14 @@ function Pause:onHelp()
 end
 
 function Pause:onSoundOn()
-    s_DATABASE_MGR.setSoundOn(false)
+    s_LocalDatabaseManager.setSoundOn(false)
 
     ccbPause['soundOn']:setVisible(false)
     ccbPause['soundOff']:setVisible(true)
 end
 
 function Pause:onSoundOff()
-    s_DATABASE_MGR.setSoundOn(true)
+    s_LocalDatabaseManager.setSoundOn(true)
 
     ccbPause['soundOn']:setVisible(true)
     ccbPause['soundOff']:setVisible(false)
@@ -183,7 +183,7 @@ function Pause:onSoundOff()
 end
 
 function Pause:onMusicOn()
-    s_DATABASE_MGR.setMusicOn(false)
+    s_LocalDatabaseManager.setMusicOn(false)
     
     ccbPause['musicOn']:setVisible(false)
     ccbPause['musicOff']:setVisible(true)
@@ -192,7 +192,7 @@ function Pause:onMusicOn()
 end
 
 function Pause:onMusicOff()
-    s_DATABASE_MGR.setMusicOn(true)
+    s_LocalDatabaseManager.setMusicOn(true)
     
     ccbPause['musicOn']:setVisible(true)
     ccbPause['musicOff']:setVisible(false)

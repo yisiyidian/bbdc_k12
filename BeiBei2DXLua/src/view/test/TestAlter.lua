@@ -100,9 +100,9 @@ showGirlAndStar = function()
         rightCount = rightCount + s_CorePlayManager.answerStateRecord[i]
     end
 
-    local star1 = s_DATA_MANAGER.starRules[#s_CorePlayManager.wordList]["star_1"]
-    local star2 = s_DATA_MANAGER.starRules[#s_CorePlayManager.wordList]["star_2"]
-    local star3 = s_DATA_MANAGER.starRules[#s_CorePlayManager.wordList]["star_3"]
+    local star1 = s_DataManager.starRules[#s_CorePlayManager.wordList]["star_1"]
+    local star2 = s_DataManager.starRules[#s_CorePlayManager.wordList]["star_2"]
+    local star3 = s_DataManager.starRules[#s_CorePlayManager.wordList]["star_3"]
 
     print(rightCount.." "..star1..star2..star3)
 

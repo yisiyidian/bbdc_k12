@@ -28,6 +28,10 @@ local function getSecondsFromString(srcDateTime)
     return t + ms / 1000.0
 end
 
+function getLocalSeconds()
+    return os.time()
+end
+
 function parseServerDataToUserData(serverdata, userdata)
     for key, value in pairs(userdata) do
         if type(value) ~= 'function' 
@@ -84,6 +88,13 @@ function dataToJSONString(dataObj)
     return str
 end
 
+function updateDataFromUser(data, user)
+    data.userId = user.objectId
+    data.username = user.username
+end
+
+------------------------------------------------------------------------------------------
+
 local DataClassBase = class("DataClassBase", function()
     return {}
 end)
@@ -97,6 +108,7 @@ function DataClassBase:ctor()
     self.className = ''
     self.objectId = ''
     self.userId = ''
+    self.username = ''
     self.createdAt = os.time()
     self.updatedAt = 0
 end

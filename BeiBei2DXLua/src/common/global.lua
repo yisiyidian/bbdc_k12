@@ -1,3 +1,7 @@
+function reloadModule( moduleName )
+    package.loaded[moduleName] = nil
+    return require(moduleName)
+end
 
 local function _initConstant()
     -- number
@@ -45,8 +49,8 @@ local function _initConstant()
     CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
     CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
 
-    s_DATA_MANAGER = require('model.DataManager')
-    s_DATA_MANAGER.clear()
+    s_DataManager = require('model.DataManager')
+    s_DataManager.clear()
 end
 
 local function _initTool()
@@ -123,9 +127,8 @@ local function _initServer()
 end
 
 local function _initData()
-    s_DATABASE_MGR = require('model.LocalDatabaseManager')
-    s_DATABASE_MGR.open()
-    s_DATABASE_MGR.initTables()
+    s_LocalDatabaseManager = require('model.LocalDatabaseManager')
+    s_LocalDatabaseManager.init()
 
     local DataUser = require('model.user.DataUser')
     s_CURRENT_USER = DataUser.create()

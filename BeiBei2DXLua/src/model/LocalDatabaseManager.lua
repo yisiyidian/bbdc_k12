@@ -3,7 +3,37 @@ local MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
 local MAXTYPEINDEX = 4
 
 require("common.global")
-require("lsqlite3")
+local sqlite3 = require("lsqlite3")
+
+-- useless
+local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
+local DataDailyWord = require('model.user.DataDailyWord')
+local DataIAP = require('model.user.DataIAP')
+local DataLevel = require('model.user.DataLevel')
+
+local DataLogIn = require('model.user.DataLogIn')
+local DataUser = require('model.user.DataUser')
+local DataBookProgress = require('model.user.DataBookProgress')
+local DataCurrentIndex = require('model.user.DataCurrentIndex')
+local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
+
+local databaseTables = {
+        DataDailyCheckIn,
+        DataDailyWord,
+        DataIAP,
+        DataLevel,
+
+        DataLogIn,
+        DataUser,
+        DataBookProgress,
+        DataCurrentIndex,
+        DataDailyStudyInfo
+    }
+
+local localdatabaseutils = nil
+local localdatabaseuser = nil
+local localdatabasedailyStudyInfo = nil
+local localdatabasecurrentIndex = nil
 
 -- define Manager
 local Manager = {}
@@ -12,124 +42,24 @@ local Manager = {}
 Manager.database = nil
 
 -- connect local sqlite
-function Manager.open()
-    local sqlite3 = require("sqlite3")
+function Manager.init()
     local databasePath = cc.FileUtils:getInstance():getWritablePath() .. "localDB.sqlite"
     Manager.database = sqlite3.open(databasePath)
-    s_logd('databasePath:' .. databasePath)
+    print ('databasePath:' .. databasePath)
+
+    localdatabaseutils = reloadModule('model.localDatabase.utils')
+    localdatabaseuser = reloadModule('model.localDatabase.user')
+    localdatabasedailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
+    localdatabasecurrentIndex = reloadModule('model.localDatabase.currentIndex')
+
+    Manager.initTables()
 end
 
 -- close local sqlite
-function Manager.close()
-    Manager.database:close()
-end
-
--- add new column
--- ALTER TABLE table_name ADD column_name datatype
-function Manager.alterLocalDatabase(objectOfDataClass)
-    local function createData (col, type, isAlreadyInDB)
-        local data = {}
-        data.col = col
-        data.type = type
-        data.isAlreadyInDB = isAlreadyInDB
-        return data
-    end
-
-    local dataCols = {}
-    for key, value in pairs(objectOfDataClass) do  
-        if (key == 'sessionToken'  
-            or string.find(key, '__') ~= nil 
-            or value == nil) == false then 
-
-            if key == 'PRIMARY' then key = 'fuckprimary' end
-
-            local data = nil
-            if (type(value) == 'string') then
-                data = createData(key, 'TEXT', false)
-            elseif (type(value) == 'boolean') then
-                data = createData(key, 'Boolean', false)
-            elseif (type(value) == 'number') then
-                data = createData(key, 'INTEGER', false)
-            end 
-            if data ~= nil then
-                dataCols[ key ] = data
-            end
-        end
-    end
-
-    Manager.database:exec('PRAGMA table_info(' .. objectOfDataClass.className .. ')', 
-        function (udata, cols, values, names)
-            local n = nil
-            local t = nil
-            for i = 1, cols do 
-                if names[i] == 'name' then
-                    n = values[i]
-                elseif names[i] == 'type' then
-                    t = values[i]
-                end
-            end
-
-            if n ~= nil and t ~= nil then
-                dataCols[ n ] = nil
-            end
-
-            return 0
-        end)
-
-    for k, v in pairs(dataCols) do
-        if v ~= nil then
-            Manager.database:exec('ALTER TABLE ' .. objectOfDataClass.className .. ' ADD ' .. v.col .. ' ' .. v.type)
-        end
-    end
-end
-
-function Manager.createTable(objectOfDataClass)
-    local sql = 'create table if not exists ' .. objectOfDataClass.className .. '(\n'
-
-    local str = ''
-    for key, value in pairs(objectOfDataClass) do  
-        if (key == 'sessionToken'  
-            or string.find(key, '__') ~= nil 
-            or value == nil) == false then 
-
-            if key == 'PRIMARY' then key = 'fuckprimary' end
-
-            if (type(value) == 'string') then
-                if string.len(str) > 1 then str = str .. ',\n' end
-                str = str .. key .. ' TEXT'
-            elseif (type(value) == 'boolean') then
-                if string.len(str) > 1 then str = str .. ',\n' end
-                str = str .. key .. ' Boolean'
-            elseif (type(value) == 'number') then
-                if string.len(str) > 1 then str = str .. ',\n' end
-                str = str .. key .. ' INTEGER'
-            end     
-        end
-    end
-
-    sql = sql .. str .. '\n);'
-    local ret = Manager.database:exec(sql)
-    print ('Manager.createTable: ' .. objectOfDataClass.className .. ', ' .. tostring(ret))
-    if ret ~= 0 then
-        print (sql)
-        print_lua_table (objectOfDataClass)
-    end
-
-    Manager.alterLocalDatabase(objectOfDataClass)
-end
+function Manager.close() Manager.database:close() end
 
 -- init data structure
 function Manager.initTables()
-    
-    -- CREATE table Current Index
-    Manager.database:exec[[
-        create table if not exists DataCurrentIndex(
-            userId TEXT,
-            bookKey TEXT,
-            currentIndex INTEGER,
-            lastUpdate INTEGER
-        );
-    ]]
     
     -- CREATE table NewPlay State
     Manager.database:exec[[
@@ -177,19 +107,8 @@ function Manager.initTables()
         );
     ]]
     
-    -- CREATE table Daily Study Info
-    Manager.database:exec[[
-        create table if not exists DataDailyStudyInfo(
-            userId TEXT,
-            bookKey TEXT,
-            dayString TEXT,
-            studyNum INTEGER,
-            graspNum INTEGER,
-            lastUpdate INTEGER
-        );
-    ]]
-    
     -- CREATE table New Study Configuration
+    -- just used in local
     Manager.database:exec[[
         create table if not exists DataStudyConfiguration(
             userId TEXT,
@@ -200,6 +119,7 @@ function Manager.initTables()
     ]]
     
     -- CREATE table Download State
+    -- just used in local
     Manager.database:exec[[
         create table if not exists DataDownloadState(
             bookKey TEXT,
@@ -208,260 +128,58 @@ function Manager.initTables()
         );
     ]]
 
-    local userDataClasses = {
-        require('model.user.DataDailyCheckIn'),
-        require('model.user.DataDailyWord'),
-        require('model.user.DataIAP'),
-        require('model.user.DataLevel'),
-        require('model.user.DataLogIn'),
-        require('model.user.DataUser'),
-        require('model.user.DataBookProgress')
-    }
-    for i = 1, #userDataClasses do
-        Manager.createTable(userDataClasses[i].create())
+    for i = 1, #databaseTables do
+        localdatabaseutils.createTable(databaseTables[i].create())
     end
 end
 
--- if record exists then update record
--- else create record
---
--- ALTER TABLE table_name ADD column_name datatype
-function Manager.saveDataClassObject(objectOfDataClass)
-    Manager.alterLocalDatabase(objectOfDataClass)
-    
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'") do
-        num = num + 1
-        break
-    end
-
-    local insert = function ()
-        local keys, values = '', ''
-        for key, value in pairs(objectOfDataClass) do  
-            if (key == 'sessionToken'  
-                or string.find(key, '__') ~= nil 
-                or value == nil) == false then 
-
-                if key == 'PRIMARY' then key = 'fuckprimary' end
-
-                if (type(value) == 'string') then
-                    if string.len(keys) > 0 then keys = keys .. ',' end
-                    keys = keys .. "'" .. key .. "'"
-
-                    if string.len(values) > 0 then values = values .. ',' end
-                    values = values .. "'" .. value .. "'"
-                elseif (type(value) == 'boolean') then
-                    if string.len(keys) > 0 then keys = keys .. ',' end
-                    if string.len(values) > 0 then values = values .. ',' end
-                        keys = keys .. "'" .. key .. "'"
-                        values = values .. tostring(value)
-                    -- if value then
-                    --     keys = keys .. "'" .. key .. "'"
-                    --     values = values .. '1'
-                    -- else
-                    --     keys = keys .. "'" .. key .. "'"
-                    --     values = values .. '0'
-                    -- end
-                elseif (type(value) == 'number') then
-                    if string.len(keys) > 0 then keys = keys .. ',' end
-                    keys = keys .. "'" .. key .. "'"
-
-                    if string.len(values) > 0 then values = values .. ',' end
-                    values = values .. value
-                end
-            end
-        end
-        return keys, values
-    end
-
-    local update = function ()
-        local str = ''
-        for key, value in pairs(objectOfDataClass) do  
-            if (key == 'sessionToken'  
-                or string.find(key, '__') ~= nil 
-                or value == nil) == false then 
-
-                if key == 'PRIMARY' then key = 'fuckprimary' end
-
-                if (type(value) == 'string') then
-                    if string.len(str) > 0 then str = str .. ',' end
-                    str = str .. "'" .. key .. "'" .. '=' .. "'" .. value .. "'"
-                elseif (type(value) == 'boolean') then
-                    if string.len(str) > 0 then str = str .. ',' end
-                    str = str .. "'" .. key .. "'=" .. tostring(value)
-                    -- if value then
-                    --     str = str .. "'" .. key .. "'=1"
-                    -- else
-                    --     str = str .. "'" .. key .. "'=0"
-                    -- end
-                elseif (type(value) == 'number') then
-                    if string.len(str) > 0 then str = str .. ',' end
-                    str = str .. "'" .. key .. "'" .. '=' .. value
-                end     
-            end
-        end
-        return str
-    end
-
-    if num == 0 then
-        local keys, values = insert()
-        local query = "INSERT INTO " .. objectOfDataClass.className .. " (" .. keys .. ")" .. " VALUES (" .. values .. ");"
-        local ret = Manager.database:exec(query)
-        s_logd('[sql result:' .. tostring(ret) .. ']: ' .. query)
-    else
-        local query = "UPDATE " .. objectOfDataClass.className .. " SET " .. update() .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
-        local ret = Manager.database:exec(query)
-        s_logd('[sql result:' .. tostring(ret) .. ']: ' .. query)
-    end
+function Manager.saveDataClassObject(objectOfDataClass, userId, username)
+    localdatabaseutils.saveDataClassObject(objectOfDataClass, userId, username)
 end
-
-local function getUserDataFromLocalDB(objectOfDataClass, usertype)
-    local lastLogIn = 0
-    local data = nil
-    for row in Manager.database:nrows("SELECT * FROM " .. objectOfDataClass.className) do
-        print ('sql result:')
-        print_lua_table(row)
-        local rowTime = row.updatedAt
-        if rowTime <= 0 then rowTime = row.createdAt end
-        if rowTime > lastLogIn then
-            s_logd(string.format('getUserDataFromLocalDB updatedAt: %s, %f, %f', row.objectId, row.updatedAt, lastLogIn))
-
-            if usertype == USER_TYPE_GUEST then
-                if (row.isGuest == 1 and row.usertype == nil) or row.usertype == USER_TYPE_GUEST then
-                    lastLogIn = rowTime
-                    data = row
-                end
-            elseif usertype == USER_TYPE_QQ then
-                if row.usertype == USER_TYPE_QQ then
-                    lastLogIn = rowTime
-                    data = row
-                end
-            else
-                lastLogIn = rowTime
-                data = row
-            end
-        end
-    end
-
-    if data ~= nil then
-        if data.usertype == nil then
-            if data.isGuest == 1 then 
-                data.usertype = USER_TYPE_GUEST
-            else
-                data.usertype = USER_TYPE_MANUAL
-            end
-        end
-        parseLocalDatabaseToUserData(data, objectOfDataClass)     
-        return true
-    end
-
-    return false
-end
+---------------------------------------------------------------------------------------------------------
 
 function Manager.getLastLogInUser(objectOfDataClass, usertype)
-    return getUserDataFromLocalDB(objectOfDataClass, usertype)
+    return localdatabaseuser.getUserDataFromLocalDB(objectOfDataClass, usertype)
 end
 
+---------------------------------------------------------------------------------------------------------
 
+function Manager.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
+    localdatabaseutils.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
+end
+
+function Manager.getDatas(classNameOfDataClass, userId, username)
+    return localdatabaseutils.getDatas(classNameOfDataClass, userId, username)
+end
+
+---------------------------------------------------------------------------------------------------------
 -- show word info
 
 function Manager.getRandomWord()
-    return "apple"
+    return localdatabasedailyStudyInfo.getRandomWord()
 end
 
 function Manager.addStudyWordsNum()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local today = os.date("%x", time)
-
-    local num = 0
-    local oldStudyNum = nil
-    local oldGraspNum = nil
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-        num = num + 1
-        oldStudyNum = row.studyNum
-        oldGraspNum = row.graspNum
-    end
-    
-    if num == 0 then
-        local studyNum = 1
-        local graspNum = 0
-        local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
-    else
-        local newStudyNum = oldStudyNum + 1
-        local query = "UPDATE DataDailyStudyInfo SET studyNum = "..newStudyNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, newStudyNum, oldGraspNum)
-    end
+    localdatabasedailyStudyInfo.addStudyWordsNum()
 end
 
 function Manager.addGraspWordsNum(addNum)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local today = os.date("%x", time)
-
-    local num = 0
-    local oldStudyNum = nil
-    local oldGraspNum = nil
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-        num = num + 1
-        oldStudyNum = row.studyNum
-        oldGraspNum = row.graspNum
-    end
-
-    if num == 0 then
-        local studyNum = 0
-        local graspNum = addNum
-        local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
-    else
-        local newGraspNum = oldGraspNum + addNum
-        local query = "UPDATE DataDailyStudyInfo SET graspNum = "..newGraspNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
-        Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, oldStudyNum, newGraspNum)
-    end
+    localdatabasedailyStudyInfo.addGraspWordsNum(addNum)
 end
 
 function Manager.getStudyDayNum()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
-        num = num + 1
-    end
-    
-    return num
+    return localdatabasedailyStudyInfo.getStudyDayNum()
 end
 
 function Manager.getStudyWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    
-    local studyNum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-        studyNum = row.studyNum
-    end
-    
-    return studyNum
+    return localdatabasedailyStudyInfo.getStudyWordsNum(dayString)
 end
 
 function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    local graspNum = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-        graspNum = row.graspNum
-    end
-
-    return graspNum
+    return localdatabasedailyStudyInfo.getGraspWordsNum(dayString)
 end
+
+---------------------------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
     return Manager.getCurrentIndex() - 1
@@ -476,7 +194,6 @@ function Manager.getTotalGraspWordsNum()
     print("bossWordNum: "..bossWordNum)
     return totalStudyWordsNum - wrongWordBufferNum - bossWordNum
 end
-
 
 function Manager.getSummaryBossWordCandidate()
     local wrongWordPool = Manager.getWrongWords()
@@ -582,59 +299,22 @@ function Manager.getGraspWords()
     return wordPool
 end
 
-
+---------------------------------------------------------------------------------------------------------
+-- DataCurrentIndex
 -- record word info
 function Manager.printCurrentIndex()
-    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
-
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    print("<currentIndex>")
-    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        print("current book word index: "..row.currentIndex.." time: "..row.lastUpdate)
-    end
-    print("</currentIndex>")
+    localdatabasecurrentIndex.printCurrentIndex()
 end
 
-function Manager.getCurrentIndex()
-    local currentIndex = nil
-
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    
-    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        currentIndex = row.currentIndex
-    end
-    
-    if currentIndex == nil then
-        currentIndex = 1
-        local time = os.time()
-        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", "..time..");"
-        Manager.database:exec(query)
-    end
-    
-    return currentIndex
+function Manager.getCurrentIndex()    
+    return localdatabasecurrentIndex.getCurrentIndex()
 end
 
 function Manager.setCurrentIndex(currentIndex)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        num = num + 1
-    end
-
-    if num == 0 then
-        local query = "INSERT INTO DataCurrentIndex VALUES ('"..userId.."', '"..bookKey.."', "..currentIndex..", "..time..");"
-        Manager.database:exec(query)
-    else
-        local query = "UPDATE DataCurrentIndex SET currentIndex = "..currentIndex..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
-        Manager.database:exec(query)
-    end
+    localdatabasecurrentIndex.setCurrentIndex(currentIndex)
 end
+
+---------------------------------------------------------------------------------------------------------
 
 function Manager.printNewPlayState()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end
@@ -1047,7 +727,7 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
         return s_gamestate_reviewbossmodel
     end
     
-    if Manager.getCurrentIndex() > s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words then
+    if Manager.getCurrentIndex() > s_DataManager.books[s_CURRENT_USER.bookKey].words then
         return s_gamestate_overmodel
     end
     

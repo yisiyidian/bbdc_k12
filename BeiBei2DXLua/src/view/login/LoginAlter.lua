@@ -125,14 +125,14 @@ showLogin = function()
             playSound(s_sound_buttonEffect)
             
             if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
             if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
-            s_SCENE:logIn(username.textField:getString(), password.textField:getString())
+            s_O2OController.logInOnline(username.textField:getString(), password.textField:getString())
         end
     end
     
@@ -277,15 +277,15 @@ showRegister = function()
             -- button sound
             playSound(s_sound_buttonEffect)
             if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
             if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DATA_MANAGER.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
             s_CURRENT_USER.usertype = USER_TYPE_MANUAL
-            s_SCENE:signUp(username.textField:getString(), password.textField:getString())
+            s_O2OController.signUpOnline(username.textField:getString(), password.textField:getString())
             AnalyticsSignUp_Normal()
         end
     end

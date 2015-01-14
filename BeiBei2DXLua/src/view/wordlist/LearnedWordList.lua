@@ -112,7 +112,7 @@ function LearnedWordList:ctor()
     listView:setItemModel(default_item)
     listView:removeAllChildren()
     -- get data
-    local word = s_DATABASE_MGR:getStudyWords()
+    local word = s_LocalDatabaseManager:getStudyWords()
     local small_meaning = {}
     local meaning = {}
     local sentenceEn = {}
@@ -220,7 +220,7 @@ function LearnedWordList:ctor()
     end
     listView:setItemsMargin(2.0)
 
---    local levelConfig = s_DATA_MANAGER.getLevels(s_CURRENT_USER.bookKey)
+--    local levelConfig = s_DataManager.getLevels(s_CURRENT_USER.bookKey)
 --    self.levelArray = {}
 --    self.levelKey = {}
 --    
@@ -246,7 +246,7 @@ function LearnedWordList:ctor()
 --        local levelIndex        = levelNum[2] + 1
 --        local chapterNum = split(levelNum[1],'chapter')
 --        local chapterIndex = chapterNum[2]+1
---        local chapterName       = s_DATA_MANAGER.chapters[chapterIndex]["Name"]
+--        local chapterName       = s_DataManager.chapters[chapterIndex]["Name"]
 --        local levelName         = "第"..chapterIndex.."章 "..chapterName.." 第"..levelIndex.."关"
 --        local title = cc.Label:createWithSystemFont(levelName, '' ,28)
 --        title:setColor(cc.c3b(45,176,244))
@@ -322,7 +322,7 @@ function LearnedWordList:ctor()
 --            end
 --        end
 --        -- add word list
---        local studyWords = s_DATABASE_MGR.getStudyWords(s_CURRENT_USER.bookKey)
+--        local studyWords = s_LocalDatabaseManager.getStudyWords(s_CURRENT_USER.bookKey)
 --        for i = 1, #self.levelArray[indexConfig] do
 --            local word = self.levelArray[indexConfig][i]
 --            local wordKey = self.levelKey[indexConfig]..'|'..word

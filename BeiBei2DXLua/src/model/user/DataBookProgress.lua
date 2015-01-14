@@ -1,6 +1,6 @@
 require("cocos.init")
 require("common.global")
-local DataClassBase = require('model/user/DataClassBase')
+local DataClassBase = require('model.user.DataClassBase')
 
 local DataBookProgress = class("DataBookProgress", function()
     return DataClassBase.new()
@@ -285,9 +285,9 @@ function DataBookProgress:getBookProgress(bookKey)
 end
 
 function DataBookProgress:computeCurrentProgress()
-    local bookWordTotalCount = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
-    local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 100)
-    local bookWordCurrentCount =  s_DATABASE_MGR.getCurrentIndex()-1
+    local bookWordTotalCount = s_DataManager.books[s_CURRENT_USER.bookKey].words
+    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 100)
+    local bookWordCurrentCount =  s_LocalDatabaseManager.getCurrentIndex()-1
     local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
 --    currentLevelIndex =10
     local progress = {}

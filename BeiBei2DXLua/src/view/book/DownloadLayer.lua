@@ -10,10 +10,10 @@ end)
 
 function DownloadLayer.create(bookKey)    
     local bookImageName = "image/download/big_"..string.upper(bookKey)..".png"
-    local total_size = s_DATA_MANAGER.books[bookKey].music
+    local total_size = s_DataManager.books[bookKey].music
     
     local download_state = 0 -- 0 for no download, 1 for downloading and 2 for downloaded
-    if s_DATABASE_MGR.getDownloadState(bookKey) == 1 then
+    if s_LocalDatabaseManager.getDownloadState(bookKey) == 1 then
         download_state = 2
     end
 
@@ -44,7 +44,7 @@ function DownloadLayer.create(bookKey)
     label_hint:setColor(cc.c4b(0,0,0,255))
     backColor:addChild(label_hint)
 
-    local label_num = cc.Label:createWithSystemFont(s_DATA_MANAGER.books[bookKey].words,"",30)
+    local label_num = cc.Label:createWithSystemFont(s_DataManager.books[bookKey].words,"",30)
     label_num:setPosition(bigWidth/2+40, s_DESIGN_HEIGHT/2+70)
     backColor:addChild(label_num)
     
@@ -59,7 +59,7 @@ function DownloadLayer.create(bookKey)
                 downloadAlter.sure = function()
                     download_state = 0
                     DownloadSoundController.killDownload(bookKey)
-                    s_DATABASE_MGR.updateDownloadState(bookKey, 0)
+                    s_LocalDatabaseManager.updateDownloadState(bookKey, 0)
 
                     s_CorePlayManager.enterBookLayer()
                 end
@@ -84,7 +84,7 @@ function DownloadLayer.create(bookKey)
                 downloadAlter.sure = function()
                     download_state = 0
                     DownloadSoundController.killDownload(bookKey)
-                    s_DATABASE_MGR.updateDownloadState(bookKey, 0)
+                    s_LocalDatabaseManager.updateDownloadState(bookKey, 0)
                     
                     if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                         s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
@@ -148,7 +148,7 @@ function DownloadLayer.create(bookKey)
         if state == true then
             print("download sound successful")
             download_state = 2
-            s_DATABASE_MGR.updateDownloadState(bookKey, 1)
+            s_LocalDatabaseManager.updateDownloadState(bookKey, 1)
             
             local downloadAlter = DownloadAlter.create("贝贝提醒您，最新的单词包到货了 ^_^")
             downloadAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
@@ -250,7 +250,7 @@ function DownloadLayer.create(bookKey)
                 downloadAlter.sure = function()
                     download_state = 0
                     DownloadSoundController.deleteBookSound(bookKey)
-                    s_DATABASE_MGR.updateDownloadState(bookKey, 0)
+                    s_LocalDatabaseManager.updateDownloadState(bookKey, 0)
                     
                     button_title:setString(title1)
                     progress:setVisible(false)

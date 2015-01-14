@@ -83,7 +83,7 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
+    --local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
     local levelPosition = self.levelPos[levelIndex]
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
@@ -128,7 +128,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
-    if s_DATABASE_MGR.getGameState() == s_gamestate_reviewbossmodel and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
         -- plot review boss
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
@@ -301,10 +301,10 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         deco:setPosition(levelPosition.x-85,levelPosition.y)
         self:addChild(deco, 130)    
     elseif levelIndex % 8 == 3 then
-        local deco = sp.SkeletonAnimation:create('spine/chapterlevel/pangxie.json', 'spine/chapterlevel/pangxie.atlas',1)
-        deco:addAnimation(0, 'animation', true)
-        deco:setPosition(levelPosition.x+50, levelPosition.y)
-        self:addChild(deco, 150)    
+--        local deco = sp.SkeletonAnimation:create('spine/chapterlevel/pangxie.json', 'spine/chapterlevel/pangxie.atlas',1)
+--        deco:addAnimation(0, 'animation', true)
+--        deco:setPosition(levelPosition.x+50, levelPosition.y)
+--        self:addChild(deco, 150)    
     elseif levelIndex % 8 == 4 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
         deco:addAnimation(0,'animation',true)
@@ -350,11 +350,11 @@ function ChapterLayerBase:plotDecoration()
 end
 
 function ChapterLayerBase:plotLevelNumber(levelKey)
-    --local levelConfig = s_DATA_MANAGER.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
+    --local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
-    local avgWordCount = math.floor(s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words / 99)
+    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 99)
     --print('####levelIndex:',levelIndex,',',chapterIndex)
     if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
 --        local title = cc.Label:createWithSystemFont('Start','',40)
@@ -372,7 +372,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     local levelNumber = (chapterIndex * 10 + levelIndex) * avgWordCount
     local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     if bookProgress['level'] == 'level39' and bookProgress['chapter'] == 'chapter3' then
-        levelNumber = s_DATA_MANAGER.books[s_CURRENT_USER.bookKey].words
+        levelNumber = s_DataManager.books[s_CURRENT_USER.bookKey].words
     end
     -- check random summary boss
     local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)

@@ -42,7 +42,7 @@ function LevelLayer:levelStateManager()
 
     -- CHECK unlock chapter state
     if s_SCENE.levelLayerState == s_unlock_normal_plotInfo_state or s_SCENE.levelLayerState == s_unlock_normal_notPlotInfo_state then
-        local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey)
+        local chapterConfig = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,s_CURRENT_USER.currentChapterKey)
         if s_CURRENT_USER.currentLevelKey == chapterConfig[#chapterConfig]['level_key'] then
             s_SCENE.levelLayerState = s_unlock_next_chapter_state
         end
@@ -244,7 +244,7 @@ function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
 --    print('innerHeight:'..innerHeight)
     listView:setInnerContainerSize(cc.size(itemList[1]:getContentSize().width, innerHeight))
     
-    local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
+    local chapterConfig = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
     if chapterKey == 'chapter0' then
         local item0 = self.chapterDic['chapter0']
         local currentVerticalPercent = (string.sub(levelKey,6)+1)/#chapterConfig * item0:getContentSize().height / innerHeight * 100 -2
@@ -267,7 +267,7 @@ function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
         local connection1_2 = self.chapterDic['connection1_2']
         local upHeight = item0:getContentSize().height+connection0_1:getContentSize().height+item1:getContentSize().height+connection1_2:getContentSize().height
         -- update upHeight seperately (chapter2 is splited into 3 parts)
-        local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,'chapter2')
+        local chapterConfig = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,'chapter2')
         
         local item2 = self.chapterDic['chapter2_'..math.floor(string.sub(levelKey, 6) / 10)]
         local currentVerticalPercent =(upHeight+ (string.sub(levelKey,6)+1)/#chapterConfig * item2:getContentSize().height * #chapterConfig/10) / innerHeight * 100
@@ -281,9 +281,9 @@ function LevelLayer:scrollLevelLayer(chapterKey, levelKey)
         local item1 = self.chapterDic['chapter1']
         local connection1_2 = self.chapterDic['connection1_2']
         local upHeight = item0:getContentSize().height+connection0_1:getContentSize().height+item1:getContentSize().height+connection1_2:getContentSize().height
-        local chapterConfig2 = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,'chapter2')
+        local chapterConfig2 = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,'chapter2')
         upHeight = upHeight + self.chapterDic['chapter2_0']:getContentSize().height * #chapterConfig2 / 10
-        local chapterConfig3 = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,'chapter3')
+        local chapterConfig3 = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,'chapter3')
 
         local item3 = self.chapterDic['chapter3_'..math.floor(string.sub(levelKey, 6) / 10)]
         local currentVerticalPercent =(upHeight+ (string.sub(levelKey,6)+1)/#chapterConfig3 * item3:getContentSize().height * #chapterConfig3/10) / innerHeight * 100 + 3
@@ -315,7 +315,7 @@ end
 
 
 function LevelLayer:addChapterIntoListView(chapterKey)  -- chapter3, 4, 5,6,7
-    local chapterConfig = s_DATA_MANAGER.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
+    local chapterConfig = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,chapterKey)
     --local chapterIndex = string.sub(chapterKey, 8)
     if chapterKey == 'chapter0' then    
         local levelStypeI = require('view.level.LevelLayerI')

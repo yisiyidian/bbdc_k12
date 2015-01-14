@@ -9,34 +9,34 @@ end)
 function MissionProgressLayer.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
---    local taskTotal = s_max_wrong_num_everyday * 2 + s_DATABASE_MGR:getTodayTotalBossNum() * 20
+--    local taskTotal = s_max_wrong_num_everyday * 2 + s_LocalDatabaseManager:getTodayTotalBossNum() * 20
 --    local taskCurrent
     
     local taskTotal = 120
     local taskCurrent = 120
     
-    local state = s_DATABASE_MGR.getGameState()-- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
+    local state = s_LocalDatabaseManager.getGameState()-- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
 
 --    if state == s_gamestate_studymodel then
---       taskCurrent =  s_CorePlayManager.wrongWordNum + s_DATABASE_MGR:getTodayTotalBossNum() * 20    
+--       taskCurrent =  s_CorePlayManager.wrongWordNum + s_LocalDatabaseManager:getTodayTotalBossNum() * 20    
 --    elseif state == s_gamestate_reviewmodel then
---        taskCurrent = s_max_wrong_num_everyday * 2 - s_CorePlayManager.candidateNum + s_DATABASE_MGR:getTodayTotalBossNum() * 20    
+--        taskCurrent = s_max_wrong_num_everyday * 2 - s_CorePlayManager.candidateNum + s_LocalDatabaseManager:getTodayTotalBossNum() * 20    
 --    elseif state == s_gamestate_reviewbossmodel then
---        taskCurrent =  (s_DATABASE_MGR:getTodayTotalBossNum() - s_DATABASE_MGR:getTodayRemainBossNum()) * 20
+--        taskCurrent =  (s_LocalDatabaseManager:getTodayTotalBossNum() - s_LocalDatabaseManager:getTodayRemainBossNum()) * 20
 --    else
---        taskCurrent = s_max_wrong_num_everyday * 2 + s_DATABASE_MGR:getTodayTotalBossNum() * 20
+--        taskCurrent = s_max_wrong_num_everyday * 2 + s_LocalDatabaseManager:getTodayTotalBossNum() * 20
 --    end
     
 --    if taskCurrent == nil then
 --        taskCurrent = 0
 --    end
 
---    print("state = s_DATABASE_MGR.getGameState() .."..tostring(s_DATABASE_MGR.getGameState()))
+--    print("state = s_LocalDatabaseManager.getGameState() .."..tostring(s_LocalDatabaseManager.getGameState()))
 --    print("1 for review boss model, 2 for study model, 3 for review model and 4 for over")
 --    print("s_CorePlayManager.wrongWordNum.."..s_CorePlayManager.wrongWordNum)
 --    print("s_CorePlayManager.candidateNum.."..s_CorePlayManager.candidateNum)
---    print("s_DATABASE_MGR:getTodayTotalBossNum().."..s_DATABASE_MGR:getTodayTotalBossNum())
---    print("s_DATABASE_MGR:getTodayRemainBossNum().."..s_DATABASE_MGR:getTodayRemainBossNum())
+--    print("s_LocalDatabaseManager:getTodayTotalBossNum().."..s_LocalDatabaseManager:getTodayTotalBossNum())
+--    print("s_LocalDatabaseManager:getTodayRemainBossNum().."..s_LocalDatabaseManager:getTodayRemainBossNum())
     
     
     local startTime = 0
