@@ -16,6 +16,7 @@ local DataUser = require('model.user.DataUser')
 local DataBookProgress = require('model.user.DataBookProgress')
 local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
+local DataNewPlayState = require('model.user.DataNewPlayState')
 
 local databaseTables = {
         DataDailyCheckIn,
@@ -27,13 +28,15 @@ local databaseTables = {
         DataUser,
         DataBookProgress,
         DataCurrentIndex,
-        DataDailyStudyInfo
+        DataDailyStudyInfo,
+        DataNewPlayState
     }
 
 local localdatabaseutils = nil
 local localdatabaseuser = nil
 local localdatabasedailyStudyInfo = nil
 local localdatabasecurrentIndex = nil
+local localdatabasenewPlayState = nil
 
 -- define Manager
 local Manager = {}
@@ -51,6 +54,7 @@ function Manager.init()
     localdatabaseuser = reloadModule('model.localDatabase.user')
     localdatabasedailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
     localdatabasecurrentIndex = reloadModule('model.localDatabase.currentIndex')
+    localdatabasenewPlayState = reloadModule('model.localDatabase.newPlayState')
 
     Manager.initTables()
 end
@@ -59,21 +63,7 @@ end
 function Manager.close() Manager.database:close() end
 
 -- init data structure
-function Manager.initTables()
-    
-    -- CREATE table NewPlay State
-    Manager.database:exec[[
-        create table if not exists DataNewPlayState(
-            userId TEXT,
-            bookKey TEXT,
-            playModel INTEGER,
-            rightWordList TEXT,
-            wrongWordList TEXT,
-            wordCandidate TEXT,
-            lastUpdate INTEGER
-        );
-    ]]
-    
+function Manager.initTables()    
     -- CREATE table Wrong Word Buffer
     Manager.database:exec[[
         create table if not exists DataWrongWordBuffer(
@@ -317,94 +307,26 @@ end
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.printNewPlayState()
-    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
-
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    print("<newPlayState>")
-    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        print("<item>")
-        print("current playModel: "..row.playModel)
-        print("current rightWordList: "..row.rightWordList)
-        print("current wrongWordList: "..row.wrongWordList)
-        print("current wordCandidate: "..row.wordCandidate)
-        print("current lastUpdate: "..row.lastUpdate)
-        print("</item>")
-    end
-    print("</newPlayState>")
+    localdatabasenewPlayState.printNewPlayState()
 end
 
-function Manager.getTodayPlayModel()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local today = os.date("%x", time)
-
-    local playModel = 0
-    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        local lastUpdate = tostring(row.lastUpdate)
-        local lastUpdateDay = os.date("%x", lastUpdate)
-        if lastUpdateDay == today then
-            playModel = row.playModel
-        end
-    end
-    
-    return playModel
+function Manager.getTodayPlayModel()    
+    return localdatabasenewPlayState.getTodayPlayModel()
 end
 
 function Manager.getwrongWordListSize()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    local size = 0
-    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        local wrongWordList =  row.wrongWordList
-        if wrongWordList ~= "" then
-            local tmp = split(wrongWordList, "|")
-            size = #tmp
-        end
-    end
-    return size
+    return localdatabasenewPlayState.getwrongWordListSize()
 end
 
 function Manager.getNewPlayState()
-    local newPlayState = {}
-    newPlayState.lastUpdate = nil
-
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-
-    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        newPlayState.playModel     = row.playModel
-        newPlayState.rightWordList = row.rightWordList
-        newPlayState.wrongWordList = row.wrongWordList
-        newPlayState.wordCandidate = row.wordCandidate
-        newPlayState.lastUpdate    = row.lastUpdate
-    end
-    
-    return newPlayState
+    return localdatabasenewPlayState.getNewPlayState()
 end
 
 function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-        num = num + 1
-    end
-    
-    if num == 0 then
-        local query = "INSERT INTO DataNewPlayState VALUES ('"..userId.."', '"..bookKey.."', "..playModel..", '"..rightWordList.."', '"..wrongWordList.."', '"..wordCandidate.."', "..time..");"
-        Manager.database:exec(query)
-    else
-        local query = "UPDATE DataNewPlayState SET playModel = "..playModel..", rightWordList = '"..rightWordList.."', wrongWordList = '"..wrongWordList.."', wordCandidate = '"..wordCandidate.."', lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';"    
-        Manager.database:exec(query)
-    end
+    localdatabasenewPlayState.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
 end
 
+---------------------------------------------------------------------------------------------------------
 
 function Manager.printWrongWordBuffer()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end
@@ -471,6 +393,8 @@ function Manager.addWrongWordBuffer(wrongWord)
         Manager.database:exec(query)
     end
 end
+
+---------------------------------------------------------------------------------------------------------
 
 function Manager.printBossWord()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end
@@ -542,6 +466,46 @@ function Manager.getBossWord()
     return candidate
 end
 
+function Manager.getTodayRemainBossNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    local today = os.date("%x", time)
+
+    local num = 0
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+        local lastUpdate = tostring(row.lastUpdate)
+        local lastUpdateDay = os.date("%x", lastUpdate)
+        if lastUpdateDay ~= today then
+            num = num + 1
+        end
+    end
+
+    return num
+end
+
+function Manager.updateBossWord(bossID)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local time = os.time()
+    
+    local typeIndex = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
+        typeIndex = row.typeIndex
+    end
+    
+    if typeIndex + 1 == MAXTYPEINDEX then
+        Manager.addGraspWordsNum(MAXWRONGWORDCOUNT)
+        
+        local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataBossWord SET typeIndex = "..(typeIndex+1)..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    
+        Manager.database:exec(query)
+    end
+end
+
+---------------------------------------------------------------------------------------------------------
 
 local function saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum) -- TODO
     local data = {}
@@ -589,45 +553,7 @@ function Manager.getTodayTotalBossNum()
     end
 end
 
-function Manager.getTodayRemainBossNum()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    local today = os.date("%x", time)
-
-    local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
-        local lastUpdate = tostring(row.lastUpdate)
-        local lastUpdateDay = os.date("%x", lastUpdate)
-        if lastUpdateDay ~= today then
-            num = num + 1
-        end
-    end
-
-    return num
-end
-
-function Manager.updateBossWord(bossID)
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local time = os.time()
-    
-    local typeIndex = nil
-    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
-        typeIndex = row.typeIndex
-    end
-    
-    if typeIndex + 1 == MAXTYPEINDEX then
-        Manager.addGraspWordsNum(MAXWRONGWORDCOUNT)
-        
-        local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
-        Manager.database:exec(query)
-    else
-        local query = "UPDATE DataBossWord SET typeIndex = "..(typeIndex+1)..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    
-        Manager.database:exec(query)
-    end
-end
-
+---------------------------------------------------------------------------------------------------------
 
 -- newstudy configuration
 function Manager.getIsAlterOn()
@@ -692,6 +618,8 @@ function Manager.updateSlideNum()
         Manager.database:exec(query)
     end
 end
+
+---------------------------------------------------------------------------------------------------------
 
 -- download state
 function Manager.getDownloadState(bookKey)
