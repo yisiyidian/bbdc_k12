@@ -42,12 +42,12 @@ function M.addStudyWordsNum()
         local graspNum = 0
         local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
         Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
+        -- s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
     else
         local newStudyNum = oldStudyNum + 1
         local query = "UPDATE DataDailyStudyInfo SET studyNum = "..newStudyNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
         Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, newStudyNum, oldGraspNum)
+        -- s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, newStudyNum, oldGraspNum)
     end
 end
 
@@ -71,12 +71,12 @@ function M.addGraspWordsNum(addNum)
         local graspNum = addNum
         local query = "INSERT INTO DataDailyStudyInfo VALUES ('"..userId.."', '"..bookKey.."', '"..today.."', "..studyNum..", "..graspNum..", "..time..");"
         Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
+        -- s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, studyNum, graspNum)
     else
         local newGraspNum = oldGraspNum + addNum
         local query = "UPDATE DataDailyStudyInfo SET graspNum = "..newGraspNum..", lastUpdate = "..time.." WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"    
         Manager.database:exec(query)
-        s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, oldStudyNum, newGraspNum)
+        -- s_UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, today, oldStudyNum, newGraspNum)
     end
 end
 

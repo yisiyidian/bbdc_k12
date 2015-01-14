@@ -290,21 +290,17 @@ function Server.initNetworkStatus()
         Server.isInited = true
         Server.networkStatus = cx.CXNetworkStatus:getInstance():start()
     else
-        Server.updateNetworkStatus()
+        Server.networkStatus = cx.CXNetworkStatus:getInstance():getStatus()
     end      
 
-    if Server.isOnline() then
+    if Server.isOnlineWhenInited() then
         print ('Server initNetworkStatus isOnline')
     else
         print ('Server initNetworkStatus isOffline')
     end
 end
 
-function Server.updateNetworkStatus()
-    Server.networkStatus = cx.CXNetworkStatus:getInstance():getStatus()
-end
-
-function Server.isOnline()
+function Server.isOnlineWhenInited()
     local status = Server.networkStatus
     if status == NETWORK_STATUS_WIFI then
         return true
@@ -313,6 +309,21 @@ function Server.isOnline()
     else
         return false
     end
+end
+
+function Server.networkStatusRealtimeMonitor()
+    local status = cx.CXNetworkStatus:getInstance():getStatus()
+    if status == NETWORK_STATUS_WIFI then
+        return true
+    elseif status == NETWORK_STATUS_MOBILE then
+        return true
+    else
+        return false
+    end
+end
+
+function Server.hasSessionToken()
+    return string.len(Server.sessionToken) > 0
 end
 
 return Server

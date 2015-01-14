@@ -2,6 +2,7 @@ require("cocos.init")
 
 local BigAlter = require("view.alter.BigAlter")
 local SmallAlter = require("view.alter.SmallAlter")
+local OfflineTip = require('view.offlinetip.OfflineTip')
 
 local TipsLayer = class("TipsLayer", function ()
     return cc.Layer:create()
@@ -9,6 +10,8 @@ end)
 
 function TipsLayer.create()
     local layer = TipsLayer.new()
+    layer.offlinetip = '网络链接失败，请检查网络状态'
+    layer.offlineOrNoSessionTokenTip = '网络链接失败或者当前账号未登录，请检查网络状态或者重新登录'
     return layer
 end
 
@@ -44,6 +47,7 @@ end
 
 function TipsLayer:showSmall(message, confirmFunc, cancelFunc)
     self.listener:setSwallowTouches(true)
+    self.bg:setVisible(true)
     self:setVisible(true)
 
     local smallAlter = SmallAlter.create(message)
@@ -68,6 +72,18 @@ function TipsLayer:showSmall(message, confirmFunc, cancelFunc)
     end
 
     return smallAlter
+end
+
+function TipsLayer:showTip(content)
+    self.bg:setVisible(false)
+    self:setVisible(true)
+    local layer = self
+    local tip = OfflineTip.create(content, function ()
+        tip:removeFromParent()
+        layer:setVisible(false)
+    end)
+    self:addChild(tip)
+    tip.show()
 end
 
 return TipsLayer

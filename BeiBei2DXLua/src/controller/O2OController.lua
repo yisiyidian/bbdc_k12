@@ -51,7 +51,7 @@ function O2OController.start()
 
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
 
-    if s_SERVER.isOnline() == false then
+    if s_SERVER.isOnlineWhenInited() == false then
         if hasUserInLocalDB then
             O2OController.logInOffline()
         else
@@ -184,7 +184,7 @@ function O2OController.signUpWithRandomUserName()
     local randomUserName = genRandomUserName()
 
     showProgressHUD()
-    if s_SERVER.isOnline() == false then
+    if s_SERVER.isOnlineWhenInited() == false then
         s_CURRENT_USER.usertype = USER_TYPE_GUEST
         O2OController.signUpOffline(randomUserName, PASSWORD)
     else
@@ -286,7 +286,7 @@ function O2OController.getDataBookProgress(oncompleted)
 
     -- handle offline
 
-    if s_SERVER.isOnline() == false then 
+    if not s_SERVER.isOnlineWhenInited() or not s_SERVER.networkStatusRealtimeMonitor() or not s_SERVER.hasSessionToken() then 
         if lastLocalData ~= nil then
             parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
         end
@@ -357,7 +357,7 @@ function O2OController.getDataLogIn(onSaved)
         data.week = week
         data:setWeekDay(os.time())
 
-        if s_SERVER.isOnline() == false then
+        if s_SERVER.isOnlineWhenInited() == false then
             onUpdateWeekCompleted(data)
         else
             s_UserBaseServer.saveDataObjectOfCurrentUser(
@@ -389,7 +389,7 @@ function O2OController.getDataLogIn(onSaved)
             end
         end
 
-        if s_SERVER.isOnline() == false then -- offline
+        if not s_SERVER.isOnlineWhenInited() or not s_SERVER.networkStatusRealtimeMonitor() or not s_SERVER.hasSessionToken() then 
             if localCurrentData ~= nil then
                 updateWeek(localCurrentData, localCurrentData.week)
             else

@@ -488,11 +488,7 @@ function CorePlayManager.recordWordProciency()
         end
     end
 
-    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end)
+    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
 end
 
 function CorePlayManager.enterReviewBossLayer_special()

@@ -543,14 +543,16 @@ function Manager.getBossWord()
 end
 
 
-local function saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
+local function saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum) -- TODO
     local data = {}
     data.userId = userId
     data.bookKey = bookKey
     data.today = today
     data.reviewBossNum = reviewBossNum
     data.className = 'DataTodayReviewBossNum'
-    s_SERVER.createData(data)
+    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+        s_SERVER.createData(data)
+    end
 end
 function Manager.getTodayTotalBossNum()
     local userId = s_CURRENT_USER.objectId

@@ -8,7 +8,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     playWordSound(wordname)
 
     local height = 80
-    local onLine = s_SERVER.isOnline() 
+    local onLine = s_SERVER.isOnlineWhenInited() 
     
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)

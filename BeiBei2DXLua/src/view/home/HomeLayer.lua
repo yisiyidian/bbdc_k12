@@ -74,7 +74,7 @@ function HomeLayer.create()
     local setting_back
     
     --add offline
-    local onLine = s_SERVER.isOnline() 
+    local onLine = s_SERVER.isOnlineWhenInited() 
 --    local onLine = false
     local offLineTip = OfflineTip.create()
     if onLine == false then
