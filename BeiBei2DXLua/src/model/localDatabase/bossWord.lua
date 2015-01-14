@@ -70,7 +70,8 @@ end
 function M.getBossWordNum()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
-
+    local username = s_CURRENT_USER.username
+    
     local bossWordNum = 0
     local num = 0
     if userId ~= '' then

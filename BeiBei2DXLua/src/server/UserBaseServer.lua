@@ -414,6 +414,7 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
             s_SERVER.updateData(dataObject, s, onFailed)
         end
     else
+        s_LocalDatabaseManager.saveDataClassObject(dataObject, s_CURRENT_USER.userId, s_CURRENT_USER.username)
         s ('saveDataObjectOfCurrentUser ' .. dataObject.className, nil)
     end
 end

@@ -349,7 +349,7 @@ function O2OController.getDataLogIn(onSaved)
     local DataLogIn = require('model.user.DataLogIn')
 
     local function onUpdateWeekCompleted(data)
-        onSaved()
+        if onSaved then onSaved() end
         s_LocalDatabaseManager.saveDataClassObject(data)
         hideProgressHUD()
     end
@@ -391,7 +391,8 @@ function O2OController.getDataLogIn(onSaved)
         local localCurrentData = nil
         for i, v in ipairs(localDatas) do
             if v.week == currentWeeks then
-                localCurrentData = v
+                localCurrentData = DataLogIn.create()
+                parseLocalDatabaseToUserData(v, localCurrentData)
                 break
             end
         end
@@ -422,7 +423,7 @@ function O2OController.getDataLogIn(onSaved)
                     end
                 end,
                 function (api, code, message, description)
-                    onSaved()
+                    if onSaved then onSaved() end
                     hideProgressHUD()
                 end)
         end

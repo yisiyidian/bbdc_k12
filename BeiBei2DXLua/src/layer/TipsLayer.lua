@@ -75,10 +75,13 @@ function TipsLayer:showSmall(message, confirmFunc, cancelFunc)
 end
 
 function TipsLayer:showTip(content)
+    if self:getChildrenCount() > 1 then return end
+    
     self.bg:setVisible(false)
     self:setVisible(true)
     local layer = self
-    local tip = OfflineTip.create(content, function ()
+    local tip
+    tip = OfflineTip.create(content, function ()
         tip:removeFromParent()
         layer:setVisible(false)
     end)
