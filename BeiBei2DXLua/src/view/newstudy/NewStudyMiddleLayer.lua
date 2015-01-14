@@ -43,50 +43,87 @@ function NewStudyMiddleLayer.create()
     layer:addChild(backColor)
     
     backColor.progressBar:removeFromParent()
-    backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "yellow")
-    backColor.progressBar:setPosition(bigWidth/2+44, 1099)
-    backColor:addChild(backColor.progressBar)
-    
-    backColor.progressBar.hint = function()
-        local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
-        guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-        backColor:addChild(guideAlter)
-    end
+--    backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "yellow")
+--    backColor.progressBar:setPosition(bigWidth/2+44, 1099)
+--    backColor:addChild(backColor.progressBar)
+--    
+--    backColor.progressBar.hint = function()
+--        local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
+--        guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+--        backColor:addChild(guideAlter)
+--    end
+
+    local beans = cc.Sprite:create('image/chapter/chapter0/beanBack.png')
+    beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
+    layer:addChild(beans)
+        
+    local beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
+    beanLabel:setPosition(beans:getContentSize().width/2 - 60, beans:getContentSize().height/2+5)
+    beans:addChild(beanLabel)
+
+    local beanCountLabel = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',33)
+    beanCountLabel:setColor(cc.c3b(13, 95, 156))
+    beanCountLabel:ignoreAnchorPointForPosition(false)
+    beanCountLabel:setAnchorPoint(1,0)
+    beanCountLabel:setPosition(80,2)
+    beans:addChild(beanCountLabel,10)
 
     local wrongWordNum = s_CorePlayManager.wrongWordNum
 
-    local label_hint = cc.Label:createWithSystemFont(wrongWordNum.."个生词get!","",50)
-    label_hint:setPosition(bigWidth/2, 1000)
-    label_hint:setColor(cc.c4b(31,68,102,255))
-    backColor:addChild(label_hint)
+    local figureback = cc.Sprite:create("image/newstudy/figurebackground.png")
+    figureback:setPosition(bigWidth /2 + 100, 1000)
+    backColor:addChild(figureback)
+    
+    local label_hint_part_one = cc.Label:createWithSystemFont("收集生词","",50)
+    label_hint_part_one:setPosition(-20, 50)
+    label_hint_part_one:ignoreAnchorPointForPosition(false)
+    label_hint_part_one:setAnchorPoint(1,0.5)
+    label_hint_part_one:setColor(cc.c4b(31,68,102,255))
+    figureback:addChild(label_hint_part_one)
+    
+    local label_hint_part_two = cc.Label:createWithSystemFont("个","",50)
+    label_hint_part_two:setPosition(110, 50)
+    label_hint_part_two:ignoreAnchorPointForPosition(false)
+    label_hint_part_two:setAnchorPoint(0,0.5)
+    label_hint_part_two:setColor(cc.c4b(31,68,102,255))
+    figureback:addChild(label_hint_part_two)
+    
+    local labelWordNum = cc.Label:createWithSystemFont("0","",50)
+    labelWordNum:setPosition(50,50)
+    labelWordNum:setColor(cc.c4b(234,123,3,255))
+    figureback:addChild(labelWordNum)
+    
+    
+    
+    
 
     AnalyticsFirst(ANALYTICS_FIRST_GOT_ENOUGH_UNKNOWN_WORDS, tostring(wrongWordNum))
 
-    local circle = cc.Sprite:create("image/newstudy/yellow_circle.png")
-    circle:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-    backColor:addChild(circle)
-    
-    local number = cc.Label:createWithSystemFont("+"..wrongWordNum,"",60)
-    number:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
-    number:setColor(cc.c4b(98,124,148,255))
-    circle:addChild(number)
-    
-    local label_hint2 = cc.Label:createWithSystemFont("获得奖励：","",36)
-    label_hint2:setPosition(170, 320)
-    label_hint2:setColor(cc.c4b(31,68,102,255))
-    backColor:addChild(label_hint2)
-    
-    local bean1 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-    bean1:setPosition(bigWidth/2-100, 250)
-    backColor:addChild(bean1)
-    
-    local bean2 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-    bean2:setPosition(bigWidth/2, 250)
-    backColor:addChild(bean2)
-    
-    local bean3 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-    bean3:setPosition(bigWidth/2+100, 250)
-    backColor:addChild(bean3)
+--    local circle = cc.Sprite:create("image/newstudy/yellow_circle.png")
+--    circle:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+--    backColor:addChild(circle)
+--    
+--    local number = cc.Label:createWithSystemFont("+"..wrongWordNum,"",60)
+--    number:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
+--    number:setColor(cc.c4b(98,124,148,255))
+--    circle:addChild(number)
+--    
+--    local label_hint2 = cc.Label:createWithSystemFont("获得奖励：","",36)
+--    label_hint2:setPosition(170, 320)
+--    label_hint2:setColor(cc.c4b(31,68,102,255))
+--    backColor:addChild(label_hint2)
+--    
+--    local bean1 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+--    bean1:setPosition(bigWidth/2-100, 250)
+--    backColor:addChild(bean1)
+--    
+--    local bean2 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+--    bean2:setPosition(bigWidth/2, 250)
+--    backColor:addChild(bean2)
+--    
+--    local bean3 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+--    bean3:setPosition(bigWidth/2+100, 250)
+--    backColor:addChild(bean3)
     
     
     
@@ -107,6 +144,26 @@ function NewStudyMiddleLayer.create()
     button_go:setTitleFontSize(32)
     button_go:addTouchEventListener(button_go_click)
     backColor:addChild(button_go) 
+    
+    local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+    bean:setPosition(button_go:getContentSize().width * 0.75,button_go:getContentSize().height * 0.5)
+    button_go:addChild(bean)
+    
+    local rewardNumber = cc.Label:createWithSystemFont("+3","",36)
+    rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
+    button_go:addChild(rewardNumber)
+    
+    local time = 0
+    local function update(delta)
+        time = time + delta
+        if tonumber(labelWordNum:getString()) < wrongWordNum  then
+            labelWordNum:setString(math.ceil(time * wrongWordNum / 2))
+        else
+           layer:unscheduleUpdate()
+        end  
+
+    end
+    layer:scheduleUpdateWithPriorityLua(update, 0)
 
     return layer
 end

@@ -80,7 +80,7 @@ function NewStudySlideLayer.create()
             showAnswerStateBack:runAction(action1)
             
     
-            layer:runAction(cc.Sequence:create(cc.CallFunc:create(function()backColor.indexSwell()end),cc.DelayTime:create(1),cc.CallFunc:create(function()  
+            layer:runAction(cc.Sequence:create(cc.CallFunc:create(function()backColor.indexSwell()end),cc.DelayTime:create(2),cc.CallFunc:create(function()  
             if s_CorePlayManager.isStudyModel() then
                     s_CorePlayManager.updateWrongWordList(wordname)
                     s_CorePlayManager.updateCurrentIndex()
