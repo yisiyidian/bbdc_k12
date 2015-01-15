@@ -12,7 +12,7 @@ function OffLineTipForFriend.create()
     layer:addChild(backColor)
 
     local tipContent = "离线无法社交。"
-    if not s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedWhenInited() and not s_SERVER.hasSessionToken() then
         tipContent = '需要登录服务器后才能进入好友界面'
     end
     local tip = cc.Label:createWithSystemFont(tipContent,"",24)

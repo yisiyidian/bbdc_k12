@@ -34,7 +34,7 @@ function OffLineTipForHome.create()
         local action4 = cc.FadeOut:create(10)
         tip:runAction(cc.Sequence:create(action3,action4))
         
-        if not s_SERVER.hasSessionToken() then
+        if s_SERVER.isNetworkConnnectedWhenInited() and not s_SERVER.hasSessionToken() then
             if key == OffLineTipForHome_Feedback then
                tip:setString("贝贝听不到未登录用户的声音。")
             elseif key == OffLineTipForHome_ImproveInformation then
