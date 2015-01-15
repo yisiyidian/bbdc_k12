@@ -1,7 +1,7 @@
 
 -- *************************************
 
-local app_version_debug   = 170000
+local app_version_debug   = 170001
 local app_version_release = 170000
 
 -- All test code must in example.example

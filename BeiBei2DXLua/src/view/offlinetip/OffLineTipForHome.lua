@@ -34,12 +34,22 @@ function OffLineTipForHome.create()
         local action4 = cc.FadeOut:create(10)
         tip:runAction(cc.Sequence:create(action3,action4))
         
-        if key == OffLineTipForHome_Feedback then
-           tip:setString("贝贝听不到离线用户的声音。")
-        elseif key == OffLineTipForHome_ImproveInformation then
-           tip:setString("离线用户无法完善个人信息。")
-        elseif key == OffLineTipForHome_Logout then
-           tip:setString("离线模式下不能登出游戏。")
+        if not s_SERVER.hasSessionToken() then
+            if key == OffLineTipForHome_Feedback then
+               tip:setString("贝贝听不到未登录用户的声音。")
+            elseif key == OffLineTipForHome_ImproveInformation then
+               tip:setString("未登录用户无法完善个人信息。")
+            elseif key == OffLineTipForHome_Logout then
+               tip:setString("离线模式下不能登出游戏。")
+            end
+        else
+            if key == OffLineTipForHome_Feedback then
+               tip:setString("贝贝听不到离线用户的声音。")
+            elseif key == OffLineTipForHome_ImproveInformation then
+               tip:setString("离线用户无法完善个人信息。")
+            elseif key == OffLineTipForHome_Logout then
+               tip:setString("离线模式下不能登出游戏。")
+            end
         end
     end
     

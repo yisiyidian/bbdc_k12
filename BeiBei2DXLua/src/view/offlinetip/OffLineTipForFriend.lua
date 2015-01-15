@@ -11,7 +11,11 @@ function OffLineTipForFriend.create()
     backColor:setPosition(s_LEFT_X, 900)
     layer:addChild(backColor)
 
-    local tip = cc.Label:createWithSystemFont("离线无法社交。","",24)
+    local tipContent = "离线无法社交。"
+    if not s_SERVER.hasSessionToken() then
+        tipContent = '需要登录服务器后才能进入好友界面'
+    end
+    local tip = cc.Label:createWithSystemFont(tipContent,"",24)
     tip:setPosition(backColor:getContentSize().width / 2,backColor:getContentSize().height / 2)
     tip:setColor(cc.c4b(109,125,128,255))
     backColor:addChild(tip)
