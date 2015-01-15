@@ -5,21 +5,24 @@ end)
 OffLineTipForHome_Feedback           = 1
 OffLineTipForHome_ImproveInformation = 2
 OffLineTipForHome_Logout             = 3
-OffLineTipForHome_Friend             = 4
 
 function OffLineTipForHome.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local layer = OffLineTipForHome.new()
+    
+    local backColor  
 
-    local backColor = cc.LayerColor:create(cc.c4b(250,251,247,255),bigWidth,50)
+    backColor = cc.Sprite:create("image/offline/back.png")
     backColor:setPosition(s_LEFT_X, 415)
+    backColor:ignoreAnchorPointForPosition(false)
+    backColor:setAnchorPoint(0,0.5)
     backColor:setVisible(false)
     layer:addChild(backColor)
     
     local tip = cc.Label:createWithSystemFont("","",24)
     tip:setPosition(backColor:getContentSize().width / 2,backColor:getContentSize().height / 2)
-    tip:setColor(cc.c4b(109,125,128,255))
+    tip:setColor(cc.c4b(247,247,234,255))
     backColor:addChild(tip)
     
     layer.setTrue = function (key)
@@ -32,14 +35,16 @@ function OffLineTipForHome.create()
         tip:runAction(cc.Sequence:create(action3,action4))
         
         if key == OffLineTipForHome_Feedback then
-           tip:setString("贝贝听不到离线用户的声音，感到很沮丧。")
+           tip:setString("贝贝听不到离线用户的声音。")
         elseif key == OffLineTipForHome_ImproveInformation then
-           tip:setString("很抱歉，离线用户无法完善个人信息。贝贝很想和你做朋友。")
+           tip:setString("离线用户无法完善个人信息。")
         elseif key == OffLineTipForHome_Logout then
            tip:setString("离线模式下不能登出游戏。")
-        elseif key == OffLineTipForHome_Friend then
-            tip:setString("贝贝做不到离线社交，哭一个。")
         end
+    end
+    
+    layer.setFalse = function ()
+        backColor:setVisible(false)
     end
 
 
