@@ -74,16 +74,17 @@ function CorePlayManager.getProgress()
                 else
                     wordCandidate = split(lastPlayState.wordCandidate, "|")
                 end
-                return #wrongWordList - #wordCandidate
+                return #wrongWordList - #wordCandidate 
             elseif lastPlayState.playModel == 1 then
                 if lastPlayState.wrongWordList == "" then
                     return 0
                 else
                     local wrongWordList = split(lastPlayState.wrongWordList, "|")
-                    return #wrongWordList
+                    local wordCandidate = split(lastPlayState.wordCandidate, "|")
+                    return #wrongWordList * 2 - #wordCandidate
                 end
             elseif lastPlayState.playModel == 2 then
-                return s_max_wrong_num_everyday
+                return s_max_wrong_num_everyday * 2
             end
         else
             return 0
