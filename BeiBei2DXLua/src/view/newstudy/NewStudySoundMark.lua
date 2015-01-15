@@ -49,9 +49,9 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
 
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            playWordSound(wordname)
-            if onLine == false then
-            offLineTip.setTrue()
+            local wordSoundState = playWordSound(wordname)
+            if onLine == false and wordSoundState == PLAY_WORD_SOUND_NO then
+                offLineTip.setTrue()
             end
         end
     end

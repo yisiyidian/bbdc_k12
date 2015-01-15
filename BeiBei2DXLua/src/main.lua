@@ -13,6 +13,7 @@ local test_code = NORMAL_CODE -- switch normal or test in this line
 
 cc.FileUtils:getInstance():addSearchPath("src")
 cc.FileUtils:getInstance():addSearchPath("res")
+cc.FileUtils:getInstance():addSearchPath("res/sound/words/")
 
 require("cocos.init")
 
