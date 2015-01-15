@@ -159,11 +159,8 @@ function DataBookProgress:updateBossList(bookKey,bossList)
     elseif bookKey == s_BOOK_KEY_TOEFL then
         self.TOEFLBossList = bossList
     end
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end) 
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self) 
+    s_LocalDatabaseManager.saveDataClassObject(self)
 end
 
 function DataBookProgress:updateTime(bookKey,updateTime)
@@ -194,11 +191,8 @@ function DataBookProgress:updateTime(bookKey,updateTime)
     elseif bookKey == s_BOOK_KEY_TOEFL then
         self.TOEFLUpdateBossTime = updateTime
     end
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end) 
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self) 
+    s_LocalDatabaseManager.saveDataClassObject(self)
 end
 
 function DataBookProgress:getBookProgress(bookKey)
@@ -365,11 +359,8 @@ function DataBookProgress:updateDataToServer()
     elseif bookKey == s_BOOK_KEY_TOEFL then
         self.TOEFL = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
     end
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end) 
+    s_UserBaseServer.saveDataObjectOfCurrentUser(self) 
+    s_LocalDatabaseManager.saveDataClassObject(self)
 end
 
 return DataBookProgress

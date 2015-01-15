@@ -53,10 +53,12 @@ function HomeLayer.create()
     local setting_back
     
     --add offline
-    local onLine = s_SERVER.isOnline() 
+
+    local onLine = s_SERVER.isOnlineWhenInited() 
 --    onLine = false
     local offLineTipHome = OfflineTipHome.create()
     local offLineTipFriend = OfflineTipFriend.create()
+
     if onLine == false then
         layer:addChild(offLineTipHome,2)
         layer:addChild(offLineTipFriend,2) 
@@ -81,8 +83,10 @@ function HomeLayer.create()
             
         elseif eventType == ccui.TouchEventType.ended then
         
-            offLineTipHome.setFalse()
-            offLineTipFriend.setFalse()
+            if onLine == false then
+                offLineTipHome.setFalse()
+                offLineTipFriend.setFalse()
+            end
             
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -534,8 +538,10 @@ function HomeLayer.create()
                    button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
                    if true then
 
-                       offLineTipHome.setFalse()
-                       offLineTipFriend.setFalse()
+                    if onLine == false then
+                        offLineTipHome.setFalse()
+                        offLineTipFriend.setFalse()
+                    end
                     
                        local PersonalInfo = require("view.PersonalInfo")
                        local personalInfoLayer = PersonalInfo.create()

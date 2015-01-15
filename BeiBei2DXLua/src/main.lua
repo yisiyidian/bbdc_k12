@@ -1,8 +1,8 @@
 
 -- *************************************
 
-local app_version_debug   = 160000
-local app_version_release = 160000
+local app_version_debug   = 170000
+local app_version_release = 170000
 
 -- All test code must in example.example
 local TEST_CODE   = 1 -- constant value
@@ -81,16 +81,18 @@ start = function ()
     if AgentManager ~= nil then s_CURRENT_USER.channelId = AgentManager:getInstance():getChannelId() end
 
     saveLuaError = function (msg)
-        local errorObj = {}
-        errorObj['className'] = 'LuaError'
-        local a = string.gsub(msg, ":",  "    ") 
-        local b = string.gsub(a,   '"',  "'") 
-        local c = string.gsub(b,   "\n", "    ") 
-        local d = string.gsub(c,   "\t", "    ") 
-        errorObj['msg'] = d
-        errorObj['appVersion'] = s_APP_VERSION
-        errorObj['RA'] = RELEASE_APP
-        s_SERVER.createData(errorObj)
+        if s_SERVER.networkStatusRealtimeMonitor() then
+            local errorObj = {}
+            errorObj['className'] = 'LuaError'
+            local a = string.gsub(msg, ":",  "    ") 
+            local b = string.gsub(a,   '"',  "'") 
+            local c = string.gsub(b,   "\n", "    ") 
+            local d = string.gsub(c,   "\t", "    ") 
+            errorObj['msg'] = d
+            errorObj['appVersion'] = s_APP_VERSION
+            errorObj['RA'] = RELEASE_APP
+            s_SERVER.createData(errorObj)
+        end
     end
     
     if cc.Director:getInstance():getRunningScene() then

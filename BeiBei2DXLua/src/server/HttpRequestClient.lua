@@ -23,7 +23,11 @@ function HttpRequestClient.getBulletinBoard(callbackFunc)
     local onFailed = function (api, code, message, description)
         if callbackFunc ~= nil then callbackFunc(retIdx, retTitle, retContent) end
     end
-    s_SERVER.search('classes/DataBulletinBoard', onSucceed, onFailed)
+    if s_SERVER.networkStatusRealtimeMonitor() then
+        s_SERVER.search('classes/DataBulletinBoard', onSucceed, onFailed)
+    else
+        onFailed()
+    end
 end
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -45,7 +49,12 @@ end
     end)
 ]]--
 local function getWordObject(word, onSucceed, onFailed)
-    s_SERVER.search('classes/_File?where={"name":"' .. getWordSoundFileName(word) .. '"}', onSucceed, onFailed)
+    local sql = 'classes/_File?where={"name":"' .. getWordSoundFileName(word) .. '"}'
+    if s_SERVER.networkStatusRealtimeMonitor() then
+        s_SERVER.search(sql, onSucceed, onFailed)
+    else
+        onFailed(sql, -1, '', '')
+    end
 end
 function HttpRequestClient.downloadWordSoundFile(word, onDownloaded)
     local localPath = getWordSoundFilePath(word)
@@ -84,11 +93,13 @@ function HttpRequestClient.downloadSoundsOfLevel(levelKey, idOffset, prefix)
     end
 
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-        cx.CXAvos:getInstance():downloadWordSoundFiles(
-            prefix .. '_', 
-            nextLevelConfig.word_content, 
-            '.mp3', 
-            cc.FileUtils:getInstance():getWritablePath())
+        if s_SERVER.networkStatusRealtimeMonitor() then
+            cx.CXAvos:getInstance():downloadWordSoundFiles(
+                prefix .. '_', 
+                nextLevelConfig.word_content, 
+                '.mp3', 
+                cc.FileUtils:getInstance():getWritablePath())
+        end
     else
         local wordList = split(nextLevelConfig.word_content, "|")
         local index = 1
