@@ -57,6 +57,7 @@ function MissionProgressLayer.create()
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(layer)
     
 --    print("taskCurrent "..taskCurrent)
+    layer.stopListener = false
     
     local runProgress = cc.ProgressTo:create(taskCurrent / taskTotal ,taskCurrent / taskTotal * 100)
     
@@ -108,13 +109,17 @@ function MissionProgressLayer.create()
     end
 
     local enterButtonClick = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)   
-        elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.RotateBy:create(1,360)
-            local action2 = cc.FadeOut:create(1)
-            local action3 = cc.Spawn:create(action1,action2)
-            sender:runAction(cc.Sequence:create(action3, cc.CallFunc:create(enterGame)))
+        if layer.stopListener == false then
+            if eventType == ccui.TouchEventType.began then
+                playSound(s_sound_buttonEffect)   
+            elseif eventType == ccui.TouchEventType.ended then
+                local action1 = cc.RotateBy:create(1,360)
+                local action2 = cc.FadeOut:create(1)
+                local action3 = cc.Spawn:create(action1,action2)
+                sender:runAction(cc.Sequence:create(action3, cc.CallFunc:create(enterGame)))
+            end
+        else
+            return
         end
     end
     
@@ -132,16 +137,16 @@ function MissionProgressLayer.create()
     
     rolling = function ()
         line:setScale(1)
-        local action1 = cc.RotateBy:create(2,360)
+        local action1 = cc.RotateBy:create(1,360)
         line:runAction(cc.Sequence:create(action1,cc.CallFunc:create(swelling)))
     end
 
     swelling = function ()
         line:setScale(0)
-        local action1 = cc.ScaleTo:create(0.5,1.1)
-        local action2 = cc.ScaleTo:create(0.5,1)
-        local action3 = cc.ScaleTo:create(0.5,1.1)
-        local action4 = cc.ScaleTo:create(0.5,1)
+        local action1 = cc.ScaleTo:create(0.25,1.05)
+        local action2 = cc.ScaleTo:create(0.15,1)
+        local action3 = cc.ScaleTo:create(0.25,1.05)
+        local action4 = cc.ScaleTo:create(0.15,1)
         enterButton:runAction(cc.Sequence:create(action1, action2,action3,action4,cc.CallFunc:create(rolling)))
     end
      
@@ -171,20 +176,20 @@ function MissionProgressLayer.create()
     anotherEnterButton:setVisible(false)
     
     anotherSwelling = function ()
-        local action1 = cc.ScaleTo:create(0.5,1.1)
-        local action2 = cc.ScaleTo:create(0.5,1)
-        local action3 = cc.ScaleTo:create(0.5,1.1)
-        local action4 = cc.ScaleTo:create(0.5,1)
+        local action1 = cc.ScaleTo:create(0.25,1.05)
+        local action2 = cc.ScaleTo:create(0.15,1)
+        local action3 = cc.ScaleTo:create(0.25,1.05)
+        local action4 = cc.ScaleTo:create(0.15,1)
         anotherEnterButton:runAction(cc.Sequence:create(action1,action2,action3,action4,cc.CallFunc:create(buttonSpin)))
     end
     
     buttonSpin = function ()
-    	local action1 = cc.RotateBy:create(2,360)
+    	local action1 = cc.RotateBy:create(1,360)
     	anotherEnterButton:runAction(cc.Sequence:create(action1,cc.CallFunc:create(circleSpin)))
     end
 
     circleSpin = function ()
-        local action1 = cc.RotateBy:create(2,360)
+        local action1 = cc.RotateBy:create(1,360)
         finishProgress:runAction(cc.Sequence:create(action1,cc.CallFunc:create(anotherSwelling)))
     end
     

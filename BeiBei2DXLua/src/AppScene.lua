@@ -194,6 +194,10 @@ end
 --     eventDispatcher:addEventListenerWithFixedPriority(self.listenerLogIn, 1)
 -- end
 
+function applicationWillEnterForeground()
+    s_O2OController.showRestartTipWhenOfflineToOnline()
+end
+
 function applicationDidEnterBackgroundLua()
     Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end

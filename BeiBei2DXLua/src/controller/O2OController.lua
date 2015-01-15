@@ -24,13 +24,14 @@ local _TEXT_ID_CFG         = 2
 local _TEXT_ID_UPDATE_BP   = 3
 local _TEXT_ID_UPDATE_USER = 4
 
+local function onError()
+    if s_SERVER.hasSessionToken() then cx.CXAvos:getInstance():logOut() end
+    s_LocalDatabaseManager.setLogOut(true)
+    s_LocalDatabaseManager.close()
+    s_START_FUNCTION()
+end
+
 local function onErrorHappend(e)
-    local function onError()
-        cx.CXAvos:getInstance():logOut()
-        s_LocalDatabaseManager.setLogOut(true)
-        s_LocalDatabaseManager.close()
-        s_START_FUNCTION()
-    end
     s_TIPS_LAYER:showSmall(e, onError, onError)
 end
 
@@ -39,6 +40,12 @@ end
 local O2OController = {}
 
 function O2OController.update(dt)
+end
+
+function O2OController.showRestartTipWhenOfflineToOnline()
+    if s_SERVER.isNetworkConnnectedNow() and (not s_SERVER.isNetworkConnnectedWhenInited() or not s_SERVER.hasSessionToken()) then
+        s_TIPS_LAYER:showSmall('发现网络链接，您还没有登录，现在需要登录吗？', onError, nil)
+    end
 end
 
 ----------------------------------------------------------------------------------------------------------------
@@ -51,7 +58,7 @@ function O2OController.start()
 
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
 
-    if s_SERVER.isOnline() == false then
+    if s_SERVER.isNetworkConnnectedWhenInited() == false then
         if hasUserInLocalDB then
             O2OController.logInOffline()
         else
@@ -184,7 +191,7 @@ function O2OController.signUpWithRandomUserName()
     local randomUserName = genRandomUserName()
 
     showProgressHUD()
-    if s_SERVER.isOnline() == false then
+    if s_SERVER.isNetworkConnnectedWhenInited() == false then
         s_CURRENT_USER.usertype = USER_TYPE_GUEST
         O2OController.signUpOffline(randomUserName, PASSWORD)
     else
@@ -286,7 +293,7 @@ function O2OController.getDataBookProgress(oncompleted)
 
     -- handle offline
 
-    if s_SERVER.isOnline() == false then 
+    if not s_SERVER.isNetworkConnnectedWhenInited() or not s_SERVER.isNetworkConnnectedNow() or not s_SERVER.hasSessionToken() then 
         if lastLocalData ~= nil then
             parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
         end
@@ -342,7 +349,7 @@ function O2OController.getDataLogIn(onSaved)
     local DataLogIn = require('model.user.DataLogIn')
 
     local function onUpdateWeekCompleted(data)
-        onSaved()
+        if onSaved then onSaved() end
         s_LocalDatabaseManager.saveDataClassObject(data)
         hideProgressHUD()
     end
@@ -357,7 +364,7 @@ function O2OController.getDataLogIn(onSaved)
         data.week = week
         data:setWeekDay(os.time())
 
-        if s_SERVER.isOnline() == false then
+        if s_SERVER.isNetworkConnnectedWhenInited() == false then
             onUpdateWeekCompleted(data)
         else
             s_UserBaseServer.saveDataObjectOfCurrentUser(
@@ -384,12 +391,13 @@ function O2OController.getDataLogIn(onSaved)
         local localCurrentData = nil
         for i, v in ipairs(localDatas) do
             if v.week == currentWeeks then
-                localCurrentData = v
+                localCurrentData = DataLogIn.create()
+                parseLocalDatabaseToUserData(v, localCurrentData)
                 break
             end
         end
 
-        if s_SERVER.isOnline() == false then -- offline
+        if not s_SERVER.isNetworkConnnectedWhenInited() or not s_SERVER.isNetworkConnnectedNow() or not s_SERVER.hasSessionToken() then 
             if localCurrentData ~= nil then
                 updateWeek(localCurrentData, localCurrentData.week)
             else
@@ -415,7 +423,7 @@ function O2OController.getDataLogIn(onSaved)
                     end
                 end,
                 function (api, code, message, description)
-                    onSaved()
+                    if onSaved then onSaved() end
                     hideProgressHUD()
                 end)
         end

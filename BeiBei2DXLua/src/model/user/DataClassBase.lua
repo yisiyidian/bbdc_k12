@@ -33,6 +33,8 @@ function getLocalSeconds()
 end
 
 function parseServerDataToUserData(serverdata, userdata)
+    if serverdata == nil or userdata == nil then return end
+    
     for key, value in pairs(userdata) do
         if type(value) ~= 'function' 
             and type(value) ~= 'table' 

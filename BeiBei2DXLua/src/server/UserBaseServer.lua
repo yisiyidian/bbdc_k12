@@ -1,5 +1,6 @@
 
 require("common.global")
+local OfflineTip = require("view.offlinetip.OffLineTipForHome")
 
 local UserBaseServer = {}
 
@@ -183,6 +184,12 @@ end
 
 -- function (username, password, error description, error code)
 function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
+    if not s_SERVER.isNetworkConnnectedNow() or not s_SERVER.hasSessionToken() then
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse(username, password, s_TIPS_LAYER.offlineOrNoSessionTokenTip, -1 ) end
+        return
+    end
+
     local onCompleted = function ()
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
@@ -258,15 +265,30 @@ curl -X GET \
   https://leancloud.cn/1.1/cloudQuery
 ]]--
 function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
-    s_SERVER.search('classes/_User?where={"username":"' .. username .. '"}', onSucceed, onFailed)
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.search('classes/_User?where={"username":"' .. username .. '"}', onSucceed, onFailed)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onFailed ~= nil then onFailed('searchUserByUserName', -1, '', '') end
+    end
 end
 
 function UserBaseServer.searchUserByNickName(nickName, onSucceed, onFailed)
-    s_SERVER.search('classes/_User?where={"nickName":"' .. nickName .. '"}', onSucceed, onFailed)
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.search('classes/_User?where={"nickName":"' .. nickName .. '"}', onSucceed, onFailed)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onFailed ~= nil then onFailed('searchUserByNickName', -1, '', '') end
+    end
 end
 
 function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
-    s_SERVER.searchCount('_User', '{"username":"' .. username .. '"}', onSucceed, onFailed)
+    if s_SERVER.isNetworkConnnectedNow() then
+        s_SERVER.searchCount('_User', '{"username":"' .. username .. '"}', onSucceed, onFailed)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlinetip)
+        if onFailed ~= nil then onFailed('isUserNameExist', -1, '', '') end
+    end
 end
 
 ----
@@ -278,10 +300,11 @@ s_UserBaseServer.getDailyCheckInOfCurrentUser(
    function (api, code, message, description) end
 )
 ]]--
+-- useless function
 function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
     s_SERVER.search('classes/DataDailyCheckIn?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
 end
-
+-- useless function
 function UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, onSucceed, onFailed)
     s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards = lastCheckInAward
     UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData,
@@ -301,35 +324,56 @@ end
 ----
 
 function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
-    s_SERVER.requestFollowersAndFollowees(s_CURRENT_USER.objectId, 
-        function (api, result, err)
-            if result ~= nil then
-                s_CURRENT_USER:parseServerFolloweesData(result.followees) -- who I follow
-                s_CURRENT_USER:parseServerFollowersData(result.followers) -- who follow me
-            end
-            if onResponse ~= nil then onResponse(api, result, err) end
-        end)
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.requestFollowersAndFollowees(s_CURRENT_USER.objectId, 
+            function (api, result, err)
+                if result ~= nil then
+                    s_CURRENT_USER:parseServerFolloweesData(result.followees) -- who I follow
+                    s_CURRENT_USER:parseServerFollowersData(result.followers) -- who follow me
+                end
+                if onResponse ~= nil then onResponse(api, result, err) end
+            end)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse('unfollow', nil, 'err') end
+    end
 end
 
 function UserBaseServer.follow(targetDataUser, onResponse)
-    s_SERVER.follow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.follow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse('unfollow', nil, 'err') end
+    end
 end
 
 function UserBaseServer.unfollow(targetDataUser, onResponse)
-    s_SERVER.unfollow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.unfollow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse('unfollow', nil, 'err') end
+    end
 end
 
 function UserBaseServer.removeFan(fanDataUser, onSucceed, onFailed)
-    s_SERVER.requestFunction('apiRemoveFan', {['myObjectId']=s_CURRENT_USER.objectId, ['fanObjectId']=fanDataUser.objectId}, onSucceed, onFailed)
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.requestFunction('apiRemoveFan', {['myObjectId']=s_CURRENT_USER.objectId, ['fanObjectId']=fanDataUser.objectId}, onSucceed, onFailed)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onFailed ~= nil then onFailed('apiRemoveFan', -1, '', '') end
+    end
 end
 
 ----
-
+---- handle offline in O2O
 function UserBaseServer.getDataLogIn(userId, week, onSucceed, onFailed)
     s_SERVER.search('classes/DataLogIn?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
 end
 
 ----
+---- handle offline in O2O
 function UserBaseServer.getDataBookProgress(objectId, onSucceed, onFailed)
     s_SERVER.search('classes/DataBookProgress?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
 end
@@ -361,45 +405,51 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
         if onSucceed ~= nil then onSucceed(api, result) end
     end
     
-    dataObject.userId = s_CURRENT_USER.objectId
+    updateDataFromUser(dataObject, s_CURRENT_USER)
     
-    if string.len(dataObject.objectId) <= 0 then
-        s_SERVER.createData(dataObject, s, onFailed)
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
+        if string.len(dataObject.objectId) <= 0 then
+            s_SERVER.createData(dataObject, s, onFailed)
+        else
+            s_SERVER.updateData(dataObject, s, onFailed)
+        end
     else
-        s_SERVER.updateData(dataObject, s, onFailed)
+        s_LocalDatabaseManager.saveDataClassObject(dataObject, s_CURRENT_USER.userId, s_CURRENT_USER.username)
+        s ('saveDataObjectOfCurrentUser ' .. dataObject.className, nil)
     end
 end
 
-function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
-    local dataObject = s_CURRENT_USER.dailyStudyInfo
+-- TODO
+-- function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
+--     local dataObject = s_CURRENT_USER.dailyStudyInfo
 
-    local function update()
-        dataObject.objectId  = ''
-        dataObject.userId    = s_CURRENT_USER.objectId
-        dataObject.bookKey   = bookKey
-        dataObject.dayString = dayString
-        dataObject.studyNum  = studyNum
-        dataObject.graspNum  = graspNum
-    end
+--     local function update()
+--         dataObject.objectId  = ''
+--         dataObject.userId    = s_CURRENT_USER.objectId
+--         dataObject.bookKey   = bookKey
+--         dataObject.dayString = dayString
+--         dataObject.studyNum  = studyNum
+--         dataObject.graspNum  = graspNum
+--     end
 
-    local s = function (api, result)
-        update()
-        if #result.results > 0 then
-            for i, data in ipairs(result.results) do
-                dataObject.objectId = data.objectId
-                s_SERVER.updateData(dataObject, nil, nil)
-                break
-            end
-        else
-            s_SERVER.createData(dataObject, nil, nil)
-        end
-    end
-    local f = function (api, result) 
-        update()
-        s_SERVER.createData(dataObject, nil, nil) 
-    end
+--     local s = function (api, result)
+--         update()
+--         if #result.results > 0 then
+--             for i, data in ipairs(result.results) do
+--                 dataObject.objectId = data.objectId
+--                 s_SERVER.updateData(dataObject, nil, nil)
+--                 break
+--             end
+--         else
+--             s_SERVER.createData(dataObject, nil, nil)
+--         end
+--     end
+--     local f = function (api, result) 
+--         update()
+--         s_SERVER.createData(dataObject, nil, nil) 
+--     end
 
-    s_SERVER.search('classes/DataDailyStudyInfo?where={"userId":"' .. s_CURRENT_USER.userId .. '","bookKey":"' .. bookKey .. '","dayString":"' .. dayString .. '"}', s, f)
-end 
+--     s_SERVER.search('classes/DataDailyStudyInfo?where={"userId":"' .. s_CURRENT_USER.userId .. '","bookKey":"' .. bookKey .. '","dayString":"' .. dayString .. '"}', s, f)
+-- end 
 
 return UserBaseServer
