@@ -1,15 +1,15 @@
-local OffLineTipForHome = class("OffLineTipForHome", function()
+local OfflineTipForHome = class("OfflineTipForHome", function()
     return cc.Layer:create()
 end)
 
-OffLineTipForHome_Feedback           = 1
-OffLineTipForHome_ImproveInformation = 2
-OffLineTipForHome_Logout             = 3
+OfflineTipForHome_Feedback           = 1
+OfflineTipForHome_ImproveInformation = 2
+OfflineTipForHome_Logout             = 3
 
-function OffLineTipForHome.create()
+function OfflineTipForHome.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
-    local layer = OffLineTipForHome.new()
+    local layer = OfflineTipForHome.new()
     
     local backColor  
 
@@ -35,19 +35,19 @@ function OffLineTipForHome.create()
         tip:runAction(cc.Sequence:create(action3,action4))
         
         if s_SERVER.isNetworkConnnectedNow() and not s_SERVER.hasSessionToken() then
-            if key == OffLineTipForHome_Feedback then
+            if key == OfflineTipForHome_Feedback then
                tip:setString("贝贝听不到未登录用户的声音。")
-            elseif key == OffLineTipForHome_ImproveInformation then
+            elseif key == OfflineTipForHome_ImproveInformation then
                tip:setString("未登录用户无法完善个人信息。")
-            elseif key == OffLineTipForHome_Logout then
+            elseif key == OfflineTipForHome_Logout then
                tip:setString("离线模式下不能登出游戏。")
             end
         else
-            if key == OffLineTipForHome_Feedback then
+            if key == OfflineTipForHome_Feedback then
                tip:setString("贝贝听不到离线用户的声音。")
-            elseif key == OffLineTipForHome_ImproveInformation then
+            elseif key == OfflineTipForHome_ImproveInformation then
                tip:setString("离线用户无法完善个人信息。")
-            elseif key == OffLineTipForHome_Logout then
+            elseif key == OfflineTipForHome_Logout then
                tip:setString("离线模式下不能登出游戏。")
             end
         end
@@ -61,4 +61,4 @@ function OffLineTipForHome.create()
     return layer
 end
 
-return OffLineTipForHome
+return OfflineTipForHome

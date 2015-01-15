@@ -5,7 +5,7 @@ require("common.DynamicUpdate")
 local LoginAlter = require("view.login.LoginAlter")
 local VisitorRegister = require("view.login.VisitorRegister")
 local ImproveInfo = require("view.home.ImproveInfo")
-local OffLine = require("view.offlinetip.OffLineTipForLogin")
+local Offline = require("view.offlinetip.OfflineTipForLogin")
 
 local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
@@ -24,7 +24,7 @@ function IntroLayer.create(directOnLogin)
     
     local currentIndex = 1
     local moveLength = 100
-    local offLineTip
+    local offlineTip
     local isOnline = s_SERVER.isNetworkConnnectedWhenInited()
         
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
@@ -328,21 +328,22 @@ function IntroLayer.create(directOnLogin)
             print(currentIndex)
         end
         
+
         if isOnline == false then
             if currentIndex == 4 then
-                offLineTip.setTrue()
+                offlineTip.setTrue()
             elseif currentIndex == 3 then
-                offLineTip.setFalse()
+                offlineTip.setFalse()
             end
         end
     end
     
     --add offline        
-    offLineTip = OffLine.create()
+    offlineTip = Offline.create()
     if isOnline == false then
-        layer:addChild(offLineTip)
+        layer:addChild(offlineTip)
         if currentIndex == 4 then
-            offLineTip.setTrue()
+            offlineTip.setTrue()
         end
     end
     

@@ -55,6 +55,7 @@ function NewStudySlideLayer.create()
         playWordSound(wordname)
     
         local normal = function()  
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             -- db
             s_LocalDatabaseManager.updateSlideNum()
         
