@@ -230,7 +230,7 @@ function AnalyticsFirst(eventindex, eventDes)
         local event = ANALYTICS_FIRST_EVENTS[eventindex + 1]
         cx.CXAnalytics:logEventAndLabel(event, eventDes)
 
-        if s_SERVER.networkStatusRealtimeMonitor() and string.len(s_CURRENT_USER.objectId) > 0 then
+        if s_SERVER.isNetworkConnnectedNow() and string.len(s_CURRENT_USER.objectId) > 0 then
             s_CURRENT_USER.statsMask = s_CURRENT_USER.statsMask + (2 ^ eventindex)
             local obj = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['statsMask']=s_CURRENT_USER.statsMask}
             s_SERVER.updateData({['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, nil, nil)

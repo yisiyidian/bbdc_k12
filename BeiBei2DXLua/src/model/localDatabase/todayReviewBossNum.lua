@@ -21,7 +21,7 @@ end
 --     data.today = today
 --     data.reviewBossNum = reviewBossNum
 --     data.className = 'DataTodayReviewBossNum'
---     if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+--     if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
 --         s_SERVER.createData(data)
 --     end
 -- end
