@@ -5,10 +5,7 @@ local SoundMark = class("SoundMark", function()
 end)
 
 function SoundMark.create(wordname, soundmarkus, soundmarken)
-    playWordSound(wordname)
-
     local height = 80
-    local onLine = s_SERVER.isNetworkConnnectedWhenInited() 
     
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)
@@ -50,7 +47,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local wordSoundState = playWordSound(wordname)
-            if onLine == false and wordSoundState == PLAY_WORD_SOUND_NO then
+            if s_SERVER.isNetworkConnnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
                 offLineTip.setTrue()
             end
         end
@@ -105,9 +102,10 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
         button_soundmark_us:setVisible(false)
     end
     
+    local wordSoundState = playWordSound(wordname)
     --add offline
     offLineTip = OfflineTip.create()
-    if onLine == false then
+    if s_SERVER.isNetworkConnnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
         main:addChild(offLineTip,2)
     end
 
