@@ -248,3 +248,11 @@ function hideProgressHUD()
     cx.CXProgressHUD:hide()
 end
 
+function checkIfDownloadSoundsExist(bookkey)
+    local storagePath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookkey.."/"..bookkey
+
+    print("The path of: "..storagePath.."is ",cc.FileUtils:getInstance():isFileExist(storagePath) )
+
+    return  cc.FileUtils:getInstance():isFileExist(storagePath)
+end
+

@@ -44,24 +44,35 @@ end
 
 function getWordSoundFilePath(word)
     local filename = getWordSoundFileName(word)
-    local localPath = cc.FileUtils:getInstance():fullPathForFilename('res/words/' .. filename)
-    print("The localpath is founded or not :",cc.FileUtils:getInstance():isFileExist(localPath))
+    
+    local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
     if cc.FileUtils:getInstance():isFileExist(localPath) then
+        print("getWordSoundFilePath localPath Y :" .. localPath)
         return localPath
+    else
+        print("getWordSoundFilePath localPath N :" .. localPath)
     end
 
     local downloadPath = cc.FileUtils:getInstance():getWritablePath() .. filename
+    print("getWordSoundFilePath downloadPath :" .. downloadPath)
     return downloadPath
 end
 
+PLAY_WORD_SOUND_YES     = 'PLAY_WORD_SOUND_YES'
+PLAY_WORD_SOUND_NO      = 'PLAY_WORD_SOUND_NO'
+PLAY_WORD_SOUND_UNKNOWN = 'PLAY_WORD_SOUND_UNKNOWN'
 function playWordSound(word)
     if db.isSoundOn() then
         local filename = getWordSoundFileName(word)
                 
         if cc.FileUtils:getInstance():isFileExist(filename) then
+            print ('playWordSound Y : ' .. filename)
             cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
+            return PLAY_WORD_SOUND_YES
         else
-            cc.SimpleAudioEngine:getInstance():playEffect("sound/words/"..filename, false)        
+            print ('playWordSound N : ' .. filename)
+            return PLAY_WORD_SOUND_NO
         end
     end
+    return PLAY_WORD_SOUND_UNKNOWN
 end

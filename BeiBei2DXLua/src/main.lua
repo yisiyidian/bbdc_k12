@@ -1,7 +1,7 @@
 
 -- *************************************
 
-local app_version_debug   = 170000
+local app_version_debug   = 170001
 local app_version_release = 170000
 
 -- All test code must in example.example
@@ -13,6 +13,7 @@ local test_code = NORMAL_CODE -- switch normal or test in this line
 
 cc.FileUtils:getInstance():addSearchPath("src")
 cc.FileUtils:getInstance():addSearchPath("res")
+cc.FileUtils:getInstance():addSearchPath("res/sound/words/")
 
 require("cocos.init")
 
@@ -81,7 +82,7 @@ start = function ()
     if AgentManager ~= nil then s_CURRENT_USER.channelId = AgentManager:getInstance():getChannelId() end
 
     saveLuaError = function (msg)
-        if s_SERVER.networkStatusRealtimeMonitor() then
+        if s_SERVER.isNetworkConnnectedNow() then
             local errorObj = {}
             errorObj['className'] = 'LuaError'
             local a = string.gsub(msg, ":",  "    ") 
