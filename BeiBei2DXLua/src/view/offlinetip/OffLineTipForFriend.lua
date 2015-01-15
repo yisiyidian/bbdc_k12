@@ -11,11 +11,7 @@ function OffLineTipForFriend.create()
     backColor:setPosition(s_LEFT_X, 900)
     layer:addChild(backColor)
 
-    local tipContent = "离线无法社交。"
-    if s_SERVER.isNetworkConnnectedWhenInited() and not s_SERVER.hasSessionToken() then
-        tipContent = '需要登录服务器后才能进入好友界面'
-    end
-    local tip = cc.Label:createWithSystemFont(tipContent,"",24)
+    local tip = cc.Label:createWithSystemFont("","",24)
     tip:setPosition(backColor:getContentSize().width / 2,backColor:getContentSize().height / 2)
     tip:setColor(cc.c4b(109,125,128,255))
     backColor:addChild(tip)
@@ -23,6 +19,12 @@ function OffLineTipForFriend.create()
     backColor:setVisible(false)
 
     layer.setTrue = function ()
+        local tipContent = "离线无法社交。"
+        if s_SERVER.isNetworkConnnectedNow() and not s_SERVER.hasSessionToken() then
+            tipContent = '需要登录服务器后才能进入好友界面'
+        end
+        tip:setString(tipContent)
+
         backColor:setVisible(true)
         local action1 = cc.FadeIn:create(1)
         local action2 = cc.FadeOut:create(10)

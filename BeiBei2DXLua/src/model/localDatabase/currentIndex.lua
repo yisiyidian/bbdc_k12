@@ -1,6 +1,8 @@
 local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local Manager = s_LocalDatabaseManager
 
+-- 代表当前书的进度
+
 local M = {}
 
 -- record word info
