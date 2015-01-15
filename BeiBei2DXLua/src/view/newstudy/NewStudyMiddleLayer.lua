@@ -153,6 +153,8 @@ function NewStudyMiddleLayer.create()
     rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
     button_go:addChild(rewardNumber)
     
+    print_lua_table(s_CorePlayManager.wrongWordList)
+    
     local time = 0
     local function update(delta)
         time = time + delta

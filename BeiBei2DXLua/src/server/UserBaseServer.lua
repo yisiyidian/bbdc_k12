@@ -1,6 +1,6 @@
 
 require("common.global")
-local OfflineTip = require("view.offlinetip.OffLineTipForHome")
+local OfflineTip = require("view.offlinetip.OfflineTipForHome")
 
 local UserBaseServer = {}
 
@@ -184,7 +184,7 @@ end
 
 -- function (username, password, error description, error code)
 function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
-    if not s_SERVER.networkStatusRealtimeMonitor() or not s_SERVER.hasSessionToken() then
+    if not s_SERVER.isNetworkConnnectedNow() or not s_SERVER.hasSessionToken() then
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
         if onResponse ~= nil then onResponse(username, password, s_TIPS_LAYER.offlineOrNoSessionTokenTip, -1 ) end
         return
@@ -265,7 +265,7 @@ curl -X GET \
   https://leancloud.cn/1.1/cloudQuery
 ]]--
 function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
         s_SERVER.search('classes/_User?where={"username":"' .. username .. '"}', onSucceed, onFailed)
     else
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
@@ -274,7 +274,7 @@ function UserBaseServer.searchUserByUserName(username, onSucceed, onFailed)
 end
 
 function UserBaseServer.searchUserByNickName(nickName, onSucceed, onFailed)
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
         s_SERVER.search('classes/_User?where={"nickName":"' .. nickName .. '"}', onSucceed, onFailed)
     else
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
@@ -283,7 +283,7 @@ function UserBaseServer.searchUserByNickName(nickName, onSucceed, onFailed)
 end
 
 function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
-    if s_SERVER.networkStatusRealtimeMonitor() then
+    if s_SERVER.isNetworkConnnectedNow() then
         s_SERVER.searchCount('_User', '{"username":"' .. username .. '"}', onSucceed, onFailed)
     else
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlinetip)
@@ -324,7 +324,7 @@ end
 ----
 
 function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
         s_SERVER.requestFollowersAndFollowees(s_CURRENT_USER.objectId, 
             function (api, result, err)
                 if result ~= nil then
@@ -340,7 +340,7 @@ function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
 end
 
 function UserBaseServer.follow(targetDataUser, onResponse)
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
         s_SERVER.follow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
     else
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
@@ -349,7 +349,7 @@ function UserBaseServer.follow(targetDataUser, onResponse)
 end
 
 function UserBaseServer.unfollow(targetDataUser, onResponse)
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
         s_SERVER.unfollow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
     else
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
@@ -358,7 +358,7 @@ function UserBaseServer.unfollow(targetDataUser, onResponse)
 end
 
 function UserBaseServer.removeFan(fanDataUser, onSucceed, onFailed)
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
         s_SERVER.requestFunction('apiRemoveFan', {['myObjectId']=s_CURRENT_USER.objectId, ['fanObjectId']=fanDataUser.objectId}, onSucceed, onFailed)
     else
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
@@ -407,7 +407,7 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
     
     updateDataFromUser(dataObject, s_CURRENT_USER)
     
-    if s_SERVER.networkStatusRealtimeMonitor() and s_SERVER.hasSessionToken() then
+    if s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken() then
         if string.len(dataObject.objectId) <= 0 then
             s_SERVER.createData(dataObject, s, onFailed)
         else

@@ -284,6 +284,7 @@ NETWORK_STATUS_WIFI = 1
 NETWORK_STATUS_MOBILE = 2
 Server.networkStatus = NETWORK_STATUS_NONE
 Server.isInited = false
+Server.closeNetwork = false
 
 function Server.initNetworkStatus()
     if Server.isInited == false then
@@ -293,37 +294,49 @@ function Server.initNetworkStatus()
         Server.networkStatus = cx.CXNetworkStatus:getInstance():getStatus()
     end      
 
-    if Server.isOnlineWhenInited() then
+    if Server.isNetworkConnnectedWhenInited() then
         print ('Server initNetworkStatus isOnline')
     else
         print ('Server initNetworkStatus isOffline')
     end
 end
 
-function Server.isOnlineWhenInited()
-    local status = Server.networkStatus
-    if status == NETWORK_STATUS_WIFI then
-        return true
-    elseif status == NETWORK_STATUS_MOBILE then
-        return true
-    else
+function Server.isNetworkConnnectedWhenInited()
+    if Server.closeNetwork then
         return false
+    else
+        local status = Server.networkStatus
+        if status == NETWORK_STATUS_WIFI then
+            return true
+        elseif status == NETWORK_STATUS_MOBILE then
+            return true
+        else
+            return false
+        end
     end
 end
 
-function Server.networkStatusRealtimeMonitor()
-    local status = cx.CXNetworkStatus:getInstance():getStatus()
-    if status == NETWORK_STATUS_WIFI then
-        return true
-    elseif status == NETWORK_STATUS_MOBILE then
-        return true
-    else
+function Server.isNetworkConnnectedNow()
+    if Server.closeNetwork then
         return false
+    else
+        local status = cx.CXNetworkStatus:getInstance():getStatus()
+        if status == NETWORK_STATUS_WIFI then
+            return true
+        elseif status == NETWORK_STATUS_MOBILE then
+            return true
+        else
+            return false
+        end
     end
 end
 
 function Server.hasSessionToken()
-    return string.len(Server.sessionToken) > 0
+    if Server.closeNetwork then
+        return false
+    else
+        return string.len(Server.sessionToken) > 0
+    end
 end
 
 return Server
