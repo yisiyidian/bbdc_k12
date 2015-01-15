@@ -54,12 +54,14 @@ function MissionProgressLayer.create()
     
     local layer = MissionProgressLayer.new()
     
+    local downloadSoundButton = require("view.home.DownloadSoundButton").create(layer)
+    
 --    print("taskCurrent "..taskCurrent)
     
     local runProgress = cc.ProgressTo:create(taskCurrent / taskTotal ,taskCurrent / taskTotal * 100)
     
     local missionToday = cc.Label:createWithSystemFont("今日任务","",40)
-    missionToday:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 + 300)
+    missionToday:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 + 250)
     missionToday:setColor(cc.c4b(82,196,241,255))
     layer:addChild(missionToday)
     
@@ -100,7 +102,7 @@ function MissionProgressLayer.create()
         AnalyticsFirst(ANALYTICS_FIRST_LEVEL, 'TOUCH')
 
         showProgressHUD()
-        playSound(s_sound_buttonEffect)  
+        playSound(s_sound_buttonEffect)
         s_CorePlayManager.enterLevelLayer()  
         hideProgressHUD()
     end
