@@ -611,12 +611,7 @@ function ChapterLayer:plotDecoration()
     local action2 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(50, 0)))
     local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
     wave:runAction(action3)
---    local action1 = 
-    
---    self:addBeansUI()
-    --print('chapter0: '..self.chapterDic['chapter0']:getPosition())
---    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
-    --print('fanPosition:'..fanPosition)
+
 end
 
 function ChapterLayer:addBottomBounce()
@@ -656,8 +651,7 @@ function ChapterLayer:addBeansUI()
     self:addChild(self.beans,150)
     self.beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
     self.beanLabel:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
-    self.beans:addChild(self.beanLabel)
-    
+    self.beans:addChild(self.beanLabel)    
     self.beanCount = s_CURRENT_USER.beans
     self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',33)
     self.beanCountLabel:setColor(cc.c3b(13, 95, 156))
