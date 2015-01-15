@@ -177,9 +177,14 @@ function M.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
     conditions = conditions or ''
     M.alterLocalDatabase(objectOfDataClass)
     
-    print ('\n\nManager saveData:' .. objectOfDataClass.className .. ' == ' .. tostring(getLocalSeconds() - objectOfDataClass.updatedAt) .. ', updatedAt:' .. tostring(objectOfDataClass.updatedAt) .. ', getLocalSeconds:' .. tostring(getLocalSeconds()))
-    if objectOfDataClass.updatedAt > getLocalSeconds() then return end
-    if objectOfDataClass.updatedAt < getLocalSeconds() then objectOfDataClass.updatedAt = getLocalSeconds() end
+    if objectOfDataClass.updatedAt > getLocalSeconds() then 
+        print ('\n\nM saveData NO:' .. objectOfDataClass.className .. ', updatedAt offset: ' .. tostring(getLocalSeconds() - objectOfDataClass.updatedAt) .. ', updatedAt:' .. tostring(objectOfDataClass.updatedAt) .. ', getLocalSeconds:' .. tostring(getLocalSeconds()))
+        return 
+    end
+    if objectOfDataClass.updatedAt < getLocalSeconds() then 
+        print ('\n\nM saveData YES:' .. objectOfDataClass.className .. ', updatedAt offset: ' .. tostring(getLocalSeconds() - objectOfDataClass.updatedAt) .. ', updatedAt:' .. tostring(objectOfDataClass.updatedAt) .. ', getLocalSeconds:' .. tostring(getLocalSeconds()))
+        objectOfDataClass.updatedAt = getLocalSeconds() 
+    end
     local query = ''
     local ret = 'nothing saved'
     if recordsNum == 0 then
@@ -207,11 +212,12 @@ end
 
 -- if record exists then update record
 -- else create record
-function M.saveDataClassObject(objectOfDataClass, userId, username)
-    local searchSql = ''
+function M.saveDataClassObject(objectOfDataClass, userId, username, conditions)
+    conditions = conditions or ''
+
     local num = 0
     if objectOfDataClass.objectId ~= '' then
-        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'"
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
         for row in Manager.database:nrows(searchSql) do
             num = num + 1
@@ -220,7 +226,7 @@ function M.saveDataClassObject(objectOfDataClass, userId, username)
     end
 
     if num == 0 and userId ~= nil and userId ~= '' then
-        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE userId = '".. userId .."'"
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE userId = '".. userId .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
         for row in Manager.database:nrows(searchSql) do
             num = num + 1
@@ -229,7 +235,7 @@ function M.saveDataClassObject(objectOfDataClass, userId, username)
     end
 
     if num == 0 and username ~= nil and username ~= '' then
-        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE username = '".. username .."'"
+        local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE username = '".. username .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
         for row in Manager.database:nrows(searchSql) do
             num = num + 1
@@ -237,12 +243,13 @@ function M.saveDataClassObject(objectOfDataClass, userId, username)
         end
     end
 
-    M.saveData(objectOfDataClass, nil, username, num)
+    M.saveData(objectOfDataClass, userId, username, num, conditions)
 end
 
 ----------------------------------------------------------------------------------------------------
 
 function M.getDatas(classNameOfDataClass, userId, username)
+    print ('\n\n\nM getDatas >>>')
     local sql = ''
     local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s"', classNameOfDataClass, username)
     local sqlUserId = string.format('SELECT * FROM %s WHERE userId = "%s"', classNameOfDataClass, userId)
@@ -262,6 +269,10 @@ function M.getDatas(classNameOfDataClass, userId, username)
             table.insert(ret, row)
         end
     end
+    print (sqlUsername)
+    print (sqlUserId)
+    print (tostring(#ret))
+    print ('M getDatas <<<\n\n\n')
     return ret
 end
 

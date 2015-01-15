@@ -315,7 +315,7 @@ function O2OController.getDataBookProgress(oncompleted)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.bookProgress)
         else
             -- save server to local
-            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.bookProgress)
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.bookProgress, s_CURRENT_USER.bookProgress.userId, s_CURRENT_USER.bookProgress.username)
         end
 
         if oncompleted ~= nil then oncompleted() end
@@ -350,7 +350,7 @@ function O2OController.getDataLogIn(onSaved)
 
     local function onUpdateWeekCompleted(data)
         if onSaved then onSaved() end
-        s_LocalDatabaseManager.saveDataClassObject(data)
+        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, "' and week = '" .. tostring(data.week) .. "'")
         hideProgressHUD()
     end
 
@@ -387,6 +387,7 @@ function O2OController.getDataLogIn(onSaved)
         showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_USER])
         
         local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
+        print ('currentWeeks:' .. tostring(currentWeeks))
         -- local database
         local localCurrentData = nil
         for i, v in ipairs(localDatas) do
