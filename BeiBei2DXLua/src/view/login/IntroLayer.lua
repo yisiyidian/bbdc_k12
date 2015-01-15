@@ -5,7 +5,7 @@ require("common.DynamicUpdate")
 local LoginAlter = require("view.login.LoginAlter")
 local VisitorRegister = require("view.login.VisitorRegister")
 local ImproveInfo = require("view.home.ImproveInfo")
-local OffLine = require("view.offlinetip.OffLineTipForLogin")
+local Offline = require("view.offlinetip.OfflineTipForLogin")
 
 local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
@@ -24,8 +24,8 @@ function IntroLayer.create(directOnLogin)
     
     local currentIndex = 1
     local moveLength = 100
-    local offLineTip
-    local onLine = s_SERVER.isOnlineWhenInited()  
+    local offlineTip
+    local online = s_SERVER.isOnlineWhenInited()
         
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
@@ -77,7 +77,7 @@ function IntroLayer.create(directOnLogin)
         button_qq:setPosition(s_DESIGN_WIDTH/2, 590)
         button_qq:setTitleFontSize(36)
         button_qq:setTitleText("QQ登陆")
-        if  onLine == false then
+        if  online == false then
 
         else
             intro:addChild(button_qq)
@@ -172,7 +172,7 @@ function IntroLayer.create(directOnLogin)
     button_login:setTitleText("登陆")
     button_login:setTitleColor(cc.c4b(255,255,255,255))
     button_login:setVisible(false)
-    if  onLine == false then
+    if  online == false then
 
     else
         cloud:addChild(button_login)
@@ -186,7 +186,7 @@ function IntroLayer.create(directOnLogin)
     button_register:setTitleText("注册")
     button_register:setTitleColor(cc.c4b(115,197,243,255))
     button_register:setVisible(false)
-    if  onLine == false then
+    if  online == false then
 
     else
         cloud:addChild(button_register)
@@ -248,7 +248,7 @@ function IntroLayer.create(directOnLogin)
         
         cloud:setPosition(s_DESIGN_WIDTH/2, 0)
 
-        if  onLine == true then
+        if  online == true then
             button_login:setVisible(true)
             button_register:setVisible(true)
         end
@@ -277,7 +277,7 @@ function IntroLayer.create(directOnLogin)
                 moved = true
                 
                 if currentIndex == 4 then
-                    if  onLine == true then
+                    if  online == true then
                         button_login:setVisible(false)
                         button_register:setVisible(false)
                     end
@@ -318,7 +318,7 @@ function IntroLayer.create(directOnLogin)
                 if currentIndex == 3 then            
                     local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
                     local action3 = cc.CallFunc:create(function()
-                        if  onLine == true then
+                        if  online == true then
                             button_login:setVisible(true)
                             button_register:setVisible(true)
                         end
@@ -337,21 +337,21 @@ function IntroLayer.create(directOnLogin)
             print(currentIndex)
         end
         
-        if onLine == false then
+        if online == false then
             if currentIndex == 4 then
-                offLineTip.setTrue()
+                offlineTip.setTrue()
             elseif currentIndex == 3 then
-                offLineTip.setFalse()
+                offlineTip.setFalse()
             end
         end
     end
     
     --add offline        
-    offLineTip = OffLine.create()
-    if onLine == false then
-        layer:addChild(offLineTip)
+    offlineTip = Offline.create()
+    if online == false then
+        layer:addChild(offlineTip)
         if currentIndex == 4 then
-            offLineTip.setTrue()
+            offlineTip.setTrue()
         end
     end
     

@@ -15,7 +15,7 @@ function MissionProgressLayer.create()
     local taskTotal = 120
     local taskCurrent = 120
     
-    local state = s_LocalDatabaseManager.getGameState()-- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
+--    local state = s_LocalDatabaseManager.getGameState()-- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
 
 --    if state == s_gamestate_studymodel then
 --       taskCurrent =  s_CorePlayManager.wrongWordNum + s_LocalDatabaseManager:getTodayTotalBossNum() * 20    
@@ -35,8 +35,10 @@ function MissionProgressLayer.create()
 --    print("1 for review boss model, 2 for study model, 3 for review model and 4 for over")
 --    print("s_CorePlayManager.wrongWordNum.."..s_CorePlayManager.wrongWordNum)
 --    print("s_CorePlayManager.candidateNum.."..s_CorePlayManager.candidateNum)
---    print("s_LocalDatabaseManager:getTodayTotalBossNum().."..s_LocalDatabaseManager:getTodayTotalBossNum())
---    print("s_LocalDatabaseManager:getTodayRemainBossNum().."..s_LocalDatabaseManager:getTodayRemainBossNum())
+--    print("s_LocalDatabaseManager:getTodayTotalBossNum()..")
+--    print(s_LocalDatabaseManager:getTodayTotalBossNum())
+--    print("s_LocalDatabaseManager:getTodayRemainBossNum()..")
+--    print(s_LocalDatabaseManager:getTodayRemainBossNum())
     
     
     local startTime = 0

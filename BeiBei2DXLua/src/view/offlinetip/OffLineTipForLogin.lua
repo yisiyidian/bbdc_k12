@@ -1,11 +1,11 @@
-local OffLineTipForLogin = class("OffLineTipForLogin", function()
+local OfflineTipForLogin = class("OfflineTipForLogin", function()
     return cc.Layer:create()
 end)
 
-function OffLineTipForLogin.create()
+function OfflineTipForLogin.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
-    local layer = OffLineTipForLogin.new()
+    local layer = OfflineTipForLogin.new()
 
     local backColor = cc.LayerColor:create(cc.c4b(234,247,254,255),bigWidth,50)
     backColor:setPosition(s_LEFT_X, 415)
@@ -28,4 +28,4 @@ function OffLineTipForLogin.create()
     return layer
 end
 
-return OffLineTipForLogin
+return OfflineTipForLogin

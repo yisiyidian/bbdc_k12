@@ -1,6 +1,6 @@
 
 require("common.global")
-local OfflineTip = require("view.offlinetip.OffLineTipForHome")
+local OfflineTip = require("view.offlinetip.OfflineTipForHome")
 
 local UserBaseServer = {}
 

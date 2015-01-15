@@ -1,4 +1,4 @@
-local OfflineTip        = require("view.offlinetip.OffLineTipForStudy")
+local OfflineTip        = require("view.offlinetip.OfflineTipForStudy")
 
 local SoundMark = class("SoundMark", function()
     return cc.Layer:create()
@@ -8,7 +8,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     playWordSound(wordname)
 
     local height = 80
-    local onLine = s_SERVER.isOnlineWhenInited() 
+    local online = s_SERVER.isOnlineWhenInited() 
     
     local main = SoundMark.new()
     main:setContentSize(s_DESIGN_WIDTH, height)
@@ -26,7 +26,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local button_country_name1      =   "image/newstudy/changemark_begin.png"
     local button_country_name2      =   "image/newstudy/changemark_end.png"
     
-    local offLineTip
+    local offlineTip
     
 
     local changeCountry = function(sender, eventType)
@@ -50,8 +50,8 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playWordSound(wordname)
-            if onLine == false then
-            offLineTip.setTrue()
+            if online == false then
+            offlineTip.setTrue()
             end
         end
     end
@@ -106,11 +106,42 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     end
     
     --add offline
-    offLineTip = OfflineTip.create()
-    if onLine == false then
-        main:addChild(offLineTip,2)
+    offlineTip = OfflineTip.create()
+    if online == false then
+        main:addChild(offlineTip,2)
+    end
+    
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+    
+    local onTouchEnded = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+ 
+        if cc.rectContainsPoint(button_wordname:getBoundingBox(),location) then
+            playWordSound(wordname)
+            if online == false then
+                offlineTip.setTrue()
+            end
+        elseif s_CURRENT_USER.isSoundAm == 1 and cc.rectContainsPoint(button_soundmark_us:getBoundingBox(),location) then
+            s_CURRENT_USER.isSoundAm = 0
+            button_country:setTitleText("EN")
+            button_soundmark_en:setVisible(true)
+            button_soundmark_us:setVisible(false)
+        elseif s_CURRENT_USER.isSoundAm == 0 and cc.rectContainsPoint(button_soundmark_en:getBoundingBox(),location) then
+            s_CURRENT_USER.isSoundAm = 1
+            button_country:setTitleText("US")
+            button_soundmark_en:setVisible(false)
+            button_soundmark_us:setVisible(true)
+        end 
     end
 
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = main:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
     return main    
 end

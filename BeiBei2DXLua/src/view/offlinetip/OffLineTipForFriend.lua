@@ -1,11 +1,11 @@
-local OffLineTipForFriend = class("OffLineTipForFriend", function()
+local OfflineTipForFriend = class("OfflineTipForFriend", function()
     return cc.Layer:create()
 end)
 
-function OffLineTipForFriend.create()
+function OfflineTipForFriend.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
-    local layer = OffLineTipForFriend.new()
+    local layer = OfflineTipForFriend.new()
 
     local backColor = cc.LayerColor:create(cc.c4b(234,247,254,255),bigWidth,50)
     backColor:setPosition(s_LEFT_X, 900)
@@ -37,4 +37,4 @@ function OffLineTipForFriend.create()
     return layer
 end
 
-return OffLineTipForFriend
+return OfflineTipForFriend
