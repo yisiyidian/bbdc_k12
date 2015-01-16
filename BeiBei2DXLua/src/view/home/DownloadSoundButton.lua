@@ -24,7 +24,7 @@ end
 
 function DownloadSoundButton.create(parentNode)
     local postion = cc.p(parentNode:getContentSize().width/2,parentNode:getContentSize().height-255)
-    local isOffline = s_SERVER.isNetworkConnnectedNow()
+    local isOffline = s_SERVER.isNetworkConnectedNow()
     local bookKey = s_CURRENT_USER.bookKey
     local total_size = s_DataManager.books[bookKey].music    
     local downloadState = initDownloadState(bookKey)
@@ -153,7 +153,7 @@ function DownloadSoundButton.create(parentNode)
     end
     
     local checkIfNetworkUpdate = function(dt)
-        isOffline = s_SERVER.isNetworkConnnectedNow()
+        isOffline = s_SERVER.isNetworkConnectedNow()
         updateOfflineState()
     end
 
