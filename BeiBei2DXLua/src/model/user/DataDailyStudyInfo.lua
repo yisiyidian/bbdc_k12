@@ -1,3 +1,5 @@
+-- 记录每天的学习信息
+
 local DataClassBase = require('model.user.DataClassBase')
 
 local DataDailyStudyInfo = class("DataDailyStudyInfo", function()

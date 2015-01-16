@@ -43,7 +43,7 @@ function O2OController.update(dt)
 end
 
 function O2OController.showRestartTipWhenOfflineToOnline()
-    if s_SERVER.isNetworkConnnectedNow() and (not s_SERVER.isNetworkConnnectedWhenInited() or not s_SERVER.hasSessionToken()) then
+    if s_SERVER.isNetworkConnectedNow() and (not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.hasSessionToken()) then
         s_TIPS_LAYER:showSmall('发现网络链接，您还没有登录，现在需要登录吗？', onError, nil)
     end
 end
@@ -58,7 +58,7 @@ function O2OController.start()
 
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
 
-    if s_SERVER.isNetworkConnnectedWhenInited() == false then
+    if s_SERVER.isNetworkConnectedWhenInited() == false then
         if hasUserInLocalDB then
             O2OController.logInOffline()
         else
@@ -191,7 +191,7 @@ function O2OController.signUpWithRandomUserName()
     local randomUserName = genRandomUserName()
 
     showProgressHUD()
-    if s_SERVER.isNetworkConnnectedWhenInited() == false then
+    if s_SERVER.isNetworkConnectedWhenInited() == false then
         s_CURRENT_USER.usertype = USER_TYPE_GUEST
         O2OController.signUpOffline(randomUserName, PASSWORD)
     else
@@ -293,9 +293,11 @@ function O2OController.getDataBookProgress(oncompleted)
 
     -- handle offline
 
-    if not s_SERVER.isNetworkConnnectedWhenInited() or not s_SERVER.isNetworkConnnectedNow() or not s_SERVER.hasSessionToken() then 
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
         if lastLocalData ~= nil then
             parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
+        else
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.bookProgress)
         end
         if oncompleted ~= nil then oncompleted() end
         return
@@ -350,7 +352,7 @@ function O2OController.getDataLogIn(onSaved)
 
     local function onUpdateWeekCompleted(data)
         if onSaved then onSaved() end
-        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, "' and week = '" .. tostring(data.week) .. "'")
+        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = '" .. tostring(data.week) .. "'")
         hideProgressHUD()
     end
 
@@ -364,7 +366,7 @@ function O2OController.getDataLogIn(onSaved)
         data.week = week
         data:setWeekDay(os.time())
 
-        if s_SERVER.isNetworkConnnectedWhenInited() == false then
+        if s_SERVER.isNetworkConnectedWhenInited() == false then
             onUpdateWeekCompleted(data)
         else
             s_UserBaseServer.saveDataObjectOfCurrentUser(
@@ -398,7 +400,7 @@ function O2OController.getDataLogIn(onSaved)
             end
         end
 
-        if not s_SERVER.isNetworkConnnectedWhenInited() or not s_SERVER.isNetworkConnnectedNow() or not s_SERVER.hasSessionToken() then 
+        if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
             if localCurrentData ~= nil then
                 updateWeek(localCurrentData, localCurrentData.week)
             else

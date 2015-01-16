@@ -1,6 +1,6 @@
 local DataClassBase = require('model.user.DataClassBase')
 
--- 保存学习状态中的弹窗状态
+-- 保存今天需要完成的BOSS数量
 
 local DataTodayReviewBossNum = class("DataTodayReviewBossNum", function()
     return DataClassBase.new()
