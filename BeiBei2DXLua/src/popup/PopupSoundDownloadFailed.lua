@@ -7,6 +7,7 @@ end)
 function PopupSoundDownloadFailed.create()
 
     local layer = PopupSoundDownloadFailed.new()
+    local bookkey = s_CURRENT_USER.bookKey
 
     --add background
     layer:createBackground("image/soundLoadingBar/popup.png")
@@ -24,7 +25,7 @@ function PopupSoundDownloadFailed.create()
     layer:addTitle("找不到网络")
     
     --add description
-    layer:addDescription("网络异常，下载失败")
+    layer:addDescription("网络异常，"..bookkey.."下载失败")
 
     --disable the touch event under this layer
     layer:disableTouchevent()

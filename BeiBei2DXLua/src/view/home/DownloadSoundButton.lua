@@ -77,7 +77,9 @@ function DownloadSoundButton.create(parentNode)
 
     local updateOfflineState = function()
 
-        if isOffline == true then
+        local currentNetwork = s_SERVER.isNetworkConnectedNow()
+
+        if currentNetwork == true and isOffline == false then
             label:setString("下载离线音频")
             button:setPercent(0)
             button_back:loadTextureNormal("image/soundLoadingBar/loadingbar_back.png",ccui.TextureResType.localType)
@@ -85,25 +87,28 @@ function DownloadSoundButton.create(parentNode)
             button_back:setEnabled(true)
             button_back:setBright(true)
             button_back:addTouchEventListener(button_download_clicked)
-        else
-            if SoundsDownloadingInstance[bookKey]~=nil then
+        elseif currentNetwork== false then
+             if SoundsDownloadingInstance[bookKey]~=nil then
                 updateFailedState()
-            end
+            end           
+
             label:setString("下载离线音频")
             button:setPercent(0)
             button_back:loadTextureNormal("image/soundLoadingBar/no_network.png",ccui.TextureResType.localType)
             button_back:loadTexturePressed("image/soundLoadingBar/no_network_press.png",ccui.TextureResType.localType)
             button_back:setEnabled(true)
             button_back:setBright(true)
-            button_back:addTouchEventListener(button_offline_clicked)
+            button_back:addTouchEventListener(button_offline_clicked)           
         end
 
         if downloadState == "SUCCESS" then
-            label:setString("已完成")
+            label:setString("已下载")
             button:setPercent(0)
             button_back:setEnabled(false)
             button_back:setBright(false)
         end
+
+        isOffline = currentNetwork
     end
     
     --update the state when the download state is "DOWNLOADING"
@@ -138,6 +143,7 @@ function DownloadSoundButton.create(parentNode)
             if SoundsDownloadingInstance[bookKey]~=nil then
                 downloadState = SoundsDownloadingInstance[bookKey].downloadState
             end
+            
             if downloadState == "DOWNLOADING" then
                 updateDownloadingState()
             elseif downloadState == "SUCCESS" then
@@ -153,7 +159,6 @@ function DownloadSoundButton.create(parentNode)
     end
     
     local checkIfNetworkUpdate = function(dt)
-        isOffline = s_SERVER.isNetworkConnectedNow()
         updateOfflineState()
     end
 
@@ -161,7 +166,6 @@ function DownloadSoundButton.create(parentNode)
     button_cancel_download_clicked = function (sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             print("cancel download")
-            button:unscheduleUpdate()
             downloadState="NOTBEGIN"
             label:setString("下载离线音频")
             button:setPercent(0)
@@ -192,7 +196,7 @@ function DownloadSoundButton.create(parentNode)
         label:setString("下载离线音频")
         button_back:addTouchEventListener(button_download_clicked)
     elseif downloadState == "DOWNLOADING" then
-        -- button:scheduleUpdateWithPriorityLua(update, 0)     
+
     elseif downloadState == "SUCCESS"  then
         updateSuccessState()
     elseif downloadState == "FAILED" then
