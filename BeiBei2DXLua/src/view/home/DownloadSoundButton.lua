@@ -22,7 +22,7 @@ local function initDownloadState(bookKey)
 end
 
 function DownloadSoundButton.create(parentNode)
-    local postion = cc.p(parentNode:getContentSize().width/2,parentNode:getContentSize().height-235)
+    local postion = cc.p(parentNode:getContentSize().width/2,parentNode:getContentSize().height-255)
     local bookKey = s_CURRENT_USER.bookKey
     local total_size = s_DataManager.books[bookKey].music    
     local downloadState = initDownloadState(bookKey)
@@ -31,10 +31,10 @@ function DownloadSoundButton.create(parentNode)
     --init loading bar
     local button = DownloadSoundButton.new()
     button:loadTexture("image/soundLoadingBar/loadingbar.png",ccui.TextureResType.localType)
-    button:setPosition(postion)
+    button:setPosition(postion.x, postion.y+2)
     
     --init the background of the loading bar 
-    local button_back = ccui.Button:create("image/soundLoadingBar/loadingbar_back.png","image/soundLoadingBar/loadingbar_back_press.png","",ccui.TextureResType.localType)
+    local button_back = ccui.Button:create("image/soundLoadingBar/loadingbar_back.png","image/soundLoadingBar/loadingbar_back_press.png","image/soundLoadingBar/no_network.png",ccui.TextureResType.localType)
     button_back:setAnchorPoint(cc.p(0.5,0.5))
     button_back:setPosition(postion)
     
@@ -54,16 +54,37 @@ function DownloadSoundButton.create(parentNode)
     
     --update the state when the download state is "SUCCESS"
     local updateSuccessState =function()
-        button:setPercent(100) 
-        label:setString("已下载")
-        button:setEnabled(false)    
-        SoundsDownloadingInstance[bookKey]=nil
+        if SoundsDownloadingInstance[bookKey] ~=nil then
+            SoundsDownloadingInstance[bookKey]=nil
+            local popupSuccess = require("popup.PopupSoundDownloadSuccess").create()
+            local parent = parentNode:getParent()
+            popupSuccess:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
+            parent:addChild(popupSuccess,100)
+            popupSuccess:runMoveInAction()
+        end
+            button:setPercent(0)
+            label:setString("已下载")
+            button_back:setEnabled(false)   
+            button_back:setBright(false)
     end
     
+    local button_download_clicked
     local updateFailedState = function()
-        SoundsDownloadingInstance[bookKey].am:releaseDownload()
-        SoundsDownloadingInstance[bookKey]=nil
-        print("渣网络下载失败！！！！！！！！！！！！！！！！！！！！！！")
+        if SoundsDownloadingInstance[bookKey]~=nil then
+            SoundsDownloadingInstance[bookKey]:killDownload()
+            SoundsDownloadingInstance[bookKey]=nil
+            label:setString("下载离线音频")
+            button:setPercent(0)
+            button_back:setEnabled(true)
+            button_back:setBright(true)
+            button_back:addTouchEventListener(button_download_clicked)
+            local popupFailed = require("popup.PopupSoundDownloadFailed").create()
+            local parent = parentNode:getParent()
+            popupFailed:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
+            parent:addChild(popupFailed,100)
+            popupFailed:runMoveInAction()   
+            downloadState = "NOTBEGIN"        
+        end            
     end
     
     --update function
@@ -85,14 +106,31 @@ function DownloadSoundButton.create(parentNode)
         end
     end
     
-    --touch event of the button
-    local button_download_clicked = function(sender, eventType)
+    button_cancel_download_clicked = function (sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            print("cancel download")
+            button:unscheduleUpdate()
+            downloadState="NOTBEGIN"
+            label:setString("下载离线音频")
+            button:setPercent(0)
+            button_back:setEnabled(true)
+            button_back:setBright(true)
+            button_back:addTouchEventListener(button_download_clicked)     
+           if SoundsDownloadingInstance[bookKey]~=nil then
+                SoundsDownloadingInstance[bookKey]:killDownload()
+                SoundsDownloadingInstance[bookKey]=nil
+            end                
+        end
+    end
+
+    --touch event of the button downloadEvent
+    button_download_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             print("Download button touch began")
             local downloadSC = require("view.book.DownloadSoundController").create(bookKey)
             downloadSC:beginSoundDownloadUpdate()
-            button_back:setEnabled(false)
-            button:scheduleUpdateWithPriorityLua(update, 0)     
+            button:scheduleUpdateWithPriorityLua(update, 0)
+            button_back:addTouchEventListener(button_cancel_download_clicked)     
             downloadState = "DOWNLOADING"
         end
     end
@@ -110,6 +148,7 @@ function DownloadSoundButton.create(parentNode)
         updateFailedState()
     end
     
+    --add the components
     parentNode:addChild(button_back)
     parentNode:addChild(button)
     parentNode:addChild(label)
