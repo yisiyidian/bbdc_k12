@@ -156,7 +156,7 @@ function M.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidat
     end
 
     local data = createData(bookKey, time, playModel, rightWordList, wrongWordList, wordCandidate)
-    Manager.saveData(data, userId, username, num)
+    Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."';")
 end
 
 return M
