@@ -5,7 +5,7 @@ require("common.DynamicUpdate")
 local LoginAlter = require("view.login.LoginAlter")
 local VisitorRegister = require("view.login.VisitorRegister")
 local ImproveInfo = require("view.home.ImproveInfo")
-local OffLine = require("view.offlinetip.OffLineTipForLogin")
+local Offline = require("view.offlinetip.OfflineTipForLogin")
 
 local IntroLayer = class("IntroLayer", function ()
     return cc.Layer:create()
@@ -24,8 +24,8 @@ function IntroLayer.create(directOnLogin)
     
     local currentIndex = 1
     local moveLength = 100
-    local offLineTip
-    local onLine = s_SERVER.isNetworkConnnectedWhenInited()  
+    local offlineTip
+    local isOnline = s_SERVER.isNetworkConnnectedWhenInited()
         
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
@@ -70,18 +70,14 @@ function IntroLayer.create(directOnLogin)
         end
     end
 
-    if IS_SNS_QQ_LOGIN_AVAILABLE then
+    if IS_SNS_QQ_LOGIN_AVAILABLE and isOnline then
         local button_qq = ccui.Button:create()
         button_qq:loadTextures("image/button/button_white2_denglu.png", "", "")
         button_qq:addTouchEventListener(button_qq_clicked)
         button_qq:setPosition(s_DESIGN_WIDTH/2, 590)
         button_qq:setTitleFontSize(36)
         button_qq:setTitleText("QQ登陆")
-        if  onLine == false then
-
-        else
-            intro:addChild(button_qq)
-        end
+        intro:addChild(button_qq)
     end
     
     local button_visitor = ccui.Button:create()
@@ -172,11 +168,7 @@ function IntroLayer.create(directOnLogin)
     button_login:setTitleText("登陆")
     button_login:setTitleColor(cc.c4b(255,255,255,255))
     button_login:setVisible(false)
-    if  onLine == false then
-
-    else
-        cloud:addChild(button_login)
-    end
+    cloud:addChild(button_login)
     
     button_register = ccui.Button:create()
     button_register:loadTextures("image/button/button_white_denglu.png", "", "")
@@ -186,11 +178,7 @@ function IntroLayer.create(directOnLogin)
     button_register:setTitleText("注册")
     button_register:setTitleColor(cc.c4b(115,197,243,255))
     button_register:setVisible(false)
-    if  onLine == false then
-
-    else
-        cloud:addChild(button_register)
-    end
+    cloud:addChild(button_register)
 
     local label_hint_array = {}
     table.insert(label_hint_array, "一关一城市 贝贝带你游美国")
@@ -248,9 +236,12 @@ function IntroLayer.create(directOnLogin)
         
         cloud:setPosition(s_DESIGN_WIDTH/2, 0)
 
-        if  onLine == true then
+        if isOnline == true then
             button_login:setVisible(true)
             button_register:setVisible(true)
+        else
+            button_login:setVisible(false)
+            button_register:setVisible(false)
         end
     end
         
@@ -277,7 +268,7 @@ function IntroLayer.create(directOnLogin)
                 moved = true
                 
                 if currentIndex == 4 then
-                    if  onLine == true then
+                    if isOnline == true then
                         button_login:setVisible(false)
                         button_register:setVisible(false)
                     end
@@ -318,7 +309,7 @@ function IntroLayer.create(directOnLogin)
                 if currentIndex == 3 then            
                     local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
                     local action3 = cc.CallFunc:create(function()
-                        if  onLine == true then
+                        if isOnline == true then
                             button_login:setVisible(true)
                             button_register:setVisible(true)
                         end
@@ -337,21 +328,22 @@ function IntroLayer.create(directOnLogin)
             print(currentIndex)
         end
         
-        if onLine == false then
+
+        if isOnline == false then
             if currentIndex == 4 then
-                offLineTip.setTrue()
+                offlineTip.setTrue()
             elseif currentIndex == 3 then
-                offLineTip.setFalse()
+                offlineTip.setFalse()
             end
         end
     end
     
     --add offline        
-    offLineTip = OffLine.create()
-    if onLine == false then
-        layer:addChild(offLineTip)
+    offlineTip = Offline.create()
+    if isOnline == false then
+        layer:addChild(offlineTip)
         if currentIndex == 4 then
-            offLineTip.setTrue()
+            offlineTip.setTrue()
         end
     end
     

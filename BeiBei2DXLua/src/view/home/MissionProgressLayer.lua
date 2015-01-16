@@ -9,34 +9,18 @@ end)
 function MissionProgressLayer.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
---    local taskTotal = s_max_wrong_num_everyday * 2 + s_LocalDatabaseManager:getTodayTotalBossNum() * 20
---    local taskCurrent
-    
     local taskTotal = 120
     local taskCurrent = 120
     
-    local state = s_LocalDatabaseManager.getGameState()-- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
-
---    if state == s_gamestate_studymodel then
---       taskCurrent =  s_CorePlayManager.wrongWordNum + s_LocalDatabaseManager:getTodayTotalBossNum() * 20    
---    elseif state == s_gamestate_reviewmodel then
---        taskCurrent = s_max_wrong_num_everyday * 2 - s_CorePlayManager.candidateNum + s_LocalDatabaseManager:getTodayTotalBossNum() * 20    
---    elseif state == s_gamestate_reviewbossmodel then
---        taskCurrent =  (s_LocalDatabaseManager:getTodayTotalBossNum() - s_LocalDatabaseManager:getTodayRemainBossNum()) * 20
---    else
---        taskCurrent = s_max_wrong_num_everyday * 2 + s_LocalDatabaseManager:getTodayTotalBossNum() * 20
---    end
+    local bossNumber 
+    if s_LocalDatabaseManager:getTodayTotalBossNum() == nil then
+        bossNumber = 0
+    else
+        bossNumber = s_LocalDatabaseManager:getTodayTotalBossNum()
+    end
     
---    if taskCurrent == nil then
---        taskCurrent = 0
---    end
-
---    print("state = s_LocalDatabaseManager.getGameState() .."..tostring(s_LocalDatabaseManager.getGameState()))
---    print("1 for review boss model, 2 for study model, 3 for review model and 4 for over")
---    print("s_CorePlayManager.wrongWordNum.."..s_CorePlayManager.wrongWordNum)
---    print("s_CorePlayManager.candidateNum.."..s_CorePlayManager.candidateNum)
---    print("s_LocalDatabaseManager:getTodayTotalBossNum().."..s_LocalDatabaseManager:getTodayTotalBossNum())
---    print("s_LocalDatabaseManager:getTodayRemainBossNum().."..s_LocalDatabaseManager:getTodayRemainBossNum())
+    taskTotal = (bossNumber + 2) * s_max_wrong_num_everyday
+    taskCurrent = s_CorePlayManager:getProgress() + (bossNumber - s_LocalDatabaseManager:getTodayRemainBossNum()) * s_max_wrong_num_everyday
     
     
     local startTime = 0
@@ -60,10 +44,15 @@ function MissionProgressLayer.create()
     
     local runProgress = cc.ProgressTo:create(taskCurrent / taskTotal ,taskCurrent / taskTotal * 100)
     
-    local missionToday = cc.Label:createWithSystemFont("今日任务","",40)
+    local missionToday = cc.Label:createWithSystemFont("今日任务","",50)
     missionToday:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 + 250)
     missionToday:setColor(cc.c4b(82,196,241,255))
     layer:addChild(missionToday)
+    
+    if taskTotal == taskCurrent then
+        missionToday:setString("任务完成")
+        missionToday:setColor(cc.c4b(233,147,72,255))
+    end
     
     local backProgress = cc.Sprite:create("image/homescene/missionprogress/taskstartcirclebg.png")
     backProgress:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 - 20)

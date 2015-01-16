@@ -52,6 +52,46 @@ function CorePlayManager.initTotalPlay()
     end
 end
 
+function CorePlayManager.getProgress()
+    local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
+    if lastPlayState.lastUpdate == nil then
+        return 0
+    else
+        local lastupdate              = lastPlayState.lastUpdate
+        local lastupdate_day          = os.date("%x", lastupdate)
+        local current_day             = os.date("%x", os.time())
+        if lastupdate_day == current_day then
+            if lastPlayState.playModel == 0 then
+                local wrongWordList
+                local wordCandidate
+                if lastPlayState.wrongWordList == "" then
+                    wrongWordList = {}
+                else
+                    wrongWordList = split(lastPlayState.wrongWordList, "|")
+                end
+                if lastPlayState.wordCandidate == "" then
+                    wordCandidate = {}
+                else
+                    wordCandidate = split(lastPlayState.wordCandidate, "|")
+                end
+                return #wrongWordList - #wordCandidate 
+            elseif lastPlayState.playModel == 1 then
+                if lastPlayState.wrongWordList == "" then
+                    return 0
+                else
+                    local wrongWordList = split(lastPlayState.wrongWordList, "|")
+                    local wordCandidate = split(lastPlayState.wordCandidate, "|")
+                    return #wrongWordList * 2 - #wordCandidate
+                end
+            elseif lastPlayState.playModel == 2 then
+                return s_max_wrong_num_everyday * 2
+            end
+        else
+            return 0
+        end
+    end 
+end
+
 function CorePlayManager.initNewStudyLayer()
     CorePlayManager.maxWrongWordCount = s_max_wrong_num_everyday
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]

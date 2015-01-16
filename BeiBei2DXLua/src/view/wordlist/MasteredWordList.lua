@@ -111,7 +111,7 @@ function MasteredWordList:ctor()
     listView:removeAllChildren()
     -- get data
 
-    local word = s_LocalDatabaseManager:getGraspWords()
+    local word = s_LocalDatabaseManager.getGraspWords()
     local small_meaning = {}
     local meaning = {}
     local sentenceEn = {}

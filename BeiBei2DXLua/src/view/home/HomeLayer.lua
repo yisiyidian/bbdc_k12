@@ -4,8 +4,8 @@ require("common.global")
 local AlterI = require("view.alter.AlterI")
 local ImproveInfo = require("view.home.ImproveInfo")
 local MissionProgress = require("view.home.MissionProgressLayer")
-local OfflineTipHome = require("view.offlinetip.OffLineTipForHome")
-local OfflineTipFriend = require("view.offlinetip.OffLineTipForFriend")
+local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
+local OfflineTipFriend = require("view.offlinetip.OfflineTipForFriend")
 
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
@@ -54,14 +54,16 @@ function HomeLayer.create()
     
     --add offline
 
-    local onLine = s_SERVER.isNetworkConnnectedWhenInited() 
---    onLine = false
-    local offLineTipHome = OfflineTipHome.create()
-    local offLineTipFriend = OfflineTipFriend.create()
 
-    if onLine == false then
-        layer:addChild(offLineTipHome,2)
-        layer:addChild(offLineTipFriend,2) 
+    local online = s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken()
+--    online = false
+    local offlineTipHome = OfflineTipHome.create()
+    local offlineTipFriend = OfflineTipFriend.create()
+
+
+    if online == false then
+        layer:addChild(offlineTipHome,2)
+        layer:addChild(offlineTipFriend,2) 
     end
 
     local mission_progress = MissionProgress.create()
@@ -72,7 +74,18 @@ function HomeLayer.create()
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-120)
     backColor:addChild(name)
     
-    local currentBook = cc.Label:createWithSystemFont("正在学习："..s_CURRENT_USER.bookKey,"",40)
+    local book_name 
+    
+    local English_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
+    local simple_array = {'四级','六级','高考','托福','雅思','gre','考验','专四','专八','gmat','sat','中学','小学'}
+    
+    for i = 1, #English_array do
+    	if s_CURRENT_USER.bookKey == English_array[i] then
+            book_name = simple_array[i]
+    	end
+    end
+    
+    local currentBook = cc.Label:createWithSystemFont("正在学习："..book_name,"",30)
     currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-180)
     currentBook:setColor(cc.c4b(61,191,244,255))
     backColor:addChild(currentBook)
@@ -84,9 +97,9 @@ function HomeLayer.create()
             
         elseif eventType == ccui.TouchEventType.ended then
         
-            if onLine == false then
-                offLineTipHome.setFalse()
-                offLineTipFriend.setFalse()
+            if online == false then
+                offlineTipHome.setFalse()
+                offlineTipFriend.setFalse()
             end
             
             if viewIndex == 1 then
@@ -137,8 +150,8 @@ function HomeLayer.create()
             
             elseif eventType == ccui.TouchEventType.ended then
             
-            if  onLine == false then
-                offLineTipFriend.setTrue()
+            if  online == false then
+                offlineTipFriend.setTrue()
             else
                 if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                     s_CorePlayManager.enterFriendLayer()
@@ -354,16 +367,16 @@ function HomeLayer.create()
                     AnalyticsChangeBookBtn()
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
-                    if  onLine == false then
-                        offLineTipHome.setTrue(OffLineTipForHome_Feedback)
+                    if  online == false then
+                        offlineTipHome.setTrue(OfflineTipForHome_Feedback)
                     else
                         local alter = AlterI.create("用户反馈")
                         alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                         layer:addChild(alter)
                     end
                 elseif label_name[i] == "完善个人信息" then
-                    if  onLine == false then
-                        offLineTipHome.setTrue(OffLineTipForHome_ImproveInformation)
+                    if  online == false then
+                        offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
                     else
                         local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER)
                         improveInfo:setTag(1)
@@ -380,8 +393,8 @@ function HomeLayer.create()
                         end
                     end
                 elseif label_name[i] == "登出游戏" then
-                    if  onLine == false then
-                        offLineTipHome.setTrue(OffLineTipForHome_Logout)
+                    if not s_SERVER.isNetworkConnnectedNow() then
+                        offlineTipHome.setTrue(OfflineTipForHome_Logout)
                     else
                         -- logout
                         AnalyticsLogOut()
@@ -420,7 +433,7 @@ function HomeLayer.create()
         --add offline 
         if i == 1 or i == 2 then
         else
-            if onLine == false then
+            if online == false then
                label:setColor(cc.c4b(157,157,157,255))
             end
         end
@@ -539,9 +552,9 @@ function HomeLayer.create()
                    button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
                    if true then
 
-                    if onLine == false then
-                        offLineTipHome.setFalse()
-                        offLineTipFriend.setFalse()
+                    if online == false then
+                        offlineTipHome.setFalse()
+                        offlineTipFriend.setFalse()
                     end
                     
                        local PersonalInfo = require("view.PersonalInfo")
