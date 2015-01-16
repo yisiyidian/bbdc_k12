@@ -1,6 +1,7 @@
 local DataClassBase = require('model.user.DataClassBase')
 
 -- record count == book count
+-- 保存错词缓冲池
 
 local DataWrongWordBuffer = class("DataWrongWordBuffer", function()
     return DataClassBase.new()
