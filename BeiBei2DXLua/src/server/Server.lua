@@ -294,14 +294,14 @@ function Server.initNetworkStatus()
         Server.networkStatus = cx.CXNetworkStatus:getInstance():getStatus()
     end      
 
-    if Server.isNetworkConnnectedWhenInited() then
+    if Server.isNetworkConnectedWhenInited() then
         print ('Server initNetworkStatus isOnline')
     else
         print ('Server initNetworkStatus isOffline')
     end
 end
 
-function Server.isNetworkConnnectedWhenInited()
+function Server.isNetworkConnectedWhenInited()
     if Server.closeNetwork then
         return false
     else
@@ -316,7 +316,7 @@ function Server.isNetworkConnnectedWhenInited()
     end
 end
 
-function Server.isNetworkConnnectedNow()
+function Server.isNetworkConnectedNow()
     if Server.closeNetwork then
         return false
     else

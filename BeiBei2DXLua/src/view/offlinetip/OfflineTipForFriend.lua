@@ -20,7 +20,7 @@ function OfflineTipForFriend.create()
 
     layer.setTrue = function ()
         local tipContent = "离线无法社交。"
-        if s_SERVER.isNetworkConnnectedNow() and not s_SERVER.hasSessionToken() then
+        if s_SERVER.isNetworkConnectedNow() and not s_SERVER.hasSessionToken() then
             tipContent = '需要登录服务器后才能进入好友界面'
         end
         tip:setString(tipContent)

@@ -86,7 +86,7 @@ start = function ()
     if AgentManager ~= nil then s_CURRENT_USER.channelId = AgentManager:getInstance():getChannelId() end
 
     saveLuaError = function (msg)
-        if s_SERVER.isNetworkConnnectedNow() then
+        if s_SERVER.isNetworkConnectedNow() then
             local errorObj = {}
             errorObj['className'] = 'LuaError'
             local a = string.gsub(msg, ":",  "    ") 

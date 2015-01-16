@@ -1,6 +1,7 @@
 local DataClassBase = require('model.user.DataClassBase')
 
 -- record count == book count
+-- 代表书中背单词的进度
 
 local DataCurrentIndex = class("DataCurrentIndex", function()
     return DataClassBase.new()
