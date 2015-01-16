@@ -106,14 +106,31 @@ function DownloadSoundButton.create(parentNode)
         end
     end
     
+    button_cancel_download_clicked = function (sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            print("cancel download")
+            button:unscheduleUpdate()
+            downloadState="NOTBEGIN"
+            label:setString("下载离线音频")
+            button:setPercent(0)
+            button_back:setEnabled(true)
+            button_back:setBright(true)
+            button_back:addTouchEventListener(button_download_clicked)     
+           if SoundsDownloadingInstance[bookKey]~=nil then
+                SoundsDownloadingInstance[bookKey]:killDownload()
+                SoundsDownloadingInstance[bookKey]=nil
+            end                
+        end
+    end
+
     --touch event of the button downloadEvent
     button_download_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             print("Download button touch began")
             local downloadSC = require("view.book.DownloadSoundController").create(bookKey)
             downloadSC:beginSoundDownloadUpdate()
-            button_back:setEnabled(false)
-            button:scheduleUpdateWithPriorityLua(update, 0)     
+            button:scheduleUpdateWithPriorityLua(update, 0)
+            button_back:addTouchEventListener(button_cancel_download_clicked)     
             downloadState = "DOWNLOADING"
         end
     end
