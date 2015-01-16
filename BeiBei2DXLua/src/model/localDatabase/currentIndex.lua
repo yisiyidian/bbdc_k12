@@ -76,7 +76,7 @@ function M.setCurrentIndex(currentIndex)
         end
     end
 
-    Manager.saveData(data, userId, username, num, "' and bookKey = '" .. bookKey .. "';")
+    Manager.saveData(data, userId, username, num, " and bookKey = '" .. bookKey .. "';")
 end
 
 return M

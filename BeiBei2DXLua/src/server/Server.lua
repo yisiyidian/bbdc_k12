@@ -284,7 +284,7 @@ NETWORK_STATUS_WIFI = 1
 NETWORK_STATUS_MOBILE = 2
 Server.networkStatus = NETWORK_STATUS_NONE
 Server.isInited = false
-Server.closeNetwork = false
+Server.closeNetwork = false -- only for DEBUG
 
 function Server.initNetworkStatus()
     if Server.isInited == false then

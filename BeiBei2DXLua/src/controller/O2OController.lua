@@ -296,6 +296,8 @@ function O2OController.getDataBookProgress(oncompleted)
     if not s_SERVER.isNetworkConnnectedWhenInited() or not s_SERVER.isNetworkConnnectedNow() or not s_SERVER.hasSessionToken() then 
         if lastLocalData ~= nil then
             parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
+        else
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.bookProgress)
         end
         if oncompleted ~= nil then oncompleted() end
         return
@@ -350,7 +352,7 @@ function O2OController.getDataLogIn(onSaved)
 
     local function onUpdateWeekCompleted(data)
         if onSaved then onSaved() end
-        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, "' and week = '" .. tostring(data.week) .. "'")
+        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = '" .. tostring(data.week) .. "'")
         hideProgressHUD()
     end
 

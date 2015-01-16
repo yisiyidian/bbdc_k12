@@ -55,6 +55,8 @@ start = function ()
         s_SERVER.isAppStoreServer = false -- TODO
         s_SERVER.production       = 1
 
+        s_SERVER.closeNetwork = false
+
         s_SERVER.appId = LEAN_CLOUD_ID
         s_SERVER.appKey = LEAN_CLOUD_KEY
 
@@ -68,6 +70,8 @@ start = function ()
         if RELEASE_APP == RELEASE_FOR_TEST then
             test_code = NORMAL_CODE
 
+            s_SERVER.closeNetwork = false
+            
             s_SERVER.appId = LEAN_CLOUD_ID
             s_SERVER.appKey = LEAN_CLOUD_KEY
         else
