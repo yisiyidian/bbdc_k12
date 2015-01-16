@@ -2,8 +2,19 @@ local NewReviewBossFailPopup = class ("NewReviewBossFailPopup",function ()
     return cc.Layer:create()
 end)
 
-function NewReviewBossFailPopup.create()
+function NewReviewBossFailPopup.create(currentWordName)
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS_RESULT, 'fail')
+
+    local currentWord       = s_WordPool[currentWordName]
+    local wordname          = currentWord.wordName
+    local wordSoundMarkEn   = currentWord.wordSoundMarkEn
+    local wordSoundMarkAm   = currentWord.wordSoundMarkAm
+    local wordMeaningSmall  = currentWord.wordMeaningSmall
+    local wordMeaning       = currentWord.wordMeaning
+    local sentenceEn        = currentWord.sentenceEn
+    local sentenceCn        = currentWord.sentenceCn
+    local sentenceEn2       = currentWord.sentenceEn2
+    local sentenceCn2       = currentWord.sentenceCn2
 
     local layer = NewReviewBossFailPopup.new()
     
@@ -36,22 +47,22 @@ function NewReviewBossFailPopup.create()
     
 
     local popup_title = cc.Label:createWithSystemFont("真遗憾！这个词：","",40)
-    popup_title:setPosition(back:getContentSize().width / 2,back:getContentSize().height *0.8)
-    popup_title:setColor(cc.c4b(39,127,182,255))
+    popup_title:setPosition(back:getContentSize().width *0.51,back:getContentSize().height *0.8)
+    popup_title:setColor(cc.c4b(29,156,196,255))
     popup_title:ignoreAnchorPointForPosition(false)
     popup_title:setAnchorPoint(0.5,0.5)
     back:addChild(popup_title)
     
-    local popup_word = cc.Label:createWithSystemFont("你已答错3次","",28)
+    local popup_word = cc.Label:createWithSystemFont(wordname,"",40)
     popup_word:setPosition(back:getContentSize().width / 2,back:getContentSize().height *0.7)
-    popup_word:setColor(cc.c4b(39,127,182,255))
+    popup_word:setColor(cc.c4b(0,0,0,255))
     popup_word:ignoreAnchorPointForPosition(false)
     popup_word:setAnchorPoint(0.5,0.5)
     back:addChild(popup_word)
     
-    local popup_meaning = cc.Label:createWithSystemFont("你已答错3次","",28)
+    local popup_meaning = cc.Label:createWithSystemFont(wordMeaningSmall,"",40)
     popup_meaning:setPosition(back:getContentSize().width / 2,back:getContentSize().height *0.65)
-    popup_meaning:setColor(cc.c4b(39,127,182,255))
+    popup_meaning:setColor(cc.c4b(0,0,0,255))
     popup_meaning:ignoreAnchorPointForPosition(false)
     popup_meaning:setAnchorPoint(0.5,0.5)
     back:addChild(popup_meaning)

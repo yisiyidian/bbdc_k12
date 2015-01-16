@@ -17,6 +17,9 @@ function NewReviewBossSummaryLayer.create()
     local layer = NewReviewBossSummaryLayer.new()
     
     local totol_boss_number = s_LocalDatabaseManager:getTodayTotalBossNum()
+    if totol_boss_number == nil then
+        totol_boss_number = 0
+    end
     local current_boss_number = totol_boss_number - s_LocalDatabaseManager:getTodayRemainBossNum() + 1
    
     

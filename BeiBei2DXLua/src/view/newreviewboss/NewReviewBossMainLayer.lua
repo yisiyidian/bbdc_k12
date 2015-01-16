@@ -186,37 +186,18 @@ function NewReviewBossMainLayer.create()
             for j = 1, 3 do
                 local sprite = sprite_array[i][j]
                 if i <= rbCurrentWordIndex-1 then
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,200))
-                    local action2 = cc.ScaleTo:create(0.4, 0)
-                    local action3 = cc.Spawn:create(action1, action2)
-                    sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.two_to_one(j)
                     sprite.visible(false)
                 elseif i == rbCurrentWordIndex then
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,200))
-                    local action2 = cc.ScaleTo:create(0.4, 0.8)
-                    local action3 = cc.Spawn:create(action1, action2)
-                    sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.three_to_two(j)
                     sprite.visible(false)
                 elseif i == rbCurrentWordIndex + 1 then
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(40*j-80,200))
-                    local action2 = cc.ScaleTo:create(0.4, 1)
-                    local action3 = cc.Spawn:create(action1, action2)
-                    sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.four_to_three(j)
                     sprite.visible(true)
                 elseif i == rbCurrentWordIndex + 2 then
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(0,200))
-                    local action2 = cc.ScaleTo:create(0.4, 0.8)
-                    local action3 = cc.Spawn:create(action1, action2)
-                    sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.five_to_four()
                 else
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(0,200))
-                    sprite:runAction(cc.Sequence:create(action0, action1))
-                    sprite.visible(false)
+                    sprite.more_to_five()
                 end
             end
         end
@@ -241,7 +222,7 @@ function NewReviewBossMainLayer.create()
         local action2 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
         local action3 = cc.CallFunc:create(function()
             local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
-            local newReviewBossLayerChange = NewReviewBossLayerChange.create()
+            local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName)
             s_SCENE:popup(newReviewBossLayerChange)
             end)
         layer:runAction(cc.Sequence:create(action1, action2,action3))
@@ -257,7 +238,7 @@ function NewReviewBossMainLayer.create()
         for j = 1, 3 do
             local sprite = NewReviewBossNode.create(words[j])
             sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), index_y - 200))
-            sprite:setScale(0.8)
+            sprite:setScale(0)
             layer:addChild(sprite)
             tmp[j] = sprite
         end
@@ -272,28 +253,14 @@ function NewReviewBossMainLayer.create()
                 local sprite = sprite_array[i][j]
                 if i <= rbCurrentWordIndex-1 then
                 elseif i == rbCurrentWordIndex then
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(80-40*j,-200))
-                    local action2 = cc.ScaleTo:create(0.4, 0)
-                    local action3 = cc.Spawn:create(action1, action2)
-                    sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.two_to_three(j)
                 elseif i == rbCurrentWordIndex + 1 then
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(40*j-80,200))
-                    local action2 = cc.ScaleTo:create(0.4, 1)
-                    local action3 = cc.Spawn:create(action1, action2)
-                    sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.four_to_three(j)
                     sprite.visible(true)
                 elseif i == rbCurrentWordIndex + 2 then
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(0,200))
-                    local action2 = cc.ScaleTo:create(0.4, 0.8)
-                    local action3 = cc.Spawn:create(action1, action2)
-                    sprite:runAction(cc.Sequence:create(action0, action3))
+                    sprite.five_to_four()
                 else
-                    local action0 = cc.DelayTime:create(0.1)
-                    local action1 = cc.MoveBy:create(0.4, cc.p(0,200))
-                    sprite:runAction(cc.Sequence:create(action0, action1))
+                    sprite.more_to_five()
                     sprite.visible(false)                
                 end
             end
@@ -338,7 +305,7 @@ function NewReviewBossMainLayer.create()
     hint_button:setAnchorPoint(0.5,0)
     hint_button:addTouchEventListener(hint_click)
     hint_button:setScale9Enabled(true)
-    layer:addChild(hint_button) 
+    layer:addChild(hint_button,2) 
 
     local hint_label = cc.Label:createWithSystemFont("这是啥？","",36)
     hint_label:setPosition(hint_button:getContentSize().width * 0.5,hint_button:getContentSize().height * 0.5)
