@@ -69,6 +69,7 @@ function HomeLayer.create()
     local mission_progress = MissionProgress.create()
     backColor:addChild(mission_progress,1)
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(mission_progress)
+    local downloadSoundBtnSchedule = downloadSoundButton:getScheduler()
    
     local name = cc.Sprite:create("image/homescene/title_shouye_name.png")
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-120)
@@ -154,6 +155,9 @@ function HomeLayer.create()
                 offlineTipFriend.setTrue()
             else
                 if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                    if downloadSoundBtnSchedule ~=nil then
+                        downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+                    end
                     s_CorePlayManager.enterFriendLayer()
                 else
 
@@ -226,6 +230,9 @@ function HomeLayer.create()
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
+            if downloadSoundBtnSchedule ~=nil then
+                downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+            end
             s_CorePlayManager.enterLevelLayer()  
             hideProgressHUD()
             
@@ -365,6 +372,9 @@ function HomeLayer.create()
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     AnalyticsChangeBookBtn()
+                    if downloadSoundBtnSchedule ~=nil then
+                        downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+                    end
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
                     if  online == false then

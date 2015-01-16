@@ -43,35 +43,6 @@ function NewReviewBossHintLayer.create(currentWordName)
     	
     end
     
-    local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 263)
-    fillColor1:setAnchorPoint(0.5,0)
-    fillColor1:ignoreAnchorPointForPosition(false)
-    fillColor1:setPosition(s_DESIGN_WIDTH/2,0)
-    layer:addChild(fillColor1)
-
-    local fillColor2 = cc.LayerColor:create(cc.c4b(26,169,227,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 542-263)
-    fillColor2:setAnchorPoint(0.5,0)
-    fillColor2:ignoreAnchorPointForPosition(false)
-    fillColor2:setPosition(s_DESIGN_WIDTH/2,263)
-    layer:addChild(fillColor2)
-
-    local fillColor3 = cc.LayerColor:create(cc.c4b(36,186,248,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 776-542)
-    fillColor3:setAnchorPoint(0.5,0)
-    fillColor3:ignoreAnchorPointForPosition(false)
-    fillColor3:setPosition(s_DESIGN_WIDTH/2,542)
-    layer:addChild(fillColor3)
-
-    local fillColor4 = cc.LayerColor:create(cc.c4b(213,243,255,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-776)
-    fillColor4:setAnchorPoint(0.5,0)
-    fillColor4:ignoreAnchorPointForPosition(false)
-    fillColor4:setPosition(s_DESIGN_WIDTH/2,776)
-    layer:addChild(fillColor4)
-
-    local back = sp.SkeletonAnimation:create("spine/fuxiboss_background.json", "spine/fuxiboss_background.atlas", 1)
-    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    layer:addChild(back)      
-    back:addAnimation(0, 'animation', true)
-    
     local onTouchBegan = function(touch, event)
         playSound(s_sound_buttonEffect)            
         local action1 = cc.MoveTo:create(0.2, cc.p(s_RIGHT_X ,s_DESIGN_HEIGHT * 0.81 ))
@@ -83,16 +54,6 @@ function NewReviewBossHintLayer.create(currentWordName)
 
     local onTouchEnded = function(touch, event)
            layer.close()
-    end
-
-    for i=1,s_CorePlayManager.currentReward do
-        local reward = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-        reward:setPosition(s_RIGHT_X - reward:getContentSize().width * i,
-            s_DESIGN_HEIGHT * 0.95)
-        reward:ignoreAnchorPointForPosition(false)
-        reward:setAnchorPoint(0.5,0.5)
-        reward:setTag(i)
-        layer:addChild(reward)  
     end
     
     local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"yellow")
@@ -118,7 +79,7 @@ function NewReviewBossHintLayer.create(currentWordName)
             playSound(s_sound_buttonEffect)
             local action1 = cc.MoveTo:create(0.2, cc.p(s_RIGHT_X ,s_DESIGN_HEIGHT * 0.81 ))
             hint_button:runAction(action1)
-            local action2 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.4))
+            local action2 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
             white_back:runAction(action2)
         elseif eventType == ccui.TouchEventType.ended then
             layer.close()                          
@@ -149,12 +110,12 @@ function NewReviewBossHintLayer.create(currentWordName)
     hint_button:addChild(hint_arrow)
     
     white_back = cc.Sprite:create("image/newreviewboss/backgroundreviewboss1tishi.png")
-    white_back:setPosition(s_DESIGN_WIDTH/2*2, s_DESIGN_HEIGHT * 0.4)
+    white_back:setPosition(s_DESIGN_WIDTH/2*2, s_DESIGN_HEIGHT * 0.55)
     white_back:ignoreAnchorPointForPosition(false)
     white_back:setAnchorPoint(0.5,0.5)
     layer:addChild(white_back)
     
-    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.4))
+    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55))
     local action2 = cc.EaseBackOut:create(action1)
     white_back:runAction(action2)
     
