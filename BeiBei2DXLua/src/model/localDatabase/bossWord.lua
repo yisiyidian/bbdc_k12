@@ -202,7 +202,7 @@ function M.updateBossWord(bossID)
         end
     else
         local data = createData(bookKey, time, bossID, typeIndex + 1, wordList)
-        Manager.saveData(data, userId, username, num)
+        Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    )
     end
 end
 

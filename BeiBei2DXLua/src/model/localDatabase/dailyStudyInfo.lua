@@ -56,7 +56,7 @@ function M.addStudyWordsNum()
     else
         local newStudyNum = oldStudyNum + 1
         local data = createData(bookKey, today, newStudyNum, oldGraspNum, time)
-        Manager.saveData(data, userId, username, num)
+        Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
 end
 
@@ -96,7 +96,7 @@ function M.addGraspWordsNum(addNum)
     else
         local newGraspNum = oldGraspNum + addNum
         local data = createData(bookKey, today, oldStudyNum, newGraspNum, time)
-        Manager.saveData(data, userId, username, num)
+        Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
 end
 
