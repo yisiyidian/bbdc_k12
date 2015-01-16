@@ -157,14 +157,14 @@ end
 
 function DownloadSoundController:killDownload()
     
-    self:releaseDownload()
     self:deleteBookSound()    
+    self:releaseDownload()
 end
 
 
 function DownloadSoundController:deleteBookSound()
 
-    local bookKey = s_CURRENT_USER.bookkey
+    local bookKey = self.bookkey
     cc.FileUtils:getInstance():removeDirectory(cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookKey.."/")
     print("删除单词包成功")
 end

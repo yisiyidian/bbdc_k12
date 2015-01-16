@@ -66,7 +66,8 @@ function HomeLayer.create()
 
     local mission_progress = MissionProgress.create()
     backColor:addChild(mission_progress,1)
-    
+    local downloadSoundButton = require("view.home.DownloadSoundButton").create(mission_progress)
+   
     local name = cc.Sprite:create("image/homescene/title_shouye_name.png")
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-120)
     backColor:addChild(name)

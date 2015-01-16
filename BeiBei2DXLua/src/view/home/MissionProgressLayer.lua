@@ -54,7 +54,6 @@ function MissionProgressLayer.create()
     
     local layer = MissionProgressLayer.new()
     
-    local downloadSoundButton = require("view.home.DownloadSoundButton").create(layer)
     
 --    print("taskCurrent "..taskCurrent)
     layer.stopListener = false
