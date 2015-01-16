@@ -55,7 +55,7 @@ function HomeLayer.create()
     --add offline
 
 
-    local online = s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken()
+    local online = s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()
 --    online = false
     local offlineTipHome = OfflineTipHome.create()
     local offlineTipFriend = OfflineTipFriend.create()
@@ -403,7 +403,7 @@ function HomeLayer.create()
                         end
                     end
                 elseif label_name[i] == "登出游戏" then
-                    if not s_SERVER.isNetworkConnnectedNow() then
+                    if not s_SERVER.isNetworkConnectedNow() then
                         offlineTipHome.setTrue(OfflineTipForHome_Logout)
                     else
                         -- logout

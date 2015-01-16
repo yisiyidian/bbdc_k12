@@ -25,7 +25,7 @@ function IntroLayer.create(directOnLogin)
     local currentIndex = 1
     local moveLength = 100
     local offlineTip
-    local isOnline = s_SERVER.isNetworkConnnectedWhenInited()
+    local isOnline = s_SERVER.isNetworkConnectedWhenInited()
         
     local backColor = cc.LayerColor:create(cc.c4b(30,193,239,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)

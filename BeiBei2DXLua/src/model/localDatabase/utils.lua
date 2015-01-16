@@ -172,7 +172,7 @@ function getUpdateRecord(objectOfDataClass)
 end
 
 -- recordsNum : 0 or positive integer
--- conditions : "' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"
+-- conditions : " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;"
 function M.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
     conditions = conditions or ''
     M.alterLocalDatabase(objectOfDataClass)

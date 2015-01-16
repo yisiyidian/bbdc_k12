@@ -1,6 +1,7 @@
 local DataClassBase = require('model.user.DataClassBase')
 
 -- record count == book count
+-- 保存复习BOSS数据
 
 local DataBossWord = class("DataBossWord", function()
     return DataClassBase.new()

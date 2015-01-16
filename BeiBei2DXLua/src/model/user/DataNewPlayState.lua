@@ -1,4 +1,7 @@
 
+-- record count == book count
+-- 保存今日学习状态
+
 local DataClassBase = require('model.user.DataClassBase')
 
 local DataNewPlayState = class("DataNewPlayState", function()
