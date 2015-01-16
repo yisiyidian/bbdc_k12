@@ -9,6 +9,8 @@ OfflineTipForHome_Logout             = 3
 function OfflineTipForHome.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
+    local text
+
     local layer = OfflineTipForHome.new()
     
     local backColor  
