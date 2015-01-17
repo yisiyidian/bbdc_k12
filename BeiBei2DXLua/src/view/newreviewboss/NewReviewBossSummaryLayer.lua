@@ -242,7 +242,7 @@ function NewReviewBossSummaryLayer.create()
             local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-200))
             backGround:runAction(action1)
 
-            local rbProgressBar = ProgressBar.create(20,0,"yellow")
+            local rbProgressBar = ProgressBar.create(20,0,"orange")
             rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9 + 200)
             layer:addChild(rbProgressBar)
             local action1 = cc.MoveBy:create(0.5,cc.p(0,-200))

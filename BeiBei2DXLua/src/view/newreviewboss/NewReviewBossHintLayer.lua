@@ -45,7 +45,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     	
     end
     
-    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"yellow")
+    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"orange")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
     
