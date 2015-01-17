@@ -5,7 +5,7 @@ local ChapterLayer = class('ChapterLayer', function()
     return cc.Layer:create()
 end)
 
-local listView
+
 local s_chapter_layer_width = 854
 local oceanBlue = cc.c4b(61,191,244,255)
 local bounceSectionSize = cc.size(854,512)
@@ -33,18 +33,18 @@ function ChapterLayer:ctor()
         end
 
     end 
-    listView = ccui.ListView:create()
-    listView:setDirection(ccui.ScrollViewDir.vertical)
-    listView:setBounceEnabled(true)
-    listView:setBackGroundImageScale9Enabled(true)
-    listView:addEventListener(listViewEvent)
-    listView:addScrollViewEventListener(scrollViewEvent)
-    listView:removeAllChildren()
-    self:addChild(listView)
+    self.listView = ccui.ListView:create()
+    self.listView:setDirection(ccui.ScrollViewDir.vertical)
+    self.listView:setBounceEnabled(true)
+    self.listView:setBackGroundImageScale9Enabled(true)
+    self.listView:addEventListener(listViewEvent)
+    self.listView:addScrollViewEventListener(scrollViewEvent)
+    self.listView:removeAllChildren()
+    self:addChild(self.listView)
     
     local fullWidth = s_chapter_layer_width
-    listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
-    listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
+    self.listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
+    self.listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
     -- add bounce
     self:addTopBounce()
     -- add chapter node
@@ -246,6 +246,10 @@ function ChapterLayer:checkUnlockLevel()
         -- unlock chapter
         s_SCENE:callFuncWithDelay(delayTime, function()
             self:plotUnlockCloudAnimation()
+            s_SCENE:callFuncWithDelay(1.0,function()            
+                -- add next chapter
+                self:addChapterIntoListView(currentProgress['chapter'])
+            end)
 --            local delay_t = 0
 --            -- plot player
 --            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
@@ -267,15 +271,12 @@ function ChapterLayer:checkUnlockLevel()
 --                self:addPlayerNotification(false) 
 --            end) 
 --
---            s_Scene:callFuncWithDelay(delay_t+2,function()            
---                -- add next chapter
---                self:addChapterIntoListView(currentProgress['chapter'])
---            end)
+
         end)
        
-        s_SCENE:callFuncWithDelay(0.5, function()
-            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
-        end)
+--        s_SCENE:callFuncWithDelay(0.5, function()
+--            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
+--        end)
     elseif currentProgress['level'] ~= oldProgress['level'] then   -- unlock level
         local oldLevelIndex = string.sub(oldProgress['level'], 6)
         local currentLevelIndex = string.sub(currentProgress['level'],6)
@@ -533,7 +534,7 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         custom_item:setContentSize(self.chapterDic['chapter0']:getContentSize())  
         custom_item:setName('chapter0')  
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
-        listView:addChild(self.chapterDic['chapter0'])
+        self.listView:addChild(self.chapterDic['chapter0'])
    else    
         local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
         self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
@@ -543,25 +544,25 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
         custom_item:setName(chapterKey)  
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
-        listView:addChild(self.chapterDic[chapterKey]) 
+        self.listView:addChild(self.chapterDic[chapterKey]) 
     end
     
 
 end
 
--- scroll listview to show the specific chapter and level
+-- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
     if chapterKey == 'chapter0' and levelKey == 'level0' then
         return
     end
     local bookProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
-    -- compute listView inner height
-    local itemList = listView:getItems()
+    -- compute self.listView inner height
+    local itemList = self.listView:getItems()
     local innerHeight = 0
     for i = 1,#itemList do
         innerHeight = innerHeight + itemList[i]:getContentSize().height
     end
-    listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
+    self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
     local levelIndex = string.sub(levelKey, 6)
     local currentLevelCount = levelIndex + 1
     local totalLevelCount = 0
@@ -586,11 +587,11 @@ function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
     local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
     --print('currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
     if scrollTime - 0 == 0 then
-        listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
+        self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
     else
-        listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,true)
+        self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,true)
     end
-    listView:setInertiaScrollEnabled(true)
+    self.listView:setInertiaScrollEnabled(true)
 end
 
 function ChapterLayer:plotUnlockCloudAnimation()
@@ -598,6 +599,12 @@ function ChapterLayer:plotUnlockCloudAnimation()
     local action2 = cc.MoveBy:create(0.5, cc.p(s_DESIGN_WIDTH*2,0))
     self.chapterDic['leftCloud']:runAction(action1)
     self.chapterDic['rightCloud']:runAction(action2)
+    s_SCENE:callFuncWithDelay(0.6,function()
+        self.chapterDic['leftCloud']:removeFromParent() 
+        self.chapterDic['rightCloud']:removeFromParent()
+    end)
+   
+    
 end
 
 function ChapterLayer:addTopBounce()
@@ -651,8 +658,8 @@ function ChapterLayer:addBottomBounce()
     self.chapterDic['rightCloud']:setAnchorPoint(0, 1)
     self.chapterDic['leftCloud']:setPosition((s_chapter_layer_width-bounceSectionSize.width)/2,50)
     self.chapterDic['rightCloud']:setPosition((s_chapter_layer_width-bounceSectionSize.width)/2,50)
-    listView:addChild(self.chapterDic['leftCloud'],100)
-    listView:addChild(self.chapterDic['rightCloud'],100)
+    self.listView:addChild(self.chapterDic['leftCloud'],100)
+    self.listView:addChild(self.chapterDic['rightCloud'],100)
 end
 
 function ChapterLayer:addBackToHome()
