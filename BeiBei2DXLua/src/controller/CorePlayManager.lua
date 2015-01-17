@@ -42,10 +42,6 @@ end
 
 function CorePlayManager.initTotalPlay()  
     local gameState = s_LocalDatabaseManager.getGameState()
---    CorePlayManager.initNewReviewBossRewardAndTotalWord()
---    local candidate = CorePlayManager.getReviewBossCandidate()
---    CorePlayManager.initNewReviewBossLayer(candidate)
---    AnalyticsReviewBoss()
     if gameState == s_gamestate_reviewbossmodel then
         CorePlayManager.initNewReviewBossRewardAndTotalWord()
         local candidate = CorePlayManager.getReviewBossCandidate()

@@ -90,15 +90,19 @@ function NewReviewBossMainLayer.create()
             local sprite = NewReviewBossNode.create(words[j])
             if i == 1 then
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 850 - 200*i - 150))
-                sprite.visible(true)
+                sprite.opacity(255)
+                sprite.font_size(25)
             elseif i == 2 then 
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
-                sprite:setScale(0.8)
-                sprite.visible(false)
+                sprite:setScaleX(0.8)
+                sprite:setScaleY(1)
+                sprite.opacity(102)
+                sprite.font_size(18)
             else
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
                 sprite:setScale(0)
-                sprite.visible(false)
+                sprite.opacity(102)
+                sprite.font_size(18)
             end
             layer:addChild(sprite,1)
             tmp[j] = sprite
@@ -163,8 +167,13 @@ function NewReviewBossMainLayer.create()
     fillColor4:ignoreAnchorPointForPosition(false)
     fillColor4:setPosition(s_DESIGN_WIDTH/2,811)
     layer:addChild(fillColor4)
+    
+    local backGround = cc.Sprite:create("image/newreviewboss/newreviewboss_background.png")
+    backGround:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
+    backGround:setOpacity(200)
+    layer:addChild(backGround)
 
-    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"yellow")
+    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"orange")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
     
@@ -187,13 +196,10 @@ function NewReviewBossMainLayer.create()
                 local sprite = sprite_array[i][j]
                 if i <= rbCurrentWordIndex-1 then
                     sprite.two_to_one(j)
-                    sprite.visible(false)
                 elseif i == rbCurrentWordIndex then
                     sprite.three_to_two(j)
-                    sprite.visible(false)
                 elseif i == rbCurrentWordIndex + 1 then
                     sprite.four_to_three(j)
-                    sprite.visible(true)
                 elseif i == rbCurrentWordIndex + 2 then
                     sprite.five_to_four()
                 else
@@ -260,8 +266,7 @@ function NewReviewBossMainLayer.create()
                 elseif i == rbCurrentWordIndex + 2 then
                     sprite.five_to_four()
                 else
-                    sprite.more_to_five()
-                    sprite.visible(false)                
+                    sprite.more_to_five()           
                 end
             end
         end
@@ -318,7 +323,6 @@ function NewReviewBossMainLayer.create()
         local location = layer:convertToNodeSpace(touch:getLocation())
         local logic_location = checkTouchIndex(location)
         if logic_location.x == rbCurrentWordIndex then
-            playSound(s_sound_buttonEffect)
             if type % 2 == 0 then
                 answer = wordToBeTested[logic_location.x]
             else
@@ -326,6 +330,7 @@ function NewReviewBossMainLayer.create()
             end
             if answer == sprite_array[logic_location.x][logic_location.y].character then
                 sprite_array[logic_location.x][logic_location.y].right()
+                playSound(s_sound_learn_true)
                 
                 local x = rbProgressBar:getPos()
                 
@@ -334,12 +339,13 @@ function NewReviewBossMainLayer.create()
                 true_mark:setPosition(position_X,position_Y)
                 layer:addChild(true_mark) 
                 
-                local action1 = cc.MoveTo:create(0.5,cc.p(x ,990))
-                local action2 = cc.ScaleTo:create(0.5,0)
-                true_mark:runAction(cc.Sequence:create(action1, action2))
+                local action1 = cc.MoveTo:create(0.2,cc.p(x ,990))
+                local action2 = cc.ScaleTo:create(0.2,0)
+                true_mark:runAction(cc.Sequence:create(action1, action2,cc.CallFunc:create(function()rbProgressBar.addOne()end)))
                 
             else
-                sprite_array[logic_location.x][logic_location.y].wrong()                        
+                sprite_array[logic_location.x][logic_location.y].wrong()    
+                playSound(s_sound_learn_false)                    
                 wrongWordFunction()  
                 return true              
             end
@@ -348,10 +354,8 @@ function NewReviewBossMainLayer.create()
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 if answer == sprite_array[logic_location.x][logic_location.y].character then
                     rightWordFuntion()
-                    rbProgressBar.addOne()
                 end
             else            
-                rbProgressBar.addOne()
                 
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             
