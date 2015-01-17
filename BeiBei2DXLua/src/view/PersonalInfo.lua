@@ -19,7 +19,7 @@ function PersonalInfo:ctor()
     local moved = false
     local start_y = nil
     local colorArray = {cc.c4b(56,182,236,255),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
-    local titleArray = {'单词学习日增长','登陆贝贝天数','学习效率统计'}
+    local titleArray = {'单词掌握统计','单词学习日增长','登陆贝贝天数','学习效率统计'}
     self.intro_array = {}
 
     
@@ -62,7 +62,6 @@ function PersonalInfo:ctor()
     local lastPage = -1
     local function update(delta)
         local curPage = pageView:getCurPageIndex()
-        
         if curPage ~= lastPage then
             if lastPage >= 0 then
                 self.intro_array[curPage+1]:removeAllChildren()
@@ -77,7 +76,7 @@ function PersonalInfo:ctor()
             elseif curPage == 1 then
                 self:login()
                 AnalyticsDataCenterPage('LOGIN')
-            else
+            elseif curPage == 0 then
                 self:XXTJ()
                 AnalyticsDataCenterPage('XXTJ')
             end
@@ -112,6 +111,7 @@ function PersonalInfo:ctor()
 end
 
 function PersonalInfo:PLVM()
+    
     local updateTime = 0
     local tolearnCount = s_LocalDatabaseManager.getTotalStudyWordsNum()
     local toMasterCount = s_LocalDatabaseManager.getTotalGraspWordsNum()
@@ -476,9 +476,11 @@ function PersonalInfo:login()
     local back = self.intro_array[2]
     local loginData = s_CURRENT_USER.logInDatas
     local loginData_array = {}
-    for i = 1,#loginData do
+    for i = 1,#loginData_array do
         loginData_array[i] = loginData[i]:getDays()
+        --loginData_array[i] = {0,1,1,1,0,1,1}
     end
+    print_lua_table(loginData_array)
     local calendar = {}
     local weekDay = {'SUN','MON','TUE','WED','THU','FRI','SAT'}
     local year_begin = tonumber(os.date('%Y',s_CURRENT_USER.localTime),10)
@@ -507,7 +509,7 @@ function PersonalInfo:login()
         calendar[index] = nil
         calendar[index] = cc.Node:create()
         calendar[index]:setPosition((index - 2) * (s_RIGHT_X - s_LEFT_X),0)
-        back:addChild(calendar[index])
+        back:addChild(calendar[index],1)
 
         formerDate = selectDate - 24 * 3600
         formerDate = formerDate - (tonumber(os.date('%d',formerDate),10) - 1) * 24 * 3600
@@ -520,7 +522,11 @@ function PersonalInfo:login()
         end
 
         local offset = tonumber(os.date('%w',selectDate),10)
+        local delayTime = 0
+        local loadingList = {}
+        local lengthList = {}
         while true do
+            s_logd(os.date('%x',selectDate))
             local date = tonumber(os.date('%d',selectDate),10)
             local week = tonumber(os.date('%w',selectDate),10)
             local label = cc.Label:createWithSystemFont(string.format('%d',date),'',28)
@@ -534,11 +540,19 @@ function PersonalInfo:login()
                 local circle = cc.Sprite:create('image/PersonalInfo/login/circle_today.png')
                 circle:setPosition(cc.p(label:getPosition()))
                 calendar[index]:addChild(circle,1)
+                circle:setScale(0)
+                table.insert(loadingList,circle)
+                table.insert(lengthList,0)
+
+                                
+
             end
 
             local weekIndex = math.floor((sDate - firstDate) / (7 * 24 * 3600)) + 1
             local dayIndex = ((sDate - firstDate) % (7 * 24 * 3600)) / (24 * 3600) + 1
+            
             if weekIndex > 0 and weekIndex <= #loginData_array and dayIndex > 0 and dayIndex <= 7 then
+                
                 if loginData_array[weekIndex][dayIndex] == 1 then
                     if dayIndex < 7 then
                         if loginData_array[weekIndex][dayIndex + 1] == 0 or dayIndex == 6 then
@@ -561,21 +575,42 @@ function PersonalInfo:login()
                                 local circle = cc.Sprite:create('image/PersonalInfo/login/circle_login_days.png')
                                 circle:setPosition(cc.p(label:getPosition()))
                                 calendar[index]:addChild(circle)
+                                circle:setOpacity(0)
+                                table.insert(loadingList,circle)
+                                table.insert(lengthList,length)
                             else
-                                local circle = ccui.Scale9Sprite:create('image/PersonalInfo/login/continious_login.png',cc.rect(0,0,72,55),cc.rect(30,0,12,55))
-                                circle:setContentSize(cc.size(55 + s_DESIGN_WIDTH / 8 * (length - 1),55))
-                                circle:setAnchorPoint(1 - 27.5 / circle:getContentSize().width,0.5)
-                                circle:setPosition(cc.p(label:getPosition()))
-                                calendar[index]:addChild(circle)
+
+                                local loadingBar = ccui.LoadingBar:create()
+                                loadingBar:setAnchorPoint(1 - 27.5 / (55 + s_DESIGN_WIDTH / 8 * (length - 1)),0.5)
+                                loadingBar:setTag(0)
+                                loadingBar:setName("LoadingBar")
+                                loadingBar:setVisible(false)
+                                loadingBar:loadTexture("image/PersonalInfo/login/continious_login.png")
+                                loadingBar:setScale9Enabled(true)
+                                loadingBar:setCapInsets(cc.rect(0,0,0,0))
+                                loadingBar:setContentSize(cc.size(55 + s_DESIGN_WIDTH / 8 * (length - 1),55))
+                                loadingBar:setDirection(ccui.LoadingBarDirection.LEFT)
+                                local percent = 55 / (55 + s_DESIGN_WIDTH / 8 * (length - 1)) * 100
+
+                                loadingBar:setPercent(percent)
+                                loadingBar:setPosition(cc.p(label:getPosition()))
+                                back:addChild(loadingBar)
+                                table.insert(loadingList,loadingBar)
+                                table.insert(lengthList,length)
+
                             end
                         end
                     elseif dayIndex == 7 and weekIndex < #loginData_array and loginData_array[weekIndex + 1][1] == 0 then
                         local circle = cc.Sprite:create('image/PersonalInfo/login/circle_login_days.png')
                         circle:setPosition(cc.p(label:getPosition()))
                         calendar[index]:addChild(circle)
+                        circle:setOpacity(0)
+                        table.insert(loadingList,circle)
+                        table.insert(lengthList,1)
                     end
                 end
             end
+            
 
             selectDate = selectDate + 24 * 3600
             if tonumber(os.date('%d',selectDate),10) == 1 then
@@ -583,7 +618,35 @@ function PersonalInfo:login()
                 break
             end
         end
+
+        local curIndex = 1
+            s_logd('loadingList'..#loadingList)
+            local function update(delta)
+                if curIndex > #loadingList then
+                    return
+                end
+                if lengthList[curIndex] == 1 then
+                    loadingList[curIndex]:setOpacity(255)
+                    curIndex = curIndex + 1
+                elseif lengthList[curIndex] > 1 then
+                    local length = lengthList[curIndex]
+                    loadingList[curIndex]:setVisible(true)
+                    local percent = loadingList[curIndex]:getPercent() + s_DESIGN_WIDTH * 0.125 / (55 + s_DESIGN_WIDTH / 8 * (length - 1)) * 100 / 8
+                    loadingList[curIndex]:setPercent(percent)
+                    if percent >= 100 then
+                        curIndex = curIndex + 1
+                    end
+                else
+                    local fadeIn = cc.EaseBackOut:create(cc.ScaleTo:create(0.4,1))
+                    loadingList[curIndex]:runAction(fadeIn)
+                    curIndex = curIndex + 1
+                end
+            end
+
+            back:scheduleUpdateWithPriorityLua(update, 0)
+        
     end
+
     
     local selectDate = os.time() - (tonumber(os.date('%d',os.time()),10) - 1) * 24 * 3600
     drawCalendar(selectDate,2)
@@ -672,8 +735,9 @@ function PersonalInfo:XXTJ()
         dayToFinish = math.ceil((totalWord - s_LocalDatabaseManager.getTotalStudyWordsNum()) / everydayWord)
     end
     local back = self.intro_array[1]
+    local list = {}
 
-    local drawLabel = function(label,count,unit,y)
+    local drawLabel = function(label,count,unit,y,index)
    
         local speedLabel = cc.Label:createWithSystemFont(string.format('%s ',label),'',36)
         speedLabel:setAnchorPoint(0,0)
@@ -683,7 +747,9 @@ function PersonalInfo:XXTJ()
         local speed = cc.Label:createWithSystemFont(string.format('%d',count),'',80)
         speed:setAnchorPoint(0,0.1)
         speed:setColor(cc.c4b(128,172,20,255))
+        speed:setVisible(false)
         back:addChild(speed)
+        table.insert(list,1,speed)
 
         local unit1 = cc.Label:createWithSystemFont(string.format(' %s',unit),'',36)
         unit1:setAnchorPoint(1,0)
@@ -696,13 +762,13 @@ function PersonalInfo:XXTJ()
         unit1:setPosition(speedLabel:getPositionX() + length,y)
     end
 
-    drawLabel('日均学习',everydayWord,'个',0.3 * back:getContentSize().height)
+    drawLabel('日均学习',everydayWord,'个',0.3 * back:getContentSize().height,1)
     local dayLabel = '还需学习'
     if dayToFinish > 99 then
         dayToFinish = 99
         dayLabel = '还需学习大于'
     end
-    drawLabel(dayLabel,dayToFinish,'天',0.7 * back:getContentSize().height)
+    drawLabel(dayLabel,dayToFinish,'天',0.5 * back:getContentSize().height,1)
 
     if dayToFinish > 99 then
         dayToFinish = 99
@@ -717,6 +783,7 @@ function PersonalInfo:XXTJ()
         local month = cc.Label:createWithSystemFont(string.format('%s',tonumber(os.date('%m',finishTime),10)),'',76)
         month:setAnchorPoint(0,0.1)
         month:setColor(cc.c4b(128,172,20,255))
+        month:setVisible(false)
         back:addChild(month)
 
         local unit1 = cc.Label:createWithSystemFont(' 月 ','',36)
@@ -727,6 +794,7 @@ function PersonalInfo:XXTJ()
         local day = cc.Label:createWithSystemFont(string.format('%s',tonumber(os.date('%d',finishTime),10)),'',76)
         day:setAnchorPoint(0,0.1)
         day:setColor(cc.c4b(128,172,20,255))
+        day:setVisible(false)
         back:addChild(day)
 
         local unit2 = cc.Label:createWithSystemFont(' 日','',36)
@@ -735,12 +803,46 @@ function PersonalInfo:XXTJ()
         back:addChild(unit2)
 
         local length = month:getContentSize().width + day:getContentSize().width + speedLabel:getContentSize().width + unit1:getContentSize().width + unit2:getContentSize().width
-        speedLabel:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X - length / 2,0.5 * back:getContentSize().height)
-        month:setPosition(speedLabel:getPositionX() + speedLabel:getContentSize().width,0.5 * back:getContentSize().height)
-        unit1:setPosition(month:getPositionX() + month:getContentSize().width,0.5 * back:getContentSize().height)
-        day:setPosition(unit1:getPositionX() + unit1:getContentSize().width,0.5 * back:getContentSize().height)
-        unit2:setPosition(speedLabel:getPositionX() + length,0.5 * back:getContentSize().height)  
+        speedLabel:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X - length / 2,0.7 * back:getContentSize().height)
+        month:setPosition(speedLabel:getPositionX() + speedLabel:getContentSize().width,0.7 * back:getContentSize().height)
+        unit1:setPosition(month:getPositionX() + month:getContentSize().width,0.7 * back:getContentSize().height)
+        day:setPosition(unit1:getPositionX() + unit1:getContentSize().width,0.7 * back:getContentSize().height)
+        unit2:setPosition(speedLabel:getPositionX() + length,0.7 * back:getContentSize().height)  
         --speedLabel:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)  
+
+        table.insert(list,1,day)
+        table.insert(list,1,month)
+        for i = 1, #list do
+            list[i]:setString('')
+            list[i]:setVisible(true)
+        end
+    local numList = {}
+    numList[1] = tonumber(os.date('%m',finishTime),10)
+    numList[2] = tonumber(os.date('%d',finishTime),10)
+    numList[3] = dayToFinish
+    numList[4] = everydayWord
+    local updateIndex = 1
+    local curNum = 0
+    local function update(delta)
+        if updateIndex > 4 then
+            return
+        end
+        local offset = numList[updateIndex] / 10
+        if 1 > offset then
+            offset = 1
+        end
+        curNum = math.ceil(offset + curNum)
+        if curNum > numList[updateIndex] then
+            curNum = numList[updateIndex]
+        end
+        list[updateIndex]:setString(string.format('%d',curNum))
+        if curNum >= numList[updateIndex] then
+            updateIndex = updateIndex + 1
+            curNum = 0
+        end
+
+    end
+    back:scheduleUpdateWithPriorityLua(update, 0)
 	
 end
 
