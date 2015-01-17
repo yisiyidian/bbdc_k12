@@ -77,8 +77,8 @@ function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
-    if true then  
---    if currentProgress['chapter'] ~= oldProgress['chapter'] then
+--    if true then  
+    if currentProgress['chapter'] ~= oldProgress['chapter'] then
 --        local oldLevelIndex = string.sub(oldProgress['level'], 6)
 --        local currentLevelIndex = string.sub(currentProgress['level'],6)
 --        local oldChapterIndex = string.sub(oldProgress['chapter'], 8)
