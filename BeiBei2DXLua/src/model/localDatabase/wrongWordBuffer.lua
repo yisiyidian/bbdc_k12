@@ -99,7 +99,7 @@ function M.addWrongWordBuffer(wrongWord)
         end
         
         local data = createData(bookKey, time, wordNum, wordBuffer)
-        Manager.saveData(data, userId, username, num)
+        Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."';")
     end
 end
 

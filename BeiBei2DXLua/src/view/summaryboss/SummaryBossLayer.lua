@@ -736,7 +736,7 @@ function SummaryBossLayer:initWordList()
         self.totalBlood = self.totalBlood + string.len(wordList[i])
     end
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 12
+    self.totalTime = math.ceil(self.totalBlood / 7) * 15
 
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood

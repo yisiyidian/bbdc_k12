@@ -98,16 +98,17 @@ function NewStudyChooseLayer.create()
             sender:addChild(feedback)
 
             if sender.tag == 1 then  
-                    if s_CorePlayManager.isStudyModel() then
-                        local action1 = cc.DelayTime:create(0.5)
-                        feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
+            
+                if s_CorePlayManager.isStudyModel() then
+                    local action1 = cc.DelayTime:create(0.5)
+                    feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                         AnalyticsStudyAnswerRight()
                         s_CorePlayManager.enterNewStudyRightLayer()
-                        end)))
-                    else             
-                        local action1 = cc.MoveTo:create(0.5,cc.p((backColor.getProgressBarIndexPosition()) - 20,1120 - sender:getPositionY()))
-                        local action2 = cc.ScaleTo:create(0.2,0)
-                        feedback:runAction(cc.Sequence:create(action1, action2,cc.CallFunc:create(function() 
+                    end)))
+                else             
+                    local action1 = cc.MoveTo:create(0.5,cc.p((backColor.getProgressBarIndexPosition()) - 20,1120 - sender:getPositionY()))
+                    local action2 = cc.ScaleTo:create(0.2,0)
+                    feedback:runAction(cc.Sequence:create(action1, action2,cc.CallFunc:create(function() 
                         AnalyticsStudyAnswerRight_strikeWhileHot()
 
                         s_CorePlayManager.updateWordCandidate(false)
@@ -118,9 +119,9 @@ function NewStudyChooseLayer.create()
                         else
                             s_CorePlayManager.enterNewStudyChooseLayer()
                         end
-                        end)))
+                    end)))
 
-                    end
+                end
 
             else
                 local action1 = cc.DelayTime:create(0.5)

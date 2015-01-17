@@ -47,7 +47,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local wordSoundState = playWordSound(wordname)
-            if s_SERVER.isNetworkConnnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
+            if s_SERVER.isNetworkConnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
                 offlineTip.setTrue()
             end
         end
@@ -105,7 +105,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local wordSoundState = playWordSound(wordname)
     --add offline
     offlineTip = OfflineTip.create()
-    if s_SERVER.isNetworkConnnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
+    if s_SERVER.isNetworkConnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
         main:addChild(offlineTip,2)
     end
     
@@ -136,6 +136,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
 
 
     local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()

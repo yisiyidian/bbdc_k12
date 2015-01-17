@@ -9,6 +9,8 @@ OfflineTipForHome_Logout             = 3
 function OfflineTipForHome.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
+    local text
+
     local layer = OfflineTipForHome.new()
     
     local backColor  
@@ -34,7 +36,7 @@ function OfflineTipForHome.create()
         local action4 = cc.FadeOut:create(10)
         tip:runAction(cc.Sequence:create(action3,action4))
         
-        if s_SERVER.isNetworkConnnectedNow() and not s_SERVER.hasSessionToken() then
+        if s_SERVER.isNetworkConnectedNow() and not s_SERVER.hasSessionToken() then
             if key == OfflineTipForHome_Feedback then
                tip:setString("贝贝听不到未登录用户的声音。")
             elseif key == OfflineTipForHome_ImproveInformation then

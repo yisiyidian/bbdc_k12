@@ -55,7 +55,7 @@ function HomeLayer.create()
     --add offline
 
 
-    local online = s_SERVER.isNetworkConnnectedNow() and s_SERVER.hasSessionToken()
+    local online = s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()
 --    online = false
     local offlineTipHome = OfflineTipHome.create()
     local offlineTipFriend = OfflineTipFriend.create()
@@ -68,7 +68,9 @@ function HomeLayer.create()
 
     local mission_progress = MissionProgress.create()
     backColor:addChild(mission_progress,1)
-    
+    local downloadSoundButton = require("view.home.DownloadSoundButton").create(mission_progress)
+    local downloadSoundBtnSchedule = downloadSoundButton:getScheduler()
+   
     local name = cc.Sprite:create("image/homescene/title_shouye_name.png")
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-120)
     backColor:addChild(name)
@@ -153,6 +155,9 @@ function HomeLayer.create()
                 offlineTipFriend.setTrue()
             else
                 if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                    if downloadSoundBtnSchedule ~=nil then
+                        downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+                    end
                     s_CorePlayManager.enterFriendLayer()
                 else
 
@@ -225,6 +230,9 @@ function HomeLayer.create()
             showProgressHUD()
             -- button sound
             playSound(s_sound_buttonEffect)  
+            if downloadSoundBtnSchedule ~=nil then
+                downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+            end
             s_CorePlayManager.enterLevelLayer()  
             hideProgressHUD()
             
@@ -364,6 +372,9 @@ function HomeLayer.create()
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     AnalyticsChangeBookBtn()
+                    if downloadSoundBtnSchedule ~=nil then
+                        downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+                    end
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
                     if  online == false then
@@ -392,7 +403,7 @@ function HomeLayer.create()
                         end
                     end
                 elseif label_name[i] == "登出游戏" then
-                    if not s_SERVER.isNetworkConnnectedNow() then
+                    if not s_SERVER.isNetworkConnectedNow() then
                         offlineTipHome.setTrue(OfflineTipForHome_Logout)
                     else
                         -- logout

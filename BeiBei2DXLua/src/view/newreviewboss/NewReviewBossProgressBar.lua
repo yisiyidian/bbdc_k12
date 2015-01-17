@@ -49,9 +49,9 @@ function NewReviewBossProgressBar.create(totalIndex, currentIndex ,color)
     main.addOne = function()
         currentIndex = currentIndex + 1
         label_number:setString(currentIndex)
-        local action1 = cc.MoveTo:create(0.5,cc.p(left + gap* (currentIndex), 0))
+        local action1 = cc.MoveTo:create(0.2,cc.p(left + gap* (currentIndex), 0))
         index:runAction(action1)
-        local action2 = cc.ProgressTo:create(0.5, 100*(currentIndex)/totalIndex)
+        local action2 = cc.ProgressTo:create(0.2, 100*(currentIndex)/totalIndex)
         progress:runAction(action2)
     end
 

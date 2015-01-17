@@ -38,7 +38,6 @@ function MissionProgressLayer.create()
     
     local layer = MissionProgressLayer.new()
     
-    local downloadSoundButton = require("view.home.DownloadSoundButton").create(layer)
     
 --    print("taskCurrent "..taskCurrent)
     layer.stopListener = false
@@ -93,6 +92,10 @@ function MissionProgressLayer.create()
 
         showProgressHUD()
         playSound(s_sound_buttonEffect)
+        if layer:getChildByTag(8888) ~=nil then
+            local schedule = layer:getChildByTag(8888):getScheduler()
+                schedule:unscheduleScriptEntry(schedule.schedulerEntry)
+        end
         s_CorePlayManager.enterLevelLayer()  
         hideProgressHUD()
     end
@@ -205,6 +208,10 @@ function MissionProgressLayer.create()
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
             AnalyticsWordsLibBtn()
+        if layer:getChildByTag(8888) ~=nil then
+            local schedule = layer:getChildByTag(8888):getScheduler()
+                schedule:unscheduleScriptEntry(schedule.schedulerEntry)
+        end            
            s_CorePlayManager.enterWordListLayer()
         end
     end
