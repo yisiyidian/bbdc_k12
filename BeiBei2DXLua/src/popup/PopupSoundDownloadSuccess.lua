@@ -7,7 +7,8 @@ end)
 function PopupSoundDownloadSuccess.create()
     
     local layer = PopupSoundDownloadSuccess.new()
-    
+    local bookkey = s_CURRENT_USER.bookKey
+
     --add background
     layer:createBackground("image/soundLoadingBar/popup.png")
 
@@ -21,7 +22,7 @@ function PopupSoundDownloadSuccess.create()
     layer:addConfirmButton("image/soundLoadingBar/confirm_button.png","image/soundLoadingBar/confirm_button_press.png","知道了")
     
     --add title
-    layer:addTitle("完成音频下载")
+    layer:addTitle(bookkey.."完成下载")
     
     --add description
     layer:addDescription("赞，你可以听见单词声音了")
@@ -108,7 +109,10 @@ end
 function PopupSoundDownloadSuccess:runMoveInAction()
     
     local parentNode = self:getParent() 
-    self:runAction(cc.EaseIn:create(cc.MoveTo:create(0.6,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2)),2.5))
+    local action1 = cc.MoveTo:create(0.3,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2-50))
+    local action2 = cc.MoveTo:create(0.2,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2))
+
+    self:runAction(cc.Sequence:create(action1,action2))
 end
 
 function PopupSoundDownloadSuccess:runMoveOutAction()
@@ -118,8 +122,9 @@ function PopupSoundDownloadSuccess:runMoveOutAction()
     end
     
     local parentNode = self:getParent() 
-    local action = cc.EaseOut:create(cc.MoveTo:create(0.6,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2+800)),2.5)
-    self:runAction(cc.Sequence:create(action, cc.CallFunc:create(releaseSelf)))
+    local action1 = cc.MoveTo:create(0.2,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2-50))
+    local action2 = cc.MoveTo:create(0.3,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2+850))
+    self:runAction(cc.Sequence:create(action1,action2, cc.CallFunc:create(releaseSelf)))
 end
 
 function PopupSoundDownloadSuccess:disableTouchevent()
