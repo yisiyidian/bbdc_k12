@@ -212,10 +212,20 @@ function HomeLayer.create()
         end
     )
 
---
+    local button_shop_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local ShopLayer = require("view.shop.ShopLayer")
+            local shopLayer = ShopLayer.create()
+            s_SCENE:replaceGameLayer(shopLayer)
+        end
+    end
+
+    local button_shop = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
+    button_shop:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-200)
+    button_shop:addTouchEventListener(button_shop_clicked)
+    backColor:addChild(button_shop)   
 
 
-    
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
 --            s_CorePlayManager.initTotalPlay()
