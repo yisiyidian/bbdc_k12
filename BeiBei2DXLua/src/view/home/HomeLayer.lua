@@ -355,10 +355,14 @@ function HomeLayer.create()
     button_data:addChild(data_name)
 
     -- setting ui
-    --setting_back = cc.Sprite:create("image/homescene/setup_background.png")
-    setting_back = cc.LayerColor:create(cc.c4b(255,255,255,255),854,1136)
-    setting_back:ignoreAnchorPointForPosition(false)
+    -- setting_back = cc.Sprite:create("image/homescene/setup_background.png")
+    -- setting_back:setAnchorPoint(1,0.5)
+    -- setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
+    -- layer:addChild(setting_back)
+
+    setting_back = cc.LayerColor:create(cc.c4b(255,255,255,255), offset, s_DESIGN_HEIGHT)  
     setting_back:setAnchorPoint(1,0.5)
+    setting_back:ignoreAnchorPointForPosition(false)
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
 
@@ -422,6 +426,7 @@ function HomeLayer.create()
         end
 
         local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+<<<<<<< HEAD
         button_back:setOpacity(0)
         button_back:setAnchorPoint(0, 1)
         button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 80)
@@ -464,6 +469,26 @@ function HomeLayer.create()
         split:ignoreAnchorPointForPosition(false)
         split:setAnchorPoint(0.5,0)
         split:setPosition(button_back:getContentSize().width/2, 0)
+=======
+        button_back:setAnchorPoint(1, 1)
+        button_back:setPosition(offset, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 20)
+        button_back:addTouchEventListener(button_back_clicked)
+        setting_back:addChild(button_back)
+        
+        local logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
+        logo:setPosition(400, button_back:getContentSize().height/2)
+        button_back:addChild(logo)
+        
+        local label = cc.Label:createWithSystemFont(label_name[i],"",28)
+        label:setColor(cc.c4b(0,0,0,255))
+        label:setAnchorPoint(0,0.5)
+        label:setPosition(500, button_back:getContentSize().height/2)
+        button_back:addChild(label)
+        
+        local split = cc.Sprite:create("image/homescene/setup_line.png")
+        split:setAnchorPoint(1,0)
+        split:setPosition(offset, 0)
+>>>>>>> modify color
         button_back:addChild(split)
         
         --add offline 
@@ -482,6 +507,14 @@ function HomeLayer.create()
         table.insert(list, t)
     end
     
+<<<<<<< HEAD
+=======
+    -- local setting_shadow = cc.Sprite:create("image/homescene/setup_shadow.png")
+    -- setting_shadow:setAnchorPoint(1,0.5)
+    -- setting_shadow:setPosition(setting_back:getContentSize().width, setting_back:getContentSize().height/2)
+    -- setting_back:addChild(setting_shadow)
+    
+>>>>>>> modify color
     local moveLength = 100
     local moved = false
     local start_x = nil
