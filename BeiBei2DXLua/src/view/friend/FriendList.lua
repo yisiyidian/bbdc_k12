@@ -13,7 +13,7 @@ end
 
 function FriendList:ctor()
     --local friendCount = #self.friend
-    local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
+    local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
@@ -111,9 +111,15 @@ function FriendList:addList()
         custom_button:setContentSize(default_button:getContentSize())
         custom_button.index = i
         local custom_item = ccui.Layout:create()
-        custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,custom_button:getContentSize().height))
-        custom_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) * 0, custom_item:getContentSize().height * 0))
-        custom_item:addChild(custom_button)
+        custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,custom_button:getContentSize().height + 2))
+        custom_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) * 0, custom_item:getContentSize().height * 0 + 1))
+        custom_item:addChild(custom_button,1)
+
+        local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,custom_button:getContentSize().height + 2)
+        back:ignoreAnchorPointForPosition(false)
+        back:setAnchorPoint(0.5,0.5)
+        back:setPosition((s_RIGHT_X - s_LEFT_X) * 0.5, custom_item:getContentSize().height * 0.5)
+        custom_item:addChild(back,0)
 
         listView:addChild(custom_item)
         
@@ -140,7 +146,14 @@ function FriendList:addList()
                     local custom_item = ccui.Layout:create()
                     custom_item:setContentSize(custom_button:getContentSize())
                     custom_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) / 2.0, custom_item:getContentSize().height / 2.0))
-                    custom_item:addChild(custom_button)
+                    custom_item:addChild(custom_button,1)
+
+                    local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,custom_button:getContentSize().height + 2)
+                    back:ignoreAnchorPointForPosition(false)
+                    back:setAnchorPoint(0.5,0.5)
+                    back:setPosition((s_RIGHT_X - s_LEFT_X) * 0.5, custom_item:getContentSize().height * 0.5)
+                    custom_item:addChild(back,0)
+
                     listView:insertCustomItem(custom_item,listView:getCurSelectedIndex() + 1)
                     local delete = cc.Sprite:create('image/friend/fri_delete.png')
                     delete:setScaleX(1 / scale)

@@ -14,7 +14,7 @@ end
 function FriendRequest:ctor()
     showProgressHUD('正在加载好友请求')
 
-    local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,162 * 6)
+    local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
@@ -92,9 +92,15 @@ function FriendRequest:main()
         custom_button:setContentSize(default_button:getContentSize())
 
         local custom_item = ccui.Layout:create()
-        custom_item:setContentSize(custom_button:getContentSize())
+        custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,280 + 2))
         custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
         custom_item:addChild(custom_button)
+
+        local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,282)
+        back:ignoreAnchorPointForPosition(false)
+        back:setAnchorPoint(0.5,0.5)
+        back:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
+        custom_item:addChild(back,0)
 
         listView:addChild(custom_item) 
     end
