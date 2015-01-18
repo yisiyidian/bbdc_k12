@@ -247,9 +247,11 @@ function ChapterLayer:checkUnlockLevel()
         self:plotUnlockCloudAnimation()
 --        s_SCENE:callFuncWithDelay(1.0,function()            
             -- add next chapter
-            --self:addChapterIntoListView(currentProgress['chapter'])
+            --self:addChapterIntoListView()
 --            print(currentProgress['chapter']);
-            self:addChapterIntoListView("chapter1")
+        self:addChapterIntoListView(currentProgress['chapter'])
+        self:addPlayerOnLevel(currentProgress['chapter'],'level0')
+        self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
 --        end)
 --        s_SCENE:callFuncWithDelay(delayTime, function()
 --            self:plotUnlockCloudAnimation()
