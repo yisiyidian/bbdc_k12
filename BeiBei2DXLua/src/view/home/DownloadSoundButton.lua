@@ -102,10 +102,9 @@ function DownloadSoundButton.create(parentNode)
         end
 
         if downloadState == "SUCCESS" then
-            label:setString("已下载")
-            button:setPercent(0)
-            button_back:setEnabled(false)
-            button_back:setBright(false)
+            label:setVisible(false)
+            button:setVisible(false)
+            button_back:setVisible(false)
         end
 
         isOffline = currentNetwork
@@ -129,10 +128,9 @@ function DownloadSoundButton.create(parentNode)
             parent:addChild(popupSuccess,100)
             popupSuccess:runMoveInAction()
         end
-            button:setPercent(0)
-            label:setString("已下载")
-            button_back:setEnabled(false)   
-            button_back:setBright(false)
+            label:setVisible(false)
+            button:setVisible(false)
+            button_back:setVisible(false)
     end
     
     --update function
