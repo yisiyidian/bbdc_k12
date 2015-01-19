@@ -214,6 +214,9 @@ function HomeLayer.create()
 
     local button_shop_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
+            if downloadSoundBtnSchedule ~=nil then
+                downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+            end
             local ShopLayer = require("view.shop.ShopLayer")
             local shopLayer = ShopLayer.create()
             s_SCENE:replaceGameLayer(shopLayer)
