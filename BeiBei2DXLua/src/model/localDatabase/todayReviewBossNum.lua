@@ -14,17 +14,29 @@ local function createData(bookKey, bossNum, lastUpdate)
     return data
 end
 
--- local function saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum) -- TODO
---     local data = {}
---     data.userId = userId
---     data.bookKey = bookKey
---     data.today = today
---     data.reviewBossNum = reviewBossNum
---     data.className = 'DataTodayReviewBossNum'
---     if s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken() then
---         s_SERVER.createData(data)
---     end
--- end
+function M.getDataTodayTotalBoss()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+   if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + 1
+            local data = createData(bookKey, row.bossNum, row.lastUpdate)
+            return data
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + 1
+            local data = createData(bookKey, row.bossNum, row.lastUpdate)
+            return data
+        end
+    end
+
+    return nil 
+end
+
 function M.getTodayTotalBossNum()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
@@ -36,19 +48,11 @@ function M.getTodayTotalBossNum()
     local num = 0
     local bossNum = 0
     local lastUpdate = nil
-    if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
-            num = num + 1
-            bossNum = row.bossNum 
-            lastUpdate = row.lastUpdate
-        end
-    end
-    if num == 0 and username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
-            num = num + 1
-            bossNum = row.bossNum 
-            lastUpdate = row.lastUpdate
-        end
+    local data = M.getDataTodayTotalBoss()
+    if data ~= nil then
+        num = 1
+        bossNum = data.bossNum
+        lastUpdate = data.lastUpdate
     end
     
     if num == 0 then

@@ -452,4 +452,47 @@ end
 --     s_SERVER.search('classes/DataDailyStudyInfo?where={"userId":"' .. s_CURRENT_USER.userId .. '","bookKey":"' .. bookKey .. '","dayString":"' .. dayString .. '"}', s, f)
 -- end 
 
+function UserBaseServer.synBookRelations(classNames)
+    if s_CURRENT_USER.bookKey == '' then 
+        return 
+    end
+
+    local objs = {}
+    objs.className = 'DataBookRelations'
+    objs.bookKey = s_UserBaseServer.bookKey
+    updateDataFromUser(data, s_CURRENT_USER)
+
+    for key, value in pairs(classNames) do
+        if key == 'DataCurrentIndex' then
+            local data = s_LocalDatabaseManager.getDataCurrentIndex()
+            objs['lastUpdate' .. key] = data.lastUpdate
+            objs.currentIndex = data.currentIndex
+        elseif key == 'DataNewPlayState' then
+            local data = s_LocalDatabaseManager.getDataNewPlayState()
+            if data ~= nil then
+                objs['lastUpdate' .. key] = data.lastUpdate
+                objs.playModel = data.playModel
+                objs.rightWordList = data.rightWordList
+                objs.wrongWordList = data.wrongWordList
+                objs.wordCandidate = data.wordCandidate
+            end
+        elseif key == 'DataWrongWordBuffer' then
+            local data = s_LocalDatabaseManager.getDataWrongWordBuffer()
+            if data ~= nil then
+                objs['lastUpdate' .. key] = data.lastUpdate
+                objs.wordNum = data.wordNum
+                objs.wordBuffer = data.wordBuffer
+            end
+        elseif key == 'DataTodayReviewBossNum' then
+            local data = s_LocalDatabaseManager.getDataTodayTotalBoss()
+            if data ~= nil then
+                objs['lastUpdate' .. key] = data.lastUpdate
+                objs.bossNum = data.bossNum
+            end
+        end
+    end
+
+    
+end
+
 return UserBaseServer

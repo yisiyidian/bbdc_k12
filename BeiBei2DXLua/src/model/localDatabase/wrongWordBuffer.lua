@@ -32,24 +32,35 @@ function M.printWrongWordBuffer()
     print("</wrongWordBuffer>")
 end
 
-function M.getWrongWordBufferNum()
+function M.getDataWrongWordBuffer()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
 
-    local wrongWordBufferNum = 0
     local num = 0
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
-            wrongWordBufferNum = wrongWordBufferNum + row.wordNum
+            local data = createData(row.bookKey, row.lastUpdate, row.wordNum, row.wordBuffer)
+            return data
         end
     end
     if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
-            wrongWordBufferNum = wrongWordBufferNum + row.wordNum
+            local data = createData(row.bookKey, row.lastUpdate, row.wordNum, row.wordBuffer)
+            return data
         end
+    end
+    
+    return nil
+end
+
+function M.getWrongWordBufferNum()
+    local wrongWordBufferNum = 0
+    local data = M.getDataWrongWordBuffer()
+    if data ~= nil then
+        wrongWordBufferNum = data.wordNum
     end
     
     return wrongWordBufferNum
