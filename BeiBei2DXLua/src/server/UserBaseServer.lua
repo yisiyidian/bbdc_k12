@@ -492,6 +492,13 @@ function UserBaseServer.synBookRelations(classNames)
         end
     end
 
+end
+
+function UserBaseServer.synUserConfig()
+    local isAlterOn = s_LocalDatabaseManager.getIsAlterOn()
+    local slideNum = s_LocalDatabaseManager.getSlideNum()
+    local time = os.time()
+    local data = DataStudyConfiguration.createData(isAlterOn, slideNum, time)
     
 end
 

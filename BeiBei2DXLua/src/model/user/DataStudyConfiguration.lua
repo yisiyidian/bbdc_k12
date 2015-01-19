@@ -6,6 +6,17 @@ local DataStudyConfiguration = class("DataStudyConfiguration", function()
     return DataClassBase.new()
 end)
 
+function DataStudyConfiguration.createData(isAlterOn, slideNum, lastUpdate)
+    local data = DataStudyConfiguration.create()
+    updateDataFromUser(data, s_CURRENT_USER)
+
+    data.isAlterOn = isAlterOn
+    data.slideNum = slideNum
+    data.lastUpdate = lastUpdate
+
+    return data
+end
+
 function DataStudyConfiguration.create()
     local data = DataStudyConfiguration.new()
     return data
