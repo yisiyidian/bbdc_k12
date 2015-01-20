@@ -1,6 +1,6 @@
-local RBWORDNUM = 10
-local MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
-local MAXTYPEINDEX = 4
+RBWORDNUM = 10
+MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
+MAXTYPEINDEX = 4
 
 require("common.global")
 local sqlite3 = require("lsqlite3")
