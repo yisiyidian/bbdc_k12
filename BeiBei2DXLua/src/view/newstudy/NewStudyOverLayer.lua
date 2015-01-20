@@ -41,7 +41,7 @@ function NewStudyOverLayer.create()
     label_hint:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     label_hint:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(label_hint)
-
+    
     local button_go_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound

@@ -78,7 +78,7 @@ function HomeLayer.create()
     local book_name 
     
     local English_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
-    local simple_array = {'四级','六级','高考','托福','雅思','gre','考验','专四','专八','gmat','sat','中学','小学'}
+    local simple_array = {'四级','六级','高考','托福','雅思','gre','考研','专四','专八','gmat','sat','中学','小学'}
     
     for i = 1, #English_array do
     	if s_CURRENT_USER.bookKey == English_array[i] then

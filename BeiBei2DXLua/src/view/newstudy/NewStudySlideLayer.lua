@@ -16,7 +16,7 @@ function NewStudySlideLayer.create()
     -- word info
     local currentWordName
     if s_CorePlayManager.isStudyModel() then
-        currentWordName = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+        currentWordName = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1]
     else
         currentWordName = s_CorePlayManager.wordCandidate[1]
     end
@@ -83,8 +83,6 @@ function NewStudySlideLayer.create()
     
             layer:runAction(cc.Sequence:create(cc.CallFunc:create(function()backColor.indexSwell()end),cc.DelayTime:create(2),cc.CallFunc:create(function()  
             if s_CorePlayManager.isStudyModel() then
-                    s_CorePlayManager.updateWrongWordList(wordname)
-                    s_CorePlayManager.updateCurrentIndex()
                     if s_CorePlayManager.bookOver() then
                         if s_CorePlayManager.wrongWordNum == 0 then
                             s_CorePlayManager.enterNewStudyBookOverLayer()
