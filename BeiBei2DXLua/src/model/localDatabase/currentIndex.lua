@@ -60,6 +60,7 @@ function M.getDataCurrentIndex()
 
     if hasLocalDBData == false then
         Manager.saveData(data, userId, username, 0)
+        s_UserBaseServer.saveDataCurrentIndex()
     end
 
     return data
@@ -70,11 +71,14 @@ function M.getCurrentIndex()
     return data.currentIndex
 end
 
-function M.setCurrentIndex(currentIndex)
+-- lastUpdate : nil means now
+function M.saveDataCurrentIndex(currentIndex, lastUpdate)
+    lastUpdate = lastUpdate or os.time()
+    
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
-    local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
+    local data = createDataCurrentIndex(lastUpdate, bookKey, currentIndex)
 
     local num = 0
     if userId ~= '' then
