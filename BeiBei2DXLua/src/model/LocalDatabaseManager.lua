@@ -368,7 +368,7 @@ end
 
 function Manager.addWrongWordBuffer(wrongWord)
     localdatabase_wrongWordBuffer.addWrongWordBuffer(wrongWord)
-    UserBaseServer.saveDataWrongWordBuffer()
+    s_UserBaseServer.saveDataWrongWordBuffer()
 end
 
 function Manager.getDataWrongWordBuffer()
