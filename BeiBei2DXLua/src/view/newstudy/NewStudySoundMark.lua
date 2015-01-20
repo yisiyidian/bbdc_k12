@@ -58,7 +58,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
 
 
 
-    button_wordname = cc.Label:createWithSystemFont(wordname,"",44)
+    button_wordname = cc.Label:createWithSystemFont(wordname,"",64)
     button_wordname:setColor(cc.c4b(31,68,102,255))
 
     button_country = ccui.Button:create(button_country_name1, button_country_name2, "")
@@ -79,7 +79,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
 
     -- handle position
     local max_text_length = math.max(button_wordname:getContentSize().width, button_soundmark_en:getContentSize().width, button_soundmark_us:getContentSize().width)
-    local total_length = button_pronounce:getContentSize().width + max_text_length + 10
+    local total_length = button_pronounce:getContentSize().width + max_text_length + 30
     local position_left_x = (s_DESIGN_WIDTH-total_length)/2 + button_pronounce:getContentSize().width/2
     local position_right_x = (s_DESIGN_WIDTH+total_length)/2 - max_text_length/2
 
