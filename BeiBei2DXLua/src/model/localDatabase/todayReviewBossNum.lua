@@ -18,6 +18,8 @@ function M.getDataTodayTotalBoss()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
+    
+    local num = 0
 
    if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
