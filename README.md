@@ -26,6 +26,9 @@ If you check out other branch, remove folders below
 /BeiBei2DXLua/frameworks/runtime-src/proj.android/libs/armeabi
 /BeiBei2DXLua/frameworks/runtime-src/proj.android/obj
 
+lean cloud
+手动添加数据库表 DataBookRelations DataStudyConfiguration 
+
 ----------------------------------------------------------------------------------------
 开发环境
 

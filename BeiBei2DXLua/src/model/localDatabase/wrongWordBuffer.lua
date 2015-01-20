@@ -5,7 +5,8 @@ local M = {}
 
 local function createData(bookKey, lastUpdate, wordNum, wordBuffer)
     local data = DataWrongWordBuffer.create()
-
+    updateDataFromUser(data, s_CURRENT_USER)
+    
     data.bookKey = bookKey
     data.lastUpdate = lastUpdate
 
@@ -112,6 +113,30 @@ function M.addWrongWordBuffer(wrongWord)
         local data = createData(bookKey, time, wordNum, wordBuffer)
         Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."';")
     end
+end
+
+-- lastUpdate : nil means now
+function M.saveDataWrongWordBuffer(wordNum, wordBuffer, lastUpdate)
+    lastUpdate = lastUpdate or os.time()
+
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+    
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+        end
+    end
+
+    local data = createData(bookKey, lastUpdate, wordNum, wordBuffer)
+    Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."';")
 end
 
 return M

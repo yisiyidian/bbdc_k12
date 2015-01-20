@@ -21,7 +21,8 @@ function M.getDataTodayTotalBoss()
     
     local num = 0
 
-   if userId ~= '' then
+    local num = 0
+    if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
             num = num + 1
             local data = createData(bookKey, row.bossNum, row.lastUpdate)
@@ -61,7 +62,6 @@ function M.getTodayTotalBossNum()
         local reviewBossNum = Manager.getTodayRemainBossNum()
         local data = createData(bookKey, reviewBossNum, lastUpdate)
         Manager.saveData(data, userId, username, num)
-        -- saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
         return reviewBossNum
     else
         local lastUpdateDay = os.date("%x", lastUpdate)
@@ -71,10 +71,33 @@ function M.getTodayTotalBossNum()
             local reviewBossNum = Manager.getTodayRemainBossNum()
             local data = createData(bookKey, reviewBossNum, lastUpdate)
             Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' ;")
-            -- saveDataTodayReviewBossNum(userId, bookKey, today, reviewBossNum)
             return reviewBossNum
         end
     end
+end
+
+-- lastUpdate : nil means now
+function M.saveDataTodayReviewBossNum(bossNum, lastUpdate)
+    lastUpdate = lastUpdate or os.time()
+
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + 1
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + 1
+        end
+    end
+
+    local data = createData(bookKey, bossNum, lastUpdate)
+    Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' ;")
 end
 
 return M
