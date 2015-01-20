@@ -132,10 +132,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
                     tmp_sprite:setOpacity(120)
                     main:addChild(tmp_sprite)
                     
-                    local tmp_label = cc.Label:createWithSystemFont(charaster_set_filtered[randomIndex],"",40)
-                    tmp_label:setColor(cc.c3b(0,0,0))
+                    local tmp_label = cc.Label:createWithSystemFont(charaster_set_filtered[randomIndex],"",60)
+                    tmp_label:setColor(cc.c3b(20,20,20))
                     tmp_label:setOpacity(120)
-                    tmp_label:setPosition(tmp_sprite:getContentSize().width/2, tmp_sprite:getContentSize().height/2)
+                    tmp_label:setPosition(tmp_sprite:getContentSize().width/2 + 3, tmp_sprite:getContentSize().height/2 + 3)
                     tmp_sprite:addChild(tmp_label)
                 else
                     node:setPosition(left+gap*(i-1), bottom+gap*(j-1))

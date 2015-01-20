@@ -33,9 +33,9 @@ function FlipNode.create(back, character, x, y)
     main.main_back:setPosition(mainSize.width/2, mainSize.height/2)
     main:addChild(main.main_back)
     
-    main.main_character_label = cc.Label:createWithSystemFont(main.main_character_content,"",40)
-    main.main_character_label:setColor(cc.c3b(0,0,0))
-    main.main_character_label:setPosition(mainSize.width/2, mainSize.height/2)
+    main.main_character_label = cc.Label:createWithSystemFont(main.main_character_content,"",60)
+    main.main_character_label:setColor(cc.c3b(20,20,20))
+    main.main_character_label:setPosition(mainSize.width/2 + 3, mainSize.height/2 + 3)
     main:addChild(main.main_character_label)
 
     main.firstStyle = function()
