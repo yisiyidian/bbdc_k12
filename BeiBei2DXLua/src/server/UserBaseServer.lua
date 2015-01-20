@@ -452,54 +452,139 @@ end
 --     s_SERVER.search('classes/DataDailyStudyInfo?where={"userId":"' .. s_CURRENT_USER.userId .. '","bookKey":"' .. bookKey .. '","dayString":"' .. dayString .. '"}', s, f)
 -- end 
 
-function UserBaseServer.synBookRelations(classNames)
+function UserBaseServer.saveDataCurrentIndex()
+    UserBaseServer.synBookRelations({'DataCurrentIndex'}, nil, false)
+end
+
+function UserBaseServer.saveDataNewPlayState()
+    UserBaseServer.synBookRelations({'DataNewPlayState'}, nil, false)
+end
+
+function UserBaseServer.saveDataWrongWordBuffer()
+    UserBaseServer.synBookRelations({'DataWrongWordBuffer'}, nil, false)
+end
+
+function UserBaseServer.saveDataTodayReviewBossNum()
+    UserBaseServer.synBookRelations({'DataTodayReviewBossNum'}, nil, false)
+end
+
+function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if onCompleted then onCompleted() end
+        return
+    end
+
     if s_CURRENT_USER.bookKey == '' then 
+        if onCompleted then onCompleted() end
         return 
     end
+
+    local all = {'DataCurrentIndex', 'DataNewPlayState', 'DataWrongWordBuffer', 'DataTodayReviewBossNum'}
+    classNames = classNames or all
+    saveToLocalDB = saveToLocalDB or true
 
     local objs = {}
     objs.className = 'DataBookRelations'
     objs.bookKey = s_UserBaseServer.bookKey
-    updateDataFromUser(data, s_CURRENT_USER)
+    updateDataFromUser(objs, s_CURRENT_USER)
 
+    local clientDatas = {}
     for key, value in pairs(classNames) do
-        if key == 'DataCurrentIndex' then
+        if value == 'DataCurrentIndex' then
             local data = s_LocalDatabaseManager.getDataCurrentIndex()
-            objs['lastUpdate' .. key] = data.lastUpdate
+            objs['lastUpdate' .. value] = data.lastUpdate
             objs.currentIndex = data.currentIndex
-        elseif key == 'DataNewPlayState' then
+            clientDatas[value] = data
+        elseif value == 'DataNewPlayState' then
             local data = s_LocalDatabaseManager.getDataNewPlayState()
             if data ~= nil then
-                objs['lastUpdate' .. key] = data.lastUpdate
+                objs['lastUpdate' .. value] = data.lastUpdate
                 objs.playModel = data.playModel
                 objs.rightWordList = data.rightWordList
                 objs.wrongWordList = data.wrongWordList
                 objs.wordCandidate = data.wordCandidate
+                clientDatas[value] = data
             end
-        elseif key == 'DataWrongWordBuffer' then
+        elseif value == 'DataWrongWordBuffer' then
             local data = s_LocalDatabaseManager.getDataWrongWordBuffer()
             if data ~= nil then
-                objs['lastUpdate' .. key] = data.lastUpdate
+                objs['lastUpdate' .. value] = data.lastUpdate
                 objs.wordNum = data.wordNum
                 objs.wordBuffer = data.wordBuffer
+                clientDatas[value] = data
             end
-        elseif key == 'DataTodayReviewBossNum' then
+        elseif value == 'DataTodayReviewBossNum' then
             local data = s_LocalDatabaseManager.getDataTodayTotalBoss()
             if data ~= nil then
-                objs['lastUpdate' .. key] = data.lastUpdate
+                objs['lastUpdate' .. value] = data.lastUpdate
                 objs.bossNum = data.bossNum
+                clientDatas[value] = data
             end
         end
     end
 
+    s_SERVER.synData(objs, 
+        function (api, result) 
+            print ('synBookRelations >>>')
+            print_lua_table (result)
+            print ('synBookRelations <<<')
+            
+            if saveToLocalDB == true then
+                -- update local db data
+                for key, value in pairs(clientDatas) do
+                    local timestamp = result['lastUpdate'..key]
+                    if timestamp ~= nil and value['lastUpdate'] ~= nil and timestamp > value['lastUpdate'] then
+                        value['lastUpdate'] = timestamp
+                        if key == 'DataCurrentIndex' then
+                            s_LocalDatabaseManager.saveDataCurrentIndex(result.currentIndex, timestamp)
+                        elseif key == 'DataNewPlayState' then
+                            s_LocalDatabaseManager.saveDataNewPlayState(result.playModel, result.rightWordList, result.wrongWordList, result.wordCandidate, timestamp)
+                        elseif key == 'DataWrongWordBuffer' then
+                            s_LocalDatabaseManager.saveDataWrongWordBuffer(result.wordNum, result.wordBuffer, timestamp)
+                        elseif key == 'DataTodayReviewBossNum' then
+                            s_LocalDatabaseManager.saveDataTodayReviewBossNum(result.bossNum, timestamp)
+                        end
+                    end
+                end -- for
+            end
+
+            if onCompleted then onCompleted() end
+        end, 
+        function (api, code, message, description) 
+            if onCompleted then onCompleted() end
+        end)
 end
 
-function UserBaseServer.synUserConfig()
+function UserBaseServer.synUserConfig(onCompleted, saveToLocalDB)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if onCompleted then onCompleted() end
+        return
+    end
+
+    saveToLocalDB = saveToLocalDB or true
+
+    local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
     local isAlterOn = s_LocalDatabaseManager.getIsAlterOn()
     local slideNum = s_LocalDatabaseManager.getSlideNum()
     local time = os.time()
     local data = DataStudyConfiguration.createData(isAlterOn, slideNum, time)
     
+    s_SERVER.synData(data, 
+        function (api, result) 
+            print ('synUserConfig >>>')
+            print_lua_table (result)
+            print ('synUserConfig <<<')
+
+            local timestamp = result['lastUpdate']
+            if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
+                s_LocalDatabaseManager.saveDataStudyConfiguration(result.isAlterOn, result.slideNum, timestamp)
+            end
+
+            if onCompleted then onCompleted() end
+        end, 
+        function (api, code, message, description)
+            if onCompleted then onCompleted() end 
+        end)
 end
 
 return UserBaseServer

@@ -1,6 +1,6 @@
-local RBWORDNUM = 10
-local MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
-local MAXTYPEINDEX = 4
+RBWORDNUM = 10
+MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
+MAXTYPEINDEX = 4
 
 require("common.global")
 local sqlite3 = require("lsqlite3")
@@ -308,12 +308,19 @@ function Manager.getCurrentIndex()
     return localdatabase_currentIndex.getCurrentIndex()
 end
 
-function Manager.setCurrentIndex(currentIndex)
-    localdatabase_currentIndex.setCurrentIndex(currentIndex)
+-- lastUpdate : nil means now
+function Manager.setCurrentIndex(currentIndex, lastUpdate)
+    localdatabase_currentIndex.saveDataCurrentIndex(currentIndex, lastUpdate)
+    s_UserBaseServer.saveDataCurrentIndex()
 end
 
 function Manager.getDataCurrentIndex()
     return localdatabase_currentIndex.getDataCurrentIndex()
+end
+
+-- lastUpdate : nil means now
+function Manager.saveDataCurrentIndex(currentIndex, lastUpdate)
+    localdatabase_currentIndex.saveDataCurrentIndex(currentIndex, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -338,8 +345,15 @@ function Manager.getNewPlayState()
     return localdatabase_newPlayState.getNewPlayState()
 end
 
-function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
-    localdatabase_newPlayState.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
+-- lastUpdate : nil means now
+function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate, lastUpdate)
+    localdatabase_newPlayState.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate, lastUpdate)
+    s_UserBaseServer.saveDataNewPlayState()
+end
+
+-- lastUpdate : nil means now
+function Manager.saveDataNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate, lastUpdate)
+    localdatabase_newPlayState.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -354,10 +368,16 @@ end
 
 function Manager.addWrongWordBuffer(wrongWord)
     localdatabase_wrongWordBuffer.addWrongWordBuffer(wrongWord)
+    s_UserBaseServer.saveDataWrongWordBuffer()
 end
 
 function Manager.getDataWrongWordBuffer()
     return localdatabase_wrongWordBuffer.getDataWrongWordBuffer()
+end
+
+-- lastUpdate : nil means now
+function Manager.saveDataWrongWordBuffer(wordNum, wordBuffer, lastUpdate)
+    return localdatabase_wrongWordBuffer.saveDataWrongWordBuffer(wordNum, wordBuffer, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -389,11 +409,18 @@ end
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.getTodayTotalBossNum()
-    localdatabase_todayReviewBossNum.getTodayTotalBossNum()
+    local ret = localdatabase_todayReviewBossNum.getTodayTotalBossNum()
+    s_UserBaseServer.saveDataTodayReviewBossNum()
+    return ret
 end
 
 function Manager.getDataTodayTotalBoss()
-    localdatabase_todayReviewBossNum.getDataTodayTotalBoss()
+    return localdatabase_todayReviewBossNum.getDataTodayTotalBoss()
+end
+
+-- lastUpdate : nil means now
+function Manager.saveDataTodayReviewBossNum(bossNum, lastUpdate)
+    localdatabase_todayReviewBossNum.saveDataTodayReviewBossNum(bossNum, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -403,16 +430,25 @@ function Manager.getIsAlterOn()
     return localdatabase_studyConfiguration.getIsAlterOn()
 end
 
-function Manager.setIsAlterOn(isAlterOn)
-    localdatabase_studyConfiguration.setIsAlterOn(isAlterOn)
+-- lastUpdate : nil means now
+function Manager.setIsAlterOn(isAlterOn, lastUpdate)
+    localdatabase_studyConfiguration.setIsAlterOn(isAlterOn, lastUpdate)
+    s_UserBaseServer.synUserConfig(nil, false)
 end
 
 function Manager.getSlideNum()
     return localdatabase_studyConfiguration.getSlideNum()
 end
 
-function Manager.updateSlideNum()
-    localdatabase_studyConfiguration.updateSlideNum()
+-- lastUpdate : nil means now
+function Manager.updateSlideNum(lastUpdate)
+    localdatabase_studyConfiguration.updateSlideNum(lastUpdate)
+    s_UserBaseServer.synUserConfig(nil, false)
+end
+
+-- lastUpdate : nil means now
+function Manager.saveDataStudyConfiguration(isAlterOn, slideNum, lastUpdate)
+    localdatabase_studyConfiguration.saveDataStudyConfiguration(isAlterOn, slideNum, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------

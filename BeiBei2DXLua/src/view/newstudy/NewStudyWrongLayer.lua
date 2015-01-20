@@ -44,7 +44,7 @@ function NewStudyWrongLayer.create()
     layer:addChild(backColor)
 
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
-    soundMark:setPosition(bigWidth/2, 960)  
+    soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
     
     local detailInfo = DetailInfo.create(currentWord)

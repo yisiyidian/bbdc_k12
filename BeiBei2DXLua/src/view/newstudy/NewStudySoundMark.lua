@@ -83,8 +83,8 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     local position_left_x = (s_DESIGN_WIDTH-total_length)/2 + button_pronounce:getContentSize().width/2
     local position_right_x = (s_DESIGN_WIDTH+total_length)/2 - max_text_length/2
 
-    button_pronounce:setPosition(position_left_x,height)
-    button_wordname:setPosition(position_right_x,height)
+    button_pronounce:setPosition(position_left_x,height )
+    button_wordname:setPosition(position_right_x,height )
     button_country:setPosition(position_left_x,0)
     button_soundmark_us:setPosition(position_right_x,0)
     button_soundmark_en:setPosition(position_right_x,0)
@@ -95,6 +95,11 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     main:addChild(button_country)
     main:addChild(button_soundmark_us)
     main:addChild(button_soundmark_en)
+    
+    main.scale = function (float)
+    	button_pronounce:setScale(float)
+        button_country:setScale(float)
+    end
 
     if s_CURRENT_USER.isSoundAm == 1 then
         button_soundmark_en:setVisible(false)

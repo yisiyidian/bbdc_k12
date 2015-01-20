@@ -48,14 +48,14 @@ function SmallWordDetailInfo.create(word)
     
     
     
-    label_hint = cc.Label:createWithSystemFont("这个词太熟悉了？如果希望放弃复习，点击下一个按钮将它收入你的熟词库吧。","",28)
-    label_hint:setAnchorPoint(0,1)
-    label_hint:setColor(cc.c4b(0,0,0,255))
-    label_hint:setDimensions(text_length,0)
-    label_hint:setAlignment(0)
-    label_hint:setPosition(left, index_y)
-    main:addChild(label_hint)
-    index_y = index_y - label_hint:getContentSize().height - 10 
+--    label_hint = cc.Label:createWithSystemFont("这个词太熟悉了？如果希望放弃复习，点击下一个按钮将它收入你的熟词库吧。","",28)
+--    label_hint:setAnchorPoint(0,1)
+--    label_hint:setColor(cc.c4b(0,0,0,255))
+--    label_hint:setDimensions(text_length,0)
+--    label_hint:setAlignment(0)
+--    label_hint:setPosition(left, index_y)
+--    main:addChild(label_hint)
+--    index_y = index_y - label_hint:getContentSize().height - 10 
 
     return main
 end
