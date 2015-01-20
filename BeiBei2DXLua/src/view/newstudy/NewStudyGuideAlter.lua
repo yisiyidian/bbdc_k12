@@ -49,6 +49,18 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
     
+    main.addbeibeiThrowHeart = function()
+       local beibei = cc.Sprite:create("image/newstudy/throwheart.png")
+       beibei:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
+       back:addChild(beibei)
+    end
+    
+    main.addbeibeiBreakHeart = function()
+        local beibei = cc.Sprite:create("image/newstudy/breakheart.png")
+        beibei:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
+        back:addChild(beibei)
+    end
+    
     local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
@@ -86,20 +98,20 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         button_know:addTouchEventListener(button_know_clicked)
         back:addChild(button_know)
     else
-        box = cc.Sprite:create("image/newstudy/guide_box.png")
-        box:setPosition(maxWidth/2, 160)
-        back:addChild(box)
-        
-        box_right = cc.Sprite:create("image/newstudy/guide_right.png")
-        box_right:setPosition(maxWidth/2, 160)
-        box_right:setVisible(false)
-        back:addChild(box_right)
-        
-        local label_box = cc.Label:createWithSystemFont("不再出现此提示","",24)
-        label_box:setAnchorPoint(0, 0.5)
-        label_box:setColor(cc.c4b(0,0,0,255))
-        label_box:setPosition(maxWidth/2+30, 160)
-        back:addChild(label_box)
+--        box = cc.Sprite:create("image/newstudy/guide_box.png")
+--        box:setPosition(maxWidth/2, 160)
+--        back:addChild(box)
+--        
+--        box_right = cc.Sprite:create("image/newstudy/guide_right.png")
+--        box_right:setPosition(maxWidth/2, 160)
+--        box_right:setVisible(false)
+--        back:addChild(box_right)
+--        
+--        local label_box = cc.Label:createWithSystemFont("不再出现此提示","",24)
+--        label_box:setAnchorPoint(0, 0.5)
+--        label_box:setColor(cc.c4b(0,0,0,255))
+--        label_box:setPosition(maxWidth/2+30, 160)
+--        back:addChild(label_box)
     
         local button_cancel_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
@@ -130,28 +142,28 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     end
 
     -- touch lock
-    local onTouchBegan = function(touch, event)
-        if box ~= nil then
-            local location = box:convertToNodeSpace(touch:getLocation())
-            if cc.rectContainsPoint({x=0,y=0,width=box:getBoundingBox().width,height=box:getBoundingBox().height}, location) then
-                if main.box_tag == 0 then
-                    main.box_tag = 1
-                    box_right:setVisible(true)
-                else
-                    main.box_tag = 0
-                    box_right:setVisible(false)
-                end
-            end
-        end
-        
-        return true
-    end
-
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:setSwallowTouches(true)
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    local eventDispatcher = main:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+--    local onTouchBegan = function(touch, event)
+--        if box ~= nil then
+--            local location = box:convertToNodeSpace(touch:getLocation())
+--            if cc.rectContainsPoint({x=0,y=0,width=box:getBoundingBox().width,height=box:getBoundingBox().height}, location) then
+--                if main.box_tag == 0 then
+--                    main.box_tag = 1
+--                    box_right:setVisible(true)
+--                else
+--                    main.box_tag = 0
+--                    box_right:setVisible(false)
+--                end
+--            end
+--        end
+--        
+--        return true
+--    end
+--
+--    local listener = cc.EventListenerTouchOneByOne:create()
+--    listener:setSwallowTouches(true)
+--    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+--    local eventDispatcher = main:getEventDispatcher()
+--    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
     return main    
 end

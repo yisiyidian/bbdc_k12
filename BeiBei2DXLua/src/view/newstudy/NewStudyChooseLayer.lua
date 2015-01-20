@@ -3,6 +3,7 @@ require("common.global")
 
 local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
+local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 
 
 local  NewStudyChooseLayer = class("NewStudyChooseLayer", function ()
@@ -78,7 +79,7 @@ function NewStudyChooseLayer.create()
     layer:addChild(backColor)
     
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
-    soundMark:setPosition(bigWidth/2, 960)  
+    soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
 
     local click_choose = function(sender, eventType)
@@ -106,7 +107,7 @@ function NewStudyChooseLayer.create()
                         s_CorePlayManager.enterNewStudyRightLayer()
                     end)))
                 else             
-                    local action1 = cc.MoveTo:create(0.5,cc.p((backColor.getProgressBarIndexPosition()) - 20,1120 - sender:getPositionY()))
+                    local action1 = cc.MoveTo:create(0.5,cc.p((backColor.getProgressBarIndexPosition()) - 20,1070 - sender:getPositionY()))
                     local action2 = cc.ScaleTo:create(0.2,0)
                     feedback:runAction(cc.Sequence:create(action1, action2,cc.CallFunc:create(function() 
                         AnalyticsStudyAnswerRight_strikeWhileHot()
@@ -130,11 +131,15 @@ function NewStudyChooseLayer.create()
                         AnalyticsStudyGuessWrong()
                         s_CorePlayManager.updateWrongWordList(wordname)
                         s_CorePlayManager.updateCurrentIndex()
-                        s_CorePlayManager.enterNewStudyWrongLayer()
+                        local guessWrong = GuessWrong.create()
+                        s_SCENE:popup(guessWrong)
+                        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()                
                     else
                         AnalyticsStudyGuessWrong_strikeWhileHot()
 
-                        s_CorePlayManager.enterNewStudyWrongLayer()
+                        local guessWrong = GuessWrong.create()
+                        s_SCENE:popup(guessWrong)
+                        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
                     end
                 end)))
             end
