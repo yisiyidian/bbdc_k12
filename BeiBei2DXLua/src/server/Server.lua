@@ -94,6 +94,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
             local description = result.description
 
             if code and onFailed then
+                LUA_ERROR = LUA_ERROR .. '\necode:' .. tostring(code) .. ',msg:' .. tostring(message) .. ',des:' .. tostring(description)
                 onFailed(api, code, message, description)
             elseif not code and onSucceed then 
                 onSucceed(api, result)
@@ -208,6 +209,10 @@ end
 
 function Server.updateData(obj, onSucceed, onFailed)
     Server.requestFunction('apiUpdate', {['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
+end
+
+function Server.synData(obj, onSucceed, onFailed)
+    Server.requestFunction('apiSyn', {['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, onSucceed, onFailed)
 end
 -- cloud function <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

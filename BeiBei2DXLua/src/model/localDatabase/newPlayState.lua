@@ -147,7 +147,10 @@ function M.getNewPlayState()
     return newPlayState
 end
 
-function M.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate)
+-- lastUpdate : nil means now
+function M.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate, lastUpdate)
+    lastUpdate = lastUpdate or os.time()
+
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username

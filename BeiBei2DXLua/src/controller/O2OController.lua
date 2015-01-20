@@ -248,8 +248,14 @@ function O2OController.getUserDatasOnline()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
             else
-                s_CorePlayManager.enterHomeLayer()
-                O2OController.getBulletinBoard()    
+                showProgressHUD()
+                s_UserBaseServer.synBookRelations(nil, function ()
+                    s_UserBaseServer.synUserConfig(function ()
+                        s_CorePlayManager.enterHomeLayer()
+                        O2OController.getBulletinBoard()    
+                        hideProgressHUD()
+                    end)
+                end)
             end 
         end)
     end)
@@ -351,9 +357,9 @@ function O2OController.getDataLogIn(onSaved)
     local DataLogIn = require('model.user.DataLogIn')
 
     local function onUpdateWeekCompleted(data)
+        hideProgressHUD()
         if onSaved then onSaved() end
         s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = '" .. tostring(data.week) .. "'")
-        hideProgressHUD()
     end
 
     -- save to local or server
