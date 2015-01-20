@@ -209,30 +209,56 @@ function WordList:createButtons(headerHeight)
     return buttons
 end
 
+function WordList:createBackButton(type)
+    local backButton = ccui.Button:create("image/word_list/button_wordbook_back.png")
+    backButton:setAnchorPoint(cc.p(0,0.5))
+    local backButtonEvent = function(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            if type[1] == "ALL" then
+                s_CorePlayManager.enterHomeLayer()
+            else
+                s_CorePlayManager.enterLevelLayer()
+            end
+        end
+    end
+
+    backButton:addTouchEventListener(backButtonEvent)
+    return backButton
+end
+
 function WordList:createBackground()
 
+    --init background layer
     local backLayerColor = cc.LayerColor:create(cc.c4b(245,247,248,255),854,s_DESIGN_HEIGHT)
     backLayerColor:setAnchorPoint(0,0)
     backLayerColor:setPosition(s_LEFT_X,0)
     self:addChild(backLayerColor,0)
 
+    --init header
     local header = cc.Sprite:create("image/word_list/frontground_ciku.png")
     header:setAnchorPoint(cc.p(0,0))
     header:setPosition(s_LEFT_X,s_DESIGN_HEIGHT-header:getContentSize().height)
+    self:addChild(header,1)
 
+    --init two buttons
     local buttons = self:createButtons(header:getContentSize().height)
     local familiarWords = buttons["familiarWords"]
     familiarWords:setPosition(s_DESIGN_WIDTH/2,header:getContentSize().height/2)
     local newWords = buttons["newWords"]
     newWords:setPosition(s_DESIGN_WIDTH/2,header:getContentSize().height/2)
 
+    --init listview
     local type ={"ALL","GRASP"}
     local listview = createWordListview(type,header:getContentSize().height)
     listview:setPosition(s_LEFT_X,s_DESIGN_HEIGHT-header:getContentSize().height)
     self:addChild(listview,2)
     self.listview = listview
  
-    self:addChild(header,1)
+    --init back button
+    local backBtn = self:createBackButton(type)
+    backBtn:setPosition(50,header:getContentSize().height-backBtn:getContentSize().height-10)
+
+    header:addChild(backBtn)
     header:addChild(familiarWords)
     header:addChild(newWords)
 end
