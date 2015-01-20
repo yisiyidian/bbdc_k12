@@ -128,7 +128,8 @@ function NewStudyChooseLayer.create()
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     if s_CorePlayManager.isStudyModel() then
                         AnalyticsStudyGuessWrong()
-
+                        s_CorePlayManager.updateWrongWordList(wordname)
+                        s_CorePlayManager.updateCurrentIndex()
                         s_CorePlayManager.enterNewStudyWrongLayer()
                     else
                         AnalyticsStudyGuessWrong_strikeWhileHot()
@@ -175,7 +176,8 @@ function NewStudyChooseLayer.create()
             if s_CorePlayManager.isStudyModel() then
                 AnalyticsStudyDontKnowAnswer()  
                 AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
-                
+                s_CorePlayManager.updateWrongWordList(wordname)
+                s_CorePlayManager.updateCurrentIndex()
                 s_CorePlayManager.enterNewStudyWrongLayer()
             else
                 AnalyticsStudyDontKnowAnswer_strikeWhileHot()

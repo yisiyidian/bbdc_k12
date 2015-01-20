@@ -16,7 +16,7 @@ function NewStudyWrongLayer.create()
     -- word info
     local currentWordName
     if s_CorePlayManager.isStudyModel() then
-        currentWordName = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
+        currentWordName = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1]
     else
         currentWordName = s_CorePlayManager.wordCandidate[1]
     end

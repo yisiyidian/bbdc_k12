@@ -92,39 +92,13 @@ function NewStudyMiddleLayer.create()
     labelWordNum:setPosition(50,50)
     labelWordNum:setColor(cc.c4b(234,123,3,255))
     figureback:addChild(labelWordNum)
-    
-    
-    
-    
 
     AnalyticsFirst(ANALYTICS_FIRST_GOT_ENOUGH_UNKNOWN_WORDS, tostring(wrongWordNum))
 
---    local circle = cc.Sprite:create("image/newstudy/yellow_circle.png")
---    circle:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
---    backColor:addChild(circle)
---    
---    local number = cc.Label:createWithSystemFont("+"..wrongWordNum,"",60)
---    number:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
---    number:setColor(cc.c4b(98,124,148,255))
---    circle:addChild(number)
---    
---    local label_hint2 = cc.Label:createWithSystemFont("获得奖励：","",36)
---    label_hint2:setPosition(170, 320)
---    label_hint2:setColor(cc.c4b(31,68,102,255))
---    backColor:addChild(label_hint2)
---    
---    local bean1 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
---    bean1:setPosition(bigWidth/2-100, 250)
---    backColor:addChild(bean1)
---    
---    local bean2 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
---    bean2:setPosition(bigWidth/2, 250)
---    backColor:addChild(bean2)
---    
---    local bean3 = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
---    bean3:setPosition(bigWidth/2+100, 250)
---    backColor:addChild(bean3)
-    
+    local label_come_on = cc.Label:createWithSystemFont("贝贝给你加油","",50)
+    label_come_on:setPosition(bigWidth/2, 600)
+    label_come_on:setColor(cc.c4b(234,123,3,255))
+    backColor:addChild(label_come_on)
     
     
     local button_go_click = function(sender, eventType)
