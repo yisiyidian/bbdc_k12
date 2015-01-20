@@ -312,6 +312,10 @@ function Manager.setCurrentIndex(currentIndex)
     localdatabase_currentIndex.setCurrentIndex(currentIndex)
 end
 
+function Manager.getDataCurrentIndex()
+    return localdatabase_currentIndex.getDataCurrentIndex()
+end
+
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.printNewPlayState()
@@ -324,6 +328,10 @@ end
 
 function Manager.getwrongWordListSize()
     return localdatabase_newPlayState.getwrongWordListSize()
+end
+
+function Manager.getDataNewPlayState()
+    return localdatabase_newPlayState.getDataNewPlayState()
 end
 
 function Manager.getNewPlayState()
@@ -346,6 +354,10 @@ end
 
 function Manager.addWrongWordBuffer(wrongWord)
     localdatabase_wrongWordBuffer.addWrongWordBuffer(wrongWord)
+end
+
+function Manager.getDataWrongWordBuffer()
+    return localdatabase_wrongWordBuffer.getDataWrongWordBuffer()
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -378,6 +390,10 @@ end
 
 function Manager.getTodayTotalBossNum()
     localdatabase_todayReviewBossNum.getTodayTotalBossNum()
+end
+
+function Manager.getDataTodayTotalBoss()
+    localdatabase_todayReviewBossNum.getDataTodayTotalBoss()
 end
 
 ---------------------------------------------------------------------------------------------------------

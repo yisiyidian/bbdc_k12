@@ -3,17 +3,6 @@ local Manager = s_LocalDatabaseManager
 
 local M = {}
 
-local function createData(isAlterOn, slideNum, lastUpdate)
-    local data = DataStudyConfiguration.create()
-    updateDataFromUser(data, s_CURRENT_USER)
-
-    data.isAlterOn = isAlterOn
-    data.slideNum = slideNum
-    data.lastUpdate = lastUpdate
-
-    return data
-end
-
 function M.getIsAlterOn()
     local userId = s_CURRENT_USER.objectId
     local username = s_CURRENT_USER.username
@@ -58,7 +47,7 @@ function M.setIsAlterOn(isAlterOn)
         end
     end
 
-    local data = createData(isAlterOn, slideNum, time)
+    local data = DataStudyConfiguration.createData(isAlterOn, slideNum, time)
     Manager.saveData(data, userId, username, num)
 end
 
@@ -106,7 +95,7 @@ function M.updateSlideNum()
         end
     end
 
-     local data = createData(isAlterOn, slideNum, time)
+     local data = DataStudyConfiguration.createData(isAlterOn, slideNum, time)
     Manager.saveData(data, userId, username, num)
 end
 

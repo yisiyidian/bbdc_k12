@@ -5,7 +5,7 @@ local ChapterLayer = class('ChapterLayer', function()
     return cc.Layer:create()
 end)
 
-local listView
+
 local s_chapter_layer_width = 854
 local oceanBlue = cc.c4b(61,191,244,255)
 local bounceSectionSize = cc.size(854,512)
@@ -33,18 +33,18 @@ function ChapterLayer:ctor()
         end
 
     end 
-    listView = ccui.ListView:create()
-    listView:setDirection(ccui.ScrollViewDir.vertical)
-    listView:setBounceEnabled(true)
-    listView:setBackGroundImageScale9Enabled(true)
-    listView:addEventListener(listViewEvent)
-    listView:addScrollViewEventListener(scrollViewEvent)
-    listView:removeAllChildren()
-    self:addChild(listView)
+    self.listView = ccui.ListView:create()
+    self.listView:setDirection(ccui.ScrollViewDir.vertical)
+    self.listView:setBounceEnabled(true)
+    self.listView:setBackGroundImageScale9Enabled(true)
+    self.listView:addEventListener(listViewEvent)
+    self.listView:addScrollViewEventListener(scrollViewEvent)
+    self.listView:removeAllChildren()
+    self:addChild(self.listView)
     
     local fullWidth = s_chapter_layer_width
-    listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
-    listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
+    self.listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
+    self.listView:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
     -- add bounce
     self:addTopBounce()
     -- add chapter node
@@ -77,106 +77,106 @@ function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
-    
+--    if true then  
     if currentProgress['chapter'] ~= oldProgress['chapter'] then
-        local oldLevelIndex = string.sub(oldProgress['level'], 6)
-        local currentLevelIndex = string.sub(currentProgress['level'],6)
-        local oldChapterIndex = string.sub(oldProgress['chapter'], 8)
-        local currentChapterIndex = string.sub(currentProgress['chapter'], 8)
-        local endLevelIndex = 9
-        if oldProgress['chapter'] == 'chapter0' then
-            endLevelIndex = 9
-        elseif oldProgress['chapter'] == 'chapter1' then
-            endLevelIndex = 19
-        elseif oldProgress['chapter'] == 'chapter2' then
-            endLevelIndex = 29
-        else
-            endLevelIndex = 59
-        end
-        local moveDelayTime = endLevelIndex - oldLevelIndex +2
-        print("moveDelayTime is", moveDelayTime)
-        
-        local movePlayerToEndLevelCallback = function()   
-            print("movePlayerToEndLevelCallback")
-            -- unlock level first 
-            local oldLevelIndex = string.sub(oldProgress['level'], 6)
-            local currentLevelIndex = string.sub(currentProgress['level'],6)
-            local delayTime = 0
- 
-            for index = oldLevelIndex, endLevelIndex do
-                s_SCENE:callFuncWithDelay(delayTime+index,function()
-                    if index == endLevelIndex then
-                        local action1 = cc.MoveBy:create(1, cc.p(-400,0))
-                        local action2 = cc.MoveBy:create(1, cc.p(400*2,0))
-                        self.chapterDic['leftCloud']:runAction(action1)
-                        self.chapterDic['rightCloud']:runAction(action2)
-                        print("plotUnlockCloudAnimation")
-                    else
-                        self.chapterDic[oldProgress['chapter']]:plotUnlockLevelAnimation('level'..(index+1))
-                        -- move player
-                        local nextLevelPosition = self.chapterDic[oldProgress['chapter']]:getLevelPosition('level'..(index+1))
-                        local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
-                        self.player:runAction(playerAction)
-                        print("chapter"..oldChapterIndex.." level"..(index+1))
-                        self:scrollLevelLayer("chapter"..oldChapterIndex ,"level"..(index+1),1)
-                        delayTime = delayTime+1
-                     end
-                end)
-            end
-        end
-        
-        local movePlayerToCurrentLevelCallback = function()   
-            print("movePlayerToCurrentLevelCallback")
-            -- unlock level first 
-            local oldLevelIndex = string.sub(oldProgress['level'], 6)
-            local currentLevelIndex = string.sub(currentProgress['level'],6)
-            local delayTime = 0
-            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
-            self:addPlayerNotification(false)
-            for index = 0, currentLevelIndex do
-                s_SCENE:callFuncWithDelay(delayTime+index,function()
-                
-                    local unlockAnimation = function()
-                        self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
-                    end
-                    -- move player
-                    local notification = self.player:getChildByTag(100)
-                    local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
-                    local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
-                    self:scrollLevelLayer("chapter"..currentChapterIndex,"level"..index,1)
-
-                    local notificationAction1 = function()
-                        local notification = self.player:getChildByTag(100)
-                        if index == tonumber(currentLevelIndex) then
-                            local notificationAct = cc.ScaleTo:create(0.4,1)
-                            notification:runAction(notificationAct)
-                        end
-                    end
-                    self.player:runAction(cc.Sequence:create(cc.CallFunc:create(unlockAnimation),
-                                                             playerAction,
-                                                             cc.DelayTime:create(0.6),
-                                                             cc.CallFunc:create(notificationAction1)))
-                    delayTime = delayTime+1
-                end)
-            end
-        end
-
-        local addNewChpaterCallback = function()
-            self:addChapterIntoListView(currentProgress['chapter'])
-            print("addNewChpaterCallback")
-        end
-
-        local setListViewTouchEnabled = function(isEnabled)
-            listView:setEnabled(isEnabled[1])
-            print("setListViewTouchEnabled is", isEnabled)
-        end
-        
-        self:runAction(cc.Sequence:create(cc.CallFunc:create(addNewChpaterCallback),
-                                          cc.DelayTime:create(1),
-                                          cc.CallFunc:create(movePlayerToEndLevelCallback),
-                                          cc.DelayTime:create(moveDelayTime),
-                                          cc.CallFunc:create(movePlayerToCurrentLevelCallback)))
-            
+--        local oldLevelIndex = string.sub(oldProgress['level'], 6)
+--        local currentLevelIndex = string.sub(currentProgress['level'],6)
+--        local oldChapterIndex = string.sub(oldProgress['chapter'], 8)
+--        local currentChapterIndex = string.sub(currentProgress['chapter'], 8)
+--        local endLevelIndex = 9
+--        if oldProgress['chapter'] == 'chapter0' then
+--            endLevelIndex = 9
+--        elseif oldProgress['chapter'] == 'chapter1' then
+--            endLevelIndex = 19
+--        elseif oldProgress['chapter'] == 'chapter2' then
+--            endLevelIndex = 29
+--        else
+--            endLevelIndex = 59
+--        end
+--        local moveDelayTime = endLevelIndex - oldLevelIndex +2
+--        print("moveDelayTime is", moveDelayTime)
+--        
+--        local movePlayerToEndLevelCallback = function()   
+--            print("movePlayerToEndLevelCallback")
+--            -- unlock level first 
+--            local oldLevelIndex = string.sub(oldProgress['level'], 6)
+--            local currentLevelIndex = string.sub(currentProgress['level'],6)
+--            local delayTime = 0
+-- 
+--            for index = oldLevelIndex, endLevelIndex do
+--                s_SCENE:callFuncWithDelay(delayTime+index,function()
+--                    if index == endLevelIndex then
+--                        local action1 = cc.MoveBy:create(1, cc.p(-400,0))
+--                        local action2 = cc.MoveBy:create(1, cc.p(400*2,0))
+--                        self.chapterDic['leftCloud']:runAction(action1)
+--                        self.chapterDic['rightCloud']:runAction(action2)
+--                        print("plotUnlockCloudAnimation")
+--                    else
+--                        self.chapterDic[oldProgress['chapter']]:plotUnlockLevelAnimation('level'..(index+1))
+--                        -- move player
+--                        local nextLevelPosition = self.chapterDic[oldProgress['chapter']]:getLevelPosition('level'..(index+1))
+--                        local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+--                        self.player:runAction(playerAction)
+--                        print("chapter"..oldChapterIndex.." level"..(index+1))
+--                        self:scrollLevelLayer("chapter"..oldChapterIndex ,"level"..(index+1),1)
+--                        delayTime = delayTime+1
+--                     end
+--                end)
+--            end
+--        end
+--        
+--        local movePlayerToCurrentLevelCallback = function()   
+--            print("movePlayerToCurrentLevelCallback")
+--            -- unlock level first 
+--            local oldLevelIndex = string.sub(oldProgress['level'], 6)
+--            local currentLevelIndex = string.sub(currentProgress['level'],6)
+--            local delayTime = 0
+--            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
+--            self:addPlayerNotification(false)
+--            for index = 0, currentLevelIndex do
+--                s_SCENE:callFuncWithDelay(delayTime+index,function()
+--                
+--                    local unlockAnimation = function()
+--                        self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
+--                    end
+--                    -- move player
+--                    local notification = self.player:getChildByTag(100)
+--                    local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
+--                    local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+--                    self:scrollLevelLayer("chapter"..currentChapterIndex,"level"..index,1)
+--
+--                    local notificationAction1 = function()
+--                        local notification = self.player:getChildByTag(100)
+--                        if index == tonumber(currentLevelIndex) then
+--                            local notificationAct = cc.ScaleTo:create(0.4,1)
+--                            notification:runAction(notificationAct)
+--                        end
+--                    end
+--                    self.player:runAction(cc.Sequence:create(cc.CallFunc:create(unlockAnimation),
+--                                                             playerAction,
+--                                                             cc.DelayTime:create(0.6),
+--                                                             cc.CallFunc:create(notificationAction1)))
+--                    delayTime = delayTime+1
+--                end)
+--            end
+--        end
+--
+--        local addNewChpaterCallback = function()
+--            self:addChapterIntoListView(currentProgress['chapter'])
+--            print("addNewChpaterCallback")
+--        end
+--
+--        local setListViewTouchEnabled = function(isEnabled)
+--            listView:setEnabled(isEnabled[1])
+--            print("setListViewTouchEnabled is", isEnabled)
+--        end
+--        
+--        self:runAction(cc.Sequence:create(cc.CallFunc:create(addNewChpaterCallback),
+--                                          cc.DelayTime:create(1),
+--                                          cc.CallFunc:create(movePlayerToEndLevelCallback),
+--                                          cc.DelayTime:create(moveDelayTime),
+--                                          cc.CallFunc:create(movePlayerToCurrentLevelCallback)))
+--            
             
 --        -- unlock chapter
 --        s_SCENE:callFuncWithDelay(delayTime, function()
@@ -207,7 +207,7 @@ function ChapterLayer:checkUnlockLevel()
 --                self:addChapterIntoListView(currentProgress['chapter'])
 --            end)
 --        end)
---        -- unlock level first 
+--     -- unlock level first 
 --        local oldLevelIndex = string.sub(oldProgress['level'], 6)
 --        local currentLevelIndex = string.sub(currentProgress['level'],6)
 --        local delayTime = 0
@@ -242,7 +242,47 @@ function ChapterLayer:checkUnlockLevel()
 --            end)
 --            delayTime = delayTime + 1
 --        end 
---       
+        
+        -- unlock chapter
+        self:plotUnlockCloudAnimation()
+--        s_SCENE:callFuncWithDelay(1.0,function()            
+            -- add next chapter
+            --self:addChapterIntoListView()
+--            print(currentProgress['chapter']);
+        self:addChapterIntoListView(currentProgress['chapter'])
+        self:addPlayerOnLevel(currentProgress['chapter'],'level0')
+        self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
+--        end)
+--        s_SCENE:callFuncWithDelay(delayTime, function()
+--            self:plotUnlockCloudAnimation()
+--            s_SCENE:callFuncWithDelay(1.0,function()            
+--                -- add next chapter
+--                self:addChapterIntoListView(currentProgress['chapter'])
+--            end)
+--            local delay_t = 0
+--            -- plot player
+--            self:addPlayerOnLevel(currentProgress['chapter'],'level0')
+--            self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
+--            for index = 1, (currentLevelIndex - 0) do
+--                s_SCENE:callFuncWithDelay(delayTime,function()
+--                    self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level'..(index))
+--                    -- move player
+--                    s_SCENE:callFuncWithDelay(0.3,function()
+--                        local nextLevelPosition = self.chapterDic[currentProgress['chapter']]:getLevelPosition('level'..(index))
+--                        local action = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+--                        self.player:runAction(action)
+--                    end)
+--                end)
+--                delay_t = delay_t + 1
+--            end
+--            s_SCENE:callFuncWithDelay(delay_t+1, function()
+--                -- add notification
+--                self:addPlayerNotification(false) 
+--            end) 
+--
+
+--        end)
+       
 --        s_SCENE:callFuncWithDelay(0.5, function()
 --            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
 --        end)
@@ -503,7 +543,7 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         custom_item:setContentSize(self.chapterDic['chapter0']:getContentSize())  
         custom_item:setName('chapter0')  
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
-        listView:addChild(self.chapterDic['chapter0'])
+        self.listView:addChild(self.chapterDic['chapter0'])
    else    
         local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
         self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
@@ -513,25 +553,25 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
         custom_item:setName(chapterKey)  
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
-        listView:addChild(self.chapterDic[chapterKey]) 
+        self.listView:addChild(self.chapterDic[chapterKey]) 
     end
     
 
 end
 
--- scroll listview to show the specific chapter and level
+-- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
     if chapterKey == 'chapter0' and levelKey == 'level0' then
         return
     end
     local bookProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
-    -- compute listView inner height
-    local itemList = listView:getItems()
+    -- compute self.listView inner height
+    local itemList = self.listView:getItems()
     local innerHeight = 0
     for i = 1,#itemList do
         innerHeight = innerHeight + itemList[i]:getContentSize().height
     end
-    listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
+    self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
     local levelIndex = string.sub(levelKey, 6)
     local currentLevelCount = levelIndex + 1
     local totalLevelCount = 0
@@ -556,18 +596,24 @@ function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
     local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
     --print('currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
     if scrollTime - 0 == 0 then
-        listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
+        self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
     else
-        listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,true)
+        self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,true)
     end
-    listView:setInertiaScrollEnabled(true)
+    self.listView:setInertiaScrollEnabled(true)
 end
 
 function ChapterLayer:plotUnlockCloudAnimation()
-    local action1 = cc.MoveBy:create(0.5, cc.p(-s_DESIGN_WIDTH,0))
-    local action2 = cc.MoveBy:create(0.5, cc.p(s_DESIGN_WIDTH*2,0))
+    local action1 = cc.MoveBy:create(1.5, cc.p(-s_DESIGN_WIDTH*2,0))
+    local action2 = cc.MoveBy:create(1.5, cc.p(s_DESIGN_WIDTH*2,0))
     self.chapterDic['leftCloud']:runAction(action1)
     self.chapterDic['rightCloud']:runAction(action2)
+    s_SCENE:callFuncWithDelay(1.6,function()
+        self.chapterDic['leftCloud']:removeFromParent() 
+        self.chapterDic['rightCloud']:removeFromParent()
+    end)
+   
+    
 end
 
 function ChapterLayer:addTopBounce()
@@ -611,12 +657,7 @@ function ChapterLayer:plotDecoration()
     local action2 = cc.EaseSineInOut:create(cc.MoveBy:create(5, cc.p(50, 0)))
     local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
     wave:runAction(action3)
---    local action1 = 
-    
---    self:addBeansUI()
-    --print('chapter0: '..self.chapterDic['chapter0']:getPosition())
---    print('boatPosition:'..boatPosition.x..','..boatPosition.y)
-    --print('fanPosition:'..fanPosition)
+
 end
 
 function ChapterLayer:addBottomBounce()
@@ -626,8 +667,8 @@ function ChapterLayer:addBottomBounce()
     self.chapterDic['rightCloud']:setAnchorPoint(0, 1)
     self.chapterDic['leftCloud']:setPosition((s_chapter_layer_width-bounceSectionSize.width)/2,50)
     self.chapterDic['rightCloud']:setPosition((s_chapter_layer_width-bounceSectionSize.width)/2,50)
-    listView:addChild(self.chapterDic['leftCloud'],100)
-    listView:addChild(self.chapterDic['rightCloud'],100)
+    self.listView:addChild(self.chapterDic['leftCloud'],100)
+    self.listView:addChild(self.chapterDic['rightCloud'],100)
 end
 
 function ChapterLayer:addBackToHome()
@@ -656,8 +697,7 @@ function ChapterLayer:addBeansUI()
     self:addChild(self.beans,150)
     self.beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
     self.beanLabel:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
-    self.beans:addChild(self.beanLabel)
-    
+    self.beans:addChild(self.beanLabel)    
     self.beanCount = s_CURRENT_USER.beans
     self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',33)
     self.beanCountLabel:setColor(cc.c3b(13, 95, 156))

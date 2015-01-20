@@ -102,36 +102,48 @@ function M.getwrongWordListSize()
     return size
 end
 
-function M.getNewPlayState()
+function M.getDataNewPlayState()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
 
-    local newPlayState = createData(bookKey, 0, 0, '', '', '')
+    local ret = nil
 
     local num = 0
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
+            local newPlayState = createData(bookKey, 0, 0, '', '', '')
             newPlayState.playModel     = row.playModel
             newPlayState.rightWordList = row.rightWordList
             newPlayState.wrongWordList = row.wrongWordList
             newPlayState.wordCandidate = row.wordCandidate
             newPlayState.lastUpdate    = row.lastUpdate
+            ret = newPlayState
         end
     end
 
     if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
             num = num + 1
+            local newPlayState = createData(bookKey, 0, 0, '', '', '')
             newPlayState.playModel     = row.playModel
             newPlayState.rightWordList = row.rightWordList
             newPlayState.wrongWordList = row.wrongWordList
             newPlayState.wordCandidate = row.wordCandidate
             newPlayState.lastUpdate    = row.lastUpdate
+            ret = newPlayState
         end
     end
     
+    return ret
+end
+
+function M.getNewPlayState()
+    local newPlayState = M.getDataNewPlayState()
+    if newPlayState == nil then
+        newPlayState = createData(bookKey, 0, 0, '', '', '')
+    end
     return newPlayState
 end
 

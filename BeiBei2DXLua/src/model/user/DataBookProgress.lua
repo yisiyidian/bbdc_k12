@@ -283,27 +283,33 @@ function DataBookProgress:computeCurrentProgress()
     local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 100)
     local bookWordCurrentCount =  s_LocalDatabaseManager.getCurrentIndex()-1
     local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
---    currentLevelIndex =10
-    local progress = {}
-    if currentLevelIndex < 10 then
-        progress['chapter'] = 'chapter0'
-        progress['level'] = 'level'..currentLevelIndex
---        progress['']
-    elseif currentLevelIndex < 30 then 
-        progress['chapter'] = 'chapter1'
-        progress['level'] = 'level'..(currentLevelIndex-10)
-    elseif currentLevelIndex < 60 then
-        progress['chapter'] = 'chapter2'
-        progress['level'] = 'level'..(currentLevelIndex-30)
-    else
-        progress['chapter'] = 'chapter3'
-        progress['level'] = 'level'..(currentLevelIndex-60)
-    end
-    
-    -- avoid complete state
-    if progress['chapter'] == 'chapter3' and string.sub(progress['level'],6)-39 > 0 then
-        progress['level'] = 'level39'
-    end
+    local currentChapterIndex = math.floor(currentLevelIndex/10)
+--    currentLevelIndex =  --test
+--    local progress = {}
+--    if currentLevelIndex < 10 then
+--        progress['chapter'] = 'chapter0'
+--        progress['level'] = 'level'..currentLevelIndex
+----        progress['']
+--    elseif currentLevelIndex < 30 then 
+--        progress['chapter'] = 'chapter1'
+--        progress['level'] = 'level'..(currentLevelIndex-10)
+--    elseif currentLevelIndex < 60 then
+--        progress['chapter'] = 'chapter2'
+--        progress['level'] = 'level'..(currentLevelIndex-30)
+--    else
+--        progress['chapter'] = 'chapter3'
+--        progress['level'] = 'level'..(currentLevelIndex-60)
+--    end
+   local progress = {}
+   progress['chapter'] = 'chapter'..(currentChapterIndex)
+   progress['level'] = 'level'..(currentLevelIndex - 10*currentChapterIndex)
+   
+--    
+--    
+--    -- avoid complete state
+--    if progress['chapter'] == 'chapter3' and string.sub(progress['level'],6)-39 > 0 then
+--        progress['level'] = 'level39'
+--    end
     
     return progress 
 end

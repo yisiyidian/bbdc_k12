@@ -212,10 +212,23 @@ function HomeLayer.create()
         end
     )
 
---
+    local button_shop_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            if downloadSoundBtnSchedule ~=nil then
+                downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
+            end
+            local ShopLayer = require("view.shop.ShopLayer")
+            local shopLayer = ShopLayer.create()
+            s_SCENE:replaceGameLayer(shopLayer)
+        end
+    end
+
+    local button_shop = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
+    button_shop:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-200)
+    button_shop:addTouchEventListener(button_shop_clicked)
+    backColor:addChild(button_shop)   
 
 
-    
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
 --            s_CorePlayManager.initTotalPlay()
@@ -310,7 +323,7 @@ function HomeLayer.create()
                isDataShow = false
                button_friend:setEnabled(true)
                button_main:setEnabled(true)
-               local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+               local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
                local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
                    data_back:removeChildByName('PersonalInfo')
@@ -321,7 +334,7 @@ function HomeLayer.create()
                button_friend:setEnabled(false)
                button_main:setEnabled(false)
                button_data:setLocalZOrder(2)
-               button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
+               button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                if true then
                    local PersonalInfo = require("view.PersonalInfo")
                    local personalInfoLayer = PersonalInfo.create()
@@ -356,9 +369,16 @@ function HomeLayer.create()
 
     -- setting ui
     setting_back = cc.Sprite:create("image/homescene/setup_background.png")
+    -- setting_back:setOpacity(0)
     setting_back:setAnchorPoint(1,0.5)
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
+
+    -- setting_back = cc.LayerColor:create(cc.c4b(255,255,255,255), offset, s_DESIGN_HEIGHT)  
+    -- setting_back:setAnchorPoint(1,0.5)
+    -- setting_back:ignoreAnchorPointForPosition(false)
+    -- setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
+    -- layer:addChild(setting_back)
 
     
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
@@ -420,22 +440,46 @@ function HomeLayer.create()
         end
 
         local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+        button_back:setOpacity(0)
         button_back:setAnchorPoint(0, 1)
-        button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 20)
+        button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 80)
         button_back:addTouchEventListener(button_back_clicked)
         setting_back:addChild(button_back)
         
-        local logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
-        logo:setPosition(button_back:getContentSize().width-offset+50, button_back:getContentSize().height/2)
-        button_back:addChild(logo)
+        if i > 1 then
+            local logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
+            logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2)
+            button_back:addChild(logo)
+            local label = cc.Label:createWithSystemFont(label_name[i],"",32)
+            label:setColor(cc.c4b(0,0,0,255))
+            label:setAnchorPoint(0, 0.5)
+            label:setPosition(button_back:getContentSize().width-offset+200, button_back:getContentSize().height/2)
+            button_back:addChild(label)
+        else
+            local logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
+            logo:setScale(0.9)
+            logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
+            button_back:addChild(logo)
+            local label = cc.Label:createWithSystemFont(label_name[i],"",36)
+            label:setColor(cc.c4b(0,0,0,255))
+            label:setAnchorPoint(0, 0)
+            label:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
+            button_back:addChild(label)
+
+            local label2 = cc.Label:createWithSystemFont('正在学习'..bookName..'词汇',"",24)
+            label2:setColor(cc.c4b(0,0,0,255))
+            label2:setAnchorPoint(0, 1)
+            label2:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
+            button_back:addChild(label2)
+
+        end
+
         
-        local label = cc.Label:createWithSystemFont(label_name[i],"",28)
-        label:setColor(cc.c4b(0,0,0,255))
-        label:setAnchorPoint(0, 0.5)
-        label:setPosition(button_back:getContentSize().width-offset+100, button_back:getContentSize().height/2)
-        button_back:addChild(label)
         
-        local split = cc.Sprite:create("image/homescene/setup_line.png")
+        
+        --local split = cc.Sprite:create("image/homescene/setup_line.png")
+        local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
+        split:ignoreAnchorPointForPosition(false)
         split:setAnchorPoint(0.5,0)
         split:setPosition(button_back:getContentSize().width/2, 0)
         button_back:addChild(split)
@@ -455,11 +499,6 @@ function HomeLayer.create()
         t.split = split
         table.insert(list, t)
     end
-    
-    local setting_shadow = cc.Sprite:create("image/homescene/setup_shadow.png")
-    setting_shadow:setAnchorPoint(1,0.5)
-    setting_shadow:setPosition(setting_back:getContentSize().width, setting_back:getContentSize().height/2)
-    setting_back:addChild(setting_shadow)
     
     local moveLength = 100
     local moved = false
@@ -489,7 +528,7 @@ function HomeLayer.create()
                    button_friend:setEnabled(false)
                    button_main:setEnabled(false)
                    button_data:setLocalZOrder(2)
-                   button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
+                   button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                    if true then
                        local PersonalInfo = require("view.PersonalInfo")
                        local personalInfoLayer = PersonalInfo.create()
@@ -509,7 +548,7 @@ function HomeLayer.create()
                 isDataShow = false
                 button_friend:setEnabled(true)
                 button_main:setEnabled(true)
-                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+                local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
                 local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
                    data_back:removeChildByName('PersonalInfo')
@@ -559,7 +598,7 @@ function HomeLayer.create()
                    button_friend:setEnabled(false)
                    button_main:setEnabled(false)
                    button_data:setLocalZOrder(2)
-                   button_data:runAction(cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280)))
+                   button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                    if true then
 
                     if online == false then
@@ -582,7 +621,7 @@ function HomeLayer.create()
             isDataShow = false
             button_friend:setEnabled(true)
             button_main:setEnabled(true)
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, 0))
+            local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
             local action2 = cc.CallFunc:create(function()
                button_data:setLocalZOrder(0)
                data_back:removeChildByName('PersonalInfo')

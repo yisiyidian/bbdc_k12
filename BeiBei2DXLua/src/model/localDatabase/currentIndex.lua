@@ -30,32 +30,44 @@ local function createDataCurrentIndex(lastUpdate, bookKey, currentIndex)
     return data
 end
 
-function M.getCurrentIndex()
-    local currentIndex = nil
+function M.getDataCurrentIndex()
+    local currentIndex = 1
+    local lastUpdate = os.time()
 
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
 
+    local hasLocalDBData = false
+
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
             currentIndex = row.currentIndex
+            lastUpdate = row.lastUpdate
+            hasLocalDBData = true
         end
     end
     
-    if currentIndex == nil and username ~= '' then
+    if hasLocalDBData == false and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataCurrentIndex WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
             currentIndex = row.currentIndex
+            lastUpdate = row.lastUpdate
+            hasLocalDBData = true
         end
     end
-    
-    if currentIndex == nil then
-        currentIndex = 1
-        local data = createDataCurrentIndex(os.time(), bookKey, currentIndex)
+
+    local data = createDataCurrentIndex(lastUpdate, bookKey, currentIndex)
+
+    if hasLocalDBData == false then
         Manager.saveData(data, userId, username, 0)
     end
-    
-    return currentIndex
+
+    return data
+end
+
+function M.getCurrentIndex()
+    local data = M.getDataCurrentIndex()
+    return data.currentIndex
 end
 
 function M.setCurrentIndex(currentIndex)

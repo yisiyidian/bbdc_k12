@@ -15,8 +15,8 @@ function InputNode.create(type)
     
     local backImage
     local cursor
-    local hint1 = "请输入账号"
-    local hint2 = "请输入密码"
+    local hint1 = "用户名"
+    local hint2 = "密码"
     main.textField = nil
     
     local cursorShowUp
@@ -52,11 +52,14 @@ function InputNode.create(type)
     end
 
     main.textField = ccui.TextField:create()
+    main.textField:ignoreAnchorPointForPosition(false)
+    main.textField:setAnchorPoint(0,0.5)
     main.textField:setTouchSize(backImage:getContentSize())
     main.textField:setTouchAreaEnabled(true)
-    main.textField:setFontSize(30)
+    main.textField:setFontSize(34)
     main.textField:setMaxLengthEnabled(true)
-    main.textField:setColor(cc.c4b(0,0,0,255))
+    main.textField:setPlaceHolderColor(cc.c3b(150,150,150))
+    main.textField:setTextColor(cc.c4b(0,0,0,255))
     if type == "username" then
         main.textField:setPlaceHolder(hint1)
         main.textField:setMaxLength(10)
@@ -66,19 +69,19 @@ function InputNode.create(type)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
     end
-    main.textField:setPosition(cc.p(backImage:getContentSize().width / 2, backImage:getContentSize().height / 2))
+    main.textField:setPosition(cc.p(30, backImage:getContentSize().height / 2))
     main.textField:addEventListener(eventHandle)
     backImage:addChild(main.textField)
 
-    cursor = cc.Label:createWithSystemFont("|","",30)
+    cursor = cc.Label:createWithSystemFont("|","",34)
     cursor:setColor(cc.c4b(0,0,0,255))
     cursor:setVisible(false)
-    cursor:setPosition(main.textField:getContentSize().width,main.textField:getContentSize().height/2)
+    cursor:setPosition(main.textField:getContentSize().width,34)
     cursor:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.FadeIn:create(0.5),cc.FadeOut:create(0.5))))
     main:addChild(cursor)
     
     local update = function(dt)
-        cursor:setPosition(backImage:getContentSize().width/2+main.textField:getContentSize().width/2, height/2)
+        cursor:setPosition(30+main.textField:getContentSize().width, height/2)
     end
     main:scheduleUpdateWithPriorityLua(update, 0)
 
