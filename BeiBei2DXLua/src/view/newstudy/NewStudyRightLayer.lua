@@ -37,7 +37,7 @@ function NewStudyRightLayer.create()
     layer:addChild(backColor)
 
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
-    soundMark:setPosition(bigWidth/2, 960)  
+    soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
 
     local detailInfo = DetailInfo.create(currentWord)
@@ -59,15 +59,13 @@ function NewStudyRightLayer.create()
                 s_CorePlayManager.enterNewStudySlideLayer()
             end
             if s_LocalDatabaseManager.getIsAlterOn() == 1 then
-                local guideAlter = GuideAlter.create(1, "依然复习？", "看来你对“"..wordname.."”还不熟，贝贝将把“"..wordname.."”放入生词库中，接下来的复习中，你们还会再见哦！")
+                local guideAlter = GuideAlter.create(1, "依然复习？", "陛下，我在生词库中等你来哦～")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter)
-                
+                guideAlter.addbeibeiThrowHeart()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
-                    if guideAlter.box_tag == 1 then
-                        s_LocalDatabaseManager.setIsAlterOn(0)
-                	end
+                    s_LocalDatabaseManager.setIsAlterOn(0)
                     normal()
                 end
             else
@@ -108,15 +106,13 @@ function NewStudyRightLayer.create()
             end
         
             if s_LocalDatabaseManager.getIsAlterOn() == 1 then
-                local guideAlter = GuideAlter.create(1, "不再复习？", "看来你对“"..wordname.."”很熟悉，贝贝将把“"..wordname.."”放入熟词库中，该词以后不再出现！")
+                local guideAlter = GuideAlter.create(1, "太简单了？", "陛下，您真的要把我打入冷宫吗？")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter)
-                
+                guideAlter.addbeibeiBreakHeart()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
-                    if guideAlter.box_tag == 1 then
-                        s_LocalDatabaseManager.setIsAlterOn(0)
-                    end
+                    s_LocalDatabaseManager.setIsAlterOn(0)
                     normal()
 
                     if s_CorePlayManager.isStudyModel() then

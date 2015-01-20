@@ -35,7 +35,7 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
 
-    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT - 50)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     backColor:addChild(pauseBtn,100)
     local Pause = require('view.Pause')
@@ -61,7 +61,7 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
         backColor.progressBar = ProgressBar.create(s_CorePlayManager.wrongWordNum, s_CorePlayManager.wrongWordNum-s_CorePlayManager.candidateNum, "yellow")
     end
     
-    backColor.progressBar:setPosition(bigWidth/2+44, 1099)
+    backColor.progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(backColor.progressBar)
     
     backColor.getProgressBarIndexPosition = function ()

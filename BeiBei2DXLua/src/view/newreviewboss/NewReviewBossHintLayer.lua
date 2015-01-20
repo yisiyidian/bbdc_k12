@@ -56,13 +56,13 @@ function NewReviewBossHintLayer.create(currentWordName)
     layer:addChild(white_back)
     
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
-    soundMark:setPosition(white_back:getContentSize().width/2, white_back:getContentSize().height * 0.85)  
+    soundMark:setPosition(white_back:getContentSize().width/2, white_back:getContentSize().height * 0.85 )  
     white_back:addChild(soundMark)
     
     local detailInfo = DetailInfo.create(currentWord)
     detailInfo:setAnchorPoint(0.5,0.5)
     detailInfo:ignoreAnchorPointForPosition(false)
-    detailInfo:setPosition(white_back:getContentSize().width/2, white_back:getContentSize().height * 0.4)
+    detailInfo:setPosition(white_back:getContentSize().width/2, white_back:getContentSize().height * 0.4 )
     white_back:addChild(detailInfo)
     
     local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55))
