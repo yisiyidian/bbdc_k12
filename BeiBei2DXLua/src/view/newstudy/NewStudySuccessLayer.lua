@@ -66,6 +66,12 @@ function NewStudySuccessLayer.create()
     label_hint:setPosition(bigWidth/2, 1000)
     label_hint:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(label_hint)
+    
+    local label_congratulation = cc.Label:createWithSystemFont("贝贝给你祝贺","",50)
+    label_congratulation:setPosition(bigWidth/2, 600)
+    label_congratulation:setColor(cc.c4b(31,68,102,255))
+    backColor:addChild(label_congratulation)
+
 
 --    local circle = cc.Sprite:create("image/newstudy/yellow_circle_small.png")
 --    circle:setPosition(bigWidth/2, 900)

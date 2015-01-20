@@ -1,10 +1,10 @@
 require("cocos.init")
 require("common.global")
 
+local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
-local SmallDetailInfo   = require("view.newstudy.NewStudySmallDetailInfo")
-local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
+local DetailInfo        = require("view.newstudy.NewStudyDetailInfo")
 
 local  NewStudyRightLayer = class("NewStudyRightLayer", function ()
     return cc.Layer:create()
@@ -40,9 +40,11 @@ function NewStudyRightLayer.create()
     soundMark:setPosition(bigWidth/2, 960)  
     backColor:addChild(soundMark)
 
-    local smallDetailInfo = SmallDetailInfo.create(currentWord)
-    smallDetailInfo:setPosition(backColor:getContentSize().width *0.5, 0)  
-    backColor:addChild(smallDetailInfo)
+    local detailInfo = DetailInfo.create(currentWord)
+    detailInfo:setAnchorPoint(0.5,0.5)
+    detailInfo:ignoreAnchorPointForPosition(false)
+    detailInfo:setPosition(bigWidth/2, 520)
+    backColor:addChild(detailInfo)
     
     local click_study_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -52,7 +54,9 @@ function NewStudyRightLayer.create()
             AnalyticsContinueReviewBtn()
 
             local normal = function()
-                s_CorePlayManager.enterNewStudyWrongLayer()
+                s_CorePlayManager.updateWrongWordList(wordname)
+                s_CorePlayManager.updateCurrentIndex()
+                s_CorePlayManager.enterNewStudySlideLayer()
             end
             if s_LocalDatabaseManager.getIsAlterOn() == 1 then
                 local guideAlter = GuideAlter.create(1, "依然复习？", "看来你对“"..wordname.."”还不熟，贝贝将把“"..wordname.."”放入生词库中，接下来的复习中，你们还会再见哦！")
@@ -138,7 +142,7 @@ function NewStudyRightLayer.create()
 
     local choose_next_button = ccui.Button:create("image/newstudy/button_twobutton_size.png","image/newstudy/button_twobutton_size_pressed.png","")
     choose_next_button:setPosition(bigWidth/2+151, 153)
-    choose_next_button:setTitleText("下一个")
+    choose_next_button:setTitleText("太简单了")
     choose_next_button:setTitleColor(cc.c4b(255,255,255,255))
     choose_next_button:setTitleFontSize(32)
     choose_next_button:addTouchEventListener(click_next_button)

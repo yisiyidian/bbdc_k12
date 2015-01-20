@@ -114,7 +114,7 @@ function PersonalInfo:PLVM()
     
     local updateTime = 0
     local tolearnCount = s_LocalDatabaseManager.getTotalStudyWordsNum()
-    local toMasterCount = s_LocalDatabaseManager.getTotalGraspWordsNum()
+    local toMasterCount = tolearnCount - s_LocalDatabaseManager.getTotalGraspWordsNum()
     local learnPercent = tolearnCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     
@@ -145,7 +145,7 @@ function PersonalInfo:PLVM()
     circleBack:addChild(circleBackSmall)
     
     local learnStr = string.format('已学习%d',tolearnCount)
-    local masterStr = string.format('已掌握%d',toMasterCount)
+    local masterStr = string.format('生词数%d',toMasterCount)
     for i = 1,#learnStr - 9 do
         local label = cc.Label:createWithSystemFont(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i),'',28)
         label:setRotation((1 - i) * 5)

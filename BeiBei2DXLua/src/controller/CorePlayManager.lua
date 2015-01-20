@@ -103,6 +103,15 @@ function CorePlayManager.initNewStudyLayer()
         return
     end
     
+    if CorePlayManager.isStudyModel() then
+        if CorePlayManager.wrongWordNum >= CorePlayManager.maxWrongWordCount then
+            CorePlayManager.initWordCandidate()
+            CorePlayManager.checkInReviewModel()
+            CorePlayManager.enterNewStudyMiddleLayer()
+            return
+        end
+    end
+    
     local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
     if lastPlayState.lastUpdate == nil then
         print("lastPlayStateRecord not exist...")
