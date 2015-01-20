@@ -27,8 +27,8 @@ function LastWordAndTotalNumberTip.create()
     richtext1:setPosition(-300,0)     
 --    backColor:addChild(richtext1)
     
-    local lastButton = ccui.Button:create("image/newstudy/lastbutton.png","","")
-    lastButton:setPosition(float,float)
+--    local lastButton = ccui.Button:create("image/newstudy/lastbutton.png","","")
+--    lastButton:setPosition(float,float)
 
 
     return layer
