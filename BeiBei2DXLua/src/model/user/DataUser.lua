@@ -84,6 +84,10 @@ function DataUser:ctor()
     self.dailyStudyInfo                    = DataDailyStudyInfo.create()
 end
 
+function DataUser:getBeans()
+    return self.beans
+end
+
 function DataUser:addBeans(count)
     self.beans = self.beans + count
     self:updateDataToServer()
