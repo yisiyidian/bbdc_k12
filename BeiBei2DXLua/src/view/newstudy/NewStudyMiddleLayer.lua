@@ -11,12 +11,10 @@ end)
 
 function NewStudyMiddleLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    s_CURRENT_USER:addBeans(3)
+    s_CURRENT_USER:addBeans(s_CorePlayManager.reward)
     
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
-    
-    s_CorePlayManager.initNewStudyReward()
 
     -- word info
     local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
@@ -125,9 +123,11 @@ function NewStudyMiddleLayer.create()
     bean:setPosition(button_go:getContentSize().width * 0.75,button_go:getContentSize().height * 0.5)
     button_go:addChild(bean)
     
-    local rewardNumber = cc.Label:createWithSystemFont("+3","",36)
+    local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(s_CorePlayManager.reward),"",36)
     rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
     button_go:addChild(rewardNumber)
+    
+    s_CorePlayManager.initNewStudyReward()
     
     print_lua_table(s_CorePlayManager.wrongWordList)
     

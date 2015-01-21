@@ -12,6 +12,8 @@ function GuessWrongPunishPopup:ctor(reward)
     if reward == nil then
     	reward = 3
     end
+    
+    s_CorePlayManager.reward = s_CorePlayManager.reward - 1
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
