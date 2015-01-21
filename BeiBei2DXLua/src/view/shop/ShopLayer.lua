@@ -1,6 +1,7 @@
 require("cocos.init")
 require("common.global")
 
+local ShopAlter = require("view.shop.ShopAlter")
 
 local ShopLayer = class("ShopLayer", function()
     return cc.Layer:create()
@@ -62,12 +63,25 @@ function ShopLayer.create()
         local x = s_DESIGN_WIDTH/2+150*(1-2*(i%2))
         local y = s_DESIGN_HEIGHT-height*(math.floor((i-1)/2))-435
         
+        
+        local item_clicked = function(sender, eventType)
+            if eventType == ccui.TouchEventType.ended then
+                print("item "..i.." clicked")
+                local shopAlter = ShopAlter.create(i)
+                shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                backColor:addChild(shopAlter)
 
-        local item = cc.Sprite:create("image/shop/item"..i..".png")
+                shopAlter.sure = function()
+                    
+                end
+            end
+        end
+        
+        local item = ccui.Button:create("image/shop/item"..i..".png","image/shop/item"..i..".png","")
         item:setPosition(x, y+150)
+        item:addTouchEventListener(item_clicked)
         backColor:addChild(item) 
-
-
+        
         local item_name_back = cc.Sprite:create("image/shop/item_name_back.png")
         item_name_back:setPosition(x+15, y)
         backColor:addChild(item_name_back) 
