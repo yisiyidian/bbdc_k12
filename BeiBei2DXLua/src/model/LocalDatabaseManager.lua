@@ -52,6 +52,7 @@ local localdatabase_studyConfiguration = nil
 local localdatabase_todayReviewBossNum = nil
 local localdatabase_wrongWordBuffer = nil
 local localdatabase_bossWord = nil
+local localdatabase_unknownWordTask = nil
 
 -- define Manager
 local Manager = {}
@@ -75,6 +76,8 @@ function Manager.init()
     localdatabase_todayReviewBossNum = reloadModule('model.localDatabase.todayReviewBossNum')
     localdatabase_wrongWordBuffer = reloadModule('model.localDatabase.wrongWordBuffer')
     localdatabase_bossWord = reloadModule('model.localDatabase.bossWord')
+
+    localdatabase_unknownWordTask = reloadModule('model.localDatabase.unknownWordTask')
 
     Manager.initTables()
 end

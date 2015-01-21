@@ -513,6 +513,12 @@ function ChapterLayer:addPlayer()
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
     self.chapterDic[bookProgress['chapter']]:addChild(self.player, 150)
+
+    print('ChapterLayer:addPlayer >>>')
+    print_lua_table(bookProgress)
+    print('ChapterLayer:addPlayer <<<')
+
+
 end
 
 function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
@@ -530,6 +536,12 @@ function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
     self.chapterDic[chapterKey]:addChild(self.player, 150)
+
+    print('ChapterLayer:addPlayerOnLevel >>>')
+    print_lua_table(bookProgress)
+    print('ChapterLayer:addPlayerOnLevel <<<')
+
+    
 end
 
 function ChapterLayer:addChapterIntoListView(chapterKey)
