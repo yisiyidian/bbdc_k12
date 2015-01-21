@@ -1,3 +1,5 @@
+--Old wordlist, deprecated on version 1.8.0.1
+
 require("cocos.init")
 require("common.global")
 

@@ -16,7 +16,7 @@ local HomeLayer              = require("view.home.HomeLayer")
 local LevelLayer             = require("view.LevelLayer")
 local BookLayer              = require("view.book.BookLayer")
 local DownloadLayer          = require("view.book.DownloadLayer")
-local WordListLayer          = require("view.wordlist.WordMenu")
+local WordListLayer          = require("view.wordlist.WordList")
 local FriendLayer            = require("view.friend.FriendLayer") 
 
 local NewStudyChooseLayer    = require("view.newstudy.NewStudyChooseLayer")
