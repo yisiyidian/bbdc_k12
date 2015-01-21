@@ -13,16 +13,16 @@ local Chapter0ResTable = {
     back2 = {'res/image/chapter/chapter0/2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-970)},
     back3_1 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
     back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
-    island0Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(527, 2662),"level0"}
-    ,island1Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(533, 2344),"level1"}
-    ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(333, 2071),"level2"}
-    ,island3Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(230, 1811),"level3"}
-    ,island4Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(395, 1536),"level4"}
-    ,island5Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(597, 1268),"level5"}
-    ,island6Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(482, 941),"level6"}
-    ,island7Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(300, 652),"level7"}
-    ,island8Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(223, 315),"level8"}
-    ,island9Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(382,80),"level9"}
+    island0Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(527, 2662),"island","level0"}
+    ,island1Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(533, 2344),"island","level1"}
+    ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(333, 2071),"island","level2"}
+    ,island3Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(230, 1811),"island","level3"}
+    ,island4Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(395, 1536),"island","level4"}
+    ,island5Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(597, 1268),"island","level5"}
+    ,island6Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(482, 941),"island","level6"}
+    ,island7Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(300, 652),"island","level7"}
+    ,island8Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(223, 315),"island","level8"}
+    ,island9Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(382,80),"island","level9"}
 }
 -- resourceType "start" / "middle" / "end"
 function ChapterLayer0.create(resourceType)

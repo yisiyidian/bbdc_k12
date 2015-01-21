@@ -37,7 +37,22 @@ end
 function ChapterLayerBase:createObjectForResource(t)
     local object
     if t[1]~=nil then 
-        object = cc.Sprite:create(t[1])
+        if t[4] ~=nil and t[4]=='island' then
+            -- define touchEvent
+            local function touchEvent(sender,eventType)
+                if eventType == ccui.TouchEventType.ended then
+                    print('levelbutton '..sender.getName()..' touched...')
+                end
+            end
+            print('create level button')
+            object = ccui.Button:create(t[1],t[1],t[1])
+            object:setScale9Enabled(true)
+            object:setName(t[5])
+            object:addTouchEventListener(touchEvent)
+        else
+            object = cc.Sprite:create(t[1])
+        end
+        
         if t[2]~=nil then 
             object:setAnchorPoint(t[2].x,t[2].y)
         end
@@ -48,9 +63,9 @@ function ChapterLayerBase:createObjectForResource(t)
         if t[4]~=nil and t[4]== "island" then
             object:setTag(islandTag)
             islandTag=islandTag + 1
-        else
-            self:addChild(object,50)
+
         end
+        self:addChild(object,50)
     end
     return object
 end
@@ -378,14 +393,18 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     -- check random summary boss
     local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)
     local summaryboss = split(bossList,'|')
-    local currentIndex = levelIndex
-    if self.chapterKey == 'chapter1' then
-        currentIndex = currentIndex + 10
-    elseif self.chapterKey == 'chapter2' then
-        currentIndex = currentIndex + 30
-    elseif self.chapterKey == 'chapter3' then
-        currentIndex = currentIndex + 60
-    end
+    local currentIndex = levelIndex 
+--    
+-- 
+--    if self.chapterKey == 'chapter1' then
+--        currentIndex = currentIndex + 10
+--    elseif self.chapterKey == 'chapter2' then
+--        currentIndex = currentIndex + 30
+--    elseif self.chapterKey == 'chapter3' then
+--        currentIndex = currentIndex + 60
+--    end
+    currentIndex = currentIndex + chapterIndex * 10
+
     local checkSummaryBoss = false
     for i = 1, #summaryboss do
         if summaryboss[i] == '' then break end
@@ -398,7 +417,8 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
         local number = ccui.TextBMFont:create()
         number:setFntFile('font/number_inclined.fnt')
         --number:setColor(cc.c3b(56,26,23))
-        number:setString(levelNumber)
+--        number:setString(levelNumber)
+        number:setString(levelIndex+1)
         number:setPosition(levelPosition.x, levelPosition.y+3)
         self:addChild(number,130)
     end
