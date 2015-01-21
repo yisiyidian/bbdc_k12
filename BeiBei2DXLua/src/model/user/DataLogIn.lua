@@ -9,16 +9,21 @@ function DataLogIn.create()
     return data
 end
 
+WEEKDAYSTATE_NONE = 0
+WEEKDAYSTATE_LOGEDIN = 1
+WEEKDAYSTATE_CHECKEDIN = 2
+
 function DataLogIn:ctor()
     self.className = 'DataLogIn'
     
-    self.Monday = 0
-    self.Tuesday = 0
-    self.Wednesday = 0
-    self.Thursday = 0
-    self.Friday = 0
-    self.Saturday = 0
-    self.Sunday = 0
+    self.Monday = WEEKDAYSTATE_NONE
+    self.Tuesday = WEEKDAYSTATE_NONE
+    self.Wednesday = WEEKDAYSTATE_NONE
+    self.Thursday = WEEKDAYSTATE_NONE
+    self.Friday = WEEKDAYSTATE_NONE
+    self.Saturday = WEEKDAYSTATE_NONE
+    self.Sunday = WEEKDAYSTATE_NONE
+    
     self.week = 0
 end
 
@@ -33,23 +38,31 @@ function getCurrentLogInWeek(offsetSeconds_1stPlay_now)
     return math.ceil(ret)
 end
 
-function DataLogIn:setWeekDay(secondsFrom1970)
+local function setWeekDayState(dataLogIn, secondsFrom1970, weekDayState)
     local wd = getWeekDay(secondsFrom1970)
     if wd == 1 then
-        self.Sunday = 1
+        dataLogIn.Sunday = weekDayState
     elseif wd == 2 then
-        self.Monday = 1
+        dataLogIn.Monday = weekDayState
     elseif wd == 3 then
-        self.Tuesday = 1
+        dataLogIn.Tuesday = weekDayState
     elseif wd == 4 then
-        self.Wednesday = 1
+        dataLogIn.Wednesday = weekDayState
     elseif wd == 5 then
-        self.Thursday = 1
+        dataLogIn.Thursday = weekDayState
     elseif wd == 6 then
-        self.Friday = 1
+        dataLogIn.Friday = weekDayState
     elseif wd == 7 then
-        self.Saturday = 1
+        dataLogIn.Saturday = weekDayState
     end
+end
+
+function DataLogIn:setWeekDay(secondsFrom1970)
+    setWeekDayState(self, secondsFrom1970, WEEKDAYSTATE_LOGEDIN)
+end
+
+function DataLogIn:checkIn(secondsFrom1970)
+    setWeekDayState(self, secondsFrom1970, WEEKDAYSTATE_CHECKEDIN)
 end
 
 function DataLogIn:getDays()

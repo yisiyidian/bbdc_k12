@@ -177,7 +177,7 @@ function M.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
     conditions = conditions or ''
     M.alterLocalDatabase(objectOfDataClass)
     
-    if objectOfDataClass.updatedAt > getLocalSeconds() then 
+    if objectOfDataClass.updatedAt > getLocalSeconds() + 1 then -- + 1 to remove milliseconds
         print ('\n\nM saveData NO:' .. objectOfDataClass.className .. ', updatedAt offset: ' .. tostring(getLocalSeconds() - objectOfDataClass.updatedAt) .. ', updatedAt:' .. tostring(objectOfDataClass.updatedAt) .. ', getLocalSeconds:' .. tostring(getLocalSeconds()))
         return 
     end

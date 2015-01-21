@@ -8,6 +8,7 @@ local WordDetailInfo = class("WordDetailInfo", function()
 end)
 
 function WordDetailInfo.create(word)
+
     local height = 520
 
     local main = cc.Layer:create()
@@ -63,7 +64,7 @@ function WordDetailInfo.create(word)
     local length = {}
     local wordHeight
     
-    label_sentenceen = cc.Label:createWithSystemFont(word.sentenceEn,"",26)
+    label_sentenceen = cc.Label:createWithTTF(word.sentenceEn,'font/CenturyGothic.ttf',26)
     label_sentenceen:setOpacity(180)
     label_sentenceen:setAnchorPoint(0,1)
     label_sentenceen:setColor(cc.c4b(0,0,0,255))
@@ -76,8 +77,6 @@ function WordDetailInfo.create(word)
     label_sentenceen:setDimensions(0,0)
     length[1] = label_sentenceen:getContentSize().width
     wordHeight = label_sentenceen:getContentSize().height
-    -- local  l = cc.Label:createWithTTF("Grossini only rotate/scale in 3 seconds", "font/CenturyGothic.ttf", 16, cc.size(text_length,0),0,0)
-    --         main:addChild(l)
 
     label_sentencecn = cc.Label:createWithSystemFont(word.sentenceCn,"",24)
     label_sentencecn:setOpacity(200)
@@ -88,11 +87,10 @@ function WordDetailInfo.create(word)
     label_sentencecn:setPosition(left, index_y)
     main:addChild(label_sentencecn)
     index_y = index_y - label_sentencecn:getContentSize().height - 10
-    label_sentencecn:setDimensions(0,0)
     length[2] = label_sentencecn:getContentSize().width
     local y2 = index_y
 
-    label_sentenceen2 = cc.Label:createWithSystemFont(word.sentenceEn2,"",26)
+    label_sentenceen2 = cc.Label:createWithTTF(word.sentenceEn2,'font/CenturyGothic.ttf',26)
     label_sentenceen2:setOpacity(180)
     label_sentenceen2:setAnchorPoint(0,1)
     label_sentenceen2:setColor(cc.c4b(0,0,0,255))
@@ -112,9 +110,6 @@ function WordDetailInfo.create(word)
     label_sentencecn2:setAlignment(0)
     label_sentencecn2:setPosition(left, index_y)
     main:addChild(label_sentencecn2)
-    index_y = index_y - label_sentencecn2:getContentSize().height - 10
-    label_sentencecn2:setDimensions(0,0)
-    length[4] = label_sentencecn2:getContentSize().width
     
     local realHeight = height-index_y
 
@@ -131,11 +126,34 @@ function WordDetailInfo.create(word)
 
     local index = 1
     for i = 1,#sentence1 do
-        local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence1[i],'',26)     
+        local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence1[i],'font/CenturyGothic.ttf',26)     
         index = index + 1                   
         richtext:pushBackElement(richElement1)     
         if i < #sentence1 then
-            local richElement2 = ccui.RichElementText:create(index,cc.c3b(255, 90, 17),200,word.wordName,'',26)
+            local clr = cc.c3b(255, 90, 17)
+            local c1 = 0
+            local c2 = 0
+            local isSeperate = true
+            if string.len(sentence1[i]) > 0 then
+                c1 = string.byte(string.sub(sentence1[i],string.len(sentence1[i]),string.len(sentence1[i])))
+                if (c1 <= 122 and c1 >= 97) or (c1 <= 90 and c1 >= 65) then
+                    isSeperate = false
+                    print(c1)
+                    print(sentence1[i]..'false')
+                end
+            end
+            if i < #sentence1 and string.len(sentence1[i + 1]) > 0 and string.len(sentence1[i + 1])< 5 and isSeperate then
+                c2 = string.byte(string.sub(sentence1[i + 1],1,1))
+                if (c2 <= 122 and c2 >= 97) or (c2 <= 90 and c2 >= 65) then
+                    isSeperate = false
+                    print(c2)
+                    print('false'..sentence1[i + 1])
+                end
+            end
+            if not isSeperate then
+                clr = cc.c3b(0,0,0)
+            end
+            local richElement2 = ccui.RichElementText:create(index,clr,200,word.wordName,'font/CenturyGothic.ttf',26)
             index = index + 1                           
             richtext:pushBackElement(richElement2) 
         else
@@ -157,11 +175,30 @@ function WordDetailInfo.create(word)
     main:addChild(richtext2)  
     index = 1
     for i = 1,#sentence2 do
-        local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence2[i],'',26)     
+        local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence2[i],'font/CenturyGothic.ttf',26)     
         index = index + 1                   
         richtext2:pushBackElement(richElement1)     
-        if i < #sentence1 then
-            local richElement2 = ccui.RichElementText:create(index,cc.c3b(255, 90, 17),200,word.wordName,'',26)
+        if i < #sentence2 then
+            local clr = cc.c3b(255, 90, 17)
+            local c1 = 0
+            local c2 = 0
+            local isSeperate = true
+            if string.len(sentence2[i]) > 0 then
+                c1 = string.byte(string.sub(sentence2[i],string.len(sentence2[i]),string.len(sentence2[i])))
+                if (c1 <= 122 and c1 >= 97) or (c1 <= 90 and c1 >= 65) then
+                    isSeperate = false
+                end
+            end
+            if i < #sentence2 and string.len(sentence2[i + 1]) > 0 and string.len(sentence2[i + 1])< 5 and isSeperate then
+                c2 = string.byte(string.sub(sentence2[i + 1],1,1))
+                if (c2 <= 122 and c2 >= 97) or (c2 <= 90 and c2 >= 65) then
+                    isSeperate = false
+                end
+            end
+            if not isSeperate then
+                clr = cc.c3b(0,0,0)
+            end
+            local richElement2 = ccui.RichElementText:create(index,clr,200,word.wordName,'font/CenturyGothic.ttf',26)
             index = index + 1                           
             richtext2:pushBackElement(richElement2) 
         end

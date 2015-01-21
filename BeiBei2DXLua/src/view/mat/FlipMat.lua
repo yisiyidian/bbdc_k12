@@ -132,7 +132,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
                     tmp_sprite:setOpacity(120)
                     main:addChild(tmp_sprite)
                     
-                    local tmp_label = cc.Label:createWithSystemFont(charaster_set_filtered[randomIndex],"",60)
+                    local tmp_label = cc.Label:createWithTTF(charaster_set_filtered[randomIndex],'font/CenturyGothic.ttf',60)
                     tmp_label:setColor(cc.c3b(20,20,20))
                     tmp_label:setOpacity(120)
                     tmp_label:setPosition(tmp_sprite:getContentSize().width/2 + 3, tmp_sprite:getContentSize().height/2 + 3)
@@ -204,7 +204,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
             main:addChild(term_back)
         end
         for i = 1, #selectStack do
-            local term_char = cc.Label:createWithSystemFont(selectStack[i].main_character_content,"",36)
+            local term_char = cc.Label:createWithTTF(selectStack[i].main_character_content,'font/CenturyGothic.ttf',36)
             term_char:setColor(cc.c4b(255,255,255,255))
             term_char:setPosition(left+(i-1)*gap,640)
             term_char:setTag(100+i)

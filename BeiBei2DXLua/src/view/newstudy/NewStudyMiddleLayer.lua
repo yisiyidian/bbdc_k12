@@ -11,7 +11,7 @@ end)
 
 function NewStudyMiddleLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    s_CURRENT_USER:addBeans(3)
+    s_CURRENT_USER:addBeans(s_CorePlayManager.reward)
     
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
@@ -61,7 +61,7 @@ function NewStudyMiddleLayer.create()
     beanLabel:setPosition(beans:getContentSize().width/2 - 60, beans:getContentSize().height/2+5)
     beans:addChild(beanLabel)
 
-    local beanCountLabel = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',33)
+    local beanCountLabel = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',33)
     beanCountLabel:setColor(cc.c3b(13, 95, 156))
     beanCountLabel:ignoreAnchorPointForPosition(false)
     beanCountLabel:setAnchorPoint(1,0)
@@ -123,9 +123,11 @@ function NewStudyMiddleLayer.create()
     bean:setPosition(button_go:getContentSize().width * 0.75,button_go:getContentSize().height * 0.5)
     button_go:addChild(bean)
     
-    local rewardNumber = cc.Label:createWithSystemFont("+3","",36)
+    local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(s_CorePlayManager.reward),"",36)
     rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
     button_go:addChild(rewardNumber)
+    
+    s_CorePlayManager.initNewStudyReward()
     
     print_lua_table(s_CorePlayManager.wrongWordList)
     

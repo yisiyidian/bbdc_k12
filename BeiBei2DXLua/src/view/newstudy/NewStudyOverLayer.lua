@@ -37,7 +37,7 @@ function NewStudyOverLayer.create()
     back_tail:setPosition(bigWidth/2, 0)
     backColor:addChild(back_tail)
 
-    local label_hint = cc.Label:createWithSystemFont("恭喜你完成今天的学习任务","",40)
+    local label_hint = cc.Label:createWithSystemFont("恭喜你完成本书的学习任务","",40)
     label_hint:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
     label_hint:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(label_hint)

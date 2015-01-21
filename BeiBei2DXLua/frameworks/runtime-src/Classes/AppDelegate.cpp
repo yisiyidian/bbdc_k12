@@ -143,8 +143,12 @@ bool AppDelegate::applicationDidFinishLaunching()
 void AppDelegate::applicationDidEnterBackground()
 {
     auto engine = LuaEngine::getInstance();
+    
     engine->executeScriptFile("AppScene.lua");
     engine->executeGlobalFunction("applicationDidEnterBackgroundLua");
+    
+    engine->executeScriptFile("view/Pause.lua");
+    engine->executeGlobalFunction("createPauseLayerWhenTestOrBoss");
     
     Director::getInstance()->stopAnimation();
 
@@ -159,10 +163,6 @@ void AppDelegate::applicationWillEnterForeground()
     SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
     
     auto engine = LuaEngine::getInstance();
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    engine->executeScriptFile("view/Pause.lua");
-    engine->executeGlobalFunction("createPauseLayerWhenTestOrBoss");
-#endif
     engine->executeScriptFile("AppScene.lua");
     engine->executeGlobalFunction("applicationWillEnterForeground");
 }

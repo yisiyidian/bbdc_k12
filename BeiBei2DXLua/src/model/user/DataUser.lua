@@ -68,7 +68,6 @@ function DataUser:ctor()
 
     self.needToUnlockNextChapter           = 0
 
-    self.dailyCheckInData                  = DataDailyCheckIn.create()
     self.levels                            = {}
     self.logInDatas                        = {}
     self.localAuthData                     = nil
@@ -81,7 +80,10 @@ function DataUser:ctor()
     self.summaryBossList                   = ''
     self.chestList                         = ''
     self.lastUpdateChestTime               = 0
-    self.dailyStudyInfo                    = DataDailyStudyInfo.create()
+end
+
+function DataUser:getBeans()
+    return self.beans
 end
 
 function DataUser:addBeans(count)
@@ -224,16 +226,6 @@ function DataUser:parseServerLevelData(results)
         --print_lua_table(data)
     end
     --print('-------server level size:'..#self.levels)
-end
-
-function DataUser:parseServerDailyCheckInData(results)
-    for i, v in ipairs(results) do
-        local data = DataDailyCheckIn.create()
-        parseServerDataToUserData(v, data)
-        self.dailyCheckInData = data
-        print_lua_table(data)
-        break
-    end 
 end
 
 function DataUser:parseServerDataLogIn(results)
