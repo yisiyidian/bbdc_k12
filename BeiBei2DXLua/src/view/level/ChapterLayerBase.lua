@@ -47,9 +47,10 @@ function ChapterLayerBase:createObjectForResource(t)
         end
         if t[4]~=nil and t[4]== "island" then
             object:setTag(islandTag)
-            islandTag=islandTag+1
+            islandTag=islandTag + 1
+        else
+            self:addChild(object,50)
         end
-        self:addChild(object,50)
     end
     return object
 end
