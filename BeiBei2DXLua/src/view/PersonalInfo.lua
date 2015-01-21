@@ -52,6 +52,12 @@ function PersonalInfo:ctor()
         title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
         title:setColor(colorArray[5 - i])
         layout:addChild(title)
+
+        local share = ccui.Button:create('image/PersonalInfo/share_button.png','','')
+        share:setScale9Enabled(true)
+        share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
+        layout:addChild(share)
+        
         table.insert(self.intro_array, intro)
 
         pageView:addPage(layout)

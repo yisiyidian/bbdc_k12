@@ -292,36 +292,6 @@ function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
 end
 
 ----
---[[
-s_UserBaseServer.getDailyCheckInOfCurrentUser( 
-   function (api, result)
-       s_CURRENT_USER:parseServerDailyCheckInData(result.results)
-   end,
-   function (api, code, message, description) end
-)
-]]--
--- useless function
-function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
-    s_SERVER.search('classes/DataDailyCheckIn?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
-end
--- useless function
-function UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, onSucceed, onFailed)
-    s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards = lastCheckInAward
-    UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData,
-        function (api, result) 
-            if lastCheckInAward <= #s_DataManager.dailyCheckIn then
-                local metaDailyCheckIn = s_DataManager.dailyCheckIn[lastCheckInAward]
-                s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + metaDailyCheckIn.count
-                UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
-                AnalyticsDailyCheckIn(lastCheckInAward)
-            end
-            if onSucceed ~= nil then onSucceed(api, result) end
-        end, 
-        onFailed
-    )
-end
-
-----
 
 function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
     if s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken() then
@@ -377,25 +347,6 @@ end
 function UserBaseServer.getDataBookProgress(objectId, onSucceed, onFailed)
     s_SERVER.search('classes/DataBookProgress?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
 end
-----
-
---[[
-s_UserBaseServer.getLevelsOfCurrentUser(
-    function (api, result)
-        s_CURRENT_USER:parseServerLevelData(result.results)
-    end,
-    function (api, code, message, description)
-    end
-)
-]]--
--- local function getLevels(userId, bookKey, onSucceed, onFailed)
---     s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
--- end
--- function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
---     getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
--- end
-
-----
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -418,39 +369,6 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
         s ('saveDataObjectOfCurrentUser ' .. dataObject.className, nil)
     end
 end
-
--- TODO
--- function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
---     local dataObject = s_CURRENT_USER.dailyStudyInfo
-
---     local function update()
---         dataObject.objectId  = ''
---         dataObject.userId    = s_CURRENT_USER.objectId
---         dataObject.bookKey   = bookKey
---         dataObject.dayString = dayString
---         dataObject.studyNum  = studyNum
---         dataObject.graspNum  = graspNum
---     end
-
---     local s = function (api, result)
---         update()
---         if #result.results > 0 then
---             for i, data in ipairs(result.results) do
---                 dataObject.objectId = data.objectId
---                 s_SERVER.updateData(dataObject, nil, nil)
---                 break
---             end
---         else
---             s_SERVER.createData(dataObject, nil, nil)
---         end
---     end
---     local f = function (api, result) 
---         update()
---         s_SERVER.createData(dataObject, nil, nil) 
---     end
-
---     s_SERVER.search('classes/DataDailyStudyInfo?where={"userId":"' .. s_CURRENT_USER.userId .. '","bookKey":"' .. bookKey .. '","dayString":"' .. dayString .. '"}', s, f)
--- end 
 
 function UserBaseServer.saveDataCurrentIndex()
     UserBaseServer.synBookRelations({'DataCurrentIndex'}, nil, false)
@@ -482,6 +400,9 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
     local all = {'DataCurrentIndex', 'DataNewPlayState', 'DataWrongWordBuffer', 'DataTodayReviewBossNum'}
     classNames = classNames or all
     saveToLocalDB = saveToLocalDB or true
+
+    print ('synBookRelations AAA >>>')
+    print_lua_table (classNames)
 
     local objs = {}
     objs.className = 'DataBookRelations'
@@ -523,11 +444,14 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
         end
     end
 
+    print ('\n')
+    print_lua_table (objs)
+    print ('synBookRelations AAA <<<')
+
     s_SERVER.synData(objs, 
         function (api, result) 
-            print ('synBookRelations >>>')
+            print ('synBookRelations synData >>>')
             print_lua_table (result)
-            print ('synBookRelations <<<')
             
             if saveToLocalDB == true then
                 -- update local db data
@@ -547,6 +471,8 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
                     end
                 end -- for
             end
+
+            print ('synBookRelations synData <<<')
 
             if onCompleted then onCompleted() end
         end, 

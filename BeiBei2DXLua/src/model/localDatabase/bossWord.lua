@@ -1,10 +1,10 @@
-local DataTodayReviewBossNum = require('model.user.DataTodayReviewBossNum')
+local DataBossWord = require('model.user.DataBossWord')
 local Manager = s_LocalDatabaseManager
 
 local M = {}
 
 local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList)
-    local data = DataTodayReviewBossNum.create()
+    local data = DataBossWord.create()
     updateDataFromUser(data, s_CURRENT_USER)
 
     data.bookKey = bookKey
