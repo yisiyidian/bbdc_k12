@@ -483,6 +483,9 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
     classNames = classNames or all
     saveToLocalDB = saveToLocalDB or true
 
+    print ('synBookRelations AAA >>>')
+    print_lua_table (classNames)
+
     local objs = {}
     objs.className = 'DataBookRelations'
     objs.bookKey = s_UserBaseServer.bookKey
@@ -523,11 +526,14 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
         end
     end
 
+    print ('\n')
+    print_lua_table (objs)
+    print ('synBookRelations AAA <<<')
+
     s_SERVER.synData(objs, 
         function (api, result) 
-            print ('synBookRelations >>>')
+            print ('synBookRelations synData >>>')
             print_lua_table (result)
-            print ('synBookRelations <<<')
             
             if saveToLocalDB == true then
                 -- update local db data
@@ -547,6 +553,8 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
                     end
                 end -- for
             end
+
+            print ('synBookRelations synData <<<')
 
             if onCompleted then onCompleted() end
         end, 

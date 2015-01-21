@@ -359,7 +359,7 @@ function O2OController.getDataLogIn(onSaved)
     local function onUpdateWeekCompleted(data)
         hideProgressHUD()
         if onSaved then onSaved() end
-        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = '" .. tostring(data.week) .. "'")
+        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = " .. tostring(data.week))
     end
 
     -- save to local or server
