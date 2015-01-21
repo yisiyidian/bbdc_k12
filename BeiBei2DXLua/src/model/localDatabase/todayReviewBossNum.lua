@@ -20,8 +20,6 @@ function M.getDataTodayTotalBoss()
     local username = s_CURRENT_USER.username
     
     local num = 0
-
-    local num = 0
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataTodayReviewBossNum WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
             num = num + 1
@@ -60,7 +58,7 @@ function M.getTodayTotalBossNum()
     
     if num == 0 then
         local reviewBossNum = Manager.getTodayRemainBossNum()
-        local data = createData(bookKey, reviewBossNum, lastUpdate)
+        local data = createData(bookKey, reviewBossNum, os.time())
         Manager.saveData(data, userId, username, num)
         return reviewBossNum
     else
