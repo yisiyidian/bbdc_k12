@@ -63,7 +63,7 @@ function NewStudyMiddleLayer.create()
     beanLabel:setPosition(beans:getContentSize().width/2 - 60, beans:getContentSize().height/2+5)
     beans:addChild(beanLabel)
 
-    local beanCountLabel = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',33)
+    local beanCountLabel = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',33)
     beanCountLabel:setColor(cc.c3b(13, 95, 156))
     beanCountLabel:ignoreAnchorPointForPosition(false)
     beanCountLabel:setAnchorPoint(1,0)
