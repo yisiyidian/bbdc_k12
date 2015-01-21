@@ -15,6 +15,8 @@ function NewStudyMiddleLayer.create()
     
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
+    
+    s_CorePlayManager.initNewStudyReward()
 
     -- word info
     local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]

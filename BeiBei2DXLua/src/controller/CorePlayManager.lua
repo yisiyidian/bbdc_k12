@@ -48,6 +48,7 @@ function CorePlayManager.initTotalPlay()
         CorePlayManager.initNewReviewBossLayer(candidate)
         AnalyticsReviewBoss()
     elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel then
+        CorePlayManager.initNewStudyReward()
         CorePlayManager.initNewStudyLayer()
     end
 end
@@ -336,6 +337,10 @@ end
 function CorePlayManager.initNewReviewBossRewardAndTotalWord()
     CorePlayManager.reward = 0
     CorePlayManager.totalWord = 0
+end
+
+function CorePlayManager.initNewStudyReward()
+    CorePlayManager.reward = 3
 end
 
 function CorePlayManager.initNewReviewBossLayer(candidate)

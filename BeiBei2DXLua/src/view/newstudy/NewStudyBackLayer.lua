@@ -18,8 +18,13 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT)  
 
     local lastWordAndTotalNumber = LastWordAndTotalNumber.create()
-    backColor:addChild(lastWordAndTotalNumber,2)
-
+    backColor:addChild(lastWordAndTotalNumber,1)
+    
+    backColor.setWordAndNumber = function (number,word,bool)
+        lastWordAndTotalNumber.setWord(word,bool)
+        lastWordAndTotalNumber.setNumber(number)
+    end
+    
 
     local back_head = cc.Sprite:create("image/newstudy/back_head.png")
     back_head:setAnchorPoint(0.5, 1)
@@ -71,7 +76,6 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     backColor.indexSwell = function ()
     return backColor.progressBar.swell()
     end
-    
     
     backColor.progressBar.hint = function()
         local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")

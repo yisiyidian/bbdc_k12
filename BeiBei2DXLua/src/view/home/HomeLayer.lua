@@ -225,6 +225,9 @@ function HomeLayer.create()
 
     local button_shop = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
     button_shop:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-200)
+    button_shop:setColor(cc.c4b(0,0,0,255))
+    button_shop:setTitleText("$")
+    button_shop:setTitleFontSize(40)
     button_shop:addTouchEventListener(button_shop_clicked)
     backColor:addChild(button_shop)   
 

@@ -35,6 +35,20 @@ function NewStudyRightLayer.create()
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
+    
+    local time = os.time()
+    local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
+
+
+    if s_CorePlayManager.isStudyModel() then
+        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then
+            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1])
+        else
+            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+        end
+    else
+        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+    end
 
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
     soundMark:setPosition(bigWidth/2, 920)  
@@ -61,7 +75,7 @@ function NewStudyRightLayer.create()
             if s_LocalDatabaseManager.getIsAlterOn() == 1 then
                 local guideAlter = GuideAlter.create(1, "依然复习？", "陛下，我在生词库中等你来哦～")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-                backColor:addChild(guideAlter)
+                backColor:addChild(guideAlter,5)
                 guideAlter.addbeibeiThrowHeart()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
@@ -108,7 +122,7 @@ function NewStudyRightLayer.create()
             if s_LocalDatabaseManager.getIsAlterOn() == 1 then
                 local guideAlter = GuideAlter.create(1, "太简单了？", "陛下，您真的要把我打入冷宫吗？")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-                backColor:addChild(guideAlter)
+                backColor:addChild(guideAlter,5)
                 guideAlter.addbeibeiBreakHeart()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
