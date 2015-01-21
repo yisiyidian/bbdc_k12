@@ -159,7 +159,7 @@ function NewStudySlideLayer.create()
 
     local choose_before_button = ccui.Button:create("image/newstudy/button_twobutton_size.png","image/newstudy/button_twobutton_size_pressed.png","")
     choose_before_button:setPosition(bigWidth/2, 153)
-    choose_before_button:setTitleText("再看一眼")
+    choose_before_button:setTitleText("偷看一眼")
     choose_before_button:setTitleColor(cc.c4b(255,255,255,255))
     choose_before_button:setTitleFontSize(32)
     choose_before_button:addTouchEventListener(click_before_button)
