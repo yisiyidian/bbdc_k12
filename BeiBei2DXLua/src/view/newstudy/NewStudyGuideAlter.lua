@@ -141,8 +141,8 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         back:addChild(button_sure)
     end
 
-    -- touch lock
---    local onTouchBegan = function(touch, event)
+ -- touch lock
+    local onTouchBegan = function(touch, event)
 --        if box ~= nil then
 --            local location = box:convertToNodeSpace(touch:getLocation())
 --            if cc.rectContainsPoint({x=0,y=0,width=box:getBoundingBox().width,height=box:getBoundingBox().height}, location) then
@@ -155,15 +155,15 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
 --                end
 --            end
 --        end
---        
---        return true
---    end
---
---    local listener = cc.EventListenerTouchOneByOne:create()
---    listener:setSwallowTouches(true)
---    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
---    local eventDispatcher = main:getEventDispatcher()
---    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+        
+        return true
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    local eventDispatcher = main:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
     return main    
 end

@@ -41,12 +41,24 @@ function NewStudySlideLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
     
-    local positionX = backColor.getProgressBarIndexPosition()
-    
+    local time = os.time()
+    local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
 
+
+    if s_CorePlayManager.isStudyModel() then
+        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 1 then
+            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 2])
+        else
+            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+        end
+    else
+        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+    end
+    
+    local positionX = backColor.getProgressBarIndexPosition()
 
     local word_meaning_label = cc.Label:createWithSystemFont(wordMeaningSmall,"",50)
-    word_meaning_label:setPosition(bigWidth/2, 1000)
+    word_meaning_label:setPosition(bigWidth/2, 950)
     word_meaning_label:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(word_meaning_label)
 

@@ -77,6 +77,23 @@ function NewStudyChooseLayer.create()
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
+
+    local time = os.time()
+    local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
+    
+    if s_CorePlayManager.isStudyModel() then
+        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then    
+            if s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1] == s_CorePlayManager.rightWordList[#s_CorePlayManager.rightWordList] then
+                backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],true)
+            else
+                backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],false)
+            end
+        else
+            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+        end
+    else
+        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+    end
     
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
     soundMark:setPosition(bigWidth/2, 920)  
@@ -131,15 +148,23 @@ function NewStudyChooseLayer.create()
                         AnalyticsStudyGuessWrong()
                         s_CorePlayManager.updateWrongWordList(wordname)
                         s_CorePlayManager.updateCurrentIndex()
-                        local guessWrong = GuessWrong.create()
-                        s_SCENE:popup(guessWrong)
-                        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()                
+                        if s_CorePlayManager.reward >=1 then
+                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward)
+                            s_SCENE:popup(guessWrong)
+                            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
+                        else
+                            s_CorePlayManager.enterNewStudyWrongLayer()
+                        end
+             
                     else
                         AnalyticsStudyGuessWrong_strikeWhileHot()
-
-                        local guessWrong = GuessWrong.create()
-                        s_SCENE:popup(guessWrong)
-                        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
+                        if s_CorePlayManager.reward >=1 then
+                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward)
+                            s_SCENE:popup(guessWrong)
+                            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
+                        else
+                            s_CorePlayManager.enterNewStudyWrongLayer()
+                        end
                     end
                 end)))
             end
