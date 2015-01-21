@@ -58,7 +58,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
 
 
 
-    button_wordname = cc.Label:createWithSystemFont(wordname,"",64)
+    button_wordname = cc.Label:createWithTTF(wordname,'font/CenturyGothic.ttf',64)
     button_wordname:setColor(cc.c4b(31,68,102,255))
 
     button_country = ccui.Button:create(button_country_name1, button_country_name2, "")
@@ -71,10 +71,10 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     end
 
 
-    button_soundmark_us = cc.Label:createWithSystemFont(soundmarkus,"",24)
+    button_soundmark_us = cc.Label:createWithSystemFont(soundmarkus,'',28)
     button_soundmark_us:setColor(cc.c4b(41,109,146,255))
 
-    button_soundmark_en = cc.Label:createWithSystemFont(soundmarken,"",24)
+    button_soundmark_en = cc.Label:createWithSystemFont(soundmarken,'',28)
     button_soundmark_en:setColor(cc.c4b(41,109,146,255))
 
     -- handle position
