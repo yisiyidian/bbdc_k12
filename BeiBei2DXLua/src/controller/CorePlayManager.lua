@@ -42,14 +42,18 @@ end
 
 function CorePlayManager.initTotalPlay()  
     local gameState = s_LocalDatabaseManager.getGameState()
-    if gameState == s_gamestate_reviewbossmodel then
+    if gameState == s_gamestate_reviewbossmodel_beforetoday then
         CorePlayManager.initNewReviewBossRewardAndTotalWord()
         local candidate = CorePlayManager.getReviewBossCandidate()
         CorePlayManager.initNewReviewBossLayer(candidate)
         AnalyticsReviewBoss()
-    elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel then
+    elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel or  gameState == s_gamestate_studymodel_extra or  gameState == s_gamestate_reviewmodel_extra then
         CorePlayManager.initNewStudyReward()
         CorePlayManager.initNewStudyLayer()
+    elseif gameState == s_gamestate_reviewbossmodel_today then
+        CorePlayManager.initNewReviewBossRewardAndTotalWord()
+        local candidate = CorePlayManager.getReviewBossCandidateToday()
+        CorePlayManager.initNewReviewBossLayer(candidate)
     end
 end
 
@@ -62,6 +66,7 @@ function CorePlayManager.getProgress()
         local lastupdate_day          = os.date("%x", lastupdate)
         local current_day             = os.date("%x", os.time())
         if lastupdate_day == current_day then
+            -- 0 for study and 1 for review and 2 for play over
             if lastPlayState.playModel == 0 then
                 local wrongWordList
                 local wordCandidate
@@ -113,7 +118,68 @@ function CorePlayManager.initNewStudyLayer()
         end
     end
     
+--    local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
+--    if lastPlayState.lastUpdate == nil then
+--        print("lastPlayStateRecord not exist...")
+--        CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
+--        CorePlayManager.rightWordList = {}
+--        CorePlayManager.wrongWordList = {}
+--        CorePlayManager.wordCandidate = {}
+--        CorePlayManager.rightWordNum  = 0
+--        CorePlayManager.wrongWordNum  = 0
+--        CorePlayManager.candidateNum  = 0
+--        CorePlayManager.enterNewStudyChooseLayer()
+--    else
+--        -- day format is a string like "11/16/14", as month + day + year
+--        local lastupdate              = lastPlayState.lastUpdate
+--        local lastupdate_day          = os.date("%x", lastupdate)
+--        local current_day             = os.date("%x", os.time())
+--        if lastupdate_day == current_day then
+--            print("lastPlayStateRecord is today...")
+--            CorePlayManager.playModel     = lastPlayState.playModel
+--            if CorePlayManager.playModel == 2 then
+--                print("lastPlayStateRecord is today but over...")
+--                CorePlayManager.enterNewStudyOverLayer()
+--            else
+--                print("lastPlayStateRecord is today and not over...")
+--                if lastPlayState.rightWordList == "" then
+--                    CorePlayManager.rightWordList = {}
+--                else
+--                    CorePlayManager.rightWordList = split(lastPlayState.rightWordList, "|")
+--                end
+--                if lastPlayState.wrongWordList == "" then
+--                    CorePlayManager.wrongWordList = {}
+--                else
+--                    CorePlayManager.wrongWordList = split(lastPlayState.wrongWordList, "|")
+--                end
+--                if lastPlayState.wordCandidate == "" then
+--                    CorePlayManager.wordCandidate = {}
+--                else
+--                    CorePlayManager.wordCandidate = split(lastPlayState.wordCandidate, "|")
+--                end
+--                CorePlayManager.rightWordNum  = #CorePlayManager.rightWordList
+--                CorePlayManager.wrongWordNum  = #CorePlayManager.wrongWordList
+--                CorePlayManager.candidateNum  = #CorePlayManager.wordCandidate
+--                print("right word list: "..lastPlayState.rightWordList)
+--                print("wrong word list: "..lastPlayState.wrongWordList)
+--                print("candidate word list: "..lastPlayState.wordCandidate)
+--                CorePlayManager.enterNewStudyChooseLayer()
+--            end
+--        else
+--            print("lastPlayStateRecord is before today...")
+--            CorePlayManager.playModel     = 0
+--            CorePlayManager.rightWordList = {}
+--            CorePlayManager.wrongWordList = {}
+--            CorePlayManager.wordCandidate = {}
+--            CorePlayManager.rightWordNum  = 0
+--            CorePlayManager.wrongWordNum  = 0
+--            CorePlayManager.candidateNum  = 0
+--            CorePlayManager.enterNewStudyChooseLayer()
+--        end
+--    end
+
     local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
+    s_LocalDatabaseManager.addOrdinalNum(0)
     if lastPlayState.lastUpdate == nil then
         print("lastPlayStateRecord not exist...")
         CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
@@ -123,45 +189,16 @@ function CorePlayManager.initNewStudyLayer()
         CorePlayManager.rightWordNum  = 0
         CorePlayManager.wrongWordNum  = 0
         CorePlayManager.candidateNum  = 0
+        CorePlayManager.ordinalNum    = s_LocalDatabaseManager.getOrdinalNum()
         CorePlayManager.enterNewStudyChooseLayer()
     else
         -- day format is a string like "11/16/14", as month + day + year
         local lastupdate              = lastPlayState.lastUpdate
         local lastupdate_day          = os.date("%x", lastupdate)
         local current_day             = os.date("%x", os.time())
-        if lastupdate_day == current_day then
-            print("lastPlayStateRecord is today...")
-            CorePlayManager.playModel     = lastPlayState.playModel
-            if CorePlayManager.playModel == 2 then
-                print("lastPlayStateRecord is today but over...")
-                CorePlayManager.enterNewStudyOverLayer()
-            else
-                print("lastPlayStateRecord is today and not over...")
-                if lastPlayState.rightWordList == "" then
-                    CorePlayManager.rightWordList = {}
-                else
-                    CorePlayManager.rightWordList = split(lastPlayState.rightWordList, "|")
-                end
-                if lastPlayState.wrongWordList == "" then
-                    CorePlayManager.wrongWordList = {}
-                else
-                    CorePlayManager.wrongWordList = split(lastPlayState.wrongWordList, "|")
-                end
-                if lastPlayState.wordCandidate == "" then
-                    CorePlayManager.wordCandidate = {}
-                else
-                    CorePlayManager.wordCandidate = split(lastPlayState.wordCandidate, "|")
-                end
-                CorePlayManager.rightWordNum  = #CorePlayManager.rightWordList
-                CorePlayManager.wrongWordNum  = #CorePlayManager.wrongWordList
-                CorePlayManager.candidateNum  = #CorePlayManager.wordCandidate
-                print("right word list: "..lastPlayState.rightWordList)
-                print("wrong word list: "..lastPlayState.wrongWordList)
-                print("candidate word list: "..lastPlayState.wordCandidate)
-                CorePlayManager.enterNewStudyChooseLayer()
-            end
-        else
-            print("lastPlayStateRecord is before today...")
+        CorePlayManager.playModel     = lastPlayState.playModel
+        if CorePlayManager.playModel == 2 then
+            print("lastPlayStateRecord is over and begin new ...")
             CorePlayManager.playModel     = 0
             CorePlayManager.rightWordList = {}
             CorePlayManager.wrongWordList = {}
@@ -169,6 +206,33 @@ function CorePlayManager.initNewStudyLayer()
             CorePlayManager.rightWordNum  = 0
             CorePlayManager.wrongWordNum  = 0
             CorePlayManager.candidateNum  = 0
+            s_LocalDatabaseManager.addOrdinalNum(1)
+            CorePlayManager.ordinalNum    = s_LocalDatabaseManager.getOrdinalNum()
+            CorePlayManager.enterNewStudyChooseLayer()
+        else
+            print("lastPlayStateRecord is not over...")
+            if lastPlayState.rightWordList == "" then
+                CorePlayManager.rightWordList = {}
+            else
+                CorePlayManager.rightWordList = split(lastPlayState.rightWordList, "|")
+            end
+            if lastPlayState.wrongWordList == "" then
+                CorePlayManager.wrongWordList = {}
+            else
+                CorePlayManager.wrongWordList = split(lastPlayState.wrongWordList, "|")
+            end
+            if lastPlayState.wordCandidate == "" then
+                CorePlayManager.wordCandidate = {}
+            else
+                CorePlayManager.wordCandidate = split(lastPlayState.wordCandidate, "|")
+            end
+            CorePlayManager.rightWordNum  = #CorePlayManager.rightWordList
+            CorePlayManager.wrongWordNum  = #CorePlayManager.wrongWordList
+            CorePlayManager.candidateNum  = #CorePlayManager.wordCandidate
+            CorePlayManager.ordinalNum    = s_LocalDatabaseManager.getOrdinalNum()
+            print("right word list: "..lastPlayState.rightWordList)
+            print("wrong word list: "..lastPlayState.wrongWordList)
+            print("candidate word list: "..lastPlayState.wordCandidate)
             CorePlayManager.enterNewStudyChooseLayer()
         end
     end
@@ -324,7 +388,11 @@ end
 
 -- new review boss
 function CorePlayManager.getReviewBossCandidate() -- if not exist candidate will return nil
-    return s_LocalDatabaseManager.getBossWord()
+    return s_LocalDatabaseManager.getBossWordBeforeToday()
+end
+
+function CorePlayManager.getReviewBossCandidateToday()
+    return s_LocalDatabaseManager.getBossWordBeforeToday()
 end
 
 function CorePlayManager.updateReviewBoss(bossID)

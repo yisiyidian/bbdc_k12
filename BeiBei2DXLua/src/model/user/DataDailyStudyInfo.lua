@@ -6,7 +6,7 @@ local DataDailyStudyInfo = class("DataDailyStudyInfo", function()
     return DataClassBase.new()
 end)
 
-function DataDailyStudyInfo.createData(bookKey, dayString, studyNum, graspNum, lastUpdate)
+function DataDailyStudyInfo.createData(bookKey, dayString, studyNum, graspNum, lastUpdate, ordinalNum)
     local data = DataDailyStudyInfo.create()
     updateDataFromUser(data, s_CURRENT_USER)
 
@@ -15,6 +15,7 @@ function DataDailyStudyInfo.createData(bookKey, dayString, studyNum, graspNum, l
     data.studyNum = studyNum
     data.graspNum = graspNum
     data.lastUpdate = lastUpdate
+    data.ordinalNum = ordinalNum
 
     return data
 end
@@ -32,6 +33,8 @@ function DataDailyStudyInfo:ctor()
     self.studyNum = 0
     self.graspNum = 0
     self.lastUpdate = 0
+    self.ordinalNum = 0
+    
 end
 
 return DataDailyStudyInfo

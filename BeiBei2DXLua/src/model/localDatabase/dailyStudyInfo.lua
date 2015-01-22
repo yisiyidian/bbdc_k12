@@ -19,7 +19,7 @@ function M.addStudyWordsNum()
 
     local data = M.getDataDailyStudyInfo(today)
     if data == nil then
-        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time)
+        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time, 0)
         Manager.saveData(data, userId, username, 0)
     else
         data.studyNum = data.studyNum + 1
@@ -27,6 +27,44 @@ function M.addStudyWordsNum()
     end
     return data
 end
+
+function M.addOrdinalNum(ordinalNum)-- influence beibei bean
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local time = os.time()
+    local today = getDayStringForDailyStudyInfo(time)
+
+    local data = M.getDataDailyStudyInfo(today)
+    if data == nil then
+        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time, 0)
+        Manager.saveData(data, userId, username, 0)
+    else
+        data.ordinalNum = data.ordinalNum + ordinalNum
+        Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
+    end
+    return data
+end
+
+function M.getOrdinalNum()-- influence beibei bean    
+    local ordinalNum = 0
+    
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local time = os.time()
+    local today = getDayStringForDailyStudyInfo(time)
+
+    local data = M.getDataDailyStudyInfo(today)
+    if data ~= nil then
+        ordinalNum = data.ordinalNum
+    end
+
+    return ordinalNum
+end
+
 
 function M.addGraspWordsNum(addNum)
     local userId = s_CURRENT_USER.objectId
@@ -38,7 +76,7 @@ function M.addGraspWordsNum(addNum)
 
     local data = M.getDataDailyStudyInfo(today)
     if data == nil then
-        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time)
+        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time, 0)
         Manager.saveData(data, userId, username, 0)
     else
         data.graspNum = data.graspNum + addNum
@@ -105,7 +143,7 @@ function M.getDataDailyStudyInfo(dayString)
     end
 
     if dbData ~= nil then
-        local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate)
+        local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate, dbData.ordinalNum)
         parseLocalDatabaseToUserData(dbData, data)
         return data
     end
@@ -116,6 +154,7 @@ function M.saveDataDailyStudyInfo(data)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
+    local dayString = data.dayString
     
     local num = 0
     if userId ~= '' then
@@ -129,7 +168,7 @@ function M.saveDataDailyStudyInfo(data)
         end
     end
     
-    Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
+    Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;")
 end
 
 return M

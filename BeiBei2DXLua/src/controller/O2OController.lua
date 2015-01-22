@@ -256,7 +256,7 @@ function O2OController.getUserDatasOnline()
                         local dayString = getDayStringForDailyStudyInfo(os.time())
                         local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
                         if today == nil then
-                            today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time())
+                            today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
                         end
                         s_UserBaseServer.synTodayDailyStudyInfo(today, function ()
                             s_CorePlayManager.enterHomeLayer()

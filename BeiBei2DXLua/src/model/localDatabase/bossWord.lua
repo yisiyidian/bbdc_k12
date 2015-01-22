@@ -92,7 +92,7 @@ function M.getBossWordNum()
     return bossWordNum
 end
 
-function M.getBossWord()
+function M.getBossWordBeforeToday()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
