@@ -2,29 +2,29 @@ require("cocos.init")
 require("common.global")
 local DataClassBase = require('model.user.DataClassBase')
 
-local DataBookProgress = class("DataBookProgress", function()
+local DataLevelInfo = class("DataLevelInfo", function()
     return DataClassBase.new()
 end)
-function DataBookProgress.create()
-    local data = DataBookProgress.new()
+function DataLevelInfo.create()
+    local data = DataLevelInfo.new()
     return data
 end
 
-function DataBookProgress:ctor()
-    self.className = 'DataBookProgress'
-    self.CET4 = '0'    -- level index
-    self.CET6 = '0'
-    self.GMAT = '0'
-    self.GRE = '0'
-    self.GSE = '0'
-    self.IELTS = '0'
-    self.MIDDLE = '0'
-    self.NCEE = '0'
-    self.PRIMARY = '0'
-    self.PRO4 = '0'
-    self.PRO8 = '0'
-    self.SAT = '0'
-    self.TOEFL = '0'
+function DataLevelInfo:ctor()
+    self.className = 'DataLevelInfo'
+    self.CET4 = 0    -- level index
+    self.CET6 = 0
+    self.GMAT = 0
+    self.GRE = 0
+    self.GSE = 0
+    self.IELTS = 0
+    self.MIDDLE = 0
+    self.NCEE = 0
+    self.PRIMARY = 0
+    self.PRO4 = 0
+    self.PRO8 = 0
+    self.SAT = 0
+    self.TOEFL = 0
 
     self.CET4BossList = ''
     self.CET6BossList = ''
@@ -55,8 +55,8 @@ function DataBookProgress:ctor()
     self.TOEFLUpdateBossTime = 0    
 end
 
-function DataBookProgress:getBookCurrentLevelIndex()
-    local progress = self:getBookProgress(s_CURRENT_USER.bookKey)
+function DataLevelInfo:getBookCurrentLevelIndex()
+    local progress = self:getLevelInfo(s_CURRENT_USER.bookKey)
 --    local levelIndex = progress[]
 --    local levelIndex = string.sub(progress['level'],6)+0
 --    local chapterIndex = string.sub(progress['chapter'],8)+0
@@ -71,7 +71,7 @@ function DataBookProgress:getBookCurrentLevelIndex()
     return progress
 end
 
-function DataBookProgress:getBossList(bookKey)
+function DataLevelInfo:getBossList(bookKey)
     if bookKey == s_BOOK_KEY_CET4 then
         return self.CET4BossList
     elseif bookKey == s_BOOK_KEY_CET6 then
@@ -101,7 +101,7 @@ function DataBookProgress:getBossList(bookKey)
     end
 end
 
-function DataBookProgress:getUpdateBossTime(bookKey)
+function DataLevelInfo:getUpdateBossTime(bookKey)
     if bookKey == s_BOOK_KEY_CET4 then
         return self.CET4UpdateBossTime
     elseif bookKey == s_BOOK_KEY_CET6 then
@@ -132,7 +132,7 @@ function DataBookProgress:getUpdateBossTime(bookKey)
 end
 
 
-function DataBookProgress:updateBossList(bookKey,bossList)
+function DataLevelInfo:updateBossList(bookKey,bossList)
     if bookKey == s_BOOK_KEY_CET4 then
         self.CET4BossList = bossList
     elseif bookKey == s_BOOK_KEY_CET6 then
@@ -164,7 +164,7 @@ function DataBookProgress:updateBossList(bookKey,bossList)
     s_LocalDatabaseManager.saveDataClassObject(self, self.userId, self.username)
 end
 
-function DataBookProgress:updateTime(bookKey,updateTime)
+function DataLevelInfo:updateTime(bookKey,updateTime)
     if bookKey == s_BOOK_KEY_CET4 then
         self.CET4UpdateBossTime = updateTime
     elseif bookKey == s_BOOK_KEY_CET6 then
@@ -196,7 +196,7 @@ function DataBookProgress:updateTime(bookKey,updateTime)
     s_LocalDatabaseManager.saveDataClassObject(self, self.userId, self.username)
 end
 
-function DataBookProgress:getBookProgress(bookKey)
+function DataLevelInfo:getLevelInfo(bookKey)
 --    local progressData = {}
 
 --    return 9
@@ -234,7 +234,7 @@ function DataBookProgress:getBookProgress(bookKey)
     end
 end
 
-function DataBookProgress:computeCurrentProgress()
+function DataLevelInfo:computeCurrentProgress()
 --    local bookWordTotalCount = s_DataManager.books[s_CURRENT_USER.bookKey].words
 --    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 100)
 --    local bookWordCurrentCount =  s_LocalDatabaseManager.getCurrentIndex()-1
@@ -266,9 +266,9 @@ function DataBookProgress:computeCurrentProgress()
      return s_LocalDatabaseManager.getMaxBossID()
 end
 
-function DataBookProgress:updateDataToServer()
+function DataLevelInfo:updateDataToServer()
 --    local currentProgress = self:computeCurrentProgress()
---    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey)
+--    local oldProgress = self:getLevelInfo(s_CURRENT_USER.bookKey)
 --    -- compute add beans count --
 --    local increments = 0
 --    local oldLevelIndex = string.sub(oldProgress['level'],  6)
@@ -289,7 +289,7 @@ function DataBookProgress:updateDataToServer()
 --        increments = 10 - oldLevelIndex + currentLevelIndex
 --    end
     local currentProgress = self:computeCurrentProgress() 
-    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey) 
+    local oldProgress = self:getLevelInfo(s_CURRENT_USER.bookKey) 
     local increments = (currentProgress - oldProgress) * 2   -- add beans count
     s_CURRENT_USER:addBeans(increments)
     -----------------------------
@@ -326,4 +326,4 @@ function DataBookProgress:updateDataToServer()
     s_LocalDatabaseManager.saveDataClassObject(self, self.userId, self.username)
 end
 
-return DataBookProgress
+return DataLevelInfo

@@ -113,7 +113,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 --        currentIndex = currentIndex + 60
 --    end
     
---    local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)
+--    local bossList = s_CURRENT_USER.levelInfo:getBossList(s_CURRENT_USER.bookKey)
 --    local summaryboss = split(bossList,'|')
 --    local checkSummaryBoss = false
 --    for i = 1, #summaryboss do
@@ -142,7 +142,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 --    AnalyticsChestGeneratedCnt(#chestList)
     
 --    if levelConfig['type'] == 1 then
-    local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress() + 0
+    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
     -- TODO add review boss position
     if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
@@ -344,9 +344,9 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 end
 
 function ChapterLayerBase:plotDecoration()
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    local currentLevelIndex = bookProgress
-    local currentChapterIndex = math.floor(bookProgress / 10)
+    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    local currentLevelIndex = levelInfo
+    local currentChapterIndex = math.floor(levelInfo / 10)
     local chapterIndex = string.sub(self.chapterKey, 8)
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
@@ -409,12 +409,12 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 
     
 --    local levelNumber = (chapterIndex * 10 + levelIndex) * avgWordCount
---    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-----    if bookProgress['level'] == 'level39' and bookProgress['chapter'] == 'chapter3' then
+--    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+----    if levelInfo['level'] == 'level39' and levelInfo['chapter'] == 'chapter3' then
 ----        levelNumber = s_DataManager.books[s_CURRENT_USER.bookKey].words
 ----    end
 --    -- check random summary boss
---    local bossList = s_CURRENT_USER.bookProgress:getBossList(s_CURRENT_USER.bookKey)
+--    local bossList = s_CURRENT_USER.levelInfo:getBossList(s_CURRENT_USER.bookKey)
 --    local summaryboss = split(bossList,'|')
 --    local currentIndex = levelIndex 
 --    

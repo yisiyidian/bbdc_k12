@@ -49,25 +49,25 @@ function ChapterLayer:ctor()
     self:addTopBounce()
     -- add chapter node
     self:addChapterIntoListView('chapter0')
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    local currentChapterIndex = math.floor(bookProgress / 10)   
+    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    local currentChapterIndex = math.floor(levelInfo / 10)   
     for i = 1, currentChapterIndex do
         self.addChapterIntoListView('chapter'..i)
     end
---    if string.sub(bookProgress['chapter'],8) - 1>= 0 then
+--    if string.sub(levelInfo['chapter'],8) - 1>= 0 then
 --        self:addChapterIntoListView('chapter1')
 --    end
---    if string.sub(bookProgress['chapter'], 8) - 2 >= 0 then
+--    if string.sub(levelInfo['chapter'], 8) - 2 >= 0 then
 --        self:addChapterIntoListView('chapter2')
 --    end
---    if string.sub(bookProgress['chapter'], 8) - 3 >= 0 then
+--    if string.sub(levelInfo['chapter'], 8) - 3 >= 0 then
 --        self:addChapterIntoListView('chapter3')
 --    end
     -- add player
     self:addPlayer()
     self:plotDecoration()
     -- scroll to current chapter level
-    local progress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
+    local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     self:scrollLevelLayer(progress,0)
     self:addBottomBounce()
     -- check unlock level
@@ -77,9 +77,9 @@ function ChapterLayer:ctor()
 end
 
 function ChapterLayer:checkUnlockLevel()
-    local oldProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
-    s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
+    local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress()
+    s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
 --    if true then  
 --    if currentProgress['chapter'] ~= oldProgress['chapter'] then
 --        local oldLevelIndex = string.sub(oldProgress['level'], 6)
@@ -520,9 +520,9 @@ end
 
 function ChapterLayer:addPlayer()
 --    self.player:removeFromParent()
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    local currentChapterKey = 'chapter'..math.floor(bookProgress/10)
-    local levelKey = 'level'..bookProgress
+    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    local currentChapterKey = 'chapter'..math.floor(levelInfo/10)
+    local levelKey = 'level'..levelInfo
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
     if s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
 --    if true then
@@ -536,7 +536,7 @@ function ChapterLayer:addPlayer()
     self.chapterDic[currentChapterKey]:addChild(self.player, 150)
 
 --    print('ChapterLayer:addPlayer >>>')
---    print_lua_table(bookProgress)
+--    print_lua_table(levelInfo)
 --    print('ChapterLayer:addPlayer <<<')
 
 
@@ -544,7 +544,7 @@ end
 
 function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:removeFromParent()
---    local bookProgress = s_CURRENT_USER.bookProgress:computeCu
+--    local levelInfo = s_CURRENT_USER.levelInfo:computeCu
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
     if s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
         self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
@@ -559,7 +559,7 @@ function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.chapterDic[chapterKey]:addChild(self.player, 150)
 --
 --    print('ChapterLayer:addPlayerOnLevel >>>')
---    print_lua_table(bookProgress)
+--    print_lua_table(levelInfo)
 --    print('ChapterLayer:addPlayerOnLevel <<<')
 
     
@@ -604,15 +604,15 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
 --        innerHeight = innerHeight + itemList[i]:getContentSize().height
 --    end
 
-    local currentLevelCount = s_CURRENT_USER.bookProgress:computeCurrentProgress() + 1
+    local currentLevelCount = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 1
     local totalLevelCount = (math.floor((currentLevelCount-1) / 10) + 1) * 10
     local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / 10) + 1)
     self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
---    if bookProgress['chapter'] == 'chapter0' then
+--    if levelInfo['chapter'] == 'chapter0' then
 --        totalLevelCount = 10
---    elseif bookProgress['chapter'] == 'chapter1' then
+--    elseif levelInfo['chapter'] == 'chapter1' then
 --        totalLevelCount = 30
---    elseif bookProgress['chapter'] == 'chapter2' then
+--    elseif levelInfo['chapter'] == 'chapter2' then
 --        totalLevelCount = 60
 --    else
 --        totalLevelCount = 100

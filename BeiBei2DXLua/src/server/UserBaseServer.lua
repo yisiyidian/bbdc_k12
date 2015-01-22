@@ -344,8 +344,8 @@ end
 
 ----
 ---- handle offline in O2O
-function UserBaseServer.getDataBookProgress(objectId, onSucceed, onFailed)
-    s_SERVER.search('classes/DataBookProgress?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
+function UserBaseServer.getDataLevelInfo(objectId, onSucceed, onFailed)
+    s_SERVER.search('classes/DataLevelInfo?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
 end
 
 ---------------------------------------------------------------------------------------------------------------------

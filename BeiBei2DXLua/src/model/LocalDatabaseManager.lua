@@ -13,7 +13,7 @@ local DataLevel = require('model.user.DataLevel')
 
 local DataLogIn = require('model.user.DataLogIn')
 local DataUser = require('model.user.DataUser')
-local DataBookProgress = require('model.user.DataBookProgress')
+local DataLevelInfo = require('model.user.DataLevelInfo')
 
 local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
@@ -31,7 +31,7 @@ local databaseTables = {
 
         DataLogIn,
         DataUser,
-        DataBookProgress,
+        DataLevelInfo,
 
         DataCurrentIndex,
         DataDailyStudyInfo,
