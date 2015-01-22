@@ -207,7 +207,7 @@ function DownloadSoundButton.create(parentNode)
     --begin the update
     button:scheduleUpdateWithPriorityLua(update, 0)
     local scheduler = button:getScheduler()
-    scheduler.schedulerEntry = scheduler:scheduleScriptFunc(checkIfNetworkUpdate,2,false)
+    scheduler.schedulerEntry = scheduler:scheduleScriptFunc(checkIfNetworkUpdate, 30, false)
 
     --add the components
     parentNode:addChild(button_back)
