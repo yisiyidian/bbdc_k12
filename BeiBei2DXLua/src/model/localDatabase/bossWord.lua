@@ -101,28 +101,30 @@ function M.getBossWordBeforeToday()
     local candidate = nil
     local num = 0
     if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate LIMIT 0, 1 ;") do
+        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate ;") do
             num = num + 1
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today then
+            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
                 candidate           = {}
                 candidate.bossID    = row.bossID
                 candidate.typeIndex = row.typeIndex
                 candidate.wordList  = row.wordList
+                break
             end
         end
     end
     if num == 0 and username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate LIMIT 0, 1 ;") do
+        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ORDER BY lastUpdate  ;") do
             num = num + 1
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today then
+            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
                 candidate           = {}
                 candidate.bossID    = row.bossID
                 candidate.typeIndex = row.typeIndex
                 candidate.wordList  = row.wordList
+                break
             end
         end
     end
@@ -143,7 +145,7 @@ function M.getTodayRemainBossNum()
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today then
+            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
                 num = num + 1
             end
         end
@@ -152,7 +154,7 @@ function M.getTodayRemainBossNum()
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today then
+            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
                 num = num + 1
             end
         end
@@ -190,16 +192,16 @@ function M.updateBossWord(bossID)
         end
     end
 
-    if typeIndex + 1 == MAXTYPEINDEX then
+    if typeIndex + 1 >= MAXTYPEINDEX then
         Manager.addGraspWordsNum(MAXWRONGWORDCOUNT)
-        if isId and userId ~= '' then
-            local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
-            Manager.database:exec(query)
-        end
-        if isUsername and username ~= '' then
-            local query = "DELETE FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
-            Manager.database:exec(query)
-        end
+--        if isId and userId ~= '' then
+--            local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
+--            Manager.database:exec(query)
+--        end
+--        if isUsername and username ~= '' then
+--            local query = "DELETE FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
+--            Manager.database:exec(query)
+--        end
     else
         local data = createData(bookKey, time, bossID, typeIndex + 1, wordList)
         Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    )
