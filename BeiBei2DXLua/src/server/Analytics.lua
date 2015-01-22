@@ -233,7 +233,7 @@ function AnalyticsFirst(eventindex, eventDes)
         if s_SERVER.isNetworkConnectedNow() and string.len(s_CURRENT_USER.objectId) > 0 then
             s_CURRENT_USER.statsMask = s_CURRENT_USER.statsMask + (2 ^ eventindex)
             local obj = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['statsMask']=s_CURRENT_USER.statsMask}
-            s_SERVER.updateData({['className']=obj.className, ['objectId']=obj.objectId, ['obj']=dataToJSONString(obj)}, nil, nil)
+            s_SERVER.updateData(obj, nil, nil)
         end
     end
 end

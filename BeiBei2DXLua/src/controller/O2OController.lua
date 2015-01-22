@@ -251,9 +251,19 @@ function O2OController.getUserDatasOnline()
                 showProgressHUD()
                 s_UserBaseServer.synBookRelations(nil, function ()
                     s_UserBaseServer.synUserConfig(function ()
-                        s_CorePlayManager.enterHomeLayer()
-                        O2OController.getBulletinBoard()    
-                        hideProgressHUD()
+
+                        local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
+                        local dayString = getDayStringForDailyStudyInfo(os.time())
+                        local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
+                        if today == nil then
+                            today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time())
+                        end
+                        s_UserBaseServer.synTodayDailyStudyInfo(today, function ()
+                            s_CorePlayManager.enterHomeLayer()
+                            O2OController.getBulletinBoard()    
+                            hideProgressHUD()
+                        end, true)
+
                     end)
                 end)
             end 

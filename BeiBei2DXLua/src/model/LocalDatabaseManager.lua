@@ -127,11 +127,13 @@ function Manager.getRandomWord()
 end
 
 function Manager.addStudyWordsNum()
-    localdatabase_dailyStudyInfo.addStudyWordsNum()
+    local data = localdatabase_dailyStudyInfo.addStudyWordsNum()
+    s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
 function Manager.addGraspWordsNum(addNum)
-    localdatabase_dailyStudyInfo.addGraspWordsNum(addNum)
+    local data = localdatabase_dailyStudyInfo.addGraspWordsNum(addNum)
+    s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
 function Manager.getStudyDayNum()
@@ -144,6 +146,14 @@ end
 
 function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
     return localdatabase_dailyStudyInfo.getGraspWordsNum(dayString)
+end
+
+function Manager.getDataDailyStudyInfo(dayString)
+    return localdatabase_dailyStudyInfo.getDataDailyStudyInfo(dayString)
+end
+
+function Manager.saveDataDailyStudyInfo(data)
+   localdatabase_dailyStudyInfo.saveDataDailyStudyInfo(data)
 end
 
 ---------------------------------------------------------------------------------------------------------

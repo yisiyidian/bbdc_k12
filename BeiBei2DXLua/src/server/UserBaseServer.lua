@@ -513,4 +513,31 @@ function UserBaseServer.synUserConfig(onCompleted, saveToLocalDB)
         end)
 end
 
+function UserBaseServer.synTodayDailyStudyInfo(data, onCompleted, saveToLocalDB)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if onCompleted then onCompleted() end
+        return
+    end
+
+    saveToLocalDB = saveToLocalDB or true
+
+    s_SERVER.synData(data, 
+        function (api, result) 
+            print ('synTodayDailyStudyInfo >>>')
+            print_lua_table (result)
+            print ('synTodayDailyStudyInfo <<<')
+
+            local timestamp = result['lastUpdate']
+            if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
+                parseServerDataToUserData(result, data)
+                s_LocalDatabaseManager.saveDataDailyStudyInfo(data)
+            end
+
+            if onCompleted then onCompleted() end
+        end, 
+        function (api, code, message, description)
+            if onCompleted then onCompleted() end 
+        end)
+end
+
 return UserBaseServer

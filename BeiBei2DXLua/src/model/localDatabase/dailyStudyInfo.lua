@@ -9,55 +9,23 @@ function M.getRandomWord()
     return "apple"
 end
 
-local function createData(bookKey, dayString, studyNum, graspNum, lastUpdate)
-    local data = DataDailyStudyInfo.create()
-    updateDataFromUser(data, s_CURRENT_USER)
-
-    data.bookKey = bookKey
-    data.dayString = dayString
-    data.studyNum = studyNum
-    data.graspNum = graspNum
-    data.lastUpdate = lastUpdate
-
-    return data
-end
-
 function M.addStudyWordsNum()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
 
     local time = os.time()
-    local today = os.date("%x", time)
+    local today = getDayStringForDailyStudyInfo(time)
 
-    local num = 0
-    local oldStudyNum = nil
-    local oldGraspNum = nil
-    if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-            num = num + 1
-            oldStudyNum = row.studyNum
-            oldGraspNum = row.graspNum
-        end
-    end
-    if num == 0 and username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-            num = num + 1
-            oldStudyNum = row.studyNum
-            oldGraspNum = row.graspNum
-        end
-    end
-    
-    if num == 0 then
-        local studyNum = 1
-        local graspNum = 0
-        local data = createData(bookKey, today, studyNum, graspNum, time)
-        Manager.saveData(data, userId, username, num)
+    local data = M.getDataDailyStudyInfo(today)
+    if data == nil then
+        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time)
+        Manager.saveData(data, userId, username, 0)
     else
-        local newStudyNum = oldStudyNum + 1
-        local data = createData(bookKey, today, newStudyNum, oldGraspNum, time)
-        Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
+        data.studyNum = data.studyNum + 1
+        Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
+    return data
 end
 
 function M.addGraspWordsNum(addNum)
@@ -66,38 +34,17 @@ function M.addGraspWordsNum(addNum)
     local username = s_CURRENT_USER.username
 
     local time = os.time()
-    local today = os.date("%x", time)
+    local today = getDayStringForDailyStudyInfo(time)
 
-    local num = 0
-    local oldStudyNum = nil
-    local oldGraspNum = nil
-
-    if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-            num = num + 1
-            oldStudyNum = row.studyNum
-            oldGraspNum = row.graspNum
-        end
-    end
-
-    if num == 0 and username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;") do
-            num = num + 1
-            oldStudyNum = row.studyNum
-            oldGraspNum = row.graspNum
-        end
-    end
-
-    if num == 0 then
-        local studyNum = 0
-        local graspNum = addNum
-        local data = createData(bookKey, today, studyNum, graspNum, time)
-        Manager.saveData(data, userId, username, num)
+    local data = M.getDataDailyStudyInfo(today)
+    if data == nil then
+        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time)
+        Manager.saveData(data, userId, username, 0)
     else
-        local newGraspNum = oldGraspNum + addNum
-        local data = createData(bookKey, today, oldStudyNum, newGraspNum, time)
-        Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
+        data.graspNum = data.graspNum + addNum
+        Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
+    return data
 end
 
 function M.getStudyDayNum()
@@ -121,46 +68,68 @@ function M.getStudyDayNum()
 end
 
 function M.getStudyWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local username = s_CURRENT_USER.username
-    
     local studyNum = 0
-    local num = 0
-    if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-            studyNum = row.studyNum
-            num = num + 1
-        end
+    local data = M.getDataDailyStudyInfo(dayString)
+    if data ~= nil then
+        studyNum = data.studyNum
     end
-    if num == 0 and username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-            studyNum = row.studyNum
-            num = num + 1
-        end
-    end
-    
+
     return studyNum
 end
 
 function M.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
+    local graspNum = 0
+    local data = M.getDataDailyStudyInfo(dayString)
+    if data ~= nil then
+        graspNum = data.graspNum
+    end
+
+    return graspNum
+end
+
+function M.getDataDailyStudyInfo(dayString)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
 
-    local graspNum = 0
+    local dbData = nil
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
+            dbData = row
+        end
+    end
+    if dbData == nil and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
+            dbData = row
+        end
+    end
+
+    if dbData ~= nil then
+        local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate)
+        parseLocalDatabaseToUserData(dbData, data)
+        return data
+    end
+    return nil
+end
+
+function M.saveDataDailyStudyInfo(data)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+    
     local num = 0
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-            graspNum = row.graspNum
+            num = num + 1
         end
     end
     if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;") do
-            graspNum = row.graspNum
+            num = num + 1
         end
     end
-
-    return graspNum
+    
+    Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
 end
 
 return M
