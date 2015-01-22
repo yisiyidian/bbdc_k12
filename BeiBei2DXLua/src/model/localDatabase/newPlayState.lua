@@ -102,6 +102,38 @@ function M.getwrongWordListSize()
     return size
 end
 
+function M.getwordCandidateSize()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local size = 0
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+            local wordCandidate =  row.wordCandidate
+            if wordCandidate ~= "" then
+                local tmp = split(wordCandidate, "|")
+                size = #tmp
+            end
+        end
+    end
+
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataNewPlayState WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+            local wordCandidate =  row.wordCandidate
+            if wordCandidate ~= "" then
+                local tmp = split(wordCandidate, "|")
+                size = #tmp
+            end
+        end
+    end
+
+    return size
+end
+
 function M.getDataNewPlayState()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey

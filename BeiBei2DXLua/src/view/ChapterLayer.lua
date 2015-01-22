@@ -442,7 +442,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,85)
         notification:addChild(task_name)
-        local number = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
+        local number = cc.Label:createWithSystemFont((s_LocalDatabaseManager.getwrongWordListSize() - s_LocalDatabaseManager.getwordCandidateSize())..' / '..s_max_wrong_num_everyday,'',25)
         number:setColor(cc.c3b(165,55,80))
         number:ignoreAnchorPointForPosition(false)
         number:setAnchorPoint(0,0)

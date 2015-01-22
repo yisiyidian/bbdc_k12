@@ -354,6 +354,10 @@ function Manager.getwrongWordListSize()
     return localdatabase_newPlayState.getwrongWordListSize()
 end
 
+function Manager.getwordCandidateSize()
+    return localdatabase_newPlayState.getwordCandidateSize()
+end
+
 function Manager.getDataNewPlayState()
     return localdatabase_newPlayState.getDataNewPlayState()
 end
