@@ -357,12 +357,12 @@ function ChapterLayerBase:plotDecoration()
             end
         end
 --        print('######create level button#########')
---        local levelButton = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
---        levelButton:setScale9Enabled(true)
---        levelButton:setPosition(levelPosition)
---        levelButton:setName(levelIndex)
---        levelButton:addTouchEventListener(touchEvent)
---        self:addChild(levelButton, 40)
+        local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')
+        levelButton:setScale9Enabled(true)
+        levelButton:setPosition(levelPosition)
+        levelButton:setName(levelIndex)
+        levelButton:addTouchEventListener(touchEvent)
+        self:addChild(levelButton, 40)
         
         if (levelIndex - currentLevelIndex) > 0 then
             local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
