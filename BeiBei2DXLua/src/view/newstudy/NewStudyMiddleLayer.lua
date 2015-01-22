@@ -96,10 +96,14 @@ function NewStudyMiddleLayer.create()
     AnalyticsFirst(ANALYTICS_FIRST_GOT_ENOUGH_UNKNOWN_WORDS, tostring(wrongWordNum))
 
     local label_come_on = cc.Label:createWithSystemFont("贝贝给你加油","",50)
-    label_come_on:setPosition(bigWidth/2, 600)
+    label_come_on:setPosition(bigWidth/2, 700)
     label_come_on:setColor(cc.c4b(234,123,3,255))
     backColor:addChild(label_come_on)
     
+    local beibeiAnimation = sp.SkeletonAnimation:create("spine/bb_hello_public.json", 'spine/bb_hello_public.atlas',1)
+    beibeiAnimation:addAnimation(0, 'animation', false)
+    beibeiAnimation:setPosition(bigWidth/2, 270)
+    backColor:addChild(beibeiAnimation)
     
     local button_go_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

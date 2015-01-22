@@ -11,6 +11,7 @@ local function _initConstant()
     s_gamestate_reviewmodel     = 3
     s_gamestate_overmodel       = 4
     
+    
     --
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
     s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
