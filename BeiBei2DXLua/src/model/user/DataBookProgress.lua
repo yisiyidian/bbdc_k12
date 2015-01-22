@@ -284,7 +284,7 @@ function DataBookProgress:computeCurrentProgress()
     local bookWordCurrentCount =  s_LocalDatabaseManager.getCurrentIndex()-1
     local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
     local currentChapterIndex = math.floor(currentLevelIndex/10)
---    currentLevelIndex =  --test
+--    currentLevelIndex =  9--test
 --    local progress = {}
 --    if currentLevelIndex < 10 then
 --        progress['chapter'] = 'chapter0'
@@ -321,18 +321,20 @@ function DataBookProgress:updateDataToServer()
     local increments = 0
     local oldLevelIndex = string.sub(oldProgress['level'],  6)
     local currentLevelIndex = string.sub(currentProgress['level'],6)
+--    local current
     if oldProgress['chapter'] == currentProgress['chapter'] then
         increments = currentLevelIndex - oldLevelIndex
     else
-        if oldProgress['chapter'] == 'chapter0' then
-            increments = 10 - oldLevelIndex + currentLevelIndex
-        elseif oldProgress['chapter'] == 'chapter1' then
-            increments = 20 - oldLevelIndex + currentLevelIndex
-        elseif oldProgress['chapter'] == 'chapter2' then
-            increments = 30 - oldLevelIndex + currentLevelIndex
-        elseif oldProgress['chapter'] == 'chapter3' then
-            increments = 40 - oldLevelIndex + currentLevelIndex
-        end
+--        if oldProgress['chapter'] == 'chapter0' then
+--            increments = 10 - oldLevelIndex + currentLevelIndex
+--        elseif oldProgress['chapter'] == 'chapter1' then
+--            increments = 20 - oldLevelIndex + currentLevelIndex
+--        elseif oldProgress['chapter'] == 'chapter2' then
+--            increments = 30 - oldLevelIndex + currentLevelIndex
+--        elseif oldProgress['chapter'] == 'chapter3' then
+--            increments = 40 - oldLevelIndex + currentLevelIndex
+--        end
+        increments = 10 - oldLevelIndex + currentLevelIndex
     end
     s_CURRENT_USER:addBeans(increments)
     -----------------------------
