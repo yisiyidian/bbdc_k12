@@ -149,6 +149,14 @@ function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16
     return localdatabase_dailyStudyInfo.getGraspWordsNum(dayString)
 end
 
+function Manager.addOrdinalNum(init)
+    localdatabase_dailyStudyInfo.addOrdinalNum(init)
+end
+
+function Manager.getOrdinalNum()
+    return localdatabase_dailyStudyInfo.getOrdinalNum()
+end
+
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
@@ -397,8 +405,8 @@ function Manager.getBossWordNum()
     return localdatabase_bossWord.getBossWordNum()
 end
 
-function Manager.getBossWord()
-    return localdatabase_bossWord.getBossWord()
+function Manager.getBossWordBeforeToday()
+    return localdatabase_bossWord.getBossWordBeforeToday()
 end
 
 function Manager.getTodayRemainBossNum()
@@ -482,18 +490,18 @@ function Manager.updateDownloadState(bookKey, isDownloaded)
     end
 end
 
---s_gamestate_reviewbossmodel = 1
+--s_gamestate_reviewbossmodel_beforetoday = 1
 --s_gamestate_studymodel      = 2
 --s_gamestate_reviewmodel     = 3
---s_gamestate_overmodel       = 4
+--s_gamestate_studymodel_extra       = 4
 
 function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
     if Manager.getTodayRemainBossNum() > 0 then
-        return s_gamestate_reviewbossmodel
+        return s_gamestate_reviewbossmodel_beforetoday
     end
     
     if Manager.getCurrentIndex() > s_DataManager.books[s_CURRENT_USER.bookKey].words then
-        return s_gamestate_overmodel
+        return s_gamestate_studymodel_extra
     end
     
     local playModel = Manager.getTodayPlayModel()
@@ -502,7 +510,7 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
     elseif playModel == 1 then
         return s_gamestate_reviewmodel
     else
-        return s_gamestate_overmodel
+        return s_gamestate_studymodel_extra
     end
 end
 

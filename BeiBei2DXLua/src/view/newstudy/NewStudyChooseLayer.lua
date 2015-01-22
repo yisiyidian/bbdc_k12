@@ -184,8 +184,8 @@ function NewStudyChooseLayer.create()
                         AnalyticsStudyGuessWrong()
                         s_CorePlayManager.updateWrongWordList(wordname)
                         s_CorePlayManager.updateCurrentIndex()
-                        if s_CorePlayManager.reward >=1 then
-                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward)
+                        if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 1 then
+                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward - s_CorePlayManager.ordinalNum, 3 - s_CorePlayManager.ordinalNum)
                             s_SCENE:popup(guessWrong)
                             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
                         else
@@ -194,8 +194,8 @@ function NewStudyChooseLayer.create()
              
                     else
                         AnalyticsStudyGuessWrong_strikeWhileHot()
-                        if s_CorePlayManager.reward >=1 then
-                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward)
+                        if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 1 then
+                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward - s_CorePlayManager.ordinalNum, 3 - s_CorePlayManager.ordinalNum)
                             s_SCENE:popup(guessWrong)
                             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
                         else
