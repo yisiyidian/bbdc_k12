@@ -12,19 +12,19 @@ end
 
 function DataBookProgress:ctor()
     self.className = 'DataBookProgress'
-    self.CET4 = 0    -- level index
-    self.CET6 = 0
-    self.GMAT = 0
-    self.GRE = 0
-    self.GSE = 0
-    self.IELTS = 0
-    self.MIDDLE = 0
-    self.NCEE = 0
-    self.PRIMARY = 0
-    self.PRO4 = 0
-    self.PRO8 = 0
-    self.SAT = 0
-    self.TOEFL = 0
+    self.CET4 = '0'    -- level index
+    self.CET6 = '0'
+    self.GMAT = '0'
+    self.GRE = '0'
+    self.GSE = '0'
+    self.IELTS = '0'
+    self.MIDDLE = '0'
+    self.NCEE = '0'
+    self.PRIMARY = '0'
+    self.PRO4 = '0'
+    self.PRO8 = '0'
+    self.SAT = '0'
+    self.TOEFL = '0'
 
     self.CET4BossList = ''
     self.CET6BossList = ''
@@ -198,37 +198,39 @@ end
 
 function DataBookProgress:getBookProgress(bookKey)
 --    local progressData = {}
+
+--    return 9
     if bookKey == s_BOOK_KEY_CET4 then
 --        local data = split(self.CET4,'|')
 --        progressData['book'] = data[1]
 --        progressData['chapter'] = data[2]
 --        progressData['level'] = data[3]
 --        return progressData
-        return self.CET4
+        return self.CET4 + 0
     elseif bookKey == s_BOOK_KEY_CET6 then
-        return self.CET6
+        return self.CET6 + 0
     elseif bookKey == s_BOOK_KEY_GMAT then
-        return self.GMAT
+        return self.GMAT + 0
     elseif bookKey == s_BOOK_KEY_GRE then
-        return self.GRE
+        return self.GRE + 0
     elseif bookKey == s_BOOK_KEY_GSE then
-        return self.GSE
+        return self.GSE + 0
     elseif bookKey == s_BOOK_KEY_IELTS then
-        return self.IELTS
+        return self.IELTS + 0
     elseif bookKey == s_BOOK_KEY_MIDDLE then
-        return self.MIDDLE
+        return self.MIDDLE + 0
     elseif bookKey == s_BOOK_KEY_NCEE then
-        return self.NCEE  
+        return self.NCEE + 0 
     elseif bookKey == s_BOOK_KEY_PRIMARY then
-        return self.PRIMARY
+        return self.PRIMARY + 0
     elseif bookKey == s_BOOK_KEY_PRO4 then
-        return self.PRO4
+        return self.PRO4 + 0
     elseif bookKey == s_BOOK_KEY_PRO8 then
-        return self.PRO8
+        return self.PRO8 + 0
     elseif bookKey == s_BOOK_KEY_SAT then
-        return self.SAT
+        return self.SAT + 0 
     elseif bookKey == s_BOOK_KEY_TOEFL then
-        return self.TOEFL
+        return self.TOEFL + 0
     end
 end
 
@@ -258,6 +260,9 @@ function DataBookProgress:computeCurrentProgress()
 --   progress['chapter'] = 'chapter'..(currentChapterIndex)
 --   progress['level'] = 'level'..(currentLevelIndex - 10*currentChapterIndex)   
 --    return progress 
+--    
+    -- TODO test
+--    return 10
      return s_LocalDatabaseManager.getMaxBossID()
 end
 
@@ -283,8 +288,8 @@ function DataBookProgress:updateDataToServer()
 ----        end
 --        increments = 10 - oldLevelIndex + currentLevelIndex
 --    end
-    local currentProgress = self:computeCurrentProgress()
-    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey)
+    local currentProgress = self:computeCurrentProgress() 
+    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey) 
     local increments = (currentProgress - oldProgress) * 2   -- add beans count
     s_CURRENT_USER:addBeans(increments)
     -----------------------------
@@ -294,7 +299,6 @@ function DataBookProgress:updateDataToServer()
         self.CET4 = currentProgress
     elseif bookKey == s_BOOK_KEY_CET6 then
         self.CET6 = currentProgress
-        return progressData
     elseif bookKey == s_BOOK_KEY_GMAT then
         self.GMAT = currentProgress
     elseif bookKey == s_BOOK_KEY_GRE then

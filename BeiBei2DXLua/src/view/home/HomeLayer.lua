@@ -16,9 +16,10 @@ function HomeLayer.create()
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
     
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    local currentChapterKey = bookProgress['chapter']
-    local currentLevelKey   = bookProgress['level']
+    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey) + 0
+    print('home player###### '..bookProgress)
+    local currentChapterKey = 'chapter'..math.floor(bookProgress / 10) 
+    local currentLevelKey   = 'level'..(bookProgress % 10)
     
     local chapterIndex      = string.sub(currentChapterKey, 8)+1
     local levelIndex        = string.sub(currentLevelKey, 6)+1
