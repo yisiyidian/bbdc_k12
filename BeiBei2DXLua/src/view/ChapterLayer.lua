@@ -350,15 +350,17 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
     local type
     print('gameState:'..s_LocalDatabaseManager.getGameState())
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday then
         type = 'reviewboss'
 --    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel or s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then
 --        type = 'study'
-    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_overmodel then
-        type = 'complete'
+    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
+        type = 'study'
+    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_reviewmodel_extra then
+        type = 'review'
     elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then
         type = 'study'
-    else
+    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_reviewmodel then
         type = 'review'
     end
 --    type = 'reviewboss'
@@ -434,7 +436,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         title:setAnchorPoint(0,0)
         title:setPosition(55,115)
         notification:addChild(title)
-        local task_name = cc.Label:createWithSystemFont('学习生词: ','',22)
+        local task_name = cc.Label:createWithSystemFont('趁热打铁: ','',22)
         task_name:setColor(cc.c3b(98,195,223))
         task_name:ignoreAnchorPointForPosition(false)
         task_name:setAnchorPoint(0,0)
@@ -522,7 +524,7 @@ function ChapterLayer:addPlayer()
     local currentChapterKey = 'chapter'..math.floor(bookProgress/10)
     local levelKey = 'level'..bookProgress
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_overmodel then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
 --    if true then
         self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
     else
@@ -544,7 +546,7 @@ function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:removeFromParent()
 --    local bookProgress = s_CURRENT_USER.bookProgress:computeCu
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_overmodel then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
         self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
     else
         self.player = cc.Sprite:create('image/chapter/chapter0/player.png')

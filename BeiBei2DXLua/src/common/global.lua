@@ -5,11 +5,15 @@ end
 
 local function _initConstant()
     -- number
-    s_max_wrong_num_everyday    = 5
-    s_gamestate_reviewbossmodel = 1
-    s_gamestate_studymodel      = 2
-    s_gamestate_reviewmodel     = 3
-    s_gamestate_overmodel       = 4
+    s_max_wrong_num_everyday                = 5
+    s_gamestate_reviewbossmodel_beforetoday = 1
+    s_gamestate_studymodel                  = 2
+    s_gamestate_reviewmodel                 = 3
+    s_gamestate_studymodel_extra            = 4
+    s_gamestate_reviewmodel_extra           = 5
+    
+    --need to do next version maybe
+    s_gamestate_reviewbossmodel_today       = 9
     
     
     --

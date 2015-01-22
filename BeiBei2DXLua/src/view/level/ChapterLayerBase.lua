@@ -145,7 +145,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
     -- TODO add review boss position
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel and currentChapterKey == self.chapterKey and currentProgress == levelIndex then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
         -- plot review boss
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)

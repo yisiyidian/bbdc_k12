@@ -271,7 +271,7 @@ function HomeLayer.create()
     local state = s_LocalDatabaseManager.getGameState()
 
     local playImg = 'image/homescene/bigbutton.png'
-    if state == s_gamestate_overmodel then
+    if state == s_gamestate_studymodel_extra then
         playImg = 'image/homescene/buttonfinish.png'
     end
     local state_str
@@ -279,7 +279,7 @@ function HomeLayer.create()
         state_str = '积累生词'
     elseif state == s_gamestate_reviewmodel then
         state_str = '趁热打铁'
-    elseif state == s_gamestate_reviewbossmodel then
+    elseif state == s_gamestate_reviewbossmodel_beforetoday then
         state_str = '复习旧词'
     else
         state_str = '  完成  '

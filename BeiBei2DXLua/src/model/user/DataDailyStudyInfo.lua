@@ -19,6 +19,8 @@ function DataDailyStudyInfo:ctor()
     self.studyNum = 0
     self.graspNum = 0
     self.lastUpdate = 0
+    self.ordinalNum = 0
+    
 end
 
 return DataDailyStudyInfo
