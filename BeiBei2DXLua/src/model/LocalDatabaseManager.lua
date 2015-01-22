@@ -409,6 +409,10 @@ function Manager.updateBossWord(bossID)
     localdatabase_bossWord.updateBossWord(bossID)
 end
 
+function Manager.getMaxBossID()
+    return localdatabase_bossWord.getMaxBossID()
+end
+
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.getTodayTotalBossNum()

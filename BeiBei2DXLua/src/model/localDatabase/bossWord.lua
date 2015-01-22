@@ -67,6 +67,33 @@ function M.addBossWord(bossWordList)
     Manager.saveData(data, userId, username, 0)
 end
 
+function M.getMaxBossID()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local maxBossID = 0
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+            if row.bossID > maxBossID then
+                maxBossID = row.bossID
+            end
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
+            num = num + 1
+            if row.bossID > maxBossID then
+                maxBossID = row.bossID
+            end
+        end
+    end
+
+    return maxBossID
+end
+
 function M.getBossWordNum()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
