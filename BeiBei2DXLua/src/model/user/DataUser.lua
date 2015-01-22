@@ -91,6 +91,11 @@ function DataUser:addBeans(count)
     self:updateDataToServer()
 end
 
+function DataUser:reduceBeans(count)
+    self.beans = self.beans - count
+    self:updateDataToServer()
+end
+
 function DataUser:generateChestList()
     --print("###########start generate chest########")
     local timePass = os.time() - s_CURRENT_USER.lastUpdateChestTime
