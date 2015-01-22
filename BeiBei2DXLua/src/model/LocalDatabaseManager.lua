@@ -241,8 +241,8 @@ function Manager.getWrongWords()
         end
 
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-            n2 = n2 + 1
-            if row.wordList ~= "" then
+            if row.wordList ~= "" and row.typeIndex + 1 <= MAXTYPEINDEX then
+                n2 = n2 + 1
                 local wordList = split(row.wordList, "|")
                 for i = 1, #wordList do
                     table.insert(wordPool, wordList[i])
@@ -254,7 +254,7 @@ function Manager.getWrongWords()
     if username ~= '' then
         if n1 == 0 then
             for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
-                if row.wordBuffer ~= "" then
+                if row.wordBuffer ~= "" and row.typeIndex + 1 <= MAXTYPEINDEX then
                     local wordList = split(row.wordBuffer, "|")
                     for i = 1, #wordList do
                         table.insert(wordPool, wordList[i])
@@ -265,7 +265,7 @@ function Manager.getWrongWords()
 
         if n2 == 0 then
             for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
-                if row.wordList ~= "" then
+                if row.wordList ~= "" and row.typeIndex + 1 <= MAXTYPEINDEX then
                     local wordList = split(row.wordList, "|")
                     for i = 1, #wordList do
                         table.insert(wordPool, wordList[i])
