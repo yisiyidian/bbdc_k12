@@ -3,7 +3,7 @@ local Manager = s_LocalDatabaseManager
 
 local M = {}
 
-local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList)
+local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex)
     local data = DataBossWord.create()
     updateDataFromUser(data, s_CURRENT_USER)
 
@@ -13,6 +13,7 @@ local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList)
     data.bossID = bossID
     data.typeIndex = typeIndex
     data.wordList = wordList
+    data.lastWordIndex = lastWordIndex
 
     return data
 end
@@ -39,6 +40,7 @@ function M.addBossWord(bossWordList)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
+    local lastWordIndex = Manager.getCurrentIndex()
 
     local time = os.time()
     
@@ -63,7 +65,7 @@ function M.addBossWord(bossWordList)
     
     local bossID = maxBossID + 1
     local typeIndex = 0
-    local data = createData(bookKey, time, maxBossID, typeIndex, bossWordList)
+    local data = createData(bookKey, time, maxBossID, typeIndex, bossWordList, lastWordIndex)
     Manager.saveData(data, userId, username, 0)
 end
 
@@ -110,6 +112,7 @@ function M.getBossWord()
                 candidate.bossID    = row.bossID
                 candidate.typeIndex = row.typeIndex
                 candidate.wordList  = row.wordList
+                candidate.lastWordIndex = row.lastWordIndex
                 break
             end
         end
@@ -124,6 +127,7 @@ function M.getBossWord()
                 candidate.bossID    = row.bossID
                 candidate.typeIndex = row.typeIndex
                 candidate.wordList  = row.wordList
+                candidate.lastWordIndex = row.lastWordIndex
                 break
             end
         end
@@ -171,7 +175,8 @@ function M.updateBossWord(bossID)
     local time = os.time()
     
     local wordList = ''
-    local typeIndex = nil
+    local typeIndex = 0
+    local lastWordIndex = 0
     local isId = false
     local isUsername = false
     local num = 0
@@ -181,6 +186,7 @@ function M.updateBossWord(bossID)
             isId = true
             typeIndex = row.typeIndex
             wordList = row.wordList
+            lastWordIndex = row.lastWordIndex
         end
     end
     if num == 0 and username ~= '' then
@@ -189,6 +195,7 @@ function M.updateBossWord(bossID)
             isUsername = true
             typeIndex = row.typeIndex
             wordList = row.wordList
+            lastWordIndex = row.lastWordIndex
         end
     end
 
@@ -203,7 +210,7 @@ function M.updateBossWord(bossID)
 --            Manager.database:exec(query)
 --        end
     else
-        local data = createData(bookKey, time, bossID, typeIndex + 1, wordList)
+        local data = createData(bookKey, time, bossID, typeIndex + 1, wordList, lastWordIndex)
         Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    )
     end
 end
