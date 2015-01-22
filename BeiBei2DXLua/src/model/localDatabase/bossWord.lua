@@ -103,14 +103,18 @@ function M.getBossWordNum()
     local num = 0
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
-            num = num + 1
-            bossWordNum = bossWordNum + MAXWRONGWORDCOUNT
+            if row.typeIndex + 1 <= MAXTYPEINDEX then
+                num = num + 1
+                bossWordNum = bossWordNum + MAXWRONGWORDCOUNT
+            end
         end
     end
     if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
-            num = num + 1
-            bossWordNum = bossWordNum + MAXWRONGWORDCOUNT
+            if row.typeIndex + 1 <= MAXTYPEINDEX then
+                num = num + 1
+                bossWordNum = bossWordNum + MAXWRONGWORDCOUNT
+            end
         end
     end
 

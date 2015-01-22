@@ -65,7 +65,7 @@ function ChapterLayer:ctor()
     self:plotDecoration()
     -- scroll to current chapter level
     local progress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    self:scrollLevelLayer(progress['chapter'],progress['level'],0)
+    self:scrollLevelLayer(progress,0)
     self:addBottomBounce()
     -- check unlock level
     self:checkUnlockLevel()
@@ -78,7 +78,7 @@ function ChapterLayer:checkUnlockLevel()
     local currentProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     s_CURRENT_USER.bookProgress:updateDataToServer()  -- update book progress
 --    if true then  
-    if currentProgress['chapter'] ~= oldProgress['chapter'] then
+--    if currentProgress['chapter'] ~= oldProgress['chapter'] then
 --        local oldLevelIndex = string.sub(oldProgress['level'], 6)
 --        local currentLevelIndex = string.sub(currentProgress['level'],6)
 --        local oldChapterIndex = string.sub(oldProgress['chapter'], 8)
@@ -242,7 +242,7 @@ function ChapterLayer:checkUnlockLevel()
 --            end)
 --            delayTime = delayTime + 1
 --        end 
-        
+ if currentProgress % 10 == 0 and currentProgress > 0 then       
         -- unlock chapter
         self:plotUnlockCloudAnimation()
 --        s_SCENE:callFuncWithDelay(1.0,function()            
@@ -252,6 +252,9 @@ function ChapterLayer:checkUnlockLevel()
         self:addChapterIntoListView(currentProgress['chapter'])
         self:addPlayerOnLevel(currentProgress['chapter'],'level0')
         self.chapterDic[currentProgress['chapter']]:plotUnlockLevelAnimation('level0')
+        s_SCENE:callFuncWithDelay(0.5, function()
+            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],0.5)
+        end)
 --        end)
 --        s_SCENE:callFuncWithDelay(delayTime, function()
 --            self:plotUnlockCloudAnimation()
@@ -283,12 +286,11 @@ function ChapterLayer:checkUnlockLevel()
 
 --        end)
        
---        s_SCENE:callFuncWithDelay(0.5, function()
---            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime+currentLevelIndex)
---        end)
-    elseif currentProgress['level'] ~= oldProgress['level'] then   -- unlock level
-        local oldLevelIndex = string.sub(oldProgress['level'], 6)
-        local currentLevelIndex = string.sub(currentProgress['level'],6)
+
+    elseif currentProgress - oldProgress > 0 then   -- unlock level
+--        local oldLevelIndex = string.sub(oldProgress['level'], 6)
+--        local currentLevelIndex = string.sub(currentProgress['level'],6)
+        local chapterKey = 'chapter'..math.floor(oldProgress / 10)
         local delayTime = 0
         s_SCENE:callFuncWithDelay(delayTime, 
             function()
@@ -296,31 +298,30 @@ function ChapterLayer:checkUnlockLevel()
                 self:addPlayerNotification(false) 
             end
         )  
-        
-        for index = 1, (currentLevelIndex - oldLevelIndex) do
-            s_SCENE:callFuncWithDelay(delayTime,function()
-                self.chapterDic[oldProgress['chapter']]:plotUnlockLevelAnimation('level'..(oldLevelIndex+index))
-                -- move player
-                s_SCENE:callFuncWithDelay(0.3,function()
-                    local nextLevelPosition = self.chapterDic[oldProgress['chapter']]:getLevelPosition('level'..(oldLevelIndex+index))
-                    local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
-                    local notification = self.player:getChildByTag(100)
-                    local notificationAction1 = function()
-                        if index == currentLevelIndex - oldLevelIndex then
-                            local notificationAct = cc.ScaleTo:create(0.4,1)
-                            notification:runAction(notificationAct)
-                        end
-                    end
-                    self.player:runAction(cc.Sequence:create(playerAction,
-                                          cc.DelayTime:create(0.6),
-                                          cc.CallFunc:create(notificationAction1)))
-                end)
-            end)
-            delayTime = delayTime + 1
-        end
+        self.chapterDic[chapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
+        -- move player
+        s_SCENE:callFuncWithDelay(0.3,function()
+            local nextLevelPosition = self.chapterDic[chapterKey]:getLevelPosition('level'..currentProgress)
+            local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+            local notification = self.player:getChildByTag(100)
+            local notificationAction1 = function()
+                if index == currentLevelIndex - oldLevelIndex then
+                    local notificationAct = cc.ScaleTo:create(0.4,1)
+                    notification:runAction(notificationAct)
+                end
+            end
+            self.player:runAction(cc.Sequence:create(playerAction,
+                cc.DelayTime:create(0.6),
+                cc.CallFunc:create(notificationAction1)))
+        end)
+--        for index = 1, (currentLevelIndex - oldLevelIndex) do
+--            s_SCENE:callFuncWithDelay(delayTime,function()
+--                
+--            end)
+--            delayTime = delayTime + 1
+--        end
         s_SCENE:callFuncWithDelay(1, function()
-            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'],delayTime)
---            s_CURRENT_USER.bookProgress:updateDataToServer(s_CURRENT_USER.bookKey)
+            self:scrollLevelLayer(currentProgress['chapter'],currentProgress['level'], 1)
         end)
     else
         -- add notification
@@ -572,11 +573,10 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
 end
 
 -- scroll self.listView to show the specific chapter and level
-function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
-    if chapterKey == 'chapter0' and levelKey == 'level0' then
+function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
+    if levelIndex == 0 then
         return
     end
-    local bookProgress = s_CURRENT_USER.bookProgress:computeCurrentProgress()
     -- compute self.listView inner height
     local itemList = self.listView:getItems()
     local innerHeight = 0
@@ -584,27 +584,26 @@ function ChapterLayer:scrollLevelLayer(chapterKey, levelKey, scrollTime)
         innerHeight = innerHeight + itemList[i]:getContentSize().height
     end
     self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
-    local levelIndex = string.sub(levelKey, 6)
-    local currentLevelCount = levelIndex + 1
-    local totalLevelCount = 0
-    if bookProgress['chapter'] == 'chapter0' then
-        totalLevelCount = 10
-    elseif bookProgress['chapter'] == 'chapter1' then
-        totalLevelCount = 30
-    elseif bookProgress['chapter'] == 'chapter2' then
-        totalLevelCount = 60
-    else
-        totalLevelCount = 100
-    end
-    if chapterKey == 'chapter0' then
-        currentLevelCount = currentLevelCount
-    elseif chapterKey == 'chapter1' then
-        currentLevelCount = currentLevelCount + 10
-    elseif chapterKey == 'chapter2' then
-        currentLevelCount = currentLevelCount + 30
-    elseif chapterKey == 'chapter3' then
-        currentLevelCount = currentLevelCount + 60
-    end
+    local currentLevelCount = s_CURRENT_USER.bookProgress:computeCurrentProgress()
+    local totalLevelCount = (math.floor(currentLevelCount / 10) + 1) * 10
+--    if bookProgress['chapter'] == 'chapter0' then
+--        totalLevelCount = 10
+--    elseif bookProgress['chapter'] == 'chapter1' then
+--        totalLevelCount = 30
+--    elseif bookProgress['chapter'] == 'chapter2' then
+--        totalLevelCount = 60
+--    else
+--        totalLevelCount = 100
+--    end
+--    if chapterKey == 'chapter0' then
+--        currentLevelCount = currentLevelCount
+--    elseif chapterKey == 'chapter1' then
+--        currentLevelCount = currentLevelCount + 10
+--    elseif chapterKey == 'chapter2' then
+--        currentLevelCount = currentLevelCount + 30
+--    elseif chapterKey == 'chapter3' then
+--        currentLevelCount = currentLevelCount + 60
+--    end
     local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
     --print('currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
     if scrollTime - 0 == 0 then
