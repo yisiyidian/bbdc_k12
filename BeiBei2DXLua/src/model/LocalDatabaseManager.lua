@@ -154,6 +154,7 @@ end
 
 function Manager.saveDataDailyStudyInfo(data)
    localdatabase_dailyStudyInfo.saveDataDailyStudyInfo(data)
+end
 
 function Manager.addOrdinalNum(init)
     localdatabase_dailyStudyInfo.addOrdinalNum(init)
