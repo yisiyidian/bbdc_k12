@@ -12,19 +12,19 @@ end
 
 function DataBookProgress:ctor()
     self.className = 'DataBookProgress'
-    self.CET4 = 'cet4|chapter0|level0'
-    self.CET6 = 'cet6|chapter0|level0'
-    self.GMAT = 'gmat|chapter0|level0'
-    self.GRE = 'gre|chapter0|level0'
-    self.GSE = 'gse|chapter0|level0'
-    self.IELTS = 'ielts|chapter0|level0'
-    self.MIDDLE = 'middle|chapter0|level0'
-    self.NCEE = 'ncee|chapter0|level0'
-    self.PRIMARY = 'primary|chapter0|level0'
-    self.PRO4 = 'pro4|chapter0|level0'
-    self.PRO8 = 'pro8|chapter0|level0'
-    self.SAT = 'sat|chapter0|level0'
-    self.TOEFL = 'toefl|chapter0|level0'
+    self.CET4 = '0'    -- level index
+    self.CET6 = '0'
+    self.GMAT = '0'
+    self.GRE = '0'
+    self.GSE = '0'
+    self.IELTS = '0'
+    self.MIDDLE = '0'
+    self.NCEE = '0'
+    self.PRIMARY = '0'
+    self.PRO4 = '0'
+    self.PRO8 = '0'
+    self.SAT = '0'
+    self.TOEFL = '0'
 
     self.CET4BossList = ''
     self.CET6BossList = ''
@@ -57,17 +57,18 @@ end
 
 function DataBookProgress:getBookCurrentLevelIndex()
     local progress = self:getBookProgress(s_CURRENT_USER.bookKey)
-    local levelIndex = string.sub(progress['level'],6)+0
-    local chapterIndex = string.sub(progress['chapter'],8)+0
---    if progress['chapter'] == 'chapter1' then
---        levelIndex = levelIndex + 10
---    elseif progress['chapter'] == 'chapter2' then
---        levelIndex = levelIndex + 30
---    elseif progress['chapter'] == 'chapter3' then
---        levelIndex = levelIndex + 60
---    end
-    levelIndex = levelIndex + 10 * chapterIndex
-    return levelIndex
+--    local levelIndex = progress[]
+--    local levelIndex = string.sub(progress['level'],6)+0
+--    local chapterIndex = string.sub(progress['chapter'],8)+0
+----    if progress['chapter'] == 'chapter1' then
+----        levelIndex = levelIndex + 10
+----    elseif progress['chapter'] == 'chapter2' then
+----        levelIndex = levelIndex + 30
+----    elseif progress['chapter'] == 'chapter3' then
+----        levelIndex = levelIndex + 60
+----    end
+--    levelIndex = levelIndex + 10 * chapterIndex
+    return progress
 end
 
 function DataBookProgress:getBossList(bookKey)
@@ -101,7 +102,6 @@ function DataBookProgress:getBossList(bookKey)
 end
 
 function DataBookProgress:getUpdateBossTime(bookKey)
-    print('bookKey'..bookKey)
     if bookKey == s_BOOK_KEY_CET4 then
         return self.CET4UpdateBossTime
     elseif bookKey == s_BOOK_KEY_CET6 then
@@ -133,7 +133,6 @@ end
 
 
 function DataBookProgress:updateBossList(bookKey,bossList)
---    print('update boss List:'..bookKey..','..bossList)
     if bookKey == s_BOOK_KEY_CET4 then
         self.CET4BossList = bossList
     elseif bookKey == s_BOOK_KEY_CET6 then
@@ -198,94 +197,49 @@ function DataBookProgress:updateTime(bookKey,updateTime)
 end
 
 function DataBookProgress:getBookProgress(bookKey)
-    local progressData = {}
+--    local progressData = {}
+
+--    return 9
     if bookKey == s_BOOK_KEY_CET4 then
-        local data = split(self.CET4,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+--        local data = split(self.CET4,'|')
+--        progressData['book'] = data[1]
+--        progressData['chapter'] = data[2]
+--        progressData['level'] = data[3]
+--        return progressData
+        return self.CET4 + 0
     elseif bookKey == s_BOOK_KEY_CET6 then
-        local data = split(self.CET6,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.CET6 + 0
     elseif bookKey == s_BOOK_KEY_GMAT then
-        local data = split(self.GMAT,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.GMAT + 0
     elseif bookKey == s_BOOK_KEY_GRE then
-        local data = split(self.GRE,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.GRE + 0
     elseif bookKey == s_BOOK_KEY_GSE then
-        local data = split(self.GSE,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.GSE + 0
     elseif bookKey == s_BOOK_KEY_IELTS then
-        local data = split(self.IELTS,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.IELTS + 0
     elseif bookKey == s_BOOK_KEY_MIDDLE then
-        local data = split(self.MIDDLE,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.MIDDLE + 0
     elseif bookKey == s_BOOK_KEY_NCEE then
-        local data = split(self.NCEE,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData    
+        return self.NCEE + 0 
     elseif bookKey == s_BOOK_KEY_PRIMARY then
-        local data = split(self.PRIMARY,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData 
+        return self.PRIMARY + 0
     elseif bookKey == s_BOOK_KEY_PRO4 then
-        local data = split(self.PRO4,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.PRO4 + 0
     elseif bookKey == s_BOOK_KEY_PRO8 then
-        local data = split(self.PRO8,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.PRO8 + 0
     elseif bookKey == s_BOOK_KEY_SAT then
-        local data = split(self.SAT,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.SAT + 0 
     elseif bookKey == s_BOOK_KEY_TOEFL then
-        local data = split(self.TOEFL,'|')
-        progressData['book'] = data[1]
-        progressData['chapter'] = data[2]
-        progressData['level'] = data[3]
-        return progressData
+        return self.TOEFL + 0
     end
 end
 
 function DataBookProgress:computeCurrentProgress()
-    local bookWordTotalCount = s_DataManager.books[s_CURRENT_USER.bookKey].words
-    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 100)
-    local bookWordCurrentCount =  s_LocalDatabaseManager.getCurrentIndex()-1
-    local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
-    local currentChapterIndex = math.floor(currentLevelIndex/10)
+--    local bookWordTotalCount = s_DataManager.books[s_CURRENT_USER.bookKey].words
+--    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 100)
+--    local bookWordCurrentCount =  s_LocalDatabaseManager.getCurrentIndex()-1
+--    local currentLevelIndex = math.floor(bookWordCurrentCount/avgWordCount)
+--    local currentChapterIndex = math.floor(currentLevelIndex/10)
 --    currentLevelIndex =  9--test
 --    local progress = {}
 --    if currentLevelIndex < 10 then
@@ -302,72 +256,71 @@ function DataBookProgress:computeCurrentProgress()
 --        progress['chapter'] = 'chapter3'
 --        progress['level'] = 'level'..(currentLevelIndex-60)
 --    end
-   local progress = {}
-   progress['chapter'] = 'chapter'..(currentChapterIndex)
-   progress['level'] = 'level'..(currentLevelIndex - 10*currentChapterIndex)
-   
+--   local progress = {}
+--   progress['chapter'] = 'chapter'..(currentChapterIndex)
+--   progress['level'] = 'level'..(currentLevelIndex - 10*currentChapterIndex)   
+--    return progress 
 --    
---    
---    -- avoid complete state
---    if progress['chapter'] == 'chapter3' and string.sub(progress['level'],6)-39 > 0 then
---        progress['level'] = 'level39'
---    end
-    
-    return progress 
+    -- TODO test
+--    return 10
+     return s_LocalDatabaseManager.getMaxBossID()
 end
 
 function DataBookProgress:updateDataToServer()
-    local currentProgress = self:computeCurrentProgress()
-    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey)
-    -- compute add beans count --
-    local increments = 0
-    local oldLevelIndex = string.sub(oldProgress['level'],  6)
-    local currentLevelIndex = string.sub(currentProgress['level'],6)
---    local current
-    if oldProgress['chapter'] == currentProgress['chapter'] then
-        increments = currentLevelIndex - oldLevelIndex
-    else
---        if oldProgress['chapter'] == 'chapter0' then
---            increments = 10 - oldLevelIndex + currentLevelIndex
---        elseif oldProgress['chapter'] == 'chapter1' then
---            increments = 20 - oldLevelIndex + currentLevelIndex
---        elseif oldProgress['chapter'] == 'chapter2' then
---            increments = 30 - oldLevelIndex + currentLevelIndex
---        elseif oldProgress['chapter'] == 'chapter3' then
---            increments = 40 - oldLevelIndex + currentLevelIndex
---        end
-        increments = 10 - oldLevelIndex + currentLevelIndex
-    end
+--    local currentProgress = self:computeCurrentProgress()
+--    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey)
+--    -- compute add beans count --
+--    local increments = 0
+--    local oldLevelIndex = string.sub(oldProgress['level'],  6)
+--    local currentLevelIndex = string.sub(currentProgress['level'],6)
+----    local current
+--    if oldProgress['chapter'] == currentProgress['chapter'] then
+--        increments = currentLevelIndex - oldLevelIndex
+--    else
+----        if oldProgress['chapter'] == 'chapter0' then
+----            increments = 10 - oldLevelIndex + currentLevelIndex
+----        elseif oldProgress['chapter'] == 'chapter1' then
+----            increments = 20 - oldLevelIndex + currentLevelIndex
+----        elseif oldProgress['chapter'] == 'chapter2' then
+----            increments = 30 - oldLevelIndex + currentLevelIndex
+----        elseif oldProgress['chapter'] == 'chapter3' then
+----            increments = 40 - oldLevelIndex + currentLevelIndex
+----        end
+--        increments = 10 - oldLevelIndex + currentLevelIndex
+--    end
+    local currentProgress = self:computeCurrentProgress() 
+    local oldProgress = self:getBookProgress(s_CURRENT_USER.bookKey) 
+    local increments = (currentProgress - oldProgress) * 2   -- add beans count
     s_CURRENT_USER:addBeans(increments)
     -----------------------------
     bookKey = s_CURRENT_USER.bookKey
     if bookKey == s_BOOK_KEY_CET4 then
-        self.CET4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+--        self.CET4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.CET4 = currentProgress
     elseif bookKey == s_BOOK_KEY_CET6 then
-        self.CET6 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
-        return progressData
+        self.CET6 = currentProgress
     elseif bookKey == s_BOOK_KEY_GMAT then
-        self.GMAT = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.GMAT = currentProgress
     elseif bookKey == s_BOOK_KEY_GRE then
-        self.GRE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.GRE = currentProgress
     elseif bookKey == s_BOOK_KEY_GSE then
-        self.GSE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.GSE = currentProgress
     elseif bookKey == s_BOOK_KEY_IELTS then
-        self.IELTS = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.IELTS = currentProgress
     elseif bookKey == s_BOOK_KEY_MIDDLE then
-        self.MIDDLE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.MIDDLE = currentProgress
     elseif bookKey == s_BOOK_KEY_NCEE then
-        self.NCEE = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']    
+        self.NCEE = currentProgress   
     elseif bookKey == s_BOOK_KEY_PRIMARY then
-        self.PRIMARY = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.PRIMARY = currentProgress
     elseif bookKey == s_BOOK_KEY_PRO4 then
-        self.PRO4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.PRO4 = currentProgress
     elseif bookKey == s_BOOK_KEY_PRO8 then
-        self.PRO8 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.PRO8 = currentProgress
     elseif bookKey == s_BOOK_KEY_SAT then
-        self.SAT = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.SAT = currentProgress
     elseif bookKey == s_BOOK_KEY_TOEFL then
-        self.TOEFL = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
+        self.TOEFL = currentProgress
     end
     s_UserBaseServer.saveDataObjectOfCurrentUser(self) 
     s_LocalDatabaseManager.saveDataClassObject(self, self.userId, self.username)

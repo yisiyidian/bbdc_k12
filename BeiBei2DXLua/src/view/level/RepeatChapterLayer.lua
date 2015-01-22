@@ -20,13 +20,14 @@ function RepeatChapterLayer:ctor(chapterKey)
     --    print_lua_table(s_CURRENT_USER)
     --    local chapterConfig = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,self.chapterKey)
     local chapterSize = 1
-    if self.chapterKey == 'chapter1' then
-        chapterSize = 2
-    elseif self.chapterKey == 'chapter2' then
-        chapterSize = 3
-    elseif self.chapterKey == 'chapter3' then
-        chapterSize = 4
-    end
+    local chapterIndex = string.sub(chapterKey, 8) + 0
+--    if self.chapterKey == 'chapter1' then
+--        chapterSize = 2
+--    elseif self.chapterKey == 'chapter2' then
+--        chapterSize = 3
+--    elseif self.chapterKey == 'chapter3' then
+--        chapterSize = 4
+--    end
     local s_layer_height = s_chapter0_base_height * chapterSize
     self:setContentSize(cc.size(s_MAX_WIDTH, s_layer_height))
     for i = 1, chapterSize do
@@ -34,7 +35,7 @@ function RepeatChapterLayer:ctor(chapterKey)
         local chapterLayer = ChapterLayer0.create("end")
         chapterLayer.chapterKey = self.chapterKey
         -- load level position
-        local startLevelKey = 'level'..(i-1)*10
+        local startLevelKey = 'level'..(i-1 + chapterIndex)*10
         chapterLayer:loadLevelPosition(startLevelKey)
         for k,v in pairs(chapterLayer.levelPos) do
             self.levelPos[k] = cc.p(v.x, v.y + s_layer_height - i*s_chapter0_base_height)
