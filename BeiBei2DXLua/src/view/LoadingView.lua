@@ -4,17 +4,15 @@ local LoadingView = class ("LoadingView", function()
     return cc.Layer:create()
 end)
 
-
-
-function LoadingView.create()
+function LoadingView.create(needUpdate)
     
     local layer = LoadingView.new()
     
     local background = cc.Sprite:create('image/loading/loading_little_girl_background.png')
     
     background:ignoreAnchorPointForPosition(false)
-    background:setAnchorPoint(0,0.5)
-    background:setPosition(s_LEFT_X  , s_DESIGN_HEIGHT / 2 )
+    background:setAnchorPoint(0.5,0.5)
+    background:setPosition(s_DESIGN_WIDTH / 2  , s_DESIGN_HEIGHT / 2 )
     layer:addChild(background)
 
     local leaf = cc.Sprite:create('image/loading/loading-little-girl-leaf.png')
@@ -30,9 +28,56 @@ function LoadingView.create()
     sleep_girl:setPosition(leaf:getContentSize().width * 0.2 ,leaf:getContentSize().height * 0.3)    
     leaf:addChild(sleep_girl)
     
-    local updateInfoLabel =DynamicUpdate.initUpdateLabel()
-    layer:addChild(updateInfoLabel,1000)
-    DynamicUpdate.beginLoginUpdate(updateInfoLabel)
+    
+    if needUpdate == true then
+        local updateInfoLabel = DynamicUpdate.initUpdateLabel()
+        layer:addChild(updateInfoLabel,1000)
+        DynamicUpdate.beginLoginUpdate(updateInfoLabel)
+    else
+    
+    end
+    
+    local backCircle = cc.Sprite:create("image/loading/loadingbegin.png")
+    backCircle:setPosition(background:getContentSize().width / 2,background:getContentSize().height / 2)
+    background:addChild(backCircle)
+
+    local runProgress = cc.ProgressTo:create(0.2,99)
+
+    local progressCircle = cc.ProgressTimer:create(cc.Sprite:create("image/loading/loadingend.png"))
+    progressCircle:setPosition(backCircle:getContentSize().width / 2 ,backCircle:getContentSize().height / 2)
+    progressCircle:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    progressCircle:setReverseDirection(false)
+    progressCircle:setPercentage(0)
+    progressCircle:runAction(runProgress)
+    backCircle:addChild(progressCircle)
+
+    local progressText = cc.Label:createWithSystemFont("","",30)
+    progressText:setColor(cc.c4b(0,0,0,255))
+    progressText:setPosition(backCircle:getContentSize().width / 2 ,backCircle:getContentSize().height / 2)
+    backCircle:addChild(progressText)
+
+    local seed = math.randomseed(os.time())
+    local randomNum = math.random(1,5)
+
+    local hint = cc.Sprite:create("image/loading/loading"..randomNum..".png")
+    hint:setPosition(background:getContentSize().width / 2,100)
+    background:addChild(hint)
+
+    local time = 0
+
+    local function update(delta)
+        time = time + delta
+        if time > 10 then
+            time = 0
+            seed = math.randomseed(os.time())
+            randomNum = math.random(1,5)
+            hint:setTexture("image/loading/loading"..randomNum..".png")
+        end
+        local per = '%'
+        local str = string.format("%d%s",progressCircle:getPercentage(),per)
+        progressText:setString(str)
+    end
+    layer:scheduleUpdateWithPriorityLua(update, 0)
     
     return layer
 end
