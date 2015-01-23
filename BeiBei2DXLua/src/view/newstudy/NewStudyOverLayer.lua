@@ -10,6 +10,8 @@ end)
 function NewStudyOverLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
+
+
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
 
@@ -47,7 +49,9 @@ function NewStudyOverLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.enterLevelLayer()
+            local HomeLayer = require('view.home.HomeLayer')
+            local homeLayer = HomeLayer.create(true)
+            s_SCENE:replaceGameLayer(homeLayer)
         end
     end
 

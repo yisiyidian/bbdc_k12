@@ -11,7 +11,7 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
-function HomeLayer.create()
+function HomeLayer.create(share)
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
@@ -66,8 +66,12 @@ function HomeLayer.create()
         layer:addChild(offlineTipHome,2)
         layer:addChild(offlineTipFriend,2) 
     end
-
-    local mission_progress = MissionProgress.create()
+    local mission_progress
+    if not share then
+        mission_progress = MissionProgress.create()
+    else
+        mission_progress = MissionProgress.create(true)
+    end
     backColor:addChild(mission_progress,1)
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(mission_progress)
     local downloadSoundBtnSchedule = downloadSoundButton:getScheduler()
