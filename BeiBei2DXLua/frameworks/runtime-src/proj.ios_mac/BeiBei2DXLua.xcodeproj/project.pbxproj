@@ -90,6 +90,9 @@
 		AB6CB6F51A1F275E009C2562 /* ConsoleCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EE1A1F275E009C2562 /* ConsoleCommand.cpp */; };
 		AB6CB6F61A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
 		AB6CB6F71A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
+		B82D2AD41A723665001DD4C2 /* CXAVCloud.mm in Sources */ = {isa = PBXBuildFile; fileRef = B82D2AD31A723665001DD4C2 /* CXAVCloud.mm */; };
+		B82D2AD61A723675001DD4C2 /* CXAVCloudCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B82D2AD51A723675001DD4C2 /* CXAVCloudCommon.cpp */; };
+		B82D2AD91A723DAE001DD4C2 /* CXUtils_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = B82D2AD71A723DAE001DD4C2 /* CXUtils_iOS.mm */; };
 		B85077501A5E664D00A66723 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B850774F1A5E664D00A66723 /* Reachability.m */; };
 		B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077511A5E67E900A66723 /* CXAvosCommon.cpp */; };
 		B85077581A5F7CC400A66723 /* CXNetworkStatusCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */; };
@@ -295,6 +298,11 @@
 		AB6CB6F01A1F275E009C2562 /* FileServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileServer.cpp; sourceTree = "<group>"; };
 		AB6CB6F11A1F275E009C2562 /* FileServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileServer.h; sourceTree = "<group>"; };
 		B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionInfo.h; sourceTree = "<group>"; };
+		B82D2AD11A7233E9001DD4C2 /* CXAVCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAVCloud.h; sourceTree = "<group>"; };
+		B82D2AD31A723665001DD4C2 /* CXAVCloud.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAVCloud.mm; sourceTree = "<group>"; };
+		B82D2AD51A723675001DD4C2 /* CXAVCloudCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXAVCloudCommon.cpp; sourceTree = "<group>"; };
+		B82D2AD71A723DAE001DD4C2 /* CXUtils_iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXUtils_iOS.mm; sourceTree = "<group>"; };
+		B82D2AD81A723DAE001DD4C2 /* CXUtils_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXUtils_iOS.h; sourceTree = "<group>"; };
 		B850774E1A5E664D00A66723 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../Classes/Reachability.h; sourceTree = "<group>"; };
 		B850774F1A5E664D00A66723 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../Classes/Reachability.m; sourceTree = "<group>"; };
 		B85077511A5E67E900A66723 /* CXAvosCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXAvosCommon.cpp; sourceTree = "<group>"; };
@@ -533,6 +541,8 @@
 			isa = PBXGroup;
 			children = (
 				B8C5C35D1A44219A00593E15 /* CXAnalytics.h */,
+				B82D2AD11A7233E9001DD4C2 /* CXAVCloud.h */,
+				B82D2AD51A723675001DD4C2 /* CXAVCloudCommon.cpp */,
 				B8C5C35E1A44219A00593E15 /* CXAvos.h */,
 				B85077511A5E67E900A66723 /* CXAvosCommon.cpp */,
 				B85077561A5F7CC400A66723 /* CXNetworkStatus.h */,
@@ -552,11 +562,14 @@
 		660224391A370E4B00233788 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */,
 				B8C5C3591A44218E00593E15 /* CXAnalytics.mm */,
+				B82D2AD31A723665001DD4C2 /* CXAVCloud.mm */,
 				B8C5C35A1A44218E00593E15 /* CXAvos.mm */,
 				6602243A1A370E4B00233788 /* CXMailFeedBack.mm */,
+				B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */,
 				6602243B1A370E4B00233788 /* CXProgressHUD.mm */,
+				B82D2AD81A723DAE001DD4C2 /* CXUtils_iOS.h */,
+				B82D2AD71A723DAE001DD4C2 /* CXUtils_iOS.mm */,
 				6602243C1A370E4B00233788 /* MBProgressHUD */,
 			);
 			path = iOS;
@@ -921,6 +934,7 @@
 				15AA9648199B6D4600725633 /* lua_debugger.c in Sources */,
 				3EB5156A1952865D006966AA /* once.cc in Sources */,
 				B850775A1A5F7CD500A66723 /* CXNetworkStatus.mm in Sources */,
+				B82D2AD91A723DAE001DD4C2 /* CXUtils_iOS.mm in Sources */,
 				660224541A370E4B00233788 /* CXMailFeedBack.mm in Sources */,
 				660224501A370E4B00233788 /* CXStore.cpp in Sources */,
 				C00FD4981938512100C6382D /* Portrait_png.cpp in Sources */,
@@ -945,6 +959,7 @@
 				3EB515581952865D006966AA /* extension_set.cc in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
 				3EB5156C1952865D006966AA /* stringprintf.cc in Sources */,
+				B82D2AD41A723665001DD4C2 /* CXAVCloud.mm in Sources */,
 				3EB515681952865D006966AA /* common.cc in Sources */,
 				C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */,
 				B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */,
@@ -959,6 +974,7 @@
 				C0619CD71896894800872C26 /* Runtime_ios-mac.mm in Sources */,
 				B8C5C35C1A44218E00593E15 /* CXAvos.mm in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,
+				B82D2AD61A723675001DD4C2 /* CXAVCloudCommon.cpp in Sources */,
 				AB6CB6F41A1F275E009C2562 /* ConsoleCommand.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
