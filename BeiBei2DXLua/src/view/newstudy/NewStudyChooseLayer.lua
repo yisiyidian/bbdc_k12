@@ -116,7 +116,6 @@ function NewStudyChooseLayer.create()
 
     local time = os.time()
     local str = getDayStringForDailyStudyInfo(time)
-    
     if s_CorePlayManager.isStudyModel() then
         if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then    
             if s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1] == s_CorePlayManager.rightWordList[#s_CorePlayManager.rightWordList] then

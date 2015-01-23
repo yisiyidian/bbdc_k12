@@ -74,6 +74,7 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBackToHome()
     self:addBeansUI()
+   
 end
 
 function ChapterLayer:checkUnlockLevel()
