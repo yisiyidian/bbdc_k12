@@ -116,22 +116,17 @@ function NewStudyChooseLayer.create()
 
     local time = os.time()
     local str = getDayStringForDailyStudyInfo(time)
-    
     if s_CorePlayManager.isStudyModel() then
         if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then    
-            print("s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0")
-            print(s_LocalDatabaseManager.getStudyWordsNum(str))
             if s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1] == s_CorePlayManager.rightWordList[#s_CorePlayManager.rightWordList] then
                 backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],true)
             else
                 backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],false)
             end
         else
-            print("s_LocalDatabaseManager.getStudyWordsNum(str) == 0")
             backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
         end
     else
-        print("s_CorePlayManager.isStudyModel() nil")
         backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
     end
     

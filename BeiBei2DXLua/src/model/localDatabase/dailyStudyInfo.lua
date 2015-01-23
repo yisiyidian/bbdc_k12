@@ -38,7 +38,7 @@ function M.addOrdinalNum(ordinalNum)-- influence beibei bean
 
     local data = M.getDataDailyStudyInfo(today)
     if data == nil then
-        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time, 0)
+        data = DataDailyStudyInfo.createData(bookKey, today, 0, 0, time, 0)
         Manager.saveData(data, userId, username, 0)
     else
         data.ordinalNum = data.ordinalNum + ordinalNum
@@ -76,7 +76,7 @@ function M.addGraspWordsNum(addNum)
 
     local data = M.getDataDailyStudyInfo(today)
     if data == nil then
-        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time, 0)
+        data = DataDailyStudyInfo.createData(bookKey, today, addNum, addNum, time, 0)
         Manager.saveData(data, userId, username, 0)
     else
         data.graspNum = data.graspNum + addNum
