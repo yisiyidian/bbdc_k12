@@ -16,6 +16,8 @@
 -- showProgressHUD(info)
 -- hideProgressHUD()
 
+-- getDayStringForDailyStudyInfo(time)
+
 ------------------------------------------------------------------------------------------------------------
 
 function randomMinN(M, N) -- random M numbers from 1 to N, N must >= M
@@ -256,3 +258,7 @@ function checkIfDownloadSoundsExist(bookkey)
     return  cc.FileUtils:getInstance():isFileExist(storagePath)
 end
 
+function getDayStringForDailyStudyInfo(time)
+    local str = string.format('%s/%s/%s', os.date('%m', time), os.date('%d', time), os.date('%y', time))
+    return str
+end

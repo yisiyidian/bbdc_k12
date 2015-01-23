@@ -16,9 +16,10 @@ function HomeLayer.create()
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
     
-    local bookProgress = s_CURRENT_USER.bookProgress:getBookProgress(s_CURRENT_USER.bookKey)
-    local currentChapterKey = bookProgress['chapter']
-    local currentLevelKey   = bookProgress['level']
+    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey) + 0
+    print('home player###### '..levelInfo)
+    local currentChapterKey = 'chapter'..math.floor(levelInfo / 10) 
+    local currentLevelKey   = 'level'..(levelInfo % 10)
     
     local chapterIndex      = string.sub(currentChapterKey, 8)+1
     local levelIndex        = string.sub(currentLevelKey, 6)+1
@@ -271,7 +272,7 @@ function HomeLayer.create()
     local state = s_LocalDatabaseManager.getGameState()
 
     local playImg = 'image/homescene/bigbutton.png'
-    if state == s_gamestate_overmodel then
+    if state == s_gamestate_studymodel_extra then
         playImg = 'image/homescene/buttonfinish.png'
     end
     local state_str
@@ -279,7 +280,7 @@ function HomeLayer.create()
         state_str = '积累生词'
     elseif state == s_gamestate_reviewmodel then
         state_str = '趁热打铁'
-    elseif state == s_gamestate_reviewbossmodel then
+    elseif state == s_gamestate_reviewbossmodel_beforetoday then
         state_str = '复习旧词'
     else
         state_str = '  完成  '

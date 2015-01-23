@@ -365,10 +365,10 @@ function PersonalInfo:PLVI()
     local daytime = os.time() - dayCount * 24 * 3600
     if #loginData > 1 then
         --local time = os.time() - dayCount * 24 * 3600
-        local time =daytime
+        local time = daytime
         for i = 1,#loginData - 1 do
             for j = 1,7 do
-                local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
+                local str = getDayStringForDailyStudyInfo(time)
                 countArray[1] = countArray[1] + s_LocalDatabaseManager.getStudyWordsNum(str)
                 time = time - 24 * 3600
             end
@@ -379,7 +379,7 @@ function PersonalInfo:PLVI()
     local selectDate = daytime
     for i = 2 , dayCount + 1 do 
         selectDate = selectDate + 24 * 3600
-        local str = string.format("%s/%s/%s",os.date('%m',selectDate),os.date('%d',selectDate),os.date('%y',selectDate))
+        local str = getDayStringForDailyStudyInfo(selectDate)
         countArray[i] = s_LocalDatabaseManager.getStudyWordsNum(str)
         countArray[i] = countArray[i - 1] + countArray[i]
     end

@@ -39,10 +39,39 @@ function NewStudyChooseLayer.create()
     math.randomseed(os.time())
     local randomNameArray  = {}
     table.insert(randomNameArray, currentWordName)
+    local word1 = split(tostring(s_WordPool[currentWordName].wordMeaningSmall),"%.")
+    local wordList = {}
+    
+    if word1[1] == "num" then
+         wordList = {"thirty","eighty","fourteen","eight"}
+    elseif word1[1] == "int" then 
+         wordList = {"lord","please","oh","hey"}
+    elseif word1[1] == "pron" then
+         wordList = {"hers","which","our","something"}
+    elseif word1[1] == "prep" then
+         wordList = {"who","from","of","regarding"}
+    elseif word1[1] == "conj" then
+         wordList = {"whether","because","or","provided"}
+    elseif word1[1] == "aux" then
+        wordList = {"do","could","can","have"}
+    elseif word1[1] == "art" then
+        wordList = {"an","thirty","lord","who"}
+    end
+    
+    if wordList ~= nil then
+        for i = 1 ,3 do
+            if wordname == wordList[i] then
+                table.insert(randomNameArray, wordList[4])
+            else
+                table.insert(randomNameArray, wordList[i])
+            end
+        end
+    end
+    
     while 1 do
         if #randomNameArray >= 4 then
             break
-        end
+        end 
         local randomIndex = math.random(1, totalWordNum)
         local randomWord = s_CorePlayManager.NewStudyLayerWordList[randomIndex]
         local isIn = 0
@@ -51,6 +80,13 @@ function NewStudyChooseLayer.create()
                 isIn = 1
                 break
             end
+            local word1 = split(tostring(s_WordPool[currentWordName].wordMeaningSmall),"%.")
+            local word2 = split(tostring(s_WordPool[randomWord].wordMeaningSmall),"%.")
+            if word1[1] ~= word2[1] then
+                isIn = 1
+                break
+            end
+            
         end
         if isIn == 0 then
             table.insert(randomNameArray, randomWord)
@@ -67,7 +103,7 @@ function NewStudyChooseLayer.create()
     local tmp = wordMeaningTable[1]
     wordMeaningTable[1] = wordMeaningTable[rightIndex]
     wordMeaningTable[rightIndex] = tmp
-        
+   
     -- ui 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local layer = NewStudyChooseLayer.new()
@@ -79,8 +115,7 @@ function NewStudyChooseLayer.create()
     layer:addChild(backColor)
 
     local time = os.time()
-    local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
-    
+    local str = getDayStringForDailyStudyInfo(time)
     if s_CorePlayManager.isStudyModel() then
         if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then    
             if s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1] == s_CorePlayManager.rightWordList[#s_CorePlayManager.rightWordList] then
@@ -148,8 +183,8 @@ function NewStudyChooseLayer.create()
                         AnalyticsStudyGuessWrong()
                         s_CorePlayManager.updateWrongWordList(wordname)
                         s_CorePlayManager.updateCurrentIndex()
-                        if s_CorePlayManager.reward >=1 then
-                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward)
+                        if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 1 then
+                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward - s_CorePlayManager.ordinalNum, 3 - s_CorePlayManager.ordinalNum)
                             s_SCENE:popup(guessWrong)
                             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
                         else
@@ -158,8 +193,8 @@ function NewStudyChooseLayer.create()
              
                     else
                         AnalyticsStudyGuessWrong_strikeWhileHot()
-                        if s_CorePlayManager.reward >=1 then
-                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward)
+                        if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 1 then
+                            local guessWrong = GuessWrong.create(s_CorePlayManager.reward - s_CorePlayManager.ordinalNum, 3 - s_CorePlayManager.ordinalNum)
                             s_SCENE:popup(guessWrong)
                             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()   
                         else

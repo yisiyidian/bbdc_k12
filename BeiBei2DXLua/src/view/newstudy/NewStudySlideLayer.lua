@@ -42,7 +42,7 @@ function NewStudySlideLayer.create()
     layer:addChild(backColor)
     
     local time = os.time()
-    local str = string.format('%s/%s/%s',os.date('%m',time),os.date('%d',time),os.date('%y',time))
+    local str = getDayStringForDailyStudyInfo(time)
 
 
     if s_CorePlayManager.isStudyModel() then

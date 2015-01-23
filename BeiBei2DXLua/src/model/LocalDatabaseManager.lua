@@ -1,6 +1,6 @@
 RBWORDNUM = 10
 MAXWRONGWORDCOUNT = s_max_wrong_num_everyday
-MAXTYPEINDEX = 4
+MAXTYPEINDEX = 5
 
 require("common.global")
 local sqlite3 = require("lsqlite3")
@@ -13,7 +13,7 @@ local DataLevel = require('model.user.DataLevel')
 
 local DataLogIn = require('model.user.DataLogIn')
 local DataUser = require('model.user.DataUser')
-local DataBookProgress = require('model.user.DataBookProgress')
+local DataLevelInfo = require('model.user.DataLevelInfo')
 
 local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
@@ -31,7 +31,7 @@ local databaseTables = {
 
         DataLogIn,
         DataUser,
-        DataBookProgress,
+        DataLevelInfo,
 
         DataCurrentIndex,
         DataDailyStudyInfo,
@@ -127,11 +127,13 @@ function Manager.getRandomWord()
 end
 
 function Manager.addStudyWordsNum()
-    localdatabase_dailyStudyInfo.addStudyWordsNum()
+    local data = localdatabase_dailyStudyInfo.addStudyWordsNum()
+    s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
 function Manager.addGraspWordsNum(addNum)
-    localdatabase_dailyStudyInfo.addGraspWordsNum(addNum)
+    local data = localdatabase_dailyStudyInfo.addGraspWordsNum(addNum)
+    s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
 function Manager.getStudyDayNum()
@@ -144,6 +146,22 @@ end
 
 function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
     return localdatabase_dailyStudyInfo.getGraspWordsNum(dayString)
+end
+
+function Manager.getDataDailyStudyInfo(dayString)
+    return localdatabase_dailyStudyInfo.getDataDailyStudyInfo(dayString)
+end
+
+function Manager.saveDataDailyStudyInfo(data)
+   localdatabase_dailyStudyInfo.saveDataDailyStudyInfo(data)
+end
+
+function Manager.addOrdinalNum(init)
+    localdatabase_dailyStudyInfo.addOrdinalNum(init)
+end
+
+function Manager.getOrdinalNum()
+    return localdatabase_dailyStudyInfo.getOrdinalNum()
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -238,8 +256,8 @@ function Manager.getWrongWords()
         end
 
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-            n2 = n2 + 1
-            if row.wordList ~= "" then
+            if row.wordList ~= "" and row.typeIndex + 1 <= MAXTYPEINDEX then
+                n2 = n2 + 1
                 local wordList = split(row.wordList, "|")
                 for i = 1, #wordList do
                     table.insert(wordPool, wordList[i])
@@ -251,7 +269,7 @@ function Manager.getWrongWords()
     if username ~= '' then
         if n1 == 0 then
             for row in Manager.database:nrows("SELECT * FROM DataWrongWordBuffer WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
-                if row.wordBuffer ~= "" then
+                if row.wordBuffer ~= "" and row.typeIndex + 1 <= MAXTYPEINDEX then
                     local wordList = split(row.wordBuffer, "|")
                     for i = 1, #wordList do
                         table.insert(wordPool, wordList[i])
@@ -262,7 +280,7 @@ function Manager.getWrongWords()
 
         if n2 == 0 then
             for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
-                if row.wordList ~= "" then
+                if row.wordList ~= "" and row.typeIndex + 1 <= MAXTYPEINDEX then
                     local wordList = split(row.wordList, "|")
                     for i = 1, #wordList do
                         table.insert(wordPool, wordList[i])
@@ -337,6 +355,10 @@ function Manager.getwrongWordListSize()
     return localdatabase_newPlayState.getwrongWordListSize()
 end
 
+function Manager.getwordCandidateSize()
+    return localdatabase_newPlayState.getwordCandidateSize()
+end
+
 function Manager.getDataNewPlayState()
     return localdatabase_newPlayState.getDataNewPlayState()
 end
@@ -394,8 +416,8 @@ function Manager.getBossWordNum()
     return localdatabase_bossWord.getBossWordNum()
 end
 
-function Manager.getBossWord()
-    return localdatabase_bossWord.getBossWord()
+function Manager.getBossWordBeforeToday()
+    return localdatabase_bossWord.getBossWordBeforeToday()
 end
 
 function Manager.getTodayRemainBossNum()
@@ -404,6 +426,10 @@ end
 
 function Manager.updateBossWord(bossID)
     localdatabase_bossWord.updateBossWord(bossID)
+end
+
+function Manager.getMaxBossID()
+    return localdatabase_bossWord.getMaxBossID()
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -479,18 +505,18 @@ function Manager.updateDownloadState(bookKey, isDownloaded)
     end
 end
 
---s_gamestate_reviewbossmodel = 1
+--s_gamestate_reviewbossmodel_beforetoday = 1
 --s_gamestate_studymodel      = 2
 --s_gamestate_reviewmodel     = 3
---s_gamestate_overmodel       = 4
+--s_gamestate_studymodel_extra       = 4
 
 function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3 for review model and 4 for over
     if Manager.getTodayRemainBossNum() > 0 then
-        return s_gamestate_reviewbossmodel
+        return s_gamestate_reviewbossmodel_beforetoday
     end
     
     if Manager.getCurrentIndex() > s_DataManager.books[s_CURRENT_USER.bookKey].words then
-        return s_gamestate_overmodel
+        return s_gamestate_studymodel_extra
     end
     
     local playModel = Manager.getTodayPlayModel()
@@ -499,7 +525,7 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
     elseif playModel == 1 then
         return s_gamestate_reviewmodel
     else
-        return s_gamestate_overmodel
+        return s_gamestate_studymodel_extra
     end
 end
 

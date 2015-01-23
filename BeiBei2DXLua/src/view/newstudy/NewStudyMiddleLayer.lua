@@ -11,12 +11,16 @@ end)
 
 function NewStudyMiddleLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    s_CURRENT_USER:addBeans(3)
+    
+    local beanNum = s_CorePlayManager.reward - s_CorePlayManager.ordinalNum
+    if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 0 then
+        s_CURRENT_USER:addBeans(beanNum)
+    else
+        beanNum = 0
+    end
     
     --pause music
     cc.SimpleAudioEngine:getInstance():pauseMusic()
-    
-    s_CorePlayManager.initNewStudyReward()
 
     -- word info
     local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
@@ -98,10 +102,14 @@ function NewStudyMiddleLayer.create()
     AnalyticsFirst(ANALYTICS_FIRST_GOT_ENOUGH_UNKNOWN_WORDS, tostring(wrongWordNum))
 
     local label_come_on = cc.Label:createWithSystemFont("贝贝给你加油","",50)
-    label_come_on:setPosition(bigWidth/2, 600)
+    label_come_on:setPosition(bigWidth/2, 700)
     label_come_on:setColor(cc.c4b(234,123,3,255))
     backColor:addChild(label_come_on)
     
+    local beibeiAnimation = sp.SkeletonAnimation:create("spine/bb_hello_public.json", 'spine/bb_hello_public.atlas',1)
+    beibeiAnimation:addAnimation(0, 'animation', false)
+    beibeiAnimation:setPosition(bigWidth/2, 270)
+    backColor:addChild(beibeiAnimation)
     
     local button_go_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -125,9 +133,11 @@ function NewStudyMiddleLayer.create()
     bean:setPosition(button_go:getContentSize().width * 0.75,button_go:getContentSize().height * 0.5)
     button_go:addChild(bean)
     
-    local rewardNumber = cc.Label:createWithSystemFont("+3","",36)
+    local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(beanNum),"",36)
     rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
     button_go:addChild(rewardNumber)
+    
+    s_CorePlayManager.initNewStudyReward()
     
     print_lua_table(s_CorePlayManager.wrongWordList)
     

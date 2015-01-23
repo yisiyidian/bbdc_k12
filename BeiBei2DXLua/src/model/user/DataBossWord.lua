@@ -21,6 +21,7 @@ function DataBossWord:ctor()
     self.bossID = 0
     self.typeIndex = 0
     self.wordList = ''
+    self.lastWordIndex = 0
 end
 
 return DataBossWord

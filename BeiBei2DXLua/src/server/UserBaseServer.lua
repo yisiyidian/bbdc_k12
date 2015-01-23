@@ -292,36 +292,6 @@ function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
 end
 
 ----
---[[
-s_UserBaseServer.getDailyCheckInOfCurrentUser( 
-   function (api, result)
-       s_CURRENT_USER:parseServerDailyCheckInData(result.results)
-   end,
-   function (api, code, message, description) end
-)
-]]--
--- useless function
-function UserBaseServer.getDailyCheckInOfCurrentUser(onSucceed, onFailed)
-    s_SERVER.search('classes/DataDailyCheckIn?where={"userId":"' .. s_CURRENT_USER.objectId .. '"}', onSucceed, onFailed)
-end
--- useless function
-function UserBaseServer.saveDailyCheckInOfCurrentUser(lastCheckInAward, onSucceed, onFailed)
-    s_CURRENT_USER.dailyCheckInData.dailyCheckInAwards = lastCheckInAward
-    UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.dailyCheckInData,
-        function (api, result) 
-            if lastCheckInAward <= #s_DataManager.dailyCheckIn then
-                local metaDailyCheckIn = s_DataManager.dailyCheckIn[lastCheckInAward]
-                s_CURRENT_USER.energyCount = s_CURRENT_USER.energyCount + metaDailyCheckIn.count
-                UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
-                AnalyticsDailyCheckIn(lastCheckInAward)
-            end
-            if onSucceed ~= nil then onSucceed(api, result) end
-        end, 
-        onFailed
-    )
-end
-
-----
 
 function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
     if s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken() then
@@ -374,28 +344,9 @@ end
 
 ----
 ---- handle offline in O2O
-function UserBaseServer.getDataBookProgress(objectId, onSucceed, onFailed)
-    s_SERVER.search('classes/DataBookProgress?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
+function UserBaseServer.getDataLevelInfo(objectId, onSucceed, onFailed)
+    s_SERVER.search('classes/DataLevelInfo?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
 end
-----
-
---[[
-s_UserBaseServer.getLevelsOfCurrentUser(
-    function (api, result)
-        s_CURRENT_USER:parseServerLevelData(result.results)
-    end,
-    function (api, code, message, description)
-    end
-)
-]]--
--- local function getLevels(userId, bookKey, onSucceed, onFailed)
---     s_SERVER.search('classes/DataLevel?where={"userId":"' .. userId .. '","bookKey":"' .. bookKey .. '"}', onSucceed, onFailed)
--- end
--- function UserBaseServer.getLevelsOfCurrentUser(onSucceed, onFailed)
---     getLevels(s_CURRENT_USER.objectId, s_CURRENT_USER.bookKey, onSucceed, onFailed)
--- end
-
-----
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -418,39 +369,6 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
         s ('saveDataObjectOfCurrentUser ' .. dataObject.className, nil)
     end
 end
-
--- TODO
--- function UserBaseServer.saveDataDailyStudyInfoOfCurrentUser(bookKey, dayString, studyNum, graspNum)
---     local dataObject = s_CURRENT_USER.dailyStudyInfo
-
---     local function update()
---         dataObject.objectId  = ''
---         dataObject.userId    = s_CURRENT_USER.objectId
---         dataObject.bookKey   = bookKey
---         dataObject.dayString = dayString
---         dataObject.studyNum  = studyNum
---         dataObject.graspNum  = graspNum
---     end
-
---     local s = function (api, result)
---         update()
---         if #result.results > 0 then
---             for i, data in ipairs(result.results) do
---                 dataObject.objectId = data.objectId
---                 s_SERVER.updateData(dataObject, nil, nil)
---                 break
---             end
---         else
---             s_SERVER.createData(dataObject, nil, nil)
---         end
---     end
---     local f = function (api, result) 
---         update()
---         s_SERVER.createData(dataObject, nil, nil) 
---     end
-
---     s_SERVER.search('classes/DataDailyStudyInfo?where={"userId":"' .. s_CURRENT_USER.userId .. '","bookKey":"' .. bookKey .. '","dayString":"' .. dayString .. '"}', s, f)
--- end 
 
 function UserBaseServer.saveDataCurrentIndex()
     UserBaseServer.synBookRelations({'DataCurrentIndex'}, nil, false)
@@ -586,6 +504,33 @@ function UserBaseServer.synUserConfig(onCompleted, saveToLocalDB)
             local timestamp = result['lastUpdate']
             if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
                 s_LocalDatabaseManager.saveDataStudyConfiguration(result.isAlterOn, result.slideNum, timestamp)
+            end
+
+            if onCompleted then onCompleted() end
+        end, 
+        function (api, code, message, description)
+            if onCompleted then onCompleted() end 
+        end)
+end
+
+function UserBaseServer.synTodayDailyStudyInfo(data, onCompleted, saveToLocalDB)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if onCompleted then onCompleted() end
+        return
+    end
+
+    saveToLocalDB = saveToLocalDB or true
+
+    s_SERVER.synData(data, 
+        function (api, result) 
+            print ('synTodayDailyStudyInfo >>>')
+            print_lua_table (result)
+            print ('synTodayDailyStudyInfo <<<')
+
+            local timestamp = result['lastUpdate']
+            if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
+                parseServerDataToUserData(result, data)
+                s_LocalDatabaseManager.saveDataDailyStudyInfo(data)
             end
 
             if onCompleted then onCompleted() end

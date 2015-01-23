@@ -1,7 +1,7 @@
 local DataClassBase = require('model.user.DataClassBase')
 local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
 local DataLogIn = require('model/user/DataLogIn')
-local DataBookProgress = require('model.user.DataBookProgress')
+local DataLevelInfo = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo = require('model/user/DataDailyStudyInfo')
 
 USER_TYPE_MANUAL = 0
@@ -68,20 +68,18 @@ function DataUser:ctor()
 
     self.needToUnlockNextChapter           = 0
 
-    self.dailyCheckInData                  = DataDailyCheckIn.create()
     self.levels                            = {}
     self.logInDatas                        = {}
     self.localAuthData                     = nil
     self.snsUserInfo                       = nil
     self.clientData                        = {0}
-    self.bookProgress                      = DataBookProgress.create()
-    self.bookProgressObjectId              = ''
+    self.levelInfo                      = DataLevelInfo.create()
+    self.levelInfoObjectId              = ''
 
     self.lastUpdateSummaryBossTime         = 0
     self.summaryBossList                   = ''
     self.chestList                         = ''
     self.lastUpdateChestTime               = 0
-    self.dailyStudyInfo                    = DataDailyStudyInfo.create()
 end
 
 function DataUser:getBeans()
@@ -93,6 +91,11 @@ function DataUser:addBeans(count)
     self:updateDataToServer()
 end
 
+function DataUser:reduceBeans(count)
+    self.beans = self.beans - count
+    self:updateDataToServer()
+end
+
 function DataUser:generateChestList()
     --print("###########start generate chest########")
     local timePass = os.time() - s_CURRENT_USER.lastUpdateChestTime
@@ -100,7 +103,7 @@ function DataUser:generateChestList()
 --    print('lastUpdate:'..s_CURRENT_USER.lastUpdateChestTime)
     if timePass >= 3600 * 24 * 2 then   -- two days
         s_CURRENT_USER.lastUpdateChestTime = os.time()
-        local currentIndex = s_CURRENT_USER.bookProgress:getBookCurrentLevelIndex()
+        local currentIndex = s_CURRENT_USER.levelInfo:getBookCurrentLevelIndex()
         if currentIndex == 0 then
             return 
         end
@@ -122,15 +125,15 @@ end
 
 function DataUser:generateSummaryBossList() 
 
-    local updateTime = self.bookProgress:getUpdateBossTime(self.bookKey)
+    local updateTime = self.levelInfo:getUpdateBossTime(self.bookKey)
     --print('!!!!updatetime:'..os.date('%x',updateTime))
-    local list = self.bookProgress:getBossList(self.bookKey)
+    local list = self.levelInfo:getBossList(self.bookKey)
     local isSameDate = (os.date('%x',updateTime) == os.date('%x',os.time()))
     local summaryBossList = split(list,'|')
     if list == '' then
         summaryBossList = {}
     end
-    local index = self.bookProgress:getBookCurrentLevelIndex()
+    local index = self.levelInfo:getBookCurrentLevelIndex()
     if index == 0 then
         return
     end
@@ -162,10 +165,10 @@ function DataUser:generateSummaryBossList()
             end
         end
    
-        self.bookProgress:updateBossList(self.bookKey,list)
+        self.levelInfo:updateBossList(self.bookKey,list)
         
     end
-    self.bookProgress:updateTime(self.bookKey,os.time())
+    self.levelInfo:updateTime(self.bookKey,os.time())
     --print("summaryBossList:"..self.summaryBossList.."lastUpdate:"..os.date('%x',self.lastUpdateSummaryBossTime))
 end
 
@@ -188,7 +191,7 @@ function DataUser:removeChest(index)
 end
 
 function DataUser:removeSummaryBoss(index)
-    local bosslist = self.bookProgress:getBossList(self.bookKey)
+    local bosslist = self.levelInfo:getBossList(self.bookKey)
     local list = split(bosslist,'|')
     local tempList = ''
     for i = 1, #list do 
@@ -200,7 +203,7 @@ function DataUser:removeSummaryBoss(index)
             end
         end
     end
-    self.bookProgress:updateBossList(self.bookKey,tempList)
+    self.levelInfo:updateBossList(self.bookKey,tempList)
 end
 
 function DataUser:getNameForDisplay()
@@ -230,16 +233,6 @@ function DataUser:parseServerLevelData(results)
     --print('-------server level size:'..#self.levels)
 end
 
-function DataUser:parseServerDailyCheckInData(results)
-    for i, v in ipairs(results) do
-        local data = DataDailyCheckIn.create()
-        parseServerDataToUserData(v, data)
-        self.dailyCheckInData = data
-        print_lua_table(data)
-        break
-    end 
-end
-
 function DataUser:parseServerDataLogIn(results)
     local DataDailyCheckIn = require('model.user.DataLogIn')
    self.logInDatas = {}
@@ -251,10 +244,10 @@ function DataUser:parseServerDataLogIn(results)
    end 
 end
 
-function DataUser:parseServerDataBookProgress(results)
+function DataUser:parseServerDataLevelInfo(results)
     for i, v in ipairs(results) do
-        parseServerDataToUserData(v, self.bookProgress)
-        return self.bookProgress
+        parseServerDataToUserData(v, self.levelInfo)
+        return self.levelInfo
     end 
 end
 

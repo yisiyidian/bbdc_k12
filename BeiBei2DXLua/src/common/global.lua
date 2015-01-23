@@ -5,11 +5,16 @@ end
 
 local function _initConstant()
     -- number
-    s_max_wrong_num_everyday    = 20
-    s_gamestate_reviewbossmodel = 1
-    s_gamestate_studymodel      = 2
-    s_gamestate_reviewmodel     = 3
-    s_gamestate_overmodel       = 4
+    s_max_wrong_num_everyday                = 5
+    s_gamestate_reviewbossmodel_beforetoday = 1
+    s_gamestate_studymodel                  = 2
+    s_gamestate_reviewmodel                 = 3
+    s_gamestate_studymodel_extra            = 4
+    s_gamestate_reviewmodel_extra           = 5
+    
+    --need to do next version maybe
+    s_gamestate_reviewbossmodel_today       = 9
+    
     
     --
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
@@ -49,26 +54,26 @@ local function _initConstant()
     CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
     CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
 
-    s_DataManager = require('model.DataManager')
+    s_DataManager = reloadModule('model.DataManager')
     s_DataManager.clear()
 end
 
 local function _initTool()
-    require("cocos.init")
-    -- require('Deprecated')
+    reloadModule("cocos.init")
+    -- reloadModule('Deprecated')
     
     -- tools
-    s_JSON = require("common/json")
+    s_JSON = reloadModule("common/json")
 
     -- debug
-    s_debugger = require("common.debugger")
+    s_debugger = reloadModule("common.debugger")
     s_debugger.configLog(true, true)
     s_logd     = s_debugger.logd
     s_logdStr  = s_debugger.logdStr
 
-    require('common.utils')
-    require("AudioMgr")
-    s_O2OController = require('controller.O2OController')
+    reloadModule('common.utils')
+    reloadModule("AudioMgr")
+    s_O2OController = reloadModule('controller.O2OController')
 
     DEBUG_PRINT_LUA_TABLE = true
 end
@@ -99,7 +104,7 @@ local function _initScene()
     cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.ResolutionPolicy.FIXED_HEIGHT)
 
     -- create main scene 
-    local scene = require("AppScene")
+    local scene = reloadModule("AppScene")
     s_SCENE = scene.create()
     -- layers of main scene
     s_BG_LAYER                = s_SCENE.bgLayer
@@ -113,29 +118,29 @@ end
 
 local function _initServer()
     -- server
-    s_SERVER                  = require('server.Server')
+    s_SERVER                  = reloadModule('server.Server')
     s_SERVER.debugLocalHost   = false -- 'http://localhost:3000/avos/'
     s_SERVER.isAppStoreServer = false
     s_SERVER.production       = 0
     s_SERVER.sessionToken     = ''
 
     -- user base server
-    s_UserBaseServer          = require('server.UserBaseServer')
-    s_HttpRequestClient       = require('server.HttpRequestClient')
+    s_UserBaseServer          = reloadModule('server.UserBaseServer')
+    s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
 
-    require('server.Analytics')
+    reloadModule('server.Analytics')
 end
 
 local function _initData()
-    s_LocalDatabaseManager = require('model.LocalDatabaseManager')
+    s_LocalDatabaseManager = reloadModule('model.LocalDatabaseManager')
     s_LocalDatabaseManager.init()
 
-    local DataUser = require('model.user.DataUser')
+    local DataUser = reloadModule('model.user.DataUser')
     s_CURRENT_USER = DataUser.create()
 end
 
 local function _initStore()
-    s_STORE = require('store.Store')
+    s_STORE = reloadModule('store.Store')
     s_STORE.init()
 end
 

@@ -217,7 +217,7 @@ function O2OController.signUpOffline(username, password)
     s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, username)
 
     O2OController.loadConfigs()
-    O2OController.getDataBookProgress()
+    O2OController.getDataLevelInfo()
     O2OController.getDataLogIn()
 
     s_CorePlayManager.enterBookLayer()
@@ -227,7 +227,7 @@ end
 
 function O2OController.logInOffline()
     O2OController.loadConfigs()
-    O2OController.getDataBookProgress()
+    O2OController.getDataLevelInfo()
     O2OController.getDataLogIn()
 
     if s_CURRENT_USER.bookKey == '' then
@@ -243,7 +243,7 @@ end
 
 function O2OController.getUserDatasOnline()
     O2OController.loadConfigs()
-    O2OController.getDataBookProgress(function () 
+    O2OController.getDataLevelInfo(function () 
         O2OController.getDataLogIn(function ()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
@@ -251,9 +251,19 @@ function O2OController.getUserDatasOnline()
                 showProgressHUD()
                 s_UserBaseServer.synBookRelations(nil, function ()
                     s_UserBaseServer.synUserConfig(function ()
-                        s_CorePlayManager.enterHomeLayer()
-                        O2OController.getBulletinBoard()    
-                        hideProgressHUD()
+
+                        local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
+                        local dayString = getDayStringForDailyStudyInfo(os.time())
+                        local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
+                        if today == nil then
+                            today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
+                        end
+                        s_UserBaseServer.synTodayDailyStudyInfo(today, function ()
+                            s_CorePlayManager.enterHomeLayer()
+                            O2OController.getBulletinBoard()    
+                            hideProgressHUD()
+                        end, true)
+
                     end)
                 end)
             end 
@@ -274,19 +284,19 @@ function O2OController.loadConfigs()
     s_CorePlayManager.create()
 end
 
-function O2OController.getDataBookProgress(oncompleted)
+function O2OController.getDataLevelInfo(oncompleted)
     -- get local data
 
-    s_CURRENT_USER.bookProgress.userId = s_CURRENT_USER.objectId
-    s_CURRENT_USER.bookProgress.username = s_CURRENT_USER.username
+    s_CURRENT_USER.levelInfo.userId = s_CURRENT_USER.objectId
+    s_CURRENT_USER.levelInfo.username = s_CURRENT_USER.username
 
-    local localDatas = s_LocalDatabaseManager.getDatas(s_CURRENT_USER.bookProgress.className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+    local localDatas = s_LocalDatabaseManager.getDatas(s_CURRENT_USER.levelInfo.className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
     local lastLocalData = nil
     local lastTime = 0
-    print ('\n\n\ngetDataBookProgress >>>')
+    print ('\n\n\ngetDataLevelInfo >>>')
     print (localDatas)
     print_lua_table (localDatas)
-    print ('getDataBookProgress <<<\n\n\n')
+    print ('getDataLevelInfo <<<\n\n\n')
     for key, value in ipairs(localDatas) do
         local time = value.updatedAt
         if time <= 0 and lastTime == 0 then 
@@ -301,9 +311,9 @@ function O2OController.getDataBookProgress(oncompleted)
 
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
         if lastLocalData ~= nil then
-            parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
+            parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.levelInfo)
         else
-            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.bookProgress)
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.levelInfo)
         end
         if oncompleted ~= nil then oncompleted() end
         return
@@ -311,39 +321,39 @@ function O2OController.getDataBookProgress(oncompleted)
 
     -- handle online
 
-    local afterGetDataBookProgress = function ()
+    local afterGetDataLevelInfo = function ()
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
 
-        if lastLocalData ~= nil and lastLocalData.updatedAt > s_CURRENT_USER.bookProgress.updatedAt then
+        if lastLocalData ~= nil and lastLocalData.updatedAt > s_CURRENT_USER.levelInfo.updatedAt then
             -- send local to server
-            lastLocalData.objectId = s_CURRENT_USER.bookProgress.objectId
+            lastLocalData.objectId = s_CURRENT_USER.levelInfo.objectId
             updateDataFromUser(lastLocalData, s_CURRENT_USER)
-            parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.bookProgress)
-            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.bookProgress)
+            parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.levelInfo)
+            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.levelInfo)
         else
             -- save server to local
-            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.bookProgress, s_CURRENT_USER.bookProgress.userId, s_CURRENT_USER.bookProgress.username)
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.levelInfo, s_CURRENT_USER.levelInfo.userId, s_CURRENT_USER.levelInfo.username)
         end
 
         if oncompleted ~= nil then oncompleted() end
     end
 
-    if s_CURRENT_USER.bookProgressObjectId == '' then
-        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.bookProgress,
+    if s_CURRENT_USER.levelInfoObjectId == '' then
+        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.levelInfo,
             function(api,result)
-                s_CURRENT_USER.bookProgressObjectId = s_CURRENT_USER.bookProgress.objectId
-                afterGetDataBookProgress()
+                s_CURRENT_USER.levelInfoObjectId = s_CURRENT_USER.levelInfo.objectId
+                afterGetDataLevelInfo()
             end,
             function(api, code, message, description)
                 onErrorHappend(message)
                 hideProgressHUD()
             end)
     else
-        s_UserBaseServer.getDataBookProgress(s_CURRENT_USER.bookProgressObjectId,
+        s_UserBaseServer.getDataLevelInfo(s_CURRENT_USER.levelInfoObjectId,
             function(api, result)
-                s_CURRENT_USER:parseServerDataBookProgress(result.results)
-                afterGetDataBookProgress()
+                s_CURRENT_USER:parseServerDataLevelInfo(result.results)
+                afterGetDataLevelInfo()
             end, 
             function(api, code, message, description)
                 onErrorHappend(message)
@@ -351,7 +361,7 @@ function O2OController.getDataBookProgress(oncompleted)
             end
         )
     end
-end -- O2OController.getDataBookProgress(oncompleted)
+end -- O2OController.getDataLevelInfo(oncompleted)
 
 function O2OController.getDataLogIn(onSaved)
     local DataLogIn = require('model.user.DataLogIn')

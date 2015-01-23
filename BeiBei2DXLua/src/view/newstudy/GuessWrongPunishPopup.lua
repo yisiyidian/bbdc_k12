@@ -2,16 +2,22 @@ local GuessWrongPunishPopup = class ("GuessWrongPunishPopup",function ()
     return cc.Layer:create()
 end)
 
-function GuessWrongPunishPopup.create(reward)
-    local layer = GuessWrongPunishPopup.new(reward)
+function GuessWrongPunishPopup.create(currentReward,totalReward)
+    local layer = GuessWrongPunishPopup.new(currentReward,totalReward)
     return layer
 end
 
-function GuessWrongPunishPopup:ctor(reward)
+function GuessWrongPunishPopup:ctor(currentReward,totalReward)
 
-    if reward == nil then
-    	reward = 3
+    if currentReward == nil then
+        currentReward = 3
     end
+    
+    if totalReward == nil then
+        totalReward = 3
+    end
+    
+    s_CorePlayManager.reward = s_CorePlayManager.reward - 1
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -28,21 +34,19 @@ function GuessWrongPunishPopup:ctor(reward)
     text:setColor(cc.c4b(84,107,140,255))
     back:addChild(text)
     
-    for i = 1,3 do
+    for i = 1,totalReward do
         local bean = cc.Sprite:create("image/newstudy/bean.png")
-        bean:setPosition(back:getContentSize().width * (0.5 + (i - 2) * 0.2),back:getContentSize().height * 0.5)
+        bean:setPosition(back:getContentSize().width * (0.3 +  ( 3 - totalReward) * 0.1 + (i - 1) * 0.2),back:getContentSize().height * 0.5)
         bean:setName("bean"..i)
         back:addChild(bean)
     end
     
-	
-    for i = reward,3 do
+    for i = currentReward,totalReward do
         local bean = back:getChildByName("bean"..i)
         bean:setTexture("image/newstudy/badbean.png")
     end
 
-    
-    local sprite = back:getChildByName("bean"..reward)
+    local sprite = back:getChildByName("bean"..currentReward)
     local animation = sp.SkeletonAnimation:create("spine/fuxiboss_bea_dispare.json", "spine/fuxiboss_bea_dispare.atlas", 1)
     animation:setPosition(sprite:getContentSize().width / 2, 0)
     sprite:addChild(animation)      

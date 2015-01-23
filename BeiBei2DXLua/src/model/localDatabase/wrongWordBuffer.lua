@@ -94,7 +94,7 @@ function M.addWrongWordBuffer(wrongWord)
     
     if num == 0 then
         local wordNum = 1
-        local data = createData(bookKey, time, wordNum, oldWordBuffer)
+        local data = createData(bookKey, time, wordNum, wrongWord)
         Manager.saveData(data, userId, username, num)
     else
         local wordNum = nil
