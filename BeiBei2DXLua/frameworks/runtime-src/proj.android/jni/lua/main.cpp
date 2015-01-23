@@ -6,6 +6,7 @@
 #include "ConfigParser.h"
 #include "PluginJniHelper.h"
 #include "../../../cocos2d-x/common/CXAvos.h"
+#include "../../../cocos2d-x/common/CXAVCloud.h"
 
 using namespace anysdk::framework;
 
@@ -101,5 +102,18 @@ extern "C"
         if (qqjson) env->ReleaseStringUTFChars(qqjson, nativeString_qqjson);
         if (authjson) env->ReleaseStringUTFChars(authjson, nativeString_authjson);
         if (error) env->ReleaseStringUTFChars(error, nativeString_error);
+    }
+
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionCallAVCloudFunction(JNIEnv *env, jobject thisz, jlong cppObjPtr,
+            jstring objectjson, jstring errorjson) {
+    	CXAVCloud* cloud = (CXAVCloud*)cppObjPtr;
+    	const char *nativeString_objectjson = objectjson ? env->GetStringUTFChars(objectjson, 0) : 0;
+    	const char *nativeString_errorjson = errorjson ? env->GetStringUTFChars(errorjson, 0) : 0;
+
+    	cloud->invokeCallback(nativeString_objectjson, nativeString_errorjson);
+    	cloud->release();
+
+    	if (objectjson) env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
+    	if (errorjson) env->ReleaseStringUTFChars(errorjson, nativeString_errorjson);
     }
 }

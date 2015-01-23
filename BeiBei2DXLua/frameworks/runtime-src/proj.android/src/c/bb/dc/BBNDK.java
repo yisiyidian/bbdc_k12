@@ -22,14 +22,15 @@ import android.net.Uri;
 import android.os.Environment;
 import android.provider.*;
 import android.widget.Toast;
-
 import c.bb.dc.notification.*;
 import c.bb.dc.sns.CXTencentSDKCall;
 
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.FunctionCallback;
 import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
@@ -265,6 +266,19 @@ public class BBNDK {
 		AVUser.logOut();
 	}
 	
+	public static void callAVCloudFunction(final long cppObjPtr, String func, String parameters) {
+		Map<String, Object> para = new HashMap<String, Object>();
+		AVCloud.callFunctionInBackground("validateGame", para, new FunctionCallback<Object>() {
+			public void done(Object object, AVException e) {
+				if (e == null) {
+//					invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, object, e);
+				} else {
+//					invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, object, e);
+				}
+			}
+		});
+	}
+	
 	// ***************************************************************************************************************************
 	// loading circle
 	// ***************************************************************************************************************************
@@ -432,4 +446,5 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLIQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
+	public static native void invokeLuaCallbackFunctionCallAVCloudFunction(long cppObjPtr, String func, String parameters);
 }
