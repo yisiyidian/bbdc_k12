@@ -965,6 +965,152 @@ int lua_cx_common_CXUtils_decryptXxteaFile(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cx_common_CXUtils__testCppApi_(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXUtils* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXUtils*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXUtils__testCppApi_'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXUtils__testCppApi_'", nullptr);
+            return 0;
+        }
+        cobj->_testCppApi_();
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXUtils:_testCppApi_",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils__testCppApi_'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXUtils_compressAndBase64EncodeString(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXUtils* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXUtils*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXUtils_compressAndBase64EncodeString'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "CXUtils:compressAndBase64EncodeString");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXUtils_compressAndBase64EncodeString'", nullptr);
+            return 0;
+        }
+        std::string ret = cobj->compressAndBase64EncodeString(arg0);
+        tolua_pushcppstring(tolua_S,ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXUtils:compressAndBase64EncodeString",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_compressAndBase64EncodeString'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXUtils_base64DecodeAndDecompressString(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXUtils* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXUtils*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXUtils_base64DecodeAndDecompressString'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "CXUtils:base64DecodeAndDecompressString");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXUtils_base64DecodeAndDecompressString'", nullptr);
+            return 0;
+        }
+        std::string ret = cobj->base64DecodeAndDecompressString(arg0);
+        tolua_pushcppstring(tolua_S,ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXUtils:base64DecodeAndDecompressString",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_base64DecodeAndDecompressString'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXUtils_showMail(lua_State* tolua_S)
 {
     int argc = 0;
@@ -1087,6 +1233,9 @@ int lua_register_cx_common_CXUtils(lua_State* tolua_S)
 
     tolua_beginmodule(tolua_S,"CXUtils");
         tolua_function(tolua_S,"decryptXxteaFile",lua_cx_common_CXUtils_decryptXxteaFile);
+        tolua_function(tolua_S,"_testCppApi_",lua_cx_common_CXUtils__testCppApi_);
+        tolua_function(tolua_S,"compressAndBase64EncodeString",lua_cx_common_CXUtils_compressAndBase64EncodeString);
+        tolua_function(tolua_S,"base64DecodeAndDecompressString",lua_cx_common_CXUtils_base64DecodeAndDecompressString);
         tolua_function(tolua_S,"showMail", lua_cx_common_CXUtils_showMail);
         tolua_function(tolua_S,"getInstance", lua_cx_common_CXUtils_getInstance);
         tolua_function(tolua_S,"md5", lua_cx_common_CXUtils_md5);

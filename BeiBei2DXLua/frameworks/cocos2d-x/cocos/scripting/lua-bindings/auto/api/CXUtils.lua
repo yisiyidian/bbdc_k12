@@ -13,6 +13,25 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXUtils] _testCppApi_ 
+-- @param self
+        
+--------------------------------
+-- 
+-- @function [parent=#CXUtils] compressAndBase64EncodeString 
+-- @param self
+-- @param #string str
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+-- 
+-- @function [parent=#CXUtils] base64DecodeAndDecompressString 
+-- @param self
+-- @param #string str
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+-- 
 -- @function [parent=#CXUtils] showMail 
 -- @param self
 -- @param #char mailTitle

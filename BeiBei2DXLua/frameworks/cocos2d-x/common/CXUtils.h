@@ -24,6 +24,11 @@ public:
     
     const char* decryptXxteaFile(const char* filePath);
     
+    std::string compressAndBase64EncodeString(const std::string& str);
+    std::string base64DecodeAndDecompressString(const std::string& str);
+    
+    void _testCppApi_();
+    
 private:
     CXUtils();
     

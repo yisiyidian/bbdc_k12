@@ -8,11 +8,13 @@ local ziaoangTest       = require("view.ZiaoangTest")
 local ScrollViewTest    = require("view.ScrollviewTest")
 
 function test()
+    cx.CXUtils:getInstance():_testCppApi_()
+    
     --local test = ziaoangTest.create()
     --s_SCENE:replaceGameLayer(test)
-    local testLayer = require('view.level.ChapterLayerBase')
-    local chapterLayer = testLayer.create('chapter0','level0')
-    s_SCENE.replaceGameLayer(chapterLayer)
+    -- local testLayer = require('view.level.ChapterLayerBase')
+    -- local chapterLayer = testLayer.create('chapter0','level0')
+    -- s_SCENE.replaceGameLayer(chapterLayer)
 
 --    s_UserBaseServer.logIn('tester112', 'qwerty', function (u, e, code) 
 --        s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
@@ -43,8 +45,8 @@ function test()
 --    
 --    layer:addChild(mat)
 --    return layer
-local IntroLayer = require("view.ScrollviewTest")
-local introLayer = IntroLayer.create(s_DESIGN_WIDTH,s_DESIGN_HEIGHT,2 * s_DESIGN_HEIGHT)
-s_SCENE:replaceGameLayer(introLayer) 
+-- local IntroLayer = require("view.ScrollviewTest")
+-- local introLayer = IntroLayer.create(s_DESIGN_WIDTH,s_DESIGN_HEIGHT,2 * s_DESIGN_HEIGHT)
+-- s_SCENE:replaceGameLayer(introLayer) 
     
 end
