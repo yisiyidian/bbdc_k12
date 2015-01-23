@@ -11,17 +11,34 @@ function ShopLayer.create()
     local layer = ShopLayer.new()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local backColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, s_DESIGN_HEIGHT)
+    local bigHeight = 1.3*s_DESIGN_HEIGHT
+
+    local initColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, s_DESIGN_HEIGHT)
+    initColor:setAnchorPoint(0.5,0.5)
+    initColor:ignoreAnchorPointForPosition(false)  
+    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    layer:addChild(initColor)
+
+    local scrollView = ccui.ScrollView:create()
+    scrollView:setTouchEnabled(true)
+    scrollView:setBounceEnabled(true)
+    scrollView:setAnchorPoint(0.5,0.5)
+    scrollView:ignoreAnchorPointForPosition(false)
+    scrollView:setContentSize(cc.size(bigWidth, s_DESIGN_HEIGHT))  
+    scrollView:setInnerContainerSize(cc.size(bigWidth, bigHeight))      
+    scrollView:setPosition(cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
+    layer:addChild(scrollView)
+
+    local backColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, bigHeight)
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
-    backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
-    layer:addChild(backColor)
+    backColor:setPosition(s_DESIGN_WIDTH/2, bigHeight/2)
+    scrollView:addChild(backColor)
 
     local back_head = cc.Sprite:create("image/shop/headback.png")
     back_head:setAnchorPoint(0.5, 1)
     back_head:setPosition(bigWidth/2, s_DESIGN_HEIGHT)
-    backColor:addChild(back_head)
-
+    layer:addChild(back_head)
 
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -32,11 +49,11 @@ function ShopLayer.create()
     local button_back = ccui.Button:create("image/shop/button_back.png","image/shop/button_back.png","")
     button_back:setPosition(50, s_DESIGN_HEIGHT-50)
     button_back:addTouchEventListener(button_back_clicked)
-    backColor:addChild(button_back) 
+    layer:addChild(button_back) 
 
     local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
     been_number_back:setPosition(s_DESIGN_WIDTH-100, s_DESIGN_HEIGHT-50)
-    backColor:addChild(been_number_back)
+    layer:addChild(been_number_back)
 
     local been = cc.Sprite:create("image/shop/been.png")
     been:setPosition(0, been_number_back:getContentSize().height/2)
@@ -48,28 +65,25 @@ function ShopLayer.create()
     been_number_back:addChild(been_number)
 
 
-
-
     local lock_state = {1,0,1,0,1,0,1,0}
 
     local height = 320
     for i = 1, 4 do
         local shelf = cc.Sprite:create("image/shop/shelf.png")
-        shelf:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT-80-height*i)
+        shelf:setPosition(s_DESIGN_WIDTH/2, bigHeight-80-height*i)
         backColor:addChild(shelf) 
     end
 
     for i = 1, 8 do
         local x = s_DESIGN_WIDTH/2+150*(1-2*(i%2))
-        local y = s_DESIGN_HEIGHT-height*(math.floor((i-1)/2))-435
-        
+        local y = bigHeight-height*(math.floor((i-1)/2))-435
         
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 print("item "..i.." clicked")
                 local shopAlter = ShopAlter.create(i)
                 shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-                backColor:addChild(shopAlter)
+                layer:addChild(shopAlter)
 
                 shopAlter.sure = function()
                     

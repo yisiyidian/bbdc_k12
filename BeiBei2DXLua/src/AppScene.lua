@@ -6,6 +6,7 @@ local HudLayer = require("layer.HudLayer")
 local PopupLayer = require("layer.PopupLayer")
 local TipsLayer = require("layer.TipsLayer")
 local TouchEventBlockLayer = require("layer.TouchEventBlockLayer")
+local LoadingLayer = require("layer.LoadingLayer")
 local DebugLayer = require("layer.DebugLayer")
 
 -- define level layer state constant
@@ -84,6 +85,9 @@ function AppScene.create()
 
     scene.touchEventBlockLayer = TouchEventBlockLayer.create()
     scene.rootLayer:addChild(scene.touchEventBlockLayer)
+    
+    scene.loadingLayer = LoadingLayer.create()
+    scene.rootLayer:addChild(scene.loadingLayer)
 
     if RELEASE_APP == RELEASE_FOR_APPSTORE then 
         scene.debugLayer = cc.Layer:create()
@@ -143,6 +147,26 @@ function AppScene:replaceGameLayer(newLayer)
     else
         self.currentGameLayerName = 'unknown'
     end
+end
+
+function AppScene:addLoadingView(needUpdate)
+    self.loadingLayer.lockTouch()
+    local k = self.loadingLayer:getChildrenCount()
+    if k > 0 then
+    else
+    self.loadingLayer:removeAllChildren()
+    local LoadingLayer = require("view.LoadingView")
+    local loadingExtra = LoadingLayer.create(needUpdate)
+    self.loadingLayer:addChild(loadingExtra)  
+    end 
+end
+
+function AppScene:removeLoadingView()
+   local action = cc.DelayTime:create(0.5)
+    self.loadingLayer:runAction(cc.Sequence:create(action,cc.CallFunc:create(function()
+        self.loadingLayer.unlockTouch()
+        self.loadingLayer:removeAllChildren()
+   end)))
 end
 
 function AppScene:popup(popupNode)

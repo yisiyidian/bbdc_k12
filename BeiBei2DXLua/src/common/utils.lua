@@ -242,12 +242,14 @@ math["xor"]=function(x,y,z)
 end
 
 function showProgressHUD(info)
-    if info == '' or info == nil then info = 'loading' end
-    cx.CXProgressHUD:show(info)
+--    if info == '' or info == nil then info = 'loading' end
+--    cx.CXProgressHUD:show(info)  
+    s_SCENE:addLoadingView()
 end
 
 function hideProgressHUD()
-    cx.CXProgressHUD:hide()
+--    cx.CXProgressHUD:hide()
+    s_SCENE:removeLoadingView()
 end
 
 function checkIfDownloadSoundsExist(bookkey)

@@ -69,8 +69,9 @@ function O2OController.start()
     else
         -- go to O2OController.onAssetsManagerCompleted()
         local LoadingView = require("view.LoadingView")
-        local loadingView = LoadingView.create()
+        local loadingView = LoadingView.create(true)
         s_SCENE:replaceGameLayer(loadingView) 
+
     end
 end
 
