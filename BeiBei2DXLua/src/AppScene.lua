@@ -226,4 +226,19 @@ function applicationDidEnterBackgroundLua()
     Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end
 
+function AppScene:checkInAnimation()
+    local HomeLayer = require("view.home.HomeLayer")
+    local homeLayer = HomeLayer.create()
+    self:replaceGameLayer(homeLayer)
+    homeLayer:showDataLayer(true)
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    local delay = cc.DelayTime:create(2)
+    local hide = cc.CallFunc:create(function()
+        homeLayer:hideDataLayer()
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    end,{})
+    self:runAction(cc.Sequence:create(delay,hide))
+
+end
+
 return AppScene

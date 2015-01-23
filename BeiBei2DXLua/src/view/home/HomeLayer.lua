@@ -134,6 +134,7 @@ function HomeLayer.create()
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             end
+            --s_SCENE:checkInAnimation()
         end
     end
 
@@ -359,12 +360,14 @@ function HomeLayer.create()
     button_data:setPosition(bigWidth/2, 0)
     --button_data:addTouchEventListener(button_data_clicked)
     backColor:addChild(button_data)
+    layer.dataButton = button_data
     
     data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT - 280)  
     data_back:setAnchorPoint(0.5,1)
     data_back:ignoreAnchorPointForPosition(false)  
     data_back:setPosition(button_data:getContentSize().width/2, 0)
     button_data:addChild(data_back)
+    layer.dataBack = data_back
     
     local data_name = cc.Label:createWithSystemFont("数据","",28)
     data_name:setColor(cc.c4b(0,0,0,255))
@@ -646,6 +649,30 @@ function HomeLayer.create()
     playMusic(s_sound_First_Noel_pluto,true)
 
     return layer
+end
+
+function HomeLayer:showDataLayer(checkIn)
+    self.dataButton:setLocalZOrder(2)
+    self.dataButton:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280))))
+    if true then
+        local PersonalInfo = require("view.PersonalInfo")
+        local personalInfoLayer = PersonalInfo.create(true)
+        personalInfoLayer:setPosition(-s_LEFT_X,0)
+        self.dataBack:addChild(personalInfoLayer,0,'PersonalInfo') 
+    else
+        local Item_popup = require("popup/PopupModel")
+        local item_popup = Item_popup.create(Site_From_Information)  
+        s_SCENE:popup(item_popup)
+    end 
+end
+
+function HomeLayer:hideDataLayer()
+    local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, 0))
+    local action2 = cc.CallFunc:create(function()
+        self.dataButton:setLocalZOrder(0)
+        self.dataBack:removeChildByName('PersonalInfo')
+    end)
+    self.dataButton:runAction(cc.Sequence:create(action1, action2))
 end
 
 return HomeLayer
