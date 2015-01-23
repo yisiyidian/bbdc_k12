@@ -105,7 +105,7 @@ function M.getBossWordNum()
     local num = 0
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
-            if row.typeIndex + 1 <= MAXTYPEINDEX then
+            if row.typeIndex < MAXTYPEINDEX then
                 num = num + 1
                 bossWordNum = bossWordNum + MAXWRONGWORDCOUNT
             end
@@ -113,7 +113,7 @@ function M.getBossWordNum()
     end
     if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
-            if row.typeIndex + 1 <= MAXTYPEINDEX then
+            if row.typeIndex < MAXTYPEINDEX then
                 num = num + 1
                 bossWordNum = bossWordNum + MAXWRONGWORDCOUNT
             end
@@ -138,7 +138,7 @@ function M.getBossWordBeforeToday()
             num = num + 1
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
+            if lastUpdateDay ~= today and row.typeIndex < MAXTYPEINDEX then
                 candidate           = {}
                 candidate.bossID    = row.bossID
                 candidate.typeIndex = row.typeIndex
@@ -153,7 +153,7 @@ function M.getBossWordBeforeToday()
             num = num + 1
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
+            if lastUpdateDay ~= today and row.typeIndex < MAXTYPEINDEX then
                 candidate           = {}
                 candidate.bossID    = row.bossID
                 candidate.typeIndex = row.typeIndex
@@ -180,7 +180,7 @@ function M.getTodayRemainBossNum()
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
+            if lastUpdateDay ~= today and row.typeIndex < MAXTYPEINDEX then
                 num = num + 1
             end
         end
@@ -189,7 +189,7 @@ function M.getTodayRemainBossNum()
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
             local lastUpdate = tostring(row.lastUpdate)
             local lastUpdateDay = os.date("%x", lastUpdate)
-            if lastUpdateDay ~= today and row.typeIndex + 1 <= MAXTYPEINDEX then
+            if lastUpdateDay ~= today and row.typeIndex < MAXTYPEINDEX then
                 num = num + 1
             end
         end
@@ -213,34 +213,30 @@ function M.updateBossWord(bossID)
     local num = 0
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
-            num = num + 1
-            isId = true
-            typeIndex = row.typeIndex
-            wordList = row.wordList
-            lastWordIndex = row.lastWordIndex
+            if row.typeIndex < MAXTYPEINDEX then
+                num = num + 1
+                isId = true
+                typeIndex = row.typeIndex
+                wordList = row.wordList
+                lastWordIndex = row.lastWordIndex
+            end
         end
     end
     if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
-            num = num + 1
-            isUsername = true
-            typeIndex = row.typeIndex
-            wordList = row.wordList
-            lastWordIndex = row.lastWordIndex
+            if row.typeIndex < MAXTYPEINDEX then
+                num = num + 1
+                isUsername = true
+                typeIndex = row.typeIndex
+                wordList = row.wordList
+                lastWordIndex = row.lastWordIndex
+            end
         end
     end
 
-    if typeIndex + 1 >= MAXTYPEINDEX then
-        Manager.addGraspWordsNum(MAXWRONGWORDCOUNT)
---        if isId and userId ~= '' then
---            local query = "DELETE FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
---            Manager.database:exec(query)
---        end
---        if isUsername and username ~= '' then
---            local query = "DELETE FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"
---            Manager.database:exec(query)
---        end
-    else
+    if typeIndex + 1 >= MAXTYPEINDEX then Manager.addGraspWordsNum(MAXWRONGWORDCOUNT) end
+
+    if typeIndex < MAXTYPEINDEX then
         local data = createData(bookKey, time, bossID, typeIndex + 1, wordList, lastWordIndex)
         Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;"    )
     end
