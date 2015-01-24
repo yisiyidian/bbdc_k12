@@ -76,12 +76,16 @@ function DataLogIn:getDays()
 end
 
 function DataLogIn:updateFrom(otherDataLogIn)
+    if otherDataLogIn.updatedAt < self.updatedAt then
+        return false
+    end
     local keys = {'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'}
     for i, v in ipairs(keys) do
         if otherDataLogIn[v] > 0 then
             self[v] = 1
         end
     end
+    return true
 end
 
 return DataLogIn

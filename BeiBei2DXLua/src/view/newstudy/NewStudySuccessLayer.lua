@@ -13,6 +13,9 @@ function NewStudySuccessLayer.create()
 
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
+    s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:checkIn(os.time())
+    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas])
+
     local beanNum = s_CorePlayManager.reward - s_CorePlayManager.ordinalNum
     if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 0 then
         s_CURRENT_USER:addBeans(beanNum)
@@ -106,7 +109,9 @@ function NewStudySuccessLayer.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.enterLevelLayer()
+            local HomeLayer = require('view.home.HomeLayer')
+            local homeLayer = HomeLayer.create(true)
+            s_SCENE:replaceGameLayer(homeLayer)
         end
     end
 
