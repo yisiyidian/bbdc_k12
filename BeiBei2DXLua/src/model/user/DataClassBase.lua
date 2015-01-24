@@ -81,7 +81,7 @@ function dataToJSONString(dataObj)
                 str = str .. '"' .. key .. '":' .. tostring(value)
             elseif (type(value) ~= 'function' and type(value) ~= 'table') then
                 if string.len(str) > 1 then str = str .. ',' end
-                str = str .. '"' .. key .. '":' .. value
+                str = str .. '"' .. key .. '":' .. tostring(value)
             end
             
         end

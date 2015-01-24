@@ -8,6 +8,7 @@ Server.production = 0
 Server.appId = ''
 Server.appKey = ''
 Server.sessionToken = ''
+Server.useNativeLeanCloudSDK = true
 
 CONTENT_TYPE_JSON = 'application/json'
 CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -39,7 +40,7 @@ end
 -- onSucceed(api, result) -- result : json
 -- onFailed(api, code, message, description)
 local function __request__(api, httpRequestType, contentType, parameters, onSucceed, onFailed)
-    if string.find(api, 'users/') == nil then
+    if Server.useNativeLeanCloudSDK and string.find(api, 'users/') == nil then
 
         print('>> request: ' .. api)
         if parameters then print_lua_table(parameters) end

@@ -101,10 +101,10 @@ end
 
 -- delta time : seconds
 local function update(dt)
-    s_O2OController.update(dt)
+    -- s_O2OController.update(dt)
 
-    if s_CURRENT_USER.sessionToken ~= '' and  s_CURRENT_USER.serverTime >= 0 then
-        s_CURRENT_USER.serverTime = s_CURRENT_USER.serverTime + dt
+    -- if s_CURRENT_USER.sessionToken ~= '' and s_CURRENT_USER.serverTime >= 0 then
+        -- s_CURRENT_USER.serverTime = s_CURRENT_USER.serverTime + dt
         --print('serverTime:'..s_CURRENT_USER.serverTime..',energyCount:'..s_CURRENT_USER.energyCount..',lastCool:'..s_CURRENT_USER.energyLastCoolDownTime)
         -- if s_CURRENT_USER.energyCount <= s_energyMaxCount then
         --     if s_CURRENT_USER.energyLastCoolDownTime < 0 then
@@ -122,7 +122,7 @@ local function update(dt)
         --         s_CURRENT_USER:updateDataToServer()
         --     end
         -- end
-    end 
+    -- end 
 end
 
 function AppScene:ctor()

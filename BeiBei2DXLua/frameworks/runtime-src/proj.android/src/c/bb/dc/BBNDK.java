@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -266,15 +269,52 @@ public class BBNDK {
 		AVUser.logOut();
 	}
 	
-	public static void callAVCloudFunction(final long cppObjPtr, String func, String parameters) {
-		Map<String, Object> para = new HashMap<String, Object>();
-		AVCloud.callFunctionInBackground("validateGame", para, new FunctionCallback<Object>() {
-			public void done(Object object, AVException e) {
-				if (e == null) {
-//					invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, object, e);
-				} else {
-//					invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, object, e);
-				}
+	public static HashMap<String, String> jsonToMap(String t) throws JSONException {
+        HashMap<String, String> map = new HashMap<String, String>();
+        JSONObject jObject = new JSONObject(t);
+        Iterator<?> keys = jObject.keys();
+
+        while ( keys.hasNext() ) {
+            String key = (String)keys.next();
+            String value = jObject.getString(key); 
+            map.put(key, value);
+        }
+
+        return map;
+    }
+	
+	public static void testNDK(String func) {
+		
+	}
+	
+	public static void callAVCloudFunc(String func, String parameters, final long cppObjPtr) {
+		Map<String, String> para = null;
+		try {
+			para = jsonToMap(parameters);
+		} catch (JSONException e) {
+			String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
+			invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
+			return;
+		}
+		
+		AVCloud.callFunctionInBackground(func, para, new FunctionCallback<Object>() {
+			public void done(final Object object, final AVException e) {
+				
+				((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+					@Override
+					public void run() {
+						if (e == null) {
+							@SuppressWarnings("unchecked")
+							JSONObject json = new JSONObject((Map<String, String>)(object));
+							String objectjson = json.toString();
+							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
+						} else {
+							String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
+							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
+						}
+					}
+				});
+				
 			}
 		});
 	}
