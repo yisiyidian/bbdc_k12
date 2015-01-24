@@ -159,6 +159,20 @@ function NewStudySlideLayer.create()
     backColor.forceFail =  function ()
     	mat.forceFail()
     end
+    
+    local click_refresh_button = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            -- button sound
+            playSound(s_sound_buttonEffect)        
+        elseif eventType == ccui.TouchEventType.ended then
+            mat.forceFail()
+        end
+    end
+    
+    local refreshButton = ccui.Button:create("image/newstudy/refreshbegin.png","image/newstudy/refreshend.png","")
+    refreshButton:setPosition(bigWidth * 0.9, 800)
+    refreshButton:addTouchEventListener(click_refresh_button)
+    backColor:addChild(refreshButton)  
 
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
