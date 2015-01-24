@@ -25,6 +25,9 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
         lastWordAndTotalNumber.setNumber(number)
     end
     
+    backColor.forceFail =function ()
+
+    end  
 
     local back_head = cc.Sprite:create("image/newstudy/back_head.png")
     back_head:setAnchorPoint(0.5, 1)
@@ -54,6 +57,8 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
 
             --button sound
             playSound(s_sound_buttonEffect)
+            
+            backColor.forceFail()
         end
     end
     

@@ -8,6 +8,7 @@ Server.production = 0
 Server.appId = ''
 Server.appKey = ''
 Server.sessionToken = ''
+Server.useNativeLeanCloudSDK = true
 
 CONTENT_TYPE_JSON = 'application/json'
 CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -39,83 +40,120 @@ end
 -- onSucceed(api, result) -- result : json
 -- onFailed(api, code, message, description)
 local function __request__(api, httpRequestType, contentType, parameters, onSucceed, onFailed)
-    local appId, sign = getAppData()
-    local xhr = cc.XMLHttpRequest:new()    
-    xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
-    xhr:open(httpRequestType, getURL() .. api)
-    xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
-    xhr:setRequestHeader('X-AVOSCloud-Request-Sign', sign)
-    xhr:setRequestHeader('X-AVOSCloud-Application-Production', Server.production)
-    xhr:setRequestHeader('Content-Type', contentType)
-    if (string.len(Server.sessionToken) > 0) then
-        xhr:setRequestHeader('X-AVOSCloud-Session-Token', Server.sessionToken)
-    end
+    if Server.useNativeLeanCloudSDK and string.find(api, 'users/') == nil then
 
-    --
-    xhr:registerScriptHandler(function ()
-        -- * xhr.readyState：XMLHttpRequest对象的状态，等于4表示数据已经接收完毕
-        -- * xhr.status：服务器返回的状态码，等于200表示一切正常
-        -- * xhr.responseText：服务器返回的文本数据
-        -- * xhr.statusText：服务器返回的状态文本
-        print('\n>>>\nresponse api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
-        if parameters ~= nil then print_lua_table(parameters) end
-        print('response data: \n\n' .. xhr.response .. '\n\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
-        
-        -- readyState == 4
-        
-    -- pure RESTful API : TODO
-        -- 一个请求是否成功是由 HTTP 状态码标明的. 
-        -- 一个 2XX 的状态码表示成功, 而一个 4XX 表示请求失败. 
-        -- 当一个请求失败时响应的主体仍然是一个 JSON 对象, 
-        -- 但是总是会包含 code 和 error 这两个字段, 
-        -- 您可以用它们来进行 debug. 
-        -- 举个例子, 如果尝试用不允许的 key 来保存一个对象会得到如下信息:
-        -- {
-        --   "code": 105,
-        --   "error": "invalid field name: bl!ng"
-        -- }
-
-    -- Cloud Code
-        -- {'code': error.code, 'message': error.message, 'description':error.description}
-        if xhr.status ~= 200 then
-            if onFailed then onFailed(api, xhr.status, xhr.statusText, '') end
-        elseif xhr.response ~= nil then
-
-            local data = s_JSON.decode(xhr.response)
-            local result
-            if data.result ~= nil then
-                result = data.result
-            else 
-                result = data 
+        print('>> request: ' .. api)
+        if parameters then print_lua_table(parameters) end
+        print('<< request: ' .. api)
+        local request = cx.CXAVCloud:new()
+        request:callAVCloudFunction(string.gsub(api, 'functions/', ''), s_JSON.encode(parameters), function (obj, err)
+            if err and onFailed then
+                print('response >>' .. api)
+                print(err)
+                print('response <<' .. api)
+                err = s_JSON.decode(err)
+                onFailed(api, err.code, err.message, err.description)
+            elseif obj and onSucceed then
+                print('response >>' .. api)
+                print(obj)
+                print('response <<' .. api)
+                obj = s_JSON.decode(obj)
+                onSucceed(api, obj)
             end
-            local code = result.code
-            local message = result.message
-            if message == nil then message = result.error end
-            local description = result.description
+        end)
 
-            if code and onFailed then
-                LUA_ERROR = LUA_ERROR .. '\necode:' .. tostring(code) .. ',msg:' .. tostring(message) .. ',des:' .. tostring(description)
-                onFailed(api, code, message, description)
-            elseif not code and onSucceed then 
-                onSucceed(api, result)
-            end
+    else
+
+        local appId, sign = getAppData()
+        local xhr = cc.XMLHttpRequest:new()    
+        xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING
+        xhr:open(httpRequestType, getURL() .. api)
+        xhr:setRequestHeader('X-AVOSCloud-Application-Id', appId)
+        xhr:setRequestHeader('X-AVOSCloud-Request-Sign', sign)
+        xhr:setRequestHeader('X-AVOSCloud-Application-Production', Server.production)
+        xhr:setRequestHeader('Content-Type', contentType)
+        if (string.len(Server.sessionToken) > 0) then
+            xhr:setRequestHeader('X-AVOSCloud-Session-Token', Server.sessionToken)
         end
 
-        xhr:unregisterScriptHandler()
-    end)
+        --
+        xhr:registerScriptHandler(function ()
+            -- * xhr.readyState：XMLHttpRequest对象的状态，等于4表示数据已经接收完毕
+            -- * xhr.status：服务器返回的状态码，等于200表示一切正常
+            -- * xhr.responseText：服务器返回的文本数据
+            -- * xhr.statusText：服务器返回的状态文本
+            print('\n>>>\nresponse api:  ' .. api .. ', status:' .. xhr.status .. ', statusText:' .. xhr.statusText .. ', type:' .. xhr.responseType)
+            if parameters ~= nil then print_lua_table(parameters) end
+            print('response data: \n\n' .. xhr.response .. '\n\n<<<\n') -- .. ', ' .. xhr:getAllResponseHeaders())
+            
+            -- readyState == 4
+            
+        -- pure RESTful API : TODO
+            -- 一个请求是否成功是由 HTTP 状态码标明的. 
+            -- 一个 2XX 的状态码表示成功, 而一个 4XX 表示请求失败. 
+            -- 当一个请求失败时响应的主体仍然是一个 JSON 对象, 
+            -- 但是总是会包含 code 和 error 这两个字段, 
+            -- 您可以用它们来进行 debug. 
+            -- 举个例子, 如果尝试用不允许的 key 来保存一个对象会得到如下信息:
+            -- {
+            --   "code": 105,
+            --   "error": "invalid field name: bl!ng"
+            -- }
 
-    --
-    local str = ''
-    if parameters ~= nil then
-        for key, value in pairs(parameters) do  
-            if string.len(str) > 0 then str = str .. '&' end
-            str = str .. key .. '=' .. value
+        -- Cloud Code
+            -- {'code': error.code, 'message': error.message, 'description':error.description}
+            if xhr.status ~= 200 then
+                if onFailed then onFailed(api, xhr.status, xhr.statusText, '') end
+            elseif xhr.response ~= nil then
+
+                local data = s_JSON.decode(xhr.response)
+                local result
+                if data.result ~= nil then
+                    result = data.result
+                else 
+                    result = data 
+                end
+                local code = result.code
+                local message = result.message
+                if message == nil then message = result.error end
+                local description = result.description
+
+                if code and onFailed then
+                    LUA_ERROR = LUA_ERROR .. '\necode:' .. tostring(code) .. ',msg:' .. tostring(message) .. ',des:' .. tostring(description)
+                    onFailed(api, code, message, description)
+                elseif not code and onSucceed then 
+                    onSucceed(api, result)
+                end
+            end
+
+            xhr:unregisterScriptHandler()
+        end)
+
+        --
+        local str = ''
+        local debugStr = ''
+        if parameters ~= nil then
+            for key, value in pairs(parameters) do  
+                if string.len(str) > 0 then 
+                    str = str .. '&' 
+                    debugStr = debugStr .. '&'
+                end
+                -- if key == 'obj' then
+                --     local encodedStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(value)
+                --     str = str .. 'dobj' .. '=' .. encodedStr
+                -- else
+                    str = str .. key .. '=' .. value
+                -- end
+                debugStr = debugStr .. key .. '=' .. value
+            end
+
+            xhr:send(str)
+        else 
+            xhr:send()
         end
-        xhr:send(str)
-    else 
-        xhr:send()
+        print('\n>>>\nrequest: api:' .. api .. ', sessionToken:' .. Server.sessionToken .. ', parameters:' .. debugStr .. '\n<<<\n')
+        -- print('\n>>>\nrequest: api:' .. api .. ', sessionToken:' .. Server.sessionToken .. ', parameters:' .. str .. '\n<<<\n')
     end
-    print('\n>>>\nrequest: api:' .. api .. ', sessionToken:' .. Server.sessionToken .. ', parameters:' .. str .. '\n<<<\n')
 end
 
 -- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***

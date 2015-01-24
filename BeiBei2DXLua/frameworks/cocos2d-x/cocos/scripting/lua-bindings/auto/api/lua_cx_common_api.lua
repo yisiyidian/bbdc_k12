@@ -31,4 +31,9 @@
 -- @field [parent=#cx] CXNetworkStatus#CXNetworkStatus CXNetworkStatus preloaded module
 
 
+--------------------------------------------------------
+-- the cx CXAVCloud
+-- @field [parent=#cx] CXAVCloud#CXAVCloud CXAVCloud preloaded module
+
+
 return nil
