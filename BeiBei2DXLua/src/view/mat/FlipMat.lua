@@ -61,6 +61,13 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
     local startTouchLocation
     local lastTouchLocation
     
+    local judgementFunction
+    local failFunction
+    local successFunction
+    local buildTimer
+    local removeTimer
+    local time
+    
     local slideCoco = {}
     slideCoco[1] = s_sound_slideCoconut
     slideCoco[2] = s_sound_slideCoconut1
@@ -315,32 +322,277 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
 
     end
     
+--    onTouchBegan = function(touch, event)
+--        main.stop = false
+--        local location = main:convertToNodeSpace(touch:getLocation())
+--        if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
+--            return false
+--        end
+--    
+--        if main.globalLock then
+--            return true
+--        end
+--        
+--        startTouchLocation = location
+--        lastTouchLocation = location
+--
+--        checkTouchLocation(location)
+----        checkTouchLocation_opt(location)   
+--        
+--        if onNode then
+--            startNode = main_mat[current_node_x][current_node_y]
+--            table.insert(selectStack, startNode)
+--            updateSelectWord()
+--            startNode.addSelectStyle()
+--            startNode.bigSize()
+--
+--            startAtNode = true
+--            if #selectStack <= 7 then
+--                playSound(slideCoco[#selectStack])
+--            else
+--                playSound(slideCoco[7])
+--            end  
+--        else
+--            startAtNode = false
+--        end
+--        return true
+--    end
+--
+--    onTouchMoved = function(touch, event)
+--        main.stop = false
+--        local location = main:convertToNodeSpace(touch:getLocation())
+--        if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
+--            return
+--        end
+--    
+--        if main.globalLock then
+--            return
+--        end
+--    
+--        local length_gap = 5.0
+--
+--        local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
+--        if length <= length_gap then
+--            fakeTouchMoved(location)
+--        else
+--            local deltaX = (location.x - lastTouchLocation.x) * length_gap/length
+--            local deltaY = (location.y - lastTouchLocation.y) * length_gap/length
+--
+--            for i = 1, length/length_gap do
+--                fakeTouchMoved({x=lastTouchLocation.x+(i-1)*deltaX,y=lastTouchLocation.y+(i-1)*deltaY})
+--            end
+--            fakeTouchMoved(location)
+--        end
+--
+--        lastTouchLocation = location
+--    end
+--    
+--    fakeTouchMoved = function(location)
+--        if main.globalLock then
+--            return
+--        end
+--    
+--        checkTouchLocation(location)
+----        checkTouchLocation_opt(location)  
+--
+--        if startAtNode then
+--            local x = location.x - startTouchLocation.x
+--            local y = location.y - startTouchLocation.y
+--
+--            if math.abs(x) > 5 or math.abs(y) > 5 then
+--                if y > x and y > -x then
+--                    startNode:up()
+--                elseif y < x and y < -x then
+--                    startNode:down()
+--                elseif y > x and y < -x then
+--                    startNode:left()
+--                else
+--                    startNode:right()
+--                end
+--                startAtNode = false
+--            end
+--        else
+--            if onNode then
+--                local currentNode = main_mat[current_node_x][current_node_y]
+--                if currentNode.hasSelected then
+--                    if #selectStack >= 2 then
+--                        local stackTop = selectStack[#selectStack]
+--                        local secondStackTop = selectStack[#selectStack-1]
+--                        if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
+--                            stackTop.removeSelectStyle()
+--                            table.remove(selectStack)
+--                            updateSelectWord()
+--                            if #selectStack <= 7 then
+--                                playSound(slideCoco[#selectStack])
+--                            else
+--                                playSound(slideCoco[7])
+--                            end  
+--                        end
+--                    end
+--                else
+--                    if #selectStack == 0 then
+--                        if current_dir == dir_up then
+--                            currentNode.down()
+--                        elseif current_dir == dir_down then
+--                            currentNode.up()
+--                        elseif current_dir == dir_left then
+--                            currentNode.right()
+--                        else
+--                            currentNode.left()
+--                        end
+--                        currentNode.hasSelected = true
+--                        table.insert(selectStack, currentNode)
+--                        updateSelectWord()
+--                    else
+--                        local stackTop = selectStack[#selectStack]
+--                        if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
+--                            table.insert(selectStack, currentNode)
+--                            updateSelectWord()
+--                            -- slide coco "s_sound_slideCoconut"
+--                            if #selectStack <= 7 then
+--                                playSound(slideCoco[#selectStack])
+--                            else
+--                                playSound(slideCoco[7])
+--                            end
+--                            currentNode.addSelectStyle()
+--                            currentNode.bigSize()
+--                            if current_dir == dir_up then
+--                                currentNode.down()
+--                            elseif current_dir == dir_down then
+--                                currentNode.up()
+--                            elseif current_dir == dir_left then
+--                                currentNode.right()
+--                            else
+--                                currentNode.left()
+--                            end
+--                        end
+--                    end
+--                end
+--            else
+--
+--            end
+--        end
+--    end
+
+--    onTouchEnded = function(touch, event)
+--        if main.globalLock then
+--            return
+--        end
+--        
+--        if #selectStack < 1 then
+--            return
+--        end
+--        
+--        local location = main:convertToNodeSpace(touch:getLocation())
+--
+--        local selectWord = ""
+--        for i = 1, #selectStack do
+--            selectWord = selectWord .. selectStack[i].main_character_content
+--        end
+--
+--        if selectWord == main_word then
+--            if main.rightLock then
+--                main.globalLock = true
+--            end
+--        
+--            for i = 1, #selectStack do
+--                local node = selectStack[i]
+--                local bullet = node:getChildByName("bullet")
+--
+--                node.win()
+--                if endPositionX ~= nil then
+--                    local startPositionX,startPositionY = node:getPosition()
+--                    local endPosition = endPositionX
+--                    local action1 = cc.CallFunc:create(function()bullet:setVisible(true) end)
+--                    local action2 = cc.MoveTo:create(0.3,cc.p(endPosition - startPositionX + 90,950 - startPositionY))
+--                    local action3 = cc.CallFunc:create(function()bullet:setVisible(false) end)
+--                    bullet:runAction(cc.Sequence:create(action1,action2,action3))
+--                end
+--            end
+--            selectStack = {}
+--            
+--            main.success()
+--            
+--            -- slide true
+--            playSound(s_sound_learn_true)
+--        else
+--            if main.wrongLock then
+--                main.globalLock = true
+--            end
+--        
+--            for i = 1, #selectStack do
+--                local node = selectStack[i]
+--                node.removeSelectStyle()
+--            end
+--            selectStack = {}
+--            
+--            firstFlipNode.firstStyle()
+--            
+--            main.fail()
+--            
+--            --slide wrong
+--            playSound(s_sound_learn_false)
+--            
+--        end
+--    end
     onTouchBegan = function(touch, event)
+        removeTimer()
+    
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
             return false
         end
-    
+
         if main.globalLock then
             return true
         end
         
-        startTouchLocation = location
-        lastTouchLocation = location
+        if #selectStack < 1 then
+            startTouchLocation = location
+            lastTouchLocation = location
+        else    
+            lastTouchLocation = location
+        end 
 
         checkTouchLocation(location)
---        checkTouchLocation_opt(location)   
-        
-        if onNode then
-            startNode = main_mat[current_node_x][current_node_y]
-            table.insert(selectStack, startNode)
-            updateSelectWord()
-            startNode.addSelectStyle()
-            startNode.bigSize()
 
+        if onNode then
+            if #selectStack < 1 then
+                startNode = main_mat[current_node_x][current_node_y]
+                table.insert(selectStack, startNode)
+                updateSelectWord()
+                startNode.addSelectStyle()
+                startNode.bigSize()
+            else    
+                startNode = main_mat[current_node_x][current_node_y]
+                for i = 1 ,#selectStack do
+                    if startNode == selectStack[i] then
+                       failFunction()
+                	   return true
+                    end
+                end
+                table.insert(selectStack, startNode)
+                updateSelectWord()
+            end
             startAtNode = true
-            playSound(s_sound_slideCoconut)
-            
+            if #selectStack <= 7 then
+                playSound(slideCoco[#selectStack])
+            else
+                playSound(slideCoco[7])
+            end  
+            local x = location.x - startTouchLocation.x
+            local y = location.y - startTouchLocation.y
+
+            if y > x and y > -x then
+                startNode:up()
+            elseif y < x and y < -x then
+                startNode:down()
+            elseif y > x and y < -x then
+                startNode:left()
+            else
+                startNode:right()
+            end
+            startAtNode = false
         else
             startAtNode = false
         end
@@ -348,15 +600,17 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
     end
 
     onTouchMoved = function(touch, event)
+        removeTimer()
+        
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
             return
         end
-    
+
         if main.globalLock then
             return
         end
-    
+
         local length_gap = 5.0
 
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
@@ -374,14 +628,14 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
 
         lastTouchLocation = location
     end
-    
+
     fakeTouchMoved = function(location)
         if main.globalLock then
             return
         end
-    
+
         checkTouchLocation(location)
---        checkTouchLocation_opt(location)  
+        --        checkTouchLocation_opt(location)  
 
         if startAtNode then
             local x = location.x - startTouchLocation.x
@@ -461,82 +715,100 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
             end
         end
     end
+    
+    judgementFunction = function ()
+        local selectWord = ""
+        for i = 1, #selectStack do
+            selectWord = selectWord .. selectStack[i].main_character_content
+        end
 
+        if selectWord == main_word then
+            successFunction()
+        else
+            failFunction()
+        end
+    end
+    
+    successFunction = function ()
+        if main.rightLock then
+            main.globalLock = true
+        end
+
+        for i = 1, #selectStack do
+            local node = selectStack[i]
+            local bullet = node:getChildByName("bullet")
+
+            node.win()
+            if endPositionX ~= nil then
+                local startPositionX,startPositionY = node:getPosition()
+                local endPosition = endPositionX
+                local action1 = cc.CallFunc:create(function()bullet:setVisible(true) end)
+                local action2 = cc.MoveTo:create(0.3,cc.p(endPosition - startPositionX + 90,950 - startPositionY))
+                local action3 = cc.CallFunc:create(function()bullet:setVisible(false) end)
+                bullet:runAction(cc.Sequence:create(action1,action2,action3))
+            end
+        end
+        selectStack = {}
+
+        main.success()
+
+        -- slide true
+        playSound(s_sound_learn_true)
+    end
+    
+    failFunction = function ()
+        if main.wrongLock then
+            main.globalLock = true
+        end
+
+        for i = 1, #selectStack do
+            local node = selectStack[i]
+            node.removeSelectStyle()
+        end
+        selectStack = {}
+
+        firstFlipNode.firstStyle()
+
+        main.fail()
+
+        --slide wrong
+        playSound(s_sound_learn_false)
+    end
+    
     onTouchEnded = function(touch, event)
         if main.globalLock then
             return
         end
-        
+
         if #selectStack < 1 then
             return
-        end
+        end        
         
-        local location = main:convertToNodeSpace(touch:getLocation())
+        buildTimer()
 
-        local selectWord = ""
-        for i = 1, #selectStack do
-            selectWord = selectWord .. selectStack[i].main_character_content
-            -- slide coco "s_sound_slideCoconut"
---            if #selectStack <= 7 then
---                playSound(slideCoco[#selectStack])
---            else
---                playSound(slideCoco[7])
---            end
-        end
-
-        if selectWord == main_word then
-            if main.rightLock then
-                main.globalLock = true
-            end
-        
-            for i = 1, #selectStack do
-                local node = selectStack[i]
-                local bullet = node:getChildByName("bullet")
-
-                node.win()
-                if endPositionX ~= nil then
-                    local startPositionX,startPositionY = node:getPosition()
-                    local endPosition = endPositionX
-                    local action1 = cc.CallFunc:create(function()bullet:setVisible(true) end)
-                    local action2 = cc.MoveTo:create(0.3,cc.p(endPosition - startPositionX + 90,950 - startPositionY))
-                    local action3 = cc.CallFunc:create(function()bullet:setVisible(false) end)
-                    bullet:runAction(cc.Sequence:create(action1,action2,action3))
-                end
-            end
-            selectStack = {}
-            
-            main.success()
-            
-            -- slide true
-            playSound(s_sound_learn_true)
-        else
-            if main.wrongLock then
-                main.globalLock = true
-            end
-        
-            for i = 1, #selectStack do
-                local node = selectStack[i]
-                node.removeSelectStyle()
-            end
-            selectStack = {}
-            
-            firstFlipNode.firstStyle()
-            
-            main.fail()
-            
-            --slide wrong
-            playSound(s_sound_learn_false)
-            
-        end
     end
     
+    buildTimer = function ()
+        time = 0
+        local function update(delta)
+           time = time + delta
+           if time > 2 then
+              judgementFunction()
+           end
+        end   
+        main:scheduleUpdateWithPriorityLua(update, 0)
+    end
+
+    removeTimer = function ()
+        time = 0
+        main:unscheduleUpdate()
+    end
 
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
---    listener:setSwallowTouches(true)
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
     
