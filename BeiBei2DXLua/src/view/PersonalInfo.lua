@@ -62,33 +62,44 @@ function PersonalInfo:ctor()
         share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
         layout:addChild(share)
         local counter = 0
+        local target = nil
+
+        local top = nil
+        local function addTop()
+            top = cc.LayerColor:create(cc.c4b(211,239,254,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT - intro:getContentSize().width)
+            top:ignoreAnchorPointForPosition(false)
+            top:setAnchorPoint(0,0)
+            top:setPosition(0,intro:getContentSize().height)
+            intro:addChild(top)
+            local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
+            title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
+            title:setColor(colorArray[5 - i])
+            intro:addChild(title)
+            target:begin()
+            intro:visit()
+            target:endToLua()
+            top:removeFromParent()
+        end
+
         local function saveImage(sender, eventType)
             if eventType == ccui.TouchEventType.began then
-                target:begin()
-                intro:visit()
-                target:endToLua()
+                addTop()
             end
             if eventType == ccui.TouchEventType.ended then
-                -- target:begin()
-                -- intro:visit()
-                -- target:endToLua()
                 local png = string.format("image-%d-%d.png", i, counter)
-
                 target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
-                --target:saveToFile(jpg, cc.IMAGE_FORMAT_JPEG)
+                -- local pImage = target:newImage()
 
-                local pImage = target:newImage()
+                -- local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
 
-                local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
+                -- pImage:release()
 
-                pImage:release()
+                -- local sprite = cc.Sprite:createWithTexture(tex)
 
-                local sprite = cc.Sprite:createWithTexture(tex)
-
-                sprite:setScale(0.3)
-                intro:addChild(sprite,10)
-                sprite:setPosition(cc.p(200, 400))
-                sprite:setRotation(counter * 3)
+                -- sprite:setScale(0.3)
+                -- intro:addChild(sprite,10)
+                -- sprite:setPosition(cc.p(200, 400))
+                -- sprite:setRotation(counter * 3)
                 print('image is saved')
                 --print("Image saved %s and %s", png, jpg)
                 counter = counter + 1
@@ -100,17 +111,9 @@ function PersonalInfo:ctor()
         target = cc.RenderTexture:create(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
         target:retain()
         target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
-        --target:clear(math.random(), math.random(), math.random(), math.random())
-
-        -- note that the render texture is a cc.Node, and contains a sprite of its texture for convience,
-        -- so we can just parent it to the scene like any other cc.Node
-        intro:addChild(target, -1)
-
-
-
+        intro:addChild(target,10)
         
         table.insert(self.intro_array, intro)
-
         pageView:addPage(layout)
 
     end 

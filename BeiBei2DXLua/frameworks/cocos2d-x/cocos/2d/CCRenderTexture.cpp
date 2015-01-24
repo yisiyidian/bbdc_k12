@@ -443,6 +443,7 @@ bool RenderTexture::saveToFile(const std::string& fileName, Image::Format format
     _saveToFileCommand.func = CC_CALLBACK_0(RenderTexture::onSaveToFile, this, fullpath, isRGBA);
     
     Director::getInstance()->getRenderer()->addCommand(&_saveToFileCommand);
+    CCLOG("%s",fullpath.c_str());
     return true;
 }
 
