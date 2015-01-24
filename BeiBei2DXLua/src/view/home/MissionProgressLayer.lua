@@ -6,7 +6,7 @@ local MissionProgressLayer = class("MissionProgressLayer", function ()
 end)
 
 
-function MissionProgressLayer.create()
+function MissionProgressLayer.create(share)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local taskTotal = 120
@@ -67,8 +67,19 @@ function MissionProgressLayer.create()
         if taskTotal == taskCurrent then
             local action1 = cc.FadeOut:create(1)
             local action2 = cc.FadeOut:create(2)
-
-            finishProgress:runAction(cc.Sequence:create(cc.ProgressTo:create(taskCurrent / taskTotal ,taskCurrent / taskTotal * 100),cc.CallFunc:create(anotherSwelling)))
+            local swell = cc.CallFunc:create(anotherSwelling)
+            if share then
+                local a1 = cc.DelayTime:create(0.1)
+                local a2 = cc.CallFunc:create(function ()
+                    local Share = require('view.share.ShareCheckIn')
+                    local shareLayer = Share.create()
+                    shareLayer:setPosition(0,-s_DESIGN_HEIGHT)
+                    shareLayer:runAction(cc.MoveTo:create(0.3,cc.p(0,0)))
+                    s_GAME_LAYER:addChild(shareLayer,2)
+                end,{})
+                swell = cc.Spawn:create(cc.Sequence:create(a1,a2),cc.CallFunc:create(anotherSwelling))
+            end
+            finishProgress:runAction(cc.Sequence:create(cc.ProgressTo:create(taskCurrent / taskTotal ,taskCurrent / taskTotal * 100),swell))
             finishProgress:setVisible(true) 
             anotherEnterButton:setVisible(true)    
 

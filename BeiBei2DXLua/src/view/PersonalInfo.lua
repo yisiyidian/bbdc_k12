@@ -7,8 +7,12 @@ local PersonalInfo = class("PersonalInfo", function()
     return cc.Layer:create()
 end)
 
-function PersonalInfo.create()
+function PersonalInfo.create(checkIn)
     local layer = PersonalInfo.new()
+    layer.checkIn = false
+    if checkIn then
+        layer.checkIn = true
+    end
     return layer
 end
 
@@ -57,17 +61,73 @@ function PersonalInfo:ctor()
         share:setScale9Enabled(true)
         share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
         layout:addChild(share)
+        local counter = 0
+        local function saveImage(sender, eventType)
+            if eventType == ccui.TouchEventType.began then
+                target:begin()
+                intro:visit()
+                target:endToLua()
+            end
+            if eventType == ccui.TouchEventType.ended then
+                -- target:begin()
+                -- intro:visit()
+                -- target:endToLua()
+                local png = string.format("image-%d-%d.png", i, counter)
+
+                target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+                --target:saveToFile(jpg, cc.IMAGE_FORMAT_JPEG)
+
+                local pImage = target:newImage()
+
+                local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
+
+                pImage:release()
+
+                local sprite = cc.Sprite:createWithTexture(tex)
+
+                sprite:setScale(0.3)
+                intro:addChild(sprite,10)
+                sprite:setPosition(cc.p(200, 400))
+                sprite:setRotation(counter * 3)
+                print('image is saved')
+                --print("Image saved %s and %s", png, jpg)
+                counter = counter + 1
+            end
+        end
+        share:addTouchEventListener(saveImage)
+
+        -- create a render texture, this is what we are going to draw into
+        target = cc.RenderTexture:create(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
+        target:retain()
+        target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
+        --target:clear(math.random(), math.random(), math.random(), math.random())
+
+        -- note that the render texture is a cc.Node, and contains a sprite of its texture for convience,
+        -- so we can just parent it to the scene like any other cc.Node
+        intro:addChild(target, -1)
+
+
+
         
         table.insert(self.intro_array, intro)
 
         pageView:addPage(layout)
 
     end 
-    
+    -- if p_checkIn then
+    --     s_logd('p_checkInTrue')
+    --     pageView:scrollToPage(1)
+    -- end
     self:addChild(pageView)
     local lastPage = -1
     local function update(delta)
+        
         local curPage = pageView:getCurPageIndex()
+        if self.checkIn then
+            if curPage ~= 1 then
+                pageView:scrollToPage(1)
+            end
+        end
         if curPage ~= lastPage then
             if lastPage >= 0 then
                 self.intro_array[curPage+1]:removeAllChildren()
@@ -331,7 +391,6 @@ function PersonalInfo:PLVI()
     local function drawXYLabel(count)
         local max = count[#count] + 10
         local min = count[1]
-        print_lua_table(count)
         if max == min then
             min = 0
         end
@@ -482,11 +541,10 @@ function PersonalInfo:login()
     local back = self.intro_array[2]
     local loginData = s_CURRENT_USER.logInDatas
     local loginData_array = {}
-    for i = 1,#loginData_array do
+    for i = 1,#loginData do
         loginData_array[i] = loginData[i]:getDays()
-        --loginData_array[i] = {0,1,1,1,0,1,1}
+        print_lua_table(loginData_array[i])
     end
-    print_lua_table(loginData_array)
     local calendar = {}
     local weekDay = {'SUN','MON','TUE','WED','THU','FRI','SAT'}
     local year_begin = tonumber(os.date('%Y',s_CURRENT_USER.localTime),10)
@@ -531,8 +589,8 @@ function PersonalInfo:login()
         local delayTime = 0
         local loadingList = {}
         local lengthList = {}
+        local checkInList = {}
         while true do
-            s_logd(os.date('%x',selectDate))
             local date = tonumber(os.date('%d',selectDate),10)
             local week = tonumber(os.date('%w',selectDate),10)
             local label = cc.Label:createWithSystemFont(string.format('%d',date),'',28)
@@ -542,24 +600,18 @@ function PersonalInfo:login()
 
             --login circle
             local sDate = (selectDate - selectDate % (24 * 3600))
-            if nowDate == sDate then
-                local circle = cc.Sprite:create('image/PersonalInfo/login/circle_today.png')
-                circle:setPosition(cc.p(label:getPosition()))
-                calendar[index]:addChild(circle,1)
-                circle:setScale(0)
-                table.insert(loadingList,circle)
-                table.insert(lengthList,0)
-
-                                
-
-            end
+            
 
             local weekIndex = math.floor((sDate - firstDate) / (7 * 24 * 3600)) + 1
             local dayIndex = ((sDate - firstDate) % (7 * 24 * 3600)) / (24 * 3600) + 1
             
             if weekIndex > 0 and weekIndex <= #loginData_array and dayIndex > 0 and dayIndex <= 7 then
                 
-                if loginData_array[weekIndex][dayIndex] == 1 then
+                if loginData_array[weekIndex][dayIndex] >= 1 then
+                    --label:setColor(cc.c3b(255,255,255))
+                    if loginData_array[weekIndex][dayIndex] > 1 then
+                        table.insert(checkInList,label)
+                    end
                     if dayIndex < 7 then
                         if loginData_array[weekIndex][dayIndex + 1] == 0 or dayIndex == 6 then
                             local length = 1
@@ -617,6 +669,14 @@ function PersonalInfo:login()
                 end
             end
             
+            if nowDate == sDate then
+                local circle = cc.Sprite:create('image/PersonalInfo/login/circle_today.png')
+                circle:setPosition(cc.p(label:getPosition()))
+                calendar[index]:addChild(circle,1)
+                circle:setScale(0)
+                table.insert(loadingList,circle)
+                table.insert(lengthList,0)
+            end
 
             selectDate = selectDate + 24 * 3600
             if tonumber(os.date('%d',selectDate),10) == 1 then
@@ -626,9 +686,16 @@ function PersonalInfo:login()
         end
 
         local curIndex = 1
-            s_logd('loadingList'..#loadingList)
             local function update(delta)
                 if curIndex > #loadingList then
+                    for i = 1,#checkInList do
+                        --local pos = checkInList[i]:getPosition()
+                        local tick = cc.Sprite:create('image/PersonalInfo/login/learning_process_finish_task_tick_on_canlender.png')
+                        tick:setPosition(checkInList[i]:getPositionX(),checkInList[i]:getPositionY())
+                        calendar[index]:addChild(tick,2)
+                        checkInList[i]:setVisible(false)
+                    end
+                    calendar[index]:unscheduleUpdate()
                     return
                 end
                 if lengthList[curIndex] == 1 then
@@ -637,7 +704,7 @@ function PersonalInfo:login()
                 elseif lengthList[curIndex] > 1 then
                     local length = lengthList[curIndex]
                     loadingList[curIndex]:setVisible(true)
-                    local percent = loadingList[curIndex]:getPercent() + s_DESIGN_WIDTH * 0.125 / (55 + s_DESIGN_WIDTH / 8 * (length - 1)) * 100 / 8
+                    local percent = loadingList[curIndex]:getPercent() + s_DESIGN_WIDTH * 0.125 / (55 + s_DESIGN_WIDTH / 8 * (length - 1)) * 100 / 6
                     loadingList[curIndex]:setPercent(percent)
                     if percent >= 100 then
                         curIndex = curIndex + 1
@@ -645,11 +712,12 @@ function PersonalInfo:login()
                 else
                     local fadeIn = cc.EaseBackOut:create(cc.ScaleTo:create(0.4,1))
                     loadingList[curIndex]:runAction(fadeIn)
+                    --print('curIndex'..curIndex)
                     curIndex = curIndex + 1
                 end
             end
 
-            back:scheduleUpdateWithPriorityLua(update, 0)
+            calendar[index]:scheduleUpdateWithPriorityLua(update, 0)
         
     end
 

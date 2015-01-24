@@ -109,15 +109,6 @@ function CorePlayManager.initNewStudyLayer()
         return
     end
     
-    if CorePlayManager.isStudyModel() then
-        if CorePlayManager.wrongWordNum >= CorePlayManager.maxWrongWordCount then
-            CorePlayManager.initWordCandidate()
-            CorePlayManager.checkInReviewModel()
-            CorePlayManager.enterNewStudyMiddleLayer()
-            return
-        end
-    end
-    
 --    local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
 --    if lastPlayState.lastUpdate == nil then
 --        print("lastPlayStateRecord not exist...")
@@ -230,6 +221,14 @@ function CorePlayManager.initNewStudyLayer()
             CorePlayManager.wrongWordNum  = #CorePlayManager.wrongWordList
             CorePlayManager.candidateNum  = #CorePlayManager.wordCandidate
             CorePlayManager.ordinalNum    = s_LocalDatabaseManager.getOrdinalNum()
+            if lastPlayState.playModel == 0 and CorePlayManager.wrongWordNum ~= nil then
+                if CorePlayManager.wrongWordNum >= CorePlayManager.maxWrongWordCount then
+                    CorePlayManager.initWordCandidate()
+                    CorePlayManager.checkInReviewModel()
+                    CorePlayManager.enterNewStudyMiddleLayer()
+                    return
+                end
+            end
             print("right word list: "..lastPlayState.rightWordList)
             print("wrong word list: "..lastPlayState.wrongWordList)
             print("candidate word list: "..lastPlayState.wordCandidate)
