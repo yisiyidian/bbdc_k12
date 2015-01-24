@@ -5,6 +5,7 @@
 #include "CXStore.h"
 #include "CXProgressHUD.h"
 #include "CXNetworkStatus.h"
+#include "CXAVCloud.h"
 #include "tolua_fix.h"
 #include "LuaBasicConversions.h"
 
@@ -1936,6 +1937,172 @@ int lua_register_cx_common_CXNetworkStatus(lua_State* tolua_S)
     g_typeCast["CXNetworkStatus"] = "CXNetworkStatus";
     return 1;
 }
+
+int lua_cx_common_CXAVCloud_invokeCallback(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAVCloud* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAVCloud",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAVCloud*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAVCloud_invokeCallback'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        const char* arg0;
+        const char* arg1;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAVCloud:invokeCallback"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAVCloud:invokeCallback"); arg1 = arg1_tmp.c_str();
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAVCloud_invokeCallback'", nullptr);
+            return 0;
+        }
+        cobj->invokeCallback(arg0, arg1);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAVCloud:invokeCallback",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAVCloud_invokeCallback'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAVCloud_callAVCloudFunction(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAVCloud* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAVCloud",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAVCloud*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAVCloud_callAVCloudFunction'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        std::string arg0;
+        std::string arg1;
+        CXLUAFUNC arg2;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "CXAVCloud:callAVCloudFunction");
+
+        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "CXAVCloud:callAVCloudFunction");
+
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAVCloud_callAVCloudFunction'", nullptr);
+            return 0;
+        }
+        cobj->callAVCloudFunction(arg0, arg1, arg2);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAVCloud:callAVCloudFunction",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAVCloud_callAVCloudFunction'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAVCloud_constructor(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAVCloud* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAVCloud_constructor'", nullptr);
+            return 0;
+        }
+        cobj = new CXAVCloud();
+        cobj->autorelease();
+        int ID =  (int)cobj->_ID ;
+        int* luaID =  &cobj->_luaID ;
+        toluafix_pushusertype_ccobject(tolua_S, ID, luaID, (void*)cobj,"CXAVCloud");
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAVCloud:CXAVCloud",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAVCloud_constructor'.",&tolua_err);
+#endif
+
+    return 0;
+}
+
+static int lua_cx_common_CXAVCloud_finalize(lua_State* tolua_S)
+{
+    printf("luabindings: finalizing LUA object (CXAVCloud)");
+    return 0;
+}
+
+int lua_register_cx_common_CXAVCloud(lua_State* tolua_S)
+{
+    tolua_usertype(tolua_S,"CXAVCloud");
+    tolua_cclass(tolua_S,"CXAVCloud","CXAVCloud","cc.Ref",nullptr);
+
+    tolua_beginmodule(tolua_S,"CXAVCloud");
+        tolua_function(tolua_S,"new",lua_cx_common_CXAVCloud_constructor);
+        tolua_function(tolua_S,"invokeCallback",lua_cx_common_CXAVCloud_invokeCallback);
+        tolua_function(tolua_S,"callAVCloudFunction",lua_cx_common_CXAVCloud_callAVCloudFunction);
+    tolua_endmodule(tolua_S);
+    std::string typeName = typeid(CXAVCloud).name();
+    g_luaType[typeName] = "CXAVCloud";
+    g_typeCast["CXAVCloud"] = "CXAVCloud";
+    return 1;
+}
 TOLUA_API int register_all_cx_common(lua_State* tolua_S)
 {
 	tolua_open(tolua_S);
@@ -1945,6 +2112,7 @@ TOLUA_API int register_all_cx_common(lua_State* tolua_S)
 
 	lua_register_cx_common_CXNetworkStatus(tolua_S);
 	lua_register_cx_common_CXUtils(tolua_S);
+	lua_register_cx_common_CXAVCloud(tolua_S);
 	lua_register_cx_common_CXAnalytics(tolua_S);
 	lua_register_cx_common_CXProgressHUD(tolua_S);
 	lua_register_cx_common_CXStore(tolua_S);

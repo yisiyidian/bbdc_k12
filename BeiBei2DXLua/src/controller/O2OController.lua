@@ -323,6 +323,8 @@ function O2OController.getDataLevelInfo(oncompleted)
     -- handle online
 
     local afterGetDataLevelInfo = function ()
+        print('afterGetDataLevelInfo')
+        print_lua_table(s_CURRENT_USER)
         s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
 
@@ -461,7 +463,7 @@ function O2OController.getBulletinBoard()
             bb:updateValue(index, title, content)
             s_SCENE:popup(bb)
 
-            s_CURRENT_USER.bulletinBoardTime = s_CURRENT_USER.serverTime
+            s_CURRENT_USER.bulletinBoardTime = os.time() -- s_CURRENT_USER.serverTime
         end
 
         hideProgressHUD()

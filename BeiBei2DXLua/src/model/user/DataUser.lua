@@ -73,8 +73,8 @@ function DataUser:ctor()
     self.localAuthData                     = nil
     self.snsUserInfo                       = nil
     self.clientData                        = {0}
-    self.levelInfo                      = DataLevelInfo.create()
-    self.levelInfoObjectId              = ''
+    self.levelInfo                         = DataLevelInfo.create()
+    self.levelInfoObjectId                 = ''
 
     self.lastUpdateSummaryBossTime         = 0
     self.summaryBossList                   = ''

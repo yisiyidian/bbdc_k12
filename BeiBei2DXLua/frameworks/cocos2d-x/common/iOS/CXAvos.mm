@@ -13,40 +13,7 @@
 #import <AVOSCloudSNS/AVOSCloudSNS.h>
 #import <AVOSCloudSNS/AVUser+SNS.h>
 #import "CXTencentSDKCall.h"
-
-NSString* NSDictionaryToJSONString(NSDictionary* json) {
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
-                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
-                                                         error:&error];
-    if (! jsonData) {
-        CCLOG("AVUserToJsonStr Got an error: %s", error.localizedDescription.UTF8String);
-        return @"{}";
-    } else {
-        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        return jsonString;
-    }
-}
-
-NSString* AVUserToJsonStr(AVUser* user) {
-    NSMutableDictionary* json = [NSMutableDictionary dictionary];
-    
-    json[@"objectId"] = user.objectId;
-    json[@"username"] = user.username;
-    json[@"sessionToken"] = user.sessionToken;
-    json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
-    json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
-    for (NSString* key in user.allKeys) {
-        id obj = [user objectForKey:key];
-        if ([obj isKindOfClass:[NSString class]]) {
-            json[key] = ((NSString*)obj);
-        } else if ([obj isKindOfClass:[NSNumber class]]) {
-            json[key] = ((NSNumber*)obj);
-        }
-    }
-    
-    return NSDictionaryToJSONString(json);
-}
+#import "CXUtils_iOS.h"
 
 #pragma mark -
 
