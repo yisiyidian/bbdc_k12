@@ -71,8 +71,6 @@ function NewStudySlideLayer.create()
             -- db
             s_LocalDatabaseManager.updateSlideNum()
         
-            playSound(s_sound_learn_true) 
-        
             local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
             showAnswerStateBack:setPosition(backColor:getContentSize().width *1.5, 768)
             showAnswerStateBack:ignoreAnchorPointForPosition(false)
@@ -157,6 +155,10 @@ function NewStudySlideLayer.create()
     mat.success = success
     mat.rightLock = true
     mat.wrongLock = false
+    
+    backColor.forceFail =  function ()
+    	mat.forceFail()
+    end
 
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

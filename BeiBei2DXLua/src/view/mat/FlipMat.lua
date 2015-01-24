@@ -205,7 +205,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         local left = s_DESIGN_WIDTH/2 - (#selectStack-1)*gap/2
 
         for i = 1, #selectStack do
-            local term_back = cc.Sprite:create("image/studyscene/circle_back_green.png") -- "image/newstudy/wordbackground.png"
+            local term_back = cc.Sprite:create("image/newstudy/wordsbackgroundblue.png") -- "image/newstudy/wordbackground.png"
             term_back:setPosition(left+(i-1)*gap,640)
             term_back:setTag(i)
             main:addChild(term_back)
@@ -721,7 +721,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         for i = 1, #selectStack do
             selectWord = selectWord .. selectStack[i].main_character_content
         end
-
+        removeTimer()
         if selectWord == main_word then
             successFunction()
         else
@@ -749,6 +749,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
             end
         end
         selectStack = {}
+        
+        firstFlipNode:setVisible(false)
 
         main.success()
 
@@ -775,6 +777,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         playSound(s_sound_learn_false)
     end
     
+    main.forceFail = function ()
+    	failFunction()
+    end
+    
     onTouchEnded = function(touch, event)
         if main.globalLock then
             return
@@ -785,7 +791,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         end        
         
         buildTimer()
-
     end
     
     buildTimer = function ()
