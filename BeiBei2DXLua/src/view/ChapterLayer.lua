@@ -312,10 +312,6 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         title:setAnchorPoint(0,0)
         title:setPosition(20,60)
         notification:addChild(title)
---        local head = cc.Sprite:create('image/newstudy/head.png')
---        head:setScale(0.5)
---        head:setPosition(notification:getContentSize().width-20,40)
---        notification:addChild(head)
     end
 end
 
@@ -409,24 +405,7 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
     local totalLevelCount = (math.floor((currentLevelCount-1) / 10) + 1) * 10
     local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / 10) + 1)
     self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
---    if levelInfo['chapter'] == 'chapter0' then
---        totalLevelCount = 10
---    elseif levelInfo['chapter'] == 'chapter1' then
---        totalLevelCount = 30
---    elseif levelInfo['chapter'] == 'chapter2' then
---        totalLevelCount = 60
---    else
---        totalLevelCount = 100
---    end
---    if chapterKey == 'chapter0' then
---        currentLevelCount = currentLevelCount
---    elseif chapterKey == 'chapter1' then
---        currentLevelCount = currentLevelCount + 10
---    elseif chapterKey == 'chapter2' then
---        currentLevelCount = currentLevelCount + 30
---    elseif chapterKey == 'chapter3' then
---        currentLevelCount = currentLevelCount + 60
---    end
+
     local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
     print('#######currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
     if scrollTime - 0 == 0 then

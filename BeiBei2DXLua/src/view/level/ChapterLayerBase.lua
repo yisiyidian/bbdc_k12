@@ -145,7 +145,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
     -- TODO add review boss position
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday and currentProgress['chapter'] == self.chapterKey and currentProgress['level'] == 'level'..levelIndex then
+    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday and  currentProgress - levelIndex == 0 then
         -- plot review boss
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
@@ -389,12 +389,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 --    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 99)
     --print('####levelIndex:',levelIndex,',',chapterIndex)
     if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
---        local title = cc.Label:createWithSystemFont('Start','',40)
---        title:setColor(cc.c3b(255,255,255))
---        title:ignoreAnchorPointForPosition(false)
---        title:setAnchorPoint(0,0)
---        title:setPosition(levelPosition.x, levelPosition.y)
---        self:addChild(title, 130)
+
         local start = cc.Sprite:create('image/chapter/chapter0/start.png')
         start:setPosition(levelPosition.x, levelPosition.y)
         self:addChild(start, 130)
