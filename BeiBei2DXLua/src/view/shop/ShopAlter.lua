@@ -6,7 +6,7 @@ end)
 
 local button_sure
 
-function ShopAlter.create(itemId)
+function ShopAlter.create(itemId, state)
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
     local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
@@ -14,7 +14,13 @@ function ShopAlter.create(itemId)
     main:ignoreAnchorPointForPosition(false)
 
     main.sure = function()
+        s_CURRENT_USER:reduceBeans(s_DataManager.product[itemId].productValue)
+        
+        s_CURRENT_USER:unlockFunction(itemId)
 
+        local ShopLayer = require("view.shop.ShopLayer")
+        local shopLayer = ShopLayer.create()
+        s_SCENE:replaceGameLayer(shopLayer)
     end
 
     local back = cc.Sprite:create("image/shop/alter_back.png")
@@ -28,21 +34,46 @@ function ShopAlter.create(itemId)
     local maxWidth = back:getContentSize().width
     local maxHeight = back:getContentSize().height
 
+    if state == 0 then
+        local item = cc.Sprite:create("image/shop/item"..itemId..".png")
+        item:setPosition(maxWidth/2, maxHeight/2+150)
+        back:addChild(item)
+        
+        local button_sure_clicked = function(sender, eventType)
+            if eventType == ccui.TouchEventType.ended then
+                main.sure()
+            end
+        end
 
-    local title = cc.Sprite:create("image/shop/label"..itemId..".png")
-    title:setPosition(maxWidth/2, maxHeight-80)
-    back:addChild(title)
+        button_sure = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
+        button_sure:setPosition(maxWidth/2,100)
+        button_sure:addTouchEventListener(button_sure_clicked)
+        back:addChild(button_sure)
+
+        local item_name = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productValue.."贝贝豆购买",'',30)
+        item_name:setColor(cc.c4b(255,255,255,255))
+        item_name:setPosition(button_sure:getContentSize().width/2+10, button_sure:getContentSize().height/2)
+        button_sure:addChild(item_name)
+
+        local been = cc.Sprite:create("image/shop/been.png")
+        been:setPosition(50, button_sure:getContentSize().height/2)
+        button_sure:addChild(been)
+    else
+        local title = cc.Sprite:create("image/shop/label"..itemId..".png")
+        title:setPosition(maxWidth/2, maxHeight-80)
+        back:addChild(title)
+        
+        local item = cc.Sprite:create("image/shop/product"..itemId..".png")
+        item:setPosition(maxWidth/2, maxHeight/2+150)
+        back:addChild(item)
+    end
     
-    local item = cc.Sprite:create("image/shop/item"..itemId..".png")
-    item:setPosition(maxWidth/2, maxHeight/2+100)
-    back:addChild(item)
-    
-    local label_content = cc.Label:createWithSystemFont("bababababba","",32)
+    local label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",32)
     label_content:setAnchorPoint(0.5, 1)
     label_content:setColor(cc.c4b(0,0,0,255))
-    label_content:setDimensions(maxWidth-60,0)
+    label_content:setDimensions(maxWidth-180,0)
     label_content:setAlignment(0)
-    label_content:setPosition(maxWidth/2, maxHeight/2-100)
+    label_content:setPosition(maxWidth/2, maxHeight/2-60)
     back:addChild(label_content)
     
     local button_close_clicked = function(sender, eventType)
@@ -55,19 +86,6 @@ function ShopAlter.create(itemId)
     button_close:setPosition(maxWidth-30,maxHeight-30)
     button_close:addTouchEventListener(button_close_clicked)
     back:addChild(button_close)
-
-    local button_sure_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            main.sure()
-        end
-    end
-
-    button_sure = ccui.Button:create("image/shop/long_button.png","image/shop/long_button.png","")
-    button_sure:setTitleText("购买")
-    button_sure:setTitleFontSize(30)
-    button_sure:setPosition(maxWidth/2,100)
-    button_sure:addTouchEventListener(button_sure_clicked)
-    back:addChild(button_sure)
 
     -- touch lock
     local onTouchBegan = function(touch, event)        
