@@ -36,6 +36,35 @@ end
 -- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
 
 -- api : string
+-- isEncoded : bool
+-- parameters : table
+-- callback : function (result, error)
+-- datas is a string
+function Server.request(api, isEncoded, parameters, callback)
+    local paraStr = nil
+    if parameters ~= nil then paraStr = s_JSON.encode(parameters) end
+    if isEncoded and paraStr ~= nil then 
+        paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
+    end
+    local params = {['api']=api, ['isEncoded']=isEncoded}
+    if isEncoded then
+        params['isEncoded'] = isEncoded
+    end
+    if paraStr ~= nil then
+        params['datas'] = paraStr
+    end
+
+    local request = cx.CXAVCloud:new()
+    request:callAVCloudFunction('cld', s_JSON.encode(params), function (result, error)
+        if err then
+        else
+        end
+    end)
+end
+
+-- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+
+-- api : string
 -- parameters : table
 -- onSucceed(api, result) -- result : json
 -- onFailed(api, code, message, description)
