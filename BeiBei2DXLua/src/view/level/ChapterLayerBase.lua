@@ -60,11 +60,10 @@ function ChapterLayerBase:createObjectForResource(t)
         if t[3]~=nil then
             object:setPosition(t[3].x,t[3].y)
         end
-        if t[4]~=nil and t[4]== "island" then
-            object:setTag(islandTag)
-            islandTag=islandTag + 1
-
-        end
+--        if t[4]~=nil and t[4]== "island" then
+--            object:setTag(islandTag)
+--            islandTag=islandTag + 1
+--        end
         self:addChild(object,50)
     end
     return object
@@ -343,6 +342,15 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
 end
 
+function ChapterLayerBase:addPopup(levelIndex)
+    -- TODO check level state
+    -- if state == 1 then
+    local levelPosition = self:getLevelPosition('level'..levelIndex)
+    local popup = cc.Sprite:create('image/chapter/chapter0/popup.png')
+    popup:setPosition(levelPosition)
+    self:addChild(popup, 100)
+end
+
 function ChapterLayerBase:plotDecoration()
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local currentLevelIndex = levelInfo
@@ -354,9 +362,12 @@ function ChapterLayerBase:plotDecoration()
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 print('BaseLayer:levelbutton '..sender:getName()..' touched...')
+                
+                -- TODO check level state
+                -- if state == 1 then
+                --self:addPopup(sender:getName())
             end
         end
---        print('######create level button#########')
         local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')
         levelButton:setScale9Enabled(true)
         levelButton:setPosition(levelPosition)

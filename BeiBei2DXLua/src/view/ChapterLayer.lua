@@ -84,10 +84,6 @@ function ChapterLayer:checkUnlockLevel()
  if currentProgress % 10 == 0 and currentProgress > 0 then       
         -- unlock chapter
         self:plotUnlockCloudAnimation()
---        s_SCENE:callFuncWithDelay(1.0,function()            
-            -- add next chapter
-            --self:addChapterIntoListView()
---            print(currentProgress['chapter']);
         local currentChapterKey = 'chapter'..math.floor(currentProgress / 10)
         s_SCENE:callFuncWithDelay(0.1, function() 
             self:addChapterIntoListView(currentChapterKey)
