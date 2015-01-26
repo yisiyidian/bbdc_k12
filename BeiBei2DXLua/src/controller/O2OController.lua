@@ -411,13 +411,13 @@ function O2OController.getDataLogIn(onSaved)
         print ('currentWeeks:' .. tostring(currentWeeks))
         -- local database
         local localCurrentData = nil
-        for i, v in ipairs(localDatas) do
-            if v.week == currentWeeks then
-                localCurrentData = DataLogIn.create()
-                parseLocalDatabaseToUserData(v, localCurrentData)
-                break
-            end
-        end
+        -- for i, v in ipairs(localDatas) do
+        --     if v.week == currentWeeks then
+        --         localCurrentData = DataLogIn.create()
+        --         parseLocalDatabaseToUserData(v, localCurrentData)
+        --         break
+        --     end
+        -- end
 
         if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
             if localCurrentData ~= nil then
