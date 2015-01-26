@@ -39,7 +39,7 @@ function ShareBottom:ctor()
 
     local function saveImage(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-        	local png = "image-saved1.png"
+        	local png = string.format("image-saved%s.png",os.date('%X',os.time()))
             self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
             self:getParent():shareEnd()
             local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
