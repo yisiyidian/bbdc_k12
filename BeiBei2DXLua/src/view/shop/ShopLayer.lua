@@ -14,15 +14,15 @@ function ShopLayer.create()
     for i = 1, productNum do
         local state
         if s_DataManager.product[i].productName == 'friend' then
-            state = s_CURRENT_USER.friendFunctionState
+            state = s_CURRENT_USER.p1
         elseif s_DataManager.product[i].productName == 'data1' then
-            state = s_CURRENT_USER.dataFunctionOneState
+            state = s_CURRENT_USER.p2
         elseif s_DataManager.product[i].productName == 'data2' then
-            state = s_CURRENT_USER.dataFunctionTwoState
+            state = s_CURRENT_USER.p3
         elseif s_DataManager.product[i].productName == 'data3' then
-            state = s_CURRENT_USER.dataFunctionThreeState
+            state = s_CURRENT_USER.p4
         elseif s_DataManager.product[i].productName == 'data4' then
-            state = s_CURRENT_USER.dataFunctionFourState
+            state = s_CURRENT_USER.p5
         else
             state = 0
         end
@@ -65,7 +65,6 @@ function ShopLayer.create()
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
            s_CorePlayManager.enterHomeLayer()
-            s_CURRENT_USER:addBeans(3000)
         end
     end
 
