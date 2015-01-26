@@ -56,8 +56,22 @@ function Server.request(api, isEncoded, parameters, callback)
 
     local request = cx.CXAVCloud:new()
     request:callAVCloudFunction('cld', s_JSON.encode(params), function (result, error)
-        if err then
+        local cb = function (result, error) end
+        callback = callback or cb
+        if error then
+            callback(result, s_JSON.decode(error))
         else
+            result = s_JSON.decode(result)
+            -- decode
+            if isEncoded and result.datas ~= nil then 
+                local datasStr = cx.CXUtils:getInstance():base64DecodeAndDecompressString(result.datas)
+                result.datas = s_JSON.decode(datasStr)
+            end
+            -- string to table
+            if result.datas ~= nil and type(result.datas) == 'string' then
+                result.datas = s_JSON.decode(result.datas)
+            end
+            callback(result, nil)
         end
     end)
 end
