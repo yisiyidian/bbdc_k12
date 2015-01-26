@@ -82,30 +82,11 @@ function DataUser:ctor()
     self.lastUpdateChestTime               = 0
     
     -- function lock
-    self.p1                                = 0
-    self.p2                                = 0
-    self.p3                                = 0
-    self.p4                                = 0
-    self.p5                                = 0
-end
-
-function DataUser:unlockFunction(itemId)
-    if itemId == 1 then
-        self.p1 = 1
-        self:updateDataToServer()
-    elseif itemId == 2 then
-        self.p2 = 1
-        self:updateDataToServer()
-    elseif itemId == 3 then
-        self.p3 = 1
-        self:updateDataToServer()
-    elseif itemId == 4 then
-        self.p4 = 1
-        self:updateDataToServer()
-    elseif itemId == 5 then
-        self.p5 = 1
-        self:updateDataToServer()
-    end
+    self.friendFunction                    = 0
+    self.dataFunction1                     = 0
+    self.dataFunction2                     = 0
+    self.dataFunction3                     = 0
+    self.dataFunction4                     = 0
 end
 
 function DataUser:getBeans()
