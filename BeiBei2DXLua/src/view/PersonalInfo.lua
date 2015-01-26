@@ -66,11 +66,31 @@ function PersonalInfo:ctor()
 
         local top = nil
         local function addTop()
-            top = cc.LayerColor:create(cc.c4b(211,239,254,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT - intro:getContentSize().width)
+            top = cc.LayerColor:create(cc.c4b(211,239,254,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT - intro:getContentSize().height)
             top:ignoreAnchorPointForPosition(false)
             top:setAnchorPoint(0,0)
             top:setPosition(0,intro:getContentSize().height)
             intro:addChild(top)
+
+            local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+            head:setPosition(top:getContentSize().width * 0.25, top:getContentSize().height * 0.5)
+            top:addChild(head)
+
+            local logoWord = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/title_shouye_name.png'))
+            logoWord:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+            logoWord:setMidpoint(cc.p(0.5, 1))
+            logoWord:setBarChangeRate(cc.p(0, 1))
+            logoWord:setPercentage(80) 
+            logoWord:setScale(0.8)
+            logoWord:setPosition(top:getContentSize().width * 0.6, top:getContentSize().height * 0.55)
+            top:addChild(logoWord)
+
+            local name = cc.Label:createWithSystemFont(s_CURRENT_USER:getNameForDisplay(),'',30)
+            name:setAnchorPoint(0,1)
+            name:setPosition(top:getContentSize().width * 0.4 + 30, top:getContentSize().height * 0.5 - 15)
+            name:setColor(cc.c3b(92,130,140))
+            top:addChild(name)
+
             local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
             title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
             title:setColor(colorArray[5 - i])

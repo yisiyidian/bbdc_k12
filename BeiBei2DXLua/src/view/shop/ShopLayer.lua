@@ -8,6 +8,14 @@ local ShopLayer = class("ShopLayer", function()
 end)
 
 function ShopLayer.create()
+    print("shop info")
+    for i = 1, #s_DataManager.product do
+        print(s_DataManager.product[i].productId)
+        print(s_DataManager.product[i].productName)
+        print(s_DataManager.product[i].productDescription)
+        print(s_DataManager.product[i].productValue)
+    end
+
     local layer = ShopLayer.new()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH

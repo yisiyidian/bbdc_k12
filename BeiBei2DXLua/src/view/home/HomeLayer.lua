@@ -12,6 +12,14 @@ local HomeLayer = class("HomeLayer", function ()
 end)
 
 function HomeLayer.create(share)
+    print("shop info")
+    for i = 1, #s_DataManager.product do
+        print(s_DataManager.product[i].productId)
+        print(s_DataManager.product[i].productName)
+        print(s_DataManager.product[i].productDescription)
+        print(s_DataManager.product[i].productValue)
+    end
+    
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words

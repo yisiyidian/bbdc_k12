@@ -43,6 +43,7 @@ cp ${RAW_CONFIGS}/chapters.json ${TMP_DIR}/
 cp ${RAW_CONFIGS}/review_boss.json ${TMP_DIR}/
 # cp ${RAW_CONFIGS}/starRule.json ${TMP_DIR}/
 cp ${RAW_CONFIGS}/text.json ${TMP_DIR}/
+cp ${RAW_CONFIGS}/product.json ${TMP_DIR}/
 
 cd ${BASE_DIR_FOR_SCRIPT_SELF}/pack_files
 ./pack_files.sh -i ${TMP_DIR} -o ${TMP_XXTEA_DIR} -ek fuck2dxLua -es fuckXXTEA

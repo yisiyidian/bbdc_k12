@@ -279,6 +279,7 @@ function O2OController.loadConfigs()
     s_BookWord = s_DataManager.loadBookWords()
     s_DataManager.loadChapters()
     s_DataManager.loadReviewBoss()
+    s_DataManager.loadProduct()
 
     s_WordPool = s_DataManager.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
