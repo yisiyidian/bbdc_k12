@@ -80,6 +80,32 @@ function DataUser:ctor()
     self.summaryBossList                   = ''
     self.chestList                         = ''
     self.lastUpdateChestTime               = 0
+    
+    -- function lock
+    self.friendFunctionState               = 0
+    self.dataFunctionOneState              = 0
+    self.dataFunctionTwoState              = 0
+    self.dataFunctionThreeState            = 0
+    self.dataFunctionFourState             = 0
+end
+
+function DataUser:unlockFunction(itemId)
+    if itemId == 1 then
+        self.friendFunctionState = 1
+        self:updateDataToServer()
+    elseif itemId == 2 then
+        self.dataFunctionOneState = 1
+        self:updateDataToServer()
+    elseif itemId == 3 then
+        self.dataFunctionTwoState = 1
+        self:updateDataToServer()
+    elseif itemId == 4 then
+        self.dataFunctionThreeState = 1
+        self:updateDataToServer()
+    elseif itemId == 5 then
+        self.dataFunctionFourState = 1
+        self:updateDataToServer()
+    end
 end
 
 function DataUser:getBeans()

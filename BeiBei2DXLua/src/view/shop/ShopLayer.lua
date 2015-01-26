@@ -2,24 +2,38 @@ require("cocos.init")
 require("common.global")
 
 local ShopAlter = require("view.shop.ShopAlter")
+local ShopErrorAlter = require("view.shop.ShopErrorAlter")
 
 local ShopLayer = class("ShopLayer", function()
     return cc.Layer:create()
 end)
 
 function ShopLayer.create()
-    print("shop info")
-    for i = 1, #s_DataManager.product do
-        print(s_DataManager.product[i].productId)
-        print(s_DataManager.product[i].productName)
-        print(s_DataManager.product[i].productDescription)
-        print(s_DataManager.product[i].productValue)
+    local productNum = #s_DataManager.product
+    local productState = {}
+    for i = 1, productNum do
+        local state
+        if s_DataManager.product[i].productName == 'friend' then
+            state = s_CURRENT_USER.friendFunctionState
+        elseif s_DataManager.product[i].productName == 'data1' then
+            state = s_CURRENT_USER.dataFunctionOneState
+        elseif s_DataManager.product[i].productName == 'data2' then
+            state = s_CURRENT_USER.dataFunctionTwoState
+        elseif s_DataManager.product[i].productName == 'data3' then
+            state = s_CURRENT_USER.dataFunctionThreeState
+        elseif s_DataManager.product[i].productName == 'data4' then
+            state = s_CURRENT_USER.dataFunctionFourState
+        else
+            state = 0
+        end
+        table.insert(productState, state)
     end
+    
 
     local layer = ShopLayer.new()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local bigHeight = 1.3*s_DESIGN_HEIGHT
+    local bigHeight = 1.0*s_DESIGN_HEIGHT
 
     local initColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, s_DESIGN_HEIGHT)
     initColor:setAnchorPoint(0.5,0.5)
@@ -51,6 +65,7 @@ function ShopLayer.create()
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
            s_CorePlayManager.enterHomeLayer()
+            s_CURRENT_USER:addBeans(3000)
         end
     end
 
@@ -67,49 +82,47 @@ function ShopLayer.create()
     been:setPosition(0, been_number_back:getContentSize().height/2)
     been_number_back:addChild(been)
 
-    local been_number = cc.Label:createWithSystemFont('100','',24)
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
     been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
     been_number_back:addChild(been_number)
 
-
-    local lock_state = {1,0,1,0,1,0,1,0}
-
     local height = 320
-    for i = 1, 4 do
+    for i = 1, math.ceil(productNum/2) do
         local shelf = cc.Sprite:create("image/shop/shelf.png")
         shelf:setPosition(s_DESIGN_WIDTH/2, bigHeight-80-height*i)
         backColor:addChild(shelf) 
     end
 
-    for i = 1, 8 do
+    for i = 1, productNum do
         local x = s_DESIGN_WIDTH/2+150*(1-2*(i%2))
         local y = bigHeight-height*(math.floor((i-1)/2))-435
         
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-                print("item "..i.." clicked")
-                local shopAlter = ShopAlter.create(i)
-                shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-                layer:addChild(shopAlter)
-
-                shopAlter.sure = function()
-                    
+                if s_CURRENT_USER.beans - s_DataManager.product[i].productValue >= 0 then
+                    local shopAlter = ShopAlter.create(i, productState[i])
+                    shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(shopAlter)
+                else
+                    local shopErrorAlter = ShopErrorAlter.create()
+                    shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(shopErrorAlter)
                 end
             end
         end
-        
-        local item = ccui.Button:create("image/shop/item"..i..".png","image/shop/item"..i..".png","")
-        item:setPosition(x, y+150)
-        item:addTouchEventListener(item_clicked)
-        backColor:addChild(item) 
         
         local item_name_back = cc.Sprite:create("image/shop/item_name_back.png")
         item_name_back:setPosition(x+15, y)
         backColor:addChild(item_name_back) 
 
-        if lock_state[i] == 0 then
-            local item_name = cc.Label:createWithSystemFont('100','',28)
+        if productState[i] == 0 then
+            local item = ccui.Button:create("image/shop/item"..i..".png","image/shop/item"..i..".png","")
+            item:setPosition(x, y+150)
+            item:addTouchEventListener(item_clicked)
+            backColor:addChild(item)
+        
+            local item_name = cc.Label:createWithSystemFont(s_DataManager.product[i].productValue,'',28)
             item_name:setColor(cc.c4b(0,0,0,255))
             item_name:setPosition(item_name_back:getContentSize().width/2-10, item_name_back:getContentSize().height/2-5)
             item_name_back:addChild(item_name)
@@ -118,6 +131,15 @@ function ShopLayer.create()
             been_small:setPosition(40, item_name_back:getContentSize().height/2-5)
             item_name_back:addChild(been_small)
         else
+            local item = ccui.Button:create("image/shop/product"..i..".png","image/shop/product"..i..".png","")
+            item:setPosition(x, y+150)
+            item:addTouchEventListener(item_clicked)
+            backColor:addChild(item)
+            
+            local label = cc.Sprite:create("image/shop/label"..i..".png")
+            label:setPosition(x-10, y+110)
+            backColor:addChild(label) 
+        
             local item_name = cc.Label:createWithSystemFont('已购','',28)
             item_name:setColor(cc.c4b(0,0,0,255))
             item_name:setPosition(item_name_back:getContentSize().width/2-20, item_name_back:getContentSize().height/2-5)
