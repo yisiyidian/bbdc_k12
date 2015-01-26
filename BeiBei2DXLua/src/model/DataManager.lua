@@ -34,6 +34,7 @@ function DataManager.clear()
     DataManager.reviewBoos = nil
     DataManager.starRules = nil
     DataManager.dailyCheckIn = nil
+    DataManager.product = nil
 end
 
 s_energyMaxCount = 8
@@ -54,6 +55,7 @@ local getLevelConfigFilePath = function (bookkey) return string.format('cfg/lv_%
 s_review_boos = 'cfg/review_boss.json'
 s_starRule = 'cfg/starRule.json'
 s_text = 'cfg/text.json'
+s_product = 'cfg/product.json'
 
 local function loadXxteaFile(filepath)
     local str = cx.CXUtils:getInstance():decryptXxteaFile(filepath)
@@ -429,6 +431,23 @@ function DataManager.loadStarRules()
     end
 end
 
--------------------------------------------------------------------
+-- product info -----------------------------------------------------------------
+function DataManager.loadProduct()
+    local jsonObj = loadJsonFile(s_product)
+    local jsonArr = jsonObj
+    local MetaProduct = require("model.meta.MetaProduct")
+    DataManager.product = {}
+    for i = 1, #jsonArr do 
+        local data = jsonArr[i]
+        local p = MetaProduct.create(data['productId'],
+            data['productName'],
+            data['productDescription'],
+            data['productValue'])
+        table.insert(DataManager.product, p)
+    end
+end
+
+
+
 
 return DataManager
