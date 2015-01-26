@@ -40,6 +40,7 @@ function DownloadSoundButton.create(parentNode)
     local button_back = ccui.Button:create("image/soundLoadingBar/loadingbar_back.png","image/soundLoadingBar/loadingbar_back_press.png","image/soundLoadingBar/no_network.png",ccui.TextureResType.localType)
     button_back:setAnchorPoint(cc.p(0.5,0.5))
     button_back:setPosition(postion)
+    button.button_back = button_back
     
     --init the label of loading bar
     local label = cc.Label:create()
@@ -215,6 +216,10 @@ function DownloadSoundButton.create(parentNode)
     parentNode:addChild(label)
     
     return button
+end
+
+function DownloadSoundButton:setEnabled(enabled)
+    self.button_back:setEnabled(enabled)
 end
 
 return DownloadSoundButton

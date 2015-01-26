@@ -25,6 +25,7 @@ function PersonalInfo:ctor()
     local colorArray = {cc.c4b(56,182,236,255),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
     local titleArray = {'单词掌握统计','单词学习日增长','登陆贝贝天数','学习效率统计'}
     self.intro_array = {}
+    local target = {}
 
     
     local pageView = ccui.PageView:create()
@@ -62,7 +63,7 @@ function PersonalInfo:ctor()
         share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
         layout:addChild(share)
         local counter = 0
-        local target = nil
+        --local target = nil
 
         local top = nil
         local function addTop()
@@ -85,7 +86,7 @@ function PersonalInfo:ctor()
             logoWord:setPosition(top:getContentSize().width * 0.6, top:getContentSize().height * 0.55)
             top:addChild(logoWord)
 
-            local name = cc.Label:createWithSystemFont(s_CURRENT_USER:getNameForDisplay(),'',30)
+            local name = cc.Label:createWithSystemFont(s_CURRENT_USER:getNameForDisplay(),'',36)
             name:setAnchorPoint(0,1)
             name:setPosition(top:getContentSize().width * 0.4 + 30, top:getContentSize().height * 0.5 - 15)
             name:setColor(cc.c3b(92,130,140))
@@ -95,9 +96,9 @@ function PersonalInfo:ctor()
             title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
             title:setColor(colorArray[5 - i])
             intro:addChild(title)
-            target:begin()
+            target[i]:begin()
             intro:visit()
-            target:endToLua()
+            target[i]:endToLua()
             top:removeFromParent()
         end
 
@@ -106,8 +107,7 @@ function PersonalInfo:ctor()
                 addTop()
             end
             if eventType == ccui.TouchEventType.ended then
-                local png = string.format("image-%d-%d.png", i, counter)
-                target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+
                 -- local pImage = target:newImage()
 
                 -- local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
@@ -120,7 +120,9 @@ function PersonalInfo:ctor()
                 -- intro:addChild(sprite,10)
                 -- sprite:setPosition(cc.p(200, 400))
                 -- sprite:setRotation(counter * 3)
-                print('image is saved')
+                local SaveDataInfo = require('view.share.SaveDataInfo')
+                local saveDataInfo = SaveDataInfo.create(target[i],i)
+                self:addChild(saveDataInfo,20)
                 --print("Image saved %s and %s", png, jpg)
                 counter = counter + 1
             end
@@ -128,10 +130,10 @@ function PersonalInfo:ctor()
         share:addTouchEventListener(saveImage)
 
         -- create a render texture, this is what we are going to draw into
-        target = cc.RenderTexture:create(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
-        target:retain()
-        target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
-        intro:addChild(target,10)
+        target[i] = cc.RenderTexture:create(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
+        target[i]:retain()
+        target[i]:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
+        intro:addChild(target[i],10)
         
         table.insert(self.intro_array, intro)
         pageView:addPage(layout)
@@ -630,7 +632,7 @@ function PersonalInfo:login()
             
             if weekIndex > 0 and weekIndex <= #loginData_array and dayIndex > 0 and dayIndex <= 7 then
                 
-                if loginData_array[weekIndex][dayIndex] >= 1 then
+                if loginData_array[weekIndex][dayIndex] >= 1 and sDate <= nowDate then
                     --label:setColor(cc.c3b(255,255,255))
                     if loginData_array[weekIndex][dayIndex] > 1 then
                         table.insert(checkInList,label)

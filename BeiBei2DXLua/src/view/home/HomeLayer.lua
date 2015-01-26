@@ -338,8 +338,10 @@ function HomeLayer.create(share)
             
            if isDataShow then
                isDataShow = false
-               button_friend:setEnabled(true)
-               button_main:setEnabled(true)
+               layer:setButtonEnabled(true)
+               -- button_friend:setEnabled(true)
+               -- button_shop:setEnabled(true)
+               -- button_main:setEnabled(true)
                local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
                local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
@@ -348,15 +350,17 @@ function HomeLayer.create(share)
                button_data:runAction(cc.Sequence:create(action1, action2))
            else
                isDataShow = true
-               button_friend:setEnabled(false)
-               button_main:setEnabled(false)
+               layer:setButtonEnabled(false)
+               -- button_friend:setEnabled(false)
+               -- button_shop:setEnabled(false)
+               -- button_main:setEnabled(false)
                button_data:setLocalZOrder(2)
                button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                if true then
                    local PersonalInfo = require("view.PersonalInfo")
                    local personalInfoLayer = PersonalInfo.create()
                    personalInfoLayer:setPosition(-s_LEFT_X,0)
-                   data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
+                   data_back:addChild(personalInfoLayer,10,'PersonalInfo') 
                else
                    local Item_popup = require("popup/PopupModel")
                    local item_popup = Item_popup.create(Site_From_Information)  
@@ -378,13 +382,13 @@ function HomeLayer.create(share)
     data_back:setAnchorPoint(0.5,1)
     data_back:ignoreAnchorPointForPosition(false)  
     data_back:setPosition(button_data:getContentSize().width/2, 0)
-    button_data:addChild(data_back)
+    button_data:addChild(data_back,2)
     layer.dataBack = data_back
     
     local data_name = cc.Label:createWithSystemFont("数据","",28)
     data_name:setColor(cc.c4b(0,0,0,255))
     data_name:setPosition(button_data:getContentSize().width/2+30, button_data:getContentSize().height/2-5)
-    button_data:addChild(data_name)
+    button_data:addChild(data_name,0)
 
     -- setting ui
     setting_back = cc.Sprite:create("image/homescene/setup_background.png")
@@ -544,15 +548,17 @@ function HomeLayer.create(share)
         if start_y < 0.1 * s_DESIGN_HEIGHT and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
             if now_y - moveLength > start_y and not isDataShow and viewIndex == 1 then         
                    isDataShow = true
-                   button_friend:setEnabled(false)
-                   button_main:setEnabled(false)
+                   layer:setButtonEnabled(false)
+                   -- button_friend:setEnabled(false)
+                   -- button_shop:setEnabled(false)
+                   -- button_main:setEnabled(false)
                    button_data:setLocalZOrder(2)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                    if true then
                        local PersonalInfo = require("view.PersonalInfo")
                        local personalInfoLayer = PersonalInfo.create()
                        personalInfoLayer:setPosition(-s_LEFT_X,0)
-                       data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
+                       data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
                    else
                        local Item_popup = require("popup/PopupModel")
                        local item_popup = Item_popup.create(Site_From_Information)  
@@ -565,8 +571,10 @@ function HomeLayer.create(share)
         if start_y > s_DESIGN_HEIGHT - 280 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
             if now_y + moveLength < start_y and isDataShow and viewIndex == 1 then
                 isDataShow = false
-                button_friend:setEnabled(true)
-                button_main:setEnabled(true)
+                layer:setButtonEnabled(true)
+                -- button_friend:setEnabled(true)
+                -- button_shop:setEnabled(true)
+                -- button_main:setEnabled(true)
                 local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
                 local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
@@ -614,8 +622,7 @@ function HomeLayer.create(share)
                 return
             elseif viewIndex == 1 and location.y < 0.1 * s_DESIGN_HEIGHT then
                 isDataShow = true
-                   button_friend:setEnabled(false)
-                   button_main:setEnabled(false)
+                   layer:setButtonEnabled(false)
                    button_data:setLocalZOrder(2)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                    if true then
@@ -628,7 +635,7 @@ function HomeLayer.create(share)
                        local PersonalInfo = require("view.PersonalInfo")
                        local personalInfoLayer = PersonalInfo.create()
                        personalInfoLayer:setPosition(-s_LEFT_X,0)
-                       data_back:addChild(personalInfoLayer,0,'PersonalInfo') 
+                       data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
                    else
                        local Item_popup = require("popup/PopupModel")
                        local item_popup = Item_popup.create(Site_From_Information)  
@@ -638,8 +645,10 @@ function HomeLayer.create(share)
 
         elseif location.y >  s_DESIGN_HEIGHT-280 and (location.y == start_y and location.x == start_x) and viewIndex == 1 then
             isDataShow = false
-            button_friend:setEnabled(true)
-            button_main:setEnabled(true)
+            layer:setButtonEnabled(true)
+            -- button_friend:setEnabled(true)
+            -- button_shop:setEnabled(true)
+            -- button_main:setEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
             local action2 = cc.CallFunc:create(function()
                button_data:setLocalZOrder(0)
@@ -659,6 +668,11 @@ function HomeLayer.create(share)
     
     -- main pape  "First_Noel_pluto" 
     playMusic(s_sound_First_Noel_pluto,true)
+    layer.button_friend = button_friend
+    layer.button_shop = button_shop
+    layer.button_main = button_main
+    layer.button_sound = downloadSoundButton
+    layer.button_enter = mission_progress
 
     return layer
 end
@@ -670,7 +684,7 @@ function HomeLayer:showDataLayer(checkIn)
         local PersonalInfo = require("view.PersonalInfo")
         local personalInfoLayer = PersonalInfo.create(true)
         personalInfoLayer:setPosition(-s_LEFT_X,0)
-        self.dataBack:addChild(personalInfoLayer,0,'PersonalInfo') 
+        self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
     else
         local Item_popup = require("popup/PopupModel")
         local item_popup = Item_popup.create(Site_From_Information)  
@@ -685,6 +699,15 @@ function HomeLayer:hideDataLayer()
         self.dataBack:removeChildByName('PersonalInfo')
     end)
     self.dataButton:runAction(cc.Sequence:create(action1, action2))
+end
+
+function HomeLayer:setButtonEnabled(enabled)
+    self.button_friend:setEnabled(enabled)
+    self.button_shop:setEnabled(enabled)
+    self.button_main:setEnabled(enabled)
+    self.button_sound:setEnabled(enabled)
+    self.button_enter:setEnabled(enabled)
+
 end
 
 return HomeLayer

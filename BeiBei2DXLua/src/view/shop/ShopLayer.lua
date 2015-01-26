@@ -14,15 +14,15 @@ function ShopLayer.create()
     for i = 1, productNum do
         local state
         if s_DataManager.product[i].productName == 'friend' then
-            state = s_CURRENT_USER.p1
+            state = s_CURRENT_USER.friendFunction
         elseif s_DataManager.product[i].productName == 'data1' then
-            state = s_CURRENT_USER.p2
+            state = s_CURRENT_USER.dataFunction1
         elseif s_DataManager.product[i].productName == 'data2' then
-            state = s_CURRENT_USER.p3
+            state = s_CURRENT_USER.dataFunction2
         elseif s_DataManager.product[i].productName == 'data3' then
-            state = s_CURRENT_USER.p4
+            state = s_CURRENT_USER.dataFunction3
         elseif s_DataManager.product[i].productName == 'data4' then
-            state = s_CURRENT_USER.p5
+            state = s_CURRENT_USER.dataFunction4
         else
             state = 0
         end

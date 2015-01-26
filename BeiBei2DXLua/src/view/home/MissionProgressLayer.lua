@@ -130,6 +130,7 @@ function MissionProgressLayer.create(share)
     enterButton:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
     enterButton:addTouchEventListener(enterButtonClick)
     backProgress:addChild(enterButton)
+    layer.button = enterButton
     
     local line = cc.LayerColor:create(cc.c4b(0,0,0,0),1,150)
     line:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 - 20)
@@ -236,6 +237,10 @@ function MissionProgressLayer.create(share)
     layer:addChild(stackButton)
     
     return layer
+end
+
+function  MissionProgressLayer:setEnabled(enabled)
+    self.button:setEnabled(enabled)
 end
 
 return MissionProgressLayer
