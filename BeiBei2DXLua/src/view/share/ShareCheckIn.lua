@@ -84,6 +84,11 @@ function ShareCheckIn:ctor()
 	icon:setVisible(false)
 	self.icon = icon
 
+	local label = cc.Label:createWithSystemFont('贝贝单词','',20)
+	label:setPosition(0.5 * icon:getContentSize().width, - 0.25 * icon:getContentSize().height)
+	label:setColor(cc.c3b(127,57,0))
+	icon:addChild(label)
+
 	local target = cc.RenderTexture:create(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
     target:retain()
     target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
