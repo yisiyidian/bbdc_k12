@@ -54,7 +54,7 @@ start = function ()
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false -- TODO
         s_SERVER.production       = 1
-        Server.hasLog             = false
+        s_SERVER.hasLog             = false
         s_SERVER.closeNetwork     = false
 
         s_SERVER.appId = LEAN_CLOUD_ID
@@ -66,7 +66,7 @@ start = function ()
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false
         s_SERVER.production       = 0
-        Server.hasLog             = true
+        s_SERVER.hasLog             = true
 
         if RELEASE_APP == RELEASE_FOR_TEST then
             test_code = NORMAL_CODE

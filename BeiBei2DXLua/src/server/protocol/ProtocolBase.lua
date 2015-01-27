@@ -34,7 +34,7 @@ end
 function M:request()
     if self.api == nil then
         if self.callback then 
-            self.callback(nil, {['code']=65535, ['message']='API is nil', ['description']='API is nil'}) 
+            self.callback(nil, {['code']=MAX_ERROR_CODE, ['message']='API is nil', ['description']='API is nil'}) 
         else
 
         end

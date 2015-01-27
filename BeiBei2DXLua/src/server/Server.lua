@@ -1,5 +1,7 @@
 require("common.global")
 
+MAX_ERROR_CODE = 65535
+
 local Server = {}
 
 Server.debugLocalHost = false -- CQL can NOT debug at local host
@@ -38,18 +40,18 @@ end
 
 function Server.log(...)
     if Server.hasLog then 
-        print('\nServer.log >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        print('\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nServer.log')
         print(string.format(...)) 
-        print('Server.log <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
+        print('Server.log\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
     end
 end
 function Server.logLuaTable(api, luaTable, info)
     if Server.hasLog then 
-        print('\nServer.logLuaTable >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-        print(api)
-        print(info)
+        print('\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nServer.logLuaTable')
+        print('***  ' .. info .. '  ***')
+        print('###  ' .. api .. '  ###')
         print_lua_table(luaTable)
-        print('Server.logLuaTable <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
+        print('Server.logLuaTable\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
     end
 end
 -- api : string
@@ -73,7 +75,7 @@ function Server.request(api, t, parameters, callback)
         params['datas'] = paraStr
     end
 
-    Server.logLuaTable(api, parameters, 'request raw')
+    Server.logLuaTable(api, parameters, 'request PARAMETERS')
 
     local request = cx.CXAVCloud:new()
     request:callAVCloudFunction('cld', s_JSON.encode(params), function (response, error)
@@ -81,11 +83,11 @@ function Server.request(api, t, parameters, callback)
         callback = callback or cb
         if error then
             local err = s_JSON.decode(error)
-            callback(nil, err.result)
-            Server.logLuaTable(api, err.result, 'response error')
+            callback(nil, err)
+            Server.logLuaTable(api, err, 'response ERROR')
         else
-            local responseObj = s_JSON.decode(response)
-            local result = responseObj.result
+            local result = s_JSON.decode(response)
+            Server.logLuaTable(api, result, 'response SERVER')
             -- decode
             if result.t and result.datas ~= nil then 
                 local datasStr = cx.CXUtils:getInstance():base64DecodeAndDecompressString(result.datas)
@@ -95,7 +97,7 @@ function Server.request(api, t, parameters, callback)
             if result.datas ~= nil and type(result.datas) == 'string' then
                 result.datas = s_JSON.decode(result.datas)
             end
-            Server.logLuaTable(api, result, 'response')
+            Server.logLuaTable(api, result, 'response DECODED')
             callback(result, nil)
         end
     end)

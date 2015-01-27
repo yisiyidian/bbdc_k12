@@ -214,8 +214,10 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
 
     if s_CURRENT_USER.username ~= username then
 
-        UserBaseServer.isUserNameExist(username, function (api, result)
-            if result.count <= 0 then
+        isUsernameExist(username, function (exist, error)
+            if error then
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, error.description, error.code)
+            elseif not exist then
                 local obj = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['username']=username}
                 UserBaseServer.saveDataObjectOfCurrentUser(obj, 
                     function (api, result) 
@@ -228,11 +230,8 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                     end
                 )
             else
-                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), 65535)
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), MAX_ERROR_CODE)
             end
-        end,
-        function (api, code, message, description)
-            onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
         end)
 
     else
@@ -279,15 +278,6 @@ function UserBaseServer.searchUserByNickName(nickName, onSucceed, onFailed)
     else
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
         if onFailed ~= nil then onFailed('searchUserByNickName', -1, '', '') end
-    end
-end
-
-function UserBaseServer.isUserNameExist(username, onSucceed, onFailed)
-    if s_SERVER.isNetworkConnectedNow() then
-        s_SERVER.searchCount('_User', '{"username":"' .. username .. '"}', onSucceed, onFailed)
-    else
-        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlinetip)
-        if onFailed ~= nil then onFailed('isUserNameExist', -1, '', '') end
     end
 end
 

@@ -196,18 +196,17 @@ function O2OController.signUpWithRandomUserName()
         s_CURRENT_USER.usertype = USER_TYPE_GUEST
         O2OController.signUpOffline(randomUserName, PASSWORD)
     else
-        s_UserBaseServer.isUserNameExist(randomUserName, function (api, result)
-            if result.count <= 0 then -- not exist the user name
+        isUsernameExist(randomUserName, function (exist, error)
+            if error then
+                s_TIPS_LAYER:showSmall(error.message)
+                hideProgressHUD()
+            elseif not exist then -- not exist the user name
                 s_CURRENT_USER.usertype = USER_TYPE_GUEST
                 O2OController.signUpOnline(randomUserName, PASSWORD)
                 AnalyticsSignUp_Guest()
             else -- exist the user name
                 O2OController.signUpWithRandomUserName()
             end
-        end,
-        function (api, code, message, description)
-            s_TIPS_LAYER:showSmall(message)
-            hideProgressHUD()
         end)
     end
 end
