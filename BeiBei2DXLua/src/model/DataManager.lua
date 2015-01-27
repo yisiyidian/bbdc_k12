@@ -33,7 +33,6 @@ function DataManager.clear()
     DataManager.level_toefl = nil
     DataManager.reviewBoos = nil
     DataManager.starRules = nil
-    DataManager.dailyCheckIn = nil
     DataManager.product = nil
 end
 
@@ -48,7 +47,6 @@ s_friend_max_count = 50
 s_allwords = "cfg/newwords.json"
 s_books = 'cfg/books.json'
 s_chapters = 'cfg/chapters.json'
-s_daily = 'cfg/dailyCheckIn.json'
 s_energy = 'cfg/energy.json'
 s_items = 'cfg/items.json'
 local getLevelConfigFilePath = function (bookkey) return string.format('cfg/lv_%s.json', bookkey) end
@@ -200,23 +198,6 @@ function DataManager.loadChapters()
                                     data['NameImage'],
                                     data['Name'])
         DataManager.chapters[i] = chapter
-    end
-end
-
--- dailyCheckIn -------------------------------------------------------------------
-
-function DataManager.loadDailyCheckIns()
-    local jsonObj = loadJsonFile(s_daily)
-    local jsonArr = jsonObj['dailyCheckIn']
-    local MetaDailyCheckIn = require("model.meta.MetaDailyCheckIn")
-    DataManager.dailyCheckIn = {}
-    for i = 1, #jsonArr do 
-        local data = jsonArr[i]
-        local dailyCheckIn = MetaDailyCheckIn.create(data['day'],
-                                    data['itemKey'],
-                                    data['count'],
-                                    data['default_word'])
-        DataManager.dailyCheckIn[i] = dailyCheckIn
     end
 end
 

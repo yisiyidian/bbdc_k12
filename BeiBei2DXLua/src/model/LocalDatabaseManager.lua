@@ -5,12 +5,6 @@ MAXTYPEINDEX = 5
 require("common.global")
 local sqlite3 = require("lsqlite3")
 
--- useless
-local DataDailyCheckIn = require('model.user.DataDailyCheckIn')
-local DataDailyWord = require('model.user.DataDailyWord')
-local DataIAP = require('model.user.DataIAP')
-local DataLevel = require('model.user.DataLevel')
-
 local DataLogIn = require('model.user.DataLogIn')
 local DataUser = require('model.user.DataUser')
 local DataLevelInfo = require('model.user.DataLevelInfo')
@@ -24,11 +18,6 @@ local DataWrongWordBuffer = require('model.user.DataWrongWordBuffer')
 local DataBossWord = require('model.user.DataBossWord')
 
 local databaseTables = {
-        DataDailyCheckIn,
-        DataDailyWord,
-        DataIAP,
-        DataLevel,
-
         DataLogIn,
         DataUser,
         DataLevelInfo,
