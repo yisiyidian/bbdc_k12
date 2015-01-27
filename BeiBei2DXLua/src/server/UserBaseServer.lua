@@ -57,7 +57,7 @@ local function parseServerUser( objectjson )
     local user = s_JSON.decode(objectjson)
     s_CURRENT_USER.sessionToken = user.sessionToken
     s_SERVER.sessionToken = user.sessionToken
-    parseServerDataToUserData(user, s_CURRENT_USER)
+    parseServerDataToClientData(user, s_CURRENT_USER)
     return true
 end
 
@@ -342,7 +342,7 @@ end
 
 function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFailed)
     local s = function (api, result)
-        parseServerDataToUserData(result, dataObject)
+        parseServerDataToClientData(result, dataObject)
         if onSucceed ~= nil then onSucceed(api, result) end
     end
     
@@ -519,7 +519,7 @@ function UserBaseServer.synTodayDailyStudyInfo(data, onCompleted, saveToLocalDB)
 
             local timestamp = result['lastUpdate']
             if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
-                parseServerDataToUserData(result, data)
+                parseServerDataToClientData(result, data)
                 s_LocalDatabaseManager.saveDataDailyStudyInfo(data)
             end
 

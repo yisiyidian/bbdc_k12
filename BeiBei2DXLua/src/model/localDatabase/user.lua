@@ -37,7 +37,7 @@ function M.getUserDataFromLocalDB(objectOfDataClass, usertype)
                 data.usertype = USER_TYPE_MANUAL
             end
         end
-        parseLocalDatabaseToUserData(data, objectOfDataClass)     
+        parseLocalDBDataToClientData(data, objectOfDataClass)     
         return true
     end
 

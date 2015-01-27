@@ -38,6 +38,11 @@ end
 
 -- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
 
+SERVER_REQUEST_TYPE_NORMAL           = 0 --   0
+SERVER_REQUEST_TYPE_CLIENT_ENCODE    = 1 --   1
+SERVER_REQUEST_TYPE_CLIENT_DECODE    = 2 --  10
+SERVER_REQUEST_TYPE_NO_RESPONSE_DATA = 4 -- 100
+
 function Server.log(...)
     if Server.hasLog then 
         print('\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nServer.log')
@@ -55,27 +60,24 @@ function Server.logLuaTable(api, luaTable, info)
     end
 end
 -- api : string
--- t : bool
+-- serverRequestType
 -- parameters : table
 -- callback : function (result, error) 
---                   -> result: {['api']=api, ['t']=t, ['datas']=datas} -- datas is a table
+--                   -> result: {['api']=api, ['t']=serverRequestType, ['datas']=datas} -- datas is a table
 --                   -> error: {['code']=code, ['message']=message, ['description']=description}
-function Server.request(api, t, parameters, callback)
+function Server.request(api, serverRequestType, parameters, callback)
     local paraStr = nil
     if parameters ~= nil then paraStr = s_JSON.encode(parameters) end
-    if t and paraStr ~= nil then 
+    if math["and"](serverRequestType, SERVER_REQUEST_TYPE_CLIENT_ENCODE) > 0 and paraStr ~= nil then 
         paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
     end
-    local params = {['api']=api}
-    if t then
-        params['t'] = t
-    end
+    local params = {['api']=api, ['t'] = serverRequestType}
     if paraStr ~= nil then
         -- datas is a string
         params['datas'] = paraStr
     end
 
-    Server.logLuaTable(api, parameters, 'request PARAMETERS')
+    Server.logLuaTable(api, params, 'request PARAMS')
 
     local request = cx.CXAVCloud:new()
     request:callAVCloudFunction('cld', s_JSON.encode(params), function (response, error)
@@ -89,7 +91,7 @@ function Server.request(api, t, parameters, callback)
             local result = s_JSON.decode(response)
             Server.logLuaTable(api, result, 'response SERVER')
             -- decode
-            if result.t and result.datas ~= nil then 
+            if result.t and math["and"](result.t, SERVER_REQUEST_TYPE_CLIENT_DECODE) > 0 and result.datas ~= nil then 
                 local datasStr = cx.CXUtils:getInstance():base64DecodeAndDecompressString(result.datas)
                 result.datas = s_JSON.decode(datasStr)
             end

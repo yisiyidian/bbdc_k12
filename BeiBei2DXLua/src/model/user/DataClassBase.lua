@@ -1,5 +1,5 @@
 
-local function getSecondsFromString(srcDateTime)  
+function getSecondsFromString(srcDateTime)  
     -- Compute the difference in seconds between local time and UTC.
     local function get_timezone()
       local now = os.time()
@@ -32,7 +32,7 @@ function getLocalSeconds()
     return os.time()
 end
 
-function parseServerDataToUserData(serverdata, userdata)
+function parseServerDataToClientData(serverdata, userdata)
     if serverdata == nil or userdata == nil then return end
     
     for key, value in pairs(userdata) do
@@ -51,7 +51,7 @@ function parseServerDataToUserData(serverdata, userdata)
     end
 end
 
-function parseLocalDatabaseToUserData(localdb, userdata)
+function parseLocalDBDataToClientData(localdb, userdata)
     for key, value in pairs(localdb) do
         userdata[key] = localdb[key]
     end

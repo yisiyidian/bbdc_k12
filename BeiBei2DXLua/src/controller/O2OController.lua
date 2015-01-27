@@ -123,7 +123,7 @@ function O2OController.startLoadingData(userStartType, username, password)
     local isLocalNewerThenServer = false
 
     local function onResponse(u, e, code)
-
+        -- u is s_CURRENT_USER and u is server data
         if e == nil and s_CURRENT_USER.tutorialStep == 0 then 
             AnalyticsTutorial(0)
             AnalyticsSmallTutorial(0)
@@ -148,19 +148,21 @@ function O2OController.startLoadingData(userStartType, username, password)
                 tmpUser.objectId = s_CURRENT_USER.objectId
                 tmpUser.userId = s_CURRENT_USER.objectId
                 tmpUser.sessionToken = s_CURRENT_USER.sessionToken
-                s_CURRENT_USER = tmpUser
-                print ('\n\n\nisLocalNewerThenServer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-                print_lua_table (s_CURRENT_USER)
-                print ('isLocalNewerThenServer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n\n')
-                s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, username)
-                s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, 
-                    function (api, result) 
-                        O2OController.getUserDatasOnline()
-                    end, 
-                    function (api, code, message, description)
-                        O2OController.getUserDatasOnline()
+
+                synUserAfterLogIn(tmpUser, s_CURRENT_USER, function (updatedAt, error)
+                    if error == nil then
+                        tmpUser.updatedAt = getSecondsFromString(updatedAt)
                     end
-                )
+                    s_CURRENT_USER = tmpUser
+                    
+                    print ('\n\n\nisLocalNewerThenServer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+                    print_lua_table (s_CURRENT_USER)
+                    print ('isLocalNewerThenServer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n\n\n')
+
+                    s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, username)
+                    O2OController.getUserDatasOnline()
+                end)
+                
             else
                 O2OController.getUserDatasOnline()
             end
@@ -312,7 +314,7 @@ function O2OController.getDataLevelInfo(oncompleted)
 
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
         if lastLocalData ~= nil then
-            parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.levelInfo)
+            parseLocalDBDataToClientData(lastLocalData, s_CURRENT_USER.levelInfo)
         else
             s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.levelInfo)
         end
@@ -332,7 +334,7 @@ function O2OController.getDataLevelInfo(oncompleted)
             -- send local to server
             lastLocalData.objectId = s_CURRENT_USER.levelInfo.objectId
             updateDataFromUser(lastLocalData, s_CURRENT_USER)
-            parseLocalDatabaseToUserData(lastLocalData, s_CURRENT_USER.levelInfo)
+            parseLocalDBDataToClientData(lastLocalData, s_CURRENT_USER.levelInfo)
             s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.levelInfo)
         else
             -- save server to local
@@ -414,7 +416,7 @@ function O2OController.getDataLogIn(onSaved)
         -- for i, v in ipairs(localDatas) do
         --     if v.week == currentWeeks then
         --         localCurrentData = DataLogIn.create()
-        --         parseLocalDatabaseToUserData(v, localCurrentData)
+        --         parseLocalDBDataToClientData(v, localCurrentData)
         --         break
         --     end
         -- end

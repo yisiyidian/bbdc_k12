@@ -144,7 +144,7 @@ function M.getDataDailyStudyInfo(dayString)
 
     if dbData ~= nil then
         local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate, dbData.ordinalNum)
-        parseLocalDatabaseToUserData(dbData, data)
+        parseLocalDBDataToClientData(dbData, data)
         return data
     end
     return nil

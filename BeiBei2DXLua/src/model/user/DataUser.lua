@@ -231,7 +231,7 @@ function DataUser:parseServerDataLogIn(results)
    self.logInDatas = {}
    for i, v in ipairs(results) do
        local data = DataLogIn.create()
-       parseServerDataToUserData(v, data)
+       parseServerDataToClientData(v, data)
        self.logInDatas[i] = data
        print_lua_table(data)
    end 
@@ -239,7 +239,7 @@ end
 
 function DataUser:parseServerDataLevelInfo(results)
     for i, v in ipairs(results) do
-        parseServerDataToUserData(v, self.levelInfo)
+        parseServerDataToClientData(v, self.levelInfo)
         return self.levelInfo
     end 
 end
@@ -261,7 +261,7 @@ function DataUser:parseServerFolloweesData(results)
     self.followees = {}
     for i, v in ipairs(results) do
         local data = DataUser.create()
-        parseServerDataToUserData(v.followee, data)
+        parseServerDataToClientData(v.followee, data)
         self.followees[i] = data
     end
 end
@@ -271,7 +271,7 @@ function DataUser:parseServerFollowersData(results)
     self.followers = {}
     for i, v in ipairs(results) do
         local data = DataUser.create()
-        parseServerDataToUserData(v.follower, data)
+        parseServerDataToClientData(v.follower, data)
         self.followers[i] = data
     end
 end
