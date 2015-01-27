@@ -13,10 +13,15 @@ function isUsernameExist(username, callback)
     protocol:request()
 end
 
+function synUser()
+end
+
 -- 1 data/book
--- 'DataCurrentIndex', 'DataNewPlayState', 'DataTodayReviewBossNum'
+-- DataCurrentIndex 
+-- DataNewPlayState
+-- DataTodayReviewBossNum
 function syn( ... )
-    -- body
+
 end
 
 -- 1 data
@@ -27,6 +32,8 @@ end
 -- DataDailyStudyInfo
 -- DataLogIn
 
--- 1 data/book DataWrongWordBuffer
+-- 1 data/book 
+-- DataWrongWordBuffer
+
 -- 20 words, book
 -- DataBossWord

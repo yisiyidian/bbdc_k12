@@ -66,7 +66,7 @@ function Server.request(api, t, parameters, callback)
     if t and paraStr ~= nil then 
         paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
     end
-    local params = {['api']=api, ['t']=t}
+    local params = {['api']=api}
     if t then
         params['t'] = t
     end
