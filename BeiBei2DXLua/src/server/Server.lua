@@ -1,5 +1,7 @@
 require("common.global")
 
+MAX_ERROR_CODE = 65535
+
 local Server = {}
 
 Server.debugLocalHost = false -- CQL can NOT debug at local host
@@ -9,6 +11,7 @@ Server.appId = ''
 Server.appKey = ''
 Server.sessionToken = ''
 Server.useNativeLeanCloudSDK = true
+Server.hasLog = false
 
 CONTENT_TYPE_JSON = 'application/json'
 CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -35,35 +38,58 @@ end
 
 -- *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
 
+function Server.log(...)
+    if Server.hasLog then 
+        print('\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nServer.log')
+        print(string.format(...)) 
+        print('Server.log\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
+    end
+end
+function Server.logLuaTable(api, luaTable, info)
+    if Server.hasLog then 
+        print('\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\nServer.logLuaTable')
+        print('***  ' .. info .. '  ***')
+        print('###  ' .. api .. '  ###')
+        print_lua_table(luaTable)
+        print('Server.logLuaTable\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
+    end
+end
 -- api : string
--- isEncoded : bool
+-- t : bool
 -- parameters : table
--- callback : function (result, error)
--- datas is a string
-function Server.request(api, isEncoded, parameters, callback)
+-- callback : function (result, error) 
+--                   -> result: {['api']=api, ['t']=t, ['datas']=datas} -- datas is a table
+--                   -> error: {['code']=code, ['message']=message, ['description']=description}
+function Server.request(api, t, parameters, callback)
     local paraStr = nil
     if parameters ~= nil then paraStr = s_JSON.encode(parameters) end
-    if isEncoded and paraStr ~= nil then 
+    if t and paraStr ~= nil then 
         paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
     end
-    local params = {['api']=api, ['isEncoded']=isEncoded}
-    if isEncoded then
-        params['isEncoded'] = isEncoded
+    local params = {['api']=api, ['t']=t}
+    if t then
+        params['t'] = t
     end
     if paraStr ~= nil then
+        -- datas is a string
         params['datas'] = paraStr
     end
 
+    Server.logLuaTable(api, parameters, 'request PARAMETERS')
+
     local request = cx.CXAVCloud:new()
-    request:callAVCloudFunction('cld', s_JSON.encode(params), function (result, error)
+    request:callAVCloudFunction('cld', s_JSON.encode(params), function (response, error)
         local cb = function (result, error) end
         callback = callback or cb
         if error then
-            callback(result, s_JSON.decode(error))
+            local err = s_JSON.decode(error)
+            callback(nil, err)
+            Server.logLuaTable(api, err, 'response ERROR')
         else
-            result = s_JSON.decode(result)
+            local result = s_JSON.decode(response)
+            Server.logLuaTable(api, result, 'response SERVER')
             -- decode
-            if isEncoded and result.datas ~= nil then 
+            if result.t and result.datas ~= nil then 
                 local datasStr = cx.CXUtils:getInstance():base64DecodeAndDecompressString(result.datas)
                 result.datas = s_JSON.decode(datasStr)
             end
@@ -71,6 +97,7 @@ function Server.request(api, isEncoded, parameters, callback)
             if result.datas ~= nil and type(result.datas) == 'string' then
                 result.datas = s_JSON.decode(result.datas)
             end
+            Server.logLuaTable(api, result, 'response DECODED')
             callback(result, nil)
         end
     end)

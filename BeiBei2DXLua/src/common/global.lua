@@ -124,6 +124,8 @@ local function _initServer()
     s_SERVER.production       = 0
     s_SERVER.sessionToken     = ''
 
+    reloadModule('server.protocol.protocols')
+    
     -- user base server
     s_UserBaseServer          = reloadModule('server.UserBaseServer')
     s_HttpRequestClient       = reloadModule('server.HttpRequestClient')

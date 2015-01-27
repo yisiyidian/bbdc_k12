@@ -1,8 +1,8 @@
 
 -- *************************************
 
-local app_version_debug   = 170001
-local app_version_release = 170000
+local app_version_debug   = 180000
+local app_version_release = 180000
 
 -- All test code must in example.example
 local TEST_CODE   = 1 -- constant value
@@ -50,22 +50,23 @@ start = function ()
         test_code = NORMAL_CODE
 
         s_debugger.configLog(false, false)
-        DEBUG_PRINT_LUA_TABLE = false
+        DEBUG_PRINT_LUA_TABLE     = false
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false -- TODO
         s_SERVER.production       = 1
-
-        s_SERVER.closeNetwork = false
+        s_SERVER.hasLog             = false
+        s_SERVER.closeNetwork     = false
 
         s_SERVER.appId = LEAN_CLOUD_ID
         s_SERVER.appKey = LEAN_CLOUD_KEY
 
     else
         s_debugger.configLog(true, true)
-        DEBUG_PRINT_LUA_TABLE = true
+        DEBUG_PRINT_LUA_TABLE     = true
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false
         s_SERVER.production       = 0
+        s_SERVER.hasLog             = true
 
         if RELEASE_APP == RELEASE_FOR_TEST then
             test_code = NORMAL_CODE

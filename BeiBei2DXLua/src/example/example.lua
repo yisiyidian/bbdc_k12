@@ -7,8 +7,17 @@ require("common.global")
 local ziaoangTest       = require("view.ZiaoangTest")
 local ScrollViewTest    = require("view.ScrollviewTest")
 
+require('server.protocol.protocols')
+
 function test()
-    cx.CXUtils:getInstance():_testCppApi_()
+    local username = 'tester112'
+    isUsernameExist(username, function (exsit, error)
+        if error == nil then
+            print (username .. ' ' .. tostring(exsit))
+        end
+    end)
+
+    -- cx.CXUtils:getInstance():_testCppApi_()
     
     --local test = ziaoangTest.create()
     --s_SCENE:replaceGameLayer(test)
