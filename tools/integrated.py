@@ -92,6 +92,9 @@ VER=$DATE"_"$BRANCH"_"$VER"_"$(git rev-list HEAD -n 1 | cut -c 1-7)
 echo $VER
 
 python exportCodes.py $APPTYPE $VER ${LUA_CODE} ${OBJC_CODE} ${JAVA_CODE} $CHANNEL_NAME $CHANNEL_CONFIGS $ANDROID_MANIFEST $ANDROID_MANIFEST_TARGET $APP_ACTIVITY $APP_ACTIVITY_NAME $JAVA_SRC
+
+cd ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/
+ant clean
 ''' % os.getcwd()
     return cmd
 

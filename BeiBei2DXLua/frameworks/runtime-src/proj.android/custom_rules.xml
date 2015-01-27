@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="custom_rules" default="release">
+<target name="-pre-compile">
+    <echo message="JARPATH=${toString:project.all.jars.path}"></echo>
+
+    <property name="libs3rd.dir" value="${jar.libs.dir}"></property>
+    <path id="libs3rd.lib">
+        <path path="${toString:project.all.jars.path}"></path>
+        <pathelement location="${libs3rd.dir}/android-async-http-1.4.6.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/avoscloud-v2.6.9.2.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/avossns-v2.6.9.2.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/avosstatistics-v2.6.9.2.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/fastjson.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/httpmime-4.2.4.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/libPluginProtocol.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/umeng-analytics-v5.2.4.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/open_sdk_r4346_lite.jar"></pathelement>
+    </path>
+
+    <path id="project.all.jars.path">
+        <path refid="libs3rd.lib"></path>
+    </path>
+
+    <echo message="JARPATH=${toString:project.all.jars.path}"></echo>
+</target>
+</project>
