@@ -61,7 +61,7 @@ Manager.database = nil
 
 -- connect local sqlite
 function Manager.init()
-    local databasePath = cc.FileUtils:getInstance():getWritablePath() .. "localDB.sqlite"
+    local databasePath = cc.FileUtils:getInstance():getWritablePath() .. "localDB.sqlite" -- TODO
     Manager.database = sqlite3.open(databasePath)
     print ('databasePath:' .. databasePath)
 

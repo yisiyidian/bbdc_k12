@@ -53,21 +53,23 @@ function Server.logLuaTable(api, luaTable, info)
     end
 end
 -- api : string
--- isEncoded : bool
+-- t : bool
 -- parameters : table
--- callback : function (response, error), response {"result":{...}}
--- datas is a string
-function Server.request(api, isEncoded, parameters, callback)
+-- callback : function (result, error) 
+--                   -> result: {['api']=api, ['t']=t, ['datas']=datas} -- datas is a table
+--                   -> error: {['code']=code, ['message']=message, ['description']=description}
+function Server.request(api, t, parameters, callback)
     local paraStr = nil
     if parameters ~= nil then paraStr = s_JSON.encode(parameters) end
-    if isEncoded and paraStr ~= nil then 
+    if t and paraStr ~= nil then 
         paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
     end
-    local params = {['api']=api, ['isEncoded']=isEncoded}
-    if isEncoded then
-        params['isEncoded'] = isEncoded
+    local params = {['api']=api, ['t']=t}
+    if t then
+        params['t'] = t
     end
     if paraStr ~= nil then
+        -- datas is a string
         params['datas'] = paraStr
     end
 
@@ -79,13 +81,13 @@ function Server.request(api, isEncoded, parameters, callback)
         callback = callback or cb
         if error then
             local err = s_JSON.decode(error)
-            callback(result, err)
-            Server.logLuaTable(api, err, 'response error')
+            callback(nil, err.result)
+            Server.logLuaTable(api, err.result, 'response error')
         else
             local responseObj = s_JSON.decode(response)
             local result = responseObj.result
             -- decode
-            if result.isEncoded and result.datas ~= nil then 
+            if result.t and result.datas ~= nil then 
                 local datasStr = cx.CXUtils:getInstance():base64DecodeAndDecompressString(result.datas)
                 result.datas = s_JSON.decode(datasStr)
             end
