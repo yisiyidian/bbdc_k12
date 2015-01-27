@@ -244,7 +244,26 @@ function HomeLayer.create(share)
     button_shop:setTitleFontSize(40)
     button_shop:addTouchEventListener(button_shop_clicked)
     backColor:addChild(button_shop)   
+    
+    local button_reward_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            playSound(s_sound_buttonEffect)
+            
+        elseif eventType == ccui.TouchEventType.ended then
 
+            local Loginreward = require("view.loginreward.LoginRewardPopup")
+            local loginreward = Loginreward:create()
+            s_SCENE:popup(loginreward)
+        end
+    end
+    
+    local button_reward = ccui.Button:create("image/homescene/main_friends.png","","")
+    button_reward:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-280)
+    button_reward:setColor(cc.c4b(0,0,0,255))
+    button_reward:setTitleText("$_$")
+    button_reward:setTitleFontSize(30)
+    button_reward:addTouchEventListener(button_reward_clicked)
+    backColor:addChild(button_reward)   
 
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
