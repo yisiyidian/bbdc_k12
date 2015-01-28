@@ -8,7 +8,7 @@ end)
 
 local button_sure
 
-function ShopAlter.create(itemId)
+function ShopAlter.create(itemId, location)
     local state = s_CURRENT_USER:getLockFunctionState(itemId)
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
@@ -22,9 +22,15 @@ function ShopAlter.create(itemId)
             s_CURRENT_USER:unlockFunctionState(itemId)
             s_CURRENT_USER:updateDataToServer()
             
-            local ShopLayer = require("view.shop.ShopLayer")
-            local shopLayer = ShopLayer.create()
-            s_SCENE:replaceGameLayer(shopLayer)
+            main:removeFromParent()
+            
+            if location == 'in' then
+                local ShopLayer = require("view.shop.ShopLayer")
+                local shopLayer = ShopLayer.create()
+                s_SCENE:replaceGameLayer(shopLayer)
+            else
+                
+            end
         else
             local shopErrorAlter = ShopErrorAlter.create()
             shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
@@ -32,7 +38,13 @@ function ShopAlter.create(itemId)
         end
     end
 
-    local back = cc.Sprite:create("image/shop/alter_back.png")
+    
+    local back
+    if location == 'out' then
+        back = cc.Sprite:create("image/shop/alter_back_out.png")
+    else
+        back = cc.Sprite:create("image/shop/alter_back_in.png")
+    end
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 
