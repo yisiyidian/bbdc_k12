@@ -328,8 +328,8 @@ end
 
 ----
 ---- handle offline in O2O
-function UserBaseServer.getDataLogIn(userId, week, onSucceed, onFailed)
-    s_SERVER.search('classes/DataLogIn?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
+function UserBaseServer.getDataEverydayInfo(userId, week, onSucceed, onFailed)
+    s_SERVER.search('classes/DataEverydayInfo?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
 end
 
 ----

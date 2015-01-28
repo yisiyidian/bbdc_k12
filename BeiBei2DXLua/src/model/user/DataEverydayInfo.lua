@@ -1,11 +1,11 @@
 local DataClassBase = require('model.user.DataClassBase')
 
-local DataLogIn = class("DataLogIn", function()
+local DataEverydayInfo = class("DataEverydayInfo", function()
     return DataClassBase.new()
 end)
 
-function DataLogIn.create()
-    local data = DataLogIn.new()
+function DataEverydayInfo.create()
+    local data = DataEverydayInfo.new()
     return data
 end
 
@@ -13,8 +13,8 @@ WEEKDAYSTATE_NONE = 0
 WEEKDAYSTATE_LOGEDIN = 1
 WEEKDAYSTATE_CHECKEDIN = 2
 
-function DataLogIn:ctor()
-    self.className = 'DataLogIn'
+function DataEverydayInfo:ctor()
+    self.className = 'DataEverydayInfo'
     
     self.Monday = WEEKDAYSTATE_NONE
     self.Tuesday = WEEKDAYSTATE_NONE
@@ -38,34 +38,34 @@ function getCurrentLogInWeek(offsetSeconds_1stPlay_now)
     return math.ceil(ret)
 end
 
-local function setWeekDayState(dataLogIn, secondsFrom1970, weekDayState)
+local function setWeekDayState(DataEverydayInfo, secondsFrom1970, weekDayState)
     local wd = getWeekDay(secondsFrom1970)
     if wd == 1 then
-        dataLogIn.Sunday = weekDayState
+        DataEverydayInfo.Sunday = weekDayState
     elseif wd == 2 then
-        dataLogIn.Monday = weekDayState
+        DataEverydayInfo.Monday = weekDayState
     elseif wd == 3 then
-        dataLogIn.Tuesday = weekDayState
+        DataEverydayInfo.Tuesday = weekDayState
     elseif wd == 4 then
-        dataLogIn.Wednesday = weekDayState
+        DataEverydayInfo.Wednesday = weekDayState
     elseif wd == 5 then
-        dataLogIn.Thursday = weekDayState
+        DataEverydayInfo.Thursday = weekDayState
     elseif wd == 6 then
-        dataLogIn.Friday = weekDayState
+        DataEverydayInfo.Friday = weekDayState
     elseif wd == 7 then
-        dataLogIn.Saturday = weekDayState
+        DataEverydayInfo.Saturday = weekDayState
     end
 end
 
-function DataLogIn:setWeekDay(secondsFrom1970)
+function DataEverydayInfo:setWeekDay(secondsFrom1970)
     setWeekDayState(self, secondsFrom1970, WEEKDAYSTATE_LOGEDIN)
 end
 
-function DataLogIn:checkIn(secondsFrom1970)
+function DataEverydayInfo:checkIn(secondsFrom1970)
     setWeekDayState(self, secondsFrom1970, WEEKDAYSTATE_CHECKEDIN)
 end
 
-function DataLogIn:getDays()
+function DataEverydayInfo:getDays()
     return {self.Monday,
     self.Tuesday,
     self.Wednesday,
@@ -75,17 +75,17 @@ function DataLogIn:getDays()
     self.Sunday}
 end
 
-function DataLogIn:updateFrom(otherDataLogIn)
-    if otherDataLogIn.updatedAt < self.updatedAt then
+function DataEverydayInfo:updateFrom(otherDataEverydayInfo)
+    if otherDataEverydayInfo.updatedAt < self.updatedAt then
         return false
     end
     local keys = {'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'}
     for i, v in ipairs(keys) do
-        if otherDataLogIn[v] > 0 then
+        if otherDataEverydayInfo[v] > 0 then
             self[v] = 1
         end
     end
     return true
 end
 
-return DataLogIn
+return DataEverydayInfo

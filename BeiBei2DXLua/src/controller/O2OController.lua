@@ -220,7 +220,7 @@ function O2OController.signUpOffline(username, password)
 
     O2OController.loadConfigs()
     O2OController.getDataLevelInfo()
-    O2OController.getDataLogIn()
+    O2OController.getDataEverydayInfo()
 
     s_CorePlayManager.enterBookLayer()
 
@@ -230,7 +230,7 @@ end
 function O2OController.logInOffline()
     O2OController.loadConfigs()
     O2OController.getDataLevelInfo()
-    O2OController.getDataLogIn()
+    O2OController.getDataEverydayInfo()
 
     if s_CURRENT_USER.bookKey == '' then
         s_CorePlayManager.enterBookLayer()
@@ -246,7 +246,7 @@ end
 function O2OController.getUserDatasOnline()
     O2OController.loadConfigs()
     O2OController.getDataLevelInfo(function () 
-        O2OController.getDataLogIn(function ()
+        O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
             else
@@ -368,8 +368,8 @@ function O2OController.getDataLevelInfo(oncompleted)
     end
 end -- O2OController.getDataLevelInfo(oncompleted)
 
-function O2OController.getDataLogIn(onSaved)
-    local DataLogIn = require('model.user.DataLogIn')
+function O2OController.getDataEverydayInfo(onSaved)
+    local DataEverydayInfo = require('model.user.DataEverydayInfo')
 
     local function onUpdateWeekCompleted(data)
         hideProgressHUD()
@@ -380,7 +380,7 @@ function O2OController.getDataLogIn(onSaved)
     -- save to local or server
     local function updateWeek(data, week)
         if data == nil then 
-            data = DataLogIn.create()
+            data = DataEverydayInfo.create()
             s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
         end
         updateDataFromUser(data, s_CURRENT_USER)
@@ -398,7 +398,7 @@ function O2OController.getDataLogIn(onSaved)
         end
     end
 
-    local className = 'DataLogIn'
+    local className = 'DataEverydayInfo'
     local localDatas = s_LocalDatabaseManager.getDatas(className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
 
     if s_CURRENT_USER.localTime == 0 then
@@ -415,7 +415,7 @@ function O2OController.getDataLogIn(onSaved)
         local localCurrentData = nil
         -- for i, v in ipairs(localDatas) do
         --     if v.week == currentWeeks then
-        --         localCurrentData = DataLogIn.create()
+        --         localCurrentData = DataEverydayInfo.create()
         --         parseLocalDBDataToClientData(v, localCurrentData)
         --         break
         --     end
@@ -428,9 +428,9 @@ function O2OController.getDataLogIn(onSaved)
                 updateWeek(nil, currentWeeks)
             end
         else -- online
-            s_UserBaseServer.getDataLogIn(s_CURRENT_USER.objectId, currentWeeks,
+            s_UserBaseServer.getDataEverydayInfo(s_CURRENT_USER.objectId, currentWeeks,
                 function (api, result)
-                    s_CURRENT_USER:parseServerDataLogIn(result.results)
+                    s_CURRENT_USER:parseServerDataEverydayInfo(result.results)
                     if #(result.results) <= 0 then
                         if localCurrentData ~= nil then
                             updateWeek(localCurrentData, localCurrentData.week)

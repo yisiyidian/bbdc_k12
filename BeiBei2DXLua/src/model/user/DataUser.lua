@@ -1,5 +1,5 @@
 local DataClassBase = require('model.user.DataClassBase')
-local DataLogIn = require('model/user/DataLogIn')
+local DataEverydayInfo = require('model/user/DataEverydayInfo')
 local DataLevelInfo = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo = require('model/user/DataDailyStudyInfo')
 
@@ -226,11 +226,11 @@ function DataUser:parseServerData(data)
     end
 end
 
-function DataUser:parseServerDataLogIn(results)
-    local DataDailyCheckIn = require('model.user.DataLogIn')
+function DataUser:parseServerDataEverydayInfo(results)
+    local DataDailyCheckIn = require('model.user.DataEverydayInfo')
    self.logInDatas = {}
    for i, v in ipairs(results) do
-       local data = DataLogIn.create()
+       local data = DataEverydayInfo.create()
        parseServerDataToClientData(v, data)
        self.logInDatas[i] = data
        print_lua_table(data)

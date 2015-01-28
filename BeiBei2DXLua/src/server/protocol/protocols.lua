@@ -20,6 +20,7 @@ end
 function synUserAfterLogIn(localDBUser, serverUser, callback)
     local api = 'synuserafterlogin'
     local serverRequestType = SERVER_REQUEST_TYPE_CLIENT_ENCODE
+    
     local function cb (result, error)
         if error == nil then
             if callback then callback(result.datas.updatedAt, nil) end
@@ -27,6 +28,7 @@ function synUserAfterLogIn(localDBUser, serverUser, callback)
             if callback then callback(nil, error) end
         end
     end
+
     local data = {['objectId']=localDBUser.objectId}
     for key, value in pairs(localDBUser) do
         if type(value) ~= 'function' 
@@ -42,25 +44,31 @@ function synUserAfterLogIn(localDBUser, serverUser, callback)
     local protocol = ProtocolBase.create(api, serverRequestType, data, cb)
     protocol:request()
 end
+-- DataStudyConfiguration -- User
 
 -- 1 data/book
 -- DataCurrentIndex 
--- DataNewPlayState
--- DataTodayReviewBossNum
+
 function syn( ... )
 
 end
 
 -- 1 data
 -- DataLevelInfo
--- DataStudyConfiguration
 
 -- 1 data/day
--- DataDailyStudyInfo
--- DataLogIn
+-- DataEverydayInfo
+function sysEverydayInfo()
+    
+end
 
--- 1 data/book 
--- DataWrongWordBuffer
+-- 1 data/day/book
+-- DataDailyStudyInfo
 
 -- 20 words, book
 -- DataBossWord
+
+
+-- XXX DataNewPlayState
+-- XXX DataTodayReviewBossNum
+-- XXX DataWrongWordBuffer
