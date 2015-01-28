@@ -52,6 +52,19 @@ function PersonalInfo:ctor()
             local move = cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-20)),cc.MoveBy:create(0.5,cc.p(0,20)))
             scrollButton:runAction(cc.RepeatForever:create(move))
 
+            local scrollPageButton = ccui.Button:create('image/PersonalInfo/scroll_page_button.png','')
+            --scrollPageButton:setScale9Enabled(true)
+            scrollPageButton:setScaleY(0.5)
+            scrollPageButton:setPosition(s_DESIGN_WIDTH/2 - s_LEFT_X  ,s_DESIGN_HEIGHT * 0.05)
+            layout:addChild(scrollPageButton)
+
+            local function scrollPageEvent(sender,eventType)
+                if eventType == ccui.TouchEventType.ended then
+                    pageView:scrollToPage(i - 2)
+                end
+            end
+            scrollPageButton:addTouchEventListener(scrollPageEvent)
+
         end
         local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
         title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
@@ -139,10 +152,7 @@ function PersonalInfo:ctor()
         pageView:addPage(layout)
 
     end 
-    -- if p_checkIn then
-    --     s_logd('p_checkInTrue')
-    --     pageView:scrollToPage(1)
-    -- end
+
     self:addChild(pageView)
     local lastPage = -1
     local function update(delta)
@@ -175,30 +185,6 @@ function PersonalInfo:ctor()
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
 
-    local onTouchBegan = function ( touch,event )
-         return true
-    end
-
-    local onTouchEnded = function ( touch,event )
---         print_lua_table(pageView:getPages())
---        local location = s_SCENE.popupLayer:convertToNodeSpace(touch:getLocation())
---        local curPage = pageView:getCurPageIndex()
---        curPage=curPage+1
---        pageView:scrollToPage(pageView:getCurPageIndex())
---        if location.y < 0.1 * s_DESIGN_HEIGHT and curPage >= 1 then
---             s_logd(pageView:getPage(curPage - 1):getPositionY()..'touchend'..pageView:getPage(curPage):getPositionY())
---            pageView:scrollToPage(curPage - 2)
---        elseif location.y < 0.1 * s_DESIGN_HEIGHT and curPage == 1 then
---             s_logd('touchend'..curPage)
---            pageView:scrollToPage(0)
---        end
-    end
-
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-    local eventDispatcher = s_SCENE.popupLayer:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, s_SCENE.popupLayer)
 end
 
 function PersonalInfo:PLVM()
