@@ -309,6 +309,7 @@ public class BBNDK {
 							String objectjson = json.toString();
 							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
 						} else {
+							String msg = e.getMessage().replace("\"", "\'");
 							String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
 							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
 						}

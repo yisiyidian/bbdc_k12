@@ -1,20 +1,30 @@
 local DataClassBase = require('model.user.DataClassBase')
 
-local DataEverydayInfo = class("DataEverydayInfo", function()
+---------------------------------------------------------------------------------------------------
+
+local CLASSNAME = 'DataEverydayInfo'
+
+WEEKDAYSTATE_NONE = 0
+WEEKDAYSTATE_LOGEDIN = 1
+WEEKDAYSTATE_CHECKEDIN = 2
+
+---------------------------------------------------------------------------------------------------
+
+local DataEverydayInfo = class(CLASSNAME, function()
     return DataClassBase.new()
 end)
+
+---------------------------------------------------------------------------------------------------
 
 function DataEverydayInfo.create()
     local data = DataEverydayInfo.new()
     return data
 end
 
-WEEKDAYSTATE_NONE = 0
-WEEKDAYSTATE_LOGEDIN = 1
-WEEKDAYSTATE_CHECKEDIN = 2
+---------------------------------------------------------------------------------------------------
 
 function DataEverydayInfo:ctor()
-    self.className = 'DataEverydayInfo'
+    self.className = CLASSNAME
     
     self.Monday = WEEKDAYSTATE_NONE
     self.Tuesday = WEEKDAYSTATE_NONE
@@ -76,16 +86,45 @@ function DataEverydayInfo:getDays()
 end
 
 function DataEverydayInfo:updateFrom(otherDataEverydayInfo)
-    if otherDataEverydayInfo.updatedAt < self.updatedAt then
-        return false
+    if self.week ~= otherDataEverydayInfo.week 
+        or (self.objectId ~= nil and string.len(self.objectId) > 0 and self.objectId ~= otherDataEverydayInfo.objectId) then 
+        return false 
+    end
+    
+    if (self.objectId == nil or string.len(self.objectId) <= 0) and otherDataEverydayInfo.objectId ~= nil then
+        self.objectId = otherDataEverydayInfo.objectId
     end
     local keys = {'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'}
     for i, v in ipairs(keys) do
-        if otherDataEverydayInfo[v] > 0 then
-            self[v] = 1
+        if self[v] < otherDataEverydayInfo[v] then
+            self[v] = otherDataEverydayInfo[v]
         end
     end
+    
     return true
 end
+
+---------------------------------------------------------------------------------------------------
+
+function DataEverydayInfo.getAllDatasFromLocalDB()
+    local localDatas = s_LocalDatabaseManager.getDatas(CLASSNAME, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+    return localDatas
+end
+
+function DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
+    local noObjectIdDatas = {}
+    local currentWeek = nil
+    local week = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
+    s_LocalDatabaseManager.getDatas(CLASSNAME, s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
+        if row.objectId == '' or row.objectId == nil then
+            table.insert(noObjectIdDatas, row)
+        elseif row.week == week then
+            currentWeek = row
+        end
+    end)
+    return {['noObjectIdDatas']=noObjectIdDatas, ['currentWeek']=currentWeek}
+end
+
+---------------------------------------------------------------------------------------------------
 
 return DataEverydayInfo

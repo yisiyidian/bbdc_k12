@@ -1,4 +1,4 @@
-function reloadModule( moduleName )
+local function reloadModule( moduleName )
     package.loaded[moduleName] = nil
     return require(moduleName)
 end

@@ -31,7 +31,8 @@ NSDictionary* JSONStringToNSDictionary(NSString* jsonString, NSError** error) {
 }
 
 NSString* NSErrorToJSONString(NSError* error) {
-    NSString* ret = [NSString stringWithFormat:@"{\"code\":%ld,\"message\":\"%@\",\"description\":\"%@\"}", (long)error.code, error.description, error.localizedDescription];
+    NSString* description = [error.description stringByReplacingOccurrencesOfString:@"\"" withString:@"\'"];
+    NSString* ret = [NSString stringWithFormat:@"{\"code\":%ld,\"message\":\"%@\",\"description\":\"%@\"}", (long)error.code, description, error.localizedDescription];
     return ret;
 }
 

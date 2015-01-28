@@ -58,8 +58,28 @@ end
 
 -- 1 data/day
 -- DataEverydayInfo
-function sysEverydayInfo()
+function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
+    local api = 'syseverydayinfo'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb (result, error)
+        if error == nil then
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local dataTable = {}
+    if unsavedWeeks ~= nil then
+        for i, v in ipairs(unsavedWeeks) do
+            table.insert(dataTable, dataToJSONString(v))
+        end
+    end
+    if currentWeek ~= nil then table.insert(dataTable, dataToJSONString(currentWeek)) end
     
+    local protocol = ProtocolBase.create(api, serverRequestType, dataTable, cb)
+    protocol:request()
 end
 
 -- 1 data/day/book
@@ -72,3 +92,26 @@ end
 -- XXX DataNewPlayState
 -- XXX DataTodayReviewBossNum
 -- XXX DataWrongWordBuffer
+
+-- dataTable = {['className']=className, ['objectId']=objectId, ...}
+-- callback(datas, error)
+function saveToServer(dataTable, callback)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(dataTable, nil) end
+        return
+    end
+
+    local api = 'savetoserver'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb (result, error)
+        if error == nil then
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local protocol = ProtocolBase.create(api, serverRequestType, dataTable, cb)
+    protocol:request()
+end

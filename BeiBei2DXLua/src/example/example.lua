@@ -10,12 +10,14 @@ local ScrollViewTest    = require("view.ScrollviewTest")
 require('server.protocol.protocols')
 
 function test()
-    local username = 'tester112'
-    isUsernameExist(username, function (exsit, error)
-        if error == nil then
-            print (username .. ' ' .. tostring(exsit))
-        end
-    end)
+    -- local username = 'tester112'
+    -- isUsernameExist(username, function (exsit, error)
+    --     if error == nil then
+    --         print (username .. ' ' .. tostring(exsit))
+    --     end
+    -- end)
+    local t = {'a', 'b' , 'g'}
+    print(s_JSON.encode(t))
 
     -- cx.CXUtils:getInstance():_testCppApi_()
     
