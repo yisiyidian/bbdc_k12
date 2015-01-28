@@ -15,19 +15,7 @@ function ShopAlter.create(itemId, state)
 
     main.sure = function()
         s_CURRENT_USER.beans = s_CURRENT_USER.beans - s_DataManager.product[itemId].productValue
-        
-        if itemId == 1 then
-            s_CURRENT_USER.friendFunction = 1
-        elseif itemId == 2 then
-            s_CURRENT_USER.dataFunction1 = 1
-        elseif itemId == 3 then
-            s_CURRENT_USER.dataFunction2 = 1
-        elseif itemId == 4 then
-            s_CURRENT_USER.dataFunction3 = 1
-        elseif itemId == 5 then
-            s_CURRENT_USER.dataFunction4 = 1
-        end
-        
+        s_CURRENT_USER:unlockFunctionState(itemId)
         s_CURRENT_USER:updateDataToServer()
         
         local ShopLayer = require("view.shop.ShopLayer")

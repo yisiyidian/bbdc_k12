@@ -12,24 +12,10 @@ function ShopLayer.create()
     local productNum = #s_DataManager.product
     local productState = {}
     for i = 1, productNum do
-        local state
-        if s_DataManager.product[i].productName == 'friend' then
-            state = s_CURRENT_USER.friendFunction
-        elseif s_DataManager.product[i].productName == 'data1' then
-            state = s_CURRENT_USER.dataFunction1
-        elseif s_DataManager.product[i].productName == 'data2' then
-            state = s_CURRENT_USER.dataFunction2
-        elseif s_DataManager.product[i].productName == 'data3' then
-            state = s_CURRENT_USER.dataFunction3
-        elseif s_DataManager.product[i].productName == 'data4' then
-            state = s_CURRENT_USER.dataFunction4
-        else
-            state = 0
-        end
+        local state = s_CURRENT_USER:getLockFunctionState(i)
         table.insert(productState, state)
     end
     
-
     local layer = ShopLayer.new()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
