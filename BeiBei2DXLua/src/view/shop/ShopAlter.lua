@@ -1,12 +1,15 @@
 require("common.global")
 
+local ShopErrorAlter = require("view.shop.ShopErrorAlter")
+
 local ShopAlter = class("ShopAlter", function()
     return cc.Layer:create()
 end)
 
 local button_sure
 
-function ShopAlter.create(itemId, state)
+function ShopAlter.create(itemId)
+    local state = s_CURRENT_USER:getLockFunctionState(itemId)
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
     local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
@@ -14,13 +17,19 @@ function ShopAlter.create(itemId, state)
     main:ignoreAnchorPointForPosition(false)
 
     main.sure = function()
-        s_CURRENT_USER.beans = s_CURRENT_USER.beans - s_DataManager.product[itemId].productValue
-        s_CURRENT_USER:unlockFunctionState(itemId)
-        s_CURRENT_USER:updateDataToServer()
-        
-        local ShopLayer = require("view.shop.ShopLayer")
-        local shopLayer = ShopLayer.create()
-        s_SCENE:replaceGameLayer(shopLayer)
+        if s_CURRENT_USER.beans >= s_DataManager.product[itemId].productValue then
+            s_CURRENT_USER.beans = s_CURRENT_USER.beans - s_DataManager.product[itemId].productValue
+            s_CURRENT_USER:unlockFunctionState(itemId)
+            s_CURRENT_USER:updateDataToServer()
+            
+            local ShopLayer = require("view.shop.ShopLayer")
+            local shopLayer = ShopLayer.create()
+            s_SCENE:replaceGameLayer(shopLayer)
+        else
+            local shopErrorAlter = ShopErrorAlter.create()
+            shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            main:addChild(shopErrorAlter)
+        end
     end
 
     local back = cc.Sprite:create("image/shop/alter_back.png")
