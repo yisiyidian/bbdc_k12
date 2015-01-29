@@ -57,7 +57,7 @@ function HomeLayer.create(share)
 
     local top = cc.Sprite:create('image/homescene/home_page_bg_top.png')
     top:setAnchorPoint(0.5,1)
-    top:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    top:setPosition(0.5 * backColor:getContentSize().width,s_DESIGN_HEIGHT)
     backColor:addChild(top)
 
     local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
@@ -633,20 +633,6 @@ function HomeLayer.create(share)
             
         end
 
-
-        -- if now_x - moveLength > start_x and not isDataShow then
-        --     if viewIndex == 1 then
-        --         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-        --         viewIndex = 2
-
-        --         local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
-        --         backColor:runAction(action1)
-
-        --         local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
-        --         local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-        --         setting_back:runAction(cc.Sequence:create(action2, action3))
-        --     end
         if now_x + moveLength < start_x and not isDataShow then
             if viewIndex == 2 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()

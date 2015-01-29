@@ -61,9 +61,6 @@ function DataUser:ctor()
     self.beans                             = 0
     self.newStudyRightLayerMask            = 0
 
-    self.checkInWord                       = ''
-    self.checkInWordUpdateDate             = 0
-    self.hasCheckInButtonAppeared          = 0
 
     self.needToUnlockNextChapter           = 0
 
