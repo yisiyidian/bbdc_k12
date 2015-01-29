@@ -382,11 +382,26 @@ end -- O2OController.getDataLevelInfo(oncompleted)
 
 ---------------------------------------------------------------------------------------------------
 
-local function onUpdateWeekCompleted(unsavedWeeks, currentWeek, onSaved)
-    if unsavedWeeks ~= nil then
-    else
+local function onUpdateWeekCompleted(serverDatas, currentWeek, onSaved)
+    if serverDatas ~= nil then
+        for i, v in ipairs(serverDatas) do
+            local data = DataEverydayInfo.create()
+            parseServerDataToClientData(v, data)
+            s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = " .. tostring(data.week))
+        end
+    elseif currentWeek ~= nil then
         s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
     end
+
+    DataEverydayInfo.getAllDatasFromLocalDB(function (row)
+        local data = DataEverydayInfo.create()
+        parseServerDataToClientData(row, data)
+        s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
+    end)
+
+    print('s_CURRENT_USER.logInDatas')
+    print_lua_table(s_CURRENT_USER.logInDatas)
+
     hideProgressHUD()
     if onSaved then onSaved() end
 end
@@ -405,9 +420,9 @@ local function updateWeek(localDBDatas, week, onSaved)
         onUpdateWeekCompleted(nil, currentWeek, onSaved)
     else
         local unsavedWeeks = localDBDatas['noObjectIdDatas']
-        sysEverydayInfo(unsavedWeeks, currentWeek, function (datas, error) 
+        sysEverydayInfo(unsavedWeeks, currentWeek, function (serverDatas, error) 
             if error == nil then
-                onUpdateWeekCompleted(datas, nil, onSaved)
+                onUpdateWeekCompleted(serverDatas, nil, onSaved)
             else
                 onUpdateWeekCompleted(nil, currentWeek, onSaved)
             end
@@ -420,7 +435,6 @@ function O2OController.getDataEverydayInfo(onSaved)
     if s_CURRENT_USER.localTime == 0 then
         -- 1st log in
         s_CURRENT_USER.localTime = os.time()
-        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
         local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['localTime']=s_CURRENT_USER.localTime}
         saveToServer(userdata, function (datas, error) updateWeek(nil, 1, onSaved) end)
     else

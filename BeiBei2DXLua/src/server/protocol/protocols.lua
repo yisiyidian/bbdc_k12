@@ -1,5 +1,33 @@
 local ProtocolBase = require('server.protocol.ProtocolBase')
 
+local function dataTableToJSONString(dataTable)
+    local str = '{'
+    for key, value in pairs(dataTable) do  
+        if (key == 'sessionToken'
+            or key == 'password' 
+            or key == 'className' 
+            or key == 'createdAt' 
+            or key == 'updatedAt' 
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
+            if (type(value) == 'string') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":"' .. value .. '"'
+            elseif (type(value) == 'boolean') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":' .. tostring(value)
+            elseif (type(value) ~= 'function' and type(value) ~= 'table') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":' .. tostring(value)
+            end
+            
+        end
+    end
+    str = str .. '}'
+    return str
+end
+
 -- callback(isExist, error)
 function isUsernameExist(username, callback)
     local api = 'searchusername'
@@ -73,12 +101,14 @@ function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
     local dataTable = {}
     if unsavedWeeks ~= nil then
         for i, v in ipairs(unsavedWeeks) do
-            table.insert(dataTable, dataToJSONString(v))
+            table.insert(dataTable, dataTableToJSONString(v))
         end
     end
-    if currentWeek ~= nil then table.insert(dataTable, dataToJSONString(currentWeek)) end
+    local current = ''
+    if currentWeek ~= nil then current = dataTableToJSONString(currentWeek) end
+    -- print('sysEverydayInfo:' .. s_JSON.encode(dataTable)) -- json array
     
-    local protocol = ProtocolBase.create(api, serverRequestType, dataTable, cb)
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataEverydayInfo', ['uw']=dataTable, ['crt']=current}, cb)
     protocol:request()
 end
 

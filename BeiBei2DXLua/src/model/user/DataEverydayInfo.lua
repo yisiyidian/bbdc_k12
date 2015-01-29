@@ -106,8 +106,8 @@ end
 
 ---------------------------------------------------------------------------------------------------
 
-function DataEverydayInfo.getAllDatasFromLocalDB()
-    local localDatas = s_LocalDatabaseManager.getDatas(CLASSNAME, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+function DataEverydayInfo.getAllDatasFromLocalDB(handleRow)
+    local localDatas = s_LocalDatabaseManager.getDatas(CLASSNAME, s_CURRENT_USER.objectId, s_CURRENT_USER.username, handleRow)
     return localDatas
 end
 
@@ -116,10 +116,10 @@ function DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
     local currentWeek = nil
     local week = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
     s_LocalDatabaseManager.getDatas(CLASSNAME, s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
-        if row.objectId == '' or row.objectId == nil then
-            table.insert(noObjectIdDatas, row)
-        elseif row.week == week then
+        if row.week == week then
             currentWeek = row
+        elseif row.objectId == '' or row.objectId == nil then
+            table.insert(noObjectIdDatas, row)
         end
     end)
     return {['noObjectIdDatas']=noObjectIdDatas, ['currentWeek']=currentWeek}
