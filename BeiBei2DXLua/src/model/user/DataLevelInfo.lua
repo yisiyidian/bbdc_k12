@@ -20,7 +20,7 @@ function DataLevelInfo:ctor()
     self.IELTS = 0
     self.MIDDLE = 0
     self.NCEE = 0
-    self.PRIMARY = 0
+    self.XPRIMARY = 0
     self.PRO4 = 0
     self.PRO8 = 0
     self.SAT = 0
@@ -34,7 +34,7 @@ function DataLevelInfo:ctor()
     self.IELTSBossList = ''
     self.MIDDLEBossList = ''
     self.NCEEBossList = ''
-    self.PRIMARYBossList = ''
+    self.XPRIMARYBossList = ''
     self.PRO4BossList = ''
     self.PRO8BossList = ''
     self.SATBossList = ''
@@ -48,7 +48,7 @@ function DataLevelInfo:ctor()
     self.IELTSUpdateBossTime = 0
     self.MIDDLEUpdateBossTime = 0
     self.NCEEUpdateBossTime = 0
-    self.PRIMARYUpdateBossTime = 0
+    self.XPRIMARYUpdateBossTime = 0
     self.PRO4UpdateBossTime = 0
     self.PRO8UpdateBossTime = 0
     self.SATUpdateBossTime = 0
@@ -88,8 +88,8 @@ function DataLevelInfo:getBossList(bookKey)
         return self.MIDDLEBossList
     elseif bookKey == s_BOOK_KEY_NCEE then
         return self.NCEEBossList    
-    elseif bookKey == s_BOOK_KEY_PRIMARY then
-        return self.PRIMARYBossList 
+    elseif bookKey == s_BOOK_KEY_XPRIMARY then
+        return self.XPRIMARYBossList 
     elseif bookKey == s_BOOK_KEY_PRO4 then
         return self.PRO4BossList
     elseif bookKey == s_BOOK_KEY_PRO8 then
@@ -118,8 +118,8 @@ function DataLevelInfo:getUpdateBossTime(bookKey)
         return self.MIDDLEUpdateBossTime
     elseif bookKey == s_BOOK_KEY_NCEE then
         return self.NCEEUpdateBossTime 
-    elseif bookKey == s_BOOK_KEY_PRIMARY then
-        return self.PRIMARYUpdateBossTime
+    elseif bookKey == s_BOOK_KEY_XPRIMARY then
+        return self.XPRIMARYUpdateBossTime
     elseif bookKey == s_BOOK_KEY_PRO4 then
         return self.PRO4UpdateBossTime
     elseif bookKey == s_BOOK_KEY_PRO8 then
@@ -149,8 +149,8 @@ function DataLevelInfo:updateBossList(bookKey,bossList)
         self.MIDDLEBossList = bossList
     elseif bookKey == s_BOOK_KEY_NCEE then
         self.NCEEBossList = bossList 
-    elseif bookKey == s_BOOK_KEY_PRIMARY then
-        self.PRIMARYBossList = bossList
+    elseif bookKey == s_BOOK_KEY_XPRIMARY then
+        self.XPRIMARYBossList = bossList
     elseif bookKey == s_BOOK_KEY_PRO4 then
         self.PRO4BossList = bossList
     elseif bookKey == s_BOOK_KEY_PRO8 then
@@ -181,8 +181,8 @@ function DataLevelInfo:updateTime(bookKey,updateTime)
         self.MIDDLEUpdateBossTime = updateTime
     elseif bookKey == s_BOOK_KEY_NCEE then
         self.NCEEUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_PRIMARY then
-        self.PRIMARYUpdateBossTime = updateTime
+    elseif bookKey == s_BOOK_KEY_XPRIMARY then
+        self.XPRIMARYUpdateBossTime = updateTime
     elseif bookKey == s_BOOK_KEY_PRO4 then
         self.PRO4UpdateBossTime = updateTime
     elseif bookKey == s_BOOK_KEY_PRO8 then
@@ -221,8 +221,8 @@ function DataLevelInfo:getLevelInfo(bookKey)
         return self.MIDDLE + 0
     elseif bookKey == s_BOOK_KEY_NCEE then
         return self.NCEE + 0 
-    elseif bookKey == s_BOOK_KEY_PRIMARY then
-        return self.PRIMARY + 0
+    elseif bookKey == s_BOOK_KEY_XPRIMARY then
+        return self.XPRIMARY + 0
     elseif bookKey == s_BOOK_KEY_PRO4 then
         return self.PRO4 + 0
     elseif bookKey == s_BOOK_KEY_PRO8 then
@@ -264,6 +264,13 @@ function DataLevelInfo:computeCurrentProgress()
     -- TODO test
 --    return 10
      return s_LocalDatabaseManager.getMaxBossID()
+end
+
+function DataLevelInfo:getDataFromLocalDB()
+    updateDataFromUser(self, s_CURRENT_USER)
+    s_LocalDatabaseManager.getDatas(self.className, s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
+        parseLocalDBDataToClientData(row, self)
+    end)
 end
 
 function DataLevelInfo:updateDataToServer()
@@ -311,8 +318,8 @@ function DataLevelInfo:updateDataToServer()
         self.MIDDLE = currentProgress
     elseif bookKey == s_BOOK_KEY_NCEE then
         self.NCEE = currentProgress   
-    elseif bookKey == s_BOOK_KEY_PRIMARY then
-        self.PRIMARY = currentProgress
+    elseif bookKey == s_BOOK_KEY_XPRIMARY then
+        self.XPRIMARY = currentProgress
     elseif bookKey == s_BOOK_KEY_PRO4 then
         self.PRO4 = currentProgress
     elseif bookKey == s_BOOK_KEY_PRO8 then
@@ -322,8 +329,12 @@ function DataLevelInfo:updateDataToServer()
     elseif bookKey == s_BOOK_KEY_TOEFL then
         self.TOEFL = currentProgress
     end
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self) 
-    s_LocalDatabaseManager.saveDataClassObject(self, self.userId, self.username)
+
+    sysLevelInfo(self, function (serverData, error)
+        if serverData ~= nil then parseServerDataToClientData(serverData, self) end
+        s_LocalDatabaseManager.saveDataClassObject(self, s_CURRENT_USER.userId, s_CURRENT_USER.username)
+    end)
+
 end
 
 return DataLevelInfo
