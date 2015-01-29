@@ -319,6 +319,15 @@ function HomeLayer.create(share)
             local Loginreward = require("view.loginreward.LoginRewardPopup")
             local loginreward = Loginreward:create()
             s_SCENE:popup(loginreward)
+            
+            
+--            local Test1 = require("view.islandPopup.WordLibraryPopup")
+--            local test1 = Test1:create()
+--            s_SCENE:popup(test1)
+
+--            local Test2 = require("view.islandPopup.WordInfoPopup")
+--            local test2 = Test2:create()
+--            s_SCENE:popup(test2)
         end
     end
 
@@ -347,6 +356,7 @@ function HomeLayer.create(share)
     --button_reward:setPosition(bigWidth / 2 + 166, 200)
     button_reward:addTouchEventListener(button_reward_clicked)
     backColor:addChild(button_reward)   
+    
 
     --icon_reward = cc.Sprite:create('image/homescene/home_page_medal.png')
     icon_reward:setPosition(button_reward:getContentSize().width / 2,button_reward:getContentSize().height / 2)

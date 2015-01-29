@@ -12,7 +12,6 @@ local DataLevelInfo = require('model.user.DataLevelInfo')
 local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 local DataNewPlayState = require('model.user.DataNewPlayState')
-local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
 local DataTodayReviewBossNum = require('model.user.DataTodayReviewBossNum')
 local DataWrongWordBuffer = require('model.user.DataWrongWordBuffer')
 local DataBossWord = require('model.user.DataBossWord')
@@ -25,7 +24,6 @@ local databaseTables = {
         DataCurrentIndex,
         DataDailyStudyInfo,
         DataNewPlayState,
-        DataStudyConfiguration,
         DataTodayReviewBossNum,
         DataWrongWordBuffer,
         DataBossWord
@@ -37,7 +35,6 @@ local localdatabase_user = nil
 local localdatabase_dailyStudyInfo = nil
 local localdatabase_currentIndex = nil
 local localdatabase_newPlayState = nil
-local localdatabase_studyConfiguration = nil
 local localdatabase_todayReviewBossNum = nil
 local localdatabase_wrongWordBuffer = nil
 local localdatabase_bossWord = nil
@@ -60,7 +57,6 @@ function Manager.init()
     localdatabase_dailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
     localdatabase_currentIndex = reloadModule('model.localDatabase.currentIndex')
     localdatabase_newPlayState = reloadModule('model.localDatabase.newPlayState')
-    localdatabase_studyConfiguration = reloadModule('model.localDatabase.studyConfiguration')
     localdatabase_todayReviewBossNum = reloadModule('model.localDatabase.todayReviewBossNum')
     localdatabase_wrongWordBuffer = reloadModule('model.localDatabase.wrongWordBuffer')
     localdatabase_bossWord = reloadModule('model.localDatabase.bossWord')
@@ -104,8 +100,9 @@ function Manager.saveData(objectOfDataClass, userId, username, recordsNum, condi
     localdatabase_utils.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
 end
 
-function Manager.getDatas(classNameOfDataClass, userId, username)
-    return localdatabase_utils.getDatas(classNameOfDataClass, userId, username)
+-- handleRecordRow : nil or function(row)
+function Manager.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
+    return localdatabase_utils.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -436,34 +433,6 @@ end
 -- lastUpdate : nil means now
 function Manager.saveDataTodayReviewBossNum(bossNum, lastUpdate)
     localdatabase_todayReviewBossNum.saveDataTodayReviewBossNum(bossNum, lastUpdate)
-end
-
----------------------------------------------------------------------------------------------------------
-
--- newstudy configuration
-function Manager.getIsAlterOn()
-    return localdatabase_studyConfiguration.getIsAlterOn()
-end
-
--- lastUpdate : nil means now
-function Manager.setIsAlterOn(isAlterOn, lastUpdate)
-    localdatabase_studyConfiguration.setIsAlterOn(isAlterOn, lastUpdate)
-    s_UserBaseServer.synUserConfig(nil, false)
-end
-
-function Manager.getSlideNum()
-    return localdatabase_studyConfiguration.getSlideNum()
-end
-
--- lastUpdate : nil means now
-function Manager.updateSlideNum(lastUpdate)
-    localdatabase_studyConfiguration.updateSlideNum(lastUpdate)
-    s_UserBaseServer.synUserConfig(nil, false)
-end
-
--- lastUpdate : nil means now
-function Manager.saveDataStudyConfiguration(isAlterOn, slideNum, lastUpdate)
-    localdatabase_studyConfiguration.saveDataStudyConfiguration(isAlterOn, slideNum, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------

@@ -1,5 +1,33 @@
 local ProtocolBase = require('server.protocol.ProtocolBase')
 
+local function dataTableToJSONString(dataTable)
+    local str = '{'
+    for key, value in pairs(dataTable) do  
+        if (key == 'sessionToken'
+            or key == 'password' 
+            or key == 'className' 
+            or key == 'createdAt' 
+            or key == 'updatedAt' 
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false then 
+
+            if (type(value) == 'string') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":"' .. value .. '"'
+            elseif (type(value) == 'boolean') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":' .. tostring(value)
+            elseif (type(value) ~= 'function' and type(value) ~= 'table') then
+                if string.len(str) > 1 then str = str .. ',' end
+                str = str .. '"' .. key .. '":' .. tostring(value)
+            end
+            
+        end
+    end
+    str = str .. '}'
+    return str
+end
+
 -- callback(isExist, error)
 function isUsernameExist(username, callback)
     local api = 'searchusername'
@@ -58,8 +86,54 @@ end
 
 -- 1 data/day
 -- DataEverydayInfo
-function sysEverydayInfo()
+function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
+    local api = 'syseverydayinfo'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb (result, error)
+        if error == nil then
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local dataTable = {}
+    if unsavedWeeks ~= nil then
+        for i, v in ipairs(unsavedWeeks) do
+            table.insert(dataTable, dataTableToJSONString(v))
+        end
+    end
+    local current = ''
+    if currentWeek ~= nil then current = dataTableToJSONString(currentWeek) end
     
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataEverydayInfo', ['uw']=dataTable, ['crt']=current}, cb)
+    protocol:request()
+end
+
+function checkInEverydayInfo()
+    local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+    currentWeek:checkIn(os.time())
+
+    local function cb (currentWeek)
+        s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
+        s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas] = currentWeek
+    end
+
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then    
+        cb(currentWeek)
+        return
+    end
+
+    sysEverydayInfo(nil, currentWeek, function (serverDatas, error) 
+        if error == nil then
+            if serverDatas ~= nil then
+            for i, v in ipairs(serverDatas) do
+                parseServerDataToClientData(v, currentWeek)
+            end
+        end
+        cb(currentWeek)
+    end)
 end
 
 -- 1 data/day/book
@@ -72,3 +146,26 @@ end
 -- XXX DataNewPlayState
 -- XXX DataTodayReviewBossNum
 -- XXX DataWrongWordBuffer
+
+-- dataTable = {['className']=className, ['objectId']=objectId, ...}
+-- callback(datas, error)
+function saveToServer(dataTable, callback)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(dataTable, nil) end
+        return
+    end
+
+    local api = 'savetoserver'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb (result, error)
+        if error == nil then
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local protocol = ProtocolBase.create(api, serverRequestType, dataTable, cb)
+    protocol:request()
+end

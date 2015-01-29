@@ -471,38 +471,6 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
         end)
 end
 
-function UserBaseServer.synUserConfig(onCompleted, saveToLocalDB)
-    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
-        if onCompleted then onCompleted() end
-        return
-    end
-
-    saveToLocalDB = saveToLocalDB or true
-
-    local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
-    local isAlterOn = s_LocalDatabaseManager.getIsAlterOn()
-    local slideNum = s_LocalDatabaseManager.getSlideNum()
-    local time = os.time()
-    local data = DataStudyConfiguration.createData(isAlterOn, slideNum, time)
-    
-    s_SERVER.synData(data, 
-        function (api, result) 
-            print ('synUserConfig >>>')
-            print_lua_table (result)
-            print ('synUserConfig <<<')
-
-            local timestamp = result['lastUpdate']
-            if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
-                s_LocalDatabaseManager.saveDataStudyConfiguration(result.isAlterOn, result.slideNum, timestamp)
-            end
-
-            if onCompleted then onCompleted() end
-        end, 
-        function (api, code, message, description)
-            if onCompleted then onCompleted() end 
-        end)
-end
-
 function UserBaseServer.synTodayDailyStudyInfo(data, onCompleted, saveToLocalDB)
     if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
         if onCompleted then onCompleted() end

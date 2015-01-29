@@ -69,7 +69,7 @@ function NewStudySlideLayer.create()
         local normal = function()  
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             -- db
-            s_LocalDatabaseManager.updateSlideNum()
+            -- s_LocalDatabaseManager.updateSlideNum()
         
             local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
             showAnswerStateBack:setPosition(backColor:getContentSize().width *1.5, 768)
@@ -117,7 +117,7 @@ function NewStudySlideLayer.create()
                 end) ))
         end
     
-        if s_LocalDatabaseManager.getSlideNum() == 1 then
+        if s_CURRENT_USER.slideNum == 1 then
             local guideAlter = GuideAlter.create(0, "划词加强记忆", "用来加强用户记忆的步骤，可以强化你对生词的印象。")
             guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
             backColor:addChild(guideAlter)
@@ -133,14 +133,14 @@ function NewStudySlideLayer.create()
     local size_big = backColor:getContentSize()
 
     if s_CorePlayManager.isStudyModel() then
-        if s_LocalDatabaseManager.getSlideNum() == 0 then
+        if s_CURRENT_USER.slideNum == 0 then
             mat = FlipMat.create(wordname,4,4,true,"coconut_light",positionX)
             mat.finger_action()
         else
             mat = FlipMat.create(wordname,4,4,false,"coconut_light",positionX)
         end
     else
-        if s_LocalDatabaseManager.getSlideNum() == 0 then
+        if s_CURRENT_USER.slideNum == 0 then
             mat = FlipMat.create(wordname,4,4,true,"coconut_light")
             mat.finger_action()
         else

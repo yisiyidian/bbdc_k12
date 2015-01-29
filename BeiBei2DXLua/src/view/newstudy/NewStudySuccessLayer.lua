@@ -13,8 +13,7 @@ function NewStudySuccessLayer.create()
 
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
-    s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:checkIn(os.time())
-    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas])
+    checkInEverydayInfo()
 
     local beanNum = s_CorePlayManager.reward - s_CorePlayManager.ordinalNum
     if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 0 then

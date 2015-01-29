@@ -1,4 +1,14 @@
 
+local DataUser -- = require('model.user.DataUser')
+local DataEverydayInfo -- = require('model.user.DataEverydayInfo')
+local DataDailyStudyInfo -- = require('model.user.DataDailyStudyInfo')
+
+local BulletinBoard -- = require('view.BulletinBoard')
+local IntroLayer -- = require("view.login.IntroLayer")
+local LoadingView -- = require("view.LoadingView")
+
+----------------------------------------------------------------------------------------------------------------
+
 local function genRandomUserName()
     math.randomseed(os.time())
     local randomIndex = math.random(0, 65535)
@@ -54,6 +64,14 @@ end
 -- start
 
 function O2OController.start()
+    DataUser = require('model.user.DataUser')
+    DataEverydayInfo = require('model.user.DataEverydayInfo')
+    DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
+
+    BulletinBoard = require('view.BulletinBoard')
+    IntroLayer = require("view.login.IntroLayer")
+    LoadingView = require("view.LoadingView")
+
     s_SERVER.initNetworkStatus()
 
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
@@ -62,13 +80,11 @@ function O2OController.start()
         if hasUserInLocalDB then
             O2OController.logInOffline()
         else
-            local IntroLayer = require("view.login.IntroLayer")
             local introLayer = IntroLayer.create(hasUserInLocalDB)
             s_SCENE:replaceGameLayer(introLayer)
         end
     else
         -- go to O2OController.onAssetsManagerCompleted()
-        local LoadingView = require("view.LoadingView")
         local loadingView = LoadingView.create(true)
         s_SCENE:replaceGameLayer(loadingView) 
 
@@ -87,11 +103,9 @@ function O2OController.onAssetsManagerCompleted()
             O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
         end
     elseif s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then
-        local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(true)
         s_SCENE:replaceGameLayer(introLayer)
     else
-        local IntroLayer = reloadModule("view.login.IntroLayer")
         local introLayer = IntroLayer.create(false)
         s_SCENE:replaceGameLayer(introLayer)
     end
@@ -117,7 +131,6 @@ function O2OController.logInByQQAuthData()
 end
 
 function O2OController.startLoadingData(userStartType, username, password)
-    local DataUser = require('model.user.DataUser')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
     local isLocalNewerThenServer = false
@@ -252,9 +265,7 @@ function O2OController.getUserDatasOnline()
             else
                 showProgressHUD()
                 s_UserBaseServer.synBookRelations(nil, function ()
-                    s_UserBaseServer.synUserConfig(function ()
 
-                        local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
                         local dayString = getDayStringForDailyStudyInfo(os.time())
                         local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
                         if today == nil then
@@ -267,7 +278,7 @@ function O2OController.getUserDatasOnline()
                         end, true)
 
                     end)
-                end)
+                
             end 
         end)
     end)
@@ -368,91 +379,71 @@ function O2OController.getDataLevelInfo(oncompleted)
     end
 end -- O2OController.getDataLevelInfo(oncompleted)
 
-function O2OController.getDataEverydayInfo(onSaved)
-    local DataEverydayInfo = require('model.user.DataEverydayInfo')
+---------------------------------------------------------------------------------------------------
 
-    local function onUpdateWeekCompleted(data)
-        hideProgressHUD()
-        if onSaved then onSaved() end
-        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = " .. tostring(data.week))
+local function onUpdateWeekCompleted(serverDatas, currentWeek, onSaved)
+    if serverDatas ~= nil then
+        for i, v in ipairs(serverDatas) do
+            local data = DataEverydayInfo.create()
+            parseServerDataToClientData(v, data)
+            s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = " .. tostring(data.week))
+        end
+    elseif currentWeek ~= nil then
+        s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
     end
 
-    -- save to local or server
-    local function updateWeek(data, week)
-        if data == nil then 
-            data = DataEverydayInfo.create()
-            s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
-        end
-        updateDataFromUser(data, s_CURRENT_USER)
-        data.week = week
-        data:setWeekDay(os.time())
+    DataEverydayInfo.getAllDatasFromLocalDB(function (row)
+        local data = DataEverydayInfo.create()
+        parseServerDataToClientData(row, data)
+        s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
+    end)
 
-        if s_SERVER.isNetworkConnectedWhenInited() == false then
-            onUpdateWeekCompleted(data)
-        else
-            s_UserBaseServer.saveDataObjectOfCurrentUser(
-                data, 
-                function (api, result) onUpdateWeekCompleted(data) end, 
-                function (api, code, message, description) onUpdateWeekCompleted(data) end
-            )
-        end
-    end
+    print('s_CURRENT_USER.logInDatas')
+    print_lua_table(s_CURRENT_USER.logInDatas)
 
-    local className = 'DataEverydayInfo'
-    local localDatas = s_LocalDatabaseManager.getDatas(className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+    hideProgressHUD()
+    if onSaved then onSaved() end
+end
 
-    if s_CURRENT_USER.localTime == 0 then
-        s_CURRENT_USER.localTime = os.time()
-        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
-        updateWeek(nil, 1)
+-- save to local or server
+local function updateWeek(localDBDatas, week, onSaved)
+    local currentWeek = DataEverydayInfo.create()
+    updateDataFromUser(currentWeek, s_CURRENT_USER)
+    currentWeek.week = week
+    currentWeek:setWeekDay(os.time())
+
+    local localCurrentDBData = localDBDatas['currentWeek']
+    if localDBData ~= nil then currentWeek:updateFrom(localCurrentData) end
+
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        onUpdateWeekCompleted(nil, currentWeek, onSaved)
     else
-        print ('os time, local time:', os.time(), s_CURRENT_USER.localTime)
-        showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_USER])
-        
-        local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
-        print ('currentWeeks:' .. tostring(currentWeeks))
-        -- local database
-        local localCurrentData = nil
-        -- for i, v in ipairs(localDatas) do
-        --     if v.week == currentWeeks then
-        --         localCurrentData = DataEverydayInfo.create()
-        --         parseLocalDBDataToClientData(v, localCurrentData)
-        --         break
-        --     end
-        -- end
-
-        if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
-            if localCurrentData ~= nil then
-                updateWeek(localCurrentData, localCurrentData.week)
+        local unsavedWeeks = localDBDatas['noObjectIdDatas']
+        sysEverydayInfo(unsavedWeeks, currentWeek, function (serverDatas, error) 
+            if error == nil then
+                onUpdateWeekCompleted(serverDatas, nil, onSaved)
             else
-                updateWeek(nil, currentWeeks)
+                onUpdateWeekCompleted(nil, currentWeek, onSaved)
             end
-        else -- online
-            s_UserBaseServer.getDataEverydayInfo(s_CURRENT_USER.objectId, currentWeeks,
-                function (api, result)
-                    s_CURRENT_USER:parseServerDataEverydayInfo(result.results)
-                    if #(result.results) <= 0 then
-                        if localCurrentData ~= nil then
-                            updateWeek(localCurrentData, localCurrentData.week)
-                            s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
-                        else
-                            updateWeek(nil, currentWeeks)
-                        end
-                    else
-                        local data = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
-                        if localCurrentData ~= nil then
-                            data:updateFrom(localCurrentData)
-                        end
-                        updateWeek(data, data.week)
-                    end
-                end,
-                function (api, code, message, description)
-                    if onSaved then onSaved() end
-                    hideProgressHUD()
-                end)
-        end
+        end)
     end
 end
+
+function O2OController.getDataEverydayInfo(onSaved)
+    showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_USER])
+    if s_CURRENT_USER.localTime == 0 then
+        -- 1st log in
+        s_CURRENT_USER.localTime = os.time()
+        local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['localTime']=s_CURRENT_USER.localTime}
+        local localDBDatas = {['noObjectIdDatas']=noObjectIdDatas, ['currentWeek']=currentWeek}
+        saveToServer(userdata, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
+    else
+        local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
+        updateWeek(localDBDatas, 1, onSaved)
+    end
+end
+
+---------------------------------------------------------------------------------------------------
 
 function O2OController.getBulletinBoard()
     showProgressHUD()
@@ -460,7 +451,6 @@ function O2OController.getBulletinBoard()
         local showBB = (s_CURRENT_USER.bulletinBoardMask <= 0 and index >= 0)
                    or (s_CURRENT_USER.bulletinBoardMask > 0 and math["and"](s_CURRENT_USER.bulletinBoardMask, (2 ^ index)) == 0)
         if showBB then
-            local BulletinBoard = require('view.BulletinBoard')
             local bb = BulletinBoard.create() 
             bb:updateValue(index, title, content)
             s_SCENE:popup(bb)
