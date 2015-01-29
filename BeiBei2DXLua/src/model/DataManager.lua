@@ -5,7 +5,7 @@ require('common.text')
 ---------------------------------------------------------------------------
 local s_USE_XXTEA = true
 
-g_BOOKS    = {'CET4', 'CET6', 'GMAT', 'GRE', 'GSE', 'IELTS', 'MIDDLE', 'NCEE', 'XPRIMARY', 'PRO4', 'PRO8', 'SAT', 'TOEFL'}
+g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13'}
 g_BOOKKEYS = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee',  'primary', 'pro4', 'pro8', 'sat', 'toefl'}
 
 s_BOOK_KEY_CET4     = g_BOOKKEYS[1] -- 'cet4'

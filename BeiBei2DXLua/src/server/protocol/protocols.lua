@@ -77,9 +77,6 @@ function synUserAfterLogIn(localDBUser, serverUser, callback)
     protocol:request()
 end
 
--- 1 data/book
--- DataCurrentIndex 
-
 function syn( ... )
 
 end
@@ -88,6 +85,7 @@ end
 
 -- 1 data
 -- DataLevelInfo
+-- DataCurrentIndex 
 function sysLevelInfo(clientData, callback)
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
         if callback then callback(nil, nil) end
