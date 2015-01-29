@@ -19,6 +19,7 @@ end
 function PersonalInfo:ctor()
 
     math.randomseed(os.time())
+    local UNLOCK = 0
     self.totalDay = 1
     local moved = false
     local start_y = nil
@@ -66,15 +67,24 @@ function PersonalInfo:ctor()
             scrollPageButton:addTouchEventListener(scrollPageEvent)
 
         end
-        local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
-        title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
-        title:setColor(colorArray[5 - i])
-        layout:addChild(title)
 
         local share = ccui.Button:create('image/PersonalInfo/share_button.png','','')
         share:setScale9Enabled(true)
         share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
         layout:addChild(share)
+
+        if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
+            titleArray[5 - i] = titleArray[5 - i].."被锁住了！"
+            local dataInfoLockedLayer = require('view.datainfo.DataInfoLockedLayer').create(5 - i)
+            layout:addChild(dataInfoLockedLayer)
+            share:setVisible(false)
+        end
+        local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
+        title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
+        title:setColor(colorArray[5 - i])
+        layout:addChild(title)
+
+        
         local counter = 0
         --local target = nil
 
@@ -120,23 +130,9 @@ function PersonalInfo:ctor()
                 addTop()
             end
             if eventType == ccui.TouchEventType.ended then
-
-                -- local pImage = target:newImage()
-
-                -- local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
-
-                -- pImage:release()
-
-                -- local sprite = cc.Sprite:createWithTexture(tex)
-
-                -- sprite:setScale(0.3)
-                -- intro:addChild(sprite,10)
-                -- sprite:setPosition(cc.p(200, 400))
-                -- sprite:setRotation(counter * 3)
                 local SaveDataInfo = require('view.share.SaveDataInfo')
                 local saveDataInfo = SaveDataInfo.create(target[i],i)
                 self:addChild(saveDataInfo,20)
-                --print("Image saved %s and %s", png, jpg)
                 counter = counter + 1
             end
         end
@@ -168,18 +164,20 @@ function PersonalInfo:ctor()
                 self.intro_array[curPage+1]:removeAllChildren()
             end
             lastPage = curPage
-            if curPage == 3 then
-                self:PLVM()
-                AnalyticsDataCenterPage('PLVM')
-            elseif curPage == 2 then
-                self:PLVI()
-                AnalyticsDataCenterPage('PLVI')
-            elseif curPage == 1 then
-                self:login()
-                AnalyticsDataCenterPage('LOGIN')
-            elseif curPage == 0 then
-                self:XXTJ()
-                AnalyticsDataCenterPage('XXTJ')
+            if s_CURRENT_USER:getLockFunctionState(5 - curPage) == UNLOCK then
+                if curPage == 3 then
+                    self:PLVM()
+                    AnalyticsDataCenterPage('PLVM')
+                elseif curPage == 2 then
+                    self:PLVI()
+                    AnalyticsDataCenterPage('PLVI')
+                elseif curPage == 1 then
+                    self:login()
+                    AnalyticsDataCenterPage('LOGIN')
+                elseif curPage == 0 then
+                    self:XXTJ()
+                    AnalyticsDataCenterPage('XXTJ')
+                end
             end
         end
     end
