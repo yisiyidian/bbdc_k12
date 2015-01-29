@@ -190,6 +190,7 @@ function DataUser:generateSummaryBossList()
         
     end
     self.levelInfo:updateTime(self.bookKey,os.time())
+    self.levelInfo:sysData()
     --print("summaryBossList:"..self.summaryBossList.."lastUpdate:"..os.date('%x',self.lastUpdateSummaryBossTime))
 end
 
@@ -224,7 +225,8 @@ function DataUser:removeSummaryBoss(index)
             end
         end
     end
-    self.levelInfo:updateBossList(self.bookKey,tempList)
+    self.levelInfo:updateBossList(self.bookKey, tempList)
+    self.levelInfo:sysData()
 end
 
 function DataUser:getNameForDisplay()

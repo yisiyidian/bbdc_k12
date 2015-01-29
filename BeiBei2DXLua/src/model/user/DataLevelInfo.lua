@@ -1,58 +1,28 @@
 require("cocos.init")
 require("common.global")
+
 local DataClassBase = require('model.user.DataClassBase')
 
 local DataLevelInfo = class("DataLevelInfo", function()
     return DataClassBase.new()
 end)
+
 function DataLevelInfo.create()
     local data = DataLevelInfo.new()
     return data
 end
 
+DataLevelInfo.BossList = 'BossList'
+DataLevelInfo.UpdateBossTime = 'UpdateBossTime'
+
 function DataLevelInfo:ctor()
     self.className = 'DataLevelInfo'
-    self.CET4 = 0    -- level index
-    self.CET6 = 0
-    self.GMAT = 0
-    self.GRE = 0
-    self.GSE = 0
-    self.IELTS = 0
-    self.MIDDLE = 0
-    self.NCEE = 0
-    self.XPRIMARY = 0
-    self.PRO4 = 0
-    self.PRO8 = 0
-    self.SAT = 0
-    self.TOEFL = 0
 
-    self.CET4BossList = ''
-    self.CET6BossList = ''
-    self.GMATBossList = ''
-    self.GREBossList = ''
-    self.GSEBossList = ''
-    self.IELTSBossList = ''
-    self.MIDDLEBossList = ''
-    self.NCEEBossList = ''
-    self.XPRIMARYBossList = ''
-    self.PRO4BossList = ''
-    self.PRO8BossList = ''
-    self.SATBossList = ''
-    self.TOEFLBossList = ''
-
-    self.CET4UpdateBossTime = 0
-    self.CET6UpdateBossTime = 0
-    self.GMATUpdateBossTime = 0
-    self.GREUpdateBossTime = 0
-    self.GSEUpdateBossTime = 0
-    self.IELTSUpdateBossTime = 0
-    self.MIDDLEUpdateBossTime = 0
-    self.NCEEUpdateBossTime = 0
-    self.XPRIMARYUpdateBossTime = 0
-    self.PRO4UpdateBossTime = 0
-    self.PRO8UpdateBossTime = 0
-    self.SATUpdateBossTime = 0
-    self.TOEFLUpdateBossTime = 0    
+    for i, v in ipairs(g_BOOKS) do
+        self[v] = 0
+        self[v .. DataLevelInfo.BossList] = ''
+        self[v .. DataLevelInfo.UpdateBossTime] = 0
+    end
 end
 
 function DataLevelInfo:getBookCurrentLevelIndex()
@@ -72,166 +42,49 @@ function DataLevelInfo:getBookCurrentLevelIndex()
 end
 
 function DataLevelInfo:getBossList(bookKey)
-    if bookKey == s_BOOK_KEY_CET4 then
-        return self.CET4BossList
-    elseif bookKey == s_BOOK_KEY_CET6 then
-        return self.CET6BossList
-    elseif bookKey == s_BOOK_KEY_GMAT then
-        return self.GMATBossList
-    elseif bookKey == s_BOOK_KEY_GRE then
-        return self.GREBossList
-    elseif bookKey == s_BOOK_KEY_GSE then
-        return self.GSEBossList
-    elseif bookKey == s_BOOK_KEY_IELTS then
-        return self.IELTSBossList
-    elseif bookKey == s_BOOK_KEY_MIDDLE then
-        return self.MIDDLEBossList
-    elseif bookKey == s_BOOK_KEY_NCEE then
-        return self.NCEEBossList    
-    elseif bookKey == s_BOOK_KEY_XPRIMARY then
-        return self.XPRIMARYBossList 
-    elseif bookKey == s_BOOK_KEY_PRO4 then
-        return self.PRO4BossList
-    elseif bookKey == s_BOOK_KEY_PRO8 then
-        return self.PRO8BossList
-    elseif bookKey == s_BOOK_KEY_SAT then
-        return self.SATBossList
-    elseif bookKey == s_BOOK_KEY_TOEFL then
-        return self.TOEFLBossList
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            return self[g_BOOKS[i] .. DataLevelInfo.BossList]
+        end
     end
+
+    return ''
 end
 
 function DataLevelInfo:getUpdateBossTime(bookKey)
-    if bookKey == s_BOOK_KEY_CET4 then
-        return self.CET4UpdateBossTime
-    elseif bookKey == s_BOOK_KEY_CET6 then
-        return self.CET6UpdateBossTime
-    elseif bookKey == s_BOOK_KEY_GMAT then
-        return self.GMATUpdateBossTime
-    elseif bookKey == s_BOOK_KEY_GRE then
-        return self.GREUpdateBossTime
-    elseif bookKey == s_BOOK_KEY_GSE then
-        return self.GSEUpdateBossTime
-    elseif bookKey == s_BOOK_KEY_IELTS then
-        return self.IELTSUpdateBossTime
-    elseif bookKey == s_BOOK_KEY_MIDDLE then
-        return self.MIDDLEUpdateBossTime
-    elseif bookKey == s_BOOK_KEY_NCEE then
-        return self.NCEEUpdateBossTime 
-    elseif bookKey == s_BOOK_KEY_XPRIMARY then
-        return self.XPRIMARYUpdateBossTime
-    elseif bookKey == s_BOOK_KEY_PRO4 then
-        return self.PRO4UpdateBossTime
-    elseif bookKey == s_BOOK_KEY_PRO8 then
-        return self.PRO8UpdateBossTime
-    elseif bookKey == s_BOOK_KEY_SAT then
-        return self.SATUpdateBossTime
-    elseif bookKey == s_BOOK_KEY_TOEFL then
-        return self.TOEFLUpdateBossTime
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            return self[g_BOOKS[i] .. DataLevelInfo.UpdateBossTime]
+        end
     end
+
+    return 0
 end
 
 
-function DataLevelInfo:updateBossList(bookKey,bossList)
-    if bookKey == s_BOOK_KEY_CET4 then
-        self.CET4BossList = bossList
-    elseif bookKey == s_BOOK_KEY_CET6 then
-        self.CET6BossList = bossList
-    elseif bookKey == s_BOOK_KEY_GMAT then
-        self.GMATBossList = bossList
-    elseif bookKey == s_BOOK_KEY_GRE then
-        self.GREBossList = bossList
-    elseif bookKey == s_BOOK_KEY_GSE then
-        self.GSEBossList = bossList
-    elseif bookKey == s_BOOK_KEY_IELTS then
-        self.IELTSBossList = bossList
-    elseif bookKey == s_BOOK_KEY_MIDDLE then
-        self.MIDDLEBossList = bossList
-    elseif bookKey == s_BOOK_KEY_NCEE then
-        self.NCEEBossList = bossList 
-    elseif bookKey == s_BOOK_KEY_XPRIMARY then
-        self.XPRIMARYBossList = bossList
-    elseif bookKey == s_BOOK_KEY_PRO4 then
-        self.PRO4BossList = bossList
-    elseif bookKey == s_BOOK_KEY_PRO8 then
-        self.PRO8BossList = bossList
-    elseif bookKey == s_BOOK_KEY_SAT then
-        self.SATBossList = bossList
-    elseif bookKey == s_BOOK_KEY_TOEFL then
-        self.TOEFLBossList = bossList
+function DataLevelInfo:updateBossList(bookKey, bossList)
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            self[g_BOOKS[i] .. DataLevelInfo.BossList] = bossList
+        end
     end
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self) 
-    s_LocalDatabaseManager.saveDataClassObject(self, self.userId, self.username)
 end
 
-function DataLevelInfo:updateTime(bookKey,updateTime)
-    if bookKey == s_BOOK_KEY_CET4 then
-        self.CET4UpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_CET6 then
-        self.CET6UpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_GMAT then
-        self.GMATUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_GRE then
-        self.GREUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_GSE then
-        self.GSEUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_IELTS then
-        self.IELTSUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_MIDDLE then
-        self.MIDDLEUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_NCEE then
-        self.NCEEUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_XPRIMARY then
-        self.XPRIMARYUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_PRO4 then
-        self.PRO4UpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_PRO8 then
-        self.PRO8UpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_SAT then
-        self.SATUpdateBossTime = updateTime
-    elseif bookKey == s_BOOK_KEY_TOEFL then
-        self.TOEFLUpdateBossTime = updateTime
+function DataLevelInfo:updateTime(bookKey, updateTime)
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            self[g_BOOKS[i] .. DataLevelInfo.UpdateBossTime] = updateTime
+        end
     end
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self) 
-    s_LocalDatabaseManager.saveDataClassObject(self, self.userId, self.username)
 end
 
 function DataLevelInfo:getLevelInfo(bookKey)
---    local progressData = {}
-
---    return 9
-    if bookKey == s_BOOK_KEY_CET4 then
---        local data = split(self.CET4,'|')
---        progressData['book'] = data[1]
---        progressData['chapter'] = data[2]
---        progressData['level'] = data[3]
---        return progressData
-        return self.CET4 + 0
-    elseif bookKey == s_BOOK_KEY_CET6 then
-        return self.CET6 + 0
-    elseif bookKey == s_BOOK_KEY_GMAT then
-        return self.GMAT + 0
-    elseif bookKey == s_BOOK_KEY_GRE then
-        return self.GRE + 0
-    elseif bookKey == s_BOOK_KEY_GSE then
-        return self.GSE + 0
-    elseif bookKey == s_BOOK_KEY_IELTS then
-        return self.IELTS + 0
-    elseif bookKey == s_BOOK_KEY_MIDDLE then
-        return self.MIDDLE + 0
-    elseif bookKey == s_BOOK_KEY_NCEE then
-        return self.NCEE + 0 
-    elseif bookKey == s_BOOK_KEY_XPRIMARY then
-        return self.XPRIMARY + 0
-    elseif bookKey == s_BOOK_KEY_PRO4 then
-        return self.PRO4 + 0
-    elseif bookKey == s_BOOK_KEY_PRO8 then
-        return self.PRO8 + 0
-    elseif bookKey == s_BOOK_KEY_SAT then
-        return self.SAT + 0 
-    elseif bookKey == s_BOOK_KEY_TOEFL then
-        return self.TOEFL + 0
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            return self[g_BOOKS[i]]
+        end
     end
+    return 0
 end
 
 function DataLevelInfo:computeCurrentProgress()
@@ -301,40 +154,21 @@ function DataLevelInfo:updateDataToServer()
     s_CURRENT_USER:addBeans(increments)
     -----------------------------
     bookKey = s_CURRENT_USER.bookKey
-    if bookKey == s_BOOK_KEY_CET4 then
---        self.CET4 = bookKey..'|'..currentProgress['chapter']..'|'..currentProgress['level']
-        self.CET4 = currentProgress
-    elseif bookKey == s_BOOK_KEY_CET6 then
-        self.CET6 = currentProgress
-    elseif bookKey == s_BOOK_KEY_GMAT then
-        self.GMAT = currentProgress
-    elseif bookKey == s_BOOK_KEY_GRE then
-        self.GRE = currentProgress
-    elseif bookKey == s_BOOK_KEY_GSE then
-        self.GSE = currentProgress
-    elseif bookKey == s_BOOK_KEY_IELTS then
-        self.IELTS = currentProgress
-    elseif bookKey == s_BOOK_KEY_MIDDLE then
-        self.MIDDLE = currentProgress
-    elseif bookKey == s_BOOK_KEY_NCEE then
-        self.NCEE = currentProgress   
-    elseif bookKey == s_BOOK_KEY_XPRIMARY then
-        self.XPRIMARY = currentProgress
-    elseif bookKey == s_BOOK_KEY_PRO4 then
-        self.PRO4 = currentProgress
-    elseif bookKey == s_BOOK_KEY_PRO8 then
-        self.PRO8 = currentProgress
-    elseif bookKey == s_BOOK_KEY_SAT then
-        self.SAT = currentProgress
-    elseif bookKey == s_BOOK_KEY_TOEFL then
-        self.TOEFL = currentProgress
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            self[g_BOOKS[i]] = currentProgress
+        end
     end
 
+    self:sysData()
+
+end
+
+function DataLevelInfo:sysData()
     sysLevelInfo(self, function (serverData, error)
         if serverData ~= nil then parseServerDataToClientData(serverData, self) end
         s_LocalDatabaseManager.saveDataClassObject(self, s_CURRENT_USER.userId, s_CURRENT_USER.username)
     end)
-
 end
 
 return DataLevelInfo
