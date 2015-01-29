@@ -265,7 +265,6 @@ function O2OController.getUserDatasOnline()
             else
                 showProgressHUD()
                 s_UserBaseServer.synBookRelations(nil, function ()
-                    s_UserBaseServer.synUserConfig(function ()
 
                         local dayString = getDayStringForDailyStudyInfo(os.time())
                         local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
@@ -279,7 +278,7 @@ function O2OController.getUserDatasOnline()
                         end, true)
 
                     end)
-                end)
+                
             end 
         end)
     end)

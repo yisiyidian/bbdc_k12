@@ -82,6 +82,9 @@ function DataUser:ctor()
     
     -- function lock
     self.lockFunction                      = 0    
+
+    self.isAlterOn                         = 0
+    self.slideNum                          = 0
 end
 
 function DataUser:getLockFunctionState(productId)

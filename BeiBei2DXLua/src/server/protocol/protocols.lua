@@ -106,7 +106,6 @@ function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
     end
     local current = ''
     if currentWeek ~= nil then current = dataTableToJSONString(currentWeek) end
-    -- print('sysEverydayInfo:' .. s_JSON.encode(dataTable)) -- json array
     
     local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataEverydayInfo', ['uw']=dataTable, ['crt']=current}, cb)
     protocol:request()
