@@ -50,7 +50,7 @@ s_chapters = 'cfg/chapters.json'
 s_energy = 'cfg/energy.json'
 s_items = 'cfg/items.json'
 local getLevelConfigFilePath = function (bookkey) return string.format('cfg/lv_%s.json', bookkey) end
-s_review_boos = 'cfg/review_boss.json'
+s_review_boss = 'cfg/review_boss.json'
 s_starRule = 'cfg/starRule.json'
 s_text = 'cfg/text.json'
 s_product = 'cfg/product.json'
@@ -375,7 +375,7 @@ end
 -- review boss -------------------------------------------------------------------
 
 function DataManager.loadReviewBoss()
-    local jsonObj = loadJsonFile(s_review_boos)
+    local jsonObj = loadJsonFile(s_review_boss)
     DataManager.reviewBoos = {}
     DataManager.reviewBoos["review_boss_key"] = jsonObj["review_boss_key"]
     DataManager.reviewBoos["review_boss_type"] = jsonObj["review_boss_type"]

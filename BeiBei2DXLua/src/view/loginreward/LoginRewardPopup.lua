@@ -59,18 +59,25 @@ function LoginRewardPopup:ctor()
                 end  
             elseif tag == 6  then
                 local shadow_sprite = cc.Sprite:create("image/loginreward/back"..tag..".png")
-                shadow_sprite:setPosition(addColor:getContentSize().width * 0.5,addColor:getContentSize().height * 0.15)
+                shadow_sprite:setPosition(addColor:getContentSize().width * 0.5,addColor:getContentSize().height * 0.3)
                 addColor:addChild(shadow_sprite)
+                shadow_sprite:setScale(0.8)
                 local bean_sprite = cc.Sprite:create("image/loginreward/many.png")
-                bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 20 )
+                bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 20)
                 shadow_sprite:addChild(bean_sprite)  
             elseif tag == 7  then
                 local shadow_sprite = cc.Sprite:create("image/loginreward/back"..tag..".png")
-                shadow_sprite:setPosition(addColor:getContentSize().width * 0.50,addColor:getContentSize().height * 0.1)
+                shadow_sprite:setPosition(addColor:getContentSize().width * 0.50,addColor:getContentSize().height * 0.3)
                 addColor:addChild(shadow_sprite)
+                shadow_sprite:setScale(0.8)
                 local bean_sprite = cc.Sprite:create("image/loginreward/more.png")
-                bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 25 )
+                bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 25)
                 shadow_sprite:addChild(bean_sprite)
+                local reward_label = cc.Label:createWithSystemFont("+30","",25)
+                reward_label:setColor(cc.c4b(212,129,86,255))
+                reward_label:setPosition(addColor:getContentSize().width * 0.8,addColor:getContentSize().height * 0.12)
+                reward_label:setRotation(10)
+                addColor:addChild(reward_label)
             elseif tag == 8  then
                 local up_sprite = cc.Sprite:create("image/loginreward/up.png")
                 up_sprite:setPosition(addColor:getContentSize().width * 0.5 ,addColor:getContentSize().height * 0.5 )
@@ -81,7 +88,7 @@ function LoginRewardPopup:ctor()
     
     for x = 0,2 do
         for y = 0,2 do
-           local addColor = cc.LayerColor:create(cc.c4b(0,0,0,125),158,135)
+           local addColor = cc.LayerColor:create(cc.c4b(0,0,0,80),158,135)
            addColor:setPosition(66 + x * 165,101 + y * 142)          
            addColor:setAnchorPoint(0,0)
            addColor:ignoreAnchorPointForPosition(true)

@@ -139,13 +139,16 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
         end 
     end
 
-
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+
+    main.setSwallowTouches = function (bool)
+        listener:setSwallowTouches(bool)
+    end
 
     return main    
 end
