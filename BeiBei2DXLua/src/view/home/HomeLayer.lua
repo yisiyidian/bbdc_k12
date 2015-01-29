@@ -11,15 +11,7 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
-function HomeLayer.create(share)
-    print("shop info")
-    for i = 1, #s_DataManager.product do
-        print(s_DataManager.product[i].productId)
-        print(s_DataManager.product[i].productName)
-        print(s_DataManager.product[i].productDescription)
-        print(s_DataManager.product[i].productValue)
-    end
-    
+function HomeLayer.create(share)    
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
@@ -187,46 +179,46 @@ function HomeLayer.create(share)
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             AnalyticsFriendBtn()
-
-            -- button sound
             playSound(s_sound_buttonEffect)
-            
-            elseif eventType == ccui.TouchEventType.ended then
-            
-            if  online == false then
-                offlineTipFriend.setTrue()
+        elseif eventType == ccui.TouchEventType.ended then
+            if s_CURRENT_USER:getLockFunctionState(1) == 0 then -- check is friend function unlock
+                local ShopAlter = require("view.shop.ShopAlter")
+                local shopAlter = ShopAlter.create(1, 'out')
+                shopAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                layer:addChild(shopAlter)
             else
-                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                    if downloadSoundBtnSchedule ~=nil then
-                        downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
-                    end
-                    s_CorePlayManager.enterFriendLayer()
+                if  online == false then
+                    offlineTipFriend.setTrue()
                 else
-
-                    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
-                        local Item_popup = require("popup/PopupModel")
-                        local item_popup = Item_popup.create(Site_From_Friend_Guest)  
-
-                        item_popup.update = function()
-                            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                                list[1].label:setString(s_CURRENT_USER.username)
-                                list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                                if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
-                            end
+                    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                        if downloadSoundBtnSchedule ~=nil then
+                            downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
                         end
-
-                        s_SCENE:popup(item_popup)
+                        s_CorePlayManager.enterFriendLayer()
                     else
-                        local Item_popup = require("popup/PopupModel")
-                        local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
-
-                        s_SCENE:popup(item_popup)
-                    end              
-
-                end   
+    
+                        if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
+                            local Item_popup = require("popup/PopupModel")
+                            local item_popup = Item_popup.create(Site_From_Friend_Guest)  
+    
+                            item_popup.update = function()
+                                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                                    list[1].label:setString(s_CURRENT_USER.username)
+                                    list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                                    if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                                end
+                            end
+    
+                            s_SCENE:popup(item_popup)
+                        else
+                            local Item_popup = require("popup/PopupModel")
+                            local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
+    
+                            s_SCENE:popup(item_popup)
+                        end
+                    end   
+                end
             end
-
-       
         end
     end
     

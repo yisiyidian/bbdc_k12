@@ -32,12 +32,12 @@ function ShopLayer.create()
     local backColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, bigHeight)
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
-    backColor:setPosition(s_DESIGN_WIDTH/2, bigHeight/2)
+    backColor:setPosition(bigWidth/2, bigHeight/2)
     scrollView:addChild(backColor)
 
     local back_head = cc.Sprite:create("image/shop/headback.png")
     back_head:setAnchorPoint(0.5, 1)
-    back_head:setPosition(bigWidth/2, s_DESIGN_HEIGHT)
+    back_head:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
     layer:addChild(back_head)
 
     local button_back_clicked = function(sender, eventType)
@@ -78,7 +78,7 @@ function ShopLayer.create()
         
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-                local shopAlter = ShopAlter.create(i)
+                local shopAlter = ShopAlter.create(i, 'in')
                 shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(shopAlter)
             end
