@@ -436,67 +436,12 @@ function O2OController.getDataEverydayInfo(onSaved)
         -- 1st log in
         s_CURRENT_USER.localTime = os.time()
         local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['localTime']=s_CURRENT_USER.localTime}
-        saveToServer(userdata, function (datas, error) updateWeek(nil, 1, onSaved) end)
+        local localDBDatas = {['noObjectIdDatas']=noObjectIdDatas, ['currentWeek']=currentWeek}
+        saveToServer(userdata, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
     else
         local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
         updateWeek(localDBDatas, 1, onSaved)
     end
-
-    
-
-    -- local localDatas = DataEverydayInfo.getAllDatasFromLocalDB()
-
-    -- if s_CURRENT_USER.localTime == 0 then
-    --     s_CURRENT_USER.localTime = os.time()
-    --     s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
-    --     updateWeek(nil, 1)
-    -- else
-    --     print ('os time, local time:', os.time(), s_CURRENT_USER.localTime)
-    --     showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_USER])
-        
-    --     local currentWeeks = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
-    --     print ('currentWeeks:' .. tostring(currentWeeks))
-    --     -- local database
-    --     local localCurrentData = nil
-    --     -- for i, v in ipairs(localDatas) do
-    --     --     if v.week == currentWeeks then
-    --     --         localCurrentData = DataEverydayInfo.create()
-    --     --         parseLocalDBDataToClientData(v, localCurrentData)
-    --     --         break
-    --     --     end
-    --     -- end
-
-    --     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
-    --         if localCurrentData ~= nil then
-    --             updateWeek(localCurrentData, localCurrentData.week)
-    --         else
-    --             updateWeek(nil, currentWeeks)
-    --         end
-    --     else -- online
-    --         s_UserBaseServer.getDataEverydayInfo(s_CURRENT_USER.objectId, currentWeeks,
-    --             function (api, result)
-    --                 s_CURRENT_USER:parseServerDataEverydayInfo(result.results)
-    --                 if #(result.results) <= 0 then
-    --                     if localCurrentData ~= nil then
-    --                         updateWeek(localCurrentData, localCurrentData.week)
-    --                         s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
-    --                     else
-    --                         updateWeek(nil, currentWeeks)
-    --                     end
-    --                 else
-    --                     local data = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
-    --                     if localCurrentData ~= nil then
-    --                         data:updateFrom(localCurrentData)
-    --                     end
-    --                     updateWeek(data, data.week)
-    --                 end
-    --             end,
-    --             function (api, code, message, description)
-    --                 if onSaved then onSaved() end
-    --                 hideProgressHUD()
-    --             end)
-    --     end
-    -- end
 end
 
 ---------------------------------------------------------------------------------------------------
