@@ -245,16 +245,16 @@ function DataUser:parseServerData(data)
     end
 end
 
-function DataUser:parseServerDataEverydayInfo(results)
-    local DataDailyCheckIn = require('model.user.DataEverydayInfo')
-   self.logInDatas = {}
-   for i, v in ipairs(results) do
-       local data = DataEverydayInfo.create()
-       parseServerDataToClientData(v, data)
-       self.logInDatas[i] = data
-       print_lua_table(data)
-   end 
-end
+-- function DataUser:parseServerDataEverydayInfo(results)
+--     local DataDailyCheckIn = require('model.user.DataEverydayInfo')
+--    self.logInDatas = {}
+--    for i, v in ipairs(results) do
+--        local data = DataEverydayInfo.create()
+--        parseServerDataToClientData(v, data)
+--        self.logInDatas[i] = data
+--        print_lua_table(data)
+--    end 
+-- end
 
 function DataUser:parseServerDataLevelInfo(results)
     for i, v in ipairs(results) do

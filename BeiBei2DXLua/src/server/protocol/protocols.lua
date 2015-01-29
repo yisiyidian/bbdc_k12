@@ -111,6 +111,31 @@ function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
     protocol:request()
 end
 
+function checkInEverydayInfo()
+    local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+    currentWeek:checkIn(os.time())
+
+    local function cb (currentWeek)
+        s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
+        s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas] = currentWeek
+    end
+
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then    
+        cb(currentWeek)
+        return
+    end
+
+    sysEverydayInfo(nil, currentWeek, function (serverDatas, error) 
+        if error == nil then
+            if serverDatas ~= nil then
+            for i, v in ipairs(serverDatas) do
+                parseServerDataToClientData(v, currentWeek)
+            end
+        end
+        cb(currentWeek)
+    end)
+end
+
 -- 1 data/day/book
 -- DataDailyStudyInfo
 
