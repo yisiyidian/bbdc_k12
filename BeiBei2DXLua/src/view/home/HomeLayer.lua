@@ -632,6 +632,36 @@ function HomeLayer.create(share)
             end
             
         end
+
+
+        -- if now_x - moveLength > start_x and not isDataShow then
+        --     if viewIndex == 1 then
+        --         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+        --         viewIndex = 2
+
+        --         local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
+        --         backColor:runAction(action1)
+
+        --         local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
+        --         local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+        --         setting_back:runAction(cc.Sequence:create(action2, action3))
+        --     end
+        if now_x + moveLength < start_x and not isDataShow then
+            if viewIndex == 2 then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+                viewIndex = 1
+
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+                backColor:runAction(action1)
+
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                setting_back:runAction(cc.Sequence:create(action2, action3))
+            end
+        end
+
     end
 
     local onTouchEnded = function(touch,event)
