@@ -254,6 +254,15 @@ function HomeLayer.create(share)
             local Loginreward = require("view.loginreward.LoginRewardPopup")
             local loginreward = Loginreward:create()
             s_SCENE:popup(loginreward)
+            
+            
+--            local Test1 = require("view.islandPopup.WordLibraryPopup")
+--            local test1 = Test1:create()
+--            s_SCENE:popup(test1)
+
+--            local Test2 = require("view.islandPopup.WordInfoPopup")
+--            local test2 = Test2:create()
+--            s_SCENE:popup(test2)
         end
     end
     
@@ -264,6 +273,7 @@ function HomeLayer.create(share)
     button_reward:setTitleFontSize(30)
     button_reward:addTouchEventListener(button_reward_clicked)
     backColor:addChild(button_reward)   
+    
 
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
