@@ -104,41 +104,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     self:plotLevelNumber('level'..levelIndex)
 
     local currentIndex = levelIndex
---    if self.chapterKey == 'chapter1' then
---        currentIndex = currentIndex + 10
---    elseif self.chapterKey == 'chapter2' then
---        currentIndex = currentIndex + 30
---    elseif self.chapterKey == 'chapter3' then
---        currentIndex = currentIndex + 60
---    end
-    
---    local bossList = s_CURRENT_USER.levelInfo:getBossList(s_CURRENT_USER.bookKey)
---    local summaryboss = split(bossList,'|')
---    local checkSummaryBoss = false
---    for i = 1, #summaryboss do
-----        print('summarybossIndex:'..summaryboss[i])
---        if summaryboss[i] == '' then break end
---        if summaryboss[i] - currentIndex == 0 then
---            checkSummaryBoss = true
---            break
---        end
---    end
-----    print('######check summaryboss#####')
-----    print(bossList)
---    
---    -- chest
---    local chestList = split(s_CURRENT_USER.chestList, '|')
---    local checkChest = false
---    for i = 1, #chestList do
---        --print('summarybossIndex:'..summaryboss[i])
---        if chestList[i] == '' then break end
---        if chestList[i] - currentIndex == 0 then
---            checkChest = true
---            break
---        end
---    end
---
---    AnalyticsChestGeneratedCnt(#chestList)
+
     
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0

@@ -71,10 +71,10 @@ function DataUser:ctor()
     self.clientData                        = {0}
     self.levelInfo                         = DataLevelInfo.create()
 
-    self.lastUpdateSummaryBossTime         = 0
-    self.summaryBossList                   = ''
-    self.chestList                         = ''
-    self.lastUpdateChestTime               = 0
+--    self.lastUpdateSummaryBossTime         = 0
+--    self.summaryBossList                   = ''
+--    self.chestList                         = ''
+--    self.lastUpdateChestTime               = 0
     
     -- function lock
     self.lockFunction                      = 0    
