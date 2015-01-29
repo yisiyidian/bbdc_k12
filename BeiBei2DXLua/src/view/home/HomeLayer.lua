@@ -62,7 +62,7 @@ function HomeLayer.create(share)
 
     local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
     been_number_back:setPosition(s_DESIGN_WIDTH-100, s_DESIGN_HEIGHT-50)
-    layer:addChild(been_number_back)
+    backColor:addChild(been_number_back)
 
     local been = cc.Sprite:create("image/shop/been.png")
     been:setPosition(0, been_number_back:getContentSize().height/2)
@@ -433,41 +433,6 @@ function HomeLayer.create(share)
     local button_data
     local data_back
     local isDataShow = false
-    local button_data_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
-            AnalyticsDataCenterBtn()
-
-            -- button sound
-            playSound(s_sound_buttonEffect)
-            
-           if isDataShow then
-               isDataShow = false
-               layer:setButtonEnabled(true)
-               local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
-               local action2 = cc.CallFunc:create(function()
-                   button_data:setLocalZOrder(0)
-                   data_back:removeChildByName('PersonalInfo')
-               end)
-               button_data:runAction(cc.Sequence:create(action1, action2))
-           else
-               isDataShow = true
-               layer:setButtonEnabled(false)
-               button_data:setLocalZOrder(2)
-               button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
-               if true then
-                   local PersonalInfo = require("view.PersonalInfo")
-                   local personalInfoLayer = PersonalInfo.create()
-                   personalInfoLayer:setPosition(-s_LEFT_X,0)
-                   data_back:addChild(personalInfoLayer,10,'PersonalInfo') 
-               else
-                   local Item_popup = require("popup/PopupModel")
-                   local item_popup = Item_popup.create(Site_From_Information)  
-                   s_SCENE:popup(item_popup)
-               end 
-           end
-
-        end
-    end
 
     button_data = cc.Sprite:create("image/homescene/main_bottom.png")
     button_data:setAnchorPoint(0.5,0)
@@ -484,7 +449,7 @@ function HomeLayer.create(share)
     layer.dataBack = data_back
     
     local data_name = cc.Label:createWithSystemFont("数据","",28)
-    data_name:setColor(cc.c4b(0,0,0,255))
+    data_name:setColor(cc.c4b(0,150,210,255))
     data_name:setPosition(button_data:getContentSize().width/2+30, button_data:getContentSize().height/2-5)
     button_data:addChild(data_name,0)
 
@@ -667,6 +632,36 @@ function HomeLayer.create(share)
             end
             
         end
+
+
+        -- if now_x - moveLength > start_x and not isDataShow then
+        --     if viewIndex == 1 then
+        --         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+        --         viewIndex = 2
+
+        --         local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
+        --         backColor:runAction(action1)
+
+        --         local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
+        --         local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+        --         setting_back:runAction(cc.Sequence:create(action2, action3))
+        --     end
+        if now_x + moveLength < start_x and not isDataShow then
+            if viewIndex == 2 then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+                viewIndex = 1
+
+                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+                backColor:runAction(action1)
+
+                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                setting_back:runAction(cc.Sequence:create(action2, action3))
+            end
+        end
+
     end
 
     local onTouchEnded = function(touch,event)

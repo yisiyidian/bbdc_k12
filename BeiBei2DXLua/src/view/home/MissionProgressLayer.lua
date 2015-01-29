@@ -77,15 +77,17 @@ function MissionProgressLayer.create(share)
     end
 
     local circle_color = {cc.c3b(76,223,204),cc.c3b(36,168,217),cc.c3b(18,128,213)}
-
-    for i = 1, completeCount + 1 do 
-        local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
-        split_line:setAnchorPoint(0.5,- 161 / 80)
-        split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
-        backProgress:addChild(split_line,1)
-        split_line:setRotation(360 * (i - 1) / missionCount)
-        split_line:setVisible(false)
-        split_line:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount),cc.Show:create()))
+    
+    if completeCount < missionCount then
+        for i = 1, completeCount + 1 do 
+            local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
+            split_line:setAnchorPoint(0.5,- 161 / 80)
+            split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
+            backProgress:addChild(split_line,1)
+            split_line:setRotation(360 * (i - 1) / missionCount)
+            split_line:setVisible(false)
+            split_line:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount),cc.Show:create()))
+        end
     end
 
     for i = 1, completeCount do 
