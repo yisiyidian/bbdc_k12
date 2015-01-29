@@ -126,8 +126,7 @@ function checkInEverydayInfo()
     end
 
     sysEverydayInfo(nil, currentWeek, function (serverDatas, error) 
-        if error == nil then
-            if serverDatas ~= nil then
+        if error == nil and serverDatas ~= nil then
             for i, v in ipairs(serverDatas) do
                 parseServerDataToClientData(v, currentWeek)
             end
