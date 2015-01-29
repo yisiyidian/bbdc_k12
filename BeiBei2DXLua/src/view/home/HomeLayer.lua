@@ -38,6 +38,10 @@ function HomeLayer.create(share)
 
     local redHint = nil
     -- data end
+
+    local FRIEND_LOCKED = 0
+    local SHOP_LOCKED = 0
+    local REWARD_LOCKED = 0
     
     local list = {}
     local username = "游客"
@@ -58,6 +62,24 @@ function HomeLayer.create(share)
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
+
+    local top = cc.Sprite:create('image/homescene/home_page_bg_top.png')
+    top:setAnchorPoint(0.5,1)
+    top:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    backColor:addChild(top)
+
+    local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
+    been_number_back:setPosition(s_DESIGN_WIDTH-100, s_DESIGN_HEIGHT-50)
+    layer:addChild(been_number_back)
+
+    local been = cc.Sprite:create("image/shop/been.png")
+    been:setPosition(0, been_number_back:getContentSize().height/2)
+    been_number_back:addChild(been)
+
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',24)
+    been_number:setColor(cc.c4b(0,0,0,255))
+    been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
+    been_number_back:addChild(been_number)
     
     local setting_back
     
@@ -81,12 +103,13 @@ function HomeLayer.create(share)
         mission_progress = MissionProgress.create(true)
     end
     backColor:addChild(mission_progress,1)
-    local downloadSoundButton = require("view.home.DownloadSoundButton").create(mission_progress)
+    local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)
     local downloadSoundBtnSchedule = downloadSoundButton:getScheduler()
-   
-    local name = cc.Sprite:create("image/homescene/title_shouye_name.png")
-    name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-120)
+
+    local name = cc.Label:createWithSystemFont('贝贝单词','',50)
+    name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-85)
     backColor:addChild(name)
+
     
     local book_name 
     
@@ -99,9 +122,9 @@ function HomeLayer.create(share)
     	end
     end
     
-    local currentBook = cc.Label:createWithSystemFont("正在学习："..book_name,"",30)
-    currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-180)
-    currentBook:setColor(cc.c4b(61,191,244,255))
+    local currentBook = cc.Label:createWithSystemFont("正在学习："..book_name,"",26)
+    currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-140)
+    currentBook:setColor(cc.c4b(255,255,255,255))
     backColor:addChild(currentBook)
     
     local button_left_clicked = function(sender, eventType)
@@ -150,12 +173,17 @@ function HomeLayer.create(share)
         end
     end
 
-    local button_main = ccui.Button:create("image/homescene/main_set.png","image/homescene/main_set.png","")
-    button_main:setPosition((bigWidth-s_DESIGN_WIDTH)/2+50, s_DESIGN_HEIGHT-120)
+    local button_main = ccui.Button:create("image/homescene/home_page_function_bg1.png",'',"")
+    button_main:setScale9Enabled(true)
+    button_main:setPosition(bigWidth / 2 - 166, 200)
+    button_main:setRotation(180)
     button_main:addTouchEventListener(button_left_clicked)
     backColor:addChild(button_main)
+
+    local icon_main = cc.Sprite:create('image/homescene/home_page_setting.png')
+    icon_main:setPosition(button_main:getContentSize().width / 2,button_main:getContentSize().height / 2)
+    button_main:addChild(icon_main)
     
-   
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             AnalyticsFriendBtn()
@@ -202,10 +230,33 @@ function HomeLayer.create(share)
         end
     end
     
-    local button_friend = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
-    button_friend:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-120)
+    local button_friend 
+    local icon_friend
+    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+        button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+        button_friend:setPosition(bigWidth / 2 - 1, 200)
+        icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+    else
+        button_friend = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
+        button_friend:setPosition(bigWidth / 2 - 0.5, 200)
+        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
+        cover:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+        button_friend:addChild(cover)
+        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
+        lock:setAnchorPoint(1,0)
+        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
+        button_friend:addChild(lock)
+        icon_friend = cc.Sprite:create('image/homescene/home_page_friends_locked.png')
+    end
+    button_friend:setScale9Enabled(true)
+    button_friend:setAnchorPoint(1,0.5)
+    --button_friend:setPosition(bigWidth / 2 - 1, 200)
     button_friend:addTouchEventListener(button_right_clicked)
     backColor:addChild(button_friend)   
+
+    icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+    button_friend:addChild(icon_friend)
+
     s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
         function (api, result)
             print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
@@ -237,11 +288,33 @@ function HomeLayer.create(share)
         end
     end
 
-    local button_shop = ccui.Button:create("image/homescene/main_friends.png","image/homescene/main_friends.png","")
-    button_shop:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-200)
-    button_shop:setColor(cc.c4b(0,0,0,255))
-    button_shop:setTitleText("$")
-    button_shop:setTitleFontSize(40)
+    local button_shop
+    local icon_shop
+
+    if SHOP_LOCKED == 0 then
+        button_shop = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+        button_shop:setPosition(bigWidth / 2 + 1, 200)
+        icon_shop = cc.Sprite:create('image/homescene/home_page_store.png')
+    else
+        button_shop = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
+        button_shop:setPosition(bigWidth / 2 + 0.5, 200)
+        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
+        cover:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
+        button_shop:addChild(cover)
+        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
+        lock:setAnchorPoint(1,0)
+        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
+        button_shop:addChild(lock)
+        icon_shop = cc.Sprite:create('image/homescene/home_page_store_locked.png')
+    end
+
+    button_shop:setScale9Enabled(true)
+    button_shop:setAnchorPoint(0,0.5)
+    --button_shop:setPosition(bigWidth / 2 + 1, 200)
+
+    icon_shop:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
+    button_shop:addChild(icon_shop)
+
     button_shop:addTouchEventListener(button_shop_clicked)
     backColor:addChild(button_shop)   
     
@@ -256,14 +329,36 @@ function HomeLayer.create(share)
             s_SCENE:popup(loginreward)
         end
     end
+
+    local button_reward
+    local icon_reward
+
+    if REWARD_LOCKED == 0 then
+        button_reward = ccui.Button:create("image/homescene/home_page_function_bg1.png","","")
+        button_reward:setPosition(bigWidth / 2 + 166, 200)
+        icon_reward = cc.Sprite:create('image/homescene/home_page_medal.png')
+    else
+        button_reward = ccui.Button:create("image/homescene/home_page_function_locked_bg2.png","","")
+        button_reward:setPosition(bigWidth / 2 + 166, 200)
+        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover2.png')
+        cover:setPosition(button_reward:getContentSize().width / 2,button_reward:getContentSize().height / 2)
+        button_reward:addChild(cover)
+        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
+        lock:setAnchorPoint(1,0)
+        lock:setPosition(button_reward:getContentSize().width,button_reward:getContentSize().height * 0)
+        button_reward:addChild(lock)
+        icon_reward = cc.Sprite:create('image/homescene/home_page_medal_locked.png')
+    end
     
-    local button_reward = ccui.Button:create("image/homescene/main_friends.png","","")
-    button_reward:setPosition((bigWidth-s_DESIGN_WIDTH)/2+s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT-280)
-    button_reward:setColor(cc.c4b(0,0,0,255))
-    button_reward:setTitleText("$_$")
-    button_reward:setTitleFontSize(30)
+    --button_reward = ccui.Button:create("image/homescene/home_page_function_bg1.png","","")
+    button_reward:setScale9Enabled(true)
+    --button_reward:setPosition(bigWidth / 2 + 166, 200)
     button_reward:addTouchEventListener(button_reward_clicked)
     backColor:addChild(button_reward)   
+
+    --icon_reward = cc.Sprite:create('image/homescene/home_page_medal.png')
+    icon_reward:setPosition(button_reward:getContentSize().width / 2,button_reward:getContentSize().height / 2)
+    button_reward:addChild(icon_reward)
 
     local button_play_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended and viewIndex == 1 then
@@ -285,21 +380,9 @@ function HomeLayer.create(share)
             s_CorePlayManager.enterLevelLayer()  
             hideProgressHUD()
             
-
---            s_UserBaseServer.saveDataObjectOfCurrentUser(self,
---                function(api,result)
---                    s_CorePlayManager.initTotalPlay()
---                end,
---                function(api, code, message, description)
---                    s_CorePlayManager.initTotalPlay()
---                end)
-            
         end
     end
-    -- local ACCUMULATING_WORD = 2
-    -- local LEARNING_WORD = 3
-    -- local REVIEWING_WORD = 1
-    -- local COMPLETE_MISSION = 4
+
     local state = s_LocalDatabaseManager.getGameState()
 
     local playImg = 'image/homescene/bigbutton.png'
@@ -358,9 +441,6 @@ function HomeLayer.create(share)
            if isDataShow then
                isDataShow = false
                layer:setButtonEnabled(true)
-               -- button_friend:setEnabled(true)
-               -- button_shop:setEnabled(true)
-               -- button_main:setEnabled(true)
                local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
                local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
@@ -370,9 +450,6 @@ function HomeLayer.create(share)
            else
                isDataShow = true
                layer:setButtonEnabled(false)
-               -- button_friend:setEnabled(false)
-               -- button_shop:setEnabled(false)
-               -- button_main:setEnabled(false)
                button_data:setLocalZOrder(2)
                button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                if true then
@@ -415,12 +492,6 @@ function HomeLayer.create(share)
     setting_back:setAnchorPoint(1,0.5)
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
-
-    -- setting_back = cc.LayerColor:create(cc.c4b(255,255,255,255), offset, s_DESIGN_HEIGHT)  
-    -- setting_back:setAnchorPoint(1,0.5)
-    -- setting_back:ignoreAnchorPointForPosition(false)
-    -- setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
-    -- layer:addChild(setting_back)
 
     
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
@@ -516,10 +587,6 @@ function HomeLayer.create(share)
 
         end
 
-        
-        
-        
-        --local split = cc.Sprite:create("image/homescene/setup_line.png")
         local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
         split:ignoreAnchorPointForPosition(false)
         split:setAnchorPoint(0.5,0)
@@ -568,9 +635,6 @@ function HomeLayer.create(share)
             if now_y - moveLength > start_y and not isDataShow and viewIndex == 1 then         
                    isDataShow = true
                    layer:setButtonEnabled(false)
-                   -- button_friend:setEnabled(false)
-                   -- button_shop:setEnabled(false)
-                   -- button_main:setEnabled(false)
                    button_data:setLocalZOrder(2)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                    if true then
@@ -591,9 +655,6 @@ function HomeLayer.create(share)
             if now_y + moveLength < start_y and isDataShow and viewIndex == 1 then
                 isDataShow = false
                 layer:setButtonEnabled(true)
-                -- button_friend:setEnabled(true)
-                -- button_shop:setEnabled(true)
-                -- button_main:setEnabled(true)
                 local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
                 local action2 = cc.CallFunc:create(function()
                    button_data:setLocalZOrder(0)
@@ -603,34 +664,6 @@ function HomeLayer.create(share)
                 return
             end
             
-        end
-
-        if now_x - moveLength > start_x and not isDataShow then
-            if viewIndex == 1 then
-                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-                viewIndex = 2
-
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
-                backColor:runAction(action1)
-
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
-                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                setting_back:runAction(cc.Sequence:create(action2, action3))
-            end
-        elseif now_x + moveLength < start_x and not isDataShow then
-            if viewIndex == 2 then
-                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-                viewIndex = 1
-
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-                backColor:runAction(action1)
-
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
-                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                setting_back:runAction(cc.Sequence:create(action2, action3))
-            end
         end
     end
 
@@ -665,9 +698,6 @@ function HomeLayer.create(share)
         elseif location.y >  s_DESIGN_HEIGHT-280 and (location.y == start_y and location.x == start_x) and viewIndex == 1 then
             isDataShow = false
             layer:setButtonEnabled(true)
-            -- button_friend:setEnabled(true)
-            -- button_shop:setEnabled(true)
-            -- button_main:setEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
             local action2 = cc.CallFunc:create(function()
                button_data:setLocalZOrder(0)
@@ -692,6 +722,7 @@ function HomeLayer.create(share)
     layer.button_main = button_main
     layer.button_sound = downloadSoundButton
     layer.button_enter = mission_progress
+    layer.button_reward = button_reward
 
     return layer
 end
@@ -726,6 +757,7 @@ function HomeLayer:setButtonEnabled(enabled)
     self.button_main:setEnabled(enabled)
     self.button_sound:setEnabled(enabled)
     self.button_enter:setEnabled(enabled)
+    self.button_reward:setEnabled(enabled)
 
 end
 
