@@ -13,8 +13,6 @@ function M.createTable(objectOfDataClass)
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
-            if key == 'PRIMARY' then key = 'fuckprimary' end
-
             if (type(value) == 'string') then
                 if string.len(str) > 1 then str = str .. ',\n' end
                 str = str .. key .. ' TEXT'
@@ -58,8 +56,6 @@ function M.alterLocalDatabase(objectOfDataClass)
         if (key == 'sessionToken'  
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
-
-            if key == 'PRIMARY' then key = 'fuckprimary' end
 
             local data = nil
             if (type(value) == 'string') then
@@ -110,8 +106,6 @@ function getInsertRecord(objectOfDataClass)
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
-            if key == 'PRIMARY' then key = 'fuckprimary' end
-
             if (type(value) == 'string') then
                 if string.len(keys) > 0 then keys = keys .. ',' end
                 keys = keys .. "'" .. key .. "'"
@@ -148,8 +142,6 @@ function getUpdateRecord(objectOfDataClass)
         if (key == 'sessionToken'  
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
-
-            if key == 'PRIMARY' then key = 'fuckprimary' end
 
             if (type(value) == 'string') then
                 if string.len(str) > 0 then str = str .. ',' end

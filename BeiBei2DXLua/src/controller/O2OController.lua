@@ -266,18 +266,18 @@ function O2OController.getUserDatasOnline()
                 showProgressHUD()
                 s_UserBaseServer.synBookRelations(nil, function ()
 
-                        local dayString = getDayStringForDailyStudyInfo(os.time())
-                        local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
-                        if today == nil then
-                            today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
-                        end
-                        s_UserBaseServer.synTodayDailyStudyInfo(today, function ()
-                            s_CorePlayManager.enterHomeLayer()
-                            O2OController.getBulletinBoard()    
-                            hideProgressHUD()
-                        end, true)
+                    local dayString = getDayStringForDailyStudyInfo(os.time())
+                    local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
+                    if today == nil then
+                        today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
+                    end
+                    s_UserBaseServer.synTodayDailyStudyInfo(today, function ()
+                        s_CorePlayManager.enterHomeLayer()
+                        O2OController.getBulletinBoard()    
+                        hideProgressHUD()
+                    end, true)
 
-                    end)
+                end)
                 
             end 
         end)
@@ -299,85 +299,21 @@ function O2OController.loadConfigs()
 end
 
 function O2OController.getDataLevelInfo(oncompleted)
-    -- get local data
-
-    s_CURRENT_USER.levelInfo.userId = s_CURRENT_USER.objectId
-    s_CURRENT_USER.levelInfo.username = s_CURRENT_USER.username
-
-    local localDatas = s_LocalDatabaseManager.getDatas(s_CURRENT_USER.levelInfo.className, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
-    local lastLocalData = nil
-    local lastTime = 0
-    print ('\n\n\ngetDataLevelInfo >>>')
-    print (localDatas)
-    print_lua_table (localDatas)
-    print ('getDataLevelInfo <<<\n\n\n')
-    for key, value in ipairs(localDatas) do
-        local time = value.updatedAt
-        if time <= 0 and lastTime == 0 then 
-            lastLocalData = value
-        elseif time > lastTime then
-            lastTime = time
-            lastLocalData = value
+    s_CURRENT_USER.levelInfo:getDataFromLocalDB()    
+    sysLevelInfo(s_CURRENT_USER.levelInfo, function (serverData, error)
+        if error then
+            onErrorHappend(error.message)
+            hideProgressHUD()
+            return
         end
-    end
 
-    -- handle offline
-
-    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
-        if lastLocalData ~= nil then
-            parseLocalDBDataToClientData(lastLocalData, s_CURRENT_USER.levelInfo)
-        else
-            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.levelInfo)
+        if serverData ~= nil then
+            parseServerDataToClientData(serverData, s_CURRENT_USER.levelInfo)
+            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.levelInfo, s_CURRENT_USER.userId, s_CURRENT_USER.username)
         end
         if oncompleted ~= nil then oncompleted() end
-        return
-    end
-
-    -- handle online
-
-    local afterGetDataLevelInfo = function ()
-        print('afterGetDataLevelInfo')
-        print_lua_table(s_CURRENT_USER)
-        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
-        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
-
-        if lastLocalData ~= nil and lastLocalData.updatedAt > s_CURRENT_USER.levelInfo.updatedAt then
-            -- send local to server
-            lastLocalData.objectId = s_CURRENT_USER.levelInfo.objectId
-            updateDataFromUser(lastLocalData, s_CURRENT_USER)
-            parseLocalDBDataToClientData(lastLocalData, s_CURRENT_USER.levelInfo)
-            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.levelInfo)
-        else
-            -- save server to local
-            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.levelInfo, s_CURRENT_USER.levelInfo.userId, s_CURRENT_USER.levelInfo.username)
-        end
-
-        if oncompleted ~= nil then oncompleted() end
-    end
-
-    if s_CURRENT_USER.levelInfoObjectId == '' then
-        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER.levelInfo,
-            function(api,result)
-                s_CURRENT_USER.levelInfoObjectId = s_CURRENT_USER.levelInfo.objectId
-                afterGetDataLevelInfo()
-            end,
-            function(api, code, message, description)
-                onErrorHappend(message)
-                hideProgressHUD()
-            end)
-    else
-        s_UserBaseServer.getDataLevelInfo(s_CURRENT_USER.levelInfoObjectId,
-            function(api, result)
-                s_CURRENT_USER:parseServerDataLevelInfo(result.results)
-                afterGetDataLevelInfo()
-            end, 
-            function(api, code, message, description)
-                onErrorHappend(message)
-                hideProgressHUD()
-            end
-        )
-    end
-end -- O2OController.getDataLevelInfo(oncompleted)
+    end)
+end
 
 ---------------------------------------------------------------------------------------------------
 
