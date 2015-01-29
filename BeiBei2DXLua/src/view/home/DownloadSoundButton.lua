@@ -23,7 +23,7 @@ local function initDownloadState(bookKey)
 end
 
 function DownloadSoundButton.create(parentNode)
-    local postion = cc.p(parentNode:getContentSize().width/2,parentNode:getContentSize().height-255)
+    local postion = cc.p(parentNode:getContentSize().width/2,parentNode:getContentSize().height * 0.3)
     local isOffline = s_SERVER.isNetworkConnectedNow()
     local bookKey = s_CURRENT_USER.bookKey
     local total_size = s_DataManager.books[bookKey].music    
@@ -33,7 +33,7 @@ function DownloadSoundButton.create(parentNode)
     --init loading bar
     local button = DownloadSoundButton.new()
     button:loadTexture("image/soundLoadingBar/loadingbar.png",ccui.TextureResType.localType)
-    button:setPosition(postion.x, postion.y+2)
+    button:setPosition(postion.x, postion.y)
     button:setTag(8888)
     
     --init the background of the loading bar 

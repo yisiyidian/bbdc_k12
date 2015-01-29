@@ -5,7 +5,7 @@ MAXTYPEINDEX = 5
 require("common.global")
 local sqlite3 = require("lsqlite3")
 
-local DataLogIn = require('model.user.DataLogIn')
+local DataEverydayInfo = require('model.user.DataEverydayInfo')
 local DataUser = require('model.user.DataUser')
 local DataLevelInfo = require('model.user.DataLevelInfo')
 
@@ -18,7 +18,7 @@ local DataWrongWordBuffer = require('model.user.DataWrongWordBuffer')
 local DataBossWord = require('model.user.DataBossWord')
 
 local databaseTables = {
-        DataLogIn,
+        DataEverydayInfo,
         DataUser,
         DataLevelInfo,
 
@@ -54,16 +54,16 @@ function Manager.init()
     Manager.database = sqlite3.open(databasePath)
     print ('databasePath:' .. databasePath)
 
-    localdatabase_utils = reloadModule('model.localDatabase.utils')
-    localdatabase_user = reloadModule('model.localDatabase.user')
+    localdatabase_utils = require('model.localDatabase.utils')
+    localdatabase_user = require('model.localDatabase.user')
 
-    localdatabase_dailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
-    localdatabase_currentIndex = reloadModule('model.localDatabase.currentIndex')
-    localdatabase_newPlayState = reloadModule('model.localDatabase.newPlayState')
-    localdatabase_studyConfiguration = reloadModule('model.localDatabase.studyConfiguration')
-    localdatabase_todayReviewBossNum = reloadModule('model.localDatabase.todayReviewBossNum')
-    localdatabase_wrongWordBuffer = reloadModule('model.localDatabase.wrongWordBuffer')
-    localdatabase_bossWord = reloadModule('model.localDatabase.bossWord')
+    localdatabase_dailyStudyInfo = require('model.localDatabase.dailyStudyInfo')
+    localdatabase_currentIndex = require('model.localDatabase.currentIndex')
+    localdatabase_newPlayState = require('model.localDatabase.newPlayState')
+    localdatabase_studyConfiguration = require('model.localDatabase.studyConfiguration')
+    localdatabase_todayReviewBossNum = require('model.localDatabase.todayReviewBossNum')
+    localdatabase_wrongWordBuffer = require('model.localDatabase.wrongWordBuffer')
+    localdatabase_bossWord = require('model.localDatabase.bossWord')
 
     Manager.initTables()
 end
@@ -104,8 +104,9 @@ function Manager.saveData(objectOfDataClass, userId, username, recordsNum, condi
     localdatabase_utils.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
 end
 
-function Manager.getDatas(classNameOfDataClass, userId, username)
-    return localdatabase_utils.getDatas(classNameOfDataClass, userId, username)
+-- handleRecordRow : nil or function(row)
+function Manager.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
+    return localdatabase_utils.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
 end
 
 ---------------------------------------------------------------------------------------------------------

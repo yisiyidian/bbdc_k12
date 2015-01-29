@@ -20,7 +20,7 @@ function ShopErrorAlter.create()
         s_SCENE:replaceGameLayer(shopLayer)
     end
 
-    local back = cc.Sprite:create("image/shop/alter_back.png")
+    local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 

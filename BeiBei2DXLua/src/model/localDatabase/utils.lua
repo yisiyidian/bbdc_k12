@@ -248,7 +248,8 @@ end
 
 ----------------------------------------------------------------------------------------------------
 
-function M.getDatas(classNameOfDataClass, userId, username)
+-- handleRecordRow(row)
+function M.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
     print ('\n\n\nM getDatas >>>')
     local sql = ''
     local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s"', classNameOfDataClass, username)
@@ -263,10 +264,12 @@ function M.getDatas(classNameOfDataClass, userId, username)
     local ret = {}
     for row in Manager.database:nrows(sql) do
         table.insert(ret, row)
+        if handleRecordRow then handleRecordRow(row) end
     end
     if #ret == 0 and sql == sqlUsername and userId ~= '' then
         for row in Manager.database:nrows(sqlUserId) do
             table.insert(ret, row)
+            if handleRecordRow then handleRecordRow(row) end
         end
     end
     print (sqlUsername)

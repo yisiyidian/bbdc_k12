@@ -138,13 +138,7 @@ function DataManager.loadBookWords()
     for i = 1, #bookName do
         bookWord[bookName[i]] = {}
         local filepath = "cfg/" .. bookName[i] .. ".book"
-        print (filepath)
-        local content = ''
-        -- if s_USE_XXTEA then -- too slow
-        --     content = loadXxteaFile(filepath)
-        -- else
-            content = cc.FileUtils:getInstance():getStringFromFile(filepath)
-        -- end
+        local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
         local lines = split(content, "\n")
         for j = 1, #lines do
             if lines[j] ~= "" then

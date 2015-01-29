@@ -1,5 +1,5 @@
 local DataClassBase = require('model.user.DataClassBase')
-local DataLogIn = require('model/user/DataLogIn')
+local DataEverydayInfo = require('model/user/DataEverydayInfo')
 local DataLevelInfo = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo = require('model/user/DataDailyStudyInfo')
 
@@ -81,11 +81,27 @@ function DataUser:ctor()
     self.lastUpdateChestTime               = 0
     
     -- function lock
-    self.friendFunction                    = 0
-    self.dataFunction1                     = 0
-    self.dataFunction2                     = 0
-    self.dataFunction3                     = 0
-    self.dataFunction4                     = 0
+    self.lockFunction                      = 0    
+end
+
+function DataUser:getLockFunctionState(productId)
+    local lockFunction = self.lockFunction
+    for i = 1, productId - 1 do
+        lockFunction = math.floor(lockFunction/2)
+    end
+    return lockFunction%2
+end
+
+function DataUser:unlockFunctionState(productId)
+    local lockFunction = self.lockFunction
+    local addNum = 1
+    for i = 1, productId - 1 do
+        lockFunction = math.floor(lockFunction/2)
+        addNum = addNum*2
+    end
+    if lockFunction%2 == 0 then
+        self.lockFunction = self.lockFunction + addNum
+    end
 end
 
 function DataUser:getBeans()
@@ -226,11 +242,11 @@ function DataUser:parseServerData(data)
     end
 end
 
-function DataUser:parseServerDataLogIn(results)
-    local DataDailyCheckIn = require('model.user.DataLogIn')
+function DataUser:parseServerDataEverydayInfo(results)
+    local DataDailyCheckIn = require('model.user.DataEverydayInfo')
    self.logInDatas = {}
    for i, v in ipairs(results) do
-       local data = DataLogIn.create()
+       local data = DataEverydayInfo.create()
        parseServerDataToClientData(v, data)
        self.logInDatas[i] = data
        print_lua_table(data)
