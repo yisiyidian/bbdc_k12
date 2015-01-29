@@ -1171,7 +1171,7 @@
 					"-fobjc-arc",
 				);
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=*]" = "566768c0-d417-4156-84b0-9c5907c16069";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";

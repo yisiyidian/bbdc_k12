@@ -1,7 +1,7 @@
 [
-{"productId":"1","productName":"friend","productDescription":"这个是好友功能","productValue":"300"},
-{"productId":"2","productName":"data1","productDescription":"这个是数据1","productValue":"300"},
-{"productId":"3","productName":"data2","productDescription":"这个是数据2","productValue":"300"},
-{"productId":"4","productName":"data3","productDescription":"这个是数据3","productValue":"300"},
-{"productId":"5","productName":"data4","productDescription":"这个是数据4","productValue":"300"}
+{"productId":"1","productName":"friend","productDescription":"这个是好友功能","productValue":300},
+{"productId":"2","productName":"data1","productDescription":"这个是数据1","productValue":300},
+{"productId":"3","productName":"data2","productDescription":"这个是数据2","productValue":300},
+{"productId":"4","productName":"data3","productDescription":"这个是数据3","productValue":300},
+{"productId":"5","productName":"data4","productDescription":"这个是数据4","productValue":300}
 ]

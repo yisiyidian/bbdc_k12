@@ -1,12 +1,15 @@
 require("common.global")
 
+local ShopErrorAlter = require("view.shop.ShopErrorAlter")
+
 local ShopAlter = class("ShopAlter", function()
     return cc.Layer:create()
 end)
 
 local button_sure
 
-function ShopAlter.create(itemId, state)
+function ShopAlter.create(itemId, location)
+    local state = s_CURRENT_USER:getLockFunctionState(itemId)
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
     local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
@@ -14,28 +17,34 @@ function ShopAlter.create(itemId, state)
     main:ignoreAnchorPointForPosition(false)
 
     main.sure = function()
-        s_CURRENT_USER.beans = s_CURRENT_USER.beans - s_DataManager.product[itemId].productValue
-        
-        if itemId == 1 then
-            s_CURRENT_USER.friendFunction = 1
-        elseif itemId == 2 then
-            s_CURRENT_USER.dataFunction1 = 1
-        elseif itemId == 3 then
-            s_CURRENT_USER.dataFunction2 = 1
-        elseif itemId == 4 then
-            s_CURRENT_USER.dataFunction3 = 1
-        elseif itemId == 5 then
-            s_CURRENT_USER.dataFunction4 = 1
+        if s_CURRENT_USER.beans >= s_DataManager.product[itemId].productValue then
+            s_CURRENT_USER.beans = s_CURRENT_USER.beans - s_DataManager.product[itemId].productValue
+            s_CURRENT_USER:unlockFunctionState(itemId)
+            s_CURRENT_USER:updateDataToServer()
+            
+            main:removeFromParent()
+            
+            if location == 'in' then
+                local ShopLayer = require("view.shop.ShopLayer")
+                local shopLayer = ShopLayer.create()
+                s_SCENE:replaceGameLayer(shopLayer)
+            else
+                
+            end
+        else
+            local shopErrorAlter = ShopErrorAlter.create()
+            shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            main:addChild(shopErrorAlter)
         end
-        
-        s_CURRENT_USER:updateDataToServer()
-        
-        local ShopLayer = require("view.shop.ShopLayer")
-        local shopLayer = ShopLayer.create()
-        s_SCENE:replaceGameLayer(shopLayer)
     end
 
-    local back = cc.Sprite:create("image/shop/alter_back.png")
+    
+    local back
+    if location == 'out' then
+        back = cc.Sprite:create("image/shop/alter_back_out.png")
+    else
+        back = cc.Sprite:create("image/shop/alter_back_in.png")
+    end
     back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 

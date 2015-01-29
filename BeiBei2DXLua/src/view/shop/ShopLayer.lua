@@ -2,34 +2,12 @@ require("cocos.init")
 require("common.global")
 
 local ShopAlter = require("view.shop.ShopAlter")
-local ShopErrorAlter = require("view.shop.ShopErrorAlter")
 
 local ShopLayer = class("ShopLayer", function()
     return cc.Layer:create()
 end)
 
-function ShopLayer.create()
-    local productNum = #s_DataManager.product
-    local productState = {}
-    for i = 1, productNum do
-        local state
-        if s_DataManager.product[i].productName == 'friend' then
-            state = s_CURRENT_USER.friendFunction
-        elseif s_DataManager.product[i].productName == 'data1' then
-            state = s_CURRENT_USER.dataFunction1
-        elseif s_DataManager.product[i].productName == 'data2' then
-            state = s_CURRENT_USER.dataFunction2
-        elseif s_DataManager.product[i].productName == 'data3' then
-            state = s_CURRENT_USER.dataFunction3
-        elseif s_DataManager.product[i].productName == 'data4' then
-            state = s_CURRENT_USER.dataFunction4
-        else
-            state = 0
-        end
-        table.insert(productState, state)
-    end
-    
-
+function ShopLayer.create()    
     local layer = ShopLayer.new()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
@@ -54,12 +32,12 @@ function ShopLayer.create()
     local backColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, bigHeight)
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
-    backColor:setPosition(s_DESIGN_WIDTH/2, bigHeight/2)
+    backColor:setPosition(bigWidth/2, bigHeight/2)
     scrollView:addChild(backColor)
 
     local back_head = cc.Sprite:create("image/shop/headback.png")
     back_head:setAnchorPoint(0.5, 1)
-    back_head:setPosition(bigWidth/2, s_DESIGN_HEIGHT)
+    back_head:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
     layer:addChild(back_head)
 
     local button_back_clicked = function(sender, eventType)
@@ -87,6 +65,7 @@ function ShopLayer.create()
     been_number_back:addChild(been_number)
 
     local height = 320
+    local productNum = #s_DataManager.product
     for i = 1, math.ceil(productNum/2) do
         local shelf = cc.Sprite:create("image/shop/shelf.png")
         shelf:setPosition(s_DESIGN_WIDTH/2, bigHeight-80-height*i)
@@ -99,15 +78,9 @@ function ShopLayer.create()
         
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-                if s_CURRENT_USER.beans - s_DataManager.product[i].productValue >= 0 then
-                    local shopAlter = ShopAlter.create(i, productState[i])
-                    shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-                    layer:addChild(shopAlter)
-                else
-                    local shopErrorAlter = ShopErrorAlter.create()
-                    shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-                    layer:addChild(shopErrorAlter)
-                end
+                local shopAlter = ShopAlter.create(i, 'in')
+                shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                layer:addChild(shopAlter)
             end
         end
         
@@ -115,7 +88,7 @@ function ShopLayer.create()
         item_name_back:setPosition(x+15, y)
         backColor:addChild(item_name_back) 
 
-        if productState[i] == 0 then
+        if s_CURRENT_USER:getLockFunctionState(i) == 0 then
             local item = ccui.Button:create("image/shop/item"..i..".png","image/shop/item"..i..".png","")
             item:setPosition(x, y+150)
             item:addTouchEventListener(item_clicked)
