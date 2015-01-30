@@ -10,11 +10,14 @@ local button_sure
 
 function ShopPanel.create(itemId)    
     local maxWidth = s_DESIGN_WIDTH
-    local maxHeight = 500
+    local maxHeight = 800
 
-    local main = cc.LayerColor:create(cc.c4b(0,0,0,100), maxWidth, maxWidth)
-    main:setAnchorPoint(0.5,0.5)
+    local main = cc.LayerColor:create(cc.c4b(255,255,255,255), maxWidth, maxWidth)
+    main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
+
+    main.feedback = function()
+    end
 
     main.sure = function()
         if s_CURRENT_USER.beans >= s_DataManager.product[itemId].productValue then
@@ -22,17 +25,19 @@ function ShopPanel.create(itemId)
             s_CURRENT_USER:unlockFunctionState(itemId)
             s_CURRENT_USER:updateDataToServer()
 
+            main.feedback()
             main:removeFromParent()
         else
             local shopErrorAlter = ShopErrorAlter.create()
-            shopErrorAlter:setPosition(maxWidth/2, s_DESIGN_HEIGHT/2)
+            shopErrorAlter:setAnchorPoint(0.5, 0)
+            shopErrorAlter:setPosition(maxWidth/2, -50)
             main:addChild(shopErrorAlter)
         end
     end
 
     local item = cc.Sprite:create("image/shop/item"..itemId..".png")
-    item:setPosition(maxWidth/2, maxHeight/2+150)
-    back:addChild(item)
+    item:setPosition(maxWidth/2, 550)
+    main:addChild(item)
 
     local button_sure_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -41,9 +46,9 @@ function ShopPanel.create(itemId)
     end
 
     button_sure = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
-    button_sure:setPosition(maxWidth/2,100)
+    button_sure:setPosition(maxWidth/2,150)
     button_sure:addTouchEventListener(button_sure_clicked)
-    back:addChild(button_sure)
+    main:addChild(button_sure)
 
     local item_name = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productValue.."贝贝豆购买",'',30)
     item_name:setColor(cc.c4b(255,255,255,255))
@@ -59,19 +64,8 @@ function ShopPanel.create(itemId)
     label_content:setColor(cc.c4b(0,0,0,255))
     label_content:setDimensions(maxWidth-180,0)
     label_content:setAlignment(0)
-    label_content:setPosition(maxWidth/2, maxHeight/2-60)
-    back:addChild(label_content)
-
-    -- touch lock
-    local onTouchBegan = function(touch, event)        
-        return true
-    end
-
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:setSwallowTouches(true)
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    local eventDispatcher = main:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+    label_content:setPosition(maxWidth/2, 350)
+    main:addChild(label_content)
 
     return main
 end
