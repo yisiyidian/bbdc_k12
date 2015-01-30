@@ -6,7 +6,6 @@ require("common.global")
 local sqlite3 = require("lsqlite3")
 
 local DataEverydayInfo = require('model.user.DataEverydayInfo')
-local DataUser = require('model.user.DataUser')
 local DataLevelInfo = require('model.user.DataLevelInfo')
 
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')

@@ -185,9 +185,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
 
-        local obj = {['password']=s_CURRENT_USER.password, ['usertype']=USER_TYPE_BIND}
-        saveUserToServer(obj, function (datas, error)
-            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
+        saveUserToServer({['usertype']=USER_TYPE_BIND}, function (datas, error)
             onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
         end)
     end

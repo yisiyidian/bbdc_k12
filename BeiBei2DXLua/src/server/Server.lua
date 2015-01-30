@@ -70,7 +70,16 @@ function Server.request(api, serverRequestType, parameters, callback)
     if parameters ~= nil then paraStr = s_JSON.encode(parameters) end
     if math["and"](serverRequestType, SERVER_REQUEST_TYPE_CLIENT_ENCODE) > 0 and paraStr ~= nil then 
         Server.logLuaTable(api, parameters, 'request paraStr')
+        local rawLen = string.len(paraStr)
+        local raw = paraStr
         paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
+        local zipLen = string.len(paraStr)
+        if rawLen < zipLen then 
+            paraStr = raw
+            serverRequestType = serverRequestType - SERVER_REQUEST_TYPE_CLIENT_ENCODE
+        end
+        print('request raw length:', rawLen)
+        print('request zip length:', zipLen)
     end
     local params = {['api']=api, ['t'] = serverRequestType}
     if paraStr ~= nil then

@@ -271,13 +271,13 @@ end
 
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
-    self:updateDataToServer()
+    saveUserToServer({['tutorialStep']=tutorialStep})
     AnalyticsTutorial(step)
 end
 
 function DataUser:setTutorialSmallStep(step)
     self.tutorialSmallStep = step
-    self:updateDataToServer()
+    saveUserToServer({['tutorialSmallStep']=tutorialSmallStep})
     AnalyticsSmallTutorial(step)
 end
 
@@ -578,11 +578,7 @@ end
 -- end
 
 function DataUser:updateDataToServer()
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end) 
+    saveUserToServer(self)
 end
 
 

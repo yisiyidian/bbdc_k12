@@ -214,12 +214,7 @@ function FriendSearch:ctor()
                                                                         if fan then
                                                                             s_CURRENT_USER.friends[#s_CURRENT_USER.friends + 1] = user
                                                                             s_CURRENT_USER:parseServerFollowData(user)
-                                                                            table.remove(s_CURRENT_USER.fans,key)
-                                                                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-                                                                                function(api,result)
-                                                                                end,
-                                                                                function(api, code, message, description)
-                                                                                end)
+                                                                            table.remove(s_CURRENT_USER.fans, key)
                                                                         end
                                                                         arrow:setVisible(true)
                                                                         add:setVisible(false)

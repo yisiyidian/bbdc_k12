@@ -1,5 +1,4 @@
 
-local DataUser -- = require('model.user.DataUser')
 local DataEverydayInfo -- = require('model.user.DataEverydayInfo')
 local DataDailyStudyInfo -- = require('model.user.DataDailyStudyInfo')
 
@@ -64,7 +63,6 @@ end
 -- start
 
 function O2OController.start()
-    DataUser = require('model.user.DataUser')
     DataEverydayInfo = require('model.user.DataEverydayInfo')
     DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 

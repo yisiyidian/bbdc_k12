@@ -72,7 +72,7 @@ function BookLayer.create()
                 end
                 
                 s_CURRENT_USER.bookKey = key
-                s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+                saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                 AnalyticsBook(key)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
                 
