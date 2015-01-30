@@ -109,12 +109,10 @@ end
 
 function DataUser:addBeans(count)
     self.beans = self.beans + count
-    self:updateDataToServer()
 end
 
-function DataUser:reduceBeans(count)
+function DataUser:subtractBeans(count)
     self.beans = self.beans - count
-    self:updateDataToServer()
 end
 
 function DataUser:generateChestList()
@@ -356,7 +354,7 @@ function DataUser:getFriendsInfo()
     self.friendsCount = #self.friends
     self.fansCount = #self.fans
     print_lua_table (s_CURRENT_USER.fans)
-    saveUserToServer({'friendsCount']=self.friendsCount, 'fansCount']=self.fansCount})
+    saveUserToServer({'friendsCount']=self.friendsCount, ['fansCount']=self.fansCount})
 end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)

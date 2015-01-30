@@ -12,9 +12,9 @@ local HomeLayer = class("HomeLayer", function ()
 end)
 
 function HomeLayer.create(share) 
-    if s_CURRENT_USER.beans < 1 then
+    if s_CURRENT_USER:getBeans() < 1 then
         s_CURRENT_USER:addBeans(10000)
-
+        saveUserToServer({'beans']=s_CURRENT_USER.beans})
     end
 
     -- data begin
@@ -73,13 +73,13 @@ function HomeLayer.create(share)
     been:setPosition(0, been_number_back:getContentSize().height/2)
     been_number_back:addChild(been)
 
-    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',24)
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
     been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
     been_number_back:addChild(been_number)
 
     local function updateBean(delta)
-        been_number:setString(s_CURRENT_USER.beans)
+        been_number:setString(s_CURRENT_USER:getBeans())
     end
 
     been_number:scheduleUpdateWithPriorityLua(updateBean,0)
