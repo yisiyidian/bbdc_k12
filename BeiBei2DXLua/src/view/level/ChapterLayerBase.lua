@@ -216,11 +216,15 @@ end
 
 function ChapterLayerBase:addPopup(levelIndex)
     -- TODO check level state
-    -- if state == 1 then
     local levelPosition = self:getLevelPosition('level'..levelIndex)
-    local popup = cc.Sprite:create('image/chapter/chapter0/popup.png')
-    popup:setPosition(levelPosition)
-    self:addChild(popup, 100)
+    state = 1
+    if state == 1 then
+        local popup = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')
+        popup:setPosition(levelPosition)
+        self:addChild(popup, 100)
+    end
+    -- if state == 1 then
+
 end
 
 function ChapterLayerBase:plotDecoration()
@@ -236,8 +240,8 @@ function ChapterLayerBase:plotDecoration()
                 print('BaseLayer:levelbutton '..sender:getName()..' touched...')
                 
                 -- TODO check level state
-                -- if state == 1 then
-                --self:addPopup(sender:getName())
+                --if state == 1 then
+                self:addPopup(sender:getName())
             end
         end
         local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')
