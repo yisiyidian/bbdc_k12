@@ -17,13 +17,13 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT)  
 
-    local lastWordAndTotalNumber = LastWordAndTotalNumber.create()
-    backColor:addChild(lastWordAndTotalNumber,1)
-    
-    backColor.setWordAndNumber = function (number,word,bool)
-        lastWordAndTotalNumber.setWord(word,bool)
-        lastWordAndTotalNumber.setNumber(number)
-    end
+--    local lastWordAndTotalNumber = LastWordAndTotalNumber.create()
+--    backColor:addChild(lastWordAndTotalNumber,1)
+--    
+--    backColor.setWordAndNumber = function (number,word,bool)
+--        lastWordAndTotalNumber.setWord(word,bool)
+--        lastWordAndTotalNumber.setNumber(number)
+--    end
     
     backColor.forceFail =function ()
 
@@ -65,28 +65,28 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     pauseBtn:addTouchEventListener(pauseScene)
 
 
-    if s_CorePlayManager.isStudyModel() then
-        backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "blue")
-    else
-        backColor.progressBar = ProgressBar.create(s_CorePlayManager.wrongWordNum, s_CorePlayManager.wrongWordNum-s_CorePlayManager.candidateNum, "yellow")
-    end
-    
-    backColor.progressBar:setPosition(bigWidth/2+44, 1049)
-    backColor:addChild(backColor.progressBar)
-    
-    backColor.getProgressBarIndexPosition = function ()
-    return backColor.progressBar.indexPosition()
-    end
-    
-    backColor.indexSwell = function ()
-    return backColor.progressBar.swell()
-    end
-    
-    backColor.progressBar.hint = function()
-        local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
-        guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-        backColor:addChild(guideAlter,pauseBtn:getLocalZOrder() + 1)
-    end
+--    if s_CorePlayManager.isStudyModel() then
+--        backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "blue")
+--    else
+--        backColor.progressBar = ProgressBar.create(s_CorePlayManager.wrongWordNum, s_CorePlayManager.wrongWordNum-s_CorePlayManager.candidateNum, "yellow")
+--    end
+--    
+--    backColor.progressBar:setPosition(bigWidth/2+44, 1049)
+--    backColor:addChild(backColor.progressBar)
+--    
+--    backColor.getProgressBarIndexPosition = function ()
+--    return backColor.progressBar.indexPosition()
+--    end
+--    
+--    backColor.indexSwell = function ()
+--    return backColor.progressBar.swell()
+--    end
+--    
+--    backColor.progressBar.hint = function()
+--        local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
+--        guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+--        backColor:addChild(guideAlter,pauseBtn:getLocalZOrder() + 1)
+--    end
     
     return backColor
 end

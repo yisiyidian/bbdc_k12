@@ -1,8 +1,6 @@
 require("cocos.init")
 require("common.global")
 
-
-
 local  NewStudyBookOverLayer = class("NewStudyBookOverLayer", function ()
     return cc.Layer:create()
 end)
