@@ -5,6 +5,7 @@ s_chapter_resource_start_type = "start"
 s_chapter_resource_middle_type = "middle" 
 s_chapter_resource_end_type = "end"
 s_chapter0_base_height = 3014
+s_chapter_layer_width = 854
 
 local ChapterLayerBase = class('ChapterLayerBase',function() 
     return ccui.Widget:create()
@@ -217,13 +218,51 @@ end
 function ChapterLayerBase:addPopup(levelIndex)
     -- TODO check level state
     local levelPosition = self:getLevelPosition('level'..levelIndex)
-    state = 1
+    state = 2
+    local back
     if state == 1 then
-        local popup = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')
-        popup:setPosition(levelPosition)
-        self:addChild(popup, 100)
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')     
+        local function taskEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO 
+                print('click task button ')
+            end
+        end
+        
+        local taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png')
+        taskButton:setScale9Enabled(true)
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
+        taskButton:addTouchEventListener(taskEvent)
+        back:addChild(taskButton)
+    elseif state == 2 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
+        local function taskEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO 
+                print('click task button ')
+            end
+        end
+
+        local taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png')
+        taskButton:setScale9Enabled(true)
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-280)
+        taskButton:addTouchEventListener(taskEvent)
+        back:addChild(taskButton)
     end
-    -- if state == 1 then
+    
+    -- add close button
+    local function touchEvent(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            s_SCENE:removeAllPopups()
+        end
+    end
+    local closeButton = ccui.Button:create('image/button/button_close.png','image/button/button_close.png','image/button/button_close.png')
+    closeButton:setScale9Enabled(true)
+    closeButton:setPosition(back:getContentSize().width-40, back:getContentSize().height-40)
+    closeButton:addTouchEventListener(touchEvent)
+    back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 500))
+    back:addChild(closeButton)
+    s_SCENE:popup(back)
 
 end
 
