@@ -12,7 +12,10 @@ local HomeLayer = class("HomeLayer", function ()
 end)
 
 function HomeLayer.create(share) 
-    s_CURRENT_USER:addBeans(10000)
+    if s_CURRENT_USER:getBeans() < 1 then
+        s_CURRENT_USER:addBeans(10000)
+        saveUserToServer({'beans']=s_CURRENT_USER.beans})
+    end
 
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
@@ -63,17 +66,23 @@ function HomeLayer.create(share)
     backColor:addChild(top)
 
     local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
-    been_number_back:setPosition(s_DESIGN_WIDTH-100, s_DESIGN_HEIGHT-50)
+    been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
     backColor:addChild(been_number_back)
 
     local been = cc.Sprite:create("image/shop/been.png")
     been:setPosition(0, been_number_back:getContentSize().height/2)
     been_number_back:addChild(been)
 
-    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',24)
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
     been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
     been_number_back:addChild(been_number)
+
+    local function updateBean(delta)
+        been_number:setString(s_CURRENT_USER:getBeans())
+    end
+
+    been_number:scheduleUpdateWithPriorityLua(updateBean,0)
     
     local setting_back
     
@@ -320,9 +329,11 @@ function HomeLayer.create(share)
 
             local Loginreward = require("view.loginreward.LoginRewardPopup")
             local loginreward = Loginreward:create()
-            s_SCENE:popup(loginreward)
+            s_SCENE:popup(loginreward)          
             
-            
+        end
+    end
+    
 --            local Test1 = require("view.islandPopup.WordLibraryPopup")
 --            local test1 = Test1:create()
 --            s_SCENE:popup(test1)
@@ -330,8 +341,38 @@ function HomeLayer.create(share)
 --            local Test2 = require("view.islandPopup.WordInfoPopup")
 --            local test2 = Test2:create()
 --            s_SCENE:popup(test2)
-        end
-    end
+
+--            local Test3 = require("view.newstudy.CollectUnfamiliarLayer")
+--            local test3 = Test3:create()
+--            s_SCENE:replaceGameLayer(test3)
+
+--            local Test4 = require("view.newstudy.BlacksmithLayer")
+--            local test4 = Test4:create()
+--            s_SCENE:replaceGameLayer(test4)
+
+--            local Test5 = require("view.newstudy.ChooseRightLayer")
+--            local test5 = Test5:create()
+--            s_SCENE:replaceGameLayer(test5)
+
+--            local Test6 = require("view.newstudy.ChooseWrongLayer")
+--            local test6 = Test6:create()
+--            s_SCENE:replaceGameLayer(test6)
+
+--            local Test7 = require("view.newstudy.SlideCoconutLayer")
+--            local test7 = Test7:create()
+--            s_SCENE:replaceGameLayer(test7)
+
+--            local Test8 = require("view.newstudy.MiddleLayer")
+--            local test8 = Test8:create()
+--            s_SCENE:replaceGameLayer(test8)
+
+--            local Test9 = require("view.newstudy.EndLayer")
+--            local test9 = Test9:create()
+--            s_SCENE:replaceGameLayer(test9)
+
+--            local Test10 = require("view.newstudy.BookOverLayer")
+--            local test10 = Test10:create()
+--            s_SCENE:replaceGameLayer(test10)
 
     local button_reward
     local icon_reward

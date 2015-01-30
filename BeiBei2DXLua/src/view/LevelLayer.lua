@@ -475,11 +475,6 @@ function LevelLayer:ctor()
     -- level layer state manager
     self:levelStateManager()
 
-    -- right top node
-
-    local IntroLayer = require("view.hud.RightTopNode")
-    local introLayer = IntroLayer.create()
-    self:addChild(introLayer)
     
     local click_home = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then

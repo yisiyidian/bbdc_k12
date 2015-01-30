@@ -172,6 +172,7 @@ function DataLevelInfo:updateDataToServer()
     local oldProgress = self:getLevelInfo(s_CURRENT_USER.bookKey) 
     local increments = (currentProgress - oldProgress) * 2   -- add beans count
     s_CURRENT_USER:addBeans(increments)
+    saveUserToServer({'beans']=s_CURRENT_USER.beans})
     -----------------------------
     bookKey = s_CURRENT_USER.bookKey
     for i, v in ipairs(g_BOOKKEYS) do

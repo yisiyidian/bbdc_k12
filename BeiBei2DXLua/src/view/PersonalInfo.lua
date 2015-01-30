@@ -72,9 +72,10 @@ function PersonalInfo:ctor()
         share:setScale9Enabled(true)
         share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
         layout:addChild(share)
-
+        local title_here = titleArray[5 - i]
+        local title
         if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
-            titleArray[5 - i] = titleArray[5 - i].."被锁住了！"
+            title_here = titleArray[5 - i].."被锁住了！"
             
             
             local ShopPanel = require('view.shop.ShopPanel')
@@ -83,12 +84,22 @@ function PersonalInfo:ctor()
             layout:addChild(shopPanel)
             
             shopPanel.feedback = function()
-                
+                local curPage = pageView:getCurPageIndex()
+                title:setString(titleArray[5 - i])
+                if curPage == 3 then
+                    self:PLVM()
+                elseif curPage == 2 then
+                    self:PLVI()
+                elseif curPage == 1 then
+                    self:login()
+                elseif curPage == 0 then
+                    self:XXTJ()
+                end
             end
             
             share:setVisible(false)
         end
-        local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
+        title = cc.Label:createWithSystemFont(title_here,'',30)
         title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
         title:setColor(colorArray[5 - i])
         layout:addChild(title)
@@ -215,7 +226,7 @@ function PersonalInfo:PLVM()
     backProgress:setScaleY(483 / 527)
     backProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     backProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-    backProgress:setReverseDirection(true)
+    --backProgress:setReverseDirection(true)
     backProgress:setPercentage(0)
     backProgress:runAction(toLearn)
     circleBack:addChild(backProgress)
@@ -231,16 +242,17 @@ function PersonalInfo:PLVM()
     local learnStr = string.format('已学习%d',tolearnCount)
     local masterStr = string.format('生词数%d',toMasterCount)
     for i = 1,#learnStr - 9 do
-        local label = cc.Label:createWithSystemFont(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i),'',28)
-        label:setRotation((1 - i) * 5)
+        local label = cc.Label:createWithSystemFont(string.sub(learnStr,9 + i,9 + i),'',28)
+        local angle =  (1 - i) * 5 - 24
+        label:setRotation(- angle)
         --label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + 5 * (i - 1) / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + 5 * (i - 1) / 180)))
+        label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + angle / 180)))
         circleBack:addChild(label,100)
     end
     
     for i = 1,3 do
         local label = cc.Label:createWithSystemFont(string.sub(learnStr,3 * (i - 1) + 1,3 * i),'',28)
-        local angle = (#learnStr - 10) * 5 + (4 - i) * 8
+        local angle = (1 - i) * 8
         label:setRotation(-angle)
         --label:setColor(cc.c3b(0,0,0))
         label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + angle / 180)))
@@ -248,16 +260,18 @@ function PersonalInfo:PLVM()
     end
     
     for i = 1,#masterStr - 9 do
-        local label = cc.Label:createWithSystemFont(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i),'',28)
-        label:setRotation((1 - i) * 6)
+        local label = cc.Label:createWithSystemFont(string.sub(masterStr,9 + i,9 + i),'',28)
+        local angle = (1 - i) * 6 - 33
+        label:setRotation(-angle)
         --label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * (i - 1) / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * (i - 1) / 180)))
+        label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
         circleBack:addChild(label,100)
     end
 
     for i = 1,3 do
         local label = cc.Label:createWithSystemFont(string.sub(masterStr,3 * (i - 1) + 1,3 * i),'',28)
-        local angle = (#masterStr - 10) * 6 + (4 - i) * 10
+        --local angle = (#masterStr - 10) * 6 + (4 - i) * 10
+        local angle = -(i - 1) * 11
         label:setRotation(-angle)
         --label:setColor(cc.c3b(0,0,0))
         label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
@@ -267,7 +281,7 @@ function PersonalInfo:PLVM()
     local learnProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_big_dark.png'))
     learnProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     learnProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-    learnProgress:setReverseDirection(true)
+    --learnProgress:setReverseDirection(true)
     learnProgress:setPercentage(0)
     learnProgress:runAction(cc.ProgressTo:create(learnPercent,learnPercent * 100))
     circleBack:addChild(learnProgress)
@@ -275,7 +289,7 @@ function PersonalInfo:PLVM()
     local masterProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_small_dark.png'))
     masterProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     masterProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-    masterProgress:setReverseDirection(true)
+    --masterProgress:setReverseDirection(true)
     masterProgress:setPercentage(0)
     masterProgress:runAction(toMaster)
     circleBack:addChild(masterProgress)
