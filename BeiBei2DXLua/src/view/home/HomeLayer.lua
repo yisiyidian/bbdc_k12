@@ -20,7 +20,7 @@ local list = {}
 function HomeLayer.create(share) 
     if s_CURRENT_USER:getBeans() < 1 then
         s_CURRENT_USER:addBeans(10000)
-        saveUserToServer({'beans']=s_CURRENT_USER.beans})
+        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     end
 
     -- data begin

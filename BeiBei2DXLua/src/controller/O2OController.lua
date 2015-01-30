@@ -367,7 +367,7 @@ function O2OController.getDataEverydayInfo(onSaved)
         -- 1st log in
         s_CURRENT_USER.localTime = os.time()
         local localDBDatas = {['noObjectIdDatas']=noObjectIdDatas, ['currentWeek']=currentWeek}
-        saveUserToServer({'localTime']=s_CURRENT_USER.localTime}, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
+        saveUserToServer({['localTime']=s_CURRENT_USER.localTime}, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
     else
         local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
         updateWeek(localDBDatas, 1, onSaved)

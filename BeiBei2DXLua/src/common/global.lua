@@ -137,7 +137,7 @@ local function _initData()
     s_LocalDatabaseManager = reloadModule('model.LocalDatabaseManager')
     s_LocalDatabaseManager.init()
 
-    local DataUser = reloadModule('model.user.DataUser')
+    DataUser = reloadModule('model.user.DataUser')
     s_CURRENT_USER = DataUser.create()
 end
 
