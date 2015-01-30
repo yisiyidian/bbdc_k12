@@ -61,9 +61,6 @@ function DataUser:ctor()
     self.beans                             = 0
     self.newStudyRightLayerMask            = 0
 
-    self.checkInWord                       = ''
-    self.checkInWordUpdateDate             = 0
-    self.hasCheckInButtonAppeared          = 0
 
     self.needToUnlockNextChapter           = 0
 
@@ -73,7 +70,6 @@ function DataUser:ctor()
     self.snsUserInfo                       = nil
     self.clientData                        = {0}
     self.levelInfo                         = DataLevelInfo.create()
-    self.levelInfoObjectId                 = ''
 
     self.lastUpdateSummaryBossTime         = 0
     self.summaryBossList                   = ''
@@ -82,6 +78,9 @@ function DataUser:ctor()
     
     -- function lock
     self.lockFunction                      = 0    
+
+    self.isAlterOn                         = 0
+    self.slideNum                          = 0
 end
 
 function DataUser:getLockFunctionState(productId)
@@ -191,6 +190,7 @@ function DataUser:generateSummaryBossList()
         
     end
     self.levelInfo:updateTime(self.bookKey,os.time())
+    self.levelInfo:sysData()
     --print("summaryBossList:"..self.summaryBossList.."lastUpdate:"..os.date('%x',self.lastUpdateSummaryBossTime))
 end
 
@@ -225,7 +225,8 @@ function DataUser:removeSummaryBoss(index)
             end
         end
     end
-    self.levelInfo:updateBossList(self.bookKey,tempList)
+    self.levelInfo:updateBossList(self.bookKey, tempList)
+    self.levelInfo:sysData()
 end
 
 function DataUser:getNameForDisplay()
@@ -242,16 +243,16 @@ function DataUser:parseServerData(data)
     end
 end
 
-function DataUser:parseServerDataEverydayInfo(results)
-    local DataDailyCheckIn = require('model.user.DataEverydayInfo')
-   self.logInDatas = {}
-   for i, v in ipairs(results) do
-       local data = DataEverydayInfo.create()
-       parseServerDataToClientData(v, data)
-       self.logInDatas[i] = data
-       print_lua_table(data)
-   end 
-end
+-- function DataUser:parseServerDataEverydayInfo(results)
+--     local DataDailyCheckIn = require('model.user.DataEverydayInfo')
+--    self.logInDatas = {}
+--    for i, v in ipairs(results) do
+--        local data = DataEverydayInfo.create()
+--        parseServerDataToClientData(v, data)
+--        self.logInDatas[i] = data
+--        print_lua_table(data)
+--    end 
+-- end
 
 function DataUser:parseServerDataLevelInfo(results)
     for i, v in ipairs(results) do

@@ -1,5 +1,7 @@
 local ProtocolBase = require('server.protocol.ProtocolBase')
 
+---------------------------------------------------------------------------------------------------
+
 local function dataTableToJSONString(dataTable)
     local str = '{'
     for key, value in pairs(dataTable) do  
@@ -27,6 +29,8 @@ local function dataTableToJSONString(dataTable)
     str = str .. '}'
     return str
 end
+
+---------------------------------------------------------------------------------------------------
 
 -- callback(isExist, error)
 function isUsernameExist(username, callback)
@@ -72,19 +76,40 @@ function synUserAfterLogIn(localDBUser, serverUser, callback)
     local protocol = ProtocolBase.create(api, serverRequestType, data, cb)
     protocol:request()
 end
--- DataStudyConfiguration -- User
-
--- 1 data/book
--- DataCurrentIndex 
 
 function syn( ... )
 
 end
 
+---------------------------------------------------------------------------------------------------
+
 -- 1 data
 -- DataLevelInfo
+-- DataCurrentIndex 
+function sysLevelInfo(clientData, callback)
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        if callback then callback(nil, nil) end
+        return
+    end
 
--- 1 data/day
+    local api = 'syslevelinfo'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb (result, error)
+        if error == nil then
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataLevelInfo', ['info']=dataTableToJSONString(clientData)}, cb)
+    protocol:request()
+end
+
+---------------------------------------------------------------------------------------------------
+
+-- 1 data/week
 -- DataEverydayInfo
 function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
     local api = 'syseverydayinfo'
@@ -106,11 +131,36 @@ function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
     end
     local current = ''
     if currentWeek ~= nil then current = dataTableToJSONString(currentWeek) end
-    -- print('sysEverydayInfo:' .. s_JSON.encode(dataTable)) -- json array
     
     local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataEverydayInfo', ['uw']=dataTable, ['crt']=current}, cb)
     protocol:request()
 end
+
+function checkInEverydayInfo()
+    local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+    currentWeek:checkIn(os.time())
+
+    local function cb (currentWeek)
+        s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
+        s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas] = currentWeek
+    end
+
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then    
+        cb(currentWeek)
+        return
+    end
+
+    sysEverydayInfo(nil, currentWeek, function (serverDatas, error) 
+        if error == nil and serverDatas ~= nil then
+            for i, v in ipairs(serverDatas) do
+                parseServerDataToClientData(v, currentWeek)
+            end
+        end
+        cb(currentWeek)
+    end)
+end
+
+---------------------------------------------------------------------------------------------------
 
 -- 1 data/day/book
 -- DataDailyStudyInfo
@@ -122,6 +172,8 @@ end
 -- XXX DataNewPlayState
 -- XXX DataTodayReviewBossNum
 -- XXX DataWrongWordBuffer
+
+---------------------------------------------------------------------------------------------------
 
 -- dataTable = {['className']=className, ['objectId']=objectId, ...}
 -- callback(datas, error)

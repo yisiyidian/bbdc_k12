@@ -72,14 +72,14 @@ function NewStudyRightLayer.create()
                 s_CorePlayManager.updateCurrentIndex()
                 s_CorePlayManager.enterNewStudySlideLayer()
             end
-            if s_LocalDatabaseManager.getIsAlterOn() == 1 then
+            if s_CURRENT_USER.isAlterOn == 1 then
                 local guideAlter = GuideAlter.create(1, "依然复习？", "陛下，我在生词库中等你来哦～")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter,5)
                 guideAlter.addbeibeiThrowHeart()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
-                    s_LocalDatabaseManager.setIsAlterOn(0)
+                    s_CURRENT_USER.isAlterOn = 0
                     normal()
                 end
             else
@@ -119,14 +119,14 @@ function NewStudyRightLayer.create()
                 end
             end
         
-            if s_LocalDatabaseManager.getIsAlterOn() == 1 then
+            if s_CURRENT_USER.isAlterOn == 1 then
                 local guideAlter = GuideAlter.create(1, "太简单了？", "陛下，您真的要把我打入冷宫吗？")
                 guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
                 backColor:addChild(guideAlter,5)
                 guideAlter.addbeibeiBreakHeart()
                 guideAlter.sure = function()
                     print("guide alter tag: "..guideAlter.box_tag)
-                    s_LocalDatabaseManager.setIsAlterOn(0)
+                    s_CURRENT_USER.isAlterOn = 0
                     normal()
 
                     if s_CorePlayManager.isStudyModel() then

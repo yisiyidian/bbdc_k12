@@ -9,10 +9,8 @@ local DataEverydayInfo = require('model.user.DataEverydayInfo')
 local DataUser = require('model.user.DataUser')
 local DataLevelInfo = require('model.user.DataLevelInfo')
 
-local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 local DataNewPlayState = require('model.user.DataNewPlayState')
-local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
 local DataTodayReviewBossNum = require('model.user.DataTodayReviewBossNum')
 local DataWrongWordBuffer = require('model.user.DataWrongWordBuffer')
 local DataBossWord = require('model.user.DataBossWord')
@@ -22,10 +20,8 @@ local databaseTables = {
         DataUser,
         DataLevelInfo,
 
-        DataCurrentIndex,
         DataDailyStudyInfo,
         DataNewPlayState,
-        DataStudyConfiguration,
         DataTodayReviewBossNum,
         DataWrongWordBuffer,
         DataBossWord
@@ -35,9 +31,7 @@ local localdatabase_utils = nil
 local localdatabase_user = nil
 
 local localdatabase_dailyStudyInfo = nil
-local localdatabase_currentIndex = nil
 local localdatabase_newPlayState = nil
-local localdatabase_studyConfiguration = nil
 local localdatabase_todayReviewBossNum = nil
 local localdatabase_wrongWordBuffer = nil
 local localdatabase_bossWord = nil
@@ -54,16 +48,14 @@ function Manager.init()
     Manager.database = sqlite3.open(databasePath)
     print ('databasePath:' .. databasePath)
 
-    localdatabase_utils = require('model.localDatabase.utils')
-    localdatabase_user = require('model.localDatabase.user')
+    localdatabase_utils = reloadModule('model.localDatabase.utils')
+    localdatabase_user = reloadModule('model.localDatabase.user')
 
-    localdatabase_dailyStudyInfo = require('model.localDatabase.dailyStudyInfo')
-    localdatabase_currentIndex = require('model.localDatabase.currentIndex')
-    localdatabase_newPlayState = require('model.localDatabase.newPlayState')
-    localdatabase_studyConfiguration = require('model.localDatabase.studyConfiguration')
-    localdatabase_todayReviewBossNum = require('model.localDatabase.todayReviewBossNum')
-    localdatabase_wrongWordBuffer = require('model.localDatabase.wrongWordBuffer')
-    localdatabase_bossWord = require('model.localDatabase.bossWord')
+    localdatabase_dailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
+    localdatabase_newPlayState = reloadModule('model.localDatabase.newPlayState')
+    localdatabase_todayReviewBossNum = reloadModule('model.localDatabase.todayReviewBossNum')
+    localdatabase_wrongWordBuffer = reloadModule('model.localDatabase.wrongWordBuffer')
+    localdatabase_bossWord = reloadModule('model.localDatabase.bossWord')
 
     Manager.initTables()
 end
@@ -157,7 +149,7 @@ end
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
-    return Manager.getCurrentIndex() - 1
+    return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
 end
 
 function Manager.getTotalGraspWordsNum()
@@ -214,7 +206,7 @@ function Manager.getStudyWords()
     local bookKey = s_CURRENT_USER.bookKey
     local wordList = s_BookWord[bookKey]
 
-    local currentIndex = Manager.getCurrentIndex()
+    local currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     
     local wordPool = {}
     for i = 1, currentIndex-1 do
@@ -303,32 +295,6 @@ function Manager.getGraspWords()
     end
 
     return wordPool
-end
-
----------------------------------------------------------------------------------------------------------
--- DataCurrentIndex
--- record word info
-function Manager.printCurrentIndex()
-    localdatabase_currentIndex.printCurrentIndex()
-end
-
-function Manager.getCurrentIndex()    
-    return localdatabase_currentIndex.getCurrentIndex()
-end
-
--- lastUpdate : nil means now
-function Manager.setCurrentIndex(currentIndex, lastUpdate)
-    localdatabase_currentIndex.saveDataCurrentIndex(currentIndex, lastUpdate)
-    s_UserBaseServer.saveDataCurrentIndex()
-end
-
-function Manager.getDataCurrentIndex()
-    return localdatabase_currentIndex.getDataCurrentIndex()
-end
-
--- lastUpdate : nil means now
-function Manager.saveDataCurrentIndex(currentIndex, lastUpdate)
-    localdatabase_currentIndex.saveDataCurrentIndex(currentIndex, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -441,34 +407,6 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 
--- newstudy configuration
-function Manager.getIsAlterOn()
-    return localdatabase_studyConfiguration.getIsAlterOn()
-end
-
--- lastUpdate : nil means now
-function Manager.setIsAlterOn(isAlterOn, lastUpdate)
-    localdatabase_studyConfiguration.setIsAlterOn(isAlterOn, lastUpdate)
-    s_UserBaseServer.synUserConfig(nil, false)
-end
-
-function Manager.getSlideNum()
-    return localdatabase_studyConfiguration.getSlideNum()
-end
-
--- lastUpdate : nil means now
-function Manager.updateSlideNum(lastUpdate)
-    localdatabase_studyConfiguration.updateSlideNum(lastUpdate)
-    s_UserBaseServer.synUserConfig(nil, false)
-end
-
--- lastUpdate : nil means now
-function Manager.saveDataStudyConfiguration(isAlterOn, slideNum, lastUpdate)
-    localdatabase_studyConfiguration.saveDataStudyConfiguration(isAlterOn, slideNum, lastUpdate)
-end
-
----------------------------------------------------------------------------------------------------------
-
 -- download state
 function Manager.getDownloadState(bookKey)
     local isDownloaded = 0
@@ -505,7 +443,7 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
         return s_gamestate_reviewbossmodel_beforetoday
     end
     
-    if Manager.getCurrentIndex() > s_DataManager.books[s_CURRENT_USER.bookKey].words then
+    if s_CURRENT_USER.levelInfo:getCurrentWordIndex() > s_DataManager.books[s_CURRENT_USER.bookKey].words then
         return s_gamestate_studymodel_extra
     end
     

@@ -5,20 +5,22 @@ require('common.text')
 ---------------------------------------------------------------------------
 local s_USE_XXTEA = true
 
-s_BOOK_KEY_CET4     = 'cet4'
-s_BOOK_KEY_CET6     = 'cet6'
-s_BOOK_KEY_GMAT     = 'gmat'
-s_BOOK_KEY_GRE      = 'gre'
-s_BOOK_KEY_GSE      = 'gse'
-s_BOOK_KEY_IELTS    = 'ielts'
-s_BOOK_KEY_MIDDLE   = 'middle'
-s_BOOK_KEY_NCEE     = 'ncee'
-s_BOOK_KEY_PRIMARY  = 'primary'
-s_BOOK_KEY_PRO4     = 'pro4'
-s_BOOK_KEY_PRO8     = 'pro8'
-s_BOOK_KEY_SAT      = 'sat'
-s_BOOK_KEY_TOEFL    = 'toefl'
+g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13'}
+g_BOOKKEYS = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee',  'primary', 'pro4', 'pro8', 'sat', 'toefl'}
 
+s_BOOK_KEY_CET4     = g_BOOKKEYS[1] -- 'cet4'
+s_BOOK_KEY_CET6     = g_BOOKKEYS[2] -- 'cet6'
+s_BOOK_KEY_GMAT     = g_BOOKKEYS[3] -- 'gmat'
+s_BOOK_KEY_GRE      = g_BOOKKEYS[4] -- 'gre'
+s_BOOK_KEY_GSE      = g_BOOKKEYS[5] -- 'gse'
+s_BOOK_KEY_IELTS    = g_BOOKKEYS[6] -- 'ielts'
+s_BOOK_KEY_MIDDLE   = g_BOOKKEYS[7] -- 'middle'
+s_BOOK_KEY_NCEE     = g_BOOKKEYS[8] -- 'ncee'
+s_BOOK_KEY_XPRIMARY = g_BOOKKEYS[9] -- 'primary'
+s_BOOK_KEY_PRO4     = g_BOOKKEYS[10] -- 'pro4'
+s_BOOK_KEY_PRO8     = g_BOOKKEYS[11] -- 'pro8'
+s_BOOK_KEY_SAT      = g_BOOKKEYS[12] -- 'sat'
+s_BOOK_KEY_TOEFL    = g_BOOKKEYS[13] -- 'toefl'
 
 function DataManager.clear()
     DataManager.configs = nil

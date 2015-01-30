@@ -101,7 +101,7 @@ end
 function CorePlayManager.initNewStudyLayer()
     CorePlayManager.maxWrongWordCount = s_max_wrong_num_everyday
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
-    CorePlayManager.currentIndex = s_LocalDatabaseManager.getCurrentIndex()
+    CorePlayManager.currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     print("currentBookWordIndex is "..CorePlayManager.currentIndex)
     
     if CorePlayManager.bookOver() then
@@ -246,8 +246,8 @@ function CorePlayManager.bookOver()
 end
 
 function CorePlayManager.recordStudyStateIntoDB()
-    s_LocalDatabaseManager.setCurrentIndex(CorePlayManager.currentIndex)
-    s_LocalDatabaseManager.printCurrentIndex()
+    s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
+    s_CURRENT_USER.levelInfo:sysData()
 
     local rightWordListString = changeTableToString(CorePlayManager.rightWordList)
     local wrongWordListString = changeTableToString(CorePlayManager.wrongWordList)

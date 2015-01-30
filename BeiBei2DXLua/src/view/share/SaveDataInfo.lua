@@ -14,8 +14,9 @@ function SaveDataInfo.create(target,index)
     black:setPosition(s_DESIGN_WIDTH / 2,0)
     layer:addChild(black)
 
-    local png = string.format("target_saved%d.png",index)
+    local png = string.format("share_sample%d.png",index)
     target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+    layer.png = png
     local pImage = target:newImage()
     local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
     pImage:release()
@@ -23,7 +24,7 @@ function SaveDataInfo.create(target,index)
     sprite:setScale(0.8)
     sprite:setPosition(black:getContentSize().width / 2,black:getContentSize().height / 2)
     black:addChild(sprite)
-
+    layer.sprite = sprite
     local ShareBottom = require('view.share.ShareBottom')
     local shareBottomLayer = ShareBottom.create(target)
     layer:addChild(shareBottomLayer)
@@ -46,12 +47,16 @@ function SaveDataInfo.create(target,index)
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(layer.listener, layer)
     layer.listener:setSwallowTouches(true)
+
 	return layer
 end
 
 function SaveDataInfo:shareEnd()
     local delay = cc.DelayTime:create(0.3)
     local remove = cc.CallFunc:create(function ()
+        self.sprite:removeFromParent()
+        local filename = string.format('%s%s',cc.FileUtils:getInstance():getWritablePath(),self.png)
+        os.remove(filename)
         self:removeFromParent()
     end)
     self:runAction(cc.Sequence:create(delay,remove))

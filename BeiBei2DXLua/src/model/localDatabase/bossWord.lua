@@ -18,6 +18,44 @@ local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, last
     return data
 end
 
+
+function M.addRightWord(wordname)
+    
+end
+
+function M.addWrongWord(wordname)
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+    local time = os.time()
+
+    local wordList = nil
+    local bossID = nil
+    local lastWordIndex = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ORDER BY bossID DESC LIMIT 1 ;") do
+        wordList = row.wordList
+        bossID = row.bossID
+        lastWordIndex = row.lastWordIndex
+    end
+    
+    if wordList == nil then
+        local data = createData(bookKey, time, 1, 0, bossWordList, lastWordIndex)
+        Manager.saveData(data, userId, username, 0)
+        
+    else
+        
+    end
+    
+    
+    local a = 0
+    if a == 0 then
+        return true
+    else
+        return false
+    end
+end
+
+
 function M.printBossWord()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end
 
@@ -40,7 +78,7 @@ function M.addBossWord(bossWordList)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
-    local lastWordIndex = Manager.getCurrentIndex()
+    local lastWordIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
 
     local time = os.time()
     
@@ -211,6 +249,7 @@ function M.updateBossWord(bossID)
     local isId = false
     local isUsername = false
     local num = 0
+    
     if userId ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
             if row.typeIndex < MAXTYPEINDEX then
@@ -222,6 +261,7 @@ function M.updateBossWord(bossID)
             end
         end
     end
+    
     if num == 0 and username ~= '' then
         for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."' and bossID = "..bossID.." ;") do
             if row.typeIndex < MAXTYPEINDEX then

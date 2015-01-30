@@ -69,6 +69,7 @@ function Server.request(api, serverRequestType, parameters, callback)
     local paraStr = nil
     if parameters ~= nil then paraStr = s_JSON.encode(parameters) end
     if math["and"](serverRequestType, SERVER_REQUEST_TYPE_CLIENT_ENCODE) > 0 and paraStr ~= nil then 
+        Server.logLuaTable(api, parameters, 'request paraStr')
         paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
     end
     local params = {['api']=api, ['t'] = serverRequestType}

@@ -360,10 +360,6 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
     end
 end
 
-function UserBaseServer.saveDataCurrentIndex()
-    UserBaseServer.synBookRelations({'DataCurrentIndex'}, nil, false)
-end
-
 function UserBaseServer.saveDataNewPlayState()
     UserBaseServer.synBookRelations({'DataNewPlayState'}, nil, false)
 end
@@ -387,7 +383,7 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
         return 
     end
 
-    local all = {'DataCurrentIndex', 'DataNewPlayState', 'DataWrongWordBuffer', 'DataTodayReviewBossNum'}
+    local all = {'DataNewPlayState', 'DataWrongWordBuffer', 'DataTodayReviewBossNum'}
     classNames = classNames or all
     saveToLocalDB = saveToLocalDB or true
 
@@ -401,12 +397,7 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
 
     local clientDatas = {}
     for key, value in pairs(classNames) do
-        if value == 'DataCurrentIndex' then
-            local data = s_LocalDatabaseManager.getDataCurrentIndex()
-            objs['lastUpdate' .. value] = data.lastUpdate
-            objs.currentIndex = data.currentIndex
-            clientDatas[value] = data
-        elseif value == 'DataNewPlayState' then
+        if value == 'DataNewPlayState' then
             local data = s_LocalDatabaseManager.getDataNewPlayState()
             if data ~= nil then
                 objs['lastUpdate' .. value] = data.lastUpdate
@@ -449,9 +440,7 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
                     local timestamp = result['lastUpdate'..key]
                     if timestamp ~= nil and value['lastUpdate'] ~= nil and timestamp > value['lastUpdate'] then
                         value['lastUpdate'] = timestamp
-                        if key == 'DataCurrentIndex' then
-                            s_LocalDatabaseManager.saveDataCurrentIndex(result.currentIndex, timestamp)
-                        elseif key == 'DataNewPlayState' then
+                        if key == 'DataNewPlayState' then
                             s_LocalDatabaseManager.saveDataNewPlayState(result.playModel, result.rightWordList, result.wrongWordList, result.wordCandidate, timestamp)
                         elseif key == 'DataWrongWordBuffer' then
                             s_LocalDatabaseManager.saveDataWrongWordBuffer(result.wordNum, result.wordBuffer, timestamp)
@@ -468,38 +457,6 @@ function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
         end, 
         function (api, code, message, description) 
             if onCompleted then onCompleted() end
-        end)
-end
-
-function UserBaseServer.synUserConfig(onCompleted, saveToLocalDB)
-    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
-        if onCompleted then onCompleted() end
-        return
-    end
-
-    saveToLocalDB = saveToLocalDB or true
-
-    local DataStudyConfiguration = require('model.user.DataStudyConfiguration')
-    local isAlterOn = s_LocalDatabaseManager.getIsAlterOn()
-    local slideNum = s_LocalDatabaseManager.getSlideNum()
-    local time = os.time()
-    local data = DataStudyConfiguration.createData(isAlterOn, slideNum, time)
-    
-    s_SERVER.synData(data, 
-        function (api, result) 
-            print ('synUserConfig >>>')
-            print_lua_table (result)
-            print ('synUserConfig <<<')
-
-            local timestamp = result['lastUpdate']
-            if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
-                s_LocalDatabaseManager.saveDataStudyConfiguration(result.isAlterOn, result.slideNum, timestamp)
-            end
-
-            if onCompleted then onCompleted() end
-        end, 
-        function (api, code, message, description)
-            if onCompleted then onCompleted() end 
         end)
 end
 

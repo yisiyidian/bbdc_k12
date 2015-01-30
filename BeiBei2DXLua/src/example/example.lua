@@ -7,6 +7,7 @@ require("common.global")
 local ziaoangTest       = require("view.ZiaoangTest")
 local ScrollViewTest    = require("view.ScrollviewTest")
 
+local ProtocolBase = require('server.protocol.ProtocolBase')
 require('server.protocol.protocols')
 
 function test()
@@ -16,8 +17,22 @@ function test()
     --         print (username .. ' ' .. tostring(exsit))
     --     end
     -- end)
-    local t = {'a', 'b' , 'g'}
-    print(s_JSON.encode(t))
+    -- local t = {'a', 'b' , 'g'}
+    -- print(s_JSON.encode(t))
+
+    local api = ''
+    local serverRequestType = SERVER_REQUEST_TYPE_NORMAL
+    local function cb (result, error)
+        print('ProtocolBase >>')
+        if error == nil then
+            print_lua_table(error)
+        else
+            print('ProtocolBase')
+        end
+        print('ProtocolBase <<')
+    end
+    local protocol = ProtocolBase.create(api, serverRequestType, {['username']=username}, cb)
+    protocol:request()
 
     -- cx.CXUtils:getInstance():_testCppApi_()
     
@@ -40,6 +55,9 @@ function test()
  -- local newStudyLayer = NewStudyLayer.create(1)
  -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
+
+    local circle = require('view.MissionCompleteCircle').create()
+    s_SCENE:replaceGameLayer(circle)
 
 
 
