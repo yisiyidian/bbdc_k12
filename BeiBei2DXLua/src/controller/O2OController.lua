@@ -263,21 +263,17 @@ function O2OController.getUserDatasOnline()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
             else
-                showProgressHUD()
-                s_UserBaseServer.synBookRelations(nil, function ()
+               
+                -- TODO sys wrong word levels & DailyStudyInfo
+                local dayString = getDayStringForDailyStudyInfo(os.time())
+                local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
+                if today == nil then
+                    today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
+                end
+                s_LocalDatabaseManager.saveDataDailyStudyInfo(today)
 
-                    local dayString = getDayStringForDailyStudyInfo(os.time())
-                    local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
-                    if today == nil then
-                        today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
-                    end
-                    s_UserBaseServer.synTodayDailyStudyInfo(today, function ()
-                        s_CorePlayManager.enterHomeLayer()
-                        O2OController.getBulletinBoard()    
-                        hideProgressHUD()
-                    end, true)
-
-                end)
+                s_CorePlayManager.enterHomeLayer()
+                O2OController.getBulletinBoard()    
                 
             end 
         end)
@@ -370,9 +366,8 @@ function O2OController.getDataEverydayInfo(onSaved)
     if s_CURRENT_USER.localTime == 0 then
         -- 1st log in
         s_CURRENT_USER.localTime = os.time()
-        local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['localTime']=s_CURRENT_USER.localTime}
         local localDBDatas = {['noObjectIdDatas']=noObjectIdDatas, ['currentWeek']=currentWeek}
-        saveToServer(userdata, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
+        saveUserToServer({'localTime']=s_CURRENT_USER.localTime}, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
     else
         local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
         updateWeek(localDBDatas, 1, onSaved)

@@ -110,12 +110,12 @@ end
 
 function Manager.addStudyWordsNum()
     local data = localdatabase_dailyStudyInfo.addStudyWordsNum()
-    s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
+    -- s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
 function Manager.addGraspWordsNum(addNum)
     local data = localdatabase_dailyStudyInfo.addGraspWordsNum(addNum)
-    s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
+    -- s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
 function Manager.getStudyDayNum()
@@ -326,7 +326,7 @@ end
 -- lastUpdate : nil means now
 function Manager.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate, lastUpdate)
     localdatabase_newPlayState.setNewPlayState(playModel, rightWordList, wrongWordList, wordCandidate, lastUpdate)
-    s_UserBaseServer.saveDataNewPlayState()
+    -- s_UserBaseServer.saveDataNewPlayState()
 end
 
 -- lastUpdate : nil means now
@@ -346,7 +346,7 @@ end
 
 function Manager.addWrongWordBuffer(wrongWord)
     localdatabase_wrongWordBuffer.addWrongWordBuffer(wrongWord)
-    s_UserBaseServer.saveDataWrongWordBuffer()
+    -- s_UserBaseServer.saveDataWrongWordBuffer()
 end
 
 function Manager.getDataWrongWordBuffer()
@@ -392,7 +392,7 @@ end
 
 function Manager.getTodayTotalBossNum()
     local ret = localdatabase_todayReviewBossNum.getTodayTotalBossNum()
-    s_UserBaseServer.saveDataTodayReviewBossNum()
+    -- s_UserBaseServer.saveDataTodayReviewBossNum()
     return ret
 end
 
