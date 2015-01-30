@@ -30,7 +30,7 @@ end
 
 function DataLevelInfo:getCurrentWordIndex()
     for i, v in ipairs(g_BOOKKEYS) do
-        if v == bookKey then
+        if v == s_CURRENT_USER.bookKey then
             return self[DataLevelInfo.CurrentWordIndex .. g_BOOKS[i]]
         end
     end
@@ -39,7 +39,7 @@ end
 
 function DataLevelInfo:setCurrentWordIndex(idx)
     for i, v in ipairs(g_BOOKKEYS) do
-        if v == bookKey then
+        if v == s_CURRENT_USER.bookKey then
             self[DataLevelInfo.CurrentWordIndex .. g_BOOKS[i]] = idx
         end
     end
