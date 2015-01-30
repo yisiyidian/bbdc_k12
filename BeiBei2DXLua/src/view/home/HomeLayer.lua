@@ -66,7 +66,7 @@ function HomeLayer.create(share)
     backColor:addChild(top)
 
     local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
-    been_number_back:setPosition(s_DESIGN_WIDTH-100, s_DESIGN_HEIGHT-50)
+    been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
     backColor:addChild(been_number_back)
 
     local been = cc.Sprite:create("image/shop/been.png")
