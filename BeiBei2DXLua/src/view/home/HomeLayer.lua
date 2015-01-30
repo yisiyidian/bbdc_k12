@@ -12,7 +12,10 @@ local HomeLayer = class("HomeLayer", function ()
 end)
 
 function HomeLayer.create(share) 
-    s_CURRENT_USER:addBeans(10000)
+    if s_CURRENT_USER.beans < 1 then
+        s_CURRENT_USER:addBeans(10000)
+
+    end
 
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
@@ -74,6 +77,12 @@ function HomeLayer.create(share)
     been_number:setColor(cc.c4b(0,0,0,255))
     been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
     been_number_back:addChild(been_number)
+
+    local function updateBean(delta)
+        been_number:setString(s_CURRENT_USER.beans)
+    end
+
+    been_number:scheduleUpdateWithPriorityLua(updateBean,0)
     
     local setting_back
     

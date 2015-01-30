@@ -19,7 +19,7 @@ end
 function PersonalInfo:ctor()
 
     math.randomseed(os.time())
-    local UNLOCK = 0
+    local UNLOCK = 1
     self.totalDay = 1
     local moved = false
     local start_y = nil
@@ -72,9 +72,10 @@ function PersonalInfo:ctor()
         share:setScale9Enabled(true)
         share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
         layout:addChild(share)
-
+        local title_here = titleArray[5 - i]
+        local title
         if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
-            titleArray[5 - i] = titleArray[5 - i].."被锁住了！"
+            title_here = titleArray[5 - i].."被锁住了！"
             
             
             local ShopPanel = require('view.shop.ShopPanel')
@@ -83,12 +84,22 @@ function PersonalInfo:ctor()
             layout:addChild(shopPanel)
             
             shopPanel.feedback = function()
-                
+                local curPage = pageView:getCurPageIndex()
+                title:setString(titleArray[5 - i])
+                if curPage == 3 then
+                    self:PLVM()
+                elseif curPage == 2 then
+                    self:PLVI()
+                elseif curPage == 1 then
+                    self:login()
+                elseif curPage == 0 then
+                    self:XXTJ()
+                end
             end
             
             share:setVisible(false)
         end
-        local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
+        title = cc.Label:createWithSystemFont(title_here,'',30)
         title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
         title:setColor(colorArray[5 - i])
         layout:addChild(title)
