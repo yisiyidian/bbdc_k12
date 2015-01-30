@@ -242,16 +242,17 @@ function PersonalInfo:PLVM()
     local learnStr = string.format('已学习%d',tolearnCount)
     local masterStr = string.format('生词数%d',toMasterCount)
     for i = 1,#learnStr - 9 do
-        local label = cc.Label:createWithSystemFont(string.sub(learnStr,#learnStr + 1 - i,#learnStr + 1 - i),'',28)
-        label:setRotation((1 - i) * 5)
+        local label = cc.Label:createWithSystemFont(string.sub(learnStr,9 + i,9 + i),'',28)
+        local angle =  (1 - i) * 5 - 24
+        label:setRotation(- angle)
         --label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + 5 * (i - 1) / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + 5 * (i - 1) / 180)))
+        label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + angle / 180)))
         circleBack:addChild(label,100)
     end
     
     for i = 1,3 do
         local label = cc.Label:createWithSystemFont(string.sub(learnStr,3 * (i - 1) + 1,3 * i),'',28)
-        local angle = (#learnStr - 10) * 5 + (4 - i) * 8
+        local angle = (1 - i) * 8
         label:setRotation(-angle)
         --label:setColor(cc.c3b(0,0,0))
         label:setPosition(circleBack:getContentSize().width / 2 + 220 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 220 * math.sin(math.pi * (0.5 + angle / 180)))
@@ -259,16 +260,18 @@ function PersonalInfo:PLVM()
     end
     
     for i = 1,#masterStr - 9 do
-        local label = cc.Label:createWithSystemFont(string.sub(masterStr,#masterStr + 1 - i,#masterStr + 1 - i),'',28)
-        label:setRotation((1 - i) * 6)
+        local label = cc.Label:createWithSystemFont(string.sub(masterStr,9 + i,9 + i),'',28)
+        local angle = (1 - i) * 6 - 33
+        label:setRotation(-angle)
         --label:setColor(cc.c3b(0,0,0))
-        label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + 6 * (i - 1) / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + 6 * (i - 1) / 180)))
+        label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
         circleBack:addChild(label,100)
     end
 
     for i = 1,3 do
         local label = cc.Label:createWithSystemFont(string.sub(masterStr,3 * (i - 1) + 1,3 * i),'',28)
-        local angle = (#masterStr - 10) * 6 + (4 - i) * 10
+        --local angle = (#masterStr - 10) * 6 + (4 - i) * 10
+        local angle = -(i - 1) * 11
         label:setRotation(-angle)
         --label:setColor(cc.c3b(0,0,0))
         label:setPosition(circleBack:getContentSize().width / 2 + 161 * math.cos(math.pi * (0.5 + angle / 180)),circleBack:getContentSize().height / 2 + 161 * math.sin(math.pi * (0.5 + angle / 180)))
