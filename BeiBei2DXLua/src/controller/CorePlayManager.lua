@@ -609,7 +609,7 @@ function CorePlayManager.recordWordProciency()
         end
     end
 
-    saveUserToServer({'wordsCount']=s_CURRENT_USER.wordsCount, 'masterCount']=s_CURRENT_USER.masterCount})
+    saveUserToServer({['wordsCount']=s_CURRENT_USER.wordsCount, ['masterCount']=s_CURRENT_USER.masterCount})
 end
 
 function CorePlayManager.enterReviewBossLayer_special()
