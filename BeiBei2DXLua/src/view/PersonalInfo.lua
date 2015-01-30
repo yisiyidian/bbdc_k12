@@ -19,7 +19,7 @@ end
 function PersonalInfo:ctor()
 
     math.randomseed(os.time())
-    local UNLOCK = 0
+    local UNLOCK = 1
     self.totalDay = 1
     local moved = false
     local start_y = nil
