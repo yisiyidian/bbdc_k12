@@ -12,16 +12,36 @@ function DataLevelInfo.create()
     return data
 end
 
-DataLevelInfo.BossList = 'BossList'
-DataLevelInfo.UpdateBossTime = 'UpdateBossTime'
+DataLevelInfo.BOOKKEY          = 'K'
+DataLevelInfo.CurrentWordIndex = 'I'
+DataLevelInfo.BossList         = 'B'
+DataLevelInfo.UpdateBossTime   = 'T'
 
 function DataLevelInfo:ctor()
     self.className = 'DataLevelInfo'
 
     for i, v in ipairs(g_BOOKS) do
-        self[v] = 0
-        self[v .. DataLevelInfo.BossList] = ''
-        self[v .. DataLevelInfo.UpdateBossTime] = 0
+        self[DataLevelInfo.BOOKKEY          .. v] = 0
+        self[DataLevelInfo.CurrentWordIndex .. v] = 1
+        self[DataLevelInfo.BossList         .. v] = ''
+        self[DataLevelInfo.UpdateBossTime   .. v] = 0
+    end
+end
+
+function DataLevelInfo:getCurrentWordIndex()
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            return self[DataLevelInfo.CurrentWordIndex .. g_BOOKS[i]]
+        end
+    end
+    return 0
+end
+
+function DataLevelInfo:setCurrentWordIndex(idx)
+    for i, v in ipairs(g_BOOKKEYS) do
+        if v == bookKey then
+            self[DataLevelInfo.CurrentWordIndex .. g_BOOKS[i]] = idx
+        end
     end
 end
 
@@ -44,7 +64,7 @@ end
 function DataLevelInfo:getBossList(bookKey)
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
-            return self[g_BOOKS[i] .. DataLevelInfo.BossList]
+            return self[DataLevelInfo.BossList .. g_BOOKS[i]]
         end
     end
 
@@ -54,7 +74,7 @@ end
 function DataLevelInfo:getUpdateBossTime(bookKey)
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
-            return self[g_BOOKS[i] .. DataLevelInfo.UpdateBossTime]
+            return self[DataLevelInfo.UpdateBossTime .. g_BOOKS[i]]
         end
     end
 
@@ -65,7 +85,7 @@ end
 function DataLevelInfo:updateBossList(bookKey, bossList)
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
-            self[g_BOOKS[i] .. DataLevelInfo.BossList] = bossList
+            self[DataLevelInfo.BossList .. g_BOOKS[i]] = bossList
         end
     end
 end
@@ -73,7 +93,7 @@ end
 function DataLevelInfo:updateTime(bookKey, updateTime)
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
-            self[g_BOOKS[i] .. DataLevelInfo.UpdateBossTime] = updateTime
+            self[DataLevelInfo.UpdateBossTime .. g_BOOKS[i]] = updateTime
         end
     end
 end
@@ -81,7 +101,7 @@ end
 function DataLevelInfo:getLevelInfo(bookKey)
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
-            return self[g_BOOKS[i]]
+            return self[DataLevelInfo.BOOKKEY .. g_BOOKS[i]]
         end
     end
     return 0
@@ -156,7 +176,7 @@ function DataLevelInfo:updateDataToServer()
     bookKey = s_CURRENT_USER.bookKey
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
-            self[g_BOOKS[i]] = currentProgress
+            self[DataLevelInfo.BOOKKEY .. g_BOOKS[i]] = currentProgress
         end
     end
 

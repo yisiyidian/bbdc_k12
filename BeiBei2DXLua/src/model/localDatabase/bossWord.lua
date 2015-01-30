@@ -40,7 +40,7 @@ function M.addBossWord(bossWordList)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
-    local lastWordIndex = Manager.getCurrentIndex()
+    local lastWordIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
 
     local time = os.time()
     

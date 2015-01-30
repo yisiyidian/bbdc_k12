@@ -9,7 +9,6 @@ local DataEverydayInfo = require('model.user.DataEverydayInfo')
 local DataUser = require('model.user.DataUser')
 local DataLevelInfo = require('model.user.DataLevelInfo')
 
-local DataCurrentIndex = require('model.user.DataCurrentIndex')
 local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 local DataNewPlayState = require('model.user.DataNewPlayState')
 local DataTodayReviewBossNum = require('model.user.DataTodayReviewBossNum')
@@ -21,7 +20,6 @@ local databaseTables = {
         DataUser,
         DataLevelInfo,
 
-        DataCurrentIndex,
         DataDailyStudyInfo,
         DataNewPlayState,
         DataTodayReviewBossNum,
@@ -33,7 +31,6 @@ local localdatabase_utils = nil
 local localdatabase_user = nil
 
 local localdatabase_dailyStudyInfo = nil
-local localdatabase_currentIndex = nil
 local localdatabase_newPlayState = nil
 local localdatabase_todayReviewBossNum = nil
 local localdatabase_wrongWordBuffer = nil
@@ -55,7 +52,6 @@ function Manager.init()
     localdatabase_user = reloadModule('model.localDatabase.user')
 
     localdatabase_dailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
-    localdatabase_currentIndex = reloadModule('model.localDatabase.currentIndex')
     localdatabase_newPlayState = reloadModule('model.localDatabase.newPlayState')
     localdatabase_todayReviewBossNum = reloadModule('model.localDatabase.todayReviewBossNum')
     localdatabase_wrongWordBuffer = reloadModule('model.localDatabase.wrongWordBuffer')
@@ -153,7 +149,7 @@ end
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
-    return Manager.getCurrentIndex() - 1
+    return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
 end
 
 function Manager.getTotalGraspWordsNum()
@@ -210,7 +206,7 @@ function Manager.getStudyWords()
     local bookKey = s_CURRENT_USER.bookKey
     local wordList = s_BookWord[bookKey]
 
-    local currentIndex = Manager.getCurrentIndex()
+    local currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     
     local wordPool = {}
     for i = 1, currentIndex-1 do
@@ -299,32 +295,6 @@ function Manager.getGraspWords()
     end
 
     return wordPool
-end
-
----------------------------------------------------------------------------------------------------------
--- DataCurrentIndex
--- record word info
-function Manager.printCurrentIndex()
-    localdatabase_currentIndex.printCurrentIndex()
-end
-
-function Manager.getCurrentIndex()    
-    return localdatabase_currentIndex.getCurrentIndex()
-end
-
--- lastUpdate : nil means now
-function Manager.setCurrentIndex(currentIndex, lastUpdate)
-    localdatabase_currentIndex.saveDataCurrentIndex(currentIndex, lastUpdate)
-    s_UserBaseServer.saveDataCurrentIndex()
-end
-
-function Manager.getDataCurrentIndex()
-    return localdatabase_currentIndex.getDataCurrentIndex()
-end
-
--- lastUpdate : nil means now
-function Manager.saveDataCurrentIndex(currentIndex, lastUpdate)
-    localdatabase_currentIndex.saveDataCurrentIndex(currentIndex, lastUpdate)
 end
 
 ---------------------------------------------------------------------------------------------------------
@@ -473,7 +443,7 @@ function Manager.getGameState() -- 1 for review boss model, 2 for study model, 3
         return s_gamestate_reviewbossmodel_beforetoday
     end
     
-    if Manager.getCurrentIndex() > s_DataManager.books[s_CURRENT_USER.bookKey].words then
+    if s_CURRENT_USER.levelInfo:getCurrentWordIndex() > s_DataManager.books[s_CURRENT_USER.bookKey].words then
         return s_gamestate_studymodel_extra
     end
     
