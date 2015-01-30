@@ -19,7 +19,7 @@ end
 function PersonalInfo:ctor()
 
     math.randomseed(os.time())
-    local UNLOCK = 1
+    local UNLOCK = 0
     self.totalDay = 1
     local moved = false
     local start_y = nil
@@ -206,7 +206,7 @@ function PersonalInfo:PLVM()
     backProgress:setScaleY(483 / 527)
     backProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     backProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-    backProgress:setReverseDirection(true)
+    --backProgress:setReverseDirection(true)
     backProgress:setPercentage(0)
     backProgress:runAction(toLearn)
     circleBack:addChild(backProgress)
@@ -258,7 +258,7 @@ function PersonalInfo:PLVM()
     local learnProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_big_dark.png'))
     learnProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     learnProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-    learnProgress:setReverseDirection(true)
+    --learnProgress:setReverseDirection(true)
     learnProgress:setPercentage(0)
     learnProgress:runAction(cc.ProgressTo:create(learnPercent,learnPercent * 100))
     circleBack:addChild(learnProgress)
@@ -266,7 +266,7 @@ function PersonalInfo:PLVM()
     local masterProgress = cc.ProgressTimer:create(cc.Sprite:create('image/PersonalInfo/PLVM/shuju_ring_blue_small_dark.png'))
     masterProgress:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     masterProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-    masterProgress:setReverseDirection(true)
+    --masterProgress:setReverseDirection(true)
     masterProgress:setPercentage(0)
     masterProgress:runAction(toMaster)
     circleBack:addChild(masterProgress)
