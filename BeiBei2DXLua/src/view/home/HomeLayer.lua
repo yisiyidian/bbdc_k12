@@ -18,9 +18,9 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
 
 function HomeLayer.create(share) 
-    if s_CURRENT_USER.beans < 1 then
+    if s_CURRENT_USER:getBeans() < 1 then
         s_CURRENT_USER:addBeans(10000)
-
+        saveUserToServer({'beans']=s_CURRENT_USER.beans})
     end
 
     -- data begin
@@ -57,13 +57,13 @@ function HomeLayer.create(share)
     been:setPosition(0, been_number_back:getContentSize().height/2)
     been_number_back:addChild(been)
 
-    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER.beans,'',24)
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
     been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
     been_number_back:addChild(been_number)
 
     local function updateBean(delta)
-        been_number:setString(s_CURRENT_USER.beans)
+        been_number:setString(s_CURRENT_USER:getBeans())
     end
 
     been_number:scheduleUpdateWithPriorityLua(updateBean,0)
@@ -184,6 +184,9 @@ function HomeLayer.create(share)
             local loginreward = Loginreward:create()
             s_SCENE:popup(loginreward)          
             
+        end
+    end
+    
 --            local Test1 = require("view.islandPopup.WordLibraryPopup")
 --            local test1 = Test1:create()
 --            s_SCENE:popup(test1)
@@ -223,9 +226,6 @@ function HomeLayer.create(share)
 --            local Test10 = require("view.newstudy.BookOverLayer")
 --            local test10 = Test10:create()
 --            s_SCENE:replaceGameLayer(test10)
-
-        end
-    end
 
     local button_reward
     local icon_reward
