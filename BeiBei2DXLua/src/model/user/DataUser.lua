@@ -18,6 +18,10 @@ function DataUser.create()
     return data
 end
 
+DataUser.BEANSKEY = 'bbbean'
+local BEANS_PREFIX = 'xd928f'
+local BEANS_SUBFIX = '$121M^'
+
 function DataUser:ctor()
     self.className                         = '_User'
     
@@ -58,7 +62,7 @@ function DataUser:ctor()
 --    self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
-    self.beans                             = 0
+    self[DataUser.BEANSKEY]                = BEANS_PREFIX .. '0' .. BEANS_SUBFIX
     self.newStudyRightLayerMask            = 0
 
 
@@ -104,15 +108,21 @@ function DataUser:unlockFunctionState(productId)
 end
 
 function DataUser:getBeans()
-    return self.beans
+    local a = string.gsub(self[DataUser.BEANSKEY], BEANS_PREFIX,  "") 
+    local b = string.gsub(a, BEANS_SUBFIX,  "") 
+    return tonumber(b)
+end
+
+function DataUser:setBeans(num)
+    self[DataUser.BEANSKEY] = string.format('%s%d%s', BEANS_PREFIX, num, BEANS_SUBFIX)
 end
 
 function DataUser:addBeans(count)
-    self.beans = self.beans + count
+    self:setBeans( self:getBeans() + count )
 end
 
 function DataUser:subtractBeans(count)
-    self.beans = self.beans - count
+    self:setBeans( self:getBeans() - count )
 end
 
 function DataUser:generateChestList()
@@ -354,7 +364,7 @@ function DataUser:getFriendsInfo()
     self.friendsCount = #self.friends
     self.fansCount = #self.fans
     print_lua_table (s_CURRENT_USER.fans)
-    saveUserToServer({'friendsCount']=self.friendsCount, ['fansCount']=self.fansCount})
+    saveUserToServer({['friendsCount']=self.friendsCount, ['fansCount']=self.fansCount})
 end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)

@@ -17,7 +17,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
         s_CURRENT_USER:addBeans(3)
         -- s_CURRENT_USER:removeSummaryBoss(levelIndex)
         -- s_CURRENT_USER:updateDataToServer()
-        saveUserToServer({'beans']=s_CURRENT_USER.beans})
+        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     end
     
     --disable pauseBtn
