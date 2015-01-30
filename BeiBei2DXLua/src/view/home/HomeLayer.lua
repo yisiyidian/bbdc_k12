@@ -11,7 +11,9 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
-function HomeLayer.create(share)    
+function HomeLayer.create(share) 
+    s_CURRENT_USER:addBeans(10000)
+
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
@@ -551,7 +553,6 @@ function HomeLayer.create(share)
             label2:setAnchorPoint(0, 1)
             label2:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
             button_back:addChild(label2)
-
         end
 
         local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)

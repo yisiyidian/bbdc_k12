@@ -13,11 +13,8 @@ function ShopErrorAlter.create()
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
 
-    main.sure = function()
-        s_CURRENT_USER:addBeans(10000)
-        local ShopLayer = require("view.shop.ShopLayer")
-        local shopLayer = ShopLayer.create()
-        s_SCENE:replaceGameLayer(shopLayer)
+    main.sure = function() 
+        main:removeFromParent()
     end
 
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")

@@ -75,8 +75,17 @@ function PersonalInfo:ctor()
 
         if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
             titleArray[5 - i] = titleArray[5 - i].."被锁住了！"
-            local dataInfoLockedLayer = require('view.datainfo.DataInfoLockedLayer').create(5 - i)
-            layout:addChild(dataInfoLockedLayer)
+            
+            
+            local ShopPanel = require('view.shop.ShopPanel')
+            local shopPanel = ShopPanel.create(6-i)
+            shopPanel:setPosition(s_DESIGN_WIDTH/2, 0)
+            layout:addChild(shopPanel)
+            
+            shopPanel.feedback = function()
+                
+            end
+            
             share:setVisible(false)
         end
         local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
