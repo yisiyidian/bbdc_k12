@@ -17,7 +17,7 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-function SummaryBossLayer.create(levelIndex,chapter)   
+function SummaryBossLayer.create(chapter)   
     AnalyticsSummaryBoss()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
@@ -416,7 +416,7 @@ function SummaryBossLayer.create(levelIndex,chapter)
                         local win = cc.CallFunc:create(function()
                             
                             --layer.boss:removeFromParent()
-                            layer:win(levelIndex,chapter)
+                            layer:win(chapter)
                         end,{})
                         layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
                         
@@ -1148,10 +1148,10 @@ function SummaryBossLayer:crabBig(chapter,index)
     end
 end
 
-function SummaryBossLayer:win(levelIndex,chapter)
+function SummaryBossLayer:win(chapter)
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,levelIndex)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
@@ -1164,7 +1164,7 @@ end
 function SummaryBossLayer:lose(chapter)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,levelIndex)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
