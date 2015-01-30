@@ -331,6 +331,9 @@ function HomeLayer.create(share)
             local loginreward = Loginreward:create()
             s_SCENE:popup(loginreward)          
             
+        end
+    end
+    
 --            local Test1 = require("view.islandPopup.WordLibraryPopup")
 --            local test1 = Test1:create()
 --            s_SCENE:popup(test1)
@@ -370,9 +373,6 @@ function HomeLayer.create(share)
 --            local Test10 = require("view.newstudy.BookOverLayer")
 --            local test10 = Test10:create()
 --            s_SCENE:replaceGameLayer(test10)
-
-        end
-    end
 
     local button_reward
     local icon_reward
