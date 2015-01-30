@@ -4,7 +4,7 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(win,wordCount,blood,index,levelIndex)
+function SummaryBossAlter.create(win,wordCount,blood,index)
     
     local layer = SummaryBossAlter.new()
     layer.wordCount = wordCount
@@ -14,17 +14,9 @@ function SummaryBossAlter.create(win,wordCount,blood,index,levelIndex)
     layer.levelIndex = levelIndex
 
     if layer.win then
-        s_CURRENT_USER:addBeans(2)
-        s_CURRENT_USER:removeSummaryBoss(levelIndex)
-        s_CURRENT_USER:updateDataToServer()
-        -- local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey)
-        -- s_CURRENT_USER:setUserLevelDataOfStars(s_CURRENT_USER.currentChapterKey, s_CURRENT_USER.currentSelectedLevelKey,3)
-        -- if levelData then
-        --     local isPassed = levelData.isPassed
-        --     if isPassed == 0 then
-        --         s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
-        --     end
-        -- end
+        s_CURRENT_USER:addBeans(3)
+        -- s_CURRENT_USER:removeSummaryBoss(levelIndex)
+        -- s_CURRENT_USER:updateDataToServer()
         
     end
     
