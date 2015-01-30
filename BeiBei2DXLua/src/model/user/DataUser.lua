@@ -35,10 +35,10 @@ function DataUser:ctor()
     self.tutorialStep                      = 0 
     self.tutorialSmallStep                 = 0 
     self.isSoundAm                         = 1 
-    self.reviewBossTutorialStep            = 0 
+--    self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
-    self.energyLastCoolDownTime            = -1 
-    self.energyCount                       = s_energyMaxCount
+--    self.energyLastCoolDownTime            = -1 
+--    self.energyCount                       = s_energyMaxCount
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
     
@@ -51,20 +51,20 @@ function DataUser:ctor()
     self.seenFansCount                     = 0
 
     self.currentWordsIndex                 = 0 
-    self.currentChapterKey                 = ''
+--    self.currentChapterKey                 = ''
     --self.currentSelectedChapterKey         = ''
-    self.currentLevelKey                   = ''
+--    self.currentLevelKey                   = ''
     --self.currentSelectedLevelKey           = ''
-    self.stars                             = 0 
+--    self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
     self.beans                             = 0
     self.newStudyRightLayerMask            = 0
 
 
-    self.needToUnlockNextChapter           = 0
+--    self.needToUnlockNextChapter           = 0
 
-    self.levels                            = {}
+--    self.levels                            = {}
     self.logInDatas                        = {}
     self.localAuthData                     = nil
     self.snsUserInfo                       = nil

@@ -73,7 +73,7 @@ function LevelLayer:levelStateManager()
     local levelData = s_CURRENT_USER:getUserLevelData(s_CURRENT_USER.currentChapterKey,s_CURRENT_USER.currentLevelKey)
 --    print('tutuorial step:'..s_CURRENT_USER.reviewBossTutorialStep)
 --    print_lua_table(levelData)
-    if levelData ~= nil and s_CURRENT_USER.currentLevelKey == 'level0' and levelData.stars > 0 and s_SCENE.levelLayerState ~= s_review_boss_pass_state and s_CURRENT_USER.reviewBossTutorialStep == 0 then
+    if levelData ~= nil and s_CURRENT_USER.currentLevelKey == 'level0' and levelData.stars > 0 and s_SCENE.levelLayerState ~= s_review_boss_pass_state then
         s_SCENE.levelLayerState = s_review_boss_appear_state
         currentChapterLayer:plotLevelDecoration(s_CURRENT_USER.currentLevelKey)
     end
@@ -164,9 +164,9 @@ function LevelLayer:levelStateManager()
             end)
         --end
         s_SCENE.levelLayerState = s_normal_level_state
-        if s_CURRENT_USER.reviewBossTutorialStep == 0 then
-            s_CURRENT_USER.reviewBossTutorialStep = 1
-        end
+--        if s_CURRENT_USER.reviewBossTutorialStep == 0 then
+--            s_CURRENT_USER.reviewBossTutorialStep = 1
+--        end
      elseif s_SCENE.levelLayerState == s_unlock_next_chapter_state then
         s_SCENE.levelLayerState = s_normal_level_state
         if s_CURRENT_USER.currentChapterKey ~= 'chapter3' then
