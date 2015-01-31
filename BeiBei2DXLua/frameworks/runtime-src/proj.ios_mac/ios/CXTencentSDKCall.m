@@ -205,7 +205,7 @@ static CXTencentSDKCall *g_instance = nil;
     SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent:img];
     
     QQApiSendResultCode sent = [QQApiInterface sendReq:req];
-//    [self handleSendResult:sent];
+    [self handleSendResult:sent];
 }
 
 - (void)handleSendResult:(QQApiSendResultCode)sendResult

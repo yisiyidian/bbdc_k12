@@ -67,7 +67,8 @@ LOCAL_SRC_FILES := ../manual/CCLuaBridge.cpp \
           ../../../../common/md5/md5.c \
           ../../../../common/Android/CXMailFeedBack.cpp \
           ../../../../common/Android/CXProgressHUD.cpp \
-          ../../../../common/CXUtils.cpp \
+          ../../../../common/Android/CXUtils.cpp \
+          ../../../../common/CXUtilsCommon.cpp \
           ../../../../common/CXStore.cpp \
           ../../../../external/lua/lsqlite3/lsqlite3.c \
           ../../../../external/lua/lsqlite3/sqlite3.c \
