@@ -123,9 +123,6 @@ local function createOptions(randomNameArray,word,wrongNum)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     s_CorePlayManager.leaveStudyModel(false)
-                    local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-                    s_SCENE:replaceGameLayer(chooseWrongLayer)
                 end)))
             end
 
@@ -161,10 +158,7 @@ local function createDontknow(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.leaveStudyModel(false)
-            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(chooseWrongLayer)            
+            s_CorePlayManager.leaveStudyModel(false)           
         end
     end
 

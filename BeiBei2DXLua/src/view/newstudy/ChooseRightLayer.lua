@@ -26,9 +26,6 @@ local function addStudyButton(word,wrongNum)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             s_CorePlayManager.leaveStudyModel(false)
-            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
 
@@ -48,9 +45,6 @@ local function addNextButton(word,wrongNum)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             s_CorePlayManager.leaveStudyModel(true)
-            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
         end
     end
 
