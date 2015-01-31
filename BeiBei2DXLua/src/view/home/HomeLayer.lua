@@ -182,10 +182,7 @@ function HomeLayer.create(share)
 
             local Loginreward = require("view.loginreward.LoginRewardPopup")
             local loginreward = Loginreward:create()
-            s_SCENE:popup(loginreward)   
-
-            -- local circle = require('view.summaryboss.SummaryBossLayer').create(1)
-            -- s_SCENE:replaceGameLayer(circle)       
+            s_SCENE:popup(loginreward)         
             
         end
     end
@@ -444,9 +441,15 @@ function HomeLayer.create(share)
     end
 
     local onTouchEnded = function(touch,event)
+        print('touchend')
         local location = layer:convertToNodeSpace(touch:getLocation())
+        print('location y'..location.y..' '..start_y)
+        print('location x'..location.x..' '..start_x)
+        print('s_DESIGN_HEIGHT'..s_DESIGN_HEIGHT)
+        print('viewIndex'..viewIndex)
         if not isDataShow then
-            if location.y ~= start_y or location.x ~= start_x then
+            print('isnotShow')
+            if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
                 return
             elseif viewIndex == 1 and location.y < 0.1 * s_DESIGN_HEIGHT then
                 isDataShow = true
@@ -471,7 +474,8 @@ function HomeLayer.create(share)
                    end 
             end
 
-        elseif location.y >  s_DESIGN_HEIGHT-280 and (location.y == start_y and location.x == start_x) and viewIndex == 1 then
+        elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
+            print('isDataShow')
             isDataShow = false
             layer:setButtonEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))

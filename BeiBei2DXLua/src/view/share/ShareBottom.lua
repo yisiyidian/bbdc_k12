@@ -39,7 +39,7 @@ function ShareBottom:ctor()
 
     local function saveImage(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-        	local png = string.format("image-saved%s.png",os.date('%X',os.time()))
+        	local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
             self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
             self:getParent():shareEnd()
             local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
@@ -64,19 +64,20 @@ function ShareBottom:ctor()
 	qq_button:setPosition(0.74 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
 	bottom:addChild(qq_button)
 	addTitle(qq_button,'QQ好友',0.5)
-	local png = string.format("image-saved%s.png",os.date('%X',os.time()))
+	local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
 	local function shareToQQ(sender, eventType)
 		if eventType == ccui.TouchEventType.began then
 			self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
         elseif eventType == ccui.TouchEventType.ended then
         	--local png = string.format("image-saved%s.png",os.date('%X',os.time()))
             --self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
-            -- local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
-            local imagePath = cc.FileUtils:getInstance():fullPathForFilename(png)
+            local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
             cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, '分享我的记录', '贝贝单词－根本停不下来')
+
             self:getParent():shareEnd()
             local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
             local remove = cc.CallFunc:create(function ()
+        		os.remove(imagePath)
 				self:removeFromParent()
 			end)
             bottom:runAction(cc.Sequence:create(move,remove))

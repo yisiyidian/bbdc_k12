@@ -120,10 +120,9 @@ function BlacksmithLayer:ctor()
     self:addChild(backColor)
 
     self.currentWord = "apple"
-    self.currentList = {"apple","banana","cat","dog","egg","floor"}
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
-    self.randWord = CollectUnfamiliar:createRandWord(self.currentWord,self.currentList)
+    self.randWord = CollectUnfamiliar:createRandWord(self.currentWord)
 
     local progressBar = ProgressBar.create(#self.currentList, 0, "yellow")
     progressBar:setPosition(bigWidth/2+44, 1049)
