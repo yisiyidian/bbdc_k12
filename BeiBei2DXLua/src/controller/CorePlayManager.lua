@@ -121,6 +121,7 @@ end
 function CorePlayManager.initOverModel()
 end
 
+
 function CorePlayManager.enterStudyModel(wordName, wrongWordNum)
     local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
     local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum)
@@ -148,6 +149,14 @@ function CorePlayManager.leaveStudyModel(state)
             CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
         end
     end
+end
+
+function CorePlayManager.enterStudyOverModel()
+
+end
+
+function CorePlayManager.levelStudyOverModel()
+    
 end
 
 function CorePlayManager.enterTestModel(wordList)
