@@ -110,8 +110,14 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
+    
+    
     -- TODO add review boss position
     -- TODO check level state
+    local levelState = 0
+    if levelState == 0 then
+    
+    end
     if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday and  currentProgress - levelIndex == 0 then
         -- plot review boss
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
@@ -309,12 +315,6 @@ function ChapterLayerBase:plotDecoration()
                 self:addPopup(sender:getName())
             end
         end
-        local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')
-        levelButton:setScale9Enabled(true)
-        levelButton:setPosition(levelPosition)
-        levelButton:setName(levelIndex)
-        levelButton:addTouchEventListener(touchEvent)
-        self:addChild(levelButton, 40)
         
         if (levelIndex - currentLevelIndex) > 0 then
             local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
@@ -326,6 +326,12 @@ function ChapterLayerBase:plotDecoration()
             self:addChild(lockIsland,120)
             self:addChild(lock,130)
         else
+            local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')
+            levelButton:setScale9Enabled(true)
+            levelButton:setPosition(levelPosition)
+            levelButton:setName(levelIndex)
+            levelButton:addTouchEventListener(touchEvent)
+            self:addChild(levelButton, 40)
             self:plotDecorationOfLevel(levelIndex)
         end  
     end
