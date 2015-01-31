@@ -12,6 +12,7 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
 import com.tencent.connect.UserInfo;
+import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
@@ -69,11 +70,14 @@ public class CXTencentSDKCall {
 	
 	public void shareImageToQQFriend(String path, String title, String desc) {
 	    Bundle params = new Bundle();
+	    
+	    params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
 	    params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, path);
+		
 	    params.putString(QQShare.SHARE_TO_QQ_TITLE, title);
 	    params.putString(QQShare.SHARE_TO_QQ_SUMMARY, desc);
-	    params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
-	    params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, QQShare.SHARE_TO_QQ_FLAG_QZONE_AUTO_OPEN);
+		params.putString(QQShare.SHARE_TO_QQ_APP_NAME, "贝贝单词");
+		
 	    mTencent.shareToQQ(mActivity, params, new ShareImageToQQFriendListener());
 	}
 

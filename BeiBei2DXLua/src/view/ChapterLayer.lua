@@ -109,8 +109,6 @@ function ChapterLayer:checkUnlockLevel()
        
 
     elseif currentProgress - oldProgress > 0 then   -- unlock level
---        local oldLevelIndex = string.sub(oldProgress['level'], 6)
---        local currentLevelIndex = string.sub(currentProgress['level'],6)
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         local delayTime = 0
         s_SCENE:callFuncWithDelay(delayTime, 
@@ -171,8 +169,6 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     end
     notification:setTag(100)
     self.player:addChild(notification, 100)
---    type = 'complete'
-    -- TODO show message according to type
     if type == 'study' then
         local title = cc.Label:createWithSystemFont('当前任务','',28)
         title:setColor(cc.c3b(56,26,23))
