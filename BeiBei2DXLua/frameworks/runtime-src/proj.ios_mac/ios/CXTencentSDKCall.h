@@ -10,6 +10,9 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/TencentOAuthObject.h>
 #import <TencentOpenAPI/TencentApiInterface.h>
+#import <TencentOpenAPI/QQApi.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/QQApiInterfaceObject.h>
 
 #import "AppVersionInfo.h"
 
@@ -69,5 +72,7 @@
 - (void)setAppId:(NSString*)appid appKey:(NSString*)appKey;
 - (void)login;
 - (void)logout;
+
+- (void)shareImageToQQFriend:(NSString*)path title:(NSString*)title desc:(NSString*)desc;
 
 @end

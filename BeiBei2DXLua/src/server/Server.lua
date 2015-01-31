@@ -1,6 +1,7 @@
 require("common.global")
 
-MAX_ERROR_CODE = 65535
+ERROR_CODE_MAX = 65535
+ERROR_CODE_USER_NEW_SESSION_TOKEN = 65534
 
 local Server = {}
 
@@ -96,6 +97,9 @@ function Server.request(api, serverRequestType, parameters, callback)
         if error then
             local err = s_JSON.decode(error)
             callback(nil, err)
+            if err.code == ERROR_CODE_USER_NEW_SESSION_TOKEN then
+                onErrorNeedRestartAppHappend(err.message)
+            end
             Server.logLuaTable(api, err, 'response ERROR')
         else
             local result = s_JSON.decode(response)
