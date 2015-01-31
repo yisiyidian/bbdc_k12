@@ -797,7 +797,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         time = 0
         local function update(delta)
            time = time + delta
-           if time > 2 then
+           if time > 1 then
               judgementFunction()
            end
         end   

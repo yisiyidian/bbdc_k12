@@ -94,9 +94,7 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     local success = function()
         playWordSound(self.currentWord) 
         if isCollectLayer == true then
-            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+            s_CorePlayManager.leaveStudyModel(false)   
         else
             local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
             local blacksmithLayer = BlacksmithLayer.create()
