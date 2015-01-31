@@ -188,7 +188,7 @@ function SummaryBossAlter:win1()
     end
 
     local missionCompleteCircle = require('view.MissionCompleteCircle').create()
-    self:addChild(missionCompleteCircle,1)
+    s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
     self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
         local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
         backColor:ignoreAnchorPointForPosition(false)
@@ -215,8 +215,7 @@ function SummaryBossAlter:win1()
 
         local function onButton(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                local home = require('view.home.HomeLayer').create(true)
-                s_SCENE:replaceGameLayer(home)
+                s_SCENE:checkInAnimation()
             end
         end
 
