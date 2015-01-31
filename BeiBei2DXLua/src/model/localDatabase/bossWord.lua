@@ -56,15 +56,17 @@ function M.addWrongWord(wordname, wordindex)
     if wordList == nil then
         local query = "INSERT INTO DataBossWord (userId, username, bookKey, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', 1, 0, '"..wordname.."', "..wordindex..") ;"
         Manager.database:exec(query)
+        return false
     elseif wordList == '' then
         local query = "UPDATE DataBossWord SET wordList = '"..wordname.."' and lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
         Manager.database:exec(query)
+        return false
     else
         local wordCount = split(wordList, "|")
         local newWordList = wordList.."|"..wordname
 
         if wordCount == 9 then
-            local query = "UPDATE DataBossWord SET typeIndex = "..1.." and wordList = '"..newWordList.."' and lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
+            local query = "UPDATE DataBossWord SET typeIndex = 1 and wordList = '"..newWordList.."' and lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
 
             query = "INSERT INTO DataBossWord (userId, username, bookKey, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', "..(bossID+1)..", 0, '', "..wordindex..") ;"
@@ -73,12 +75,10 @@ function M.addWrongWord(wordname, wordindex)
         else
             local query = "UPDATE DataBossWord SET wordList = '"..newWordList.."' and lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
+            return false
         end
     end
-    
-    return false
 end
-
 
 function M.printBossWord()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end

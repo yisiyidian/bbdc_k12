@@ -40,6 +40,100 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
+
+function CorePlayManager.getBossState()
+    -- if review boss exist
+    -- get latest
+    
+    bossList = {}
+    table.insert(bossList, 4)
+    table.insert(bossList, 4)
+    table.insert(bossList, 0)
+
+    return bossList
+end
+
+function CorePlayManager.enterCoreControl()
+    CorePlayManager.currentBossID    = 1
+    CorePlayManager.currentBossState = 0
+
+    if     CorePlayManager.currentBossState == 0 then   -- study   model
+        CorePlayManager.initStudyModel()
+    elseif CorePlayManager.currentBossState == 1 then   -- test    model
+        CorePlayManager.initTestModel()
+    elseif CorePlayManager.currentBossState == 2 then   -- review  model
+        CorePlayManager.initReviewModel(0)
+    elseif CorePlayManager.currentBossState == 3 then   -- summary model
+        CorePlayManager.initSummaryModel()
+    elseif CorePlayManager.currentBossState == 4 then   -- review1 model
+        CorePlayManager.initReviewModel(1)
+    elseif CorePlayManager.currentBossState == 5 then   -- review2 model
+        CorePlayManager.initReviewModel(2)
+    elseif CorePlayManager.currentBossState == 6 then   -- review3 model
+        CorePlayManager.initReviewModel(3)
+    elseif CorePlayManager.currentBossState == 7 then   -- review4 model
+        CorePlayManager.initReviewModel(4)
+    elseif CorePlayManager.currentBossState == 8 then   -- over    model
+        CorePlayManager.initOverModel()
+    end
+end
+
+-- init model
+function CorePlayManager.initStudyModel()
+    CorePlayManager.currentIndex = 1
+    local wordName = "apple"
+    local wrongWordNum = 4
+    CorePlayManager.enterStudy(wordName, wrongWordNum)
+end
+
+function CorePlayManager.initTestModel()
+
+end
+
+function CorePlayManager.initReviewModel(reviewNum)
+end
+
+function CorePlayManager.initSummaryModel()
+end
+
+function CorePlayManager.initOverModel()
+end
+
+
+
+function CorePlayManager.enterStudy(wordName, wrongWordNum)
+
+end
+
+function CorePlayManager.leaveStudy(state)
+
+end
+
+function CorePlayManager.enterTest(wordList)
+
+end
+
+function CorePlayManager.leaveTest(state)
+
+end
+
+function CorePlayManager.enterReview(wordlist)
+
+end
+
+function CorePlayManager.leaveReview(state)
+
+end
+
+function CorePlayManager.enterSummary(wordlist)
+
+end
+
+function CorePlayManager.leaveSummary(state)
+
+end
+
+
 function CorePlayManager.initTotalPlay()  
     local gameState = s_LocalDatabaseManager.getGameState()
     if gameState == s_gamestate_reviewbossmodel_beforetoday then
