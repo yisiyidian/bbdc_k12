@@ -42,8 +42,12 @@ function M.addWrongWord(wordname)
         local data = createData(bookKey, time, 1, 0, bossWordList, lastWordIndex)
         Manager.saveData(data, userId, username, 0)
         
+    elseif wordList == '' then
+        
+        
     else
         
+
     end
     
     
