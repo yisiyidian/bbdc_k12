@@ -102,7 +102,7 @@ end
 function CorePlayManager.initStudyModel()
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
-    CorePlayManager.wrongWordNum = 4
+    CorePlayManager.wrongWordNum = 0
 
     local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
     CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
