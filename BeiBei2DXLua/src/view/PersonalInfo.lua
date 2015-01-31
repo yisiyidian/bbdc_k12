@@ -80,11 +80,12 @@ function PersonalInfo:ctor()
             
             local ShopPanel = require('view.shop.ShopPanel')
             local shopPanel = ShopPanel.create(6-i)
-            shopPanel:setPosition(s_DESIGN_WIDTH/2, 0)
+            shopPanel:setPosition((s_RIGHT_X - s_LEFT_X)/2, 0)
             layout:addChild(shopPanel)
             
             shopPanel.feedback = function()
                 local curPage = pageView:getCurPageIndex()
+                share:setVisible(true)
                 title:setString(titleArray[5 - i])
                 if curPage == 3 then
                     self:PLVM()
@@ -126,7 +127,8 @@ function PersonalInfo:ctor()
             logoWord:setBarChangeRate(cc.p(0, 1))
             logoWord:setPercentage(80) 
             logoWord:setScale(0.8)
-            logoWord:setPosition(top:getContentSize().width * 0.6, top:getContentSize().height * 0.55)
+            logoWord:setAnchorPoint(0,0.5)
+            logoWord:setPosition(top:getContentSize().width * 0.4 + 30, top:getContentSize().height * 0.55)
             top:addChild(logoWord)
 
             local name = cc.Label:createWithSystemFont(s_CURRENT_USER:getNameForDisplay(),'',36)
@@ -150,16 +152,16 @@ function PersonalInfo:ctor()
                 addTop()
             end
             if eventType == ccui.TouchEventType.ended then
-                local SaveDataInfo = require('view.share.SaveDataInfo')
-                local saveDataInfo = SaveDataInfo.create(target[i],i)
-                self:addChild(saveDataInfo,20)
+                local ShareDataInfo = require('view.share.ShareDataInfo')
+                local shareDataInfo = ShareDataInfo.create(target[i],i)
+                self:addChild(shareDataInfo,20)
                 counter = counter + 1
             end
         end
         share:addTouchEventListener(saveImage)
 
         -- create a render texture, this is what we are going to draw into
-        target[i] = cc.RenderTexture:create(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
+        target[i] = cc.RenderTexture:create(s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
         target[i]:retain()
         target[i]:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
         intro:addChild(target[i],10)
@@ -387,6 +389,7 @@ function PersonalInfo:PLVI()
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setScaleX(scale)
+    gezi:setOpacity(0)
     gezi:setAnchorPoint(0.0,0.5)
     gezi:setPosition(-s_LEFT_X + yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.5)
     back:addChild(gezi)

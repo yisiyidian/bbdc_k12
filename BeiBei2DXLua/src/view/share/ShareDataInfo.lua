@@ -1,12 +1,12 @@
 require("cocos.init")
 require("common.global")
 
-local SaveDataInfo = class('SaveDataInfo',function ()
+local ShareDataInfo = class('ShareDataInfo',function ()
 	return cc.Layer:create()
 end)
 
-function SaveDataInfo.create(target,index)
-	local layer = SaveDataInfo.new()
+function ShareDataInfo.create(target,index)
+	local layer = ShareDataInfo.new()
 	--layer.target = target
     local black = cc.LayerColor:create(cc.c4b(0,0,0,128),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     black:ignoreAnchorPointForPosition(false)
@@ -51,7 +51,7 @@ function SaveDataInfo.create(target,index)
 	return layer
 end
 
-function SaveDataInfo:shareEnd()
+function ShareDataInfo:shareEnd()
     local delay = cc.DelayTime:create(0.3)
     local remove = cc.CallFunc:create(function ()
         self.sprite:removeFromParent()
@@ -62,4 +62,4 @@ function SaveDataInfo:shareEnd()
     self:runAction(cc.Sequence:create(delay,remove))
 end
 
-return SaveDataInfo
+return ShareDataInfo

@@ -64,12 +64,31 @@ function ShareBottom:ctor()
 	qq_button:setPosition(0.74 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
 	bottom:addChild(qq_button)
 	addTitle(qq_button,'QQ好友',0.5)
+	local png = string.format("image-saved%s.png",os.date('%X',os.time()))
+	local function shareToQQ(sender, eventType)
+		if eventType == ccui.TouchEventType.began then
+			self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+        elseif eventType == ccui.TouchEventType.ended then
+        	--local png = string.format("image-saved%s.png",os.date('%X',os.time()))
+            --self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+            local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
+            cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, 'allen is sb', 'allen is not sb')
+            self:getParent():shareEnd()
+            local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
+            local remove = cc.CallFunc:create(function ()
+				self:removeFromParent()
+			end)
+            bottom:runAction(cc.Sequence:create(move,remove))
+        end
+    end
+
+    qq_button:addTouchEventListener(shareToQQ)
 
 	local close = ccui.Button:create('image/share/share_close_sharing.png','')
 	close:setScale9Enabled(true)
 	--close:setVisible(false)
 	close:setAnchorPoint(1,1)
-	close:setPosition((s_RIGHT_X - s_LEFT_X) * 0.99,s_DESIGN_HEIGHT * 0.99)
+	close:setPosition(s_RIGHT_X * 0.99,s_DESIGN_HEIGHT * 0.99)
 	self:addChild(close)
 
 	local function closeShare(sender,eventType)
