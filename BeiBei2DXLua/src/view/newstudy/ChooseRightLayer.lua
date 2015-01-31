@@ -76,12 +76,12 @@ function ChooseRightLayer:ctor(word,wrongNum)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
 	
-    self.currentWord = "apple"
-    self.currentList = {"apple","banana","cat","dog","egg","floor"}
+    self.currentWord = word
+    self.currentList = s_BookWord[s_CURRENT_USER.bookKey]
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar = ProgressBar.create(#self.currentList, 0, "yellow")
+    local progressBar = ProgressBar.create(10, 0, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     
