@@ -40,7 +40,9 @@ local function createLastButton()
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("last")
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer:create()
+            s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
 
@@ -55,6 +57,8 @@ end
 
 function SlideCoconutLayer:ctor()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    
+    local isCollectLayer = true
 
     local backColor = BackLayer.create(97) 
     backColor:setAnchorPoint(0.5,0.5)
@@ -85,7 +89,16 @@ function SlideCoconutLayer:ctor()
     
     local success = function()
         playWordSound(self.currentWord) 
-        print("success")
+        if isCollectLayer == true then
+            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
+            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create()
+            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+        else
+            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+            local blacksmithLayer = BlacksmithLayer.create()
+            s_SCENE:replaceGameLayer(blacksmithLayer)
+        end
+
     end
     
     mat.success = success

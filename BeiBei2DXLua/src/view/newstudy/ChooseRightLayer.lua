@@ -13,8 +13,8 @@ local  ChooseRightLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseRightLayer.create()
-    local layer = ChooseRightLayer.new()
+function ChooseRightLayer.create(word,wrongNum)
+    local layer = ChooseRightLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -25,7 +25,9 @@ local function addStudyButton()
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("study")
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer.create()
+            s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
 
@@ -38,13 +40,17 @@ local function addStudyButton()
     return choose_study_button
 end
 
-local function addNextButton()
+local function addNextButton(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("next")
+            print("word4 =="..word)
+            print("wrongNum"..wrongNum)
+            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
+            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
         end
     end
 
@@ -57,7 +63,9 @@ local function addNextButton()
     return choose_next_button
 end
 
-function ChooseRightLayer:ctor()
+function ChooseRightLayer:ctor(word,wrongNum)
+    print("word3 =="..word)
+    print("wrongNum"..wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local backColor = BackLayer.create(45) 
@@ -93,7 +101,7 @@ function ChooseRightLayer:ctor()
     self.studyButton = addStudyButton()
     backColor:addChild(self.studyButton)
     
-    self.nextButton = addNextButton()
+    self.nextButton = addNextButton(word,wrongNum)
     backColor:addChild(self.nextButton)
 end
 

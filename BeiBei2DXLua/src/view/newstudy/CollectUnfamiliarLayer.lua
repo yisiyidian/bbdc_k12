@@ -85,7 +85,7 @@ function CollectUnfamiliarLayer:createRandWord(word,currentList)
     return randomNameArray
 end
 
-local function createOptions(randomNameArray)
+local function createOptions(randomNameArray,word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local wordMeaningTable= {}
     for i = 1, 4 do
@@ -115,16 +115,18 @@ local function createOptions(randomNameArray)
             if sender.tag == 1 then  
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
-                    ----enter right 
-                    --                        AnalyticsStudyAnswerRight()
-                    print("right")
+                    print("word2 =="..word)
+                    print("wrongNum"..wrongNum)
+                    local ChooseRightLayer = require("view.newstudy.ChooseRightLayer")
+                    local chooseRightLayer = ChooseRightLayer.create(word,wrongNum)
+                    s_SCENE:replaceGameLayer(chooseRightLayer)
                 end)))            
             else
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
-                   ----enter false and beibei bean
-                    --                        AnalyticsStudyGuessWrong()
-                   print("wrong")
+                    local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+                    s_SCENE:replaceGameLayer(chooseWrongLayer)
                 end)))
             end
 
@@ -153,17 +155,16 @@ local function createOptions(randomNameArray)
     return choose_button
 end
 
-local function createDontknow()
+local function createDontknow(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local click_dontknow_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
---            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
---            AnalyticsStudyDontKnowAnswer()  
---            AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
-            print("dontknow")               
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(chooseWrongLayer)            
         end
     end
 
@@ -177,15 +178,18 @@ local function createDontknow()
     return choose_dontknow_button
 end
 
-function CollectUnfamiliarLayer.create()
-    local layer = CollectUnfamiliarLayer.new()
+function CollectUnfamiliarLayer.create(word,wrongNum)
+    local layer = CollectUnfamiliarLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     cc.SimpleAudioEngine:getInstance():pauseMusic()
     return layer
 end
 
-function CollectUnfamiliarLayer:ctor()
+function CollectUnfamiliarLayer:ctor(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    
+    print("word1 =="..word)
+    print("wrongNum"..wrongNum)
 
     local backColor = BackLayer.create(45) 
     backColor:setAnchorPoint(0.5,0.5)
@@ -212,12 +216,12 @@ function CollectUnfamiliarLayer:ctor()
     soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
     
-    self.options = createOptions(self.randWord)
+    self.options = createOptions(self.randWord,word,wrongNum)
     for i = 1, #self.options do
         backColor:addChild(self.options[i])
     end
     
-    self.dontknow = createDontknow()
+    self.dontknow = createDontknow(word,wrongNum)
     backColor:addChild(self.dontknow)
     
     local label_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",26)
