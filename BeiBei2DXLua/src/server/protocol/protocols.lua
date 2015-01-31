@@ -199,10 +199,31 @@ function saveToServer(dataTable, callback)
     protocol:request()
 end
 
+-- callback(datas, error)
 function saveUserToServer(dataTable, callback)
-    local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId}
-    for k, v in pairs(dataTable) do
-        userdata[k] = v
+    local function cb (datas, error)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
+        if error == nil then
+            if callback then callback(datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
     end
-    saveToServer(userdata, callback)    
+
+    local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId}
+    for key, value in pairs(dataTable) do
+        if (key == 'sessionToken'
+            or key == 'password' 
+            or key == 'className' 
+            or key == 'createdAt' 
+            or key == 'updatedAt' 
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false 
+            and (type(value) ~= 'function' and type(value) ~= 'table') then 
+
+            userdata[key] = value
+
+        end
+    end
+    saveToServer(userdata, cb)    
 end

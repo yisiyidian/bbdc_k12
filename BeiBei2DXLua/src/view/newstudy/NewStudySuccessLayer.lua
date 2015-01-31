@@ -51,7 +51,7 @@ function NewStudySuccessLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
     
-    backColor.progressBar:removeFromParent()
+--    backColor.progressBar:removeFromParent()
     
     local beans = cc.Sprite:create('image/chapter/chapter0/beanBack.png')
     beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)

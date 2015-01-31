@@ -1,5 +1,4 @@
 
-local DataUser -- = require('model.user.DataUser')
 local DataEverydayInfo -- = require('model.user.DataEverydayInfo')
 local DataDailyStudyInfo -- = require('model.user.DataDailyStudyInfo')
 
@@ -41,7 +40,7 @@ local function onError()
     s_START_FUNCTION()
 end
 
-local function onErrorHappend(e)
+function onErrorNeedRestartAppHappend(e)
     s_TIPS_LAYER:showSmall(e, onError, onError)
 end
 
@@ -64,7 +63,6 @@ end
 -- start
 
 function O2OController.start()
-    DataUser = require('model.user.DataUser')
     DataEverydayInfo = require('model.user.DataEverydayInfo')
     DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 
@@ -149,7 +147,7 @@ function O2OController.startLoadingData(userStartType, username, password)
             -- 210 : The username and password mismatch
                 s_TIPS_LAYER:showSmall(e)
             else
-                onErrorHappend(e .. '\n username: ' .. username)
+                onErrorNeedRestartAppHappend(e .. '\n username: ' .. username)
             end
             hideProgressHUD()
         else -- no error
@@ -298,7 +296,7 @@ function O2OController.getDataLevelInfo(oncompleted)
     s_CURRENT_USER.levelInfo:getDataFromLocalDB()    
     sysLevelInfo(s_CURRENT_USER.levelInfo, function (serverData, error)
         if error then
-            onErrorHappend(error.description)
+            onErrorNeedRestartAppHappend(error.description)
             hideProgressHUD()
             return
         end

@@ -71,7 +71,7 @@ function BulletinBoard:updateValue(index, title, content)
 end
 
 function BulletinBoard:onClose()
-    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+    saveUserToServer({['bulletinBoardMask']=s_CURRENT_USER.bulletinBoardMask, ['bulletinBoardTime']=s_CURRENT_USER.bulletinBoardTime})
     local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(cw / 2, ch * 1.5)))
     local remove = cc.CallFunc:create(function() 
         s_SCENE:removeAllPopups()

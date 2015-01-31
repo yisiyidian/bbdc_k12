@@ -34,11 +34,7 @@ function FriendRequest:main()
     
     s_CURRENT_USER:getFriendsInfo() 
     s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
-    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end)
+    saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount})
     local array = s_CURRENT_USER.fans
     for i = 1,#array do
         --array[i] = string.format("ListView_item_%d",i - 1)
@@ -184,7 +180,9 @@ function FriendRequest:main()
                             s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
                             s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
                             s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
-                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
+                            saveUserToServer({['friendsCount']=s_CURRENT_USER.friendsCount, 
+                                              ['fansCount']=s_CURRENT_USER.fansCount, 
+                                              ['seenFansCount']=s_CURRENT_USER.seenFansCount})
                         end
                     end
                 )
@@ -214,11 +212,9 @@ function FriendRequest:main()
                         s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
                         s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
                         s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
-                        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-                            function(api,result)
-                            end,
-                            function(api, code, message, description)
-                            end)
+                        saveUserToServer({['friendsCount']=s_CURRENT_USER.friendsCount, 
+                                          ['fansCount']=s_CURRENT_USER.fansCount, 
+                                          ['seenFansCount']=s_CURRENT_USER.seenFansCount})
                     end,
                     function(api, code, message, description)
                     end

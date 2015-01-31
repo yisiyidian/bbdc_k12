@@ -41,8 +41,10 @@ function DataUser:ctor()
     self.isSoundAm                         = 1 
 --    self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
+
 --    self.energyLastCoolDownTime            = -1 
 --    self.energyCount                       = s_energyMaxCount
+
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
     
@@ -59,14 +61,20 @@ function DataUser:ctor()
     --self.currentSelectedChapterKey         = ''
 --    self.currentLevelKey                   = ''
     --self.currentSelectedLevelKey           = ''
+
 --    self.stars                             = 0 
+
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
     self[DataUser.BEANSKEY]                = BEANS_PREFIX .. '0' .. BEANS_SUBFIX
     self.newStudyRightLayerMask            = 0
 
 
+    self.needToUnlockNextChapter           = 0
+
+
 --    self.needToUnlockNextChapter           = 0
+
 
 --    self.levels                            = {}
     self.logInDatas                        = {}
@@ -85,6 +93,7 @@ function DataUser:ctor()
 
     self.isAlterOn                         = 0
     self.slideNum                          = 0
+    self.familiarOrUnfamiliar              = 1 -- 0 for choose familiar ,1 for choose unfamiliar
 end
 
 function DataUser:getLockFunctionState(productId)
@@ -271,13 +280,13 @@ end
 
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
-    self:updateDataToServer()
+    saveUserToServer({['tutorialStep']=tutorialStep})
     AnalyticsTutorial(step)
 end
 
 function DataUser:setTutorialSmallStep(step)
     self.tutorialSmallStep = step
-    self:updateDataToServer()
+    saveUserToServer({['tutorialSmallStep']=tutorialSmallStep})
     AnalyticsSmallTutorial(step)
 end
 
@@ -578,11 +587,7 @@ end
 -- end
 
 function DataUser:updateDataToServer()
-    s_UserBaseServer.saveDataObjectOfCurrentUser(self,
-        function(api,result)
-        end,
-        function(api, code, message, description)
-        end) 
+    saveUserToServer(self)
 end
 
 

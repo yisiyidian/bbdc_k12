@@ -38,17 +38,11 @@ function FriendLayer:ctor()
         if eventType == ccui.TouchEventType.ended then
         
             s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
-            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER,
-                function(api,result)
-                    local HomeLayer = require('view.home.HomeLayer')
-                    local homeLayer = HomeLayer.create()
-                    s_SCENE:replaceGameLayer(homeLayer)
-                end,
-                function(api, code, message, description)
-                    local HomeLayer = require('view.home.HomeLayer')
-                    local homeLayer = HomeLayer.create()
-                    s_SCENE:replaceGameLayer(homeLayer)
-                end)
+            saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount}, function (datas, error)
+                local HomeLayer = require('view.home.HomeLayer')
+                local homeLayer = HomeLayer.create()
+                s_SCENE:replaceGameLayer(homeLayer)
+            end)
             
         end
     end

@@ -82,6 +82,8 @@ function DownloadLayer.create(bookKey)
                 backColor:addChild(downloadAlter)
                 
                 downloadAlter.sure = function()
+                    playSound(s_sound_buttonEffect)
+
                     download_state = 0
                     DownloadSoundController.killDownload(bookKey)
                     s_LocalDatabaseManager.updateDownloadState(bookKey, 0)
@@ -91,12 +93,9 @@ function DownloadLayer.create(bookKey)
                     end
 
                     s_CURRENT_USER.bookKey = bookKey
-
+                    saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                     AnalyticsBook(bookKey)
                     AnalyticsFirst(ANALYTICS_FIRST_BOOK, bookKey)
-
-                    playSound(s_sound_buttonEffect)
-                    s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
                     
                     s_CorePlayManager.enterHomeLayer()
                 end
@@ -106,12 +105,12 @@ function DownloadLayer.create(bookKey)
                 end
 
                 s_CURRENT_USER.bookKey = bookKey
-                
+                saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                 AnalyticsBook(bookKey)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, bookKey)
 
                 playSound(s_sound_buttonEffect)
-                s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
+                
                 s_CorePlayManager.enterHomeLayer()
             end
         end

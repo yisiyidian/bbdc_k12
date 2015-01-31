@@ -62,8 +62,8 @@
 		64E5CEC41A6F5A69005770C9 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 64E5CEC31A6F5A69005770C9 /* res */; };
 		660224501A370E4B00233788 /* CXStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224351A370E4B00233788 /* CXStore.cpp */; };
 		660224511A370E4B00233788 /* CXStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224351A370E4B00233788 /* CXStore.cpp */; };
-		660224521A370E4B00233788 /* CXUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224371A370E4B00233788 /* CXUtils.cpp */; };
-		660224531A370E4B00233788 /* CXUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224371A370E4B00233788 /* CXUtils.cpp */; };
+		660224521A370E4B00233788 /* CXUtilsCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224371A370E4B00233788 /* CXUtilsCommon.cpp */; };
+		660224531A370E4B00233788 /* CXUtilsCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660224371A370E4B00233788 /* CXUtilsCommon.cpp */; };
 		660224541A370E4B00233788 /* CXMailFeedBack.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6602243A1A370E4B00233788 /* CXMailFeedBack.mm */; };
 		660224551A370E4B00233788 /* CXMailFeedBack.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6602243A1A370E4B00233788 /* CXMailFeedBack.mm */; };
 		660224561A370E4B00233788 /* CXProgressHUD.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6602243B1A370E4B00233788 /* CXProgressHUD.mm */; };
@@ -90,6 +90,7 @@
 		AB6CB6F51A1F275E009C2562 /* ConsoleCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EE1A1F275E009C2562 /* ConsoleCommand.cpp */; };
 		AB6CB6F61A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
 		AB6CB6F71A1F275E009C2562 /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6F01A1F275E009C2562 /* FileServer.cpp */; };
+		B80DAE771A7CB01E000BE8E7 /* CXUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = B80DAE761A7CB01E000BE8E7 /* CXUtils.mm */; };
 		B82D2AD41A723665001DD4C2 /* CXAVCloud.mm in Sources */ = {isa = PBXBuildFile; fileRef = B82D2AD31A723665001DD4C2 /* CXAVCloud.mm */; };
 		B82D2AD61A723675001DD4C2 /* CXAVCloudCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B82D2AD51A723675001DD4C2 /* CXAVCloudCommon.cpp */; };
 		B82D2AD91A723DAE001DD4C2 /* CXUtils_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = B82D2AD71A723DAE001DD4C2 /* CXUtils_iOS.mm */; };
@@ -271,7 +272,7 @@
 		660224341A370E4B00233788 /* CXProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgressHUD.h; sourceTree = "<group>"; };
 		660224351A370E4B00233788 /* CXStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXStore.cpp; sourceTree = "<group>"; };
 		660224361A370E4B00233788 /* CXStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXStore.h; sourceTree = "<group>"; };
-		660224371A370E4B00233788 /* CXUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXUtils.cpp; sourceTree = "<group>"; };
+		660224371A370E4B00233788 /* CXUtilsCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXUtilsCommon.cpp; sourceTree = "<group>"; };
 		660224381A370E4B00233788 /* CXUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXUtils.h; sourceTree = "<group>"; };
 		6602243A1A370E4B00233788 /* CXMailFeedBack.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXMailFeedBack.mm; sourceTree = "<group>"; };
 		6602243B1A370E4B00233788 /* CXProgressHUD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXProgressHUD.mm; sourceTree = "<group>"; };
@@ -297,6 +298,7 @@
 		AB6CB6EF1A1F275E009C2562 /* ConsoleCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleCommand.h; sourceTree = "<group>"; };
 		AB6CB6F01A1F275E009C2562 /* FileServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileServer.cpp; sourceTree = "<group>"; };
 		AB6CB6F11A1F275E009C2562 /* FileServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileServer.h; sourceTree = "<group>"; };
+		B80DAE761A7CB01E000BE8E7 /* CXUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXUtils.mm; sourceTree = "<group>"; };
 		B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVersionInfo.h; sourceTree = "<group>"; };
 		B82D2AD11A7233E9001DD4C2 /* CXAVCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAVCloud.h; sourceTree = "<group>"; };
 		B82D2AD31A723665001DD4C2 /* CXAVCloud.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXAVCloud.mm; sourceTree = "<group>"; };
@@ -550,7 +552,7 @@
 				660224341A370E4B00233788 /* CXProgressHUD.h */,
 				660224351A370E4B00233788 /* CXStore.cpp */,
 				660224361A370E4B00233788 /* CXStore.h */,
-				660224371A370E4B00233788 /* CXUtils.cpp */,
+				660224371A370E4B00233788 /* CXUtilsCommon.cpp */,
 				660224381A370E4B00233788 /* CXUtils.h */,
 				660224391A370E4B00233788 /* iOS */,
 				6602243F1A370E4B00233788 /* md5 */,
@@ -562,6 +564,7 @@
 		660224391A370E4B00233788 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B80DAE761A7CB01E000BE8E7 /* CXUtils.mm */,
 				B8C5C3591A44218E00593E15 /* CXAnalytics.mm */,
 				B82D2AD31A723665001DD4C2 /* CXAVCloud.mm */,
 				B8C5C35A1A44218E00593E15 /* CXAvos.mm */,
@@ -912,7 +915,7 @@
 				3EB515631952865D006966AA /* message_lite.cc in Sources */,
 				C00FD49B1938512100C6382D /* Runtime.cpp in Sources */,
 				3EB515591952865D006966AA /* extension_set.cc in Sources */,
-				660224531A370E4B00233788 /* CXUtils.cpp in Sources */,
+				660224531A370E4B00233788 /* CXUtilsCommon.cpp in Sources */,
 				3EB5155B1952865D006966AA /* generated_message_util.cc in Sources */,
 				C0619CD81896894800872C26 /* Runtime_ios-mac.mm in Sources */,
 				3EB5152D19528284006966AA /* Protos.pb.cc in Sources */,
@@ -934,6 +937,7 @@
 				15AA9648199B6D4600725633 /* lua_debugger.c in Sources */,
 				3EB5156A1952865D006966AA /* once.cc in Sources */,
 				B850775A1A5F7CD500A66723 /* CXNetworkStatus.mm in Sources */,
+				B80DAE771A7CB01E000BE8E7 /* CXUtils.mm in Sources */,
 				B82D2AD91A723DAE001DD4C2 /* CXUtils_iOS.mm in Sources */,
 				660224541A370E4B00233788 /* CXMailFeedBack.mm in Sources */,
 				660224501A370E4B00233788 /* CXStore.cpp in Sources */,
@@ -954,7 +958,7 @@
 				C00FD4941938512100C6382D /* PlayDisable_png.cpp in Sources */,
 				C00FD49C1938512100C6382D /* Shine_png.cpp in Sources */,
 				3EB5156E1952865D006966AA /* wire_format_lite.cc in Sources */,
-				660224521A370E4B00233788 /* CXUtils.cpp in Sources */,
+				660224521A370E4B00233788 /* CXUtilsCommon.cpp in Sources */,
 				AB6CB6F21A1F275E009C2562 /* ConnectWaitLayer.cpp in Sources */,
 				3EB515581952865D006966AA /* extension_set.cc in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,

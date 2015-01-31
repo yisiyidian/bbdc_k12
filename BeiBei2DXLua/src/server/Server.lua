@@ -1,6 +1,7 @@
 require("common.global")
 
-MAX_ERROR_CODE = 65535
+ERROR_CODE_MAX = 65535
+ERROR_CODE_USER_NEW_SESSION_TOKEN = 65534
 
 local Server = {}
 
@@ -70,7 +71,16 @@ function Server.request(api, serverRequestType, parameters, callback)
     if parameters ~= nil then paraStr = s_JSON.encode(parameters) end
     if math["and"](serverRequestType, SERVER_REQUEST_TYPE_CLIENT_ENCODE) > 0 and paraStr ~= nil then 
         Server.logLuaTable(api, parameters, 'request paraStr')
+        local rawLen = string.len(paraStr)
+        local raw = paraStr
         paraStr = cx.CXUtils:getInstance():compressAndBase64EncodeString(paraStr) 
+        local zipLen = string.len(paraStr)
+        if rawLen < zipLen then 
+            paraStr = raw
+            serverRequestType = serverRequestType - SERVER_REQUEST_TYPE_CLIENT_ENCODE
+        end
+        print('request raw length:', rawLen)
+        print('request zip length:', zipLen)
     end
     local params = {['api']=api, ['t'] = serverRequestType}
     if paraStr ~= nil then
@@ -87,6 +97,9 @@ function Server.request(api, serverRequestType, parameters, callback)
         if error then
             local err = s_JSON.decode(error)
             callback(nil, err)
+            if err.code == ERROR_CODE_USER_NEW_SESSION_TOKEN then
+                onErrorNeedRestartAppHappend(err.message)
+            end
             Server.logLuaTable(api, err, 'response ERROR')
         else
             local result = s_JSON.decode(response)

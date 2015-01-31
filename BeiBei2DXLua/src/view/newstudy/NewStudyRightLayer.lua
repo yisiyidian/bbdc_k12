@@ -36,19 +36,19 @@ function NewStudyRightLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
     
-    local time = os.time()
-    local str = getDayStringForDailyStudyInfo(time)
-
-
-    if s_CorePlayManager.isStudyModel() then
-        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then
-            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1])
-        else
-            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
-        end
-    else
-        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
-    end
+--    local time = os.time()
+--    local str = getDayStringForDailyStudyInfo(time)
+--
+--
+--    if s_CorePlayManager.isStudyModel() then
+--        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then
+--            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1])
+--        else
+--            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+--        end
+--    else
+--        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+--    end
 
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
     soundMark:setPosition(bigWidth/2, 920)  

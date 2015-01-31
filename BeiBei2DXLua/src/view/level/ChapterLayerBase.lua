@@ -218,38 +218,37 @@ end
 function ChapterLayerBase:addPopup(levelIndex)
     -- TODO check level state
     local levelPosition = self:getLevelPosition('level'..levelIndex)
-    state = 2
-    local back
-    if state == 1 then
-        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')     
-        local function taskEvent(sender,eventType)
-            if eventType == ccui.TouchEventType.ended then
-                -- TODO 
-                print('click task button ')
-            end
+    local function taskEvent(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            -- TODO 
+            
+            print('click task button '..sender:getName())
         end
-        
-        local taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png')
-        taskButton:setScale9Enabled(true)
+    end
+    state = 1
+    local back, taskButton
+    if state == 1 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
-        taskButton:addTouchEventListener(taskEvent)
-        back:addChild(taskButton)
     elseif state == 2 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
-        local function taskEvent(sender,eventType)
-            if eventType == ccui.TouchEventType.ended then
-                -- TODO 
-                print('click task button ')
-            end
-        end
-
-        local taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png')
-        taskButton:setScale9Enabled(true)
+        taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-280)
-        taskButton:addTouchEventListener(taskEvent)
-        back:addChild(taskButton)
+    elseif state == 3 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_3.png')     
+        taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_3.png','image/chapter/popup/button_pressed_xiaoguantancu_3.png','image/chapter/popup/button_pressed_xiaoguantancu_3.png')
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-360)
+    elseif state == 4 then    
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_4.png')     
+        taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_4.png','image/chapter/popup/button_pressed_xiaoguantancu_4.png','image/chapter/popup/button_pressed_xiaoguantancu_4.png')
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-450)
     end
     
+    taskButton:setScale9Enabled(true)
+    taskButton:setName(levelIndex)
+    taskButton:addTouchEventListener(taskEvent)
+    back:addChild(taskButton)
     -- add close button
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then

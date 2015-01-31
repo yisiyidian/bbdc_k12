@@ -190,7 +190,8 @@ function FriendList:addList()
                                             s_CURRENT_USER:parseServerRemoveFanData(self.array[self.selectIndex])
                                             s_CURRENT_USER.friendsCount = #s_CURRENT_USER.friends
                                             s_CURRENT_USER.fansCount = #s_CURRENT_USER.fans
-                                            s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER, nil, nil)
+                                            saveUserToServer({['friendsCount']=s_CURRENT_USER.friendsCount, ['fansCount']=s_CURRENT_USER.fansCount})
+
                                             listView:removeItem(listView:getCurSelectedIndex())
                                             listView:removeItem(self.selectIndex - 1)
 
