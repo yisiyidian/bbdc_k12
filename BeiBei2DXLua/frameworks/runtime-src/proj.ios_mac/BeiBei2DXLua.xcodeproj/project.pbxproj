@@ -98,6 +98,7 @@
 		B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077511A5E67E900A66723 /* CXAvosCommon.cpp */; };
 		B85077581A5F7CC400A66723 /* CXNetworkStatusCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */; };
 		B850775A1A5F7CD500A66723 /* CXNetworkStatus.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */; };
+		B8551C041A7CC98800F0037D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B8551C031A7CC98800F0037D /* Icon-72.png */; };
 		B89B86901A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		B89B86911A454C3C00E596E0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */; };
 		B89B86931A454CFC00E596E0 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B86921A454CFC00E596E0 /* libiconv.dylib */; };
@@ -311,6 +312,7 @@
 		B85077561A5F7CC400A66723 /* CXNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkStatus.h; sourceTree = "<group>"; };
 		B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXNetworkStatusCommon.cpp; sourceTree = "<group>"; };
 		B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXNetworkStatus.mm; sourceTree = "<group>"; };
+		B8551C031A7CC98800F0037D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "BeiBei2DXLua iOS/Images.xcassets/AppIcon.appiconset/Icon-72.png"; sourceTree = "<group>"; };
 		B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = frameworks/TencentOpenAPI/TencentOpenAPI.framework; sourceTree = "<group>"; };
 		B89B86921A454CFC00E596E0 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
@@ -635,6 +637,7 @@
 		F293B3BD15EB7BE500256477 = {
 			isa = PBXGroup;
 			children = (
+				B8551C031A7CC98800F0037D /* Icon-72.png */,
 				B8E98D9D1A3C37F500CE3119 /* string.strings */,
 				660224261A370E4B00233788 /* common */,
 				C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */,
@@ -864,6 +867,7 @@
 				B8E98D9B1A3C37F500CE3119 /* string.strings in Resources */,
 				64E5CEC41A6F5A69005770C9 /* res in Resources */,
 				C03781BB18BF655400FE4F13 /* src in Resources */,
+				B8551C041A7CC98800F0037D /* Icon-72.png in Resources */,
 				C05D1C121923449100B808A4 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

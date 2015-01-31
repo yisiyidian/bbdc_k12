@@ -714,7 +714,8 @@ function SummaryBossLayer:initBossLayer_boss(chapter)
 end
 
 function SummaryBossLayer:initWordList()
-    local wordList = s_LocalDatabaseManager.getSummaryBossWordCandidate()
+    --local wordList = s_LocalDatabaseManager.getSummaryBossWordCandidate()
+    local wordList = {}
     if #wordList < 1 then
         wordList = {'apple','many','tea'}
     end
@@ -725,7 +726,7 @@ function SummaryBossLayer:initWordList()
         local tmp = wordList[i]
         wordList[i] = wordList[randomIndex]
         wordList[randomIndex] = tmp
-
+        
     end
 
     self.maxCount = #wordList

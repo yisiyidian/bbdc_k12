@@ -56,7 +56,7 @@ function test()
  -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
-    local circle = require('view.MissionCompleteCircle').create()
+    local circle = require('view.summaryboss.SummaryBossLayer').create(1)
     s_SCENE:replaceGameLayer(circle)
 
 
