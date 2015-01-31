@@ -301,15 +301,15 @@ function MissionProgressLayer.create(share)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
-            local Test2 = require("view.newstudy.CollectUnfamiliarLayer")
-            local test2 = Test2.create("apple",0)
+            local Test2 = require("view.newstudy.MiddleLayer")
+            local test2 = Test2.create()
             s_SCENE:replaceGameLayer(test2)
         end
     end
 
     local Button2 = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
     Button2:setPosition(bigWidth/2 + 300 , s_DESIGN_HEIGHT/2 - 300)
-    Button2:setTitleText("study")
+    Button2:setTitleText("middle")
     Button2:setTitleColor(cc.c4b(255,255,255,255))
     Button2:setTitleFontSize(40)
     Button2:addTouchEventListener(ButtonClick2)

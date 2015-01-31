@@ -25,10 +25,9 @@ local function addStudyButton(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.leaveStudyModel(false)
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
             local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(chooseWrongLayer)  
+            s_SCENE:replaceGameLayer(chooseWrongLayer)   
         end
     end
 
@@ -47,12 +46,7 @@ local function addNextButton(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("word4 =="..word)
-            print("wrongNum"..wrongNum)
             s_CorePlayManager.leaveStudyModel(true)
-            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
         end
     end
 
@@ -66,8 +60,6 @@ local function addNextButton(word,wrongNum)
 end
 
 function ChooseRightLayer:ctor(word,wrongNum)
-    print("word3 =="..word)
-    print("wrongNum"..wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local backColor = BackLayer.create(45) 
@@ -77,11 +69,10 @@ function ChooseRightLayer:ctor(word,wrongNum)
     self:addChild(backColor)
 	
     self.currentWord = word
-    self.currentList = s_BookWord[s_CURRENT_USER.bookKey]
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar = ProgressBar.create(10, 0, "blue")
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     

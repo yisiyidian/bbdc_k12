@@ -57,8 +57,7 @@ local function createLastButton(word,wrongNum)
 end
 
 function SlideCoconutLayer:ctor(word,wrongNum)
-    print("word7 =="..word)
-    print("wrongNum"..wrongNum)
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local isCollectLayer = true
@@ -70,12 +69,10 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     self:addChild(backColor)
     
     self.currentWord = word
-    self.currentList = s_BookWord[s_CURRENT_USER.bookKey]
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
-    self.randWord = CollectUnfamiliar:createRandWord(self.currentWord,self.currentList)
     
-    local progressBar = ProgressBar.create(10, 0, "blue")
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     
@@ -97,11 +94,7 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     local success = function()
         playWordSound(self.currentWord) 
         if isCollectLayer == true then
-            print("word8 =="..word)
-            print("wrongNum"..wrongNum)
-            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+            s_CorePlayManager.leaveStudyModel(false)   
         else
             local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
             local blacksmithLayer = BlacksmithLayer.create()

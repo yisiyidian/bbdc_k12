@@ -225,30 +225,58 @@ function ChapterLayerBase:addPopup(levelIndex)
             print('click task button '..sender:getName())
         end
     end
-    state = 1
-    local back, taskButton
-    if state == 1 then
+    state = 2
+    local back, taskButton, tick
+    tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
+    if state == 0 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
-    elseif state == 2 then
+    elseif state == 1 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-280)
-    elseif state == 3 then
+    elseif state == 2 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_3.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_3.png','image/chapter/popup/button_pressed_xiaoguantancu_3.png','image/chapter/popup/button_pressed_xiaoguantancu_3.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-360)
-    elseif state == 4 then    
+    elseif state == 3 then    
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_4.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_4.png','image/chapter/popup/button_pressed_xiaoguantancu_4.png','image/chapter/popup/button_pressed_xiaoguantancu_4.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-450)
+    elseif state == 4 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_5.png')     
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png')
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-540)
+    elseif state == 5 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_6.png')     
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png')
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-630)
+    elseif state == 6 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu7.png')     
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png')
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-720)
+    elseif state == 7 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_8.png')     
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png')
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-810) 
+    elseif state == 8 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_9.png')
     end
     
-    taskButton:setScale9Enabled(true)
-    taskButton:setName(levelIndex)
-    taskButton:addTouchEventListener(taskEvent)
-    back:addChild(taskButton)
+    if state ~= 8 then
+        taskButton:setScale9Enabled(true)
+        taskButton:setName(levelIndex)
+        taskButton:addTouchEventListener(taskEvent)
+        back:addChild(taskButton)
+        tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 125)
+        tick:setScale(2.0)
+        local action1 = cc.ScaleTo:create(0.5, 2.0)
+        local action2 = cc.ScaleTo:create(0.5, 1.0)
+        local action3 = cc.Sequence:create(action1, action2)
+        tick:runAction(action2)
+        back:addChild(tick, 10) 
+    end
     -- add close button
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -268,15 +296,14 @@ end
 function ChapterLayerBase:plotDecoration()
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local currentLevelIndex = levelInfo
-    local currentChapterIndex = math.floor(levelInfo / 10)
+    local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)
     local chapterIndex = string.sub(self.chapterKey, 8)
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
         -- define touchEvent
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                print('BaseLayer:levelbutton '..sender:getName()..' touched...')
-                
+                print('BaseLayer:levelbutton '..sender:getName()..' touched...')                
                 -- TODO check level state
                 --if state == 1 then
                 self:addPopup(sender:getName())
@@ -300,21 +327,15 @@ function ChapterLayerBase:plotDecoration()
             self:addChild(lock,130)
         else
             self:plotDecorationOfLevel(levelIndex)
-        end
-        -- decoration
-        
+        end  
     end
 end
 
 function ChapterLayerBase:plotLevelNumber(levelKey)
-    --local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
---    local avgWordCount = math.floor(s_DataManager.books[s_CURRENT_USER.bookKey].words / 99)
-    --print('####levelIndex:',levelIndex,',',chapterIndex)
     if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
-
         local start = cc.Sprite:create('image/chapter/chapter0/start.png')
         start:setPosition(levelPosition.x, levelPosition.y)
         self:addChild(start, 130)
@@ -368,15 +389,6 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 end
 
 function ChapterLayerBase:loadResource()
-    if self.chapterKey == 'chapter0' then
---        self:createObjectForResource(Chapter0ResTable['back1_1'])
---        self:createObjectForResource(Chapter0ResTable['back2'])
---        self:createObjectForResource(Chapter0ResTable['back3_1'])
-        --ccui.Layout:create('res/image/chapter/chapter0/1.png')
-        
-    elseif self.chapterKey == 'chapter1' then
-        print('hello')
-    end
 end
 
 return ChapterLayerBase

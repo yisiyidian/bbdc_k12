@@ -23,14 +23,50 @@ function M.getBossInfo(bossID)
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
     
-    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."' and bossID = "..bossID
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
     local boss      = {}
-    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ;") do
-        boss.bossID      = row.bossID
-        boss.typeIndex   = row.typeIndex
-        boss.wordList    = row.wordList
-        boss.lastWordIndex = row.lastWordIndex
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." and bossID = "..bossID.." ;") do
+        boss.bossID         = row.bossID
+        boss.typeIndex      = row.typeIndex
+        boss.wrongWordList  = row.wordList
+        boss.lastWordIndex  = row.lastWordIndex
+    end
+
+
+    if boss.bossID == nil then
+        boss.bossID         = bossID
+        boss.typeIndex      = 0
+        boss.wrongWordList  = {}
+        boss.rightWordList  = {}
+    else
+        local startIndex
+        if boss.bossID == 1 then
+            startIndex = 1
+        else
+            for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." and bossID = "..(bossID-1).." ;") do
+                startIndex  = row.lastWordIndex + 1
+            end
+        end
+
+        local hash = {}
+        if  boss.wrongWordList == '' then
+            boss.wrongWordList = {}
+        else
+            boss.wrongWordList = split(boss.wrongWordList, "|")
+            for i = 1, #boss.wrongWordList do
+                local wordname = boss.wrongWordList[i]
+                hash[wordname] = 1
+            end
+        end
+
+        boss.rightWordList = {}
+        for i = startIndex, boss.lastWordIndex do
+            local wordname = s_BookWord[s_CURRENT_USER.bookKey][i]
+            if hash[wordname] ~= 1 then
+                table.insert(boss.rightWordList, wordname)
+            end
+        end
     end
 
     return boss
