@@ -132,6 +132,8 @@ function CorePlayManager.leaveStudyModel(state)
         -- answer right
         CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
         local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
+        print("ziaoang.."..CorePlayManager.currentIndex)
+        print("ziaoang.."..wordName)
         CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
     else
         -- answer wrong
