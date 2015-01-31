@@ -83,7 +83,7 @@ function CorePlayManager.initStudyModel()
     CorePlayManager.currentIndex = 1
     local wordName = "apple"
     local wrongWordNum = 4
-    CorePlayManager.enterStudy(wordName, wrongWordNum)
+    CorePlayManager.enterStudyModel(wordName, wrongWordNum)
 end
 
 function CorePlayManager.initTestModel()
@@ -101,15 +101,17 @@ end
 
 
 
-function CorePlayManager.enterStudy(wordName, wrongWordNum)
+function CorePlayManager.enterStudyModel(wordName, wrongWordNum)
+    local S = require("view.newstudy.CollectUnfamiliarLayer")
+    local s = S.create(wordName, wrongWordNum)
+    s_SCENE:replaceGameLayer(s)
+end
+
+function CorePlayManager.leaveStudyModel(state)
 
 end
 
-function CorePlayManager.leaveStudy(state)
-
-end
-
-function CorePlayManager.enterTest(wordList)
+function CorePlayManager.enterTestModel(wordList)
 
 end
 
@@ -117,7 +119,7 @@ function CorePlayManager.leaveTest(state)
 
 end
 
-function CorePlayManager.enterReview(wordlist)
+function CorePlayManager.enterReviewModel(wordlist)
 
 end
 
@@ -125,7 +127,7 @@ function CorePlayManager.leaveReview(state)
 
 end
 
-function CorePlayManager.enterSummary(wordlist)
+function CorePlayManager.enterSummaryModel(wordlist)
 
 end
 
@@ -135,21 +137,26 @@ end
 
 
 function CorePlayManager.initTotalPlay()  
-    local gameState = s_LocalDatabaseManager.getGameState()
-    if gameState == s_gamestate_reviewbossmodel_beforetoday then
-        CorePlayManager.initNewReviewBossRewardAndTotalWord()
-        local candidate = CorePlayManager.getReviewBossCandidate()
-        CorePlayManager.initNewReviewBossLayer(candidate)
-        AnalyticsReviewBoss()
-    elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel or  gameState == s_gamestate_studymodel_extra or  gameState == s_gamestate_reviewmodel_extra then
-        CorePlayManager.initNewStudyReward()
-        CorePlayManager.initNewStudyLayer()
-    elseif gameState == s_gamestate_reviewbossmodel_today then
-        CorePlayManager.initNewReviewBossRewardAndTotalWord()
-        local candidate = CorePlayManager.getReviewBossCandidateToday()
-        CorePlayManager.initNewReviewBossLayer(candidate)
-    end
+    -- local gameState = s_LocalDatabaseManager.getGameState()
+    -- if gameState == s_gamestate_reviewbossmodel_beforetoday then
+    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
+    --     local candidate = CorePlayManager.getReviewBossCandidate()
+    --     CorePlayManager.initNewReviewBossLayer(candidate)
+    --     AnalyticsReviewBoss()
+    -- elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel or  gameState == s_gamestate_studymodel_extra or  gameState == s_gamestate_reviewmodel_extra then
+    --     CorePlayManager.initNewStudyReward()
+    --     CorePlayManager.initNewStudyLayer()
+    -- elseif gameState == s_gamestate_reviewbossmodel_today then
+    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
+    --     local candidate = CorePlayManager.getReviewBossCandidateToday()
+    --     CorePlayManager.initNewReviewBossLayer(candidate)
+    -- end
+    
+    CorePlayManager.enterCoreControl()
+
 end
+
+
 
 function CorePlayManager.getProgress()
     local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
