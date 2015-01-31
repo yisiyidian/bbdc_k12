@@ -87,14 +87,14 @@ function MissionCompleteCircle:ctor()
         	taskProgress:setPercentage(0)
         	local runProgress = cc.ProgressTo:create(0.5 ,100 / missionCount)
         	taskProgress:runAction(cc.Sequence:create(cc.FadeIn:create(0.5),runProgress,cc.CallFunc:create(function ()
-        		local delayTime = 0.5
+        		local delayTime = 1.0
         		if completeCount == missionCount then
         			local final = cc.Sprite:create('image/homescene/missionprogress/learning_process_finish_task_put_tick.png')
         			final:setPosition(backCircle:getContentSize().width / 2 ,backCircle:getContentSize().height / 2 )
     				backCircle:addChild(final)
     				final:setOpacity(0)
     				final:runAction(cc.FadeIn:create(0.5))
-    				delayTime = 1
+    				delayTime = 1.5
         		end
       			s_SCENE.touchEventBlockLayer.unlockTouch()
         		background:runAction(cc.Sequence:create(cc.DelayTime:create(delayTime),cc.FadeOut:create(0.5)))

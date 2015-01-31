@@ -69,7 +69,7 @@ function ShareBottom:ctor()
 	close:setScale9Enabled(true)
 	--close:setVisible(false)
 	close:setAnchorPoint(1,1)
-	close:setPosition((s_RIGHT_X - s_LEFT_X) * 0.99,s_DESIGN_HEIGHT * 0.99)
+	close:setPosition(s_RIGHT_X * 0.99,s_DESIGN_HEIGHT * 0.99)
 	self:addChild(close)
 
 	local function closeShare(sender,eventType)

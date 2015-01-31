@@ -180,9 +180,12 @@ function HomeLayer.create(share)
             
         elseif eventType == ccui.TouchEventType.ended then
 
-            local Loginreward = require("view.loginreward.LoginRewardPopup")
-            local loginreward = Loginreward:create()
-            s_SCENE:popup(loginreward)          
+            -- local Loginreward = require("view.loginreward.LoginRewardPopup")
+            -- local loginreward = Loginreward:create()
+            -- s_SCENE:popup(loginreward)   
+
+            local circle = require('view.summaryboss.SummaryBossLayer').create(1)
+            s_SCENE:replaceGameLayer(circle)       
             
         end
     end
@@ -226,6 +229,8 @@ function HomeLayer.create(share)
 --            local Test10 = require("view.newstudy.BookOverLayer")
 --            local test10 = Test10:create()
 --            s_SCENE:replaceGameLayer(test10)
+
+    
 
     local button_reward
     local icon_reward

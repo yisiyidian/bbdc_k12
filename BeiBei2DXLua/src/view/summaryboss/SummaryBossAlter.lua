@@ -187,52 +187,57 @@ function SummaryBossAlter:win1()
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_win)
     end
 
-    self.winBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
-    self.winBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
-    self.winBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
-    self:addChild(self.winBoard)
+    local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+    self:addChild(missionCompleteCircle,1)
+    self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+        local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+        backColor:ignoreAnchorPointForPosition(false)
+        backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+        self:addChild(backColor)
+
+        local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
+        been_number_back:setPosition(s_RIGHT_X - s_LEFT_X -100, s_DESIGN_HEIGHT-50)
+        backColor:addChild(been_number_back)
+
+        local been = cc.Sprite:create("image/shop/been.png")
+        been:setPosition(0, been_number_back:getContentSize().height/2)
+        been_number_back:addChild(been)
+
+        local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
+        been_number:setColor(cc.c4b(0,0,0,255))
+        been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
+        been_number_back:addChild(been_number)
+
+        local win_back = cc.Sprite:create('image/summarybossscene/win_back.png')
+        win_back:setAnchorPoint(0.5,0)
+        win_back:setPosition(s_DESIGN_WIDTH / 2,0)
+        self:addChild(win_back)
+
+        local button = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
+        button:setPosition(win_back:getContentSize().width/2,150)
+        --button:addTouchEventListener()
+        win_back:addChild(button)
+
+        local item_name = cc.Label:createWithTTF('OK','font/CenturyGothic.ttf',30)
+        --item_name:setColor(cc.c4b(255,255,255,255))
+        item_name:setPosition(button:getContentSize().width/2, button:getContentSize().height/2)
+        button:addChild(item_name)
+
+        local been_button = cc.Sprite:create("image/shop/been.png")
+        been_button:setPosition(button:getContentSize().width * 0.8, button:getContentSize().height/2)
+        button:addChild(been_button)
+
+        local label = cc.Label:createWithSystemFont('打败总结Boss！','',44)
+        label:setColor(cc.c3b(31,68,102))
+        label:setPosition(0.5 * backColor:getContentSize().width,0.85 * s_DESIGN_HEIGHT)
+        backColor:addChild(label)
+
+        local pic = cc.Sprite:create('image/summarybossscene/summaryboss_beated.png')
+        pic:setPosition(0.5 * win_back:getContentSize().width,0.5 * win_back:getContentSize().height)
+        win_back:addChild(pic)
+
+    end,{})))
     
-    local boss = sp.SkeletonAnimation:create("spine/summaryboss/klsbeidacandonghua.json","spine/summaryboss/klsbeidacandonghua.atlas",1)
-    boss:setAnimation(0,'animation',true)
-    boss:setPosition(self.winBoard:getContentSize().width / 4,self.winBoard:getContentSize().height * 0.22)
-    self.winBoard:addChild(boss)
-    
-    local label = cc.Label:createWithSystemFont("挑战成功！",'',40)
-    label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.64)
-    label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
-    self.winBoard:addChild(label)
-    
-    local label1 = cc.Label:createWithSystemFont(string.format("击败了恐老师！\n获得2个贝贝豆！",self.wordCount),'',40)
-    label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label1:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.55)
-    label1:setColor(cc.c4b(52,177,241,255))
-    self.winBoard:addChild(label1)
-    
-    local head = cc.Sprite:create("image/summarybossscene/summaryboss_win_head.png")
-    head:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.75)
-    self.winBoard:addChild(head)
-    
-    local menu = cc.Menu:create()
-    self.winBoard:addChild(menu)
-    local continue = cc.MenuItemImage:create("image/summarybossscene/summaryboss_blue_button.png","")
-    menu:setPosition(self.winBoard:getContentSize().width / 2,self.winBoard:getContentSize().height * 0.15)
-    menu:addChild(continue)
-    
-    local btn_title = cc.Label:createWithSystemFont("继 续",'',40)
-    btn_title:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    btn_title:setPosition(continue:getContentSize().width / 2,continue:getContentSize().height / 2)
-    continue:addChild(btn_title)
-    
-    local function backToLevelScene(sender)
-       s_CorePlayManager.enterLevelLayer() 
-       
-        -- stop effect
-        cc.SimpleAudioEngine:getInstance():stopAllEffects()
-        -- button sound
-        playSound(s_sound_buttonEffect)
-    end
-    continue:registerScriptTapHandler(backToLevelScene)
     
 end
 
