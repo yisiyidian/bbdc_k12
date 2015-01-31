@@ -47,8 +47,6 @@ local function addNextButton(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("word4 =="..word)
-            print("wrongNum"..wrongNum)
             s_CorePlayManager.leaveStudyModel(true)
             local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
             local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
@@ -66,8 +64,6 @@ local function addNextButton(word,wrongNum)
 end
 
 function ChooseRightLayer:ctor(word,wrongNum)
-    print("word3 =="..word)
-    print("wrongNum"..wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local backColor = BackLayer.create(45) 
@@ -77,7 +73,6 @@ function ChooseRightLayer:ctor(word,wrongNum)
     self:addChild(backColor)
 	
     self.currentWord = word
-    self.currentList = s_BookWord[s_CURRENT_USER.bookKey]
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     

@@ -27,7 +27,7 @@ function CollectUnfamiliarLayer:createWordInfo(word)
         wordMeaning,sentenceEn,sentenceCn,sentenceEn2,sentenceCn2 }
 end
 
-function CollectUnfamiliarLayer:createRandWord(word,currentList)
+function CollectUnfamiliarLayer:createRandWord(word)
     local randomNameArray  = {}
     table.insert(randomNameArray, word)
     local word1 = split(tostring(s_WordPool[word].wordMeaningSmall),"%.")
@@ -63,8 +63,8 @@ function CollectUnfamiliarLayer:createRandWord(word,currentList)
         if #randomNameArray >= 4 then
             break
         end 
-        local randomIndex = math.random(1, #currentList)
-        local randomWord = currentList[randomIndex]
+        local randomIndex = math.random(1, #s_BookWord[s_CURRENT_USER.bookKey])
+        local randomWord = s_BookWord[s_CURRENT_USER.bookKey][randomIndex]
         local isIn = 0
         for i = 1, #randomNameArray do
             if randomNameArray[i] == randomWord then
@@ -115,8 +115,6 @@ local function createOptions(randomNameArray,word,wrongNum)
             if sender.tag == 1 then  
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
-                    print("word2 =="..word)
-                    print("wrongNum"..wrongNum)
                     local ChooseRightLayer = require("view.newstudy.ChooseRightLayer")
                     local chooseRightLayer = ChooseRightLayer.create(word,wrongNum)
                     s_SCENE:replaceGameLayer(chooseRightLayer)
@@ -189,9 +187,6 @@ end
 
 function CollectUnfamiliarLayer:ctor(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    
-    print("word1 =="..word)
-    print("wrongNum"..wrongNum)
 
     local backColor = BackLayer.create(45) 
     backColor:setAnchorPoint(0.5,0.5)
@@ -200,10 +195,9 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     self:addChild(backColor)
     
     self.currentWord = word
-    self.currentList = s_BookWord[s_CURRENT_USER.bookKey]
 
     self.wordInfo = self:createWordInfo(self.currentWord)
-    self.randWord = self:createRandWord(self.currentWord,self.currentList)
+    self.randWord = self:createRandWord(self.currentWord)
     
     local progressBar = ProgressBar.create(10, 0, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
