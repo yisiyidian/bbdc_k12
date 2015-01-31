@@ -72,7 +72,7 @@ function ShareBottom:ctor()
         	--local png = string.format("image-saved%s.png",os.date('%X',os.time()))
             --self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
             local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
-            cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, 'allen is sb', 'allen is not sb')
+            cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, '', '')
             self:getParent():shareEnd()
             local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
             local remove = cc.CallFunc:create(function ()
