@@ -4,6 +4,7 @@ require("common.global")
 local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local FlipMat           = require("view.mat.FlipMat")
+local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
@@ -12,8 +13,8 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create()
-    local layer = SlideCoconutLayer.new()
+function SlideCoconutLayer.create(word,wrongNum)
+    local layer = SlideCoconutLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -34,13 +35,15 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton()
+local function createLastButton(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("last")
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
 
@@ -53,8 +56,11 @@ local function createLastButton()
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor()
+function SlideCoconutLayer:ctor(word,wrongNum)
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    
+    local isCollectLayer = true
 
     local backColor = BackLayer.create(97) 
     backColor:setAnchorPoint(0.5,0.5)
@@ -62,11 +68,13 @@ function SlideCoconutLayer:ctor()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
     
-    self.currentWord = "apple"
-    self.currentList = {"apple","banana","cat","dog","egg","floor"}
+    self.currentWord = word
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
-    self.randWord = CollectUnfamiliar:createRandWord(self.currentWord,self.currentList)
+    
+    local progressBar = ProgressBar.create(10, 0, "blue")
+    progressBar:setPosition(bigWidth/2+44, 1049)
+    backColor:addChild(progressBar)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -85,7 +93,16 @@ function SlideCoconutLayer:ctor()
     
     local success = function()
         playWordSound(self.currentWord) 
-        print("success")
+        if isCollectLayer == true then
+            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
+            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+        else
+            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+            local blacksmithLayer = BlacksmithLayer.create()
+            s_SCENE:replaceGameLayer(blacksmithLayer)
+        end
+
     end
     
     mat.success = success
@@ -95,7 +112,7 @@ function SlideCoconutLayer:ctor()
     self.refreshButton = createRefreshButton()
     backColor:addChild(self.refreshButton)
     
-    self.lastButton = createLastButton()
+    self.lastButton = createLastButton(word,wrongNum)
     backColor:addChild(self.lastButton)
 end
 

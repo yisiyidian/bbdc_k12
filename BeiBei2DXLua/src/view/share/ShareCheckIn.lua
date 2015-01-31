@@ -89,7 +89,7 @@ function ShareCheckIn:ctor()
 	label:setColor(cc.c3b(127,57,0))
 	icon:addChild(label)
 
-	local target = cc.RenderTexture:create(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
+	local target = cc.RenderTexture:create(s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
     target:retain()
     target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
     background:addChild(target, -1)

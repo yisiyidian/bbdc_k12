@@ -182,50 +182,15 @@ function HomeLayer.create(share)
 
             local Loginreward = require("view.loginreward.LoginRewardPopup")
             local loginreward = Loginreward:create()
-            s_SCENE:popup(loginreward)          
+            s_SCENE:popup(loginreward)   
+
+            -- local circle = require('view.summaryboss.SummaryBossLayer').create(1)
+            -- s_SCENE:replaceGameLayer(circle)       
             
         end
     end
+
     
---            local Test1 = require("view.islandPopup.WordLibraryPopup")
---            local test1 = Test1:create()
---            s_SCENE:popup(test1)
-
---            local Test2 = require("view.islandPopup.WordInfoPopup")
---            local test2 = Test2:create()
---            s_SCENE:popup(test2)
-
---            local Test3 = require("view.newstudy.CollectUnfamiliarLayer")
---            local test3 = Test3:create()
---            s_SCENE:replaceGameLayer(test3)
-
---            local Test4 = require("view.newstudy.BlacksmithLayer")
---            local test4 = Test4:create()
---            s_SCENE:replaceGameLayer(test4)
-
---            local Test5 = require("view.newstudy.ChooseRightLayer")
---            local test5 = Test5:create()
---            s_SCENE:replaceGameLayer(test5)
-
---            local Test6 = require("view.newstudy.ChooseWrongLayer")
---            local test6 = Test6:create()
---            s_SCENE:replaceGameLayer(test6)
-
---            local Test7 = require("view.newstudy.SlideCoconutLayer")
---            local test7 = Test7:create()
---            s_SCENE:replaceGameLayer(test7)
-
---            local Test8 = require("view.newstudy.MiddleLayer")
---            local test8 = Test8:create()
---            s_SCENE:replaceGameLayer(test8)
-
---            local Test9 = require("view.newstudy.EndLayer")
---            local test9 = Test9:create()
---            s_SCENE:replaceGameLayer(test9)
-
---            local Test10 = require("view.newstudy.BookOverLayer")
---            local test10 = Test10:create()
---            s_SCENE:replaceGameLayer(test10)
 
     local button_reward
     local icon_reward
@@ -479,9 +444,15 @@ function HomeLayer.create(share)
     end
 
     local onTouchEnded = function(touch,event)
+        print('touchend')
         local location = layer:convertToNodeSpace(touch:getLocation())
+        print('location y'..location.y..' '..start_y)
+        print('location x'..location.x..' '..start_x)
+        print('s_DESIGN_HEIGHT'..s_DESIGN_HEIGHT)
+        print('viewIndex'..viewIndex)
         if not isDataShow then
-            if location.y ~= start_y or location.x ~= start_x then
+            print('isnotShow')
+            if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
                 return
             elseif viewIndex == 1 and location.y < 0.1 * s_DESIGN_HEIGHT then
                 isDataShow = true
@@ -506,7 +477,8 @@ function HomeLayer.create(share)
                    end 
             end
 
-        elseif location.y >  s_DESIGN_HEIGHT-280 and (location.y == start_y and location.x == start_x) and viewIndex == 1 then
+        elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
+            print('isDataShow')
             isDataShow = false
             layer:setButtonEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))

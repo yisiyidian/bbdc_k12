@@ -159,35 +159,31 @@ function WordLibraryPopup:ctor()
         listview = Listview.create("banana")
         bottom_sprite:setVisible(true)
     end
-    listview:setPosition(2,55)
+    listview:setPosition(2,70)
     backPopup:addChild(listview)
     
     local onTouchEnded = function(touch, event)
         local location = top_sprite:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(self.familiarButton:getBoundingBox(), location)  then
+            s_CURRENT_USER.familiarOrUnfamiliar = 0
             self.familiarButton:setTexture("image/islandPopup/familiarwordend.png")
             self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordbegin.png")
-            print("unfamiliarword")
-            listview:removeFromParent()
-            listview = Listview.create("banana") 
-            listview:setPosition(2,55)
-            backPopup:addChild(listview)
-            bottom_sprite:setVisible(false)
-            s_CURRENT_USER.familiarOrUnfamiliar = 0
-        elseif cc.rectContainsPoint(self.unfamiliarButton:getBoundingBox(), location) then
-            self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
-            self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")
-            print("familiarword")
             listview:removeFromParent()
             listview = Listview.create("apple") 
-            listview:setPosition(2,55)
+            listview:setPosition(2,70)
+            backPopup:addChild(listview)
+            bottom_sprite:setVisible(false)
+        elseif cc.rectContainsPoint(self.unfamiliarButton:getBoundingBox(), location) then
+            s_CURRENT_USER.familiarOrUnfamiliar = 1
+            self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
+            self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")
+            listview:removeFromParent()
+            listview = Listview.create("banana") 
+            listview:setPosition(2,70)
             backPopup:addChild(listview)
             bottom_sprite:setVisible(true)
-            s_CURRENT_USER.familiarOrUnfamiliar = 1
         end
     end
-    
-
     
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
