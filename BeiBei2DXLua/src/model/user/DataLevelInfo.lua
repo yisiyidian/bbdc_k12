@@ -121,27 +121,6 @@ function DataLevelInfo:getDataFromLocalDB()
 end
 
 function DataLevelInfo:updateDataToServer()
---    local currentProgress = self:computeCurrentProgress()
---    local oldProgress = self:getLevelInfo(s_CURRENT_USER.bookKey)
---    -- compute add beans count --
---    local increments = 0
---    local oldLevelIndex = string.sub(oldProgress['level'],  6)
---    local currentLevelIndex = string.sub(currentProgress['level'],6)
-----    local current
---    if oldProgress['chapter'] == currentProgress['chapter'] then
---        increments = currentLevelIndex - oldLevelIndex
---    else
-----        if oldProgress['chapter'] == 'chapter0' then
-----            increments = 10 - oldLevelIndex + currentLevelIndex
-----        elseif oldProgress['chapter'] == 'chapter1' then
-----            increments = 20 - oldLevelIndex + currentLevelIndex
-----        elseif oldProgress['chapter'] == 'chapter2' then
-----            increments = 30 - oldLevelIndex + currentLevelIndex
-----        elseif oldProgress['chapter'] == 'chapter3' then
-----            increments = 40 - oldLevelIndex + currentLevelIndex
-----        end
---        increments = 10 - oldLevelIndex + currentLevelIndex
---    end
     local currentProgress = self:computeCurrentProgress() 
     local oldProgress = self:getLevelInfo(s_CURRENT_USER.bookKey) 
     local increments = (currentProgress - oldProgress) * 2   -- add beans count
@@ -154,7 +133,6 @@ function DataLevelInfo:updateDataToServer()
             self[DataLevelInfo.BOOKKEY .. g_BOOKS[i]] = currentProgress
         end
     end
-
     self:sysData()
 
 end
