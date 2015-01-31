@@ -1,6 +1,7 @@
 require("cocos.init")
 require('common.global')
 s_chapter0_base_height = 3014
+s_islands_per_page = 10
 local ChapterLayer = class('ChapterLayer', function() 
     return cc.Layer:create()
 end)
@@ -50,7 +51,7 @@ function ChapterLayer:ctor()
     -- add chapter node
     self:addChapterIntoListView('chapter0')
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    local currentChapterIndex = math.floor(levelInfo / 10)   
+    local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)   
     for i = 1, currentChapterIndex do
         self.addChapterIntoListView('chapter'..i)
     end
@@ -81,10 +82,10 @@ function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress()
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
- if currentProgress % 10 == 0 and currentProgress > 0 then       
+ if currentProgress % s_islands_per_page == 0 and currentProgress > 0 then       
         -- unlock chapter
         self:plotUnlockCloudAnimation()
-        local currentChapterKey = 'chapter'..math.floor(currentProgress / 10)
+        local currentChapterKey = 'chapter'..math.floor(currentProgress / s_islands_per_page)
         s_SCENE:callFuncWithDelay(0.1, function() 
             self:addChapterIntoListView(currentChapterKey)
         end)
@@ -110,7 +111,7 @@ function ChapterLayer:checkUnlockLevel()
     elseif currentProgress - oldProgress > 0 then   -- unlock level
 --        local oldLevelIndex = string.sub(oldProgress['level'], 6)
 --        local currentLevelIndex = string.sub(currentProgress['level'],6)
-        local chapterKey = 'chapter'..math.floor(oldProgress / 10)
+        local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         local delayTime = 0
         s_SCENE:callFuncWithDelay(delayTime, 
             function()
@@ -314,7 +315,7 @@ end
 function ChapterLayer:addPlayer()
 --    self.player:removeFromParent()
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    local currentChapterKey = 'chapter'..math.floor(levelInfo/10)
+    local currentChapterKey = 'chapter'..math.floor(levelInfo/s_islands_per_page)
     local levelKey = 'level'..levelInfo
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
     if s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
@@ -398,8 +399,8 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
 --    end
 
     local currentLevelCount = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 1
-    local totalLevelCount = (math.floor((currentLevelCount-1) / 10) + 1) * 10
-    local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / 10) + 1)
+    local totalLevelCount = (math.floor((currentLevelCount-1) / s_islands_per_page) + 1) * s_islands_per_page
+    local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / s_islands_per_page) + 1)
     self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
 
     local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
