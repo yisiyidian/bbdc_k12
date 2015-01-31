@@ -2,6 +2,8 @@ local WordLibraryListview = class ("WordLibraryListview",function ()
     return ccui.ListView:create()
 end)
 
+local wordInfoPopup = require("view.islandPopup.WordInfoPopup")
+
 function WordLibraryListview.create(word)
     local layer = WordLibraryListview.new(word)
     return layer
@@ -11,6 +13,13 @@ function WordLibraryListview:ctor(word)
 
     local scrollViewEvent = function (sender, evenType)
 
+    end
+    
+    local visible
+    if s_CURRENT_USER.familiarOrUnfamiliar == 0 then
+        visible = true
+    else
+        visible = false
     end
     
     self:setDirection(ccui.ScrollViewDir.vertical)
@@ -48,7 +57,11 @@ function WordLibraryListview:ctor(word)
     
     local arrow_button_click = function (sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            print(sender:getName())
+            local Name = sender:getName()
+            print("name"..Name)
+            local part = split(Name,"||")
+            local wordInfo = wordInfoPopup.create()
+            s_SCENE:popup(wordInfo)
         end
     end
     
@@ -83,6 +96,7 @@ function WordLibraryListview:ctor(word)
         lookup_button:setAnchorPoint(0,0.5)
         lookup_button:addTouchEventListener(lookup_button_click)
         lookup_button:setName("i"..i)
+        lookup_button:setVisible(visible)
         current_sprite:addChild(lookup_button)
         
         local lookup_label = cc.Label:createWithSystemFont("点击查看示意","",25)
@@ -93,7 +107,7 @@ function WordLibraryListview:ctor(word)
         local arrow_button = ccui.Button:create("image/islandPopup/arrow.png","","")
         arrow_button:setPosition(cc.p(current_sprite:getContentSize().width * 0.92,current_sprite:getContentSize().height / 2.0))
         arrow_button:addTouchEventListener(arrow_button_click)
-        arrow_button:setName("arrow"..i)
+        arrow_button:setName("arrow||"..i)
         current_sprite:addChild(arrow_button)
           
         local line = cc.LayerColor:create(cc.c4b(244,245,246,255),current_sprite:getContentSize().width * 0.95  ,4)
@@ -112,7 +126,6 @@ function WordLibraryListview:ctor(word)
     end
 
     self:setItemsMargin(2.0)
-    
 
 end
 

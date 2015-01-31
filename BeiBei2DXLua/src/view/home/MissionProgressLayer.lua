@@ -276,25 +276,67 @@ function MissionProgressLayer.create(share)
 --    stackButton:addTouchEventListener(stackButtonClick)
 --    layer:addChild(stackButton)
 
-    local ButtonClick = function(sender, eventType)
+    local ButtonClick1 = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
             local Test1 = require("view.islandPopup.WordLibraryPopup")
-            local test1 = Test1:create()
+            local test1 = Test1.create()
             s_SCENE:popup(test1)
         end
     end
 
-    local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
-    Button:setPosition(bigWidth/2 + 300 , s_DESIGN_HEIGHT/2 - 400)
-    Button:setTitleText("test")
-    Button:setTitleColor(cc.c4b(255,255,255,255))
-    Button:setTitleFontSize(40)
-    Button:addTouchEventListener(ButtonClick)
-    layer:addChild(Button)
+    local Button1 = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+    Button1:setPosition(bigWidth/2 + 300 , s_DESIGN_HEIGHT/2 - 400)
+    Button1:setTitleText("library")
+    Button1:setTitleColor(cc.c4b(255,255,255,255))
+    Button1:setTitleFontSize(40)
+    Button1:addTouchEventListener(ButtonClick1)
+    layer:addChild(Button1)
     
-    Button:setScale(0.5)
+    Button1:setScale(0.5)
+    
+    
+    local ButtonClick2 = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            playSound(s_sound_buttonEffect)   
+        elseif eventType == ccui.TouchEventType.ended then
+            local Test2 = require("view.newstudy.CollectUnfamiliarLayer")
+            local test2 = Test2.create("apple",0)
+            s_SCENE:replaceGameLayer(test2)
+        end
+    end
+
+    local Button2 = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+    Button2:setPosition(bigWidth/2 + 300 , s_DESIGN_HEIGHT/2 - 300)
+    Button2:setTitleText("study")
+    Button2:setTitleColor(cc.c4b(255,255,255,255))
+    Button2:setTitleFontSize(40)
+    Button2:addTouchEventListener(ButtonClick2)
+    layer:addChild(Button2)
+
+    Button2:setScale(0.5)
+    
+    local ButtonClick3 = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            playSound(s_sound_buttonEffect)   
+        elseif eventType == ccui.TouchEventType.ended then
+            local Test3 = require("view.newstudy.BlacksmithLayer")
+            local test3 = Test3.create()
+            s_SCENE:replaceGameLayer(test3)
+        end
+    end
+
+    local Button3 = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+    Button3:setPosition(bigWidth/2 + 300 , s_DESIGN_HEIGHT/2 - 200)
+    Button3:setTitleText("iron")
+    Button3:setTitleColor(cc.c4b(255,255,255,255))
+    Button3:setTitleFontSize(40)
+    Button3:addTouchEventListener(ButtonClick3)
+    layer:addChild(Button3)
+
+    Button3:setScale(0.5)
+    
     
     
     return layer

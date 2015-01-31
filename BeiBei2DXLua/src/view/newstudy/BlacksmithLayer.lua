@@ -49,16 +49,16 @@ local function createOptions(randomNameArray)
             if sender.tag == 1 then  
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
-                    ----enter right 
-                    --                        AnalyticsStudyAnswerRight()
-                    print("right")
+                    local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+                    local blacksmithLayer = BlacksmithLayer.create()
+                    s_SCENE:replaceGameLayer(blacksmithLayer)
                 end)))            
             else
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
-                    ----enter false and beibei bean
-                    --                        AnalyticsStudyGuessWrong()
-                    print("wrong")
+                    local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+                    local chooseWrongLayer = ChooseWrongLayer.create()
+                    s_SCENE:replaceGameLayer(chooseWrongLayer)
                 end)))
             end
 
@@ -94,10 +94,9 @@ local function createDontknow()
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            --            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            --            AnalyticsStudyDontKnowAnswer()  
-            --            AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
-            print("dontknow")               
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer.create()
+            s_SCENE:replaceGameLayer(chooseWrongLayer)            
         end
     end
 
