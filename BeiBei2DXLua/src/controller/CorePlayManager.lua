@@ -40,7 +40,6 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
-
 function CorePlayManager.getBossState()
     -- if review boss exist
     -- get latest
@@ -52,6 +51,27 @@ function CorePlayManager.getBossState()
 
     return bossList
 end
+
+function CorePlayManager.initTotalPlay()  
+    -- local gameState = s_LocalDatabaseManager.getGameState()
+    -- if gameState == s_gamestate_reviewbossmodel_beforetoday then
+    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
+    --     local candidate = CorePlayManager.getReviewBossCandidate()
+    --     CorePlayManager.initNewReviewBossLayer(candidate)
+    --     AnalyticsReviewBoss()
+    -- elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel or  gameState == s_gamestate_studymodel_extra or  gameState == s_gamestate_reviewmodel_extra then
+    --     CorePlayManager.initNewStudyReward()
+    --     CorePlayManager.initNewStudyLayer()
+    -- elseif gameState == s_gamestate_reviewbossmodel_today then
+    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
+    --     local candidate = CorePlayManager.getReviewBossCandidateToday()
+    --     CorePlayManager.initNewReviewBossLayer(candidate)
+    -- end
+    
+    CorePlayManager.enterCoreControl()
+
+end
+
 
 function CorePlayManager.enterCoreControl()
     CorePlayManager.currentBossID    = 1
@@ -153,25 +173,7 @@ function CorePlayManager.leaveSummary(state)
 end
 
 
-function CorePlayManager.initTotalPlay()  
-    -- local gameState = s_LocalDatabaseManager.getGameState()
-    -- if gameState == s_gamestate_reviewbossmodel_beforetoday then
-    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
-    --     local candidate = CorePlayManager.getReviewBossCandidate()
-    --     CorePlayManager.initNewReviewBossLayer(candidate)
-    --     AnalyticsReviewBoss()
-    -- elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel or  gameState == s_gamestate_studymodel_extra or  gameState == s_gamestate_reviewmodel_extra then
-    --     CorePlayManager.initNewStudyReward()
-    --     CorePlayManager.initNewStudyLayer()
-    -- elseif gameState == s_gamestate_reviewbossmodel_today then
-    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
-    --     local candidate = CorePlayManager.getReviewBossCandidateToday()
-    --     CorePlayManager.initNewReviewBossLayer(candidate)
-    -- end
-    
-    CorePlayManager.enterCoreControl()
 
-end
 
 
 
