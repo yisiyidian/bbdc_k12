@@ -109,8 +109,8 @@ end
 
 function DataLevelInfo:computeCurrentProgress()
 
-    return 4
---     return s_LocalDatabaseManager.getMaxBossID()
+--    return 4
+     return s_LocalDatabaseManager.getMaxBossID()
 end
 
 function DataLevelInfo:getDataFromLocalDB()
