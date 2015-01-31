@@ -23,12 +23,14 @@
  THE SOFTWARE.
  ****************************************************************************/
 
+#import "WXApi.h"
+
 @class RootViewController;
 
-@interface AppController : NSObject <UIAccelerometerDelegate, UIAlertViewDelegate, UITextFieldDelegate,UIApplicationDelegate>
+@interface AppController : NSObject <UIAccelerometerDelegate, UIAlertViewDelegate, UITextFieldDelegate, UIApplicationDelegate, WXApiDelegate>
 {
     UIWindow *window;
-    RootViewController    *viewController;
+    RootViewController *viewController;
 }
 
 -(RootViewController*) getViewController;
