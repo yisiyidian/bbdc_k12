@@ -37,8 +37,6 @@ function DataUser:ctor()
     self.isSoundAm                         = 1 
     self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
-    self.energyLastCoolDownTime            = -1 
-    self.energyCount                       = s_energyMaxCount
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
     
@@ -55,12 +53,10 @@ function DataUser:ctor()
     --self.currentSelectedChapterKey         = ''
     self.currentLevelKey                   = ''
     --self.currentSelectedLevelKey           = ''
-    self.stars                             = 0 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
     self.beans                             = 0
     self.newStudyRightLayerMask            = 0
-
 
     self.needToUnlockNextChapter           = 0
 
@@ -81,6 +77,7 @@ function DataUser:ctor()
 
     self.isAlterOn                         = 0
     self.slideNum                          = 0
+    self.familiarOrUnfamiliar              = 1 -- 0 for choose familiar ,1 for choose unfamiliar
 end
 
 function DataUser:getLockFunctionState(productId)

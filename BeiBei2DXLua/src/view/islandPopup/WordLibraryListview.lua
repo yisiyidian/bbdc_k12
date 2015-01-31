@@ -2,17 +2,16 @@ local WordLibraryListview = class ("WordLibraryListview",function ()
     return ccui.ListView:create()
 end)
 
-function WordLibraryListview.create()
-    local layer = WordLibraryListview.new()
+function WordLibraryListview.create(word)
+    local layer = WordLibraryListview.new(word)
     return layer
 end
 
-function WordLibraryListview:ctor()
+function WordLibraryListview:ctor(word)
 
     local scrollViewEvent = function (sender, evenType)
 
     end
-
     
     self:setDirection(ccui.ScrollViewDir.vertical)
     self:setBackGroundImageScale9Enabled(true)
@@ -24,7 +23,7 @@ function WordLibraryListview:ctor()
 
     local wordList = {}
     for i = 1,20  do
-        table.insert(wordList,"apple")
+        table.insert(wordList,word)
     end
     local word = {}
     local meaning = {}

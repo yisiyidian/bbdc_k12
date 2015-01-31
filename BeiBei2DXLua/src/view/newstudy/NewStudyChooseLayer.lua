@@ -114,21 +114,21 @@ function NewStudyChooseLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
 
-    local time = os.time()
-    local str = getDayStringForDailyStudyInfo(time)
-    if s_CorePlayManager.isStudyModel() then
-        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then    
-            if s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1] == s_CorePlayManager.rightWordList[#s_CorePlayManager.rightWordList] then
-                backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],true)
-            else
-                backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],false)
-            end
-        else
-            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
-        end
-    else
-        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
-    end
+--    local time = os.time()
+--    local str = getDayStringForDailyStudyInfo(time)
+--    if s_CorePlayManager.isStudyModel() then
+--        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 0 then    
+--            if s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1] == s_CorePlayManager.rightWordList[#s_CorePlayManager.rightWordList] then
+--                backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],true)
+--            else
+--                backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 1],false)
+--            end
+--        else
+--            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+--        end
+--    else
+--        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+--    end
     
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
     soundMark:setPosition(bigWidth/2, 920)  
@@ -159,9 +159,9 @@ function NewStudyChooseLayer.create()
                         s_CorePlayManager.enterNewStudyRightLayer()
                     end)))
                 else             
-                    local action1 = cc.MoveTo:create(0.5,cc.p((backColor.getProgressBarIndexPosition()) - 20,1070 - sender:getPositionY()))
-                    local action2 = cc.ScaleTo:create(0.2,0)
-                    feedback:runAction(cc.Sequence:create(action1, action2,cc.CallFunc:create(function() 
+--                    local action1 = cc.MoveTo:create(0.5,cc.p((backColor.getProgressBarIndexPosition()) - 20,1070 - sender:getPositionY()))
+--                    local action2 = cc.ScaleTo:create(0.2,0)
+                    feedback:runAction(cc.Sequence:create(cc.CallFunc:create(function() 
                         AnalyticsStudyAnswerRight_strikeWhileHot()
 
                         s_CorePlayManager.updateWordCandidate(false)

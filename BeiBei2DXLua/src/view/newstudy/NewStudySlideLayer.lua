@@ -41,21 +41,21 @@ function NewStudySlideLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
     
-    local time = os.time()
-    local str = getDayStringForDailyStudyInfo(time)
-
-
-    if s_CorePlayManager.isStudyModel() then
-        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 1 then
-            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 2])
-        else
-            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
-        end
-    else
-        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
-    end
+--    local time = os.time()
+--    local str = getDayStringForDailyStudyInfo(time)
+--
+--
+--    if s_CorePlayManager.isStudyModel() then
+--        if s_LocalDatabaseManager.getStudyWordsNum(str) ~= 1 then
+--            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex - 2])
+--        else
+--            backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+--        end
+--    else
+--        backColor.setWordAndNumber(s_LocalDatabaseManager.getStudyWordsNum(str),0)
+--    end
     
-    local positionX = backColor.getProgressBarIndexPosition()
+--    local positionX = backColor.getProgressBarIndexPosition()
 
     local word_meaning_label = cc.Label:createWithSystemFont(wordMeaningSmall,"",50)
     word_meaning_label:setPosition(bigWidth/2, 950)
@@ -91,7 +91,7 @@ function NewStudySlideLayer.create()
             showAnswerStateBack:runAction(action1)
             
     
-            layer:runAction(cc.Sequence:create(cc.CallFunc:create(function()backColor.indexSwell()end),cc.DelayTime:create(2),cc.CallFunc:create(function()  
+            layer:runAction(cc.Sequence:create(cc.DelayTime:create(2),cc.CallFunc:create(function()  
             if s_CorePlayManager.isStudyModel() then
                     if s_CorePlayManager.bookOver() then
                         if s_CorePlayManager.wrongWordNum == 0 then

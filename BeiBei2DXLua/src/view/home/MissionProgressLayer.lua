@@ -255,26 +255,47 @@ function MissionProgressLayer.create(share)
     -- grayLump:setPosition(bigWidth/2 + 60, s_DESIGN_HEIGHT/2 - 310)
     -- layer:addChild(grayLump)
     
-    local stackButtonClick = function(sender, eventType)
+--    local stackButtonClick = function(sender, eventType)
+--        if eventType == ccui.TouchEventType.began then
+--            playSound(s_sound_buttonEffect)   
+--        elseif eventType == ccui.TouchEventType.ended then
+--            AnalyticsWordsLibBtn()
+--        if layer:getChildByTag(8888) ~=nil then
+--            local schedule = layer:getChildByTag(8888):getScheduler()
+--                schedule:unscheduleScriptEntry(schedule.schedulerEntry)
+--        end            
+--           s_CorePlayManager.enterWordListLayer()
+--        end
+--    end
+--    
+--    local stackButton = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+--    stackButton:setPosition(bigWidth/2 , s_DESIGN_HEIGHT/2 - 400)
+--    stackButton:setTitleText("词库")
+--    stackButton:setTitleColor(cc.c4b(255,255,255,255))
+--    stackButton:setTitleFontSize(40)
+--    stackButton:addTouchEventListener(stackButtonClick)
+--    layer:addChild(stackButton)
+
+    local ButtonClick = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
-            AnalyticsWordsLibBtn()
-        if layer:getChildByTag(8888) ~=nil then
-            local schedule = layer:getChildByTag(8888):getScheduler()
-                schedule:unscheduleScriptEntry(schedule.schedulerEntry)
-        end            
-           s_CorePlayManager.enterWordListLayer()
+            local Test1 = require("view.islandPopup.WordLibraryPopup")
+            local test1 = Test1:create()
+            s_SCENE:popup(test1)
         end
     end
+
+    local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+    Button:setPosition(bigWidth/2 + 300 , s_DESIGN_HEIGHT/2 - 400)
+    Button:setTitleText("test")
+    Button:setTitleColor(cc.c4b(255,255,255,255))
+    Button:setTitleFontSize(40)
+    Button:addTouchEventListener(ButtonClick)
+    layer:addChild(Button)
     
-    -- local stackButton = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
-    -- stackButton:setPosition(bigWidth/2 , s_DESIGN_HEIGHT/2 - 400)
-    -- stackButton:setTitleText("词库")
-    -- stackButton:setTitleColor(cc.c4b(255,255,255,255))
-    -- stackButton:setTitleFontSize(40)
-    -- stackButton:addTouchEventListener(stackButtonClick)
-    -- layer:addChild(stackButton)
+    Button:setScale(0.5)
+    
     
     return layer
 end

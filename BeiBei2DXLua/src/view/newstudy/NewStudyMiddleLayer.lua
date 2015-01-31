@@ -48,7 +48,7 @@ function NewStudyMiddleLayer.create()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)
     
-    backColor.progressBar:removeFromParent()
+--    backColor.progressBar:removeFromParent()
 --    backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "yellow")
 --    backColor.progressBar:setPosition(bigWidth/2+44, 1099)
 --    backColor:addChild(backColor.progressBar)
