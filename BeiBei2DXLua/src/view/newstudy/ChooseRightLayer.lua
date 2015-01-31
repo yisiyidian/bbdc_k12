@@ -19,14 +19,15 @@ function ChooseRightLayer.create(word,wrongNum)
     return layer
 end
 
-local function addStudyButton()
+local function addStudyButton(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_study_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_CorePlayManager.leaveStudyModel(false)
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create()
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
@@ -48,6 +49,7 @@ local function addNextButton(word,wrongNum)
         elseif eventType == ccui.TouchEventType.ended then
             print("word4 =="..word)
             print("wrongNum"..wrongNum)
+            s_CorePlayManager.leaveStudyModel(true)
             local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
             local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
@@ -98,7 +100,7 @@ function ChooseRightLayer:ctor(word,wrongNum)
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
     
-    self.studyButton = addStudyButton()
+    self.studyButton = addStudyButton(word,wrongNum)
     backColor:addChild(self.studyButton)
     
     self.nextButton = addNextButton(word,wrongNum)

@@ -12,8 +12,8 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create()
-    local layer = SlideCoconutLayer.new()
+function SlideCoconutLayer.create(word,wrongNum)
+    local layer = SlideCoconutLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -34,14 +34,14 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton()
+local function createLastButton(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer:create()
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
@@ -55,7 +55,9 @@ local function createLastButton()
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor()
+function SlideCoconutLayer:ctor(word,wrongNum)
+    print("word7 =="..word)
+    print("wrongNum"..wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local isCollectLayer = true
@@ -90,8 +92,10 @@ function SlideCoconutLayer:ctor()
     local success = function()
         playWordSound(self.currentWord) 
         if isCollectLayer == true then
+            print("word8 =="..word)
+            print("wrongNum"..wrongNum)
             local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create()
+            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
         else
             local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
@@ -108,7 +112,7 @@ function SlideCoconutLayer:ctor()
     self.refreshButton = createRefreshButton()
     backColor:addChild(self.refreshButton)
     
-    self.lastButton = createLastButton()
+    self.lastButton = createLastButton(word,wrongNum)
     backColor:addChild(self.lastButton)
 end
 
