@@ -177,7 +177,7 @@ end
 function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
     if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
-        if onResponse ~= nil then onResponse(username, password, s_TIPS_LAYER.offlineOrNoSessionTokenTip, MAX_ERROR_CODE) end
+        if onResponse ~= nil then onResponse(username, password, s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
         return
     end
 
@@ -220,7 +220,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                     end
                 end)
             else
-                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), MAX_ERROR_CODE)
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), ERROR_CODE_MAX)
             end
         end)
 
