@@ -389,6 +389,7 @@ function PersonalInfo:PLVI()
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setScaleX(scale)
+    gezi:setOpacity(0)
     gezi:setAnchorPoint(0.0,0.5)
     gezi:setPosition(-s_LEFT_X + yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.5)
     back:addChild(gezi)
