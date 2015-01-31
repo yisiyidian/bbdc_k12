@@ -27,10 +27,22 @@ function M.getBossInfo(bossID)
 
     local boss      = {}
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ;") do
-        boss.bossID      = row.bossID
-        boss.typeIndex   = row.typeIndex
-        boss.wordList    = row.wordList
-        boss.lastWordIndex = row.lastWordIndex
+        boss.bossID         = row.bossID
+        boss.typeIndex      = row.typeIndex
+        boss.wrongWordList  = row.wordList
+        boss.lastWordIndex  = row.lastWordIndex
+    end
+
+
+    if boss.bossID == nil then
+        boss.bossID         = bossID
+        boss.typeIndex      = 0
+        boss.wrongWordList  = ''
+        boss.rightWordList  = ''
+    elseif boss.bossID == 1 then
+        
+    else
+
     end
 
     return boss
