@@ -13,19 +13,22 @@ local  ChooseRightLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseRightLayer.create()
-    local layer = ChooseRightLayer.new()
+function ChooseRightLayer.create(word,wrongNum)
+    local layer = ChooseRightLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addStudyButton()
+local function addStudyButton(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_study_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("study")
+            s_CorePlayManager.leaveStudyModel(false)
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
 
@@ -38,13 +41,18 @@ local function addStudyButton()
     return choose_study_button
 end
 
-local function addNextButton()
+local function addNextButton(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("next")
+            print("word4 =="..word)
+            print("wrongNum"..wrongNum)
+            s_CorePlayManager.leaveStudyModel(true)
+            local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
+            local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
         end
     end
 
@@ -57,7 +65,9 @@ local function addNextButton()
     return choose_next_button
 end
 
-function ChooseRightLayer:ctor()
+function ChooseRightLayer:ctor(word,wrongNum)
+    print("word3 =="..word)
+    print("wrongNum"..wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local backColor = BackLayer.create(45) 
@@ -66,12 +76,12 @@ function ChooseRightLayer:ctor()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
 	
-    self.currentWord = "apple"
-    self.currentList = {"apple","banana","cat","dog","egg","floor"}
+    self.currentWord = word
+    self.currentList = s_BookWord[s_CURRENT_USER.bookKey]
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar = ProgressBar.create(#self.currentList, 0, "yellow")
+    local progressBar = ProgressBar.create(10, 0, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     
@@ -90,10 +100,10 @@ function ChooseRightLayer:ctor()
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
     
-    self.studyButton = addStudyButton()
+    self.studyButton = addStudyButton(word,wrongNum)
     backColor:addChild(self.studyButton)
     
-    self.nextButton = addNextButton()
+    self.nextButton = addNextButton(word,wrongNum)
     backColor:addChild(self.nextButton)
 end
 

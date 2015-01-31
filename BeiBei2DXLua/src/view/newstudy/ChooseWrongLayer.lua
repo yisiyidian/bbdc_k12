@@ -13,19 +13,23 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseWrongLayer.create()
-    local layer = ChooseWrongLayer.new()
+function ChooseWrongLayer.create(word,wrongNum)
+    local layer = ChooseWrongLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton()
+local function addNextButton(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            print("next")
+            print("word6 =="..word)
+            print("wrongNum"..wrongNum)
+            local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
+            local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(slideCoconutLayer)
         end
     end
 
@@ -38,7 +42,9 @@ local function addNextButton()
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor()
+function ChooseWrongLayer:ctor(word,wrongNum)
+    print("word5 =="..word)
+    print("wrongNum"..wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -47,12 +53,12 @@ function ChooseWrongLayer:ctor()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
 
-    self.currentWord = "apple"
-    self.currentList = {"apple","banana","cat","dog","egg","floor"}
+    self.currentWord = word
+    self.currentList = s_BookWord[s_CURRENT_USER.bookKey]
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
 
-    local progressBar = ProgressBar.create(#self.currentList, 0, "yellow")
+    local progressBar = ProgressBar.create(10, 0, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
 
@@ -71,7 +77,7 @@ function ChooseWrongLayer:ctor()
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton()
+    self.nextButton = addNextButton(word,wrongNum)
     backColor:addChild(self.nextButton)
 end
 

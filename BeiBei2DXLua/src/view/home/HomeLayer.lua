@@ -189,46 +189,6 @@ function HomeLayer.create(share)
             
         end
     end
-    
---            local Test1 = require("view.islandPopup.WordLibraryPopup")
---            local test1 = Test1:create()
---            s_SCENE:popup(test1)
-
---            local Test2 = require("view.islandPopup.WordInfoPopup")
---            local test2 = Test2:create()
---            s_SCENE:popup(test2)
-
---            local Test3 = require("view.newstudy.CollectUnfamiliarLayer")
---            local test3 = Test3:create()
---            s_SCENE:replaceGameLayer(test3)
-
---            local Test4 = require("view.newstudy.BlacksmithLayer")
---            local test4 = Test4:create()
---            s_SCENE:replaceGameLayer(test4)
-
---            local Test5 = require("view.newstudy.ChooseRightLayer")
---            local test5 = Test5:create()
---            s_SCENE:replaceGameLayer(test5)
-
---            local Test6 = require("view.newstudy.ChooseWrongLayer")
---            local test6 = Test6:create()
---            s_SCENE:replaceGameLayer(test6)
-
---            local Test7 = require("view.newstudy.SlideCoconutLayer")
---            local test7 = Test7:create()
---            s_SCENE:replaceGameLayer(test7)
-
---            local Test8 = require("view.newstudy.MiddleLayer")
---            local test8 = Test8:create()
---            s_SCENE:replaceGameLayer(test8)
-
---            local Test9 = require("view.newstudy.EndLayer")
---            local test9 = Test9:create()
---            s_SCENE:replaceGameLayer(test9)
-
---            local Test10 = require("view.newstudy.BookOverLayer")
---            local test10 = Test10:create()
---            s_SCENE:replaceGameLayer(test10)
 
     
 

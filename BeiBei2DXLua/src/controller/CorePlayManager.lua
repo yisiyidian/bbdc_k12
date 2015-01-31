@@ -40,22 +40,142 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
+function CorePlayManager.getBossState()
+    -- if review boss exist
+    -- get latest
+    
+    bossList = {}
+    table.insert(bossList, 4)
+    table.insert(bossList, 4)
+    table.insert(bossList, 0)
+
+    return bossList
+end
+
 function CorePlayManager.initTotalPlay()  
-    local gameState = s_LocalDatabaseManager.getGameState()
-    if gameState == s_gamestate_reviewbossmodel_beforetoday then
-        CorePlayManager.initNewReviewBossRewardAndTotalWord()
-        local candidate = CorePlayManager.getReviewBossCandidate()
-        CorePlayManager.initNewReviewBossLayer(candidate)
-        AnalyticsReviewBoss()
-    elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel or  gameState == s_gamestate_studymodel_extra or  gameState == s_gamestate_reviewmodel_extra then
-        CorePlayManager.initNewStudyReward()
-        CorePlayManager.initNewStudyLayer()
-    elseif gameState == s_gamestate_reviewbossmodel_today then
-        CorePlayManager.initNewReviewBossRewardAndTotalWord()
-        local candidate = CorePlayManager.getReviewBossCandidateToday()
-        CorePlayManager.initNewReviewBossLayer(candidate)
+    -- local gameState = s_LocalDatabaseManager.getGameState()
+    -- if gameState == s_gamestate_reviewbossmodel_beforetoday then
+    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
+    --     local candidate = CorePlayManager.getReviewBossCandidate()
+    --     CorePlayManager.initNewReviewBossLayer(candidate)
+    --     AnalyticsReviewBoss()
+    -- elseif gameState == s_gamestate_studymodel or gameState == s_gamestate_reviewmodel or  gameState == s_gamestate_studymodel_extra or  gameState == s_gamestate_reviewmodel_extra then
+    --     CorePlayManager.initNewStudyReward()
+    --     CorePlayManager.initNewStudyLayer()
+    -- elseif gameState == s_gamestate_reviewbossmodel_today then
+    --     CorePlayManager.initNewReviewBossRewardAndTotalWord()
+    --     local candidate = CorePlayManager.getReviewBossCandidateToday()
+    --     CorePlayManager.initNewReviewBossLayer(candidate)
+    -- end
+    
+    CorePlayManager.enterCoreControl()
+
+end
+
+
+function CorePlayManager.enterCoreControl()
+    CorePlayManager.currentBossID    = 1
+    CorePlayManager.currentBossState = 0
+
+    if     CorePlayManager.currentBossState == 0 then   -- study   model
+        CorePlayManager.initStudyModel()
+    elseif CorePlayManager.currentBossState == 1 then   -- test    model
+        CorePlayManager.initTestModel()
+    elseif CorePlayManager.currentBossState == 2 then   -- review  model
+        CorePlayManager.initReviewModel(0)
+    elseif CorePlayManager.currentBossState == 3 then   -- summary model
+        CorePlayManager.initSummaryModel()
+    elseif CorePlayManager.currentBossState == 4 then   -- review1 model
+        CorePlayManager.initReviewModel(1)
+    elseif CorePlayManager.currentBossState == 5 then   -- review2 model
+        CorePlayManager.initReviewModel(2)
+    elseif CorePlayManager.currentBossState == 6 then   -- review3 model
+        CorePlayManager.initReviewModel(3)
+    elseif CorePlayManager.currentBossState == 7 then   -- review4 model
+        CorePlayManager.initReviewModel(4)
+    elseif CorePlayManager.currentBossState == 8 then   -- over    model
+        CorePlayManager.initOverModel()
     end
 end
+
+-- init model
+function CorePlayManager.initStudyModel()
+    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
+    CorePlayManager.currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
+    CorePlayManager.wrongWordNum = 4
+
+    local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
+    CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
+end
+
+function CorePlayManager.initTestModel()
+
+end
+
+function CorePlayManager.initReviewModel(reviewNum)
+end
+
+function CorePlayManager.initSummaryModel()
+end
+
+function CorePlayManager.initOverModel()
+end
+
+function CorePlayManager.enterStudyModel(wordName, wrongWordNum)
+    local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
+    local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum)
+    s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+end
+
+function CorePlayManager.leaveStudyModel(state)
+    if state == true then
+        -- answer right
+        CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+        local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
+        CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
+    else
+        -- answer wrong
+        CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+        if CorePlayManager.wrongWordNum == s_max_wrong_num_everyday then
+            -- do collect enough words
+            
+        else
+            -- do not collect enough words
+            CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+            local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
+            CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
+        end
+    end
+end
+
+function CorePlayManager.enterTestModel(wordList)
+
+end
+
+function CorePlayManager.leaveTest(state)
+
+end
+
+function CorePlayManager.enterReviewModel(wordlist)
+
+end
+
+function CorePlayManager.leaveReview(state)
+
+end
+
+function CorePlayManager.enterSummaryModel(wordlist)
+
+end
+
+function CorePlayManager.leaveSummary(state)
+
+end
+
+
+
+
+
 
 function CorePlayManager.getProgress()
     local lastPlayState = s_LocalDatabaseManager.getNewPlayState()

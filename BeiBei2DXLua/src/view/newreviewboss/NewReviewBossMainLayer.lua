@@ -94,8 +94,7 @@ function NewReviewBossMainLayer.create()
                 sprite.font_size(25)
             elseif i == 2 then 
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
-                sprite:setScaleX(0.8)
-                sprite:setScaleY(1)
+                sprite:setScale(0.8)
                 sprite.opacity(102)
                 sprite.font_size(18)
             else

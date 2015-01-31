@@ -69,7 +69,7 @@ function NewReviewBossNode.create(character)
         local action0 = cc.DelayTime:create(0.1)
         local action1 = cc.MoveBy:create(0.4, cc.p(0,200))
         main:runAction(cc.Sequence:create(action0,action1))
-        main:runAction(cc.Sequence:create(action0,cc.CallFunc:create(function()main.animation(0.8,1)end)))
+        main:runAction(cc.Sequence:create(action0,cc.CallFunc:create(function()main.animation(0.8)end)))
         main:runAction(cc.Sequence:create(action0,cc.CallFunc:create(function()main.opacity(102)end)))
         main.font_size(18)
     end

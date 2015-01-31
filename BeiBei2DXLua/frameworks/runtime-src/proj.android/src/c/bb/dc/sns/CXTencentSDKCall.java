@@ -3,12 +3,16 @@ package c.bb.dc.sns;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
 import c.bb.dc.BBNDK;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
 import com.tencent.connect.UserInfo;
+import com.tencent.connect.share.QQShare;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
@@ -35,6 +39,8 @@ public class CXTencentSDKCall {
 		mTencent = Tencent.createInstance(appId, activity);
 	}
 	
+	// ------------------------------------------------------------------------------
+	
 	public void logIn() {
 		if (!mTencent.isSessionValid()) {
 			mTencent.login(mActivity, "all", new LogInListener());
@@ -57,6 +63,18 @@ public class CXTencentSDKCall {
 		        }
 		    }
 		});
+	}
+	
+	// ------------------------------------------------------------------------------
+	
+	public void shareImageToQQFriend(String path, String title, String desc) {
+	    Bundle params = new Bundle();
+	    params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, path);
+	    params.putString(QQShare.SHARE_TO_QQ_TITLE, title);
+	    params.putString(QQShare.SHARE_TO_QQ_SUMMARY, desc);
+	    params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
+	    params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, QQShare.SHARE_TO_QQ_FLAG_QZONE_AUTO_OPEN);
+	    mTencent.shareToQQ(mActivity, params, new ShareImageToQQFriendListener());
 	}
 
 	// ------------------------------------------------------------------------------
@@ -122,4 +140,36 @@ public class CXTencentSDKCall {
 		}
 	}
 	
+	// ------------------------------------------------------------------------------
+	class ShareImageToQQFriendListener implements IUiListener {
+
+		@Override
+		public void onCancel() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onComplete(Object arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onError(final UiError error) {
+			mActivity.runOnUiThread(new Runnable() {
+
+				@Override
+				public void run() {
+					new AlertDialog.Builder(mActivity)							
+							.setMessage(error.errorMessage)
+							.setNegativeButton("CLOSE", null)
+							.create()
+							.show();
+				}
+
+			});
+		}
+			
+	}
 }

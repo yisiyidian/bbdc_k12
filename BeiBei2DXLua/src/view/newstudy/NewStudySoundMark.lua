@@ -4,7 +4,7 @@ local SoundMark = class("SoundMark", function()
     return cc.Layer:create()
 end)
 
-function SoundMark.create(wordname, soundmarkus, soundmarken)
+function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
     local height = 80
     
     local main = SoundMark.new()
@@ -106,12 +106,15 @@ function SoundMark.create(wordname, soundmarkus, soundmarken)
     else
         button_soundmark_us:setVisible(false)
     end
-    
-    local wordSoundState = playWordSound(wordname)
-    --add offline
-    offlineTip = OfflineTip.create()
-    if s_SERVER.isNetworkConnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
-        main:addChild(offlineTip,2)
+    if playWordOrNot == false then
+
+    else   
+        local wordSoundState = playWordSound(wordname)
+        --add offline
+        offlineTip = OfflineTip.create()
+        if s_SERVER.isNetworkConnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
+            main:addChild(offlineTip,2)
+        end
     end
     
     local onTouchBegan = function(touch, event)

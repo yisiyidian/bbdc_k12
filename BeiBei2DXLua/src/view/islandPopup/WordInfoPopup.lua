@@ -26,7 +26,7 @@ local function creatWordLayout(word)
     local layout = ccui.Layout:create()
     layout:setContentSize(cc.size(545, 683))
 
-    local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
+    local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm ,false)
     soundMark:setPosition(cc.p(layout:getContentSize().width / 2, layout:getContentSize().height * 0.8))
     layout:addChild(soundMark)
     soundMark.setSwallowTouches(false)
@@ -67,7 +67,9 @@ function WordInfoPopup:ctor()
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            s_SCENE:removeAllPopups()
+            local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+            local wordLibrary = WordLibrary.create()
+            s_SCENE:popup(wordLibrary)
         end
     end
 
@@ -136,6 +138,16 @@ function WordInfoPopup:createInfo()
         (backgroundSize.width - pageView:getContentSize().width) / 2,
         (s_DESIGN_HEIGHT - backgroundSize.height) / 2 +
         (backgroundSize.height - pageView:getContentSize().height) / 2))
+        
+    local pageNum = 3 
+        
+    if pageNum == 1 then
+    	
+    elseif pageNum == 2 then
+    
+    else
+    
+    end
         
     for i = 1 , 3 do
         local layout = creatWordLayout("apple")
