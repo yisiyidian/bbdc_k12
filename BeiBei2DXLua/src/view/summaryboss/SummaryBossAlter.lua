@@ -213,9 +213,16 @@ function SummaryBossAlter:win1()
         win_back:setPosition(s_DESIGN_WIDTH / 2,0)
         self:addChild(win_back)
 
+        local function onButton(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                local home = require('view.home.HomeLayer').create(true)
+                s_SCENE:replaceGameLayer(home)
+            end
+        end
+
         local button = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
         button:setPosition(win_back:getContentSize().width/2,150)
-        --button:addTouchEventListener()
+        button:addTouchEventListener(onButton)
         win_back:addChild(button)
 
         local item_name = cc.Label:createWithTTF('OK','font/CenturyGothic.ttf',30)
