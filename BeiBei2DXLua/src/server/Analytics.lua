@@ -15,9 +15,9 @@ function AnalyticsSmallTutorial(step)
     cx.CXAnalytics:logEventAndLabel('TutorialSmallStep', tostring(step))
 end
 
-function AnalyticsReviewBossTutorial(step)
-    cx.CXAnalytics:logEventAndLabel('ReviewBossTutorialStep', tostring(step))
-end
+--function AnalyticsReviewBossTutorial(step)
+--    cx.CXAnalytics:logEventAndLabel('ReviewBossTutorialStep', tostring(step))
+--end
 
 ----------------------------------------------------------------------------------------
 

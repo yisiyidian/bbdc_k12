@@ -507,7 +507,7 @@ function ChapterLayer:addBeansUI()
     self.beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
     self.beanLabel:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
     self.beans:addChild(self.beanLabel)    
-    self.beanCount = s_CURRENT_USER.beans
+    self.beanCount = s_CURRENT_USER:getBeans()
     self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',33)
     self.beanCountLabel:setColor(cc.c3b(13, 95, 156))
     self.beanCountLabel:ignoreAnchorPointForPosition(false)

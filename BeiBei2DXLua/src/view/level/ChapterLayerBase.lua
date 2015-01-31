@@ -5,6 +5,7 @@ s_chapter_resource_start_type = "start"
 s_chapter_resource_middle_type = "middle" 
 s_chapter_resource_end_type = "end"
 s_chapter0_base_height = 3014
+s_chapter_layer_width = 854
 
 local ChapterLayerBase = class('ChapterLayerBase',function() 
     return ccui.Widget:create()
@@ -104,41 +105,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     self:plotLevelNumber('level'..levelIndex)
 
     local currentIndex = levelIndex
---    if self.chapterKey == 'chapter1' then
---        currentIndex = currentIndex + 10
---    elseif self.chapterKey == 'chapter2' then
---        currentIndex = currentIndex + 30
---    elseif self.chapterKey == 'chapter3' then
---        currentIndex = currentIndex + 60
---    end
-    
---    local bossList = s_CURRENT_USER.levelInfo:getBossList(s_CURRENT_USER.bookKey)
---    local summaryboss = split(bossList,'|')
---    local checkSummaryBoss = false
---    for i = 1, #summaryboss do
-----        print('summarybossIndex:'..summaryboss[i])
---        if summaryboss[i] == '' then break end
---        if summaryboss[i] - currentIndex == 0 then
---            checkSummaryBoss = true
---            break
---        end
---    end
-----    print('######check summaryboss#####')
-----    print(bossList)
---    
---    -- chest
---    local chestList = split(s_CURRENT_USER.chestList, '|')
---    local checkChest = false
---    for i = 1, #chestList do
---        --print('summarybossIndex:'..summaryboss[i])
---        if chestList[i] == '' then break end
---        if chestList[i] - currentIndex == 0 then
---            checkChest = true
---            break
---        end
---    end
---
---    AnalyticsChestGeneratedCnt(#chestList)
+
     
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
@@ -250,11 +217,53 @@ end
 
 function ChapterLayerBase:addPopup(levelIndex)
     -- TODO check level state
-    -- if state == 1 then
     local levelPosition = self:getLevelPosition('level'..levelIndex)
-    local popup = cc.Sprite:create('image/chapter/chapter0/popup.png')
-    popup:setPosition(levelPosition)
-    self:addChild(popup, 100)
+    state = 2
+    local back
+    if state == 1 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')     
+        local function taskEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO 
+                print('click task button ')
+            end
+        end
+        
+        local taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png')
+        taskButton:setScale9Enabled(true)
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
+        taskButton:addTouchEventListener(taskEvent)
+        back:addChild(taskButton)
+    elseif state == 2 then
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
+        local function taskEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                -- TODO 
+                print('click task button ')
+            end
+        end
+
+        local taskButton = ccui.Button:create('image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png')
+        taskButton:setScale9Enabled(true)
+        taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-280)
+        taskButton:addTouchEventListener(taskEvent)
+        back:addChild(taskButton)
+    end
+    
+    -- add close button
+    local function touchEvent(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            s_SCENE:removeAllPopups()
+        end
+    end
+    local closeButton = ccui.Button:create('image/button/button_close.png','image/button/button_close.png','image/button/button_close.png')
+    closeButton:setScale9Enabled(true)
+    closeButton:setPosition(back:getContentSize().width-40, back:getContentSize().height-40)
+    closeButton:addTouchEventListener(touchEvent)
+    back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 500))
+    back:addChild(closeButton)
+    s_SCENE:popup(back)
+
 end
 
 function ChapterLayerBase:plotDecoration()
@@ -270,8 +279,8 @@ function ChapterLayerBase:plotDecoration()
                 print('BaseLayer:levelbutton '..sender:getName()..' touched...')
                 
                 -- TODO check level state
-                -- if state == 1 then
-                --self:addPopup(sender:getName())
+                --if state == 1 then
+                self:addPopup(sender:getName())
             end
         end
         local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')

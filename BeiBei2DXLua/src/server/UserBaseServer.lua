@@ -161,20 +161,11 @@ function UserBaseServer.onLogInByQQ(onResponse)
 
                 s_CURRENT_USER.nickName = s_CURRENT_USER.snsUserInfo.nickname
                 -- save nick name
-                local obj = {['className']=s_CURRENT_USER.className, 
-                             ['objectId']=s_CURRENT_USER.objectId, 
-                             ['nickName']=s_CURRENT_USER.snsUserInfo.nickname,
+                local obj = {['nickName']=s_CURRENT_USER.snsUserInfo.nickname,
                              ['access_token']=s_CURRENT_USER.localAuthData.access_token,
                              ['openid']=s_CURRENT_USER.localAuthData.openid,
                              ['usertype']=USER_TYPE_QQ}
-                UserBaseServer.saveDataObjectOfCurrentUser(obj, 
-                    function (api, result) 
-                        onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
-                    end, 
-                    function (api, code, message, description) 
-                        onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
-                    end
-                )
+                saveUserToServer(obj, function (datas, error) onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse) end)
             end
         else
             onResponse_signUp_logIn(isParsed, objectjson, e, code, onResponse)
@@ -193,9 +184,10 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
     local onCompleted = function ()
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
-        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
-        s_UserBaseServer.saveDataObjectOfCurrentUser(s_CURRENT_USER)
-        onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
+
+        saveUserToServer({['usertype']=USER_TYPE_BIND}, function (datas, error)
+            onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
+        end)
     end
 
     local change_password = function (password, onResponse)
@@ -218,17 +210,15 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
             if error then
                 onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, error.description, error.code)
             elseif not exist then
-                local obj = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId, ['username']=username}
-                UserBaseServer.saveDataObjectOfCurrentUser(obj, 
-                    function (api, result) 
+                saveUserToServer({['username']=username}, function (datas, error)
+                    if error ~= nil then
+                        onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, error.description, error.code)
+                    else
                         s_CURRENT_USER.username = username
                         s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
                         change_password(password, onResponse)
-                    end, 
-                    function (api, code, message, description) 
-                        onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
                     end
-                )
+                end)
             else
                 onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), MAX_ERROR_CODE)
             end
@@ -326,18 +316,6 @@ function UserBaseServer.removeFan(fanDataUser, onSucceed, onFailed)
     end
 end
 
-----
----- handle offline in O2O
-function UserBaseServer.getDataEverydayInfo(userId, week, onSucceed, onFailed)
-    s_SERVER.search('classes/DataEverydayInfo?where={"userId":"' .. userId .. '","week":' .. week .. '}', onSucceed, onFailed)
-end
-
-----
----- handle offline in O2O
-function UserBaseServer.getDataLevelInfo(objectId, onSucceed, onFailed)
-    s_SERVER.search('classes/DataLevelInfo?where={"objectId":"' .. objectId.. '"}', onSucceed, onFailed)
-end
-
 ---------------------------------------------------------------------------------------------------------------------
 
 function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFailed)
@@ -360,131 +338,131 @@ function UserBaseServer.saveDataObjectOfCurrentUser(dataObject, onSucceed, onFai
     end
 end
 
-function UserBaseServer.saveDataNewPlayState()
-    UserBaseServer.synBookRelations({'DataNewPlayState'}, nil, false)
-end
+-- function UserBaseServer.saveDataNewPlayState()
+--     UserBaseServer.synBookRelations({'DataNewPlayState'}, nil, false)
+-- end
 
-function UserBaseServer.saveDataWrongWordBuffer()
-    UserBaseServer.synBookRelations({'DataWrongWordBuffer'}, nil, false)
-end
+-- function UserBaseServer.saveDataWrongWordBuffer()
+--     UserBaseServer.synBookRelations({'DataWrongWordBuffer'}, nil, false)
+-- end
 
-function UserBaseServer.saveDataTodayReviewBossNum()
-    UserBaseServer.synBookRelations({'DataTodayReviewBossNum'}, nil, false)
-end
+-- function UserBaseServer.saveDataTodayReviewBossNum()
+--     UserBaseServer.synBookRelations({'DataTodayReviewBossNum'}, nil, false)
+-- end
 
-function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
-    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
-        if onCompleted then onCompleted() end
-        return
-    end
+-- function UserBaseServer.synBookRelations(classNames, onCompleted, saveToLocalDB)
+--     if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+--         if onCompleted then onCompleted() end
+--         return
+--     end
 
-    if s_CURRENT_USER.bookKey == '' then 
-        if onCompleted then onCompleted() end
-        return 
-    end
+--     if s_CURRENT_USER.bookKey == '' then 
+--         if onCompleted then onCompleted() end
+--         return 
+--     end
 
-    local all = {'DataNewPlayState', 'DataWrongWordBuffer', 'DataTodayReviewBossNum'}
-    classNames = classNames or all
-    saveToLocalDB = saveToLocalDB or true
+--     local all = {'DataNewPlayState', 'DataWrongWordBuffer', 'DataTodayReviewBossNum'}
+--     classNames = classNames or all
+--     saveToLocalDB = saveToLocalDB or true
 
-    print ('synBookRelations AAA >>>')
-    print_lua_table (classNames)
+--     print ('synBookRelations AAA >>>')
+--     print_lua_table (classNames)
 
-    local objs = {}
-    objs.className = 'DataBookRelations'
-    objs.bookKey = s_UserBaseServer.bookKey
-    updateDataFromUser(objs, s_CURRENT_USER)
+--     local objs = {}
+--     objs.className = 'DataBookRelations'
+--     objs.bookKey = s_UserBaseServer.bookKey
+--     updateDataFromUser(objs, s_CURRENT_USER)
 
-    local clientDatas = {}
-    for key, value in pairs(classNames) do
-        if value == 'DataNewPlayState' then
-            local data = s_LocalDatabaseManager.getDataNewPlayState()
-            if data ~= nil then
-                objs['lastUpdate' .. value] = data.lastUpdate
-                objs.playModel = data.playModel
-                objs.rightWordList = data.rightWordList
-                objs.wrongWordList = data.wrongWordList
-                objs.wordCandidate = data.wordCandidate
-                clientDatas[value] = data
-            end
-        elseif value == 'DataWrongWordBuffer' then
-            local data = s_LocalDatabaseManager.getDataWrongWordBuffer()
-            if data ~= nil then
-                objs['lastUpdate' .. value] = data.lastUpdate
-                objs.wordNum = data.wordNum
-                objs.wordBuffer = data.wordBuffer
-                clientDatas[value] = data
-            end
-        elseif value == 'DataTodayReviewBossNum' then
-            local data = s_LocalDatabaseManager.getDataTodayTotalBoss()
-            if data ~= nil then
-                objs['lastUpdate' .. value] = data.lastUpdate
-                objs.bossNum = data.bossNum
-                clientDatas[value] = data
-            end
-        end
-    end
+--     local clientDatas = {}
+--     for key, value in pairs(classNames) do
+--         if value == 'DataNewPlayState' then
+--             local data = s_LocalDatabaseManager.getDataNewPlayState()
+--             if data ~= nil then
+--                 objs['lastUpdate' .. value] = data.lastUpdate
+--                 objs.playModel = data.playModel
+--                 objs.rightWordList = data.rightWordList
+--                 objs.wrongWordList = data.wrongWordList
+--                 objs.wordCandidate = data.wordCandidate
+--                 clientDatas[value] = data
+--             end
+--         elseif value == 'DataWrongWordBuffer' then
+--             local data = s_LocalDatabaseManager.getDataWrongWordBuffer()
+--             if data ~= nil then
+--                 objs['lastUpdate' .. value] = data.lastUpdate
+--                 objs.wordNum = data.wordNum
+--                 objs.wordBuffer = data.wordBuffer
+--                 clientDatas[value] = data
+--             end
+--         elseif value == 'DataTodayReviewBossNum' then
+--             local data = s_LocalDatabaseManager.getDataTodayTotalBoss()
+--             if data ~= nil then
+--                 objs['lastUpdate' .. value] = data.lastUpdate
+--                 objs.bossNum = data.bossNum
+--                 clientDatas[value] = data
+--             end
+--         end
+--     end
 
-    print ('\n')
-    print_lua_table (objs)
-    print ('synBookRelations AAA <<<')
+--     print ('\n')
+--     print_lua_table (objs)
+--     print ('synBookRelations AAA <<<')
 
-    s_SERVER.synData(objs, 
-        function (api, result) 
-            print ('synBookRelations synData >>>')
-            print_lua_table (result)
+--     s_SERVER.synData(objs, 
+--         function (api, result) 
+--             print ('synBookRelations synData >>>')
+--             print_lua_table (result)
             
-            if saveToLocalDB == true then
-                -- update local db data
-                for key, value in pairs(clientDatas) do
-                    local timestamp = result['lastUpdate'..key]
-                    if timestamp ~= nil and value['lastUpdate'] ~= nil and timestamp > value['lastUpdate'] then
-                        value['lastUpdate'] = timestamp
-                        if key == 'DataNewPlayState' then
-                            s_LocalDatabaseManager.saveDataNewPlayState(result.playModel, result.rightWordList, result.wrongWordList, result.wordCandidate, timestamp)
-                        elseif key == 'DataWrongWordBuffer' then
-                            s_LocalDatabaseManager.saveDataWrongWordBuffer(result.wordNum, result.wordBuffer, timestamp)
-                        elseif key == 'DataTodayReviewBossNum' then
-                            s_LocalDatabaseManager.saveDataTodayReviewBossNum(result.bossNum, timestamp)
-                        end
-                    end
-                end -- for
-            end
+--             if saveToLocalDB == true then
+--                 -- update local db data
+--                 for key, value in pairs(clientDatas) do
+--                     local timestamp = result['lastUpdate'..key]
+--                     if timestamp ~= nil and value['lastUpdate'] ~= nil and timestamp > value['lastUpdate'] then
+--                         value['lastUpdate'] = timestamp
+--                         if key == 'DataNewPlayState' then
+--                             s_LocalDatabaseManager.saveDataNewPlayState(result.playModel, result.rightWordList, result.wrongWordList, result.wordCandidate, timestamp)
+--                         elseif key == 'DataWrongWordBuffer' then
+--                             s_LocalDatabaseManager.saveDataWrongWordBuffer(result.wordNum, result.wordBuffer, timestamp)
+--                         elseif key == 'DataTodayReviewBossNum' then
+--                             s_LocalDatabaseManager.saveDataTodayReviewBossNum(result.bossNum, timestamp)
+--                         end
+--                     end
+--                 end -- for
+--             end
 
-            print ('synBookRelations synData <<<')
+--             print ('synBookRelations synData <<<')
 
-            if onCompleted then onCompleted() end
-        end, 
-        function (api, code, message, description) 
-            if onCompleted then onCompleted() end
-        end)
-end
+--             if onCompleted then onCompleted() end
+--         end, 
+--         function (api, code, message, description) 
+--             if onCompleted then onCompleted() end
+--         end)
+-- end
 
-function UserBaseServer.synTodayDailyStudyInfo(data, onCompleted, saveToLocalDB)
-    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
-        if onCompleted then onCompleted() end
-        return
-    end
+-- function UserBaseServer.synTodayDailyStudyInfo(data, onCompleted, saveToLocalDB)
+--     if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+--         if onCompleted then onCompleted() end
+--         return
+--     end
 
-    saveToLocalDB = saveToLocalDB or true
+--     saveToLocalDB = saveToLocalDB or true
 
-    s_SERVER.synData(data, 
-        function (api, result) 
-            print ('synTodayDailyStudyInfo >>>')
-            print_lua_table (result)
-            print ('synTodayDailyStudyInfo <<<')
+--     s_SERVER.synData(data, 
+--         function (api, result) 
+--             print ('synTodayDailyStudyInfo >>>')
+--             print_lua_table (result)
+--             print ('synTodayDailyStudyInfo <<<')
 
-            local timestamp = result['lastUpdate']
-            if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
-                parseServerDataToClientData(result, data)
-                s_LocalDatabaseManager.saveDataDailyStudyInfo(data)
-            end
+--             local timestamp = result['lastUpdate']
+--             if saveToLocalDB and timestamp ~= nil and data.lastUpdate ~= nil and timestamp > data.lastUpdate then
+--                 parseServerDataToClientData(result, data)
+--                 s_LocalDatabaseManager.saveDataDailyStudyInfo(data)
+--             end
 
-            if onCompleted then onCompleted() end
-        end, 
-        function (api, code, message, description)
-            if onCompleted then onCompleted() end 
-        end)
-end
+--             if onCompleted then onCompleted() end
+--         end, 
+--         function (api, code, message, description)
+--             if onCompleted then onCompleted() end 
+--         end)
+-- end
 
 return UserBaseServer

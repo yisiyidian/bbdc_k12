@@ -18,6 +18,7 @@ function NewStudySuccessLayer.create()
     local beanNum = s_CorePlayManager.reward - s_CorePlayManager.ordinalNum
     if s_CorePlayManager.reward - s_CorePlayManager.ordinalNum >= 0 then
         s_CURRENT_USER:addBeans(beanNum)
+        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     else
         beanNum = 0
     end

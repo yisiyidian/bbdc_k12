@@ -61,11 +61,12 @@ function synUserAfterLogIn(localDBUser, serverUser, callback)
         end
     end
 
-    local data = {['objectId']=localDBUser.objectId}
+    local data = {}
     for key, value in pairs(localDBUser) do
         if type(value) ~= 'function' 
             and type(value) ~= 'table' 
-            and key ~= 'sessionToken' 
+            and key ~= 'sessionToken'
+            and key ~= 'objectId' 
             and key ~= 'password' 
             and key ~= 'createdAt' 
             and key ~= 'updatedAt' then
@@ -196,4 +197,33 @@ function saveToServer(dataTable, callback)
 
     local protocol = ProtocolBase.create(api, serverRequestType, dataTable, cb)
     protocol:request()
+end
+
+-- callback(datas, error)
+function saveUserToServer(dataTable, callback)
+    local function cb (datas, error)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
+        if error == nil then
+            if callback then callback(datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId}
+    for key, value in pairs(dataTable) do
+        if (key == 'sessionToken'
+            or key == 'password' 
+            or key == 'className' 
+            or key == 'createdAt' 
+            or key == 'updatedAt' 
+            or string.find(key, '__') ~= nil 
+            or value == nil) == false 
+            and (type(value) ~= 'function' and type(value) ~= 'table') then 
+
+            userdata[key] = value
+
+        end
+    end
+    saveToServer(userdata, cb)    
 end

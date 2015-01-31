@@ -17,11 +17,11 @@ function ShopAlter.create(itemId, location)
     main:ignoreAnchorPointForPosition(false)
 
     main.sure = function()
-        if s_CURRENT_USER.beans >= s_DataManager.product[itemId].productValue then
-            s_CURRENT_USER.beans = s_CURRENT_USER.beans - s_DataManager.product[itemId].productValue
+        if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue then
+            s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
             s_CURRENT_USER:unlockFunctionState(itemId)
-            s_CURRENT_USER:updateDataToServer()
-            
+            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY], ['lockFunction']=s_CURRENT_USER.lockFunction})
+
             main:removeFromParent()
             
             if location == 'in' then

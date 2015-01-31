@@ -134,10 +134,11 @@ local function _initServer()
 end
 
 local function _initData()
+    DataUser = reloadModule('model.user.DataUser')
+    
     s_LocalDatabaseManager = reloadModule('model.LocalDatabaseManager')
     s_LocalDatabaseManager.init()
 
-    local DataUser = reloadModule('model.user.DataUser')
     s_CURRENT_USER = DataUser.create()
 end
 

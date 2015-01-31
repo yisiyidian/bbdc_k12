@@ -257,6 +257,7 @@ function NewReviewBossSummaryLayer.create()
 --            print("reward .."..s_CorePlayManager.currentReward)
 --            print("total .."..s_CorePlayManager.reward)
             s_CURRENT_USER:addBeans(s_CorePlayManager.currentReward)
+            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
             
             local candidate = s_CorePlayManager.getReviewBossCandidate() 
             s_CorePlayManager.initNewReviewBossLayer(candidate)
