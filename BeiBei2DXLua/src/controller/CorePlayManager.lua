@@ -133,15 +133,13 @@ function CorePlayManager.leaveStudyModel(state)
         -- answer right
         CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
         local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
-        print("ziaoang.."..CorePlayManager.currentIndex)
-        print("ziaoang.."..wordName)
         CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
     else
         -- answer wrong
         CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
         if CorePlayManager.wrongWordNum == s_max_wrong_num_everyday then
             -- do collect enough words
-            
+            CorePlayManager.enterStudyOverModel()
         else
             -- do not collect enough words
             CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
@@ -152,11 +150,13 @@ function CorePlayManager.leaveStudyModel(state)
 end
 
 function CorePlayManager.enterStudyOverModel()
-
+    local MiddleLayer = require("view.newstudy.MiddleLayer")
+    local middleLayer = MiddleLayer.create()
+    s_SCENE:replaceGameLayer(middleLayer)
 end
 
-function CorePlayManager.levelStudyOverModel()
-    
+function CorePlayManager.leaveStudyOverModel()
+    CorePlayManager.enterLevelLayer()
 end
 
 function CorePlayManager.enterTestModel(wordList)
