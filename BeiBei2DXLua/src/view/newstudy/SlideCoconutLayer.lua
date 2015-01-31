@@ -72,7 +72,7 @@ function SlideCoconutLayer:ctor(word,wrongNum)
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar = ProgressBar.create(10, 0, "blue")
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     
