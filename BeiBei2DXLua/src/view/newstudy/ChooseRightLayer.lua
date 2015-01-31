@@ -25,7 +25,9 @@ local function addStudyButton(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.leaveStudyModel(false)
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(chooseWrongLayer)   
         end
     end
 
@@ -70,7 +72,7 @@ function ChooseRightLayer:ctor(word,wrongNum)
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar = ProgressBar.create(10, 0, "blue")
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     
