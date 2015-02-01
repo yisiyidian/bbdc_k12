@@ -359,6 +359,18 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 
+function Manager.getBossInfo(bossID)
+    localdatabase_bossWord.getBossInfo(bossID)
+end
+
+function Manager.addRightWord(wordindex)
+    localdatabase_bossWord.addRightWord(wordindex)
+end
+
+function Manager.addWrongWord(wordindex)
+    localdatabase_bossWord.addWrongWord(wordindex)
+end
+
 function Manager.printBossWord()
     localdatabase_bossWord.printBossWord()
 end

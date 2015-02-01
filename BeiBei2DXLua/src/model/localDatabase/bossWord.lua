@@ -18,6 +18,7 @@ local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, last
     return data
 end
 
+
 function M.getBossInfo(bossID)
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
@@ -72,7 +73,35 @@ function M.getBossInfo(bossID)
     return boss
 end
 
-function M.addWrongWord(wordname, wordindex)
+
+function M.addRightWord(wordindex)
+    local wordname = s_BookWord[s_CURRENT_USER.bookKey][wordindex]
+
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local time      = os.time()
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    local bossID    = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
+        bossID      = row.bossID
+    end
+
+    if bossID == nil then
+        local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '', "..wordindex..") ;"
+        Manager.database:exec(query)
+    else
+        local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
+        Manager.database:exec(query)
+    end
+end
+
+
+function M.addWrongWord(wordindex)
+    local wordname = s_BookWord[s_CURRENT_USER.bookKey][wordindex]
+
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
@@ -89,46 +118,52 @@ function M.addWrongWord(wordname, wordindex)
         wordList    = row.wordList
     end
 
-    if wordList == nil then
-        local query = "INSERT INTO DataBossWord (userId, username, bookKey, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', 1, 0, '"..wordname.."', "..wordindex..") ;"
+    if bossID == nil then
+        local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '"..wordname.."', "..wordindex..") ;"
         Manager.database:exec(query)
         return false
     elseif wordList == '' then
-        local query = "UPDATE DataBossWord SET wordList = '"..wordname.."' and lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
+        local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , wordList = '"..wordname.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
         Manager.database:exec(query)
         return false
     else
-        local wordCount = split(wordList, "|")
         local newWordList = wordList.."|"..wordname
+        local wordCount = split(wordList, "|")
 
         if wordCount == 9 then
-            local query = "UPDATE DataBossWord SET typeIndex = 1 and wordList = '"..newWordList.."' and lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
+            local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
 
-            query = "INSERT INTO DataBossWord (userId, username, bookKey, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', "..(bossID+1)..", 0, '', "..wordindex..") ;"
+            query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..wordindex..") ;"
             Manager.database:exec(query)
             return true
         else
-            local query = "UPDATE DataBossWord SET wordList = '"..newWordList.."' and lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
+            local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
             return false
         end
     end
 end
 
+
 function M.printBossWord()
     if RELEASE_APP ~= DEBUG_FOR_TEST then return end
 
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
 
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    local query = "SELECT * FROM DataBossWord WHERE "..condition.." ;"
+    print(query)
     print("<bossWord>")
-    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
+    for row in Manager.database:nrows(query) do
         print("<item>")
         print("bossID: "..row.bossID)
         print("typeIndex: "..row.typeIndex)
         print("wordList: "..row.wordList)
-        print("lastUpdate: "..row.lastUpdate)
+        print("lastWordIndex: "..row.lastWordIndex)
         print("</item>")
     end
     print("</bossWord>")

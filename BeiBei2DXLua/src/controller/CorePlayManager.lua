@@ -130,13 +130,23 @@ end
 
 function CorePlayManager.leaveStudyModel(state)
     if state == true then
-        -- answer right
+        print('answer right')
+        s_LocalDatabaseManager.addRightWord(CorePlayManager.currentIndex)
+        s_LocalDatabaseManager.printBossWord()
         CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+        s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
+        -- s_CURRENT_USER.levelInfo:sysData()
+
         local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
         CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
     else
-        -- answer wrong
+        print('answer wrong')
+        s_LocalDatabaseManager.addWrongWord(CorePlayManager.currentIndex)
+        s_LocalDatabaseManager.printBossWord()
         CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+        s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
+        -- s_CURRENT_USER.levelInfo:sysData()
+
         if CorePlayManager.wrongWordNum == s_max_wrong_num_everyday then
             -- do collect enough words
             CorePlayManager.enterStudyOverModel()
