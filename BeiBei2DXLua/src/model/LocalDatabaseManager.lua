@@ -360,7 +360,7 @@ end
 ---------------------------------------------------------------------------------------------------------
 
 function Manager.getBossInfo(bossID)
-    localdatabase_bossWord.getBossInfo(bossID)
+    return localdatabase_bossWord.getBossInfo(bossID)
 end
 
 function Manager.addRightWord(wordindex)
@@ -368,7 +368,7 @@ function Manager.addRightWord(wordindex)
 end
 
 function Manager.addWrongWord(wordindex)
-    localdatabase_bossWord.addWrongWord(wordindex)
+    return localdatabase_bossWord.addWrongWord(wordindex)
 end
 
 function Manager.printBossWord()

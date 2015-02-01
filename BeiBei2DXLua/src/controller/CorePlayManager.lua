@@ -102,7 +102,26 @@ end
 function CorePlayManager.initStudyModel()
     CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
-    CorePlayManager.wrongWordNum = 0
+    
+    CorePlayManager.bossInfo = s_LocalDatabaseManager.getBossInfo(1)
+
+    print("<boss info>")
+    print(CorePlayManager.bossInfo.bossID)
+    print(CorePlayManager.bossInfo.typeIndex)
+    CorePlayManager.wrongWordNum = #CorePlayManager.bossInfo.wrongWordList
+
+    print("<right word list>")
+    for i = 1, #CorePlayManager.bossInfo.rightWordList do
+        print(CorePlayManager.bossInfo.rightWordList[i])
+    end
+    print("<end>")
+
+    print("<wrong word list>")
+    for i = 1, #CorePlayManager.bossInfo.wrongWordList do
+        print(CorePlayManager.bossInfo.wrongWordList[i])
+    end
+    print("<end>")
+    
 
     local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
     CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)

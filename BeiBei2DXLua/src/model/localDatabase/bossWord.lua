@@ -18,7 +18,6 @@ local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, last
     return data
 end
 
-
 function M.getBossInfo(bossID)
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
@@ -33,7 +32,6 @@ function M.getBossInfo(bossID)
         boss.wrongWordList  = row.wordList
         boss.lastWordIndex  = row.lastWordIndex
     end
-
 
     if boss.bossID == nil then
         boss.bossID         = bossID
