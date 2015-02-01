@@ -50,42 +50,42 @@ function DataLevelInfo:getBookCurrentLevelIndex()
     return progress
 end
 
-function DataLevelInfo:getBossList(bookKey)
-    for i, v in ipairs(g_BOOKKEYS) do
-        if v == bookKey then
-            return self[DataLevelInfo.BossList .. g_BOOKS[i]]
-        end
-    end
-
-    return ''
-end
-
-function DataLevelInfo:getUpdateBossTime(bookKey)
-    for i, v in ipairs(g_BOOKKEYS) do
-        if v == bookKey then
-            return self[DataLevelInfo.UpdateBossTime .. g_BOOKS[i]]
-        end
-    end
-
-    return 0
-end
-
-
-function DataLevelInfo:updateBossList(bookKey, bossList)
-    for i, v in ipairs(g_BOOKKEYS) do
-        if v == bookKey then
-            self[DataLevelInfo.BossList .. g_BOOKS[i]] = bossList
-        end
-    end
-end
-
-function DataLevelInfo:updateTime(bookKey, updateTime)
-    for i, v in ipairs(g_BOOKKEYS) do
-        if v == bookKey then
-            self[DataLevelInfo.UpdateBossTime .. g_BOOKS[i]] = updateTime
-        end
-    end
-end
+--function DataLevelInfo:getBossList(bookKey)
+--    for i, v in ipairs(g_BOOKKEYS) do
+--        if v == bookKey then
+--            return self[DataLevelInfo.BossList .. g_BOOKS[i]]
+--        end
+--    end
+--
+--    return ''
+--end
+--
+--function DataLevelInfo:getUpdateBossTime(bookKey)
+--    for i, v in ipairs(g_BOOKKEYS) do
+--        if v == bookKey then
+--            return self[DataLevelInfo.UpdateBossTime .. g_BOOKS[i]]
+--        end
+--    end
+--
+--    return 0
+--end
+--
+--
+--function DataLevelInfo:updateBossList(bookKey, bossList)
+--    for i, v in ipairs(g_BOOKKEYS) do
+--        if v == bookKey then
+--            self[DataLevelInfo.BossList .. g_BOOKS[i]] = bossList
+--        end
+--    end
+--end
+--
+--function DataLevelInfo:updateTime(bookKey, updateTime)
+--    for i, v in ipairs(g_BOOKKEYS) do
+--        if v == bookKey then
+--            self[DataLevelInfo.UpdateBossTime .. g_BOOKS[i]] = updateTime
+--        end
+--    end
+--end
 
 function DataLevelInfo:getLevelInfo(bookKey)
     for i, v in ipairs(g_BOOKKEYS) do

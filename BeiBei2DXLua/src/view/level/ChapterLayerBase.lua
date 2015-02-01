@@ -114,7 +114,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
     -- TODO add review boss position
     -- TODO check level state
-    local levelState = 3
+    local levelState = math.random(0, 3)
     if levelState == 0 then
         local deco = cc.Sprite:create('image/chapter/elements/big_tubiao_daizi_tanchu_xiaoguan.png')
         deco:setPosition(levelPosition.x+10,levelPosition.y+20)
@@ -256,7 +256,8 @@ function ChapterLayerBase:addPopup(levelIndex)
             print('click task button '..sender:getName())
         end
     end
-    state = 2
+    state = math.random(0, 7)
+    print('state is '..state)
     local back, taskButton, tick
     tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
     if state == 0 then
@@ -284,7 +285,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-630)
     elseif state == 6 then
-        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu7.png')     
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_7.png')     
         taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-720)
     elseif state == 7 then
@@ -329,6 +330,11 @@ function ChapterLayerBase:plotDecoration()
     local currentLevelIndex = levelInfo
     local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)
     local chapterIndex = string.sub(self.chapterKey, 8)
+    -- add state information
+--    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+--    print('######## boss list ########')
+--    print_lua_table(bossList)
+    
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
         -- define touchEvent
@@ -379,44 +385,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
         self:addChild(number,130)
     end
 
-    
---    local levelNumber = (chapterIndex * 10 + levelIndex) * avgWordCount
---    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-----    if levelInfo['level'] == 'level39' and levelInfo['chapter'] == 'chapter3' then
-----        levelNumber = s_DataManager.books[s_CURRENT_USER.bookKey].words
-----    end
---    -- check random summary boss
---    local bossList = s_CURRENT_USER.levelInfo:getBossList(s_CURRENT_USER.bookKey)
---    local summaryboss = split(bossList,'|')
---    local currentIndex = levelIndex 
---    
--- 
---    if self.chapterKey == 'chapter1' then
---        currentIndex = currentIndex + 10
---    elseif self.chapterKey == 'chapter2' then
---        currentIndex = currentIndex + 30
---    elseif self.chapterKey == 'chapter3' then
---        currentIndex = currentIndex + 60
---    end
---    currentIndex = currentIndex + chapterIndex * 10
---
---    local checkSummaryBoss = false
---    for i = 1, #summaryboss do
---        if summaryboss[i] == '' then break end
---        if summaryboss[i] - currentIndex == 0 then
---            checkSummaryBoss = true
---            break
---        end
---    end
---    if not checkSummaryBoss then
---        local number = ccui.TextBMFont:create()
---        number:setFntFile('font/number_inclined.fnt')
---        --number:setColor(cc.c3b(56,26,23))
-----        number:setString(levelNumber)
---        number:setString(currentIndex+1)
---        number:setPosition(levelPosition.x, levelPosition.y+3)
---        self:addChild(number,130)
---    end
+ 
 end
 
 function ChapterLayerBase:loadResource()
