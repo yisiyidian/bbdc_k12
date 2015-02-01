@@ -18,10 +18,91 @@ local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, last
     return data
 end
 
+function M.getTodayReviewBoss()
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+
+    local time      = os.time()
+    local today     = os.date("%x", time)
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    local bossList  = {}
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID ;") do
+        if row.typeIndex >= 4 and row.typeIndex <= 7 then
+            local boss  = {}
+            boss.bossID = row.bossID
+            boss.typeIndex  = row.typeIndex
+            boss.lastUpdate = row.lastUpdate
+            table.insert(bossList, boss)
+        end
+    end
+
+    local getGapDay = function(day1, day2)
+        local t1 = split(day1, "/")
+        local t2 = split(day2, "/")
+        local d1 = {}
+        local d2 = {}
+        d1.year  = "20"..t1[3]
+        d1.month = t1[1]
+        d1.day   = t1[2]
+        d2.year  = "20"..t2[3]
+        d2.month = t2[1]
+        d2.day   = t2[2]
+        local numDay1 = os.time(d1)
+        local numDay2 = os.time(d2)
+        local gap = (numDay2-numDay1)/(3600*24)
+        return gap
+    end
+
+
+    local todayReviewBoss = {}
+    for i = 1, #bossList do
+        local boss = bossList[i]
+        
+        local gap
+        if     boss.typeIndex == 4 then
+            gap = 1
+        elseif boss.typeIndex == 5 then
+            gap = 2
+        elseif boss.typeIndex == 6 then
+            gap = 3
+        elseif boss.typeIndex == 7 then
+            gap = 8
+        end
+
+        local lastUpdateDay = os.date("%x", boss.lastUpdate)
+        local gapDayNum = getGapDay(lastUpdateDay, today)
+        if gapDayNum >= gap then
+            table.insert(todayReviewBoss, bossID)
+        end
+    end
+
+    return todayReviewBoss
+end
+
+function M.getMaxBossID()
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local time      = os.time()
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    local maxBossID = 1
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
+        maxBossID   = row.bossID
+    end
+
+    return maxBossID
+end
+
 function M.getBossInfo(bossID)
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
+    local time      = os.time()
     
     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
@@ -31,6 +112,7 @@ function M.getBossInfo(bossID)
         boss.typeIndex      = row.typeIndex
         boss.wrongWordList  = row.wordList
         boss.lastWordIndex  = row.lastWordIndex
+        boss.lastUpdate     = row.lastUpdate
     end
 
     if boss.bossID == nil then
@@ -38,6 +120,7 @@ function M.getBossInfo(bossID)
         boss.typeIndex      = 0
         boss.wrongWordList  = {}
         boss.rightWordList  = {}
+        boss.lastUpdate     = time
     else
         local startIndex
         if boss.bossID == 1 then
@@ -69,6 +152,18 @@ function M.getBossInfo(bossID)
     end
 
     return boss
+end
+
+function M.getAllBossInfo()
+    local bossList = {}
+
+    local maxBossID = M.getMaxBossID()
+    for i = 1, maxBossID do
+        local boss = M.getBossInfo(i)
+        table.insert(bossList, boss)
+    end
+
+    return bossList
 end
 
 
@@ -198,33 +293,6 @@ function M.addBossWord(bossWordList)
     local typeIndex = 0
     local data = createData(bookKey, time, maxBossID, typeIndex, bossWordList, lastWordIndex)
     Manager.saveData(data, userId, username, 0)
-end
-
-function M.getMaxBossID()
-    local userId = s_CURRENT_USER.objectId
-    local bookKey = s_CURRENT_USER.bookKey
-    local username = s_CURRENT_USER.username
-
-    local maxBossID = 0
-    local num = 0
-    if userId ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."';") do
-            num = num + 1
-            if row.bossID > maxBossID then
-                maxBossID = row.bossID
-            end
-        end
-    end
-    if num == 0 and username ~= '' then
-        for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE username = '"..username.."' and bookKey = '"..bookKey.."';") do
-            num = num + 1
-            if row.bossID > maxBossID then
-                maxBossID = row.bossID
-            end
-        end
-    end
-
-    return maxBossID
 end
 
 function M.getBossWordNum()
