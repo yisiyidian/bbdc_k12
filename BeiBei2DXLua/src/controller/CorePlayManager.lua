@@ -11,18 +11,6 @@ local DownloadLayer          = require("view.book.DownloadLayer")
 local WordListLayer          = require("view.wordlist.WordList")
 local FriendLayer            = require("view.friend.FriendLayer") 
 
-local NewStudyChooseLayer    = require("view.newstudy.NewStudyChooseLayer")
-local NewStudyRightLayer     = require("view.newstudy.NewStudyRightLayer")
-local NewStudyWrongLayer     = require("view.newstudy.NewStudyWrongLayer")
-local NewStudySlideLayer     = require("view.newstudy.NewStudySlideLayer")
-local NewStudyMiddleLayer    = require("view.newstudy.NewStudyMiddleLayer")
-local NewStudySuccessLayer   = require("view.newstudy.NewStudySuccessLayer")
-local NewStudyOverLayer      = require("view.newstudy.NewStudyOverLayer")
-local NewStudyBookOverLayer  = require("view.newstudy.NewStudyBookOverLayer")
-
-local ReviewBossMainLayer    = require("view.newreviewboss.NewReviewBossMainLayer")
-local ReviewBossHintLayer    = require("view.newreviewboss.NewReviewBossHintLayer")
-local ReviewBossSummaryLayer = require("view.newreviewboss.NewReviewBossSummaryLayer")
 
 local CorePlayManager = {}
 
@@ -126,7 +114,6 @@ function CorePlayManager.leaveStudyOverModel()
     CorePlayManager.enterLevelLayer()
 end
 
-
 function CorePlayManager.initTestModel()
 
 end
@@ -175,8 +162,8 @@ function CorePlayManager.enterHomeLayer()
 end
 
 function CorePlayManager.enterLevelLayer()
-    local testLayer = require('view.ChapterLayer')
-    local chapterLayer = testLayer.create()
+    local ChapterLayer = require('view.ChapterLayer')
+    local chapterLayer = ChapterLayer.create()
     s_SCENE:replaceGameLayer(chapterLayer)
 end
 
