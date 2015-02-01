@@ -289,7 +289,6 @@ function O2OController.loadConfigs()
 
     s_WordPool = s_DataManager.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
 end
 
 function O2OController.getDataLevelInfo(oncompleted)

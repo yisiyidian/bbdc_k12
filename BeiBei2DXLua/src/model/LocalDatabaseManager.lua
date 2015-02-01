@@ -359,6 +359,30 @@ end
 
 ---------------------------------------------------------------------------------------------------------
 
+function Manager.getTodayReviewBoss()
+    return localdatabase_bossWord.getTodayReviewBoss()
+end
+
+function Manager.getMaxBossID()
+    return localdatabase_bossWord.getMaxBossID()
+end
+
+function Manager.getBossInfo(bossID)
+    return localdatabase_bossWord.getBossInfo(bossID)
+end
+
+function Manager.getAllBossInfo()
+    return localdatabase_bossWord.getAllBossInfo()
+end
+
+function Manager.addRightWord(wordindex)
+    localdatabase_bossWord.addRightWord(wordindex)
+end
+
+function Manager.addWrongWord(wordindex)
+    return localdatabase_bossWord.addWrongWord(wordindex)
+end
+
 function Manager.printBossWord()
     localdatabase_bossWord.printBossWord()
 end
