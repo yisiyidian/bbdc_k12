@@ -96,10 +96,10 @@ function ChapterLayer:checkUnlockLevel()
             self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
             self:scrollLevelLayer(currentProgress,0.3)
             -- notification
-            self:addPlayerNotification(false)
-            local notification = self.player:getChildByTag(100)
-            local notificationAct = cc.ScaleTo:create(0.4,1)
-            notification:runAction(notificationAct)
+--            self:addPlayerNotification(false)
+--            local notification = self.player:getChildByTag(100)
+--            local notificationAct = cc.ScaleTo:create(0.4,1)
+--            notification:runAction(notificationAct)
         end)
         s_SCENE:callFuncWithDelay(2.0, function() 
             self:addBottomBounce()
@@ -145,7 +145,7 @@ end
 function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
     local type
-    print('gameState:'..s_LocalDatabaseManager.getGameState())
+    -- TODO get status list
     if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday then
         type = 'reviewboss'
 --    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel or s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then

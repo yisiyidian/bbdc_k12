@@ -47,17 +47,6 @@ end
 
 function DataLevelInfo:getBookCurrentLevelIndex()
     local progress = self:getLevelInfo(s_CURRENT_USER.bookKey)
---    local levelIndex = progress[]
---    local levelIndex = string.sub(progress['level'],6)+0
---    local chapterIndex = string.sub(progress['chapter'],8)+0
-----    if progress['chapter'] == 'chapter1' then
-----        levelIndex = levelIndex + 10
-----    elseif progress['chapter'] == 'chapter2' then
-----        levelIndex = levelIndex + 30
-----    elseif progress['chapter'] == 'chapter3' then
-----        levelIndex = levelIndex + 60
-----    end
---    levelIndex = levelIndex + 10 * chapterIndex
     return progress
 end
 
@@ -108,7 +97,6 @@ function DataLevelInfo:getLevelInfo(bookKey)
 end
 
 function DataLevelInfo:computeCurrentProgress()
-
 --    return 4
      return s_LocalDatabaseManager.getMaxBossID()
 end
