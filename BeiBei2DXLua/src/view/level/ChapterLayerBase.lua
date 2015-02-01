@@ -116,7 +116,10 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- TODO check level state
     local levelState = 0
     if levelState == 0 then
-    
+        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
+        deco:addAnimation(0,'animation',true)
+        deco:setPosition(levelPosition.x+10,levelPosition.y+20)
+        self:addChild(deco, 130)
     end
     if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday and  currentProgress - levelIndex == 0 then
         -- plot review boss
