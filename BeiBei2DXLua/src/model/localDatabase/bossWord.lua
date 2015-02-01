@@ -219,7 +219,7 @@ function M.addWrongWord(wordindex)
         return false
     else
         local newWordList = wordList.."|"..wordname
-        local wordCount = split(wordList, "|")
+        local wordCount = #split(wordList, "|")
 
         if wordCount == s_max_wrong_num_everyday - 1 then
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"

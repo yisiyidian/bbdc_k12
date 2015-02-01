@@ -45,11 +45,8 @@ function CorePlayManager.initTotalPlay()
     elseif CorePlayManager.currentTypeIndex >= 4 and CorePlayManager.currentTypeIndex <= 7 then
         -- review model
         CorePlayManager.initReviewModel()
-    elseif CorePlayManager.currentBossState == 8 then
-        -- over model
-        CorePlayManager.initOverModel()
     else
-        -- default model
+        -- over model
         CorePlayManager.initOverModel()
     end
 end
@@ -118,20 +115,15 @@ function CorePlayManager.initTestModel()
 
 end
 
-function CorePlayManager.initReviewModel()
-end
-
-function CorePlayManager.initSummaryModel()
-end
-
-function CorePlayManager.initOverModel()
-end
-
 function CorePlayManager.enterTestModel(wordList)
 
 end
 
-function CorePlayManager.leaveTest(state)
+function CorePlayManager.leaveTest()
+
+end
+
+function CorePlayManager.initReviewModel()
 
 end
 
@@ -139,7 +131,11 @@ function CorePlayManager.enterReviewModel(wordlist)
 
 end
 
-function CorePlayManager.leaveReview(state)
+function CorePlayManager.leaveReview()
+
+end
+
+function CorePlayManager.initSummaryModel()
 
 end
 
@@ -147,9 +143,10 @@ function CorePlayManager.enterSummaryModel(wordlist)
 
 end
 
-function CorePlayManager.leaveSummary(state)
+function CorePlayManager.leaveSummary()
 
 end
+
 
 function CorePlayManager.enterIntroLayer()
     local IntroLayer = IntroLayer.create(false)
