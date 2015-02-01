@@ -40,18 +40,6 @@ function CorePlayManager.create()
     CorePlayManager.loadConfiguration()
 end
 
-function CorePlayManager.getBossState()
-    -- if review boss exist
-    -- get latest
-    
-    bossList = {}
-    table.insert(bossList, 4)
-    table.insert(bossList, 4)
-    table.insert(bossList, 0)
-
-    return bossList
-end
-
 function CorePlayManager.initTotalPlay()  
     -- local gameState = s_LocalDatabaseManager.getGameState()
     -- if gameState == s_gamestate_reviewbossmodel_beforetoday then
@@ -67,84 +55,69 @@ function CorePlayManager.initTotalPlay()
     --     local candidate = CorePlayManager.getReviewBossCandidateToday()
     --     CorePlayManager.initNewReviewBossLayer(candidate)
     -- end
-    
-    CorePlayManager.enterCoreControl()
 
+    CorePlayManager.enterCoreControl()
 end
 
 
 function CorePlayManager.enterCoreControl()
-    CorePlayManager.currentBossID    = 1
-    CorePlayManager.currentBossState = 0
+    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
 
-    if     CorePlayManager.currentBossState == 0 then   -- study   model
+    if #todayReviewBoss == 0 then
+        CorePlayManager.currentBossID = s_LocalDatabaseManager.getMaxBossID()
+    else
+        CorePlayManager.currentBossID = todayReviewBoss[1]
+    end
+
+    CorePlayManager.currentBoss       = s_LocalDatabaseManager.getBossInfo(CorePlayManager.currentBossID)
+    CorePlayManager.currentTypeIndex  = CorePlayManager.currentBoss.typeIndex
+    CorePlayManager.currentRightWordList   = CorePlayManager.currentBoss.rightWordList
+    CorePlayManager.currentWrongWordList   = CorePlayManager.currentBoss.wrongWordList 
+
+
+    if     CorePlayManager.currentTypeIndex == 0 then
+        -- study   model
         CorePlayManager.initStudyModel()
-    elseif CorePlayManager.currentBossState == 1 then   -- test    model
+    elseif CorePlayManager.currentTypeIndex == 1 then
+        -- test    model
         CorePlayManager.initTestModel()
-    elseif CorePlayManager.currentBossState == 2 then   -- review  model
-        CorePlayManager.initReviewModel(0)
-    elseif CorePlayManager.currentBossState == 3 then   -- summary model
+    elseif CorePlayManager.currentTypeIndex == 2 then
+        -- review  model
+        CorePlayManager.initReviewModel()
+    elseif CorePlayManager.currentTypeIndex == 3 then
+        -- summary model
         CorePlayManager.initSummaryModel()
-    elseif CorePlayManager.currentBossState == 4 then   -- review1 model
-        CorePlayManager.initReviewModel(1)
-    elseif CorePlayManager.currentBossState == 5 then   -- review2 model
-        CorePlayManager.initReviewModel(2)
-    elseif CorePlayManager.currentBossState == 6 then   -- review3 model
-        CorePlayManager.initReviewModel(3)
-    elseif CorePlayManager.currentBossState == 7 then   -- review4 model
-        CorePlayManager.initReviewModel(4)
-    elseif CorePlayManager.currentBossState == 8 then   -- over    model
+    elseif CorePlayManager.currentTypeIndex >= 4 and CorePlayManager.currentTypeIndex <= 7 then
+        -- review1 model
+        CorePlayManager.initReviewModel()
+    elseif CorePlayManager.currentBossState == 8 then
+        -- over model
+        CorePlayManager.initOverModel()
+    else
+        -- default model
         CorePlayManager.initOverModel()
     end
 end
 
 -- init model
 function CorePlayManager.initStudyModel()
-    CorePlayManager.NewStudyLayerWordList = s_BookWord[s_CURRENT_USER.bookKey]
-    CorePlayManager.currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
-    
-    CorePlayManager.bossInfo = s_LocalDatabaseManager.getBossInfo(1)
+    CorePlayManager.BookWordList          = s_BookWord[s_CURRENT_USER.bookKey]
+    CorePlayManager.currentIndex          = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
+    CorePlayManager.wrongWordNum          = #CorePlayManager.currentWrongWordList
 
-    print("<boss info>")
-    print(CorePlayManager.bossInfo.bossID)
-    print(CorePlayManager.bossInfo.typeIndex)
-    CorePlayManager.wrongWordNum = #CorePlayManager.bossInfo.wrongWordList
-
-    print("<right word list>")
-    for i = 1, #CorePlayManager.bossInfo.rightWordList do
-        print(CorePlayManager.bossInfo.rightWordList[i])
-    end
-    print("<end>")
-
-    print("<wrong word list>")
-    for i = 1, #CorePlayManager.bossInfo.wrongWordList do
-        print(CorePlayManager.bossInfo.wrongWordList[i])
-    end
-    print("<end>")
-    
-
-    local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
+    local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
     CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
 end
 
-function CorePlayManager.initTestModel()
-
-end
-
-function CorePlayManager.initReviewModel(reviewNum)
-end
-
-function CorePlayManager.initSummaryModel()
-end
-
-function CorePlayManager.initOverModel()
-end
-
-
 function CorePlayManager.enterStudyModel(wordName, wrongWordNum)
-    local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-    local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum)
-    s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+    if wordName == nil then
+        -- book over
+        -- TODO
+    else
+        local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
+        local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum)
+        s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+    end
 end
 
 function CorePlayManager.leaveStudyModel(state)
@@ -154,25 +127,24 @@ function CorePlayManager.leaveStudyModel(state)
         s_LocalDatabaseManager.printBossWord()
         CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
         s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
-        -- s_CURRENT_USER.levelInfo:sysData()
 
-        local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
+        local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
         CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
     else
         print('answer wrong')
-        s_LocalDatabaseManager.addWrongWord(CorePlayManager.currentIndex)
+        local isNewBossBirth = s_LocalDatabaseManager.addWrongWord(CorePlayManager.currentIndex)
         s_LocalDatabaseManager.printBossWord()
-        CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+        CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
         s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
-        -- s_CURRENT_USER.levelInfo:sysData()
 
-        if CorePlayManager.wrongWordNum == s_max_wrong_num_everyday then
+        CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+
+        if isNewBossBirth then
             -- do collect enough words
             CorePlayManager.enterStudyOverModel()
         else
             -- do not collect enough words
-            CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
-            local wordName = CorePlayManager.NewStudyLayerWordList[CorePlayManager.currentIndex]
+            local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
             CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
         end
     end
@@ -186,6 +158,20 @@ end
 
 function CorePlayManager.leaveStudyOverModel()
     CorePlayManager.enterLevelLayer()
+end
+
+
+function CorePlayManager.initTestModel()
+
+end
+
+function CorePlayManager.initReviewModel()
+end
+
+function CorePlayManager.initSummaryModel()
+end
+
+function CorePlayManager.initOverModel()
 end
 
 function CorePlayManager.enterTestModel(wordList)
@@ -268,66 +254,6 @@ function CorePlayManager.initNewStudyLayer()
         CorePlayManager.enterNewStudyBookOverLayer()
         return
     end
-    
---    local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
---    if lastPlayState.lastUpdate == nil then
---        print("lastPlayStateRecord not exist...")
---        CorePlayManager.playModel     = 0 -- 0 for study and 1 for review and 2 for play over
---        CorePlayManager.rightWordList = {}
---        CorePlayManager.wrongWordList = {}
---        CorePlayManager.wordCandidate = {}
---        CorePlayManager.rightWordNum  = 0
---        CorePlayManager.wrongWordNum  = 0
---        CorePlayManager.candidateNum  = 0
---        CorePlayManager.enterNewStudyChooseLayer()
---    else
---        -- day format is a string like "11/16/14", as month + day + year
---        local lastupdate              = lastPlayState.lastUpdate
---        local lastupdate_day          = os.date("%x", lastupdate)
---        local current_day             = os.date("%x", os.time())
---        if lastupdate_day == current_day then
---            print("lastPlayStateRecord is today...")
---            CorePlayManager.playModel     = lastPlayState.playModel
---            if CorePlayManager.playModel == 2 then
---                print("lastPlayStateRecord is today but over...")
---                CorePlayManager.enterNewStudyOverLayer()
---            else
---                print("lastPlayStateRecord is today and not over...")
---                if lastPlayState.rightWordList == "" then
---                    CorePlayManager.rightWordList = {}
---                else
---                    CorePlayManager.rightWordList = split(lastPlayState.rightWordList, "|")
---                end
---                if lastPlayState.wrongWordList == "" then
---                    CorePlayManager.wrongWordList = {}
---                else
---                    CorePlayManager.wrongWordList = split(lastPlayState.wrongWordList, "|")
---                end
---                if lastPlayState.wordCandidate == "" then
---                    CorePlayManager.wordCandidate = {}
---                else
---                    CorePlayManager.wordCandidate = split(lastPlayState.wordCandidate, "|")
---                end
---                CorePlayManager.rightWordNum  = #CorePlayManager.rightWordList
---                CorePlayManager.wrongWordNum  = #CorePlayManager.wrongWordList
---                CorePlayManager.candidateNum  = #CorePlayManager.wordCandidate
---                print("right word list: "..lastPlayState.rightWordList)
---                print("wrong word list: "..lastPlayState.wrongWordList)
---                print("candidate word list: "..lastPlayState.wordCandidate)
---                CorePlayManager.enterNewStudyChooseLayer()
---            end
---        else
---            print("lastPlayStateRecord is before today...")
---            CorePlayManager.playModel     = 0
---            CorePlayManager.rightWordList = {}
---            CorePlayManager.wrongWordList = {}
---            CorePlayManager.wordCandidate = {}
---            CorePlayManager.rightWordNum  = 0
---            CorePlayManager.wrongWordNum  = 0
---            CorePlayManager.candidateNum  = 0
---            CorePlayManager.enterNewStudyChooseLayer()
---        end
---    end
 
     local lastPlayState = s_LocalDatabaseManager.getNewPlayState()
     s_LocalDatabaseManager.addOrdinalNum(0)
@@ -417,132 +343,6 @@ function CorePlayManager.recordStudyStateIntoDB()
     s_LocalDatabaseManager.printNewPlayState()
 end
 
-function CorePlayManager.checkInStudyModel()
-    CorePlayManager.playModel = 0
-    CorePlayManager.recordStudyStateIntoDB()
-end
-
-function CorePlayManager.checkInReviewModel()
-    CorePlayManager.playModel = 1
-    CorePlayManager.recordStudyStateIntoDB()
-end
-
-function CorePlayManager.checkInOverModel()
-    CorePlayManager.playModel = 2
-    CorePlayManager.recordStudyStateIntoDB()
-end
-
-function CorePlayManager.isStudyModel()
-    if CorePlayManager.playModel == 0 then
-        return true
-    else
-        return false
-    end
-end
-
-function CorePlayManager.isReviewModel()
-    if CorePlayManager.playModel == 1 then
-        return true
-    else
-        return false
-    end
-end
-
-function CorePlayManager.isOverModel()
-    if CorePlayManager.playModel == 2 then
-        return true
-    else
-        return false
-    end
-end
-
-function CorePlayManager.initWordCandidate()
-    for i = 1, CorePlayManager.wrongWordNum do
-        table.insert(CorePlayManager.wordCandidate, CorePlayManager.wrongWordList[i])
-    end
-    CorePlayManager.candidateNum = CorePlayManager.wrongWordNum
-    
-    s_CorePlayManager.recordStudyStateIntoDB()
-end
-
-function CorePlayManager.updateWordCandidate(isInsertTail)
-    if isInsertTail then
-        table.insert(CorePlayManager.wordCandidate, CorePlayManager.wordCandidate[1])
-        table.remove(CorePlayManager.wordCandidate, 1)
-    else
-        table.remove(CorePlayManager.wordCandidate, 1)
-        CorePlayManager.candidateNum = CorePlayManager.candidateNum - 1
-    end
-    
-    s_CorePlayManager.recordStudyStateIntoDB()
-end
-
-function CorePlayManager.enterNewStudyChooseLayer()
-    local newStudyChooseLayer = NewStudyChooseLayer.create()
-    s_SCENE:replaceGameLayer(newStudyChooseLayer)
-end
-
-function CorePlayManager.enterNewStudySlideLayer()
-    local newStudySlideLayer = NewStudySlideLayer.create()
-    s_SCENE:replaceGameLayer(newStudySlideLayer)
-end
-
-function CorePlayManager.enterNewStudyRightLayer()
-    local newStudyRightLayer = NewStudyRightLayer.create()
-    s_SCENE:replaceGameLayer(newStudyRightLayer)
-end
-
-function CorePlayManager.enterNewStudyWrongLayer()
-    local newStudyWrongLayer = NewStudyWrongLayer.create()
-    s_SCENE:replaceGameLayer(newStudyWrongLayer)
-end
-
-function CorePlayManager.enterNewStudyMiddleLayer()
-    local newStudyMiddleLayer = NewStudyMiddleLayer.create()
-    s_SCENE:replaceGameLayer(newStudyMiddleLayer)
-end
-
-function CorePlayManager.enterNewStudySuccessLayer()
-    local newStudySuccessLayer = NewStudySuccessLayer.create()
-    s_SCENE:replaceGameLayer(newStudySuccessLayer)
-end
-
-function CorePlayManager.enterNewStudyOverLayer()
-    local newStudyOverLayer = NewStudyOverLayer.create()
-    s_SCENE:replaceGameLayer(newStudyOverLayer)
-end
-
-function CorePlayManager.enterNewStudyBookOverLayer()
-    local newStudyBookOverLayer = NewStudyBookOverLayer.create()
-    s_SCENE:replaceGameLayer(newStudyBookOverLayer)
-end
-
-function CorePlayManager.updateCurrentIndex()
-    s_LocalDatabaseManager.addStudyWordsNum()
-    CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
-    
-    s_CorePlayManager.recordStudyStateIntoDB()
-end
-
-function CorePlayManager.updateRightWordList(wordname)
-    s_LocalDatabaseManager.addGraspWordsNum(1)
-
-    table.insert(CorePlayManager.rightWordList, wordname)
-    CorePlayManager.rightWordNum = CorePlayManager.rightWordNum + 1
-    
-    s_CorePlayManager.recordStudyStateIntoDB()
-end
-
-function CorePlayManager.updateWrongWordList(wordname)
-    s_LocalDatabaseManager.addWrongWordBuffer(wordname)
-    s_LocalDatabaseManager.printWrongWordBuffer()
-    s_LocalDatabaseManager.printBossWord()
-    
-    table.insert(CorePlayManager.wrongWordList, wordname)
-    CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
-    
-    s_CorePlayManager.recordStudyStateIntoDB()
-end
 
 
 -- new review boss

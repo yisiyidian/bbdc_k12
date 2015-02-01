@@ -112,7 +112,6 @@ function M.getBossInfo(bossID)
         boss.typeIndex      = row.typeIndex
         boss.wrongWordList  = row.wordList
         boss.lastWordIndex  = row.lastWordIndex
-        boss.lastUpdate     = row.lastUpdate
     end
 
     if boss.bossID == nil then
@@ -120,7 +119,6 @@ function M.getBossInfo(bossID)
         boss.typeIndex      = 0
         boss.wrongWordList  = {}
         boss.rightWordList  = {}
-        boss.lastUpdate     = time
     else
         local startIndex
         if boss.bossID == 1 then
@@ -223,7 +221,7 @@ function M.addWrongWord(wordindex)
         local newWordList = wordList.."|"..wordname
         local wordCount = split(wordList, "|")
 
-        if wordCount == 9 then
+        if wordCount == s_max_wrong_num_everyday - 1 then
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
 
