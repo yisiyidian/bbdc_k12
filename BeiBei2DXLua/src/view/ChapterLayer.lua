@@ -96,10 +96,10 @@ function ChapterLayer:checkUnlockLevel()
             self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
             self:scrollLevelLayer(currentProgress,0.3)
             -- notification
-            self:addPlayerNotification(false)
-            local notification = self.player:getChildByTag(100)
-            local notificationAct = cc.ScaleTo:create(0.4,1)
-            notification:runAction(notificationAct)
+--            self:addPlayerNotification(false)
+--            local notification = self.player:getChildByTag(100)
+--            local notificationAct = cc.ScaleTo:create(0.4,1)
+--            notification:runAction(notificationAct)
         end)
         s_SCENE:callFuncWithDelay(2.0, function() 
             self:addBottomBounce()
@@ -144,8 +144,50 @@ end
 
 function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
+    -- TODO get state
+--    local state
+--    if state == 0 then
+--        local title = cc.Label:createWithSystemFont('当前任务','',28)
+--        title:setColor(cc.c3b(56,26,23))
+--        title:ignoreAnchorPointForPosition(false)
+--        title:setAnchorPoint(0,0)
+--        title:setPosition(55,115)
+--        notification:addChild(title)
+--        local task_name = cc.Label:createWithSystemFont('积累生词: ','',22)
+--        task_name:setColor(cc.c3b(98,195,223))
+--        task_name:ignoreAnchorPointForPosition(false)
+--        task_name:setAnchorPoint(0,0)
+--        task_name:setPosition(30,85)
+--        notification:addChild(task_name)
+--        local number = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
+--        number:setColor(cc.c3b(165,55,80))
+--        number:ignoreAnchorPointForPosition(false)
+--        number:setAnchorPoint(0,0)
+--        number:setPosition(130,85)
+--        notification:addChild(number)
+--    elseif state == 1 then
+--        local title = cc.Label:createWithSystemFont('当前任务','',28)
+--        title:setColor(cc.c3b(56,26,23))
+--        title:ignoreAnchorPointForPosition(false)
+--        title:setAnchorPoint(0,0)
+--        title:setPosition(55,115)
+--        notification:addChild(title)
+--        local task_name = cc.Label:createWithSystemFont('趁热打铁: ','',22)
+--        task_name:setColor(cc.c3b(98,195,223))
+--        task_name:ignoreAnchorPointForPosition(false)
+--        task_name:setAnchorPoint(0,0)
+--        task_name:setPosition(30,85)
+--        notification:addChild(task_name)
+--        local number = cc.Label:createWithSystemFont((s_LocalDatabaseManager.getwrongWordListSize() - s_LocalDatabaseManager.getwordCandidateSize())..' / '..s_max_wrong_num_everyday,'',25)
+--        number:setColor(cc.c3b(165,55,80))
+--        number:ignoreAnchorPointForPosition(false)
+--        number:setAnchorPoint(0,0)
+--        number:setPosition(130,85)
+--        notification:addChild(number)
+--    end
     local type
-    print('gameState:'..s_LocalDatabaseManager.getGameState())
+    -- TODO get status list
+    
     if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday then
         type = 'reviewboss'
 --    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel or s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then
