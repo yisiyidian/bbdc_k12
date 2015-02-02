@@ -15,12 +15,8 @@ function MissionProgressLayer.create(share)
     local taskTotal = 120
     local taskCurrent = 120
     
-    local bossNumber 
-    if s_LocalDatabaseManager:getTodayTotalBossNum() == nil then
-        bossNumber = 0
-    else
-        bossNumber = s_LocalDatabaseManager:getTodayTotalBossNum()
-    end
+    local bossNumber = 0
+
     
     taskTotal = (bossNumber + 2) * s_max_wrong_num_everyday
     --taskCurrent = s_CorePlayManager:getProgress() + (bossNumber - s_LocalDatabaseManager:getTodayRemainBossNum()) * s_max_wrong_num_everyday
