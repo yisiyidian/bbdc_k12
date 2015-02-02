@@ -42,7 +42,7 @@ start = function ()
     initApp(start)
     if IS_SNS_QQ_LOGIN_AVAILABLE then cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY) end
 
-    if RELEASE_APP == RELEASE_FOR_APPSTORE then
+    if BUILD_TARGET == BUILD_TARGET_RELEASE then
         -- remove print debug info when release app
         print = function ( ... )
         end
@@ -68,7 +68,7 @@ start = function ()
         s_SERVER.production       = 0
         s_SERVER.hasLog             = true
 
-        if RELEASE_APP == RELEASE_FOR_TEST then
+        if BUILD_TARGET == BUILD_TARGET_RELEASE_TEST then
             test_code = NORMAL_CODE
 
             s_SERVER.closeNetwork = false
@@ -96,7 +96,7 @@ start = function ()
             local d = string.gsub(c,   "\t", "    ") 
             errorObj['msg'] = d
             errorObj['appVersion'] = s_APP_VERSION
-            errorObj['RA'] = RELEASE_APP
+            errorObj['RA'] = BUILD_TARGET
             s_SERVER.createData(errorObj)
         end
     end

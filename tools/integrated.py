@@ -130,9 +130,9 @@ fi
     return cmd
     pass
 
-# DEBUG_FOR_TEST = '0'
-# RELEASE_FOR_APPSTORE = '1'
-# RELEASE_FOR_TEST = '2'
+# BUILD_TARGET_DEBUG = '0'
+# BUILD_TARGET_RELEASE = '1'
+# BUILD_TARGET_RELEASE_TEST = '2'
 
 if __name__ == "__main__":
     if sys.argv[1] == '0':

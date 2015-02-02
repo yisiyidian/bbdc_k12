@@ -15,6 +15,7 @@
         <pathelement location="${libs3rd.dir}/libPluginProtocol.jar"></pathelement>
         <pathelement location="${libs3rd.dir}/umeng-analytics-v5.2.4.jar"></pathelement>
         <pathelement location="${libs3rd.dir}/open_sdk_r4346_lite.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/libammsdk.jar"></pathelement>
     </path>
 
     <path id="project.all.jars.path">

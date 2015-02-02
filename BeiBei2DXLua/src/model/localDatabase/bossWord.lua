@@ -238,7 +238,7 @@ end
 
 
 function M.printBossWord()
-    if RELEASE_APP ~= DEBUG_FOR_TEST then return end
+    if BUILD_TARGET ~= BUILD_TARGET_DEBUG then return end
 
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey

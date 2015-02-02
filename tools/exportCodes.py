@@ -6,9 +6,14 @@ import os, os.path, errno
 import sys
 import shutil
 
-DEBUG_FOR_TEST = '0'
-RELEASE_FOR_APPSTORE = '1'
-RELEASE_FOR_TEST = '2'
+try:
+    import xml.etree.cElementTree as ET
+except ImportError:
+    import xml.etree.ElementTree as ET
+
+BUILD_TARGET_DEBUG = '0'
+BUILD_TARGET_RELEASE = '1'
+BUILD_TARGET_RELEASE_TEST = '2'
 
 # ---------------------------------------------------------
 
@@ -28,28 +33,28 @@ UMENG_APP = UMENG_APP_ANDROID
 # ---------------------------------------------------------
 
 def getCodeTypeDes(codeType):
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         return 'debug'
-    elif codeType == RELEASE_FOR_APPSTORE:
+    elif codeType == BUILD_TARGET_RELEASE:
         return 'release'
-    elif codeType == RELEASE_FOR_TEST:
+    elif codeType == BUILD_TARGET_RELEASE_TEST:
         return 'release for test'
 
 def getLeanCloudAppId(codeType):
     lean_cloud_id = LEAN_CLOUD_RELEASE[0]
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         lean_cloud_id = LEAN_CLOUD_TEST[0]
     return lean_cloud_id
 
 def getLeanCloudAppKey(codeType):
     lean_cloud_key = LEAN_CLOUD_RELEASE[1]
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         lean_cloud_key = LEAN_CLOUD_TEST[1]        
     return lean_cloud_key
 
 def getLeanCloudAppName(codeType):
     lean_cloud_name = LEAN_CLOUD_RELEASE[2]
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         lean_cloud_name = LEAN_CLOUD_TEST[2]        
     return lean_cloud_name
 
@@ -72,8 +77,11 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget, ch
     for c in channels:
         if c['name'] == channelName:
             print getJsonObjToStr(c)
+            packageName = str(c['packageName'])
 
             am = open(androidManifest).read()
+            # <meta-data android:name="Channel ID" android:value="LeanCloud"/>
+            am = am.replace('LeanCloud', packageName)
             if len( str(c['QQAppId']) ) > 0:
                 am = am.replace('1103783596', str(c['QQAppId']))
             else:
@@ -82,7 +90,6 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget, ch
 
             # TODO
             # aaj = open(channelConfigsDir + AppActivityJava).read()
-            # packageName = str(c['packageName'])
             # if packageName == "com.beibei.wordmaster.tencentmyapp":
             #     am = am.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
             #     aaj = aaj.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
@@ -133,18 +140,18 @@ LEAN_CLOUD_KEY       = "%s"
 
 --------------------------------------------------------------------------------
 
-DEBUG_FOR_TEST       = '0'
-RELEASE_FOR_APPSTORE = '1'
-RELEASE_FOR_TEST     = '2'
+BUILD_TARGET_DEBUG            = '0'
+BUILD_TARGET_RELEASE          = '1'
+BUILD_TARGET_RELEASE_TEST     = '2'
 
-RELEASE_APP = '%s' -- DEBUG_FOR_TEST, RELEASE_FOR_APPSTORE, RELEASE_FOR_TEST
+BUILD_TARGET = '%s' -- BUILD_TARGET_DEBUG, BUILD_TARGET_RELEASE, BUILD_TARGET_RELEASE_TEST
 
 --------------------------------------------------------------------------------
 
 LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
-    if RELEASE_FOR_APPSTORE == RELEASE_APP then return end
+    if BUILD_TARGET_RELEASE == BUILD_TARGET then return end
 
     local str = ''
     -- if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
@@ -171,7 +178,7 @@ end
 
 def exportObjc(codeType, appVersionInfo, fullpath):
     isProduction = 'NO'
-    if codeType == RELEASE_FOR_APPSTORE:
+    if codeType == BUILD_TARGET_RELEASE:
         isProduction = 'YES'
 
     appVersionInfoLua = '''
@@ -200,7 +207,7 @@ def exportJava(codeType, appVersionInfo, fullpath):
 
     isDebugLogEnabled = 'true'
     isProduction = 'false'
-    if codeType == RELEASE_FOR_APPSTORE:
+    if codeType == BUILD_TARGET_RELEASE:
         isDebugLogEnabled = 'false'
         isProduction = 'true'
 

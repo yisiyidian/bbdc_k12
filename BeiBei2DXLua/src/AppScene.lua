@@ -89,7 +89,7 @@ function AppScene.create()
     scene.loadingLayer = LoadingLayer.create()
     scene.rootLayer:addChild(scene.loadingLayer)
 
-    if RELEASE_APP == RELEASE_FOR_APPSTORE then 
+    if BUILD_TARGET == BUILD_TARGET_RELEASE then 
         scene.debugLayer = cc.Layer:create()
         scene.debugLayer:setVisible(false) 
     else

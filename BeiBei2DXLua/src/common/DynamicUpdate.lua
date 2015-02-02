@@ -28,7 +28,7 @@ end
 
 function DynamicUpdate.beginLoginUpdate(updateInfo)
     
-    if RELEASE_APP==DEBUG_FOR_TEST or RELEASE_APP==RELEASE_FOR_TEST   then
+    if BUILD_TARGET==BUILD_TARGET_DEBUG or BUILD_TARGET==BUILD_TARGET_RELEASE_TEST   then
         am = cc.AssetsManagerEx:create("manifest/project_debug.manifest",storagePath)
         am:retain()
         print("debug version")
