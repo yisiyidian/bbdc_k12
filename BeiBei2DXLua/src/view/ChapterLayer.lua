@@ -159,7 +159,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
 --        task_name:setAnchorPoint(0,0)
 --        task_name:setPosition(30,85)
 --        notification:addChild(task_name)
---        local number = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
+--        local number = cc.Label:createWithSystemFont('0 / '..s_max_wrong_num_everyday,'',25)
 --        number:setColor(cc.c3b(165,55,80))
 --        number:ignoreAnchorPointForPosition(false)
 --        number:setAnchorPoint(0,0)
@@ -178,7 +178,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
 --        task_name:setAnchorPoint(0,0)
 --        task_name:setPosition(30,85)
 --        notification:addChild(task_name)
---        local number = cc.Label:createWithSystemFont((s_LocalDatabaseManager.getwrongWordListSize() - s_LocalDatabaseManager.getwordCandidateSize())..' / '..s_max_wrong_num_everyday,'',25)
+--        local number = cc.Label:createWithSystemFont('0 / '..s_max_wrong_num_everyday,'',25)
 --        number:setColor(cc.c3b(165,55,80))
 --        number:ignoreAnchorPointForPosition(false)
 --        number:setAnchorPoint(0,0)
@@ -187,21 +187,8 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
 --    end
     local type
     -- TODO get status list
-    
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_reviewbossmodel_beforetoday then
-        type = 'reviewboss'
---    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel or s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then
---        type = 'study'
-    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
-        type = 'study'
-    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_reviewmodel_extra then
-        type = 'review'
-    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel then
-        type = 'study'
-    elseif s_LocalDatabaseManager.getGameState() == s_gamestate_reviewmodel then
-        type = 'review'
-    end
---    type = 'reviewboss'
+
+    type = 'study'
     local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
     notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height)
     notification:setAnchorPoint(cc.p(0.5,0))
@@ -224,7 +211,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,85)
         notification:addChild(task_name)
-        local number = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getwrongWordListSize()..' / '..s_max_wrong_num_everyday,'',25)
+        local number = cc.Label:createWithSystemFont('0 / '..s_max_wrong_num_everyday,'',25)
         number:setColor(cc.c3b(165,55,80))
         number:ignoreAnchorPointForPosition(false)
         number:setAnchorPoint(0,0)
@@ -278,7 +265,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,85)
         notification:addChild(task_name)
-        local number = cc.Label:createWithSystemFont((s_LocalDatabaseManager.getwrongWordListSize() - s_LocalDatabaseManager.getwordCandidateSize())..' / '..s_max_wrong_num_everyday,'',25)
+        local number = cc.Label:createWithSystemFont('0 / '..s_max_wrong_num_everyday,'',25)
         number:setColor(cc.c3b(165,55,80))
         number:ignoreAnchorPointForPosition(false)
         number:setAnchorPoint(0,0)
@@ -356,12 +343,8 @@ function ChapterLayer:addPlayer()
     local currentChapterKey = 'chapter'..math.floor(levelInfo/s_islands_per_page)
     local levelKey = 'level'..levelInfo
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
---    if true then
-        self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
-    else
-        self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
-    end
+
+    self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
     local position = self.chapterDic[currentChapterKey]:getLevelPosition(levelKey)
     self.player:setPosition(position.x+100,position.y)
     --self.player:setScale(0.4)
@@ -378,11 +361,7 @@ function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
     self.player:removeFromParent()
 --    local levelInfo = s_CURRENT_USER.levelInfo:computeCu
     --self.player = cc.Sprite:create('image/chapter_level/gril_head.png')
-    if s_LocalDatabaseManager.getGameState() == s_gamestate_studymodel_extra then
-        self.player = cc.Sprite:create('image/chapter/chapter0/complete.png')
-    else
-        self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
-    end
+    self.player = cc.Sprite:create('image/chapter/chapter0/player.png')
     local position = self.chapterDic[chapterKey]:getLevelPosition(levelKey)
 --    print('!!!!!!!!!!player position!!!!!!')
 --    print(position)
