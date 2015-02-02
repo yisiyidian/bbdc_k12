@@ -261,6 +261,24 @@ function M.printBossWord()
 end
 
 
+function M.getAllWrongWordList()
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    local wordPool = {}
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID ;") do
+        if row.wordList ~= '' then
+            local t = split(row.wordList, "|")
+            for i = 1, #t do
+                table.insert(wordPool, t[i])
+            end
+        end
+    end
+    return wordPool
+end
 
 
 return M

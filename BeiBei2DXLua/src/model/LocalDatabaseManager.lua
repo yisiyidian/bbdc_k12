@@ -103,11 +103,13 @@ function Manager.getStudyDayNum()
     return localdatabase_dailyStudyInfo.getStudyDayNum()
 end
 
-function Manager.getStudyWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
+function Manager.getStudyWordsNum(dayString)
+    -- day must be a string like "11/16/14", as month + day + year
     return localdatabase_dailyStudyInfo.getStudyWordsNum(dayString)
 end
 
-function Manager.getGraspWordsNum(dayString) -- day must be a string like "11/16/14", as month + day + year
+function Manager.getGraspWordsNum(dayString)
+    -- day must be a string like "11/16/14", as month + day + year
     return localdatabase_dailyStudyInfo.getGraspWordsNum(dayString)
 end
 
@@ -125,32 +127,6 @@ end
 
 function Manager.getOrdinalNum()
     return localdatabase_dailyStudyInfo.getOrdinalNum()
-end
-
-
----- Statistics -----------------------------------------------------------------------------------------
-
-function Manager.getTotalStudyWordsNum()
-    return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
-end
-
-function Manager.getTotalGraspWordsNum()
-    return 0
-end
-
-function Manager.getStudyWords()
-    local wordPool = {}
-    return wordPool
-end
-
-function Manager.getWrongWords()
-    local wordPool = {}
-    return wordPool
-end
-
-function Manager.getGraspWords()
-    local wordPool = {}
-    return wordPool
 end
 
 ---- Boss Word -------------------------------------------------------------------------------------------
@@ -182,6 +158,54 @@ end
 function Manager.printBossWord()
     localdatabase_bossWord.printBossWord()
 end
+
+---- Statistics -----------------------------------------------------------------------------------------
+
+function Manager.getTotalStudyWordsNum()
+    return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+end
+
+function Manager.getTotalGraspWordsNum()
+    return #localdatabase_bossWord.getAllWrongWordList()
+end
+
+function Manager.getStudyWords()
+    local bookKey = s_CURRENT_USER.bookKey
+    local wordList = s_BookWord[bookKey]
+    local currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
+    
+    local wordPool = {}
+    for i = 1, currentIndex-1 do
+        table.insert(wordPool, wordList[i])
+    end
+    return wordPool
+end
+
+function Manager.getWrongWords()
+    return localdatabase_bossWord.getAllWrongWordList()
+end
+
+function Manager.getGraspWords()
+    local studyWordPool = Manager.getStudyWords()
+    local wrongWordPool = Manager.getWrongWords()
+    
+    local dict = {}
+    for i = 1, #wrongWordPool do
+        local wordname = wrongWordPool[i]
+        dict[wordname] = 1
+    end
+    
+    local wordPool = {}
+    for i = 1, #studyWordPool do
+        local wordname = studyWordPool[i]
+        if dict[wordname] == nil then
+            table.insert(wordPool, wordname)
+        end
+    end
+
+    return wordPool
+end
+
 
 ---- Download --------------------------------------------------------------------------------------------
 
