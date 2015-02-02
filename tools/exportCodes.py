@@ -185,10 +185,13 @@ def exportObjc(codeType, appVersionInfo, fullpath):
 // %s
 // server: %s
 
-#define INIT_SERVER \\
+#define INIT_APP \\
     [AVOSCloud setApplicationId:@"%s" \\
                       clientKey:@"%s"]; \\
-    [AVCloud setProductionMode:%s];
+    [AVCloud setProductionMode:%s];\\
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];\\
+    \\
+    [WXApi registerApp:@"wxda1d46326a992465"];
 
 ''' % (getCodeTypeDes(codeType), getLeanCloudAppName(codeType), getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction)
 

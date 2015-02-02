@@ -48,9 +48,7 @@ static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [WXApi registerApp:@"wxda1d46326a992465"];
-    INIT_SERVER
-    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    INIT_APP
 
     cocos2d::Application *app = cocos2d::Application::getInstance();
     app->initGLContextAttrs();
@@ -151,13 +149,23 @@ static AppDelegate s_sharedApplication;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-//    return [WXApi handleOpenURL:url delegate:self];
-    return [TencentOAuth HandleOpenURL:url];
+    if ([WXApi handleOpenURL:url delegate:self]) {
+        return true;
+    }
+    if ([TencentOAuth HandleOpenURL:url]) {
+        return true;
+    }
+    return false;
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-//    return [WXApi handleOpenURL:url delegate:self];
-    return [TencentOAuth HandleOpenURL:url];
+    if ([WXApi handleOpenURL:url delegate:self]) {
+        return true;
+    }
+    if ([TencentOAuth HandleOpenURL:url]) {
+        return true;
+    }
+    return false;
 }
 
 #pragma mark -
