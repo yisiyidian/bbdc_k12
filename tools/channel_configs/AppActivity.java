@@ -67,9 +67,8 @@ public class AppActivity extends Cocos2dxActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		BBNDK.setup(getApplicationContext(), this);
-		
 		AppVersionInfo.initServer(this);
+        BBNDK.setup(getApplicationContext(), this, AppVersionInfo.WEIXIN_APP_ID);
 		
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);

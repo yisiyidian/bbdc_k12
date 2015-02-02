@@ -48,6 +48,12 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXUtils] getExternalStorageDirectory 
+-- @param self
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+-- 
 -- @function [parent=#CXUtils] showMail 
 -- @param self
 -- @param #char mailTitle

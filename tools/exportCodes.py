@@ -80,6 +80,7 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget, ch
             print getJsonObjToStr(c)
             packageName = str(c['packageName'])
 
+            # androidManifest ------------------------------------------------
             am = open(androidManifest).read()
             # <meta-data android:name="Channel ID" android:value="LeanCloud"/>
             am = am.replace('LeanCloud', packageName)
@@ -89,23 +90,39 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget, ch
                 am = am.replace('<!-- tencent start -->', '<!-- tencent start ')
                 am = am.replace('<!-- tencent end -->', ' tencent end -->')
 
-            # TODO
-            # aaj = open(channelConfigsDir + AppActivityJava).read()
-            # if packageName == "com.beibei.wordmaster.tencentmyapp":
-            #     am = am.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
-            #     aaj = aaj.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
-
             amt = open(androidManifestTarget, 'w')
             amt.write(am)
             amt.close()
+            # androidManifest ------------------------------------------------
 
-            # newJavaSrcDir = javaSrcDir + packageName.replace('.', '/') + '/'
-            # if os.path.exists(javaSrcDir + 'com/beibei/wordmaster'):
-            #     shutil.rmtree(javaSrcDir + 'com/beibei/wordmaster')
+
+
+
+            # AppActivityJava ------------------------------------------------
+            pkgPath = javaSrcDir + 'com/beibei/wordmaster/'
+            if os.path.exists(pkgPath):
+                shutil.rmtree(pkgPath)
+            os.makedirs(pkgPath)
+            rawJavaStr = open(channelConfigsDir + AppActivityJava).read()
+            if packageName != "com.beibei.wordmaster":
+                newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
+            #     newJavaSrcDir = javaSrcDir + packageName.replace('.', '/') + '/'
             #     os.makedirs(newJavaSrcDir)
-            # newAppActivityJava = open(newJavaSrcDir + AppActivityJava, 'w')
-            # newAppActivityJava.write(aaj)
-            # newAppActivityJava.close()
+            #     newAppActivityJava = open(newJavaSrcDir + AppActivityJava, 'w')
+            #     newAppActivityJava.write(newJavaStr)
+            #     newAppActivityJava.close()
+                # TODO
+                rawAppActivityJava = open(pkgPath + AppActivityJava, 'w')
+                rawAppActivityJava.write(rawJavaStr)
+                rawAppActivityJava.close()
+            else:
+                rawAppActivityJava = open(pkgPath + AppActivityJava, 'w')
+                rawAppActivityJava.write(rawJavaStr)
+                rawAppActivityJava.close()
+            # AppActivityJava ------------------------------------------------
+            
+
+            
 
             LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey']), getJsonObjToStr(c['leanCloudAppName'])]
             UMENG_APP = [str(c['umengAppKey']), getJsonObjToStr(c['umengAppName'])]
@@ -192,7 +209,7 @@ def exportObjc(codeType, appVersionInfo, fullpath):
     [AVCloud setProductionMode:%s];\\
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];\\
     \\
-    [WXApi registerApp:@"%s"]; //TODO
+    [WXApi registerApp:@"%s"];
 
 ''' % (getCodeTypeDes(codeType), getLeanCloudAppName(codeType), getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction, WEIXIN_APP[1])
 
@@ -226,11 +243,9 @@ import android.app.Activity;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
 import com.umeng.analytics.AnalyticsConfig;
-import com.tencent.mm.sdk.openapi.WXTextObject;
 
 public class AppVersionInfo {
-    private static final String WEIXIN_APP_ID = "%s"; //TODO
-    private IWXAPI api;
+    public static final String WEIXIN_APP_ID = "%s";
 
     public static void initServer(Activity a) {
         // server: %s
@@ -240,9 +255,6 @@ public class AppVersionInfo {
 
         AnalyticsConfig.setAppkey("%s");
         AnalyticsConfig.setChannel("%s");
-
-        api = WXAPIFactory.createWXAPI(a, WEIXIN_APP_ID, true);
-        api.registerApp(WEIXIN_APP_ID);
     }
 }
 ''' % (macro_type, WEIXIN_APP[1], getLeanCloudAppName(codeType), lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel)

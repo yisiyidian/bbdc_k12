@@ -39,3 +39,7 @@ void CXUtils::shareImageToWeiXin(const std::string& path, const std::string& tit
     [WXApi sendReq:req];
 
 }
+
+std::string CXUtils::getExternalStorageDirectory() {
+    return cocos2d::FileUtils::getInstance()->getWritablePath();
+}

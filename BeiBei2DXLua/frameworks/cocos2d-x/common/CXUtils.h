@@ -32,6 +32,8 @@ public:
     
     void _testCppApi_();
     
+    std::string getExternalStorageDirectory();
+    
 private:
     CXUtils();
     
