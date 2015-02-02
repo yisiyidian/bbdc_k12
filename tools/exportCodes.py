@@ -26,7 +26,8 @@ UMENG_APP_ANDROID    = ['549a5eb9fd98c5b2ac00144e', 'android']
 # ---------------------------------------------------------
 
 LEAN_CLOUD_TEST = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3", 'test']
-TENCENT_APP = ['true', 'package name', "1103783596", "n7vXdt6eDIggSsa6"]
+QQ_APP = ['true', 'package name', "1103783596", "n7vXdt6eDIggSsa6" , 'true']
+WEIXIN_APP = ['true', 'wx68b3465c73ce139e']
 LEAN_CLOUD_RELEASE = LEAN_CLOUD_XIAOMI
 UMENG_APP = UMENG_APP_ANDROID
 
@@ -70,7 +71,7 @@ def getJsonObjToStr(jsonObj):
 def init(channelName, channelConfigs, androidManifest, androidManifestTarget, channelConfigsDir, AppActivityJava, javaSrcDir):
     global LEAN_CLOUD_RELEASE
     global UMENG_APP
-    global TENCENT_APP
+    global QQ_APP
     configs = open(channelConfigs).read()
     jsonObj = json.loads(configs)
     channels = jsonObj['channels']
@@ -108,10 +109,10 @@ def init(channelName, channelConfigs, androidManifest, androidManifestTarget, ch
 
             LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey']), getJsonObjToStr(c['leanCloudAppName'])]
             UMENG_APP = [str(c['umengAppKey']), getJsonObjToStr(c['umengAppName'])]
-            TENCENT_APP = [str(c['isQQLogInAvailable']), getJsonObjToStr(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
+            QQ_APP = [str(c['isQQLogInAvailable']), getJsonObjToStr(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
 
             print getJsonObjToStr(c['umengAppName'])
-            print TENCENT_APP
+            print QQ_APP
 
             return
     
@@ -166,7 +167,7 @@ function getAppVersionDebugInfo()
 end
 
 ''' % (getCodeTypeDes(codeType), \
-    TENCENT_APP[0], TENCENT_APP[1], TENCENT_APP[2], TENCENT_APP[3], \
+    QQ_APP[0], QQ_APP[1], QQ_APP[2], QQ_APP[3], \
     LEAN_CLOUD_TEST[2], LEAN_CLOUD_TEST[0], LEAN_CLOUD_TEST[1], LEAN_CLOUD_RELEASE[2], LEAN_CLOUD_RELEASE[0], LEAN_CLOUD_RELEASE[1], \
     codeType, appVersionInfo, appVersionInfo, getCodeTypeDes(codeType))
 
@@ -191,9 +192,9 @@ def exportObjc(codeType, appVersionInfo, fullpath):
     [AVCloud setProductionMode:%s];\\
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];\\
     \\
-    [WXApi registerApp:@"wxda1d46326a992465"];
+    [WXApi registerApp:@"%s"]; //TODO
 
-''' % (getCodeTypeDes(codeType), getLeanCloudAppName(codeType), getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction)
+''' % (getCodeTypeDes(codeType), getLeanCloudAppName(codeType), getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction, WEIXIN_APP[1])
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
@@ -225,8 +226,11 @@ import android.app.Activity;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVOSCloud;
 import com.umeng.analytics.AnalyticsConfig;
+import com.tencent.mm.sdk.openapi.WXTextObject;
 
 public class AppVersionInfo {
+    private static final String WEIXIN_APP_ID = "%s"; //TODO
+    private IWXAPI api;
 
     public static void initServer(Activity a) {
         // server: %s
@@ -236,9 +240,12 @@ public class AppVersionInfo {
 
         AnalyticsConfig.setAppkey("%s");
         AnalyticsConfig.setChannel("%s");
+
+        api = WXAPIFactory.createWXAPI(a, WEIXIN_APP_ID, true);
+        api.registerApp(WEIXIN_APP_ID);
     }
 }
-''' % (macro_type, getLeanCloudAppName(codeType), lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel)
+''' % (macro_type, WEIXIN_APP[1], getLeanCloudAppName(codeType), lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)

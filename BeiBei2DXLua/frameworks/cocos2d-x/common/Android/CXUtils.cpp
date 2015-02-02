@@ -28,3 +28,7 @@ void CXUtils::shareImageToQQFriend(const std::string& path, const std::string& t
         t.env->DeleteLocalRef(t.classID);
     }
 }
+
+void CXUtils::shareImageToWeiXin(const std::string& path, const std::string& title, const std::string& desc) {
+}
+
