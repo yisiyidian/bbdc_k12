@@ -215,6 +215,7 @@ function SummaryBossAlter:win1()
 
         local function onButton(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
+                s_CorePlayManager.leaveSummaryModel(true)
                 s_SCENE:checkInAnimation()
             end
         end

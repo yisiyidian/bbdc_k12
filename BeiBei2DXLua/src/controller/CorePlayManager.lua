@@ -150,7 +150,9 @@ function CorePlayManager.initSummaryModel()
 end
 
 function CorePlayManager.enterSummaryModel(wordlist)
-    print("TODO: enter summary boss view")
+    local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
+    local summaryBossLayer = SummaryBossLayer.create(1)
+    s_SCENE:replaceGameLayer(summaryBossLayer) 
 end
 
 function CorePlayManager.leaveSummaryModel(state)
@@ -159,7 +161,7 @@ function CorePlayManager.leaveSummaryModel(state)
     else
         -- do nothing
     end
-    CorePlayManager.enterLevelLayer()
+    -- CorePlayManager.enterLevelLayer()
 end
 
 
