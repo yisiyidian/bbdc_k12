@@ -141,20 +141,35 @@ function ChapterLayer:checkUnlockLevel()
         -- add notification
         self:addPlayerNotification(true) 
     end
+--    self:addNotification()
 end
 
 function ChapterLayer:addNotification()
-    local notification = cc.Sprite:create('image/chapter/chapter0/notifi.png')
-    
-    notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height)
+    local notification = cc.Sprite:create('image/chapter/chapter0/notifi.png') 
     notification:setAnchorPoint(cc.p(0.5,0))
-    notification:setScale(0)
-    
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    
+    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+    local taskIndex 
     -- check active index
-    
+    if #todayReviewBoss == 0 then
+        taskIndex = progress
+    else
+        taskIndex = todayReviewBoss[0] - 1
+    end
     -- check state
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local taskState
+    for bossID, bossInfo in pairs(bossList) do
+        if bossID - (taskIndex + 1) == 0 then
+            taskState = bossInfo["typeIndex"] 
+        end
+    end
+    local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
+    local taskKey = 'level'..taskIndex
+    print('task:'..taskKey..taskChapterKey)
+    local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
+    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 200))
+    self.chapterDic[taskChapterKey]:addChild(notification, 150)
 end
 
 function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
