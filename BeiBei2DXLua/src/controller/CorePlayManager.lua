@@ -119,7 +119,7 @@ function CorePlayManager.enterTestModel(wordList)
 
 end
 
-function CorePlayManager.leaveTest()
+function CorePlayManager.leaveTestModel()
 
 end
 
@@ -131,7 +131,7 @@ function CorePlayManager.enterReviewModel(wordlist)
 
 end
 
-function CorePlayManager.leaveReview()
+function CorePlayManager.leaveReviewModel()
 
 end
 
@@ -143,7 +143,7 @@ function CorePlayManager.enterSummaryModel(wordlist)
 
 end
 
-function CorePlayManager.leaveSummary()
+function CorePlayManager.leaveSummaryModel()
 
 end
 
