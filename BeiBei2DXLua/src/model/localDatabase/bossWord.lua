@@ -225,8 +225,8 @@ function M.addWrongWord(wordindex)
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
 
-            query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..wordindex..") ;"
-            Manager.database:exec(query)
+            -- query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..wordindex..") ;"
+            -- Manager.database:exec(query)
             return true
         else
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
@@ -236,6 +236,9 @@ function M.addWrongWord(wordindex)
     end
 end
 
+function M.updateTypeIndex(bossID)
+    
+end
 
 function M.printBossWord()
     if BUILD_TARGET ~= BUILD_TARGET_DEBUG then return end

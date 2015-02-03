@@ -112,19 +112,21 @@ function CorePlayManager.leaveStudyOverModel()
 end
 
 function CorePlayManager.initTestModel()
-
+    CorePlayManager.enterTestModel(CorePlayManager.currentWrongWordList)
 end
 
-function CorePlayManager.enterTestModel(wordList)
-
+function CorePlayManager.enterTestModel(wordlist)
+    local BlacksmithLayer = require("view.newStudy.BlacksmithLayer")
+    local blacksmithLayer = BlacksmithLayer.create(wordlist)
+    s_SCENE:replaceGameLayer(blacksmithLayer)
 end
 
 function CorePlayManager.leaveTestModel()
-
+    CorePlayManager.enterLevelLayer()
 end
 
 function CorePlayManager.initReviewModel()
-
+    CorePlayManager.enterReviewModel(CorePlayManager.currentWrongWordList)
 end
 
 function CorePlayManager.enterReviewModel(wordlist)
@@ -132,7 +134,7 @@ function CorePlayManager.enterReviewModel(wordlist)
 end
 
 function CorePlayManager.leaveReviewModel()
-
+    CorePlayManager.enterLevelLayer()
 end
 
 function CorePlayManager.initSummaryModel()

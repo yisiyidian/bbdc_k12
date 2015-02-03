@@ -262,21 +262,19 @@ function O2OController.getUserDatasOnline()
                 s_CorePlayManager.enterBookLayer() 
             else
                
-                -- TODO sys wrong word levels & DailyStudyInfo
-                local dayString = getDayStringForDailyStudyInfo(os.time())
-                local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
-                if today == nil then
-                    today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
-                end
-                s_LocalDatabaseManager.saveDataDailyStudyInfo(today)
+                -- TODO sys wrong word levels
 
-                s_CorePlayManager.enterHomeLayer()
-                O2OController.getBulletinBoard()    
+                O2OController.getDailyStudyInfo(function () 
+                    s_CorePlayManager.enterHomeLayer()
+                    O2OController.getBulletinBoard()    
+                end)
                 
             end 
         end)
     end)
 end
+
+---------------------------------------------------------------------------------------------------
 
 function O2OController.loadConfigs()
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_CFG])
@@ -290,6 +288,8 @@ function O2OController.loadConfigs()
     s_WordPool = s_DataManager.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
 end
+
+---------------------------------------------------------------------------------------------------
 
 function O2OController.getDataLevelInfo(oncompleted)
     s_CURRENT_USER.levelInfo:getDataFromLocalDB()    
@@ -369,6 +369,38 @@ function O2OController.getDataEverydayInfo(onSaved)
         local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
         updateWeek(localDBDatas, 1, onSaved)
     end
+end
+
+---------------------------------------------------------------------------------------------------
+
+function O2OController.getDailyStudyInfo(oncompleted)
+
+    local dayString = getDayStringForDailyStudyInfo(os.time())
+    local localDBDatas = DataDailyStudyInfo.getNoObjectIdAndTodayDatasFromLocalDB(dayString)
+    
+    local today = localDBDatas['today']
+    if today == nil then
+        today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
+    end
+
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        s_LocalDatabaseManager.saveDataDailyStudyInfo(today)
+        if oncompleted then oncompleted() end
+    else
+        table.insert(localDBDatas['noObjectIdDatas'], today)
+        sysDailyStudyInfo(localDBDatas['noObjectIdDatas'], function (serverDatas, error)
+            if serverDatas ~= nil then
+                for i, v in ipairs(serverDatas) do
+                    local data = DataDailyStudyInfo.create()
+                    parseServerDataToClientData(v, data)
+                    s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and dayString = " .. tostring(data.dayString))
+                end
+            end
+            
+            if oncompleted then oncompleted() end
+        end)
+    end
+
 end
 
 ---------------------------------------------------------------------------------------------------
