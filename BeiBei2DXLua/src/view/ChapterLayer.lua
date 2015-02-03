@@ -17,6 +17,8 @@ function ChapterLayer.create()
 end
 
 function ChapterLayer:ctor()
+    s_SCENE.touchEventBlockLayer.unlockTouch()
+
     self.chapterDic = {}
     -- add list view
     local function listViewEvent(sender, eventType)

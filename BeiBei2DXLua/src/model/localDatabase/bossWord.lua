@@ -249,6 +249,8 @@ function M.updateTypeIndex(bossID)
         local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = "..newTypeIndex.." WHERE "..condition.." and bossID = "..bossID.." ;"
         Manager.database:exec(query)
     end    
+
+    M.printBossWord()
 end
 
 function M.printBossWord()
