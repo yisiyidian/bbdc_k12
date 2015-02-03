@@ -143,6 +143,19 @@ function ChapterLayer:checkUnlockLevel()
     end
 end
 
+function ChapterLayer:addNotification()
+    local notification = cc.Sprite:create('image/chapter/chapter0/notifi.png')
+    
+    notification:setPosition(self.player:getContentSize().width/2,self.player:getContentSize().height)
+    notification:setAnchorPoint(cc.p(0.5,0))
+    notification:setScale(0)
+    
+    local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    
+    -- check active index
+    
+    -- check state
+end
 
 function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
