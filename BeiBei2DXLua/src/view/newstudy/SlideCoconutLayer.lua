@@ -13,9 +13,9 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create(word,wrongNum)
+function SlideCoconutLayer.create(word,wrongNum,wrongWordList)
     AnalyticsStudyLookBackWord()
-    local layer = SlideCoconutLayer.new(word,wrongNum)
+    local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -36,14 +36,19 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton(word,wrongNum)
+local function createLastButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            local chooseWrongLayer 
+            if wrongWordList == nil then
+                ChooseWrongLayer.create(word,wrongNum)
+            else
+                ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+            end
             s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
@@ -57,7 +62,7 @@ local function createLastButton(word,wrongNum)
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor(word,wrongNum)
+function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
@@ -94,13 +99,6 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     
     local success = function()
         playWordSound(self.currentWord) 
---        if isCollectLayer == true then
---            s_CorePlayManager.leaveStudyModel(false)   
---        else
---            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
---            local blacksmithLayer = BlacksmithLayer.create()
---            s_SCENE:replaceGameLayer(blacksmithLayer)
---        end
         local normal = function()  
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
@@ -124,8 +122,16 @@ function SlideCoconutLayer:ctor(word,wrongNum)
             showAnswerStateBack:runAction(action1)
 
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
-                s_CorePlayManager.leaveStudyModel(false) 
-            end) ))
+                if wrongWordList == nil then
+                    s_CorePlayManager.leaveStudyModel(false) 
+                else
+                    table.insert(wrongWordList,wrongWordList[1])
+                    table.remove(wrongWordList,1)
+                    local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+                    local blacksmithLayer = BlacksmithLayer.create(wrongWordList)
+                    s_SCENE:replaceGameLayer(blacksmithLayer)
+                end
+            end)))
         end
 
         if s_CURRENT_USER.slideNum == 1 then
@@ -149,7 +155,7 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     self.refreshButton = createRefreshButton()
     backColor:addChild(self.refreshButton)
     
-    self.lastButton = createLastButton(word,wrongNum)
+    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastButton)
 end
 

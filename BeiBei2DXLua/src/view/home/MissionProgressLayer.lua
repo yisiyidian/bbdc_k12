@@ -319,7 +319,11 @@ function MissionProgressLayer.create(share)
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
             local Test3 = require("view.newstudy.BlacksmithLayer")
-            local test3 = Test3.create()
+            local textlist = {}
+            for i = 1,10  do
+            	table.insert(textlist,"apple")
+            end
+            local test3 = Test3.create(textlist)
             s_SCENE:replaceGameLayer(test3)
         end
     end

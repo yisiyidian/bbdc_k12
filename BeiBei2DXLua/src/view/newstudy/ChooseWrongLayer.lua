@@ -13,13 +13,13 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseWrongLayer.create(word,wrongNum)
-    local layer = ChooseWrongLayer.new(word,wrongNum)
+function ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton(word,wrongNum)
+local function addNextButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -27,7 +27,13 @@ local function addNextButton(word,wrongNum)
         elseif eventType == ccui.TouchEventType.ended then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
-            local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+            local slideCoconutLayer
+            if wrongWordList == nil then
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+            else
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
+            end
+
             s_SCENE:replaceGameLayer(slideCoconutLayer)
         end
     end
@@ -41,7 +47,7 @@ local function addNextButton(word,wrongNum)
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor(word,wrongNum)
+function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -73,7 +79,7 @@ function ChooseWrongLayer:ctor(word,wrongNum)
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton(word,wrongNum)
+    self.nextButton = addNextButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.nextButton)
 end
 
