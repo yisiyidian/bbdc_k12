@@ -129,6 +129,7 @@ function O2OController.logInByQQAuthData()
 end
 
 function O2OController.startLoadingData(userStartType, username, password)
+    print('PROFILE START TIME: %s, %ld', 'startLoadingData', os.time())
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
     local isLocalNewerThenServer = false
@@ -255,8 +256,11 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function O2OController.getUserDatasOnline()
+    print('PROFILE START TIME: %s, %ld', 'loadConfigs', os.time())
     O2OController.loadConfigs()
+    print('PROFILE START TIME: %s, %ld', 'getDataLevelInfo', os.time())
     O2OController.getDataLevelInfo(function () 
+        print('PROFILE START TIME: %s, %ld', 'getDataEverydayInfo', os.time())
         O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
@@ -264,7 +268,9 @@ function O2OController.getUserDatasOnline()
                
                 -- TODO sys wrong word levels
 
+                print('PROFILE START TIME: %s, %ld', 'getDailyStudyInfo', os.time())
                 O2OController.getDailyStudyInfo(function () 
+                    print('PROFILE START TIME: %s, %ld', 'enterHomeLayer', os.time())
                     s_CorePlayManager.enterHomeLayer()
                     O2OController.getBulletinBoard()    
                 end)
@@ -393,7 +399,7 @@ function O2OController.getDailyStudyInfo(oncompleted)
                 for i, v in ipairs(serverDatas) do
                     local data = DataDailyStudyInfo.create()
                     parseServerDataToClientData(v, data)
-                    s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and dayString = " .. tostring(data.dayString))
+                    s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and dayString = '".. today.dayString .."' ;")
                 end
             end
             
