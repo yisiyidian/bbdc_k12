@@ -26,7 +26,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
 
     local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
-    main:ignoreAnchorPointForPosition(false)
+    main:ignoreAnchorPointForPosition(false)    
 
     main.cancel = function()
 
@@ -87,7 +87,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         local button_know_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 main.know()
-                main:removeFromParent()
+                s_SCENE:removeAllPopups()
             end
         end
     

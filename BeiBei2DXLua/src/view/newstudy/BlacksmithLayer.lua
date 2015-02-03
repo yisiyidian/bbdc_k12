@@ -36,7 +36,7 @@ local function createOptions(randomNameArray,wordlist)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then  
-            --            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local feedback 
             if sender.tag == 1 then  
                 feedback = cc.Sprite:create("image/newstudy/right.png")            
@@ -53,6 +53,7 @@ local function createOptions(randomNameArray,wordlist)
                     if #wordlist == 0 then
                         s_CorePlayManager.leaveTestModel()
                     else
+                        AnalyticsStudyAnswerRight_strikeWhileHot()
                         local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
                         local blacksmithLayer = BlacksmithLayer.create(wordlist)
                         s_SCENE:replaceGameLayer(blacksmithLayer)
@@ -62,6 +63,7 @@ local function createOptions(randomNameArray,wordlist)
             else
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
+                    AnalyticsStudyGuessWrong_strikeWhileHot()
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)
@@ -100,6 +102,8 @@ local function createDontknow(wordlist)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            AnalyticsStudyDontKnowAnswer_strikeWhileHot()
+            AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
             local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
             s_SCENE:replaceGameLayer(chooseWrongLayer)            

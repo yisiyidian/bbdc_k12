@@ -44,6 +44,7 @@ local function createLastButton(word,wrongNum,wrongWordList)
         elseif eventType == ccui.TouchEventType.ended then
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
             local chooseWrongLayer 
+            AnalyticsStudyLookBackWord()
             if wrongWordList == nil then
                 ChooseWrongLayer.create(word,wrongNum)
             else
@@ -78,7 +79,14 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
+    local color 
+    if wrongWordList == nil then
+        color = "blue"
+    else
+        color = "yellow"
+    end
+    
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     
