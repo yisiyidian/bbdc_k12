@@ -37,10 +37,6 @@ function NewReviewBossHintLayer.create(currentWordName)
     	
     end
     
-    local rbProgressBar = ProgressBar.create(s_max_wrong_num_everyday,0,"orange")
-    rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
-    layer:addChild(rbProgressBar)
-    
     white_back = cc.Sprite:create("image/newreviewboss/backgroundreviewboss1tishi.png")
     white_back:setPosition(s_DESIGN_WIDTH/2*2, s_DESIGN_HEIGHT * 0.55)
     white_back:ignoreAnchorPointForPosition(false)

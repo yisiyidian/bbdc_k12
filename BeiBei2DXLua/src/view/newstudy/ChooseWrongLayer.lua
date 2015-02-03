@@ -29,8 +29,10 @@ local function addNextButton(word,wrongNum,wrongWordList)
             local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
             local slideCoconutLayer
             if wrongWordList == nil then
+                AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
                 slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
             else
+                AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
                 slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
             end
 
@@ -59,8 +61,15 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
     self.currentWord = word
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
+    
+    local color 
+    if wrongWordList == nil then
+        color = "blue"
+    else
+        color = "yellow"
+    end
 
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
 

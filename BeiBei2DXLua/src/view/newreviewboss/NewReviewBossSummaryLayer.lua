@@ -6,7 +6,7 @@ local  NewReviewBossSummaryLayer = class("NewReviewBossSummaryLayer", function (
 end)
 
 
-function NewReviewBossSummaryLayer.create()
+function NewReviewBossSummaryLayer.create(reviewWordList)
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local custom_sprite_site = {}
@@ -15,13 +15,9 @@ function NewReviewBossSummaryLayer.create()
     custom_sprite_site[3] = "image/newreviewboss/endtext.png"
 
     local layer = NewReviewBossSummaryLayer.new()
-    
-    local totol_boss_number = 0
-
-    local current_boss_number = totol_boss_number - s_LocalDatabaseManager:getTodayRemainBossNum() + 1
    
     
-    local type = s_CorePlayManager.typeIndex
+    local type = 1
     local custom_sprite = {}
     local percentBar 
     local listView
@@ -63,15 +59,15 @@ function NewReviewBossSummaryLayer.create()
     local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,0))
     backGround:runAction(action1)
     
-    local summary_label = cc.Label:createWithSystemFont("小结（"..current_boss_number.."/"..totol_boss_number..")","",48)
-    summary_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.95 + 200)
-    summary_label:setColor(cc.c4b(0,0,0,255))
-    summary_label:ignoreAnchorPointForPosition(false)
-    summary_label:setAnchorPoint(0.5,0.5)
-    layer:addChild(summary_label)
-    
-    local action1 = cc.MoveBy:create(0.4, cc.p(0,-200))
-    summary_label:runAction(action1)
+--    local summary_label = cc.Label:createWithSystemFont("小结（"..current_boss_number.."/"..totol_boss_number..")","",48)
+--    summary_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.95 + 200)
+--    summary_label:setColor(cc.c4b(0,0,0,255))
+--    summary_label:ignoreAnchorPointForPosition(false)
+--    summary_label:setAnchorPoint(0.5,0.5)
+--    layer:addChild(summary_label)
+--    
+--    local action1 = cc.MoveBy:create(0.4, cc.p(0,-200))
+--    summary_label:runAction(action1)
     
     local summury_back = cc.Sprite:create("image/newreviewboss/backgroundreviewboss1.png")
     summury_back:setPosition(s_DESIGN_WIDTH / 2,-100)
@@ -83,19 +79,12 @@ function NewReviewBossSummaryLayer.create()
     summury_back:runAction(action1)
     
     local wordList = {}
-    table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)
-        if  s_CorePlayManager.ReviewWordList[i] ~= "" then
-            table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
+    table.foreachi(reviewWordList, function(i, v)
+        if  reviewWordList[i] ~= "" then
+            table.insert(wordList,reviewWordList[i] )
         end
     end) 
     local wordListLen = table.getn(wordList)  
-    
---    local word = {}
---    local meaning = {}
---    for i = 1,s_CorePlayManager.maxReviewWordCount  do
---        word[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordName
---        meaning[i] = s_WordPool[s_CorePlayManager.ReviewWordList[i]].wordMeaning
---    end
     
     local word = {}
     local meaning = {}
@@ -240,7 +229,7 @@ function NewReviewBossSummaryLayer.create()
             local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-200))
             backGround:runAction(action1)
 
-            local rbProgressBar = ProgressBar.create(20,0,"orange")
+            local rbProgressBar = ProgressBar.create(s_max_wrong_num_everyday,0,"orange")
             rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9 + 200)
             layer:addChild(rbProgressBar)
             local action1 = cc.MoveBy:create(0.5,cc.p(0,-200))
@@ -249,25 +238,11 @@ function NewReviewBossSummaryLayer.create()
             local action1 = cc.MoveTo:create(0.4, cc.p(s_DESIGN_WIDTH / 2,-400))
             summury_back:runAction(action1)    
 
-            s_CorePlayManager.updateReviewBoss(s_CorePlayManager.bossID)  
-            s_CorePlayManager.updateReviewRewardAndTotalWord()  
-            
---            print("reward .."..s_CorePlayManager.currentReward)
---            print("total .."..s_CorePlayManager.reward)
-            s_CURRENT_USER:addBeans(s_CorePlayManager.currentReward)
-            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-            
-            local candidate = s_CorePlayManager.getReviewBossCandidate() 
-            s_CorePlayManager.initNewReviewBossLayer(candidate)
-            if candidate == nil then
-                local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossSuccessPopup")
-                local newReviewBossLayerChange = NewReviewBossLayerChange.create()
-                s_SCENE:popup(newReviewBossLayerChange)
-            else
-                s_CorePlayManager.enterReviewBossMainLayer()
-            end
         elseif eventType == ccui.TouchEventType.ended then   
-
+            
+            local SuccessLayer = require("view.newreviewboss.NewReviewBossSuccessPopup")
+            local successLayer = SuccessLayer.create()
+            s_SCENE:popup(successLayer)
         end
     end
     
@@ -280,7 +255,7 @@ function NewReviewBossSummaryLayer.create()
     nextButton:setScale9Enabled(true)
     layer:addChild(nextButton) 
     
-    local nextButton_label = cc.Label:createWithSystemFont("下一组","",30)
+    local nextButton_label = cc.Label:createWithSystemFont("完成复习","",30)
     nextButton_label:setPosition(nextButton:getContentSize().width / 2,nextButton: getContentSize().height / 2)
     nextButton_label:setColor(cc.c4b(255,255,255,255))
     nextButton_label:ignoreAnchorPointForPosition(false)
@@ -293,12 +268,6 @@ function NewReviewBossSummaryLayer.create()
     seagrass:setAnchorPoint(0.5,0)
     layer:addChild(seagrass)
     
-    if s_LocalDatabaseManager:getTodayRemainBossNum()  == 0 then
-    	nextButton_label:setString("完成复习")
-    else
-        nextButton_label:setString("下一组")
-    end
-    
     local timer = 0
     local function update(delta)
         local current_y = (0 - listView:getInnerContainer():getPositionY())
@@ -306,7 +275,7 @@ function NewReviewBossSummaryLayer.create()
         local current_percent = current_y / current_height + 0.2
         local top_y = summury_back:getContentSize().height * 0.98
         local bottom_y = summury_back:getContentSize().height * 0.28
-        local changetoposition_y = bottom_y + (top_y - bottom_y) * current_percent
+        local changetoposition_y = top_y -  (top_y - bottom_y) * (1 -current_percent)
 
         timer = timer +  delta
         if timer > 0.2 then

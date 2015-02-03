@@ -6,6 +6,7 @@ local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
+local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 
 local  CollectUnfamiliarLayer = class("CollectUnfamiliarLayer", function ()
     return cc.Layer:create()
@@ -111,6 +112,9 @@ local function createOptions(randomNameArray,word,wrongNum)
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
+            
+--            local action1 = cc.MoveTo:create(0.5,cc.p((wrongNum * sender:getPositionY(),1070 - sender:getPositionY()))
+--            local action2 = cc.ScaleTo:create(0.2,0)
 
             if sender.tag == 1 then  
                 local action1 = cc.DelayTime:create(0.5)
@@ -204,7 +208,7 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     
     local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
-    backColor:addChild(progressBar)
+    backColor:addChild(progressBar,2)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -227,6 +231,7 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     label_dontknow:setPosition(bigWidth/2, 220)
     label_dontknow:setColor(cc.c4b(37,158,227,255))
     backColor:addChild(label_dontknow)
+    
 end
 
 return CollectUnfamiliarLayer

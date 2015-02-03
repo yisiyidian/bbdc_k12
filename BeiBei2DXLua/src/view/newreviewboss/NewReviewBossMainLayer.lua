@@ -89,19 +89,16 @@ function NewReviewBossMainLayer.create(ReviewWordList)
         for j = 1, 3 do
             local sprite = NewReviewBossNode.create(words[j])
             if i == 1 then
-                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 850 - 200*i - 150))
+                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 210 + 210*(j-1), 850 - 200*i - 150))
                 sprite.opacity(255)
-                sprite.font_size(25)
             elseif i == 2 then 
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
                 sprite:setScale(0.8)
                 sprite.opacity(102)
-                sprite.font_size(18)
             else
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
                 sprite:setScale(0)
                 sprite.opacity(102)
-                sprite.font_size(18)
             end
             layer:addChild(sprite,1)
             tmp[j] = sprite
@@ -225,9 +222,10 @@ function NewReviewBossMainLayer.create(ReviewWordList)
         local action1 = cc.DelayTime:create(0.5)
         local action2 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
         local action3 = cc.CallFunc:create(function()
-            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
-            local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName)
-            s_SCENE:popup(newReviewBossLayerChange)
+            s_CorePlayManager.leaveReviewModel(false)
+--            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
+--            local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName,ReviewWordList)
+--            s_SCENE:popup(newReviewBossLayerChange)
             end)
         layer:runAction(cc.Sequence:create(action1, action2,action3))
 
@@ -260,7 +258,6 @@ function NewReviewBossMainLayer.create(ReviewWordList)
                     sprite.two_to_three(j)
                 elseif i == rbCurrentWordIndex + 1 then
                     sprite.four_to_three(j)
-                    sprite.visible(true)
                 elseif i == rbCurrentWordIndex + 2 then
                     sprite.five_to_four()
                 else
@@ -375,7 +372,7 @@ function NewReviewBossMainLayer.create(ReviewWordList)
 
                 s_SCENE:callFuncWithDelay(1,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
-
+                s_CorePlayManager.leaveReviewModel(true)
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)
             end            

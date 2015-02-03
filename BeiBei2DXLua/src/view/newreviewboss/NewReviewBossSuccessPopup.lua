@@ -8,10 +8,7 @@ function NewReviewBossSuccessPopup.create()
     local layer = NewReviewBossSuccessPopup.new()
 
     local currentchapter
-    local totalchapter
-    
-    local reward = s_CorePlayManager.reward
-    local totalWord = s_CorePlayManager.totalWord        
+    local totalchapter      
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -35,13 +32,8 @@ function NewReviewBossSuccessPopup.create()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-
-            --            local level = require('view.LevelLayer')
-            --            local layer = level.create()
             s_SCENE.popupLayer.listener:setSwallowTouches(false)
             s_SCENE.popupLayer:removeAllChildren()
---            s_SCENE:replaceGameLayer(layer)
-
             s_CorePlayManager.enterHomeLayer()
 
         end
@@ -62,33 +54,33 @@ function NewReviewBossSuccessPopup.create()
     popup_title:setAnchorPoint(0.5,0.5)
     back:addChild(popup_title)
 
-    local popup_total_review = cc.Label:createWithSystemFont("复习单词","",32)
-    popup_total_review:setPosition(back:getContentSize().width *0.4,back:getContentSize().height *0.60)
-    popup_total_review:setColor(cc.c4b(39,127,182,255))
-    popup_total_review:ignoreAnchorPointForPosition(false)
-    popup_total_review:setAnchorPoint(0.5,0.5)
-    back:addChild(popup_total_review)
-
-    local popup_total_number = cc.Label:createWithSystemFont(totalWord.."个","",32)
-    popup_total_number:setPosition(back:getContentSize().width *0.6,back:getContentSize().height *0.60)
-    popup_total_number:setColor(cc.c4b(228,78,0,255))
-    popup_total_number:ignoreAnchorPointForPosition(false)
-    popup_total_number:setAnchorPoint(0.5,0.5)
-    back:addChild(popup_total_number)
-    
-    local popup_reward_review = cc.Label:createWithSystemFont("获得贝贝豆","",32)
-    popup_reward_review:setPosition(back:getContentSize().width *0.4,back:getContentSize().height *0.55)
-    popup_reward_review:setColor(cc.c4b(39,127,182,255))
-    popup_reward_review:ignoreAnchorPointForPosition(false)
-    popup_reward_review:setAnchorPoint(0.5,0.5)
-    back:addChild(popup_reward_review)
-    
-    local popup_reward_number = cc.Label:createWithSystemFont(reward.."个","",32)
-    popup_reward_number:setPosition(back:getContentSize().width *0.6,back:getContentSize().height *0.55)
-    popup_reward_number:setColor(cc.c4b(228,78,0,255))
-    popup_reward_number:ignoreAnchorPointForPosition(false)
-    popup_reward_number:setAnchorPoint(0.5,0.5)
-    back:addChild(popup_reward_number)
+--    local popup_total_review = cc.Label:createWithSystemFont("复习单词","",32)
+--    popup_total_review:setPosition(back:getContentSize().width *0.4,back:getContentSize().height *0.60)
+--    popup_total_review:setColor(cc.c4b(39,127,182,255))
+--    popup_total_review:ignoreAnchorPointForPosition(false)
+--    popup_total_review:setAnchorPoint(0.5,0.5)
+--    back:addChild(popup_total_review)
+--
+--    local popup_total_number = cc.Label:createWithSystemFont(totalWord.."个","",32)
+--    popup_total_number:setPosition(back:getContentSize().width *0.6,back:getContentSize().height *0.60)
+--    popup_total_number:setColor(cc.c4b(228,78,0,255))
+--    popup_total_number:ignoreAnchorPointForPosition(false)
+--    popup_total_number:setAnchorPoint(0.5,0.5)
+--    back:addChild(popup_total_number)
+--    
+--    local popup_reward_review = cc.Label:createWithSystemFont("获得贝贝豆","",32)
+--    popup_reward_review:setPosition(back:getContentSize().width *0.4,back:getContentSize().height *0.55)
+--    popup_reward_review:setColor(cc.c4b(39,127,182,255))
+--    popup_reward_review:ignoreAnchorPointForPosition(false)
+--    popup_reward_review:setAnchorPoint(0.5,0.5)
+--    back:addChild(popup_reward_review)
+--    
+--    local popup_reward_number = cc.Label:createWithSystemFont(reward.."个","",32)
+--    popup_reward_number:setPosition(back:getContentSize().width *0.6,back:getContentSize().height *0.55)
+--    popup_reward_number:setColor(cc.c4b(228,78,0,255))
+--    popup_reward_number:ignoreAnchorPointForPosition(false)
+--    popup_reward_number:setAnchorPoint(0.5,0.5)
+--    back:addChild(popup_reward_number)
 
     local girl = sp.SkeletonAnimation:create("spine/bb_happy_public.json","spine/bb_happy_public.atlas",1)
     girl:addAnimation(0, 'animation', true)
@@ -97,15 +89,11 @@ function NewReviewBossSuccessPopup.create()
     
     local button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
 
---            local level = require('view.LevelLayer')
---            local layer = level.create()
             s_SCENE.popupLayer.listener:setSwallowTouches(false)
             s_SCENE.popupLayer:removeAllChildren()
-            
             s_CorePlayManager.enterHomeLayer()
 
         end

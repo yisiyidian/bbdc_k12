@@ -1,10 +1,11 @@
-
+local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 
 local ProgressBar = class("ProgressBar", function()
     return cc.Layer:create()
 end)
 
 function ProgressBar.create(totalIndex, currentIndex, color)
+    local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local pngColor          = color
     local backImageName     = "image/progress/rb_progressBack_"..pngColor..".png"
@@ -16,7 +17,11 @@ function ProgressBar.create(totalIndex, currentIndex, color)
     main:ignoreAnchorPointForPosition(false)
     main:setAnchorPoint(0.5,0.5)
     
-    main.hint = function()end
+    main.hint = function()
+        local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
+        guideAlter:setPosition(s_LEFT_X + bigWidth / 2,s_DESIGN_HEIGHT / 2)
+        s_SCENE:popup(guideAlter)
+    end
 
     local local_size = main:getContentSize()
 

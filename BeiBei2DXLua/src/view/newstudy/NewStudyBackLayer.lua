@@ -74,9 +74,6 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
 --    backColor.progressBar:setPosition(bigWidth/2+44, 1049)
 --    backColor:addChild(backColor.progressBar)
 --    
---    backColor.getProgressBarIndexPosition = function ()
---    return backColor.progressBar.indexPosition()
---    end
 --    
 --    backColor.indexSwell = function ()
 --    return backColor.progressBar.swell()
