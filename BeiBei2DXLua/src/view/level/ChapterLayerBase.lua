@@ -152,60 +152,6 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end)
         reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
         self:addChild(reviewBoss, 140)
---    elseif checkSummaryBoss then
---        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
---        summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
-----                summaryboss:setAnchorPoint(1,1)
---        -- chapter layer
---        local notification = cc.Sprite:create('image/chapter/chapter0/notification.png')
---        notification:setPosition(summaryboss:getContentSize().width+130,summaryboss:getContentSize().height+320)
---        summaryboss:addChild(notification, 100)
---        summaryboss:setName('summaryboss'..currentIndex)
---        local title = cc.Label:createWithSystemFont('当前任务','',28)
---        title:setColor(cc.c3b(0,0,0))
---        title:ignoreAnchorPointForPosition(false)
---        title:setAnchorPoint(0,0)
---        title:setPosition(30,110)
---        notification:addChild(title)        
---        
---        local task_name = cc.Label:createWithSystemFont('打败鲶鱼boss','',25)
---        task_name:setColor(cc.c3b(0,0,0))
---        task_name:ignoreAnchorPointForPosition(false)
---        task_name:setAnchorPoint(0,0)
---        task_name:setPosition(30,80)
---        notification:addChild(task_name)
---        -- define touchEvent
---        local function touchEvent(sender,eventType)
---            if eventType == ccui.TouchEventType.ended then
---                -- TODO go to summaryboss
-----                s_CorePlayManager.initTotalPlay()
---                    local index = string.sub(sender:getName(),12)
---                    local summaryboss = require('view.summaryboss.SummaryBossLayer')
---                    local layer = summaryboss.create(index,1)
---                    
---                    layer:setAnchorPoint(0.5,0)
---                    s_SCENE:replaceGameLayer(layer)
---            end
---        end
---        local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
---        start:setScale9Enabled(true)
---        start:setPosition(50,40)
---        start:setAnchorPoint(0,0)
---        notification:addChild(start)
---        start:addTouchEventListener(touchEvent)
---        start:setName('summaryboss'..string.sub('level'..levelIndex, 6))
---        -- add button title
---        local button_title = cc.Label:createWithSystemFont('开始挑战','',20)
---        --button_title:setColor(cc.c3b(0,0,0))
---        button_title:ignoreAnchorPointForPosition(false)
---        button_title:setAnchorPoint(0.5,0.5)
---        button_title:setPosition(start:getContentSize().width/2,start:getContentSize().height/2)
---        start:addChild(button_title)
-----        print('summaryboss position:'..summaryboss:getPosition())
---        
---        summaryboss:addAnimation(0, 'jianxiao', true)
---        summaryboss:setScale(0.7)
---        self:addChild(summaryboss, 150)
     elseif levelIndex % 8 == 0 then
         local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
         deco:addAnimation(0,'animation',true)
