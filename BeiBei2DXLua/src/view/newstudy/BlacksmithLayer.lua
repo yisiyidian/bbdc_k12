@@ -51,7 +51,7 @@ local function createOptions(randomNameArray,wordlist)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     if #wordlist == 0 then
-                        s_CorePlayManager.leaveTest()
+                        s_CorePlayManager.leaveTestModel()
                     else
                         local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
                         local blacksmithLayer = BlacksmithLayer.create(wordlist)

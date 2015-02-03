@@ -32,20 +32,12 @@ function NewReviewBossHintLayer.create(currentWordName)
     local return_button
     local white_back
     local line_y
-    
-    local wordList = {}
-    table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)
-        if  s_CorePlayManager.ReviewWordList[i] ~= "" then
-            table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
-        end
-    end) 
-    local wordListLen = table.getn(wordList)
 
     layer.close  = function ()
     	
     end
     
-    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"orange")
+    local rbProgressBar = ProgressBar.create(s_max_wrong_num_everyday,0,"orange")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
     

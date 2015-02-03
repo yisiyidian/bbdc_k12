@@ -12,7 +12,7 @@ end)
 
 
 
-function NewReviewBossMainLayer.create()
+function NewReviewBossMainLayer.create(ReviewWordList)
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS, 'SHOW')
 
     --pause music
@@ -34,13 +34,13 @@ function NewReviewBossMainLayer.create()
     local sentenceEn2       
     local sentenceCn2    
     
-    local type = s_CorePlayManager.typeIndex
+    local type = 1
     local answer
     
     local wordList = {}
-    table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)
-        if  s_CorePlayManager.ReviewWordList[i] ~= "" then
-            table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
+    table.foreachi(ReviewWordList, function(i, v)
+        if  ReviewWordList ~= "" then
+            table.insert(wordList,ReviewWordList[i] )
         end
     end) 
     local wordListLen = table.getn(wordList)
@@ -172,7 +172,7 @@ function NewReviewBossMainLayer.create()
     backGround:setOpacity(200)
     layer:addChild(backGround)
 
-    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"orange")
+    local rbProgressBar = ProgressBar.create(wordListLen,0,"orange")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
     
@@ -211,7 +211,6 @@ function NewReviewBossMainLayer.create()
         layer:runAction(cc.Sequence:create(action1, action2))
 
         rbCurrentWordIndex = rbCurrentWordIndex + 1                
-        s_CorePlayManager.updateRightReviewWordNum()
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
         if type % 2 == 0 then
@@ -292,9 +291,9 @@ function NewReviewBossMainLayer.create()
             pauseButton:runAction(action1)
             local HintView = require("view.newreviewboss.NewReviewBossHintLayer")
             local hintView = HintView.create(currentWordName)
-            layer:addChild(hintView,2)          
+            s_SCENE:popup(hintView)        
             hintView.close = function ()          
-                hintView:removeFromParent()
+                s_SCENE:removeAllPopups()
                 hintWordFunction()        
                 local action2 = cc.MoveBy:create(0.4,cc.p(0,-200))
                 pauseButton:runAction(action2)
@@ -376,7 +375,7 @@ function NewReviewBossMainLayer.create()
 
                 s_SCENE:callFuncWithDelay(1,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
-                s_CorePlayManager.enterReviewBossSummaryLayer()
+
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)
             end            
