@@ -46,9 +46,9 @@ local function createLastButton(word,wrongNum,wrongWordList)
             local chooseWrongLayer 
             AnalyticsStudyLookBackWord()
             if wrongWordList == nil then
-                ChooseWrongLayer.create(word,wrongNum)
+                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             else
-                ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
             end
             s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
@@ -131,7 +131,16 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
 
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
                 if wrongWordList == nil then
-                    s_CorePlayManager.leaveStudyModel(false) 
+                    if wrongNum == s_max_wrong_num_everyday - 1 then
+--                        local beanNum = 3 - s_CorePlayManager.ordinalNum
+--                        if 3 - s_CorePlayManager.ordinalNum >= 0 then
+                            s_CURRENT_USER:addBeans(3)
+--                            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+--                        else
+--                            beanNum = 0
+--                        end
+                    end 
+                    s_CorePlayManager.leaveStudyModel(false)             
                 else
                     table.insert(wrongWordList,wrongWordList[1])
                     table.remove(wrongWordList,1)

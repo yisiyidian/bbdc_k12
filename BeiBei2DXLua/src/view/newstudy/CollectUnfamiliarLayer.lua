@@ -28,7 +28,7 @@ function CollectUnfamiliarLayer:createWordInfo(word)
         wordMeaning,sentenceEn,sentenceCn,sentenceEn2,sentenceCn2 }
 end
 
-function CollectUnfamiliarLayer:createRandWord(word)
+function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
     local randomNameArray  = {}
     table.insert(randomNameArray, word)
     local word1 = split(tostring(s_WordPool[word].wordMeaningSmall),"%.")
@@ -51,7 +51,7 @@ function CollectUnfamiliarLayer:createRandWord(word)
     end
     
     if wordList ~= nil then
-        for i = 1 ,3 do
+        for i = 1 ,randomWrongNumber - 1 do
             if word == wordList[i] then
                 table.insert(randomNameArray, wordList[4])
             else
@@ -61,7 +61,7 @@ function CollectUnfamiliarLayer:createRandWord(word)
     end
     
     while 1 do
-        if #randomNameArray >= 4 then
+        if #randomNameArray >= randomWrongNumber then
             break
         end 
         local randomIndex = math.random(1, #s_BookWord[s_CURRENT_USER.bookKey])
@@ -112,9 +112,7 @@ local function createOptions(randomNameArray,word,wrongNum)
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
-            
---            local action1 = cc.MoveTo:create(0.5,cc.p((wrongNum * sender:getPositionY(),1070 - sender:getPositionY()))
---            local action2 = cc.ScaleTo:create(0.2,0)
+          
 
             if sender.tag == 1 then  
                 local action1 = cc.DelayTime:create(0.5)
@@ -128,7 +126,12 @@ local function createOptions(randomNameArray,word,wrongNum)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong()
-                    ---- minus beibei bean need to do
+                    local bean = 3
+                    local total = 3
+                    if bean > 0 then
+                        local guessWrong = GuessWrong.create(bean,bean)
+                        s_SCENE:popup(guessWrong)
+                    end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
@@ -204,7 +207,7 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     self.currentWord = word
 
     self.wordInfo = self:createWordInfo(self.currentWord)
-    self.randWord = self:createRandWord(self.currentWord)
+    self.randWord = self:createRandWord(self.currentWord,4)
     
     local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)

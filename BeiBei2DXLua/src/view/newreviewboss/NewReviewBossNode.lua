@@ -98,9 +98,9 @@ function NewReviewBossNode.create(character)
     main.wrong = function()
         main.main_back:setTexture("image/newreviewboss/reviewbosswrong.png")
         local action0 = cc.DelayTime:create(0.1)
-        local action1 = cc.RotateBy:create(0.1,15)
-        local action2 = cc.RotateBy:create(0.2,-30)
-        local action3 = cc.RotateBy:create(0.2,30)
+        local action1 = cc.RotateBy:create(0.05,15)
+        local action2 = cc.RotateBy:create(0.1,-30)
+        local action3 = cc.RotateBy:create(0.1,30)
         main:runAction(cc.Sequence:create(action0,action1,action2,action3))
     end
     
