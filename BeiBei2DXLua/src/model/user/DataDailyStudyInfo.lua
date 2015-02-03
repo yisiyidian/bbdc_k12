@@ -41,18 +41,20 @@ function DataDailyStudyInfo.getNoObjectIdAndTodayDatasFromLocalDB(todayString)
     local noObjectIdDatas = {}
     local today = nil
     s_LocalDatabaseManager.getDatas('DataDailyStudyInfo', s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
-        local data = DataDailyStudyInfo.createData(row.bookKey, row.dayString, row.studyNum, row.graspNum, row.lastUpdate, row.ordinalNum)
-        data.className = row.className
-        data.objectId = row.objectId
-        data.userId = row.userId
-        data.username = row.userId
-        data.createdAt = row.createdAt
-        data.updatedAt = row.updatedAt
-        
-        if row.dayString == todayString then
-            today = data
-        elseif row.objectId == '' or row.objectId == nil then
-            table.insert(noObjectIdDatas, data)
+        if row.bookKey ~= '' and row.bookKey ~= nil and row.bookKey == s_CURRENT_USER.bookKey then
+            local data = DataDailyStudyInfo.createData(row.bookKey, row.dayString, row.studyNum, row.graspNum, row.lastUpdate, row.ordinalNum)
+            data.className = row.className
+            data.objectId = row.objectId
+            data.userId = row.userId
+            data.username = row.userId
+            data.createdAt = row.createdAt
+            data.updatedAt = row.updatedAt
+            
+            if row.dayString == todayString then
+                today = data
+            elseif row.objectId == '' or row.objectId == nil then
+                table.insert(noObjectIdDatas, data)
+            end
         end
     end)
     return {['noObjectIdDatas']=noObjectIdDatas, ['today']=today}

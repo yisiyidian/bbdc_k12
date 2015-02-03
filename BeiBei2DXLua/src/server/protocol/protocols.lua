@@ -2,7 +2,9 @@ local ProtocolBase = require('server.protocol.ProtocolBase')
 
 ---------------------------------------------------------------------------------------------------
 
-local function dataTableToJSONString(dataTable)
+SKIP_WORDLIST = '1'
+-- wordList : only for DataBossWord
+local function dataTableToJSONString(dataTable, wordList)
     local str = '{'
     for key, value in pairs(dataTable) do  
         if (key == 'sessionToken'
@@ -13,17 +15,23 @@ local function dataTableToJSONString(dataTable)
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
-            if (type(value) == 'string') then
+            if wordList ~= nil and wordList == key then
                 if string.len(str) > 1 then str = str .. ',' end
-                str = str .. '"' .. key .. '":"' .. value .. '"'
-            elseif (type(value) == 'boolean') then
-                if string.len(str) > 1 then str = str .. ',' end
-                str = str .. '"' .. key .. '":' .. tostring(value)
-            elseif (type(value) ~= 'function' and type(value) ~= 'table') then
-                if string.len(str) > 1 then str = str .. ',' end
-                str = str .. '"' .. key .. '":' .. tostring(value)
-            end
+                str = str .. '"' .. key .. '":"' .. SKIP_WORDLIST .. '"'
+            else
+
+                if (type(value) == 'string') then
+                    if string.len(str) > 1 then str = str .. ',' end
+                    str = str .. '"' .. key .. '":"' .. value .. '"'
+                elseif (type(value) == 'boolean') then
+                    if string.len(str) > 1 then str = str .. ',' end
+                    str = str .. '"' .. key .. '":' .. tostring(value)
+                elseif (type(value) ~= 'function' and type(value) ~= 'table') then
+                    if string.len(str) > 1 then str = str .. ',' end
+                    str = str .. '"' .. key .. '":' .. tostring(value)
+                end
             
+            end
         end
     end
     str = str .. '}'
@@ -186,21 +194,30 @@ function sysDailyStudyInfo(unsavedDays, callback)
         end
     end
 
-    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataDailyStudyInfo', ['us']=dataTable}, cb)
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataDailyStudyInfo', ['bookKey']=s_CURRENT_USER.bookKey, ['us']=dataTable}, cb)
     protocol:request()
 end
 
 -- data : DataDailyStudyInfo
 -- callback : function (data, error)
+-- save data to server and update local database
 function saveDailyStudyInfoToServer(data, callback)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(data, nil) end
+        return
+    end
+
     sysDailyStudyInfo({['1']=data}, function (serverDatas, error)
         if error == nil then
-            -- if serverDatas ~= nil then
-            --     for i, v in ipairs(serverDatas) do
-            --         parseServerDataToClientData(v, data)
-            --         s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and dayString = " .. tostring(data.dayString))
-            --     end
-            -- end
+            if serverDatas ~= nil then
+                for i, v in ipairs(serverDatas) do
+                    if data.dayString == v.dayString then
+                        parseServerDataToClientData(v, data)
+                        s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and dayString = '".. data.dayString .."' ;")
+                        break
+                    end
+                end
+            end
             if callback then callback(data, nil) end
         else
             if callback then callback(nil, error) end
@@ -212,6 +229,55 @@ end
 
 -- 20 words, book
 -- DataBossWord
+
+-- bosses: DataDailyStudyInfo table
+-- callback : function (serverDatas, error)
+function sysBossWord(bosses, callback)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(nil, nil) end
+        return
+    end
+
+    local api = 'sysbossword'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local skips = {}
+    local function cb (result, error)
+        if error == nil then
+            if result.datas ~= nil then
+                for i, v in ipairs(result.datas) do
+                    if v.wordList == SKIP_WORDLIST and skips[v.bossID] ~= nil then
+                        v.wordList = skips[v.bossID].wordList
+                    end
+                end
+            end
+
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local unsavedDataTable = {}
+    if bosses ~= nil then
+        for i, v in ipairs(bosses) do
+            if v.objectId == '' or v.objectId == nil then
+                table.insert(unsavedDataTable, dataTableToJSONString(v))
+            else
+                table.insert(unsavedDataTable, dataTableToJSONString(v, 'wordList'))
+                skips[v.bossID] = v
+            end
+        end
+    end
+
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataBossWord', ['bookKey']=s_CURRENT_USER.bookKey, ['us']=unsavedDataTable}, cb)
+    protocol:request()
+end
+
+-- callback : function (serverDatas, error)
+function saveWordBossToServer(clientData, callback)
+    sysBossWord({['1']=clientData}, callback)
+end
 
 ---------------------------------------------------------------------------------------------------
 
