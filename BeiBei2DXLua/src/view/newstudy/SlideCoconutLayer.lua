@@ -14,6 +14,7 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
 end)
 
 function SlideCoconutLayer.create(word,wrongNum)
+    AnalyticsStudyLookBackWord()
     local layer = SlideCoconutLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
@@ -93,12 +94,50 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     
     local success = function()
         playWordSound(self.currentWord) 
-        if isCollectLayer == true then
-            s_CorePlayManager.leaveStudyModel(false)   
+--        if isCollectLayer == true then
+--            s_CorePlayManager.leaveStudyModel(false)   
+--        else
+--            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+--            local blacksmithLayer = BlacksmithLayer.create()
+--            s_SCENE:replaceGameLayer(blacksmithLayer)
+--        end
+        local normal = function()  
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+            local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
+            showAnswerStateBack:setPosition(backColor:getContentSize().width *1.5, 768)
+            showAnswerStateBack:ignoreAnchorPointForPosition(false)
+            showAnswerStateBack:setAnchorPoint(0.5,0.5)
+            backColor:addChild(showAnswerStateBack)
+
+            local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
+            sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
+            showAnswerStateBack:addChild(sign)
+
+            local right_wordname = cc.Label:createWithSystemFont(self.currentWord,"",60)
+            right_wordname:setColor(cc.c4b(130,186,47,255))
+            right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
+            right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
+            showAnswerStateBack:addChild(right_wordname)
+
+            local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
+            showAnswerStateBack:runAction(action1)
+
+            self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
+                s_CorePlayManager.leaveStudyModel(false) 
+            end) ))
+        end
+
+        if s_CURRENT_USER.slideNum == 1 then
+            local guideAlter = GuideAlter.create(0, "划词加强记忆", "用来加强用户记忆的步骤，可以强化你对生词的印象。")
+            guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            backColor:addChild(guideAlter)
+
+            guideAlter.know = function()
+                normal()
+            end
         else
-            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
-            local blacksmithLayer = BlacksmithLayer.create()
-            s_SCENE:replaceGameLayer(blacksmithLayer)
+            normal()
         end
 
     end

@@ -25,6 +25,7 @@ local function addNextButton(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
             local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(slideCoconutLayer)

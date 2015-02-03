@@ -115,6 +115,7 @@ local function createOptions(randomNameArray,word,wrongNum)
             if sender.tag == 1 then  
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
+                    AnalyticsStudyAnswerRight()
                     local ChooseRightLayer = require("view.newstudy.ChooseRightLayer")
                     local chooseRightLayer = ChooseRightLayer.create(word,wrongNum)
                     s_SCENE:replaceGameLayer(chooseRightLayer)
@@ -122,6 +123,8 @@ local function createOptions(randomNameArray,word,wrongNum)
             else
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
+                    AnalyticsStudyGuessWrong()
+                    ---- minus beibei bean need to do
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
@@ -160,6 +163,8 @@ local function createDontknow(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            AnalyticsStudyDontKnowAnswer()  
+            AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
             local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
