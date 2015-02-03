@@ -166,13 +166,33 @@ end
 -- 1 data/day/book
 -- DataDailyStudyInfo
 
+function sysDailyStudyInfo(unsavedDays, callback)
+    local api = 'sysdailystudyinfo'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb (result, error)
+        if error == nil then
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local dataTable = {}
+    if unsavedDays ~= nil then
+        for i, v in ipairs(unsavedDays) do
+            table.insert(dataTable, dataTableToJSONString(v))
+        end
+    end
+
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataDailyStudyInfo', ['us']=dataTable}, cb)
+    protocol:request()
+end
+
+---------------------------------------------------------------------------------------------------
+
 -- 20 words, book
 -- DataBossWord
-
-
--- XXX DataNewPlayState
--- XXX DataTodayReviewBossNum
--- XXX DataWrongWordBuffer
 
 ---------------------------------------------------------------------------------------------------
 
