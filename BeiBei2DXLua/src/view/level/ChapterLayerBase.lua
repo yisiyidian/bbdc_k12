@@ -105,7 +105,22 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     self:plotLevelNumber('level'..levelIndex)
 
     local currentIndex = levelIndex
-
+    -- to do get level state
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local levelState
+    for bossID, bossInfo in pairs(bossList) do
+        if bossID - (levelIndex + 1) == 0 then
+            levelState = bossInfo["typeIndex"] 
+        end
+    end
+    -- check activate
+    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+    local activate
+    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
+        activate = 0
+    else
+        activate = 1
+    end
     
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
@@ -114,7 +129,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
     -- TODO add review boss position
     -- TODO check level state
-    local levelState = math.random(0, 3)
+--    local levelState = math.random(0, 3)
     if levelState == 0 then
         local deco = cc.Sprite:create('image/chapter/elements/big_tubiao_daizi_tanchu_xiaoguan.png')
         deco:setPosition(levelPosition.x+10,levelPosition.y+20)
@@ -130,7 +145,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
         self:addChild(summaryboss, 140)
-    elseif levelState == 3 then
+    elseif levelState == 3 or activate == 1 then -- check activate
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
         s_SCENE:callFuncWithDelay(1,function()
@@ -194,16 +209,53 @@ end
 
 function ChapterLayerBase:addPopup(levelIndex)
     -- TODO check level state
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local state
+    for bossID, bossInfo in pairs(bossList) do
+        if bossID - (levelIndex + 1) == 0 then
+            state = bossInfo["typeIndex"] 
+        end
+    end
+    -- check activate
+    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+    local activate
+    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
+        activate = 0
+    else
+        activate = 1
+    end
+    
     local levelPosition = self:getLevelPosition('level'..levelIndex)
     local function taskEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            -- TODO 
+            -- TODO add response
+            local info = split(sender:getName(), '|')
+            local bossID = info[0] + 1
+            local state = info[1]
+            local activate = info[2]
             
-            print('click task button '..sender:getName())
+            if state == 0 then
+            elseif state == 1 then
+            elseif state == 2 then
+            elseif state == 3 then
+            elseif state == 4 then
+            elseif state == 5 then
+                if activate == 0 then
+                elseif activate == 1 then
+                end
+            elseif state == 6 then
+                if activate == 0 then
+                elseif activate == 1 then
+                end
+            elseif state == 7 then
+                if activate == 0 then
+                elseif activate == 1 then
+                end
+            end
         end
     end
-    state = math.random(0, 7)
-    print('state is '..state)
+--    state = math.random(0, 7)
+--    print('state is '..state)
     local back, taskButton, tick
     tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
     if state == 0 then
@@ -244,7 +296,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     if state ~= 8 then
         taskButton:setScale9Enabled(true)
-        taskButton:setName(levelIndex)
+        taskButton:setName(levelIndex..'|'..state..'|'..activate)
         taskButton:addTouchEventListener(taskEvent)
         back:addChild(taskButton)
         tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 125)
