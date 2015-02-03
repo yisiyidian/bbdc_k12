@@ -42,19 +42,27 @@ import com.avos.avoscloud.SignUpCallback;
 import com.avos.sns.*;
 import com.umeng.analytics.MobclickAgent;
 
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+
 public class BBNDK {
 	private static String _hostIPAdress = "0.0.0.0";
 	private static Context _context = null;
 	private static Activity _instance = null;
 	private static PendingIntent _pendingIntent = null;
 	
+	public static IWXAPI wxapi;
+	
 	public static Context getContext() {
 		return _context;
 	}
 
-	public static void setup(Context context, Activity instance) {
+	public static void setup(Context context, Activity instance, String weixinAppId) {
 		_context = context;
 		_instance = instance;
+		
+		wxapi = WXAPIFactory.createWXAPI(_instance, weixinAppId, true);
+		wxapi.registerApp(weixinAppId);
 	}
 	
 	// ***************************************************************************************************************************
@@ -326,6 +334,10 @@ public class BBNDK {
 	
 	public static void shareImageToQQFriend(String path, String title, String desc) {
 		CXTencentSDKCall.getInstance().shareImageToQQFriend(path, title, desc);
+	}
+	
+	public static void shareImageToWeiXin(String path, String title, String desc) {
+		CXTencentSDKCall.getInstance().shareImageToWeiXin(path, title, desc);
 	}
 	
 	// ***************************************************************************************************************************

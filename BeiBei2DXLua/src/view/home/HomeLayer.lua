@@ -182,10 +182,7 @@ function HomeLayer.create(share)
 
             local Loginreward = require("view.loginreward.LoginRewardPopup")
             local loginreward = Loginreward:create()
-            s_SCENE:popup(loginreward)   
-
-            -- local circle = require('view.summaryboss.SummaryBossLayer').create(1)
-            -- s_SCENE:replaceGameLayer(circle)       
+            s_SCENE:popup(loginreward)         
             
         end
     end

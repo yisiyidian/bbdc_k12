@@ -28,8 +28,11 @@ public:
     std::string base64DecodeAndDecompressString(const std::string& str);
     
     void shareImageToQQFriend(const std::string& path, const std::string& title, const std::string& desc);
+    void shareImageToWeiXin(const std::string& path, const std::string& title, const std::string& desc);
     
     void _testCppApi_();
+    
+    std::string getExternalStorageDirectory();
     
 private:
     CXUtils();

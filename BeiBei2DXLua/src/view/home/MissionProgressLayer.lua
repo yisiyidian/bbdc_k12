@@ -15,15 +15,11 @@ function MissionProgressLayer.create(share)
     local taskTotal = 120
     local taskCurrent = 120
     
-    local bossNumber 
-    if s_LocalDatabaseManager:getTodayTotalBossNum() == nil then
-        bossNumber = 0
-    else
-        bossNumber = s_LocalDatabaseManager:getTodayTotalBossNum()
-    end
+    local bossNumber = 0
+
     
     taskTotal = (bossNumber + 2) * s_max_wrong_num_everyday
-    taskCurrent = s_CorePlayManager:getProgress() + (bossNumber - s_LocalDatabaseManager:getTodayRemainBossNum()) * s_max_wrong_num_everyday
+    --taskCurrent = s_CorePlayManager:getProgress() + (bossNumber - s_LocalDatabaseManager:getTodayRemainBossNum()) * s_max_wrong_num_everyday
     
     
     local startTime = 0
@@ -111,7 +107,8 @@ function MissionProgressLayer.create(share)
                         local Share = require('view.share.ShareCheckIn')
                         local shareLayer = Share.create()
                         shareLayer:setPosition(0,-s_DESIGN_HEIGHT)
-                        shareLayer:runAction(cc.MoveTo:create(0.3,cc.p(0,0)))
+                        local move = cc.MoveTo:create(0.3,cc.p(0,0))
+                        shareLayer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),move))
                         s_GAME_LAYER:addChild(shareLayer,2)
                     end,{})
                     swell = cc.Spawn:create(cc.Sequence:create(a1,a2),cc.CallFunc:create(anotherSwelling))
@@ -336,6 +333,23 @@ function MissionProgressLayer.create(share)
     layer:addChild(Button3)
 
     Button3:setScale(0.5)
+
+    local function enterSummaryBoss(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local circle = require('view.summaryboss.SummaryBossLayer').create(1)
+            s_SCENE:replaceGameLayer(circle) 
+        end
+    end
+
+    local Button_boss = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+    Button_boss:setPosition(bigWidth/2 - 300 , s_DESIGN_HEIGHT/2 - 400)
+    Button_boss:setTitleText("summaryboss")
+    Button_boss:setTitleColor(cc.c4b(255,255,255,255))
+    Button_boss:setTitleFontSize(40)
+    Button_boss:addTouchEventListener(enterSummaryBoss)
+    layer:addChild(Button_boss)
+
+    Button_boss:setScale(0.5)
     
     
     

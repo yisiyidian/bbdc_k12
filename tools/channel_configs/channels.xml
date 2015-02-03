@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<configs>
+
+  <channel 
+    name="xiaomi" 
+    packageName="com.beibei.wordmaster.mi"
+
+    leanCloudAppName="贝贝单词X"
+    leanCloudAppId="94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
+    leanCloudAppKey="lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
+
+    QQAppId=""
+    QQAppKey=""
+    isQQLogInAvailable="false"
+    isQQShareAvailable="true"
+
+    umengAppName="贝贝单词-小米"
+    umengAppKey="5498fc3afd98c56b4200075d"/>
+
+
+</configs>

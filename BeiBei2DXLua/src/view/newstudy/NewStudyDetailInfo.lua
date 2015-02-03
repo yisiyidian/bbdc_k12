@@ -113,8 +113,24 @@ function WordDetailInfo.create(word)
     
     local realHeight = height-index_y
 
-    local sentence1 = split(word.sentenceEn,word.wordName)
-    local sentence2 = split(word.sentenceEn2,word.wordName)
+    local sentence1
+    local sentence2
+    local split1 = false
+    local split2 = false
+    if #split(word.sentenceEn,'||') > 1 then
+        sentence1 = split(word.sentenceEn,'||')
+        split1 = true
+    else
+        sentence1 = split(word.sentenceEn,word.wordName)
+    end 
+
+    if #split(word.sentenceEn2,'||') > 1 then
+        sentence2 = split(word.sentenceEn2,'||')
+        split2 = true
+    else
+        sentence2 = split(word.sentenceEn2,word.wordName)
+    end 
+
     local richtext = ccui.RichText:create()
 
     richtext:ignoreContentAdaptWithSize(false)
@@ -126,40 +142,51 @@ function WordDetailInfo.create(word)
 
     local index = 1
     for i = 1,#sentence1 do
-        local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence1[i],'font/CenturyGothic.ttf',26)     
-        index = index + 1                   
-        richtext:pushBackElement(richElement1)     
-        if i < #sentence1 then
-            local clr = cc.c3b(255, 90, 17)
-            local c1 = 0
-            local c2 = 0
-            local isSeperate = true
-            if string.len(sentence1[i]) > 0 then
-                c1 = string.byte(string.sub(sentence1[i],string.len(sentence1[i]),string.len(sentence1[i])))
-                if (c1 <= 122 and c1 >= 97) or (c1 <= 90 and c1 >= 65) then
-                    isSeperate = false
-                    print(c1)
-                    print(sentence1[i]..'false')
-                end
+        if split1 then
+            local clr = cc.c3b(0,0,0)
+            if i % 2 == 0 then
+                clr = cc.c3b(255, 90, 17)
             end
-            if i < #sentence1 and string.len(sentence1[i + 1]) > 0 and string.len(sentence1[i + 1])< 5 and isSeperate then
-                c2 = string.byte(string.sub(sentence1[i + 1],1,1))
-                if (c2 <= 122 and c2 >= 97) or (c2 <= 90 and c2 >= 65) then
-                    isSeperate = false
-                    print(c2)
-                    print('false'..sentence1[i + 1])
-                end
-            end
-            if not isSeperate then
-                clr = cc.c3b(0,0,0)
-            end
-            local richElement2 = ccui.RichElementText:create(index,clr,200,word.wordName,'font/CenturyGothic.ttf',26)
+            local richElement1 = ccui.RichElementText:create(index,clr,200,sentence1[i],'font/CenturyGothic.ttf',26)
             index = index + 1                           
-            richtext:pushBackElement(richElement2) 
+            richtext:pushBackElement(richElement1) 
         else
-            local richElement2 = ccui.RichElementText:create(index,cc.c3b(255, 90, 17),200,'\n','',26)
-            index = index + 1                           
-            richtext:pushBackElement(richElement2)
+            local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence1[i],'font/CenturyGothic.ttf',26)     
+            index = index + 1                   
+            richtext:pushBackElement(richElement1)
+            
+            if i < #sentence1 then
+                local clr = cc.c3b(255, 90, 17)
+                local c1 = 0
+                local c2 = 0
+                local isSeperate = true
+                if string.len(sentence1[i]) > 0 then
+                    c1 = string.byte(string.sub(sentence1[i],string.len(sentence1[i]),string.len(sentence1[i])))
+                    if (c1 <= 122 and c1 >= 97) or (c1 <= 90 and c1 >= 65) then
+                        isSeperate = false
+                        print(c1)
+                        print(sentence1[i]..'false')
+                    end
+                end
+                if i < #sentence1 and string.len(sentence1[i + 1]) > 0 and string.len(sentence1[i + 1])< 5 and isSeperate then
+                    c2 = string.byte(string.sub(sentence1[i + 1],1,1))
+                    if (c2 <= 122 and c2 >= 97) or (c2 <= 90 and c2 >= 65) then
+                        isSeperate = false
+                        print(c2)
+                        print('false'..sentence1[i + 1])
+                    end
+                end
+                if not isSeperate then
+                    clr = cc.c3b(0,0,0)
+                end
+                local richElement2 = ccui.RichElementText:create(index,clr,200,word.wordName,'font/CenturyGothic.ttf',26)
+                index = index + 1                           
+                richtext:pushBackElement(richElement2) 
+            else
+                local richElement2 = ccui.RichElementText:create(index,cc.c3b(255, 90, 17),200,'\n','',26)
+                index = index + 1                           
+                richtext:pushBackElement(richElement2)
+            end
         end
     end
     -- local richElementCn1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,word.sentenceCn,'',26) 
@@ -175,32 +202,42 @@ function WordDetailInfo.create(word)
     main:addChild(richtext2)  
     index = 1
     for i = 1,#sentence2 do
-        local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence2[i],'font/CenturyGothic.ttf',26)     
-        index = index + 1                   
-        richtext2:pushBackElement(richElement1)     
-        if i < #sentence2 then
-            local clr = cc.c3b(255, 90, 17)
-            local c1 = 0
-            local c2 = 0
-            local isSeperate = true
-            if string.len(sentence2[i]) > 0 then
-                c1 = string.byte(string.sub(sentence2[i],string.len(sentence2[i]),string.len(sentence2[i])))
-                if (c1 <= 122 and c1 >= 97) or (c1 <= 90 and c1 >= 65) then
-                    isSeperate = false
-                end
+        if split2 then
+            local clr = cc.c3b(0,0,0)
+            if i % 2 == 0 then
+                clr = cc.c3b(255, 90, 17)
             end
-            if i < #sentence2 and string.len(sentence2[i + 1]) > 0 and string.len(sentence2[i + 1])< 5 and isSeperate then
-                c2 = string.byte(string.sub(sentence2[i + 1],1,1))
-                if (c2 <= 122 and c2 >= 97) or (c2 <= 90 and c2 >= 65) then
-                    isSeperate = false
-                end
-            end
-            if not isSeperate then
-                clr = cc.c3b(0,0,0)
-            end
-            local richElement2 = ccui.RichElementText:create(index,clr,200,word.wordName,'font/CenturyGothic.ttf',26)
+            local richElement1 = ccui.RichElementText:create(index,clr,200,sentence2[i],'font/CenturyGothic.ttf',26)
             index = index + 1                           
-            richtext2:pushBackElement(richElement2) 
+            richtext2:pushBackElement(richElement1) 
+        else
+            local richElement1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,sentence2[i],'font/CenturyGothic.ttf',26)     
+            index = index + 1                   
+            richtext2:pushBackElement(richElement1)     
+            if i < #sentence2 then
+                local clr = cc.c3b(255, 90, 17)
+                local c1 = 0
+                local c2 = 0
+                local isSeperate = true
+                if string.len(sentence2[i]) > 0 then
+                    c1 = string.byte(string.sub(sentence2[i],string.len(sentence2[i]),string.len(sentence2[i])))
+                    if (c1 <= 122 and c1 >= 97) or (c1 <= 90 and c1 >= 65) then
+                        isSeperate = false
+                    end
+                end
+                if i < #sentence2 and string.len(sentence2[i + 1]) > 0 and string.len(sentence2[i + 1])< 5 and isSeperate then
+                    c2 = string.byte(string.sub(sentence2[i + 1],1,1))
+                    if (c2 <= 122 and c2 >= 97) or (c2 <= 90 and c2 >= 65) then
+                        isSeperate = false
+                    end
+                end
+                if not isSeperate then
+                    clr = cc.c3b(0,0,0)
+                end
+                local richElement2 = ccui.RichElementText:create(index,clr,200,word.wordName,'font/CenturyGothic.ttf',26)
+                index = index + 1                           
+                richtext2:pushBackElement(richElement2) 
+            end
         end
     end
     -- local richElementCn2 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,word.sentenceCn2,'',26) 

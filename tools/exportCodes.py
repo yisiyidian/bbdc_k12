@@ -6,9 +6,14 @@ import os, os.path, errno
 import sys
 import shutil
 
-DEBUG_FOR_TEST = '0'
-RELEASE_FOR_APPSTORE = '1'
-RELEASE_FOR_TEST = '2'
+try:
+    import xml.etree.cElementTree as ET
+except ImportError:
+    import xml.etree.ElementTree as ET
+
+BUILD_TARGET_DEBUG = '0'
+BUILD_TARGET_RELEASE = '1'
+BUILD_TARGET_RELEASE_TEST = '2'
 
 # ---------------------------------------------------------
 
@@ -21,35 +26,36 @@ UMENG_APP_ANDROID    = ['549a5eb9fd98c5b2ac00144e', 'android']
 # ---------------------------------------------------------
 
 LEAN_CLOUD_TEST = ["gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn", "x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3", 'test']
-TENCENT_APP = ['true', 'package name', "1103783596", "n7vXdt6eDIggSsa6"]
+QQ_APP = ['true', 'package name', "1103783596", "n7vXdt6eDIggSsa6" , 'true']
+WEIXIN_APP = ['true', 'wx68b3465c73ce139e']
 LEAN_CLOUD_RELEASE = LEAN_CLOUD_XIAOMI
 UMENG_APP = UMENG_APP_ANDROID
 
 # ---------------------------------------------------------
 
 def getCodeTypeDes(codeType):
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         return 'debug'
-    elif codeType == RELEASE_FOR_APPSTORE:
+    elif codeType == BUILD_TARGET_RELEASE:
         return 'release'
-    elif codeType == RELEASE_FOR_TEST:
+    elif codeType == BUILD_TARGET_RELEASE_TEST:
         return 'release for test'
 
 def getLeanCloudAppId(codeType):
     lean_cloud_id = LEAN_CLOUD_RELEASE[0]
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         lean_cloud_id = LEAN_CLOUD_TEST[0]
     return lean_cloud_id
 
 def getLeanCloudAppKey(codeType):
     lean_cloud_key = LEAN_CLOUD_RELEASE[1]
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         lean_cloud_key = LEAN_CLOUD_TEST[1]        
     return lean_cloud_key
 
 def getLeanCloudAppName(codeType):
     lean_cloud_name = LEAN_CLOUD_RELEASE[2]
-    if codeType == DEBUG_FOR_TEST:
+    if codeType == BUILD_TARGET_DEBUG:
         lean_cloud_name = LEAN_CLOUD_TEST[2]        
     return lean_cloud_name
 
@@ -65,46 +71,65 @@ def getJsonObjToStr(jsonObj):
 def init(channelName, channelConfigs, androidManifest, androidManifestTarget, channelConfigsDir, AppActivityJava, javaSrcDir):
     global LEAN_CLOUD_RELEASE
     global UMENG_APP
-    global TENCENT_APP
+    global QQ_APP
     configs = open(channelConfigs).read()
     jsonObj = json.loads(configs)
     channels = jsonObj['channels']
     for c in channels:
         if c['name'] == channelName:
             print getJsonObjToStr(c)
+            packageName = str(c['packageName'])
 
+            # androidManifest ------------------------------------------------
             am = open(androidManifest).read()
+            # <meta-data android:name="Channel ID" android:value="LeanCloud"/>
+            am = am.replace('LeanCloud', packageName)
             if len( str(c['QQAppId']) ) > 0:
                 am = am.replace('1103783596', str(c['QQAppId']))
             else:
                 am = am.replace('<!-- tencent start -->', '<!-- tencent start ')
                 am = am.replace('<!-- tencent end -->', ' tencent end -->')
 
-            # TODO
-            # aaj = open(channelConfigsDir + AppActivityJava).read()
-            # packageName = str(c['packageName'])
-            # if packageName == "com.beibei.wordmaster.tencentmyapp":
-            #     am = am.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
-            #     aaj = aaj.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
-
             amt = open(androidManifestTarget, 'w')
             amt.write(am)
             amt.close()
+            # androidManifest ------------------------------------------------
 
-            # newJavaSrcDir = javaSrcDir + packageName.replace('.', '/') + '/'
-            # if os.path.exists(javaSrcDir + 'com/beibei/wordmaster'):
-            #     shutil.rmtree(javaSrcDir + 'com/beibei/wordmaster')
+
+
+
+            # AppActivityJava ------------------------------------------------
+            pkgPath = javaSrcDir + 'com/beibei/wordmaster/'
+            if os.path.exists(pkgPath):
+                shutil.rmtree(pkgPath)
+            os.makedirs(pkgPath)
+            rawJavaStr = open(channelConfigsDir + AppActivityJava).read()
+            if packageName != "com.beibei.wordmaster":
+                newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', 'com.beibei.wordmaster.tencentmyapp')
+            #     newJavaSrcDir = javaSrcDir + packageName.replace('.', '/') + '/'
             #     os.makedirs(newJavaSrcDir)
-            # newAppActivityJava = open(newJavaSrcDir + AppActivityJava, 'w')
-            # newAppActivityJava.write(aaj)
-            # newAppActivityJava.close()
+            #     newAppActivityJava = open(newJavaSrcDir + AppActivityJava, 'w')
+            #     newAppActivityJava.write(newJavaStr)
+            #     newAppActivityJava.close()
+                # TODO
+                rawAppActivityJava = open(pkgPath + AppActivityJava, 'w')
+                rawAppActivityJava.write(rawJavaStr)
+                rawAppActivityJava.close()
+            else:
+                rawAppActivityJava = open(pkgPath + AppActivityJava, 'w')
+                rawAppActivityJava.write(rawJavaStr)
+                rawAppActivityJava.close()
+            # AppActivityJava ------------------------------------------------
+            
+
+            
 
             LEAN_CLOUD_RELEASE = [str(c['leanCloudAppId']), str(c['leanCloudAppKey']), getJsonObjToStr(c['leanCloudAppName'])]
             UMENG_APP = [str(c['umengAppKey']), getJsonObjToStr(c['umengAppName'])]
-            TENCENT_APP = [str(c['isQQLogInAvailable']), getJsonObjToStr(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
+            QQ_APP = [str(c['isQQLogInAvailable']), getJsonObjToStr(c['packageName']), str(c['QQAppId']), str(c['QQAppKey'])]
 
             print getJsonObjToStr(c['umengAppName'])
-            print TENCENT_APP
+            print QQ_APP
 
             return
     
@@ -133,18 +158,18 @@ LEAN_CLOUD_KEY       = "%s"
 
 --------------------------------------------------------------------------------
 
-DEBUG_FOR_TEST       = '0'
-RELEASE_FOR_APPSTORE = '1'
-RELEASE_FOR_TEST     = '2'
+BUILD_TARGET_DEBUG            = '0'
+BUILD_TARGET_RELEASE          = '1'
+BUILD_TARGET_RELEASE_TEST     = '2'
 
-RELEASE_APP = '%s' -- DEBUG_FOR_TEST, RELEASE_FOR_APPSTORE, RELEASE_FOR_TEST
+BUILD_TARGET = '%s' -- BUILD_TARGET_DEBUG, BUILD_TARGET_RELEASE, BUILD_TARGET_RELEASE_TEST
 
 --------------------------------------------------------------------------------
 
 LUA_ERROR = ''
 
 function getAppVersionDebugInfo()
-    if RELEASE_FOR_APPSTORE == RELEASE_APP then return end
+    if BUILD_TARGET_RELEASE == BUILD_TARGET then return end
 
     local str = ''
     -- if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
@@ -159,7 +184,7 @@ function getAppVersionDebugInfo()
 end
 
 ''' % (getCodeTypeDes(codeType), \
-    TENCENT_APP[0], TENCENT_APP[1], TENCENT_APP[2], TENCENT_APP[3], \
+    QQ_APP[0], QQ_APP[1], QQ_APP[2], QQ_APP[3], \
     LEAN_CLOUD_TEST[2], LEAN_CLOUD_TEST[0], LEAN_CLOUD_TEST[1], LEAN_CLOUD_RELEASE[2], LEAN_CLOUD_RELEASE[0], LEAN_CLOUD_RELEASE[1], \
     codeType, appVersionInfo, appVersionInfo, getCodeTypeDes(codeType))
 
@@ -171,19 +196,22 @@ end
 
 def exportObjc(codeType, appVersionInfo, fullpath):
     isProduction = 'NO'
-    if codeType == RELEASE_FOR_APPSTORE:
+    if codeType == BUILD_TARGET_RELEASE:
         isProduction = 'YES'
 
     appVersionInfoLua = '''
 // %s
 // server: %s
 
-#define INIT_SERVER \\
+#define INIT_APP \\
     [AVOSCloud setApplicationId:@"%s" \\
                       clientKey:@"%s"]; \\
-    [AVCloud setProductionMode:%s];
+    [AVCloud setProductionMode:%s];\\
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];\\
+    \\
+    [WXApi registerApp:@"%s"];
 
-''' % (getCodeTypeDes(codeType), getLeanCloudAppName(codeType), getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction)
+''' % (getCodeTypeDes(codeType), getLeanCloudAppName(codeType), getLeanCloudAppId(codeType), getLeanCloudAppKey(codeType), isProduction, WEIXIN_APP[1])
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)
@@ -200,7 +228,7 @@ def exportJava(codeType, appVersionInfo, fullpath):
 
     isDebugLogEnabled = 'true'
     isProduction = 'false'
-    if codeType == RELEASE_FOR_APPSTORE:
+    if codeType == BUILD_TARGET_RELEASE:
         isDebugLogEnabled = 'false'
         isProduction = 'true'
 
@@ -217,6 +245,7 @@ import com.avos.avoscloud.AVOSCloud;
 import com.umeng.analytics.AnalyticsConfig;
 
 public class AppVersionInfo {
+    public static final String WEIXIN_APP_ID = "%s";
 
     public static void initServer(Activity a) {
         // server: %s
@@ -228,7 +257,7 @@ public class AppVersionInfo {
         AnalyticsConfig.setChannel("%s");
     }
 }
-''' % (macro_type, getLeanCloudAppName(codeType), lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel)
+''' % (macro_type, WEIXIN_APP[1], getLeanCloudAppName(codeType), lean_cloud_id, lean_cloud_key, isDebugLogEnabled, isProduction, umeng_app_key, umeng_app_channel)
 
     appVersionInfoLuaFile = open(fullpath, 'w')
     appVersionInfoLuaFile.write(appVersionInfoLua)

@@ -188,7 +188,7 @@ function SummaryBossAlter:win1()
     end
 
     local missionCompleteCircle = require('view.MissionCompleteCircle').create()
-    self:addChild(missionCompleteCircle,1)
+    s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
     self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
         local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
         backColor:ignoreAnchorPointForPosition(false)
@@ -213,9 +213,15 @@ function SummaryBossAlter:win1()
         win_back:setPosition(s_DESIGN_WIDTH / 2,0)
         self:addChild(win_back)
 
+        local function onButton(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                s_SCENE:checkInAnimation()
+            end
+        end
+
         local button = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
         button:setPosition(win_back:getContentSize().width/2,150)
-        --button:addTouchEventListener()
+        button:addTouchEventListener(onButton)
         win_back:addChild(button)
 
         local item_name = cc.Label:createWithTTF('OK','font/CenturyGothic.ttf',30)

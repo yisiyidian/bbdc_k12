@@ -89,7 +89,7 @@ function AppScene.create()
     scene.loadingLayer = LoadingLayer.create()
     scene.rootLayer:addChild(scene.loadingLayer)
 
-    if RELEASE_APP == RELEASE_FOR_APPSTORE then 
+    if BUILD_TARGET == BUILD_TARGET_RELEASE then 
         scene.debugLayer = cc.Layer:create()
         scene.debugLayer:setVisible(false) 
     else
@@ -228,12 +228,13 @@ end
 
 function AppScene:checkInAnimation()
     local HomeLayer = require("view.home.HomeLayer")
-    local homeLayer = HomeLayer.create()
+    local homeLayer = HomeLayer.create(true)
     self:replaceGameLayer(homeLayer)
     homeLayer:showDataLayer(true)
     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     local delay = cc.DelayTime:create(2)
     local hide = cc.CallFunc:create(function()
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
         homeLayer:hideDataLayer()
         s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     end,{})
