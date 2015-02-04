@@ -35,6 +35,12 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXUtils] addImageToGallery 
+-- @param self
+-- @param #string filePath
+        
+--------------------------------
+-- 
 -- @function [parent=#CXUtils] _testCppApi_ 
 -- @param self
         
@@ -45,12 +51,6 @@
 -- @param #string path
 -- @param #string title
 -- @param #string desc
-        
---------------------------------
--- 
--- @function [parent=#CXUtils] getExternalStorageDirectory 
--- @param self
--- @return string#string ret (return value: string)
         
 --------------------------------
 -- 
