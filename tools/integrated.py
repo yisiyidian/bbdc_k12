@@ -35,9 +35,9 @@ echo " -------------------------------"
 echo "input Channel Id"
 echo "Enter < NUMBER > of channel"
 echo "xiao mi:          \\033[31m0\\033[0m"
-echo "other androids:   \\033[31m1\\033[0m"
-echo "360 zhushou:      \\033[31m2\\033[0m"
-echo "tencent myapp:    \\033[31m3\\033[0m"
+echo "open.QQ.com:      \\033[31m1\\033[0m"
+echo "360qihu:          \\033[31m2\\033[0m"
+echo "others:           \\033[31m3\\033[0m"
 
 read CHANNEL_NAME_ID
 
@@ -45,11 +45,11 @@ CHANNEL_NAME="xiaomi"
 if [ $CHANNEL_NAME_ID = "0" ] ; then
     CHANNEL_NAME="xiaomi" 
 elif [ $CHANNEL_NAME_ID = "1" ] ; then   
-    CHANNEL_NAME="android" 
+    CHANNEL_NAME="openQQ" 
 elif [ $CHANNEL_NAME_ID = "2" ] ; then 
-    CHANNEL_NAME="360_zhushou" 
+    CHANNEL_NAME="360qihu" 
 elif [ $CHANNEL_NAME_ID = "3" ] ; then 
-    CHANNEL_NAME="tencent_myapp" 
+    CHANNEL_NAME="others" 
 else 
     echo "Wrong channel id" 
     exit 0
@@ -67,13 +67,21 @@ echo ""
 BASE_DIR_FOR_SCRIPT_SELF=%s
 cd ${BASE_DIR_FOR_SCRIPT_SELF}/
 
-APP_ACTIVITY_NAME=AppActivity.java
-APP_ACTIVITY=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/
-CHANNEL_CONFIGS=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/configs.json
-ANDROID_MANIFEST=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/AndroidManifest.xml
-ANDROID_MANIFEST_TARGET=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/AndroidManifest.xml
+CHANNEL_CONFIGS_PATH=${BASE_DIR_FOR_SCRIPT_SELF}/../tools/channel_configs/
+CHANNEL_CONFIGS=${CHANNEL_CONFIGS_PATH}/channels.xml
 
-JAVA_SRC=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/src/
+JAVA_PROJ=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android
+JAVA_SRC=${JAVA_PROJ}/src/
+
+ANDROID_MANIFEST=${CHANNEL_CONFIGS_PATH}/AndroidManifest.xml
+ANDROID_MANIFEST_TARGET=${JAVA_PROJ}/AndroidManifest.xml
+
+APP_ACTIVITY_NAME=AppActivity.java
+APP_ACTIVITY=${CHANNEL_CONFIGS_PATH}/AppActivity.java
+
+BBPUSHNOTIFICATIONSERVICESRC=${CHANNEL_CONFIGS_PATH}/BBPushNotificationService.java
+BBPUSHNOTIFICATIONSERVICEDSC=${JAVA_SRC}/c/bb/dc/notification/BBPushNotificationService.java
+
 LUA_CODE=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/src/AppVersionInfo.lua 
 OBJC_CODE=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/ios/AppVersionInfo.h
 JAVA_CODE=${JAVA_SRC}/c/bb/dc/AppVersionInfo.java
@@ -91,7 +99,13 @@ echo $VER
 VER=$DATE"_"$BRANCH"_"$VER"_"$(git rev-list HEAD -n 1 | cut -c 1-7)
 echo $VER
 
-python exportCodes.py $APPTYPE $VER ${LUA_CODE} ${OBJC_CODE} ${JAVA_CODE} $CHANNEL_NAME $CHANNEL_CONFIGS $ANDROID_MANIFEST $ANDROID_MANIFEST_TARGET $APP_ACTIVITY $APP_ACTIVITY_NAME $JAVA_SRC
+cd ${CHANNEL_CONFIGS_PATH}/
+python channel.py $APPTYPE $VER \
+    $CHANNEL_CONFIGS $CHANNEL_NAME \
+    $LUA_CODE $OBJC_CODE $JAVA_CODE \
+    $ANDROID_MANIFEST $ANDROID_MANIFEST_TARGET \
+    $JAVA_SRC $APP_ACTIVITY $APP_ACTIVITY_NAME \
+    $BBPUSHNOTIFICATIONSERVICESRC $BBPUSHNOTIFICATIONSERVICEDSC
 
 cd ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/
 ant clean

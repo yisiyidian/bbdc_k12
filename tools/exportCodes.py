@@ -70,6 +70,7 @@ def getJsonObjToStr(jsonObj):
 
 def init(channelName, channelConfigs, androidManifest, androidManifestTarget, channelConfigsDir, AppActivityJava, javaSrcDir):
     global LEAN_CLOUD_RELEASE
+    global WEIXIN_APP
     global UMENG_APP
     global QQ_APP
     configs = open(channelConfigs).read()
