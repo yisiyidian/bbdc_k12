@@ -54,13 +54,7 @@ local function createOptions(randomNameArray,wordlist)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
                     if #wordlist == 0 then
-                        --                        local beanNum = 3 - s_CorePlayManager.ordinalNum
-                        --                        if 3 - s_CorePlayManager.ordinalNum >= 0 then
                         s_CURRENT_USER:addBeans(3)
-                        --                            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-                        --                        else
-                        --                            beanNum = 0
-                        --                        end
                         s_CorePlayManager.leaveTestModel()
                     else
                         AnalyticsStudyAnswerRight_strikeWhileHot()

@@ -278,7 +278,8 @@ function MissionProgressLayer.create(share)
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
             local Test1 = require("view.islandPopup.WordLibraryPopup")
-            local test1 = Test1.create()
+            local boss = s_LocalDatabaseManager.getBossInfo(1)
+            local test1 = Test1.create(boss)
             s_SCENE:popup(test1)
         end
     end

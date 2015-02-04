@@ -10,9 +10,10 @@ local  NewReviewBossMainLayer = class("NewReviewBossMainLayer", function ()
     return cc.Layer:create()
 end)
 
+Review_From_Word_Bank = 1
+Review_From_Normal    = 2
 
-
-function NewReviewBossMainLayer.create(ReviewWordList)
+function NewReviewBossMainLayer.create(ReviewWordList,number)
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS, 'SHOW')
 
     --pause music
@@ -211,10 +212,13 @@ function NewReviewBossMainLayer.create(ReviewWordList)
         local action1 = cc.DelayTime:create(0.5)
         local action2 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
         local action3 = cc.CallFunc:create(function()
-            s_CorePlayManager.leaveReviewModel(false)
---            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
---            local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName,ReviewWordList)
---            s_SCENE:popup(newReviewBossLayerChange)
+            if number == Review_From_Word_Bank then
+                local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
+                local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName,ReviewWordList,Review_From_Word_Bank)
+                s_SCENE:popup(newReviewBossLayerChange)
+            else
+                s_CorePlayManager.leaveReviewModel(true)
+            end
             end)
         layer:runAction(cc.Sequence:create(action1, action2,action3))
 
@@ -361,14 +365,14 @@ function NewReviewBossMainLayer.create(ReviewWordList)
 
                 s_SCENE:callFuncWithDelay(1,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
-                    --                        local beanNum = 3 - s_CorePlayManager.ordinalNum
-                    --                        if 3 - s_CorePlayManager.ordinalNum >= 0 then
-                    s_CURRENT_USER:addBeans(3)
-                    --                            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-                    --                        else
-                    --                            beanNum = 0
-                    --                        end
-                s_CorePlayManager.leaveReviewModel(true)
+                s_CURRENT_USER:addBeans(3)
+                if number == Review_From_Word_Bank then
+                	local SuccessLayer = require("view.newreviewboss.NewReviewBossSuccessPopup")
+                	local successLayer = SuccessLayer.create()
+                	s_SCENE:popup(successLayer)
+                else
+                   s_CorePlayManager.leaveReviewModel(true)
+                end
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)
             end            
