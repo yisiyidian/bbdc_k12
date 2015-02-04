@@ -107,8 +107,9 @@ python channel.py $APPTYPE $VER \
     $JAVA_SRC $APP_ACTIVITY $APP_ACTIVITY_NAME \
     $BBPUSHNOTIFICATIONSERVICESRC $BBPUSHNOTIFICATIONSERVICEDSC
 
-cd ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.android/
+cd $JAVA_PROJ
 ant clean
+android update project --name BeiBei2DXLua --target "android-17" --path $JAVA_PROJ
 ''' % os.getcwd()
     return cmd
 

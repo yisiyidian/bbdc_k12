@@ -316,7 +316,8 @@ def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrc
     # androidManifest ------------------------------------------------
     manifestRaw = open(manifestSrc).read()
     # <meta-data android:name="Channel ID" android:value="LeanCloud"/>
-    manifestNew = manifestRaw.replace('LeanCloud', channelAndroid.packageName)
+    manifestNew = manifestRaw.replace('com.beibei.wordmaster', channelAndroid.packageName)
+    manifestNew = manifestNew.replace('LeanCloud', channelAndroid.packageName)
     if len(channelAndroid.qq.AppID) > 0:
         manifestNew = manifestNew.replace('1103783596', channelAndroid.qq.AppID)
     else:
@@ -329,9 +330,9 @@ def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrc
     # androidManifest ------------------------------------------------
 
     # AppActivity.java ------------------------------------------------
+    if os.path.exists(androidProjSrcPath + '/com/beibei/wordmaster'):
+        shutil.rmtree(androidProjSrcPath + '/com/beibei/wordmaster')
     pkgPath = androidProjSrcPath + '/' + channelAndroid.packageName.replace('.', '/') + '/'
-    if os.path.exists(pkgPath):
-        shutil.rmtree(pkgPath)
     os.makedirs(pkgPath)
 
     rawJavaStr = open(AppActivitySrc).read()
