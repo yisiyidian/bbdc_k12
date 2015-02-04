@@ -315,6 +315,8 @@ function M.updateTypeIndex(bossID)
         if newTypeIndex == 4 then
             query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..") ;"
             Manager.database:exec(query)
+        elseif newTypeIndex == 8 then
+            s_LocalDatabaseManager.addGraspWordsNum(s_max_wrong_num_everyday)
         end
     end    
 
