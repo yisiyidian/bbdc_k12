@@ -120,7 +120,7 @@ public class CXTencentSDKCall {
 		
 		Bitmap rawbmp = BitmapFactory.decodeFile(path);
 		String newpath = BBNDK.getSDCardPath() + "/beibeidanci/screenshot/";
-		String tmpfilename = "tmp.png";
+		String tmpfilename = System.currentTimeMillis() + "tmp.png";
 		if (saveMyBitmap(newpath, tmpfilename, rawbmp) == false) return;
 		
 	    Bundle params = new Bundle();
@@ -145,7 +145,7 @@ public class CXTencentSDKCall {
 				
 				Bitmap rawbmp = BitmapFactory.decodeFile(path);
 				String newpath = BBNDK.getSDCardPath() + "/beibeidanci/screenshot/";
-				String tmpfilename = "tmp.png";
+				String tmpfilename = System.currentTimeMillis() + "tmp.png";
 				if (saveMyBitmap(newpath, tmpfilename, rawbmp) == false) return;
 				
 				WXImageObject imgObj = new WXImageObject();
