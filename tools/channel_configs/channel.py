@@ -363,9 +363,6 @@ BUILD_TARGET_RELEASE      = BuildTarget(BUILD_TYPE_RELEASE,      'BUILD_TARGET_R
 BUILD_TARGET_RELEASE_TEST = BuildTarget(BUILD_TYPE_RELEASE_TEST, 'BUILD_TARGET_RELEASE_TEST', False)
 TEST_SERVER = Server('贝贝单词X测试', 'gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn', 'x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3')
 
-channeliOS = readChannelConfigurations('/Users/bmo/Dev/YiSiYiDian/BeiBeiDanCiX/tools/channel_configs/channels.xml', 'iOS')
-channelAndroid = readChannelConfigurations('/Users/bmo/Dev/YiSiYiDian/BeiBeiDanCiX/tools/channel_configs/channels.xml', 'xiaomi')
-
 # createLuaCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channelAndroid, channeliOS, '/Users/bmo/Dev/YiSiYiDian/BeiBeiDanCiX/BeiBei2DXLua/src/AppVersionInfo.lua')
 # createObjectiveCCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channeliOS, 'savePath')
 # createJavaCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channelAndroid, 'savePath')
