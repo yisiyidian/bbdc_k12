@@ -122,6 +122,7 @@ function CorePlayManager.enterTestModel(wordlist)
 end
 
 function CorePlayManager.leaveTestModel()
+    s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
     CorePlayManager.enterLevelLayer()
 end
 
@@ -130,23 +131,37 @@ function CorePlayManager.initReviewModel()
 end
 
 function CorePlayManager.enterReviewModel(wordlist)
-
+    local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
+    local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordlist)
+    s_SCENE:replaceGameLayer(newReviewBossMainLayer)
 end
 
-function CorePlayManager.leaveReviewModel()
+function CorePlayManager.leaveReviewModel(state)
+    if state then
+        s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
+    else
+        -- do nothing
+    end
     CorePlayManager.enterLevelLayer()
 end
 
 function CorePlayManager.initSummaryModel()
-
+    CorePlayManager.enterSummaryModel(CorePlayManager.currentWrongWordList)
 end
 
 function CorePlayManager.enterSummaryModel(wordlist)
-
+    local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
+    local summaryBossLayer = SummaryBossLayer.create(1)
+    s_SCENE:replaceGameLayer(summaryBossLayer) 
 end
 
-function CorePlayManager.leaveSummaryModel()
-
+function CorePlayManager.leaveSummaryModel(state)
+    if state then
+        s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
+    else
+        -- do nothing
+    end
+    -- CorePlayManager.enterLevelLayer()
 end
 
 

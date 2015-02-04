@@ -45,12 +45,22 @@ local function createOptions(randomNameArray,wordlist)
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
+            
+            local action2 = cc.MoveTo:create(0.5,cc.p((s_max_wrong_num_everyday - #wordlist + 1) * 50 , 1070 - sender:getPositionY()))
+            local action3 = cc.ScaleTo:create(0.2,0)
 
             if sender.tag == 1 then  
                 table.remove(wordlist,1)
                 local action1 = cc.DelayTime:create(0.5)
-                feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
+                feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
                     if #wordlist == 0 then
+                        --                        local beanNum = 3 - s_CorePlayManager.ordinalNum
+                        --                        if 3 - s_CorePlayManager.ordinalNum >= 0 then
+                        s_CURRENT_USER:addBeans(3)
+                        --                            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+                        --                        else
+                        --                            beanNum = 0
+                        --                        end
                         s_CorePlayManager.leaveTestModel()
                     else
                         AnalyticsStudyAnswerRight_strikeWhileHot()
@@ -64,6 +74,12 @@ local function createOptions(randomNameArray,wordlist)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong_strikeWhileHot()
+                    local bean = 3
+                    local total = 3
+                    if bean > 0 then
+                        local guessWrong = GuessWrong.create(bean,bean)
+                        s_SCENE:popup(guessWrong)
+                    end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)
@@ -132,7 +148,7 @@ function BlacksmithLayer:ctor(wordlist)
     self.currentWord = wordlist[1]
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
-    self.randWord = CollectUnfamiliar:createRandWord(self.currentWord)
+    self.randWord = CollectUnfamiliar:createRandWord(self.currentWord,4)
 
     local progressBar = ProgressBar.create(s_max_wrong_num_everyday, s_max_wrong_num_everyday - #wordlist, "yellow")
     progressBar:setPosition(bigWidth/2+44, 1049)

@@ -4,7 +4,7 @@ require("common.global")
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
 local Pause             = require("view.newreviewboss.NewReviewBossPause")
-
+local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 
 local  NewReviewBossMainLayer = class("NewReviewBossMainLayer", function ()
     return cc.Layer:create()
@@ -49,34 +49,23 @@ function NewReviewBossMainLayer.create(ReviewWordList)
     local wordToBeTested = {}
     local sprite_array = {}
     
-
-    local getRandomWordForRightWord = function(wordName)
-
-        local tmp =  {}            
-        table.foreachi(wordList, function(i, v)  tmp[i] = wordList[i]  end)     
-        local wordNumber
-        table.foreachi(tmp, function(i, v) if v == wordName then  wordNumber = i end end)               
-
-        local randomIndex = (wordNumber )%wordListLen + 1 
-        local word1 = tmp[randomIndex]
-        local randomIndex = (wordNumber + 1)%wordListLen + 1 
-        local word2 = tmp[randomIndex]
-
+    local getRandomWordForRightWord = function (wordname)
+        local RandomWord = CollectUnfamiliar:createRandWord(wordname,3)
         local rightIndex = math.random(1,1024)%3 + 1
 
         if type%2 == 0 then    
             local ans = {}
-            ans[rightIndex] = wordName
-            if rightIndex == 1 then  ans[2] = word1 ans[3] = word2
-            elseif rightIndex == 2 then ans[3] = word1 ans[1] = word2
-            else ans[1] = word1 ans[2] = word2        end
+            ans[rightIndex] = wordname
+            if rightIndex == 1 then  ans[2] = RandomWord[2] ans[3] = RandomWord[3]
+            elseif rightIndex == 2 then ans[3] = RandomWord[2] ans[1] = RandomWord[3]
+            else ans[1] = RandomWord[2] ans[2] = RandomWord[3]        end
             return ans
         else
             local ans = {}
-            ans[rightIndex]  = s_WordPool[wordName].wordMeaningSmall
-            if rightIndex == 1 then  ans[2] = s_WordPool[word1].wordMeaningSmall ans[3] = s_WordPool[word2].wordMeaningSmall
-            elseif rightIndex == 2 then ans[3] = s_WordPool[word1].wordMeaningSmall  ans[1] = s_WordPool[word2].wordMeaningSmall
-            else ans[1] = s_WordPool[word1].wordMeaningSmall ans[2] = s_WordPool[word2].wordMeaningSmall    end
+            ans[rightIndex]  = s_WordPool[wordname].wordMeaningSmall
+            if rightIndex == 1 then  ans[2] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[3] = s_WordPool[RandomWord[3]].wordMeaningSmall
+            elseif rightIndex == 2 then ans[3] = s_WordPool[RandomWord[2]].wordMeaningSmall  ans[1] = s_WordPool[RandomWord[3]].wordMeaningSmall
+            else ans[1] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[2] = s_WordPool[RandomWord[3]].wordMeaningSmall    end
             return ans
         end
     end
@@ -372,6 +361,13 @@ function NewReviewBossMainLayer.create(ReviewWordList)
 
                 s_SCENE:callFuncWithDelay(1,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
+                    --                        local beanNum = 3 - s_CorePlayManager.ordinalNum
+                    --                        if 3 - s_CorePlayManager.ordinalNum >= 0 then
+                    s_CURRENT_USER:addBeans(3)
+                    --                            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+                    --                        else
+                    --                            beanNum = 0
+                    --                        end
                 s_CorePlayManager.leaveReviewModel(true)
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)

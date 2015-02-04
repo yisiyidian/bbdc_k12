@@ -237,7 +237,26 @@ function M.addWrongWord(wordindex)
 end
 
 function M.updateTypeIndex(bossID)
-    
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local time      = os.time()
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." and bossID = "..bossID.." ;") do
+        local newTypeIndex = row.typeIndex + 1
+        local lastWordIndex = row.lastWordIndex
+        local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = "..newTypeIndex.." WHERE "..condition.." and bossID = "..bossID.." ;"
+        Manager.database:exec(query)
+
+        if newTypeIndex == 4 then
+            query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..") ;"
+            Manager.database:exec(query)
+        end
+    end    
+
+    M.printBossWord()
 end
 
 function M.printBossWord()

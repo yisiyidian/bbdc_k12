@@ -155,6 +155,10 @@ function Manager.addWrongWord(wordindex)
     return localdatabase_bossWord.addWrongWord(wordindex)
 end
 
+function Manager.updateTypeIndex(bossID)
+    localdatabase_bossWord.updateTypeIndex(bossID)
+end
+
 function Manager.printBossWord()
     localdatabase_bossWord.printBossWord()
 end
