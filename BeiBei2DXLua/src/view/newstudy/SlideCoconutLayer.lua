@@ -136,13 +136,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
                 if wrongWordList == nil then
                     if wrongNum == s_max_wrong_num_everyday - 1 then
---                        local beanNum = 3 - s_CorePlayManager.ordinalNum
---                        if 3 - s_CorePlayManager.ordinalNum >= 0 then
-                            s_CURRENT_USER:addBeans(3)
---                            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
---                        else
---                            beanNum = 0
---                        end
+                       s_CURRENT_USER:addBeans(3)
                     end 
                     s_CorePlayManager.leaveStudyModel(false)             
                 else

@@ -136,10 +136,12 @@ def createLuaCodes(gitVer, testServer, buildTarget, channelAndroid, channeliOS, 
 
         -- WEIXIN PACKAGE NAME : %s, APPNAME: %s
         IS_SNS_WEIXIN_SHARE_AVAILABLE = %s
+
+        CHANNEL = "%s"
 ''' % (channelAndroid.qq.isLogInAvailable, channelAndroid.qq.isShareAvailable, \
     channelAndroid.qq.PkgName, channelAndroid.qq.Name, 
     channelAndroid.qq.AppID, channelAndroid.qq.AppKey, \
-    channelAndroid.wx.Name, channelAndroid.packageName, channelAndroidWX)
+    channelAndroid.wx.Name, channelAndroid.packageName, channelAndroidWX, channelAndroid.packageName)
 
     serverAndroid = '''
         -- debug server: %s
@@ -164,10 +166,12 @@ def createLuaCodes(gitVer, testServer, buildTarget, channelAndroid, channeliOS, 
 
         -- WEIXIN PACKAGE NAME : %s, APPNAME: %s
         IS_SNS_WEIXIN_SHARE_AVAILABLE = %s
+
+        CHANNEL = "%s"
 ''' % (channeliOS.qq.isLogInAvailable, channeliOS.qq.isShareAvailable, \
     channeliOS.qq.PkgName, channeliOS.qq.Name, 
     channeliOS.qq.AppID, channeliOS.qq.AppKey, \
-    channeliOS.wx.Name, channeliOS.packageName, channeliOSWX)
+    channeliOS.wx.Name, channeliOS.packageName, channeliOSWX, channeliOS.packageName)
 
     serveriOS = '''
         -- debug server: %s
@@ -212,18 +216,14 @@ function getAppVersionDebugInfo()
     local str = ''
     -- if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
     str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName
-    if AgentManager ~= nil then
-        str = 'name:' .. str .. '\\nchannel:' .. AgentManager:getInstance():getChannelId() .. ' v:' .. s_APP_VERSION .. '\\n%s'
-    else
-        str = 'name:' .. str .. '\\nchannel:' .. 'unknown' .. ' v:' .. s_APP_VERSION .. '\\n%s'
-    end
+    str = 'name:' .. str .. '\\nchannel:' .. CHANNEL .. ' v:' .. s_APP_VERSION .. '\\n%s'
     str = '[%s]' .. ' ' .. str .. '\\n' .. LUA_ERROR
     return str
 end
 
 ''' % (buildInfo, snsAndroid, serverAndroid, snsiOS, serveriOS, \
     BUILD_TYPE_DEBUG, BUILD_TYPE_RELEASE, BUILD_TYPE_RELEASE_TEST, \
-    buildTarget.buildType, gitVer, gitVer, buildTarget.description)
+    buildTarget.buildType, gitVer, buildTarget.description)
     
     f = open(savePath, 'w')
     f.write(lua)

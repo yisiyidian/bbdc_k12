@@ -5,9 +5,9 @@ end)
 local DetailInfo        = require("view.newreviewboss.NewReviewBossWordInfo")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 
-function WordInfoPopup.create()
-    local layer = WordInfoPopup.new()
-    layer:createInfo()
+function WordInfoPopup.create(wordname,index,wordlist)
+    local layer = WordInfoPopup.new(wordname,index,wordlist)
+    layer:createInfo(wordname,index,wordlist)
     return layer
 end
 
@@ -40,11 +40,16 @@ local function creatWordLayout(word)
     return layout
 end
 
-function WordInfoPopup:ctor()
+function WordInfoPopup:ctor(wordname,index,wordlist)
 
-    self.current_index = 1
-    self.total_index = 6
-    
+    if wordlist == nil then
+        self.total_index = 0
+    else
+        self.total_index = #wordlist
+    end
+
+    self.current_index = index
+
     local backPopup = cc.Sprite:create("image/islandPopup/backforinfo.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backPopup)
@@ -68,7 +73,8 @@ function WordInfoPopup:ctor()
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-            local wordLibrary = WordLibrary.create()
+            local boss = s_LocalDatabaseManager.getBossInfo(1)
+            local wordLibrary = WordLibrary.create(boss)
             s_SCENE:popup(wordLibrary)
         end
     end
@@ -128,7 +134,25 @@ function WordInfoPopup:ctor()
     
 end
 
-function WordInfoPopup:createInfo()
+local function findIndex(currentIndex,wordList,number)
+    if number > 0 then
+        if currentIndex + number > #wordList then
+            return (currentIndex + number) % #wordList
+        else
+            return currentIndex + number
+        end
+    else
+        if currentIndex + number == 0 then
+            return #wordList
+        elseif currentIndex + number < 0 then
+            return (currentIndex + number ) % #wordList 
+        else
+            return currentIndex + number
+        end
+    end
+end
+
+function WordInfoPopup:createInfo(wordname,index,wordlist)
     
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
@@ -139,20 +163,15 @@ function WordInfoPopup:createInfo()
         (s_DESIGN_HEIGHT - backgroundSize.height) / 2 +
         (backgroundSize.height - pageView:getContentSize().height) / 2))
         
-    local pageNum = 3 
-        
-    if pageNum == 1 then
-    	
-    elseif pageNum == 2 then
-    
-    else
-    
+    if wordlist == nil or #wordlist == 0 then
+       return    
     end
-        
-    for i = 1 , 3 do
-        local layout = creatWordLayout("apple")
+    local wordIndex = {findIndex(index,wordlist,-1),tonumber(index),findIndex(index,wordlist,1)}
+    for i=1, 3 do
+        local layout = creatWordLayout(wordlist[wordIndex[i]])
         pageView:addPage(layout)
-    end 
+    end
+
     -- change to current index
     pageView:scrollToPage(1) 
 
@@ -168,10 +187,11 @@ function WordInfoPopup:createInfo()
     
     local function pageViewEvent(sender, eventType)
         if eventType == ccui.PageViewEventType.turning then
-            print("index"..pageView:getCurPageIndex() + 1)
             if pageView:getCurPageIndex() + 1 == 1 then
                 pageView:removePageAtIndex(2)
-            	local newLayout = creatWordLayout("apple")
+                local newIndex = findIndex(self.current_index,wordlist,-2)
+                print("index"..newIndex)
+                local newLayout = creatWordLayout(wordlist[newIndex])
                 pageView:insertPage(newLayout,0)  
                 pageView:scrollToPage(1)             
                 self:changeNum(false)
@@ -179,19 +199,17 @@ function WordInfoPopup:createInfo()
             
             elseif pageView:getCurPageIndex() + 1 == 3 then
                 pageView:removePageAtIndex(0)
-                local newLayout = creatWordLayout("apple")
+                local newIndex = findIndex(self.current_index,wordlist,2)
+                print("index"..newIndex)
+                local newLayout = creatWordLayout(wordlist[newIndex])
                 pageView:insertPage(newLayout,2)  
                 pageView:scrollToPage(1) 
                 self:changeNum(true)      
             end
         end
     end 
-
     pageView:addEventListener(pageViewEvent)
-
     self:addChild(pageView)
-        
-        
 end
 
 function WordInfoPopup:changeNum(bool)

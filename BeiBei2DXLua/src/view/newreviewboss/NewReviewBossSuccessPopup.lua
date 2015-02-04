@@ -91,11 +91,9 @@ function NewReviewBossSuccessPopup.create()
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-
             s_SCENE.popupLayer.listener:setSwallowTouches(false)
             s_SCENE.popupLayer:removeAllChildren()
             s_CorePlayManager.enterHomeLayer()
-
         end
     end
 
