@@ -101,7 +101,11 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     backColor:addChild(word_meaning_label)
     
     local size_big = backColor:getContentSize()
-    mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light")
+    if wrongWordList ~= nil then
+        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light")
+    else
+        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light", (wrongNum + 1) * 50)
+    end
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
     
