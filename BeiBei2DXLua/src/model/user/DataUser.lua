@@ -99,6 +99,7 @@ function DataUser:ctor()
 end
 
 function DataUser:getTodayTotalReviewBossNum()
+    -- This has to been done first when user open this app today
     local time = os.time()
     local today = os.date("%x", time)
     if self.todayTotalReviewBossNumUpdateTime ~= today then
@@ -109,6 +110,9 @@ function DataUser:getTodayTotalReviewBossNum()
     return self.todayTotalReviewBossNum
 end
 
+function DataUser:getTodayCurrentReviewBossNum()
+    return #s_LocalDatabaseManager.getTodayReviewBoss()
+end
 
 function DataUser:getLockFunctionState(productId)
     local lockFunction = self.lockFunction
