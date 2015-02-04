@@ -79,15 +79,15 @@ function NewReviewBossMainLayer.create(ReviewWordList)
             local sprite = NewReviewBossNode.create(words[j])
             if i == 1 then
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 210 + 210*(j-1), 850 - 200*i - 150))
-                sprite.opacity(255)
+                sprite.opacity(0,255)
             elseif i == 2 then 
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
                 sprite:setScale(0.8)
-                sprite.opacity(102)
+                sprite.opacity(0,102)
             else
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
                 sprite:setScale(0)
-                sprite.opacity(102)
+                sprite.opacity(0,102)
             end
             layer:addChild(sprite,1)
             tmp[j] = sprite
