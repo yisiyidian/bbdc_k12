@@ -195,6 +195,22 @@ function M.getBossInfo(bossID)
         end
     end
 
+    if     boss.typeIndex == 0 then
+        boss.proficiency = 0
+    elseif boss.typeIndex >= 1 and boss.typeIndex <= 4 then
+        boss.proficiency = 1
+    elseif boss.typeIndex == 5 then
+        boss.proficiency = 2
+    elseif boss.typeIndex == 6 then
+        boss.proficiency = 3
+    elseif boss.typeIndex == 7 then
+        boss.proficiency = 4
+    elseif boss.typeIndex == 8 then
+        boss.proficiency = 5
+    else
+        boss.proficiency = 0
+    end
+
     return boss
 end
 
