@@ -1121,6 +1121,55 @@ int lua_cx_common_CXUtils_base64DecodeAndDecompressString(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cx_common_CXUtils_addImageToGallery(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXUtils* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXUtils*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXUtils_addImageToGallery'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        std::string arg0;
+
+        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "CXUtils:addImageToGallery");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXUtils_addImageToGallery'", nullptr);
+            return 0;
+        }
+        cobj->addImageToGallery(arg0);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXUtils:addImageToGallery",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_addImageToGallery'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXUtils__testCppApi_(lua_State* tolua_S)
 {
     int argc = 0;
@@ -1218,53 +1267,6 @@ int lua_cx_common_CXUtils_shareImageToQQFriend(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_shareImageToQQFriend'.",&tolua_err);
-#endif
-
-    return 0;
-}
-int lua_cx_common_CXUtils_getExternalStorageDirectory(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXUtils* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXUtils",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXUtils*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXUtils_getExternalStorageDirectory'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 0) 
-    {
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXUtils_getExternalStorageDirectory'", nullptr);
-            return 0;
-        }
-        std::string ret = cobj->getExternalStorageDirectory();
-        tolua_pushcppstring(tolua_S,ret);
-        return 1;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXUtils:getExternalStorageDirectory",argc, 0);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXUtils_getExternalStorageDirectory'.",&tolua_err);
 #endif
 
     return 0;
@@ -1394,9 +1396,9 @@ int lua_register_cx_common_CXUtils(lua_State* tolua_S)
         tolua_function(tolua_S,"shareImageToWeiXin",lua_cx_common_CXUtils_shareImageToWeiXin);
         tolua_function(tolua_S,"compressAndBase64EncodeString",lua_cx_common_CXUtils_compressAndBase64EncodeString);
         tolua_function(tolua_S,"base64DecodeAndDecompressString",lua_cx_common_CXUtils_base64DecodeAndDecompressString);
+        tolua_function(tolua_S,"addImageToGallery",lua_cx_common_CXUtils_addImageToGallery);
         tolua_function(tolua_S,"_testCppApi_",lua_cx_common_CXUtils__testCppApi_);
         tolua_function(tolua_S,"shareImageToQQFriend",lua_cx_common_CXUtils_shareImageToQQFriend);
-        tolua_function(tolua_S,"getExternalStorageDirectory",lua_cx_common_CXUtils_getExternalStorageDirectory);
         tolua_function(tolua_S,"showMail", lua_cx_common_CXUtils_showMail);
         tolua_function(tolua_S,"getInstance", lua_cx_common_CXUtils_getInstance);
         tolua_function(tolua_S,"md5", lua_cx_common_CXUtils_md5);

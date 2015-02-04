@@ -37,11 +37,15 @@ function ShareBottom:ctor()
     -- target:retain()
     -- target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
 
+    local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
     local function saveImage(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-        	local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
+        if eventType == ccui.TouchEventType.began then
             self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+        elseif eventType == ccui.TouchEventType.ended then
+            local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
+            cx.CXUtils:getInstance():addImageToGallery(imagePath)
             self:getParent():shareEnd()
+            
             local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
             local remove = cc.CallFunc:create(function ()
 				self:removeFromParent()
