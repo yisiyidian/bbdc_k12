@@ -53,5 +53,8 @@ BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/AppVersionInfo.java
 BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/ios/AppVersionInfo.h
 BeiBei2DXLua/src/AppVersionInfo.lua
 BeiBei2DXLua/frameworks/runtime-src/proj.android/AndroidManifest.xml
+BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/notification/BBPushNotificationService.java
+BeiBei2DXLua/frameworks/runtime-src/proj.android/src/com/beibei/wordmaster
 
 tmp_apk
+

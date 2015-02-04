@@ -95,6 +95,7 @@ function EndLayer:ctor()
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
 
+    AnalyticsTasksFinished('NewStudySuccessLayer')
 end
 
 return EndLayer

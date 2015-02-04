@@ -2,7 +2,7 @@ local NewReviewBossFailPopup = class ("NewReviewBossFailPopup",function ()
     return cc.Layer:create()
 end)
 
-function NewReviewBossFailPopup.create(currentWordName,reviewWordList)
+function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS_RESULT, 'fail')
 
     local currentWord       = s_WordPool[currentWordName]
@@ -74,7 +74,7 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList)
         elseif eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
             local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-            local newReviewBossMainLayer = NewReviewBossMainLayer.create(reviewWordList)
+            local newReviewBossMainLayer = NewReviewBossMainLayer.create(reviewWordList,number)
             s_SCENE:replaceGameLayer(newReviewBossMainLayer)
         end
     end
