@@ -45,6 +45,7 @@ start = function ()
     
     require("common.global")
     require("AppVersionInfo")
+    initBuildTarget()
     initApp(start)
     if IS_SNS_QQ_LOGIN_AVAILABLE then cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY) end
 
