@@ -129,7 +129,7 @@ function O2OController.logInByQQAuthData()
 end
 
 function O2OController.startLoadingData(userStartType, username, password)
-    print('PROFILE START TIME: %s, %ld', 'startLoadingData', os.time())
+    LOGTIME('startLoadingData')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
     local isLocalNewerThenServer = false
@@ -256,11 +256,11 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function O2OController.getUserDatasOnline()
-    print('PROFILE START TIME: %s, %ld', 'loadConfigs', os.time())
+    LOGTIME('loadConfigs')
     O2OController.loadConfigs()
-    print('PROFILE START TIME: %s, %ld', 'getDataLevelInfo', os.time())
+    LOGTIME('getDataLevelInfo')
     O2OController.getDataLevelInfo(function () 
-        print('PROFILE START TIME: %s, %ld', 'getDataEverydayInfo', os.time())
+        LOGTIME('getDataEverydayInfo')
         O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
@@ -268,9 +268,9 @@ function O2OController.getUserDatasOnline()
                
                 -- TODO sys wrong word levels
 
-                print('PROFILE START TIME: %s, %ld', 'getDailyStudyInfo', os.time())
+                LOGTIME('getDailyStudyInfo')
                 O2OController.getDailyStudyInfo(function () 
-                    print('PROFILE START TIME: %s, %ld', 'enterHomeLayer', os.time())
+                    LOGTIME('enterHomeLayer')
                     s_CorePlayManager.enterHomeLayer()
                     O2OController.getBulletinBoard()    
                 end)
@@ -285,12 +285,18 @@ end
 function O2OController.loadConfigs()
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_CFG])
     
+    LOGTIME('loadBooks')
     s_DataManager.loadBooks()
+    LOGTIME('loadBookWords')
     s_BookWord = s_DataManager.loadBookWords()
+    LOGTIME('loadChapters')
     s_DataManager.loadChapters()
+    LOGTIME('loadReviewBoss')
     s_DataManager.loadReviewBoss()
+    LOGTIME('loadProduct')
     s_DataManager.loadProduct()
 
+    LOGTIME('loadAllWords')
     s_WordPool = s_DataManager.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
 end

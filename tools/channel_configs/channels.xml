@@ -2,21 +2,65 @@
 
 <configs>
 
-  <channel 
-    name="xiaomi" 
-    packageName="com.beibei.wordmaster.mi"
+    <channel name="iOS" 
+        packageName="com.BeiBeiDanCiX"
 
-    leanCloudAppName="贝贝单词X"
-    leanCloudAppId="94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
-    leanCloudAppKey="lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
+        leanCloudAppName="贝贝单词X"
+        leanCloudAppId="94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
+        leanCloudAppKey="lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
 
-    QQAppId=""
-    QQAppKey=""
-    isQQLogInAvailable="false"
-    isQQShareAvailable="true"
+        QQAppId="1103783596"
+        QQAppKey="n7vXdt6eDIggSsa6"
+        isQQLogInAvailable="true"
+        isQQShareAvailable="true"
 
-    umengAppName="贝贝单词-小米"
-    umengAppKey="5498fc3afd98c56b4200075d"/>
+        WXName="贝贝单词-背单词根本停不下来"
+        WXAppID="wx68b3465c73ce139e"
+        WXAppSecret="6a958c38c2ba812690b62bad4685750f"
+        WXSignature=""
+
+        umengAppName=""
+        umengAppKey=""/>
+
+    <channel name="xiaomi" 
+        packageName="com.beibei.wordmaster.mi"
+
+        leanCloudAppName="贝贝单词X"
+        leanCloudAppId="94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
+        leanCloudAppKey="lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
+
+        QQAppId="1103783596"
+        QQAppKey="n7vXdt6eDIggSsa6"
+        isQQLogInAvailable="false"
+        isQQShareAvailable="true"
+
+        WXName="贝贝单词-小米"
+        WXAppID="wx1858437590c609dc"
+        WXAppSecret="4f96fca821089773ace06d5a240d04ac"
+        WXSignature="b7cf8084bd0d4f782b2a4ebd2a0c90b8"
+
+        umengAppName="贝贝单词-小米"
+        umengAppKey="5498fc3afd98c56b4200075d"/>
+
+    <channel name="360qihu" 
+        packageName="com.beibei.wordmaster.qihu"
+
+        leanCloudAppName="贝贝单词X_0"
+        leanCloudAppId="2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq"
+        leanCloudAppKey="gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc"
+
+        QQAppId="1103783596"
+        QQAppKey="n7vXdt6eDIggSsa6"
+        isQQLogInAvailable="false"
+        isQQShareAvailable="true"
+
+        WXName=""
+        WXAppID=""
+        WXAppSecret=""
+        WXSignature=""
+
+        umengAppName="贝贝单词-android"
+        umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
 
 </configs>
