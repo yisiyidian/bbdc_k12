@@ -26,9 +26,10 @@ local function addStudyButton(word,wrongNum)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then     
             local normal = function ()
-                local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-                s_SCENE:replaceGameLayer(chooseWrongLayer)  
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
+                local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+                s_SCENE:replaceGameLayer(slideCoconutLayer)
             end
 
             if s_CURRENT_USER.isAlterOn == 1 then
