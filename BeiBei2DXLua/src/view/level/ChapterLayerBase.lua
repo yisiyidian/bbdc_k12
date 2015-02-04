@@ -139,13 +139,6 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         deco:setPosition(levelPosition.x+10,levelPosition.y+20)
         self:addChild(deco, 130)
     elseif levelState == 2 then
-        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-        summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
-        summaryboss:setAnchorPoint(1,1)
-        summaryboss:addAnimation(0, 'jianxiao', true)
-        summaryboss:setScale(0.7)
-        self:addChild(summaryboss, 140)
-    elseif levelState == 3 or active == 1 then -- check active
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
         s_SCENE:callFuncWithDelay(1,function()
@@ -153,6 +146,13 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end)
         reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
         self:addChild(reviewBoss, 140)
+    elseif levelState == 3 then 
+        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+        summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
+        summaryboss:setAnchorPoint(1,1)
+        summaryboss:addAnimation(0, 'jianxiao', true)
+        summaryboss:setScale(0.7)
+        self:addChild(summaryboss, 140)
     end
     
 --    if true then

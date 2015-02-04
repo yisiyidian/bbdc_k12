@@ -57,15 +57,6 @@ function ChapterLayer:ctor()
     for i = 1, currentChapterIndex do
         self.addChapterIntoListView('chapter'..i)
     end
---    if string.sub(levelInfo['chapter'],8) - 1>= 0 then
---        self:addChapterIntoListView('chapter1')
---    end
---    if string.sub(levelInfo['chapter'], 8) - 2 >= 0 then
---        self:addChapterIntoListView('chapter2')
---    end
---    if string.sub(levelInfo['chapter'], 8) - 3 >= 0 then
---        self:addChapterIntoListView('chapter3')
---    end
     -- add player
     self:addPlayer()
     self:plotDecoration()
