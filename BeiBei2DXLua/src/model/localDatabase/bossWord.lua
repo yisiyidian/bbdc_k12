@@ -112,6 +112,7 @@ function M.getBossInfo(bossID)
         boss.typeIndex      = row.typeIndex
         boss.wrongWordList  = row.wordList
         boss.lastWordIndex  = row.lastWordIndex
+        boss.lastUpdate     = row.lastUpdate
     end
 
     if boss.bossID == nil then
@@ -119,6 +120,7 @@ function M.getBossInfo(bossID)
         boss.typeIndex      = 0
         boss.wrongWordList  = {}
         boss.rightWordList  = {}
+        boss.coolingDay     = 0
     else
         local startIndex
         if boss.bossID == 1 then
@@ -145,6 +147,50 @@ function M.getBossInfo(bossID)
             local wordname = s_BookWord[s_CURRENT_USER.bookKey][i]
             if hash[wordname] ~= 1 then
                 table.insert(boss.rightWordList, wordname)
+            end
+        end
+
+        -- get cooling day
+        local getGapDay = function(day1, day2)
+            local t1 = split(day1, "/")
+            local t2 = split(day2, "/")
+            local d1 = {}
+            local d2 = {}
+            d1.year  = "20"..t1[3]
+            d1.month = t1[1]
+            d1.day   = t1[2]
+            d2.year  = "20"..t2[3]
+            d2.month = t2[1]
+            d2.day   = t2[2]
+            local numDay1 = os.time(d1)
+            local numDay2 = os.time(d2)
+            local gap = (numDay2-numDay1)/(3600*24)
+            return gap
+        end
+
+        if boss.typeIndex < 4 or boss.typeIndex > 7 then
+            -- other model
+            boss.coolingDay = 0
+        else
+            -- review boss model
+            local gap
+            if     boss.typeIndex == 4 then
+                gap = 1
+            elseif boss.typeIndex == 5 then
+                gap = 2
+            elseif boss.typeIndex == 6 then
+                gap = 3
+            elseif boss.typeIndex == 7 then
+                gap = 8
+            end
+
+            local today = os.date("%x", time)
+            local lastUpdateDay = os.date("%x", boss.lastUpdate)
+            local gapDayNum = getGapDay(lastUpdateDay, today)
+            if gapDayNum >= gap then
+                boss.coolingDay = 0
+            else
+                boss.coolingDay = gap - gapDayNum
             end
         end
     end
