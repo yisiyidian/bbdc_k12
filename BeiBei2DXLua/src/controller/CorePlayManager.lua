@@ -154,7 +154,7 @@ end
 
 function CorePlayManager.enterSummaryModel(wordlist)
     local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-    local summaryBossLayer = SummaryBossLayer.create(1)
+    local summaryBossLayer = SummaryBossLayer.create(wordlist,1)
     s_SCENE:replaceGameLayer(summaryBossLayer) 
 end
 

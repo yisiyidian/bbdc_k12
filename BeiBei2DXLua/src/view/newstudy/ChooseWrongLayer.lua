@@ -41,8 +41,10 @@ local function addNextButton(word,wrongNum,wrongWordList)
     end
 
     local choose_next_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
-    choose_next_button:setPosition(bigWidth/2, 153)
+    choose_next_button:setPosition(bigWidth/2, 100)
     choose_next_button:setTitleText("下一步")
+    choose_next_button:ignoreAnchorPointForPosition(false)
+    choose_next_button:setAnchorPoint(0.5,0)
     choose_next_button:setTitleColor(cc.c4b(255,255,255,255))
     choose_next_button:setTitleFontSize(32)
     choose_next_button:addTouchEventListener(click_next_button)  

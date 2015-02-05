@@ -50,9 +50,11 @@ local function addStudyButton(word,wrongNum)
     end
 
     local choose_study_button = ccui.Button:create("image/newstudy/button_twobutton_size.png","image/newstudy/button_twobutton_size_pressed.png","")
-    choose_study_button:setPosition(bigWidth/2-151, 153)
+    choose_study_button:setPosition(bigWidth/2-151, 100)
     choose_study_button:setTitleText("依然复习")
     choose_study_button:setTitleColor(cc.c4b(255,255,255,255))
+    choose_study_button:ignoreAnchorPointForPosition(false)
+    choose_study_button:setAnchorPoint(0.5,0)
     choose_study_button:setTitleFontSize(32)
     choose_study_button:addTouchEventListener(click_study_button)
     return choose_study_button
@@ -91,8 +93,10 @@ local function addNextButton(word,wrongNum)
     end
 
     local choose_next_button = ccui.Button:create("image/newstudy/button_twobutton_size.png","image/newstudy/button_twobutton_size_pressed.png","")
-    choose_next_button:setPosition(bigWidth/2+151, 153)
+    choose_next_button:setPosition(bigWidth/2+151, 100)
     choose_next_button:setTitleText("太简单了")
+    choose_next_button:ignoreAnchorPointForPosition(false)
+    choose_next_button:setAnchorPoint(0.5,0)
     choose_next_button:setTitleColor(cc.c4b(255,255,255,255))
     choose_next_button:setTitleFontSize(32)
     choose_next_button:addTouchEventListener(click_next_button)
