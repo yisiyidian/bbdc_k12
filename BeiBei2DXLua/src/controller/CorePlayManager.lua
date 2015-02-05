@@ -119,7 +119,7 @@ function CorePlayManager.initTestModel()
 end
 
 function CorePlayManager.enterTestModel(wordlist)
-    local BlacksmithLayer = require("view.newStudy.BlacksmithLayer")
+    local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
     local blacksmithLayer = BlacksmithLayer.create(wordlist)
     s_SCENE:replaceGameLayer(blacksmithLayer)
 end
