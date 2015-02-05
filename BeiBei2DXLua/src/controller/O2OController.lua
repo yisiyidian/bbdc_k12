@@ -354,7 +354,7 @@ local function updateWeek(localDBDatas, week, onSaved)
     currentWeek:setWeekDay(os.time())
 
     local localCurrentDBData = localDBDatas['currentWeek']
-    if localDBData ~= nil then currentWeek:updateFrom(localCurrentData) end
+    if localCurrentDBData ~= nil then currentWeek:updateFrom(localCurrentDBData) end
 
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
         onUpdateWeekCompleted(nil, currentWeek, onSaved)
@@ -375,7 +375,7 @@ function O2OController.getDataEverydayInfo(onSaved)
     if s_CURRENT_USER.localTime == 0 then
         -- 1st log in
         s_CURRENT_USER.localTime = os.time()
-        local localDBDatas = {['noObjectIdDatas']=noObjectIdDatas, ['currentWeek']=currentWeek}
+        local localDBDatas = {['noObjectIdDatas']={}, ['currentWeek']=nil}
         saveUserToServer({['localTime']=s_CURRENT_USER.localTime}, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
     else
         local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
