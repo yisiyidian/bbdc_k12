@@ -129,7 +129,7 @@ local function createOptions(randomNameArray,word,wrongNum)
                     local bean = s_CURRENT_USER.beanReward
                     local total = 3
                     if bean > 0 then
-                        local guessWrong = GuessWrong.create(bean,bean)
+                        local guessWrong = GuessWrong.create(bean,total)
                         s_SCENE:popup(guessWrong)
                         s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
                     end
@@ -197,9 +197,6 @@ function CollectUnfamiliarLayer.create(word,wrongNum)
 end
 
 function CollectUnfamiliarLayer:ctor(word,wrongNum)
-    if wrongNum == 0 then
-    	s_CURRENT_USER.beanReward = 3
-    end
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
