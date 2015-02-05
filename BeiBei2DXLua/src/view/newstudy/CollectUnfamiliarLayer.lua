@@ -180,8 +180,10 @@ local function createDontknow(word,wrongNum)
     end
 
     local choose_dontknow_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
-    choose_dontknow_button:setPosition(bigWidth/2, 153)
+    choose_dontknow_button:setPosition(bigWidth/2, 100)
     choose_dontknow_button:setTitleText("不认识")
+    choose_dontknow_button:ignoreAnchorPointForPosition(false)
+    choose_dontknow_button:setAnchorPoint(0.5,0)
     choose_dontknow_button:setTitleColor(cc.c4b(255,255,255,255))
     choose_dontknow_button:setTitleFontSize(32)
     choose_dontknow_button:addTouchEventListener(click_dontknow_button)
@@ -216,7 +218,8 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    self.lastWordAndTotalNumber.setNumber(9999)
+    local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    self.lastWordAndTotalNumber.setNumber(todayNumber)
     self.lastWordAndTotalNumber.setWord("apple",true)
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])

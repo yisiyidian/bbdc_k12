@@ -184,24 +184,26 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             
-            if state == 0 then
-            elseif state == 1 then
-            elseif state == 2 then
-            elseif state == 3 then
-            elseif state == 4 then
-            elseif state == 5 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            elseif state == 6 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            elseif state == 7 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            end
+            -- if state == 0 then
+            -- elseif state == 1 then
+            -- elseif state == 2 then
+            -- elseif state == 3 then
+            -- elseif state == 4 then
+            -- elseif state == 5 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- elseif state == 6 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- elseif state == 7 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- end
+
+            s_CorePlayManager.initTotalPlay()
         end
     end
 --    state = math.random(0, 7)
@@ -213,7 +215,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
     elseif state == 1 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-280)
     elseif state == 2 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_3.png')     

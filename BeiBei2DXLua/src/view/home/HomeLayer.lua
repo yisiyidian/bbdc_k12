@@ -23,6 +23,11 @@ function HomeLayer.create(share)
         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     end
 
+    -- can not be delete
+    local todayTotalReviewBossNum = s_CURRENT_USER:getTodayTotalReviewBossNum()
+    local todayCurrentReviewBossNum = s_CURRENT_USER:getTodayCurrentReviewBossNum()
+    -- can not be delete
+
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
