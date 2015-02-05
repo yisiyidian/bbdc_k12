@@ -12,10 +12,55 @@ local  MiddleLayer = class("MiddleLayer", function ()
     return cc.Layer:create()
 end)
 
+function MiddleLayer:ShakeFunction()
+
+end
+
 function MiddleLayer.create()
     local layer = MiddleLayer.new()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
+end
+
+local function calculationAngle(point)
+   return math.acos(point.x / math.sqrt(point.y * point.y + point.x * point.x) )
+end
+
+local function wordAnimation(endPoint,backColor)
+   local wordList = {}
+   for i=1, 10 do
+        table.insert(wordList,"apple")
+   end
+   
+   local wordLabel = {}
+   for i=1, 10 do
+        local rand = math.randomseed(os.time() * i)
+        wordLabel[i] = cc.Label:createWithSystemFont(wordList[i],"",30)
+        wordLabel[i]:setColor(cc.c4b(0,0,0,255))
+        local beginPoint = cc.p(math.random(1,100) - 50,  math.random(1,25) + 200)
+        wordLabel[i]:setPosition(endPoint.x + beginPoint.x, endPoint.y + beginPoint.y) 
+        local angle = math.deg(calculationAngle(beginPoint))
+        local randAngle = math.random(1,40) - 20 
+        wordLabel[i]:setRotation(-angle + randAngle)
+        wordLabel[i]:setVisible(false)
+
+   end
+    local time = 0
+    local i = 1
+        local function update(delta)
+        time = time + delta
+        if time * 10 > 11 then
+            backColor:unscheduleUpdate()
+        elseif time * 10 > i then
+            wordLabel[i]:setVisible(true)  
+            wordLabel[i]:runAction(cc.MoveTo:create(0.5,cc.p(endPoint.x,endPoint.y - 50)))
+            i = i + 1
+        end
+    end
+    backColor:scheduleUpdateWithPriorityLua(update, 0)
+   
+   
+   return wordLabel
 end
 
 local function createBeanSprite(bean)
@@ -60,7 +105,16 @@ local function createNumberSprite(wrongNumber)
     labelWordNum:setColor(cc.c4b(234,123,3,255))
     figureback:addChild(labelWordNum)
     
-    
+    local time = 0
+    local function update(delta)
+       time = time + delta
+        if tonumber(labelWordNum:getString()) <= wrongNumber then
+            labelWordNum:setString(math.ceil(wrongNumber / 2 * time))
+       else
+            figureback:unscheduleUpdate()
+       end
+    end
+    figureback:scheduleUpdateWithPriorityLua(update, 0)
     
     return figureback
 end
@@ -111,14 +165,27 @@ function MiddleLayer:ctor()
     self.showNumber = createNumberSprite(self.wrongNumber)
     backColor:addChild(self.showNumber)
     
-    local label_come_on = cc.Label:createWithSystemFont("贝贝给你加油","",50)
-    label_come_on:setPosition(bigWidth/2, 700)
-    label_come_on:setColor(cc.c4b(234,123,3,255))
-    backColor:addChild(label_come_on)
+    local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
+    backBagSprite:setPosition(bigWidth * 0.6, 530)
+    backColor:addChild(backBagSprite)
+    
+    local frontBagSprite = cc.Sprite:create("image/newstudy/bagfront.png")
+    frontBagSprite:setPosition(bigWidth * 0.6 + 4, 540)
+    frontBagSprite:ignoreAnchorPointForPosition(false)
+    frontBagSprite:setAnchorPoint(0.5,1)
+    frontBagSprite:setColor(cc.c4b(234,123,3,255))
+    backColor:addChild(frontBagSprite,2)
+    
+    local point = cc.p(backBagSprite:getPositionX(),backBagSprite:getPositionY())
+    
+    local jumpWord = wordAnimation(point,backBagSprite)
+    for i = 1 ,#jumpWord do
+        backColor:addChild(jumpWord[i])	
+    end
 
-    local beibeiAnimation = sp.SkeletonAnimation:create("spine/bb_hello_public.json", 'spine/bb_hello_public.atlas',1)
+    local beibeiAnimation = sp.SkeletonAnimation:create("spine/collectword.json", "spine/collectword.atlas",1)
     beibeiAnimation:addAnimation(0, 'animation', false)
-    beibeiAnimation:setPosition(bigWidth/2, 270)
+    beibeiAnimation:setPosition(bigWidth * 0.25, 300)
     backColor:addChild(beibeiAnimation)
     
     self.getBean = s_CURRENT_USER.beanReward

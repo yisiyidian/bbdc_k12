@@ -262,6 +262,8 @@ function HomeLayer.create(share)
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
     end
+    local label
+    local logo
     for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
@@ -323,20 +325,20 @@ function HomeLayer.create(share)
         setting_back:addChild(button_back)
         
         if i > 1 then
-            local logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
+            logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
             logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2)
             button_back:addChild(logo)
-            local label = cc.Label:createWithSystemFont(label_name[i],"",32)
+            label = cc.Label:createWithSystemFont(label_name[i],"",32)
             label:setColor(cc.c4b(0,0,0,255))
             label:setAnchorPoint(0, 0.5)
             label:setPosition(button_back:getContentSize().width-offset+200, button_back:getContentSize().height/2)
             button_back:addChild(label)
         else
-            local logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
+            logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
             logo:setScale(0.9)
             logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
             button_back:addChild(logo)
-            local label = cc.Label:createWithSystemFont(label_name[i],"",36)
+            label = cc.Label:createWithSystemFont(label_name[i],"",36)
             label:setColor(cc.c4b(0,0,0,255))
             label:setAnchorPoint(0, 0)
             label:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)

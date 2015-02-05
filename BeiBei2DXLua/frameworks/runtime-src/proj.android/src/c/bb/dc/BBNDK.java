@@ -357,7 +357,8 @@ public class BBNDK {
 	// loading circle
 	// ***************************************************************************************************************************
 	
-	private static ProgressDialog _loadingView = null;
+//	private static ProgressDialog _loadingView = null;
+	private static MyProgressDialog _loadingView = null;
 	
 	public static void showCXProgressHUD(final String content) {
 		_instance.runOnUiThread(new Runnable() {
@@ -366,9 +367,11 @@ public class BBNDK {
 			public void run() {
 //				_hideCXProgressHUD();
 				if (_loadingView == null) {
-					_loadingView = ProgressDialog.show(_instance, "", content, true);
+//					_loadingView = ProgressDialog.show(_instance, "", content, true);
+					_loadingView = MyProgressDialog.show(_instance, content, "");
 				} else {
-					_loadingView.setMessage(content);
+//					_loadingView.setMessage(content);
+					_loadingView.setTitle(content);
 				}
 			}
 			

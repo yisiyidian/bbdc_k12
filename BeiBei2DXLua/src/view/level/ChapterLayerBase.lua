@@ -100,6 +100,22 @@ end
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     local levelPosition = self.levelPos[levelIndex]
+    
+    -- define touchEvent
+    local function touchEvent(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            print('BaseLayer:levelbutton '..sender:getName()..' touched...')                
+            self:addPopup(sender:getName())
+        end
+    end
+
+    local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')
+    levelButton:setScale9Enabled(true)
+    levelButton:setPosition(levelPosition)
+    levelButton:setName(levelIndex)
+    levelButton:addTouchEventListener(touchEvent)
+    self:addChild(levelButton, 40)
+    
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
 
@@ -113,14 +129,14 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end
     end
     -- check active
-    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
-    local active
-    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
-        active = 0
-    else
-        active = 1
-    end
-    print('####active'..active..','..levelState)
+--    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+--    local active
+--    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
+--        active = 0
+--    else
+--        active = 1
+--    end
+--    print('####active'..active..','..levelState)
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
@@ -184,26 +200,23 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             
-            -- if state == 0 then
-            -- elseif state == 1 then
-            -- elseif state == 2 then
-            -- elseif state == 3 then
-            -- elseif state == 4 then
-            -- elseif state == 5 then
-            --     if active == 0 then
-            --     elseif active == 1 then
-            --     end
-            -- elseif state == 6 then
-            --     if active == 0 then
-            --     elseif active == 1 then
-            --     end
-            -- elseif state == 7 then
-            --     if active == 0 then
-            --     elseif active == 1 then
-            --     end
-            -- end
-            s_SCENE:removeAllPopups()
-            s_CorePlayManager.initTotalPlay()
+--            s_SCENE:removeAllPopups()
+--            print('######## state'..state..',active'..active)
+            if state >= 4 and active ~= 0 then
+                s_SCENE:callFuncWithDelay(0.7,function()
+                    local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+                    tutorial_text:setPosition(300, 450)
+                    self:addChild(tutorial_text,520)
+                    print(tutorial_text:getPosition())
+                    local text = cc.Label:createWithSystemFont('距离任务出现还差'..active..'天','',28)
+                    text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+                    text:setColor(cc.c3b(0,0,0))
+                    tutorial_text:addChild(text)
+                end)
+                s_SCENE:removeAllPopups()
+            else
+                s_CorePlayManager.initTotalPlay()
+            end
         end
     end
 --    state = math.random(0, 7)
@@ -308,7 +321,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     wordButton:setPosition(100, back:getContentSize().height-50)
     wordButton:addTouchEventListener(wordEvent)
     
-    back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 500))
+    back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
     back:addChild(closeButton)
     back:addChild(wordButton)
     s_SCENE:popup(back)
@@ -324,15 +337,6 @@ function ChapterLayerBase:plotDecoration()
     
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
-        -- define touchEvent
-        local function touchEvent(sender,eventType)
-            if eventType == ccui.TouchEventType.ended then
-                print('BaseLayer:levelbutton '..sender:getName()..' touched...')                
-                -- TODO check level state
-                --if state == 1 then
-                self:addPopup(sender:getName())
-            end
-        end
         
         if (levelIndex - currentLevelIndex) > 0 then
             local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
@@ -344,12 +348,6 @@ function ChapterLayerBase:plotDecoration()
             self:addChild(lockIsland,120)
             self:addChild(lock,130)
         else
-            local levelButton = ccui.Button:create('image/chapter/chapter0/island.png','image/chapter/chapter0/island.png','image/chapter/chapter0/island.png')
-            levelButton:setScale9Enabled(true)
-            levelButton:setPosition(levelPosition)
-            levelButton:setName(levelIndex)
-            levelButton:addTouchEventListener(touchEvent)
-            self:addChild(levelButton, 40)
             self:plotDecorationOfLevel(levelIndex)
         end  
     end

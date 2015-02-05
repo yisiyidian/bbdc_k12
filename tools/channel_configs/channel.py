@@ -323,7 +323,7 @@ public class AppVersionInfo {
 
 # ---------------------------------------------------------------------------------
 
-def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrcPath, AppActivitySrc, AppActivityName, BBPushNotificationServiceSrc, BBPushNotificationServiceDst):
+def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrcPath, AppActivitySrc, AppActivityName, BBPushNotificationServiceSrc, BBPushNotificationServiceDst, MyProgressDialogSrc, MyProgressDialogDsc):
     # androidManifest ------------------------------------------------
     manifestRaw = open(manifestSrc).read()
     # <meta-data android:name="Channel ID" android:value="LeanCloud"/>
@@ -362,6 +362,12 @@ def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrc
     newAppActivityJava.close()
     # BBPushNotificationService.java
 
+    rawJavaStr = open(MyProgressDialogSrc).read()
+    newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', channelAndroid.packageName)
+    newAppActivityJava = open(MyProgressDialogDsc, 'w')
+    newAppActivityJava.write(newJavaStr)
+    newAppActivityJava.close()
+
     pass
 
 # ---------------------------------------------------------------------------------
@@ -396,6 +402,8 @@ if __name__ == "__main__":
     _AppActivityName = sys.argv[12]
     _BBPushNotificationServiceSrc = sys.argv[13]
     _BBPushNotificationServiceDsc = sys.argv[14]
+    _MyProgressDialogSrc = sys.argv[15]
+    _MyProgressDialogDsc = sys.argv[16]
 
     # ---------------------------------------------------------------------------------
 
@@ -412,4 +420,4 @@ if __name__ == "__main__":
     createObjectiveCCodes(_ver, TEST_SERVER, buildTarget, channeliOS, _objc)
     createJavaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, _java)
 
-    setupAndroidProject(channelAndroid, _manifestSrc, _manifestDst, _androidProjSrcPath, _AppActivitySrc, _AppActivityName, _BBPushNotificationServiceSrc, _BBPushNotificationServiceDsc)
+    setupAndroidProject(channelAndroid, _manifestSrc, _manifestDst, _androidProjSrcPath, _AppActivitySrc, _AppActivityName, _BBPushNotificationServiceSrc, _BBPushNotificationServiceDsc, _MyProgressDialogSrc, _MyProgressDialogDsc)
