@@ -118,26 +118,29 @@ end
 -- word -------------------------------------------------------------------
 
 function DataManager.loadAllWords()
-    local wordInfo = {}
-    local content
-    if s_USE_XXTEA then
-        content = cx.CXUtils:getInstance():decryptXxteaFile(s_allwords)
-    else
-        content = cc.FileUtils:getInstance():getStringFromFile(s_allwords)
-    end
-    local lines = split(content, "\n")
-    local MetaWord = require("model.meta.MetaWord")
-
-    for i = 1, #lines do
-        local terms = split(lines[i], "\t")
-        local word = MetaWord.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7], terms[8], terms[9])
-        wordInfo[word.wordName] = word
-    end
-
-    return wordInfo
+--    local wordInfo = {}
+--    local content
+--    if s_USE_XXTEA then
+--        content = cx.CXUtils:getInstance():decryptXxteaFile(s_allwords)
+--    else
+--        content = cc.FileUtils:getInstance():getStringFromFile(s_allwords)
+--    end
+--    local lines = split(content, "\n")
+--    local MetaWord = require("model.meta.MetaWord")
+--
+--    for i = 1, #lines do
+--        local terms = split(lines[i], "\t")
+--        local word = MetaWord.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7], terms[8], terms[9])
+--        wordInfo[word.wordName] = word
+--    end
+--
+--    return wordInfo
+    return {}
 end
 
 function DataManager.loadBookWords()
+
+
     local bookWord = {}
     local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
     for i = 1, #bookName do
@@ -152,6 +155,8 @@ function DataManager.loadBookWords()
         end
     end
     return bookWord
+    
+    
 end
 
 -- book -------------------------------------------------------------------

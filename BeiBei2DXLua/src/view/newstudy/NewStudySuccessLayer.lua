@@ -28,7 +28,8 @@ function NewStudySuccessLayer.create()
 
     -- word info
     local currentWordName   = s_CorePlayManager.NewStudyLayerWordList[s_CorePlayManager.currentIndex]
-    local currentWord       = s_WordPool[currentWordName]
+    --local currentWord       = s_WordPool[currentWordName]
+    local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(currentWordName)
     local wordname          = currentWord.wordName
     local wordSoundMarkEn   = currentWord.wordSoundMarkEn
     local wordSoundMarkAm   = currentWord.wordSoundMarkAm

@@ -34,8 +34,12 @@ function WordLibraryListview:ctor(wordList)
     local word = {}
     local meaning = {}
     for i = 1,#wordList  do
-        word[i] = s_WordPool[wordList[i]].wordName
-        meaning[i] = s_WordPool[wordList[i]].wordMeaningSmall
+        --word[i] = s_WordPool[wordList[i]].wordName
+        --meaning[i] = s_WordPool[wordList[i]].wordMeaningSmall
+
+        local currentWord = s_LocalDatabaseManager.getWordInfoFromWordName(wordList[i])
+        word[i] = currentWord.wordName
+        meaning[i] = currentWord.wordMeaningSmall
     end
 
     local count = table.getn(wordList)

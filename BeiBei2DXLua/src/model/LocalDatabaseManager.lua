@@ -24,6 +24,8 @@ local localdatabase_dailyStudyInfo  = nil
 local localdatabase_bossWord        = nil
 local localdatabase_task            = nil
 
+local localdatabase_word            = nil
+
 -- define Manager
 local Manager = {}
 
@@ -42,6 +44,8 @@ function Manager.init()
     localdatabase_dailyStudyInfo    = reloadModule('model.localDatabase.dailyStudyInfo')
     localdatabase_bossWord          = reloadModule('model.localDatabase.bossWord')
     localdatabase_task              = reloadModule('model.localDatabase.task')
+    
+    localdatabase_word              = reloadModule('model.localDatabase.word')
     
     Manager.initTables()
 end
@@ -75,14 +79,36 @@ function Manager.initTables()
             sentenceCn2 TEXT
         );
     ]]
-     -- INIT ALL WORD POOL
-     
-     
-    
 
+    -- INIT ALL WORD POOL BEGIN
+    local num = 0
+    for row in Manager.database:nrows("select * from DataWord where wordName='jawbone' ;") do
+        num = 1
+    end
+    
+    if num == 0 then
+        print("INIT ALL WORD POOL BEGIN")
+        local content= cc.FileUtils:getInstance():getStringFromFile("newword.json")
+        local lines = split(content, "\n")
+        for i = 1, #lines do
+            local terms = split(lines[i], "\t")
+            for i = 1, #terms do
+                terms[i] = string.gsub(terms[i], "'", '"')
+            end
+            local query = "INSERT INTO DataWord (wordName, wordSoundMarkEn, wordSoundMarkAm, wordMeaningSmall, wordMeaning, sentenceEn, sentenceCn, sentenceEn2, sentenceCn2) VALUES ('"..terms[1].."','"..terms[2].."','"..terms[3].."','"..terms[4].."','"..terms[5].."','"..terms[6].."','"..terms[7].."','"..terms[8].."','"..terms[9].."') ;"
+            Manager.database:exec(query)
+        end
+        print("INIT ALL WORD POOL END")
+    end
+    -- INIT ALL WORD POOL END
+    
     for i = 1, #databaseTables do
         localdatabase_utils.createTable(databaseTables[i].create())
     end
+end
+
+function Manager.getWordInfoFromWordName(wordName)
+    return localdatabase_word.getWordInfoFromWordName(wordName)
 end
 
 function Manager.saveDataClassObject(objectOfDataClass, userId, username)

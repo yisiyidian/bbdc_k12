@@ -51,11 +51,19 @@ local function getWords(type)
     
     for i = 1,#words  do
         
-        words.wordName[i]      = s_WordPool[words[i]].wordName
-        words.smallMeaning[i]  = s_WordPool[words[i]].wordMeaningSmall
-        words.meaning[i]       = split(s_WordPool[words[i]].wordMeaning, "|||")
-        words.sentenceEn[i]    = s_WordPool[words[i]].sentenceEn
-        words.sentenceCn[i]    = s_WordPool[words[i]].sentenceCn
+        --words.wordName[i]      = s_WordPool[words[i]].wordName
+        --words.smallMeaning[i]  = s_WordPool[words[i]].wordMeaningSmall
+        --words.meaning[i]       = split(s_WordPool[words[i]].wordMeaning, "|||")
+        --words.sentenceEn[i]    = s_WordPool[words[i]].sentenceEn
+        --words.sentenceCn[i]    = s_WordPool[words[i]].sentenceCn
+
+        local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(words[i])
+        words.wordName[i]      = currentWord.wordName
+        words.smallMeaning[i]  = currentWord.wordMeaningSmall
+        words.meaning[i]       = split(currentWord.wordMeaning, "|||")
+        words.sentenceEn[i]    = currentWord.sentenceEn
+        words.sentenceCn[i]    = currentWord.sentenceCn
+
         words.meaning[i].meaningArray = {}
         
         for temp = 1,#words.meaning[i] do

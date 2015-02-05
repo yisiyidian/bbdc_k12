@@ -5,7 +5,8 @@ end)
 function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS_RESULT, 'fail')
 
-    local currentWord       = s_WordPool[currentWordName]
+    --local currentWord       = s_WordPool[currentWordName]
+    local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(currentWordName)
     local wordname          = currentWord.wordName
     local wordSoundMarkEn   = currentWord.wordSoundMarkEn
     local wordSoundMarkAm   = currentWord.wordSoundMarkAm

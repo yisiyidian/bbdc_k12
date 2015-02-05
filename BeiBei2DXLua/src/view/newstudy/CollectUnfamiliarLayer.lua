@@ -13,7 +13,8 @@ local  CollectUnfamiliarLayer = class("CollectUnfamiliarLayer", function ()
 end)
 
 function CollectUnfamiliarLayer:createWordInfo(word) 
-    local currentWord       = s_WordPool[word]
+    --local currentWord       = s_WordPool[word]
+    local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(word)
     local wordname          = currentWord.wordName
     local wordSoundMarkEn   = currentWord.wordSoundMarkEn
     local wordSoundMarkAm   = currentWord.wordSoundMarkAm
@@ -31,7 +32,9 @@ end
 function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
     local randomNameArray  = {}
     table.insert(randomNameArray, word)
-    local word1 = split(tostring(s_WordPool[word].wordMeaningSmall),"%.")
+    --local word1 = split(tostring(s_WordPool[word].wordMeaningSmall),"%.")
+    local word1 = split(tostring(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall),"%.")
+
     local wordList = {}
 
     if word1[1] == "num" then
@@ -72,8 +75,10 @@ function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
                 isIn = 1
                 break
             end
-            local word1 = split(tostring(s_WordPool[word].wordMeaningSmall),"%.")
-            local word2 = split(tostring(s_WordPool[randomWord].wordMeaningSmall),"%.")
+            --local word1 = split(tostring(s_WordPool[word].wordMeaningSmall),"%.")
+            --local word2 = split(tostring(s_WordPool[randomWord].wordMeaningSmall),"%.")
+            local word1 = split(tostring(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall),"%.")
+            local word2 = split(tostring(s_LocalDatabaseManager.getWordInfoFromWordName(randomWord).wordMeaningSmall),"%.")
             if word1[1] ~= word2[1] then
                 isIn = 1
                 break
@@ -91,7 +96,8 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
     local wordMeaningTable= {}
     for i = 1, 4 do
         local name = randomNameArray[i]
-        local meaning = s_WordPool[name].wordMeaningSmall
+        --local meaning = s_WordPool[name].wordMeaningSmall
+        local meaning = s_LocalDatabaseManager.getWordInfoFromWordName(name).wordMeaningSmall
         table.insert(wordMeaningTable, meaning)
     end
     local rightIndex = math.random(1, 4)
