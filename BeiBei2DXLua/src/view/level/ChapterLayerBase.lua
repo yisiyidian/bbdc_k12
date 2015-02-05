@@ -209,8 +209,8 @@ function ChapterLayerBase:addPopup(levelIndex)
 --    state = math.random(0, 7)
 --    print('state is '..state)
     local back, taskButton, tick
-    state = 5
-    coolingDay = 1
+--    state = 5
+--    coolingDay = 1
     if state == 0 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
         taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
