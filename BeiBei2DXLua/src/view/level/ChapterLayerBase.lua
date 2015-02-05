@@ -209,9 +209,11 @@ function ChapterLayerBase:addPopup(levelIndex)
 --    state = math.random(0, 7)
 --    print('state is '..state)
     local back, taskButton, tick
+    state = 5
+    coolingDay = 1
     if state == 0 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
 --        taskButton:set
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
     elseif state == 1 then
@@ -222,28 +224,43 @@ function ChapterLayerBase:addPopup(levelIndex)
 --        taskButton:setAnchorPoint(0,0)
     elseif state == 2 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_3.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_pressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-360)
     elseif state == 3 then    
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_4.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_pressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-450)
     elseif state == 4 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_5.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png')
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_pressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_1.png','image/chapter/popup/button_pressed_xiaoguantancu_?_1.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-540)
     elseif state == 5 then
---        if coolingDay == 0 then
-            back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_6.png')     
-            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png')
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_6.png')   
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_pressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_2.png','image/chapter/popup/button_pressed_xiaoguantancu_?_2.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-630)
     elseif state == 6 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_7.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png')
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_pressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_3.png','image/chapter/popup/button_pressed_xiaoguantancu_?_3.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-720)
     elseif state == 7 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_8.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png')
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_pressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_4.png','image/chapter/popup/button_pressed_xiaoguantancu_?_4.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-810) 
     elseif state == 8 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_9.png')
