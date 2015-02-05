@@ -24,13 +24,13 @@ function M.getWordInfoFromWordName(wordName)
     local word = {}
     for row in Manager.database:nrows("SELECT * FROM DataWord WHERE wordName = '"..wordName.."' ;") do
         word.wordName           =   row.wordName
-        word.wordSoundMarkEn    =   row.wordSoundMarkEn
-        word.wordSoundMarkAm    =   row.wordSoundMarkAm
+        word.wordSoundMarkEn    =   string.gsub(row.wordSoundMarkEn, '"', "'")
+        word.wordSoundMarkAm    =   string.gsub(row.wordSoundMarkAm, '"', "'")
         word.wordMeaningSmall   =   row.wordMeaningSmall
         word.wordMeaning        =   row.wordMeaning
-        word.sentenceEn         =   row.sentenceEn
+        word.sentenceEn         =   string.gsub(row.sentenceEn, '"', "'")
         word.sentenceCn         =   row.sentenceCn
-        word.sentenceEn2        =   row.sentenceEn2
+        word.sentenceEn2        =   string.gsub(row.sentenceEn2, '"', "'")
         word.sentenceCn2        =   row.sentenceCn2
     end
     return word
