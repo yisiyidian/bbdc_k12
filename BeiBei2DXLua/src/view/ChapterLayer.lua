@@ -58,7 +58,7 @@ function ChapterLayer:ctor()
         self.addChapterIntoListView('chapter'..i)
     end
     -- add player
-    self:addPlayer()
+--    self:addPlayer()
     self:plotDecoration()
     -- scroll to current chapter level
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
@@ -86,7 +86,7 @@ function ChapterLayer:checkUnlockLevel()
             self.chapterDic[currentChapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
         end)
         s_SCENE:callFuncWithDelay(1.0, function() 
-            self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
+            --self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
             self:scrollLevelLayer(currentProgress,0.3)
             -- notification
 --            self:addPlayerNotification(false)
@@ -104,12 +104,12 @@ function ChapterLayer:checkUnlockLevel()
     elseif currentProgress - oldProgress > 0 then   -- unlock level
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         local delayTime = 0
-        s_SCENE:callFuncWithDelay(delayTime, 
-            function()
-                -- add notification
-                self:addPlayerNotification(false) 
-            end
-        )  
+--        s_SCENE:callFuncWithDelay(delayTime, 
+--            function()
+--                -- add notification
+--                self:addPlayerNotification(false) 
+--            end
+--        )  
         self.chapterDic[chapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
         -- move player
         s_SCENE:callFuncWithDelay(0.3,function()
@@ -130,7 +130,7 @@ function ChapterLayer:checkUnlockLevel()
         end)
     else
         -- add notification
-        self:addPlayerNotification(true) 
+--        self:addPlayerNotification(true) 
     end
     self:addNotification()
 end
