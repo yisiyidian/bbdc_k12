@@ -8,7 +8,7 @@ end)
 
 function MissionProgressLayer.create(share)
     local missionCount = s_CURRENT_USER:getTodayTotalReviewBossNum() + 1
-    local completeCount = s_CURRENT_USER:getTodayCurrentReviewBossNum()
+    local completeCount = s_CURRENT_USER:getTodayReaminReviewBossNum()
     if share then
         completeCount = missionCount
     end

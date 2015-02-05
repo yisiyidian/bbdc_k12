@@ -24,8 +24,12 @@ function HomeLayer.create(share)
     end
 
     -- can not be delete
-    local todayTotalReviewBossNum = s_CURRENT_USER:getTodayTotalReviewBossNum()
-    local todayCurrentReviewBossNum = s_CURRENT_USER:getTodayCurrentReviewBossNum()
+    DataUser:updateTotalDataEveryday()
+
+    local todayTotalReviewBossNum  = s_CURRENT_USER:getTodayTotalReviewBossNum()
+    local todayReaminReviewBossNum = s_CURRENT_USER:getTodayReaminReviewBossNum()
+    local todayTotalTaskNum        = s_CURRENT_USER:getTodayTotalTaskNum()
+    local todayRemainTaskNum       = s_CURRENT_USER:getTodayRemainTaskNum()
     -- can not be delete
 
     -- data begin
