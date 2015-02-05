@@ -1,8 +1,9 @@
 local WordLibraryPopup = class ("WordLibraryPopup",function ()
     return cc.Layer:create()
-end)
+end) 
 
-local Listview = require("view.islandPopup.WordLibraryListview")
+local StatePopup  = require("view.level.ChapterLayerBase")
+local Listview    = require("view.islandPopup.WordLibraryListview")
 
 function WordLibraryPopup.create(boss)
     local layer = WordLibraryPopup.new(boss)

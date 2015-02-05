@@ -4,6 +4,13 @@ local LastWordAndTotalNumberTip = class("LastWordAndTotalNumberTip", function()
     return cc.Layer:create()
 end)
 
+function LastWordAndTotalNumberTip:getTodayNum()
+    local daytime = os.time()
+    local str = getDayStringForDailyStudyInfo(daytime)
+    local todayNumber = s_LocalDatabaseManager.getStudyWordsNum(str)
+    return todayNumber
+end
+
 function LastWordAndTotalNumberTip.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
