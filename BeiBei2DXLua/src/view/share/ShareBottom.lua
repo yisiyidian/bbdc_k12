@@ -37,11 +37,15 @@ function ShareBottom:ctor()
     -- target:retain()
     -- target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
 
+    local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
     local function saveImage(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-        	local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
+        if eventType == ccui.TouchEventType.began then
             self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+        elseif eventType == ccui.TouchEventType.ended then
+            local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
+            cx.CXUtils:getInstance():addImageToGallery(imagePath)
             self:getParent():shareEnd()
+            
             local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
             local remove = cc.CallFunc:create(function ()
 				self:removeFromParent()
@@ -64,15 +68,20 @@ function ShareBottom:ctor()
 	qq_button:setPosition(0.74 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
 	bottom:addChild(qq_button)
 	addTitle(qq_button,'QQ好友',0.5)
+
 	local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
-	local function shareToQQ(sender, eventType)
+	local function shareTo(sender, eventType)
 		if eventType == ccui.TouchEventType.began then
 			self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
         elseif eventType == ccui.TouchEventType.ended then
         	--local png = string.format("image-saved%s.png",os.date('%X',os.time()))
             --self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
             local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
-            cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, '分享我的记录', '贝贝单词－根本停不下来')
+            if sender == qq_button then
+                cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, '分享我的记录', '贝贝单词－根本停不下来')
+            else
+                cx.CXUtils:getInstance():shareImageToWeiXin(imagePath, '分享我的记录', '贝贝单词－根本停不下来')
+            end
 
             self:getParent():shareEnd()
             local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
@@ -84,7 +93,8 @@ function ShareBottom:ctor()
         end
     end
 
-    qq_button:addTouchEventListener(shareToQQ)
+    weixin_button:addTouchEventListener(shareTo)
+    qq_button:addTouchEventListener(shareTo)
 
 	local close = ccui.Button:create('image/share/share_close_sharing.png','')
 	close:setScale9Enabled(true)

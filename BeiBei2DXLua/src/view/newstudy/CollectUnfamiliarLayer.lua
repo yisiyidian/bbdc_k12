@@ -6,6 +6,7 @@ local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
+local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 
 local  CollectUnfamiliarLayer = class("CollectUnfamiliarLayer", function ()
     return cc.Layer:create()
@@ -27,7 +28,7 @@ function CollectUnfamiliarLayer:createWordInfo(word)
         wordMeaning,sentenceEn,sentenceCn,sentenceEn2,sentenceCn2 }
 end
 
-function CollectUnfamiliarLayer:createRandWord(word)
+function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
     local randomNameArray  = {}
     table.insert(randomNameArray, word)
     local word1 = split(tostring(s_WordPool[word].wordMeaningSmall),"%.")
@@ -50,7 +51,7 @@ function CollectUnfamiliarLayer:createRandWord(word)
     end
     
     if wordList ~= nil then
-        for i = 1 ,3 do
+        for i = 1 ,randomWrongNumber - 1 do
             if word == wordList[i] then
                 table.insert(randomNameArray, wordList[4])
             else
@@ -60,7 +61,7 @@ function CollectUnfamiliarLayer:createRandWord(word)
     end
     
     while 1 do
-        if #randomNameArray >= 4 then
+        if #randomNameArray >= randomWrongNumber then
             break
         end 
         local randomIndex = math.random(1, #s_BookWord[s_CURRENT_USER.bookKey])
@@ -111,10 +112,12 @@ local function createOptions(randomNameArray,word,wrongNum)
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
+          
 
             if sender.tag == 1 then  
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
+                    AnalyticsStudyAnswerRight()
                     local ChooseRightLayer = require("view.newstudy.ChooseRightLayer")
                     local chooseRightLayer = ChooseRightLayer.create(word,wrongNum)
                     s_SCENE:replaceGameLayer(chooseRightLayer)
@@ -122,6 +125,14 @@ local function createOptions(randomNameArray,word,wrongNum)
             else
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
+                    AnalyticsStudyGuessWrong()
+                    local bean = s_CURRENT_USER.beanReward
+                    local total = 3
+                    if bean > 0 then
+                        local guessWrong = GuessWrong.create(bean,bean)
+                        s_SCENE:popup(guessWrong)
+                        s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
+                    end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
@@ -160,6 +171,8 @@ local function createDontknow(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            AnalyticsStudyDontKnowAnswer()  
+            AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
             local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
@@ -184,6 +197,9 @@ function CollectUnfamiliarLayer.create(word,wrongNum)
 end
 
 function CollectUnfamiliarLayer:ctor(word,wrongNum)
+    if wrongNum == 0 then
+    	s_CURRENT_USER.beanReward = 3
+    end
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -195,11 +211,11 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     self.currentWord = word
 
     self.wordInfo = self:createWordInfo(self.currentWord)
-    self.randWord = self:createRandWord(self.currentWord)
+    self.randWord = self:createRandWord(self.currentWord,4)
     
     local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
-    backColor:addChild(progressBar)
+    backColor:addChild(progressBar,2)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -222,6 +238,7 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     label_dontknow:setPosition(bigWidth/2, 220)
     label_dontknow:setColor(cc.c4b(37,158,227,255))
     backColor:addChild(label_dontknow)
+    
 end
 
 return CollectUnfamiliarLayer

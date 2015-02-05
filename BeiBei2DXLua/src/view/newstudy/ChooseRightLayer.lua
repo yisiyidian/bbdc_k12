@@ -24,10 +24,28 @@ local function addStudyButton(word,wrongNum)
     local click_study_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-            s_SCENE:replaceGameLayer(chooseWrongLayer)   
+        elseif eventType == ccui.TouchEventType.ended then     
+            local normal = function ()
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
+                local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+                s_SCENE:replaceGameLayer(slideCoconutLayer)
+            end
+
+            if s_CURRENT_USER.isAlterOn == 1 then
+                local guideAlter = GuideAlter.create(1, "依然复习？", "陛下，我在生词库中等你来哦～")
+                guideAlter:setPosition(s_LEFT_X + bigWidth / 2, s_DESIGN_HEIGHT/2)
+                s_SCENE:popup(guideAlter)
+                guideAlter.addbeibeiThrowHeart()
+                guideAlter.sure = function()
+                    print("guide alter tag: "..guideAlter.box_tag)
+                    s_CURRENT_USER.isAlterOn = 0
+                    normal()
+                end
+            else
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                normal()
+            end
         end
     end
 
@@ -46,7 +64,29 @@ local function addNextButton(word,wrongNum)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.leaveStudyModel(true)
+            AnalyticsStudyNextBtn()
+            local normal = function()
+                s_CorePlayManager.leaveStudyModel(true)
+            end
+            if s_CURRENT_USER.isAlterOn == 1 then
+                local guideAlter = GuideAlter.create(1, "太简单了？", "陛下，您真的要把我打入冷宫吗？")
+                guideAlter:setPosition(s_LEFT_X + bigWidth / 2, s_DESIGN_HEIGHT/2)
+                s_SCENE:popup(guideAlter)
+                guideAlter.addbeibeiBreakHeart()
+                guideAlter.sure = function()
+                    print("guide alter tag: "..guideAlter.box_tag)
+                    s_CURRENT_USER.isAlterOn = 0
+                    normal()
+                    AnalyticsFirst(ANALYTICS_FIRST_SKIP_REVIEW, 'sure')
+                end
+
+                guideAlter.cancel = function()
+                    AnalyticsFirst(ANALYTICS_FIRST_SKIP_REVIEW, 'cancel')
+                end
+            else
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                normal()
+            end
         end
     end
 

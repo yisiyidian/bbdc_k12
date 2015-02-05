@@ -6,14 +6,6 @@
 
 --------------------------------
 -- 
--- @function [parent=#CXUtils] shareImageToQQFriend 
--- @param self
--- @param #string path
--- @param #string title
--- @param #string desc
-        
---------------------------------
--- 
 -- @function [parent=#CXUtils] decryptXxteaFile 
 -- @param self
 -- @param #char filePath
@@ -21,8 +13,11 @@
         
 --------------------------------
 -- 
--- @function [parent=#CXUtils] _testCppApi_ 
+-- @function [parent=#CXUtils] shareImageToWeiXin 
 -- @param self
+-- @param #string path
+-- @param #string title
+-- @param #string desc
         
 --------------------------------
 -- 
@@ -37,6 +32,25 @@
 -- @param self
 -- @param #string str
 -- @return string#string ret (return value: string)
+        
+--------------------------------
+-- 
+-- @function [parent=#CXUtils] addImageToGallery 
+-- @param self
+-- @param #string filePath
+        
+--------------------------------
+-- 
+-- @function [parent=#CXUtils] _testCppApi_ 
+-- @param self
+        
+--------------------------------
+-- 
+-- @function [parent=#CXUtils] shareImageToQQFriend 
+-- @param self
+-- @param #string path
+-- @param #string title
+-- @param #string desc
         
 --------------------------------
 -- 

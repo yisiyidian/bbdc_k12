@@ -13,8 +13,9 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create(word,wrongNum)
-    local layer = SlideCoconutLayer.new(word,wrongNum)
+function SlideCoconutLayer.create(word,wrongNum,wrongWordList)
+    AnalyticsStudyLookBackWord()
+    local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -35,14 +36,20 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton(word,wrongNum)
+local function createLastButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            local chooseWrongLayer 
+            AnalyticsStudyLookBackWord()
+            if wrongWordList == nil then
+                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            else
+                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+            end
             s_SCENE:replaceGameLayer(chooseWrongLayer)  
         end
     end
@@ -56,7 +63,7 @@ local function createLastButton(word,wrongNum)
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor(word,wrongNum)
+function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
@@ -72,7 +79,14 @@ function SlideCoconutLayer:ctor(word,wrongNum)
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
+    local color 
+    if wrongWordList == nil then
+        color = "blue"
+    else
+        color = "yellow"
+    end
+    
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
     
@@ -87,18 +101,64 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     backColor:addChild(word_meaning_label)
     
     local size_big = backColor:getContentSize()
-    mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light")
+    if wrongWordList ~= nil then
+        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light")
+    else
+        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light", (wrongNum + 1) * 50)
+    end
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
     
     local success = function()
         playWordSound(self.currentWord) 
-        if isCollectLayer == true then
-            s_CorePlayManager.leaveStudyModel(false)   
+        local normal = function()  
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+            local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
+            showAnswerStateBack:setPosition(backColor:getContentSize().width *1.5, 768)
+            showAnswerStateBack:ignoreAnchorPointForPosition(false)
+            showAnswerStateBack:setAnchorPoint(0.5,0.5)
+            backColor:addChild(showAnswerStateBack)
+
+            local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
+            sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
+            showAnswerStateBack:addChild(sign)
+
+            local right_wordname = cc.Label:createWithSystemFont(self.currentWord,"",60)
+            right_wordname:setColor(cc.c4b(130,186,47,255))
+            right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
+            right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))
+            showAnswerStateBack:addChild(right_wordname)
+
+            local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
+            showAnswerStateBack:runAction(action1)
+
+            self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
+                if wrongWordList == nil then
+                    if wrongNum == s_max_wrong_num_everyday - 1 then
+                        s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
+                    end 
+                    s_CorePlayManager.leaveStudyModel(false)             
+                else
+                    table.insert(wrongWordList,wrongWordList[1])
+                    table.remove(wrongWordList,1)
+                    local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+                    local blacksmithLayer = BlacksmithLayer.create(wrongWordList)
+                    s_SCENE:replaceGameLayer(blacksmithLayer)
+                end
+            end)))
+        end
+
+        if s_CURRENT_USER.slideNum == 1 then
+            local guideAlter = GuideAlter.create(0, "划词加强记忆", "用来加强用户记忆的步骤，可以强化你对生词的印象。")
+            guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            backColor:addChild(guideAlter)
+
+            guideAlter.know = function()
+                normal()
+            end
         else
-            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
-            local blacksmithLayer = BlacksmithLayer.create()
-            s_SCENE:replaceGameLayer(blacksmithLayer)
+            normal()
         end
 
     end
@@ -110,7 +170,7 @@ function SlideCoconutLayer:ctor(word,wrongNum)
     self.refreshButton = createRefreshButton()
     backColor:addChild(self.refreshButton)
     
-    self.lastButton = createLastButton(word,wrongNum)
+    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastButton)
 end
 

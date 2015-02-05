@@ -33,16 +33,25 @@ function __G__TRACKBACK__(msg)
     return msg
 end
 
+function LOGTIME(des)
+    if BUILD_TARGET == BUILD_TARGET_RELEASE then return end
+    print('LOGTIME', des, os.time())
+    LUA_ERROR = LUA_ERROR .. '\n' .. 'LOGTIME:' .. des .. ', ' .. tostring(os.time())
+end
+
 local start
 start = function ()
     s_APP_VERSION = app_version_release
     
     require("common.global")
     require("AppVersionInfo")
+    initBuildTarget()
     initApp(start)
-    if IS_SNS_QQ_LOGIN_AVAILABLE then cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY) end
+    if IS_SNS_QQ_LOGIN_AVAILABLE or IS_SNS_QQ_SHARE_AVAILABLE then 
+        cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY) 
+    end
 
-    if RELEASE_APP == RELEASE_FOR_APPSTORE then
+    if BUILD_TARGET == BUILD_TARGET_RELEASE then
         -- remove print debug info when release app
         print = function ( ... )
         end
@@ -54,7 +63,7 @@ start = function ()
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false -- TODO
         s_SERVER.production       = 1
-        s_SERVER.hasLog             = false
+        s_SERVER.hasLog           = false
         s_SERVER.closeNetwork     = false
 
         s_SERVER.appId = LEAN_CLOUD_ID
@@ -66,9 +75,9 @@ start = function ()
         s_SERVER.debugLocalHost   = false
         s_SERVER.isAppStoreServer = false
         s_SERVER.production       = 0
-        s_SERVER.hasLog             = true
+        s_SERVER.hasLog           = true
 
-        if RELEASE_APP == RELEASE_FOR_TEST then
+        if BUILD_TARGET == BUILD_TARGET_RELEASE_TEST then
             test_code = NORMAL_CODE
 
             s_SERVER.closeNetwork = false
@@ -96,7 +105,7 @@ start = function ()
             local d = string.gsub(c,   "\t", "    ") 
             errorObj['msg'] = d
             errorObj['appVersion'] = s_APP_VERSION
-            errorObj['RA'] = RELEASE_APP
+            errorObj['RA'] = BUILD_TARGET
             s_SERVER.createData(errorObj)
         end
     end

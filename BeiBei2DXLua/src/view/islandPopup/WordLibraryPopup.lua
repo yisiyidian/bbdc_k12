@@ -4,8 +4,8 @@ end)
 
 local Listview = require("view.islandPopup.WordLibraryListview")
 
-function WordLibraryPopup.create()
-    local layer = WordLibraryPopup.new()
+function WordLibraryPopup.create(boss)
+    local layer = WordLibraryPopup.new(boss)
     return layer
 end
 
@@ -67,10 +67,17 @@ local function addfamiliarButton(top_sprite)
     return familiar_button
 end
 
-local function addReviewButton(bottom_sprite)
+local function addReviewButton(bottom_sprite,boss)
     local review_button_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            print("review")
+            local ReviewBoss = require("view.newreviewboss.NewReviewBossMainLayer")
+            if boss.wrongWordList == nil or #boss.wrongWordList == 0 then
+                return 
+            else
+                local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
+                s_SCENE:replaceGameLayer(reviewBoss)
+                s_SCENE:removeAllPopups()
+            end
         end
     end
 
@@ -105,7 +112,7 @@ local function addSummaryButton(bottom_sprite)
     return summary_button
 end
 
-function WordLibraryPopup:ctor()
+function WordLibraryPopup:ctor(boss)
 
     local backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
@@ -141,7 +148,7 @@ function WordLibraryPopup:ctor()
     bottom_sprite:setAnchorPoint(0.5,0.5)
     backPopup:addChild(bottom_sprite,2)
     
-    self.reviewButton = addReviewButton(bottom_sprite)
+    self.reviewButton = addReviewButton(bottom_sprite,boss)
     bottom_sprite:addChild(self.reviewButton)
     
     self.summaryButton = addSummaryButton(bottom_sprite)
@@ -153,10 +160,10 @@ function WordLibraryPopup:ctor()
     
     local listview
     if s_CURRENT_USER.familiarOrUnfamiliar == 0 then -- 0 for choose familiar ,1 for choose unfamiliar
-    	listview = Listview.create("apple")
+        listview = Listview.create(boss.rightWordList)
         bottom_sprite:setVisible(false)
     else
-        listview = Listview.create("banana")
+        listview = Listview.create(boss.wrongWordList)
         bottom_sprite:setVisible(true)
     end
     listview:setPosition(2,70)
@@ -169,7 +176,7 @@ function WordLibraryPopup:ctor()
             self.familiarButton:setTexture("image/islandPopup/familiarwordend.png")
             self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordbegin.png")
             listview:removeFromParent()
-            listview = Listview.create("apple") 
+            listview = Listview.create(boss.rightWordList) 
             listview:setPosition(2,70)
             backPopup:addChild(listview)
             bottom_sprite:setVisible(false)
@@ -178,7 +185,7 @@ function WordLibraryPopup:ctor()
             self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
             self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")
             listview:removeFromParent()
-            listview = Listview.create("banana") 
+            listview = Listview.create(boss.wrongWordList) 
             listview:setPosition(2,70)
             backPopup:addChild(listview)
             bottom_sprite:setVisible(true)

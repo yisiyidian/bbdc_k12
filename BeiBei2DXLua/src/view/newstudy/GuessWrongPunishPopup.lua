@@ -17,7 +17,7 @@ function GuessWrongPunishPopup:ctor(currentReward,totalReward)
         totalReward = 3
     end
     
-    s_CorePlayManager.reward = s_CorePlayManager.reward - 1
+--    s_CorePlayManager.reward = s_CorePlayManager.reward - 1
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -54,11 +54,9 @@ function GuessWrongPunishPopup:ctor(currentReward,totalReward)
 
     self.button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
-            s_CorePlayManager.enterNewStudyWrongLayer()
         end
     end  
 

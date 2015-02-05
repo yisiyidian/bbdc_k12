@@ -13,20 +13,29 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseWrongLayer.create(word,wrongNum)
-    local layer = ChooseWrongLayer.new(word,wrongNum)
+function ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton(word,wrongNum)
+local function addNextButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
-            local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+            local slideCoconutLayer
+            if wrongWordList == nil then
+                AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+            else
+                AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
+            end
+
             s_SCENE:replaceGameLayer(slideCoconutLayer)
         end
     end
@@ -40,7 +49,7 @@ local function addNextButton(word,wrongNum)
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor(word,wrongNum)
+function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -52,8 +61,15 @@ function ChooseWrongLayer:ctor(word,wrongNum)
     self.currentWord = word
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
+    
+    local color 
+    if wrongWordList == nil then
+        color = "blue"
+    else
+        color = "yellow"
+    end
 
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar)
 
@@ -72,7 +88,7 @@ function ChooseWrongLayer:ctor(word,wrongNum)
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton(word,wrongNum)
+    self.nextButton = addNextButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.nextButton)
 end
 

@@ -4,12 +4,12 @@ end)
 
 local wordInfoPopup = require("view.islandPopup.WordInfoPopup")
 
-function WordLibraryListview.create(word)
-    local layer = WordLibraryListview.new(word)
+function WordLibraryListview.create(wordList)
+    local layer = WordLibraryListview.new(wordList)
     return layer
 end
 
-function WordLibraryListview:ctor(word)
+function WordLibraryListview:ctor(wordList)
 
     local scrollViewEvent = function (sender, evenType)
 
@@ -30,23 +30,15 @@ function WordLibraryListview:ctor(word)
     self:addScrollViewEventListener(scrollViewEvent)
     self:setBounceEnabled(true)
 
-    local wordList = {}
-    for i = 1,20  do
-        table.insert(wordList,word)
-    end
+
     local word = {}
     local meaning = {}
-    local text_rich = ""
-    for i = 1 , 50 do
-       text_rich = text_rich.."*"
-    end  
-    for i = 1,20  do
+    for i = 1,#wordList  do
         word[i] = s_WordPool[wordList[i]].wordName
-        --        meaning[i] = s_WordPool[wordList[i]].wordMeaningSmall
-        meaning[i] = text_rich
+        meaning[i] = s_WordPool[wordList[i]].wordMeaningSmall
     end
 
-    local count = table.getn(word)
+    local count = table.getn(wordList)
     self:removeAllChildren()
 
     local lookup_button_click = function (sender,eventType)
@@ -60,7 +52,7 @@ function WordLibraryListview:ctor(word)
             local Name = sender:getName()
             print("name"..Name)
             local part = split(Name,"||")
-            local wordInfo = wordInfoPopup.create()
+            local wordInfo = wordInfoPopup.create(part[1],part[2],wordList)
             s_SCENE:popup(wordInfo)
         end
     end

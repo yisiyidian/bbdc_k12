@@ -129,6 +129,7 @@ function O2OController.logInByQQAuthData()
 end
 
 function O2OController.startLoadingData(userStartType, username, password)
+    LOGTIME('startLoadingData')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
     local isLocalNewerThenServer = false
@@ -255,42 +256,52 @@ end
 ----------------------------------------------------------------------------------------------------------------
 
 function O2OController.getUserDatasOnline()
+    LOGTIME('loadConfigs')
     O2OController.loadConfigs()
+    LOGTIME('getDataLevelInfo')
     O2OController.getDataLevelInfo(function () 
+        LOGTIME('getDataEverydayInfo')
         O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
             else
                
-                -- TODO sys wrong word levels & DailyStudyInfo
-                local dayString = getDayStringForDailyStudyInfo(os.time())
-                local today = s_LocalDatabaseManager.getDataDailyStudyInfo(dayString)
-                if today == nil then
-                    today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
-                end
-                s_LocalDatabaseManager.saveDataDailyStudyInfo(today)
+                -- TODO sys wrong word levels
 
-                s_CorePlayManager.enterHomeLayer()
-                O2OController.getBulletinBoard()    
+                LOGTIME('getDailyStudyInfo')
+                O2OController.getDailyStudyInfo(function () 
+                    LOGTIME('enterHomeLayer')
+                    s_CorePlayManager.enterHomeLayer()
+                    O2OController.getBulletinBoard()    
+                end)
                 
             end 
         end)
     end)
 end
 
+---------------------------------------------------------------------------------------------------
+
 function O2OController.loadConfigs()
     showProgressHUD(LOADING_TEXTS[_TEXT_ID_CFG])
     
+    LOGTIME('loadBooks')
     s_DataManager.loadBooks()
+    LOGTIME('loadBookWords')
     s_BookWord = s_DataManager.loadBookWords()
+    LOGTIME('loadChapters')
     s_DataManager.loadChapters()
+    LOGTIME('loadReviewBoss')
     s_DataManager.loadReviewBoss()
+    LOGTIME('loadProduct')
     s_DataManager.loadProduct()
 
+    LOGTIME('loadAllWords')
     s_WordPool = s_DataManager.loadAllWords()
     s_CorePlayManager = require("controller.CorePlayManager")
-    s_CorePlayManager.create()
 end
+
+---------------------------------------------------------------------------------------------------
 
 function O2OController.getDataLevelInfo(oncompleted)
     s_CURRENT_USER.levelInfo:getDataFromLocalDB()    
@@ -370,6 +381,38 @@ function O2OController.getDataEverydayInfo(onSaved)
         local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
         updateWeek(localDBDatas, 1, onSaved)
     end
+end
+
+---------------------------------------------------------------------------------------------------
+
+function O2OController.getDailyStudyInfo(oncompleted)
+
+    local dayString = getDayStringForDailyStudyInfo(os.time())
+    local localDBDatas = DataDailyStudyInfo.getNoObjectIdAndTodayDatasFromLocalDB(dayString)
+    
+    local today = localDBDatas['today']
+    if today == nil then
+        today = DataDailyStudyInfo.createData(s_CURRENT_USER.bookKey, dayString, 0, 0, os.time(), 0)
+    end
+
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        s_LocalDatabaseManager.saveDataDailyStudyInfo(today)
+        if oncompleted then oncompleted() end
+    else
+        table.insert(localDBDatas['noObjectIdDatas'], today)
+        sysDailyStudyInfo(localDBDatas['noObjectIdDatas'], function (serverDatas, error)
+            if serverDatas ~= nil then
+                for i, v in ipairs(serverDatas) do
+                    local data = DataDailyStudyInfo.create()
+                    parseServerDataToClientData(v, data)
+                    s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and dayString = '".. today.dayString .."' ;")
+                end
+            end
+            
+            if oncompleted then oncompleted() end
+        end)
+    end
+
 end
 
 ---------------------------------------------------------------------------------------------------

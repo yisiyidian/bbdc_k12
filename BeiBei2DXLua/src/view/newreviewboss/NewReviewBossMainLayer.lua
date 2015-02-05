@@ -4,15 +4,16 @@ require("common.global")
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
 local Pause             = require("view.newreviewboss.NewReviewBossPause")
-
+local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 
 local  NewReviewBossMainLayer = class("NewReviewBossMainLayer", function ()
     return cc.Layer:create()
 end)
 
+Review_From_Word_Bank = 1
+Review_From_Normal    = 2
 
-
-function NewReviewBossMainLayer.create()
+function NewReviewBossMainLayer.create(ReviewWordList,number)
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS, 'SHOW')
 
     --pause music
@@ -34,13 +35,13 @@ function NewReviewBossMainLayer.create()
     local sentenceEn2       
     local sentenceCn2    
     
-    local type = s_CorePlayManager.typeIndex
+    local type = 1
     local answer
     
     local wordList = {}
-    table.foreachi(s_CorePlayManager.ReviewWordList, function(i, v)
-        if  s_CorePlayManager.ReviewWordList[i] ~= "" then
-            table.insert(wordList,s_CorePlayManager.ReviewWordList[i] )
+    table.foreachi(ReviewWordList, function(i, v)
+        if  ReviewWordList ~= "" then
+            table.insert(wordList,ReviewWordList[i] )
         end
     end) 
     local wordListLen = table.getn(wordList)
@@ -49,34 +50,23 @@ function NewReviewBossMainLayer.create()
     local wordToBeTested = {}
     local sprite_array = {}
     
-
-    local getRandomWordForRightWord = function(wordName)
-
-        local tmp =  {}            
-        table.foreachi(wordList, function(i, v)  tmp[i] = wordList[i]  end)     
-        local wordNumber
-        table.foreachi(tmp, function(i, v) if v == wordName then  wordNumber = i end end)               
-
-        local randomIndex = (wordNumber )%wordListLen + 1 
-        local word1 = tmp[randomIndex]
-        local randomIndex = (wordNumber + 1)%wordListLen + 1 
-        local word2 = tmp[randomIndex]
-
+    local getRandomWordForRightWord = function (wordname)
+        local RandomWord = CollectUnfamiliar:createRandWord(wordname,3)
         local rightIndex = math.random(1,1024)%3 + 1
 
         if type%2 == 0 then    
             local ans = {}
-            ans[rightIndex] = wordName
-            if rightIndex == 1 then  ans[2] = word1 ans[3] = word2
-            elseif rightIndex == 2 then ans[3] = word1 ans[1] = word2
-            else ans[1] = word1 ans[2] = word2        end
+            ans[rightIndex] = wordname
+            if rightIndex == 1 then  ans[2] = RandomWord[2] ans[3] = RandomWord[3]
+            elseif rightIndex == 2 then ans[3] = RandomWord[2] ans[1] = RandomWord[3]
+            else ans[1] = RandomWord[2] ans[2] = RandomWord[3]        end
             return ans
         else
             local ans = {}
-            ans[rightIndex]  = s_WordPool[wordName].wordMeaningSmall
-            if rightIndex == 1 then  ans[2] = s_WordPool[word1].wordMeaningSmall ans[3] = s_WordPool[word2].wordMeaningSmall
-            elseif rightIndex == 2 then ans[3] = s_WordPool[word1].wordMeaningSmall  ans[1] = s_WordPool[word2].wordMeaningSmall
-            else ans[1] = s_WordPool[word1].wordMeaningSmall ans[2] = s_WordPool[word2].wordMeaningSmall    end
+            ans[rightIndex]  = s_WordPool[wordname].wordMeaningSmall
+            if rightIndex == 1 then  ans[2] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[3] = s_WordPool[RandomWord[3]].wordMeaningSmall
+            elseif rightIndex == 2 then ans[3] = s_WordPool[RandomWord[2]].wordMeaningSmall  ans[1] = s_WordPool[RandomWord[3]].wordMeaningSmall
+            else ans[1] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[2] = s_WordPool[RandomWord[3]].wordMeaningSmall    end
             return ans
         end
     end
@@ -89,19 +79,16 @@ function NewReviewBossMainLayer.create()
         for j = 1, 3 do
             local sprite = NewReviewBossNode.create(words[j])
             if i == 1 then
-                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 200 + 200*(j-1), 850 - 200*i - 150))
-                sprite.opacity(255)
-                sprite.font_size(25)
+                sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 210 + 210*(j-1), 850 - 200*i - 150))
+                sprite.opacity(0,255)
             elseif i == 2 then 
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
                 sprite:setScale(0.8)
-                sprite.opacity(102)
-                sprite.font_size(18)
+                sprite.opacity(0,102)
             else
                 sprite:setPosition(cc.p(s_DESIGN_WIDTH/2 - 160 + 160*(j-1), 850 - 200*i - 150))
                 sprite:setScale(0)
-                sprite.opacity(102)
-                sprite.font_size(18)
+                sprite.opacity(0,102)
             end
             layer:addChild(sprite,1)
             tmp[j] = sprite
@@ -172,7 +159,7 @@ function NewReviewBossMainLayer.create()
     backGround:setOpacity(200)
     layer:addChild(backGround)
 
-    local rbProgressBar = ProgressBar.create(wordListLen,s_CorePlayManager.rightReviewWordNum,"orange")
+    local rbProgressBar = ProgressBar.create(wordListLen,0,"orange")
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
     
@@ -211,7 +198,6 @@ function NewReviewBossMainLayer.create()
         layer:runAction(cc.Sequence:create(action1, action2))
 
         rbCurrentWordIndex = rbCurrentWordIndex + 1                
-        s_CorePlayManager.updateRightReviewWordNum()
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
         if type % 2 == 0 then
@@ -226,9 +212,13 @@ function NewReviewBossMainLayer.create()
         local action1 = cc.DelayTime:create(0.5)
         local action2 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
         local action3 = cc.CallFunc:create(function()
-            local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
-            local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName)
-            s_SCENE:popup(newReviewBossLayerChange)
+            if number == Review_From_Word_Bank then
+                local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
+                local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName,ReviewWordList,Review_From_Word_Bank)
+                s_SCENE:popup(newReviewBossLayerChange)
+            else
+                s_CorePlayManager.leaveReviewModel(true)
+            end
             end)
         layer:runAction(cc.Sequence:create(action1, action2,action3))
 
@@ -261,7 +251,6 @@ function NewReviewBossMainLayer.create()
                     sprite.two_to_three(j)
                 elseif i == rbCurrentWordIndex + 1 then
                     sprite.four_to_three(j)
-                    sprite.visible(true)
                 elseif i == rbCurrentWordIndex + 2 then
                     sprite.five_to_four()
                 else
@@ -292,9 +281,9 @@ function NewReviewBossMainLayer.create()
             pauseButton:runAction(action1)
             local HintView = require("view.newreviewboss.NewReviewBossHintLayer")
             local hintView = HintView.create(currentWordName)
-            layer:addChild(hintView,2)          
+            s_SCENE:popup(hintView)        
             hintView.close = function ()          
-                hintView:removeFromParent()
+                s_SCENE:removeAllPopups()
                 hintWordFunction()        
                 local action2 = cc.MoveBy:create(0.4,cc.p(0,-200))
                 pauseButton:runAction(action2)
@@ -376,7 +365,14 @@ function NewReviewBossMainLayer.create()
 
                 s_SCENE:callFuncWithDelay(1,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
-                s_CorePlayManager.enterReviewBossSummaryLayer()
+                s_CURRENT_USER:addBeans(3)
+                if number == Review_From_Word_Bank then
+                	local SuccessLayer = require("view.newreviewboss.NewReviewBossSuccessPopup")
+                	local successLayer = SuccessLayer.create()
+                	s_SCENE:popup(successLayer)
+                else
+                   s_CorePlayManager.leaveReviewModel(true)
+                end
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)
             end            

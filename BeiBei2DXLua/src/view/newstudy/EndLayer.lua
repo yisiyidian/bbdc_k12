@@ -30,7 +30,7 @@ local function createBeanSprite(bean)
     beanCountLabel:setColor(cc.c3b(13, 95, 156))
     beanCountLabel:ignoreAnchorPointForPosition(false)
     beanCountLabel:setAnchorPoint(1,0)
-    beanCountLabel:setPosition(80,2)
+    beanCountLabel:setPosition(90,2)
     beans:addChild(beanCountLabel,10)
 
     return beans
@@ -73,7 +73,7 @@ function EndLayer:ctor()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
 
-    self.bean = 0
+    self.bean = s_CURRENT_USER:getBeans()
     self.beanSprite = createBeanSprite(self.bean)
     self:addChild(self.beanSprite)
 
@@ -91,10 +91,11 @@ function EndLayer:ctor()
     backColor:addChild(partical)
     backColor:addChild(beibeiAnimation)
 
-    self.getBean = 0
+    self.getBean = s_CURRENT_USER.beanReward
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
 
+    AnalyticsTasksFinished('NewStudySuccessLayer')
 end
 
 return EndLayer

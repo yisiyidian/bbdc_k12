@@ -90,10 +90,30 @@ function DataUser:ctor()
     
     -- function lock
     self.lockFunction                      = 0    
+    self.todayTotalReviewBossNum           = 0
+    self.todayTotalReviewBossNumUpdateTime = ''
 
     self.isAlterOn                         = 0
     self.slideNum                          = 0
     self.familiarOrUnfamiliar              = 1 -- 0 for choose familiar ,1 for choose unfamiliar
+    
+    self.beanReward                        = 3 -- if begin a new mission ,bean = 3 ; if guess wrong word ,bean = 2 ,1 ,0
+end
+
+function DataUser:getTodayTotalReviewBossNum()
+    -- This has to been done first when user open this app today
+    local time = os.time()
+    local today = os.date("%x", time)
+    if self.todayTotalReviewBossNumUpdateTime ~= today then
+        self.todayTotalReviewBossNum = #s_LocalDatabaseManager.getTodayReviewBoss()
+        self.todayTotalReviewBossNumUpdateTime = today
+        -- TODO save data
+    end
+    return self.todayTotalReviewBossNum
+end
+
+function DataUser:getTodayCurrentReviewBossNum()
+    return #s_LocalDatabaseManager.getTodayReviewBoss()
 end
 
 function DataUser:getLockFunctionState(productId)
