@@ -145,13 +145,16 @@ def createLuaCodes(gitVer, testServer, buildTarget, channelAndroid, channeliOS, 
 
     serverAndroid = '''
         -- debug server: %s
+        LEAN_CLOUD_NAME_TEST = "%s"
         LEAN_CLOUD_ID_TEST   = "%s"
         LEAN_CLOUD_KEY_TEST  = "%s"
 
         -- release server: %s
+        LEAN_CLOUD_NAME      = "%s"
         LEAN_CLOUD_ID        = "%s"
         LEAN_CLOUD_KEY       = "%s"
-''' % (testServer.AppName, testServer.AppID, testServer.AppKey, channelAndroid.server.AppName, channelAndroid.server.AppID, channelAndroid.server.AppKey)
+''' % (testServer.AppName, testServer.AppName, testServer.AppID, testServer.AppKey, \
+    channelAndroid.server.AppName, channelAndroid.server.AppName, channelAndroid.server.AppID, channelAndroid.server.AppKey)
     # ---------------------------------------------------------------------------------
     channeliOSWX = 'false'
     if channeliOS.wx.AppID != '':
@@ -175,13 +178,16 @@ def createLuaCodes(gitVer, testServer, buildTarget, channelAndroid, channeliOS, 
 
     serveriOS = '''
         -- debug server: %s
+        LEAN_CLOUD_NAME_TEST = "%s"
         LEAN_CLOUD_ID_TEST   = "%s"
         LEAN_CLOUD_KEY_TEST  = "%s"
 
         -- release server: %s
+        LEAN_CLOUD_NAME      = "%s"
         LEAN_CLOUD_ID        = "%s"
         LEAN_CLOUD_KEY       = "%s"
-''' % (testServer.AppName, testServer.AppID, testServer.AppKey, channeliOS.server.AppName, channeliOS.server.AppID, channeliOS.server.AppKey)
+''' % (testServer.AppName, testServer.AppName, testServer.AppID, testServer.AppKey, \
+    channeliOS.server.AppName, channeliOS.server.AppName, channeliOS.server.AppID, channeliOS.server.AppKey)
     # ---------------------------------------------------------------------------------
 
     lua = '''%s
@@ -215,9 +221,8 @@ function getAppVersionDebugInfo()
 
     local str = ''
     -- if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
-    str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName
-    str = 'name:' .. str .. '\\nchannel:' .. CHANNEL .. ' v:' .. s_APP_VERSION .. '\\n%s'
-    str = '[%s]' .. ' ' .. str .. '\\n' .. LUA_ERROR
+    str = '\\nname:' .. s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName .. '\\nchannel:' .. CHANNEL .. ' v:' .. s_APP_VERSION .. '\\n%s'
+    str = '[%s]' .. ' ' .. str .. '\\n' .. s_SERVER.appName .. '\\n' .. LUA_ERROR
     return str
 end
 
@@ -278,6 +283,10 @@ def createJavaCodes(gitVer, testServer, buildTarget, channelAndroid, savePath):
         isProduction = 'true'
         isDebugLogEnabled = 'false'
 
+    isUMengAvailable = 'false'
+    if len(channelAndroid.um.AppKey) > 0:
+        isUMengAvailable = 'true'
+
     java = '''
 // ----------
 // %s
@@ -300,11 +309,13 @@ public class AppVersionInfo {
         AVOSCloud.setDebugLogEnabled(%s);
         AVCloud.setProductionMode(%s);
 
-        AnalyticsConfig.setAppkey("%s");
-        AnalyticsConfig.setChannel("%s");
+        if (%s) {
+            AnalyticsConfig.setAppkey("%s");
+            AnalyticsConfig.setChannel("%s");
+        }
     }
 }
-''' % (buildInfo, gitVer, channelAndroid.wx.AppID, server.AppName, server.AppID, server.AppKey, isDebugLogEnabled, isProduction, channelAndroid.um.AppKey, channelAndroid.packageName)
+''' % (buildInfo, gitVer, channelAndroid.wx.AppID, server.AppName, server.AppID, server.AppKey, isDebugLogEnabled, isProduction, isUMengAvailable, channelAndroid.um.AppKey, channelAndroid.packageName)
     
     f = open(savePath, 'w')
     f.write(java)
