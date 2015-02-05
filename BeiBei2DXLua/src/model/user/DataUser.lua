@@ -89,11 +89,13 @@ function DataUser:ctor()
 --    self.lastUpdateChestTime               = 0
     
     -- function lock
-    self.lockFunction                      = 0    
+    self.lockFunction                      = 0
+    -- task data
     self.todayTotalReviewBossNum           = 0
     self.todayTotalTaskNum                 = 0
     self.todayRemainTaskNum                = 0
-    self.todayDataUpdateTime               = ''
+    self.taskDataUpdateTime                = ''
+    self.taskDataUpdateBook                = ''
 
     self.isAlterOn                         = 0
     self.slideNum                          = 0
@@ -103,10 +105,15 @@ function DataUser:ctor()
 end
 
 
-function DataUser:updateTotalDataEveryday()
-    local time = os.time()
+function DataUser:updateTaskData()
+    local time  = os.time()
     local today = os.date("%x", time)
-    if self.todayDataUpdateTime ~= today then
+    local book  = self.bookKey
+
+    if self.taskDataUpdateTime ~= today or self.taskDataUpdateBook ~= book then
+        self.taskDataUpdateTime = today
+        self.taskDataUpdateBook = book
+
         self.todayTotalReviewBossNum = #s_LocalDatabaseManager.getTodayReviewBoss()
 
         local maxBossID = s_LocalDatabaseManager.getMaxBossID()
@@ -121,9 +128,7 @@ function DataUser:updateTotalDataEveryday()
 
         self.todayRemainTaskNum = self.todayTotalTaskNum
 
-        self.todayDataUpdateTime = today
-
-        saveUserToServer({['todayTotalReviewBossNum']=self.todayTotalReviewBossNum, ['todayTotalTaskNum']=self.todayTotalTaskNum, ['todayRemainTaskNum']=self.todayRemainTaskNum, ['todayDataUpdateTime']=self.todayDataUpdateTime})
+        saveUserToServer({['todayTotalReviewBossNum']=self.todayTotalReviewBossNum, ['todayTotalTaskNum']=self.todayTotalTaskNum, ['todayRemainTaskNum']=self.todayRemainTaskNum, ['taskDataUpdateTime']=self.taskDataUpdateTime, ['taskDataUpdateBook']=self.taskDataUpdateBook})
     end
 end
 
