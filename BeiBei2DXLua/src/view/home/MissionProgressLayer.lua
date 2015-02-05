@@ -7,8 +7,11 @@ end)
 
 
 function MissionProgressLayer.create(share)
-    local missionCount = 3
-    local completeCount = 3
+    local missionCount = s_CURRENT_USER:getTodayTotalReviewBossNum() + 1
+    local completeCount = s_CURRENT_USER:getTodayCurrentReviewBossNum()
+    if share then
+        completeCount = missionCount
+    end
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
@@ -74,7 +77,7 @@ function MissionProgressLayer.create(share)
 
     local circle_color = {cc.c3b(76,223,204),cc.c3b(36,168,217),cc.c3b(18,128,213)}
     
-    if completeCount < missionCount then
+    if completeCount < missionCount and completeCount > 0 then
         for i = 1, completeCount + 1 do 
             local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
             split_line:setAnchorPoint(0.5,- 161 / 80)

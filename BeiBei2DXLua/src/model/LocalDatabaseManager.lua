@@ -131,6 +131,10 @@ end
 
 ---- Boss Word -------------------------------------------------------------------------------------------
 
+function Manager.getPrevWordState()
+    return localdatabase_bossWord.getPrevWordState()
+end
+
 function Manager.getTodayReviewBoss()
     return localdatabase_bossWord.getTodayReviewBoss()
 end

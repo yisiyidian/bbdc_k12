@@ -75,7 +75,7 @@ function O2OController.start()
 
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
 
-    if s_SERVER.isNetworkConnectedWhenInited() == false then
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() then
         if hasUserInLocalDB then
             O2OController.logInOffline()
         else
@@ -207,7 +207,7 @@ function O2OController.signUpWithRandomUserName()
     local randomUserName = genRandomUserName()
 
     showProgressHUD()
-    if s_SERVER.isNetworkConnectedWhenInited() == false then
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() then
         s_CURRENT_USER.usertype = USER_TYPE_GUEST
         O2OController.signUpOffline(randomUserName, PASSWORD)
     else

@@ -12,8 +12,16 @@ local  MiddleLayer = class("MiddleLayer", function ()
     return cc.Layer:create()
 end)
 
-function MiddleLayer:ShakeFunction()
-
+function MiddleLayer:ShakeFunction(k,times)
+    local action1 = cc.MoveBy:create(0.05, cc.p(-5 * k,0))
+    local action2 = cc.MoveBy:create(0.05, cc.p(10 * k,0))
+    local action3 = cc.MoveBy:create(0.05, cc.p(-10 * k , 0))
+    local action6 = cc.ScaleTo:create(0.05, 1.1)
+    local action7 = cc.ScaleTo:create(0.05, 1)
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action6 ,action3, action7),times)
+    local action5 = cc.MoveBy:create(0.05, cc.p(5 * k,0)) 
+    local action = cc.Sequence:create(action1, action4, action5, nil)
+    return action
 end
 
 function MiddleLayer.create()
@@ -26,41 +34,46 @@ local function calculationAngle(point)
    return math.acos(point.x / math.sqrt(point.y * point.y + point.x * point.x) )
 end
 
-local function wordAnimation(endPoint,backColor)
-   local wordList = {}
-   for i=1, 10 do
-        table.insert(wordList,"apple")
-   end
-   
-   local wordLabel = {}
-   for i=1, 10 do
+local function wordAnimation(endPoint,back1,back2)
+    local wordList = {}
+    local bossId = s_LocalDatabaseManager.getMaxBossID()
+    local boss = s_LocalDatabaseManager.getBossInfo(bossId)
+    for i=1, s_max_wrong_num_everyday do
+        table.insert(wordList,boss.wrongWordList[i])
+    end
+    back1:runAction(MiddleLayer:ShakeFunction(1,1))
+    back2:runAction(MiddleLayer:ShakeFunction(1,1))
+    local wordLabel = {}
+    for i=1, s_max_wrong_num_everyday do
         local rand = math.randomseed(os.time() * i)
         wordLabel[i] = cc.Label:createWithSystemFont(wordList[i],"",30)
         wordLabel[i]:setColor(cc.c4b(0,0,0,255))
-        local beginPoint = cc.p(math.random(1,100) - 50,  math.random(1,25) + 200)
+        local beginPoint = cc.p(math.random(1,150) - 75,  math.random(1,25) + 200)
         wordLabel[i]:setPosition(endPoint.x + beginPoint.x, endPoint.y + beginPoint.y) 
         local angle = math.deg(calculationAngle(beginPoint))
         local randAngle = math.random(1,40) - 20 
         wordLabel[i]:setRotation(-angle + randAngle)
         wordLabel[i]:setVisible(false)
-
-   end
+    end
     local time = 0
     local i = 1
-        local function update(delta)
+    local function update(delta)
         time = time + delta
-        if time * 10 > 11 then
-            backColor:unscheduleUpdate()
+        if time * 10 > s_max_wrong_num_everyday + 1 then
+            back1:unscheduleUpdate()
+            back1:runAction(MiddleLayer:ShakeFunction(2,2))
+            back2:runAction(MiddleLayer:ShakeFunction(2,2))
         elseif time * 10 > i then
             wordLabel[i]:setVisible(true)  
-            wordLabel[i]:runAction(cc.MoveTo:create(0.5,cc.p(endPoint.x,endPoint.y - 50)))
+            wordLabel[i]:runAction(cc.MoveTo:create(0.3,cc.p(endPoint.x,endPoint.y - 50)))
+            wordLabel[i]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.FadeOut:create(0.1)))
             i = i + 1
         end
     end
-    backColor:scheduleUpdateWithPriorityLua(update, 0)
-   
-   
-   return wordLabel
+    back1:scheduleUpdateWithPriorityLua(update, 0)
+
+
+    return wordLabel
 end
 
 local function createBeanSprite(bean)
@@ -166,11 +179,11 @@ function MiddleLayer:ctor()
     backColor:addChild(self.showNumber)
     
     local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
-    backBagSprite:setPosition(bigWidth * 0.6, 530)
+    backBagSprite:setPosition(bigWidth * 0.6, 500)
     backColor:addChild(backBagSprite)
     
     local frontBagSprite = cc.Sprite:create("image/newstudy/bagfront.png")
-    frontBagSprite:setPosition(bigWidth * 0.6 + 4, 540)
+    frontBagSprite:setPosition(bigWidth * 0.6 + 4, 510)
     frontBagSprite:ignoreAnchorPointForPosition(false)
     frontBagSprite:setAnchorPoint(0.5,1)
     frontBagSprite:setColor(cc.c4b(234,123,3,255))
@@ -178,7 +191,7 @@ function MiddleLayer:ctor()
     
     local point = cc.p(backBagSprite:getPositionX(),backBagSprite:getPositionY())
     
-    local jumpWord = wordAnimation(point,backBagSprite)
+    local jumpWord = wordAnimation(point,backBagSprite,frontBagSprite)
     for i = 1 ,#jumpWord do
         backColor:addChild(jumpWord[i])	
     end
