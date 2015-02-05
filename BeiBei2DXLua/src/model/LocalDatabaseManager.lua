@@ -6,6 +6,7 @@ local DataEverydayInfo          = require('model.user.DataEverydayInfo')
 local DataLevelInfo             = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
 local DataBossWord              = require('model.user.DataBossWord')
+local DataTask                  = require('model.user.DataTask')
 
 local databaseTables = {
         DataEverydayInfo,
@@ -13,14 +14,15 @@ local databaseTables = {
         DataLevelInfo,
 
         DataDailyStudyInfo,
-        DataBossWord
+        DataBossWord,
+        DataTask
     }
 
-local localdatabase_utils       = nil
-local localdatabase_user        = nil
-local localdatabase_dailyStudyInfo = nil
-local localdatabase_bossWord    = nil
-
+local localdatabase_utils           = nil
+local localdatabase_user            = nil
+local localdatabase_dailyStudyInfo  = nil
+local localdatabase_bossWord        = nil
+local localdatabase_task            = nil
 
 -- define Manager
 local Manager = {}
@@ -34,12 +36,13 @@ function Manager.init()
     Manager.database = sqlite3.open(databasePath)
     print ('databasePath:' .. databasePath)
 
-    localdatabase_utils = reloadModule('model.localDatabase.utils')
-    localdatabase_user = reloadModule('model.localDatabase.user')
+    localdatabase_utils             = reloadModule('model.localDatabase.utils')
+    localdatabase_user              = reloadModule('model.localDatabase.user')
 
-    localdatabase_dailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
-    localdatabase_bossWord = reloadModule('model.localDatabase.bossWord')
-
+    localdatabase_dailyStudyInfo    = reloadModule('model.localDatabase.dailyStudyInfo')
+    localdatabase_bossWord          = reloadModule('model.localDatabase.bossWord')
+    localdatabase_task              = reloadModule('model.localDatabase.task')
+    
     Manager.initTables()
 end
 
@@ -58,6 +61,24 @@ function Manager.initTables()
             lastUpdate INTEGER
         );
     ]]
+    
+    Manager.database:exec[[
+        create table if not exists DataWord(
+            wordName TEXT,
+            wordSoundMarkEn TEXT,
+            wordSoundMarkAm TEXT,
+            wordMeaningSmall TEXT,
+            wordMeaning TEXT,
+            sentenceEn TEXT,
+            sentenceCn TEXT,
+            sentenceEn2 TEXT,
+            sentenceCn2 TEXT
+        );
+    ]]
+     -- INIT ALL WORD POOL
+     
+     
+    
 
     for i = 1, #databaseTables do
         localdatabase_utils.createTable(databaseTables[i].create())
