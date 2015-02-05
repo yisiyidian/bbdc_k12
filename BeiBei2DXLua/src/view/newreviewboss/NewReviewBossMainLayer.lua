@@ -62,17 +62,6 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             else ans[1] = RandomWord[2] ans[2] = RandomWord[3]        end
             return ans
         else
-            --local ans = {}
-            --ans[rightIndex]  = s_WordPool[wordname].wordMeaningSmall
-            --if rightIndex == 1 then
-            --    ans[2] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[3] = s_WordPool[RandomWord[3]].wordMeaningSmall
-            --elseif rightIndex == 2 then
-            --    ans[3] = s_WordPool[RandomWord[2]].wordMeaningSmall  ans[1] = s_WordPool[RandomWord[3]].wordMeaningSmall
-            --else
-            --    ans[1] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[2] = s_WordPool[RandomWord[3]].wordMeaningSmall
-            --end
-            --return ans
-
             local ans = {}
             ans[rightIndex]  = s_LocalDatabaseManager.getWordInfoFromWordName(wordname).wordMeaningSmall
             if rightIndex == 1 then
@@ -126,7 +115,6 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
 
     local updateWord = function ()
         local currentWordName   = wordToBeTested[rbCurrentWordIndex]
-        --local currentWord       = s_WordPool[currentWordName]
         local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(currentWordName)
         local wordname          = currentWord.wordName
         local wordSoundMarkEn   = currentWord.wordSoundMarkEn
@@ -258,7 +246,6 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         if type % 2 == 0 then
             answer = wordToBeTested[rbCurrentWordIndex]
         else
-            --answer = s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall
             answer = s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[rbCurrentWordIndex]).wordMeaningSmall
         end
         for i = 1, #wordToBeTested do
@@ -332,7 +319,6 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             if type % 2 == 0 then
                 answer = wordToBeTested[logic_location.x]
             else
-                --answer = s_WordPool[wordToBeTested[logic_location.x]].wordMeaningSmall
                 answer = s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[logic_location.x]).wordMeaningSmall
             end
             if answer == sprite_array[logic_location.x][logic_location.y].character then

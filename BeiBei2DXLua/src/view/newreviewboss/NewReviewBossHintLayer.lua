@@ -11,7 +11,6 @@ end)
 function NewReviewBossHintLayer.create(currentWordName)
 
     -- word info
-    --local currentWord       = s_WordPool[currentWordName]
     local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(currentWordName)
     local wordname          = currentWord.wordName
     local wordSoundMarkEn   = currentWord.wordSoundMarkEn

@@ -119,11 +119,6 @@ function MasteredWordList:ctor()
     local sentenceEn = {}
     local sentenceCn = {}
     for i = 1,#word  do
-        --small_meaning[i]     = s_WordPool[word[i]].wordMeaningSmall
-        --meaning[i]           = string.gsub(s_WordPool[word[i]].wordMeaning,"|||"," ")
-        --sentenceEn[i]        = s_WordPool[word[i]].sentenceEn
-        --sentenceCn[i]        = s_WordPool[word[i]].sentenceCn
-
         local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(words[i])
         small_meaning[i]     = currentWord.wordMeaningSmall
         meaning[i]           = string.gsub(currentWord.wordMeaning,"|||"," ")
@@ -268,7 +263,6 @@ function MasteredWordList:ctor()
 --        local function touchEvent(sender,eventType)
 --            if eventType == ccui.TouchEventType.ended then
 --                local control = split(sender:getName(),'|')
---                local wordInfo = s_WordPool[control[2]]
 --                
 --                local arrow = sender:getChildByName('arrow'..control[2])
 --                -- print('arrowName:'..'arrow'..control[2])
@@ -329,7 +323,6 @@ function MasteredWordList:ctor()
 --        for i = 1, #self.levelArray[indexConfig] do
 --            local word = self.levelArray[indexConfig][i]
 --            local wordKey = self.levelKey[indexConfig]..'|'..word
---            local wordInfo = s_WordPool[word]
 --            --print('grasp word is '..word)
 --            --print_lua_table(masterWords)
 --            --print('masterWords:'..masterWords[word])

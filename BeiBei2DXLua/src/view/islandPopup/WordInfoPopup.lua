@@ -12,7 +12,6 @@ function WordInfoPopup.create(wordname,index,wordlist)
 end
 
 local function creatWordLayout(word)
-    --local currentWord       = s_WordPool[word]
     local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(word)
     local wordname          = currentWord.wordName
     local wordSoundMarkEn   = currentWord.wordSoundMarkEn

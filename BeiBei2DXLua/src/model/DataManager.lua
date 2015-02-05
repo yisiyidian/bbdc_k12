@@ -117,27 +117,6 @@ end
 
 -- word -------------------------------------------------------------------
 
-function DataManager.loadAllWords()
---    local wordInfo = {}
---    local content
---    if s_USE_XXTEA then
---        content = cx.CXUtils:getInstance():decryptXxteaFile(s_allwords)
---    else
---        content = cc.FileUtils:getInstance():getStringFromFile(s_allwords)
---    end
---    local lines = split(content, "\n")
---    local MetaWord = require("model.meta.MetaWord")
---
---    for i = 1, #lines do
---        local terms = split(lines[i], "\t")
---        local word = MetaWord.create(terms[1], terms[2], terms[3], terms[4], terms[5], terms[6], terms[7], terms[8], terms[9])
---        wordInfo[word.wordName] = word
---    end
---
---    return wordInfo
-    return {}
-end
-
 function DataManager.loadBookWords()
 
 

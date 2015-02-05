@@ -305,8 +305,7 @@ function O2OController.loadConfigs()
     LOGTIME('loadBean')
     s_DataManager.loadBean()
 
-    LOGTIME('loadAllWords')
-    s_WordPool = s_DataManager.loadAllWords()
+    LOGTIME('CorePlayManager')
     s_CorePlayManager = require("controller.CorePlayManager")
 end
 

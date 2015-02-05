@@ -120,11 +120,6 @@ function LearnedWordList:ctor()
     local sentenceEn = {}
     local sentenceCn = {}
     for i = 1,#word  do
-        --small_meaning[i]     = s_WordPool[word[i]].wordMeaningSmall
-        --meaning[i]           = string.gsub(s_WordPool[word[i]].wordMeaning,"|||"," ")
-        --sentenceEn[i]        = s_WordPool[word[i]].sentenceEn
-        --sentenceCn[i]        = s_WordPool[word[i]].sentenceCn
-
         local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(words[i])
         small_meaning[i]     = currentWord.wordMeaningSmall
         meaning[i]           = string.gsub(currentWord.wordMeaning,"|||"," ")

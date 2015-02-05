@@ -148,7 +148,6 @@ local function _initStore()
 end
 
 local function _declaration()
-    s_WordPool        = nil
     s_CorePlayManager = nil
 end
 

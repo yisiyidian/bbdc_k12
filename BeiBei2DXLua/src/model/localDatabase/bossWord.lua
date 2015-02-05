@@ -15,10 +15,6 @@ local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, last
     data.wordList = wordList
     data.lastWordIndex = lastWordIndex
     data.savedToServer = savedToServer
-    
-    self.todayTotalTaskNum   = 0
-    self.todayRemainTaskNum  = 0
-    self.todayTotalBossNum   = 0
 
     return data
 end
