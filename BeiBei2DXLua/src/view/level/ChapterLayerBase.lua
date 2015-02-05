@@ -199,19 +199,25 @@ function ChapterLayerBase:addPopup(levelIndex)
             local bossID = info[1] + 1
             local state = info[2] + 0
             local active = info[3] + 0
+          
             
             s_SCENE:removeAllPopups()
 --            print('######## state'..state..',active'..active)
             if state >= 4 and active ~= 0 then
 
                     local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-                    tutorial_text:setPosition(300, 450)
+                    tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
                     self:addChild(tutorial_text,520)
                     print(tutorial_text:getPosition())
                     local text = cc.Label:createWithSystemFont('距离任务出现还差'..active..'天','',28)
                     text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
                     text:setColor(cc.c3b(0,0,0))
+
                     tutorial_text:addChild(text)
+                    local action1 = cc.FadeOut:create(1.5)
+                    tutorial_text:runAction(action1)
+                    local action2 = cc.FadeOut:create(1.5)
+                    text:runAction(action2)
  
             else
                 s_CorePlayManager.initTotalPlay()

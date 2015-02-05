@@ -155,7 +155,7 @@ function ChapterLayer:addNotification()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] == 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 then
             taskIndex = bossID - 1
             taskState = bossInfo["typeIndex"] 
         end
@@ -165,8 +165,7 @@ function ChapterLayer:addNotification()
     end
     
     if taskIndex == -2 then
-        taskIndex = progressIndex
-        taskState = progressState
+        return
     end
     
     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
