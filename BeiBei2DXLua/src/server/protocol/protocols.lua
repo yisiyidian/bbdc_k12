@@ -260,7 +260,7 @@ function sysBossWord(bosses, skipWordList, callback)
 
     local unsavedDataTable = {}
     if bosses ~= nil then
-        for i, v in ipairs(bosses) do
+        for k, v in pairs(bosses) do
             if skipWordList then
                 table.insert(unsavedDataTable, dataTableToJSONString(v, 'wordList'))
             else
