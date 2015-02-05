@@ -75,7 +75,8 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    self.lastWordAndTotalNumber.setNumber(9999)
+    local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    self.lastWordAndTotalNumber.setNumber(todayNumber)
     self.lastWordAndTotalNumber.setWord("apple",true)
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
