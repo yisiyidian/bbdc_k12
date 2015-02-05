@@ -30,7 +30,7 @@ local function createBeanSprite(bean)
     beanCountLabel:setColor(cc.c3b(13, 95, 156))
     beanCountLabel:ignoreAnchorPointForPosition(false)
     beanCountLabel:setAnchorPoint(1,0)
-    beanCountLabel:setPosition(80,2)
+    beanCountLabel:setPosition(90,2)
     beans:addChild(beanCountLabel,10)
     
     return beans
@@ -69,6 +69,7 @@ local function createNextButton(getBean)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_CURRENT_USER.beanReward = 3
             s_CorePlayManager.leaveStudyOverModel()
         end
     end
@@ -100,11 +101,11 @@ function MiddleLayer:ctor()
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
     
-    self.bean = 0
+    self.bean = s_CURRENT_USER:getBeans()
     self.beanSprite = createBeanSprite(self.bean)
     self:addChild(self.beanSprite)
     
-    self.wrongNumber = 10
+    self.wrongNumber = s_max_wrong_num_everyday
     self.showNumber = createNumberSprite(self.wrongNumber)
     backColor:addChild(self.showNumber)
     
@@ -118,7 +119,7 @@ function MiddleLayer:ctor()
     beibeiAnimation:setPosition(bigWidth/2, 270)
     backColor:addChild(beibeiAnimation)
     
-    self.getBean = 0
+    self.getBean = s_CURRENT_USER.beanReward
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
     

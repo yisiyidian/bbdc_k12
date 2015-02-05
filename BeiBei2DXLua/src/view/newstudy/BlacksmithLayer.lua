@@ -54,7 +54,8 @@ local function createOptions(randomNameArray,wordlist)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
                     if #wordlist == 0 then
-                        s_CURRENT_USER:addBeans(3)
+                        s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
+                        s_CURRENT_USER.beanReward = 3
                         s_CorePlayManager.leaveTestModel()
                     else
                         AnalyticsStudyAnswerRight_strikeWhileHot()
@@ -68,11 +69,12 @@ local function createOptions(randomNameArray,wordlist)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong_strikeWhileHot()
-                    local bean = 3
+                    local bean = s_CURRENT_USER.beanReward
                     local total = 3
                     if bean > 0 then
-                        local guessWrong = GuessWrong.create(bean,bean)
+                        local guessWrong = GuessWrong.create(bean,total)
                         s_SCENE:popup(guessWrong)
+                        s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
