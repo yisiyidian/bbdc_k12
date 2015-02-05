@@ -66,7 +66,8 @@ function SummaryBossLayer.create(wordList,chapter)
     
     layer:initWordList(wordList)
     layer:initBossLayer_back(chapter)
-    
+    local isTouchEnded = true
+    local endTime = 0
     local loadingTime = 0
     local loadingState = 0
     layer:initMapInfo()
@@ -74,56 +75,15 @@ function SummaryBossLayer.create(wordList,chapter)
     light:setAnchorPoint(0.5,0.05)
     layer:addChild(light,10)
     light:setVisible(false)    
-    --update
-    local function update(delta)
-        if loadingTime > delta and loadingState < 2 then
-            loadingState = 2
-        elseif loadingTime > 1.5 and loadingState < 4 then
-            loadingState = 4
-        elseif loadingTime > 1.8 and loadingState < 6 then
-            loadingState = 6    
-        end       
-        if loadingState == 0 then
-            loadingState = 1
-            layer:initBossLayer_girl(chapter)
-        elseif loadingState == 2 then
-            loadingState = 3
-            
-            
-        elseif loadingState == 4 then
-            loadingState = 5
-            layer:initBossLayer_boss(chapter)
-        elseif loadingState == 6 then
-            loadingState = 7
-            
-            layer:initMap(chapter)
-        end
-        if loadingTime < 5 then
-            loadingTime = loadingTime + delta
-        end
-        
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
-            return
-        end
-        
-        if layer.hintTime < 10 or layer.isPaused then
-            if layer.hintTime >= 8 and layer.isPaused then
-                layer.hintTime = 8
-            else
-                layer.hintTime = layer.hintTime + delta
-            end
-        elseif not layer.isPaused and not layer.isHinting then
-            
-            layer:hint()
-        end
-    end
-    layer:scheduleUpdateWithPriorityLua(update, 0)
+    
     
     -- handing touch events
     onTouchBegan = function(touch, event)
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return true
         end
+
+        isTouchEnded = false
         
         local location = layer:convertToNodeSpace(touch:getLocation())
         
@@ -313,7 +273,11 @@ function SummaryBossLayer.create(wordList,chapter)
     end
 
     onTouchEnded = function(touch, event)
-        
+        isTouchEnded = true
+    end
+
+    local function checkAnswer()
+            
         layer.isPaused = false
         if layer.globalLock then
             return
@@ -331,7 +295,7 @@ function SummaryBossLayer.create(wordList,chapter)
         end
         
     
-        local location = layer:convertToNodeSpace(touch:getLocation())
+        --local location = layer:convertToNodeSpace(touch:getLocation())
 
         local selectWord = ""
         for i = 1, #selectStack do
@@ -491,6 +455,60 @@ function SummaryBossLayer.create(wordList,chapter)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+
+    --update
+    local function update(delta)
+        if loadingTime > delta and loadingState < 2 then
+            loadingState = 2
+        elseif loadingTime > 1.5 and loadingState < 4 then
+            loadingState = 4
+        elseif loadingTime > 1.8 and loadingState < 6 then
+            loadingState = 6    
+        end       
+        if loadingState == 0 then
+            loadingState = 1
+            layer:initBossLayer_girl(chapter)
+        elseif loadingState == 2 then
+            loadingState = 3
+            
+            
+        elseif loadingState == 4 then
+            loadingState = 5
+            layer:initBossLayer_boss(chapter)
+        elseif loadingState == 6 then
+            loadingState = 7
+            
+            layer:initMap(chapter)
+        end
+        if loadingTime < 5 then
+            loadingTime = loadingTime + delta
+        end
+        
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
+            return
+        end
+
+        if endTime < 1 and #selectStack > 0 and isTouchEnded then
+            endTime = endTime + delta
+        end
+        if endTime >= 1 then
+            endTime = 0
+            checkAnswer()
+
+        end
+        
+        if layer.hintTime < 10 or layer.isPaused then
+            if layer.hintTime >= 8 and layer.isPaused then
+                layer.hintTime = 8
+            else
+                layer.hintTime = layer.hintTime + delta
+            end
+        elseif not layer.isPaused and not layer.isHinting then
+            
+            layer:hint()
+        end
+    end
+    layer:scheduleUpdateWithPriorityLua(update, 0)
     
     -- boss "s_sound_Get_Outside"
     playMusic(s_sound_Get_Outside,true)

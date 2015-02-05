@@ -166,10 +166,8 @@ function SummaryBossAlter:lose2()
     
     local function challengeAgain(sender)
         
-        local summaryboss = require('view.summaryboss.SummaryBossLayer')
-        local layer = summaryboss.create(self.levelIndex,1)
-        layer:setAnchorPoint(0.5,0)
-        s_SCENE:replaceGameLayer(layer)
+        --local summaryboss = require('view.summaryboss.SummaryBossLayer')
+        s_CorePlayManager.initSummaryModel()
         
         -- stop effect
         cc.SimpleAudioEngine:getInstance():stopAllEffects()
@@ -239,8 +237,12 @@ function SummaryBossAlter:win1()
         button:addChild(item_name)
 
         local been_button = cc.Sprite:create("image/shop/been.png")
-        been_button:setPosition(button:getContentSize().width * 0.8, button:getContentSize().height/2)
+        been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
         button:addChild(been_button)
+
+        local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
+        rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
+        button:addChild(rewardNumber)
 
         local label = cc.Label:createWithSystemFont('打败总结Boss！','',44)
         label:setColor(cc.c3b(31,68,102))
