@@ -26,6 +26,8 @@ local function saveDataToServer(skip_wordList, lastUpdate, bossID, typeIndex, wo
     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
     local data = createData(bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer)
     saveWordBossToServer(data, skip_wordList, function (serverDatas, error)
+        if serverDatas == nil then return end
+        
         for i, v in ipairs(serverDatas) do
 
             local query = "UPDATE DataBossWord SET objectId = '"..v.objectId.."', savedToServer = " .. v.savedToServer .. " WHERE "..condition.." and bossID = "..bossID.." ;"

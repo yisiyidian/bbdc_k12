@@ -96,7 +96,6 @@ function HomeLayer.create(share)
     end
     backColor:addChild(mission_progress,1)
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)
-    local downloadSoundBtnSchedule = downloadSoundButton:getScheduler()
 
     local name = cc.Label:createWithSystemFont('贝贝单词','',50)
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-85)
@@ -270,9 +269,6 @@ function HomeLayer.create(share)
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     AnalyticsChangeBookBtn()
-                    if downloadSoundBtnSchedule ~=nil then
-                        downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
-                    end
                     s_CorePlayManager.enterBookLayer()
                 elseif label_name[i] == "用户反馈" then
                     if  online == false then
@@ -515,9 +511,6 @@ end
 function HomeLayer:addShopButton(backColor)
     local button_shop_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            if downloadSoundBtnSchedule ~=nil then
-                downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
-            end
             local ShopLayer = require("view.shop.ShopLayer")
             local shopLayer = ShopLayer.create()
             s_SCENE:replaceGameLayer(shopLayer)
@@ -572,9 +565,6 @@ function HomeLayer:addFriendButton(backColor)
                     offlineTipFriend.setTrue()
                 else
                     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                        if downloadSoundBtnSchedule ~=nil then
-                            downloadSoundBtnSchedule:unscheduleScriptEntry(downloadSoundBtnSchedule.schedulerEntry)
-                        end
                         s_CorePlayManager.enterFriendLayer()
                     else
     
