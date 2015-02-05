@@ -76,17 +76,20 @@ function CorePlayManager.initStudyModel()
     CorePlayManager.currentIndex          = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     CorePlayManager.wrongWordNum          = #CorePlayManager.currentWrongWordList
 
+    CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
+    CorePlayManager.preWordNameState      = s_LocalDatabaseManager.getPrevWordState()
+
     local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
-    CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
+    CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
 end
 
-function CorePlayManager.enterStudyModel(wordName, wrongWordNum)
+function CorePlayManager.enterStudyModel(wordName, wrongWordNum, preWordName, preWordNameState)
     if wordName == nil then
         -- book over
         -- TODO
     else
         local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-        local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum)
+        local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
         s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
     end
 end
@@ -101,8 +104,11 @@ function CorePlayManager.leaveStudyModel(state)
         s_LocalDatabaseManager.addGraspWordsNum(1)
         s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
 
+        CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex-1]
+        CorePlayManager.preWordNameState      = true
+
         local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
-        CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
+        CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
     else
         print('answer wrong')
         local isNewBossBirth = s_LocalDatabaseManager.addWrongWord(CorePlayManager.currentIndex)
@@ -113,13 +119,16 @@ function CorePlayManager.leaveStudyModel(state)
 
         CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
 
+        CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex-1]
+        CorePlayManager.preWordNameState      = false
+
         if isNewBossBirth then
             -- do collect enough words
             CorePlayManager.enterStudyOverModel()
         else
             -- do not collect enough words
             local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
-            CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum)
+            CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
         end
     end
 end

@@ -47,6 +47,7 @@ function DownloadSoundButton.create(parentNode)
     label:setAnchorPoint(0.5,0.5)    
     label:setSystemFontSize(24) 
     label:setPosition(postion)
+    label:setString('')
 
     local button_download_clicked
     local button_offline_clicked = function(sender,eventType)
@@ -135,7 +136,8 @@ function DownloadSoundButton.create(parentNode)
     end
     
     --update function
-    local update =function(dt)
+    local timeToCheckNetwork = 0
+    local update = function(dt)
 
         if isOffline == true then
 
@@ -154,11 +156,14 @@ function DownloadSoundButton.create(parentNode)
                 updateFailedState()            
                 button:unscheduleUpdate()
             end
+        else
+            if timeToCheckNetwork >= 30 then
+                timeToCheckNetwork = 0
+                updateOfflineState()
+            else
+                timeToCheckNetwork = timeToCheckNetwork + dt
+            end
         end
-    end
-    
-    local checkIfNetworkUpdate = function(dt)
-        updateOfflineState()
     end
 
     --touch event of cancel download
@@ -207,8 +212,6 @@ function DownloadSoundButton.create(parentNode)
 
     --begin the update
     button:scheduleUpdateWithPriorityLua(update, 0)
-    local scheduler = button:getScheduler()
-    scheduler.schedulerEntry = scheduler:scheduleScriptFunc(checkIfNetworkUpdate, 30, false)
 
     --add the components
     parentNode:addChild(button_back)

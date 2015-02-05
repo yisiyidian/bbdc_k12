@@ -200,10 +200,10 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             
---            s_SCENE:removeAllPopups()
+            s_SCENE:removeAllPopups()
 --            print('######## state'..state..',active'..active)
             if state >= 4 and active ~= 0 then
-                s_SCENE:callFuncWithDelay(0.7,function()
+
                     local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
                     tutorial_text:setPosition(300, 450)
                     self:addChild(tutorial_text,520)
@@ -212,8 +212,7 @@ function ChapterLayerBase:addPopup(levelIndex)
                     text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
                     text:setColor(cc.c3b(0,0,0))
                     tutorial_text:addChild(text)
-                end)
-                s_SCENE:removeAllPopups()
+ 
             else
                 s_CorePlayManager.initTotalPlay()
             end
