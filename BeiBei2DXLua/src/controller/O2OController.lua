@@ -436,7 +436,7 @@ function O2OController.getBossWord(oncompleted)
         return 
     end
 
-    sysBossWord(unsaved, function (serverDatas, error)
+    sysBossWord(unsaved, false, function (serverDatas, error)
         if serverDatas ~= nil then
             for i, v in ipairs(serverDatas) do
                 local data = DataBossWord.create()

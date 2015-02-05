@@ -22,6 +22,7 @@ function DataBossWord:ctor()
     self.typeIndex = 0
     self.wordList = ''
     self.lastWordIndex = 0
+    self.savedToServer = 0 -- wordList
 end
 
 function DataBossWord.getNoObjectIdDatasFromLocalDB()
@@ -37,6 +38,7 @@ function DataBossWord.getNoObjectIdDatasFromLocalDB()
             data.typeIndex = row.typeIndex
             data.wordList = row.wordList
             data.lastWordIndex = row.lastWordIndex
+            data.savedToServer = row.savedToServer
 
             data.className = row.className
             data.objectId = row.objectId
