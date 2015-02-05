@@ -154,6 +154,7 @@ function SummaryBossAlter:lose2()
     again:addChild(again_title)
     
     local function backToLevelScene(sender)
+        s_CorePlayManager.leaveSummaryModel(false)
         s_CorePlayManager.enterLevelLayer() 
         
         -- stop effect

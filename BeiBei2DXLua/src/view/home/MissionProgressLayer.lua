@@ -341,7 +341,7 @@ function MissionProgressLayer.create(share)
 
     local function enterSummaryBoss(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local circle = require('view.summaryboss.SummaryBossLayer').create(1)
+            local circle = require('view.summaryboss.SummaryBossLayer').create(1,1)
             s_SCENE:replaceGameLayer(circle) 
         end
     end
