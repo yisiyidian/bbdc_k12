@@ -17,6 +17,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -24,6 +25,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.*;
+import android.provider.MediaStore.Images;
 import android.widget.Toast;
 import c.bb.dc.notification.*;
 import c.bb.dc.sns.CXTencentSDKCall;
@@ -41,7 +43,6 @@ import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SignUpCallback;
 import com.avos.sns.*;
 import com.umeng.analytics.MobclickAgent;
-
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
@@ -338,6 +339,18 @@ public class BBNDK {
 	
 	public static void shareImageToWeiXin(String path, String title, String desc) {
 		CXTencentSDKCall.getInstance().shareImageToWeiXin(path, title, desc);
+	}
+	
+	public static void addImageToGallery(final String filePath) {
+
+	    ContentValues values = new ContentValues();
+
+	    values.put(Images.Media.DATE_TAKEN, System.currentTimeMillis());
+	    values.put(Images.Media.MIME_TYPE, "image/jpeg");
+	    values.put(MediaStore.MediaColumns.DATA, filePath);
+
+	    _context.getContentResolver().insert(Images.Media.EXTERNAL_CONTENT_URI, values);
+	    
 	}
 	
 	// ***************************************************************************************************************************

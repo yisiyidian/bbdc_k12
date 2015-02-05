@@ -1,6 +1,9 @@
 package c.bb.dc.sns;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import org.json.JSONObject;
 
@@ -77,11 +80,53 @@ public class CXTencentSDKCall {
 	
 	// ------------------------------------------------------------------------------
 	
+	public boolean saveMyBitmap(String dst, String filename, Bitmap mBitmap) {
+		File dir = new File(dst);
+		dir.mkdirs();
+		
+		File f = new File(dir, filename);
+		try {
+			f.createNewFile();
+		} catch (IOException e) {
+			return false;
+		}
+		
+		FileOutputStream fOut = null;
+		try {
+			fOut = new FileOutputStream(f);
+		} catch (FileNotFoundException e) {
+			return false;
+		}
+		mBitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
+		try {
+			fOut.flush();
+		} catch (IOException e) {
+			return false;
+		}
+		try {
+			fOut.close();
+		} catch (IOException e) {
+			return false;
+		}
+		return true;
+	}
+	
 	public void shareImageToQQFriend(String path, String title, String desc) {
+		File file = new File(path);
+		if (!file.exists()) {
+			Toast.makeText(mActivity, "no such image: path = " + path, Toast.LENGTH_LONG).show();
+			return;
+		}
+		
+		Bitmap rawbmp = BitmapFactory.decodeFile(path);
+		String newpath = BBNDK.getSDCardPath() + "/beibeidanci/screenshot/";
+		String tmpfilename = /*System.currentTimeMillis() + */"tmp.png";
+		if (saveMyBitmap(newpath, tmpfilename, rawbmp) == false) return;
+		
 	    Bundle params = new Bundle();
 	    
 	    params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
-	    params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, path);
+	    params.putString(QQShare.SHARE_TO_QQ_IMAGE_LOCAL_URL, newpath + tmpfilename);
 		
 	    params.putString(QQShare.SHARE_TO_QQ_TITLE, title);
 	    params.putString(QQShare.SHARE_TO_QQ_SUMMARY, desc);
@@ -90,45 +135,56 @@ public class CXTencentSDKCall {
 	    mTencent.shareToQQ(mActivity, params, new ShareImageToQQFriendListener());
 	}
 	
-	public void shareImageToWeiXin(String path, String title, String desc) {
-//		File file = new File(path);
-//		if (!file.exists()) {
-//			Toast.makeText(mActivity, "no such image: path = " + path, Toast.LENGTH_LONG).show();
-//			return;
-//		}
-//		
-//		WXImageObject imgObj = new WXImageObject();
-//		imgObj.setImagePath(path);
-//		
-//		WXMediaMessage msg = new WXMediaMessage();
-//		msg.mediaObject = imgObj;
-//		
-//		Bitmap bmp = BitmapFactory.decodeFile(path);
-//		final int THUMB_SIZE = 64;
-//		Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
-//		bmp.recycle();
-//		msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
-//		
-//		SendMessageToWX.Req req = new SendMessageToWX.Req();
-//		req.transaction = buildTransaction("img");
-//		req.message = msg;
-//		req.scene = SendMessageToWX.Req.WXSceneTimeline;
-//		BBNDK.wxapi.sendReq(req);
-		
-		String text = "share our application";  
-        WXTextObject textObj = new WXTextObject();  
-        textObj.text = text;  
+	public void shareImageToWeiXin(final String path, final String title, final String desc) {
 
-        WXMediaMessage msg = new WXMediaMessage(textObj);  
-        msg.mediaObject = textObj;  
-        msg.description = text;  
-          
-        SendMessageToWX.Req req = new SendMessageToWX.Req();  
-        req.transaction = String.valueOf(System.currentTimeMillis());  
-        req.scene = SendMessageToWX.Req.WXSceneTimeline;
-        req.message = msg;  
-          
-        BBNDK.wxapi.sendReq(req); 
+            	
+				File file = new File(path);
+				if (!file.exists()) {
+					return;
+				}
+				
+				Bitmap rawbmp = BitmapFactory.decodeFile(path);
+				String newpath = BBNDK.getSDCardPath() + "/beibeidanci/screenshot/";
+				String tmpfilename = /*System.currentTimeMillis() + */"tmp.png";
+				if (saveMyBitmap(newpath, tmpfilename, rawbmp) == false) return;
+				
+				WXImageObject imgObj = new WXImageObject();
+				imgObj.setImagePath(newpath + tmpfilename);
+				
+				WXMediaMessage msg = new WXMediaMessage();
+				msg.mediaObject = imgObj;
+				
+				Bitmap bmp = BitmapFactory.decodeFile(newpath + tmpfilename);
+				final int THUMB_SIZE = 128;
+				Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
+				bmp.recycle();
+				msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
+				msg.title = title;
+				msg.description = desc;
+				
+				SendMessageToWX.Req req = new SendMessageToWX.Req();
+				req.transaction = buildTransaction("img");
+				req.message = msg;
+				req.scene = SendMessageToWX.Req.WXSceneTimeline;
+				BBNDK.wxapi.sendReq(req);
+				
+		//		String text = "share our application";  
+		//        WXTextObject textObj = new WXTextObject();  
+		//        textObj.text = text;  
+		//
+		//        WXMediaMessage msg = new WXMediaMessage(textObj);  
+		//        msg.mediaObject = textObj;  
+		//        msg.description = text;  
+		//          
+		//        SendMessageToWX.Req req = new SendMessageToWX.Req();  
+		//        req.transaction = String.valueOf(System.currentTimeMillis());  
+		//        req.scene = SendMessageToWX.Req.WXSceneTimeline;
+		//        req.message = msg;  
+		//          
+		//        BBNDK.wxapi.sendReq(req); 
+				
+
+
 	}
 	
 	private String buildTransaction(final String type) {

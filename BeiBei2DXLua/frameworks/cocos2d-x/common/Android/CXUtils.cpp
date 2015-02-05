@@ -45,20 +45,32 @@ void CXUtils::shareImageToWeiXin(const std::string& path, const std::string& tit
     }
 }
 
-std::string CXUtils::getExternalStorageDirectory() {
+void CXUtils::addImageToGallery(const std::string& filePath) {
     cocos2d::JniMethodInfo t;
-    bool b = cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "getSDCardPath", "()Ljava/lang/String;");
-    if (b) {
-        jstring jSDCardPath = (jstring)(t.env->CallStaticObjectMethod(t.classID, t.methodID));
-        const char *SDCardPath = jSDCardPath ? t.env->GetStringUTFChars(jSDCardPath, 0) : 0;
-        if (jSDCardPath) {
-            std::string ret(SDCardPath);
-            t.env->ReleaseStringUTFChars(jSDCardPath, SDCardPath);
-            return ret;
-        } else {
-            return cocos2d::FileUtils::getInstance()->getWritablePath();
-        }
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "addImageToGallery", "(Ljava/lang/String;)V")) {
+        jstring java_path = t.env->NewStringUTF(filePath.c_str());
+        
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, java_path);
+        
+        t.env->DeleteLocalRef(java_path);
         t.env->DeleteLocalRef(t.classID);
     }
-    return cocos2d::FileUtils::getInstance()->getWritablePath();
 }
+
+//std::string CXUtils::getExternalStorageDirectory() {
+//    cocos2d::JniMethodInfo t;
+//    bool b = cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "getSDCardPath", "()Ljava/lang/String;");
+//    if (b) {
+//        jstring jSDCardPath = (jstring)(t.env->CallStaticObjectMethod(t.classID, t.methodID));
+//        const char *SDCardPath = jSDCardPath ? t.env->GetStringUTFChars(jSDCardPath, 0) : 0;
+//        if (jSDCardPath) {
+//            std::string ret(SDCardPath);
+//            t.env->ReleaseStringUTFChars(jSDCardPath, SDCardPath);
+//            return ret;
+//        } else {
+//            return cocos2d::FileUtils::getInstance()->getWritablePath();
+//        }
+//        t.env->DeleteLocalRef(t.classID);
+//    }
+//    return cocos2d::FileUtils::getInstance()->getWritablePath();
+//}

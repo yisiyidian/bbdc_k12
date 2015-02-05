@@ -57,15 +57,6 @@ function ChapterLayer:ctor()
     for i = 1, currentChapterIndex do
         self.addChapterIntoListView('chapter'..i)
     end
---    if string.sub(levelInfo['chapter'],8) - 1>= 0 then
---        self:addChapterIntoListView('chapter1')
---    end
---    if string.sub(levelInfo['chapter'], 8) - 2 >= 0 then
---        self:addChapterIntoListView('chapter2')
---    end
---    if string.sub(levelInfo['chapter'], 8) - 3 >= 0 then
---        self:addChapterIntoListView('chapter3')
---    end
     -- add player
     self:addPlayer()
     self:plotDecoration()
@@ -141,7 +132,7 @@ function ChapterLayer:checkUnlockLevel()
         -- add notification
         self:addPlayerNotification(true) 
     end
---    self:addNotification()
+    self:addNotification()
 end
 
 function ChapterLayer:addNotification()
@@ -168,7 +159,12 @@ function ChapterLayer:addNotification()
     local taskKey = 'level'..taskIndex
     print('task:'..taskKey..taskChapterKey)
     local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
-    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 200))
+    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 60))
+    local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 80))
+    local action2 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 60))
+    local action3 = cc.Sequence:create(action1, action2)
+    local action4 = cc.RepeatForever:create(action3)
+    notification:runAction(action4)
     self.chapterDic[taskChapterKey]:addChild(notification, 150)
 end
 

@@ -63,10 +63,10 @@
         isQQLogInAvailable="false"
         isQQShareAvailable="true"
 
-        WXName=""
-        WXAppID=""
-        WXAppSecret=""
-        WXSignature=""
+        WXName="贝贝单词-360"
+        WXAppID="wx137f5433bb860905"
+        WXAppSecret="286a1be70a91e1d8c0a205f5264acce9"
+        WXSignature="b7cf8084bd0d4f782b2a4ebd2a0c90b8"
 
         umengAppName="贝贝单词-android"
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>

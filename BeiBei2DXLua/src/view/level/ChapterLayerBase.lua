@@ -139,13 +139,6 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         deco:setPosition(levelPosition.x+10,levelPosition.y+20)
         self:addChild(deco, 130)
     elseif levelState == 2 then
-        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-        summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
-        summaryboss:setAnchorPoint(1,1)
-        summaryboss:addAnimation(0, 'jianxiao', true)
-        summaryboss:setScale(0.7)
-        self:addChild(summaryboss, 140)
-    elseif levelState == 3 or active == 1 then -- check active
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
         reviewBoss:addAnimation(0, '1', false)
         s_SCENE:callFuncWithDelay(1,function()
@@ -153,58 +146,14 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end)
         reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
         self:addChild(reviewBoss, 140)
+    elseif levelState == 3 then 
+        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+        summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
+        summaryboss:setAnchorPoint(1,1)
+        summaryboss:addAnimation(0, 'jianxiao', true)
+        summaryboss:setScale(0.7)
+        self:addChild(summaryboss, 140)
     end
-    
---    if true then
---    return
---    end
---    if currentProgress - levelIndex == 0 then
---        -- plot review boss
---        local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
---        reviewBoss:addAnimation(0, '1', false)
---        s_SCENE:callFuncWithDelay(1,function()
---            reviewBoss:addAnimation(1, '2', true)
---        end)
---        reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
---        self:addChild(reviewBoss, 140)
---    elseif levelIndex % 8 == 0 then
---        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_1.json','spine/xuanxiaoguan1_san_1.atlas',1)
---        deco:addAnimation(0,'animation',true)
---        deco:setPosition(levelPosition.x+10,levelPosition.y+20)
---        self:addChild(deco, 130)
---    elseif levelIndex % 8 == 1 then
---        local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yezi.png')
---        deco:setPosition(levelPosition.x+10, levelPosition.y-30)
---        self:addChild(deco, 130)    
---    elseif levelIndex % 8 == 2 then
---        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_san_2.json','spine/xuanxiaoguan1_san_2.atlas',1)
---        deco:addAnimation(0,'animation',true)
---        deco:setPosition(levelPosition.x-85,levelPosition.y)
---        self:addChild(deco, 130)    
---    elseif levelIndex % 8 == 3 then
-----        local deco = sp.SkeletonAnimation:create('spine/chapterlevel/pangxie.json', 'spine/chapterlevel/pangxie.atlas',1)
-----        deco:addAnimation(0, 'animation', true)
-----        deco:setPosition(levelPosition.x+50, levelPosition.y)
-----        self:addChild(deco, 150)    
---    elseif levelIndex % 8 == 4 then
---        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_1.json','spine/xuanxiaoguan1_shu_1.atlas',1)
---        deco:addAnimation(0,'animation',true)
---        deco:setPosition(levelPosition.x-30,levelPosition.y+10)
---        self:addChild(deco, 130)    
---    elseif levelIndex % 8 == 5 then
---        local deco = cc.Sprite:create('res/image/chapter_level/xuanxiaoguan1_yinliao.png')
---        deco:setPosition(levelPosition.x+70,levelPosition.y+ 40)
---        self:addChild(deco, 130)    
---    elseif levelIndex % 8 == 6 then
---        local deco = sp.SkeletonAnimation:create('spine/xuanxiaoguan1_shu_2.json','spine/xuanxiaoguan1_shu_2.atlas',1)
---        deco:addAnimation(0,'animation',true)
---        deco:setPosition(levelPosition.x,levelPosition.y-20)
---        self:addChild(deco, 130)    
---    elseif levelIndex % 8 == 7 then
---        local deco = cc.Sprite:create('image/chapter_level/xuanxiaoguan1_youyongquan.png')
---        deco:setPosition(levelPosition.x+100,levelPosition.y+ 40)
---        self:addChild(deco, 130)       
---    end
 end
 
 function ChapterLayerBase:addPopup(levelIndex)
@@ -316,12 +265,27 @@ function ChapterLayerBase:addPopup(levelIndex)
             s_SCENE:removeAllPopups()
         end
     end
+    
+    local function wordEvent(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            -- TODO add wordlist
+            
+        end
+    end
+    
     local closeButton = ccui.Button:create('image/button/button_close.png','image/button/button_close.png','image/button/button_close.png')
     closeButton:setScale9Enabled(true)
     closeButton:setPosition(back:getContentSize().width-40, back:getContentSize().height-40)
     closeButton:addTouchEventListener(touchEvent)
+    
+    local wordButton = ccui.Button:create('image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png')
+    wordButton:setScale9Enabled(true)
+    wordButton:setPosition(100, back:getContentSize().height-50)
+    wordButton:addTouchEventListener(touchEvent)
+    
     back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 500))
     back:addChild(closeButton)
+    back:addChild(wordButton)
     s_SCENE:popup(back)
 
 end

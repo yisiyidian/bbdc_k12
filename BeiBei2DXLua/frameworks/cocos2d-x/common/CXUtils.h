@@ -29,10 +29,13 @@ public:
     
     void shareImageToQQFriend(const std::string& path, const std::string& title, const std::string& desc);
     void shareImageToWeiXin(const std::string& path, const std::string& title, const std::string& desc);
+    void addImageToGallery(const std::string& filePath);
     
     void _testCppApi_();
     
-    std::string getExternalStorageDirectory();
+//    std::string getExternalStorageDirectory();
+    
+    
     
 private:
     CXUtils();

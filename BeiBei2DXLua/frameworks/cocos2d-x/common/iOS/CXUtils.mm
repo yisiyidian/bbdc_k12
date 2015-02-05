@@ -40,6 +40,14 @@ void CXUtils::shareImageToWeiXin(const std::string& path, const std::string& tit
 
 }
 
-std::string CXUtils::getExternalStorageDirectory() {
-    return cocos2d::FileUtils::getInstance()->getWritablePath();
+void CXUtils::addImageToGallery(const std::string& filePath) {
+    NSString* path = [NSString stringWithUTF8String:filePath.c_str()];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage* image = [UIImage imageWithData:[NSData dataWithContentsOfFile:path]];
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    });
 }
+
+//std::string CXUtils::getExternalStorageDirectory() {
+//    return cocos2d::FileUtils::getInstance()->getWritablePath();
+//}
