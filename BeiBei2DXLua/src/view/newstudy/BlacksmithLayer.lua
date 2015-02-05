@@ -19,7 +19,7 @@ function BlacksmithLayer.create(wordlist,index)
     return layer
 end
 
-local function createOptions(randomNameArray,wordlist)
+local function createOptions(randomNameArray,wordlist,position)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local wordMeaningTable= {}
     for i = 1, 4 do
@@ -46,7 +46,7 @@ local function createOptions(randomNameArray,wordlist)
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
             
-            local action2 = cc.MoveTo:create(0.5,cc.p((s_max_wrong_num_everyday - #wordlist + 1) * 50 , 1070 - sender:getPositionY()))
+            local action2 = cc.MoveTo:create(0.5,cc.p(position , 1070 - sender:getPositionY()))
             local action3 = cc.ScaleTo:create(0.2,0)
 
             if sender.tag == 1 then  
@@ -148,9 +148,9 @@ function BlacksmithLayer:ctor(wordlist)
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     self.randWord = CollectUnfamiliar:createRandWord(self.currentWord,4)
 
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, s_max_wrong_num_everyday - #wordlist, "yellow")
-    progressBar:setPosition(bigWidth/2+44, 1049)
-    backColor:addChild(progressBar)
+    self.progressBar = ProgressBar.create(s_max_wrong_num_everyday, s_max_wrong_num_everyday - #wordlist, "yellow")
+    self.progressBar:setPosition(bigWidth/2+44, 1049)
+    backColor:addChild(self.progressBar)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -162,7 +162,7 @@ function BlacksmithLayer:ctor(wordlist)
     soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
 
-    self.options = createOptions(self.randWord,wordlist)
+    self.options = createOptions(self.randWord,wordlist,self.progressBar.indexPosition())
     for i = 1, #self.options do
         backColor:addChild(self.options[i])
     end

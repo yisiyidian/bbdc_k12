@@ -217,7 +217,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                 local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName,ReviewWordList,Review_From_Word_Bank)
                 s_SCENE:popup(newReviewBossLayerChange)
             else
-                s_CorePlayManager.leaveReviewModel(true)
+                s_CorePlayManager.leaveReviewModel(false)
             end
             end)
         layer:runAction(cc.Sequence:create(action1, action2,action3))
@@ -367,9 +367,9 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
                 s_CURRENT_USER:addBeans(3)
                 if number == Review_From_Word_Bank then
-                	local SuccessLayer = require("view.newreviewboss.NewReviewBossSuccessPopup")
+                	local SuccessLayer = require("view.newreviewboss.SuccessLayer")
                 	local successLayer = SuccessLayer.create()
-                	s_SCENE:popup(successLayer)
+                    s_SCENE:replaceGameLayer(successLayer)
                 else
                    s_CorePlayManager.leaveReviewModel(true)
                 end

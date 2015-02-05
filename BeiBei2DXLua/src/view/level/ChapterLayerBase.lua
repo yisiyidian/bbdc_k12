@@ -99,7 +99,6 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    --local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
     local levelPosition = self.levelPos[levelIndex]
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
@@ -159,21 +158,22 @@ end
 function ChapterLayerBase:addPopup(levelIndex)
     -- TODO check level state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    local state
+    local state, coolingDay
     for bossID, bossInfo in pairs(bossList) do
         if bossID - (levelIndex + 1) == 0 then
             state = bossInfo["typeIndex"] 
+            coolingDay = bossInfo["coolingDay"]
         end
     end
-    -- check active
-    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
-    local active
---    print('###todayReviewBoss'..#todayReviewBoss)
-    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
-        active = 0
-    else
-        active = 1
-    end
+--    -- check active
+--    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+--    local active
+----    print('###todayReviewBoss'..#todayReviewBoss)
+--    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
+--        active = 0
+--    else
+--        active = 1
+--    end
     
     local levelPosition = self:getLevelPosition('level'..levelIndex)
     local function taskEvent(sender,eventType)
@@ -202,44 +202,65 @@ function ChapterLayerBase:addPopup(levelIndex)
             --     elseif active == 1 then
             --     end
             -- end
-
+            s_SCENE:removeAllPopups()
             s_CorePlayManager.initTotalPlay()
         end
     end
 --    state = math.random(0, 7)
 --    print('state is '..state)
     local back, taskButton, tick
+--    state = 5
+--    coolingDay = 1
     if state == 0 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
+--        taskButton:set
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
     elseif state == 1 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','')
+
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-280)
+--        taskButton:setAnchorPoint(0,0)
     elseif state == 2 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_3.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_3.png','image/chapter/popup/button_pressed_xiaoguantancu_3.png','image/chapter/popup/button_unpressed_xiaoguantancu_3.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-360)
     elseif state == 3 then    
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_4.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_4.png','image/chapter/popup/button_pressed_xiaoguantancu_4.png','image/chapter/popup/button_unpressed_xiaoguantancu_4.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-450)
     elseif state == 4 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_5.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png')
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_pressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_1.png','image/chapter/popup/button_pressed_xiaoguantancu_?_1.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-540)
     elseif state == 5 then
-        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_6.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png')
+        back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_6.png')   
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_pressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_2.png','image/chapter/popup/button_pressed_xiaoguantancu_?_2.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-630)
     elseif state == 6 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_7.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png')
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_pressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_3.png','image/chapter/popup/button_pressed_xiaoguantancu_?_3.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-720)
     elseif state == 7 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_8.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png')
+        if coolingDay == 0 then  
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_pressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png')
+        else
+            taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_4.png','image/chapter/popup/button_pressed_xiaoguantancu_?_4.png','')
+        end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-810) 
     elseif state == 8 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_9.png')
@@ -247,7 +268,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     if state ~= 8 then
         taskButton:setScale9Enabled(true)
-        taskButton:setName(levelIndex..'|'..state..'|'..active)
+        taskButton:setName(levelIndex..'|'..state..'|'..coolingDay)
         taskButton:addTouchEventListener(taskEvent)
         back:addChild(taskButton)
         if state ~= 0 then
@@ -300,9 +321,6 @@ function ChapterLayerBase:plotDecoration()
     local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)
     local chapterIndex = string.sub(self.chapterKey, 8)
     -- add state information
---    local bossList = s_LocalDatabaseManager.getAllBossInfo()
---    print('######## boss list ########')
---    print_lua_table(bossList)
     
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button

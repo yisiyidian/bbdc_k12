@@ -108,6 +108,7 @@ function DataUser:getTodayTotalReviewBossNum()
         self.todayTotalReviewBossNum = #s_LocalDatabaseManager.getTodayReviewBoss()
         self.todayTotalReviewBossNumUpdateTime = today
         -- TODO save data
+        saveUserToServer({['todayTotalReviewBossNum']=self.todayTotalReviewBossNum, ['todayTotalReviewBossNumUpdateTime']=self.todayTotalReviewBossNumUpdateTime})
     end
     return self.todayTotalReviewBossNum
 end

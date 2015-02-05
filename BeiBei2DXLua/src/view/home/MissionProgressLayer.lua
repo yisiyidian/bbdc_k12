@@ -326,7 +326,7 @@ function MissionProgressLayer.create(share)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
-            local Test = require("view.newreviewboss.NewReviewBossSuccessPopup")
+            local Test = require("view.newstudy.MiddleLayer")
             local test = Test.create()
             s_SCENE:replaceGameLayer(test)
         end
@@ -334,7 +334,7 @@ function MissionProgressLayer.create(share)
 
     local Button3 = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
     Button3:setPosition(bigWidth/2 + 300 , s_DESIGN_HEIGHT/2 - 200)
-    Button3:setTitleText("reviewbossend")
+    Button3:setTitleText("collect end")
     Button3:setTitleColor(cc.c4b(255,255,255,255))
     Button3:setTitleFontSize(40)
     Button3:addTouchEventListener(ButtonClick3)
