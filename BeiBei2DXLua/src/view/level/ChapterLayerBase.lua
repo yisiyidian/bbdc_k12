@@ -268,8 +268,10 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     local function wordEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            -- TODO add wordlist
-            
+            local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+            local boss = s_LocalDatabaseManager.getBossInfo(levelIndex + 1)
+            local wordLibrary = WordLibrary.create(boss)
+            s_SCENE:popup(wordLibrary)    
         end
     end
     
@@ -281,7 +283,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     local wordButton = ccui.Button:create('image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png')
     wordButton:setScale9Enabled(true)
     wordButton:setPosition(100, back:getContentSize().height-50)
-    wordButton:addTouchEventListener(touchEvent)
+    wordButton:addTouchEventListener(wordEvent)
     
     back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 500))
     back:addChild(closeButton)
