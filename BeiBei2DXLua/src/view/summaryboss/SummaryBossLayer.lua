@@ -587,7 +587,7 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     pauseBtn:setAnchorPoint(0,1)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     self:addChild(pauseBtn,100)
-    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
 
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
