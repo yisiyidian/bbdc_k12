@@ -542,7 +542,7 @@ bool Texture2D::initWithData(const void *data, ssize_t dataLen, Texture2D::Pixel
     MipmapInfo mipmap;
     mipmap.address = (unsigned char*)data;
     mipmap.len = static_cast<int>(dataLen);
-    return initWithMipmaps(&mipmap, 1, pixelFormat, pixelsWide, pixelsHigh);
+     return initWithMipmaps(&mipmap, 1, pixelFormat, pixelsWide, pixelsHigh);
 }
 
 bool Texture2D::initWithMipmaps(MipmapInfo* mipmaps, int mipmapsNum, PixelFormat pixelFormat, int pixelsWide, int pixelsHigh)

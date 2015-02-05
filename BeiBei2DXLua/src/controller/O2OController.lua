@@ -65,6 +65,7 @@ end
 function O2OController.start()
     DataEverydayInfo = require('model.user.DataEverydayInfo')
     DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
+    DataBossWord = require('model.user.DataBossWord')
 
     BulletinBoard = require('view.BulletinBoard')
     IntroLayer = require("view.login.IntroLayer")
@@ -247,6 +248,8 @@ function O2OController.logInOffline()
     if s_CURRENT_USER.bookKey == '' then
         s_CorePlayManager.enterBookLayer()
     else
+        O2OController.getBossWord()
+        O2OController.getDailyStudyInfo()
         s_CorePlayManager.enterHomeLayer()
     end
 
@@ -258,6 +261,7 @@ end
 function O2OController.getUserDatasOnline()
     LOGTIME('loadConfigs')
     O2OController.loadConfigs()
+
     LOGTIME('getDataLevelInfo')
     O2OController.getDataLevelInfo(function () 
         LOGTIME('getDataEverydayInfo')
@@ -265,14 +269,17 @@ function O2OController.getUserDatasOnline()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
             else
-               
-                -- TODO sys wrong word levels
 
-                LOGTIME('getDailyStudyInfo')
-                O2OController.getDailyStudyInfo(function () 
-                    LOGTIME('enterHomeLayer')
-                    s_CorePlayManager.enterHomeLayer()
-                    O2OController.getBulletinBoard()    
+                LOGTIME('getBossWord')               
+                O2OController.getBossWord(function ()
+
+                    LOGTIME('getDailyStudyInfo')
+                    O2OController.getDailyStudyInfo(function () 
+                        LOGTIME('enterHomeLayer')
+                        s_CorePlayManager.enterHomeLayer()
+                        O2OController.getBulletinBoard()    
+                    end)
+
                 end)
                 
             end 
@@ -413,6 +420,33 @@ function O2OController.getDailyStudyInfo(oncompleted)
         end)
     end
 
+end
+
+---------------------------------------------------------------------------------------------------
+
+function O2OController.getBossWord(oncompleted)
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        if oncompleted then oncompleted() end
+        return
+    end
+
+    local unsaved = DataBossWord.getNoObjectIdDatasFromLocalDB()
+    if #unsaved <= 0 then 
+        if oncompleted then oncompleted() end
+        return 
+    end
+
+    sysBossWord(unsaved, false, function (serverDatas, error)
+        if serverDatas ~= nil then
+            for i, v in ipairs(serverDatas) do
+                local data = DataBossWord.create()
+                parseServerDataToClientData(v, data)
+                s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and bossID = ".. tostring(data.bossID) .." ;")
+            end
+        end
+
+        if oncompleted then oncompleted() end
+    end)
 end
 
 ---------------------------------------------------------------------------------------------------

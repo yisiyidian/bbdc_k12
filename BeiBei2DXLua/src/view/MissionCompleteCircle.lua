@@ -25,7 +25,7 @@ function MissionCompleteCircle:ctor()
 
 	local backCircle = cc.Sprite:create('image/homescene/missionprogress/learning_process_finish_task_bg.png')
 	backCircle:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    self:addChild(backCircle)
+    self:addChild(backCircle,0,'back')
 
 	local backProgress = cc.Sprite:create("image/homescene/missionprogress/white_circle_thick.png")
     backProgress:setColor(cc.c4b(170,217,230,0))

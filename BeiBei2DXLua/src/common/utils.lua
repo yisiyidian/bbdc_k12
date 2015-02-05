@@ -241,15 +241,21 @@ math["xor"]=function(x,y,z)
     return math["and"](nand(x,y,z),math["or"](x,y,z),z)
 end
 
-function showProgressHUD(info)
---    if info == '' or info == nil then info = 'loading' end
---    cx.CXProgressHUD:show(info)  
-    s_SCENE:addLoadingView()
+function showProgressHUD(info, native)
+    if native then
+        if info == '' or info == nil then info = 'loading' end
+        cx.CXProgressHUD:show(info)
+    else
+        s_SCENE:addLoadingView()
+    end
 end
 
-function hideProgressHUD()
---    cx.CXProgressHUD:hide()
-    s_SCENE:removeLoadingView()
+function hideProgressHUD(native)
+    if native then
+        cx.CXProgressHUD:hide()
+    else
+        s_SCENE:removeLoadingView()
+    end
 end
 
 function checkIfDownloadSoundsExist(bookkey)

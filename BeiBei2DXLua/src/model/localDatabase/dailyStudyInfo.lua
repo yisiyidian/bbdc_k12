@@ -25,6 +25,7 @@ function M.addStudyWordsNum()
         data.studyNum = data.studyNum + 1
         Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
+    saveDailyStudyInfoToServer(data)
     return data
 end
 
@@ -82,6 +83,7 @@ function M.addGraspWordsNum(addNum)
         data.graspNum = data.graspNum + addNum
         Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
+    saveDailyStudyInfoToServer(data)
     return data
 end
 
@@ -169,6 +171,7 @@ function M.saveDataDailyStudyInfo(data)
     end
     
     Manager.saveData(data, userId, username, num, " and bookKey = '"..bookKey.."' and dayString = '"..dayString.."' ;")
+    saveDailyStudyInfoToServer(data)
 end
 
 return M

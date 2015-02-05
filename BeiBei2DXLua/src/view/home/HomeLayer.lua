@@ -656,7 +656,7 @@ end
 
 function HomeLayer:showDataLayer(checkIn)
     self.dataButton:setLocalZOrder(2)
-    self.dataButton:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280))))
+    self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
     if true then
         local PersonalInfo = require("view.PersonalInfo")
         local personalInfoLayer = PersonalInfo.create(true)

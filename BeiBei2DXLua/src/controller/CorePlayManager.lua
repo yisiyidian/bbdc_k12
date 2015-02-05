@@ -16,19 +16,39 @@ local CorePlayManager = {}
 
 
 function CorePlayManager.initTotalPlay()
-    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
 
-    if #todayReviewBoss == 0 then
-        CorePlayManager.currentBossID = s_LocalDatabaseManager.getMaxBossID()
-    else
-        CorePlayManager.currentBossID = todayReviewBoss[1]
+    CorePlayManager.currentBossID = nil
+    for i = 1, #bossList do
+        local boss = bossList[i]
+        print("boss info")
+        print(boss.bossID)
+        print(boss.coolingDay)
+        if boss.typeIndex >= 4 and boss.typeIndex <= 7 then
+            if boss.coolingDay == 0 then
+                CorePlayManager.currentBossID = boss.bossID
+                break
+            else
+                -- pass
+            end
+        elseif boss.typeIndex == 8 then
+            -- pass
+        else
+            CorePlayManager.currentBossID = boss.bossID
+            break
+        end
     end
 
-    CorePlayManager.currentBoss       = s_LocalDatabaseManager.getBossInfo(CorePlayManager.currentBossID)
-    CorePlayManager.currentTypeIndex  = CorePlayManager.currentBoss.typeIndex
+    if CorePlayManager.currentBossID == nil then
+        -- pass all
+    else
+        -- exist boss
+    end
+
+    CorePlayManager.currentBoss            = s_LocalDatabaseManager.getBossInfo(CorePlayManager.currentBossID)
+    CorePlayManager.currentTypeIndex       = CorePlayManager.currentBoss.typeIndex
     CorePlayManager.currentRightWordList   = CorePlayManager.currentBoss.rightWordList
     CorePlayManager.currentWrongWordList   = CorePlayManager.currentBoss.wrongWordList 
-
 
     if     CorePlayManager.currentTypeIndex == 0 then
         -- study   model

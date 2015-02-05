@@ -183,6 +183,9 @@ function SummaryBossAlter:lose2()
 end
 
 function SummaryBossAlter:win1()
+
+    checkInEverydayInfo()
+    
     if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
         s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_win)
@@ -217,7 +220,11 @@ function SummaryBossAlter:win1()
         local function onButton(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 s_CorePlayManager.leaveSummaryModel(true)
-                s_SCENE:checkInAnimation()
+                if true then
+                    s_SCENE:checkInAnimation()
+                else
+                    s_CorePlayManager.enterLevelLayer()
+                end
             end
         end
 

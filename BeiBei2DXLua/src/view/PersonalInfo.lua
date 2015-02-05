@@ -724,12 +724,18 @@ function PersonalInfo:login()
         local curIndex = 1
             local function update(delta)
                 if curIndex > #loadingList then
-                    for i = 1,#checkInList do
-                        --local pos = checkInList[i]:getPosition()
-                        local tick = cc.Sprite:create('image/PersonalInfo/login/learning_process_finish_task_tick_on_canlender.png')
-                        tick:setPosition(checkInList[i]:getPositionX(),checkInList[i]:getPositionY())
-                        calendar[index]:addChild(tick,2)
-                        checkInList[i]:setVisible(false)
+                    local tickCount = #checkInList
+                    if self.checkIn then
+                        tickCount = tickCount - 1
+                    end
+                    if tickCount > 0 then
+                        for i = 1,tickCount do
+                            --local pos = checkInList[i]:getPosition()
+                            local tick = cc.Sprite:create('image/PersonalInfo/login/learning_process_finish_task_tick_on_canlender.png')
+                            tick:setPosition(checkInList[i]:getPositionX(),checkInList[i]:getPositionY())
+                            calendar[index]:addChild(tick,2)
+                            checkInList[i]:setVisible(false)
+                        end
                     end
                     calendar[index]:unscheduleUpdate()
                     return
@@ -749,6 +755,20 @@ function PersonalInfo:login()
                     local fadeIn = cc.EaseBackOut:create(cc.ScaleTo:create(0.4,1))
                     loadingList[curIndex]:runAction(fadeIn)
                     --print('curIndex'..curIndex)
+                    
+                    if self.checkIn then
+                        local tick = s_HUD_LAYER:getChildByName('missionCompleteCircle'):getChildByName('back')
+                        local move = cc.MoveTo:create(0.5,cc.p(loadingList[curIndex]:getPositionX() + s_LEFT_X,loadingList[curIndex]:getPositionY()))
+                        local delay = cc.DelayTime:create(0.5)
+                        local tickChange = cc.CallFunc:create(function ()
+                            local newtick = cc.Sprite:create('image/PersonalInfo/login/learning_process_finish_task_tick_on_canlender.png')
+                            newtick:setPosition(loadingList[#loadingList]:getContentSize().width / 2,loadingList[#loadingList]:getContentSize().height / 2)
+                            loadingList[#loadingList]:addChild(newtick,2)
+                            checkInList[#checkInList]:setVisible(false)
+                            tick:removeFromParent()
+                        end,{})
+                        tick:runAction(cc.Sequence:create(delay,move,tickChange))
+                    end
                     curIndex = curIndex + 1
                 end
             end

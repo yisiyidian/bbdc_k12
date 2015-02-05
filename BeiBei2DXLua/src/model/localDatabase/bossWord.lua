@@ -3,7 +3,7 @@ local Manager = s_LocalDatabaseManager
 
 local M = {}
 
-local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex)
+local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer)
     local data = DataBossWord.create()
     updateDataFromUser(data, s_CURRENT_USER)
 
@@ -14,8 +14,26 @@ local function createData(bookKey, lastUpdate, bossID, typeIndex, wordList, last
     data.typeIndex = typeIndex
     data.wordList = wordList
     data.lastWordIndex = lastWordIndex
+    data.savedToServer = savedToServer
 
     return data
+end
+
+local function saveDataToServer(skip_wordList, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer)
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    local data = createData(bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer)
+    saveWordBossToServer(data, skip_wordList, function (serverDatas, error)
+        for i, v in ipairs(serverDatas) do
+
+            local query = "UPDATE DataBossWord SET objectId = '"..v.objectId.."', savedToServer = " .. v.savedToServer .. " WHERE "..condition.." and bossID = "..bossID.." ;"
+            Manager.database:exec(query)
+
+            break
+        end
+    end)
 end
 
 function M.getTodayReviewBoss()
@@ -238,16 +256,20 @@ function M.addRightWord(wordindex)
     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
     local bossID    = nil
+    local record = nil
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
         bossID      = row.bossID
+        record      = row
     end
 
     if bossID == nil then
-        local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '', "..wordindex..") ;"
+        local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '', "..wordindex..", 0) ;"
         Manager.database:exec(query)
+        saveDataToServer(true, time, 1, 0, '', wordindex, 0)
     else
         local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
         Manager.database:exec(query)
+        saveDataToServer(true, time, record.bossID, record.typeIndex, record.wordList, wordindex, record.savedToServer)
     end
 end
 
@@ -265,19 +287,23 @@ function M.addWrongWord(wordindex)
     local bossID    = nil
     local typeIndex = nil
     local wordList  = nil
+    local record = nil
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
         bossID      = row.bossID
         typeIndex   = row.typeIndex
         wordList    = row.wordList
+        record = row
     end
 
     if bossID == nil then
-        local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '"..wordname.."', "..wordindex..") ;"
+        local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '"..wordname.."', "..wordindex..", 0) ;"
         Manager.database:exec(query)
+        saveDataToServer(true, time, 1, 0, '', wordindex, 0)
         return false
     elseif wordList == '' then
         local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , wordList = '"..wordname.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
         Manager.database:exec(query)
+        saveDataToServer(true, time, record.bossID, record.typeIndex, wordname, wordindex, record.savedToServer)
         return false
     else
         local newWordList = wordList.."|"..wordname
@@ -287,12 +313,15 @@ function M.addWrongWord(wordindex)
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
 
+            saveDataToServer(false, time, bossID, 1, newWordList, wordindex, 1)
+
             -- query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..wordindex..") ;"
             -- Manager.database:exec(query)
             return true
         else
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
+            saveDataToServer(true, time, record.bossID, record.typeIndex, newWordList, wordindex, record.savedToServer)
             return false
         end
     end
@@ -309,12 +338,15 @@ function M.updateTypeIndex(bossID)
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." and bossID = "..bossID.." ;") do
         local newTypeIndex = row.typeIndex + 1
         local lastWordIndex = row.lastWordIndex
+
         local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = "..newTypeIndex.." WHERE "..condition.." and bossID = "..bossID.." ;"
         Manager.database:exec(query)
+        saveDataToServer(true, time, row.bossID, newTypeIndex, row.wordList, lastWordIndex, row.savedToServer)
 
         if newTypeIndex == 4 then
-            query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..") ;"
+            query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
             Manager.database:exec(query)
+            saveDataToServer(true, time, bossID + 1, 0, '', lastWordIndex, 0)
         elseif newTypeIndex == 8 then
             s_LocalDatabaseManager.addGraspWordsNum(s_max_wrong_num_everyday)
         end
