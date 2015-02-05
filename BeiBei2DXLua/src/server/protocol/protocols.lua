@@ -189,7 +189,7 @@ function sysDailyStudyInfo(unsavedDays, callback)
 
     local dataTable = {}
     if unsavedDays ~= nil then
-        for i, v in ipairs(unsavedDays) do
+        for k, v in pairs(unsavedDays) do
             table.insert(dataTable, dataTableToJSONString(v))
         end
     end
