@@ -126,11 +126,12 @@ local function createOptions(randomNameArray,word,wrongNum)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong()
-                    local bean = 3
+                    local bean = s_CURRENT_USER.beanReward
                     local total = 3
                     if bean > 0 then
                         local guessWrong = GuessWrong.create(bean,bean)
                         s_SCENE:popup(guessWrong)
+                        s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
@@ -196,6 +197,9 @@ function CollectUnfamiliarLayer.create(word,wrongNum)
 end
 
 function CollectUnfamiliarLayer:ctor(word,wrongNum)
+    if wrongNum == 0 then
+    	s_CURRENT_USER.beanReward = 3
+    end
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
