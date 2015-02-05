@@ -17,7 +17,7 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-function SummaryBossLayer.create(index,chapter)   
+function SummaryBossLayer.create(wordList,chapter)   
     AnalyticsSummaryBoss()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
@@ -64,7 +64,7 @@ function SummaryBossLayer.create(index,chapter)
     local fakeTouchMoved
     local onTouchEnded
     
-    layer:initWordList(index)
+    layer:initWordList(wordList)
     layer:initBossLayer_back(chapter)
     
     local loadingTime = 0
@@ -713,10 +713,8 @@ function SummaryBossLayer:initBossLayer_boss(chapter)
     self.bossNode = bossNode
 end
 
-function SummaryBossLayer:initWordList(index)
-    --local wordList = s_LocalDatabaseManager.getSummaryBossWordCandidate()
-    local boss = s_LocalDatabaseManager.getBossInfo(index)
-    local wordList = boss.wrongWordList
+function SummaryBossLayer:initWordList(word)
+    local wordList = word
     if #wordList < 1 then
         wordList = {'apple','many','tea'}
     end

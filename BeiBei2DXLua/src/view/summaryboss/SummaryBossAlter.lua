@@ -154,6 +154,7 @@ function SummaryBossAlter:lose2()
     again:addChild(again_title)
     
     local function backToLevelScene(sender)
+        s_CorePlayManager.leaveSummaryModel(false)
         s_CorePlayManager.enterLevelLayer() 
         
         -- stop effect
@@ -215,7 +216,7 @@ function SummaryBossAlter:win1()
 
         local function onButton(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                --s_CorePlayManager.leaveSummaryModel(true)
+                s_CorePlayManager.leaveSummaryModel(true)
                 s_SCENE:checkInAnimation()
             end
         end
