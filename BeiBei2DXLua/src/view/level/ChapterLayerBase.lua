@@ -201,7 +201,7 @@ function ChapterLayerBase:addPopup(levelIndex)
             local active = info[3] + 0
             
 --            s_SCENE:removeAllPopups()
-            print('######## state'..state..',active'..active)
+--            print('######## state'..state..',active'..active)
             if state >= 4 and active ~= 0 then
                 s_SCENE:callFuncWithDelay(0.7,function()
                     local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
