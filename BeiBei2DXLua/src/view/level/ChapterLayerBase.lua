@@ -99,7 +99,6 @@ end
 
 
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    --local levelConfig = s_DataManager.getLevelConfig(s_CURRENT_USER.bookKey,self.chapterKey,'level'..levelIndex
     local levelPosition = self.levelPos[levelIndex]
     -- plot level number
     self:plotLevelNumber('level'..levelIndex)
@@ -213,7 +212,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
     elseif state == 1 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
-        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png')
+        taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_2.png','image/chapter/popup/button_pressed_xiaoguantancu_2.png','image/chapter/popup/button_unpressed_xiaoguantancu_2.png')
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-280)
     elseif state == 2 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_3.png')     
@@ -296,9 +295,6 @@ function ChapterLayerBase:plotDecoration()
     local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)
     local chapterIndex = string.sub(self.chapterKey, 8)
     -- add state information
---    local bossList = s_LocalDatabaseManager.getAllBossInfo()
---    print('######## boss list ########')
---    print_lua_table(bossList)
     
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button

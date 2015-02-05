@@ -157,7 +157,7 @@ function ChapterLayer:addNotification()
     end
     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
     local taskKey = 'level'..taskIndex
-    print('task:'..taskKey..taskChapterKey)
+--    print('task:'..taskKey..taskChapterKey)
     local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
     notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 60))
     local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 80))
