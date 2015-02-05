@@ -38,6 +38,38 @@ local function saveDataToServer(skip_wordList, lastUpdate, bossID, typeIndex, wo
     end)
 end
 
+function M.getPrevWordState()
+    local preIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+    local preWord  = s_BookWord[s_CURRENT_USER.bookKey][preIndex]
+
+    if preWord == nil then
+        return true
+    else
+        local maxBossID = M.getMaxBossID()
+        local boss = M.getBossInfo(maxBossID)
+        if #boss.wrongWordList == 0 then
+            if maxBossID == 1 then
+                return true
+            else
+                local preBoss = M.getBossInfo(maxBossID - 1)
+                local lastWrongWord = preBoss.wrongWordList[#preBoss.wrongWordList]
+                if preWord == lastWrongWord then
+                    return false
+                else
+                    return true
+                end
+            end
+        else
+            local lastWrongWord = boss.wrongWordList[#boss.wrongWordList]
+            if preWord == lastWrongWord then
+                return false
+            else
+                return true
+            end
+        end
+    end
+end
+
 function M.getTodayReviewBoss()
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
