@@ -184,24 +184,26 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             
-            if state == 0 then
-            elseif state == 1 then
-            elseif state == 2 then
-            elseif state == 3 then
-            elseif state == 4 then
-            elseif state == 5 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            elseif state == 6 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            elseif state == 7 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            end
+            -- if state == 0 then
+            -- elseif state == 1 then
+            -- elseif state == 2 then
+            -- elseif state == 3 then
+            -- elseif state == 4 then
+            -- elseif state == 5 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- elseif state == 6 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- elseif state == 7 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- end
+
+            s_CorePlayManager.initTotalPlay()
         end
     end
 --    state = math.random(0, 7)
@@ -268,8 +270,10 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     local function wordEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            -- TODO add wordlist
-            
+            local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+            local boss = s_LocalDatabaseManager.getBossInfo(levelIndex + 1)
+            local wordLibrary = WordLibrary.create(boss)
+            s_SCENE:popup(wordLibrary)    
         end
     end
     
@@ -281,7 +285,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     local wordButton = ccui.Button:create('image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png')
     wordButton:setScale9Enabled(true)
     wordButton:setPosition(100, back:getContentSize().height-50)
-    wordButton:addTouchEventListener(touchEvent)
+    wordButton:addTouchEventListener(wordEvent)
     
     back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 500))
     back:addChild(closeButton)

@@ -121,13 +121,13 @@ function Manager.saveDataDailyStudyInfo(data)
    localdatabase_dailyStudyInfo.saveDataDailyStudyInfo(data)
 end
 
-function Manager.addOrdinalNum(init)
-    localdatabase_dailyStudyInfo.addOrdinalNum(init)
-end
-
-function Manager.getOrdinalNum()
-    return localdatabase_dailyStudyInfo.getOrdinalNum()
-end
+--function Manager.addOrdinalNum(init)
+--    localdatabase_dailyStudyInfo.addOrdinalNum(init)
+--end
+--
+--function Manager.getOrdinalNum()
+--    return localdatabase_dailyStudyInfo.getOrdinalNum()
+--end
 
 ---- Boss Word -------------------------------------------------------------------------------------------
 

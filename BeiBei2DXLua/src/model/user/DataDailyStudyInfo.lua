@@ -6,7 +6,7 @@ local DataDailyStudyInfo = class("DataDailyStudyInfo", function()
     return DataClassBase.new()
 end)
 
-function DataDailyStudyInfo.createData(bookKey, dayString, studyNum, graspNum, lastUpdate, ordinalNum)
+function DataDailyStudyInfo.createData(bookKey, dayString, studyNum, graspNum, lastUpdate)
     local data = DataDailyStudyInfo.create()
     updateDataFromUser(data, s_CURRENT_USER)
 
@@ -15,7 +15,6 @@ function DataDailyStudyInfo.createData(bookKey, dayString, studyNum, graspNum, l
     data.studyNum = studyNum
     data.graspNum = graspNum
     data.lastUpdate = lastUpdate
-    data.ordinalNum = ordinalNum
 
     return data
 end
@@ -33,7 +32,6 @@ function DataDailyStudyInfo:ctor()
     self.studyNum = 0
     self.graspNum = 0
     self.lastUpdate = 0
-    self.ordinalNum = 0
     
 end
 
@@ -42,7 +40,7 @@ function DataDailyStudyInfo.getNoObjectIdAndTodayDatasFromLocalDB(todayString)
     local today = nil
     s_LocalDatabaseManager.getDatas('DataDailyStudyInfo', s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
         if row.bookKey ~= '' and row.bookKey ~= nil and row.bookKey == s_CURRENT_USER.bookKey then
-            local data = DataDailyStudyInfo.createData(row.bookKey, row.dayString, row.studyNum, row.graspNum, row.lastUpdate, row.ordinalNum)
+            local data = DataDailyStudyInfo.createData(row.bookKey, row.dayString, row.studyNum, row.graspNum, row.lastUpdate)
             data.className = row.className
             data.objectId = row.objectId
             data.userId = row.userId

@@ -37,7 +37,7 @@ function ShareBottom:ctor()
     -- target:retain()
     -- target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
 
-    local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
+    local png = "image_saved.png"
     local function saveImage(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
@@ -62,21 +62,37 @@ function ShareBottom:ctor()
 	weixin_button:setPosition(0.5 * (s_RIGHT_X - s_LEFT_X) + 5,0.55 * bottom:getContentSize().height)
 	bottom:addChild(weixin_button)
 	addTitle(weixin_button,'朋友圈',0.45)
+	if not IS_SNS_WEIXIN_SHARE_AVAILABLE then
+		weixin_button:setVisible(false)
+	end
 
 	local qq_button = ccui.Button:create('image/share/share_QQ.png','')
 	qq_button:setScale9Enabled(true)
 	qq_button:setPosition(0.74 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
 	bottom:addChild(qq_button)
 	addTitle(qq_button,'QQ好友',0.5)
+	if not IS_SNS_QQ_SHARE_AVAILABLE then
+		qq_button:setVisible(false)
+	end
 
-	local png = string.format("image_saved%s%s%s%s%s%s.png",os.date('%y',os.time()),os.date('%m',os.time()),os.date('%d',os.time()),os.date('%H',os.time()),os.date('%M',os.time()),os.date('%S',os.time()))
+	if (not IS_SNS_WEIXIN_SHARE_AVAILABLE) and (not IS_SNS_QQ_SHARE_AVAILABLE) then
+		save_button:setPosition(0.5 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
+	elseif (not IS_SNS_WEIXIN_SHARE_AVAILABLE) and (IS_SNS_QQ_SHARE_AVAILABLE) then
+		save_button:setPosition(0.33 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
+		qq_button:setPosition(0.67 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
+	elseif (IS_SNS_WEIXIN_SHARE_AVAILABLE) and (not IS_SNS_QQ_SHARE_AVAILABLE) then
+		save_button:setPosition(0.33 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
+		weixin_button:setPosition(0.67 * (s_RIGHT_X - s_LEFT_X),0.55 * bottom:getContentSize().height)
+	end 
+
+	local png_shared = "image_shared.png"
 	local function shareTo(sender, eventType)
 		if eventType == ccui.TouchEventType.began then
-			self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+			self.target:saveToFile(png_shared, cc.IMAGE_FORMAT_PNG)
         elseif eventType == ccui.TouchEventType.ended then
         	--local png = string.format("image-saved%s.png",os.date('%X',os.time()))
             --self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
-            local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
+            local imagePath = cc.FileUtils:getInstance():getWritablePath()..png_shared
             if sender == qq_button then
                 cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, '分享我的记录', '贝贝单词－根本停不下来')
             else

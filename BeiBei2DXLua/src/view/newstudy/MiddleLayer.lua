@@ -69,6 +69,7 @@ local function createNextButton(getBean)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_CURRENT_USER.beanReward = 3
             s_CorePlayManager.leaveStudyOverModel()
         end
     end

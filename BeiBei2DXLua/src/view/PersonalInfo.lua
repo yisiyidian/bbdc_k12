@@ -576,6 +576,7 @@ function PersonalInfo:login()
     local back = self.intro_array[2]
     local loginData = s_CURRENT_USER.logInDatas
     local loginData_array = {}
+    print('loginData_array = '..#loginData)
     for i = 1,#loginData do
         loginData_array[i] = loginData[i]:getDays()
         print_lua_table(loginData_array[i])

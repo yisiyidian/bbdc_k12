@@ -55,6 +55,7 @@ local function createOptions(randomNameArray,wordlist)
                 feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
                     if #wordlist == 0 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
+                        s_CURRENT_USER.beanReward = 3
                         s_CorePlayManager.leaveTestModel()
                     else
                         AnalyticsStudyAnswerRight_strikeWhileHot()
@@ -71,7 +72,7 @@ local function createOptions(randomNameArray,wordlist)
                     local bean = s_CURRENT_USER.beanReward
                     local total = 3
                     if bean > 0 then
-                        local guessWrong = GuessWrong.create(bean,bean)
+                        local guessWrong = GuessWrong.create(bean,total)
                         s_SCENE:popup(guessWrong)
                         s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
                     end
@@ -132,9 +133,6 @@ local function createDontknow(wordlist)
 end
 
 function BlacksmithLayer:ctor(wordlist)
-    if #wordlist == s_max_wrong_num_everyday then
-        s_CURRENT_USER.beanReward = 3
-    end
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
