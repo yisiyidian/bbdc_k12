@@ -78,6 +78,8 @@ APP_ACTIVITY=${CHANNEL_CONFIGS_PATH}/AppActivity.java
 
 BBPUSHNOTIFICATIONSERVICESRC=${CHANNEL_CONFIGS_PATH}/BBPushNotificationService.java
 BBPUSHNOTIFICATIONSERVICEDSC=${JAVA_SRC}/c/bb/dc/notification/BBPushNotificationService.java
+MyProgressDialogSRC=${CHANNEL_CONFIGS_PATH}/MyProgressDialog.java
+MyProgressDialogDSC=${JAVA_SRC}/c/bb/dc/MyProgressDialog.java
 
 LUA_CODE=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/src/AppVersionInfo.lua 
 OBJC_CODE=${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/ios/AppVersionInfo.h
@@ -102,7 +104,8 @@ python channel.py $APPTYPE $VER \
     $LUA_CODE $OBJC_CODE $JAVA_CODE \
     $ANDROID_MANIFEST $ANDROID_MANIFEST_TARGET \
     $JAVA_SRC $APP_ACTIVITY $APP_ACTIVITY_NAME \
-    $BBPUSHNOTIFICATIONSERVICESRC $BBPUSHNOTIFICATIONSERVICEDSC
+    $BBPUSHNOTIFICATIONSERVICESRC $BBPUSHNOTIFICATIONSERVICEDSC \
+    $MyProgressDialogSRC $MyProgressDialogDSC
 
 cd $JAVA_PROJ
 ant clean

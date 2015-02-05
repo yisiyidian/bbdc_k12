@@ -189,7 +189,7 @@ function sysDailyStudyInfo(unsavedDays, callback)
 
     local dataTable = {}
     if unsavedDays ~= nil then
-        for i, v in ipairs(unsavedDays) do
+        for k, v in pairs(unsavedDays) do
             table.insert(dataTable, dataTableToJSONString(v))
         end
     end
@@ -232,7 +232,7 @@ end
 
 -- bosses: DataDailyStudyInfo table
 -- callback : function (serverDatas, error)
-function sysBossWord(bosses, callback)
+function sysBossWord(bosses, skipWordList, callback)
     if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
         if callback then callback(nil, nil) end
         return
@@ -260,13 +260,18 @@ function sysBossWord(bosses, callback)
 
     local unsavedDataTable = {}
     if bosses ~= nil then
-        for i, v in ipairs(bosses) do
-            if v.objectId == '' or v.objectId == nil then
-                table.insert(unsavedDataTable, dataTableToJSONString(v))
-            else
+        for k, v in pairs(bosses) do
+            if skipWordList then
                 table.insert(unsavedDataTable, dataTableToJSONString(v, 'wordList'))
-                skips[v.bossID] = v
+            else
+                local wordCount = #split(v.wordList, "|")
+                if wordCount == s_max_wrong_num_everyday and v.savedToServer == 0 then
+                    table.insert(unsavedDataTable, dataTableToJSONString(v))
+                else
+                    table.insert(unsavedDataTable, dataTableToJSONString(v, 'wordList'))
+                end
             end
+            skips[v.bossID] = v
         end
     end
 
@@ -275,8 +280,8 @@ function sysBossWord(bosses, callback)
 end
 
 -- callback : function (serverDatas, error)
-function saveWordBossToServer(clientData, callback)
-    sysBossWord({['1']=clientData}, callback)
+function saveWordBossToServer(clientData, skipWordList, callback)
+    sysBossWord({['1']=clientData}, skipWordList, callback)
 end
 
 ---------------------------------------------------------------------------------------------------
