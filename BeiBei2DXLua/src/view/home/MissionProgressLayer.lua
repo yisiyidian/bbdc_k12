@@ -85,7 +85,10 @@ function MissionProgressLayer.create(share)
             split_line:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount),cc.Show:create()))
         end
     end
-
+    local shareDelayTime = 0
+    if share then
+        shareDelayTime = 3
+    end
     for i = 1, completeCount do 
         local taskProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
         taskProgress:setColor(circle_color[(i - 1) % 3 + 1])
@@ -94,7 +97,7 @@ function MissionProgressLayer.create(share)
         taskProgress:setReverseDirection(false)
         taskProgress:setPercentage(0)
         local runProgress = cc.ProgressTo:create(1 / missionCount ,100 / missionCount)
-        taskProgress:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount),runProgress,cc.CallFunc:create(function()
+        taskProgress:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount + shareDelayTime),runProgress,cc.CallFunc:create(function()
             if i < missionCount then
                 return
             else--if taskTotal == taskCurrent then
@@ -341,7 +344,7 @@ function MissionProgressLayer.create(share)
 
     local function enterSummaryBoss(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local circle = require('view.summaryboss.SummaryBossLayer').create(1,1)
+            local circle = require('view.summaryboss.SummaryBossLayer').create({},1)
             s_SCENE:replaceGameLayer(circle) 
         end
     end
