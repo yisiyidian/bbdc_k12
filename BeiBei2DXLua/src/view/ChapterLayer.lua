@@ -139,22 +139,36 @@ function ChapterLayer:addNotification()
     local notification = cc.Sprite:create('image/chapter/chapter0/notifi.png') 
     notification:setAnchorPoint(cc.p(0.5,0))
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
-    local taskIndex 
-    -- check active index
-    if #todayReviewBoss == 0 then
-        taskIndex = progress
-    else
-        taskIndex = todayReviewBoss[0] - 1
-    end
+   
+
+--    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+--    -- check active index
+--    if #todayReviewBoss == 0 then
+--        taskIndex = progress
+--    else
+--        taskIndex = todayReviewBoss[0] - 1
+--    end
     -- check state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    local taskState
+    local taskIndex = -2
+    local taskState = -2
+    local progressIndex = progress
+    local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossID - (taskIndex + 1) == 0 then
+        if bossInfo["coolingDay"] == 0 then
+            taskIndex = bossID - 1
             taskState = bossInfo["typeIndex"] 
         end
+        if (progressIndex + 1) == bossID then
+            progressState = bossInfo["typeIndex"]
+        end
     end
+    
+    if taskIndex == -2 then
+        taskIndex = progressIndex
+        taskState = progressState
+    end
+    
     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
     local taskKey = 'level'..taskIndex
 --    print('task:'..taskKey..taskChapterKey)

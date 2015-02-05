@@ -129,14 +129,14 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end
     end
     -- check active
-    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
-    local active
-    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
-        active = 0
-    else
-        active = 1
-    end
-    print('####active'..active..','..levelState)
+--    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
+--    local active
+--    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
+--        active = 0
+--    else
+--        active = 1
+--    end
+--    print('####active'..active..','..levelState)
 --    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
@@ -200,16 +200,20 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             
-            s_SCENE:removeAllPopups()
-            if state >= 4 and active == 0 then
---                local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
---                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, 1073)
---                self:addChild(tutorial_text,220)
---
---                local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT_ID_TUTORIAL_BOOK_SELECT),'',28)
---                text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
---                text:setColor(cc.c3b(0,0,0))
---                tutorial_text:addChild(text)
+--            s_SCENE:removeAllPopups()
+            print('######## state'..state..',active'..active)
+            if state >= 4 and active ~= 0 then
+                s_SCENE:callFuncWithDelay(0.7,function()
+                    local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+                    tutorial_text:setPosition(300, 450)
+                    self:addChild(tutorial_text,520)
+                    print(tutorial_text:getPosition())
+                    local text = cc.Label:createWithSystemFont('距离任务出现还差'..active..'天','',28)
+                    text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+                    text:setColor(cc.c3b(0,0,0))
+                    tutorial_text:addChild(text)
+                end)
+                s_SCENE:removeAllPopups()
             else
                 s_CorePlayManager.initTotalPlay()
             end
@@ -317,7 +321,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     wordButton:setPosition(100, back:getContentSize().height-50)
     wordButton:addTouchEventListener(wordEvent)
     
-    back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 450))
+    back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
     back:addChild(closeButton)
     back:addChild(wordButton)
     s_SCENE:popup(back)
