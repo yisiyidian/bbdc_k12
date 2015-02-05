@@ -86,9 +86,9 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
         color = "yellow"
     end
     
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
-    progressBar:setPosition(bigWidth/2+44, 1049)
-    backColor:addChild(progressBar)
+    self.progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
+    self.progressBar:setPosition(bigWidth/2+44, 1049)
+    backColor:addChild(self.progressBar)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -105,7 +105,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     if wrongWordList ~= nil then
         mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light")
     else
-        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light", (wrongNum + 1) * 50)
+        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light",self.progressBar.indexPosition())
     end
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)

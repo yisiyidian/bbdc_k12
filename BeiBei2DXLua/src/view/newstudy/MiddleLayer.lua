@@ -60,6 +60,8 @@ local function createNumberSprite(wrongNumber)
     labelWordNum:setColor(cc.c4b(234,123,3,255))
     figureback:addChild(labelWordNum)
     
+    
+    
     return figureback
 end
 

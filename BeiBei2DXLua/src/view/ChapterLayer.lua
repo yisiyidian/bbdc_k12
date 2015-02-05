@@ -58,7 +58,7 @@ function ChapterLayer:ctor()
         self.addChapterIntoListView('chapter'..i)
     end
     -- add player
-    self:addPlayer()
+--    self:addPlayer()
     self:plotDecoration()
     -- scroll to current chapter level
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
@@ -86,7 +86,7 @@ function ChapterLayer:checkUnlockLevel()
             self.chapterDic[currentChapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
         end)
         s_SCENE:callFuncWithDelay(1.0, function() 
-            self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
+            --self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
             self:scrollLevelLayer(currentProgress,0.3)
             -- notification
 --            self:addPlayerNotification(false)
@@ -104,33 +104,33 @@ function ChapterLayer:checkUnlockLevel()
     elseif currentProgress - oldProgress > 0 then   -- unlock level
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         local delayTime = 0
-        s_SCENE:callFuncWithDelay(delayTime, 
-            function()
-                -- add notification
-                self:addPlayerNotification(false) 
-            end
-        )  
+--        s_SCENE:callFuncWithDelay(delayTime, 
+--            function()
+--                -- add notification
+--                self:addPlayerNotification(false) 
+--            end
+--        )  
         self.chapterDic[chapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
-        -- move player
-        s_SCENE:callFuncWithDelay(0.3,function()
-            local nextLevelPosition = self.chapterDic[chapterKey]:getLevelPosition('level'..currentProgress)
-            local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
-            local notification = self.player:getChildByTag(100)
-            local notificationAction1 = function()
-                local notificationAct = cc.ScaleTo:create(0.4,1)
-                notification:runAction(notificationAct)
-            end
-            self.player:runAction(cc.Sequence:create(playerAction,
-                cc.DelayTime:create(0.6),
-                cc.CallFunc:create(notificationAction1)))
-        end)
+--        -- move player
+--        s_SCENE:callFuncWithDelay(0.3,function()
+--            local nextLevelPosition = self.chapterDic[chapterKey]:getLevelPosition('level'..currentProgress)
+--            local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
+--            local notification = self.player:getChildByTag(100)
+--            local notificationAction1 = function()
+--                local notificationAct = cc.ScaleTo:create(0.4,1)
+--                notification:runAction(notificationAct)
+--            end
+--            self.player:runAction(cc.Sequence:create(playerAction,
+--                cc.DelayTime:create(0.6),
+--                cc.CallFunc:create(notificationAction1)))
+--        end)
 
         s_SCENE:callFuncWithDelay(1, function()
             self:scrollLevelLayer(currentProgress, 1)
         end)
     else
         -- add notification
-        self:addPlayerNotification(true) 
+--        self:addPlayerNotification(true) 
     end
     self:addNotification()
 end
@@ -157,7 +157,7 @@ function ChapterLayer:addNotification()
     end
     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
     local taskKey = 'level'..taskIndex
-    print('task:'..taskKey..taskChapterKey)
+--    print('task:'..taskKey..taskChapterKey)
     local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
     notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 60))
     local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 80))
