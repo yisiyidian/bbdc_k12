@@ -184,24 +184,26 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             
-            if state == 0 then
-            elseif state == 1 then
-            elseif state == 2 then
-            elseif state == 3 then
-            elseif state == 4 then
-            elseif state == 5 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            elseif state == 6 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            elseif state == 7 then
-                if active == 0 then
-                elseif active == 1 then
-                end
-            end
+            -- if state == 0 then
+            -- elseif state == 1 then
+            -- elseif state == 2 then
+            -- elseif state == 3 then
+            -- elseif state == 4 then
+            -- elseif state == 5 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- elseif state == 6 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- elseif state == 7 then
+            --     if active == 0 then
+            --     elseif active == 1 then
+            --     end
+            -- end
+
+            s_CorePlayManager.initTotalPlay()
         end
     end
 --    state = math.random(0, 7)

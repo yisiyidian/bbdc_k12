@@ -66,6 +66,7 @@ start = function ()
         s_SERVER.hasLog           = false
         s_SERVER.closeNetwork     = false
 
+        s_SERVER.appName = LEAN_CLOUD_NAME
         s_SERVER.appId = LEAN_CLOUD_ID
         s_SERVER.appKey = LEAN_CLOUD_KEY
 
@@ -82,11 +83,13 @@ start = function ()
 
             s_SERVER.closeNetwork = false
             
+            s_SERVER.appName = LEAN_CLOUD_NAME
             s_SERVER.appId = LEAN_CLOUD_ID
             s_SERVER.appKey = LEAN_CLOUD_KEY
         else
             s_APP_VERSION = app_version_debug
 
+            s_SERVER.appName = LEAN_CLOUD_NAME_TEST
             s_SERVER.appId = LEAN_CLOUD_ID_TEST
             s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
         end

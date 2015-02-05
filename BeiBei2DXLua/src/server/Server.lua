@@ -8,6 +8,7 @@ local Server = {}
 Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
 Server.production = 0
+Server.appName = ''
 Server.appId = ''
 Server.appKey = ''
 Server.sessionToken = ''

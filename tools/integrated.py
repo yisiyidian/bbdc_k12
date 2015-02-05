@@ -41,7 +41,7 @@ echo "others:           \\033[31m3\\033[0m"
 
 read CHANNEL_NAME_ID
 
-CHANNEL_NAME="xiaomi"
+CHANNEL_NAME="DEBUG"
 if [ $CHANNEL_NAME_ID = "0" ] ; then
     CHANNEL_NAME="xiaomi" 
 elif [ $CHANNEL_NAME_ID = "1" ] ; then   
@@ -50,9 +50,6 @@ elif [ $CHANNEL_NAME_ID = "2" ] ; then
     CHANNEL_NAME="360qihu" 
 elif [ $CHANNEL_NAME_ID = "3" ] ; then 
     CHANNEL_NAME="others" 
-else 
-    echo "Wrong channel id" 
-    exit 0
 fi
 '''
     return cmd
