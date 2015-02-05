@@ -151,11 +151,11 @@ fi
 
 if __name__ == "__main__":
     if sys.argv[1] == '0':
-        cmd = 'APPTYPE="0"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel()
+        cmd = 'APPTYPE="0"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel() + packageApk()
     elif sys.argv[1] == '1':
-        cmd = 'APPTYPE="1"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel()
+        cmd = 'APPTYPE="1"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel() + packageApk()
     elif sys.argv[1] == '2':
-        cmd = 'APPTYPE="2"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel()
+        cmd = 'APPTYPE="2"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel() + packageApk()
     else:
         cmd = inputAppType() + inputChannelId() + resetCodesAndProjectsConfigsForChannel() + packageApk()
 
