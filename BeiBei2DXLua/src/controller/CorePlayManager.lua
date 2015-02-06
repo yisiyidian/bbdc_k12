@@ -155,7 +155,9 @@ end
 
 function CorePlayManager.leaveTestModel()
     s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
-    CorePlayManager.enterLevelLayer()
+    local MiddleLayer = require("view.newstudy.EndLayer")
+    local middleLayer = MiddleLayer.create()
+    s_SCENE:replaceGameLayer(middleLayer)
 end
 
 function CorePlayManager.initReviewModel()
@@ -174,7 +176,9 @@ function CorePlayManager.leaveReviewModel(state)
     else
         -- do nothing
     end
-    CorePlayManager.enterLevelLayer()
+    local SuccessLayer = require("view.newreviewboss.SuccessLayer")
+    local successLayer = SuccessLayer.create()
+    s_SCENE:replaceGameLayer(successLayer)
 end
 
 function CorePlayManager.initSummaryModel()
@@ -183,7 +187,7 @@ end
 
 function CorePlayManager.enterSummaryModel(wordlist)
     local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-    local summaryBossLayer = SummaryBossLayer.create(wordlist,1)
+    local summaryBossLayer = SummaryBossLayer.create(wordlist,1,true)
     s_SCENE:replaceGameLayer(summaryBossLayer) 
 end
 

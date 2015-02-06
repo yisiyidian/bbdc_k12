@@ -17,7 +17,7 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 
-function SummaryBossLayer.create(wordList,chapter)   
+function SummaryBossLayer.create(wordList,chapter,entrance)   
     AnalyticsSummaryBoss()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
@@ -381,7 +381,7 @@ function SummaryBossLayer.create(wordList,chapter)
                         local win = cc.CallFunc:create(function()
                             
                             --layer.boss:removeFromParent()
-                            layer:win(chapter)
+                            layer:win(chapter,entrance)
                         end,{})
                         layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
                         
@@ -475,7 +475,7 @@ function SummaryBossLayer.create(wordList,chapter)
             
         elseif loadingState == 4 then
             loadingState = 5
-            layer:initBossLayer_boss(chapter)
+            layer:initBossLayer_boss(chapter,entrance)
         elseif loadingState == 6 then
             loadingState = 7
             
@@ -656,7 +656,7 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     
 end
 
-function SummaryBossLayer:initBossLayer_boss(chapter)
+function SummaryBossLayer:initBossLayer_boss(chapter,entrance)
     
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
@@ -714,7 +714,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter)
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
         if self.currentBlood > 0 then
             self.isLose = true
-            self:lose(chapter)
+            self:lose(chapter,entrance)
         end
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
@@ -1167,10 +1167,10 @@ function SummaryBossLayer:crabBig(chapter,index)
     end
 end
 
-function SummaryBossLayer:win(chapter)
+function SummaryBossLayer:win(chapter,entrance)
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
@@ -1180,10 +1180,10 @@ function SummaryBossLayer:win(chapter)
     AnalyticsSummaryBossResult('win')
 end
 
-function SummaryBossLayer:lose(chapter)
+function SummaryBossLayer:lose(chapter,entrance)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,entrance)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     

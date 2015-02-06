@@ -4,7 +4,7 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(win,wordCount,blood,index)
+function SummaryBossAlter.create(win,wordCount,blood,index,entrance)
     
     local layer = SummaryBossAlter.new()
     layer.wordCount = wordCount
@@ -32,7 +32,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     if win then
-        layer:win1()  
+        layer:win1(entrance)  
         cc.SimpleAudioEngine:getInstance():pauseMusic()
 
         s_SCENE:callFuncWithDelay(0.3,function()
@@ -180,7 +180,7 @@ function SummaryBossAlter:lose2()
     
 end
 
-function SummaryBossAlter:win1()
+function SummaryBossAlter:win1(entrance)
 
     checkInEverydayInfo()
     
@@ -217,11 +217,17 @@ function SummaryBossAlter:win1()
 
         local function onButton(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                s_CorePlayManager.leaveSummaryModel(true)
-                if true then
-                    s_SCENE:checkInAnimation()
-                else
+                local ENTRANCE_WORD_LIBRARY = false
+                local ENTRANCE_NORMAL = true
+                if entrance == ENTRANCE_WORD_LIBRARY then
                     s_CorePlayManager.enterLevelLayer()
+                else
+                    s_CorePlayManager.leaveSummaryModel(true)
+                    if true then
+                        s_SCENE:checkInAnimation()
+                    else
+                        s_CorePlayManager.enterLevelLayer()
+                    end
                 end
             end
         end

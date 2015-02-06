@@ -198,7 +198,7 @@ function PersonalInfo:ctor()
     local function update(delta)
         
         local curPage = pageView:getCurPageIndex()
-        if self.checkIn then
+        if self.checkIn ~= nil and self.checkIn then
             if curPage ~= 1 then
                 pageView:scrollToPage(1)
             end
@@ -748,7 +748,7 @@ function PersonalInfo:login()
             local function update(delta)
                 if curIndex > #loadingList then
                     local tickCount = #checkInList
-                    if self.checkIn then
+                    if self.checkIn ~= nil and self.checkIn then
                         tickCount = tickCount - 1
                     end
                     if tickCount > 0 then
@@ -779,7 +779,7 @@ function PersonalInfo:login()
                     loadingList[curIndex]:runAction(fadeIn)
                     --print('curIndex'..curIndex)
                     
-                    if self.checkIn then
+                    if self.checkIn ~= nil and self.checkIn then
                         local tick = s_HUD_LAYER:getChildByName('missionCompleteCircle'):getChildByName('back')
                         local move = cc.MoveTo:create(0.5,cc.p(loadingList[curIndex]:getPositionX() + s_LEFT_X,loadingList[curIndex]:getPositionY()))
                         local delay = cc.DelayTime:create(0.5)

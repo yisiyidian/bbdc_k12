@@ -56,7 +56,12 @@ local function createOptions(randomNameArray,wordlist,position)
                     if #wordlist == 0 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
                         s_CURRENT_USER.beanReward = 3
-                        s_CorePlayManager.leaveTestModel()
+                        local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+                        s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+                        sender:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+                            s_CorePlayManager.leaveTestModel()   
+                        end,{})))
+                        
                     else
                         AnalyticsStudyAnswerRight_strikeWhileHot()
                         local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
