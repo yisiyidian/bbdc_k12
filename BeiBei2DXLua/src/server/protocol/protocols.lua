@@ -217,7 +217,7 @@ local function resetLocalEverydayInfos()
                             parseLocalDBDataToClientData(row, data)
                             table.insert(s_CURRENT_USER.logInDatas, data)
                         end, 
-                        'order by week')
+                        ' order by week')
     print('>>> resetLocalEverydayInfos')
     print_lua_table(s_CURRENT_USER.logInDatas)
     print('<<< resetLocalEverydayInfos')
