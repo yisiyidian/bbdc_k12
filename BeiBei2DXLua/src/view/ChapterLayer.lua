@@ -18,7 +18,7 @@ end
 
 function ChapterLayer:ctor()
     s_SCENE.touchEventBlockLayer.unlockTouch()
-
+    playMusic(s_sound_bgm1,true)
     self.chapterDic = {}
     -- add list view
     local function listViewEvent(sender, eventType)

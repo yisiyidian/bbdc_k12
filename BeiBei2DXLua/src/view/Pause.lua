@@ -120,6 +120,7 @@ function Pause:onBack()
     --button sound
     
     playSound(s_sound_buttonEffect)
+    --cc.SimpleAudioEngine:getInstance():stopMusic()
     
     --control volune
     if s_LocalDatabaseManager.isMusicOn() then
