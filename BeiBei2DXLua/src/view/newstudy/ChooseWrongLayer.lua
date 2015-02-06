@@ -13,13 +13,13 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+function ChooseWrongLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
     local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton(word,wrongNum,wrongWordList)
+local function addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -30,7 +30,7 @@ local function addNextButton(word,wrongNum,wrongWordList)
             local slideCoconutLayer
             if wrongWordList == nil then
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
             else
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
                 slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
@@ -51,7 +51,7 @@ local function addNextButton(word,wrongNum,wrongWordList)
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
+function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -79,7 +79,9 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastWordAndTotalNumber,1)
     local todayNumber = LastWordAndTotalNumber:getTodayNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
-    self.lastWordAndTotalNumber.setWord("apple",true)
+    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
+    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+    end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 920)  
@@ -91,7 +93,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton(word,wrongNum,wrongWordList)
+    self.nextButton = addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
     backColor:addChild(self.nextButton)
 end
 
