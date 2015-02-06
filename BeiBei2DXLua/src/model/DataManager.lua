@@ -22,6 +22,8 @@ s_BOOK_KEY_PRO8     = g_BOOKKEYS[11] -- 'pro8'
 s_BOOK_KEY_SAT      = g_BOOKKEYS[12] -- 'sat'
 s_BOOK_KEY_TOEFL    = g_BOOKKEYS[13] -- 'toefl'
 
+s_bean = {'1',    '5',    '3',    '4',   '5',   '6',     '7'}
+
 function DataManager.clear()
     DataManager.configs = nil
     DataManager.text = nil
@@ -36,6 +38,7 @@ function DataManager.clear()
     DataManager.reviewBoos = nil
     DataManager.starRules = nil
     DataManager.product = nil
+    DataManager.bean = nil
 end
 
 s_energyMaxCount = 8
@@ -424,7 +427,14 @@ function DataManager.loadProduct()
     end
 end
 
-
-
+-- bean info -----------------------------------------------------------------
+function DataManager.loadBean()
+    local MetaBean = require("model.meta.MetaBean")
+    DataManager.bean = {}
+    for i = 1, 7 do 
+        local p = MetaBean.create(i , s_bean[i])
+        table.insert(DataManager.bean, p)
+    end
+end
 
 return DataManager

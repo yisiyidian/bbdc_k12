@@ -29,42 +29,43 @@ function M.addStudyWordsNum()
     return data
 end
 
---function M.addOrdinalNum(ordinalNum)-- influence beibei bean
---    local userId = s_CURRENT_USER.objectId
---    local bookKey = s_CURRENT_USER.bookKey
---    local username = s_CURRENT_USER.username
---
---    local time = os.time()
---    local today = getDayStringForDailyStudyInfo(time)
---
---    local data = M.getDataDailyStudyInfo(today)
---    if data == nil then
---        data = DataDailyStudyInfo.createData(bookKey, today, 0, 0, time, 0)
---        Manager.saveData(data, userId, username, 0)
---    else
---        data.ordinalNum = data.ordinalNum + ordinalNum
---        Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
---    end
---    return data
---end
---
---function M.getOrdinalNum()-- influence beibei bean    
---    local ordinalNum = 0
---    
---    local userId = s_CURRENT_USER.objectId
---    local bookKey = s_CURRENT_USER.bookKey
---    local username = s_CURRENT_USER.username
---
---    local time = os.time()
---    local today = getDayStringForDailyStudyInfo(time)
---
---    local data = M.getDataDailyStudyInfo(today)
---    if data ~= nil then
---        ordinalNum = data.ordinalNum
---    end
---
---    return ordinalNum
---end
+function M.addTodayGetReward()-- influence beibei bean
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local time = os.time()
+    local today = getDayStringForDailyStudyInfo(time)
+
+    local data = M.getDataDailyStudyInfo(today)
+    if data == nil then
+        data = DataDailyStudyInfo.createData(bookKey, today, 0, 0, time, 0)
+        Manager.saveData(data, userId, username, 0)
+    else
+        data.todayGetReward =  1
+        Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
+    end
+
+    return data
+end
+
+function M.getTodayGetReward()-- influence beibei bean    
+    local todayGetReward = 0
+    
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local time = os.time()
+    local today = getDayStringForDailyStudyInfo(time)
+
+    local data = M.getDataDailyStudyInfo(today)
+    if data ~= nil then
+        todayGetReward = data.todayGetReward
+    end
+
+    return todayGetReward
+end
 
 
 function M.addGraspWordsNum(addNum)
