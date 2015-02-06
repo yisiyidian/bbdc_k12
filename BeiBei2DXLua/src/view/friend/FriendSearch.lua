@@ -71,7 +71,7 @@ function FriendSearch:ctor()
                 return
             end
             local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
-            showProgressHUD('正在搜索相应用户')
+            showProgressHUD('正在搜索相应用户', true)
             s_UserBaseServer.searchUserByNickName(username,
                 function(api,result)
                     local f_user = result.results
@@ -192,7 +192,7 @@ function FriendSearch:ctor()
                                                     s_SCENE.popupLayer:addChild(smallAlter)
                                                     return
                                                 end
-                                                showProgressHUD('正在发送好友请求')
+                                                showProgressHUD('正在发送好友请求', true)
                                                 AnalyticsFriendRequest()
                                                 s_UserBaseServer.unfollow(user,
                                                     function(api, result, err)

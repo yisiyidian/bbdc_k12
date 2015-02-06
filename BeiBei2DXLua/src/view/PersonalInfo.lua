@@ -2,10 +2,32 @@ require("cocos.init")
 require("common.global")
 CC_USE_DEPRECATED_API = true
 
-
 local PersonalInfo = class("PersonalInfo", function()
     return cc.Layer:create()
 end)
+
+PersonalInfo.hasGotNotContainedInLocalDatas = false
+-- function callback() end
+function PersonalInfo.getNotContainedInLocalDatas(callback)
+    if PersonalInfo.hasGotNotContainedInLocalDatas or (not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken()) then
+        if callback then callback() end
+        return
+    end
+
+    showProgressHUD('', true)
+    getNotContainedInLocalEverydayInfosFromServer(function (serverDatas, error)
+        PersonalInfo.hasGotNotContainedInLocalDatas = (error == nil)
+
+        getNotContainedInLocalDailyStudyInfoFromServer(function (serverDatas, error)
+        
+            PersonalInfo.hasGotNotContainedInLocalDatas = (error == nil)
+            if callback then callback() end
+            hideProgressHUD()
+
+        end)
+
+    end)
+end
 
 function PersonalInfo.create(checkIn)
     local layer = PersonalInfo.new()
