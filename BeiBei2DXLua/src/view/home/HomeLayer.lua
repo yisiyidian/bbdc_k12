@@ -23,17 +23,16 @@ function HomeLayer.create(share)
         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     end
 
-    -- can not be delete
-    DataUser:updateTaskData()
+    -- task
+    local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
+    local todayReaminBossNum    = s_LocalDatabaseManager:getTodayReaminBossNum()
+    local todayTotalTaskNum     = s_LocalDatabaseManager:getTodayTotalTaskNum()
+    local todayRemainTaskNum    = s_LocalDatabaseManager:getTodayRemainTaskNum()
 
-    local maxBossID = s_LocalDatabaseManager.getMaxBossID()
-    local boss = s_LocalDatabaseManager.getBossInfo(maxBossID)
-    local todayTotalReviewBossNum  = s_CURRENT_USER:getTodayTotalReviewBossNum()
-    local todayReaminReviewBossNum = s_CURRENT_USER:getTodayReaminReviewBossNum()
-    local todayTotalTaskNum        = s_CURRENT_USER:getTodayTotalTaskNum()
-    local todayRemainTaskNum       = s_CURRENT_USER:getTodayRemainTaskNum()
-    print('todayTotalReviewBossNum',todayTotalReviewBossNum,'todayReaminReviewBossNum',todayReaminReviewBossNum,'todayTotalTaskNum',todayTotalTaskNum,'todayRemainTaskNum',todayRemainTaskNum)
-    -- can not be delete
+    print("todayTotalBossNum : "..todayTotalBossNum)
+    print("todayReaminBossNum : "..todayReaminBossNum)
+    print("todayTotalTaskNum : "..todayTotalTaskNum)
+    print("todayRemainTaskNum : "..todayRemainTaskNum)
 
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name

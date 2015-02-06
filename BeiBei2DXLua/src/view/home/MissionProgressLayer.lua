@@ -22,8 +22,8 @@ function MissionProgressLayer.getNotContainedInLocalDatas(callback)
 end
 
 function MissionProgressLayer.create(share)
-    local missionCount = s_CURRENT_USER:getTodayTotalReviewBossNum() + 1
-    local completeCount = s_CURRENT_USER:getTodayReaminReviewBossNum()
+    local missionCount = s_LocalDatabaseManager.getTodayTotalBossNum() + 1
+    local completeCount = s_LocalDatabaseManager.getTodayRemainBossNum()
     if share ~= nil and share then
         completeCount = missionCount
     end
