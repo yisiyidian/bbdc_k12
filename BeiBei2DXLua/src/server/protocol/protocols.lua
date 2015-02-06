@@ -1,4 +1,7 @@
 local ProtocolBase = require('server.protocol.ProtocolBase')
+local DataEverydayInfo          = require('model.user.DataEverydayInfo')
+local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
+local DataBossWord              = require('model.user.DataBossWord')
 
 ---------------------------------------------------------------------------------------------------
 
@@ -209,7 +212,9 @@ function getNotContainedInLocalEverydayInfosFromServer(callback)
         if error == nil then
             if serverDatas ~= nil then
                 for i, v in ipairs(serverDatas) do 
-                    s_LocalDatabaseManager.saveDataClassObject(v, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and week = " .. tostring(v.week))
+                    local data = DataEverydayInfo.create()
+                    parseServerDataToClientData(v, data)
+                    s_LocalDatabaseManager.saveDataClassObject(data, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and week = " .. tostring(data.week))
                 end
             end
             if callback then callback(serverDatas, nil) end
@@ -280,7 +285,9 @@ function getNotContainedInLocalDailyStudyInfoFromServer(callback)
         if error == nil then
             if serverDatas ~= nil then
                 for i, v in ipairs(serverDatas) do 
-                    s_LocalDatabaseManager.saveDataClassObject(v, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and dayString = '".. v.dayString .."' ;")
+                    local data = DataDailyStudyInfo.create()
+                    parseServerDataToClientData(v, data)
+                    s_LocalDatabaseManager.saveDataClassObject(data, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and dayString = '".. data.dayString .."' ;")
                 end
             end
             if callback then callback(serverDatas, nil) end
@@ -354,7 +361,9 @@ function getNotContainedInLocalBossWordFromServer(callback)
         if error == nil then
             if serverDatas ~= nil then
                 for i, v in ipairs(serverDatas) do 
-                    s_LocalDatabaseManager.saveDataClassObject(v, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and bossID = '".. v.bossID .."' ;")
+                    local data = DataBossWord.create()
+                    parseServerDataToClientData(v, data)
+                    s_LocalDatabaseManager.saveDataClassObject(data, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and bossID = '".. data.bossID .."' ;")
                 end
             end
             if callback then callback(serverDatas, nil) end
