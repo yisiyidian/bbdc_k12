@@ -5,6 +5,21 @@ local MissionProgressLayer = class("MissionProgressLayer", function ()
     return cc.Layer:create()
 end)
 
+MissionProgressLayer.hasGotNotContainedInLocalDatas = false
+-- function callback() end
+function MissionProgressLayer.getNotContainedInLocalDatas(callback)
+    if MissionProgressLayer.hasGotNotContainedInLocalDatas or (not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken()) then
+        if callback then callback() end
+        return
+    end
+
+    showProgressHUD('', true)
+    getNotContainedInLocalBossWordFromServer(function (serverDatas, error)
+        MissionProgressLayer.hasGotNotContainedInLocalDatas = (error == nil)
+        if callback then callback() end
+        hideProgressHUD()
+    end)
+end
 
 function MissionProgressLayer.create(share)
     local missionCount = s_CURRENT_USER:getTodayTotalReviewBossNum() + 1
@@ -137,21 +152,21 @@ function MissionProgressLayer.create(share)
     
     
     local enterGame = function ()
-        s_CURRENT_USER:generateSummaryBossList()
-        s_CURRENT_USER:generateChestList()
-        s_CURRENT_USER:updateDataToServer()
+        MissionProgressLayer.getNotContainedInLocalDatas(function ()
+            s_CURRENT_USER:generateSummaryBossList()
+            s_CURRENT_USER:generateChestList()
+            s_CURRENT_USER:updateDataToServer()
 
-        AnalyticsEnterLevelLayerBtn()
-        AnalyticsFirst(ANALYTICS_FIRST_LEVEL, 'TOUCH')
+            AnalyticsEnterLevelLayerBtn()
+            AnalyticsFirst(ANALYTICS_FIRST_LEVEL, 'TOUCH')
 
-        showProgressHUD()
-        playSound(s_sound_buttonEffect)
-        if layer:getChildByTag(8888) ~=nil then
-            local schedule = layer:getChildByTag(8888):getScheduler()
+            playSound(s_sound_buttonEffect)
+            if layer:getChildByTag(8888) ~=nil then
+                local schedule = layer:getChildByTag(8888):getScheduler()
                 schedule:unscheduleScriptEntry(schedule.schedulerEntry)
-        end
-        s_CorePlayManager.enterLevelLayer()  
-        hideProgressHUD()
+            end
+            s_CorePlayManager.enterLevelLayer()
+        end)
     end
 
     local enterButtonClick = function(sender, eventType)

@@ -123,7 +123,7 @@ showLogin = function()
                 )
             end
 
-            showProgressHUD()
+            showProgressHUD('', true)
             
             if main.layerType == ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER
                 or main.layerType == ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER then

@@ -13,7 +13,7 @@
 -- math["or"](x,y,z)
 -- math["xor"](x,y,z)
 
--- showProgressHUD(info)
+-- showProgressHUD(info, native)
 -- hideProgressHUD()
 
 -- getDayStringForDailyStudyInfo(time)
@@ -243,19 +243,16 @@ end
 
 function showProgressHUD(info, native)
     if native then
-        if info == '' or info == nil then info = 'loading' end
+        info = info or ''
         cx.CXProgressHUD:show(info)
     else
         s_SCENE:addLoadingView()
     end
 end
 
-function hideProgressHUD(native)
-    if native then
-        cx.CXProgressHUD:hide()
-    else
-        s_SCENE:removeLoadingView()
-    end
+function hideProgressHUD()
+    cx.CXProgressHUD:hide()
+    s_SCENE:removeLoadingView()
 end
 
 function checkIfDownloadSoundsExist(bookkey)

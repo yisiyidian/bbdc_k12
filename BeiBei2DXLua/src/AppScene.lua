@@ -152,21 +152,22 @@ end
 function AppScene:addLoadingView(needUpdate)
     self.loadingLayer.lockTouch()
     local k = self.loadingLayer:getChildrenCount()
-    if k > 0 then
-    else
-    self.loadingLayer:removeAllChildren()
-    local LoadingLayer = require("view.LoadingView")
-    local loadingExtra = LoadingLayer.create(needUpdate)
-    self.loadingLayer:addChild(loadingExtra)  
+    if k <= 0 then
+        self.loadingLayer:removeAllChildren()
+        local LoadingLayer = require("view.LoadingView")
+        local loadingExtra = LoadingLayer.create(needUpdate)
+        self.loadingLayer:addChild(loadingExtra)  
     end 
 end
 
 function AppScene:removeLoadingView()
-   local action = cc.DelayTime:create(0.5)
-    self.loadingLayer:runAction(cc.Sequence:create(action,cc.CallFunc:create(function()
-        self.loadingLayer.unlockTouch()
-        self.loadingLayer:removeAllChildren()
-   end)))
+    if self.loadingLayer:getChildrenCount() > 0 then
+        local action = cc.DelayTime:create(0.5)
+        self.loadingLayer:runAction(cc.Sequence:create(action,cc.CallFunc:create(function()
+            self.loadingLayer.unlockTouch()
+            self.loadingLayer:removeAllChildren()
+        end)))
+    end
 end
 
 function AppScene:popup(popupNode)
