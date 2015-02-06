@@ -36,7 +36,7 @@ end
 function LOGTIME(des)
     if BUILD_TARGET == BUILD_TARGET_RELEASE then return end
     print('LOGTIME', des, os.time())
-    LUA_ERROR = LUA_ERROR .. '\n' .. 'LOGTIME:' .. des .. ', ' .. tostring(os.time())
+    -- LUA_ERROR = LUA_ERROR .. '\n' .. 'LOGTIME:' .. des .. ', ' .. tostring(os.time())
 end
 
 local start
