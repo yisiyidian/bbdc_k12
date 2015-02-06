@@ -371,7 +371,12 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                 	local successLayer = SuccessLayer.create()
                     s_SCENE:replaceGameLayer(successLayer)
                 else
-                   s_CorePlayManager.leaveReviewModel(true)
+                    local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+                        s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+                        layer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+                            s_CorePlayManager.leaveReviewModel(true)  
+                        end,{})))
+                   
                 end
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)
