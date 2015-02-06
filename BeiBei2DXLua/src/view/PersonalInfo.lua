@@ -597,6 +597,7 @@ end
 function PersonalInfo:login()
     local back = self.intro_array[2]
     local loginData = s_CURRENT_USER.logInDatas
+    --local loginData_array = {{0,1,1,0,1,1,1},{2,2,1,0,1,0,0}}
     local loginData_array = {}
     print('loginData_array = '..#loginData)
     for i = 1,#loginData do

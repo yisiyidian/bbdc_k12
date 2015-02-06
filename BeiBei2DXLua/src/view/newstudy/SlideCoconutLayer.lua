@@ -141,7 +141,12 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
                     if wrongNum == s_max_wrong_num_everyday - 1 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
                     end 
-                    s_CorePlayManager.leaveStudyModel(false)             
+                    s_CorePlayManager.leaveStudyModel(false)
+                    -- local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+                    -- s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+                    -- self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+                    --     s_CorePlayManager.leaveStudyModel(false)    
+                    -- end,{})))         
                 else
                     table.insert(wrongWordList,wrongWordList[1])
                     table.remove(wrongWordList,1)
