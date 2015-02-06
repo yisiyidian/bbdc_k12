@@ -13,13 +13,13 @@ local  ChooseRightLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseRightLayer.create(word,wrongNum)
+function ChooseRightLayer.create(word,wrongNum, preWordName, preWordNameState)
     local layer = ChooseRightLayer.new(word,wrongNum)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addStudyButton(word,wrongNum)
+local function addStudyButton(word,wrongNum, preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_study_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -28,7 +28,7 @@ local function addStudyButton(word,wrongNum)
             local normal = function ()
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
-                local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+                local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum, preWordName, preWordNameState)
                 s_SCENE:replaceGameLayer(slideCoconutLayer)
             end
 
@@ -60,7 +60,7 @@ local function addStudyButton(word,wrongNum)
     return choose_study_button
 end
 
-local function addNextButton(word,wrongNum)
+local function addNextButton(word,wrongNum, preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -103,7 +103,7 @@ local function addNextButton(word,wrongNum)
     return choose_next_button
 end
 
-function ChooseRightLayer:ctor(word,wrongNum)
+function ChooseRightLayer:ctor(word,wrongNum, preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local backColor = BackLayer.create(45) 
@@ -124,7 +124,9 @@ function ChooseRightLayer:ctor(word,wrongNum)
     backColor:addChild(self.lastWordAndTotalNumber,1)
     local todayNumber = LastWordAndTotalNumber:getTodayNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
-    self.lastWordAndTotalNumber.setWord("apple",true)
+    if wrongNum ~= 0  and preWordName ~= nil then
+    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+    end
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 920)  
@@ -136,10 +138,10 @@ function ChooseRightLayer:ctor(word,wrongNum)
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
     
-    self.studyButton = addStudyButton(word,wrongNum)
+    self.studyButton = addStudyButton(word,wrongNum, preWordName, preWordNameState)
     backColor:addChild(self.studyButton)
     
-    self.nextButton = addNextButton(word,wrongNum)
+    self.nextButton = addNextButton(word,wrongNum, preWordName, preWordNameState)
     backColor:addChild(self.nextButton)
 end
 

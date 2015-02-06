@@ -2,11 +2,14 @@ local WordLibraryPopup = class ("WordLibraryPopup",function ()
     return cc.Layer:create()
 end) 
 
-local StatePopup  = require("view.level.ChapterLayerBase")
-local Listview    = require("view.islandPopup.WordLibraryListview")
+local StatePopup       = require("view.level.ChapterLayerBase")
+local Listview         = require("view.islandPopup.WordLibraryListview")
+local ChapterLayerBase = require("view.level.ChapterLayerBase")
 
-function WordLibraryPopup.create(boss)
-    local layer = WordLibraryPopup.new(boss)
+
+
+function WordLibraryPopup.create(index)
+    local layer = WordLibraryPopup.new(index)
     return layer
 end
 
@@ -26,12 +29,12 @@ local function addCloseButton(top_sprite)
     return button_close
 end 
 
-local function addBackButton(top_sprite)
+local function addBackButton(top_sprite,self)
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            print("back")
+            self:removeFromParent()
         end
     end
 
@@ -72,7 +75,7 @@ local function addReviewButton(bottom_sprite,boss)
     local review_button_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local ReviewBoss = require("view.newreviewboss.NewReviewBossMainLayer")
-            if boss.wrongWordList == nil or #boss.wrongWordList == 0 then
+            if boss.wrongWordList == nil or #boss.wrongWordList < s_max_wrong_num_everyday then
                 return 
             else
                 local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
@@ -113,8 +116,9 @@ local function addSummaryButton(bottom_sprite)
     return summary_button
 end
 
-function WordLibraryPopup:ctor(boss)
-
+function WordLibraryPopup:ctor(index)
+    local boss = s_LocalDatabaseManager.getBossInfo(index + 1)
+    
     local backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backPopup)
@@ -128,7 +132,7 @@ function WordLibraryPopup:ctor(boss)
     self.closeButton = addCloseButton(top_sprite)
     top_sprite:addChild(self.closeButton)
     
-    self.backButton = addBackButton(top_sprite)
+    self.backButton = addBackButton(top_sprite,self)
     top_sprite:addChild(self.backButton)
     
     self.unfamiliarButton = addUnfamiliarButton(top_sprite)
@@ -165,7 +169,11 @@ function WordLibraryPopup:ctor(boss)
         bottom_sprite:setVisible(false)
     else
         listview = Listview.create(boss.wrongWordList)
-        bottom_sprite:setVisible(true)
+            if #boss.wrongWordList >= s_max_wrong_num_everyday then
+                bottom_sprite:setVisible(true)
+            else
+                bottom_sprite:setVisible(false)
+            end
     end
     listview:setPosition(2,70)
     backPopup:addChild(listview)
@@ -189,11 +197,17 @@ function WordLibraryPopup:ctor(boss)
             listview = Listview.create(boss.wrongWordList) 
             listview:setPosition(2,70)
             backPopup:addChild(listview)
-            bottom_sprite:setVisible(true)
+            if #boss.wrongWordList >= s_max_wrong_num_everyday then
+                bottom_sprite:setVisible(true)
+            else
+                bottom_sprite:setVisible(false)
+            end
+
         end
     end
     
     local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = top_sprite:getEventDispatcher()

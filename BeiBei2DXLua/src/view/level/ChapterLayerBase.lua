@@ -304,9 +304,8 @@ function ChapterLayerBase:addPopup(levelIndex)
     local function wordEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-            local boss = s_LocalDatabaseManager.getBossInfo(levelIndex + 1)
-            local wordLibrary = WordLibrary.create(boss)
-            s_SCENE:popup(wordLibrary)    
+            local wordLibrary = WordLibrary.create(levelIndex)
+            s_SCENE.popupLayer:addChild(wordLibrary)   
         end
     end
     

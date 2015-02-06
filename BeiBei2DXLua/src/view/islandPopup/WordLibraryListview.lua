@@ -53,7 +53,7 @@ function WordLibraryListview:ctor(wordList)
             print("name"..Name)
             local part = split(Name,"||")
             local wordInfo = wordInfoPopup.create(part[1],part[2],wordList)
-            s_SCENE:popup(wordInfo)
+            s_SCENE.popupLayer:addChild(wordInfo)
         end
     end
     

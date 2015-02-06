@@ -86,7 +86,7 @@ function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
     return randomNameArray
 end
 
-local function createOptions(randomNameArray,word,wrongNum)
+local function createOptions(randomNameArray,word,wrongNum, preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local wordMeaningTable= {}
     for i = 1, 4 do
@@ -119,7 +119,7 @@ local function createOptions(randomNameArray,word,wrongNum)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyAnswerRight()
                     local ChooseRightLayer = require("view.newstudy.ChooseRightLayer")
-                    local chooseRightLayer = ChooseRightLayer.create(word,wrongNum)
+                    local chooseRightLayer = ChooseRightLayer.create(word,wrongNum, preWordName, preWordNameState)
                     s_SCENE:replaceGameLayer(chooseRightLayer)
                 end)))            
             else
@@ -134,7 +134,7 @@ local function createOptions(randomNameArray,word,wrongNum)
                         s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
                 end)))
             end
@@ -164,7 +164,7 @@ local function createOptions(randomNameArray,word,wrongNum)
     return choose_button
 end
 
-local function createDontknow(word,wrongNum)
+local function createDontknow(word,wrongNum, preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local click_dontknow_button = function(sender, eventType)
@@ -174,7 +174,7 @@ local function createDontknow(word,wrongNum)
             AnalyticsStudyDontKnowAnswer()  
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
         end
     end
@@ -191,14 +191,14 @@ local function createDontknow(word,wrongNum)
     return choose_dontknow_button
 end
 
-function CollectUnfamiliarLayer.create(word,wrongNum)
-    local layer = CollectUnfamiliarLayer.new(word,wrongNum)
+function CollectUnfamiliarLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
+    local layer = CollectUnfamiliarLayer.new(wordName, wrongWordNum, preWordName, preWordNameState)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     cc.SimpleAudioEngine:getInstance():pauseMusic()
     return layer
 end
 
-function CollectUnfamiliarLayer:ctor(word,wrongNum)
+function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -207,12 +207,12 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
     
-    self.currentWord = word
+    self.currentWord = wordName
 
     self.wordInfo = self:createWordInfo(self.currentWord)
     self.randWord = self:createRandWord(self.currentWord,4)
     
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, "blue")
+    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongWordNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar,2)
     
@@ -220,18 +220,22 @@ function CollectUnfamiliarLayer:ctor(word,wrongNum)
     backColor:addChild(self.lastWordAndTotalNumber,1)
     local todayNumber = LastWordAndTotalNumber:getTodayNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
-    self.lastWordAndTotalNumber.setWord("apple",true)
+    if wrongWordNum ~= 0  and preWordName ~= nil then
+    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+    end
+
+
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
     
-    self.options = createOptions(self.randWord,word,wrongNum)
+    self.options = createOptions(self.randWord,wordName,wrongWordNum, preWordName, preWordNameState)
     for i = 1, #self.options do
         backColor:addChild(self.options[i])
     end
     
-    self.dontknow = createDontknow(word,wrongNum)
+    self.dontknow = createDontknow(wordName,wrongWordNum, preWordName, preWordNameState)
     backColor:addChild(self.dontknow)
     
     local label_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",26)

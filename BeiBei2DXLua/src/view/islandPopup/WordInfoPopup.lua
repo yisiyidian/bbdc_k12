@@ -72,10 +72,7 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-            local boss = s_LocalDatabaseManager.getBossInfo(1)
-            local wordLibrary = WordLibrary.create(boss)
-            s_SCENE:popup(wordLibrary)
+            self:removeFromParent()
         end
     end
 
@@ -136,8 +133,10 @@ end
 
 local function findIndex(currentIndex,wordList,number)
     if number > 0 then
-        if currentIndex + number > #wordList then
-            return (currentIndex + number) % #wordList
+        if (currentIndex + number) % #wordList == 0 then
+            return #wordList
+        elseif currentIndex + number > #wordList then
+            return (currentIndex + number) % #wordList 
         else
             return currentIndex + number
         end
@@ -166,6 +165,9 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
     if wordlist == nil or #wordlist == 0 then
        return    
     end
+    print(findIndex(index,wordlist,-1))
+    print(tonumber(index))
+    print(findIndex(index,wordlist,1))
     local wordIndex = {findIndex(index,wordlist,-1),tonumber(index),findIndex(index,wordlist,1)}
     for i=1, 3 do
         local layout = creatWordLayout(wordlist[wordIndex[i]])
