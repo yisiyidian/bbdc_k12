@@ -26,10 +26,13 @@ function HomeLayer.create(share)
     -- can not be delete
     DataUser:updateTaskData()
 
+    local maxBossID = s_LocalDatabaseManager.getMaxBossID()
+    local boss = s_LocalDatabaseManager.getBossInfo(maxBossID)
     local todayTotalReviewBossNum  = s_CURRENT_USER:getTodayTotalReviewBossNum()
     local todayReaminReviewBossNum = s_CURRENT_USER:getTodayReaminReviewBossNum()
     local todayTotalTaskNum        = s_CURRENT_USER:getTodayTotalTaskNum()
     local todayRemainTaskNum       = s_CURRENT_USER:getTodayRemainTaskNum()
+    print('todayTotalReviewBossNum',todayTotalReviewBossNum,'todayReaminReviewBossNum',todayReaminReviewBossNum,'todayTotalTaskNum',todayTotalTaskNum,'todayRemainTaskNum',todayRemainTaskNum)
     -- can not be delete
 
     -- data begin
@@ -403,9 +406,11 @@ function HomeLayer.create(share)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
                    if true then
                        local PersonalInfo = require("view.PersonalInfo")
-                       local personalInfoLayer = PersonalInfo.create()
-                       personalInfoLayer:setPosition(-s_LEFT_X,0)
-                       data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+                       PersonalInfo.getNotContainedInLocalDatas(function ()
+                           local personalInfoLayer = PersonalInfo.create()
+                           personalInfoLayer:setPosition(-s_LEFT_X,0)
+                           data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+                       end)
                    else
                        local Item_popup = require("popup/PopupModel")
                        local item_popup = Item_popup.create(Site_From_Information)  
@@ -471,9 +476,11 @@ function HomeLayer.create(share)
                     end
                     
                        local PersonalInfo = require("view.PersonalInfo")
-                       local personalInfoLayer = PersonalInfo.create()
-                       personalInfoLayer:setPosition(-s_LEFT_X,0)
-                       data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+                       PersonalInfo.getNotContainedInLocalDatas(function ()
+                           local personalInfoLayer = PersonalInfo.create()
+                           personalInfoLayer:setPosition(-s_LEFT_X,0)
+                           data_back:addChild(personalInfoLayer,1,'PersonalInfo')
+                       end) 
                    else
                        local Item_popup = require("popup/PopupModel")
                        local item_popup = Item_popup.create(Site_From_Information)  
@@ -653,9 +660,12 @@ function HomeLayer:showDataLayer(checkIn)
     self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
     if true then
         local PersonalInfo = require("view.PersonalInfo")
-        local personalInfoLayer = PersonalInfo.create(true)
-        personalInfoLayer:setPosition(-s_LEFT_X,0)
-        self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
+        PersonalInfo.getNotContainedInLocalDatas(function ()
+            local personalInfoLayer = PersonalInfo.create(true)
+            personalInfoLayer:setPosition(-s_LEFT_X,0)
+            self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
+        end)
+        
     else
         local Item_popup = require("popup/PopupModel")
         local item_popup = Item_popup.create(Site_From_Information)  
