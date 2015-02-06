@@ -519,7 +519,7 @@ function LevelLayer:ctor()
 --    self:addChild(pauseButton)
 
     -- level select "s_sound_bgm1"
-    playMusic(s_sound_bgm1,true)
+    -- playMusic(s_sound_bgm1,true)
     
     
     

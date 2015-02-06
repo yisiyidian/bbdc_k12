@@ -84,6 +84,7 @@ function SummaryBossLayer.create(wordList,chapter)
         end
 
         isTouchEnded = false
+        endTime = 0
         
         local location = layer:convertToNodeSpace(touch:getLocation())
         
