@@ -302,6 +302,8 @@ function O2OController.loadConfigs()
     s_DataManager.loadReviewBoss()
     LOGTIME('loadProduct')
     s_DataManager.loadProduct()
+    LOGTIME('loadBean')
+    s_DataManager.loadBean()
 
     LOGTIME('loadAllWords')
     s_WordPool = s_DataManager.loadAllWords()

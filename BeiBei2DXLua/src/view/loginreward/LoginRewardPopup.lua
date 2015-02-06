@@ -7,7 +7,35 @@ function LoginRewardPopup.create()
     return layer
 end
 
+local function numberToSprite(number)
+    if number >= 1 and number <= 5 then
+        local shadow_sprite = cc.Sprite:create("image/loginreward/back"..number..".png")
+        for i = 1,number do
+            local bean_sprite = cc.Sprite:create("image/loginreward/bean.png")
+            bean_sprite:setPosition(shadow_sprite:getContentSize().width * (0.5 - 0.08 * (number - 1) + (i - 1) * 0.16),shadow_sprite:getContentSize().height + 10 )
+            shadow_sprite:addChild(bean_sprite)
+        end 
+        return shadow_sprite
+	elseif number == 6 then
+        local shadow_sprite = cc.Sprite:create("image/loginreward/back"..number..".png")
+        shadow_sprite:setScale(0.8)
+        local bean_sprite = cc.Sprite:create("image/loginreward/many.png")
+        bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 20)
+        shadow_sprite:addChild(bean_sprite)  
+        return shadow_sprite
+    elseif number == 7 then
+        local shadow_sprite = cc.Sprite:create("image/loginreward/back"..number..".png")
+        shadow_sprite:setScale(0.8)
+        local bean_sprite = cc.Sprite:create("image/loginreward/more.png")
+        bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 25)
+        shadow_sprite:addChild(bean_sprite)
+        return shadow_sprite
+	end
+end
+
 function LoginRewardPopup:ctor()
+
+    local rewardList = s_DataManager.bean
 
 	local backPopup = cc.Sprite:create("image/loginreward/backPopup.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
@@ -15,7 +43,6 @@ function LoginRewardPopup:ctor()
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
@@ -49,35 +76,22 @@ function LoginRewardPopup:ctor()
                 beibei_sprite:setPosition(addColor:getContentSize().width * 0.5,addColor:getContentSize().height * 0.5)
                 addColor:addChild(beibei_sprite)
             elseif tag >= 1 and tag <= 5 then
-                local shadow_sprite = cc.Sprite:create("image/loginreward/back"..tag..".png")
+                local shadow_sprite = numberToSprite(tonumber(rewardList[tag].reward))
                 shadow_sprite:setPosition(addColor:getContentSize().width * 0.5,addColor:getContentSize().height * 0.25)
                 addColor:addChild(shadow_sprite)
-                for i = 1,tag do
-                    local bean_sprite = cc.Sprite:create("image/loginreward/bean.png")
-                    bean_sprite:setPosition(shadow_sprite:getContentSize().width * (0.5 - 0.08 * (tag - 1) + (i - 1) * 0.16),shadow_sprite:getContentSize().height + 10 )
-                    shadow_sprite:addChild(bean_sprite)
-                end  
             elseif tag == 6  then
-                local shadow_sprite = cc.Sprite:create("image/loginreward/back"..tag..".png")
+                local shadow_sprite = numberToSprite(tonumber(rewardList[tag].reward))
                 shadow_sprite:setPosition(addColor:getContentSize().width * 0.5,addColor:getContentSize().height * 0.3)
-                addColor:addChild(shadow_sprite)
-                shadow_sprite:setScale(0.8)
-                local bean_sprite = cc.Sprite:create("image/loginreward/many.png")
-                bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 20)
-                shadow_sprite:addChild(bean_sprite)  
+                addColor:addChild(shadow_sprite) 
             elseif tag == 7  then
-                local shadow_sprite = cc.Sprite:create("image/loginreward/back"..tag..".png")
-                shadow_sprite:setPosition(addColor:getContentSize().width * 0.50,addColor:getContentSize().height * 0.3)
-                addColor:addChild(shadow_sprite)
-                shadow_sprite:setScale(0.8)
-                local bean_sprite = cc.Sprite:create("image/loginreward/more.png")
-                bean_sprite:setPosition(shadow_sprite:getContentSize().width * 0.5,shadow_sprite:getContentSize().height + 25)
-                shadow_sprite:addChild(bean_sprite)
-                local reward_label = cc.Label:createWithSystemFont("+30","",25)
-                reward_label:setColor(cc.c4b(212,129,86,255))
-                reward_label:setPosition(addColor:getContentSize().width * 0.8,addColor:getContentSize().height * 0.12)
-                reward_label:setRotation(10)
-                addColor:addChild(reward_label)
+                local shadow_sprite = numberToSprite(tonumber(rewardList[tag].reward))
+                shadow_sprite:setPosition(addColor:getContentSize().width * 0.5,addColor:getContentSize().height * 0.3)
+                addColor:addChild(shadow_sprite) 
+--                local reward_label = cc.Label:createWithSystemFont("+30","",25)
+--                reward_label:setColor(cc.c4b(212,129,86,255))
+--                reward_label:setPosition(addColor:getContentSize().width * 0.8,addColor:getContentSize().height * 0.12)
+--                reward_label:setRotation(10)
+--                addColor:addChild(reward_label)
             elseif tag == 8  then
                 local up_sprite = cc.Sprite:create("image/loginreward/up.png")
                 up_sprite:setPosition(addColor:getContentSize().width * 0.5 ,addColor:getContentSize().height * 0.5 )
@@ -109,20 +123,78 @@ function LoginRewardPopup:ctor()
     addColor6:setName("reward6")
     addColor6:setVisible(false)
     
+    local loginData = s_CURRENT_USER.logInDatas
+    local loginData_array = {}
+    for i = 1,#loginData do
+        loginData_array[i] = loginData[i]:getDays()
+    end
+    local day = 0
     for i = 1,7 do
-       local sprite = backPopup:getChildByName("reward"..i)
-       sprite:setVisible(true)
-       local mark = cc.Sprite:create("image/loginreward/mark.png")
-       mark:setPosition(sprite:getContentSize().width * 0.7,sprite:getContentSize().height * 0.3)
-       mark:setScale(0.8)
-       sprite:addChild(mark)
-       if i % 2 == 0 then
-          mark:setTexture("image/loginreward/miss.png")
+        if loginData_array[1][i] > 0 then
+            day = i
+            break
+        end
+    end
+    local currentData = {}
+    for i = 1,7 do
+       if loginData_array[#loginData][day + i - 1] ~= nil then
+            table.insert(currentData,loginData_array[#loginData][day + i - 1])
+       else
+            table.insert(currentData,-1)
        end
     end
     
+    local today 
     
+    for  i = 7,1,-1 do
+    	if currentData[i] > 0 then
+    	   today = i
+    	end
+    end
+
+    local todayMark = s_LocalDatabaseManager.getTodayGetReward()
+    for i = 1,7 do
+        local sprite = backPopup:getChildByName("reward"..i)
+        local mark = cc.Sprite:create("image/loginreward/mark.png")
+        mark:setPosition(sprite:getContentSize().width * 0.7,sprite:getContentSize().height * 0.3)
+        mark:setScale(0.8)
+        sprite:addChild(mark)
+        if i < today then
+            if tonumber(currentData[i]) <= 0  then
+                mark:setTexture("image/loginreward/miss.png")
+            end  
+            sprite:setVisible(true)
+        elseif i == today then
+            if todayMark > 0  then
+                sprite:setVisible(true)
+            end  
+        end
+    end
     
+    local onTouchBegan = function(touch, event)
+        return true  
+    end 
+
+    local sprite = backPopup:getChildByName("reward"..today)
+    local onTouchEnded = function(touch, event)
+        if todayMark == nil or tonumber(todayMark) == 0 then
+            local location = backPopup:convertToNodeSpace(touch:getLocation())
+            if cc.rectContainsPoint(sprite:getBoundingBox(), location)  then
+                s_CURRENT_USER:addBeans(rewardList[today].reward)  
+                s_LocalDatabaseManager.addTodayGetReward()   
+                sprite:setVisible(true)       
+            end
+        end
+    end
+    
+
+    
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = backPopup:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backPopup)  
     
 end
 
