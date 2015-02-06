@@ -190,7 +190,7 @@ function Manager.getTodayTotalBossNum()
     return localdatabase_task.getTodayTotalBossNum()
 end
 
-function Manager.getTodayReaminBossNum()
+function Manager.getTodayRemainBossNum()
     return #localdatabase_bossWord.getTodayReviewBoss()
 end
 

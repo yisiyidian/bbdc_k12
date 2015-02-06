@@ -18,7 +18,7 @@ local function createData(todayTotalTaskNum, todayRemainTaskNum, todayTotalBossN
     return data
 end
 
-function M.initEveryDay()
+function M.updateEveryDay()
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
@@ -34,7 +34,7 @@ function M.initEveryDay()
     end
 
     if lastUpdateDay == nil or lastUpdateDay ~= today then
-        local todayTotalBossNum = M.getTodayTotalBossNum()
+        local todayTotalBossNum = #s_LocalDatabaseManager.getTodayReviewBoss()
 
         local maxBossID = s_LocalDatabaseManager.getMaxBossID()
         local boss = s_LocalDatabaseManager.getBossInfo(maxBossID)
@@ -50,13 +50,18 @@ function M.initEveryDay()
 
         local todayRemainTaskNum = todayTotalTaskNum
 
-        local query = "UPDATE DataTask SET lastUpdate = '"..time.."', todayTotalTaskNum = " .. todayTotalTaskNum .. ", todayRemainTaskNum = "..todayRemainTaskNum..", todayTotalBossNum = "..todayTotalBossNum.." WHERE "..condition.." ;"
-        Manager.database:exec(query)
+        if lastUpdateDay == nil then
+            local query = "INSERT INTO DataTask (userId, username, bookKey, lastUpdate, todayTotalTaskNum, todayRemainTaskNum, todayTotalBossNum) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..todayTotalTaskNum..", "..todayRemainTaskNum..", "..todayTotalBossNum..") ;"
+            Manager.database:exec(query)
+        else
+            local query = "UPDATE DataTask SET lastUpdate = '"..time.."', todayTotalTaskNum = " .. todayTotalTaskNum .. ", todayRemainTaskNum = "..todayRemainTaskNum..", todayTotalBossNum = "..todayTotalBossNum.." WHERE "..condition.." ;"
+            Manager.database:exec(query)
+        end
     end
 end
 
 function M.getTodayTotalTaskNum()
-    M.initEveryDay()
+    M.updateEveryDay()
     
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
@@ -69,7 +74,7 @@ function M.getTodayTotalTaskNum()
 end
 
 function M.getTodayRemainTaskNum()
-    M.initEveryDay()
+    M.updateEveryDay()
 
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
@@ -82,7 +87,7 @@ function M.getTodayRemainTaskNum()
 end
 
 function M.getTodayTotalBossNum()
-    M.initEveryDay()
+    M.updateEveryDay()
     
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
@@ -101,6 +106,7 @@ function M.setTodayRemainTaskNum(todayRemainTaskNum)
     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
     local query = "UPDATE DataTask SET todayRemainTaskNum = "..todayRemainTaskNum.." WHERE "..condition.." ;"
+    print(query)
     Manager.database:exec(query)
 end
 

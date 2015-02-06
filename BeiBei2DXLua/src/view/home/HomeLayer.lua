@@ -25,12 +25,12 @@ function HomeLayer.create(share)
 
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
-    local todayReaminBossNum    = s_LocalDatabaseManager:getTodayReaminBossNum()
+    local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
     local todayTotalTaskNum     = s_LocalDatabaseManager:getTodayTotalTaskNum()
     local todayRemainTaskNum    = s_LocalDatabaseManager:getTodayRemainTaskNum()
 
     print("todayTotalBossNum : "..todayTotalBossNum)
-    print("todayReaminBossNum : "..todayReaminBossNum)
+    print("todayRemainBossNum : "..todayRemainBossNum)
     print("todayTotalTaskNum : "..todayTotalTaskNum)
     print("todayRemainTaskNum : "..todayRemainTaskNum)
 
