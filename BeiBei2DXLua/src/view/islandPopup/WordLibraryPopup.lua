@@ -97,10 +97,32 @@ local function addReviewButton(bottom_sprite,boss)
     return review_button
 end
 
-local function addSummaryButton(bottom_sprite)
+local function addSummaryButton(bottom_sprite,boss)
+    local wordList = function (initWordList)
+        local temp = {}
+        local endList = {}
+        for i = 1 , # initWordList do
+            table.insert(temp,initWordList[i])
+        end
+        for i = 1 , 6 do
+            local randSeed = math.randomseed(os.time())
+            local randNum  = math.random(1,#initWordList)
+            local tempNum  = temp[randNum]
+            temp[randNum] = temp[i]
+            temp[i] = tempNum  
+        end
+        for i = 1 , 6 do
+            table.insert(endList,temp[i])
+        end
+        return  endList
+    end
     local summary_button_click = function(sender, eventType)
+        local endList = wordList(boss.wrongWordList)
         if eventType == ccui.TouchEventType.ended then
-            print("summary")
+        local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
+        local summaryBossLayer = SummaryBossLayer.create(endList,1)
+        s_SCENE:replaceGameLayer(summaryBossLayer) 
+        s_SCENE:removeAllPopups()
         end
     end
 
@@ -156,7 +178,7 @@ function WordLibraryPopup:ctor(index)
     self.reviewButton = addReviewButton(bottom_sprite,boss)
     bottom_sprite:addChild(self.reviewButton)
     
-    self.summaryButton = addSummaryButton(bottom_sprite)
+    self.summaryButton = addSummaryButton(bottom_sprite,boss)
     bottom_sprite:addChild(self.summaryButton)
     
     local onTouchBegan = function(touch, event)
