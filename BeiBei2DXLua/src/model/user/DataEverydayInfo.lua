@@ -43,9 +43,24 @@ function getWeekDay(secondsFrom1970)
     return dd.wday
 end
 
-function getCurrentLogInWeek(offsetSeconds_1stPlay_now)
-    local ret = offsetSeconds_1stPlay_now / (7 * 24 * 60 * 60.0)
-    return math.ceil(ret)
+function getCurrentLogInWeek(currentTime,localTime)
+    local ret = (currentTime - localTime) / (7 * 24 * 60 * 60.0)
+    local t = math.ceil(ret) + getNumberOfWeekDay(localTime) - getNumberOfWeekDay(currentTime)
+    t = t / 7 + 1
+    if t - math.floor(t) > 0.5 then
+        t = math.ceil(t)
+    else
+        t = math.floor(t)
+    end
+    return t
+end
+
+function getNumberOfWeekDay(time)
+    local w = tonumber(os.date('%w',time),10)
+    if w == 0 then 
+        w = 7
+    end
+    return w
 end
 
 local function setWeekDayState(DataEverydayInfo, secondsFrom1970, weekDayState)
@@ -114,7 +129,7 @@ end
 function DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
     local noObjectIdDatas = {}
     local currentWeek = nil
-    local week = getCurrentLogInWeek(os.time() - s_CURRENT_USER.localTime)
+    local week = getCurrentLogInWeek(os.time() , s_CURRENT_USER.localTime)
     s_LocalDatabaseManager.getDatas(CLASSNAME, s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
         if row.week == week then
             currentWeek = row
