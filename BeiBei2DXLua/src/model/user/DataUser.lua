@@ -89,9 +89,13 @@ function DataUser:ctor()
 --    self.lastUpdateChestTime               = 0
     
     -- function lock
-    self.lockFunction                      = 0    
+    self.lockFunction                      = 0
+    -- task data
     self.todayTotalReviewBossNum           = 0
-    self.todayTotalReviewBossNumUpdateTime = ''
+    self.todayTotalTaskNum                 = 0
+    self.todayRemainTaskNum                = 0
+    self.taskDataUpdateTime                = ''
+    self.taskDataUpdateBook                = ''
 
     self.isAlterOn                         = 0
     self.slideNum                          = 0
@@ -100,22 +104,70 @@ function DataUser:ctor()
     self.beanReward                        = 3 -- if begin a new mission ,bean = 3 ; if guess wrong word ,bean = 2 ,1 ,0
 end
 
+
+function DataUser:updateTaskData()
+    local time  = os.time()
+    local today = os.date("%x", time)
+    local book  = self.bookKey
+
+    if self.taskDataUpdateTime ~= today or self.taskDataUpdateBook ~= book then
+        self.taskDataUpdateTime = today
+        self.taskDataUpdateBook = book
+
+        self.todayTotalReviewBossNum = #s_LocalDatabaseManager.getTodayReviewBoss()
+
+        local maxBossID = s_LocalDatabaseManager.getMaxBossID()
+        local boss = s_LocalDatabaseManager.getBossInfo(maxBossID)
+        if boss.typeIndex == 0 then
+            self.todayTotalTaskNum = self.todayTotalReviewBossNum + 4
+        elseif boss.typeIndex >= 1 and boss.typeIndex <= 3 then
+            self.todayTotalTaskNum = self.todayTotalReviewBossNum + 8 - boss.typeIndex
+        else
+            self.todayTotalTaskNum = self.todayTotalReviewBossNum
+        end
+
+        self.todayRemainTaskNum = self.todayTotalTaskNum
+
+        saveUserToServer({['todayTotalReviewBossNum']=self.todayTotalReviewBossNum, ['todayTotalTaskNum']=self.todayTotalTaskNum, ['todayRemainTaskNum']=self.todayRemainTaskNum, ['taskDataUpdateTime']=self.taskDataUpdateTime, ['taskDataUpdateBook']=self.taskDataUpdateBook})
+    end
+end
+
+
 function DataUser:getTodayTotalReviewBossNum()
-    -- This has to been done first when user open this app today
+    return self.todayTotalReviewBossNum
+end
+
+function DataUser:getTodayReaminReviewBossNum()
+    return #s_LocalDatabaseManager.getTodayReviewBoss()
+end
+
+function DataUser:getTodayTotalTaskNum()
+    return self.todayTotalTaskNum
+end
+
+function DataUser:getTodayRemainTaskNum()
+    return self.todayRemainTaskNum
+end
+
+function DataUser:minusTodayRemainTaskNum()
+    if self.todayRemainTaskNum >= 1 then
+        self.todayRemainTaskNum = self.todayRemainTaskNum - 1
+        saveUserToServer({['todayRemainTaskNum']=self.todayRemainTaskNum})
+    end
+end
+
+function DataUser:getTodayTotalTaskNum()
     local time = os.time()
     local today = os.date("%x", time)
-    if self.todayTotalReviewBossNumUpdateTime ~= today then
+    if self.todayTaskUpdateTime ~= today then
         self.todayTotalReviewBossNum = #s_LocalDatabaseManager.getTodayReviewBoss()
-        self.todayTotalReviewBossNumUpdateTime = today
-        -- TODO save data
-        saveUserToServer({['todayTotalReviewBossNum']=self.todayTotalReviewBossNum, ['todayTotalReviewBossNumUpdateTime']=self.todayTotalReviewBossNumUpdateTime})
+        self.todayTaskUpdateTime = today
+        saveUserToServer({['todayTotalReviewBossNum']=self.todayTotalReviewBossNum, ['todayTaskUpdateTime']=self.todayTaskUpdateTime})
     end
     return self.todayTotalReviewBossNum
 end
 
-function DataUser:getTodayCurrentReviewBossNum()
-    return #s_LocalDatabaseManager.getTodayReviewBoss()
-end
+
 
 function DataUser:getLockFunctionState(productId)
     local lockFunction = self.lockFunction
