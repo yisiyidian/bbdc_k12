@@ -208,7 +208,9 @@ function getNotContainedInLocalEverydayInfosFromServer(callback)
     getNotContainedInLocalDatasFromServer('DataEverydayInfo', nil, function (serverDatas, error)
         if error == nil then
             if serverDatas ~= nil then
-                for i, v in ipairs(serverDatas) do end
+                for i, v in ipairs(serverDatas) do 
+                    s_LocalDatabaseManager.saveDataClassObject(v, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and week = " .. tostring(v.week))
+                end
             end
             if callback then callback(serverDatas, nil) end
         else
@@ -277,7 +279,9 @@ function getNotContainedInLocalDailyStudyInfoFromServer(callback)
     getNotContainedInLocalDatasFromServer('DataDailyStudyInfo', " and bookKey = '".. s_CURRENT_USER.bookKey .. "' ", function (serverDatas, error)
         if error == nil then
             if serverDatas ~= nil then
-                for i, v in ipairs(serverDatas) do end
+                for i, v in ipairs(serverDatas) do 
+                    s_LocalDatabaseManager.saveDataClassObject(v, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and dayString = '".. v.dayString .."' ;")
+                end
             end
             if callback then callback(serverDatas, nil) end
         else
@@ -349,7 +353,9 @@ function getNotContainedInLocalBossWordFromServer(callback)
     getNotContainedInLocalDatasFromServer('DataBossWord', " and bookKey = '".. s_CURRENT_USER.bookKey .. "' ", function (serverDatas, error)
         if error == nil then
             if serverDatas ~= nil then
-                for i, v in ipairs(serverDatas) do end
+                for i, v in ipairs(serverDatas) do 
+                    s_LocalDatabaseManager.saveDataClassObject(v, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and bossID = '".. v.bossID .."' ;")
+                end
             end
             if callback then callback(serverDatas, nil) end
         else
