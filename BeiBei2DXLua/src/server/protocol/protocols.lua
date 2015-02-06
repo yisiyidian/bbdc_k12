@@ -86,8 +86,43 @@ function synUserAfterLogIn(localDBUser, serverUser, callback)
     protocol:request()
 end
 
-function syn( ... )
+---------------------------------------------------------------------------------------------------
 
+-- callback : function (serverDatas, error)
+function getNotContainedInLocalDatasFromServer(className, sqlCondition, callback)
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        if callback then callback(nil, nil) end
+        return
+    end
+
+    local api = 'getNotContainedInLocalDatas'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb (result, error)
+        if error == nil then
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+
+    local objectIds = '['
+    local i = 0
+    local function handleDBData(row)
+        if row.objectId ~= nil and row.objectId ~= '' then
+            if i > 0 then objectIds = objectIds .. ',' end
+            objectIds = objectIds .. '"' .. row.objectId .. '"'
+        end
+    end
+    s_LocalDatabaseManager.getDatas(className, 
+                                    s_CURRENT_USER.objectId, 
+                                    s_CURRENT_USER.username, 
+                                    handleDBData, 
+                                    sqlCondition)
+    objectIds = objectIds .. ']'
+
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']=className, ['bookKey']=s_CURRENT_USER.bookKey, ['objectIds']=objectIds}, cb)
+    protocol:request()
 end
 
 ---------------------------------------------------------------------------------------------------
@@ -169,6 +204,19 @@ function checkInEverydayInfo()
     end)
 end
 
+function getNotContainedInLocalEverydayInfosFromServer(callback)
+    getNotContainedInLocalDatasFromServer('DataEverydayInfo', nil, function (serverDatas, error)
+        if error == nil then
+            if serverDatas ~= nil then
+                for i, v in ipairs(serverDatas) do end
+            end
+            if callback then callback(serverDatas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end)
+end
+
 ---------------------------------------------------------------------------------------------------
 
 -- 1 data/day/book
@@ -219,6 +267,19 @@ function saveDailyStudyInfoToServer(data, callback)
                 end
             end
             if callback then callback(data, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end)
+end
+
+function getNotContainedInLocalDailyStudyInfoFromServer(callback)
+    getNotContainedInLocalDatasFromServer('DataDailyStudyInfo', " and bookKey = '".. s_CURRENT_USER.bookKey .. "' ", function (serverDatas, error)
+        if error == nil then
+            if serverDatas ~= nil then
+                for i, v in ipairs(serverDatas) do end
+            end
+            if callback then callback(serverDatas, nil) end
         else
             if callback then callback(nil, error) end
         end
@@ -284,6 +345,19 @@ function saveWordBossToServer(clientData, skipWordList, callback)
     sysBossWord({['1']=clientData}, skipWordList, callback)
 end
 
+function getNotContainedInLocalBossWordFromServer(callback)
+    getNotContainedInLocalDatasFromServer('DataBossWord', " and bookKey = '".. s_CURRENT_USER.bookKey .. "' ", function (serverDatas, error)
+        if error == nil then
+            if serverDatas ~= nil then
+                for i, v in ipairs(serverDatas) do end
+            end
+            if callback then callback(serverDatas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end)
+end
+
 ---------------------------------------------------------------------------------------------------
 
 -- dataTable = {['className']=className, ['objectId']=objectId, ...}
@@ -337,3 +411,5 @@ function saveUserToServer(dataTable, callback)
     end
     saveToServer(userdata, cb)    
 end
+
+

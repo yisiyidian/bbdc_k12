@@ -169,7 +169,7 @@ function FriendList:addList()
                     self.selectIndex = sender.index
                 elseif sender.index == 0 then --delete friend
                     local function deleteFriend()
-                        showProgressHUD('正在删除好友')
+                        showProgressHUD('正在删除好友', true)
                         s_UserBaseServer.unfollow(self.array[self.selectIndex],
                             function(api, result, err)
                                 if err == nil then

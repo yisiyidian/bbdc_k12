@@ -241,11 +241,12 @@ end
 ----------------------------------------------------------------------------------------------------
 
 -- handleRecordRow(row)
-function M.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
+function M.getDatas(classNameOfDataClass, userId, username, handleRecordRow, conditions)
     print ('\n\n\nM getDatas >>>')
+    conditions = conditions or ''
     local sql = ''
-    local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s"', classNameOfDataClass, username)
-    local sqlUserId = string.format('SELECT * FROM %s WHERE userId = "%s"', classNameOfDataClass, userId)
+    local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s" ', classNameOfDataClass, username, conditions)
+    local sqlUserId = string.format('SELECT * FROM %s WHERE userId = "%s" ', classNameOfDataClass, userId, conditions)
     if username ~= '' then
         sql = sqlUsername
     elseif userId ~= '' then
