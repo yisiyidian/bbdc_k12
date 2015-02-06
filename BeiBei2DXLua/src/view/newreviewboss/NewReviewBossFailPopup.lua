@@ -34,7 +34,9 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
-            s_CorePlayManager.enterLevelLayer()
+            local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
+            local newReviewBossMainLayer = NewReviewBossMainLayer.create(reviewWordList,number)
+            s_SCENE:replaceGameLayer(newReviewBossMainLayer)
         end
     end
     

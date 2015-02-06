@@ -76,7 +76,7 @@ function WordLibraryListview:ctor(wordList)
 
         local current_word_wordMeaning = cc.LabelTTF:create (opt_meaning,
             "Helvetica",24, cc.size(current_sprite:getContentSize().width *0.32, 100), cc.TEXT_ALIGNMENT_LEFT)
-        current_word_wordMeaning:setPosition(cc.p(current_sprite:getContentSize().width * 0.5,current_sprite:getContentSize().height * 0.45))
+        current_word_wordMeaning:setPosition(cc.p(current_sprite:getContentSize().width * 0.5,current_sprite:getContentSize().height * 0.25))
         current_word_wordMeaning:setColor(cc.c4b(0,0,0,255))
         current_word_wordMeaning:ignoreAnchorPointForPosition(false)
         current_word_wordMeaning:setAnchorPoint(0,0.5)
