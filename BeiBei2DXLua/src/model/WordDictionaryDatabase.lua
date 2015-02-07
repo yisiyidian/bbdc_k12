@@ -32,8 +32,6 @@ function Manager.init()
             Manager.allwords[word.wordName] = word
         end
     end
-    print('table.maxn - Manager.allwords:', table.getn(Manager.allwords))
-    print_lua_table(Manager.allwords['apple'])
 end
 
 -- ONLY use this in example.lua
