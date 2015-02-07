@@ -341,13 +341,9 @@ local function onUpdateWeekCompleted(serverDatas, currentWeek, onSaved)
         s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
     end
 
-    DataEverydayInfo.getAllDatasFromLocalDB(function (row)
-        local data = DataEverydayInfo.create()
-        parseServerDataToClientData(row, data)
-        s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas + 1] = data
-    end)
+    resetLocalEverydayInfos()
 
-    print('s_CURRENT_USER.logInDatas')
+    print('onUpdateWeekCompleted: s_CURRENT_USER.logInDatas')
     print_lua_table(s_CURRENT_USER.logInDatas)
 
     hideProgressHUD()
