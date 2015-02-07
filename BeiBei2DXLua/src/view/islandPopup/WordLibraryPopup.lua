@@ -48,7 +48,7 @@ end
 
 local function addUnfamiliarButton(top_sprite)
     local unfamiliar_button = cc.Sprite:create("image/islandPopup/unfamiliarwordend.png")
-    unfamiliar_button:setPosition(top_sprite:getContentSize().width * 0.5 - unfamiliar_button:getContentSize().width * 0.5,top_sprite:getContentSize().height * 0.5)
+    unfamiliar_button:setPosition(top_sprite:getContentSize().width * 0.5 - unfamiliar_button:getContentSize().width * 0.6 + 8,top_sprite:getContentSize().height * 0.5)
     unfamiliar_button:ignoreAnchorPointForPosition(false)
     unfamiliar_button:setAnchorPoint(0.5,0.5)
 
@@ -61,7 +61,7 @@ end
 
 local function addfamiliarButton(top_sprite)
     local familiar_button = cc.Sprite:create("image/islandPopup/familiarwordbegin.png")
-    familiar_button:setPosition(top_sprite:getContentSize().width * 0.5 + familiar_button:getContentSize().width * 0.5,top_sprite:getContentSize().height * 0.5)
+    familiar_button:setPosition(top_sprite:getContentSize().width * 0.5 + familiar_button:getContentSize().width * 0.6 - 9,top_sprite:getContentSize().height * 0.5)
     familiar_button:ignoreAnchorPointForPosition(false)
     familiar_button:setAnchorPoint(0.5,0.5)
 
@@ -160,6 +160,12 @@ function WordLibraryPopup:ctor(index)
     
     self.unfamiliarButton = addUnfamiliarButton(top_sprite)
     top_sprite:addChild(self.unfamiliarButton)
+
+    local borderSprite = cc.Sprite:create("image/islandPopup/border.png")
+    borderSprite:setPosition(top_sprite:getContentSize().width * 0.5,top_sprite:getContentSize().height * 0.5)
+    borderSprite:ignoreAnchorPointForPosition(false)
+    borderSprite:setAnchorPoint(0.5,0.5)
+    top_sprite:addChild(borderSprite)
     
     self.familiarButton = addfamiliarButton(top_sprite)
     top_sprite:addChild(self.familiarButton)
