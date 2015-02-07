@@ -54,6 +54,8 @@ local function _initConstant()
     CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
     CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
 
+    s_WordDictionaryDatabase = s_WordDictionaryDatabase or require('model.WordDictionaryDatabase')
+
     s_DataManager = reloadModule('model.DataManager')
     s_DataManager.clear()
 end

@@ -39,6 +39,8 @@ function LOGTIME(des)
     -- LUA_ERROR = LUA_ERROR .. '\n' .. 'LOGTIME:' .. des .. ', ' .. tostring(os.time())
 end
 
+s_WordDictionaryDatabase = nil
+
 local start
 start = function ()
     s_APP_VERSION = app_version_release

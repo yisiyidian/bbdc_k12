@@ -24,7 +24,7 @@ else
 fi
 
 # python exportCfg_allwords.py ${RAW_CONFIGS}/allword.json ${TMP_DIR}/allwords.json
-python exportCfg_newwords.py ${RAW_CONFIGS}/newword.json ${TMP_DIR}/newwords.json
+# python exportCfg_newwords.py ${RAW_CONFIGS}/newword.json ${TMP_DIR}/newwords.json
 
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'ncee'
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'cet4'
@@ -50,3 +50,4 @@ cd ${BASE_DIR_FOR_SCRIPT_SELF}/pack_files
 
 cp -f ${TMP_XXTEA_DIR}/* ${RES_CFG}
 cp ${RAW_BOOKS}/*.book ${RES_CFG}/
+cp ${RAW_CONFIGS}/*.bin ${RES_CFG}/
