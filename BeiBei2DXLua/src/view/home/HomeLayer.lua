@@ -96,10 +96,10 @@ function HomeLayer.create(share)
         layer:addChild(offlineTipFriend,2) 
     end
     local mission_progress
-    if not share then
-        mission_progress = MissionProgress.create()
-    else
+    if share ~= nil and share then
         mission_progress = MissionProgress.create(true)
+    else
+        mission_progress = MissionProgress.create()
     end
     backColor:addChild(mission_progress,1)
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)

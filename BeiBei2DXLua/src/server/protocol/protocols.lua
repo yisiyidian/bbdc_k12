@@ -184,6 +184,7 @@ function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
 end
 
 function checkInEverydayInfo()
+    resetLocalEverydayInfos()
     local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
     currentWeek:checkIn(os.time())
 

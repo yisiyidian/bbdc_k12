@@ -173,12 +173,14 @@ end
 function CorePlayManager.leaveReviewModel(state)
     if state then
         s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
+        local SuccessLayer = require("view.newreviewboss.SuccessLayer")
+        local successLayer = SuccessLayer.create()
+        s_SCENE:replaceGameLayer(successLayer)
     else
         -- do nothing
+        CorePlayManager.enterLevelLayer()
     end
-    local SuccessLayer = require("view.newreviewboss.SuccessLayer")
-    local successLayer = SuccessLayer.create()
-    s_SCENE:replaceGameLayer(successLayer)
+    
 end
 
 function CorePlayManager.initSummaryModel()
