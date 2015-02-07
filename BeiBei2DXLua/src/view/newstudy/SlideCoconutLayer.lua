@@ -142,7 +142,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
                         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
                         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-                        self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+                        self:runAction(cc.Sequence:create(cc.DelayTime:create(2.0),cc.CallFunc:create(function ()
                             s_CorePlayManager.leaveStudyModel(false)    
                         end,{})))
                     else
