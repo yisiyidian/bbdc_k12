@@ -99,8 +99,9 @@ function HomeLayer.create(share)
         mission_progress = MissionProgress.create(true)
     else
         mission_progress = MissionProgress.create()
+        mission_progress.animation()
     end
-    backColor:addChild(mission_progress,1)
+    backColor:addChild(mission_progress,1,'mission_progress')
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)
 
     local name = cc.Label:createWithSystemFont('贝贝单词','',50)
@@ -702,6 +703,7 @@ function HomeLayer:showDataLayer(checkIn)
 end
 
 function HomeLayer:hideDataLayer()
+    self.button_enter.animation()
     local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, 0))
     local action2 = cc.CallFunc:create(function()
         self.dataButton:setLocalZOrder(0)

@@ -142,6 +142,8 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
                         print('logInDatas')
                         print_lua_table(s_CURRENT_USER.logInDatas)
+                        print('isCheckIn')
+                        print(s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey))
                         if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                             s_CorePlayManager.leaveStudyModel(false)
                         else
