@@ -120,7 +120,7 @@ local function addSummaryButton(bottom_sprite,boss)
         local endList = wordList(boss.wrongWordList)
         if eventType == ccui.TouchEventType.ended then
         local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-        local summaryBossLayer = SummaryBossLayer.create(endList,1)
+        local summaryBossLayer = SummaryBossLayer.create(endList,1,false)
         s_SCENE:replaceGameLayer(summaryBossLayer) 
         s_SCENE:removeAllPopups()
         end

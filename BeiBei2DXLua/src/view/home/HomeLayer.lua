@@ -270,6 +270,7 @@ function HomeLayer.create(share)
     end
     local label
     local logo
+    local button_back
     for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
@@ -297,9 +298,35 @@ function HomeLayer.create(share)
                         improveInfo.close = function()
                             layer:removeChildByTag(1)
                             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                                if list[1].label ~= nil then
-                                    list[1].label:setString(s_CURRENT_USER.username)
-                                end
+                                button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+                                button_back:setOpacity(0)
+                                button_back:setAnchorPoint(0, 1)
+                                button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (1 - 1) - 80)
+                                setting_back:addChild(button_back)
+
+                                logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
+                                logo:setScale(0.9)
+                                logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
+                                button_back:addChild(logo)
+                                label = cc.Label:createWithSystemFont(s_CURRENT_USER.username,"",36)
+                                label:setColor(cc.c4b(0,0,0,255))
+                                label:setAnchorPoint(0, 0)
+                                label:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
+                                button_back:addChild(label)
+
+                                local label2 = cc.Label:createWithSystemFont('正在学习'..bookName..'词汇',"",24)
+                                label2:setColor(cc.c4b(0,0,0,255))
+                                label2:setAnchorPoint(0, 1)
+                                label2:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
+                                button_back:addChild(label2)
+
+                                local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
+                                split:ignoreAnchorPointForPosition(false)
+                                split:setAnchorPoint(0.5,0)
+                                split:setPosition(button_back:getContentSize().width/2, 0)
+                                button_back:addChild(split)
+
+                                if list[1].button_back ~= nil then list[1].button_back:removeFromParent() end
                                 list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 90)
                                 if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
                             end
@@ -322,7 +349,7 @@ function HomeLayer.create(share)
             end
         end
 
-        local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+        button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
         button_back:setOpacity(0)
         button_back:setAnchorPoint(0, 1)
         button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 80)

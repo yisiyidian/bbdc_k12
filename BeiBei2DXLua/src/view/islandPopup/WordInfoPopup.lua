@@ -165,9 +165,6 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
     if wordlist == nil or #wordlist == 0 then
        return    
     end
-    print(findIndex(index,wordlist,-1))
-    print(tonumber(index))
-    print(findIndex(index,wordlist,1))
     local wordIndex = {findIndex(index,wordlist,-1),tonumber(index),findIndex(index,wordlist,1)}
     for i=1, 3 do
         local layout = creatWordLayout(wordlist[wordIndex[i]])
@@ -192,7 +189,6 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
             if pageView:getCurPageIndex() + 1 == 1 then
                 pageView:removePageAtIndex(2)
                 local newIndex = findIndex(self.current_index,wordlist,-2)
-                print("index"..newIndex)
                 local newLayout = creatWordLayout(wordlist[newIndex])
                 pageView:insertPage(newLayout,0)  
                 pageView:scrollToPage(1)             
@@ -202,7 +198,6 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
             elseif pageView:getCurPageIndex() + 1 == 3 then
                 pageView:removePageAtIndex(0)
                 local newIndex = findIndex(self.current_index,wordlist,2)
-                print("index"..newIndex)
                 local newLayout = creatWordLayout(wordlist[newIndex])
                 pageView:insertPage(newLayout,2)  
                 pageView:scrollToPage(1) 
