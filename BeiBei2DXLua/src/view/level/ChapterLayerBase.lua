@@ -116,18 +116,18 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     levelButton:addTouchEventListener(touchEvent)
     self:addChild(levelButton, 40)
     
-    -- plot level number
-    self:plotLevelNumber('level'..levelIndex)
 
     local currentIndex = levelIndex
     -- to do get level state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    local levelState
+    local levelState, coolingDay
     for bossID, bossInfo in pairs(bossList) do
         if bossID - (levelIndex + 1) == 0 then
             levelState = bossInfo["typeIndex"] 
+            coolingDay = bossInfo["coolingDay"] + 0
         end
     end
+    
     -- check active
 --    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
 --    local active
@@ -161,13 +161,16 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end)
         reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
         self:addChild(reviewBoss, 140)
-    elseif levelState == 3 then 
+    elseif levelState == 3 or coolingDay == 0 then 
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
         summaryboss:setAnchorPoint(1,1)
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
         self:addChild(summaryboss, 140)
+    else
+        -- plot level number
+        self:plotLevelNumber('level'..levelIndex)
     end
 end
 
@@ -365,18 +368,18 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
-    if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
-        local start = cc.Sprite:create('image/chapter/chapter0/start.png')
-        start:setPosition(levelPosition.x, levelPosition.y)
-        self:addChild(start, 130)
-    else
+--    if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
+--        local start = cc.Sprite:create('image/chapter/chapter0/start.png')
+--        start:setPosition(levelPosition.x, levelPosition.y)
+--        self:addChild(start, 130)
+--    else
         local number = ccui.TextBMFont:create()
         number:setFntFile('font/number_inclined.fnt')
         --number:setColor(cc.c3b(56,26,23))
         number:setString(levelIndex+1)
         number:setPosition(levelPosition.x, levelPosition.y+3)
         self:addChild(number,130)
-    end
+--    end
 
  
 end
