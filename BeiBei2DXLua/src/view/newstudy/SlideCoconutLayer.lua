@@ -140,11 +140,15 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
                 if wrongWordList == nil then
                     if wrongNum == s_max_wrong_num_everyday - 1 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
-                        local missionCompleteCircle = require('view.MissionCompleteCircle').create()
-                        s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-                        self:runAction(cc.Sequence:create(cc.DelayTime:create(2.0),cc.CallFunc:create(function ()
-                            s_CorePlayManager.leaveStudyModel(false)    
-                        end,{})))
+                        if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                            s_CorePlayManager.leaveStudyModel(false)
+                        else
+                            local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+                            s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+                            self:runAction(cc.Sequence:create(cc.DelayTime:create(2.0),cc.CallFunc:create(function ()
+                                s_CorePlayManager.leaveStudyModel(false)    
+                            end,{})))
+                        end
                     else
                         s_CorePlayManager.leaveStudyModel(false)
                     end

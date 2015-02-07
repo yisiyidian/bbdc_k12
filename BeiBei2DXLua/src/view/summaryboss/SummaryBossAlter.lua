@@ -187,87 +187,96 @@ function SummaryBossAlter:lose2()
 end
 
 function SummaryBossAlter:win1(entrance)
-
-    checkInEverydayInfo()
     
     if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
         s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_win)
     end
 
+    local hasCheckedIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey)
+    if not hasCheckedIn then
+        checkInEverydayInfo()
+    end
+    if not hasCheckedIn then
     local missionCompleteCircle = require('view.MissionCompleteCircle').create()
-    s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-    self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
-        local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
-        backColor:ignoreAnchorPointForPosition(false)
-        backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
-        self:addChild(backColor)
+        s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+        self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+            self:win2(entrance,hasCheckedIn)
+        end,{})))
+    else
+        self:win2(entrance,hasCheckedIn)
+    end
+    
+    
+end
 
-        local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
-        been_number_back:setPosition(s_RIGHT_X - s_LEFT_X -100, s_DESIGN_HEIGHT-50)
-        backColor:addChild(been_number_back)
+function SummaryBossAlter:win2(entrance,hasCheckedIn)
+    local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+    backColor:ignoreAnchorPointForPosition(false)
+    backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+    self:addChild(backColor)
 
-        local been = cc.Sprite:create("image/shop/been.png")
-        been:setPosition(0, been_number_back:getContentSize().height/2)
-        been_number_back:addChild(been)
+    local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
+    been_number_back:setPosition(s_RIGHT_X - s_LEFT_X -100, s_DESIGN_HEIGHT-50)
+    backColor:addChild(been_number_back)
 
-        local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
-        been_number:setColor(cc.c4b(0,0,0,255))
-        been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
-        been_number_back:addChild(been_number)
+    local been = cc.Sprite:create("image/shop/been.png")
+    been:setPosition(0, been_number_back:getContentSize().height/2)
+    been_number_back:addChild(been)
 
-        local win_back = cc.Sprite:create('image/summarybossscene/win_back.png')
-        win_back:setAnchorPoint(0.5,0)
-        win_back:setPosition(s_DESIGN_WIDTH / 2,0)
-        self:addChild(win_back)
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
+    been_number:setColor(cc.c4b(0,0,0,255))
+    been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
+    been_number_back:addChild(been_number)
 
-        local function onButton(sender,eventType)
-            if eventType == ccui.TouchEventType.ended then
-                local ENTRANCE_WORD_LIBRARY = false
-                local ENTRANCE_NORMAL = true
-                if entrance == ENTRANCE_WORD_LIBRARY then
-                    s_CorePlayManager.enterLevelLayer()
+    local win_back = cc.Sprite:create('image/summarybossscene/win_back.png')
+    win_back:setAnchorPoint(0.5,0)
+    win_back:setPosition(s_DESIGN_WIDTH / 2,0)
+    self:addChild(win_back)
+
+    local function onButton(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local ENTRANCE_WORD_LIBRARY = false
+            local ENTRANCE_NORMAL = true
+            if entrance == ENTRANCE_WORD_LIBRARY then
+                s_CorePlayManager.enterLevelLayer()
+            else
+                s_CorePlayManager.leaveSummaryModel(true)
+                if not hasCheckedIn then
+                    s_SCENE:checkInAnimation()
                 else
-                    s_CorePlayManager.leaveSummaryModel(true)
-                    if true then
-                        s_SCENE:checkInAnimation()
-                    else
-                        s_CorePlayManager.enterLevelLayer()
-                    end
+                    s_CorePlayManager.enterLevelLayer()
                 end
             end
         end
+    end
 
-        local button = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
-        button:setPosition(win_back:getContentSize().width/2,150)
-        button:addTouchEventListener(onButton)
-        win_back:addChild(button)
+    local button = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
+    button:setPosition(win_back:getContentSize().width/2,150)
+    button:addTouchEventListener(onButton)
+    win_back:addChild(button)
 
-        local item_name = cc.Label:createWithTTF('OK','font/CenturyGothic.ttf',30)
-        --item_name:setColor(cc.c4b(255,255,255,255))
-        item_name:setPosition(button:getContentSize().width/2, button:getContentSize().height/2)
-        button:addChild(item_name)
+    local item_name = cc.Label:createWithTTF('OK','font/CenturyGothic.ttf',30)
+    --item_name:setColor(cc.c4b(255,255,255,255))
+    item_name:setPosition(button:getContentSize().width/2, button:getContentSize().height/2)
+    button:addChild(item_name)
 
-        local been_button = cc.Sprite:create("image/shop/been.png")
-        been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
-        button:addChild(been_button)
+    local been_button = cc.Sprite:create("image/shop/been.png")
+    been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
+    button:addChild(been_button)
 
-        local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
-        rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
-        button:addChild(rewardNumber)
+    local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
+    rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
+    button:addChild(rewardNumber)
 
-        local label = cc.Label:createWithSystemFont('打败总结Boss！','',44)
-        label:setColor(cc.c3b(31,68,102))
-        label:setPosition(0.5 * backColor:getContentSize().width,0.85 * s_DESIGN_HEIGHT)
-        backColor:addChild(label)
+    local label = cc.Label:createWithSystemFont('打败总结Boss！','',44)
+    label:setColor(cc.c3b(31,68,102))
+    label:setPosition(0.5 * backColor:getContentSize().width,0.85 * s_DESIGN_HEIGHT)
+    backColor:addChild(label)
 
-        local pic = cc.Sprite:create('image/summarybossscene/summaryboss_beated.png')
-        pic:setPosition(0.5 * win_back:getContentSize().width,0.5 * win_back:getContentSize().height)
-        win_back:addChild(pic)
-
-    end,{})))
-    
-    
+    local pic = cc.Sprite:create('image/summarybossscene/summaryboss_beated.png')
+    pic:setPosition(0.5 * win_back:getContentSize().width,0.5 * win_back:getContentSize().height)
+    win_back:addChild(pic)
 end
 
 return SummaryBossAlter
