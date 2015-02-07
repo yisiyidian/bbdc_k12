@@ -79,6 +79,8 @@ function BookLayer.create()
                 s_CorePlayManager.enterHomeLayer()
             
                 playSound(s_sound_buttonEffect)   
+
+                s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD
             end
         end
         table.insert(func_array, click)
