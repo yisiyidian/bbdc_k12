@@ -118,7 +118,7 @@ showLogin = function()
                         else        
                             main.close()                    
                         end     
-                        hideProgressHUD()
+                        hideProgressHUD(true)
                     end
                 )
             end
@@ -132,7 +132,7 @@ showLogin = function()
                 s_UserBaseServer.logIn(s_CURRENT_USER.username, s_CURRENT_USER.password, function (userdata, errordescription, errorcode)
                     if errordescription ~= nil then
                         s_TIPS_LAYER:showSmall(errordescription)
-                        hideProgressHUD()
+                        hideProgressHUD(true)
                     else
                         updateUserNameAndPassword()
                         s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)

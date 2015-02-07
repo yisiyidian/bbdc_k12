@@ -209,11 +209,11 @@ function FriendList:addList()
                                             end
 
                                             self.selectIndex = -2
-                                            hideProgressHUD()
+                                            hideProgressHUD(true)
                                         end,
-                                        function(api, code, message, description) hideProgressHUD() end)
+                                        function(api, code, message, description) hideProgressHUD(true) end)
                                 else
-                                    hideProgressHUD()
+                                    hideProgressHUD(true)
                                 end
                             end)
                     end

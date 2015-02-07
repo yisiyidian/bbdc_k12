@@ -17,7 +17,7 @@ function MissionProgressLayer.getNotContainedInLocalDatas(callback)
     getNotContainedInLocalBossWordFromServer(function (serverDatas, error)
         MissionProgressLayer.hasGotNotContainedInLocalDatas = (error == nil)
         if callback then callback() end
-        hideProgressHUD()
+        hideProgressHUD(true)
     end)
 end
 
