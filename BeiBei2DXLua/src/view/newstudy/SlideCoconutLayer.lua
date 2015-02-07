@@ -140,7 +140,9 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
                 if wrongWordList == nil then
                     if wrongNum == s_max_wrong_num_everyday - 1 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
-                        if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                        print('logInDatas')
+                        print_lua_table(s_CURRENT_USER.logInDatas)
+                        if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                             s_CorePlayManager.leaveStudyModel(false)
                         else
                             local missionCompleteCircle = require('view.MissionCompleteCircle').create()

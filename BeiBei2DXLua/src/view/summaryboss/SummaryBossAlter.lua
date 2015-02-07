@@ -193,7 +193,7 @@ function SummaryBossAlter:win1(entrance)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_win)
     end
 
-    local hasCheckedIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey)
+    local hasCheckedIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey)
     if not hasCheckedIn then
         checkInEverydayInfo()
     end

@@ -56,7 +56,7 @@ local function createOptions(randomNameArray,wordlist,position)
                     if #wordlist == 0 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
                         s_CURRENT_USER.beanReward = 3
-                        if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                        if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                             s_CorePlayManager.leaveTestModel() 
                         else
                             local missionCompleteCircle = require('view.MissionCompleteCircle').create()
