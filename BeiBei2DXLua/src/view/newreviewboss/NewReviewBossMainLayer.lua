@@ -222,7 +222,9 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                 local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName,ReviewWordList,Review_From_Word_Bank)
                 s_SCENE:popup(newReviewBossLayerChange)
             else
-                s_CorePlayManager.leaveReviewModel(false)
+                local NewReviewBossLayerChange = require("view.newreviewboss.NewReviewBossFailPopup")
+                local newReviewBossLayerChange = NewReviewBossLayerChange.create(currentWordName,ReviewWordList,Review_From_Normal)
+                s_SCENE:popup(newReviewBossLayerChange)
             end
             end)
         layer:runAction(cc.Sequence:create(action1, action2,action3))
