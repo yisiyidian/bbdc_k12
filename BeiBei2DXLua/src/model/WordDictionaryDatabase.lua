@@ -30,7 +30,6 @@ function Manager.init()
             word.sentenceEn2        =   row.sentenceEn2
             word.sentenceCn2        =   row.sentenceCn2
             Manager.allwords[word.wordName] = word
-            print('word.wordName', word.wordName)
         end
     end
 end
