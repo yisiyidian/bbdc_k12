@@ -141,7 +141,7 @@ local function findIndex(currentIndex,wordList,number)
             return currentIndex + number
         end
     else
-        if currentIndex + number == 0 then
+        if (currentIndex + number ) % #wordList == 0 then
             return #wordList
         elseif currentIndex + number < 0 then
             return (currentIndex + number ) % #wordList 
