@@ -8,14 +8,16 @@ function HttpRequestClient.getBulletinBoard(callbackFunc)
     local retTitle = ''
     local retContent = ''
     local onSucceed = function (api, result)
-        for i, v in ipairs(result.results) do
-            local idx = v["index"]
-            local t = v["content_top"]
-            local ct = v["content"]
-            if idx > retIdx then
-                retIdx = idx
-                retTitle = t
-                retContent = ct
+        if result.results ~= nil then
+            for i, v in ipairs(result.results) do
+                local idx = v["index"]
+                local t = v["content_top"]
+                local ct = v["content"]
+                if idx > retIdx then
+                    retIdx = idx
+                    retTitle = t
+                    retContent = ct
+                end
             end
         end
         if callbackFunc ~= nil then callbackFunc(retIdx, retTitle, retContent) end

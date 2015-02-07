@@ -101,7 +101,7 @@ function ReviewBossLayerII.create()
         sprite_array[i] = tmp
     end
 
-    local wordMeaningBeTestedNow = cc.Label:createWithSystemFont(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall,"",40)
+    local wordMeaningBeTestedNow = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[rbCurrentWordIndex]).wordMeaningSmall,"",40)
     wordMeaningBeTestedNow:setColor(cc.c4b(0,0,0,255))
     wordMeaningBeTestedNow:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.8)
     layer:addChild(wordMeaningBeTestedNow)
@@ -186,7 +186,7 @@ function ReviewBossLayerII.create()
                 layer:runAction(cc.Sequence:create(action1, action2))
 
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
-                wordMeaningBeTestedNow:setString(s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall)
+                wordMeaningBeTestedNow:setString(s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[rbCurrentWordIndex]).wordMeaningSmall)
             else
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
