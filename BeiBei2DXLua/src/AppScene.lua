@@ -249,17 +249,22 @@ end
 function AppScene:checkInAnimation()
     local HomeLayer = require("view.home.HomeLayer")
     local homeLayer = HomeLayer.create(true)
+    homeLayer:setName('homeLayer')
     self:replaceGameLayer(homeLayer)
     homeLayer:showDataLayer(true)
     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-    local delay = cc.DelayTime:create(3)
-    local hide = cc.CallFunc:create(function()
-        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
-        homeLayer:hideDataLayer()
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    end,{})
-    self:runAction(cc.Sequence:create(delay,hide))
+    -- local delay = cc.DelayTime:create(3)
+    -- local hide = cc.CallFunc:create(function()
+        
+    -- end,{})
+    -- self:runAction(cc.Sequence:create(delay,hide))
 
+end
+
+function AppScene:checkInOver()
+    s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+    s_GAME_LAYER:getChildByName('homeLayer'):hideDataLayer()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 end
 
 return AppScene

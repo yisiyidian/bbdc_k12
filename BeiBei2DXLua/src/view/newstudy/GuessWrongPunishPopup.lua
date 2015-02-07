@@ -50,10 +50,14 @@ function GuessWrongPunishPopup:ctor(currentReward,totalReward)
     local animation = sp.SkeletonAnimation:create("spine/fuxiboss_bea_dispare.json", "spine/fuxiboss_bea_dispare.atlas", 1)
     animation:setPosition(sprite:getContentSize().width / 2, 0)
     sprite:addChild(animation)     
-    local action3 = cc.DelayTime:create(0.5) 
+    animation:setVisible(false)
+    sprite:setTexture("image/chapter/chapter0/bean.png")
+    local action3 = cc.DelayTime:create(0.8) 
     self:runAction(cc.Sequence:create(action3,cc.CallFunc:create(function() 
         if animation ~= nil then
+            animation:setVisible(true)
             animation:addAnimation(0, 'oudupus2', false)
+            sprite:setTexture("image/newstudy/badbean.png")
         end
     end)))
 

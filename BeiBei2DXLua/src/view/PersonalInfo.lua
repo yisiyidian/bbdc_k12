@@ -378,8 +378,8 @@ function PersonalInfo:PLVM()
         local per = '%'
         local str = string.format("%.1f%s",learnProgress:getPercentage(),per)
         label_percent:setString(str)
-        smallCircleTail:setPosition(0.5 * circleBackBig:getContentSize().width + 220 * math.cos((0.5 + 0.02 * learnProgress:getPercentage()) * math.pi),0.5 * circleBackBig:getContentSize().height + 220 * math.sin((0.5 + 0.02 * learnProgress:getPercentage()) * math.pi))
-        smallCircleTail2:setPosition(0.5 * circleBackSmall:getContentSize().width + 161 * math.cos((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi),0.5 * circleBackSmall:getContentSize().height + 161 * math.sin((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi))
+        smallCircleTail:setPosition(0.5 * circleBackBig:getContentSize().width + 220 * math.cos((0.5 - 0.02 * learnProgress:getPercentage()) * math.pi),0.5 * circleBackBig:getContentSize().height + 220 * math.sin((0.5 + 0.02 * learnProgress:getPercentage()) * math.pi))
+        smallCircleTail2:setPosition(0.5 * circleBackSmall:getContentSize().width + 161 * math.cos((0.5 - 0.02 * masterProgress:getPercentage()) * math.pi),0.5 * circleBackSmall:getContentSize().height + 161 * math.sin((0.5 + 0.02 * masterProgress:getPercentage()) * math.pi))
     end
     back:scheduleUpdateWithPriorityLua(update, 0)
 end
@@ -789,6 +789,9 @@ function PersonalInfo:login()
                             loadingList[#loadingList]:addChild(newtick,2)
                             checkInList[#checkInList]:setVisible(false)
                             tick:removeFromParent()
+                            newtick:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function ()
+                                s_SCENE:checkInOver()
+                            end,{})))
                         end,{})
                         tick:runAction(cc.Sequence:create(delay,move,tickChange))
                     end

@@ -121,9 +121,10 @@ local function createNumberSprite(wrongNumber)
     local time = 0
     local function update(delta)
        time = time + delta
-        if tonumber(labelWordNum:getString()) <= wrongNumber then
-            labelWordNum:setString(math.ceil(wrongNumber / 2 * time))
+        if time <= 1 then
+            labelWordNum:setString(math.floor(wrongNumber * time))
        else
+            labelWordNum:setString(wrongNumber)
             figureback:unscheduleUpdate()
        end
     end
