@@ -192,7 +192,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         finger:runAction(cc.RepeatForever:create(action6))
     end
     --main.finger_action()
-    ----houqi 
     local back_box = cc.Layer:create()
     local back_box_num = 0
     local updateSelectWord = function()
@@ -781,6 +780,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
 
     main.forceFail = function ()
         failFunction()
+        updateSelectWord()
     end
 
     onTouchEnded = function(touch, event)
