@@ -12,8 +12,8 @@ end
 
 function MissionCompleteCircle:ctor()
 	s_SCENE.touchEventBlockLayer.lockTouch()
-	local missionCount = 4
-	local completeCount = 4
+	local missionCount = s_LocalDatabaseManager:getTodayTotalTaskNum()
+	local completeCount = missionCount - s_LocalDatabaseManager:getTodayRemainTaskNum() + 1
 
 	local bigWidth = s_RIGHT_X - s_LEFT_X
 

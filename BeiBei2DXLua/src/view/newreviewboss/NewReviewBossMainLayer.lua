@@ -378,12 +378,15 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                 	local successLayer = SuccessLayer.create()
                     s_SCENE:replaceGameLayer(successLayer)
                 else
-                    local missionCompleteCircle = require('view.MissionCompleteCircle').create()
-                        s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-                        layer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
-                            s_CorePlayManager.leaveReviewModel(true)  
-                        end,{})))
-                   
+                    if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                        s_CorePlayManager.leaveReviewModel(true)  
+                    else
+                        local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+                            s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+                            layer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+                                s_CorePlayManager.leaveReviewModel(true)  
+                            end,{})))
+                    end
                 end
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 end)
