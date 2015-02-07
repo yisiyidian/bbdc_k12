@@ -119,6 +119,13 @@ function WordLibraryListview:ctor(wordList)
 
     self:setItemsMargin(2.0)
 
+    self.getPosition = function ()
+        local current_y = (0 - self:getInnerContainer():getPositionY())
+        local current_height = self:getInnerContainerSize().height
+        local current_percent = current_y / current_height + 0.2
+        return current_percent
+    end
+ 
 end
 
 return WordLibraryListview

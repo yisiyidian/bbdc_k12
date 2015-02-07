@@ -131,6 +131,7 @@ function Pause:onBack()
     s_SCENE.popupLayer:removeAllChildren()
     s_SCENE.popupLayer.layerpaused = false
     s_CorePlayManager.enterLevelLayer()
+    s_CURRENT_USER.beanReward = 3
     --if self.win and isPassed == 0 then
     --    s_SCENE.levelLayerState = s_unlock_normal_plotInfo_state
     --end

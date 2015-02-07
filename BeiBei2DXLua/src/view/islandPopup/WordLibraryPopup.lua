@@ -185,20 +185,23 @@ function WordLibraryPopup:ctor(index)
         return true  
     end
     
-    local listview
+
     if s_CURRENT_USER.familiarOrUnfamiliar == 0 then -- 0 for choose familiar ,1 for choose unfamiliar
-        listview = Listview.create(boss.rightWordList)
-        bottom_sprite:setVisible(false)
+        self.listview = Listview.create(boss.rightWordList)
+        self.reviewButton:setVisible(false)
+        self.summaryButton:setVisible(false)
     else
-        listview = Listview.create(boss.wrongWordList)
-            if #boss.wrongWordList >= s_max_wrong_num_everyday then
-                bottom_sprite:setVisible(true)
-            else
-                bottom_sprite:setVisible(false)
-            end
+        self.listview = Listview.create(boss.wrongWordList)
+        if #boss.wrongWordList >= s_max_wrong_num_everyday then
+            self.reviewButton:setVisible(true)
+            self.summaryButton:setVisible(true)
+        else
+            self.reviewButton:setVisible(false)
+            self.summaryButton:setVisible(false)
+        end
     end
-    listview:setPosition(2,70)
-    backPopup:addChild(listview)
+    self.listview:setPosition(2,70)
+    backPopup:addChild(self.listview)
     
     local onTouchEnded = function(touch, event)
         local location = top_sprite:convertToNodeSpace(touch:getLocation())
@@ -206,27 +209,49 @@ function WordLibraryPopup:ctor(index)
             s_CURRENT_USER.familiarOrUnfamiliar = 0
             self.familiarButton:setTexture("image/islandPopup/familiarwordend.png")
             self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordbegin.png")
-            listview:removeFromParent()
-            listview = Listview.create(boss.rightWordList) 
-            listview:setPosition(2,70)
-            backPopup:addChild(listview)
-            bottom_sprite:setVisible(false)
+            self.listview:removeFromParent()
+            self.listview = Listview.create(boss.rightWordList) 
+            self.listview:setPosition(2,70)
+            backPopup:addChild(self.listview)
+            self.reviewButton:setVisible(false)
+            self.summaryButton:setVisible(false)
         elseif cc.rectContainsPoint(self.unfamiliarButton:getBoundingBox(), location) then
             s_CURRENT_USER.familiarOrUnfamiliar = 1
             self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
             self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")
-            listview:removeFromParent()
-            listview = Listview.create(boss.wrongWordList) 
-            listview:setPosition(2,70)
-            backPopup:addChild(listview)
+            self.listview:removeFromParent()
+            self.listview = Listview.create(boss.wrongWordList) 
+            self.listview:setPosition(2,70)
+            backPopup:addChild(self.listview)
             if #boss.wrongWordList >= s_max_wrong_num_everyday then
-                bottom_sprite:setVisible(true)
+                self.reviewButton:setVisible(true)
+                self.summaryButton:setVisible(true)
             else
-                bottom_sprite:setVisible(false)
+                self.reviewButton:setVisible(false)
+                self.summaryButton:setVisible(false)
             end
-
         end
     end
+
+--    local timer = 0
+--    local function update(delta)
+--        local current_y = (0 - listView:getInnerContainer():getPositionY())
+--        local current_height = listView:getInnerContainerSize().height
+--        local current_percent = current_y / current_height + 0.2
+--        local top_y = summury_back:getContentSize().height * 0.98
+--        local bottom_y = summury_back:getContentSize().height * 0.28
+--        local changetoposition_y = top_y -  (top_y - bottom_y) * (1 -current_percent)
+--
+--        timer = timer +  delta
+--        if timer > 0.5 then
+--            local action1 = cc.MoveTo:create(timer,cc.p(summury_back:getContentSize().width * 0.98,changetoposition_y))
+--            percentBar:runAction(action1)
+--            print(self.listview.getPosition())
+--        timer = 0
+--        end
+--    end
+--
+--    self:scheduleUpdateWithPriorityLua(update, 0)
     
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)

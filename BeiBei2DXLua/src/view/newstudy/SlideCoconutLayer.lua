@@ -148,8 +148,12 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
                     --     s_CorePlayManager.leaveStudyModel(false)    
                     -- end,{})))         
                 else
-                    table.insert(wrongWordList,wrongWordList[1])
-                    table.remove(wrongWordList,1)
+                    if wrongWordList[1] ~= nil then
+                        local temp = wrongWordList[1]
+                        table.insert(wrongWordList,temp)
+                        table.remove(wrongWordList,1)
+                    end                                   
+
                     local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
                     local blacksmithLayer = BlacksmithLayer.create(wrongWordList)
                     s_SCENE:replaceGameLayer(blacksmithLayer)
