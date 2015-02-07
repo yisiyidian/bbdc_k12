@@ -135,7 +135,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
                         s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState)
+                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, nil, preWordName, preWordNameState)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
                 end)))
             end
