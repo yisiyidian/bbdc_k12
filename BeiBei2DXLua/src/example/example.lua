@@ -11,6 +11,10 @@ local ProtocolBase = require('server.protocol.ProtocolBase')
 require('server.protocol.protocols')
 
 function test()
+    local WordDictionaryDatabase = require('model.WordDictionaryDatabase')
+    WordDictionaryDatabase.init()
+    print_lua_table( WordDictionaryDatabase.testGetWord('apple') )
+
     -- local username = 'tester112'
     -- isUsernameExist(username, function (exsit, error)
     --     if error == nil then
@@ -20,19 +24,19 @@ function test()
     -- local t = {'a', 'b' , 'g'}
     -- print(s_JSON.encode(t))
 
-    local api = ''
-    local serverRequestType = SERVER_REQUEST_TYPE_NORMAL
-    local function cb (result, error)
-        print('ProtocolBase >>')
-        if error == nil then
-            print_lua_table(error)
-        else
-            print('ProtocolBase')
-        end
-        print('ProtocolBase <<')
-    end
-    local protocol = ProtocolBase.create(api, serverRequestType, {['username']=username}, cb)
-    protocol:request()
+    -- local api = ''
+    -- local serverRequestType = SERVER_REQUEST_TYPE_NORMAL
+    -- local function cb (result, error)
+    --     print('ProtocolBase >>')
+    --     if error == nil then
+    --         print_lua_table(error)
+    --     else
+    --         print('ProtocolBase')
+    --     end
+    --     print('ProtocolBase <<')
+    -- end
+    -- local protocol = ProtocolBase.create(api, serverRequestType, {['username']=username}, cb)
+    -- protocol:request()
 
     -- cx.CXUtils:getInstance():_testCppApi_()
     
@@ -56,8 +60,8 @@ function test()
  -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
-    local circle = require('view.summaryboss.SummaryBossLayer').create(1)
-    s_SCENE:replaceGameLayer(circle)
+    -- local circle = require('view.summaryboss.SummaryBossLayer').create(1)
+    -- s_SCENE:replaceGameLayer(circle)
 
 
 

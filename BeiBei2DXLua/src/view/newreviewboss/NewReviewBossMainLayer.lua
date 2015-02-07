@@ -378,7 +378,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                 	local successLayer = SuccessLayer.create()
                     s_SCENE:replaceGameLayer(successLayer)
                 else
-                    if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                    if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                         s_CorePlayManager.leaveReviewModel(true)  
                     else
                         local missionCompleteCircle = require('view.MissionCompleteCircle').create()

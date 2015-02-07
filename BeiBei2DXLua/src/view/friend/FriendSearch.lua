@@ -77,7 +77,7 @@ function FriendSearch:ctor()
                     local f_user = result.results
                     s_UserBaseServer.searchUserByUserName(username,
                         function(api,result)
-                            hideProgressHUD()
+                            hideProgressHUD(true)
                             for i, user in ipairs(result.results) do
                                 f_user[#f_user + 1] = user
                             end
@@ -229,10 +229,10 @@ function FriendSearch:ctor()
                                                                         smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                                                                         s_SCENE.popupLayer:addChild(smallAlter) 
                                                                     end
-                                                                    hideProgressHUD()
+                                                                    hideProgressHUD(true)
                                                                 end)
                                                         else
-                                                            hideProgressHUD()
+                                                            hideProgressHUD(true)
                                                         end
                                                     end)
                                                 
@@ -251,12 +251,12 @@ function FriendSearch:ctor()
                             end
                         end,
                         function(api, code, message, description)
-                            hideProgressHUD()
+                            hideProgressHUD(true)
                         end)
 
                 end,
                 function(api, code, message, description)
-                    hideProgressHUD()
+                    hideProgressHUD(true)
                 end)
             
             

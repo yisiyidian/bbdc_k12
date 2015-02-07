@@ -22,7 +22,7 @@ function PersonalInfo.getNotContainedInLocalDatas(callback)
         
             PersonalInfo.hasGotNotContainedInLocalDatas = (error == nil)
             if callback then callback() end
-            hideProgressHUD()
+            hideProgressHUD(true)
 
         end)
 

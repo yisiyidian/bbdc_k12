@@ -14,7 +14,7 @@
 -- math["xor"](x,y,z)
 
 -- showProgressHUD(info, native)
--- hideProgressHUD()
+-- hideProgressHUD(native)
 
 -- getDayStringForDailyStudyInfo(time)
 
@@ -250,9 +250,12 @@ function showProgressHUD(info, native)
     end
 end
 
-function hideProgressHUD()
-    cx.CXProgressHUD:hide()
-    s_SCENE:removeLoadingView()
+function hideProgressHUD(native)
+    if native then
+        cx.CXProgressHUD:hide()
+    else
+        s_SCENE:removeLoadingView()
+    end
 end
 
 function checkIfDownloadSoundsExist(bookkey)
