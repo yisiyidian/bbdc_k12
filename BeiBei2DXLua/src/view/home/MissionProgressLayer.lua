@@ -24,7 +24,7 @@ end
 function MissionProgressLayer.create(share)
     local missionCount = s_CURRENT_USER:getTodayTotalReviewBossNum() + 1
     local completeCount = s_CURRENT_USER:getTodayReaminReviewBossNum()
-    if share then
+    if share ~= nil and share then
         completeCount = missionCount
     end
 
@@ -104,7 +104,7 @@ function MissionProgressLayer.create(share)
         end
     end
     local shareDelayTime = 0
-    if share then
+    if share ~= nil and share then
         shareDelayTime = 3
     end
     for i = 1, completeCount do 
@@ -122,7 +122,7 @@ function MissionProgressLayer.create(share)
                 local action1 = cc.FadeOut:create(1)
                 local action2 = cc.FadeOut:create(2)
                 local swell = cc.CallFunc:create(anotherSwelling)
-                if share then
+                if share ~= nil and share then
                     local a1 = cc.DelayTime:create(0.1)
                     local a2 = cc.CallFunc:create(function ()
                         local Share = require('view.share.ShareCheckIn')

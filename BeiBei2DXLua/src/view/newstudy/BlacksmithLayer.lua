@@ -58,7 +58,7 @@ local function createOptions(randomNameArray,wordlist,position)
                         s_CURRENT_USER.beanReward = 3
                         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
                         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-                        sender:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+                        sender:runAction(cc.Sequence:create(cc.DelayTime:create(1.5),cc.CallFunc:create(function ()
                             s_CorePlayManager.leaveTestModel()   
                         end,{})))
                         
