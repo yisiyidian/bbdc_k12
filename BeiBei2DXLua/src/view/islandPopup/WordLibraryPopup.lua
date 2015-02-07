@@ -13,7 +13,7 @@ function WordLibraryPopup.create(index)
     return layer
 end
 
-local function addCloseButton(top_sprite)
+local function addCloseButton(top_sprite,self)
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
@@ -34,6 +34,7 @@ local function addBackButton(top_sprite,self)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
+            self.close()
             self:removeFromParent()
         end
     end
@@ -120,7 +121,7 @@ local function addSummaryButton(bottom_sprite,boss)
         local endList = wordList(boss.wrongWordList)
         if eventType == ccui.TouchEventType.ended then
         local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-        local summaryBossLayer = SummaryBossLayer.create(endList,1)
+        local summaryBossLayer = SummaryBossLayer.create(endList,1,false)
         s_SCENE:replaceGameLayer(summaryBossLayer) 
         s_SCENE:removeAllPopups()
         end
@@ -142,7 +143,7 @@ function WordLibraryPopup:ctor(index)
     local boss = s_LocalDatabaseManager.getBossInfo(index + 1)
     
     local backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
-    backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+    backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
     self:addChild(backPopup)
 
     local top_sprite = cc.Sprite:create("image/islandPopup/top.png")
@@ -151,7 +152,7 @@ function WordLibraryPopup:ctor(index)
     top_sprite:setAnchorPoint(0.5,0.5)
     backPopup:addChild(top_sprite)
     
-    self.closeButton = addCloseButton(top_sprite)
+    self.closeButton = addCloseButton(top_sprite,self)
     top_sprite:addChild(self.closeButton)
     
     self.backButton = addBackButton(top_sprite,self)
@@ -170,7 +171,7 @@ function WordLibraryPopup:ctor(index)
     top_sprite:addChild(line_sprite)
     
     local bottom_sprite = cc.Sprite:create("image/islandPopup/bottom.png")
-    bottom_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.02)
+    bottom_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.03)
     bottom_sprite:ignoreAnchorPointForPosition(false)
     bottom_sprite:setAnchorPoint(0.5,0.5)
     backPopup:addChild(bottom_sprite,2)
@@ -180,6 +181,10 @@ function WordLibraryPopup:ctor(index)
     
     self.summaryButton = addSummaryButton(bottom_sprite,boss)
     bottom_sprite:addChild(self.summaryButton)
+
+    self.close = function ()
+    	
+    end
     
     local onTouchBegan = function(touch, event)
         return true  

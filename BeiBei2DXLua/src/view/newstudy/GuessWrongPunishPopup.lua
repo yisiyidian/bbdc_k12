@@ -35,7 +35,7 @@ function GuessWrongPunishPopup:ctor(currentReward,totalReward)
     back:addChild(text)
     
     for i = 1,totalReward do
-        local bean = cc.Sprite:create("image/newstudy/bean.png")
+        local bean = cc.Sprite:create("image/chapter/chapter0/bean.png")
         bean:setPosition(back:getContentSize().width * (0.3 +  ( 3 - totalReward) * 0.1 + (i - 1) * 0.2),back:getContentSize().height * 0.5)
         bean:setName("bean"..i)
         back:addChild(bean)
@@ -49,8 +49,14 @@ function GuessWrongPunishPopup:ctor(currentReward,totalReward)
     local sprite = back:getChildByName("bean"..currentReward)
     local animation = sp.SkeletonAnimation:create("spine/fuxiboss_bea_dispare.json", "spine/fuxiboss_bea_dispare.atlas", 1)
     animation:setPosition(sprite:getContentSize().width / 2, 0)
-    sprite:addChild(animation)      
-    animation:addAnimation(0, 'oudupus2', false)
+    sprite:addChild(animation)     
+    local action3 = cc.DelayTime:create(0.5) 
+    self:runAction(cc.Sequence:create(action3,cc.CallFunc:create(function() 
+        if animation ~= nil then
+            animation:addAnimation(0, 'oudupus2', false)
+        end
+    end)))
+
 
     self.button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

@@ -56,11 +56,15 @@ local function createOptions(randomNameArray,wordlist,position)
                     if #wordlist == 0 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
                         s_CURRENT_USER.beanReward = 3
-                        local missionCompleteCircle = require('view.MissionCompleteCircle').create()
-                        s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-                        sender:runAction(cc.Sequence:create(cc.DelayTime:create(2.0),cc.CallFunc:create(function ()
-                            s_CorePlayManager.leaveTestModel()   
-                        end,{})))
+                        if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                            s_CorePlayManager.leaveTestModel() 
+                        else
+                            local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+                            s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+                            sender:runAction(cc.Sequence:create(cc.DelayTime:create(2.0),cc.CallFunc:create(function ()
+                                s_CorePlayManager.leaveTestModel()   
+                            end,{})))
+                        end
                         
                     else
                         AnalyticsStudyAnswerRight_strikeWhileHot()

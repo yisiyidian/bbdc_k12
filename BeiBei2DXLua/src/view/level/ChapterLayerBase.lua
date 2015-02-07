@@ -312,6 +312,10 @@ function ChapterLayerBase:addPopup(levelIndex)
             local WordLibrary = require("view.islandPopup.WordLibraryPopup")
             local wordLibrary = WordLibrary.create(levelIndex)
             s_SCENE.popupLayer:addChild(wordLibrary)   
+            back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
+            wordLibrary.close = function ( )
+            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
+            end
         end
     end
     

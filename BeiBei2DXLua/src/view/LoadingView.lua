@@ -18,7 +18,7 @@ function LoadingView.create(needUpdate)
     local leaf = cc.Sprite:create('image/loading/loading-little-girl-leaf.png')
     leaf:ignoreAnchorPointForPosition(false)
     leaf:setAnchorPoint(0.5,0.5)
-    leaf:setPosition(background:getContentSize().width * 0.4 ,background:getContentSize().height * 0.66)    
+    leaf:setPosition(background:getContentSize().width * 0.45 ,background:getContentSize().height * 0.66)    
     background:addChild(leaf)
 
     local sleep_girl = sp.SkeletonAnimation:create('spine/loading-little-girl.json','spine/loading-little-girl.atlas',1) 
@@ -41,7 +41,7 @@ function LoadingView.create(needUpdate)
     backCircle:setPosition(background:getContentSize().width / 2,background:getContentSize().height / 2)
     background:addChild(backCircle)
 
-    local runProgress = cc.ProgressTo:create(0.2,99)
+    local runProgress = cc.ProgressTo:create(0.2,93)
 
     local progressCircle = cc.ProgressTimer:create(cc.Sprite:create("image/loading/loadingend.png"))
     progressCircle:setPosition(backCircle:getContentSize().width / 2 ,backCircle:getContentSize().height / 2)
@@ -60,7 +60,7 @@ function LoadingView.create(needUpdate)
     local randomNum = math.random(1,5)
 
     local hint = cc.Sprite:create("image/loading/loading"..randomNum..".png")
-    hint:setPosition(background:getContentSize().width / 2,100)
+    hint:setPosition(background:getContentSize().width / 2,80)
     background:addChild(hint)
 
     local time = 0
@@ -74,7 +74,7 @@ function LoadingView.create(needUpdate)
             hint:setTexture("image/loading/loading"..randomNum..".png")
         end
         local per = '%'
-        local str = string.format("%d%s",progressCircle:getPercentage(),per)
+        local str = string.format("%d%s",progressCircle:getPercentage()  * 99 / 93,per)
         progressText:setString(str)
     end
     layer:scheduleUpdateWithPriorityLua(update, 0)
