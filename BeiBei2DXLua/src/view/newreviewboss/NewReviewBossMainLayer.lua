@@ -63,16 +63,21 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             return ans
         else
             local ans = {}
-            ans[rightIndex]  = s_WordPool[wordname].wordMeaningSmall
-            if rightIndex == 1 then  ans[2] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[3] = s_WordPool[RandomWord[3]].wordMeaningSmall
-            elseif rightIndex == 2 then ans[3] = s_WordPool[RandomWord[2]].wordMeaningSmall  ans[1] = s_WordPool[RandomWord[3]].wordMeaningSmall
-            else ans[1] = s_WordPool[RandomWord[2]].wordMeaningSmall ans[2] = s_WordPool[RandomWord[3]].wordMeaningSmall    end
+            ans[rightIndex]  = s_LocalDatabaseManager.getWordInfoFromWordName(wordname).wordMeaningSmall
+            if rightIndex == 1 then
+                ans[2] = s_LocalDatabaseManager.getWordInfoFromWordName(RandomWord[2]).wordMeaningSmall ans[3] = s_LocalDatabaseManager.getWordInfoFromWordName(RandomWord[3]).wordMeaningSmall
+            elseif rightIndex == 2 then
+                ans[3] = s_LocalDatabaseManager.getWordInfoFromWordName(RandomWord[2]).wordMeaningSmall  ans[1] = s_LocalDatabaseManager.getWordInfoFromWordName(RandomWord[3]).wordMeaningSmall
+            else
+                ans[1] = s_LocalDatabaseManager.getWordInfoFromWordName(RandomWord[2]).wordMeaningSmall ans[2] = s_LocalDatabaseManager.getWordInfoFromWordName(RandomWord[3]).wordMeaningSmall
+            end
             return ans
+
         end
     end
-    
 
-    for i = 1,  wordListLen do   
+
+    for i = 1,  wordListLen do
         table.insert(wordToBeTested,wordList[i])
         local words = getRandomWordForRightWord(wordList[i])
         local tmp = {}
@@ -110,7 +115,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
 
     local updateWord = function ()
         local currentWordName   = wordToBeTested[rbCurrentWordIndex]
-        local currentWord       = s_WordPool[currentWordName]
+        local currentWord       = s_LocalDatabaseManager.getWordInfoFromWordName(currentWordName)
         local wordname          = currentWord.wordName
         local wordSoundMarkEn   = currentWord.wordSoundMarkEn
         local wordSoundMarkAm   = currentWord.wordSoundMarkAm
@@ -241,7 +246,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         if type % 2 == 0 then
             answer = wordToBeTested[rbCurrentWordIndex]
         else
-            answer = s_WordPool[wordToBeTested[rbCurrentWordIndex]].wordMeaningSmall
+            answer = s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[rbCurrentWordIndex]).wordMeaningSmall
         end
         for i = 1, #wordToBeTested do
             for j = 1, 3 do
@@ -314,7 +319,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             if type % 2 == 0 then
                 answer = wordToBeTested[logic_location.x]
             else
-                answer = s_WordPool[wordToBeTested[logic_location.x]].wordMeaningSmall
+                answer = s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[logic_location.x]).wordMeaningSmall
             end
             if answer == sprite_array[logic_location.x][logic_location.y].character then
                 sprite_array[logic_location.x][logic_location.y].right()

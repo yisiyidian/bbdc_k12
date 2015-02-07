@@ -872,8 +872,8 @@ function SummaryBossLayer:initCrab1()
             --delaytime = 1.5
         end
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
-        self.ccbcrab[i]['meaningSmall']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
-        self.ccbcrab[i]['meaningBig']:setString(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall)
+        self.ccbcrab[i]['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall)
+        self.ccbcrab[i]['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall)
     end
 end
 
@@ -903,7 +903,7 @@ function SummaryBossLayer:initCrab2(chapter)
         hand:setAnchorPoint(0.5,0.7)
         hand:setPosition(0.5 * self.crab[i]:getContentSize().width,-10)
         self.crab[i]:addChild(hand)
-        local meaning = cc.Label:createWithSystemFont(s_WordPool[self.wordPool[self.currentIndex][i]].wordMeaningSmall,'',28)
+        local meaning = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall,'',28)
         if chapter == 3 then
             meaning:setColor(cc.c3b(0,0,0))
         end

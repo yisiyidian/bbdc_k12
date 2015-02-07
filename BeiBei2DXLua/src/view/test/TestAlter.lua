@@ -212,7 +212,7 @@ showDetailInfo = function()
     selectWordBack:setPosition(277,764)
     back:addChild(selectWordBack)
     
-    local content = s_WordPool[s_CorePlayManager.wordList[1]].wordMeaningSmall
+    local content = s_LocalDatabaseManager.getWordInfoFromWordName(s_CorePlayManager.wordList[1]).wordMeaningSmall
     local selectWordMeaning = cc.Label:createWithSystemFont(content,"",28)
     selectWordMeaning:setColor(cc.c4b(0,0,0,255))
     selectWordMeaning:setPosition(selectWordBack:getContentSize().width/2, selectWordBack:getContentSize().height/2)
@@ -222,7 +222,7 @@ showDetailInfo = function()
     local lastSelectIndex = nil
     local showSelectWordInfo = function(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            selectWordMeaning:setString(s_WordPool[s_CorePlayManager.wordList[sender.tag]].wordMeaningSmall)
+            selectWordMeaning:setString(s_LocalDatabaseManager.getWordInfoFromWordName(s_CorePlayManager.wordList[sender.tag]).wordMeaningSmall)
             
             if button_array[lastSelectIndex].name == "right" then
                 button_array[lastSelectIndex]:loadTextures("image/alter/testscene_rightword_back_light.png", "", "")

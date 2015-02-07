@@ -24,7 +24,7 @@ local function createOptions(randomNameArray,wordlist,position)
     local wordMeaningTable= {}
     for i = 1, 4 do
         local name = randomNameArray[i]
-        local meaning = s_WordPool[name].wordMeaningSmall
+        local meaning = s_LocalDatabaseManager.getWordInfoFromWordName(name).wordMeaningSmall
         table.insert(wordMeaningTable, meaning)
     end
     local rightIndex = math.random(1, 4)

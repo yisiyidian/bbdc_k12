@@ -34,8 +34,9 @@ function WordLibraryListview:ctor(wordList)
     local word = {}
     local meaning = {}
     for i = 1,#wordList  do
-        word[i] = s_WordPool[wordList[i]].wordName
-        meaning[i] = s_WordPool[wordList[i]].wordMeaningSmall
+        local currentWord = s_LocalDatabaseManager.getWordInfoFromWordName(wordList[i])
+        word[i] = currentWord.wordName
+        meaning[i] = currentWord.wordMeaningSmall
     end
 
     local count = table.getn(wordList)
@@ -119,6 +120,13 @@ function WordLibraryListview:ctor(wordList)
 
     self:setItemsMargin(2.0)
 
+    self.getPosition = function ()
+        local current_y = (0 - self:getInnerContainer():getPositionY())
+        local current_height = self:getInnerContainerSize().height
+        local current_percent = current_y / current_height + 0.2
+        return current_percent
+    end
+ 
 end
 
 return WordLibraryListview

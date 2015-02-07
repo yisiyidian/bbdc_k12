@@ -158,6 +158,22 @@ end
 
 -- 1 data/week
 -- DataEverydayInfo
+function resetLocalEverydayInfos()
+    s_CURRENT_USER.logInDatas = {}
+    s_LocalDatabaseManager.getDatas('DataEverydayInfo', 
+                        s_CURRENT_USER.objectId, 
+                        s_CURRENT_USER.username, 
+                        function (row)
+                            local data = DataEverydayInfo.create()
+                            parseLocalDBDataToClientData(row, data)
+                            table.insert(s_CURRENT_USER.logInDatas, data)
+                        end, 
+                        ' order by week')
+    print('>>> resetLocalEverydayInfos')
+    print_lua_table(s_CURRENT_USER.logInDatas)
+    print('<<< resetLocalEverydayInfos')
+end
+
 function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
     local api = 'syseverydayinfo'
     local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
@@ -208,21 +224,6 @@ function checkInEverydayInfo()
     end)
 end
 
-local function resetLocalEverydayInfos()
-    s_CURRENT_USER.logInDatas = {}
-    s_LocalDatabaseManager.getDatas('DataEverydayInfo', 
-                        s_CURRENT_USER.objectId, 
-                        s_CURRENT_USER.username, 
-                        function (row)
-                            local data = DataEverydayInfo.create()
-                            parseLocalDBDataToClientData(row, data)
-                            table.insert(s_CURRENT_USER.logInDatas, data)
-                        end, 
-                        ' order by week')
-    print('>>> resetLocalEverydayInfos')
-    print_lua_table(s_CURRENT_USER.logInDatas)
-    print('<<< resetLocalEverydayInfos')
-end
 function getNotContainedInLocalEverydayInfosFromServer(callback)
     getNotContainedInLocalDatasFromServer('DataEverydayInfo', nil, function (serverDatas, error)
         if error == nil then

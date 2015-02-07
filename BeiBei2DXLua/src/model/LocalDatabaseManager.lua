@@ -6,6 +6,7 @@ local DataEverydayInfo          = require('model.user.DataEverydayInfo')
 local DataLevelInfo             = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
 local DataBossWord              = require('model.user.DataBossWord')
+local DataTask                  = require('model.user.DataTask')
 
 local databaseTables = {
         DataEverydayInfo,
@@ -13,14 +14,17 @@ local databaseTables = {
         DataLevelInfo,
 
         DataDailyStudyInfo,
-        DataBossWord
+        DataBossWord,
+        DataTask
     }
 
-local localdatabase_utils       = nil
-local localdatabase_user        = nil
-local localdatabase_dailyStudyInfo = nil
-local localdatabase_bossWord    = nil
+local localdatabase_utils           = nil
+local localdatabase_user            = nil
+local localdatabase_dailyStudyInfo  = nil
+local localdatabase_bossWord        = nil
+local localdatabase_task            = nil
 
+local localdatabase_word            = nil
 
 -- define Manager
 local Manager = {}
@@ -34,12 +38,15 @@ function Manager.init()
     Manager.database = sqlite3.open(databasePath)
     print ('databasePath:' .. databasePath)
 
-    localdatabase_utils = reloadModule('model.localDatabase.utils')
-    localdatabase_user = reloadModule('model.localDatabase.user')
+    localdatabase_utils             = reloadModule('model.localDatabase.utils')
+    localdatabase_user              = reloadModule('model.localDatabase.user')
 
-    localdatabase_dailyStudyInfo = reloadModule('model.localDatabase.dailyStudyInfo')
-    localdatabase_bossWord = reloadModule('model.localDatabase.bossWord')
-
+    localdatabase_dailyStudyInfo    = reloadModule('model.localDatabase.dailyStudyInfo')
+    localdatabase_bossWord          = reloadModule('model.localDatabase.bossWord')
+    localdatabase_task              = reloadModule('model.localDatabase.task')
+    
+    localdatabase_word              = reloadModule('model.localDatabase.word')
+    
     Manager.initTables()
 end
 
@@ -58,10 +65,50 @@ function Manager.initTables()
             lastUpdate INTEGER
         );
     ]]
+    
+    Manager.database:exec[[
+        create table if not exists DataWord(
+            wordName TEXT,
+            wordSoundMarkEn TEXT,
+            wordSoundMarkAm TEXT,
+            wordMeaningSmall TEXT,
+            wordMeaning TEXT,
+            sentenceEn TEXT,
+            sentenceCn TEXT,
+            sentenceEn2 TEXT,
+            sentenceCn2 TEXT
+        );
+    ]]
 
+    -- INIT ALL WORD POOL BEGIN
+    local num = 0
+    for row in Manager.database:nrows("select * from DataWord where wordName='jawbone' ;") do
+        num = 1
+    end
+    
+    if num == 0 then
+        print("INIT ALL WORD POOL BEGIN")
+        local content= cc.FileUtils:getInstance():getStringFromFile("newword.json")
+        local lines = split(content, "\n")
+        for i = 1, #lines do
+            local terms = split(lines[i], "\t")
+            for i = 1, #terms do
+                terms[i] = string.gsub(terms[i], "'", '"')
+            end
+            local query = "INSERT INTO DataWord (wordName, wordSoundMarkEn, wordSoundMarkAm, wordMeaningSmall, wordMeaning, sentenceEn, sentenceCn, sentenceEn2, sentenceCn2) VALUES ('"..terms[1].."','"..terms[2].."','"..terms[3].."','"..terms[4].."','"..terms[5].."','"..terms[6].."','"..terms[7].."','"..terms[8].."','"..terms[9].."') ;"
+            Manager.database:exec(query)
+        end
+        print("INIT ALL WORD POOL END")
+    end
+    -- INIT ALL WORD POOL END
+    
     for i = 1, #databaseTables do
         localdatabase_utils.createTable(databaseTables[i].create())
     end
+end
+
+function Manager.getWordInfoFromWordName(wordName)
+    return localdatabase_word.getWordInfoFromWordName(wordName)
 end
 
 function Manager.saveDataClassObject(objectOfDataClass, userId, username)
