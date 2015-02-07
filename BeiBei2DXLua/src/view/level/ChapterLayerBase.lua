@@ -106,6 +106,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         if eventType == ccui.TouchEventType.ended then
             print('BaseLayer:levelbutton '..sender:getName()..' touched...')                
             self:addPopup(sender:getName())
+--              self:checkLevelStateBeforePopup(sender:getName())
+            
         end
     end
 
@@ -171,6 +173,29 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     else
         -- plot level number
         self:plotLevelNumber('level'..levelIndex)
+    end
+end
+
+function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local state, coolingDay
+    for bossID, bossInfo in pairs(bossList) do
+        if bossID - (levelIndex + 1) == 0 then
+            state = bossInfo["typeIndex"] + 0
+            coolingDay = bossInfo["coolingDay"] + 0
+        end
+    end
+    
+    if state >= 4 and active ~= 0 then
+        local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+        local wordLibrary = WordLibrary.create(levelIndex)
+        s_SCENE.popupLayer:addChild(wordLibrary)   
+        back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
+        wordLibrary.close = function ( )
+            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
+        end
+    else
+        self:addPopup(levelIndex)
     end
 end
 
@@ -303,6 +328,7 @@ function ChapterLayerBase:addPopup(levelIndex)
             back:addChild(tick, 10) 
         end
     end
+    
     -- add close button
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -315,9 +341,11 @@ function ChapterLayerBase:addPopup(levelIndex)
             local WordLibrary = require("view.islandPopup.WordLibraryPopup")
             local wordLibrary = WordLibrary.create(levelIndex)
             s_SCENE.popupLayer:addChild(wordLibrary)   
-            back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
+--            back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
+            back:setVisible(false)
             wordLibrary.close = function ( )
-            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
+--            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
+            back:setVisible(true)
             end
         end
     end
@@ -332,11 +360,25 @@ function ChapterLayerBase:addPopup(levelIndex)
     wordButton:setPosition(100, back:getContentSize().height-50)
     wordButton:addTouchEventListener(wordEvent)
     
-    back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
     back:addChild(closeButton)
     back:addChild(wordButton)
-    s_SCENE:popup(back)
 
+    s_SCENE:popup(back)
+    if state >= 4 and coolingDay ~= 0 then
+        local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+        local wordLibrary = WordLibrary.create(levelIndex)
+        s_SCENE.popupLayer:addChild(wordLibrary)   
+--        back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
+        back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
+       -- back:setPosition(cc.p(800+(s_DESIGN_WIDTH-s_LEFT_X)/2,550))
+        back:setVisible(false)
+        wordLibrary.close = function ( )
+--            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
+            back:setVisible(true)
+        end
+    else
+        back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
+    end
 end
 
 function ChapterLayerBase:plotDecoration()
