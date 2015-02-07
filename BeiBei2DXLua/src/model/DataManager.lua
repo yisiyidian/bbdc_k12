@@ -5,6 +5,8 @@ require('common.text')
 ---------------------------------------------------------------------------
 local s_USE_XXTEA = true
 
+---------------------------------------------------------------------------
+-- DO NOT modify these below
 g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13'}
 g_BOOKKEYS = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee',  'primary', 'pro4', 'pro8', 'sat', 'toefl'}
 
@@ -21,6 +23,7 @@ s_BOOK_KEY_PRO4     = g_BOOKKEYS[10] -- 'pro4'
 s_BOOK_KEY_PRO8     = g_BOOKKEYS[11] -- 'pro8'
 s_BOOK_KEY_SAT      = g_BOOKKEYS[12] -- 'sat'
 s_BOOK_KEY_TOEFL    = g_BOOKKEYS[13] -- 'toefl'
+---------------------------------------------------------------------------
 
 s_bean = {'1',    '5',    '3',    '4',   '5',   '6',     '7'}
 

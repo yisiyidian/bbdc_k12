@@ -202,7 +202,7 @@ end
 function checkInEverydayInfo()
     resetLocalEverydayInfos()
     local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
-    currentWeek:checkIn(os.time())
+    currentWeek:checkIn(os.time(), s_CURRENT_USER.bookKey)
 
     local function cb (currentWeek)
         s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
