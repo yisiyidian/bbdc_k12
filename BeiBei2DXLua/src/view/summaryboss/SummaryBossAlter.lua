@@ -4,7 +4,7 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(win,wordCount,blood,index,entrance)
+function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     
     local layer = SummaryBossAlter.new()
     layer.wordCount = wordCount
@@ -12,7 +12,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance)
     layer.win = win
     layer.index = index
     layer.levelIndex = levelIndex
-
+    layer.wordList = wordList
     if layer.win then
         s_CURRENT_USER:addBeans(3)
         -- s_CURRENT_USER:removeSummaryBoss(levelIndex)
@@ -167,7 +167,13 @@ function SummaryBossAlter:lose2()
     local function challengeAgain(sender)
         
         --local summaryboss = require('view.summaryboss.SummaryBossLayer')
-        s_CorePlayManager.initSummaryModel()
+        if entrance then
+            s_CorePlayManager.initSummaryModel()
+        else
+            local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
+            local summaryBossLayer = SummaryBossLayer.create(self.wordlist,1,false)
+            s_SCENE:replaceGameLayer(summaryBossLayer) 
+        end
         
         -- stop effect
         cc.SimpleAudioEngine:getInstance():stopAllEffects()

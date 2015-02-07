@@ -64,6 +64,8 @@ end
 
 function O2OController.start()
     DataEverydayInfo = require('model.user.DataEverydayInfo')
+    DataEverydayInfo.initCheckedInMask()
+    
     DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
     DataBossWord = require('model.user.DataBossWord')
 

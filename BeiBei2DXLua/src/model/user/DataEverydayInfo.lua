@@ -6,7 +6,8 @@ local CLASSNAME = 'DataEverydayInfo'
 
 WEEKDAYSTATE_NONE = 0
 WEEKDAYSTATE_LOGEDIN = 1
-WEEKDAYSTATE_CHECKEDIN = 2
+
+WEEKDAYSTATE_CHECKEDIN_MASK = nil
 
 ---------------------------------------------------------------------------------------------------
 
@@ -15,6 +16,17 @@ local DataEverydayInfo = class(CLASSNAME, function()
 end)
 
 ---------------------------------------------------------------------------------------------------
+
+function DataEverydayInfo.initCheckedInMask()
+    if WEEKDAYSTATE_CHECKEDIN_MASK == nil then
+        WEEKDAYSTATE_CHECKEDIN_MASK = {}
+        for i, v in ipairs(g_BOOKKEYS) do
+            WEEKDAYSTATE_CHECKEDIN_MASK[v] = math.pow(2, i) -- 1st bit is WEEKDAYSTATE_LOGEDIN
+        end
+        print('DataEverydayInfo.initCheckedInMask()')
+        print_lua_table(WEEKDAYSTATE_CHECKEDIN_MASK)
+    end
+end
 
 function DataEverydayInfo.create()
     local data = DataEverydayInfo.new()
@@ -63,22 +75,41 @@ function getNumberOfWeekDay(time)
     return w
 end
 
-local function setWeekDayState(DataEverydayInfo, secondsFrom1970, weekDayState)
+local function setWeekDayState(everydayInfo, secondsFrom1970, weekDayState)
     local wd = getWeekDay(secondsFrom1970)
     if wd == 1 then
-        DataEverydayInfo.Sunday = weekDayState
+        everydayInfo.Sunday = weekDayState
     elseif wd == 2 then
-        DataEverydayInfo.Monday = weekDayState
+        everydayInfo.Monday = weekDayState
     elseif wd == 3 then
-        DataEverydayInfo.Tuesday = weekDayState
+        everydayInfo.Tuesday = weekDayState
     elseif wd == 4 then
-        DataEverydayInfo.Wednesday = weekDayState
+        everydayInfo.Wednesday = weekDayState
     elseif wd == 5 then
-        DataEverydayInfo.Thursday = weekDayState
+        everydayInfo.Thursday = weekDayState
     elseif wd == 6 then
-        DataEverydayInfo.Friday = weekDayState
+        everydayInfo.Friday = weekDayState
     elseif wd == 7 then
-        DataEverydayInfo.Saturday = weekDayState
+        everydayInfo.Saturday = weekDayState
+    end
+end
+
+local function getWeekDayState(everydayInfo, secondsFrom1970)
+    local wd = getWeekDay(secondsFrom1970)
+    if wd == 1 then
+        return everydayInfo.Sunday
+    elseif wd == 2 then
+        return everydayInfo.Monday
+    elseif wd == 3 then
+        return everydayInfo.Tuesday
+    elseif wd == 4 then
+        return everydayInfo.Wednesday
+    elseif wd == 5 then
+        return everydayInfo.Thursday
+    elseif wd == 6 then
+        return everydayInfo.Friday
+    elseif wd == 7 then
+        return everydayInfo.Saturday
     end
 end
 
@@ -86,8 +117,16 @@ function DataEverydayInfo:setWeekDay(secondsFrom1970)
     setWeekDayState(self, secondsFrom1970, WEEKDAYSTATE_LOGEDIN)
 end
 
-function DataEverydayInfo:checkIn(secondsFrom1970)
-    setWeekDayState(self, secondsFrom1970, WEEKDAYSTATE_CHECKEDIN)
+function DataEverydayInfo:checkIn(secondsFrom1970, bookKey)
+    local weekDayState = getWeekDayState(self, secondsFrom1970)
+    weekDayState =  math["or"](weekDayState, WEEKDAYSTATE_CHECKEDIN_MASK[bookKey])
+    setWeekDayState(self, secondsFrom1970, weekDayState)
+end
+
+function DataEverydayInfo:isCheckIn(secondsFrom1970, bookKey)
+    local weekDayState = getWeekDayState(self, secondsFrom1970)
+    local ret = math["and"](weekDayState, WEEKDAYSTATE_CHECKEDIN_MASK[bookKey]) > 0
+    return ret
 end
 
 function DataEverydayInfo:getDays()

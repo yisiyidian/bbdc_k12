@@ -37,6 +37,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.isPaused = false
     layer.isHinting = false
     layer.wordStack = {}
+    layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
     slideCoco[1] = s_sound_slideCoconut
@@ -75,207 +76,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     light:setAnchorPoint(0.5,0.05)
     layer:addChild(light,10)
     light:setVisible(false)    
-    
-    
-    -- handing touch events
-    onTouchBegan = function(touch, event)
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
-            return true
-        end
 
-        isTouchEnded = false
-        endTime = 0
-        
-        local location = layer:convertToNodeSpace(touch:getLocation())
-        
-        startTouchLocation = location
-        lastTouchLocation = location
-        
-        layer:checkTouchLocation(location)
-        if chapter == 2 then
-            light:setPosition(location)
-            light:setVisible(true)
-        end
-        if layer.onNode then
-            layer.isPaused = true
-            for i = 1, 5 do
-                for j = 1,5 do
-                    layer.coconut[i][j]:stopAllActions()
-                    layer.coconut[i][j]:setScale(scale)
-                end
-            end
-            startNode = layer.coconut[layer.current_node_x][layer.current_node_y]
-            selectStack[#selectStack+1] = startNode
-            layer:updateWord(selectStack,chapter)
-            startNode.addSelectStyle()
-            startNode.bigSize()
-            if startNode.isFirst > 0 and layer.crabOnView[startNode.isFirst] then
-                layer:crabBig(chapter,startNode.isFirst)
-            end
-            startAtNode = true
-        else
-            startAtNode = false
-        end
-        
-        for i = 1,#layer.wordPool[layer.currentIndex] do
-            if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) then
-                layer.isPaused = true
-                layer:crabBig(chapter,i)
-                layer.onCrab = i
-                for m = 1, 5 do
-                    for n = 1,5 do
-                        if layer.coconut[m][n].isFirst == i then
-                            layer.coconut[m][n]:runAction(cc.Repeat:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.2 * scale),cc.ScaleTo:create(0.5,1.0 * scale)),2))
-                            break
-                        end
-                    end
-                end
-            end
-        end
-        if layer.isPaused then
-            layer.isHinting = false
-        end
-        -- CCTOUCHBEGAN event must return true
-        return true
-    end
-
-    onTouchMoved = function(touch, event)
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
-            return true
-        end
-    
-        local length_gap = 5.0
-
-        local location = layer:convertToNodeSpace(touch:getLocation())
-        if chapter == 2 then
-            light:setPosition(location)
-        end
-
-        local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
-        if length <= length_gap then
-            fakeTouchMoved(location)
-        else
-            local deltaX = (location.x - lastTouchLocation.x) * length_gap/length
-            local deltaY = (location.y - lastTouchLocation.y) * length_gap/length
-
-            for i = 1, length/length_gap do
-                fakeTouchMoved({x=lastTouchLocation.x+(i-1)*deltaX,y=lastTouchLocation.y+(i-1)*deltaY})
-            end
-            fakeTouchMoved(location)
-        end
-
-        lastTouchLocation = location
-    end
-    
-    fakeTouchMoved = function(location)
-        if layer.globalLock then
-            return
-        end
-    
-        layer:checkTouchLocation(location)
-        if chapter == 2 then
-            light:setPosition(location)
-        end
-
-        if startAtNode then
-            local x = location.x - startTouchLocation.x
-            local y = location.y - startTouchLocation.y
-
-            if math.abs(x) > 5 or math.abs(y) > 5 then
-                if chapter ~= 2 then
-                    if y > x and y > -x then
-                        startNode:up()
-                    elseif y < x and y < -x then
-                        startNode:down()
-                    elseif y > x and y < -x then
-                        startNode:left()
-                    else
-                        startNode:right()
-                    end
-                end
-                startAtNode = false
-            end
-        else
-            if layer.onNode then
-                local currentNode = layer.coconut[layer.current_node_x][layer.current_node_y]
-                if currentNode.hasSelected then
-                    if #selectStack >= 2 then
-                        local stackTop = selectStack[#selectStack]
-                        local secondStackTop = selectStack[#selectStack-1]
-                        if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
-                            stackTop.removeSelectStyle()
-                            stackTop:setScale(scale)
-                            if stackTop.isFirst > 0 then
-                                stackTop.firstStyle()
-                            end
-                            table.remove(selectStack)    
-                            -- slide coco "s_sound_slideCoconut"
-                            if #selectStack <= 7 then
-                                playSound(slideCoco[#selectStack])
-                            else
-                                playSound(slideCoco[7])
-                            end
-                        end
-
-                    end
-                else
-                    if #selectStack == 0 then
-                        if chapter ~= 2 then
-                            if layer.current_dir == dir_up then
-                                currentNode.down()
-                            elseif layer.current_dir == dir_down then
-                                currentNode.up()
-                            elseif layer.current_dir == dir_left then
-                                currentNode.right()
-                            else
-                                currentNode.left()
-                            end
-                        end
-                        currentNode.addSelectStyle()
-                        currentNode.bigSize()
-                        currentNode.hasSelected = true
-                        selectStack[#selectStack+1] = currentNode
-                        --layer:updateWord(selectStack)
-                        --slide coco
-                        playSound(s_sound_slideCoconut)
-                    else
-                        local stackTop = selectStack[#selectStack]
-                        if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
-                            selectStack[#selectStack+1] = currentNode
-                            --layer:updateWord(selectStack)
-                            -- slide coco "s_sound_slideCoconut"
-                            if #selectStack <= 7 then
-                                playSound(slideCoco[#selectStack])
-                            else
-                                playSound(slideCoco[7])
-                            end
-                            
-                            currentNode.addSelectStyle()
-                            currentNode.bigSize()
-                            if chapter ~= 2 then
-                                if layer.current_dir == dir_up then
-                                    currentNode.down()
-                                elseif layer.current_dir == dir_down then
-                                    currentNode.up()
-                                elseif layer.current_dir == dir_left then
-                                    currentNode.right()
-                                else
-                                    currentNode.left()
-                                end
-                            end
-                        end
-                    end
-                end
-            else
-
-            end
-        end
-        layer:updateWord(selectStack,chapter)
-    end
-
-    onTouchEnded = function(touch, event)
-        isTouchEnded = true
-    end
 
     local function checkAnswer()
             
@@ -421,6 +222,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         
         if not match then
+            if endTime < 1 then
+                return
+            end
             local s
             if layer.girlAfraid then
                 s = 'girl-afraid'
@@ -449,6 +253,218 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             playSound(s_sound_learn_false)
         end
     end
+    
+    
+    -- handing touch events
+    onTouchBegan = function(touch, event)
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
+            return true
+        end
+
+        isTouchEnded = false
+        endTime = 0
+        
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        
+        startTouchLocation = location
+        lastTouchLocation = location
+        
+        layer:checkTouchLocation(location)
+        if chapter == 2 then
+            light:setPosition(location)
+            light:setVisible(true)
+        end
+        if layer.onNode then
+            layer.isPaused = true
+            for i = 1, 5 do
+                for j = 1,5 do
+                    layer.coconut[i][j]:stopAllActions()
+                    layer.coconut[i][j]:setScale(scale)
+                end
+            end
+            startNode = layer.coconut[layer.current_node_x][layer.current_node_y]
+            if not startNode.hasSelected then
+                selectStack[#selectStack+1] = startNode
+                layer:updateWord(selectStack,chapter)
+                
+                startNode.addSelectStyle()
+                startNode.right()
+                startNode.bigSize()
+                if startNode.isFirst > 0 and layer.crabOnView[startNode.isFirst] then
+                    layer:crabBig(chapter,startNode.isFirst)
+                end
+                startAtNode = true
+            else
+                checkAnswer()
+            end
+            
+        else
+            startAtNode = false
+        end
+        
+        for i = 1,#layer.wordPool[layer.currentIndex] do
+            if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) then
+                layer.isPaused = true
+                layer:crabBig(chapter,i)
+                layer.onCrab = i
+                for m = 1, 5 do
+                    for n = 1,5 do
+                        if layer.coconut[m][n].isFirst == i then
+                            layer.coconut[m][n]:runAction(cc.Repeat:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.2 * scale),cc.ScaleTo:create(0.5,1.0 * scale)),2))
+                            break
+                        end
+                    end
+                end
+            end
+        end
+        if layer.isPaused then
+            layer.isHinting = false
+        end
+        -- CCTOUCHBEGAN event must return true
+        return true
+    end
+
+    onTouchMoved = function(touch, event)
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
+            return true
+        end
+    
+        local length_gap = 5.0
+
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        if chapter == 2 then
+            light:setPosition(location)
+        end
+
+        local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
+        if length <= length_gap then
+            fakeTouchMoved(location)
+        else
+            local deltaX = (location.x - lastTouchLocation.x) * length_gap/length
+            local deltaY = (location.y - lastTouchLocation.y) * length_gap/length
+
+            for i = 1, length/length_gap do
+                fakeTouchMoved({x=lastTouchLocation.x+(i-1)*deltaX,y=lastTouchLocation.y+(i-1)*deltaY})
+            end
+            fakeTouchMoved(location)
+        end
+
+        lastTouchLocation = location
+    end
+    
+    fakeTouchMoved = function(location)
+        if layer.globalLock then
+            return
+        end
+    
+        layer:checkTouchLocation(location)
+        if chapter == 2 then
+            light:setPosition(location)
+        end
+
+        if startAtNode then
+            startAtNode = false
+            -- local x = location.x - startTouchLocation.x
+            -- local y = location.y - startTouchLocation.y
+
+            -- if math.abs(x) > 5 or math.abs(y) > 5 then
+            --     if chapter ~= 2 then
+            --         if y > x and y > -x then
+            --             startNode:up()
+            --         elseif y < x and y < -x then
+            --             startNode:down()
+            --         elseif y > x and y < -x then
+            --             startNode:left()
+            --         else
+            --             startNode:right()
+            --         end
+            --     end
+            --     startAtNode = false
+            -- end
+        else
+            if layer.onNode then
+                local currentNode = layer.coconut[layer.current_node_x][layer.current_node_y]
+                if currentNode.hasSelected then
+                    if #selectStack >= 2 then
+                        local stackTop = selectStack[#selectStack]
+                        local secondStackTop = selectStack[#selectStack-1]
+                        if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
+                            stackTop.removeSelectStyle()
+                            stackTop:setScale(scale)
+                            if stackTop.isFirst > 0 then
+                                stackTop.firstStyle()
+                            end
+                            table.remove(selectStack)    
+                            -- slide coco "s_sound_slideCoconut"
+                            if #selectStack <= 7 then
+                                playSound(slideCoco[#selectStack])
+                            else
+                                playSound(slideCoco[7])
+                            end
+                        end
+
+                    end
+                else
+                    if #selectStack == 0 then
+                        if chapter ~= 2 then
+                            if layer.current_dir == dir_up then
+                                currentNode.down()
+                            elseif layer.current_dir == dir_down then
+                                currentNode.up()
+                            elseif layer.current_dir == dir_left then
+                                currentNode.right()
+                            else
+                                currentNode.left()
+                            end
+                        end
+                        currentNode.addSelectStyle()
+                        currentNode.bigSize()
+                        currentNode.hasSelected = true
+                        selectStack[#selectStack+1] = currentNode
+                        --layer:updateWord(selectStack)
+                        --slide coco
+                        playSound(s_sound_slideCoconut)
+                    else 
+                        local stackTop = selectStack[#selectStack]
+                        if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
+                            selectStack[#selectStack+1] = currentNode
+                            --layer:updateWord(selectStack)
+                            -- slide coco "s_sound_slideCoconut"
+                            if #selectStack <= 7 then
+                                playSound(slideCoco[#selectStack])
+                            else
+                                playSound(slideCoco[7])
+                            end
+                            
+                            currentNode.addSelectStyle()
+                            currentNode.bigSize()
+                            if chapter ~= 2 then
+                                if layer.current_dir == dir_up then
+                                    currentNode.down()
+                                elseif layer.current_dir == dir_down then
+                                    currentNode.up()
+                                elseif layer.current_dir == dir_left then
+                                    currentNode.right()
+                                else
+                                    currentNode.left()
+                                end
+                            end
+                        end
+                    end
+                end
+            else
+
+            end
+        end
+        layer:updateWord(selectStack,chapter)
+    end
+
+    onTouchEnded = function(touch, event)
+        isTouchEnded = true
+        checkAnswer()
+    end
+
+    
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
@@ -493,9 +509,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             endTime = endTime + delta
         end
         if endTime >= 1 then
-            endTime = 0
+            
             checkAnswer()
-
+            endTime = 0
         end
         
         if layer.hintTime < 10 or layer.isPaused then
@@ -1170,7 +1186,7 @@ end
 function SummaryBossLayer:win(chapter,entrance)
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance)
+    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance,wordList)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
@@ -1183,7 +1199,7 @@ end
 function SummaryBossLayer:lose(chapter,entrance)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,entrance)
+    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,entrance,wordList)
     alter:setPosition(0,0)
     self:addChild(alter,1000)
     
