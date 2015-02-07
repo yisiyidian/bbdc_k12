@@ -22,8 +22,8 @@ function MissionProgressLayer.getNotContainedInLocalDatas(callback)
 end
 
 function MissionProgressLayer.create(share)
-    local missionCount = s_CURRENT_USER:getTodayTotalReviewBossNum() + 1
-    local completeCount = s_CURRENT_USER:getTodayReaminReviewBossNum()
+    local missionCount = s_LocalDatabaseManager.getTodayTotalBossNum() + 1
+    local completeCount = s_LocalDatabaseManager.getTodayRemainBossNum()
     if share ~= nil and share then
         completeCount = missionCount
     end
@@ -295,22 +295,22 @@ function MissionProgressLayer.create(share)
 --    layer:addChild(stackButton)
 
 
-    local function enterSummaryBoss(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local circle = require('view.summaryboss.SummaryBossLayer').create({},1)
-            s_SCENE:replaceGameLayer(circle) 
-        end
-    end
+    -- local function enterSummaryBoss(sender, eventType)
+    --     if eventType == ccui.TouchEventType.ended then
+    --         local circle = require('view.summaryboss.SummaryBossLayer').create({},1)
+    --         s_SCENE:replaceGameLayer(circle) 
+    --     end
+    -- end
 
-    local Button_boss = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
-    Button_boss:setPosition(bigWidth/2 - 300 , s_DESIGN_HEIGHT/2 - 400)
-    Button_boss:setTitleText("summaryboss")
-    Button_boss:setTitleColor(cc.c4b(255,255,255,255))
-    Button_boss:setTitleFontSize(40)
-    Button_boss:addTouchEventListener(enterSummaryBoss)
-    layer:addChild(Button_boss)
+    -- local Button_boss = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+    -- Button_boss:setPosition(bigWidth/2 - 300 , s_DESIGN_HEIGHT/2 - 400)
+    -- Button_boss:setTitleText("summaryboss")
+    -- Button_boss:setTitleColor(cc.c4b(255,255,255,255))
+    -- Button_boss:setTitleFontSize(40)
+    -- Button_boss:addTouchEventListener(enterSummaryBoss)
+    -- layer:addChild(Button_boss)
 
-    Button_boss:setScale(0.5)
+    -- Button_boss:setScale(0.5)
     
     
     

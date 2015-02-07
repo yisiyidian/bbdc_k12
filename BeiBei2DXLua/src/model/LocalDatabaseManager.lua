@@ -176,13 +176,31 @@ function Manager.saveDataDailyStudyInfo(data)
    localdatabase_dailyStudyInfo.saveDataDailyStudyInfo(data)
 end
 
---function Manager.addOrdinalNum(init)
---    localdatabase_dailyStudyInfo.addOrdinalNum(init)
---end
---
---function Manager.getOrdinalNum()
---    return localdatabase_dailyStudyInfo.getOrdinalNum()
---end
+---- Task ------------------------------------------------------------------------------------------------
+
+function Manager.getTodayTotalTaskNum()
+    return localdatabase_task.getTodayTotalTaskNum()
+end
+
+function Manager.getTodayRemainTaskNum()
+    return localdatabase_task.getTodayRemainTaskNum()
+end
+
+function Manager.getTodayTotalBossNum()
+    return localdatabase_task.getTodayTotalBossNum()
+end
+
+function Manager.getTodayRemainBossNum()
+    return #localdatabase_bossWord.getTodayReviewBoss()
+end
+
+function Manager.minusTodayRemainTaskNum()
+    local todayRemainTaskNum = localdatabase_task.getTodayRemainTaskNum()
+
+    if todayRemainTaskNum > 0 then
+        localdatabase_task.setTodayRemainTaskNum(todayRemainTaskNum-1)
+    end
+end
 
 ---- Boss Word -------------------------------------------------------------------------------------------
 
@@ -215,6 +233,7 @@ function Manager.addWrongWord(wordindex)
 end
 
 function Manager.updateTypeIndex(bossID)
+    Manager.minusTodayRemainTaskNum()
     localdatabase_bossWord.updateTypeIndex(bossID)
 end
 

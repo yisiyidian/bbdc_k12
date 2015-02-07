@@ -344,13 +344,12 @@ function M.addWrongWord(wordindex)
         local wordCount = #split(wordList, "|")
 
         if wordCount == s_max_wrong_num_everyday - 1 then
+            s_LocalDatabaseManager.minusTodayRemainTaskNum()
+
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
 
             saveDataToServer(false, time, bossID, 1, newWordList, wordindex, 1)
-
-            -- query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..wordindex..") ;"
-            -- Manager.database:exec(query)
             return true
         else
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
