@@ -24,7 +24,7 @@ local function creatWordLayout(word)
     local sentenceCn2       = currentWord.sentenceCn2
 
     local layout = ccui.Layout:create()
-    layout:setContentSize(cc.size(545, 683))
+    layout:setContentSize(cc.size(510, 683))
 
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm ,false)
     soundMark:setPosition(cc.p(layout:getContentSize().width / 2, layout:getContentSize().height * 0.8))
@@ -53,7 +53,7 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
     local backPopup = cc.Sprite:create("image/islandPopup/backforinfo.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backPopup)
-    
+
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
@@ -67,7 +67,7 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
     button_close:setPosition(backPopup:getContentSize().width - 30 , backPopup:getContentSize().height - 30 )
     button_close:addTouchEventListener(button_close_clicked)
     backPopup:addChild(button_close,10)
-    
+
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
@@ -97,7 +97,7 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
     self.progress_label = cc.Label:createWithSystemFont(self.current_index.."/"..self.total_index,"",30)
     self.progress_label:setPosition(progress_sprite:getContentSize().width * 0.5,progress_sprite:getContentSize().height * 0.5)
     progress_sprite:addChild(self.progress_label)
-    
+
     local last_button_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
@@ -112,7 +112,7 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
     last_button:setAnchorPoint(0.5,0.5)
     last_button:addTouchEventListener(last_button_clicked)
     progress_sprite:addChild(last_button)
-    
+
     local next_button_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
@@ -128,7 +128,22 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
     next_button:addTouchEventListener(next_button_clicked)
     progress_sprite:addChild(next_button)
 
-    
+    local onTouchBegan = function(touch, event)
+        return true  
+    end
+
+    local onTouchEnded = function(touch, event)
+
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)  
+
+
 end
 
 local function findIndex(currentIndex,wordList,number)
@@ -152,18 +167,18 @@ local function findIndex(currentIndex,wordList,number)
 end
 
 function WordInfoPopup:createInfo(wordname,index,wordlist)
-    
+
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
-    pageView:setContentSize(cc.size(545, 683))
-    local backgroundSize = cc.size(545, 683)
+    pageView:setContentSize(cc.size(530, 683))
+    local backgroundSize = cc.size(500, 683)
     pageView:setPosition(cc.p((s_DESIGN_WIDTH - backgroundSize.width) / 2 +
         (backgroundSize.width - pageView:getContentSize().width) / 2,
         (s_DESIGN_HEIGHT - backgroundSize.height) / 2 +
         (backgroundSize.height - pageView:getContentSize().height) / 2))
-        
+
     if wordlist == nil or #wordlist == 0 then
-       return    
+        return    
     end
     local wordIndex = {findIndex(index,wordlist,-1),tonumber(index),findIndex(index,wordlist,1)}
     for i=1, 3 do
@@ -183,7 +198,7 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
             pageView:scrollToPage(target - 1)
         end
     end
-    
+
     local function pageViewEvent(sender, eventType)
         if eventType == ccui.PageViewEventType.turning then
             if pageView:getCurPageIndex() + 1 == 1 then
@@ -194,7 +209,7 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
                 pageView:scrollToPage(1)             
                 self:changeNum(false)
             elseif pageView:getCurPageIndex() + 1 == 2 then
-            
+
             elseif pageView:getCurPageIndex() + 1 == 3 then
                 pageView:removePageAtIndex(0)
                 local newIndex = findIndex(self.current_index,wordlist,2)
@@ -210,19 +225,19 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
 end
 
 function WordInfoPopup:changeNum(bool)
-	if bool == true then
+    if bool == true then
         self.current_index = self.current_index + 1
         if self.current_index > self.total_index then
-           self.current_index = 1
+            self.current_index = 1
         end
         self.progress_label:setString(self.current_index.."/"..self.total_index)
-	else 
+    else 
         self.current_index = self.current_index - 1
         if self.current_index < 1  then
             self.current_index = self.total_index
         end
         self.progress_label:setString(self.current_index.."/"..self.total_index)
-	end
+    end
 end
 
 return WordInfoPopup
