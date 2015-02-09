@@ -1195,7 +1195,7 @@
 					"-fobjc-arc",
 				);
 				PROVISIONING_PROFILE = "566768c0-d417-4156-84b0-9c5907c16069";
-				"PROVISIONING_PROFILE[sdk=*]" = "7a623c22-0c54-4d2d-9e04-b223627cf8aa";
+				"PROVISIONING_PROFILE[sdk=*]" = "7a623c22-0c54-4d2d-b223627cf8aa9e04-";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
@@ -1233,7 +1233,7 @@
 					"-fobjc-arc",
 				);
 				PROVISIONING_PROFILE = "95a38e0c-707e-4cb7-9e99-b7ad5ebf8780";
-				"PROVISIONING_PROFILE[sdk=*]" = "7a623c22-0c54-4d2d-9e04-b223627cf8aa";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
