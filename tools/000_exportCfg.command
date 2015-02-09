@@ -50,4 +50,4 @@ cd ${BASE_DIR_FOR_SCRIPT_SELF}/pack_files
 
 cp -f ${TMP_XXTEA_DIR}/* ${RES_CFG}
 cp ${RAW_BOOKS}/*.book ${RES_CFG}/
-cp ${RAW_CONFIGS}/*.bin ${RES_CFG}/
+# cp ${RAW_CONFIGS}/*.sqlite ${RES_CFG}/
