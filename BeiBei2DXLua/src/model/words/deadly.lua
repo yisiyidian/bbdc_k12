@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deadly"]={"deadly","['dedlɪ]","['dɛdli]","adj.致命的",'adj.致命的,致死的|||adv.非常地,如死一般地','The conference was deadly dull.','会议开得死气沉沉的.','Cancer is a deadly disease.','癌症是一种致命的疾病。'}

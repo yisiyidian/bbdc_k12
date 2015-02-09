@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pawn"]={"pawn","[pɔːn]","[pɔn]","n.典当",'n.典当,抵押物,人质,(国际象棋中)卒|||vt.典当,以…为担保','I redeemed my watch from the pawn shop.','我把手表从当铺里赎回来了。','Chess includes rook, knight, bishop, queen, king and pawn.','国际象棋有车、马、象、后、王和卒。'}

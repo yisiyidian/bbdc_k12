@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corridor"]={"corridor","['kɒrɪdɔː]","['kɔrɪdɔr]","n.走廊",'n.走廊','The meeting spilt over from the hall into the corridor.','参加会议的人从大厅到走廊挤得水泄不通.','She finally nailed me in the corridor.','她最後在走廊里把我抓住了.'}

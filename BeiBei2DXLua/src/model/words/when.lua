@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["when"]={"when","[wen]","[wɛn]","conj.在…时",'adv.什么时候；（用于时间的表达方式之后）在那时；其时；当时|||conj.在…时；既然；如果|||pron.什么时候；那时|||n.时间，时候；日期；场合','||When|| will we leave?','我们什么时候离开?','I\'ll call you when I get there.','我一到那里就给你打电话'}

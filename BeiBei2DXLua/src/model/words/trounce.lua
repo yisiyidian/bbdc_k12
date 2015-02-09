@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trounce"]={"trounce","[traʊns]","[traʊns]","v.痛打",'v.痛打,严惩|||vt.痛打,痛骂,严责','Wales were trounced 5-0 by Poland.','威尔士队让波兰队以5比0打得一败涂地.','I was out to trounce on every digression and indiscretion conducted (or should I say semiconducted) in this performance','“我总是力图严厉责备这场表演中出现的（或者我应该说几乎出现的）偏题或疏忽”'}

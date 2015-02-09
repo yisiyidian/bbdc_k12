@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["visitation"]={"visitation","[vɪzɪ'teɪʃ(ə)n]","['vɪzə'teʃən]","n.访问",'n.访问,视察，探视权|||n.苦难，天罚|||Visitation:[宗]圣母访问节','We had sundry visitations from the Tax Inspector.','税务检查员常来我们这里, 不胜其烦.','The famine was a visitation of God for their sins.','那次饥荒算是上帝对他们罪孽的惩罚.'}

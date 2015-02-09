@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annul"]={"annul","[ə'nʌl]","[ ə'nʌl ]","v.废除",'v.废除,消减,取消，宣告无效','The marriage was annulled last month.','上个月这桩婚姻被宣告无效。','Opposition party leaders are now pressing for the entire election to be annulled.','反对党领导人现正强烈要求宣告这次选举无效。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tuna"]={"tuna","['tjuːnə]","['tunə]","n.金枪鱼",'n.金枪鱼','I like to eat tinned tuna fish.','我喜欢吃金枪鱼罐头。','||Tuna|| can be grilled, fried or barbecued.','金枪鱼可以用烤炉烤、油炸或者烧烤。'}

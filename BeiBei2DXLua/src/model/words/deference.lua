@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deference"]={"deference","['def(ə)r(ə)ns]","['dɛfərəns]","n.顺从",'n.顺从，敬重','I changed my plan in deference to your opinion.','我听从你的意见，改变了计划。','He showed deference to his coach.','他尊重教练。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["medieval"]={"medieval","[ˌmediˈi:vl]","[,midɪ'ivəl]","adj.中世纪的",'adj.中世纪的','The personification of evil as a devil is a feature of medieval painting.','用魔鬼象徵罪恶是中世纪绘画的特色.','The gallery is a treasure trove of medieval art.','这个画廊是中世纪艺术的宝库。'}

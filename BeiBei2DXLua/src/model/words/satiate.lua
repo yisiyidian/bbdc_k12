@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["satiate"]={"satiate","['seɪʃɪeɪt]","['seʃɪet]","vt.使过饱",'vt.使过饱,使满足|||adj.达到满足的','The Edinburgh International Festival offers enough choice to satiate most appetites.','爱丁堡国际艺术节上活动丰富，大多数人都会尽兴而归。','The dinner was enough to satiate the gourmets.','晚餐足以让这些美食家们大饱口福。'}

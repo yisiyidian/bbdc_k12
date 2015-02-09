@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["network"]={"network","['netwɜːk]","['nɛtwɝk]","n.网络",'n.网络,系统,广播网|||vt.用网覆盖,联网|||vi.加入网络','Under the mountain there is a network of caves.','这座山里有许多相通的洞穴.','The fabrics are merchandised through a network of dealers.','通过经销网点销售纺织品.'}

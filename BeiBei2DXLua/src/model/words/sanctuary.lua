@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sanctuary"]={"sanctuary","['sæŋ(k)tjʊərɪ]","['sæŋktʃuɛri]","n.圣所",'n.圣所,耶路撒冷的神殿,至圣所','The ancient privilege of sanctuary was transferred to the Christian temple.','古代的庇护特权转移到了基督教的教堂。','It is a classic sanctuary in which the rationalist fancy may take refuge.','这是一所古雅的圣殿，理性主义者可以躲在其中。'}

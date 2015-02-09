@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insect"]={"insect","['ɪnsekt]","['ɪnsɛkt]","n.昆虫",'n.昆虫','She stamped on the insect and killed it.','她踩死了一只虫子。','Do you think butterfly is a type of insect?','你认为蝴蝶是一种昆虫 吗 ?'}

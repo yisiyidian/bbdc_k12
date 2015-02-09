@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["puff"]={"puff","[pʌf]","[pʌf]","n.一阵喷烟",'n.一阵喷烟,粉扑,泡夫|||vt.喷出,喘息,夸张,膨胀|||vi.喷出,膨胀,骄傲|||adj.吹嘘的','His speech was just puff.','他的发言尽是吹捧而已。','He blew out the candles with a single puff.','他一口气吹灭了蜡烛。'}

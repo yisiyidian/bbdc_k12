@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gutless"]={"gutless","['gʌtlɪs]","['gʌtləs]","adj.没有勇气的",'adj.没有勇气的,懦怯的，不重要的','By attacking me, by attacking my wife, he has proved himself to be a gutless coward.','通过袭击我，袭击我妻子，他已经证明了自己是一个胆小的懦夫。','little girl: hah! you\'re just a gutless fatso!','小女孩：你只不过是个没勇气的胖子'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foment"]={"foment","[fə(ʊ)'ment]","[ 'fəument ]","v.挑起",'v.挑起，激起，煽动（事端或暴力）','The rebels know the truth and seek to foment revolution.','那些叛乱者知道真相，并且想办法来挑起革命。','They accused strike leaders of fomenting violence.','他们指责罢工领导人煽动暴力。'}

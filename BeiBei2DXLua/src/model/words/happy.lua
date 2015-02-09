@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["happy"]={"happy","['hæpɪ]","['hæpɪ]","adj.快乐的",'adj.快乐的,幸福的,乐于做某事','That wasn\'t a very happy choice of words.','那样的措辞并不十分恰当','I wish you a very happy future.','我祝你有非常幸福的未来。'}

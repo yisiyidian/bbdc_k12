@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intention"]={"intention","[ɪn'tenʃ(ə)n]","[ɪn'tɛnʃən]","n.意图",'n.意图,意向,目的','I have no intention of coming to this terrible place again!','我再也不想到这个糟糕的地方来了.','Have you heard of her intention to resign?','你听到她打算辞职的传闻了吗？'}

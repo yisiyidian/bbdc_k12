@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shady"]={"shady","['ʃeɪdɪ]","['ʃedi]","adj.荫凉的",'adj.荫凉的,成荫的,暗的','At midday in madrid, it\'s better to walk on the shady of the street.','在马德里的中午时分，最好在街道的阴凉一侧行走。','After a while, we find a shady place under some poplar trees.','过了一会儿，我们在一些白杨树下面找到了一个遮阴的地方。'}

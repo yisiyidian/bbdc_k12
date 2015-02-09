@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mortify"]={"mortify","['mɔːtɪfaɪ]","['mɔrtɪfaɪ]","v.抑制",'v.抑制,苦修,使...悔恨','The knowledge of future evils ||mortified|| the present felicities.','对未来苦难的了解压抑了目前的喜悦。','He felt ||mortified|| for his mistake.','他对他的错深感羞愧。'}

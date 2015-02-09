@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waylay"]={"waylay","[weɪ'leɪ]","[we'le]","v.埋伏",'v.埋伏,伏击|||vt.伏击,拦住...问讯','She lingered outside the theater to waylay him after the show.','她在戏院外面徘徊想在演出之后拦住他说话。','The trucks are being ||waylaid|| by bandits.','这些卡车被强盗们拦了下来。'}

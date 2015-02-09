@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["roulette"]={"roulette","[rʊ'let]","[rʊ'lɛt]","n.轮盘赌",'n.轮盘赌,点线机,转迹线|||vt.用滚轮压骑缝孔','I think I\'ll try my luck at roulette.','我想玩玩轮盘赌碰碰运气。','I had been playing roulette at the casino.','我过去一直在那家赌场玩轮盘赌。'}

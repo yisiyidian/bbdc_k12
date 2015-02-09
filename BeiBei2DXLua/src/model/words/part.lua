@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["part"]={"part","[pɑːt]","[pɑrt]","n.部份",'n.部份,零件,角色,部位|||vt.分开,分离,分配|||vi.分离,离开|||adv.部份地|||adj.分离的','I want no part in this sordid business.','我不想和这一肮脏勾当有任何瓜葛。','I\'m afraid I have to part company with you there.','看来在这一点上我不敢苟同。'}

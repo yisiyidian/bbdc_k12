@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trustworthy"]={"trustworthy","['trʌs(t)wɜːðɪ]","['trʌstwɝði]","adj.可信赖的",'adj.可信赖的','He was esteemed trustworthy.','他被认为是可靠的。','Can you engage that all his statements are trustworthy?','你能担保他的话都可靠 吗 ?'}

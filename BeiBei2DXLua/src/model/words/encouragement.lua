@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encouragement"]={"encouragement","[ɪn'kʌrɪdʒm(ə)nt]","[ɪn'kɝɪdʒmənt]","n.鼓励",'n.鼓励','Her encouragement gave me a great sense of uplift.','她鼓励我激发了我的上进心.','The crowd yelled (out) encouragement at the players.','人们叫喊著为选手打气.'}

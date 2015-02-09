@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lumen"]={"lumen","['luːmen]","['lumɛn]","n.流明",'n.流明,内腔','A lumen is a measure of the rate of emission of light energy.','流明是光能放射率的量度单位。','The conical configuration of the appendix makes obstruction of the lumen unlikely.','阑尾呈圆锥形,不易造成腔内梗阻。'}

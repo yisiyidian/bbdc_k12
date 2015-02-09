@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["phosphorus"]={"phosphorus","['fɒsf(ə)rəs]","['fɑsfərəs]","n.磷",'n.磷','Because the removal of phosphorus and sulfur require special condition that can be met only by the basic process.','因为除去钢中的磷和硫需要一些特殊的条件，这些条件只有碱性法才能满足。','A fertilizer containing phosphorus compounds.','磷肥含有磷化合物的一种化肥'}

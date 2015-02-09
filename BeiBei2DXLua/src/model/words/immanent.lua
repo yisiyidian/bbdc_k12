@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immanent"]={"immanent","['ɪmənənt]","['ɪmənənt]","adj.普遍存在的",'adj.普遍存在的,内在的','He believed that beauty was not something imposed, but something immanent.','他认为美丽不是外在的而是内在的.','believed in a God immanent in human beings.','相信人类有一个内在的上帝'}

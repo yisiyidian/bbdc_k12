@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corny"]={"corny","['kɔːnɪ]","['kɔrni]","adj.平淡无奇的,",'adj.谷类的，平淡无奇的,乡巴佬的，长鸡眼的','I know it sounds corny, but I\'m really not motivated by money.','我知道这听起来有点俗，但是我真的不是为了钱。','...a corny slapstick movie.','…一部老套的闹剧。'}

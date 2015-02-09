@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["platform"]={"platform","['plætfɔːm]","['plæt'fɔrm]","n.平台",'n.平台,月台,讲台,坛,计划','Any train from this platform stops at Gatwick.','从这一月台开出的火车都在盖特威克停.','He was walking up and down the station platform.','他在火车站的月台上走来走去。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["massage"]={"massage","['mæsɑːʒ; mə'sɑːʒ; -dʒ]","[mə'sɑʒ]","n.按摩",'n.按摩,揉|||vt.按摩,揉,美化,奉承,篡改数据','A month or so in plaster and then a little massage and therapy, and we\'ll have your ankle and you as right as a trivet.','打一个月左右的石膏, 然后做点按摩和理疗, 我们会让你的踝部和身体恢复健康。','I want somebody to massage my shoulders.','我想要有人给我按摩肩膀。'}

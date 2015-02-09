@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["morsel"]={"morsel","['mɔːs(ə)l]","['mɔrsl]","n.少量",'n.少量,一口,一片|||vt.分成小块','A very small quantity, especially of food; a morsel.','非常小的量，尤指食物而言；一小片','Between the cup and the lip a morsel may slip.','[谚]吃到嘴里才算是你的。'}

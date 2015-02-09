@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["femur"]={"femur","['fiːmə]","['fimɚ]","n.大腿骨",'n.大腿骨,股骨','||Femur|| is the longest bone in human body.','（大腿骨，股骨）是人身上最长的骨头。','He broke his femur when falling off the bike.','他从自行车上摔下来，股骨折了。'}

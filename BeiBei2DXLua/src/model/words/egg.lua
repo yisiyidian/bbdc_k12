@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["egg"]={"egg","[eg]","[ɛɡ]","n.蛋",'n.蛋;(俚语)人','I didn\'t want to do it but Peter kept egging me on.','我本不想做那件事, 但彼得一直怂恿我.','Do you want a boiled egg for breakfast?','你早饭要吃煮鸡蛋吗？'}

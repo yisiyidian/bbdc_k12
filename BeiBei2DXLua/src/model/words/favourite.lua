@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["favourite"]={"favourite","['feɪv(ə)rɪt]","['fevərɪt]","adj.特别喜爱的",'adj.特别喜爱的|||n.特别喜爱的人(或物)','It used to be my favourite restaurant but the standard of cooking has fallen off recently.','那是我以前最喜欢的饭馆，但近来烹饪水平已大不如前了。','My favourite film stars Marilyn Monroe.','我最喜欢的电影是玛丽莲·梦露主演的。'}

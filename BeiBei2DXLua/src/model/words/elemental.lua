@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elemental"]={"elemental","[,elɪ'ment(ə)l]","[,ɛlɪ'mɛntl]","adj.元素的",'adj.元素的,基本的，自然力的|||n.元素','The storm stuck with elemental fury.','暴风雨以大自然的狂怒袭来.','The elemental mathematics is very easy.','初等数学很简单。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["teddy"]={"teddy","['tedɪ]","['tɛdi]","n.泰迪(熊)",'n.泰迪(熊)|||n.妇女连衫裤','He loved soft things, and would often smile at the touch of a soft teddy bear or other soft toy.','他喜欢柔软的东西, 在触摸软软的艾德熊和别的柔软的东西时经常露出微笑。','The little boy go upstairs trailing his teddy bear behind him.','那小男孩儿走上楼去, 还拖著他的玩具熊。'}

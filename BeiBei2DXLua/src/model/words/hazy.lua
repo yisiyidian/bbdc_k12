@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hazy"]={"hazy","['heɪzɪ]","['hezi]","adj.朦胧的",'adj.朦胧的,烟雾弥漫的，不明白的','The mountains were hazy in the distance.','远处的群山笼罩在雾霭之中。','The air was thin and crisp, filled with hazy sunshine and frost.','空气稀薄清新，其间日光蒙眬，寒气逼人。'}

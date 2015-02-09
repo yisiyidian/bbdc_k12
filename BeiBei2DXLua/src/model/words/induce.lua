@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["induce"]={"induce","[ɪn'djuːs]","[ɪn'dus]","vt.引诱",'vt.引诱,导致,催生','We couldn\'t induce the old lady to travel by air.','我们无法劝服那老太太乘飞机旅行。','Too much food induces sleepiness.','吃得太饱会引起睡意。'}

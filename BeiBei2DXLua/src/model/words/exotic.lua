@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exotic"]={"exotic","[ɪg'zɒtɪk; eg-]","[ɪɡ'zɑtɪk]","adj.异国的",'adj.异国的,外来的,奇异的,脱衣舞的|||n.(复数)异国风格的事物,脱衣舞者','Flavor your favorite dishes with exotic herbs and spices.','把异国风味的芳草和香料加到你最喜爱的菜肴里调味。','She likes to wear exotic clothes.','她喜欢穿奇装异服。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["footle"]={"footle","['fuːt(ə)l]","[ 'fu:tl ]","vi.浪费(时间)",'vi.胡闹,浪费(时间)|||n.愚蠢，胡话','I wish he would not footle about so much.','我希望他不要这样混日子。','show how ||footling|| statistical arguments can be','无价值'}

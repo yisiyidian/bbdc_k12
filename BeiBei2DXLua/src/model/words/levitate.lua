@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["levitate"]={"levitate","['levɪteɪt]","['lɛvɪtet]","v.(使)浮于空中",'v.(使)浮于空中|||vt.升在空中','Ghosts will simply levitate over the water.','鬼魂只是悬浮在水面上方。','I often dream that I can levitate.','我经常梦想我能够悬浮在空中。'}

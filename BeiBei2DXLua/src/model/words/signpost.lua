@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["signpost"]={"signpost","['saɪnpəʊst]","['saɪnpost]","n.招牌柱",'n.招牌柱,广告柱,路标|||vt.指示','The signpost indicates the right way to go.','路标标示正确的前进路线。','The signpost points in a westerly direction.','路标指向西.'}

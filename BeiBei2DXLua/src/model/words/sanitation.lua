@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sanitation"]={"sanitation","[sænɪ'teɪʃ(ə)n]","[,sænɪ'teʃən]","n.环境卫生",'n.环境卫生(卫生设备,下水道设备)','The people lived in that city can keep sanitation clean.','住在那个城市的人们能保持公共卫生的清洁。','There is no sanitation in the room.','这个房间没有卫生设施。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drug"]={"drug","[drʌg]","[drʌg]","n.药",'n.药,毒品|||vt.下药,使...服麻醉药|||vi.吸毒','As the addict\'s toleration increases, he requires ever larger doses of the drug.','由于嗜毒者对药物的耐受性增加了，因而需要更大剂量的毒品。','They were arrested for drug offences.','他们因吸毒罪而被逮捕。'}

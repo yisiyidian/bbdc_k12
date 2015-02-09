@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["throng"]={"throng","[θrɒŋ]","[θrɔŋ]","n.群众",'n.群众,一大群，大量|||adj.拥挤的,忙的|||v.群集,挤压,挤满','She had to press through the throng to reach the stage.','她不得不穿过拥挤的人群走上舞台。','The airport was thronged with holiday-makers.','飞机场挤满了去度假的人。'}

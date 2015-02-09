@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contented"]={"contented","[kən'tentɪd]","[kən'tɛntɪd]","adj.满足的",'adj.满足的,心安的|||动词content的过去式和过去分词形式','A contented mind is a perpetual feast.','【谚】知足长乐。','He looked very contented just sitting and watching us.','他只坐着看我们就显得很满足的样子。'}

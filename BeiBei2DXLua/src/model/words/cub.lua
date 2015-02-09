@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cub"]={"cub","[kʌb]","[kʌb]","n.幼兽",'n.幼兽,年轻人','As a cub reporter he would learn the facts of life in the newspaper world.','作为一名初出茅庐的记者，他要了解报界生涯的内幕。','You cheeky young cub!','你这莽撞的毛头小伙子!'}

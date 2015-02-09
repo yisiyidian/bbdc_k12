@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monstrous"]={"monstrous","['mɒnstrəs]","['mɑnstrəs]","adj.怪异的",'adj.畸形的,怪异的，巨大的','a monstrous tidal wave.','一股巨大的浪潮','All the students were burning with anger at this monstrous crime.','所有的学生对这残暴的罪行都感到无比的愤慨。'}

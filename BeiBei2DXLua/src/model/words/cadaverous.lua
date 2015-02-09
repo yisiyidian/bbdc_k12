@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cadaverous"]={"cadaverous","[kə'dæv(ə)rəs]","[kə'dævərəs]","adj.像尸体的",'adj.像尸体的,枯槁的，憔悴的','I saw a cadaverous face appear at a small window.','我看到小窗口处出现了一张没有血色的面孔。','The tall, thin man had a long, cadaverous face.','那个高个儿男子长着一张苍白的长脸。'}

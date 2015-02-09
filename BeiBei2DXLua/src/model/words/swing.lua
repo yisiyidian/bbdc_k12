@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swing"]={"swing","[swɪŋ]","[swɪŋ]","n.摇摆",'n.摇摆,改变,冲力|||vt.&vi.摇摆,旋转,动摇','He ||swung|| round to confront his accusers.','他突然转过身来面对著那些指控他的人。','Can you swing them round to my point of view?','你能让他们转而支持我的观点吗？'}

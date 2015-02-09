@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accession"]={"accession","[ək'seʃ(ə)n]","[æk'sɛʃən]","n.到达",'n.到达,即位,加入','On his accession to the throne, he inherit vast estate.','他一登上王位就继承了大宗财产。','the queen\'s accession to the throne.','女王登基'}

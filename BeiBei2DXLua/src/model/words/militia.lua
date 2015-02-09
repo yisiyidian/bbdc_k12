@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["militia"]={"militia","[mɪ'lɪʃə]","[mə'lɪʃə]","n.民兵组织",'n.民兵组织，义勇军,国民军','People gathered to form a militia to protect their town.','人们聚集起来，组成国民自卫队来保卫他们的城镇。','The boy felt very proud since he joined state militia.','自从他加入人民自卫队后，那个男孩感到非常的自豪。'}

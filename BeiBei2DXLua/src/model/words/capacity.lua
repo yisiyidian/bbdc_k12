@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capacity"]={"capacity","[kə'pæsɪtɪ]","[kə'pæsəti]","n.能力",'n.能力,容量,容积;资格,职位|||adj.(达到最大容量)满的','The drama drew a capacity audience; you should have gone to see it.','这出戏吸引了满场观众；你真该去看的。','I do not believe in equality of capacity, but I do believe in equality of opportunity.','我不相信能力均等，但我确实相信机会均等。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poignancy"]={"poignancy","['pɔɪɡnənsi]","[ 'pɔinjənsi, 'pɔiɡnənsi ]","n.辛酸事",'n.辛酸事,尖锐','It is a precious moment, and one that is full of poignancy.','这是一个宝贵的片刻，也是一个充满辛酸的片刻。','There is a certain poignancy about Eric.','埃里克的身上有一种哀伤。'}

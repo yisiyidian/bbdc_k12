@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emboss"]={"emboss","[ɪm'bɒs; em-]","[ɪm'bɔs]","vt.加浮雕花纹于",'vt.加浮雕花纹于,使凸出，装饰','He carried a leather briefcase embossed with his initials.','他带着一个饰有浮凸的姓名首字母的皮公事包。','Can you read the addresses embossed on the notepaper?','你能看出凸印在信纸上的地址吗？'}

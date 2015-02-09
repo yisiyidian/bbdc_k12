@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["theirs"]={"theirs","[ðeəz]","[ðɛrz]","pron.他(她,它)们的",'pron.他(她,它)们的','So far as I know, our football team is more advanced than theirs.','就我所知, 我们的足球队比他们的有实力。','||Theirs|| are blue.','他们的是蓝色的。'}

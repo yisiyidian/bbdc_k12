@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sate"]={"sate","[seɪt]","[set]","v.使心满意足",'v.使心满意足,过份的给与,sit的过去式','Nothing could sate the careerist\'s greed for power.','什么也满足不了这个野心家的权力欲。','sate your appetite at the resort\'s restaurant.','在景区的餐馆里吃个够。'}

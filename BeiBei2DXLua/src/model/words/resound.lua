@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resound"]={"resound","[rɪ'zaʊnd]","[rɪ'zaʊnd]","v.(使)回响",'v.(使)回响,鸣响','The sonorous voice of the priest resounded in the church.','教士那圆润低沉的声音在教堂里回响。','The whole building resounded the siren\'s warning.','整个大楼回响着警报声。'}

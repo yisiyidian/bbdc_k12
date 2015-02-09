@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intrepid"]={"intrepid","[ɪn'trepɪd]","[ɪn'trɛpɪd]","adj.无畏的",'adj.无畏的,刚毅的','He is not really satisfied with his intrepid action.','他对他无畏的行动不是很满意。','At this moment the three intrepid travelers appeared.','这时候，那三位勇敢的旅行家出现了。'}

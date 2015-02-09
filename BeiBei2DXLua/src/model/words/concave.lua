@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["concave"]={"concave","['kɒnkeɪv]","[kɑn'kev]","adj.凹的",'adj.凹的，凹面的|||n.凹面，凹线，凹形','The surface of our playground is somewhat concave.','我们的操场表明有些凹。','The ground is concave.','地面凹陷了下去。'}

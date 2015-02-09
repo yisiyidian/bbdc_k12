@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clockwise"]={"clockwise","['klɒkwaɪz]","['klɑk'waɪz]","adj.顺时针方向的",'adj.顺时针方向的|||adv.顺时针方向地','Turn the key clockwise.','顺时针方向转动钥匙。','He is running around the playground clockwise.','他顺时针地绕着操场跑圈。'}

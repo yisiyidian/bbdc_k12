@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["degenerate"]={"degenerate","[dɪ'dʒen(ə)rət]","[dɪ'dʒɛnəret]","adj.堕落的",'adj.堕落的|||v.退化,堕落|||[计算机]退化','His health is ||degenerating|| rapidly.','他的健康状况迅速恶化。','The quality of his writing degenerated as he continued to drink.','他的写作质量随着他的酗喝而变质。'}

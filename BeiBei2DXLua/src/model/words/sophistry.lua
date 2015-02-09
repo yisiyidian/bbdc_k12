@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sophistry"]={"sophistry","['sɒfɪstrɪ]","['sɑfɪstri]","n.诡辩",'n.诡辩','He won the argument by sophistry.','他靠诡辩赢了那场争论。','I wasn\'t taken in by his sophistry.','我没有被他的诡辩骗倒。'}

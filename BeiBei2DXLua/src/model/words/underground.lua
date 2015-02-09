@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["underground"]={"underground","[ʌndə'graʊnd]","[,ʌndə'ɡraʊnd]","adj.地下的",'adj.地下的,秘密的|||adv.在地下,秘密地|||n.地下,地铁,地道,秘密活动','The cavers discovered a vast underground chamber.','探穴人发现了一个地下大洞穴.','The revolutionist eluded capture for weeks by hiding underground.','那位革命者为避免被捕在地下躲藏了几个星期。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mortification"]={"mortification","[,mɔːtɪfɪ'keɪʃn]","[ ,mɔ:tifi'keiʃən ]","n.耻辱",'n.耻辱,屈辱，禁欲，[医]坏疽','To his mortification, he was criticized by the manager.','他被经理批评，感到很难堪。','It is our nation\'s mortification.','这是我们国家的耻辱。'}

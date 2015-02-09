@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potency"]={"potency","['pəʊtnsɪ]","['potnsi]","n.权势",'n.权势(效力,潜能)','One wonders also why Nature, with some snakes concocted poison of such extreme potency.','人们也不知道大自然为何在一些蛇身上调制出这样高效的毒液来。','All their songs have a lingering potency.','他们所有的歌曲都有挥之不去的影响力。'}

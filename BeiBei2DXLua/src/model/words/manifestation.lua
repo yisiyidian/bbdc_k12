@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manifestation"]={"manifestation","[,mænɪfe'steɪʃ(ə)n]","['mænəfɛ'steʃən]","n.显示",'n.显示,证明,示威运动','That manifestation showed our power.','那次示威运动显示了我们的力量。','A high fever is an early manifestation of the disease.','发高烧是这种疾病的症状之一。'}

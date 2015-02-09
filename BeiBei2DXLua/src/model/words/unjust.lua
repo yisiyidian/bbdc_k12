@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unjust"]={"unjust","[ʌn'dʒʌst]","['ʌn'dʒʌst]","adj.不公平的",'adj.不公平的','The sentence of six months imprisonment was most unjust.','六个月监禁的判决极其不公。','It is unjust and unlawful to discriminate against people of other races.','歧视外族人是不公正的,也是违法的.'}

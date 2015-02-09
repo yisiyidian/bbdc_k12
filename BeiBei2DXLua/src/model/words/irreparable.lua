@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["irreparable"]={"irreparable","[ɪ'rep(ə)rəb(ə)l]","[ɪ'rɛpərəbl]","adj.不能修补的",'adj.不能修补的,不能挽回的','The flood did irreparable damage to the house.','洪水对这幢楼房的损坏是无法弥补的。','The move would cause irreparable harm to the organization.','这一举措会对该组织造成不可弥补的损害。'}

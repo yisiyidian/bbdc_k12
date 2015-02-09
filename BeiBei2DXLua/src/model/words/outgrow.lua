@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outgrow"]={"outgrow","[aʊt'grəʊ]","[,aʊt'ɡro]","vt.过大而不适于",'vt.过大而不适于，长得比...快(或大、高)','By the time he is ten, he has outgrown his older brother.','他十岁的时候就已经长得比他哥哥高了。','The child ||outgrew|| all his clothes.','这孩子长得太快以至于穿不下他所有的衣服'}

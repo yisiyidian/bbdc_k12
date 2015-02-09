@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["modish"]={"modish","['məʊdɪʃ]","['modɪʃ]","adj.流行的",'adj.流行的,时髦的','My sister brought me a very modish hat from Paris last week.','我姐姐上个星期从巴黎给我带了顶很时髦的帽子。','His place really looks lived-in for nothing expensive or modish just to impress people.','他的住处丝毫没有引人注目的昂贵的时髦货，看上去的确像是个舒适安定的家。'}

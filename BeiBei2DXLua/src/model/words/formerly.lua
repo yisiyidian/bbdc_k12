@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["formerly"]={"formerly","['fɔːməlɪ]","['fɔrmɚli]","adv.以前",'adv.以前,从前','Smocks were formerly worn by farm-workers.','这种罩衫是旧时农民穿的.','We now enjoy these comforts of which formerly we had only heard.','我们现在享受到了过去只是听说过的那些舒适条件'}

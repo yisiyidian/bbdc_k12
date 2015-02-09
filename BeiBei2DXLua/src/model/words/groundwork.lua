@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["groundwork"]={"groundwork","['graʊn(d)wɜːk]","['graʊnd'wɝk]","n.基础",'n.基础，根基','Constant practice is the groundwork for success in play the piano.','要弹得一手好钢琴, 经常练习才是根本。','The groundwork or source of something.','基础, 根源某事物的基础工作或根源'}

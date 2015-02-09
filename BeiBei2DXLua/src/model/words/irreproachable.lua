@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["irreproachable"]={"irreproachable","[ɪrɪ'prəʊtʃəb(ə)l]","[,ɪrɪ'protʃəbl]","adj.不可非难的",'adj.不可非难的,无缺点的,无过失的','irreproachable conduct.','准确无误的举止','She welcomed her unexpected visitor with irreproachable politeness.','她以无可指摘的礼仪接待了不速之客。'}

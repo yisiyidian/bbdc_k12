@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["graduate"]={"graduate","['grædʒʊət; -djʊət]","[ˈɡrædʒuˌet]","vt.毕业",'vt.毕业;(在表、计、尺上)刻[分]度,定等级|||vi.毕业,获学位,逐渐变得|||n.毕业生|||adj.毕业的,获得学位的','Most foreign students here are graduate students.','这里多数的外国学生是研究生。','I am an arts graduate.','我是一个文科毕业生。'}

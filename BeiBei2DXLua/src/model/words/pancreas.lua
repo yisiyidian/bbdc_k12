@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pancreas"]={"pancreas","['pæŋkrɪəs]","['pæŋkrɪəs]","n.胰脏",'n.胰脏','The pancreas can produce substances which help in the digestion of food.','胰脏能产生助消化的物质。','Each people have a pancreas.','每个人都有一个胰脏'}

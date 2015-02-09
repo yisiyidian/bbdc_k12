@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perplex"]={"perplex","[pə'pleks]","[pɚ'plɛks]","v.使...困惑",'v.使...困惑,使...更复杂,使...为难','Faced with that dilemma, he was perplexed.','他面对进退两难的局面，不知如何是好。','When new math was introduced into schools, many parents were perplexed by it.','当学校开设新的数学课时，许多家长对此感到迷惑不解。'}

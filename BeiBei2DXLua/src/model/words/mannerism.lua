@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mannerism"]={"mannerism","['mænərɪz(ə)m]","['mænə'rɪzəm]","n.特殊习惯",'n.特殊习惯；矫揉造作；怪癖','He has this irritating mannerism of constantly scratching his nose.','他老是挠鼻子,这个习惯真让人不舒服.','He\'s taken on some irritating mannerisms.','他新添了些讨人嫌的怪毛病.'}

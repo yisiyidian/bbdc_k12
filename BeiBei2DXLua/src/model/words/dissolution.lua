@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissolution"]={"dissolution","[dɪsə'luːʃ(ə)n]","[,dɪsə'luʃən]","n.分解",'n.分解','The President announced the dissolution of Parliament.','总统宣布议会解散。','The dissolution of the empire was remarkably swift.','帝国非常迅速地瓦解了。'}

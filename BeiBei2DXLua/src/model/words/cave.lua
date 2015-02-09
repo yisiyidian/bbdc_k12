@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cave"]={"cave","[keɪv]","[kev]","n.山洞",'n.山洞|||v.(使)凹陷|||vi.(in)塌落,倒坍','We kindled a firebrand in the cave.','我们在山洞里点燃火把。','This cave was used by smugglersin the eighteenth century.','这个洞穴是十八世纪走私的人使用的.'}

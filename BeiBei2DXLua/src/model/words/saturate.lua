@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["saturate"]={"saturate","['sætʃəreɪt]","['sætʃərɪt]","v.使渗透",'v.使渗透,浸,使饱和|||adj.浸透的,饱度高的,深颜色的','The market has been saturated with paintings like this.','这种画已经充斥了市场。','The recollection was saturated with sunshine','回忆中充满阳光。'}

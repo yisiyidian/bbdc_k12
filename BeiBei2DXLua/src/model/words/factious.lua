@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["factious"]={"factious","['fækʃəs]","['fækʃəs]","adj.好搞派系的",'adj.好搞派系的,好捣乱的','These factious groups are more violent than their predecessors.','这些宗派组织比他们的前辈更加残暴。','He is a factious boy.','他是一个爱捣乱的孩子。'}

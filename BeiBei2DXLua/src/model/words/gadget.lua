@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gadget"]={"gadget","['gædʒɪt]","['gædʒɪt]","n.小机件",'n.小机件','Found the gadget surprisingly useful; found the book entertaining.','发觉这个妙计非常有用；认为这本书很有趣','This gadget isn\'t much good.','这小机械没什麽用处.'}

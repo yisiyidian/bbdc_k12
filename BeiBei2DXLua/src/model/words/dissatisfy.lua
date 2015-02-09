@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissatisfy"]={"dissatisfy","[dɪ(s)'sætɪsfaɪ]","[dɪs'sætɪs,fai]","v.使感觉不满",'v.使感觉不满,不满足','She\'s very ||dissatisfied|| at not getting a bonus.','她因未能获得奖金而深感不满。','I\'m thoroughly ||dissatisfied|| with your work.','我完全不满意你的工作。'}

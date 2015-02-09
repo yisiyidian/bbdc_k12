@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spice"]={"spice","[spaɪs]","[spaɪs]","n.药料",'n.药料,香料,情趣|||vt.用香料调味','Variety is the spice of life.','变化是生活的调味品。','Have you spiced this cake?','这蛋糕中加香料了吗？'}

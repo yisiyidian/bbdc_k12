@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["syndicate"]={"syndicate","['sɪndɪkət]","['sɪndɪkət]","n.企业联合",'n.企业联合|||v.联合组织','The head of a branch of an organized crime syndicate.','黑社会老大，头目有组织的犯罪辛迪加的一个部门头领','A murder planned and carried out usually by a member of an underworld syndicate.','谋杀通常由一地下犯罪集团成员策划并进行的谋杀案'}

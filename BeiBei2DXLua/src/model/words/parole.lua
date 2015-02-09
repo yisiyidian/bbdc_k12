@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parole"]={"parole","[pə'rəʊl]","[pə'rol]","n.誓言",'n.誓言,释放宣言,语言|||v.宣释后释放,使假释出狱','He\'s hoping to get parole.','他希望获得假释.','a parole board; parole violations.','假释裁判委员会；触犯假释'}

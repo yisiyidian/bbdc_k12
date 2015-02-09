@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["err"]={"err","[ɜː]","[ɛr]","v.犯错",'v.犯错,做错|||v.','She erred in failing to meet him in person.','她错在没有亲自与他见面。','He erred in telling lie to her mother','他错在对母亲说谎'}

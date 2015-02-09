@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["taxing"]={"taxing","['tæksɪŋ]","['tæksɪŋ]","adj.繁重的",'adj.繁重的,费力的|||动词tax的现在分词形式','a taxing business schedule.','繁杂的商业计划','I don\'t know the result, for it\'s a taxing task.','繁重的'}

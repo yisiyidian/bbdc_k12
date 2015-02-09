@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["banquet"]={"banquet","['bæŋkwɪt]","['bæŋkwɪt]","n.宴会",'n.宴会|||vi.宴请|||vt.宴会,设宴','The manager was called on to speak at the banquet.','经理应邀在宴会上讲了话。','The president gave the Prince and his attendants a farewell banquet.','总统为王子和他的随员举行了告别宴会。'}

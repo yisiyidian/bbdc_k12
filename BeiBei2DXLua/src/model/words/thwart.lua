@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thwart"]={"thwart","[θwɔːt]","[θwɔrt]","adj.横～",'adj.横～|||v.反对,阻碍|||adv.横过','Our plan for a football match was thwarted by the heavy rain.','我们的足球比赛计划因大雨而受阻。','The accounting firm deliberately destroyed documents to thwart government investigators.','会计事务所故意毁坏文件，阻挠政府调查工作。'}

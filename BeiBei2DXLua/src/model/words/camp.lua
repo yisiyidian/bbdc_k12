@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["camp"]={"camp","[kæmp]","[kæmp]","n.露营",'n.露营,帐棚,训练营,做作|||vt.&vi.露营,扎营,做作|||adj.做作的','We made camp under the shade of trees.','我们在树荫下宿营。','You and I belong to different political camps.','你和我属于不同的政治阵营。'}

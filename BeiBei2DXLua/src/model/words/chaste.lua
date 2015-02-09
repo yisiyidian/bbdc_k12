@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chaste"]={"chaste","[tʃeɪst]","[tʃest]","adj.贞洁的",'adj.贞洁的,纯洁的,朴素的','She was a holy woman, innocent and chaste.','她是一个圣洁的女人，天真而忠贞。','He wrote in a chaste style.','他文笔朴实。'}

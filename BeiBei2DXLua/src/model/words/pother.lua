@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pother"]={"pother","['pɒðə]","[ 'pɔðə ]","n.烦恼",'n.烦恼,喧闹，弥漫的尘土（烟雾等）|||v.（使）烦恼，（使）喧闹','The children are making a great pother about the picnic.','孩子们正在为野餐的事吵吵嚷嚷。','What a pother you make!','瞧你闹腾的！'}

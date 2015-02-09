@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flout"]={"flout","[flaʊt]","[flaʊt]","v.嘲笑",'v.嘲笑,愚弄|||n.嘲笑,愚弄,轻视','Building regulations have been habitually flouted.','建筑法规一向都无人遵守。','Whoever flouts the rule should be punished.','无论谁违法了原则，都应该受到处罚。'}

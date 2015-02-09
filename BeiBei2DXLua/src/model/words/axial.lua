@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["axial"]={"axial","['æksɪəl]","['æksɪəl]","adj.轴的",'adj.轴的,轴向的，轴心的','The axial pump has a broad scope in futu.','轴流泵具有广阔的临床应用前景。','A trigonal bipyramid has three equatorial and two axial positions.','一个三角双锥体有三个赤道位和两个轴向位.'}

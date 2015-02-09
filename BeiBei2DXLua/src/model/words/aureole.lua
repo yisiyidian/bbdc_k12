@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aureole"]={"aureole","['ɔːrɪəʊl]","['ɔrɪol]","n.光环",'n.光环，光轮|||=aureola','An aureole of romance plays about him.','他身上闪耀着浪漫的光辉。','strip off aureole, mask and panoply.','脱掉光环、华服、面具。'}

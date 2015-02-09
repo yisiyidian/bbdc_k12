@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gigantic"]={"gigantic","[dʒaɪ'gæntɪk]","[dʒaɪ'ɡæntɪk]","adj.巨大的",'adj.巨大的','The whole job was a gigantic bungle.','整件工作都糟透了.','The earth may be thought of as a gigantic magnet.','整个地球可以想像为一块硕大无朋的磁石.'}

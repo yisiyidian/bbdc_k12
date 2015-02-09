@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knotty"]={"knotty","['nɒtɪ]","['nɑti]","adj.有结的",'adj.有结的,多节的,多瘤的','He tackled the knotty problem without recourse to any help.','他不依靠任何人的帮助，独立处理了这一难题。','The new management faces some knotty problems.','新管理层面临着一些棘手的问题。'}

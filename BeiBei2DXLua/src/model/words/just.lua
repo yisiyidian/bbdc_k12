@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["just"]={"just","[dʒʌst]","[dʒʌst]","adv.只是",'adj.公正的,公平的,恰当的|||adv.正好,恰好,只是','You have received a just reward.','你已得到了应有的报酬。','That\'s just what I think.','我正是那样想的。'}

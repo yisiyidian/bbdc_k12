@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carrier"]={"carrier","['kærɪə]","['kærɪɚ]","n.运送者",'n.运送者,行李架,客运公司,运输工具,航空母舰,带菌者,电信公司','He used to be a mail carrier.','他曾是个邮递员。','baggage carriers; a message carrier.','行李搬运工；传信人'}

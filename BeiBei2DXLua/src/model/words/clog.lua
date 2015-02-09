@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clog"]={"clog","[klɒg]","[klɑg]","n.累赘",'n.累赘,有木跟的鞋子|||vt.阻塞,妨碍,超载|||vi.阻塞,结块,跳木屐舞','Heavy traffic clogged the freeways.','拥挤的交通堵塞了高速公路','The pipes are clogging up.','管子渐渐被堵塞.'}

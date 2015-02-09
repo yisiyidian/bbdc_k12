@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frail"]={"frail","[freɪl]","[frel]","adj.脆弱的",'adj.脆弱的,虚弱的','Her health has been frail for months.','她身体虚弱已有好几个月了。','The frail wooden bridge cracked.','这座不牢固的木桥断裂了。'}

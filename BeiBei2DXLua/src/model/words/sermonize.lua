@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sermonize"]={"sermonize","['sɜːmənaɪz]","['sɝmənaɪz]","v.说教",'v.说教,讲道|||=sermonise(英)','A good novelist doesn\'t sermonize in his book.','一个好的小说家不会在他的书中说教','the stories avoided ||sermonizing|| like some chinese cartoons but i often felt inspired after a hearty laugh li said','“这些故事没有某些中国动画片里的说教，但我经常会在哈哈大笑之后受到启示。”李说道。'}

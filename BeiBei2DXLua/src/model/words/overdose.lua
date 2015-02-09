@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overdose"]={"overdose","['əʊvədəʊs]","['ovɚdos]","n.配药量过多",'n.配药量过多,过量|||v.配药过量,使服药','He died from an overdose of barbiturates.','他因服用过量巴比土而死亡.','He overdosed (on sleeping-pills) and died.','他服用安眠药过量致死.'}

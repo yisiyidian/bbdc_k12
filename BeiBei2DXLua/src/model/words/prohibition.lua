@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prohibition"]={"prohibition","[,prəʊhɪ'bɪʃ(ə)n; prəʊɪ-]","[,proə'bɪʃən]","n.禁止",'n.禁止，禁令|||Prohibition：禁酒','||Prohibition|| was laid on the export of coal.','禁止煤炭输出。','The prohibition against smoking on school grounds is strictly enforced.','校园内严禁吸烟。'}

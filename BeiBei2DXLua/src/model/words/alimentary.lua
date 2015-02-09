@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alimentary"]={"alimentary","[ælɪ'ment(ə)rɪ]","[,ælɪ'mɛntəri]","adj.食物的",'adj.食物的,滋养的，供养的','He had the disease of alimentary canal.','他患了消化道疾病。','alimentary organs','消化系统'}

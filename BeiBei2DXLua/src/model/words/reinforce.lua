@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reinforce"]={"reinforce","[riːɪn'fɔːs]","[,riɪn'fɔrs]","v.加强",'n.加固物|||v.增援,加强|||vt.加强,增援','Any good speaker should be able to reinforce his argument with facts.','一个好的演讲者会用事实来加强他论点。','The commander poured men in to reinforce the slaughtered battalions.','指挥官投入大量兵员增援被打败的部队。'}

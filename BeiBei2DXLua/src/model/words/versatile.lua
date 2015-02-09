@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["versatile"]={"versatile","['vɜːsətaɪl]","['vɝsətl]","adj.多才多艺的",'adj.多才多艺的,多方面的，通用的，','The most versatile of vegetables is the tomato.','蔬菜中用途最广的是西红柿。','Nylon is a versatile material.','尼龙是一种用途广泛的材料。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monitor"]={"monitor","['mɒnɪtə]","['mɔnɪtɚ]","n.班长",'n.监督器,班长,监听员,[计算机]显示器,监视器|||v.监视,监听,监督','The monitor is really a notch above us.','班长确实比我们略胜一筹。','The monitor handed the papers out to the classmates.','班长把试卷分发给同学们。'}

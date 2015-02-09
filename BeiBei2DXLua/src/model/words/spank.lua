@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spank"]={"spank","[spæŋk]","[spæŋk]","vt.拍（屁股）",'vt.拍（屁股）|||vi.轻快地移动|||n.拍击','The boy got a sound spanking.','那男孩的屁股著实挨了一顿巴掌.','When I used to do that when I was a kid, my mom would spank me.','我小时候做那种事时，我妈妈总是打我的屁股。'}

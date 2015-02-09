@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["omen"]={"omen","['əʊmən]","['omən]","n.征兆",'n.征兆,预兆|||vt.预示','An omen or foreboding, especially of evil.','预示，预兆，凶兆预兆或凶兆，尤指不幸的','An indication of something important or calamitous about to occur; an omen.','预告，为…的征兆预示着重大事情或灾难性事情即将发生的预兆；预告'}

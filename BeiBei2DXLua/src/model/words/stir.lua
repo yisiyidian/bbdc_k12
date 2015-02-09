@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stir"]={"stir","[stɜː]","[stɝ]","n.感动",'n.感动(激动,愤怒或震动),搅拌,骚乱|||vt.激起,惹起,搅和|||vi.挪动,活动,离开,搅拌,激动','The news caused quite a stir in the village.','那消息在村里引起了一片混乱。','Old memories stirred as she looked at the photographs.','她看到这些照片，唤起了对往事的回忆。'}

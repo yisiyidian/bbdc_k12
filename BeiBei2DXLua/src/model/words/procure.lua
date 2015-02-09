@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["procure"]={"procure","[prə'kjʊə]","[prə'kjʊr]","vt.获得",'vt.获得,取得,促成|||vi.拉皮条','He was accused of ||procuring|| women for his business associates.','他被指控为其生意合伙人招妓.','The book is out of print and difficult to procure.','那书已绝版, 很难弄到手.'}

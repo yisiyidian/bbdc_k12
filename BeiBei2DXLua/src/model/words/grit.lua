@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grit"]={"grit","[grɪt]","[ɡrɪt]","n.砂砾",'n.砂砾,粗砂石，勇气，决心|||v.覆以砂砾，咬紧牙关','The soldiers are hard grit.','士兵们全都是刚强勇敢的。','||Grit|| is spread on roads to make them less slippery in icy weather.','在结冰的天气，在路上撒上砂砾心免路面太滑。'}

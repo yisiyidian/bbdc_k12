@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["postgraduate"]={"postgraduate","[pəʊs(t)'grædjʊət]","[post'ɡrædjet]","n.研究生",'n.研究生|||adj.大学毕业后的','I didn\'t put down that I had postgraduate degree.','我没有写上我有硕士学位.','She seems a postgraduate.','她似乎是个研究生.'}

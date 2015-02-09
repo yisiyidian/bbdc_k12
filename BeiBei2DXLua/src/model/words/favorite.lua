@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["favorite"]={"favorite","['feɪvərɪt]","['fevərɪt]","adj.喜爱的",'adj.流行的，喜爱的|||n.最喜爱的人或物,被认为最有可能胜出的竞争者','Pink is her favorite color.','粉红色是她最喜欢的颜色。','His favorite dish is roast duck.','他最喜欢吃的菜是烤鸭。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sanctum"]={"sanctum","['sæŋ(k)təm]","['sæŋktəm]","n.至圣所",'n.至圣所,密室,私室','I was allowed once into his inner sanctum.','我有一次获准进入他的内室.','His bedroom\'s his inner sanctum.','卧房是他的内室。'}

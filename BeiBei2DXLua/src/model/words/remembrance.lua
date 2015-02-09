@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remembrance"]={"remembrance","[rɪ'membr(ə)ns]","[rɪ'mɛmbrəns]","n.回想",'n.回想,记忆,纪念品','In remembrance of the battle, we set up a museum.','为纪念那次战役, 我们建立了一座博物馆。','This watch is a remembrance of my father.','这块手表是我父亲留下的纪念品.'}

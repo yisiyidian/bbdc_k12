@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orderly"]={"orderly","['ɔːd(ə)lɪ]","['ɔrdɚli]","adj.有秩序的",'adj.有秩序的,整齐的,一丝不苟的,和平的|||adv.有秩序地，有条理地，依次地|||n.勤务兵,（医院的）勤务工','||Orderly|| in the upkeep of his rooms.','在保养他的房间上一丝不苟','an orderly room.','洁净的房间'}

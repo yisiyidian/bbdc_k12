@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fight"]={"fight","[faɪt]","[faɪt]","n.打架",'n.打架,战斗,斗志|||vt.对抗,打架|||vi.斗争,奋斗','She ||fought|| like a tiger to get what she wanted.','她竭力争取自己想要的东西。','He was unhappy in his job for years but always ||fought|| shy of telling his boss.','他多年来工作都很不愉快，却始终未向老板启齿。'}

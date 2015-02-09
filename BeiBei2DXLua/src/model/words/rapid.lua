@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rapid"]={"rapid","['ræpɪd]","['ræpɪd]","adj.迅速的",'adj.迅速的,急促的|||n.急流','The student is showing rapid progress in his studies.','这个学生学习上进步很快。','With the rapid economical development, China\'s position on the international stage is getting more and more important.','随着经济迅速发展，中国在国际舞台上的地位变得愈来愈重要了。'}

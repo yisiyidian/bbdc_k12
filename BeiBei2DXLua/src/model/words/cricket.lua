@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cricket"]={"cricket","['krɪkɪt]","['krɪkɪt]","n.板球",'n.板球,蟋蟀|||vi.打板球','I would never choose to watch cricket as an amusement.','我决不会把看板球当作消遣.','He plays cricket professionally.','他以打板球为职业.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["havoc"]={"havoc","['hævək]","['hævək]","n.大破坏",'n.大破坏,混乱|||vt.破坏','The earthquake has made great havoc of the city.','地震给这个城市造成了巨大的破坏。','The earthquake wreaked havoc on the city.','地震对这个城市造成了大破坏。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cherry"]={"cherry","['tʃerɪ]","['tʃɛri]","n.樱桃(树)",'n.樱桃(树),樱桃色','The cherry trees blossomed early this year.','樱桃树今年开花早.','We went to the park to see Japanese cherry blossoms.','我们到公园去看日本樱花。'}

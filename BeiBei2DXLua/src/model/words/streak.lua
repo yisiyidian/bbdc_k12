@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["streak"]={"streak","[striːk]","[strik]","n.条理",'n.条理,斑纹,倾向,少许,痕迹|||vt.&vi.加条纹,变成条纹,奔驰,快速移动','The cat streaked across the road with a dog behind it.','有只狗在后面，这只猫飞快地越过马路。','A thin or faint streak or fragment, as of smoke or clouds.','一缕薄或微弱的条纹或碎片，如烟、云等'}

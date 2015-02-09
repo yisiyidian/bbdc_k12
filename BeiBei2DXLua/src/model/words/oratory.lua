@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oratory"]={"oratory","['ɒrət(ə)rɪ]","['ɔrətɔri]","n.讲演术",'n.讲演术，演说，祈祷室，小礼拜堂|||Oratory:（天主教）奥拉托利会','The Muse of sacred song and oratory.','波吕许漠尼亚主管圣歌和雄辩的缪斯女神','He pulverized the opposition with the force of his oratory.','他能言善辩把对方驳得体无完肤.'}

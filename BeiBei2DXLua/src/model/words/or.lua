@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["or"]={"or","[ɔː]","[ɔr]","conj.或者",'conj.或者,还是|||prep.&adv.或者','He can\'t read or write.','他不会看书也不会写字。','Hurry up or else you\'ll be late.','快，否则你就要来不及了。'}

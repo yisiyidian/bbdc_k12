@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transitory"]={"transitory","['trænsɪt(ə)rɪ; 'trɑːns-; -nz-]","['trænsətɔri]","adj.暂时的",'adj.暂时的，瞬息的,短暂的,片刻的','the disorder of his life: the succession of cities, of transitory loves','“他混乱的生活：不断的变换他生活的城市和转瞬即逝的爱情”','Most teenage romances are transitory.','大多数少年时代的罗曼史都转瞬即逝。'}

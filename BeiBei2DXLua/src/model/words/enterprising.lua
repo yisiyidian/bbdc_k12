@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enterprising"]={"enterprising","['entəpraɪzɪŋ]","['ɛntɚpraɪzɪŋ]","adj.有企业精神的",'adj.有企业精神的,有进取心的','It was enterprising of him to go by himself.','他竟敢独自去，真有胆量。','The condition of the postwar years brought many enterprising men to the fore.','战后这些年来的情况使许多有进取心的人成为名人。'}

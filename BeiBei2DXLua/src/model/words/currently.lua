@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["currently"]={"currently","['kʌrəntlɪ]","['kɝrəntlɪ]","adv.现在",'adv.现在，现时，目前，当前','This Book is currently out of print.','这本书现在绝版了','Our contracts are currently under review.','我们的合同正在复查.'}

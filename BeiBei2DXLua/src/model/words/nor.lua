@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nor"]={"nor","[nɔː; nə]","[nɔr]","conj.&adv.也不",'conj.&adv.也不,也没有|||[计]"或非"，"非或"|||abbr.诺曼人(=Norman)|||abbr.北方（=North）|||abbr.挪威（=Norway）|||abbr.挪威人（=Norwegian）','It is neither hot nor cold in winter here.','这里冬天既不热也不冷。','||Nor|| am I aware that anyone else knows the secret.','我也不知道别人谁还能知道这个秘密。'}

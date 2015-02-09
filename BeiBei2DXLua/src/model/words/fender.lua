@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fender"]={"fender","['fendə]","['fɛndɚ]","n.挡泥板",'n.挡泥板,护舷的垫子等','The fender of my car was covered with mud after the hiking trip.','远足回来后，我的车挡板上全是泥','His car bruised the auto fender of my car.','他的汽车撞瘪了我的汽车挡泥板。'}

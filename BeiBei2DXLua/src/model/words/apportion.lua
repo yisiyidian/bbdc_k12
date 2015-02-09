@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apportion"]={"apportion","[ə'pɔːʃ(ə)n]","[ə'pɔrʃən]","v.分配",'v.分配,分摊,分派','I apportioned half the property to each of them.','我把财产的一半分配给他们各人。','The department manager apportioned his men the duties for the week.','部门经理把一星期的工作任务分配给他的下属。'}

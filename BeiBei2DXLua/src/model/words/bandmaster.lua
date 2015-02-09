@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bandmaster"]={"bandmaster","['bæn(d)mɑːstə]","['bænd,mæstɚ]","n.乐队队长",'n.乐队队长','he is a bandmaster','他是这个乐队的队长。','It is already three years since he was a bandmaster.','他不当乐队指挥已经三年了。'}

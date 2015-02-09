@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inarticulate"]={"inarticulate","[,ɪnɑː'tɪkjʊlət]","[,ɪnɑr'tɪkjələt]","adj.不能说话的",'adj.不能说话的，发音不清的，不善言辞的','He becomes inarticulate when angry.','他生气时，会说不出话来。','||Inarticulate|| and rather shy, he had always dreaded speaking in public.','他不善言辞又比较腼腆，总害怕在公众场合讲话。'}

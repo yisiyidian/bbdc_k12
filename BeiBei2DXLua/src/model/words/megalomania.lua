@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["megalomania"]={"megalomania","[,meg(ə)lə(ʊ)'meɪnɪə]","[,mɛɡələ'menɪə]","n.自大狂",'n.自大狂','Early success may lead to megalomania.','少年得志可能导致妄自尊大。','Their weak spot is a huge self-respect which can turn something into megalomania.','他们的弱点是膨大的自尊心，容易陷入狂妄自大中。'}

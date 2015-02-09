@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["odorless"]={"odorless","['odɚlɪs]","[ 'əudəlis ]","adj.无臭的",'adj.无臭的，没有气味的','Hydrogen is a colorless, odorless gas.','氢气是一种无色、无味的气体。','The violets of Japan are, as a rule, odorless.','日本的紫罗兰通常是无气味的.'}

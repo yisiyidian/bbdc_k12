@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["laureate"]={"laureate","['lɒrɪət; 'lɔː-]","['lɔrɪət]","n.桂冠诗人",'n.桂冠诗人，得奖人|||adj.杰出的，带桂冠的|||vt.戴桂冠，授予荣誉，授予桂冠诗人的称号','We won a laureate cup.','我们赢得了荣誉奖杯。','He was awarded the poet laureate by the queen.','他被女王封为桂冠诗人。'}

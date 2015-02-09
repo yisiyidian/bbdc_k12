@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vote"]={"vote","[vəʊt]","[vot]","v.投票",'v.投票，选举；提议；投票表决；公认，由舆论决定|||n.投票，表决；投票数；投票权；决议','He became a citizen, thereby gaining the right to vote.','他成为公民，并因此获得了选举权。','A large vote was polled.','投票踊跃。'}

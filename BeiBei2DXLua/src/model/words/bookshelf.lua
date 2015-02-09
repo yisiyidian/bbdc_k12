@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bookshelf"]={"bookshelf","['bʊkʃelf]","[ 'bukʃelf ]","n.书架",'n.书架','A sunbeam rests on the bookshelf.','一道阳光照在书架上。','Stephen can easily find the dictionary, because he have carefully arranged all his book on his bookshelf.','史蒂芬很轻易地找到这本字典, 因为他把所有的书都仔细地放在书架上。'}

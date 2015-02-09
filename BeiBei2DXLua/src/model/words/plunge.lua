@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plunge"]={"plunge","[plʌn(d)ʒ]","[plʌndʒ]","n.跳水",'n.突然跌落,跳水|||vi.&vi.投入,骤降,使...陷入,全神贯注于','The sudden jolt plunged her forward.','突然颠了一下，她向前打了个趔趄。','She plunged her hands into her coat pockets.','她把两手插在上衣口袋里。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excited"]={"excited","[ɪk'saɪtɪd]","[ɪk'saɪtɪd]","adj.兴奋的",'adj.兴奋的','Sara was excited to see the rock band.','莎拉看到摇滚乐团很兴奋。','Oh, I\'m so excited.','哦，我太兴奋了。'}

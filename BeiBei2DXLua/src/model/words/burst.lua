@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["burst"]={"burst","[bɜːst]","[bɝst]","n.破裂",'n.破裂,阵,爆发|||vt.&vi.爆裂,突发','I\'ve eaten so much I\'m bursting at the seams.','我吃得太多了，肚子都要撑破了。','The police burst through the door.','警察破门而入。'}

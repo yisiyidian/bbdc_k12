@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["highway"]={"highway","['haɪweɪ]","['haɪwe]","n.公路",'n.公路','The motel business went to pot when the new highway was built.','这条新公路建成后，汽车旅馆的生意冷落了下来。','He was charged with obstructing the highway.','他因阻碍公路交通而受控告.'}

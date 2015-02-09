@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lever"]={"lever","['liːvə]","['lɛvɚ]","n.杠杆",'n.杠杆,似杠杆之工具|||vt.撬开,使用杠杆','This lever must serve some ulterior purpose.','这撬棒准是用於不可告人的目的的.','Push hard and the lever will go down.','用力推就能把控制杆按下去.'}

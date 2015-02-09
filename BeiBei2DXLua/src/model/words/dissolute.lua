@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissolute"]={"dissolute","['dɪsəluːt]","['dɪsəlut]","adj.放荡的",'adj.放荡的,风流的,肆意挥霍的|||v.溶解','Intemperate in the pursuit of pleasure; dissolute.','放荡的，浪荡的无节制地追寻欢乐；浪荡的','One who acts without moral restraint; a dissolute person.','放荡不羁的人行动没有道德约束的人；放荡的人'}

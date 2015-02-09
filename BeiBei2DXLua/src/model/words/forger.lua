@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forger"]={"forger","['fɔːdʒə(r)]","['fɔrdʒɚ]","n.伪造者",'n.伪造者,膺造者,铁匠','Everybody is the forger of his own happiness.','人人都是自身幸福的打造者。','The police suspected her of fronting for a gang of forgers.','警察怀疑她是一帮伪造者的掩护人。'}

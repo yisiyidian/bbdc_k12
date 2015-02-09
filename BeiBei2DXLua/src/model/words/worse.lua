@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["worse"]={"worse","[wɜːs]","[wɝs]","adj.更坏的",'adj.更坏的,更差的|||adv.以更坏的方式,变得更坏|||n.更坏的事物','We thought that the situation was as bad as it could be, but worse was to follow.','我们还以为那是最坏的情况呢，可没想到更糟的还在后面。','I\'m afraid he is getting steadily worse.','恐怕他的病情越来越严重了。'}

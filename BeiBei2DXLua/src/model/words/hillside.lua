@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hillside"]={"hillside","['hɪlsaɪd]","['hɪl'saɪd]","n.(小山)山腰",'n.(小山)山腰,山坡','The old man laboured up the hillside.','老人吃力地登山.','The path steepens as you climb the hillside.','沿著山坡往上爬时, 那条小径越来越陡.'}

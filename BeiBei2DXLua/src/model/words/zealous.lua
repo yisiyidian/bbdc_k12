@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zealous"]={"zealous","['zeləs]","['zɛləs]","adj.热心的",'adj.热心的,狂热的，热衷的','The doctors were zealous in their efforts to ensure the survival of premature babies.','医生们在努力保证早产婴儿成活方面热情很高。','She made zealous efforts to clean up the classroom.','她非常热心地努力清扫教室.'}

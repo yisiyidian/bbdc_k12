@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crimp"]={"crimp","[krɪmp]","[krɪmp]","v.卷曲",'v.卷曲，束缚,妨碍|||v.诱骗某人当兵（水兵）|||n.卷曲，卷发，褶皱，阻碍|||n.强迫他人当兵（水兵）的人','The accident put a crimp in our vacation plans.','这意外事故阻碍了我们的假期计划。','crimp a pie crust.','将馅饼皮的周围摺皱褶'}

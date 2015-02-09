@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proximity"]={"proximity","[prɒk'sɪmɪtɪ]","[prɑk'sɪməti]","n.接近",'n.接近,亲近','Marriages in proximity of blood are forbidden by the law.','法律规定禁止近亲结婚。','Part of the attraction is Darwin\'s proximity to Asia.','达尔文市的魅力一部分在于它靠近亚洲。'}

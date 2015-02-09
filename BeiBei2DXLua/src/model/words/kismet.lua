@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kismet"]={"kismet","['kɪzmet; -mɪt; -s-]","[ 'kismet ]","n.命运",'n.命运,天命','Predestined by kismet, I\'m called to the teacher\'s office, again.','无奈命运安排，我又被叫到办公室去了。','So this is your fate, destiny, kismet, you must rise up to it because no one else can take this job.','所以，这是你的命运、气数、天命，你必须正面接受它，因为没有其他人可以做到这点。'}

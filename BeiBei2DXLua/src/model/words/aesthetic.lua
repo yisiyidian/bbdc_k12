@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aesthetic"]={"aesthetic","[iːs'θetɪk; es-]","[ɛs'θɛtɪk]","adj.美学的",'adj.美学的,审美的,有美感的|||n.(复数)审美观','Their furniture was more aesthetic than functional.','他们的家具美观多于实用。','He responded very strongly to the aesthetic of this particular work.','他强烈地感受到这件作品的美学价值。'}

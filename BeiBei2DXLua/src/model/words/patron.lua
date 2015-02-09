@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["patron"]={"patron","['peɪtr(ə)n]","['petrən]","n.赞助人",'n.赞助人,保护人,老主顾','St Christopher is the patron saint of travellers.','圣·克里斯托弗是旅行者的守护神.','Modern artists have difficulty in finding patrons.','现代艺术家们很难找到赞助人。'}

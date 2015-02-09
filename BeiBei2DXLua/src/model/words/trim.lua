@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trim"]={"trim","[trɪm]","[trɪm]","n.整齐",'n.整齐,装饰,修剪下来的部分|||adj.整洁的,匀称的|||adv.整齐地|||vt.修除,削剪,装备,痛打,击败,使整洁|||vi.保持平衡,见风使舵','We have to trim our cost if we want to increase our profit.','我们如果想增加利润，就必须削减开支。','I\'ll have my hair trimmed tomorrow.','明天我要修剪头发。'}

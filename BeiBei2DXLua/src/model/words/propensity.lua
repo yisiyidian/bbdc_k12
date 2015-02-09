@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["propensity"]={"propensity","[prə'pensɪtɪ]","[prə'pɛnsəti]","n.倾向",'n.倾向,习性','He has a propensity for drinking too much alcohol.','他有酗酒的倾向。','She hasn\'t reckoned on his propensity for violence.','她不曾料到他有暴力倾向。'}

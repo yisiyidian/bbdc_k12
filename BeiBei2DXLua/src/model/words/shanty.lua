@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shanty"]={"shanty","['ʃæntɪ]","['ʃænti]","n.简陋小屋",'n.简陋小屋，(水手唱的)劳动号子|||=chantey，chanty','A trip through the shanty town brought home to me just how poor the people are.','棚户区之行使我深切地感到那里的人民何等的贫穷。','The soldier rigged up a shanty for a night\'s rest.','士兵们临时胡乱搭起了一间小屋过夜。'}

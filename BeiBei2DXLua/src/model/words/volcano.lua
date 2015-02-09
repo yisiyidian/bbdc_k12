@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["volcano"]={"volcano","[vɒl'keɪnəʊ]","[vɑl'keno]","n.火山",'n.火山','The volcano spurted (out) molten lava.','火山喷出了熔岩.','The region near the erupting volcano was evacuated rapidly.','火山爆发处附近已迅速撤空.'}

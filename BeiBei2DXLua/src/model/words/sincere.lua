@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sincere"]={"sincere","[sɪn'sɪə]","[sɪn'sɪr]","adj.真诚的",'adj.真诚的,诚挚的','How can I persuade you that I am sincere?','怎样才能使你相信我是真心实意的呢?','I think he is sincere and quite without affectation.','我认为他为人诚挚，毫不做作。'}

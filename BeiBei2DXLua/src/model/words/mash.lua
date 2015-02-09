@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mash"]={"mash","[mæʃ]","[mæʃ]","n.麦芽浆",'n.麦芽浆，糊状物，土豆泥|||v.把…捣成糊状|||v.挑逗，调情','A whiskey distilled from a fermented mash containing not less than51 percent corn in addition to malt and rye.','波旁酒一种由不少于51％的玉米与麦芽和黑麦浆发酵后蒸出的威士忌酒','||Mash|| the potatoes with a fork.','用叉把土豆捣烂。'}

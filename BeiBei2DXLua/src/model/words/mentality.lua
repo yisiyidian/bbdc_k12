@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mentality"]={"mentality","[men'tælɪtɪ]","[mɛn'tæləti]","n.精神力",'n.精神力,智力,头脑作用','It threw light on the mentality of his former friend.','它使他对他故友的思想有了一些了解。','He has many years\' experience of the criminal mentality.','他研究犯罪心理有多年经验.'}

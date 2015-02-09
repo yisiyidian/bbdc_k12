@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shipbuilding"]={"shipbuilding","['ʃɪp,bɪldɪŋ]","[ 'ʃip,bildiŋ ]","n.造船",'n.造船，造船业','A wooden peg that swells when wet and is used to fasten timbers, especially in shipbuilding.','木钉一种遇湿时膨涨的木制钉子，用于固定木头，尤指在造船中','A lot of people in shipbuilding will get the axe.','造船业的很多人将被解雇.'}

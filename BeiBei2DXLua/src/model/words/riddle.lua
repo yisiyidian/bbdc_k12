@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["riddle"]={"riddle","['rɪd(ə)l]","['rɪdl]","n.谜",'n.谜,谜语|||vt.解谜,出谜题,充满,打洞,筛选|||vi.出谜题','He could not solve the riddle.','他猜不出这个谜。','He got the answer to the riddle as quick as a flash.','他一下子就猜中了谜底.'}

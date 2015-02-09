@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["promptly"]={"promptly","['prɒm(p)tlɪ]","['prɑmptli]","adv.敏捷地",'adv.敏捷地,迅速地','Paying bills promptly is good financial practice.','及时付帐是理财的好习惯.','The girl\'s life was saved because the doctors acted so promptly.','由於医生们行动迅速, 那个女孩子得救了.'}

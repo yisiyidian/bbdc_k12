@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leach"]={"leach","[liːtʃ]","[litʃ]","v.过滤",'v.过滤,萃取,水浸|||n.过滤,过滤器,滤灰槽','The treatment of metal or the separation of metal from ores and ore concentrates by liquid processes, such as leaching, extraction, and precipitation.','水冶金术通过液体过程，象过滤，提炼，沉淀等方法处理金属，从矿石中或矿石浓缩物中分离出金属','The act or process of leaching.','过滤滤去的行为或过程'}

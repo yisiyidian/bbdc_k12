@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mockingbird"]={"mockingbird","['mɒkɪŋbɜːd]","['mɑkɪŋbɝd]","n.模仿鸟",'n.模仿鸟','Mama\'s going to buy you a mockingbird.','妈妈给你买一只会唱歌的小鸟.','Well, for one, there\'s the book To Kill a ||Mockingbird||.','首先,有本书叫《杀死一只知更鸟》'}

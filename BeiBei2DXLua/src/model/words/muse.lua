@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["muse"]={"muse","[mjuːz]","[mjuz]","vi.沉思",'vi.沉思，冥想|||vt.沉思默想|||n.沉思，（希腊神话）缪斯，指引方向的神，诗歌，','She lay ||musing|| for a while.','她躺着沉思了一会儿。','The young girl was lost in a muse.','这女孩陷入了沉思。'}

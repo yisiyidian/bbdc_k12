@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["holy"]={"holy","['həʊlɪ]","['holi]","adj.神圣的",'adj.神圣的,圣洁的,令人敬仰的','The holy man healed them of their sickness.','那位神职人员治好了他们的疾病。','He reads the ||Holy|| Scripture everyday.','他每天都读《圣经》。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whirl"]={"whirl","[wɜːl]","[wɝrl]","v.使...旋转",'v.使...旋转,急转，回旋，迅速移动|||n.回旋,旋转，繁忙，混乱，尝试','The houses whirled past us as the train gathered speed.','火车越开越快，周围的房子在我们旁边一闪而过。','The job doesn\'t sound very exciting but I\'ll give it a whirl.','这个工作听起来没什麽意思，可是我还是要去试一试。'}

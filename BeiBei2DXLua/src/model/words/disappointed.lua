@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disappointed"]={"disappointed","[dɪsə'pɒɪntɪd]","['dɪsə'pɔɪntɪd]","adj.失望的",'adj.失望的','I was more disappointed than discouraged.','我是失望, 而不是泄气。','Tom was no more surprised than (he was) disappointed at this news.','汤姆听见那消息既不惊讶也不失望。'}

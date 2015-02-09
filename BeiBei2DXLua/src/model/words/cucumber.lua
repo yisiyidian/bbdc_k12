@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cucumber"]={"cucumber","['kjuːkʌmbə]","['kjʊ,kʌmbɚ]","n.黄瓜",'n.黄瓜','In our garden we have egg-plants, cucumber and potato.','在我们的菜园里，我们种了茄子，黄瓜和土豆。','Have some cucumber.','吃点黄瓜吧。'}

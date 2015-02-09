@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trademark"]={"trademark","['treɪdmɑːk]","['tred'mɑrk]","n.商标",'n.商标','Appearing briefly in his own films was a trademark of Alfred Hitchcock.','在自己的影片里短暂露面是阿尔弗雷德·希区柯克的特点。','The trademark is registered on the book of the Patent Office.','该商标已在专利局登记注册.'}

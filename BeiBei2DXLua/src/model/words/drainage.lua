@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drainage"]={"drainage","['dreɪnɪdʒ]","['drenɪdʒ]","v.排水",'v.排水|||n.排水系统,污水','A long narrow trench or furrow dug in the ground, as for irrigation, drainage, or a boundary line.','沟渠，排水沟，水道在地面上狭长的沟渠或细沟，用于灌溉、排水或用作分界线','He came to look at the drainage.','他是来检查排水设备的。'}

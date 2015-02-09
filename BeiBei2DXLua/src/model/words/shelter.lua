@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shelter"]={"shelter","['ʃeltə]","['ʃɛltɚ]","n.庇护所",'n.庇护所,避难所,庇护|||vt.&vi.庇护,保护,隐匿','The refugees\' main requirements are food and shelter.','难民的主要必需品是食物和住所。','People were scrambling madly for shelter.','人们疯了似的抢着往隐蔽处跑。'}

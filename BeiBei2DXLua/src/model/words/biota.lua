@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["biota"]={"biota","[baɪ'əʊtə]","[baɪ'otə]","n.生物区(系)",'n.生物区(系)','The consistency of the pattern strongly implies that biota in all regions','这个模式的一致性强烈暗示着整个生物系','the wildlife in a region/the biota(flora+fauna) of a region','某一地区所有生物的总称'}

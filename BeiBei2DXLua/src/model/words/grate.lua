@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grate"]={"grate","[greɪt]","[ɡret]","n.栅",'n.栅|||vt.磨擦,磨碎','It\'s her ingratitude that grates on me.','是她忘恩负义把我惹火了。','A wood fire burned in the grate.','柴火在炉栅里燃烧着。'}

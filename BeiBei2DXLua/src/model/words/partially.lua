@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["partially"]={"partially","['pɑːʃ(ə)lɪ]","['pɑrʃəli]","adv.部份地",'adv.部份地,一部份地,不公平地','||Partially|| or completely lacking in the sense of hearing.','聋的，重听的部分或完全丧失听觉的','He was only partially to blame for the accident.','他对事故只应负部分责任。'}

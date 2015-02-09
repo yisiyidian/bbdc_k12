@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pollinate"]={"pollinate","['pɒlɪneɪt]","['pɑlənet]","v.给...授粉",'v.给...授粉|||vt.授以花粉','Wild bees will naturally then pollinate human crops.','野生蜜蜂随之将很自然地帮助人类农作物授粉。','Many of the indigenous insects are needed to pollinate the local plants.','需要很多种土生昆虫给当地植物授粉。'}

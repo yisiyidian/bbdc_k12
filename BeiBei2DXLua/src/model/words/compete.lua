@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compete"]={"compete","[kəm'piːt]","[kəm'pit]","v.竞争",'v.竞争,对抗','Companies must be able to compete in the marketplace.','公司一定要在市场中有竞争力。','We have limited funds and several ||competing|| claims.','我们的基金有限而争相申请的却有几处。'}

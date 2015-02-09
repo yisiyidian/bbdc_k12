@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["haste"]={"haste","[heɪst]","[hest]","n.匆忙",'n.急速,急忙|||v.匆忙,赶快|||vi.赶紧,赶快','More haste, less speed , as the saying goes.','常言道，“欲速则不达”。','Marry in haste, repent at leisure.','【谚】结婚太急，后悔莫及。'}

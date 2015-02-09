@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maim"]={"maim","[meɪm]","[mem]","vt.使残废",'vt.使残废,使不能工作,使伤残|||n.伤残，残废','She survived the accident but she was maimed for life and will never walk again.','她在意外事故中大难不死，但却终身残废，再也不能行走了。','Rod was maimed for life in a car smash.','罗德在一次撞车事故中受重伤，落下终身残疾。'}

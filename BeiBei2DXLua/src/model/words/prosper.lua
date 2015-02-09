@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prosper"]={"prosper","['prɒspə]","['prɑspɚ]","v.兴隆",'v.兴隆,成功,使...昌盛','With her at the wheel, the company began to prosper.','有了她当主管, 公司开始兴旺起来.','With the advent of the new chairman, the company began to prosper.','随著新主席的到来, 公司也开始有了起色.'}

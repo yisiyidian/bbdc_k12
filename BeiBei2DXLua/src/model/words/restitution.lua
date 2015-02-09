@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["restitution"]={"restitution","[,restɪ'tjuːʃ(ə)n]","['rɛstə'tʊʃən]","n.归还",'n.归还，赔偿，恢复原状','We have asked that they rehire the people that were fired and that they make restitution to them.','我们已经要求他们重新雇用那些被开除的人，并对他们进行补偿。','It\'s only fair that those who do the damage should make restitution.','损坏东西的人应负责赔偿，这是再公平不过的了。'}

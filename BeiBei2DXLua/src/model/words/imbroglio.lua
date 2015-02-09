@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imbroglio"]={"imbroglio","[ɪm'brəʊlɪəʊ]","[ɪm'brolɪo]","n.纷乱",'n.纷乱,纠葛,纷扰','The imbroglio led to the resignation of several managers.','这场纠纷导致了多名经理辞职。','He turned his attention back to the Internet imbroglio of the night.','他将注意力转回到前一天晚上的互联网争论。'}

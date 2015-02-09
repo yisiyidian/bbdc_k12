@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dumb"]={"dumb","[dʌm]","[dʌm]","adj.无言的",'adj.无言的,沉默的,哑的,愚蠢的|||vt.使人沉默','No animal of the horoscope is considered dumb or ugly or evil.','天宫图上的动物没有一种被认为是愚笨的或丑陋的或邪恶的。','||Dumb|| dogs are dangerous.','【谚】哑巴狗最危险。'}

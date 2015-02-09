@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harbinger"]={"harbinger","['hɑːbɪndʒə]","['hɑrbɪndʒɚ]","n.先驱",'n.先驱,预兆','The crowing of the cock is a harbinger of dawn.','鸡啼报晓。','The birds flying lower is a harbinger for the raining.','燕子低飞预示着要下雨。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regenerative"]={"regenerative","[rɪ'dʒen(ə)rətɪv]","[rə'dʒɛnəretɪv]","adj.再生的",'adj.再生的，更新的，倾向于再生的','Somatic cells of angiosperms enter a regenerative phase and behave like embryos.','被子植物体细胞进入一个生殖阶段,而且其行为象胚.','Infection inhibits the regenerative power of the bone marrow.','感染抑制骨髓的再生能力.'}

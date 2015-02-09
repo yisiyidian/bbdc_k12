@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penal"]={"penal","['piːn(ə)l]","['pinl]","adj.刑罚的",'adj.刑罚的，刑事的','I\'m comparing only your ignorance and mine about penal institutions.','我只是拿你我两人对刑法机构的无知作个比较罢了.','I do not wish, however, to embark upon the subject of penal reform.','但我并不想在此谈论刑法改革.'}

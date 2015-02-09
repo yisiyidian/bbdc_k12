@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kindness"]={"kindness","['kaɪn(d)nɪs]","['kaɪndnəs]","n.仁慈",'n.仁慈,好意','Your kindness is grateful.','你的友善令人感激。','Your kindness quite overwhelmed me.','你的好意使我感激难言。'}

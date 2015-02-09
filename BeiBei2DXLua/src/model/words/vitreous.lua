@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vitreous"]={"vitreous","['vɪtrɪəs]","['vɪtrɪəs]","adj.玻璃的",'adj.玻璃的,似玻璃的','||Vitreous|| rocks are hard and shiny.','玻璃状的岩石坚硬而晶莹。','Most part of the eyeball is the vitreous body.','眼球的大部分是玻璃体。'}

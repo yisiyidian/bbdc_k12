@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shout"]={"shout","[ʃaʊt]","[ʃaʊt]","n.呼喊",'n.呼喊,突发的大叫|||vt.高声呼喊，呼叫|||vi.呼叫，突然喊叫','The crowd shouted the speaker down.','群众高声喊叫把演讲人的声音压了下去。','The children on the sand were shouting with excitement.','沙滩上的孩子们兴奋得大喊大叫。'}

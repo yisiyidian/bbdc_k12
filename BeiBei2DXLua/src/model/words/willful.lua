@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["willful"]={"willful","['wɪlfʊl]","['wɪlfəl]","adj.任性的",'adj.任性的,故意的,有意的','He displayed a willful ignorance of their plight.','对于他们的困境他故意装作一无所知。','The sergeant faces a charge of willful neglect of duty.','这位军士面临着故意玩忽职守的指控。'}

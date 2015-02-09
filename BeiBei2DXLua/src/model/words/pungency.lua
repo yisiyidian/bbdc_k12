@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pungency"]={"pungency","['pʌndʒənsi]","[ 'pʌndʒənsi ]","n.刺激性",'n.刺激性,尖刻','Ginger is the traditional spice for its aroma and pungency.','姜是我国传统的香辛料，其风味芳香而辛辣。','The pungency of the cigarette smoke made me cough.','香烟的辛辣烟雾让我咳个不停。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chronic"]={"chronic","['krɒnɪk]","['krɑnɪk]","adj.长期的",'adj.长期的,慢性的,惯常的','There is a chronic unemployment problem in America.','在美国长期存在失业问题。','My brother has chronic bronchitis.','我的哥哥患有慢性支气管炎。'}

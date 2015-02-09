@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pliers"]={"pliers","['plaɪəz]","['plaɪɚz]","n.钳子（单复同）",'n.钳子（单复同）','pincer pliers','老虎钳','He had a coil of wire around one arm and a pair of pliers hung by a thong from his wrist.','他一条臂上挽着一圈铜丝,手腕上绕着的一根皮带上挂着一把钳子'}

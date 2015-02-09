@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["memo"]={"memo","['meməʊ]","['mɛmo]","n.备忘录",'n.备忘录','Keep this exchange memo for reconversion into foreign currency.','保存好这张兑换水单以便兑换回外币。','Here is the exchange memo.','这是兑换便笺。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["optimism"]={"optimism","['ɒptɪmɪz(ə)m]","['ɑptɪmɪzəm]","n.&adj.乐观",'n.&adj.乐观,乐观主义','Her mood varied from optimism to extreme depression.','她的情绪由乐观一变而为极度消沉.','He swings from wild optimism to total despair.','他由极其乐观一变而为完全绝望.'}

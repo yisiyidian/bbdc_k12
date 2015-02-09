@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["offspring"]={"offspring","['ɒfsprɪŋ]","['ɔfsprɪŋ]","n.子孙",'n.子孙,后代,产物','This device is the offspring of his inventive mind.','这一装置是他那长于发明的头脑的产儿.','How many offspring does a lion usually have?','一只狮子通常能生多少小狮子?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pugnacious"]={"pugnacious","[pʌg'neɪʃəs]","[pʌg'neʃəs]","adj.好斗的",'adj.好斗的','He is so pugnacious that he always fight with others.','他很好斗，因此经常和别人打架。','The President was in a pugnacious mood when he spoke to journalists about the rebellion.','总统和记者说起叛乱时，情绪激昂。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penetrate"]={"penetrate","['penɪtreɪt]","['pɛnətret]","vt.&vi.穿透",'vt.&vi.穿透,渗透,看穿','Nothing we say penetrates his thick skull!','无论我们说什麽他都不懂。','The headlamps penetrated the fog.','车的前灯的光射进雾中。'}

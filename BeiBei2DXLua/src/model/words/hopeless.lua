@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hopeless"]={"hopeless","['həʊplɪs]","['hopləs]","adj.没有希望的",'adj.没有希望的,绝望的,无可救药的','Leave me alone. I\'m hopeless.','别打扰我。我已经彻底绝望了。','I\'m hopeless at mathematics.','我对数学一窍不通。'}

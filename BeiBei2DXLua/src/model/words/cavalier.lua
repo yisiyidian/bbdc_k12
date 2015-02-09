@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cavalier"]={"cavalier","[,kævə'lɪə]","[,kævə'lɪr]","n.骑士",'n.骑士,武士|||adj.满不在乎的,无忧无虑的','The government takes a cavalier attitude to the problems of prison overcrowding.','政府对监狱拥挤不堪的问题不闻不问。','The editor takes a cavalier attitude to the concept of fact checking.','该编辑对于核对事实这一点采取无所谓的态度。'}

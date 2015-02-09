@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bereavement"]={"bereavement","[bɪ'riːvm(ə)nt]","[bɪ'rivmənt]","n.丧失（尤指亲友）",'n.丧失（尤指亲友）','Her daughter is a great solace to her in her bereavement.','在她丧夫之时，她的女儿是她的极大的安慰。','It is with the deepest regret that we learn of your bereavement.','惊悉你亲人逝世，深切悲痛。'}

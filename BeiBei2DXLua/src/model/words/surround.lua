@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surround"]={"surround","[sə'raʊnd]","[sə'raʊnd]","vt.包围",'n.环绕物|||vt.包围,环绕','Troops have surrounded the town.','部队已将该城包围.','The house was surrounded by high walls.','房子的四周有高墙.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["famous"]={"famous","['feɪməs]","['feməs]","adj.著名的",'adj.著名的,一流的','The parks of this city are famous for their ornate fountains.','这个城市的公园以其华丽的喷泉而著名。','That famous politician was murdered last year.','那位著名的政治家去年被谋杀了。'}

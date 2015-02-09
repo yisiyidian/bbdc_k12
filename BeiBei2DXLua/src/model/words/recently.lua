@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recently"]={"recently","['riːsntlɪ]","['risntli]","adv.最近",'adv.最近','Her books have been in popularity recently.','她的书近来大受欢迎。','A ban on the importation of drugs had been issued recently.','最近已经发布了禁止进口毒品的法令。'}

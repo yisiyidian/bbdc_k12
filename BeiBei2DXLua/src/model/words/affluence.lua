@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affluence"]={"affluence","['æflʊəns]","['æflʊəns]","n.富裕",'n.富裕','They are the products of post-war affluence.','他们是战后富裕生活的产物。','Their affluence is more apparent than real.','他们的富有只是虚有其表。'}

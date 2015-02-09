@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unicameral"]={"unicameral","[,juːnɪ'kæm(ə)r(ə)l]","['jʊnɪ'kæmərəl]","adj.一院的",'adj.一院的,单院的','The unicameral parliament of Israel.','以色列一院制的议会','The house is unicameral','这个房子是独院的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impuissance"]={"impuissance","[ɪm'pjuːɪsəns]","[ im'pju:isəns ]","n.无能",'n.无能,无力,虚弱','That can result in total lack of energy and muscle impuissance.','这将导致缺乏体能和肌肉无力。','She felt impuissance in the legs.','她感到双腿无力。'}

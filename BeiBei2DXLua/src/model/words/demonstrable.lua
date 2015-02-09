@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["demonstrable"]={"demonstrable","[dɪ'mɒnstrəb(ə)l; 'demən-]","[dɪ'mɑnstrəbl]","adj.可论证的",'adj.可论证的，明显的或显而易见的','demonstrable truths.','可证明的真理','demonstrable lies.','显而易见的谎言'}

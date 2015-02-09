@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attendant"]={"attendant","[ə'tend(ə)nt]","[ə'tɛndənt]","n.服务员",'adj.伴随的|||n.服务员,侍从,伴随物,出席者','If you need anything, just ring for the attendant.','如果您要什么，就按铃叫服务员。','Please ring for the attendant if you need anything.','如果需要什么，请按铃找服务员。'}

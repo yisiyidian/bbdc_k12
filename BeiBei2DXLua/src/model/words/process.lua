@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["process"]={"process","['prəʊses]","['prɑsɛs]","n.过程",'n.过程；工序；做事方法；工艺流程|||vt.加工；处理；审阅；审核|||vi.列队行进|||adj.经过特殊加工（或处理）的','I started moving the china ornaments but dropped a vase in the process.','我动手搬那些瓷制饰物，但在移动时摔了一只花瓶。','It may take a few weeks for your application to be processed.','审查你的申请书也许要等几个星期。'}

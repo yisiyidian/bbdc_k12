@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breathe"]={"breathe","[briːð]","[brið]","vi.呼吸",'vi.呼吸|||vt.轻声说,流露感情,注入','Promise me you won\'t breathe a word of this to anyone.','答应我别将此事泄漏给任何人。','Fish cannot breathe out of water.','鱼离开水就不能呼吸。'}

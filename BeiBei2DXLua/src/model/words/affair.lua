@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affair"]={"affair","[ə'feə]","[ə'fɛr]","n.事件",'n.事件,事情,事务','The minister is busy with important affairs of state.','部长忙于重要国务。','The party was a dull affair.','这次聚会单调乏味。'}

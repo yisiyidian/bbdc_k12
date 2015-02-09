@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sonorous"]={"sonorous","['sɒn(ə)rəs; sə'nɔːrəs]","['sɑnərəs]","adj.洪亮的",'adj.洪亮的,响亮的,作响的，堂皇的','The sonorous voice of the priest resounded in the church.','教士那圆润低沉的声音在教堂里回响。','There is a sonorous bell in the tower.','塔里有一口洪亮的钟。'}

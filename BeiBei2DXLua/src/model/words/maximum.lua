@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maximum"]={"maximum","['mæksɪməm]","[ˈmæksəməm]","n.最大量",'n.极点,最大量,极大|||adj.最高的,最大极限的','The demonstration was carefully orchestrated to attract maximum publicity.','该示威经过精心策画以尽量吸引公众注意.','The dress is carefully styled for maximum comfort.','这服装精心设计，力求达到最大限度的舒适。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["iterate"]={"iterate","['ɪtəreɪt]","['ɪtərət]","v.重做",'v.重做,反复重申|||vt.反复申说','If so, it must iterate the entire invocation list.','如果是, 它必须迭代整个调用列表.','Let me iterate that we have absolutely no plans to increase taxation.','让我再一次重申我们绝对没有增税的计划。'}

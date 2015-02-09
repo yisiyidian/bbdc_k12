@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["versus"]={"versus","['vɜːsəs]","['vɝsəs]","adj.对抗",'adj.对抗,相对比|||prep.对。。。；与。。。相对','There are different explanations for the use of right versus left.','和左侧相比,使用右侧有不同的解释.','freedom of information versus invasion of privacy','“信息自由与抄袭侵权相对”'}

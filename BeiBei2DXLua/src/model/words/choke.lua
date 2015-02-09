@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["choke"]={"choke","[tʃəʊk]","[tʃok]","vi.窒息",'vi.窒息,阻塞|||vt.(掐住或阻塞气管)使(某人)停止呼吸,塞满|||n.窒息,阻风门开关,阻塞','She choked with emotion.','她激动得说不出话来。','An old woman was found choked to death.','发现一个老妇人被掐死了。'}

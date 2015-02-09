@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["powerful"]={"powerful","['paʊəfʊl; -f(ə)l]","['paʊɚfl]","adj.强有力的",'adj.强有力的','She redeemed her reputation with a powerful speech to the party convention.','她由于向党代表大会做了有力的演说而挽回了自己的声誉。','This athlete has a powerful frame.','这位运动员有着魁梧的体格。'}

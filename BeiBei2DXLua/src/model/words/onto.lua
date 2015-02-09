@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["onto"]={"onto","['ɒntuː]","[ˈɑnˌtu, -tə, ˈɔn-]","prep.到...上",'prep.到...上','His soup spoon dropped onto the ground.','他的汤勺掉到了地上。','A miner\'s lamp is fixed onto his helmet.','矿灯固定在矿工的头盔上。'}

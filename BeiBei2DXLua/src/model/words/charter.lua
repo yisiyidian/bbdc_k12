@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["charter"]={"charter","['tʃɑːtə]","['tʃɑrtɚ]","n.特许(状)",'n.特许(状),宪章,契据|||vt.特许,发特许执照|||adj.特许的','A royal charter exempted the Massachusetts colony from direct interference by the Crown.','一张皇家的特许状，使马萨诸塞州殖民地免受英王直接干涉','The company was granted a charter trade in the occupied territory.','这家公司被授予特权，可以在被占领地区进行贸易活动。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adventitious"]={"adventitious","[,ædv(ə)n'tɪʃəs]","[,ædvɛn'tɪʃəs]","adj.偶然的",'adj.偶然的,外来的,[生]不定的，偶生的','The strike was broken, of course, but mainly by a series of adventitious developments.','罢工是中断了，但主要还是由于发生了一系列意外事件。','adventitious','偶然的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immortal"]={"immortal","[ɪ'mɔːt(ə)l]","[ɪ'mɔrtl]","adj.不朽的",'adj.不朽的|||n.不朽的人物','He left behind an immortal example to all posterity.','他给后世留下了不朽的典范。','The little girl is very interested in the old legend of immortal creatures.','小女孩对有关永生的精灵的古老传奇非常感兴趣。'}

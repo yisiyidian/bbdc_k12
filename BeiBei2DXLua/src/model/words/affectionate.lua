@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affectionate"]={"affectionate","[ə'fekʃ(ə)nət]","[ə'fɛkʃənət]","adj.情深的",'adj.情深的,充满情爱的','He gave her knee an affectionate pat.','他深情地拍了一下她的膝盖.','She gave her mother an affectionate hug.','她紧紧拥抱著她的母亲。'}

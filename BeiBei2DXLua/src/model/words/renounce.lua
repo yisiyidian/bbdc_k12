@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["renounce"]={"renounce","[rɪ'naʊns]","[rɪ'naʊns]","v.弃绝",'v.弃绝,放弃,否认','The barrister entirely renounce his right to object to a juror.','这位律师完全放弃了反对陪审团员的权力。','He renounced his claim to the property.','他放弃了对财产的继承权。'}

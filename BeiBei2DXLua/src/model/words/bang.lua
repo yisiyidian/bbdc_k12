@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bang"]={"bang","[bæŋ]","[bæŋ]","n.重击",'n.重击,突然巨响,刘海|||vt.重击,大声敲,剪成刘海|||vi.大声敲击,发出巨响|||adv.正好地,准确地','I banged my elbow on the corner of the table.','我的胳膊肘撞著桌子角了。','Her criticisms were bang on every time.','她的批评每次都非常中肯。'}

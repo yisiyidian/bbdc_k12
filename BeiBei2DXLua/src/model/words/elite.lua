@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elite"]={"elite","[[eɪˈliːt]]","[ɪˈliːt]","n.精华",'n.精华,精锐,中坚份子','It\'ll be a long time to become the elite of the society .','成为社会的精英份子，还需要更长的时间','In addition to notions of social equality there was much emphasis on the role of elites and of heroes within them','“除了社会平等概念之外还强调其中精英们和英雄们所起的作用”'}

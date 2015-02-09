@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soot"]={"soot","[sʊt]","[sʊt]","n.煤烟",'n.煤烟,烟尘|||vt.熏以煤烟','You\'vegot a smudge of soot on your cheek.','你脸上有块煤灰污迹.','One small fire in the kitchen will cover the whole house in soot.','一个厨房里的小火炉就会把整个房子都熏黑。'}

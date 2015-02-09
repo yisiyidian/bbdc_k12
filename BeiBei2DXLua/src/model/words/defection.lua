@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defection"]={"defection","[dɪ'fekʃn]","[dɪ'fɛkʃən]","n.背叛",'n.背叛,脱党,离会','He denounced the defection as a stab in the back.','他谴责这次背叛是背后捅刀子。','His defection to the other side was the ultimate betrayal','他变节投向另一方是最终的背叛。'}

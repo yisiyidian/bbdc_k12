@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nonentity"]={"nonentity","[nɒ'nentɪtɪ]","[nɑ'nɛntəti]","n.不存在",'n.不存在,非实在,虚无，不重要','How could such a nonentity become chairman of the company?','这样的庸才怎么能当公司的董事长?','You\'d better catch the chance and show us that you\'re not a nonentity.','你最好抓住这个机会，证明自己不是无名之辈。'}

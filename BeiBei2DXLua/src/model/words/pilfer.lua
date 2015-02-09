@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pilfer"]={"pilfer","['pɪlfə]","[ 'pilfə ]","v.盗",'v.盗,偷,窃','She had been pilfering from the petty cash for months.','她多月来一直从零用现金中偷钱.','He was caught pilfering.','他行窃当场被抓住.'}

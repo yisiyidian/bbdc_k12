@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oracular"]={"oracular","[ɒ'rækjʊlə]","[ə'rækjəlɚ]","adj.神谕的",'adj.神谕的,玄妙难懂的','The content in the book of changes is oracular.','易经中的内容玄妙难懂。','To us this oracular remark seemed to herald Hitler.','这番玄妙深奥的话在我们看来仿佛预示着希特勒的来临。'}

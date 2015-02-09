@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vessel"]={"vessel","['ves(ə)l]","['vɛsl]","n.船",'n.船,容器,脉管,血管,化身','We hove the vessel to.','我们把船停住了.','First the surgeon performed the section of the blood vessel.','外科医生首先切开血管。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["director"]={"director","[dɪ'rektə; daɪ-]","[də'rɛktɚ]","n.导演",'n.董事,经理,主管,指导者,导演','He has a lot of pull with the managing director.','他对总经理有很大的影响力。','The director made his son start on the bottom rung of the ladder as an office boy.','董事让他的儿子从最低级的职员做起。'}

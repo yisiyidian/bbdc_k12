@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unaffected"]={"unaffected","[ʌnə'fektɪd]","[,ʌnə'fɛktɪd]","adj.不受影响的",'adj.不受影响的，不矫揉造作的,自然的','His happiness was natural and unaffected.','他的快乐是发自内心的','The children seem unaffected emotionally by their parents\' divorce.','孩子在情绪上似乎未受到父母离婚的影响。'}

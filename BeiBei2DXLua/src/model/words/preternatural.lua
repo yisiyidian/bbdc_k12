@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preternatural"]={"preternatural","[,priːtə'nætʃ(ə)r(ə)l]","[ ,pri:tə'nætʃərəl ]","adj.超自然的",'adj.异常的,超自然的','Their parents had an almost preternatural ability to understand what was going on in their children\'s minds.','他们的父母有着一种近乎神奇的能力，能够洞悉自己的孩子脑子里正在想什么。','Dogs have a preternatural sense of smell.','狗有不寻常的嗅觉。'}

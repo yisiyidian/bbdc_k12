@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["go"]={"go","[gəʊ]","[go]","vi.去",'vi.去,走,变得,进行,放,通往,消失|||vt.走过,称重|||[计算机]执行','It\'s all go in the office today.','今天办公室里忙得不可开交。','We will go by bus. Solicitors went from door to door seeking donations. How fast can the boat go?','我们将坐公共汽车去。募捐者挨户筹募钱款。这条船行驶的速度有多快?'}

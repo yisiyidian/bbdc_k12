@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["around"]={"around","[ə'raʊnd]","[ə'raʊnd]","prep.在...附近",'adj.大约,在现存范围内|||adv.大约,到处,在周围|||prep.在...附近,到处','I\'ll send someone to show you around.','我派人带你到周围转转。','It\'ll be finished around Christmas.','这事将在圣诞节前後完成。'}

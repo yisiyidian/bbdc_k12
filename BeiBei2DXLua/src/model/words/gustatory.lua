@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gustatory"]={"gustatory","[gʌ'steɪt(ə)rɪ; 'gʌstət(ə)rɪ]","['gʌstə,tori]","adj.味觉的",'adj.味觉的','||Gustatory|| is the most important thing of a cooker.','味觉是一个厨师最重要的东西。','Relax your gustatory bud, the tour of graceful table delicacies that begin one!','放松您的味蕾，开始一个曼妙的美食之旅吧！'}

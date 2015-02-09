@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emergence"]={"emergence","[ɪ'mɜːdʒ(ə)ns]","[ɪ'mɝdʒəns]","n.出现",'n.出现','Some pinned their faith on the emergence of a new national leader, others on a religious revival.','一些人相信会出现一个新的国家领导人，而另一些人则相信宗教复兴。','The last decade saw the emergence of a dynamic economy.','最近10 年见证了经济增长的姿态。'}

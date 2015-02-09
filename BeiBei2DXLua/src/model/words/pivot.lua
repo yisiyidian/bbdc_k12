@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pivot"]={"pivot","['pɪvət]","['pɪvət]","n.枢",'n.枢,核心,旋转|||adj.在枢轴上转动的,关键的|||vt.装枢轴于,以...为中心旋转|||vi.在枢轴上转动','Because her job had been the pivot of her life, retirement was very difficult.','因为她的工作一向是她生命的支柱，所以退休后日子很不好过.','The whole discussion pivots on this one point.','整个讨论内容均以此为中心。'}

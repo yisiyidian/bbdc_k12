@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pusillanimous"]={"pusillanimous","[,pjuːsɪ'lænɪməs]","[,pjusɪ'lænɪməs]","adj.懦弱的",'adj.懦弱的,胆小的','The pusillanimous man would not defend his own family.','软弱无力的人不会保卫他自己的家。','The authorities have been too pusillanimous in merely condemning the violence.','当局对暴行只是进行了谴责，真是太胆小怕事了。'}

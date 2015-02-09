@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assemble"]={"assemble","[ə'semb(ə)l]","[ə'sɛmbl]","vt.聚集",'vt.聚集,集合,装配|||vi.集合,聚集','If the fire-alarm goes, staff should assemble outside the building.','火警警报响时全体人员应到楼外集合.','The captain called the men to assemble.','队长命令部队集合。'}

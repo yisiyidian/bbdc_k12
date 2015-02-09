@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opiate"]={"opiate","['əʊpɪət]","['opɪət]","n.鸦片剂(麻醉剂)",'n.鸦片剂(麻醉剂)|||adj.安眠的(麻醉的)','She can not go asleep but with opiate.','没有安眠药她不能入睡。','Heroin is an opiate processed directly from the extracts of the opium poppy.','海洛因是一种鸦片剂，直接由罂粟提炼而成。'}

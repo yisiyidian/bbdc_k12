@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hoard"]={"hoard","[hɔːd]","[hɔrd]","v.&n.贮藏",'v.&n.贮藏,秘藏|||vt.贮藏','The squirrel hoards up nuts for the winter.','松鼠为过冬储藏坚果。','Time can not be hoarded.','时间不可储存。'}

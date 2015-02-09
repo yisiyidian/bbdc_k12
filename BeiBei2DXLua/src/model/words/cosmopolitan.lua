@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cosmopolitan"]={"cosmopolitan","[,kɒzmə'pɒlɪt(ə)n]","['kɑzmə'pɑlətn]","adj.世界性的",'adj.世界性的,久经世故的','Beijing is the capital of China. It\'s a cosmopolitan city.','北京是中国的首都，它是一个国际都市。','The rose is a cosmopolitan plant.','玫瑰是遍生于世界各地的植物。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dire"]={"dire","['daɪə]","[ 'daiə ]","adj.可怕的",'adj.可怕的，悲惨的，灾难警告的，极其的','He was in dire need of hospital treatment.','他急需入院治疗。','You\'ll be in dire trouble if you don\'t watch out.','你若不小心，就会有可怕的麻烦。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["practicality"]={"practicality","[,præktɪ'kælɪtɪ]","['præktɪ'kæləti]","n.实际",'n.实际,实用,实用性,实际的事情','I\'m not sure about the practicality of that suggestion.','我还无法确定那个建议的可行性。','He questioned the practicality of the proposal.','他对该项建议的可行性表示怀疑。'}

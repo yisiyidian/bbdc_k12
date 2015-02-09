@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yokel"]={"yokel","['jəʊk(ə)l]","[ 'jəukəl ]","n.庄稼汉",'n.庄稼汉,乡下人','We put that money to a lot better use than those yokels in congress ever could.','我们比国会那帮乡下佬更好地利用了那笔钱。','The clothes makes him look like a yokel.','这件衣服让他看起来像个乡巴佬。'}

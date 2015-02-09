@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["satyr"]={"satyr","['sætə]","['sætɚ]","n.(希腊及罗马神话)半人半兽的森林之神",'n.(希腊及罗马神话)半人半兽的森林之神,好色之徒,性欲极强的男人','A satyr is half man and half goat in Greek and Roman mythology.','在希腊和罗马神话中，森林之神是半人半羊的样子。','The vulgar, ill-bred old M.P. fell down on his knees and leered at her like a satyr.','这庸俗的缺乏教养的老议员竟然朝她下跪，并像色鬼那样睨视着她。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amity"]={"amity","['æmɪtɪ]","['æməti]","n.友好",'n.友好,亲善关系','We live in amity with our neighbours.','我们与邻居和睦相处。','He wished to live in amity with his neighbour.','他希望能与邻居和睦相处。'}

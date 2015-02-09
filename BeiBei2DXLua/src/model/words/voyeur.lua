@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["voyeur"]={"voyeur","[vwʌ'jɜː; vɒɪ-]","[vɔɪ'jɝ]","n.窥淫狂者",'n.窥淫狂者,窥隐私者','The voyeur stayed beside the window of his neighbor\'s bathroom.','偷窥狂站在邻居浴室的窗户旁边。','They accidentally found out that their ostensibly benign neighbor is actually a voyeur.','他们偶然间发现那个表面和善的邻居居然是一个偷窥狂。'}

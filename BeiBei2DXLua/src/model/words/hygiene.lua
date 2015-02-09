@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hygiene"]={"hygiene","['haɪdʒiːn]","['haɪdʒin]","n.卫生",'adj.(hygienic)|||n.卫生','Their course of study includes elementary hygiene and medical theory.','他们的课程包括基础卫生学和医疗知识.','People should wash regularly to ensure personal hygiene.','人们应经常洗澡以保证个人卫生。'}

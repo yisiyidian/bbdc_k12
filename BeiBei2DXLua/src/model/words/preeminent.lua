@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preeminent"]={"preeminent","[prɪ'emɪnənt]","[pri'ɛmɪnənt]","adj.卓越的",'adj.卓越的，优秀的,超群的','A preeminent actor can bring a fictional character to life.','一个优秀的演员能把虚拟的人物演得有声有色。','Since you are preeminent, I want to invite you to join our society','我们社团正需要你这样的江湖人士，有兴趣加入吗？'}

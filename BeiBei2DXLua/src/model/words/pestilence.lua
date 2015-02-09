@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pestilence"]={"pestilence","['pestɪl(ə)ns]","['pɛstɪləns]","n.瘟疫",'n.瘟疫，毒害物','They were crazed by the famine and pestilence of that bitter winter.','他们因那年严冬的饥饿与瘟疫而折磨得发狂.','A pestilence was raging in that area.','瘟疫正在那个地方流行。'}

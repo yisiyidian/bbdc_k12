@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coin"]={"coin","[kɒɪn]","[kɔɪn]","n.硬币",'n.硬币,金钱,货币|||vt.制造钱币,创造|||adj.与硬币有关的','The Royal Mint will strike a commemorative gold coin.','英国皇家造币厂将铸造一种纪念金币。','He reversed the coin and examined it carefully.','他把硬币倒过来，仔细检查。'}

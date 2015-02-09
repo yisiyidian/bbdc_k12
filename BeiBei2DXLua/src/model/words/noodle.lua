@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["noodle"]={"noodle","['nuːd(ə)l]","['nʊdl]","n.面条",'n.面条','He went to the piano and noodle around until the tune came back to him.','他走到钢琴边随意弹奏起来, 一直到他想起那曲子。','Chinese food is often served with rice or noodles.','中餐常有米饭或面条.'}

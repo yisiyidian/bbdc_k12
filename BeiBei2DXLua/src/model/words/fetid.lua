@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fetid"]={"fetid","['fetɪd; 'fiːt-]","['fɛtɪd]","adj.有恶臭的",'adj.有恶臭的,臭的','His socks were very fetid.','他的袜子臭极了。','The air of the room was fetid with stale tobacco smoke.','房间里的空气有陈烟的臭味。'}

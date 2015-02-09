@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["miscellany"]={"miscellany","[mɪ'selənɪ]","['mɪsəleni]","n.杂集",'n.杂集,文集,混合物','The top drawer held a miscellany of foreign coins and banknotes.','最上层的抽屉装着各式各样的外国硬币和钞票。','The book is a fascinating miscellany collected from the writer\'s life work.','这本文集收录了该作家毕生作品的精华。'}

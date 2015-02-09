@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bustle"]={"bustle","['bʌs(ə)l]","['bʌsl]","v.奔忙",'n.喧哗，匆忙|||n.(旧时）裙撑，衬垫|||v.奔忙,催促','He hated being transplanted from his home in the country to the noise and bustle of life in the city.','他很不喜欢从乡间的居所迁居到了喧闹的城市里.','She is always ||bustling|| about the house.','她总是为家务忙个没完。'}

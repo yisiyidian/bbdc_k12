@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collation"]={"collation","[kə'leɪʃ(ə)n]","[kə'leʃən]","n.检验",'n.检验(整理,校对)','Many countries have no laws governing the collation of personal information.','很多国家没有针对个人信息收集的法律。','collation','校对'}

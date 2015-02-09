@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cumulative"]={"cumulative","['kjuːmjʊlətɪv]","['kjumjəletɪv]","adj.累积的",'adj.累积的，附加的','It is a cumulative process.','它是一个逐步累积的过程。','It is simple pleasures, such as a walk on a sunny day, which have a cumulative effect on our mood.','一些简单的娱乐，譬如在一个阳光明媚的日子散步，就能使我们的心情更愉快。'}

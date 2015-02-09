@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["philosophy"]={"philosophy","[fɪ'lɒsəfɪ]","[fə'lɑsəfi]","n.哲学",'n.哲学,哲理','He holds the chair of philosophy at Oxford.','他任牛津大学哲学教授.','Ethics is a branch of philosophy.','伦理学是哲学的分科.'}

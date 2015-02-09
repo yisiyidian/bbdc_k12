@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lexicographer"]={"lexicographer","[,leksɪ'kɒgrəfə]","[,lɛksɪ'kɑɡrəfɚ]","n.辞典编纂者",'n.辞典编纂者','There must be a lot of tautological work for a lexicographer to do.','词典编纂者一定有很多繁琐的工作需要做。','A lexicographer\'s job is to describe the language.','词典编纂者的工作就是对语言加以描述。'}

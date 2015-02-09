@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["backslide"]={"backslide","['bækslaɪd]","[ ,bæk'slaid ]","vi.堕落",'vi.堕落,退步,背离宗教','He\'s a reformed criminal who may yet backslide.','他是个经过改造的罪犯，然而仍有可能故态复萌。','Many guys have backslided during the university.','很多人在大学就堕落了.'}

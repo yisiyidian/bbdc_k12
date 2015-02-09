@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forecast"]={"forecast","['fɔːkɑːst]","['fɔrkæst]","vt.&vi.预测",'n.预测,预报|||vt.&vi.预测','Despite the good weather forecast, the next morning was as wet as ever.','尽管预报称天气很好，但次日上午仍阴雨绵绵。','Who can forecast the future?','谁能预言将来?'}

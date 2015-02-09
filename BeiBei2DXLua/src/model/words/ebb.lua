@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ebb"]={"ebb","[eb]","[ɛb]","n.退潮",'n.退潮,衰落|||vi.落潮,衰退','His energy seemed to ebb.','他的精力似乎正在衰退。','Painting was then at its lowest ebb.','那时绘画艺术非常不景气。'}

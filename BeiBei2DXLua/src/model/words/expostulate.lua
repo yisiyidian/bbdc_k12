@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expostulate"]={"expostulate","[ɪk'spɒstjʊleɪt; ek-]","[ɪk'spɑstʃulet]","v.(对人或行为的)抗议",'v.(对人或行为的)抗议,告诫','They expostulated with him about the risks involved in his plan.','他们指出他的计划有风险, 劝他放弃.','For heaven\'s sake! Dot expostulated. "They\'re cheap and they\'re useful."','“看在老天的份上！”多特反驳道。“他们便宜而且他们有用。”'}

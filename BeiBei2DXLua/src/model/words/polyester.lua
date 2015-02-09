@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polyester"]={"polyester","[,pɒlɪ'estə]","[,pɑlɪ'ɛstɚ]","n.聚酯",'n.聚酯|||adj.有朴实特色的','...a green polyester shirt.','…一件绿色的涤纶衬衫。','T-shirts blent with cotton and polyester','棉和聚酯混合的Ｔ恤'}

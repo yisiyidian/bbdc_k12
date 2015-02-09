@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["raw"]={"raw","[rɔː]","[rɔ]","adj.生的",'adj.生的,未加工的,原始的,不熟练的,寒冷的|||n.触到某人的痛处','The steel works has been supplying us with raw material in large quantities.','在过去的两年中, 那家钢铁厂一直提供给我们原材料。','With the production going up, an increasing supply of raw materials is needed.','随着生产量的增长, 需要原材料的供应也不断增长。'}

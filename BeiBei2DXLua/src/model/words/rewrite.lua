@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rewrite"]={"rewrite","[riː'raɪt]","['riraɪt]","n.重写",'n.重写,改写|||vt.改写,重写|||vi.修改','I ||rewrote|| the article because it do not according with our policy.','由于该文与我们的政策不符，我重新写了一遍。','Following this critique, students rewrite their papers and submit them for final evaluation.','遵照这一评语，学生们重写他们的论文并交上去以接受终审。'}

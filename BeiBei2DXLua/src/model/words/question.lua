@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["question"]={"question","['kwestʃ(ə)n]","['kwɛstʃən]","n.问题",'n.问题,询问,争论点|||vt.询问,怀疑|||vi.问问题','A new bicycle is out of the question; we can\'t afford it.','买新自行车的事谈不到——我们买不起。','She is so talented that her success can only be a question of time.','她才华横溢，事业成功只是时间问题。'}

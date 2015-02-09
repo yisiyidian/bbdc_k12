@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gratuity"]={"gratuity","[grə'tjuːɪtɪ]","[ɡrə'tuəti]","n.赠物",'n.赠物,赏钱,贺仪','He is taking a gratuity from the Navy.','他将领到海军补助的退役金。','The total cost, excluding gratuity, be￡1520.00 per person for the 6-night trip.','6夜游平均每个人要花1520英镑，不含小费。'}

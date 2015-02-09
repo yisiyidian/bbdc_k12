@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swivel"]={"swivel","['swɪv(ə)l]","['swɪvl]","vi.旋转",'n.转换仪器，转体|||vt.使旋转,使回旋|||vi.旋转，回旋','She swivelled the telescope (round).','她用望远镜向四周看.','He swivelled (round) in his chair to face us.','他把坐著的转椅转过来面向著我们.'}

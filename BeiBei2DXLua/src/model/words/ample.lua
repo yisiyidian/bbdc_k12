@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ample"]={"ample","['æmp(ə)l]","['æmpl]","adj.充足的",'adj.充足的,丰富的,宽敞的','The house has an ample parlor.','这座房子有宽敞的客厅。','||Ample|| sunshine and rainfall are bringing the crops on nicely.','充足的阳光和雨水正使庄稼茁壮地生长。'}

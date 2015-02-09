@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cough"]={"cough","[kɒf]","[kɔf]","n.咳嗽",'n.咳嗽|||vt.&vi.咳嗽','You really ought to/should do something about that cough!','你咳嗽那麽厉害, 真得治一治了!','The baby has a cough.','婴儿咳嗽了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["venomous"]={"venomous","['venəməs]","['vɛnəməs]","adj.恶意的",'adj.恶意的,有毒的','She has a venomous tongue.','她有一张刻毒的嘴。','There are two types of mollusc  that are actively venomous.','有两种随时释放毒素的软体动物.'}

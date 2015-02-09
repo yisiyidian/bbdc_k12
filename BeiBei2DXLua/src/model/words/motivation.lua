@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["motivation"]={"motivation","[məʊtɪ'veɪʃ(ə)n]","[,motə'veʃən]","n.动机",'n.动机','The motivation for the decision is the desire to improve our service to our customers.','做这决定的原因是为了改善我们对顾客的服务.','The motivations and identities of the hackers remained uncertain.','黑客的动机与身份现在仍然不确定。'}

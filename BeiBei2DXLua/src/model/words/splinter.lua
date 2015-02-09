@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["splinter"]={"splinter","['splɪntə]","['splɪntɚ]","n.碎片",'n.碎片,刺|||v.劈开,破裂','I got a splinter in my finger while I was moving the boxes.','我在搬箱子的时候手指头上扎了一根刺。','Some splinters of glass had got into his feet.','他的脚上扎了一些碎玻璃屑。'}

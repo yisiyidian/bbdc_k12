@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illimitable"]={"illimitable","[ɪ'lɪmɪtəb(ə)l]","[ i'limitəbl ]","adj.无穷的",'adj.无穷的,无限的','Mankind has begun to glimpse its illimitable powers.','人类终于得以瞥见一丝无穷的能量。','We underestimate the illimitable complexity of society.','我们低估了社会的无限复杂性。'}

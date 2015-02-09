@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reclaim"]={"reclaim","[rɪ'kleɪm]","[rɪ'klem]","v.收回",'v.开垦,纠正,收回','After he stop pay the hire purchase installment, the finance company tried to reclaim his car.','在他停止支付租购分期付款后，该金融公司试图收回他的汽车。','This land was reclaimed from the sea.','这块土地是填海开垦出来的。'}

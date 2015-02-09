@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["theatrical"]={"theatrical","[θɪ'ætrɪk(ə)l]","[θɪ'ætrɪkl]","adj.剧场的",'adj.剧场的,夸张的','A theatrical performance of this kind; a variety show.','杂耍表演这类的戏剧演出；综合演出','British actor and theatrical producer who founded the Royal Academy of Dramatic Art(1904).','特里，赫伯特·比尔博姆1853－1917英国演员和戏剧制作人，他创立了皇家戏剧学院（1904年）'}

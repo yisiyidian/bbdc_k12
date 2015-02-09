@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gaunt"]={"gaunt","[gɔːnt]","[ ɡɔ:nt ]","adj.憔悴的",'adj.憔悴的,荒凉的','The city looks gaunt after the war.','战争结束后，这座城市看起来一片荒凉。','Looking gaunt and tired, he denied there was anything to worry about.','他看上去憔悴而又疲劳，却否认有烦心事。'}

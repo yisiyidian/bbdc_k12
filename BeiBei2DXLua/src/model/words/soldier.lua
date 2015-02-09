@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soldier"]={"soldier","['səʊldʒə]","['soldʒɚ]","n.士兵",'n.士兵,军人','The soldier received a serious wound on the chest.','这名士兵胸部受了重伤。','Should a soldier value honour above life?','军人应视荣誉重於生命吗?'}

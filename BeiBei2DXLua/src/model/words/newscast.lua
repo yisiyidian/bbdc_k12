@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["newscast"]={"newscast","['njuːzkɑːst]","['njʊzkæst]","n.新闻广播",'n.新闻广播','Foreign ||Newscast|| is on Page 16.','国外新闻在第16版。','The 24 hour newscast was known for reporting developing news around the globe.','这个24小时新闻广播节目以同步报道国际新闻而知名。'}

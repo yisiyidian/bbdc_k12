@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["witticism"]={"witticism","['wɪtɪsɪz(ə)m]","['wɪtɪsɪzəm]","n.名言",'n.名言,机敏,妙语','Once in a while, after witticism, he would look down, and his eyes would meet hers','每隔一小会儿，说了什么俏皮话以后，他就低下头，和她目光相交。','He tries to lighten his lectures with an occasional witticism.','他有时想用俏皮话使课堂活跃.'}

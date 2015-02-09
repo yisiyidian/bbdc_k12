@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["male"]={"male","[meɪl]","[mel]","adj.男性的",'adj.男性的,雄性的|||n.男子,雄性动物','In early days only male athletes were allowed to take part in the Olympic Games.','在奥林匹克运动会早期, 只有男性运动员才能参加比赛。','The male and female genders are equal.','男性和女性是平等的。'}

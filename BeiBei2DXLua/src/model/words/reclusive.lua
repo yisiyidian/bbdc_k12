@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reclusive"]={"reclusive","[rɪ'kluːsɪv]","[rɪ'klʊsɪv]","adj.隐遁的",'adj.隐遁的,寂寞','He is in essence a reclusive sort.','他本质上具有一种隐士的气质','a reclusive hut','禁闭室'}

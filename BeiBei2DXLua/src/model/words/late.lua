@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["late"]={"late","[leɪt]","[let]","adj.迟的",'adj.迟的,晚的,已故的|||adv.很晚,很迟,晚,最近地','Because of the cold weather the crops are late this year.','因天气寒冷，今年的作物成熟得晚。','The train was 10 minutes late.','火车晚点了10 分钟。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plainly"]={"plainly","['pleinli]","[ 'pleinli ]","adv.平坦地",'adv.平坦地,明白地','Don\'t beat about the bush so much, tell us plainly what you are driving it.','别旁敲侧击，简单明了地对我们说一说到底是什么意思！','You are plainly unwilling to co-operate.','你显然不愿合作.'}

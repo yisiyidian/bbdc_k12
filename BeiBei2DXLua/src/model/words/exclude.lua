@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exclude"]={"exclude","[ɪk'skluːd; ek-]","[ɪk'sklʊd]","vt.排除",'vt.除外,排除,拒绝|||[计算机]排除','No one was excluded from sentry duty.','人人都得站岗放哨。','We cannot exclude the possibility that he killed his wife.','我们不能排除他杀了他妻子的可能性。'}

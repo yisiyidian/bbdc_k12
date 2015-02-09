@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["certainly"]={"certainly","['sɜːt(ə)nlɪ; -tɪn-]","['sɝtnli]","adv.当然",'adv.当然','She certainly bears you no malice.','她对你的确并无恶意。','||Certainly||, if the weather is fine.','如果天气好，当然可以。'}

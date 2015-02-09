@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alimony"]={"alimony","['ælɪmənɪ]","['ælɪmoni]","n.(离婚后丈夫给妻子的)赡养费",'n.(离婚后丈夫给妻子的)赡养费','You may have to pay alimony if the divorce goes through.','如果离婚了，你也必须给对方赡养费。','A great deal of Jeff\'s money went in alimony to his three former wives.','杰夫的很大一部分钱都用在了向他的前三任妻子支付赡养费。'}

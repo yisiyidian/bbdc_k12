@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["valuable"]={"valuable","['væljʊb(ə)l]","['væljuəbl]","adj.贵重的",'adj.贵重的,有价值的|||n.(pl.)贵重物品','The flaw in this vase makes it less valuable.','这个花瓶因为有点缺陷，不那么值钱了。','Real friendship is more valuable than money.','真正的友谊比金钱更宝贵。'}

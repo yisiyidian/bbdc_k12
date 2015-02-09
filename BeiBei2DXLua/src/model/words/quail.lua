@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quail"]={"quail","[kweɪl]","[kwel]","n.鹌鹑",'n.鹌鹑|||vi.畏缩，胆怯','I quailed with fear at the thought of telling her the bad news.','想到要告诉她这个坏消息，我就害怕得发抖。','I quailed at the danger.','我一遇到危险，心里就发毛。'}

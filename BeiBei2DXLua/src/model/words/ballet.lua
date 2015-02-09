@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ballet"]={"ballet","['bæleɪ; -lɪ]","[bæ'le]","n.芭蕾舞",'n.芭蕾舞','The ballet school offers free places to children who are exceptionally talented.','该芭蕾舞蹈学校给有特殊天赋的儿童提供免费学习的机会.','Fonteyn represents the best traditions of ballet.','芳廷承袭了芭蕾舞艺术的最优秀的传统'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pineapple"]={"pineapple","['paɪnæp(ə)l]","['paɪn'æpl]","n.菠萝",'n.菠萝','Cut some pineapple for your sister.','给你姐姐切几片菠萝吧。','It\'s impossible to cut a pineapple with such a dull knife.','用一把这么钝的刀子切菠萝是不可能的。'}

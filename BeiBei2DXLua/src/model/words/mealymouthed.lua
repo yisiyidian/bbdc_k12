@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mealymouthed"]={"mealymouthed","['mi:limauðd]","[ 'mi:limauðd ]","adj.不坦率的",'adj.不坦率的','He repeated that he did not intend to be mealymouthed with the country\'s leaders.','他重申道，他和国家领导人谈话时无意拐弯抹角。','The mealymouthed answer: only time will tell.','拐弯抹角的说法：时间会证明一切。'}

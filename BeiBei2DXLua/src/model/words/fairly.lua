@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fairly"]={"fairly","['feəlɪ]","['fɛrli]","adj.相当地",'adj.公平地,相当|||adv.相当地','I felt I hadn\'t been treated fairly.','我觉得我没有受到公正的对待。','It\'s fairly hot today.','今天相当热。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deputy"]={"deputy","['depjʊtɪ]","['dɛpjuti]","adj.代理的",'adj.代理的,副的|||n.代表,副手','By convention the deputy leader is always a woman.','按照惯例这一领导人的副职总是由女子担任.','I am resigning as chairman and handing over to my deputy.','我现在辞去主席职位，交由我的副手接替。'}

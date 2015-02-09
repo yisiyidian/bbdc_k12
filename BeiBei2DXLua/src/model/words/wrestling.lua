@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrestling"]={"wrestling","['reslɪŋ]","['rɛslɪŋ]","n.摔角",'n.摔角,扭斗,格斗|||wrestle的现在分词','After wrestling with myself for some days, I decided to accept her offer.','经过了几天的内心斗争，我决定接受她的建议。','Can\'t you help your mother wrestling with that heavy box?','你不能帮帮你妈妈搬一搬那沉重的箱子吗？'}

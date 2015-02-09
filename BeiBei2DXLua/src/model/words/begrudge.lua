@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["begrudge"]={"begrudge","[bɪ'grʌdʒ]","[bɪ'ɡrʌdʒ]","vt.嫉妒",'vt.嫉妒,羡慕,对（某人所享有的）感到不满；舍不得给','Nobody begrudges you your success.','没有人忌妒你的成功。','She begrudged his youth.','她羡慕他的青春。'}

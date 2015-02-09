@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inundate"]={"inundate","['ɪnʌndeɪt]","['ɪnʌndet]","v.浸水",'v.浸水,向泛滥,淹没','We were inundated with enquiries.','查询的人很多，我们应接不暇。','When the river burst its banks the fields were inundated.','大河决堤时，田野被洪水淹没。'}

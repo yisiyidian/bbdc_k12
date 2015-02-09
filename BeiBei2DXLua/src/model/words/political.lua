@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["political"]={"political","[pə'lɪtɪk(ə)l]","[pə'lɪtɪkl]","adj.政治的",'adj.政治的,政党的,派系斗争的,有政治头脑的','She entered the political arena after her husband\'s death.','她丈夫死后，她进入了政界。','This department collects information on political extremists.','这个部门搜集有关政治极端分子的情报。'}

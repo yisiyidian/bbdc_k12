@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["supersede"]={"supersede","[,suːpə'siːd; ,sjuː-]","[,supɚ'sid]","vt.取代",'vt.取代,接替,使放在一边','Will factory workers be entirely superseded by machines one day?','工人将来能完全由机器取代吗?','Motorways have largely superseded ordinary roads for long-distance travel.','在长途旅行方面，高速公路已经在很大程度上取代了普通公路。'}

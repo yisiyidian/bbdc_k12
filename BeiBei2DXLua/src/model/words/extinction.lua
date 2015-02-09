@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extinction"]={"extinction","[ɪk'stɪŋ(k)ʃ(ə)n; ek-]","[ɪk'stɪŋkʃən]","n.消失",'n.消失,消减,废止','The race was threatened with extinction.','这个种族这时眼看要灭绝了。','His movie of the extinction of dinosaurs was a great success.','他的关于恐龙灭绝的电影取得了巨大的成功。'}

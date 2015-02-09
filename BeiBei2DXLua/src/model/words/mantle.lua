@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mantle"]={"mantle","['mænt(ə)l]","['mæntl]","n.斗篷",'n.斗篷,覆罩之物,罩子|||v.罩住,覆盖,脸红','The earth has a core and a mantle around it.','地球的中心是地核, 地核的周围是地幔.','The earth bore a thick green mantle of vegetation.','大地覆盖着一层厚厚的绿色植物.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["should"]={"should","[ʃʊd]","[ʃʊd]","verbauxiliary.应该",'verbauxiliary.应该,竟然,可能','It should cost roughly 10.','这大约10英镑.','We should improve what is called the quality of living.','我们应该改进所谓的生活品质。'}

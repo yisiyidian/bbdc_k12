@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["today"]={"today","[tə'deɪ]","[tə'de]","n.&adv.今天",'n.&adv.今天','We\'ve made 100 miles today.','我们今天已走了100英里.','The fashions of today change very quickly.','现今的时装式样变换很快。'}

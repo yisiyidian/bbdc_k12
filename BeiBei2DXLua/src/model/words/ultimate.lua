@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ultimate"]={"ultimate","['ʌltɪmət]","['ʌltəmət]","n.终极",'n.终极,根本，精华|||adj.终极的,根本的,极限的,最后的','Their ultimate weapon was the threat of an all-out strike.','他们最后的杀手锏是威胁举行大罢工。','The ultimate luxury of the trip was flying in Concorde.','这一行程中最大的享受就是乘坐协和式飞机。'}

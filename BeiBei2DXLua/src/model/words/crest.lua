@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crest"]={"crest","[krest]","[krɛst]","n.冠",'n.冠,饰毛,顶部|||v.到达绝顶,加以顶饰','On the wall is the family crest.','墙上是家族饰章。','The rooster bristled his crest.','公鸡竖起了鸡冠。'}

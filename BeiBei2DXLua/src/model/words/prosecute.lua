@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prosecute"]={"prosecute","['prɒsɪkjuːt]","['prɑsɪ'kjʊt]","vt.对...提起公诉",'vt.对...提起公诉,彻底进行,追捕,经营,从事|||vi.起诉,担任检察官','Trespassers will be prosecuted.','闲人免进，违者必究。','A judgment against a plaintiff for failure to prosecute the case or to introduce sufficient evidence.','诉讼驳回由于原告没将案件起诉或缺乏确凿证据而作出对原告不利的判决'}

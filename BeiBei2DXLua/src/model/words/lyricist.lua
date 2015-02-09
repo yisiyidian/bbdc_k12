@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lyricist"]={"lyricist","['lɪrɪsɪst]","['lɪrɪsɪst]","n.抒情诗人",'n.抒情诗人','Mr Sharp who works out of the country-music tradition, is a gifted lyricist who does something good in every second song.','基于乡村音乐进行创作的夏普先生是一位很有天才的歌词作者，他在许多歌曲中都做出好成绩。','Mr Xuzhimo is a famous lyricist in Chinese history.','在中国历史上，徐志摩是个很有名的抒情诗人。'}

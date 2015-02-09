@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lineaments"]={"lineaments","['lɪnɪəmənts]","[ 'liniəmənts ]","轮廓",'轮廓','He shows the lineaments of a Mongol face.','他有蒙古人的外貌特征。','I could barely see my father\'s lineaments','我仅能看到父亲的背影'}

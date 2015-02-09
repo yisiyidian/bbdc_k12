@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thereby"]={"thereby","[ðeə'baɪ]","[,ðɛr'baɪ]","adv.因此",'adv.因此,从而','He became a citizen, thereby gaining the right to vote.','他成为公民，并因此获得了选举权。','||Thereby|| hangs a tale.','其中必有文章。'}

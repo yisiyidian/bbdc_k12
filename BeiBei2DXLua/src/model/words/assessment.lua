@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assessment"]={"assessment","[ə'sesmənt]","[ə'sɛsmənt]","n.评估",'n.估价,评估','Your assessment is substantially correct.','你的估计基本正确.','His assessment of the situation was spot-on.','他对形势判断得很正确.'}

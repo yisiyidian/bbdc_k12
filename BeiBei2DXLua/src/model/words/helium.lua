@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["helium"]={"helium","['hiːlɪəm]","['hilɪəm]","n.氦",'n.氦','||Helium|| is a gas used in balloons.','氦是一种用于气球的气体.','Now their profits are rising like helium-filled balloons.','现在一元店的利润增长速度如氦气球升空一般。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rectify"]={"rectify","['rektɪfaɪ]","['rɛktɪfaɪ]","vt.订正",'vt.订正,矫正,改正','Please rectify the mistake in my bill.','请改正我帐单上的错误。','I made a mistake that can not be ||rectified||.','我犯了一个无法改正的错误。'}

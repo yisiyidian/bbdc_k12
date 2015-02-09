@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["woolly"]={"woolly","['wʊlɪ]","['wʊli]","adj.羊毛制的",'adj.羊毛制的,似羊毛的,蓬乱的|||n.羊毛制品','It was a wild and woolly town.','这是一座不文明的城镇。','She prepared for all possibilities by taking a sunhat, a raincoat and a woolly scarf.','她带了太阳帽、 雨衣和毛围巾, 一切有备无患.'}

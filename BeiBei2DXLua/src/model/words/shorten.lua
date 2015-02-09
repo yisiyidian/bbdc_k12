@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shorten"]={"shorten","['ʃɔːt(ə)n]","['ʃɔrtn]","v.弄短",'v.弄短,变短','Lively companionship shorten the mile.','欢乐同路人，行程不觉长。','My teacher asked me to shorten the report to one page.','老师让我把报告缩短为一页。'}

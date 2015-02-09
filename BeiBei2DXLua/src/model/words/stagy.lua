@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stagy"]={"stagy","['steɪdʒɪ]","[ 'steidʒi ]","adj.做作的",'adj.做作的,演戏一般的|||=stagey','The room was decorated with stagy opulence.','那房间装饰得富丽堂皇, 像戏台似的.','you are a cocky, stagy, self-serving girl.','你是一个狂妄的，做作的，自私的女孩。'}

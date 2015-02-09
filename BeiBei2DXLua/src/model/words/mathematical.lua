@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mathematical"]={"mathematical","[mæθ(ə)'mætɪk(ə)l]","[,mæθə'mætɪkl]","adj.数学的",'adj.数学的，精确的，可能性极小的','Einstein was a mathematical genius.','爱因斯坦是数学天才.','Of all the students in our school, Tom is mathematical genius.','在我们学校所有的学生之中，汤姆是数学天才。'}

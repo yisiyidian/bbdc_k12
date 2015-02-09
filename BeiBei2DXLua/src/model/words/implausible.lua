@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["implausible"]={"implausible","[ɪm'plɔːzɪb(ə)l]","[ɪm'plɔzəbl]","adj.难信的",'adj.难信的,不像真实的','Her explanation is not implausible.','她的解释并非没有道理。','The scenery is so beatifully that seems like implausible.','风景优美如画。'}

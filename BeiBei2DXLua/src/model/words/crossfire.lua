@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crossfire"]={"crossfire","['krɔsfaɪɚ]","[ 'krɔsfaiə ]","n.交叉火力",'n.交叉火力','soldiers caught in crossfire.','被交叉火力击倒的士兵','They say they are caught in the crossfire between the education establishment and the government.','他们说他们被卷入了教育机构和政府之间的争端。'}

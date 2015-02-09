@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["raincoat"]={"raincoat","['reɪnkəʊt]","[ 'reinkəut ]","n.雨衣",'n.雨衣','The rain may hold off, but it won\'t hurt to take the raincoat with you.','＂雨可能下不下来，不过把雨伞带去总没有坏处。＂','If I\'d had the forethought to bring my raincoat, I wouldn\'t have got wet in the storm.','我当初如果想到要带雨衣，便不会被暴风雨淋湿了。'}

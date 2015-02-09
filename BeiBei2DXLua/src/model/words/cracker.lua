@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cracker"]={"cracker","['krækə]","['krækɚ]","n.薄脆饼干",'n.薄脆饼干,发出爆裂声的东西,爆竹，裂化设备,黑客,穷苦白人|||(复)crackers：n.胡桃钳|||Cracker|||n.佛罗里达州和乔治亚州当地居民的别名','The fire cracker went off and scared Jack\'s dog.','爆竹爆炸声把杰克的狗吓了一跳。','Some of my friends like soda crackers.','我的一些朋友喜欢苏打饼干。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plantation"]={"plantation","[plæn'teɪʃ(ə)n; plɑːn-]","[plæn'teʃən]","n.种植园",'n.种植园，大农场，殖民地','A hothouse or plantation where pineapples are grown.','菠萝种植园菠萝生长的温室或园林','The plantation owners would rather plough their cotton in than sell it at a lower price.','种植园主宁可把棉花犁入土中，也不愿以低价出售。'}

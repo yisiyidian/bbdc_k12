@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spinal"]={"spinal","['spaɪn(ə)l]","['spaɪnl]","adj.针的",'adj.针的,尖刺的,尖刺状突起的|||adj.脊骨的,脊髓的','I must provide security for Joe\'s 18 - inch spinal cord.','我必须为乔的那个18英寸的脊髓提供安全保护.','A membrane, especially one of the three membranes enclosing the brain and spinal cord in vertebrates.','脑膜一种膜，尤指覆盖脑子和脊椎中脊髓的三种细胞膜之一'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excavate"]={"excavate","['ekskəveɪt]","['ɛkskə'vet]","v.挖掘",'v.挖掘,挖开,凿通','They plan to excavate a large hole.','他们计划挖个大洞。','He later returned to excavate the site.','后来他回来挖掘这个遗址'}

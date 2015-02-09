@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feckless"]={"feckless","['feklɪs]","['fɛkləs]","adj.没精神的",'adj.没精神的,无用的，不负责任的','In those days he was a feckless and poverty-stricken young drop-out.','那些日子里，他只是一个无精打采的穷困退学生。','It\'s feckless attitude to waste your time on games everyday.','每天沉迷于游戏中是一种无用的生活态度。'}

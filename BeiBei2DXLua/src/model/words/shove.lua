@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shove"]={"shove","[ʃʌv]","[ʃʌv]","n.推",'n.推,挤|||v.推挤,放置,撞','Don\'t try to shove all the work onto me!','别把工作都推给我！','He dragged her out of the door and shoved her into the street.','他把她拖到门口，猛地把她推到马路上。'}

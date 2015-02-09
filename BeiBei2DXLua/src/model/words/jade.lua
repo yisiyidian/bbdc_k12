@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jade"]={"jade","[dʒeɪd]","[dʒed]","n.玉",'n.玉,老马,荡妇|||vt.使疲倦|||vi.疲倦','Of all the high mountains, Mt. ||Jade|| is the highest.','在所有高山当中，玉山为最高。','Mt. ||Jade|| is higher than any other mountain in Taiwan.','玉山要比台湾的任何山都高。'}

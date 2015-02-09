@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["culprit"]={"culprit","['kʌlprɪt]","['kʌlprɪt]","n.犯人",'n.犯人,罪犯,刑事被告,肇事者,罪魁祸首','The culprit will be whipped when he is found.','那个罪犯找到後就要挨鞭子抽打.','The police are now on the scent of the culprit.','警方已获得罪犯的线索.'}

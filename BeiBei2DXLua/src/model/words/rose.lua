@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rose"]={"rose","[rəʊz]","[roz]","n.玫瑰",'n.玫瑰,蔷薇|||v.(rise的过去式)起立,上升,升起|||adj.玫瑰色的,玫瑰的','The mist quickly dissipated as the sun rose.','太阳升起时雾很快就消散了.','The court rose (ie stood up) as the judge entered.','法官出庭时全体到庭人员起立.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["advancement"]={"advancement","[əd'vɑːnsm(ə)nt]","[əd'vænsmənt]","n.前进",'n.前进,进步','An obstacle composed of barbed wire or spikes attached to a wooden frame, used to block enemy advancement.','铁蒺藜由钉在林桩上的有刺铁丝或尖钉构成的用来阻挡敌人的前进障碍物','A firm or secure position that provides a base for further advancement.','据点提供下一步前进基地的坚固或安全的位置'}

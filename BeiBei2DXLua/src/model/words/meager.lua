@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meager"]={"meager","['migɚ]","[ 'mi:ɡə ]","adj.贫乏的",'adj.贫乏的，不足的，瘦的','Their food supply is meager.','他们的食品供给少得可怜。','Aside from his meager savings, he has no resources to fall back on.','除了极少量的积蓄外，他没有可以依赖的财源。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stroke"]={"stroke","[strəʊk]","[strok]","n.中风",'n.中风；冲程；笔画；打击；尝试；轻抚|||vt.抚摸；敲击；划尾桨；划掉|||vi.击球；作尾桨手；敲击键盘','My speech went quite well until I was put off my stroke by the interruption.','我起初讲得很顺利，可是受到干扰後就结巴起来了。','It was a stroke of luck that I found you here.','我在这里碰见你真是运气。'}

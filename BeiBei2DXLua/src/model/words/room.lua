@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["room"]={"room","[ruːm; rʊm]","[rum]","n.房间",'n.房间,空间','He\'s rooming with my friend Alan.','他住在我的朋友艾伦家里。','There is not so much room for these books.','没有这么大的地方来放这些书。'}

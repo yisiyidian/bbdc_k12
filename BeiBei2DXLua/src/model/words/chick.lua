@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chick"]={"chick","[tʃɪk]","[tʃɪk]","adj.胆小的",'adj.胆小的,懦弱的|||n.小鸡','||Chicks|| are hatching from the eggs.','小鸡正从蛋壳里孵出来。','The chick finally broke through the shell and struggled out (of it).','小鸡终於破开蛋壳, 挣扎著(从中)钻了出来.'}

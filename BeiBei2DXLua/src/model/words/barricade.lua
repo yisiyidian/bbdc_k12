@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barricade"]={"barricade","[,bærɪ'keɪd]","['bærɪ'ked]","n.路障",'n.路障，街垒，障碍物，栅栏|||（复数）barricades:有激烈争论的领域或议题|||v.设路障挡住，阻拦，封锁','The police barricaded off the entrance to the square.','警方在广场的入口处设置了路障.','They barricaded themselves in (their rooms).','他们把自己关在（自己的屋子）里面.'}

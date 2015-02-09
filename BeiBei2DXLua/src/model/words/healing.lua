@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["healing"]={"healing","['hiːlɪŋ]","['hilɪŋ]","n.康复",'n.康复,复原|||adj.有治疗功用的','Please take your time. The body has a marvelous healing process, but it sometimes works more slowly than we\'d like.','别着急，人体有一个奇妙的痊愈系统，只是有时比我们希望的要来得慢些。','The wound was healing slowly.','伤口慢慢愈合了.'}

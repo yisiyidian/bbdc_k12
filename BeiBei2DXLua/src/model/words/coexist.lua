@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coexist"]={"coexist","[,kəʊɪg'zɪst]","[,koɪɡ'zɪst]","vi.同时存在(于同一处)",'vi.同时存在(于同一处),共存','Our foreign policy is to coexist with other countries.','我们的外交政策是和其它国家和平共处。','The capitalist countries have to coexist with the socialist countries peacefully.','资本主义国家不得不与社会主义国家和平共处。'}

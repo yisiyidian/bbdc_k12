@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["supervision"]={"supervision","[,suːpə'vɪʒn; ,sjuː-]","[,sʊpɚ'vɪʒən]","n.监督",'n.监督,管理','Close attention; close supervision.','密切注意；严格监督','This drug should only be taken under the supervision of a doctor.','此药须遵医嘱服用。'}

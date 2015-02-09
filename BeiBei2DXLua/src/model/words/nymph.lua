@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nymph"]={"nymph","[nɪmf]","[nɪmf]","n.女神",'n.女神,美丽的少女，蛹','A divinity presiding over forests and trees; a wood nymph.','德律阿得斯森林与树之神；林中女仙','A wood nymph who was changed into a fountain by Artemis.','阿瑞托莎被阿耳忒弥斯变成喷泉的山林中的仙女'}

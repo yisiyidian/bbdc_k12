@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["once"]={"once","[wʌns]","[wʌns]","adv.一次",'adv.一次,曾经|||conj.一旦|||n.一次|||adj.曾经的','Be pleasant to each other just this once.','彼此要和睦些－－就只为这一次吧。','The film is at once humorous and moving.','这部电影既幽默又动人。'}

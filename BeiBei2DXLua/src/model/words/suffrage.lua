@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suffrage"]={"suffrage","['sʌfrɪdʒ]","['sʌfrɪdʒ]","n.投票",'n.投票,选举权,参政权','The question of woman suffrage sets them at variance.','妇女参政的问题使他们发生争执。','When was universal suffrage introduced in your country?','贵国是什么时候实行普选权的？'}

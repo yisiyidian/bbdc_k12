@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["realize"]={"realize","['riːəlaɪz]","['rɪrlaɪz]","vt.实现",'vt.实现；了解，意识到；（所担心的事）发生；以…价格卖出|||vt.&vi.变卖，赚得','Do you realize that all of these shirts are half off?','你知道这些衬衫都卖半价了吗？','Only after you lose your health, will you realize the importance of health.','唯有在失去健康之后，我们才能了解健康的重要。'}

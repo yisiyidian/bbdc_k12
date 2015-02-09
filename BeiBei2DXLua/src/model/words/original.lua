@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["original"]={"original","[ə'rɪdʒɪn(ə)l; ɒ-]","[ə'rɪdʒənl]","adj.最初的",'adj.最初的,原始的;有独创性的,原版的|||n.原件,原稿;有独创性的人,怪人','The original picture is in the British Museum.','这幅画的原作在大英博物馆内。','The original owner of the house moved out.','房子原先的主人搬出去了。'}

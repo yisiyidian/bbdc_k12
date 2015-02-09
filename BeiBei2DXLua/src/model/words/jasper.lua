@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jasper"]={"jasper","['dʒæspə]","['dʒæspɚ]","n.碧玉",'n.碧玉,绿色装饰用宝石','||Jasper||','碧玉','And in the first chamber I saw an idol seated on a throne of jasper bordered with great orient pearls.','在第一间庙堂里，我看见一尊偶像端坐于以东方明珠镶边的碧玉宝座上。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agape"]={"agape","[ə'geɪp]","[ə'ɡep]","adj.瞠目结舌的",'adj.瞠目结舌的|||adv.瞠目结舌地|||n.大爱','He was left alone and agape.','剩下他独自一个张大着嘴发呆。','The wind set the door agape.','风把门吹开。'}

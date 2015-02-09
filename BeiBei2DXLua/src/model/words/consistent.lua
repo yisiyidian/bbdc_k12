@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consistent"]={"consistent","[kən'sɪst(ə)nt]","[kən'sɪstənt]","adj.始终如一的",'adj.始终如一的,一致的,坚持的','I left as early as it was consistent with politeness.','我在不失礼的情况下提前离去了。','The last five years have seen a consistent improvement in the country\'s economy.','在最近的五年里，这个国家的经济状况一直在好转。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chilly"]={"chilly","['tʃɪlɪ]","['tʃɪli]","adj.寒冷的",'adj.寒冷的,冷淡的,恐怖的','A gust of chilly autumn wind is blowing from the north.','一阵冷飕飕的秋风从北方吹来。','It often happens that a balmy morning passes into a chilly afternoon.','一个温和的上午常常转为一个寒冷的下午。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["braggart"]={"braggart","['brægət; -ɑːt]","['bræɡɚt]","n.吹牛者",'n.吹牛者，自夸者|||adj.吹牛的','However, Captain Prien was not a braggart.','不过，普里恩舰长却不是一个夸大其词的人。','braggart','好自夸者'}

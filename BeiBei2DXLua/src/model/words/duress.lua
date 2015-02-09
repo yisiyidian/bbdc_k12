@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["duress"]={"duress","[djʊ(ə)'res; 'djʊəres]","[du'rɛs]","n.强迫",'n.强迫,监禁','He claimed that he signed the confession under duress.','他说他是被迫在认罪书上签字的。','He thought her confession had been made under duress.','他认为她是被刑讯逼供的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boutique"]={"boutique","[buː'tiːk]","[bu'tik]","n.专卖流行衣服的小商店",'n.专卖流行衣服的小商店','She started life as a shop assistant and now she has her own boutique.','她是从当一名营业员开始谋生的，现在她已拥有一家妇女时装用品的小商店了。','I believe Margot\'s got a finger in that new boutique in the High Street.','我认为玛戈参与了大街上的那家时装用品小商店的买卖。'}

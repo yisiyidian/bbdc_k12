@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["espy"]={"espy","[ɪ'spaɪ; e-]","[ i'spai ]","v.(从远处等)突然看到",'v.(从远处等)突然看到|||vt.窥见','Was it you I ||espied|| jogging in the park this morning?','我今早看到在公园里有人慢跑，是你吗？','Here, from a window, did Guinevere espy a knight standing in a woodman\'s cart.','吉尼维尔是从这里透过窗户看到了站在樵夫车上的骑士。'}

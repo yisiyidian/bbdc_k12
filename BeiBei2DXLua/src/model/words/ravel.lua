@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ravel"]={"ravel","['ræv(ə)l]","['rævl]","v.散开",'v.散开,解除','Bind the edge of the rug so that it won\'t ravel.','给地毯镶个边以免开线。','Don\'t let the cat ravel that ball of wool up.','别让那只猫把毛线弄乱了。'}

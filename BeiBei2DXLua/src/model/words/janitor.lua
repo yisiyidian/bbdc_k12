@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["janitor"]={"janitor","['dʒænɪtə]","['dʒænɪtɚ]","n.守卫",'n.守卫,门警,管理人','That janitor is a snail who never gets things done.','那个照管房屋的人动作慢吞吞的，什麽事也做不成。','The janitor is very conscientious.','那个管理员很认真。'}

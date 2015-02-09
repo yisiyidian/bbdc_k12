@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gardener"]={"gardener","['ɡɑːdənə]","['gɑrdənɚ]","n.园丁",'n.园丁,花匠,园艺家','She prides herself on her skill as a gardener.','她对自己的花园[对自己的园艺]非常得意.','The gardener pruned the dead branches.','园丁剪去枯枝。'}

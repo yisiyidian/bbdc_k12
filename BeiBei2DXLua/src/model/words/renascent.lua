@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["renascent"]={"renascent","[rɪ'næs(ə)nt; 'neɪ-]","[rɪ'nesənt]","adj.新生的",'adj.新生的','Bush is without doubt a renascent phenomenon among presidential children','From Baidu.','Since 80 time metaphase, area creeds renascent, caused people more and more attention.','80年代中期以来，区域主义复活，引起了人们越来越多的关注。'}

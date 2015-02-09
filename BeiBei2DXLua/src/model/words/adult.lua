@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adult"]={"adult","['ædʌlt; ə'dʌlt]","['ædʌlt]","adj.成年的",'adj.成年的,成人的，成熟的|||n.成年人','We should do our best to develop the adult education.','我们应当努力发展成人教育.','He spent his adult life in Canada.','他成年时期是在加拿大度过的.'}

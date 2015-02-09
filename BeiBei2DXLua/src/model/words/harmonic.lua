@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harmonic"]={"harmonic","[hɑː'mɒnɪk]","[hɑr'mɑnɪk]","adj.调和的",'adj.调和的,音乐般的,和声的|||n.和音,调波|||[计算机]调和的','In the dynamic case motion is often harmonic.','在动态情况下,运动通常为谐运动.','The system executes simple harmonic motion.','此系统产生简谐运动.'}

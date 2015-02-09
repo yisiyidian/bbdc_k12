@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whip"]={"whip","[wɪp]","[wɪp]","n.鞭子",'n.鞭子,鞭打,奶油甜食,车夫|||vt.抽出,鞭打,捆扎,搅拌,打败|||vi.突然移动,飘浮','The wind whipped across the plain.','大风扫过平原。','The star was whipped into a fast car and driven off.','那个明星迅速上了一辆汽车疾驶而去。'}

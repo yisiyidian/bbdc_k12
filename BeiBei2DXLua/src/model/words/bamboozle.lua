@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bamboozle"]={"bamboozle","[bæm'buːz(ə)l]","[bæm'buzl]","vt.欺骗",'vt.欺骗,隐瞒，迷惑','He bamboozled me into believing that he\'d lost all his money.','他欺骗我让我相信他把钱全丢光了.','You\'ve completely bamboozled me.','你完全把我搞糊涂了.'}

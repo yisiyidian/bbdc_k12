@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["upheaval"]={"upheaval","[ʌp'hiːv(ə)l]","[ʌp'hivl]","n.举起",'n.举起,隆起,大变动','The French Revolution was a volcanic upheaval in European history.','法国大革命是欧洲历史上的火山爆发。','It was faced with the greatest social upheaval since World War Ⅱ.','它面临第二次世界大战以来最大的社会动乱.'}

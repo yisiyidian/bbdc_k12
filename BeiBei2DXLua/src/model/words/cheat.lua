@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cheat"]={"cheat","[tʃiːt]","[tʃit]","vt.&vi.欺骗",'n.骗子,欺骗行为|||vt.&vi.欺骗,作弊','How could you cheat your own children, you skunk!','你怎麽能欺骗自己的孩子, 你这个坏家伙!','It\'s my considered opinion that he is a liar and a cheat.','我经过仔细考虑，认为他是个说谎的家伙，又是个骗子。'}

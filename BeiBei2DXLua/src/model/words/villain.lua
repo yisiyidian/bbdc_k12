@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["villain"]={"villain","['vɪlən]","['vɪlən]","n.坏人",'n.坏人,恶棍','I like films where the villain comes to a sticky end!','我喜欢恶有恶报的影片!','The king is represented as a villain in the play.','在这出剧中把国王刻画成一个反面人物。'}

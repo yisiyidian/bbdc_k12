@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mark"]={"mark","[mɑːk]","[ mɑ:k ]","n.标记",'n.污迹,标记,分数,烙印,纪录|||vt.做标记于,留意,打分数,留下污痕,使...明显|||vi.做标志,记分,留下印记','Our defense had him closely marked throughout the first half.','我们的後卫在整个上半场都把他盯得死死的。','I\'m just marking time in this job; I\'m hoping to become an actor.','我做这份工作是骑马找马；我很希望当演员。'}

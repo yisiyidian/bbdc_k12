@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ready"]={"ready","['redɪ]","['rɛdi]","adj.准备好的",'adj.准备好的,乐意的,情愿的，现成的|||vt.做好…的准备','The troops were ready for anything.','部队已做好了一切准备。','She is always ready to help others.','她总是乐于助人。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congregation"]={"congregation","[kɒŋgrɪ'geɪʃ(ə)n]","[,kɑŋɡrɪ'ɡeʃən]","n.集合",'n.集合,会合','The congregation bowed their heads in prayer.','会众在一起低头祷告.','The congregation entered the church in procession.','教徒们排著队进入教堂.'}

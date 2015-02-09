@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scalding"]={"scalding","['skɔːldɪŋ]","['skɔldɪŋ]","adj.滚烫的",'adj.滚烫的，尖刻的，严厉的|||动词scald的现在分词形式','As if scalding her arm wasn\'t enough, she went and broke her ankle the next day.','她烫伤了手臂还不算，竟然在第二天出去摔伤了踝节部。','The coffee was scalding hot.','这咖啡是滚烫的。'}

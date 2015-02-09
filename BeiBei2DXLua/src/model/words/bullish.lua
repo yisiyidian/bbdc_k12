@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bullish"]={"bullish","['bʊlɪʃ]","['bʊlɪʃ]","adj.似牡牛的",'adj.似牡牛的,看涨的,上扬的','Freight market continue bullish no chance to get same rate presently.','海运市场持续看涨，目前无法获得相同的运费率。','Cheaper energy is bullish because it stimulates growth','“廉价能源价格上涨因为它刺激发展”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exempt"]={"exempt","[ɪg'zem(p)t; eg-]","[ɪg'zɛmpt]","n.免税者",'n.免税者,被免除义务者|||adj.免除的|||v.使免除','These houses are exempt from paying rates.','这些房子是免付捐税的。','He was exempt from charges by virtue of his youth','他因年幼而获得免费.'}

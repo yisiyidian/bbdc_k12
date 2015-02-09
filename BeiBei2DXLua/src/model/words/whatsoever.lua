@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whatsoever"]={"whatsoever","[wɒtsəʊ'evə]","[,hwɑtso'ɛvɚ]","adv.(用于否定句中以加强语气)任何",'adv.(用于否定句中以加强语气)任何|||pron.&adj.无论什么','The police found no suspicious document whatsoever.','警察未发现任何可怀疑的文件。','I see no objection whatsoever.','我没有任何异议。'}

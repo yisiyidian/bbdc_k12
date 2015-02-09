@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["symbolism"]={"symbolism","['sɪmbəlɪz(ə)m]","['sɪmbəlɪzəm]","n.象征主义",'n.象征主义,象征,符号化','The film was much praised at the time for its visual symbolism.','那部电影由于其视觉上的象征主义而在当时大受褒扬。','We shall encounter some of his symbolism in our survey of the calculus.','以后在概述微积分发展时,我们将碰到他所创立的一些符号.'}

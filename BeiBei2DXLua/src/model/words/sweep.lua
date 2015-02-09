@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sweep"]={"sweep","[swiːp]","[swip]","vt.扫",'vt.扫除,拂去,掠过,席卷,扫视,全胜|||vi.打扫,席卷,昂首阔步地走,连绵,全胜|||n.扫除,席卷,搜寻,挥动,范围,风帆,(竞赛中)全胜,连绵一片,赌金','Her eyes ||swept|| the room.','她的眼睛扫视了一下那个房间。','His fingers ||swept|| the keys of the piano.','他的手指在钢琴键盘上轻快地移动。'}

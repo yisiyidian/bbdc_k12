@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unanimous"]={"unanimous","[juː'nænɪməs]","[jʊ'nænəməs]","adj.全体一致的",'adj.全体一致的,一致同意的','Politicians from all parties were completely unanimous in condemning his action.','所有党派的政治家们都一致谴责他的行为。','The Chinese are unanimous in their condemnation.','全中国人民一致提出谴责。'}

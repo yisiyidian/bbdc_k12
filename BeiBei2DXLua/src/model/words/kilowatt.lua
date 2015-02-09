@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kilowatt"]={"kilowatt","['kɪləwɒt]","['kɪlə'wɑt]","n.千瓦(功率单位)",'n.千瓦(功率单位)','A unit of electric power equal to the work done by one kilowatt acting for one hour.','千瓦－小时电功率的单位，等于在一千瓦功率下一小时内消耗的功','To reach the 100 kilowatt target, the laser will require six modules.','为了达到100千瓦目标, 激光发生器将要求有六个模块.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oatmeal"]={"oatmeal","['əʊtmiːl]","['ot'mil]","n.燕麦片",'n.燕麦片,燕麦粥','The oatmeal is burning.','麦片粥烧焦了。','The oatmeal lumps if you don\'t stir it well.','如果你不好好搅拌，麦片粥会结块。'}

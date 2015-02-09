@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uncomfortable"]={"uncomfortable","[ʌn'kʌmf(ə)təb(ə)l]","[ʌn'kʌmftəbl]","adj.不舒服的",'adj.不舒服的,不自在的','His rustic speech and ways made him uncomfortable in the city school.','他土里土气的语言和生活方式使他在城里的中学感到不舒服。','Your intent gaze made her uncomfortable.','你的注目凝视使她感到不自在。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expertise"]={"expertise","[,ekspɜː'tiːz]","['ɛkspɝ'tiz]","n.专家的意见",'n.专家的意见,专门技术','It\'s a team unrivalled in stature, expertise and credibility.','这个团队的名声、专业技能和信誉都是无可匹敌的。','We were amazed at his expertise on the ski slopes.','他斜坡滑雪的技能使我们赞叹不已。'}

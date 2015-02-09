@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prodigy"]={"prodigy","['prɒdɪdʒɪ]","['prɑdədʒi]","n.惊人的事物",'n.惊人的事物,奇迹，神童，天才，预兆','She was a child prodigy on the violin.','她是小提琴神童。','Something of a prodigy, he quit high school at 17.','带有几分传奇色彩的是，他在十七岁念高中时退学。'}

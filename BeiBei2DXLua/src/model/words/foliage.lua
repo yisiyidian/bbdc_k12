@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foliage"]={"foliage","['fəʊlɪɪdʒ]","['folɪɪdʒ]","n.叶子(总称)",'n.叶子(总称)，簇叶','The path was completely covered by the dense foliage.','小路被树叶厚厚地盖了一层。','He crouched down among the tangled foliage.','他蹲下来藏在紊乱的叶丛中。'}

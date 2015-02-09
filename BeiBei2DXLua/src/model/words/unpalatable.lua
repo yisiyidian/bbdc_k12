@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unpalatable"]={"unpalatable","[ʌn'pælətəb(ə)l]","[ʌn'pælətəbl]","adj.不适口的",'adj.不适口的,味道差的,不好吃的','He is afraid to tell them the unpalatable truths.','他不敢把令人不快的真情告诉他们。','The fish was particularly unpalatable.','这鱼特别难吃.'}

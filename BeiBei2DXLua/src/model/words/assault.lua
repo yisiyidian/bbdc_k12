@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assault"]={"assault","[ə'sɔːlt; ə'sɒlt]","[ə'sɔlt]","n.攻击",'n.攻击,突袭|||vt.袭击,突袭','The court determined that the man was guilty of assault.','法庭裁定那个人犯了侵犯人身罪。','Trainee commandos are put through an exhausting assault course.','受训的突击队员要参加令人筋疲力尽的突击课程。'}

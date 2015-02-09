@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["microcosm"]={"microcosm","['maɪkrə(ʊ)kɒz(ə)m]","['maɪkrokɑzəm]","n.小宇宙",'n.小宇宙，微观世界，缩影','This small island contains the whole of nature in microcosm.','这个小岛就是整个自然界的缩影。','Man is a microcosm of the whole of mankind.','人是全人类的缩影。'}

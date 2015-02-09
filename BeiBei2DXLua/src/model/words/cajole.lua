@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cajole"]={"cajole","[kə'dʒəʊl]","[kə'dʒol]","v.(以甜言蜜语)哄骗",'v.(以甜言蜜语)哄骗|||vt.哄骗','I can cajole some money out of my father.','我能设法向父亲再要到一点钱。','It was he who had cajoled Garland into doing the film.','是他劝服嘉兰拍这部片子的。'}

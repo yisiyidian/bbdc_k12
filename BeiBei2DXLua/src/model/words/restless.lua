@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["restless"]={"restless","['res(t)lɪs]","['rɛstləs]","adj.不安宁的",'adj.不安宁的,焦虑的','The audience was becoming restless.','观众渐渐地不耐烦了.','After only a month in the job, he felt restless and decided to leave.','那工作他只干了一个月就厌倦了, 决定不干了.'}

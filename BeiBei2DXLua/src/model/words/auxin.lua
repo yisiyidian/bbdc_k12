@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["auxin"]={"auxin","['ɔːksɪn]","['ɔksɪn]","n.(植物)生长素",'n.(植物)生长素','||Auxin|| is a plant hormone in fact.','生长素是植物的一种荷尔蒙。','Apical buds produce a growth hormone called auxin.','顶芽分泌出叫做生长素的生长类激素。'}

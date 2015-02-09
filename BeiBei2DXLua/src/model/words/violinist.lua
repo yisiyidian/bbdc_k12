@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["violinist"]={"violinist","[,vaɪə'lɪnɪst]","[,vaɪə'lɪnɪst]","n.小提琴手",'n.小提琴手','The young girl violinist outshone (ie was much better than) all the other competitors.','那年轻姑娘演奏小提琴使所有的竞争者相形见绌.','He dreams of one day becoming a famous violinist.','他梦想有朝一日成为著名的小提琴家。'}

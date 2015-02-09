@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lave"]={"lave","[leɪv]","[ leiv ]","vt.洗涤",'vt.洗涤(沐浴,冲刷,流过)|||n.遗留物','I lave done my duty.','我已尽了我的责任。','The quiet and the cool laved her','“寂静和清凉使她精神焕发”'}

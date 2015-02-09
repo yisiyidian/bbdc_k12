@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["qualifier"]={"qualifier","['kwɒlɪfaɪə(r)]","['kwɑlɪfaɪɚ]","n.合格者",'n.合格者|||n.[语法]限定物,限定句','The final brings together four qualifiers from each heat.','有四名初赛获胜者进入决赛.','Crew Stadium hosted the U.S.-Mexico qualifier.','在船员体育场举行了美国对墨西哥的预选赛。'}

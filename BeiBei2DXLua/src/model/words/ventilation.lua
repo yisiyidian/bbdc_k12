@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ventilation"]={"ventilation","[,ventɪ'leɪʃ(ə)n]","[,vɛntl'eʃən]","n.通风处",'n.通风处,通风设备,充气','Do not place the product in a separate enclosure unless proper ventilation are provided.','除非通风良好，不要把产品放在独立的封闭装置中。','They increased ventilation by opening the top center part of the carriage window.','他们把车厢上面的中央部分打开以增进空气的流通。'}

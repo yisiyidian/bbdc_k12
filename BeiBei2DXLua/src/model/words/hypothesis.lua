@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypothesis"]={"hypothesis","[haɪ'pɒθɪsɪs]","[haɪ'pɑθəsɪs]","n.假设",'n.假设,猜测,前提','Science continued to throw up discoveries which further backed up his hypothesis.','科学不断地提供新的发现，从而进一步证实了他的假设。','Several conclusions flow from this hypothesis.','从这项假设中可以得出几个结论。'}

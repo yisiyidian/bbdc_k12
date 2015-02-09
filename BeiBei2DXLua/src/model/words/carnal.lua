@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carnal"]={"carnal","['kɑːn(ə)l]","[ 'kɑ:nəl ]","adj.肉体的",'adj.肉体的，世俗的','Love is spiritual; lust is carnal.','爱是精神的，情欲是肉体的。','Their ruling passion is that of carnal love.','他们现在情欲正盛。'}

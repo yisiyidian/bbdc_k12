@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beak"]={"beak","[biːk]","[bik]","n.鸟嘴",'n.鸟嘴，鸟嘴装物体，鼻|||n.地方治安官，校长','The male\'s orange beak differentiates it from the female.','那种鸟雄鸟的喙呈橙色, 与雌鸟不同.','The male is distinguished (from the female) by its red beak.','由喙部为红色这一特点可以辨认出其为雄性（以区别於雌性）.'}

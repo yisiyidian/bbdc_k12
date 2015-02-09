@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["informer"]={"informer","[ɪn'fɔːmə]","[ɪn'fɔrmɚ]","n.告发者",'n.告发者,告密者','An informer denounced him to the police (as a terrorist).','检举人已向警方告发他（是恐怖分子）.','The informer has done dirt to her.','告密者说了她很多坏话。'}

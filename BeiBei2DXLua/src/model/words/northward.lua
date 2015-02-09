@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["northward"]={"northward","['nɔːθwəd]","['nɔrθwɚdz]","n.北方",'n.北方,北|||adj.向北的|||adv.向北的','He pointed his boat northward.','他将船驶向北方.','I would have a chance to head northward quickly.','我就很快有机会去北方了.'}

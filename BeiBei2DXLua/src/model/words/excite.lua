@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excite"]={"excite","[ɪk'saɪt; ek-]","[ɪk'saɪt]","v.刺激",'v.刺激,使...兴奋,激励','Some people are sexually excited by pornographic magazines.','有的人看到色情杂志能激发起性欲。','Your remark excited him to jealousy.','你的话引起了他的嫉妒。'}

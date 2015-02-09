@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dent"]={"dent","[dent]","[dɛnt]","n.凹痕",'n.凹痕,心理阴影,挫伤|||vt.弄凹|||vi.形成凹陷','Please strike up a dent in the medal(of a fender).','请在（防护板的）金属上敲出凹痕。','I don\'t know how it came about but I\'ve got a dent in the rear of my car.','我不知道是怎么回事，但我的汽车后部有了一个凹痕。'}

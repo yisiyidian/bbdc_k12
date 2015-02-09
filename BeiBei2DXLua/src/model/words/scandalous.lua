@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scandalous"]={"scandalous","['skændələs]","['skændələs]","adj.不体面的",'adj.不体面的,可耻的,可恶的','She deplored his scandalous actions.','她谴责他那令人愤慨的行为.','You surely won\'t print (ie publish, esp in a newspaper) such a scandalous allegation.','你绝不会让这种造谣中伤的言论披露见报的吧.'}

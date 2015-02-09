@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coral"]={"coral","['kɒr(ə)l]","['kɔrəl]","adj.珊瑚(色)的",'adj.珊瑚(色)的|||n.珊瑚','The ship was wrecked on a coral reef.','那艘船触珊瑚礁失事.','Beyond the coral reef the open sea is dark blue.','珊瑚礁之外的大海是一片深蓝色。'}

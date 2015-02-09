@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["necessitate"]={"necessitate","[nɪ'sesɪteɪt]","[nə'sɛsɪtet]","v.迫使",'v.迫使,使...成为必需,需要','It\'s an unpopular measure, but the situation necessitates it.','这是不得人心的办法，但形势需要这样做。','Your proposal will necessitate borrowing more money.','依你的建议就必须增加借款。'}

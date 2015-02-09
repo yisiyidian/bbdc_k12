@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blunder"]={"blunder","['blʌndə]","['blʌndɚ]","n.大错",'n.大错,大失策|||v.失策,绊倒,弄糟','The police blundered badly by arresting the wrong man.','警方抓错了人，犯了荒唐的大错。','I made a terrible blunder in introducing her to my husband.','我把她介绍给我的丈夫真是大错特错。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minatory"]={"minatory","['mɪnə,t(ə)rɪ]","['mɪnə,təri]","adj.威胁的",'adj.威胁的,恫吓的','I recently received a minatory letter.','最近我收到了一封恐吓信。','There will be no threats and minatory actions.','我们不会采取威胁和恫吓的行为。'}

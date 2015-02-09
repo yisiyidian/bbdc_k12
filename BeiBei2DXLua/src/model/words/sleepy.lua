@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sleepy"]={"sleepy","['sliːpɪ]","['slipi]","adj.欲睡的",'adj.欲睡的','I often feel sleepy after supper and then I get my second wind later in the evening.','我吃完晚饭常感到困, 一到晚上就又精神了.','The softness of the breeze made him feel sleepy.','柔和的微风使他昏昏欲睡。'}

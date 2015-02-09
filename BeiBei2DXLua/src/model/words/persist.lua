@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["persist"]={"persist","[pə'sɪst]","[pɚ'sɪst]","vi.坚持",'vi.坚持,固执,持续','If you persist in breaking the law you will go to prison.','如果你再继续违法的话，你会坐牢的。','The cold weather will persist for the rest of the week.','这种寒冷的天气将持续到本周末。'}

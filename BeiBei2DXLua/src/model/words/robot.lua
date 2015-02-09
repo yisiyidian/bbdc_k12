@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["robot"]={"robot","['rəʊbɒt]","['robɑt]","n.机器人",'n.机器人','I consider it to be inferior to robot.','我认为它不及机器人。','The toy robot moved forward with quick jerky steps.','玩具机器人一颠一颠地走得很快.'}

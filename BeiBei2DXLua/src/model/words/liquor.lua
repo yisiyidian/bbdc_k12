@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liquor"]={"liquor","['lɪkə]","['lɪkɚ]","n.酒",'n.酒','One fifth of a gallon or four fifths of a quart of liquor.','五分之一加仑或一夸脱酒的五分之四','A bottle, holding about two fifths of a gallon(1.5 liters), for wine or liquor.','夸脱酒瓶容量大约为五分之二加轮（1.5升）的装酒或溶剂的瓶子'}

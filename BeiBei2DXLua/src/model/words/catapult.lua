@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["catapult"]={"catapult","['kætəpʌlt]","['kætəpʌlt]","n.弹弩",'n.弹弩,发射机','Suddenly she was catapulted into his jet-set lifestyle.','突然间，她过上了他那种阔佬生活。','In the crash the driver was catapulted through the windscreen.','在事故中，司机从挡风玻璃中被弹了出来。'}

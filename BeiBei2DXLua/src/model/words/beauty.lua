@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beauty"]={"beauty","['bjuːtɪ]","['bjuti]","n.美",'n.美,美人,美的东西','That last goal was a beauty.','最後进去的那个球真漂亮。','The beauty of living in California is that the weather is so good.','在加利福尼亚居住的好处就在於气候宜人。'}

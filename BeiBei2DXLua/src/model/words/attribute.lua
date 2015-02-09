@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attribute"]={"attribute","[ə'trɪbjuːt]","[ə'trɪbjut]","n.属性",'n.属性,特征;标志,象征|||vt.归于,属于','Politeness is an attribute of a gentleman.','彬彬有礼是绅士的本色。','The sword is an attribute of a fighter.','剑是斗士的象征。'}

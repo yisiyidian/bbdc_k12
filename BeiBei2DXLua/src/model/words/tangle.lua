@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tangle"]={"tangle","['tæŋg(ə)l]","['tæŋɡl]","n.缠结",'n.缠结,混乱,海澡类|||v.使缠结,纠纷','Her hair got all tangled up in the barbed wire fence.','她的头发被刺钢丝篱笆给挂住了。','The wool got in a fearful tangle.','毛线乱成了一团。'}

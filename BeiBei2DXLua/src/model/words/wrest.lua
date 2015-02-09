@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrest"]={"wrest","[rest]","[rɛst]","n.扭",'n.扭,拧,[音]调音键|||vt.夺取,歪曲','For the past year he has been trying to wrest control from the central government.','一年来，他一直试图从中央政府手中将控制权夺过来。','He wrested the suitcase from the chauffeur.','他从司机手里抢过手提箱。'}

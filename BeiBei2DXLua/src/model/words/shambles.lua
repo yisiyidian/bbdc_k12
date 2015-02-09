@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shambles"]={"shambles","['ʃæmb(ə)lz]","[ 'ʃæmblz ]","n.混乱之处",'n.混乱之处,凌乱的地点','The ship\'s interior was an utter shambles.','船里面一片狼藉。','The economy is in a shambles.','经济混乱无序。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mutation"]={"mutation","[mjuː'teɪʃ(ə)n]","[mju'teʃən]","n.变化",'n.变化,转变,母音变化','The mutations in plants caused by radiation have been found in experiments.','放射线引起植物变异已在实验中被证实。','Our teacher has mutation of sounds suddenly.','我们的老师突然语音发生了变化。'}

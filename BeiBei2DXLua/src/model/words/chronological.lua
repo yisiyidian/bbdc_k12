@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chronological"]={"chronological","[krɒnə'lɒdʒɪk(ə)l]","[,krɑnə'lɑdʒɪkl]","adj.按时间顺序的",'adj.按时间顺序的','Put electronic documents in chronological order.','把电子文档按时间顺序排列。','chronological change','年代上的更新'}

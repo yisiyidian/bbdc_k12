@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uplift"]={"uplift","[ʌp'lɪft]","['ʌplɪft]","v.提高",'v.提高,振奋|||n.高扬,道德的向上,精神昂扬','Her encouragement gave me a great sense of uplift.','她鼓励我激发了我的上进心.','The hero\'s speech is a great uplift for us.','英雄的演讲是对我们的极大鼓舞。'}

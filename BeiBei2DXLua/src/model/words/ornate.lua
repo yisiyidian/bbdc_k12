@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ornate"]={"ornate","[ɔː'neɪt]","[ɔr'net]","adj.装饰的",'adj.装饰的,华丽的','This house look like a ornate palace.','这栋房子像一个华丽的宫殿。','He likes to use an ornate style when writing.','他写文章时喜欢雕砌词藻。'}

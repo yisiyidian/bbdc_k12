@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clout"]={"clout","[klaʊt]","[klaʊt]","n.破布",'n.破布(靶心,铁板)，巨大的影响（尤其是政治或人文的）|||vt用布擦(敲)','He has a lot of clout with the board of directors.','他对董事会有很大的影响力。','He gave the little boy a clout on the head.','他打了那小男孩脑袋一下。'}

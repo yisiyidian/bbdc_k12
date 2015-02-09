@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orgy"]={"orgy","['ɔːdʒɪ]","['ɔrdʒi]","(=orgy)n.纵酒狂欢",'(=orgy)n.纵酒狂欢,放荡','They embarked on an orgy of sightseeing.','他们开始尽情地观光游览。','an orgy of spending.','无节制消费参见'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["physical"]={"physical","['fɪzɪk(ə)l]","['fɪzɪkl]","adj.身体的",'adj.身体的,物理的,物质的|||n.体检','||Physical|| disability causes mental anguish.','生理伤残会引起心理苦闷.','Staying up late makes him at his worst in terms of physical situation.','熬夜使得他的体力状况处于低潮。'}

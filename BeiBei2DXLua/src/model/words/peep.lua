@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peep"]={"peep","[piːp]","[pip]","n.瞥见",'n.瞥见,偷看,初现|||v.窥视,慢慢露出,吱吱叫','He took a peep at the back of the book to find out the answers to the questions.','他偷偷看了一下书的后面，想找出那些问题的答案。','I caught him peeping at my paper.','他偷看我的论文时，我当场抓住了他。'}

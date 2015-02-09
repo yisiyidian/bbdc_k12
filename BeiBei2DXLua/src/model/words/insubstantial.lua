@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insubstantial"]={"insubstantial","[ɪnsəb'stænʃ(ə)l]","[,ɪnsəb'stænʃl]","adj.非实质的",'adj.脆弱的,无实体的,非实质的','It‘s just an insubstantial mirage on the horizon as insubstantial as a dream.','它只是地平线上虚幻的海市蜃楼，像梦一样虚幻。','To be insubstantial I can avoid the physical attacking.','隐身起来，我就可以躲过物理攻击。'}

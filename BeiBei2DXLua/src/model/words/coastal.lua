@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coastal"]={"coastal","['kəʊstl]","['kostl]","adj.海岸的",'adj.海岸的,沿海的,沿岸的','The number of fish in coastal waters has decreased.','沿海鱼的数量已减少了.','The invaders plundered food and valuables from coastal towns and villages.','侵略者在沿海城乡抢劫食物和贵重物品.'}

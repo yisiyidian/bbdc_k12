@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aggressive"]={"aggressive","[ə'gresɪv]","[ə'ɡrɛsɪv]","adj.侵略性的",'adj.侵略性的；好斗的；有进取心的；有闯劲的','He has an aggressive manner.','他的态度咄咄逼人。','His style of argument in meetings is not so much aggressive as pertinacious.','他在会议上的辩论态度并非锋芒逼人而是坚持己见。'}

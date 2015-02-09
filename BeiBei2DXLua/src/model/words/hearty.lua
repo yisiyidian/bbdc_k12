@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hearty"]={"hearty","['hɑːtɪ]","['hɑrti]","adj.诚恳的",'adj.诚恳的,热烈的,丰盛的，好胃口的|||n.水手','Having white hair and ruddy complexion, my grandfather is hale and hearty.','我爷爷是位鹤发童颜的矍铄老人。','Grandfather will be 80 years old, but he is hale and hearty.','祖父就要80高龄了，但仍精神矍铄。'}

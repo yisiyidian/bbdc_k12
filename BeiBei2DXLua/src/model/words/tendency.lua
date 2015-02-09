@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tendency"]={"tendency","['tend(ə)nsɪ]","['tɛndənsi]","n.趋势",'n.趋势,倾向','The belief that society has an innate tendency toward improvement and that this tendency may be furthered through conscious human effort.','社会向善论认为社会具有变得更好的内在倾向和人类有力量促使其改善的信仰或学说','His illness grew out of his tendency to overwork.','他的病是由于工作过度所致。'}

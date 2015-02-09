@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pervasive"]={"pervasive","[pə'veɪsɪv]","[pɚ'vesɪv]","adj.普遍的",'adj.普遍的,蔓延的,渗透的','English learnning is pervasive in the whole world.','英语学习在全世界都很普遍。','It is knowledge directed to the fundamental and pervasive concerns of existence.','它要回答的是人类生存的根本、普遍的问题。'}

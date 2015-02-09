@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subsume"]={"subsume","[səb'sjuːm]","[səb'sʊm]","v.包含",'v.包含,包容|||vt.包含','This creature can be subsumed in the class of reptiles.','这种生物可以归入爬行动物一类。','With unification, East Germany was subsumed by capitalist West Germany.','统一后，东德被归入资本主义的西德。'}

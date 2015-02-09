@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monumental"]={"monumental","[mɒnjʊ'ment(ə)l]","[,mɑnju'mɛntl]","adj.纪念碑的",'adj.纪念碑的，作为纪念的,不朽的','Einstein\'s made monumental contributions to physics.','爱因斯坦对物理学作出不朽的贡献。','If you make monumental contribution to people,you will become monumental.','如果你为人类做了巨大贡献，那么你将永垂不朽。'}

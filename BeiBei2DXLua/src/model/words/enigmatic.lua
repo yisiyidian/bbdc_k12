@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enigmatic"]={"enigmatic","[,enɪg'mætɪk]","['ɛnɪg'mætɪk]","adj.谜的",'adj.谜的,莫明其妙的,不可思议的','His reply was highly enigmatic.','他的回答高深莫测。','She starred in one of Welles\'s most enigmatic films.','她在韦尔斯最具神秘色彩的一部电影中出演主角。'}

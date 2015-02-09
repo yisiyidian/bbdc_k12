@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thriller"]={"thriller","['θrɪlə]","['θrɪlɚ]","n.惊险小说",'n.惊险小说','Our new serial thriller begins at 7:30 this evening.','我们的新系列惊险故事於今晚 7 时 30 分开始播出.','He is at an absorbing thriller and can\'t be disturbed.','他正在阅读一部引人入胜的惊险小说, 什么也惊动不了他。'}

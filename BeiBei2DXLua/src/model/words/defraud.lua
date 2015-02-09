@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defraud"]={"defraud","[dɪ'frɔːd]","[dɪ'frɔd]","vt.欺骗",'vt.欺骗','She was defrauded of her money by a dishonest accountant.','她的钱被一个奸诈的会计骗去了。','She is defrauded of her money by a dishonest accountant.','她的钱被一个奸诈的会计骗去了。'}

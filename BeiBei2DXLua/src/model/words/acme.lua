@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acme"]={"acme","['ækmɪ]","['ækmi]","n.顶点",'n.顶点,极点','Schubert reached the acme of his skill while quite young.','舒伯特的技巧在他十分年轻时即已达顶峰。','His work is considered the acme of cinematic art.','他的作品被认为是电影艺术的巅峰之作。'}

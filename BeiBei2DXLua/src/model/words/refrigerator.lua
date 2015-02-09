@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["refrigerator"]={"refrigerator","[rɪ'frɪdʒəreɪtə]","[rɪ'frɪdʒəretɚ]","n.冰箱",'n.冰箱','The boys made away with the contents of the refrigerator.','男孩子们把冰箱中的食物吃得精光。','Perishable food should be stored in a refrigerator.','易腐的食物应储存在冰箱里.'}

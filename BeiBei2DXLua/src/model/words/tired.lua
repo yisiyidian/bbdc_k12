@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tired"]={"tired","[taɪəd]","['taɪɚd]","adj.疲劳的",'adj.疲劳的,累的,厌烦的','I was too tired to walk any further.','我累得再也走不动了。','I am not in the least tired.','我一点也不疲倦。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["daily"]={"daily","['deɪlɪ]","['delɪ]","adj.每日的",'adj.每日的,按天计算的,日常的|||adv.每日,天天|||n.日报,(复)工作样片','Take two of the tablets three times daily before meals.','每日三次, 每次两片, 饭前服用.','The news was blazed all over the daily papers.','所有日报都刊登了这条消息.'}

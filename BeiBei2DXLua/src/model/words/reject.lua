@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reject"]={"reject","[rɪ'dʒekt]","[rɪ'dʒɛkt]","v.拒绝",'n.被拒之人,不合格品,不及格者|||v.拒绝,驳回,丢弃','The factory sells some of its better rejects cheaply, but it throws most of the rejects away.','这家公司廉价出售略好一些的次品，但将大多数次品丢弃。','I absolutely reject the management\'s line on this.','我断然否绝经理部门处理此事的方法.'}

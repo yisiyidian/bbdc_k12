@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sack"]={"sack","[sæk]","[sæk]","n.袋子",'n.袋子,劫掠|||vt.解雇,劫掠,把...装入袋子','The company\'s threat to sack anyone who went on strike was just (a) bluff.','公司威胁说谁罢工就解雇谁, 那只不过是虚张声势罢了.','The poor old sod got the sack yesterday.','那个可怜的家伙昨天给辞退了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["availability"]={"availability","[ə,veɪlə'bɪlətɪ]","[ə,velə'bɪləti]","n.可用性",'n.有效,有用,有益；可得到的人(或物)','The availability of cheap long - term credit would help small business.','低利息的 长期 贷款对小型企业会有帮助.','Before travelling we must ensure the availability of petrol and oil.','旅行前,我们必须确保能够买到汽油和机油.'}

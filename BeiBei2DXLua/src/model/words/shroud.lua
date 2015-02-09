@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shroud"]={"shroud","[ʃraʊd]","[ʃraʊd]","n.寿衣",'n.寿衣,覆盖物,[航海]船之横桅索|||v.包以尸衣,遮蔽,隐藏，笼罩|||v.掩盖，保护|||n.','The whole jail was shrouded in darkness.','整座监狱笼罩在黑暗之中。','His past is enveloped in a shroud of mystery.','他过去的经历笼罩着神秘气氛。'}

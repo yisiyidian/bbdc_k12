@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expense"]={"expense","[ɪk'spens; ek-]","[ɪk'spɛns]","n.消费",'n.消费,支出','He finished the job at the expenses of his health.','他以牺牲健康完成了这项工作。','It\'s too much of an expense for me to own a car.','对我来说，拥有一辆汽车的花费太大。'}

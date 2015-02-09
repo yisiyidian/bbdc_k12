@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disaffected"]={"disaffected","[,dɪsə'fɛktɪd]","[ disə'fektid ]","adj.不忠的",'adj.不忠的，不满的|||动词disaffect的过去式和过去分词形式','The dictator\'s policies had soon disaffected the people.','独裁者的政策很快就使人民大为不满。','||Disaffected|| members have left to form a new party.','那些不忠分子脱党另组了一个新党。'}

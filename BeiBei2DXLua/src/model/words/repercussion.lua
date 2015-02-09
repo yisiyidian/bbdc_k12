@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repercussion"]={"repercussion","[riːpə'kʌʃ(ə)n]","[,ripɚ'kʌʃən]","n.弹回",'n.弹回,反响,反射','After being put out , the service has received very good market repercussion.','这项服务推出后，收到了非常好的市场反响。','the toyota gas pedal\'s mistake get a intensive repercussion','丰田油门错误引起了强烈的反响'}

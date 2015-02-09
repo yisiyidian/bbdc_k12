@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hungry"]={"hungry","['hʌŋgrɪ]","['hʌŋɡri]","adj.饥饿的",'adj.饥饿的，渴望的','She is hungry for news of her husband working abroad.','她渴望得到国外工作的丈夫的消息。','He felt very hungry after four-hours\' hard work.','辛苦工作了四个小时后，他觉得非常饿。'}

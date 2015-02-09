@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snare"]={"snare","[sneə]","[snɛr]","n.陷阱",'n.陷阱,诱惑,圈套|||n.（去除息肉或者肿瘤的）勒除器|||n.响弦，小军鼓|||vt.以陷阱捕获,诱惑','A snare or trap for game.','狩猎用的陷阱或圈套','He fell into a snare laid by his enemy.','他落入敌人设的圈套。'}

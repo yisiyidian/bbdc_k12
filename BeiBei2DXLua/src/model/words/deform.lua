@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deform"]={"deform","[dɪ'fɔːm]","[dɪ'fɔrm]","v.使...残缺",'v.使...残缺,使...变形','She has a deformed foot and can\'t walk very easily.','她有一只脚畸形, 行动不方便.','His leg was deformed in an accident.','他的腿在一次事故中致畸。'}

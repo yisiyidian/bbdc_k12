@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pathos"]={"pathos","['peɪθɒs]","['peθɑs]","n.感伤",'n.感伤,悲怅,悲情','The play is notable for the pathos of its final scene.','该剧以最后一场的哀婉动人而著称。','The play is notable for the pathos of its final scene.','该剧以最后一场的哀婉动人而著称。'}

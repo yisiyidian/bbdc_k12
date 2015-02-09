@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comparable"]={"comparable","['kɒmp(ə)rəb(ə)l]","['kɑmpərəbl]","adj.可比较的",'adj.可比较的,比得上的','His handwriting is not bad, but it\'s hardly comparable with yours.','他的书法不错，但是很难和你的相比。','The achievements of an athlete and a writer are not comparable.','运动员的成就与作家的成就不能相提并论。'}

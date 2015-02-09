@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forthcoming"]={"forthcoming","[fɔːθ'kʌmɪŋ]","[,fɔrθ'kʌmɪŋ]","adj.即将到来的",'adj.即将到来的','The forthcoming talks hold out the hope of real arms reductions.','即将举行的会谈给实现真正的裁军带来了希望。','the forthcoming elections.','即将到来的选举'}

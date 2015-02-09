@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bonanza"]={"bonanza","[bə'nænzə]","[bə'nænzə]","n.富矿带",'n.富矿带,带来好运的事物，富源','Shanghai’s World Expo is expected to be a tourist  bonanza','上海的世博馆被认为是一个旅游胜地','China\'s high-speed railway is a bonanza to many foreign investors.','中国的高铁对国外投资者而言是一座富矿。'}

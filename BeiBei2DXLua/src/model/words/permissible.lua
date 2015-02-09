@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["permissible"]={"permissible","[pə'mɪsɪb(ə)l]","[pɚ'mɪsəbl]","adj.可允许的",'adj.可允许的,可容许程度的','Her request is permissible.','她的要求是许可的。','Delay is not permissible, even for a single day.','不得延误, 即使一日亦不可.'}

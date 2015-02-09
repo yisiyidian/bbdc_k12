@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glimmer"]={"glimmer","['glɪmə]","['ɡlɪmɚ]","n.一丝光线",'n.一丝光线,微光|||v.发微光','From the cottage window a few lamps were glimmering in the distance.','远处的农舍窗户闪烁着几盏微弱的灯。','Hope still glimmered in our minds.','我们脑中仍有一些希望。'}

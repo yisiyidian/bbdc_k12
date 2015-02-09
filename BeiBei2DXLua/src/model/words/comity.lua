@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comity"]={"comity","['kɒmɪtɪ]","['kɑməti]","n.友谊",'n.友谊,礼让','I try my best to maintain the comity between us.','我尽最大努力维持我们之间的友谊。','||Comity|| is such a kind of intense emotion of sanctity is thus sweet, firm and honest.','友谊是如此圣洁的一种激情，是如此甜蜜、牢固和忠诚。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hurry"]={"hurry","['hʌrɪ]","['hɝrɪ]","n.骚乱",'n.骚乱,匆忙,急需|||vt.催促,加快,迅速处理|||vi.快速移动','||Hurry|| up and get ready we\'re waiting!','快点准备好－－我们在等著呢。','He picked up his bag and ||hurried|| off along the platform.','他拿起提包急急忙忙地沿著站台走了。'}

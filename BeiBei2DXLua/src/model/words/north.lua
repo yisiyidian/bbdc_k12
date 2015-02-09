@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["north"]={"north","[nɔːθ]","[nɔrθ]","adj.北",'adj.北,北方(的)|||adv.向北方|||n.北,北方','Our course was straight to the north.','我们是朝正北方向航行。','A compass needle points to the north.','罗盘的指针永远指向北方.'}

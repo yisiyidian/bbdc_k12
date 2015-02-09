@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["filigree"]={"filigree","['fɪlɪɡriː]","['fɪlɪɡri]","n.金银丝做的工艺品",'n.金银丝做的工艺品|||vt.用金银丝装饰','The sunlight shining through the branches made a filigree pattern on the tiles.','树枝间透过斑驳的阳光，装点着瓦片。','The frost made a beautiful filigree on the window pane.','寒霜在玻璃窗上形成了美丽的花纹。'}

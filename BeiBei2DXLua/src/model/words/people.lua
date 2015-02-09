@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["people"]={"people","['piːp(ə)l]","['pipl]","n.人们",'n.民族,人,人们,人民,家人|||vt.居住于','||People|| do not know the value of health till they lose it.','直到失去健康，人们才知道健康的可贵。','I met all sorts of people.','我遇到了各种各样的人'}

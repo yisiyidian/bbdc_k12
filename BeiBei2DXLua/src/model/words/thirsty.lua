@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thirsty"]={"thirsty","['θɜːstɪ]","['θɝsti]","adj.口渴的",'adj.口渴的,渴望的','Boy:... and thirsty, mum.','男孩：。。。还渴，妈妈。','The fields are thirsty for rain.','田地干旱，需要雨水。'}

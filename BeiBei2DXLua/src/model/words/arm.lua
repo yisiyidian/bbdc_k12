@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arm"]={"arm","[ɑːm]","[ɑrm]","n.手臂",'n.手臂,港湾,狭长地带,扶手,袖子,枪|||vt.装备,准备(炸弹)|||vi.武装自己','He fled to Brazil trying to escape the long arm of the law.','他逃到巴西，企图逃避恢恢法网。','His left arm was hurt in an accident.','他的左胳膊在一次事故中受伤了。'}

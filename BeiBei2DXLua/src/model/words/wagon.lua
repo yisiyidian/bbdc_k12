@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wagon"]={"wagon","['wæg(ə)n]","['wægən]","n.四轮马车",'n.四轮马车,货车|||vt.&vi.用四轮马车运','The wagon jogged along (a rough track).','马车（沿凹凸不平的小路）颠簸前行.','The wagon jogged along on the rough road.','马车沿着崎岖不平的道路颠簸前行。'}

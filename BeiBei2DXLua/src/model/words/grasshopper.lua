@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grasshopper"]={"grasshopper","['grɑːshɒpə]","['ɡræshɑpɚ]","n.蚱蜢",'n.蚱蜢(输送设备,转送装置,小型侦察机)','Charles started reading when hi was knee-high to a grasshopper.','查尔斯在很小的时候就开始读书了。','I\'ve known him since he was knee-high to a grasshopper.','他很小的时候我就认识他了.'}

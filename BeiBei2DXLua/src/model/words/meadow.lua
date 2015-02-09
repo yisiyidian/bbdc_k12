@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meadow"]={"meadow","['medəʊ]","['mɛdo]","n.草地",'n.草地,牧场','There are lambs frisking in the meadow.','那儿有些在草地上跳来跳去的小羊。','We can\'t cross the meadow there because the river is in flood.','我们不能从那里穿过草地, 因为河水泛滥了.'}

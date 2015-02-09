@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collection"]={"collection","[kə'lekʃ(ə)n]","[kə'lɛkʃən]","n.收藏品",'n.收藏品,收集物,小组,集合','Is the collection going to be divided up or sold as a whole?','这批收藏品是零卖还是一起卖?','The firm contributed 10,000 to the collection.','公司拿出10,000元做为募捐。'}

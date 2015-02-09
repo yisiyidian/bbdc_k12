@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["favor"]={"favor","['feɪvə]","['fevɚ]","n.偏爱",'[美]n.好意,喜爱,偏爱,特权|||vt.给予,关心,偏爱,支持,利于,长得像','Could you do me a big favor?','能否请你帮我个忙？','That might be in your favor.','那可能对你有利。'}

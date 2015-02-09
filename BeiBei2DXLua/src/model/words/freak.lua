@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["freak"]={"freak","[friːk]","[friːk]","n.怪人",'n.怪人,怪事,反复无常,狂热爱好者|||adj.奇异的,不正常的|||vt.使强烈反应(震惊,畏惧)|||vi.在药物影响下变得异乎寻常','Listening to a good stereo system always freaks me out.','我一听到好的立体声音乐就乐不可支。','He was really confused by the freak result.','这个异乎寻常的结果让他非常困惑。'}

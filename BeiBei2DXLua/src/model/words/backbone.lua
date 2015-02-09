@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["backbone"]={"backbone","['bækbəʊn]","['bæk'bon]","n.脊椎",'n.脊椎,志气','The backbone is an articulate structure.','脊椎骨是一种关节相连的结构。','He has no backbone.','他没有骨气。'}

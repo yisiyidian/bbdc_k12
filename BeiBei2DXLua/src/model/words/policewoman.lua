@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["policewoman"]={"policewoman","[pə'liːswʊmən]","[pə'liswʊmən]","n.女警察",'n.女警察','She was strongly committed to her job, a policewoman by eminence.','她非常忠于职守，一位典型的(卓越的)女警察。','The thief made a misguided attempt to rob a policewoman.','那个贼不识好歹竟要抢劫一个女警察。'}

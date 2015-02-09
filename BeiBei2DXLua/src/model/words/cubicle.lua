@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cubicle"]={"cubicle","['kjuːbɪk(ə)l]","['kjubɪkl]","n.寝室",'n.寝室,小卧室','He made his way to the nearest toilet and locked himself in a cubicle.','他走到最近的卫生间，进了一个小隔间后把门反锁上。','She studies in a cubicle in the school library.','她在学校图书馆的小自习室里学习。'}

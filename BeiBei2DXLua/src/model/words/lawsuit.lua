@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lawsuit"]={"lawsuit","['lɔːsuːt; -sjuːt]","['lɔsut]","n.诉讼",'n.诉讼,控诉','This lawsuit ran him into a fix.','这场官司使他陷入了困境.','The lawsuit is still pending in the state court.','这案子仍在州法庭等待定夺.'}

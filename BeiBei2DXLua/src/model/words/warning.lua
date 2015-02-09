@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["warning"]={"warning","['wɔːnɪŋ]","['wɔrnɪŋ]","n.警告",'n.警告,预告,通知|||vbl.警告,注意,通知','No one has given out a warning of the imminent danger.','没有人对即将发生的危险发出警告。','The police are warning (motorists) of possible delays.','警方通知（驾驶汽车的人）交通可能受阻.'}

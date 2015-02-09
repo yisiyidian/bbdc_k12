@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["avaricious"]={"avaricious","[ævə'rɪʃəs]","[,ævə'rɪʃəs]","adj.贪财的",'adj.贪财的,贪婪的','He sacrificed his own career so that his avaricious brother could succeed.','他牺牲了自己的事业，其目的是让他贪婪的弟弟成功。','A perfect man shouldn\'t be avaricious .','一个完美的人不应该贪婪。'}

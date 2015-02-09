@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["build"]={"build","[bɪld]","[bɪld]","vt.&vi.建造",'vt.&vi.建造，创建，开发，逐渐增强|||n.体格，身材','A consortium of construction companies will build the power-station.','由建筑公司组成的集团将建造该发电站.','We are of the same build.','我们的身材一样。'}

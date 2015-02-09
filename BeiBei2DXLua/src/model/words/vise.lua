@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vise"]={"vise","[vaɪs]","[vaɪs]","n.虎头钳",'n.虎头钳|||vt.用虎头钳夹紧','The scored jaws of a vise help it bite the work.','台钳上有刻痕的虎钳牙帮助它紧咬住工件。','The carpenter held the piece of wood in a vise.','木匠把一块木料夹在夹钳当中。'}

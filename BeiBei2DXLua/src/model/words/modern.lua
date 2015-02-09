@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["modern"]={"modern","['mɒd(ə)n]","['mɑdɚn]","adj.现代的",'adj.现代的,时髦的|||n.现代人,时尚人士','||Modern|| agriculture is spoiling our beautiful countryside.','现代农业正在破坏我们美丽的农村。','He can\'t adjust himself to the whirl of modern life in this big city.','他无法适应这个大都市的现代生活的忙碌。'}

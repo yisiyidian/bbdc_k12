@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ellipsis"]={"ellipsis","[ɪ'lɪpsɪs]","[ɪ'lɪpsɪs]","n.省略",'n.省略','In this textbook we will tolerate a certain amount of ellipsis.','在这本书中我们允许一些简化。','There is an ellipsis of "that" in that sentence.','那个句子省略了"that"。'}

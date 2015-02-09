@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["motley"]={"motley","['mɒtlɪ]","['mɑtli]","adj.杂色的",'adj.杂色的,杂多的,混杂的|||n.杂色,杂色衣服,混杂','They are wearing a motley collection of old clothes.','他们穿着各式各样的旧衣服。','His friends were a motley crew.','他的朋友三教九流全有。'}

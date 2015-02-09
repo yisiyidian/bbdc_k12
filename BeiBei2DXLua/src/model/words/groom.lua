@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["groom"]={"groom","[gruːm]","[ɡrum]","n.马夫",'n.马夫,新郎,男仆|||vt.刷洗,照看马,打扮,有意培养...作为候选人或从事某职业|||vi.打扮自己,提升自己','Help me to groom the horses for the show this afternoon.','帮我梳洗打扮这些马参加今天下午的展出。','Please charge your glasses and drink a toast to the bride and groom!','请各位将酒杯斟满, 向新娘、 新郎祝酒!'}

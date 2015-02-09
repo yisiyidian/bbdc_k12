@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beaded"]={"beaded","['bidɪd]","[ bi:did ]","adj.串珠状的",'adj.串珠状的(粒状的,带珠的)|||v.起泡','Turn yourself into a breezy goddess by opting for the braided, crochet or beaded headband models。','通过选择编织，钩针或串珠型的发带，把你自己变成一个活泼清新的女神。','His face was beaded with tears.','他脸上挂着滴滴泪珠。'}

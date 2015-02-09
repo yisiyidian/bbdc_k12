@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repair"]={"repair","[rɪ'peə]","[rɪ'pɛr]","vi.去v.修理",'vi.去，集合|||n.修理,补救|||v.修理,补救,补偿|||n.维修工作，维修状态','She turned the chair on its side to repair it.','她把椅子翻转过来修理.','The brickwork in this house is in need of repair.','这所房子的砖造部分需要修理。'}

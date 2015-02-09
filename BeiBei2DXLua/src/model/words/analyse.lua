@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["analyse"]={"analyse","['æn(ə)laɪz]","['æn(ə)laɪz]","vt.分析",'vt.分析,检讨,细察','||Analyse|| the sentence into its constituent parts.','把这句子的各个成分加以分析.','He analysed the food and found that it contained poison.','他对这种食物做了化验，发现有毒。'}

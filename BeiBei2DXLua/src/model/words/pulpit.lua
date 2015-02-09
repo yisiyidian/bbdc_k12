@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pulpit"]={"pulpit","['pʊlpɪt]","['pʊlpɪt]","n.讲道坛",'n.讲道坛','The policy was condemned (ie by clergymen) from the pulpit.','该项政策受到神职人员的谴责.','The time came for the sermon and he ascended the pulpit steps.','布道的时间到了，他迈上了讲坛的台阶。'}

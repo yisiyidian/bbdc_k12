@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["itself"]={"itself","[ɪt'self]","[ɪt'sɛlf]","pron.它自己",'pron.它自己,它本身','The discussion resolved itself into a pleasant chat.','讨论变成了愉快的闲聊。','The snake coiled itself around the tree.','蛇盘绕在树上。'}

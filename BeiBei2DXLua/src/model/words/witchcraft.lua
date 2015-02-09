@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["witchcraft"]={"witchcraft","['wɪtʃkrɑːft]","['wɪtʃkræft]","n.魔法",'n.魔法,巫术','Relating to or characteristic of witchcraft.','巫术的, 施魔法的与巫术有关的或有巫术特征的','At that time most people believe in sorcery and witchcraft.','那时候大多数人相信巫术和魔法。'}

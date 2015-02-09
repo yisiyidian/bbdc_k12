@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["voter"]={"voter","['vəʊtə]","['votɚ]","n.投票人",'n.投票人,选举人','A voter must necessarily be no younger than eighteen.','选民必须在18岁以上.','The Opposition alleged voter intimidation by the army.','反对党声称投票者受到军方的恐吓.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seventh"]={"seventh","['sev(ə)nθ]","['sɛvənθ]","n.第七",'n.第七，七分之一|||adj.第七的|||adv.第七','Just give him a bucket and spade and he\'s in seventh heaven!','只要给他一个桶子和一把铲子, 他就高兴极了!','He was laid out in the seventh round.','他在第七回合中被打倒了。'}

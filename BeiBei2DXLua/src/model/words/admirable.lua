@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["admirable"]={"admirable","['ædm(ə)rəb(ə)l]","['ædmərəbl]","adj.令人赞赏的",'adj.令人钦佩的,令人赞赏的','The book is admirable in respect of style.','这本书风格极佳.','This essay is admirable in all respects.','这篇文章在各方面都很值得欣赏。'}

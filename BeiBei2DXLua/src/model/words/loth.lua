@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loth"]={"loth","[ləʊθ]","[ ləuθ ]","adj.不愿意的",'adj.不愿意的|||=loath,loathe','The girls were nothing loth, for the house was splendid, and the welcome kind enough.','姑娘们很愉快，因为房子很是华丽的，而且接待是相当热情。','I am loth to attend this conference','我很不情愿地去参加这个会议'}

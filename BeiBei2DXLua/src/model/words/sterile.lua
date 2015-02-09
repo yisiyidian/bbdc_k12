@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sterile"]={"sterile","['steraɪl]","['stɛrəl]","adj.无菌的",'adj.贫瘠的,无生气的,无菌的','The high risk of infection puts a premium on the use of sterile needles.','由於受感染的风险很大，无菌注射针的使用受到了重视。','An operation chamber should be completely sterile.','手术室应该完全无菌。'}

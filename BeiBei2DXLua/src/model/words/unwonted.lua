@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unwonted"]={"unwonted","[ʌn'wəʊntɪd]","[ʌn'wontɪd]","adj.不寻常的",'adj.不习惯的,不寻常的,非习常的','He spoke with unwonted enthusiasm.','他讲话显得出人意料地热心。','There was an unwonted light in his eyes, and slight trembling of his lips.','他的眼睛闪耀着一种不同寻常的光彩，他的嘴唇在颤动。'}

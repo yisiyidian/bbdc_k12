@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["statistical"]={"statistical","[stə'tɪstɪk(ə)l]","[stə'tɪstɪkl]","adj.统计的",'adj.统计的,统计学的','He showed the price fluctuations in a statistical table.','他用统计表显示价格的波动.','They\'re making detailed statistical analysis.','他们正在做具体的统计分析.'}

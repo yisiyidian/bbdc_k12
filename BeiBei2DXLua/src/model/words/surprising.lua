@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surprising"]={"surprising","[sə'praɪzɪŋ]","[sɚ'praɪzɪŋ]","adj.令人惊讶的",'adj.令人惊讶的|||动词surprise的现在分词','In a surprising denouement, she becomes a nun.','结局出人意表, 她当修女了.','It\'s surprising how the bills tot up.','这帐是怎麽加在一起的, 真奇怪.'}

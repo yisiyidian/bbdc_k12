@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lime"]={"lime","[laɪm]","[laɪm]","n.石灰",'n.石灰,酸橙,酸橙树,粘鸟胶,钙|||vt.施石灰,涂上粘性物质,沾上粘鸟胶|||adj.与石灰或石灰石相关的','He added some water into the lime.','他往石灰里加了些水。','||Lime|| in the soil is detrimental to some plants.','土壤里的石灰对某些植物有害.'}

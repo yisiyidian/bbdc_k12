@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preside"]={"preside","[prɪ'zaɪd]","[prɪ'zaɪd]","v.任主席",'v.任主席,统辖,当主人','The old professor had presided over a seminar for theoretical physicists.','老教授主持了一次理论物理学家的研讨会。','The hostess presided at table with tact and urbanity.','女主人招待客人进餐时风雅而又得体。'}

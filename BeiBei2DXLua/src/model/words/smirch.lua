@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smirch"]={"smirch","[smɜːtʃ]","[smɝtʃ]","n.污点",'n.污点|||vt.玷污','their tough, hostile faces, smirched by the grime and rust','“他们生硬、敌视、沾满污垢和铁锈的脸庞”','scour the smirch','擦掉污点'}

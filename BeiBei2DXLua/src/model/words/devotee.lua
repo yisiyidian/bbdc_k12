@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["devotee"]={"devotee","[,devə(ʊ)'tiː]","[,dɛvə'ti]","n.热爱家",'n.热爱家,献身者,皈依者，信徒','He is a devotee of sports.','他很喜欢体育。','I\'m a great devotee of jazz.','我是个十足的爵士乐迷。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["principal"]={"principal","['prɪnsəp(ə)l]","['prɪnsəpl]","adj.主要的",'adj.主要的|||n.负责人,校长,资本','My principal concern is my family\'s welfare.','我至为关心的是我一家的幸福.','How much interest will there be on a principal of $5000?','5000美元本金的利息是多少？'}

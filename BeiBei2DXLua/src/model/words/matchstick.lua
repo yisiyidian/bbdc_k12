@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["matchstick"]={"matchstick","['mætʃstɪk]","[ 'mætʃstik ]","n.火柴",'n.火柴','matchstick arms; matchstick slices of potato.','火柴杆似的胳膊；火柴杆似的土豆条','Some fellas collect stamps. Others build matchstick houses.','有人集邮,有人盖火柴屋'}

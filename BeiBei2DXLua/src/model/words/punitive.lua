@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["punitive"]={"punitive","['pjuːnɪtɪv]","['pjʊnətɪv]","adj.刑罚的",'adj.刑罚的,惩罚的','The US could impose punitive tariffs of up to 100% on some countries\' exports.','美国可能会对某些国家的出口商品征收高达100%的惩罚性关税。','There are calls for more punitive measures against people who drink and drive.','有人呼吁对酒后驾车的人要有更具处罚性的措施。'}

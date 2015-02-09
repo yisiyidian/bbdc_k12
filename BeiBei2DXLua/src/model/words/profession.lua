@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profession"]={"profession","[prə'feʃ(ə)n]","[prə'fɛʃən]","n.职业",'n.职业,专业,声明,信仰','His ability carried him to the top of his profession.','他有才干能在本行业中首屈一指。','He has achieved eminence in his profession.','他在职业上出人头地。'}

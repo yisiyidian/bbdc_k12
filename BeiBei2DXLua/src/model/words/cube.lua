@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cube"]={"cube","[kjuːb]","[kjʊb]","n.立方体",'n.立方体,立方|||vt.求...的立方|||adj.立方的','A square has four corners; a cube has eight.','正方形有四个角儿; 立方体有八个角儿.','A cube is a solid.','正方体是立体图形.'}

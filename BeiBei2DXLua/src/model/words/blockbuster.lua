@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blockbuster"]={"blockbuster","['blɒkbʌstə]","['blɑkbʌstɚ]","n.轰动",'n.轰动,巨型炸弹','...the latest Hollywood blockbuster.','…最新的好莱坞大片。','blockbuster','一鸣惊人者'}

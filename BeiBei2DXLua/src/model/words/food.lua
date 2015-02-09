@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["food"]={"food","[fuːd]","[fud]","n.食物",'n.食物','They were shoveling food into their mouths.','他们正大口大口地往嘴里塞食物。','Are you used to the food here?','你习惯吃这儿的饭菜吗？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blanket"]={"blanket","['blæŋkɪt]","['blæŋkɪt]","n.毛毯",'n.毛毯,覆盖物,排字版|||vt.用毯子裹,扑灭,挡风,覆盖,使包含|||adj.包含所有的,适用于所有情形的','He threw a blanket over the injured man.','他急忙给受伤的人披上条毯子.','They cuddled up (together) under the blanket.','他们盖著毯子（在一起）搂着。'}

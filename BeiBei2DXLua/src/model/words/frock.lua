@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frock"]={"frock","[frɒk]","[frɑk]","n.罩袍",'n.罩袍,僧衣，女上装|||vt.穿罩衫，授以神职','This monk wears a gray frock.','这个和尚穿着灰色的僧袍。','That frock shows your petticoat.','那件上衣太短,让你的衬裙露出来了.'}

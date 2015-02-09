@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revolve"]={"revolve","[rɪ'vɒlv]","[rɪ'vɔlv]","vt.&vi.旋转",'vt.&vi.旋转,考虑,循环','The wheels must synchronize as they revolve.','这些轮子须同速转动.','My life revolves around my job.','我的工作是我生活的中心。'}

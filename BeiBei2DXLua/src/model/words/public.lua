@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["public"]={"public","['pʌblɪk]","['pʌblɪk]","adj.公开的",'adj.公开的,众所周知的,公众的|||n.公共场合,公众,同好者','The pension fund owns shares in several major public companies.','该养老基金在几家主要出售股份给公众的公司中均有股份.','The town has its own public library and public gardens.','那城市有自己的公用图书馆和公园。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anguish"]={"anguish","['æŋgwɪʃ]","['æŋɡwɪʃ]","n.苦闷",'n.苦闷,痛苦|||v.使...极苦闷,使...极痛苦','Nothing can take away the anguish of losing a child.','什么都不能解除失去孩子的巨大悲痛。','Physical disability causes mental anguish.','生理伤残会引起心理苦闷。'}

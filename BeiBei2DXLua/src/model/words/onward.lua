@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["onward"]={"onward","['ɒnwəd]","['ɑnwɚd]","adj.向前的",'adj.向前的,前进的|||adv.向前,前进,在先','Age stole onward and benumbed me more and more.','年纪渐老使得我（反应）越来越迟钝。','On life\'s earnest battle they only prevail, who daily march onward and never say fail.','生活在顽强战斗中，只有每天不屈不挠奋勇向前的人才能取得胜利。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multiplier"]={"multiplier","['mʌltɪplaɪə]","['mʌltɪplaɪɚ]","n.乘数",'n.增加者，乘数，扩音器','The number by which another number is multiplied. In 8*2, the multiplier is 8.','乘数与被乘数相乘的数。在乘式8*2中，乘数是8','The multiplier for the estimate of man-hour costs to take care of overheads and fringe benefits.','工时成本估计的乘数及以满足福利费和经营管理费的需要。'}

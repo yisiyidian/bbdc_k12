@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["daring"]={"daring","['deərɪŋ]","['dɛrɪŋ]","adj.大胆的",'adj.大胆的|||n.冒险精神','her daring work behind the enemy lines is now legend','她在敌後的英勇斗争事迹现在已是传奇美谈','there are many daring similes in this book','这本书中使用了很多大胆的明喻。'}

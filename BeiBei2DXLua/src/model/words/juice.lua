@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["juice"]={"juice","[dʒuːs]","[dʒus]","n.果汁",'n.细胞液,内在本质,汽油,果汁,唾液,体液|||vt.加液体,榨出...的汁液','I like to drink coconut juice.','我喜欢喝椰子汁。','Soup\'s off -- we\'ve only got fruit juice.','汤已售完--现只供应果汁.'}

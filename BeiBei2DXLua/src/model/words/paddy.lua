@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paddy"]={"paddy","['pædɪ]","[ 'pædi ]","n.稻田",'n.稻田|||n.&lt;口&gt;爱尔兰人','People flocked to see for themselves the marvel of green paddy flourishing on the once barren desert land.','在从前贫瘠荒芜的土地上, 翠绿的稻秧茁壮成长。人们成群结队前来亲眼观看这个奇迹。','Thatch hut is raised high above the paddy field on stilt.','茅草屋用柱高高地建在稻田之上。'}

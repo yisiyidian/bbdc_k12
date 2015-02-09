@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrongheaded"]={"wrongheaded","['rɒŋ'hedɪd]","['rɔŋ'hɛdɪd]","adj.乖僻的",'adj.乖僻的,顽固的,固执的','He told them exactly how wrongheaded they were.','他实实在在地跟他们说他们有多执迷不悟。','Don\'t be a wrongheaded man!','固执的，坚持错误思想的'}

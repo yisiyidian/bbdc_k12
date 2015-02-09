@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rakish"]={"rakish","['reɪkɪʃ]","['rekɪʃ]","adj.轻快的",'adj.轻快的,俏皮的,潇洒的,放荡的','She wore her hat at a rakish angle.','她歪戴着帽子。','The rakish actor was known for dating models.','那位风流倜傥的演员爱跟模特儿交往是出了名的。'}

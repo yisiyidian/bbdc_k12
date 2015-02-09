@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cadre"]={"cadre","['kɑːdə; 'kɑːdr(ə); 'kædrɪ]","['kædri]","n.干部",'n.干部,骨架,小组成员,骨干','Do you think him a good cadre?','你们认为他是个好干部吗？','A veteran cadre was named for the directorship.','一位老干部被任命为厂长。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deter"]={"deter","[dɪ'tɜː]","[dɪ'tɝ]","v.制止",'v.制止,使...断念','Repulse after repulse failed to deter Alec, who persisted day by day, at first with a marriage license and holy words.','苔丝一次又一次的严辞拒绝未能制止亚历克，他整天缠住苔丝，先是用结婚证书和神圣的誓言来说服她。','Several factors deter new industry from coming to the city.','许多因素造成了新工业无法进入这座城市。'}

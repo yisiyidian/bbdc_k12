@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soup"]={"soup","[suːp]","[sup]","n.汤",'n.汤,羹,困境','I made some gravy soup for my husband.','我给我丈夫做了一些肉汤。','This soup tastes of chicken.','这汤里有鸡肉的味道。'}

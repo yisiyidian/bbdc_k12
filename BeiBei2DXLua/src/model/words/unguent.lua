@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unguent"]={"unguent","['ʌŋgwənt]","['ʌŋgwənt]","n.软膏",'n.软膏,药膏','The unguent is convenient and easy to carry with.','软膏剂便于携带。','The doctor applied an unguent to the wound, which speedily healed it.','医生给伤口涂了些药膏，伤口很快就愈合了。'}

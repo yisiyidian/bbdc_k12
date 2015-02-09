@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ostracize"]={"ostracize","['ɑstrəsaɪz]","[ 'ɔstrəsaiz ]","v.被流放",'v.被流放,放逐,排斥','He was ostracized by his colleagues for refusing to support the strike.','他因不支持罢工而受到同事的排斥。','The whole team ostracized me the whole way back on the train.','乘火车回来的时候全队的人一路上谁也不理我。'}

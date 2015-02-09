@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mariner"]={"mariner","['mærɪnə]","['mærɪnɚ]","n.海员",'n.海员，水手','He recited the whole of The Ancient ||Mariner|| to us off the reel.','他一口气把《古水手吟》从头到尾都背诵出来了。','There are more than 50 mariners on this ship.','船上有五十多名水手。'}

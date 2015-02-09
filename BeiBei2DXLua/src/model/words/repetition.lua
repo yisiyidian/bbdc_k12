@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repetition"]={"repetition","[repɪ'tɪʃ(ə)n]","['rɛpə'tɪʃən]","n.重复",'n.重复,反复','The story loses a great deal in repetition.','这个故事由于反复讲述而大为减色了。','That is a mere repetition of what you said before.','那不过是重复了你以前讲的话.'}

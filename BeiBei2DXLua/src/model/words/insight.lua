@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insight"]={"insight","['ɪnsaɪt]","['ɪn'saɪt]","n.洞察力",'n.洞察力','In this new book he hits off the American temperament with amazing insight.','在这本新书里，他对美国人性格的描写表现出惊人的洞察力。','The book is filled with remarkable insights.','这本书很有真知卓见。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nadir"]={"nadir","['neɪdɪə; 'nædɪə]","['nedɪr]","n.最低点",'n.最低点，[天文学]天底','His fortune was at its nadir.','他的运气坏到极点。','This failure was the nadir of her career.','这次失败是她事业上的低谷。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peddler"]={"peddler","['pedlə]","['pɛdlɚ]","n.小贩",'n.小贩|||n.毒品贩|||=pedlar','The peddler sold his wares cheap.','小贩廉价出售货物。','He rigged himself out as a peddler.','他装扮成一个小贩。'}

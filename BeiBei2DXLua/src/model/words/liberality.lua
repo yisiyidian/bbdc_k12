@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liberality"]={"liberality","[lɪbə'rælɪtɪ]","[,lɪbə'ræləti]","n.慷慨",'n.慷慨,心胸开阔','The Tang Dynasty is a period remarkable for its liberality.','唐朝是一段以开明著称的时期。','she firmly relied on the liberality of his intentions.','她对他的慷慨豁达坚信不疑。'}

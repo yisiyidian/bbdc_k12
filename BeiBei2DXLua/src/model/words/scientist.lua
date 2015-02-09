@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scientist"]={"scientist","['saɪəntɪst]","['saɪəntɪst]","n.科学家",'n.科学家','When will scientist conquer cancer?','科学家什么时候才能征服癌症呢？','The scientist needs some delicate instruments.','这位科学家需要一些精密的仪器。'}

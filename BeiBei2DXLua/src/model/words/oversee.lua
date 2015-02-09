@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oversee"]={"oversee","[əʊvə'siː]","['ovɚ'si]","v.向下看",'v.向下看,了望,监督','You must employ someone to oversee the project.','你得雇个人监督这一工程.','He happened to oversee the burglar leaving the premises.','他碰巧看到那盗贼离开房子.'}

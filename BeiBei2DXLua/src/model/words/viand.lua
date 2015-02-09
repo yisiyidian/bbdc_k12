@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["viand"]={"viand","['vaɪənd]","['vaɪənd]","n.一件食品",'n.一件食品,珍馐美味，食物','For truly palatable viand, you should ask Ryan to bake you one of his wonderful cakes.','要吃真正美味的食物，你应该要求雷恩烤一个好吃的蛋糕给你尝尝。','There are lots of viands at the feast.','食物'}

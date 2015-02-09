@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commodious"]={"commodious","[kə'məʊdɪəs]","[kə'modɪəs]","adj.宽敞的",'adj.宽敞的','It is a commodious house.','这是一间宽敞的房屋。','The students\' cupboards are very commodious.','学生们的橱柜非常宽敞。'}

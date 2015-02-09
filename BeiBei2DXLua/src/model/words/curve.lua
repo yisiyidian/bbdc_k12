@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curve"]={"curve","[kɜːv]","[kɝv]","n.曲线",'n.曲线,弯曲,曲球|||vt.使...弯曲|||vi.弯曲','The coast sweeps (away) northwards in a wide curve.','海岸呈一大弧形向北伸展.','The falling star described a long curve in the sky.','流星在空中画出了一道长长的弧线。'}

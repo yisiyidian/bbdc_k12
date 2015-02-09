@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nominee"]={"nominee","[nɒmɪ'niː]","[,nɑmɪ'ni]","n.被提名的人",'n.被提名的人,名义人','He is a nominee.','他是被提名的人。','Even being a potential nominee was a big enough honor for me.','对我来说，即使是有可能被提名也是莫大的荣幸。'}

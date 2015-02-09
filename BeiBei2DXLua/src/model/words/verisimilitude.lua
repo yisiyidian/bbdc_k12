@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verisimilitude"]={"verisimilitude","[,verɪsɪ'mɪlɪtjuːd]","[ ,verisi'militju:d ]","n.逼真",'n.逼真,逼真的事物','These flower illustrations show the artist\'s concern for verisimilitude.','这些花卉插图表明这个画家很注重写实。','She has included a photograph in the book to verisimilitude her story.','她为书添加了图片来让故事更逼真。'}

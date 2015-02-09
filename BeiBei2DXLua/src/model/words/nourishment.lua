@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nourishment"]={"nourishment","['nʌrɪʃm(ə)nt]","['nɝɪʃmənt]","n.营养",'n.营养，滋养品,养料','He told me I wanted nourishment.','他对我说，我需要营养。','Plants get nourishment from the soil.','植物从土壤中吸取营养.'}

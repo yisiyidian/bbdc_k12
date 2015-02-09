@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aim"]={"aim","[eɪm]","[em]","n.目标",'n.目标,对准,枪法|||vt.瞄准,针对|||vi.旨在,瞄准,打算','My remarks were not aimed at you.','我的话不是针对你的。','I aimed at the target but hit the wall.','我瞄准了目标射击，但却打在了墙上。'}

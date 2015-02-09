@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annihilate"]={"annihilate","[ə'naɪɪleɪt]","[ə'naɪəlet]","v.消灭",'v.消灭，歼灭，彻底消除，使无效，废止','The invasion force was annihilated.','侵略军被消灭了。','Radio communication has annihilated space.','无线电通讯已消除了空间的阻隔。'}

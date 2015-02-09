@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pulsation"]={"pulsation","[pʌl'seɪʃən]","[pʌl'seʃən]","n.脉博",'n.脉博,悸动,震动','A single complete pulsation of the heart.','心搏一次完整的心脏跳动','A pulsation or throb.','（心脏）悸动，搏动'}

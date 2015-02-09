@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["torpor"]={"torpor","['tɔːpə]","['tɔrpɚ]","n.麻木",'n.麻木,无感觉,不活泼','The sick person gradually falls into a torpor.','病人逐渐变得萎靡。','He fell into a deep torpor.','他一下子进入了深度麻痹状态。'}

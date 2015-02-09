@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["secrecy"]={"secrecy","['siːkrɪsɪ]","['sikrəsi]","n.秘密",'n.秘密，保密,隐蔽','By breaking the rule of absolute secrecy, he became a marked man.','他因违犯绝密条例, 成了处罚对象.','The negotiations were cloaked in secrecy.','谈判是秘密进行的.'}

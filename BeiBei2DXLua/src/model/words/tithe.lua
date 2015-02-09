@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tithe"]={"tithe","[taɪð]","[taɪð]","n.十分之一税",'n.十分之一税,十分之一的教区税,小部分|||v.课十分之一税','I cannot remember a tithe of it.','我一点儿也不记得了。','The ||Tithe|| is compulsory while the offering is voluntary.','十一税是强制的，奉献是自愿的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hydrogen"]={"hydrogen","['haɪdrədʒ(ə)n]","['haɪdrədʒən]","n.氢",'n.氢','Water is composed of the elements hydrogen and oxygen.','水是由氢元素和氧元素组成的.','A molecule of water consists of two atoms of hydrogen and one atom of oxygen.','水分子含有两个氢原子和一个氧原子.'}

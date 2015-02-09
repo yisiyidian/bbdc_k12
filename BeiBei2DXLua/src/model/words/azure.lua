@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["azure"]={"azure","['æʒə; -ʒj(ʊ)ə; 'eɪ-]","['æʒɚ]","n.天蓝色",'n.天蓝色,碧空|||adj.蔚蓝的','His eyes are azure.','他的眼睛是天蓝色的。','He looked up at the azure and was lost in thought.','他抬头看着蓝天，沉思起来。'}

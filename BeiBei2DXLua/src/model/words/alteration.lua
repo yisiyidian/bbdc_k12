@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alteration"]={"alteration","[ɔːltə'reɪʃ(ə)n; 'ɒl-]","[,ɔltə'reʃən]","n.改变",'n.改变,变更','The timetable is subject to alteration.','时刻表有可能更改.','There is a structural alteration to the building.','这座建筑物在这有一处结构上的改变。'}

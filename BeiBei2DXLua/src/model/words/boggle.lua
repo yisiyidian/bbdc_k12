@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boggle"]={"boggle","['bɒg(ə)l]","[ 'bɔɡl ]","v.犹豫",'v.犹豫,踌躇,使……惊奇；使……困惑','I tried to check the accounts but there are so many entries altered or crossed out that it makes one\'s mind boggle.','我试图将账目核实一下，但变更或销掉账目实在太多，真是令人头痛。','My neighbour wears his dressing-gown to work. The mind boggles!','我的邻居穿著晨衣去上班. 真不可思议!'}

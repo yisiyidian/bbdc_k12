@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["supplementary"]={"supplementary","[,sʌplɪ'ment(ə)rɪ]","[,sʌplɪ'mɛntri]","adj.补充的",'adj.补充的,附加的','Provide them with additional background or with supplementary information.','给他们提供额外的背景资料或补充信息。','...the question of whether or not we need to take supplementary vitamins.','…我们是否有必要补充维生素的问题。'}

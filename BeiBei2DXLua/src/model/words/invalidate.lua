@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invalidate"]={"invalidate","[ɪn'vælɪdeɪt]","[ɪn'vælɪdet]","vt.使无效",'vt.使无效，使作废','A contract signed now might be invalidated at some future date.','现在签订的合同可能在将来的某一天就会失效。','Any form of physical activity will invalidate the results.','任何形式的物理活动都会证明这些结果是错误的。'}

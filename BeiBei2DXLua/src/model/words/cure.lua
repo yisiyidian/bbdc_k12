@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cure"]={"cure","[kjʊə; kjɔː]","[kjʊr]","vt.&vi.治疗",'n.治疗,治愈,治疗法|||vt.&vi.治疗,治愈,改正','That nasty shock cured him of his inquisitiveness for ever.','那一沉重教训根除了他凡事爱打听的毛病。','When I left the hospital I was completely cured.','出院时，我已经完全痊愈了。'}

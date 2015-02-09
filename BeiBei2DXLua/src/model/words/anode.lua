@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anode"]={"anode","['ænəʊd]","['ænod]","n.阳极",'n.阳极','The body or plate to which the electrons are attracted is called the anode.','电子被吸引到其上面去的物体或薄板称为阳极。','A red wire is often attached to the anode.','红色电线通常与阳极相联.'}

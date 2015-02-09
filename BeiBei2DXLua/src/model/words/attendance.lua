@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attendance"]={"attendance","[ə'tend(ə)ns]","[ə'tɛndəns]","n.出席",'n.出席,出席人数,出席率','At Easter, attendances at church rose.','复活节期间，到教堂做礼拜的人多了。','||Attendance|| at school is demanded by law.','法律规定儿童必须上学。'}

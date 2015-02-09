@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["constrain"]={"constrain","[kən'streɪn]","[kən'stren]","v.强迫",'v.强迫,勉强,驱使','Cold weather constrains the plant\'s growth.','寒冷的天气抑制了植物的生长。','I felt constrained to do what he told me.','我觉得不能不做他叫我做的事。'}

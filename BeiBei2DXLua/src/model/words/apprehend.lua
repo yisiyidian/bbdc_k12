@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apprehend"]={"apprehend","[æprɪ'hend]","[,æprɪ'hɛnd]","v.理解",'v.理解,忧虑|||逮捕,拘押','Do you apprehend there will be any difficulty?','你担心会有困难吗？','He can\'t apprehend the real nature of change.','他不能理解变革的真实性质。'}

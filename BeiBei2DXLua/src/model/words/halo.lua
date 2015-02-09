@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["halo"]={"halo","['heɪləʊ]","['helo]","n.(日月等)晕",'n.(日月等)晕,神像之光环','A bright spot sometimes appearing on either side of the sun, often on a luminous ring or halo.','幻日，假日有时出现在太阳旁边的一个常常形成光亮的环的明亮光斑','A luminous spot on a lunar halo.','幻月，假月月晕上的光斑'}

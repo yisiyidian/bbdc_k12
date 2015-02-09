@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lumber"]={"lumber","['lʌmbə]","['lʌmbɚ]","n.木材",'n.木材,木料|||v.伐木|||vi.缓慢地移动|||vt.拖累','Oh, are you going to the lumber yard?','唔，你要到木料场去？','The truck was sent to carry lumber.','卡车被派出去运木材。'}

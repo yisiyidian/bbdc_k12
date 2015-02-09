@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["purify"]={"purify","['pjʊərɪfaɪ]","['pjʊrɪfaɪ]","v.(使）净化",'v.(使）净化，（使）精炼，涤罪','They open the windows to purify the air of the room.','他们打开窗户清涤室内空气.','You can purify the water by distilling.','你可以通过蒸馏来净化水。'}

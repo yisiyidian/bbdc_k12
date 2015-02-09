@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contaminant"]={"contaminant","[kən'tæmɪnənt]","[kən'tæmɪnənt]","n.杂质",'n.杂质(污染物质,沾染物)','This factory product many contaminants.','这个工厂产生了很多污染物。','contaminant','杂质'}

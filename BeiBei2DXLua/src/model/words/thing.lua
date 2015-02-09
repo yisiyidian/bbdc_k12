@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thing"]={"thing","[θɪŋ]","[θɪŋ]","n.东西",'n.东西,事情','As things stand, we won\'t finish the job on time.','据目前情况看，我们不能按时完成任务了。','A holiday will be just the thing for you.','你现在需要的就是放假。'}

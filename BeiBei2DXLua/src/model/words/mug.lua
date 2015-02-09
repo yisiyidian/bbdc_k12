@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mug"]={"mug","[mʌg]","[mʌɡ]","n.杯",'n.杯,脸,一杯的量,恶棍|||vi.扮鬼脸|||vt.攻击,打劫','He has a mug of cocoa before bed.','他临睡前喝一缸子可可.','This mug has a chip in it.','这个缸子上有个缺口.'}

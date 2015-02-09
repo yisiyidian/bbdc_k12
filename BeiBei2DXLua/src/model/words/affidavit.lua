@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affidavit"]={"affidavit","[,æfɪ'deɪvɪt]","[,æfə'devɪt]","n.宣誓书",'n.宣誓书','I gave an affidavit to the judge about the accident I witnessed.','我向法官提交了一份关于我目击的事故的证词。','The affidavit was formally read to the court.','正式向出席法庭的人宣读了书面证词。'}

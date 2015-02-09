@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imagine"]={"imagine","[ɪ'mædʒɪn]","[ɪ'mædʒɪn]","vt.想像",'vt.想像,幻想,猜测|||vi.想像起来,认为','I can\'t imagine that anyone cares what I do.','我想不出谁会关心我的所作所为。','You can imagine how surprised I was.','你可以想象我是多么惊讶。'}

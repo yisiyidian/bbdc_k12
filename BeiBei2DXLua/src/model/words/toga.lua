@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toga"]={"toga","['təʊgə]","['toɡə]","n.托加袍(古罗马男子穿的宽松罩袍)",'n.托加袍(古罗马男子穿的宽松罩袍)，官服','But sometimes they would put on loose-fitting gowns called togas.','但有时候他们会穿上叫做托加袍的宽松长袍。','But what kind of toga?','和它比较的又是什么价位的西装呢'}

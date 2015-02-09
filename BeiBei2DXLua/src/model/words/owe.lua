@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["owe"]={"owe","[əʊ]","[o]","v.欠",'v.欠|||vi.欠钱|||vt.欠(债等),归功于,应感谢','I owe you one.','我欠你一个人情。','He owes his success more to luck than to ability.','他认为他的成功是靠运气而不是因为自己有能力。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["variegated"]={"variegated","['veərɪgeɪtɪd; 'veərɪə-]","[ 'vεəriəɡeitid ]","adj.杂色的",'adj.杂色的,斑驳的,形形色色的，富于变化的|||动词variegate的过去式和过去分词形式','We’re going to grow a variegated ivy up the back of the house.','我们打算在房子后面种一棵杂色常春藤。','This plant has beautifully variegated leaves.','这种植物的叶子色彩斑驳，非常美丽。'}

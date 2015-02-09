@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dolphin"]={"dolphin","['dɒlfɪn]","['dɑlfɪn]","n.海豚",'n.海豚','The head of the dolphin popped up quite near the boat.','那海豚的头在离船很近的地方冒出来。','The dolphin balanced the ball on its nose.','海豚用鼻子顶着球，使其保持平衡。'}

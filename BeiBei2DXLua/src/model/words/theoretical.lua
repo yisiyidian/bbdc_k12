@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["theoretical"]={"theoretical","[θɪə'retɪk(ə)l]","[,θiə'rɛtɪkəl]","adj.理论上的",'adj.理论上的','The old professor had presided over a seminar for theoretical physicists.','老教授主持了一次理论物理学家的研讨会。','It\'s a theoretical possibility, but I don\'t suppose it will happen.','这是一种理论上的可能性，但我认为这种情况不会发生。'}

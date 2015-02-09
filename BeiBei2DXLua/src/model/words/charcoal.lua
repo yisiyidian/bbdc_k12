@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["charcoal"]={"charcoal","['tʃɑːkəʊl]","['tʃɑrkol]","n.木炭",'n.木炭,炭笔','Blacked their faces with charcoal.','用木炭弄黑他们的脸','What can we do with charcoal?','我们用木炭能做什么呢'}

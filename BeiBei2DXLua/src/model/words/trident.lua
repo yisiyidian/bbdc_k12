@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trident"]={"trident","['traɪd(ə)nt]","['traɪdnt]","n.三叉戟",'n.三叉戟|||adj.三齿的','Poseidons\' symbols were the dolphin and the trident.','波塞冬的象征是海豚和三叉戟。','Hold your position give way to the ||Trident||','保持原位给三叉戟让路'}

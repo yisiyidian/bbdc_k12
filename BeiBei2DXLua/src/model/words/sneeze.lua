@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sneeze"]={"sneeze","[sniːz]","[sniz]","n.喷嚏",'n.喷嚏|||vi.打喷嚏','The pepper in the food caused me to/made me sneeze.','这食物中的胡椒味儿呛得我直打喷嚏.','A prize of 50 is not to be sneezed at.','50英镑的奖金可不是个小数.'}

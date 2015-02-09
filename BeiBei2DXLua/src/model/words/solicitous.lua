@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solicitous"]={"solicitous","[sə'lɪsɪtəs]","[sə'lɪsɪtəs]","adj.热心的",'adj.热心的,热切想要...的,热切期望','She is so solicitous that she virtually kills you with kindness.','她过于热心了，以致她的善意实际上反而使人感到尴尬。','||Solicitous|| parents might give their child too much pressure.','望子成龙的父母也许会给孩子带来很多的压力。'}

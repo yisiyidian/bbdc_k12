@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["biographer"]={"biographer","[baɪ'ɒɡrəfə]","[baɪ'ɑɡrəfɚ]","n.传记记者",'n.传记记者','The biographer will be seized of all pertinent papers and correspondence.','这位传记作者将掌握全部有关文件和信件。','He is a biographer','他是一名传记记者'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defend"]={"defend","[dɪ'fend]","[dɪ'fɛnd]","vt.&vi.防护",'vt.&vi.防护,辩护,防卫','He retained the best lawyer in the state to defend his case.','他为他的案子聘了该州最好的律师。','The company has briefed a top lawyer to defend it.','公司已将案件委托给最好的律师进行辩护。'}

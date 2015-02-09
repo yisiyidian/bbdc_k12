@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pachyderm"]={"pachyderm","['pækɪdɜːm]","['pækɪdɝm]","n.厚皮类迟钝的人",'n.厚皮类迟钝的人','And a pachyderm turns Picasso at a safari park in Britain.','英国野生动物园的一头大象俨然变身为毕家索。','She is such a pachyderm.','她脸皮很厚。'}

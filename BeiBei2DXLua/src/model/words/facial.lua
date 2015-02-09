@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["facial"]={"facial","['feɪʃ(ə)l]","['feʃl]","adj.面部的",'adj.面部的|||n.面部护理','The cream dissolves facial hair.','这种化妆品能清除脸上的汗毛.','She is having a facial massage.','她正做脸部按摩。'}

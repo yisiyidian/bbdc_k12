@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reduce"]={"reduce","[rɪ'djuːs]","[rɪ'dʊs]","vt.换算",'vt.换算；约束；使变为；使变弱|||vi.减少；减轻体重；[生物学]（细胞）减数分裂；（液体）浓缩变稠','The windows were tinted to reduce the glare.','窗户上涂上了浅色以减少强光。','The manager hasn\'t worked out a suitable action to reduce the domino effect.','经理还没有想出一个适当的举措来减少多米诺效应。'}

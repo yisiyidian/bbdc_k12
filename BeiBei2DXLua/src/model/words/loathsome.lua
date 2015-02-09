@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loathsome"]={"loathsome","['ləʊðs(ə)m]","['loθsəm]","adj.讨厌的",'adj.讨厌的,可恶的,令人呕吐的','Some people think that snakes are loathsome creatures.','有些人觉得蛇是令人憎恶的动物.','The witch hid her loathsome face with her hands.','巫婆用手掩住她那张令人恶心的脸.'}

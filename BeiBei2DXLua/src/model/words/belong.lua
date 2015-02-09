@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["belong"]={"belong","[bɪ'lɒŋ]","[bɪ'lɔŋ]","vi.属于",'vi.属于，适合于','A napkin belongs at every place setting.','餐巾对每一席位都适合','That dictionary belongs to me.','那本字典是属于我的。'}

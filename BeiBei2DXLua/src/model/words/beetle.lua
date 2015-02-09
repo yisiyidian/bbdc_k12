@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beetle"]={"beetle","['biːt(ə)l]","[ 'bi:tl ]","n.甲虫",'n.甲虫|||n.大锥，小木槌|||vi.忙碌地来回，突出，高悬|||adj.显著的，突出的','The beetle scuttled away when I lifted the stone.','我把石头搬起来时，那只甲虫跑了。','She screamed as she saw the beetle.','看到甲虫，她尖叫起来。'}

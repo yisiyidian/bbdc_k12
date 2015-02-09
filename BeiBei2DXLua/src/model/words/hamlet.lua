@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hamlet"]={"hamlet","['hæmlɪt]","['hæmlət]","n.哈姆雷特",'n.哈姆雷特|||n.小村,部落','He took/played the part of ||Hamlet||.','他去哈姆雷特这个角色.','Who is acting (the part of) ||Hamlet||?','谁扮演哈姆雷特（这个角色）?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["worship"]={"worship","['wɝʃɪp]","[ 'wə:ʃip ]","n.崇拜",'n.崇拜,爱慕,做礼拜|||vi.做礼拜|||vt.崇拜,爱慕','The boy worshipped his father.','这小孩崇拜他的父亲。','He personifies the worship of money.','他是拜金的化身.'}

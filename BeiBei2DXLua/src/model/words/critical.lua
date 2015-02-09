@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["critical"]={"critical","['krɪtɪk(ə)l]","['krɪtɪkl]","adj.批评的",'adj.批评的，爱挑剔的；危险的，危急的；决定性的；[物]临界的','The reforms of enterprises are now at the critical moment.','现在企业的改革正处在紧要关头。','We have come to the critical moment.','现在到了紧要关头。'}

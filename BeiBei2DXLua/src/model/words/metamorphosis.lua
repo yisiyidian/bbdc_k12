@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["metamorphosis"]={"metamorphosis","[,metə'mɔːfəsɪs; ,metəmɔː'fəʊsɪs]","['mɛtə'mɔrfəsɪs]","n.锐变",'n.锐变,变质,变形','She\'s undergo quite a metamorphosis since you last see her.','自你上次见到她以来，她已完全变了一个样子。','The employment department has undergone several ||metamorphoses||.','就业部已经经历了数次改革。'}

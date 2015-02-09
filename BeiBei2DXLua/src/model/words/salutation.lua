@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["salutation"]={"salutation","[,sæljʊ'teɪʃ(ə)n]","['sæljʊ'teʃən]","n.招呼",'n.招呼,致敬,问候|||n.(信函开头)称呼语','A salutation or toast given in drinking someone\'s health or as an expression of good will at a festivity.','祝酒辞节日时喝酒祝某人身体健康或表达良好愿望的敬辞或祝颂','A ceremonial embrace, as of greeting or salutation.','见面礼节礼节性拥抱，如问候或敬礼'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fascinating"]={"fascinating","['fæsɪneɪtɪŋ]","['fæsɪnetɪŋ]","adj.迷人的",'adj.迷人的','The book is fascinating, despite its uninspiring title.','这本书很有意思, 虽然书名并不吸引人.','I find it extremely fascinating.','我觉得这非常迷人。'}

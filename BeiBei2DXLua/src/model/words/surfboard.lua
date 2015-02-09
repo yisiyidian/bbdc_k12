@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surfboard"]={"surfboard","['sɜːfbɔːd]","['sɝfbɔrd]","n.冲浪板",'n.冲浪板','So she got on the surfboard. She was surfing and she was trying to play golf at the same time.','所以她站到了冲浪板上。她一边冲浪，与此同时一边尝试打高尔夫球。','there is a surfboard performance tonight.','今晚这有冲浪板表演。'}

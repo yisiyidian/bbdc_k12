@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["three"]={"three","[θriː]","[θri]","num.三",'num.三|||pron.&adj.三(个,只...)','No one knows outside two or three persons.','除两三个人外谁也不知道.','This street is three times wider than that one.','这条街比那条街宽三倍。'}

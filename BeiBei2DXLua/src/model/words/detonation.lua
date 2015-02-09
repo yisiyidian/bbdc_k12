@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detonation"]={"detonation","[detə'neɪʃ(ə)n]","[,dɛtə'neʃən]","n.爆炸",'n.爆炸,爆裂,爆炸声','There are many scenes of detonation in this movie.','这个电影中有很多爆炸的场面。','Could there be an accidental detonation of a nuclear weapon?','有没有可能会有核武的意外爆炸?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["downward"]={"downward","['daʊnwəd]","['daʊnwɚd]","adj.向下的",'adj.向下的|||adv.向下','She laid the picture face downward on the table.','她把那幅画正面朝下放在桌上.','A downward incline or passage; a slope.','斜面，斜坡向下的斜面；倾斜面'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["furniture"]={"furniture","['fɜːnɪtʃə]","['fɝnɪtʃɚ]","n.家具",'n.家具','The wood surface of the furniture is full of diagonal stripes.','这件家具的木头表面上布满了斜纹。','The furniture in the room was placed askew.','屋子里的家俱摆得歪歪斜斜。'}

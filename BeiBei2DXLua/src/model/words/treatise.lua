@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["treatise"]={"treatise","['triːtɪs; -ɪz]","['tritɪs]","n.论文",'n.论文,论述','Our professor asked him to write a treatise on the subject.','我们的教授要求他就这个课题写篇论文。','The doctor wrote a treatise on alcoholism.','那位医生写了一篇关于酗酒问题的论文。'}

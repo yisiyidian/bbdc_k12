@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surge"]={"surge","[sɜːdʒ]","[sɝdʒ]","n.汹涌",'n.汹涌,澎湃|||vi.汹涌；强烈感到；飞涨|||vt.放开,松手','A surge of innovation in techniques is on the horizon.','技术改进的浪潮即将出现。','The crowd surged past him.','人们从他身边涌过。'}

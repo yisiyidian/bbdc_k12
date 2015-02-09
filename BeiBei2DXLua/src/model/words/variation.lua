@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["variation"]={"variation","[veərɪ'eɪʃ(ə)n]","[,vɛrɪ'eʃən]","n.变化",'n.变化,变动,变种,变奏曲','The dial records showed a very slight variation in pressure.','刻度盘显示出压力有极微小的变化。','Prices have not shown much variation this year.','今年物价没显出多大变化。'}

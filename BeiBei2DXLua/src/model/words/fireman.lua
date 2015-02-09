@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fireman"]={"fireman","['faɪəmən]","['faɪrmən]","n.消防队员",'n.消防队员，司炉工','The fireman smashed the door down to reach the children.','消防员破门而入冲向孩子们.','The well-trained fireman can get over this tall wall easily.','受过严格训练的消防员可以轻而易举地越过这道高墙。'}

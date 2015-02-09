@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fearless"]={"fearless","['fɪəlɪs]","['fɪrləs]","adj.大胆的",'adj.大胆的,勇敢的,无畏的','The major impregnated the soldiers with his own fearless courage.','少校把他自己那份无所畏惧的勇气灌输给了士兵们。','The soldiers followed their fearless leader into the battle.','士兵们随着他们勇敢的指挥官投入战斗.'}

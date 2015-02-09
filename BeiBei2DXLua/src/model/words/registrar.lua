@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["registrar"]={"registrar","['redʒɪstrɑː; ,redʒɪ'strɑː]","[,rɛdʒɪ'strɑr]","n.记录者",'n.记录者,登记者,登记官员','You can obtain the application from the registrar.','你可以向注册人员索取申请书。','The registrar\'s responsibility is to record the visitor\'s data.','等记者的职责是记录来访者的信息。'}

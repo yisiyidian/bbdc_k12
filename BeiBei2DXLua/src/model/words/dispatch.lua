@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dispatch"]={"dispatch","[dɪˈspætʃ]","[dɪ'spætʃ]","n.派遣",'n.派遣；急件|||vt.派遣；分派','With computers we can solve all problems with dispatch.','有了计算机我们可以火速地处理许多问题。','Please advise us of the dispatch of the goods.','货物发出后请通知我们。'}

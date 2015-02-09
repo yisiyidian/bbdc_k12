@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annoyance"]={"annoyance","[ə'nɒɪəns]","[ə'nɔɪəns]","n.烦恼",'n.烦恼,生气,令人讨厌的人或事情','He gave a mild answer, in spite of his annoyance.','他尽管已恼火, 但回答得还是很和蔼.','His wife tut-tutted with annoyance.','他妻子不耐烦地咂著嘴.'}

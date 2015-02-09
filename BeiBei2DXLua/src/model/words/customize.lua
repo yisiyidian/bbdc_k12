@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["customize"]={"customize","['kʌstəmaɪz]","['kʌstəmaɪz]","vt.定制",'vt.定制|||[计算机]用户化','||Customize|| a van.','定做一辆大马车','customize a van.','定做一辆大马车'}

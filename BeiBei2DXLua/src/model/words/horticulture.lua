@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["horticulture"]={"horticulture","['hɔːtɪ,kʌltʃə]","['hɔrtɪ'kʌltʃɚ]","n.园艺学",'n.园艺学','This was the first proposed curvilinear glass roof for horticulture.','这是园艺的首先提出的曲线玻璃屋顶.','It is forbidden to occupy basic farmland to develop horticulture.','禁止占用基本农田发展林果业和挖塘养鱼.'}

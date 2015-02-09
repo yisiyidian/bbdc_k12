@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brass"]={"brass","[brɑːs]","[bræs]","n.黄铜(制品)",'n.黄铜(制品),铜管（乐器）|||adj.黄铜的','He walked in, bold as brass, and asked me to lend him 50!','他走进来, 厚颜无耻地要我借给他50英镑!','||Brass|| is formed by the fusion of copper and zinc.','黄铜是由铜和锌熔合制成的。'}

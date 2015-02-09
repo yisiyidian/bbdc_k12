@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anyway"]={"anyway","['enɪweɪ]","['ɛnɪ'we]","adv.不管怎样",'adv.不管怎样','I don\'t think they need help, but I think I should offer anyway.','我认为他们无须帮助, 不过我想我应有所表示.','He really hates shopping but he goes anyway, and takes his medicine like a man.','他实在讨厌买东西, 但还是硬著头皮去了.'}

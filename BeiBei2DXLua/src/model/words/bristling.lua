@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bristling"]={"bristling","['brisliŋ]","[ 'brisliŋ ]","adj.竖立的",'adj.竖立的','The dog\'s fur ||bristled|| as it sensed danger.','那狗觉察到危险时，毛都竖立起来了。','He has a bristling white mustache.','他有着浓密的白胡子。'}

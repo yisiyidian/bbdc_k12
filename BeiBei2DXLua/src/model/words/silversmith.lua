@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["silversmith"]={"silversmith","['sɪlvəsmɪθ]","['sɪlvɚsmɪθ]","n.银器匠",'n.银器匠','The Navajo are noted as stockbreeders and skilled weavers, potters, and silversmiths.','纳瓦霍人以豢养家禽，技术熟练的纺织者，制陶者和银匠而著名。','My grandfather is a silversmith.','我爷爷是个银匠。'}

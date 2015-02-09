@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peck"]={"peck","[pek]","[pɛk]","v.啄",'v.啄,啄食|||n.啄痕,啄食，轻吻|||n.配克，大量','She gave her aunt a quick peck on the cheek.','她在姑姑的脸颊上匆匆吻了一下。','The parrot gave me a sharp peck on the finger.','鹦鹉把我的手指啄得得很疼。'}

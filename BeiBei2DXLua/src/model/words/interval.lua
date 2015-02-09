@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interval"]={"interval","['ɪntəv(ə)l]","['ɪntɚvl]","n.间隔",'n.间隔,休息时间,(数学)区间,(音乐)音程','The continuation of the play after the tea interval was ruined by rain.','原定茶点休息后继续进行的比赛因下雨而取消了。','He comes back to see us at regular intervals.','他每隔一段时间就回来看看我们。'}

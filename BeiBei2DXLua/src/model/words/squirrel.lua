@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["squirrel"]={"squirrel","['skwɪr(ə)l]","['skwɝrəl]","n.松鼠",'n.松鼠,松鼠皮毛|||vt.储存','The squirrel hoards up nuts for the winter.','松鼠储藏坚果以防冬天。','The squirrel is a lovely small animal.','松鼠是一种可爱的小动物。'}

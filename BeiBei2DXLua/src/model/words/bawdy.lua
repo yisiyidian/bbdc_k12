@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bawdy"]={"bawdy","['bɔːdɪ]","['bɔdi]","adj.淫猥的",'adj.淫猥的,下流的','His eyes were shrewd and bawdy.','他的一双眼睛机灵而轻佻。','We got arrested once, for singing bawdy songs in a cemetery.','我们曾经因为在公墓唱下流歌曲而被拘留过一次。'}

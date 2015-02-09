@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mixture"]={"mixture","['mɪkstʃə]","['mɪkstʃɚ]","n.混合物",'n.混合,混合物','She levelled the surface of the cake mixture with a metal spatula.','她用金属铲抹平了蛋糕配料.','Do you know the constituents of the mixture?','你知道这种混合物的成份吗？'}

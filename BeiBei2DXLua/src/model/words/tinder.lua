@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tinder"]={"tinder","['tɪndə]","['tɪndɚ]","n.火绒",'n.火绒,火种','A metal box for holding tinder.','引火盒一种装引火物的金属盒子','Dry, decayed wood, used as tinder.','用作引火物的干朽木'}

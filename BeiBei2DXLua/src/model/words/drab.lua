@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drab"]={"drab","[dræb]","[dræb]","adj.土褐色的",'adj.土褐色的,单调的，乏味的|||n.邋遢女人，娼妓|||n.少量','The city, drab and dour by day, is transformed at night.','这座城市白天死气沉沉、单调乏味，晚上就完全变了样。','Mary was wearing the same drab grey dress.','玛丽穿着同一件毫无朝气的灰色裙子。'}

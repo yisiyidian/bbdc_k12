@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utterance"]={"utterance","['ʌt(ə)r(ə)ns]","['ʌtərəns]","n.说话",'n.说话,发表,说话的方式','She has a defective utterance.','她发音有缺陷。','as long as I have utterance.','只要我能说话'}

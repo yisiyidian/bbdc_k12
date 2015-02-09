@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["continent"]={"continent","['kɒntɪnənt]","['kɑntɪnənt]","n.大陆",'n.大陆,洲,(theContinent)欧洲大陆','The Antarctica is a continent centered roughly on the South Pole.','南极洲是一片大致以南极为中心的大陆。','Asia is the biggest continent in the world','亚洲是世界上最大的洲'}

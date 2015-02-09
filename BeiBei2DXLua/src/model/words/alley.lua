@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alley"]={"alley","['ælɪ]","['æli]","n.小路",'n.小路,巷，跑道，球道','The alley was strewn with garbage.','垃圾散布于巷道上。','an assignment that is right up your alley.','一项正好让你去发挥才能的任务'}

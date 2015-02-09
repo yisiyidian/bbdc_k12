@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recant"]={"recant","[rɪ'kænt]","[ ri'kænt ]","vt.放弃主张(撤销",'vt.放弃主张(撤销,改变,公开认错)','White House officials ordered Williams to recant.','白宫官员命令威廉斯公开宣布放弃自己的观点。','Unless you recant your confession, you will be punished severely.','收回你的供词，否则你将受到严厉的惩罚。'}

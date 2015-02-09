@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grand"]={"grand","[grænd]","[ɡrænd]","adj.宏伟的",'adj.豪华的,宏伟的,壮丽的,主要的,重大的|||n.(美俚)一千美元','The king ordered the ||Grand|| Chamberlain to bring the prisoner immediately.','国王命令侍卫长马上把犯人带来。','The king\'s court was full of nobles and grand ladies.','王宫里到处都是贵族和贵夫人。'}

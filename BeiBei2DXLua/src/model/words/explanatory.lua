@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["explanatory"]={"explanatory","[ɪk'splænə,t(ə)rɪ; ek-]","[ɪk'splænətɔri]","adj.说明的",'adj.说明的,解释的','With respect to your enquiry, I enclose an explanatory leaflet.','关於你的询问, 兹附上有关说明资料.','The official prefixed an explanatory note to the list of statistics.','那官员在统计表前加了一段说明文字.'}

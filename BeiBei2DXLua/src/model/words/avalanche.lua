@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["avalanche"]={"avalanche","['ævəlɑːnʃ]","['ævəlæntʃ]","n.雪崩",'n.雪崩','What a precarious situation we were in when the avalanche started!','雪崩发生的时候我们的处境多么危险啊！','He was buried by an avalanche and had to be dug out.','他遇雪崩被埋住了，得把他挖出来。'}

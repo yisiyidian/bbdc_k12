@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magnanimity"]={"magnanimity","[mægnə'nɪmɪtɪ]","[,mæɡnə'nɪmɪti]","n.宽大",'n.宽大,雅量,高尚','The father of one victim spoke with remarkable magnanimity.','一名受害者的父亲以极为宽容的口吻发了言。','She accepted the criticism with magnanimity.','她很大度地接受了批评。'}

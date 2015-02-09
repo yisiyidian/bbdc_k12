@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["majesty"]={"majesty","['mædʒɪstɪ]","['mædʒəsti]","n.威严",'n.威严；最高权威，王权；雄伟；权威','Now if you will take off your cloths, Your ||Majesty||, said the cheats.','陛下，现在请您脱下您的衣服，骗子们说。','The majesty of the mountains awed us.','山岭的雄伟使我们生敬畏之感.'}

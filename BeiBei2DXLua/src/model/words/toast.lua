@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toast"]={"toast","[təʊst]","[tost]","n.烤(土司)面包",'n.烤(土司)面包,干杯,祝酒,受敬酒的人等|||vt.敬酒,烤...|||vi.烘烤','If you cut the bread (ie into slices) we\'ll make some toast.','你要是把面包切成片, 我们就烤点儿面包片.','He spread some strawberry jam on his toast.','他把草莓酱涂在烤面包片上.'}

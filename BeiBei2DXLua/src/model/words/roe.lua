@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["roe"]={"roe","[rəʊ]","[ro]","n.鱼卵",'n.鱼卵|||n.獐鹿','I\'ll scramble some eggs with roe?','我用鱼籽炒几个鸡蛋好 吗 ?','||Roes|| comes out with the strangest remarks at times.','罗斯不时地发表些极怪的议论。'}

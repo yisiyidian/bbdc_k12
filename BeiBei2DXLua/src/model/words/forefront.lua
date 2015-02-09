@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forefront"]={"forefront","['fɔːfrʌnt]","['fɔrfrʌnt]","n.最前部",'n.最前部,最前线','The brave soldier was in the forefront of the fighting.','那个勇敢的士兵战斗在最前线。','They have been at the forefront of the campaign for political change.','他们一直处于政治变革运动的风口浪尖上'}

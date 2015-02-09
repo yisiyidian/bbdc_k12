@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hers"]={"hers","[hɜːz]","[hɝz]","pron.她的（宾格）",'pron.她的（宾格）','That short skirt of hers is positively indecent.','她那条短裙实在是不雅观.','His personality is complementary to hers.','他的个性与她的相反相成，'}

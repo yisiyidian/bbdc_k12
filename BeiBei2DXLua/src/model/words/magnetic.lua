@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magnetic"]={"magnetic","[mæg'netɪk]","[mæg'nɛtɪk]","adj.有磁性的",'adj.有磁性的,有吸引力的,催眠术的','A single magnetic disk.','单独的一片磁盘。','The loop becomes magnetic when the current is switched on.','通电时线圈就会有磁性。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hasty"]={"hasty","['heɪstɪ]","['hesti]","adj.匆匆的",'adj.匆匆的,轻率的,急忙的','Yet again we can see the results of hasty decision-making.','我们可以再一次看到仓促作出决定的後果.','I was hustled into (making) a hasty decision.','我在催逼之下匆匆地做出决定.'}

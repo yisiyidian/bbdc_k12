@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["patient"]={"patient","['peɪʃ(ə)nt]","['peʃnt]","n.病人",'adj.有耐心的,能忍耐的|||n.病人','A patient throng was waiting in silence.','一大群人耐心地静候着。','The patient took no nourishment all day until dinner.','这个病人晚饭前什么东西都没吃。'}

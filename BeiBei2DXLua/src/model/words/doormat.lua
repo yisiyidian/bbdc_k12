@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["doormat"]={"doormat","['dɔːmæt]","['dɔr'mæt]","n.门垫",'n.门垫','Stand up for yourself a bit don\'t be such a doormat!','长点骨气吧--别老这麽忍著任人践踏!','The dog sleeps on the doormat.','outside the door.'}

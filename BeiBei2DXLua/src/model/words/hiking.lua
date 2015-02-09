@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hiking"]={"hiking","['haɪkɪŋ]","['haɪkɪŋ]","n.徒步旅行",'n.徒步旅行','Fair-weather hiking gear.','适于好天气远足的工具','However hard it rained, they go on hiking.','不管雨下得多大他们仍继续徒步旅行。'}

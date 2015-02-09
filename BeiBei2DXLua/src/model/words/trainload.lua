@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trainload"]={"trainload","['treɪnləʊd]","[ 'treinləud ]","n.装载量",'n.装载量,列车载重','The trainload means the quantity that can be carried by a train','装载量是指列车所能装载的数量。','A trainload of dangerous chemical gas','一辆载着危险化学气体的火车'}

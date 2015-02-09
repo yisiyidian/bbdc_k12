@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["game"]={"game","[geɪm]","[ɡem]","n.游戏",'n.游戏,比赛,行业,非法手段,策略,猎物,野味,戏弄|||vi.赌博|||vt.欺骗|||adj.乐意做的,勇敢的,跛的','Who\'ll climb up to get it? I\'m game to try.','谁愿意爬上去把它拿下来？我来试试。','The little boy was shocked by the fall, but he was game enough to get up and try again.','这个小男孩因摔倒而受到惊吓，但他勇敢地站起来准备再试。'}

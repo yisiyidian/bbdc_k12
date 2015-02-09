@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entrust"]={"entrust","[ɪn'trʌst; en-]","[ɪn'trʌst]","v.交托",'v.信赖,信托,交托','||Entrust|| his drawing to the care to us.','把他的画委托给我们照顾。','Do you mean to say that if we entrust you with the agency, you will sell$1, 000, 000 each year?','你的意思是说如果我们指定你们为代理，你将每年销售100万美元？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deserted"]={"deserted","[dɪ'zɜːtɪd]","[dɪ'zɝtɪd]","adj.废弃的",'adj.废弃的，荒芜的，被遗弃的|||动词desert的过去式和过去分词','Much as she loved him (=Though she loved him very much), he deserted her in the long run.','虽然她很爱他，但最后他仍抛弃了她。','Their guide deserted them, but nothing daunted, they pressed on into the jungle.','向导离他们而去，但是他们毫不气馁，仍向森林进发。'}

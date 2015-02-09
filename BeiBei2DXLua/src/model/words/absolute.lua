@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["absolute"]={"absolute","['æbsəluːt]","['æbsəlut]","adj.绝对的",'adj.绝对的,无限制的,专制的|||n.绝对的事物','Her new dress is an absolute dream.','她的新连衣裙漂亮极了。','That child is an absolute pest!','那孩子讨厌极了！'}

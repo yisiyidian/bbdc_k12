@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cupidity"]={"cupidity","[kjuː'pɪdɪtɪ]","[kju'pɪdəti]","n.贪心",'n.贪心,贪婪','Her cupidity is well known.','她的贪婪人尽皆知。','||Cupidity|| is a greedy desire for money and possessions','贪心,贪婪'}

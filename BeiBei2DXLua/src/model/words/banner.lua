@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["banner"]={"banner","['bænə]","['bænɚ]","n.旗帜",'n.旗帜,横幅,大标题|||adj.特别好的,杰出的|||vt.用横幅装饰,以大标题报道','The banner lent color to the streets.','旗帜给街道增添了色彩。','The patriots fought under the banner of freedom.','爱国者在自由的旗帜下战斗。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["short"]={"short","[ʃɔːt]","[ʃɔːrt]","adj.短的",'adj.短的,矮的,短暂的|||n.短裤|||adv.短暂地;突然地','All his observations were short and to the point.','他的观察报告都很简单扼要。','His achievements had fallen short of his hopes.','他的成就没有达到他期望的那麽大。'}

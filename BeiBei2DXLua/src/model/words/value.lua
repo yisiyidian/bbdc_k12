@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["value"]={"value","['væljuː]","['vælju]","n.价值",'n.价值,重要性,价格,(pl)价值观|||vt.评价,估价,重视','The conjunction of workmanship and artistry in making jewelry decides the value of the jewelry.','在珠宝饰物的制造中，手工与艺术的结合决定了珠宝的价值。','The value of most newspaper writing is only fugitive.','大多新闻报道的价值都不长久。'}

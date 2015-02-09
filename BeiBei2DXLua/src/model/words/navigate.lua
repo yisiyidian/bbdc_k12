@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["navigate"]={"navigate","['nævɪgeɪt]","['nævə'get]","vi.航行",'vi.航行,驾驶,操纵|||vt.航行,驾驶','I don\'t like having to navigate London\'s crowded streets.','我不愿意在伦敦拥挤的街道上穿行。','I\'ll drive the car if you hold the map and navigate.','如果你拿着地图指路，我就来开车。'}

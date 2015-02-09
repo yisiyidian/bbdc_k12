@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shoplifting"]={"shoplifting","['ʃɒplɪftɪŋ]","['ʃɑp'lɪftɪŋ]","n.入店行窃",'n.入店行窃|||动词shoplift的现在分词形式','shoplifting','n. 入店行窃','The shoplifting is a kind of criminal offence.','入店行窃是一种刑事犯罪。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrath"]={"wrath","[rɒθ; rɔːθ]","[ræθ]","n.愤怒",'n.愤怒,激怒,猛烈的力量','By their sin they provoked the wrath of the people.','他们因犯罪而激起人民的愤怒。','He incurred Helen\'s wrath by arriving late.','他迟到了，惹得海伦发了火。'}

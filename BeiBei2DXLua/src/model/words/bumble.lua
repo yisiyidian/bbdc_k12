@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bumble"]={"bumble","['bʌmb(ə)l]","['bʌmbl]","v.说话含糊",'v.说话含糊，语无伦次地说','He didn\'t bumble for the honeyed words of the landlord.','他没有被这个地主的甜言蜜语所欺骗。','The professor bumbled absent-mindedly along the road.','教授心不在焉地沿途瞎遛.'}

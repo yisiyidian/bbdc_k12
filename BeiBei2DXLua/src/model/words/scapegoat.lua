@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scapegoat"]={"scapegoat","['skeɪpgəʊt]","['skepɡot]","n.替罪的羔羊",'n.替罪的羔羊,替人顶罪者|||v.使…成为替罪羊','The old curmudgeon found a new scapegoat and that let me out.','那个老守财奴找到一个新的替罪羊，这样我就脱身了。','The accused was used as a scapegoat.','被告成了别人的替罪羊。'}

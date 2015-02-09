@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["volume"]={"volume","['vɒljuːm]","['vɑljum]","n.体积",'n.体积,容量,音量|||n.卷,册','Is that volume still in print?','那册书还能买到吗？','The volume of this container is 20 cubic meters.','这个集装箱的体积是20立方米。'}

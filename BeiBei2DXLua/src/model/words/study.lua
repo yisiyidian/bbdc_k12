@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["study"]={"study","['stʌdɪ]","['stʌdi]","vi.学习",'n.学习,研究,学科,沉思,书房|||vt.读书,计划,研究,记忆,调查|||vi.学习,研究,沉思','I like to study in the library.','我喜欢在图书馆学习。','Give yourself to diligent study and you will certainly succeed.','努力读书, 你一定会成功。'}

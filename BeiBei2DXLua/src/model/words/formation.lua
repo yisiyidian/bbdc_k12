@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["formation"]={"formation","[fɔː'meɪʃ(ə)n]","[fɔr'meʃən]","n.构造",'n.构造,编队,形成','beautiful cloud formations.','美丽的云层','Her front teeth were irregular in formation.','她的门牙排列不整齐。'}

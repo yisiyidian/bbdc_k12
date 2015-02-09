@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yield"]={"yield","[jiːld]","[jild]","n.生产量",'n.生产量,投资收益|||v.生产,屈服,投降,弯下去,凹下去','These trees gave a high yield of fruit this year.','这些果树今年获得了大丰收。','A brave man may fall, but he won\'t yield.','一个勇敢的人可能会失败，但他不会屈服。'}

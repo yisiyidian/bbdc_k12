@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weaver"]={"weaver","['wiːvə]","['wivɚ]","n.织布者",'n.织布者,织工','The two weavers were cheats out and out.','那两个织工是彻头彻尾的骗子。','His sister is a weaver in this factory.','他姐姐是这个工厂的一名纺织工。'}

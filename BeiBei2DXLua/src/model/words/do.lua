@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["do"]={"do","[duː]","[du]","v.做",'aux.助动词(无词意)|||v.干,做','Do you do science at school?','你在学校里学自然科学吗？','I don\'t know what to do.','我不知道怎么做才好。'}

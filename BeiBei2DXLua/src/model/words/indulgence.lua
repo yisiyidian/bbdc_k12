@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indulgence"]={"indulgence","[ɪn'dʌldʒ(ə)ns]","[ɪn'dʌldʒəns]","n.沉溺",'n.沉溺,放纵,嗜好|||n.【宗】(天主教)特赦;豁免','I must ask the readers\' kind indulgence for any inaccuracies and omissions that may possibly occur.','我必须请求读者原谅可能出现的错误和疏漏。','Sweets are my only indulgence.','甜食是我唯一的嗜好。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suction"]={"suction","['sʌkʃ(ə)n]","['sʌkʃən]","n.吸",'n.吸,吸入，汲水管|||v.抽吸，吸出','Operating by means of suction or by maintaining a partial vacuum.','抽真空的用吸取的方式或用维持部分真空的方式来运作的','Flies\' feet stick to surfaces by suction.','苍蝇的脚借吸力可附着于物体表面上。'}

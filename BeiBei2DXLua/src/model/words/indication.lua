@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indication"]={"indication","[ɪndɪ'keɪʃ(ə)n]","[,ɪndɪ'keʃən]","n.象征",'n.象征,迹象,指示,表示','Did he give you any indication of his feelings?','他向你表示过他的感情吗？','There are some indications that the prices will rise.','有迹象表明物价将上涨。'}

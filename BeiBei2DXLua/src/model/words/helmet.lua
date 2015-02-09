@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["helmet"]={"helmet","['helmɪt]","['hɛlmɪt]","n.头盔",'n.头盔,遮阳帽,盔甲','A cloth band or scarf wrapped around the crown of a hat or sun helmet.','头巾缠绕在礼帽或遮阳帽帽冠周围的布条或三角巾','A medieval light helmet with a neck guard and movable visor.','头盔中世纪有护颈和活动护面的轻便头盔'}

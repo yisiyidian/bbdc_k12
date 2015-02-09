@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chunk"]={"chunk","[tʃʌŋk]","[tʃʌŋk]","n.厚块（片）",'n.厚块（片）,相当大的量，矮胖的人或物|||vt.（高尔夫球）没击中|||vi.发出猛冲的声音','The giant shovel is biting off big chunks from the hill.','巨型铲土机正在把小山头一大口一大口地啃掉。','I\'ve completed a fair chunk of my article.','我已经把文章的一大部分写完了.'}

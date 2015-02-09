@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rotten"]={"rotten","['rɒt(ə)n]","['rɑtn]","adj.腐烂的",'adj.腐烂的,腐朽的','This place has an odious smell; something must be rotten.','这个地方有一股臭味，一定有东西腐烂了。','He\'s a rotten apple.','他是一个讨厌的家伙。'}

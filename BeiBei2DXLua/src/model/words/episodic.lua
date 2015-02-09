@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["episodic"]={"episodic","[,epɪ'sɒdɪk]","[,ɛpɪ'sɑdɪk]","adj.插话式的",'adj.插话式的','My memories of childhood are hazy and episodic.','我儿时的回忆是一些朦朦胧胧的松散片段。','An episodic format is the writer\'s favourite, when he tries to relax by writing.','当这个作家想用写作来放松自己时，他喜欢用一种松散的形式来创作。'}

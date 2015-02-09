@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lip"]={"lip","[lɪp]","[lɪp]","n.嘴唇",'n.嘴唇','I\'d like to tell you what I know but my lips are sealed.','我何尝不想把我知道的都告诉你，只是有口难言。','He kissed her on the lips.','他吻了她的嘴唇。'}

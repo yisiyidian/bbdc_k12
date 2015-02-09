@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["laborious"]={"laborious","[lə'bɔːrɪəs]","[lə'bɔrɪəs]","adj.艰苦的",'adj.艰苦的,费劲的','Checking all the names was a slow, laborious job.','核对全部名字是件既慢又费劲的事。','Ants and bees are laborious insects.','蚂蚁与蜜蜂是勤劳的昆虫。'}

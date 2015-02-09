@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expectation"]={"expectation","[ekspek'teɪʃ(ə)n]","[,ɛkspɛk'teʃən]","n.期待",'n.期待,期望|||v.期待,前程','She ate a light lunch in expectation of a good dinner.','她午饭吃得很少，期待晚饭时饱餐一顿。','He has great expectations from his uncle.','他渴望从叔叔那继承大笔遗产。'}

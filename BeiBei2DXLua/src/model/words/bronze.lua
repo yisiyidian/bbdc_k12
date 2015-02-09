@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bronze"]={"bronze","[brɒnz]","[brɑnz]","adj.青铜色的",'adj.青铜色的|||n.青铜,青铜色,青铜制品,铜牌(第三名)|||vt.使成青铜色','The sculpture was a bronze cast.','这个雕塑是青铜铸成的','The statue is made of bronze.','这座雕像是青铜铸成。'}

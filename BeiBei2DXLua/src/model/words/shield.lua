@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shield"]={"shield","[ʃiːld]","[ʃild]","n.盾",'n.盾,防卫物,盾状物|||vt.保护,遮蔽','She intended to shield the child from the bad information.','她打算不让这个孩子知道这个坏消息.','Motorcyclists must wear helmets to shield them from injury.','摩托车手必须戴头盔保护自己免受伤害。'}

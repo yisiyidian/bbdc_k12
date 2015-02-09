@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["basically"]={"basically","['beɪsɪk(ə)lɪ]","['besɪkli]","adv.基本上",'adv.基本上,主要地','I\'m basically a bit of a square.','我是比较古板的.','His heart is basically sound.','他的心脏基本上健康.'}

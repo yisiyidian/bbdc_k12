@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exemplar"]={"exemplar","[ɪg'zemplə; eg-]","[ɪɡ'zɛmplɑr]","n.模范",'n.模范,榜样','They viewed their new building as an exemplar of taste.','他们将自己的新建筑视为一个品味的典范。','One of the wittiest exemplars of the technique was M. C. Escher.','该技术最巧妙的代表之一是埃舍尔。'}

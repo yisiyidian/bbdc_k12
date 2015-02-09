@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thus"]={"thus","[ðʌs]","[ðʌs]","adv.从而",'adv.如此,这样,因此,从而|||conj.因此,于是','It was already rather late, thus we decide to urge the customer.','已经相当晚了，所以我们决定催促客户。','He forgot to turn on the radio and thus missed the program.','他忘了打开收音机, 因此错过了那个节目。'}

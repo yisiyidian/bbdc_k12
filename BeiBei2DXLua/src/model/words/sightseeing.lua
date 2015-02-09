@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sightseeing"]={"sightseeing","['saɪtsiːɪŋ]","['saɪtsiɪŋ]","n.观光",'n.观光,游览|||动词sightsee的现在分词','We spent the remainder of the day sightseeing.','这天剩下的时间我们到各处观光.','Did you do any sightseeing there?','在那儿你游览了什么地方没有？'}

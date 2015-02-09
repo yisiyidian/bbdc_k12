@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["route"]={"route","[ruːt]","[rut]","n.路线",'n.航线,路线,途径|||vt.按路线发送,改变路线','The markings along the route are quite plain.','路线沿途的标志都十分清楚.','The route was once much travelled but has fallen into disuse.','这条路线旅行的人以前常走，但是现在已不用了。'}

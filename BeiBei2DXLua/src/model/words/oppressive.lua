@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oppressive"]={"oppressive","[ə'presɪv]","[ə'prɛsɪv]","adj.压制性的",'adj.压制性的,压迫的,沉重的','Are the newcomers prepared to shoulder some of the burdens which we have suddenly discovered to be oppressive?','这些新来者准备承担一部分我们突然间感到很沉重的那些负担吗？','An oppressive or nightmarish burden.','沉重的或梦魇般的重担'}

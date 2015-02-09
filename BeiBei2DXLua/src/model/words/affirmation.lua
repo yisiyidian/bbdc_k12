@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affirmation"]={"affirmation","[æfə'meɪʃ(ə)n]","[,æfɚ'meʃən]","n.肯定",'n.肯定,断言,主张','The poem is a joyous affirmation of the power of love.','这首诗以欢快的笔触肯定了爱情的力量。','The Director is awaiting the Board\'s affirmation of his nominee.','董事长在等待董事会批准他提名的候选人.'}

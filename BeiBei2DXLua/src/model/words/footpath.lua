@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["footpath"]={"footpath","['fʊtpɑːθ]","['fʊtpæθ]","n.人行小径",'n.人行小径','Follow the footpath and you\'ll eventually hit the road.','沿这条小径走终究会见到大路的。','You can park it on the footpath over there','你可以把车停在那边的人行道上。'}

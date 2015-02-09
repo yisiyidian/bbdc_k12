@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["machinations"]={"machinations","['mækə'neiʃənz -mæʃ]","[ 'mækə'neiʃənz -mæʃ ]","n.诡计",'n.诡计,阴谋','The spy, a past master of machinations and maneuver, was caught at last.','这个老奸巨滑的间谍终于被逮住了。','That her machinations to marry off her daughters all worked out?','她千方百计希望自己的姑娘们有所依靠，最终全部实现了吗？'}

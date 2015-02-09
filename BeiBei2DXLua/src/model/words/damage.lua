@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["damage"]={"damage","['dæmɪdʒ]","['dæmɪdʒ]","n.损坏",'n.(pl.)赔偿金,损坏,毁坏|||vt.损害,毁坏','The store owner received satisfaction for the damage.','店主收到了对损坏的赔偿。','We will reimburse the customer for any loss or damage.','我们愿赔偿顾客受到的一切损失和损害.'}

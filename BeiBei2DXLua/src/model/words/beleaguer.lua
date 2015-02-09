@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beleaguer"]={"beleaguer","[bɪ'liːgə]","[ bi'li:ɡə ]","vt.围攻",'vt.围攻，使烦恼','Civilians trapped in the beleaguered city have been airlifted to safety.','被围困在城里的老百姓已空运到安全地区。','We are beleaguered by problems.','我们被许多困难所困扰。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entangle"]={"entangle","[ɪn'tæŋg(ə)l; en-]","[ɪn'tæŋɡl]","vt.使...纠缠",'vt.使...纠缠,使...复杂，卷入,使...混乱','How did Alice manage to entangle her hair so badly in the brambles?','爱丽丝是怎么把头发死死地缠在野生灌木上的？','How did Mary manage to entangle her hair so badly in the brambles?','玛丽的头发缠紧在荆棘上了，她是怎么搞的？'}

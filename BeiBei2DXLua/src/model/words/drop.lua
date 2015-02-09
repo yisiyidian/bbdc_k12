@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drop"]={"drop","[drɒp]","[drɑp]","n.滴",'n.滴,微量,落下|||vt.使落下，减少|||vi.落下，减少，减弱','||Drop|| the noodles into the water.','把面条下到水里。','Mary Ann wished he would just drop it.','玛丽安希望他不要再谈这事。'}

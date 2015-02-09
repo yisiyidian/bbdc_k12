@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tasteless"]={"tasteless","['teɪs(t)lɪs]","['testləs]","adj.无味的",'adj.无味的，不雅致的，俗气的','It was tasteless of you to say that.','你说那种话真是庸俗。','He thinks the vegetable is a bit tasteless.','他觉得蔬菜没有什么滋味。'}

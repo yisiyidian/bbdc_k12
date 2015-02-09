@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["advocate"]={"advocate","['ædvəkeɪt]","['ædvəket]","vt.提倡",'vt.提倡；拥护；鼓吹；为…辩护|||n.（辩护）律师；提倡者；支持者','I don\'t really believe in capital punishment, I\'m just playing the devil\'s advocate.','我并不是真的主张应该有死刑，只是故意唱唱反调罢了。','This judge is a strong advocate of prison reform.','这位法官是监狱改革的坚决拥护者。'}

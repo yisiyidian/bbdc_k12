@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plea"]={"plea","[pliː]","[pli]","n.请求",'n.请求,恳求|||v.借口,恳求,请求','spoke out in a plea for greater tolerance.','喊出来恳求更大的宽容','An earnest request or petition; a plea.','迫切要求或恳求；请求'}

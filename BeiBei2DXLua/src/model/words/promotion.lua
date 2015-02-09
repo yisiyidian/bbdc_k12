@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["promotion"]={"promotion","[prə'məʊʃn]","[prə'moʃən]","n.促进",'n.促进,提升,推广','Your hope of promotion is a mere delusion.','你提升的希望只不过是一种幻觉。','This year\'s sales promotions haven\'t been very successful.','今年的推销活动不是很成功。'}

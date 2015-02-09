@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vicious"]={"vicious","['vɪʃəs]","['vɪʃəs]","adj.恶毒的",'adj.恶毒的,恶意的,凶残的,剧烈的,严重的','The people are held down by a vicious and repressive military regime.','人民受著凶恶而专制的军政权的压迫.','Let go of me, you vicious monster!','放开我, 你这可恶的家伙!'}

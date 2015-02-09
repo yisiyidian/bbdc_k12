@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knock"]={"knock","[nɒk]","[nɑk]","n.敲",'n.敲,敲打|||vt.&vi.敲击,互撞,攻击','||Knock|| it off, kids, I\'m trying to sleep!','孩子们，别闹了，我要睡觉了！','She knocked the bottom out of our argument.','她把我们的论点驳得体无完肤。'}

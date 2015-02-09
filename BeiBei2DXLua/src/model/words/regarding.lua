@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regarding"]={"regarding","[rɪ'gɑːdɪŋ]","[rɪ'ɡɑrdɪŋ]","prep.关于",'prep.关于,至于','He booked the holiday without regarding my wishes.','他不考虑我的意愿就把假日的一切都定下来了.','An arrangement between parties regarding a method of action; a covenant.','协定，协议几方关于行动方法的商定；协定'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["script"]={"script","[skrɪpt]","[skrɪpt]","n.脚本",'n.原稿,手稿,脚本|||vi.写剧本','The script won\'t play well.','那个剧本不适于在舞台上演出。','The script was a bit racy until the producer wielded his blue pencil.','在制片人挥动他那蓝色铅笔删改前，剧本有一些逃逗性。'}

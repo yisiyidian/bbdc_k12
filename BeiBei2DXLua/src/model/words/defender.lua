@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defender"]={"defender","[dɪ'fendə(r)]","[dɪ'fɛndɚ]","n.防卫者",'n.防卫者,拥护者,辩护者','Liverpool\'s defender is tackling Thomas.','利物浦队的防守正在拦截托马斯。','He shouldered off a defender and shot at goal.','他用肩膀挡开防守队员後射门。'}

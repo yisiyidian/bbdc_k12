@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["distraught"]={"distraught","[dɪ'strɔːt]","[dɪ'strɔt]","adj.烦恼的",'adj.烦恼的,发狂的，异常激动的','Her distraught mother had spent all night waiting by the phone.','她母亲忧心如焚，在电话旁守了一个晚上。','Weeks after the accident she remained distraught.','事故过去几周了，可她仍是心神不宁。'}

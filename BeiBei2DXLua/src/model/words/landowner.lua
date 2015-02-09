@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["landowner"]={"landowner","['lændəʊnə]","['lændonɚ]","n.地主",'n.地主,土地所有者','The power of the landowners waned during this period.','这一时期地主的势力削弱了.','The meanest labourer has the same rights as the richest landowner.','最贫贱的劳动者享有和最富的地主同样的权利.'}

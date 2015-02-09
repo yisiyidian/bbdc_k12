@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congenial"]={"congenial","[kən'dʒiːnɪəl]","[kən'dʒinɪəl]","adj.同性质的",'adj.同性质的,适意的,趣味相同的，友善的','They are of congenial temper.','他们的性情相投。','I find him very congenial.','我发现他跟人很合得来。'}

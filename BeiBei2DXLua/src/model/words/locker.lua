@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["locker"]={"locker","['lɒkə]","['lɑkɚ]","n.柜",'n.柜(箱,橱,机架,室,锁夹,锁扣装置)','The Titanic and all her crew were in Davy Jones\'s locker.','泰坦尼克号及其全体船员均都葬身鱼腹。','Now where is the coin locker?','出租寄物柜在哪里呢？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apprehensive"]={"apprehensive","[æprɪ'hensɪv]","[,æprɪ'hɛnsɪv]","adj.惴惴不安的",'adj.惴惴不安的,敏悟的,有知觉的','He is always apprehensive for his son\'s safety.','他经常担心儿子的安全。','I am apprehensive about the results of the exams.','我很担心考试的成绩。'}

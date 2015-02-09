@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leaflet"]={"leaflet","[ˈliːflət]","['liflət]","n.小叶",'n.小叶,传单|||vt.&vi.散发传单','With respect to your enquiry, I enclose an explanatory leaflet.','关於你的询问, 兹附上有关说明资料.','I rustle up a few helper to hand out leaflet.','我找到几个助手散发传单。'}

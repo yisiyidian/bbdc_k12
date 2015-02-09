@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regulation"]={"regulation","[regjʊ'leɪʃ(ə)n]","[,rɛɡju'leʃən]","n.规则",'n.规则,规章,管理|||adj.规定的,官方的','The regulation has no application to this particular case.','那项规则不适用于这一特定情况.','This regulation refers only to children.','这些规定仅适用于儿童。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ferocious"]={"ferocious","[fə'rəʊʃəs]","[fə'roʃəs]","adj.残忍的",'adj.残忍的,凶猛的，极度的，十分强烈的','The state or quality of being ferocious; fierceness.','凶恶，残忍凶恶的状态或特点；凶猛','The ferocious winds seemed about to tear the ship to pieces.','猛烈的狂风仿佛要把船撕成碎片似的。'}

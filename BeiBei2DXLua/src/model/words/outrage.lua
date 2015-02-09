@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outrage"]={"outrage","['aʊtreɪdʒ]","['aʊtredʒ]","n.暴行",'n.暴行,侮辱,愤怒|||v.凌辱,虐待,触犯','Her behaviour was a positive outrage.','她的行为残暴到了极点。','All ,right-minded people will be surely shocked by this outrage.','凡是有正义感的人都一定会对这种暴行感到震惊.'}

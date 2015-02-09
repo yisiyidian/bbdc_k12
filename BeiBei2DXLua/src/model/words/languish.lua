@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["languish"]={"languish","['læŋgwɪʃ]","['læŋɡwɪʃ]","v.变得衰弱无力",'v.变得衰弱无力，失去活力，憔悴，被冷落，苦思，表现出惹人爱怜的倦态','The flower languished from lack of water.','花因缺水而枯萎。','He languished for home.','他苦苦地思念家乡。'}

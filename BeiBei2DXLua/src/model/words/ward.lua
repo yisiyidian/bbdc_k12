@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ward"]={"ward","[wɔːd]","[wɔrd]","n.守卫",'n.守卫,监护,病房,行政区,由监护人或法院保护的人（尤指儿童）|||vt.守护,躲开','The patient lay quietly on his bed in the medical ward.','病人安静地躺在内科病房的床上。','a maternity ward.','产科病房'}

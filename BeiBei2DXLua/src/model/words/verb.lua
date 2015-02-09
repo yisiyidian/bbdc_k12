@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verb"]={"verb","[vɜːb]","[vɝb]","n.动词",'n.动词','The word is an adjunct of that verb.','这个词是那个动词的修饰语。','In English, there must be concord between a verb and its subject.','英语中动词与主语必须一致。'}

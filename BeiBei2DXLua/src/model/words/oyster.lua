@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oyster"]={"oyster","['ɒɪstə]","['ɔɪstɚ]","n.牡蛎",'n.牡蛎','||Oyster|| is the only seafood I like; I dislike the rest.','牡蛎是我唯一喜欢吃的海味；其余的我都不喜欢。','After the damp weather all the drawers became as fast as a Kentish oyster.','湿季过后所有的抽屉都如肯特郡的牡蛎一般关得死死的。'}

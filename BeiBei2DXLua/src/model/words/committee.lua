@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["committee"]={"committee","[kə'mɪtɪ]","[kə'mɪti]","n.委员会",'n.委员会','There was a clash of wills among committee members.','委员们意愿不一, 发生了冲突.','||Committee|| members have different points.','委员们持有不同的观点'}

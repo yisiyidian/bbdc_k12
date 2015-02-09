@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["travail"]={"travail","['træveɪl]","['trævel]","n.分娩的痛苦",'n.分娩的痛苦,阵痛,辛劳|||vi.苦干,辛劳，（因分娩）发生阵痛','The team, despite their recent travails, are still in the game.','尽管近来遇到了难题，这支队伍还没有出局。','Europe\'s travails suggest the outlook isn\'t much better.','欧洲的举步维艰预示着前景依旧黯淡。'}

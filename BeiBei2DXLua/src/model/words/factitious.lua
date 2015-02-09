@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["factitious"]={"factitious","[fæk'tɪʃəs]","[ fæk'tiʃəs ]","adj.人为的",'adj.人为的,不自然的,人工的','Extensive advertising can cause a factitious demand for an article.','大规模的广告能引起对某一物品人为的需求。','speculators responsible for the factitious value of some stocks.','应对一些股票的虚假价值负责的投机者'}

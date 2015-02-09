@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["satisfaction"]={"satisfaction","[sætɪs'fækʃ(ə)n]","[,sætɪs'fækʃən]","n.满意",'n.赔偿,满意,妥善处理,乐事,确信','She gets a perverse satisfaction from making other people embarrassed.','她有一种不正常的心态，以使别人难堪来取乐。','Looking at a beautiful painting always gives one satisfaction.','观赏一幅美丽的图画使人心满意足。'}

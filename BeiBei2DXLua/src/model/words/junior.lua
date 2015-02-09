@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["junior"]={"junior","['dʒuːnɪə]","['dʒunɪɚ]","adj.初级的",'adj.较年幼的，较年小的；三年级的，低年级的；资历较浅的；后进的|||n.年少者，青少年；晚辈；三年级生；职位较低者','I do wish he wouldn\'t condescend to the junior staff in his department.','我但愿他不要假惺惺地纡尊降贵接近部门里的低级员工.','He likes to lord it over the junior staff.','他喜欢对下级职员逞威风.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accordance"]={"accordance","[ə'kɔːd(ə)ns]","[ə'kɔrdns]","n.一致",'n.符合,一致','Do you always act in accordance with your convictions?','你是否一贯地本著你的信念行事?','He acted in accordance with his beliefs.','他按照自己的信念行事。'}

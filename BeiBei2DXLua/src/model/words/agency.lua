@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agency"]={"agency","['eɪdʒ(ə)nsɪ]","['edʒənsi]","n.机构",'n.代理,代理处,政府机构','By and large the work of the news agency is appreciative.','一般而论这家新闻社的工作是让人感激的。','He enrolled with an employment agency for a secretary.','他在职业介绍所登记要当秘书。'}

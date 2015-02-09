@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["humiliate"]={"humiliate","[hjʊ'mɪlɪeɪt]","[hju'mɪlɪet]","v.使...丢脸",'v.使...丢脸,使...蒙羞,屈辱','He felt humiliated when the teacher scolded him in front of the whole class.','老师在全班同学面前批评他使他感到羞辱。','She was humiliated because her children behaved so badly.','她为她的孩子表现不好而感到羞辱。'}

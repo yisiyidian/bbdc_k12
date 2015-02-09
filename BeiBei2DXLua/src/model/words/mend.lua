@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mend"]={"mend","[mend]","[mɛnd]","n.修补",'n.修补,改进,修补处|||vt.修改,改进|||vi.改过自新,改进,痊愈','It is never too late to mend.','改过不嫌晚.','In the end, things will mend.','【谚】车到山前必有路。'}

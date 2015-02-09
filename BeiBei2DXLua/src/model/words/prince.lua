@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prince"]={"prince","[prɪns]","[prɪns]","n.王子",'n.王子,亲王,佼佼者','By the common consent of critics, Shakespeare is the prince of character delineators.','评论家一致公认莎士比亚是刻画人物的大师。','The witch charmed the prince.','女巫对王子施了魔法。'}

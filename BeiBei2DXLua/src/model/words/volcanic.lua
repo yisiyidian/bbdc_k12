@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["volcanic"]={"volcanic","[vɒl'kænɪk]","[vɑl'kænɪk]","adj.火山的",'adj.火山的，猛烈的','The temperature of volcanic gases is very high.','火山气体的温度很高。','a volcanic temper.','暴烈的脾气'}

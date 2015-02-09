@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tenure"]={"tenure","['tenjə]","['tɛnjɚ]","n.享有",'n.享有,保有时间','He holds his life on a precarious tenure.','他过着朝不保夕的生活。','Junior staff have only a slim chance of getting tenure.','初级职员得到终身职位的机会十分渺茫。'}

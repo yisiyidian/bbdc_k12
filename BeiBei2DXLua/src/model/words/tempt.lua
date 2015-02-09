@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tempt"]={"tempt","[tem(p)t]","[tɛmpt]","v.诱惑",'v.诱惑,引起,冒...之险','They tried to tempt her (into staying) with offers of promotion.','他们提出给她晋级来劝说她（留下）.','I am tempted(ie feel inclined) to take the day off.','我打算休一天假.'}

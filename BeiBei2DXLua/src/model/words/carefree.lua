@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carefree"]={"carefree","['keəfriː]","['kɛrfri]","adj.无忧无虑的",'adj.无忧无虑的,不负责的','He\'s a carefree fellow who bears his responsibilities lightly.','他是个满不在意不大负责的人.','The music of this song sent her carefree and joyous.','这支歌的乐曲使她心旷神怡。'}

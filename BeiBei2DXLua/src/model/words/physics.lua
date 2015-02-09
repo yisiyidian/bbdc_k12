@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["physics"]={"physics","['fɪzɪks]","['fɪzɪks]","n.物理学",'n.物理学','Jim got away with cheating in the physics test, while Mike was scolded.','吉姆在物理考试中作弊却逃避了惩罚, 麦克则受到责备。','He does well in physics.','他的物理学得很好。'}

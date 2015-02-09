@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rumble"]={"rumble","['rʌmb(ə)l]","['rʌmbl]","n.隆隆声",'n.隆隆声,辘辘声|||n.(旧式汽车车厢后的)折叠加座|||打群架|||v.发隆隆声,使辘辘响','The thunder rumbled in the distance.','远处雷声隆隆。','The heavy cart rumbled down the street.','笨重的马车辘辘地在街上走过。'}

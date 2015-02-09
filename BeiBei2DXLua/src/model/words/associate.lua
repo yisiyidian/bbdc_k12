@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["associate"]={"associate","[ə'səʊʃɪeɪt; -sɪeɪt]","[ə'soʃɪet]","vt.（使）发生联系",'vt.（使）发生联系；（使）联合；结交；联想|||vi.联盟；陪伴同事|||n.合伙人；伴侣，同志；非正式会员|||adj.联合的；合伙的；非正式的；（性质上）有密切联系的','I don\'t want to associate myself with them any more.','我不愿再和他们交往了。','I got a new job and a new set of work ||associations||.','我有了新工作和一班新同事。'}

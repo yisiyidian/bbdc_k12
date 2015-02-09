@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crook"]={"crook","[krʊk]","[krʊk]","n.钩",'n.钩,弯曲部份,恶棍|||vi.弯曲,诈骗|||vt.使成钩状,使弯曲','Don\'t get mixed up with him -- he\'s a crook!','别跟他厮混--他是个无赖!','This crafty man is nothing but a crook.','那个狡猾的人纯粹是个骗子。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overuse"]={"overuse","[əʊvə'juːz]","['ovə'jʊs]","vt.过多使用",'vt.过多使用,过度使用|||n.过度的试用','Lacking power to evoke interest through overuse or repetition; hackneyed.','陈腐的，老一套的因久用或重复而失去引起兴趣的力量的，老生常谈的','Nice’ is a very overused word. nice','一词用得实在太滥了'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chastise"]={"chastise","[tʃæ'staɪz]","[tʃæ'staɪz]","vt.笞责",'vt.笞责,惩罚','The leader chastised that man who made a mistake.','领导严厉惩罚了那个犯错误的人。','My father used to chastise my brothers with whips.','父亲以前经常鞭斥我的兄弟。'}

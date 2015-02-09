@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overtake"]={"overtake","[əʊvə'teɪk]","[,ovɚ'tek]","v.赶上",'v.赶上,突然来袭,压倒','The murderer was overtaken in his crime.','杀人犯当场被捕。','The driver behind me tried to overtake on the inside.','我後面的驾驶员想从内车道超过我。'}

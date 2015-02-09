@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["idealism"]={"idealism","[aɪ'dɪəlɪz(ə)m; -'diːə-]","['aɪ'diə'lɪzəm]","n.唯心论",'n.唯心论，唯心主义,观念论,理想主义','Jefferson\'s courage and idealism were based on knowledge.','杰斐逊的勇气和理想主义是建立在知识的基础上的。','An artist or a writer whose work is imbued with idealism.','理想主义艺术家作品充满了理想主义的艺术家或作家'}

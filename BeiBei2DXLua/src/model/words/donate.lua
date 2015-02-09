@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["donate"]={"donate","[də(ʊ)'neɪt]","['donet]","vt.捐赠",'vt.捐赠,转移(电子)|||vi.捐款','Local people lined up to donate blood for the brave girl.','当地群众排队给这位勇敢的姑娘献血。','The government calls on the youth to donate their blood voluntarily.','政府号召青年义务献血。'}

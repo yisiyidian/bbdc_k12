@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insistent"]={"insistent","[ɪn'sɪst(ə)nt]","[ɪn'sɪstənt]","adj.坚持的",'adj.坚持的,迫切的','You mustn\'t be late; he was most insistent about that.','你万不可迟到, 他对这一点最严格.','He is insistent on the advocacy of new scientific methods.','他坚持提倡新的科学方法.'}

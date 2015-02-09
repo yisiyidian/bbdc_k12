@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blurry"]={"blurry","['blɜːrɪ]","['blɝi]","adj.模糊的",'adj.模糊的，失去焦距的','The picture on the screen was very blurry.','屏幕上的图片非常模糊。','Everything is blurry when I don\'t wear my glasses.','只要我没戴眼镜，每样东西看起来都很模糊。'}

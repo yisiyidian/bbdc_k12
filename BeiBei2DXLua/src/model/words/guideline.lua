@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guideline"]={"guideline","['gaɪdlaɪn]","['ɡaɪdlaɪn]","n.指引",'n.指引，指导方针','Please finish the task under the guideline.','请在指引下完成任务。','This is probably the most important interaction design guideline.','这基本上是最重要的交互设计指导准则.'}

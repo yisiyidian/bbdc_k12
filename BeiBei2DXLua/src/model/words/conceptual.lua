@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conceptual"]={"conceptual","[kən'septjʊəl]","[kən'sɛptʃʊəl]","adj.概念上的",'adj.概念上的','This result is developed from a conceptual model and not from reality itself.','这结果是从概念化的模型推导出来的，而不是从现实本身得到的。','Like all of my analysis,there are conceptual tools.','像我做的分析一样，这些是概念工具。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surmise"]={"surmise","[sə'maɪz]","[sɝ'maɪz]","n.推测",'n.推测|||vt.推测,臆测','There\'s so little to go on, we can only surmise what happened.','几乎毫无凭据，我们只能猜测发生了什么。','She had a guilty look which immediately roused surmise in his mind.','她那做贼心虚的神色马上引起了他的猜测。'}

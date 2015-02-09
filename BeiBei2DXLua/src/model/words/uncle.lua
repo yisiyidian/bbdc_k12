@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uncle"]={"uncle","['ʌŋk(ə)l]","['ʌŋkl]","n.叔",'n.伯,姑父,舅,叔,姨父','My uncle has an apple orchard.','我叔叔拥有一个苹果园。','His uncle instructed him in French.','他的叔叔教他法语。'}

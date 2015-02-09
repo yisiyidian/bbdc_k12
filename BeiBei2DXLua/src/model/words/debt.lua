@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["debt"]={"debt","[det]","[dɛt]","n.债务",'n.债务,义务,罪','I took her to court for repayment of the debt.','我为索取债务而起诉她.','Getting out of debt must be placed before buying anything new.','必须先还清债务然后再置办物品。'}

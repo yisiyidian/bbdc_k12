@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tranquil"]={"tranquil","['træŋkwɪl]","[ˈtræŋkwəl]","adj.安静的",'adj.安静的,宁静的,稳定的,不变的','He looked at the man with a tranquil eye.','他以平静的眼神看着那个男人。','Both my husband and I love the tranquil life in the country.','我丈夫和我都喜欢乡村的宁静生活。'}

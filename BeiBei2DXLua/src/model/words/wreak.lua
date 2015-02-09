@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wreak"]={"wreak","[riːk]","[rik]","vt.发泄",'vt.发泄；报仇','The earthquake wreaked havoc on the city.','地震对这个城市造成了大破坏。','He often wreaked his bad temper on his family.','他常常对家人大发脾气。'}

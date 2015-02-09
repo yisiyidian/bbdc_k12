@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["improvise"]={"improvise","['ɪmprəvaɪz]","['ɪmprəvaɪz]","v.即席写作",'v.即席写作,即席即兴,即席而作','If an actor forgets his word, he has to improvise.','演员要是忘记台词，那就只好即兴现编。','You need a wok with a steaming rack for this; if you don\'t have one, improvise.','要做这个，你需要一口带蒸笼篦子的锅，如果没有，就用别的临时凑合一下。'}

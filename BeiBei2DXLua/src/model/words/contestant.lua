@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contestant"]={"contestant","[kən'test(ə)nt]","[kən'tɛstənt]","n.竞争者",'n.竞争者，参赛者，提出异议者','Before the television quiz program, there was a warm-up to prepare the contestant.','在电视问答比赛节目开始之前，为参赛者做了准备性的练习。','A contestant in the final session of a competition.','决赛选手在比赛最后一轮相遇的比赛参加者'}

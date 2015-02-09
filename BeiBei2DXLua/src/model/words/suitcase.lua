@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suitcase"]={"suitcase","['suːtkeɪs]","['sutkes]","n.手提箱",'n.手提箱','These clothes won\'t all pack into one suitcase.','这些衣物一个箱子装不下.','What an idiot I was to leave my suitcase on the train!','我真笨, 竟把手提箱落在火车上了!'}

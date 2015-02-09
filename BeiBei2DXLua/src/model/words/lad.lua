@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lad"]={"lad","[læd]","[læd]","n.少年",'n.少年,小伙子','He\'s a nice enough lad, but he doesn\'t seem to have much gumption.','他是个不错的小伙子, 但好像没有什麽进取心.','He\'s a nice lad, but a bit slow on the draw.','他是个挺不错的小伙子，就是头脑欠灵活。'}

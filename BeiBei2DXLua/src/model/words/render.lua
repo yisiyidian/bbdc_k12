@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["render"]={"render","['rendə]","['rɛndɚ]","vt.使成为",'vt.使成为,提供,报答,着色;执行,实施|||vi.给予补偿|||n.交纳,粉刷,打底','She rendered the song beautifully.','这首歌她唱得非常动听。','The artist had rendered her gentle smile perfectly.','该艺术家把她那温柔的笑容表现得惟妙惟肖。'}

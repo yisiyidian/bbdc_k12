@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["specification"]={"specification","[,spesɪfɪ'keɪʃ(ə)n]","['spɛsəfə'keʃən]","n.规格",'n.规格,详述,详细说明书','In case of need we can offer you some other brand of the same specification.','万一有需要，我们可供应同样规格的其它牌号货品。','Have you get a product of this specification?','不知贵方有没有这种规格的产品？'}

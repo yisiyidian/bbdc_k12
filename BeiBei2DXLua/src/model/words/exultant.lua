@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exultant"]={"exultant","[ɪɡ'zʌltənt]","[ɪɡ'zʌltənt]","adj.非常高兴的",'adj.非常高兴的,欢腾的','Intense and especially ecstatic or exultant happiness.','欢欣，喜悦，高兴强烈的喜悦，尤指狂喜或欢腾的喜悦','An exultant party leader said: "He will be an excellent MP."','一位面带欢欣的政党领导人说：“他会成为一名出色的议员。”'}

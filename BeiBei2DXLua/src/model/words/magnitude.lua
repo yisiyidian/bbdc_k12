@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magnitude"]={"magnitude","['mægnɪtjuːd]","['mæɡnɪtud]","n.巨大",'n.巨大，广大；重大，重要；量级；（地震）级数','You haven\'t realized the magnitude of her achievement.','你没有认识到她这一成就的重大意义。','The magnitude of the epidemic was frightening.','这种流行病传播范围之广令人惶惶不安。'}

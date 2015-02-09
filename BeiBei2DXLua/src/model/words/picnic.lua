@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["picnic"]={"picnic","['pɪknɪk]","['pɪknɪk]","n.野餐",'n.野餐,愉快的时间,猪脊肉|||vi.野餐','Let\'s go for a picnic by the riverside.','我们到河边野餐去吧。','Their family often picnics in the woods.','他们一家常在树林里野餐。'}

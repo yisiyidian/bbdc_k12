@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tutor"]={"tutor","['tjuːtə]","['tʊtɚ]","n.家庭教师",'n.家庭教师,导师|||vt.监护,指导|||vi.当导师(私人教师)','His parents employed a tutor to teach him Greek.','他父母雇佣了一位家庭教师来教他希腊语。','My tutor is an accomplished scholar.','我的导师是一位学识渊博的学者。'}

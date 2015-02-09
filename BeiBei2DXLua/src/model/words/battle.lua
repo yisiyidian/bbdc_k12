@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["battle"]={"battle","['bæt(ə)l]","['bætl]","n.战斗",'n.战斗,争论|||vt.&vi.与...作战;与...斗争','He harangued the troops before a battle.','他在战前向士兵作了慷慨激昂的讲话。','His brave deeds in the battle earned him everlasting glory.','他在那场战斗中的英勇事迹为他赢得了永恒的荣誉。'}

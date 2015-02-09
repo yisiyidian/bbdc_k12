@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bicameral"]={"bicameral","[baɪ'kæm(ə)r(ə)l]","[,baɪ'kæmərəl]","adj.两院制的",'adj.两院制的','The United States Congress is a bicameral body.','美国国会由两个议院组成.','The Legislative branch, a bicameral legislature called Congress, consists of the House of Representatives and the Senate.','立法分支是被称为国会的两院立法机构，由众议院和参议院组成。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malfeasance"]={"malfeasance","[mæl'fiːz(ə)ns]","[,mæl'fizns]","n.不正当",'n.不正当,不法行为,坏事','||Malfeasance|| of government officers leads to the girl\'s death.','官员的玩忽职守导致了小女孩的死亡。','malfeasance','不正当'}

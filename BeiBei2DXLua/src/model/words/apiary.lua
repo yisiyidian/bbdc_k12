@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apiary"]={"apiary","['eɪpɪərɪ]","['epɪɛri]","n.养蜂场",'n.养蜂场,蜂房','He keeps an apiary.','他有一个养蜂场。','An apiary is a place where bees are kept','a collection of beehives;'}

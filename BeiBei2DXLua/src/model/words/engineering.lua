@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["engineering"]={"engineering","[endʒɪ'nɪərɪŋ]","['ɛndʒə'nɪrɪŋ]","n.工程(学)",'n.工程(学),工程技术','geopolitical engineering; social engineering.','地理政治操作法；社会运作法','In this course, students receive instruction in basic engineering.','在本课程中, 学生能学到基础工程学的知识.'}

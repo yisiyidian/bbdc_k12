@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recover"]={"recover","[rɪ'kʌvə]","[rɪ'kʌvɚ]","vt.恢复",'vt.恢复；重新获得；找回；[正]恢复（适当的状态或位置）|||vi.恢复健康（体力、能力等）|||n.恢复开始时姿势','He\'s now fully recovered from his stroke.','他现已从中风病完全康复了。','He is very ill and unlikely to recover.','他病得非常厉害，不大可能恢复健康了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slogan"]={"slogan","['sləʊg(ə)n]","['slogən]","n.标语",'n.标语,口号','The slogan was a pun on the name of the product.','那广告用语与其产品名称一语双关.','A slogan is over the blackboard.','一条标语在黑板正上方。'}

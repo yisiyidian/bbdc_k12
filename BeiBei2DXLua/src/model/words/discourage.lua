@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discourage"]={"discourage","[dɪs'kʌrɪdʒ]","[dɪs'kɝɪdʒ]","vt.使气馁",'vt.使气馁,阻碍','A new law has been brought in to discourage racial prejudice.','一项反对种族歧视的新法律已被提出。','He is easily discouraged by difficulties and obstacles.','他遇到困难和阻碍就容易泄气。'}

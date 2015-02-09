@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pious"]={"pious","['paɪəs]","['paɪəs]","adj.虔诚的",'adj.虔诚的，尽责的，值得的','Alexander is a pious follower of the faith.','亚历山大是个虔诚的信徒。','Congress have do no more than set out some pious hopes.','国会除了提出一些不可能实现的希望之外别无所为。'}

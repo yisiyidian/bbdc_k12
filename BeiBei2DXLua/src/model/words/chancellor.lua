@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chancellor"]={"chancellor","['tʃɑːns(ə)lə]","['tʃænsəlɚ]","n.英大臣",'n.英大臣(使馆秘书,首相)','The ||Chancellor|| of the Exchequer is expected to announce tax cuts in this year\'s budget.','人们期望财政大臣公布在本年度预算中削减税收。','The ||Chancellor|| of the Exchequer is the minister in charge of finance in Britain.','英国财政大臣是负责财政的大臣。'}

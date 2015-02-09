@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subsistence"]={"subsistence","[səb'sɪst(ə)ns]","[səb'sɪstəns]","n.生存",'n.生存,生活','She had no means of subsistence and was dependent on charity.','她没什么谋生手段，只能依靠救济。','He is on the margin of bare subsistence.','他正处在挨饿的边缘。'}

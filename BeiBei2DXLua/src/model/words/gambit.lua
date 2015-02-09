@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gambit"]={"gambit","['gæmbɪt]","['ɡæmbɪt]","n.开始",'n.以取得优势的开局棋法,开始,话题','Peter\'s usual opening gambit is to buy a girl a drink, so that she immediately thinks she owes him something.','彼得通常先是为姑娘买一杯饮料，这样她就马上认为自己欠了他什么。','His opening gambit at the debate is a direct attack on government policy.','他在辩论中的策略是先直接抨击政府的政策。'}

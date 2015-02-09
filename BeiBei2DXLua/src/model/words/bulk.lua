@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bulk"]={"bulk","[bʌlk]","[bʌlk]","n.大部分",'n.大部分,大多数,大块,大批,容积,体积|||vi.变大,增加|||vt.膨胀,出现|||adj.大量的','The war still bulks large in the memories of those who fought in it.','对於那些曾参战的人来说，那场战争仍记忆犹新。','Do they charge carriage by bulk?','他们是否按体积计算运费？'}

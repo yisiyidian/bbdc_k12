@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antifreeze"]={"antifreeze","['æntɪfriːz]","['æntɪfriz]","n.防冻剂",'n.防冻剂，防冻液','cars need to charge antifreeze to pertrol in winter','冬天需要给汽油里添加防冻剂','Fill the cooling system with antifreeze as a protection against frost.','在冷卻系统里加防冻剂以防止霜冻。'}

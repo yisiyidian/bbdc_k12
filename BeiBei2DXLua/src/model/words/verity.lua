@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verity"]={"verity","['verɪtɪ]","['vɛrəti]","n.真",'n.真,真实,真实的陈述','How to guarantee the verity of the financial information disclosed by listed companies?','如何保证上市公司财务信息披露的真实性?','Excellent news communication is endowed with the qualities of verity, objectivity and novelty.','优秀的新闻传播本身具有真实、客观、惊奇的审美品质。'}

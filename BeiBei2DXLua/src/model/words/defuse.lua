@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defuse"]={"defuse","[diː'fjuːz]","[,di'fjuz]","vt.拆除(炸弹等)的雷管",'vt.拆除(炸弹等)的雷管,消除危险,缓和','a diplomatic move that defused the international crisis.','一个缓和国际危机的外交活动','Police administrators credited the organization with helping defuse potentially violent situations.','警方赞扬该组织帮助缓和潜在的暴力情势。'}

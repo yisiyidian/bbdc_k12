@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["concatenate"]={"concatenate","[kən'kætɪneɪt]","[kɑn'kætə,net]","v.连结",'v.连结,连锁|||adj.连锁的','There are lots of  concatenate KFC in our country.','我们这里有很多KFC连锁店。','These are concatenated and the result returned.','这会被拼接到一起并返回。'}

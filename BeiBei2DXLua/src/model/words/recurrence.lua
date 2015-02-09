@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recurrence"]={"recurrence","[rɪ'kʌrəns]","[rɪ'kɝəns]","n.再现",'n.再现,再发生,反复','The return of a trait or recurrence of previous behavior after a period of absence.','重现经过一段时间的缺失后，一特征的重新出现或以前特性的再次发生','Preventing regular recurrence of the symptoms of a disease, as in malaria.','防治间发病的防止一种病症的规则性发作，如疟疾'}

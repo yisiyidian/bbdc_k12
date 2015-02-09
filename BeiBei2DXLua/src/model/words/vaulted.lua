@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vaulted"]={"vaulted","['vɔːltɪd]","['vɔltɪd]","adj.有圆顶的",'adj.有圆顶的,圆顶的,拱形的','One of the wedge-shaped stones forming the curved parts of an arch or a vaulted ceiling.','拱楔块用于形成拱或穹窿的曲线部分的楔形石头中的一块','The formal living room has a fireplace and vaulted ceilings.','正式的客厅有一个壁炉和拱形天花板。'}

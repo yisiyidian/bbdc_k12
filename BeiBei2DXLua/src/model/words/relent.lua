@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relent"]={"relent","[rɪ'lent]","[rɪ'lɛnt]","v.变宽厚",'v.变宽厚,变温和,动怜悯之心','If the weather relents, the game will be finished today.','如果天气转好的话，比赛将在今天结束。','If you relent to the criminals, you will be hurt in the next step.','如果你对罪犯心慈手软，那接下来你就会受伤害了。'}

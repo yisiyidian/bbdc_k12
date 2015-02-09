@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dollar"]={"dollar","['dɒlə]","['dɑlɚ]","n.美元",'n.美元','These socks retail at 1 dollar a pair.','这些袜子零卖一美圆一双。','She gave the boys a dollar apiece.','她给孩子们每人一美元。'}

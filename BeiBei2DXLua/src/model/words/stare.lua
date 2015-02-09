@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stare"]={"stare","[steə]","[stɛr]","vt.凝视",'vt.凝视,显眼,变硬|||vi.凝视|||n.凝视','The answer to his problem was ||staring|| him in the face.','他那个问题的答案是明摆著的。','She stared him into silence.','她把他盯得不吭声了。'}

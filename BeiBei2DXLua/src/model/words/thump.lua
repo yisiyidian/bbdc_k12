@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thump"]={"thump","[θʌmp]","[θʌmp]","n.重打",'n.重打，重击声|||vt.重打,猛击|||vi.重击，发出重击声','He was thumping the keys of the piano.','他重重地敲击钢琴琴键。','My heart was thumping with happiness.','我的心兴奋得咚咚直跳。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["architectural"]={"architectural","[,ɑːkɪ'tektʃərəl]","[,ɑrkɪ'tɛktʃərəl]","adj.建筑的",'adj.建筑的,建筑学的,建筑术的','The fountains of Rome are famed for their architectural beauty.','罗马的喷泉以其建筑之美而著称.','This cathedral was regarded as a miracle in architectural history.','这座大教堂被认为是建筑史上的奇迹。'}

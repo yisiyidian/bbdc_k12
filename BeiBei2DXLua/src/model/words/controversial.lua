@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["controversial"]={"controversial","[kɒntrə'vɜːʃ(ə)l]","[,kɑntrə'vɝʃl]","adj.引起争论的",'adj.引起争论的,有争议的','She was vilified by the press for her controversial views.','因她持有异议, 新闻界对她横加挞伐.','In deference to our host I decided not to challenge his controversial remarks.','我出於对主人的尊敬, 不对他那易引起争论的话表示异议.'}

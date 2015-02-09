@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nonstop"]={"nonstop","[nɑn'stɑp]","[ 'nɔn'stɔp ]","adj.不断的",'adj.直达的,不断的,不间断的|||adv.直达地，不休息地|||n.直达车,直达行驶','a nonstop flight.','直达飞行','nonstop criticism.','不间断的批评'}

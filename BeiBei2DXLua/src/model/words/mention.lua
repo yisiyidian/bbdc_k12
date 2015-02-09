@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mention"]={"mention","['menʃ(ə)n]","['mɛnʃən]","vt.提到",'vt.提到，说起；提名表扬|||n.提及','He has a big house and an expensive car, not to mention a villa in France.','他有一所大房子和一辆昂贵汽车，且不说在法国还有一座别墅了。','He made no mention of having met her.','他不提他曾经和她见面。'}

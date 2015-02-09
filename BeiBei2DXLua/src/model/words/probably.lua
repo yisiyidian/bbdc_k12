@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["probably"]={"probably","['prɒbəblɪ]","['prɑbəbli]","adv.或许",'adv.大概,或许','That hotel probably costs no less than 20 dollars a night.','那间旅馆的住宿费大约要20元一晚呢。','Well, you\'re probably right.','嗯，你大概是对的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apprise"]={"apprise","[ə'praɪz]","[ ə'praiz ]","vt.通知(报告)",'vt.通知(报告)','I was apprised of the committee\'s decision.','我已获悉委员会的决定。','Have customers been fully apprised of the advantages?','顾客们已充分了解这些好处吗？'}

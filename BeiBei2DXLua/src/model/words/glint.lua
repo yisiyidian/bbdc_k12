@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glint"]={"glint","[glɪnt]","[ɡlɪnt]","n.闪烁",'n.闪烁|||v.闪耀,闪闪发光','The gold was glinting in the sunlight.','金子在阳光下闪闪发光。','His eye caught the glint of a revolver among the bushes.','他一眼看到灌木丛中有手枪的反光.'}

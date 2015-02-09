@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["baleful"]={"baleful","['beɪlfʊl; -f(ə)l]","[ 'beilful ]","adj.有害的",'adj.有害的,恶意的','He turned his baleful glare on the cowering suspect.','他恶毒地盯着那个蜷缩成一团的嫌疑犯。','The robber gave me a baleful look.','那强盗用威胁的眼光看着我。'}

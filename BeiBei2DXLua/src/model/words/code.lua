@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["code"]={"code","[kəʊd]","[kod]","n.码",'n.码,密码,法规,准则|||vt.把...编码,制成法典','The new code of conduct lays down the ground rules for management-union relations.','新的管理章程为劳资关系确定了基本的原则.','I can\'t access the file on your company because I\'ve forgotten the code.','我无法取出贵公司的文件, 因为我把代码忘了.'}

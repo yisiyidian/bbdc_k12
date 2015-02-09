@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["structure"]={"structure","['strʌktʃə]","['strʌktʃɚ]","n.结构",'n.结构,构造,建筑物|||v.构成,建立,建造','The two halves of the structure didn\'t marry up.','该结构的两部分未配合好.','The structure had keeled over in the high winds.','那座建筑物让大风给刮倒了.'}

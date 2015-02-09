@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extraterrestrial"]={"extraterrestrial","[,ekstrətə'restrɪəl]","['ɛkstrətə'rɛstrɪəl]","n.外星人",'adj.地球(或其大气圈)外的,行星际的|||n.外星人','Presented a careful argument for extraterrestrial life.','提出关于地球外生命的详细论证','intelligent extraterrestrial life.','地球外的智慧生命'}

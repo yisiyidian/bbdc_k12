@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enlighten"]={"enlighten","[ɪn'laɪt(ə)n; en-]","[ɪn'laɪtn]","v.启发",'v.授与...知识,启发,启蒙','How can I enlighten your wooden head?','我怎么才能让你这木头疙瘩开窍呢？','She was anxious to enlighten me about the events that led up to the dispute.','她急着要使我明白引起这场争执的那些事情。'}

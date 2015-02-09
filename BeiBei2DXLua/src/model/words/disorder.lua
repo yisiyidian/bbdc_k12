@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disorder"]={"disorder","[dɪs'ɔːdə]","[dɪs'ɔrdɚ]","n.杂乱",'n.杂乱,混乱|||vt.扰乱','Wine cups and dishes lay about in disorder in the room.','屋里杯盘狼藉。','The meeting terminated in disorder.','会议在混乱中结束.'}

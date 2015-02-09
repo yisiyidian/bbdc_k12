@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["erupt"]={"erupt","[ɪ'rʌpt]","[ɪ'rʌpt]","v.爆发",'v.爆发','An active volcano may erupt at any time.','活火山随时可能喷发。','A rash has erupted all over my back.','我的背上出满了疹子.'}

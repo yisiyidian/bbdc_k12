@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fatigue"]={"fatigue","[fə'tiːg]","[fə'tig]","n.疲乏",'n.疲乏,疲劳,累活|||adj.疲劳的|||vt.使...疲劳,使...心智衰弱|||vi.疲劳','I am utterly fatigued.','我完全累坏了。','The patient fatigues easily.','病人容易疲劳。'}

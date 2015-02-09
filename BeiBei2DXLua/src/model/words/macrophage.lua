@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["macrophage"]={"macrophage","['mækrə(ʊ)feɪdʒ]","['mækrə'fedʒ]","n.[生]巨噬细胞",'n.[生]巨噬细胞','macrophage','[生]巨噬细胞','antibodies were used in the macrophage system to inhibit cathepsin d','巨噬细胞系统中使用了抗体来抑制组织蛋白酶d。'}

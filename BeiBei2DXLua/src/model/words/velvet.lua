@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["velvet"]={"velvet","['velvɪt]","['vɛlvɪt]","n.天鹅绒",'n.天鹅绒|||adj.天鹅绒的','He took in plenty of velvet when he work for the firm.','他替该公司工作时得到一大笔钱。','The queen assumed a velvet robe.','王后穿了一件天鹅绒长袍'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parade"]={"parade","[pə'reɪd]","[pə'red]","n.游行",'n.游行,阅兵,轮替,夸耀,广场|||vi.参加游行,阅兵,散步,炫耀|||vt.使参加游行,校阅,绕行,夸耀','She paraded up and down in her new hat.','她戴著新帽子在人前走来走去。','The Olympic Games begin with a parade of all the competing nations.','奥运会以参赛各国的列队行进开始。'}

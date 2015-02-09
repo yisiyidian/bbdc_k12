@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vaccinate"]={"vaccinate","['væksɪneɪt]","['væksə'net]","v.预防接种",'v.预防接种','She was vaccinated against smallpox as a child.','她小时候就接种了天花疫苗。','Local health officials then can plan the best times to vaccinate people.','这样,当地的卫生官员就可以安排最佳时间给人们接种疫苗.'}

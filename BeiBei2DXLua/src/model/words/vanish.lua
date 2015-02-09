@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vanish"]={"vanish","['vænɪʃ]","['vænɪʃ]","vi.消失",'vi.消失,不见了,绝迹|||vt.消失','After the alien spacecraft had hovered over the park for a short time, it vanished.','那只外星来的宇宙飞船在公园上空盘旋了一会儿之后就不见了。','Many types of animals have now vanished from the earth.','很多种类的动物现在已经从地球上绝迹了。'}

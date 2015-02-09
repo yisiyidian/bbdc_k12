@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["client"]={"client","['klaɪənt]","['klaɪənt]","n.顾客",'n.顾客；当事人；诉讼委托人；[计算机]客户端','The manager said (that) he believed (that) the client would come next week.','经理说他相信客户下周会来的。','The lawyer explained the legal technicalities to his client.','律师给委托人解释法律上的要点.'}

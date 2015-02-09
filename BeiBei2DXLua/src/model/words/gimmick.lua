@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gimmick"]={"gimmick","['gɪmɪk]","['ɡɪmɪk]","n.暗机关",'n.暗机关，小发明，花招，噱头|||vt.用暗机关改变或影响','The pretty girl on the cover of the pictorial is just a sales gimmick.','画报的封面上印上美女不过是吸引顾客的一种生意眼。','I think all of this is just a moneymaking gimmick','我正为这些都只是为了赚钱的骗人伎俩'}

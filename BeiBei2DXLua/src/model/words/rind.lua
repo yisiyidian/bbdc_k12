@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rind"]={"rind","[raɪnd]","[raɪnd]","n.皮",'n.皮,壳,外表|||v.削皮,剥壳','Please help me to cut off the rinds of lemons.','请帮我去掉柠檬的皮。','Those apple rinds are green.','那些苹果的皮是绿的。'}

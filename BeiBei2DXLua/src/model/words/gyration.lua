@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gyration"]={"gyration","[dʒaɪ'reɪʃ(ə)n]","[dʒaɪ'reʃən]","n.旋回",'n.旋回，旋转，循环周期','When the load is lifted, unload the gyration handle and turn it.','负载吊起后, 取下回转手柄,手摇回转.','In this case, a charged particle has a simple gyration.','.在这种情况下，带电粒子有一个简单的回转'}

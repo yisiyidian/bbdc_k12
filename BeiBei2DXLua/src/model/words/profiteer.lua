@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profiteer"]={"profiteer","[prɒfɪ'tɪə]","[,prɑfə'tɪə]","n.获暴利的人",'n.获暴利的人,奸商|||v.获暴利,赚大钱','Rent controls were introduced to prevent profiteering.','为了防止牟取暴利而 实行了租金管制.','...a new social class composed largely of war profiteers and gangsters.','...主要由战争投机商和强盗组成的一个新的社会阶层。'}

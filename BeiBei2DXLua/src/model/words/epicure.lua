@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["epicure"]={"epicure","['epɪkjʊə; 'epɪkjɔː]","['ɛpɪkjʊr]","n.美食家",'n.美食家,老饕','Each nibble was eaten with the air of an epicure.','每小块食物都吃得津津有味的样子。','This cookery book has been written by a real epicure.','这本食谱是由一位真正的美食家写的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compelling"]={"compelling","[kəm'pelɪŋ]","[kəm'pɛlɪŋ]","adj.强制的",'adj.强制的,强迫性的,令人注目的|||引起兴趣的','His prose is always lucid and compelling.','他的散文素来简洁、有力。','There is no logically compelling argument to support their claims.','没有任何逻辑上有说服力的论据来支持他们的主张。'}

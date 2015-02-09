@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["handshake"]={"handshake","['hæn(d)ʃeɪk]","['hænd'ʃek]","n.握手",'n.握手','Henry\'s company asked him to retire early but he was able to pay off his mortgage with the golden handshake they gave him.','亨利的公司要他提前退休，不过他能够用他们付给他的退职金归还抵押款。','Has limp, weak handshake.','握手时软弱无力。'}

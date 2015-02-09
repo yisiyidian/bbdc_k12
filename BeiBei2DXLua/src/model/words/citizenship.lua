@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["citizenship"]={"citizenship","['sɪtɪzən,ʃɪp]","['sɪtɪzənʃɪp]","n.国籍",'n.国籍,市民权,市民的身份','Not only was everything that he had taken away from him, but also his German citizenship.','不仅他所有的一切都被没收或撤消了，而且连他的德国公民权也被剥夺了。','By accident of birth，he is entitled to British citizenship.','因出生的造化, 他成为英国公民（因有缘生於该地）.'}

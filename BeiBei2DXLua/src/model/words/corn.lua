@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corn"]={"corn","[kɔːn]","[kɔrn]","n.谷物",'n.谷物,谷粒,陈词滥调,鸡眼|||vt.使成颗粒状,用盐水腌制,用谷物喂|||vi.变成颗粒','Farmers often burn the stubble after they have cut the corn.','农民们在收割完庄稼后常烧茬子。','The ground was plowed and planted with corn.','地翻耕后种上了玉米。'}

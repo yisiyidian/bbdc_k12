@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["absence"]={"absence","['æbs(ə)ns]","['æbsns]","n.缺席",'n.没有；缺乏；缺席；不注意','His long absence raised fears about his safety.','他长期不在引起了大家对他的安全的担心。','What was the real reason for your absence?','你缺席的真正原因是什么？'}

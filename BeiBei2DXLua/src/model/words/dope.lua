@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dope"]={"dope","[dəʊp]","[dop]","n.麻药",'n.麻药，毒品，涂料|||n.笨蛋，内幕消息|||v.麻醉|||n.[化]吸收剂','He got a lot of dope from the secretary.','他从秘书那里获得许多内部消息。','The detective tried to dope out why the man was murdered.','侦探们试图搞清那人被害的原因。'}

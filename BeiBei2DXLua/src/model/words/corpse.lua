@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corpse"]={"corpse","[kɔːps]","[kɔrps]","n.尸体",'n.尸体','The corpse lay face down in a pool of blood.','尸体俯卧在血泊中.','There is a decomposing corpse of a deer.','那儿有一具鹿的腐尸。'}

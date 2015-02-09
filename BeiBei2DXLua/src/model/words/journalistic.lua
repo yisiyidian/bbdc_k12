@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["journalistic"]={"journalistic","[,dʒɜːnə'lɪstɪk]","['dʒɝnl'ɪstɪk]","adj.新闻业的",'adj.新闻业的','He began his journalistic career in the early eighties in Australia.','他在80年代早期开始在澳大利亚从事新闻工作。','He is an old journalistic acquaintance.','他是我在新闻界的一位旧交.'}

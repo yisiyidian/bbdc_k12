@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["equipment"]={"equipment","[ɪ'kwɪpm(ə)nt]","[ɪ'kwɪpmənt]","n.设备",'n.设备,装备','The government has an interest in importing scientific equipment.','政府对引进科学设备非常感兴趣。','I tried to fix the equipment but I failed.','我想把机器修理好，但是失败了。'}

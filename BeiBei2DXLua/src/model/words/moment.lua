@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moment"]={"moment","['məʊm(ə)nt]","['momənt]","n.片刻",'n.片刻，瞬间，准确时刻，非常重要的时机，力矩','I\'d like to talk to you for a moment.','我想和你谈一会儿。','My job is not a very glamorous one but it does have its moments.','我的工作虽不算十分吸引人，但也自有其乐趣所在。'}

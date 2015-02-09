@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utmost"]={"utmost","['ʌtməʊst]","['ʌt'most]","adj.极度的",'adj.极度的,最远的|||n.极限,最大可能','The widowed mother exerted herself to the utmost to send her son to college.','那位守寡的母亲尽全力让儿子念大学。','The meeting was arranged with the utmost secrecy.','会议绝对保密。'}

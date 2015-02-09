@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ingratiate"]={"ingratiate","[ɪn'greɪʃɪeɪt]","[ɪn'ɡreʃɪet]","vt.逢迎",'vt.逢迎,讨好','The first part of his plan was to ingratiate himself with the members of the committee.','他的计划的第一步是拉拢委员会的成员。','I won\'t ingratiate myself with you for money.','我不会为金钱而去讨好你。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leisurely"]={"leisurely","['leʒəlɪ]","['liʒɚli]","adj.悠闲的",'adj.悠闲的,从容的|||adv.从容地,悠闲地','He enjoyed a leisurely bath.','他悠然自得地洗了个澡.','Lunch was a leisurely affair.','午饭吃得很悠闲.'}

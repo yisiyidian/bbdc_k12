@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hilarious"]={"hilarious","[hɪ'leərɪəs]","[hɪ'lɛrɪəs]","adj.欢闹的",'adj.欢闹的；非常滑稽的；令人捧腹的；喜不自禁的','A former model wrote a hilarious novel based on pillow talk with her many male friends.','一位前模特儿以她同许多男友的枕头谈话为基础写出了一本有趣的小说。','The party get quite hilarious after they bring more wine.','当他们拿来更多葡萄酒後聚会变得十分热闹起来。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blond"]={"blond","[blɒnd]","[blɑnd]","adj.金发的",'adj.金发的|||n.金发的人','The actress wore a black wig over her blond hair.','女演员的金发上戴着黑色的假发。','The generality of Swedes are blond.','瑞典人大部分是金发的.'}

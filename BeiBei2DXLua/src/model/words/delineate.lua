@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["delineate"]={"delineate","[dɪ'lɪnɪeɪt]","[dɪ'lɪnɪet]","v.描画",'v.描画|||vt.描绘','It protects the rights and lifestyle of Hong Kong people and delineates our obligations.','这保障了香港居民习惯的生活方式和权利，也界定了香港居民的义务。','Biography must to some extent delineate characters.','传记必须在一定程度上描绘人物。'}

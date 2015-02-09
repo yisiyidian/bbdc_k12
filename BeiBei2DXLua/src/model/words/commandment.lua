@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commandment"]={"commandment","[kə'mɑːndmənt]","[kə'mændmənt]","n.诫命",'n.诫命,诫律,指令','Say what you will about the ten commandment, you must always come back to the pleasant facts that there are only ten of them.','不管你怎么说那时诫（指摩西十诫）也罢，总要想到那些令人高兴的事实——就是，只不过十项罢了。','His face is filled with break commandment.','他脸上划满了破破烂烂的十诫。'}

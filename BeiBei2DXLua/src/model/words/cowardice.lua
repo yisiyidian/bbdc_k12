@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cowardice"]={"cowardice","['kaʊədɪs]","['kaʊɚdɪs]","n.懦弱",'n.懦弱','I\'ve been accused of many things in my life, but never of cowardice.','我一生中受过种种指责，但从来没有人说我怯懦。','Such an act of cowardice by an officer shames his whole regiment.','一个军官作出如此胆怯的行为使整个团都蒙受羞辱。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cream"]={"cream","[kriːm]","[krim]","n.乳霜",'n.乳霜；精英；奶油色；乳脂，奶油|||vt.把…搅成糊状（或奶油状）混合物；彻底打败，狠揍','hand cream.','护手乳液','Don\'t stint on the cream!','不要舍不得放奶油！'}

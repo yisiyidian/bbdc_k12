@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yes"]={"yes","[jes]","[jɛs]","adj.是的",'adj.是的|||adv.是,是的|||v.是','||Yes||, I don\'t see why not.','是的，我看不出有什么不好。','||Yes||, it\'s still in my mind.','是的，这事仍在我的记忆里。'}

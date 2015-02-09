@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["horrible"]={"horrible","['hɒrəb(ə)l]","['hɔrəbl]","adj.可怕的",'adj.可怕的,令人毛骨悚然的,令人讨厌的','What a horrible pong!','臭死了!','||Horrible||, isn\'t it?','讨厌极了，不是吗?'}

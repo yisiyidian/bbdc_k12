@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congregate"]={"congregate","['kɒŋgrɪgeɪt]","['kɑŋɡrɪɡet]","vt.使集合",'vt.使集合,聚集|||vi.集合|||adj.集体的','We are congregated for a meeting.','我们集合起来开会。','A crowd quickly congregated round the speaker.','大群的人迅速地在演说者周围聚集起来。'}

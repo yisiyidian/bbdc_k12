@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cannibalism"]={"cannibalism","['kænɪbəlɪzəm]","['kænəbl,ɪzəm]","n.吃人肉的习性",'n.吃人肉的习性，同类相食','They were forced to practise cannibalism in order to survive.','他们被迫人吃人以求活下去。','I don\'t think cannibalism is the nature of human beings.','我不认为同类相食是人类的天性'}

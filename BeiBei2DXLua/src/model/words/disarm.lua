@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disarm"]={"disarm","[dɪs'ɑːm]","[dɪs'ɑrm]","v.解除武装",'v.解除武装,回复平常的编制,缓和','The police disarmed the criminal.','警察缴下了罪犯的枪械。','We didn\'t trust him at first, but his charming manner completely disarmed us.','我们开始时并不信任他，但他令人愉快的举止完全消除了我们的疑虑。'}

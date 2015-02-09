@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["steel"]={"steel","[stiːl]","[stil]","n.钢",'n.钢,钢制品,坚强|||adj.钢的,如钢铁般的,非常坚强的|||vt.包钢,使坚硬,使下定决心','The doctor inserted a steel plate into his damaged leg.','医生在他受伤的腿中植入了一块钢板。','Hot steel is quenched to harden it.','烧热的钢淬火使它坚硬。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preliminary"]={"preliminary","[prɪ'lɪmɪn(ə)rɪ]","[prɪ'lɪmɪnɛri]","n.初步行动",'n.初步行动,准备,初步措施|||adj.初步的,开始的,预备的','A preliminary draft or plan, as of a project or proposal.','草案初步的草案或计划，如工程或建议的草案','There are a lot of ||preliminaries|| to be gone through before you can visit a foreign country.','在出访外国之前要做好许多准备工作。'}

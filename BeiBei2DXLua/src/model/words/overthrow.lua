@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overthrow"]={"overthrow","[əʊvə'θrəʊ]","[,ovɚ'θro]","v.推翻",'v.推翻，打倒,颠覆|||n.推翻,瓦解,颠覆','Unknownforces were at work to overthrow the government.','有些尚未查明的势力正在活动图谋推翻政府.','The rebel factions made common cause (with each other) to overthrow the regime.','各造反派（彼此）联合起来共同推翻政府.'}

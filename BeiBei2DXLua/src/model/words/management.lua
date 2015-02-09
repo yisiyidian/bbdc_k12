@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["management"]={"management","['mænɪdʒm(ə)nt]","['mænɪdʒmənt]","n.管理(层)",'n.管理(层),经营,处理','The farm prospered through good management.','由于管理有方，农场兴旺发达。','If labour and management don\'t reach an accommodation there will be a strike.','如果劳资双方达不成妥协，就会发生罢工。'}

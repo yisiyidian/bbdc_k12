@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discriminatory"]={"discriminatory","[dɪ'skrɪmɪnɪ,t(ə)rɪ; dɪ,skrɪmɪ'neɪt(ə)rɪ]","[dɪ'skrɪmɪnətɔri]","adj.歧视的",'adj.歧视的,差别待遇的','These reforms will abolish racially discriminatory laws.','这些改革将废除种族歧视法律。','a discriminatory audience','有识别力的听众'}

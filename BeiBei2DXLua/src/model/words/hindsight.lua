@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hindsight"]={"hindsight","['haɪn(d)saɪt]","['haɪndsaɪt]","n.枪的照门",'n.枪的照门,后见之明','I now know with hindsight that I made a mistake.','我事后才明白自己犯了一个错误。','I am able to attempt a judgment with the benefit of hindsight.','我借助事后的认识才得以做出判断。'}

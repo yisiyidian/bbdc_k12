@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gravity"]={"gravity","['grævɪtɪ]","['ɡrævəti]","n.地心引力",'n.地心引力,重力,严重,庄重,严肃','He discoursed impressively on Newton\'s theory of gravity.','他讲述了牛顿的万有引力定律，给人以深刻的印象。','They are still quite unaware of the gravity of their problems.','他们仍未意识到问题的严重性。'}

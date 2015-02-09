@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paroxysm"]={"paroxysm","['pærək'sɪzəm]","[ 'pærəksizəm ]","n.发作",'n.发作,突发','He broke into a paroxysm of coughing.','他突然猛咳了一阵。','He exploded in a paroxysm of rage.','他突然勃然大怒。'}

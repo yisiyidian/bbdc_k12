@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ale"]={"ale","[eɪl]","[el]","n.麦芽酒",'n.麦芽酒,乡下啤酒节','Life isn\'t all cakes and ale, you know.','要知道生活并非都是吃喝玩乐.','You ale very helpful.','您真帮了我的大忙。'}

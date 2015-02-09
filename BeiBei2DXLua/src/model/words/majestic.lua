@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["majestic"]={"majestic","[mə'dʒestɪk]","[mə'dʒɛstɪk]","adj.宏伟的",'adj.宏伟的,高贵的,壮丽的','He looks majestic in uniform.','他穿上军装显得很威风.','Openings and closings were all accomplished with majestic rituality.','开幕兴闭幕都是用隆重的仪式来完成的。'}

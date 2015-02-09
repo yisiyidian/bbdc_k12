@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["atone"]={"atone","[ə'təʊn]","[ ə'təun ]","vt.补偿",'vt.补偿,赎罪|||vi.偿还','Blood must atone for blood.','血债要用血来还。','He promised to atone for his crime.','他承诺要赎自己的罪。'}

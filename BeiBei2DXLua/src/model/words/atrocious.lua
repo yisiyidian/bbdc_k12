@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["atrocious"]={"atrocious","[ə'trəʊʃəs]","[ə'troʃəs]","adj.残暴的",'adj.1.残暴的；残忍的；凶恶的；2.糟透的；十分讨厌的','an atrocious crime.','残忍的罪行','atrocious decor; atrocious behavior.','糟糕的装饰；恶劣的行为'}

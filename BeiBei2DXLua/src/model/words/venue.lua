@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["venue"]={"venue","['venjuː]","['vɛnju]","n.犯罪地点",'n.犯罪地点,审判地,管辖地,发生地点,集合地,体育场馆','Please note the change of venue for this event.','请注意比赛将更换场地进行。','Their training venue shouldn\'t have been like this.','她们的训练场地不应该是这样的吧。'}

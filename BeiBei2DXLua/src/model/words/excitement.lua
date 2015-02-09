@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excitement"]={"excitement","[ɪk'saɪtmənt]","[ɪk'saɪtmənt]","n.激动",'n.激动,兴奋','Her eyes kindled with excitement.','她的眼睛里闪耀出激动的神色。','We were trembling with excitement.','我们兴奋得颤抖起来'}

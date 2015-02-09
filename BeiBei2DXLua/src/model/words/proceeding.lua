@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proceeding"]={"proceeding","[prəʊ'siːdɪŋ]","[prə'sidɪŋ]","n.进行",'n.进行,行动,诉讼程序|||vbl.著手进行,继续进行,肇始','I was proceeding along the High Street in a northerly direction when...','我那时正沿著大街向北去, 走著走著....','The solicitor is proceeding with the execution of my mother\'s will.','律师正著手执行我母亲的遗嘱.'}

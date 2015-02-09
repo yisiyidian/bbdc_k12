@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bearing"]={"bearing","['beərɪŋ]","['bɛrɪŋ]","n.[机]轴承",'n.[机]轴承；关系；方位；举止|||v.忍受（bear的ing形式）','The ambassador arrived bearing gifts for the Queen.','大使携礼物觐见女王.','The angry farmer was bearing down on us.','那个怒气冲冲的农民迅速地向我们逼来'}

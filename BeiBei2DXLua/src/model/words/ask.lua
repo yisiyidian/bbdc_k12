@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ask"]={"ask","[ɑːsk]","[æsk]","vt.询问",'vt.询问,请求，要求，开价|||vi.询问，恳求','If you ask me, he hasn\'t got long to live.','恕我直言，他活不长了。','Did you ask the price?','你问价钱了吗？'}

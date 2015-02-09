@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["air"]={"air","[eə]","[ɛr]","n.空气",'n.空气,旋律,气氛,态度|||vt.&vi.晾干,使通风,广播','I shall travel to New York by air this weekend.','这个周末我将要乘飞机去纽约旅行。','There was an air of excitement at the meeting.','开会时气氛显得有些兴奋。'}

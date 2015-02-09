@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consistency"]={"consistency","[kən'sɪst(ə)nsɪ]","[kən'sɪstənsi]","n.一致性",'n.坚持,一致性,强度,硬度,浓稠度','Please mix the flour and milk to the right consistency.','请把面粉和牛奶调至恰当的浓度。','His action lacks consistency.','他的行为缺乏一致性。'}

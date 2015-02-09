@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["creed"]={"creed","[kriːd]","[krid]","n.信条",'n.信条,教义','This is an indispensable part of his creed.','这是他的信条中必不可少的一部分。','The laws apply to everyone irrespective of race, creed or colour.','法律适用于所有的人，不分种族、信仰或肤色。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pitiful"]={"pitiful","['pɪtɪfʊl; -f(ə)l]","['pɪtɪfəl]","adj.慈悲的",'adj.慈悲的,可怜的','I was more or less pitiful at the news he couldn\'t come.','听到他不能来的消息后, 我多少有些遗憾。','The patient was in a pitiful condition.','那个病人处于一种非常可怜的状况。'}

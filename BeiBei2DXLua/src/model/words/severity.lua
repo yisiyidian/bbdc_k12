@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["severity"]={"severity","[sɪ'verɪtɪ]","[sə'vɛrəti]","n.严重",'n.严格,严重,激烈','The cold has decreased in severity.','冷空气已经大大减弱。','When the ship reached port, it bore abundant evidence of the severity of the storm.','船抵港时，船上满是受到暴风雨肆虐的痕迹。'}

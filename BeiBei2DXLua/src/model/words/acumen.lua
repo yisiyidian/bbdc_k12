@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acumen"]={"acumen","['ækjʊmən; ə'kjuːmən]","[ ə'kju:men ]","n.锐敏",'n.锐敏,聪明','Her business acumen has made her very successful.','她灵活的经商头脑使她的生意十分兴隆。','Her business acumen has made her very successful.','她灵活的经商头脑使她的生意十分兴隆。'}

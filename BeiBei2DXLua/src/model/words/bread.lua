@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bread"]={"bread","[bred]","[brɛd]","n.面包",'n.面包,食物,生计|||vt.撒面包屑','The bread is baking in the oven.','烤箱里正在烤面包。','If bread is the first necessity of life, recreation is a close second','“如果面包是生活的第一需要，娱乐将成为第二需要”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shin"]={"shin","[ʃɪn]","[ʃɪn]","n.胫骨",'n.胫骨|||v.攀爬,快步走，踢或打在…的胫骨上','I shin up a tree to get a better view of the procession.','我爬上一棵树, 好把游行队伍看得更清楚些。','His elbow was poking through his torn shin sleeve.','他的肘从衬衫的破袖子中露出。'}

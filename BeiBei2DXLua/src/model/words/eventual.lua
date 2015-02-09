@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eventual"]={"eventual","[ɪ'ven(t)ʃʊəl]","[ i'ventʃuəl ]","adj.最后的",'adj.最后的,终于的,可能的','An entry-level position in sales. ||Eventual|| goal; manager of marketing department.','销售方面的初级职位。最终目标：销售部门的经理。','I fervently believe in our eventual victory.','我坚信我们最后会胜利。'}

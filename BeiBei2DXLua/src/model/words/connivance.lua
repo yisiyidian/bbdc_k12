@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["connivance"]={"connivance","[kə'naɪv(ə)ns]","[ kə'naivəns ]","n.默许",'n.默许,纵容,共谋|||=connivence','He tried to bribe the police into connivance.','他企图收买警察放他一马。','The criminals could not have escaped without your connivance.','囚犯没有你的配合是逃不掉的。'}

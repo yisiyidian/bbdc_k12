@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overblown"]={"overblown","[əʊvə'bləʊn]","[,ovɚ'blon]","adj.停息的",'adj.停息的,盛开过的','overblown decorations.','过多的修饰品','overblown oratory.','华而不实的演说'}

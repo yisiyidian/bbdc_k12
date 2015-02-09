@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["riot"]={"riot","['raɪət]","['raɪət]","v.&n.骚乱",'v.&n.骚乱,闹事|||vi.闹事,骚乱','Football hooligans ran riot through the town.','闹事的足球迷在城里胡作非为。','His tongue runs riot.','他讲话口没遮拦。'}

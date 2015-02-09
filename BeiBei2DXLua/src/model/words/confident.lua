@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["confident"]={"confident","['kɒnfɪd(ə)nt]","['kɑnfɪdənt]","adj.自信的",'adj.确信的,自信的','Your encouragement made me more confident of my future.','你的鼓励使我对我的未来更加有信心。','For my own part, being nice about appearance keeps me confident.','就我而论,注重仪表使我自信。'}

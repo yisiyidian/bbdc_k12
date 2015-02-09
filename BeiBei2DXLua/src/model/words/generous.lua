@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["generous"]={"generous","['dʒen(ə)rəs]","['dʒɛnərəs]","adj.慷慨的",'adj.慷慨的,宽宏大量的,丰盛的,味浓的','She\'s been generous in the extreme.','她一直非常慷慨。','She was always very generous in her charity.','她行善时总是很慷慨。'}

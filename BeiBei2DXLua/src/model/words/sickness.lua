@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sickness"]={"sickness","['sɪknɪs]","['sɪknəs]","n.疾病",'n.疾病','The boy didn\'t take the exam under the pretence of sickness.','那个男孩藉口生病没有参加考试。','The holy man healed them of their sickness.','那位神职人员治好了他们的疾病。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pasture"]={"pasture","['pɑːstʃə]","['pæstʃɚ]","n.牧场",'n.牧场|||v.吃(草)|||vt.放牧','This is the place where they used to pasture.','这就是他们过去经常放牧的地方.','Nitrate of soda may be sown on pasture that does not eat off.','可以把硝酸钠撒在牧草还没有吃光的草地上。'}

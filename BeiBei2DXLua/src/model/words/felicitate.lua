@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["felicitate"]={"felicitate","[fɪ'lɪsɪteɪt]","[ fi'lisiteit ]","vt.祝贺",'vt.祝贺,庆贺，使开心|||adj.使幸福的','I felicitate you on your memory, sir','“祝贺你有这么好的记忆，先生”','felicitate','庆贺，祝贺'}

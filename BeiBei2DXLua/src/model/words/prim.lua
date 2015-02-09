@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prim"]={"prim","[prɪm]","[prɪm]","adj.规规矩矩的",'adj.规规矩矩的,呆板的,拘谨的|||vt.使一本正经，使整洁','She is much too prim and proper to drink pints of beer.','她太循规蹈矩了，滴酒不沾。','Those young ladies are much too prim and proper to enjoy such a rude joke.','那几位年轻的太太非常拘谨和正经，不会喜欢这种粗俗的笑话。'}

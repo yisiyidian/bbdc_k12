@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["egress"]={"egress","['iːgres]","['iɡrɛs]","n.出口",'n.出口,外出','Safe access and egress can be achieved by various methods.','可以采用各种方法安全的进入或离开。','But his parents egress frequently remain him in the family','他父母经常外出而把他一个人留在家里'}

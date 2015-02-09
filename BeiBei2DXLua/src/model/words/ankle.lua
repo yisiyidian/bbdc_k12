@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ankle"]={"ankle","['æŋk(ə)l]","['æŋkl]","n.踝",'n.踝,踝关节','The doctor ordered the man who had sprained his ankle to keep quiet for a few days.','医生命令那扭伤足踝的人静养几天。','He turned back to help his friend who had sprained an ankle.','他回过身来, 帮助那位扭了脚的朋友。'}

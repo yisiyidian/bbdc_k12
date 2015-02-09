@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crane"]={"crane","[kreɪn]","[kren]","n.鹤",'n.鹤,起重机|||v.引颈,伸长(脖子)|||vt.伸长(脖子等)','He craned his neck to get a glimpse of the parade.','他伸长脖子看了看游行的队伍。','A whooping crane.','美洲鹤，高叫鹤'}

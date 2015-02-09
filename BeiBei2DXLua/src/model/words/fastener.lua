@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fastener"]={"fastener","['fɑːsənə]","['fæsnɚ]","n.使牢系之物",'n.使牢系之物','The zip fastener  had long since been wrenched out of them.','拉练早已取走了.','He\'s nipped his thumb in the fastener.','他的姆指被钩扣夹住了。'}

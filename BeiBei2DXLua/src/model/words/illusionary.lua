@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illusionary"]={"illusionary","[i'lju:ʒənəri]","[ i'lju:ʒənəri ]","adj.幻觉的",'adj.幻觉的(错觉的,假象的)','illusionary stage effects','幻觉的影响','don\'t be confused by the illusionary','不要被你的幻觉所迷惑'}

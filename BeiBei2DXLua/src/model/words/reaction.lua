@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reaction"]={"reaction","[rɪ'ækʃ(ə)n]","[rɪ'ækʃən]","n.反应",'n.反应,反作用力,化学反应','A reactor is a container for chemical reaction.','反应器是进行化学反应的容器。','Running away is our instinctive reaction when we meet danger.','遇到危险时，我们的本能反应就是跑开。'}

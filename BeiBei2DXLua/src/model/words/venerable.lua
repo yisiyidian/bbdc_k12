@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["venerable"]={"venerable","['ven(ə)rəb(ə)l]","['vɛnərəbl]","adj.庄严的",'adj.庄严的,值得尊敬的','We plan to visit the venerable ruins of the abbey.','我们计划去访问该修道院的珍贵的历史遗址。','The cathedral is a venerable building.','主教座堂是神圣庄严的建筑.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spicy"]={"spicy","['spaɪsɪ]","['spaɪsi]","adj.芳香的(辛辣的)",'adj.芳香的(辛辣的)','||Spicy|| food does not agree with me.','辛辣食物不合我的胃口','||Spicy|| food disagrees with me.','我不能吃辛辣食品。'}

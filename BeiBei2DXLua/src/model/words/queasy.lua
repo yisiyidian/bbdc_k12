@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["queasy"]={"queasy","['kwiːzɪ]","['kwizi]","adj.催吐的",'adj.催吐的,使人呕吐的,反胃的;不稳定的、不确定的.','I felt a little queasy on the ship.','我在船上觉得有点晕眩想呕吐。','I started to feel queasy as soon as our boat left the harbour.','我们的船一离开港口，我就开始觉得想吐。'}

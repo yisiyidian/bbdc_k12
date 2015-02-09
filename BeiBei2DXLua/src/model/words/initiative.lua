@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["initiative"]={"initiative","[ɪ'nɪʃɪətɪv; -ʃə-]","[ɪ'nɪʃətɪv]","adj.创始的",'adj.创始的,初步的,自发的|||n.第一步,首创精神;主动权','I put it all down to her hard work and initiative.','我把这一切归因于她工作又勤奋又主动。','It is hoped that the government\'s initiative will bring the strike to an end.','希望政府采取的主动措施可以结束罢工。'}

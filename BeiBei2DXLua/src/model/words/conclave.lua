@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conclave"]={"conclave","['kɒŋkleɪv]","['kɑŋklev]","n.秘密会议",'n.秘密会议,教皇选举会议,红衣主教团','You heard the reaction in the conclave.','你听到了秘密会议上的反应。','China\'s leadership closed its annual conclave on the economy with an ambiguous call for more balanced growth in 2010,','中国领导人在一年一度的经济工作最高决策会议上发出了要让明年经济更平衡增长的模糊信号。'}

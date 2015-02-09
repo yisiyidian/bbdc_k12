@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inception"]={"inception","[ɪn'sepʃ(ə)n]","[ɪn'sɛpʃən]","n.开端",'n.开端,开始,取得学位','He\'s worked for that company from its inception.','自从那家公司开办以来，他一直在那儿工作。','He had been director of the project since its inception.','他从一开始就是这项工作的负责人。'}

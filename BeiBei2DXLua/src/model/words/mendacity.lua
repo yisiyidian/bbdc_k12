@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mendacity"]={"mendacity","[men'dæsətɪ]","[mɛn'dæsəti]","n.撒谎",'n.虚假，撒谎','...an astonishing display of cowardice and mendacity.','...一种令人吃惊的懦弱和撒谎的表现。','It was that the incentive for mendacity is growing, as unemployment balloons and competition for jobs rises.','随着失业人数迅速膨胀，及就业竞争加剧，说谎的动机在不断增强。'}

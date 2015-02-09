@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reformism"]={"reformism","[rɪ'fɔːmɪzəm]","[rɪ'fɔrmɪzəm]","n.改革主义",'n.改革主义','Here is the classic contradiction of reformism.','这就是典型的改良主义的矛盾.','Here is the classic contradiction of reformism.','这就是典型的改良主义的矛盾。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["towel"]={"towel","['taʊəl]","['taʊəl]","n.毛巾",'n.毛巾|||v.用毛巾擦|||vt.用毛巾擦或擦干','Please throw me that towel.','请把那条毛巾给我扔过来.','Sop up the water with a paper towel.','用纸巾把水吸乾.'}

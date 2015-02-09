@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["criminal"]={"criminal","['krɪmɪn(ə)l]","['krɪmɪnl]","adj.犯罪的",'adj.犯罪的,刑事的,无耻的|||n.罪犯','The criminal was convicted of murder.','歹徒被判谋杀罪。','The police had to make a forcible entry into the house where the criminal was hiding.','警察不得不强行进入罪犯藏身的那座房子。'}

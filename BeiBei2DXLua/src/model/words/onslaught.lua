@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["onslaught"]={"onslaught","['ɒnslɔːt]","['ɑnslɔt]","n.突击",'n.突击,猛击,猛攻','The politician made a strong onslaught on the unions.','那个政客对工会进行猛烈抨击。','The city resisted the enemy onslaught for two weeks.','这个城市反抗敌人的猛攻达两个星期之久。'}

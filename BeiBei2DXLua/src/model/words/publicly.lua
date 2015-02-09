@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["publicly"]={"publicly","['pʌblɪklɪ]","[ 'pʌblikli ]","adv.公开地",'adv.公开地','They showed a remarkable degree of moderation in not quarrelling publicly on television.','他们表现得极为克制, 未在电视上公开吵起来.','The President has to be sworn in publicly.','总统必须当众宣誓就职.'}

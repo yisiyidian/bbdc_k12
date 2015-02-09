@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["buttress"]={"buttress","['bʌtrɪs]","['bʌtrəs]","n.扶墙",'n.扶墙,拱壁|||vt.支持','He buttressed up the argument with lots of solid facts.','他以大量确凿的事实支持这个论点。','I don\'t think they have any buttress behind them.','我认为他们背后没有什么支持力量。'}

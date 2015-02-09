@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["horse"]={"horse","[hɔːs]","[hɔrs]","n.马",'n.马|||vt.骑马|||adj.马的','Don\'t put the cart before the horse.','【谚】勿本末倒置。','When the horse had finished the race, its sides were wet with foam.','这匹马结束比赛时，它的脊背被汗水湿透了。'}

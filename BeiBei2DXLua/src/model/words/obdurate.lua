@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obdurate"]={"obdurate","['ɒbdjʊrət]","['ɑbdərət]","adj.固执的",'adj.固执的,顽固的','He is too obdurate to get rid of his bad habbits.','他非常顽固，不想戒除坏习惯。','He remained obdurate, refusing to alter his decision.','他依然固执己见，拒不改变决定。'}

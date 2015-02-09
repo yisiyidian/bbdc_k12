@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conscience"]={"conscience","['kɒnʃ(ə)ns]","['kɑnʃəns]","n.良心",'n.良心,责任心,顾忌','How can he reconcile it to his conscience?','他怎能问心无愧呢？','She was afflicted with conscience.','她受良心责备。'}

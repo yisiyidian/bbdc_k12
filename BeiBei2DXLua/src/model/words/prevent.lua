@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prevent"]={"prevent","[prɪ'vent]","[pri'vɛnt]","v.防止",'v.预防,防止','The car came to a halt just in time to prevent an accident.','汽车及时停下，避免了一场车祸。','The government tried to prevent the diminution of resources.','政府试图阻止资源的减少。'}

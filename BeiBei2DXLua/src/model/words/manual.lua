@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manual"]={"manual","['mænjʊ(ə)l]","['mænjuəl]","adj.手工的",'adj.手工的,体力的|||n.手册,指南,键盘','Work done by machines has replaced manual labour.','机器生产已经代替了手工劳作.','This manual is full of useful tips.','这本小册子里有很多实用的小建议。'}

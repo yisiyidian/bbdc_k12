@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["divisible"]={"divisible","[dɪ'vɪzɪb(ə)l]","[də'vɪzəbl]","adj.可分的",'adj.可分的,可割的,【数】可以除的','Designating an integer not divisible by two, such as1, 3, and5.','奇数的不能被2整除的整数，如1，3和5','15 is divisible by 3 and 5.','15可被3和5除尽'}

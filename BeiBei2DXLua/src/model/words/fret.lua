@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fret"]={"fret","[fret]","[frɛt]","n.烦躁",'n.烦躁,磨损,焦急|||v.烦恼,不满,磨损','I see him chafe and fret at every pore.','我看见他非常暴躁。','||Fretting|| about it won\'t help.','发愁于事无补。'}

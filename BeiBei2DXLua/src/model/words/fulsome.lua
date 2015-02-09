@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fulsome"]={"fulsome","['fʊls(ə)m]","['fʊlsəm]","adj.过度的",'adj.过度的,过分的,令人生厌的','They try to please him with fulsome complinents.','他们想用溢美之词取悦他。','Newspapers have been fulsome in their praise of the former president.','报纸上对前总统都是些溢美之词。'}

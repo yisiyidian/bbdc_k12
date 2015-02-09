@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barrel"]={"barrel","['bær(ə)l]","['bærəl]","n.桶",'n.桶,一桶的量,大量,枪管,炮管,笔管,汽油桶|||vi.快速移动|||vt.把...装桶','Beer swilled around the bottom of the barrel.','啤酒在桶底晃荡.','The beer comes out of the barrel under pressure.','啤酒受到压力从桶中流出.'}

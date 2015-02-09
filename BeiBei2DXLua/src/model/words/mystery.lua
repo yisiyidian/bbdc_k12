@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mystery"]={"mystery","['mɪst(ə)rɪ]","[ˈmɪstəri]","n.神秘",'n.神秘,秘密,神秘的人或事物','How he got in is a mystery.','他是怎样进去的是一个谜。','It\'s an insoluble mystery.','那是无法解释的奥秘。'}

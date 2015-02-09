@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["captive"]={"captive","['kæptɪv]","['kæptɪv]","n.俘虏",'n.俘虏,迷恋者|||adj.被俘的,被迷住的','Television advertisers can exploit a captive audience.','电视广告商能利用被动观众.','He remained a captive to her beauty.','他始终为她的美貌所迷惑。'}

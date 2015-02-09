@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["importance"]={"importance","[ɪm'pɔːt(ə)ns]","[ɪm'pɔrtns]","n.重要",'n.重要,重要性','He has an exaggerated idea of his own importance.','他自视过高。','He emphasized the importance of careful driving.','他强调小心驾驶的重要性。'}

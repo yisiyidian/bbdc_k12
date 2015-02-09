@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sermon"]={"sermon","['sɜːmən]","['sɝmən]","n.布道",'n.布道,说教','He preaches the same sermon every Christmas.','他每逢圣诞节都宣讲同一教旨.','The collection will be taken (up)/made after the sermon.','教堂讲道之後将进行募捐.'}

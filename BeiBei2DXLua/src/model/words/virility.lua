@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["virility"]={"virility","[və'rɪləti]","[ vi'riləti ]","n.男子气概",'n.男子气概；刚强有力','virility','n. 雄劲,丈夫气','At the same time a wave of intense virility seemed to surge out from him and impinge upon her.','同时一股强烈的生命之力似乎从他身上磅礴喷出，向她滚滚扑来'}

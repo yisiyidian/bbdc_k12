@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prate"]={"prate","[preɪt]","[pret]","vi.唠唠叨叨的讲",'vi.唠唠叨叨的讲,闲聊|||n.唠叨,多嘴,无聊话','If the hen does not prate, she will not lay.','不叨叨的母鸡不下蛋。','They have been ||prating|| on the phone for hours.','他们已经煲了几个小时的电话粥了。'}

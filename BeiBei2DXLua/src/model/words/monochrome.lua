@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monochrome"]={"monochrome","['mɒnəkrəʊm; mɒnə(ʊ)'krəʊm]","['mɑnəkrom]","n.单色画",'n.单色画,单色画法|||adj.单色的,黑白的|||[计算机]单色的','In monochrome maps, of course, colour variation cannot be employed at all.','当然, 单色地图根本不可能采用颜色的变化.','The sun was down and the room fading to monochrome.','夕阳西下,房间黯淡下来,周围变成了一幅单色画.'}

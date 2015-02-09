@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prostitution"]={"prostitution","[,prɒstɪ'tʃuːʃn ; ,prɒstɪ'tjuːʃn]","['prɑstə'tʊʃən]","n.卖淫",'n.卖淫，堕落','Sexual immorality, especially prostitution.','卖淫性关系的不道德, 特指卖淫','||Prostitution|| is on the increase in the city.','城里卖淫活动越来越多.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hermetic"]={"hermetic","[hɜː'metɪk]","[hɝ'mɛtɪk]","adj.密封的",'adj.密封的,与外界隔绝的|||adj.深奥的','The village in the mountain is almost hermetic.','山谷里的这个村庄几乎与世隔绝。','This would permit air to enter, breaking the hermetic seal of the jar.','这会造成漏气，破坏罐子的密封性。'}

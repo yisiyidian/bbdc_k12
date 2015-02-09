@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["allocate"]={"allocate","['æləkeɪt]","['æləket]","v.分派",'v.分派,分配,分配额','We allocate 10 % of revenue to publicity.','我们拨出10%的收入做广告。','Tickets are limited and will be allocated to those who apply first.','票数有限，将分配给那些先申请的人。'}

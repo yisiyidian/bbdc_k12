@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["setback"]={"setback","['setbæk]","['sɛtbæk]","n.顿挫",'n.顿挫,挫折,退步','He has pulled in his horns since that setback.','碰了钉子以后，他收敛些了。','Ah well, I suppose there\'s nothing like an occasional setback to make you realize how lucky you really are.','唉，我看什么都不如偶尔受点挫折更能使你明白你是多么的幸运了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blemish"]={"blemish","['blemɪʃ]","['blɛmɪʃ]","n.污点",'n.污点,缺点|||v.弄脏,污损,损害','His reputation was blemished by a newspaper article alleging he had taken bribes.','报纸上一篇文章说他受贿，他的声誉因此受到玷污。','These wine glasses were sold at half price because of blemishes in the jade.','这些酒杯半价出售，因为玉上有瑕疵。'}

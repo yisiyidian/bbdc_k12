@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["divisive"]={"divisive","[dɪ'vaɪsɪv]","[ di'vaisiv ]","adj.区分的",'adj.区分的,分裂的,不和的','Abortion has always been a divisive issue.','堕胎一直是个有争议的问题。','divisive issue','有分歧的问题'}

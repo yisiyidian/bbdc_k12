@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["totter"]={"totter","['tɒtə]","['tɑtɚ]","vi.蹒跚",'vi.蹒跚,摇摇欲坠|||n.摇晃','The old lady tottered down the stairs.','那位老太太步履蹒跚地走下楼梯。','The piles of books tottered and then fell.','这堆书晃了几下，然后就倒了。'}

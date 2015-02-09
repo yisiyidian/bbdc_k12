@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["routinely"]={"routinely","[rʊ'tinli]","[ ru:'ti:nli ]","adv.通常",'adv.通常','Toenails should be routinely inspected and cut.','趾甲应该做常规的检查和修剪。','You\'d better accomplish the routinely work in two hours.','你最好在两小时内完戌日常工作。'}

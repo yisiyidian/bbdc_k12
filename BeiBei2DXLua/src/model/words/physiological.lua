@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["physiological"]={"physiological","[,fɪzɪə'lɒdʒɪkəl]","[,fɪzɪə'lɑdʒɪkl]","adj.生理的",'adj.生理的,生理学的','The doctor had a test on the physiological reaction of human being.','医生做了一次有关人的生理反应的测试.','Every individual has a physiological requirement for each nutrient.','每个人对每种营养成分都有一种生理上的需要.'}

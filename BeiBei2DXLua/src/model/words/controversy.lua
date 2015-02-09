@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["controversy"]={"controversy","['kɒntrəvɜːsɪ; kən'trɒvəsɪ]","['kɑntrə'vɝsi]","n.(公开的)争论",'n.(公开的)争论,争议','The remark touched off a heated controversy.','这句话引起了热烈的争论。','The mayor will try to accord the controversy over the housing scheme.','市长试图调解在住房建筑规划方面的争议。'}

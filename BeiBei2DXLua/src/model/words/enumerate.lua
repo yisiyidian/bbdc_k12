@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enumerate"]={"enumerate","[ɪ'njuːməreɪt]","[ɪ'numəret]","v.列举",'v.列举,计算,枚举|||[计算机]枚举','The names of items are too numerous to enumerate.','名目繁多不胜枚举。','The teacher enumerated many examples to us for understanding.','为了便于我们理解，老师列举了很多事例。'}

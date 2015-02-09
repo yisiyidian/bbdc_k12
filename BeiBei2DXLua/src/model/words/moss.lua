@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moss"]={"moss","[mɒs]","[mɔs]","n.苔藓",'n.苔藓,(苏格兰)泥沼|||vt.使…长满苔藓','||Moss|| affects the northern slopes.','朝北的山坡易生苔。','He is found asleep on a pillow of leaves and moss.','有人看见他枕著树叶和苔藓睡著了。'}

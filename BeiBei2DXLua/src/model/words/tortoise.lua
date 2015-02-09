@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tortoise"]={"tortoise","['tɔːtəs; -tɒɪz]","['tɔːrtəs]","n.龟",'n.龟','The tortoise crept along at an agonizingly slow speed.','乌龟以极其缓慢的速度爬行着。','`Have you got any pets?\' `Yes, I\'ve got three rabbits and a tortoise.\'','｀你有什麽宠物吗?＇｀有, 我有三只兔子和一只乌龟.＇'}

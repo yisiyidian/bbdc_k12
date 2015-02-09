@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antidote"]={"antidote","['æntɪdəʊt]","['æntɪdot]","n.解毒剂",'n.解毒剂,解药|||n.(喻)矫正方法','Do you have any antidote for a snakebite?','你有治疗毒蛇咬伤的解毒药吗？','Jogging is an antidote to nervous tension.','慢跑是消除精神紧张的一剂良药'}

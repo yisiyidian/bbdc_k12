@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emend"]={"emend","[ɪ'mend]","[ɪ'mɛnd]","vt.修订",'vt.修订，校订','Many men are needed to emend this book.','修订这本书需要许多人手。','He is emending classical authors.','他在校勘古典著作。'}

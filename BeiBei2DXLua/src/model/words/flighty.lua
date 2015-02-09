@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flighty"]={"flighty","['flaɪtɪ]","[ 'flaiti ]","adj.轻浮的",'adj.轻浮的,轻狂的,心情浮动的','Isabelle was a frivolous little fool, vain and flighty.','伊莎贝尔曾是一个轻率的小傻瓜，自负而轻浮。','of course! the three fluhs; flighty,flirty and flawed.','当然！轻浮，放荡有缺陷'}

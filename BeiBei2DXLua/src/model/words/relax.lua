@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relax"]={"relax","[rɪ'læks]","[rɪ'læks]","vi.放松",'vi.放松,松懈,松弛|||vt.放松,放宽(限制等)','His muscles relaxed.','他的肌肉松弛了。','relax one\'s grip.','松开某人的掌握'}

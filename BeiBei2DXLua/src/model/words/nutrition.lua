@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nutrition"]={"nutrition","[njʊ'trɪʃ(ə)n]","[nu'trɪʃən]","n.营养",'n.营养','Growth is a function of nutrition.','长身体是由营养决定的','Our bodies need adequate nutrition.','我们的身体需要充足的营养。'}

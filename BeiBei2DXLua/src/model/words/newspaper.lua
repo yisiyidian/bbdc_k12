@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["newspaper"]={"newspaper","['njuːzpeɪpə; 'njuːs-]","['nuzpepɚ]","n.报纸",'n.报纸，报社，新闻纸|||v.从事新闻工作','He unfurled the newspaper and began to read.','他展开报纸开始阅读。','The value of most newspaper writing is only fugitive.','大多新闻报道的价值都不长久。'}

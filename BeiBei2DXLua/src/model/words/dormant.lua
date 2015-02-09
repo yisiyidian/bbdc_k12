@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dormant"]={"dormant","['dɔːm(ə)nt]","['dɔrmənt]","adj.睡眠状态的",'adj.睡眠状态的,静止的|||[计算机]静止的','As soon as they meet again his dormant love for her is rekindled.','他们一见面，他对她的旧情如干柴烈火般又重新燃起。','Many dormant branches of our organization are now springing to active life.','我们组织中有许多沉寂的部门现在突然活跃起来。'}

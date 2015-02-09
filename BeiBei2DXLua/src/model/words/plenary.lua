@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plenary"]={"plenary","['pliːnərɪ]","['plɛnəri]","adj.充分的",'adj.充分的，完全的，全体出席的','I\'ll be at the plenary session of the conference.','我将出席大会的全体会议。','The proposal was turned down at the plenary meeting of the committee.','这个建议在委员会全体会议上被否决了。'}

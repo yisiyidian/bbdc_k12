@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impertinent"]={"impertinent","[ɪm'pɜːtɪnənt]","[ɪm'pɝtnənt]","adj.鲁莽的",'adj.鲁莽的,无礼的,粗鲁的','His remarks were impertinent.','他说话语言粗鲁。','impertinent behavoir  influents interpersonal relationship','粗鲁的行为影响人际关系'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["torpid"]={"torpid","['tɔːpɪd]","['tɔrpɪd]","adj.迟钝的",'adj.迟钝的，呆滞的，无精打采的，不活泼的','Marked by lethargy; torpid.','惰怠的以懒惰为特征的；呆钝的','he is always a torpid boy','不活泼的'}

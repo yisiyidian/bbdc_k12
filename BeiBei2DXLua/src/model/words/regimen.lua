@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regimen"]={"regimen","['redʒɪmən]","['rɛdʒɪmən]","n.养生法",'n.养生法,生活规则,训练课程，统治，制度','Elderly people usually pay much attention to regimen.','上了年纪的人通常很注重养生之道。','A good regimen  of  dieting is helpful to  your healthy.','一个好的饮食习惯对你的健康有帮助。'}

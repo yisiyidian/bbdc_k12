@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cut"]={"cut","[kʌt]","[kʌt]","vt.切割",'n.切口,割伤,降低,份额,删节,割下的一块肉|||vt.切割,减少,停止,修剪|||vi.切割,快速移动|||[计算机]剪掉','Her work is a cut above that of the others.','她干的工作比别人要好些。','||Cut|| the chatter and get on with your work!','别唠唠叨叨了，继续工作吧。'}

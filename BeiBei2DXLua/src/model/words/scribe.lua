@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scribe"]={"scribe","[skraɪb]","[skraɪb]","n.书记",'n.书记,抄写员,作者（尤指新闻记者）|||n.划线器|||v.抄写，划线','The god of commerce, invention, cunning, and theft, who also served as messenger, scribe, and herald for the other gods.','赫尔墨斯商业、发明、灵巧之神, 盗贼的保护神, 也是众神的信使、书吏及报信者','The scribe worked hard to support his family.','那个抄写员辛勤工作来养家。'}

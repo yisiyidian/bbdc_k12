@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["metro"]={"metro","['metrəʊ]","['mɛtro]","n.地铁",'n.地铁|||adj.大都市的|||(METRO)麦德隆(财富500强公司之一总部所在地德国，主要经营零售)','metro Los Angeles.','大洛杉矶市','This metro ranks number one in unemployment','“这个大都市地区失业率最高”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resignation"]={"resignation","[rezɪg'neɪʃ(ə)n]","[,rɛzɪɡ'neʃən]","n.辞职",'n.辞职,辞呈,认命','She handed in her resignation.','她提交了辞呈。','There was no grief in his expression, only deep resignation.','他的表情里没有悲痛，只有深深的无奈。'}

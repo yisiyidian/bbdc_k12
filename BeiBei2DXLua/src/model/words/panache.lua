@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["panache"]={"panache","[pə'næʃ]","[pə'næʃ]","n.羽饰",'n.羽饰,炫耀,假威风','Her panache at dealing with the world\'s media is quite astonishing.','她应付世界媒体的派头非常令人吃惊。','The orchestra played with great panache.','管弦乐队神气十足地演奏着。'}

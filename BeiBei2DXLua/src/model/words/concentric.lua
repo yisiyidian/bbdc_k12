@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["concentric"]={"concentric","[kən'sentrɪk]","[kən'sɛntrɪk]","adj.同中心的",'adj.同中心的,同轴的','Those are three concentric circles.','这是三个同心圆。','The two concentric cycles form a loop.','两个同心圆构成了一个环。'}

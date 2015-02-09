@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["distinguish"]={"distinguish","[dɪ'stɪŋgwɪʃ]","[dɪ'stɪŋɡwɪʃ]","vt.区别",'vt.区别,辨认,特别关注|||vi.区别','Speeches distinguish human beings from animals.','人类和动物的区别在于人会说话。','She distinguished herself by her coolness and bravery.','她因头脑冷静、敢作敢为而为人称道。'}

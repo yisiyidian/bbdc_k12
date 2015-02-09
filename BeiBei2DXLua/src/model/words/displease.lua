@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["displease"]={"displease","[dɪs'pliːz]","[dɪs'pliz]","v.使...不快",'v.使...不快，使...生气','Her husband\'s failure to notice her new hairstyle displeased her very much.','她丈夫没注意到她的新发型，这使她大为不悦。','Not wishing to displease her, he avoided answering the question.','为了不惹她生气，他对这个问题避而不答。'}

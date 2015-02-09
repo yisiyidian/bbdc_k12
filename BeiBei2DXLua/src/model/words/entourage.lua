@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entourage"]={"entourage","['ɒntʊrɑːʒ; ,ɒntʊ(ə)'rɑːʒ]","['ɑnturɑʒ]","n.随行人员",'n.随行人员,周围的事物','Rachel was quickly whisked away by her entourage.','雷切尔很快被她的随从带走了。','Behind the famous person,there always follows a group of entourage.','真相之后必有群策。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mink"]={"mink","[mɪŋk]","[mɪŋk]","n.貂",'n.貂,貂皮衣','June: I don\'t want a mink coat! I want to see the world.','琼：我不要貂皮大衣！我要去见见世面。','She wheedled him into buying her a mink coat.','她用甜言蜜语诱他买貂皮大衣给她。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fend"]={"fend","[fend]","[ fend ]","v.照料",'v.照料，挡开，努力，[英口]供养','Most animals let their young fend for themselves from an early age.','大多数动物让他们的幼仔从小就独立生活。','In the old society, he was compelled to fend for himself at the age of14.','在旧社会，他十四岁时就被迫自己独立谋生。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pleasure"]={"pleasure","['pleʒə]","[[ˈplɛʒɚ]]","n.高兴",'n.高兴,愉快,快事|||vt.使高兴|||vi.享受快乐,高兴','She took no pleasure in her work.','她觉得自己的工作毫无乐趣。','She seemed to take pleasure in our suffering.','她似乎对我们的痛苦幸灾乐祸。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imbalance"]={"imbalance","[ɪm'bæl(ə)ns]","[ɪm'bæləns]","n.不平衡",'n.不平衡,失调','Social imbalance worries him more than inequity of income.','社会失衡比收入不公平更令他忧虑。','The current trade deficit indicates a serious imbalance between our import and export trade.','当前的贸易赤字表明我们的进出口贸易严重失调。'}

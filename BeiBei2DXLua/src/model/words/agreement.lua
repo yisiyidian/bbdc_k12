@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agreement"]={"agreement","[ə'griːm(ə)nt]","[ə'grimənt]","n.同意",'n.同意,一致,协议','Finally we reached an agreement.','我们最终达成了协议。','We are in agreement with their decision.','我们同意他们的决定。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["simulate"]={"simulate","['sɪmjʊleɪt]","['sɪmjulet]","v.假装",'v.假装,冒充,模仿,模拟','Some moths simulate dead leaves.','有些蛾拟态为枯叶。','He shook a sheet of metal to simulate the noise of thunder.','他摇动一块金属薄片来模拟雷声。'}

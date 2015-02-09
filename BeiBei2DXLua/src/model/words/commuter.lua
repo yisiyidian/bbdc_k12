@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commuter"]={"commuter","[kə'mjuːtə(r)]","[kə'mjʊtɚ]","n.通勤者",'n.通勤者,每日往返上班者','The commuter train is never punctual.','市郊往返列车从来不准点。','The rail strike is a problem for all commuters.','铁路员工罢工对所有通勤者来说都是一个问题。'}

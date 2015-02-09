@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["productive"]={"productive","[prə'dʌktɪv]","[prə'dʌktɪv]","adj.能生产的",'adj.能生产的,有生产价值的,多产的','She was elected a productive worker.','她被选为劳动能手。','I spent a very productive hour in the library.','我在图书馆里的这一小时收获很大。'}

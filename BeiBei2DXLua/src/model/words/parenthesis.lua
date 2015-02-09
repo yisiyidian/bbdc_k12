@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parenthesis"]={"parenthesis","[pə'renθɪsɪs]","[pə'rɛnθəsɪs]","n.圆括号",'n.圆括号,插入语,插曲，间歇,停歇','One have to dismount from an idea and get into saddle again at every parenthesis.','每当遇上一个括号，就叫人不得不从一种想法下马，然后再次骑上马鞍。','The statistics were given in parenthesis.','统计数字在括号里.'}

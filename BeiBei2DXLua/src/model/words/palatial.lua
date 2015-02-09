@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["palatial"]={"palatial","[pə'leɪʃ(ə)l]","[pə'leʃl]","adj.宫殿般的",'adj.宫殿般的,具有宫殿特色的，宏伟的','He bought a palatial house.','他买了套富丽堂皇的大房子。','||Palatial|| office buildings are being constructed in the city.','那个城市正在兴建一些宫殿式办公大楼。'}

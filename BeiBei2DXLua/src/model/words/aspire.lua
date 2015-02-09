@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aspire"]={"aspire","[ə'spaɪə]","[ə'spaɪr]","vi.渴望",'vi.渴望；立志；追求','In his childhood, he aspire to become a great general.','在童年时代，他渴望成为一位伟大的将军。','The young girl aspired to be a scientist.','小女孩立志要做一名科学家。'}

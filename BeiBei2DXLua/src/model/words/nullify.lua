@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nullify"]={"nullify","['nʌlɪfaɪ]","['nʌlɪ'fai]","v.使无效",'v.使无效,废弃,取消','The budget cuts ||nullified|| all plans.','预算的削减使所有计划都泡汤了。','This, of course, would nullify the effect of the move and merely accelerate inflation.','这毫无疑问会使该举措完全失效，而仅仅只是加速通货膨胀。'}

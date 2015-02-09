@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["persevere"]={"persevere","[pɜːsɪ'vɪə]","[,pɝsə'vɪr]","v.坚持",'v.坚持,孜孜不倦,不屈不挠','When things get difficult, you just have to grit your teeth and persevere.','遇到困难只需咬紧牙关坚持下去.','If you persevere with work, you\'ll succeed in the end.','你如果把工作坚持下去，最终会取得成功的。'}

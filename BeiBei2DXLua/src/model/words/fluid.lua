@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fluid"]={"fluid","['fluːɪd]","['fluɪd]","adj.流畅优美的",'adj.流畅优美的,流体的,流动的,不稳定的|||n.流体,液体','Air is a fluid but not a liquid, while water is both a fluid and a liquid.','空气是流体不是液体, 水是流体也是液体.','Did the cleaning fluid work (on that stain)? ie Did it remove it?','这种洗涤剂（对那块污斑）管用吗?'}

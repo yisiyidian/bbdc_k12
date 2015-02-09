@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exclusively"]={"exclusively","[ɪk'skluːsɪvlɪ]","[ɪk'sklʊsɪvli]","adv.排他地",'adv.排他地(独占地,专门地,仅仅,只)','This room is exclusively for women.','这个房间是供妇女专用的。','The star has a ski slope reserved exclusively for her.','这位明星有一个专门留给她的滑雪场地'}

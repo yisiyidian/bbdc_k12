@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fix"]={"fix","[fɪks]","[fɪks]","vt.&vi.修理",'vt.&vi.使...固定,修理,准备|||n.困境,(船只、飞机等的)定方位,贿赂','He fixed up the cottage before they moved in.','他把农舍修整好，他们才搬进去。','My watch has stopped it needs fixing.','我的表停了－－需要修理了。'}

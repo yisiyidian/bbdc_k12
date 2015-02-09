@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["windy"]={"windy","['wɪndɪ]","['wɪndi]","adj.有风的",'adj.有风的,多风的','It\'s been windy all morning.','整个早上都有风。','We can see numberless grains of sand in a windy day.','在风天，我们能看到无数沙粒。'}

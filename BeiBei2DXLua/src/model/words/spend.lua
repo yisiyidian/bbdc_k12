@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spend"]={"spend","[spend]","[spɛnd]","v.花费",'v.(spent,spent)花费,浪费,度过','How do you spend your spare time?','你业余时间怎么打发？','We ||spent|| many hours in a pleasant conversation.','我们畅谈了好几个小时。'}

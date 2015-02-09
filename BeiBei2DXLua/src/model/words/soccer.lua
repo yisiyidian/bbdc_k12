@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soccer"]={"soccer","['sɒkə]","['sɑkɚ]","n.英式足球",'n.英式足球','In soccer, only the goal-keeper may play the ball with his hands.','在足球运动中只有守门员可以用手触球.','The Government intends to clamp down on soccer hooliganism.','政府拟采取措施严禁在足球比赛中闹事。'}

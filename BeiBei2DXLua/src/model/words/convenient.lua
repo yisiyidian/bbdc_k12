@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["convenient"]={"convenient","[kən'viːnɪənt]","[kən'vinɪənt]","adj.方便的",'adj.方便的','Living in the big city is convenient.','住在大城市是方便的。','Gruel is convenient to make in the morning for breakfast.','吃早饭时，做稀粥是很方便的。'}

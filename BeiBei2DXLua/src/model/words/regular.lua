@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regular"]={"regular","['regjʊlə]","['rɛgjəlɚ]","adj.有规律的",'adj.有规律的,有规则的,整齐的,正规的','His pulse is not very regular.','他的脉搏不很规则。','I am a regular reader of this newspaper.','我是这份报纸的长期读者。'}

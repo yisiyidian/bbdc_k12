@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["altitude"]={"altitude","['æltɪtjuːd]","['æltɪtud]","n.高度",'n.高度,海拔,高地','Some people develop altitude sickness when climbing high mountains.','有些人在爬高山时会发生高山反应。','At this altitude you often get strong winds.','在这一高度，经常有大风。'}

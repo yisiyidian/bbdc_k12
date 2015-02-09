@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drudgery"]={"drudgery","['drʌdʒərɪ]","['drʌdʒəri]","n.苦差事",'n.苦差事,苦工','I am afraid that I shall find it drudgery to teach music to beginner.','我恐怕会觉得教初学者音乐是个单调沉闷的工作。','Life  can be drudgery, or it can be play.','生活可以是一种苦差，也可以是一种娱乐。'}

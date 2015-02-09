@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["composition"]={"composition","[kɒmpə'zɪʃ(ə)n]","[,kɑmpə'zɪʃən]","n.作文",'n.作文,著作,组织,合成物，成份','You\'ve made several grammatical mistakes in the composition.','你的作文中犯了几处语法错误。','Your composition contains too many mistakes.','你的作文错误太多。'}

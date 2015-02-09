@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whole"]={"whole","[həʊl]","[hol]","adj.整个的",'adj.整个的,完全的,未受损的,(人)全面发展的|||n.全部,通常情况|||adv.完全地,统一地','I just threw the whole caboodle in the back of the car.','我把所有东西都扔到汽车後座上去了。','The whole country was anxious for peace.','全国上下都渴望和平。'}

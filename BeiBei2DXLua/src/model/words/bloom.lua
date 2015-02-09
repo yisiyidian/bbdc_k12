@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bloom"]={"bloom","[bluːm]","[blum]","n.花",'n.花,钢块,兴旺|||vt.使...开花|||vi.开花,变得健康','Daffodils and crocuses bloom in the spring.','水仙花和番红花在春天开放。','The roses are blooming!','玫瑰花正在盛开。'}

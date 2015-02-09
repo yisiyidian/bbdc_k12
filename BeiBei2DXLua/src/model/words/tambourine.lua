@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tambourine"]={"tambourine","[,tæmbə'riːn]","[,tæmbə'rin]","n.小手鼓",'n.小手鼓','It had a tambourine in its hand.','它的手上拿着一个铃鼓','small hand drum similar to a tambourine formerly carried by itinerant jugglers.','由流浪艺人携带的形状像以前的小手鼓的一种小手鼓'}

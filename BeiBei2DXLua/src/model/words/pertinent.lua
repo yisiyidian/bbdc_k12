@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pertinent"]={"pertinent","['pɜːtɪnənt]","['pɝtnənt]","adj.相关的",'adj.相关的,中肯的,切题的','The biographer will be seized of all pertinent papers and correspondence.','这位传记作者将掌握全部有关文件和信件。','The expert made some pertinent comments on the scheme.','那专家对规划提出了一些中肯的意见。'}

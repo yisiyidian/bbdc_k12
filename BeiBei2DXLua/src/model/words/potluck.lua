@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potluck"]={"potluck","['pɒt'lʌk]","[pɑt'lʌk]","n.便饭",'n.便饭|||每人自带一个菜的家庭聚会','Shall we go out for dinner tonight? Or would you rather stay home and take potluck?','咱们今晚是到外边去吃饭呢？你还是愿意留在家里凑合着吃顿便饭？','If you don\'t mind, please come and take potluck with us.','如果你不介意，请过来和我们一道吃点便饭吧。'}

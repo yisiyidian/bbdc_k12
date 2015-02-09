@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ineluctable"]={"ineluctable","[,ɪnɪ'lʌktəb(ə)l]","[,ɪnɪ'lʌktəbl]","adj.难免的",'adj.难免的,不能逃避的','The onward march of globalisation is, of course, not ineluctable .','当然，全球化进程并不是不可阻挡的。','Aging is ineluctable.','岁月不饶人。'}

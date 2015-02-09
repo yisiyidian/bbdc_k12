@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["onset"]={"onset","['ɒnset]","['ɑnsɛt]","n.攻击",'n.攻击,进攻,肇端','The drug must be taken from the onset of the infection.','这种药必须在感染的最初期就开始服用.','Our troops withstood the onset of the enemy.','我们的部队抵挡住了敌人的进攻.'}

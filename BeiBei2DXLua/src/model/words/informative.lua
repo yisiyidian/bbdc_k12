@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["informative"]={"informative","[ɪn'fɔːmətɪv]","[ɪn'fɔrmətɪv]","adj.情报的",'adj.情报的,使知道消息的,见闻广博的','The adverts are not very informative.','这些广告并没有包含太多有用信息','The informative asides about rural life make this wine guide rather special.','这些有关乡村生活的知识性解说资料使这种酒的广告词颇具特色.'}

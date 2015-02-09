@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exude"]={"exude","[ɪg'zjuːd; eg-]","[ɪɡ'zud]","v.流出",'v.流出,渗出','Water exude through the holes on the wall.','水从墙洞里渗出来。','The hot sun made him exude sweat.','烈日晒得他汗流浃背。'}

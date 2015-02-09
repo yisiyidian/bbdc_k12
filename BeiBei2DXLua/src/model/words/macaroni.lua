@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["macaroni"]={"macaroni","[,mækə'rəʊnɪ]","[,mækə'roni]","n.通心粉",'n.通心粉','Here you can see two workers who, between them, have just finished cutting three cart-loads of golden brown macaroni stalks.','这里您可以看到两名工人, 他们刚刚割好三大马车金黄色的通心粉小麦杆。','I like macaroni .','我喜欢吃通心粉。'}

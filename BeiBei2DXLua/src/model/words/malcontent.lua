@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malcontent"]={"malcontent","['mælkəntent]","['mælkən'tɛnt]","adj.抱不平的",'adj.抱不平的,不满的,不服的|||n.不满现状的人','The malcontent is gunning for his supervisor.','那个心怀不满的人在伺机加害他的上司。','The chaos was caused by a handful of malcontents.','混乱是由一小撮不满分子引起的。'}

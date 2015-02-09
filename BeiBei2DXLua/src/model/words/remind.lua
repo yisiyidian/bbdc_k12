@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remind"]={"remind","[rɪ'maɪnd]","[rɪ'maɪnd]","v.提醒",'v.提醒|||vt.使想起,提醒','He reminds me of his brother.','他使我想起了他的弟弟。','Please remind me to write to my mother tomorrow.','请提醒我明天给我母亲写信。'}

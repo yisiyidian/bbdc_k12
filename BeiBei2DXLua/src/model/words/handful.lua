@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["handful"]={"handful","['hæn(d)fʊl; -f(ə)l]","['hænd,fʊl]","n.少数",'n.少数,一把,棘手之事|||n.【非正式用语】难以控制的人或费劲的事','All the trouble is being caused by a handful of malcontents.','这些是非都是由一小撮不满分子搬弄的.','He dipped into the bag and brought out a handful of sample wheat.','他把手伸进袋里，取出一把小麦样品。'}

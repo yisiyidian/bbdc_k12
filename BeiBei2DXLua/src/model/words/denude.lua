@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["denude"]={"denude","[dɪ'njuːd]","[dɪ'nud]","v.脱去",'v.脱去,剥蚀,剥夺','Mining would pollute the lake and denude the forest.','采矿将会污染湖水并伐光森林。','The embassy is now denuded of all foreign and local staff.','这个使馆现在所有的外籍和本地员工都被解散了。'}

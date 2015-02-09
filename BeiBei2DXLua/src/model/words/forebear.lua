@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forebear"]={"forebear","['fɔːbeə]","['fɔrbɛr]","n.祖先",'n.祖先,祖宗|||=forbear','Our forebears came from eastern Europe.','我们的祖先是从东欧迁来的。','I\'ll come back to the land of my forebears.','我将回到祖先的土地。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["development"]={"development","[dɪ'veləpm(ə)nt]","[dɪ'vɛləpmənt]","n.发展",'n.发展,显影,开发区,开发','The town has been designated a development area.','该城市已被定为开发区。','The economic sanctions could not prevent the development of that country.','经济制裁不能阻碍那个国家的发展。'}

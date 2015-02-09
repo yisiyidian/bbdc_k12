@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ephemeral"]={"ephemeral","[ɪ'fem(ə)r(ə)l; -'fiːm-]","[ə'fɛmərəl]","adj.朝生暮死的",'adj.朝生暮死的,生命短暂的','Such novels came forward to enjoy ephemeral popularity only.','这样的小说只是昙花一现的东西而已。','The life of most insects are ephemeral.','多数昆虫的生命很短暂。'}

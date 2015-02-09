@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imperial"]={"imperial","[ɪm'pɪərɪəl]","[ɪm'pɪrɪəl]","adj.帝国(王)的",'adj.帝国(王)的,至尊的,特大的|||n.皇帝,女皇,马车车顶,特大号,特级品','The time has come to abandon the romantic view of ||Imperial|| history.','现在已经到了抛弃帝国历史的幻想的时候了。','Have you been to the ||Imperial|| Palace?','你去过故宫吗？'}

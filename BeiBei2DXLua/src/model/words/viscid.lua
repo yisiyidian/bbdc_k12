@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["viscid"]={"viscid","['vɪsɪd]","['vɪsɪd]","adj.粘质的",'adj.粘质的','Emma uses her viscid blue tag to hang her photos on the wall.','艾玛用蓝色的粘胶把她的相片贴在墙上。','Honey is a sweet yellowish or brownish viscid fluid produced by various bees from the nectar of flowers.','蜂蜜是各种蜜蜂从花蜜酿制而成的、黄色或褐色的甜味粘性液体。'}

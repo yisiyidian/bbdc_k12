@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["become"]={"become","[bɪ'kʌm]","[bɪ'kʌm]","vt.变得",'vt.变得|||vi.存在,变得,经历改变或发展','The meeting began to become clamorous.','会议开始变得喧哗了。','I was pleased to see how peaceable the horse had become.','我很高兴地看到这匹马变得这么温顺。'}

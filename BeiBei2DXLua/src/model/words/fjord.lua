@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fjord"]={"fjord","[fjɔːd; 'fiːɔːrd]","['fjɔrd]","n.峡湾(峭壁间的狭长的海湾)",'n.峡湾(峭壁间的狭长的海湾)','Howling ||Fjord||','凛风峡湾(wow)','The country’s main port is located at the head of fjord on Norway’s southern coast.','挪威的主要港口，位于挪威南海岸的海湾的上游。'}

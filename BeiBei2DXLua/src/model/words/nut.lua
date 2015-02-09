@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nut"]={"nut","[nʌt]","[nʌt]","n.坚果",'n.坚果,螺母,螺帽,难对付的人(事)|||vi.采坚果','She\'s a tough nut to crack.','她这个人不好说话。','Cashew nuts and walnuts are both nuts.','腰果和核桃都是坚果。'}

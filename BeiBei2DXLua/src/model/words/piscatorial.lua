@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["piscatorial"]={"piscatorial","[,pɪskə'tɔːrɪəl]","[,pɪskə'tɔriəl]","adj.渔业的",'adj.渔业的','They are living on piscatorial bussiness.','他们以打渔为生。','In south China, there are many piscatorial villages.','中国南方有许多渔村。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entire"]={"entire","[ɪn'taɪə; en-]","[ɪn'taɪɚ]","adj.全部的",'adj.全部的,完整的，同性质的，纯正的，全面的','The entire content of a book will be located on a single silicon chip.','整本书的内容只用一片硅芯片就可以装下。','The entire population was wiped out by the terrible disease.','所有的居民都被可怕的疾病夺去了生命。'}

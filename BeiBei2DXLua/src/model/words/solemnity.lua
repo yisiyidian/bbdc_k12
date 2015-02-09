@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solemnity"]={"solemnity","[sə'lemnɪtɪ]","[sə'lɛmnəti]","n.庄严",'n.庄严,庄重的仪式','The setting for this morning\'s signing ceremony matched the solemnity of the occasion.','今天上午签字仪式的布置与该场合的严肃性非常协调。','The monument was unveiled with great solemnity.','纪念碑的揭幕庄严而肃穆。'}

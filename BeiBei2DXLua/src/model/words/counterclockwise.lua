@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["counterclockwise"]={"counterclockwise","[kaʊntə'klɒkwaɪz]","['kaʊntɚ'klɑk'waɪz]","adj.反时针方向(的)",'adj.反时针方向(的)','The first moment is clockwise and the second is counterclockwise .','第一个力矩为顺时针方向，第二个力矩为反时针方向。','Please move counterclockwise in a circle!','请逆时针做圆周运动。'}

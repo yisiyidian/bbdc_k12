@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fill"]={"fill","[fɪl]","[fɪl]","vt.装满",'vt.装满,填充,弥漫,担任|||n.足量','The hall soon filled(with people).','大厅里不久就坐满了人。','Can you fill me in on what has been happening?','你能把发生的事情原原本本地告诉我吗？'}

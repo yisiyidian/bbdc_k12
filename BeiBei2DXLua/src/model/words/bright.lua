@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bright"]={"bright","[braɪt]","[braɪt]","adj.明亮的",'adj.明亮的,阳光的,生动的,聪明的|||adv.亮|||n.亮色','The bright moonlight showed the Taj Mahal in all its glory.','泰吉·玛哈尔陵在明亮的月光下显得光彩夺目。','What a nice bright day!','今天天气多晴朗！'}

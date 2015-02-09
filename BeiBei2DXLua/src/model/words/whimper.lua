@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whimper"]={"whimper","['wɪmpə]","['wɪmpɚ]","n.呜咽",'n.呜咽,啜泣,低声吠叫；悲嗥|||v.呜咽,啜泣,抽噎地哭','The little dog whimpered when I tried to bathe its wounds.','当我想给那小狗清洗伤口时它悲嗥起来。','Please don\'t leave me alone,\' he whimpered.','｀请不要丢下我不管,＇他抽抽搭搭地说.'}

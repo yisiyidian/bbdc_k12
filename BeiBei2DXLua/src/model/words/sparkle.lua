@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sparkle"]={"sparkle","['spɑːk(ə)l]","['spɑrkl]","n.闪耀",'n.闪耀,火花|||v.闪耀,冒火花','I like the sparkles in her eyes.','我喜欢她眼睛的光彩。','The wet grass sparkles in the sun.','太阳使湿草闪闪发光。'}

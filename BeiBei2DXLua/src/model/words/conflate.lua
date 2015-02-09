@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conflate"]={"conflate","[kən'fleɪt]","[ kən'fleit ]","vt.合并",'vt.合并','The results of the two experiments were conflated.','这两项实验的结果合并在一起了.','Can these two definitions be conflated, or must they be kept separate?','这两个定义可以合成一个呢, 还是必须分开?'}

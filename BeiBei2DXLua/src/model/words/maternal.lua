@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maternal"]={"maternal","[mə'tɜːn(ə)l]","[mə'tɝnl]","adj.母亲的",'adj.母亲的,母系的,母方的','Your maternal instincts go deeper than you think.','你的母性本能远比你想像的强。','On the maternal side his inheritance was a happy one.','他从母方接受的遗传是良好的。'}

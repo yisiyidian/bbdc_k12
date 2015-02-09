@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beat"]={"beat","[biːt]","[bit]","vt.&vi.打",'n.打,敲打声,拍子,独家报道,一会儿|||vt.&vi.打,打败','He\'s alive his heart is still beating.','他还活著－－心脏还在跳。','We heard the beat of the drum.','我们听到鼓声。'}

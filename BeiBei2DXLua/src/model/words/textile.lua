@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["textile"]={"textile","['tekstaɪl]","['tɛkstaɪl]","adj.纺织的",'adj.纺织的|||n.纺织品','I will appreciate it, if you can introduce me to some firms which deal with textile.','如果能承蒙您给我介绍几家经营纺织品的公司，我会十分感激的。','||Textile|| workers favoured protection because they feared an influx of cheap cloth.','纺织工人拥护贸易保护措施, 因为他们担心涌入廉价纺织品.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inefficient"]={"inefficient","[ɪnɪ'fɪʃ(ə)nt]","[,ɪnɪ'fɪʃnt]","adj.无效率的",'adj.无效率的,无能的，不称职的','He is inefficient and must be replaced.','他不称职, 必须撤换.','The government refuses to prop up inefficient industries.','政府拒绝补贴效益不佳的行业.'}

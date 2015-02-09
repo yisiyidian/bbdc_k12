@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["warlord"]={"warlord","['wɔːlɔːd]","['wɔrlɔrd]","n.军阀",'n.军阀','All these movements were suppressed by the warlord government.','所有这些运动都受到军阀政府的镇压。','he hated the warlord from the heart','他发自内心他演军阀'}

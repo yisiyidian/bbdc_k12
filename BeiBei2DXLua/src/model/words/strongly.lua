@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strongly"]={"strongly","['strɒŋlɪ]","['strɔŋli]","adv.强有力地",'adv.强有力地，坚固地,坚强地,激烈地','The president is strongly desirous that you should attend the meeting.','董事长极希望你能参加会议。','Quakers strongly oppose violence and war.','教友派信徒们强烈反对暴力和战争。'}

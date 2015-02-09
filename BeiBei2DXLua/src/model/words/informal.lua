@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["informal"]={"informal","[ɪn'fɔːm(ə)l]","[ɪn'fɔrml]","adj.非正式的",'adj.非正式的,不拘形式的','I meant it to be an informal discussion, but it didn\'t turn out as I intended (it should).','我本想随便商量一下, 结果事与愿违.','It is only an informal gathering.','这只是个非正式的集会。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pleasant"]={"pleasant","['plez(ə)nt]","['plɛznt]","adj.令人愉快的",'adj.令人愉快的,舒适的','The discussion resolved itself into a pleasant chat.','讨论变成了愉快的闲聊。','We spent many hours in a pleasant conversation.','我们畅谈了好几个小时。'}

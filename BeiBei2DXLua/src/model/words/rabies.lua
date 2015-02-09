@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rabies"]={"rabies","['reɪbiːz; -ɪz]","['rebiz]","n.狂犬病",'n.狂犬病','||Rabie|| is a serious disease which causes people and animals to go mad and die.','狂犬病是一种非常严重的疾病，会使人类和动物变得疯狂并死去。','Animals with rabies often froth at the mouth.','患狂犬病的动物常常口吐白沫。'}

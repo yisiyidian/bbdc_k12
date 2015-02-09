@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["competition"]={"competition","[kɒmpɪ'tɪʃ(ə)n]","[,kɑmpə'tɪʃən]","n.比赛",'n.比赛,竞争','The team were on excellent form throughout the whole competition.','这个队在整个比赛过程中一直处於极好的竞技状态。','a skating competition.','溜冰赛'}

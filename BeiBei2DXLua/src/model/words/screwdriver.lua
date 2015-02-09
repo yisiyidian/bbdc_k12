@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["screwdriver"]={"screwdriver","['skruːdraɪvə]","['skrʊ'draɪvɚ]","n.螺丝起子",'n.螺丝起子|||n.伏特加橙汁鸡尾酒','He took a screwdriver and teased out the remaining screws.','他拿出螺丝刀把其余的螺丝卸了下来.','Will you go and fetch me a screwdriver, please?','请你去给我拿把改锥来, 好吗?'}

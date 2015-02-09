@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obstruction"]={"obstruction","[əb'strʌkʃ(ə)n]","[ əb'strʌkʃən, ɔb- ]","n.障碍",'n.障碍,妨碍,闭塞','She had to have surgery to remove an obstruction from her throat.','为去除咽喉里的堵塞物,她不得不接受手术.','Your interference is an obstruction of justice.','你的干预阻碍了正义.'}

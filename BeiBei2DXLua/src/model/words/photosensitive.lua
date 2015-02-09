@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["photosensitive"]={"photosensitive","[fəʊtəʊ'sensɪtɪv]","[,foto'sɛnsətɪv]","adj.感光性的",'adj.感光性的','The eye is a complex and highly developed photosensitive organ.','眼是复杂而且高度精密的感光器官','This kind of plant has a good photosensitive.','这种植物有良好的感光性。'}

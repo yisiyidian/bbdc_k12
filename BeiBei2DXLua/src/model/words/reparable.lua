@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reparable"]={"reparable","['rep(ə)rəb(ə)l]","['rɛpərəbl]","adj.能补救的",'adj.能补救的,可挽回的','There is scarcely a hope that anything in his character or fortunes is reparable now.','要想他的性格或命运改变怕是没有希望的。','Her mistakes looked easily reparable in the light of her restored self-confidence .','她恢复了自信心以后，所犯的错误似乎也并非不可补救了。'}

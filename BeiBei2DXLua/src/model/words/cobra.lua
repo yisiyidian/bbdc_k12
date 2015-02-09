@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cobra"]={"cobra","['kəʊbrə; 'kɒbrə]","['kobrə]","n.眼镜蛇",'n.眼镜蛇','The cobra cast off its old skin.','这条眼镜蛇蜕了旧皮。','||Cobras|| are usually poisonous.','眼镜蛇通常是有毒的。'}

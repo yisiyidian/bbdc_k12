@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chapter"]={"chapter","['tʃæptə]","['tʃæptɚ]","n.章",'n.章,回,篇,牧师的例行会议,地方分会','Half-way through the chapter I realized I hadn\'t taken anything in.','这一章我看到一半才意识到我根本没看懂。','One of the funniest episodes in the book occurs in chapter 6.','书中最有趣的情节是在第6章。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chronology"]={"chronology","[krə'nɒlədʒɪ]","[krə'nɑlədʒi]","n.年代学",'n.年代学，年表','He is a professor on chronology','他是年代学方面的专家','I wrote a book about my grandparents according to chronology.','我根据年表写了一本关于我祖父母的书.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["characteristic"]={"characteristic","[kærəktə'rɪstɪk]","[,kærəktə'rɪstɪk]","n.特征",'adj.特有的,典型的|||n.特性,特征,特色','Her predominant characteristic is honesty.','她最为突出的特点是诚实。','Ambition is a characteristic of all successful businessmen.','雄心勃勃是所有成功生意人的共同特点。'}

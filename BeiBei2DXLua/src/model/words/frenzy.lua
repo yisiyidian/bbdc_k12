@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frenzy"]={"frenzy","['frenzɪ]","['frɛnzi]","n.狂暴",'n.狂暴,狂怒','The people were whipped up into a frenzy by the speaker.','人们听了演说人的话群情激奋.','She worked herself up into a frenzy because she thought she\'d miss her train.','她焦躁已极，因为她以为她会错过火车。'}

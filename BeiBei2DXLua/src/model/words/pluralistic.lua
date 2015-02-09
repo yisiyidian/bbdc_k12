@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pluralistic"]={"pluralistic","[plʊrə'lɪstɪk]","[ pluərə'listik ]","adj.兼管数个教堂的兼职的",'adj.兼管数个教堂的兼职的,多元论的','the idea that intelligence is a pluralistic quality that  varies in many dimensions among individuals','“智力具有多元性的理念...是因人而异的”','pluralistic','兼管数个教堂的兼职的,多元论的'}

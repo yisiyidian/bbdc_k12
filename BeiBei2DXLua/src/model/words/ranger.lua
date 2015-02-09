@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ranger"]={"ranger","['reɪn(d)ʒə]","['rendʒɚ]","n.守林人",'n.守林人,骑警,突击队员','||Ranger|| must be ready to deal with emergencies of all kinds.','国家公园管理员必须随时准备好处理各种紧急情况。','Bill Justice is a park ranger at the Carlsbad Caverns National Park.','比尔·贾斯蒂斯是卡尔斯巴德洞穴国家公园的管理员。'}

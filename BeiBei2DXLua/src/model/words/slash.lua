@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slash"]={"slash","[slæʃ]","[slæʃ]","vi.大幅度削减",'vi.大幅度削减|||vt.猛砍,尖锐抨击,大幅减少|||n.猛砍,斜线,长切口,衣衩','The government has slashed back(on) its spending.','那个政府已经大大削减了开支。','The blade slashed his leg open.','刀刃把他的腿划破了。'}

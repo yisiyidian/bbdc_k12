@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ascendancy"]={"ascendancy","[ə'send(ə)nsɪ]","[ə'sɛndənsi]","n.统治权",'n.统治权,支配力量','He has gained the ascendancy over all his main rivals.','他获得了压倒一切主要对手的优势。','Germany only awaits trade revival to gain an immense mercantile ascendancy','德国只等着贸易复苏以获取巨大的贸易优势。'}

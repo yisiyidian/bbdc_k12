@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["checkpoint"]={"checkpoint","['tʃekpɒɪnt]","['tʃɛkpɔɪnt]","n.检查站",'n.检查站','Vehicles are stopped at several checkpoints along the border.','汽车在边境上的几个检查站被停下','...a bomb explosion close to an army checkpoint.','…军队检查站附近的一次炸弹爆炸。'}

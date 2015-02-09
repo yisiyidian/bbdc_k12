@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["teach"]={"teach","[tiːtʃ]","[titʃ]","vt.教",'vt.教,教书,教导，教训|||vi.给予指导','I\'ll teach you to call me a liar!','你说我说谎, 我就要教训你!','I ||taught|| her to ride a bicycle.','我教她骑自行车。'}

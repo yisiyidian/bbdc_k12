@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unpaid"]={"unpaid","[ʌn'peɪd]","[,ʌn'ped]","adj.未付款的",'adj.未付款的','The salesmen is claiming for back payment of unpaid commission.','销售人员正在提出索取尚未支付的佣金的要求。','He\'s taken unpaid leave for a month.','他请了一个月的停薪假。'}

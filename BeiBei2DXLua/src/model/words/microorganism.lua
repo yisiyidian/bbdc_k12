@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["microorganism"]={"microorganism","[maɪkrəʊ'ɔːg(ə)nɪz(ə)m]","[,maɪkro'ɔrgən,ɪzəm]","n.微生物",'n.微生物','Have you ever watched microorganism under microscope?','你从显微镜下看过微生物吗？','They act at least a temporary block to DNA synthesis in microorganisms.','它们在微生物中至少对DNA合成起暂时性的阻止作用。'}

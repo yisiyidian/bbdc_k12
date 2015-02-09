@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invigorate"]={"invigorate","[ɪn'vɪgəreɪt]","[ɪn'vɪɡəret]","v.鼓舞",'v.鼓舞,激励|||vt.增添活力','Serving to invigorate; stimulating.','使兴奋的使人精力充沛的；使兴奋的','I feel invigorated by all this fresh air!','空气很清新, 我觉得精神焕发!'}

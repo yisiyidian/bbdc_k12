@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dispel"]={"dispel","[dɪ'spel]","[dɪ'spɛl]","v.驱散",'v.驱散,驱逐','The wind soon dispelled the fog.','风很快就把雾吹散了。','How can we dispel their doubts?','我们怎么才能消除他们的疑虑呢？'}

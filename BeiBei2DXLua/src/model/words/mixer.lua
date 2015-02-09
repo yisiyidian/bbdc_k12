@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mixer"]={"mixer","['mɪksə]","['mɪksɚ]","n.混合器",'n.混合器，混铁炉,混频器,混和者','She\'s outgoing and a good mixer.','她是一个杰出的爱交际的人','You can take the mixer apart to clean it.','你可以把搅拌器拆开来清洁.'}

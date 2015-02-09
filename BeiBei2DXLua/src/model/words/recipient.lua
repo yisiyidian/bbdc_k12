@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recipient"]={"recipient","[rɪ'sɪpɪənt]","[rɪ'sɪpɪənt]","n.接受者",'n.接受者,收信人','A suppressed immune system puts a transplant recipient at risk of other infections.','接受器官移植的病人免疫系统受到抑制后很可能会感染其他疾病。','This is a blend of elements of the invading and recipient cultures.','这是入侵文化和接受文化两种成分的融合。'}

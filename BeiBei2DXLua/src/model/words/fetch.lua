@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fetch"]={"fetch","[fetʃ]","[fɛtʃ]","vt.取来",'n.取得|||vt.取来,带来,航行到达|||vi.取回,兜圈子','This house should fetch a good price.','这所房子应该卖个好价钱。','She fetched him a terrific slap in the face.','她狠狠地给了他一记耳光。'}

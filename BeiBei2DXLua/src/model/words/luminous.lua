@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["luminous"]={"luminous","['luːmɪnəs]","['lʊmənəs]","adj.发光的",'adj.发光的,发亮的，清楚的，明白易懂的','The luminous dial on the clock showed five minutes to seven.','时钟上发光的表盘显示当时7点差5分。','luminous paint','安全漆，晚上能发光的那种漆，用于safty clothes, road signs.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drawing"]={"drawing","['drɔː(r)ɪŋ]","['drɔɪŋ]","n.图画",'n.图画,绘图技巧,素描','He was fond of drawing when he was a child.','他还是个孩子时就喜欢画画。','The boys amuse themselves by drawing caricatures of their teacher.','男孩子们以画老师的漫画取乐。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["location"]={"location","[lə(ʊ)'keɪʃ(ə)n]","[lo'keʃən]","n.地点",'n.地点,位置','It is a suitable location for a new school.','那是建一所新学校的合适地点.','He indicated the location of the Persian Gulf with a pen on the map.','他用一支笔在地图上标出了波斯湾的位置。'}

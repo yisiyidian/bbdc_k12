@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defence"]={"defence","[dɪ'fens]","[ di'fens ]","n.防务",'n.防务,防御,答辩','She plays in defence.','她打後卫.','The defence argue/argues that the evidence is weak.','辩护律师提出理由认为证据不充分.'}

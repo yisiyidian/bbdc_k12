@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vernacular"]={"vernacular","[və'nækjʊlə]","[vɚ'nækjəlɚ]","n.本地话",'n.本地话,方言，（动植物的）俗名|||adj.地方的,地方语的，白话的','There are many strange words in the vernacular of the lawyers.','律师的术语中颇有些怪字。','To use the vernacular of the period, Peter was square.','用那时的土话讲，彼得是个老古板。'}

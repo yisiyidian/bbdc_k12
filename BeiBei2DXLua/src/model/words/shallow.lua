@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shallow"]={"shallow","['ʃæləʊ]","['ʃælo]","adj.浅的",'adj.浅的,肤浅的,浅显易懂的|||n.(pl.)浅滩,浅处|||v.变浅','The rain ran in shallow runnels alongside the path.','雨水流进路边的小河沟里.','The small shallow boat is called a cockle.','那种浅底小船叫小舟。'}

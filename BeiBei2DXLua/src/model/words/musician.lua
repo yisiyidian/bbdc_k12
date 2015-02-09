@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["musician"]={"musician","[mjuː'zɪʃ(ə)n]","[mjʊ'zɪʃən]","n.音乐家",'n.音乐家，作曲家','She is a talented musician as well as being a photographer.','她不但是摄影师还是个天才的音乐家.','A famous musician, Tom\'s father teaches me music.','汤姆的父亲是位知名的音乐家，他教我音乐。'}

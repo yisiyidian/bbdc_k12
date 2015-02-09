@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expiate"]={"expiate","['ekspɪeɪt]","['ɛkspɪet]","vt.赎罪",'vt.赎罪；补偿|||vi.赎罪；补偿','He hoped to expiate his guilt over leaving her.','他希望补偿抛弃她的罪过。','God is equal, and one will expiate all his or her sin.','上帝是公平的，罪恶早晚是要赎的。'}

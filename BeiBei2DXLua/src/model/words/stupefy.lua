@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stupefy"]={"stupefy","['stjuːpɪfaɪ]","['stupɪfaɪ]","v.(使)茫然",'v.(使)茫然,失去知觉','He was ||stupefied|| with alcohol.','他喝得神志不清了。','Temptation ||stupefies|| him.','诱惑令他辨不清是非。'}

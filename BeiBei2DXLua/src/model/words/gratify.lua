@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gratify"]={"gratify","['grætɪfaɪ]","['grætə'fai]","v.使满足",'v.使满足，使高兴|||v.酬劳，回报','Now that she has a job in France she can gratify her desire to see Europe.','既然现在她在法国工作，那就可以满足她游览欧洲的愿望了。','His achievement ||gratified|| his father.','他的成就让他的父亲感到欣慰。'}

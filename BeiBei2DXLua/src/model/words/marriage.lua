@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["marriage"]={"marriage","['mærɪdʒ]","['mærɪdʒ]","n.婚姻",'n.婚姻,结婚','Her father reluctantly consented to the marriage.','她父亲勉强答应了这桩婚姻。','His character seems to have undergone a complete transformation since his marriage.','他结婚之后性格判若两人。'}

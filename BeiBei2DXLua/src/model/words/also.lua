@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["also"]={"also","['ɔːlsəʊ]","['ɔlso]","adv.也",'adv.也,同样地,而且','We should also take account of difficulties.','我们也应该考虑到困难。','London was also called the modern Babylon.','伦敦也被称为现代巴比伦。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["philosopher"]={"philosopher","[fɪ'lɒsəfə]","[fə'lɑsəfɚ]","n.哲学家",'n.哲学家，思想家，达观者','A married philosopher is necessarily comic.','已婚的哲学家必然是喜剧性的。','According to some philosopher, everything in existence is reasonable.','某位哲学家认为, 存在的事物都是合理的。'}

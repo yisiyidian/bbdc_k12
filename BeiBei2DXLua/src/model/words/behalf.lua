@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["behalf"]={"behalf","[bɪ'hɑːf]","[bɪ'hæf]","n.代表",'n.代表；利益','The agent spoke on behalf of his principal.','代理人代表他的委托人说话。','I made all these troubles in your behalf.','我是为了你才找这么多麻烦的。'}

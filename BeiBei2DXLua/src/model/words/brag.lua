@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brag"]={"brag","[bræg]","[ bræɡ ]","n.吹牛的人",'n.吹牛的人,自夸,傲慢的态度|||vt.&vi.吹牛,炫耀|||adj.一流的,特别好的','He\'s been bragging about his new car.','他一直夸他的新汽车。','Don\'t brag about what you\'re going to do . Get something done.','先别吹, 做出具体成绩来再说.'}

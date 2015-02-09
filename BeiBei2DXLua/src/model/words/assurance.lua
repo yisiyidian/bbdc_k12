@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assurance"]={"assurance","[ə'ʃʊər(ə)ns]","[ə'ʃʊrəns]","n.保证",'n.保证,确信,肯定,自信,(人寿)保险','He made an unctuous assurance.','他做了个虚请假意的承诺。','They were waiting with assurance for me to discover the truth for myself.','他们自信地等待我自己发现事实真相。'}

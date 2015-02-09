@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interdependent"]={"interdependent","[ɪntədɪ'pendənt]","[,ɪntɚdɪ'pɛndənt]","adj.相互依赖的",'adj.相互依赖的,互助的','All nations are interdependent in the modern world.','当今世界上所有国家都是互相依存的.','We live in an increasingly interdependent world.','我们生活在一个越来越相互依赖的世界'}

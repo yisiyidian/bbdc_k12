@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["license"]={"license","['laɪsns]","['laɪsns]","n.许可证",'n.批准,许可证,特许|||vt.允许,特许','He can obtain a driver\'s license now.','他现在可以获得驾驶执照了。','He has taken out a driving license.','他已领驾驶执照了。'}

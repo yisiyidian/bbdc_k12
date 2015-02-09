@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["saga"]={"saga","['sɑːgə]","['sɑɡə]","n.传说",'n.传说,英雄事迹,冒险故事','The novelist had issued many saga novels.','那个小说家已经发表了很多长篇小说。','This is a 600 page saga about 18th century slavery.','这是一篇关于18世纪奴隶制的总计600页的长篇记述。'}

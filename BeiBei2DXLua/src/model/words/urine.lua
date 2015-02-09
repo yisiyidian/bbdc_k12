@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["urine"]={"urine","['jʊərɪn; -raɪn]","['jʊrən]","n.尿",'n.尿','The presence of hemoglobin in the urine.','血红蛋白尿尿液中出现血红蛋白','The kidneys secrete urine.','肾脏是分泌尿液的器官。'}

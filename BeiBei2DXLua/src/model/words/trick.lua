@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trick"]={"trick","[trɪk]","[trɪk]","n.把戏",'n.诡计，欺诈，把戏，诀窍|||vt.戏弄,欺骗|||adj.有诡计的，有阴谋的','Her partner tried to trick her out of her share.','她的合伙人企图骗走她的股份。','The police tricked him into making a confession.','警察哄骗他作了招认。'}

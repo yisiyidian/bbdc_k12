@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expend"]={"expend","[ɪk'spend; ek-]","[ɪk'spɛnd]","v.花费",'v.花费,消耗,支出','He lived high and expended largely.','他生活讲究，花费很大。','The soldiers expended all their ammunition in that fight.','士兵在那场战斗中用尽了所有的弹药。'}

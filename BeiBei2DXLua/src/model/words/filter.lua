@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["filter"]={"filter","['fɪltə]","['fɪltɚ]","n.滤波器",'n.筛选,滤波器,过滤器,滤色镜|||vt.&vi.过滤,渗透|||[计算机]过滤','You need to filter the drinking water.','你需要把饮用水过滤。','The teacher gave each of us a piece of filter paper before doing the experiment.','做试验前，老师给我们每个人发了一张滤纸。'}

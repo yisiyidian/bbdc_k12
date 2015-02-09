@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deity"]={"deity","['deɪɪtɪ; 'diːɪ-]","['deəti]","n.神",'n.神,神性|||Deity|||n.（前加the）上帝','The evil deity has not yet revived completely.','那邪恶的神他还没有苏醒。','He is worshipped as deity.','他被敬若神明。'}

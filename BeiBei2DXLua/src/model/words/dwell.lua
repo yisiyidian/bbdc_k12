@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dwell"]={"dwell","[dwel]","[dwɛl]","vi.居住",'vi.居住,存在,冥想,详细阐述','Don\'t dwell on past failures.','不要老是想着过去的失败。','How his words dwell in my mind!','他的一席话在我的脑海里经久难忘。'}

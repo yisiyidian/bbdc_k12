@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peculiarity"]={"peculiarity","[pɪ,kjuːlɪ'ærɪtɪ]","[pɪ'kjʊlɪ'ærəti]","n.特质",'n.特质,特性,怪癖,古怪','She has ||peculiarities|| on diet.','她有饮食方面的怪癖。','Pouches are a peculiarity of marsupials.','腹袋是有袋动物的特色.'}

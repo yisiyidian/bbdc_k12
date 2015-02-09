@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crab"]={"crab","[kræb]","[kræb]","n.蟹",'n.蟹|||v.捕蟹，使横行|||n.爱争吵的人|||n.[植]山楂子|||v.批评，抱怨','A crab louse.','毛虱，阴虱','A crab burger, a tofu burger.','蟹肉三明治；豆腐三明治'}

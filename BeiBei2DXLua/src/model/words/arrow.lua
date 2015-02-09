@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arrow"]={"arrow","['ærəʊ]","['æro]","n.箭",'n.箭，箭头|||vi.快且笔直的前进有如穿梭的箭','The bow twanged and the arrow whistled through the air.','那张弓发出“嘣”的一声，箭随之呼啸而去。','The arrow flew straight and true to its mark.','那箭不偏不斜地直朝目标飞去。'}

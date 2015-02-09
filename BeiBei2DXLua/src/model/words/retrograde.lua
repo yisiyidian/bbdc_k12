@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retrograde"]={"retrograde","['retrəgreɪd]","['rɛtrəɡred]","adj.后退的",'adj.后退的,倒退的,退步的|||vi.倒退,退步,逆行|||adv.后退地','The Prime Minister described transferring education to central government funding as "a retrograde step".','首相称将教育投入转由中央政府拨款是“一种倒退”。','The closure of the factory is a retrograde step.','工厂的关闭是一大退步。'}

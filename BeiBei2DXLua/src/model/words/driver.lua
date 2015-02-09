@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["driver"]={"driver","['draɪvə]","['draɪvɚ]","n.驾驶员",'n.驾驶员,司机','The driver was not to blame for the accident.','这次事故怪不着司机。','The driver was weaving his way through the traffic.','司机在车辆和人流中曲折前进。'}

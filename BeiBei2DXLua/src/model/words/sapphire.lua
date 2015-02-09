@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sapphire"]={"sapphire","['sæfaɪə]","['sæfaɪɚ]","n.蓝宝石(青色)",'n.蓝宝石(青色)|||adj.蓝宝石色的(青色的)','She had the sapphire set in a gold ring.','她把那枚蓝宝石镶在金戒指上了.','Her sapphire necklace attracted everyone\'s attention.','她的蓝宝石项链吸引了每个人的注意。'}

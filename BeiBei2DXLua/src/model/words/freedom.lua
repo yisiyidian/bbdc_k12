@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["freedom"]={"freedom","['friːdəm]","['fridəm]","n.自由",'n.自由','The country\'s constitution embodies the ideals of freedom and equality.','这个国家的宪法体现了自由和平等的理想。','Bondmen have no freedom.','奴隶们没有自由。'}

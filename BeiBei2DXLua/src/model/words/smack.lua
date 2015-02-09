@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smack"]={"smack","[smæk]","[smæk]","n滋味",'n滋味,风味,少量,拍击|||v.带有...风味,用掌击,拍打','I\'d a good mind to smack him for being so rude!','他这样粗野，我真想揍他。','Put that down or else I\'ll smack you.','把它放下，不然我就揍你。'}

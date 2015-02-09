@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ministry"]={"ministry","['mɪnɪstrɪ]","['mɪnɪstri]","n.(政府的)部",'n.(政府的)部,(全体)牧师,牧师工作','The ||Ministry|| of Transport made a searching enquiry to discover the cause of the plane crash.','交通部进行了一次彻底的调查，以查明飞机坠毁的原因。','She\'s on attachment to the ||Ministry|| of Defense.','她现在隶属于国防部。'}

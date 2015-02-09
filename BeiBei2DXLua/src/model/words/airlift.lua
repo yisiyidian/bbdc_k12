@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["airlift"]={"airlift","['eəlɪft]","['ɛrlɪft]","n.空运",'n.空运,空中补给线|||v.空运','Civilians trapped in the beleaguered city have been airlifted to safety.','被围困在城里的老百姓已空运到安全地区.','President Garcia has ordered an airlift of food, medicines and blankets.','加西亚总统已经下令空运食品、药品和毛毯。'}

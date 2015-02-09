@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["standstill"]={"standstill","['stæn(d)stɪl]","['stændstɪl]","n.停顿",'n.停顿','A sudden shower of rain brought our horses to a complete standstill.','突然来一了阵雨，使我们的马完全停了下来。','Bob rode his horse to a standstill.','鲍勃把马骑得走不动了。'}

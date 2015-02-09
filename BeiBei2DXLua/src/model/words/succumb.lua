@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["succumb"]={"succumb","[sə'kʌm]","[sə'kʌm]","v.屈从",'v.屈从,死','The city succumbed after only a short siege.','该城受围困仅很短时间就不再抵抗了。','In spite of his efforts, he at last succumbed to the terrible fever and died in the hospital.','尽管他竭力避免，还是染上了那可怕的热病，死在了医院里。'}

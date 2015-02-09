@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jostle"]={"jostle","['dʒɒs(ə)l]","['dʒɑsl]","v.&n.推",'v.&n.推,撞,挤(人)|||vt.推撞','You get 2,000 people ||jostling|| each other and bumping into furniture.','2,000个人互相推推搡搡，撞在家具上。','We spent an hour ||jostling|| with the crowds as we did our shopping.','我们购物的时候，花了1个钟头在人群中挤来挤去。'}

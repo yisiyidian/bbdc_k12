@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frigid"]={"frigid","['frɪdʒɪd]","['frɪdʒɪd]","adj.寒冷的",'adj.寒冷的,死板的，(指女性)性冷淡的','His frigid glance made me afraid.','他那冷淡的目光让我害怕。','She returned his smile with a frigid glance.','她对他的微笑报以冷冷的一瞥。'}

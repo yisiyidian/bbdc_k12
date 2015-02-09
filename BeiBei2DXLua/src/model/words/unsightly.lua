@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unsightly"]={"unsightly","[ʌn'saɪtlɪ]","[ʌn'saɪtli]","adj.难看的(丑的)",'adj.难看的(丑的)','My mother has had unsightly varicose veins for years.','我母亲多年来一直患有难看的静脉曲张。','||Unsightly|| moles can be removed surgically.','不雅观的痣可以手术去除。'}

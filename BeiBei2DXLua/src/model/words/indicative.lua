@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indicative"]={"indicative","[ɪn'dɪkətɪv]","[ɪn'dɪkətɪv]","adj.指示的",'adj.指示的,象徵的,表示...的','His presence is indicative of his wish to help.','他的出现表明他愿意提供帮助。','Their failure to act is indicative of their lack of interest in the problem.','他们没有采取行动，表明他们对这个问题不感兴趣。'}

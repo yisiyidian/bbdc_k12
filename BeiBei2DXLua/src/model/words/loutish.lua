@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loutish"]={"loutish","['lautiʃ]","[ 'lautiʃ ]","adj.粗野的",'adj.粗野的,无礼的','I was appalled by the loutish behaviour.','这种粗野行为令我大为震惊。','he had a scruffy appearance and loutish manners','他德文模样邋遢，举止粗鲁。'}

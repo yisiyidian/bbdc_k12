@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scratch"]={"scratch","[skrætʃ]","[skrætʃ]","vt.&vi.抓",'n.抓痕,抓的声音,乱写|||vt.&vi.搔痒,抓,抹掉|||adj.使皮肤发痒的，潦草的','That cat scratches.','那只猫会抓伤人。','The famine is so bad, aid can only scratch the surface.','饥荒十分严重，援助也只是杯水车薪。'}

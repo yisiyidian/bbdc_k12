@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["block"]={"block","[blɒk]","[blɑk]","n.块",'n.块；街区；[英]大楼，大厦；障碍物，阻碍|||vt.阻止；阻塞；限制','She chopped the block of wood in two with a single blow.','她一斧头把木块劈成两半。','The heating system in this block doesn\'t work well.','这个街区的供暖系统不太好用。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["modal"]={"modal","['məʊd(ə)l]","['modl]","adj.模态的",'adj.模态的','In grammar, a modal or a modal auxiliary is a word such as `can\' or `would\' which is used with a main verb to express ideas such as possibility, intention, or necessity. (TECHNICAL)','.','modal verb','情态动词'}

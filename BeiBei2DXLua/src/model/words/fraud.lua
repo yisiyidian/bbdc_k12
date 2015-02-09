@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fraud"]={"fraud","[frɔːd]","[frɔd]","n.骗子",'n.骗子,欺骗,诈欺','She was put on trial for fraud.','她因涉及诈骗罪而受审.','He combed through the files searching for evidence of fraud.','他详查档案，寻找欺诈行为的证据。'}

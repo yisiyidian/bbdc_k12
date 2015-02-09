@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ulcerate"]={"ulcerate","['ʌlsəreɪt]","['ʌlsəret]","v.溃烂",'v.溃烂,生恶疮','Aspirin can ulcerate the stomach lining.','阿司匹林能造成胃壁溃疡.','Thank God, his wound didn\'t ulcerate, and it\'s venail.','溃烂'}

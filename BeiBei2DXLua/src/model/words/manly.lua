@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manly"]={"manly","['mænlɪ]","['mænli]","adj.像男人的",'adj.像男人的,强壮的,适于男人的|||adv.男子般地','Football is a manly sport.','足球是一项激烈的体育运动。','He looks very manly in his uniform.','他穿着制服十分精神。'}

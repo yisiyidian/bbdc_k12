@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outfit"]={"outfit","['aʊtfɪt]","['aʊtfɪt]","n.用具",'n.用具,配备,机构,全套服装|||vt.配备,供应|||vi.得到装备','She was prancing along in her new outfit.','她穿著全套新衣服神气活现地走著.','Such an outfit would be a useful addition to my wardrobe.','在我的服装中添置这一套会有用的.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pierce"]={"pierce","[pɪəs]","[pɪrs]","v.刺穿",'v.刺穿,穿透,洞悉','Her shrieks pierced the air.','她尖锐的叫声直刺云天。','The needle pierced her finger.','针刺进了她的手指。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inflate"]={"inflate","[ɪn'fleɪt]","[ɪn'flet]","v.使膨胀",'v.使膨胀,使得意,使通货膨胀|||[计算机]使膨胀','With a supply of compressed air the large balloon inflated in a matter of seconds.','大气球注入压缩空气後, 几秒钟就充足了气.','Air bags were designed to inflate rapidly in an accident.','设计气囊是为了在事故中快速地充气.'}

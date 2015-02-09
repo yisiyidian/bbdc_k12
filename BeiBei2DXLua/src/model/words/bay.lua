@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bay"]={"bay","[beɪ]","[be]","adj.红棕色",'adj.红棕色|||n.红棕色,隔间,配电间,犬吠,围困,海湾,月桂树,名望|||vi.嗥叫|||vt.吼叫着追赶或进攻,哀号,把...围困住','We can see a magical view over the calm water of the bay from our window.','从我们的窗户里可以看到海湾里平静海水的迷人景色。','He painted the picturesque fishing village in the bay.','他画了海湾里一个风景如画的渔村。'}

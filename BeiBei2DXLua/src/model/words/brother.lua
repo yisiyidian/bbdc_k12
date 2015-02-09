@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brother"]={"brother","['brʌðə]","['brʌðɚ]","n.兄弟",'n.兄弟,同胞,同事,教友','She gaped at the tall man, not believing that he was her younger brother.','她张嘴呆看着那个高个子，不相信他就是她的弟弟。','I always confounded him with his twin brother.','我总分不清他和他的孪生兄弟。'}

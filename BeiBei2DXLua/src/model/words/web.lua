@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["web"]={"web","[web]","[wɛb]","n.网",'n.网','He was enmeshed in a web of deceit and lies.','他陷入坑蒙拐骗的圈套.','I caught in a web of lies.','我陷入了谎言的罗网'}

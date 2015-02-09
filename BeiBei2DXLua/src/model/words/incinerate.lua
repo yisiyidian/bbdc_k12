@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incinerate"]={"incinerate","[ɪn'sɪnəreɪt]","[ in'sinəreit ]","v.焚化",'v.焚化,毁弃|||vi.把...烧成灰,烧弃|||vt.焚化(废物),火化','They were ||incinerating|| hazardous waste without a license.','他们没有许可就把危险废弃物烧成灰烬。','Do not incinerate or mutilate batteries, may burst or release toxic material.','不要燃烧或毁坏电池,可能导致有毒气体释放或爆炸.'}

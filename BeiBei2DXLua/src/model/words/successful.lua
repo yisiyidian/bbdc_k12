@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["successful"]={"successful","[sək'sesfʊl; -f(ə)l]","[sək'sɛsfl]","adj.成功的",'adj.成功的,达到目的的','She made a successful debut.','她初次登台获得成功。','He is a successful character actor.','他是一个成功的性格演员。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bless"]={"bless","[bles]","[blɛs]","vt.赐福",'vt.赐福,祈佑,称颂上帝,使神圣,赋予','The priest blessed the ship before it left port.','牧师在船离港之前为其祝福。','God bless you!','愿上帝保佑你！'}

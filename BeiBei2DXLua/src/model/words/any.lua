@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["any"]={"any","['enɪ]","['ɛni]","adj.任何的",'adj.任何的|||adv.稍|||det.一些|||prep.无论哪个|||pron.任何','I wonder whether Mr Black has any roses in his garden.','我不知道布莱克先生的花园里有没有玫瑰。','Give me a pen; any pen will do.','给我一枝钢笔－－哪枝都行。'}

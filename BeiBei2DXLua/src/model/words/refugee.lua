@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["refugee"]={"refugee","[refjʊ'dʒiː]","['rɛfjʊdʒi]","n.难民",'n.难民,流亡者','The television picture bring home to us all the plight of the refugee.','我们从电视上知道了难民所处的一切困境。','There are many refugees from that country.','有许多来自那个国家的难民。'}

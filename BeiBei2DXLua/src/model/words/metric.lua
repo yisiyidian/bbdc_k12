@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["metric"]={"metric","['metrɪk]","['mɛtrɪk]","adj.公制的",'adj.公制的,米制的,十进制的|||n.度量标准,公制,米制,十进制','The price quoted was for the small lot you named,5 metric tons; we can offer you10% off for a150-ton lot.','这一价格是针对你方5吨小批量订货的，如果订150吨，我们可降价10％。','Britain changed to a metric system of currency in 1970.','1970年英国已改用公制货币.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrap"]={"wrap","[ræp]","[ræp]","vt.包",'vt.包；缠绕；用…包裹（或包扎、覆盖等）；掩护|||n.膝毯，披肩，围巾，头巾，罩衫，外套，大衣；包装纸；〈俚〉机密|||vi.缠绕，盘绕（通常与over,around等连用）；包上，裹上；穿上（衣服等）','I wrapped the rug around the sick man\'s legs to keep him warm.','我用毯子把病人的腿包了起来，让他暖和一点儿。','The plans for the new space mission are still under wraps.','新的太空宇航计划仍未公开。'}

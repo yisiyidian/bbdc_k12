@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frost"]={"frost","[frɒst]","[frɔst]","n.霜",'n.霜,冰冻,冷漠|||vt.&vi.覆着霜,冻结,结霜','||Frost|| binds the soil.','霜把土壤冻结了.','||Frost|| has killed several of our young plants.','寒霜冻死了我们的几株幼苗。'}

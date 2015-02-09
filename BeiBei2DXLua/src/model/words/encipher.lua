@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encipher"]={"encipher","[ɪn'saɪfə; en-]","[ɪn'saɪfɚ]","vt.译成密码",'vt.译成密码','information where the message to be enciphered','消息被加密后的信息','to encipher a message','对信息加密'}

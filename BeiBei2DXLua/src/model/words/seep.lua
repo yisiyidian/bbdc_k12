@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seep"]={"seep","[siːp]","[sip]","v.渗出",'v.渗出,渗漏|||n.渗漏，小泉，水（油）坑','Rain seeped through the roof.','雨水从房顶往下漏。','My anger began to seep away.','我的怒火开始消下去了。'}

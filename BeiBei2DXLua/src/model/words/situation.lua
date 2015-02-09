@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["situation"]={"situation","[sɪtjʊ'eɪʃ(ə)n]","[,sɪtʃu'eʃən]","n.状况",'n.位置,形势,局面,处境,状况,职位','This situation is unfavorable for us.','这样的局面对我们来说是不利的。','He doesn\'t seem to understand the gravity of the situation.','他似乎没有意识到形势的严重性。'}

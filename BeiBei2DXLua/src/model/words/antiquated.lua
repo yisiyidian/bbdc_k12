@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antiquated"]={"antiquated","['æntɪkweɪtɪd]","['æntɪkwetɪd]","adj.陈旧的",'adj.陈旧的,过时的，年老的|||动词antiquate的过去式和过去分词','Many factories are so antiquated they are not worth saving.','很多工厂过于陈旧落后，已不值得挽救。','I don\'t care if my clothes is antiquated.','我不介意我的衣服是否过时。'}

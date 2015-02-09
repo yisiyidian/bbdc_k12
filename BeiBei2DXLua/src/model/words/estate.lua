@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["estate"]={"estate","[ɪ'steɪt; e-]","[ɪ'stet]","n.房地产经纪人",'n.财产,房地产,状态,遗产','He has succeeded to his father\'s estate.','他继承了父亲的产业。','He invited us to his country estate for a weekend shoot.','他邀请我们到他乡下的庄园去过一次打猎的周末。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plant"]={"plant","[plɑːnt]","[plænt]","n.植物",'n.植物，设施，设备，工厂|||v.种植，建立，设立','His strange remarks planted doubts in our minds about his sanity.','他那些怪话使我们心中生疑，不知他精神是否正常。','The speaker\'s supporters were planted in the audience and applauded loudly.','听众中安插了演讲人的支持者；他们使劲给他鼓掌。'}

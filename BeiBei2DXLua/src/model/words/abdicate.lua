@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abdicate"]={"abdicate","['æbdɪkeɪt]","['æbdɪket]","vt.正式放弃（权利或责任等）",'vt.正式放弃（权利或责任等），让位|||vi.（国王）退位，辞职','Whether Edward would abdicate in favour of his brother became the question of the hour.','爱德华是否会放弃王位而支持他的兄弟成了当前的热门话题。','He\'s abdicated all responsibility in the affair.','他已经放弃了这件事中的一切职责。'}

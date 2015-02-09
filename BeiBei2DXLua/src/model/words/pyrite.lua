@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pyrite"]={"pyrite","['paɪraɪt]","['paɪraɪt]","n.黄铁矿",'n.黄铁矿','||Pyrite|| is called fool\'s gold in western countries','黄铁矿在西方呗称为愚人金。','pyrite','黄铁矿'}

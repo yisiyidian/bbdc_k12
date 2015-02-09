@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transformer"]={"transformer","[træns'fɔːmə; trɑːns-; -nz-]","[træns'fɔrmɚ]","n.变压器",'n.变压器','Keep away from the transformer.','不要靠近那个变压器.','We traced the trouble to a faulty transformer.','我们查出故障出在一个有毛病的变压器上.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spiel"]={"spiel","[ʃpiːl; spiːl]","[ʃpil]","n.滔滔不绝的讲话",'n.滔滔不绝的讲话','The children can spiel of the names of all the Presidents, but do they really understand their country\'s history?','那些孩子可以流利地背出所有总统的名字，可是他们真正懂得自己国家的历史吗？','That salesman have a good spiel, he sell many dress in one hour.','那个推销员讲话流利又夸张，他在一小时内卖了很多衣服。'}

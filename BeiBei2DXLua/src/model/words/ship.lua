@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ship"]={"ship","[ʃɪp]","[ʃɪp]","n.船",'n.船,舰,船员,飞船|||vt.以船运送,乘船,运送,进水,在船上工作|||vi.上船,坐船,运送,在船上工作','When my ship comes in, I\'ll move to a better apartment.','如果我交了好运，我要找个更好的公寓住','The ship was due to sail the following morning.','这艘船定于第二天启航。'}

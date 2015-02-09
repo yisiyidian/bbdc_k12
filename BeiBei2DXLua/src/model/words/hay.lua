@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hay"]={"hay","[heɪ]","[ hei ]","n.干草",'n.干草','The children snuggled down on the hay.','孩子们舒适地蜷伏在干草上。','I adviced him to make hay while the sun shone.','我劝他抓紧时机。'}

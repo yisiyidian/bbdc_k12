@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retention"]={"retention","[rɪ'tenʃ(ə)n]","[rɪ'tɛnʃən]","n.保存",'n.保存(保持力,包装牢固,记忆力,保留物)','They advocate the retention of our nuclear power plants.','他们主张保留我们的核电厂.','This quantity describes the retention of particles in a porous substance.','这个参数描述阻留在多孔体中的微粒量.'}

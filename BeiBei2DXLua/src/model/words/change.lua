@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["change"]={"change","[tʃeɪn(d)ʒ]","[tʃendʒ]","v.改变",'n.变化,零钱|||v.改变','Can you change a five-pound note?','你能换开五英镑的票子吗？','Her expression changed when she heard the news.','她听到这一消息时表情就变了。'}

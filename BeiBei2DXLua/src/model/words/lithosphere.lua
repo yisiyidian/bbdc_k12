@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lithosphere"]={"lithosphere","['lɪθəsfɪə]","['lɪθəsfɪr]","n.岩圈",'n.岩圈,地壳','The hydrosphere and the lithosphere together form the Earth\'s surface.','水圈与岩石圈一起形成地球的表面。','He is absorbed in researching lithosphere.','他正致力于研究地壳。'}

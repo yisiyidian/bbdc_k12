@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["synopsis"]={"synopsis","[sɪ'nɒpsɪs]","[sɪ'nɑpsɪs]","n.摘要",'n.摘要,概要','An abbreviated list, as of contents; a synopsis.','简表一个扼要的（如内容的）条目；大纲','For each title there is a brief synopsis of the book.','每本书都附有一个该书的简短提要。'}

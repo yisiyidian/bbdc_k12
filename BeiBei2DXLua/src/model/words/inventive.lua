@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inventive"]={"inventive","[ɪn'ventɪv]","[ɪn'vɛntɪv]","adj.善于创造的",'adj.善于创造的,发明的','Marked by inventive skill and imagination.','灵巧的拥有创造性天才和想象力的','It inspired me to be more inventive with my own cooking.','它激励我在自己烹饪时更具创造力。'}

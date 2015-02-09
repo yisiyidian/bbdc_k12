@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paradise"]={"paradise","['pærədaɪs]","['pærə'daɪs]","n.天堂",'n.天堂','Hawaii is called an island paradise.','夏威夷被称为海岛乐园。','I see no sign of the actual approach of this hundred per cent French paradise.','我看不出有什么迹象表明这种十全十美的法国天堂真正会到来。'}

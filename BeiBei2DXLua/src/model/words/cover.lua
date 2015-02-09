@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cover"]={"cover","['kʌvə]","['kʌvɚ]","v.覆盖",'n.封面,盖子,表面|||v.覆盖,涉及,包含','Our guns covered every approach to the town.','我们的炮火控制了通往市区的各条道路。','I\'ll cover for Jane while she\'s on holiday.','简休假时我替补她工作。'}

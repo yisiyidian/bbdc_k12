@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lurch"]={"lurch","[lɜːtʃ]","[lɝtʃ]","n.举步蹒跚",'n.举步蹒跚，突然倾斜|||n.惨败|||vi.突然倾斜，蹒跚地走|||vt.偷，骗','Earthquake, the enemy of human happiness, is always lying at lurch.','地震，这个人类幸福的大敌，总是伺机作恶。','The enemy of human happiness is always lying at lurch.','人类幸福的大敌总是伺机进行破坏的。'}

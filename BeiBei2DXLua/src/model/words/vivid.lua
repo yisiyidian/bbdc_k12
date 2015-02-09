@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vivid"]={"vivid","['vɪvɪd]","['vɪvɪd]","adj.生动的",'adj.生动的,强烈的,鲜艳的,清晰的,逼真的','This place conjures up vivid memories.','这个地方使人回忆起许多生动的往事。','My daughter is a child with vivid imagination.','我女儿是一个想象力活跃的孩子。'}

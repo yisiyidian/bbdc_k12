@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revenue"]={"revenue","['revənjuː]","['rɛvənu]","n.总收入",'n.总收入;财政收入,税收|||n.税务局','Oil revenue have rise with the rise in the dollar.','石油收益因美元增值而增加。','The Inland ||Revenue|| is responsible for collecting income tax.','税务局负责徵收所得税.'}

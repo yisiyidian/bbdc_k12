@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boast"]={"boast","[bəʊst]","[bost]","n.吹牛",'n.吹牛|||vt.&vi.吹牛,自夸','It is one of their proudest boasts that they have halved the death rate from typhoid.','他们使伤寒病人的死亡率降低了一半，这是他们最感骄傲的事之一。','Don\'t believe him; he is just boasting.','别相信他，他只是在吹嘘罢了。'}

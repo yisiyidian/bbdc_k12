@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["novelist"]={"novelist","['nɒv(ə)lɪst]","['nɑvlɪst]","n.小说家",'n.小说家','A novelist creates characters and a plot.','小说家塑造人物并设计作品的情节.','As both a novelist and a university lecturer, she has two strings to her bow.','她又是小说家又当大学讲师, 有两手准备.'}

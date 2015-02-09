@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hemisphere"]={"hemisphere","['hemɪsfɪə]","['hɛmɪsfɪr]","n.半球",'n.半球','This animal is to be found only in the Southern ||Hemisphere||.','这种动物只有在南半球才能找到.','Your left cerebral hemisphere controls the right - hand side of your body.','你的左半脑控制身体的右半身.'}

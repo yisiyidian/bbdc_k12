@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["logistics"]={"logistics","[lə'dʒɪstɪks]","[lə'dʒɪstɪks]","n.后勤学",'n.后勤学|||Logisticsdepartment物流部','The skills and logistics of getting such a big show on the road pose enormous practical problems.','这样的一个大型节目进行巡演在技术和后勤方面都会面临大量实际问题。','logistics deparment','物流部'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["start"]={"start","[stɑːt]","[stɑrt]","n.开始",'n.开始；动身；开动；起点|||vt.&vi.出发，启程|||vt.起动；提出（问题）；开办；使开始|||vi.起始；突然出现；突然跳起；突然涌出','She started at the sound of my voice.','她听到了我的声音，蓦地一惊。','The society was started in 1980.','该协会是1980年创建的。'}

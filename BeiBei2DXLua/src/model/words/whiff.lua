@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whiff"]={"whiff","[wɪf]","[wɪf]","n.一吹",'n.一吹,一阵香气,香烟的一口|||v.轻轻地吹,吹送,使被三阵出局','Not a whiff of scandal has ever tainted his private life.','他的私生活没有爆出过一丁点儿的丑闻。','I got a fragrant whiff of roses through the window.','我透过窗子闻到一阵玫瑰花香。'}

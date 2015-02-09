@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["praise"]={"praise","[preɪz]","[prez]","vt.称赞",'n.赞美,称赞,崇拜|||vt.称赞,归荣誉于,赞美|||vi.赞美','||Praise|| can be a fine tonic.','赞美有时真让人感到振奋。','This doctor received high praise from everyone.','这位医生受到所有人的高度赞扬。'}

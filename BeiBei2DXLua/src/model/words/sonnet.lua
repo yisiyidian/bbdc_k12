@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sonnet"]={"sonnet","['sɒnɪt]","['sɑnɪt]","n.十四行诗",'n.十四行诗','In an early sonnet Keats rhymes "eyes" with "surmise" .','在早期的一首十四行诗中，济慈用＂surmise＂来押＂eyes＂的韵。','He wrote a sonnet to his beloved.','他写了一首十四行诗, 献给他心爱的人.'}

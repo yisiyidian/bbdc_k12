@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["marsupial"]={"marsupial","[mɑː'suːpɪəl]","[mɑr'supɪəl]","n.有袋动物",'n.有袋动物|||adj.袋的,袋状的，有袋动物的','Pouches are a peculiarity of marsupials.','腹袋是有袋动物的特色。','I\'ll buy some marsupial milk from the supermarket.','我会去超市买些袋装牛奶。'}

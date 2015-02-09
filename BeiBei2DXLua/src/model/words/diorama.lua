@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diorama"]={"diorama","[,daɪə'rɑːmə]","[,daɪə'rɑmə]","n.透视画",'n.透视画','Mike thought that the process developed by Nill could help speed up his diorama creation.','迈克认为尼尔发明的这一过程可以帮助加快透视画的制作。','||Diorama|| can show the distance of objects.','（透视画）可以显示物体的距离。'}

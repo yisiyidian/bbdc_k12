@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cup"]={"cup","[kʌp]","[kʌp]","n.杯子",'n.杯子|||v.(使)成杯形|||vt.使成杯形','This is an opaque cup.','这是一个不透明的杯子。','This cup is made of stainless steel.','这只杯子是不锈钢做的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["folk"]={"folk","[fəʊk]","[fok]","adj.民间的",'n.民族；人们；〈口〉家属，亲戚；民间音乐|||adj.民间的；普通平民的；流传民间的；普通百姓的','He arranged many traditional folk songs (for the piano).','他（为钢琴演奏）改编了很多传统民歌.','||Folk|| music has been passed down from one generation to another.','民间音乐是一代一代地流传下来的。'}

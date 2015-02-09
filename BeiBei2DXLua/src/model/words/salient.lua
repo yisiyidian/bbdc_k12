@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["salient"]={"salient","['seɪlɪənt]","['selɪənt]","adj.突出的",'adj.突出的,显著的|||n.突出部分','The salient point of his plan is summed up in this report.','这份报告中概括了他计划的要点。','He read the salient facts quickly.','他快速浏览了重要的事实。'}

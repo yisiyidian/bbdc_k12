@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plumbing"]={"plumbing","['plʌmɪŋ]","['plʌmɪŋ]","n.管道装置",'n.管道装置，铅管工行业|||动词plumb的现在分词','A human is an ingenious assembly of portable plumbing.','人类，是一堆可以随意拆卸的铅管零件的巧妙装配。','They\'re going to have to put in new plumbing.','他们将需要安装新的水管.'}

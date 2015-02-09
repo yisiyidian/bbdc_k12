@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collapse"]={"collapse","[kə'læps]","[kə'læps]","n.崩溃",'n.崩溃,倒塌,暴跌|||vi.倒塌,崩溃,瓦解,折叠|||vt.倒塌,缩减','The whole building collapsed.','整个建筑倒塌了。','Talks between management and unions have collapsed.','管理层方和工会的谈判失败了。'}

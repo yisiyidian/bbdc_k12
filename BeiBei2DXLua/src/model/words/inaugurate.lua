@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inaugurate"]={"inaugurate","[ɪ'nɔːgjʊreɪt]","[ɪ'nɔɡjəret]","v.举行就职典礼",'v.举行就职典礼,举行仪式|||v.开始,开创','Obama inaugurated as the first African-American president in U.S history.','奥巴马就职成为美国历史上第一位非洲裔总统。','The city library was inaugurated by the mayor.','市长主持了市图书馆的落成仪式。'}

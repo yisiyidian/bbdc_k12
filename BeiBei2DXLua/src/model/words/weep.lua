@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weep"]={"weep","[wiːp]","[wip]","n.悲叹",'n.悲叹,哀悼,为...伤心|||v.哭泣,流泪|||vi.流泪,哭泣|||vt.为...而哭','It is better to laugh than (to) weep.','笑比哭好。','Laugh, and the world laughs with you; Weep, and you weep alone.','【谚】欢笑，整个世界伴你欢笑。哭泣，只有你独自向隅而泣。'}

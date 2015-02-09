@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retaliation"]={"retaliation","[rɪ,tælɪ'eɪʃn]","[ ri,tæli'eiʃən ]","n.报复",'n.报复,反击','it was in retaliation for recent American-backed attacks on its members in Yemen','dee','I\'d be glad of a retaliation that wouldn\'t recoil on myself.','我喜欢一种不会牵累到我自己的报复。'}

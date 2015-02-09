@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polymath"]={"polymath","['pɒlɪmæθ]","['pɑlɪmæθ]","n.知识广博者",'n.知识广博者|||adj.知识广博的','Alex Hope says his company needs a rich mix of talents: "We\'re looking for polymaths - people with computer science, maths, physics or fine art can all thrive."','x','when will I meet this polymath ?','我什么时候能见到这位大师？'}

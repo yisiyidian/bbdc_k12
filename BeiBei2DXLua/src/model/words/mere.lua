@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mere"]={"mere","[mɪə]","[mɪr]","adj.仅仅的",'adj.纯粹的,仅仅的,只不过的|||adv.仅仅,只不过|||n.小湖','Her liberal views were soon revealed as mere posturing.','她那些开明的观点很快地就暴露出只不过是做做样子而已.','Your hope of promotion is a mere delusion.','你提升的希望只不过是一种幻觉。'}

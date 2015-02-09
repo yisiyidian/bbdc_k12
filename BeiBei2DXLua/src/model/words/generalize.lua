@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["generalize"]={"generalize","['dʒɛnrəlaɪz]","[ 'dʒenərəlaiz ]","v.使一般化",'v.使一般化,概括，归纳','It is dangerous to generalize about people.','以偏概全地谈论人是危险的。','You cannot generalize about the effects of the drug from one or two cases.','不能根据一两个病例就得出该药是否有效的结论.'}

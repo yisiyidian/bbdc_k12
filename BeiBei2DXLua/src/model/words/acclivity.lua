@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acclivity"]={"acclivity","[ə'klɪvɪtɪ]","[ə'klɪvəti]","n.向上的陡坡",'n.向上的陡坡','The steep acclivity was especially daunting for the novice hikers.','这样陡峭的上坡路尤其令登山新手望而生畏。','there is an acclivity at the end of this street','在街尾有一个向上的陡坡'}

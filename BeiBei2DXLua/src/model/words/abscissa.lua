@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abscissa"]={"abscissa","[æb'sɪsə]","[æb'sɪsə]","n.横坐标(横线)",'n.横坐标(横线)','I learned abscissa at Middle school.','我中学时学习了横坐标。','abscissa','横坐标'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["act"]={"act","[ækt]","[ækt]","vi.行动",'n.行为,行动,法案,（戏剧、歌剧等的）一幕|||vt.表演,扮演|||vi.表演,行动,表现,充当,奏效','a charitable act.','善行','Think well before you act.','要三思而后行。'}

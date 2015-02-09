@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arrange"]={"arrange","[ə'reɪn(d)ʒ]","[ə'rendʒ]","vt.安排",'vt.安排,整理,计划,改编(乐曲)|||vi.协商,计划','I arranged the flowers in the vase as soon as I came back home.','一回到家里，我就把花在花瓶里插好。','I have arranged with him to meet at the restaurant.','我和他约好在饭馆见面。'}

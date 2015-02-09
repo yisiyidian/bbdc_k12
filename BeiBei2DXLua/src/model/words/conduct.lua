@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conduct"]={"conduct","['kɒndʌkt]","[kən'dʌkt]","n.行为",'n.行为,举动,品行|||v.引导,指挥,管理|||vt.导电,传热','I think he conducted himself admirably, considering the difficult circumstances.','考虑到那种困难的情况，我认为他的表现令人钦佩。','Copper conducts electricity better than iron does.','铜的导电性比铁强。'}

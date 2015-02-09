@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magnetism"]={"magnetism","['mægnɪtɪz(ə)m]","['mægnə'tɪzəm]","n.磁性",'n.磁性,吸引力,磁学','||Magnetism|| is a natural phenomenon.','磁力是一种自然现象。','We know about magnetism by the way magnets act.','我们通过磁铁的作用知道磁性是怎么一回事.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ongoing"]={"ongoing","['ɒngəʊɪŋ]","['ɑnɡoɪŋ]","adj.前进的",'adj.前进的,进行的|||n.前进,举止,行为','He interrupted the ongoing discussion and announced a notice.','他打断正在进行的讨论，宣读了一项通知。','He rushed in and interrupted the ongoing meeting.','他冲了进来打断了正在进行的会议。'}

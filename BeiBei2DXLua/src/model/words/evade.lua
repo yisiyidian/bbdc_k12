@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evade"]={"evade","[ɪ'veɪd]","[ɪ'ved]","v.规避",'v.规避,逃避,躲避','Give me a direct answer, and stop evade the issue.','给我一个直截了当的回答，不要回避这一问题。','Genius is the capacity of ||evading|| hard work.','天才是避免苦干的能力。'}

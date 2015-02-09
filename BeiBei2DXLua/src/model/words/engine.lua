@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["engine"]={"engine","['endʒɪn]","['ɛndʒɪn]","n.发动机",'n.发动机,引擎,机车,火车头|||vt.装引擎','What\'s the cubic capacity of this engine?','这台发动机的立体容积是多少？','There was a puff of steam from the engine before it stopped.','机车喷出一股蒸气後就停了下来.'}

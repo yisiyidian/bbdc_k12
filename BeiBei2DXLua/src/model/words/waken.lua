@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waken"]={"waken","['weɪk(ə)n]","['wekən]","v.唤醒",'v.唤醒,醒来','He asks to be waken at7.00.','他要求7点钟叫醒他。','It is ill to waken sleeping dogs.','别多事,别惹麻烦。'}

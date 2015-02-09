@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["astigmatism"]={"astigmatism","[ə'stɪgmətɪz(ə)m]","[ə'stɪɡmətɪzəm]","n.散光",'n.散光','And these lenses do not correct serious astigmatism.','而且这种眼镜也无法矫正严重的散光。','he is fed up with his astigmatism','他厌烦了他的眼睛散光'}

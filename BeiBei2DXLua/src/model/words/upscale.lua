@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["upscale"]={"upscale","['ʌpskeɪl]","[ 'ʌpskeil ]","adj.高端的",'adj.高消费的,高端的|||adv.高消费地,高级地|||vt.提高,提升','Vodka has acquired an upscale image in the US.','伏特加在美国已树立起高档商品的形象。','We specialize in luxury  decor  that is both upscale and unique.','我们专门从事开发华贵家居饰品,她高端,独特.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forte"]={"forte","['fɔːteɪ; 'fɔːtɪ; fɔːt]","['fɔrte]","n.长处",'n.长处,特长,优点|||n.[音乐]强音记号','Cooking is her forte.','她擅长烹调。','Singing is not really my forte, but I\'ll try.','唱歌实在不是我擅长的，但是我会试着唱唱看。'}

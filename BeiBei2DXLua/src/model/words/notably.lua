@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["notably"]={"notably","['nəʊtəblɪ]","['notəbli]","adv.显著地(著名地",'adv.显著地(著名地,值得注意地,格外,特别是)','They were not notably overworked.','他们的过度劳苦的情形并不显著.','Many students were absent, notably the monitor.','许多学生缺席，特别是连班长也没来。'}

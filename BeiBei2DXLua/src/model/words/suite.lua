@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suite"]={"suite","[swiːt]","[swit]","n.随员",'n.随员,套房,一组','The bridal suite was prepared for the reception of the honeymooners.','新婚套间已准备好以接待度蜜月的人.','The suite has a bedroom, bathroom and a private sit room.','这套房子有一间卧室、一间浴室和一间起居室。'}

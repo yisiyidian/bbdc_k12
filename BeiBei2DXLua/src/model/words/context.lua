@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["context"]={"context","['kɒntekst]","['kɑntɛkst]","n.上下文",'n.上下文,环境,背景','In the context of the present economic crisis it seems unwise to lower taxes.','鉴於当前的经济危机，降低税率似乎不妥。','In these context, this word doesn\'t mean what it always mean.','在这些情景中，这个单词的意思就不是它通常的意思了。'}

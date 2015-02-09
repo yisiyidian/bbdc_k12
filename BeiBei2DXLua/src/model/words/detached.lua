@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detached"]={"detached","[dɪ'tætʃt]","[dɪ'tætʃt]","adj.分离的",'adj.超然的,分离的|||v.分离|||vbl.分离','It is written in a detached, precise style.','行文冷静客观，一针见血。','I detached my watch from the chain.','我从表链上解下手表。'}

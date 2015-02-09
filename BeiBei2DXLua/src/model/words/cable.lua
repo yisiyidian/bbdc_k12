@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cable"]={"cable","['keɪb(ə)l]","['kebl]","n.电缆",'n.电缆,海底电报|||vt.打海底电报,把...拧成缆,用缆捆住|||vi.打海底电报','||Cable|| television has been around for some time now.','有线电视面世已有些时日了.','They are building a submarine cable tunnel.','他们正在建设一条海底电缆隧道。'}

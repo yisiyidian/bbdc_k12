@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["protuberant"]={"protuberant","[prə'tjuːb(ə)r(ə)nt]","[pro'tubərənt]","adj.突出的",'adj.突出的,隆起的','The hill is like a protuberant thing','隆起的','the mountain is protuberant','这个山是隆起的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undertaking"]={"undertaking","[ʌndə'teɪkɪŋ]","['ʌndɚ'tekɪŋ]","n.事业",'n.事业,企业,保证','An undertaking, especially one of some scope, complication, and risk.','事业一项事业，尤其指一项雄心勃勃、复杂、且具危险性的事业','In system development, an undertaking with prescribed objectives, magnitude, and duration.','在系统开发过程中，一种具有规定目标、规模和期限的任务。'}

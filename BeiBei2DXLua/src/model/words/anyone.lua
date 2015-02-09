@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anyone"]={"anyone","['enɪwʌn]","['ɛnɪ'wʌn]","pron.任何人",'pron.任何人','He was too shy to talk to anyone at the party.','在晚会上他很腼腆，没有和任何人讲话。','John is more diligent than anyone else in his class.','约翰比班上其他的同学用功。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fragmentary"]={"fragmentary","['frægm(ə)nt(ə)rɪ]","['frægmən'tɛri]","adj.碎片的",'adj.碎片的，碎块的,碎屑状的,零碎的,不完全的','a picture that emerges from fragmentary information.','由拼凑不完整的信息而画出的画','A picture that emerges from fragmentary information.','由拼凑不完整的信息而画出的画'}

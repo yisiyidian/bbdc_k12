@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["filament"]={"filament","['fɪləm(ə)nt]","['fɪləmənt]","n.细丝",'n.细丝,细线,单纤维','Having the form of or resembling a thread or filament.','丝状的，纤维状的具有或象线或细丝形状的','The filament drive included a trailing weight and a preheater.','长丝体的传动部分包括一个拖拉重锤和一个预热器.'}

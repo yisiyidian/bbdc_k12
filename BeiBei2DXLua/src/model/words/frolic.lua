@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frolic"]={"frolic","['frɒlɪk]","['frɑlɪk]","vi.嬉戏",'vi.嬉戏|||adj.嬉戏的|||n.调皮，欢乐的聚会','Fun and frolic.','乐趣和欢乐','He smiled to see the children\'s frolics.','他看到孩子们嬉戏而微笑。'}

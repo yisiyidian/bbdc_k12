@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whoever"]={"whoever","[huː'evə]","[hʊ'ɛvɚ]","adv.无论是谁",'adv.无论是谁,任何人|||pron.究竟是谁,谁,无论谁,不管谁','||Whoever|| commits the crime shall be sentenced to ten years in prison.','任何人犯了此罪就要被判处十年徒刑。','||Whoever|| told you that was lying.','谁对你说这话，谁就在说谎。'}

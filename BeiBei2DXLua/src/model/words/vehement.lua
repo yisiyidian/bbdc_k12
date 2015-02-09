@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vehement"]={"vehement","['viːɪm(ə)nt]","[ 'vi:imənt ]","adj.激烈的",'adj.激烈的,猛烈的','He slammed the door with a vehement fury.','他愤怒地用力把门关上。','She made a vehement attack on the government\'s policies.','她强烈谴责政府的政策。'}

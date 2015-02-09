@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["euthanasia"]={"euthanasia","[,juːθə'neɪzɪə]","[,juθə'neʒə]","n.安乐死",'n.安乐死','Should euthanasia be made legal?','是否应将安乐死合法化？','There are lots of dispute about legalization of euthanasia.','对于安乐死合法化还存在很多争议。'}

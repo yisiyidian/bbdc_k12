@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heater"]={"heater","['hiːtə]","['hitɚ]","n.加热器",'n.加热器,火炉,加热之人','You\'ll run up a huge gas bill if you leave the heater on.','热水器要是总开著, 煤气费就很高了.','Once installed, this heater operates automatically.','一旦安装好以后，这加热器就会自动地运行。'}

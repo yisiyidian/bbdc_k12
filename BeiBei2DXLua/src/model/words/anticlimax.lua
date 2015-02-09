@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anticlimax"]={"anticlimax","[æntɪ'klaɪmæks]","[,æntɪ'klaɪmæks]","n.突降",'n.突降，急转而下，虎头蛇尾','The holiday itself was rather an anticlimax after all the excitement of planning it.','尽管计划度假时兴致勃勃，而到头来假日本身却颇为扫兴。','After a week of dramatic negotiations, all that followed was anticlimax.','经过一周戏剧性的谈判，结果很是令人扫兴。'}

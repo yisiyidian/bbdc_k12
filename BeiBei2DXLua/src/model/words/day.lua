@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["day"]={"day","[deɪ]","[de]","n.一天",'n.白天,一天','Day in, day out, no matter what the weather is like, she walks ten miles.','她不管天气如何，每天总是不间断地步行十英里。','Despite strong opposition, the ruling party carried the day.','执政党尽管遭到强烈反对，还是获胜了。'}

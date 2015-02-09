@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exonerate"]={"exonerate","[ɪg'zɒnəreɪt; eg-]","[ɪɡ'zɑnəret]","v.免除责任",'v.免除责任,确定无罪|||vt.使免罪','The report on the accident exonerates the bus driver from any responsibility.','事故报告认为公共汽车司机没有任何责任。','Nothing can exonerate him from that.','任何解释都难辞其咎。'}

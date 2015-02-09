@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fort"]={"fort","[fɔːt]","[fɔrt]","n.堡垒",'n.堡垒,要塞','The soldiers are still holding the fort, but they\'re hanging on by their eyelids.','士兵们仍然固守城堡，但他们已陷于险境。','The attack succeeded,and the fort was taken.','这次袭击成功, 拿下了堡垒.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rambunctious"]={"rambunctious","[ræm'bʌŋ(k)ʃəs]","[ræm'bʌŋkʃəs]","adj.粗暴的",'adj.粗暴的，喧闹的,放纵的','...a very rambunctious and energetic class.','...一个十分喧闹活跃的课堂。','A rambunctious person is energetic in a cheerful, noisy way.','d'}

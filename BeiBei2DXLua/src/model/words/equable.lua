@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["equable"]={"equable","['ekwəb(ə)l]","['ɛkwəbl]","adj.平静的",'adj.平静的,变动小的','He was a man of the most equable temper.','他是个脾气非常好的人。','The speaker, calm and equable, claimed that he would campaign for equitable treatment of all citizens.','发言的人心平气和地宣布他要为全体公民的公正待遇而竞选。'}

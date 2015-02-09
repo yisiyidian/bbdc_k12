@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["generosity"]={"generosity","[dʒenə'rɒsətɪ]","[,dʒɛnə'rɑsəti]","n.慷慨",'n.慷慨,大方','His supposed generosity is merely a form of self-interest.','他貌似慷慨, 不过是变相的利己而已.','He hasn\'t a spark of generosity in him.','他一点也不慷慨.'}

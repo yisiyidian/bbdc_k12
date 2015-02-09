@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enough"]={"enough","[ɪ'nʌf]","[ɪ'nʌf]","adj.足够的",'adj.足够的|||adv.足够地|||n.充足,足够|||pron.足够(的)','I\'ve had enough of her continual chatter.','我已厌烦了她喋喋不休的闲谈。','Do you have enough time to finish the paper?','你有足够的时间写完论文吗？'}

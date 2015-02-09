@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arouse"]={"arouse","[ə'raʊz]","[ə'raʊz]","vt.唤醒",'vt.唤醒,激发,激起|||vi.唤醒','His sufferings aroused our sympathy.','他的痛苦引起了我们的同情。','Diana aroused them just before dawn.','戴安娜在黎明前唤醒了他们。'}

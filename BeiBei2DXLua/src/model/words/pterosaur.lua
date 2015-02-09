@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pterosaur"]={"pterosaur","['terəsɔː]","['tɛrə,sɔr]","n.翼龙",'n.翼龙','So what we\'re trying to piece together here is a story. It involves flying reptiles like this ||Pterosaur|| that we reconstructed from Africa.','所以我们正在尽力还原当初的情况,包括会飞的爬行动物,像这只我们在非洲重新复原的翼龙。','when can I earn a pterosaur in WOW?','我啥时候才能在魔兽里面拥有个翼龙？'}

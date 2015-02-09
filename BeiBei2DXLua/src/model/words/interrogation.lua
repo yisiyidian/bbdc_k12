@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interrogation"]={"interrogation","[ɪn,terə'geɪʃ(ə)n]","[ɪn,tɛrə'geʃən]","n.审问",'n.审问,问号','...the right to silence in police interrogations.','…在警察审问时保持沉默的权利。','such as through torture during interrogation.','在审问期间使用非法逼供，'}

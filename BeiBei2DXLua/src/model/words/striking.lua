@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["striking"]={"striking","['straɪkɪŋ]","['straɪkɪŋ]","adj.引人注目的",'adj.引人注目的,罢工的,打击的|||n.打击','A pair of white shoes completed the striking ensemble.','一双白鞋配这套醒目的服装已完美无缺了.','Visually, the decor was very striking.','这个房间的装饰看上去非常醒目.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gallantry"]={"gallantry","['gæləntrɪ]","['ɡæləntri]","n.勇气",'n.勇气,豪勇,勇敢的行为','He got a medal for his gallantry.','他因勇敢而赢得一枚勋章。','His gallantry deserves the medal.','他的勇气值得这枚勋章。'}

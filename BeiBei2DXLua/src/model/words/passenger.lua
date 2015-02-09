@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["passenger"]={"passenger","['pæsɪndʒə]","['pæsɪndʒɚ]","n.乘客",'n.乘客,旅客','Only experienced pilots fly large passenger aircraft.','只有有经验的飞行员才能驾驶大型客机。','This is a large passenger airliner.','这是一架大型客机。'}

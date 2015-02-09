@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inhibition"]={"inhibition","[ɪn(h)ɪ'bɪʃ(ə)n]","[ˌɪnhɪˈbɪʃn]","n.禁止",'n.禁止,禁制,压抑','The inhibition of growth, but not the killing, of bacteria.','细菌抑制抑制细菌的生长, 但不将其杀死','The inhibition of growth in one species of plants by chemicals produced by another species.','植物毒素抑制, 植物相克一种植物的生长因另一种植物所产生的化学物质而被抑制'}

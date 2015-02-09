@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["colloquial"]={"colloquial","[kə'ləʊkwɪəl]","[kə'lokwɪəl]","adj.白话的",'adj.白话的,口语的,语体的','This is a colloquial expression.','这是通俗的口语表达。','You use too many colloquial words in this essay.','你在这篇论文里使用了太多的口头语。'}

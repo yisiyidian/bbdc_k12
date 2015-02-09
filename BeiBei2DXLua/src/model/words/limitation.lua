@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["limitation"]={"limitation","[lɪmɪ'teɪʃ(ə)n]","[,lɪmɪ'teʃən]","n.限制",'n.限制','The limitation of time beyond which an action, a debt, or a crime is no longer valid or enforceable.','追诉期限一个时间限制，若超过该时间限制一个行动，债务或罪行则不再有效或不再可实施','A small alteration, adjustment, or limitation.','更改小小的改变，调正或限制'}

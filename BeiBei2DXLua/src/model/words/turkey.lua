@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turkey"]={"turkey","['tɜːkɪ]","['tɝki]","n.火鸡",'n.(Turkey)土耳其,火鸡,笨蛋,失败之作','It\'s traditional in England to eat turkey on Christmas Day.','圣诞节时吃火鸡是英格兰的传统.','People often drink white wine with turkey.','人们经常边吃火鸡肉边喝白葡萄酒。'}

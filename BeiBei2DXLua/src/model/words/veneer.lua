@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["veneer"]={"veneer","[vɪ'nɪə]","[və'nɪr]","n.薄木片",'n.薄木片(层板,饰面)|||vt镶盖(胶合,砌面)','I considered him to be far more veneer than substance.','我认为他过于虚伪，华而不实。','For the first time her veneer of politeness began to crack.','她温文尔雅的外表第一次露出破绽。'}

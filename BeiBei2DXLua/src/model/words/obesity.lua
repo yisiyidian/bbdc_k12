@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obesity"]={"obesity","[ə(ʊ)'biːsɪtɪ]","[o'bisəti]","n.肥胖",'n.肥胖,肥大','||Obesity|| is a problem for many people in western countries.','西方国家很多人都有过度肥胖的问题.','One effect of overeating may be obesity.','吃得过多能导致痴肥.'}

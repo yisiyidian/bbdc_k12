@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anachronism"]={"anachronism","[ə'nækrə,nɪz(ə)m]","[ə'nækrənɪzəm]","n.时代错误",'n.时代错误,不合潮流的人(物)','Modern dress is an anachronism in productions of Shakespeare\'s plays.','在莎士比亚剧作演出中出现现代服装是个时代错误。','It would be an anachronism to talk of Queen Victoria watching television.','谈到维多利亚女王看电视是时代上的错误。'}

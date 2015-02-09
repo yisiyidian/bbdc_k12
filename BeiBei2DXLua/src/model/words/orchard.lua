@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orchard"]={"orchard","['ɔːtʃəd]","['ɔrtʃɚd]","n.果园",'n.果园','He went to the cherry orchard to see flowers.','他去樱桃园看花。','I have a car, a house and an orchard and you may have whatever you like best.','我有一辆车，一栋房子和一座果园，你可以挑一样你最喜欢的。'}

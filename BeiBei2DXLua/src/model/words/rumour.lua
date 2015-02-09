@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rumour"]={"rumour","['ruːmə]","[ 'ru:mə ]","n.谣言",'n.谣言,传闻，低语|||(美)=rumor|||vt.传闻,谣传','The company is trying to dispel rumour about a take-over.','公司力图澄清有关接管的流言。','The rumour percolated through the firm.','那谣言在公司里慢慢流传开来.'}

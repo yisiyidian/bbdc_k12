@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["supererogatory"]={"supererogatory","[,sjuːprə'rɒɡətɔːrɪ]","[ ,sju:prə'rɔɡətɔ:ri, -təri ]","adj.职责以外的(多余的)",'adj.职责以外的(多余的)','It was supererogatory for her to gloat.','她也在一旁幸灾乐祸地看得出神，真是多余。','This task is supererogatory.','这项任务在职责以外了。'}

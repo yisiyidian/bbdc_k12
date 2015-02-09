@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["downright"]={"downright","['daʊnraɪt]","['daʊnraɪt]","adv.彻底",'adj.明白的,率直的,显明的|||adv.全然,彻底,完全','He has a downright pleasant manner.','他有一种令人愉快的率直态度。','He wasn\'t just unfriendly, he was downright rude.','他不仅仅是态度冷淡, 简直是无礼透顶。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tremendous"]={"tremendous","[trɪ'mendəs]","[trə'mɛndəs]","adj.巨大的",'adj.巨大的,惊人的','He has a tremendous hold over his younger brother.','他对他弟弟很有影响.','She does her work with tremendous vigour.','她工作起来干劲十足.'}

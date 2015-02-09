@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transplant"]={"transplant","[træns'plɑːnt; trɑːns-; -nz-]","[træns'plænt]","vt.移居",'vt.移居,移栽(植物),移植(器官)|||vi.能经得住移植|||n.移植,被移植的事物','She had a bone-marrow transplant.','她接受了骨髓移植手术。','He transplanted the seedlings into peaty soil.','他把幼苗移栽到含泥炭的土壤里。'}

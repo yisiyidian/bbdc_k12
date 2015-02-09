@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trauma"]={"trauma","['trɔːmə; 'traʊmə]","['traʊmə]","n.外伤",'n.精神创伤,外伤','Psychic trauma; psychic energy.','心理创伤；心理能量','A bodily injury, irritation, or trauma.','身体的损伤，发炎或损伤'}

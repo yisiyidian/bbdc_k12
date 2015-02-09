@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bucket"]={"bucket","['bʌkɪt]","['bʌkɪt]","n.水桶",'n.水桶|||vt.装在桶里|||vi.急急忙忙','Go and fill this bucket with water for me.','去替我装满一桶水来。','I knocked over the bucket and the water poured (out) all over the floor.','我打翻了水桶, 水流了一地.'}

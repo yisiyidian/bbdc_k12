@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infidel"]={"infidel","['ɪnfɪd(ə)l]","['ɪnfədl]","n.不信宗教者",'n.不信宗教者,无宗教信仰之人','He promised to continue the fight against infidel forces.','他许诺继续对抗异教势力。','They wanted to secure the Holy Places from the infidel.','他们要保护圣地不受异教徒侵扰。'}

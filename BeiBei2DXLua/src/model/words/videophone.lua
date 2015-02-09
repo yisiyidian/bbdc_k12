@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["videophone"]={"videophone","['vɪdɪə(ʊ)fəʊn]","['vɪdɪofon]","n.可视电话",'n.可视电话','I want to have a videophone.','我想要一架可视电话','||Videophone|| is the latest achivement of electronic technology.','可视电话是电子科技领域的最新研究成果。'}

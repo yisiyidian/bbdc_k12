@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fountain"]={"fountain","[ˈfaʊntən]","['faʊntn]","n.喷泉",'n.喷泉,源泉,储水容器,泉水|||vt.&vi.使像喷泉一样流','She dabbled her fingers in the fountain.','她用手指在喷泉中玩水.','The parks of this city are famous for their ornate fountains.','这个城市的公园以其华丽的喷泉而著名。'}

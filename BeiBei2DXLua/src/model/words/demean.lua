@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["demean"]={"demean","[dɪ'miːn]","[ di'mi:n ]","vt.贬抑",'vt.贬抑,降低|||vt.刻意','He find it demean to ask his wife to support the family.','他觉得让妻子来养家糊口有损他的面子。','I wouldn\'t demean myself to ask for favours from them.','我不会自贬身份向他们求情。'}

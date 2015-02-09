@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stipple"]={"stipple","['stɪp(ə)l]","['stɪpl]","vt.点画",'vt.点画,点描|||n.点画','The sunlight stippled the trees.','日光在树上形成了斑纹。','They crossed a field stippled with purple lavender.','他们穿越了一片有紫色薰衣草点缀的田野。'}

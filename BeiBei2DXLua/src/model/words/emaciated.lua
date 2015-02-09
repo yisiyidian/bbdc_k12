@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emaciated"]={"emaciated","[ɪ'meʃɪ'etɪd]","[ i'meisieitid ]","adj.瘦弱的",'adj.瘦弱的,憔悴的|||动词emaciate的过去式和过去分词','He was emaciated by long illness.','由于长期生病，他很瘦弱。','the illness let him look so emaciated','疾病让他看起来如此消瘦'}

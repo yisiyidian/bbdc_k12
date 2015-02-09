@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pharmacist"]={"pharmacist","['fɑːməsɪst]","['fɑrməsɪst]","n.药剂师",'n.药剂师，药商','Technicians and pharmacists are paramedical personnel.','技术员和药剂师都是医事辅助人员。','One that prepares and sells drugs and other medicines; a pharmacist.','药剂师制药并销售药材及其它内服药剂的人; 药剂师'}

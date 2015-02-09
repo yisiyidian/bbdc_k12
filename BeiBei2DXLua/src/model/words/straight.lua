@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["straight"]={"straight","[streɪt]","[stret]","adj.直的",'adj.直的,准的,正直的,坦率的,连续的|||adv.直接,笔直地,平正了,坦率的,连续不断地|||n.直的东西,传统的人','Please put your desk straight before you leave the office.','请你先把办公桌收拾好再离开办公室。','Come straight away after school.','放学后直接回家。'}

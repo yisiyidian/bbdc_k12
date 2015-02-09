@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pulsar"]={"pulsar","['pʌlsɑː]","['pʌlsɑr]","n.脉冲星",'n.脉冲星，（快速）脉冲射电源','How can we tell the difference between the sound of the Sun and the sound of a pulsar?','我们如何区分太阳的声音和脉冲星的声音?','Most important in this case, one pulsar eclipses the other briefly every couple of hours.','更重要的是，每隔几个小时，其中的一颗脉冲星会遮挡另外一颗。'}

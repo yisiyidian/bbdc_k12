@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prick"]={"prick","[prɪk]","[prɪk]","v.刺",'v.刺,穿,受责备|||n.扎,逗点,锥','My conscience pricked me.','我受良心责备。','He felt a sharp prick when he stepped on a upturned nail.','他一脚踩在一枚尖头朝上的钉子上，感到一阵剧痛。'}

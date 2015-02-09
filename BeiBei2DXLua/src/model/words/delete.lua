@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["delete"]={"delete","[dɪ'liːt]","[dɪ'lit]","vt.删除",'vt.删除','||Delete|| his name from the list.','把他的名字从名单上删去。','He also deleted files from the computer system.','他还从计算机系统里删除了文件。'}

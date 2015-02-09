@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orthography"]={"orthography","[ɔː'θɒgrəfɪ]","[ɔr'θɑɡrəfi]","n.正确拼字",'n.正确拼字,拼字,正字法','In dictionaries, words are listed according to their orthography.','在词典中，单词是按照字母拼写顺序排列的。','In dictionaries, words are listed according to their orthography.','在词典中, 词是按照字母拼写顺序排列的.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regardless"]={"regardless","[rɪ'gɑːdlɪs]","[rɪ'ɡɑrdləs]","adv.不顾",'adj.不注意的,粗心的|||adv.不顾','She is determined to do regardless of all consequences.','她不顾一切后果，决心这样做。','I protested, but she carried on regardless.','我极力反对，但她置之不理仍一意孤行。'}

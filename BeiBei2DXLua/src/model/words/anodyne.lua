@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anodyne"]={"anodyne","['ænədaɪn]","['ænədaɪn]","n.止痛药",'n.止痛药,安慰物|||adj.止痛的，安慰的','This is daytime television at its most anodyne.','现在正是日间电视最不痛不痒的节目时间。','At the time, I thought that passage was pretty anodyne','那时，我认为那篇文章相当乏味。'}

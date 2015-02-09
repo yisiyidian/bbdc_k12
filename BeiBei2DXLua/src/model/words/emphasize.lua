@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emphasize"]={"emphasize","['emfəsaɪz]","['ɛmfəsaɪz]","v.强调",'v.强调,着重|||vt.强调','He banged his fist on the table to emphasize his argument.','他用拳头敲著桌子为自己的辩驳助威。','She stabbed at the air with her finger to emphasize what she was saying.','她手指一戳一戳的, 强调她说的话.'}

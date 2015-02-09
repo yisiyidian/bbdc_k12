@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sterilize"]={"sterilize","['stɛrəlaɪz]","[ 'sterəlaiz ]","vt.使不育",'vt.使不育，杀菌，使贫瘠','After her fourth child she decided to have herself sterilized.','她生了第四个孩子后决定做绝育手术。','After her fourth child she decided to be/have herself sterilized.','她生了第四个孩子後决定做绝育手术.'}

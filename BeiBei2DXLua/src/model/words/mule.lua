@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mule"]={"mule","[mjuːl]","[mjul]","n.骡子",'n.骡子,固执的人，走私毒品者','A mule is a cross between a horse and an ass.','骡是马和驴交配而生的杂种.','He is as stubborn as a mule.','他非常固执。'}

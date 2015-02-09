@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excoriate"]={"excoriate","[ɪk'skɔːrɪeɪt; eks-]","[,ɛks'kɔrɪet]","vt.撕去皮",'vt.撕去皮,严厉批评','This is an editorial that excoriated the administration for its inaction.','这是一篇强烈谴责政府无所事事的社论。','Suzane was excoriated for her mistakes.','苏珊因犯了错误而被指责。'}

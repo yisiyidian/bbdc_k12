@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["titular"]={"titular","['tɪtjʊlə]","['tɪtʃəlɚ]","adj.有名无实的",'adj.有名无实的,有资格的,有头衔的|||n.只有名义的人','The Queen is titular head of the Church of England.','英国女王是英国国教名义上的领袖。','He is titular head, and merely signs laws occasionally.','他是名义上的首脑，不过偶尔签字批准法律法规。'}

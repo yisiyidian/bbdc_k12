@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["denomination"]={"denomination","[dɪ,nɒmɪ'neɪʃ(ə)n]","[dɪ,nɑmɪ'neʃən]","n.名称",'n.名称,教派,面额','A coin, usually of small denomination, made of copper or a copper alloy.','铜币用铜或铜的合金制成的硬币，通常为小面值','Not restricted to or associated with a religious denomination.','非教派的不受宗教派别约束的或与宗教别无联系的'}

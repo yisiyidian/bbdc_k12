@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["despair"]={"despair","[dɪ'speə]","[dɪ'spɛr]","n.绝望",'n.绝望,失望|||vi.失望','He has been in the abyss of despair.','他已陷入绝望的深渊。','A person is most disappointed when he is in despair.','一个人在绝望时最失望。'}

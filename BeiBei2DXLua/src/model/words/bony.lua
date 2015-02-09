@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bony"]={"bony","['bəʊnɪ]","['boni]","adj.如骨的",'adj.如骨的,多骨的,瘦骨嶙峋的','The armadillo has a protective shell of bony plates.','犰狳有角质鳞片的护甲.','Composed of, containing, or resembling bone; bony.','骨状的, 多骨的由骨组成的、含骨的或象骨的; 多骨的'}

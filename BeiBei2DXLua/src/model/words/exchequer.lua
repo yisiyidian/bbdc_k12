@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exchequer"]={"exchequer","[ɪks'tʃekə; eks-]","[ɪks'tʃɛkɚ]","n.国库",'n.国库,财源|||Exchequer|||n.英国财政部，英国的税务法庭','The Chancellor of ||Exchequer|| will present his budget to Parliament tomorrow.','财政大臣明天将向议会提出预算案。','The Chancellor of the ||Exchequer|| deals with taxes.','财政大臣负责税务。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["would"]={"would","[wʊd; wəd]","[wʊd]","aux.将",'aux.将，将要；愿意；会，打算；大概|||v.(will的过去式，用于转述)将','The teacher blazoned she would punish the bad student.','老师宣布她将惩罚那个坏学生。','He stood to his offer of $100 and would not withdraw.','他坚持要付100美元, 不肯做丝毫让步。'}

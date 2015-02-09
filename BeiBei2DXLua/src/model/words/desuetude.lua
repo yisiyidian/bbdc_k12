@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["desuetude"]={"desuetude","['deswɪtjuːd; də'sjuːətjuːd]","['dɛswɪ,tjʊd]","n.废止",'n.废止,不用','Many words once commonly used have fallen into desuetude.','许多过去曾通用的词，今天已经废弃不用了。','These words have fallen into desuetude.','这些词如今已经不用了。'}

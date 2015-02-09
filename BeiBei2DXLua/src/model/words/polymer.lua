@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polymer"]={"polymer","['pɒlɪmə]","['pɑlɪmɚ]","n.聚合体",'n.聚合体','A molecule that can combine with others to form a polymer.','单体可以与其他分子结合形成聚合物的分子','Most polymer emulsion may coagulate when they enter waste streams.','多数聚合物乳浊液在进入废水流时可能凝聚.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frequently"]={"frequently","['friːkw(ə)ntlɪ]","['frikwəntli]","adv.经常地",'adv.经常地,频繁地','The area is flooded, as frequently happens during the typhoon.','这个地区淹了水，这是台风时经常发生的。','Stores of grain are frequently attacked by pests.','储存的谷物经常受到害虫的破坏。'}

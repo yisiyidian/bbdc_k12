@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gallery"]={"gallery","['gæl(ə)rɪ]","['gæləri]","n.美术馆",'n.美术馆,画廊,顶层楼座,狭长的房间','The gallery is a treasure trove of medieval art.','这个画廊是中世纪艺术的宝库。','Her paintings are being shown (ie exhibited) at a gallery in London.','她的画正在伦敦的一个美术馆里展出.'}

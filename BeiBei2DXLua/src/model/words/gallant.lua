@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gallant"]={"gallant","['gæl(ə)nt; gə'lænt]","['ɡælənt]","adj.英勇的",'adj.英勇的,华丽的，殷勤的n.时髦男士，对女子殷勤的男士，求爱者，情夫vt.献殷勤','He was very gallant at the ball','他在舞会上对妇女大献殷勤','These gallant soldiers will protect our country.','这些勇敢的士兵会保卫我们的国家的。'}

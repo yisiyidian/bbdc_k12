@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["postulate"]={"postulate","['pɒstjʊleɪt]","['pɑstʃəlet]","n.假定",'n.假定,基本条件|||vt.要求,假定','The school building programme postulates an increase in educational investment.','修建校舍计划的前提是增加教学经费。','He postulated that a cure for the disease will have been found by the year 2000.','他推断到2000年能研究出治愈该病的方法。'}

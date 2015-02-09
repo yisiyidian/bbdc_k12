@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glorify"]={"glorify","['glɔːrɪfaɪ]","['ɡlɔrɪfaɪ]","vt.赞美",'vt.赞美,美化','The newspapers ||glorified|| their heroic deeds.','报纸称颂了他们的英雄事迹。','The setting sun ||glorified|| the scene.','落日使景色更美。'}

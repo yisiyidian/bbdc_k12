@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["secret"]={"secret","['siːkrɪt]","['sikrɪt]","n.秘密",'adj.秘密的,机密的|||adv.秘密地|||n.秘密','His secret died with him, for he never told anyone.','他的秘密至死也不为人知，因为他从未告诉过别人。','All the people who know this secret represent a security risk.','凡是知道这个秘密的人都对安全造成危险。'}

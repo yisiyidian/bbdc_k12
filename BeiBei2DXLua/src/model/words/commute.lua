@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commute"]={"commute","[kə'mjuːt]","[kə'mjʊt]","vi.交换",'vi.交换,通勤,折偿|||vt.交换,减刑,改变付款方式|||n.乘车上下班,通勤','He commute from Beijing to Nanjing every week.','他每周乘车往返北京与南京。','My uncle used to commute ten miles to the city.','我的叔父过去每天要走10英里到城里去。'}

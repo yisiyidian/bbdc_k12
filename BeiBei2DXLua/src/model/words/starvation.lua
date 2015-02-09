@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["starvation"]={"starvation","[stɑː'veɪʃn]","[stɑr'veʃən]","n.饿死",'n.饿死,饥饿','The lost explorers ate birds\' eggs to stave off starvation.','为了避免饿死，那些迷路的勘探人员吃鸟蛋充饥。','It was a race against time to stop people dying from starvation.','为抢救那些即将饿死的人而分秒必争。'}

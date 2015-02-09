@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["villainous"]={"villainous","['vɪlənəs]","['vɪlənəs]","adj.邪恶的",'adj.邪恶的,恶毒的','a villainous plot.','极坏的计谋','a villainous band of thieves.','一群恶棍一样的小偷'}

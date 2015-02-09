@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["statute"]={"statute","['stætjuːt; -tʃuːt]","['stætʃut]","n.法令",'n.法令,法规','The high court was precluded by statute from reviewing such a decision.','高等法院不得复查此类裁决。','We must obey the statutes in this country.','我们必须遵守这个国家的法规。'}

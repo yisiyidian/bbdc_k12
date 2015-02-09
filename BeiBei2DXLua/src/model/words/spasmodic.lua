@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spasmodic"]={"spasmodic","[spæz'mɒdɪk]","[spæz'mɑdɪk]","adj.间歇的",'adj.间歇的,痉挛的，突发性的','My husband\'s work was so spasmodic.','我丈夫的工作总是时忙时闲。','The disease is spasmodic, so it is hard to save the victims.','这种病是突发的，所以很难抢救患者。'}

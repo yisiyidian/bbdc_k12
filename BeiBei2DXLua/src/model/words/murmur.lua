@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["murmur"]={"murmur","['mɜːmə]","['mɝmɚ]","n.低语",'n.低语,低声的抱怨,[医]心区杂音|||v.低语,低声抱怨','An angry murmur ran through the crowd.','群众纷纷气愤地抱怨著.','The murmur swelled into a roar.','窃窃私语的声音变大形成一片喧哗。'}

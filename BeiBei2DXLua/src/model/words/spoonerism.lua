@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spoonerism"]={"spoonerism","['spuːnərɪz(ə)m]","['spunərɪzəm]","n.头音的交换",'n.头音的交换','The classic error of this type is the spoonerism (or slip of the tongue), where the initial letter or letters of two words are transposed.','这种类型的典型错误就是首音互换（或叫“口误”）：两个单词的前个或前几个字母互换了位置。','i made a mistake of spoonerism.','我犯了头音效换的错误'}

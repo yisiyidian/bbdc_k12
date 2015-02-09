@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jurisdiction"]={"jurisdiction","[,dʒʊərɪs'dɪkʃ(ə)n]","[,dʒʊrɪs'dɪkʃən]","n.司法权",'n.司法权,审判权,管辖权,控制权','The court has no jurisdiction over foreign diplomats living in this country.','法院对居住在本国的外交官无裁判权。','A school is a principal\'s jurisdiction.','学校归校长管辖.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["convincing"]={"convincing","[kən'vɪnsɪŋ]","[kən'vɪnsɪŋ]","adj.使人信服的",'adj.使人信服的,有力的,令人心悦诚服的|||vbl.使...信服,使...明白','His arguments sound convincing but they\'re based on delusion.','他的论据听起来似乎有理，但根本上是欺骗性的。','The data we have collected is not enough to be convincing.','我们所收集的资料还不足以令人信服。'}

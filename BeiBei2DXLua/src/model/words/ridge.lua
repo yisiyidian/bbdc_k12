@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ridge"]={"ridge","[rɪdʒ]","[rɪdʒ]","n.脊",'n.脊,山脊,山脉','Park ||Ridge|| is the prototypical American suburb.','帕克里奇是美国郊区的典型。','We clambered up the hillside to the ridge above.','我们沿着山坡费力地爬上了山脊.'}

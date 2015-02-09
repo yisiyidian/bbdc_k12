@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gilding"]={"gilding","['gɪldɪŋ]","['ɡɪldɪŋ]","n.镀金术(假象)",'n.镀金术(假象)','His article praising classical Greek art is just gilding lily.','他的那篇高度评价古典希腊艺术的论文真是锦上添花.','The gilding is extremely lavish.','这层镀金极为奢华'}

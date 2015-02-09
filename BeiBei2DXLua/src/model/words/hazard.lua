@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hazard"]={"hazard","['hæzəd]","['hæzɚd]","n.冒险",'n.冒险,危险,危害|||v.冒...的危险,赌运气','Explosions, though infrequent, are an occupational hazard for coal-miners.','矿井爆炸虽然不常发生, 但却是煤矿工人职业中的危险.','The car had its hazard warning lights on.','这辆汽车亮起了危险信号灯。'}

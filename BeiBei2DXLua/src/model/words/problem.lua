@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["problem"]={"problem","['prɒbləm]","['prɑbləm]","n.问题",'adj.成问题的,难对付的|||n.问题','The problem is when to get the money we need.','问题是什么时候能得到我们所需要的钱。','What\'s your problem?','你怎么回事啊？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hovercraft"]={"hovercraft","['hʌvɚkræft]","[ 'hɔvəkrɑ:ft, -kræft ]","n.气垫船",'n.气垫船','The hovercraft travelled first over the water, then mounted the beach, climbed up the dunes, and sat down on a road.','气垫船先在水面之上行驶，然后登上河滩，爬上沙丘，而后停在路上。','The plane is the fast but the hovercraft is more comfortable.','乘飞机最快，但是乘气垫船更舒服。'}

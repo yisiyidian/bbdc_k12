@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incubator"]={"incubator","['ɪŋkjʊbeɪtə]","['ɪŋkjubetɚ]","n.孵卵器",'n.孵卵器,细菌培养器,早产儿保育器','the college campus as an incubator of radical new sociological concepts.','大学校园是产生激进的社会学新概念的温床','',''}

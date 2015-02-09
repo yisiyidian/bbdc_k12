@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["too"]={"too","[tuː]","[tu]","adj.太",'adj.太,过于,也,还|||adv.也','He plays the guitar and sings too.','他会弹吉他, 也会唱歌.','It\'s too early for getting up.','现在起床还太早。'}

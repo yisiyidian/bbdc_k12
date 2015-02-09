@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["domesticity"]={"domesticity","[,dɒme'stɪsɪtɪ; ,dəʊm-]","['domɛ'stɪsəti]","n.(喜欢)家庭生活",'n.(喜欢)家庭生活，顾家','Mrs. Bush is also adept at combining domesticity with statesmanship.','劳拉现在已经能熟练地把家庭生活与布什的总统工作结合起来.','Any atmosphere of domesticity has long vanished.','家庭生活气氛早已荡然无存。'}

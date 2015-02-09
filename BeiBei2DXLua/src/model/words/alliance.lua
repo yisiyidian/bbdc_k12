@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alliance"]={"alliance","[ə'laɪəns]","[ə'laɪəns]","n.结盟",'n.结盟,联盟,联姻|||Alliance[地理名词]','Which country is the predominant member of the alliance?','哪个国家在联盟中居于支配地位？','The alliance had been forged in the crucible of war.','这个联盟经受了战争的严峻考验.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breakdown"]={"breakdown","['breɪkdaʊn]","['brek'daʊn]","n.故障",'n.崩溃,故障,分类,腐烂,失败,一种街舞','Unless he stops driving himself like this he\'ll have a breakdown.','他要是总这样拚命干下去是吃不消的.','He couldn\'t hold down a job after his breakdown.','他病倒以後, 工作也就保不住了.'}

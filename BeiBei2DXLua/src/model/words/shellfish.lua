@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shellfish"]={"shellfish","['ʃelfɪʃ]","['ʃɛl'fɪʃ]","n.贝",'n.贝,甲壳类动物','The idea of eating raw shellfish nauseates me.','我一想到吃生贝就恶心.','||Shellfish|| always attach themselves to huge rocks.','贝类经常将自己贴附在大石块上。'}

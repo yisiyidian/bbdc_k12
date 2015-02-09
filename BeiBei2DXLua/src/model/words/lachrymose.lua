@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lachrymose"]={"lachrymose","['lækrɪməʊs; -z]","['lækrɪmos]","adj.爱哭的",'adj.爱哭的,引人落泪的，哀痛的','She was irritable and lachrymose.','她易怒并爱哭。','a lachrymose disposition','生性爱哭'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["centrifugal"]={"centrifugal","[,sentrɪ'fjuːg(ə)l; sen'trɪfjʊg(ə)l]","[sɛn'trɪfjəgl]","adj.离心的",'adj.离心的','In the washing machine, the clothes is at centrifugal motion state.','衣服在洗衣机里面作离心运动。','The division of Europe into warring blocs produces ever-increasing centrifugal stress.','把欧洲分为作战集团产生了越来越大的离心效果。'}

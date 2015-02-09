@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["model"]={"model","['mɒdl]","['mɑdl]","n.模型",'n.模型,模范,模特儿|||adj.模范的,作模型用的|||v.做模型,塑造,模仿','When he became interested in model airplanes he went the whole hog.','他对模型飞机感兴趣之后就全力以赴了。','All this year\'s new models are displayed at the motor show.','汽车展览会上展出了今年所有的新型号。'}

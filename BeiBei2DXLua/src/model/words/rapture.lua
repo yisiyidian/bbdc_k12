@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rapture"]={"rapture","['ræptʃə]","['ræptʃɚ]","n.狂喜",'n.狂喜|||vt.使狂喜','In rapture some little boys and girls were listening to an interesting story.','一些男孩和女孩正非常高兴地听一个有趣的故事。','he fell into rapture over classic music','他对古典音乐喜爱若狂。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["farmland"]={"farmland","['fɑːmlænd]","['fɑrmlænd]","n.农田",'n.农田','The once barren hillsides are now good farmland.','昔日荒坡，今日良田。','A cow charged across the farmland with a bull bellowing(out) after it.','一头母牛狂奔着冲过农田，一头公牛吼叫着尾随其后。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gild"]={"gild","[gɪld]","[ɡɪld]","vt.镀金",'vt.镀金，虚饰|||n.协会，行会（=guild)','He bought her a ||gilt|| brooch.','他给她买了一枚镀金胸针。','Her beauty gilds her vice.','她的美貌掩盖了她的邪恶。'}

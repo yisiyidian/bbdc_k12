@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subscribe"]={"subscribe","[səb'skraɪb]","[səb'skraɪb]","vt.签名",'vt.签名,签署,支持|||vi.签名,签署,定期捐赠,订阅','Do you subscribe to her pessimistic view of the state of the economy?','你是否同意她对经济状况所持的悲观看法？','I subscribed my name to the document.','我在文件上签了名。'}

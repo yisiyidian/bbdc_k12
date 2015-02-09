@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exegesis"]={"exegesis","[,eksɪ'dʒiːsɪs]","['ɛksə'dʒisɪs]","n.解释",'n.解释,注释','Biblical exegesis was a phase of the rational approach to religion that was popular in the Age of Reason.','圣经的注释是对宗教作理性探讨的一个方面，这种探讨在理性时代是很流行的。','Accuracy in exegesis is no substitute for reality in experience.','正确的解经并不能取代实际的生活经验'}

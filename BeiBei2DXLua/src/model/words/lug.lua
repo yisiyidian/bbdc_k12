@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lug"]={"lug","[lʌg]","[lʌɡ]","n.柄",'n.柄，突出部，螺帽|||n.(英）耳朵|||笨蛋|||vt.拖，拉,用力拖动','His fiddle is in lug just now.','他的提琴眼下正押在当铺里。','She lugged the suitcase out into the hallway.','她吃力地将提箱拖进门厅。'}

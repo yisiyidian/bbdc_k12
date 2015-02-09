@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pathology"]={"pathology","[pə'θɒlədʒɪ]","[pə'θɑlədʒi]","n.病理学",'n.病理学','the pathology of cancer.','癌症的病理','Neighborhoods plagued by a self-perpetuating pathology of joblessness, welfare dependency, crime','“附近地区被失业、救济依赖和犯罪等反常现象所缠绕”'}

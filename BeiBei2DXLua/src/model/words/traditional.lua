@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["traditional"]={"traditional","[trə'dɪʃ(ə)n(ə)l]","[trə'dɪʃənl]","adj.传统的",'adj.传统的','Ensure that our traditional markets are looked after; for the rest, I am not much concerned.','一定要满足我们传统市场的需要，其他方面倒无所谓。','This traditional costume is of indigo blue.','这件传统服装是靛蓝色的。'}

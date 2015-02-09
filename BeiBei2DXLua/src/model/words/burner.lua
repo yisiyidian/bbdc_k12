@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["burner"]={"burner","['bɜːnə]","['bɝnɚ]","n.火炉",'n.火炉,烧火的人','There is a two-burner stove in the kitchen.','厨房里有一个两个火眼的煤气炉。','an oil burner.','一种烧油炉'}

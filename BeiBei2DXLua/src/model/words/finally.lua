@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["finally"]={"finally","['faɪnəlɪ]","['faɪnəli]","adv.最后",'adv.最后,最终','||Finally|| the team from Argentina won the championship.','最后，这支来自阿根廷的队伍夺得了冠军。','The patient finally died from cancer.','那位病人最终死于癌症。'}

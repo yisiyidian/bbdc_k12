@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cuddle"]={"cuddle","['kʌd(ə)l]","['kʌdl]","n.搂抱",'n.搂抱,拥抱|||vt.怀抱,拥抱|||vi.抱著睡,依偎,蜷曲','My lovely daughter came to her father for a cuddle.','我可爱的小女儿走到她父亲那，要他抱抱她。','The little girl cuddled her pet cat.','这个小女孩搂抱着她的宠物猫。'}

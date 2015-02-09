@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mill"]={"mill","[mɪl]","[ mil ]","n.磨粉机",'n.磨粉机,磨坊,制造厂,密尔:一种货币单位,使陷于困境|||vt.磨细|||vi.乱转,磨细','The logs are drifted downstream to the mill.','那些原木沿河顺水漂到工厂.','I never refuse odd jobs to supplement my income it\'s all grist to the mill.','我为增加收入, 对於做零活总是来者不拒--多多益善.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["explore"]={"explore","[ɪk'splɔː; ek-]","[ɪk'splɔr]","vt.&vi.探索",'vt.&vi.探险,探测,探究','Can you explore the market possibility for us?','您能为我们考察一下市场前景吗？','He had an itch to get away and explore.','他等不及要动身去探险。'}

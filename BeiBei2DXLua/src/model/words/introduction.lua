@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["introduction"]={"introduction","[,ɪntrə'dʌkʃ(ə)n]","[,ɪntrə'dʌkʃən]","n.介绍",'n.介绍,引进,导论,序言','A few words of introduction may not come amiss.','说几句开场白会很合适的。','This course is designed as an introduction to the subject.','这门课程是作为该科目的入门课而开设的。'}

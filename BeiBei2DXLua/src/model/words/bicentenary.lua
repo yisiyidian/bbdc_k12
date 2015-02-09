@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bicentenary"]={"bicentenary","[,baɪsen'tiːnərɪ; -'ten-]","[,baɪsɛn'tɛnəri]","n.二百周年纪念",'n.二百周年纪念','bicentenary','二百周年纪念','Do you have the memorial postage stamps for the bicentenary?','还是你有二百周年的纪念邮票吗？'}

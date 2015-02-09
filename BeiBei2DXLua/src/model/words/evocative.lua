@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evocative"]={"evocative","[ɪ'vɒkətɪv]","[ɪ'vɑkətɪv]","adj.唤出的",'adj.唤出的,唤起的','His talk was evocative of the bygone days.','他的谈话令人回忆起往昔的时日。','That smell is evocative of school.','这种气味使人回想起学校来.'}

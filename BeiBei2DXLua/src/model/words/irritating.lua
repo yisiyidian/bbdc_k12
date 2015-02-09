@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["irritating"]={"irritating","['ɪrɪteɪtɪŋ]","[ 'iriteitiŋ ]","adj.刺激的",'adj.刺激的,使愤怒的,气人的|||动词irritate的现在分词','He has this irritating mannerism of constantly scratching his nose.','他老是挠鼻子,这个习惯真让人不舒服.','He had an irritating habit of singing tunelessly about the house.','他有个恼人的习惯,老在屋子里不成调地唱歌.'}

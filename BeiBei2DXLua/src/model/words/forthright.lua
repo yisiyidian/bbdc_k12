@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forthright"]={"forthright","['fɔːθraɪt; fɔːθ'raɪt]","[ ,fɔ:θ'rait ]","adv.直截地",'adv.直截地,马上,立即|||adj.直截的,直率的,坦白的|||n.直路','His forthright behaviour shows that he\'s honest, but he seems rude to some people.','他的直率行为说明他是个诚实的人，可是有些人却认为他粗鲁。','His forthright behaviors sometimes offend other people.','他直率的行为有时候会冒犯别人。'}

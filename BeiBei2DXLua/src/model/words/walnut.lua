@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["walnut"]={"walnut","['wɔːlnʌt]","['wɔlnət]","n.胡桃",'n.胡桃,胡桃木,胡桃色,茶色','A seed borne within a fruit having a hard shell, as in the peanut, almond, or walnut.','坚果种子生长在有硬壳的果实之内的种子，如花生、杏或核桃','This box is made of walnut.','这个箱子是胡桃木做的。'}

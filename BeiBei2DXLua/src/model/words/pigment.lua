@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pigment"]={"pigment","['pɪgm(ə)nt]","['pɪgmənt]","n.色素",'n.色素,颜料|||v.把...加颜色,变色','I have mixed pigment with oil.','我已经把颜料和油混合起来了。','The Romans used natural pigments on their fabrics and walls.','古罗马人在织物和墙壁上使用天然颜料。'}

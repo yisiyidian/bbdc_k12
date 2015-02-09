@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insidious"]={"insidious","[ɪn'sɪdɪəs]","[ɪn'sɪdɪəs]","adj.隐伏的",'adj.隐伏的,暗中为害的，阴险的,诱人上当的，（疾病等）不知不觉恶化的','That insidious man bad-mouthed me to almost everyone else.','那个阴险的家伙几乎见人便说我的坏话。','Cancer is an insidious disease.','癌症是潜伏性疾病。'}

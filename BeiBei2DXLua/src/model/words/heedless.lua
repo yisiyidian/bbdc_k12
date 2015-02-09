@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heedless"]={"heedless","['hiːdlɪs]","[ 'hi:dlis ]","adj.不注意的",'adj.不注意的,不留心的','He is heedless of the noises out of the windows.','他没有注意到窗外的嘈杂声。','She was rummaging through the letters, scattering them about the table in her heedless haste.','她在信件里乱翻，匆忙冒失之下将它们扔得满桌都是。'}

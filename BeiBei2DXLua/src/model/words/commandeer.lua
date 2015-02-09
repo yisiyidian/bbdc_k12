@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commandeer"]={"commandeer","[,kɒmən'dɪə]","[,kɑmən'dɪr]","vt.征募(兵役等)",'vt.征募(兵役等)','All automobiles in the town were commandeered by the army.','城中所有的汽车均被部队征用了。','The soldiers commandeered vehicles in the capital and occupied the television station.','士兵们征用首都的车辆，并且占领了电视台。'}

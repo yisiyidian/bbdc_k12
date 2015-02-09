@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shuffle"]={"shuffle","['ʃʌf(ə)l]","['ʃʌfl]","vt.&vi.拖曳",'n.拖著脚走,洗纸牌|||vt.&vi.拖曳,慢吞吞地走','The prisoners shuffled along the corridor and into their cells.','囚犯们沿着走廊拖着脚步进入牢房。','Don\'t shuffle, give me a clear answer.','别支支吾吾，给我一个明确的答复。'}

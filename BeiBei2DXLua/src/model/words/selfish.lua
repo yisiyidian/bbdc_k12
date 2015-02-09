@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["selfish"]={"selfish","['selfɪʃ]","['sɛlfɪʃ]","adj.自私的",'adj.自私的,利己的','Nobody but you could be so selfish.','除了你之外, 谁也不会这样自私.','I call his behaviour mean and selfish.','我认为他的行为卑鄙、 自私.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bauble"]={"bauble","['bɔːb(ə)l]","['bɔbl]","n.美观而无价值的饰物",'n.美观而无价值的饰物，丑角手杖','The shop sells baubles as well.','这家商店也销售廉价珠宝。','A bauble is a showy ornament of little value.','廉价珠宝是华而不实的装饰品。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["macabre"]={"macabre","[mə'kɑːbr(ə)]","[ mə'kɑ:brə ]","adj.恐怖的",'adj.恐怖的,令人毛骨悚然的,以死亡为主题的','Walking on a rural lane in midnight is macabre.','半夜走在郊区的小路上真是令人毛骨悚然。','Police have made a macabre discovery.','警方有一个令人毛骨悚然的发现。'}

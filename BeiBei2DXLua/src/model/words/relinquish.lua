@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relinquish"]={"relinquish","[rɪ'lɪŋkwɪʃ]","[rɪ'lɪŋkwɪʃ]","v.放弃",'v.放弃,放手,让渡','Finally he relinquish his plan for want of business.','因生意需要，彼得只好放弃计划。','He relinquished his share to his partner.','他把他的股权让给了他的合伙人。'}

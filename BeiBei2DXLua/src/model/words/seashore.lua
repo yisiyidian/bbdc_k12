@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seashore"]={"seashore","['siːʃɔː(r)]","['siʃɔr]","n.海岸",'n.海岸,海滨','They set up a tent near the seashore.','他们在海滨附近搭起了一个帐篷。','We have a long seashore in our country.','我们国家的海岸线很长。'}

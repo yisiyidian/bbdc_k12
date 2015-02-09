@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["epitomize"]={"epitomize","[ɪ'pɪtəmaɪz; e-]","[ɪ'pɪtəmaɪz]","vt.摘要",'vt.摘要；概括；成为……的典范；作为……的缩影','He epitomizes everything I dislike.','我讨厌的一切都在他身上体现出来了。','behavior that epitomizes selfishness.','典型的自私行为'}

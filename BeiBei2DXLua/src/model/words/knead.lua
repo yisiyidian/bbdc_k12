@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knead"]={"knead","[niːd]","[nid]","v.揉",'v.揉,按摩,捏制|||vt.按摩,揉(面粉等)','She felt him knead the aching muscles.','她感到他在按摩她酸痛的肌肉。','The little boy kneaded the dough into a ball.','那个小男孩把面团揉成了球状。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sicken"]={"sicken","['sɪk(ə)n]","['sɪkən]","v.患病",'v.患病,使...厌倦,生病','I was sickened at/by the sight of the dead body.','我看到那死尸感到很恶心.','I began to sicken of the endless violence shown on television.','我逐渐对电视上无尽无休的暴力镜头感到厌恶.'}

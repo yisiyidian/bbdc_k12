@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cereal"]={"cereal","['sɪərɪəl]","['sɪrɪəl]","adj.谷类(的)",'adj.谷类(的),谷物(的)|||n.谷类食物','He sprinkled sugar over his cereal.','他在麦片粥里撒上了糖。','The edible whole or coarsely ground grains of a cereal grass.','粗磨粉谷类植物完全或粗磨的可食用颗粒'}

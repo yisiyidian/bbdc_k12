@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affected"]={"affected","[ə'fektɪd]","[ə'fɛktɪd]","vbl.影响",'vbl.影响','He spoke in an affected accent.','他用做作的腔调说话。','My throat is affected by a cold.','感冒引起我喉部不适。'}

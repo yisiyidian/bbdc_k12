@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clamp"]={"clamp","[klæmp]","[klæmp]","n.螺丝钳",'n.螺丝钳,夹子|||vt.夹住，固定','The wood is held in position by a clamp.','木头用钳夹固定住了.','The Government intends to clamp down on soccer hooliganism.','政府拟采取措施严禁在足球比赛中闹事。'}

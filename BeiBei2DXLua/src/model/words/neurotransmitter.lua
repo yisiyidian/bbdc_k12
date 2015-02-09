@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neurotransmitter"]={"neurotransmitter","[,njʊərəʊtrænz'mɪtə]","['nʊrotrænzmɪtɚ]","n.神经传递素",'n.神经传递素','A neurotransmitter must be present within the presynaptic neuron.','突触前神经元必须存在神经递质.','Dopamine is an important neurotransmitter.','多巴胺是一种重要的神经传递素。'}

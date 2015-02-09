@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["teacher"]={"teacher","['tiːtʃə]","['titʃɚ]","n.教师",'n.教师','I asked the teacher for her advice.','我征求这位老师的意见。','The key role of the teacher in the learning process should not be neglected.','教师在学习中的关键作用是不该忽视的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wealthy"]={"wealthy","['welθɪ]","['wɛlθi]","adj.富有的",'adj.富有的|||n.富人','She\'s an attractive woman, and wealthy to boot.','她是个很有魅力的女人, 而且很富有.','She is reputed to be very wealthy.','大家说她很富有.'}

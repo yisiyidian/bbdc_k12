@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acrimonious"]={"acrimonious","[,ækrɪ'məʊnɪəs]","[ ,ækri'məunjəs ]","adj.尖刻的",'adj.尖刻的','He had an acrimonious quarrel with his girlfriend yesterday.','昨天他跟他的女朋友激烈争吵了一番。','The acrimonious debate on the agenda ended indecisively.','对这项议程的激烈辩论无果而终。'}

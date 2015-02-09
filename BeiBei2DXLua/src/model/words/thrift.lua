@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thrift"]={"thrift","[θrɪft]","[θrɪft]","adj.节约",'adj.节约,节俭|||n.节俭,节约','||Thrift|| is the basement of richness.','节约是富裕的基础。','Diligence and thrift made him a possessor of warm fortunes.','勤俭使他成为富翁.'}

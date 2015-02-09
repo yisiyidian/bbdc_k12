@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strew"]={"strew","[struː]","[ stru: ]","vt.散播",'vt.散播,撒满','Shells of all shapes and sizes strew the long narrow beach.','各种各样的贝壳点缀着狭长的海滩。','They strewed seeds over the earth.','他们把种子撒在地里。'}

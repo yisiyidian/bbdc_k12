@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gourmand"]={"gourmand","['gʊəmənd; 'gɔː-]","[ 'ɡuəmənd ]","n.饕餮者",'n.饕餮者,贪食者,美食者','He was long famed as a gourmand and heavy smoker and drinker.','长期以来，他一直以嗜好美食和烟酒闻名。','||Gourmand|| is a lover of good food.','美食家是爱吃好东西的人。'}

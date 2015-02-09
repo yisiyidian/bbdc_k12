@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presentiment"]={"presentiment","[prɪ'zentɪm(ə)nt; -'sen-]","[prɪ'zɛntɪmənt]","n.预感",'n.预感,预觉','To all appearances, everything is smooth and successful, but I have a king of ominous presentiment .','表面看来，一切都很顺利成功，但我却有一种不祥的预感。','He had a presentiment of disaster.','他预感到灾难要降临。'}

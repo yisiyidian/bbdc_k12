@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cicada"]={"cicada","[sɪ'kɑːdə]","[sɪ'kedɚ]","n.蝉",'n.蝉，知了','||Cicadas|| are really noisy in Summer.','蝉在夏天确实很吵。','A cicada throws its slough.','蝉是要蜕皮的。'}

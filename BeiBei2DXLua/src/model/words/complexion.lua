@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complexion"]={"complexion","[kəm'plekʃ(ə)n]","[kəm'plɛkʃən]","n.外观",'n.外观(状态,形势,开色,配容)|||vt染(上色)','Her sparkling jewellery served as the perfect foil for her fine complexion.','她戴著闪闪生辉的首饰, 更显得容貌姣好.','She has a pale complexion.','她面色苍白.'}

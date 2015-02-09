@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revoke"]={"revoke","[rɪ'vəʊk]","[rɪ'vok]","vt.撤回(回想)",'vt.撤回(回想)|||n.取消(回想)','His driving licence was revoked after the crash.','他撞车后驾驶执照被吊销了。','The unreasonable rules were revoked.','不合理的规则被废除了。'}

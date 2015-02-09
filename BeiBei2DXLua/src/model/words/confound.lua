@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["confound"]={"confound","[kən'faʊnd]","[kən'faʊnd]","vt.使困惑",'vt.使困惑,混淆,挫败，诅咒|||vt.','I always confounded him with his twin brother.','我总分不清他和他的孪生兄弟。','Her husband\'s cruelty amazed and confounded her.','她丈夫的残忍让她既惊愕又惶惑。'}

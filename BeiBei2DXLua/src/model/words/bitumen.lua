@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bitumen"]={"bitumen","['bɪtjʊmən]","[bə'tumən]","n.沥青",'n.沥青','||Bitumen|| paper can be burnt to gain energy.','沥青纸可以焚烧以获得能量。','||Bitumen|| sales are also increasing','沥青的销售额也在不断增加。'}

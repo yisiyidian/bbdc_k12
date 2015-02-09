@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["notoriety"]={"notoriety","[nəʊtə'raɪɪtɪ]","[,notə'raɪəti]","n.臭名昭著",'n.臭名昭著,恶名,声名狼籍','His abrasive manner has won him an unenviable notoriety.','他生硬粗暴的态度让他声名狼藉。','He achieved notoriety as chief counsel to President Nixon in the Watergate break-in.','他因在水门事件中担任尼克松总统的首席法律顾问而声名狼藉。'}

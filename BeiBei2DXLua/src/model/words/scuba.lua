@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scuba"]={"scuba","['skuːbə; 'skjuːbə]","['skjʊbə]","n.水中呼吸器",'n.水中呼吸器','Ned used to be a scuba diver and now he\'s gone to the other extreme and taken up hang gliding.','内德过去是一名深水潜水员，现在他已走到另一个极端，开始从事悬挂式滑行运动。','I first got hooked on scuba diving when I was twelve.','12岁时我开始迷上了带水肺潜水.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resin"]={"resin","['rezɪn]","['rɛzn]","n.树脂",'n.树脂,松香,树脂制品|||vt.涂树脂','Amber is the resin of pine trees that grew very very long ago.','琥珀是古老的松脂。','This shelf was made of synthetic resin.','这个架子是合成树脂做的。'}

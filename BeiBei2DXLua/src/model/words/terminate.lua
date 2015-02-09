@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terminate"]={"terminate","['tɜːmɪneɪt]","['tɝmɪnet]","vt.终止",'adj.有结尾的,有限的|||vt.结束,终止,满期|||vi.达到终点','Your contract has been terminated.','你的合同已经被终止。','The next train terminates here.','这是下一班火车的终点站。'}

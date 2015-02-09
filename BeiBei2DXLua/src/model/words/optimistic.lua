@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["optimistic"]={"optimistic","[ɒptɪ'mɪstɪk]","[,ɑptɪ'mɪstɪk]","adj.乐观的",'adj.乐观的,乐观主义的','The book ended on an optimistic note.','该书的结尾寓意乐观.','She was always optimistic, even when things were at their worst.','她即使在最糟糕的时候也总是非常乐观.'}

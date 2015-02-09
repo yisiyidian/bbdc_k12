@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["martial"]={"martial","['mɑːʃ(ə)l]","['mɑrʃəl]","adj.军事的",'adj.军事的,战争的','The old veteran had a martial bearing.','那老兵具有威武的仪表。','He faced a court martial for disobeying orders.','他因不服从命令受到军法审判。'}

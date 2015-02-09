@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arena"]={"arena","[ə'riːnə]","[ə'rinə]","n.竞技场",'n.竞技场','The Roman arena was very famous.','罗马竞技场是很出名的。','He made it clear he had no intention of withdrawing from the political arena.','他明确表示他没有退出政治舞台的意图。'}

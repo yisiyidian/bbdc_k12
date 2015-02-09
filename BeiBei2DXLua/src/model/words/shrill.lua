@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shrill"]={"shrill","[ʃrɪl]","[ʃrɪl]","n.尖锐的声音",'n.尖锐的声音|||adj.尖锐的,刺耳的|||v.用尖锐的声音说,发出刺耳声','the shrill wail of a siren.','警笛的尖啸','Telephone shrilled unattended in deserted office.','在空无一人的办公室里电话铃突然地发出刺耳的尖叫声。'}

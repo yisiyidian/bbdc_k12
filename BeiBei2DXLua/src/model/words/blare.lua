@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blare"]={"blare","[bleə]","[blɛr]","n.巨响",'n.巨响,吼叫声,颜色的鲜艳|||v.高声鸣叫,大叫','The blare of the speaker burst upon our ears.','扩音器的噪音突然传进我们的耳中。','The trumpets blared out.','喇叭齐鸣.'}

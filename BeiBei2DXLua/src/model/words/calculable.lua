@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calculable"]={"calculable","['kælkjʊləb(ə)l]","['kælkjələbl]","adj.可计算的",'adj.可计算的,可信赖的,可靠的','calculable odds.','可数的东西','a calculable assistant.','可信赖的助手'}

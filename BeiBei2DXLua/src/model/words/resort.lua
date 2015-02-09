@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resort"]={"resort","[rɪ'zɔːt]","[rɪ'zɔrt]","n.(渡假)胜地",'n.(渡假)胜地,手段,凭借|||vi.诉诸,常去','This place has become a famous summer resort.','这个地方已成为一个避暑胜地。','The island is noted for its summer resort.','这个岛以避暑胜地而著称。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["naughty"]={"naughty","['nɔːtɪ]","['nɔti]","adj.顽皮的",'adj.顽皮的,淘气的，粗俗的','The naughty boy hid the books in the shrub.','这个淘气的孩子把书藏在了灌木丛里。','His dog scared that naughty boy away.','他的狗把那个顽皮的孩子吓走了。'}

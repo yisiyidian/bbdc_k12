@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quietude"]={"quietude","['kwaɪɪtjuːd]","['kwaɪətud]","n.安静",'n.安静,静止','Abby likes to retreat to the quietude of her personal study when she has a difficult problem to think over.','有难题必须思考时，艾比喜欢躲进自己安静的书房里。','Therefore, quietude overwhelmed hubbub in the streets and alleys of the county.','因此，县城的大街小巷倒也比平时少了许多嘈杂。'}

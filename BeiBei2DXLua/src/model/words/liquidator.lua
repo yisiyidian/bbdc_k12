@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liquidator"]={"liquidator","['lɪkwɪdeɪtə]","['lɪkwɪ'detɚ]","n.清算人",'n.清算人','...the failed company\'s liquidators.','…破产公司的清算人。','The court may dismiss a liquidator whenever it deems necessary.','法院认为必要时，得将清算人解任之。'}

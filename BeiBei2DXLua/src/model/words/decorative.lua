@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decorative"]={"decorative","['dek(ə)rətɪv]","['dɛkəretɪv]","adj.装饰的",'adj.装饰的，可作装饰的','The buildings were utilitarian rather than decorative.','这些建筑物是实用型的而不是装饰型的。','The pink flowers of the torch are used in decorative arrangements.','毛蕊花上粉红的花朵是用来装饰用的。'}

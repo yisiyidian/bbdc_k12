@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["punishment"]={"punishment","['pʌnɪʃm(ə)nt]","['pʌnɪʃmənt]","n.惩罚",'n.惩罚','||Punishment|| seemed to make no impression on the child.','惩罚对这孩子似乎没什么效果。','A teacher should not give students corporal punishment.','老师不应该体罚学生。'}

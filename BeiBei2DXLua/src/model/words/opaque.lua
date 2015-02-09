@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opaque"]={"opaque","[ə(ʊ)'peɪk]","[o'pek]","adj.不透明的",'adj.不透明的,难懂的','He interposed an opaque body between a light and the eye.','他将一个不透明的物体放在了一盏灯和眼睛之间。','This is an opaque cup.','这是一个不透明的杯子。'}

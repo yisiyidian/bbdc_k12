@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bravery"]={"bravery","['breɪv(ə)rɪ]","['brevəri]","n.勇敢",'n.勇敢','Several soldiers were decorated for bravery.','数名士兵因英勇而受嘉奖。','The commanding officer put Sergeant Williams in for a medal for bravery.','指挥官推荐威廉斯中士获勇敢勋章.'}

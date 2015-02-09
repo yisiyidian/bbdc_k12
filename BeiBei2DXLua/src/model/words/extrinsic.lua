@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extrinsic"]={"extrinsic","[ɪk'strɪnsɪk; ek-]","[ɛks'trɪnsɪk]","adj.非固有的",'adj.非固有的(非本质的,含杂质的)','That\'s something extrinsic to the subject.','那是对本题无关紧要的。','Nowadays there are fewer extrinsic pressures to get married.','现在来自外部的结婚压力少了。'}

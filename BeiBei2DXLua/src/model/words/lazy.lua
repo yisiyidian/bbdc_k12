@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lazy"]={"lazy","['leɪzɪ]","['lezi]","adj.懒惰的",'adj.懒惰的','The lazy man\'s the beggar\'s brother.','【谚】懒鬼是乞丐的兄弟。','A lazy youth, a lousy age.','【谚】少壮不努力，老大徒悲伤。'}

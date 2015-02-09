@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inspiration"]={"inspiration","[ɪnspɪ'reɪʃ(ə)n]","[,ɪnspə'reʃən]","n.灵感",'n.灵感,吸入,鼓舞人心(的东西)','Let\'s give mutual support and inspiration to each other.','让我们互相支持，互相鼓励。','Her speeches have ever been a fount of inspiration to her audiences.','她的演说对于听众来说永远是灵感之源。'}

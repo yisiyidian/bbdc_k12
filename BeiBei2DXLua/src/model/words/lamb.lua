@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lamb"]={"lamb","[læm]","[læm]","n.羔羊",'n.羔羊,小羊,羔羊肉,温顺的人|||vt.&vi.产羊羔','The dying lamb fell, its legs flailing (about) helplessly.','小羊快要死了, 倒在地上四条腿又踢又蹬.','The lamb had to be brought up by hand.','这只小羊要用奶瓶喂养.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disarray"]={"disarray","[dɪsə'reɪ]","[ ,disə'rei ]","v.弄乱",'v.弄乱,使混乱,使脱去衣服|||n.无秩序,杂乱,不整齐的衣服','The troops fled in disarray.','部队仓皇逃散。','Our plans were thrown into disarray by the rail strike.','铁路罢工打乱了我们的计划。'}

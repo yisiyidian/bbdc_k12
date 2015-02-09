@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["confession"]={"confession","[kən'feʃ(ə)n]","[kən'fɛʃən]","n.自认",'n.自认,自白,招供','The police tricked him into making a confession.','警察哄骗他作了招认。','By clever questioning they trapped him into making a confession.','他们用巧妙的提问诱使他招认了。'}

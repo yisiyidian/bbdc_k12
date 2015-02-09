@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plagiarize"]={"plagiarize","['pledʒə'raɪz]","[ 'pleidʒjəraiz ]","vt.抄袭(剽窃",'vt.抄袭(剽窃,借用)','He have plagiarize most of the book from earlier study of the period.','他的那本书，大部分都是抄袭的对那个时期的早期研究。','The poem employs as its first lines a verse plagiarized from a billboard.','这首诗开头的几行抄袭了一个广告牌上的一节诗。'}

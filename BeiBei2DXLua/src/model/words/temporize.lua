@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["temporize"]={"temporize","['tempəraɪz]","['tɛmpə'raɪz]","vt.投机",'vt.投机(因循,拖延,应付,妥协,迎合潮流)','Celia had decided long ago she would never temporize on that.','西莉亚早就认定，在那上面她绝不能妥协。','They are still ||temporizing|| in the face of what can only be described as a disaster.','面临着显而易见的灾难，他们还在拖延时间。'}

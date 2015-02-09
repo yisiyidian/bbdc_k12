@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unselfish"]={"unselfish","[ʌn'selfɪʃ]","[ʌn'sɛlfɪʃ]","adj.无私的",'adj.无私的','His unselfish work is beginning to tell.','他无私的工作开始产生效果。','It was unselfish of you to help us.','你无私地帮助了我们.'}

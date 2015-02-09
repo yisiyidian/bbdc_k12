@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["choreographer"]={"choreographer","[,kɒrɪ'ɒɡrəfə]","[ ,kɔri'ɔɡrəfə ]","n.舞蹈指导",'n.舞蹈指导','She is a leading professional belly dance, choreographer, and teacher.','她既是杰出的专业肚皮舞演员，也是舞蹈指导和老师。','The pole dancer wants to become a choreographer','钢管舞者想成为舞蹈编辑'}

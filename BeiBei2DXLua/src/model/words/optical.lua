@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["optical"]={"optical","['ɒptɪk(ə)l]","['ɑptɪkl]","adj.眼睛的",'adj.眼睛的,视觉的,光学的','I thought I saw a ghost but it was just an optical illusion.','我以为我看见鬼了, 其实只是一种幻觉.','They concentrated on better definition of the optical image.','他们致力於提高该光学影像的鲜明度.'}

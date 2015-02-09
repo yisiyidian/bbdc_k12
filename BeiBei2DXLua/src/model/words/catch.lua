@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["catch"]={"catch","[kætʃ]","[kætʃ]","vt.抓住",'n.捕捉,陷阱,捕获物,接(球等),扣栓物,隐患|||vt.抓住；赶上,了解,感染,被钩住,击中,察觉|||vi.抓住，燃着','I don\'t catch your meaning.','我不明白你的意思','Her dress ||caught|| on a nail.','她的衣服让钉子给钩住了。'}

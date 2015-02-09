@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reindeer"]={"reindeer","['reɪndɪə]","['rendɪr]","n.驯鹿",'n.驯鹿','Any of several large reindeer native to northern North America.','北美驯鹿原产于北美洲北部的一种巨大的驯鹿','||Reindeer|| have branched antlers.','驯鹿有带叉的角。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terrify"]={"terrify","['terɪfaɪ]","['tɛrɪfaɪ]","v.使害怕",'v.使害怕，使恐怖，威胁','The little girl was ||terrified|| out of her wits.','这个小女孩吓得魂不附体。','Rats terrify me.','老鼠使我害怕。'}

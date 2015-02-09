@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["char"]={"char","[tʃɑː]","[tʃɑr]","n.木炭",'n.木炭(散工,茶,字符)|||vt烧成炭(做散工)','Toast hazelnuts on a baking sheet until the skins char.','在烤盘上烤榛子直到外皮烤焦。','Halve the peppers and char the skins under a hot grill.','将柿子椒一分为二并在烤架下烤焦外皮。'}

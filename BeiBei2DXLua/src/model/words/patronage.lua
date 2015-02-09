@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["patronage"]={"patronage","[ˈpeɪtrənɪdʒ]","['pætrənɪdʒ]","n.赞助",'n.赞助,光顾,任免权','One taken by a person who is the guest of a business or an agency seeking favor or patronage.','某企业的客户或企图寻求优惠或赞助的某机构的客人的旅行','This orchestra has been established under the patronage of the government.','这个交响乐团是在政府赞助下成立的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["onion"]={"onion","['ʌnjən]","['ʌnjən]","n.洋葱",'n.洋葱','||Onion|| does not agree with me.','洋葱不适合我的胃口。','He is really a good onion.','他真是个大好人。'}

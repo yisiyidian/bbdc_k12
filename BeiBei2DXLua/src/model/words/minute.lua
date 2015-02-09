@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minute"]={"minute","['mɪnɪt]","['mɪnɪt]","n.分钟",'adj.微小的,不重要的,详细的n.分钟,一会儿,会议记录vt.记录','Her clothes are always right up to the minute.','她衣服的样式总是最新的。','You must learn how to take minutes.','你必须学会做会议纪要。'}

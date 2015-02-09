@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["famine"]={"famine","['fæmɪn]","['fæmɪn]","n.饥荒",'n.饥荒,极度缺乏','Millions of people gave freely in response to the famine appeal.','千百万人响应救灾呼吁而慷慨解囊.','War, famine and flood are terrible evils.','战争、饥荒和洪水都是可怕的灾祸。'}

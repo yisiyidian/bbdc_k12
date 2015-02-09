@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["naval"]={"naval","['neɪv(ə)l]","['nevl]","adj.海军的",'adj.海军的,军舰的|||adj.','Beiyang Navy is the earliest naval force of China.','北洋水师是中国最早的海军部队。','The ships required the protection of naval and air power.','船只本身需要海军和空军的保护。'}

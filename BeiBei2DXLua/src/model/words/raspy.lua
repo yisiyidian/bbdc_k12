@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["raspy"]={"raspy","['rɑːspɪ]","['ræspi]","adj.刺耳的",'adj.刺耳的,粗糙的,易怒的','Both men sang in a deep, raspy tone.','两个男人的歌声都很低沉、沙哑。','Her voice was raspy with nicotine and whiskey.','她因为抽烟喝酒声音变得嘶哑。'}

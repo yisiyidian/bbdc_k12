@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["porch"]={"porch","[pɔːtʃ]","[pɔrtʃ]","n.门廊",'n.门廊','A pigeon perched on our porch railing.','一只鸽子栖息在我们门廊的栏杆上。','We rolled up to the front porch.','我们坐车抵达前门廊.'}

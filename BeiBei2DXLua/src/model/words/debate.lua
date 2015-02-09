@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["debate"]={"debate","[dɪ'beɪt]","[dɪ'bet]","n.辩论",'n.辩论,讨论|||vt.争论,思考|||vi.商讨,辩论','Her resignation caused much public debate.','她辞职一事引起群众议论纷纷。','He debated buying a new car, but didn\'t in the end.','他思量很久是否买辆新汽车，但最後还是没买。'}

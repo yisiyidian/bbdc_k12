@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["midday"]={"midday","[mɪd'deɪ]","[,mɪd'de]","n.正午",'n.正午,中午|||adj.正午的','We\'re leaving round about midday.','我们要在中午前後走.','He finally surfaced at midday.','他终於在中午时醒过来了.'}

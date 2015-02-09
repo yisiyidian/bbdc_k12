@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deceptive"]={"deceptive","[dɪ'septɪv]","[dɪ'sɛptɪv]","adj.迷惑的",'adj.迷惑的,虚伪的,诈欺的','||Deceptive|| advertising has damaged the company\'s image among the consumer.','虚假广告已损坏了该公司在消费者中的形象。','His appearance was deceptive.','他的外表带有欺骗性。'}

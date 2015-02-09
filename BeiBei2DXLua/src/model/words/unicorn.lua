@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unicorn"]={"unicorn","['juːnɪkɔːn]","['junɪkɔrn]","n.(传说中的)独角兽",'n.(传说中的)独角兽','a Chinese unicorn','麒麟','||Unicorns|| are legendary beasts.','独角兽是传说里的野兽。'}

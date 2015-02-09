@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sacrilege"]={"sacrilege","['sækrɪlɪdʒ]","['sækrəlɪdʒ]","n.亵渎圣物",'n.亵渎圣物,冒渎,悖理逆天的行为','Putting water in brandy is sacrilege.','在白兰地中掺水是可恶的事。','It is (a) sacrilege to steal a crucifix from an altar.','从圣坛窃取耶稣受难像是亵渎神灵的行为.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["technique"]={"technique","[tek'niːk]","[tɛk'nik]","n.技术",'n.技术','I owe the restoration of my hearing to this remarkable new technique.','我之所以能恢复听觉完全是因为采用了这项非凡的新技术.','He gave a demonstration of the new technique then and there.','他当场表演了这种新的操作方法.'}

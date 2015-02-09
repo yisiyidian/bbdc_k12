@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assistance"]={"assistance","[ə'sɪst(ə)ns]","[ə'sɪstəns]","n.帮助",'n.帮助,援助','The value of your assistance is inestimable.','阁下鼎立相助之功不可胜言。','He refused the proffered assistance.','他拒绝接受向他提供的帮助.'}

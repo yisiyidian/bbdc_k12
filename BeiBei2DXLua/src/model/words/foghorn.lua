@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foghorn"]={"foghorn","['fɒghɔːn]","['fɔɡhɔrn]","n.[航海]雾号",'n.[航海]雾号,尖而响的声音','The deep boom of a foghorn echoed across the bay','雾角低沉的声音在海湾回响。','The foghorn boomed out its warning.','雾号发出呜呜的警报声。'}

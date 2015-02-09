@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rejoice"]={"rejoice","[rɪ'dʒɒɪs]","[rɪ'dʒɔɪs]","v.使...欢喜",'v.使...欢喜,高兴','I always rejoice in my comrades\' achievements.','我总是为同志们的成就感到高兴。','They all rejoiced to hear the happy news.','他们都很乐于听到这个令人高兴的消息。'}

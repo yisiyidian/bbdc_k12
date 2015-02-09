@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["audio"]={"audio","['ɔːdɪəʊ]","['ɔdɪo]","adj.成音频率的",'adj.成音频率的,声音的|||n.音响设备','The school\'s audio apparatus includes films and records.','学校的视听设备包括放映机和录音机.','Its frequency response has to be flat over the whole audio range.','它的频率响应在整个音频范围内有所下降.'}

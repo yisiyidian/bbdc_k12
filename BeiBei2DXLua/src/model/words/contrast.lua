@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contrast"]={"contrast","['kɒntrɑːst]","['kɑntræst]","n.对比",'n.对比，对照；差异；对照物，对立面；[摄]反差','The coastal areas have mild winters, but by contrast the central plains become extremely cold.','沿海地区的冬天天气暖和，可是相比之下中部平原却异常寒冷。','The black furnishings provide an interesting contrast to the white walls.','黑色家具和白色墙壁形成很有意思的对比。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whether"]={"whether","['weðə]","['wɛðɚ]","conj.&adv.是否",'conj.&adv.是否','Air whether in the gaseous or liquid state is a fluid.','空气，无论是气态的还是液态的，都是一种流体。','His nationality isn\'t relevant to whether he\'s a good teacher.','他的国籍与他是否是位好老师无关。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guitar"]={"guitar","[gɪ'tɑː]","[ɡɪ'tɑr]","n.吉他",'n.吉他|||vi.弹吉他','Doubtless he\'ll be bringing his guitar, as usual.','他很可能跟平常一样会带吉他来.','His parents balked at the cost of the guitar he wanted.','他想要那个吉他, 但他父母看到吉他的价格却踌躇不决.'}

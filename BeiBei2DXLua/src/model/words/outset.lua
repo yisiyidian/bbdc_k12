@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outset"]={"outset","['aʊtset]","['aʊtsɛt]","n.开始",'n.开始,开端','Certain problems were apparent from the outset.','有些问题从一开始就是显而易见的.','The teacher laid emphasis on the precision of the translation from the outset.','老师从一开始就强调翻译准确性。'}

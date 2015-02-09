@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soprano"]={"soprano","[sə'prɑːnəʊ]","[sə'prɑno]","n.女高音",'n.女高音,最高音部adj.女高音的','It\'s a soprano of great compass and of great purity.','这是一种音域宽广，高度纯正的女高音。','The young soprano was taken up by a famous conductor.','那年轻的女高音歌手受到一著名指挥家的提携.'}

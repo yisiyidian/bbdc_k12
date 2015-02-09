@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scotch"]={"scotch","[skɒtʃ]","[skɑtʃ]","n.伤口",'n.伤口,刻痕|||v.粉碎，消灭，阻止|||v.弄伤，刻|||Scotch|||n.苏格兰人,苏格兰语|||adj.苏格兰人的,苏格兰语的','Anyway, there never was any one more ||Scotch|| in this wide world.','不管怎样，普天之下没有人比他更像一个苏格兰人了。','The prime minister scotched the rumors of her illness with a public appearance.','总理在公从场合的出现平息了关于她得病的传言'}

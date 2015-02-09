@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["felony"]={"felony","['felənɪ]","['fɛləni]","n.重罪",'n.重罪','Drinking makes such fools of people, and people are such fools to begin with, that it\'s compounding a felony.','酗酒令人如此糊涂，而人本来就是糊涂，所以酗酒无非就是等于是以罚款免人重罪罢了。','One who has committed a felony.','重罪犯，犯了重罪的人'}

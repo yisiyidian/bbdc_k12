@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pyre"]={"pyre","[paɪə]","['paɪɚ]","n.火葬柴堆",'n.火葬柴堆','The glow of a funeral pyre slowly dies by the silent river.','火葬灰中的红光在沉静的河边慢慢熄灭。','They built pyres and made burnt offerings to their god.','他们堆起柴堆向他们的神祭献燔祭。'}

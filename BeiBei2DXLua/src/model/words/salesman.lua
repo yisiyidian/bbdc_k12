@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["salesman"]={"salesman","['seɪlzmən]","['selzmən]","n.销售人员",'n.销售人员,推销员','A good salesman must be aggressive if he wants to succeed.','要做个好推销员一定要有闯劲才能成功。','That used-car salesman is a real crook.','那个卖旧汽车的商人是个地地道道的骗子.'}

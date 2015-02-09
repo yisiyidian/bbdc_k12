@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flagship"]={"flagship","['flægʃɪp]","['flæɡʃɪp]","n.旗舰",'n.旗舰','The ship carrying an admiral; flagship.','旗舰海军上将所在的船只; 旗舰','This dictionary is the flagship of Oxford\'s range of learners\' dictionaries.','本词典执牛津一系列学习者词典之牛耳.'}

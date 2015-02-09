@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["which"]={"which","[wɪtʃ]","[wɪtʃ]","pron.哪一个",'pron.哪一个|||adj.哪一个,哪一些','||Which|| book have you read?','哪一本书你读过了？','The movie which was shown later was better.','后来上映的电影较好看'}

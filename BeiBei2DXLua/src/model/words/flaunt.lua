@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flaunt"]={"flaunt","[flɔːnt]","[flɔnt]","v.挥动",'v.挥动,夸耀,（厚颜无耻地）炫耀,飘扬，张扬','She\'s asking for trouble, flaunting herself like that.','她那么招摇，真是在自找麻烦。','She flaunts her new clothes.','她炫耀自己的新衣服。'}

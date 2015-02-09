@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ski"]={"ski","[skiː]","[ski]","vt.&vi.滑雪",'adj.滑雪（用）的|||n.滑雪，滑雪板|||vt.&vi.滑雪','We were amazed at his expertise on the ski slopes.','他斜坡滑雪的技能使我们赞叹不已.','I am learning to ski.','我正在学滑雪。'}

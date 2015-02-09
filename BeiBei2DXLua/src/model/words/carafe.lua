@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carafe"]={"carafe","[kə'ræf; -'rɑːf]","[kə'ræf]","n.卡夫卡瓶",'n.卡夫卡瓶，玻璃水瓶','He ordered a carafe of wine.','他点了一瓶葡萄酒。','She lifted the stopper from the carafe.','她拔出玻璃酒瓶上的瓶塞。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reef"]={"reef","[riːf]","[rif]","n.暗礁",'n.暗礁,收缩帆部份','The ship struck a hidden reef and went down with all hands.','船只撞上暗礁与全体船员一起沉没。','Our ship was able to haul up just before it hit the submerged reef.','我们的船就在要撞上暗礁的时候停住了。'}

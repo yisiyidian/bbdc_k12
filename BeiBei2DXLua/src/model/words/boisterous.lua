@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boisterous"]={"boisterous","['bɒɪst(ə)rəs]","['bɔɪstərəs]","adj.喧闹的",'adj.喧闹的,欢闹的','Most of the children were noisy and boisterous.','大多数孩子都又吵又闹。','As midnight drew on, the party became more boisterous.','随着午夜的临近，参加宴会的人变得更加喧闹。'}

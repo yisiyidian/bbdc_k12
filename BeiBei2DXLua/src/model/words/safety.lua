@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["safety"]={"safety","['seɪftɪ]","['sefti]","n.安全",'n.安全；安全性；安全处所；中卫|||adj.保障安全的','The new car design incorporates all the latest safety features.','新的汽车设计具备最新安全措施的一切特点。','It seemed an eternity before news of his safety reached her.','他平安的消息到达她那里之前，那段时间似乎是无限漫长的。'}

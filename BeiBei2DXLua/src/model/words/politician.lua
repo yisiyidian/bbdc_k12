@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["politician"]={"politician","[pɒlɪ'tɪʃ(ə)n]","[,pɑlə'tɪʃən]","n.政治家",'n.政治家,政客','A politician should be a servant of the people.','政治家应是人民的公仆。','You need a thick skin to be a politician.','当政客得脸皮厚.'}

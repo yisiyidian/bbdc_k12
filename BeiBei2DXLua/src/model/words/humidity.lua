@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["humidity"]={"humidity","[hjʊ'mɪdɪtɪ]","[hju'mɪdəti]","n.湿度",'n.湿度,湿气','Summers in Washington bring murderous heat and humidity.','华盛顿的夏天酷热而潮湿.','The house is not comfortable tonight because of the high humidity.','由于湿度高,今晚屋子里不舒服.'}

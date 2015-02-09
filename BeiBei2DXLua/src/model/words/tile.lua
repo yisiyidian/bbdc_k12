@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tile"]={"tile","[taɪl]","[taɪl]","n.砖瓦",'n.砖瓦|||vt.铺以瓦,铺以瓷砖','A picture or decorative design made by setting small colored pieces, as of stone or tile, into a surface.','马赛克图画或装饰性的设计，通过把小的有色彩的石块或瓦块嵌入一个表面制成','Material, such as lumber or tile, used in making floors.','地面材料如木料或瓷砖等铺地板用的材料'}

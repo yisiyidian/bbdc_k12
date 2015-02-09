@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harmless"]={"harmless","['hɑ:mləs]","['hɑrmləs]","adj.无害的",'adj.无害的,无恶意的','I made a harmless remark to some guy at the bar and he swung at me.','在酒吧里我向某个家伙说了句无恶意的话，他就向我打了一拳。','This snake is harmless.','这条蛇是无毒的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["participant"]={"participant","[pɑː'tɪsɪp(ə)nt]","[pɑr'tɪsəpənt]","n.参加者",'adj.参与的|||n.参加者,参与者','One that demonstrates, such as a participant in a public display of opinion.','示威者示威的人，例如一个表达意愿的公开集会的参加者','A participant in a feud.','结下世仇的人结下世仇的参与者'}

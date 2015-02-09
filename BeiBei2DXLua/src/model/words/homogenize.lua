@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["homogenize"]={"homogenize","[hə'mɒdʒənaɪz]","[ho'mɑdʒə,naɪz]","vt.使均匀",'vt.使均匀，使均质','The two liquids homogenized in the blender.','两种液体在掺和器里均匀了一下','The industrial trades are now being homogenized, and it is a general trend.','现代工业企业正朝着单一化发展，而且这将成为总的趋势。'}

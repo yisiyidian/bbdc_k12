@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["postoperative"]={"postoperative","[pəʊst'ɒpərətɪv]","[ pəust'ɔpərətiv ]","adj.手术后的",'adj.手术后的','All were normal and no postoperative complications were found.','一切正常,并没有什么手术后的并发症.','Acute respiratory insufficiency in the postoperative patient may be caused by defective ventilation.','手术后病人的急性呼吸功能不全,可因不足的通气所引起.'}

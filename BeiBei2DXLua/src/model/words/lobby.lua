@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lobby"]={"lobby","['lɒbɪ]","['lɑbi]","n.大厅",'n.大厅,门廊,门厅,休息室,游说议员者|||v.游说','A lobby or an anteroom, as of a theater or hotel.','休息室，候客室如戏院或旅馆的休息室或接待室','The film star held court in the hotel lobby.','这位电影明星在旅馆的大厅里接见了影迷.'}

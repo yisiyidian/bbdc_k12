@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cutter"]={"cutter","['kʌtə]","['kʌtɚ]","n.裁剪者",'n.裁剪者,切割者,切割器|||n.快艇，巡逻艇|||n.轻便雪橇','The coastguard cutter cruise along the coast look for smuggler.','海岸警卫队缉私艇沿海巡逻搜寻走私犯。','The passengers were sent to the cutters as the ship was sinking.','大船要沉没了，乘客们被送到驳船上。'}

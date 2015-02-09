@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["landscape"]={"landscape","['læn(d)skeɪp]","['lænd'skep]","n.风景",'n.风景,山水,风景画|||v.美化…的景观,进行造园工程','That new factory is a blot on the landscape.','那新建的工厂破坏了此地的景色.','The landscape was grey and stark.','景色灰暗荒凉。'}

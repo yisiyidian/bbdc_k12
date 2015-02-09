@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blithe"]={"blithe","[blaɪð]","[blaɪð]","adj.快乐的",'adj.快乐的,无忧无虑的，轻率的','She seems quite blithe.','她看上去很高兴。','It does so with blithe disregard for best scientific practice.','没有考虑最科学的做法就轻率地这么做了。'}

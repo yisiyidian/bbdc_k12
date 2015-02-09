@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deeply"]={"deeply","['diːplɪ]","['diplɪ]","adv.深深地",'adv.深深地,强烈地，（颜色）浓浓地，（声音）低沉地','He felt deeply insulted.','他觉得受了大辱。','I deeply respect her courage.','我深深敬佩她的勇气。'}

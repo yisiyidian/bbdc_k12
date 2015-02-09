@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reading"]={"reading","['riːdɪŋ]","['ridɪŋ]","n.阅读",'adj.阅读的|||n.阅读','He made the attic in the small house a reading room.','他把小屋的阁楼当作阅读室。','I am reading a book about the rise and fall of the Roman Empire.','我正在看一本关于罗马帝国兴衰的书。'}

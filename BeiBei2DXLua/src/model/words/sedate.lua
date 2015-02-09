@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sedate"]={"sedate","[sɪ'deɪt]","[ si'deit ]","adj.安静的",'adj.安静的,镇静的|||vt.使安静，使镇静','Her London life was sedate, almost mundane.','她在伦敦的生活平淡无奇，几乎有些枯燥。','We set off again at a more sedate pace.','我们重新上路了，步调更加从容。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gibberish"]={"gibberish","['dʒɪb(ə)rɪʃ]","['dʒɪbərɪʃ]","n.急促而不清楚的话",'n.急促而不清楚的话,乱语','Don\'t talk gibberish!','别胡扯!','No one can unterstand his gibberish language.','没人能听懂他的胡言乱语。'}

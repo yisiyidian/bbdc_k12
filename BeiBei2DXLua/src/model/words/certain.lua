@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["certain"]={"certain","['sɜːt(ə)n; -tɪn]","['sɝtn]","adj.一定的",'adj.一定的|||pron.某几个,某些|||肯定的,无疑的,必然发生的','For certain reasons I will be unable to attend the meeting.','因为某种原因，我不能出席这次会议。','I can\'t say for certain when he will arrive.','我说不准他什么时候会来。'}

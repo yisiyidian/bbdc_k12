@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abundance"]={"abundance","[ə'bʌnd(ə)ns]","[ə'bʌndəns]","n.丰富",'n.丰富,充裕','My thoughts . . . are from the abundance of my heart','“我的思想…是从我充实的内心中流淌出来的”','There was an abundance of corn last year.','去年玉米丰收。'}

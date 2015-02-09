@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unfortunate"]={"unfortunate","[ʌn'fɔːtʃ(ə)nət]","[ʌn'fɔrtʃənət]","adj.不幸的",'adj.不幸的,令人遗憾的，不成功的|||n.不幸的人','He has an unfortunate aptitude for saying the wrong thing.','他有失言的倒霉本事.','His speech had an unfortunate sequel, in that it caused a riot.','他的演说产生了不幸的後果, 由之引发一场骚乱.'}

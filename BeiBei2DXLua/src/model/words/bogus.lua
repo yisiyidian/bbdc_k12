@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bogus"]={"bogus","['bəʊgəs]","['bogəs]","adj.假的",'adj.假的,伪造的','She was fooled by his bogus identity card.','她被他的假身份证骗了。','He said these figures were bogus and totally inaccurate.','他说这些数字都是捏造的，完全不准确。'}

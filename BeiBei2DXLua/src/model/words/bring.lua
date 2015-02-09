@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bring"]={"bring","[brɪŋ]","[brɪŋ]","vt.带来",'vt.带来,引起,促使,劝诱|||vi.产生','Spring brings warm weather and flowers.','随著春天的到来，天气和暖，百花盛开。','Spring rains bring summer flowers.','春雨带来了夏日百花。'}

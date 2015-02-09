@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pacifist"]={"pacifist","['pæsɪfɪst]","['pæsɪfɪst]","adj.非战主义的",'adj.非战主义的|||n.反战，反对武力','Later he was to become famous as a pacifist.','后来他就变成了一位知名的和平主义者。','||Pacifist|| movements gathered strength in Norway.','在挪威，和平主义的运动力量逐渐增强。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reciprocate"]={"reciprocate","[rɪ'sɪprəkeɪt]","[rɪ'sɪprəket]","v.互换",'v.互换,交换,报答，往返运动','Some day I will reciprocate your great kindness to me.','总有一天我会报答你对我的厚爱。','Although she did not reciprocate his feelings, she did not discourage him.','尽管她没有回应他的感情，她也没有使他丧失信心。'}

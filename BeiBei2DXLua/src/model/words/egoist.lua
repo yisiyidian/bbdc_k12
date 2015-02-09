@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["egoist"]={"egoist","['iːɡəʊɪst]","['iɡoɪst]","n.自我主义者",'n.自我主义者','The egoists are not welcome by people','自我主义者不受人们欢迎','Having grown up in household where competitiveness was accepted, even encouraged, Danny became a consummate egoist.','丹尼生长在一个接受竞争、甚至鼓励竞争的家庭，所以变成一个极端的自我主义者。'}

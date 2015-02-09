@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ton"]={"ton","[tʌn]","[tʌn]","n.吨",'n.吨','These cases weigh a ton what have you got in them?','这些箱子非常重--你在里面放了什麽了?','The maximum load for this lorry is one ton.','这辆卡车最大载重量是一吨。'}

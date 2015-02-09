@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["airsickness"]={"airsickness","['ɛr,sɪknɪs]","[ 'εəsiknis ]","n.晕机",'n.晕机','You seem to have some airsickness. We have medicine on the plane. I\'ll get some for you','您可能是有点儿晕机。我们这有晕机药，我去给您拿。','May I have some medicine for airsickness?','我可以要一些晕机药么？'}

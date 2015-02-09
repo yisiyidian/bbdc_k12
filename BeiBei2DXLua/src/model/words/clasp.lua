@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clasp"]={"clasp","[klɑːsp]","[klæsp]","n.扣子",'n.扣子,钩,紧握|||v.扣紧,紧握,密切合作','The clasp of my brooch is broken.','我胸针的钩子断了。','He held her hand in a firm clasp.','他紧握她的手。'}

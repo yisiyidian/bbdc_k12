@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dynamo"]={"dynamo","['daɪnəməʊ]","['daɪnəmo]","n.发电机",'n.发电机','||Dynamo|| have not score yet.','迪纳摩队还没有进球。','a vice president who was the real dynamo of the corporation.','副总裁是公司真正强有力的人物'}

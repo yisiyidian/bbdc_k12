@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mermaid"]={"mermaid","['mɜːmeɪd]","['mɝmed]","n.美人鱼",'n.美人鱼','Have you read the story of mermaids?','你看过关于美人鱼的故事吗？','what if there were only two kinds of mermaids live with in the world, which one would you like to choose, the one with fish head or the one with fish tale?','如果要你选择一种美人鱼一起生活，你会选择鱼脸人身的还是人脸鱼尾的？'}

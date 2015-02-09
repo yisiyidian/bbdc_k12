@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aver"]={"aver","[ə'vɜː]","[ ə'və: ]","v.极力声明",'v.极力声明,断言|||vt.&n.断言','He avers he will not attend the meeting.','他断言不会参加那个会议。','I aver it will not rain tomorrow.','我肯定明天不会下雨。'}

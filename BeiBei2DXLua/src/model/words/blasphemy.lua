@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blasphemy"]={"blasphemy","['blæsfəmɪ]","['blæsfəmi]","n.亵渎神明",'n.亵渎神明,亵渎神明的言词','Murder and blasphemy are mortal sins.','谋杀和亵渎神明的言词都是不可饶恕的大罪。','Their conversation was full of blasphemy.','他们的谈话中充满了渎犯神灵的言词。'}

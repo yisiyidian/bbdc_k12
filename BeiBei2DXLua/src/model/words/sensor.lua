@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sensor"]={"sensor","['sensə]","['sɛnsɚ]","n.传感器",'n.传感器，探测器','Smoke sensors warned us of the fire.','烟雾探测器已向我们发出火警警报.','The temperature sensor is enclosed in a protective well.','温度传感器密封在保护套管中.'}

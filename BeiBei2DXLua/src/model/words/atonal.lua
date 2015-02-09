@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["atonal"]={"atonal","[eɪ'təʊn(ə)l; ə-]","[e'tonl]","adj.(音乐)无调的",'adj.(音乐)无调的','Atonal composition or the theory of atonal composition.','无调性风格乐曲，无调性风格学说','We are trying to follow some general intern atonal practice.','我们在尝试按国际惯例办事。'}

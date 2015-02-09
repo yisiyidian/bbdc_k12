@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["severance"]={"severance","['sev(ə)r(ə)ns]","['sɛvərəns]","n.切断",'n.切断,分离,隔离','He uses the severance to found a company.','他用遣散费建了一家公司。','We were offered 13 weeks\' severance pay.','我们拿到了 13 个星期的薪水作为遣散费。'}

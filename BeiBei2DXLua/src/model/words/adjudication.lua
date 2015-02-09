@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adjudication"]={"adjudication","[ə,dʒuːdɪ'keɪʃn]","[ə,dʒʊdɪ'keʃən]","n.判决",'n.判决,裁定,破产之宣告','The adjudication is published by the court.','法院公布了判决。','||Adjudication|| of the company is going to release.','对公司的判决快要出来了。'}

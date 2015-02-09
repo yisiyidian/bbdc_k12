@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clutch"]={"clutch","[klʌtʃ]","[klʌtʃ]","n.爪子",'n.爪子,控制,抓紧,掌握,离合器,母鸡一次所孵的蛋,一组,关键时刻,女式无带提包|||vt.抓牢|||vi.企图抓住,踩汽车之离合器|||adj.关键的,致胜的','Careless use of the clutch may damage the gears.','离合器使用不慎可能损坏传动装置.','The brake (pedal) is between the clutch and the accelerator.','制动器（踏板）在离合器和加速器之间.'}

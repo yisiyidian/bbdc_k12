@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["faze"]={"faze","[feɪz]","[fez]","v.打扰",'v.打扰,折磨,使狼狈','The worst results cannot faze him.','最坏的结果也不会让他发慌。','Do not faze me if there is not emergency.','没有紧急事件别来烦我。'}

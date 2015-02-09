@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potentate"]={"potentate","['pəʊt(ə)nteɪt]","[ 'pəutənteit ]","n.有权的人",'n.有权的人,有势力的人,统治者','Those who rule the nation are often known as "potentates".','那些管理国家的人通常被称为“统治者”。','In a kingdom, the capability of potentate decide the nation\'s destiny.','在一个王国，（统治者，有权势的人）的能力决定了国家的命运。'}

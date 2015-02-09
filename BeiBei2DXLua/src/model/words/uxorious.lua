@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uxorious"]={"uxorious","[ʌk'sɔːrɪəs]","[ʌk'sorɪəs]","adj.宠爱妻子的",'adj.宠爱妻子的','His friends laughed at him because he was so uxorious and submissive to his wife\'s desires.','他的朋友们嘲笑他，因为他溺爱妻子到了百依百顺的程度。','He will be  uxorious husband.','他将会是一个宠爱妻子的丈夫。'}

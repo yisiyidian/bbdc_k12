@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["return"]={"return","[rɪ'tɜːn]","[rɪ'tɝn]","vt.&vi.返回",'n.返回,归还,报答,报告|||vt.&vi.返回,归还,回来|||adj.返回的','We look forward to the return of spring.','我们期待着春天的到来。','Our investment accounts return a high rate of interest.','我们的投资项目利润回报很高。'}

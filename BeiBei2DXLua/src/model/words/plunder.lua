@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plunder"]={"plunder","['plʌndə]","['plʌndɚ]","v.掠夺",'v.掠夺,抢劫,抢夺|||n.抢夺,掠夺品,战利品','The enemy plundered the village.','敌人抢劫村庄。','He escaped with his plunder.','他带着赃物逃跑了。'}

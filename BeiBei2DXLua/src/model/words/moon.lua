@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moon"]={"moon","[muːn]","[mun]","n.月亮",'n.月亮','The moon goes round the earth.','月亮绕着地球转。','The moon waxes and wanes every month.','月亮每个月都有盈亏。'}

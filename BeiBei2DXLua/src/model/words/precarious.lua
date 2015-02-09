@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["precarious"]={"precarious","[prɪ'keərɪəs]","[prɪ'kɛrərɪəs]","adj.不确定的",'adj.不确定的,危险的','The family lived a precarious existence.','这家人过着朝不保夕的生活。','What a precarious situation we were in when the avalanche started!','雪崩发生的时候我们的处境多么危险啊！'}

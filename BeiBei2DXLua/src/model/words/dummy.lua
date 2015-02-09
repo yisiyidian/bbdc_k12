@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dummy"]={"dummy","['dʌmɪ]","['dʌmi]","adj.假的",'n.傀儡,假人,哑巴,笨蛋,仿制品|||adj.假的,虚晃的|||vt.仿制','||Dummy|| patrol cars will be set up beside motorways to frighten speeding motorists.','仿真巡逻车将被安置在公路旁以威慑超速行驶的驾驶员。','a dummy corporation.','挂名公司'}

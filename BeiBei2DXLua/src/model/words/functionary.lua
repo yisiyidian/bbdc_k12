@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["functionary"]={"functionary","['fʌn(k)ʃ(ə)n(ə)rɪ]","['fʌŋkʃənɛri]","n.职员",'n.职员,负责人员,官员|||adj.机能的,作用的,职务的','A functionary of local government told us the truth.','当地政府的一名工作人员告诉了我们实情。','No functionary may support or cover up unfair competition acts.','国家官员不得支持、包庇不正当竞争行为。'}

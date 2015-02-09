@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mat"]={"mat","[mæt]","[mæt]","n.垫",'n.垫,丛,衬边,消光面|||vt.遮盖,保护,用垫子装饰,使纠缠,铺席于...上,使...无光泽,给(照片)镶框|||vi.缠结','Be careful you don\'t trip (up) on the mat.','小心别在地席上绊倒了.','There are some clods of soil on the mat.','垫子上有些土块。'}

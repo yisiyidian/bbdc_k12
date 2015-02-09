@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["closet"]={"closet","['klɒzɪt]","['klɑzət]","n.壁橱",'n.壁橱,衣帽间|||adj.（用于名词前）隐藏（身分等）的；不公开（个人信息）的|||vt.把…关在房间里（尤指为了私下会谈或避免他人打扰）','Put the coats back into the closet.','请把大衣放回到壁橱里。','Please put the coats back into the closet.','请把大衣放回到壁橱里。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cruiser"]={"cruiser","['kruːzə]","['krʊzɚ]","n.巡洋舰",'n.巡洋舰，游艇','The fast cruiser soon overhauled the old cargo boat.','快速巡逻艇迅即赶上那艘旧货船.','Our torpedo boats bore down on the enemy cruiser.','我方面鱼雷艇向敌巡洋舰冲去。'}

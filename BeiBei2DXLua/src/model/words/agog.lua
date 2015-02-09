@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agog"]={"agog","[ə'gɒg]","[ ə'ɡɔɡ ]","adj.兴奋的",'adj.兴奋的,有强烈兴趣的','The prospect of Christmas left the children agog.','对圣诞节的憧憬使得孩子们兴奋不已。','The people are all agog to know the news about the World Cup.','人们都渴望得知世界杯足球赛的消息。'}

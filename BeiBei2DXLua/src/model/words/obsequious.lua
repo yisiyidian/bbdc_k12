@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obsequious"]={"obsequious","[əb'siːkwɪəs]","[əb'sikwɪəs]","adj.谄媚的",'adj.谄媚的,奉承的,顺从的','Barrow was positively obsequious to me until he learnt that I too was the son of a labouring man.','巴罗竭力讨好我，直到得知我也是工人家庭出身。','His obsequious submission to his boss\'s ideas disgusted his fellow workers.','他对老板的意见阿谀逢迎，这使他的同事感到恶心。'}

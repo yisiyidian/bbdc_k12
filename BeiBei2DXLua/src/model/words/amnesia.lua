@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amnesia"]={"amnesia","[æm'niːzɪə]","[æm'niʒə]","n.健忘症",'n.健忘症，记忆缺失','He is suffered from amnesia.','他患有健忘症。','People suffering from amnesia don\'t forget their general knowledge of objects.','患健忘症的人不会忘记关于物体的一些基本知识。'}

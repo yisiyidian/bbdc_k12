@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reactor"]={"reactor","[rɪ'æktə]","[rɪ'æktɚ]","n.反应堆",'n.反应者，反应堆','a breeder reactor','增殖反应堆','An undamaged nuclear reactor; undamaged feelings.','未毁坏的核反应堆；未受伤害的感情'}

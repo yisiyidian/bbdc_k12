@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["method"]={"method","['meθəd]","['mɛθəd]","n.方法",'n.方法,办法,条理','I have a simple and easy method.','我有个简易的方法。','This is not an economical method of heating.','这不是一种经济的取暖方式。'}

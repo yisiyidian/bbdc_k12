@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["betroth"]={"betroth","[bɪ'trəʊð; -θ]","[ bi'trəuð ]","n.订婚者",'n.订婚者|||v.订婚|||vt.同...订婚','Her father betrothed her to him at an early age.','她父亲在她年幼时已把她许配给他。','She betrothed herself to him.','她和他订婚了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cab"]={"cab","[kæb]","[kæb]","n.出租汽车",'n.出租汽车,司机室,驾驶室,轻便马车|||vi.乘出租车','Shall we take a cab there and come back by subway?','我们坐出租车去再乘地铁回来好吗？','The cab swung around the corner.','那部计程车转过街角。'}

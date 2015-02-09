@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["belligerence"]={"belligerence","[bə'lɪdʒ(ə)r(ə)ns]","[bə'lɪdʒərəns]","n.好战性",'n.交战,好战性,斗争性','Japan is a country full of belligerence','好战','The belligerence in Turner\'s voice told them that the warning was a serious threat.','特纳充满交战气息的语气告诉他们这警告不是开玩笑。'}

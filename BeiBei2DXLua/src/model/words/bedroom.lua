@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bedroom"]={"bedroom","['bedruːm; -rʊm]","['bɛdrum]","n.卧室",'n.卧室，寝室|||adj.[美]城郊住宅区的；两性关系的，男女性爱的','Her bedroom is an oasis of calm in the noisy house.','她的卧室是这座嘈杂房屋中一个难得的安静之处。','The wallpaper in our bedroom has a pattern of orchids.','我们卧室的壁纸是兰花图案的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["margin"]={"margin","['mɑːdʒɪn]","['mɑrdʒən]","n.差额",'n.差额,利润,页边空白,边缘|||vt.使围绕于,加边缘','Please write on both sides of the paper, and don\'t write in the margin.','请在纸的正反两面书写, 但不要写在四周的边上.','The computer has been programmed (to calculate the gross profit margin on all sales).','计算机已输入了程序指令（以计算各项销售的毛利率）.'}

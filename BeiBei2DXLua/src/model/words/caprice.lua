@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["caprice"]={"caprice","[kə'priːs]","[kə'pris]","n.反复无常",'n.反复无常,任性,异想天开','I lived in terror of her sudden caprices and moods.','她的任性妄为和喜怒无常让我整天提心吊胆。','He acted not from reason, but from caprice.','他不是凭理智，而是凭幻想来行动。'}

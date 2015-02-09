@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bill"]={"bill","[bɪl]","[bɪl]","n.账单",'n.账单；钞票；清单；广告|||vt.安排；给…开账单；为…发提（货）单；把…登录在账|||vi.鸟嘴相接触','After a long debate the bill was passed.','经长时间的辩论，议案获得通过。','||Bill|| Gates is an American citizen.','比尔·盖茨是美国公民。'}

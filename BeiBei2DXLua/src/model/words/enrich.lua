@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enrich"]={"enrich","[ɪn'rɪtʃ; en-]","[ɪn'rɪtʃ]","vt.使富足",'vt.使富足,使肥沃，添加元素','Farmers enrich the soil with organic and inorganic manures.','农民用有机肥料和无机肥料来提高土壤的肥力。','It is generally thought that traveling abroad can enrich one\'s knowledge.','一般认为出国旅游可增广见闻。'}

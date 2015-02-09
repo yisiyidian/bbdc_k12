@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rapidity"]={"rapidity","[rə'pɪdɪtɪ]","[rə'pɪdəti]","n.迅速",'n.迅速,急速,速度','The styles change with bewildering rapidity.','风格多变,令人应接不暇.','Animal and vegetable pests spread with extreme rapidity.','动植物疫害传播极快.'}

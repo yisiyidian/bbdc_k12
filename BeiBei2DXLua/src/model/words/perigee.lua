@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perigee"]={"perigee","['perɪdʒiː]","['pɛrɪdʒi]","n.近地点",'n.近地点','The Moon reaches its absolute perigee once a year.','月球每年有一次达到它的绝对近地点。','Scientists call these perigean tides, because the moon\'s closest point to Earth is called perigee.','科学家们称这种潮水为“近月潮”，因为月球离地球最近的点叫做近地点。'}

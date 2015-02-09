@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overshadow"]={"overshadow","[əʊvə'ʃædəʊ]","['ovɚ'ʃædo]","v.遮阴",'v.遮阴,使阴暗,使失色','Despite her professional success, she is always overshadow by her husband.','尽管她事业有成，但和丈夫相比总觉逊色。','They traveled to a village overshadowed by mountains.','他们旅游到了一个被山影笼罩的村庄。'}

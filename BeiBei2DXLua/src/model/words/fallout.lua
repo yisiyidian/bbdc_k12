@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fallout"]={"fallout","['fɔːlaʊt]","['fɔlaʊt]","n.原子尘的降下",'n.原子尘的降下,辐射性微尘,原子尘|||n.余波,附带结果','Other social trends also have psychiatric fallout, and the people who suffer can\'t afford treatment','“其它社会倾向同样有精神病学的后遗症，病人仍无法接受治疗”','They were exposed to radioactive fallout during nuclear weapons tests.','他们在核武器试验过程中暴露于放射性核辐射。'}

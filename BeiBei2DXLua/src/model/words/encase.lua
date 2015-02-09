@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encase"]={"encase","[ɪn'keɪs; en-]","[ɪn'kes]","v.包围",'v.包围,装入箱内|||vt.把...装入箱中,包起','His broken leg was encased in plaster.','他折的腿打上了石膏.','His body was encased in shining armour.','他全身披着明晃晃的甲胄。'}

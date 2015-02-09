@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jocose"]={"jocose","[dʒə'kəʊs]","[dʒə'kos]","adj.开玩笑的",'adj.开玩笑的','He said this in a tone of jocose raillery.','他以幽默嘲弄的口吻说了这事。','My husband is a man with jocose nature.','我老公天生具有幽默感。'}

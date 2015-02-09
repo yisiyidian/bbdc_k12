@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["redemptive"]={"redemptive","[rɪ'demptɪv]","[rɪ'dɛmptɪv]","adj.赎回的",'adj.赎回的,买回的,赎身的','...the redemptive power of Christ.','...基督的赎罪能力。','Continue to work with the faith that unearned suffering is redemptive.','不该受的苦就当是赎罪'}

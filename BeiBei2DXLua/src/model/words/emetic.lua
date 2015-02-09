@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emetic"]={"emetic","[ɪ'metɪk]","[ i'metik ]","n.催吐剂",'n.催吐剂|||adj.催吐的','He was given an emetic medicine after eating poisonous berries.','他吃了有毒的浆果，已给了他催吐剂。','Caution: large doses of this remedy are emetic.','注意：大量服用这种药物会引致呕吐。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inscribe"]={"inscribe","[ɪn'skraɪb]","[ɪn'skraɪb]","v.题写",'v.题写，铭刻于，题赠|||（英）登记|||[数]使内接','I told the jeweler to inscribe the ring with my name.','我叫珠宝商把我的名字刻在那只戒指上。','This book was inscribed "regard" .','这本书题有“问候”字样。'}

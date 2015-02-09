@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seventeen"]={"seventeen","[sev(ə)n'tiːn; 'sev(ə)ntiːn]","[,sɛvn'tin]","num.十七",'num.十七','My son wants to join the army when he leaves school. He\'s nearly seventeen and should know his own mind by now.','我儿子希望毕业后去参军，他快１７岁了，该到自己决定干什么的时候了。','Jenny is seventeen years old.','珍妮17岁。'}

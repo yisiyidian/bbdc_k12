@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barley"]={"barley","['bɑːlɪ]","['bɑrli]","n.大麦",'n.大麦','The peasants are reaping a field of barley.','农民们正在收割大麦。','||Barley|| is planted widely in this area.','大麦在这个地区广泛种植。'}

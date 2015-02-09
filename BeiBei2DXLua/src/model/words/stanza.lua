@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stanza"]={"stanza","['stænzə]","['stænzə]","n.诗节",'n.诗节','We omitted the second stanza.','我们略去了这首诗的第二段。','The troupe has agreed to be held over for another stanza.','剧团已经同意续演一期.'}

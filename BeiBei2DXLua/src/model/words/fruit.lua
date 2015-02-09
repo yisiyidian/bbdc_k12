@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fruit"]={"fruit","[fruːt]","[frut]","n.水果",'n.水果|||vt.&vi.结果实','An apple is a kind of fruit.','苹果是一种水果。','The potato is a vegetable, not a fruit.','马铃薯是一种蔬菜，不是一种水果。'}

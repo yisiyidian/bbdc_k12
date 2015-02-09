@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vendor"]={"vendor","['vendə; 'vendɔː]","['vɛndɚ]","n.厂商",'n.厂商,小贩,卖主,自动售货机|||=vender','A few militant members of the crowd attacked the vendor.','人群中几个好斗的人攻击了那个小贩。','Remember, the estate agent is working for the vendor.','记住，房地产代理商是为房地产卖方服务的。'}

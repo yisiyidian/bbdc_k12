@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gullible"]={"gullible","['gʌlɪb(ə)l]","['ɡʌləbl]","adj.易受骗的",'adj.易受骗的，轻信的','Donna is so gullible she gives credence to any rumor she hears.','唐娜非常容易受骗，她相信她所听到的任何谣言。','What point is there in admitting that the stories fed to the gullible public were false?','承认向轻信媒体的公众提供了不实报道有何意义呢？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heaven"]={"heaven","['hev(ə)n]","['hɛvn]","n.天堂",'n.天堂；天空','It was the will of ||Heaven||.','这是天意.','Sitting here with you is heaven.','跟你一起坐在这里, 其乐无穷.'}

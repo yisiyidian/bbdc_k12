@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flourish"]={"flourish","['flʌrɪʃ]","[ˈflɜːrɪʃ]","vi.繁荣",'vi.繁荣,茂盛,活跃,手舞足蹈|||vt.挥舞|||n.挥舞,华丽词藻,茂盛,兴旺,炫耀','A flourish of trumpets marked the Queen\'s arrival.','小号奏出嘹亮的乐曲欢迎女王驾到。','There were two or three palm trees flourishing in the promenade garden.','街心花园里有两三棵枝繁叶茂的棕榈树。'}

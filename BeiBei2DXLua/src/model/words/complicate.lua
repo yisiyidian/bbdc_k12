@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complicate"]={"complicate","['kɒmplɪkeɪt]","['kɑmplɪket]","vt.弄复杂",'vt.弄复杂,使错综,使起纠纷','These events will greatly complicate the situation.','这些事件将使局势变得极其复杂.','Don\'t complicate life for me!','不要为我把生活搞复杂了！'}

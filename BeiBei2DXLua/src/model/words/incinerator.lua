@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incinerator"]={"incinerator","[ɪn'sɪnəreɪtə]","[ɪn'sɪnəretɚ]","n.焚烧炉",'n.焚烧装置,焚烧炉,焚尸炉','Thousands of citizens held a protest rally for building incinerators around their apartments.','成千上万的居民举行游行，抗议在他们公寓边上兴建焚烧楼。','That leaf was almost certainly torn up and sent to the incinerator.','几乎可以肯定这一页后来被撕下来送进了焚化炉。'}

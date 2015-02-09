@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alone"]={"alone","[ə'ləʊn]","[ə'lon]","adj.单独的",'adj.单独的,仅仅，独自一人的|||adv.只有,独自地,独一无二地','I haven\'t decided on the menu yet, let alone bought the food.','我还没决定吃什么菜呢, 更不必说买好了.','You can\'t live on bread alone.','你不能仅靠面包维生。'}

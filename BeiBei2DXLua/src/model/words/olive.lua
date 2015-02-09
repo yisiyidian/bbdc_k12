@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["olive"]={"olive","['ɒlɪv]","['ɑlɪv]","n.橄榄",'n.橄榄,橄榄树,橄榄色|||adj.黄绿色的,黄褐色的,橄榄色的','The olive leaf is a badge of peace.','橄榄叶是和平的象征。','Have you eaten a kind of fruit called olive?','你吃过橄榄这种水果 吗 ?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["valor"]={"valor","['vælə]","[ 'vælə ]","n.勇气",'n.勇气,英勇，勇猛','Fortitude is distinct from valor.','坚韧不拔有别于勇猛。','The captain is always boasting of his military valor.','船长总是在吹嘘他在战事中的英勇。'}

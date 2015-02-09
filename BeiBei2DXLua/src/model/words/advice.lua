@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["advice"]={"advice","[əd'vaɪs]","[əd'vaɪs]","n.建议",'n.忠告，建议，劝告','Tell me the reason (why) he refused to listen to my advice.','告诉我为何他拒绝听从我的劝告。','I gave him advice instead of money.','我给了他忠告，而不是钱。'}

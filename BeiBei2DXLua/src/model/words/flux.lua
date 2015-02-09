@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flux"]={"flux","[flʌks]","[flʌks]","n.流出",'n.流出,流量,涨潮,变迁,助熔剂|||vt.使熔化,使泻,涨|||vi.熔化','The newness and flux of the computer industry has meant many opportunities for women and minorities.','计算机工业的更新和不断变化为妇女和少数民族提供了许多机会。','The market is in a constant state of flux.','市场行情在不断变化。'}

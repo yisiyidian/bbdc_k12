@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["empirical"]={"empirical","[em'pɪrɪk(ə)l; ɪm-]","[ɪm'pɪrɪkl]","adj.经验主义的",'adj.经验主义的','We now have empirical evidence that the moon is covered with dust.','现在我们有实践经验证明月球上布满了灰尘。','There is no empirical evidence to support his thesis.','他的论文缺乏实验证据的支持。'}

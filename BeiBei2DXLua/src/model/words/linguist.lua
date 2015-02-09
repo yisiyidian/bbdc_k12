@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["linguist"]={"linguist","['lɪŋgwɪst]","['lɪŋgwɪst]","n.语言学家",'n.语言学家','I\'m no linguist.','我不懂外国语。','The linguist go to study tribal language in the field.','语言学家们去实地研究部落语言了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["salable"]={"salable","['seɪləbl]","[ 'seiləbl ]","adj.适于销售的",'adj.适于销售的，有销路的|||=saleable','His paintings are highly salable.','他的画是非常畅销的。','The creative products are always salable.','富有创意的产品总是有销路的。'}

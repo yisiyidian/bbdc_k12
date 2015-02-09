@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shiftless"]={"shiftless","['ʃɪftlɪs]","['ʃɪftləs]","adj.无计谋的",'adj.无计谋的,不中用的,无能的','A lazy or shiftless person, especially one who seeks to live solely by the support of others.','懒鬼，游手好闲的人一个懒惰或得过且过的人，尤指靠别人施舍过生活的人','a shiftless student.','一个懒惰的学生'}

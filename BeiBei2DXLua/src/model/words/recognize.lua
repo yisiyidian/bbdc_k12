@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recognize"]={"recognize","['rekəɡnaɪz]","['rɛkɚɡnaɪz]","vt.认出",'vt.认出,认可,承认,意识到,表示感激','I think I recognize your hoof in it.','我看出你在这里面插了一手。','At that instant she did not recognize the man that had kidnapped her.','在那一瞬间, 她没有认出绑架她的人。'}

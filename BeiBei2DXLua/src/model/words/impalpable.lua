@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impalpable"]={"impalpable","[ɪm'pælpəb(ə)l]","[ im'pælpəbl ]","adj.感触不到的",'adj.感触不到的，难以理解的','||Impalpable|| ideas are floating through his mind.','难以捉摸的念头在他的头脑中闪现。','The characters become impalpable.','人物真难以捉摸。'}

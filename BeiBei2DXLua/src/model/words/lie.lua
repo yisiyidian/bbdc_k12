@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lie"]={"lie","[laɪ]","[ lai ]","n.谎言",'n.谎言|||v.躺着,说谎,位于','The cure for stress lies in learning to relax.','消除紧张的方法在於学会放松。','He lied about his age to join the army.','他为了参军谎报了年龄。'}

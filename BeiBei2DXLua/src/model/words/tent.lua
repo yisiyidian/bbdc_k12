@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tent"]={"tent","[tent]","[tɛnt]","n.帐篷",'n.帐篷|||vt.&vi.住帐篷,宿营','They placed the child in an oxygen tent when he had difficulty in breathing.','那孩子呼吸困难时, 他们把他放进氧幕里.','They set up a tent near the seashore.','他们在海滨附近搭起了一个帐篷。'}

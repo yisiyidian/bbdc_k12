@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proclivity"]={"proclivity","[prə'klɪvɪtɪ]","[prə'klɪvəti]","n.倾向",'n.倾向,癖性','He has the proclivity of drinking a cup of milk before sleeping.','他有在睡觉前喝杯牛奶的习惯。','He has a proclivity toward violence.','他有暴力倾向。'}

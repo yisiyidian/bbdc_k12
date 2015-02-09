@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["survivor"]={"survivor","[sə'vaɪvə]","[sɚ'vaɪvɚ]","n.幸存者",'n.幸存者','All the ships in the vicinity of the crash joined in the search for survivors.','撞船事故发生地区的所有船只都参加了搜寻幸存者的工作。','The sole survivor of the crash was a little boy.','这次撞车事故的唯一幸存者是一个小男孩。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["refrigerate"]={"refrigerate","[rɪ'frɪdʒəreɪt]","[rɪ'frɪdʒəret]","v.冷藏",'v.冷藏,使冷|||vt.冷冻,冷藏','They are trying to repair a breakdown in the refrigerate system.','他们正在全力抢修发生故障的冷却系统.','The food must be refrigerated in summer.','夏天事物必须冷藏'}

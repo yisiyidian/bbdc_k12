@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["landfill"]={"landfill","['læn(d)fɪl]","['lænd'fɪl]","n.垃圾堆",'n.垃圾堆','...the environmental costs of landfill.','…垃圾填埋法对环境的损害。','The rubbish in modern landfills does not rot.','现代垃圾填埋场里的垃圾不会腐烂。'}

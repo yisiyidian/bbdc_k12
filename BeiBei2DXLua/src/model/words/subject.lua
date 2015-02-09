@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subject"]={"subject","['sʌbdʒekt; 'sʌbdʒɪkt]","[ˈsʌbdʒekt]","n.主题",'n.科目,主题;缘由|||n.(君主国)国民;实验对象|||adj.服从的,易患的|||vt.使隶属,使服从;使遭遇','All citizens in this nation are subject to the law.','这个国家的全体公民都必须服从法律','I am French by birth and a British subject by marriage.','我按出生是法国人，因结婚而成为英国公民。'}

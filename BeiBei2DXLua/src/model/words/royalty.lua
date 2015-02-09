@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["royalty"]={"royalty","['rɒɪəltɪ]","['rɔɪəlti]","n.皇家",'n.皇家,皇族|||n.版税','She claims to be descended from royalty.','她声称她是皇室後裔.','His income is mainly from royalty.','他的收入主要来自版税。'}

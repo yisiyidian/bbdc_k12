@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comparison"]={"comparison","[kəm'pærɪs(ə)n]","[kəm'pærɪsn]","n.比较",'n.比较','In comparison with other students, Mike is more diligent.','和其他学生相比, 麦克更加勤勉一些。','We can only tell good from bad by comparison.','我们可以通过比较来分辨好坏。'}

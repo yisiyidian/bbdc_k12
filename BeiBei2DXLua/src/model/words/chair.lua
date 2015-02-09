@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chair"]={"chair","[tʃeə]","[tʃɛr]","n.椅子",'n.椅子,席位,讲座,要职|||vt.上任,使担任（某事务）的主席,主持','Father sits in the same chair every evening.','父亲每晚都坐在同一张椅子上，','The old chair gave a groan when the fat man sat down on it.','那个胖子坐下时，旧椅子发出嘎吱的响声。'}

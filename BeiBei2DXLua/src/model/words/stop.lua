@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stop"]={"stop","[stɒp]","[stɑp]","v.停止",'n.停止,车站,滞留,阻挡|||vt.停止,制止,塞住|||vi.停止,停留,结束','I only just managed to stop myself from shouting at him.','我极力控制住自己没对他喊叫起来。','His heart has stopped.','他的心脏停止了跳动。'}

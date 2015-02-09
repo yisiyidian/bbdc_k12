@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perforate"]={"perforate","['pɜːfəreɪt]","['pɝfə'ret]","v.穿孔于",'v.穿孔于,刺穿|||adj.有孔的','The target was perforated by bullets.','靶子上全是子弹打穿的孔。','I refused to wear headphones because they can perforate your eardrums.','我不愿戴耳机，因为它可能会使鼓膜穿孔。'}

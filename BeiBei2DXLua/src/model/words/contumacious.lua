@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contumacious"]={"contumacious","[,kɒntjʊ'meɪʃəs]","[,kɑntu'meʃəs]","adj.不听命令的",'adj.不听命令的,顽固的,反抗法院命令的','On his refusal to appear in person or by his attorney, he was pronounced contumacious.','由于拒绝亲自出庭或派他的律师出庭，他被宣布为抗传。','She found herself contumacious.','她发现自己很固执。'}

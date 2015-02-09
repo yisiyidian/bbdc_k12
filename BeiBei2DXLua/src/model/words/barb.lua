@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barb"]={"barb","[bɑːb]","[bɑrb]","n.倒钩",'n.倒钩|||n.尖刻、刻薄的言语|||vt.给...装倒钩','The prisoners cut their way through the barbed wire and escaped.','囚犯们从铁丝网中开出一条路逃跑了。','His land was fenced with barbed wire.','他的地被铁丝网围著。'}

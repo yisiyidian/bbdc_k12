@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coriander"]={"coriander","[,kɒrɪ'ændə]","[,kɔrɪ'ændɚ]","n.[植]胡荽",'n.[植]胡荽','The chicken was garnished with coriander and red chilli.','这道鸡配上了芫荽和红辣椒。','coriander','苋茜'}

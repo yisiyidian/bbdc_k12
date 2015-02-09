@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["silhouette"]={"silhouette","[,sɪlʊ'et]","[,sɪlu'ɛt]","n.黑色半身侧面影",'n.黑色半身侧面影,影子,轮廓|||v.描绘成侧面影,照出影子来,仅仅显出轮廓','He saw the building in silhouette.','他看到了那幢建筑的轮廓。','The outline, form, or silhouette of a thing.','外形, 轮廓某物的外廓、外形或轮廓'}

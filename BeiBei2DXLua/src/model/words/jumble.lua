@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jumble"]={"jumble","['dʒʌmb(ə)l]","['dʒʌmbl]","vi.掺杂",'vi.掺杂,混杂|||vt.使混乱，搞乱|||n.混杂,混乱|||n.环形小甜饼','We bundled up some old clothes for the jumble sale.','我们把一些旧衣物捆起来准备义卖.','Nobody else in the family gave anything for the jumble sale, but my sister came up trumps.','家里人谁也没拿出东西来捐助这次义卖活动, 只有我妹妹慷慨相助.'}

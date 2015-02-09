@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prudent"]={"prudent","['pruːd(ə)nt]","['prʊdnt]","adj.谨慎的",'adj.谨慎的,有远见的,精打细算的','It\'s prudent to save.','储蓄很有远见。','Young as he was, he was prudent.','他虽然如此年轻，却很慎重。'}

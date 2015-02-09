@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illusion"]={"illusion","[ɪ'l(j)uːʒ(ə)n]","[ɪ'luʒn]","n.幻觉",'n.幻觉,错觉,错误的信仰(或观念)','A mirage is an optical illusion.','海市蜃楼是一种视错觉。','I was under the illusion that he was honest until he was caught stealing some money.','他偷钱当场被人抓住，在此之前我一直误以为他是个老实人。'}

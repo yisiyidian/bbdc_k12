@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unhappy"]={"unhappy","[ʌn'hæpɪ]","[ʌn'hæpi]","adj.不快乐的",'adj.不快乐的,不幸的,不适当的','I was unhappy because of the discomforts of travel.','我因为旅行的不适而感到不快。','He was unhappy because of his separation from his mother.','他因与母亲分离而感到不快。'}

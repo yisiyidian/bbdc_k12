@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["granddaughter"]={"granddaughter","['grændɔːtə]","['ɡrændɔtɚ]","n.孙女",'n.孙女,外孙女','Her granddaughter lives abroad.','她的孙女住在国外.','My granddaughter is a little doll.','我的孙女是个小美人.'}

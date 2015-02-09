@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foray"]={"foray","['fɒreɪ]","['fɔre]","v.侵略",'v.侵略,劫掠|||n.侵掠,侵略,攻击','Vikings made a foray on the port.','北欧海盗突袭劫掠了港口。','Upon returning to England, he employed the favorable media attention as foray into politics.','一回到英国，他就利用媒体的高知名度，作为进入政坛的踏板。'}

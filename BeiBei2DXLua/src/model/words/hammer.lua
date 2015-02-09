@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hammer"]={"hammer","['hæmə]","['hæmɚ]","n.锤",'n.锤,榔头|||vi.锤击,反复敲打|||vt.锤打,严厉批评','After much discussion the negotiators hammered out a compromise settlement.','双方经多次谈判达成一项折衷的解决办法。','The teacher has been trying to hammer in the facts.','教师一直设法把这些事实灌输给学生。'}

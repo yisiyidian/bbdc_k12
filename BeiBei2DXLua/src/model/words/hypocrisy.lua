@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypocrisy"]={"hypocrisy","[hɪ'pɒkrɪsɪ]","[hɪ'pɑkrəsi]","n.伪善",'n.伪善','His hypocrisy makes me sick.','我很讨厌他那麽虚伪.','Her remarks savour of hypocrisy.','她说的话听起来有点儿虚伪.'}

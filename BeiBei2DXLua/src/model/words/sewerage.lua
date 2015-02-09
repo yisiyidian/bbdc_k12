@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sewerage"]={"sewerage","['suːərɪdʒ; 'sjuː-]","['suərɪdʒ]","n.排水设备",'n.排水设备,污水','It is supposed to be washed down the gutter and into the city\'s vast sewerage system.','它应该是被沿排水沟冲入城市庞大的排水系统。','Our town has a modern sewerage system.','我们城镇有一个现代化的下水道系统。'}

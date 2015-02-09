@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vein"]={"vein","[veɪn]","[ven]","n.静脉",'n.静脉,纹路,岩脉,情绪,风格,气质|||vt.饰以纹路','There is a vein of melancholy in his character.','他的性格中有少许忧郁的气质。','I am not in the vein for work.','我没有心情工作。'}

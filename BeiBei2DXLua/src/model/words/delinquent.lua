@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["delinquent"]={"delinquent","[dɪ'lɪŋkw(ə)nt]","[dɪ'lɪŋkwənt]","n.行为不良的人",'n.行为不良的人,流氓|||adj.怠忽的,有过失的','I\'m afraid he\'ll ultimately become a juvenile delinquent.','我恐怕他最终会成为一名青少年罪犯。','A delinquent account.','一笔拖欠的款项'}

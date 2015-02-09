@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cascade"]={"cascade","[kæs'keɪd]","[kæ'sked]","n.瀑布",'n.瀑布，[电]串联|||v.瀑布似地落下，（将...）连结，串联','When it rained, water would cascade down the window.','下雨的时候，雨水像瀑布一样沿着窗沿泻下。','Climbing plants with their bright flowers hung in cascades over the garden wall.','开出鲜艳花朵的爬藤植物瀑布般悬挂在花园墙上。'}

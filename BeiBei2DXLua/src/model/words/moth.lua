@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moth"]={"moth","[mɒθ]","[mɔθ]","n.蛾;飞蛾",'n.蛾;飞蛾','Its colour makes the moth indistinguishable from the branch it rests on.','这蛾子停在树枝上, 其颜色和树枝几不可辨.','A moth was fluttering round the lamp.','有一只蛾子扑打著翅膀绕著灯飞.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["omniscient"]={"omniscient","[ɒm'nɪsɪənt]","[ɑm'nɪsɪənt]","adj.全知的",'adj.全知的,无所不知的','Christians believe that God is omniscient.','基督教徒相信上帝是无所不知的。','To their small children, Marsha and Joe seemed omniscient, able to answer any question they had.','玛莎和乔在孩子的心目中似乎是无所不知的，能够回答任何问题。'}

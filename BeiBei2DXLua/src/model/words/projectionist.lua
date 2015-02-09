@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["projectionist"]={"projectionist","[prəʊ'dʒekʃənɪst]","[prə'dʒɛkʃənɪst]","n.放映师",'n.放映师,电视技师,地图制作者','The projectionist runs the film back at the end of every performance.','放映员把每部影片都重新卷绕到开头。','The cinema employed a new projectionist.','这家电影院雇佣了个新的放映师'}

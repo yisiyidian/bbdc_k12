@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emaciate"]={"emaciate","[ɪ'meɪsɪeɪt]","[ɪ'meʃɪ,et]","v.(使)消瘦",'v.(使)消瘦,(使)憔悴','The lack of food emaciates her','她因为饿而变得消瘦','To cause to become lean, usually by starvation;emaciate.','使消瘦通常通过饥饿使变瘦.'}

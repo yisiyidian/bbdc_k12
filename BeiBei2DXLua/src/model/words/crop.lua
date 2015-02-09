@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crop"]={"crop","[krɒp]","[krɑp]","n.庄稼",'n.庄稼,收成,一群,平头|||vt.割掉,修剪,剪短,收割,使谷物生长|||vi.啃青草,种植谷物','The farmer paid 3 laborers to gather the crop.','农场主雇佣3名工人收割庄稼。','All sorts of difficulties cropped up.','各种各样的困难意想不到地出现了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recoup"]={"recoup","[rɪ'kuːp]","[ ri'ku:p ]","v.重获",'v.重获,补偿|||vt.重获(尤指钱),失而复得,赔偿,扣除','The act of recouping.','获得补偿获得补偿的行为','He recouped himself for his losses.','他挽回了自己的损失.'}

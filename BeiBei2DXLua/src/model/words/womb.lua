@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["womb"]={"womb","[wuːm]","[wum]","n.子宫",'n.子宫','The Christian doctrine that the Son of God was conceived in the womb of Mary and that Jesus is true God and true man.','道成肉身上帝之子耶稣由玛丽亚孕育并且耶稣是真正的神和真正的人的基督教教义','It still lies in the womb of time.','此事尚在酝酿中。'}

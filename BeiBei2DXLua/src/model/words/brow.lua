@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brow"]={"brow","[braʊ]","[braʊ]","n.眉毛",'n.眉毛,额','He wrinkled his brow, confused and worried by the strange events.','他皱著眉头, 觉得这些怪事莫名其妙又十分担心.','His brow corrugated with the effort of thinking.','他皱著眉头用心地思考.'}

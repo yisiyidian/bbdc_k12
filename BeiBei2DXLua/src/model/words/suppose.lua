@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suppose"]={"suppose","[sə'pəʊz]","[sə'poz]","vt.假定",'vt.假定；猜想，推测；认为；让（用于祈祷语气）|||vi.想象，猜想','They were supposed to be here an hour ago.','他们应该在一小时以前到达这里。','I suppose you want to borrow money from me again?','我猜你又要找我借钱了吧?'}

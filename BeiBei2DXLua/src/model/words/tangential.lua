@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tangential"]={"tangential","[tæn'dʒenʃ(ə)l]","[tæn'dʒɛnʃl]","adj.切线的",'adj.切线的,相切的,正接的','As in earlier novels, some of the tenderest scenes are tangential to the mainline.','和早期作品一样，小说中最动容的情节并不是小说的主线。','Too much time was spent discussing tangential issues.','太多时间花在了讨论那些无关紧要的问题。'}

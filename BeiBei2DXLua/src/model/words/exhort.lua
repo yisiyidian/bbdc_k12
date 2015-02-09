@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exhort"]={"exhort","[ɪg'zɔːt; eg-]","[ɪɡ'zɔrt]","v.劝诫",'v.劝诫,忠告','He often exhorts Mary to work harder.','他经常勉励玛丽要更加努力工作。','The chairman exhorted the party workers to take action.','主席敦促党的工作人员采取行动。'}

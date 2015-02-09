@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tortuous"]={"tortuous","['tɔːtʃʊəs; -jʊəs]","['tɔrtʃuəs]","adj.弯曲的",'adj.弯曲的,曲折的，转弯抹角的','It took all he could do to keep his cart from going over in the tortuous mountain trails.','他竭尽全力才算保住大车，没有在曲曲弯弯的山路上翻倒。','They walked through the tortuous streets of the old city.','他们步行穿过老城区中心弯弯曲曲的街道。'}

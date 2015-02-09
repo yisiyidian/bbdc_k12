@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bike"]={"bike","[baɪk]","[baɪk]","n.脚踏车",'n.脚踏车','I\'ve decided to buy that bike.','我已决定购买那辆自行车。','I want to have a ride of that bike.','我想骑一骑那辆自行车。'}

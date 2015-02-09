@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tendon"]={"tendon","['tendən]","['tɛndən]","n.腱",'n.腱','The tendon had been so skillfully grafted in that the boy was able to flex his finger quite normally after four weeks.','腱的接合手术做得非常高明, 那个男孩在四个星期之后, 就能相当正常地伸屈他的手指了。','My tendon was strained.','我扭伤了肌腱。'}

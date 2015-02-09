@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nonconformity"]={"nonconformity","[nɒnkən'fɔːmɪtɪ]","[,nɑnkən'fɔrmɪti]","n.不遵从(传统)",'n.不遵从(传统)','Her clothes were an immediate signal of her nonconformity.','她的衣服立即显示出她是一个不走寻常路线的人。','For nonconformity the world whips you with its displeasure.','“只因不随俗，整个世界都用不悦鞭笞着你”'}

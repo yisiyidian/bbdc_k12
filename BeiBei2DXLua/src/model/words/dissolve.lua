@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissolve"]={"dissolve","[dɪ'zɒlv]","[dɪ'zɑlv]","vi.溶解",'vt.消除,解散,使溶解,解决(问题),使沮丧|||vi.消散,溶解,解散,液化,变得模糊|||n.叠化画面','Ice dissolved in the warm weather.','冰在温暖的天气中溶化了。','The parliament was dissolved.','议会解散了。'}

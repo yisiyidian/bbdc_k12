@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grind"]={"grind","[graɪnd]","[ɡraɪnd]","n.磨",'n.磨,碾,挤摩擦声,无聊的苦工作|||vt.磨,碾,挤压,摇动手柄|||vi.磨擦,磨碎,用功','The strike brought industry grinding to a halt.','由於罢工生产逐渐停顿下来。','The old engine ||ground|| and shuddered.','那台陈旧的发动机抖动著发出摩擦的声音。'}

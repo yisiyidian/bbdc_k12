@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["careful"]={"careful","['keəfʊl; -f(ə)l]","['kɛrfl]","adj.小心的",'adj.小心的,仔细的','You should be more careful with your money.','你花钱要慎重一些。','Be careful crossing the road.','过马路要当心。'}

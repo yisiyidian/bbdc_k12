@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inherit"]={"inherit","[ɪn'herɪt]","[ɪn'hɛrɪt]","vi.继承",'vi.继承|||vt.继承,遗传','The will has to be proved before we can inherit.','遗嘱要先认证, 然後我们才能继承遗产.','The oldest son will inherit the title.','长子将继承爵位。'}

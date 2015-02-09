@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ruin"]={"ruin","['ruːɪn]","['ruɪn]","n.(pl.)废墟",'n.(pl.)废墟,毁灭|||v.毁坏,破坏|||vi.(使)破产,毁灭|||vt.毁坏,毁灭','He ruined his prospects by carelessness.','他因疏忽大意而断送了前途。','His rashness led ultimately to his ruin.','他的急燥卤莽最终导致了他的毁灭。'}

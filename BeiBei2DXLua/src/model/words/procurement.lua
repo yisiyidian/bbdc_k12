@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["procurement"]={"procurement","[prə'kjʊəmənt]","[prə'kjʊrmənt]","n.取得",'n.取得,征购,斡旋,促成','Russia was cutting procurement of new weapons \'by about 80 per cent\', he said.','他说，俄罗斯新武器的采购量将削减“大约80％”。','He is in charge of the procurement of materials.','他负责物资的采购。'}

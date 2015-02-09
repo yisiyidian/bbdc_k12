@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bough"]={"bough","[baʊ]","[baʊ]","n.大树枝",'n.大树枝','The bird settled on the topmost bough.','这只鸟儿在最高的权枝上停了下来。','The bough was loaded with fruit.','树枝上果实累累。'}

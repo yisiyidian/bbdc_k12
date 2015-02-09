@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pellet"]={"pellet","['pelɪt]","['pɛlɪt]","n.小球",'n.小球,小子弹','A small pill or pellet.','小药丸，小糖丸','A hard pellet of snow and ice.','雹块一种坚硬的冰雪团'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["downpour"]={"downpour","['daʊnpɔː]","['daʊnpɔr]","n.倾盆大雨",'n.倾盆大雨','There was a heavy downpour.','下了一阵暴雨。','The rescue work had been going very well until a sudden downpour loused the whole thing up.','营救工作本来一直进行得很顺利，后来突然下了一场倾盆大雨，把整个事情弄得一团糟。'}

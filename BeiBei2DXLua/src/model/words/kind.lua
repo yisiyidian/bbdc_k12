@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kind"]={"kind","[kaɪnd]","[kaɪnd]","adj.仁慈的",'adj.仁慈的,友好的|||n.种类,本质','People had told me she was very pleasant but she\'s nothing of the kind.','人家告诉我她很可爱，可是她根本不是那样。','Taking a blind man across the street is a kind act.','扶盲人过马路是一种善良的行为。'}

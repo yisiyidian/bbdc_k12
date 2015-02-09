@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["furnish"]={"furnish","['fɜːnɪʃ]","['fɝnɪʃ]","vt.布置",'vt.布置,提供,装备','They scouted around for some antiques to furnish their new apartment.','他们到处搜罗一些古董来装饰新居。','I am bound to furnish my antagonists with arguments, but not with comprehension.','我一定要向对手提供争论点，但并无予以理解的必要。'}

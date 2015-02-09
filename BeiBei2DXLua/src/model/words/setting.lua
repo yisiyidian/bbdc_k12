@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["setting"]={"setting","['setɪŋ]","['sɛtɪŋ]","n.环境",'n.安装,放置,周围,环境,(为诗等谱写的)乐曲','With the setting of the sun, night comes silently.','随着太阳的落下，夜晚悄悄地来到。','The setting sun glorified the scene.','落日使景色更美。'}

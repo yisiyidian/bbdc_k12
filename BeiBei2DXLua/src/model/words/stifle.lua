@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stifle"]={"stifle","['staɪf(ə)l]","['staɪfl]","v.使不能呼吸",'v.使不能呼吸,窒息,抑制','The gas stifled them.','他们被煤气熏得透不过气来。','Our ideas were stifled.','我们的意见被压了下来。'}

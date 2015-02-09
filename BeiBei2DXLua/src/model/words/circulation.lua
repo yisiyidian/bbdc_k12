@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["circulation"]={"circulation","[sɜːkjʊ'leɪʃ(ə)n]","[,sɝkjə'leʃən]","n.流通",'n.流通,循环,发行量,消息传播','The newspaper\'s circulation has trebled since last year.','去年以来该报的发行量已增加到原来的三倍.','The old coins have been withdrawn from circulation.','旧硬币已经收回不再流通了.'}

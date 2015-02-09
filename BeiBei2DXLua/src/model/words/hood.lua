@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hood"]={"hood","[hʊd]","[ hud ]","n.头巾",'n.头巾,兜帽,覆盖|||v.罩上,以头巾覆盖','Covered with or having a hood.','带头巾的，有头罩的','He held both sides of the parka hood closed against the snow.','他把派克大衣兜帽两边都绑得紧紧的来挡住雪。'}

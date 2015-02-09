@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mix"]={"mix","[mɪks]","[mɪks]","vt.&vi.混合",'n.混合(物),融合|||vt.&vi.混合,掺入,合成,交往,联系|||[计算机]混合','He finds it hard to mix at parties.','他感到很难在聚会上与人攀谈。','In my job, I mix with all sorts of people.','我在工作中常和各种人打交道。'}

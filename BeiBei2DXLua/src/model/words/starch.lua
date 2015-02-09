@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["starch"]={"starch","[stɑːtʃ]","[stɑrtʃ]","n.淀粉",'n.淀粉|||vt.给...上浆','Sugar and starch are broken down in the stomach.','糖和淀粉在胃里被分解.','You eat too much starch.','你吃的含淀粉的食物太多了。'}

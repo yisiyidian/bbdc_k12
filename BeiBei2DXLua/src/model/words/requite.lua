@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["requite"]={"requite","[rɪ'kwaɪt]","[rɪ'kwaɪt]","vt.报答",'vt.报答,报酬,还礼，报复','I\'ll requite you for your help.','我想报答你的帮助。','The hospitals requite the workers\' long hours of hard work with low wages.','工人们长时间辛苦劳作，而医院却给他们很低的工资。'}

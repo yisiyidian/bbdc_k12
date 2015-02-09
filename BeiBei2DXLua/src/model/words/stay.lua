@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stay"]={"stay","[steɪ]","[ste]","n.停留",'n.停留,停止;依靠,忍耐力;撑条|||vt.等待,坚持到底|||vi.保持,停留,留宿','I don\'t think he\'s sufficiently dedicated to stay the course.','我认为他不够坚定，不会坚持到底的。','I stayed late at the party last night.','昨晚我在晚会上呆到很晚。'}

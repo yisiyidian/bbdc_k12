@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["admit"]={"admit","[əd'mɪt]","[əd'mɪt]","vt.&vi.承认",'vt.&vi.许可进入；承认，供认|||vt.允许；确认|||vi.承认；允许','I must admit, it\'s more difficult than I thought it would be.','我必须承认，这比我想象的要困难得多。','His conduct admits of no excuse.','他的行为无可宽恕。'}

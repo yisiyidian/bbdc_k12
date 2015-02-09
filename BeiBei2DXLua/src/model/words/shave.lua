@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shave"]={"shave","[ʃeɪv]","[ʃev]","n.修面",'n.修面,刮胡子|||vt.修面,剃,擦过,消减价格|||vi.刮胡子,勉强通过','The lorry shaved the barrier, scraping its side.','那辆卡车掠过路障，刮坏了车身。','The ball narrowly shaved his off stump.','那个球紧贴著他的三柱门的外柱掠过。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interminable"]={"interminable","[ɪn'tɜːmɪnəb(ə)l]","[ɪn'tɝmɪnəbl]","adj.无限的",'adj.无限的,冗长的','Their quarrels about the trivia are always interminable.','他们对琐事的争吵总是没完没了。','We are tired of the interminable waiting.','这种无止境的干等让我们厌倦。'}

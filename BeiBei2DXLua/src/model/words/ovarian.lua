@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ovarian"]={"ovarian","[əʊ'veərɪən]","[o'vɛrɪən]","adj.卵巢的",'adj.卵巢的','The diagnosis was ovarian cancer.','诊断结果她患的是卵巢癌。','ovarian cancer','卵巢癌'}

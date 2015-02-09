@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lifeboat"]={"lifeboat","['laɪfbəʊt]","['laɪfbot]","n.救生船",'n.救生船','The passengers and crew were brought off by the Dover lifeboat.','乘客及船员都被多佛尔的救生艇救出.','Men are needed to crew the lifeboat.','需要有人来做救生艇的船员。'}

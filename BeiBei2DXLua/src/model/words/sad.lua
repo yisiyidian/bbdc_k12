@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sad"]={"sad","[sæd]","[sæd]","adj.悲哀的",'adj.悲哀的,伤心的,不能令人满意的','The exclusion of women from the temple made them feel sad.','妇女被排斥于寺院之外使得她们很难过。','He was much affected by the sad news.','这个悲惨的消息使他非常难过。'}

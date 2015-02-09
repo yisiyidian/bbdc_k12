@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accredit"]={"accredit","[ə'kredɪt]","[ə'krɛdɪt]","vt.归咎于",'vt.归咎于，授权，委派，鉴定合格','The president will accredit you as his assistant.','董事长将任命你做他的助理。','He is accredited with having first introduced this word into the language.','是他在这个语言中首先使用这个词的.'}

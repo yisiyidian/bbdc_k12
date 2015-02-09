@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gymnastics"]={"gymnastics","[dʒɪm'næstɪks]","[dʒɪm'næstɪks]","n.&adj.体操",'n.&adj.体操','As a cricketer, gymnastics is out of his domain.','他是个板球运动员, 体操非其所长.','The Russians made a clean sweep of (the medals in) the gymnastics events.','俄罗斯运动员囊括体操项目奖牌.'}

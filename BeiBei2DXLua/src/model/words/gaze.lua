@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gaze"]={"gaze","[geɪz]","[ɡez]","n.凝视",'vi.凝视|||n.凝视','Your intent gaze made her uncomfortable.','你的注目凝视使她感到不自在。','Her steady gaze did not waver.','她目不转睛地注视著.'}

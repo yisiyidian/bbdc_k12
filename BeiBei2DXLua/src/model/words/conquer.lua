@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conquer"]={"conquer","['kɒŋkə]","['kɑŋkɚ]","vt.征服",'vt.征服,战胜,克服|||vi.得胜','He set out to conquer the literary world of london.','他决心赢得伦敦文学界的赞誉。','When will scientist conquer cancer?','科学家什么时候才能征服癌症呢？'}

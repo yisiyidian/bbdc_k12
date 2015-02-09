@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lent"]={"lent","[lent]","[lɛnt]","n.(基督教的)四旬斋",'n.(基督教的)四旬斋，大斋节|||动词lend的过去式和过去分词','The scars on his body lent colour to his claim that he had been tortured.','他说他受过折磨拷打, 从他身上的伤疤看来倒也可信.','I\'ve got a bone to pick with you. Where\'s the money I lent you last week?','我得跟你讲讲理, 上星期我借给你的钱到哪里去了?'}

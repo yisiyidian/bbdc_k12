@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dictum"]={"dictum","['dɪktəm]","['dɪktəm]","n.格言",'n.格言；声明；法官的附带意见','He cites Augustine\'s dictum that If you understand it, it is not God','他援引了奥古斯丁的最后声明：“如果你了解它，它就不是神了”。','I agree with this dictum.','我赞成这条格言。'}

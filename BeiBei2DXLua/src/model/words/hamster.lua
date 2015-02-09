@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hamster"]={"hamster","['hæmstə]","['hæmstɚ]","n.仓鼠",'n.仓鼠','The hamster had got through the wire at the front of its cage.','仓鼠从其笼子前部的栅栏处钻出去了.','In the laboratory,hamsters put on more weight when the nights get shorter.','在试验室里，随着晚上时间的变短，仓鼠会长更多的肉。'}

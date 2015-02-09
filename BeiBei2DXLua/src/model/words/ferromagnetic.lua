@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ferromagnetic"]={"ferromagnetic","[,ferə(ʊ)mæg'netɪk]","[,fɛromæɡ'nɛtɪk]","n.铁磁体",'n.铁磁体','Both stator and rotor are made of ferromagnetic materials.','定子和转子都是由铁磁材料制成','Both stator and rotor are made of ferromagnetic materials.','定子和转子都是由铁磁材料构成。'}

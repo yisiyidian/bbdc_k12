@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harmful"]={"harmful","['hɑːmfʊl; -f(ə)l]","['hɑrmfəl]","adj.有害的",'adj.有害的','Drunkenness is harmful to our health.','醉酒对我们的身体有害。','Smoking is harmful to one\'s health.','吸烟对健康有害。'}

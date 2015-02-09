@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["puppy"]={"puppy","['pʌpɪ]","['pʌpi]","n.小狗",'n.小狗,人,东西','We heard him playing with his puppy.','我们听到了他在玩着他的小狗。','I once raised a little puppy.','我曾饲养过一只小狗。'}

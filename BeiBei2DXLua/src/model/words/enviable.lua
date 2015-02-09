@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enviable"]={"enviable","['envɪəb(ə)l]","['ɛnvɪəbl]","adj.令人欣羡的",'adj.令人欣羡的,可羡慕的','the enviable English quality of being able to be mute without unrest','“英国人能够保持沉默而无不安的气质令人羡慕”','Japan, unlike other big economies, is in the enviable position of having a budget surplus.','不像其他经济大国，日本有着令人羡慕的预算盈余。'}

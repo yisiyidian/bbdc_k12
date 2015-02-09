@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imponderable"]={"imponderable","[ɪm'pɒnd(ə)rəb(ə)l]","[ɪm'pɑndərəbl]","adj.无重量的",'adj.无重量的,无法计算的,不可估价的|||n.无法测知重量的事物','What a imponderable treasure!','真是件不可估价的宝贝啊！','They are speculating on the imponderables of the future.','他们猜测着未来难以预见的事情。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intact"]={"intact","[ɪn'tækt]","[ɪn'tækt]","adj.尚未被人碰过的",'adj.尚未被人碰过的,原封不动的,完整的,完好无缺的','Despite his misfortunes, his faith and optimism remained intact.','虽然他遭到一连串的不幸，他的信心和乐观丝毫未减。','He can scarcely survive this scandal with his reputation intact.','他经此丑闻名誉很难不受损.'}

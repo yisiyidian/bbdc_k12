@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hoarding"]={"hoarding","['hɔːdɪŋ]","['hɔrdɪŋ]","n.贮藏",'n.贮藏,囤积|||动词hoard的现在分词形式','People found hoarding (food) during the famine were punished.','在饥荒时期屯积(食物)的人受到了惩罚.','the farmer can only hoarding the food since its the only way to avoid the crisis for poor people','对农民来说，贮藏粮食是他们应对危机的唯一途径'}

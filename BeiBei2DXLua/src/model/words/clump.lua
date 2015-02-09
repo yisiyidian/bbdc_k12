@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clump"]={"clump","[klʌmp]","[klʌmp]","n.丛",'n.丛,块,沉重的声音|||v.用沉重的脚步行走，丛生，使成簇','Do you see yonder clump of trees (ie that clump of trees over there)?','你看见那边的一丛树林了吗?','Do you hear the clump of boots?','你听到靴子的咯咯声吗？'}

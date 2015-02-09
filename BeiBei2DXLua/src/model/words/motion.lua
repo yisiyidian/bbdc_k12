@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["motion"]={"motion","['məʊʃ(ə)n]","['moʃən]","n.运动",'n.运动；手势；动机，意向；请求|||vt.打手势；向某人点头或摇头示意；打手势要求[指示]|||vi.运动；打手势','What\'s your opinion of the motion?','你认为这项提议怎样？','The motion was put to the assemblage.','这项提议已提交大会了。'}

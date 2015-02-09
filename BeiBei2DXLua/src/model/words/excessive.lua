@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excessive"]={"excessive","[ɪk'sesɪv; ek-]","[ɪk'sesɪv;]","adj.过多的",'adj.过多的,过分的','||Excessive|| patriotism can lead to xenophobia.','爱国主义过了头即可导致仇视一切外国人.','||Excessive|| dosage of this drug can result in injury to the liver.','这种药使用过量会损害肝脏.'}

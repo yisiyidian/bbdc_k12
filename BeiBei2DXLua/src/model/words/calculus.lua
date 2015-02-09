@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calculus"]={"calculus","['kælkjʊləs]","['kælkjələs]","n.微积分",'n.微积分','I\'m specializing in differential and integral calculus.','我正专攻微分学和积分学.','This is a problem where calculus won\'t help at all.','对于这一题,微积分一点也用不上.'}

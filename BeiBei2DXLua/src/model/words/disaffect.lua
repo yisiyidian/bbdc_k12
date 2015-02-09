@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disaffect"]={"disaffect","[,dɪsə'fekt]","[,dɪsə'fɛkt]","vt.使不满意",'vt.使疏远,使成为敌人,使不满意','||Disaffected|| members have left to form a new party.','那些不忠分子脱党另组了一个新党.','And there is the rising public disaffection with the Pakistani Peoples Party under Zardari and Gilani.”','公众对于扎尔达里和吉拉尼领导下的巴基斯坦人民党越发不满。'}

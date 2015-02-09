@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nightshade"]={"nightshade","['naɪtʃeɪd]","['naɪt'ʃed]","n.龙葵属植物",'n.龙葵属植物','nightshade','n. 龙葵属植物','nightshade is a plant with poisonous black or red berries','茄属植物（浆果黑色或红色，有毒）'}

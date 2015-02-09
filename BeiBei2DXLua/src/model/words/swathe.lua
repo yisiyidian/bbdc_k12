@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swathe"]={"swathe","[sweɪð]","[ sweið, swɔð ]","vt.缠裹",'n.绷带,包布,束带|||vt.紧绑，缠裹|||=swath','His hands were swathed in bandages.','他的手被绷带层层裹起来。','Torrential rain and a howling tempest cut a swathe of destruction across the country.','狂风暴雨横扫全国，所到之处，一片狼藉。'}

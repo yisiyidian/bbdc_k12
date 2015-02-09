@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["benign"]={"benign","[bɪ'naɪn]","[bɪ'naɪn]","adj.仁慈的",'adj.仁慈的,温和的,良性的','The benign weather brought North America a bumper crop.','温和的气候给北美带来大丰收。','A benign tumour will not cause you any fatal harm.','良性肿瘤不会对你有致命的伤害。'}

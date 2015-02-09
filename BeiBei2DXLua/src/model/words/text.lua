@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["text"]={"text","[tekst]","[tɛkst]","n.文本",'n.本文,文件,正文,课文|||vt.&vi.发短信','The text is accompanied by illustration.','正文附有插图。','You will find the text somewhere in the Bible.','你会在圣经里找到这段文章。'}

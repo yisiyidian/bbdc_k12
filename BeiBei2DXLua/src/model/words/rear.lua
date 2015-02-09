@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rear"]={"rear","[rɪə]","[rɪr]","n.后面",'n.后面,背后,臀部|||adj.后面的,背面的,后方的|||vt.养育,饲养,举起,建立|||vi.高耸,用后腿站立','He is so lazy; he could do with a good kick up the rear.','他这个人太懒惰，真想在他屁股上踢一脚。','The rear door hinges/is hinged at the top so that it opens upwards.','後面的门是在顶部铰接上的, 以便可以向上开.'}

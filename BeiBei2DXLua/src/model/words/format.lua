@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["format"]={"format","['fɔːmæt]","['fɔrmæt]","n.板式",'n.设计,版式|||n.[计算机]格式,DOS命令:格式化(磁盘),用于空盘或使用过的磁盘建立新空盘来存储数据|||v.vt.使格式化,设计,安排','They formatted the conference so that each speaker had less than 15 minutes to deliver a paper.','他们安排了会议以至每个演讲者有不到15分钟的时间发表演讲','The book has been styled in a modern format.','该书已按照现代版式制作。'}

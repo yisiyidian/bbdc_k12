@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seaman"]={"seaman","['siːmən]","['simən]","n.海员",'n.海员,水手','In1929 he took a job as a seaman.','1929年他当了海员。','A seaman went below to fetch the captain a cup of coffee.','一位水手下舱去为船长拿一杯咖啡。'}

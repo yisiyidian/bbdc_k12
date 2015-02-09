@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vouch"]={"vouch","[vaʊtʃ]","[vaʊtʃ]","v.担保",'v.担保，保证，证明，确定|||[律]传唤（某人）出庭作证','I can vouch for his honesty.','我可以为他的诚实做担保。','The experts have vouched for the painting\'s authenticity.','专家已经确认了该画是真迹。'}

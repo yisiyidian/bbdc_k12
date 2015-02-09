@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impermeable"]={"impermeable","[ɪm'pɜːmɪəb(ə)l]","[ɪm'pɝmɪəbl]","adj.不能渗透的",'adj.不能渗透的,不渗透性的','The external layer of the skin is relatively impermeable to water.','皮肤的外层不透水。','The plastic membrane is impermeable.','塑料薄膜能防水。'}

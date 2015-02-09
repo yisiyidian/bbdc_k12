@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["backwater"]={"backwater","['bækwɔːtə]","['bækwɔtɚ]","n.回水",'n.回水，回水河汊，穷乡僻壤','I find this town too much of a backwater.','我觉得这个城镇太闭塞.','The running of family fortunes has always been a backwateralbeit a lucrative oneof the investment management business','“家庭未来的趋势一直处于投资管理商务的停滞状态——尽管有有利的一面”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prize"]={"prize","[praɪz]","[praɪz]","n.奖品",'n.奖品,珍品,战利品|||vt.重视|||adj.奖励的,杰出的','The portrait of her mother was her most prized possession.','她母亲的这张肖像是她最珍爱的物品。','The boy\'s bicycle was his most prized possession.','这个男孩子把自行车看作是他最宝贵的财产。'}

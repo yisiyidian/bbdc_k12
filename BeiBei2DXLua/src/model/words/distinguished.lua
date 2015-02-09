@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["distinguished"]={"distinguished","[dɪ'stɪŋgwɪʃt]","[ dis'tiŋɡwiʃt ]","adj.卓著的",'adj.卓著的|||v.区别|||vbl.区别','The scientist is distinguished in many spheres of knowledge.','这位科学家在许多知识领域中都是杰出的。','The Queen conferred knighthood on several distinguished men.','女王将爵士头衔授予几位杰出人士。'}

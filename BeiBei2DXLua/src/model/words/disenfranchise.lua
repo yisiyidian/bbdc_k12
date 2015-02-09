@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disenfranchise"]={"disenfranchise","[,dɪsɪn'fræn(t)ʃaɪz; ,dɪsen-]","[,dɪsɪn'fræntʃaɪz]","v.(=disfranchise)剥夺...公民权",'v.(=disfranchise)剥夺...公民权','He is disenfranchised according to law.','他被依法剥夺公民权。','Political criminals are always be disenfranchised.','政治犯常常被剥夺公民权。'}

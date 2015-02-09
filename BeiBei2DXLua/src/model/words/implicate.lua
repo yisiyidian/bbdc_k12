@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["implicate"]={"implicate","['ɪmplɪkeɪt]","['ɪmplɪket]","vt.纠缠(使...绕住",'vt.纠缠(使...绕住,暗示)|||n.包含的东西(暗指的东西)','His enemies tried to implicate him (in the murder).','他的仇人竭力想把他牵扯进谋杀案中.','He was deeply implicated (ie involved) in the plot.','他与该阴谋牵涉颇深.'}

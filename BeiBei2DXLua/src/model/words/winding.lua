@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["winding"]={"winding","['waɪndɪŋ]","['waɪndɪŋ]","n.卷",'n.卷,弯曲,线圈|||adj.蜿蜒的,卷绕的,弯曲的|||vbl.卷绕,上发条,蜿蜒','You operate the mechanism by winding this handle.','操纵这台机器要转动这个把手.','A river winding through a valley.','在山谷中蜿蜒的河流'}

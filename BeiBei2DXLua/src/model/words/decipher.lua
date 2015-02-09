@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decipher"]={"decipher","[dɪ'saɪfə]","[dɪ'saɪfɚ]","vt.译解",'vt.译解','Can you decipher her scrawl?','你能辩认出她乱写的是什么吗?','I\'m still no closer to deciphering the code.','我还是无法破译该密码。'}

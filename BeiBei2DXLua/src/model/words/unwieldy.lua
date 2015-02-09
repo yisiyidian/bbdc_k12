@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unwieldy"]={"unwieldy","[ʌn'wiːldɪ]","[ʌn'wildi]","adj.笨重的",'adj.笨重的,笨拙的','This machine is too unwieldy to move.','这台机器太笨重了，很难搬动。','It is too unwieldy for practical calculations.','它用于实际计算太麻烦了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["production"]={"production","[prə'dʌkʃ(ə)n]","[prə'dʌkʃən]","n.生产",'n.生产,产品,产量,作品,成果','We must increase production levels.','我们必须提高生产水平。','The necessary outcome of a war is a fall in production.','战争带来的必然结果就是生产力下降。'}

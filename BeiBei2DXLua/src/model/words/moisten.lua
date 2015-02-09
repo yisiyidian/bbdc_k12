@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moisten"]={"moisten","['mɒɪs(ə)n]","['mɔɪsn]","v.弄湿",'v.弄湿，使湿润','Her eyes moistened slightly.','她的眼睛湿润了。','She moistened a tissue and gently wiped the dust off the necklace.','她沾湿了一块纸巾，轻轻擦去项链上的灰尘。'}

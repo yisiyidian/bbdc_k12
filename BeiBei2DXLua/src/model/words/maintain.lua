@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maintain"]={"maintain","[meɪn'teɪn; mən'teɪn]","[men'ten]","vt.维持;维修",'vt.维持;维修,保养;坚持;断言','Mankind have been trying every means to maintain the balance of nature.','人类采用一切手段保持生态平衡。','We must maintain a firm attitude.','我们必须采取坚定的态度。'}

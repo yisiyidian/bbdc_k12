@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rarity"]={"rarity","['reərɪtɪ]","['rɛrəti]","n.稀薄",'n.稀薄，稀有,珍品','No one discovers a rarity by chance.','侥幸发现一件珍品的人是没有的。','These stamps have great value because of their rarity.','这些罕见的邮票非常珍贵。'}

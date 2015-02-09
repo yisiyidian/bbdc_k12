@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chief"]={"chief","[tʃiːf]","[tʃif]","adj.首席的",'adj.主要的,首席的|||n.首领','His nomination as chief executive was approved by the board.','他被提名为行政总裁的事被董事会批准了。','In the US, Washington is the seat of government and New York City is the chief seat of commerce.','在美国，华盛顿是政府所在地，纽约是主要的商业中心。'}

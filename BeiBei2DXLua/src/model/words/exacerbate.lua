@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exacerbate"]={"exacerbate","[ɪg'zæsəbeɪt; ek'sæs-]","[ɪɡ'zæsɚbet]","vt.加重",'vt.加重(使...恶化,激怒)','Her mother\'s interference exacerbated the difficulties in their marriage.','她母亲的从中干预使他们的婚姻雪上加霜。','Scratching exacerbates a skin rash.','抓挠会让皮疹恶化。'}

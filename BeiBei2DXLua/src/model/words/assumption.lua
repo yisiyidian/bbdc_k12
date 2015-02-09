@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assumption"]={"assumption","[ə'sʌm(p)ʃ(ə)n]","[ə'sʌmpʃən]","n.假定",'n.假定,设想,担任(职责等),假装','The project was predicated on the assumption that the economy was expanding.','这一计划是以经济发展的设想为依据的.','Their assumptions of an air of confidence fooled nobody.','他们装出信心十足的样子却欺骗不了任何人。'}

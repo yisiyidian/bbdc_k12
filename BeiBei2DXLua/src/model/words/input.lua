@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["input"]={"input","['ɪnpʊt]","['ɪn'pʊt]","n.输入",'n.输入','There are several errors in the input.','输入中有好几处错误。','I have inputted the data into a computer.','我已经把数据输入到计算机中了。'}

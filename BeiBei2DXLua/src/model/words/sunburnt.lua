@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sunburnt"]={"sunburnt","['sʌnbɜːnt]","['sʌn,bɝnt]","adj.晒黑的",'adj.晒黑的，晒伤的，日灼的|||=sunburned|||动词sunburn的过去式和过去分词形式','His hard hands and sinewy sunburnt limbs told of labor and endurance.','他粗糙的双手，被太阳哂得发黑的健壮四肢，均表明他十分辛勤，非常耐劳。','',''}

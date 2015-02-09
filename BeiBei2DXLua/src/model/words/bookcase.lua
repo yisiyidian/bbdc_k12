@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bookcase"]={"bookcase","['bʊkkeɪs]","['bʊkkes]","n.书架",'n.书架,书柜','He ruptured himself lifting a bookcase.','他抬书柜时出现了器官错位.','A bookcase screens off part of the room.','有个书柜把房间隔开了一部分.'}

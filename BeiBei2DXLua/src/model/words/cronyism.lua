@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cronyism"]={"cronyism","['krəʊnɪɪz(ə)m]","['kronɪɪzəm]","n.任人唯亲",'n.任人唯亲','||Cronyism|| is very common in modern society.','当今社会，任人唯亲非常普遍。','||Cronyism|| is not good method','任人唯亲不是好的方法'}

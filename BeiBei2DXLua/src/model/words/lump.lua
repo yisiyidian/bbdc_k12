@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lump"]={"lump","[lʌmp]","[lʌmp]","n.团",'n.团,块状,瘤,很多,愚笨的人,惩罚|||vt.聚成团,合并考虑,同等对待或分类,笨拙地移动,结块,忍受|||vi.使成块状,沉重地移动|||adj.整体的,全部的,块状的','A pension is often commutable into a lump sum.','养老金常可改为一次性总付款。','Can we lump all these items together as incidental expenses\'?','我们可否把这些项目都归在｀杂费＇项内?'}

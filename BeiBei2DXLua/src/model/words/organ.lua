@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["organ"]={"organ","['ɔːg(ə)n]","['ɔrɡən]","n.器官",'n.风琴,器官,机构,机关报刊','The organ resounded (through the church).','风琴的声音（在教堂里）回荡著.','Tears are secreted by an organ under the upper eyelid.','眼泪由上眼睑下面的器官分泌。'}

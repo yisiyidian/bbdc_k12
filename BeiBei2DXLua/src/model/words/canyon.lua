@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["canyon"]={"canyon","['kænjən]","[ 'kænjən ]","n.峡谷",'n.峡谷','Herbert become rich by opening a tourist trap near the grand canyon.','赫伯特靠在大峡谷附近开的一家对旅游者大敲竹杠的商店而变得富有起来。','Arizona is famous for the Grand ||Canyon||.','亚利桑那州因科罗拉多大峡谷而著名。'}

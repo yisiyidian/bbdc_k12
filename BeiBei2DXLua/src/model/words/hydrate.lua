@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hydrate"]={"hydrate","['haɪdreɪt]","['haɪdret]","n.水化物",'n.水化物|||v.（使）水合','...aluminium hydrate.','...氢氧化铝。','After-sun products will cool and hydrate your skin.','晒后护肤品会清凉肌肤并为其补水。'}

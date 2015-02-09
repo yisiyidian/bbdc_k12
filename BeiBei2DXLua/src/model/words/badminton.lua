@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["badminton"]={"badminton","['bædmɪnt(ə)n]","['bædmɪntən]","n.羽毛球",'n.羽毛球','We go to play badminton in the nearest gym every Sunday.','每个星期天我们都去最近的体育馆打羽毛球。','He went to the badminton club at times during his school days.','他上学时有时到羽毛球俱乐部去。'}

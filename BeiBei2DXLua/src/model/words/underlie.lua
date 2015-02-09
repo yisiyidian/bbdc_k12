@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["underlie"]={"underlie","[ʌndə'laɪ]","[,ʌndɚ'laɪ]","v.成为...的基础",'v.位于...之下,成为...的基础','A deep faith underlies her work among refugees.','她在难民中工作是因为她有很深的信念.','Many factors underlie my decision.','我的决定以众多因素为基础'}

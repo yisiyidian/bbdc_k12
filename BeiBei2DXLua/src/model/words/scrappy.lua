@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scrappy"]={"scrappy","['skræpɪ]","['skræpi]","adj.散乱的",'adj.1.散乱的；不连贯的；支离破碎的;2.充满斗志的','it was a scrappy rambling speech','这是一篇结构松散，不严谨的演讲稿。','A scrappy litigator.','一个自由，散漫的诉讼律师。'}

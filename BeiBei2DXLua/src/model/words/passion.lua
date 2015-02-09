@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["passion"]={"passion","['pæʃ(ə)n]","['pæʃən]","n.激情",'n.激情,热情','Nothing could rekindle her extinct passion.','她激情已逝, 无从心回意转.','The dying embers of a former passion can still be seen in his article.','往日激情将熄的余烬仍可从他的文章中看出来。'}

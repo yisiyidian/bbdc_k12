@@ -96,6 +96,10 @@ function Manager.getWordInfoFromWordName(word)
     ret.wordName = word
     if s_WordDictionaryDatabase.allwords ~= nil then
         local raw = s_WordDictionaryDatabase.allwords[word]
+        if raw == nil then
+            local w = require('model.words.' .. word)
+            raw = s_WordDictionaryDatabase.allwords[word]
+        end
         if raw ~= nil then
             ret.wordName           =   raw[1]
             ret.wordSoundMarkEn    =   raw[2]

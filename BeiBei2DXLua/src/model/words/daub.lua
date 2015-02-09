@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["daub"]={"daub","[dɔːb]","[dɔb]","v.涂抹",'v.涂抹,乱画','The children were encouraged to daub the colors liberally.','他们鼓励孩子随意涂鸦。','They sent death threats and daubed his home with slogans.','他们向他发出了死亡威胁，还在他家的墙上涂满了标语。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["propel"]={"propel","[prə'pel]","[prə'pɛl]","v.推进",'v.推进,驱使','We are propelled to go forward.','我们被推着向前走。','His addiction to drugs propelled him towards a life of crime.','他吸毒成瘾使他走上了犯罪的道路。'}

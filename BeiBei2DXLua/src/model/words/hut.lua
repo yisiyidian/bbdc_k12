@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hut"]={"hut","[hʌt]","[hʌt]","n.小屋",'n.小屋,棚屋','They tore down that old hut.','他们把那间旧草屋拆掉了。','The hut was made out of pieces of wood.','这小屋是用木板建造的。'}

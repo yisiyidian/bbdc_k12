@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complement"]={"complement","['kɒmplɪm(ə)nt]","['kɑmplɪmɛnt]","n.补语",'n.补语；余角；补足物；补体|||vt.补足，补助','His business skill complements her flair for design.','他的经营技巧和她的设计才能相辅相成。','A wine is a complement to a good meal.','美食加美酒才算完备。'}

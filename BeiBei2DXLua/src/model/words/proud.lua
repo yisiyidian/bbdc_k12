@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proud"]={"proud","[praʊd]","[praʊd]","adj.骄傲的",'adj.骄傲的,自豪的,壮观的','It was a proud day for us when we won the trophy.','我们夺得奖杯那一天是值得我们骄傲的日子。','He is too proud now to be seen with his former friends.','他现在忘乎所以了，觉得跟以前的朋友在一起有失他的脸面。'}

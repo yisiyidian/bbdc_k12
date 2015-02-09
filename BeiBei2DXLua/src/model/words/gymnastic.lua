@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gymnastic"]={"gymnastic","[dʒɪm'næstɪk]","[dʒɪm'næstɪks]","adj.体操的",'adj.体操的,体育的','I don\'t like gymnastics.','我不喜欢体操。','She passed her qualification for the Olympic gymnastic competition.','她获得了奥林匹克体操比赛的资格.'}

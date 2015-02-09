@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recede"]={"recede","[rɪ'siːd]","[rɪ'sid]","vi.后退",'vi.后退,减弱|||vt.撤回','His hair is beginning to recede from his forehead.','他的头发开始从前额往后秃了。','The prospect of bankruptcy has now receded.','破产的危险已经减少了。'}

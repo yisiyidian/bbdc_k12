@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conqueror"]={"conqueror","['kɒŋk(ə)rə(r)]","['kɑŋkərɚ]","n.征服者",'n.征服者,胜利者','The conquerors advanced, killing and plundering as they went.','征服者一路上杀人越货无所不为.','The general handed over to the conqueror.','将军向胜利者办理了移交手续。'}

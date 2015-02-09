@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remittance"]={"remittance","[rɪ'mɪt(ə)ns]","[rɪ'mɪtns]","n.汇款",'n.汇款','Have you received our remittance?','你方是否已收到我方汇款？','Sorry, your remittance have not reach us yet.','对不起，您的汇款还没有到我们这儿。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["questionnaire"]={"questionnaire","[,kwestʃə'neə; ,kestjə-]","[,kɛstʃə'nɛr]","n.调查表",'n.调查表','The advance testing of something, such as a questionnaire, a product, or an idea.','预先测试在正式测试答卷、产品或观点之前进行的考试','Is a questionnaire answered by 500 people truly representative of national opinion?','一份调查问卷有500人作答, 是否能真正代表全国人民的意见?'}

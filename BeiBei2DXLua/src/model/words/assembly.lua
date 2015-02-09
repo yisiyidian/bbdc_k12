@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assembly"]={"assembly","[ə'semblɪ]","[ə'sɛmbli]","n.集合",'n.集合,集会,装配','The production is greatly increased due to a new assembly line installed.','由于安装了新装配线, 生产量大大提高。','It\'s an unlawful assembly.','那是非法集会。'}

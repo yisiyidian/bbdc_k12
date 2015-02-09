@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["root"]={"root","[ruːt]","[rut]","n.根",'n.根,根源,祖先|||vt.&vi.生根,扎根,翻寻,起源于','Who\'s been rooting about among my papers?','谁翻过我的文件了？','Unhappiness is the root cause of his illness.','不开心是他生病的根源。'}

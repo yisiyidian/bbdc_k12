@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sluggard"]={"sluggard","['slʌgəd]","['slʌɡɚd]","n.游手好闲的人",'n.游手好闲的人,懒鬼|||adj.游手好闲的','I will not, like a sluggard, wear out my youth in idleness at home.','我不愿意象个懒人一样待在家里，游手好闲地把我的青春消磨掉。','He is a sluggard, a drunkard.','他是个懒汉，酒鬼。'}

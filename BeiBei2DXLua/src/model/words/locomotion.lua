@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["locomotion"]={"locomotion","[ləʊkə'məʊʃ(ə)n]","[,lokə'moʃən]","n.运动",'n.运动,移动,转位','||Locomotion|| had at times seemed impossible.','有些时候简直象是寸步难行了.','By land, air or sea, birds are masters of locomotion.','无论是通过陆地, 飞越空中还是穿过海洋, 鸟应算是运动能手了.'}

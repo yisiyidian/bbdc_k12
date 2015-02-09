@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["administration"]={"administration","[ədmɪnɪ'streɪʃ(ə)n]","[əd,mɪnɪ'streʃən]","n.行政",'n.行政,管理,中央政府','The Prime Minister appointed some new ministers to ginger up her administration.','首相任命一些新大臣以增强她现届政府的活力。','She has been looking after the day-to-day administration.','她一直在照管日常的行政工作.'}

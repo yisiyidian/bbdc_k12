@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cubic"]={"cubic","['kjuːbɪk]","['kjubɪk]","adj.立方体的",'adj.立方体的','The store- room be400 cubic feet in volume.','这库房的容量是400立方英尺。','The volume of this container is 20 cubic meters.','这个集装箱的体积是20立方米。'}

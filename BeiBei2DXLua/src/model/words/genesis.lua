@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["genesis"]={"genesis","['dʒenɪsɪs]","['dʒɛnəsɪs]","n.起源",'n.起源，发生|||Genesis：《创世纪》（旧约圣经第一卷）','The Bible begins with the ||Genesis||.','《圣经》开篇是《创世记》。','We cannot yet satisfactorily explain the genesis of the universe.','我们仍不能令人满意地解释宇宙的起源。'}

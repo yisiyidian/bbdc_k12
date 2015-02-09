@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["robust"]={"robust","[rə(ʊ)'bʌst]","[ro'bʌst]","adj.强壮的",'adj.强壮的,强健的,粗野的,需要体力的,浓的','He has the keen eye and robust approach needed.','他具备了所需的敏锐的洞察力和坚定的行事态度。','The old veteran could lay flat the most robust sportsman.','这位沙场院老将能把最强壮的运动员拖得筋疲力尽。'}

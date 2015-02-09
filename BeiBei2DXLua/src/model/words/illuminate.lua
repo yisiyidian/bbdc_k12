@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illuminate"]={"illuminate","[ɪ'l(j)uːmɪneɪt]","[ɪ'lumɪnet]","vt.照明",'vt.照明,阐释,说明','That biography is an illuminate footnote to the history of our times.','那篇传记对我们这个时代是一个很有启发性的说明。','No streetlights illuminated the street.','一盏照亮街道的路灯也没有。'}

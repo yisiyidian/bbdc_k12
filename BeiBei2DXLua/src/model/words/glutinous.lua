@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glutinous"]={"glutinous","['gluːtɪnəs]","['ɡlutənəs]","adj.粘性的",'adj.粘性的，胶状的','The sauce was glutinous and tasted artificial.','这种酱有些黏，尝起来不是非常地道。','Tangyuan is made from glutinous rice flour.','汤圆是由糯米粉做成的。'}

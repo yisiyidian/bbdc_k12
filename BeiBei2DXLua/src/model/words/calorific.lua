@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calorific"]={"calorific","[kælə'rɪfɪk]","[,kælə'rɪfɪk]","adj.生热的",'adj.生热的','Coal is much calorific than green wood.','煤产生的热量比湿木材多得多。','In theory, people should adjust their purchases of food when relative prices change so that they maximise their calorific intake.','理论上讲，当相对价格变化时，人们应该调节食物的购买种类，以达到热量摄入的最大化。'}

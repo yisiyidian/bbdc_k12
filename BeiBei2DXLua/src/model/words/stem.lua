@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stem"]={"stem","[stem]","[stɛm]","n.茎",'n.茎,干,船首,词干,血统|||vt.堵住,阻止,抽去梗|||vi.起源于,发生','She sat twirling the stem of the glass in her fingers.','她坐在那里用手指捻著玻璃杯的杯颈。','She bought some roses with long stems.','她买了一些枝干很长的玫瑰花。'}

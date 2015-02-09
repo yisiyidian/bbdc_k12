@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["healthful"]={"healthful","['helθfʊl; -f(ə)l]","['hɛlθfl]","adj.有益健康的",'adj.有益健康的,使人健康的,卫生的','Plenty of sleep is healthful.','充足的睡眠有益于健康。','Fire is as hurtful as healthful.','火有两面性，有利也有弊。'}

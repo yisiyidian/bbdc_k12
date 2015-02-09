@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twine"]={"twine","[twaɪn]","[twaɪn]","n.线",'n.线|||v.缠绕,捻','Have you got some twine to tie this box up?','你有没有绳子来把这些箱子捆好？','He tied the parcel with twine.','他用细绳来捆扎包裹。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["herbivorous"]={"herbivorous","[hɜː'bɪvərəs]","['hɝbɪvərəs]","adj.食草的",'adj.食草的','The camel is a herbivorous animal.','骆驼是一种食草动物。','||Herbivorous|| animals have very small canine teeth, or none.','食草动物的犬牙很小，或者没有犬牙。'}

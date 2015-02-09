@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perversion"]={"perversion","[pə'vɜːʃ(ə)n]","[ pɔ'və:ʃən, -ʒən ]","n.误用",'n.误用(曲解,倒错,颠倒,反常)','The past has been scarred by countless perversions of justice.','无数的是非颠倒使过去的岁月伤痕累累。','In its most general sense, corruption means the perversion or abandonment.','就其最一般的意义上说，舞弊就是堕落，就是背离准则。'}

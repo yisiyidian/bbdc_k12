@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unfavorable"]={"unfavorable","[ʌn'fevrəbl]","[ ,ʌn'feivərəbl ]","adj.不宜的",'adj.不宜的,不理想的','I am surprised you got an unfavorable impression of him.','我很惊讶你对他印象不佳。','I got an unfavorable score.','我得到一个不理想的成绩。'}

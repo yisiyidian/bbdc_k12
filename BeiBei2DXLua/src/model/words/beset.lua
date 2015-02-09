@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beset"]={"beset","[bɪ'set]","[bɪ'sɛt]","vt.困扰",'vt.包围,困扰，镶嵌','The country was beset with many problems.','这个国家被许多问题所困扰。','He was beset by doubts.','他疑虑重重。'}

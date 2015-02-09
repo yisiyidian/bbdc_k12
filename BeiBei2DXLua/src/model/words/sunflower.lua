@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sunflower"]={"sunflower","['sʌnflaʊə]","['sʌnflaʊɚ]","n.向日葵",'n.向日葵','That must be Van Gogh\'s sunflower there, where all the people are crowded around.','那边有很多人挤在一起，一定是梵高的《向日葵》在那儿。','The bird pecked seeds out of the sunflower.','那只鸟用喙从向日葵中啄出种的。'}

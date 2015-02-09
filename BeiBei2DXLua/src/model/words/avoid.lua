@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["avoid"]={"avoid","[ə'vɒɪd]","[ə'vɔɪd]","v.避免",'v.避免|||vt.避免,逃避','He is a fugitive from justice trying to avoid being caught by the police.','他是逃犯，正试图逃避警方的追捕。','If we are to avoid defeat we need a change of leadership.','我们要避免失败的话，就要换掉领导人。'}
