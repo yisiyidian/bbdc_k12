@@ -52,10 +52,10 @@ function ChapterLayer:ctor()
     self:addTopBounce()
     -- add chapter node
     self:addChapterIntoListView('chapter0')
-    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey) + 0
     local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)   
     for i = 1, currentChapterIndex do
-        self.addChapterIntoListView('chapter'..i)
+        self:addChapterIntoListView('chapter'..i)
     end
     -- add player
 --    self:addPlayer()
@@ -73,8 +73,9 @@ function ChapterLayer:ctor()
 end
 
 function ChapterLayer:checkUnlockLevel()
-    local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress()
+    local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)+0
+    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
+--    currentProgress = 10
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
  if currentProgress % s_islands_per_page == 0 and currentProgress > 0 then       
         -- unlock chapter
