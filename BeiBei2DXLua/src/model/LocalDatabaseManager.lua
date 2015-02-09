@@ -67,8 +67,8 @@ function Manager.initTables()
     end
 end
 
-function Manager.saveDataClassObject(objectOfDataClass, userId, username)
-    localdatabase_utils.saveDataClassObject(objectOfDataClass, userId, username)
+function Manager.saveDataClassObject(objectOfDataClass, userId, username, conditions)
+    localdatabase_utils.saveDataClassObject(objectOfDataClass, userId, username, conditions)
 end
 ---------------------------------------------------------------------------------------------------------
 
