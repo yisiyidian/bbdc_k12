@@ -238,8 +238,8 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             local currentTaskID = info[4] + 1
---            print('#####sendr:name:'..sender:getName())
             local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
+            print('#####sendr:name:'..sender:getName()..':'..currentProgress)
             s_SCENE:removeAllPopups()
 --            print('######## state'..state..',active'..active)
             if state >= 4 and bossID ~= currentTaskID then
@@ -261,7 +261,7 @@ function ChapterLayerBase:addPopup(levelIndex)
                     local action2 = cc.FadeOut:create(1.5)
                     text:runAction(action2)
  
-            elseif currentTaskID ~= 0 and bossID == currentProgress + 1 then
+            elseif currentTaskID ~= 0 and currentTaskID ~= (currentProgress + 1) and bossID == currentProgress + 1 then
             	local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
                     tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
                     self:addChild(tutorial_text,520)
