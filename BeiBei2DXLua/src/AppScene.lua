@@ -157,6 +157,7 @@ function AppScene:replaceGameLayer(newLayer)
         self.currentGameLayerName = newLayer.class.__cname
         if newLayer.class.__cname == 'HomeLayer' then
             s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__INIT
+            print(s_WordDictionaryDatabase.nextframe, 's_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__INIT')
         end
     else
         self.currentGameLayerName = 'unknown'
@@ -183,6 +184,7 @@ function AppScene:removeLoadingView()
 
             if self.currentGameLayerName == 'HomeLayer' then
                 s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD
+                print(s_WordDictionaryDatabase.nextframe, 's_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD')
             end
 
         end)))

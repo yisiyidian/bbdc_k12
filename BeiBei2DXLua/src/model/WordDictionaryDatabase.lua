@@ -11,27 +11,80 @@ Manager.nextframe = WDD_NEXTFRAME_STATE__INIT
 Manager.allwords = nil
 
 function Manager.init()
-    local databasePath = cc.FileUtils:getInstance():fullPathForFilename('cfg/bbdxw.bin')
-    print('databasePath:', databasePath)
-    Manager.database = sqlite3.open(databasePath)
-
     Manager.allwords = {}
-    if Manager.database ~= nil then
-        local DataWord = require('model.user.DataWord')
-        for row in Manager.database:nrows("SELECT * FROM DataWord") do
-            local word = DataWord.create()
-            word.wordName           =   row.wordName
-            word.wordSoundMarkEn    =   row.wordSoundMarkEn
-            word.wordSoundMarkAm    =   row.wordSoundMarkAm
-            word.wordMeaningSmall   =   row.wordMeaningSmall
-            word.wordMeaning        =   row.wordMeaning
-            word.sentenceEn         =   row.sentenceEn
-            word.sentenceCn         =   row.sentenceCn
-            word.sentenceEn2        =   row.sentenceEn2
-            word.sentenceCn2        =   row.sentenceCn2
-            Manager.allwords[word.wordName] = word
-        end
-    end
+    require('model.bbdxw')
+    -- local databasePath = cc.FileUtils:getInstance():fullPathForFilename('cfg/bbdxw.sqlite')
+    -- print('databasePath:', databasePath)
+    -- Manager.database = sqlite3.open(databasePath)
+    -- print('Manager.database:', Manager.database)
+    -- Manager.allwords = {}
+    -- if Manager.database ~= nil then
+    --     local DataWord = require('model.user.DataWord')
+    --     for row in Manager.database:nrows("SELECT * FROM DataWord") do
+    --         local word = DataWord.create()
+    --         word.wordName           =   row.wordName
+    --         word.wordSoundMarkEn    =   row.wordSoundMarkEn
+    --         word.wordSoundMarkAm    =   row.wordSoundMarkAm
+    --         word.wordMeaningSmall   =   row.wordMeaningSmall
+    --         word.wordMeaning        =   row.wordMeaning
+    --         word.sentenceEn         =   row.sentenceEn
+    --         word.sentenceCn         =   row.sentenceCn
+    --         word.sentenceEn2        =   row.sentenceEn2
+    --         word.sentenceCn2        =   row.sentenceCn2
+    --         Manager.allwords[word.wordName] = word
+    --     end
+    -- end
+
+    -- local function loadXxteaFile(filepath)
+    --     local str = cx.CXUtils:getInstance():decryptXxteaFile(filepath)
+    --     return str
+    --     -- if str ~= nil then
+    --     --     local jsonObj = s_JSON.decode(str)
+    --     --     return jsonObj
+    --     -- else
+    --     --     return {}
+    --     -- end
+    -- end
+
+    -- local content= loadXxteaFile("cfg/newwords.json")
+    -- local lines = split(content, "\n")
+    -- Manager.allwords = {}
+    -- local DataWord = require('model.user.DataWord')
+    -- local file = ''
+    -- for i = 1, #lines do
+    --     local terms = split(lines[i], "\t")
+    --     for i = 6, #terms do
+    --         terms[i] = string.gsub(terms[i], "'", "\\'")
+    --     end
+
+    --     local word = DataWord.create()
+    --     word.wordName           =   terms[1]
+    --     word.wordSoundMarkEn    =   terms[2]
+    --     word.wordSoundMarkAm    =   terms[3]
+    --     word.wordMeaningSmall   =   terms[4]
+    --     word.wordMeaning        =   terms[5]
+    --     word.sentenceEn         =   terms[6]
+    --     word.sentenceCn         =   terms[7]
+    --     word.sentenceEn2        =   terms[8]
+    --     word.sentenceCn2        =   terms[9]
+    --     Manager.allwords[word.wordName] = word
+
+    --     -- local str = string.format('Manager.allwords["%s"]={["wordName"]="%s",["wordSoundMarkEn"]="%s",["wordSoundMarkAm"]="%s",["wordMeaningSmall"]="%s",["wordMeaning"]=\'%s\',["sentenceEn"]=\'%s\',["sentenceCn"]=\'%s\',["sentenceEn2"]=\'%s\',["sentenceCn2"]=\'%s\'}',
+    --         -- tostring(terms[1]), tostring(terms[1]), tostring(terms[2]), tostring(terms[3]), tostring(terms[4]), tostring(terms[5]), tostring(terms[6]), tostring(terms[7]), tostring(terms[8]), tostring(terms[9]))
+    --     if terms[3] == nil then 
+    --         local str = string.format('Manager.allwords["%s"]={"%s","%s","%s","%s",\'%s\',\'%s\',\'%s\',\'%s\',\'%s\'}',
+    --             tostring(terms[1]), tostring(terms[1]), tostring(terms[2]), tostring(terms[2]), tostring(terms[4]), tostring(terms[5]), tostring(terms[6]), tostring(terms[7]), tostring(terms[8]), tostring(terms[9]))
+    --         file = file .. str .. '\n'
+    --     else
+    --         local str = string.format('Manager.allwords["%s"]={"%s","%s","%s","%s",\'%s\',\'%s\',\'%s\',\'%s\',\'%s\'}',
+    --             tostring(terms[1]), tostring(terms[1]), tostring(terms[2]), tostring(terms[3]), tostring(terms[4]), tostring(terms[5]), tostring(terms[6]), tostring(terms[7]), tostring(terms[8]), tostring(terms[9]))
+    --         file = file .. str .. '\n'
+    --     end
+    -- end
+    -- local path = cc.FileUtils:getInstance():getWritablePath() .. 'bbdxw.lua'
+    -- local f = io.open(path, "w")
+    -- f:write(file)
+    -- f:close()
 end
 
 -- ONLY use this in example.lua

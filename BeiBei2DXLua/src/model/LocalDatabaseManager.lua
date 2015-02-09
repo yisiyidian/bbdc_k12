@@ -92,14 +92,21 @@ end
 function Manager.getWordInfoFromWordName(word)
 
     local DataWord = require('model.user.DataWord')
-    local ret = nil
+    local ret = DataWord.create()
+    ret.wordName = word
     if s_WordDictionaryDatabase.allwords ~= nil then
-        ret = s_WordDictionaryDatabase.allwords[word]
-    end
-
-    if not ret then
-        ret = DataWord.create()
-        ret.wordName = word
+        local raw = s_WordDictionaryDatabase.allwords[word]
+        if raw ~= nil then
+            ret.wordName           =   raw[1]
+            ret.wordSoundMarkEn    =   raw[2]
+            ret.wordSoundMarkAm    =   raw[3]
+            ret.wordMeaningSmall   =   raw[4]
+            ret.wordMeaning        =   raw[5]
+            ret.sentenceEn         =   raw[6]
+            ret.sentenceCn         =   raw[7]
+            ret.sentenceEn2        =   raw[8]
+            ret.sentenceCn2        =   raw[9]
+        end
     end
 
     return ret
