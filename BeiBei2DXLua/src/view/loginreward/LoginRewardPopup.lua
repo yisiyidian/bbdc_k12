@@ -123,48 +123,52 @@ function LoginRewardPopup:ctor()
     addColor6:setName("reward6")
     addColor6:setVisible(false)
     
-    local loginData = s_CURRENT_USER.logInDatas
-    local loginData_array = {}
-    for i = 1,#loginData do
-        loginData_array[i] = loginData[i]:getDays()
-    end
-    local day = 0
-    for i = 1,7 do
-        if loginData_array[1][i] > 0 then
-            day = i
-            break
-        end
-    end
-    local currentData = {}
-    for i = 1,7 do
-       if loginData_array[#loginData][day + i - 1] ~= nil then
-            table.insert(currentData,loginData_array[#loginData][day + i - 1])
-       else
+     local loginData = s_CURRENT_USER.logInDatas
+     local loginData_array = {}
+     for i = 1,#loginData do
+         loginData_array[i] = loginData[i]:getDays()
+     end
+     local day = 0
+     for i = 1,7 do
+         if loginData_array[1][i] > 0 then
+             day = i
+             break
+         end
+     end
+     local currentData = {}
+     local currentTime = os.time()
+     local today = math.floor((currentTime - s_CURRENT_USER.localTime) / ( 24 * 60 * 60 ) ) % 7
+
+     if today == 0 then
+        table.insert(currentData,-1)
+     else 
+        for i = 1,today do
+            if day + today <= 7 then
+                table.insert(currentData,loginData_array[#loginData][day + i - 1])
+            else
+                if day + i - 1 <= 7 then                
+                    table.insert(currentData,loginData_array[#loginData - 1][day + i - 1])
+                else
+                    table.insert(currentData,loginData_array[#loginData][day + i - 1 - 7])
+                end
+            end
             table.insert(currentData,-1)
-       end
-    end
-    
-    local today 
-    
-    for  i = 7,1,-1 do
-    	if currentData[i] > 0 then
-    	   today = i
-    	end
-    end
+        end
+     end
 
     local todayMark = s_LocalDatabaseManager.getTodayGetReward()
-    for i = 1,7 do
+    for i = 1,#currentData do
         local sprite = backPopup:getChildByName("reward"..i)
         local mark = cc.Sprite:create("image/loginreward/mark.png")
         mark:setPosition(sprite:getContentSize().width * 0.7,sprite:getContentSize().height * 0.3)
         mark:setScale(0.8)
         sprite:addChild(mark)
-        if i < today then
+        if i < #currentData then
             if tonumber(currentData[i]) <= 0  then
                 mark:setTexture("image/loginreward/miss.png")
             end  
             sprite:setVisible(true)
-        elseif i == today then
+        else
             if todayMark > 0  then
                 sprite:setVisible(true)
             end  
@@ -175,12 +179,12 @@ function LoginRewardPopup:ctor()
         return true  
     end 
 
-    local sprite = backPopup:getChildByName("reward"..today)
+    local sprite = backPopup:getChildByName("reward"..(today + 1))
     local onTouchEnded = function(touch, event)
         if todayMark == nil or tonumber(todayMark) == 0 then
             local location = backPopup:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint(sprite:getBoundingBox(), location)  then
-                s_CURRENT_USER:addBeans(rewardList[today].reward)  
+                s_CURRENT_USER:addBeans(rewardList[#currentData].reward)  
                 s_LocalDatabaseManager.addTodayGetReward()   
                 sprite:setVisible(true)       
             end

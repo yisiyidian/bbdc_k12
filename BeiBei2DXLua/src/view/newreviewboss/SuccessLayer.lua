@@ -5,8 +5,8 @@ local  SuccessLayer = class("SuccessLayer", function ()
     return cc.Layer:create()
 end)
 
-function SuccessLayer.create()
-    local layer = SuccessLayer.new()
+function SuccessLayer.create(number)
+    local layer = SuccessLayer.new(number)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -59,7 +59,7 @@ local function createNextButton(getBean)
     return button_go
 end
 
-function SuccessLayer:ctor()
+function SuccessLayer:ctor(number)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255), bigWidth, s_DESIGN_HEIGHT)  
@@ -90,6 +90,9 @@ function SuccessLayer:ctor()
     waveSprite:addChild(hammerSprite)
 
     self.getBean = s_CURRENT_USER.beanReward
+    if number ~= nil then
+    self.getBean = number
+    end
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
 

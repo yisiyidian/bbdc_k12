@@ -221,7 +221,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     backColor:addChild(self.lastWordAndTotalNumber,1)
     local todayNumber = LastWordAndTotalNumber:getTodayNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
-    if wrongWordNum ~= 0  and preWordName ~= nil then
+    if preWordName ~= nil then
     self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
     end
 

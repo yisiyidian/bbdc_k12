@@ -62,8 +62,9 @@ function ChapterLayer:ctor()
     self:plotDecoration()
     -- scroll to current chapter level
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    self:scrollLevelLayer(progress,0)
+--    self:scrollLevelLayer(progress,0)
     self:addBottomBounce()
+    self:addNotification()
     -- check unlock level
     self:checkUnlockLevel()
     self:addBackToHome()
@@ -128,7 +129,6 @@ function ChapterLayer:checkUnlockLevel()
         -- add notification
 --        self:addPlayerNotification(true) 
     end
-    self:addNotification()
 end
 
 function ChapterLayer:addNotification()
@@ -151,7 +151,7 @@ function ChapterLayer:addNotification()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 then
             taskIndex = bossID - 1
             taskState = bossInfo["typeIndex"] 
         end
@@ -161,16 +161,19 @@ function ChapterLayer:addNotification()
     end
     
     if taskIndex == -2 then
+        self:scrollLevelLayer(progress,0)
         return
+    else
+        self:scrollLevelLayer(taskIndex,0)
     end
     
     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
     local taskKey = 'level'..taskIndex
 --    print('task:'..taskKey..taskChapterKey)
     local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
-    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 100))
-    local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 120))
-    local action2 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 100))
+    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 150))
+    local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 170))
+    local action2 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 150))
     local action3 = cc.Sequence:create(action1, action2)
     local action4 = cc.RepeatForever:create(action3)
     notification:runAction(action4)
