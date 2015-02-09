@@ -98,9 +98,9 @@ function Server.request(api, serverRequestType, parameters, callback)
         if error then
             local err = s_JSON.decode(error)
             callback(nil, err)
-            if err.code == ERROR_CODE_USER_NEW_SESSION_TOKEN then
-                onErrorNeedRestartAppHappend(err.message)
-            end
+            -- if err.code == ERROR_CODE_USER_NEW_SESSION_TOKEN then
+                -- onErrorNeedRestartAppHappend(err.message)
+            -- end
             Server.logLuaTable(api, err, 'response ERROR')
         else
             local result = s_JSON.decode(response)

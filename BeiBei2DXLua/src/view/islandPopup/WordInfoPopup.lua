@@ -24,7 +24,7 @@ local function creatWordLayout(word)
     local sentenceCn2       = currentWord.sentenceCn2
 
     local layout = ccui.Layout:create()
-    layout:setContentSize(cc.size(510, 683))
+    layout:setContentSize(cc.size(545, 683))
 
     local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm ,false)
     soundMark:setPosition(cc.p(layout:getContentSize().width / 2, layout:getContentSize().height * 0.8))
@@ -170,8 +170,8 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
 
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
-    pageView:setContentSize(cc.size(530, 683))
-    local backgroundSize = cc.size(500, 683)
+    pageView:setContentSize(cc.size(545, 683))
+    local backgroundSize = cc.size(545, 683)
     pageView:setPosition(cc.p((s_DESIGN_WIDTH - backgroundSize.width) / 2 +
         (backgroundSize.width - pageView:getContentSize().width) / 2,
         (s_DESIGN_HEIGHT - backgroundSize.height) / 2 +

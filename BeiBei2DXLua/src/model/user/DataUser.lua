@@ -89,7 +89,7 @@ function DataUser:ctor()
 --    self.lastUpdateChestTime               = 0
     
     -- function lock
-    self.lockFunction                      = 0
+    self.lockFunction                      = 8
 
     self.isAlterOn                         = 0
     self.slideNum                          = 0
