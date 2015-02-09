@@ -266,7 +266,7 @@ function ChapterLayerBase:addPopup(levelIndex)
                     tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
                     self:addChild(tutorial_text,520)
                     print(tutorial_text:getPosition())
-                    local text = cc.Label:createWithSystemFont('完成复习任务再能继续学习','',28)
+                    local text = cc.Label:createWithSystemFont('需完成前面的复习boss才能继续','',28)
                     text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
                     text:setColor(cc.c3b(0,0,0))
 
