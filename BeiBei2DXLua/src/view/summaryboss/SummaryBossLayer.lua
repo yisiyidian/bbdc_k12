@@ -78,7 +78,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     light:setVisible(false)    
 
 
-    local function checkAnswer()
+    local function checkAnswer(checkAtOnce)
             
         layer.isPaused = false
         if layer.globalLock then
@@ -222,7 +222,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         
         if not match then
-            if endTime < 1 then
+            if endTime < 1 and not checkAtOnce then
                 return
             end
             local s
@@ -286,7 +286,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             if not startNode.hasSelected then
                 selectStack[#selectStack+1] = startNode
                 layer:updateWord(selectStack,chapter)
-                
+                --startNode.hasSelected = true
                 startNode.addSelectStyle()
                 startNode.right()
                 startNode.bigSize()
@@ -295,7 +295,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                 end
                 startAtNode = true
             else
-                checkAnswer()
+                checkAnswer(true)
             end
             
         else
@@ -461,7 +461,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 
     onTouchEnded = function(touch, event)
         isTouchEnded = true
-        checkAnswer()
+        checkAnswer(false)
     end
 
     
@@ -510,7 +510,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         if endTime >= 1 then
             
-            checkAnswer()
+            checkAnswer(false)
             endTime = 0
         end
         

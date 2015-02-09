@@ -127,7 +127,7 @@ function M.getTodayReviewBoss()
         local lastUpdateDay = os.date("%x", boss.lastUpdate)
         local gapDayNum = getGapDay(lastUpdateDay, today)
         if gapDayNum >= gap then
-            table.insert(todayReviewBoss, bossID)
+            table.insert(todayReviewBoss, boss.bossID)
         end
     end
 
