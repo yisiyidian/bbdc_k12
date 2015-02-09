@@ -237,18 +237,18 @@ function ChapterLayerBase:addPopup(levelIndex)
             local bossID = info[1] + 1
             local state = info[2] + 0
             local active = info[3] + 0
-          
-            
+            local currentTaskID = info[4] + 1
+            print('#####sendr:name:'..sender:getName())
             s_SCENE:removeAllPopups()
 --            print('######## state'..state..',active'..active)
-            if state >= 4 and active ~= 0 then
+            if state >= 4 and bossID ~= currentTaskID then
 --                if true then
 
                     local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
                     tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
                     self:addChild(tutorial_text,520)
                     print(tutorial_text:getPosition())
-                    local text = cc.Label:createWithSystemFont('距离任务出现还差'..active..'天','',28)
+                    local text = cc.Label:createWithSystemFont('尚未接到神秘任务','',28)
                     text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
                     text:setColor(cc.c3b(0,0,0))
 
@@ -327,7 +327,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     if state ~= 8 then
         taskButton:setScale9Enabled(true)
-        taskButton:setName(levelIndex..'|'..state..'|'..coolingDay)
+        taskButton:setName(levelIndex..'|'..state..'|'..coolingDay..'|'..currentTaskBossIndex)
         taskButton:addTouchEventListener(taskEvent)
         back:addChild(taskButton)
         if state ~= 0 then
@@ -377,7 +377,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     back:addChild(wordButton)
 
     s_SCENE:popup(back)
-    if state >= 4 and coolingDay ~= 0 then
+    if state >= 4 and levelIndex - currentTaskBossIndex ~= 0 then
         local WordLibrary = require("view.islandPopup.WordLibraryPopup")
         local wordLibrary = WordLibrary.create(levelIndex)
         s_SCENE.popupLayer:addChild(wordLibrary)   
@@ -385,7 +385,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
        -- back:setPosition(cc.p(800+(s_DESIGN_WIDTH-s_LEFT_X)/2,550))
         back:setVisible(false)
-        wordLibrary.close = function ( )
+        wordLibrary.close = function ()
 --            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
             back:setVisible(true)
         end
