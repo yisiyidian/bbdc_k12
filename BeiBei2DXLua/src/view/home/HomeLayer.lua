@@ -183,7 +183,7 @@ function HomeLayer.create(share)
     button_main:addChild(icon_main)
     
     layer:addShopButton(backColor)
-    layer:addFriendButton(backColor)  
+--    layer:addFriendButton(backColor)  
     
     local button_reward_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -348,7 +348,100 @@ function HomeLayer.create(share)
                 end
             end
         end
+----
+            local button_right_clicked = function(sender, eventType)
+                if eventType == ccui.TouchEventType.began then
+                    AnalyticsFriendBtn()
+                    playSound(s_sound_buttonEffect)
+                elseif eventType == ccui.TouchEventType.ended then
+                    if s_CURRENT_USER:getLockFunctionState(1) == 0 then -- check is friend function unlock
+                        local ShopAlter = require("view.shop.ShopAlter")
+                        local shopAlter = ShopAlter.create(1, 'out')
+                        shopAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    layer:addChild(shopAlter)
+                    else
+                        if  online == false then
+                            offlineTipFriend.setTrue()
+                        else
+                            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                                s_CorePlayManager.enterFriendLayer()
+                            else
 
+                                if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
+                                    local Item_popup = require("popup/PopupModel")
+                                    local item_popup = Item_popup.create(Site_From_Friend_Guest)  
+
+                                    item_popup.update = function()
+                                        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                                            list[1].label:setString(s_CURRENT_USER.username)
+                                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+                                            if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                                        end
+                                    end
+
+                                    s_SCENE:popup(item_popup)
+                                else
+                                    local Item_popup = require("popup/PopupModel")
+                                    local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
+
+                                    s_SCENE:popup(item_popup)
+                                end
+                            end   
+                        end
+                    end
+                end
+            end
+
+            local button_friend 
+            local icon_friend
+            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+                button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+                button_friend:setPosition(bigWidth / 2 - 1, 200)
+                icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+            else
+                button_friend = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
+                button_friend:setPosition(bigWidth / 2 - 0.5, 200)
+                local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
+                cover:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+                button_friend:addChild(cover)
+                local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
+                lock:setAnchorPoint(1,0)
+                lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
+                button_friend:addChild(lock)
+                icon_friend = cc.Sprite:create('image/homescene/home_page_friends_locked.png')
+            end
+            button_friend:setScale9Enabled(true)
+            button_friend:setAnchorPoint(1,0.5)
+            --button_friend:setPosition(bigWidth / 2 - 1, 200)
+            button_friend:addTouchEventListener(button_right_clicked)
+            backColor:addChild(button_friend)   
+
+            icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+            button_friend:addChild(icon_friend)
+
+            layer.button_friend = button_friend
+
+            s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
+                function (api, result)
+                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                    s_CURRENT_USER:getFriendsInfo()
+                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+
+                    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+                        local redHint = cc.Sprite:create('image/friend/fri_infor.png')
+                        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+                        button_friend:addChild(redHint)
+
+                        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+                        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+                        redHint:addChild(num)
+                    end
+                end,
+                function (api, code, message, description)
+                end
+            )
+
+----
         button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
         button_back:setOpacity(0)
         button_back:setAnchorPoint(0, 1)
@@ -589,100 +682,100 @@ function HomeLayer:addShopButton(backColor)
     self.button_shop = button_shop
 end
 
-function HomeLayer:addFriendButton(backColor)
-    local button_right_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            AnalyticsFriendBtn()
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            if s_CURRENT_USER:getLockFunctionState(1) == 0 then -- check is friend function unlock
-                local ShopAlter = require("view.shop.ShopAlter")
-                local shopAlter = ShopAlter.create(1, 'out')
-                shopAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                self:addChild(shopAlter)
-            else
-                if  online == false then
-                    offlineTipFriend.setTrue()
-                else
-                    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                        s_CorePlayManager.enterFriendLayer()
-                    else
-    
-                        if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
-                            local Item_popup = require("popup/PopupModel")
-                            local item_popup = Item_popup.create(Site_From_Friend_Guest)  
-    
-                            item_popup.update = function()
-                                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                                    list[1].label:setString(s_CURRENT_USER.username)
-                                    list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                                    if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
-                                end
-                            end
-    
-                            s_SCENE:popup(item_popup)
-                        else
-                            local Item_popup = require("popup/PopupModel")
-                            local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
-    
-                            s_SCENE:popup(item_popup)
-                        end
-                    end   
-                end
-            end
-        end
-    end
-    
-    local button_friend 
-    local icon_friend
-    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
-        button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
-        button_friend:setPosition(bigWidth / 2 - 1, 200)
-        icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
-    else
-        button_friend = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
-        button_friend:setPosition(bigWidth / 2 - 0.5, 200)
-        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
-        cover:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
-        button_friend:addChild(cover)
-        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
-        lock:setAnchorPoint(1,0)
-        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
-        button_friend:addChild(lock)
-        icon_friend = cc.Sprite:create('image/homescene/home_page_friends_locked.png')
-    end
-    button_friend:setScale9Enabled(true)
-    button_friend:setAnchorPoint(1,0.5)
-    --button_friend:setPosition(bigWidth / 2 - 1, 200)
-    button_friend:addTouchEventListener(button_right_clicked)
-    backColor:addChild(button_friend)   
-
-    icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
-    button_friend:addChild(icon_friend)
-
-    self.button_friend = button_friend
-
-    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
-        function (api, result)
-            print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
-            s_CURRENT_USER:getFriendsInfo()
-            print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
-
-            if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
-                local redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
-                button_friend:addChild(redHint)
-               
-                local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
-                num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-                redHint:addChild(num)
-            end
-        end,
-        function (api, code, message, description)
-        end
-    )
-
-end
+--function HomeLayer:addFriendButton(backColor)
+--    local button_right_clicked = function(sender, eventType)
+--        if eventType == ccui.TouchEventType.began then
+--            AnalyticsFriendBtn()
+--            playSound(s_sound_buttonEffect)
+--        elseif eventType == ccui.TouchEventType.ended then
+--            if s_CURRENT_USER:getLockFunctionState(1) == 0 then -- check is friend function unlock
+--                local ShopAlter = require("view.shop.ShopAlter")
+--                local shopAlter = ShopAlter.create(1, 'out')
+--                shopAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+--                self:addChild(shopAlter)
+--            else
+--                if  online == false then
+--                    offlineTipFriend.setTrue()
+--                else
+--                    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+--                        s_CorePlayManager.enterFriendLayer()
+--                    else
+--    
+--                        if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
+--                            local Item_popup = require("popup/PopupModel")
+--                            local item_popup = Item_popup.create(Site_From_Friend_Guest)  
+--    
+--                            item_popup.update = function()
+--                                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+--                                    list[1].label:setString(s_CURRENT_USER.username)
+--                                    list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
+--                                    if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+--                                end
+--                            end
+--    
+--                            s_SCENE:popup(item_popup)
+--                        else
+--                            local Item_popup = require("popup/PopupModel")
+--                            local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
+--    
+--                            s_SCENE:popup(item_popup)
+--                        end
+--                    end   
+--                end
+--            end
+--        end
+--    end
+--    
+--    local button_friend 
+--    local icon_friend
+--    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+--        button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+--        button_friend:setPosition(bigWidth / 2 - 1, 200)
+--        icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+--    else
+--        button_friend = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
+--        button_friend:setPosition(bigWidth / 2 - 0.5, 200)
+--        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
+--        cover:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+--        button_friend:addChild(cover)
+--        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
+--        lock:setAnchorPoint(1,0)
+--        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
+--        button_friend:addChild(lock)
+--        icon_friend = cc.Sprite:create('image/homescene/home_page_friends_locked.png')
+--    end
+--    button_friend:setScale9Enabled(true)
+--    button_friend:setAnchorPoint(1,0.5)
+--    --button_friend:setPosition(bigWidth / 2 - 1, 200)
+--    button_friend:addTouchEventListener(button_right_clicked)
+--    backColor:addChild(button_friend)   
+--
+--    icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+--    button_friend:addChild(icon_friend)
+--
+--    self.button_friend = button_friend
+--
+--    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
+--        function (api, result)
+--            print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+--            s_CURRENT_USER:getFriendsInfo()
+--            print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+--
+--            if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+--                local redHint = cc.Sprite:create('image/friend/fri_infor.png')
+--                redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+--                button_friend:addChild(redHint)
+--               
+--                local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+--                num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+--                redHint:addChild(num)
+--            end
+--        end,
+--        function (api, code, message, description)
+--        end
+--    )
+--
+--end
 
 function HomeLayer:showDataLayer(checkIn)
     self.dataButton:setLocalZOrder(2)

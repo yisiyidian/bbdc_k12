@@ -375,7 +375,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
 
                 if number == Review_From_Word_Bank then
                 	local SuccessLayer = require("view.newreviewboss.SuccessLayer")
-                	local successLayer = SuccessLayer.create()
+                    local successLayer = SuccessLayer.create(0)
                     s_SCENE:replaceGameLayer(successLayer)
                 else
                     s_CURRENT_USER:addBeans(3)

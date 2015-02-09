@@ -31,6 +31,9 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     if win then
+        if entrance == true then
+            s_CURRENT_USER:addBeans(3)
+        end
         layer:win1(entrance)  
         cc.SimpleAudioEngine:getInstance():pauseMusic()
 
@@ -240,7 +243,6 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
             if entrance == ENTRANCE_WORD_LIBRARY then
                 s_CorePlayManager.enterLevelLayer()
             else
-                s_CURRENT_USER:addBeans(3)
                 s_CorePlayManager.leaveSummaryModel(true)
                 if not hasCheckedIn then
                     s_SCENE:checkInAnimation()
