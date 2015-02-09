@@ -128,13 +128,6 @@ function Manager.addGraspWordsNum(addNum)
     -- s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
-function Manager.addTodayGetReward()
-    return localdatabase_dailyStudyInfo.addTodayGetReward()
-end
-
-function Manager.getTodayGetReward()
-    return localdatabase_dailyStudyInfo.getTodayGetReward()
-end
 
 function Manager.getStudyDayNum()
     return localdatabase_dailyStudyInfo.getStudyDayNum()

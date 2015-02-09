@@ -156,7 +156,13 @@ function LoginRewardPopup:ctor()
         end
      end
 
-    local todayMark = s_LocalDatabaseManager.getTodayGetReward()
+    local lastTime = s_CURRENT_USER.getDailyRewardTime
+    local todayMark = 0
+    if math.floor((currentTime - s_CURRENT_USER.getDailyRewardTime) / ( 24 * 60 * 60 )) >= 1 then
+       todayMark = 0
+    else
+       todayMark = 1
+    end
     for i = 1,#currentData do
         local sprite = backPopup:getChildByName("reward"..i)
         local mark = cc.Sprite:create("image/loginreward/mark.png")
@@ -181,12 +187,13 @@ function LoginRewardPopup:ctor()
 
     local sprite = backPopup:getChildByName("reward"..(today + 1))
     local onTouchEnded = function(touch, event)
-        if todayMark == nil or tonumber(todayMark) == 0 then
+        if todayMark == 0 then
             local location = backPopup:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint(sprite:getBoundingBox(), location)  then
                 s_CURRENT_USER:addBeans(rewardList[#currentData].reward)  
-                s_LocalDatabaseManager.addTodayGetReward()   
-                sprite:setVisible(true)       
+                saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
+                sprite:setVisible(true) 
+                s_CURRENT_USER.getDailyRewardTime = currentTime    
             end
         end
     end
