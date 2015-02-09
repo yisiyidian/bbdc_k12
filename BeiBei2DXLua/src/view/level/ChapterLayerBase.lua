@@ -238,7 +238,8 @@ function ChapterLayerBase:addPopup(levelIndex)
             local state = info[2] + 0
             local active = info[3] + 0
             local currentTaskID = info[4] + 1
-            print('#####sendr:name:'..sender:getName())
+--            print('#####sendr:name:'..sender:getName())
+            local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
             s_SCENE:removeAllPopups()
 --            print('######## state'..state..',active'..active)
             if state >= 4 and bossID ~= currentTaskID then
@@ -260,6 +261,22 @@ function ChapterLayerBase:addPopup(levelIndex)
                     local action2 = cc.FadeOut:create(1.5)
                     text:runAction(action2)
  
+            elseif currentTaskID ~= 0 and bossID == currentProgress + 1 then
+            	local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+                    tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
+                    self:addChild(tutorial_text,520)
+                    print(tutorial_text:getPosition())
+                    local text = cc.Label:createWithSystemFont('完成复习任务再能继续学习','',28)
+                    text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+                    text:setColor(cc.c3b(0,0,0))
+
+                    tutorial_text:addChild(text)
+                    local action1 = cc.FadeOut:create(1.5)
+                    local action1_1 = cc.MoveBy:create(1.5, cc.p(0, 100))
+                    local action1_2 = cc.Spawn:create(action1,action1_1)
+                    tutorial_text:runAction(action1_2)
+                    local action2 = cc.FadeOut:create(1.5)
+                    text:runAction(action2)
             else
                 s_CorePlayManager.initTotalPlay()
             end

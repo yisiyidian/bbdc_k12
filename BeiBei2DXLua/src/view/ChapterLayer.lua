@@ -62,8 +62,9 @@ function ChapterLayer:ctor()
     self:plotDecoration()
     -- scroll to current chapter level
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    self:scrollLevelLayer(progress,0)
+--    self:scrollLevelLayer(progress,0)
     self:addBottomBounce()
+    self:addNotification()
     -- check unlock level
     self:checkUnlockLevel()
     self:addBackToHome()
@@ -128,7 +129,6 @@ function ChapterLayer:checkUnlockLevel()
         -- add notification
 --        self:addPlayerNotification(true) 
     end
-    self:addNotification()
 end
 
 function ChapterLayer:addNotification()
@@ -161,7 +161,10 @@ function ChapterLayer:addNotification()
     end
     
     if taskIndex == -2 then
+        self:scrollLevelLayer(progress,0)
         return
+    else
+        self:scrollLevelLayer(taskIndex,0)
     end
     
     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
