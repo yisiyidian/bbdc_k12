@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comatose"]={"comatose","['kəʊmətəʊs; -z]","['komətos]","adj.昏睡的",'adj.昏睡的,昏睡状态的','The right side of my brain had been so severely bruised that I was comatose for a month.','由于右脑遭受重创，我昏迷了一个月。','Grandpa lies comatose on the sofa.','爷爷躺在沙发上，睡得很沉。'}

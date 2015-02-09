@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["formidable"]={"formidable","['fɔːmɪdəb(ə)l; fɔː'mɪd-]","['fɔrmɪdəbl]","adj.强大的",'adj.强大的,可怕的,难对付的','He was one of the most formidable intellects of his time.','他是该时代的盖世奇才。','His mother is a most formidable lady.','他的母亲令人望而生畏。'}

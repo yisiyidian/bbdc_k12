@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impersonate"]={"impersonate","[ɪm'pɜːs(ə)neɪt]","[ɪm'pɝsənet]","v.模仿",'v.模仿,扮演,假冒','He can impersonate many well-known politicians.','他能饰演许多著名政治家的角色.','He was caught trying to impersonate a military officer.','他企图冒充军官,但当场被抓获.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flick"]={"flick","[flɪk]","[flɪk]","n.快速的轻打",'n.快速的轻打,轻打声,轻溅|||vt.轻弹,轻打,忽然摇动,按开开关|||vi.轻击,快速翻阅','He turned the pancake over with a strong flick of his wrist.','他一抖腕子就把饼翻过来了。','I flicked the dust off my coat.','我把灰从衣服上弹掉。'}

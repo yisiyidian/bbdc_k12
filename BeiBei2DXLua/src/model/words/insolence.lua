@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insolence"]={"insolence","['ɪns(ə)l(ə)ns; 'ɪnsəl(ə)ns; 'ɪnsələns]","[ 'insələns ]","n.傲慢",'n.傲慢,无礼','I could not endure the insolence of his behaviour.','我不能再忍受他那傲慢无礼的行为了。','||Insolence|| is the defense of the weak.','傲慢是软弱的护身符。'}

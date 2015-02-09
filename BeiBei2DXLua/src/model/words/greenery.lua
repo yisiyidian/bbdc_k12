@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["greenery"]={"greenery","['griːn(ə)rɪ]","['ɡrinəri]","n.绿色植物",'n.绿树,绿色植物，暖房','The spires of churches are to be seen pricking up through the greenery.','透过葱翠的树林可以看见那耸立着的教堂的塔尖。','The hall looks more festive with all that greenery in pot.','花盆里的绿叶使大厅显得节日气氛更浓。'}

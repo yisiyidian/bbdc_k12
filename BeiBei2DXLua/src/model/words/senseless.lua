@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["senseless"]={"senseless","['senslɪs]","['sɛnsləs]","adj.无感觉的",'adj.无感觉的,无意识的,不省人事的','The fall knocked me senseless.','那一跤　得我失去了知觉.','That\'s quite senseless.','这非常不合情理。'}

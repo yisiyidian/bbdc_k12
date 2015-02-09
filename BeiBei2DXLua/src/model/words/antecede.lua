@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antecede"]={"antecede","[,æntɪ'siːd]","[ ,ænti'si:d ]","vt.在...之前",'vt.在...之前，居...之先','Repentance must antecede death, or it will be of no avail.','悔改必须在死亡之前，否则一切都无济于事。','thinkers who anteceded the rise of capitalism','资本主义兴起前的思想家'}

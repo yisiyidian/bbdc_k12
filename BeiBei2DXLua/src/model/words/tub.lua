@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tub"]={"tub","[tʌb]","[tʌb]","n.桶",'n.桶,浴盆|||v.装入桶,洗澡','A tub for bathing, especially one installed in a bathroom.','浴缸澡盆，尤指固定设置在浴室内','The wooden tub is fitted with the iron hoop.','木盆都用铁箍箍紧.'}

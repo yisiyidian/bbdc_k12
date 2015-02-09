@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["synchronize"]={"synchronize","['sɪŋkrənaɪz]","[ 'siŋkrənaiz ]","v.使同时",'v.使同时,同时发生','The sound on a film must synchronize with the action.','影片中的声音必须与动作配合一致.','The wheels must synchronize as they revolve.','这些轮子须同速转动.'}

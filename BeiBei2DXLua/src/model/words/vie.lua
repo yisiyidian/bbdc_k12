@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vie"]={"vie","[vaɪ]","[vaɪ]","v.竞争",'v.竞争','Four rescue plans are ||vying|| to save the zoo.','4个拯救动物园的方案正争得不可开交。','In hospitals, business plans vie with patients for doctors\' attention.','在医院，经营方针和病人都是医生所要关心的。'}

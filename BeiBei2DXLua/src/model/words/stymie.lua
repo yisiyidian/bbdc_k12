@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stymie"]={"stymie","['staɪmɪ]","[ 'staimi ]","n.困难境地",'n.困难境地|||vt使...处于困难境地','His action without authorization has stymied the whole plan.','他擅自采取的行动已经妨碍了整个计划的实施。','Relief efforts have been stymied in recent weeks by armed gunmen.','最近几周的救援工作一直受到武装分子的阻挠。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neat"]={"neat","[niːt]","[nit]","adj.整洁的",'adj.整洁的,巧妙的,端正的,极好的,纯的|||adv.整齐地','Your new car is a neat little job, isn\'t it?','你这辆新汽车很精巧哇, 是吧?','The headmaster praised the boys for their neat turn-out.','校长表扬男同学服装整齐.'}

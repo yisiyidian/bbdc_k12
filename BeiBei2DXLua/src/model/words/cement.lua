@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cement"]={"cement","[sɪ'ment]","[sə'mɛnt]","n.水泥",'n.水泥,纽带,接合剂,牙骨质,补牙物,基石|||vt.接合,用水泥涂|||vi.接合起来','The sack of cement hit the ground with a thump.','水泥袋砰的一声落在地上.','Don\'t walk on the wet cement.','水泥未乾时不要在上面行走。'}

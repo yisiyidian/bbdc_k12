@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waddle"]={"waddle","['wɒd(ə)l]","['wɑdl]","vi.蹒跚而行",'vi.蹒跚而行','A short plump woman came ||waddling|| along the pavement.','有个矮胖女子一摇一摆地沿人行道走来.','the waddle of ducks','鸭子摇摆的走路姿势'}

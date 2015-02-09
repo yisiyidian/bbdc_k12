@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pulley"]={"pulley","['pʊlɪ]","['pʊli]","n.滑轮",'n.滑车,滑轮，皮带轮','The worker threaded the wire through the pulley.','工人把金属丝穿在滑轮上.','The weights are moved via a cable and pulley system.','重物通过缆绳和滑轮系统运送。'}

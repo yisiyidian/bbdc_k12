@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presage"]={"presage","['presɪdʒ]","['prɛsɪdʒ]","n.预感",'n.预感,预兆,预知|||v.成为...的前兆,预示,预言','The clouds presage a storm.','乌云预示着暴风雨的到来。','Peace may be the presage of the thunderstorm.','宁静也许是暴风雨来临的前兆。'}

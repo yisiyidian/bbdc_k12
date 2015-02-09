@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slipshod"]={"slipshod","['slɪpʃɒd]","['slɪpʃɑd]","adj.粗枝大叶的",'adj.粗枝大叶的(随便的,潦草的,不整洁的)','The hotel had always been run in a slipshod way.','该酒店的管理一向马虎。','he is always slipshod','他总是粗心大意的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wry"]={"wry","[raɪ]","[raɪ]","adj.扭歪的",'adj.扭歪的,歪曲的,歪斜的|||v.（使）扭曲','A wry smile spread over his face.','他的脸上现出一副苦笑。','There is a wry sense of humor in his work.','他的作品带有一种讽刺意味的幽默。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pendulous"]={"pendulous","['pendjʊləs]","['pɛndʒələs]","adj.下垂的",'adj.下垂的,摇摆的,摇摆不定的','The pendulous weeping willows are swaying in the breeze.','垂柳在微风中摇曳。','He wanted to hang a pendulous lamp on the ceiling.','他打算在天花板上挂个吊灯。'}

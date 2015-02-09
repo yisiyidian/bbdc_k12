@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annually"]={"annually","['ænjʊəlɪ; 'ænjʊlɪ]","['ænjuəli]","adv.每年",'adv.每年,年年|||n.每年','The society publish its list of member annually.','该协会每年出版其会员名单。','The tulip festival held annually in may','郁金香节每年5月举行'}

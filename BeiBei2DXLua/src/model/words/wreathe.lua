@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wreathe"]={"wreathe","[riːð]","[rið]","v.环绕",'v.环绕,盘绕,作成花圈','The local people used to wreathe the guest\'s head in leaves.','当地人过去常把树叶缠在宾客的头上。','Mist wreathed the hilltops.','山顶上薄雾环绕。'}

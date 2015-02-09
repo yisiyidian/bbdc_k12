@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fixture"]={"fixture","['fɪkstʃə; -tjə]","['fɪkstʃɚ]","n.固定装置或设备",'n.固定装置或设备,体育运动项目,固定在某位置的人或物','The price includes all fixtures and fittings.','这个价钱把全部固定装置和设备都打在里面了。','plumbing fixtures.','管道装置'}

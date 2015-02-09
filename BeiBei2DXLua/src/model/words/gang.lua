@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gang"]={"gang","[gæŋ]","[ɡæŋ]","n.队",'n.队,群,帮|||vt.&vi.结一组,联合在一起','He\'d been worked over by the gang for giving information to the police.','他向警方提供情报而遭那群歹徒毒打.','He was done over by a gang of thugs after a football match.','他在足球比赛结束以後受到一帮暴徒的殴打。'}

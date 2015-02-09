@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["education"]={"education","[edjʊ'keɪʃ(ə)n]","[,ɛdʒu'keʃən]","n.教育",'n.教育,培养','Our teacher expounded his views on education to me at great length.','我们的老师向我详细讲述了他的教育观点。','Many people believe that private education encourages elitism.','许多人认为私人办学可助长精英主义.'}

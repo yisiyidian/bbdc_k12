@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repeatedly"]={"repeatedly","[rɪ'piːtɪdlɪ]","[rɪ'pitɪdli]","adv.重复地",'adv.重复地,再三地','She was repeatedly snubbed by her neighbours.','她多次遭到邻居的冷遇.','He struck at me repeatedly with a stick.','他一再挥棍向我打来.'}

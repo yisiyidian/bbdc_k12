@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["firsthand"]={"firsthand","['fɜːst'hænd]","[ 'fə:st'hænd ]","adj.直接的",'adj.直接的，第一手的|||adv.直接地，第一手','I learned the news about her mother\'s illness firsthand from Lena.','我直接从丽娜那里了解到她母亲生病的消息。','firsthand information.','第一手资料'}

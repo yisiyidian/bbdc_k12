@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["asymmetric"]={"asymmetric","[,æsɪ'metrɪk]","[,esɪ'mɛtrɪk]","adj.不对称的",'adj.不对称的','Most people\'s faces are asymmetric.','大多数人的脸不对称。','Flowers bisexual, asymmetric, mostly large.','花两性，不对称，通常较大。'}

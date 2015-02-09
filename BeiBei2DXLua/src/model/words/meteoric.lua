@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meteoric"]={"meteoric","[,miːtɪ'ɒrɪk]","[,mitɪ'ɔrɪk]","adj.流星的",'adj.流星的,昙花一现的，大气的','His early career had been meteoric.','他的早期生涯平步青云。','Love is always meteoric.','爱情总是昙花一现的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cradle"]={"cradle","['kreɪd(ə)l]","['kredl]","n.摇篮",'n.摇篮,发祥地,摇篮时代|||v.放在摇篮内,抚育,刈割','the cradle of civilization.','文明的发源地','The sea is thought to have been the cradle of life.','人们认为海洋曾经是生命的发源地。'}

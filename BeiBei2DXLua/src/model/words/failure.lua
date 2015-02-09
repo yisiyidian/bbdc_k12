@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["failure"]={"failure","['feɪljə]","['feljɚ]","n.失败",'n.失败,失败的人或事','The play was a dead failure.','这场戏完全失败了。','Production in the factories stopped because of frequent power failures.','频繁的停电使工厂停产。'}

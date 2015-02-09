@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adulation"]={"adulation","[ædjʊ'leɪʃ(ə)n]","[,ædʒə'leʃən]","n.奉承",'n.奉承,谄媚','The book was received with adulation by the public.','这本书受到公众的吹捧。','The teenager\'s adulation of the top group worried her parents.','十几岁的女儿吹捧流行歌星使父母很忧虑。'}

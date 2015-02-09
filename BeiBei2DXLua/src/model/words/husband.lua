@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["husband"]={"husband","['hʌzbənd]","['hʌzbənd]","n.丈夫",'n.丈夫|||vt.节俭','A good husband makes a good wife.','【谚】夫善则妻贤。','She is an interesting person but her husband is a real nothing.','她是个很有趣的人，但是她的先生却一无是处。'}

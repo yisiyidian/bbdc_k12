@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["usually"]={"usually","['juʒuəli]","['juʒuəli]","adv.通常",'adv.通常','I usually wake up early.','我通常醒得很早。','Married people usually have a different view of life from single people.','已婚的人与单身的人通常有不同的人生观.'}

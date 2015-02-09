@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enfranchise"]={"enfranchise","[ɪn'fræn(t)ʃaɪz; en-]","[ɪn'fræntʃaɪz]","vt.给与自治权",'vt.给与自治权,给与选举权,解放','In Britain women were enfranchised in 1918.','1918年英国妇女获得议会选举权。','The company voted to enfranchise its 120 women members.','公司投票决定给予其120名女职员选举权。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inhibit"]={"inhibit","[ɪn'hɪbɪt]","[ɪn'hɪbɪt]","vt.&vi.禁止",'vt.&vi.禁止,抑制|||[计算机]禁止','Shyness inhibited him from speaking.','他因害羞而说不出话来。','The high cost of borrowing is inhibiting investment by industry in new equipment.','借款的高成本抑制了企业对新设备的投资。'}

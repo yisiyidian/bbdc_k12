@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flashlight"]={"flashlight","['flæʃlaɪt]","['flæʃlaɪt]","n.手电筒",'n.手电筒，闪光灯','I saw the sudden flare of a flashlight in the darkness.','我看到手电筒在黑暗中突然闪出的亮光','By folding it up to make it a flashing alarm flashlight.','折叠使用，即是一台闪光报警求助电筒。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["linen"]={"linen","['lɪnɪn]","['lɪnɪn]","n.亚麻布",'n.亚麻布,亚麻线,亚麻制品|||adj.亚麻布制的,亚麻的','Wash your dirty linen at home.','【谚】家丑不可外扬。','||Linen|| is produced from flax.','亚麻布是以亚麻纤维为原料制造的.'}

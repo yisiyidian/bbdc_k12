@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["control"]={"control","[kən'trəʊl]","[kən'trol]","n.控制",'n.克制,控制,管制,操作装置|||vt.控制,掌管,支配','Our papers are checked as we go through passport control at the airport.','我们通过机场查验护照的关卡时，查验了我们的证件。','Inflation has got out of control.','通货膨胀失去了控制。'}

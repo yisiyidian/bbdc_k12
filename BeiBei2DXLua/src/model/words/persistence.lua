@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["persistence"]={"persistence","[pə'sɪst(ə)ns]","[pɚ'sɪstəns]","n.坚持",'n.坚持(余辉,时间常数)','Although he\'s less talented, he won by sheer dogged persistence.','他虽天赋不高，但全凭坚韧的毅力赢得了胜利。','You may not like him, but you have got to admire his persistence.','你可以不喜欢他，但你不得不佩服他那种坚韧不拔的精神。'}

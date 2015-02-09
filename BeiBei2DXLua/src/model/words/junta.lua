@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["junta"]={"junta","['dʒʌntə; 'hʊ-]","['hʊntə]","n.派别",'n.派别,团体','The question is: will the junta consolidate its power by force?','问题是：军政府会通过武力巩固其政权吗？','The junta reacted violently to the perceived threat to its authority.','军政府感到自身权力受威胁而进行了激烈反击。'}

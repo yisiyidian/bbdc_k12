@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["falsehood"]={"falsehood","['fɔːlshʊd; 'fɒls-]","['fɔlshʊd]","n.谎言",'n.谎言,虚假','||Falsehood|| can in no way be turned into truth by repetition.','假话不管怎样重复, 也不可能变为真话。','A falsehood; a lie.','假话; 谎言'}

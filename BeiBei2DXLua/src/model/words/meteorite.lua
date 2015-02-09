@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meteorite"]={"meteorite","['miːtɪəraɪt]","['mitɪəraɪt]","n.陨石",'n.陨石,陨星','||Meteorite|| is a part of stars which fall off from the galaxy','陨石是星系中星球坠落的一部分','The house has been crushed by the meteorite.','这所房子被陨石砸坏了。'}

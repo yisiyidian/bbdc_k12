@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reservation"]={"reservation","[rezə'veɪʃ(ə)n]","[,rɛzɚ'veʃən]","n.预定",'n.预定，保留意见','The hotel provides a reservation of tickets for its residents.','这家旅馆为旅客提供订票服务。','I\'d like to make a reservation.','我想订票。'}

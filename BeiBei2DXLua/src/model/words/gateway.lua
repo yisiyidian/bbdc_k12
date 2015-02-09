@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gateway"]={"gateway","['geɪtweɪ]","['ɡetwe]","n.门",'n.门,通路|||[计算机]网间连接器','A good education can be the gateway to success.','良好的教育是通往成功之路。','Hard work is the gateway to success.','辛勤工作是通往成功之路。'}

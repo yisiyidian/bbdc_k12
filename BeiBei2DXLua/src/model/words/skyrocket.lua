@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skyrocket"]={"skyrocket","['skaɪrɒkɪt]","['skaɪ'rɑkɪt]","n.烟火(高空探测火箭)",'n.烟火(高空探测火箭)|||vt使...上升','Wheat prices skyrocketed.','小麦价格猛涨。','Discovery of oil here has skyrocketed land values.','在这里发现了石油使土地价值大幅度上升'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["microcomputer"]={"microcomputer","['maɪkrə(ʊ)kɒm,pjuːtə]","['maɪkrokəm'pjʊtɚ]","n.微电脑",'n.微电脑|||[计算机]微机计算机','The typical secondary storage medium of a microcomputer is the floppy and hard disks.','微型计算机的典型的辅助存储介质是软盘和硬盘。','I have a microcomputer.','我有一台微电脑.'}

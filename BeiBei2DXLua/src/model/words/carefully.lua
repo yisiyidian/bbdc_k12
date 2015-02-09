@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carefully"]={"carefully","['keəfəlɪ]","['kɛrfəli]","adv.小心地",'adv.小心地,仔细地','He wrote just as carefully as Tom.','他就像汤姆一样小心地写。','As long as you drive carefully, you will be very safe.','如果你开车小心，你就会很安全。'}

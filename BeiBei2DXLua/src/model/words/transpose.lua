@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transpose"]={"transpose","[træns'pəʊz; trɑːns-; -nz-]","[træn'spoz]","v.调换",'v.调换,颠倒顺序,移项','transpose the words of a sentence.','把句子中的词序调换一下','The director transposes the action from sixteenth-century France to post-Civil War America.','导演把情节从16世纪的法国转换到内战后的美国。'}

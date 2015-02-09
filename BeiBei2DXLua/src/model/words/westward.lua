@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["westward"]={"westward","['westwəd]","['wɛstwɚdz]","adv.向西",'n.西方,西部|||adj.西方的,向西的|||adv.向西','As you travel westward, does the land get higher or lower?','当你向西旅行时，地势是否变得越来越高还是越来越低？','They went westward.','他们向西走了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coaster"]={"coaster","['kəʊstə]","['kostɚ]","n.沿近海航行",'n.沿近海航行(惯性运转装置,飞轮超越)|||杯垫，小托盘','My greatest thrill is going on the roller coaster.','我觉得最刺激的事就是坐过山车。','dirty British coaster with a salt-caked smokestack','“肮脏的英国沿海航船，有盐饼状的大烟囱”'}

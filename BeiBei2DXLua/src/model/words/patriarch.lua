@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["patriarch"]={"patriarch","['peɪtrɪɑːk]","['petrɪɑrk]","n.创办人",'n.创办人,家长,元老，主教','The ||Patriarch|| or Pope of Rome claimed to be the head of the entire Christian church.','罗马教皇声称是整个基督教会的头儿。','The patriarch paid him a handsome price.','族长给了他一个很高的价格。'}

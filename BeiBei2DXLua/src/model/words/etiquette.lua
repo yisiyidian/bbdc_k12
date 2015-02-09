@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["etiquette"]={"etiquette","['etɪket; etɪ'ket]","['ɛtɪkɛt]","n.礼仪",'n.礼仪,礼节,成规','Let us avoid the etiquette.','让我们免除礼节。','You have to follow the social etiquette if you want others\' respect.','想要获得别人的尊重你得遵守社会（礼仪，礼节，成规）。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thirty"]={"thirty","['θɜːtɪ]","['θɝti]","num.三十",'num.三十','I get up at six thirty every morning.','我每天早上六点半起床。','There are more than thirty footmen in this hotel.','这家旅馆里有三十多名仆役。'}

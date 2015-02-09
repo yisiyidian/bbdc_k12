@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exacting"]={"exacting","[ɪg'zæktɪŋ; eg-]","[ iɡ'zæktiŋ ]","adj.苛求的",'adj.苛求的,吃力的|||动词exact的现在分词形式','If the government goes on exacting so much from the taxpayer, it will not last long.','如果该政府继续征这么多税的话，它将不会持续多久。','Only exacting problems are interesting to me.','越是难度大的工作越能激起我的工作热情。'}

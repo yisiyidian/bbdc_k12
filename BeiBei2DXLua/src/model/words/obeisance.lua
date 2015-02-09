@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obeisance"]={"obeisance","[ə(ʊ)'beɪs(ə)ns]","[o'bisns]","n.鞠躬",'n.鞠躬,敬礼','He made a deep obeisance to the queen.','他向女王深深鞠了一躬。','While he was still young and strong all paid obeisance to him.','他年轻力壮时，人人都尊敬他。'}

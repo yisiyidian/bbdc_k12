@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solar"]={"solar","['səʊlə]","['solɚ]","adj.太阳的",'adj.太阳的,太阳能的','||Solar|| energy is a new kind of source of energy.','太阳能是一种新型能源。','The planets of our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.','我们太阳系的行星有水星、金星、地球、火星、木星、土星、天王星、海王星。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obsolescent"]={"obsolescent","[,ɒbsə'les(ə)nt]","[,ɑbsə'lɛsnt]","adj.荒废的",'adj.荒废的','...outmoded, obsolescent equipment.','...陈旧过时的设备。','Electronic equipment quickly becomes obsolescent.','电子设备淘汰得很快.'}

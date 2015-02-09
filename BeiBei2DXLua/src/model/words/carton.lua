@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carton"]={"carton","['kɑːt(ə)n]","['kɑrtn]","n.硬纸盒",'n.硬纸盒,纸板箱|||vt.把...装入纸板箱|||vi.用硬纸板片做纸板箱','The kid drink up a whole big carton of juice after play in the hot sun.','孩子们在烈日下玩耍後，把一整大盒的果汁喝个精光。','He give the foreman a carton of cigarette as a sop.','他给工头一条香烟以表心意。'}

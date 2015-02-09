@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repent"]={"repent","[rɪ'pent]","[rɪ'pɛnt]","v.后悔",'v.后悔,悔悟','He is kind and gracious to all sinners who repent.','他对忏悔的罪人一概慈悲为怀。','Bitterly did we repent our decision.','我们非常后悔做此决定。'}

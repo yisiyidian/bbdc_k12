@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diurnal"]={"diurnal","[daɪ'ɜːn(ə)l]","[daɪ'ɝnl]","adj.每日的",'adj.每日的,一日间的,白天的','Unlike most other bats, this species is diurnal.','这种蝙蝠与大多数蝙蝠不同，是在日间活动的。','Kangaroos are diurnal animals.','袋鼠是日间活动的动物。'}

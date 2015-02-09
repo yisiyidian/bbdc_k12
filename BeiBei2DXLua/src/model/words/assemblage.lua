@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assemblage"]={"assemblage","[ə'semblɪdʒ]","[ə'sɛmblɪdʒ]","n.集合",'n.集合，装配,装配艺术品','The motion was put to the assemblage.','这项提议已提交大会了。','A faunal assemblage','动物群落'}

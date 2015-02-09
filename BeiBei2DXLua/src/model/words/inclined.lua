@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inclined"]={"inclined","[ɪn'klaɪnd]","[ɪn'klaɪnd]","adj.倾向于...的",'adj.倾向于...的','I\'m inclined to believe him innocent.','我倾向于相信他是无辜的。','Louise is very musically inclined.','路易丝很有音乐天赋。'}

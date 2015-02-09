@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["king"]={"king","[kɪŋ]","[kɪŋ]","n.国王",'n.国王','The lion is called the king of beasts.','狮子号称百兽之王。','The soldier was cited by the king for his bravery.','这士兵由于英勇而受到国王的褒扬。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tableland"]={"tableland","['teɪb(ə)llænd]","['tebllænd]","n.高原",'n.高原(台地,海台)','They have been herding cattle on the tableland for generations.','他们世世代代在这高原上放牧。','We are standing on the tableland.','我们正站在高原上。'}

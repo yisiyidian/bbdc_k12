@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["modicum"]={"modicum","['mɒdɪkəm]","['mɑdɪkəm]","n.少量",'n.少量，一小份','If he had a modicum of sense, he wouldn\'t do such a foolish thing.','要是他稍有一点理智，也决不会做出如此愚蠢的事来。','He hasn\'t even a modicum of sincerity.','他毫无诚意。'}

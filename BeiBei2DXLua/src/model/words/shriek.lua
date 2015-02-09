@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shriek"]={"shriek","[ʃriːk]","[ʃrik]","n.尖叫",'n.尖叫,叫喊|||v.尖叫','Suddenly he began to shriek loudly.','突然他开始大声尖叫起来。','She shrieked in alarm.','她惊恐地尖叫起来。'}

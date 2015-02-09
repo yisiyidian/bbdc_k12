@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dieter"]={"dieter","['daɪətə]","['daɪətɚ]","n.节食者",'n.节食者','As a dieter,she is slim.','作为一名节食者，她很瘦。','I have been a dieter for 6months since i decide to lose weight','我从下决心减肥开始就是一个节食者了'}

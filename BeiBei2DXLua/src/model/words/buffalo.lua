@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["buffalo"]={"buffalo","['bʌfələʊ]","['bʌfəlo]","n.水牛",'n.水牛，野牛，水路坦克|||vt.威吓，哄骗','He tried to buffalo me at first meeting but I soon caught on to his tricks.','初次见面时他企图欺骗我，但是我很快就明白了他耍的花招。','There were lots of buffaloes in the North America 100 years ago.','100年前，北美有大量的野牛。'}

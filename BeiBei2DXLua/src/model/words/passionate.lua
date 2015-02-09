@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["passionate"]={"passionate","['pæʃ(ə)nət]","['pæʃənət]","adj.热情的",'adj.热情的,易怒的,激情的','His early experience turn him into a passionate social reformer.','他早年的经历使他变成了一个狂热的社会改革者。','The novelist characterizes his heroine as capricious and passionate.','这位小说家把女主人公刻画成反覆无常而又多情的人.'}

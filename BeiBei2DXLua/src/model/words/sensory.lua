@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sensory"]={"sensory","['sens(ə)rɪ]","['sɛnsəri]","adj.感觉的",'adj.知觉的,感觉的,知觉器官的','The value of the exponent varies for different sensory modalities.','指数值随不同的灵敏速模式而变化.','The sensory system may undergo long-term adaptation in alien environments.','感觉系统对陌生的环境可能经过长时期才能适应。'}

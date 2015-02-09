@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["negotiable"]={"negotiable","[nɪ'gəʊʃəb(ə)l; -ʃɪə-]","[nɪ'ɡoʃɪəbl]","adj.可磋商的",'adj.可磋商的,可转让的,可通行的','He says his claim is not negotiable.','他说他的要求是不容讨价还价的。','The road is only negotiable in the dry season.','这条道只有在旱季才能通行。'}

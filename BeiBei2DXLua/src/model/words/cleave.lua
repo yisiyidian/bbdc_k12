@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cleave"]={"cleave","[kliːv]","[kliv]","vt.劈开",'vt.劈开,使分开，穿过|||vi.劈开，分开，粘住，依恋','He cleaved an apple with a knife.','他用一把刀子将苹果切开。','They cleaved a path through the wilderness.','他们在荒原中开辟出一条路。'}

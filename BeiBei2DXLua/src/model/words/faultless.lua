@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["faultless"]={"faultless","['fɔːltlɪs; 'fɒlt-]","['fɔltləs]","adj.完美的",'adj.完美的,无缺点的','Lifeless, faultless.','只有死人才不会犯错误。','Our seller faultless cannot dispute will recommend you regard matter closed','卖方没有错，此事不必争论，建议贵公司早日平息此事。'}

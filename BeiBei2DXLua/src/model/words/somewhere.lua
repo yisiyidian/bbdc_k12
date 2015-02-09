@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["somewhere"]={"somewhere","['sʌmweə]","['sʌmwɛr]","adv.在某处",'adv.在某处，到某种程度，大约，差不多','A musical bell softly sounded somewhere in the passageway.','走廊的某处响起轻柔悦耳的铃声。','It was dawn, and I could hear a cock crowing somewhere.','天亮了，我听到从某处传来雄鸡的啼叫声。'}

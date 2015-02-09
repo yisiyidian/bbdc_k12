@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disparage"]={"disparage","[dɪ'spærɪdʒ]","[dɪ'spærɪdʒ]","vt.贬损",'vt.蔑视,贬损','The woman always disparages my achievements.','那个女人常贬低我的成就。','I disparage his work.','我看不上他的作品。'}

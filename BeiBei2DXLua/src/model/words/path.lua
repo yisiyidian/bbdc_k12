@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["path"]={"path","[pɑːθ]","[pæθ]","n.小路",'n.小路，路；路线，路程；〈比喻〉（人生的）道路；（思想，行为，生活的）途径','We bumped up and down along the gravel path.','我们沿砾石小路颠簸而行。','They went out for a walk on the gravelled path.','他们在碎石小径上散步。'}

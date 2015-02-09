@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mechanism"]={"mechanism","['mek(ə)nɪz(ə)m]","['mɛkənɪzəm]","n.机制",'n.机制,原理，机械,机构,结构','You operate the mechanism by winding this handle.','操纵这台机器要转动这个把手.','The mechanism that revolves the turntable is broken.','带动转盘旋转的机械装置坏了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bewilder"]={"bewilder","[bɪ'wɪldə]","[bɪ'wɪldɚ]","vt.使迷惑",'vt.使迷惑，使...不知所措','You bewildered me.','你把我搞糊涂了。','Big city traffic bewilders me.','大城市的交通使我晕头转向。'}

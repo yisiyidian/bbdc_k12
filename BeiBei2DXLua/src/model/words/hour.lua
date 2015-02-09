@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hour"]={"hour","['aʊə]","['aʊɚ]","n.小时",'n.小时,钟点','The London bus departs every hour on the hour.','伦敦的公共汽车每小时零分开出一趟。','It took him half an hour to finish the work.','他花了半个小时做完这项工作。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["professor"]={"professor","[prə'fesə]","[prə'fɛsɚ]","n.教授",'n.宣称者,教授','The professor invited his students to his home for conversation.','教授邀请学生们到自己家里会晤。','||Professor|| Green, lately of Princeton, is now head of the department at California.','格林教授不久前在普林斯顿任教，现在是加州大学的系主任。'}

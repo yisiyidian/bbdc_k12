@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["music"]={"music","['mjuːzɪk]","['mjuzɪk]","n.音乐",'n.音乐,伴奏,美妙的声音','Rock music blasted full from the parlor.','摇滚乐声震屋宇，从客厅传来。','Listening to the music has a calming influence on her.','听音乐对她起了一种镇静的作用。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expeditious"]={"expeditious","[,ekspɪ'dɪʃəs]","[,ɛkspə'dɪʃəs]","adj.迅速的",'adj.迅速的,敏捷的','Sent the package by the most expeditious means.','以最快速有效的方式送包裹','The judge said that arbitration was a fair and expeditious decision-making process.','法官说仲裁是一个公正且迅速有效率的决定过程。'}

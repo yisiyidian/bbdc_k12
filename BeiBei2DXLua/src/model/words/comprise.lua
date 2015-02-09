@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comprise"]={"comprise","[kəm'praɪz]","[kəm'praɪz]","vt.包含",'vt.包含,构成','A cricket team is comprised of eleven players.','一个板球队由11名队员组成。','This month\'s figures are comprised in the total.','这个月的数字已包含在总数之内。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["farm"]={"farm","[fɑːm]","[fɑrm]","n.农场",'n.农场,农田|||vt.务农|||vi.务农','Increasingly, farm land is yielding to property development.','地产的发展逐渐占据了农田.','My friend is farming in Wales.','我的朋友在威尔士的农场种地。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["degree"]={"degree","[dɪ'griː]","[dɪ'ɡri]","n.度数",'n.学位，程度,度数','She has also been affected, but to a lesser degree.','她也受到波及，但程度较轻。','They cannot be trusted in the slightest degree.','对他们一点也不能相信。'}

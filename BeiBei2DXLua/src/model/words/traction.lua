@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["traction"]={"traction","['trækʃ(ə)n]","['trækʃən]","n.拖",'n.拖，拽，牵引,牵引力，附着磨擦力','We may continue the traction up to three weeks, until the fracture is healed.','我们可以继续牵引三周, 直到骨折痊愈为止.','Isabelle\'s legs were in traction for about two and a half weeks.','伊莎贝尔的腿做了两周半的牵引治疗。'}

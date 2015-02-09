@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["airmail"]={"airmail","['eəmeɪl]","['ɛrmel]","n.航空邮件",'n.航空邮件，航空邮政|||vt.航空邮寄','How much is the postage for an airmail letter to Canada?','寄往加拿大的航空信要多少邮费？','I use email instead of airmail now.','现在我用电子邮件代替航空信。'}

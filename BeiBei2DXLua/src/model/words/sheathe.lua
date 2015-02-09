@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sheathe"]={"sheathe","[ʃiːð]","[ʃið]","vt.包",'vt.包,插入鞘,覆|||=sheath','He sheathed the knife and strapped it to his shin.','他将刀插入鞘中，绑在小腿上。','The television was sheathed in a snug coverlet.','电视机用一个床罩严严实实地盖住了。'}

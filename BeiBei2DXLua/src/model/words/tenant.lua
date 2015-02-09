@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tenant"]={"tenant","['tenənt]","['tɛnənt]","n.房客",'n.房客,佃户|||vt.居住','A clause in the agreement provides that the tenant shall pay for repairs to the building.','协议中有一条规定, 承租人负担建筑物的修理费.','Her tenant left, bag and baggage, without paying the rent.','她的房客未付房租就带著全部财物离去了.'}

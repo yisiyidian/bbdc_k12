@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chide"]={"chide","[tʃaɪd]","[tʃaɪd]","vi.斥责",'vi.斥责,指责|||vt.(温和地）责备','She chided him for his laziness.','她责备他懒惰。','He chided his son for being clumsy.','他斥责儿子笨手笨脚。'}

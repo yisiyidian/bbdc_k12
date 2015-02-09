@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hundred"]={"hundred","['hʌndrəd]","['hʌndrəd]","n.百",'n.百,百个东西|||adj.百,百个','Five hundred jobs were axed as a result of government spending cuts.','由于政府缩减经费的缘故，有五百人被突然解雇了。','There are more than five hundred people on the playground.','运动场上有五百多人。'}

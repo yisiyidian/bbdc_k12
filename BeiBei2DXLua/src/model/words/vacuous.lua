@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vacuous"]={"vacuous","['vækjʊəs]","['vækjuəs]","adj.空的",'adj.空的,发呆的,心灵空虚的','Male models are not always so vacuous as they are made out to be.','男模特儿并不总像人们说的那样愚蠢。','His eyes looked dull, almost vacuous.','他看上去目光呆滞，茫然若失。'}

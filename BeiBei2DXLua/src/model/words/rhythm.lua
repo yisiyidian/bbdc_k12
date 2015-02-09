@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rhythm"]={"rhythm","['rɪð(ə)m]","['rɪðəm]","n.节奏",'n.节奏,韵律','The song has a syncopated rhythm in the jazz version.','这首歌曲改编为爵士乐後采用了切分音节奏.','Stress and rhythm are important in speaking English.','说英语时, 重音和节奏是很重要的.'}

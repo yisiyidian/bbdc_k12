@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lunch"]={"lunch","[lʌn(t)ʃ]","[lʌntʃ]","n.午餐",'n.午餐|||vi.吃午餐|||vt.请客吃午餐','Have you had your lunch?','吃过午饭了吗？','He made a habit of taking a nap after lunch.','他养成了午饭后小睡的习惯.'}

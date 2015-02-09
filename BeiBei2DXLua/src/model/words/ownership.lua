@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ownership"]={"ownership","['əʊnəʃɪp]","['onɚʃɪp]","n.所有权",'n.所有权','The family possessed documents that proved their right to ownership.','这家人持有可以证明他们享有所有权的文件.','Socialist policy favours public ownership of the coal industry.','社会主义的政策有利於在煤炭工业中推行公有制.'}

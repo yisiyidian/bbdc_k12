@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["headline"]={"headline","['hedlaɪn]","['hɛdlaɪn]","n.大字标题",'n.(pl.)新闻提要,大字标题','A newspaper headline caught his attention.','报纸的大标题引起他的注意.','A headline on the front page draws attention to the fuller story inside.','扉页上的大字标题为的是吸引你注意里面的详细内容。'}

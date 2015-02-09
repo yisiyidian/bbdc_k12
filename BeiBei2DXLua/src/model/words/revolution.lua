@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revolution"]={"revolution","[revə'luːʃ(ə)n]","['rɛvə'lʊʃən]","n.革命",'n.革命,旋转,转数','The industrial revolution had taken place in England first.','工业革命首先在英国发生。','Have you read the article on information revolution?','你读了有关信息革命的那篇文章没有？'}

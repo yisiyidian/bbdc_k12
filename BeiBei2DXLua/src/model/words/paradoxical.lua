@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paradoxical"]={"paradoxical","[,pærə'dɒksɪk(ə)l]","[,pærə'dɑksɪkl]","adj.矛盾的",'adj.矛盾的；诡论的；似非而是的','A concise, clever, often paradoxical statement.','隽语一个简明, 机智, 常常似是而非的陈述','Some sedatives produce the paradoxical effect of making the person more anxious.','一些镇静剂产生出使人更紧张这样自相矛盾的结果。'}

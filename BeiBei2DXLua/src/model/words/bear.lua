@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bear"]={"bear","[beə]","[bɛr]","n.熊",'n.熊|||v.忍受,负荷|||v.结果实,生子女','He\'s bearing up well against all his misfortunes.','他以坚强的意志对待他所有的不幸。','She bears little resemblance to her mother.','她不象她母亲。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["facile"]={"facile","['fæsaɪl; -sɪl]","['fæsl]","adj.不费力的",'adj.不费力的，温和的,容易做到的','Her facile nature adapted herself to any company.','她随和的个性使她能与任何人相处。','What he said is a facile remark.','他说的话全是信口开河。'}

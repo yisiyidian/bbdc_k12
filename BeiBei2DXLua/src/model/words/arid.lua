@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arid"]={"arid","['ærɪd]","['ærɪd]","adj.干燥的",'adj.干燥的,不毛的|||adj.枯燥的，无趣的','He is tired of the arid studies that have produced nothing new.','他对这些没有新意的枯燥乏味的研究感到厌倦。','This is a technically perfect but arid musical performance.','这是一场技术上完美但枯燥的音乐演出。'}

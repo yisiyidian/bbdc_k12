@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["film"]={"film","[fɪlm]","[fɪlm]","n.电影",'n.电影,胶卷,薄膜|||vt.把...拍成电影,给...覆上一薄层|||vi.从事电影拍摄','He made a film about Egypt.','他拍了一部关于埃及的电影。','Tears filmed his eyes.','泪水模糊了他的眼睛。'}

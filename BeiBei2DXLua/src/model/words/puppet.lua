@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["puppet"]={"puppet","['pʌpɪt]","['pʌpɪt]","n.木偶",'n.木偶,傀儡','The revolutionist planned to overturn this puppet regime.','革命者计划推翻傀儡政府。','He jerked the string and the puppet jumped.','他猛地一拉绳子，木偶就跳了起来。'}

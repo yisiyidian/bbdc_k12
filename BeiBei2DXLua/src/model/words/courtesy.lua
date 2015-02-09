@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["courtesy"]={"courtesy","['kɜːtɪsɪ]","['kɝtəsi]","n.礼貌",'n.礼貌,好意,恩惠','There is always enough time for courtesy.','现在不必在这里说客气话。','They showed us every courtesy.','他们对我们彬彬有礼。'}

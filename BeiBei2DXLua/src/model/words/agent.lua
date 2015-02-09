@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agent"]={"agent","['eɪdʒ(ə)nt]","['edʒənt]","n.代理人",'n.代理人,代理商,特工人员,药剂','FBI is on the look out for the agent these days.','这些天联邦调查局正在注意那个特工。','He and his agent have parted company/He has parted company with his agent.','他和他的代理人散伙了.'}

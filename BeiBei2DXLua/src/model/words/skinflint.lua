@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skinflint"]={"skinflint","['skɪnflɪnt]","['skɪnflɪnt]","n.吝啬鬼",'n.吝啬鬼','A skinflint worships money.','吝啬鬼崇拜金钱。','She is a penny-pinching skinflint.','她是个一毛不拔的小气鬼。'}

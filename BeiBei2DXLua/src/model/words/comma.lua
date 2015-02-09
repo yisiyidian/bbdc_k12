@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comma"]={"comma","['kɒmə]","['kɑmə]","n.逗号",'n.逗号，停顿，间歇|||n.银纹多角蛱蝶','The clause should be set off by a comma.','这个从句应该用逗号隔开。','A comma is sometimes used to set off a clause in a sentence.','逗号有时用来隔开一个句子中间的从句。'}

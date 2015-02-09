@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["warn"]={"warn","[wɔːn]","[wɔrn]","vt.警告",'vt.警告,注意,远离|||vi.提醒','He warned me against going there at night.','他警告我晚上不要到那去。','He warned us against pickpockets.','他告诉我们要小心扒手。'}

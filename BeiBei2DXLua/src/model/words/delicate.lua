@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["delicate"]={"delicate","['delɪkət]","[ˈdɛlɪkɪt]","adj.细致优雅的",'adj.细致优雅的,微妙的,美味的|||adj.淡色的,淡味的|||adj.娇弱的,纤细的','She wears a dress with delicate lace.','她穿了一件带有精致花边的裙子。','The surgeon is performing a delicate operation.','那位外科医生正在做一个很精细的手术。'}

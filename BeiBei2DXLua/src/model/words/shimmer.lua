@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shimmer"]={"shimmer","['ʃɪmə]","['ʃɪmɚ]","n.微光",'n.微光,闪光，摇曳的光|||v.（使）闪烁，（使）发微光','The hot pavement sent up shimmers.','炎热的路面闪烁着微光。','The trees shimmered in the afternoon heat.','午后的热浪中，树木闪着微光。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inveigh"]={"inveigh","[ɪn'veɪ]","[ɪn've]","vi.痛骂",'vi.痛骂,漫骂,臭骂','Marx inveighed against the evils of the property-owning classes.','马克思强烈抨击了有产阶级的罪恶。','A lot of his writings inveigh against luxury and riches.','他的很多文章都痛批奢华与财富。'}

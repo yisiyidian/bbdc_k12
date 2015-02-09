@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cobble"]={"cobble","['kɒb(ə)l]","['kɑbl]","n.圆石",'n.圆石,鹅卵石,圆石子路|||vt.铺鹅卵石,修,拙劣地修补','The student cobbled together an essay in half an hour.','这个学生用半小时草草拼凑了一篇文章.','The cart clattered over the cobble-stones.','马车咔嗒咔嗒响著经过大卵石路.'}

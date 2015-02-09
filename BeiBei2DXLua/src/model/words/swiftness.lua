@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swiftness"]={"swiftness","['swiftnis]","[ 'swiftnis ]","n.迅速",'n.迅速,敏捷','His reaction of swiftness surprised us.','他迅速的反应让我们吃了一惊。','||Swiftness|| and certitude require strength, and the man had not this strength.','敏捷和准确是需要力气的, 他没有这种力气.'}

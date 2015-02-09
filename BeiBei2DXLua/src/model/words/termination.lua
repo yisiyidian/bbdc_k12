@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["termination"]={"termination","[tɜːmɪ'neɪʃ(ə)n]","['tɝmə'neʃən]","n.终结",'n.终结,中止,词尾,限制,结果','The landlord gave notice of the termination of tenancy.','房东给了租期终止的通知.','She chose to have an early termination.','她选择了早期终止妊娠.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revival"]={"revival","[rɪ'vaɪv(ə)l]","[rɪ'vaɪvl]","n.复兴",'n.复兴,复活,恢复精神','The revival of our country depends on our young generation.','我们国家的复兴要靠我们年轻的一代。','The patient had a speedy revival after her operation.','那个女病人在手术后迅速康复。'}

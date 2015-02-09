@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thermal"]={"thermal","['θɜːm(ə)l]","['θɝml]","adj.热的",'adj.热的,热量的,保热的|||n.上升的热气流','They will build another thermal power station.','他们要另外建一座热能发电站。','Volcanic activity has created thermal springs and boiling mud pools.','火山活动产生了温泉和沸腾的泥浆池。'}

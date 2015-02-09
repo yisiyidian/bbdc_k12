@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multilingual"]={"multilingual","[mʌltɪ'lɪŋgw(ə)l]","[,mʌltɪ'lɪŋɡwəl]","adj.使用多种语言的",'adj.使用多种语言的','He recruited two multilingual engineers.','他招聘了两个懂多种语言的工程师。','Let\'s send the multilingual wishes to our friends at Christmas Day.','圣诞了，我们一起给朋友们送去这个多语言的祝福吧'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fluke"]={"fluke","[fluːk]","[fluk]","n.侥幸",'n.侥幸,偶然的机会，鲽鱼，猫爪','By sheer fluke, one of the shipowner\'s employees was in the city.','非常凑巧的是，船主的一个雇员正在城里。','The discovery was something of a fluke.','这个发现多少有点机缘巧合。'}

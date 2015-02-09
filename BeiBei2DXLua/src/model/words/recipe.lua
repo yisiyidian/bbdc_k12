@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recipe"]={"recipe","['resɪpɪ]","['rɛsəpi]","n.食谱",'n.食谱,处方,秘诀','This recipe will be enough for four servings.','本食谱为四人食用分量.','A recipe tells you that you need so many eggs, so much milk, etc.','这个食谱上说需要多少鸡蛋、 多少牛奶等等.'}

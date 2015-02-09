@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["allot"]={"allot","[ə'lɒt]","[ə'lɑt]","vt.分配",'vt.分配，分摊','We did the work within the time they had allotted to us.','我们在指定的时间内把工作做完了。','Who will she allot the easy jobs to?','她要把轻活儿分给谁?'}

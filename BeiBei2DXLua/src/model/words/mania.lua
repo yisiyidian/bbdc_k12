@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mania"]={"mania","['meɪnɪə]","['menɪə]","n.狂躁",'n.狂躁,热衷,狂热','Collecting small items can easily became a mania.','收藏小玩意儿很容易着迷。','He\'s got motorcycle mania.','他爱摩托车爱得发狂.'}

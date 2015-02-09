@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intermittent"]={"intermittent","[ɪntə'mɪt(ə)nt]","[,ɪntɚ'mɪtənt]","adj.间歇的",'adj.间歇的,断断续续的','They saw the intermittent flashes from a lighthouse.','他们看见了灯塔发出一闪一灭的光。','In the daytime intermittent rains freshened all the earth.','白天时断时续地下着雨，整个大地都焕然一新了。'}

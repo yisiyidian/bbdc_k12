@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sparing"]={"sparing","['speərɪŋ]","['spɛrɪŋ]","adj.节约的",'adj.节约的(不足的,防护的)','I like to play badminton in my ||spare|| time.','我喜欢在闲暇时打羽毛球。','I like reading novels in my ||spare|| time.','我喜欢闲暇时读小说。'}

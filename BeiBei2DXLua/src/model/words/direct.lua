@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["direct"]={"direct","[daɪˈrekt]","[daɪˈrɛkt]","adj.直接的",'adj.笔直的,直接的,坦白的|||vt.指挥，命令，负责|||vi.指导，指出','I prefer to deal with him direct.','还是我直接跟他打交道为好','She directed the planning of the festival.','她统管节日活动的筹划。'}

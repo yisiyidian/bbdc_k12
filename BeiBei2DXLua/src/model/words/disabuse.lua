@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disabuse"]={"disabuse","[,dɪsə'bjuːz]","[,dɪsə'bjuz]","vt.解惑",'vt.解惑,使省悟','If you think I\'m going to lend you money, I must disabuse you of te wrong idea.','你若认为我会借钱给你, 我倒要劝你打消那念头。','I must disabuse you of your feelings of grandeur.','我必须去消除你的傲气。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["naked"]={"naked","['neɪkɪd]","['nekɪd]","adj.裸体的",'adj.裸体的,无掩饰的,明白的,手无寸铁的','She was such a prude that she was even embarrassed by the sight of naked children.','她正经得出了格, 甚至见了赤身露体的孩子也难为情.','This star is not visible to the naked eye.','这颗星肉眼看不见.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capitalize"]={"capitalize","['kæpɪtəlaɪz]","['kæpɪtəlaɪz]","v.以大写字母写",'v.以大写字母写,使...资本化,计算...的现价','||Capitalize|| a corporation.','准许一个公司发行股票','Please capitalize the report.','请用大写字母写这份报告。'}

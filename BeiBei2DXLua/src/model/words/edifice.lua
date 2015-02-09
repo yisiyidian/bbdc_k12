@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["edifice"]={"edifice","['edɪfɪs]","['ɛdɪfɪs]","n.大厦",'n.大厦,大建筑物','The whole edifice of his hopes was destroyed.','他心中的希望整个都毁了。','The whole edifice is exploded','整座大厦都炸毁了'}

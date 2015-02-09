@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["economics"]={"economics","[iːkə'nɒmɪks; ek-]","['ikə'nɑmɪks; 'ɛkə'nɑmɪks]","n.经济学",'n.经济学','A knowledge of economics is fundamental to any understanding of this problem.','经济知识对于理解这个问题是至关重要的。','When they start talking about economics, I\'m out of my depth.','他们一谈起经济学, 我就一窍不通了.'}

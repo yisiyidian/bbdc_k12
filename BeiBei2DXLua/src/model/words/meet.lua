@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meet"]={"meet","[miːt]","[mit]","vt.遇见",'n.集会,比赛,运动会|||adj.适宜的,合适的|||vt.遇见,引见,经历,结识,对付,满足,支付|||vi.相遇,集合,交锋,相交','The champion and the challenger meet next week.','下星期冠军将迎战挑战者。','City ||met|| United in the final last year, and City won.','去年决赛中，市队与联队交锋，市队获胜'}

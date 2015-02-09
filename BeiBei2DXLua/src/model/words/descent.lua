@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["descent"]={"descent","[dɪ'sent]","[dɪ'sɛnt]","n.下落",'n.下落,家世,倾斜,侵袭','a person of African descent.','一个非洲血统的人','He traces his descent back to an old norman family.','他追踪自己的世系上溯至一个古老的诺曼家族。'}

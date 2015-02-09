@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invaluable"]={"invaluable","[ɪn'væljʊ(ə)b(ə)l]","[ɪn'væljʊəbl]","adj.无价的",'adj.无价的','This set of ancient china is invaluable.','这套古瓷器非常珍贵。','A dictionary is an invaluable aid in learning a new language.','在学习一种新语言时，词典是非常有用的工具。'}

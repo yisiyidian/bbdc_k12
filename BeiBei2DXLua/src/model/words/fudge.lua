@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fudge"]={"fudge","[fʌdʒ]","[fʌdʒ]","n.软糖",'n.软糖，胡言|||v.敷衍,回避(责任)，捏造','Our manager has been ||fudging|| the issue of bonus payments for months.','我们的经理数月来一直回避发放奖金一事.','Oh fudge, she says they can\'t come.','哦, 胡说, 她说他们不能来。'}

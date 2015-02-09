@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enamored"]={"enamored","[en'æməd]","[ en'æməd ]","adj.倾心的",'adj.倾心的,被迷住的','I\'m not too enamored with the idea of spending a whole day with him.','我可不喜欢整天和他在一起。','He is enamored with scientific research.','他沉迷于科学研究。'}

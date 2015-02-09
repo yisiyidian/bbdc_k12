@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["renewable"]={"renewable","[rɪ'njuːəbəl]","[rɪ'nuəbl]","adj.可更新的",'adj.可更新的(可继续的,可更换的,可展期的)','If I can rephrase what I had just said, I think our resource is not renewable.','如果我可以把我刚说的话重新措辞一下，我变为我们的资源是不能再生的。','Is the permit renewable?','这个许可证可以延期吗？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["primer"]={"primer","['praɪmə]","['praɪmɚ]","n.启蒙书",'n.启蒙书,识字课本','An early primer consisting of a single page protected by a transparent sheet of horn, formerly used in teaching children to read.','角帖书一种早期初级读物，即为一张盖有透明角片作为保护的书页，以前供儿童认字用','Children learn knowledge from primers.','孩子们从启蒙书上学习知识。'}

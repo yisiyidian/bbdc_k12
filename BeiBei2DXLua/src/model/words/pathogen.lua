@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pathogen"]={"pathogen","['pæθədʒ(ə)n]","['pæθədʒən]","n.病原体",'n.病原体','The pathogen was almost instantly detected by automated systems.','病原体几乎立刻就被自动系统检测到了。','The opposite end latches onto the pathogen.','相对的一端锁在病原体上.'}

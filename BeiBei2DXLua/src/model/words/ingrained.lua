@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ingrained"]={"ingrained","[ɪn'greɪnd]","[ɪn'ɡrend]","adj.根深蒂固的",'adj.根深蒂固的|||adj.深嵌入纺织品或纤维的|||动词ingrain的过去式和过去分词','Mahjong culture is  deeply ingrained in the Chinese community.','麻将文化在中国根深蒂固。','Morals tend to be deeply ingrained.','道德观念往往是根深蒂固的。'}

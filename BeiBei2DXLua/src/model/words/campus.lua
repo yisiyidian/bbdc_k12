@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["campus"]={"campus","['kæmpəs]","['kæmpəs]","n.(大学)校园",'n.(大学)校园','Two suspicious-looking fellows were seen hanging around the campus last night.','昨夜有人看见两个形迹可疑的人在校园里徘徊。','The news soon went round the campus.','消息很快传遍校园。'}

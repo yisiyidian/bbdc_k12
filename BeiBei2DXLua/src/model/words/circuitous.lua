@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["circuitous"]={"circuitous","[sɜː'kjuːɪtəs]","[sɚ'kjʊɪtəs]","adj.迂回的路的",'adj.迂回的路的,迂曲的,绕行的','They took a circuitous route to avoid reporters.','他们绕道避开了记者。','The cabdriver took them on a circuitous route to the police station.','出租车司机绕道把他们带到警察局。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["myriad"]={"myriad","['mɪrɪəd]","[ 'miriəd ]","adj.无数的",'adj.无数的|||n.极大数量','A myriad of thoughts passed through her mind.','无数想法划过她的心头。','They face a myriad of problems bringing up children.','他们在抚养孩子上面临着各种问题。'}

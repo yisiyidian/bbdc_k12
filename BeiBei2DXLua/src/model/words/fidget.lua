@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fidget"]={"fidget","['fɪdʒɪt]","['fɪdʒɪt]","vt.使坐立不安",'vt.使坐立不安|||vi.坐立不安|||n.烦躁，烦躁之人','It\'s bad manners to fidget about (with the cutlery) at the table.','用餐时摆弄刀叉玩儿是不雅的.','Stop fidgeting!','别坐立不安的!'}

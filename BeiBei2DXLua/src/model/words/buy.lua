@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["buy"]={"buy","[baɪ]","[baɪ]","vt.买",'n.合理的价格,购买|||vt.买,换得,收买,接受|||vi.购买','It\'s a good buy at that price.','这是一笔价钱合算的买卖。','They ||bought|| peace with their freedom.','他们牺牲自由换取和平。'}

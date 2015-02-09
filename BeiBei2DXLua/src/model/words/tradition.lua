@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tradition"]={"tradition","[trə'dɪʃ(ə)n]","[trə'dɪʃən]","n.传统",'n.传统,惯例','The old man told us a story passed on by oral tradition.','老人给我们讲述了一个口头流传的故事。','We shall carry forward the revolutionary tradition.','我们应该发扬革命传统。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["distinctive"]={"distinctive","[dɪ'stɪŋ(k)tɪv]","[dɪ'stɪŋktɪv]","adj.有特色的",'adj.有特色的,出众的','This is a distinctive room.','这是一间独具一格的房间。','Walt Whitman originated a distinctive form of free verse.','惠特曼创造了一种极为优秀的自由诗的形式。'}

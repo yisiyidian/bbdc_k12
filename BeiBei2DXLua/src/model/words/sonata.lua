@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sonata"]={"sonata","[sə'nɑːtə]","[sə'nɑtə]","n.奏鸣曲",'n.奏鸣曲','The first part of a composition in sonata form that introduces the themes.','呈示部奏呜曲式音乐作品中表现主旋律的第一部分','She\'s going to play the opening bar of the sonata.','她准备演奏这支奏鸣曲的开始数小节。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["despondent"]={"despondent","[dɪ'spɒnd(ə)nt]","[dɪ'spɑndənt]","adj.沮丧的",'adj.沮丧的,没有精神的','He is despondent over his illness.','他对自己的病情感到灰心。','He was up for a time and then, without warning, despondent again.','他一度兴高采烈，但忽然又情绪低落下来。'}

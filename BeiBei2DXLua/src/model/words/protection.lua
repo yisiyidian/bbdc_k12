@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["protection"]={"protection","[prə'tekʃ(ə)n]","[prə'tɛkʃən]","n.保护",'n.保护,防卫','We subscribe to an animal protection society.','我们定期捐款给一个动物保护基金会。','The young in our society need care and protection.','我们社会的年轻人需要受到关怀和爱护.'}

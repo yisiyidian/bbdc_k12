@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bean"]={"bean","[biːn]","[bin]","n.豆",'n.豆','Every bean hath its black.','【谚】人孰无过。','Coffee beans are the seeds of coffee plants.','咖啡豆是咖啡树的果实。'}

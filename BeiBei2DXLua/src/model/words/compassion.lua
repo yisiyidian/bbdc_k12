@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compassion"]={"compassion","[kəm'pæʃ(ə)n]","[kəm'pæʃən]","n.同情",'n.同情,怜悯','We had compassion for the poor widow.','我们同情这个可怜的寡妇。','She showed no compassion for her patients.','她对病人没有任何同情心.'}

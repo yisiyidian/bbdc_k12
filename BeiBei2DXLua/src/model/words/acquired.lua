@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acquired"]={"acquired","[ə'kwaɪəd]","[ə'kwaɪrd]","adj.已取得的",'adj.已取得的,已获得的,已成习惯的','She sought out and acquired all his early paintings.','她找到并获得了他早期画的所有的画儿.','Abstract art is an acquired taste.','抽象派艺术要慢慢才会欣赏.'}

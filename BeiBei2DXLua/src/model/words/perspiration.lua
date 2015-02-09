@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perspiration"]={"perspiration","[pɜːspɪ'reɪʃ(ə)n]","[,pɝspə'reʃən]","n.汗",'n.汗,流汗,努力','One of the ways to dissipate perspiration is by convection.','散发汗水的一种方法是通过对流作用。','She burst out in perspiration.','她突然出了一身汗。'}

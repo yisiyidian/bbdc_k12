@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utensil"]={"utensil","[juː'tens(ə)l]","[jʊ'tɛnsl]","n.器具",'n.器具,用具','The best carving utensil is a long, sharp, flexible knife.','最好的雕刻工具是锋利而柔韧的长刻刀。','He replaced the utensil in a higher set of brackets.','他把烤肉架移到了距离火盆更高的托架上.'}

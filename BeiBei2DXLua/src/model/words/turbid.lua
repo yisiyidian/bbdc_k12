@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turbid"]={"turbid","['tɜːbɪd]","['tɝbɪd]","adj.混浊的",'adj.混浊的,泥水的,浓密的','Alum will settle turbid water.','明矾可以澄清浊水。','The turbid water of the river did not look inviting to any of the swimmers.','浑浊不清的河水对游泳的人来说，一点吸引力也没有。'}

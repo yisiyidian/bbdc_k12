@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["civic"]={"civic","['sɪvɪk]","['sɪvɪk]","adj.公民的",'adj.公民的,市民的,城市的','The village hall is given over to civic functions and meetings.','村子的礼堂专作举行庆典和会议之用.','It\'s our civic duty to plant trees.','植树是每个公民的义务。'}

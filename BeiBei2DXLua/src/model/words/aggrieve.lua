@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aggrieve"]={"aggrieve","[ə'ɡriːv]","[ə'griv]","vt.使...受屈",'vt.使...受屈,使...苦恼','aggrieve sb an aggrieved tone of voice feel aggrieved at sth','unfair worried','this work aggrieves me','这个工作让我苦恼'}

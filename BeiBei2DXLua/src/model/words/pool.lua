@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pool"]={"pool","[puːl]","[pul]","n.水塘(池)",'n.水塘(池),游泳池,撞球|||vi.形成池塘|||vt.集中,积累','She lay at the side of the pool and paddled in the water with her fingers.','她躺在池子边上，用手指玩水。','The fox lay dying in a pool of gore.','狐狸倒在血泊中奄奄一息。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accent"]={"accent","['æks(ə)nt; -sent]","['æksɛnt]","n.重音",'n.重音,口音,强调|||vt.重读,强调','He flattered himself that he spoke French with a perfect accent.','他自以为他说法语的腔调很完美。','His accent betrayed the fact that he was foreign.','他的口音显露出他是外国人。'}

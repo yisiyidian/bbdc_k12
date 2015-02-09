@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["firework"]={"firework","['faɪəwɜːk]","['faɪɚwɝk]","n.焰火",'n.焰火|||(复数)fireworks:烟火大会,(热情,怒气等的)迸发','The firework exploded in a shower of sparks.','烟火炸开放出一阵火花.','The firework exploded with a loud bang.','烟火砰的一声爆开了.'}

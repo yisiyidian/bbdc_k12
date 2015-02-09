@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["caper"]={"caper","['keɪpə]","['kepɚ]","n.跳跃",'n.跳跃|||n.[植物]马槟榔|||vi.雀跃,蹦跳','A ludicrous or extravagant act or gesture; a caper.','滑稽动作滑稽夸张的动作或姿势；怪诞动作','The lambs were capering in the fields.','小羊在田野里欢快地蹦蹦跳跳。'}

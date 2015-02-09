@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["biography"]={"biography","[baɪ'ɒgrəfɪ]","[baɪ'ɑɡrəfi]","n.传记",'n.传记','His biography is a saga of scientific research.','他的传记就是一部科研记实.','If it\'s not under sport, try looking under biography.','要是在运动类中查不到，可以查查传记类。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calculate"]={"calculate","['kælkjʊleɪt]","['kælkjulet]","vt.计算",'vt.计算,估计,考虑,推测|||vi.计算,预测,依赖','The scientists calculated when the spacecraft would reach the moon.','科学家推算出宇宙飞船抵达月球的时间。','The government has to calculate the likely effects on revenues of a big drop in the oil price.','政府必须估算出油价大幅度下降对财政收入可能产生的影响。'}

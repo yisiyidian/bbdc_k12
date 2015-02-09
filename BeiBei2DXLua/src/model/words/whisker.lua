@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whisker"]={"whisker","['wɪskə]","['wɪskɚ]","n.腮须胡须",'n.腮须胡须','The candidate lost the election by a whisker.','该候选人以微弱劣势失去了竞选','He has heavy whiskers.','他长着很重的连鬓胡子。'}

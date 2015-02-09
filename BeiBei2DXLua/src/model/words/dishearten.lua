@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dishearten"]={"dishearten","[dɪs'hɑːt(ə)n]","[ dis'hɑ:tən ]","vt.使沮丧",'vt.使沮丧,使泄气','Don\'t let the defeat dishearten you.','不要因这一挫折而气馁。','The death of her mother disheartened her.','她母亲的死使她失去勇气。'}

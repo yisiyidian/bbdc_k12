@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["natty"]={"natty","['nætɪ]","['næti]","adj.整洁的",'adj.整洁的,漂亮的','The girl is so natty and gorgeous that we all like her.','这女孩整洁漂亮，我们都喜欢她。','Cliff was a natty dresser.','克利夫是讲究衣着整洁美观的人。'}

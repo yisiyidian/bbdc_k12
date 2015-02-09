@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["streamline"]={"streamline","['striːmlaɪn]","['strimlaɪn]","n.流线",'n.流线,流线型|||v.使...成流线型,使...合理化','He aimed to streamline the office.','他的目标是提高办公室的工作效率。','We must streamline our production procedures.','我们必须精简生产程序以提高效率.'}

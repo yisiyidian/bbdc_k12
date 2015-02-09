@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vitamin"]={"vitamin","['vɪtəmɪn; 'vaɪt-]","['vaɪtəmɪn]","n.维生素",'n.维生素','Oranges are rich in vitamin C.','橙子含有丰富的维生素C.','She supplements her diet with vitamin tablets.','她服用维生素片剂以补充规定食谱中的营养。'}

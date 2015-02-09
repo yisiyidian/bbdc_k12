@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wolf"]={"wolf","[wʊlf]","[wʊlf]","n.狼",'n.狼','It is a foolish sheep that makes the wolf his confessor.','【谚】蠢羊才向狼忏悔。','The hunter incurred great danger in killing the wolf.','猎人打狼时承受着巨大的危险。'}

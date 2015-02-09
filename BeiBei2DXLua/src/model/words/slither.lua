@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slither"]={"slither","['slɪðə]","['slɪðɚ]","vt.使....不稳地滑动(使...蜿蜒地滑行)",'vt.使....不稳地滑动(使...蜿蜒地滑行)','A snake slithered into the thick grass.','一条蛇滑进了草丛中。','Robert lost his footing and slithered down the bank.','罗伯特失足滑下了河岸。'}

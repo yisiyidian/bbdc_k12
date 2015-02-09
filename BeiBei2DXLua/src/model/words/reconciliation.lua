@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reconciliation"]={"reconciliation","[,rek(ə)nsɪlɪ'eɪʃ(ə)n]","[,rɛkənsɪlɪ'eʃən]","n.调和",'n.调和(和解,一致,甘愿)','A mutual clarification of misunderstandings; a reconciliation.','和解为消除误解而进行的相互说明；和解','We\'ve tried our best to effect reconciliation between the two parties.','我们已尽了最大努力希望促成双方和解。'}

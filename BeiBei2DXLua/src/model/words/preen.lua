@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preen"]={"preen","[priːn]","[prin]","vt.整理羽毛",'vt.整理羽毛,(人)打扮修饰，自满，自负|||vi.精心打扮，沾沾自喜','He\'s always preening himself on his success.','他总是对自己的成功沾沾自喜。','Rare birds preen themselves right in front of your camera.','很少有鸟类会在镜头面前梳理自己的羽毛。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dreadful"]={"dreadful","['dredfʊl; -f(ə)l]","['drɛdfəl]","adj.可怕的",'adj.可怕的','What a dreadful situation for you.','您的处境真糟糕。','||Dreadful|| weather, don\'t you think?','这天气真讨厌，你说不是吗?'}

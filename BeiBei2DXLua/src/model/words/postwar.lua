@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["postwar"]={"postwar","['pəʊst'wɔː]","['post'wɔr]","adj.战后的",'adj.战后的','The condition of the postwar years brought many enterprising men to the fore.','战后这些年来的情况使许多有进取心的人成为名人。','During the postwar years in Germany, many honors were given to Einstein.','在战后的岁月里，爱因斯坦在德国得到了很多荣誉。'}

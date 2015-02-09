@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slit"]={"slit","[slɪt]","[slɪt]","n.裂缝",'n.裂缝,投币口|||vt.纵切,扯裂','The man slit his former sweetheart up.','那人故意伤了他昔日的情人。','The rider\'s jacket is slit up the back to make it more comfortable to wear when riding.','骑手的夹克后背上开着长叉，使他骑在马上穿着更舒服。'}

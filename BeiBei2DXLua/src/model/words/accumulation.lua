@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accumulation"]={"accumulation","[əkjuːmjʊ'leɪʃ(ə)n]","[ə,kjʊmjə'leʃən]","n.积聚",'n.积聚,累积,积聚物','An accumulation of data to be processed.','要处理的数据的一种聚集。','The steady accumulation of small debts was a ball and chain to his progress.','不断累积的小债务妨碍了他的发展。'}

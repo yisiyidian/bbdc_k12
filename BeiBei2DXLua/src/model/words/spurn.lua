@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spurn"]={"spurn","[spɜːn]","[ spə:n ]","v.拒绝",'v.拒绝,摈弃|||vt.轻蔑地拒绝,唾弃','These gestures have been spurned.','这些表示都遭到了拒绝。','He spurned the advice of management consultants.','他拒绝了管理顾问们的建议。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["autumn"]={"autumn","['ɔːtəm]","['ɔtəm]","n.秋季",'n.秋季,秋天','There is a rumor that there will be a General Election in the autumn.','据传闻今秋将举行普选。','We\'ll be off the air for the summer and returning for a new series in the autumn.','我们将於夏季停播而於秋季开始播放一套新节目.'}

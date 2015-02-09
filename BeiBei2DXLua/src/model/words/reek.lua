@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reek"]={"reek","[riːk]","[rik]","n.恶臭",'n.恶臭,水蒸汽|||vi.放出恶臭,有...气味','The entire house reeked for a long time.','整座房子长时间一直有股难闻的味道。','Their actions reek of corruption.','他们的行为有贪腐之嫌。'}

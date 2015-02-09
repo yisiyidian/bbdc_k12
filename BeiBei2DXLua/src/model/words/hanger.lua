@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hanger"]={"hanger","['hæŋə]","['hæŋɚ]","n.挂钩",'n.挂钩(钩子,悬挂者,悬杆,支架)','One more thing, I also need a couple more of hangers.','还有一件事，我还需要两三个衣架。','A fighter plane is revving up on the hanger apron.','飞机库前面停机坪上，一架战斗机正在起动。'}

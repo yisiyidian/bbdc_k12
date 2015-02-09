@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["precipitate"]={"precipitate","[prɪ'sɪpɪteɪt]","[prɪ'sɪpɪtet]","vt.使...陷入",'vt.使...陷入,促成,使...沉淀,猛摔|||n.沉淀物,冷凝物|||adj.仓促的,迅猛的,感情用事的','The cart overturned and precipitated us to the ditch.','车子翻了，我们被摔进了沟里。','They acted with precipitate haste.','他们鲁莽仓促地采取了行动。'}

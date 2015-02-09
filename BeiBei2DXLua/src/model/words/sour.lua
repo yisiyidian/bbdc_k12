@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sour"]={"sour","[saʊə]","['saʊɚ]","adj.酸的",'adj.酸的,腐坏的,抑沉的,刻薄的|||vt.&vi.变酸,变乖戾,腐坏','What a sour face she has!','她的脸色多难看！','Most green fruits are sour.','大多数未熟的水果都是酸的。'}

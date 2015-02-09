@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jubilant"]={"jubilant","['dʒuːbɪl(ə)nt]","['dʒubɪlənt]","adj.扬声欢呼的",'adj.扬声欢呼的,喜洋洋的','The jubilant throng is like the waves of the sea.','欢腾的人群宛如大海的波涛.','Liverpool were in a jubilant mood after their cup victory.','利物浦队夺得优胜杯後喜气洋洋.'}

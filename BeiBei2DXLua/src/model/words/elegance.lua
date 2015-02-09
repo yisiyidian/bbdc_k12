@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elegance"]={"elegance","['elɪg(ə)ns]","['ɛləgəns]","n.高雅",'n.高雅,典雅,优雅，简洁|||n.雅致的物品','She was the personification of elegance.','她是优雅的化身。','He is admired for the elegance of his writing.','他文风高雅令人钦佩.'}

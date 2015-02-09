@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["literally"]={"literally","['lɪt(ə)rəlɪ]","['lɪtərəli]","adv.按照字面上地",'adv.逐字地,按照字面上地,不夸张地','The prediction was literally accomplished.','这个预言确实实现了。','Idioms usually cannot be translated literally in another language.','成语通常不能照字面译成另一种语言。'}

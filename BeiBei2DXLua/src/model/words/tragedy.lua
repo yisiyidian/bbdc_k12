@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tragedy"]={"tragedy","['trædʒɪdɪ]","['trædʒədi]","n.悲剧",'n.悲剧,惨事,灾难','The tragedy is all over now.','悲剧结束了。','This recent tragedy has put the manufacturersof the drug squarely in the dock.','新近发生的这一悲惨事件使药品厂商受到指控.'}

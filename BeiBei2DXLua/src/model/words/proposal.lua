@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proposal"]={"proposal","[prə'pəʊz(ə)l]","[prə'pozl]","n.提议",'n.求婚,提议,建议','We will discuss the proposal at the meeting.','我们将在会议上讨论这项提议。','Her resistance to the proposal has crumpled.','她对这个建议的抵触情绪已化为乌有了。'}

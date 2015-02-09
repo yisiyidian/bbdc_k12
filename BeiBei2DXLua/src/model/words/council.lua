@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["council"]={"council","['kaʊns(ə)l; -sɪl]","['kaʊnsl]","n.理事会",'n.理事会,委员会,商议','The council will not permit you to build here.','委员会不会允许你们在这一带搞建筑.','The theatre is under the patronage of the Arts ||Council||.','那家剧院得到了艺术委员会的赞助。'}

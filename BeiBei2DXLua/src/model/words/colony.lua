@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["colony"]={"colony","['kɒlənɪ]","['kɑləni]","n.殖民地居民",'n.侨民,侨居地,殖民地,聚居(地)','Britain was mandated to govern the former colony of German East Africa.','英国受权代管德国在东非的前殖民地.','the American colony in Paris.','巴黎的美国人聚居区'}

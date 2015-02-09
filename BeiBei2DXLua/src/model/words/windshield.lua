@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["windshield"]={"windshield","['wɪn(d)ʃiːld]","['wɪndʃild]","n.挡风玻璃",'n.挡风玻璃','It is dangerous to drive with a dirty windshield.','开一辆挡风玻璃脏了的车子是危险的.','The windshield of my car frosted over during the night.','我汽车上的挡风玻璃在夜里结上了霜花.'}

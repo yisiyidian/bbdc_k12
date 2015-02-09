@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lien"]={"lien","[liːn; 'liːən]","['liən]","n.扣押权",'n.扣押权,留置权','The court granted me a lien on my debtor\'s property.','法庭授予我对我债务人财产的留置权。','the payment bond protects the purchaser against liens that','付款保证金保护采购员对抗抵押权'}

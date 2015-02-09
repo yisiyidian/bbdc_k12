@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spotted"]={"spotted","['spɒtɪd]","['spɑtɪd]","adj.有斑点的",'adj.有斑点的，斑纹的，弄污了的|||动词spot的过去式和过去分词形式','A ,sharp-eyed police officer spotted the stolen car.','那个目光敏锐的警察发现了那辆被盗的汽车.','She spotted her friend in the crowd.','她在人群中认出了她的朋友。'}

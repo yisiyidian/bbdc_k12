@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cunning"]={"cunning","['kʌnɪŋ]","['kʌnɪŋ]","adj.狡猾的",'adj.狡猾的,有眼光的,精巧的,可爱的|||n.狡诈,灵巧','The fox is known for its cleverness and cunning.','狐狸的机敏和狡猾是人所共知的.','Many politicians are cunning sophists.','许多政客都是狡猾的诡辩家.'}

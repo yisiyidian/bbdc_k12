@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jockey"]={"jockey","['dʒɒkɪ]","['dʒɑki]","n.赛马的骑师",'n.赛马的骑师,驾驶员,操作工|||vt.骑马，驾驶（操作），瞒骗,骗人使做...|||vi.当骑士骑马，运用手段谋利','Player number14 on the lose team is the biggest bench jockey I have ever seen.','要输的那队中的14号是我见过的最爱起哄的队员。','The jockey turned the scales at 80 lb.','那赛马骑师体重为 80 磅.'}

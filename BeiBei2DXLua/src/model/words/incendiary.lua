@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incendiary"]={"incendiary","[ɪn'sendɪərɪ]","[ɪn'sɛndɪɛri]","adj.放火的",'adj.放火的,煽动的,教唆的|||n.纵火犯人,煽动者,燃烧弹','They tend to say incendiary things, which draw more and angrier counterarguments.','这些人开始散布煽动性言论，激起的怒火又为他们带来更多对手。','The incendiary made a turmoil in the center of the city.','煽动者在市中心制造了骚乱。'}

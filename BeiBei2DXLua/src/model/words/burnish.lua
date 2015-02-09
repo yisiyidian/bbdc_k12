@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["burnish"]={"burnish","['bɜːnɪʃ]","[ 'bə:niʃ ]","n.光泽",'n.光泽|||v.擦亮,磨光|||vt.磨,抛光','The copper has been burnished.','铜已被抛光。','He is burnishing the knife.','他正在磨刀。'}

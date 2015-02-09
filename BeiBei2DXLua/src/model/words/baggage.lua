@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["baggage"]={"baggage","['bægɪdʒ]","['bæɡɪdʒ]","n.行李",'n.行李','a baggage handler; baggage claim.','包裹装卸机；过多的要求','||Baggage|| loaded onto an aircraft must be evenly distributed.','飞机载运的行李应均匀放置在各个部位.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pulverize"]={"pulverize","['pʌlvəraɪz]","['pʌlvə'raɪz]","v.磨成粉",'v.磨成粉,粉碎','The tsunami pulverized everything in its path.','这场海啸将所经之地夷为平地。','He is set to pulverize his two opponents in the race for the presidency.','他决心在总统竞选中彻底击垮他的两个对手。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arboreal"]={"arboreal","[ɑː'bɔːrɪəl]","[ɑr'bɔrɪəl]","adj.树木的",'adj.树木的,栖于树木的','Squirrels are arboreal creatures.','松鼠是栖于树上的动物。','Koala is an arboreal Australian marsupial.','考拉是一种澳大利亚树栖有袋动物。'}

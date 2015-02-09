@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extraordinary"]={"extraordinary","[ɪkˈstrɔːdnri]","[ɪkˈstrɔːrdəneri]","adj.非凡的",'adj.非凡的,特别的,特派的','She wears the most extraordinary get-ups.','她穿著最不寻常的衣裳。','How extraordinary!','真怪呀!'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seductive"]={"seductive","[sɪ'dʌktɪv]","[sɪ'dʌktɪv]","adj.诱惑的",'adj.诱惑的,引人注意的,有魅力的','I long to be seductive and tempting. What\'s Helen got that I haven\'t got?','我真希望自己富有迷人的魅力。为什么海伦就比我强呢？','his sad and fastidious but ever seductive Irish voice','“他伤感的、难讨好的但却始终具有魅力的爱尔兰声调”'}

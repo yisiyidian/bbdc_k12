@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["correct"]={"correct","[kə'rekt]","[kə'rɛkt]","adj.正确的",'adj.正确的|||v.改正,纠正|||vt.改正','Would that be correct?','这是正确的吗?','I think his commentary on this issue is not correct.','我认为他对这个问题的评论是不正确的。'}

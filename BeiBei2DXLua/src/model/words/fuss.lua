@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fuss"]={"fuss","[fʌs]","[fʌs]","n.大惊小怪",'n.大惊小怪,小题大作,强烈不满或争吵|||vi.无事自扰,焦急,对小事激动|||vt.扰乱,使焦躁','Stop all this fuss and get on with your work.','别大惊小怪的闹了，继续干你的活儿去吧。','Don\'t make so much fuss over the children.','不要对孩子照顾得太过分。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["demeanor"]={"demeanor","[di'mi:nə]","[ di'mi:nə ]","n.行为(态度",'n.行为(态度,举止)','She is quiet in her demeanor.','她举止文静。','The old soldier never lost his military demeanor.','那个老军人从来没有失去军人风度。'}

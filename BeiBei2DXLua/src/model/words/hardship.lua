@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hardship"]={"hardship","['hɑːdʃɪp]","['hɑrdʃɪp]","n.艰难",'n.艰难,困苦','The tax increases will, in the aggregate, cause much hardship.','增加税收归结起来将造成很多困难.','Years of hardship and neglect had taken their toll.','多年的劳累和疏于保养损害了他们的健康。'}

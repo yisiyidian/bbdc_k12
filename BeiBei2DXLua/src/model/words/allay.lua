@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["allay"]={"allay","[ə'leɪ]","[ə'le]","v.使…缓和",'v.使...镇静,使...缓和','More reading may be allaying your doubt.','多读书或许可以减少你的疑惑。','Work can allay trouble.','工作能减轻烦恼。'}

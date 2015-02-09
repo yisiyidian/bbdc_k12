@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rant"]={"rant","[rænt]","[rænt]","v.咆哮",'v.咆哮，大声地说，激昂地说|||n.咆哮,豪言壮语','As the boss began to rant, I stood up and went out.','老板开始咆哮的时候，我起身走了出去。','I don\'t rant and rave or throw tea cups.','我不会大喊大叫或摔茶杯。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dough"]={"dough","[dəʊ]","[do]","n.生面团",'n.生面团,浆糊','The dough shrank slowly in the cold air.','面团在冷空气中慢慢收缩了.','The little boy kneaded the dough into a ball.','那个小男孩把面团揉成了球状。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["economy"]={"economy","[ɪ'kɒnəmɪ]","[ɪ'kɑnəmi]","n.经济",'n.节约；经济；理财；秩序','The new model delivers speed and fuel economy.','这种新型设计能提高速度、节约燃料。','The determinate factor of our economy is to control inflation.','我们经济的决定性因素是控制通货膨胀。'}

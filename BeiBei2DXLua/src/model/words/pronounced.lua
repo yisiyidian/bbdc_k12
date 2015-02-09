@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pronounced"]={"pronounced","[prə'naʊnst]","[prə'naʊnst]","adj.显著的",'adj.显著的，断然的，明确的|||pronounce的过去式和过去分词','She pronounced herself satisfied with the results.','她对那结果表示满意.','The word `hour\' is pronounced without an initial aspirate.','hour一字的开头字母h不发送气音.'}

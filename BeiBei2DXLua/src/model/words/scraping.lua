@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scraping"]={"scraping","['skreɪpɪŋ]","['skrepɪŋ]","n.擦去",'n.擦去,抹去,削去','||Scraping|| the snow away, they found a car buried under.','他们把雪铲走后，发现下面埋有一辆小汽车。','He led his life, pinching and scraping.','他省吃俭用地过日子。'}

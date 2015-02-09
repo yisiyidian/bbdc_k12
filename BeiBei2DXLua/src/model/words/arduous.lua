@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arduous"]={"arduous","['ɑːdjʊəs]","['ɑrdʒuəs]","adj.费力的",'adj.费力的,辛勤的,险峻的','Negotiating a reduction in nuclear arms is a long and arduous undertaking.','有关削减核武器的谈判是一项漫长而艰苦的工作。','He mastered these words through the arduous consultation of the dictionary.','通过勤查字典，他掌握了这些单词。'}

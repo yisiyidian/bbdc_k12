@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["registration"]={"registration","[redʒɪ'streɪʃ(ə)n]","['rɛdʒɪ'streʃən]","n.登记",'n.登记,注册,挂号','Even the producer forget to apply for the registration renewal, the law grant a6- month grace period.','连生产商都常常忘记申请注册续展, 法律会给予6个月的宽限期。','Please write your home address on the registration form.','请在这张登记表上写下你的家庭住址。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sympathize"]={"sympathize","['sɪmpə'θaɪz]","[ 'simpəθaiz ]","v.同情",'v.同情,同感','We all sympathize with you in your bereavement.','我们对你丧亲之痛表示同情.','sympathized with the goals of the committee.','赞同委员会的想法'}

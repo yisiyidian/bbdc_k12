@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skepticism"]={"skepticism","['skɛptɪ,sɪzəm]","[ 'skeptisizəm ]","n.怀疑论",'n.怀疑论,怀疑态度,怀疑主义','If a man really have strong faith he can indulge in the luxury of skepticism.','假如一个人果真有强烈的信仰，就可以纵情享受（宗教上的）怀疑主义了。','He is a man with strong skepticism.','他是一个强烈的怀疑论者。'}

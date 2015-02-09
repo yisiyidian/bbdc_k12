@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sanguine"]={"sanguine","['sæŋgwɪn]","[ 'sæŋɡwin ]","adj.乐天的",'adj.乐天的,自信的，红润的|||n.血红色','He was always so ready to be interested and always so happy, sanguine and light-hearted.','他总是那么体贴，那么快乐，那么乐观，那么无忧无虑。','He\'s remarkably sanguine about the problems involved.','他对所涉及的问题态度极为乐观。'}

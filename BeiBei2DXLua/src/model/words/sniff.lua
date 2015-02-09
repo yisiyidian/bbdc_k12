@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sniff"]={"sniff","[snɪf]","[snɪf]","n.以鼻吸气",'n.以鼻吸气,吸入的东西,吸气(声),一股气味|||vi.用鼻吸气,嗤之以鼻,找出|||vt.用鼻吸气,以轻蔑的口吻说,嗅到','We shouldn\'t sniff at this opportunity--we any not get another like it.','我们不可小看这个机会--也许我们再也找不到这样的机会了。','His generous offer is not to be sniffed at.','对他的慷慨厚意不可嗤之以鼻。'}

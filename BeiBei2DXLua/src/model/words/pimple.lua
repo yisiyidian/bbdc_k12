@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pimple"]={"pimple","['pɪmp(ə)l]","['pɪmpl]","n.丘疹",'n.丘疹,脓疱,疙瘩','The tip of an abscess, a boil, or a pimple, in which pus forms.','脓头中间有脓液的脓疮、疖或丘疹的顶端','The pimple came to a head before bursting.','丘疹长成脓包後才破裂.'}

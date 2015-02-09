@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gregarious"]={"gregarious","[grɪ'geərɪəs]","[grɪ'gɛrɪəs]","adj.群居的",'adj.群居的，爱社交的','Man is a gregarious animal.','人是一种群居的动物。','She is such a gregarious and outgoing person.','她就是这样一个爱社交而且外向的人。'}

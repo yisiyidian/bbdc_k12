@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inordinate"]={"inordinate","[ɪ'nɔːdɪnət]","[ɪn'ɔrdɪnət]","adj.过度的",'adj.过度的,非常的,无法无天的','||Inordinate|| desire is at the root of all evils.','无节制的欲望是一切罪恶的根源。','They spend an inordinate amount of time talking.','他们聊天时间长得超乎想像。'}

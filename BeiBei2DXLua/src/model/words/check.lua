@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["check"]={"check","[tʃek]","[tʃɛk]","vt.检查",'vt.检查，核对；制止，抑制；在…上打勾|||vi.核实，查核；中止；打勾；[象棋]将一军|||n.[美]支票；制止，抑制；检验，核对','The plumber made a careful check of the pipes.','水管工人对管道做了仔细的检查。','They checked their steps.','他们突然停住脚步。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quirk"]={"quirk","[kwɜːk]","[kwɝk]","n.怪癖",'n.怪癖,急转','He have a strange quirk of addressing his wife as Mrs Smith.','他很怪，把自己的妻子称作史密斯夫人。','By a strange quirk of fate they had booked into the same hotel.','真是天缘奇遇，他们住进了同一家旅馆。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sentence"]={"sentence","['sent(ə)ns]","['sɛntəns]","n.句子",'n.句子,意见,宣判,刑罚,命题|||vt.宣判,判决,使遭受','I\'m not satisfied with his interpretation of this sentence.','我不太满意他对这个句子的翻译。','The sentence of six months imprisonment was most unjust.','六个月监禁的判决极其不公。'}

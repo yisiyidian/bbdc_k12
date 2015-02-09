@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cap"]={"cap","[kæp]","[kæp]","n.帽子",'n.帽子,盖子,顶|||vt.给戴帽,覆盖顶端,超过,形成化学键于,抑制|||vi.形成化学键','Winning the gold medal was yet another feather in her cap.','夺得金牌是她又一值得骄傲的成就.','He took off his cap.','他摘掉帽子。'}

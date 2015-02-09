@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congruence"]={"congruence","['kɒŋgrʊəns]","['kɑŋgrʊəns]","n.一致",'n.适合,一致,相合性','What an extraordinary congruence of genius and era!','天才与时代是多么惊人的和谐！','With the congruence answers, they were criticized by Miss Wang.','他们的答案一样，结果被王老师批评了一顿。'}

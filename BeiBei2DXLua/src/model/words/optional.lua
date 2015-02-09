@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["optional"]={"optional","['ɒpʃ(ə)n(ə)l]","['ɑpʃənl]","adj.可以任选的",'adj.可以任选的,非强制的','Some courses in college are required while others are optional.','大学里有的课程是必修的有的是选修的。','It is optional with you.','那是你的自由。'}

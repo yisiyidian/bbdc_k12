@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bowdlerize"]={"bowdlerize","['baʊdləraɪz]","['baʊdləraɪz]","vt.删去",'vt.删去，删节','This book has been bowdlerized.','这本书中不当的部分已被删去。','The paper need to be bowdlerized according to the requirement of the conference.','论文需要根据会议需求进行删节。'}

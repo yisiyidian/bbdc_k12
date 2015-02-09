@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["certainty"]={"certainty","['sɜːt(ə)ntɪ; -tɪn-]","['sɝtnti]","n.确定",'n.确定,确实的事情','It\'s a mathematical certainty.','这事绝对肯定。','That horse is a certainty.','那匹马赢定了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invader"]={"invader","[ɪn'veɪdə(r)]","[ɪn'vedɚ]","n.侵略者",'n.侵略者','The invader laid towns and villages in ruins.','入侵者把村镇变为废墟。','No matter when the invader comes, they will be wiped out clean.','不管侵略者什麽时候来，都必被消灭。'}

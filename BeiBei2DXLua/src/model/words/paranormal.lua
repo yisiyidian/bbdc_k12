@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paranormal"]={"paranormal","[pærə'nɔːm(ə)l]","['pærə'nɔrml]","adj.超过正常的",'adj.超过正常的,超过正常范围的','such paranormal phenomena as telepathy; a medium\'s paranormal powers.','像传心术一样的超自然现象；一个巫师超自然的力量','The speed of the car is paranormal','车子超速了'}

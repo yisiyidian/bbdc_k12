@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interstice"]={"interstice","[ɪn'tɜːstɪs]","[ɪn'tɝstɪs]","n.细裂缝",'n.细裂缝,空隙','The interstices between the bricks let in cold air.','冷空气透过砖缝进入室内.','There is a gleam of luminous gold, where the sinking western sun has found a first direct interstice in the clouds','“从西落太阳在云层里发现的一个直接空隙处，透出一缕金光”'}

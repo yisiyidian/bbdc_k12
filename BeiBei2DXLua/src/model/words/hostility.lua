@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hostility"]={"hostility","[hɒ'stɪlɪtɪ]","[hɑ'stɪləti]","n.敌意",'n.敌意,敌对状态,公开战争','Humour was his only weapon against their hostility.','他有幽默感, 这是他对付他们的敌对行动的唯一手段.','After weeks of silent hostility they\'ve at last had it out with each other.','他们经过几个星期的暗斗之後, 彼此终於谈开了.'}

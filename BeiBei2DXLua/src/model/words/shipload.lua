@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shipload"]={"shipload","['ʃɪpləʊd]","['ʃɪplod]","n.船货",'n.船货,一船上的载货','A single fact is worth a shipload of arguments.','事实胜于雄辩','A shipload of supplies arrived in Havana, Cuba, last night.','昨晚一船补给用品送达了古巴哈瓦那。'}

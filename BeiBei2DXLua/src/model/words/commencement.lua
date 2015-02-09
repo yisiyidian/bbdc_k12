@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commencement"]={"commencement","[kə'mensm(ə)nt]","[kə'mɛnsmənt]","n.开始",'n.开始,毕业典礼','Received the Bachelor of Arts degree at commencement.','在毕业典礼上接受文学学士学位','On ||Commencement|| Day, Joe was sick on bed the college gave him his bachelor\'s degree in absentia.','毕业典礼那天，乔生病卧床。在他缺席的情况下，校方授予他学士学位。'}

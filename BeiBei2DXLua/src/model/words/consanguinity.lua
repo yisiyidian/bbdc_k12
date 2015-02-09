@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consanguinity"]={"consanguinity","[,kɒnsæŋ'ɡwɪnɪtɪ]","[,kɑnsæŋ'ɡwɪnəti]","n.血缘",'n.血缘,血亲,同族','||Consanguinity|| was never considered when Eric decided to fire his brother from the company.','当艾瑞克决定将他的弟弟解雇时，完全没有考虑到血缘关系。','Nothing can change the consanguinity between us.','什么也改变不了我们之间的血缘关系。'}

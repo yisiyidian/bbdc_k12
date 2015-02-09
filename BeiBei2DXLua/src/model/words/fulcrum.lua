@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fulcrum"]={"fulcrum","['fʊlkrəm; 'fʌl-]","['fʊlkrəm]","n.杠杆的支点",'n.杠杆的支点,支点,[动物]转节','Give me a fulcrum and a lever and I can move the Earth.','给我一个杠杆，一个支点，我就能撬动地球。','We unconsciously assume the center of a picture corresponds to a fulcrum.','我们会下意识地认为一幅图的中心是一个支点。'}

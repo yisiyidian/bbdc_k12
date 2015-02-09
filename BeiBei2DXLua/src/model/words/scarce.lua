@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scarce"]={"scarce","[skeəs]","[skɛrs]","adj.稀少的",'adj.缺乏的,不足的,稀少的,罕见的|||adv.勉强','I could scarce believe my eyes.','我几乎不敢相信自己的眼睛。','Food was scarce throughout the war.','在战争期间食物匮乏.'}

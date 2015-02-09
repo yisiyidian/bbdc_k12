@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ambulance"]={"ambulance","['æmbjʊl(ə)ns]","['æmbjələns]","n.救护车",'n.救护车','An ambulance dashed to the scene of the accident.','救护车风驰电掣赶往事故现场.','The light was red but the ambulance drove straight through.','红灯亮著, 但救护车闯了过去.'}

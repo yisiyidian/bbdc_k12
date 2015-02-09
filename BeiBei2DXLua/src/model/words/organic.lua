@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["organic"]={"organic","[ɔː'gænɪk]","[ɔr'gænɪk]","adj.器官的",'adj.器官的,有机的,根本的,接近自然的|||n.有机物质','The music is organic to the story.','这首乐曲是这个故事必不可少的组成部分。','I am not good at organic chemistry.','我的有机化学学得不好。'}

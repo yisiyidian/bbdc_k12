@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["warm"]={"warm","[wɔːm]","[wɔrm]","adj.暖和的",'adj.暖和的,快要发现的,热心的,新鲜的|||vt.&vi.(使)变暖，（使）变得更友好,加温|||adv.温暖地','It was a warm climb to the summit.','向顶峰攀登时身上都热起来了。','Sawing logs is warm work.','锯原木这工作干起来浑身发热。'}

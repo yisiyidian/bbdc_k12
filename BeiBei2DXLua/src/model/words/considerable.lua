@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["considerable"]={"considerable","[kən'sɪd(ə)rəb(ə)l]","[kən'sɪdərəbl]","adj.相当大的",'adj.相当大的,可观的,重要的','The strength of the dollar is causing considerable disquiet on the stock exchange.','美元表现坚挺在证券交易所中引起很大的不安。','He showed/exercised considerable restraint in not suing for a divorce.','他极力克制自己, 不提出离婚诉讼.'}

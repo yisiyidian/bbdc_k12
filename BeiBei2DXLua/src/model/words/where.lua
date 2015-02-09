@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["where"]={"where","[weə]","[wɛr]","adv.哪里",'adv.哪里，在哪里；到哪里；某种情势或位置|||conj.在…的地方|||n.地方，场所|||pron.哪里','This is where he lives.','这就是他居住的地方。','||Where|| did she get the news?','她从哪儿得到这个消息的？'}

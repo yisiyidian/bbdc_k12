@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coarse"]={"coarse","[kɔːs]","[kɔrs]","adj.粗糙的",'adj.粗糙的,非精制的,粗俗的','Your hands are so coarse that it feels like bark.','你的手太粗糙了，摸起来像树皮。','coarse manners.','粗俗的习惯'}

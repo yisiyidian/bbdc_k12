@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reactionary"]={"reactionary","[rɪ'ækʃ(ə)n(ə)rɪ]","[rɪ'ækʃənɛri]","adj.反动的",'adj.反动的,反动主义的,反对改革的|||n.反动者,反动主义者','They forced thousands of peasants into their reactionary armies.','他们迫使成千上万的农民参加他们的反动军队。','It grew ever more clear to everyone that the Minister was too reactionary, too blinkered.','大家都越来越清楚部长太保守、心胸太狭窄。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["husky"]={"husky","['hʌskɪ]","['hʌski]","adj.声音沙哑的",'adj.声音沙哑的|||adj.有壳的|||adj.强壮的|||n.哈士奇，强壮的人','The husky is unequalled for stamina and endurance.','爱斯基摩狗的体力和耐性是无双的.','The teacher speaks with a husky voice.','老师以嘶哑的声音说话。'}

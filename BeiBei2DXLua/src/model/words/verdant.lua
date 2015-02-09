@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verdant"]={"verdant","['vɜːd(ə)nt]","['vɝdnt]","adj.翠绿的",'adj.翠绿的,青','Children are playing on the verdant lawn.','孩子们在绿茵茵的草坪上嬉戏玩耍。','There is a verdant lawn in front of the dormitory.','宿舍前是绿茵茵的草坪。'}

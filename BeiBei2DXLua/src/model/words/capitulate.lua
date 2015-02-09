@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capitulate"]={"capitulate","[kə'pɪtjʊleɪt]","[kə'pɪtʃulet]","vi.有条件投降",'vi.有条件投降','The club eventually capitulated and now grants equal rights to women.','该俱乐部最终让步，现在给予妇女同等的权利。','They were finally forced to capitulate to the terrorists\' demands.','他们最后被迫屈从恐怖分子的要求。'}

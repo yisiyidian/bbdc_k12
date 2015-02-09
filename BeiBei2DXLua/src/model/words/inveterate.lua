@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inveterate"]={"inveterate","[ɪn'vet(ə)rət]","[ɪn'vɛtərət]","adj.根深的",'adj.根深的,成癖的,积习的','It is hard for an inveterate smoker to give up tobacco.','要一位有多年烟瘾的烟民戒烟是困难的。','||Inveterate|| thinking way make bring failure to people.','习惯性思维常常造成失败。'}

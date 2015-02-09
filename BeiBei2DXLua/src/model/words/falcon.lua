@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["falcon"]={"falcon","['fɔː(l)k(ə)n; 'fɒlk(ə)n]","['fælkən]","n.猎鹰",'n.猎鹰','The boys went hunting with their falcon.','男孩子们带着猎鹰出去打猎了。','The falcon cannot hear the falconer.','猎鹰再也听不见主人的呼唤'}

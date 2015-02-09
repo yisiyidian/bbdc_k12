@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peacock"]={"peacock","['piːkɒk]","['pikɑk]","n.(雄)孔雀",'n.(雄)孔雀，爱炫耀的人|||v.炫耀','The sparrow is sorry for the peacock at the burden of its tail.','麻雀看见孔雀负担着它的翎尾，替它担忧。','Children shout when they see the peacock spread his gorgeous tail.','当孔雀展现它华丽的尾巴时，孩子们大声叫着。'}

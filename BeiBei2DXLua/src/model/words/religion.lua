@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["religion"]={"religion","[rɪ'lɪdʒ(ə)n]","[rɪ'lɪdʒən]","n.宗教;宗教信仰",'n.宗教;宗教信仰','Jesus was the founder of the Christian religion.','耶稣是基督教的创始人。','I am unconcerned with questions of religion or morality.','我对宗教问题和道德问题不感兴趣。'}

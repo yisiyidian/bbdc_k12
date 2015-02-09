@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["categorize"]={"categorize","['kætəɡəraɪz]","['kætəgə'raɪz]","vt.分类",'vt.分类','I need to categorize these words.','我需要将这些单词分类。','Our task was to categorize the letters and send them to different offices.','我们的任务就是把这些信件分类送往不同的办公室'}

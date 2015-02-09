@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissuade"]={"dissuade","[dɪ'sweɪd]","[dɪ'swed]","vt.劝阻",'vt.劝阻','My teacher dissuade me from accepting the job.','老师劝我不要接受这份工作。','She tried to dissuade her son from marrying the girl.','她试着劝儿子不要和那个女孩结婚。'}

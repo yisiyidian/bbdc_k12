@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lymph"]={"lymph","[lɪmf]","[lɪmf]","n.淋巴",'n.淋巴,淋巴液','An unattached body cell, such as a blood or lymph cell.','活细胞孤立的身体细胞，例如血球细胞、淋巴细胞','Any of several diseases of the blood or lymph vessels.','管腺病；淋巴管病一种血管或淋巴管疾病'}

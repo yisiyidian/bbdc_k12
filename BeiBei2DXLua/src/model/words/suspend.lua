@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suspend"]={"suspend","[sə'spend]","[sə'spɛnd]","v.暂停",'v.推迟,悬(浮),挂,暂停,取消|||vi.吊,悬浮|||vt.悬,挂,吊,暂停,中止','The policeman was suspended while the complaint was investigated.','因该警察遭投诉，在调查期间已令其暂停职务。','suspend a student from school.','勒令一学生休学'}

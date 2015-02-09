@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["desolation"]={"desolation","[desə'leɪʃ(ə)n]","[,dɛsə'leʃən]","n.荒芜",'n.荒芜,荒废,荒凉','He felt startled when he saw the desolation caused by war.','看到战争造成的荒凉，他感到触目惊心。','a drought that brought desolation to the region.','旱灾使这一地区荒芜了'}

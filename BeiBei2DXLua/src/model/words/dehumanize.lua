@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dehumanize"]={"dehumanize","[diː'hjuːmənaɪz]","[,di'hjumənaɪz]","v.使失掉人性",'v.使失掉人性,使成兽性','Torture always dehumanizes both the torturer and his victim.','严刑拷打往往使施刑者和受刑者都丧失人性.','slaves who had been dehumanized by their abysmal condition.','被极端恶劣的条件剥夺了人性的奴隶'}

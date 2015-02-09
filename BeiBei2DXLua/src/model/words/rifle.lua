@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rifle"]={"rifle","['raɪf(ə)l]","['raɪfl]","n.步枪",'n.步枪|||v.洗劫,抢劫','The hostage had a rifle levelled at his head.','一枝步枪瞄准著人质的头.','The hunter steadied his rifle and fired.','猎人端稳了猎枪，然后开了火。'}

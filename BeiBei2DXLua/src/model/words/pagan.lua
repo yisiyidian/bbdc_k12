@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pagan"]={"pagan","['peɪg(ə)n]","['pegən]","n.异教徒",'n.异教徒，无宗教信仰者|||adj.异教的,异教徒的，无宗教信仰的','A woman who presides over especially pagan rites.','女祭司指专门主持，基督教以外宗教仪式的女人','That pagan did not believe in Christ.','那个异教徒从不相信基督。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reliance"]={"reliance","[rɪ'laɪəns]","[rɪ'laɪəns]","n.信赖",'n.信赖,所信赖的人或物','A child has reliance on his or her mother.','孩子都依赖于母亲.','||Reliance|| on something in the future; hope.','期待，期望对某事未来的信赖；希望'}

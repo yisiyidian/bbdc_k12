@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sign"]={"sign","[saɪn]","[saɪn]","n.标志",'n.符号,标志,手势,迹象,招牌|||v.签,做手势,做标记','Just sign on the dotted line and the car is yours.','你只需签署这份文件，这辆汽车就是你的了。','Arsenal have just signed a new striker.','阿塞纳尔队刚雇用了一名新前锋。'}

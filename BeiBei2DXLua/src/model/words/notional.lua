@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["notional"]={"notional","['nəʊʃ(ə)n(ə)l]","['noʃənl]","adj.虚的",'adj.虚的；概念上的(想象的,象征的)','My calculation is based on notional figures, since the actual figures are not yet available.','因尚无实际数字, 我是根据估计的数字计算的.','it\'s just a notional idea','这只是个虚的想法'}

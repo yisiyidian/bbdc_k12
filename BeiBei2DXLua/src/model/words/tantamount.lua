@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tantamount"]={"tantamount","['tæntəmaʊnt]","['tæntə'maʊnt]","adj.同等的",'adj.同等的,相等的,相当于','This invasion is tantamount to a declaration of war.','这次侵略就相当于宣战。','What Bracey is saying is tantamount to heresy.','布雷西的言论简直就是异端邪说。'}

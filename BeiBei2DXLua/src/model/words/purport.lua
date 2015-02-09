@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["purport"]={"purport","[pə'pɔːt]","['pɝpɔt]","n.意义",'n.意义,要旨,大要|||v.意味著,做为...要旨,要领是...','Her letter may purport her forthcoming arrival.','她的来信可能意味着她快要到了。','The purport of the statement is that the firm is bankrupt.','该项声明大意是说该商行已经破产。'}

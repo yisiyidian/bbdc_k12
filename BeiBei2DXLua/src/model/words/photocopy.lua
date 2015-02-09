@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["photocopy"]={"photocopy","['fəʊtəʊkɒpɪ]","['fotokɑpi]","n.影印本",'n.影印本|||v.影印','It is a very poor photocopy but you should be able to make something of it.','那个照相复制本非常蹩脚, 不过你应该能够看懂的。','A powdery ink used dry or suspended in a liquid to produce a photocopy.','色粉一种粉状颜料, 在液体中变干或凝结, 从而产生照片底片'}

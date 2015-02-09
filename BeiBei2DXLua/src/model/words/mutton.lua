@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mutton"]={"mutton","['mʌt(ə)n]","['mʌtn]","n.羊肉",'n.羊肉','Please warm(up) yesterday\'s mutton.','请把昨天的羊肉热一下。','He likes to eat mutton which was seasoned with garlic.','他喜欢吃用大蒜调味的羊肉.'}

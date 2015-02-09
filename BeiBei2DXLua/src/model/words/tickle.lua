@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tickle"]={"tickle","['tɪk(ə)l]","['tɪkl]","v.胳肢",'n.胳肢|||v.胳肢,发痒,使快乐','I\'m tickled pink that my essay won the prize.','我的文章获奖了，我高兴得要命。','The little girl laughed when her uncle gave her a tickle.','叔叔呵那个小姑娘的痒时，小姑娘笑起来。'}

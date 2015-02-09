@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nothing"]={"nothing","['nʌθɪŋ]","['nʌθɪŋ]","pron.什么也没有",'adv.毫不|||n.微不足道的人或事|||pron.什么也没有','||Nothing|| but a miracle can save her now.','现在只有出现奇迹她才能得救。','I\'ve heard nothing about it.','我什么也没听说'}

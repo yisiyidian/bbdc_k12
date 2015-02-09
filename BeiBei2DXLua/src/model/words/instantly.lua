@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["instantly"]={"instantly","['ɪnst(ə)ntlɪ]","['ɪnstəntli]","adv.立即地",'adv.立即地,即刻地','The poor girl was dismissed instantly.','这个可怜的姑娘被当即解雇。','It\'s an instantly recognizable face.','那是我一眼就能认得出的面孔。'}

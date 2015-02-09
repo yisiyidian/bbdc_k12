@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["idiomatic"]={"idiomatic","[,ɪdɪə'mætɪk]","[,ɪdɪə'mætɪk]","adj.地道的",'adj.地道的，成语的，符合语言习惯的','To pull a face is an idiomatic expression.','To pull a face"愁眉苦脸是一个习惯表达法。','He speaks idiomatic English.','他说道地的英语。'}

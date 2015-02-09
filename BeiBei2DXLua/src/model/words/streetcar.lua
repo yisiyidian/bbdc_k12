@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["streetcar"]={"streetcar","['striːtkɑː]","['stritkɑr]","n.路面电车",'n.路面电车，市内有轨电车','The city has taken the old streetcar tracks up.','这座城市已经把旧的电车轨道拆除了。','The fare charged a passenger, as on a streetcar or bus.','如在市区电车或公车上找给顾客的零钱'}

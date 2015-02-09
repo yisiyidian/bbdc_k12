@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissimulate"]={"dissimulate","[dɪ'sɪmjʊleɪt]","[ di'simjuleit ]","v.掩饰",'v.掩饰,假装,装糊涂','This man was too injured to dissimulate well.','这个人受伤严重，无法完全遮掩住。','They were decked out in tracksuits, seemingly to dissimulate their true function.','他们都穿着田径服，似乎想掩饰他们的真实职能。'}

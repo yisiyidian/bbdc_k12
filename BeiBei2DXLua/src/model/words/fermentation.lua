@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fermentation"]={"fermentation","[fɜːmen'teɪʃ(ə)n]","[,fɝmɛn'teʃən]","n.发酵",'n.发酵，骚动','Sugar is converted into alcohol through the process of fermentation.','糖经过发酵变成酒精。','The fermentation of milk causes it to curdle.','牛奶发酵会凝结起来'}

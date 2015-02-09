@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cadge"]={"cadge","[kædʒ]","[kædʒ]","v.行乞",'v.行乞,乞求','Just cupboard love; they were always coming up to cadge from her money, food furniture, anything and everything.','他们是有所图的。他们老是来向他要东西，要钱，要吃的东西，要家具，什么东西都要。','He\'s always ||cadging|| meals from his friends.','他总吃朋友的便宜饭.'}

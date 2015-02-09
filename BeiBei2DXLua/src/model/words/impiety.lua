@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impiety"]={"impiety","[ɪm'paɪɪtɪ]","[ɪm'paɪəti]","n.不敬",'n.不敬，不恭(尤指对上帝和宗教)','His remarks show impiety to religion.','他的话表现出对宗教的不敬。','||Impiety|| is classically a lack of proper concern for the obligations owed to public religious observation','不恭'}

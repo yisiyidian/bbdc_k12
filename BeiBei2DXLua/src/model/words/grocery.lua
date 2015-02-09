@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grocery"]={"grocery","['grəʊs(ə)rɪ]","['ɡrosəri]","n.杂货店",'n.杂货店','A delivery van has brought the grocery order.','送货车已把定购的杂货送来了.','I am on my way to the grocery store.','我正在去杂货店的路上。'}

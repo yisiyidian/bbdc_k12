@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pronoun"]={"pronoun","['prəʊnaʊn]","['pronaʊn]","n.代词",'n.代词','That is a demonstrative pronoun.','that是一个指示代词。','Please make a sentence with this pronoun.','请用这个代词造一个句子。'}

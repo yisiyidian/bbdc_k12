@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ether"]={"ether","['iːθə]","['iθɚ]","n.乙醚",'n.乙醚,醚','The merciful magic of ether was not used that day, so the poor soul had to bear their pain as best they may.','那天, 由于没有使用能够魔术般解除疼痛的乙醚, 那些可怜的人得尽量忍受他们的痛苦。','A whiff of ether will put you out in a few seconds.','一剂乙醚几秒钟后就会使你失去知觉。'}

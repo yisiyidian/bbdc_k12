@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["etymology"]={"etymology","[,etɪ'mɒlədʒɪ]","[,ɛtɪ'mɑlədʒi]","n.语源",'n.语源,字源学','This dictionary does not give ||etymologies||.','这部词典不介绍词源。','The hippies\' etymology is contentious.','嬉皮士的语源是有争议的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deign"]={"deign","[deɪn]","[den]","v.屈尊",'v.屈尊,惠允(做某事)|||vi.屈尊|||vt.赐于','He did not deign to an answer.','他不屑置答。','The lady deigned to come our place.','夫人屈尊来我们这里。'}

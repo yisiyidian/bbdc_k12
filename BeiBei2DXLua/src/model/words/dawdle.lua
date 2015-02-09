@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dawdle"]={"dawdle","['dɔːd(ə)l]","[ 'dɔ:dl ]","v.游手好闲",'v.游手好闲,混日子','Do not dawdle about like that.','别那么磨磨蹭蹭了。','He got fed up as bank staff dawdled over cashing him a cheque.','银行职员慢吞吞地给他兑现支票，他憋了一肚子气。'}

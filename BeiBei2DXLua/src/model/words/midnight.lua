@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["midnight"]={"midnight","['mɪdnaɪt]","['mɪdnaɪt]","n.午夜",'n.午夜，漆黑','We stayed up yarning until midnight.','我们讲故事一直讲到半夜才睡。','The train wrecked at midnight.','这列火车半夜出轨了。'}

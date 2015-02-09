@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hedge"]={"hedge","[hedʒ]","[hɛdʒ]","n.树篱",'n.树篱,防止财产损失的方法|||vt.包围,限制|||vi.种树篱,拐弯抹角,保护自己不受财产损失|||adj.树篱的,篱笆边的','There is an opening in the hedge.','这篱笆上有个洞。','They managed to wriggle (their way) through the thick hedge.','他们设法钻过了厚厚的树篱.'}

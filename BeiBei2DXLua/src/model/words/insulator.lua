@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insulator"]={"insulator","['ɪnsjʊleɪtə]","['ɪnsəletɚ]","n.绝缘体",'n.绝缘体,绝热器','Conductors let electricity through, but insulators don\'t let through.','导体让电流通过，而绝缘体则不让通过。','Few substances can equal fur as an insulator.','作为绝缘体很少有其他材料能与动物皮毛相媲美.'}

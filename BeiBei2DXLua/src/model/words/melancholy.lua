@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["melancholy"]={"melancholy","['melənkəlɪ]","['mɛlənkɑli]","n.忧沉",'n.忧沉,悲哀,愁思|||adj.忧沉的,使人悲伤的,愁思的','A deep melancholy runs through her poetry.','她的诗中贯穿著悲伤的情调.','||Melancholy|| is the preponderant mood of the poem.','忧郁的感情是该诗的基调.'}

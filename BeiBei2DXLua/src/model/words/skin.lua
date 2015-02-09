@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skin"]={"skin","[skɪn]","[skɪn]","n.皮",'n.皮，皮肤；（蔬菜，水果等）外皮；毛皮|||vt.剥皮，削皮；擦破皮，擦伤；欺骗|||vi.使愈合，长皮|||adj.[俚]色情的','I nearly jumped out of my skin when a hand grabbed me in the dark.','黑暗中有一只手把我抓住，可真把我吓了一大跳。','It\'s no skin off my nose if I lose this job, I can always get another one.','我失掉这份工作也没有关系，我随时都能再找到工作。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tanner"]={"tanner","['tænə]","['tænɚ]","n.制革工人",'n.制革工人','The tanners were on strike，expressing their disagreement with the demand of working overtime.','制革工人通过罢工来宣泄他们对要求加班的不满。','The tanners asked their boss to raise their salary.','这些制革工人要求老板涨工资。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snappish"]={"snappish","['snæpɪʃ]","['snæpɪʃ]","adj.脾气暴躁的",'adj.脾气暴躁的，爱咬人的','a snappish mongrel.','咬人的杂种狗','a snappish tone of voice; a snappish debating partner.','声调中带怒气的声音；易怒的辩论伙伴'}

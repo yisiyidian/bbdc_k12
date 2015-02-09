@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["timorous"]={"timorous","['tɪm(ə)rəs]","['tɪmərəs]","adj.胆怯的",'adj.胆怯的,胆小的,羞怯的','She is as timorous as a rabbit.','她胆小得像只兔子。','He is a reclusive, timorous creature.','他是个离群索居、胆小羞怯的家伙。'}

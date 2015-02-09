@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chocolate"]={"chocolate","['tʃɒk(ə)lət]","['tʃɑklət]","n.巧克力",'n.巧克力,巧克力糖,巧克力饮品|||adj.巧克力的,有巧克力糖衣的,巧克力色的','We covered the cakes with chocolate sprinkles.','我们给蛋糕洒上巧克力末。','You must avoid sweet foods, e.g. cake, chocolate, sugar and ice cream.','你要避免吃甜食，例如蛋糕、巧克力、糖和冰淇淋。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["serpent"]={"serpent","['sɜːp(ə)nt]","['sɝpənt]","n.蛇",'n.蛇,蛇一般的人,狡猾的人','The serpent fascinated its prey.','蛇用目光吓住了它的猎物。','There\'s a serpent beside him.','他身边有条大蛇.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conduit"]={"conduit","['kɒndjʊɪt; 'kɒndɪt]","['kɑnduɪt]","n.导管",'n.导管,水管,沟渠','Pakistan became a conduit for drugs produced in Afghanistan.','巴基斯坦成了阿富汗毒品的贩运通道。','The organization had acted as a conduit for money from the arms industry.','那家机构充当了从军火工业向他处中转资金的渠道。'}

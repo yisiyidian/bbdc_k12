@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cemetery"]={"cemetery","['semɪtrɪ]","['sɛmə'tɛri]","n.公墓",'n.公墓,墓地','His remains were shipped back and laid away in a cemetery.','他的遗体被运回，埋葬在一个公墓里。','The body was interred at the cemetery.','遗体埋葬在公墓里.'}

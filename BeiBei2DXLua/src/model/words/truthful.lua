@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["truthful"]={"truthful","['truːθfʊl; -f(ə)l]","[ 'tru:θful ]","adj.诚实的",'adj.诚实的，真实的','Ruth is always truthful and anything she says will be accredited.','露丝总是诚实的, 所以她所说的任何话都会被人相信。','He is a truthful child.','他是个从不说谎的孩子。'}

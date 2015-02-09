@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rocky"]={"rocky","['rɒkɪ]","['rɑki]","adj.岩石的",'adj.岩石的,像岩石的，坚硬的，麻木的','The walkers were making slow progress up the rocky path.','行人沿著岩石小道慢慢往上走.','Most of the shore is rocky, but there is a sandy beach.','沿海大部分为岩石, 但也有一部分沙滩。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["section"]={"section","['sekʃ(ə)n]","['sɛkʃən]","n.部分",'n.零件,部分,章节,区域,部门,路段,断面|||vt.划分,切开|||vi.划分','The last section sums up all the arguments on either side.','最后一部分总结了双方的全部论点。','The architect drew the house in section.','建筑师画出房子的剖面图。'}

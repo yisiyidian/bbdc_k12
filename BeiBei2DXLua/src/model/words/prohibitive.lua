@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prohibitive"]={"prohibitive","[prə(ʊ)'hɪbɪtɪv]","[prə'hɪbətɪv]","adj.禁止的",'adj.禁止的,抑制的，（价格等）过高的','The cost of redeveloping the product is prohibitive.','重新研制此产品的成本高得使人不敢问津。','The cost of travel to the far east is prohibitive.','到远东旅游的费用高的令人不敢问津。'}

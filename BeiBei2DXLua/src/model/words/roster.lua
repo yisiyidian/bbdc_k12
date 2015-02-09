@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["roster"]={"roster","['rɒstə]","['rɑstɚ]","n.值勤表",'n.值勤表,花名册','The teacher called everybody\'s name according to the roster.','老师按花名册点了每个学生的名字。','The next day he put himself first on the new roster for domestic chores.','第二天，他把自己排在了新的家务值日表的第一位。'}

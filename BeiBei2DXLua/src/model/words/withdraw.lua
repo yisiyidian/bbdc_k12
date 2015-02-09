@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["withdraw"]={"withdraw","[wɪð'drɔː]","[wɪð'drɔ]","vt.撤回",'vt.撤回,取回,撤退|||vi.退回,撤退','He talked to us for an hour and then ||withdrew||.','他跟我们谈了一小时的话就走了。','The troops have been withdrawn from the danger area.','部队已经撤出危险地带。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["why"]={"why","[waɪ]","[waɪ]","adv.为什么",'adv.为什么|||conj.…的理由,为什么|||int.咳,哎呀|||pron.为何,为什么','The reasons why he did it are obscure.','他做那事的理由还不清楚。','||Why|| not let her do as she likes?','为什么不让她想怎么做就怎么做呢？'}

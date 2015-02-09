@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["identification"]={"identification","[aɪ,dentɪfɪ'keɪʃ(ə)n]","[aɪˌdentɪfɪ'keʃn]","n.身份的证明",'n.身份的证明|||n.视为同一,证明同一,确认','The identification of rabies virus has saved many lives.','狂犬病病毒的确认挽救了许多人的性命.','His identification with the hero of the book made him sleepless.','对书中主人公的同情使他睡不着.'}

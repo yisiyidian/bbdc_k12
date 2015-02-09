@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unify"]={"unify","['juːnɪfaɪ]","['junɪfaɪ]","v.统一",'v.统一,使成一体','It can be helped by the unifying of relief activities which today are of ten scattered, uneconomical, unequal.','将现在常常是分散不经济、不平等的救济活动统一起来有助于任务的完成。','Is it possible to unify such scattered islands into a nation?','有可能把这样一些散落在大海上的岛屿统一成一个国家吗？'}

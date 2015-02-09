@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["separate"]={"separate","['sep(ə)reɪt]","['sɛpret]","v.分开",'n.分开,抽印本|||adj.分开的,各自的,单独的|||v.分开,隔开,分居','The war separated many families.','战争使许多家庭妻离子散。','This word has three separate meanings.','这个词有三个不同的意思。'}

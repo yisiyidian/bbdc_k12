@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gymnast"]={"gymnast","['dʒɪmnæst]","['dʒɪmnæst]","n.体操运动员",'n.体操运动员','A gymnast on the trampoline was turning (ie performing) somersaults.','有个体操运动员正在蹦床上做空翻.','The gymnast dared a breathtakingly difficult move.','这位体操选手敢于做惊险的高难度动作'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["danger"]={"danger","['deɪn(d)ʒə]","['dendʒɚ]","n.危险",'n.危险','The operation is a success and now the patient is out of danger.','手术成功了，病人现在已脱离危险。','She was on the danger list, but is much better now.','她曾一度病危，现在好多了。'}

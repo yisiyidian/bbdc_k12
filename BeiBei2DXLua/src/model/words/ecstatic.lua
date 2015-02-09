@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ecstatic"]={"ecstatic","[ɪk'stætɪk; ek-]","[ɪk'stætɪk]","n.狂喜的人",'n.狂喜的人|||adj.狂喜的','Intense and especially ecstatic or exultant happiness.','欢欣，喜悦，高兴强烈的喜悦，尤指狂喜或欢腾的喜悦','My daughter\'s birth was ecstatic.','我女儿的出生令人欣喜。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["timely"]={"timely","['taɪmlɪ]","['taɪmli]","adj.及时的",'adj.及时的,适时的|||adv.及时的','Be timely and exact.','要做到又及时又准确。','I do appreciate your timely help.','我的确很感谢您的及时帮助。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corrosion"]={"corrosion","[kə'rəʊʒ(ə)n]","[kə'roʒən]","n.侵蚀(腐蚀",'n.侵蚀(腐蚀,锈)','Clean off any corrosion before applying the paint.','先除去所有的锈迹再上油漆.','Please clean off the corrosion.','请将锈迹清理干净。'}

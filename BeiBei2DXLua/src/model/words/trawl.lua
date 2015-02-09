@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trawl"]={"trawl","[trɔːl]","[trɔl]","n.拖网",'n.拖网|||v.用拖网捕鱼,搜罗|||vi.用拖网捕鱼','The police are trawling (through) their files for similar cases.','警方正在查阅类似案件的档案.','A team of officers is trawling through the records of thousands of petty thieves.','一队警察正在数千名小偷的记录中搜索。'}

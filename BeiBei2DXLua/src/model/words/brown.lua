@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brown"]={"brown","[braʊn]","[braʊn]","adj.棕色的",'adj.褐色的,棕色的|||n.褐色,棕色|||(姓)布朗','He had brown skin.','他的皮肤是棕色的','Ms. ||Brown|| is active in the party.','布朗女士在晚会上很活跃。'}

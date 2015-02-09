@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bovine"]={"bovine","['bəʊvaɪn]","['bovaɪn]","adj.(似)牛的",'adj.(似)牛的,迟钝的','He was a gentle, rather bovine man.','他是一位文雅而反应迟钝的人。','I\'m depressed by the bovine enthusiasm of the crowd\'s response.','人群毫无热情的迟钝反应使我感到很沮丧。'}

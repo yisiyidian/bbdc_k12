@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inaccurate"]={"inaccurate","[ɪn'ækjʊrət]","[ɪn'ækjərət]","adj.不准确的",'adj.不准确的，错误的','Your information is inaccurate and your conclusion is therefore wrong.','你的信息不准确，所以你的结论是错误的。','It was good drama, but historically inaccurate.','戏倒是出好戏, 但与史实有出入.'}

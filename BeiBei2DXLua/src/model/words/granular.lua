@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["granular"]={"granular","['grænjʊlə]","['grænjəlɚ]","adj.由小粒而成的",'adj.由小粒而成的,粒状的','granular cells.','颗粒细胞','The substance is hard and granular.','该物质地坚硬, 呈颗粒状。'}

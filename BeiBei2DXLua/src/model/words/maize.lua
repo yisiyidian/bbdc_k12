@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maize"]={"maize","[meɪz]","[mez]","n.玉米",'n.玉米','Do you care for maize?','你喜欢吃玉米吗？','||Maize|| is widely planted in the America.','玉米在美洲广泛种植。'}

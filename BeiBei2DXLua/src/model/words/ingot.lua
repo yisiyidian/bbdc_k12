@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ingot"]={"ingot","['ɪŋgət]","['ɪŋgət]","n.[冶金]锭",'n.[冶金]锭,铸块','An ingot is a lump of metal, usually shaped like a brick.','ingot 就是一整块金属，通常呈砖状','a gold ingot','金锭'}

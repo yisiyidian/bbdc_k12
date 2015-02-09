@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exponential"]={"exponential","[,ekspə'nenʃ(ə)l]","['ɛkspə'nɛnʃəl]","adj.指数的",'adj.指数的|||n.指数','an exponential curve.','指数曲线。','exponential growth','几何增长'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flatter"]={"flatter","['flætə]","['flætɚ]","vt.&vi.阿谀奉承",'vt.&vi.阿谀奉承,取悦,炫耀|||n.平整工具','Oh, you flatter me.','哦，你过奖了。','I feel greatly flattered by your invitation to address the meeting.','蒙您邀请在此会上演说，我深感荣幸。'}

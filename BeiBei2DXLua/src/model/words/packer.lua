@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["packer"]={"packer","['pækə]","['pækɚ]","n.包装者(打包机",'n.包装者(打包机,密垫)','I took out a packer of cigarettes and offered the man one.','我拿出一包香烟请这个人吸一支.','Norma Jones worked as a packer in a local chemical factory.','诺尔玛·琼斯在当地一家化工厂当打包工。'}

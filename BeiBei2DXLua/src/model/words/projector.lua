@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["projector"]={"projector","[prə'dʒektə]","[prə'dʒɛktɚ]","n.放映机",'n.放映机(探照灯,发射装置,设计者,制图投射线)','An early movie projector.','一种早期电影放映机','I do not deny that the projector be top quality.','我并不否认放映机质量上乘。'}

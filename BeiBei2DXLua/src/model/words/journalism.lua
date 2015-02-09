@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["journalism"]={"journalism","['dʒɜːn(ə)lɪz(ə)m]","['dʒɝnl'ɪzəm]","n.新闻工作",'n.新闻工作,新闻业,新闻写作','Cliche is a feature of bad journalism.','使用套语是拙劣的新闻体的特点.','Political reporting has become a staple of American journalism.','政治新闻已成为美国新闻报道的主要内容。'}

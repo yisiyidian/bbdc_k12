@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tribulation"]={"tribulation","[,trɪbjʊ'leɪʃ(ə)n]","[,trɪbju'leʃən]","n.苦难",'n.苦难,灾难','After many trial and tribulation, we finally reach our destination.','经过了许多考验和磨难之后，我们终于到达了目的地。','It was a time of great tribulation.','那是一段充满苦难的时期。'}

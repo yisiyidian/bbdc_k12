@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radical"]={"radical","['rædɪk(ə)l]","['rædɪkl]","n.激进份子",'n.激进份子,原子团,激进派|||adj.急进的,根本的,激进的,基本的,彻底的','I don\'t belong to the school of thought that favours radical change.','我不属於激进派.','radical opinions on education.','对教育的极端的见解'}

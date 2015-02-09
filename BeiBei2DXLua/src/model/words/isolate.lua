@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["isolate"]={"isolate","['aɪsəleɪt]","['aɪsəlɪt]","adj.孤立的",'adj.孤立的|||v.隔离,孤立|||vt.使隔离,使孤立','Scientists have isolated the virus causing the epidemic.','科学家们已分离出引起这种流行病的病毒。','We should never isolate ourselves from the masses.','我们永远不能脱离群众'}

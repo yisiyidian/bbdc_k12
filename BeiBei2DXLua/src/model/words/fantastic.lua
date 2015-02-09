@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fantastic"]={"fantastic","[fæn'tæstɪk]","[fæn'tæstɪk]","adj.极好的",'adj.极好的,难以相信的,奇异的,幻想的','He is given to telling fantastic stories about his travels in Asia.','他喜欢告诉我们他在亚洲旅游的新奇经历。','My daughter likes to describe her fantastic dreams to me.','我女儿喜欢给我讲她那些奇怪的梦。'}

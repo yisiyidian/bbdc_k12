@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contusion"]={"contusion","[kən'tjuːʒ(ə)n]","[kən'tuʒn]","n.打伤",'n.打伤,撞伤','contusion','挫伤','And main types of injuries are contusion, scratch, sprain and strain.','运动损伤以挫伤、擦伤、扭伤和拉伤为主。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["allegory"]={"allegory","['ælɪg(ə)rɪ]","['æləɡɔri]","n.寓言",'n.寓言，讽喻，寓意','The blindfolded figure with scales is an allegory of justice.','蒙着眼睛手执天平的形象象征着正义。','The book is a kind of allegory of Latin American history.','这本书有点像是拉丁美洲历史的寓言。'}

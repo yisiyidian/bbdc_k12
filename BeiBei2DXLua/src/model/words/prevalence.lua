@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prevalence"]={"prevalence","['prev(ə)l(ə)ns; 'prevəl(ə)ns; 'prevələns]","['prɛvələns]","n.传播",'n.传播,流行,普及','I\'m shocked at the prevalence of bribery among these officials.','我对这些官员的普遍受贿感到震惊。','They are so surprised by the prevalence of anti-government sentiments.','他们对普遍存在的反政府情绪感到很吃惊。'}

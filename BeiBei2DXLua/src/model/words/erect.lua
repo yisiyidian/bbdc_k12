@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["erect"]={"erect","[ɪ'rekt]","[ɪ'rɛkt]","adj.直立的",'adj.直立的,竖立的,笔直的|||v.竖立,使...直立,建筑','an erect lily stalk; an erect posture.','挺立的百合花茎；直立的姿势','erect a skyscraper.','建造一幢摩天大厦'}

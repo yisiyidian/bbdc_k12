@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["metropolitan"]={"metropolitan","[metrə'pɒlɪt(ə)n]","[,mɛtrə'pɑlɪtən]","n.大都市的居民",'n.大都市的居民,大主教,母国的居民|||adj.大都市的,大主教区的,母国的','Canadian French is different from the language of metropolitan France.','加拿大的法语与法国本土的法语不相同.','||Metropolitan|| residents are used to fast rhythm.','大都市的居民习惯于快节奏.'}

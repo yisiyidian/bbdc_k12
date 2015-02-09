@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tense"]={"tense","[tens]","[tɛns]","adj.紧张的",'adj.紧张的,拉紧的|||vt.使紧张,拉紧|||vi.变得紧张|||n.(动词的)时态','Most English verbs are inflected with `-ed\' in the past tense.','英语大多数动词过去式词尾均变化为-ed的形式.','Try to act naturally, even if you\'re tense.','即使紧张也不要做作.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["goodness"]={"goodness","['gʊdnɪs]","['ɡʊdnəs]","n.善良",'n.善良,美德，精华|||int.天哪','Thank goodness!','谢天谢地！','She\'s the very incarnation of goodness.','她是美德的化身.'}

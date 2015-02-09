@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["digit"]={"digit","['dɪdʒɪt]","['dɪdʒɪt]","n.数字",'n.数字,位数,指头','The number 410 contains three digits.','数字 410 中包括三个数目字。','He made a rude gesture with his digits','他用手指做了一个不礼貌的手势。'}

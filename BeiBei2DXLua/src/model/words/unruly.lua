@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unruly"]={"unruly","[ʌn'ruːlɪ]","[ʌn'ruli]","adj.难控制的",'adj.难控制的,无法无天的,任性的','He is an unruly boy grown in parents\' spoil.','他是个在父母溺爱中长大的任性孩子。','The severe punishment was meted out to the unruly hooligan.','对那个嚣张的流氓已给予严厉惩处。'}

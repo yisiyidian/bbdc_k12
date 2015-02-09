@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shortage"]={"shortage","['ʃɔːtɪdʒ]","['ʃɔrtɪdʒ]","n.不足",'n.不足,缺少','There was a shortage of oxygen at the top of the mountain.','山顶上缺氧。','The bad harvest led to severe food shortage.','歉收引起食物严重短缺。'}

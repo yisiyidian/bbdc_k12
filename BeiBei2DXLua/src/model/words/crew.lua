@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crew"]={"crew","[kruː]","[krʊ]","n.全体船员",'n.全体船员,全体乘务员|||vi.一起工作','The Air Commodore briefed the bomber crew on their dangerous mission.','空军准将向轰炸机机组下达执行危险任务的各项指示。','They were a motley crew.','这帮人成份混杂。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hail"]={"hail","[heɪl]","[hel]","n.冰雹",'n.冰雹,致敬,招呼|||vt.向...欢呼,致敬,招呼|||vi.下雹|||int.万岁,欢迎','An old friend hailed me from the other side of the street.','一个老朋友从街的对面喊我。','It\'s hailing outside.','外面在下冰雹。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obtuse"]={"obtuse","[əb'tjuːs]","[ əb'tju:s, ɔb- ]","adj.钝的",'adj.钝的,不尖的,圆头的','The knife is too obtuse to use.','刀很钝几乎不能用。','You were too obtuse to take the hint.','你太迟钝了，没有理解这种暗示。'}

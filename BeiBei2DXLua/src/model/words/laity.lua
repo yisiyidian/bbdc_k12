@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["laity"]={"laity","['leɪɪtɪ]","['leəti]","n.外行人(门外汉)",'n.外行人(门外汉)，非神职信徒','Clergy and laity alike are divided in their views.','神职人员和信众同样都观点各异。','The Church and the laity were increasingly active in charity work.','教会与俗众越来越积极参与慈善工作。'}

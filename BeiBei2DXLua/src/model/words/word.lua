@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["word"]={"word","[wɜːd]","[wɝd]","n.词",'n.词,单词,消息,诺言|||vt.用词语表达','Could we have a word before you go to the meeting?','你去开会之前，咱们能私下说句话吗？','Tell me what happened in your own words.','用你自己的话把发生的事情告诉我。'}

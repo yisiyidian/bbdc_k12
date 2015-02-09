@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["picturesque"]={"picturesque","[,pɪktʃə'resk]","[,pɪktʃə'rɛsk]","adj.如画的",'adj.如画的,生动的,别致的','The castle stands in a picturesque setting surrounded by hills.','这座城堡四周环山, 风景如画.','The place is remarkable for its picturesque scenery.','这个地方以它的如画的景色著称。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encumber"]={"encumber","[ɪn'kʌmbə; en-]","[ɪn'kʌmbɚ]","v.妨害",'v.妨害,阻害','The girl\'s long skirt encumber her while running.','女孩的长裙会妨碍她跑步。','He is encumbered with a large family.','他被一个大家庭所拖累。'}

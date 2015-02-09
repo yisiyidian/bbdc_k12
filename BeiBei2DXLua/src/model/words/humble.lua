@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["humble"]={"humble","['hʌmbl]","['hʌmbl]","adj.卑下的",'adj.卑下的,谦逊的,粗陋的|||vt.使...卑下,贬低','The more noble, the more humble.','结实愈丰者，其穗愈低。','He is a humble and submissive servant.','他是个恭顺的仆人。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oncoming"]={"oncoming","['ɒnkʌmɪŋ]","['ɔn,kʌmɪŋ]","adj.接近的",'adj.接近的,即将到来的|||n.接近','Remember to ease up as you approach the bridge; oncoming traffic has the right of way.','记住，靠近大桥时开慢一些，迎面来的车流有先行权。','Gave way to an oncoming car.','给一辆即将过来的汽车让路'}

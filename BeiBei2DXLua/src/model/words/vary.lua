@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vary"]={"vary","['veərɪ]","[´vεrrɪ]","vt.改变",'vt.改变,使多样化|||vi.变化,违背','vary one\'s diet.','使某人的饮食多样化','She ||varied|| her dress as fashion changes.','她的衣着随着潮流而变化。'}

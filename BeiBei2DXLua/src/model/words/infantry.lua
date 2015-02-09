@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infantry"]={"infantry","['ɪnf(ə)ntrɪ]","['ɪnfəntri]","n.步兵(部队)",'n.步兵(部队)','Artillery gave cover (ie fired at the enemy to stop them firing back) while the infantry advanced.','炮火掩护步兵前进.','Enemy positions were bombarded before our infantry attacked.','炮轰敌军阵地之後, 我步兵开始进攻.'}

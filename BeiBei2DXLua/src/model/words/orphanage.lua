@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orphanage"]={"orphanage","['ɔːf(ə)nɪdʒ]","['ɔrfənɪdʒ]","n.孤儿的身份",'n.孤儿的身份，孤儿院','I founded an orphanage last year and feel obliged to take care of those children.','去年我创办了一个孤儿院。我觉得有责任去照顾那些小孩。','the organizations give the money to orphanages and schools','這個組織資助孤兒院和學校'}

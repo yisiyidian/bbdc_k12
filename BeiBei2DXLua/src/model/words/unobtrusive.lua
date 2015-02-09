@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unobtrusive"]={"unobtrusive","[ʌnəb'truːsɪv]","['ʌnəb'trʊsɪv]","adj.不突出的",'adj.不突出的,不显眼的,谦虚的','A small, unobtrusive smile curved the cook\'s thin lips.','厨师的薄唇一弯，露出一丝不易察觉的微笑。','He managed the factory with unobtrusive efficiency.','他经营那家工厂很有效率却不事张扬。'}

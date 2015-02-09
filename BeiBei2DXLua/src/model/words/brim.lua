@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brim"]={"brim","[brɪm]","[brɪm]","n.边",'n.边,边缘,(河)边|||v.满,使...盈','The wide brim of his hat shadowed his face.','他的大帽檐的影子映在他的脸上.','the brim of a hat.','帽沿'}

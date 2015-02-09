@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invigilate"]={"invigilate","[ɪn'vɪdʒɪleɪt]","[ɪn'vɪdʒɪlet]","v.监考",'v.监考，监督','The headmaster invigilates.','校长监考。','invigilate a history exam','监考历史.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["railway"]={"railway","['reɪlweɪ]","['relwe]","n.铁路",'n.铁路|||v.由铁道运输','The railway lines run parallel to the road.','铁路线和那条道路平行。','Can you tell me the nearest way to the railway station?','你能告诉我去火车站最近的路吗？'}

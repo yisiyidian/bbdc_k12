@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissipated"]={"dissipated","['dɪsɪpeɪtɪd]","['dɪsɪpetɪd]","adj.浪费的",'adj.浪费的,放荡的','The mist quickly dissipated as the sun rose.','太阳升起时雾很快就消散了.','Her son\'s letter dissipated all her fears and anxiety.','她儿子的来信消除了她一切恐惧和焦虑.'}

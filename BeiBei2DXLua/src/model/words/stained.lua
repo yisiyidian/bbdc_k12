@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stained"]={"stained","[steɪnd]","[stend]","adj.玷污的",'adj.玷污的|||褪色的','This cup is stained on the inside.','这杯子的内侧有积垢.','He stained the wood dark brown.','他把木头染成深褐色了.'}

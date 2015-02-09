@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["title"]={"title","['taɪt(ə)l]","['taɪtl]","n.头衔",'n.头衔,名称,标题,所有权,资格,冠军|||vt.赋予称号,加标题于|||adj.标题的','The title passes by inheritance to the eldest son.','这头衔按世袭传给长子。','He is the eldest son and thus heir to the title.','他是长子，因此是头衔的继承人。'}

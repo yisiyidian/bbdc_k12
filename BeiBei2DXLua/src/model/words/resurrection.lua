@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resurrection"]={"resurrection","[rezə'rekʃ(ə)n]","[,rɛzə'rɛkʃən]","n.复活",'n.复活,复兴,恢复|||Resurrection：耶稣复活，（最后审判日前）全部死者的复活','A representation of Jesus appearing to Mary Magdalen after his resurrection.','耶稣显灵图复活后的耶稣与抹大拉马利亚的相会图','The demystification of the ||Resurrection|| upsets many Christians.','把耶稣的复活作非神秘化解释使许多基督徒不快.'}

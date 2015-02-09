@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["introspection"]={"introspection","[ɪntrə(ʊ)'spekʃ(ə)n]","['ɪntrə'spɛkʃən]","n.内省",'n.内省,反省,自省','||Introspection|| is the best guideline for life.','自省是最好的人生指导。','We should make an introspection every day.','我们每天都应该反省一下。'}

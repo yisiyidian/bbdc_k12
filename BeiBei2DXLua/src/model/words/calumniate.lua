@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calumniate"]={"calumniate","[kə'lʌmnɪeɪt]","[ kə'lʌmnieit ]","vt.中伤",'vt.中伤,诽谤','I have never seen people like you calumniate others like this!','我从来没有见过像你这样中伤别人的人。','Bless them that curse you, and pray for them that calumniate you.','应祝福诅咒你们的人，为毁谤你们的人祈祷。'}

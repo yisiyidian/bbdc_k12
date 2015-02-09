@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shortfall"]={"shortfall","['ʃɔːtfɔːl]","['ʃɔrtfɔl]","n.不足之量",'n.不足之量,差额','The government has refused to make up a $30,000 shortfall in funding.','政府已经拒绝补足3万美元的资金短缺。','you need to pay for the shortfall you dropped on your way','你们要偿还在路上掉了的不足量'}

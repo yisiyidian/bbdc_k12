@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tension"]={"tension","['tenʃ(ə)n]","['tɛnʃən]","n.紧张",'n.紧张,张力,拉力|||vt.（使金属线、帆等）拉紧','My hobby is a good safety-valve for the tension that builds up at work.','我用业余爱好来消除工作中产生的紧张情绪。','The tension is building up.','形势逐步紧张起来。'}

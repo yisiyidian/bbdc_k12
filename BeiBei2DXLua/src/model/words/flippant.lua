@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flippant"]={"flippant","['flɪp(ə)nt]","['flɪpənt]","adj.轻率的",'adj.轻率的,没礼貌的|||adj.[古]能说会道的','Don\'t be flippant, damn it! This is serious!','该死，不要不当回事！这是很严肃的！','He now dismisses that as a flippant comment.','他现在把那当作一个轻率的评论，不再理会了。'}

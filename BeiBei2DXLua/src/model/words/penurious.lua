@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penurious"]={"penurious","[pɪ'njʊərɪəs]","[ pi'njuəriəs ]","adj.吝啬的",'adj.吝啬的,缺乏的，贫困的','He presents himself as self-effacing and penurious.','他总以低调和简朴的形象出现在公众场合。','But the price was right for penurious law students: seventy-five dollars a month.','但是房子的租金对于不大方的法学院大学生还是很合适的：每个月75美元。'}

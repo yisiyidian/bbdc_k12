@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["predestine"]={"predestine","[priː'destɪn]","[ pri:'destin ]","vt.预定",'vt.预定，注定','They both felt that they were predestined to spend their lives together.','他们俩都觉得他们注定了要在一起生活一辈子.','She was obviously predestined to succeed.','她显然注定了能成功.'}

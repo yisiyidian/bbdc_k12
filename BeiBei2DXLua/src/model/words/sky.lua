@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sky"]={"sky","[skaɪ]","[skaɪ]","n.天空",'n.天空|||v.把...投向空中，将…高挂','Stars are brilliant in the clear night sky.','星星在晴朗的夜空闪亮。','He stared up at the stars twinkling in the sky above him.','他抬眼凝视着头顶上方星光闪烁的天空。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forceful"]={"forceful","['fɔːsfʊl; -f(ə)l]","['fɔrsfl]","adj.有力的",'adj.有力的,强烈的','The dramatist cut out a couple of scenes in his script to make the play more compact and forceful.','那个剧作家删掉了原稿中的两场, 使剧本更加紧凑, 更加有力。','His forceful argument soon made the opposing speaker step down.','他有力的论点很快就使对方的发言者认输了。'}

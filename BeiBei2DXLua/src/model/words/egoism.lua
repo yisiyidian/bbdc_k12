@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["egoism"]={"egoism","['egəʊɪz(ə)m; 'iː-]","['ɛɡoɪzəm]","n.自我主义",'n.自我主义,利己主义','He was looked down upon because of his egoism.','他因自私而受人冷落。','Joel turned down all offer of help he badly needed because of his excessive egoism .','由於极度的自大,乔尔拒绝了所有他极需要的帮助。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bandy"]={"bandy","['bændɪ]","['bændi]","adj.向外弯曲的v.把...打来打去",'adj.向外弯曲的v.把...打来打去,往复投掷;传播;散布','The stories being ||bandied|| about are completely false.','这些道听途说的事全属子虚乌有。','Her name is being ||bandied|| about as the next chairperson.','到处都在传，说她将出任下届主席。'}

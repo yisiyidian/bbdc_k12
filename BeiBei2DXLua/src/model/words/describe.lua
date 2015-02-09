@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["describe"]={"describe","[dɪ'skraɪb]","[dɪ'skraɪb]","vt.描述",'vt.描述,画(尤指几何图形)','The falling star described a long curve in the sky.','流星在空中画出了一道长长的弧线。','The police asked me to describe exactly how it happened.','警察让我描述一下这事是怎样发生的。'}

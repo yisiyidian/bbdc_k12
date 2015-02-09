@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["treasure"]={"treasure","['treʒə]","['trɛʒɚ]","n.宝物",'n.宝物,财富|||v.珍爱,重视,储藏','The gallery is a treasure trove of medieval art.','这个画廊是中世纪艺术的宝库。','Knowledge is a treasure, but practice is the key to it.','【谚】知识是宝库，实践是钥匙。'}

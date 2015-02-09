@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mankind"]={"mankind","[,mæn'kaɪnd]","[mæn'kaɪnd]","n.人类",'n.人类|||n.男人','Genetic engineering will have revolutionary consequences for mankind.','遗传工程将对人类产生深远的影响.','Man is a microcosm of the whole of mankind.','人是全人类的缩影.'}

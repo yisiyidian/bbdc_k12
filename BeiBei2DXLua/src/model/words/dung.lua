@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dung"]={"dung","[dʌŋ]","[dʌŋ]","n.粪",'n.粪|||vt.上粪','A substance composed chiefly of the dung of sea birds or bats, accumulated along certain coastal areas or in caves and used as fertilizer.','鸟粪一种主要由海鸟或蝙蝠的排泄物构成的物质, 在某些海岸或山洞中不断积累, 用做肥料','A fragment of dried animal dung used as fuel.','干粪块一块用作燃料的干燥过的动物粪便'}

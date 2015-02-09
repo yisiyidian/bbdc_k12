@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aeroplane"]={"aeroplane","['eərəpleɪn]","['ɛrə'plen]","n.飞机",'n.飞机','An aeroplane started for Tokyo yesterday.','昨天有一架飞机飞往东京.','The aeroplane was flying a few feet above the sea.','飞机正在距海面几英尺的低空飞行.'}

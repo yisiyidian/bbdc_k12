@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perceptive"]={"perceptive","[pə'septɪv]","[pɚ'sɛptɪv]","adj.知觉的",'adj.知觉的,有洞察力的,感知的','His comment was trenchant and perceptive.','他的评论既一针见血又鞭辟入里。','This is a very perceptive assessment of the situation.','这是一个对该情况的极富洞察力的评价。'}

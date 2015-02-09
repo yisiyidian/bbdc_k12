@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poseur"]={"poseur","[po'zɝ]","[ pəu'zə: ]","n.装模作样的人",'n.装模作样的人','Some people admired him greatly while others considered him a poseur.','有的人对他佩服得五体投地，而有的人则认为他装腔作势。','People will not venerate poseurs.','人们不会尊敬装模作样的人。'}

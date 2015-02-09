@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lechery"]={"lechery","['letʃ(ə)rɪ]","['lɛtʃɚi]","n.好色",'n.好色','His lechery made him the enemy of every self-respecting husband and father in the county.','他的好色放浪使他成为全县所有自尊自重的丈夫和父亲的公敌。','And it accords with poetic social culture mentality in the period: lechery and longevity.','而这恰好符合此时文人既嗜欲又延年的社会文化心理。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["empiricism"]={"empiricism","[em'pɪrɪsɪz(ə)m]","[ɛm'pɪrə'sɪzəm]","n.经验主义",'n.经验主义,经验论','Some of them hold that Einstein changed his thought from empiricism to rationalism.','有人认为爱因斯坦是从经验论者转变成了唯理论者；','The opposite of empiricism is rationalism.','经验论的对立面是唯理论。'}

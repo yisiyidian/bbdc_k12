@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gingivitis"]={"gingivitis","[,dʒɪndʒɪ'vaɪtɪs]","[,dʒɪndʒɪ'vaɪtəs]","n.齿肉炎",'n.齿肉炎','This can result in dry mouth and increased plaque formation and gingivitis.','这会导致口干并增加菌斑形成和牙龈炎。','In early stages, gum disease is known as gingivitis.','在早期，牙龈疾病被称为牙龈炎。'}

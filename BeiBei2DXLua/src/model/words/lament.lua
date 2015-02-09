@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lament"]={"lament","[lə'ment]","[lə'mɛnt]","n.悲叹",'n.悲叹,悔恨,恸哭|||v.哀悼,悔恨,悲叹','He lamented his thoughtless acts.','他非常懊悔自己轻率的举动。','Ken began to lament the death of his only son.','肯开始对独子的死悲痛不已。'}

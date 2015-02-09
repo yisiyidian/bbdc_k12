@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radar"]={"radar","['reɪdɑː]","['redɑr]","n.雷达",'n.雷达','They picked up the yacht on their radar screen.','他们在雷达屏上看到了那艘游艇.','They were able to position the yacht by means of radar.','他们能够用雷达测定快艇的方位.'}

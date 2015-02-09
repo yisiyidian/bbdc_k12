@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eggplant"]={"eggplant","['egplɑːnt]","['ɛɡplænt]","n.茄子",'n.茄子,黑紫色','I like eggplant','woxiadoas;','Potatos are related to tomatos, peppers and eggplants','土豆与番茄，胡椒和茄子都有所关联'}

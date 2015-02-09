@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extra"]={"extra","['ekstrə]","['ɛkstrə]","adj.额外的",'adj.额外的|||adv.特别地|||n.额外的事物，另外收费的','Luggage in excess of 100 kg will be charged extra.','超过100公斤的行李要额外收费.','I\'m so envious of you getting an extra day\'s holiday.','我真羡慕你得到一天额外的假期.'}

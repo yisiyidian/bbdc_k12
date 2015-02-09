@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minimize"]={"minimize","['mɪnɪmaɪz]","[ 'minimaiz ]","v.将...减到最少",'v.将...减到最少|||[计算机]最小化','At his trial, he tried to minimize his behavior.','接受审判的时候，他企图对自己的行为轻描淡写。','He minimized the value of her contribution to his research so that he got all the praise.','他极力贬低她在那项研究中的贡献, 从而独获全部奖励.'}

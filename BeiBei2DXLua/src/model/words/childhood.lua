@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["childhood"]={"childhood","['tʃaɪldhʊd]","['tʃaɪldhʊd]","n.童年",'n.童年,幼年','Why is it that he rarely mentions his childhood?','他为什么很少提到他的儿童时代呢？','He was my playmate in childhood.','他是我童年时的玩伴。'}

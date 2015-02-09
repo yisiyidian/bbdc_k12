@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snow"]={"snow","[snəʊ]","[sno]","n.雪",'n.雪,似雪花的东西,粉状物,下雪|||vi.下雪|||vt.像雪一般落下,使雪白,欺骗','||Snow|| is an unusual sight in this warm place.','下雪在这个温暖的地方是一种罕见的景象。','He watched his woods filled up with snow.','他眼看着他的树林渐渐被雪覆盖。'}

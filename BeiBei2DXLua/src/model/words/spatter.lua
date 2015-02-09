@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spatter"]={"spatter","['spætə]","['spætɚ]","v.溅",'v.溅,洒|||vt.诬蔑|||n.泼溅的污迹','The bus spatter them with mud as it pass in the rain.','公共汽车在雨中驶过, 溅了他们一身泥。','As the bus passed, it spattered mud on my clothes.','公共汽车开过时溅了我一身泥。'}

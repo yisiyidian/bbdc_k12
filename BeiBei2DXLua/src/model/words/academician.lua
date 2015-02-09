@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["academician"]={"academician","[ə,kædə'mɪʃ(ə)n]","[,ækədə'mɪʃən]","n.学者",'n.学者,大学教师,知识分子,学会会员','the academician of Chinese Academy of Science.','中国科学院院士','Now a days, academician have changed their thinking. They truned more practicality.','现在大学生已经改变了他们的思维方式。他们变得更加实际。'}

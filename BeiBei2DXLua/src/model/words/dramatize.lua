@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dramatize"]={"dramatize","['dræmətaɪz]","[ 'dræmətaiz ]","vt.把(小说等)改编成戏剧",'vt.把(小说等)改编成戏剧,渲染|||vi.戏剧化','Don\'t believe everything she tells you; she tends to dramatize.','她的话不可尽信; 她往往言过其实.','He is ||dramatizing|| the story of his life.','他把自己的一生改编成戏剧。'}

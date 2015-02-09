@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nuclei"]={"nuclei","['njuːklɪaɪ]","['njʊklɪ,ai]","n.（复数形式）核",'n.（复数形式）核,核心,细胞核,原子核','The electron clouds are clearly visible as blurs surrounding the invisible nuclei.','电子云就象环绕着看不见的核的一片云雾.','Energy is released by the fission of atomic nuclei.','能量是由原子核分裂释放出来的。'}

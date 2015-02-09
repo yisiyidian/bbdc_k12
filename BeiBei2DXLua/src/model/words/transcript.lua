@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transcript"]={"transcript","['trænskrɪpt; 'trɑːn-]","['trænskrɪpt]","n.成绩单",'n.成绩单|||n.抄本,誊本;副本|||n.笔录','The transcript of court testimony; an academic transcript.','法庭证词的记录；学生成绩报告单','She went through the transcript carefully, to eliminate all errors from it.','她把誊本从头至尾认真地看了一遍，以消除其中的错误之处。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["listener"]={"listener","['lɪs(ə)nə]","['lɪsənɚ]","n.听者",'n.听者,听众','An alert listener will have noticed the error.','耳朵尖的人能听出这个错。','She is a good listener at class.','在课堂上，她是个认真听讲的人。'}

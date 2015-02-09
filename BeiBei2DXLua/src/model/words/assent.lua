@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assent"]={"assent","[ə'sent]","[ə'sɛnt]","n.同意",'n.同意,赞成|||vi.赞成','The new law has received the royal assent.','新的法规已得到国王的批准。','I translated her silence as assent.','我认为她沉默不语就是同意了。'}

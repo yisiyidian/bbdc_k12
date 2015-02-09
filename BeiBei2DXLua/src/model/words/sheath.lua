@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sheath"]={"sheath","[ʃiːθ]","[ʃiθ]","n.鞘",'n.鞘，护套|||n.女式紧身衣服','He drew his sword from its sheath.','他拔剑出鞘.','He was not ready to sheath all his weapons.','他并不准备从此刀枪入库,马放南山.'}

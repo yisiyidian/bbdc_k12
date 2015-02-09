@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["temperate"]={"temperate","['temp(ə)rət]","['tɛmpərət]","adj.温和的",'adj.温和的,适度的,有节制的','Ninety per cent of the country lies in the temperate zone.','这个国家百分之九十的地方都是温带。','Britain has a temperate climate.','英国气候温和。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spill"]={"spill","[spɪl]","[spɪl]","v.溢出",'v.溢出,洒,使...流出，泄漏|||n.溢出,流|||n.木片，小杆','Don\'t jog me, or you\'ll make me spill something!','别碰我, 不然我就把东西弄洒了.','Put the cap back on the bottle, otherwise the juice will spill.','把瓶盖儿盖好, 要不汁液就洒出来了.'}

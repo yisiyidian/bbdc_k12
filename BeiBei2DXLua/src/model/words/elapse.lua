@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elapse"]={"elapse","[ɪ'læps]","[ɪ'læps]","v.逝去",'v.逝去,过去','Weeks elapsed before we could start renovating.','几周过去后我们才开始修复','Three years have elapsed since we last met.','我们上次相见至今已过了三年.'}

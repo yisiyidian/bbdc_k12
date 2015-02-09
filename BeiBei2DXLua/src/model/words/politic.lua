@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["politic"]={"politic","['pɒlɪtɪk]","['pɑlətɪk]","adj.精明的",'adj.精明的,圆滑的,慎重的|||adj.','A politic man tries not to offend people.','精明的人尽量不得罪人。','A politic decision.','一个明智的决定'}

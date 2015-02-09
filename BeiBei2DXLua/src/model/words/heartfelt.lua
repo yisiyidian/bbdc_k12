@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heartfelt"]={"heartfelt","['hɑːtfelt]","['hɑrtfɛlt]","adj.衷心的",'adj.衷心的,真心真意的','I wish to take this opportunity to express my heartfelt gratitude to you again.','我借此机会再一次地向大家表示衷心的感谢。','My heartfelt thanks to you all.','我谨向各位表示衷心的感谢.'}

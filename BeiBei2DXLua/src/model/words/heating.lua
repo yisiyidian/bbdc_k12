@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heating"]={"heating","['hiːtɪŋ]","['hitɪŋ]","n.加热",'adj.加热的,供暖的|||n.加热,供暖,暖气装置|||动词heat的现在分词','Why won\'t the heating go on?','为什麽供暖设备停了?','Make sure the central heating is off.','集中供暖设备一定要关掉。'}

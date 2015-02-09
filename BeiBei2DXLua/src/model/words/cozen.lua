@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cozen"]={"cozen","['kʌz(ə)n]","[ 'kʌzən ]","v.欺",'v.欺,骗,瞒','The clever salesman cozened the old lady into buying his goods.','聪明的推销员诱使老太太买下了他的东西。','The old man cozened me into giving him some money.','那老头哄骗我给了他一些钱。'}

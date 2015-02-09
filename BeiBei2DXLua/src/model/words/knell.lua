@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knell"]={"knell","[nel]","[nɛl]","n.丧钟声",'n.丧钟声,哀伤的声音,凶兆|||v.鸣丧钟','The bell is knelling.','丧钟已经敲响。','Their refusal rang the knell of our hopes.','他们的拒绝是我们希望破灭的凶兆。'}

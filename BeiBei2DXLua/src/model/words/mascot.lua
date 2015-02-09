@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mascot"]={"mascot","['mæskɒt]","['mæskɑt]","n.福神",'n.福神,吉祥的东西','The regimental mascot is a goat.','这个团的吉祥物是山羊.','His little son is the mascot for the local football team.','他的小儿子是当地足球队的吉祥人物。'}

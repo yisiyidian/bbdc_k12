@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nudity"]={"nudity","['njuːdətɪ]","['nudəti]","n.裸露",'n.裸露','Describing or portraying nudity or sexual activity in graphic detail.','描述裸体或性行为的轮廓鲜明地描述或描绘裸体或性行为的','Recent nudity on the stage has been the talk of the town.','最近舞台上出现的裸体已成为大家谈论的话题。'}

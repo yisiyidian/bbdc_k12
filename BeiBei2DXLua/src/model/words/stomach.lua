@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stomach"]={"stomach","['stʌmək]","['stʌmək]","n.胃",'n.胃|||v.忍受,容忍|||vt.承受,忍受','How could you stomach all the violence in the film?','那部影片里的那些暴力场面，你怎么竟看得下去呢？','The film about eye operations turned my stomach.','这部眼科手术的影片看得我恶心极了。'}

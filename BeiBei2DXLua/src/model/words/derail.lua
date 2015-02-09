@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["derail"]={"derail","[dɪ'reɪl]","[dɪ'rel]","vt.使出轨",'vt.使出轨，阻碍，扰乱|||vi.出轨','The engine was derailed by a tree lying across the line.','有一棵树横在铁轨上, 造成机车出轨.','a campaign derailed by lack of funds; a policy that derailed under the new administration.','由于资金缺乏而突然中止的运动；被新政府下突然中止的政策'}

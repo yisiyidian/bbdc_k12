@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lustrous"]={"lustrous","['lʌstrəs]","['lʌstrəs]","adj.有光泽的",'adj.有光泽的,光辉的','Mary has a head of thick, lustrous, wavy brown hair.','玛丽有一头浓密、富有光泽的褐色鬈发。','The moon was above, lustrous and serene.','天上的月亮皎洁肃穆。'}

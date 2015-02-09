@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["convalescent"]={"convalescent","[kɒnvə'les(ə)nt]","[,kɑnvə'lɛsnt]","adj.恢复期的",'adj.恢复期的，调养中的','At last she was pronounced upon the mend and then convalescent.','她的病情终于宣告有了好转—不久就恢复健康了。','...an officers\' convalescent home.','...一个军官疗养院。'}

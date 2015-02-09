@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entanglement"]={"entanglement","[ɪn'tæŋg(ə)lm(ə)nt; en-]","[ɪn'tæŋɡlmənt]","n.纠缠",'n.纠缠,牵累，铁丝网','She had always been afraid of any emotional entanglements.','她一向都害怕感情纠葛。','Then entanglement crushes our experience of space.','然后纠缠就粉碎了我们对于空间的体验。'}

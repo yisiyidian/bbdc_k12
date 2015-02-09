@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recommend"]={"recommend","[rekə'mend]","['rɛkə'mɛnd]","vt.建议",'vt.建议,推荐,劝告|||vt.使成为可取,使受欢迎','I recommend the deal, but with certain caveats.','我介绍这笔交易, 但有几项要提请注意.','I wouldn\'t recommend you to go there alone.','我劝你不要孤身一人到那里去。'}

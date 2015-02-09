@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whet"]={"whet","[wet]","[wɛt]","n.磨",'n.磨,磨利之物,开胃物|||vt.磨（刀），刺激（欲望，兴趣）','He whetted his knife on the stone.','他在石头上磨刀。','The frying bacon whetted my appetite.','煎咸肉激发了我的食欲。'}

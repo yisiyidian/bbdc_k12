@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["allegiance"]={"allegiance","[ə'liːdʒ(ə)ns]","[ə'lidʒəns]","n.忠诚",'n.忠诚','They have sworn (an oath of) allegiance to the crown.','他们宣誓效忠君主.','Private members keep up their outward allegiance to the parties they belong to.','议员们对各自所属的党派保持表面上的忠诚。'}

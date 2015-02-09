@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revelry"]={"revelry","['revlrɪ]","['rɛvlri]","n.狂欢",'n.狂欢','The ||revelries|| went on all the night.','狂欢活动通宵达旦。','The ||revelries|| next door kept me awake all night.','邻居家的狂欢搞得我一夜未眠。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prediction"]={"prediction","[prɪ'dɪkʃ(ə)n]","[prɪ'dɪkʃən]","n.预言",'n.预言,预报','Recent discoveries will bear his prediction out.','近来的种种发现将会证实他的预言。','The prediction was literally accomplished.','这个预言确实实现了。'}

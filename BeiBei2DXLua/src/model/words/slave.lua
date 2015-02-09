@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slave"]={"slave","[sleɪv]","[slev]","n.奴隶",'n.奴隶,完全受控制的人,劳工,从动装置|||vt.对另一种装置作出直接回应|||vi.拼命工作,贩卖奴隶','This slave dreamed of becoming a freeman.','这个奴隶梦想着成为一个自由人。','The boy was caught and sold to be a galley slave.','这个男孩被抓住，并被卖到战舰上做奴隶。'}

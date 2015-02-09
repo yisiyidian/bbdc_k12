@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scold"]={"scold","[skəʊld]","[skold]","v.责骂",'n.老爱责骂的人|||v.责骂,训斥|||vi.责骂,申斥|||vt.责骂','Don\'t scold too much.','别老是熊人.','The disobedient son went out of his way to scold his parents.','这个不孝顺的儿子越出常轨谴责父母。'}

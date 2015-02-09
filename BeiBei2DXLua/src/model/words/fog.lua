@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fog"]={"fog","[fɒg]","[fɔɡ]","n.雾",'n.雾,朦胧,喷雾,迷惑|||vt.&vi.以雾笼罩,使模糊,迷惑','Shut the door or the light will fog the film.','把门关上，不然亮光能使底片发灰。','Steam has fogged the bathroom mirror.','水蒸气把浴室里的镜子遮住了。'}

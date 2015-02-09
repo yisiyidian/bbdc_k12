@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mall"]={"mall","[mæl; mɔːl; mɒl]","[mɔl]","n.购物商场",'n.林荫大道,商业街,购物商场','The crowds thronged into the mall.','人群涌进大厅.','There is a large mall on the street.','在这条街上有一家大商场.'}

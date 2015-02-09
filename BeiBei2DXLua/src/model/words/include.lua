@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["include"]={"include","[ɪn'kluːd]","[ɪn'klud]","v.包括",'v.包括,包含,连...在内|||[计算机]包括','The graphic arts include calligraphy and lithography.','平面造型艺术包括书法和平版印刷术。','My job doesn\'t include making coffee for the boss!','为老板煮咖啡不是我份内的事！'}

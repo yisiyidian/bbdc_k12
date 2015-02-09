@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["occupant"]={"occupant","['ɒkjʊp(ə)nt]","['ɑkəpənt]","n.占有者",'n.占有者,拥有者，占领者，居住者','Are you the occupant of this house?','你是不是住在这所房子里的？','He shrug his low opinion of the occupant of the room.','他耸耸肩表示对那房间的住户不屑一顾。'}

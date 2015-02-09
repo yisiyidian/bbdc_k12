@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maneuver"]={"maneuver","[mə'nʊvə]","[mə'nʊvɚ; mə'njʊvɚ]","n.演习",'n.演习,调遣,策略|||vt.调遣,演习,巧妙地操纵|||vi.调遣,演习,用计策','A maneuver causing someone to stumble or fall.','绊使某人绊倒或跌倒的动作','A maneuver, stratagem, or ploy, especially one used at an initial stage.','策略尤指人在开始阶段所采用的计谋、策略、手法'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seismology"]={"seismology","[saɪz'mɒlədʒɪ]","[saɪz'mɑlədʒi]","n.地震学",'n.地震学','It is essential to develop seismology.','发展地震学是有必要的。','||Seismology|| is the branch of geology that studies earthquakes.','地震学是地理学中研究地震的一个分支'}

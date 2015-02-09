@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reproduce"]={"reproduce","[riːprə'djuːs]","[,riprə'dus]","v.再生",'v.再生,复制,生殖','The photograph of the painting reproduces the colors of the original extremely well.','这幅画的照片绝妙地再现了原作的色彩。','Most fish reproduce themselves by laying eggs.','大多数鱼产卵繁殖。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retail"]={"retail","['riːteɪl]","['ritel]","n.零售",'n.零售|||vt.零售|||adj.零售的|||adv.以零售形式','Could you tell me the retail prices of these shoes?','你能告诉我这些鞋子的零售价吗？','These socks retail at 1 dollar a pair.','这些袜子零卖一美圆一双。'}

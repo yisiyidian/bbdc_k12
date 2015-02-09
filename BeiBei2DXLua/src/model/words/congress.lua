@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congress"]={"congress","['kɒŋgres]","['kɑŋɡrəs]","n.国会",'n.国会；代表大会；会议；社交','He introduced a motion to the ||Congress||.','他向国会提交了一份议案。','The mayor must make policies in accordance with the bill passed in the ||Congress||.','市长要根据议会的议案来制定政策。'}

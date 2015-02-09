@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interweave"]={"interweave","[ɪntə'wiːv]","[,ɪntɚ'wiv]","v.使交织",'v.使交织,织进,使混杂','Our lives are ||interwoven||.','我们的命运已经结合在一起了.','Your destiny is ||interwoven|| with mine.','你的命运已和我的命运结合在一起了.'}

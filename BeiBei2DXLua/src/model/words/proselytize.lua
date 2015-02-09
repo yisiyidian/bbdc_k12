@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proselytize"]={"proselytize","['prɒsələtaɪz]","['prɑsələtaɪz]","v.使改宗",'v.使改宗,劝诱改宗','I am not trying to convert you, to proselytize you or to do propaganda against any particular religion.','我并没有要转变你的观念，使你改变信仰，或者进行反对某种宗教的宣传。','Christians were arrested for trying to proselytize people.','一些基督徒因试图劝说人们改变信仰而被逮捕。'}

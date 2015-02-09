@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sprout"]={"sprout","[sprəʊt]","[spraʊt]","n.芽",'n.芽,萌芽|||v.使发芽,长芽','These potatoes have begun to sprout.','这些马铃薯开始发芽了。','Leaves began to sprout from the trees.','树上开始长叶子了。'}

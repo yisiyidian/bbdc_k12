@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["desperado"]={"desperado","[,despə'rɑːdəʊ]","[,dɛspə'rɑdo]","n.恶汉",'n.恶汉,亡命徒','A desperado grabbed a little girl.','一个亡命之徒抓着一个小女孩。','you are a desperado','你是个恶汉'}

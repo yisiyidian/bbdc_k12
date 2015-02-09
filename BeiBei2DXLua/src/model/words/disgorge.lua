@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disgorge"]={"disgorge","[dɪs'gɔːdʒ]","[dɪs'ɡɔrdʒ]","v.吐出",'v.吐出,流注,被迫交出','Crowds disgorged from the theatre into the dark street.','人流从戏院涌出，进入了黑洞洞的街道。','She was trying hard to disgorge a fish bone.','她拼命想把鱼刺吐出来。'}

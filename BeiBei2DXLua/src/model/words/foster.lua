@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foster"]={"foster","['fɒstə]","['fɔstɚ]","adj.收养的",'adj.收养的,养育的|||v.养育,抚育,培养|||n.(Foster)人名；(英、捷、意、葡、法、德、俄、西)福斯特','The mother tried to foster her son\'s interest in music.','母亲设法培养儿子对音乐的兴趣。','The captain did his best to foster a sense of unity among the new recruits.','队长尽力培养新成员之间的团结精神。'}

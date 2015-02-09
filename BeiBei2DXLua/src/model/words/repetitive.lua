@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repetitive"]={"repetitive","[rɪ'petɪtɪv]","[rɪ'pɛtətɪv]","adj.重复的",'adj.重复的','Has no relish for repetitive work.','不喜欢重复性的工作','Popular dance music characterized by strong repetitive bass rhythms.','迪斯科音乐特点是强烈重复基本旋律的一种流行舞蹈音乐'}

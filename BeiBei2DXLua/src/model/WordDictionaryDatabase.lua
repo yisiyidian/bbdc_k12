@@ -12,7 +12,7 @@ Manager.allwords = nil
 
 function Manager.init()
     Manager.allwords = {}
-    require('model.bbdxw')
+    -- require('model.bbdxw')
     -- local databasePath = cc.FileUtils:getInstance():fullPathForFilename('cfg/bbdxw.sqlite')
     -- print('databasePath:', databasePath)
     -- Manager.database = sqlite3.open(databasePath)

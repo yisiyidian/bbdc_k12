@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["percentage"]={"percentage","[pə'sentɪdʒ]","[pɚ'sɛntɪdʒ]","n.百分率",'n.百分率,比例,可能性','Whisky contains a large percentage of alcohol.','威士忌所含酒精的百分比很高.','Of all the fibers now used by man, a very large percentage is man-made.','现在人类所使用的所有纤维之中，有很大的百分比是人造的。'}

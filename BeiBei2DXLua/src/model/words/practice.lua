@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["practice"]={"practice","['præktɪs]","['præktɪs]","n.练习",'n.练习,实行,习惯;业务|||vt.&vi练习,实习,开业','It is the practice in Britain to drive on the left.','车辆靠左行驶是英国的制度。','We\'ve made our plans, and now we must put them into practice.','我们已订好计划，现在应付诸实施了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proscribe"]={"proscribe","[prə(ʊ)'skraɪb]","[pro'skraɪb]","vt.不予法律保护(排斥)",'vt.不予法律保护(排斥)','The sale of narcotics is proscribed by law.','法律禁止贩卖毒品。','We do not proscribe any prayer.','我们不排斥任何的祷告。'}

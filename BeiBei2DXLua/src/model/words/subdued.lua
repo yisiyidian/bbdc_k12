@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subdued"]={"subdued","[səb'djuːd]","[səb'dud]","adj.屈服的",'adj.屈服的，柔和的，减弱的|||动词subdue的过去式和过去分词','But even the mosquito has been subdued by attention to drainage and by chemical sprays.','但甚至蚊子也由于我们注意排水和化学喷雾而已被抑制住了。','Napoleon subdued most of Europe.','拿破伦征服了大半个欧洲。'}

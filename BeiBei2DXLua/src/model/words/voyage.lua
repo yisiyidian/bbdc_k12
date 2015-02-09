@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["voyage"]={"voyage","['vɒɪɪdʒ]","['vɔɪɪdʒ]","n.航行",'n.航行,旅程|||vt.&vi.航行,旅行','This is the virgin voyage of the ship.','这是这艘船的处女航。','The ship will start its maiden voyage next Monday.','这艘船将于下周一开始它的处女航。'}

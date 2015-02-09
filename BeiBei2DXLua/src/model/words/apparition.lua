@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apparition"]={"apparition","[æpə'rɪʃ(ə)n]","[,æpə'rɪʃən]","n.鬼",'n.鬼,幽灵,幻影','You look as though you\'ve seen an apparition.','你好像撞见了鬼似的。','He saw the apparition of his dead wife.','他看见了他亡妻的幽灵。'}

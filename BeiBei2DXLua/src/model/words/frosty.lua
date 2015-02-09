@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frosty"]={"frosty","['frɒstɪ]","['frɔsti]","adj.下霜的",'adj.下霜的,严寒的,冷淡的，灰白色的','I hung out the washing to dry on a frosty day and when I went to take it in it was as stiff as a board.','在一个霜冻的日子里，我把洗涤物挂到外面晒干，但当我去把它拿进来时，它已硬绷绷了。','Extremely cold; frosty.','严寒的特别冷；冰冻的'}

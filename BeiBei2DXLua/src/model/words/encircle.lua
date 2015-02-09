@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encircle"]={"encircle","[ɪn'sɜːk(ə)l; en-]","[ɪn'sɝkl]","v.环绕",'v.环绕,包围|||vt.包围,环绕','The lake is encircled by trees.','湖被树木环绕。','Enemy troops had encircled the town.','敌军包围了该城。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stuff"]={"stuff","[stʌf]","[stʌf]","n.材料",'n.材料,原料,东西|||n.素质,本质;废物|||vt.填满,塞满','Do you call this stuff beer?','你把这东西叫做啤酒吗?','There has been some really good stuff on TV lately.','近来电视上有些节目确实不错.'}

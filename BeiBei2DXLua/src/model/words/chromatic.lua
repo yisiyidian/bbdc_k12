@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chromatic"]={"chromatic","[krə'mætɪk]","[krə'mætɪk]","adj.彩色的",'adj.彩色的,五彩的','...the notes of the chromatic scale.','...半音音阶的音符。','There is some chromatic difference on this clothes.','这件衣服有色差。'}

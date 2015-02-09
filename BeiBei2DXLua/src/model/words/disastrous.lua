@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disastrous"]={"disastrous","[dɪ'zɑːstrəs]","[dɪ'zæstrəs]","adj.灾难性的",'adj.灾难性的','The economic position of the country is disastrous.','国家的经济形势非常糟糕.','The rise in interest rates will be disastrous as far as small firms are concerned.','利率增加对小公司来说是大祸临头.'}

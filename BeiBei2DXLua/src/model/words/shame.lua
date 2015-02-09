@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shame"]={"shame","[ʃeɪm]","[ʃem]","n.羞愧",'n.羞愧,遗憾的事|||vt.使羞愧','He was shamed by how much more work the others had done.','别人做得多得多，他感到很难为情。','It\'s quite ||shaming|| that our society cares so little for the poor.','我们这个社会对穷人很不关心，是很难堪的事。'}

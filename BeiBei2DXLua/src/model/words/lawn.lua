@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lawn"]={"lawn","[lɔːn]","[lɔn]","n.草地",'n.草地,草坪,上等细麻布','Moles dug tunnels under the lawn.','鼹鼠在草地下面打洞.','The lawn was covered with fungi.','草地上到处都是蘑菇。'}

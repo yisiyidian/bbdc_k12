@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chameleon"]={"chameleon","[kə'miːlɪən]","[kə'miljən]","n.变色龙",'n.变色龙,善变的人,轻浮的人','The chameleon changes colour to match its surroundings.','变色龙变换颜色以适应环境。','Like a chameleon, he could merge unobtrusively into the background.','他就像一条变色龙，可以神不知鬼不觉地隐藏在背景中间。'}

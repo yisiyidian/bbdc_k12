@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["asteroid"]={"asteroid","['æstərɒɪd]","['æstərɔɪd]","n.小游星",'n.小游星,小行星,海盘车|||adj.星状的','There is an asteroid on a collision course with the Earth.','有一颗小行星可能会与地球发生碰撞。','An asteroid is one of the very small planets that move around the sun between Mars and Jupiter.','小行星是在土星与火星之间围绕太阳转动的非常小的行星'}

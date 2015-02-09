@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kindle"]={"kindle","['kɪnd(ə)l]","['kɪndl]","v.燃烧",'v.燃烧,使...著火,引起，激发','The moon kindled the countryside.','月光照耀着郊外。','Her eyes kindled with excitement.','她的眼睛里闪耀出激动的神色。'}

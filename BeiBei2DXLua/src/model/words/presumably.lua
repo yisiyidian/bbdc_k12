@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presumably"]={"presumably","[prɪ'zjuːməblɪ]","[prɪ'zuməbli]","adv.推测上",'adv.推测上,假定上,大概','||Presumably|| the bad weather has delayed the flight.','大概恶劣的天气使飞机误点了。','She is aware of the difficulties, presumably?','她对这些困难大概了解吧?'}

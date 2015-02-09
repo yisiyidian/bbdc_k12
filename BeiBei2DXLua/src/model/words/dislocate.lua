@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dislocate"]={"dislocate","['dɪsləkeɪt]","['dɪsloket]","vt.使脱臼",'vt.使脱臼,使混乱','Flights have been dislocated by thefog.','大雾将飞机的班次搅乱了.','a continuing drought that dislocated the state\'s economy.','持续的干旱使该国经济陷入混乱'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gifted"]={"gifted","['gɪftɪd]","['ɡɪftɪd]","adj.有天赋的",'adj.有天赋的,有才华的','Man is the only creature that is gifted with speech.','人类是唯一被赋予语言能力的动物。','He is gifted for art.','他有艺术天赋。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outdoors"]={"outdoors","[aʊt'dɔːz]","['aʊt'dɔrz]","adv.在户外地",'adv.在户外地,在野外地|||n.露天,野外|||名词outdoor的复数形式','There is intolerable noise outdoors.','门外是难以忍受的嘈杂声。','She\'s outdoors gardening every afternoon.','她每天下午都在户外搞园艺.'}

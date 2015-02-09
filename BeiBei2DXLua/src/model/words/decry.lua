@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decry"]={"decry","[dɪ'kraɪ]","[dɪ'kraɪ]","v.责难",'v.责难,诽谤','He ||decried|| her efforts as a waste of time.','他贬低她所作的努力，认为这是浪费时间。','Every person ||decries|| his bad behavior on the meeting','所有人都谴责他在会议上的无礼之举。'}

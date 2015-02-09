@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["armory"]={"armory","['ɑrməri]","[ 'ɑ:məri ]","n.军械库",'n.军械库,兵工厂','The ||armories|| were important in the World War II.','兵工厂在二战中是很重要的。','Next, he and the other criminals broke into the armory and carried off 20 rifles.','接着，她和其他的罪犯闯入了军械库拿走了20只来复枪。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flea"]={"flea","[fliː]","[fli]","n.跳蚤",'n.跳蚤','My own accidental cut across the knuckles was a flea-bite.','我指关节上的意外刀伤根本算不了什么','My friend likes to stroll around the flea market.','我的朋友爱逛旧货市场（跳蚤市场）'}

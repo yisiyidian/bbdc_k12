@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illogical"]={"illogical","[ɪ'lɒdʒɪk(ə)l]","[ɪ'lɑdʒɪkl]","adj.不合逻辑的",'adj.不合逻辑的,不合理的','A fallacious or illogical argument or conclusion.','不合逻辑的推论，谬论错误的或不合逻辑的观点或结论','It seems illogical to change the timetable so often.','时间表变动得如此频繁, 似乎没有什麽道理.'}

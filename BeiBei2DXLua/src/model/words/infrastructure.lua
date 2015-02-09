@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infrastructure"]={"infrastructure","['ɪnfrəstrʌktʃə]","['ɪnfrə'strʌktʃɚ]","n.下部构造",'n.下部构造,下部组织,基础结构,基础设施','We should step up the development of infrastructure for research.','加强科学基础设施建设.','Vast sums are needed to maintain the infrastructure.','保养基础设施需要巨额款项.'}

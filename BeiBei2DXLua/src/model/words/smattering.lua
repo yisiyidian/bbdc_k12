@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smattering"]={"smattering","['smætərɪŋ]","[ 'smætəriŋ ]","n.一知半解",'n.一知半解，一点点|||动词smatter的现在分词形式','On his wanderings he\'s picked up Spanish, Italian, French and a smattering of Russian.','在流浪途中，他学会了西班牙语、意大利语、法语和一丁点儿俄语。','He only has a smattering of French.','他只懂一点法语。'}

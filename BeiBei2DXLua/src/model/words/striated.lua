@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["striated"]={"striated","['straɪetɪd]","[ 'straieitid ]","adj.有条纹的",'adj.有条纹的,有条痕的,有线纹的|||动词striate的过去式和过去分词形式','He bought a striated shirt.','他买了一件条纹衬衫。','There are striated engravings on this wall.','这面墙上有着条纹状的雕饰。'}

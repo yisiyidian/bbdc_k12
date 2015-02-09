@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["broadcast"]={"broadcast","['brɔːdkɑːst]","['brɔdkæst]","n.广播",'n.广播,广播节目|||adj.广播的|||vt.&vi.广播|||adv.经广播,四散地','The Prime Minister set forth the aims of his government in a television broadcast.','首相在电视广播中公布了内阁的工作目标.','Before this play is broadcast several cuts must be made.','这个剧目播出前必须经过数次剪辑。'}

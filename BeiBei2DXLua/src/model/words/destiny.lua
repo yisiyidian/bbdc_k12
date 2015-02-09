@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["destiny"]={"destiny","['destɪnɪ]","['dɛstəni]","n.命运",'n.命运','Your destiny is interwoven with mine.','你的命运已和我的命运结合在一起了.','Some people believe that the Fates preside over man\'s destiny.','有些人相信，命运之神支配人类的命运。'}

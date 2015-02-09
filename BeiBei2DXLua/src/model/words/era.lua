@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["era"]={"era","['ɪərə]","['ɪrə]","n.纪元",'n.纪元,时代,年代','My professor studies flora of the Palaeozoic ||Era||.','我的教授研究古生代的植物群。','His death marked the end of an era.','他的死标志著一个时代的结束.'}

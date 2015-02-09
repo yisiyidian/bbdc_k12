@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dawn"]={"dawn","[dɔːn]","[dɔn]","n.破晓",'n.破晓，开端|||vi.破晓,逐渐明白','The diligent student gets up before dawn every day.','这个勤奋的学生每天天亮以前就起床了。','The morning dawned clear after the rain.','雨后的清晨，天一破晓就晴空万里。'}

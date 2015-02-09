@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["escort"]={"escort","['eskɔːt]","['ɛskɔt]","n.护送者",'n.护送者,护卫者,护航舰|||vt.护卫,护送，伴游','The troop ship was escorted by two warships.','运兵船由两艘军舰护航。','He offered to be her escort, but she declined it.','他提出护送她，但她谢绝了。'}

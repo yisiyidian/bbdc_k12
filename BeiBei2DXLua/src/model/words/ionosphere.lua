@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ionosphere"]={"ionosphere","[aɪ'ɒnəsfɪə]","[aɪ'ɑnə'sfɪr]","n.电离层",'n.电离层','The ionosphere is that region of space containing electrically charged species.','电离层是指含有带电物质的空间区域.','Its upper limit is determined by the conditions in the ionosphere','其上限由电离层的状态而决定.'}

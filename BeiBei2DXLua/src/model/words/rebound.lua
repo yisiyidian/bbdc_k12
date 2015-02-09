@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rebound"]={"rebound","[rɪ'baʊnd]","[rɪ'baʊnd]","n.弹回",'n.弹回|||vt.&vi.弹回','The ball rebounded from/off the wall into the pond.','球从墙上弹回来掉进池里.','The scheme rebounded on her in a way she had not expected.','她未曾想到这计谋反倒使她自食其果.'}

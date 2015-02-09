@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repugnance"]={"repugnance","[rɪ'pʌgnəns]","[rɪ'pʌɡnəns]","n.不一致(厌恶)",'n.不一致(厌恶)','Before then I do not catch cold to this kind of propaganda, even has some small repugnance .','在这之前我对这种宣传并不感冒，甚至有一些小小的反感。','She turned away from him in repugnance.','她极为厌恶地从他面前转身走开了。'}

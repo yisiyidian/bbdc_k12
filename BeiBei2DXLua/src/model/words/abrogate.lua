@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abrogate"]={"abrogate","['æbrəgeɪt]","['æbrəɡet]","vt.废除",'vt.废除，废止','The next president could abrogate the treaty.','下任总统可能会废除这个条约。','The government had abrogated some old rules','政府废除了一些旧法令。'}

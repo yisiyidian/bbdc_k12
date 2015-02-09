@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slur"]={"slur","[slɜː]","[slɝ]","n.诽谤",'n.诽谤,耻辱，污点，污迹|||n.[音]连音符|||v.诋毁，中伤，草率地看过,忽略,含糊地念，印刷模糊','She slurred over the high cost of her plan.','她对这一计划的巨额费用避而不提。','He took the remarks as a slur on his reputation','他把这些话当作是对他的名誉的中伤。'}

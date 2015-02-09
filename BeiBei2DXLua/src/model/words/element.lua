@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["element"]={"element","['elɪm(ə)nt]","['ɛləmənt]","n.元素",'n.成分,要素,元素,基本原理,(复数)恶劣天气','There\'s an element of truth in his story.','他说的有些道理.','The children are really in their element playing on the beach.','孩子们在沙滩上嬉戏真是乐得其所.'}

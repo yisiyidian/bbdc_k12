@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["philanthropist"]={"philanthropist","[fɪ'lænθrəpɪst]","[fɪ'lænθrəpɪst]","n.慈善家",'n.慈善家，博爱的人,博爱主义者','The university was founded by a millionaire philanthropist.','这所大学的创建人是位腰缠万贯的慈善家。','he is a philanthropist','他是一个慈善家'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["periphery"]={"periphery","[pə'rɪf(ə)rɪ]","[pə'rɪfəri]","n.周边",'n.周边(边缘,圆周,圆柱体表面)','The idea is also expressed by minor poet on the periphery of the movement.','该运动外围一些不大出名的诗人也表达了这些观点。','Taste buds are concentrated at the tip and rear of the tongue and around its periphery.','味蕾集中于舌尖、舌根和舌头两侧。'}

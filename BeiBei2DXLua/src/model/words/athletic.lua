@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["athletic"]={"athletic","[æθ'letɪk]","[æθ'lɛtɪk]","adj.运动的",'adj.运动的,活跃的,健壮的','The boy got in to the athletic school after a special test.','男孩经过一次专门测验后进了体育学校。','||Athletic|| sports are good to the health.','体育运动有益健康。'}

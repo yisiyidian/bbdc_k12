@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["desecrate"]={"desecrate","['desɪkreɪt]","['dɛsɪ'kret]","v.亵渎",'v.供俗用,亵渎,污辱','She shouldn\'t have desecrated the picture of a religious leader.','她不该亵渎宗教领袖的肖像。','The earth is to be honoured; it is not to be desecrated.','大地应该受到敬仰，而不该被亵渎。'}

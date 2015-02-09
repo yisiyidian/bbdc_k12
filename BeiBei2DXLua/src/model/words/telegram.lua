@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["telegram"]={"telegram","['telɪgræm]","['tɛlɪɡræm]","n.电报",'n.电报|||vt用电报发送(打电报)','She has clapped a telegram for me.','她给我拍了封电报。','Can you make sense of this telegram?','你搞得懂这电报的意思吗？'}

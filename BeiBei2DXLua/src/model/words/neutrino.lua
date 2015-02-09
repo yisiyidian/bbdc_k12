@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neutrino"]={"neutrino","[njuː'triːnəʊ]","[nu'trino]","n.中微子",'n.中微子','||Neutrino|| is a special words.','中微子是一个很奇怪的单词。','For example, we observe three types of neutrino.','例如，我们发现了三种不同的中微子。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nourishing"]={"nourishing","['nʌrɪʃɪŋ]","['nɝrɪʃɪŋ]","adj.有营养的",'adj.有营养的,滋养多的|||动词nourish的现在分词形式','Fruit is very nourishing.','水果富有营养。','He\'s been nourishing the hope of a trip abroad.','他一直怀着出国旅行的愿望.'}

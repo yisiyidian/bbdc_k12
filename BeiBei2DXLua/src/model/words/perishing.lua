@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perishing"]={"perishing","['pɛrɪʃɪŋ]","[ 'periʃiŋ ]","adj.严寒的",'adj.严寒的，不耐烦的|||动词perish的现在分词形式','He\'s too perishing mean to pay his share.','他小气极了，连自己的那份钱也不付。','I can\'t get in I\'ve lost the perishing key!','我进不去－－我把该死的钥匙丢了。'}

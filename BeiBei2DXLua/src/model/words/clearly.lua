@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clearly"]={"clearly","['klɪəlɪ]","['klɪrli]","adv.清楚地",'adv.清楚地','He formulated his thought clearly.','他清楚确切地表达了自己的思想。','If I had binoculars, I could see that comet clearly.','如果我有望远镜，我就可以清楚地看见那颗彗星。'}

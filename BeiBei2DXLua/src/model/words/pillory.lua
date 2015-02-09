@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pillory"]={"pillory","['pɪlərɪ]","['pɪləri]","n.颈手枷",'n.颈手枷,示众,嘲弄|||vt.套上枷锁，使遭人嘲笑','She was ||pilloried|| in the press for her extravagant parties.','她的聚会十分铺张，新闻界对她大加嘲弄。','A man has been forced to resign as a result of being ||pilloried|| by some of the press.','一人因为受到一些媒体的抨击已被迫辞职。'}

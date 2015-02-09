@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fabrication"]={"fabrication","[fæbrɪ'keɪʃ(ə)n]","[,fæbrɪ'keʃən]","n.虚构的谎言",'n.制造,建造,虚构的谎言','Her story was nothing but a series of fabrications.','她说的完全都是编造的.','That\'s pure fabrication!','那纯粹是捏造的!'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trite"]={"trite","[traɪt]","[traɪt]","adj.平庸的",'adj.平庸的,陈腐的,平凡的','The simple concepts he had been taught now sounded trite and naive.','他曾经被教导的简单观念如今听起来陈腐而幼稚。','I don\'t like trite life.','我不甘于平庸的生活。'}

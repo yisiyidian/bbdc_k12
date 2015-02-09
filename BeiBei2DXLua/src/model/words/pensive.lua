@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pensive"]={"pensive","['pensɪv]","['pɛnsɪv]","adj.沉思的",'adj.沉思的,愁眉苦脸的','The woman in this painting has a pensive smile.','这幅画上的女人脸上露出忧郁的微笑。','The painting can inspire a pensive mood.','这幅画能引人沉思。'}

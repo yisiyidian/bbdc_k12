@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coupon"]={"coupon","['kuːpɒn]","['kupɑn]","n.试样",'n.试样(配给票,息票,附单)','A coupon offering two items, especially tickets for a play, for the price of one.','两件的票券提供两件的票券，尤指用一张票的价格购买的两张戏票','I have a coupon for ten pence off a packet of soap.','我有一张优惠券，买一盒肥皂可以便宜十便士。'}

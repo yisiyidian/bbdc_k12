@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disgruntle"]={"disgruntle","[dɪs'ɡrʌntl]","[dɪs'grʌntl]","vt.使不满",'vt.使不满，使不高兴','The employees were disgruntled by their bad working conditions.','员工们不满其恶劣的工作环境。','The little boy was disgruntled by his elder brother who had ocuppied his toy.','那个小男孩被他哥（使不高兴）因为玩具被霸占了。'}

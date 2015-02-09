@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utterly"]={"utterly","['ʌtəlɪ ]","['ʌtɚli]","adv.完全",'adv.完全,全然,绝对','I feel utterly zonked.','我感到精疲力竭了.','Considering the losses in the disaster area, our support was an utterly inadequate measure.','比起灾区的损失, 我们的支援不过杯水车薪。'}

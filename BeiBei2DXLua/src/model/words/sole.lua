@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sole"]={"sole","[səʊl]","[sol]","adj.唯一的",'adj.唯一的,独占的|||n.脚底,鞋底;sole或soles鳎鱼|||vt.给(鞋)换底','Farming is his sole livelihood.','他唯一的谋生之道就是务农.','The court has the sole right to decide.','法庭拥有独有的决定权。'}

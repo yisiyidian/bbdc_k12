@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brandling"]={"brandling","['brændlɪŋ]","['brændlɪŋ]","n.红蚯蚓",'n.红蚯蚓','I am afraid to touch a brandling.','我不敢碰红纹蚯蚓。','||Brandling|| worm is a species of earthworm adapted to decaying organic material. These worms thrive in rotting vegetation, compost, and manure.','红蚯蚓是蚯蚓的一种，主要以有机腐殖质为生。这些蚯蚓易于出现在腐蚀蔬菜、堆肥以及肥料中。'}

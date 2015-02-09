@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["induct"]={"induct","[ɪn'dʌkt]","[ɪn'dʌkt]","vt.使就职",'vt.使就职,使入伍，使入门','a service to induct the new president of the university.','那个大学的新校长正式的就任仪式','a draftee waiting to be inducted into the army.','等候被应召入伍的士兵'}

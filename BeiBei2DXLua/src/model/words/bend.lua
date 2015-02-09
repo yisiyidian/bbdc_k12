@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bend"]={"bend","[bend]","[bɛnd]","v.弯曲",'v.弯曲,屈服|||n.弯曲(物),弯道','The branch ||bent|| but didn\'t break when the boy climbed along it.','那男孩爬上树枝时，树枝弯曲了，但是没有折断。','They refused to bend to the hijackers\' demands.','他们拒绝屈从于劫机者的要求。'}

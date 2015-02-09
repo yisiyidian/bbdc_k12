@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remarkable"]={"remarkable","[rɪ'mɑːkəb(ə)l]","[rɪ'mɑrkəbl]","adj.显著的",'adj.显著的,异常的,非凡的,值得注意的','The doctors had given her up but she made a remarkable recovery.','医生们已放弃了治愈她的希望, 而她却恢复得很好.','The Tang Dynasty is a period remarkable for its liberality.','唐朝是一段以开明著称的时期。'}

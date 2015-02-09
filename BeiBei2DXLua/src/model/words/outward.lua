@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outward"]={"outward","['aʊtwəd]","['aʊtwɚd]","adj.向外的",'adj.向外的,表面的,外部的|||adv.向外,在外,表面','He was to all outward appearances dead.','他显然已经死了.','The two things are the same in outward form but different in essence.','那两样东西在外表上相同，但在本质上不同。'}

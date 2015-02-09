@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inspire"]={"inspire","[ɪn'spaɪə]","[ɪn'spaɪɚ]","vt.激发",'vt.影响，使...感动,激发，煽动|||vi.吸入','The painting can inspire a pensive mood.','这幅画能引人沉思。','The sight inspired him with nostalgia.','这景象激起了他的怀旧之情。'}

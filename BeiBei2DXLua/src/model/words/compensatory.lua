@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compensatory"]={"compensatory","[kɒmpen'seɪtərɪ]","[kəm'pɛnsə,tori]","adj.赔偿的",'adj.赔偿的,补偿的','We are discussing the compensatory policy。','我们正在讨论赔偿的政策。','He received a compensatory payment of $20 000.','他获得了 2 万元的赔偿金。'}

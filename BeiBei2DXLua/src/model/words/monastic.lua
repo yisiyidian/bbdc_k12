@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monastic"]={"monastic","[mə'næstɪk]","[mə'næstɪk]","n.僧侣",'n.僧侣,修道士|||adj.修士的，修道院的','I enjoy listening to monastic chants.','我喜欢听修道院的圣歌。','He was drawn to the monastic life.','他已进入寺院修行。'}

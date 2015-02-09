@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["performance"]={"performance","[pə'fɔːm(ə)ns]","[pɚ'fɔrməns]","n.表演",'n.表演；演技；表现；执行','He goes through the whole performance of checking the oil and water every time he drives the car.','他每次开汽车都总是不厌其烦地把油和水整个检查一遍。','The novel is considered a brilliant performance.','这部小说被认为是出色的佳作。'}

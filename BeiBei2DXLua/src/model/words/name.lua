@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["name"]={"name","[neɪm]","[nem]","n.名字",'n.名字,名称,姓名|||vt.命名,称呼,任命|||adj.有名的,著名的','I greet you in the name of the President.','我代表总统前来迎接您。','He writes under the name of Nimrod.','他用尼姆罗德这个名字写作。'}

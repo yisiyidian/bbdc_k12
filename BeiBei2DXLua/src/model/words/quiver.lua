@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quiver"]={"quiver","['kwɪvə]","['kwɪvɚ]","v.颤抖",'v.颤抖,振动|||n.震动,颤抖,箭袋，箭袋内的箭','The skylark quivered its wings.','云雀抖动它的双翼。','He felt a quiver of excitement.','他感到激动得发抖。'}

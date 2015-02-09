@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["admonish"]={"admonish","[əd'mɒnɪʃ]","[əd'mɑnɪʃ]","vt.劝告",'vt.劝告,训诫,告诫，提醒，敦促','He was admonished against doing wrong.','人们告诫他不要做坏事。','His wife admonished him not to drive too fast.','他的妻子警告他开车不要超速。'}

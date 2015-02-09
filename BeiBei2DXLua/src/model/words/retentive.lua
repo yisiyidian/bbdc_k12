@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retentive"]={"retentive","[rɪ'tentɪv]","[rɪ'tɛntɪv]","adj.保持的",'adj.保持的,有保持力的,记性好的','My memory on childhood is retentive.','我对童年还记的很清楚。','Luke had an amazingly retentive memory.','卢克记忆力惊人。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accumulate"]={"accumulate","[ə'kjuːmjʊleɪt]","[ə'kjumjəlet]","vt.积聚",'vt.积聚,累加,堆积|||vi.累积','However, as the evidence began to accumulate, experts from the zoo felt obliged to investigate.','然而，当证据日趋增多时，该动物园的专家们感到有必要进行调查。','Dust and dirt will soon accumulate if a house is not cleaned regularly.','房屋不经常打扫，尘土很快就越积越多。'}

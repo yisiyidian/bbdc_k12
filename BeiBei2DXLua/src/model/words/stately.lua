@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stately"]={"stately","['steɪtlɪ]","['stetli]","adj.庄严的",'adj.庄严的,堂皇的，高贵的|||adv.庄严地;堂皇地','The estate was fringed with stately elms.','那片地以挺拔的榆树为边界。','She is stately in personage.','她仪容端庄。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fealty"]={"fealty","['fiːəltɪ]","[ 'fi:əlti ]","n.效忠",'n.效忠，忠诚,忠实','He took an oath of fealty to the king.','他宣誓对国王效忠。','fealty to principle','忠于原则'}

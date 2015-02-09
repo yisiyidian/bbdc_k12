@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["analysis"]={"analysis","[ə'nælɪsɪs]","[ə'næləsɪs]","n.分析",'n.分析,解析','We agreed with his acute analysis of the political situation.','我们都同意他对政治形势的深刻分析。','His analysis of the problem showed great perception.','他对该问题的分析显示出敏锐的洞察力。'}

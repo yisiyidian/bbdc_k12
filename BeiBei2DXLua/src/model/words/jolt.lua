@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jolt"]={"jolt","[dʒəʊlt; dʒɒlt]","[dʒolt]","n.震摇",'n.震摇,摇动,颠簸|||v.颠簸而行,震摇','The sudden jolt plunged her forward.','突然颠了一下，她向前打了个趔趄。','The car stopped with a jolt.','汽车停止时震动了一下。'}

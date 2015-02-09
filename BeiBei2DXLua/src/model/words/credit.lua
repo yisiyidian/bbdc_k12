@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["credit"]={"credit","['kredɪt]","['krɛdɪt]","n.信用",'n.信用,荣誉,贷款,学分|||v.归功于,赞颂,信任','It is greatly to your credit that you gave back the money you found; your honesty does you credit.','你拾金不昧是非常难能可贵的；你很诚实，应该受表扬。','She was given the credit for what I had done.','事情是我做的，她却受到称赞。'}

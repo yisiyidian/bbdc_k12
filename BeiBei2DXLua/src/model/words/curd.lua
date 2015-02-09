@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curd"]={"curd","[kɜːd]","[kɝd]","n.凝乳",'n.凝乳','Our bean curd processing line is the most advanced and well- know in the world.','我们的豆腐生产线是世界上最为先进的，久负盛名。','A solid food prepared from the pressed curd of milk, often seasoned and aged.','奶酪从经压缩过的牛奶凝聚物制成的固体食物，经常是风干的并且是陈年的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["idiosyncrasy"]={"idiosyncrasy","[,ɪdɪə(ʊ)'sɪŋkrəsɪ]","[,ɪdɪə'sɪŋkrəsi]","n.特质",'n.特质','One of her little ||idiosyncrasies|| is always washing in cold water.','她有个怪习惯，就是洗什么都爱用冷水。','Eating no meat was Amy\'s idiosyncrasy.','不吃肉是艾米的习惯。'}

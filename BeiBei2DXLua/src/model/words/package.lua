@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["package"]={"package","['pækɪdʒ]","['pækɪdʒ]","n.包裹",'n.包裹,整批交易|||vt.把...打包,把...进行推销','He sent me a package by post.','他邮寄给我一个包裹。','He received a compact package.','他收到一个扎得很紧的包裹。'}

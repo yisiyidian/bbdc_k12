@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bump"]={"bump","[bʌmp]","[bʌmp]","n.撞击",'n.撞击,表面隆起,肿块|||vt.&vi.碰撞,颠簸而行','The old bus bumped along the mountain road.','旧公共汽车沿著山路颠簸行驶。','She got a bump on her head.','她头上撞起了一个包。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrapper"]={"wrapper","['ræpə]","['ræpɚ]","n.(饺子)皮",'n.(饺子)皮,包装用品','An envelope or wrapper for mail.','封套, 信封为邮寄而制的信封或封套','The book has a red wrapper.','这本书有红色的包装。'}

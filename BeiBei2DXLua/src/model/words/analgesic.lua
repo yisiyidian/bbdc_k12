@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["analgesic"]={"analgesic","[,æn(ə)l'dʒiːzɪk; -sɪk]","['ænl'dʒizɪk]","adj.止痛的",'adj.止痛的|||n.镇痛剂','Aspirin is a mild analgesic.','阿司匹林是药性平和的止痛药。','Aloe may have an analgesic effect on inflammation and minor skin irritations.','芦荟可能对发炎以及轻微的皮肤炎症具有镇痛作用。'}

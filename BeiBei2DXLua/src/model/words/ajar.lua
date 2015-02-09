@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ajar"]={"ajar","[ə'dʒɑː]","[ə'dʒɑr]","adj.微开",'adj.微开,半开,不和谐|||adv.微开,半开,格格不入','As soon as the door is left ajar the puppy makes a bid for freedom.','这门刚开到一半，那条小狗就企图逃跑。','The door was/stood ajar.','那扇门半开著.'}

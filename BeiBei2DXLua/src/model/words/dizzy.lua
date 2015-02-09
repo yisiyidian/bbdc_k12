@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dizzy"]={"dizzy","['dɪzɪ]","['dɪzi]","adj.晕眩的",'adj.晕眩的,傻的,(速度)极快的,困惑的|||vt.使困惑,使晕眩','I feel dizzy and nauseated.','我感觉昏眩作呕。','We were dizzy by the strong wind.','我们被大风刮得头晕目眩。'}

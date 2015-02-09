@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compass"]={"compass","['kʌmpəs]","['kʌmpəs]","n.指南针",'n.指南针,圆规|||vt.图谋,包围,达成','A compass needle points (to the) north.','罗盘的指针永远指向北方.','South is opposite north on a compass.','罗盘上南与北是相对的.'}

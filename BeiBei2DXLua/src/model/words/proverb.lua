@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proverb"]={"proverb","['prɒvɜːb]","['prɑvɝb]","n.谚语",'n.谚语,格言|||vt.用谚语表达','In this connection I remember a proverb.','在这一方面我记得有一句谚语。','Expressed in a proverb.','用一句谚语表示的'}

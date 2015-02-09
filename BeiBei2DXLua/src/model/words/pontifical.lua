@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pontifical"]={"pontifical","[pɒn'tɪfɪk(ə)l]","[pɑn'tɪfɪkl]","adj.自以为是的",'adj.自以为是的,武断的，教皇的|||n.主教于祭典所用的书，主教的祭服','He is always pontifical.','他总是很自以为是。','His words criticising modern society just right indicate his pontifical character.','他用以批评现代社会的言论恰好反映了他自大武断的性格。'}

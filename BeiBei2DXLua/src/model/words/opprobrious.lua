@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opprobrious"]={"opprobrious","[ə'prəʊbrɪəs]","[ ə'prəubriəs ]","adj.嘴不干净的",'adj.嘴不干净的,辱骂的，臭名昭著的','opprobrious epithets.','轻蔑的词语','opprobrious conduct.','可耻行为'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jubilation"]={"jubilation","[dʒuːbɪ'leɪʃn]","[,dʒubɪ'leʃən]","n.欢腾",'n.欢腾,喜悦,庆祝','The whole city was a scene of jubilation.','全市一片欢腾。','The goal was greeted by jubilation from the home fans.','主场球迷为进球欢呼。'}

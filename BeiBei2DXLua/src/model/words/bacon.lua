@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bacon"]={"bacon","['beɪk(ə)n]","['bekən]","n.咸肉",'n.咸肉,熏肉','The bacon is all frizzled up!','腌肉都煎糊了!','I was nearly bankrupt, but your loan saved my bacon.','我已濒於破产, 是你借给我的钱使我幸免於难.'}

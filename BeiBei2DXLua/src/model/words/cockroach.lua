@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cockroach"]={"cockroach","['kɒkrəʊtʃ]","['kɑk'rotʃ]","n.蟑螂",'n.蟑螂','Look! There\'s a big cockroach on your desk light.','看啊！有只大蟑螂在你的台灯上。','The inspector find cockroach in the bottle kitchen.','卫生检查员在饭店厨房发现了蟑螂。'}

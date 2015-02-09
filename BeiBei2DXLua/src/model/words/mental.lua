@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mental"]={"mental","['ment(ə)l]","['mɛntl]","adj.精神的",'adj.精神的,脑力的,精神错乱的,传心术的,[解剖学]颏的','Ageing is accompanied by a slow degeneration of his mental faculties.','他随著年纪增长, 智力逐渐衰退.','He was certified and sent to a mental hospital.','他经诊断为精神失常而送往精神病院.'}

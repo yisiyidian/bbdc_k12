@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["herculean"]={"herculean","[,hə:kju'li:ən; hə'ku:liən]","[ ,hə:kju'li:ən; hə'ku:liən ]","adj.力大无比的",'adj.力大无比的，极费力的|||Herculean|||adj.[希神]赫拉克勒斯的','The consortium began its ||Herculean|| task by looking at supply chain processes.','该联盟从研究供应链的过程入手开始这个艰巨的任务.','Digging the canal was a ||Herculean|| task.','开凿运河是项极其艰巨的工程。'}

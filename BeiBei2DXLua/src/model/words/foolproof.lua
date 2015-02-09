@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foolproof"]={"foolproof","['fuːlpruːf]","['fulpruf]","adj.极简单的",'adj.极简单的|||n.极简单','a foolproof detonator; a foolproof safety lock.','十分安全的炸弹；傻瓜也可打开的保险锁','a foolproof scheme.','完美的计划'}

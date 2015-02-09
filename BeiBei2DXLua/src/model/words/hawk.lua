@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hawk"]={"hawk","[hɔːk]","[hɔk]","n.鹰",'n.鹰,掠夺别人的人,鹰派人物|||n.清嗓|||v.用训好的鹰捕猎,像鹰一般地袭击,鹰啸，清嗓|||v.沿街叫卖','The hawk pounced on its prey and carried it off.','那只鹰向那小动物猛扑过去把它叼走了.','The hawk is hovering overhead.','鹰在头顶上盘旋。'}

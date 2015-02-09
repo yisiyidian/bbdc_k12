@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["archbishop"]={"archbishop","[ɑːtʃ'bɪʃəp; 'ɑːtʃ-]","[,ɑrtʃ'bɪʃəp]","n.总主教",'n.总主教','The rank, office, or term of an archbishop.','大主教级别, 大主教职务, 大主教任期','He was consecrated ||Archbishop|| last year.','他於去年就任大主教之圣职.'}

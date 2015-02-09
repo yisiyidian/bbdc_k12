@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["electricity"]={"electricity","[,ɪlek'trɪsɪtɪ; ,el-; ,iːl-]","[ɪ'lɛk'trɪsəti]","n.电力",'n.电力；电流；强烈的紧张情绪','After the failure of the electricity supplies the city was in chaos.','电力供应中断，城市陷于混乱之中。','The interruption of electricity made us unable to do anything.','电力的中断让我们什么也不能做。'}

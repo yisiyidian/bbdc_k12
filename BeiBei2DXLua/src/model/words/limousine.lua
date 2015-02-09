@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["limousine"]={"limousine","['lɪməziːn; ,lɪmə'ziːn]","['lɪməzin]","n.豪华轿车",'n.豪华轿车；（往返机场接送旅客的）中型客车，小型公共汽车','The hotel has a fleet of limousine to take guest to the airport.','这家饭店拥有一个运送客人去机场的豪华车队。','A limousine carried us to the museum.','一辆小型巴士载我们到博物馆。'}

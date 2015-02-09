@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forward"]={"forward","['fɔːwəd]","['fɔrwɚd]","adv.前进地",'adv.前进地；向前；至将来；提前地|||adj.向前方的；迅速的；（社会、政治）进步的；早熟的|||vt.促进，助长；（按新地址）转寄；发送|||n.前锋','Police have appealed for witnesses to come forward.','警方呼吁目击者挺身而出。','The car stopped suddenly and he plunged forward.','汽车突然停下，他的身子朝前一冲。'}

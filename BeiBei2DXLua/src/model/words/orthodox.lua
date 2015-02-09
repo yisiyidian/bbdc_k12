@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orthodox"]={"orthodox","['ɔːθədɒks]","['ɔrθədɑks]","adj.正(传)统的",'adj.正(传)统的','A cleric ranking just below a priest in the Anglican, Eastern ||Orthodox||, and Roman Catholic churches.','执事英国圣公会、东正教和罗马天主教的教堂中仅次于牧师级别的神职人员','She has an orthodox view of world affairs.','她对世事的看法很传统。'}

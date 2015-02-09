@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solution"]={"solution","[sə'luːʃ(ə)n]","[sə'luʃən]","n.解决办法",'n.解答,解决办法,溶解,溶液','We haven\'t found the solution yet, but I\'m sure we\'re on the right track.','我们还没有找到解决办法, 但我肯定我们的思路是对的.','Litmus paper can be used as an indicator of the presence of acid in a solution.','石蕊试纸可用以测试溶液是否含酸.'}

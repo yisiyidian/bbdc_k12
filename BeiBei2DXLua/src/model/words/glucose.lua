@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glucose"]={"glucose","['gluːkəʊs; -z]","['ɡlukos]","n.葡萄糖",'n.葡萄糖','An abnormally low level of glucose in the blood.','低血糖症血液中葡萄糖不正常地低含量','Most green plants make the kind of sugar called glucose.','大部分绿色植物都制造称为葡萄糖的这种糖。'}

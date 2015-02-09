@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hostess"]={"hostess","['həʊstɪs; -es; həʊ'stes]","['hostəs]","n.女主人",'n.女主人','You need a lot of tact to be an air hostess.','当空中小姐言行需十分得体.','Now that she\'s an air hostess, foreign travel has lost its glamour for her.','她当上了空中小姐, 到国外旅行对她已失去吸引力.'}

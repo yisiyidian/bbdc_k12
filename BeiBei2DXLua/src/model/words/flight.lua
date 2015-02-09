@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flight"]={"flight","[flaɪt]","[flaɪt]","n.（物体的）飞行",'n.（物体的）飞行；航班；飞翔；楼梯的一段|||vi.成群地迁徙或飞行|||vt.射击；使惊飞','She\'s in the top flight of journalists.','她是出类拔萃的新闻工作者。','I\'ll book you on a direct flight to London.','我将为你预订直飞伦敦的航班。'}

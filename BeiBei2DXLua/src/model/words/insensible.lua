@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insensible"]={"insensible","[ɪn'sensɪb(ə)l]","[ɪn'sɛnsəbl]","adj.无感觉的",'adj.无感觉的，麻木的','He was insensible of the danger.','他没有察觉到危险。','I am not insensible of your concern.','我不是没察觉到你的忧虑。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quell"]={"quell","[kwel]","[kwɛl]","v.压制",'v.压制,平息,镇定','Aspirin will quell your headache.','阿斯匹林能缓和你的头疼。','His actions have done little to quell the speculation','他的行动无助于平息传言。'}

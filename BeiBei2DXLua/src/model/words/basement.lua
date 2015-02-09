@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["basement"]={"basement","['beɪsm(ə)nt]","['besmənt]","n.根基",'n.根基，地下室|||n.（新英格兰）特别指学校中的公厕','Thrift is the basement of richness.','节约是富裕的基础。','Also they want to destroy the basement.','他们也想摧毁地下室。'}

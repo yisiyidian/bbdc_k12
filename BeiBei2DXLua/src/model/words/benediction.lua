@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["benediction"]={"benediction","[,benɪ'dɪkʃ(ə)n]","['bɛnə'dɪkʃən]","n.祝祷",'n.祝祷,祝福','She conferred her benediction to me when I left.','当我离开的时候，她向我祝福。','I say the benediction to my father\'s birthday.','我祝福父亲的生日。'}

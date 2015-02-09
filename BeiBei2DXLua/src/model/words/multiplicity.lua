@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multiplicity"]={"multiplicity","[,mʌltɪ'plɪsɪtɪ]","[,mʌltɪ'plɪsəti]","n.多数",'n.多数,重复,多样','the multiplicity of architectural styles on that street.','那条街上建筑风格多种多样。','We are all amazed at the multiplicity of the nature.','大自然的多样性令我们大家惊奇。'}

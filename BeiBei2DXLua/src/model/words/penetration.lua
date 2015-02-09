@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penetration"]={"penetration","[penɪ'treɪʃ(ə)n]","[,pɛnɪ'treʃən]","n.渗透",'n.渗透,侵入,突破,','He writes with penetration.','他写的文章尖锐深刻。','Resistant to penetration by water but not entirely waterproof.','抗水的能抵抗水的渗透但不完全防水的'}

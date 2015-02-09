@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["continuation"]={"continuation","[kəntɪnjʊ'eɪʃ(ə)n]","[kən'tɪnjʊ'eʃən]","n.继续",'n.继续,延续，续集','He argued for a continuation of the search.','他主张继续搜查。','This road is a continuation of the motorway.','这条公路是高速公路的延伸。'}

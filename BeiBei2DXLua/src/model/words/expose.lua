@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expose"]={"expose","[ɪk'spəʊz; ek-]","[ɪk'spoz]","vt.暴露",'vt.暴露,揭穿,使遭受（危险或不快）','It\'s very foolish of the commander to expose his men to unnecessary risks.','这个指挥官让士兵们冒不必要的危险真是太愚蠢了。','You shouldn\'t expose the soldiers to unnecessary risks.','你不应该让士兵们冒不必要的危险。'}

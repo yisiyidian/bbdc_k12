@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proceeds"]={"proceeds","['prəʊsiːdz]","['prosidz]","n.收益",'n.收益|||动词proceed的第三人称一般现在时形式','Most people sell their souls and live with a good conscience on the proceeds.','大多数的人在出卖了自己的灵魂之后，就凭那收入过其心安理得的日子。','||Proceeds|| from the concert will go to charity.','音乐会的收入将捐赠给慈善事业.'}

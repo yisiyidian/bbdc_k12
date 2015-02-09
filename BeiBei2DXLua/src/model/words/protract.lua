@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["protract"]={"protract","[prə'trækt]","[pro'trækt]","vt.延长",'vt.延长,托长,伸出','Let\'s not protract the debate any further.','我们不要再继续争论下去了。','protracted effort','长期努力'}

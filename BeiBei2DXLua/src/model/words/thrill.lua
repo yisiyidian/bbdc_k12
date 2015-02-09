@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thrill"]={"thrill","[θrɪl]","[θrɪl]","n.震颤",'n.震颤,激动|||vt.(使)震颤,抖颤,激动|||vi.变激动','Such was the picture, and he thrilled to the memory of it.','当时正是这样的情景，他回想起来还感到毛骨悚然。','She was thrilled when the handsome filmstar kissed her.','当那位英俊的电影明星吻她的时候，她欣喜若狂。'}

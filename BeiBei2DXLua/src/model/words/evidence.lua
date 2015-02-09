@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evidence"]={"evidence","['evɪd(ə)ns]","['ɛvɪdəns]","n.证据",'n.根据,证据|||vt.vi.证实,证明','On the evidence of their recent matches it\'s unlikely the Spanish team will win the cup.','从西班牙队最近的比赛情况来看，他们难以在这一锦标赛中夺标。','There wasn\'t enough evidence to prove his guilt.','没有充分的证据能证明他有罪。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dotage"]={"dotage","['dəʊtɪdʒ]","['dotɪdʒ]","n.老耄",'n.老耄,老迷糊,溺爱','Even in his dotage, the professor still sits on the committee.','即便上了年纪，教授仍然是委员会的一员。','I\'m not in my dotage yet.','我还没到老糊涂的年纪呢。'}

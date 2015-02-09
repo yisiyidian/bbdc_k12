@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bark"]={"bark","[bɑːk]","[bɑrk]","n.狗叫",'n.狗叫,咆哮,厉声说话,树皮,小帆船|||vi.吠叫,咆哮,急促地说|||vt.咆哮,叫卖,撕(表皮)','The birds bark softly, sounding almost like young pups','“鸟象小狗似地清脆柔和地叫着”','He barked his elbow on the wall.','他碰到墙上，肘部擦破了皮。'}

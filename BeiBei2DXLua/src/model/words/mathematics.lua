@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mathematics"]={"mathematics","[mæθ(ə)'mætɪks]","[,mæθə'mætɪks]","n.数学",'n.数学','I\'m hopeless at mathematics.','我对数学一窍不通。','He is superior to his brother in mathematics.','他的数学比他兄弟好。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["economize"]={"economize","[ɪ'kɑnə'maɪz]","[ i'kɔnəmaiz ]","v.节约",'v.节约,节省,有效地利用','Housewives can economize by buying their milk in gallon containers.','家庭主妇可以购买加仑装的牛奶而节省开支。','The best that can be said for this method is that it economizes on thought','“这种方法最好的一点是它不费脑筋”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sly"]={"sly","[slaɪ]","[slaɪ]","adj.狡猾的",'adj.狡猾的，诡密的,偷偷摸摸的','She\'s a sly puss.','她是个刁滑的姑娘.','Don\'t trust him, he is a sly old fox.','别相信他，他像老狐狸一样狡猾。'}

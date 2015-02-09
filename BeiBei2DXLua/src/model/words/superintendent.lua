@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["superintendent"]={"superintendent","[suːp(ə)rɪn'tend(ə)nt; sjuː-]","[,supərɪn'tɛndənt]","n.监督人",'n.监督人,管理人,所长','The officer in charge of the case is ||Superintendent|| Lewis.','负责这件案子的警官是警长刘易斯.','The superintendent is the boss of prison.','这个所长是监狱的头儿。'}

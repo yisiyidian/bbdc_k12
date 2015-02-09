@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tram"]={"tram","[træm]","[træm]","n.（英）有轨电车",'n.（英）有轨电车,矿车,煤车,缆车|||(复数）trams:有轨电车轨道|||vt.用缆车,电车等运输','The device is in tram.','这一装置调准了','The device is in tram.','这一装置调准了'}

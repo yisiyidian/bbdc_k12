@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wail"]={"wail","[weɪl]","[wel]","n.痛哭",'n.痛哭，嚎啕|||v.痛哭，悲叹','I\'ve lost all my money!\' she wailed.','她哭著说: ｀我的钱都丢了!＇','The exhausted mother smiled at the wail of her newborn baby.','听到新生儿的哭叫声，倦极了的母亲笑了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conflicting"]={"conflicting","[kən'flɪktɪŋ]","[kən'flɪktɪŋ]","adj.相冲突的",'adj.相冲突的|||动词conflict的现在分词形式','A settlement or compromise of conflicting opinions.','和解，妥协两种冲突观点的和解或妥协','My husband and I hold conflicting opinions on this matter.','对于这件事，我和丈夫的意见相左。'}

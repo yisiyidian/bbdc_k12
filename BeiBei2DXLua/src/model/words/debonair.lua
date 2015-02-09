@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["debonair"]={"debonair","[,debə'neə]","[,dɛbə'nɛr]","adj.高兴的(心情愉快的)",'adj.高兴的(心情愉快的),殷勤的，温文尔雅的','He strolled about, looking very debonair in his elegant new suit.','他穿了一身讲究的新衣服逛来逛去，显得颇为惬意。','He was a handsome, debonair, death-defying racing-driver.','他是一位英俊潇洒、风流倜傥、敢于挑战死神的赛车手。'}

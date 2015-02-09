@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plaster"]={"plaster","['plɑːstə]","['plæstɚ]","n.石膏",'n.石膏,灰泥,膏药|||v.涂以灰泥,敷以膏药,使...平','We chipped the old plaster (away) (ie removed it in small pieces) from the wall.','我们把旧墙皮从墙上铲掉.','His broken leg was encased in plaster.','他折的腿打上了石膏.'}

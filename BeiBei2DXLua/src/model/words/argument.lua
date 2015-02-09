@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["argument"]={"argument","['ɑːgjʊm(ə)nt]","['ɑrɡjumənt]","n.争论",'n.辩论,争论,论点(据),理由','The interruption fragmented his argument.','他的辩论因被打断而显得不完整。','There are strong arguments against these measures.','有一些有力的论据反对这些措施。'}

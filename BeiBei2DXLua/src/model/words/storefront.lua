@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["storefront"]={"storefront","['stɔːfrʌnt]","['stɔr'frʌnt]","n.店头",'n.店头,店面|||adj.临街的','a political office in a storefront.','一楼铺面的政党办公室','storefront window boxes.','临街的窗户阳台'}

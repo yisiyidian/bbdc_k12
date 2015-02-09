@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elaborate"]={"elaborate","[ɪ'læb(ə)rət]","[ɪ'læbəret]","adj.精细的",'adj.精细的,详尽的,精心的|||v.详细地说明,用心地作,推敲','Orthodox Christian churches often have elaborate steeples.','传统的基督教堂都有精致的尖塔。','The curtains had an elaborate pattern of flowers.','窗帘上绘有精美的花卉图案。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infirmary"]={"infirmary","[ɪn'fɜːm(ə)rɪ]","[ɪn'fɝməri]","n.医务室",'n.医务室；医院；养老院','This is his infirmary.','这是他的弱点。','Hello, please follow me to have your injection in the infirmary.','您好，请跟我来，在这边的医务室打针。'}

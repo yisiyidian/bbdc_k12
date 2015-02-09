@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["camouflage"]={"camouflage","['kæməflɑːʒ]","['kæmə'flɑʒ]","v.伪装",'v.伪装,欺瞒','Some insect have a natural camouflage which hide them from the attack of their enemy.','有些昆虫有一种天然的保护色可以防止敌人的袭击。','The soldiers camouflaged themselves with leaves and branches.','士兵们用树枝树叶把自己伪装起来.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ideology"]={"ideology","[,aɪdɪ'ɒlədʒɪ; ɪd-]","[ ,aidi'ɔlədʒi, ,idi- ]","n.观念学",'n.观念学,空论,意识形态','The ideology has great influence in the world.','这种思想体系在世界上有很大的影响。','The Community is not governed by any particular party ideology.','该团体不受任何特定一方的意识形态约束。'}

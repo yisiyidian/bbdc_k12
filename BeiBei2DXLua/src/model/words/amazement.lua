@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amazement"]={"amazement","[ə'meɪzm(ə)nt]","[ə'mezmənt]","n.惊愕",'n.惊愕,惊异','They all stared in/with amazement.','他们都惊讶得瞪大了眼睛.','She was pop-eyed with amazement.','她惊奇得瞪著眼发愣.'}

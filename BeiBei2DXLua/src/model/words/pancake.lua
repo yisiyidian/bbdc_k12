@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pancake"]={"pancake","['pænkeɪk]","['pænkek]","n.薄煎饼",'n.薄煎饼','He turned the pancake over with a strong flick of his wrist.','他一抖腕子就把饼翻过来了.','The whole landscape looked as flat as a pancake.','整个地形十分平坦.'}

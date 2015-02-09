@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hard"]={"hard","[hɑːd]","[hɑrd]","adj.坚硬的",'adj.坚硬的;艰难的,苛刻的|||adv.努力地,猛烈地,坚定地','The ground is as hard as stone after the drought.','长期乾旱之後土地硬得就像石头一样。','Don\'t be too hard on her; she\'s very young.','别对她太严了－－她还小呢。'}

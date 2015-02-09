@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["layer"]={"layer","['leɪə]","['leɪr]","n.层",'n.层，层次；膜；[植]压条；放置者，计划者|||vt.把…分层堆放；借助压条法；生根繁殖；将（头发）剪成不同层次|||vi.形成或分成层次；[植]通过压条法而生根','This layer of rock contains a lot of flint.','这一岩层中有大量燧石.','There is a fine layer of dust on the desk.','桌子上有一层薄薄的尘土。'}

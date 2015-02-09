@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toddler"]={"toddler","['tɒdlə]","['tɑdlɚ]","n.初学走路的孩子",'n.初学走路的孩子','The hyperactive toddler is a real handful.','这个还在学走路的却极其活跃的小孩真是难以控制','A toddler who was a menace in a shop full of crystal.','对放满水晶制品的商店构成威胁的蹒跚学步的孩子'}

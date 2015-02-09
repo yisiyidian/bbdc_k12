@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["admiration"]={"admiration","[ædmə'reɪʃ(ə)n]","[,ædmə'reʃən]","n.钦佩",'n.钦佩,赞赏','His cleverness and skill compel our admiration.','他的聪明和技巧使我们赞叹不已。','His patriotic action raised our admiration.','他的爱国行为激起了我们的敬佩。'}

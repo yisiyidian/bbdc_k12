@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dilute"]={"dilute","[daɪ'l(j)uːt; dɪ-]","[daɪ'l(j)ut]","vt.冲淡",'vt.冲淡,稀释|||adj.冲淡的,稀释的,微弱的','The pollution was diluted by the heavy rainfall, but it\'s still very serious.','污染被大量降雨稀释了，但是依然很严重。','She diluted the concentrated fruit juice with water.','她搀水冲淡浓缩水果汁。'}

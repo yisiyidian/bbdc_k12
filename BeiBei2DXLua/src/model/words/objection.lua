@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["objection"]={"objection","[əb'dʒekʃ(ə)n]","[əb'dʒɛkʃən]","n.反对",'n.反对,异议','||Objection|| sustained!','反对有效!','You\'ve no objection, I trust.','我希望你不反对吧.'}

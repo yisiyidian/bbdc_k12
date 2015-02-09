@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surly"]={"surly","['sɜːlɪ]","[ 'sə:li ]","adj.不和蔼的",'adj.不和蔼的,板著面孔的,粗声暴气的','The surly insolence of the waiters drove him into a rage.','侍者们粗暴无礼的行为使得他怒不可遏。','Her manner offstage, like her manner on, is somewhat surly.','她台下和台上的举止如出一辙，都有些粗暴无礼。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["notification"]={"notification","[,nəʊtɪfɪ'keɪʃn]","['notəfə'keʃən]","n.通知单",'n.通知单,通告,告示|||[计算机]通知','There have been no more notifications of cholera cases in the last week.','上星期已没有霍乱病例的报告.','Names of the dead and injured are being withheld pending notification of relatives.','伤亡者的姓名在通知亲属前不被公布。'}

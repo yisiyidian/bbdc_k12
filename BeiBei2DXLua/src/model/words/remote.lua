@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remote"]={"remote","[rɪ'məʊt]","[rɪ'mot]","adj.遥远的",'adj.偏僻的,遥远的,远程的，(感情等)距离很大|||n.远程操作','The bomb was exploded by remote control.','这颗炸弹是遥控引爆的。','||Remote|| in space or time.','遥远的空间或时间上很远的'}

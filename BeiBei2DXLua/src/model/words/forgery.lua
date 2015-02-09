@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forgery"]={"forgery","['fɔːdʒ(ə)rɪ]","['fɔrdʒəri]","n.伪造",'n.伪造,伪造罪,伪造物','They knew the painting was a forgery. Moreover, they knew who had painted it.','他们知道那幅画是膺品. 而且还知道是谁仿画的.','He confessed the letter a forgery.','他承认那封信是伪造的。'}

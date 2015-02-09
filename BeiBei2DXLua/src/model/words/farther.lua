@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["farther"]={"farther","['fɑːðə]","['fɑrðɚ]","adj.更远的",'adj.更远的,进一步的|||adv.更远地,进一步地','The nearer the church, the farther from God.','【谚】离教堂越近，离上帝越远。','We can\'t go any farther without a rest.','不休息我们就走不动了。'}

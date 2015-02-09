@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inconsistency"]={"inconsistency","[ɪnkən'sɪst(ə)nsɪ]","[,ɪnkən'sɪstənsi]","n.不一致",'n.不一致,不调和,矛盾','She noticed several minor ||inconsistencies|| in his argument.','她觉察到他的论点有几处略微有些自相矛盾。','His worst fault was his inconsistency.','他的最大缺点就是反复无常。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hauteur"]={"hauteur","[əʊ'tɜː]","[ əu'tə: ]","n.傲慢",'n.傲慢','Once, she had been put off by his hauteur.','她以前对他的傲慢很反感。','The intense vitality that had been so remarkably in the garage was converted into impressive hauteur.','The Great Gatsby'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disease"]={"disease","[dɪ'ziːz]","[dɪ'ziz]","n.疾病",'n.疾病,弊端','The rapid spread of the disease is alarming the medical authorities.','这种疾病的迅速蔓延使医疗当局感到忧虑不安。','The treatment arrested the growth of the disease.','治疗抑制了病情的发展。'}

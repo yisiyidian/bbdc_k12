@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suspicion"]={"suspicion","[sə'spɪʃ(ə)n]","[sə'spɪʃən]","n.猜疑",'n.猜疑,怀疑','We regard her behaviour with suspicion.','我们对她的行为有怀疑.','He managed to avert suspicion.','他设法避嫌。'}

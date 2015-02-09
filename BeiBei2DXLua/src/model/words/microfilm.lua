@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["microfilm"]={"microfilm","['maɪkrə(ʊ)fɪlm]","['maɪkrofɪlm]","n.缩影胶片",'n.缩影胶片','Send the1990 correspondence to be microfilm or for microfilm.','把1990年的信函送去摄制成缩微胶卷。','A type of microfilm used especially to photograph the pages of books.','微缩胶卷专门拍摄书页用的一种显微胶片'}

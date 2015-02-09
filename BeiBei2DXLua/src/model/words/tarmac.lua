@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tarmac"]={"tarmac","['tɑrmæk]","[ 'tɑ:mæk ]","n.铺地用沥青",'n.铺地用沥青，柏油碎石地(尤指停机坪)','I\'m going to tarmac the front drive.','我要把前面的汽车道铺上碎石沥青.','The plane taxied along the tarmac.','飞机沿跑道滑行.'}

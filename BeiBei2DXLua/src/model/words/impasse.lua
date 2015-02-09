@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impasse"]={"impasse","[æm'pɑːs; 'æmpɑːs]","['ɪmpæs]","n.僵局",'n.僵局,死路','The negotiations had reached an impasse, with both sides refusing to compromise.','由于双方都不肯妥协，谈判陷入僵局。','future and even fate seem to be an impasse for the survivals.','对于幸存者来说，未来甚至于命运都像是死局。'}

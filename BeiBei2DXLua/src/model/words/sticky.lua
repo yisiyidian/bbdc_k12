@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sticky"]={"sticky","['stɪkɪ]","['stɪki]","adj.粘的",'adj.粘的,闷热的,困难的,令人不满意的','I like films where the villain comes to a sticky end!','我喜欢恶有恶报的影片!','Shall I tie the parcel or use sticky tape?','我把包裹捆上还是用胶带粘上?'}

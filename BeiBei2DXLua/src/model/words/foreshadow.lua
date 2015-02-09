@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foreshadow"]={"foreshadow","[fɔː'ʃædəʊ]","[fɔr'ʃædo]","v.预示",'v.预示,预兆|||vt.预兆','The strong wind foreshadows that rain is coming.','大风预示着要下雨了。','The disappointing sales figures foreshadow more redundancies.','令人失望的销售额预示着会有更多人被裁员。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fretful"]={"fretful","['fretfʊl; -f(ə)l]","['frɛtfəl]","adj.烦燥的",'adj.烦燥的,焦燥的','The child was tired and fretful.','那孩子又疲倦又烦躁不安。','The child asked for another cake in a fretful voice.','这个小孩以焦急的口气要求再给他一块蛋糕。'}

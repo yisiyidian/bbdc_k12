@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discharge"]={"discharge","[dɪs'tʃɑːdʒ]","[dɪs'tʃɑrdʒ]","vt.&vi.放出",'vt.&vi.放出,解雇,放电,解除,清偿债务|||n.释放，卸货，放电，一股，一阵，开火，发射，准许离开','They discharged their arrows at the enemy.','他们把箭射向敌人。','How long will the discharge of the cargo take?','卸货需要多久？'}

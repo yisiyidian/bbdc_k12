@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harassment"]={"harassment","['hærəsm(ə)nt; hə'ræsm(ə)nt]","[hə'ræsmənt]","n.烦扰",'n.困扰,烦扰,烦恼','There is a report about a sexual harassment in the office on this newspaper.','今天的报纸上有一篇关于办公室里的性骚扰的报道。','A source of harassment, annoyance, or pain.','使人痛苦的东西骚扰，烦恼或痛苦的来源'}

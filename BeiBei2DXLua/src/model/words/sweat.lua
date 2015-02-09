@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sweat"]={"sweat","[swet]","[swɛt]","n.汗",'n.汗,流汗,(因冷凝作用形成在物体表面的)水珠,艰巨的任务,焦急状态|||vi.出汗,辛苦工作,感到焦急|||vt.使流汗,拼命做出...','Making your own beer? It\'s not worth the sweat!','你自己酿啤酒吗？不值得费那个劲。','I sweated off ten pounds in a week by playing squash every day.','我每天打壁球，一个星期体重减轻了十磅。'}

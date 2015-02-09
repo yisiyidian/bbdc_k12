@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lugubrious"]={"lugubrious","[lʊ'guːbrɪəs]","[lə'gʊbrɪəs]","adj.可怜的",'adj.可怜的,悲惨的,悲哀的','Why are you looking so lugubrious?','你看上去怎么这么忧郁？','After the earthquake, the city is full of lugubrious faces.','地震之后，这个城市满是悲哀的面孔。'}

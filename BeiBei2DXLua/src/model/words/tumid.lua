@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tumid"]={"tumid","['tjuːmɪd]","[ 'tju:mid ]","adj.肿胀的",'adj.浮夸的,肿胀的','Leon was disappointed with Christopher’s tumid style of writing.','里昂对于克里斯多夫浮夸的写作风格感到失望。','My eyelid has been tumid since yesterday.','从昨天起，我的眼皮就肿了。'}

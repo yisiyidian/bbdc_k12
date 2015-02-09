@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["facade"]={"facade","[fə'sɑːd]","[fə'sɑd]","n.建筑物的正面",'n.建筑物的正面,外表(犹指虚伪的)','His fine clothes are a mere facade.','他漂亮的衣着只是虚有其表而已。','That is the ornate facade of the Palace.','那是宫殿装饰华丽的正面。'}

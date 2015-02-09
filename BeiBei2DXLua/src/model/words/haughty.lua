@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["haughty"]={"haughty","['hɔːtɪ]","['hɔti]","adj.傲慢的",'adj.傲慢的','He is haughty to us.','他对我们很傲慢.','They were displeased with her haughty airs.','他们讨厌她高傲的派头.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["instant"]={"instant","['ɪnst(ə)nt]","['ɪnstənt]","adj.立即的",'n.立即,瞬间|||adj.立即的,即时的','I don\'t like to drink instant coffee.','我不喜欢喝速溶咖啡。','I took an instant dislike to him.','我一见他就不喜欢。'}

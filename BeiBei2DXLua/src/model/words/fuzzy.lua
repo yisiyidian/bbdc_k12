@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fuzzy"]={"fuzzy","['fʌzɪ]","['fʌzi]","adj.模糊的",'[计算机]模糊的|||adj.毛茸茸的，模糊的，含糊不清的（感情）','I tied it with fuzzy white yarn, and admired my work.','我用毛茸茸的白纱线把它系好，欣赏着我的杰作。','A soft or fuzzy surface on fabric or leather.','绒毛织物或皮革上的柔软或绒毛状的表面'}

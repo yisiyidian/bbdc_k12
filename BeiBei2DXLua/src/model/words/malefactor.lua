@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malefactor"]={"malefactor","['mælɪ,fæktə]","['mælɪfæktɚ]","n.罪人",'n.罪人,犯人,坏人','||Malefactors|| will be pursued and punished.','作恶的人会被惩罚。','Shortly after the crime, the malefactor was apprehended and turned over to the police.','犯罪后不久，那个罪犯就被逮捕而且移交警方。'}

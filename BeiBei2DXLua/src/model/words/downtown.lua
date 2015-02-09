@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["downtown"]={"downtown","['daʊntaʊn]","['daʊn'taʊn]","n.市中心区",'n.市中心区,市中心|||adj.市中心的|||adv.往闹区','I have an apartment in downtown Manhattan.','我在曼哈顿中心区有一套住房。','On his way downtown, Jim looked in on his aunt.','在去市内的路上, 吉姆顺道拜访了他的姨妈。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nucleus"]={"nucleus","['njuːklɪəs]","['nuklɪəs]","n.核",'n.核,核心,细胞核,原子核','The colorless, liquid component of the cell nucleus.','细胞核液细胞核中无色的液体成分','These 1000 books will form the nucleus of the new school library.','这一千本书将构成学校新图书馆藏书的基础。'}

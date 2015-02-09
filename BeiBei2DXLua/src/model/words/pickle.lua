@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pickle"]={"pickle","['pɪk(ə)l]","['pɪkl]","n.腌汁",'n.腌汁,泡菜|||v.腌,泡','She\'s a real little pickle!','她真是个小调皮!','The dish was accompanied by a variety of pickles.','这盘菜配有什锦泡菜.'}

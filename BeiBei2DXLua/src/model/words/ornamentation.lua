@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ornamentation"]={"ornamentation","[ɔːnəmen'teɪʃ(ə)n]","[,ɔrnəmɛn'teʃən]","n.装饰",'n.装饰,修饰','But they were used for ornamentation rather than as playthings.','但玩具屋只作装饰用,而不是玩具.','Instead they used them for ornamentation in everyday life.','相反他们在日常生活中用它们作为装饰品.'}

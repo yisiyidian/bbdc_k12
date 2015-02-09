@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["submarine"]={"submarine","['sʌbməriːn; sʌbmə'riːn]","[,sʌbmə'rin]","n.潜水艇",'n.潜水艇|||adj.水底的,海底的|||vt.用潜艇袭击|||vi.滑入...底下','The frigate rammed the submarine.','护卫舰撞击了潜艇.','The submarine rose to the surface.','潜艇露出了水面.'}

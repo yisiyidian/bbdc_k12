@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frequent"]={"frequent","['friːkw(ə)nt]","['frikwənt]","adj.经常的",'adj.经常的,频繁的|||vt.常到,常去','His frequent hesitations annoyed the audience.','他三番五次欲言又止，听众已感到厌烦。','He suffers from frequent bouts of depression.','他患多发性抑郁症。'}

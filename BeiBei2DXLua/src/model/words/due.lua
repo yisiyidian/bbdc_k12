@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["due"]={"due","[djuː]","[du]","n.应有的",'n.应得物|||adj.预定的,应付的,到期的,应有的','The team\'s success was largely due to her efforts.','该队的成功在很大程度上是由於她的努力。','I don\'t like him, but, to give him his due, he is a good worker.','我不喜欢他，但是说句公道话，他是个好工人。'}

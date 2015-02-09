@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["principle"]={"principle","['prɪnsɪp(ə)l]","['prɪnsəpl]","n.原则",'n.原则,原理,主义,信念','They have agreed to the proposal in principle but we still have to negotiate the terms.','他们基本上同意了那项提议, 但我们仍须商定条件.','The system works on the principle that heat rises.','该项装置是按照热力上升的原理运转的。'}

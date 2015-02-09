@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parapsychology"]={"parapsychology","[pærəsaɪ'kɒlədʒɪ]","[,pærəsaɪ'kɑlədʒi]","n.超心理学",'n.超心理学','||Parapsychology|| is a knowlege studying on various human psychic phenomenon.','超心理学是研究心理学领域以外,各种心灵现象的一种学问.','||Parapsychology|| is a new-born subject.','超心理学是个新学科'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["baseball"]={"baseball","['beɪsbɔːl]","['besbɔl]","n.棒球",'n.棒球','We\'re rooting for the college baseball team.','我们在给学院的棒球队加油.','The baseball game on Tuesday is the most important game this year.','星期二的棒球赛是今年最重要的棒球赛。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spendthrift"]={"spendthrift","['spen(d)θrɪft]","[ 'spendθrift ]","n.浪费的人",'n.浪费的人|||adj.浪费的,挥霍无度的','He disowned his spendthrift son.','他与挥金如土的儿子脱离父子关系。','The spendthrift managed to blow all of his inheritance in a single year.','这个败家子只用了一年就把自'}

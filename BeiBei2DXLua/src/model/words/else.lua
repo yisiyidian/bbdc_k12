@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["else"]={"else","[els]","[ɛls]","adj.别的",'adj.别的,其他的|||adv.另外,否则','Run or else you\'ll be late.','快跑，不然你要迟到了。','What else could I say?','我还有什么可说的？'}

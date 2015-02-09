@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pathological"]={"pathological","[pæθə'lɒdʒɪk(ə)l]","['pæθə'lɑdʒɪkl]","adj.病理学的",'adj.病理学的','Fankly speaking, I think her jealousy has reached a pathological level.','说实话，我觉得她的嫉妒都到了病态的程度。','He experiences chronic, almost pathological jealousy.','他长期心怀近乎病态的嫉妒。'}

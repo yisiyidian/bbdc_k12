@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spell"]={"spell","[spel]","[spɛl]","v.拼写",'v.拼写，缓慢地或吃力地读|||n.魅力，符咒|||vt.用符咒镇住(某人)|||n.一段时间，轮班|||v.轮班，休息','Could you spell that word out for me again?','那个字你再拼一遍好吗？','The witch put the princess under a spell, and she fell asleep for ten years.','这女巫使公主中了巫术，沉睡了十年。'}

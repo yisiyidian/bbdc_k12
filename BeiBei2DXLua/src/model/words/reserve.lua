@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reserve"]={"reserve","[rɪ'zɜːv]","[rɪ'zɝv]","vt.保留",'n.预备品,贮存,候补|||n.克制,含蓄|||vt.保留,预订,延期','Please reserve a seat for me.','请为我预定一个座位。','He still reserved his opinion on some points.','在一些问题上，他仍然保留自己的意见。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inapt"]={"inapt","[ɪn'æpt]","[ɪn'æpt]","adj.不适当的",'adj.不适当的,不合适的','It is inapt to ask him the question.','问他这个问题不合适。','inapt handling of the project.','对这项计划的不恰当的处理'}

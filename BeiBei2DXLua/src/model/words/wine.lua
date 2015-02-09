@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wine"]={"wine","[waɪn]","[waɪn]","n.酒",'n.酒,葡萄酒,紫红色|||vt.&vi.喝酒,请喝酒','He wanted to find some wine in the pantry.','他想在餐具室里找到一些酒。','He drank the wine slowly, savoring every drop.','他慢慢地喝着酒，细细品尝着每滴酒的滋味。'}

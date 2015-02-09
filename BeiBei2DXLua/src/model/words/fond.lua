@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fond"]={"fond","[fɒnd]","[fɑnd]","adj.喜欢的",'adj.喜欢的,愚蠢的,渴望的,溺爱的|||n.基础','I am not fond of solitude.','我不喜欢孤独。','He is fond of high-sounding phrases.','他爱用夸大的词句。'}

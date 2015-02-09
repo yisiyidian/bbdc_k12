@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sidereal"]={"sidereal","[saɪ'dɪərɪəl]","[saɪ'dɪrɪəl]","adj.恒星的",'adj.恒星的','The sidereal year is not used to construct a calendar.','恒星年不用于编制年历。','A sidereal day is shorter than a mean solar day by 3 minutes and 56 seconds.','恒星日比平均太阳日短三分五十六秒。'}

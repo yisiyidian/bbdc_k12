@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apply"]={"apply","[ə'plaɪ]","[ə'plaɪ]","vt.应用",'vt.应用,申请;涂|||vt.使专心从事|||vi.申请;有关联','This rule cannot be ||applied|| to every case.','这项规则不是所有情况都使用。','I advise that they apply to the council for a home improvement grant.','我建议他们向市政会申请改善住房的津贴。'}

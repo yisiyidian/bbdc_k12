@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expropriate"]={"expropriate","[ɪks'prəʊprɪeɪt; eks-]","[ɛks'proprɪet]","vt.使充公",'vt.使充公,没收，剥夺','The new government expropriated his estate for military purposes.','新政府将他的地产徵作军用.','She was expropriated (of her land).','她的（土地的）所有权已遭剥夺.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cryptic"]={"cryptic","['krɪptɪk]","['krɪptɪk]","adj.秘密的(使用密码的",'adj.秘密的(使用密码的,意义深远的)','She made a cryptic  comment  about how the film mirrored her life.','她隐晦地表示这部电影是她人生的写照。','He has issued a short, cryptic statement denying the spying charges.','他发表了一个简短隐晦的声明，否认对其间谍行为的指控。'}

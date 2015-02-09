@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["straddle"]={"straddle","['stræd(ə)l]","['strædl]","n.跨坐",'n.跨坐|||v.跨坐,把两腿叉开','Oh, come on. Don\'t straddle the fence.','哦，别这样。别太世故。','so as to straddle or bridge; astride.','跨着以便跨过或横过；横跨'}

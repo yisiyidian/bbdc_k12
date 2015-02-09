@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["explicit"]={"explicit","[ɪk'splɪsɪt; ek-]","[ɪk'splɪsɪt]","adj.明确的",'adj.明确的,详述的，明晰的,外在的','He avoids the explicit answer to us.','他避免给我们明确的回答。','They were explicit in their criticism.','他们直截了当地表达了他们的批评。'}

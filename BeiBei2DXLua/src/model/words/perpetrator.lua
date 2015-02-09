@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perpetrator"]={"perpetrator","['pɜːpətreɪtə(r)]","['pɜːrpətreɪtər]","n.犯人",'n.犯人,作恶之人','Police have made finding the perpetrator a very high priority.','警察把抓住罪犯作为首要任务。','The police have not caught the perpetrator yet.','警察还没有抓到罪犯。'}

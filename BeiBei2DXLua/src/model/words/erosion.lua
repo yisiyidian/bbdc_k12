@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["erosion"]={"erosion","[ɪ'rəʊʒ(ə)n]","[ɪ'roʒən]","n.腐蚀",'n.腐蚀,侵蚀','The erosion of the soil is damaging the forest.','土壤侵蚀使得森林遭到了破坏','They had to face the steady erosion of the president\'s credibility.','他们不得不面对总统的威信日渐丧失的局面。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gobble"]={"gobble","['gɒb(ə)l]","['ɡɑbl]","vt.狼吞虎咽",'vt.狼吞虎咽|||vi.发出咯咯声|||n.咯咯声','As he was still hungry, he gobbled up a second sandwich.','因为还饿，他又狼吞虎咽地吃了第二块三明治。','She gobbled up all the relevant information.','她如饥似渴地收集一切有关的信息。'}

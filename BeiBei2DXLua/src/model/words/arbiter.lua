@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arbiter"]={"arbiter","['ɑːbɪtə]","['ɑrbɪtɚ]","n.仲裁人",'n.仲裁人,裁决者,公断人','Sequins have often aroused the scorn of arbiters of taste.','闪光装饰片经常引起时尚引领者的鄙视。','Andrew was the arbiter of the disagreement.','安德鲁是那场纠纷的仲裁人。'}

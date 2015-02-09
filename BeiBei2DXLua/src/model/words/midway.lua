@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["midway"]={"midway","['mɪdweɪ; mɪd'weɪ]","['mɪd'we]","adj.中途的",'adj.中途的,中间的|||adv.中途|||n.中途,中间,娱乐场','The other team, holding the whip hand, seemed to relax midway through the first half.','另一支球队控制了场面, 所以整个上半场的比赛显得很轻松。','The leading car crashed midway through the tenth lap.','领先的那辆赛车在第十圈的中途撞毁了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liberty"]={"liberty","['lɪbətɪ]","['lɪbɚti]","n.自由",'n.自由；许可；冒失','I took the liberty of borrowing your lawn-mower while you were away.','你不在的时候我擅自借用了你的刈草机。','I am afraid that I am not at liberty to discuss this matter.','对不起，我无权讨论这个问题。'}

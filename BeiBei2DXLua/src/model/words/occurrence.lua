@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["occurrence"]={"occurrence","[ə'kʌr(ə)ns]","[ə'kʌrəns]","n.发生",'n.发生,事件,发现','It is more a made-up story than a real occurrence.','那是杜撰的故事，而不是真实发生的事情。','The occurrence of such things is by no means fortuitous.','出现这种问题绝不是偶然的.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slipper"]={"slipper","['slɪpə]","['slɪpɚ]","n.拖鞋",'n.拖鞋','She has pretty dancing slippers and comfortable bedroom slippers.','她有漂亮的舞鞋和舒适的卧室拖鞋。','I rescued the remains of my slipper from the dog.','我从那狗的口中夺回了我拖鞋的残留部分.'}

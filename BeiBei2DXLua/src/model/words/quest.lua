@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quest"]={"quest","[kwest]","[kwɛst]","n.探索",'n.探索,寻求|||vt.&vi.寻找,追寻猎物','Martin Luther King made many adversaries in his nonviolent quest for equality.','马丁·路德·金在以非暴力手段寻求平等的过程中树立了许多敌人。','The lawyer was on a quest for further evidence.','律师正在到处找寻更多的证据。'}

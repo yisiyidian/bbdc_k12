@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["panoramic"]={"panoramic","[,pænə'ræmɪk]","[,pænə'ræmɪk]","adj.全景的",'adj.全景的','We need a panoramic plan for this project.','对于这个项目我们得有个全盘计划。','Guests can enjoy panoramic views of the harbor from the airport coffee bar.','客人可以在机场的咖啡吧俯瞰港口的全貌。'}

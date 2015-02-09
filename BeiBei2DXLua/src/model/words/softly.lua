@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["softly"]={"softly","['sɔftli]","[ 'sɔftli ]","adv.柔和地",'adv.柔和地,静静地,温柔地','Speak softly and carry a big stick.','说话要温和，但手里要拿着大棒。','A musical bell softly sounded somewhere in the passageway.','走廊的某处响起轻柔悦耳的铃声。'}

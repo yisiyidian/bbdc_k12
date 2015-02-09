@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deduce"]={"deduce","[dɪ'djuːs]","[dɪ'dʊs]","vt.演绎",'vt.演绎,推断,溯源','From the presence of so many people at the party, we can deduce that it is a welcomed one.','从参加聚会的人数之多我们可以看出，这次聚会是受人欢迎的。','If you saw a doctor left a house, you may deduce the fact that someone in the house may be ill.','假如你看见一个医生离开一家人家，你就可以推想那家里有人病了。'}

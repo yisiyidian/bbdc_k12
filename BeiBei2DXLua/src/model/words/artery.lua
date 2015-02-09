@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["artery"]={"artery","['ɑːtərɪ]","['ɑrtəri]","n.动脉",'n.动脉,主流,干道','Inflammation of the inner lining of an artery.','动脉内膜炎动脉内层膜的炎症','A pelvic artery.','一条靠近骨盆的动脉'}

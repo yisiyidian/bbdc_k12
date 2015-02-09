@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scarcity"]={"scarcity","['skeəsɪtɪ]","['skɛrsəti]","n.缺乏",'n.缺乏,不足,缺少','The factory is in frequent scarcity of raw materials.','这个工厂经常原料不足。','The scarcity of food forced prices up.','食物短缺促使物价上涨。'}

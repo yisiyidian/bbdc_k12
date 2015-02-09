@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blackboard"]={"blackboard","['blækbɔːd]","['blækbɔrd]","n.黑板",'n.黑板','Who\'s rubbed my figures off the blackboard?','谁把我写在黑板上的数字擦掉了?','The blackboard is in the front of the classroom.','黑板在教室的前面。'}

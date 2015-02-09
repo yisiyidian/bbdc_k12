@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drill"]={"drill","[drɪl]","[drɪl]","n.钻孔机",'n.训练；钻孔机；钻子；播种机|||vi.钻孔；训练|||vt.钻孔；训练；条播|||n.(Drill)人名；(德、英)德里尔','You\'d better set a goal before you start the drill.','练习开始前，你最好设定一个目标。','There\'ll be a fire-drill this morning.','今天上午有消防演习.'}

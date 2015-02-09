@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shrew"]={"shrew","[ʃruː]","[ʃru]","n.悍妇",'n.悍妇,泼妇','He found himself married to a vulgar shrew.','他发现自己跟一个俗不可耐的悍妇结了婚。','she is a shrew','她是一个悍妇'}

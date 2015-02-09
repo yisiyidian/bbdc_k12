@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conjunction"]={"conjunction","[kən'dʒʌŋ(k)ʃ(ə)n]","[kən'dʒʌŋkʃən]","n.连词",'n.连词,结合,关联,(事件等的)同时发生','When is a temporal conjunction.','when是一个时间连接词。','The novel should be read in conjunction with the author\'s biography.','这本小说应该和作者传记一起读。'}

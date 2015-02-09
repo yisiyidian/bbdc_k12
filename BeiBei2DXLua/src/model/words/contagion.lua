@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contagion"]={"contagion","[kən'teɪdʒ(ə)n]","[kən'tedʒən]","n.传染病",'n.传染病，接触传染，蔓延','Fear spread through the crowd like a contagion.','人们心中的恐惧像瘟疫一样蔓延开来。','You\'d better not touch these coats to avoid contagion.','你最好不要碰这些衣服，好避免传染病。'}

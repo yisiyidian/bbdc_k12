@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comely"]={"comely","['kʌmlɪ]","['kʌmli]","adj.美丽的",'adj.清秀的,美丽的，合适的','His wife is a comely young woman.','他的妻子是一个美丽的少妇。','And there dwell in this comely garden white peacocks and peacocks that have blue breasts.','在这秀美无比的花园里住着白孔雀和蓝胸孔雀。'}

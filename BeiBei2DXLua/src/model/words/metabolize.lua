@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["metabolize"]={"metabolize","[mɪ'tæbəlaɪz]","[mɛ'tæbəlaɪz]","vt.(使)产生代谢变化",'vt.(使)产生代谢变化','Our bodies constantly metabolize the food we eat.','我们吃的食物在体内不停分解产生代谢变化.','a chemical which is produced when nicotine is metabolized','当尼古丁被新陈代谢时产生的化学物质'}

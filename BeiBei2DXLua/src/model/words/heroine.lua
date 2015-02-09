@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heroine"]={"heroine","['herəʊɪn]","['hɛroɪn]","adj.英雄式的",'adj.英雄式的,英勇的|||n.女英雄,女主角','The novelist makes his heroine commit suicide at the end of the book.','那小说作者在书的结尾让他的女主人公自杀了.','The novelist characterizes his heroine as capricious and passionate.','这位小说家把女主人公刻画成反覆无常而又多情的人.'}

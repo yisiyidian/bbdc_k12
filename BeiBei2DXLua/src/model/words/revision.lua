@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revision"]={"revision","[rɪ'vɪʒ(ə)n]","[rɪ'vɪʒən]","n.校订",'n.校订,修正,修订本|||n.复习,重温','Friday afternoons are left free for revision.','留出星期五下午的时间做复习。','She matured her novel by constant revision.','她不断修改自己的小说以使其趋于完善。'}

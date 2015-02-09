@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["culpable"]={"culpable","['kʌlpəb(ə)l]","['kʌlpəbl]","adj.该责备的",'adj.该责备的,有罪的,不周到的','The judge found the man culpable.','法官认为那个人有罪。','I cannot be held culpable for their mistakes.','不能把他们的错误归咎于我。'}

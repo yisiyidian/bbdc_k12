@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ooze"]={"ooze","[uːz]","[uz]","n.软泥",'n.软泥，渗出物|||vi.渗出,泄漏|||vt.慢慢渗出，流露','Black oil was ||oozing|| out of the engine.','发动机渗出了黑油。','Blood was still ||oozing|| from the wound.','伤口仍在渗血。'}

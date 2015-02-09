@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["postdate"]={"postdate","['pəʊst'deɪt]","['post'det]","vt.把日期填迟",'vt.把日期填迟','postdate your birthday','把生日往后填','He sent us a postdate cheque.','他寄给我们一张填迟日期的支票.'}

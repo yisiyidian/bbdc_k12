@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["appellation"]={"appellation","[,æpə'leɪʃ(ə)n]","[,æpə'leʃən]","n.名称",'n.名称,称呼','This appellation pleased him.','这个称呼很中他的意.','He earned the appellation \'rebel priest.\'','他赢得了“反叛牧师”的称号。'}

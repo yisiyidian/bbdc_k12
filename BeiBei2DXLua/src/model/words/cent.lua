@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cent"]={"cent","[sent]","[sɛnt]","n.分",'n.分','You must allow for five per cent wastage in transit.','在运输中要允许有百分之五的损耗量.','I deposit a minimum of 50 cents weekly.','我每周最少存50美分。'}

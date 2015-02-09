@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unpleasant"]={"unpleasant","[ʌn'plez(ə)nt]","[ʌn'plɛznt]","adj.使人不愉快的",'adj.使人不愉快的,讨厌的','Time alone will efface those unpleasant memories.','只有时间才能使人淡忘那些不快的记忆。','He dismissed the unpleasant subject and talked about something else.','他不谈论这个令人不愉快的话题，而去谈论别的事情。'}

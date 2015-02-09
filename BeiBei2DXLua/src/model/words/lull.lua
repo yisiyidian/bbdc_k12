@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lull"]={"lull","[lʌl]","[lʌl]","v.使安静",'v.使安静，使入睡，缓和，哄骗|||n.暂停,间歇|||n.','They lulled me into a false sense of security.','他们哄骗我，让我产生了一种虚假的安全感。','The mother lulled the baby to sleep.','母亲哄着孩子入睡了。'}

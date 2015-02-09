@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["varnish"]={"varnish","['vɑːnɪʃ]","['vɑrnɪʃ]","n.油漆",'n.油漆,掩饰,光泽面，指甲油|||v.粉饰,涂油漆于，装饰，使光亮','The varnish takes a few minutes to harden.','清漆几分钟就能变硬.','She covers her selfishness with a varnish of good manners.','她用一种表面上很有礼貌的态度来掩饰她的自私。'}

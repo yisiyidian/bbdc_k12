@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blackout"]={"blackout","['blækaʊt]","['blækaʊt]","n.断电",'n.断电，暂时的意识丧失，灯火管制,（新闻的）封锁，（广播的）中断','He had had a blackout after the accident.','事故发生后，他晕过去一阵子。','The streets were not lighted at night during the blackout.','灯火管制期间，夜晚街道没有照明。'}

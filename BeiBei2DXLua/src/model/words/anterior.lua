@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anterior"]={"anterior","[æn'tɪərɪə]","[æn'tɪrɪɚ]","adj.前面的",'adj.前面的，前部的，较早的','Situated anterior to the frontal bone.','前额骨的位于额骨前部的','We\'ve already finished the work anterior to the schedule.','我们已经提前完成了工作。'}

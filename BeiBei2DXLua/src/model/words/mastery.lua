@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mastery"]={"mastery","['mɑːst(ə)rɪ]","['mæstəri]","n.精通",'n.精通,掌握,熟练','Her mastery of economic theory impressed the professors.','她对经济的精通给教授们留下了深刻的印象','He demonstrated a mastery of Arabic.','他显示了对阿拉伯语的精通。'}

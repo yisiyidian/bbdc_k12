@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["demarcate"]={"demarcate","['diːmɑːkeɪt]","['dimɑr'ket]","vt.划分",'vt.划分,划界','The playing area is demarcated by a white line.','运动场地以白线为界.','demarcate categories.','区分类别'}

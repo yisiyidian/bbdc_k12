@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coward"]={"coward","['kaʊəd]","['kaʊɚd]","n.懦夫",'n.懦夫|||adj.胆小的|||Coward|||n.科沃德(姓氏)','They taunted him with cowardice/with being a coward.','他们讥笑他胆怯[是胆小鬼].','He is a coward by his own admission.','他自己承认是个胆小鬼.'}

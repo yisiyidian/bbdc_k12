@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cadence"]={"cadence","['keɪd(ə)ns]","['kedns]","n.节奏",'n.节奏,韵律，降调句，抑扬顿挫','He read the poems with cadence.','他抑扬顿挫地朗诵诗歌。','He liked the relaxed cadence of his retired life.','他喜欢退休生活的悠闲的节奏。'}

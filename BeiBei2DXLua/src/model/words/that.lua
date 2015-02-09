@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["that"]={"that","[ðæt; ðət]","[ðæt]","pron.那",'pron.那|||adj.如此的,上文提到的,特定的|||adv.非常|||conj.引导宾语从句等从句','She\'s a housewife when she\'s not teaching English, that is.','她是个家庭主妇－－是指她不教英语的时候。','||That|| is the man I saw yesterday.','那就是我昨天见到的那个人。'}

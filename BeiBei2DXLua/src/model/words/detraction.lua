@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detraction"]={"detraction","[dɪ'trækʃən]","[dɪ'trækʃən]","n.诽谤",'n.诽谤，减损','Weak men are crushed by detraction, but the brave hold on and succeed.','贬抑只能压倒弱者，勇者则能坚持到胜利。','When faced with detraction, she was very calm as usual.','当遭到诽谤时，她还是如往常一样平静。'}

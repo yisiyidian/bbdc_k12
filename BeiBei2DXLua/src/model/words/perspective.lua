@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perspective"]={"perspective","[pə'spektɪv]","[pɚ'spɛktɪv]","n.透视",'n.远景,看法,透视|||adj.透视的','The painting provides us with one of the earliest examples of the use of perspective.','那幅画给我们提供了采用透视画法的最早的范例.','You must get the story in its right perspectives.','你必须正确地了解这件事。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turgid"]={"turgid","['tɜːdʒɪd]","['tɝdʒɪd]","adj.浮肿的",'adj.浮肿的,浮夸的','The rest of the arts scene looks increasingly turgid by comparison.','比较而言，艺术界的其他领域看起来越发索然无味。','He used to make extremely dull, turgid and frankly awful speeches.','他过去常作些极其乏味、晦涩难懂而且令人非常厌烦的演讲。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poor"]={"poor","[pɔː; pʊə]","[pʊr]","adj.贫穷的",'adj.贫穷的，贫乏的；令人怜悯的，可怜的；匮乏的；低劣的|||n.thepoor贫困者，穷人','Some people may regard radio as the poor relation of broadcasting.','有些人可能认为无线电广播在广播事业中稍逊一筹。','He was too poor to buy a new coat.','他穷得无法买新衣。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["connection"]={"connection","[kəˈnekʃn]","[kə'nɛkʃən]","n.联系",'n.联系,关系,连接,亲戚','The train was late and I missed my connection.','列车误点了，我没能赶上联运。','What is the connection between the two ideas?','这两个概念之间有何联系？'}

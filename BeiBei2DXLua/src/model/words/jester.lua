@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jester"]={"jester","['dʒestə]","['dʒɛstɚ]","n.爱开玩笑的人",'n.爱开玩笑的人，小丑','A buffoon or jester who entertains by jokes, antics, and tricks in a circus, play, or other presentation.','小丑, 丑角在马戏、戏剧或其它演出中通过玩笑、滑稽动作及骗局娱乐的小丑','A court jester; court records.','宫廷弄臣; 法庭记录'}

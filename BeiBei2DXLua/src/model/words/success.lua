@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["success"]={"success","[sək'ses]","[sək'sɛs]","n.成功",'n.成功,发财，胜利，成功者，成功的事物','||Success|| and wealth transformed his character.','成功和财富改变了他的性格。','Everything cooperated to make our holiday a success.','这一切凑合起来使我们的假期圆满过去。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inkling"]={"inkling","['ɪŋklɪŋ]","['ɪŋklɪŋ]","n.暗示",'n.暗示,微微觉得','We had an inkling that something might be happening.','我们隐约感觉可能正有什么事情发生。','He had no inkling of what was going on.','他对正在发生的事情一无所知。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liberate"]={"liberate","['lɪbəreɪt]","['lɪbə'ret]","v.解放",'v.解放,使获得自由,释出,放出|||vt.解放,使获自由','The country was liberated in 1966.','这个国家是在1966年解放的。','Our army had liberated many occupied areas.','我们的军队解放了许多地区。'}

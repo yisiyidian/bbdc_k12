@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["continental"]={"continental","[kɒntɪ'nent(ə)l]","[,kɑntɪ'nɛntl]","adj.大陆的",'adj.大陆的','In continental European countries the thousands in numbers larger than9999 are pointed off.','在欧洲大陆各国，大于9999的数字中的各个千位用点分开。','I ask for a continental holiday.','我申请到欧洲大陆休假。'}

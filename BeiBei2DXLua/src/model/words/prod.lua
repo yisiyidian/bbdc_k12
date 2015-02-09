@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prod"]={"prod","[prɒd]","[prɑd]","n.刺针",'n.刺针,刺棒,签子|||v.戳,刺,刺激','He prodded at the pig with his walking-stick.','他用手杖捅了捅那头猪。','I shall have to prod him to pay me what he owes.','我将不得不催促他把欠我的钱还给我。'}

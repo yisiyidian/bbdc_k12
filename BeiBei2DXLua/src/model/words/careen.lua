@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["careen"]={"careen","[kə'riːn]","[kə'rin]","v.(船)倾斜",'v.(船)倾斜,使倾斜','The driver lost control and the car careened down the hill.','因司机失控，那辆汽车就横冲直撞地冲下山去。','The truck sways wildly, careening down narrow mountain roads.','卡车疯狂地左摇右晃，从狭窄的山路上急冲而下。'}

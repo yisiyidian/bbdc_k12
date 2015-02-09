@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disputatious"]={"disputatious","[dɪspjuː'teɪʃəs; -pjʊ't-]","[ ,dispju'teiʃəs ]","adj.好争辩的",'adj.好争辩的','He is a disputatious lawyer.','他是一位善辩的律师。','disputatious discussion','引起争论的讨论'}

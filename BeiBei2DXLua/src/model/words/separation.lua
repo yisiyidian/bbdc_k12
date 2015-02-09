@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["separation"]={"separation","[sepə'reɪʃ(ə)n]","[,sɛpə'reʃən]","n.分离",'n.分离,分居,缺口','||Separation|| from her children was a terrible wrench.','同她的孩子们分别是一项很大的痛苦。','After a long separation, they held a glad meeting.','阔别多年之后, 他们举行了一个令人愉快的聚会.'}

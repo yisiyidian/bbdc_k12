@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["backfire"]={"backfire","[bæk'faɪə]","['bæk'faɪr]","n.逆火",'n.逆火,后爆的巨大响声|||vi.(指内燃机等)逆火,适得其反,产生事与愿违的结果','His scheme to win the girl backfired and she went to another guy.','他追求那女孩的计划产生了反效果, 现在她名花另有主。','The plot backfired (on the terrorist) when the bomb exploded too soon.','由於炸弹过早爆炸, (恐怖分子的)阴谋未能得逞.'}

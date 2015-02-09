@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imperil"]={"imperil","[ɪm'perɪl; -r(ə)l]","[ɪm'pɛrəl]","vt.使陷于危险中",'vt.使陷于危险中,危及','The security of the country had been imperilled.','国家安全处於危险之中.','AIDS epidemic imperils human being\'s future.','艾滋病传播让人类的未来岌岌可危。'}

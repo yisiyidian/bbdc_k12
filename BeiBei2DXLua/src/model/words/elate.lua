@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elate"]={"elate","[ɪ'leɪt]","[ i'leit ]","vt.使欢欣",'vt.使欢欣|||adj.兴高采烈的','He was elated at the news.','这个消息使他很兴奋。','Her success elated the family.','她的成功使全家人兴高采烈'}

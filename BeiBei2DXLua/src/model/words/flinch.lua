@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flinch"]={"flinch","['flɪn(t)ʃ]","[flɪntʃ]","v.畏缩",'v.畏缩,退缩,畏首畏尾|||n.退缩,一种把牌堆积在桌上的游戏','We never flinch from difficulties.','在困难面前我们决不退缩。','The baby flinched when he touched the hot carafe.','小宝宝碰到热水杯，就把手缩回去了。'}

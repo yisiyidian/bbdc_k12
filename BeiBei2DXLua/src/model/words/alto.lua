@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alto"]={"alto","['æltəʊ]","['ælto]","n.男最高音",'n.男最高音,女最低音，中音部，中音乐器|||adj.中音部的','an alto flute; an alto balalaika.','中音笛；中音巴拉莱卡琴','The alto voice is the lower female or unbroken male voice, or, in traditional English vocal music, the falsetto male voice.','中音声部是指女低音或完整男声，传统声乐的英文表达为男性假声。'}

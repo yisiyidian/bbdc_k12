@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aversion"]={"aversion","[ə'vɜːʃ(ə)n]","[ə'vɝʒn]","n.嫌恶",'n.嫌恶,憎恨','Do you feel any aversion to hard study?','你讨厌努力学习吗？','Washing dishes is his pet aversion.','他最讨厌洗碗。'}

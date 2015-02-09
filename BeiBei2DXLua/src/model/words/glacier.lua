@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glacier"]={"glacier","['glæsɪə; 'gleɪsɪə]","['ɡleʃɚ]","n.冰川",'n.冰河,冰川','Mr. Forster and his guide entered upon this portion of the glacier.','福斯特先生和他的向导进入了冰河地区。','He showed me a drawing of the glacier.','他给我看一张冰川图。'}

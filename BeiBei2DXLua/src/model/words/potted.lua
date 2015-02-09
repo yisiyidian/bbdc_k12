@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potted"]={"potted","['pɒtɪd]","['pɑtɪd]","adj.盆栽的",'adj.盆栽的,装入壶中的,罐头的','He potted at a sitting wild duck.','他射击一只栖息的野鸭。','They potted dozens of rabbits.','他们胡乱射击打死几十只兔子.'}

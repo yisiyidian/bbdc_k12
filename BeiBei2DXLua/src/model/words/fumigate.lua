@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fumigate"]={"fumigate","['fjuːmɪgeɪt]","['fjumɪɡet]","vt.以烟熏消毒",'vt.以烟熏消毒','The hospital wards were fumigated after the outbreak of typhus.','发现斑疹伤寒以後, 医院的病房进行了烟熏消毒.','||Fumigating|| is a helpful way to avoid having a cold.','烟熏消毒是一种避免患感冒的有效方式。'}

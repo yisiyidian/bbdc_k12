@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intersperse"]={"intersperse","[ɪntə'spɜːs]","[,ɪntɚ'spɝs]","v.散布",'v.散布,点缀|||vt.散布,散置,点缀','He interspersed his speech with anecdotes.','他在演讲中穿插一些趣闻轶事。','Flowers were interspersed among bushed.','花散落在丛林里。'}

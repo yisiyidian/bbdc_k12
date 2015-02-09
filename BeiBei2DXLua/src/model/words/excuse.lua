@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excuse"]={"excuse","[ɪk'skjuːz; ek-]","[ɪk'skjʊs]","n.借口",'n.借口,理由；低劣的样品,假条|||vt.原谅,辩解,准许离开,同意赦免','||Excuse|| me, can I get past, please?','劳驾，能让我过去吗？','||Excuse|| me, but I must say you are completely wrong.','对不起，但是我必须说你完全错了。'}

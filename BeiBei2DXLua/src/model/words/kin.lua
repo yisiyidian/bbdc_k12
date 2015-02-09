@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kin"]={"kin","[kɪn]","[kɪn]","n.家族",'n.家族,亲属|||adj.亲属关系的，同类的|||suf.(接名词后)小的','Who is your next of kin?','谁是你的健在的最近的亲属?','Her next of kin have been informed.','已通知她最近的亲属了。'}

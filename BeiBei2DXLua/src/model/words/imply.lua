@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imply"]={"imply","[ɪm'plaɪ]","[ɪm'plai]","vt.暗示",'vt.暗示,意味','Their failure to reply to our letter seems to imply a lack of interest.','他们没有回我们的信似乎暗示他们缺乏兴趣。','Life ||implies|| growth and death.','生命必然有成长和死亡。'}

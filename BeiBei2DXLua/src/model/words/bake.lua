@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bake"]={"bake","[beɪk]","[bek]","vt.烘焙",'vt.烘焙,烤|||vi.烘焙,烤,变得炎热|||n.烘焙,烤','The bread is ||baking|| in the oven.','烤箱里正在烤面包。','In some places, bricks are still baked in the sun.','有些地方仍使用在太阳下晒干砖块的方法。'}

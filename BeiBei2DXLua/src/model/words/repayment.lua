@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repayment"]={"repayment","[riː'peɪm(ə)nt; rɪ'peɪm(ə)nt]","[rɪ'pemənt]","n.偿还",'n.偿还,付还的钱','I took her to court for repayment of the debt.','我为索取债务而起诉她.','Please give us a90-day extension on loan repayment to help us tide over current financial difficulty.','请给我们延长90天的贷款偿还期限, 以便克服目前的财政困难。'}

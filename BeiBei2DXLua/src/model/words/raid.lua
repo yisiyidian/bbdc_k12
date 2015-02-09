@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["raid"]={"raid","[reɪd]","[red]","n.袭击",'n.袭击；突袭；搜捕；抢劫|||vi.对…进行突然袭击|||vt.袭击，突袭|||n.(Raid)人名；(阿拉伯)拉伊德','Police made a lightning raid on the house.','警方突然查抄了那座房子.','The bombing raid practically leveled the town.','空袭几乎把这座城镇夷为平地。'}

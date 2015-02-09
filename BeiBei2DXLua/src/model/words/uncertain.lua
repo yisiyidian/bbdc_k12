@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uncertain"]={"uncertain","[ʌn'sɜːt(ə)n; -tɪn]","[ʌn'sɝtn]","adj.不确定的",'adj.不确定的','It seems uncertain why he lost the election.','他落选的原因似乎并不清楚。','The company\'s future is uncertain.','这家公司前途未卜。'}

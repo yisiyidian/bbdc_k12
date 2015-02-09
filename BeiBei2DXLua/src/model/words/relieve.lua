@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relieve"]={"relieve","[rɪ'liːv]","[rɪ'liv]","vt.减轻",'vt.减轻,救济,解除','The Government acted quickly to relieve the widespread distress caused by the earthquake.','地震造成广泛地区的灾难, 政府迅速采取行动赈济灾民.','The route was designed to relieve traffic congestion.','这条路是为缓解交通拥挤而开辟的。'}

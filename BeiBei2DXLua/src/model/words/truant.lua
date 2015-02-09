@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["truant"]={"truant","['truːənt]","[ 'tru:ənt ]","n.懒惰鬼",'n.懒惰鬼,旷课者|||adj.偷懒的,旷课的,游荡的|||v.偷懒,旷课','The boy gave the teacher a song and dance about his being ill as an excuse for playing truant.','那男孩对老师撒野谎说他病了，以此用为他逃学的借口。','Don\'t play truant.','不要逃学。'}

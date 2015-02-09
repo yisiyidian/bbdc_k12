@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["graph"]={"graph","[grɑːf; græf]","[ɡræf]","n.图表",'n.图表,曲线图|||v.图表,用图表表示|||vt.以(曲线)图表示','Such a graph is defined to be a contact network.','我们把这样的图定义为一个接触网络.','It is useful to partition a graph into its components.','把一个图分解成它的分支,是很有益的.'}

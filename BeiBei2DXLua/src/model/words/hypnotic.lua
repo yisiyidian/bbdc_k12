@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypnotic"]={"hypnotic","[hɪp'nɒtɪk]","[hɪp'nɑtɪk]","adj.催眠的",'adj.催眠的,催眠术的,易于催眠的|||n.催眠药,安眠药,催眠状态的人','A self-induced hypnotic state.','自我催眠状态一种自我诱导的催眠状态','The process of inducing or entering sleep or a hypnotic state.','催眠引导或进入睡眠或催眠状态的过程'}

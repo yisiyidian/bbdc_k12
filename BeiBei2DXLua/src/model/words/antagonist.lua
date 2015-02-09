@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antagonist"]={"antagonist","[æn'tæg(ə)nɪst]","[æn'tæɡənɪst]","n.敌手",'n.敌手,对手，[医]对抗剂,[生理]对抗肌','I am bound to furnish my antagonists with arguments, but not with comprehension.','我一定要向对手提供争论点，但并无予以理解的必要。','He ripped into his antagonist with fury.','他向他的对手猛扑过去。'}

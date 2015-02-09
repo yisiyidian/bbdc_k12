@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flap"]={"flap","[flæp]","[flæp]","n.拍打",'n.拍打,拍打声,副翼|||vt.&vi.拍打,鼓翼而飞,飘动','I got into a real flap when I lost my keys.','我丢了钥匙，心里发慌。','The wind flapped the sails.','风吹动着帆。'}

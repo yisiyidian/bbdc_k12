@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wary"]={"wary","['weərɪ]","['wɛri]","adj.小心的",'adj.小心的,机警的,周到的','He was wary of telling state secrets.','他小心翼翼以免泄漏国家机密。','She was wary of strangers.','她对陌生人很警惕。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mob"]={"mob","[mɒb]","[mɑb]","n.暴民",'n.暴民,民众,暴徒|||v.大举包围,乱挤,围攻','The mob rampaged through the village.','这夥暴徒在村中横冲直撞.','The speaker was roughly handled by the mob.','演说者受到暴民的粗暴对待。'}

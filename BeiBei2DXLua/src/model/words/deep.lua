@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deep"]={"deep","[diːp]","[dip]","adj.深的",'adj.深的,有...深的,深奥的|||adv.深深地,晚地|||n.深处','The deer escaped to the deep forest.','那鹿逃入了丛林深处。','a deep hole in the river ice.','在冰河里的深洞'}

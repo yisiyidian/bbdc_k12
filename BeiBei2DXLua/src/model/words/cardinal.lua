@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cardinal"]={"cardinal","['kɑːd(ɪ)n(ə)l]","['kɑrdɪnl]","n.红衣主教",'n.红衣主教，鲜红色，基数，北美红雀|||adj.主要的，深红色的','a cardinal rule; cardinal sins.','基本准则；七大罪','The cardinal is a venerable man.','这位红衣主教是个令人尊敬的人。'}

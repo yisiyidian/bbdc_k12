@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ease"]={"ease","[iːz]","[iz]","n.安乐",'n.安乐,安逸,悠闲|||vt.使...安乐,使...安心|||v.减轻,放松','||Ease|| down: there\'s a sharp bend ahead.','慢一点儿，前面有个急转弯。','He eased himself along the ledge to reach the terrified boy.','他小心翼翼地沿著突出的檐向那惊惶失措的男孩靠近。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zone"]={"zone","[zəʊn]","[zon]","n.地域",'n.地域,地带,地区|||vt.划分成带,标出或指定成区,用腰带围绕|||adj.地区性的,地域上的','Supplies were parachuted into the earthquake zone.','救援物资已空投到地震区.','Wrestling is in a twilight zone between sport and entertainment.','摔交是介於运动和娱乐两者之间的活动.'}

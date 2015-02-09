@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["announce"]={"announce","[ə'naʊns]","[ə'naʊns]","vt.宣布",'vi.宣布参加竞选；当播音员|||vt.宣布；述说；声称；预告','I hope to announce the winner shortly.','我希望马上宣布胜利者的名字。','Footsteps announced his return.','听到脚步声，就知道他回来了。'}

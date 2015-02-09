@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sharp"]={"sharp","[ʃɑːp]","[ʃɑrp]","adj.锋利的",'adj.刺耳的,锋利的,急剧的|||adv.[时刻]正,准|||夏普(财富500强公司之一，总部所在地日本,主要经营电子电气)','Cats have sharp claws.','猫有锋利的爪子。','Bring the object into focus if you want a sharp photograph.','要照出清晰的照片，就要把焦点对准物体。'}

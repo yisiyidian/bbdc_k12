@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gale"]={"gale","[geɪl]","[ɡel]","n.狂风",'n.狂风,一阵（喧闹，笑声等）','gales of laughter.','阵阵大笑','...forecasts of fierce gales over the next few days.','…对未来几天的强风预报。'}

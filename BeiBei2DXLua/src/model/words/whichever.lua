@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whichever"]={"whichever","[wɪtʃ'evə]","[wɪtʃ'ɛvɚ]","adj.无论哪个",'adj.无论哪个,无论哪些|||pron.无论哪个','She\'ll buy whichever is cheapest.','什么最便宜她就买什么。','I have three cars, and you may have whichever you like.','我有三辆车，你可以挑一辆你喜欢的。'}

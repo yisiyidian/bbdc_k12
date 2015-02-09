@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discrimination"]={"discrimination","[dɪ,skrɪmɪ'neɪʃ(ə)n]","[dɪ,skrɪmɪ'neʃən]","n.歧视",'n.歧视,辨别力,识别','He is passionately opposed to racial discrimination.','他极度抵制种族歧视。','||Discrimination|| against Blacks is still common.','歧视黑人仍是普遍现象。'}

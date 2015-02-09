@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["principally"]={"principally","['prɪnsɪp(ə)lɪ]","['prɪnsəpli]","adv.主要地",'adv.主要地','The money is invested principally in government stock.','这笔钱主要投资于政府公债上。','Laughing is the sensation of feeling good all over, and shows it principally in one spot.','笑，是全身舒畅的感觉，而却主要表现于一个部分。'}

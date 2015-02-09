@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["girder"]={"girder","['gɜːdə]","['ɡədɚ]","n.桁",'n.桁,梁','The block is still just a skeleton of girders.','这片建筑还只是仅有主梁的骨架.','The girder is almost five meters high.','这个梁有近5米高。'}

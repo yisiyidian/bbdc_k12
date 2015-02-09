@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contemporary"]={"contemporary","[kən'temp(ə)r(ər)ɪ]","[kən'tɛmpərɛri]","n.同时代的人",'n.同时代的人；同时期的东西|||adj.当代的；同时代的；属于同一时期的','My parents think that the contemporary young people have no respect for authority.','我父母认为现在的年轻人不尊重权威。','He had devoted his whole life to the study of contemporary art.','他把他的一生都献给了当代艺术研究。'}

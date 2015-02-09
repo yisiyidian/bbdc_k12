@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consensus"]={"consensus","[kən'sensəs]","[kən'sɛnsəs]","n.共识",'n.共识，一致，合意|||n.[生理]交感','The two parties have reached a consensus.','这两个政党达成了一致。','There is broad consensus of opinion in the country on this issue.','对这一问题举国上下舆论普遍一致。'}

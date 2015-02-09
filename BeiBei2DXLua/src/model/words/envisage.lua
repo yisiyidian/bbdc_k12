@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["envisage"]={"envisage","[ɪn'vɪzɪdʒ; en-]","[ɪn'vɪzɪdʒ]","vt.面对",'vt.面对,正视,想像','I can\'t envisage the plan\'s working.','我无法设想计划能否行得通.','Nobody can envisage the consequences of total nuclear war.','没有人能想像出全面核子战争的後果.'}

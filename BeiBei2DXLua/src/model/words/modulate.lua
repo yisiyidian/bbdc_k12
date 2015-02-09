@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["modulate"]={"modulate","['mɒdjʊleɪt]","['mɑdʒəlet]","v.调整",'v.调整,调节（声音），变调','Music students learn how to add other parts to add other parts to a given tune, and how to modulate to a related key.','音乐学生学习给一个现有的调子配上其他音部，还要学习怎样转成和声调。','A device used to modulate an electromagnetic wave.','调制器用以调制电磁波的装置'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terse"]={"terse","[tɜːs]","[tɝs]","adj.简洁的",'adj.简洁的,简明的','His tone was terse as he asked the question.','他提问时语气生硬。','He issued a terse statement.','他发表了简短声明。'}

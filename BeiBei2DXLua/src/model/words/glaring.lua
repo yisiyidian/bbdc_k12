@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glaring"]={"glaring","['gleərɪŋ]","['ɡlɛrɪŋ]","adj.耀眼的",'adj.耀眼的,炫目的,怒视的|||动词glare的现在分词','The old gentleman just stood there glaring at the pickpocket and did not say a word.','这位老先生只是站在那里对那个扒手怒目而视，一句话也没有说。','The woman is so glaring that everybody looks at her for a long time.','那女人美得如此耀眼，大家都盯着她看。'}

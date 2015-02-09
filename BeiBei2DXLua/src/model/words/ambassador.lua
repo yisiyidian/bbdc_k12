@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ambassador"]={"ambassador","[æm'bæsədə]","[æm'bæsədɚ]","n.大使",'n.大使','We\'re dining the ambassador this week.','我们本星期宴请大使.','The ambassador expects that his next posting will be (to) Paris.','那位大使预期他下次派驻巴黎.'}

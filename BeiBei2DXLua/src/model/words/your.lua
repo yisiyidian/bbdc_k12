@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["your"]={"your","[jɔː; jʊə]","[jʊr, jɔr, jor,jə]","pron.你的",'pron.你的,你们的','The ice is too thin to bear your weight.','冰太薄，承受不住你们的重量。','Where is your office?','你们的办公室在哪？'}

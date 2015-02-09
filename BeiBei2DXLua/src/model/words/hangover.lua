@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hangover"]={"hangover","['hæŋəʊvə]","['hæŋ'ovɚ]","n.残留物",'n.残留物,遗物,宿醉','Oh, I can not do my work with this hangover.','啊，因为宿醉，工作做不下去。','Oh, my god! Do not make me run with this hangover.','天啊！不要在我宿醉后还要叫我跑步。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entertaining"]={"entertaining","[entə'teɪnɪŋ]","[,ɛntɚ'tenɪŋ]","adj.引起乐趣的",'adj.引起乐趣的，娱乐性的，令人愉快的|||动词entertain的现在分词','Found the gadget surprisingly useful; found the book entertaining.','发觉这个妙计非常有用; 认为这本书很有趣','I wish he\'d desist from entertaining his friends at all hours of the day and night.','但愿他别再昼夜不分地招待他的朋友.'}

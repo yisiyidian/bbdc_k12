@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amusement"]={"amusement","[ə'mjuːzm(ə)nt]","[ə'mjuzmənt]","n.娱乐",'n.娱乐,消遣','She watched their fumbling efforts with wry amusement.','她看著他们手忙脚乱地瞎使劲, 不觉莞尔.','The hotel offers its guests a wide variety of amusements.','这个旅馆为住客提供了各种各样的娱乐活动。'}

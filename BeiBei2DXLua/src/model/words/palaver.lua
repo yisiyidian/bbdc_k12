@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["palaver"]={"palaver","[pə'lɑːvə]","[pə'lɑvɚ]","adj.壮丽堂皇的",'adj.壮丽堂皇的|||v.&n.空谈,奉承','What a palaver there was about paying the bill!','付帐的事真费口舌呀!','What a palaver there was about paying the bill!','付帐的事真费口舌呀!'}

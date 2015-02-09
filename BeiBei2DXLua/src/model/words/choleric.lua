@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["choleric"]={"choleric","['kɒlərɪk]","['kɑlərɪk]","adj.易怒的",'adj.易怒的','He was affable at one moment, choleric the next.','他一会儿还和蔼可亲，可一转眼就火冒三丈。','A choleric person gets angry very easily. You can also use choleric to describe a person who is very angry.','易怒的，暴躁的'}

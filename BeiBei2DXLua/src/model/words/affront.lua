@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affront"]={"affront","[ə'frʌnt]","[ə'frʌnt]","n.侮辱",'n.侮辱|||v.侮辱,冒犯,面对','His speech was an affront to all members of the community.','他的话对社区所有成员是的故意侮辱。','He put an affront upon me.','他当众侮辱我。'}

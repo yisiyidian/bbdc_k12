@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slim"]={"slim","[slɪm]","[slɪm]","adj.苗条的",'adj.苗条的,细长的,微小的|||vt.使...变苗条|||vi.减轻体重,变苗条','She has a good chance/no chance/not much chance/only a slim chance of winning.','她大有希望[没有可能/没什麽希望/只有些微的可能]获胜.','She goes for tall slim men.','她喜欢瘦高个子的男子.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anxiety"]={"anxiety","[æŋ'zaɪətɪ]","[æŋ'zaɪəti]","n.焦虑",'n.焦虑,挂念,担心,渴望,热望','His forehead was ridged with anxiety.','他的前额因焦虑而布满了皱纹。','They show great anxiety concerning their retirement allowance.','他们对自己的养老金问题显得十分焦虑。'}

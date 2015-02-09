@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deposit"]={"deposit","[dɪ'pɒzɪt]","[dɪ'pɑzɪt]","vt.存放",'vt.存放,堆积,使沉淀|||vi.沉淀|||n.存款,定金,堆积物','The Nile floods the fields and deposits mud on them.','尼罗河泛滥，在田野上淤积一层泥。','He deposits a sum of money in the bank each month.','他每月在银行存一笔钱。'}

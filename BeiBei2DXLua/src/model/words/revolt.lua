@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revolt"]={"revolt","[rɪ'vəʊlt]","[rɪ'volt]","vi.叛乱",'n.叛乱,反抗,反感|||vi.叛乱,起反感|||vt.使...恶心','The colonists revolted against their British ruler.','殖民地人民反抗他们的英国统治者。','Has the revolt been contained?','叛乱是否已受到遏止?'}

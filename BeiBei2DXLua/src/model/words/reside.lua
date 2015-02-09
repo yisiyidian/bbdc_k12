@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reside"]={"reside","[rɪ'zaɪd]","[rɪ'zaɪd]","v.住",'v.住,居留,属于','The real power resides in the people.','真正的权力属于人民。','This family has resided in this city for 60 years.','这个家族住在本城已有60 年了。'}

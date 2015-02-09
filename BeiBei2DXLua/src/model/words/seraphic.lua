@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seraphic"]={"seraphic","[sə'ræfɪk]","[ si'ræfik ]","adj.如天使般的",'adj.如天使般的,美丽的','looking so seraphic when he slept;','他睡觉的样子看起来那么象天使；','All was over, Cosette had fallen back into deep, seraphic love.','完了。珂赛特又深深地陷在仙境似的爱慕中了。'}

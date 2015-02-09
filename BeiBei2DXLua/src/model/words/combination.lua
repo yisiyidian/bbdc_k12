@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["combination"]={"combination","[kɒmbɪ'neɪʃ(ə)n]","[,kɑmbɪ'neʃən]","n.结合",'n.结合,联合，联合体','We tried it in every conceivable combination.','我们把能想到的各种组合都试了一遍.','A combination of factors led to her decision to resign.','综合各种因素之後她决定辞职。'}

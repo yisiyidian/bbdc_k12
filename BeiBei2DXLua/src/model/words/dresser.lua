@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dresser"]={"dresser","['dresə]","['drɛsɚ]","n.化妆台",'n.化妆台，带镜衣柜，碗柜|||n.着衣人','This dresser is movable; we can take it to our new flat.','这个梳妆台是可移动的, 我们可以把它带到新公寓去。','a careful dresser.','一个穿衣仔细的人'}

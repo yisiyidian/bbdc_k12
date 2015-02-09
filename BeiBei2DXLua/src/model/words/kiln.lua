@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kiln"]={"kiln","[kɪln]","[kɪln]","n.窑",'n.窑,炉,干燥炉|||v.烧窑,在干燥炉干燥','Bricks are baked in a kiln.','砖是在窑里烧成的.','That morning we fired our first kiln of charcoal.','那天上午,我们烧了我们的第一窑木炭.'}

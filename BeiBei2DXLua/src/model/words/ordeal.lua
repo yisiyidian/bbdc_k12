@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ordeal"]={"ordeal","[ɔː'diːəl]","[ɔr'dil]","n.严酷的考验",'n.严酷的考验，痛苦的经验，神裁法','The hostages emerged from their ordeal unscathed.','人质经受磨难而平安生还。','She maintained her equanimity throughout her long ordeal.','在漫长的苦难中，她一直都保持平静。'}

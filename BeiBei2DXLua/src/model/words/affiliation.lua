@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affiliation"]={"affiliation","[əfɪlɪ'eɪʃ(ə)n]","[ə,fɪlɪ'eʃən]","n.加入",'n.加入,联盟,友好关系,附属','The officer cited the federation\'s rule on affiliation.','该官员引用了联邦政府对于隶属关系的规定。','The kidnappers had no affiliation with any militant group.','这些绑架者与任何军事组织都没有紧密联系。'}

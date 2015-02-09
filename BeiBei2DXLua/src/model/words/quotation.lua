@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quotation"]={"quotation","[kwə(ʊ)'teɪʃ(ə)n]","[kwo'teʃən]","n.引语",'n.引语,语录|||n.报价单|||n.行情表','I cannot give you our quotation right now.','现在我不能给你我们的报价。','With regard to our quotation, we will discuss it later.','关于我们的报价, 以后再讨论。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reunite"]={"reunite","[riːjʊ'naɪt]","[,riju'naɪt]","v.再结合",'v.再结合，再统一,重聚','She hopes ||reuniting|| with her family.','她希望与家人团聚。','Parents were reunited with their lost children.','父母与失散的孩子们团圆了。'}

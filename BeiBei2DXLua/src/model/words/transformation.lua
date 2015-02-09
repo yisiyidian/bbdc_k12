@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transformation"]={"transformation","[trænsfə'meɪʃ(ə)n; trɑːns-; -nz-]","[,trænsfɚ'meʃən]","n.转型",'n.转型,转化,改造','His character seems to have undergone a complete transformation since his marriage.','他结婚之后性格判若两人。','Going to college brought about a dramatic transformation in her outlook.','上大学使她的观念发生了巨大的变化.'}

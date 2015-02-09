@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["athletics"]={"athletics","[æθ'letɪks]","[æθ'lɛtɪks]","n.体育运动",'n.体育运动，田径','Runners in an athletics stadium run in individual lanes.','在田径运动场上赛跑的人有各自的跑道。','Sarah is very keen on athletics and can trot out the names of all the leading runners and their record times.','萨拉非常爱好体育运动，能说出所有最主要的赛跑者的姓名和他们的最佳成绩。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illustrate"]={"illustrate","['ɪləstreɪt]","['ɪləstret]","vt.举例说明",'vt.举例说明,作图解|||vi.举例','He pointed at the diagram to illustrate his point.','他指着图表来说明他的论点。','Our textbook is very well illustrated.','我们的课本插图丰富。'}

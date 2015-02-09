@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subterfuge"]={"subterfuge","['sʌbtəfjuːdʒ]","['sʌbtɚfjudʒ]","n.遁辞",'n.遁辞,藉口,托辞','He wasn\'t really ill—it was a subterfuge.','他并不是生病，生病不过是一种托辞。','Most people can see right through that type of subterfuge.','大多数人一眼就能看穿这种借口。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skulk"]={"skulk","[skʌlk]","[skʌlk]","v.躲躲闪闪",'v.躲躲闪闪,潜行，（英）逃避（工作等）|||n.潜伏者，藏匿者，一群狐狸','I don\'t want reporters skulking around my house.','我不愿看到记者在我家周围鬼鬼祟祟地活动。','There were half a dozen foxes skulking in the undergrowth.','在林下灌丛中潜伏着五六只狐狸。'}

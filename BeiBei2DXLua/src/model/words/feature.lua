@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feature"]={"feature","['fiːtʃə]","['fitʃɚ]","n.特征",'n.特征,容貌|||vt.以...为特色|||vi.起重要作用','The personification of evil as a devil is a feature of medieval painting.','用魔鬼象徵罪恶是中世纪绘画的特色.','The sole redeeming feature of this job is the salary.','这份工作唯其薪水尚可弥补一切之不足。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crossing"]={"crossing","['krɒsɪŋ]","['krɔsɪŋ]","n.人行横道",'n.人行横道，交叉口，横渡|||动词cross的现在分词','When the enemy soldiers were crossing the river, we fell on them.','敌军正在渡河时, 我们向他们发起进攻。','My hat was blown off while I was crossing the bridge.','过桥时风吹掉了我的帽子。'}

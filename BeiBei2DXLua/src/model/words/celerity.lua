@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["celerity"]={"celerity","[sɪ'lerɪtɪ]","[sə'lɛrəti]","n.敏捷",'n.敏捷,快速','||Celerity|| is the soul of warfare','兵贵神速。','Apple\'s iPhone has reached celerity status','苹果手机迅速升温'}

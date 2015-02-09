@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reach"]={"reach","[riːtʃ]","[ritʃ]","vt.到达",'n.延伸,范围,河段|||vt.到达,伸出,延伸,取得联系|||vi.延伸','I can just about reach the apples on the top branch.','我只差一点就能够著最上边树枝上的苹果。','That\'s beyond the reach of my imagination.','那是我想象不到的。'}

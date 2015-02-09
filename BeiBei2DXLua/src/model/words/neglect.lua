@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neglect"]={"neglect","[nɪ'glekt]","[nɪ'glɛkt]","vt.忽视",'n.疏忽,忽略,怠慢|||vt.疏忽,忽视,不顾','It\'s a crime to neglect such a lovely garden.','让这么可爱的花园荒废是极不应该的。','No country can afford to neglect education.','任何国家都不容忽视教育。'}

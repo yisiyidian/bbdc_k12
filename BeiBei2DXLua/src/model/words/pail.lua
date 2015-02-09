@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pail"]={"pail","[peɪl]","[pel]","n.提桶",'n.提桶','I want a pail of milk.','我想要一桶牛奶。','He lifted a pail of water from the ground.','他把一桶水从地上提了起来。'}

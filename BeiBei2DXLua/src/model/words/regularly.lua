@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regularly"]={"regularly","['rɛɡjəlɚli]","[ 'reɡjələli ]","adv.定期地",'adv.定期地,有规律地','He dunged his vegetable garden regularly.','他经常给他的菜园施肥。','Dust and dirt soon accumulates if the house is not cleaned regularly.','房屋不经常打扫，尘土很快就越积越多。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bond"]={"bond","[bɒnd]","[bɑnd]","n.结合",'n.结合,债券,粘结剂,粘合剂','Common tastes form a bond between the two men.','共同的爱好使两人结交为朋友。','People are eager to buy government bonds','人们急于购买政府公债。'}

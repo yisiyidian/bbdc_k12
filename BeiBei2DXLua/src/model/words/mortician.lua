@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mortician"]={"mortician","[mɔː'tɪʃ(ə)n]","[mɔr'tɪʃən]","n.殡仪业者",'n.殡仪业者','The few people who wish to study to become morticians are usually those whose families have mortuary businesses.','那些少数希望念完书之后从事殡仪业的人，通常家人也是从事殡仪业的。','The mortician will take care of all of the arrangements for the funeral.','殡仪馆工作人员将会安排葬礼的所有事情。'}

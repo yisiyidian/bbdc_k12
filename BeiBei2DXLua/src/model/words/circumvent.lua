@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["circumvent"]={"circumvent","[sɜːkəm'vent]","[,sɝkəm'vɛnt]","vt.围住",'vt.围住,绕行,用计谋应付','The company has opened an office abroad in order to circumvent our tax laws.','公司在国外开设了一个办事处，以躲避我国的税法。','Military planners tried to circumvent the treaty.','军事策略家们企图绕开这一条约。'}

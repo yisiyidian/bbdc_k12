@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tan"]={"tan","[tæn]","[tæn]","n.鞣制革",'n.鞣制革,黄褐色|||adj.黄褐色的,鞣皮的|||vt.晒黑,鞣(革),鞭打|||vi.晒成棕褐色','Jane tanned quickly in the sun.','简在太阳下很快就晒黑了。','It took me all summer to get this tan.','我花了整个夏天才晒出这样的棕褐色。'}

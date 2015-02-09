@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["die"]={"die","[daɪ]","[daɪ]","v.死",'n.金属模子,印模|||v.死|||n.骰子（一个小的正六面体）','It was so funny, I nearly died laughing.','太好玩了，我差点笑死了。','The moth\'s habitat is being destroyed and it has nearly died out.','这种蛾子因栖息地正受到破坏，几乎绝种了。'}

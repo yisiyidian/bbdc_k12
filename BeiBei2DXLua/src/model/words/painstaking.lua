@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["painstaking"]={"painstaking","['peɪnzteɪkɪŋ]","['penztekɪŋ]","adj.辛苦的",'n.辛苦,苦心,工夫|||adj.辛苦的,勤勉的,小心的','She is not very clever but she is painstaking.','她并不很聪明，但肯下苦功夫。','Children receive painstaking care from their parents.','孩子们受到家长爱护备至的照料。'}

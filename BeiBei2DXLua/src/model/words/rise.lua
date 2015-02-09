@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rise"]={"rise","[raɪz]","[raɪz]","v.升起",'n.上升,增加,小山|||v.升起,起身,上升,(日、月、星)升起','She ||rose|| above her difficulties and became a tremendous success.','她战胜了重重困难，取得了巨大的成功。','Christians believe that Jesus ||rose|| from the dead on Easter Sunday.','基督徒相信耶稣在那个复活节星期日里复活了。'}

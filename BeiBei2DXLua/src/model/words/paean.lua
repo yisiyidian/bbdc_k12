@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paean"]={"paean","['piːən]","['piən]","n.欢乐歌",'n.欢乐歌,赞美歌','The novel is a paean to the end of empire.','该小说奏响了一个帝国落寞的赞歌。','She struck up the first paean on the grand piano.','她开始在那架大钢琴上演奏起第一首颂歌。'}

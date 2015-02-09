@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deify"]={"deify","['deɪɪfaɪ; 'diːɪ-]","['deɪfaɪ]","vt.神化",'vt.神化，把…当作神来崇拜或敬畏，崇拜','Primitive peoples ||deified|| the sun.','原始部落将太阳奉为神。','She ||deifies|| her leader very much.','她非常崇拜她的领导。'}

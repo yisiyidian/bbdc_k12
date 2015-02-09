@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["joyous"]={"joyous","['dʒɒɪəs]","['dʒɔɪəs]","adj.充满快乐的",'adj.充满快乐的,使人高兴的','The poem is a joyous affirmation of the power of love.','这首诗以欢快的笔触肯定了爱情的力量。','The music of this song sent her carefree and joyous.','这支歌的乐曲使她心旷神怡。'}

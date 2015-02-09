@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extraordinarily"]={"extraordinarily","[ɪk'strɔːd(ə)n(ə)rəlɪ]","[ɪk'strɔdɪn(ə)rəlɪ]","adv.非常(格外)",'adv.非常(格外)','An extraordinarily large order bucked up all the staff.','一份特大订单使全体员工欢欣鼓舞。','He had an extraordinarily penetrating gaze.','他的目光有股异乎寻常的洞察力.'}

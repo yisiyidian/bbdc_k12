@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ascent"]={"ascent","[ə'sent]","[ə'sɛnt]","n.上升",'n.上升,上坡路，晋升，提升，追溯','Who was the first man to make an ascent in a balloon?','第一个乘气球登空的人是谁？','This story has a long ascent.','这个故事可以追溯到久远的时候。'}

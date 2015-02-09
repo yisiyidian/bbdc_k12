@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thermodynamics"]={"thermodynamics","[,θɜːmə(ʊ)daɪ'næmɪks]","[,θɝmodaɪ'næmɪks]","n.热力学",'n.热力学','||Thermodynamics|| is a hard course to teach.','热力学是很难教的一门课。','What light does this discussion throw on the second law of thermodynamics?','这种讨论阐明了热力学第二定律的什么问题?'}

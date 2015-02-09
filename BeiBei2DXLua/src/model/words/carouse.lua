@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carouse"]={"carouse","[kə'raʊz]","[kə'raʊz]","n.狂欢作乐",'n.狂欢作乐|||vi.痛饮,畅饮，狂欢','They told him to stay home with his wife instead of going out and ||carousing|| with friends.','他们告诉他与他的妻子在一起呆在家里，不要出去和朋友们一起痛饮狂欢。','Messina and a few other staffers had gone to a bar to carouse after Obama\'s speech.','NA'}

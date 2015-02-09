@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fin"]={"fin","[fɪn]","[fɪn]","n.鳍",'n.鳍,鱼翅,鳍状物,散热片,五元纸币|||vt.装上鳍片|||vi.露鳍于水面,拍动鳍,象鱼一样游泳','A feather, wing, fin, or similar appendage.','羽、翼或鳍状结构羽、翼、鳍或类似的悬着物','A part or an organ, such as an arm, a leg, a tail, or a fin, that is joined to the axis or trunk of a body.','附器, 附肢与身体的轴或躯干相连的部位或器官, 如胳膊、腿、尾或鳍'}

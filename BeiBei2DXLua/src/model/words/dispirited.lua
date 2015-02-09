@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dispirited"]={"dispirited","[dɪ'spɪrɪtɪd]","[ dis'piritid ]","adj.沮丧的",'adj.沮丧的','She refused to be dispirited by her long illness.','她并未因长期患病而萎靡不振。','She refused to be dispirited by her long illness','她并未因长期患病而萎靡不振'}

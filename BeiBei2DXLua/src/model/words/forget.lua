@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forget"]={"forget","[fə'get]","[fɚ'ɡɛt]","vt.&vi.忘记",'vt.&vi.忘记,忽略','I\'m afraid I ||forgot|| myself and kissed him wildly.','当时我有些忘乎所以，疯狂地吻著他。','||Forget|| yourself and think of someone else for a change.','别光想著你自己，你也为别人想一次。'}

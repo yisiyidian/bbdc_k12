@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solo"]={"solo","['səʊləʊ]","['solo]","n.独奏",'n.独奏,独唱|||adj.单独的|||adv.单独地|||vt.&vi.放单飞,单独表演','The concert began with a piano solo.','音乐会以钢琴独奏曲拉开序幕。','He has been asked to sing a solo at the concert.','他已被邀请在演奏会上表演独唱。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["behaviour"]={"behaviour","[bɪ'heɪvjə]","[bɪ'hevjər]","n.行为",'n.行为(工作情况,运转状态,特点)','He\'s making himself cheap by his unpleasant behaviour.','他那令人讨厌的行为有损他自己的身份。','He was charged with riotous behaviour.','他被控聚众闹事。'}

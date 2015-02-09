@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entreaty"]={"entreaty","[ɪn'triːtɪ; en-]","[ɪn'triti]","n.恳求",'n.恳求,哀求','He felt very uncomfortable and looked entreaty at us.','他感到很不自在，用恳求的目光望着我们。','He knelt in front of the emperor with a look of entreaty.','他面带恳求的神态跪在皇帝面前。'}

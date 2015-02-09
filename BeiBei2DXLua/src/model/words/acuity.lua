@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acuity"]={"acuity","[ə'kjuːɪtɪ]","[ə'kjuəti]","n.尖锐",'n.尖锐,敏锐,激烈','We work on improving visual acuity.','我们致力于提高视觉的敏锐度。','On examination, her visual acuity was normal and without apparent proptosis.','经检查，她的视力正常，无明显突眼。'}

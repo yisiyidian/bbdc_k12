@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preach"]={"preach","[priːtʃ]","[pritʃ]","vi.传道",'vi.传道,宣扬|||vt.讲道,说教','She preached economy as the best means of solving the crisis.','她大力鼓吹节约是解决危机的关键。','He was always preaching the virtues of capitalism.','他总是宣传资本主义的长处。'}

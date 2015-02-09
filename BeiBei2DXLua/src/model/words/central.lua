@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["central"]={"central","['sentr(ə)l]","['sɛntrəl]","adj.中心的",'adj.中心的,基本的,折中的,中枢的|||n.电话交流,中央办公室,中心','What\'s the central thought of this article?','这篇文章的中心思想是什么？','The coastal areas have mild winters, but by contrast the central plains become extremely cold.','沿海地区的冬天天气暖和，可是相比之下中部平原却异常寒冷。'}

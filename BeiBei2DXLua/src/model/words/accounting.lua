@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accounting"]={"accounting","[ə'kaʊntɪŋ]","[ə'kaʊntɪŋ]","n.会计",'n.会计','There is no accounting for tastes.','人各有所好。','A company\'s accounting records must be open for inspection at all times.','公司的会计账目必须随时可以公开以备检查。'}

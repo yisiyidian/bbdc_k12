@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["victorious"]={"victorious","[vɪk'tɔːrɪəs]","[vɪk'tɔrɪəs]","adj.胜利的",'adj.胜利的,得胜的','The city turned out to welcome back its victorious team.','全市居民倾城而出迎接凯旋球队.','The victorious nations are demanding huge indemnities from their former enemies.','战胜国要求战败国交付巨额赔款.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["handicraft"]={"handicraft","['hændɪkrɑːft]","['hændɪkræft]","n.手工艺",'n.手工艺,手艺,技巧','The place is known for its handicraft products.','这地方因出手工艺品而出名。','It\'s hard to judge between the tow handicraft articles; they\'re both charming.','很难判定这两件工艺品孰优孰劣，它们都很好看。'}

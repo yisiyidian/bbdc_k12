@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gill"]={"gill","[gɪl]","[ɡɪl]","n.鳃",'n.鳃,及耳(液量单位）|||vt.用刺网捕鱼|||vi.被缠在刺网中','Unlike human beings , most fish are breathing with gills.','与人类不同，大多数鱼类都靠鳃呼吸。','Fish take in oxygen through their gills.','鱼用鳃吸氧气。'}

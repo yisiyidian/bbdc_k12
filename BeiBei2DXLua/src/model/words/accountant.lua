@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accountant"]={"accountant","[ə'kaʊnt(ə)nt]","[ə'kaʊntənt]","n.会计人员",'n.会计人员','The accountant described his work to the sales staff.','那个会计向营业部的职员介绍了自己的工作情况.','It would pay (you) to use an accountant.','雇会计划得来.'}

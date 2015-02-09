@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aggression"]={"aggression","[ə'greʃ(ə)n]","[ə'ɡrɛʃən]","n.进攻",'n.进攻,侵犯,侵略','Is aggression an essential part of the human psyche?','损人利己是否是人心灵的主宰?','Troops are on the alert against any possible aggression.','军队戒备着可能的来犯。'}

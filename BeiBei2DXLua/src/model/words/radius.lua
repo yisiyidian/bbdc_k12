@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radius"]={"radius","['reɪdɪəs]","['redɪəs]","n.半径",'n.半径,桡骨,半径范围,辐射区','family within a radius of 25 miles of the city center','住在离城中心半径25英里的范围内的家庭','We can compute the circular area with radius.','我们能用半径计算出圆的面积。'}

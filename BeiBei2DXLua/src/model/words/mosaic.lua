@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mosaic"]={"mosaic","[mə(ʊ)'zeɪɪk]","[mo'zeɪk]","n.马赛克",'adj.摩西的n.马赛克,镶嵌细工,镶木细工','The sky this morning was a mosaic of blue and white.','今天早上的天空是幅蓝白相间的画面。','It\'s a rich mosaic of meadows, rivers and woods.','这是一幅由草地、河流、树木组成的五光十色的镶嵌画。'}

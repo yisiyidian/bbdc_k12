@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["popular"]={"popular","['pɒpjʊlə]","['pɑpjəlɚ]","adj.流行的",'adj.大众的,流行的,有销路的','Her charm of manner made her very popular.','她风度优雅，备受欢迎。','He is very interested in what are called popular songs.','他对所谓的流行歌曲很感兴趣。'}

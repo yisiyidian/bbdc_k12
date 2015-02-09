@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obsession"]={"obsession","[əb'seʃ(ə)n]","[əb'sɛʃ(ə)n]","n.[U]痴迷",'n.[U]痴迷；困扰,成见|||[C]使人痴迷的的人（或物）','Her commitment to a great cause degenerated from a crusade into an obsession.','她致力于一项伟大事业，但其崇高的奋斗精神已变质成为偏执的狂热。','With him, gambling is an obsession.','对于他来说，赌博是无法摆脱的。'}

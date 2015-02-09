@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["witty"]={"witty","['wɪtɪ]","['wɪti]","adj.富于机智的",'adj.富于机智的,诙谐的','A short, witty poem expressing a single thought or observation.','隽语诗表示一个简单思想或观察的短小机智的诗','It reminds us of all the wise and witty things that our political masters have uttered in the past year.','这令我们想起了过去一年中我们的政治家们讲过的所有机敏睿智之语。'}

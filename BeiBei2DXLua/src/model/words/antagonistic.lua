@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antagonistic"]={"antagonistic","[æn,tæg(ə)'nɪstɪk]","[æn,tæɡə'nɪstɪk]","adj.敌对的",'adj.对抗性的,敌对的','He is always antagonistic towards new ideas.','他对新思想总是持反对态度。','Nearly all the women I interviewed were aggressively antagonistic to the idea.','几乎我采访过的所有女性都对这个观点表示了强烈的反感。'}

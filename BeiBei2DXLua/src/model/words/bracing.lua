@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bracing"]={"bracing","['breɪsɪŋ]","['bresɪŋ]","n.撑杆",'n.撑杆(支撑,拉条,交搭,拉紧)|||adj.令人振奋的(爽快的,使...紧张的)','My daughter has to wear a ||brace|| on her teeth.','我的女儿得戴牙箍以矫正牙齿.','A bracing tonic.','提神的补品'}

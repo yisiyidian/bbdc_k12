@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entrance"]={"entrance","['entr(ə)ns]","['ɛntrəns]","n.入口",'n.入口|||v.使出神,使入迷|||vt.使出神','There is an entrance of concealment just around the corner.','拐角处有个隐蔽入口。','The children watched entranced as the circus animals performed.','马戏团的动物们表演时，孩子们都看得入神。'}

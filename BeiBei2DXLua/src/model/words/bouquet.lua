@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bouquet"]={"bouquet","[bʊ'keɪ; bəʊ'keɪ; 'bʊkeɪ]","[bu'ke]","n.花束",'n.花束|||n.酒香','She laid the bouquet on the newly turfed grave.','她把这束花放置在新铺上草皮的坟墓上。','He bought a bouquet at the florist.','他在花店买了一束花。'}

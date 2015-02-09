@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frighten"]={"frighten","['fraɪt(ə)n]","['fraɪtn]","v.使惊吓",'v.使惊吓,惊恐','The children\'s shouts frightened off the birds.','孩子们的喊声把鸟儿吓飞了。','The little baby was frightened by the fierce dog.','那个小孩被恶狗吓坏了。'}

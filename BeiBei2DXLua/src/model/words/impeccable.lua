@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impeccable"]={"impeccable","[ɪm'pekəb(ə)l]","[ɪm'pɛkəbl]","adj.无瑕疵的",'adj.无瑕疵的','She had an impeccable aristocratic pedigree.','她有纯正的贵族血统。','He dressed well and had impeccable manners.','他衣冠楚楚，待人接物无可挑剔。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lard"]={"lard","[lɑːd]","[lɑrd]","n.猪油",'n.猪油|||vt.点缀,涂油于，润色','The lard was tried in a big kettle.','这猪油在大锅熬炼。','I must render down this fat; we are short of lard.','我得把这块肥肉熬成油，我们正缺猪油。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perfume"]={"perfume","['pɜːfjuːm]","[pɚ'fjum]","n.香水",'n.香水,香气|||v.洒香水于,薰香','The smell of her perfume lingered in the empty house.','空屋里仍然飘溢著她的香水味.','What does the perfume smell like?','这种香水闻起来怎样?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minus"]={"minus","['maɪnəs]","['maɪnəs]","prep.减去",'adj.负的,减的|||n.减号,负数,缺点|||prep.减去','He seems to have mistaken a plus for a minus.','他似乎把正号误作负号了。','Six minus two equals four.','六减去二等于四。'}

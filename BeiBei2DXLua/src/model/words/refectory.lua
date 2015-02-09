@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["refectory"]={"refectory","[rɪ'fekt(ə)rɪ]","[rɪ'fɛktri]","n.餐厅",'n.餐厅','The refectory is open all day.','餐厅一整天都开着。','food in the refectory is terrible.','餐厅里的饭菜很糟糕。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relation"]={"relation","[rɪ'leɪʃ(ə)n]","[rɪ'leʃən]","n.关系",'n.关系,家人,亲戚,叙述,陈述','||Relation|| between the two countries has reached a crisis point.','两国关系已达到出现危机的地步。','A relation of mine is coming to stay.','我有个亲戚要来此暂住。'}

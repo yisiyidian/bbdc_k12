@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["umbrage"]={"umbrage","['ʌmbrɪdʒ]","['ʌmbrɪdʒ]","n.阴影",'n.阴影，不快,怀疑,怨恨','He takes umbrage against anyone who criticises him.','不管谁批评他，他都心生愤懑。','They got umbrage and unhappiness at the feast.','他们在宴会上被怠慢'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pedigree"]={"pedigree","['pedɪgriː]","['pɛdɪɡri]","n.家谱",'n.家谱，系谱，血统，(动物的)种|||adj.纯种的','Direct descent from an ancestor; lineage or pedigree.','家系从一个祖先传下来的直接世系；家系或家族','He was proud of his impeccable pedigree.','他为他出身于名门望族而骄傲。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recent"]={"recent","['riːs(ə)nt]","['risnt]","adj.近来的",'adj.近来的,新近的','The government\'s control over the newspapers has loosened in recent years.','近年来政府已放松了对报纸的控制。','The minister has put a different gloss on recent developments.','部长就局势的最新发展作了另一番解释。'}

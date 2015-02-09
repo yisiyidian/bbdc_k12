@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elude"]={"elude","[ɪ'l(j)uːd]","[ɪ'lud]","v.逃避",'v.逃避,躲避','She tried to remember his face, but it elude her.','她想记起他的脸，可怎么也想不起来。','The revolutionist eluded capture for weeks by hiding underground.','那位革命者为避免被捕在地下躲藏了几个星期。'}

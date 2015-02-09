@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stentorian"]={"stentorian","[sten'tɔːrɪən]","[stɛn'tɔrɪən]","adj.极洪亮的",'adj.极洪亮的,非常响亮的','He spoke with a stentorian voice.','他用极洪亮的声音说。','You don\'t need a stentorian voice to be heard in this small room.','在这个小房间里，你不需要很大声说话别人就能听见。'}

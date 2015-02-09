@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["misapprehension"]={"misapprehension","['mis,æpri'henʃən]","[ 'mis,æpri'henʃən ]","n.误解",'n.误解','I thought you wanted to see me but I was clearly under a complete misapprehension.','我以为你想见我， 显然完全是我误解了。','A quarrel often rises from a misapprehension.','争吵常起于误解。'}

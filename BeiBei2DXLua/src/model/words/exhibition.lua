@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exhibition"]={"exhibition","[eksɪ'bɪʃ(ə)n]","[,ɛksɪ'bɪʃən]","n.展览",'n.展览,展览会','There will be an exhibition of the development of automobile industry in our country next week.','下星期将举办一个关于我国汽车工业发展的展览。','They went to an exhibition of modern art yesterday.','昨天，他们参观了现代美术展览'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imposition"]={"imposition","[ɪmpə'zɪʃ(ə)n]","[,ɪmpə'zɪʃən]","n.征收",'n.征收,课税,税款，强迫接受，过分要求，欺骗|||[印刷]拼版','It\'s an imposition to ask the workers to work sixteen hours a day.','＂要求工人每天工作十六个小时，真是太过份了。＂','I\'d like to stay if it\'s not too much of an imposition on you.','要是不给你添太多麻烦的话，我倒是愿意留下来。'}

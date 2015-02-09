@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypocrite"]={"hypocrite","['hɪpəkrɪt]","['hɪpə'krɪt]","n.伪君子",'n.伪君子,伪善者','I called her a damned hypocrite and that made her sit up.','我骂她惺惺作态, 她马上警觉起来.','He is known to be a hypocrite.','人家知道他是一个伪君子。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cloy"]={"cloy","[klɒɪ]","[ klɔi ]","v.(吃甜食)生腻",'v.(吃甜食)生腻,吃腻','The pleasures of idleness soon cloy.','无所事事的享乐很快就使人厌烦了。','She has cloyed with rich food.','她已经吃腻美食。'}

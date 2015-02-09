@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vertex"]={"vertex","['vɜːteks]","['vɝtɛks]","n.顶点",'n.顶点,最高点,头顶','Now we need a vertex buffer.','现在我们需要一个顶点缓冲。','The origin in a polar coordinate system; the vertex of a polar angle.','有一个多边形底面和有一个共同顶点的三角形侧面的多面体。'}

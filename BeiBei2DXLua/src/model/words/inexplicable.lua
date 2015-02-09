@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inexplicable"]={"inexplicable","[,ɪnɪk'splɪkəb(ə)l; ,ɪnek-; ɪn'eksplɪ-]","[,ɪnɪk'splɪkəbl]","adj.无法说明的",'adj.无法说明的,无法解释的,费解的','An event inexplicable by the laws of nature; a miracle.','奇迹自然规律无法解释的事实；奇迹','An inexplicable animus against intellectuals.','对知识分子的莫名其妙的恶意'}

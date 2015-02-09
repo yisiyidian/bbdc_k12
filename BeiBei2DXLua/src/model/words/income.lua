@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["income"]={"income","['ɪnkʌm]","['ɪnkʌm]","n.收入",'n.收入,所得','The money I got was a useful supplement to my ordinary income.','我得到的那笔钱是很管用的外快。','His income is well below the average.','他的收入大大低于平均水平。'}

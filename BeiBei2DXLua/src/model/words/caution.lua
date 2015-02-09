@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["caution"]={"caution","['kɔːʃ(ə)n]","['kɔʃən]","n.慎重",'n.警告,戒备措施,慎重,吸引人眼球的物品或人|||vt.警告','We urged caution.','我们特别提出要小心谨慎.','I must caution you against the danger.','我必须告诫你应谨防危险。'}

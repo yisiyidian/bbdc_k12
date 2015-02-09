@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["staircase"]={"staircase","['steəkeɪs]","['stɛrkes]","n.楼梯",'n.楼梯','We must redecorate the staircase.','我们得把楼梯重新装饰一下.','You can go up the staircase on the right.','你可以从右边楼梯上去。'}

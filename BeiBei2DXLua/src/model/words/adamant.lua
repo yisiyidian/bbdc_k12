@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adamant"]={"adamant","['ædəm(ə)nt]","['ædəmənt]","adj.非常坚硬的",'adj.非常坚硬的，强硬的，固执的|||n.坚硬无比之物，硬石','He was adamant in his refusal.','他拒绝之意极坚决。','I\'ve tried to persuade him to change his mind but he\'s adamant.','我竭力劝他改变主意，但他毫不动摇。'}

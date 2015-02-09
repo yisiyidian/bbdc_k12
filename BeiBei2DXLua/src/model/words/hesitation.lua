@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hesitation"]={"hesitation","[hezɪ'teɪʃn]","[,hɛzə'teʃən]","n.犹豫",'n.犹豫','She answered without a moment\'s hesitation.','她毫不迟疑立即回答.','His frequent hesitations annoyed the audience.','他三番五次欲言又止，听众已感到厌烦。'}

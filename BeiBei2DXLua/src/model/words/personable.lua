@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["personable"]={"personable","['pɜːs(ə)nəb(ə)l]","[ 'pə:sənəble ]","adj.风度好的",'adj.风度好的,优雅的,貌美的','The salesman was a very personable young man.','推销员是个风度翩翩的年轻人。','The people I met were intelligent, mature, personable.','我见到的是一些聪明、成熟、品貌兼优的人。'}

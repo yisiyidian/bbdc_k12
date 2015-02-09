@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mother"]={"mother","['mʌðə]","['mʌðɚ]","n.母亲",'n.母亲|||adj.母亲的,母体的|||vt.生育,像母亲一样关爱','He disobeyed his mother and went to the party.','他不听母亲的劝告，参加了那次聚会。','My father and mother went for a walk.','爸爸妈妈去散步了。'}

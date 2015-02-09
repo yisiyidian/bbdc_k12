@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["note"]={"note","[nəʊt]","[not]","n.笔记",'n.笔记,注解,备忘录,音符,音调,票据,便条,纸币|||vt.记录,注解,注意','She sounded a note of warning in her speech.','她在讲话中表示要引起警惕。','Please note my words.','请注意我的话。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["case"]={"case","[keɪs]","[kes]","n.案例",'n.情况,实情,箱,案例|||vt.装箱,踩点','In case of fire, ring the alarm bell.','如遇失火，请按警铃。','In your case, we are prepared to be lenient.','根据你的情况，我们拟予从宽处理'}

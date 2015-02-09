@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flexible"]={"flexible","['fleksɪb(ə)l]","['flɛksəbl]","adj.灵活的",'adj.灵活的,易弯曲的,柔韧的,可变通的','We need a foreign policy that is more flexible.','我们需要一个更为灵活的外交政策。','This tube is flexible but tough.','这管子柔软但很坚固。'}

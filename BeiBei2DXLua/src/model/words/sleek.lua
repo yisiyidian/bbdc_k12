@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sleek"]={"sleek","[sliːk]","[slik]","adj.光滑的",'adj.光滑的,井然有序的|||v.使光滑,梳拢','He sleeked back his hair with water before going in to meet her.','他进去见她之前，用水将头发梳理得很光亮。','The cat looked very sleek and well fed.','这只猫毛很光滑，看来喂得很好。'}

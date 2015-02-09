@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["genius"]={"genius","['dʒiːnɪəs]","['dʒinjəs]","n.天才",'n.天才,高智力,天赋','He makes much account of her musical genius.','他重视她的音乐天才。','He is not so much a genius as a hard worker.','他的努力胜于天分。'}

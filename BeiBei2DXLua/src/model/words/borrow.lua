@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["borrow"]={"borrow","['bɒrəʊ]","['bɑro]","v.借",'v.借,借入,借用','`Can I borrow your car?\' `Surely.\'','｀我用一下你的汽车可以吗?＇｀当然可以.＇','I borrowed your good idea.','我借用了你的想法'}

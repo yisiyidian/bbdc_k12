@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mishap"]={"mishap","['mɪshæp]","['mɪshæp]","n.不幸之事",'n.不幸之事,灾祸,恶运','My whole morning\'s work has been put out of gear by that mishap.','我一个上午的工作全让这倒霉的事给弄得乱了套。','He hurt his knee during the football match, but this mishap didn\'t stop him from playing.','足球比赛时他伤了膝盖，可他并没有因此中途退出。'}

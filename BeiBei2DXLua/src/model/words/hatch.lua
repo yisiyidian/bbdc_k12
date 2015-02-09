@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hatch"]={"hatch","[hætʃ]","[hætʃ]","n.孵化",'n.孵化,舱口|||vt.孵,孵出|||vi.孵化，破壳','Hen\'s eggs take 21 days to hatch out.','鸡蛋需要21天才孵化。','No one knows how the new plan will hatch out.','谁也不知道这新方案将怎样制定出来。'}

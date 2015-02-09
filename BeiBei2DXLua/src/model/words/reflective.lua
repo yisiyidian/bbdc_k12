@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reflective"]={"reflective","[rɪ'flektɪv]","[rɪ'flɛktɪv]","adj.反射的",'adj.反射的,反映的;沉思的|||adj.【语】反身的','Not reflective; unthinking.','不加思虑的；不思考的','a reflective surface.','反射面'}

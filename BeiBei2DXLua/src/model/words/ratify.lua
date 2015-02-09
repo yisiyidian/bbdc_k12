@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ratify"]={"ratify","['rætɪfaɪ]","['rætɪfaɪ]","v.批准",'v.批准,认可','Over ninety countries ratify an agreement to ban the use of these chemicals.','九十多个国家批准了一项禁止使用这些化学品的协议。','The government has ||ratified|| the project.','政府已经批准了这个项目。'}

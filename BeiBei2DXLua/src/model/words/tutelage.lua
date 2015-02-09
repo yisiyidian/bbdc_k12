@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tutelage"]={"tutelage","['tjuːtɪlɪdʒ]","['tʊtəlɪdʒ]","n.监护",'n.监护,指导','He made good progress under her tutelage.','在她的教导下，他进步很大。','You still in tutelage except you are over 18.','十八岁之前你都必须处于监护下。'}

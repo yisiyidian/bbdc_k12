@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calculation"]={"calculation","[kælkjʊ'leɪʃ(ə)n]","[,kælkju'leʃən]","n.计算",'n.计算','Where (ie At what point) did I go wrong in my calculation?','我在计算中什麽地方出了差错?','My calculation is based on notional figures, since the actual figures are not yet available.','因尚无实际数字, 我是根据估计的数字计算的.'}

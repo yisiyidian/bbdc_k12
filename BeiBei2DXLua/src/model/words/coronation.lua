@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coronation"]={"coronation","[kɒrə'neɪʃ(ə)n]","['kɔrə'neʃən]","n.加冕礼",'n.加冕礼','Fifty heads of state attended the Queen\'s coronation to do her honour.','五十位国家元首参加了女王的加冕典礼，向女王表示敬意。','A gallant feathered hat; cut a gallant figure at the coronation.','华丽时髦的带有羽毛的帽子；加冕礼给人一种时髦的印象'}

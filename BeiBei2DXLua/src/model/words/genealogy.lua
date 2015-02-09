@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["genealogy"]={"genealogy","[dʒiːnɪ'ælədʒɪ; dʒen-]","['dʒinɪ'ælədʒi]","n.宗谱",'n.家系,宗谱','He had sat and repeated his family\'s genealogy to her, twenty minutes of nonstop names.','他坐下又给她细数了一遍他家族的家谱，20分钟内说出了一连串的名字。','Many libraries specialize in genealogy.','许多图书馆专门收藏氏族家谱。'}

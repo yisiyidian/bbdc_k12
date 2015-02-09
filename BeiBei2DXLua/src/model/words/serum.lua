@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["serum"]={"serum","['sɪərəm]","['sɪrəm]","n.浆液",'n.浆液,血清,乳浆','German physiologist. He won a1901 Nobel Prize for work on serum immunization against diphtheria and tetanus.','贝林, 埃米尔·冯1854－1917德国生理学家, 因其在抗白喉与破伤风血清免疫方面的工作获1901年诺贝尔奖','Relating to bodily fluids, especially serum.','体液的与体液(尤是血清)有关的'}

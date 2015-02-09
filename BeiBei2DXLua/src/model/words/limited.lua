@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["limited"]={"limited","['lɪmɪtɪd]","['lɪmɪtɪd]","adj.有限的",'adj.有限的','We had only limited communion with the natives.','我们与本地人的交往有限。','We have limited funds and several competing claims.','我们的基金有限而争相申请的却有几处。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assure"]={"assure","[ə'ʃʊə; ə'ʃɔː]","[ə'ʃʊr]","vt.保证",'vt.保险,保证,确信,担保','Her success as an actress was now assured.','她当演员很成功，已毋庸置疑了。','We book early to assure ourselves of seats.','我们及早订票以确保有座。'}

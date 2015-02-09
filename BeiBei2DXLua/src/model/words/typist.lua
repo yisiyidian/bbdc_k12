@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["typist"]={"typist","['taɪpɪst]","['taɪpɪst]","n.打字员",'n.打字员','Sylvia is the best typist round here, and I\'m not just saying that.','西尔维亚是这里最好的打字员，我也是这样认为。','Check over the paper carefully before pass it to the typist.','把稿子交给打字员前先仔细检查一下。'}

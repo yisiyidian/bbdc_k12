@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["galaxy"]={"galaxy","['gæləksɪ]","['ɡæləksi]","n.银河",'n.银河,一群显赫之人','The company has a galaxy of talents.','该公司拥有一批优秀的人才。','Each galaxy contains myriads of stars.','每一星系都有无数的恒星.'}

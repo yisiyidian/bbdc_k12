@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retract"]={"retract","[rɪ'trækt]","[rɪ'trækt]","vt.缩进(拉回",'vt.缩进(拉回,退回,取消)|||n.收缩核','A cat can retract its claws, but a dog can\'t.','猫的爪子可以缩进去, 但狗不能.','The accused refused to retract (his statement).','那被告拒不撤消（其供述）.'}

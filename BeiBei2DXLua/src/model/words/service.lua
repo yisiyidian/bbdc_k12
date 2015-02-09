@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["service"]={"service","['sɜːvɪs]","['sɝvɪs]","n.服务",'n.服务,公务部门,服役,发球|||vt.维护,保养','The food is good at this hotel, but the service is poor.','这家旅馆饭菜很好，但服务很差。','You may need the services of a lawyer.','你也许需要律师的帮助。'}

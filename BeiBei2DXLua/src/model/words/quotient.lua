@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quotient"]={"quotient","['kwəʊʃ(ə)nt]","['kwoʃnt]","n.商",'n.商','The number obtained by dividing one quantity by another. In 45/3=15, 15 is the quotient.','商将一个量除以另一个量而获得的数。在45÷3＝15这个等式中，15是商','His intelligence quotient is very high.','他的智商很高。'}

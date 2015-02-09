@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["piercing"]={"piercing","['pɪəsɪŋ]","['pɪrsɪŋ]","adj.刺骨的",'adj.刺骨的,刺穿的,讽刺的，尖锐的，敏锐的|||动词pierce的现在分词形式','All of a sudden a piercing scream broke the silence.','突然，刺耳的尖叫声打破了寂静。','The calling of a man\'s self to a strict account, is a medicine, sometime too piercing and corrosive.','一个人的严厉自责是一种有时过于猛烈，蚀力过强的药品。'}

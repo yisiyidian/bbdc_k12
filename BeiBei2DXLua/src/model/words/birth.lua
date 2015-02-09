@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["birth"]={"birth","[bɜːθ]","[bɝθ]","n.出生",'n.出身,血统,出生,诞生,出现','He is a man of noble birth.','他出身贵族。','The baby weighed seven pounds at birth.','那婴儿出生时重七磅。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impinge"]={"impinge","[ɪm'pɪn(d)ʒ]","[ɪm'pɪndʒ]","v.冲击",'v.冲击,撞击|||vi.侵犯','I heard the rain impinge upon the earth.','我听到雨点密密麻麻落在地上。','Do not impinge on my privacy.','不要侵犯我的隐私。'}

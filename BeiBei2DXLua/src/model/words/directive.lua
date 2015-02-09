@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["directive"]={"directive","[dɪ'rektɪv; daɪ-]","[daɪ'rɛktɪv]","adj.指导的",'adj.指导的,指挥的,管理的|||n.指令|||[计算机]指令','Thanks to a new directive, food labeling will be more specific.','由于官方的一项新指令，食品标签将会更明确具体。','a directive tha call for approval','批准的指令'}

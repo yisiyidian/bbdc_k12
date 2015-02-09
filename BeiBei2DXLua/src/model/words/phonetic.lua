@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["phonetic"]={"phonetic","[fə'netɪk]","[fə'nɛtɪk]","adj.语音的",'adj.语音的，语音学的','Agreeable sound, especially in the phonetic quality of words.','谐音，声音的和谐谐音或悦耳的声音，尤指词的音质','||Phonetic|| symbols represent sounds.','语音符号是标音的符号.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["watershed"]={"watershed","['wɔːtəʃed]","['wɔtɚʃɛd]","n.流域",'n.流域，分水岭，转折点','Leaving her first job was a watershed in her life.','辞去她的第一份工作是她生活中的一个转折点。','Her visit to India proves to be a watershed in her life.','她的印度之行成了她一生的转折点。'}

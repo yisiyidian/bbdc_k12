@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["envious"]={"envious","['envɪəs]","['ɛnvɪəs]","adj.嫉妒的",'adj.嫉妒的|||adj.[古]好胜的，羡慕的','Aged people are always envious of young people\'s energy.','上年纪的人总羡慕年轻人的精力。','I am envious of his success.','我羡慕他的成功。'}

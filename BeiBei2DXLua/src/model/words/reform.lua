@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reform"]={"reform","[rɪ'fɔːm]","[rɪ'fɔrm]","n.改革",'n.改革,改正,感化|||vt.改革,改正,使悔改|||vi.改良,悔改','They made a clamor for reform.','他们强烈要求改革。','Our reform made an inexorable march of progress.','我们的改革取得了势不可挡的进展。'}

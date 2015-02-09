@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grandiloquent"]={"grandiloquent","[græn'dɪləkwənt]","[ ɡræn'diləkwənt ]","adj.夸张的",'adj.夸张的,夸大的,浮夸的','This pretty dress is grandiloquent expensive','这条漂亮的裙子太贵了。','He is grandiloquent beyond the truth.','他夸大了事实的真相。'}

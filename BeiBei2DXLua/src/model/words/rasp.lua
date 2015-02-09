@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rasp"]={"rasp","[rɑːsp]","[ræsp]","n.锉刀",'n.锉刀,擦菜板,刺耳的声音|||vt.用挫刀挫，刺激，用刺耳的声音说|||vi.发出刺耳声','Where did you put it? he rasped.','“你把它放在哪儿了？”他尖声地问。','He was still laughing when he heard the rasp of Rennie\'s voice.','他听到伦尼刺耳的声音时还在大笑。'}

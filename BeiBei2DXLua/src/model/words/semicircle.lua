@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["semicircle"]={"semicircle","['semɪsɜːkl]","['sɛmɪsɝkl]","n.半圆",'n.半圆,半圆物，半圆形','They sit cross-legged in a semicircle and share stories.','他们盘着腿围成半圆坐在一起讲故事。','We sat in a semicircle facing the teacher.','我们面对着老师坐成半圆形。'}

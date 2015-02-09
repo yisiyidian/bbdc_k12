@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["huckster"]={"huckster","['hʌkstə]","['hʌkstɚ]","n.小商人",'n.小商人,叫卖的小贩，商业广告员|||v.贩卖,叫卖,强行推销','he is a goddamn huckster','丫就是一个该死的小贩','The hucksters in this stress sold varies of jewels from others counties.','这条街上的小贩们卖很多别的国家的首饰'}

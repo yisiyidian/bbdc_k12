@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antagonize"]={"antagonize","[æn'tæɡənaɪz]","[ æn'tæɡənaiz ]","v.使...成敌人",'v.使...成敌人,敌对,反对','It would be dangerous to antagonize him.','招惹他可危险.','He didn\'t want to antagonize her.','他不想使她对自己产生敌意。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["munificent"]={"munificent","[mjʊ'nɪfɪs(ə)nt]","[mju'nɪfɪsnt]","adj.慷慨的",'adj.慷慨的,大方的','He is open-minded and munificent to others, so he has a lot of friends.','他对别人既开明又慷慨，所以他有很多朋友。','Rich can not equal to munificent completely.','富有不能完全等价于慷慨。'}

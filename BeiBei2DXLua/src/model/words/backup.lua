@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["backup"]={"backup","['bækʌp]","['bæk,ʌp]","n.后备",'n.后备,后备','a backup in the sink; a backup of traffic at the drawbridge.','下水道堵塞；吊桥上的交通阻塞','a backup pilot.','候补飞行员'}

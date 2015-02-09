@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chiaroscuro"]={"chiaroscuro","[kɪ,ɑːrə'skʊərəʊ]","[kɪ,ɑrə'skʊro]","n.明暗的配合",'n.明暗的配合,明暗法','Italian High Renaissance painter known for his use of chiaroscuro','以运用阴暗对照法著名的文艺复兴高潮期意大利画家','A detail of a Rembrandt portrait illustrating the technique of chiaroscuro.','一幅林布兰肖像画的局部显示了明暗对照的绘画技术'}

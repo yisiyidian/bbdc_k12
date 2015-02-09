@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overconfident"]={"overconfident","[əʊvə'kɒnfɪd(ə)nt]","[ ,əuvə'kɔnfidənt ]","adj.过于自信的",'adj.过于自信的','If I become overconfident I will recall my failures','自高自大时，我要追寻失败的记忆','She warned me against being overconfident.','她告诫我不要过于自信.'}

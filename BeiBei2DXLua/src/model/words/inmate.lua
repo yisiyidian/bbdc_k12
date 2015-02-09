@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inmate"]={"inmate","['ɪnmeɪt]","['ɪnmet]","n.同住者",'n.同住者,同室者(特指在医院、监狱),居民','The prisoner is his inmate.','那个囚犯和他同住一起。','I am an inmate of that hospital.','我住在那家医院。'}

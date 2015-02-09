@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["actual"]={"actual","['æktʃʊəl; -tjʊəl]","['æktʃuəl]","adj.实际的",'adj.实际的,真实的','I need the actual figures, not an estimate.','我需要确实的数字, 不要估计的.','My calculation is based on notional figures, since the actual figures are not yet available.','因尚无实际数字, 我是根据估计的数字计算的.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seedy"]={"seedy","['siːdɪ]","['sidi]","adj.褴褛的",'adj.褴褛的,破旧的,不体面的','They suck you in to their seedy world.','他们把你卷入他们肮脏糜烂的圈子里。','We were staying in a seedy hotel close to the red light district.','我们当时住在紧挨着红灯区的一家脏乱不堪的旅馆里。'}

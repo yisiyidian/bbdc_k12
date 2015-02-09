@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["confidant"]={"confidant","['kɒnfɪdænt; ,kɒnfɪ'dænt; -dɑːnt]","['kɑnfɪdænt]","n.心腹朋友",'n.心腹朋友,知己','He was their adviser, confidant and father confessor.','他是他们的顾问、密友和倾听者。','She had chosen me for her confidant and I learned all about her quarrels with her lover.','她把我当作知己，于是，我便将她和情人之间的争吵了解得一清二楚。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fidelity"]={"fidelity","[fɪ'delɪtɪ]","[fɪ'dɛləti]","n.忠诚",'n.忠实,忠诚，准确性','There is nothing like a dog\'s fidelity.','没有什么能比得上狗的忠诚。','Trust and fidelity are essential for a lasting, successful relationship.','信任和忠诚是持久而成功的关系的真谛。'}

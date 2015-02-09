@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["confidence"]={"confidence","['kɒnfɪd(ə)ns]","['kɑnfɪdəns]","n.信心",'adj.骗得信任的|||n.信任,信心,把握','He possesses the quality of inspiring confidence.','他有本事能让别人信任他.','She has great confidence in her success.','她充分自信自己能成功。'}

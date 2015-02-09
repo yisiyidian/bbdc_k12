@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["euphony"]={"euphony","['juːf(ə)nɪ]","['jʊfəni]","n.悦耳之音",'n.悦耳之音','Such euphony is hard to resist.','如此的悦耳之声令人难以抵抗。','Your sound is the same as euphony !','你的声音真是天籁之音！'}

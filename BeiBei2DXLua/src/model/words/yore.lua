@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yore"]={"yore","[jɔː]","[jɔr]","n.〈书〉往昔",'n.〈书〉往昔,昔时','The images provoked strong surges of nostalgia for the days of yore.','这些影像勾起了对昔日时光的强烈怀念。','In the days of yore, we love each other, and in the days to come, we will still love each other.','过去我们相爱，将来我们也将仍然相爱。'}

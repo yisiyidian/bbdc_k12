@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twenty"]={"twenty","['twentɪ]","['twɛnti]","adj.二十",'adj.二十','She became the Duchess of Kent when she was twenty.','在她二十岁的时候，她成为了肯特公爵夫人。','We invited twenty people, but only a handful of them came.','我们邀请了20 个人，但只来了寥寥数人。'}

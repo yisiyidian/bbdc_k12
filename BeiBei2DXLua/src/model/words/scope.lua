@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scope"]={"scope","[skəʊp]","[skop]","n.范围",'n.能力，范围，眼界，机会，余地|||vt.仔细研究','It is within my scope.','那是在我的范围之内。','Your question is beyond the scope of this book.','你所问的问题已超出了这本书的范围。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mistrust"]={"mistrust","[mɪs'trʌst]","[,mɪs'trʌst]","n.不信任",'n.不信任,疑惑|||v.不信任,疑惑','His experience left him with a mistrust of banks.','他的经历使他不信任银行','Everything you say seems to be pervaded with a mistrust of the human race.','你说的一切似乎都渗透了对人类的不信任。'}

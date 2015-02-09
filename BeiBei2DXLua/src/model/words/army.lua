@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["army"]={"army","['ɑːmɪ]","['ɑrmi]","n.军队",'n.军队,陆军,大群','The army, navy and airforce are all controlled by the Ministry of Defense.','陆海空军皆由国防部控制。','The battlefield is full of the army.','军队布满了战场。'}

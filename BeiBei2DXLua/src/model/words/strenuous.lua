@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strenuous"]={"strenuous","['strenjʊəs]","['strɛnjuəs]","adj.紧张的",'adj.紧张的；费力的；奋发的；艰苦的；热烈的','He always took the waters at Parr after his strenuous social season.','社交忙季过后他常去矿泉胜地帕尔疗养。','I\'ll appreciate your strenuous effort to promote the sale in your market on commission basis.','如果您在代理的基础上，在市场上为我们的产品尽全力促销的话，我将非常感谢您。'}

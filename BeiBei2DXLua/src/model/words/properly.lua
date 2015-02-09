@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["properly"]={"properly","['prɒp(ə)lɪ]","['prɑpɚli]","adv.适当地",'adv.适当地,相当地,当然地','The machine won\'t function properly if you don\'t oil it well.','如果你不给机器好好加油的话，它就不会正常运转。','The heater in my car doesn\'t work properly.','我汽车里的暖气设备出了点毛病。'}

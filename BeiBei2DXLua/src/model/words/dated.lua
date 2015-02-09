@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dated"]={"dated","['deɪtɪd]","['detɪd]","adj.过时的",'adj.过时的，陈旧的|||动词date的过去式和过去分词','I saw a tombstone bearing the ||date|| 1602.','我见到一块刻有1602年字样的墓碑.','I only dated her once.','我和她只约会过一次.'}

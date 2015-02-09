@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["goddess"]={"goddess","['gɒdɪs]","['ɡɑdəs]","n.女神",'n.女神，受崇拜的女性','He adores this screen goddess with godliness.','他十分虔诚地崇拜女明星。','A calf was offered up as a sacrifice to the goddess.','向女神祭献了一头牺牲小牛.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["homestead"]={"homestead","['həʊmsted]","['homstɛd]","n.家园",'n.家园,田产','A homestead cannot be the subject of a sale by court order to satisfy creditor.','宅地不能成为法院命令的满足债权人所要求的销售对象。','We must reestablish our homestead.','我们必须重建我们的家园。'}

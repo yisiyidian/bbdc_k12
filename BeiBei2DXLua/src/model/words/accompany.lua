@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accompany"]={"accompany","[ə'kʌmpənɪ]","[ə'kʌmpəni]","vt.陪伴",'vt.陪伴,伴随，给...伴奏|||vi.伴奏','The singer was ||accompanied|| at the piano by his pupil.','演唱者由他的学生担任钢琴伴奏。','Lightning usually ||accompanies|| thunder.','闪电通常伴有雷声。'}

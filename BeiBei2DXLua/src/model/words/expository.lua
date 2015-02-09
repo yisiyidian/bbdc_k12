@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expository"]={"expository","[ɪks'pɒzɪtrɪ]","[ɪk'spɑzətɔri]","adj.说明的",'adj.说明的，解释的|||=expositive','All expository writing deals with facts. This expository type of writing gives the reader information.','说明文主要是给读者提供信息，所以和事实有关。','A expository document was provided to support his argument.','他提供了说明文件来支持他的论点。'}

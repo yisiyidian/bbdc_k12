@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nuclear"]={"nuclear","['njuːklɪə]","['nuklɪɚ]","adj.原子核的",'adj.原子核的,原子能的','The most terrifying aspect of nuclear bombing is radiation.','核弹轰炸最可怕的一面是辐射。','This old man is a famous nuclear physicist.','这位老人是一位著名的核物理学家。'}

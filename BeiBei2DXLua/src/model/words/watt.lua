@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["watt"]={"watt","[wɒt]","[wɑt]","n.瓦特",'n.瓦特','A unit of power equal to one thousandth(10-3) of a watt.','微瓦电学单位，等于千分之一（10－3）瓦','It is in vent by ||Watt||.','是瓦特发明的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["embolden"]={"embolden","[ɪm'bəʊld(ə)n; em-]","[ɛm'boldən]","vt.给...壮胆",'vt.给...壮胆,鼓励','The president was steadily emboldened by the discovery that he faced no opposition.','发现自己没有受到任何反对，该总统渐渐有了信心。','Four days of non-stop demonstrations have emboldened the anti-government protesters.','连续四天不间断的示威活动给反政府抗议者们壮了胆。'}

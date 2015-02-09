@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["federation"]={"federation","[fedə'reɪʃ(ə)n]","['fɛdə'reʃən]","n.联邦",'n.联邦,联合,联盟','A federation or tribe, especially one composed of Native Americans.','部落联盟部落联盟，尤其是由美洲印第安人组成的联盟','An association or federation of five governments, each ruled by a different leader.','五国联盟五个政府的联合或联盟，每个政府由各自的领袖领导'}

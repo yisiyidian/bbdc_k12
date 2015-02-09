@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invective"]={"invective","[ɪn'vektɪv]","[ɪn'vɛktɪv]","n.恶言漫骂",'n.恶言漫骂,臭骂|||adj.漫骂的,非难的,恶言的','||Invective|| is not constructive suggestion.','漫骂不是建设性意见。','The invective made her crazy.','恶言恶语让她崩溃了。'}

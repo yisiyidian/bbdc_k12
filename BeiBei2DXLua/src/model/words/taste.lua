@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["taste"]={"taste","[teɪst]","[test]","vi.品尝",'n.味道,品味,味觉,尝试|||vt.尝到甜头,尝试,有...味道的|||vi.品尝,体验','I thought his jokes were in very poor taste.','我认为他讲的笑话太粗俗了。','That\'s the best wine I\'ve ever tasted.','那是我喝过的最好的酒'}

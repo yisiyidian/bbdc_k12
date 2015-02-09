@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["homicide"]={"homicide","['hɒmɪsaɪd]","['hɑmɪsaɪd]","n.杀人",'n.杀人,杀人者','The police arrived at the scene of the homicide.','警察赶到了杀人现场。','He is a horrible homicide','他是个恐怖的杀人犯'}

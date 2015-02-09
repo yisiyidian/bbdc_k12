@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["isle"]={"isle","[aɪl]","[aɪl]","n.岛",'n.岛,群岛|||vt.使...成为岛屿,放在岛屿上','He later journeyed through the isle of Lemnos whose bold and heartless females, earlier, had slaughtered every male upon the island;','他在那些大胆而残忍的妇女把所有她们的男子杀死之后，曾经在雷姆诺岛旁边经过。','Do you know the locations of the British ||Isles||?','你知道不列颠群岛的位置吗？'}

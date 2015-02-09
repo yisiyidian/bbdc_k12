@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blues"]={"blues","[bluːz]","[bluz]","n.布鲁斯音乐",'n.布鲁斯音乐，忧郁的情绪|||名词blue的复数形式','She called me every now and then to sing the blues about her troubles.','她时常打电话给我对她反遇到的麻烦发牢骚。','The blues was/were first performed by the black people.','布鲁斯音乐最初是由黑人演奏的。'}

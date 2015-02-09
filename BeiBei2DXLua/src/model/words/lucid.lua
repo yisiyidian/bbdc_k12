@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lucid"]={"lucid","['luːsɪd]","['lusɪd]","adj.明白易懂的",'adj.明白易懂的,清晰的,神智清醒的','She\'s delirious, but has lucid intervals.','她神志昏乱，但时而清醒。','His style is very lucid.','他的文风简单明了。'}

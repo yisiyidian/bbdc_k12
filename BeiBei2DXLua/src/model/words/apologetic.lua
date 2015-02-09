@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apologetic"]={"apologetic","[əpɒlə'dʒetɪk]","[ə,pɑlə'dʒɛtɪk]","adj.道歉的",'adj.道歉的,认错的,赔罪的|||n.辩护','The chairman led in with some apologetic remarks.','会议主席一上来就说了几句抱歉的话。','Recognizing who the customer was, the manager was most apologetic and reprimanded the assistant severely.','经理认出顾客是谁，所以赔了一千个不是，并狠狠地斥责了店员。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recapture"]={"recapture","[riː'kæptʃə]","[,ri'kæptʃɚ]","n.取回",'n.取回,夺回|||vt.拿回,夺回,再经历，再俘获','The drama of the prisoner\'s escape and recapture.','囚犯逃跑和被重新抓获的戏剧性事件','Since he escaped from gaol, Tom has been living on a razor\'s edge, terrified of recapture.','汤姆越狱後, 时时如惊弓之鸟, 生怕再次被捕.'}

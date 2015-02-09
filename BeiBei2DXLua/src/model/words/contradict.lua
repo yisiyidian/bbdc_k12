@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contradict"]={"contradict","[kɒntrə'dɪkt]","['kɑntrə'dɪkt]","vt.反驳",'vt.反驳,与...矛盾','Don\'t contradict your father.','别和你父亲犟嘴。','The report contradicts what we heard yesterday.','这个报道与我们昨天听到的有矛盾。'}

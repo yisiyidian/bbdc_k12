@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frame"]={"frame","[freɪm]","[frem]","n.框",'n.框,结构,骨架|||v.构成，把...框起来，陷害|||adj.木结构的','Sobs shook her slender frame.','她抽泣著，苗条的身体都在颤动。','This athlete has a powerful frame.','这位运动员有着魁梧的体格。'}

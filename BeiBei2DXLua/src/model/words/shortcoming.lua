@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shortcoming"]={"shortcoming","['ʃɔːtkʌmɪŋ]","['ʃɔrtkʌmɪŋ]","n.短处",'n.短处,缺点','Not being punctual is his greatest shortcoming.','不守时间是他的最大缺点。','If it were not for this shortcoming, he is a fairly good teacher.','要不是有这一缺点，他本是一个相当好的教师。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fortitude"]={"fortitude","['fɔːtɪtjuːd]","[ 'fɔ:titju:d ]","n.刚毅",'n.刚毅,坚毅,不屈不挠','||Fortitude|| is distinct from valor.','刚毅有别于勇猛。','||Fortitude|| is one of Chinese people spirits.','坚毅是中华民族的精神之一。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breathtaking"]={"breathtaking","['breθteɪkɪŋ]","['brɛθtekɪŋ]","adj.惊险的(吃惊的)",'adj.惊险的(吃惊的)','It\'s breathtaking.','真叫人兴奋极了。','The arch has a cable car that takes visitors to the top for breathtaking views of the city and the ocean.','缆车带游客到桥顶俯瞰城市和海洋壮美的景色'}

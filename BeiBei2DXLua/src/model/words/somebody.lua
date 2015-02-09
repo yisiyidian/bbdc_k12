@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["somebody"]={"somebody","['sʌmbədɪ]","['sʌmbədi]","pron.某人",'pron.某人,有人|||n.重要人物','He mistook me for somebody else.','他把我错认为别人了。','He thinks himself to be somebody, while actually he is nobody.','他自以为是个人物，其实他算不了什么。'}

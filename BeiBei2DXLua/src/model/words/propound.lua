@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["propound"]={"propound","[prə'paʊnd]","[prə'paʊnd]","v.提出(问题)",'v.提出(问题)|||vt.提议','It is to meet every week, and each member in turn has to propound a problem.','每周将举行集会，让每个成员来解决提案中的疑难问题。','He likes to propound problems but not the ways to solve them.','他喜欢提出问题，而不是解决问题的办法。'}

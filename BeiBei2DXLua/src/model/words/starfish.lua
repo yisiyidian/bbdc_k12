@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["starfish"]={"starfish","['stɑːfɪʃ]","['stɑr'fɪʃ]","n.海星",'n.海星','She lays a kindly hand like a tiny starfish on my knee.','她和善地伸出手,像小海星一样放在我的膝盖上.','Have you ever seen a starfish shining on the beach?','你是否见过海星闪烁在沙滩上?'}

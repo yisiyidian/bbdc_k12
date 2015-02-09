@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maybe"]={"maybe","['meɪbiː; -bɪ]","['mebi]","adv.大概",'adv.大概,也许|||n.不确定性','||Maybe|| these nutrients are helpful to your health.','或许这些营养品对你的健康有帮助。','||Maybe|| I can act as a messenger for you.','也许我能给你当信差。'}

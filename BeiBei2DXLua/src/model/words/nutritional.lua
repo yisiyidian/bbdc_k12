@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nutritional"]={"nutritional","[njuː'trɪʃənəl]","[njʊ'trɪʃənl]","adj.营养的",'adj.营养的,滋养的','The poor overall health and nutritional status of women are a leading problem','一个关键的问题是妇女的身体健康问题和营养问题','Some food are not very delicious but nutritional.','有些事物并不十分可口，但却很有营养。'}

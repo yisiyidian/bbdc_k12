@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stupid"]={"stupid","['stjuːpɪd]","['stupɪd]","adj.愚蠢的",'adj.愚蠢的,笨拙的，麻木的，无趣味的|||n.傻瓜','You stupid jerk!','你这蠢猪！','Why grumble at me about your own stupid mistakes?','你自己犯了愚蠢的错误, 为什麽向我抱怨?'}

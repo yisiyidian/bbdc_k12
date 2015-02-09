@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["serenity"]={"serenity","[sɪ'renɪtɪ]","[ si'renəti ]","n.宁静",'n.宁静,沉着','There is peace and serenity within the Light.','光芒照耀着和平与宁静。','Her face, though sad, still evoked a feeling of serenity.','她的神色虽然悲伤，但仍使人感觉安详。'}

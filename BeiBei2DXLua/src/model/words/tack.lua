@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tack"]={"tack","[tæk]","[tæk]","n.大头钉",'n.大头钉,行动方针|||v.以大头针钉住,附加,跟随','The speaker suddenly changed tack and left us all rather confused.','演讲人突然改变了论调，把我们都搞糊涂了。','I hammered a tack into the wall and hung a small picture from it.','我在墙上钉了一个图钉，然后在上面挂了一张小图片。'}

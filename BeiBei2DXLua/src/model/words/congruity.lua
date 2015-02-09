@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congruity"]={"congruity","[kɒŋ'ɡruːɪtɪ]","[ kɔŋ'ɡru:iti ]","n.适合",'n.适合,一致,调和','lack of congruity or harmony','不一致性缺少一致性或协调性','Moral construction of higher schools must be emphasized the congruity of theory and practice, knowing and doing.','高校思想道德建设要做到理论教育与道德实践、与行的统一。'}

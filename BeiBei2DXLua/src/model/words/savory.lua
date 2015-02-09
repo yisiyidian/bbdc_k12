@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["savory"]={"savory","['seivəri]","[ 'seivəri ]","adj.风味极佳的",'adj.风味极佳的,可口的,味香的|||n.香薄荷|||=savoury','This place doesn\'t have a very savory reputation.','这个地方的名声可不太好。','She cooked the savory dishes.','她有一手好厨艺。'}

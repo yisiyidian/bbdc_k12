@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tour"]={"tour","[tʊə]","[tʊr]","n.旅游",'n.旅游,观光旅行,任期|||v.旅行,周游','They\'re going on a world tour.','他们正在环球旅行.','The tour guide gave a running commentary from the front of the coach.','导游在旅游车的前部向游客作连续的现场解说.'}

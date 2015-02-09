@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sitcom"]={"sitcom","['sɪtkɒm]","['sɪtkɑm]","n.情景喜剧",'n.情景喜剧','This sitcom is produced in cooperation with Hong Kong TV.','这部连续剧是同香港电视台联合制作的。','||Sitcom|| shows tend to be about ordinary people.','情境喜剧往往和一般大众息息相关。'}

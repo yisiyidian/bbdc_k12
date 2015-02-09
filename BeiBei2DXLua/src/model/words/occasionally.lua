@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["occasionally"]={"occasionally","[ə'keɪʒ(ə)n(ə)lɪ; ə'keɪʒ(ə)nəlɪ; ə'keɪʒən(ə)lɪ]","[o'keʒənəli]","adv.偶尔地",'adv.偶尔地','You can\'t have a complete monopoly of the car, I need to use it occasionally.','你不能一人独霸这辆汽车--我偶尔也要用.','A poor contact causes power to fail occasionally.','接触不良有时会造成断电.'}

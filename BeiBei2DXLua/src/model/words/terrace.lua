@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terrace"]={"terrace","['terəs]","['tɛrəs]","n.平台",'n.平台,阳台,梯田|||v.使成阶地,使成梯田|||vt.使成梯田','He walked out onto the terrace.','他漫步走到外面的平台上。','In China hill farmers grow rice on terraces.','在中国，山区农民在梯田上种水稻。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["system"]={"system","['sɪstəm]","['sɪstəm]","n.系统",'n.系统,体系,制度,体制','Do you know how to log in to the system?','你知道怎么登录进入这个系统吗？','She just blames it all on the system.','她把这全归咎于制度。'}

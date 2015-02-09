@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rite"]={"rite","[raɪt]","[raɪt]","n.仪式",'n.仪式,典礼','This festival descends from a religious rite.','这个节日起源于宗教仪式.','Alexander wore black for the rite.','亚历山大穿黑衣服参加了那个仪式.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arthritis"]={"arthritis","[ɑː'θraɪtɪs]","[ɑr'θraɪtɪs]","n.关节炎",'n.关节炎','Her arthritis is acting up again.','她的关节炎又犯了。','I have a touch of arthritis in the wrist.','我的手腕有轻微关节炎。'}

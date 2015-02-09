@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snapdragon"]={"snapdragon","['snæpdræg(ə)n]","['snæpdræɡən]","n.金鱼草",'n.金鱼草','A snapdragon is a common garden plant with small colourful flowers that can open and shut like a mouth.','金鱼草是种普通的花卉，可以开像嘴一样张合的小花','the corolla of a snapdragon is bilabiate','金鱼草的花冠是二唇形的'}

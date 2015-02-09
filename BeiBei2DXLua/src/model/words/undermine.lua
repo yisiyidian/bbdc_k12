@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undermine"]={"undermine","[ʌndə'maɪn]","['ʌndɚ'maɪn]","vt.暗中损害",'vt.暗中损害,逐渐削弱,在(某物)下挖洞或挖通道,从根基处损害','Water has undermined the stone foundations.','水已逐渐侵蚀了石基。','Late hours can undermine one\'s health.','晚睡会损害健康。'}

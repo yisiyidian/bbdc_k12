@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["severe"]={"severe","[sɪ'vɪə]","[sɪ'vɪr]","adj.严重的",'adj.剧烈的,严重的,严峻的,严厉的,严格的','He\'s suffering from severe mental disorder.','他患有严重的精神病.','Nothing can warrant such severe punishment.','这样严厉的惩罚毫无根据。'}

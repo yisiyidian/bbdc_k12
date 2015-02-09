@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["habitable"]={"habitable","['hæbɪtəb(ə)l]","['hæbɪtəbl]","adj.可居住的",'adj.可居住的，适于居住的','The northernmost region of the habitable world as thought of by ancient geographers.','极北地区古代的地理学家认为的可居住地带最北的地区','The lowest habitable story of a building, usually below ground level.','地下室可居住的最低的建筑物楼层，通常在地平面以下'}

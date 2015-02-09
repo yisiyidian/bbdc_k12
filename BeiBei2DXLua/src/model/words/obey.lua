@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obey"]={"obey","[ə(ʊ)'beɪ]","[ə'be]","vt.&vi.服从",'vt.&vi.服从,听从','The abbot told him to obey the rules.','修道院院长告诉他要遵守规定。','We must obey the decencies and attend the funeral.','我们要遵照礼仪参加葬礼。'}

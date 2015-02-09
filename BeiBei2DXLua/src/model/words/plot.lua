@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plot"]={"plot","[plɒt]","[plɑt]","n.情节梗概",'n.阴谋,情节，图,(小块)土地，|||v.绘图,密谋,计划，标示位置','They are brewing a plot behind the scenes.','他们正在幕后策划一个阴谋。','The silly ending robs the plot of any credibility.','这愚蠢的结尾使得整个情节变得一点都不可信。'}

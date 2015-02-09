@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["await"]={"await","[ə'weɪt]","[ə'wet]","vt.等候",'vt.等候,准备...以待,储存|||vi.等待','We await your pleasure.','我们听您的意思.','It was completely hopeless. They had to await their doom.','希望已绝, 他们只能坐以待毙了。'}

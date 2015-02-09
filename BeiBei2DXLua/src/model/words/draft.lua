@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["draft"]={"draft","[drɑːft]","[dræft]","n.草稿",'n.草稿,草图,汇票，徵兵|||vt.起草,征兵,选秀|||adj.酝酿中的','John was drafted into the Army last year.','约翰去年被应征入伍。','Who will draft the indictment?','谁将起草起诉状？'}

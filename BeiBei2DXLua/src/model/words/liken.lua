@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liken"]={"liken","['laɪk(ə)n]","['laɪkən]","vt.比喻",'vt.比喻,比拟,使像','Someone liken his voice to the croak of a bull-frog.','有人把他的声音比作牛蛙的叫声。','Life can be liken to a journey with an unknown destination.','人生就好比一场不知终点的旅行。'}

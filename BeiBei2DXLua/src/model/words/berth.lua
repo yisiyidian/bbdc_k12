@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["berth"]={"berth","[bɜːθ]","[bɝθ]","n.停泊处",'n.停泊处,（船、火车上的）卧铺|||v.停泊','He\'s so boring that I always try to give him a wide berth at parties.','他这个人很没意思, 在聚会上我总是对他退避三舍.','The liner berthed at midday.','邮轮中午到达停泊地。'}

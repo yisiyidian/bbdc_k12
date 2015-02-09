@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amorous"]={"amorous","['æm(ə)rəs]","['æmərəs]","adj.多情的",'adj.多情的,表示爱情的,恋爱的','They exchanged amorous glances and clearly made known their passions.','二人眉来眼去，以目传情。','She gave him an amorous look.','她脉脉含情地看了他一眼。'}

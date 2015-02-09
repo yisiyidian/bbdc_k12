@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stud"]={"stud","[stʌd]","[stʌd]","n.图钉",'n.图钉,装饰钮扣,立柱,板墙筋,壁骨,种马,耳环,年轻男子|||vt.镶嵌,点缀','Have you stud the arbitration award?','您研究过仲裁裁决了吗？','She explained to me why he stud French.','她向我解释他学习法语的原因。'}

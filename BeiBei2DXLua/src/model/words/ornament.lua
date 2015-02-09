@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ornament"]={"ornament","['ɔːnəm(ə)nt]","['ɔrnəmənt]","n.装饰",'n.装饰,装饰物|||vt.装饰','There is an ornament made of shells on the wall.','墙上有一个贝壳做成的装饰品。','A bauble is a showy ornament of little value.','廉价珠宝是华而不实的装饰品。'}

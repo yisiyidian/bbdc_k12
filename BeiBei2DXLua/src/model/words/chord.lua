@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chord"]={"chord","[kɔːd]","[kɔrd]","n.弦",'n.弦,和音,情绪','A chord consisting of a root with its third, seventh, and ninth.','九和弦由第三、第七和第九三个基础音组成的和弦','There are two naturals in this chord.','这一和弦中有两个本位音.'}

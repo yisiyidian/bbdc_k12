@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presidency"]={"presidency","['prezɪd(ə)nsɪ]","['prɛzɪdənsi]","n.总统（总裁、主席等）的职位（或任期）",'n.总统（总裁、主席等）的职位（或任期）','The tenure of the US ||Presidency|| is four years.','美国总统的任期是四年.','He\'ll run for the ||Presidency||.','他将参加总统竞选。'}

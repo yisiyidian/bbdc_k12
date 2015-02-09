@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["motorway"]={"motorway","['məʊtəweɪ]","['motɚwe]","n.(英）高速公路",'n.(英）高速公路','Warning notices were strung out along the motorway.','高速公路上隔一段距离就有一个示警牌.','A multiple crash can often be seen on that motorway.','那条公路上的联环撞车事故很多。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gold"]={"gold","[gəʊld]","[ɡold]","adj.金色的",'adj.金色的,金制的|||n.金子,金币,金黄色,金牌','The Olympic winner received a gold medal as an award.','奥林匹克的优胜者获得一枚金质奖章作为奖赏。','A reliable car is worth its weight in gold.','靠得住的汽车就是无价之宝.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["madam"]={"madam","['mædəm]","['mædəm]","n.夫人",'n.夫人,女士,老鸨','Sorry, madam, we\'re closing up for lunch.','很抱歉，小姐，我们现在要关门吃午饭。','What a little madam!','好一副小姐架子!'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diatribe"]={"diatribe","['daɪətraɪb]","['daɪətraɪb]","n.恶骂",'n.恶骂,诽谤','The book is a diatribe against the academic left.','该书对学界左派进行了抨击。','He launched a bitter diatribe against the younger generation.','他对年轻一代发起了猛烈的抨击。'}

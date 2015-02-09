@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["persnickety"]={"persnickety","[pə'snɪkɪtɪ]","[pɚ'snɪkəti]","adj.势利的",'adj.势利的,挑剔的','a persnickety job.','一个难以应付的工作','a persnickety school teacher','一位严格要求的老师'}

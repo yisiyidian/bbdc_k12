@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["different"]={"different","['dɪf(ə)r(ə)nt]","['dɪfrənt]","adj.不同的",'adj.不同的,与众不同的','The two doctors made different diagnosis of my disease.','两位医生对我的病作出了不同的诊断。','My husband has several shirts of different colors.','我丈夫有好几件颜色不同的衬衫。'}

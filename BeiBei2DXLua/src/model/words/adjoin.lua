@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adjoin"]={"adjoin","[ə'dʒɒɪn]","[ə'dʒɔɪn]","v.邻接",'v.邻接,毗连,邻接','It is forbidden to adjoin to a postcard any sample of merchandise.','在明信片上附贴商品的样品是不许可的。','Our house adjoins theirs.','我们的房屋与他们的毗连。'}

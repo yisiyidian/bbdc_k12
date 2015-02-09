@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["throne"]={"throne","[θrəʊn]","[θron]","n.王座",'n.王座,君主','The country acknowledged his claim to the throne.','全国人民确认了他的王权.','Who is first in succession to the throne?','谁是王位的第一继承人?'}

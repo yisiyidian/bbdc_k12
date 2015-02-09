@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["iris"]={"iris","['aɪrɪs]","['aɪrɪs]","n.虹膜",'n.虹膜,鸢尾属植物,彩虹之女神','Surgical removal of part of the iris of the eye.','虹膜切除术手术切除部分虹膜','Shaped like a sword, as the leaf of an iris.','剑形的，如鸢尾属植物的叶子'}

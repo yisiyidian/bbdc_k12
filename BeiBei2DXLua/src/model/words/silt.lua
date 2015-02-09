@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["silt"]={"silt","[sɪlt]","[sɪlt]","n.淤泥",'n.淤泥|||v.(使)淤塞','A concrete wall is built to stop silt from leaking to the conservation land.','人们修筑了一道水泥墙，以防泥沙流进保留地。','The harbor is being up with silt.','那海港被淤泥阻塞了。'}

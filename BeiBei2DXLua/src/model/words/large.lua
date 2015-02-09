@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["large"]={"large","[lɑːdʒ]","[lɑrdʒ]","adj.大的",'adj.广泛的,大的,强烈的|||adv.普遍地,大量地','He has a large number of reference books at his disposal.','他有大量的参考书可供使用。','The question is discussed at large in my report.','我在报告中对该问题作了详细的探讨。'}

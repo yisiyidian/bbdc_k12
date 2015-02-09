@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["licentious"]={"licentious","[laɪ'senʃəs]","[laɪ'sɛnʃəs]","adj.放荡的",'adj.放荡的，放肆的','She felt a little upset about her licentious behavior.','她对他放肆的行为感到有点不舒服。','She is licentious.','她是个放荡的女人。'}

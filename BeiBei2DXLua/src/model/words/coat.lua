@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coat"]={"coat","[kəʊt]","[kot]","n.外套",'n.外套,一层,动物皮毛|||vt.外面覆盖,盖上毛衣','You may hang your coat on the hook.','你可以把外套挂在钩子上。','He turned off the television, put on his coat, and walked out.','他关掉电视，穿上外套，走了出去。'}

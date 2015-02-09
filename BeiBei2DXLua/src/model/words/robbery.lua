@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["robbery"]={"robbery","['rɒb(ə)rɪ]","['rɑbəri]","n.抢劫",'n.抢劫','He was gaoled for six months for his part in the robbery.','他因参与抢劫监禁了六个月.','Acting on inside information, the police were able to arrest the gang before the robbery occurred.','警方根据匪徒内部情报，在劫案发生前把他们一网打尽。'}

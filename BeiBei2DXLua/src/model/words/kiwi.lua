@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kiwi"]={"kiwi","['kiːwiː; -wɪ]","['kiwi]","n.猕猴桃",'n.猕猴桃,几维（一种新西兰产的无翼鸟）,新西兰人','In Asia, the hardy kiwi grows well in the shade','在亚洲，猕猴桃在荫蔽条件下能生长得很好。','My wife likes to eat|| Kiwi||.','我老婆爱吃猕猴桃。'}

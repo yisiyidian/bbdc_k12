@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monotheism"]={"monotheism","['mɒnə(ʊ),θiːɪz(ə)m]","['mɑnoθɪ'ɪzəm]","n.一神论",'n.一神论,一神教','Judaism came into being in accordance with monotheism.','犹太民族是因一神教而诞生的民族。','He recommended monotheism but believed in reincarnation.','他宣扬一神论，却相信转世再生。'}

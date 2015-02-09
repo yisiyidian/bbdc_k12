@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hardihood"]={"hardihood","['hɑːdɪhʊd]","['hɑrdɪ,hʊd]","n.大胆",'n.大胆,鲁莽','Jack have the hardihood to deny what he have do.','杰克厚颜地否认了自己所干的事。','the 80-year-old grandmother attributes her hardihood to having eaten a cup of yogurt every day for the past 50 years','...'}

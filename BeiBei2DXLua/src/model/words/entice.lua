@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entice"]={"entice","[ɪn'taɪs; en-]","[ɪn'taɪs]","v.诱骗",'v.诱骗,引诱','He enticed the girl away from home.','他引诱这个女孩离家出走。','The boy was enticed into playing truant.','这个男孩被怂恿逃学。'}

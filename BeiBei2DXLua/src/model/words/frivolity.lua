@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frivolity"]={"frivolity","[frɪ'vɒlɪtɪ]","[ fri'vəliti ]","n.轻浮",'n.轻浮','His frivolity annoys the other people in the office.','他的轻浮使办公室里的其他人感到不快。','How could she tolerate the men\'s frivolity?','她怎能忍受得了那男人的轻浮?'}

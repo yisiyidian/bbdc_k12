@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eugenic"]={"eugenic","[juː'dʒenɪk]","[ ju:'dʒenik,-kəl ]","adj.优生（学）的",'adj.优生（学）的,优种的','Politician take no interest in eugenics because the unborn have not vote.','政治家对优生学不感兴趣，因为未出生者并无选举权。','In China today each couple is required to carry out a eugenic plan strictly.','当今中国要求每对夫妇都严格执行优生计划。'}

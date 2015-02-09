@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dutiful"]={"dutiful","['djuːtɪfʊl; -f(ə)l]","['dʊtɪfəl]","adj.守本分的",'adj.守本分的,顺从的,尽职的','The days of the dutiful wife, who sacrifices her career for her husband, are over.','贤妻为了丈夫而牺牲自己事业的时代已经结束了。','She was chiding her son for not being more dutiful to her.','她在责骂她儿子对她不够孝尽。'}

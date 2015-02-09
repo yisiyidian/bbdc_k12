@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["supposition"]={"supposition","[,sʌpə'zɪʃ(ə)n]","[,sʌpə'zɪʃən]","n.想像",'n.想像,推测,推想','My supposition is that he stole the money.','我猜是他偷了这笔钱。','His belief that things will improve is pure supposition.','他认为情况会好转，这纯粹是推测而已。'}

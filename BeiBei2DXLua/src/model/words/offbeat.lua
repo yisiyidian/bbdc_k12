@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["offbeat"]={"offbeat","['ɒfbiːt; ɒf'biːt]","[,ɔf'bit]","adj.不平常的",'adj.不平常的,离奇的，反传统的|||n.弱拍','Linguistics used to be an offbeat field, but nowadays every self-respecting university has a linguistics department.','语言学以往是个奇特的领域, 可是如今每一所有自尊心的大学都有个语言学系。','offbeat humor.','反传统的幽默'}

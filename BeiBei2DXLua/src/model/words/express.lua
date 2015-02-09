@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["express"]={"express","[ɪk'spres; ek-]","[ɪk'sprɛs]","vt.表达",'n.快车,快递,专使|||adj.急速的,明确的,直接的|||adv.用快递;特意地|||vt.表达,表示;挤压出;快递','I can\'t express how grateful I am.','我说不出我有多么感激。','Learning to express oneself well is an important part of education.','学会把意思表达清楚是受教育的一个重要方面。'}

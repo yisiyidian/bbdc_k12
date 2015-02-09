@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["woo"]={"woo","[wuː]","[wu]","v.向...求爱",'v.向...求爱,追求,恳求','I will never try to woo someone with fine car or gift.','我绝不会用香车和礼物来求婚。','He wooed and won her.','他向她求爱成功而结婚'}

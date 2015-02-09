@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["storage"]={"storage","['stɔːrɪdʒ]","['stɔrɪdʒ]","n.储藏",'n.储存体,储藏,仓库,保管费','||Storage|| is10% of value, so we scrapped the stock.','因仓储费是货物价值的10％，所以我们就废弃了这批存货。','The management accept full responsibility for loss of goods in storage.','管理部门接受仓库中货物损失的全部责任。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["counterattack"]={"counterattack","['kaʊntərə,tæk]","['kaʊntərə,tæk]","v.&n.反击",'v.&n.反击,反攻','We should seize the opportunity to counterattack.','现在, 我们应乘机反攻。','The security forces counterattacked the following day and quelled the unrest.','安全部队第二天进行了反击，平息了骚乱。'}

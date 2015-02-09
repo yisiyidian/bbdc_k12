@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["devastation"]={"devastation","[,devə'steɪʃn]","[ ,devə'steiʃən ]","n.破坏",'n.破坏,劫掠','We are just now beginning to learn the extent of the devastation','我们刚刚开始了解到地震所造成破坏的严重程度','The worst of the storm has passed. But I think all of you understand the devastation remains.','暴风雨最糟糕的时刻已经过去。但是我认为，所有人都理解，所造成的损坏依然存在。'}

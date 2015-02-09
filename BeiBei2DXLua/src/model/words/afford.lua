@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["afford"]={"afford","[ə'fɔːd]","[ə'fɔrd]","vt.提供",'vt.提供,负担得起的(后果,损失等),给予','These trees afford a pleasant shade.','这些树提供了荫凉。','I can\'t afford a holiday this summer.','今年夏天我无法度假。'}

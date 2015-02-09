@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resolve"]={"resolve","[rɪ'zɒlv]","[rɪ'zɑlv]","n.决定之事",'n.决定之事,决心,坚决|||vt.决定,解决,分离,表决|||vi.分离,决定','Intensive efforts are being made to resolve the dispute.','现正全力以赴来解决这场纠纷。','He kept his resolve to do better.','他决心干得更出色。'}

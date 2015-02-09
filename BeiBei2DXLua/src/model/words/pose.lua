@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pose"]={"pose","[pəʊz]","[poz]","n.姿势",'n.姿势,姿态,装模作样|||vt.提出(问题),引起,定格|||vi.摆姿势,装模作样','Stop ||posing|| and tell us what you really think.','别装蒜啦，告诉我们你的真实想法吧。','Heavy traffic poses a problem in many old towns.','交通拥挤是许多旧城镇的难题。'}

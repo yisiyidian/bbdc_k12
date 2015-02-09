@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["times"]={"times","[taɪmz]","[taɪmz]","n.倍",'n.时间,期限,次数,乘,倍|||vt.为...安排时间,计时,定时,乘|||[计算机]DOS命令:显示并允许改变系统时间|||adj.根据时间的,时间上的','He studies more than three times as hard as I.','他用功的程度是我的三倍还不止。','I have five times the number of Tom\'s books.','我有五倍于汤姆的书。'}

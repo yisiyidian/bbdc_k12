@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["basin"]={"basin","['beɪs(ə)n]","['besn]","n.脸盆",'n.脸盆,盆地,流域,水池','The basin was brim-full (of water).','盆（里的水）已经满到边了.','This basin is made of iron.','这个盆子是铁做的。'}

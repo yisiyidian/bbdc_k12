@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capable"]={"capable","['keɪpəb(ə)l]","['kepəbl]","adj.有能力的",'adj.有能力的，足以胜任的,有...倾向的','Salamanders once were thought to be capable of living in fire.','火蜥蜴曾被认为能生活于火中。','Only human beings are capable of speech.','只有人类才具有说话的能力。'}

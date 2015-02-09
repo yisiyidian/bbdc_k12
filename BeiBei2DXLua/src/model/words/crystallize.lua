@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crystallize"]={"crystallize","['krɪstə'laɪz]","[ 'kristə,laiz ]","v.（使）结晶",'v.（使）结晶,（使）具体化,（使）成蜜饯','She\'s trying to crystallize her ideas into a practical plan.','她试图把自己的想法订成可行的计划。','His vague ideas crystallized into a definite plan.','他那些模糊的想法变成了一个明确的计划.'}

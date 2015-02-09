@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gentry"]={"gentry","['dʒentrɪ]","['dʒɛntri]","n.绅士",'n.绅士，名流，贵族们','The English gentry is next below the nobility.','英国绅士的地位仅次于贵族。','Most of them were the nobility and the landed gentry.','他们大多是贵族和地主乡绅。'}

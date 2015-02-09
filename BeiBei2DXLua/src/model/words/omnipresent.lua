@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["omnipresent"]={"omnipresent","[ɒmnɪ'prez(ə)nt]","[,ɑmnɪ'prɛznt]","adj.无处不在的",'adj.无处不在的','Beauty is omnipresent, therefore everything is capable of giving us joy.','美随处可见，因此每样事物都能给予我们欢乐。','The obsessive thoughts became so omnipresent that her memory was affected.','这些强迫性念头变得无时不在，以至影响到了她的记忆。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nine"]={"nine","[naɪn]","[naɪn]","num.&n.九",'num.&n.九|||pron.&adv.九(个,只...)','I arrive at the hospital at eight o\'clock, but I don\'t go on duty until nine.','我八点钟就到医院了，但是九点钟我才去值班。','What time is it? It is nine o\'clock.','现在是几点钟？现在是九点钟。'}

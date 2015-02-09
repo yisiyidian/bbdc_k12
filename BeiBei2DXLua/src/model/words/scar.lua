@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scar"]={"scar","[skɑː]","[skɑr]","n.疤痕",'n.疤痕,伤痕,断崖|||vt.&vi.结疤,使...有伤痕,痊愈','The tissues have been destroyed and a scar has formed.','那些组织受到破坏，形成一道疤痕。','The scar flawed her beauty.','这伤疤损害了她的美貌。'}

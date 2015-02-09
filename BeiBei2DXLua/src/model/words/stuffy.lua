@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stuffy"]={"stuffy","['stʌfɪ]","['stʌfi]","adj.(房间等)不通气的",'adj.(房间等)不通气的,(人或事物)沉闷乏味的,自负的','Lacking fresh air; stuffy.','不通风的缺乏新鲜空气的；闷气的','The atmosphere is very stuffy in here can we open a window?','这 的空气很闷--咱们能把窗户打开吗?'}

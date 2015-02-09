@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trance"]={"trance","[trɑːns]","[træns]","n.恍惚",'n.恍惚,昏睡状态，出神，发呆|||v.使恍惚,使狂喜，使出神','He didn\'t answer when I spoke - he seemed to be in a trance.','我说话他没有答理---他像是陷入昏睡状态。','She put her son into a trance.','她使她的儿子进入昏睡状态。'}

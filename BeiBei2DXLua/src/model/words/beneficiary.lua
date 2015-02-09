@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beneficiary"]={"beneficiary","[benɪ'fɪʃ(ə)rɪ]","[,bɛnɪ'fɪʃɪɛri]","n.受惠者",'n.受惠者,受益人','The main ||beneficiaries|| of pension equality so far have been men.','迄今为止，退休金均等政策的主要受益者一直是男性。','Her husband was the chief beneficiary of her will.','她丈夫是她遗嘱的主要受益人。'}

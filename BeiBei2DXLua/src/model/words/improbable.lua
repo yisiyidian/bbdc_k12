@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["improbable"]={"improbable","[ɪm'prɒbəb(ə)l]","[ɪm'prɑbəbl]","adj.未必然的",'adj.未必然的,不像会发生的,似不可信的','These new facts make the theory improbable.','这些新出现的事实使这一理论变得荒谬.','There is nothing inherently improbable in the idea.','这个想法本身没什么不可能的.'}

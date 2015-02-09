@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["buffer"]={"buffer","['bʌfə]","['bʌfɚ]","n.缓冲",'n.缓冲,缓冲区|||vt.减轻,缓冲','Refers to push-down stack procedures and is the acronym for last in/first out, a buffer procedure.','一种把数据压入堆栈的过程，即数据缓冲的过程。LastIn／FirstOut的缩写。','His sense of humour was a useful buffer when things were going badly for him.','他有幽默感, 这使他在逆境中聊以自慰.'}

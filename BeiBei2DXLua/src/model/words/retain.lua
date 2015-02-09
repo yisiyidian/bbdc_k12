@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retain"]={"retain","[rɪ'teɪn]","[rɪ'ten]","vt.保持",'vt.保持,保留;记住','Her memory retains everything she reads.','她过目不忘。','He retained the best lawyer in the state to defend his case.','他为他的案子聘了该州最好的律师。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["static"]={"static","['stætɪk]","['stætɪk]","adj.静态的",'n.静电,静电干扰,噪声,阻碍,抨击|||adj.静态的,静电的,固态的','I do not get any static on my set.','我的电视机没有受到静电干扰。','House prices, which have been static for several months, are now rising again.','房价稳定了几个月, 现在又上涨了。'}

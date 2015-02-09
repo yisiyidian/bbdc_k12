@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ensign"]={"ensign","['ensaɪn]","['ɛnsən]","n.国旗(船上表示所属国家的旗帜)",'n.国旗(船上表示所属国家的旗帜)，徽章|||n.海军少尉','An ensign; a flag.','军旗；旗帜','The ensign of the United States is Stars and Stripes.','美国国旗是星条旗。'}

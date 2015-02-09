@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bulky"]={"bulky","['bʌlkɪ]","['bʌlki]","adj.庞大的",'adj.庞大的，笨重的，肥大的','The bulky figure of Jones makes him difficult to move.','琼斯的庞大身躯使得他难以移动。','A bulky parcel from China has arrived.','从中国来的大包裹已经到了。'}

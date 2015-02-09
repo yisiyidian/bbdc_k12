@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quay"]={"quay","[kiː]","[ki]","n.码头",'n.码头','The side of the boat hit the quay with a grinding jar.','船舷撞到码头发出刺耳的声音。','Jack and Stephen were waiting for them on the quay.','杰克和斯蒂芬正在码头等他们。'}

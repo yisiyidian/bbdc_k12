@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reluctant"]={"reluctant","[rɪ'lʌkt(ə)nt]","[rɪ'lʌktənt]","adj.不情愿的",'adj.不情愿的,勉强的','The workers are reluctant to be ordered around by the employers.','工人们不愿被雇主们差来遣去地随便使唤.','I was reluctant to do over the stitching in the dress.','我不愿意把衣服上的线脚拆了重缝。'}

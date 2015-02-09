@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assassinate"]={"assassinate","[ə'sæsɪneɪt]","[ə'sæsn'et]","v.暗杀",'v.暗杀','The police exposed a criminal plot to assassinate the president.','警方侦破了一个行刺总统的阴谋.','assassinate a rival\'s character.','诋毁对手的名誉'}

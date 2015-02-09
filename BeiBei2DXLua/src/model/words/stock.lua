@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stock"]={"stock","[stɒk]","[stɑk]","n.股份",'n.股份，股票；库存；树干；家畜|||adj.常备的，存货的；陈旧的|||vt.提供货物；备有|||vi.出新芽；囤积','Have you any grey pullovers in stock?','你们有灰色套头毛衣的现货吗？','Our new model is already on the stocks and will be available in the autumn.','我们正著手生产一种新的款式，可望在秋季面世。'}

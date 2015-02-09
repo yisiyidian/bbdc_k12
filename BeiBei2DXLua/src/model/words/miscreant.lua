@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["miscreant"]={"miscreant","['mɪskrɪənt]","['mɪskrɪənt]","adj.极恶的",'adj.极恶的,协道的,异端的|||n.罪大恶极的人,恶棍,异端','He is a miscreant.','他是一个罪大恶极的人。','Local people demanded that the police apprehended the miscreants.','当地人要求地方法官逮捕那些歹徒。'}

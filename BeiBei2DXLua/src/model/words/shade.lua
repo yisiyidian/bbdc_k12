@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shade"]={"shade","[ʃeɪd]","[ʃed]","n.荫凉处",'n.色度,荫凉处,稍微|||vt.&vi.渐变,遮蔽,微减','I think it\'s a shade warmer today.','我觉得今天暖和一点儿。','There are no trees or bushes to give shade.','没有树木或灌木丛可以遮荫。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hip"]={"hip","[hɪp]","[hɪp]","n.臀部",'n.臀部,屋脊,野蔷薇的果实,时尚|||vt.告知|||adj.非常时尚的,赞同的|||interj.表示满意或赞同的欢呼声','The thigh bone is connected to the hip bone.','股骨连著髋骨.','He stood there with his hands on his hips.','他两手叉腰站在那里。'}

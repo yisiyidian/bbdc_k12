@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adapt"]={"adapt","[ə'dæpt]","[ə'dæpt]","vi.适应",'vt.使适应,改编|||vi.适应，适合','You must adapt to the norms of the society you live in.','在社会中生活就要遵循社会行为准则.','This machine has been specially adapted for underwater use.','这机器是为水下使用而特别改装的。'}

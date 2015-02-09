@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glide"]={"glide","[glaɪd]","[ɡlaɪd]","n.滑动",'n.滑动,滑过,流水|||v.滑动,滑翔,溜走','There is a submarine ||gliding|| through the water.','潜艇在水中自由行驶','Youth glided past without our awareness.','青春在我们不知不觉中逝去。'}

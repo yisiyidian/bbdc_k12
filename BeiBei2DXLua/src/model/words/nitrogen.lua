@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nitrogen"]={"nitrogen","['naɪtrədʒ(ə)n]","['naɪtrədʒən]","n.氮",'n.氮','Air consists chiefly of nitrogen.','空气主要由氮气组成.','If it were not for oxygen and nitrogen in the air, no man could live on the earth.','大气中如果没有氧和氮，人就无法生存于地球了。'}

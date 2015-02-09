@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["universe"]={"universe","['juːnɪvɜːs]","['junɪvɝs]","n.宇宙",'n.宇宙','The universe is slowly yielding up its secrets to scientists.','宇宙慢慢地向科学家展现了自己的秘密.','The universe was created out of a primordial ball of matter.','宇宙是从一个本来就存在著的球体中产生出来的.'}

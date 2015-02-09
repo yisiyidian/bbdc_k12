@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["publication"]={"publication","[,pʌblɪ'keɪʃ(ə)n]","[,pʌblɪ'keʃən]","n.出版",'n.出版,发行,出版物,公布,发表','The newspaper had ceased publication.','报纸已停刊。','Her last novel ran into three reprints in its first year of publication.','她最近的一部小说在出版当年就印行了三次.'}

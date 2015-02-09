@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gossamer"]={"gossamer","['gɒsəmə]","['ɡɑsəmɚ]","n.小蜘蛛网",'n.小蜘蛛网,轻而弱者,薄纱|||adj.薄弱的,轻飘飘的','The prince helped the princess, who was still in her delightful gossamer gown.','王子搀扶着仍穿著那套美丽薄纱晚礼服的公主。','||Gossamer|| is floating in calm air.','空中飘浮着游丝。'}

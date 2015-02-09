@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enshrine"]={"enshrine","[ɪn'ʃraɪn; en-]","[ɪn'ʃraɪn]","v.入庙奉祀",'v.入庙奉祀,铭记','The constitution enshrines the basic rights of all citizens.','宪法中神圣地记载著全体公民的基本权利.','This system is enshrined in our Constitution.','我们的宪法使该制度神圣而不可侵犯。'}

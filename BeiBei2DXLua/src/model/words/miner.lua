@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["miner"]={"miner","['maɪnə]","['maɪnɚ]","n.矿工",'n.矿工','I\'m getting down to business, as the miner said when he was lowered into the pit.','那矿工被放下矿井时说："我要去埋头苦干啦。"','I am a coal miner.','我是矿工。'}

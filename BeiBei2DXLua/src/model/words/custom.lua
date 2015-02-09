@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["custom"]={"custom","['kʌstəm]","['kʌstəm]","n.习惯",'n.习惯,风俗,海关','The custom of young ladies being presented at court  has disappeared.','年轻女子被举荐入宫的风俗已不复存在.','||Custom|| rules the law.','【谚】风俗左右法律。'}

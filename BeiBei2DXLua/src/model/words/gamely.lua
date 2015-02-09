@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gamely"]={"gamely","['ɡeɪmlɪ]","['ɡemli]","adv.不屈地",'adv.不屈地,勇敢地','She insisted her opionion gamely.','她勇敢地坚持自己的观点。','He gamely defended his organisation\'s decision.','他坚决勇敢地为组织的决定辩护。'}

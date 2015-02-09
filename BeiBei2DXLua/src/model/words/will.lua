@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["will"]={"will","[wɪl]","[wɪl]","aux.将",'aux.将，将会；会，要|||n.愿意；意志（力）；[法]遗嘱|||vt.决心要；将（财产等）遗赠某人；用意志力驱使（某事发生）|||vi.愿意，希望，想要','The animals are allowed to wander at will in the park.','这些动物可以在公园里随意走动。','The rich man left his son nothing in the will.','那位富翁在遗嘱中什么都没给他儿子留下。'}

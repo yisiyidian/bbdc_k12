@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pie"]={"pie","[paɪ]","[paɪ]","n.馅饼",'n.饼图n.派,馅饼,杂乱,喜鹊,爱说话的人vt.弄乱','Help yourself to this apple pie.','请吃点苹果馅饼。','Have some more pie, there\'s lots left.','再吃点馅儿饼吧, 还多著呢.'}

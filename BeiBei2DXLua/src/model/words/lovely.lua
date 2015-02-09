@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lovely"]={"lovely","['lʌvlɪ]","['lʌvli]","adj.可爱的",'adj.可爱的,令人愉快的|||n.漂亮的女人,美好的东西','The girl\'s rosy cheeks made her look very lovely.','那女孩玫瑰色的脸颊使她显得非常可爱。','My sister\'s infant is very lovely.','我姐姐的小婴儿非常可爱。'}

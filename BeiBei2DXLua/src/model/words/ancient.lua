@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ancient"]={"ancient","['eɪnʃ(ə)nt]","[ˈeɪnʃənt]","adj.古老的",'adj.古代的,古老的|||n.古人,古货币','This is an ancient parable.','这是一个古老的寓言。','Soldiers in ancient time used escutcheon to fight.','古代的士兵用饰有花纹的盾作战。'}

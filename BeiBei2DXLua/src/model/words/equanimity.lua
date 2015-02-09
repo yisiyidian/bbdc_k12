@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["equanimity"]={"equanimity","[,ekwə'nɪmɪtɪ; iː-]","[,ɛkwə'nɪməti]","n.平静",'n.平静,镇定','The defeat was taken with equanimity by the leadership.','领导层坦然地接受了失败。','One should be fearless and bear his ineluctable fate with equanimity.','人应当无所畏惧，对不可避免的命运安之若泰。'}

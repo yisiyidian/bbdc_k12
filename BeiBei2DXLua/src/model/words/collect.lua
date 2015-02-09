@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collect"]={"collect","[kə'lekt]","[kə'lɛkt]","vt.收集",'vt.收集；收藏；接走；聚积|||vi.募捐；募集|||adj.由受话人付费的','I tried to collect my thoughts but I was too excited.','我试图使思想集中起来，但是我太激动了。','We are collecting money for the famine victim.','我们在为遭受饥荒的灾民募捐。'}

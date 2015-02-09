@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bullet"]={"bullet","['bʊlɪt]","['bʊlɪt]","n.子弹",'n.子弹','He grunted as the bullet hit him.','子弹击中他时他疼得哼了出来。','A bullet whizzed past my ear.','一颗子弹嗖的一声从我耳边飞过。'}

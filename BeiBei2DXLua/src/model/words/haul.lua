@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["haul"]={"haul","[hɔːl]","[hɔl]","n.拖",'n.拖,拉,移动的距离,一网的捕鱼量,努力的结果|||vt.用力拖拉,用车运送,改变方向,把某人带上来审问或训斥|||vi.拉,行进,提供交通,改变风向','They netted a good haul of fish.','他们捕了满满一网鱼.','It\'s been a long haul but at last this dictionary is published.','经过千辛万苦这部词典才终於得以问世。'}

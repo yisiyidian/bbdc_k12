@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apparent"]={"apparent","[ə'pær(ə)nt]","[ə'pærənt]","adj.明显的",'adj.明显的,表面上的','She had many good qualities despite her apparent rudeness.','她粗鲁是粗鲁, 但还有许多优秀品质.','She heard the news of his death with apparent unconcern.','她听到他的死讯无动於衷.'}

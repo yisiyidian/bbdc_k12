@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blog"]={"blog","[blɒɡ]","[blɑg]","n.网络随笔",'n.网络随笔,日志|||博客','This blog‘s ring tones are all provided free download.','本博客所有铃声均免费提供下载。','My photo galleries will be on this blog as well.','我的摄影习作将发布在这网志上。'}

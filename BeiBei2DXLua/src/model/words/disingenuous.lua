@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disingenuous"]={"disingenuous","[,dɪsɪn'dʒenjʊəs]","[,dɪsɪn'dʒɛnjuəs]","adj.不老实的",'adj.不老实的,不诚实的,虚伪的','It would be disingenuous to claim that we hadn\'t suspected them.','要是说我们当时还没有怀疑他们，那就是言不由衷了。','It would be disingenuous to claim that this is great art.','称这是艺术瑰宝是言不由衷。'}

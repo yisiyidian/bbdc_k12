@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hen"]={"hen","[hen]","[hɛn]","n.母鸡",'n.母鸡','The hen sits for most of the day.','这只母鸡整天大部分时间都在抱窝.','The hen laid a large brown egg.','这只母鸡下了一个大红皮蛋.'}

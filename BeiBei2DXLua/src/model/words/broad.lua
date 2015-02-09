@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["broad"]={"broad","[brɔːd]","[brɔd]","adj.宽阔的",'adj.宽阔的；广泛的；概括的；明显的|||n.婆娘','There is broad consensus (of opinion) in the country on this issue.','对这一问题举国上下（舆论）普遍一致.','The kidnapping occurred in broad daylight.','在光天化日之下竟发生绑架事件.'}

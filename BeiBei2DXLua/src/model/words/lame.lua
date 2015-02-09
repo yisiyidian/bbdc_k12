@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lame"]={"lame","[leɪm]","[lem]","adj.跛足的",'adj.跛足的,无说服力的|||vt.使...成残废,使...变无用|||n.金属薄板','He is lame in one leg and walks with the help of a crutch.','他的一条腿跛了，走路借助于拐杖。','He gave a lame excuse for being absent.','他找了个站不住脚的理由来解释缺席的原因。'}

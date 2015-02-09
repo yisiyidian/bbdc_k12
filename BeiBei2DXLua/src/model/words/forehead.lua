@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forehead"]={"forehead","['fɔːhed; 'fɒrɪd]","['fɔr'hɛd]","n.额",'n.额,前额','He wrinkled up his forehead in perplexity.','他困惑地皱起了眉头。','She passed her hand across her forehead.','她用手抹了一下额头.'}

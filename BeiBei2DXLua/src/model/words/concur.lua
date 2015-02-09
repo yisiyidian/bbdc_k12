@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["concur"]={"concur","[kən'kɜː]","[kən'kɝ]","v.意见相同",'v.意见相同,一致,互助','Did all the members concur in getting a bank loan?','委员们是否都同意向银行贷款？','I concur with him in many points.','我和他在许多论点上意见是一致的。'}

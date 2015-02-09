@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["variance"]={"variance","['veərɪəns]","['vɛrɪəns]","n.[数]方差",'n.不一致,变化;[数]方差','This theory is at variance with the known facts.','这种理论与已知事实不符。','We are at variance about our lodger.','我们在对待房客的问题上意见不一。'}

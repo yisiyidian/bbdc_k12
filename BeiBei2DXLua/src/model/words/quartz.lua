@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quartz"]={"quartz","[kwɔːts]","[kwɔrts]","n.石英",'n.石英','There is a great deal quartz in those mountains.','那些山里蕴藏着大量石英.','The prospectors have discovered such minerals as calcite, quartz and asbestos here.','探矿人员在这里发现了方解石、石英、石棉等矿藏。'}

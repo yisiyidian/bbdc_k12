@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["century"]={"century","['sentʃʊrɪ]","['sɛntʃəri]","n.世纪",'n.世纪，一百年，成百的东西','The atom bomb is the offspring of the 20th century physics.','原子弹是20世纪物理学的产物。','Botham made a century.','博瑟姆得了一百分.'}

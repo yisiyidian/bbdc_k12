@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["delve"]={"delve","[delv]","[dɛlv]","vi.探究",'vi.探究,查考，挖掘|||vt.挖掘|||n.','She delved in her bag and pulled out a pen.','她在背包里翻找一番后拿出了一枝钢笔。','If you\'re interested in a subject, use the Internet to delve deeper.','如果对某一主题感兴趣，就上网进一步深入研究。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paddle"]={"paddle","['pæd(ə)l]","['pædl]","n.桨",'n.桨,划桨,明轮翼|||v.划桨,戏水,抚弄','They tried to row the small boat off with a paddle.','他们试图用桨把小船划开。','Each man had a paddle for an hour and then a rest.','每个人划了一小时桨,然后休息.'}

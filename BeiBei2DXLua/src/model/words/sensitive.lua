@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sensitive"]={"sensitive","['sensɪtɪv]","['sɛnsətɪv]","adj.敏感的",'adj.敏感的,灵敏的,易受伤害的,感光的,善解人意的|||n.敏感的人','The cellist\'s bowing was very sensitive.','那位大提琴手的弓法十分细腻.','He is too sensitive to criticism.','他对批评太敏感。'}

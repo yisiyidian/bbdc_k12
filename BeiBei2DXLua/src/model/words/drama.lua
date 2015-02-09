@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drama"]={"drama","['drɑːmə]","['drɑmə]","n.戏剧",'n.剧本,戏剧,戏剧性情节,刺激','There are many humorous allusions to human foibles in the drama.','剧中多处幽默地提到人类的弱点。','She\'s involved in many extra-curricular activities, such as music, sport and drama.','她参加了许多课外活动, 如音乐、 运动、 戏剧.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encounter"]={"encounter","[ɪn'kaʊntə; en-]","[ɪn'kaʊntɚ]","vt.&vi.遭遇",'n.意外的相见,遭遇|||vt.&vi.遇到,偶然碰到,遭遇','His encounter with the guard dog had completely unnerved him.','他遇上了警卫犬, 把他吓坏了.','I encountered an old friend at Rome.','我在罗马邂逅了一个老朋友。'}

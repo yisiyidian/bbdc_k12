@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spew"]={"spew","[spjuː]","[spju]","v.(使)喷出",'v.(使)喷出,涌出,呕吐,吐出|||vt.喷出','Water spewed out of the hole.','水从孔中射出.','The volcano spewed molten lava.','火山喷出了熔岩.'}

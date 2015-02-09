@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turtle"]={"turtle","['tɜːt(ə)l]","['tɝtl]","n.海龟",'n.海龟','The turtle doesn\'t run so quickly as the hare.','乌龟没有兔子跑得那么快。','As the turtle swims across the oceanarium, the first porpoise swoops down from above and butts his shell with his belly.','当海龟游过水族馆时，第一只海豚从上方猛扑下去，并用腹部撞击龟壳。'}

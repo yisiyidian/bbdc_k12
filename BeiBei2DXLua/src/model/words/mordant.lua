@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mordant"]={"mordant","['mɔːd(ə)nt]","['mɔrdnt]","adj.尖酸的",'adj.尖酸的,辛辣的,有腐蚀性的|||n.金属腐蚀剂,金箔粘著剂|||vt.用媒染剂处理','A solution called a mordant is used in the dyeing process.','在染色过程中会用到叫做媒染剂的方法。','A wicked, mordant sense of humour has come to the fore in Blur\'s world.','布勒的世界里已出现了一种恶意、刻薄的幽默感。'}

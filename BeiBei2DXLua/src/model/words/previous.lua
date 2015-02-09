@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["previous"]={"previous","['priːvɪəs]","['privɪəs]","adj.以前的",'adj.在...之前,先,前,以前的','||Previous|| to the conference we had discussed the matter among ourselves.','在会议之前，我们讨论了这个问题。','Have you had previous career experience?','你过去有过工作经验吗？'}

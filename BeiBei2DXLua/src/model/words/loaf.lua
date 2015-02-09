@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loaf"]={"loaf","[ləʊf]","[lof]","n.条",'n.条,块|||v.游手好闲,虚掷光阴','Those who loaf all day and do nothing are social parasites.','饱食终日，无所事事的人是社会上的寄生虫。','Half a loaf is better than no bread.','有比没有好.'}

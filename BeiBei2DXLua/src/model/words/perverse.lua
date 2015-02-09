@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perverse"]={"perverse","[pə'vɜːs]","[pɚ'vɝs]","adj.乖张的",'adj.乖张的,倔强的,错误的，不正当的，误入歧途的，有悖常理的','We all wanted to go tomorrow, but she had to be perverse and insisted on going today.','我们都想明天去，但她偏要今天就去。','It would be perverse to stop this healthy trend.','阻止这一健康的趋势是有悖常理的。'}

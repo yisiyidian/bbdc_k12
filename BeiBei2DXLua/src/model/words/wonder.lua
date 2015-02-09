@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wonder"]={"wonder","['wʌndə]","['wʌndɚ]","n.奇迹",'n.奇迹,惊奇,惊谔|||v.惊奇,想知道,怀疑|||adj.奇妙的,非凡的','I was just wondering about that myself.','我就是觉得这件事莫名其妙。','I wonder who he is.','我很想知道他是谁。'}

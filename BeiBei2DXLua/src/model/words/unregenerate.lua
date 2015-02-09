@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unregenerate"]={"unregenerate","[,ʌnrɪ'dʒen(ə)rət]","[,ʌnrɪ'dʒɛnərət]","adj.不能再生的",'adj.不能再生的，顽固不化的，死不悔改的','Maybe Mr. Wickham\'s soul is unregenerate.','灵魂不能再生的，不悔改的','we should not waste the unregenerate resource any more.','我们不能再浪费不可再生资源了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tulip"]={"tulip","['tjuːlɪp]","['tʊlɪp]","n.郁金香",'n.郁金香','The fairy flew with the baby over the tulip bed.','仙女抱着小孩飞到了郁金香花圃的上空.','||Tulip|| grows large brightly-colored cup-shaped flower in spring.','郁金香在春天开出颜色鲜亮的杯状的花朵。'}

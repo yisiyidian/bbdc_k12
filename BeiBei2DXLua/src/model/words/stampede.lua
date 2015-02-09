@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stampede"]={"stampede","[stæm'piːd]","[stæm'pid]","n.(人群的)蜂拥",'n.(人群的)蜂拥|||v.惊跑','There was a stampede towards the stage when the singer appeared.','歌手出现时观众向台前涌去.','The cattle stampeded towards the farm.','受惊的牛群向牧场涌去.'}

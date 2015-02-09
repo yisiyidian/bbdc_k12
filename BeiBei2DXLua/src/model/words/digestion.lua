@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["digestion"]={"digestion","[daɪ'dʒestʃ(ə)n; dɪ-]","[daɪdʒɛstʃən]","n.消化",'n.消化,吸收，领悟|||[生]细菌分解','Happiness: a good bank account, a good cook, and a good digestion.','幸福者：好存款、好厨子、好肠胃之谓也。','Porridge is good for digestion.','粥有益于消化。'}

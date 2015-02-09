@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sexy"]={"sexy","['seksɪ]","['sɛksi]","adj.性感的",'adj.性感的','The sexy starlet is a real eye-popper in her black bikini.','身著黑色比基尼的性感女星实在令人大饱眼福。','She\'s quite shameless about wearing sexy clothes at work.','她穿著性感的衣服上班而不觉羞耻。'}

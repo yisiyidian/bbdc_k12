@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vat"]={"vat","[væt]","[væt]","n.增值税",'n.(=valueaddedtax)增值税,大桶','The office is asking for the vat papers.','办事处要有关增值税的文件。','Does the price include ||VAT||?','这价钱是否已包括增值税在内?'}

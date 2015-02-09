@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["work"]={"work","[wɜːk]","[wɝk]","n.工作",'n.工作,作用,成果,作品,善行,工艺,奏效,建筑工程,工厂,(机械)活动部件|||adj.工作的|||vi.创造,实现,有工作,起作用,操作,正常运转,成功,产生影响,逐渐进行,处理|||vt.造成,产生,使运转,锻造,奋力达到,利用','She works for an engineering company.','她在一家工程技术公司工作','He is working on a new novel.','他正在写一本新的小说。'}

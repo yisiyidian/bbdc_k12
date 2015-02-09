@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["primate"]={"primate","['praɪmeɪt; -mət]","['praɪmet]","n.灵长目动物",'n.灵长目动物|||n.(常大写)首席主教','And any primate can harbor deadly infectious agents.','而且,任何灵长类都潜藏着致死性感染病原物.','The human being is a primate.','人类是灵长类动物'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dialogue"]={"dialogue","['daɪəlɒg]","['daɪəlɑɡ]","n.对话",'n.对话|||vt.&vi.对话','The sound effects had been pre-recorded and were added to the dialogue.','音响效果经预录後已加入对话中.','The novel contains more narrative than dialogue.','这部小说里的叙述比对话多.'}

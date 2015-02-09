@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invulnerable"]={"invulnerable","[ɪn'vʌln(ə)rəb(ə)l]","[ɪn'vʌlnərəbl]","adj.固若金汤的",'adj.固若金汤的,无法伤害的','Despite his ostensibly invulnerable crust, he is rather a maudlin figure inside.','尽管看上去刀枪不入，他其实是一个相当多愁善感的人。','Many daughters assume that their mothers are invulnerable.','很多女儿都认为她们的母亲无比坚强。'}

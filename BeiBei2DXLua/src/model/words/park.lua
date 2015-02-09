@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["park"]={"park","[pɑːk]","[pɑrk]","n.公园",'n.运动场,专业区,园区,公园,停车处|||vt.停车,放排放置于|||vi.停车','My car is parked over there.','我的汽车停放在那儿了。','||Park|| yourself in that chair while I make you a cup of tea.','你坐在那张椅子上，我给你沏茶去。'}

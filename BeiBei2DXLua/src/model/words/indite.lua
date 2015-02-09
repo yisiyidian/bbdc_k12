@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indite"]={"indite","[ɪn'daɪt]","[ɪn'daɪt]","vt.著作、撰写（诗、文等）",'vt.著作、撰写（诗、文等）','He indited lot of poems.','他写了很多诗。','This indite style is closely resulted by his family environment and life experiences.','这种创作风格与他的家庭出身、生活经历息息相关。'}

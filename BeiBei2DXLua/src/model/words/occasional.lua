@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["occasional"]={"occasional","[ə'keɪʒ(ə)n(ə)l]","[ə'keʒənl]","adj.偶然的",'adj.偶然的,不时的','He\'s someone I have an occasional chat and joke with.','我偶然跟他闲聊, 一起说笑话.','Her kindness and generosity cancel out her occasional flashes of temper.','她为人厚道、慷慨大方，倒也弥补了她偶尔发点儿脾气。'}

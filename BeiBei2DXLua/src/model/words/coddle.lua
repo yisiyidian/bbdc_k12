@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coddle"]={"coddle","['kɒd(ə)l]","[ 'kɔdl ]","v.娇惯",'v.1娇惯；娇养；溺爱；2用文火煮','She coddled her youngest son madly.','她对小儿子过于溺爱。','They had been denouncing the government for ||coddling|| prisoners.','他们一直谴责政府姑息犯人。'}

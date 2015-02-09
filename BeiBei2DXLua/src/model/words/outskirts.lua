@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outskirts"]={"outskirts","['aʊtskɜːts]","['aʊt'skɝts]","n.郊区",'n.郊区|||名词outskirt的复数形式','On the outskirts they passed a steel mill.','他们从郊区的一家钢铁厂前面经过。','Presently she recognized that she was already in the outskirts of the city.','不久后她发现，她已经到达这座城市的郊区。'}

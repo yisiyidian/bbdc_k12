@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tantalize"]={"tantalize","['tæntəlaɪz]","[ 'tæntəlaiz ]","vi.逗惹",'vi.逗惹，吊胃口,令人可望而不可及|||vt.使着急','The boy would come into the room and tantalize the dog with his feed.','那个男孩会到房间里拿狗食逗弄狗。','Give the dog the bone; don\'t tantalize him!','把骨头给那条狗吧，别让它干着急了！'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["everyday"]={"everyday","['evrɪdeɪ; -'deɪ]","['ɛvrɪde]","adj.每天的",'adj.每天的,日常的|||b.平常的日子','It is very dreary to do the same job everyday.','每天都做同样工作是很单调的。','A casual newspaper reader wouldn\'t like articles on politics everyday.','不经心的报纸读者不会喜欢每天都有政论文章。'}

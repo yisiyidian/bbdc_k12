@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kite"]={"kite","[kaɪt]","[kaɪt]","n.风筝",'n.风筝|||vt.&vi.用空头支票骗人,使上升','I looked up into the sky and saw the kite become smaller and smaller.','我遥望天空，只见风筝越来越小。','Within twenty minutes I was as high as a kite.','在20分钟内，我烂醉如泥了。'}

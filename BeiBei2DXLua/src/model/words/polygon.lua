@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polygon"]={"polygon","['pɒlɪg(ə)n]","['pɑlɪɡɑn]","n.多边形",'n.多边形','What is the perimeter of this polygon?','这个多边形的周长是多少?','He conceived the first proof that the 17 - sided polygon is constructible.','他构思了17边形可以作图的第一个证明.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meteor"]={"meteor","['miːtɪə; -tɪɔː]","['mitɪɚ]","n.流星",'n.流星,大气现象|||abbr.气象学（=meteorology）','It was made by a meteor that fell from space.','它是由流星从太空中坠落造成的.','Like a flash of lightning, the meteor shot across the sky.','流星像一道闪光划过天空.'}

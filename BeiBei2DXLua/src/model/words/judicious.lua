@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["judicious"]={"judicious","[dʒʊ'dɪʃəs]","[dʒu'dɪʃəs]","adj.头脑精明的",'adj.头脑精明的,贤明的,判断正确的','I believe that he can make a judicious choice.','我相信他能作出明智的选择。','Our leaders made a judicious decision for our company\'s future.','我们公司的领导为我们公司作出了明智的抉择。'}

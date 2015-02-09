@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["civil"]={"civil","['sɪv(ə)l; -ɪl]","['sɪvl]","adj.国内的",'adj.国内的,公民的,文明的,有礼貌的,民用的','The America ||Civil|| War was broken out during the presidency of Lincoln.','在林肯就职其间，美国爆发了内战。','We were tired of being pushed around by officious civil servants.','我们厌烦那些官老爷把我们支来支去。'}

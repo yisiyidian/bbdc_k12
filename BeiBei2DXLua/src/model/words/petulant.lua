@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["petulant"]={"petulant","['petjʊl(ə)nt]","['pɛtʃələnt]","adj.暴躁的",'adj.暴躁的,易生气的,难以取悦的','His critics say he\'s just being silly and petulant.','批评家说他就是愚蠢和任性。','The thing had been remarked with petulant jealousy by his wife.','他太太觉察到这一点时，不由妒火中烧。'}

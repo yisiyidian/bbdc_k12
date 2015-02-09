@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turquoise"]={"turquoise","['tɜːkwɒɪz; -kwɑːz]","['tɝkwɔɪz]","n.绿松石",'n.绿松石,土耳其玉,蓝绿色|||adj.蓝绿色的','The women have elaborate necklaces of turquoise and pink coral.','那些女人戴着由绿松石和粉色珊瑚制成的精美项链。','She wore a string of turquoise round her neck.','她脖子上戴着一串绿宝石。'}

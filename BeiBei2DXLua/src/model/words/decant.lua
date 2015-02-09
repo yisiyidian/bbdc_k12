@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decant"]={"decant","[dɪ'kænt]","[dɪ'kænt]","v.慢慢倒出",'vt.慢慢倒出，轻轻倒出,移入其他容器','Vintage ports must be decanted to remove natural sediments.','上等的波尔图葡萄酒必须倒入其他容器中以滤除自然沉淀物。','She always used to decant the milk into a jug.','她过去总是把牛奶倒入一个壶中。'}

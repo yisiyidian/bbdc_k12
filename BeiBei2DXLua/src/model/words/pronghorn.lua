@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pronghorn"]={"pronghorn","['prɒŋhɔːn]","['prɔŋhɔn]","n.糜鹿(生活在北美洲大平原西部)",'n.糜鹿(生活在北美洲大平原西部)','Typical of the grassland dwellers of the continent is the American antelope, or pronghorn.','美洲羚羊，或称叉角羚，是该大陆典型的草原动物。','||Pronghorn|| has two small branched horns.','麋鹿有两个分叉的小角。'}

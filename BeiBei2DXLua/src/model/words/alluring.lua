@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alluring"]={"alluring","[ə'l(j)ʊərɪŋ]","[ 'ə'ljuəriŋ ]","adj.迷人的",'adj.迷人的,诱惑的|||动词allure的现在分词形式','There are often tons of alluring things in the shopping malls.','商场里总是有许多诱惑人的商品。','he dressed up alluring clothe','她打扮的很漂亮'}

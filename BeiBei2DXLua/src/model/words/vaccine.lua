@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vaccine"]={"vaccine","['væksiːn; -ɪn]","[væk'sin]","n.疫苗",'n.疫苗|||v.疫苗的,牛痘的','A prophylactic agent, device, or measure, such as a vaccine or drug.','预防剂预防性的物质、器具或措施，比如疫苗或药物','The vaccine was used to protect the whole population against infection.','这种疫苗用以为全体居民预防传染病.'}

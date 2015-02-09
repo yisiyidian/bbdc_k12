@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insult"]={"insult","[ɪn'sʌlt]","[ɪn'sʌlt]","vt.侮辱",'vt.侮辱|||n.侮辱,(对人身的)损害','She reacted to the insult by turning her back on him.','她受辱之后就不再理睬他了。','I\'ll pay you off for your insult!','我要报复你对我的侮辱!'}

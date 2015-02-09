@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fellowship"]={"fellowship","['felə(ʊ)ʃɪp]","['fɛloʃɪp]","n.友谊",'n.友谊，团体，会员资格，奖学金','He was granted a fellowship.','他被准许入会。','They offered him the hand of fellowship when he was in difficulties.','当他身处困境时，他们向他伸出了友谊之手。'}

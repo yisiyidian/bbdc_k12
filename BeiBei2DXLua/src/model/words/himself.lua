@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["himself"]={"himself","[hɪm'self]","[hɪm'sɛlf]","pron.他自己",'pron.他自己','John fixed the tape recorder by himself.','约翰靠他自己修理录音机。','His new house was built by himself, brick by brick.','他的新房子是他自己一块砖一块砖砌起来的。'}

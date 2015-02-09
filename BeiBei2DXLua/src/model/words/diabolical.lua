@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diabolical"]={"diabolical","[daɪə'bɒlɪk(ə)l]","[ 'daiə'bɔlik / -kəl ]","adj.恶魔的",'adj.恶魔的','It was a diabolical error, a schoolboy error.','那是个十分低级的错误，一个小学生才会犯的错误。','This maneuver of his is a diabolical conspiracy.','他这一手是一个居心叵测的大阴谋。'}

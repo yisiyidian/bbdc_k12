@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heyday"]={"heyday","['heɪdeɪ]","['hede]","n.全盛期",'n.全盛期|||int.嘿（喜悦、惊奇时所发声音）','In his heyday, he was a great tennis player.','他年轻时是一位了不起的网球运动员。','Steam railways had their heyday in the 19th century.','19世纪是蒸汽机车的全盛时期。'}

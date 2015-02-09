@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mottled"]={"mottled","['mɑtld]","[ 'mɔtld ]","adj.有杂色的",'adj.有杂色的,斑驳的|||动词mottle的过去式和过去分词形式','The decorative pattern on the wall is a little bit mottled with age.','因为年代太久远了，墙上的花纹都有些斑驳。','His face was mottled red and white with embarrassment.','他窘迫得脸上红一块白一块。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assortment"]={"assortment","[ə'sɔːtm(ə)nt]","[ə'sɔrtmənt]","n.分类",'n.分类,配合,各色俱备之物','The shop has a rich assortment of goods.','这个商店有各种各样的货品。','There are wide assortments of gifts to choose from.','那儿有各式各样的礼品可供选择。'}

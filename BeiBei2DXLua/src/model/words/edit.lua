@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["edit"]={"edit","['edɪt]","['ɛdɪt]","vt.编辑",'vt.编辑,编校,修订|||n.编辑工作','He edit a daily paper before he come to teach at our college.','他来我们学院任教之前充任过一份日报的主编。','You\'ll have to edit that tape, it\'s too long.','那盘录音带太长, 你得把它剪辑一下.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ursine"]={"ursine","['ɜːsaɪn; -ɪn]","['ɝsaɪn]","adj.熊的",'adj.熊的,像熊的','The ursine marauders wandered into tents or overturned garbage cans.','熊会溜进帐篷或者推翻垃圾桶。','ursine seal','海熊'}

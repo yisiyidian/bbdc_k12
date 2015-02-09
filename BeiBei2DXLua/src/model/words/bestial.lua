@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bestial"]={"bestial","['bestɪəl]","['bɛtʃəl]","adj.残忍的",'adj.残忍的,野蛮的，缺乏智慧的','He was sent to jail due to his bestial behavior.','因为他的的兽行，他被拘捕了。','The Roman gladiatorial contests were bestial amusements.','罗马角斗是残忍的娱乐活动。'}

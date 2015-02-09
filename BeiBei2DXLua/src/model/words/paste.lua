@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paste"]={"paste","[peɪst]","[pest]","v.粘贴",'n.糊,浆糊,铅制玻璃|||vt.粘贴,覆盖,猛击','My fingers are beginning to prick after touching that paste.','我的手指接触那软膏之後就疼起来了.','Stir the flour and milk to a stiff paste.','把面粉和牛奶搅成很稠的糊.'}

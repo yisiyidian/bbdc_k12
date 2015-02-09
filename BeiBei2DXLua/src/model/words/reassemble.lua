@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reassemble"]={"reassemble","[riːə'semb(ə)l]","[,riə'sɛmbl]","v.重装",'v.重装,再汇编','reassembled the cast for an anniversary performance of the musical.','将年度音乐表演的班底重新集合起来','took the entire artifact apart and reassembled it at the museum.','将整个制造物折散并在博物馆里将其重新装配起来'}

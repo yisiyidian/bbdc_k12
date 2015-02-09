@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verdure"]={"verdure","['vɜːdjə; -jʊə]","['vɝdjɚ]","n.翠绿",'n.翠绿','the verdure of childhood.','童年时期的朝气蓬勃','the verdure of the trees in spring','春天树木的青葱'}

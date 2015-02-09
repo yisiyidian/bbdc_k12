@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acidulous"]={"acidulous","[ə'sɪdjʊləs]","[ə'sɪdʒələs]","adj.多少带酸味的",'adj.多少带酸味的,不和悦的','His acidulous remarks towards the mayor put everyone ill at ease.','他对市长的尖刻评论让每个人都感觉不自在。','acidulous','adj. 多少带酸味的,不和悦的'}

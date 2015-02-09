@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exclusive"]={"exclusive","[ɪk'skluːsɪv; ek-]","[ɪk'sklusɪv]","adj.独占的",'adj.独占的,唯一的,排外的;高价的,时髦的|||[计算机]互斥的|||n.独家新闻,独权','He is part of an exclusive social circle and belongs to an exclusive club.','他所处的社交圈子很排外，而且参加的又是个很排外的社团。','The matter will be given our exclusive attention.','此事将引起我们的全部关注。'}

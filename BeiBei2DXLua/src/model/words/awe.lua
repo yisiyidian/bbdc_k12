@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["awe"]={"awe","[ɔː]","[ɔ]","n.敬畏",'n.敬畏|||vt.使崇敬','We all listened to the venerable scholar with awe.','我们都怀着敬畏之心倾听着这位德高望重的学者的讲话。','The silence awed the boy.','寂静使这个小男孩害怕了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ordinary"]={"ordinary","['ɔːdɪn(ə)rɪ; -d(ə)n-]","['ɔrdnɛri]","adj.普通的",'adj.普通的','Nothing out of the ordinary occurred.','没有什么超乎寻常的事发生','Now electrical appliances have entered into ordinary families.','现在家用电器已经步入普通家庭。'}

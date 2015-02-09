@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insomnia"]={"insomnia","[ɪn'sɒmnɪə]","[ɪn'sɑmnɪə]","n.失眠(症)",'n.失眠(症)','If I drink too much coffee, I will have insomnia.','咖啡喝多了我就会失眠。','Lately he has been moaning about his insomnia and headache.','他近来一直诉说自己患了失眠和头痛症。'}

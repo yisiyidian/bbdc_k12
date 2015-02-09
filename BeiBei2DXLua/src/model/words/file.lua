@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["file"]={"file","[faɪl]","[faɪl]","n.档案",'n.档案,公文箱,锉刀,[计算机]文件|||vt.列队行进,归档,申请','The pupils filed out of the room during the fire drill.','在消防演习中，学生们排成纵队走出房间。','Please file those letters.','请把这些信件存档。'}

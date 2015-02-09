@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["torso"]={"torso","['tɔːsəʊ]","['tɔrso]","n.躯干",'n.躯干，残缺的东西，人体的躯干雕塑像','He took off his shirt to reveal his tanned torso.','他脱下了衬衫展现出晒得黝黑的身体。','The glass bottle is the shape of a woman\'s torso.','玻璃杯呈女子身体的形状。'}

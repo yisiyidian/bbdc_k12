@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proclaim"]={"proclaim","[prə'kleɪm]","[prə'klem]","vt.正式宣布",'vt.正式宣布,公布,声明,赞扬,显示出','His accent proclaimed that he was an American.','他的口音表明他是一个美国人。','His manners proclaim him a scholar.','从他的举止可以看出他是一个学者.'}

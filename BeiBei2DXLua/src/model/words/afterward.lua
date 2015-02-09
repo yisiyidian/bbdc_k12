@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["afterward"]={"afterward","['ɑːftəwəd]","['ɑftəwəd]","adv.后来",'adv.后来,以后','Let\'s go to the theatre first and eat afterward','让我们先去看戏,然后吃饭.','At first I did not know which plan would be the best, but afterward I decided on this.','起初我不知道哪个计划最好，但后来我决定采纳这个。'}

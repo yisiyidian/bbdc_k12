@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amphitheater"]={"amphitheater","[,æmfɪ'θɪətɚ]","[ 'æmfi,θiətə ]","n.圆形剧场",'n.圆形剧场，圆形凹地，阶梯式座位区|||=amphitheatre','The secret service agents hustled the speaker out of the amphitheater.','特务把演讲者驱逐出剧场。','The Chicago ||Amphitheater|| was packed, sweltering rocking.','芝加哥半圆形剧场里拥挤不堪,热浪滚滚,人潮涌动'}

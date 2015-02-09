@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stature"]={"stature","['stætʃə]","['stætʃɚ]","n.身材",'n.身材,身高','He gave human upright stature.','他使人呈站立的姿势。','She had not yet grown to full stature.','她的个子还没有完全长到应有的高度.'}

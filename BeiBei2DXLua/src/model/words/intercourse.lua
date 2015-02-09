@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intercourse"]={"intercourse","['ɪntəkɔːs]","['ɪntɚkɔrs]","n.性交",'n.性交；交往；交流','The magazine becomes a cultural medium of intercourse between the two peoples.','该杂志成为两民族间文化交流的媒介.','A friendly intercourse has been opened between the two countries.','两国已开始了亲密的往来。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["periodic"]={"periodic","[,pɪərɪ'ɒdɪk]","[,pɪrɪ'ɑdɪk]","adj.周期的",'adj.周期的,定期的，间歇的，完句的','The idea of time is essentially an idea of periodic repetition.','时间的概念本质上是一种周期性的重复的观念.','||Periodic|| checks are taken to ensure that high standards are maintained.','定期检查以确保维持高水准。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["save"]={"save","[seɪv]","[sev]","vt.节省",'vt.节省；保存；储蓄；解救|||vi.节省；挽救；救球|||prep.&conj.除…之外|||n.救援，救援','All the guests have gone save one.','除了一个人外，所有客人都走了。','Children should learn to save.','孩子们应学会储蓄。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inflated"]={"inflated","[ɪn'fleɪtɪd]","[ɪn'fletɪd]","adj.膨胀的",'adj.膨胀的，夸张的|||动词inflate的过去式和过去分词','Even his war record was fraudulently inflated.','甚至他的参战履历也是夸大其词，充满谎言。','Clothing prices have not inflated as much as automobiles.','服装价格的涨幅不及汽车那么高。'}

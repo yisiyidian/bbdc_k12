@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["somnolent"]={"somnolent","['sɒmnəl(ə)nt]","['sɑmnələnt]","adj.想睡的",'adj.想睡的,催眠的','The noise of the stream had a pleasantly somnolent effect.','小河潺潺的流水声有宜人的催眠效果。','Tom feel very somnolent in this boring class.','汤姆在无聊的课堂中昏昏欲睡。'}

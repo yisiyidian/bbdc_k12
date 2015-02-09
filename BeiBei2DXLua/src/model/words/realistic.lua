@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["realistic"]={"realistic","[rɪə'lɪstɪk]","[,riə'lɪstɪk]","adj.现实的",'adj.现实的,现实主义的','The plot of the novel relies too much on coincidence to be realistic.','这部小说的情节多靠巧合安排而无真实感。','Stop daydreaming and be realistic.','别空想了，还是从实际出发吧。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["upstart"]={"upstart","['ʌpstɑːt]","['ʌpstɑrt]","n.暴富者",'n.暴富者,暴发户,傲慢自负之人|||adj.暴富的，傲慢的|||vi.突然跳起','You can\'t marry that young upstart!','你可不能嫁给那个年轻的暴发户!','He was a new upstart and a gentleman of the first head.','他是个暴发户，是个新封的贵族。'}

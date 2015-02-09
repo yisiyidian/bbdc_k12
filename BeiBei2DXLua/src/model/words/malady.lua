@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malady"]={"malady","['mælədɪ]","['mælədi]","n.病",'n.病,疾病,弊病','A bodily disorder or disease; a malady or an ailment.','疾病身体的失调或疾病；疾病或小毛病','Violent crime is only one of the ||maladies|| afflicting modern society.','暴力犯罪仅仅是危害社会的弊病之一。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expire"]={"expire","[ɪk'spaɪə; ek-]","[ɪk'spaɪɚ]","vi.期满",'vi.期满,失效,终止,断气|||vt.呼气','Our current contract is about to expire, and we\'ll need to discuss a new one.','我们现有合同快要期满了，需要再谈一个新合同。','My passport is due to expire in two months.','我的护照再过两个月就到期了。'}

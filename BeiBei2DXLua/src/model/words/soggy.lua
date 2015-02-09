@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soggy"]={"soggy","['sɒgɪ]","['sɑgi]","adj.湿透的",'adj.湿透的，乏味的','Resembling a marsh; soggy.','沼泽地的象沼泽地的；湿润的','If you boil the vegetables too long, they\'ll go soggy.','要是你把蔬菜煮得太久，菜就糊了。'}

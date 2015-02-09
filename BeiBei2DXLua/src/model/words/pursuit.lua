@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pursuit"]={"pursuit","[pə'sjuːt]","[pɚ'sut]","n.追求",'n.追求,追赶,工作','We work hard in pursuit of happy life.','我们为追求幸福生活而努力工作。','His life is spent in the pursuit of pleasure.','他一生都在寻欢作乐.'}

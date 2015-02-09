@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["storm"]={"storm","[stɔːm]","[stɔrm]","n.暴风雨",'n.暴风雨|||v.猛攻,捣毁,起风暴|||vi.起风暴,强攻|||vt.猛攻,捣毁','In the storm I took shelter under the tree.','暴风雨时，我正在树下躲避。','A storm arose during the night.','夜间起风暴了.'}

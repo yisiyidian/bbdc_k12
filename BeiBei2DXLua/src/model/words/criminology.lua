@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["criminology"]={"criminology","[,krɪmɪ'nɒlədʒɪ]","[,krɪmɪ'nɑlədʒi]","n.犯罪学",'n.犯罪学','criminology is hard to master','犯罪学不好掌握。','He is interested in the issues of crime and criminology.','他对犯罪及犯罪学方面的问题感兴趣。'}

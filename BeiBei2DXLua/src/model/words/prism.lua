@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prism"]={"prism","['prɪz(ə)m]","['prɪzəm]","n.棱柱",'n.棱柱,棱镜，折光体','Light is refracted when passed through a prism.','光线经过棱镜时产生折射现象.','A prism decomposes light.','棱镜可以分解光线。'}

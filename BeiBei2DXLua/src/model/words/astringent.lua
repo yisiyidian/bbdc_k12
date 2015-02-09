@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["astringent"]={"astringent","[ə'strɪn(d)ʒ(ə)nt]","[ə'strɪndʒənt]","adj.[医学]收敛性的",'adj.[医学]收敛性的,止血的,严酷的|||n.[医]收敛剂,止血药','It has an astringent effect.','这个有止血的作用。','The fruit has a tart and astringent flavour.','这种水果又酸又涩。'}

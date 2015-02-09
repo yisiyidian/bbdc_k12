@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drown"]={"drown","[draʊn]","[draʊn]","vt.淹死",'vt.淹死,沉浸于,|||vi.淹死','It is cruel to drown the cat in the river.','把猫淹死在河里是件残忍的事。','The little girl drowned in the river.','小女孩在河里淹死了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abject"]={"abject","['æbdʒekt]","['æbdʒɛkt]","adj.卑贱的",'adj.卑贱的，不幸的,可怜的','He looked back at the abject, silent girl and repeated his question.','他转过头看着这个噤若寒蝉的女孩，又重复了一遍他的问题。','The boy felt shamed of his abject poverty.','这个男孩因赤贫而感到羞耻。'}

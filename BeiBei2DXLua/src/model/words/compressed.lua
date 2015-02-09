@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compressed"]={"compressed","[kəm'prest]","[kəm'prɛst]","adj.压缩的",'adj.压缩的|||动词compress的过去式和过去分词','With a supply of compressed air the large balloon inflated in a matter of seconds.','大气球注入压缩空气後, 几秒钟就充足了气.','The farmers compressed straw into blocks for burning.','农民们将干草压成块用来烧火。'}

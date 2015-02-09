@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["equestrian"]={"equestrian","[ɪ'kwestrɪən; e-]","[ɪ'kwɛstrɪən]","n.骑马者",'n.骑马者,骑术家|||adj.骑马的，骑术的','The equestrian events will be held here.','马术比赛的赛事将在这里举行。','The land available could also be used for equestrian purposes.','这块空地也可以用作跑马场。'}

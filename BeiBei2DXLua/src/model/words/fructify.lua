@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fructify"]={"fructify","['frʌktɪfaɪ]","[ 'frʌktifai ]","v.结果实",'v.结果实,使结果多，使多产','These fruit trees start to fructify in next year.','这些果木树明年就要开始结果子了。','When you grow up, your love will bloom and fructify.','人成熟一点，你的爱情便会开花结果。'}

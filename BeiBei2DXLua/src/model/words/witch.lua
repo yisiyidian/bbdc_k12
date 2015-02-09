@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["witch"]={"witch","[wɪtʃ]","[wɪtʃ]","n.女巫",'n.女巫,巫婆|||vt.施巫术|||vi.用神杖发现地下水源或矿物','The wedding was in full swing when the witch came in.','当女巫进来时婚礼正进行得热闹。','The witch put the princess under a spell, and she fell asleep for ten years.','这女巫使公主中了巫术, 沉睡了十年。'}

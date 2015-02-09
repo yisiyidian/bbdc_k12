@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["geese"]={"geese","[ɡiːs]","[ ɡi:s ]","（复数）n.鹅",'（goose的复数形式）n.鹅','I see a flight of geese head south for the winter.','我看到一群大雁南飞过冬去了。','Domestic fowls, such as chickens, turkeys, ducks, or geese, raised for meat or eggs.','家禽用作蛋品或肉类的家养禽类，如小鸡、火鸡、鸭或鹅'}

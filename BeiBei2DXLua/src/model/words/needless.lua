@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["needless"]={"needless","['niːdlɪs]","['nidləs]","adj.不需要的",'adj.不需要的，无用的','He got a large fortune when his father died, but trifled it away in only a few years of needless spending.','父亲去世时他得到一大笔财产，可仅仅几年的时间就将这笔钱胡乱挥霍一空。','||Needless|| to say, learning without thinking is useless.','不用说，学而不思则罔。'}

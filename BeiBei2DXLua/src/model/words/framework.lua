@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["framework"]={"framework","['freɪmwɜːk]","['fremwɝk]","n.结构",'n.结构,框架,参照标准,体系','All the cases can be considered within the framework of the existing rules.','一切情况都可依据现行章程的结构加以考虑。','This structure has a good framework','这个建筑结构很好'}

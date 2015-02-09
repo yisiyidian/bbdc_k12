@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nebulous"]={"nebulous","['nebjʊləs]","['nɛbjələs]","adj.星云的",'adj.星云的,星云状的,朦胧的','The notions we children were able to form of the great world beyond were exceedingly nebulous.','我们这些孩子所能形成的对外部世界的认识是非常模糊的。','Music is such a nebulous thing.','音乐是如此朦胧之物。'}

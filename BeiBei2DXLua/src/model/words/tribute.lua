@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tribute"]={"tribute","['trɪbjuːt]","['trɪbjut]","n.贡品",'n.贡品,颂词,称赞,(表示敬意的)礼物','Her home is a tribute to her good taste.','她的家是她高雅品味的明证。','The musician gave full tribute to his former teacher.','这位音乐家盛赞了他过去的老师。'}

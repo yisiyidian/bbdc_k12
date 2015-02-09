@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dietitian"]={"dietitian","[daɪə'tɪʃ(ə)n]","[,daɪə'tɪʃən]","n.饮食学家",'n.饮食学家,营养学家|||=dietician','My dream is to be a dietitian','我的梦想成为一名营养学家','I hope I can be a dietitian in the future.','我希望在未来成为一个营养学家。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tektite"]={"tektite","['tektaɪt]","[ 'tektait ]","n.似曜岩(熔融石)",'n.似曜岩(熔融石)','The tektite was formed from the upper crust rocks by impact melting.','玻璃陨石是地壳岩石受撞击熔融形成的。','The tektite was formed from the upper crust rocks by impact melting.','玻璃陨石是地壳岩石受撞击熔融形成的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incidence"]={"incidence","['ɪnsɪd(ə)ns]","['ɪnsɪdəns]","n.发生(率)",'n.发生(率),入射','The incidence of cases of rape have increased over the last year.','强奸案的犯罪率在去年有所增加。','The angle of incidence equals the angle of reflection.','入射角等于反射角。'}

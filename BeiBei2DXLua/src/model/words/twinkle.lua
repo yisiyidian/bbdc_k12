@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twinkle"]={"twinkle","['twɪŋk(ə)l]","['twɪŋkl]","n.闪烁",'n.闪烁,闪耀,眨眼,瞬息|||v.闪烁,使...闪耀,眨眼，迅速移动','The little boy had a wicked twinkle in his eyes.','这个男孩的眼睛里闪烁着调皮的光。','He disappeared in a ||twinkling|| of an eye.','转眼间他就无影无踪了。'}

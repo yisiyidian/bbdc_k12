@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mosquito"]={"mosquito","[mɒ'skiːtəʊ]","[mə'skito]","n.蚊子",'n.蚊子','The mosquito is a transmitter of disease.','蚊子能传染疾病.','The mosquito will suck our blood.','蚊子会吸我们的血。'}

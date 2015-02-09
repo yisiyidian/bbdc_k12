@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tapestry"]={"tapestry","['tæpɪstrɪ]","['tæpəstri]","n.挂毯",'n.挂毯|||v.饰以织锦画','A wall hanging; a tapestry.','挂毯挂在壁上的（毯子）；挂毯','This tapestry is a work of art.','这张挂毯是件艺术品.'}

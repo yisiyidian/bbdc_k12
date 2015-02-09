@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["absentee"]={"absentee","[,æbs(ə)n'tiː]","[,æbsən'ti]","n.不在者",'n.不在者,缺席者，缺勤者','The custodian of a minor child\'s estate; the custodian of an absentee landlord\'s property.','年幼孩子财产的监护人；地主外出时其地产的看管人','All the absentees need to be stayed in the head\'s office.','所有缺席的人都需要留在校长办公室里。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["graveyard"]={"graveyard","['greɪvjɑːd]","['ɡrevjɑrd]","n.墓地",'n.墓地，坟场','The house has never been much cop. People don\'t like living opposite a church or a graveyard.','这幢房子从来就不值钱，人们不喜欢住在教堂或坟场的对面。','A place for burying the dead; a graveyard.','墓地埋葬死者的地方；坟地'}

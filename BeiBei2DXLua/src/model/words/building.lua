@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["building"]={"building","['bɪldɪŋ]","['bɪldɪŋ]","n.建筑物",'n.建筑物','The erection of the building took several months.','建造这座建筑物花了好几个月时间。','The force of the explosion broke all the windows in the building.','爆炸的力量震碎了这座建筑上的所有窗户。'}

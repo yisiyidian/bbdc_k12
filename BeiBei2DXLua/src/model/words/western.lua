@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["western"]={"western","['west(ə)n]","['wɛstɚn]","n.西方人",'n.西方人,西部片,西部小说|||adj.西方的,西洋的,西部的','Britain has allied itself with other western powers for trade and defence.','英国与其他西方强国结成了贸易及防御联盟.','Silk handkerchiefs embroidered by hand sell well in the ||Western|| market.','手绣的丝制手帕在西方市场销路很好。'}

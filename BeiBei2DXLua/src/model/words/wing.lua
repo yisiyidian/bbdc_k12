@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wing"]={"wing","[wɪŋ]","[wɪŋ]","n.翅膀",'n.翅膀,翼|||vt.给...装上翼,飞行|||vi.飞行','He faces a growing rebellion from the left wing of his party.','他面对着党内左翼日益增强的反对势力。','I think we should play Bill on the wing in the next match.','我认为下一场应当让比尔任边锋。'}

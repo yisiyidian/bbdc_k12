@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lancet"]={"lancet","['lɑːnsɪt]","['lænsɪt]","n.[医]柳叶刀",'n.[医]柳叶刀，[建]尖顶窗','The ||Lancet||','《柳叶刀》','The ||Lancet|| is a kind of medical journal.','《柳叶刀》是一份医学期刊。'}

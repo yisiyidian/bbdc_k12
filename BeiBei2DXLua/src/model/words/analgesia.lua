@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["analgesia"]={"analgesia","[,æn(ə)l'dʒiːzɪə]","['ænl'dʒiʒə]","n.无痛",'n.无痛,止痛法','Love-induced analgesia is much more associated with the reward centers.','恋爱的镇痛作用更与奖励中心有关。','This bill can cause analgesia','这药止痛'}

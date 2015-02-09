@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["typify"]={"typify","['tɪpɪfaɪ]","['tɪpɪfaɪ]","v.是...的典型",'v.是...的典型','Now a millionaire, he ||typifies|| the self-made man.','他成了百万富翁, 可以说是白手起家的典型.','The nurses\' strike ||typifies|| public concern about our hospitals.','这次护士罢工集中地反映出公众对医疗事业的关心.'}

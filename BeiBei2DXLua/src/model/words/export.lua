@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["export"]={"export","[ɪk'spɔːt; ek-; 'ek-]","[ɪk'spɔrt]","vt.出口",'vt.输出，出口|||n.出口,输出品|||vi.传播,输出|||adj.出口的','Prohibition was laid on the export of coal.','禁止煤炭输出。','The blood can also export waste products from the tissues.','血液还能从身体组织里排出废物。'}

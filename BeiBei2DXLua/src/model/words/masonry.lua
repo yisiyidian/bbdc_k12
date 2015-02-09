@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["masonry"]={"masonry","['meɪs(ə)nrɪ]","['mesənri]","n.石工行业",'n.石工行业，砖石建筑|||Masonry：共济会','The masonry is crumbling.','石屋日渐崩溃。','She was hit by a piece of falling masonry.','她被建筑物上落下的一块石头砸着了。'}

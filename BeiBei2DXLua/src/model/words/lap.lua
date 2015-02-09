@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lap"]={"lap","[læp]","[læp]","n.一周",'n.下摆,膝盖,舐声,一周|||vt.包围,抱...在膝上,重叠,舔,拍打,泼溅|||vi.重叠,围住,轻拍,舔','The leading car crashed midway through the tenth lap.','领先的那辆赛车在第十圈的中途撞毁了。','The child sat on its mother\'s lap.','小孩坐在妈妈的膝上。'}

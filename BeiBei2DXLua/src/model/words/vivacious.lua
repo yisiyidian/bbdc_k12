@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vivacious"]={"vivacious","[vɪ'veɪʃəs; vaɪ-]","[vɪ'veʃəs]","adj.活泼的",'adj.活泼的','He had three pretty, vivacious daughters.','他有三个活泼漂亮的女儿。','She\'s beautiful, vivacious, and charming.','她漂亮活泼，魅力十足。'}

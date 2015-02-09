@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grapple"]={"grapple","['græp(ə)l]","['græpl]","vt.抓住",'vt.抓住|||n.抓斗(钩竿)','She grappled with the bank robber, but was thrown to the ground.','她与抢劫银行的强盗扭打，被强盗摔倒在地上。','I’ve spent all afternoon ||grappling|| with these problems.','我用了整整一下午处理这些问题。'}

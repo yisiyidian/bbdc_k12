@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repression"]={"repression","[rɪ'preʃən]","[rɪ'prɛʃən]","n.抑制",'n.抑制，压抑，制止','The government\'s repression of the strike failed.','政府对这次罢工的镇压失败了。','His repression broke out.','他的压抑终于爆发了。'}

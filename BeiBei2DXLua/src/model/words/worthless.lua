@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["worthless"]={"worthless","['wɜːθlɪs]","['wɝθləs]","adj.无价值的",'adj.无价值的,无用的，可鄙的','This contract is worthless; you\'ve been taken for a ride!','这份合同毫无价值, 你上当受骗了!','The car was a worthless wreck after the collision.','撞车以后,那辆车成了毫无价值的残骸.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adverse"]={"adverse","['ædvɜːs]","[ædˈvɚs, ˈædˌvɚs]","adj.不利的",'adj.不利的；有害的；反面的','Voters have been distanced from the party by adverse publicity.','选民受到反面宣传的影响，对这个政党冷淡了。','The development was adverse to our interests.','这种发展与我们的利益背道而驰。'}

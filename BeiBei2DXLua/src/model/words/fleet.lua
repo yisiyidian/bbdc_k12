@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fleet"]={"fleet","[fliːt]","[flit]","n.船队",'n.船队,舰队,团队|||vt.&vi.飞过,掠过|||adj.跑得快的','||Fleet|| Street loves a good scandal.','新闻界热衷於轰动性的丑闻.','He is an Admiral of the ||Fleet||.','他是海军元帅。'}

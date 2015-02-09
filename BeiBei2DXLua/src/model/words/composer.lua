@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["composer"]={"composer","[kəm'pəʊzə]","[kəm'pozɚ]","n.创作者（尤指乐曲的）",'n.创作者（尤指乐曲的）','The composer kicked the music around for a while, trying it out.','作曲者把这个曲子随便哼了一会儿，看看行不行。','He\'s a composer of serious music.','他是个庄严音乐的作曲家。'}

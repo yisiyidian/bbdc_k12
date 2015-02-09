@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["treadmill"]={"treadmill","['tredmɪl]","['trɛdmɪl]","n.跑步机",'n.踏车,单调乏味的工作，跑步机','I can\'t get off the office treadmill.','我无法摆脱单调的坐班工作.','The treadmill has a heart rate monitor.','跑步机上有个脉搏监视器.'}

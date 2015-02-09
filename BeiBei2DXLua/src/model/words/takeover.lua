@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["takeover"]={"takeover","['teɪkəʊvə]","['tekovɚ]","n.接收(验收)",'n.接收(验收)','The takeover cause250 redundancy.','接管移交造成250人的裁员。','Before the hostile takeover, the purchaser often buy the stock of the target company to control most of the share.','在恶性接收开始时，买入公司总是大量购入被接收公司的股票以取得多数股权的地位。'}

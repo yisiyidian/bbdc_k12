@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sweeping"]={"sweeping","['swiːpɪŋ]","['swipɪŋ]","n.扫除",'n.扫除|||（复数）sweepings:垃圾|||adj.一扫而去的,凶猛的,广泛的|||动词sweep的现在分词','She is sweeping the soot off the chimney.','她正把烟筒里的黑灰扫掉。','He stopped sweeping and rested on the broom.','他停止扫地，倚着扫帚休息。'}

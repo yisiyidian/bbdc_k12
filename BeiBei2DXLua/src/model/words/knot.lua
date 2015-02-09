@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knot"]={"knot","[nɒt]","[nɑt]","n.结",'n.结,难题,一小群|||vi.打结|||vt.把...打成结,系牢,捆扎','You need a sharp knife to cut through the knot.','你需用快刀才能把结切断.','This knot keeps loosening.','这个结老松开.'}

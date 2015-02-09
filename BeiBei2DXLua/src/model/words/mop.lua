@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mop"]={"mop","[mɒp]","[mɑp]","n.拖把",'n.拖把,像拖把一样乱蓬蓬的东西|||vt.用拖把拖,擦拭|||vi.用拖把拖','Here is a dish mop.','这儿是洗碗刷。','She mops her tears with a towel.','她用毛巾擦眼泪。'}

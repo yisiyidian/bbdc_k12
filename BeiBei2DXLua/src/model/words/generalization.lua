@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["generalization"]={"generalization","[,dʒenrələ'zeɪʃən]","[,dʒɛnrələ'zeʃən]","n.一般化",'n.一般化,普遍化,概括，泛论','Don\'t be hasty in generalization.','不要急于笼统地下结论。','Like the first law, the second law is a generalization from experience.','像第一定律一样,第二定律是由经验归纳得出的结果。'}

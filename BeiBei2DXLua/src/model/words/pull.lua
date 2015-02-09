@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pull"]={"pull","[pʊl]","[pʊl]","n.拉",'n.拉,拖,拉绳,影响|||vi.拔,拉,拖,扳动|||vt.拉,拔','Her remark pulled me up short.','我听到她的话後一下子愣住了。','He has a lot of pull with the managing director.','他对总经理有很大的影响力。'}

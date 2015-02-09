@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["half"]={"half","[hɑːf]","[hæf]","adj.一半的",'adj.一半的,不完全的|||adv.一半地|||n.半,一半','The food\'s not half bad.','这食物挺不错。','||Half|| of them are here.','半数人来了。'}

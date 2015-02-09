@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cataract"]={"cataract","['kætərækt]","['kætərækt]","n.大瀑布",'n.大瀑布,奔流,洪水,[医]白内障','The way is blocked by the tall cataract.','高悬的大瀑布挡住了去路。','Age is not a factor in cataract surgery.','年龄并不是影响做白内障手术的因素。'}

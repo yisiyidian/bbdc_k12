@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indiscriminate"]={"indiscriminate","[,ɪndɪ'skrɪmɪnət]","[,ɪndɪ'skrɪmɪnət]","adj.无差别的",'adj.无差别的,不分皂白的,杂陈的','She disapproved of her son’s indiscriminate television viewing.','她不赞成儿子不加选择地收看电视。','||Indiscriminate|| worship of western cultures can lead the confusion of thoughts.','盲目崇拜西方文化可能会导致思想的混乱。'}

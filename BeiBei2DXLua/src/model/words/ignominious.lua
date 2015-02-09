@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ignominious"]={"ignominious","[,ɪgnə'mɪnɪəs]","[,ɪɡnə'mɪnɪəs]","adj.可耻的",'adj.可耻的,不名誉的,下流的','It is an ignominious thing to attack others in the back.','在别人背后下刀子是一件非常不光彩的事。','The waste is one kind of ignominious behavior.','浪费是一种可耻的行为。'}

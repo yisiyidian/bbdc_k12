@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coleslaw"]={"coleslaw","['kəʊlslɔː]","['kolslɔ]","n.凉拌卷心菜",'n.凉拌卷心菜','I want a coleslaw.','我要一个凉拌卷心菜、','A Couple of drumsticks and one coleslaw, please.','请给我两双鸡腿，一份生菜沙拉。'}

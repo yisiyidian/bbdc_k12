@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["avuncular"]={"avuncular","[ə'vʌŋkjʊlə]","[ə'vʌŋkjəlɚ]","adj.伯（叔)父的",'adj.伯（叔)父的,伯(叔)父似的，舅的，舅似的','He adopts an avuncular tone of voice when giving advice to junior colleagues.','他用长辈的口气劝告年轻的同事。','he began to talk in his most gentle and avuncular manner.','他开始讲话了，态度极其和蔼而慈祥。'}

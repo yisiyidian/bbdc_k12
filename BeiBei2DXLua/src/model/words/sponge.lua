@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sponge"]={"sponge","[spʌn(d)ʒ]","[spʌndʒ]","n.海绵",'n.海绵,海绵状的东西|||v.用海绵擦拭,吸收掉,抹掉','It\'s a sponge.','这是一块海绵。','I am cooking a sponge cake with jam filling.','我在做果酱松糕。'}

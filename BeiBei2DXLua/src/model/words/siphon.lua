@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["siphon"]={"siphon","['saɪf(ə)n]","['saɪfn]","n.虹吸管",'n.虹吸管|||v.用虹吸管吸出或排出','If you\'re short of petrol you can siphon off a gallon from my tank.','如果汽油不够, 你可以从我的油箱中用虹吸管吸一加仑去。','She siphoned off profits from the business into her account.','她把企业的赢利转到了自己的帐户上。'}

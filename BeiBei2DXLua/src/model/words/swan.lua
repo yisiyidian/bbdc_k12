@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swan"]={"swan","[swɒn]","[swɑn]","n.天鹅",'n.天鹅|||vi.闲荡,游荡','Mr Miller is a black swan, an honest lawyer!','米勒先生是一位诚实的律师，非常难得。','A young swan is called a cygnet.','小天鹅叫做“cygnet”。'}

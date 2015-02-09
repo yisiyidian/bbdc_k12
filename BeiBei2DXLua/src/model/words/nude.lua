@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nude"]={"nude","[njuːd]","[nud]","adj.裸的",'adj.裸的,与生俱有的,无装饰的|||n.裸体画','The boys went swimming in the nude.','男孩们光着屁股去游泳。','The occasional nude bather comes here.','偶尔裸浴的那个人来到这里 。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encroach"]={"encroach","[ɪn'krəʊtʃ; en-]","[ɪn'krotʃ]","v.侵占",'v.侵占,蚕食|||vi.侵占,侵犯,侵害|||vt.侵犯','I\'m sorry to encroach upon your time, but I really need your help.','抱歉，要来占用你的时间，可是我确实需要你的帮助。','His new house encroached on my land.','他的新房子侵占了我的土地。'}

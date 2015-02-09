@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["halcyon"]={"halcyon","['hælsɪən; -ʃ(ə)n]","['hælsɪən]","n.想像中的一种鸟",'n.想像中的一种鸟,形同翠鸟,翠鸟|||adj.宁静的,平稳的','What I really want is to have a halcyon life in spite of others\' sayings.','我真正想要的是平静的生活，不去在意别人怎么说。','Life in Berkeley is the most halcyon days in my entire life.','在伯克利生活的日子是我一生中最美好的时光。'}

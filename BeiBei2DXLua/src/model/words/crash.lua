@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crash"]={"crash","[kræʃ]","[kræʃ]","v.撞碎",'v.撞碎,猛使...破碎,迫降，发出巨响|||n.轰隆声,猛撞,崩溃,破产,垮台|||adj.速成的|||n.粗布','The rocks crashed (down) onto the car.','岩石轰隆一声砸在汽车上.','He crashed his car (into a wall).','他把汽车撞（到墙上）了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["siege"]={"siege","[siːdʒ]","[sidʒ]","v.围攻",'v.包围,围攻','The town was forced to yield after a long siege.','该城受长期围困而被迫弃守.','The city succumbed after only a short siege.','该城受围困仅很短时间就不再抵抗了.'}

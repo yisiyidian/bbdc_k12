@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aspiring"]={"aspiring","[ə'spaɪərɪŋ]","[ə'spaɪərɪŋ]","adj.积极追求的",'adj.积极追求的,有抱负的','Bernard was an aspiring writer, with “a good but rather boring job” at an investment company.','伯纳德是一个有抱负的作家，在一个“很好但很单调”的投资公司工作。','An aspiring man shall do what he should do,not what he want to do.','一个有抱负的人应当做他应该做的，而不是想要做的。'}

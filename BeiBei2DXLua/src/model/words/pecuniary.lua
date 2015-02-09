@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pecuniary"]={"pecuniary","[pɪ'kjuːnɪərɪ]","[pɪ'kjunɪɛri]","adj.金钱上的",'adj.金钱上的,金钱的','The insurance company must compensate you for your pecuniary loss in the fire.','保险公司应赔偿你在火灾中所蒙受的经济损失。','She is so independent that she refused all pecuniary aid.','她很独立，所以拒绝一切金钱上的资助。'}

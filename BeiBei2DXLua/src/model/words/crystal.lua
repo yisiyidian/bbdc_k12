@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crystal"]={"crystal","['krɪst(ə)l]","['krɪstl]","n.水晶",'adj.清澈透明的,晶体的|||n.水晶,结晶','I lost my crystal necklace at the party.','我在晚会上丢失了水晶项链。','She made her meaning crystal clear.','她把她的意思解释得清清楚楚。'}

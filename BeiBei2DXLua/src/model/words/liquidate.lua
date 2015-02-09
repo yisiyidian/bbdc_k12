@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liquidate"]={"liquidate","['lɪkwɪdeɪt]","['lɪkwɪdet]","v.偿付",'v.偿付,清算,扫除|||v.清算,整理,破产','They have not hesitated in the past to liquidate their rivals.','过去他们曾毫不犹豫地铲除对手。','The company closed down operations and began ||liquidating|| its assets in January.','公司停止了各项业务，于1月份开始变卖资产。'}

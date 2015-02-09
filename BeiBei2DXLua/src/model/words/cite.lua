@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cite"]={"cite","[saɪt]","[saɪt]","vt.引用",'vt.引用,引证,传讯,嘉奖','The lawyer cited a previous case to support his argument.','律师引用了以前的案例来支持他的论点。','He was cited for contempt of court.','他因蔑视法庭而被传讯。'}

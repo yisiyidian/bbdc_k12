@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["talon"]={"talon","['tælən]","['tælən]","n.爪",'n.爪，手，爪状物，发剩的牌','How many talons in your hand?','你手中有几张发剩下的牌？','Birds of prey have hooked beaks, strong talons or claws on their feet, and keen eyesight and hearing.','食肉鸟类有钩状的喙，强壮的爪子，敏锐的视力和听力。'}

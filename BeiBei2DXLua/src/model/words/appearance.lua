@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["appearance"]={"appearance","[ə'pɪər(ə)ns]","[ə'pɪrəns]","n.外表",'n.外表,出现,出场','I don\'t want to go to the party but I\'d better put in an appearance, I suppose.','我不想参加那个聚会，可是我最好还是要露一下面。','The journal makes its appearance once two months.','这本刊物两个月出版一次。'}

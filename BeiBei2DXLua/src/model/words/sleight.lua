@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sleight"]={"sleight","[slaɪt]","[slaɪt]","n.熟练",'n.熟练，巧妙，诡计，狡诈','The trick is done simply by sleight of hand.','这个戏法纯粹是灵活的手法演示。','With a little statistical sleight of hand they could make things look all right.','只要在统计上耍些小小的花招，他们就能瞒天过海。'}

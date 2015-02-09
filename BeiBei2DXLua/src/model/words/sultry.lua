@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sultry"]={"sultry","['sʌltrɪ]","['sʌltri]","adj.闷热的",'adj.闷热的|||adj.风骚的，淫荡的','The outside air was heavy and moist and sultry.','外面的空气沉滞、潮湿而闷热。','She is a sultry western beauty.','她是位性感的西方美人。'}

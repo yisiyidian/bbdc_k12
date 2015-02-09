@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["percent"]={"percent","[pə'sent]","[pɚ'sɛnt]","adj.&adv.百分之一",'adj.&adv.百分之一,(与基数词连用)百分之...|||n.百分之...','The company\'s market share is 48 percent in the marketplace.','这家公司的市场占有率是百分之四十八。','The gross national product had increased 5 percent last year.','去年的国民生产总值提高了百分之五。'}

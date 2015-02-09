@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apposite"]={"apposite","['æpəzɪt]","['æpəzɪt]","adj.适当的",'adj.适当的,恰切的','His answer was apposite.','他的回答是得当的。','Recent events have made his central theme even more apposite.','新近发生的事情使得他的中心主题显得更加有的放矢。'}

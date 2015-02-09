@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relieved"]={"relieved","[rɪ'liːvd]","[rɪ'livd]","adj.感到宽慰的",'adj.感到宽慰的；放心的；显得开心的','The thief relieved him of his wallet.','那小偷把他的钱包偷走了.','He was relieved of his post because of his carelessness.','他因疏忽被解除了职务。'}

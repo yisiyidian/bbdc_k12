@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consist"]={"consist","[kən'sɪst]","[kən'sɪst]","vi.组成",'n.组成|||vi.组成,存在,一致','Health does not consist with intemperance.','健康和酗酒不能相容。','The beauty of the plan consists in its simplicity.','该计划的妙处在于简洁明了。'}

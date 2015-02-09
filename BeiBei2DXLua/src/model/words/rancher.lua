@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rancher"]={"rancher","['rɑːn(t)ʃə]","['ræntʃɚ]","n.大牧场工人",'n.大牧场工人,大牧场主','She married a rancher.','她和一个牧场主结婚了.','He is a rich rancher.','他是一个富有的农场主。'}

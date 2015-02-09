@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jaunty"]={"jaunty","['dʒɔːntɪ]","['dʒɔnti]","adj.轻松活泼的",'adj.轻松活泼的，整洁的，时髦的，有教养的','The happy boy walked with jaunty steps.','这个快乐的孩子跳跳蹦蹦地走着。','She cocked her hat at a jaunty angle.','她把帽子歪戴成俏皮的样子。'}

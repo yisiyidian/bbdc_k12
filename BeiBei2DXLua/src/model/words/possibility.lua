@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["possibility"]={"possibility","[,pɒsɪ'bɪlɪtɪ]","[,pɑsə'bɪləti]","n.可能性",'n.可能性,可能的事情,潜在的价值','She saw the ||possibilities|| of the scheme from the beginning.','她从一开始就预见到这计划可能成功。','She thought of several ||possibilities||.','她考虑了几种可能的情况。'}

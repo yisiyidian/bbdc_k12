@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inflexible"]={"inflexible","[ɪn'fleksɪb(ə)l]","[ɪn'flɛksəbl]","adj.不可弯曲的",'adj.不可弯曲的，僵硬的,顽固的，不可改变的，不容变更的','The new plastic is completely inflexible.','这种新塑料是完全不可弯曲的.','He was inflexible once he had made a decision.','他一旦作了决定就不会轻易更改.'}

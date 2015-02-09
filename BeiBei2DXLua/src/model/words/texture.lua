@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["texture"]={"texture","['tekstʃə]","['tɛkstʃɚ]","n.(材料等的)结构",'n.(材料等的)结构,特点,表面,基本结构|||vt.给予结构','The range of colour, pattern and texture is wide enough to suit every one\'s needs and taste.','颜色、图案及质地的多样化足以使每一个人的需求和审美要求得到满足。','Brick walls give a room texture.','砖墙使房屋表面不平'}

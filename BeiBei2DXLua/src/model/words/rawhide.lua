@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rawhide"]={"rawhide","['rɔːhaɪd]","['rɔhaɪd]","n.(牛的)生皮",'n.(牛的)生皮,生牛皮鞭|||vt.用生牛皮鞭抽打','The drum skin was tightly strapped over the circle rawhide laces.','鼓皮的一圈被生牛皮紧紧地勒住了.','Some raftsmen would rawhide you till you were black and blue.','有些木排上的伙计会拿鞭子狠狠抽你,一直把你抽得浑身发青.'}

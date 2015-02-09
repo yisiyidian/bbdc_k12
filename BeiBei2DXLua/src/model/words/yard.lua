@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yard"]={"yard","[jɑːd]","[jɑd]","n.庭院",'n.庭院,场地,码','I was out in the back yard splitting logs.','我那时正在后院劈柴。','Three feet make one yard.','三英尺为一码。'}

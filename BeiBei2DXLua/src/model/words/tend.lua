@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tend"]={"tend","[tend]","[tɛnd]","vi.倾向（于）",'vt.照料，照顾；护理；照管，管理|||vi.倾向（于），趋向（于）；伺侯，招待；关心；注意','He\'s a good salesman, but his offhand manner does tend to put people off.','他是个很好的推销员，可是他那随便的态度容易使人产生反感。','Does he tend to lose?','他常常输吗?'}

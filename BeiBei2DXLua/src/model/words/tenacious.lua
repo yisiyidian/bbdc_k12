@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tenacious"]={"tenacious","[tɪ'neɪʃəs]","[tə'neʃəs]","adj.紧粘不放的",'adj.紧粘不放的,固执的,不屈不挠的','He hold on to my arm with a tenacious grip.','他紧紧抓住我的手臂不放。','The eagle seized its prey in a tenacious grip.','老鹰紧紧地抓住了它的猎物。'}

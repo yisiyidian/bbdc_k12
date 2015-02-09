@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glue"]={"glue","[gluː]","[ɡlu]","n.胶",'n.胶,粘性之物|||vt.粘,紧附于...','Early aircraft were insubstantial constructions of wood and glue.','早期的飞行器是木头和胶粘合的脆弱机器.','This extra strong glue should do the job nicely.','这种超强度胶应该管用.'}

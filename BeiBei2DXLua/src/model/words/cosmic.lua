@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cosmic"]={"cosmic","['kɒzmɪk]","['kɑzmɪk]","adj.宇宙的",'adj.宇宙的，广大无边的，无限的','Physics is governed by cosmic laws.','物理学受宇宙法则的制约。','The earth is a very small stage in a vast cosmic arena.','在极广阔的宇宙竞技场中，地球只是一个很微小的剧台。'}

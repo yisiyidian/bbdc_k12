@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rabbit"]={"rabbit","['ræbɪt]","['ræbɪt]","n.兔子",'n.兔子|||vi.猎兔|||vt.让...见鬼去吧,该死','I like to eat lettuce in summer, and so does my rabbit.','我喜欢夏天吃莴苣，我的兔子也喜欢。','The rabbit burrowed under the fence.','兔子在篱笆下打洞。'}

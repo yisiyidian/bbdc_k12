@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interior"]={"interior","[ɪn'tɪɜːrɪə]","[ɪn'tɪrɪɚ]","adj.内部的",'adj.内部的,内地的,国内的,在内的|||n.内部','We are fascinated by the delicate interior design of the apartment.','我们被这所公寓的精致的室内装潢设计吸引。','The architect laid out the interior of the building.','设计师设计了这座建筑的内部格局。'}

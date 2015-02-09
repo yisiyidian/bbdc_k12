@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slew"]={"slew","[sluː]","[slu]","n.沼地",'n.沼地,极多,回转|||v.使转,扭转,转|||动词slay的过去式','The slaves slew their masters with swords.','奴隶们用刀杀死了主人。','The captain could not slew the ship round in time to avoid an accident.','船长没能及时地掉转船头避免事故发生。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revise"]={"revise","[rɪ'vaɪz]","[rɪ'vaɪz]","n.校订",'n.校订,修正,再校稿|||v.校订,修正,校正','You should revise your idea about him.','你应该修改对他的看法。','He revised the manuscript of his book before sending it to the publisher.','他对自己那本书的手稿先进行校订，然后才把它交给出版社。'}

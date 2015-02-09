@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inexcusable"]={"inexcusable","[ɪnɪk'skjuːzəb(ə)l; ɪnek-]","[,ɪnɪk'skjuzəbl]","adj.不可宽恕的",'adj.不可宽恕的,不可原谅的','His rudeness is inexcusable.','他的无礼是不可宽赦的。','Reading my diary is an inexcusable invasion of privacy.','看我的日记是一种不可原谅的侵犯个人隐私的行为。'}

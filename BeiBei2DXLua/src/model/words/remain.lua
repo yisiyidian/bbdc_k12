@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remain"]={"remain","[rɪ'meɪn]","[rɪ'men]","v.保持",'v.保持,依然,剩余,留下,逗留|||n.遗迹,剩余物,残骸','I remain in London until May.','我在伦敦一直呆到五月。','He remained poor all his life.','他终生贫穷。'}

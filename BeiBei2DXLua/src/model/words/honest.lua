@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["honest"]={"honest","['ɒnɪst]","['ɑnɪst]","adj.诚实的",'adj.诚实的,正直的|||adv.老实说','The article is an attempt to defame an honest man.','这篇文章旨在诋毁一个正直的人.','It was commonly believed that he was an honest man.','一般都认为他是一个诚实的人。'}

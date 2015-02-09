@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fame"]={"fame","[feɪm]","[fem]","n.名声",'n.名声,名望|||vt.使有名望','His fame resounded all over the world.','他名扬全球。','Many great men rose from obscurity to fame.','许多伟人都是从卑微变得显赫的。'}

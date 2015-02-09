@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lend"]={"lend","[lend]","[lɛnd]","vt.借",'vt.借,贷款,给予,增添|||vi.贷款','Would you please lend me your pencil?','请把铅笔借给我用用好吗？','Can you lend me five dollars?','你能借给我五美元吗？'}

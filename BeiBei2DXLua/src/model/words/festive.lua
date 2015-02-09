@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["festive"]={"festive","['festɪv]","['fɛstɪv]","adj.庆祝的",'adj.庆祝的,喜庆的,欢乐的','The hall looks more festive with all that greenery in pots.','花盆里的绿叶使大厅显得节日气氛更浓。','The whole town is in a festive mood.','全镇沉浸在节日的气氛之中。'}

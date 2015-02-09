@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tractable"]={"tractable","['træktəb(ə)l]","['træktəbl]","adj.易于管教的",'adj.易于管教的','Gold and silver are tractable metals.','金和银是容易加工的金属。','He could easily manage his tractable younger brother.','他能轻而易举地管住听话的弟弟。'}

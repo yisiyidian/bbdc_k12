@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["awesome"]={"awesome","['ɔːs(ə)m]","['ɔsəm]","adj.令人惊叹的",'adj.令人惊叹的，难得吓人的，很好的','Everything happened at once. The view of the skyline is at once awesome, grand, and disappointing.','所有的事都一起发生了。天边立刻呈现出令人敬畏的、壮丽的和令人沮丧的景色','An awesome thunderstorm.','一场令人恐惧的暴风雨'}

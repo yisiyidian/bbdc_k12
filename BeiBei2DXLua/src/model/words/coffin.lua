@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coffin"]={"coffin","['kɒfɪn]","['kɔfɪn]","n.棺材",'n.棺材','Four soldiers stood guard over the coffin.','四个士兵守卫灵柩.','The long and costly strike proved to be the last nail in the company\'s coffin.','长期罢工损失巨大致使该公司一蹶不振.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["appliance"]={"appliance","[ə'plaɪəns]","[ə'plaɪəns]","n.器具",'n.器具,器械,装置,应用','These advances were the result of the intellectual appliance of science.','这些进步是巧妙应用科学的结果。','Caution! Don\'t turn on any electric appliance without permission.','注意！不得擅自开启电器设备。'}

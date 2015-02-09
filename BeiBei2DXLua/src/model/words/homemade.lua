@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["homemade"]={"homemade","['həʊm'meɪd]","['hom'med]","adj.自制的",'adj.自制的,国产的,朴素的','The bread and pastry are homemade.','面包和糕点都是自家做的','||Homemade|| goods are edging out imported foreign goods.','国产货正逐步取代进口货物.'}

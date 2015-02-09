@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seam"]={"seam","[siːm]","[sim]","n.缝",'n.缝；接缝|||vt.缝合；接合；使留下伤痕|||vi.裂开；产生裂缝','The valley is seamed with small streams of water.','山谷里布满小溪。','The seam of her skirt ripped.','她的裙子的接缝裂开了。'}

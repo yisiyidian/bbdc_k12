@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infuriate"]={"infuriate","[ɪn'fjʊərɪeɪt]","[ɪn'fjʊrɪet]","adj.狂怒的",'adj.狂怒的|||v.激怒','How infuriate!','真叫人发火！','I was infuriated by/with their constant criticism.','他们没完没了地批评把我给气坏了.'}

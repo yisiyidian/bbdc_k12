@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dependent"]={"dependent","[dɪ'pɛndənt]","[ di'pendənt ]","adj.附属的",'adj.附属的,依赖的,悬垂的|||n.受经济援助者','The country\'s economy is dependent on tourism.','该国经济依赖於旅游业.','All is dependent on your decision.','一切看你的决心而定。'}

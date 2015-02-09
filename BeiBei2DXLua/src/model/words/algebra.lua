@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["algebra"]={"algebra","['ældʒɪbrə]","['ældʒɪbrə]","n.代数学",'n.代数学','The boy can\'t figure out the algebra problems.','这个男孩做不出这道代数题。','It\'s easy to learn algebra.','学习代数很容易。'}

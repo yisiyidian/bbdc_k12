@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bad"]={"bad","[bæd]","[bæd]","adj.坏的",'adj.坏的,令人不满意的,有害的,有病的|||n.坏人,坏事','That\'s what I want, and I want it bad.','这就是我想要的，而且是迫不及待要得到的。','In the recession, our firm went through a bad time.','我们公司在经济衰退时期历尽艰辛。'}

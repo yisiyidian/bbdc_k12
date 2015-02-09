@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obligatory"]={"obligatory","[ə'blɪgət(ə)rɪ]","[ə'blɪɡətɔri]","adj.强制性的",'adj.强制性的,义务的,必须的','It is obligatory upon us to protect the world from nuclear war.','保护世界免于核战争是我们的义务。','Attendance is obligatory.','请务必出席。'}

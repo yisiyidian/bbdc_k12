@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thrust"]={"thrust","[θrʌst]","[θrʌst]","n.推力",'n.推力,刺,力推|||vt.&vi.插入,推挤,刺','The robber thrust his sword through the traveler\'s bosom.','那强盗以刀刺穿了那旅客的胸部。','He thrust his hands into his pockets.','他把两手插入衣袋里。'}

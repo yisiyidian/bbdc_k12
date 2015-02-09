@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trumpet"]={"trumpet","['trʌmpɪt]","['trʌmpɪt]","n.喇叭",'n.喇叭,喇叭声,喇叭手|||vt.宣扬；鼓吹；吹嘘|||vi.吹喇叭,发出喇叭似的声音','The neighbours\' children want to learn to play the trumpet, perish the thought!','邻居的孩子想学吹小号, 但愿他们别学!','The trumpet sounded.','喇叭吹响了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carpentry"]={"carpentry","['kɑːp(ə)ntrɪ]","['kɑrpəntri]","n.木工手艺",'n.木工手艺,木工业','A turn for carpentry.','有做木工的天赋','He\'s an adept in carpentry.','他是木工行家.'}

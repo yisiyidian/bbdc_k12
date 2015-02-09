@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intercontinental"]={"intercontinental","[,ɪntəkɒntɪ'nent(ə)l]","[,ɪntɚ,kɑntɪ'nɛntl]","adj.大陆间的",'adj.大陆间的,洲际的','intercontinental exploration; intercontinental cooperation.','跨洲考察；洲际合作','an intercontinental ballistic missile; an intercontinental airline.','洲际弹道导弹；洲际航线'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["formulation"]={"formulation","[fɔːmjʊ'leɪʃn]","[,fɔrmjə'leʃən]","n.形成",'n.形成,简洁陈述,公式化','The act or process of stating a precise meaning or significance; formulation of a meaning.','解释对意思或意义的精确表达或表达的过程；对意思确切的阐述','This formulation is perfectly correct.','这是完全正确的规定.'}

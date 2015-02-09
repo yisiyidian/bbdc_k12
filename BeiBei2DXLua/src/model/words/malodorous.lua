@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malodorous"]={"malodorous","[mæl'əʊd(ə)rəs]","[,mæl'odərəs]","adj.有臭味的",'adj.有臭味的,不合法的','He is living in a malodorous London street.','他住在伦敦一条臭气熏天的街道上。','Throw the malodorous  food away.','把有臭味的食物扔掉吧。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["afoul"]={"afoul","[ə'faʊl]","[ə'faʊl]","adj.相冲突的",'adj.相冲突的|||adv.相冲突地','The boat ran afoul of a buoy.','那艘船与浮标相撞。','He argued with his father and has run afoul of him ever since.','他和他的父亲争辩，从此便得罪了父亲。'}

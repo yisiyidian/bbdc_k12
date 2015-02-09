@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["autocrat"]={"autocrat","['ɔːtəkræt]","['ɔtəkræt]","n.独裁者",'n.独裁者','He was an accomplished politician and a crafty autocrat.','他是个有造诣的政治家，也是个狡黠的独裁者。','He is a autocrat.','他是一个独裁者'}

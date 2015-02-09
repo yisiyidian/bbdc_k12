@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["departure"]={"departure","[dɪ'pɑːtʃə]","[dɪ'pɑrtʃɚ]","n.离开",'n.离开,出发,分歧','Her arrival coincided with our departure.','她来到时我们正好离开.','If the roads are icy, you\'d be better advised to delay your departure.','要是路上结冰了, 你最好考虑延期出发.'}

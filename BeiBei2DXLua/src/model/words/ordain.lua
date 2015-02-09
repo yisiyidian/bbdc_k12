@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ordain"]={"ordain","[ɔː'deɪn]","[ɔr'den]","n.命令",'n.命令|||v.任命,命令|||vt.命令,任命(某人)任圣职','The judge ordained that he should pay the debts.','法院判决由他偿还债务。','He was an ordained priest.','他被任命为牧师。'}

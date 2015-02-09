@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seethe"]={"seethe","[siːð]","[sið]","v.沸腾",'v.沸腾，煮沸,起泡|||n.拥挤，激动，骚动','He is ||seething|| at all the bad press he is getting.','他正为所有那些关于自己的负面报道窝着一肚子火。','Resentment and rage seethe within him.','怨恨与愤怒在他的内心翻腾。'}

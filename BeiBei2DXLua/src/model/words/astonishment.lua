@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["astonishment"]={"astonishment","[ə'stɒnɪʃmənt]","[ə'stɑnɪʃmənt]","n.惊讶",'n.惊讶，令人惊讶的事','They all stared with astonishment.','他们全都惊讶地瞪着眼。','To our astonishment, they arrived on time.','使我们惊讶的是，他们准时到了。'}

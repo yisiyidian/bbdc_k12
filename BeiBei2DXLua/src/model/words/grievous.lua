@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grievous"]={"grievous","['griːvəs]","['ɡrivəs]","adj.严重的",'adj.痛苦的,严重的,充满悲伤的','In the legal sense the intention to cause grievous bodily harm constitutes murder if the victim dies.','在法律意义上，如果受害人死亡，造成重伤的意图构成谋杀。','She fainted when she heard the grievous news.','她听到这个噩耗，昏过去了。'}

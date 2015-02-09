@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ranch"]={"ranch","[rɑːn(t)ʃ]","[ræntʃ]","n.牧场",'n.牧场','He lives on a cattle ranch in Australia.','他在澳大利亚靠一个牧牛场为生。','The ranch is in the middle of a large plateau.','该牧场位于一个辽阔高原的中部.'}

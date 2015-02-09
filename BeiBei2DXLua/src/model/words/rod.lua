@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rod"]={"rod","[rɒd]","[rɑd]","n.杆",'n.杆,戒鞭,测量杆,视网膜,杆状菌','I bought a new fishing rod last Sunday.','上星期日我新买了一个鱼竿。','Spare the rod and spoil the child.','不打不成器.'}

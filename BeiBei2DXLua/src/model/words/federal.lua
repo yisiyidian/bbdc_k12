@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["federal"]={"federal","['fed(ə)r(ə)l]","['fɛdərəl]","adj.联邦的",'adj.联邦的|||n.同盟盟友','In the USA foreign policy is decided by the federal government and federal laws are made by Congress.','美国外交政策取决于联邦政府，联邦法律由国会制定。','Expenditures by the ||Federal|| Government have been steadily pared.','联邦政府的开支正在逐渐削减。'}

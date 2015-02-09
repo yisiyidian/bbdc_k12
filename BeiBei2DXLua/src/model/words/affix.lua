@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affix"]={"affix","[ə'fɪks]","[ə'fɪks]","v.使...附于",'v.使...附于,署名,粘贴','Please affix a stamp.','请贴上邮票。','Please affix a label to a package.','请在包裹上贴张标签。'}

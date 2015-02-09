@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ware"]={"ware","[weə]","[wɛr]","n.制品",'n.制品,器具,货物|||vt.留心,意识到|||adj.知道的,意识到的','Be ware of falling into their trap.','当心中了他们的计。','The Chairman\'s visiting the ware house today, so keep on your toes and be ready to answer any questions.','董事长今天要来仓库参观，所以你们要小心点，准备回答任何问题。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cellist"]={"cellist","['tʃelɪst]","['tʃɛlɪst]","n.大提琴演奏家",'n.大提琴演奏家','They are cellists.','他们是大提琴家。','It\'s a solo of a cellist.','这是一个大提琴演奏家的独奏。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fiction"]={"fiction","['fɪkʃ(ə)n]","['fɪkʃən]","n.小说",'n.小说,虚构','Real life is sometimes stranger than fiction.','现实生活有时比小说还离奇.','It\'s important to distinguish fact from fiction.','把现实与虚构区分开来是很重要的.'}

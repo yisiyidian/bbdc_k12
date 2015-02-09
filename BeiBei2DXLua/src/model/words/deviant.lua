@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deviant"]={"deviant","['diːvɪənt]","['divɪənt]","adj.不正常的",'adj.不正常的，离经叛道的|||n.异常的人','Not typical, usual, or regular; not normal; deviant.','反常的，异常的非一般的、不平常的或非惯例的；不正常的；反常的','...the social reactions to deviant and criminal behavior.','反常的犯罪行为的社会反应。'}

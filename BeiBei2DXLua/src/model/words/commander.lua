@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commander"]={"commander","[kə'mɑːndə]","[kə'mændɚ]","n.司令官",'n.司令官,指挥官','The director of a firm corresponds to the commander of an army.','公司的经理就等于是军队里的将军。','The battalion commander lined his men along the railway.','营长命令士兵们沿铁轨排开。'}

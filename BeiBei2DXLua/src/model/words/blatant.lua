@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blatant"]={"blatant","['bleɪt(ə)nt]","[ 'bleitənt ]","adj.喧嚣的",'adj.喧嚣的,吵闹的,俗丽的,明目张胆的','Everyone is tired of their blatant effronteries.','大家都厌恶他们粗俗。','At times the arrogance of those in power is quite blatant.','有时那些当权者颇为傲慢嚣张。'}

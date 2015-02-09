@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sodium"]={"sodium","['səʊdɪəm]","['sodɪəm]","n.钠",'n.钠','The crude sodium carbonate ash obtained from these plants.','苏打灰从这些植物中获得的粗碳酸钠灰','Common salt is a compound of sodium and chlorine.','食盐是钠和氯的化合物.'}

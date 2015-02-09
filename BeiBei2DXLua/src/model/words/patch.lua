@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["patch"]={"patch","[pætʃ]","[pætʃ]","n.补绽",'n.片,补绽,碎片|||vt.补缀,掩饰,平息','Her latest novel isn\'t a patch on her others.','她这部新小说比以前所写的差得远。','They patched up their tiff.','他们平息了争执。'}

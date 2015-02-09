@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brazen"]={"brazen","['breɪz(ə)n]","['brezn]","adj.黄铜制的",'adj.黄铜制的,厚颜无耻的|||v.使...厚颜,使...无耻','Some people prefer to brazen a thing out rather than admit defeat.','有的人不愿承认失败，而是宁肯厚着脸皮干下去。','It was brazen of him to say so!','他这样说真是无耻！'}

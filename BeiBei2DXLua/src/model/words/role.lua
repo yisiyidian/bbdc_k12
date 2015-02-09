@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["role"]={"role","[rəʊl]","[rol]","n.角色",'n.角色,影响程度','His dual role as a composer and a conductor made him very busy.','他作曲家和指挥家的双重身份使他非常繁忙。','He\'s a natural for the role of Lear.','他是李尔王这一角色的理想人选.'}

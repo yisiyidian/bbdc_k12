@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["safely"]={"safely","['seɪflɪ]","['sefli]","adv.安全地",'adv.安全地','I sent a telegram to my mother saying that I had arrived safely.','我给母亲发电报说我已安全抵达。','The pilot landed the plane safely.','驾驶员使飞机安全降落。'}

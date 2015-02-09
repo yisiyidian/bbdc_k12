@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grandeur"]={"grandeur","['grændjə; -(d)ʒə]","['ɡrændʒɚ]","n.庄严",'n.庄严,伟大','He has delusions of grandeur.','他自以为很了不起。','No words can express the grandeur of that parade.','阅兵式那宏伟的场面是无法用语言表达的。'}

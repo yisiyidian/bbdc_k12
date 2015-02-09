@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outdo"]={"outdo","[aʊt'duː]","[,aʊt'du]","vt.超过",'vt.超过,胜过','He has outdone all his rivals in skill.','他在技巧方面胜过所有的对手。','She ||outdid|| all her classmates.','她超过她的所有同班同学。'}

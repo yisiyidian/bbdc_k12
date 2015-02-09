@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["substance"]={"substance","['sʌbst(ə)ns]","['sʌbstəns]","n.物质",'n.物质,实质,重要性','The emery is a hard metallic substance.','金刚砂是非常坚硬的金属物质。','Antitoxin is substance that acts against a poisonous substance and prevents it from having a harmful effect.','抗毒素是抵抗有毒物质并防止其产生有害作用的物质。'}

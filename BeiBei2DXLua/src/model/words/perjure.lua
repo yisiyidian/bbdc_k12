@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perjure"]={"perjure","['pɜːdʒə]","['pɝdʒɚ]","v.使伪誓",'v.使伪誓,使破坏誓言','Several witnesses at the trial were clearly prepared to perjure themselves in order to protect the accused.','在审判时几个证人显然已准备好为袒护被告而作伪证.','Witnesses lied and perjured themselves.','证人撒谎作伪证。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detective"]={"detective","[dɪ'tektɪv]","[dɪ'tɛktɪv]","adj.侦探的",'adj.侦探的|||n.侦探','Sherlock Holmes has nothing on you you\'re a real detective.','福尔摩斯也没有你本事大--你是真的侦探.','The detective posed as a mourner at the victim\'s funeral.','那侦探佯装成吊唁者参加了受害人的葬礼.'}

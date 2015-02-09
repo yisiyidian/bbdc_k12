@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dentistry"]={"dentistry","['dentɪstrɪ]","['dɛntɪstri]","n.牙医术",'n.牙医术','His work was important in helping establish dentistry as a separate profession.','他的工作为牙科医学成为单独的医学专业领域起了重要的作用。','Organized dentistry began in 1840.','系统的牙科医学开始于1840年，'}

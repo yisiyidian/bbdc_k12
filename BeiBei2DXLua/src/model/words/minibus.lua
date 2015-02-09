@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minibus"]={"minibus","['mɪnɪbʌs]","['mɪnɪbʌs]","n.小型公共汽车",'n.小型公共汽车,小面包车','I am told this minibus can go jar on very little petrol.','我听说这种小客车能靠很少汽油开很多路。','The two-year-old boy liked a lot the boy minibus while her mother bought him for the first time. He always slept with it.','这两岁的小男孩子非常喜爱他母亲第一次给他买的微型玩具车，他睡觉时也总是拿着睡。'}

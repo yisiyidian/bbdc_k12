@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["communicate"]={"communicate","[kə'mjuːnɪkeɪt]","[kə'mjunɪket]","vi.交流",'vt.传达,传播|||vi.交流,沟通,联通','I like to communicate with my family.','我喜欢和我的家人沟通。','He has communicated his wishes to me.','他已经把他的愿望告诉了我。'}

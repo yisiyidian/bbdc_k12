@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sacrament"]={"sacrament","['sækrəm(ə)nt]","['sækrəmənt]","n.圣礼",'n.圣礼,圣事','A religious sacrament marked by the symbolic use of water and resulting in admission of the recipient into the community of Christians.','洗礼，浸礼宗教圣礼，象征性地用水洗浴，以表示受洗者被接受入基督教团体','The sacrament or rite of ordination.','神职仪式神职的任命或神职任命仪式'}

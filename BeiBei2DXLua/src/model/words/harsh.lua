@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harsh"]={"harsh","[hɑːʃ]","[hɑrʃ]","adj.粗糙的",'adj.粗糙的,使人不舒服的，刺耳的,严厉的，大约的','Some modern music sounds harsh and tuneless.','现代音乐中有一些又刺耳又不成调子.','His harsh words caused her much pain.','他说话很刺耳, 她听了很不舒服.'}

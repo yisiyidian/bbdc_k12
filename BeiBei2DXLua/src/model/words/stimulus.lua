@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stimulus"]={"stimulus","['stɪmjʊləs]","['stɪmjələs]","n.刺激",'n.刺激,激励,刺激品','Her words of praise were a stimulus for people to work harder.','她赞扬的话鼓舞人们工作更努力。','The nutrient in the soil acts as a stimulus to growth.','土壤中的养分能促进植物生长。'}

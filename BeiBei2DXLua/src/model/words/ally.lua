@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ally"]={"ally","['ælaɪ]","['ælaɪ]","n.盟友",'n.盟友,同盟国|||vt.&vi.联盟,联合，同盟','Britain was an ally of America in the World War I.','英国在第一次世界大战中是美国的同盟国。','Italy ||allied|| itself with Germany during World War II.','在第二次世界大战期间意大利和德国结成同盟国'}

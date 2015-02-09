@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thatch"]={"thatch","[θætʃ]","[θætʃ]","n.盖屋顶的材料",'n.盖屋顶的材料,用草盖的屋顶,浓密的头发|||v.茸','||Thatch|| hut is raised high above the paddy field on stilt.','茅草屋用柱高高地建在稻田之上。','The family lived in a thatched cottage before liberation.','解放前，他们一家住在茅屋里。'}

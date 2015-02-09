@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forsake"]={"forsake","[fə'seɪk]","[fɔrˈsek, fə-]","v.放弃",'v.放弃,断念,抛弃','He has forsaken the bad habit of smoking.','他已改掉了吸烟的坏习惯。','She pleaded with her husband not to forsake her.','她恳求丈夫不要抛弃她。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["necessarily"]={"necessarily","['nesəs(ə)rɪlɪ; ,nesə'serɪlɪ]","[,nɛsə'sɛrəli]","adv.必然地",'adv.必然地,必定地，必需地','The rich are not necessarily happy.','有钱人未必快乐。','A good book does not necessarily sell well.','好书未必畅销。'}

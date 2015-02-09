@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wait"]={"wait","[weɪt]","[wet]","vt.&vi.等候",'vt.&vi.等候；等待；（尤指长期地）希望；盼望|||vi.准备妥；在手边；可得到；可使用|||vt.推迟，搁置，延缓','I waited in all day but they didn\'t arrive.','我在家等了一天，他们却没来。','He kept us waiting for ages while he packed his luggage.','他收拾行李，让我们等了好半天。'}

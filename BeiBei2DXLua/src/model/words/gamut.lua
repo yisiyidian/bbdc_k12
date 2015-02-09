@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gamut"]={"gamut","['gæmət]","['gæmət]","n.【音乐】全音阶",'n.【音乐】全音阶,长音阶,全音域|||n.全部，整个范围','In his short life he has run the entire gamut of crime, from petty theft to murder.','他在短短的一生中，从小偷小摸到杀人，他什么罪都犯过。','He runs the whole gamut of dissipation.','他干尽了放荡的事儿。'}

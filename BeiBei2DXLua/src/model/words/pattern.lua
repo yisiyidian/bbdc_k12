@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pattern"]={"pattern","['pæt(ə)n]","['pætɚn]","n.图案",'n.图案,式样,典范|||v.以图案装饰;仿造,模仿','The curtains had an elaborate pattern of flowers.','窗帘上绘有精美的花卉图案。','The wallpaper in our bedroom has a pattern of orchids.','我们卧室的壁纸是兰花图案的。'}

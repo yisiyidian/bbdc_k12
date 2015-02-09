@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["persuasive"]={"persuasive","[pə'sweɪsɪv]","[pɚ'swesɪv]","adj.有说服力的",'adj.有说服力的|||n.动机(诱因)','They believed the child by his persuasive reasons.','他们因那个孩子有说服力的理由相信了他。','He talked to her with persuasive manner.','他以晓之以礼的态度劝说她。'}

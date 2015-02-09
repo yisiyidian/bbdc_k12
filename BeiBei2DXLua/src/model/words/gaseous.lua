@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gaseous"]={"gaseous","['gæsɪəs; 'geɪsɪəs]","['ɡæsɪəs]","adj.气体的",'adj.气体的,气态的','Moisture is gaseous water','湿气是气态的水','Air whether in the gaseous or liquid state is a fluid.','空气，无论是气态的还是液态的，都是一种流体。'}

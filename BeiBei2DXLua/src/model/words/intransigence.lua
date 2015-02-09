@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intransigence"]={"intransigence","[in'trænsidʒəns,-dʒənsi]","[ in'trænsidʒəns,-dʒənsi ]","n.不妥协(不让步)",'n.不妥协(不让步)','Yet for North Korea, intransigence is the norm.','不过对朝鲜来说，绝不妥协是其一贯作风。','Each side of the negociations accused the other of intransigence, so talks broke down.','谈判双方都认为对方固执己见，因此谈判破裂。'}

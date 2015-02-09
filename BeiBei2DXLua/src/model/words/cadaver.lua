@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cadaver"]={"cadaver","[kə'dɑːvə; -'deɪ-]","[kə'dævɚ]","n.尸体",'n.尸体','Examination of a cadaver is to determine the cause of death.','尸体解剖是为了确认死亡原因。','He fell in a dead faint at the sight of the cadaver.','他一看到死尸就晕死过去了。'}

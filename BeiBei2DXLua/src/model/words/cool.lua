@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cool"]={"cool","[kuːl]","[kul]","adj.凉的",'adj.凉的,凉快的,冷静的,冷色系的|||adv.冷静地|||n.凉快|||vt.&vi.(使)变凉,(使)冷静','Even when you argue, you should try to keep cool.','即使在争辩时，你也要尽力保持冷静。','A day in jail cooled him off.','一天的铁窗生活使他冷静了下来。'}

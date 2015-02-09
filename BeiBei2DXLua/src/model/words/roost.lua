@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["roost"]={"roost","[ruːst]","[rust]","n.栖木",'n.栖木,鸟窝,休息所|||v.栖息,安歇','It\'s Bill\'s wife who really rules the roost in that family.','在比尔家里，真正当家的是她的老婆。','Her selfishness will come home to roost someday.','她的自私总有一天会得到报应。'}

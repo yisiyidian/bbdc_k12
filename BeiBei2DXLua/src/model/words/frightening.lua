@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frightening"]={"frightening","['fraɪt(ə)nɪŋ; 'fraɪtnɪŋ]","['fraɪtnɪŋ]","adj.令人恐惧的",'adj.令人恐惧的,令人害怕的|||动词frighten的现在分词','The mask was so lifelike it was quite frightening.','该面具非常逼真以至看起来有点恐怖.','That kind of experience is really frightening.','那种经历确实够恐怖的。'}

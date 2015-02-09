@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bureau"]={"bureau","['bjʊərəʊ]","['bjʊro]","n.局",'n.局,办公处','The auctioneer knocked the bureau down to a furniture dealer from York.','拍卖者将写字台卖给从约克来的家具商.','He works in this bureau.','他在这个局工作过。'}

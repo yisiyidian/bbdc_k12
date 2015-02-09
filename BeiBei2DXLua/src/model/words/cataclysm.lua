@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cataclysm"]={"cataclysm","['kætə,klɪz(ə)m]","['kætəklɪzəm]","n.大洪水",'n.大洪水,地震,(社会政治的)大变动','The extinct volcano\'s eruption would mean a cataclysm for the city.','死火山又重新喷发，对这座城市来说意味着大难临头。','Wenchuan earthquake is a cataclysm','汶川大地震是次灾难'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["awfully"]={"awfully","['ɔːfʊlɪ]","['ɔfli]","adv.可怕地",'adv.可怕地,非常地,极端地','Oh, no. I am awfully sorry. I\'ll send it again.','哦，糟糕。真是抱歉。我再传一次好了。','This tin-opener is awfully fiddly.','这把罐头刀很不好使.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interfere"]={"interfere","[ɪntə'fɪə]","[,ɪntɚ'fɪr]","vi.妨碍",'vi.妨碍,冲突,干涉','He tries not to let (his) business interfere with his home life.','他尽量不让日常工作妨碍他的家庭生活.','Don\'t interfere with my business.','不要干涉我的事情。'}

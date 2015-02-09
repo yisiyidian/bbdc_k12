@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["provincial"]={"provincial","[prə'vɪnʃ(ə)l]","[prə'vɪnʃl]","adj.省的",'n.乡下人,地方人民|||adj.省的,地方的,偏狭的','The man displayed provincial attitudes towards the theatre.','这个人对戏剧的态度很保守。','Owen died an unknown provincial.','欧文死的时候是一个不为人知的外乡人。'}

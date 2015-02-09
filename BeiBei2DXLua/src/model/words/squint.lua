@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["squint"]={"squint","[skwɪnt]","[skwɪnt]","v.使变斜视眼",'v.使变斜视眼,斜视，眯眼看，偏移，窥视|||n.斜视，斜孔小窗|||adj.斜视的，斜的','He has a bad squint.','他患有严重的斜视。','He squinted in the bright sunlight.','他在很亮的阳光下眯起了眼睛。'}

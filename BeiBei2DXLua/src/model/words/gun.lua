@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gun"]={"gun","[gʌn]","[ɡʌn]","n.枪",'n.枪,炮','The soldier saw a gun jutting out from a bush.','那士兵看见一支枪从矮树丛伸出来。','The gun has an elevation of 45 degrees.','这门炮的仰角为45度.'}

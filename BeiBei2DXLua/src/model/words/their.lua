@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["their"]={"their","[ðeə]","[ðɛr]","adj.他们的",'adj.他们的,它们的|||pron.他(她,它)们的','The Government are back-pedalling on their election promises.','内阁正在背弃它竞选时的诺言.','The ring was important to her as an emblem of their love.','这枚戒指是他们爱情的象征，对她是重要的。'}

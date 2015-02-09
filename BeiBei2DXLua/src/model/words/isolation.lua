@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["isolation"]={"isolation","[aɪsə'leɪʃ(ə)n]","[,aɪsə'leʃən]","n.隔离",'n.隔离,孤立','The millionaire lived in complete isolation from the outside world.','这位富翁过着与世隔绝的生活.','His isolation has made him blunt about the feelings of others.','他的孤立使他对别人的感情木然无知.'}

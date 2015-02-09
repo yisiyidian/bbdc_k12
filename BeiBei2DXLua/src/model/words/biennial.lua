@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["biennial"]={"biennial","[baɪ'enɪəl]","[baɪ'ɛnɪəl]","adj.两年一次的",'adj.两年一次的','This competition is biennial.','这个比赛两年举行一次。','The workers were strongly against the biennial election.','工人们强烈反对两年一次的选举。'}

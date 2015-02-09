@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["automobile"]={"automobile","['ɔːtəməbiːl]","[,ɔtəmə'bil]","n.汽车",'n.汽车|||adj.汽车的','He is repairing the brake lever of an automobile.','他正在修理汽车的刹车杆.','He huddled the children into the automobile.','他急急忙忙地把孩子们推进汽车。'}

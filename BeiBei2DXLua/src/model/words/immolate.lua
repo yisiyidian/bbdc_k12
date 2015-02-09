@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immolate"]={"immolate","['ɪməleɪt]","['ɪməlet]","vt.为供神而宰杀",'vt.为供神而宰杀,供奉牲礼','Millions of people were immolated in World War I.','千百万的人们在第一次世界大战中被杀死。','He would immolate himself for their noble cause.','他愿意为他们的崇高事业牺牲自己。'}

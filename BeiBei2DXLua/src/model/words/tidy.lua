@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tidy"]={"tidy","['taɪdɪ]","['taɪdi]","adj.整洁的",'n.(沙发,椅子等的)背罩,装杂物的容器|||adj.饱满的,令人满意的,整洁的,可观的|||vt.使整齐|||vi.整理','She\'s put aside a tidy sum for her retirement.','她存了一笔相当可观的钱以备退休之用。','He combed his house\'s mane tidy.','他把他的马的鬃毛梳理整齐。'}

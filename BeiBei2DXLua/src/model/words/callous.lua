@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["callous"]={"callous","['kæləs]","['kæləs]","adj.麻木的",'adj.麻木的,无情的,硬结的，起老茧的','Her callous attitude repels me.','她冷酷无情的态度引起我的反感。','She was selfish, arrogant and often callous.','她自私傲慢，而且往往冷酷无情。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incorrect"]={"incorrect","[ɪnkə'rekt]","[,ɪnkə'rɛkt]","adj.不正确的",'adj.不正确的,错误的','The parcel was returned to the sender because the directions were incorrect.','包裹因姓名地址有误而退给了寄件人.','an incorrect answer.','错误的回答'}

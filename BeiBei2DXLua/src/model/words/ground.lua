@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ground"]={"ground","[graʊnd]","[ɡraʊnd]","n.地面",'n.土地,战场,地面,根据,背景|||vt.放在地上,使...搁浅,打基础,grind的过去式和过去分词','The expedition covered a lot of ground.','探险队到过很多地方.','Boredom is not a ground for divorce.','日久生厌不能成为离婚的理由.'}

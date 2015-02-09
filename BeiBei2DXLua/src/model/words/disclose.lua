@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disclose"]={"disclose","[dɪs'kləʊz]","[dɪs'kloz]","vt.揭露",'vt.揭露','The report disclosed that he had served in prison.','报告披露他曾坐过牢。','The authorities finally disclosed the truth to the press.','当局终于向新闻界透露了真相。'}

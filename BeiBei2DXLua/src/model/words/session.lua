@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["session"]={"session","['seʃ(ə)n]","['sɛʃən]","n.会议",'n.会议,开庭期,市盘,学期|||adj.短期的','Several bills were enacted at the end of this session of Parliament.','这届国会结束时，好几个议案制定成为法律。','Parliament won\'t be in session again until after Christmas.','国会将等到圣诞节后才再进入会期。'}

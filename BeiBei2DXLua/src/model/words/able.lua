@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["able"]={"able","['eɪb(ə)l]","['ebl]","adj.能干的",'adj.能干的,有能力的','Free will makes us able to choose our way of life.','自由的意志使我们可以选择自己的生活方式。','By no means was he able to handle it.','这件事他绝对没办法处理。'}

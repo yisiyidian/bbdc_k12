@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["avenue"]={"avenue","['æv(ə)njuː]","['ævənu]","n.大街",'n.林荫道,大街,途径手段','An avenue is usually a wide street of houses, often in the suburbs and lined with trees.','通常指两旁有房子的宽阔街道，常指郊区的林荫道。','Books are avenues to knowledge.','书是通向知识的道路。'}

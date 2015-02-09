@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ferocity"]={"ferocity","[fə'rɒsɪtɪ]","[fə'rɑsəti]","n.凶猛性",'n.凶猛性,残忍性,狂暴的行为','People all over the world are filled with indignation with the ferocity of NATO.','全世界的人们都对北约的暴行感到义愤填膺。','The ferocity of them frightened me.','他们的残暴吓坏了我。'}

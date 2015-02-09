@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["republic"]={"republic","[rɪ'pʌblɪk]","[rɪ'pʌblɪk]","n.共和国",'n.共和国,共和政体','Most republic have president as head of state.','大多数共和国国家以总统为国家元首。','the Fourth ||Republic|| of France.','法兰西第四共和国'}

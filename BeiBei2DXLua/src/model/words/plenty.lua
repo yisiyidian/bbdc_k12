@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plenty"]={"plenty","['plentɪ]","['plɛnti]","n.充足",'n.充足,大量','For tracksuits you need material with plenty of stretch.','做田径服需要用弹性强的料子。','As I had plenty of money I was able to help her.','我钱很宽裕，能帮助她。'}

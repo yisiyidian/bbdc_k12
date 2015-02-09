@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dish"]={"dish","[dɪʃ]","[dɪʃ]","n.盘碟",'n.盘碟,菜肴,凹形|||vt.装盘,提出,揭露,挖空|||vi.闲谈','That dish is too shallow to serve soup in.','那只盘子太浅了，不能盛汤。','The careless waiter dropped the dish onto the ground.','那个粗心的侍者把盘子摔到了地上。'}

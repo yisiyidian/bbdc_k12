@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crack"]={"crack","[kræk]","[kræk]","vt.使破裂",'vt.使破裂；打开；变声|||vi.破裂；爆裂|||n.裂缝；声变；噼啪声|||adj.最好的；高明的','Police are cracking down on drug dealers.','警方现对贩毒分子严惩不贷。','The suspect cracked under questioning.','嫌疑分子在审问之下招供了。'}

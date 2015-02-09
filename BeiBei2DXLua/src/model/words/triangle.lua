@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["triangle"]={"triangle","['traɪæŋg(ə)l]","['traɪæŋɡl]","n.三角(形)",'n.三角(形)','A triangle of land.','三角形的一块地','He outlined the triangle in red.','他用红笔画出三角形.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["traverse"]={"traverse","['trævəs; trə'vɜːs]","[trə'vɝs]","n.横贯",'n.横贯,横木|||v.横过,铭刻','The railway traverses hundreds of miles of desert.','这条铁路贯穿数百英里的沙漠。','Searching lights traversed the sky.','探照灯扫过天空。'}

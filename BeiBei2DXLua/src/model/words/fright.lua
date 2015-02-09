@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fright"]={"fright","[fraɪt]","[fraɪt]","n.惊骇",'n.惊骇,吃惊','He cried out in fright as the dark figure approached.','那个黑影向他逼近, 他吓得叫了出来.','The horse reared (up) in fright.','那马因受惊而用後腿直立（起来）.'}

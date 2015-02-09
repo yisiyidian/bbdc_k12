@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pavement"]={"pavement","['peɪvm(ə)nt]","['pevmənt]","n.人行道",'n.人行道','Tourists crowded the pavement.','游客把人行道挤得水泄不通.','The pavement was covered in dogs\' excrement.','便道上满是狗屎.'}

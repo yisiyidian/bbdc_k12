@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mercantile"]={"mercantile","['mɜːk(ə)ntaɪl]","['mɝkəntɪl]","adj.贸易的",'adj.贸易的,商业的|||n.商品','He was interested in mercantile business.','他对商业贸易感兴趣。','America had the largest mercantile marine.','美国当时拥有最大的商船队。'}

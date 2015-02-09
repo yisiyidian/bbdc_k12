@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["videocassette"]={"videocassette","[vɪdɪəʊkə'set]","[ ,vidiəukæ'set ]","n.录像带",'n.录像带','I would like to buy some videocassette tapes.','我想买一些录影带.','Before the videocassette recorder there was the movie projector and screen.','在卡匣式录影机出来之前,我们用的是电影放映机与屏幕.'}

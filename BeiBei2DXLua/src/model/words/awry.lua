@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["awry"]={"awry","[ə'raɪ]","[ ə'raɪ ]","adj.扭曲的",'adj.扭曲的,走样的|||adv.错误地,歪,斜','She was in a fury over a plan that had gone awry.','计划出了问题，她很愤怒。','Our plans went awry.','我们的计划出岔子了。'}

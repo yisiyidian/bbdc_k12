@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["probe"]={"probe","[prəʊb]","[prob]","n.探针",'n.探针,调查,探测器|||vt.用探针测,详细调查|||vi.详细调查','He was asking ||probing|| questions.','他提出了一些盘根究底的问题。','He probed the swelling anxiously with his finger.','他很担心地用手指触摸肿处。'}

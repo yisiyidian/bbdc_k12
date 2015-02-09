@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["candidacy"]={"candidacy","['kændɪdəsɪ]","['kændədəsi]","n.候选人的地位",'n.候选人的地位,候选资格','Today he is formally announcing his candidacy for President.','今天他将正式宣布参加总统竞选。','Today he is formally announcing his candidacy for president.','今天他正式宣布他的总统候选人身份。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["torrent"]={"torrent","['tɒr(ə)nt]","['tɔrənt]","n.激流",'n.激流,山洪','The torrent scoured a gully down the hillside.','那急流顺山坡而下冲出一条水沟.','The rain fell in torrents.','大雨倾盆。'}

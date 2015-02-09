@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repute"]={"repute","[rɪ'pjuːt]","[rɪ'pjut]","n.名望",'n.名望,名气,声望|||vt.认为,以为','He has little repute as an academic.','他是个名不见经传的大学教师.','He is held in high repute.','他名声很好。'}

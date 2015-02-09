@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["balderdash"]={"balderdash","['bɔːldədæʃ]","['bɔldɚdæʃ]","n.胡言乱语",'n.胡言乱语，废话','He\'s talking balderdash.','他胡说八道.','In view of this, cyclical stocks in 2008 is balderdash.','In view of this, cyclical stocks in 2008 is balderdash. 由此看来，周期性股票的确是2008年的梦呓。'}

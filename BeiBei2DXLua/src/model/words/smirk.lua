@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smirk"]={"smirk","[smɜːk]","[smɝk]","v.假笑",'v.假笑,得意地笑|||n.假笑，傻笑','A dozen people were watching her, smirking at her discomfort.','有十来个人在看着她，对她不安的样子幸灾乐祸地笑着。','Her mouth was drawn back into a smirk of triumph.','她咧开嘴，洋洋得意地笑了起来。'}

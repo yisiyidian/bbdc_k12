@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["settlement"]={"settlement","['set(ə)lm(ə)nt]","['sɛtlmənt]","n.[建]沉降",'n.[建]沉降;解决,结算,殖民(地),租界;居留地;新建区;住宅区','There is no prospect of a settlement of the dispute.','这场纠纷根本不可能获得解决.','Chances of a settlement were effectively wrecked by his speech.','和解的机会事实上被他的演讲破坏了。'}

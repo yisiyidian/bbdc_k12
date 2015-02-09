@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unfit"]={"unfit","[ʌn'fɪt]","[ ,ʌn'fit ]","adj.不合适的",'adj.不合适的|||v.&n.不适合','You\'re very unfit; you ought to take up running.','你身体很弱, 应该练练跑步.','A cycling holiday would be too much for an unfit person like me.','像我这种身体，骑自行车度假力不从心。'}

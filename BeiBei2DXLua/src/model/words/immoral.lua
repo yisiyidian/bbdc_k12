@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immoral"]={"immoral","[ɪ'mɒr(ə)l]","[ɪ'mɔrəl]","adj.不道德的",'adj.不道德的','Contrary to conscience, morality, or law; immoral or wicked.','不道德的，不正当的不合道德、良知或法律规则的；不道德的或邪恶的','An evil, degrading, or immoral practice or habit.','不道德行为，恶习邪恶的、堕落的或者不道德的行为或者习惯'}

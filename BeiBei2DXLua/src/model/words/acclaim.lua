@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acclaim"]={"acclaim","[ə'kleɪm]","[ə'klem]","n.喝采",'n.喝采,欢呼,赞同|||v.欢呼,喝采,称赞','Her performance won her much critical acclaim.','她的表演大获评论界赞颂。','acclaim or praise for exceptional achievement','对杰出成就所作的称赞或颂扬'}

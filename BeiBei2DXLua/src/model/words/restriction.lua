@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["restriction"]={"restriction","[rɪ'strɪkʃ(ə)n]","[rɪ'strɪkʃən]","n.限制",'n.限制,约束|||vi.结果,(作为结果)发生','The swimming club is open to families in the neighborhood without restriction.','这个游泳俱乐部对邻近地区的家庭开放，不受限制。','One restriction on agency action takes the form of judicial review.','对机构行为实行限制的另外一种形式表现为司法复审.'}

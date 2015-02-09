@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["predicament"]={"predicament","[prɪ'dɪkəm(ə)nt]","[prɪ'dɪkəmənt]","n.状态",'n.状态,穷境,困局','A difficult or embarrassing situation; a predicament.','困境，窘境很困难的或发窘的局面；难题','If you had no enemy, you are apt to be in the same predicament in regard to friend.','假使你全无仇敌，那么在朋友方面就易陷于同样的贫乏了。'}

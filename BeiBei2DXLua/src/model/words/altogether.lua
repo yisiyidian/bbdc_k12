@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["altogether"]={"altogether","[ɔːltə'geðə; ɒl-]","[,ɔltə'ɡɛðɚ]","adv.总共",'adv.总共，完全','The next-best solution is to abandon the project altogether.','仅次于最佳的解决方法是放弃全部计划。','There are four of us altogether.','我们总共有四个人。'}

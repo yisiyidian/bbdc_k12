@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["succession"]={"succession","[sək'seʃ(ə)n]","[sək'sɛʃən]","n.连续",'n.连续,继承权,继位','There are a succession of rainy days here.','这里一连好几天都是雨天。','A succession of one-man stalls offered soft drinks','一连串的个体户提供碳酸饮料。'}

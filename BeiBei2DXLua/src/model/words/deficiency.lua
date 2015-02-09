@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deficiency"]={"deficiency","[dɪ'fɪʃ(ə)nsɪ]","[dɪ'fɪʃənsi]","n.缺乏",'n.缺乏,不足,缺点','I have a slight calcium deficiency.','我有点缺钙。','a nutritional deficiency.','营养缺乏'}

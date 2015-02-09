@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["declaim"]={"declaim","[dɪ'kleɪm]","[dɪ'klem]","v.高谈阔论",'v.高谈阔论,雄辩,大声说','It is not a sign of humility to declaim against pride.','用慷慨激昂的言语攻击傲慢并不是谦逊的标志。','She wrote a book declaiming against our corrupt society.','她写了一本书抨击我们这腐败的社会.'}

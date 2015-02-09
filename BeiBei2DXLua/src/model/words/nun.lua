@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nun"]={"nun","[nʌn]","[nʌn]","n.尼姑",'n.尼姑,修女','In a surprising denouement, she becomes a nun.','结局出人意表, 她当修女了.','Any woman in the world, even a nun, will rather lose her virtue than her reputation.','世间的女性，甚至尼姑，都情愿失掉贞操也不愿失掉声誉。'}

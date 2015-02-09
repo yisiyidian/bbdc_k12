@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abortive"]={"abortive","[ə'bɔːtɪv]","[ə'bɔrtɪv]","adj.早产的",'adj.早产的，失败的,落空的，[生]发育不全的','We had to abandon our abortive attempts.','我们的尝试没有成功，不得不放弃。','Somehow the whole abortive affair got into the FBI files.','这件早已夭折的案子不知怎么就进了联邦调查局的档案。'}

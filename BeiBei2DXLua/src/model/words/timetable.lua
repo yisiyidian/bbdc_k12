@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["timetable"]={"timetable","['taɪmteɪb(ə)l]","['taɪm'tebl]","n.时间表",'n.时间表,时刻表，课程表','Can anyone design a better timetable?','有人能定出更好的时间表吗?','It seems illogical to change the timetable so often.','时间表变动得如此频繁, 似乎没有什麽道理.'}

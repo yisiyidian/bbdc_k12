@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["souvenir"]={"souvenir","[,suːvə'nɪə]","[,suvə'nɪr]","n.纪念品",'n.纪念品','Maybe I shall get some souvenir for the folks back at the office.','也许我该带些纪念品回去给公司同事。','Please accept this as a souvenir for our friendship.','请接受这个作为我们友谊的纪念品。'}

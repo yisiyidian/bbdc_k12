@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jaundiced"]={"jaundiced","['dʒɔndɪst]","[ 'dʒɔ:ndist ]","adj.患黄疸病的",'adj.患黄疸病的,有偏见的,嫉妒的','The general watched the proceedings with a jaundiced eye.','这位将军以带有偏见的眼光关注事态发展。','The financial markets are taking a jaundiced view of the Government\'s motives.','金融市场对政府的动机存有偏见。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subsequent"]={"subsequent","['sʌbsɪkw(ə)nt]","['sʌbsɪkwənt]","adj.随后的",'adj.随后的,后来的','The problem will be discussed at length in subsequent chapters.','这个问题将在后面几章详细讨论。','||Subsequent|| events vindicatedhis suspicions.','后来的事实表明他的怀疑有道理。'}

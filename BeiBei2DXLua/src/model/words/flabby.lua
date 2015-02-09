@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flabby"]={"flabby","['flæbɪ]","['flæbi]","adj.软弱的",'adj.软弱的,没气力的,不稳的','Soon he became a weak and flabby old man.','他马上变成一个非常软弱无力的人了','His eyes were not keen, his face marked, his hands flabby.','他目光呆滞，满脸皱纹，双手无力'}

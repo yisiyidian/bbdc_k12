@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waif"]={"waif","[weɪf]","[wef]","n.流浪者",'n.流浪者，迷途动物，无主失物|||n.信号旗','A waif is begging on the street.','街上有一个流浪儿正在乞讨。','The book is about a charming 10-year-old waif who embarks on a series of adventures with a scruffy canine sidekick.','这本书讲的是一个大约10岁大的可爱流浪儿和一只小脏狗一起经历的一系列历险故事。'}

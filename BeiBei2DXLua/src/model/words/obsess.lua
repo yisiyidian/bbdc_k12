@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obsess"]={"obsess","[əb'ses]","[əb'sɛs]","vt.使(某人)牵挂",'vt.使(某人)牵挂,惦念,着迷或困扰|||vi.牵挂,惦念,着迷或困扰','The fear of death obsessed her throughout her old age.','她晚年一直受着惧怕死亡的困扰。','She stopped drinking but began obsessing about her weight.','她戒了酒，但又开始执著于体重问题。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forbid"]={"forbid","[fə'bɪd]","[fɚ'bɪd]","vt.禁止",'vt.禁止,妨碍,阻止','Smoking is forbidden in this office.','这间办公室禁止吸烟。','Lack of time forbids any further discussion at the point.','由于时间不够，现在不能深入讨论这个问题。'}

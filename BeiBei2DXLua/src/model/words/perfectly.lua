@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perfectly"]={"perfectly","['pɜːfɪk(t)lɪ]","['pɝfɪktli]","adv.完全地",'adv.完全地,无瑕疵地,完整地，完美地，圆满地','He is perfectly sober.','他根本没喝醉。','This wine complements the food perfectly.','用这种酒配这种菜肴最妙不过了。'}

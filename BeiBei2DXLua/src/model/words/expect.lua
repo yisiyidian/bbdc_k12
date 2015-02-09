@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expect"]={"expect","[ɪk'spekt; ek-]","[ɪk'spɛkt]","v.期待",'v.预期,盼望,期待','I expect I will be back on Sunday.','我预计我会在周日回来的。','I will do what is expected of me.','我会尽本分的。'}

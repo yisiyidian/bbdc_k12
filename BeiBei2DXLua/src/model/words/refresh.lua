@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["refresh"]={"refresh","[rɪ'freʃ]","[ri'frɛʃ]","vt.&vi.使...生气蓬勃",'vt.&vi.使...生气蓬勃,提起精神,恢复精神','I looked at the map to refresh my memory of the road.','我看着地图，想使自己回忆起那条道路。','Let me refresh your memory with some fact.','我来提几件事帮你恢复记忆吧。'}

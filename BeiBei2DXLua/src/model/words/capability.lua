@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capability"]={"capability","[keɪpə'bɪlɪtɪ]","[ˌkeɪpəˈbɪləti]","n.能力",'n.能力,才能,性能,容量','The act or capability of attracting.','吸引力，魅力吸引的行为或能力','The capability, especially of a vehicle tread or tire, to remain on top of a soft surface, such as sand, wet ground, or snow.','浮力，不下陷能力尤指车辆的轮胎表层使轮胎保持不陷入柔软表面如沙地、湿地或雪地的能力'}

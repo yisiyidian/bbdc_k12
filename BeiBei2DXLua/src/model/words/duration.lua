@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["duration"]={"duration","[djʊ'reɪʃ(ə)n]","[du'reʃən]","n.持续时间",'n.持续时间，期间','She sat quietly through the duration of the speech.','她在演讲期间安静地坐着','Let\'s hope the gunmen will hold off for the duration of the cease-fire.','但愿持枪歹徒在停火期间能约束自己的行动。'}

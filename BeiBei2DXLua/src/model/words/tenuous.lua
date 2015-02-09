@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tenuous"]={"tenuous","['tenjʊəs]","['tɛnjuəs]","adj.稀薄的",'adj.稀薄的,微细的|||贫乏的;平淡的;脆弱的,无力的','This decision puts the President in a somewhat tenuous position.','这个决定使得总统的位置有些岌岌可危。','The cultural and historical links between the many provinces were seen to be very tenuous.','许多省份之间的文化和历史纽带被认为是很脆弱的。'}

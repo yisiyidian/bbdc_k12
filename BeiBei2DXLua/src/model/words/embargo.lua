@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["embargo"]={"embargo","[em'bɑːgəʊ; ɪm-]","[ɪm'bɑrɡo]","n.封港令",'n.封港令，禁运，禁止（通商）','Britain was signalling its readiness to have the embargo lifted.','英国表示愿意取消贸易禁令。','The embargo would only hurt innocent civilians.','禁运只会殃及无辜的百姓。'}

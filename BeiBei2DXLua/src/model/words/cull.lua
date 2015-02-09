@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cull"]={"cull","[kʌl]","[kʌl]","v.拣选",'v.拣选,剔除|||vt.采摘(花),拣选','The information is culled from various reference books.','这份资料是从各种参考书中摘出的。','Deer are culled by hunters.','猎人把鹿杀掉了一批。'}

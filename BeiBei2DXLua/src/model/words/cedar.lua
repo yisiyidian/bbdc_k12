@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cedar"]={"cedar","['siːdə]","['sidɚ]","n.雪松",'n.雪松，雪松木材','The durable, aromatic wood of any of these plants, especially that of the red cedar, often used to make chests.','雪松木这些植物的耐久的、带香味的木材，尤指红雪松的木材，常用于制作箱子','The bird perched on a cedar by the window.','鸟栖息在窗前的雪松树上。'}

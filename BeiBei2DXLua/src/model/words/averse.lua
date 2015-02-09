@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["averse"]={"averse","[ə'vɜːs]","[ə'vɝs]","adj.厌恶的",'adj.厌恶的,反对的','We are averse to taking action.','我们反对采取行动。','He is averse to hard work.','他不愿意努力工作。'}

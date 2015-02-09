@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["necromancy"]={"necromancy","['nɛkromænsi]","[ 'nekrəumænsi ]","n.通灵术",'n.通灵术,巫术','The necromancy is esoteric.','巫术很神秘。','He had been considered a maverick for years due to his insistence on studying the forbidden arts of necromancy.','多年以来，他一直被认为是一个异类，因为他坚持研究被禁止的通灵术。'}

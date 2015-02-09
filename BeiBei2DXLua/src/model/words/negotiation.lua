@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["negotiation"]={"negotiation","[nɪgəʊʃɪ'eɪʃ(ə)n]","[nɪ,ɡoʃɪ'eʃən]","n.谈判",'n.谈判,协商','We all accused the union of torpedoing the negotiation.','我们都谴责工会破坏谈判。','The negotiation is off.','和谈取消了。'}

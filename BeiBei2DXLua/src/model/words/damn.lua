@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["damn"]={"damn","[dæm]","[dæm]","adj.该死的",'vt.谴责，该死|||vi.诅咒,下地狱|||n.诅咒|||adj.该死的，可恶的|||adv.非常','not worth a damn.','一文不值','The book was damned by the critics.','这本书受到批评家的指责。'}

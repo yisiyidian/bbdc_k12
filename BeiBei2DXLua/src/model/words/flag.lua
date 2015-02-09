@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flag"]={"flag","[flæg]","[flæg]","n.旗子",'n.旗标,旗子,信号旗|||vt.打旗号|||vi.无力地下垂,减退','Our exporters proudly kept the flag flying at the international trade exhibition.','在国际贸易展览会上，我国的出口商为国争光。','The streets were flagged to celebrate the royal wedding.','街上挂起了旗子，庆祝皇室婚礼。'}

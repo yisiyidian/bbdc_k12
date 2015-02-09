@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["denouement"]={"denouement","[deɪnuː'mɒŋ]","[ deinu:'mɔŋ ]","n.(小说的)结尾",'n.(小说的)结尾,结局','In a surprising denouement, she becomes a nun.','结局出人意料，她当修女了。','He was in no way pleased by this rough denouement.','这样草草收场，他绝不会高兴的。'}

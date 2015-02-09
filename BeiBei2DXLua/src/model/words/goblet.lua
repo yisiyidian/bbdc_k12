@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["goblet"]={"goblet","['gɒblɪt]","['ɡɑblət]","n.高脚杯",'n.高脚杯,酒杯','A large drinking bowl or goblet made of metal or hard wood.','大酒碗用金属或硬木做成的大酒碗或酒杯','He poured some wine into the goblet.','他向高脚酒杯里倒了一些葡萄酒。'}

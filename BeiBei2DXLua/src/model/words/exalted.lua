@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exalted"]={"exalted","[ɪg'zɔːltɪd]","[ɪg'zɔltɪd]","adj.尊贵的",'adj.尊贵的,高位的,高尚的|||动词exalt的过去式和过去分词','The performance truly exalted the audience.','演出确使观众情绪高昂。','He was exalted to the position of general manager.','他被提升到总经理的职位。'}

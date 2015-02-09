@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preparatory"]={"preparatory","[prɪ'pærət(ə)rɪ]","[prɪ'pærətɔri]","adj.预备的",'adj.预备的,准备的,初步的','A preparatory action or measure.','准备预防性行动或措施','What are your preparatory measures?','你的初步措施是什么？'}

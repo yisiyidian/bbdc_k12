@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["astronomer"]={"astronomer","[ə'strɒnəmə]","[ə'strɑnəmɚ]","n.天文学家",'n.天文学家','My ideal is to be an astronomer.','我的理想是当一个天文学家。','The astronomer explained what had happened','天文学家解释了事情经过。'}

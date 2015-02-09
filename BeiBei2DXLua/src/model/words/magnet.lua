@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magnet"]={"magnet","['mægnət]","['mægnɪt]","n.磁体",'n.磁体,磁铁,有强大吸引力的人或物','A magnet attracts steel.','磁石能吸钢铁.','Human beings have learned out how to make magnet of cast iron.','人类已经学会如何从生铁制出磁铁。'}

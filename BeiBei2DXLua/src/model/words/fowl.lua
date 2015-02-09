@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fowl"]={"fowl","[faʊl]","[faʊl]","n.禽",'n.禽，禽肉|||v.猎捕野禽','There are many kinds of fowl.','家禽的种类很多。','Carve the fowl into 8 pieces.','把这只家禽切成8块。'}

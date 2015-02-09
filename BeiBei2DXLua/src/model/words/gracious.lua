@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gracious"]={"gracious","['greɪʃəs]","['ɡreʃəs]","adj.亲切的",'adj.亲切的,高尚的','In beauty, that of favor, is more than that of color; and that of decent and gracious motion, more than that of favor.','仔细分析起来，形体之美要胜于颜色之美，而优雅行为之美又胜于形体之美。','The queen was gracious enough to invite us.','女王亲切地邀请了我们。'}

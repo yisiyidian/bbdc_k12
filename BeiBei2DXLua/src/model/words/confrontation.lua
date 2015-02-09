@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["confrontation"]={"confrontation","[,kɒnfrʌn'teɪʃn]","[,kɑnfrən'teʃən]","n.对审",'n.对审,面对面,面对','Even a limited confrontation can escalate into a major war.','即使是局部的对抗也可能扩大成一场大战。','Her angry face forbode a confrontation.','她一脸怒气预示将有一场冲突.'}

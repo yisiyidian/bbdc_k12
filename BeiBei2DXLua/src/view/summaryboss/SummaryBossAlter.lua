@@ -192,7 +192,7 @@ function SummaryBossAlter:win1(entrance)
     end
 
     local hasCheckedIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey)
-    if not hasCheckedIn then
+    if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 then
         checkInEverydayInfo()
     end
     if not hasCheckedIn then
@@ -240,7 +240,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
                 s_CorePlayManager.enterLevelLayer()
             else
                 s_CorePlayManager.leaveSummaryModel(true)
-                if not hasCheckedIn then
+                if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 then
                     s_SCENE:checkInAnimation()
                 else
                     s_CorePlayManager.enterLevelLayer()

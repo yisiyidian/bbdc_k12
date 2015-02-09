@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["street"]={"street","[striːt]","[strit]","n.街道",'n.街道|||adj.街道的','I met him in the street.','我在街上遇到他。','The troops walked in procession through the street.','军队排成队伍走过街道。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subterranean"]={"subterranean","[,sʌbtə'reɪnɪən]","[,sʌbtə'renɪən]","adj.地下的",'adj.地下的，隐蔽的','A subterranean stream is flowing through this area.','有一条地下河流经这个区域.','London has 9 miles of such subterranean passages.','伦敦像这样的地下通道有9英里长。'}

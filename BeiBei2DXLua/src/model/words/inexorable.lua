@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inexorable"]={"inexorable","[ɪn'eks(ə)rəb(ə)l]","[ɪn'ɛksərəbl]","adj.不为所动的",'adj.不为所动的,坚决不变的','Facts are inexorable.','事实是无情的。','Our reform made an inexorable march of progress.','我们的改革取得了势不可挡的进展。'}

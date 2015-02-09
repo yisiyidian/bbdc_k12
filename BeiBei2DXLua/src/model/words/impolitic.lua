@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impolitic"]={"impolitic","[ɪm'pɒlɪtɪk]","[ɪm'pɑlətɪk]","adj.不明智的",'adj.不明智的,失策的','Your suggest is impolitic.','你的建议很不明智。','That\'s impolitic and impolite, but it\'s not as bad as Mr. Bush\'s response.','那样很失策且无礼，但没有布什先生回应得那么槽糕。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["argue"]={"argue","['ɑːgjuː]","['ɑrgjʊ]","vt.争论",'vt.争论,争吵,劝说,表明|||vi.提出理由,争论,辩论','We argued her into joining us.','我们说服她参加了宴会。','They argued the case for hours.','他们就这个案子辩论了几个小时。'}

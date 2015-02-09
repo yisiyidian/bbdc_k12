@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["portage"]={"portage","['pɔːtɪdʒ; pɔː'tɑːʒ]","['pɔrtɪdʒ]","n.陆运路线",'n.陆运路线,水陆联运,搬运,运费|||v.搬运，由陆路运输','canoed and portaged the goods; portaging around the rapids.','用独木舟及陆路搬运货物；用陆路绕过激流搬运货物','Everyone knows! There\'s no way  but to portage all the cargoes to Russia.','是人都知道啊！ 只能用陆运把你的东西运到俄罗斯。'}

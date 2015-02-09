@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["standard"]={"standard","['stændəd]","['stændɚd]","n.标准",'n.标准，规格；旗，军旗；度量衡标准；直立支柱|||adj.标准的，合格的；普遍的，一般的；公认为优秀的','There is no absolute standard for beauty.','美是没有绝对的标准的.','His work does not reach the standard required.','他的工作成绩达不到要求。'}

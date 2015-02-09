@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prep"]={"prep","[prep]","[prɛp]","n.准备",'n.准备,预备学校,[非正式]课外作业|||v.进预备学校,预备,准备|||abbr.准备（=preparation）|||abbr.介词（=preposition）','A college prep course; did extensive prep work for the interview.','大学预备课程; 为会见作了全面的准备工作','Four years of prep school should polish those children.','四年的预科学习应该让这些孩子变得温文尔雅'}

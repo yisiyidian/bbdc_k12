@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["latent"]={"latent","['leɪt(ə)nt]","['letnt]","adj.潜伏的",'adj.潜伏的,潜在的|||n.隐约的指印,指纹','The now responsibilities drew out his latent talents.','新任务使他潜在的才智充分发挥出来。','The manager did not find her latent abilities.','经理没有发现她潜在的才能。'}

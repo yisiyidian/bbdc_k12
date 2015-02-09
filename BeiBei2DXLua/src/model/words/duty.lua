@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["duty"]={"duty","['djuːtɪ]","['dʊti]","n.义务",'n.税，义务,职责|||adj.值班的,作为一种义务的','It\'s our duty to protect the saplings.','保护树苗是我们的责任。','I arrive at the hospital at eight o\'clock, but I don\'t go on duty until nine.','我八点钟就到医院了，但是九点钟我才去值班。'}

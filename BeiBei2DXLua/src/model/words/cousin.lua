@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cousin"]={"cousin","['kʌz(ə)n]","['kʌzn]","n.堂(或表)兄弟(姐妹)",'n.堂(或表)兄弟(姐妹)','I hear from my cousin every two weeks.','我每两星期就会收到我表哥的来信。','My cousin is an orphan; her parents died when she was young.','我的表姐是孤儿，她的父母在她小时候就去世了。'}

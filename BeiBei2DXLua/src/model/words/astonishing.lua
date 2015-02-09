@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["astonishing"]={"astonishing","[ə'stɒnɪʃɪŋ]","[ə'stɑnɪʃɪŋ]","adj.惊人的",'adj.惊人的|||动词astonish的现在分词','Gazelles can movewith astonishing velocity.','羚羊跑起来有时速度惊人.','How astonishing!','真惊人!'}

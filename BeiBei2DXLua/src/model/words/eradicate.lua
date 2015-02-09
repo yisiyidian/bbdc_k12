@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eradicate"]={"eradicate","[ɪ'rædɪkeɪt]","[ɪ'rædɪket]","v.根除",'v.根除,扑减,根绝','They attempted to eradicate crime.','他们力图根除罪恶。','Smallpox has almost been eradicated.','天花几乎已经被消灭了。'}

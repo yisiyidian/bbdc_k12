@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["astounding"]={"astounding","[ə'staʊndɪŋ]","[ə'staʊndɪŋ]","adj.令人惊骇的",'adj.令人惊骇的|||动词astound的现在分词形式','The company has made them astoundingly rich','公司成就了他们惊人的财富','Mr Zuma\'s duplicity is astounding. With such leaders, Africa is in mortal danger.','祖马先生的表里不一令人震惊。有这样的领导人，非洲危在旦夕。'}

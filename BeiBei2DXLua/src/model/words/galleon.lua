@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["galleon"]={"galleon","['gælɪən]","[ 'ɡæliən ]","n.大型帆船",'n.大型帆船','Many years ago, her grandfather came to USA by a ||Galleon||.','很多年以前，她的爷爷就是搭乘一艘大帆船来到美国的。','Tomorrow a galleon sets sail for Naples.','明天将有一艘帆船开往那不勒斯。'}

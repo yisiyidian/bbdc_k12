@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["effective"]={"effective","[ɪ'fektɪv]","[ɪ'fɛktɪv]","adj.有效的",'adj.有效的,有影响的','This country lacks an effective party of the centre.','这个国家缺少一个能起作用的中立党派.','The president promised swift and effective retribution against the terrorists.','总统答应会迅速有效地惩罚恐怖分子。'}

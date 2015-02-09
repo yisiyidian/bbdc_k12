@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["memorialize"]={"memorialize","[mɪ'mɔːrɪəlaɪz]","[mə'mɔrɪəlaɪz]","vt.纪念",'vt.纪念，请愿','He was praised in print and memorialized in stone throughout the South.','在整个南方地区，他被人们著书称颂，刻碑纪念。','When she died in 1946, her friends wanted to memorialize her in some significant way.','她1946年去世的时候，她的朋友们希望以某种隆重的方式纪念她。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fritter"]={"fritter","['frɪtə]","['frɪtɚ]","v.逐渐浪费",'v.逐渐浪费,细切,剁碎|||n.细片,屑,以肉','He frittered his inheritance away.','他慢慢把他继承的遗产挥霍贻尽。','He has frittered away every chance he ever got.','他把到手的每个机会都糟塌掉了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["silica"]={"silica","['sɪlɪkə]","['sɪlɪkə]","n.硅石",'n.硅石，矽土','The fine particles of almost pure silica remained.','剩下的是几乎纯净的矽土','The crude oil is chromatographed over silica gel.','粗制油状物用硅胶进行色谱分离.'}

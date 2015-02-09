@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["demoralize"]={"demoralize","[dɪ'mɔrəlaɪz]","[ di'mɔrəlaiz ]","vt.使士气低落",'vt.使士气低落,使失去斗志','The troops were thoroughly demoralized by this set-back.','这一挫败使部队士气丧失殆尽.','an inconsistent policy that demoralized the staff.','使工作人员泄气的前后不一致的政策'}

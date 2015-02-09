@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alphabet"]={"alphabet","['ælfəbet]","['ælfə'bɛt]","n.字母表",'n.字母表,基本原理(元素)，符号系统','C comes after B in the alphabet.','在字母表中C接在B後面.','B comes before C in the alphabet.','B在字母表里排在C之前.'}

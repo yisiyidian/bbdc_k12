@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["viewpoint"]={"viewpoint","['vjuːpɒɪnt]","['vjupɔɪnt]","n.观点",'n.观点,看法','He is very good at talking opponents over to his viewpoint.','他善于说服对手改变立场转而赞成他的观点。','I look at this problem from a different viewpoint.','我从不同的观点来看这个问题。'}

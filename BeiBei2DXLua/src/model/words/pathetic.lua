@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pathetic"]={"pathetic","[pə'θetɪk]","[pə'θɛtɪk]","adj.可怜的",'adj.可怜的，悲哀的；感伤的；乏味的','How pathetic!','真让人泄气！','We saw the pathetic sight of starving children.','我们看到挨饿的儿童悲惨可怜的样子。'}

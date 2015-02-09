@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opportunist"]={"opportunist","[ɒpə'tjuːnɪst]","[,ɑpɚ'tunɪst]","n.机会主义者",'n.机会主义者,投机者|||adj.机会主义者的','Stock market is now in trouble because of too many opportunists.','现在的股票市场因为过多的投机分子而陷入混乱。','He\'s a bit of an opportunist.','他这人爱钻空子。'}

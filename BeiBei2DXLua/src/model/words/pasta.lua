@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pasta"]={"pasta","['pæstə]","['pɑstə]","n.意大利通心粉",'n.生面团,意大利通心粉','A dish made with such strips of pasta.','白脱奶油面用这种面条做的食品','He runs a chain of pasta restaurant.','他经营着一个面食餐馆联号。'}

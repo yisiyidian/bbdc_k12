@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["staid"]={"staid","[steɪd]","[sted]","adj.固定的(沉着的)",'adj.固定的(沉着的)','There is nothing staid in this universe.','在这个宇宙里，没有什么是不变的。','The locals were a very staid lot.','当地居民非常保守。'}

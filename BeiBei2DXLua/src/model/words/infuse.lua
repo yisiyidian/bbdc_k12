@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infuse"]={"infuse","[ɪn'fjuːz]","[ɪn'fjuz]","vt.注入",'vt.注入,鼓舞，泡制,植入','The leader had the gift of being able to infuse enthusiasm into the most skeptical member of the group.','那位领导人很有天赋，能使团体中最持怀疑态度的人都充满热情。','Don\'t drink the tea until it has finished ||infusing||.','等茶泡好后再喝。'}

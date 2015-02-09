@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["broaden"]={"broaden","['brɔːd(ə)n]","['brɔdn]","v.变宽",'v.变宽,伸广','Our country has been trying to broaden its commerce with other nations.','我国一直在努力扩大与其他国家的贸易往来。','He (ie His body) broadened out in his twenties.','他二十多岁时身躯变宽了.'}

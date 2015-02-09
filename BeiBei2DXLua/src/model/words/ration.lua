@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ration"]={"ration","['ræʃ(ə)n]","['ræʃən]","n.定额",'n.定额,定量,配给|||vt.限量供应','The Government may have to introduce petrol rationing.','政府可能不得不实行汽油限量供应。','They had to ration petrol during the war.','战时他们不得不限量供给汽油。'}

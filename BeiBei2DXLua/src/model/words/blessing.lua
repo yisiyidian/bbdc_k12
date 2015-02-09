@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blessing"]={"blessing","['blesɪŋ]","['blɛsɪŋ]","n.祝福",'n.祝福,祷告','He called down a blessing on his head.','他祈求降福其身。','His illness was a blessing in disguise, because he afterwards married his nurse.','他生病倒是因祸得福，因为后来他和他的护士结了婚。'}

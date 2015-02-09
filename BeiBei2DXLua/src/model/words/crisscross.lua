@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crisscross"]={"crisscross","['krɪs,krɒs]","['krɪs,krɔs]","v.来回移动",'v.来回移动|||adj.交叉的，十字形的|||n.十字形','An open, crisscross pattern or weave.','格子细工开放式交叉结构或编织法','crisscrossed the country on a speaking tour.','在全国作巡回演说'}

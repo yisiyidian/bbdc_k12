@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["burglarize"]={"burglarize","['bɜːgləraɪz]","['bɝglə,raɪz]","v.入室盗窃",'v.入室盗窃|||=burglarise','The second-floor tenants have been burglarized twice.','二楼的房客们被偷盗了两次','Her home was burglarized.','她的家被盗了。'}

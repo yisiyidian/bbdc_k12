@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maze"]={"maze","[meɪz]","[mez]","n.迷宫",'n.迷宫，曲径，迷惑|||vt.使迷惑','We were quite disorientated by the maze of streets.','街道曲曲弯弯的, 把我们弄得迷失了方向.','An intricate structure of interconnecting passages through which it is difficult to find one\'s way; a maze.','迷宫一种复杂的建筑，里面的通道互相连接很容易使人迷路；曲径'}

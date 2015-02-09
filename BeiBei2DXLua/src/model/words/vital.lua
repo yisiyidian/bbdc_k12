@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vital"]={"vital","['vaɪt(ə)l]","['vaɪtl]","adj.至关重要的",'adj.至关重要的,生死攸关的,有活力的,充满生机的','The government saw the introduction of new technology as vital.','政府认为引进新技术至关重要。','The heart is a vital organ.','心脏是必不可少的。'}

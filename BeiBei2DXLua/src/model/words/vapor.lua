@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vapor"]={"vapor","[veipə]","[veipə]","n.蒸汽",'n.蒸汽','When nitric acid is poured on copper, a brown vapor gives off.','将硝酸倒在铜上, 会散发出一种棕色的蒸气.','Something, such as air or vapor, that is exhaled.','散发物以气体或蒸汽形式发散出的东西'}

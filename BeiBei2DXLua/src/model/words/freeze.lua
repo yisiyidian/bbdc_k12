@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["freeze"]={"freeze","[friːz]","[friz]","v.冻结",'v.冻结,冷冻,僵硬|||[计算机]冻结','The sight of the masked gunman made my blood freeze.','我一看见那个持枪的蒙面人就吓得浑身冰凉。','Ann ||froze|| with terror as the door opened silently.','门一声不响地开了，把安吓呆了。'}

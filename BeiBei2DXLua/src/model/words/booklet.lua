@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["booklet"]={"booklet","['bʊklɪt]","['bʊklət]","n.小册子",'n.小册子','Recent changes in the tax law are clearly set out in the booklet.','在那本小册子里清楚地描述了近来税务法的变更情况。','One that folds or is folded, such as a booklet or pamphlet made of one or more folded sheets of paper.','折叠者, 折叠器, 折叠印刷品折叠或被折叠起来的东西, 比如由一张或多张折叠起来的纸制成的小本子或小册子'}

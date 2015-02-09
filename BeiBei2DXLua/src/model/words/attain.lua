@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attain"]={"attain","[ə'teɪn]","[ə'ten]","vt.&vi.达到",'vt.&vi.达到,获得','I\'m determined to attain my purpose at any cost.','我决心不惜任何代价达到目的。','She pulls every string to attain the end.','她想尽一切办法来达到目的。'}

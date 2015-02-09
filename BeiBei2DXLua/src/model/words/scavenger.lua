@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scavenger"]={"scavenger","['skævɪn(d)ʒə]","['skævɪndʒɚ]","n.清除剂(清道工",'n.清除剂(清道工,选池,基接受体)','He is just fit for a job as scavenger.','他正好当个清道夫之职。','He is not a scavenger nor just a moving appetite as some sharks are.','它不是食腐动物,也不像有些鲨鱼那样,只知道游来游去满足食欲.'}

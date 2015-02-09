@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["finale"]={"finale","[fɪ'nɑːlɪ; -leɪ]","[fɪ'næli]","n.结局",'n.结局,终了,最后的一个乐章','The music worked up to a rousing finale.','该乐曲在激动人心的高潮中结束。','This victory provided a fitting finale to a brilliant season for the club','这次胜利给俱乐部辉煌的赛季画上了圆满的句号。'}

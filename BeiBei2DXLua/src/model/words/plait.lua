@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plait"]={"plait","[plæt]","[plet, plæt]","n.发辫",'n.发辫，褶子|||vt.编成辫，编制，打褶','Isabel wore a jersey and her hair in a plait.','伊莎贝尔穿着一件毛衣、头发扎成了一根辫子。','A plait or braid of hair.','发辫头发梳成的辫子或发辫'}

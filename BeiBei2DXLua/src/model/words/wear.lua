@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wear"]={"wear","[weə]","[wɛr]","vt.穿著",'n.穿著,磨损,耐久性vt.穿著,用旧,耗损,呈现vi.磨损,变旧','The insurance policy does not cover damage caused by normal wear and tear.','保险单内容不包括正常使用所导致的损坏。','The sheets have ||worn|| thin in the middle.','床单的中间部分磨薄了。'}

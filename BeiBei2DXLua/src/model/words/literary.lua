@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["literary"]={"literary","['lɪt(ə)(rə)rɪ]","[lɪtərɛri]","adj.文学的",'adj.文学的','Ba jin is a literary giant.','巴金是一位文坛巨匠。','He used to be a literary agent.','他曾是一位著作经纪人。'}

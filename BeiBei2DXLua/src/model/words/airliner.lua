@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["airliner"]={"airliner","['eəlaɪnə]","['ɛrlaɪnɚ]","n.客机",'n.定期班机,客机','The airliner faded away into the mist.','客机逐渐消失在雾中。','The terrorists are threatening to blow up the hijacked airliner.','恐怖分子扬言要炸毁劫持的客机。'}

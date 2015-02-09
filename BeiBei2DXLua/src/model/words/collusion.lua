@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collusion"]={"collusion","[kə'l(j)uːʒ(ə)n]","[kə'lʊʒən]","n.共谋",'n.共谋,勾结','The officials are in collusion with the criminals.','官员们与罪犯勾结。','He found no evidence of collusion between record companies and retailers.','他没发现唱片公司与零售商串通一气的证据。'}

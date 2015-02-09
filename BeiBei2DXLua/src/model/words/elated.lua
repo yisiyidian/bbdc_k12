@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elated"]={"elated","[ɪ'leɪtɪd]","[ɪ'letɪd]","adj.兴高采烈的",'adj.兴高采烈的|||动词elate的过去式和过去分词形式','The crowds in the square were elated by the news.','这消息使广场上的人群欢欣鼓舞。','He was elated at the news.','这个消息使他很兴奋。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ethylene"]={"ethylene","['eθɪliːn; -θ(ə)l-]","['ɛθɪlin]","n.乙烯",'n.乙烯','A substance, often a liquid such as ethylene glycol or alcohol, mixed with another liquid to lower its freezing point.','防冻剂，防冻液，抗凝剂一种物质，通常是液体，如乙二醇或酒精，和另一种液体混合来降低冰点','apple releases ethylene gas, a plant hormone','苹果会释放乙烯气体，一种植物的荷尔蒙'}

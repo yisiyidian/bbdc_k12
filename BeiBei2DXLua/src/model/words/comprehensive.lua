@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comprehensive"]={"comprehensive","[kɒmprɪ'hensɪv]","[,kɑmprɪ'hɛnsɪv]","adj.综合的",'adj.综合的,广泛的,理解的','The boys\' and girls\' schools have been amalgamated to form a new comprehensive.','男校和女校联合组成了一所新的综合中学。','He was educated at the local comprehensive school.','他曾受教于当地的综合中学。'}

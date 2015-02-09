@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feeling"]={"feeling","['fiːlɪŋ]","['filɪŋ]","n.感觉",'n.感觉,知觉,感情,气氛|||adj.有感情的,富于同情心的,含情脉脉的','His rapid promotion caused much bad feeling among his colleagues.','他获迅速提升在同事中引起很大的不满。','He spoke feelingly about his dismissal.','他激动地谈到自己被解雇一事。'}

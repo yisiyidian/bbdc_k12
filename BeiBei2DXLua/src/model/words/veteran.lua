@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["veteran"]={"veteran","['vet(ə)r(ə)n]","['vɛtərən]","n.老兵",'adj.老练的|||n.老兵,老手','a veteran actor.','资深演员','This washing machine is really a veteran.','这台洗衣机真是老古董了。'}

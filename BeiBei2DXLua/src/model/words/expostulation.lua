@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expostulation"]={"expostulation","[ɪk,spɑstʃə'leʃən]","[ ik,spɔstju'leiʃən ]","n.劝戒",'n.劝戒,忠告','The circle closed up again with a running murmur of expostulation.','那一圈人又合拢来，同时传出一阵咕咕哝哝的劝告声。','I now went into an earnest expostulation with him upon the extravagant length of his report.','接着我就开始苦口婆心地劝导他，说他写的报告过分冗长。'}

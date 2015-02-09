@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curdle"]={"curdle","['kɜːd(ə)l]","['kɝdl]","v.使凝结",'v.使凝结,变稠|||v.(使)结成凝乳,变成凝乳状','The fermentation of milk causes it to curdle.','牛奶发酵会凝结起来。','The sight made my blood curdle.','那景象使我不寒而栗。'}

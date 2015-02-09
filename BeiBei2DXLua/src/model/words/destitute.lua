@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["destitute"]={"destitute","['destɪtjuːt]","['dɛstə'tʊt]","adj.穷困的",'adj.穷困的；无的；缺乏的|||n.赤贫者|||vt.使穷困；夺去','They were destitute of necessaries of life.','他们缺少生活必需品。','He was destitute of human feelings.','他毫无人的感情。'}

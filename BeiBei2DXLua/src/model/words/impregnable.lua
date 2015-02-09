@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impregnable"]={"impregnable","[ɪm'pregnəb(ə)l]","[ɪm'prɛɡnəbl]","adj.无法攻取的",'adj.无法攻取的,要塞坚固的,难攻陷的','The lawyer won his case with an impregnable argument.','律师以无可辩驳的论据打赢了那场官司。','The old Dutch fort with its thick high walls looks virtually impregnable.','古老的荷兰城堡城墙又厚又高，看起来几乎固若金汤。'}

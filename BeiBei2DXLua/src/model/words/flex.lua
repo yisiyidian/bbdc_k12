@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flex"]={"flex","[fleks]","[flɛks]","v.弯曲",'v.弯曲,伸缩,褶曲|||n.电线,松紧带','The gardeners flexed their muscles and began to dig.','园丁们舒腰展臂后才开始挖地。','Capable of being bent or flexed; pliable.','柔软的可弯曲或扭曲的；柔韧的'}

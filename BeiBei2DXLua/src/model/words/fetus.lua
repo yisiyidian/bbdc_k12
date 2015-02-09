@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fetus"]={"fetus","['fiːtəs]","['fitəs]","n.胎",'n.胎,胎儿','An unborn infant; a fetus.','胎儿没有出生的婴儿；胎儿','The position of the fetus in the uterus at birth with respect to the mouth of the uterus.','产位，（胎儿）先露位置分娩时胎儿在子宫中相对于子宫口的位置'}

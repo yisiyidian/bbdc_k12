@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solace"]={"solace","['sɒlɪs]","[ 'sɔləs, -lis ]","n.安慰",'n.安慰|||v.使快乐|||vt.安慰(物),缓和','His career took a nosedive and he turned to drink and drugs for solace.','他的事业一落千丈，开始酗酒吸毒以寻求慰借。','He sought solace in the whisky bottle.','他借酒消愁。'}

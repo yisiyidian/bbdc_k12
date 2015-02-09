@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["movie"]={"movie","['muːvɪ]","['muvi]","n.电影",'n.电影','His last movie was a real turkey.','他最後的那部影片一塌糊涂.','We are supposed to dress up as movie characters for the party, what a novel idea!','我们在晚会上要装扮得像电影中的角色，这是一个多么新奇的主意啊！'}

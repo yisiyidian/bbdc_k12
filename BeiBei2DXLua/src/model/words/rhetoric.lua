@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rhetoric"]={"rhetoric","['retərɪk]","['rɛtərɪk]","n.修辞",'n.修辞,华丽虚饰的语言,修辞学','Strip off the platform rhetoric and what you are left with?','揭掉那一套竞选政纲的花言巧语，你还剩下什么？','I am tired of the empty rhetoric of politicians.','我讨厌政客们的花言巧语。'}

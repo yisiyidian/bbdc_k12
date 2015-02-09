@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["theocracy"]={"theocracy","[θɪ'ɒkrəsɪ]","[θɪ'ɑkrəsi]","n.神权政体",'n.神权政体,神政,神治国','Some religious groups believe that theocracy is the perfect form of government.','一些宗教团体相信，神权政治是最完善的政治型态。','The supreme ruler of a theocracy, fear to lose in the hands of Mace.','一个政教合一的最高统治者最怕失去手中的权杖。'}

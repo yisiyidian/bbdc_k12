@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dimly"]={"dimly","['dɪmli]","[ 'dimli ]","adv.微暗地",'adv.微暗地,朦胧地','The shore was dimly seen only in outline.','海岸只有轮廓清晰可见。','The room is dimly lit.','屋里灯光暗淡。'}

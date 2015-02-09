@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dole"]={"dole","[dəʊl]","[dol]","n.施舍品",'n.施舍品,失业救济金|||n.悲伤|||vt.发放救济','They lived in the uncertainty on the dole.','他们依靠救济金的生活不安定。','He received the fixed dole every month.','他每个月都能领到固定的救济金。'}

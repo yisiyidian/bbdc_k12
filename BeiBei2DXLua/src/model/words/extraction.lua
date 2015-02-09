@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extraction"]={"extraction","[ɪk'strækʃ(ə)n; ek-]","[ɪk'strækʃən]","n.抽出",'n.抽出,取出,抽出物|||n.血统','of Spanish extraction','西班牙血统的','The local economy is overwhelmingly dependent on oil and gas extraction.','当地经济过于依赖石油和天然气的开采。'}

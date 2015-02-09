@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lipstick"]={"lipstick","['lɪpstɪk]","['lɪpstɪk]","n.口红",'n.口红','||Lipstick|| often comes off on wine glasses.','口红常能印到酒杯上.','Oh my, do you have to wear that bright red lipstick?','哦，你必须涂那种鲜花红色的唇膏吗？'}

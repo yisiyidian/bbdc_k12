@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["left"]={"left","[left]","[lɛft]","adj.左边的",'adj.左边的，左侧的；左派的|||n.左，左面；[军]左翼；左派，激进分子|||adv.向左；在左边|||v.离开(leave的过去式和过去分词)','The figure on the left spoils the unity of the painting.','左边的人物有损于画面的效果。','Eyes left!','向左看！'}

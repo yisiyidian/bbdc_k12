@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["successor"]={"successor","[sək'sesə]","[sək'sɛsɚ]","n.接班人",'n.接班人,继任人','The question of choosing a successor has arisen.','挑选後继人的问题已经提出.','The chairman has designated Christina as his successor.','主席已指定克里斯蒂娜作他的继任人.'}

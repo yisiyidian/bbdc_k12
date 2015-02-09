@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plentiful"]={"plentiful","['plentɪfʊl; -f(ə)l]","['plɛntɪfəl]","adj.丰富的",'adj.丰富的,多的，充裕的','She had a plentiful store of provisions.','她贮存了大量的食物和饮料.','Marked by abundance; plentiful.','表现为丰富的；大量的'}

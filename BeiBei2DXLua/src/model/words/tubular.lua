@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tubular"]={"tubular","['tjuːbjʊlə]","['tubjəlɚ]","adj.管状的",'adj.管状的','A tubular glass or plastic bead used to trim clothing.','用来装饰衣服的管状玻璃或塑料珠子','Medium-sized tubular pasta.','意大利通心粉中等大小的管状面食'}

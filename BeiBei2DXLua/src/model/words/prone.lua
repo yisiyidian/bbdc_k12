@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prone"]={"prone","[prəʊn]","[pron]","adj.有...倾向的",'adj.俯卧的,易于...的,有...倾向的','He\'s prone to minor ailments.','他动不动就生点小病。','He was prone to anger.','他动不动就生气。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["honey"]={"honey","['hʌnɪ]","['hʌni]","n.蜂蜜",'adj.蜂蜜似的,深爱的|||n.(复数)蜂蜜,宝贝,爱人|||vt.加蜜使甜,对...说甜言蜜语|||vi.说甜言蜜语,奉承','No bees, no honey; no work, no money.','【谚】无蜂则无蜜，不劳则无酬。','||Honey|| can substitute for sugar in this recipe.','在这个食谱中, 可用蜂蜜代替食糖.'}

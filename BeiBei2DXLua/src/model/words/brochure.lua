@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brochure"]={"brochure","['brəʊʃə; brɒ'ʃʊə]","[bro'ʃʊr]","n.小册子",'n.小册子','I\'ll send you the brochure right away.','我会把公司简介即刻给您寄去。','I\'ll send you a brochure.','我给你一份小册子。'}

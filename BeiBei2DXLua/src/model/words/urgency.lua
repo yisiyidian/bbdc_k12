@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["urgency"]={"urgency","['ɜːdʒ(ə)nsɪ]","['ɝdʒənsi]","n.紧急(的事)",'n.紧急(的事)','This is a signal of the urgent urgency from Field Army Headquarters.','这是野战军首长拍来的十万火急的电报.','I am afraid you have not appreciated the urgency of the matter.','恐怕你还没有意识到这件事的紧迫性。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sophomore"]={"sophomore","['sɒfəmɔː]","['sɑfəmɔr]","n.大学二年级生(在企业中工作第二年的人)",'n.大学二年级生(在企业中工作第二年的人)','Lily is a ||Sophomore|| now.','莉莉现在大学二年级。','I am a sophomore of ForeignDepartment of Shengli college, China Petroleum University.','本人系中国石油大学胜利学院外语系大二的一名学生.'}

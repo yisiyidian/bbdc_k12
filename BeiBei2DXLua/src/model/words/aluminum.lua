@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aluminum"]={"aluminum","[əˈluːmɪnəm]","[ə'lʊmɪnəm]","n.铝",'n.铝','She put some noodles in the aluminum saucepan.','她在铝锅里下了些面条。','||Aluminum|| is a kind of light silvery metal.','铝是一种轻薄并呈银色的金属。'}

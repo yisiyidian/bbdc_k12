@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["humdrum"]={"humdrum","['hʌmdrʌm]","['hʌmdrʌm]","adj.单调的",'adj.单调的,乏味的|||n.乏味的谈话','The way in which this teacher teaches math is humdrum.','这个老师讲数学课的方式太单调了。','Imagination raises a man above the humdrum of life.','想象使人从单调无聊的生活中解脱出来。'}

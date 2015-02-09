@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["laudable"]={"laudable","['lɔːdəb(ə)l]","['lɔdəbl]","adj.值得称赞的",'adj.值得称赞的','His noble ideas and polite behavior are laudable.','他崇高的思想和彬彬有礼的举止令人赞美。','Her work for charity is highly laudable.','她的慈善工作值得高度赞扬。'}

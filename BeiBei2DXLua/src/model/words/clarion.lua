@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clarion"]={"clarion","['klærɪən]","['klærɪən]","n.尖音号角",'n.尖音号角|||adj.清澈响亮的','His words are a clarion call for democracy.','他的话是对民主的强烈呼吁。','To all the people present, his speech is a clarion call.','对所有在场的人而言，他的演讲都是动人的号召。'}

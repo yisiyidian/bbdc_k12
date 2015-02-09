@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["celebrity"]={"celebrity","[sɪ'lebrɪtɪ]","[sə'lɛbrəti]","n.名人",'n.名人,著名,著名人士,名声,名誉,社会名流','She found herself something of a celebrity.','她意识到自己已小有名气了.','She became a celebrity overnight.','她一下变成名人了。'}

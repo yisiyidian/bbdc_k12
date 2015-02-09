@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polyglot"]={"polyglot","['pɒlɪglɒt]","['pɑlɪɡlɑt]","adj.通数国语言",'adj.通数国语言,数国语言的|||n.通数国语文的人,用数国语文记载的书','He is a famous singer who is polyglot.','他是一位通晓多国语言的著名歌手。','Thanks to his polyglot aptitude, he made rapid progress.','由于他有学习语言的天赋，他进步很快。'}

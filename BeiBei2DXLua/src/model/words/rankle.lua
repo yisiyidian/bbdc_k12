@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rankle"]={"rankle","['ræŋk(ə)l]","[ 'ræŋkl ]","v.化脓",'v.化脓,发炎，惹怒，激怒','The insult still rankles in his mind.','他对那次受辱仍然耿耿于怀。','The noise that trunks and ambulances made in the street rankles me every day.','每天大街上卡车和救护车的噪音令我恼怒不已。'}

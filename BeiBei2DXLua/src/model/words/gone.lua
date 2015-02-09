@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gone"]={"gone","[gɒn]","[ɡɔn]","adj.过去的",'adj.过去的；离去的|||（go的过去分词）vi.去,走,变得,进行,放,通往,消失|||vt.走过,称重|||[计算机]执行','The fire has gone out.','火已熄灭。','Hardly had I gone out of the hotel when I met my friend.','我刚走出饭店就遇见了我的朋友。'}

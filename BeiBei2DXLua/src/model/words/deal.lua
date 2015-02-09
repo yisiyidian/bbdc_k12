@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deal"]={"deal","[diːl]","[dil]","v.处理",'n.交易,协定,份量|||v.(dealt,dealt[delt])处理,应付,分配','I hate dealing with large impersonal companies.','我讨厌与那些没有人情味的大公司打交道。','My bank deals in stocks and shares now.','我们银行现在经营债券与股票。'}

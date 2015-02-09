@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sluice"]={"sluice","[sluːs]","[slus]","n.水闸",'n.水闸(闸沟,斜槽,蓄水,口)|||vt冲洗(流出,开水闸放水,溜槽提金)','They open the sluice gates of reservoir.','他们打开水库的闸门。','The stables were sluiced out with water from a hose.','马厩已经用水冲洗过了。'}

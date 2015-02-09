@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["onlooker"]={"onlooker","['ɒnlʊkə]","['ɑnlʊkɚ]","n.旁观者",'n.旁观者','He fell into the water, much to the entertainment of the onlookers.','他跌进水中，旁观者大乐。','By the time the ambulance had arrived, a crowd of onlookers had gathered.','救护车赶到时, 围观的人已经很多了.'}

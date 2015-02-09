@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preserve"]={"preserve","[prɪ'zɜːv]","[prɪ'zɝv]","vt.保护",'vt.保护；保持，保存；腌制食物|||vi.保鲜；保持原状；做蜜饯；禁猎|||n.蜜饯；防护用品；禁猎地；独占的事物（或范围）','In the summer, large crops of fruit may be preserved by freezing or bottling.','夏天收获的大量水果可冷藏或装瓶装罐加以保存。','Salt and spices help to preserve meat.','盐和调味品有助於保藏肉类。'}

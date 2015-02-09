@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diagonal"]={"diagonal","[daɪ'æg(ə)n(ə)l]","[daɪ'æɡənl]","adj.对角线的",'adj.对角线的,斜的,斜纹的|||n.对角线,斜线,斜列','Footsteps had scored a diagonal path through the snow.','脚印在雪地上留下了一条对角线。','Draw a diagonal.','画一条对角线。'}

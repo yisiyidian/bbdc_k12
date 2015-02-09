@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prong"]={"prong","[prɒŋ]","[prɔŋ]","n.叉状物",'n.叉状物,耙子,干草耙|||vt.刺,贯穿,翻掘','One of the prong of the garden fork go through his foot.','园艺叉子的一个尖齿把他的脚扎了。','One of the prongs of the garden fork went through his foot.','园艺叉子的一个尖齿把他的脚扎了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tick"]={"tick","[tɪk]","[tɪk]","vt.滴答声",'vt.滴答声|||vi.标记号|||n.赊销,扁虱（吸血寄生虫，有些种类传播疾病）,滴答响,记以小点','Just try and keep things ticking over while I\'m away.','在我离开的期间，尽量使事情照常进行。','I stopped the car but left the motor ticking over.','我停住汽车，让发动机空转。'}

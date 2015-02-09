@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prospector"]={"prospector","[prəʊ'spektə]","['prɑspɛktɚ]","n.探矿者",'n.探矿者,投机家','The prospector staked his claim to the mine he discovered.','那个勘探者立桩标出他所发现的矿区地以示归己所有.','The prospectors have discovered such minerals as calcite,quartz and asbestos here.','探矿人员在这里发现了方解石、石英、石棉等矿藏。'}

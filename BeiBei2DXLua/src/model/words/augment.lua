@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["augment"]={"augment","[ɔːg'ment]","[ɔɡ'mɛnt]","vt.增加",'vt.增加,补充|||vi.扩大|||n.增加,补充物','He augments his income by teaching in the evenings.','他晚上去教书以增加收入。','Continuing rains augmented the flood waters.','持续的雨水加大了洪水水量。'}

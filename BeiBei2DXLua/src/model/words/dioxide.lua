@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dioxide"]={"dioxide","[daɪ'ɒksaɪd]","[daɪ'ɑksaɪd]","n.二氧化物",'n.二氧化物','Soft drinks contain carbon dioxide.','软饮料中含有二氧化碳。','Carbon dioxide does not burn, nor does it support combustion.','二氧化碳不能燃烧,它也不能助燃。'}

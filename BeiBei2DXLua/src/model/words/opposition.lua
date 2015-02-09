@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opposition"]={"opposition","[ɒpə'zɪʃ(ə)n]","['ɑpə'zɪʃən]","n.反对",'n.反对,敌对,在野党','The editor got his claws into the opposition in a vicious editorial.','那个编辑在一篇社论中恶毒地攻击了反对派。','The opposition dismissed the report as a whitewash.','反对党认为这份报告过于修饰而不予理会。'}

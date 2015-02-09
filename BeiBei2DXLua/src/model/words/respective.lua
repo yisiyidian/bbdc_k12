@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["respective"]={"respective","[rɪ'spektɪv]","[rɪ'spɛktɪv]","adj.各自的",'adj.各自的,分别的','The three men were given work according to their respective abilities.','这三个人根据各自的能力被分配了工作。','successful in their respective fields.','在他们各自的领域都取得成功'}

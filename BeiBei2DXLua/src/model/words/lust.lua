@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lust"]={"lust","[lʌst]","[lʌst]","n.贪欲",'n.贪欲,欲望,色欲|||v.贪求,渴望,动淫念','Hasn\'t NATO slaked his lust for blood?','难道北约还没有满足他的血腥的欲望吗？','His lust for power will never be satisfied.','他的权力欲永不能得到满足。'}

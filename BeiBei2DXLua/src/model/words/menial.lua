@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["menial"]={"menial","['miːnɪəl]","['minjəl]","adj.适合仆人做的",'adj.适合仆人做的,卑微的|||n.佣人，家仆，卑贱的人','He was forced to take a series of menial jobs.','他被迫做一连串琐碎的杂活。','the menial work concerned in running a house','操持家务这类的粗活'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["familiarity"]={"familiarity","[fəmɪlɪ'ærɪtɪ]","[fə,mɪlɪ'ærəti]","n.熟悉",'n.亲密,熟悉,精通，不拘礼节','Marked by close acquaintance, association, or familiarity.','亲密的以密切的相识、联系或熟悉为标志的','His familiarity with the local languages surprised me.','他对当地语言如此精通令我吃惊。'}

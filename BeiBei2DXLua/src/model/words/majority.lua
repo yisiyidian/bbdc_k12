@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["majority"]={"majority","[mə'dʒɒrɪtɪ]","[mə'dʒɔrəti]","n.多数",'n.多数；（获胜的）票数；成年；法定年龄','She reaches her majority next month.','她下个月就到成年年龄了。','The majority of people seem to prefer TV to radio.','多数人喜欢电视胜过广播。'}

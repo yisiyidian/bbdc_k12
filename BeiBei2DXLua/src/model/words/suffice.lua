@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suffice"]={"suffice","[sə'faɪs]","[sə'faɪs]","vi.足够",'vi.足够,合格|||vt.使...足够','The rations will suffice until next week.','这些口粮足够吃到下星期。','An hour should suffice for the journey.','这点路程一小时足够了。'}

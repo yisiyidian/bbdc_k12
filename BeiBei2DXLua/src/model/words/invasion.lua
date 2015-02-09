@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invasion"]={"invasion","[ɪn'veɪʒ(ə)n]","[ɪn'veʒn]","n.侵入",'n.侵入,侵略','The Second World War was brought about by Hitler\'s invasion of Poland.','希特勒入侵波兰。 自此, 第二次世界大战爆发。','America\'s invasion of the country must be done for unspeakable political purpose.','美国入侵这个国家一定是出于不可告人的政治目的。'}

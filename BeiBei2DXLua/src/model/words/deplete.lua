@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deplete"]={"deplete","[dɪ'pliːt]","[dɪ'plit]","vt.耗尽",'vt.耗尽,使...空竭','Our stock of food is greatly depleted.','我们的食物储备已消耗殆尽。','This expense has depleted our funds.','这笔开支已使我们的资金所剩无几。'}

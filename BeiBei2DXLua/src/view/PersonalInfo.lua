@@ -669,7 +669,9 @@ function PersonalInfo:login()
                 
                 if loginData_array[weekIndex][dayIndex] >= 1 and sDate <= nowDate then
                     --label:setColor(cc.c3b(255,255,255))
-                    if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                    print('selectDate',os.date('%x',selectDate))
+                    if s_CURRENT_USER.logInDatas[weekIndex]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
+                        print('selectDate is checkIn',os.date('%x',selectDate))
                         table.insert(checkInList,label)
                     end
                     if dayIndex < 7 then

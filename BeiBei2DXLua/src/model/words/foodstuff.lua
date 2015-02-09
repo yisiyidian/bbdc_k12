@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foodstuff"]={"foodstuff","['fuːdstʌf]","['fudstʌf]","n.食品",'n.食品,食料','Nowadays, the foodstuffs in our life are more various.','如今，我们生活中的食品越来越五花八门了。','Rice is our essential foodstuff in life.','大米是我们生活的基本食物。'}

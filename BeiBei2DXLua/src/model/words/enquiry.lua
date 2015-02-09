@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enquiry"]={"enquiry","[ɪn'kwaɪrɪ]","[ɛnˈkwaɪri, ˈɛnkwəri]","n.[计]询问",'n.[计]询问，[贸易]询盘','He\'s quite within his rights to demand an enquiry.','他完全有权要求进行调查.','Various malpractices by police officers were brought to light by the enquiry.','警察的各种不法行为经调查已揭露出来.'}

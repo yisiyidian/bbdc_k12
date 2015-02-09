@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crime"]={"crime","[kraɪm]","[kraɪm]","n.犯罪",'n.犯罪,羞耻,罪行','His addiction to drugs propelled him towards a life of crime.','他吸毒成瘾使他走上了犯罪的道路。','The government is alarmed by the dramatic increase in violent crime.','政府对暴力犯罪案件的急剧增加感到恐慌。'}

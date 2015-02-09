@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["duck"]={"duck","[dʌk]","[dʌk]","n.鸭",'n.鸭，鸭肉，板球零分|||vt.把…按入水中，低头弯身（以免被打中或看见)，躲避|||vi.迅速行进，飞快行走（以免被看见），推委责任','There are many ducks swimming in the lake.','湖里有许多鸭子在游泳。','The children ducked each other in the swimming pool.','孩子们在游泳池里互相把对方按入水中。'}

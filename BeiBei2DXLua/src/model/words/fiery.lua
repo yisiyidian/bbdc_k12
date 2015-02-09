@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fiery"]={"fiery","['faɪərɪ]","['faɪəri]","adj.火的",'adj.火的，炽热的,热烈的,暴躁的，火红的','She gave vent to her indignation in a fiery speech.','她在一篇激烈的演说中发泄怒气。','||Fiery|| intensity of feeling.','激情感情的炽热强度'}

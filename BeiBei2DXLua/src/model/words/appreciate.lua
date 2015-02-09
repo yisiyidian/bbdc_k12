@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["appreciate"]={"appreciate","[ə'priːʃɪeɪt; -sɪ-]","[ə'priʃɪet]","vt.欣赏",'vt.欣赏,感激,赏识|||vt.领会，充分意识|||vi.增值','I really appreciate your help.','我真的很感激你的帮助。','As students so far from home, we have learned to appreciate those of life\'s pleasures that are not readily available at home.','作为远离家乡的学子，我们已懂得如何欣赏那些在国内难以获得的生活中的乐趣。'}

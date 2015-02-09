@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["navel"]={"navel","['neɪv(ə)l]","['nevl]","n.肚脐",'n.肚脐,中央,中心','Having a central mark or depression resembling a navel.','脐状的有象肚脐一样的中间的印记或凹陷','An encircling band for holding in a baby\'s protruding navel.','脐带连于婴儿突出的肚脐上的环绕带'}

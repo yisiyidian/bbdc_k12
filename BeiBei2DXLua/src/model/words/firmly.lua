@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["firmly"]={"firmly","['fɝmli]","[ 'fə:mli ]","adv.牢牢地",'adv.牢牢地','She\'s now firmly established (in business) as an art dealer.','她已稳固地奠定了艺术品商的地位.','The struts are firmly braced.','那些支柱上得很牢固。'}

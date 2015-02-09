@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perimeter"]={"perimeter","[pə'rɪmɪtə]","[pə'rɪmɪtɚ]","n.周长",'n.周长,周界,边缘','The plane stalled, flipped over onto its back and crashed near the perimeter.','飞机失速了，翻了过来，坠毁在机场环形围栏附近。','Guards had been posted at several points around the perimeter.','在环形防线上已布置了几处岗哨。'}

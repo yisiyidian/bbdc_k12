@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["you"]={"you","[juː]","[ju]","pron.你",'pron.你,你们','Getting good results gives you confidence.','得到好的结果给你信心。','Do you speak English?','你会说英语吗？'}

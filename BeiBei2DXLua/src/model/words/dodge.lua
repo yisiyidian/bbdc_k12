@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dodge"]={"dodge","[dɒdʒ]","[dɑdʒ]","vt.&vi.避开",'vt.&vi.避开,躲避|||n.躲避','She was sharp-witted enough to dodge her attacker.','她才思敏捷足以避开别人的攻击.','He dodged past me.','他躲躲闪闪地从我旁边走过。'}

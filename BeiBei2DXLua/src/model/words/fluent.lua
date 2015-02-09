@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fluent"]={"fluent","['fluːənt]","['fluənt]","adj.流利的",'adj.流利的,流畅的','She speaks fluent and idiomatic French.','她说得一口又流利又地道的法语.','She likes him all the better for his fluent spoken English.','正因为他操一口流利的英语，她更爱他。'}

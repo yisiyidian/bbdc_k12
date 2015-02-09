@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elegant"]={"elegant","['elɪg(ə)nt]","['ɛləgənt]","adj.优雅的",'adj.优雅的,精美的,俊美的','He proudly promenaded his elegant companion in the park.','他得意地领著他那标致的伴侣遛公园.','He strolled about, looking very debonair in his elegant new suit.','他穿了一身讲究的新衣服逛来逛去, 显得颇为惬意.'}

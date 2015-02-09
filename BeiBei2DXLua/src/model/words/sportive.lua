@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sportive"]={"sportive","['spɔːtɪv]","['spɔrtɪv]","adj.爱玩的",'adj.爱玩的，爱好运动的','Boys are always sportive.','男孩总是比较爱玩。','It was now not a sportive combat, but a war to the death.','现在这已不是一场体育比赛式的竞斗，而是一场殊死的战争了。'}

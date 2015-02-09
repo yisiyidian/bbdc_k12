@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crunch"]={"crunch","[krʌn(t)ʃ]","[krʌntʃ]","vt.嘎扎嘎扎的咬嚼",'vt.嘎扎嘎扎的咬嚼,扎扎地踏过|||vi.发出刺耳的碎裂声|||n.咬碎,咬碎声,扎扎地踏','The frozen snow crunched under our feet.','冻结的雪在我们的脚下嘎吱作响.','The wheels crunched the gravel.','车轮碾在碎石上嘎吱嘎吱地响.'}

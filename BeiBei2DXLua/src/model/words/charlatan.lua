@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["charlatan"]={"charlatan","['ʃɑːlət(ə)n]","['ʃɑrlətən]","n.冒充内行者",'n.冒充内行者，骗子','In spite of his boasts of having cured many people, he was nevertheless shown up as a charlatan.','尽管那人夸口说他治好了许多人的病，但他还是被揭穿是个江湖骗子。','He was exposed as a charlatan.','他被揭穿，原来是个骗子。'}

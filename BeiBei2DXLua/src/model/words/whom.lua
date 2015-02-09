@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whom"]={"whom","[huːm]","[hum]","pron.[宾格]谁",'pron.[who的宾格]谁','To whom should I refer the matter?','我应该找谁办这件事?','By whom was the order executed?','这项命令是谁执行的?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lean"]={"lean","[liːn]","[lin]","n.瘦肉",'n.瘦肉,倾斜,弯曲|||adj.瘦的,贫乏的,歉收的|||vi.倚靠,倾斜,依赖|||vt.使倾斜','||Lean|| meat can be larded to keep it moist in the oven.','瘦肉上可加咸肉片烤制以保持水分。','I minced the lean meat finely before making dumplings.','包饺子前，我把瘦肉细细剁碎。'}

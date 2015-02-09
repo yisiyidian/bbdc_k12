@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["despite"]={"despite","[dɪ'spaɪt]","[dɪ'spaɪt]","prep.尽管",'prep.不管,尽管|||v.憎恨,轻视','||Despite|| all our efforts we still lost the game.','尽管我们尽了全力，我们还是输掉了比赛。','She managed despite everything to preserve her sense of humour.','她不管遇到什麽情况都竭力保持著幽默感.'}

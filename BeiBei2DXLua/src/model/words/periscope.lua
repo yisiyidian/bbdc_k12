@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["periscope"]={"periscope","['perɪskəʊp]","['pɛrɪskop]","n.潜望镜",'n.潜望镜','submarine periscope','潜艇潜望镜','The submarine acquire outside information through periscope.','潜水艇通过潜望镜了解外部信息。'}

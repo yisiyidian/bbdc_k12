@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aviator"]={"aviator","['eɪvɪeɪtə]","['evɪ'etɚ]","n.飞行员",'n.飞行员','He is a daring aviator.','他是一个勇敢的飞行家。','Like his father, he hopes to become a naval aviator.','与父亲一样，他希望成为海军飞行员。'}

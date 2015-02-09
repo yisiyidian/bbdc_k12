@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["divorce"]={"divorce","[dɪ'vɔːs]","[dɪ'vɔrs]","n.离婚",'n.离婚|||v.与...办离婚','The classmates discriminated against him because of his parents\' divorce.','由于父母的离异, 他遭到了同班同学的歧视。','She had adequate grounds for a divorce.','她离婚有充分的理由。'}

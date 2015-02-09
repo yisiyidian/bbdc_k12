@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["garnish"]={"garnish","['gɑːnɪʃ]","['gɑrnɪʃ]","n.装饰",'n.装饰,装饰品，勒索金|||vt.装饰，配菜，[法]传讯','||Garnish|| the plate with whipped cream rosettes and fresh fruits.','用玫瑰花形的掼奶油和新鲜的水果作配菜点缀盘子。','She had finished the vegetables and was garnishing the roast.','她已经做好了蔬菜，正给烤肉配饰菜。'}

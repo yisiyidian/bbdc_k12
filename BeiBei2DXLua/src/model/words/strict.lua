@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strict"]={"strict","[strɪkt]","[strɪkt]","adj.严格的",'adj.严格的,精确的,完全的','Our manager is very strict with us.','我们的经理对我们要求很严格。','The doctor put me on a very strict diet.','医生严格限制我的饮食。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["necessary"]={"necessary","['nesəs(ə)rɪ]","['nɛsəsɛri]","adj.必需的",'adj.必需的,必要的,必然的|||n.[pl.]必需品','I feel it is absolutely necessary.','我觉得这是绝对必要的。','The necessary outcome of a war is a fall in production.','战争带来的必然结果就是生产力下降。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["engross"]={"engross","[ɪn'grəʊs; en-]","[ɪn'ɡros]","v.使全神贯注",'v.使全神贯注，独占，大量收购，正式誊写，用大字体书写|||n.','She was engrossed in painting.','她全神贯注于绘画。','It\'s an engrossing story.','这是个引人入胜的故事。'}

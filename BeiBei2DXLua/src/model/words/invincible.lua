@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invincible"]={"invincible","[ɪn'vɪnsɪb(ə)l]","[ɪn'vɪnsəbl]","adj.不可征服的",'adj.不可征服的,难以制服的','They took an invincible lead in the chase for the championship.','他们在冠军争夺赛中居于不可动摇的领先地位。','We have an invincible army.','我们有一支不可战胜的军队。'}

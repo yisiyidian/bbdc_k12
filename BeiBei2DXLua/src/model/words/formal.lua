@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["formal"]={"formal","['fɔːm(ə)l]","['fɔrml]","adj.正式的",'adj.正式的,形式的,礼节上的,拘谨的|||n.正式(活动)','We were invited to a formal luncheon.','我们被邀参加一次正式的午宴。','At the formal party I felt very awkward and out of place.','在正式的舞会上，我感到局促不安，很不自在。'}

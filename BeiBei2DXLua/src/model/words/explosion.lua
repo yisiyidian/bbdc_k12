@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["explosion"]={"explosion","[ɪk'spləʊʒ(ə)n; ek-]","[ɪk'sploʒən]","n.爆炸",'n.爆炸,爆发,激增','After the explosion it was some time before the town resumed its everyday routines.','爆炸后经过相当一段时间，这个城镇才恢复了正常的生活秩序。','The explosion tore a hole in the wall.','墙炸开一个洞.'}

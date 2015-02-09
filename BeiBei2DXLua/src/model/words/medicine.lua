@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["medicine"]={"medicine","['meds(ə)n; 'medɪsɪn]","['mɛdsn]","n.药",'n.药,医学','The medicine worked.','药物奏效了。','There have been great advances in medicine in the last ten years.','在过去十年里，医学取得了巨大的进步。'}

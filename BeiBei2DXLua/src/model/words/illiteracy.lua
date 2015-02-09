@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illiteracy"]={"illiteracy","[ɪ'lɪt(ə)rəsɪ]","[ɪ'lɪtərəsi]","n.文盲",'n.文盲','||Illiteracy||, a serious handicap in life.','文盲, 生活中的严重障碍','||Illiteracy|| is a major problem in some developing countries.','在一些发展中国家, 文盲是个大问题.'}

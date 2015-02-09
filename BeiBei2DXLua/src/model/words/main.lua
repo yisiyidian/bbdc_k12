@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["main"]={"main","[meɪn]","[ mein ]","adj.主要的",'adj.主要的|||n.主要部分,干线,（水、煤气、电等的）供应系统,体力','The main road was flooded so we had to go round by narrow country lanes.','公路干线遭水淹没，我们只得择乡间小径绕行。','By defeating their main competitor this firm has cornered the wheat market.','这家公司击败了主要的竞争对手而垄断了整个小麦市场。'}

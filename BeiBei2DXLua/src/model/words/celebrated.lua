@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["celebrated"]={"celebrated","['selɪbreɪtɪd]","['sɛlə'bretɪd]","adj.著名的",'adj.著名的，声誉卓著的|||动词celebrate的过去式和过去分词','Odysseus\'s heroic exploits are celebrated in The Odyssey\'.','《奥德赛》史诗中歌颂了奥德修斯的丰功伟绩.','Leeds celebrated their 6-1 thrashing of Chelsea.','利兹队欢庆以6比1大胜切尔西队.'}

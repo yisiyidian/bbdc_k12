@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pitcher"]={"pitcher","['pɪtʃə]","['pɪtʃɚ]","n.水罐",'n.水罐,[棒球]投手，[植]瓶状叶','Any pitcher is liable to crack during a tight game.','任何投手在紧张的比赛中都可能会失常.','The pitcher gave a spin to the ball.','投手使球旋转。'}

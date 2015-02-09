@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["segregate"]={"segregate","['segrɪgeɪt]","['sɛɡrɪɡet]","adj.分离的",'adj.分离的,被隔离的|||v.分离,隔离,分凝','Why should the handicapped be segregated from the able-bodied?','为什麽要把伤残人士和身体健康的人分开?','Blacks were segregated from whites in schools.','学校里黑人和白人被隔离开来.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rug"]={"rug","[rʌg]","[rʌɡ]","n.毯子",'n.毯子,地毯,旅行毯','Look at the holes that have been worn in this rug.','瞧瞧这块小地毯上磨出的洞.','I slid the rug in front of the fire.','我挪了挪铺在炉前的地毯.'}

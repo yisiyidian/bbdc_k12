@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mummy"]={"mummy","['mʌmɪ]","['mʌmi]","n.木乃伊",'n.木乃伊|||n.妈妈=mommy（美）','||Mummy|| treats me just like a baby, which I can\'t bear.','妈把我看得简直像3岁小孩, 我真受不了。','Since then, organic materials ranging from Egyptian mummy hair to Stone Age sandals have been dated.','自那时起, 从埃及的木乃伊头发到石器时代的檀香木等有机物质的年代都已被确定。'}

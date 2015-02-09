@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abroad"]={"abroad","[ə'brɔːd]","[ə'brɔd]","adj.在国外",'adj.在国外,海外(一般作表语)|||adv.到国外,广为流传','The people had to gather up their few possessions and escaped abroad.','人们不得不收拾起仅有的一点财物逃到国外去。','He came to miss his homeland when he settled down abroad.','当他在国外安定下来时，他开始想念祖国了。'}
