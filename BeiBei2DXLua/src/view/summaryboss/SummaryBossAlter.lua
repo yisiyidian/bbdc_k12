@@ -13,11 +13,6 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     layer.index = index
     layer.levelIndex = levelIndex
     layer.wordList = wordList
-    if layer.win then
-        -- s_CURRENT_USER:removeSummaryBoss(levelIndex)
-        -- s_CURRENT_USER:updateDataToServer()
-        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-    end
     
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
@@ -33,6 +28,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     if win then
         if entrance == true then
             s_CURRENT_USER:addBeans(3)
+            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
         end
         layer:win1(entrance)  
         cc.SimpleAudioEngine:getInstance():pauseMusic()

@@ -349,7 +349,8 @@ function M.addWrongWord(wordindex)
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
             Manager.database:exec(query)
 
-            saveDataToServer(false, time, bossID, 1, newWordList, wordindex, 1)
+            print('saveDataToServer(false, time, bossID, 1, newWordList, wordindex, 1)')
+            saveDataToServer(false, time, bossID, 1, newWordList, wordindex, 0)
             return true
         else
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
