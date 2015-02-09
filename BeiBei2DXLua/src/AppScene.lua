@@ -241,7 +241,7 @@ end
 -- end
 
 function applicationWillEnterForeground()
-    s_O2OController.showRestartTipWhenOfflineToOnline()
+    -- s_O2OController.showRestartTipWhenOfflineToOnline()
 end
 
 function applicationDidEnterBackgroundLua()

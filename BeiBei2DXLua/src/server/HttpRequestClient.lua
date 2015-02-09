@@ -8,7 +8,7 @@ function HttpRequestClient.getBulletinBoard(callbackFunc)
     local retTitle = ''
     local retContent = ''
     local onSucceed = function (api, result)
-        if result.results ~= nil then
+        if result.results ~= nil and type(result.results) == 'table' then
             for i, v in ipairs(result.results) do
                 local idx = v["index"]
                 local t = v["content_top"]
@@ -19,6 +19,8 @@ function HttpRequestClient.getBulletinBoard(callbackFunc)
                     retContent = ct
                 end
             end
+        else
+            LUA_ERROR = LUA_ERROR .. 'getBulletinBoard:' .. tostring(result.results) .. '\n'
         end
         if callbackFunc ~= nil then callbackFunc(retIdx, retTitle, retContent) end
     end
