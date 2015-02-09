@@ -151,7 +151,7 @@ function ChapterLayer:addNotification()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 then
             taskIndex = bossID - 1
             taskState = bossInfo["typeIndex"] 
         end
@@ -168,9 +168,9 @@ function ChapterLayer:addNotification()
     local taskKey = 'level'..taskIndex
 --    print('task:'..taskKey..taskChapterKey)
     local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
-    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 100))
-    local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 120))
-    local action2 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 100))
+    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 150))
+    local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 170))
+    local action2 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 150))
     local action3 = cc.Sequence:create(action1, action2)
     local action4 = cc.RepeatForever:create(action3)
     notification:runAction(action4)

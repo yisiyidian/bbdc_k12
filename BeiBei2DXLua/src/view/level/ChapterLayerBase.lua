@@ -123,7 +123,11 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- to do get level state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
     local levelState, coolingDay
+    local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
+        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 then
+            currentTaskBossIndex = bossID - 1
+        end
         if bossID - (levelIndex + 1) == 0 then
             levelState = bossInfo["typeIndex"] 
             coolingDay = bossInfo["coolingDay"] + 0
@@ -147,6 +151,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- TODO add review boss position
     -- TODO check level state
 --    local levelState = math.random(0, 3)
+--    levelState = 2
     if levelState == 0 then
         local deco = cc.Sprite:create('image/chapter/elements/big_tubiao_daizi_tanchu_xiaoguan.png')
         deco:setPosition(levelPosition.x+10,levelPosition.y+20)
@@ -155,15 +160,16 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         local deco = cc.Sprite:create('image/chapter/elements/big_tubiao_chuizi_tanchu_xiaoguan.png')
         deco:setPosition(levelPosition.x+10,levelPosition.y+20)
         self:addChild(deco, 130)
-    elseif levelState == 2 then
+    elseif levelState == 2 or levelIndex == currentTaskBossIndex then
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
-        reviewBoss:addAnimation(0, '1', false)
-        s_SCENE:callFuncWithDelay(1,function()
+--        reviewBoss:addAnimation(0, '1', false)
+--        s_SCENE:callFuncWithDelay(1,function()
             reviewBoss:addAnimation(1, '2', true)
-        end)
+--        end)
         reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
         self:addChild(reviewBoss, 140)
-    elseif levelState == 3 or coolingDay == 0 then 
+        -- only one review boss
+    elseif levelState == 3 then 
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
         summaryboss:setAnchorPoint(1,1)
@@ -203,7 +209,11 @@ function ChapterLayerBase:addPopup(levelIndex)
     -- TODO check level state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
     local state, coolingDay
+    local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
+        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 then
+            currentTaskBossIndex = bossID - 1
+        end
         if bossID - (levelIndex + 1) == 0 then
             state = bossInfo["typeIndex"] 
             coolingDay = bossInfo["coolingDay"]
@@ -232,6 +242,7 @@ function ChapterLayerBase:addPopup(levelIndex)
             s_SCENE:removeAllPopups()
 --            print('######## state'..state..',active'..active)
             if state >= 4 and active ~= 0 then
+--                if true then
 
                     local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
                     tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
@@ -243,7 +254,9 @@ function ChapterLayerBase:addPopup(levelIndex)
 
                     tutorial_text:addChild(text)
                     local action1 = cc.FadeOut:create(1.5)
-                    tutorial_text:runAction(action1)
+                    local action1_1 = cc.MoveBy:create(1.5, cc.p(0, 100))
+                    local action1_2 = cc.Spawn:create(action1,action1_1)
+                    tutorial_text:runAction(action1_2)
                     local action2 = cc.FadeOut:create(1.5)
                     text:runAction(action2)
  
@@ -278,7 +291,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-450)
     elseif state == 4 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_5.png')     
-        if coolingDay == 0 then  
+        if coolingDay == 0 and levelIndex - currentTaskBossIndex == 0 then  
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_pressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png')
         else
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_1.png','image/chapter/popup/button_pressed_xiaoguantancu_?_1.png','')
@@ -286,7 +299,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-540)
     elseif state == 5 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_6.png')   
-        if coolingDay == 0 then  
+        if coolingDay == 0 and levelIndex - currentTaskBossIndex == 0 then  
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_6.png','image/chapter/popup/button_pressed_xiaoguantancu_6.png','image/chapter/popup/button_unpressed_xiaoguantancu_6.png')
         else
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_2.png','image/chapter/popup/button_pressed_xiaoguantancu_?_2.png','')
@@ -294,7 +307,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-630)
     elseif state == 6 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_7.png')     
-        if coolingDay == 0 then  
+        if coolingDay == 0 and levelIndex - currentTaskBossIndex == 0 then  
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_7.png','image/chapter/popup/button_pressed_xiaoguantancu_7.png','image/chapter/popup/button_unpressed_xiaoguantancu_7.png')
         else
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_3.png','image/chapter/popup/button_pressed_xiaoguantancu_?_3.png','')
@@ -302,7 +315,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-720)
     elseif state == 7 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_8.png')     
-        if coolingDay == 0 then  
+        if coolingDay == 0 and levelIndex - currentTaskBossIndex == 0 then  
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_8.png','image/chapter/popup/button_pressed_xiaoguantancu_8.png','image/chapter/popup/button_unpressed_xiaoguantancu_8.png')
         else
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_4.png','image/chapter/popup/button_pressed_xiaoguantancu_?_4.png','')
