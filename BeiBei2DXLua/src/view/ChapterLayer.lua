@@ -161,8 +161,13 @@ function ChapterLayer:addNotification()
         end
     end
     
+--    taskIndex = 1
+    
     if taskIndex == -2 then
+--        self:scrollLevelLayer(progress,0)
+        --test
         self:scrollLevelLayer(progress,0)
+        
         return
     else
         self:scrollLevelLayer(taskIndex,0)

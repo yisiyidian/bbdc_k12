@@ -146,8 +146,12 @@ function LoginRewardPopup:ctor()
             if day + today <= 7 then
                 table.insert(currentData,loginData_array[#loginData][day + i - 1])
             else
-                if day + i - 1 <= 7 then                
-                    table.insert(currentData,loginData_array[#loginData - 1][day + i - 1])
+                if day + i - 1 <= 7 then          
+                    if loginData_array[#loginData - 1] ~= nil then
+                        table.insert(currentData,loginData_array[#loginData - 1][day + i - 1])
+                    else
+                        table.insert(currentData,0)
+                    end
                 else
                     table.insert(currentData,loginData_array[#loginData][day + i - 1 - 7])
                 end
@@ -193,7 +197,9 @@ function LoginRewardPopup:ctor()
                 s_CURRENT_USER:addBeans(rewardList[#currentData].reward)  
                 saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                 sprite:setVisible(true) 
-                s_CURRENT_USER.getDailyRewardTime = currentTime    
+                s_CURRENT_USER.getDailyRewardTime = currentTime 
+                saveUserToServer({['getDailyRewardTime']=s_CURRENT_USER.getDailyRewardTime})
+                todayMark = 1   
             end
         end
     end
