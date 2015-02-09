@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infer"]={"infer","[ɪn'fɜː]","[ɪn'fɝ]","vt.推断",'vt.推断,猜测,暗示|||vi.推论','He infer from the letter that the accused know the murder victim.','他从信中推断被告认识被谋杀的受害者。','It is possible to infer two completely opposite conclusions from this set of facts.','从这些事实中可能推断出两种截然相反的结论。'}

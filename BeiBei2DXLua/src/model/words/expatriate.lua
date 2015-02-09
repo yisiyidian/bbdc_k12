@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expatriate"]={"expatriate","[ɪks'pætrɪət; -'peɪtrɪət; eks-]","[,ɛks'petrɪət]","n.移居外国者",'n.移居外国者|||vt.逐出国外,脱离国籍,放逐|||vi.移居国外','The writer, an expatriate living in Singapore, has studied and worked in the US.','作者曾在美国读书和工作，目前旅居新加坡。','She was expatriated for some political reason.','她因某种政治原因而被流放国外。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capricious"]={"capricious","[kə'prɪʃəs]","[kə'prɪʃəs]","adj.变化无常的",'adj.变化无常的,任性的','He was accused of being capricious and undemocratic.','他被指责反复无常，不讲民主。','The novelist characterizes his heroine as capricious and passionate.','这位小说家把女主人公刻画成反覆无常而又多情的人。'}

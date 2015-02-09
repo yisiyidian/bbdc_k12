@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["patois"]={"patois","['pætwɑː]","['pætwɑ]","n.方言",'n.方言,土语','He speaks the local patois.','他会说当地方言。','A substantial proportion of the population speak a French-based patois.','人口中有一大部分说以法语为基础的混合语。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["size"]={"size","[saɪz]","[saɪz]","n.尺寸",'n.尺寸,大小|||vt.按大小排列(或分类)|||adj.一定大小的|||vt.用...填充(某物)','My gloves are size medium.','我的手套尺寸是中号。','The size of the apples varied.','那些苹果大小不同。'}

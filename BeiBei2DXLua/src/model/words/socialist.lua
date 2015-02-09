@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["socialist"]={"socialist","['səʊʃ(ə)lɪst; 'səʊʃəlɪst]","['soʃəlɪst]","adj.社会主义的",'adj.社会主义的|||n.社会主义者','Her socialist beliefs were born of a hatred of injustice.','她的社会主义信念来自她对社会上不公平现象的痛恨。','This organization espouses the socialist philosophy.','这个组织支持社会主义哲学。'}

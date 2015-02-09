@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["redress"]={"redress","[rɪ'dres]","[rɪ'drɛs]","n.赔偿",'n.赔偿,救济,矫正|||v.纠正,匡正,革除','The team has more men than women so we must redress the balance.','这个队男的多女的少，所以我们得平衡一下。','A fault confessed is half redressed.','承认错误，等于改正一半。'}

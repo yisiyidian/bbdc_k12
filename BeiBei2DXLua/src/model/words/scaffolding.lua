@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scaffolding"]={"scaffolding","['skæfəʊldɪŋ; -f(ə)ld-]","['skæfəldɪŋ]","n.脚手架(搭脚手架)",'n.脚手架(搭脚手架)','||Scaffolding|| has been erected around the tower.','塔的周围已竖起了脚手架.','The scaffolding is very common in the construction site.','脚手架在施工现场是非常常见的。'}

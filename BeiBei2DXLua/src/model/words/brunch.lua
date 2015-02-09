@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brunch"]={"brunch","[brʌn(t)ʃ]","[brʌntʃ]","n.早午餐",'n.早午餐','||Brunch|| is a cross between breakfast and lunch.','早午餐是介於早餐兴午餐的中间餐。','Do you have brunch everyday?','你每天吃早午餐吗？'}

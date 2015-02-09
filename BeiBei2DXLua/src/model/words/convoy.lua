@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["convoy"]={"convoy","['kɒnvɒɪ]","['kɑnvɔɪ]","n.护送",'n.护送,护卫,警护|||vt.护航,护送','Two fighters buzzed the convoy as it approached the coast.','当船队接近海岸时, 两架战斗机飞近示警.','Warships will accompany the convoy.','军舰将护送船队.'}

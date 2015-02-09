@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["designate"]={"designate","['dezɪgneɪt]","['dɛzɪɡnet]","adj.指定的",'adj.指定的|||vt.指定,选派,标明','She was designated sportswoman of the year.','她被指定为本年度的体坛明星。','The town has been designated a development area.','该城市已被定为开发区。'}

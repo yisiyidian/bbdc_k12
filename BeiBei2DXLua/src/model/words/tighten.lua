@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tighten"]={"tighten","['taɪt(ə)n]","['taɪtn]","vt.勒紧",'vt.勒紧,固定|||vi.变得越来越紧','He tightened his grip on her arm.','他紧抓她的手臂。','Controls in the city have gradually tightened.','对这个城市的控制逐渐加强。'}

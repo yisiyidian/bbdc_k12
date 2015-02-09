@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cranky"]={"cranky","['kræŋkɪ]","['kræŋki]","adj.怪癖的",'adj.怪癖的,不稳的','A cranky, complaining person.','脾气坏的人，喜欢抱怨的人','A cranky mountain road.','一条蜿蜒曲折的山路'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terra"]={"terra","['terə]","['tɛrə]","n.土",'n.土,土地,地球','The greater portion of Antarctica is still terra nullius.','南极洲的大部分地方不属于任何国家。','||Terra|| is a key bearer or truth bearer.','地球是关键肩负者或真相肩负者。'}

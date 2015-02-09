@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scarf"]={"scarf","[skɑːf]","[skɑrf]","n.围巾",'n.围巾','Americans scarf down 50 million hot dogs on an average summer day','“美国人平均每个夏天吃掉5000万个热狗”','She twisted the long scarf round her head.','她把那条长围巾围在头上。'}

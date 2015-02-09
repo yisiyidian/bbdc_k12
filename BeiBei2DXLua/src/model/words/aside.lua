@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aside"]={"aside","[ə'saɪd]","[ə'saɪd]","adv.在一边",'n.旁白,顺便说的话|||adv.在一边,另外,离开','I laid my book aside, turned off the light and went to sleep.','我把书放在一边, 关了灯睡觉.','He moved aside for her with a polite bow.','他礼貌地鞠躬，退避一旁让她过去。'}

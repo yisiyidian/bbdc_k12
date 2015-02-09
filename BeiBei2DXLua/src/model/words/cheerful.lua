@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cheerful"]={"cheerful","['tʃɪəfʊl; -f(ə)l]","['tʃɪrfl]","adj.高兴的",'adj.高兴的,快乐的','Whether (she is) sick or fine, she is always cheerful.','不管她生不生病，她总是开开心心的。','His cheerful manner belied his real feelings.','他那快活的样子掩饰了他真实的感情。'}

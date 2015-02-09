@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["argot"]={"argot","['ɑːgəʊ]","[ 'ɑ:ɡəu, 'ɑ:ɡət ]","n.隐语",'n.隐语,暗语,暗号，行话','He knows thieves\' argot.','他懂盗贼的黑话。','The argot and proverb created by them enrich Chinese language.','他们创造的隐语、歇后语、谚语等丰富了中国的语言。'}

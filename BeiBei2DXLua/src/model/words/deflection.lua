@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deflection"]={"deflection","[dɪ'flekʃ(ə)n]","[dɪ'flɛkʃən]","n.偏向",'n.歪斜,偏向，偏转角','Starlight passing close to the sun should experience some deflection.','从太阳近旁通过的星光会受到某种偏折.','This azimuth motion is known as the ballistic deflection error.','这种绕方位轴的运动称为冲击偏差.'}

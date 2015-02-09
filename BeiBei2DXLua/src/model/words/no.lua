@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["no"]={"no","[nəʊ]","[no]","n.不",'n.不,拒绝,否决票|||adj.没有,不是,绝非|||adv.不','It is by no means easy to satisfy everyone.','要满足每一个人绝非易事。','It is no joke.','这可不是开玩笑的事。'}

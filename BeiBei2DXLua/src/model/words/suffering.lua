@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suffering"]={"suffering","['sʌf(ə)rɪŋ]","['sʌfərɪŋ]","n.痛苦",'n.痛苦,受难','The patient is suffering from the rheumatism.','这个病人受到风湿病的折磨。','He was admitted to the hospital suffering from burns.','他由于烧伤, 被送入医院治疗。'}

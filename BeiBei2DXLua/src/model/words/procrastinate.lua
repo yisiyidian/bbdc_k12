@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["procrastinate"]={"procrastinate","[prə(ʊ)'kræstɪneɪt]","[pro'kræstɪnet]","v.延迟",'v.延迟,迁延,耽搁','I don’t kill time or procrastinate with TV.','我从来不用电视消磨时间或拖延时间。','Not having a clear vision for the future is one of the biggest reasons people procrastinate.','人们拖延的最重要的原因之一就是对未来缺乏足够清晰的愿景。'}

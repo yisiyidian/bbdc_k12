@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrist"]={"wrist","[rɪst]","[rɪst]","n.腕",'n.腕,腕关节','He turned the pancake over with a strong flick of his wrist.','他一抖腕子就把饼翻过来了.','He fell downstairs and broke his wrist.','他从楼梯跌下, 摔伤了手腕.'}

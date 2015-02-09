@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["generate"]={"generate","['dʒenəreɪt]","['dʒɛnəret]","vt.产生",'vt.产生,发生,引起|||[计算机]产生','It also allows you to log event and generate report on web activity.','这也允许您记载事件并产生Web活动的报告。','In the 19th century water power was widely utilized to generate electricity.','在19世纪人们大规模使用水力来发电.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shingle"]={"shingle","['ʃɪŋg(ə)l]","['ʃɪŋɡl]","n.木瓦(小圆石)",'n.木瓦(小圆石)|||vt盖以木瓦(挤压,锻铁)','The roof of our house is covered by shingles.','我家的屋顶是用木瓦铺的。','I prefer a sandy beach to a shingle one.','我喜欢沙滩，不喜欢遍布小石子的海滩.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elsewhere"]={"elsewhere","[els'weə; 'elsweə]","[ ,els'hwεə ]","adv.在别处",'adv.在别处,到别处','The capital is calm, but continuing disorder has been reported elsewhere.','首都一片平静，然而据报道在别的地方仍有持续的骚乱。','This research merely duplicates work already done elsewhere.','这项研究仅仅是重复别人已经做过的工作。'}

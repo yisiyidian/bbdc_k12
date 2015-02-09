@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accommodation"]={"accommodation","[əkɒmə'deɪʃ(ə)n]","[ə,kɑmə'deʃən]","n.膳宿",'n.住处，膳宿；调节；和解；预订铺位','Are you looking for furnished accommodation?','你在找备有家具的出租房间 吗 ?','Our accommodation is barely adequate.','我们的住房不太够用。'}

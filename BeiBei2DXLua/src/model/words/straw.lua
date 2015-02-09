@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["straw"]={"straw","[strɔː]","[strɔ]","n.稻草",'n.稻草,麦杆,吸管|||adj.用稻草做的,用来作稻草的,麦杆色的,无价值的,象稻草人的,非正式民意测验所发现的','The force of his fall was broken by the straw mats.','草垫的缓冲作用减弱了他下跌的力量。','A straw will show which way the wind blows.','【谚】草动知风向。'}

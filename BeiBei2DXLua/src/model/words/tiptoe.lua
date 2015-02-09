@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tiptoe"]={"tiptoe","['tɪptəʊ]","['tɪpto]","n.脚尖",'n.脚尖,翘望|||v.用脚尖走|||adv.用脚尖','I can (only) just reach the shelf, if I stand on tiptoe.','我踮著脚才刚能够著架子.','The nurse walked on tiptoe for fear of waking the patient.','护士踮着脚走惟恐会吵醒病人。'}

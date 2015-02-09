@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dense"]={"dense","[dens]","[dɛns]","adj.不易看透的",'adj.不易看透的,密集的,浓厚的,愚钝的','A dense mass of black hair framed his face.','浓密的黑发衬托著他的面庞.','Traffic was interrupted by a dense fog.','交通因浓雾而受阻。'}

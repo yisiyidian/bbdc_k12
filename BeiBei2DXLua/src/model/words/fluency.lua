@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fluency"]={"fluency","['fluːənsɪ]","['fluənsi]","n.流利",'n.流利，流畅','Neither fluency nor accuracy is easy to come by in learning a foreign language.','学习外语要达到流利或精确的程度都是不容易的。','||Fluency|| in spoken English is essential.','能讲一口流利的英语很重要。'}

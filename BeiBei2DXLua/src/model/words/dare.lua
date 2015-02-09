@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dare"]={"dare","[deə]","[dɛr]","vi.敢",'n.敢,挑战|||aux.敢|||vi.敢|||vt.敢于,勇于面对','I ,dare say you are British but you still need a passport to prove it.','我相信你是英国人, 但仍需有护照加以证明.','Nobody dared lift their eyes from the ground.','没有人敢把视线离开地面。'}

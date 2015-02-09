@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harbour"]={"harbour","['hɑːbə]","[ 'hɑ:bə ]","n.海港",'n.海港|||vt停泊','We lay at anchor outside the harbour.','我们在港外抛锚停泊.','||Harbour|| lights were blinking on the horizon.','海港的灯火在水平线上闪烁著.'}

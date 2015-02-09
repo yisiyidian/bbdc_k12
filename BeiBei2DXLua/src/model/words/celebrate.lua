@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["celebrate"]={"celebrate","['selɪbreɪt]","['sɛlɪbret]","vt.&vi.庆祝",'vt.&vi.庆祝,祝贺,颂扬','Why don\'t we crack open a bottle of champagne to celebrate?','我们何不开瓶香槟酒庆祝一下呢？','We went to the church to celebrate Christmas Eve.','我们去教堂庆祝圣诞前夕。'}

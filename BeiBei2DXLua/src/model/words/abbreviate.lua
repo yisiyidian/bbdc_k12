@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abbreviate"]={"abbreviate","[ə'briːvɪeɪt]","[ə'brivɪ'et]","vt.缩写",'vt.缩写，缩短，使...简略','In writing, the title "Doctor" is abbreviated to "Dr".','在书写时，Doctor这一职称被缩写为Dr。','Since we are running out of time, I will abbreviate my comments.','由于时间已经不多了，我就简短地评论一下。'}

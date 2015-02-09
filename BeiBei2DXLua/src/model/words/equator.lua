@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["equator"]={"equator","[ɪ'kweɪtə]","[ɪ'kwetɚ]","n.赤道",'n.赤道','The angular distance north or south of the earth\'s equator, measured in degrees along a meridian, as on a map or globe.','纬度地球赤道北或南的角距离，例如在地图或地球仪上沿着子午线用度数测量','relating to or being latitudes nearest to the equator','（纬度）低的纬度接近赤道的，或与之有关的'}

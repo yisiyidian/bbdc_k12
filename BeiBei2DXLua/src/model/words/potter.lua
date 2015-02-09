@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potter"]={"potter","['pɒtə]","['pɑtɚ]","n.陶工",'n.陶工,陶艺家|||vi.懒散(=putter)','We spent the weekend pottering around (in) the house.','我们周末做一些琐碎的家务事.','He loves to potter in the garden.','他喜欢在花园里随便走走.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complimentary"]={"complimentary","[kɒmplɪ'ment(ə)rɪ]","[,kɑmplɪ'mɛntri]","adj.免费赠送的",'adj.问候的,称赞的,夸奖的,免费赠送的','No, I\'m going to see a Chinese opera. Billy gave me a complimentary ticket yesterday.','不，我要去看一出国剧，比利昨天给我一张招待券。','May I have any samples or complimentary gifts?','可以给我一些试用装或者是赠品么？'}

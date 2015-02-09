@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["caliber"]={"caliber","['kæləbɚ]","[ 'kælibə ]","n.口径",'n.口径,才干,器量','They ought to win with players of such high caliber.','他们选手的能力这么高，应该获胜。','We are always trying to improve the caliber of our schools.','我们一直在想方设法提高我们学校的水平。'}

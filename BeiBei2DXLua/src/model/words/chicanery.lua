@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chicanery"]={"chicanery","[ʃɪ'keɪnərɪ]","[ ʃi'keinəri ]","n.欺诈",'n.欺诈,欺骗','The world is full of chicanery.','世界充满了欺骗。','They are skilled at chicanery and lies.','他们擅长于撒谎和欺骗。'}

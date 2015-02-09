@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["squirm"]={"squirm","[skwɜːm]","[skwɝm]","vi.(因不舒适、羞愧或紧张而)蠕动",'vi.(因不舒适、羞愧或紧张而)蠕动','It made him squirm to think how he\'d messed up the interview.','他想到面试时自己表现得那麽差劲儿, 心里真不是滋味儿.','He was squirming (around) on the floor in agony.','他躺在地上痛苦地扭动著.'}

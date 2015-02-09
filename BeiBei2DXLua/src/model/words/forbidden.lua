@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forbidden"]={"forbidden","[fə'bɪd(ə)n]","[fɚ'bɪdn]","adj.被禁止的",'adj.被禁止的','Smoking is forbidden until the plane is airborne.','飞机升空时禁止吸烟.','Army personnel are often forbidden to fraternize with the civilian population.','军职人员常被禁止与平民百姓友好往来.'}

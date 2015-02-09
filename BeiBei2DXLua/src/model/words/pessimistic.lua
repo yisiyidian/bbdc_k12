@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pessimistic"]={"pessimistic","[,pesɪ'mɪstɪk]","[,pɛsɪ'mɪstɪk]","adj.悲观的",'adj.悲观的,悲观主义的','Do you subscribe to her pessimistic view of the state of the economy?','你是否同意她对经济状况所持的悲观看法？','I have to say I\'m rather pessimistic.','我得说我相当悲观。'}

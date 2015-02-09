@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shiver"]={"shiver","['ʃɪvə]","['ʃɪvɚ]","vt.颤动(碎裂)",'vt.颤动(碎裂)|||n.冷颤(碎块)','A shiver ran down her spine.','她浑身哆嗦了一下.','I could not repress a shiver whenever I thought of him.','我一想到他就忍不住颤抖。'}

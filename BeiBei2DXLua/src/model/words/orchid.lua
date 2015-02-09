@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orchid"]={"orchid","['ɔːkɪd]","['ɔrkɪd]","n.兰花",'n.兰花,淡紫色','She wore a single orchid on her evening dress.','她在晚礼服上缀著一朵兰花.','Many kinds of wild orchid are becoming rare.','很多种野生兰越来越罕见了.'}

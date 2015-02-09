@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["siren"]={"siren","['saɪr(ə)n]","['saɪrən]","n.汽笛",'n.汽笛,警报器','The siren went off at noon.','警笛在正午鸣响','He made out of the cabin at once on hearing the siren.','他一听到汽笛声就立即走出船舱。'}

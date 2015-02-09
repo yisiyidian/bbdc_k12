@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disciplined"]={"disciplined","['dɪsɪplɪnd]","['dɪsəplɪnd]","adj.遵守纪律的",'adj.受过训练的，遵守纪律的|||动词discipline的过去式和过去分词','The teacher disciplined the class by giving them extra homework.','那教师布置额外的家庭作业来处罚学生.','He is too wild to be disciplined.','他太野蛮了，根本就不会遵守纪律的。'}

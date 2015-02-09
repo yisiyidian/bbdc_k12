@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ramble"]={"ramble","['ræmb(ə)l]","['ræmbl]","v.漫步",'v.漫步,漫谈,漫游|||n.漫步,闲谈，蔓延','We went for a ramble through the woods.','我们散步穿过树林。','The old man rambled about the past.','老者在聊过去的事情。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["length"]={"length","[leŋθ]","[lɛŋθ]","n.长度",'n.长度,篇幅','You spend a ridiculous length of time in the bath.','你洗澡用那麽长时间, 真不像话.','They went to absurd lengths to keep the affair secret.','他们为了保密无所不用其极.'}

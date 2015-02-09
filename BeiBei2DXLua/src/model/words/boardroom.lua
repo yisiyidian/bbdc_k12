@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boardroom"]={"boardroom","['bɔːdruːm; -rʊm]","[ 'bɔ:drum ]","n.会议室",'n.会议室','Do you remember to ask the switchboard to put my call through to the boardroom?','你记住请总机把我的电话接到董事会的会议室？','The chairman went home, but the rest of the director stayed in the boardroom.','董事长回家了, 而其余的董事留在董事会会议室里。'}

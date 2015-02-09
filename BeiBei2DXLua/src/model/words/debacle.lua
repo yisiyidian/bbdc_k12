@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["debacle"]={"debacle","[dɪˈbɑːkəl]","[dɪˈbɑkəl]","n.崩溃",'n.崩溃,解冻，溃败，灾害','The convention was a debacle.','这次大会开得非常失败。','Many men were shot or captured in the debacle.','败军溃逃时，有很多人被击毙或俘虏。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["troop"]={"troop","[truːp]","[trʊp]","n.群",'n.群,组,军队,大量,童子军|||vi.群集,结队,成群前行,陪伴','The troop made good their retreat from the occupied city.','部队从沦陷的城市安全撤出。','The enemy made a thrust against our troop.','敌人向我军发动了袭击。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wean"]={"wean","[wiːn]","[win]","v.断奶",'v.断奶,戒掉|||vt.给(婴儿)断奶','She had her baby weaned a year later.','她在一年后才把孩子的奶断掉。','Police weaned him away from drugs.','警察让他渐渐戒毒。'}

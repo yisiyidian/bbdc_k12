@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feet"]={"feet","[fiːt]","[fit]","n.（复数）脚",'n.（复数）脚','Tornadoes are violent whirlwinds which vary in their width from a few yards to 1300 feet.','龙卷风是一种猛烈的旋风, 其直径从几码到1300 英尺。','Six whiskies made him unsteady on his feet.','他喝了六杯威士忌就脚下不稳了。'}

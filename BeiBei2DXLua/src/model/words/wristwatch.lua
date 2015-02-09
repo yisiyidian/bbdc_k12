@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wristwatch"]={"wristwatch","['rɪs(t)wɒtʃ]","['rɪstwɔtʃ]","n.手表",'n.手表','It was so quiet I could hear my wristwatch ticking away.','周围静悄悄的,我能听到自己的手表滴答滴答地响着.','He demanded her wristwatch as a pawn for the loan.','他要她把手表留下来作为贷款的抵押.'}

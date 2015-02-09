@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rewind"]={"rewind","[riː'waɪnd]","[,ri'waɪnd]","vt.回绕",'vt.回绕,倒带|||n.回绕，倒带','In magnetic recording, a device which removes the magnetic tape from contact with the head on fast wind or rewind.','在磁记录技术中使用的一种机构, 在快速进带或倒带时能把磁带移开, 以免和磁头接触。','Depress this button to rewind the tape.','按下这个按钮倒带。'}

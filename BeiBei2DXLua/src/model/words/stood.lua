@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stood"]={"stood","[stʊd]","[stʊd]","v.（过去式和过去分词）站立",'（动词stand的过去式与过去分词）vi.站立,位于，停滞|||vt.忍受,使站立','He stood firm amid temptations.','他不被种种引诱所动摇。','He stood on tiptoe and tried to see over the wall.','他踮起脚尖, 试图看到墙那边。'}

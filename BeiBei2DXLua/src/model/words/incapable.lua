@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incapable"]={"incapable","[ɪn'keɪpəb(ə)l]","[ɪn'kepəbl]","adj.无能力的",'adj.无能力的,不胜任的','That child seems incapable of keeping out of (ie not getting into) mischief.','那个孩子不调皮捣蛋简直就受不了.','As a lawyer she\'s totally incapable.','她当律师完全不合格。'}

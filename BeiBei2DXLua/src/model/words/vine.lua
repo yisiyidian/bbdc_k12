@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vine"]={"vine","[vaɪn]","[vaɪn]","n.攀爬植物",'n.攀爬植物,藤,蔓','The boy students dislike going any where with her because she is such a clinging vine.','男生们不喜欢和她一起出去。因为她事事靠他们。','The grapes withered on the vine.','葡萄藤上的葡萄都干瘪了。'}

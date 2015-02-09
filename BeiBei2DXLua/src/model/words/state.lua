@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["state"]={"state","[steɪt]","[stet]","n.州",'n.州,国,情形|||adj.国家的,州的,正式的|||vt.说,陈述,声明,规定','He was in a real state when I last saw him.','我上次见到他时，他很激动。','Should industry be controlled by the state?','工业应该由国家控制吗？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["themselves"]={"themselves","[ð(ə)m'selvz]","[ðɛm'sɛlvz]","pron.他(她,它)们自己",'pron.他(她,它)们自己','They quarreled among themselves.','他们互相争吵。','They sat in the sun roasting themselves.','他们坐着晒太阳。'}

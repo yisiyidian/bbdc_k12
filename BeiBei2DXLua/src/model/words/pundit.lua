@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pundit"]={"pundit","['pʌndɪt]","['pʌndɪt]","n.权威人士",'n.权威人士，专家，博学的人','The pundits disagree on the best way of dealing with the problem.','如何妥善处理这一问题，专家众说纷纭。','If you believe the fashion pundits, we\'ll all be wearing pink this year.','如果你相信這些“时尚权威”，我们今年就都要穿粉红色了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hinterland"]={"hinterland","['hɪntəlænd]","['hɪntɚlænd]","n.海岸的后部地方(穷乡僻壤)",'n.海岸的后部地方(穷乡僻壤)','The city people could not get used to the remote nature of the hinterland.','城市里的人们不能习惯穷乡僻壤的艰苦环境。','Tibet used to be an undeveloped hinterland','西藏曾经是落后的穷乡僻壤'}

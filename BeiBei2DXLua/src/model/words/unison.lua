@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unison"]={"unison","['juːnɪs(ə)n]","['jʊnəsn]","n.调和",'n.调和,和谐,一致','The last verse will be sung in unison.','歌词的最后部分要合唱。','The governments acted in unison to combat terrorism.','这些国家的政府一致行动对付恐怖主义。'}

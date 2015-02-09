@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crouch"]={"crouch","[kraʊtʃ]","[kraʊtʃ]","v.蹲下",'v.蹲下,蜷著,屈膝|||n.蹲伏,蜷缩','They (were) bent double crouching under the table.','他们蜷著身子蹲在桌子底下.','They did not crouch under the oppression.','他们受压迫而不屈服。'}

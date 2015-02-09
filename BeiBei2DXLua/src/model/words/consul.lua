@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consul"]={"consul","['kɒns(ə)l]","['kɑnsl]","n.领事",'n.领事，（古罗马）执行官员，（1799年至1804年间法国的）三名主要执政官之一','A consul\'s duty is to help his own nationals.','领事的职责是帮助自己的同胞.','He was appointed the general consul of Japan.','他被任命为驻日本的总领事。'}

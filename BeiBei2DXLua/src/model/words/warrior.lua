@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["warrior"]={"warrior","['wɒrɪə]","['wɔrɪɚ]","n.勇士",'n.勇士,战士','The Indian warrior passed a sword through his opponent.','那个印度勇士用剑刺穿了对手的身体。','A Native American warrior.','土著的美洲战士'}

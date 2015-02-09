@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["linguistics"]={"linguistics","[lɪŋ'gwɪstɪks]","[lɪŋ'ɡwɪstɪks]","n.语言学",'n.语言学','He is engaged in studies in linguistics.','他从事于语言学的研究。','She plans to take a course in applied linguistics.','她打算学习应用语言学课程.'}

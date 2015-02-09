@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poverty"]={"poverty","['pɒvətɪ]","['pɑvɚti]","n.贫穷",'n.贫穷,贫困','Although she was poor, she was living in genteel poverty.','尽管她贫穷，但她总想装出上流社会阶层的样子。','The novel is a searing indictment of urban poverty.','这部小说是对城市贫困的震撼心灵的控诉。'}

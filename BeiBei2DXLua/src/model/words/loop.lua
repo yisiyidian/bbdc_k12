@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loop"]={"loop","[luːp]","[lup]","n.环",'n.环,圈,弯曲部份,回路|||vt.使...成环,以圈结,以环连结|||vi.形成环,环形地行动','A leather loop that slides to change the tension on the cord of a drum.','滑动皮环通过滑动以改变鼓弦张力的皮环','The news of their marriage knocked me for a loop.','他们结婚的消息使我大吃一惊。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heel"]={"heel","[hiːl]","[hil]","n.脚后跟",'n.脚后跟|||v.倾侧','I only wear high heels on special occasions.','我只在特殊场合穿高跟鞋。','The police were on our heels.','警察紧追着我们。'}

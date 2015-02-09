@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contravene"]={"contravene","[,kɒntrə'viːn]","[,kɑntrə'vin]","vt.违反(同...相抵触",'vt.违反(同...相抵触,否定)','He said the article did not contravene the industry\'s code of conduct.','他说这一条款并未违反行业的行为准则。','Her actions contravene the rules.','她的所作所为违反了规定。'}

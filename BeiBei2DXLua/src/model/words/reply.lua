@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reply"]={"reply","[rɪ'plaɪ]","[rɪ'plai]","vt.&vi.&n.回答",'vt.&vi.&n.回答,答复','What a sage reply you gave!','多聪明的回答啊！','He did not vouchsafe a reply.','他未予答复。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["teem"]={"teem","[tiːm]","[tim]","vi.充满",'vi.充满,富于|||vt.把…倒空，倾泻','The river teems with all kinds of fish in summer.','夏天这条河里各种各样的鱼多得很。','The rain teemed down for hours.','大雨一直下了好几个小时。'}

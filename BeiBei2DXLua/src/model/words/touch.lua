@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["touch"]={"touch","[tʌtʃ]","[tʌtʃ]","vt.触摸",'n.触觉,接触,少许,痕迹,修饰|||vt.触摸,吃,喝,触及,感动|||vi.接触,联系','I told you not to touch my things!','我告诉过你，别动我的东西！','She hit the ball a touch too hard.','她击球的力量大了点儿。'}

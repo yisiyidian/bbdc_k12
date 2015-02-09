@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heinous"]={"heinous","['heɪnəs; 'hiːnəs]","['henəs]","adj.可憎的",'adj.可憎的,十恶不赦的','They are capable of the most heinous acts.','他们能做出最邪恶的事情。','Her life has been permanently blighted by his heinous crime.','他犯下的滔天罪行给她的生活蒙上了永久的阴影。'}

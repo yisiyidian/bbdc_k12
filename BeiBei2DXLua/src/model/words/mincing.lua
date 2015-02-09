@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mincing"]={"mincing","['mɪnsɪŋ]","['mɪnsɪŋ]","adj.矫饰的",'adj.矫饰的,装腔作势的,装模作样的|||动词mince的现在分词形式','Perhaps I\'ll buy lean meat and ||mince|| it myself.','也许我会买点瘦肉自己绞。','The doctors didn\'t ||mince|| their words, and predicted the worst.','医生直言相告，并做了最坏的预测。'}

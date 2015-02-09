@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accustom"]={"accustom","[ə'kʌstəm]","[ə'kʌstəm]","v.使...习惯",'v.使...习惯','You must accustom yourself to getting up early.','你必须使自己习惯于早起。','He soon gets accustomed to dormitory life and makes two or three friends.','他不久就逐渐习惯了宿舍的生活并交了两三个朋友。'}

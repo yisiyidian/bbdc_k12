@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strata"]={"strata","['strɑːtə]","['strætɚ]","n.地层",'n.地层|||名词stratum的复数形式','The lowest social strata live a poor life','最底层社会阶级过着贫苦的生活','They represent all social strata.','他们代表各个社会阶层。'}

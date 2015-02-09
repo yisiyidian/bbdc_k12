@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expanse"]={"expanse","[ɪk'spæns; ek-]","[ɪk'spæns]","n.广阔",'n.苍天，宽阔的区域,广阔','Ahead lay a vast expanse of wheat.','前面是一大片小麦','There was a great expanse of desert before us.','我们面前有一片广阔的沙漠。'}

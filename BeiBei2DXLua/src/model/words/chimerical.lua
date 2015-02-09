@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chimerical"]={"chimerical","[kaɪ'mɪərɪkəl]","[ kai'miərikəl ]","adj.空想的",'adj.空想的，荒诞的','He indulged in his chimerical daydream and doesn\'t want to wake up.','他沉溺在他荒诞的白日梦中不愿清醒。','chimerical ,fancied','空想的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consecrate"]={"consecrate","['kɒnsɪkreɪt]","[ 'kɔnsi,kreit ]","v.供神用",'v.供神用,奉献,使神圣|||adj.被献给神的,神圣的','This battle field is consecrated to the memory of the soldiers who died here.','这个战场被视为圣地，以纪念战死在这里的战士。','The church was consecrated in 1234.','这个教堂于1234年祝的圣。'}

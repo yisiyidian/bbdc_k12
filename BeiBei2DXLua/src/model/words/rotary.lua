@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rotary"]={"rotary","['rəʊt(ə)rɪ]","['rotəri]","adj.旋转的",'adj.旋转的|||n.旋转式机器，环形交叉路','The gardener asked me for a rotary lawn mower.','园丁向我要一台旋转式割草机。','The central unit is a rotary drum.','核心设备是一个旋转的滚筒.'}

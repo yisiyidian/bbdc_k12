@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discerning"]={"discerning","[dɪ'sɜːnɪŋ]","[dɪ'sɝnɪŋ]","adj.有见识的",'adj.有见识的|||v.鉴别(看出,领悟)','I thought I am a girl who is discerning.','我觉得我是个有品位的人。','She is a very discerning art critic.','她是位眼光敏锐的艺术评论家。'}

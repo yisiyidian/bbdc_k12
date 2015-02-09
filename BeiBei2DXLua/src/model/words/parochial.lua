@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parochial"]={"parochial","[pə'rəʊkɪəl]","[pə'rokɪəl]","adj.教区的",'adj.教区的,地方性的,狭小的','Officials tend to tilt toward secrecy from a parochial view of their responsibilities.','官吏出于狭隘的责任观念往往倾向于保密。','He is rather too parochial in his outlook.','他的眼界未免过于狭隘了。'}

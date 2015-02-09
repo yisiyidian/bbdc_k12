@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["irritant"]={"irritant","['ɪrɪt(ə)nt]","['ɪrɪtənt]","adj.刺激性的",'adj.刺激的,刺激性的|||n.刺激物,刺激剂','The noise of traffic is a constant irritant to city dwellers.','车辆的噪音对城市居民是永无止境的骚扰.','tobacco smoke, a common eye irritant.','烟草发出的烟，一种常见的眼睛刺激物'}

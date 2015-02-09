@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cherubic"]={"cherubic","[tʃɛ'rʊbɪk]","[ tʃe'ru:bik ]","adj.天使的",'adj.天使的,无邪的,可爱的','I was born cherubic and chubby.','我出生时胖乎乎的，像天使般可爱。','She has a beaming, cherubic face.','她有着天使般的笑脸。'}

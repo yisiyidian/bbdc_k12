@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hull"]={"hull","[hʌl]","[ hʌl ]","n.壳",'n.壳,皮,船体|||v.去壳','The hull of a ship loomed up suddenly through the fog.','一条船的船体突然黑压压地在雾中出现。','The outer surface of ship\'s hull is very hard.','船体的外表面非常坚硬.'}

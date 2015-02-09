@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hormone"]={"hormone","['hɔːməʊn]","['hɔrmon]","n.荷尔蒙",'n.荷尔蒙,激素','The doctor told him that his disease was caused by unbalanced hormone.','医生告诉他他的病是由荷尔蒙失衡引起的。','This hormone interacts closely with other hormones in the body.','这种荷尔蒙与体內其他荷尔蒙紧密地相互作用.'}

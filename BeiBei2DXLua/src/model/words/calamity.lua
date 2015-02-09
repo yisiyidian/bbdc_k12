@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calamity"]={"calamity","[kə'læmɪtɪ]","[kə'læməti]","n.灾难",'n.灾难,不幸事件','She is always on the alert for some new calamity.','她总是保持警觉以防某种新的灾难。','More than 50 people were killed in this calamity.','这次灾难中有五十多人丧生。'}

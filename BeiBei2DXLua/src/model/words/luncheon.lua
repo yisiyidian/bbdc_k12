@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["luncheon"]={"luncheon","['lʌn(t)ʃ(ə)n]","['lʌntʃən]","n.午宴",'n.午宴,正式的午餐','A casserole  was already in the oven cooking gently for luncheon.','焙盘菜已放在烤箱里慢慢煨着等午饭时吃.','We have luncheon at twelve o\'clock.','我们十二点钟用午餐.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vagrant"]={"vagrant","['veɪgr(ə)nt]","['veɡrənt]","n.流浪汉",'n.流浪汉,漂泊者,无赖|||adj.漂泊的,流浪的,游荡的','We met a band of vagrant beggars there.','我们在那里遇到了一伙流浪的乞丐。','He lived on the street as a vagrant.','他以在大街上乞讨为生。'}

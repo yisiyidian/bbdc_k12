@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detail"]={"detail","['diːteɪl]","['ditel]","n.细节",'n.细节,详情,部分,分派|||vt.详述,选派,用小元素装饰|||vi.画细节','The full details of the agreement haven\'t been made public.','协议的细节尚未公布。','Could you detail all your expenses on this form?','请把你的各项开支列在这张表格上，好吗？'}

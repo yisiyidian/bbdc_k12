@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["underwrite"]={"underwrite","[ʌndə'raɪt; 'ʌndəraɪt]","[,ʌndɚ'raɪt]","vt.写在...下面",'vt.写在...下面,认购，保险|||vi.从事保险业','The government ||underwrote|| the initial costs of the operation.','政府为该项活动提供了开办时所需的费用.','The shares were ||underwritten|| by the Bank of England.','这些股票由英格兰银行包销.'}

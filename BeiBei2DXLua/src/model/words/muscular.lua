@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["muscular"]={"muscular","['mʌskjʊlə]","['mʌskjəlɚ]","adj.肌肉的",'adj.肌肉的,肌肉发达的','Any of a branching system of muscular, elastic tubes that carry blood away from the heart to the cells, tissues, and organs of the body.','动脉任何树枝形系统，将血液从心脏输送到身体各细胞、组织和器官的肌肉的，一种有弹性的血管','Having a heavy, muscular physique.','公牛般的有健壮的、肌肉发达的体格的'}

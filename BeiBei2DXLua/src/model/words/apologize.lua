@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apologize"]={"apologize","[ə'pɒlədʒaɪz]","[ə'pɑlədʒaɪz]","v.道歉",'v.道歉|||vi.道歉,谢罪|||vt.道歉,谢罪,辩白','I apologize.','我很抱歉。','You must apologize to your sister for being so rude.','你太无理了, 必须向你姐姐道歉。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beneath"]={"beneath","[bɪ'niːθ]","[bɪ'niθ]","adv.在下方",'adv.在下方|||prep.在下方,在...之下','Snobs are usually contemptuous of people they feel to be beneath them.','势利者通常瞧不起他们认为地位在他们之下的人。','||Beneath|| that apparently calm surface is a man of fierce temper.','文静的外表掩盖着的是一个火暴脾气的人。'}

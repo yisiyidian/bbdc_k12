@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stoke"]={"stoke","[stəʊk]","[stok]","v.添加燃料",'v.添加燃料,司炉,激起|||vt.给(炉子)添燃料,烧(火)','He stoked up the fire in the hearth.','他给壁炉里的火添了点柴。','These demands are helping to stoke fears of civil war.','这些要求助长了人们对内战的恐惧。'}

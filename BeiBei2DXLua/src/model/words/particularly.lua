@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["particularly"]={"particularly","[pə'tɪkjʊləlɪ]","[pɚ'tɪkjəlɚli]","adv.尤其",'adv.特别,尤其','His behavior is not particularly adult.','他的举止行为还不太成熟。','The instrumentation is particularly fine.','这首器乐曲编得特别细致.'}

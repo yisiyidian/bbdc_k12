@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oligarchy"]={"oligarchy","['ɒlɪgɑːkɪ]","['ɑlə'gɑrki]","n.寡头政治",'n.寡头政治，寡头集团','It had long been realized that the only secure basis for oligarchy is collectivism.','他们早已认识到，寡头政体的唯一可靠基础是集体主义。','Athens was suffering under the rule of an oligarchy that had no concern for the people\'s welfare.','雅典当时饱受寡头集团的统治，他们对人民的福祉毫不关心。'}

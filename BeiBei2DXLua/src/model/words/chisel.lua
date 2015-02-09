@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chisel"]={"chisel","['tʃɪz(ə)l]","['tʃɪzl]","n.凿子",'n.凿子|||v.用凿子刻,雕,凿|||vt.凿,雕,凿子,錾子','She used a chisel to prise off the lid.','她用錾子来把盖子凿开.','He has chiseled me out of $5.','他骗去了我五块钱。'}

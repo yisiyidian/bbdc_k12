@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invention"]={"invention","[ɪn'venʃ(ə)n]","[ɪn'vɛnʃən]","n.发明",'n.发明,发明物,虚构,虚构物','The invention of modern xerography has made our work much easier.','现代复印术的发明让我们的工作轻松多了。','The invention of aircraft caused a revolution in our ways of travelling.','飞机的发明引起了旅行方式的巨大改变。'}

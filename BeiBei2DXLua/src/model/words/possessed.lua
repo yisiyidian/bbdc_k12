@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["possessed"]={"possessed","[pə'zest]","[pə'zɛst]","adj.疯狂的",'adj.疯狂的；着魔的','He decided to give away everything he possessed and become a monk.','他决定放弃他所有的一切, 出家为僧.','She is possessed of a wonderfully calm temperament.','她性情非常文静.'}

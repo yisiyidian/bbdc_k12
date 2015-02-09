@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["truck"]={"truck","[trʌk]","[trʌk]","n.卡车",'n.卡车,对...进行交易,来往,实物工资|||vt.对...进行交易,交往,以卡车运输|||vi.驾驶卡车,以物易物','Mind! There\'s a truck corning!','注意!有辆卡车过来了!','The truck had carried back many bricks.','卡车运回了许多砖。'}

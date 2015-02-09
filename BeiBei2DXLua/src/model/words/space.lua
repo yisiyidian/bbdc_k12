@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["space"]={"space","[speɪs]","[spes]","n.空间",'n.位置,空间,距离,太空,空地,持续的一段时间|||vt.&vi.均匀隔开,分隔','||Space|| your words when you write.','写字的时候要把字均匀地隔开。','There is plenty of space here to move about.','这里有很大的活动空间。'}

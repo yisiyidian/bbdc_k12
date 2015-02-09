@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ductile"]={"ductile","['dʌktaɪl]","['dʌktaɪl]","adj.易延展的",'adj.易延展的,柔软的|||adj.易教导的','Also, heat treating can make a metal softer and more ductile.','同时，热处理也可以增强金属的韧性。','Copper is very ductile and can be made into very fine wires.','铜的延展性很好，可以制成非常细的铜丝。'}

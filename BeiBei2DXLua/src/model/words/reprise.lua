@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reprise"]={"reprise","[rɪ'priːz]","[rɪ'priz]","n.再发生",'n.再发生(年金,再活动)|||vt重奏(赔偿)','It seems that everything reprised.','似乎一切又重演了。','He then proceeded to play for more than two hours, ||reprising|| every one of his hits.','他又接着演奏了两个多小时，将他的每一首知名作品都演奏了一遍。'}

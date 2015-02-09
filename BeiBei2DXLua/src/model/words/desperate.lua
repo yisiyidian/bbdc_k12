@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["desperate"]={"desperate","['desp(ə)rət]","['dɛspərət]","adj.绝望的",'adj.不顾一切的,绝望的,极想得到的','the desperate look of hunger; a desperate cry for help.','饥饿者脸上那绝望的样子；绝望的呼救声','He\'s desperate for a glass of water.','他极想喝一杯水。'}

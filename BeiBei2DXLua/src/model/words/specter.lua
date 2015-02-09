@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["specter"]={"specter","['spɛktɚ]","[ 'spektə ]","n.幽灵",'n.幽灵,妖怪,恐怖的根源|||=spectre(美）','A supernatural being; a ghost or specter.','下凡的神仙超自然力的灵魂；鬼魂或幽灵','The specter of unemployment hunted the country.','失业的幽灵在这个国家作祟。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inchoate"]={"inchoate","[ɪn'kəʊeɪt; 'ɪnk-; -ət]","[ɪn'koɪt]","adj.刚开始的",'adj.刚开始的,早期的，不成熟的','It is really just a inchoate idea.','这真的只是一个尚未成熟的想法。','Who knows the main symptom of inchoate lung cancer?','有谁知道早期肺癌的主要症状吗？'}

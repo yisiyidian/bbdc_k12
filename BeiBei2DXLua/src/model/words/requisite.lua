@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["requisite"]={"requisite","['rekwɪzɪt]","['rɛkwəzɪt]","adj.必要的",'adj.必要的,需要的|||n.必需品','I must buy some toilet requisites.','我必须买些卫生间必需品。','She expect to achieve the requisite two-thirds majority for nomination.','她期望能获得三分之二以上的提名。'}

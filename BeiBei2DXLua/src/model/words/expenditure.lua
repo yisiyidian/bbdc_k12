@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expenditure"]={"expenditure","[ɪk'spendɪtʃə; ek-]","[ɪk'spɛndɪtʃɚ]","n.(时间、劳力、金钱等)支出",'n.(时间、劳力、金钱等)支出,使用,消耗','||Expenditure|| on road repairs has been cut to an irreducible minimum.','修路费已削减到不能再减的最低限度了.','The government intends to cut expenditure on arms.','政府打算削减军备开支。'}

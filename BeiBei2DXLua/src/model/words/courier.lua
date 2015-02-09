@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["courier"]={"courier","['kʊrɪə]","['kʊrɪɚ]","n.送快信的",'n.送快信的,急差,旅行服务员','The member of the group is given a detailed tour itinerary by the courier.','旅游团成员从导游那里拿到详细的日程表。','The courier escort the group into the hotel.','导游陪同这个团队来到饭店。'}

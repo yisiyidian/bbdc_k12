@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sorcery"]={"sorcery","['sɔːs(ə)rɪ]","['sɔrsəri]","n.巫术",'n.巫术,魔法','A woman who practices sorcery; a witch.','巫婆搬弄巫术的女人；巫婆','At that time most people believe in sorcery and witchcraft.','那时候大多数人相信巫术和魔法。'}

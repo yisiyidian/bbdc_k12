@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curb"]={"curb","[kɜːb]","[kɝb]","n.抑制",'n.抑制,勒马绳,边石,路缘|||vt.抑制,束缚,牵(狗)到合适地方大小便','He pulled over to the curb.','他把车子停靠在道路边缘。','Pull over the curb.','靠路边停车'}

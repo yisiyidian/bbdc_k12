@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wick"]={"wick","[wɪk]","[wɪk]","n.蜡烛芯",'n.蜡烛芯，灯芯','The criminal is unpardonably wicked, by comparison, all other criminals are virtuous.','这个罪犯真是十恶不赦，相比之下，其他罪犯还算有点良心。','A vessel containing oil or alcohol burned through a wick for illumination.','酒精灯一种装有油或酒精并通过灯芯燃烧来照明的容器'}

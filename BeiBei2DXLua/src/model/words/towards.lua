@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["towards"]={"towards","[tə'wɔːdz; twɔːdz; 'tɔːdz]","[tɔrdz]","prep.朝",'prep.朝,向','As you get older your attitude towards death changes.','人随著年龄的增长，对死亡的看法也会有所改变。','He felt very friendly towards them.','他对他们非常友好。'}

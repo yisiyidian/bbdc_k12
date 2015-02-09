@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stocky"]={"stocky","['stɒkɪ]","['stɑki]","adj.矮胖的",'adj.矮胖的,健壮结实的','He always feels ashamed for his short, stocky figure.','他矮壮的体形总是让他觉得羞愧。','I turned and found a short, stocky man in shirt - sleeves standing behind me.','我转过头来,只见一个短胖粗壮 、 戴着套袖的人站在我的背后.'}

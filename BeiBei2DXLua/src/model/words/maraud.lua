@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maraud"]={"maraud","[mə'rɔːd]","[ mə'rɔ:d ]","v.抢劫",'v.抢劫,掠夺','The countryside was overrun by marauding bands.','郊野到处都有散兵游勇, 四出打劫.','maraud [mə\'rɔ:d]','v. 抢劫,掠夺'}

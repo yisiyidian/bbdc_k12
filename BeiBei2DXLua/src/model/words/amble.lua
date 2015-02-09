@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amble"]={"amble","['æmb(ə)l]","['æmbl]","n.溜蹄",'n.溜蹄,缓行漫步|||vi.缓行,溜蹄','Every evening, they amble along the bank.','每天晚上，他们都沿着江边悠闲地散步。','Slowly they ambled back to the car.','他们慢慢地走回到汽车那儿。'}

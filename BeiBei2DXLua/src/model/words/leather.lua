@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leather"]={"leather","['leðə]","['lɛðɚ]","adj.皮革制的",'adj.皮革制的|||n.皮革|||vt.用皮革覆盖,鞭打','This wallet feels to me like leather.','我觉得这钱包像是皮的.','This type of vinyl is a poor substitute for leather.','这种乙烯基材料代替皮革十分勉强.'}

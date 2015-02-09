@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ignorance"]={"ignorance","['ɪgn(ə)r(ə)ns]","['ɪɡnərəns]","n.无知",'n.无知','Pleading ignorance of the law won\'t help you if you are caught.','假若因犯法被抓住，藉口不知是犯法亦无济於事。','He tried to veil his contempt at my ignorance.','他试图掩饰对我的无知的蔑视。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oasis"]={"oasis","[əʊ'eɪsɪs]","[o'esɪs]","n.绿洲",'n.绿洲','Borne on the back of the ship of the desert, we reached the oasis at sunset.','我们骑着骆驼，在太阳落山时到达了这块绿洲。','Her bedroom is an oasis of calm in the noisy house.','她的卧室是这座嘈杂房屋中一个难得的安静之处。'}

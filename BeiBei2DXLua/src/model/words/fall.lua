@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fall"]={"fall","[fɔːl]","[fɔl]","v.落下",'n.秋天,落下,瀑布|||v.倒下,落下,来临','Christmas Day falls on a Monday.','今年的圣诞节是星期一。','Many trees ||fell|| in the storm.','在那场暴风雨中有许多树都倒了。'}

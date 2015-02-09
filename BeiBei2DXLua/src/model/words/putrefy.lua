@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["putrefy"]={"putrefy","['pjuːtrɪfaɪ]","[ 'pju:trifai ]","v.使腐烂",'v.使腐烂','The meat in all of the open flasks ||putrefied||.','所有开口瓶中的肉都腐烂了。','...putrefying corpses.','...正在腐烂的尸体。'}

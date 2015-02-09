@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proportional"]={"proportional","[prə'pɔːʃ(ə)n(ə)l]","[prə'pɔrʃənl]","adj.成比例的",'adj.成比例的,相称的|||n.[数]比例项','The dwarf\'s long arms were not proportional to his height.','那侏儒的长臂与他的身高不成比例.','The output should be proportional to the input.','输出应当与输入成比例.'}

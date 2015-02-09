@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meddle"]={"meddle","['med(ə)l]","['mɛdl]","vi.干预",'vi.干预，干涉，插手','Believe you me, the government won\'t meddle with the tax system.','我向你保证, 政府绝不会干预税收制度的.','Don\'t meddle in my affairs.','别干预我的事情。'}

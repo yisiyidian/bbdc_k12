@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["odd"]={"odd","[ɒd]","[ɑd]","adj.古怪的",'adj.奇数的,古怪的,剩余的|||.奇数','His formal clothes made him the odd one out in the club.','他衣冠楚楚，在俱乐部中如鹤立鸡群。','Banana, grape, apple, daisy which of these is the odd one out?','香蕉、葡萄、苹果、雏菊－－这几样东西哪一样与众不同？'}

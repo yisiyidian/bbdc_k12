@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toe"]={"toe","[təʊ]","[to]","n.脚趾",'n.脚趾,足尖|||vt.趾触,趾踢|||vi.踮着脚尖走','Sorry, did I tread on your toe?','对不起, 我踩著你的脚了吧?','He was wet from top to toe.','他从头到脚都湿透了。'}

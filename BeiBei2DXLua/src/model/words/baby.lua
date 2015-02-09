@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["baby"]={"baby","['beɪbɪ]","['bebi]","n.婴儿",'adj.(形容用法)婴儿的,过小的|||n.婴儿,象婴儿的人,需特殊关心的事物|||vt.溺爱,过度关心','She gave birth to a fine healthy baby.','她生了一个健康漂亮的婴儿。','We\'ve turned the smallest bedroom into a nursery for our new baby.','我们已将最小的那间卧室改成新生婴儿的幼儿室.'}

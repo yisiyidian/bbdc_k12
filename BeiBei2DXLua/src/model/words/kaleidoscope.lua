@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kaleidoscope"]={"kaleidoscope","[kə'laɪdəskəʊp]","[kə'laɪdəskop]","n.万花筒",'n.万花筒，千变万化','His paintings are a kaleidoscope of gorgeous colours.','他的油画色彩斑斓，变化万千。','The bazaar was a kaleidoscope of strange sights and impressions.','集市的景象光怪陆离，纷然杂陈。'}

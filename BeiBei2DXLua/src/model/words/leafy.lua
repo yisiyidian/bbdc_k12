@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leafy"]={"leafy","['liːfɪ]","['lifi]","adj.叶茂盛的",'adj.叶茂盛的,多叶的,叶状的','Bearing numerous leaves; leafy.','叶子茂盛的生长繁多的叶子的；多叶的','There is a leafy forest in our hometown.','在我们的家乡有一片树叶茂密的森林。'}

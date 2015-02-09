@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nifty"]={"nifty","['nɪftɪ]","['nɪfti]","adj.伶俐的",'adj.伶俐的,有技巧的','a nifty idea.','极好的主意','Bridgeport was a pretty nifty place.','布里奇波特曾是个相当整洁、惹人喜爱的地方。'}

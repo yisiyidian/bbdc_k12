@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unstable"]={"unstable","[ʌn'steɪb(ə)l]","[ʌn'stebl]","adj.不稳定的",'adj.不稳定的，易变的','Most of the countries in the region have unstable economies.','这个地区大多数国家的经济都不稳定。','If it were gentle, only the more unstable rods fell.','若地震是微弱的，仅那些比较不稳定的杆子倒下。'}

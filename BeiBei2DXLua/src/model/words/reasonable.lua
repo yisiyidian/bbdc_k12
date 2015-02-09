@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reasonable"]={"reasonable","['riːz(ə)nəb(ə)l]","['riznəbl]","adj.合理的",'adj.合理的,有道理的,适度,通情达理的|||adv.合理地','The management took all reasonable safety precautions.','管理部门采取了一切合理的安全措施。','I think that\'s not reasonable.','我认为这是没有道理的。'}

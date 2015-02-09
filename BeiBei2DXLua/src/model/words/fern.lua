@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fern"]={"fern","[fɜːn]","[fɝn]","n.羊齿植物",'n.羊齿植物，蕨','The trunk of a palm or tree fern.','棕榈树或树蕨的树干','An area overgrown with this fern.','欧洲蕨林被这种蕨覆盖的地带'}

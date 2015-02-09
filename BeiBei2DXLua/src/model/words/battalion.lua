@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["battalion"]={"battalion","[bə'tælɪən]","[bə'tæljən]","n.营",'n.营,军队，大批','The battalion formed up by companies on the barrack square.','全营以连为单位在军营广场上列队.','The battalion commander lined his men along the railway.','营长命令士兵们沿铁轨排开。'}

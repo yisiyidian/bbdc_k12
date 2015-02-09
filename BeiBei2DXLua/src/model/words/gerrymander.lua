@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gerrymander"]={"gerrymander","['dʒerɪ,mændə]","[ 'dʒeri,mændə ]","vt.为己党利益擅改选区",'vt.为己党利益擅改选区|||n.不公正划分选区','That outcome, in turn, was underpinned by a previous Republican gerrymander.','那次选举的结果，正是之前共和党进行不公正选区划分的结果。','Another law will gerrymander parliament in its favor.','另一项法律会让这个政权更容易控制国会。'}

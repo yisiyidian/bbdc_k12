@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toaster"]={"toaster","['təʊstə]","['tostɚ]","n.烤面包机",'n.烤面包机','Disassemble a toaster.','拆卸烤面包炉','The network computer, also known as the Internet toaster, Internet appliance or Internet device, is the low cost, no　maintenance desktop device.','网络计算机, 也叫“因特网烤炉”、因特网装置、因特网设备, 是一种价格低廉、无需维护的台式装置。'}

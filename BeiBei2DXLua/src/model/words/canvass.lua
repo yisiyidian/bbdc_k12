@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["canvass"]={"canvass","['kænvəs]","['kænvəs]","v.游说",'v.游说，兜售，详细检查,细究|||n.细查,论究,劝诱，民意调查','He thanked all his helpers who canvassed for him and helped him to win this election.','他感谢所有为他竞选拉选票，并且帮他赢得这次竞选胜利的人们。','The poll canvassed the views of almost eighty economists.','民意调查征询了将近80位经济学家的意见。'}

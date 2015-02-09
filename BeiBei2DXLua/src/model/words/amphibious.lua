@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amphibious"]={"amphibious","[æm'fɪbɪəs]","[æm'fɪbɪəs]","adj.具有双重性的",'adj.具有双重性的,[生物]两栖的','amphibious tanks.','水陆两用坦克','Tortoises are amphibious animal.','乌龟是两栖动物'}

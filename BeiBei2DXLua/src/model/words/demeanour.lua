@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["demeanour"]={"demeanour","[dɪ'miːnə]","[ di'mi:nə ]","n.举止",'n.举止,态度,行为|||=demeanor（美）','His demeanour has always been that of a perfect gentleman.','他的举止始终是属于正人君子的模样。','The girl has a quiet, modest demeanour.','这个女孩子的态度娴静而谦逊。'}

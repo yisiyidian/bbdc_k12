@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grunt"]={"grunt","[grʌnt]","[ɡrʌnt]","vi.(猪等)作呼噜声",'vi.(猪等)作呼噜声,(表示烦恼、反对、疲劳、轻蔑等)发哼声|||vt.咕哝着说出|||n.呼噜声,咕哝','He grunted as the bullet hit him.','子弹击中他时他疼得哼了出来。','I asked him what he thought, but he just grunted.','我问他在想什么，他只哼了一声。'}

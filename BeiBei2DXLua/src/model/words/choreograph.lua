@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["choreograph"]={"choreograph","['kɒrɪəgrɑːf]","[ 'kɔriəɡrɑ:f ]","v.设计舞蹈动作",'v.设计舞蹈动作','He\'s asked me to choreograph.','他想让我去编舞。','Now you\'ll choreograph by yourselves.','你们现在要自己当编导。'}

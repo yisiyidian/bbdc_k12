@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dumpling"]={"dumpling","['dʌmplɪŋ]","['dʌmplɪŋ]","n.饺子",'n.小面团；汤团；饺子，软绵绵象团子的东西','I feel like having some dumplings.','我很想吃饺子。','A ball or dumpling of finely chopped meat or seafood bound with eggs and poached in stock or water.','肉圆, 鱼圆由精碎肉或海味裹着鸡蛋做成的小球或团子, 放在汁料或水中煮'}

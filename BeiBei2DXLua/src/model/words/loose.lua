@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loose"]={"loose","[luːs]","[lus]","adj.宽松的",'n.解放,放任,放纵|||adj.宽松的,不牢固的,不精确的|||v.释放,放枪,开船','Come and see us if you\'re at a loose end.','闲著的时候到我们这儿来坐坐。','The guard loosed the dogs when the burglar alarm went off.','防盗警报器一响，警卫就放出了警犬。'}

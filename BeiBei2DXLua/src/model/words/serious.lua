@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["serious"]={"serious","['sɪərɪəs]","['sɪrɪəs]","adj.严肃的",'adj.严肃的,庄重的,严重的,危急的,认真的','He has serious aspirations to a career in politics.','他有从政的雄心壮志。','Deafness can be a serious handicap.','耳聋算是严重的缺陷。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["endurance"]={"endurance","[ɪn'djʊər(ə)ns; en-]","[ɪn'dʊrəns]","n.忍耐",'n.忍耐,忍耐力,耐性','He showed remarkable endurance throughout his illness.','他生病的整个阶段都表现出非凡的忍耐力。','She exhibited great powers of endurance during the climb.','她在攀登过程中表现出极大的耐力。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nitric"]={"nitric","['naɪtrɪk]","['naɪtrɪk]","adj.氮的",'adj.氮的,含氮的,硝石的','nitric','氮的，含氮的，硝石的','we have seventy percents nitric gas in the air`','空气中有百分之七十的氮'}

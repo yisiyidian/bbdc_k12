@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spire"]={"spire","[spaɪə]","['spaɪr]","n.尖塔",'n.尖塔,尖顶,旋涡|||v.突出,耸立','At the end of the last century, a marvelous spire was added, which makes it soar up slenderly into the German skies.','上世纪末期，它又被加上了完美的塔尖，俏丽地矗立在德国的天空。','The spires of churches are to be seen pricking up through the greenery.','透过葱翠的树林可以看见那耸立着的教堂的塔尖。'}

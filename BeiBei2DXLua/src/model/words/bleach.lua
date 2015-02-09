@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bleach"]={"bleach","[bliːtʃ]","[blitʃ]","n.漂白剂",'n.漂白剂,漂白|||vt.&vi.变白,漂白','The sun has bleached her yellow skirt.','阳光把她的黄裙子晒得褪色了。','There were only a few dry bones left, bleached by the sun.','只留下一些被太阳晒得泛白的枯骨。'}

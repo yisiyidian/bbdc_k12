@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pit"]={"pit","[pɪt]","[pɪt]","n.深坑",'n.深坑,核,矿井,陷阱,英国剧场正厅后排,凹陷疤痕|||vt.使...有伤痕,去...的核,与...较量','It\'s a bleak look-out for the coal industry as the number of pit closures increases.','煤井关闭的数目日多, 煤炭工业前景暗淡.','Many coal-miners were imprisoned in a pit accident.','在一次塌方事故中，许多矿工被压在了井下。'}

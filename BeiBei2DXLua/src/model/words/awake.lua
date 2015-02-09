@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["awake"]={"awake","[ə'weɪk]","[ə'wek]","adj.醒着的",'adj.醒着的,警惕的|||vt.唤醒,唤起,激发|||vi.醒来,恢复意识','A pilot must be awake to the changes in the weather.','飞行员必须警觉天气的变化。','It\'s time you ||awoke|| to the realities of the situation.','该是你认识形势的真实情况的时候了。'}

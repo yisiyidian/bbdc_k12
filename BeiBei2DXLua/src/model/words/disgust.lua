@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disgust"]={"disgust","[dɪs'gʌst]","[dɪs'ɡʌst]","n.厌恶",'n.厌恶,嫌恶|||vt.&vi.令人厌恶','She turned away in disgust.','她厌恶地转过脸去。','His behavior filled her with disgust.','她对他的行为充满了厌恶。'}

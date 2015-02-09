@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["girl"]={"girl","[gɜːl]","[ɡɝl]","n.女孩",'n.女孩,女儿','The girl has a light hand for knitting.','这女孩手巧，精于编织。','The girl tied the ends of the thread.','这女孩把线的两端结起来。'}

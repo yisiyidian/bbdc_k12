@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["certification"]={"certification","[,sɜːtɪfɪ'keɪʃən]","[,sɝtɪfɪ'keʃən]","n.证明",'n.证明,保证,鉴定','A certification on an affidavit declaring when, where, and before whom it was sworn.','宣誓证明附在宣誓书上的证明, 声明何时、何地、在何人监誓下进行宣誓','Judicial certification of the validity of a will.','遗嘱检验文件遗嘱有效的法律证明文件'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["daybreak"]={"daybreak","['deɪbreɪk]","['debrek]","n.黎明",'n.黎明,拂晓','The fire was completely overcome by daybreak.','到天亮时, 火势完全控制住了。','Columbus set foot on the shores of America just before daybreak.','哥伦布刚巧在天亮前踏上美洲海岸。'}

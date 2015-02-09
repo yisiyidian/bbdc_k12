@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["authority"]={"authority","[ɔː'θɒrɪtɪ]","[ə'θɔrəti]","n.权威",'n.权威；权力；学术权威；[复数]当权者','This old man is a leading authority on wheat diseases.','这位老人是小麦病虫害方面的权威。','The government is the highest authority in the country.','政府是国家的最高权力机构。'}

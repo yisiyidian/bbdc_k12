@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revert"]={"revert","[rɪ'vɜːt]","[rɪ'vɝt]","vi.恢复",'vi.恢复,复归,回到','If he dies without an heir, his property reverts to the state.','他死後若无继承人，其财产则归国家所有。','He reverted to smoking when under stress.','他因受到压力又恢复了吸烟的习惯。'}

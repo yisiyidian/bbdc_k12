@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["among"]={"among","[ə'mʌŋ]","[ə'mʌŋ]","prep.在...之中",'prep.在...之中','He lives in a house among the trees.','他住在一栋树木环绕的房子里。','London is among the greatest cities of the world.','伦敦是世界上最大的城市之一。'}

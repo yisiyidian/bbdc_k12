@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recoil"]={"recoil","[rɪ'kɒɪl]","['rikɔɪl]","n.畏缩",'n.畏缩,弹回,后座力,反作用|||v.退却,畏缩,弹回,报应','She recoiled at the sight of the snake.','她一见到蛇就往后缩。','He tends to recoil from making difficult decisions.','他在难以作出决定时往往踌躇不前。'}

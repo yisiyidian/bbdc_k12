@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entrant"]={"entrant","['entr(ə)nt]","['ɛntrənt]","n.(参加比赛的)竞赛者",'n.(参加比赛的)竞赛者,新就业者,新成员','The sports meet drew2600 entrants from155 enterprises.','这次运动会有155个企业的2600名职工参加。','Major Jack joined the army as a boy entrant and worked his way up.','杰克少校是少年入伍，后来逐步升上去的。'}

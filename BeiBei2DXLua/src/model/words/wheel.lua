@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wheel"]={"wheel","[wiːl]","[wil]","n.轮子",'n.轮子,周期,旋转运动|||vi.旋转,转动|||vt.推或拉车,传送,打圈,装以车轮','The bolt sheared (off) and the wheel came off.','螺栓折了, 轮子脱了出来.','The wheelbarrow has one wheel.','独轮手推车有一个轮子。'}

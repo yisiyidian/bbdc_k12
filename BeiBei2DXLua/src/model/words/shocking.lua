@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shocking"]={"shocking","['ʃɒkɪŋ]","['ʃɑkɪŋ]","adj.使人震惊的",'adj.使人震惊的，骇人的|||动词shock的现在分词形式','Her racy stories can be rather shocking.','她那些下流的故事讲起来有时很让人吃惊.','His remarks were quite shocking unrepeatable, in fact.','他说的话太让人难堪--真无法再说出口.'}

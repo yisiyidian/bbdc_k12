@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knob"]={"knob","[nɒb]","[nɑb]","n.把手",'n.把手,瘤','As he turned the knob, the sound diminished.','他一转旋钮，声音就变小了。','Twist the knob to the right setting.','把旋钮拧到适当的定位挡上.'}

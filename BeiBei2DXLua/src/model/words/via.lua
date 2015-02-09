@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["via"]={"via","['vaɪə]","[ˈvaɪə, ˈviə]","prep.经由",'prep.经由','sent the letter via airmail.','通过空邮寄信','The flight is routed to Chicago via New York.','这个航班被安排经纽约飞往芝加哥。'}

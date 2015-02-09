@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["import"]={"import","[ɪm'pɔːt; 'ɪm-]","['ɪmpɔt]","n.进口",'n.进口|||vi.进口,输入|||vt.输入,进口','The government has imposed strict controls over the import of luxury goods.','政府对奢侈品的进口采取了严格的管制。','Rich countries benefited from importing Indonesia\'s timber.','富国从进口印度尼西亚木材中获利。'}

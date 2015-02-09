@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mausoleum"]={"mausoleum","[,mɔsə'liəm]","[ ,mɔ:sə'liəm ]","n.陵墓",'n.陵墓','When we travelled to Xi\'an, we visited to the mausoleum of Emperor Qin Shihuang.','我们去西安旅游的时候，参观了秦始皇陵墓。','Later you could visit his mausoleum.','稍后你可以去他的陵墓祭拜。'}

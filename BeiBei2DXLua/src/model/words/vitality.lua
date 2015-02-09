@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vitality"]={"vitality","[vaɪ'tælɪtɪ]","[vaɪ'tæləti]","n.活力",'n.活力,生命力','She is full of youth and vitality.','她充满了青春和活力.','The ballet sparkled with vitality.','那场芭蕾舞演得生动活泼。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["switch"]={"switch","[swɪtʃ]","[swɪtʃ]","n.开关",'n.开关,电门，闸，转换器,|||vt.&vi.鞭打，转轨，交换，突然转变,摆动，接通或切断…电流','a cat switching its tail.','一只猛挥尾巴的猫','Long lectures really switch me off.','我觉得冗长的演讲很烦人。'}

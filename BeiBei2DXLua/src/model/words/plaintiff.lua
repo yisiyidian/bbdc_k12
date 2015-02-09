@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plaintiff"]={"plaintiff","['pleɪntɪf]","['plentɪf]","n.原告",'n.原告','The plaintiff is seeking remedy through the court.','原告通过法院请示获得救济。','The burden of proof lay on the plaintiff to prove negligence.','证明对方犯有疏忽罪的举证责任落在原告身上.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crimson"]={"crimson","['krɪmz(ə)n]","['krɪmzn]","n.深红色",'n.深红色|||adj.深红色的|||v.变为深红色,脸红','The evening sky was suffused with crimson.','黄昏时分天空红霞灿灿.','The river burned crimson in the setting sun.','河流被落日映照成深红色。'}

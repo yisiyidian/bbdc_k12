@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["son"]={"son","[sʌn]","[sʌn]","n.儿子",'n.儿子','After their divorce, the father was awarded custody of the son.','离婚以后，孩子由父亲监护。','My little son is fond of playing practical jokes on me.','我的小儿子喜欢对我玩恶作剧。'}

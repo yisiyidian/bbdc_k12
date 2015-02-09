@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["onus"]={"onus","['əʊnəs]","['onəs]","n.负担",'n.负担,义务，耻辱','I think the onus is upon you to provide me with a satisfactory television set.','我想你有责任给我提供一台令人满意的电视机。','The onus of proof lies with you.','你有责任提供证据。'}

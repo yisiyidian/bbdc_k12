@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pall"]={"pall","[pɔːl]","[pɔl]","vi.走味",'vi.走味，变得枯燥无味|||vt.覆盖,使平淡无味,使生厌,感到腻烦|||n.棺罩,幕,遮盖物','A pall of oily black smoke drifted over the clifftop.','一团油腻的黑色烟雾飘到悬崖顶上。','My stomach palls with it.','这东西我吃腻了。'}

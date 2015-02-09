@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uneven"]={"uneven","[ʌn'iːv(ə)n]","[ʌn'ivən]","adj.不平坦的",'adj.不平坦的,不均匀的,奇数的','A fatty deposit causing a dimpled or uneven appearance, as around the thighs and buttocks.','脂肪团一种能引起如大腿、臀部等处的皱纹或凹凸不平的脂肪沉淀物','The ground was muddy and uneven, but we toiled on.','地面泥泞不平, 我们仍吃力地向前走.'}

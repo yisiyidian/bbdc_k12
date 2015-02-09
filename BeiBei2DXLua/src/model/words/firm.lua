@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["firm"]={"firm","[fɜːm]","[fɝm]","n.公司",'n.商行,公司|||vt.(使)变得坚实,定案|||vi.变硬,恢复|||adj.坚定的,坚固的,结实的|||adv.稳固地,坚定地','We must maintain a firm attitude.','我们必须采取坚定的态度。','Exercise will firm up your muscles.','锻炼身体能使肌肉结实。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["caviar"]={"caviar","['kævɪɑː; ,kævɪ'ɑː]","['kævɪ'ɑr]","n.鱼子酱",'n.鱼子酱','Art galleries not so long ago were caviar to the general, but today many people go to them.','美术馆不久以前不为一般俗人所喜好，可是现在很多人都爱去。','i like to eat caviar','我喜欢吃鱼子酱'}

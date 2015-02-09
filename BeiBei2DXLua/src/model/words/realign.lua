@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["realign"]={"realign","[riːə'laɪn]","[,riə'laɪn]","v.重新排列",'v.重新排列，重新结盟','The party may realign (itself) with Labour in a new coalition.','该党可能与工党重新组成新的联盟.','Following the plant shutdown, New Hampshire Yankee realigned senior management at the plant.','在该工厂关闭之后，新罕布什尔州扬基公司对该厂高级管理班子进行了重组。'}

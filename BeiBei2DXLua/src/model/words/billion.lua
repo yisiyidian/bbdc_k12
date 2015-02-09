@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["billion"]={"billion","['bɪljən]","['bɪljən]","n.十亿",'n.十亿,大量|||adj.大量的','The population of this country is more than one billion.','这个国家人口数超过一亿。','Some computers can perform over a billion computation a second.','有些计算机一秒钟能完成超过十亿次运算。'}

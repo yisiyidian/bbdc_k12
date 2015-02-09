@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relatively"]={"relatively","['relətɪvlɪ]","['rɛlətɪvli]","adv.比较地",'adv.比较地,相对地','The rabbit is a relatively recent introduction in Australia.','兔子在澳洲是较为近期引进的动物.','The exam was relatively easy.','这次考试比较容易。'}

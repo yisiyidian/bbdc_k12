@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conflagration"]={"conflagration","[,kɒnflə'greɪʃ(ə)n]","[,kɑnflə'ɡreʃən]","n.大火灾",'n.大火灾,大火,突发','A conflagration in 1947 reduced 90 percent of the houses to ashes.','1947年的一场大火让90%的房屋化为灰烬。','||Conflagration|| can cause great casualty.','大火可以造成严重的伤亡。'}

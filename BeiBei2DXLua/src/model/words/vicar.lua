@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vicar"]={"vicar","['vɪkə]","['vɪkɚ]","n.教区牧师",'n.教区牧师,教堂牧师,传教牧师','Thomas Atkins, sometime vicar of this parish','托马斯·阿特金斯, 本牧区从前的牧师.','He is vicar of a large rural parish.','他是农村一大牧区的牧师.'}

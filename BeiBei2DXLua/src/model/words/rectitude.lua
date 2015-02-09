@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rectitude"]={"rectitude","['rektɪtjuːd]","['rɛktɪtʊd]","n.诚实",'n.诚实,正直','Alexander is a man of unquestioned moral rectitude.','亚历山大是个品行端正无瑕的人。','Honesty is part of rectitude','诚实是正直的一部分'}

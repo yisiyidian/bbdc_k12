@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["permeable"]={"permeable","['pɜːmɪəb(ə)l]","['pɝmɪəbl]","adj.可渗透的",'adj.可渗透的','A number of products have been developed which are permeable to air and water.','已开发出许多可渗水透气的产品。','The waste material is placed in cells with permeable membranes.','废液置于有渗透膜的槽中。'}

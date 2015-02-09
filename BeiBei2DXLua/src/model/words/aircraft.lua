@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aircraft"]={"aircraft","['eəkrɑːft]","['ɛr'kræft]","n.飞机",'n.飞机','The wings of the aircraft had iced up.','机翼上结了一层冰。','A large passenger aircraft will land on the airfield.','一架大型民航班机将降落在这个飞机场。'}

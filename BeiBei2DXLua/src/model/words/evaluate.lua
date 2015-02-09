@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evaluate"]={"evaluate","[ɪ'væljʊeɪt]","[ɪ'væljʊ'et]","vt.评估",'vt.评估,评价','Let\'s evaluate the evidence.','让我们评定一下此证据的价值。','The school has only been open for six months, so it\'s too early to evaluate its success.','这所学校开办还不过六个月，所以要对它的成绩作出评价为时尚早。'}

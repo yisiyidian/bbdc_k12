@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["precursor"]={"precursor","[prɪ'kɜːsə]","[pri'kɝsɚ]","n.先驱者",'n.先驱者,前导,先进者','He said that the deal should not be seen as a precursor to a merger.','他说该笔交易不应该被看作是合并的前兆。','Her precursor as school principal was an eminent educator.','她担任校长前是一位卓越的教育家。'}

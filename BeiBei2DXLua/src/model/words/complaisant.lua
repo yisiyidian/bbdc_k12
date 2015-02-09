@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complaisant"]={"complaisant","[kəm'pleɪz(ə)nt]","[ kəm'pleizənt ]","adj.彬彬有礼的",'adj.彬彬有礼的,殷勤的,柔顺的','She\'s always helpful and complaisant.','她总是又殷勤，又乐于助人。','if you are complaisant, you are ready to accept other people\'s actions and opinions and to do what other people want','顺从的'}

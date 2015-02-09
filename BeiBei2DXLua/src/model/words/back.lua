@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["back"]={"back","[bæk]","[bæk]","adv.向后地",'adj.后面的，偏远的,过时的,积欠的,向后的|||adv.向后地|||n.后背,背脊，后面,靠背|||vt.后退，支持|||vi.后退','He proved that he was right and his critics had to back down.','他证明了他是正确的，而那些非难他的人不得不收起他们那一套。','Please back the check.','请在这张支票背后签名。'}

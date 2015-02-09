@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shake"]={"shake","[ʃeɪk]","[ʃek]","vi.摇晃",'n.摇晃,震动,地震,颤抖(音),奶昔,短时间|||vi.摇晃,颤抖,跌跌撞撞,握手,发颤音|||vt.挥拳,摇晃,去除,动摇,排掉(灰尘),握手','Give the bottle a couple of shakes before pouring the juice.','倒果汁前，先把瓶子摇几下。','His voice ||shook|| with fear.','他害怕得声音发抖。'}

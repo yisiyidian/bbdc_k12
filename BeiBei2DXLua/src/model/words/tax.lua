@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tax"]={"tax","[tæks]","[tæks]","n.税",'n.税,租税,重负|||v.课以税,使...负重荷,斥责','The car is taxed until July.','这辆汽车七月前已上税。','His constant requests for help taxed our goodwill.','他不断要求我们帮助他，过分利用了我们对他的好意。'}

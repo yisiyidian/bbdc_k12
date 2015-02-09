@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decode"]={"decode","[diː'kəʊd]","['di'kod]","v.解码",'v.解码,译解|||[计算机]译码','We decode the enemy\'s telegram.','我们破译了敌人的电报密码。','We can encourage older kids to decode media messages, by asking: Who created it?','我们鼓励年龄大些的孩子通过几个问题来认识广告：谁制作了它？'}

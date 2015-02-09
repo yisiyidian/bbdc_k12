@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mighty"]={"mighty","['maɪtɪ]","['maɪti]","adj.强有力的",'adj.强有力的,极度的|||adv.很','There\'s no need to be/get so high and mighty with me!','用不著对我摆架子!','Little drops of water make the mighty ocean.','【谚】涓滴之水汇成洋。'}

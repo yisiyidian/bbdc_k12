@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swept"]={"swept","[swept]","[swɛpt]","（过去式和过去分词）vi.打扫",'（动词sweep的过去式和过去分词形式）vt.扫除,拂去,掠过,席卷,扫视,全胜|||vi.打扫,席卷,昂首阔步地走,连绵,全胜','Her eyes swept the room.','她的眼睛扫视了一下那个房间。','A huge wave swept over the deck.','一股巨浪从甲板上卷了过去。'}

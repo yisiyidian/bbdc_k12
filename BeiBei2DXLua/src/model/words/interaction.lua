@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interaction"]={"interaction","[ɪntər'ækʃ(ə)n]","[,ɪntə'rækʃən]","n.相互作用",'n.相互作用,相互影响','This is probably the most important interaction design guideline.','这基本上是最重要的交互设计指导准则.','The interaction of the two groups produced many good ideas.','两个组的相互交流产生了许多好主意.'}

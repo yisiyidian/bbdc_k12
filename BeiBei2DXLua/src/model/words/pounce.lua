@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pounce"]={"pounce","[paʊns]","[paʊns]","n.猛扑",'n.猛扑，袭击|||n.(猛禽的)爪|||n.吸墨粉|||vi.猛扑,突然袭击|||vt.撒吸墨粉，用印花粉印','He pounced on my offer.','他欣然接受了我的报价。','We saw the tiger ||pouncing|| on the goat.','我们看见老虎向那只山羊扑过去。'}

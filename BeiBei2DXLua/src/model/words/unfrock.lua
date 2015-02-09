@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unfrock"]={"unfrock","[ʌn'frɒk]","[ʌn'frɑk]","v.剥去法衣",'v.剥去法衣,解除僧职','No one knows the reason of his unfrocking.','没人知道他被退僧的原因。','The old physician was unfrocked by the Medical Association.','这位老医生被医师公会除名。'}

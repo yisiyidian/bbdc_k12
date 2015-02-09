@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deface"]={"deface","[dɪ'feɪs]","[dɪ'fes]","vi.损伤...的外观(损害",'vi.损伤...的外观(损害,磨损,涂销)','Don\'t deface library books.','不要污损图书馆的书籍。','The wall has been defaced with slogans.','墙上贴满了标语。'}

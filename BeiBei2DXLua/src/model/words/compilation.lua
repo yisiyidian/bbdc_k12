@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compilation"]={"compilation","[kɒmpɪ'leɪʃ(ə)n]","[,kɑmpɪ'leʃən]","n.编译",'n.编译,编辑','Her latest album is a compilation of all her best singles.','她最新的唱片收录了她的所有最佳单曲。','His latest CD is a compilation of his jazz works over the past decade.','最近发行的专辑是他过去10年来的爵士作品合集。'}

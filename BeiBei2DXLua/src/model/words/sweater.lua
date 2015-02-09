@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sweater"]={"sweater","['swetə]","['swɛtɚ]","n.毛衣",'n.毛衣,出汗者','This sweater washes well.','这件套头毛衣耐洗.','This woolen sweater may keep you warm in winter.','这件羊毛衫在冬天可以保暖。'}

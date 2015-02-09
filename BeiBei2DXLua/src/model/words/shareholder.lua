@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shareholder"]={"shareholder","['ʃeəhəʊldə]","['ʃɛrholdɚ]","n.股东",'n.股东，股票持有人','The shareholders were summoned to a general meeting.','那些股东被召集去叁加股东大会。','The principal shareholder ask for a meeting.','主要股东们要求召开会议。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["erroneous"]={"erroneous","[ɪ'rəʊnɪəs; e-]","[ɪ'ronɪəs]","adj.错误的",'adj.错误的,不正确的','We should not be infected by erroneous ideas.','我们不应该受错误观念的影响。','The result of your report is an erroneous conclusion.','你的报告结论是错误的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exactly"]={"exactly","[ɪg'zæk(t)lɪ; eg-]","[ɪɡ'zæktli]","adv.准确地",'adj.完全的|||adv.恰好地,正好地,正确地,精确地,正是','The train arrived at exactly 8 o\'clock.','火车八点钟准时到达。','Their answers are exactly the same.','他们的回答完全一样。'}

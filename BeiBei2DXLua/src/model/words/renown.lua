@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["renown"]={"renown","[rɪ'naʊn]","[rɪ'naʊn]","n.名望",'n.名望,声誉|||vt.使有名望','Do you know any place of renown around here?','你知道这儿有什么名胜吗？','He won renown as a pianist.','他赢得钢琴家的声誉。'}

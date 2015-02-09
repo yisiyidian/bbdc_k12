@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reaper"]={"reaper","['riːpə]","['ripɚ]","n.收割者",'n.收割者,收割机','A reaper is a kind of machine for harvesting crops.','收割机是一种用来收割庄稼的机器。','A rabbit got caught in the blades of the reaper.','一只兔子被卷到收割机的刀刃中去了。'}

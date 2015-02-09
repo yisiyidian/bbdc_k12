@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uneventful"]={"uneventful","[ʌnɪ'ventfʊl; -f(ə)l]","[,ʌnɪ'vɛntfl]","adj.太平无事的",'adj.太平无事的,平静无事的','The return trip was uneventful, the car running perfectly.','返程平安无事，汽车运行得很好。','Today is another uneventful day in my life.','今天又是我人生中又一个平凡无事的日子'}

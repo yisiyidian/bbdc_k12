@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["landmark"]={"landmark","['læn(d)mɑːk]","['lændmɑrk]","n.陆标",'n.陆标,划时代的事,地界标','Marble Arch is a famous London landmark.','大理石拱门是著名的伦敦标志.','The local artists will hold an exhibition on the landmark.','当地画家将要在这个风景点举办展览。'}

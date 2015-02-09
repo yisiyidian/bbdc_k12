@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enrage"]={"enrage","[ɪn'reɪdʒ; en-]","[ in'reidʒ ]","vt.激怒",'vt.激怒,使暴怒','Her behavior enraged him.','她的行为激怒了他。','Her supercilious attitude enraged me.','她的傲慢态度使我极为愤怒.'}

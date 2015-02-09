@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["labyrinth"]={"labyrinth","['læb(ə)rɪnθ]","['læbərɪnθ]","n.迷宫",'n.迷宫，难解的事件','I was unable to find out the intricate windings of the labyrinth.','我无法找出迷宫中扑朔迷离的路线。','The old building was a labyrinth with dark corridors.','那座古老建筑是一座长廊纵横、光线昏暗的迷宫。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["actuarial"]={"actuarial","[,æktjʊ'eərɪəl]","[,æktʃʊ'ɛrɪəl]","adj.保险统计的",'adj.保险统计的','The company\'s actuarial report must be made available on demand.','该公司的精算报告可随时索取。','actuarial','保险统计的'}

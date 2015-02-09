@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tedium"]={"tedium","['tiːdɪəm]","['tidɪəm]","n.单调乏味",'n.单调乏味，沉闷','We played games to relieve the tedium of the journey.','我们玩游戏，来解除旅行的沉闷。','In myself I could observe the following sources of tedium.','从我自己身上，我所观察到的烦闷的根源有下列一些。'}

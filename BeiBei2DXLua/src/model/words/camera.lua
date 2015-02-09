@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["camera"]={"camera","['kæm(ə)rə]","['kæmərə]","n.照相机",'n.摄像机,照相机','The camera panned slowly across to the door.','镜头慢慢摇向门口。','Her camera strap has broken.','她的照相机吊带断了。'}

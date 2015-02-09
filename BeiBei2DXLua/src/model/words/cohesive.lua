@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cohesive"]={"cohesive","[kəʊ'hiːsɪv]","[ko'hisɪv]","adj.粘性的",'adj.粘性的(有结合性的,有粘聚性的)','This is a cohesive team','这是一个有凝聚力的团队','A military company is a cohesive unit.','一个军事连是一个聚合的单位'}

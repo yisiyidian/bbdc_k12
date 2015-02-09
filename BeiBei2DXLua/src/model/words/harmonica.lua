@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harmonica"]={"harmonica","[hɑː'mɒnɪkə]","[hɑr'mɑnɪkə]","n.口琴",'n.口琴，玻璃琴','The harmonica is of very high quality.','那个口琴质量很好。','||Harmonicas|| have sweet sounds.','口琴的声音很悦耳.'}

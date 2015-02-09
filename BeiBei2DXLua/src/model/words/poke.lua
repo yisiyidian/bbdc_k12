@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poke"]={"poke","[pəʊk]","[pok]","n.刺",'n.刺,戳,袋|||vt.拨开,刺,戳|||vi.戳,刺,捅,搜索,伸出,行动散慢','He poked (at) the fire with a stick.','他用棍拨火.','She poked her finger into the hole.','她把手指插入孔中。'}

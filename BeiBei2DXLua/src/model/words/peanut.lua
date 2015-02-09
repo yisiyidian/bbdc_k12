@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peanut"]={"peanut","['piːnʌt]","['pinʌt]","n.花生",'n.花生','How much is a jar of peanut butter?','一瓶花生酱多少钱？','He likes to eat peanut jam.','他喜欢吃花生酱。'}

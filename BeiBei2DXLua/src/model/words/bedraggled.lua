@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bedraggled"]={"bedraggled","[bɪ'dræɡld]","[ bi'dræɡld ]","adj.全身泥污的",'adj.全身泥污的,满身湿透的,荒废的|||动词bedraggle的过去式和过去分词形式','a street of bedraggled tenements.','两旁是破旧公寓的街道','he was in such a bedraggled condition .','他浑身泥水一样。'}

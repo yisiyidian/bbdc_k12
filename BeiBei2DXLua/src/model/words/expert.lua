@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expert"]={"expert","['ekspɜːt]","['ɛkspɝt]","n.专家",'adj.熟练的,内行的|||n.专家,能手|||vi.当专家','He is an expert on the world\'s mystical religions.','他精通世界上的神秘宗教。','She is a reputable expert.','她是个有声望的专家。'}

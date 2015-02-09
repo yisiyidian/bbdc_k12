@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["creep"]={"creep","[kriːp]","[krip]","vi.爬",'vi.爬,蔓延|||n.爬,徐行,蠕动','You slimy little creep!','你这个卑鄙无耻的奴才！','The thief ||crept|| along the corridor.','那贼偷偷地在走廊上潜行。'}

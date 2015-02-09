@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thousand"]={"thousand","['θaʊz(ə)nd]","['θaʊznd]","adj.千",'adj.千,成千','I received no less than ten thousand yen for my work.','我的工资多达一万元。','She has a thousand pounds a month coming in from her investments.','她每月从投资中得到一千英镑收入.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clam"]={"clam","[klæm]","[klæm]","n.蛤",'n.蛤,沉默寡言的人|||vi.挖蚌','Everybody shut up like a clam as soon as you mention it.','你一提及此事，大家便都闭口不言','A clam bed','蛤养殖场'}

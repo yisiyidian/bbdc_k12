@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["embarrassment"]={"embarrassment","[ɪm'bærəsmənt; em-]","[ɪm'bærəsmənt]","n.困窘",'n.困窘，尴尬，困难','His ignorant behaviour at the dinner table caused much embarrassment.','他在餐桌上举止粗鲁, 在座的人颇为难堪.','There was a distinct sense of embarrassment in the air.','周围的气氛中有一种明显的局促不安的感觉.'}

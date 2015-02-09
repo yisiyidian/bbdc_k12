@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gramophone"]={"gramophone","['græməfəʊn]","['ɡræməfon]","n.留声机",'n.留声机，唱机','An old gramophone record of one of those songs would take a bit of finding.','那些歌中任何一首旧唱片都很不易弄到手。','I\'m afraid the old gramophone has conked out.','恐怕这架旧唱机已出故障了。'}

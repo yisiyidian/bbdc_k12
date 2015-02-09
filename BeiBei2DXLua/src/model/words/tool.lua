@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tool"]={"tool","[tuːl]","[tul]","n.工具",'n.工具,用具,受人利用的人,印压的图案|||vt.驾驶,用工具加工,印压图案于|||vi.驾驶,用工具加工','The machine tool went out of control because of improper use.','由于使用不当, 机床失去控制。','The metal tool clanged when it hit the ground.','金属工具碰到地面时发出叮当声。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monograph"]={"monograph","['mɒnəgrɑːf]","['mɑnəɡræf]","n.专题论文",'n.专题论文','...a monograph on her favourite author, John Updike.','...关于她最喜欢的作者约翰·厄普代克的一本专著。','This monograph belongs to the category of serious popular books.','这本专著是一本较高深的普及读物。'}

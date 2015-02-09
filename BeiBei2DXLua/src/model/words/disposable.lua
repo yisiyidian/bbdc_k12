@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disposable"]={"disposable","[dɪ'spəʊzəb(ə)l]","[dɪ'spozəbl]","adj.用完即可丢弃的",'adj.用完即可丢弃的','Disposable diapers; disposable razors.','免洗尿布；一次性剃刀','Every disposable piece of equipment was sent to the fire.','每一种可用的设备都被大火烧毁了'}

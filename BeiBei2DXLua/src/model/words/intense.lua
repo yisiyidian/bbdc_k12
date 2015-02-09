@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intense"]={"intense","[ɪn'tens]","[ɪn'tɛns]","adj.强烈的",'adj.非常的,强烈的,紧张的,热情的','Under his intense gaze she felt uncomfortable.','他目不转睛地看著她, 使她觉得很不自在.','The intense heat has dried up the pond.','酷热使池水干枯。'}

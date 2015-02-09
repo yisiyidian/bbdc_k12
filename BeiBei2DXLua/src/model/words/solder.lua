@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solder"]={"solder","['səʊldə; 'sɒldə]","['sɑdɚ]","n.焊接剂",'n.焊接剂,接合物,羁绊|||v.施以焊接,接合,补修','He soldered the wire back on.','他把金属丝重新焊上去了。','She is soldering his broken coat.','她在给他修补破了大衣。'}

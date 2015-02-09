@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calendar"]={"calendar","['kælɪndə]","['kæləndɚ]","n.日历",'n.日历,月历,日程表|||vt.进入日历','He put the desk calendar on the shelf.','他把台历放在书架上。','The cup final is an important date in the sporting calendar.','足总杯决赛在运动日程表中是个重要日子。'}

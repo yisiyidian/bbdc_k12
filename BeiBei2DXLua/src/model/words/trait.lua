@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trait"]={"trait","[treɪt; treɪ]","[tret]","n.特征",'n.特征,特点,特性,品质','Creativity is a human trait.','创造力是人类的一种特性。','The priest preached a sermon with a trait of humor.','那位神父讲道有幽默感.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deprive"]={"deprive","[dɪ'praɪv]","[dɪ'praɪv]","vt.剥夺",'vt.剥夺,拒绝,免职','If you do not drive carefully, I shall be obliged to deprive you of your licence.','如果您不谨慎驾驶，我将不得不没收您的执照。','The trees outside the windows deprive the house of light.','窗外的树木把房子遮挡得暗然无光。'}

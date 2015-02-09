@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["audacious"]={"audacious","[ɔː'deɪʃəs]","[ɔ'deʃəs]","adj.大胆的",'adj.大胆的,放肆的,无礼的,厚颜无耻的','It was audacious of him to tell me a downright lie.','他真有勇气，敢向我撒了个弥天大谎。','Your plan of going abroad is an audacious decision.','你计划出国是一项大胆的决定。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blizzard"]={"blizzard","['blɪzəd]","['blɪzɚd]","n.暴风雪",'n.暴风雪|||n.暴雪极负盛名的美国游戏软件制作公司','It was sheer madness to attempt the drive during a blizzard.','试图在暴风雨中驾车绝对是极度愚蠢的','Mountaineering in a blizzard needs a lot of grit.','在暴风雪中登山需要极大的勇气和毅力.'}

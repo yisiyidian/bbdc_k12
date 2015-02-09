@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blueprint"]={"blueprint","['bluːprɪnt]","['blʊ'prɪnt]","n.蓝图",'n.蓝图,设计图,(周详的)计划|||v.制成蓝图,计划','He hunted through the files till he found the blueprint.','他把档案翻了一遍，最后才找到图纸。','All the machine parts on a blueprint must  answer each other.','设计图上所有的机器部件都应互相配合.'}

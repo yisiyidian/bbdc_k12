@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hospital"]={"hospital","['hɒspɪt(ə)l]","['hɑspɪtl]","n.医院",'n.医院','Her endless patience made her the best nurse in the hospital.','无限的耐心使她成为这个医院最好的护士。','He was on his feet again after such a long period in hospital.','住院很长一段时间他复原了。'}

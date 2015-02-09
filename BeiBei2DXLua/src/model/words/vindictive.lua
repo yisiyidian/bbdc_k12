@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vindictive"]={"vindictive","[vɪn'dɪktɪv]","[vɪn'dɪktɪv]","adj.有报仇心的",'adj.有报仇心的,怀恨的,惩罚的','It is not right to harbor vindictive feelings.','怀有报复的念头是不对的。','A vindictive man will look for occasions for resentment.','充满复仇心的人会寻找发泄愤恨的机会。'}

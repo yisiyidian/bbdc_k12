@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["election"]={"election","[ɪ'lekʃ(ə)n]","[ɪ'lɛkʃən]","n.选举",'n.选举','Our party was routed at the election.','我们党在竞选中被彻底击败了。','After the election the party was reduced to a rump.','选举之后，该党的党员所剩无几了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evict"]={"evict","[ɪ'vɪkt]","[ɪ'vɪkt]","v.驱逐",'v.驱逐|||v.依法收回（财产等）','Don\'t fall behind with the rent, or you\'ll be evicted.','不要逾期不缴房租, 否则会被逐出.','The tenant was evicted for non-payment of rent.','这个房客因为没有交房租而被赶出去了。'}

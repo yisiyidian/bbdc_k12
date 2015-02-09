@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resistant"]={"resistant","[rɪ'zɪstənt]","[rɪ'zɪstənt]","adj.抵抗的",'adj.抵抗的,反抗的|||n.抵抗者','Many pests are resistant to the insecticide.','许多害虫对这种杀虫剂有抵抗力.','They imposed their government by force on the resistant population.','他们以武力把自己的统治强加在持反抗态度的人民头上.'}

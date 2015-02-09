@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thunder"]={"thunder","['θʌndə]","['θʌndɚ]","n.雷电",'n.雷电,雷声|||vt.&vi.打雷,轰隆地响,大声喊出','The thunder rumbled in the distance.','远处雷声隆隆。','Get out! he thundered.','“滚出去！”他大声吼到。'}

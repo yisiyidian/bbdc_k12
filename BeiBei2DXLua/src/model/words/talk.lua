@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["talk"]={"talk","[tɔːk]","[tɔk]","n.谈话",'n.谈话,会谈,讲话,闲话|||vt.说,谈论,商讨|||vi.说闲话,招供,开口说话,闲聊','He talks big but doesn\'t actually do anything.','他光吹牛，什麽实际的事都不干。','In politics there is too much talk and not enough action.','在政治方面向来是说得多做得少。'}

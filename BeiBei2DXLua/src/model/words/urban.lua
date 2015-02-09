@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["urban"]={"urban","['ɜːb(ə)n]","['ɝbən]","adj.城市的",'adj.城市的','Generations of urban living sharpened their wits.','世代居住在城市里使他们磨练了才智。','The novel is a searing indictment of urban poverty.','这部小说是对城市贫困的震撼心灵的控诉。'}

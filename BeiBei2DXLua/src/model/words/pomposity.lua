@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pomposity"]={"pomposity","[pɒm'pɒsɪtɪ]","[ pɔm'pɔsiti ]","n.自大",'n.自大,傲慢','Nothing could deflate his pomposity.','任何事都不能削弱他的气焰。','Einstein was a scientist who hated pomposity and disliked being called a genius.','科学家爱因斯坦不喜欢摆架子，也不喜欢被称为天才。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sidestep"]={"sidestep","['saɪdstep]","['saɪdstɛp]","v.向旁侧避让",'v.向旁侧避让,回避','He was trying to sidestep responsibility.','他正试图回避责任。','I don\'t think there\'s any way in the world you can sidestep all hell.','我想人生在世是不能躲过所有灾难的.'}

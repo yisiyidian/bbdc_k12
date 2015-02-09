@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["noisy"]={"noisy","['nɒɪzɪ]","['nɔɪzi]","adj.喧闹的",'adj.喧闹的,嘈杂的|||n.嘈杂声,响声','It is noisy in the kindergarten.','幼儿园里很嘈杂。','The bus was packed with noisy schoolchildren.','这辆公共汽车里挤满了吵吵嚷嚷的小学生。'}

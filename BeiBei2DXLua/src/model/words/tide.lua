@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tide"]={"tide","[taɪd]","[taɪd]","n.潮",'n.潮,趋势,潮流|||vt.使...随潮漂流|||vi.涌动','As the tide receded we were able to look for shells.','潮水退去，我们就能寻找贝壳了。','A crab was left stranded on the beach when the tide ebbed.','退潮时，一只蟹被困留在沙滩上。'}

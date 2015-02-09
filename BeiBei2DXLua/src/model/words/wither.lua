@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wither"]={"wither","['wɪðə]","['wɪðɚ]","vt.使凋谢",'vt.使凋谢，使衰退,(用眼神气势等)使畏缩|||vi.枯萎,衰退,消亡','The grapes withered on the vine.','葡萄藤上的葡萄都干瘪了。','All other laurels wither before hers.','所有荣誉和她获得的相比都黯然失色。'}

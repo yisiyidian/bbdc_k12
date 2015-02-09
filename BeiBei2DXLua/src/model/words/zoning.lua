@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zoning"]={"zoning","['zəʊnɪŋ]","['zonɪŋ]","n.分区",'n.分区(区域精炼,透镜天线相位波前修整)','a  zoning   variance.','地区规化特别许可','Local zoning laws prohibit building near property lines.','本地的规划法禁止在地产边界附近进行建筑施工。'}

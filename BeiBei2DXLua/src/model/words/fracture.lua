@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fracture"]={"fracture","['fræktʃə]","['fræktʃɚ]","n.破碎",'n.破碎,骨折|||vt.破碎,破裂|||vi.断裂','His son suffered from a fractured pelvis.','他儿子出现骨盆骨折。','||Fracture|| of the leg can be very serious in old people.','老年人腿骨骨折有可能成为严重疾患。'}

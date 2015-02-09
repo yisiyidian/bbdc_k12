@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scorpion"]={"scorpion","['skɔːpɪən]","['skɚpɪən]","n.蝎子",'n.蝎子,心黑的人,蝎子鞭|||Scorpion：天蝎座','The sting of a scorpion is in its tail.','蝎子的毒钩在其尾部.','A scorpion has a poisonous sting in its long jointed tail.','蝎子的长尾巴上长着一个有毒的蛰针。'}

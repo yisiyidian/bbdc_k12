@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consortium"]={"consortium","[kən'sɔːtɪəm]","[kənˈsɔrʃiəm]","n.联合",'n.联合,合伙,国际财团','A consortium of construction companies will build the power-station.','由建筑公司组成的集团将建造该发电站.','The new aircraft was developed by a European consortium.','这种新飞机是一家欧洲财团出资研制的。'}

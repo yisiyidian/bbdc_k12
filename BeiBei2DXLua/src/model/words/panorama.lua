@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["panorama"]={"panorama","[pænə'rɑːmə]","[,pænə'ræmə]","n.全景",'n.全景，全景画，全景照片，概观，一连串景象或事物','As we stood at the top of the mountain, a beautiful panorama spread out before us.','我们登上山顶时，一幅美丽的景色展现在我们的面前。','From the summit there is a superb panorama of the alps.','从峰巅俯瞰，阿尔卑斯山壮丽的景色尽收眼底。'}

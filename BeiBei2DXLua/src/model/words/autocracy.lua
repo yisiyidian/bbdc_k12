@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["autocracy"]={"autocracy","[ɔː'tɒkrəsɪ]","[ɔ'tɑkrəsi]","n.独裁政治",'n.独裁政治,独裁政府','Lenin wrote that the overthrow of the autocracy is only the first stage of the revolution.','列宁写道：“推翻专制制度只是革命的第一阶段。”','Many poor countries are abandoning autocracy.','很多贫穷国家都在推翻独裁统治。'}

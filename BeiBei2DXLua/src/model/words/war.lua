@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["war"]={"war","[wɔː]","[wɔr]","n.战争",'n.战争|||vi.作战','The trade of the soldier is war.','士兵的职业是打仗。','The necessary outcome of a war is a fall in production.','战争带来的必然结果就是生产力下降。'}

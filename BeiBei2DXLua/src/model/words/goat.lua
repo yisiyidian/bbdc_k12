@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["goat"]={"goat","[gəʊt]","[ɡoʊt]","n.山羊",'n.山羊,好色之徒,替罪羔羊','The regimental mascot is a goat.','这个团的吉祥物是山羊.','A satyr is half man and half goat in Greek and Roman mythology.','在希腊和罗马神话中，森林之神是半人半羊的样子。'}

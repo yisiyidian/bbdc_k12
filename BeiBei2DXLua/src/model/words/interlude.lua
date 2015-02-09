@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interlude"]={"interlude","['ɪntəl(j)uːd]","['ɪntɚ'lʊd]","n.中间",'n.中间,中间时间,介在中间的事件','Her time in Paris was a happy interlude in a difficult career.','她在巴黎期间是她艰辛的事业中一段愉快的插曲.','There will now be a 15-minute interlude.','现在有15分钟的中间休息.'}

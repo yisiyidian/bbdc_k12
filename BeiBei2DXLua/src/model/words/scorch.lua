@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scorch"]={"scorch","[skɔːtʃ]","[skɔrtʃ]","v.（使）烧焦",'v.（使）烧焦,变焦,（使）枯萎|||n.烧焦','The meat will scorch if you don\'t lower the gas.','如果你不把煤气调小一点，肉就要焦了。','The long drought scorched the grass.','久旱使青草枯萎。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["watermelon"]={"watermelon","['wɔːtəmelən]","['wɔtɚmɛlən]","n.西瓜",'n.西瓜','I like eating watermelon.','我喜欢吃西瓜。','||Watermelon|| is my favoourite fruit','西瓜是我最喜欢的水果'}

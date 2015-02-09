@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sundial"]={"sundial","['sʌndaɪəl]","['sʌn'daɪəl]","n.日规",'n.日规,日晷仪','The nightingale flew to the sundial.','夜莺飞到日昝上。','Moonlight was frosting the dew, and an old sundial threw a long shadow.','月光把露水照的雪白，一座旧日冕仪透出一道长长地影子。'}

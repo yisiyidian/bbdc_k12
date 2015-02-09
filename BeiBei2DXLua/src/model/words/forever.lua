@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forever"]={"forever","[fə'revə]","[fɚ'ɛvɚ]","adv.永远",'adv.永远|||n.漫长时间','Many Pharaohs in ancient Egypt believe they can live forever.','古埃及的许多法老相信他们可以永生。','The vassal swore that he would be loyal to the king forever.','这位封臣宣誓他将永远忠诚于国王。'}

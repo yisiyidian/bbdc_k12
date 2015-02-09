@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recidivism"]={"recidivism","[rɪ'sɪdɪvɪzəm]","[rɪ'sɪdə,vɪzəm]","n.惯常的犯罪行为",'n.惯常的犯罪行为','China\'s rate of recidivism is among the lowest in the world.','中国是世界上重新犯罪率最低的国家之一。','Their basic criticism was that prisons do not reduce the crime rate, they cause recidivism.','他们批评的主要着眼点是监狱没有降低犯罪率，反而造就了惯犯。'}

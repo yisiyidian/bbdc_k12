@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dynamics"]={"dynamics","[daɪ'næmɪks]","[daɪ'næmɪks]","n.力学",'n.力学,力量,力量变化','The dynamics of ocean waves are complex.','海浪的运动是复杂的','The dynamics of international trade have influenced our business decisions on this matter.','国际贸易的动态影响了我们对此所作的商务决定'}

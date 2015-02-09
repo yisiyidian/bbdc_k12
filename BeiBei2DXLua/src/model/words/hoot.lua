@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hoot"]={"hoot","[huːt]","[hut]","n.叫嚣",'n.叫嚣,猫头鹰叫声|||n.一点点|||vi.大声叫嚣,（汽笛,喇叭等)呜呜作响|||vt.哄赶,叫骂','The proposal was hooted down.','人们嘘叫著拒绝了这项建议。','I don\'t care one single hoot what you said about him; I like him.','你说的关于他的话我一点也不在乎, 我就是喜欢他。'}

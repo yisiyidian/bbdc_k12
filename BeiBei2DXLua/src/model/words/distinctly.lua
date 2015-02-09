@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["distinctly"]={"distinctly","[dɪ'stɪŋ(k)tlɪ]","[dɪ'stɪŋktli]","adv.清楚地",'adv.清楚地，显然地,明显地','He spoke very distinctly.','他说话十分清晰。','Though they talked in a low voice, they could be heard distinctly.','虽然他们低声谈话,还是可以很清楚地听到。'}

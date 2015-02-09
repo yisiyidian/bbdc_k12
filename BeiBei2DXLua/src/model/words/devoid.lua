@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["devoid"]={"devoid","[dɪ'vɒɪd]","[dɪ'vɔɪd]","adj.全无的",'adj.全无的,缺乏的','The article is devoid of substantial matter.','这篇文章缺乏实质性的内容。','The three most important events of human life are equally devoid of reason: birth, marriage, and death.','人生三件大事——出生、结婚以及死亡——都是全无道理可言的。'}

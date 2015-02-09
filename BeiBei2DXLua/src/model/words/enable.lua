@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enable"]={"enable","[ɪn'eɪb(ə)l; en-]","[ɪ'nebl]","vt.使...能够",'vt.使...能够,使可行|||[计算机]使能','I gave him full directions to enable him to find the house.','我向他作了详细说明, 好让他能找到那房子.','The collapse of the strike enabled the company to resume normal bus services.','罢工的失败使公司恢复了正常的公共汽车营业。'}

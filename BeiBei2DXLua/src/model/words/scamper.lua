@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scamper"]={"scamper","['skæmpə]","['skæmpɚ]","n.蹦跳",'n.蹦跳|||v.奔跑,快跑|||vi.涉猎,浏览','||Scamper|| before you get in deeper with this bunch.','趁早脱身吧，不然你要跟这伙坏人越缠越紧。','The children were scampering around the garden.','孩子们在花园里嬉戏奔跑。'}

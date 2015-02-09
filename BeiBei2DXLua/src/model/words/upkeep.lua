@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["upkeep"]={"upkeep","['ʌpkiːp]","['ʌpkip]","n.维持",'n.维持,维持费,保养费，生活费','Orderly in the upkeep of his rooms.','在保养他的房间上一丝不苟','I can\'t afford the upkeep of a large house and garden.','我负担不起带花园的大房子的维护费.'}

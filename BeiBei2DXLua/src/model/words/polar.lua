@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polar"]={"polar","['pəʊlə]","['polɚ]","adj.两极的",'adj.两极的,南辕北辙的,极地的|||n.极线,极性','Although they can swim, the polar bears are terrestrial animals.','北极熊虽然会游泳，但也是陆栖动物。','The polar bear\'s habitat is the icy waters of the Arctic.','北极熊的栖息地是冰冷的北极海域。'}

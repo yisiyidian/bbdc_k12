@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stag"]={"stag","[stæg]","[stæɡ]","adj.只准男子参加的",'adj.只准男子参加的，色情的|||n.牡鹿，投机认股者|||vt.（英）监视|||vi.只身参加舞会','Are you going to Jim\'s stag party on Friday evening?','星期五晚上你打算去杰姆家参加男子交谊会吗？','The hunter shot the stag dead.','猎人把雄鹿射死了.'}

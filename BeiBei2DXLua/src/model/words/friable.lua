@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["friable"]={"friable","['fraɪəb(ə)l]","['fraɪəbl]","adj.易碎的",'adj.易碎的','These plants were grown best in the soft, friable soil.','这些作物在柔软疏松的土壤环境下长势良好。','friable soil','松土'}

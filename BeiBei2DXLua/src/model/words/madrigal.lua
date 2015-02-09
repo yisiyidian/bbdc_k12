@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["madrigal"]={"madrigal","['mædrɪg(ə)l]","['mædrɪɡl]","n.牧歌",'n.牧歌，情歌，小调，合唱曲','I  was moved  by  his  small piece  of  madrigal.','我被他的小情歌打动了。','The madrigal that writes to you still sings.','写给你的情歌还在唱。'}

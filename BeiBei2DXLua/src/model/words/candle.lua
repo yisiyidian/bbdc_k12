@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["candle"]={"candle","['kænd(ə)l]","['kændl]","n.蜡烛",'n.蜡烛','A solitary candle lightened the darkness of the room.','一支孤烛使黑暗的房间亮了起来。','He put the candle on the silver candlestick.','他把蜡烛放在银烛台上。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suppress"]={"suppress","[sə'pres]","[sə'prɛs]","vt.镇压",'vt.镇压,使...止住,禁止','The reproduction and growth of the cancerous cells can be suppressed by bombarding them with radiation.','可以通过放疗杀死癌细胞来抑制其再生和扩散。','The revolt was suppressed in a matter of hours.','叛乱在几小时之内就镇压下去了。'}

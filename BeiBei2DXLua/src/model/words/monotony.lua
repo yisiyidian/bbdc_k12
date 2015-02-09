@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monotony"]={"monotony","[mə'nɒt(ə)nɪ]","[mə'nɑtəni]","n.单调",'n.单调,枯燥,无味','I hate the monotony of work on the assembly line.','我痛恨在单调无味的流水装配线上工作。','To avoid monotony, we must always find something fresh and new.','为了避免千篇一律，我们必须发掘新意。'}

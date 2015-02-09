@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["everywhere"]={"everywhere","['evrɪweə]","['ɛvrɪwɛr]","adv.到处",'adv.到处,无论何处','The old man took his transistor everywhere.','这个老人随时都带着他的半导体收音机。','Flags were at half mast everywhere on the day of the president\'s funeral.','总统葬礼那天，全国到处降半旗致哀。'}

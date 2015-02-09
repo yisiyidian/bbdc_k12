@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["debris"]={"debris","['debriː; 'deɪbriː]","[də'bri]","n.碎片",'n.碎片,残骇','They had to wade knee-deep through mud and debris to reach the victims.','他们必须迈过齐膝的烂泥和堆积物，磕磕绊绊来到遇难者身旁。','The sea tided the debris ashore.','潮水把碎片杂物冲上海滩。'}

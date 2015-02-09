@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knuckle"]={"knuckle","['nʌk(ə)l]","['nʌkl]","n.指关节",'n.指关节,膝关节,肘形接头，铰链连接|||v.以指节压，屈从，开始努力工作','He rapped the government on the knuckles for wasting the public money.','他尖刻地抨击政府浪费公款。','I always graze my knuckles.','我常常擦破指关节。'}

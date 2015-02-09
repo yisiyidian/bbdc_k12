@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["superlative"]={"superlative","[suː'pɜːlətɪv; sjuː-]","[su'pɝlətɪv]","adj.最上的",'adj.最上的,无比的,过度的|||n.最高级的言辞,极致,完璧','Some superlative wines are made in this region.','一些极好的葡萄酒产自这个地区。','...a spectacle which has critics world-wide reaching for superlatives.','…一种使全世界评论家都极尽盛赞之辞的景象。'}

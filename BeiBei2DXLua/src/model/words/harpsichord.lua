@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harpsichord"]={"harpsichord","['hɑːpsɪkɔːd]","[ 'hɑ:psikɔ:d ]","n.大键架",'n.大键架','and the harpsichord','大键琴','Can we dance to the harpsichord?','我们能跟着大键琴一起跳舞吗？'}

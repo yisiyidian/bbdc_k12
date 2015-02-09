@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unbridled"]={"unbridled","[ʌn'braɪd(ə)ld]","[ʌn'braɪdld]","adj.放纵的",'adj.1.(马等)无辔头的2.不受约束的;不受控制的;放纵的','His annoyance had unbridled his tongue.','他的烦恼使他打开了话匣子。','Memories have been in unbridled spread.','回忆一直在肆无忌惮的蔓延。'}

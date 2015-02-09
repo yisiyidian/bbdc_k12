@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disrupt"]={"disrupt","[dɪs'rʌpt]","[dɪs'rʌpt]","adj.分裂的",'adj.分裂的,分散的|||v.使...分裂,使...瓦解','His appearance disrupt my attention.','他的出现分散了我的注意力。','His speech disrupted the meeting.','他的讲演使会场陷入混乱。'}

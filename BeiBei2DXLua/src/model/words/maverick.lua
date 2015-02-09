@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maverick"]={"maverick","['mæv(ə)rɪk]","['mævərɪk]","adj.特立独行的",'n.没打烙印的动物；持不同意见的人|||vt.用不正当手段获取|||vi.迷途；背离|||adj.未打烙印的；行为不合常规的；特立独行的','You’re a maverick and you’ll try anything.','你是个爱自行其是的人，样样事情都要尝试一下。','He was too much of a maverick ever to hold high office.','他太特立独行，永远不可能做高官。'}

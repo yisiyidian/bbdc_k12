@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rendering"]={"rendering","['rend(ə)rɪŋ]","['rɛndərɪŋ]","n.翻译",'n.翻译,表现,描写','This phrase may well have been a rendering of a popular Arabic expression.','这个短语可能翻译自一个阿拉伯语常用表达。','His narrative is a super rendering of dialect speech and idiom.','他的叙述是方言和土语最成功的运用.'}

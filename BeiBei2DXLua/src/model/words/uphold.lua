@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uphold"]={"uphold","[ʌp'həʊld]","[ʌp'hold]","v.支撑",'v.支撑,赞成,鼓励','I uphold your opinion.','我支持你的观点。','The judge ||upheld|| the lower court\'s decision.','法官维持初级法院的判决。'}

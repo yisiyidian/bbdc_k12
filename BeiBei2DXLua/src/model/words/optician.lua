@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["optician"]={"optician","[ɒp'tɪʃ(ə)n]","[ɑp'tɪʃən]","n.光学仪器商",'n.光学仪器商,眼镜商,光学仪器制造厂','The optician said I needed new glasses.','验光师说我需要配新眼镜。','optician shop','光学仪器店'}

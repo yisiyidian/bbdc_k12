@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["motorist"]={"motorist","['məʊt(ə)rɪst]","['motərɪst]","n.驾车旅行的人",'n.驾车旅行的人，开汽车的人','The accident was caused by one motorist completely misapprehending the intentions of the other.','事故发生的原因是一个汽车驾驶员完全误解了另一个驾驶员的意图。','Invoked the help of a passing motorist.','恳求一位过路的汽车司机给予帮助'}

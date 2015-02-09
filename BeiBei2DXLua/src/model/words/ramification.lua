@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ramification"]={"ramification","[,ræmɪfɪ'keɪʃ(ə)n]","['ræməfə'keʃən]","n.分枝",'n.分枝,分叉,衍生物,支流','Public relation of police is a ramification of modern public relations.','警察公共关系是现代公共关系的衍生物。','The book analyzes the social and political ramifications of AIDS.','这本书分析了艾滋病引发的社会和政治后果。'}

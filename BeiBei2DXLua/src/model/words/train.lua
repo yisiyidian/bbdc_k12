@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["train"]={"train","[treɪn]","[tren]","n.火车",'n.火车,行列;裙裾|||vt.训练,教养|||vi.练习','The pop star was followed by a train of admirers.','那位流行歌曲歌星周围蜂拥著许多歌迷。','He trained his binoculars on the distant figures.','他把双筒望远镜对准远处的景物。'}

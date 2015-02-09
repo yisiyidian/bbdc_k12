@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foundation"]={"foundation","[faʊn'deɪʃ(ə)n]","[faʊn'deʃən]","n.基础",'n.基础,根据,建立','The foundation on which many ancient societies were built was the use of slaves.','许多古代社会都是建立在使役奴隶的基础上的。','The rumor was without foundation.','那条谣言毫无根据。'}

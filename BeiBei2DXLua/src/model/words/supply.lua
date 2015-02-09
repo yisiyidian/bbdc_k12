@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["supply"]={"supply","[sə'plaɪ]","[sə'plaɪ]","vt.供给",'n.补给,供给,供应，贮备|||vt.补给,供给,提供,提供足够以满足','Demand began to exceed supply.','开始供不应求。','Pollution of the water supply reached a level pernicious to the health of the population.','水源污染已经达到危及居民健康的程度。'}

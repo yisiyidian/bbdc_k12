@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flank"]={"flank","[flæŋk]","[flæŋk]","n.侧面",'n.侧面,侧腹,腰窝肉|||v.攻击侧面,面临着,守侧面','The road is flanked with trees and flowers.','路的两旁有花草。','A number of men were detached to guard the right flank.','派遣了一些士兵守卫右翼.'}

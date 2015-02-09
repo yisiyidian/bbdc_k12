@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pear"]={"pear","[peə]","[pɛr]","n.梨(树)",'n.梨(树)','The branch of the pear tree is weighed heavily with fruits.','梨树的树枝给沈甸甸的果实压弯了。','There are many pear trees covered in blossom.','那里有许多开满花的梨树。'}

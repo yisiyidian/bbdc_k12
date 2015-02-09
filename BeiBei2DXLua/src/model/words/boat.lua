@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boat"]={"boat","[bəʊt]","[bot]","n.船",'n.船,船型物体|||vt.放于船上|||vi.划船','They pushed the boat further into the water.','他们把小船又往水里推了推。','Don\'t miss the boat.','不要坐失良机。'}

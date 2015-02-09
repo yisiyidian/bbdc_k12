@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guru"]={"guru","['gʊruː]","['ɡʊru]","n.古鲁(指印度教等宗教的宗师或领袖)",'n.古鲁(指印度教等宗教的宗师或领袖),领袖,专家','the guru of high finance.','巨额融资的权威','In a culture that worships slimness, he was the ||Guru|| of Lean','“在崇尚苗条的文化中，他是苗条身材的倡导者”'}

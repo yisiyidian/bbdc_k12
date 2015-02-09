@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["groove"]={"groove","[gruːv]","[ɡruv]","n.凹槽",'n.凹槽,惯例|||vt.开槽|||vi.开槽,使...快活','The groove so cut.','榫槽这种切割的凹槽','Wheels leave grooves in dirt roads.','车轮在泥路上留下凹痕。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mammal"]={"mammal","['mæm(ə)l]","['mæml]","n.哺乳动物",'n.哺乳动物','The whale is the largest mammal in creation.','鲸鱼是所有哺乳动物中最大的。','A whale is no less a mammal than a horse is.','鲸鱼和马一样都是哺乳动物。'}

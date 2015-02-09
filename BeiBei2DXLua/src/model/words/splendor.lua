@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["splendor"]={"splendor","['splendə]","[ 'splendə ]","n.光辉",'n.光辉,壮丽,显赫','In summer, flowers are competing in splendor in the garden.','夏天的花园，百花争艳。','The court of King Solomon was noted for its splendor.','所罗门国王的宫廷以其华丽著称。'}

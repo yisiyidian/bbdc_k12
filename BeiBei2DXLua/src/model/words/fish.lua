@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fish"]={"fish","[fɪʃ]","[fɪʃ]","n.鱼",'n.鱼，鱼肉|||v.钓鱼，捕鱼','The beach is a good place to fish from.','海滩是钓鱼的好地方。','We caught three little fishes.','我们捉到三条小鱼。'}

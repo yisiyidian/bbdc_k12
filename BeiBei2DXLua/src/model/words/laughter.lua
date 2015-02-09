@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["laughter"]={"laughter","['lɑːftə]","['læftɚ]","n.笑",'n.笑,笑声','There was a burst of laughter in the next room.','隔壁房间里突然爆发出一阵笑声。','Her funny costume caused much mirthful laughter among the guests.','她那滑稽的服装引得客人哄堂大笑。'}

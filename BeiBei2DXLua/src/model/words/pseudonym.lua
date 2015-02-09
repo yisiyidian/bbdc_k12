@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pseudonym"]={"pseudonym","['sjuːdənɪm]","['sudənɪm]","n.匿名",'n.匿名,假名,笔名','She writes under a pseudonym.','她用笔名写作。','Both plays were published under the pseudonym of Philip Dayre.','两个剧本都是以菲利普·戴尔的笔名出版的。'}

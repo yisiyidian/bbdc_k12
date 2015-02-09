@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["merciful"]={"merciful","['mɜːsɪfʊl; -f(ə)l]","['mɝsɪfl]","adj.仁慈的",'adj.仁慈的,宽大的','The merciful king saved him from death.','仁慈的国王免他一死。','The prisoner besought the judge for mercy/to be merciful.','囚犯恳求法官宽恕[乞求宽大].'}

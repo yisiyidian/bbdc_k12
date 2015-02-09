@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proposition"]={"proposition","[prɒpə'zɪʃ(ə)n]","[,prɑpə'zɪʃən]","n.（难办或诱人的）事情",'n.（难办或诱人的）事情，任务；见解；观点；（美国的）法律修正案；提议；建议；提案|||vt.向…提出下流的要求；向…提出猥亵的要求','This is the inverse of his earlier proposition.','这和他早些时候提的建议截然相反.','His proposition is good in theory but cannot be put into practice.','他的建议在理论上可以, 但不能付诸实现。'}

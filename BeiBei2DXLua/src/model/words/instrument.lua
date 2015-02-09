@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["instrument"]={"instrument","['ɪnstrʊm(ə)nt]","['ɪnstrəmənt]","n.仪器",'n.乐器,工具,仪器,器械','This instrument monitors the patient\'s heartbeats.','这台仪器监听病人的心跳。','The compass is an instrument of navigation.','罗盘是航行仪器。'}

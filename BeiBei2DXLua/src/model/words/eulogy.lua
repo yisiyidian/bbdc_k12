@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eulogy"]={"eulogy","['juːlədʒɪ]","['jʊlədʒi]","n.颂词",'n.颂词,颂扬,悼词','He gave the eulogy at his close friend\'s funeral.','他在好朋友的葬礼上致悼词。','Newspapers worldwide were filled with ||eulogies|| and remembrances for many days afterward.','在那之后的好多天里，全球的报纸都满是哀悼和追忆之词。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ghastly"]={"ghastly","[gɑːs(t)lɪ]","[ˈɡæstli]","adj.可怕的",'adj.可怕的,鬼一样的,惨白的，巨大的|||adv.可怖地,惨白地','The sick woman\'s face was ghastly.','那女病人面色苍白。','The ghost in horrible movie usually has a ghastly face.','恐怖电影里的鬼怪通常有一张惨白恐怖的脸。'}

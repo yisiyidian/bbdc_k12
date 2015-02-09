@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["otherwise"]={"otherwise","['ʌðəwaɪz]","['ʌðɚwaɪz]","adv.否则",'adv.否则,不同地,在不同方面|||pron.其他|||adj.不同的','Seize the chance, otherwise you\'ll regret it.','抓住这个机会，否则你会后悔的。','You\'d better give me my book, otherwise I\'ll fail my test.','你最好把我的书给我，否则我的测验将要不及格了。'}

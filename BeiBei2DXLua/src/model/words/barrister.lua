@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barrister"]={"barrister","['bærɪstə]","['bærɪstɚ]","n.法庭律师",'n.法庭律师,律师','The majority of judgers are barrister, but they cannot practise as barrister.','多数法官是高级律师，但他们不能作为高级律师开业。','The barrister entirely renounce his right to object to a juror.','这位律师完全放弃了反对陪审团员的权力。'}

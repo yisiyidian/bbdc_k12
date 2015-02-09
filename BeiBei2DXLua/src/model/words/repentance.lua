@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repentance"]={"repentance","[rɪ'pent(ə)ns]","[rɪ'pɛntəns]","n.后悔",'n.后悔,悔改','Foolish people are punished by the repentance which follows their folly.','懊悔是愚夫愚行后所受的惩罚；蠢人做蠢事后得到的惩罚是懊悔。','Sudden friendship, sure repentance.','仓促结友谊，肯定悔莫及。'}

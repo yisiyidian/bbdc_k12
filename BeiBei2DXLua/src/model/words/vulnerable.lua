@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vulnerable"]={"vulnerable","['vʌln(ə)rəb(ə)l]","['vʌlnərəbl]","adj.易受伤害的",'adj.易受伤害的,有弱点的','She is very young and vulnerable to temptation.','她很年轻，易受诱惑。','The potato is vulnerable to several pests.','马铃薯易受几种害虫的侵害。'}

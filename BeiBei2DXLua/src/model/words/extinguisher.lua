@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extinguisher"]={"extinguisher","[ɪk'stɪŋgwɪʃə; ek-]","[ɪk'stɪŋɡwɪʃɚ]","n.灭火器",'n.灭火器(熄灭者,消除器)','Kept a fire extinguisher available at all times.','任何时候都要放置即时可用的灭火器','Having seen the manual, he pick the extinguisher.','看完了说明书，他拿起了灭火器。'}

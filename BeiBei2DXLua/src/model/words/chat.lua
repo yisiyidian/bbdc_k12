@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chat"]={"chat","[tʃæt]","[tʃæt]","vt.&vi.谈天",'n.聊天,闲谈|||vt.&vi.谈天,闲谈','Ask him to stop by for a chat.','请他来坐坐, 聊聊天.','It is pleasant to chat with friends, and with no chat is it more pleasant than with close friends.','和朋友聊天是愉快的，而这种情形没有比和知己的朋友聊天更为愉快。'}

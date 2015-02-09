@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rabble"]={"rabble","['ræb(ə)l]","['ræbl]","n.乌合之众",'n.乌合之众,暴民,下等人|||n.长柄耙，拔火棒|||vt.用拔火棒搅动','The rabble soon grew violent and unmanageable.','暴民们很快地变得狂暴和无法控制。','The rabbles met on the square to oppose their new mayor.','平民们在广场上集会反对他们的新市长。'}

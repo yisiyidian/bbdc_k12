@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diary"]={"diary","['daɪərɪ]","['daɪəri]","n.日记",'n.日记,日记簿','I caught that Nosey Parker reading my diary.','那个好事的家伙偷看我的日记, 让我给抓个正著.','His father ordered that he (should) keep a diary in English.','他的父亲规定他要用英文写日记。'}

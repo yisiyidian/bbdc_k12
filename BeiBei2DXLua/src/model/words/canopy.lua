@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["canopy"]={"canopy","['kænəpɪ]","['kænəpi]","n.天篷",'n.天篷,遮篷,苍穹','Today, the canopy of the heavens is grey.','今天的天幕是灰色的。','The canopy of Tibet is alway blue','西藏的天空一直是蓝色的'}

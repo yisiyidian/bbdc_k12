@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rascal"]={"rascal","['rɑːsk(ə)l]","['ræskl]","n.流氓",'n.流氓,坏蛋,淘气鬼','If I ever catch the rascal I\'ll really wallop him!','我要是逮住这个流氓, 非狠狠揍他一顿不可!','The rascal hectored the boy into taking out all of his money.','那个流氓吓唬小男孩，让他掏出了所有的钱。'}

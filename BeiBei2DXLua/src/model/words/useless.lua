@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["useless"]={"useless","[ˈju:sləs]","['jusləs]","adj.无用的",'adj.无用的，无效的','It\'s useless to continue such a barren argument.','继续这种无聊的争辩是无用的。','I had expended much time on the work but they told me it\'s useless.','我花了很多时间在这件工作上，他们却告诉我说这是无用的。'}

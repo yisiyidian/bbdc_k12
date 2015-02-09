@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypothesize"]={"hypothesize","[haɪ'pɒθɪsaɪz]","[haɪ'pɑθəsaɪz]","v.假设",'v.假设,假定,猜测','With only a few facts, Holmes could hypothesize the explanation.','仅凭少许的事实, 福尔摩斯就能推理该事件了.','Together they try to hypothesize what could have happened.','他们一起猜测有什么可能发生.'}

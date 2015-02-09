@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invalid"]={"invalid","[ɪn'vælɪd]","[ɪn'vælɪd]","adj.无效的",'adj.无效的,伤残的|||n.病人,残疾者|||vt.失去健康','His claim to ownership is invalid.','他的所有权是无效的.','The girl spent all her spare time to take after her invalid mother.','这个女孩把她所有的业余时间都用来照顾长期生病的母亲。'}

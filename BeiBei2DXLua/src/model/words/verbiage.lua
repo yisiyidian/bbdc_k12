@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verbiage"]={"verbiage","['vɜːbɪɪdʒ]","['vɝbɪɪdʒ]","n.多废话",'n.多废话,多冗词,冗长','Slough off unimportant verbiage.','删除无关紧要的空话。','Stripped of their pretentious verbiage, his statements come dangerously close to inviting racial hatred.','抛开那些夸大其词的冗词赘语不论，他的言论有挑起种族仇恨的危险。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boss"]={"boss","[bɒs]","[bɔs]","n.老板",'n.老板,上司|||v.指挥,控制','My boss is a football fan.','我的上司是一位足球迷。','He was fired by his boss.','他被他的老板解雇了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hardheaded"]={"hardheaded","['hɑːd'hedɪd]","[ 'hɑ:d'hedid ]","adj.顽固的",'adj.顽固的，现实的,冷静的，脚踏实地的','...a hardheaded and shrewd businesswoman.','...一位务实、精明的女商人。','i can just be pretty hardheaded sometimes.','有时候我还是能冷静一下'}

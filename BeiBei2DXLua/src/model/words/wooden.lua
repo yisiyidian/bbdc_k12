@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wooden"]={"wooden","['wʊd(ə)n]","['wʊdn]","adj.木制的",'adj.木制的，生硬笨拙的','How can I enlighten your wooden head?','我怎么才能让你这木头疙瘩开窍呢？','The floor was made of wooden blocks.','地板是用木块拼成的。'}

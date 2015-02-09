@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plumb"]={"plumb","[plʌm]","[plʌm]","n.铅锤",'n.铅锤,垂直|||v.（用铅垂）测量，探测|||adv.垂直地，彻底地|||adj.垂直的，完全的','Is this wall plumb?','这墙是垂直的吗？','He is just plumb crazy.','他真是疯了。'}

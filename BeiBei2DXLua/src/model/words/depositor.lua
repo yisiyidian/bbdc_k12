@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depositor"]={"depositor","[dɪ'pɒzɪtə]","[dɪ'pɑzɪtɚ]","n.寄托者",'n.寄托者,存款人','The number of our depositor is growing every day.','我行存款人的数量每天都在增长。','||Depositor|| means a person who has deposited money in a bank.','存款人就是谁将钱存入银行的人。'}

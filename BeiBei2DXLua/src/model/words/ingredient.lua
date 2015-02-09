@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ingredient"]={"ingredient","[ɪn'griːdɪənt]","[ɪn'ɡridɪənt]","n.成分",'n.成分,因素','The Australian team had the added ingredient of perseverance.','澳大利亚队另外还具备了顽强的意志.','Vulgarity is a very important ingredient in life.','庸俗是生活中非常必要的作料.'}

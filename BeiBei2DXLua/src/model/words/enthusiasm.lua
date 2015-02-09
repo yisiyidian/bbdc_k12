@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enthusiasm"]={"enthusiasm","[ɪn'θjuːzɪæz(ə)m; en-]","[ɪn'θuzɪæzəm]","v.&n.热情",'v.&n.热情,热心','His advancement to the position of manager was greeted with enthusiasm.','他被提升为经理，大家都为之欢呼。','His enthusiasm breathed new life into the company.','他的热情给公司注入了新的生命。'}

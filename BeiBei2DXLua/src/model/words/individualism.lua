@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["individualism"]={"individualism","[ɪndɪ'vɪdjʊ(ə)lɪz(ə)m]","[,ɪndɪ'vɪdʒuəlɪzəm]","n.个人主义",'n.个人主义','To many Americans the westward march illustrates a legacy of individualism.','对许多美国人来说,向西部迁移是表现一种个人奋斗的遗风.','You shuold get rid of individualism when you work in a team.','当你在一个集体时，你应该舍掉你的个人主义。'}

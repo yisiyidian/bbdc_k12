@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surgeon"]={"surgeon","['sɜːdʒ(ə)n]","['sɝdʒən]","n.外科医生",'n.外科医生','The surgeon excised the lump from her breast.','外科医生切除了她乳房的肿块.','The surgeon operated on her for appendicitis.','外科医生为她做阑尾切除手术。'}

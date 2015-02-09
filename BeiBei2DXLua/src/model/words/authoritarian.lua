@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["authoritarian"]={"authoritarian","[ɔː,θɒrɪ'teərɪən]","[ə,θɔrə'tɛrɪən]","adj.权力主义的",'adj.权力主义的,独裁主义的|||n.独裁主义者，权力主义者','She rebuked her lawyer for his authoritarian attitude to her clients.','她指责她的律师对待委托人的命令式态度。','The authoritarian policy wasn\'t proved to be a success.','威权主义的政策并不成功。'}

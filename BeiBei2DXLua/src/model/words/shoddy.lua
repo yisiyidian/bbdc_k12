@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shoddy"]={"shoddy","['ʃɒdɪ]","['ʃɑdi]","n.次品",'n.次品，劣质产品|||adj.劣质的','American customers no longer tolerate shoddy goods.','美国的顾客不再容忍劣等货了。','I\'m normally quick to complain about shoddy service.','对劣质服务我通常会立刻投诉。'}

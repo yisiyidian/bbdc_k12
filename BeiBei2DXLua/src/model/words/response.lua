@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["response"]={"response","[rɪ'spɒns]","[rɪ'spɑns]","n.回答",'n.反应,响应;回答','His cool response suggested that he didn\'t like the idea.','他反应冷淡表明他并不喜欢这个主意.','Millions of people gave freely in response to the famine appeal.','千百万人响应救灾呼吁而慷慨解囊.'}

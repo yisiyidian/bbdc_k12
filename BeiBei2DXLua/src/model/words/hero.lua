@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hero"]={"hero","['hɪərəʊ]","['hɪro]","n.英雄",'n.男主角,男主人公,英雄','He is a fabulous hero in that book.','在那本书中他是个传奇式的英雄。','At the end of the film, the hero wept bitterly.','在影片的结尾，主人公伤心地哭了。'}

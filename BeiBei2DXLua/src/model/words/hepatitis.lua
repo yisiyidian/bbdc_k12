@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hepatitis"]={"hepatitis","[,hepə'taɪtɪs]","[,hɛpə'taɪtɪs]","n.肝炎",'n.肝炎','It is said that the plant can be used to treat hepatitis.','据说那种植物可用来治肝炎。','Later stages of ||Hepatitis|| B often develop into liver cancer.','晚期乙肝疾病往往会转化为肝癌。'}

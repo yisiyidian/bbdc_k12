@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cathartic"]={"cathartic","[kə'θɑːtɪk]","[kə'θɑrtɪk]","n.泻药",'n.泻药,通便药|||adj.通便的,导泻的,释放的','His laughter was cathartic, an animal yelp that brought tears to his eyes.','他哈哈大笑以宣泄情绪，声音如野兽般尖厉，眼泪都笑出来了。','cathartic method','宣泄疗法'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smooth"]={"smooth","[smuːð]","[smʊð]","adj.平稳的",'adj.平稳的,流畅的,安祥的,圆滑的,搅拌均匀的|||vt.使光滑,磨光,安慰,理顺(羽毛)|||vi.变光滑','The birch has smooth bark and slender branches.','桦树有光滑的皮和细长的枝。','She smoothed out wrinkles out of the tablecloth.','她把桌布上的皱褶弄平。'}

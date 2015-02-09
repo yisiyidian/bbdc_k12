@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["merry"]={"merry","['merɪ]","['mɛri]","adj.欢乐的",'adj.欢乐的,愉快的,敏捷的','He ended his speech with a merry quip.','他以十分风趣的话结束了演讲.','A merry heart goes all the way.','【谚】心情愉快，万事顺利。'}

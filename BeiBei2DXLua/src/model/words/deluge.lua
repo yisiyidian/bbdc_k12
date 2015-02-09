@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deluge"]={"deluge","['deljuːdʒ]","['dɛljʊdʒ]","n.大洪水",'n.大洪水,暴雨，泛滥|||v.泛滥，大量涌入','I was deluged with phone calls.','我的电话应接不暇。','We advertised the job and were deluged with applications.','我们登出了这项工作的广告，收到的申请书不计其数。'}

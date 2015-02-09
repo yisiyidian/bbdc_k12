@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jail"]={"jail","[dʒeɪl]","[dʒel]","n.监牢",'n.监牢,监狱,拘留所|||vt.监禁,下狱','Several prisoners broke out of the jail.','有几名囚犯越狱了.','A day in jail cooled him off.','一天的铁窗生活使他冷静了下来。'}

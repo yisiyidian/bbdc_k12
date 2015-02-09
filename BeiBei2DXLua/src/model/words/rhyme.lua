@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rhyme"]={"rhyme","[raɪm]","[raɪm]","n.韵",'n.韵,押韵,韵文|||vt.押韵,用韵诗表达|||vi.押韵','A word game in which a player or team must find and express a rhyme for a word or line presented by the opposing player or team.','对韵游戏一种文字游戏, 一人或一队说出一词或一句, 对手必须对以同韵的词或句','Is there a rhyme for/to hiccups\'?','有和hiccups押韵的词吗?'}

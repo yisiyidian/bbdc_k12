@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["febrile"]={"febrile","['fiːbraɪl]","['fibraɪl]","adj.发烧的",'adj.发烧的,热病的','The real estate market is so febrile that most people cannot afford it.','房地产市场是这么火热，以至于大多数人买不起房子。','The news plunged the nation into a febrile, agitated state.','这条消息让整个国家陷入躁动不安的状态中。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["connote"]={"connote","[kə'nəʊt]","[kə'not]","vt.意思就是",'vt.意思就是(包含,暗示)','The term liberal arts connotes a certain elevation above utilitarian concerns','“人文学科”一词包含了一种超越功利主义的崇高意义','For a political leader, hesitation is apt to connote weakness.','对一个政治领袖而言，犹豫含有软弱之意'}

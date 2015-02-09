@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frustrated"]={"frustrated","[frʌ'streɪtɪd]","['frʌstretɪd]","adj.沮丧的",'adj.沮丧的，失败的，失意的','Mary was frustrated by the lack of appreciation shown of her work.','玛丽因工作得不到赏识而灰心丧气.','She found her plans frustrated at every turn.','她觉得她的计画到处碰壁。'}

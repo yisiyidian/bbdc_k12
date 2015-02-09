@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presentation"]={"presentation","[prez(ə)n'teɪʃ(ə)n]","[,prizɛn'teʃən]","n.陈述",'n.陈述,介绍,赠与|||n.[美]讲课,报告','This newspaper maintains a good balance in its presentation of different opinions.','这家报纸刊登不同意见始终做到不偏不倚.','She needs to improve her presentation of the arguments.','她需要改进阐述其论点的方式。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["circumscribe"]={"circumscribe","['sɜːkəmskraɪb]","[,sɝkəm'sraɪb]","vt.在...周围画线",'vt.在...周围画线,限制','The President\'s power is circumscribed by Congress and the Supreme Court.','总统的权力被国会和高级法院所限制','Their movements were strictly monitored and circumscribed.','他们的活动被严格监控和限制。'}

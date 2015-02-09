@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dilemma"]={"dilemma","[dɪ'lemə; daɪ-]","[dɪˈlemə]","n.困境",'n.困境,进退两难','We should think a solution to handle the dilemma.','我们应该想个方法去解决这个困境。','Faced with the dilemma, he opted for soldiering on.','面临着进退两难的困境，他决定顽强地坚持下去。'}

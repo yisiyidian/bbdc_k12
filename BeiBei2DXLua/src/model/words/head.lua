@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["head"]={"head","[hed]","[hɛd]","n.头脑",'n.头脑,领袖,冷静，硬币的正面，顶端，高潮|||vt.&vi.为首,朝向,前进，超过，起源|||adj.首要的，前面的','The chapter was headed My Early Life\'.','这一章的标题是｀我早年的生活＇.','He is the head of our school.','他是我们学校的校长。'}

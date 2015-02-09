@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drool"]={"drool","[druːl]","[drul]","v.流口水",'v.流口水,胡说|||n.口水，胡话','Fashion editors drooled over every item.','时尚编辑们忘情地观看了每样东西。','My dog Jacques is drooling on my shoulder.','我的狗雅克趴在我的肩头流口水。'}

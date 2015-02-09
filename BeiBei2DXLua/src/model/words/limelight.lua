@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["limelight"]={"limelight","['laɪmlaɪt]","['laɪmlaɪt]","n.石灰光",'n.石灰光,灰光灯,以灰光灯照射的舞台|||v.使受到注目,使显露头角','She claims she never sought the limelight.','她说她从不爱出风头.','That politician has been in the limelight recently because of his strong opinions.','那位政治家由于持激烈的观点, 近来一直引人注目。'}

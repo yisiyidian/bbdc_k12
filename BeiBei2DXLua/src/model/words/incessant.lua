@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incessant"]={"incessant","[ɪn'ses(ə)nt]","[ɪn'sɛsnt]","adj.不断的",'adj.不断的,不绝的,无尽的','||Incessant|| background music makes me punch-drunk after a couple of hours.','接连听了几个小时的背景音乐，使我觉得昏昏沉沉。','That incessant background music gets on my nerves.','那没完没了的背景音乐让我心烦意乱！'}

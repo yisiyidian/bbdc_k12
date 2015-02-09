@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exhilarate"]={"exhilarate","[ɪg'zɪləreɪt; eg-]","[ɪɡ'zɪləret]","vt.使高兴",'vt.使高兴,使愉快，使振奋','We were exhilarated by the cool, pine-scented air.','凉爽的、带有松香味的空气振作起我们的精神','These bold designs exhilarated the viewer\'s imagination.','这些大胆的设计激起了观众的想象力。'}

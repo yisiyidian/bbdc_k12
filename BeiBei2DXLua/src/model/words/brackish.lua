@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brackish"]={"brackish","['brækɪʃ]","['brækɪʃ]","adj.有盐味的",'adj.有盐味的,味道不好的','You could cut the brackish winds with a knife','你似乎可以用刀子割开这咸腥的海风','The factory has several shallow pools of brackish water.','工厂有几个浅的咸水池。'}

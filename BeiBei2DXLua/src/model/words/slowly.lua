@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slowly"]={"slowly","['sləʊlɪ]","['sloli]","adj.慢慢地",'adj.慢慢地|||adv.缓慢地','The doctor told me to breathe in and then breathe out again slowly.','医生叫我吸气然後再慢慢地呼出.','The sky slowly changed from blue to red.','天空慢慢由蓝色变为红色。'}

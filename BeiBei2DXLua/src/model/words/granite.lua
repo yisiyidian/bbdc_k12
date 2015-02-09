@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["granite"]={"granite","['grænɪt]","['grænɪt]","n.花岗岩",'n.花岗岩；坚毅；冷酷无情','A coarse-grained granite, sometimes rich in rare elements such as uranium, tungsten, and tantalum.','花岗伟晶岩一种有时富含铀、钨和钽等稀有元素的粗纹理花岗岩','The valley ended in a perpendicular rim of granite.','那山谷的尽头是花岗石的断崖.'}

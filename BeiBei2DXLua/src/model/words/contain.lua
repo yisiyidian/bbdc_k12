@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contain"]={"contain","[kən'teɪn]","[kən'ten]","vt.包含",'vt.包含,容纳,克制,抑制|||vi.自制','The atlas contains forty maps.','这个地图集有四十幅地图。','This book contains all the information you need.','这本书包含你所需的一切资料。'}

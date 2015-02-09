@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["target"]={"target","['tɑːgɪt]","['tɑrɡɪt]","n.（服务的）对象",'n.（服务的）对象；目标；（射击的）靶子；目的|||vt.瞄准；把…作为攻击目标','The sights of the gun must be in alignment with the target.','枪的瞄准器必须与射击目标对准成一线.','The shot was way off target.','这次射得远离目标.'}

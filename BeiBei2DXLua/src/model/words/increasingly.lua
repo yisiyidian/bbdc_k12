@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["increasingly"]={"increasingly","[ɪn'kriːsɪŋlɪ]","[ɪn'krisɪŋli]","adv.逐渐地",'adv.逐渐地,渐增地','He\'s become increasingly withdrawn since his wife\'s death.','他从妻子死後越来越孤僻了.','Common preconceptions about life in this district are increasingly being challenged.','原先普遍存在著对那一地区生活的成见越来越站不住脚了.'}

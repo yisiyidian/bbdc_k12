@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pelvis"]={"pelvis","['pelvɪs]","['pɛlvɪs]","n.骨盘",'n.骨盘，盆骨','His son suffered from a fractured pelvis.','他儿子出现骨盆骨折。','turn your pelvis','转动你的胯骨'}

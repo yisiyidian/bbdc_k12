@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["visitor"]={"visitor","['vɪzɪtə]","['vɪzɪtɚ]","n.参观者",'n.参观者,访问者，访客','I am expecting a visitor.','我在等一位来宾。','She ushered the visitor into the room.','她把来访者引进屋子里。'}

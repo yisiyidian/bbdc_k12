@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["effort"]={"effort","['efət]","['ɛfɚt]","n.努力",'n.努力,努力的成果','Your effort is bound to be successful.','你的努力一定会成功的。','Your success lies upon your effort.','你成功与否取决于你的努力。'}

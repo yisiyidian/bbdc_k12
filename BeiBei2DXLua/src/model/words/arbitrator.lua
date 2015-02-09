@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arbitrator"]={"arbitrator","['ɑːbɪtreɪtə]","['ɑrbə'tretɚ]","n.仲裁人",'n.仲裁人,公断者','The judgment of an arbitrator or arbiter.','仲裁结论，公断结论仲裁者或公断人的判决','A person appointed to settle a dispute that mediators have been unable to resolve; an arbitrator.','仲裁人当调解人无法解决时被指定解决争议的人；仲裁人'}

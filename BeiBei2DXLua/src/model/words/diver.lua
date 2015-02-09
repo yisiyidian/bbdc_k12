@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diver"]={"diver","['daɪvə]","['daɪvɚ]","n.跳水者",'n.跳水者，潜水员','Ned used to be a scuba diver and now he\'s gone to the other extreme and taken up hang gliding.','内德过去是一名深水潜水员，现在他已走到另一个极端，开始从事悬挂式滑行运动。','The diver draws a deep breath.','这个潜水者深深地吸了口气。'}

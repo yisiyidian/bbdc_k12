@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["studio"]={"studio","['stjuːdɪəʊ]","['studɪo]","n.工作场所",'n.工作场所,画室，照相室，制片厂','The equipment of the photographic studio was expensive.','装备摄影室的开支很大.','The studio is being wired for sound.','这个播音室正在安装音响设备用的电线.'}

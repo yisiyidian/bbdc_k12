@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["health"]={"health","[helθ]","[hɛlθ]","n.健康",'n.健康,卫生,保健','He has a bee in his bonnet about health foods.','他对于保健食品有他自己的一套奇怪的看法。','Smoking is harmful to one\'s health.','吸烟对健康有害。'}

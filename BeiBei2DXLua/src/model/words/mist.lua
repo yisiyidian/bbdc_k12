@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mist"]={"mist","[mɪst]","[mɪst]","n.雾",'n.雾,迷蒙,朦胧不清|||vt.使...模糊,蒙上雾|||vi.使...模糊,下雾','A mist of perfume hung in the air.','空气中飘溢著香水的雾气。','Our breath is misting up the car windows.','我们呼出的气渐渐给汽车的窗户上蒙上一层水蒸气。'}

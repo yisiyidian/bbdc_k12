@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oppress"]={"oppress","[ə'pres]","[ə'prɛs]","v.使(心情等)沉重",'v.使(心情等)沉重,使烦恼,压迫,压制某人|||vt.压迫,压制','Cares oppressed his spirits.','虑使他心情抑郁。','The king oppressed his people with terrible taxes and punishments.','国王以苛捐杂税和严刑来压迫人民。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agreeable"]={"agreeable","[ə'griːəb(ə)l]","[ə'ɡriəbl]","adj.愉快的",'adj.愉快的,和蔼可亲的，欣然同意的，一致的','He is an agreeable fellow, but likes to blow his own horn.','他是一个随和的人，但就是喜欢自吹自擂。','She has an agreeable voice.','她的声音悦耳。'}

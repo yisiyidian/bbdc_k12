@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dossier"]={"dossier","['dɒsɪə; -ɪeɪ; -jeɪ]","[do'sjɛi]","n.档案材料",'n.档案材料，人事材料,记录文件,记录,卷宗','We have a hefty dossier on his exploits in the war.','关于他在战争中的英勇事迹，我们有相当多的资料。','The company is compiling a dossier of evidence to back its allegations.','公司正汇编一份证据材料来支持指控。'}

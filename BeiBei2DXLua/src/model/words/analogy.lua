@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["analogy"]={"analogy","[ə'nælədʒɪ]","[ə'nælədʒi]","n.相似",'n.相似,类似，类比','He drew this conclusion on the analogy of yours.','他根据你的理论类推得出这个结论。','It is not always reliable to argue by analogy.','用类推法论证并不总是可靠的。'}

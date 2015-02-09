@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arctic"]={"arctic","['ɑːktɪk]","['ɑrktɪk]","adj.北极的",'adj.北极的,极寒的|||n.北极圈,北极地方','Eskimos live in the ||Arctic||.','爱斯基摩人生活在北极。','I guess there are much less people in the|| Arctic|| regions than here.','我想北极地区的人要比这里的少得多。'}

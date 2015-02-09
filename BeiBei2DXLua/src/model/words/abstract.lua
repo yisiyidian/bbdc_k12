@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abstract"]={"abstract","['æbstrækt]","['æbstrækt]","n.摘要",'n.摘要,抽象的东西|||adj.抽象的,理论的|||vt.移除,摘要,偷|||vi.做摘要','||Abstract|| art is an acquired taste.','抽象派艺术要慢慢才会欣赏。','I can not understand such an abstract concept.','我无法理解如此抽象的观念。'}

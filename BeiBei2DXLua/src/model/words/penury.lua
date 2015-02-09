@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penury"]={"penury","['penjʊrɪ]","['pɛnjəri]","n.贫穷",'n.贫穷，拮据','Peoples in Africa are living in penury.','非洲的人民过着贫穷的生活。','Laid-off workers fall into penury.','下岗职工陷入了贫困。'}

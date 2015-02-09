@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sculptural"]={"sculptural","['skʌlptʃərəl]","[ 'skʌlptrərəl ]","adj.雕刻的",'adj.雕刻的','Well, we can call these sculptural works.','我们可以把这些称之为雕刻作品。','He enjoyed working with clay as a sculptural form.','他很享受用雕塑的形式做塑土工作。'}

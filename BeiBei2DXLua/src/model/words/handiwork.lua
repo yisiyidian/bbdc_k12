@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["handiwork"]={"handiwork","['hændɪwɜːk]","['hændɪ'wɝk]","n.手工",'n.手工,手工艺','Is that drawing on the board your handiwork, Clare?','克莱尔, 那板上的画儿是你的大作吗?','It\'s electricity, not the devil\'s handiwork.','不就是个电嘛，又不是巫术'}

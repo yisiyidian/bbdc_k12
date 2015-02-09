@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["platonic"]={"platonic","[plə'tɑnɪk]","[ plə'tɔnik, plei- ]","adj.柏拉图哲学的",'adj.柏拉图哲学的,柏拉图主义的,理想的,不切实际的','It\'s a platonic thought.','那是个不切实际的想法。','Their relationship is purely platonic.','他们之间是柏拉图式的爱情。'}

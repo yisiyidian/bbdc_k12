@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unseemly"]={"unseemly","[ʌn'siːmlɪ]","[ʌn'simli]","adj.不体面的",'adj.不体面的,不相配的,不适宜的|||adv.不适当地','His social position allows him of no unseemly behaviour in public.','他的社会地位不容许他在公共场合有行为不妥之处。','Everyone was shocked by his unseemly conduct.','大家都被他不得体的举动震惊了。'}

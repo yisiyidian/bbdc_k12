@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seminal"]={"seminal","['semɪn(ə)l]","['sɛmɪnl]","adj.精液的",'adj.精液的,种子的,生殖的，创新的，有创意的','The reforms have been a seminal event in the history of the NHS.','这些改革已成为英国国民保健制度史上影响深远的一件大事。','She is the author of the seminal book \'Animal Liberation\'.','她是有着巨大影响的《动物解放》一书的作者。'}

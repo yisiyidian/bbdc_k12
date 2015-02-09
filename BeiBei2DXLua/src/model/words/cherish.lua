@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cherish"]={"cherish","['tʃerɪʃ]","['tʃɛrɪʃ]","vt.珍爱",'vt.珍爱,抚育,珍藏','Never cherish a serpent in your bosom.','永远不要施恩于忘恩负义之人。','Every minute I have spent here impressed me with the friendship your people cherish for our people.','我在这里度过的每一分钟都使我感到你们人民对我国人民所怀的友情。'}

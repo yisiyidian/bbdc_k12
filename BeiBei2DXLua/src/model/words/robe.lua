@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["robe"]={"robe","[rəʊb]","[rob]","n.长袍",'n.长袍|||v.(使)穿上长袍等','In the early morning, he robed and drove abroad.','他一早就穿好衣服开车出门了。','He robes himself in moonlight.','他沐浴在月光下。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alienation"]={"alienation","[eɪlɪə'neɪʃ(ə)n]","[ ,eiljə'neiʃən ]","n.疏远",'n.疏远,离间,让渡,[哲]异化','The increasingly dull nature of many industrial jobs has led to the alienation of many workers.','许多工业工作越来越单调刻板, 导致很多工人离心离德的倾向。','Mental illness can create a sense of alienation from the real world.','精神病能产生一种与现实世界脱离的感觉。'}

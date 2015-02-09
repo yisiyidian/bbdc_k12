@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lyrical"]={"lyrical","['lɪrɪk(ə)l]","['lɪrɪkl]","adj.抒情的",'adj.抒情的，抒情诗的|||n.抒情诗|||=lyric','a lyrical passage in his autobiography.','他自传中一段充满感情的文字','She gave a lyrical description of her experiences in the South Seas.','她对自己在南太平洋的经历作了热情的描述。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["morale"]={"morale","[mə'rɑːl]","[mə'ræl]","n.道德准则",'n.道德准则,士气,斗志','The morale of the enemy troops is sinking lower every day.','敌军的士气日益低落.','They sang songs to keep their morale up.','他们唱　歌以保持高昂的士气.'}

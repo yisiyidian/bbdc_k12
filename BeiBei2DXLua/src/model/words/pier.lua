@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pier"]={"pier","[pɪə]","[pɪr]","n.码头",'n.码头|||n.桥墩,桥柱;[建]窗间壁,支柱','Mr ||Pier|| yanked his son away from boarding-school.','皮尔先生把他儿子从寄宿学校领走了。','A protective pier or dock apron used as a buffer against floating ice.','桥墩护槛保护桥椁免受浮冰碰撞的护栏或码头围栏'}

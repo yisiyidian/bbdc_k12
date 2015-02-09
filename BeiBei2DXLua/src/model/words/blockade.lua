@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blockade"]={"blockade","[blɒ'keɪd]","[blɑ'ked]","n.阻塞",'n.阻塞，封锁，阻碍物|||v.封锁，挡住','A blockade of all the harbor of that country will require thousands of war-ships.','封锁那个国家的所有港口需要成千上万艘战舰。','Enemy ships tried to run the blockade.','敌军船只企图突破封锁线。'}

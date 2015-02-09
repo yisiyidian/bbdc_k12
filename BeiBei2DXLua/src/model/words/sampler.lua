@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sampler"]={"sampler","['sɑːmplə]","['sæmplɚ]","n.样板(取样器",'n.样板(取样器,样品检查员)','a sampler of American short-story writers.','美国短篇小说作家集锦','grain sampler','谷物取样器, 谷物探棒'}

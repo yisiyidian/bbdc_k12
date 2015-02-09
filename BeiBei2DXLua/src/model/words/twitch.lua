@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twitch"]={"twitch","[twɪtʃ]","[twɪtʃ]","v.急拉",'v.急拉，抽动，痉挛，抽搐|||n.扯，阵痛，痉挛','She twitched the corner of the rug to straighten it.','她拉了拉小地毯的一角，把它弄正。','She twitched the curtain into place.','她猛地拉好窗帘。'}

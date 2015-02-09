@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profile"]={"profile","['prəʊfaɪl]","['profaɪl]","n.轮廓",'n.侧面，半面；外形，轮廓；[航]翼型；人物简介|||vt.描…的轮廓；给…画侧面图；为（某人）写传略；[机]铣出…的轮廓','The huge trees were profiled against the night sky.','在夜空的映衬下显出大树的轮廓。','I photographed him in profile.','我从侧面给他拍照。'}

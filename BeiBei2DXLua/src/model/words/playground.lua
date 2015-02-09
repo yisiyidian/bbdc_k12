@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["playground"]={"playground","['pleɪgraʊnd]","['ple'graʊnd]","n.&adj.操场",'n.&adj.操场','The children were out in the playground letting off steam.','那些孩子在操场上玩, 宣泄过剩的精力.','I would rather hoe in the garden than run about on the playground.','我宁愿在花园锄草，也不愿在运动场上跑来跑去。'}

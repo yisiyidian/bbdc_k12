@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bias"]={"bias","['baɪəs]","['baɪəs]","n.偏见",'n.偏见，斜纹|||vt.使偏心','Her scientific bias showed itself in early childhood.','她在科学方面的倾向性在孩童时代就已显现出来。','He has a bias against Japanese products.','他讨厌日本的产品。'}

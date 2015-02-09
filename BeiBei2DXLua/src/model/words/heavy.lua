@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heavy"]={"heavy","['hevɪ]","['hɛvi]","adj.重的",'adj.重的，沉重的；大量的，浓密的；激烈的；重型的|||n.重物；庄重的角色|||adv.密集地；大量地；笨重地','Don\'t go so heavy on the sauce!','沙司不要加得太多!','How heavy is this box?','这个箱子有多重？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stern"]={"stern","[stɜːn]","[stɝn]","adj.严厉的",'n.尾部,船尾|||adj.严厉的,坚决的,可怖的','The teacher\'s stern look reduced him to silence.','教师神情严肃, 他便静了下来.','The liner has been refitted from stem to stern.','那艘班轮已经全面整修.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minister"]={"minister","['mɪnɪstə]","['mɪnɪstɚ]","n.部长",'n.大臣；部长；公使；牧师|||vi.辅助，服侍；执行牧师职务','The minister has indicated that he may resign next year.','该大臣已示意他明年可能辞职.','The minister can only act in this matter with the sanction of Parliament.','部长只有得到国会批准才能就此事采取行动。'}

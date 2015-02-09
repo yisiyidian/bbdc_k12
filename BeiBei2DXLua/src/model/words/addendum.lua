@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["addendum"]={"addendum","[ə'dendəm]","[ə'dɛndəm]","n.补遗",'n.补遗,附录(复：addenda)','This is an addendum to the book.','这是本书的附录。','An addendum is an additional section at the end of a book or document. = appendix','.'}

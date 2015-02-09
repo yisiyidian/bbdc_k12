@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["restrain"]={"restrain","[rɪ'streɪn]","[rɪ'stren]","vt.抑制",'vt.抑制,阻止,束缚,剥夺','If I don\'t restrain my dog, it chases the cat.','我如果不管住我的狗，它就要追猫了。','He couldn\'t restrain his curiosity.','他抑制不住自己的好奇心。'}

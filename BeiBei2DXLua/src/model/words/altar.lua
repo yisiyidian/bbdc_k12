@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["altar"]={"altar","['ɔːltə; 'ɒl-]","['ɔltɚ]","n.(教堂内的)圣坛",'n.(教堂内的)圣坛,祭坛','The altar had been defiled by vandals.','圣坛遭到破坏公物的人故意损坏.','There was a madonna on the altar.','祭坛上有一座圣母马利亚的雕像.'}

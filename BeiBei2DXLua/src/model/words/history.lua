@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["history"]={"history","['hɪst(ə)rɪ]","['hɪstri]","n.历史",'n.历史','He specializes in oriental history.','他专门研究东方史。','In the library, the books on history are all kept in one bay.','在图书馆里，历史方面的书都放在同一隔间里。'}

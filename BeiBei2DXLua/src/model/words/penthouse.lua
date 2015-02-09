@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penthouse"]={"penthouse","['penthaʊs]","['pɛnthaʊs]","n.楼顶阁楼",'n.楼顶阁楼','The family have booked the penthouse suite for two weeks.','这个家庭已预定了两周的楼顶公寓套房。','...her swanky Manhattan penthouse.','…她的曼哈顿豪华顶层公寓。'}

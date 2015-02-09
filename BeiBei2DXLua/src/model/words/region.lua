@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["region"]={"region","['riːdʒ(ə)n]","['ridʒən]","n.地区",'n.地区,地域,地带,行政区','The region near the erupting volcano was evacuated rapidly.','火山爆发处附近已迅速撤空.','These small spiced cakes are a peculiarity of the region.','这些别有风味的小蛋糕是该地的特产。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ivory"]={"ivory","['aɪv(ə)rɪ]","['aɪvəri]","n.象牙",'n.象牙,乳白色|||adj.象牙制的,乳白色的','His lean body is engulfed in an ivory white Afghan coat.','他瘦削的身躯裹在一件象牙色的阿富汗大衣中。','Living in your ivory tower at Oxford, you can\'t imagine what it\'s like to go hungry.','你生活在牛津的象牙之塔中，想像不到挨饿是什么滋味。'}

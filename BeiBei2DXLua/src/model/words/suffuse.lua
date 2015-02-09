@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suffuse"]={"suffuse","[sə'fjuːz]","[sə'fjuz]","vt.遍布...",'vt.遍布...,弥漫,充满','A blush suffused her cheeks.','她瞬间满脸通红。','They want to move everyone with their behaviors and suffuse the world with love.','她们表示要用自己的行为去感染世界上的每一个人，让世界充满爱。'}

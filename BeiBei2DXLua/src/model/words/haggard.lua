@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["haggard"]={"haggard","['hægəd]","['hæɡɚd]","adj.憔悴的",'adj.憔悴的','Don\'t lose so much weight that you look haggard.','别瘦太多，不然你会变得很憔悴的。','I trailed on behind, haggard and disheveled.','我疲惫不堪地落在后面，形容憔悴，头发蓬乱。'}

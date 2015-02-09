@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emperor"]={"emperor","['emp(ə)rə]","['ɛmpərɚ]","n.皇帝",'n.皇帝','He knelt in front of the emperor with a look of entreaty.','他面带恳求的神态跪在皇帝面前。','The emperor was actually a political eunuch.','那个皇帝实际上没有政治实权。'}

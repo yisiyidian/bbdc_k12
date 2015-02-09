@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tundra"]={"tundra","['tʌndrə]","['tʌndrə]","n.苔原",'n.苔原,冻土地带','How will the lifecydes of the tundra be affected?','冻土带的生命循环将受到怎样的影响呢 ?','The arctic tundra is at the top of the world around the North Pole.','北极冻原是指北极点周边的地区，是世界最高的地方。'}

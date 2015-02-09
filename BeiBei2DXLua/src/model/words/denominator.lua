@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["denominator"]={"denominator","[dɪ'nɒmɪneɪtə]","[dɪ'nɑmə'netɚ]","n.分母",'n.分母,平均水平','The success of the film demonstrates the denominator of public taste.','这部电影的成功表明了大众口味的平均水平','The success of the film demonstrates the denominator of public taste.','这部电影的成功表明了大众口味的平均水平'}

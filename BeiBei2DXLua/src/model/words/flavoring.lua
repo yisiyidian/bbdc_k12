@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flavoring"]={"flavoring","['fleɪvərɪŋ]","['flevrɪŋ]","n.调味料",'n.调味料','An oil or a flavoring obtained from this plant.','冬青油从这种植物中提取的油或调味香料','The flavoring is available in powder, liquid or paste form.','这种调味品有粉末状的，液体的和糊状的'}

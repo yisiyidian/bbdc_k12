@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["okay"]={"okay","['əʊ'keɪ]","[,o'kɛi]","n.认可",'n.认可，同意|||v.赞成或同意；批准|||int.行，用以表达准许或同意之意|||adj.可以，不错','He made an okay decision.','他做出同意的决定。','The play is okay, but I still prefer the book.','戏还可以, 可我仍愿读原著.'}

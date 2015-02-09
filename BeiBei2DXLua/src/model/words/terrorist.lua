@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terrorist"]={"terrorist","['terərɪst]","['tɛrərɪst]","n.恐怖分子",'n.恐怖分子','Without my gun, I\'m a sitting duck for any terrorist.','没有这支枪, 我就成了恐怖分子下手的目标.','Most disappearances are the result of the terrorist activity.','大多数的失踪案都是恐怖分子造成的.'}

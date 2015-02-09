@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gauze"]={"gauze","[gɔːz]","[gɔz]","n.薄纱",'n.薄纱,纱布,网，薄雾','A fine, very thin fabric, such as gauze.','薄纱一种非常薄的精细织物，如纱罗','She bound up the child\'s bleeding wound with gauze.','她把小孩出血的伤口用纱布包扎起来了。'}

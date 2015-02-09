@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nexus"]={"nexus","['neksəs]","['nɛksəs]","n.连系",'n.连系(联络,关系,网络,节,段,连杆,连接)','Shared ambition is the vital nexus between them.','志同道合让他们联结在一起。','As the nexus for three great religious, Jerusalem has had a troubled as well as illustrious history.','作为三大宗教的圣城，耶路撒冷有着动荡而又辉煌的历史。'}

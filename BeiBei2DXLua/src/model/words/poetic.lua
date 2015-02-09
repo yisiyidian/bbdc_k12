@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poetic"]={"poetic","[pəʊ'etɪk]","[po'ɛtɪk]","adj.诗的",'adj.诗的,用韵律写的,富有诗情的','The interlacing branches on the picture look poetic.','图上交错的树枝看起来很有诗意。','I suppose it may be more correct to say jealousy as the most poetic weak point of human being.','我相这么说可能更确切：妒忌是人类最富诗意的弱点。'}

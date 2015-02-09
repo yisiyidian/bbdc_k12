@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["linguistic"]={"linguistic","[lɪŋ'gwɪstɪk]","[lɪŋ'gwɪstɪk]","adj.语言的",'adj.语言的,语言学的','Their language and linguistic competence should be improved.','他们的语言能力和语言学知识必须得到提高。','The ability to write is a supreme test of linguistic competence.','写作能力是对语言能力的最高形式的测试。'}

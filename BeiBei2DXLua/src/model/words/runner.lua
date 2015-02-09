@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["runner"]={"runner","['rʌnə]","['rʌnɚ]","n.赛跑的人",'n.赛跑的人','The runner spurted as he approached the line.','那赛跑选手在接近终点线时加速冲刺.','The race really stretched him/his skill as a runner.','这次赛跑对他这个参赛者[他的水平]来说, 确是勉为其难.'}

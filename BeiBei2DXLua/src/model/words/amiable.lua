@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amiable"]={"amiable","['eɪmɪəb(ə)l]","['emɪəbl]","adj.和蔼的",'adj.和蔼的,亲切的','We have a very amiable companionship.','我们之间存在一种友好的关系。','He is a most amiable fellow.','他人很随和。'}

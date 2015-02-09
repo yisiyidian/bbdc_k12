@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["otiose"]={"otiose","['əʊtɪəʊs; 'əʊʃɪ-; -z]","['otɪos]","adj.不必要的",'adj.不必要的,多余的','an otiose round of meetings','一轮无用的会议','Abroad user believes this very much, it is good that he say his product has many, it is otiose.','海外用户很相信这个，自己说自己的产品有多好，是没有用的。'}

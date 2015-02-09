@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lair"]={"lair","[leə]","[lɛr]","n.野兽的巢穴",'n.野兽的巢穴,躲藏处','The kidnappers\' lair was an old farm in the hills.','绑架者的藏身处是一座山上的旧农场。','...a fox\'s lair.','...一个狐狸窝。'}

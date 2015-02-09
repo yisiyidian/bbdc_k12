@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["establish"]={"establish","[ɪ'stæblɪʃ; e-]","[ɪˈstæblɪʃ]","v.建立",'v.建立,确立,创办','His second novel established his fame as a writer.','他的第二部小说确立了他作家之名。','Our company was established in 1994.','我们的公司成立于1994年。'}

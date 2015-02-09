@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["define"]={"define","[dɪ'faɪn]","[dɪ'faɪn]","vt.定义",'vt.定义,解释','Definitions should not be more difficult to understand than the words they define.','词语的定义不应比所解释的词语更难理解.','When boundaries between countries are not clearly defined, there is usually trouble.','国与国之间的边界未明确划定时，通常会发生纠纷。'}

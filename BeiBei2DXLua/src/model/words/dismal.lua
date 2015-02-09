@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dismal"]={"dismal","['dɪzm(ə)l]","['dɪzməl]","adj.阴沉的",'adj.阴沉的,凄凉的,暗的','I feel dismal.','我觉得沈闷。','Her speech continued in the same dismal strain.','她以悲伤的语调接著往下说.'}

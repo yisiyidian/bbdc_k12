@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wink"]={"wink","[wɪŋk]","[wɪŋk]","n.眨眼",'n.眨眼,使眼色,瞬间|||vt.&vi.眨眼,使眼色,闪烁','He gave her a lewd wink.','他淫荡地对她眨了一下眼。','He winked at me to show that he was playing a joke on the others.','他向我眨了眨一只眼，意思是他正在开别人的玩笑。'}

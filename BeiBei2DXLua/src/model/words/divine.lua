@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["divine"]={"divine","[dɪ'vaɪn]","[dɪ'vaɪn]","adj.神的",'adj.神的,神圣的|||vt.推断|||vi.预言,理解|||n.牧师,神学家','At last I divined the truth.','我终于看穿了事情的真相。','That meal was simply divine!','那顿饭简直好吃极了。'}

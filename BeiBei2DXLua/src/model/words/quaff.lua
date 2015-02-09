@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quaff"]={"quaff","[kwɒf; kwɑːf]","[kwæf]","v.一口气喝干",'v.一口气喝干,大口地喝|||n.一饮而尽,痛饮','He\'s quaffed many a glass of champagne in his time.','他年轻时曾经开怀畅饮过不少香槟美酒。','He stopped at a bar and quaffed a few beers.','他在酒吧停下来，痛饮了几杯啤酒。'}

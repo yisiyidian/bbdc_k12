@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pedantic"]={"pedantic","[pɪ'dæntɪk]","[pɪ'dæntɪk]","adj.卖弄学问的",'adj.卖弄学问的,假装学者的,吹毛求疵的,钻牛角尖的','Some people can be very pedantic about punctuation.','有些人会对标点符号过于讲究。','He is learned, but neither stuffy nor pedantic.','他很博学，但既不妄自尊大也不卖弄学问。'}

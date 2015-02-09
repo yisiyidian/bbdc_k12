@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["full"]={"full","[fʊl]","[fʊl]","adj.满的",'adj.满的，装满的；完全的，完整的；丰富的；详尽的|||adv.极其，十分；充分地，完全地；整整；直接地|||n.充分，完全；全部；完整；极盛时|||v.把衣服缝得宽大；把裙子缝出皱褶；[印]蒸洗，漂洗','John hit him full in the face.','约翰一下正打在他的脸上。','The bottle is full of water.','瓶子里装满了水。'}

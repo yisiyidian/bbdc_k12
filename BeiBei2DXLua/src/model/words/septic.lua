@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["septic"]={"septic","['septɪk]","['sɛptɪk]","adj.腐败的",'adj.腐败的|||n.腐败物','A flake of plaster from the ceiling fell into his eye, which became septic.','天花板上的一小片熟石膏掉到他眼里，致使他的眼睛感染了。','Put some anti-septic cream on it.','涂上一些防止败血症的药膏。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aeronautics"]={"aeronautics","[eərə'nɔːtɪks]","[,ɛrə'nɔtɪks]","n.航空学",'n.航空学','He enter the university and take aeronautics as his major.','他进入大学并主修航空学。','The ||Aeronautics|| Building is on the left side of the university campus.','这所大学的航空学大楼位于校园的左侧。'}

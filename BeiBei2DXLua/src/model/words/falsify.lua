@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["falsify"]={"falsify","['fɔːlsɪfaɪ; 'fɒls-]","['fɔlsɪfaɪ]","vt.伪造",'vt.伪造,歪曲,说谎','Her speech in Parliament was ||falsified|| by the newspapers.','她在议会里的发言被报纸歪曲了。','||Falsify|| a visa.','伪造护照'}

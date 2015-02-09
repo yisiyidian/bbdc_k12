@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ambidextrous"]={"ambidextrous","[,æmbɪ'dekstrəs]","['æmbə'dɛkstrəs]","adj.两手俱利的",'adj.两手俱利的,怀有二心的','He is an ambidextrous surgeon.','他是一名左右手都很灵巧的外科医生。','ambidextrous','able to use both hands equally well'}

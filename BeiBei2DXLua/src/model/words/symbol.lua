@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["symbol"]={"symbol","['sɪmb(ə)l]","['sɪmbl]","n.符号",'n.符号,标志,象征','He only bought the yacht as a status symbol he hates sailing.','他买游艇只是为了显示身分--其实他根本不喜欢玩游艇.','The dove is the symbol of peace.','鸽子是和平的象征。'}

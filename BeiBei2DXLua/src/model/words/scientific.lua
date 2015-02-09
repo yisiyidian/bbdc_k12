@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scientific"]={"scientific","[saɪən'tɪfɪk]","[,saɪən'tɪfɪk]","adj.科学的",'adj.科学的','Astronomy is the scientific study of the sun, moon, and stars and other heaven bodies.','天文学是研究太阳、月亮、星星和其他天体的科学。','||Scientific|| knowledge was perverted to help cause destruction and war.','科学知识被滥用于破坏和战争。'}

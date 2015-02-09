@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["personality"]={"personality","[pɜːsə'nælɪtɪ]","[,pɝsə'næləti]","n.个性",'n.个性,名人,特色','His personality comes through in his writing.','他的个性体现在他的文章中。','He persuaded them to join him by the sheer magnetism of his personality.','他完全是靠个人的魅力，说服他们和他在一起干。'}

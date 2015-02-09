@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gainsay"]={"gainsay","[geɪn'seɪ]","[,ɡen'se]","v.否认",'v.否认','Nobody can gainsay his claims.','没有人能反驳他的说法。','There is no gainsaying her ability.','她的能力是无可否认的。'}

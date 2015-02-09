@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infield"]={"infield","['ɪnfiːld]","['ɪn'fild]","n.农宅周围的田园",'n.农宅周围的田园,耕地,内野','China government is devoting herself to protect the deadline of infield.','中国政府正努力保护红线内耕地。','to roll along the infield','沿着界内滚动'}

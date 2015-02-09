@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resolute"]={"resolute","['rezəluːt]","['rɛzəlut]","adj.坚决的",'adj.坚决的,果断的','He was resolute in carrying out his plan.','他执行计划是坚决的。','Her resolute refusal came as a surprise.','她的坚决拒绝令人感到意外。'}

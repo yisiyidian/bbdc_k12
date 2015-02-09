@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opalescent"]={"opalescent","[əʊpə'les(ə)nt]","['opə'lɛsnt]","adj.发乳白光的(乳色的)",'adj.发乳白光的(乳色的)','Pearls in nature come in white, ivory, pink and black with an opalescent glow.','天然珍珠是白色、象牙色、粉色或黑色的，带有乳白色的光泽。','The east glowed opalescent.','东方泛起乳白色。'}

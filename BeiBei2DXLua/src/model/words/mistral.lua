@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mistral"]={"mistral","['mɪstr(ə)l; mɪ'strɑːl]","['mɪstrəl]","n.冷而干燥的强风",'n.冷而干燥的强风','What little strength the had left from his painting, he spent in fighting the mistral.','那些在绘画后仅剩的力量，也被用来对付西北风。','strong cold dry N or NW wind--mistral---that blows in S France, usu in winter','强大的法国冷风'}

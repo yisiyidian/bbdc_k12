@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["docket"]={"docket","['dɒkɪt]","['dɑkɪt]","n.单据",'n.单据，标签，[法]诉讼事件表|||vt.将（某事物）列上一览表，附上标签','The document was docketed.','文件上附有提要。','The court had cleared the docket by sitting deep into the night.','法院开庭到深夜，处理了所有应审的案件。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["millimeter"]={"millimeter","['mɪlə,mitɚ]","[ 'mili,mi:tə ]","n.毫米",'n.毫米','The edge must be machined to 0.02 millimeters.','这边缘必须切割到0.02毫米的精密度。','The diameter of this bullet is 7.62 millimeters','这个子弹的直径是7.63毫米'}

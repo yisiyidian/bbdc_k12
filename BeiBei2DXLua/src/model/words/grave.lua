@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grave"]={"grave","[greɪv]","[ɡrev]","adj.重大的",'adj.重大的，重要的；严重的；[音乐]沉重的；（颜色等）朴素的|||adv.沉重地，庄重地；极慢地|||n.坟墓，墓穴；埋葬…的地方；下场；死亡|||vt.雕刻；铭记','She laid the bouquet on the newly turfed grave.','她把这束花放置在新铺上草皮的坟墓上。','You are just digging your own grave if you go on smoking so heavily.','你继续这样大量吸烟，就是在自掘坟墓。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["periodicity"]={"periodicity","[,pɪərɪə'dɪsɪtɪ]","[,pɪrɪə'dɪsəti]","n.定期性",'n.定期性,周期性,周期数','||Periodicity|| means the quality of recurring at regular intervals.','释义','biology) exhibiting 24-hour periodicity. ','(生物学)显示出24小时的周期。'}

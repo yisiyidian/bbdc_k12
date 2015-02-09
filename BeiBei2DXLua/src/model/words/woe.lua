@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["woe"]={"woe","[wəʊ]","[wo]","n.悲哀",'n.悲哀,苦痛,不幸,困难|||interj.用来表达悲伤或惊慌','||Woe|| betide anyone who arrives late!','谁迟到谁倒霉！','He told her all his woes.','他把自己的辛酸事都告诉她了。'}

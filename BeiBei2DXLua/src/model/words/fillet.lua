@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fillet"]={"fillet","['fɪlɪt]","['fɪlɪt]","n.嵌条",'n.嵌条(倒角,凸起,平缘,螺纹,整流片,垂壁)|||vt镶(加边线)','A narrow border, molding, or fillet.','扁带饰窄条，装饰用嵌线或窄带','A bony fillet of fish.','一块多骨的鱼片'}

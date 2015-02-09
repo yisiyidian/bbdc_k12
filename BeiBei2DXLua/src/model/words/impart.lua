@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impart"]={"impart","[ɪm'pɑːt]","[ɪm'pɑrt]","vt.传授",'vt.传授,赋予,告知','A teacher\'s aim is to impart knowledge.','教师的宗旨就是传授知识.','A teacher\'s aim is to impart knowledge.','教师的作用是传授知识。'}

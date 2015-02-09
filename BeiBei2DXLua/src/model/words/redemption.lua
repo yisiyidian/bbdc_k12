@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["redemption"]={"redemption","[rɪ'dem(p)ʃ(ə)n]","[rɪ'dɛmpʃən]","n.补救",'n.补救(恢复,偿还,补救,弥补)','He had finished the redemption of his promises.','他已经履行完他的诺言了。','The boy is beyond redemption.','这个男孩子不可救药了。'}

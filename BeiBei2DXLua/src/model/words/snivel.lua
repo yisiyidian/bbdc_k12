@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snivel"]={"snivel","['snɪv(ə)l]","['snɪvl]","vi.啼哭",'vi.啼哭,抽泣,流鼻涕|||n.啜泣','Carol managed a few proper snivels for the sake of appearance.','为了做做样子，卡萝尔适时地抽了几下鼻子。','Billy started to snivel.','比利抽抽搭搭地哭了起来。'}

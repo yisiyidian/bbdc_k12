@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cruelty"]={"cruelty","['krʊəltɪ]","['krʊəlti]","n.残酷",'n.残酷,残忍,残酷的行为，虐待','In an age of enlightenment such cruelty is unforgivable.','在文明时代，这麽残忍是不能宽恕的。','Her husband\'s cruelty amazed and confounded her.','她丈夫的残忍让她既惊愕又惶惑。'}

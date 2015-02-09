@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outdistance"]={"outdistance","[aʊt'dɪst(ə)ns]","['aʊt'dɪstəns]","vt.远远超过(把...远远抛在后头)",'vt.远远超过(把...远远抛在后头)','The favourite soon outdistanced the other horses in the race.','那匹热门马很快就跑到最前面去了.','His wife has outdistanced (ie has been promoted more often than) him in her career.','他的妻子在事业上比他进展快.'}

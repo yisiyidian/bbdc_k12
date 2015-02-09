@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["besiege"]={"besiege","[bɪ'siːdʒ]","[bɪ'sidʒ]","vt.围攻",'vt.围攻,包围','The city was besieged by the enemy for a few days.','这座城市被敌人围困了几天。','He was besieged by visitors.','来宾把他围在中间。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incontrovertible"]={"incontrovertible","[,ɪnkɒntrə'vɜːtɪb(ə)l]","[,ɪnkɑntrə'vɝtəbl]","adj.无争论之余地的",'adj.无争论之余地的,无疑的,明白的','We have incontrovertible evidence of what took place.','我们有确凿无疑的证据证明到底发生了什么。','||Incontrovertible|| proof of the defendant\'s innocence.','证实被告无罪的无可辩驳的证据'}

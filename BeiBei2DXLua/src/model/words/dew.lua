@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dew"]={"dew","['djuː]","[du]","n.露水",'n.露水','The grass was sprinkled with dew.','草上沾满了露珠.','Life is poetically compared to the morning dew.','在诗歌中，人生被比喻为朝露。'}

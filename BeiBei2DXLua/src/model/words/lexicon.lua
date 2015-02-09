@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lexicon"]={"lexicon","['leksɪk(ə)n]","['lɛksɪkən]","n.辞典",'n.辞典,[语言]词汇','In my lexicon, those are not the same things at all.','我认为这根本不能混为一谈。','Chocolate equals sin in most people\'s lexicon.','巧克力在大多数人的字典里等同于罪恶。'}

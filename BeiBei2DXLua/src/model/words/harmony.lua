@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harmony"]={"harmony","['hɑːmənɪ]","['hɑrməni]","n.和睦",'n.和弦,协调,和睦,调和','His tastes are in harmony with mine.','他的爱好和我的相同。','There was not much harmony in international affairs during those years.','那些年国际事态不很协调。'}

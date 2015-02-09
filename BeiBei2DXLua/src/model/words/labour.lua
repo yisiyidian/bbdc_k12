@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["labour"]={"labour","['leɪbə]","[ 'leibə ]","n.劳动",'n.劳动,劳工|||Labour(英国)工党','He was elected to the leadership of the ||Labour|| party.','他被选为工党的领导人。','It takes a lot of labour to build a railway.','修筑一条铁路要花费许多劳动力。'}

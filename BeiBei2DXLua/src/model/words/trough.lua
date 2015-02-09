@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trough"]={"trough","[trɒf]","[trɔf]","n.木钵",'n.木钵,水槽,马槽,(波浪间的)波谷','Some horses were drinking at a trough.','有些马在水糟边饮水。','Looking back afterwards you will see that this was not a terminal trough in your career.','今后回想起来你就会明白，这并非你事业中一蹶不振的低谷。'}

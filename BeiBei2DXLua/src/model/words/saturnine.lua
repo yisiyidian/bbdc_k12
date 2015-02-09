@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["saturnine"]={"saturnine","['sætənaɪn]","[ 'sætə(:)nain ]","adj.沉默寡言的",'adj.沉默寡言的,忧沉的,感染铅毒的','My former roommate was a saturnine scholar who said very little and smiled rarely.','我的前一位室友是一位沉默寡言的学者，他很少说话也很少笑。','He had a rather forbidding, saturnine manner.','他的举止相当乖戾阴郁，令人望而生畏。'}

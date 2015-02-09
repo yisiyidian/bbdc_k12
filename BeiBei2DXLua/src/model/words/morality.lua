@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["morality"]={"morality","[məˈræləti]","[məˈræləti]","n.道德",'n.道德,美德,品行,道德观','The crusade for sexual morality is turning into a witch-hunt.','捍卫性道德的运动正在转化成对持异议人士的迫害.','I am unconcerned with questions of religion or morality.','我对宗教问题和道德问题不感兴趣。'}

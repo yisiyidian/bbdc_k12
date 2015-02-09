@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sway"]={"sway","[sweɪ]","[swe]","n.摇摆",'n.摇摆,动摇,影响力,支配|||vt.使摇摆,使动摇,影响或控制|||vi.摇摆,支配,动摇','The branches of the trees were swaying in the wind.','树枝在风中摇晃。','His power sways the world.','他称霸天下。'}

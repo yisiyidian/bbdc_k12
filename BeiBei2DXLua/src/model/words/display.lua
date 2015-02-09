@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["display"]={"display","[dɪ'spleɪ]","[dɪ'sple]","n.显示",'n.显示,陈列,炫耀|||vt.显示,表现,夸示','There are so many fancy cars on display here that I don\'t know which to buy.','有这么多的豪华汽车在此展出，我不知要买哪一辆才好。','The climax of the celebration was a firework display.','庆祝会的高潮是燃放烟火。'}

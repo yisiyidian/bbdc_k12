@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magnificence"]={"magnificence","[mæɡ'nɪfɪsns]","[mæg'nɪfəsns]","n.壮丽",'n.豪华,宏伟,壮丽','The Great wall is known for its long history and its magnificence.','长城以其悠久的历史和其雄伟壮丽而著名。','The magnificence of Versailles is admirable to everyone.','凡尔赛宫的富丽堂皇让每个人都赞叹不已。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incarcerate"]={"incarcerate","[ɪn'kɑːsəreɪt]","[ɪn'kɑrsəret]","v.下狱",'v.下狱,监禁,幽闭','He was incarcerated in the castle dungeon for years.','他被多年监禁在古堡的地牢里。','Many are incarcerated for property offences.','许多人因财产犯罪被关押。'}

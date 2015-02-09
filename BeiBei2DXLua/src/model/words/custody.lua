@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["custody"]={"custody","['kʌstədɪ]","['kʌstədi]","n.监护",'n.监护,拘留,监禁,羁押','The accused was remanded in custody for a week.','被告还押候审一星期.','My ex shares custody of the children.','我原先的配偶分担照顾孩子的责任.'}

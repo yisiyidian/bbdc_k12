@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abysmal"]={"abysmal","[ə'bɪzm(ə)l]","[ə'bɪzməl]","adj.深不可测的",'adj.深不可测的,无底的，糟透了的','The film was so abysmal that I fell asleep.','电影太糟糕，看得我睡着了。','The general standard of racing was abysmal.','比赛的总体水平糟透了。'}

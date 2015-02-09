@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tenor"]={"tenor","['tenə]","['tɛnɚ]","n.要旨",'n.要旨，誉本，一般趋向，男高音，次中音乐器|||adj.(乐器)次中音的,(组钟中的)最低音的,男高音的|||n.[语]本体','The tenor disappointed us by singing flat.','那位男高音歌手调门儿唱得很低, 十分扫兴.','The tenor soloist is unable to appear tonight because of illness.','男高音独唱者因病今晚不能演出.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glaze"]={"glaze","[gleɪz]","[ɡlez]","v.装以玻璃",'v.装以玻璃,上釉,变得光滑，变呆滞|||n.釉,覆罩的一层','The dishwasher has worn the glaze off the china.','这些瓷器经常用洗碗机清洗，光泽都消失了.','I didn\'t understand why his eyes started to glaze over at the mention of her.','我不了解为什么一提到她，他的两眼就变得呆滞无神。'}

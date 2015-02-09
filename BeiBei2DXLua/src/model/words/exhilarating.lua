@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exhilarating"]={"exhilarating","[ɪg'zɪləreɪtɪŋ; eg-]","[ɪɡ'zɪləretɪŋ]","adj.令人喜欢的",'adj.令人喜欢的,使人愉快的,爽快的','Our first parachute jump was an exhilarating experience.','我们第一次跳伞感到兴奋莫名.','And I find that absolutely exhilarating.','这样的话我就觉得非常兴奋。'}

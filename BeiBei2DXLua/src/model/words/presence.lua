@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presence"]={"presence","['prez(ə)ns]","['prɛzns]","n.出席",'n.出席,在场者,举止','He advocated the withdrawal of the American presence in Lebanon.','他主张美国人应该从黎巴嫩撤走。','Since she joined the team last season she has made her presence felt.','自从上个赛季加入这个队以来，她就使人感到她是个举足轻重的队员。'}

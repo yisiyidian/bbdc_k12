@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["divide"]={"divide","[dɪ'vaɪd]","[dɪ'vaɪd]","vt.&vi.分",'vt.&vi.分；分离；（使）产生分歧|||n.分水岭，分界线；分配','The class is divided in opinion.','整个班级意见有分歧。','Six divided by two is three.','六除以二得三。'}

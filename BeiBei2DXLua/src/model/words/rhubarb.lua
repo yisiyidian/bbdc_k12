@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rhubarb"]={"rhubarb","['ruːbɑːb]","['rʊbɑrb]","n.大黄",'n.大黄,大黄的叶柄,调味液之一种|||n.喧哗，吵闹','Won\'t you grow any fruit? "No. only rhubarb, God\'s gift to Scotland and lazy gardeners."','你们这里种水果吗？"不种，只种大黄，这是上帝对对苏格兰人和懒人的恩宠。','Never eat rhubarb leaves-they\'re poisonous.','千万别吃大黄叶子它们是有毒的。'}

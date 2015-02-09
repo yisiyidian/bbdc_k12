@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exceed"]={"exceed","[ɪk'siːd; ek-]","[ɪk'sid]","vt.超过",'vt.超过,胜过,超出界限|||vi.领先','His knowledge of history exceeds mine.','他的历史知识超过我。','Do not exceed the recommended dosage.','不要超过规定的剂量.'}

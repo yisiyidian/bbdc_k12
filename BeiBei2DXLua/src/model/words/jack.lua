@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jack"]={"jack","[dʒæk]","[dʒæk]","n.插座",'n.插座,千斤顶,男人|||v.抬起,提醒,扛举|||[Jack]n.杰克(男子名,John,Jacob的昵称)','All work and no play makes ||Jack|| a dull boy.','（谚）只工作不玩耍，聪明杰克也变傻。','||Jack|| and Anne are engaged.','杰克和安妮订婚了。'}

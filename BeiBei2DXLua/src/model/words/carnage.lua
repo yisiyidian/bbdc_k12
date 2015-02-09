@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carnage"]={"carnage","['kɑːnɪdʒ]","['kɑrnɪdʒ]","n.大屠杀",'n.大屠杀,残杀','The battlefield was a scene of utter carnage.','战场完全是一片大屠杀的惨象。','Refugees crossed the border to escape the carnage in their homeland.','难民越过边境逃避国内的大屠杀。'}

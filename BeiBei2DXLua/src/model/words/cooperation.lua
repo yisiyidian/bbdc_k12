@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cooperation"]={"cooperation","[kəʊ,ɒpə'reɪʃ(ə)n]","[ko,ɑpə'reʃən]","n.合作",'n.合作,协作','Our success was attributed not so much to your help as to our cooperation.','我们的成功与其归功于您的帮忙，不如归功于我们的合作。','We were greatly aided in our investigation by the cooperation of the police.','我们在调查的过程中得到警方的大力协助。'}

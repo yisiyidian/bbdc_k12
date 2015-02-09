@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quake"]={"quake","[kweɪk]","[kwek]","n.地震",'n.地震','There were four major quakes in this century.','本世纪有四次大的地震。','The actual cause of the quake itself is the rupturing or breaking of rocks at or below the earth\'s surface.','地震本身的真正原因是地球表面的或地底下的岩石断裂或破裂。'}

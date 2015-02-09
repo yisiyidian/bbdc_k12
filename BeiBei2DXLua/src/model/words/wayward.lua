@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wayward"]={"wayward","['weɪwəd]","['wewɚd]","adj.任性的",'adj.任性的,不定的,刚愎的','That wayward child is very hard to teach.','那个任性的孩子很难教。','...wayward children with a history of severe emotional problems.','…曾出现过严重情感问题的任性的孩子们。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fester"]={"fester","['festə]","['fɛstɚ]","v.溃烂",'v.溃烂,生脓|||n.脓疮,溃烂','His wound became festering.','他的伤口在溃烂。','The resentment festered in his mind.','他心中的愤恨有增无减。'}

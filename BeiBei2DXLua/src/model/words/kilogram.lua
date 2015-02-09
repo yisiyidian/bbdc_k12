@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kilogram"]={"kilogram","[ˈkɪləɡræm]","['kɪləɡræm]","n.千克",'n.千克,公斤','These apples cost five yuan per kilogram.','这些苹果每公斤五元。','One kilogram equals 1000 grams.','一公斤等于一千克。'}

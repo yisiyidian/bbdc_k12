@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["harness"]={"harness","['hɑːnɪs]","['hɑrnɪs]","n.马具",'n.马具,系在身上的绳子,甲胄|||vt.束以马具,披上甲胄,利用(产生动力)','The parachutist was buckled into his harness.','跳伞者扣上了背带.','The brothers work in double harness.','哥儿俩一起工作.'}

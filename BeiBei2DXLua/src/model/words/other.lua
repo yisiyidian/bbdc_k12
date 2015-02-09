@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["other"]={"other","['ʌðə]","['ʌðɚ]","adj.别的",'adj.别的,其他的|||pron.另一个人(或事)|||n.其他人(或事)','I saw him in town the other day.','我最近有一天在伦敦见过他。','The other students in my class are from Italy.','我班其余同学都是意大利人。'}

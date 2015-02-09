@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cuff"]={"cuff","[kʌf]","[kʌf]","n.袖口",'n.袖口,巴掌,手铐','I won\'t prepare a speech: I\'ll talk off the cuff.','我不准备发言稿，我将即兴发言。','Give me100 dollars down and we\'ll put the rest on the cuff.','你先交100美元定钱，其余可以赊欠。'}

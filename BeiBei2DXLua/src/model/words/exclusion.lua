@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exclusion"]={"exclusion","[ɪk'skluːʒ(ə)n; ek-]","[ɪk'skluʒn]","n.排除",'n.排除,除外,逐出','He spends his spare time gardening, to the exclusion of all other interests.','他把空余时间都用在园艺上了，没有任何其他爱好。','The exclusion of women from the temple made them feel sad.','妇女被排斥于寺院之外使得她们很难过。'}

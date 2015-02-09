@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bathroom"]={"bathroom","['bɑːθruːm; -rʊm]","['bæθrum]","n.浴室",'n.浴室','He weighed himself on the bathroom scales.','他在浴室的磅秤上称体重.','When will they finish the decoration of the bathroom?','他们什麽时候才把盥洗室装饰好?'}

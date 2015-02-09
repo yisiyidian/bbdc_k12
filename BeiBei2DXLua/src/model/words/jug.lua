@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jug"]={"jug","[dʒʌg]","[dʒʌɡ]","n.水壶",'n.水壶,监牢','Pour the milk into a jug.','把牛奶灌进壶里.','When I tried to lift the jug, the handle came off (in my hand).','我刚一提这个罐, 把儿就掉了（握在我手中）.'}

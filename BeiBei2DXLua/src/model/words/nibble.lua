@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nibble"]={"nibble","['nɪb(ə)l]","['nɪbl]","n.轻咬",'n.轻咬,啃|||v.一点点地咬,慢慢啃，吹毛求疵','He didn\'t answer, but just continued to nibble at his food.','他没有回答，只是继续一点一点地吃东西。','The mice have nibbled a hole in the cheese.','老鼠在奶酪上啃出了一个洞。'}

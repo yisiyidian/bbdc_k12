@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sundry"]={"sundry","['sʌndrɪ]","['sʌndri]","adj.各种各样的",'adj.各种各样的，杂七杂八的|||pron.不定数','This cream can be used to treat sundry minor injuries.','这种药膏可用来治各种轻伤。','I don’t like you talking about my personal problems to all and sundry.','我不喜欢你把我的私人问题告诉所有人。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["animosity"]={"animosity","[,ænɪ'mɒsɪtɪ]","['ænə'mɑsəti]","n.憎恶",'n.憎恶,仇恨','He has a strong animosity against his enemy.','他对敌人有强烈的仇恨。','There is great animosity between the two classes.','这两个阶级之间有很深的仇恨。'}

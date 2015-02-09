@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recalcitrant"]={"recalcitrant","[rɪ'kælsɪtr(ə)nt]","[rɪ'kælsɪtrənt]","adj.顽固的",'adj.反抗的,反对的,顽固的|||n.反抗的人,顽强者','Donkeys are reputed to be the most recalcitrant animals.','驴被认为是最难驯服的牲畜。','He had a knack for coaxing even the most recalcitrant engine to life.','即使是最难摆弄的发动机他都有本事搞定。'}

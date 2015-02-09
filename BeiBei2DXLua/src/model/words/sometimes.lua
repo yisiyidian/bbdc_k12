@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sometimes"]={"sometimes","['sʌmtaɪmz]","['sʌmtaɪmz]","adv.有时",'adv.有时','Good student as he is, he sometimes makes mistakes.','像他这样的好学生，偶而也会犯错。','Love is sometimes put in range with a career.','人们往往认为爱情和事业是并驾齐驱的。'}

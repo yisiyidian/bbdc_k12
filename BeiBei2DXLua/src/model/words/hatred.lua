@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hatred"]={"hatred","['heɪtrɪd]","['hetrɪd]","n.憎恶",'n.憎恶,憎恨,怨恨','His words stirred up my hatred.','他的话激起了我的仇恨。','There is implacable hatred between the two nations.','两国之间有无法消除的仇恨。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["primp"]={"primp","[prɪmp]","[prɪmp]","v.(妇女)刻意打扮",'v.(妇女)刻意打扮','Kate primped herself in order to rate more glances from men in the ball.','凯特刻意打扮了一番，以便在舞会上更多地引起男人的注意。','primp','刻意打扮'}

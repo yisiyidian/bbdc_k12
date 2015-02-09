@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solely"]={"solely","['səʊllɪ]","['solli]","adv.独自地",'adv.独自地,单独地','Our quality is based solely on our sales samples.','我们的质量完全以货样为准。','It was rather a shock to look into these matters and discover that the fault was solely mine.','调查这些事情使我大吃一惊，我发现原来这完全是我的错。'}

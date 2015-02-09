@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recur"]={"recur","[rɪ'kɜː]","[rɪ'kɝ]","v.回到",'v.回到,重现,再来','The recurring decimal 3.999... is also described as 3.9 recurring.','循环小数｀3.999...＇亦作｀3.9循环＇.','His fever recurred.','他的感冒又复发了。'}

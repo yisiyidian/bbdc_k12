@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["symmetrical"]={"symmetrical","[sɪ'metrɪk(ə)l]","[sɪ'mɛtrɪkl]","adj.对称的",'adj.对称的','A new house of any size is now almost invariably symmetrical.','现在新建的房子不管大小几乎都是对称的。','He introduced to us the symmetrical arrangement of the garden.','他为我们介绍了花园中对称的布局。'}

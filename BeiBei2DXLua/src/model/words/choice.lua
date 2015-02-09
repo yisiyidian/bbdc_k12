@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["choice"]={"choice","[tʃɒɪs]","[tʃɔɪs]","n.选择",'adj.上等的,精选的|||n.选择,挑选','She wouldn\'t be my choice as Prime Minister.','她不是我看中做首相的人。','There is no choice between the two.','两者半斤八两。'}

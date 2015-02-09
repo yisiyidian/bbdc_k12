@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["classroom"]={"classroom","['klɑːsruːm; -rʊm]","['klæs'rʊm; 'klæs'rʊm]","n.教室",'n.教室，课堂','On entering the classroom, I found a book lying on the floor.','一走进教室，我就发现一本书丢在地上。','Is there a boy in the classroom?','教室里有一位男孩吗？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conditioning"]={"conditioning","[kən'dɪʃənɪŋ]","[kən'dɪʃənɪŋ]","n.调节",'n.调节，整理|||n.[心]条件作用','I want to buy a set of air conditioning.','我想买一台空调。','He equipped his car with air conditioning.','他给他的汽车装了空调。'}

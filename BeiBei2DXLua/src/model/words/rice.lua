@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rice"]={"rice","[raɪs]","[raɪs]","n.米",'n.稻,饭,米','||Rice|| does not grow in a cold climate.','稻在寒冷的气候下不能生长.','||Rice|| is our essential foodstuff in life.','大米是我们生活的基本食物。'}

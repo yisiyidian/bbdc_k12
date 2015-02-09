@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kill"]={"kill","[kɪl]","[kɪl]","v.杀",'n.杀,杀戮|||v.杀,破坏,消减','My feet are killing me.','我的脚疼死我了！','The tiger dragged its kill into the jungle.','这只老虎拖着它的猎物进了丛林。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["effigy"]={"effigy","['efɪdʒɪ]","['ɛfɪdʒi]","n.肖像",'n.肖像,雕像','The king was burned in effigy by the angry mob.','国王的肖像被愤怒的民众烧掉泄愤。','He burned her in effigy','他把她的模拟像烧掉了'}

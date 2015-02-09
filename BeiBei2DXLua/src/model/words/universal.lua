@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["universal"]={"universal","[juːnɪ'vɜːs(ə)l]","['jʊnə'vɝsl]","adj.普遍的",'adj.普遍的,通用的,宇宙的|||n.通用','Music has been called the universal language.','人们称音乐为世界语。','His courage compels universal admiration.','他的勇气得到了普遍的赞赏。。'}

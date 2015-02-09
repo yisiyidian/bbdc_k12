@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verge"]={"verge","[vɜːdʒ]","[vɝdʒ]","n.边缘",'n.边缘','She was on the verge of telling all the secret.','她正想把全部的秘密讲给我听。','A few more days, and the company will be on the verge of bankruptcy.','再过几天，这家公司就将濒临破产。'}

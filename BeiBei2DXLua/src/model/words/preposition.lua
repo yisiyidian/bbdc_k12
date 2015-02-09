@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preposition"]={"preposition","[,prepə'zɪʃ(ə)n]","[,prɛpə'zɪʃən]","n.介词",'n.介词','||Preposition|| is abbreviated as "prep" in this dictionary.','介词在词典中略作 “prep”。','The word is compounded of a preposition and a verb.','这个词是由一个介词和一个动词复合而成的.'}

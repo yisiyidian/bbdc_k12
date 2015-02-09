@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["urbanism"]={"urbanism","['ɜːbənɪzəm]","['ɝbən,ɪzəm]","n.都市生活",'n.都市生活,都市集中','America stepped into industrialization and urbanism in the mid 19th century.','世纪中期，美国进入工业化和城市化时期。','Due to its size, the project is about both urbanism and architecture.','由于其规模, 该项目是两个城市建筑.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fox"]={"fox","[fɒks]","[fɑks]","n.狐狸",'n.狐狸,狡猾的人|||v.奸狡地行动','The fox lay dying in a pool of gore.','狐狸倒在血泊中奄奄一息。','He\'s a crafty old fox.','他是一只狡猾的老狐狸。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["memento"]={"memento","[mɪ'mentəʊ]","[ me'mentəu ]","n.纪念品",'n.纪念品','He kept a lock of her hair as a memento.','他保留著她的一束头发作纪念。','My friend gave me his picture as a memento before going away.','我的朋友在离别前给我一张照片留作纪念品。'}

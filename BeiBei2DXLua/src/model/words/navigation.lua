@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["navigation"]={"navigation","[nævɪ'geɪʃ(ə)n]","['nævə'geʃən]","n.航行",'n.航行,航海,导航','||Navigation|| is difficult on this river because of the hide rock.','因为有暗礁，在这条河上航行很困难。','The compass is an instrument of navigation.','罗盘是航行仪器。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plaza"]={"plaza","['plɑːzə]","['plæzə]","n.广场",'n.广场,市场','We\'ve booked you in at the ||Plaza|| for two nights.','我们为你在“广场”旅馆预订了两夜的房间.','Across the busy plaza, vendors sell hot dogs and croissant sandwiches.','忙碌的露天广场对面，小贩们在卖热狗和新月形面包三明治。'}

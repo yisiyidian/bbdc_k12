@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["environmental"]={"environmental","[ɪnvaɪrən'ment(ə)l; en-]","[ɪn,vaɪrən'mɛntl]","adj.环境的",'adj.环境的','The government have latched onto environmental issues to win votes.','政府已开始大谈环境问题以争取选票.','There is already a high level of environmental contamination.','环境污染的程度已经很高.'}

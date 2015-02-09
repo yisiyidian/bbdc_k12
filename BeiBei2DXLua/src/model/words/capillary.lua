@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capillary"]={"capillary","[kə'pɪlərɪ]","['kæpəlɛri]","n.毛细管",'n.毛细管|||adj.毛状的,毛细管的','The ||capillaries|| can be found everywhere in our body.','毛细血管遍布我们的全身。','The capillary is so small that we can hardly find it.','毛细血管很小，我们很难看到。'}

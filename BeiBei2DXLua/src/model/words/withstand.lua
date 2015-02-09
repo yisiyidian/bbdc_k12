@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["withstand"]={"withstand","[wɪð'stænd]","[wɪð'stænd]","vt.对抗",'vt.对抗,经得起,承受','I couldn\'t withstand the murderous heat.','热得要命, 我受不了.','I couldn\'t withstand a murderous-looking knife.','我无法忍受凶光闪闪的刀。'}

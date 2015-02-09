@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wage"]={"wage","[weɪdʒ]","[wedʒ]","n.薪水",'n.薪水,报偿,代价|||vt.&vi.开始,进行（战争、运动）','How can I keep a family on such a miserable wage?','我怎么能靠这麽可怜的工资养家？','I can hardly exist on the wage I\'m getting; there is no money for luxuries.','我靠我挣的工资简直难以　口，根本无钱享受。'}

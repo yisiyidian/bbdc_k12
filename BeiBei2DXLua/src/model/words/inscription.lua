@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inscription"]={"inscription","[ɪn'skrɪpʃ(ə)n]","[ɪn'skrɪpʃən]","n.题字",'n.题字,碑铭，铭文|||(复数）inscriptions:记名证券','The inscription was still legible.','铭文仍清晰可辨.','The ring bears an inscription.','这个戒指上刻有字.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["habitat"]={"habitat","['hæbɪtæt]","['hæbə'tæt]","n.(动植物的)产地",'n.(动植物的)产地,栖息地','I prefer to see animals in their natural habitat, rather than in zoos.','我宁愿观赏居住在自然栖息地里的动物，而不愿看关在动物园里的动物。','The moth\'s habitat is being destroyed and it has nearly died out.','这种蛾子因栖息地正受到破坏，几乎绝种了。'}

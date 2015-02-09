@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["statement"]={"statement","['steɪtm(ə)nt]","['stetmənt]","n.陈述",'n.声明,陈述','The purport of the statement is that the firm is bankrupt.','该项声明大意是说该商行已经破产。','This statement is converse to that one.','这个声明和那个相反。'}

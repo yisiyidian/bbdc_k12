@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["angle"]={"angle","['æŋg(ə)l]","['æŋɡl]","n.角(度)",'n.角(度),角落|||vt.斜移,转变角度|||vi.钓鱼,谋取,转变角度|||n.(Angle)盎格鲁人','The rising sun is especially beautiful to look at from this angle.','旭日从这个角度看起来特别美。','The old house leans to the right at a dangerous angle.','那所老宅向右斜得很危险.'}

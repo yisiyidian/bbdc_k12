@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["astigmatic"]={"astigmatic","[,æstɪɡ'mætɪk]","[,æstɪg'mætɪk]","adj.散光的",'adj.散光的,乱视的|||n.散光','This is astigmatic testing, or the astigmatic dials testing.','这是散光检查，叫做散光盘视标试验。','When the astigmatic degree[ 1.50D, mydriatic optometry is of help to found the axis of cylindrical lens.','对于合并1.50D以下的散光患儿，散瞳验光可能更有助于确定柱镜的轴向。'}

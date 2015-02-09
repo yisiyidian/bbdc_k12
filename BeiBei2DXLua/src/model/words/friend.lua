@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["friend"]={"friend","[frend]","[frɛnd]","n.朋友",'n.朋友,赞助者,支持者|||vt.做朋友,对人友好','A friend in need is a friend indeed.','患难之交才是真朋友。','Our friend from China will now tell us about her research.','现在我们的中国朋友要向大家介绍她自己的研究情况。'}

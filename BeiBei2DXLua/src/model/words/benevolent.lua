@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["benevolent"]={"benevolent","[bɪ'nev(ə)l(ə)nt]","[bə'nɛvələnt]","adj.仁慈的",'adj.仁慈的,乐善好施的','The company has proved to be a most benevolent employer.','事实证明，这家公司是非常好的雇主。','They believe that the country needs a benevolent dictator.','他们认为国家需要一位仁爱的独裁者。'}

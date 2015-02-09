@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deflect"]={"deflect","[dɪ'flekt]","[dɪ'flɛkt]","vt.使转向",'vt.使转向；使偏斜；使弯曲|||vi.转向；偏斜','The bullet hit a wall and was deflected from its course.','子弹击中墙壁而改变了方向。','The missile deflected from its trajectory.','导弹已偏离轨道。'}

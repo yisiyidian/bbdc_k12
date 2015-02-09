@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plank"]={"plank","[plæŋk]","[plæŋk]","n.厚板",'n.厚板,支撑物，政纲条目|||vt.铺板,用力放下','The party\'s main plank is reducing taxes.','该党政纲的基点是减税。','A proposal to raise taxes is the central plank of the party\'s platform.','多征税的建议是该政党选举宣言建议中的主要点。'}

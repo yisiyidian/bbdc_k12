@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abhor"]={"abhor","[əb'hɔː]","[əb'hɔr]","vt.憎恶",'vt.憎恶,厌恶,痛恨','He abhors this banker.','他厌恶这个银行家。','Most people abhor cruelty to children.','大多数人痛恨虐待儿童。'}

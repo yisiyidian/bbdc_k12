@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["purse"]={"purse","[pɜːs]","[pɝs]","n.钱包",'n.钱包,资金,金钱,财富|||v.皱起，使缩拢','Little and often fills the purse.','【谚】小钱积成万，粒粮堆成山。','She got snagged by the police while stealing the purse.','她在偷钱包时被警察一把抓住了.'}

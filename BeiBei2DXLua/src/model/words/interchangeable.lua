@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interchangeable"]={"interchangeable","[ɪntə'tʃeɪn(d)ʒəbl]","[,ɪntɚ'tʃendʒəbl]","adj.可互换的",'adj.可互换的','Each vehicle is interchangeable.','各个装置都可互换。','Pertaining to disk packs which are interchangeable on any drive.','用于修饰或说明在任何磁盘机上均可交换使用的磁盘组。'}

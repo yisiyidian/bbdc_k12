@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["empire"]={"empire","['empaɪə]","['ɛmpaɪr]","n.帝国",'n.帝国','He is the builder of the great empire.','他是大帝国的创立者。','The Roman ||Empire|| existed for several centuries.','罗马帝国存在了几百年。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["northeast"]={"northeast","['nɔrθ'ist]","[ ,nɔ:θ'i:st ]","n.东北",'n.东北|||adj.东北的,向东北的,来自东北的|||adv.向东北,来自东北','His house is in the northeast of this city.','他的家在这个城市的东北部。','a northeast wind.','东北风'}

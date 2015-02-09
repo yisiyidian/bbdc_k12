@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gratitude"]={"gratitude","['grætɪtjuːd]","['ɡrætɪtud]","n.感谢的心情",'n.感谢的心情','These flowers are a small token of my gratitude.','谨以此花聊表谢忱.','We welcome the opportunity to express our gratitude.','我们能有机会表示谢意十分高兴.'}

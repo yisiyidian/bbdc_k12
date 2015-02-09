@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["puissant"]={"puissant","['pjuːɪs(ə)nt; 'pwiː-; 'pwɪ-]","['pwɪsənt]","adj.强有力的",'adj.强有力的,强盛的,有权力的','Finish this task to need to puissant science and technology is propped up.','完成这项任务需要有强力的科技支撑。','The young man has a puissant body.','这个年轻人有一副强壮的身体。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foreigner"]={"foreigner","['fɒrɪnə]","['fɔrənɚ]","n.外国人",'n.外国人','The foreigner came to China and attended the Fair.','外国朋友来华参加交易会。','She wedded a foreigner.','她嫁给了一个外国人。'}

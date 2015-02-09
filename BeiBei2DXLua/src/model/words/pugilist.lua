@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pugilist"]={"pugilist","['pjudʒɪlɪst]","[ 'pju:dʒilist ]","n.拳击家",'n.拳击家','The pugilist blocked his opponent\'s blows and then put in a sudden right to the jaw.','拳击手挡住了对方的袭击，接着用右手向他的颌部突然一击。','The pugilist blocked his opponent\'s blows','拳击手挡住了对方的袭击'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["haberdashery"]={"haberdashery","['hæbədæʃərɪ]","['hæbɚ'dæʃəri]","n.男子服饰经售店",'n.男子服饰经售店,杂货商店','We must all share the blame for the haberdashery incident.','我们在这次男子服饰经销店事件中都有责任。','||Haberdashery|| is men\'s clothing sold in a shop.','男子服饰经售店是在商店里销售的男服装'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["medication"]={"medication","[medɪ'keɪʃ(ə)n]","['mɛdɪ'keʃən]","n.药物治疗",'n.药物治疗,药物处理,医药','A treatment or medication that restores health.','恢复健康的治疗，恢复健康的药物','The infection is at last responding to medication.','药物治疗终于开始对感染显出效果。'}

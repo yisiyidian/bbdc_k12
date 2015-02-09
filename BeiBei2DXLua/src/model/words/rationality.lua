@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rationality"]={"rationality","[,ræʃə'nælətɪ]","[,ræʃən'æləti]","n.理性",'n.理性，合理性|||（复数）rationalities:合理的意见（信仰、行为等）','In my books, I argue that rationality is one of the most important human values.','在我的著作当中，我认为合理性是人类最重要的价值之一。','there is no guarantee of rationality in these showdowns.','这种摊牌的做法并不能确保在很理性的情况下发生'}

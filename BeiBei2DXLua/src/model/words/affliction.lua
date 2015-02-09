@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["affliction"]={"affliction","[ə'flɪkʃ(ə)n]","[ ə'flikʃən ]","n.痛苦",'n.痛苦,苦恼,苦难','It\'s a light affliction and will last but for a season.','这是一桩有点叫人头痛的事，它会折磨人一些时间，不过不会很长。','I have great sympathy for people in affliction.','我对那些受苦受难的人们充满同情。'}

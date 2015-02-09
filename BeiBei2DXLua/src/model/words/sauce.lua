@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sauce"]={"sauce","[sɔːs]","[sɔs]","n.调味汁",'n.调味汁,酱汁,无理的话(或举动)|||vt.给...调味,使...增加趣味,无理','What sauces go best with fish?','吃鱼用什么沙司最好？','How dare you sauce your mother?','你怎么对你母亲这么无礼?'}

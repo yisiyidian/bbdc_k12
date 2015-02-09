@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["layman"]={"layman","['leɪmən]","['lemən]","n.门外汉",'n.俗人(对僧侣而言),门外汉','He is a layman in politics.','他对政治是个门外汉。','This book is written for professionals and ||laymen|| alike.','这本书既可供专业人员阅读，又可供外行人看。'}

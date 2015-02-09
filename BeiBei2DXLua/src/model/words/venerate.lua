@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["venerate"]={"venerate","['venəreɪt]","['vɛnəret]","vt.尊敬",'vt.尊敬,崇敬,崇拜','In China, the people venerate their ancestors.','在中国，人们敬拜祖先。','My father venerated General Eisenhower.','我父亲十分敬仰艾森豪威尔将军。'}

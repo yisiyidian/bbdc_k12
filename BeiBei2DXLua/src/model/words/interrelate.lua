@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interrelate"]={"interrelate","[ɪntərɪ'leɪt]","['ɪntɚrɪ'let]","vt.（使）互相关连",'vt.（使）互相关连,（使）相关','Many would say that crime and poverty interrelate/are interrelated (with one another).','很多人都说犯罪与贫穷是密切相关的.','The body and the mind interrelate.','身体与思想互相关联。'}

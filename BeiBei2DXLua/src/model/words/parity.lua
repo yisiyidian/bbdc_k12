@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parity"]={"parity","['pærɪtɪ]","['pærəti]","n.相等",'n.相等,势均力敌,等值','The two currencies have now reached parity.','这两种货币现已达到平价。','Women have yet to achieve wage or occupational parity in many fields.','女性在很多领域还没能争取到薪金、职位方面的平等。'}

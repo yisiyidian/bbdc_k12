@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["needle"]={"needle","['niːd(ə)l]","['nidl]","n.针",'n.针|||vt.用针缝,激怒,嘲弄|||vi.缝纫','The needle pierced her finger.','针刺进了她的手指。','She pricked herself on a needle.','她被针扎了一下。'}

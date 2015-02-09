@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sacrilegious"]={"sacrilegious","[,sækrɪ'lɪdʒəs]","[,sækrɪ'lɪdʒəs]","adj.亵渎神圣的",'adj.亵渎神圣的','The man’s sacrilegious act of spitting on a monk was quickly punished by a crowd nearby.','那个人向和尚吐口水，这种亵渎的行为很快就受到附近群众的惩罚。','A number of churches were sacked and sacrilegious acts committed.','很多教堂都被洗劫一空，而且作出了诸多渎神之举。'}

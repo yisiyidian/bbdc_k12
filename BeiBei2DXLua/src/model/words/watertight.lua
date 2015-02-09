@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["watertight"]={"watertight","['wɔːtətaɪt]","['wɔtɚtaɪt]","adj.不漏水的(无懈可击的)",'adj.不漏水的(无懈可击的)','Is this roof completely watertight?','这屋顶一点也不漏吗？','a watertight alibi; a watertight contract.','无懈可击的借口；严密的合同'}

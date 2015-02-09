@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["basic"]={"basic","['beɪsɪk]","['besɪk]","adj.基本的",'adj.基本的；[化学]碱性的；[地质学]基性的；首要的|||n.基础，基本；基本原则，基本原理，基本规律；要素；基础训练','In this course, students receive instruction in basic engineering.','在本课程中, 学生能学到基础工程学的知识.','||BASIC|| is the language most programmers learn first.','BASIC是大多数程序编制者首先学习的语言.'}

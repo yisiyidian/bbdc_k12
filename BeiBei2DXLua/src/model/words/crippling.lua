@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crippling"]={"crippling","['krɪplɪŋ]","[ 'kripliŋ ]","adj.造成严重后果的",'adj.造成严重后果的','He was burdened with crippling debts.','他负债累累，深受其害。','||Crippling|| debts forced the company to close down.','严重的债务让不得不公司结束营运。'}

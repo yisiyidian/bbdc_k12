@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["absolutely"]={"absolutely","['æbsəluːtlɪ]","['æbsəlutli]","adv.绝对地",'adv.绝对地,完全地;独立地;确实地','I\'m absolutely starving.','我饿极了。','I trust his discretion absolutely.','我完全相信他的判断。'}

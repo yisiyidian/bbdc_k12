@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deadpan"]={"deadpan","['dedpæn]","['dɛdpæn]","adj.无表情的脸",'adj.无表情的脸','Some people do not catch his deadpan humor, which makes it even funnier.','有些人不能了解他那种冷面的幽默，因此更有趣。','She put the letter on the desk in front of me, her face deadpan, not a flicker of a smile.','她把那封信放在我面前的桌子上，故意一脸严肃，没有一丝的笑容。'}

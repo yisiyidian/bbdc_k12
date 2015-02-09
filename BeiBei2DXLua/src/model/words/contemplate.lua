@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contemplate"]={"contemplate","['kɒntempleɪt; -təm-]","['kɑntəmplet]","vt.沉思",'vt.注视,沉思,打算','It terrified me to contemplate the consequence of your action.','想到你行动的后果，我就感到害怕。','The doctor contemplated the difficult operation he had to perform.','医生细想他要进行的棘手的手术。'}

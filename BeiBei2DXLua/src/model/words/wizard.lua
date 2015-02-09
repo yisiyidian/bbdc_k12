@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wizard"]={"wizard","['wɪzəd]","['wɪzɚd]","n.男巫",'n.男巫,术士,鬼才|||adj.男巫的,巫术的','Having the qualities or attributes of a wizard.','魔法的, 术士的有巫师的特点或性质的','He is a wizard at playing the piano.','他是个钢琴奇才。'}

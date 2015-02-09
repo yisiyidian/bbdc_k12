@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stimulate"]={"stimulate","['stɪmjʊleɪt]","['stɪmjə'let]","vt.刺激",'vt.刺激,激励,鼓舞|||vi.起刺激作用','Light stimulates plant growth.','光会刺激植物生长。','I hoped my warning would stimulate her to greater efforts.','我希望我的告诫会促使她作出更大的努力。'}

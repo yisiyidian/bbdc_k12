@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["applicant"]={"applicant","['æplɪk(ə)nt]","['æplɪkənt]","n.申请人",'n.申请人','How would you rate the abilities of the applicant?','你如何评估申请人的能力?','As the wages were low, there were few applicants for the job.','因为工资低，没有什么人申请这份工作。'}

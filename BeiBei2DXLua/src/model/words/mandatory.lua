@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mandatory"]={"mandatory","['mændət(ə)rɪ]","['mændətɔri]","adj.强制性的",'adj.命令的,强制性的,受委托的|||n.受托管理者','It\'s mandatory to pay taxes.','缴税是义务性的。','Attendance at the meeting is mandatory.','请务必出席会议。'}

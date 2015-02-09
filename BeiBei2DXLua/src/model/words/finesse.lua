@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["finesse"]={"finesse","[fɪ'nes]","[fɪ'nɛs]","n.精密技巧",'n.精密技巧,灵巧,策略|||v.用计谋处理,偷牌','Paul played the sonata with great finesse.','保罗以丰富的技巧弹奏了这部奏鸣曲。','Paul handled the meeting with great finesse.','保罗极其巧妙地掌握着会议。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wave"]={"wave","[weɪv]","[wev]","n.波",'n.波,波浪,波动|||vi.波动,挥动,起伏,挥手|||vt.使成波形','The flag waved in the wind.','旗帜在风中飘扬。','She has a natural wave in her hair.','她的头发自然卷曲。'}

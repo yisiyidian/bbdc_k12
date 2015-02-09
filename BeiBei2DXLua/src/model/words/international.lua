@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["international"]={"international","[ɪntə'næʃ(ə)n(ə)l]","[,ɪntɚ'næʃnəl]","adj.国际的",'adj.国际的|||n.国际组织','||International|| competition was a spur to modernization.','国际竞争是实现现代化的动力。','The country violated the international agreement.','这个国家违反了国际协议。'}

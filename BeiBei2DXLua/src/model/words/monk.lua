@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monk"]={"monk","[mʌŋk]","[mʌŋk]","n.僧侣",'n.僧侣,修道士','He decided to give away everything he possessed and become a monk.','他决定放弃他所有的一切, 出家为僧.','The monk burned a stick of incense in the incense burner.','和尚在香炉里焚上一柱香。'}

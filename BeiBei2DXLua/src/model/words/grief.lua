@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grief"]={"grief","[griːf]","[ɡrif]","n.悲痛",'n.悲痛,忧伤','She uttered a wail of grief.','她悲痛地大声尖叫.','No words can express my grief.','我的忧伤无法用语言表达.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["belief"]={"belief","[bɪ'liːf]","[bɪ'lif]","n.相信",'n.相信,信念,信仰','There was a happy chime of belief and practice in everything she said.','她所说的每一件事都体现了信仰和行动的完美和谐。','His firmness on his belief supported him in difficulties.','困境中，他坚定的信仰支撑着他。'}

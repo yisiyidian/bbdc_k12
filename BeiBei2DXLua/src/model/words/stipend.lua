@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stipend"]={"stipend","['staɪpend]","['staɪpɛnd]","n.薪水",'n.薪水(薪金,定期生活津贴)','An absence without adequate excuse could result in the suspension of a financial stipend.','无正当理由的缺课者可能要受到停发津贴的处罚。','This sum was nearly a third of his total stipend.','这笔钱几乎是他全部津贴的三分之一。'}

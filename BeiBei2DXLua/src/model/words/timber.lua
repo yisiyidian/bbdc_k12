@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["timber"]={"timber","['tɪmbə]","['tɪmbɚ]","n.木材",'n.木材,木料','The firm\'s tender for the supply of timber has been accepted.','那家商号的供应木材投标已被接受。','Seasoned timber does not warp.','经干燥处理的木材不会翘曲。'}

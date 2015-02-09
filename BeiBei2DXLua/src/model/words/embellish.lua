@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["embellish"]={"embellish","[ɪm'belɪʃ; em-]","[ im'beliʃ ]","v.修饰",'v.修饰,装饰,润色','Just tell the truth and don’t embellish the story by any means.','你只要讲清事实，千万不要添油加醋。','The boat was embellished with carvings in red and blue.','船身饰有红色和蓝色的雕刻图案。'}

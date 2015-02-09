@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depletion"]={"depletion","[dɪ'pliːʃn]","[dɪ'pliʃən]","n.消耗",'n.消耗,罄尽,放血','That\'s a depletion of money.','那是一种金钱的消耗。','play video games is a depletion of life','游戏消耗生命'}

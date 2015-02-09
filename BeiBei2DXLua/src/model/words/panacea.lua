@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["panacea"]={"panacea","[,pænə'siə]","[ ,pænə'si:ə ]","n.万灵药",'n.万灵药，灵丹妙药','A panacea is a remedy that cures all diseases or evils.','万灵药能治所有的疾病和罪恶。','Love is a panacea that cure spiritual wounds.','爱是治疗精神创伤的万灵药。'}

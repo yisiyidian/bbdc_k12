@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gulp"]={"gulp","[gʌlp]","[ɡʌlp]","n.字节组",'n.字节组|||v.吞,呛,抑制|||[计算机]字节组','He gulped his food.','他狼吞虎咽地吃东西。','She gulped nervously, as if the question bothered her.','她紧张地咽了一下，似乎那问题把她难住了。'}

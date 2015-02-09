@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jellyfish"]={"jellyfish","['dʒelɪfɪʃ]","['dʒɛlɪfɪʃ]","n.水母",'n.水母,海蜇,意志薄弱的人','The sting of a jellyfish is very painful.','让水母刺著是很痛的.','Her husband is a perfect jellyfish.','她丈夫是个典型的优柔寡断的人。'}

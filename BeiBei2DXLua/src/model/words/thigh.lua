@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thigh"]={"thigh","[θaɪ]","[θaɪ]","n.大腿",'n.大腿','The thigh bone is connected to the hip bone.','股骨连著髋骨.','A cut of meat from the thigh of a hog.','火腿肉从猪大腿上切下来的肉'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["goods"]={"goods","[ɡʊdz]","[ɡʊdz]","n.货物",'n.货物,商品','The goods were consigned to you by railway.','货物已由铁路托运到你处。','These goods are freely available.','这些商品大量供应。'}

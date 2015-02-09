@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tag"]={"tag","[tæg]","[tæɡ]","n.标签",'n.标签,附属物,名称,谚语|||vt.附以签条,尾随,添饰,指责,连接|||vi.紧随,尾随','Let\'s tag the disk now or else we\'ll forget which is which.','我们先给这些磁盘加上标签吧，不然我们就记不清哪个是哪个了。','I heard only tags and snippets of what was being said.','我只听到一些零零碎碎的话'}

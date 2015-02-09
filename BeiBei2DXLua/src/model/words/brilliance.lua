@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brilliance"]={"brilliance","['brɪlj(ə)ns]","['brɪljəns]","n.辉煌",'n.(色彩)鲜明,光辉,辉煌','This is her special brilliance.','这是她特有的才华','I was totally amazed by the brilliance of her paintings.','她的绘画才能令我惊歎不已。'}

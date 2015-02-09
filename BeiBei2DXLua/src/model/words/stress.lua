@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stress"]={"stress","[stres]","[strɛs]","n.压力",'n.紧张,压力|||v.强调,着重|||vt.强调|||n.负载','High winds put great stress on the structure.','大风作用於该建筑物上而产生巨大的应力。','I must stress that what I say is confidential.','我要强调我说的话是保密的。'}

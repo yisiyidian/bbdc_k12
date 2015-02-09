@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["laudatory"]={"laudatory","['lɔːdət(ə)rɪ]","['lɔdətɔri]","adj.赞美的",'adj.赞美的,赞赏的','The New York Times has this very laudatory article about your retirement.','《纽约时报》发文谈及你的隐退，文中对你大加赞扬。','Beth spoke of Dr. Hammer in laudatory terms.','贝丝谈及哈默医生时赞不绝口。'}

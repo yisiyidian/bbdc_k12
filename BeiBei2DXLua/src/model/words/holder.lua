@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["holder"]={"holder","['həʊldə]","['holdɚ]","n.持有者",'n.持有者，占有者，（台、架等）支持物','The current holder of the apartment.','公寓的现居者','a towel holder.','毛巾架'}

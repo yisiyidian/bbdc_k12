@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abstain"]={"abstain","[əb'steɪn]","[əb'sten]","v.自制",'v.自制,戒绝','He swore to abstain from smoking.','他发誓要戒烟。','Sixty abstain in the vote on capital punishment.','在表决死刑时，60位下议院议员弃权。'}

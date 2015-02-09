@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["horde"]={"horde","[hɔːd]","[hɔrd]","n.群",'n.群,游牧部落,移动群','There were hordes of people at the jumble sale.','废旧货物拍卖市场上人山人海。','Tartar hordes scattered on the plain.','鞑靼人的游牧部落散布在这片平原上。'}

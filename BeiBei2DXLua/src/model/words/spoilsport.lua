@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spoilsport"]={"spoilsport","['spɒɪlspɔːt]","['spɔɪlspɔrt]","adj.专事破坏他人乐趣的",'adj.专事破坏他人乐趣的','Look, Justine, I hate to be a spoilsport and truly I don\'t mean to hurt your feelings.','贾斯丁,我并不想做一个扫兴的人,真的,我不想伤害你的感情。','Don\'t be such a spoilsport.','别扫兴'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poach"]={"poach","[pəʊtʃ]","[potʃ]","vt.(侵入他人地界)偷猎(或捕鱼)",'vt.(侵入他人地界)偷猎(或捕鱼),水煮,剽窃，挖角','Rival salesmen were poaching on his territory.','这些推销员是竞争对手, 却跑到他的地盘来兜生意.','A rival firm poached our best computer programmers.','我公司的竞争对手把我们最好的计算机程序编制员挖走了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["portentous"]={"portentous","[pɔː'tentəs]","[pɔr'tɛntəs]","adj.前兆的",'adj.前兆的,不吉的|||adj.令人惊讶的，难以置信的|||adj.自大的，摆架子的','The present aspect of society is portentous of great change','“现在的社会预示着重大变革的发生”','Such a portentous and mysterious monster roused all my curiosity','“这样奇特而神秘的巨怪引起我强烈的兴趣”'}

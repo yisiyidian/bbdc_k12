@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alike"]={"alike","[ə'laɪk]","[ə'laɪk]","adj.相似的",'adj.相似的,同样的|||adv.一样,以同样的方式','I always confuse the sisters: they look so alike.','我总是分不出这对姐妹, 她们看上去简直一模一样.','These kittens look exactly alike how can you tell which is which?','这些小猫看上去一模一样--你怎麽能分出哪个是哪个?'}

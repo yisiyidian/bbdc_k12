@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sprain"]={"sprain","[spreɪn]","[spren]","v.&n.扭伤",'v.&n.扭伤','His odds are very poor after he sprained his wrist.','他扭伤了手腕，获胜的可能性极小。','His sprained ankle has puffed up.','他那扭伤的脚踝肿起来了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obituary"]={"obituary","[ə(ʊ)'bɪtʃʊərɪ; -tʃərɪ; -tjʊərɪ]","[o'bɪtʃuɛri]","adj.死亡的",'adj.死亡的|||n.讣告','I read your brother\'s obituary in the Times.','我在《泰晤士报》上看到了你哥哥的讣告。','I see an obituary','我看见一则讣告'}

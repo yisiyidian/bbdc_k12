@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snippet"]={"snippet","['snɪpɪt]","[ 'snippit ]","n.小片",'n.小片,小部分,（消息或文章等的）片段','I read a snippet she had cut from a magazine.','我读了她从杂志上剪下来的一段文字。','The following code snippet provides a scenario where an error occurs.','下面的代码段提供了发生错误的典型例子.'}

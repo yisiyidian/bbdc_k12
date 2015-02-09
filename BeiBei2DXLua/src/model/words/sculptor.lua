@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sculptor"]={"sculptor","['skʌlptə]","['skʌlptɚ]","n.雕刻家",'n.雕刻家','He turned his artistic gifts to good account by becoming a sculptor.','他发挥艺术天才, 成了雕刻家.','The sculptor chiselled the lump of marble into a fine statue.','雕刻家把大理石块凿成优美的雕像.'}

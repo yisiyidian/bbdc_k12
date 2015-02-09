@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neon"]={"neon","['niːɒn]","['niɑn]","n.氖",'n.氖，霓虹灯','||Neon|| lights gleamed in the deepening mists.','霓虹灯在渐浓的雾霭中隐约闪烁。','||Neon|| light is charming.','氖灯很迷人。'}

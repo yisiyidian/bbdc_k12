@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polity"]={"polity","['pɒlɪtɪ]","['pɑləti]","n.政府制度",'n.政府制度，政体','After all, people\'s support is vital in any economic system or polity.','无论是经济体系或政治文化，都离不开最根本的社会民情。','After all, people\'s support is vital in any economic system or polity.','无论是经济体系或政治文化,都离不开最根本的社会民情。'}

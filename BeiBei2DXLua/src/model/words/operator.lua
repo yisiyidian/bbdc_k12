@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["operator"]={"operator","['ɒpəreɪtə]","['ɑpəretɚ]","n.操作员",'n.操作员,管理者,技工,报务员','Ring the operator and ask for Freefone 8921.','接通接线生, 然後要免费通话8921号.','The radio operator sent (out) an appeal for help to headquarters.','无线电报务员向司令部发出求救信号.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beguile"]={"beguile","[bɪ'gaɪl]","[bɪ'ɡaɪl]","vt.诱骗",'vt.诱骗，欺骗','The travelers were beguiled by the beauty of the landscapes.','游客们被景色的美丽深深地吸引了。','He beguiled me into lending him my bicycle.','他骗我把自行车借给了他。'}

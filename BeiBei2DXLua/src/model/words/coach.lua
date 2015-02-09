@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coach"]={"coach","[kəʊtʃ]","[kotʃ]","n.教练",'n.大巴,教练;(火车)客车车厢,四轮马车,经济舱|||vt.训练,指导|||vi.训练,指导','I had made on the coach a good impression when I went out for volleyball.','我申请加入排球队时给教练留下了良好的印象。','The coach is bringing on some girls in the reserve team.','教练正教导预备队的女孩们练球。'}

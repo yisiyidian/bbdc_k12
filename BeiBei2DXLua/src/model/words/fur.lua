@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fur"]={"fur","[fɜː]","[fɝ]","n.毛皮服饰",'n.毛皮服饰,毛皮制品,毛皮','She bought a coat with reddish fur.','她买了一件略带红色皮毛的衣服。','The lady appeared with a luxurious fur coat.','那位夫人穿着华贵的毛皮外套来了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nostril"]={"nostril","['nɒstr(ə)l]","['nɑstrəl]","n.鼻孔",'n.鼻孔','He dislikes his wide nostrils.','他不喜欢自己的宽大的鼻孔。','Her nostrils are clogged because she has caught a cold.','因为感冒她的鼻孔被塞住了。'}

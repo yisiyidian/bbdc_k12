@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cold"]={"cold","[kəʊld]","[kold]","adj.冷的",'adj.冷的,漠然的,客观的|||n.感冒,低温|||adv.唐突地,无回旋余地地,即兴地','It was bitterly cold.','天气冷得刺骨。','She was out cold but still breathing.','她失去了知觉，但还在呼吸。'}

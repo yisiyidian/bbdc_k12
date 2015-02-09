@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inference"]={"inference","['ɪnf(ə)r(ə)ns]","['ɪnfərəns]","n.推理",'n.推理,推论','Is that a fair inference to draw from his statement?','从他的说法中推出这种结论恰当吗？','She\'d begun spending a lot of money, and the obvious inference was that she\'d stolen it.','她花起钱来大手大脚了，事情很明显，钱是偷来的。'}

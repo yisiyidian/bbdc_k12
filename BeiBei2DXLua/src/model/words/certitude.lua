@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["certitude"]={"certitude","['sɜːtɪtjuːd]","[ 'sə:titju:d ]","n.确实",'n.确实,确信','eager to swap the hazards of American freedom for the gray certitudes of Soviet life','急于以美国式自由的冒险来换取苏维埃式单调但有保证的生活','We have this definite certitude that Clark will be freed.','我们非常确信克拉克将被释放。'}

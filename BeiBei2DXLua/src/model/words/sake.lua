@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sake"]={"sake","[seɪk]","[seɪk]","n.缘故",'n.缘故,利益,好处','It\'s the company\'s policy to sacrifice short-term profits for the sake of long-term growth.','为长期发展而牺牲短期利润是公司的方针。','Don\'t inconvenience yourself for my sake.','请不必为我麻烦。'}

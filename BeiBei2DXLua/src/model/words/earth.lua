@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["earth"]={"earth","[ɜːθ]","[ɝθ]","n.地球",'n.地球,泥土,世间,大地,地球人|||vt.赶入洞中,提取土壤|||vi.躲入洞穴','The police eventually ran him to earth in Paris.','警察穷追不舍，终於在巴黎找到了他。','The moon goes round the earth.','月亮绕着地球转。'}

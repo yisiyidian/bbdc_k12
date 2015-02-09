@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twentieth"]={"twentieth","[ˈtwentiəθ]","[ˈtwentiəθ]","n.二十分之一",'n.二十分之一|||num.&adj.第二十','That\'s the twentieth goal he\'s kicked this season.','这是他本赛季踢进的第二十个球.','The space age dawned in the twentieth century.','太空时代开始于二十世纪.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stun"]={"stun","[stʌn]","[stʌn]","vt.使晕倒",'vt.使晕倒,使惊吓|||n.震惊','The punch stunned me for a moment.','那一拳把我打得昏了一阵。','She sat stunned for a while, until she recovered.','她一时昏迷，坐下呆了一会儿才醒过来。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["humor"]={"humor","['hjʊmɚ]","[ 'hju:mə ]","n.幽默",'n.幽默,诙谐,心情|||v.迎合,牵就,顺应','I like your sense of humor.','我喜欢你的幽默感。','Unlike his brother, he has a good sense of humor.','和他兄弟不同，他有种幽默感。'}

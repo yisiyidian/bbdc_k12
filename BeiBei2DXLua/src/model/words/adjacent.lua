@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adjacent"]={"adjacent","[ə'dʒeɪs(ə)nt]","[ə'dʒesnt]","adj.毗连的",'adj.毗连的,邻近的,接近的','Several adjacent buildings are morged and shown as a continuous built - up area.','几个相邻的建筑物合并表示成一个完整的建筑区。','He sat in an adjacent room and waited.','他坐在隔壁房间里等待。'}

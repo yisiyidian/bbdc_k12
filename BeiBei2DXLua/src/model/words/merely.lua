@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["merely"]={"merely","['mɪəlɪ]","['mɪrli]","adv.仅仅",'adv.仅仅,只不过','Pretending to faint was merely an artifice.','假装昏迷只不过是个诡计。','merely a flesh wound.','仅仅是皮肉之伤'}

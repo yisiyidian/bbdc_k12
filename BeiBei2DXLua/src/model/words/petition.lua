@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["petition"]={"petition","[pɪ'tɪʃ(ə)n]","[pə'tɪʃən]","n.请愿书",'n.祈求,请愿书,诉状|||vi.请愿,祈求|||vt.向...请愿或祈求','Many subscribers\' names are in the petition.','请愿书上有很多签名者的名字。','They signed a petition in support of the workers\' demands.','他们在请愿书上签名，支持工人的请求。'}

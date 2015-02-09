@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attitude"]={"attitude","['ætɪtjuːd]","['ætɪtʊd]","n.态度",'n.态度,看法,姿势','As you get older, your attitude towards death changes.','人随著年龄的增长，对死亡的看法也会有所改变。','It\'s not his work that bothers me; it\'s his attitude.','困扰我的不是他的工作，而是他的态度。'}

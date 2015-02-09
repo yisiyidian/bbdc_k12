@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bigotry"]={"bigotry","['bɪgətrɪ]","['bɪɡətri]","n.固执",'n.固执,顽固,顽迷','A cancer of bigotry spread through the community.','一种顽固的社会恶习扩散到了整个社区。','He deplored religious bigotry.','他强烈谴责了宗教偏执。'}

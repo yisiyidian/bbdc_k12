@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rocket"]={"rocket","['rɒkɪt]","['rɑkɪt]","n.火箭",'n.火箭,烟火|||v.发射火箭,猛涨','Scientists have computed the probable course of the rocket.','科学家利用计算机计算了火箭可能运行的轨道。','A rocket manned by trained astronauts will launch soon.','载有受过训练的宇航员的火箭马上就要发射了。'}

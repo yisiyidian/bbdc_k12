@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["involve"]={"involve","[ɪn'vɒlv]","[ɪn'vɑlv]","vt.包含",'vt.包含,使陷入,使忙于,使卷入,牵涉','Giving advice at the right time has to involve a great deal of intelligence.','在适当的时间提建议需要人的睿智。','Painting the room involved moving out the piano.','粉刷房间就要把钢琴搬出去。'}

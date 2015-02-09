@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["patent"]={"patent","['pæt(ə)nt; 'peɪt(ə)nt]","['pætnt]","n.专利权",'n.专利权,执照,专利品|||adj.专利的,显著的,新奇的|||v.取得...的专利权,请准专利','It was patent to everyone that he disliked the idea.','每个人都看得出来他不喜欢这个主意。','In the ||Patent|| Office, we still have millions of ideas that are free for use.','在专利局，我们仍有成千上万项专利可供免费使用。'}

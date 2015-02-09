@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["empower"]={"empower","[ɪm'paʊə; em-]","[ɪm'paʊɚ]","vt.授与权力",'vt.授与权力,增加自主权','The new laws empower the police to search private house.','新的法律使警察得以搜查私人住宅。','The new laws empower the police to stop anybody in the street.','新法令授予警察可以在街上截停任何人的权利。'}

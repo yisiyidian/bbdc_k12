@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["veneration"]={"veneration","[venə'reɪʃ(ə)n]","[ ,venə'reiʃən ]","n.崇敬",'n.崇敬','The veneration of man has been misdirected','“人类的崇敬已被误导了”','I acquired lasting respect for tradition and veneration for the past.','我开始对传统和历史产生了持久的敬慕.'}

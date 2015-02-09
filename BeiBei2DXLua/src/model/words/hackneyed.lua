@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hackneyed"]={"hackneyed","['hæknɪd]","['hæknɪd]","adj.陈腐的",'adj.不新奇的,常见的,陈腐的|||动词hackney的过去式和过去分词形式','Couples often experience the period of seeing each other as hackneyed.','夫妻都会经历一个厌倦对方的过程。','He often comes up with a hackneyed idea.','他总出些老掉牙的招。'}

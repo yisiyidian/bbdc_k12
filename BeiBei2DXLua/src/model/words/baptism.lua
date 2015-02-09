@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["baptism"]={"baptism","['bæptɪz(ə)m]","['bæptɪzəm]","n.（基督教）施洗",'n.（基督教）施洗,洗礼','A woman who sponsors a person at baptism.','教母在儿童受洗礼时担任教母的女子','A pouring on of liquid, as in baptism.','注水如基督教行洗礼时的注水仪式'}

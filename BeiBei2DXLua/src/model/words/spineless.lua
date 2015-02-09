@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spineless"]={"spineless","['spaɪnlɪs]","['spaɪnləs]","adj.无脊椎的",'adj.无脊椎的,没有骨气的,懦弱的','He\'s too spineless to ask for more money.','他没有勇气要求更多的钱。','...bureaucrats and spineless politicians.','...官僚和懦弱的政治家们。'}

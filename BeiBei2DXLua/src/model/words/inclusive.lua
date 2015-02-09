@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inclusive"]={"inclusive","[ɪn'kluːsɪv]","[ɪn'klusɪv]","adj.包含...在内的",'adj.包含...在内的,包罗广泛的,包括端点的|||[计算机]包括的','The monthly rent is $20 inclusive of everything.','每个月房租总共二十美元，一切费用包括在内。','The bill is inclusive of the food and lodging.','账单包括吃、住费用。'}

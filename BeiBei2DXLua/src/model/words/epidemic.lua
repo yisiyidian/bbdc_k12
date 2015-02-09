@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["epidemic"]={"epidemic","[epɪ'demɪk]","[,ɛpɪ'dɛmɪk]","n.传染病",'n.传染病,流行病|||adj.流行的,传染性的','A flu epidemic raged through the school for weeks.','流感在这所学校里蔓延了几个星期.','The village is suffering from a cholera epidemic.','这个村庄正流行霍乱。'}

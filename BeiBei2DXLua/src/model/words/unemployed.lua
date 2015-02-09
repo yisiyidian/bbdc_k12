@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unemployed"]={"unemployed","[ʌnɪm'plɒɪd; -em-]","[,ʌnɪm'plɔɪd]","adj.失业的",'adj.失业的，未投资的|||n.失业者','During the depression, millions of the unemployed wandered around in the streets.','经济萧条时期，有好几百万的失业者在街头游荡。','The increasing army of the unemployed has attracted the attention of the economist.','不断增长的失业大军引起了这名经济学家的关注。'}

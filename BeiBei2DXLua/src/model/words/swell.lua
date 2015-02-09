@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swell"]={"swell","[swel]","[swɛl]","n.增大",'n.增大,隆起的部分,波浪|||adj.优秀的,时髦的|||vi.渐增,膨胀,积聚,情感迸发|||vt.使情感迸发,扩大,使膨胀','The murmur swelled into a roar.','窃窃私语的声音变大形成一片喧哗。','Small extra costs all swell the total.','零星的额外费用积少成多使总数增大了'}

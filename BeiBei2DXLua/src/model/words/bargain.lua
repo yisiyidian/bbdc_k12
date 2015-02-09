@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bargain"]={"bargain","['bɑːgən]","['bɑrɡən]","vi.议价",'n.交易,买卖,物美价廉的东西|||vi.议价|||vt.议价交易','If you promote our goods, we will give you a good discount as our part of the bargain.','若你方经销我们的货物，我方愿给予你相当大的优惠作为回报。','The exam was more difficult than I had bargained for.','这次考试之难出乎我的意料之外。'}

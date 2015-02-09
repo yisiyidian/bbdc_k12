@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anesthetic"]={"anesthetic","[,ænɪs'θɛtɪk]","[ ,ænis'θetik ]","n.麻醉剂",'n.麻醉剂,麻药|||adj.麻醉的,无知觉的','Some people feel that television becomes an anesthetic for the mind after too many hours of steady viewing.','一些人感觉，在持续观看电视数小时后，电视会成为大脑的麻醉品。','The operation is carried out under a general anesthetic.','这个手术是在全身麻醉下进行的。'}

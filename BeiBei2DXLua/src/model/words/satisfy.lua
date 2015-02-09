@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["satisfy"]={"satisfy","['sætɪsfaɪ]","['sætɪsfaɪ]","vt.使...满意",'vt.使...满意,使...信服|||vi.足够,取悦','I had to explain the reasons to satisfy his curiosity.','我只好解释原因来满足他的好奇心。','It is by no means easy to satisfy everyone.','要满足每一个人绝非易事。'}

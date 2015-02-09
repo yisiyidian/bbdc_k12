@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bleak"]={"bleak","[bliːk]","[blik]","adj.萧瑟的",'adj.萧瑟的,严寒的,阴郁的','Offering no hope; bleak.','没有希望的；惨淡的','It\'s a bleak look-out for the coal industry as the number of pit closures increases.','煤井关闭的数目日多，煤炭工业前景暗淡。'}

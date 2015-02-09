@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jagged"]={"jagged","['dʒægɪd]","['dʒæɡɪd]","adj.锯齿状的",'adj.锯齿状的，参差不齐的|||动词jag的过去式和过去分词','A jagged wound or cut.','锯齿状的伤口或裂口','The jagged sword is valuable.','这把有缺口的剑很有价值。'}

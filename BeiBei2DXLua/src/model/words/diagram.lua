@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diagram"]={"diagram","['daɪəgræm]","['daɪəɡræm]","n.图表",'n.图解,图表|||vt.用图解法表示','I\'ll have to alter the diagram. I\'ve made a mistake.','我得修改图表. 我出了点儿错.','He pointed at the diagram to illustrate his point.','他指着图表来说明他的论点。'}

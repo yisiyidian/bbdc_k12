@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fifty"]={"fifty","['fɪftɪ]","['fɪfti]","num.五十",'num.五十','The World Cup final is being transmitted live to over fifty countries.','世界杯决赛现在正向五十多个国家现场转播。','The number of tigers has reduced abruptly in the last fifty years.','在过去的五十年里，老虎的数目锐减。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hinder"]={"hinder","['hɪndə]","['hɪndɚ]","adj.后面的",'adj.后面的|||vt.阻碍,打扰|||vi.阻碍','A weight, such as a block, attached to the leg of an animal to hinder movement.','重物，坠脚一种重物，如大块物品，系在动物腿上阻碍行动','In a position to obstruct, hinder, or interfere.','挡道地处在阻碍、阻挡或干涉的位置上'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adduce"]={"adduce","[ə'djuːs]","[ə'dus]","vt.引证",'vt.引证,举出','I could adduce several reasons for his strange behaviour.','对他的奇怪行为, 我能提出几点原因.','In support of his claim to the inheritance, Carl adduced the original version of the will.','为了证明他有权要求继承财产，卡尔提出遗嘱的正本。'}

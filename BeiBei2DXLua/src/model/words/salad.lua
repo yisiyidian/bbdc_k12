@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["salad"]={"salad","['sæləd]","['sæləd]","n.色拉",'n.色拉,凉拌生菜,杂烩','It only takes a minute to make a salad.','做色拉用不了多少时间.','I\'ll just take a small salad, please.','我只想要一小盆沙拉。'}

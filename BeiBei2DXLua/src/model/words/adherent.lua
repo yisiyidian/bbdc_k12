@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adherent"]={"adherent","[əd'hɪər(ə)nt]","[əd'hɪrənt]","n.信徒",'n.信徒,追随者,拥护者|||adj.附着的,粘连的','The movement is gaining more and more adherents.','支持这个运动的人越来越多了。','This idea is gaining adherents.','这种观念正在赢得更多的拥护者。'}

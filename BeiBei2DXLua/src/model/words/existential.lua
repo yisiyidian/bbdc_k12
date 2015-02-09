@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["existential"]={"existential","[,egzɪ'stenʃ(ə)l]","[,ɛɡzɪ'stɛnʃəl]","adj.有关存在的",'adj.有关存在的','\'What if there\'s nothing left at all?\' he cries, lost in some intense existential angst.','“要是什么都不会留下呢？”他叫喊道，陷入了对自身存在的深度焦虑。','Nobody knows whether the history is existential.','没人知道那段历史是否存在。'}

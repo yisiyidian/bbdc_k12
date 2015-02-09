@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["genocide"]={"genocide","['dʒenəsaɪd]","['dʒɛnəsaɪd]","n.种族灭绝",'n.种族灭绝','Hitler wanted to genocide Jew in WWII.','二战中，希特勒想灭犹太人种。','Is the dinosaur really was genocided？','恐龙真的灭绝了吗？'}

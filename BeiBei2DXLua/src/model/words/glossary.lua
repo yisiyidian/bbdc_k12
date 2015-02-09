@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glossary"]={"glossary","['glɒs(ə)rɪ]","['ɡlɑsəri]","n.字典",'n.字典,辞典|||[计算机]词汇表','A glossary of terms is included for the reader\'s convenience.','为了方便读者，还收录了术语表。','There is a  glossary  at the end of the textbook.','这本教科书后面有词汇表。'}

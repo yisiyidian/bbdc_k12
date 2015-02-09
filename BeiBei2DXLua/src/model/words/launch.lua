@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["launch"]={"launch","[lɔːntʃ]","[lɔntʃ]","n.&v.发射",'n.&v.下水,发射,开始,升天,汽艇','A new ship is being launched today.','一艘新船下水了。','The ship launched in the direction of Japan.','船起航前往日本。'}

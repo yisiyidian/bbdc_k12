@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hub"]={"hub","[hʌb]","[hʌb]","n.毂",'n.毂,木片,中心','Chicago is a hub of airline traffic.','芝加哥是航运中心.','The island\'s social hub is the Cafe Sport.','该岛的社交中心是“体育咖啡馆”'}

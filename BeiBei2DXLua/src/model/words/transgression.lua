@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transgression"]={"transgression","[trɑːns'greʃn; trɑːnz'greʃn; træns'greʃn; trænz'greʃn]","[trænz'ɡrɛʃən]","n.违反",'n.违反,犯罪,逸出','What they did is transgression!','他们是在犯罪！','Tales of the candidate\'s alleged past transgressions have begun springing up','有关这位候选人所谓的过往越轨行为的流言蜚语已经开始涌现。'}

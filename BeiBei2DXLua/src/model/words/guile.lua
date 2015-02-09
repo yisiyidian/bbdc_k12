@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guile"]={"guile","[gaɪl]","[ɡaɪl]","n.狡猾",'n.狡猾,奸智,狡计','His cunning and guile were not attributes I would ever underestimate.','我从未对他的狡猾和奸诈掉以轻心。','I love children\'s innocence and lack of guile.','我喜爱儿童的天真无邪。'}

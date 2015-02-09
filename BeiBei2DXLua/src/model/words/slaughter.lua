@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slaughter"]={"slaughter","['slɔːtə]","['slɔtɚ]","n.残杀",'n.残杀,屠杀,大量杀戮|||v.残杀,屠杀','After the slaughter, the battlefield was a gruesome sight.','经过这场厮杀, 战场上一派触目惊心的惨状.','Millions of cattle are slaughtered every day.','每天有数百万头牛被屠杀。'}

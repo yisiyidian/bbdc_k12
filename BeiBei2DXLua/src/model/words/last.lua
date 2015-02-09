@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["last"]={"last","[lɑːst]","[læst]","adj.最后的",'adj.最后的,末尾的,最近的,晚了，迟到了|||adv.最后,最新|||n.最后来的人（或发生的事）|||vi.&vt.持续','Ten years ago this dress was considered the last word in elegance.','十年前这种连衣裙还算是最高雅的款式呢。','At long last a compromise was agreed on.','通过互让最终达成折衷协议。'}

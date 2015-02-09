@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grey"]={"grey","[greɪ]","[ɡre]","adj.灰色的",'adj.灰色的|||n.灰色(的)|||v.变成灰色[=gray]|||vi.变成灰色','Her hair is tinged with grey.','她的头发有些花白。','Today, the canopy of the heavens is grey.','今天的天幕是灰色的。'}

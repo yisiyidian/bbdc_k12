@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rebut"]={"rebut","[rɪ'bʌt]","[ ri'bʌt ]","v.反驳",'v.反驳,　辩驳，举反证','Medicare Groups ||Rebut|| McCain Measure.','医疗组反对麦凯恩措施','he kept rebutting that he can finish that work','他一直在反驳说自己能完成那项工作'}

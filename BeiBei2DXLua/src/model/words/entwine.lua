@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entwine"]={"entwine","[ɪn'twaɪn; en-]","[ɪn'twaɪn]","v.(使)缠绕",'v.(使)缠绕,(使)交织','The plant will entwine round the stick as it grows.','这种植物会缠绕着竿子生长。','They walked along with (their) arms entwined.','他们挽著胳膊走去.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accrue"]={"accrue","[ə'kruː]","[ə'kru]","vi.生成",'vi.生成,自然增加,积累|||vt.积累','Ability to think clearly will accrue to you from good habits of study.','有了良好的学习习惯，思考能力就自然会有所增强。','English skills will accrue to you from speaking and reading a lot.','多读和多说英语，英语能力就会培养起来。'}

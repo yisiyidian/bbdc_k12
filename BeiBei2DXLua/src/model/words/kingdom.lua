@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kingdom"]={"kingdom","['kɪŋdəm]","['kɪŋdəm]","n.王国",'n.王国，领域，界|||Kingdom：天国','the kingdom of the imagination.','想象的领域','All citizens of the United ||Kingdom|| are ruled by the laws thereof.','英联盟的全体公民都受联盟法律的约束。'}

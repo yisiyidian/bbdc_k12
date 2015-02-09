@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["psychological"]={"psychological","[saɪkə'lɒdʒɪk(ə)l]","[,saɪkə'lɑdʒɪkl]","adj.心理(学)的",'adj.心理(学)的','Is there any possible psychological explanation for his bad health?','＂他健康状况不好，有没有可能具有什么心理上的原因呢？＂','Inhibition of natural impulses may cause psychological problems.','压抑自然的冲动可能会引起心理上的问题。'}

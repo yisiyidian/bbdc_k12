@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fraction"]={"fraction","['frækʃ(ə)n]","['frækʃən]","n.分数",'n.分数,小部分,破片','The car stopped within a fraction of an inch of the wall.','汽车在离墙不到一英寸的地方停住了。','The door opened a fraction.','门稍微开了条缝。'}

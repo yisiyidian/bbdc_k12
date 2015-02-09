@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rim"]={"rim","[rɪm]","[rɪm]","n.边",'n.边,轮缘,框|||vt.镶边,为...镶边|||vi.形成边缘','The valley ended in a perpendicular rim of granite.','那山谷的尽头是花岗石的断崖.','Trees rimmed the pool.','池塘边长了一圈树。'}

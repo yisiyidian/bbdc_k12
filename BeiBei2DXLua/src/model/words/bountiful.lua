@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bountiful"]={"bountiful","['baʊntɪfʊl; -f(ə)l]","['baʊntɪfl]","adj.充足的",'adj.充足的(丰富的,慷慨的)','Our country has a bountiful supply of food.','我们国家有充足的食物供应。','We found a bountiful supply of coconuts on the island.','我们发现岛上有充足的椰子供应。'}

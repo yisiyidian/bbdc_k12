@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transit"]={"transit","['trænsɪt; 'trɑːns-; -nz-]","['træzɪt]","n.经过",'n.经过,运输|||vt.穿越,旋转|||vi.越过','You must allow for five per cent wastage in transit.','在运输中要允许有百分之五的损耗量.','The transit was damaged by flood.','运输线被洪水破坏了。'}

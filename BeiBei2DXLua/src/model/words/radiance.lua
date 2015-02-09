@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radiance"]={"radiance","['reɪdɪəns]","['redɪəns]","n.光辉",'n.光辉,闪烁','The radiance of the sunset died away.','夕阳的余辉渐渐地消失了。','A brilliant radiance.','亮光发着耀眼的亮光'}

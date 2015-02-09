@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lieu"]={"lieu","[ljuː; luː]","[lu]","n.代替",'n.代替','Enclosed is our new Quotation No. ______ in lieu of the previous one.','随附我公司第号新的报价单以替代前发的报价单。','In lieu of carrying an umbrella, I wore a waterproof coat and cap.','我穿一件雨衣, 戴一顶雨帽, 就不用带雨伞了。'}

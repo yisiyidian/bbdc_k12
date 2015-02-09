@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["within"]={"within","[wɪð'ɪn]","[wɪ'ðɪn]","adv.在内",'adv.在内|||n.里面|||prep.在...里面|||adj.在里面的','We did the work within the time they had allotted to us.','我们在指定的时间内把工作做完了。','Several cars are available within this price range.','在这个价格范围内，有好几种汽车可供选购。'}

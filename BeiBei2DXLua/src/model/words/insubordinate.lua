@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insubordinate"]={"insubordinate","[,ɪnsə'bɔːdɪnət]","[,ɪnsə'bɔrdnɪt]","adj.不顺从的",'adj.不顺从的,不听话的','Many teachers dislike insubordinate children.','很多教师不喜欢不听话的小孩。','In industry, a worker who is grossly insubordinate is threatened with discharge.','在企业内部，拒不服从指令的工人会面临遭解雇的威胁。'}

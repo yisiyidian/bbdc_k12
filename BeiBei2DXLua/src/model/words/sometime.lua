@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sometime"]={"sometime","['sʌmtaɪm]","['sʌmtaɪm]","adj.某一时间",'adj.以前的,某一时间|||adv.改天,来日','It is reported that the car accident took place sometime yesterday.','据报导，那场车祸是在昨天某个时候发生的。','I want to look them up sometime.','我希望能去拜访他们。'}

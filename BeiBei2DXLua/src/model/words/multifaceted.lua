@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multifaceted"]={"multifaceted","[mʌltɪ'fæsɪtɪd]","[,mʌltɪ'fæsɪtɪd]","adj.多层面的",'adj.多层面的','This is a multifaceted company.','这是一家多层面的公司。','Success is a multifaceted, personal concept.','成功是一个多方面的因人而异的概念。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["authoritative"]={"authoritative","[ɔː'θɒrɪtətɪv; -,teɪtɪv]","[ə'θɔrətetɪv]","adj.权威性的",'adj.权威性的,命令式的','Don\'t speak in an authoritative tone.','不要用一种命令的口吻说话。','He has a commanding presence and deep, authoritative voice.','他仪态威严，声音深沉而有权威。'}

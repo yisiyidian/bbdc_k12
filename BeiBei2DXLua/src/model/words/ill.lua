@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ill"]={"ill","[ɪl]","[ɪl]","adj.有病的",'adj.坏的,有病的,引起痛苦的,敌意的|||adv.恶劣地,勉强的|||n.邪恶,不幸,祸害,坏话','You should not speak ill of your friend.','你不应该说你朋友的坏话。','They had to shelve their holiday plans because their son was ill.','他们不得不把度假计划搁置，因为他们的儿子病了。'}

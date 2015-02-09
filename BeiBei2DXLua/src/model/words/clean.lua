@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clean"]={"clean","[kliːn]","[klin]","adj.干净的",'adj.干净的,正当的,纯洁的,完全的,精准的,空的|||adv.完全地|||n.清洁|||vt.&vi.打扫,清扫','The doctor gave him a clean bill of health.','医生给他一份健康良好的报告。','The burglars cleaned her out of all her jewellery.','窃贼把她所有的首饰都偷走了。'}

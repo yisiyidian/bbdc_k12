@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["misconception"]={"misconception","[mɪskən'sepʃ(ə)n]","['mɪskən'sɛpʃən]","n.误解",'n.误解,错误想法','There is a strange misconception about you and you will do well to correct it.','这里有一个关于你的奇怪的误会,你必须把它澄清.','It is a misconception to assume that the two continents are similar.','关于这两块大陆相似的假设是一种误解。'}

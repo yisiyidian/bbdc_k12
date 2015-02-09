@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depot"]={"depot","['depəʊ]","['dipo]","n.停车场",'n.停车场,车站,贮藏所','Buses leave the central bus depot every hour.','每个小时都有公共汽车离开公共汽车中心站。','The depot near the harbor was bombed by the enemy.','港口附近的兵站被敌人炸毁了。'}

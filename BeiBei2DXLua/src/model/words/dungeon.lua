@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dungeon"]={"dungeon","['dʌn(d)ʒ(ə)n]","['dʌndʒən]","n.地牢",'n.地牢,土牢，城堡主塔','In the first act the curtain goes up on a dungeon in a landlord\'s house.','第一幕启幕时, 舞台上现出了地主家里的一个地牢。','A deep or isolated place of confinement; a dungeon.','地牢, 土牢深而隔离的拘留地; 地牢'}

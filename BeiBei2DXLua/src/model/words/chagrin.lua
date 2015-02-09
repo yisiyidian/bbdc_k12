@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chagrin"]={"chagrin","['ʃægrɪn; ʃə'grɪn]","[ʃə'ɡrɪn]","n.懊恼",'n.懊恼|||vt.使...懊恼','Much to his chagrin, he did not win the race.','他没能赢那场比赛，大为懊丧。','To her chagrin, the party ended just as she arrived.','使她懊恼的是，她到达时聚会正好结束。'}

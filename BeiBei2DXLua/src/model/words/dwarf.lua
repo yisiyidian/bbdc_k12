@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dwarf"]={"dwarf","[dwɔːf]","[dwɔrf]","n.矮子",'n.矮子,侏儒|||vt.使矮小|||vi.变小','There is a dwarf apple tree in our garden.','在我们的花园里有一棵矮苹果树。','The kind dwarf asked the little princess to have dinner with him.','善良的小矮人邀请小公主和他一起吃晚饭。'}

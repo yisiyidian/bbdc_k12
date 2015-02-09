@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anywhere"]={"anywhere","['enɪweə]","['ɛnɪwɛr]","adv.任何地方",'adv.任何地方|||pron.任何(一个)地方','That man can nose out a news story anywhere.','那个人在任何地方都能搜寻出新闻。','If you want to go anywhere else, let me know.','你要到别的地方去，就要告诉我。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expansion"]={"expansion","[ɪk'spænʃ(ə)n; ek-]","[ɪk'spænʃən]","n.扩大",'n.扩大,膨胀,扩充','His economic policies paved the way for industrial expansion.','他的经济政策为工业的扩展铺平了道路.','The company has promised wide consultation on its expansion plans.','该公司允诺就其扩展计划广泛征求意见'}

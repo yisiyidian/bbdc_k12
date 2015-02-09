@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suicide"]={"suicide","['s(j)uːɪsaɪd]","['suɪsaɪd]","n.自杀",'n.自杀；自杀者；自杀行为|||vt.自杀|||adj.自杀的','The police suspect foul play rather than suicide.','警方怀疑是谋杀不是自杀.','He committed suicide during a fit of depression.','他一时想不开, 自杀了.'}

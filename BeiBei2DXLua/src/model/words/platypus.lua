@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["platypus"]={"platypus","['plætɪpəs]","['plætɪpəs]","n.鸭嘴兽",'n.鸭嘴兽','||Platypus|| is a ancient animal','鸭嘴兽是一种古老的动物','||Platypus|| is the precious animal only in Australia','鸭嘴兽是澳洲特有的珍贵稀有动物。'}

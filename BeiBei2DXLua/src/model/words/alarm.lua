@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alarm"]={"alarm","[ə'lɑːm]","[ə'lɑrm]","n.警报",'n.警报,惊慌,警告,报警器|||vt.使...惊慌,警告,装报警器','The news of the radiation leak caused widespread public alarm.','辐射泄露的消息引起了公众的普遍恐慌。','The government is alarmed by the dramatic increase in violent crime.','政府对暴力犯罪案件的急剧增加感到恐慌。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ore"]={"ore","[ɔː]","[ɔr]","n.矿",'n.矿,矿石','The ore is smelted in this large factory.','这个大型工厂里熔炼矿石。','We will make an assay of the ore that he brought.','我们将对他带来的矿石做实验鉴定。'}

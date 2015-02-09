@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tail"]={"tail","[teɪl]","[tel]","n.尾部",'n.尾部,后部,侍从,屁股,硬币反面,跟踪者|||adj.在后面的,从后面而来的|||vt.连结,除去尾巴,装尾巴|||vi.附于其后,尾随,逐渐消失','The sting of a scorpion is in its tail.','蝎子的毒钩在其尾部.','Lizards have four legs and a long tail.','蜥蜴有四条腿和一条长尾巴。'}

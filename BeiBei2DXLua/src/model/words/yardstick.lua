@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yardstick"]={"yardstick","['jɑːdstɪk]","['jɑrd'stɪk]","n.码尺",'n.码尺','Durability is one yardstick of quality.','耐久性是质量好坏的一个尺度.','We need a yardstick to measure our performance by.','我们的表现需要一个检验的标准.'}

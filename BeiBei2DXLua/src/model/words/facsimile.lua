@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["facsimile"]={"facsimile","[fæk'sɪmɪlɪ]","[fæk'sɪməli]","n.摹本",'n.摹本，传真|||v.复制,摹写，传真','I can use a facsimile machine skillfully.','我能熟练地使用传真机。','The facsimile of Ou Yangxiu is  wonderful','欧杨修的摹本很棒'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oblige"]={"oblige","[ə'blaɪdʒ]","[ə'blaɪdʒ]","vt.强制",'vt.强制,施恩惠|||vi.帮忙','Could you oblige me by closing the door?','请你为我关上门好吗？','I felt obliged to leave after such an unpleasant quarrel.','发生了这样不愉快的争吵之后，我觉得有必要离开。'}

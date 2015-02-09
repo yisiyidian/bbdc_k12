@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spectral"]={"spectral","['spektr(ə)l]","['spɛktrəl]","adj.波谱的",'adj.波谱的','She is compelling, spectral, fascinating, an unforgettably unique performer.','她极具吸引力，清幽如鬼魅，令人着迷，令人难忘，是个独具特色的演员。','the spectral gloom of the cellar','地窖如鬼魅般昏暗的光'}

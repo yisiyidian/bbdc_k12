@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sordid"]={"sordid","['sɔːdɪd]","[ 'sɔ:did ]","adj.肮脏的",'adj.肮脏的,不干净的,心一脏的','The huts they lived in were sordid and filthy beyond belief.','他们住的小房真是异乎寻常地脏。','He sat with his head buried in his hands as his sordid double life was revealed.','自己卑鄙的双重生活被揭穿后，他双手抱头坐在那里。'}

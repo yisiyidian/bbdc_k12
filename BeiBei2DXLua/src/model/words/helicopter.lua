@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["helicopter"]={"helicopter","['helɪkɒptə]","['hɛlɪkɑptɚ]","n.直升飞机",'n.直升飞机','-Have you ever flown a helicopter? -No, never.','你坐过直升飞机吗?"没有, 从未坐过.','The shipwrecked sailors were rescued by helicopter.','遭遇海难的水手已经被直升机救起。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["verbatim"]={"verbatim","[vɜː'beɪtɪm]","[vɝ'betɪm]","adj.逐字的",'adj.逐字的|||adv.逐字地','His memory was so good that he could repeat many Shakespeare plays verbatim.','他记忆力极好，能一字不错地背出好多部莎士比亚的戏剧。','The following is taken almost verbatim from Cox\'s paper.','以下几乎是照搬考克思的文章。'}

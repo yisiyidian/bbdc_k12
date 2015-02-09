@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lance"]={"lance","[lɑːns]","[læns]","n.枪矛",'n.枪矛,矛状器具，鱼叉，配矛骑兵|||vt.以枪矛攻击,投掷|||vi.快速向前','||Lance|| liked to walk too, so they kept each other company.','兰斯也想步行前往，于是他俩结伴而行。','He was so vain and reckless that he would break a lance or two with his general.','年轻的军官一心取胜，他并不害怕与自己的将军比试一下。'}

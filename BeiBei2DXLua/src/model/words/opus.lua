@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opus"]={"opus","['əʊpəs; 'ɒp-]","[ˈoʊpəs]","n.著作",'n.著作(艺术作品,乐曲)','The teacher told me to practice Bach\'s opus this week.','老师让我这周练习巴赫的曲子。','His latest offering is a magnum opus on philosophy.','他的最新作品是一部关于哲学的巨著。'}

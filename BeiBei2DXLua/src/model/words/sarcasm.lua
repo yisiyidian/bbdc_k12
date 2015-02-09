@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sarcasm"]={"sarcasm","['sɑːkæz(ə)m]","['sɑrkæzəm]","n.挖苦",'n.挖苦,讽刺','Her sarcasm touched his self-esteem.','她讥讽的言语伤了他的自尊心。','This is no time to indulge in sarcasm.','现在可不是一味讽刺挖苦的时候。'}

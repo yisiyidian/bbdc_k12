@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contrition"]={"contrition","[kən'trɪʃ(ə)n]","[ kən'triʃən ]","n.痛悔",'n.悔罪,痛悔','He showed no contrition on the trial','他在庭审上毫无悔罪之意','In contrition she expatiated on the beauty of the garden','在后悔中,她反复谈论着花园的美丽。'}

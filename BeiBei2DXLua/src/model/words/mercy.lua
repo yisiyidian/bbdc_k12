@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mercy"]={"mercy","['mɜːsɪ]","['mɝsi]","n.怜悯",'n.怜悯,宽恕,仁慈,恩惠,幸运','The prisoner appealed to the judge for mercy.','囚犯恳求法官开恩。','A monarch has the prerogative of mercy for criminals.','君主享有对罪犯的赦免权。'}

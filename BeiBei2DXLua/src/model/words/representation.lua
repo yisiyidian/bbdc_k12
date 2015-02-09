@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["representation"]={"representation","[,reprɪzen'teɪʃ(ə)n]","['rɛprɪzɛn'teʃən]","n.表现",'n.表示法,表现,陈述，答辩','The play is a dramatic representation of a real event.','这出话剧改编出自真人真事。','His representation influenced them to investigate.','他的陈述促使他们去调查。'}

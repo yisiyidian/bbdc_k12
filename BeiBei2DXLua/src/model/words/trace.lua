@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trace"]={"trace","[treɪs]","[tres]","n.痕迹",'n.痕迹,踪迹,微量|||vt.追踪,找出根源,描绘|||vi.追踪','The cause of the fire was traced to a faulty fuse-box.','起火的原因已查出是因保险丝盒中有短路。','He traced his signature laboriously.','他吃力地签上自己的名字。'}

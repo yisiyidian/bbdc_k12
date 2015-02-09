@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vampire"]={"vampire","['væmpaɪə]","[ 'væmpaiə ]","n.吸血鬼",'n.吸血鬼','He needed love like a vampire needs blood.','他需要爱就像吸血鬼需要血一样。','Stories of vampirism can be traced as far back as biblical times, with Lilith the first rumored vampire.','吸血鬼的故事可以一直追溯到圣经时代，谣传莉莉丝是吸血鬼的最初雏形。'}

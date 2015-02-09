@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emigrate"]={"emigrate","['emɪgreɪt]","['ɛmɪɡret]","v.移居",'v.移居,移民','Certain formalities have to be gone through before one can emigrate.','必须办妥某些手续方可移居他国.','Go back there? I\'d sooner emigrate!','回去? 我宁可移居海外也不回去!'}

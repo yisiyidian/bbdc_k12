@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contract"]={"contract","['kɒntrækt]","['kɑntrækt]","n.合约",'n.合约,婚约;合同书|||v.签合同；缩小；感染','Marriage is, first of all, a contract which must be governed by justice.','婚姻首先是一种契约，它必须以公正为制约。','The city contracted for a library with their firm.','市政当局和他们公司订立了修建图书馆的合同。'}

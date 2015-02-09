@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opt"]={"opt","[ɒpt]","[ɑpt]","vi.选择",'vi.选择,决定做某事','Most people opt for buying their own homes rather than renting them.','大多数人愿意买房子而不愿意租房子.','He opted to go to Paris rather than London.','他决定去巴黎, 不去伦敦.'}

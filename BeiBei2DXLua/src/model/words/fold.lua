@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fold"]={"fold","[fəʊld]","[fold]","vt.折叠",'n.羊栏,羊群,折层,折痕|||vt.折叠,包,交叉,拥抱|||vi.翻倍,彻底失败,倒闭','Father folded the tiny child in his arms.','父亲把小孩儿抱在怀里。','The comedian had the audience folding up.','那个喜剧演员逗得观众笑得前仰後合。'}

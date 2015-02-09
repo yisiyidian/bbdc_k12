@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deviate"]={"deviate","['diːvɪeɪt]","['divɪet]","vt.使偏离",'vt.使偏离,脱离|||vi.违背,偏离|||n.叛离者,偏差,不正常的人或物|||adj.离经叛道的','Our conversation deviate the incipient topic.','我们的交流偏离了最初的话题。','They stopped you as soon as you deviated from the script.','你一偏离剧本，他们就会叫停。'}

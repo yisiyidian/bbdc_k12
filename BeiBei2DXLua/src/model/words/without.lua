@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["without"]={"without","[wɪð'aʊt]","[wɪ'θaʊt]","prep.没有",'adv.在外部；户外；缺少；没有或不显示某事物|||prep.没有，缺乏；在外面|||conj.除非，如果不','I feel very lonely without my dog.','我的狗不在旁边我就很寂寞。','||Without|| the sun, nothing would grow.','没有太阳，就不会有生物。'}

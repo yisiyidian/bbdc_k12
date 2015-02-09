@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["augury"]={"augury","['ɔːgjʊrɪ]","['ɔɡjʊri]","n.预言",'n.预言,征兆,占卜','||Augury|| is the important part of Chinese traditional culture.','占卜是中国传统文化中的一个重要组成部分。','The |auguries|| of death are fast gathering around his head.','死亡凶兆迅速地在他脑海中盘旋。'}

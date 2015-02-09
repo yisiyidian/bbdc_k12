@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["equilibrium"]={"equilibrium","[,iːkwɪ'lɪbrɪəm; ,ekwɪ-]","[,ikwɪ'lɪbrɪəm]","n.平衡",'n.平衡,均衡','Change in the world around us disturbs our inner equilibrium.','我们周围世界的变化扰乱了我们内心的平静。','We have to keep an equilibrium of physical and psychological health.','我们得保持身心健康平衡。'}

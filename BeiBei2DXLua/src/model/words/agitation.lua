@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agitation"]={"agitation","[ædʒɪ'teɪʃ(ə)n]","[,ædʒɪ'teʃən]","n.激动",'n.激动,兴奋,煽动','Her voice quivered with agitation.','她激动得声音发抖。','By that time he had got over some of his agitation.','到这时候他激动不安的情绪已克服了一些。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carol"]={"carol","['kær(ə)l]","['kærəl]","n.颂歌",'n.颂歌,欢乐的歌|||vt.&vi.欢唱','Several of his friends came: Ben, ||Carol|| and Mike, for instance.','他的几个朋友来了, 比如本、 卡罗尔、 麦克.','She struck up the first carol on the grand piano.','她在那架大钢琴上演奏起第一支颂歌。'}

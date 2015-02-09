@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["volatile"]={"volatile","['vɒlətaɪl]","['vɑlətl]","adj.反复无常的",'adj.反复无常的,挥发性的,稍纵即逝的,脾气火爆的n.挥发性物质','He has a highly volatile personality.','他脾气反复无常。','With the markets being so volatile, investments are at great risk.','市场一直很不稳定，投资风险很大。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["horror"]={"horror","['hɒrə]","['hɔrɚ]","n.恐怖",'adj.恐怖的,令人毛骨悚然的|||n.恐怖,战栗,厌恶','He was filled with horror at the bad news.','听到这个坏消息，他心里充满恐怖。','Her son is a right little horror.','她的儿子是个不折不扣的小淘气。'}

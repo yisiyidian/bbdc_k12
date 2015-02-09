@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["middle"]={"middle","['mɪd(ə)l]","['mɪdl]","n.中部",'n.中部，中间；腰部；中央；正中|||adj.中部的；中央的；正中的；中间的|||vt.把…放在中间；把…对折|||vi.放在中间；对折','The sheets have worn thin in the middle.','床单的中间部分磨薄了。','There are 300 students or so in this middle school.','这所中学大约有300个学生。'}

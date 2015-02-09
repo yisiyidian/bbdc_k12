@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["saucer"]={"saucer","['sɔːsə]","['sɔsɚ]","n.茶托",'n.茶托,碟子','The cat lapped up all the milk in the saucer.','猫把碟中的牛奶舐得乾乾净净。','The tea slopped (over) into the saucer.','茶溢出流到茶托里了.'}

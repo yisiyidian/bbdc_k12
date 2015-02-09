@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shawl"]={"shawl","[ʃɔːl]","[ʃɔl]","n.披肩",'n.披肩,围巾|||vt.用披肩，用围巾','She gathered the shawl round her shoulders.','她用披肩把自己肩头裹紧.','I asked her to crochet a shawl for me.','我请求她给我钩一条围巾。'}

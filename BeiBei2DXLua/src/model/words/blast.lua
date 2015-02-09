@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blast"]={"blast","[blɑːst]","[blæst]","n.爆破",'n.爆破,冲击波,气流,一阵,汽笛声|||vi.爆破,突然发出声音|||vt.喷射,炸掉','The bomb blast killed several harmless passers-by.','炸弹爆炸使几个无辜行人受伤。','A trumpeter sent out a warning blast.','号兵吹出告警的号声。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jest"]={"jest","[dʒest]","[dʒɛst]","v.&n.说笑",'v.&n.说笑,玩笑|||vi.开玩笑','I said in jest I would marry Jim.','我开玩笑说要嫁给吉姆。','He is not a man to jest with.','他是个不能开玩笑的人。'}

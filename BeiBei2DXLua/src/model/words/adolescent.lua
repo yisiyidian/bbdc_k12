@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adolescent"]={"adolescent","[ædə'les(ə)nt]","[,ædə'lɛsnt]","adj.青春期的",'adj.青春期的,青少年的|||n.青少年','Many adolescents suffer from/have acne.','很多青少年患有痤疮[长粉刺].','Overgrowth is common in adolescents.','青少年成长过快是普遍现象.'}

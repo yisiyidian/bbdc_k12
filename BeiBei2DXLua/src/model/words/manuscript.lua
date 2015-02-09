@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manuscript"]={"manuscript","['mænjʊskrɪpt]","['mænjuskrɪpt]","n.手稿",'adj.手抄的|||n.手稿,原稿','The manuscript requires an expert to understand it.','这份手稿只有专家才看得懂.','He revised the manuscript of his book before sending it to the publisher.','他对自己那本书的手稿先进行校订，然后才把它交给出版社。'}

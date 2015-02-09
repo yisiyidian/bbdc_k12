@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mucous"]={"mucous","['mjuːkəs]","['mjʊkəs]","adj.黏液的",'adj.黏液的,似黏液的|||=mucus','Oil is mucous.','油是粘的。','My coat was dirty with mucous things.','我的衣服被粘的东西弄脏了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congratulation"]={"congratulation","[kəngrætjʊ'leɪʃ(ə)n]","[kən,ɡrætʃu'leʃən]","n.祝贺",'n.祝贺','May we proffer you our congratulations?','请让我们向你表示祝贺.','Please give him my congratulations when you see him.','请见到他时转达我的祝贺。'}

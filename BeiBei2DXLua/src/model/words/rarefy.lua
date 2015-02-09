@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rarefy"]={"rarefy","['reərɪfaɪ]","['rɛrə,fai]","vt.变稀少",'vt.变稀少(使...变纯净,抽真空)','The ||rarefied|| fluid said to run in the veins of the gods.','灵液诸神血管里流动着的稀有液体','He moves in very ||rarefied|| circles.','他活动于上流阶层。'}

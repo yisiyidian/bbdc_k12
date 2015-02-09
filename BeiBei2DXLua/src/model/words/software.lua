@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["software"]={"software","['sɒf(t)weə]","['sɔftwɛr]","n.软件",'n.软件','We deal in hardware but not software.','我们只经营硬件而不经营软件.','Our English software is an interactive educational software.','我们的英语软件是一种交互式教育软件。'}

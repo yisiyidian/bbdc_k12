@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["springtime"]={"springtime","['sprɪŋtaɪm]","['sprɪŋ'taɪm]","n.春季",'n.春季,青春期,初期','The sap rises in trees in springtime.','春天树中的汁液向上流动.','I like springtime best of all.','我最喜欢春天。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hilly"]={"hilly","['hɪlɪ]","['hɪli]","adj.多小山的",'adj.多小山的,丘陵的','This flower grows on a hilly area.','这种花生长在山地上.','There is a large hilly area in the northwest.','西北部有一大片丘陵地带。'}

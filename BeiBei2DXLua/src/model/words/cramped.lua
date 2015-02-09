@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cramped"]={"cramped","[kræmpt]","[kræmpt]","adj.狭促的",'adj.狭促的,难懂的,难辨的','I feel cramped by the limitations of my job.','我觉得受工作束缚, 没有什麽奔头儿.','Our accommodation is rather cramped.','我们住的地方相当拥挤。'}

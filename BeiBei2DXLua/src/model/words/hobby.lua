@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hobby"]={"hobby","['hɒbɪ]","['hɑbi]","n.业余爱好",'n.业余爱好','His hobby is entomology.','他爱好昆虫学.','She hasn\'t got any hobbies unless you call watching TV a hobby.','她没有任何嗜好--除非把看电视也算作嗜好的话.'}

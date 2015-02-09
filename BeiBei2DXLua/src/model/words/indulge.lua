@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indulge"]={"indulge","[ɪn'dʌldʒ]","[ɪn'dʌldʒ]","vt.纵情于",'vt.纵情于,放任,迁就|||vi.放纵自己于...','She indulges his every whim.','她对他的怪念头有求必应。','He indulged his children too much.','他太纵容他的孩子们了。'}

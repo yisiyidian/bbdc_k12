@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["led"]={"led","[led]","[lɛd]","动词lead的过去式和过去分词",'动词lead的过去式和过去分词|||abbr.发光二极管(=lightemittingdiode)','His rashness led ultimately to his ruin.','他的急燥卤莽最终导致了他的毁灭。','They led a holy life.','他们过着圣洁的生活。'}

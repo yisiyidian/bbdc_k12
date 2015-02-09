@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["erratic"]={"erratic","[ɪ'rætɪk]","[ɪ'rætɪk]","adj.无确定路线",'adj.无确定路线,不稳定的,奇怪的,游走的,移动的;偏离的,偏执的,固执的,无规律的,|||漂泊的,反复无常的,漂游的|||n.古怪的人,漂泊无定的人','This clock is rather erratic.','这个钟不太准.','He was like a stormy, erratic boy.','他好象是个性急的古怪的孩子。'}

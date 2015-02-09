@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fodder"]={"fodder","['fɒdə]","['fɑdɚ]","n.饲料",'n.饲料,草料，原料|||vt.供草料','Food and fodder should go ahead of troops and horses.','兵马未动，粮草先行。','Old movies were the cheapest broadcast fodder.','老电影是最廉价的播放素材。'}

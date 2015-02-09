@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["opprobrium"]={"opprobrium","[ə'prəʊbrɪəm]","[ə'probrɪəm]","n.污名",'n.污名,耻辱,咒骂','His political opinions have attracted the opprobrium of the Left.','他的政治观点遭到左派的抨击。','he would face dissent at home and opprobrium abroad.','a'}

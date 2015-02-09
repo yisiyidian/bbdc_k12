@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thicken"]={"thicken","['θɪk(ə)n]","['θɪkən]","v.使...厚",'v.变浓,使...厚,变为复杂','Thicken the sauce with cornstarch. The crowd thickened near the doorway.','用淀粉把酱汁弄稠。人群在门口处密集','It is coming in foggy; we had better get home before it thickens.','现在开始起雾了，我们最好赶在雾浓前回家。'}

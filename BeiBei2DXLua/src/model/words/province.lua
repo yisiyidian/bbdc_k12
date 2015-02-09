@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["province"]={"province","['prɒvɪns]","['prɑvɪns]","n.省",'n.省,范围','He established himself as governor of the province.','他当上了省长.','Riots are of frequent occurrence in this province.','这省经常发生骚乱.'}

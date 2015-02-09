@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nurture"]={"nurture","['nɜːtʃə]","['nɝtʃɚ]","n.养育",'n.养育,照顾,教育,滋养,营养品|||vt.养育,给与营养物,教养,扶持','The child got his nurture from his loving parents.','这个孩子由他慈爱的双亲养育的。','Most vegetables we buy in winter are nurtured in the greenhouse.','我们冬天买的大多数蔬菜都是在温室里培育的。'}

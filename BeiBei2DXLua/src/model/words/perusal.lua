@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perusal"]={"perusal","[pə'ruːz(ə)l]","[ pə'ru:zəl ]","n.熟读",'n.熟读,精读,浏览，仔细研究','That article deserves careful perusal.','那篇文章值得细读。','Please enclose a copy of Identity card or passport perusal.','请附身份证或护照副本，以供核对。'}

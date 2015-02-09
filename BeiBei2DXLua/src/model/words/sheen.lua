@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sheen"]={"sheen","[ʃiːn]","[ʃin]","n.光辉",'n.光辉,光彩,光泽|||adj.光辉的,发光的,有光泽的','The pearly sheen absorbed many people.','珍珠的光泽吸引了很多人。','Her hair has a beautiful golden sheen.','她的头发有美丽的金色的光泽。'}

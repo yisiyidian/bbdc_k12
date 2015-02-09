@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rank"]={"rank","[ræŋk]","[ræŋk]","n.排名",'n.队列,排名,等级,军衔,阶级|||adj.繁茂的,恶臭的,讨厌的|||vt.排列,归类于','I rank her among the country\'s best writers.','我认为她可属全国最优秀作家之列。','A general ranks a captain.','将军的级别比上尉高。'}

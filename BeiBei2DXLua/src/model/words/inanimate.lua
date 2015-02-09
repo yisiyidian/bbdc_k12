@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inanimate"]={"inanimate","[ɪn'ænɪmət]","[ɪn'ænɪmət]","adj.无生命的",'adj.无生命的','I am not inattentive to inanimate nature, nor unmindful of the past.','对无生命的自然我并非不关心，对过去我也并非不留意。','Rocks and stones are inanimate.','岩石是没有生命的。'}

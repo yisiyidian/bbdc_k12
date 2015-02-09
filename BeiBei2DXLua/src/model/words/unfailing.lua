@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unfailing"]={"unfailing","[ʌn'feɪlɪŋ]","[ʌn'felɪŋ]","adj.无尽的",'adj.无尽的,无穷的，可靠的','an unfailing source of good stories.','好故事的无穷尽源泉','unfailing loyalty.','坚定的忠诚'}

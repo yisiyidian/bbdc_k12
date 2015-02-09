@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trigger"]={"trigger","['trɪgə]","['trɪɡɚ]","n.触发器",'n.触发器,板机,起因|||vt.触发,发射|||vi.触发','I pulled the trigger and the gun went off.','我一扣扳机，枪就响了。','A wide range of emotionally stressful events may trigger a relapse.','多种令人情绪紧张的事情都可能引起旧病复发.'}

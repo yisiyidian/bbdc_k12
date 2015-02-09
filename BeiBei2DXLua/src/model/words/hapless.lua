@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hapless"]={"hapless","['hæplɪs]","[ 'hæplis ]","adj.倒霉的",'adj.倒霉的,不幸的','His hapless lover was knocked down by a car.','他那不幸的恋人被汽车撞倒了。','All of them were hapless victims of this hurricane.','他们都是这场飓风的不幸受害者。'}

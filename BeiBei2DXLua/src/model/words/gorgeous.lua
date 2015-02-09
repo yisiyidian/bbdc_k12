@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gorgeous"]={"gorgeous","['gɔːdʒəs]","['ɡɔrdʒəs]","adj.华丽的",'adj.华丽的,灿烂的,好极了','His paintings are a kaleidoscope of gorgeous colours.','他的油画色彩斑斓, 变化万千.','In the evening the rosy clouds were gorgeous.','傍晚的云霞绚丽多彩。'}

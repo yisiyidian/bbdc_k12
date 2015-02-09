@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rock"]={"rock","[rɒk]","[rɑk]","n.岩石",'n.岩石,巨石,摇滚乐,篮球|||vt.摇动,使震惊,使动心|||vi.来回摇动,跳摇摆舞','He rocked back and forth in his rocking chair.','他坐在摇椅里前后摇晃着。','The scandal rocked the government.','这件丑闻把政府搅得十分狼狈。'}

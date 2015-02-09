@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peregrination"]={"peregrination","[,pɛrəɡrɪ'neʃən]","[ ,periɡri'neiʃən ]","n.游历",'n.游历,旅行','In his peregrination through the countryside, he gained an appreciation for the beauty of nature.','在游历乡间时，他学会了如何欣赏大自然之美。','He experienced different cultures during his peregrination.','在国外的游历使他体验到不同的文化。'}

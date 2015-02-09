@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["floor"]={"floor","[flɔː]","[flɔr]","n.地板",'n.地板,楼层,底部,地面,议员,底线|||vt.铺地板,击倒,油门踩到底','He left his clothes lying all over the floor.','他把衣服扔得满地都是.','She held the floor for over an hour.','她发言占了一个多小时。'}

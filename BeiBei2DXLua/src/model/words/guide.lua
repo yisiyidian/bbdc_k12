@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guide"]={"guide","[gaɪd]","[ɡaɪd]","vt.指导",'vt.引路；指导；操纵；影响|||n.指导者；向导；导游；有指导意义的事物','His elder sister had been his guide, counsellor and friend.','他姐姐过去一直指导他，给他出主意，是他的朋友。','He guided the man through the streets to the railway station.','他带这个人走过街道到火车站。'}

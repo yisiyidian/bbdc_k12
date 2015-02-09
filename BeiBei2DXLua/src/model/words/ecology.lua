@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ecology"]={"ecology","[ɪ'kɒlədʒɪ; e-]","[ɪ'kɑlədʒi]","n.生态学",'n.生态学','holistic ecology','注重整体的生态学','Concern about ecology is a recent development.','对生态学的关心是最近才有的事。'}

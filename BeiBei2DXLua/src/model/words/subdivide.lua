@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subdivide"]={"subdivide","[sʌbdɪ'vaɪd]","['sʌbdɪvaɪd]","vt.细分",'vt.细分(细区分,再划分,重分,叠分,分小类)','Part of the building has been subdivided into offices.','这座大楼的一部分隔开用作办公室了.','I have to subdivide the work.','我必须再把工作细分。'}

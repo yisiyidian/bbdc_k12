@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acquit"]={"acquit","[ə'kwɪt]","[ə'kwɪt]","v.开释",'v.开释,释放,行为','He acquitted himself like a hero.','他表现得像个英雄。','He was acquitted of the crime.','他被宣告无罪。'}

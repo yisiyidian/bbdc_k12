@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waterproof"]={"waterproof","['wɔːtəpruːf]","['wɔtɚpruf]","adj.防水的",'adj.防水的，耐水的|||n.防水材料|||（英）雨衣|||vt.使...能防水','I bought a waterproof watch.','我买了一块防水表。','My mother bought me a waterproof watch.','我妈妈给我买了一块防水手表.'}

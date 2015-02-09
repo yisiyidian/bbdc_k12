@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["edify"]={"edify","['edɪfaɪ]","[ 'edifai ]","vt.启发",'vt.建立，训导，教导，启发，熏陶','These essays edify me in some way.','他们的文章在某方面对我有所启发。','Travel is an edifying experience, especially for young people.','旅游可以使人增长见闻，尤其对年轻人。'}

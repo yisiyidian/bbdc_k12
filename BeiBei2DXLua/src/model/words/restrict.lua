@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["restrict"]={"restrict","[rɪ'strɪkt]","[rɪ'strɪkt]","v.限制",'v.限制,约束','He feels this new law will restrict his freedom.','他觉得这一新法律会限制他的自由.','Recent laws have tended to restrict the freedom of the press.','新法例有限制新闻自由的趋势.'}

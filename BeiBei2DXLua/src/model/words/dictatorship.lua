@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dictatorship"]={"dictatorship","[dɪk'teɪtəʃɪp]","[dɪk'tetɚ'ʃɪp]","n.独裁（权）",'n.独裁（权），专政','The country was then living under a military dictatorship.','那个国家当时正处在军事独裁统治之下。','That country is now living under a military dictatorship.','那个国家现在正处于军事独裁统治之下。'}

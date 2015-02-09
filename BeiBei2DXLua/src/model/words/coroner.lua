@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coroner"]={"coroner","['kɒr(ə)nə]","['kɔrənɚ]","n.验尸官",'n.验尸官','The coroner recorded a verdict of accidental death.','验尸官记录下了意外死亡的判定。','The coroner recorded a verdict of accidental death.','验尸官记录下了意外死亡的判定。'}

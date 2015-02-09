@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["providential"]={"providential","[prɒvɪ'denʃ(ə)l]","[,prɑvɪ'dɛnʃl]","adj.幸运的",'adj.幸运的，神助的','Their departure just before the floods was providential.','他们恰在发洪水之前离开, 走得真是时候.','He explained the yellow fever epidemic as a providential act to discourage urban growth.','他对黄热病疫情对城市化进程的阻碍为一种巧合做出了解释。'}

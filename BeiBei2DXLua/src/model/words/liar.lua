@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liar"]={"liar","['laɪə]","['laɪɚ]","n.说谎者",'n.说谎者','You scabby liar!','你这个卑鄙的撒谎的人!','She laid about him, calling him a liar and a cheat.','她攻击他，说他说谎、是个骗子。'}

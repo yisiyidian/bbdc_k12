@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["violate"]={"violate","['vaɪəleɪt]","['vaɪəlet]","vt.违犯",'vt.违犯,亵渎,干扰,侵犯,强奸','I\'m committed not to violate the rules.','我有义务不违反规定。','The country violated the international agreement.','这个国家违反了国际协议。'}

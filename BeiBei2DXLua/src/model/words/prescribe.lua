@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prescribe"]={"prescribe","[prɪ'skraɪb]","[prɪ'skraɪb]","vi.规定",'vi.规定,开药方|||vt.规定,命令,开处方','Army regulations prescribe how rifles must be carried.','军规中对持枪方式有明文规定。','Regulations prescribe certain standards for building materials.','有规章规定建筑材料的某些标准.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["offshore"]={"offshore","['ɒfʃɔː; ɒf'ʃɔː]","[,ɔf'ʃɔr]","adj.海面的",'adj.海面的,吹向海面的|||adv.向海面','A gentle current carried them slowly offshore.','和缓的潮流慢慢地把他们带离了海岸.','His money is in an offshore island bank.','他的钱都存进了海外的一家银行.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrestle"]={"wrestle","['res(ə)l]","['rɛsl]","v.摔角",'v.摔角,斗争，用力举起|||n.摔角,角力,扭斗','The guards wrestled with the intruders.','护卫员同闯入的人扭打起来.','He wrestled his opponent to the floor/ground.','他把对手摔倒在地上.'}

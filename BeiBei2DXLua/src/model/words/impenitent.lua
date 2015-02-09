@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impenitent"]={"impenitent","[ɪm'penɪt(ə)nt]","[ɪm'pɛnɪtənt]","adj.不知悔改的",'adj.不知悔改的,顽迷的|||n.不知悔改的人,顽迷的人','An impenitent criminal who said he\'d do it all over again once given the chance.','一个不知悔改的罪犯声称，一旦有机会就卷土重来。','He have made a big mistake but he is still impenitent.','他犯了一个大错但却还是不知悔改。'}

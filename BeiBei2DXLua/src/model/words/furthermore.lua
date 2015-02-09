@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["furthermore"]={"furthermore","[fɜːðə'mɔː]","[,fɝðɚ'mɔr]","adv.而且",'adv.而且,此外','The house is too small, and furthermore, it\'s too far from the office.','＂这座房子太小，而且离办公地点也太远。＂','I don\'t like her because she is too tall and furthermore she smokes too much.','我不喜欢她,因为她太高,另外她抽烟太厉害.'}

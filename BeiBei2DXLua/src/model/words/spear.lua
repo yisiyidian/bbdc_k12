@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spear"]={"spear","[spɪə]","[spɪr]","n.矛(正负电子对撞机)",'n.矛(正负电子对撞机)|||vt用矛刺','The spear curved through the air.','标枪在空中沿曲线运动.','The hunter hurled his spear at the tiger.','猎人用力把他的长矛向虎投去。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gutter"]={"gutter","['gʌtə]","['gʌtɚ]","n.排水沟",'n.排水沟,槽,贫民区','In spite of poor health, he would rather continue to work for the collective than gutter out without doing anything.','他尽管身体不好，但他要继续为集体干活，而不愿无所事事地等死。','Gutter language; the gutter press.','下层社会的语言；下流的报纸'}

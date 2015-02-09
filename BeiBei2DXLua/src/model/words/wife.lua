@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wife"]={"wife","[waɪf]","[waɪf]","n.妻子",'n.妻子,夫人','He kissed his wife and children good-bye.','他吻别他的妻子和孩子。','The cruel man abandoned his wife and child.','那个狠心的男人抛弃了他的妻儿。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tarnish"]={"tarnish","['tɑːnɪʃ]","['tɑrnɪʃ]","n.晦暗",'n.晦暗,生锈,污点|||v.使生锈,沾污','The firm\'s good name was badly tarnished by the scandal.','这件丑事玷污了公司的好名声.','slander that tarnished the senator\'s image.','玷污参议员形象的诽谤之词'}

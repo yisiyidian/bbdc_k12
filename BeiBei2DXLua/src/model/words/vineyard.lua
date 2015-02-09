@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vineyard"]={"vineyard","['vɪnjɑːd; -jəd]","['vɪnjɚd]","n.葡萄园",'n.葡萄园,酿酒庄园','One that owns a vineyard and produces wine.','种葡萄酿酒的人拥有葡萄园并酿葡萄酒者','A vineyard or wine-producing region in France.','克鲁法国的葡萄园或葡萄酒生产区'}

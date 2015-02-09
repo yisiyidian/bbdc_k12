@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stylish"]={"stylish","['staɪlɪʃ]","['staɪlɪʃ]","adj.流行的",'adj.现代风格的,流行的,潇洒的','He is a stylish dresser.','他穿着时髦.','Baggy pants are meant to be stylish, not offensive.','松松垮垮的裤子意味着时髦, 而不是无礼.'}

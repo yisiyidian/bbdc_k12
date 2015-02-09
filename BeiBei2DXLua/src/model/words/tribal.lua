@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tribal"]={"tribal","['traɪb(ə)l]","['traɪbl]","adj.部落的",'adj.部落的,种族的','||Tribal|| dancers were wearing grotesque masks.','部落中跳舞的人戴着古怪的面具。','The country was torn apart by fierce tribal hostilities.','那个国家被部落间的激烈冲突弄得四分五裂.'}

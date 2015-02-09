@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["forebode"]={"forebode","[fɔː'bəʊd]","[ fɔ:'bəud ]","v.预兆",'v.预兆,凶兆|||vt.预兆','These developments forebode disaster.','这些情况预示著要有灾祸.','Her angry face forebode a confrontation.','她一脸怒气预示将有一场冲突.'}

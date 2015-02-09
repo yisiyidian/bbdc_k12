@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["urgent"]={"urgent","['ɜːdʒ(ə)nt]","['ɝdʒənt]","adj.急迫的",'adj.急迫的,紧要的,紧急的','It\'s not urgent we can do it next week or whenever.','不是急事--我们可以下星期做或其他时候做.','I\'m afraid something urgent has come up; I won\'t be able to see you tonight.','很抱歉, 有些急事; 今晚不能见你了.'}

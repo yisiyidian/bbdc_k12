@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["third"]={"third","[θɜːd]","[θɝd]","adj.第三(的)",'adj.第三(的)|||n.三分之一|||num.第三','This tennis player ranked third in the world.','这位网球运动员排名世界第三。','The favourite came in third.','那个最有希望获胜的却跑了个第三名.'}

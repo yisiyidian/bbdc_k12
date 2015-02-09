@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glimpse"]={"glimpse","[glɪm(p)s]","[ɡlɪmps]","n.一瞥",'n.一瞥,一闪|||vt.&vi.一瞥,闪烁','He caught a glimpse of me when I passed by.','当我走过时, 他瞥了我一眼。','The fans of the actress craned their necks to catch a glimpse of their idol.','那位女演员的崇拜者们伸长了脖子想看一看他们崇拜的偶像。'}

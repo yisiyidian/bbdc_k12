@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disport"]={"disport","[dɪ'spɔːt]","[ dis'pɔ:t ]","v.玩",'v.玩,耍,使快乐|||n.玩,耍','We saw many people disporting themselves in the park.','我们看到公园里有许多人游玩。','Every Sunday, they disport themselves either in the parks or in the mountains.','每周日他们或去公园或去爬山。'}

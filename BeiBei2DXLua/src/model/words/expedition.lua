@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expedition"]={"expedition","[ekspɪ'dɪʃ(ə)n]","[,ɛkspə'dɪʃən]","n.远征",'n.远征,探险队,迅速','Her enthusiasm for the expedition was waning rapidly.','她对这次出行的热劲迅速减低.','The expedition suffered all the rigours of a Canadian winter.','这支探险队饱受了加拿大严冬的折磨。'}

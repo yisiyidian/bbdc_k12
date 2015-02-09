@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["objective"]={"objective","[əb'dʒektɪv]","[əb'dʒɛktɪv]","adj.客观的",'adj.客观的,目标的|||n.目标,目的;物镜|||n.=objectivecase宾语','All our objectives were gained.','我们所有的目标均已达成。','We have succeeded in our main objectives.','我们已经成功地达到了主要目标。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pat"]={"pat","[pæt]","[pæt]","n.轻拍",'n.轻拍,拍打声,|||vt.轻拍,拍打|||vi.轻跑,轻击|||adv.适时,彻底|||adj.油腔滑调的,恰好的,合适的','The mother patted the little girl to make her go to sleep.','母亲拍小女孩入睡。','It\'s a complex question and your answer was too pat.','这是一个复杂的问题，你的回答来得太快了。'}

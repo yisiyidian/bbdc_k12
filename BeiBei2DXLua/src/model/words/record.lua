@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["record"]={"record","['rekɔːd]","['rɛkərd]","n.记录",'n.记录,纪录,唱片|||vt.记录,(将声音等)录下，表明|||adj.关于','Just for the record, the minister\'s statement is wrong on two points.','必须明确指出，部长的言论有两点是错误的。','My voice records quite well.','我的声音录下来很好听。'}

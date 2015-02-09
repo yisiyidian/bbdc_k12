@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gap"]={"gap","[gæp]","[ɡæp]","n.(意见、个性等的)差异",'n.(意见、个性等的)差异,缝隙,漏洞,缺口|||vt.制造缺口|||嘉普(财富500强公司之一，总部所在地美国,主要经营服装零售)','How can we bridge the gap between rich and poor?','怎样才能缩小贫富之间的差距?','Reducing the gap between rich and poor is one of the main challenges facing the government.','缩小贫富之间的差距是政府面临的主要难题之一.'}

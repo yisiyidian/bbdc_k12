@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hallmark"]={"hallmark","['hɔːlmɑːk]","['hɔlmɑrk]","n.纯度检验证明",'n.纯度检验证明,品质证明|||v.加盖纯度检验证明,有品质保证的','The plan has all the hallmarks of being a total failure.','这个方案具有彻底失败的一切标志。','Attention to detail is the hallmark of a fine craftsman.','能工巧匠的特点是一丝不苟.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["daylight"]={"daylight","['deɪlaɪt]","['delaɪt]","n.日光",'n.日光，白昼，黎明','The robbery occurred in broad daylight, in a crowded street.','在拥挤的街道上, 光天化日之下竟发生了抢劫.','||Daylight|| was ebbing away.','白昼在逐渐消失.'}

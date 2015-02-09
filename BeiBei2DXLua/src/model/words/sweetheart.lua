@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sweetheart"]={"sweetheart","['swiːthɑːt]","['swit'hɑrt]","n.情人",'n.情人,爱人|||adj.私下达成的','A favored female companion or sweetheart.','女朋友最喜欢的女性同伴或爱人','His sweetheart is a pretty girl.','他的情人是一个可爱的女孩。'}

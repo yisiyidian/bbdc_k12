@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["touching"]={"touching","['tʌtʃɪŋ]","['tʌtʃɪŋ]","adj.动人的",'n.触摸|||adj.动人的,悲惨的|||vbl.触摸,接触','The two wires were touching.','那两条金属线搭在一起了.','There was a touching air of innocence about the boy.','这个男孩有一种令人感动的天真神情.'}

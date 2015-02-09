@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["with"]={"with","[wɪð]","[wɪð]","prep.和...一起",'prep.和...一起,用,随着,包括','I leave the baby with my mother every day.','我每天都把婴儿交给我母亲照料。','I\'m with you all the way!','我始终和你的意见一致！'}

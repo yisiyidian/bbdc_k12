@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["systematic"]={"systematic","[sɪstə'mætɪk]","['sɪstə'mætɪk]","adj.有系统的",'adj.有系统的,分类的,体系的','Science means systematic knowledge possessed as a result of practice and study.','科学是由于实践和研究的结果而获得的系统知识。','Arranged or proceeding in regular, systematic order.','井然的，有条理的以有规律的，有系统的秩序排列或进行的'}

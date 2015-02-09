@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seed"]={"seed","[siːd]","[sid]","n.种子",'n.种子|||vi.(植物)结实,播种|||vt.播种','The farmers were scattering seed on the fields.','农夫把种子撒在田里。','Do you know about the evolution of a seed into a plant?','你知道从种子发展成为植物的过程吗？'}

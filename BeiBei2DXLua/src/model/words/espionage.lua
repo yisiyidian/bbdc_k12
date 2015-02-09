@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["espionage"]={"espionage","['espɪənɑːʒ; -ɪdʒ]","['ɛspɪənɑʒ]","n.间谍活动",'n.间谍活动','He was caught in the very act of commercial espionage.','他在从事商业间谍活动时被捕。','The episode could reasonably serve as a unique epic of royal espionage!','这段历史可说是王室谍报活动中独一无二的华章。'}

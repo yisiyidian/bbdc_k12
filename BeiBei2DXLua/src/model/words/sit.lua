@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sit"]={"sit","[sɪt]","[sɪt]","vt.坐",'vt.坐,担任,开会,孵|||vi.坐,孵|||n.坐','All the others ran away, but I ||sat|| tight.','别人都跑了，但我在原地没动。','I ||sat|| every day for a week until the painting was finished.','我每天那样坐著，一个星期才把我画好。'}

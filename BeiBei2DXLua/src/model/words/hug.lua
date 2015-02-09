@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hug"]={"hug","[hʌg]","[hʌɡ]","v.拥抱",'n.紧抱,拥抱|||vt.紧抱,固执,挨着,停靠|||vi.紧爆,紧紧靠着','He greeted her with a loving hug.','他以一个深情的拥抱来迎接她。','She gave her mother an affectionate hug.','她紧紧拥抱著她的母亲。'}

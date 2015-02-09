@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["staggering"]={"staggering","['stæɡərɪŋ]","['stæɡərɪŋ]","adj.摇晃的",'adj.摇晃的,惊人的|||动词stagger的现在分词','||Staggering|| along, the drunkard plumped against a tree on the roadside.','那个醉汉东一斜西一歪，猛地撞到了路边的树上。','The earth\'s ecosystem has been deteriorating at a staggering rate.','地球的生态系统正以一种惊人的速度恶化。'}

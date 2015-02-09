@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turnip"]={"turnip","['tɜːnɪp]","['tɝnɪp]","n.萝卜",'n.萝卜，芜青，大头菜','Cabbage and turnip remain cheap and plentiful.','白菜和萝卜依然是多而且便宜。','Would you like some turnip?','吃点芜菁吗？'}

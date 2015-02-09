@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["definitely"]={"definitely","['defɪnɪtlɪ]","['dɛfɪnətli]","adj.明确地",'adj.明确地,确切地|||adv.肯定地','All the students that work hard can definitely pass the exam.','用功的学生必能通过考试。','This restaurant has definitely gone downhill since I last came here.','从我上次来过之后,这家餐馆越来越糟.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rodent"]={"rodent","['rəʊd(ə)nt]","['rodnt]","n.啮齿动物",'n.啮齿动物|||adj.啮齿目的','It\'s not a dog, but a rodent that lives in underground tunnels.','它不是一直狗, 而是一种住在地下隧道里的啮齿类动物.','Did the rodent droppings have any specific shape or form?','老鼠的排泄物有什么特别的形状 吗 ?'}

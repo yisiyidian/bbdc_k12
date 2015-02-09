@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pave"]={"pave","[peɪv]","[pev]","v.铺设",'v.铺设,安排,为...铺路','The road to hell is paved with good intentions.','好心办坏事。','The road was paved with cobblestones.','那条路是用鹅卵石铺成的。'}

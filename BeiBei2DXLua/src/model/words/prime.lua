@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prime"]={"prime","[praɪm]","[praɪm]","adj.首要的",'adj.最初的,首要的,最好的，典型的|||n.青春,壮年,全盛时期|||vt.事先指点,在（金属、木材等上）打底漆|||vi.变得首要','What was said was of prime importance.','说过的那件事是很重要的。','He makes it his prime care.','他极为重视这件事。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antithesis"]={"antithesis","[æn'tɪθəsɪs]","[æn'tɪθəsɪs]","n.对照",'n.对照,正相反,对比法','Slavery is the antithesis of freedom.','奴役与自由是对立的。','The style of his speech was in complete antithesis to mine.','他和我的讲话方式完全相反。'}

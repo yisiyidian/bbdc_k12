@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elicit"]={"elicit","[ɪ'lɪsɪt]","[ɪ'lɪsɪt]","vt.引出",'vt.引出,诱探出','She loves to elicit other\'s privacy.','她热衷刺探他人隐私。','At last we have elicited the truth from him.','我们终于从他那里探得真相。'}

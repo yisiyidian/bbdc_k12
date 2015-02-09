@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extreme"]={"extreme","[ɪk'striːm; ek-]","[ɪk'strim]","adj.极度的",'adj.极度的,极端的,尽头的,严重的,末端的|||n.极端,极限','||Extreme|| poverty had reduced them to a state of apathy.','极端的贫困使他们万念俱灰.','The capital is in the extreme south of the country.','首都在这个国家的最南端。'}

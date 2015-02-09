@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regenerate"]={"regenerate","[rɪ'dʒenəreɪt]","[rɪ'dʒɛnəret]","vt.再生",'vt.再生(回收,革新)|||adj.再生的(更新的,革新的)','After his holiday he felt regenerated.','他休假之後觉得又有了精神.','Their aim is to regenerate British industry.','他们的目的是复兴英国的工业.'}

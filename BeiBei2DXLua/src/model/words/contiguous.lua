@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contiguous"]={"contiguous","[kən'tɪgjʊəs]","[kən'tɪɡjuəs]","adj.邻近的",'adj.邻近的,接触的,连续的','California and Mexico are contiguous.','加利福尼亚和墨西哥相邻。','The two states are contiguous to each other, but the laws are quite different.','两个国家虽然比邻但是他们的法律却迥异。'}

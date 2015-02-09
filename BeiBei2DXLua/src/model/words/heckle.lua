@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heckle"]={"heckle","['hek(ə)l]","['hɛkl]","vt.以麻梳梳理",'vt.以麻梳梳理,激烈质问,使困惑','The reporter wants to heckle the candidate with those embarrassing question.','记者想用那些让人难为情的问题来刁难这位候选人。','The Socialist candidate was heckled continuously.','社会党候选人不断受到诘问.'}

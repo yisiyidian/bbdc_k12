@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entail"]={"entail","[ɪn'teɪl; en-]","[ɪn'tel]","vt.使必需",'vt.使必需,使蒙受;限定继承|||n.限定继承权','The house and estate are entailed on the eldest daughter.','这所房子和地产限定由长女继承.','This job entails a lot of hard work.','这项工作需要十分努力.'}

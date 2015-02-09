@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lease"]={"lease","[liːs]","[lis]","n.租约",'n.租约,租期,租|||v.出租,租出,租得','Since recovering from her operation, she\'s had a new lease of life.','她手术复元以後活得更有劲了.','Our present lease on the flat expires next month.','我们这套公寓的租约下月到期.'}

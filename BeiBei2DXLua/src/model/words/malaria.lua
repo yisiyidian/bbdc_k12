@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malaria"]={"malaria","[mə'leərɪə]","[mə'lɛrɪə]","n.疟疾",'n.疟疾','||Malaria|| is endemic in/to many hot countries.','疟疾是热带许多国家的地方病.','Mosquitoes are carriers of malaria.','蚊子是疟疾的传播媒介.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["podium"]={"podium","['pəʊdɪəm]","['podɪəm]","n.讲台",'n.讲台，矮墙,腰墙,突出的座席|||n.[生]管足','I felt my legs trembling when I stepped onto the podium.','我走上讲台时觉得自己的腿在发抖。','The towers rise out of a concrete podium.','这些塔楼耸立在一个混凝土墩座上。'}

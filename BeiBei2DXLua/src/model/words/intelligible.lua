@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intelligible"]={"intelligible","[ɪn'telɪdʒɪb(ə)l]","[ɪn'tɛlɪdʒəbl]","adj.可理解的",'adj.可理解的,易理解的,明了的','This report would be intelligible only to an expert in computing.','只有计算机运算专家才能看懂这份报告.','The book is intelligible to anyone.','这本书任何人都看得懂。'}

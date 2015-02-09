@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crayon"]={"crayon","[ˈkreɪən]","[ˈkreɪən]","n.蜡笔",'n.蜡笔,蜡笔画|||v.以蜡笔作画','A picture or sketch drawn with this type of crayon.','粉蜡笔画由这种粉笔绘制的图画或草图','The baby daubed up the wall with his crayon.','小孩用蜡笔把墙上画得斑斑点点。'}

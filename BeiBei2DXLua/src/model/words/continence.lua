@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["continence"]={"continence","['kɒntɪnəns]","['kɑntɪnəns]","n.自制",'n.自制,克制,节欲(尤指禁欲)','Many devotees show their loyalty to the God by continence.','许多信徒通过节欲来显示自己对上帝的忠诚。','Many devotees show their loyalty to the God by continence.','许多信徒通过节欲来显示自己对上帝的忠诚。'}

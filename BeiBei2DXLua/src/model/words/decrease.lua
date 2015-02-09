@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decrease"]={"decrease","[dɪ'kriːs]","[dɪ'kris]","vt.&vi.减少",'n.减少(量),降低|||vt.&vi.减少,降低','There has been a steady decrease in population in this city.','这个城市的人口在持续下降。','They are making further efforts to decrease military spending.','他们正在做进一步的努力来减少军费开支。'}

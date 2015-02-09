@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suited"]={"suited","['suːtɪd]","[ 'sju:tid ]","adj.适合的",'adj.适合的','I can\'t think of two people more suited to each other than you and David.','没有人比你和David俩人更般配的佳偶了。','The girl is quite suited for the position [work].','这姑娘很适合担任这个职务[这个工作]。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intrinsic"]={"intrinsic","[ɪn'trɪnsɪk]","[ɪn'trɪnsɪk]","adj.固有的",'adj.固有的,内在的','The intrinsic value of a coin is the value of the metal it is made of.','一枚钱币的内在价值是造这枚钱币的金属的价值。','The brooch has little intrinsic value.','这枚胸针没有一点实质的价值.'}

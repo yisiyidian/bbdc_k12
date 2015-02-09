@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bloated"]={"bloated","['bləʊtɪd]","['blotɪd]","adj.发胀的",'adj.发胀的,浮肿的,傲慢的','Diners do not want to leave the table feeling bloated.','食客们不想吃到肚子胀鼓鼓的才离开饭桌。','His face was bloated.','他脸部浮肿。'}

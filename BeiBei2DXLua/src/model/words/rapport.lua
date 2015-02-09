@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rapport"]={"rapport","[ræ'pɔː]","[ræ'pɔr]","n.关系",'n.关系,同意,一致','You have an intellectual rapport, a kind of easy companionship that makes me really jealous.','你机智友善、平易近人，真是让我嫉妒。','I wish to be in rapport with my family.','我希望能够和家里人和睦相处。'}

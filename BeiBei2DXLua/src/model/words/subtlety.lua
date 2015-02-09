@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subtlety"]={"subtlety","['sʌt(ə)ltɪ]","['sʌtlti]","n.微妙",'n.微妙,明敏','Such philosophical ||subtleties|| are beyond my reach.','我无法理解这种深奥的哲理。','He felt once more that he was no match for her in selfcontrol and subtlety.','他又一次觉得自己在涵养和机智上都不是她的对手。'}

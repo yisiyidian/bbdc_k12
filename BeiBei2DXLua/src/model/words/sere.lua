@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sere"]={"sere","[sɪə]","[sɪr]","adj.干枯的",'adj.干枯的,凋萎的|||=sear','The street is carpeted by sere fallen leaves.','枯叶铺满街道。','The desert was edged with sere vegetation.','沙漠的边缘零星地长着一些干枯的植物。'}

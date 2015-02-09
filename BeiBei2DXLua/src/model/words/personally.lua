@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["personally"]={"personally","['pɜːs(ə)n(ə)lɪ]","[ 'pə:sənəli ]","adv.亲自地",'adv.亲自地,以个人,就自己而言','He chose Germany, but personally I\'d prefer to go to Spain.','他选择了德国，而我个人倒更喜欢西班牙。','||Personally||, I like blue best.','我个人最喜欢蓝色。'}

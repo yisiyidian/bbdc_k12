@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eclipse"]={"eclipse","[ɪ'klɪps]","[ɪ'klɪps]","n.日蚀",'n.日蚀,月蚀,衰落|||v.引起日蚀,引起月蚀,使...黯然失色','Revelations of wrongdoing helped bring about the eclipse of the governor\'s career.','恶行的揭发导致州长的政治生涯毁灭。','It was reported that there would be an annular eclipse tomorrow.','据报道说，明天有日环食。'}

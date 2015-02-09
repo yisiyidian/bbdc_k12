@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alloy"]={"alloy","['ælɒɪ]","['ælɔɪ]","n.合金",'n.合金|||vt.使...成合金,搀以劣质,减低成色,影响或贬损|||vi.有合金能力','It\'s a kind of idealism that was alloyed with political skill.','这是一种伴有政治手腕的理想主义。','Brass is an alloy of copper and zinc.','黄铜是铜和锌的合金。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["betray"]={"betray","[bɪ'treɪ]","[bɪ'tre]","vt.背叛",'vt.误导,出卖,背叛,泄露vi.证明...错误','As long as you don\'t betray me, I\'ll do whatever you ask me to (do).','只要你不出卖我，要我做什么我都愿意。','His accent betrayed the fact that he was foreign.','他的口音显露出他是外国人。'}

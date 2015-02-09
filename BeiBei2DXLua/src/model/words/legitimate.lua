@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["legitimate"]={"legitimate","[lɪ'dʒɪtɪmət]","[ləˈdʒɪtəmɪt]","adj.合法的",'adj.合法的,正当的,合理的,世袭的|||vt.使合法,授权,宣布...为合法','A legitimate solution to the problem.','该问题合乎逻辑的解决办法','Politicians are legitimate targets for satire.','政治家理所当然是讽刺的靶子。'}

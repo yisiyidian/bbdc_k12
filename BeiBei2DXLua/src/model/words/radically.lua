@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radically"]={"radically","['rædɪkəlɪ]","['rædɪkli]","adv.根本地",'adv.根本地,完全地，过激地','I think we may have to rethink our policies fairly radically.','我认为我们可能要对我们的政策进行根本的反思.','The health service must be radically reformed.','公共医疗卫生服务必须进行彻底改革.'}

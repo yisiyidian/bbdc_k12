@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scurvy"]={"scurvy","['skɜːvɪ]","['skɝvi]","n.坏血病",'n.坏血病|||adj.下流的,卑鄙的,无礼的','Vitamin C deficiency can ultimately lead to scurvy.','缺乏维生素C最终会导致坏血病。','He\'s a scurvy wretch.','他是个卑鄙的家伙。'}

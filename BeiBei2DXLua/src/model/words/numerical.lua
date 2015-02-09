@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["numerical"]={"numerical","[njuː'merɪk(ə)l]","[nʊ'mɛrɪkl]","adj.数字的",'adj.数字的,用数字表示的','A numerical unit of academic achievement equal to a letter grade.','分数学业成绩的数字形式的单位，等于用字母表示的等级','Put these invoice in numerical order.','把这些发票按其号码顺序放好。'}

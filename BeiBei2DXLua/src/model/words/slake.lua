@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slake"]={"slake","[sleɪk]","[slek]","vt.消除",'vt.消除，满足|||vi.(石灰）熟化','We had to slake ourselves with rainwater in the desert.','在沙漠中我们不得不用雨水解渴。','I slaked my thirst with three cans of Coke.','我喝了 3 罐可乐解渴。'}

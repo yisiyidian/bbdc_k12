@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jurisprudence"]={"jurisprudence","[,dʒʊərɪs'pruːd(ə)ns]","[,dʒʊrɪs'prudns]","n.法律学",'n.法律学,法学','The question of law and interest is a fundamental question of jurisprudence and attracts more attention.','法与利益作为法理学中的一个重要命题而倍受关注。','He gave up medicine, then turned to the major of jurisprudence.','他放弃了医学，转修法学。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elasticity"]={"elasticity","[elæ'stɪsɪtɪ; iː-; ɪ-]","[,ilæ'stɪsəti]","n.弹力",'n.弹力,弹性','Having or exhibiting no elasticity.','无弹性的无弹性的或显示出没有弹性的','Although apparently rigid, bones exhibit a degree of elasticity that enables the skeleton to withstand considerable impact.','骨头看起来是脆硬的，但它也有一定的弹性，使得骨骼能够承受相当的打击。'}

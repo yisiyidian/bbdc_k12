@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thumb"]={"thumb","[θʌm]","[θʌm]","n.拇指",'n.拇指|||vt.示意要求搭车,用拇指翻页翻阅|||vi.翻页','The modern office block sticks out like a sore thumb among the old buildings in the area.','那座现代的办公楼直挺挺地竖在那片旧建筑物群中十分扎眼.','Don\'t suck your thumb; it\'s so dirty.','别舔手指头，太脏了。'}

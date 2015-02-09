@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["possible"]={"possible","['pɒsɪb(ə)l]","['pɑsəbl]","adj.可能的",'adj.可能的','It isn\'t remotely possible that you will be chosen to go.','完全没可能挑选你去。','I regret to say it\'s not possible.','很抱歉这是不可能的。'}

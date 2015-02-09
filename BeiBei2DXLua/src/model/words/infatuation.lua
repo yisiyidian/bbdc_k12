@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infatuation"]={"infatuation","[ɪn,fætʃʊ'eɪʃ(ə)n; -tjʊ-]","[ɪn,fætʃu'eʃən]","n.迷恋",'n.迷恋','This is only a passing infatuation, not to be taken too seriously.','这仅仅是一时的恋情, 不必过於认真.','His infatuation with her lasted six months.','他对她迷恋了半年.'}

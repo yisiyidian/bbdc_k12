@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["access"]={"access","['ækses]","['æksɛs]","vt.进入",'n.入口，出口；接近，进入；增长；爆发|||vt.接近，进入；使用，接近，获取','As her private secretary he has access to all her correspondence.','他是她的私人秘书，能接触到她所有的信件。','I can\'t access the file on your company because I\'ve forgotten the code.','我无法取出贵公司的文件，因为我把代码忘了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dappled"]={"dappled","['dæpld]","[ 'dæpld ]","adj.斑纹的",'adj.斑纹的,花的','The path was dappled with sunlight.','小径上洒下斑斑点点的阳光。','walk among the long dappled grass','走在阳光斑驳长着高草的草地上'}

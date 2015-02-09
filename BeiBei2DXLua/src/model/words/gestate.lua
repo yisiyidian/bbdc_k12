@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gestate"]={"gestate","[dʒe'steɪt]","['dʒɛstet]","v.孕育",'v.孕育,构思','Autumn is full of achievement, but we should gestate the new fruitage.','秋天是硕果累累的季节，但我们却要孕育新的果实。','All things need time to gestate and sprout.','一切都需要时间孕育成长。'}

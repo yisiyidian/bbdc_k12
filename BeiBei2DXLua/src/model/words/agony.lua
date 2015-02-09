@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agony"]={"agony","['ægənɪ]","['æɡəni]","n.(极度的)痛苦",'n.(极度的)痛苦,创痛','The boxer folded up in agony.','那拳击手痛苦地倒下了.','He was squirming (around) on the floor in agony.','他躺在地上痛苦地扭动著.'}

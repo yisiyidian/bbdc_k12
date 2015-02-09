@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resilient"]={"resilient","[rɪ'zɪlɪənt]","[rɪ'zɪlɪənt]","adj.有弹力的",'adj.弹回的,有弹力的,愉快的','Cotton is more resistant to being squashed and polyester is more resilient.','棉布更抗压，而涤纶更有弹性。','When the U.S. stock market collapsed in October 1987, the Japanese stock market was the most resilient.','1987年10月美国股市崩盘后，日本股市是反弹最快的。'}

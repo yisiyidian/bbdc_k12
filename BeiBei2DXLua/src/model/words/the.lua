@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["the"]={"the","[before a consonant ðə; before a vowel; ðɪ; stressed; ðiː]","[ðə]","art.这(那)",'adv.[用于比较级,最高级前]|||art.这(那),这(那)些','I haven\'t the slightest idea what you are talking about.','我一点也不明白你在说些什么。','Is it necessary for me to attend the meeting?','我真的必须参加这个会议吗？'}

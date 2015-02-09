@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["refulgent"]={"refulgent","[rɪ'fʌldʒ(ə)nt]","[rɪ'fʌldʒənt]","adj.辉煌的",'adj.辉煌的,灿烂的','China has five thousand refulgent history of civilization','中国有五千年灿烂的历史文明','the beaming sun; the effulgent daffodils; a radiant sunrise; a refulgent sunset.','灿烂的太阳;灿烂的水仙花;灿烂的日出;灿烂的日落。'}

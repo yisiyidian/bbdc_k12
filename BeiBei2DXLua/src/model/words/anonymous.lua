@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anonymous"]={"anonymous","[ə'nɒnɪməs]","[ə'nɑnəməs]","adj.匿名的",'adj.匿名的,无名的,没特色的','It is unpleasant to receive anonymous letters.','接到匿名信是一件令人不快的事。','An anonymous letter containing money came to me this morning and I do not know what to make of it.','今天早晨收到一封无名氏的来信，信内还附有钱，我不明白这是怎么回事。'}

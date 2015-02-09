@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excise"]={"excise","['eksaɪz]","[ɛk'saɪz]","n.货物税",'n.货物税,国产税|||vt.收税,切除','The censor insist on ||excising|| the passage from the film.','电影审查员坚持剪去影片的这一段。','New car buyers and smokers will be hit by increases in taxes and excise.','税率和消费税的提高将使新车买主和烟民受到打击。'}

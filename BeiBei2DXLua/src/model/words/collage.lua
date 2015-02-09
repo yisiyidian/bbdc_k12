@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collage"]={"collage","['kɒlɑːʒ; kə'lɑːʒ]","[kə'lɑʒ]","n.抽象拚贴画（用报纸、布、压平的花等碎片拼合而成的）",'n.抽象拚贴画（用报纸、布、压平的花等碎片拼合而成的）|||vt.把…创作成拼贴画，拼贴','His work is a rich collage of 20th-century painting styles.','他的作品糅合了20世纪各种绘画风格。','A collage of coloured paper covers a table top .','一副彩纸拼贴画盖在桌面上。'}

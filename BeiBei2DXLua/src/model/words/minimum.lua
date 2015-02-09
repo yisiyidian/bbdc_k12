@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minimum"]={"minimum","['mɪnɪməm]","['mɪnɪməm]","adj.最小的",'adj.最低的,最小的|||n.最小量,最低限度','We have pared down our expenses to a bare minimum.','我们已最大限度地削减了开支.','She just scraped into university with the minimum qualifications.','她刚刚及格, 勉强进了大学.'}

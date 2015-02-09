@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drink"]={"drink","[drɪŋk]","[drɪŋk]","n.饮料",'n.饮料|||vt.&vi.喝,喝酒','Please give me a drink of water.','请给我点水喝。','We must drink to the health of the bride.','我们要为新娘的健康干杯。'}

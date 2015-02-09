@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sensibility"]={"sensibility","[,sensɪ'bɪlɪtɪ]","[,sɛnsə'bɪləti]","n.感性",'adj.感觉(力),敏感性|||n.感性,敏感','He is incarcerated in his own sensibility.','他被囿于自己的敏感性之中。','He is a man of subtle and refined sensibility.','他是个感情细腻的男子。'}

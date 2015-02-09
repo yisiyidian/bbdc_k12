@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ladder"]={"ladder","['lædə]","['lædɚ]","n.梯子",'n.梯子,阶梯,梯状物','The little boy had an unsteady footing on the ladder.','那小孩在梯子上站得不稳。','It\'s considered unlucky to walk under a ladder.','从梯子下面走过被认为是不吉利的。'}

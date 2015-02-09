@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aviary"]={"aviary","['eɪvɪərɪ]","['evɪɛri]","n.大鸟笼",'n.大鸟笼,鸟舍','I used to raise lots of birds in a aviary.','我曾经在一个鸟舍里养了很多鸟。','Nana has put this huge aviary right in front of the cottage.','奶奶在小木屋旁放了个超大的鸟笼。'}

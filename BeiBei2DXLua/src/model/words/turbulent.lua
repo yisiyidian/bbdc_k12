@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turbulent"]={"turbulent","['tɜːbjʊl(ə)nt]","['tɝbjələnt]","adj.狂暴的",'adj.狂暴的,吵闹的','The sea is too turbulent for sailing.','海浪太大，不宜航行。','A turbulent, swift-flowing stream.','急流形成旋涡的，迅速流动的水流'}

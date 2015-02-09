@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["satirist"]={"satirist","['sætərɪst]","['sætərɪst]","n.讽刺诗作者",'n.讽刺诗作者,讽刺家,爱挖苦别人的人','Roman satirist whose works denounced the corruption and extravagance of the privileged classes in Rome.','尤维纳利斯古罗马讽刺作家，其作品谴责了古罗马特权阶级的腐化和奢侈','Voltaire was a famous French satirist.','伏尔泰是法国一位著名的讽刺作家。'}

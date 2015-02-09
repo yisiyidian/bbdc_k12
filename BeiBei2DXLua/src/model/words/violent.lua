@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["violent"]={"violent","['vaɪəl(ə)nt]","['vaɪələnt]","adj.暴力的",'adj.暴力的,猛烈的,极端的,曲解的','||Violent|| crime is only one of the maladies afflicting modern society.','暴力犯罪仅仅是危害社会的弊病之一。','||Violent|| criminals like that are a danger to society.','那种暴力罪犯对社会是一种危害。'}

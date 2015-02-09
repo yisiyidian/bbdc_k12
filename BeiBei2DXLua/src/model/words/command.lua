@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["command"]={"command","[kə'mɑːnd]","[kə'mænd]","n.命令",'n.命令，指挥；司令部，指挥部；[计算机]指令；控制力|||vt.指挥，控制，命令；命令；应得，值得|||vi.给出命令；命令，指令|||adj.指挥的，根据命令（或要求）而作的','The army is under the king\'s direct command.','军队由国王直接统率。','The general commanded his men to attack the city.','将军下令部下攻城。'}

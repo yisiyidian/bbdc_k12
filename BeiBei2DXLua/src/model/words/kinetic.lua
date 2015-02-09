@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kinetic"]={"kinetic","[kɪ'netɪk; kaɪ-]","[kɪ'nɛtɪk]","adj.运动的",'adj.运动的，动力学的','||Kinetic|| energy is the energy arising from motion.','动能就是由于运动而产生的能量。','The kinetic theory of gases is the best known example.','气体动力学理论就是最著名的例子。'}

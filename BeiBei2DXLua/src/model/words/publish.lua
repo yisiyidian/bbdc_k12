@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["publish"]={"publish","['pʌblɪʃ]","['pʌblɪʃ]","vt.出版",'vt.出版,发行,公开发表|||vi.出版,发行','Only in 1687 did he at last publish his new theory.','终于在一六八七年他发表了他的新理论。','Her book was published last year.','她的书去年发表了。'}

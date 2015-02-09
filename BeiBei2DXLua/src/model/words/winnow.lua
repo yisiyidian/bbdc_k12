@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["winnow"]={"winnow","['wɪnəʊ]","['wɪno]","v.吹开糠皮",'v.吹开糠皮,把挑出来,精选','The girl is winnowing the chaff from the corn.','那个女孩正在簸去谷壳。','We should winnow out the errors in logic.','我们应该排除逻辑中的错误。'}

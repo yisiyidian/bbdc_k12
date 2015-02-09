@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sequestrate"]={"sequestrate","['siːkwəstreɪt; 'siːkwes-]","['sikwəstret]","vt.扣押",'vt.扣押(查封,没收,多价螯合)','No one can sequestrate his estates.','任何人都不能没收他的资产。','He tried to prevent union money from being sequestrated by the courts.','他试图阻止法院扣押工会的钱。'}

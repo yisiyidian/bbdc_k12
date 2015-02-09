@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["host"]={"host","[həʊst]","[host]","v.主办",'n.[计算机]主机；主人，东道主；节目主持人；酒店业主|||vt.当主人；主办宴会，主持节目；款待，做东|||vi.做主人，做东道主','Which country will be the host country for the next Olympic Games?','哪个国家将是下届奥运会的主办国？','At the end of the party, we thanked our host and went away.','宴会结束时，我们谢了主人后便回家去了。'}

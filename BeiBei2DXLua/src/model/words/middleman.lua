@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["middleman"]={"middleman","['mɪd(ə)lmæn]","['mɪdl'mæn]","n.中间人",'n.中间人，经纪人','He acted as a middleman in discussions between the two companies.','他在两公司的谈判中作中间人.','She wants to buy direct from the manufacturer and cut out the middleman.','她想避开分销商直接自厂家买进货物.'}

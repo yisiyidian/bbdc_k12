@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["measurable"]={"measurable","['meʒ(ə)rəb(ə)l]","['mɛʒərəbl]","adj.可测量的",'adj.可测量的','measurable depths.','可测的深度','a measurable figure in literature.','文学界的一个值得注意的人物'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contraction"]={"contraction","[kən'trækʃ(ə)n]","[kən'trækʃən]","n.收缩",'n.收缩,缩写式,痉挛','Jim is the contraction of Jimmy.','Jim是Jimmy的缩写式。','The contraction of muscle is a reaction of the body.','肌肉的收缩是人体的一种反应。'}

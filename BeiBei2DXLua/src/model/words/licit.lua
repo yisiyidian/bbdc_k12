@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["licit"]={"licit","['lɪsɪt]","['lɪsɪt]","adj.合法的",'adj.法律准许的,合法的','She made some money by licit means.','他用正当的手段挣了一些钱。','Losses would then be a licit investment in future profits.','于是，亏损就成了换取后期利润的合法投资。'}

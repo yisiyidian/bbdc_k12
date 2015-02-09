@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inoffensive"]={"inoffensive","[ɪnə'fensɪv]","[,ɪnə'fɛnsɪv]","adj.无害的",'adj.无害的,没恶意的,不讨厌的','He has an inoffensive manner.','他的举止不令人讨厌。','English bees are gentle and inoffensive creatures.','英国蜜蜂是一种温顺的、不伤害人的生物。'}

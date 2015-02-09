@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["checkout"]={"checkout","['tʃekaʊt]","['tʃɛkaʊt]","n.检查",'n.检查(调整,验算,检查输出结果,工时扣除)','Be there an express checkout service?','有没有快速退房手续的服务？','He is at the checkout count.','他在办理退房手续的柜台。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toady"]={"toady","['təʊdɪ]","['todi]","n.谄媚者",'n.谄媚者,拍马屁的人|||vi.谄媚,拍马屁','He ||toadied|| to his boss for promotion.','他为升职向老板献殷勤。','They came backstage afterward, cooing and toadying to him.','她们随后来到后台，对他娇语谄媚。'}

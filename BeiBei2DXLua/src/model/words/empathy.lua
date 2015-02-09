@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["empathy"]={"empathy","['empəθɪ]","['ɛmpəθi]","n.移情作用",'n.移情作用,共鸣,执着投入','There is a strange empathy between the old lady and her grandson.','老妇人和她孙子间有种莫名其妙的心灵相通的感觉。','I felt real empathy for what my mother had been through.','我对母亲所经历的一切深有同感。'}

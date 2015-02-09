@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["filch"]={"filch","[fɪltʃ]","[fɪltʃ]","vt.偷窃",'vt.偷窃,窃取','Oliver filched a packet of cigarettes from a well-dressed passenger.','奥立佛从一名衣冠楚楚的乘客身上偷得一包香烟。','Install firewall program for computer, and it will prevent individual account information to suffer hacker filch.','为电脑安装防火墙程序，防止个人账户信息遭到黑客窃取。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fateful"]={"fateful","['feɪtfʊl; -f(ə)l]","['fetfl]","adj.决定性的",'adj.宿命的,重大的,决定性的','The coming months will be fraught with fateful decisions.','未来数月将充满重大的决定','How can you overlook these fateful events?','你怎么能忽略了这些重大的事件?'}

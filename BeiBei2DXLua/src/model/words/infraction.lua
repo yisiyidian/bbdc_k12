@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infraction"]={"infraction","[ɪn'frækʃ(ə)n]","[ɪn'frækʃən]","n.违反",'n.违反，违法','Cheating on a test is a serious infraction at this school and will result in a three-day suspension.','考试作弊是严重违反校规的行为，会被停学三天。','Speeding is only a minor infraction, but vehicular homicide is a serious felony.','超速仅仅是小违规，车祸致死才是重罪。'}

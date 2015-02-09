@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shy"]={"shy","[ʃaɪ]","[ʃaɪ]","adj.害羞的",'adj.害羞的,胆怯的,迟疑的|||vi.惊退,畏缩,乱投|||vt.乱投|||n.投掷,惊避','The colt ||shied|| at the fence and refused to jump over it.','这马驹到障碍物前害怕不敢跳过去。','We are still a little shy of our quota.','我们离完成定额还差一点点。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paleolithic"]={"paleolithic","[,pælɪəʊ'lɪθɪk]","[,pelɪo'lɪθɪk]","adj.旧石器时代的",'adj.旧石器时代的','paleolithic','旧石器时代的','||Paleolithic|| people can walk the Earth?','旧石器时代的人能否在地球上行走？'}

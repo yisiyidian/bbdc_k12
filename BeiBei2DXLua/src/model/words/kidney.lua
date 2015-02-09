@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kidney"]={"kidney","['kɪdnɪ]","['kɪdni]","n.肾",'n.肾,腰子,类型','The surgeon graft the dead man\'s kidney into his patient.','这位外科医生将死人的两个肾移植到他的病人身上。','Several of the patients had received kidney transplant.','病人中有几位已接受了肾移植手术.'}

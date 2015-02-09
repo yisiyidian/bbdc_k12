@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lacerate"]={"lacerate","['læsəreɪt]","['læsəret]","vt.撕裂",'vt.撕裂,伤害|||adj.被撕裂的,裂成碎片的,受伤的','The sharp stones lacerated his feet.','尖石把他的脚划伤了。','His fingers were badly lacerated by the broken glass.','他的手指被碎玻璃严重划伤。'}

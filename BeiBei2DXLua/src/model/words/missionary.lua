@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["missionary"]={"missionary","['mɪʃ(ə)n(ə)rɪ]","['mɪʃənɛri]","n.传教士",'n.传教士,负有任务者,工作人员|||adj.传教的,负有使命的','missionary fervor.','宣教的热情','She taught in a missionary school for a couple of years.','她在一所教会学校教了两年书.'}

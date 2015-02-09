@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["substratum"]={"substratum","[sʌb'strɑːtəm; -'streɪtəm]","['sʌbstretəm]","n.基础",'n.基础,根据,下层,底层','...its deep substratum of chalk.','...它的深层的白垩底土。','drilled into the bedrock substratum','...'}

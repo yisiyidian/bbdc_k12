@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cynical"]={"cynical","['sɪnɪk(ə)l]","['sɪnɪkl]","adj.愤世嫉俗的",'adj.愤世嫉俗的,吹毛求疵的','She is getting more cynical about life.','她变得对生活更加愤世嫉俗。','The footballer brought down his opponent with a cynical foul.','那个足球队员恶意犯规把对方绊倒了。'}

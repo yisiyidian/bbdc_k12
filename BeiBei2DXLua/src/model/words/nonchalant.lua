@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nonchalant"]={"nonchalant","['nɒnʃ(ə)l(ə)nt]","[,nɑnʃə'lɑnt]","adj.不关心的",'adj.不关心的,冷淡的,平静的','Marked by blithe unconcern; nonchalant.','漫不经心的；漠不关心的','Carefree and nonchalant; jaunty.','无忧无虑的无忧无虑的和不关心的；快活的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incumbent"]={"incumbent","[ɪn'kʌmb(ə)nt]","[ɪn'kʌmbənt]","adj.凭依的",'adj.凭依的,依靠的,负有义务的|||n.领圣职的俸禄的牧师,在职者','It is incumbent upon justice to give some warnings of their doubt about a case.','法官有责任提醒人们有关他们对案件的疑问。','It\'s incumbent on you to advise your son before he leaves home.','你有义务在儿子离家之前给他一些忠告。'}

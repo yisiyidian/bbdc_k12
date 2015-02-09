@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["replica"]={"replica","['replɪkə]","['rɛplɪkə]","n.复制品",'n.复制品','I had a replica in little of Independence Hall.','我有一件独立纪念堂的小型复制品。','Let\'s buy some replica of the art work as souvenir.','我们买了一些艺术品的复制品留作纪念。'}

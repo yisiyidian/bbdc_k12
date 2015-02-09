@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["photo"]={"photo","['fəʊtəʊ]","['foto]","n.照片",'n.照片|||vt.&vi.拍照|||adj.摄影的','That photo is a good likeness of David.','戴维那张相片照得很像.','The photo reminds me of the far-off days of his youth.','这张照片又让我想起了他早已逝去的青年时代。'}

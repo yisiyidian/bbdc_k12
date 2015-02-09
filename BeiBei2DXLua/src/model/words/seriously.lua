@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seriously"]={"seriously","['sɪərɪəslɪ]","['sɪrɪəsli]","adv.严重地",'adv.认真地,严肃地,严重地','||Seriously|| damaged, the bridge is no longer in use.','因受到严重损坏，这座桥不再使用了。','I seriously question a number of your assertions.','对你所坚持的说法，有几点我甚为怀疑。'}

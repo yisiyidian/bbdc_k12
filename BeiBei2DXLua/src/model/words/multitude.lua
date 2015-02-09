@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multitude"]={"multitude","['mʌltɪtjuːd]","[ˈmʌltɪˌtud, -ˌtjud]","n.多数",'n.多数,群众','A multitude of people gathered at the gate of the exhibition hall.','大群人聚集在展览大厅的门口。','The multitude may laugh at his music, but we know better.','一般人也许会嘲笑他的音乐，但我们更了解它。'}

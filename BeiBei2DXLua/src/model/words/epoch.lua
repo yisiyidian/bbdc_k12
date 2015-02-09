@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["epoch"]={"epoch","['iːpɒk; 'epɒk]","['ɛpək]","n.时期",'n.时期，时代，新纪元，划时代的大事，世','The past epoch is gone, never to return.','过去的时代已经一去不复返了。','The teaching method marked a new epoch in education.','这种教学方法标志着教育的新时代。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sink"]={"sink","[sɪŋk]","[sɪŋk]","n.接收端",'n.接收端,沟渠,污水槽,散热器|||vi.下沉,下落,陷于,倾斜,恶化,渗透|||vt.下沉,陷于,倾斜,减少','My feet ||sank|| into the mud.','我的双脚陷到泥里去了。','The ship ||sank||.','船沉没。'}

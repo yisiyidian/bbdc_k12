@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curtain"]={"curtain","['kɜːt(ə)n]","['kɝtn]","n.窗帘",'n.窗帘,遮蔽物,幕|||vt.用窗帘装饰,遮蔽','She twitched the curtain into place.','她猛地拉好窗帘。','The curtain was suddenly drawn and a bright light shone in.','突然窗帘拉了开来，一道强光照了进来。'}

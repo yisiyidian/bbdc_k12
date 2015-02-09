@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["his"]={"his","[hɪz]","[hɪz]","pron.他的",'pron.他的','Next Tuesday is his birthday.','下周二是他的生日。','||His|| name leapt out at me from the newspaper.','报纸上他的名字一下字跳入我的眼帘。'}

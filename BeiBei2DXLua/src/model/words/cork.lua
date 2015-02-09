@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cork"]={"cork","[kɔːk]","[kɔrk]","n.软木塞",'n.软木塞,软木树,软木','The cork came out of the bottle with a loud pop.','瓶塞砰的一声拔出来了.','Hold the bottle and pull the cork out with the other hand.','握住瓶子, 用另一只手拔瓶塞.'}

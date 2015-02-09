@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fantasy"]={"fantasy","['fæntəsɪ; -zɪ]","['fæntəsi]","n.幻想",'n.幻想|||v.幻想','I was weaned on a regular diet of Hollywood fantasy.','我从小就时常看好莱坞幻想片.','The young always live in a world of fantasy.','年轻人总是生活在幻想中。'}

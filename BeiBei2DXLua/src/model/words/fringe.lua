@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fringe"]={"fringe","[frɪn(d)ʒ]","[frɪndʒ]","n.流苏",'n.流苏,次要,（地区或群体）边缘,（沿…边缘的）一排（树木、房屋等）vt.用流苏修饰,镶边','The fringe benefits of this job include a car and free health insurance.','这工作的附加福利包括一辆小汽车和免费健康保险。','Your correspondent had only touched upon the fringe of the matter.','你的报导只谈到了问题的边缘。'}

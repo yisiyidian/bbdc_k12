@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fat"]={"fat","[fæt]","[fæt]","adj.肥胖的",'adj.肥胖的,厚的,大的,大量的,丰厚的,愚蠢的|||n.脂肪,动植物油,精华,肥胖,过剩|||vt.使变胖|||vi.变胖','It was a fine, green, fat landscape','这是一片碧绿而肥沃的优美风景','If you don\'t get more exercise, you\'ll get fat.','如果你不多作运动，就会发胖。'}

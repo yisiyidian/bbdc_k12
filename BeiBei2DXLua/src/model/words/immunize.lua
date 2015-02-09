@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immunize"]={"immunize","['ɪmjʊ'naɪz]","[ 'imju:naiz ]","vt.使免疫",'vt.使免疫,赋予免疫性','Have you been immunized (against smallpox) yet?','你接种过（抗天花）疫苗没有?','immunize a witness.','使目击证人免于起诉'}

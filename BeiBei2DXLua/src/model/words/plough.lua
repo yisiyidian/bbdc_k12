@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plough"]={"plough","[plaʊ]","[plaʊ]","n.犁",'n.犁,耕地|||v.用犁耕田,耕犁','The soil had been turned up by the plough.','那片地是用　翻的.','The farmer was yoking his oxen to a plough.','农夫正在用轭把牛套到犁上。'}

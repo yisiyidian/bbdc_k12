@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["welfare"]={"welfare","['welfeə]","['wɛl'fɛr]","n.福利",'n.福利,社会保障,幸福|||adj.福利的','My principal concern is my family\'s welfare.','我至为关心的是我一家的幸福.','His fundamental concern was for her welfare.','他最关心的是她的幸福.'}

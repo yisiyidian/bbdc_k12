@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outnumber"]={"outnumber","[aʊt'nʌmbə]","['aʊt'nʌmbɚ]","vt.数量上超过",'vt.数量上超过','Payments by cheque easily outnumber cash transactions.','用支票付款在数量上大大超过现金交易.','Men outnumber women here in the ratio of three to one.','此地男子数量以三比一超过女子。'}

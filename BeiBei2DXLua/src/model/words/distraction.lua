@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["distraction"]={"distraction","[dɪ'strækʃ(ə)n]","[dɪ'strækʃən]","n.娱乐",'n.娱乐,分心的事物,分心','TV can be a welcome distraction after a hard day\'s work.','辛苦一天之后，看电视有时是很美的逍遣。','The child\'s continual crying drove me to distraction.','那孩子不断的哭声弄得我几乎要发狂。'}

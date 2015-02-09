@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spotlight"]={"spotlight","['spɒtlaɪt]","['spɑtlaɪt]","n.照明灯",'n.照明灯,车头灯|||公众注意中心','There are many spotlights on the stage.','舞台上有很多聚光灯。','This footballer is a sportsman who likes to be in the spotlight.','这个足球运动员是个爱出风头的运动员。'}

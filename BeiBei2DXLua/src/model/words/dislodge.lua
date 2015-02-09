@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dislodge"]={"dislodge","[dɪs'lɒdʒ]","[dɪs'lɑdʒ]","vt.逐出",'vt.逐出,用力移出|||vi.移走，离开','The wind dislodged some tiles.','风把瓦片刮下来了。','There is something between my teeth and I can\'t dislodge it.','我牙缝里塞了点东西，就是弄不出来。'}

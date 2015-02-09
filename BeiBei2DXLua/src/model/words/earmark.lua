@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["earmark"]={"earmark","['ɪəmɑːk]","['ɪrmɑrk]","n.耳上记号",'n.耳上记号,特徵,记号|||v.在耳朵做记号,弄上记号,充作','a novel with all the earmarks of success.','一本集所有成功特质的小说','Correct speech is an earmark of the educated man.','正确的谈吐是受教育者的特征.'}

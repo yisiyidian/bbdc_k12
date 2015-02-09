@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["local"]={"local","['ləʊk(ə)l]","['lokl]","adj.当地的",'adj.地方性的,当地的,局部的|||[计算机]局部的','I suggest that he put an advertisement in the local paper.','我建议他在当地的报纸上登条广告。','He provided local delicacies for his guests\' meal.','他用当地的美味佳肴来招待客人。'}

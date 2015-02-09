@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trade"]={"trade","[treɪd]","[tred]","n.贸易",'n.贸易,商业,交易,行业,同行,手工艺,主顾,(复数)信风|||vi.做生意,购物,交换|||vt.用某物交换,做买卖|||adj.商业的,专业性的,同行的','He traded in his car for a new model.','他把旧汽车折价添钱买了辆新型号的。','He trades on his father\'s reputation.','他用他父亲的名誉牟利。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pending"]={"pending","['pendɪŋ]","['pɛndɪŋ]","adj.待定的",'adj.待定的,即将发生或来临的|||prep.直到,等待...的时候,在...期间','A climax is pending.','高潮即将来到。','She was held in custody pending trial.','她被拘留候审.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hireling"]={"hireling","['haɪəlɪŋ]","['haɪɚlɪŋ]","n.雇工",'n.雇工,雇员,为金钱干活的人','The hireling works for a shop.','那个雇工在一家商店工作。','He had no authority; he was merely a hireling.','他没有权力; 他只是个受雇者.'}

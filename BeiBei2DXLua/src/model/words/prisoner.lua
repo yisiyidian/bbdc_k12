@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prisoner"]={"prisoner","['prɪz(ə)nə]","['prɪznɚ]","n.囚犯",'n.囚犯','The police are pursuing an escaped prisoner.','警方正在追捕一名越狱的逃犯。','The prisoner repeated denials of the charges against him.','囚犯对被控罪名再三否认。'}

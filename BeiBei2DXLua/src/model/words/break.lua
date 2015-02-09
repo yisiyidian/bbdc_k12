@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["break"]={"break","[breɪk]","[brek]","v.打破",'n.休息,中断,破裂|||v.打破,弄破,弄坏','The dog bit me but didn\'t break the skin.','那狗咬了我一口，但是没有把皮咬破。','The window ||broke|| into pieces.','窗户碎成碎片。'}

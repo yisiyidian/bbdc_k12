@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turncoat"]={"turncoat","['tɜːnkəʊt]","['tɝnkot]","n.背叛者",'n.背叛者,变节者','His one-time admirers now accuse him of being a turncoat.','曾经一度仰慕他的人如今指责他是叛徒。','The French football team is trying to find out the turncoat.','背叛者'}

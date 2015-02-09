@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evolve"]={"evolve","[ɪ'vɒlv]","[ɪ'vɑlv]","vt.&vi.进展",'vt.&vi.进展,进化,展开','He has evolved a new theory after many years of research.','他经过多年的研究，逐渐总结出了新的理论。','The American constitution was planned; the British constitution evolved.','美国宪法是精心制定的, 英国宪法是约定俗成的.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["social"]={"social","['səʊʃ(ə)l]","['soʃl]","adj.社会的",'adj.社会的,群居的,社团的','His unpopular views made him a social leper.','他因观点不受欢迎而见弃于社会。','Many social services are still provided by voluntary societies in our city.','在我们的城市，许多社会服务仍然是有志愿团体提供的。'}

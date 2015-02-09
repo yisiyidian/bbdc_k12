@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jeopardy"]={"jeopardy","['dʒepədɪ]","['dʒɛpɚdi]","n.危险",'n.危险','For a moment his life was in jeopardy.','他的生命一度陷入危险中。','His foolish behaviour may put his whole future in jeopardy.','他愚蠢的行为可能毁了他一生的前程。'}

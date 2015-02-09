@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sinusitis"]={"sinusitis","[,saɪnə'saɪtɪs]","[,saɪnə'saɪtɪs]","n.窦炎",'n.窦炎','||Sinusitis|| is caused by the infection of a organ in nose.','（鼻窦炎）是因为鼻子里的一个器官感染引发的。','sinusitis have bad affect to the brain.','鼻窦炎对大脑有影响。'}

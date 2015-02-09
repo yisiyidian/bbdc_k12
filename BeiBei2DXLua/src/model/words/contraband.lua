@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contraband"]={"contraband","['kɒntrəbænd]","['kɑntrə'bænd]","n.违禁品",'n.违禁品,走私品','||Contraband|| goods were found in the storehouse of the hotel.','在旅馆的储藏室里发现了走私货。','The seizure of contraband is made by customs.','那些走私品是被海关没收的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fighter"]={"fighter","['faɪtə]","['faɪtɚ]","n.战士",'n.战士,好战者，战斗机','The fighter planes quickly disengaged (from the combat).','歼击机很快（从战斗中）撤出了.','The fighter hit at his opponent but missed.','拳击手向对手打了一拳, 但是没有打中。'}

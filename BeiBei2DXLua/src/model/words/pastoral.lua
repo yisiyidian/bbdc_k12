@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pastoral"]={"pastoral","['pɑːst(ə)r(ə)l]","['pæstərəl]","adj.田园的",'adj.田园的，宁静的，牧人的，牧师的|||n.田园诗，牧歌，牧函','A few schools now offer counselling sessions; all have some system of pastoral care.','一些学校现在开设咨询课；所有学校都有某种教导关怀体制。','Many churches provide excellent pastoral counselling.','很多教堂提供出色的牧灵辅导。'}

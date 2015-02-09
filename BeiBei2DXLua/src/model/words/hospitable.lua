@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hospitable"]={"hospitable","[hɒ'spɪtəb(ə)l; 'hɒspɪt-]","[hɑ'spɪtəbl]","adj.好客的",'adj.好客的，殷勤的，易于接受的，宜人的','The great earth makes herself hospitable with the help of the grass.','大地借助于绿草，显出她自己的殷勤好客。','The hospitable host had his spare room emptied very quickly for the honoured guest.','好客的主人很快为尊贵的客人腾空了闲置着的房间。'}

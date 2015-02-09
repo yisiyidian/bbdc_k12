@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["issue"]={"issue","['ɪʃuː; 'ɪsjuː]","['ɪʃu]","n.问题",'n.问题；流出；期号；发行物|||vt.发行，发布；发给；放出，排出|||vi.发行；流出；造成…结果；传下','The government is trying to keep a low profile on this issue.','政府力图在这个问题上保持低姿态。','The leadership of the movement are in agreement on this issue.','这一运动的领导层对这个问题的看法一致。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subside"]={"subside","[səb'saɪd]","[səb'saɪd]","vi.沉没",'vi.沉没,平息','He waited until the applause had subsided.','他一直等到掌声平息后才继续下去。','Weak foundations caused the house to subside.','由于地基不牢，这所房子已下陷。'}

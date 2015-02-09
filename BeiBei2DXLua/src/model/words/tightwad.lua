@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tightwad"]={"tightwad","['taɪtwɒd]","['taɪtwɑd]","n.吝啬鬼",'n.吝啬鬼','You\'re such a tightwad.','你真是个小气鬼。','But the distinction is lost on me; I\'m thrifty because I\'m a tightwad and vice versa.','但这种区分对我来说毫无意义，我节俭因为我是个吝啬鬼，反过来说我是个吝啬鬼所以我节俭。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ballad"]={"ballad","['bæləd]","['bæləd]","n.歌谣",'n.歌谣|||民歌,歌谣,叙事歌,流行歌曲,情歌','The singer led off with a popular ballad.','歌唱家首先唱了一首流行的民歌。','A small book or pamphlet containing poems, ballads, stories, or religious tracts.','小册子包含诗歌、歌谣、故事或宗教圣经诗歌的小书或小册子'}

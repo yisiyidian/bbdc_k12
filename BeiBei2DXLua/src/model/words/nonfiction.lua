@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nonfiction"]={"nonfiction","[nɒn'fɪkʃən]","[,nɑn'fɪkʃən]","n.非小说的散文文学",'n.非小说的散文文学','His nonfiction book Abraham Lincoln: the War Years was awarded the Pulitzer prize for history in1940.','传记作品《亚伯拉罕·林肯：战争年代》1940年获普利策历史奖。','I\'ve read her novels but not her nonfiction.','我已经读过了她的小说而不是非小说作品'}

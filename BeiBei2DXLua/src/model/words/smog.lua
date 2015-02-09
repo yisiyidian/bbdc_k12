@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smog"]={"smog","[smɒg]","[smɑːɡ]","n.烟雾",'n.烟雾','||Smog|| has thickened the air.','烟雾于天空阴霾。','The sky over the city was overspread with a heavy smog.','城市上空罩上了一层烟雾.'}

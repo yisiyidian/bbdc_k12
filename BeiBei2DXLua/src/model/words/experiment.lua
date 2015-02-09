@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["experiment"]={"experiment","[ɪk'sperɪm(ə)nt; ek-]","[ɪk'sperɪmənt]","n.实验",'n.实验,试验,尝试|||vi.做实验,尝试','The teacher gave each of us a piece of filter paper before doing the experiment.','做试验前，老师给我们每个人发了一张滤纸。','We are doing a chemical experiment.','我们正在做化学实验。'}

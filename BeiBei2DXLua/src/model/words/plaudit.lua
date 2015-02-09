@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plaudit"]={"plaudit","['plɔːdɪt]","[ 'plɔ:dit ]","n.赞美",'n.赞美，喝彩','A new play that opened to the plaudits of the critics.','受到评论家们喝彩的一出新戏剧','She won plaudits for the way she presented her case.','她妙语陈情博得众口交赞.'}

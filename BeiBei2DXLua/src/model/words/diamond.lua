@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diamond"]={"diamond","['daɪəmənd]","['daɪəmənd]","n.钻石",'n.钻石,像钻石的物质,菱形,纸牌的方块,棒球内场|||vt.用钻石装饰|||adj.60或75周年纪念的','She wore a diamond clip on her new dress.','她在新衣服上戴了一枚钻石别针。','She selected a diamond ring from the collection.','她从收藏品中挑选了一枚钻石戒指。'}

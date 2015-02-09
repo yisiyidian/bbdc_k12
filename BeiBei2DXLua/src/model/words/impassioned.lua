@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impassioned"]={"impassioned","[ɪm'pæʃ(ə)nd]","[ɪm'pæʃnd]","adj.慷慨激昂的",'adj.慷慨激昂的，热烈的|||动词impassion的过去式和过去分词形式','A leader who obtains power by means of impassioned appeals to the emotions and prejudices of the populace.','煽动者，政治家通过慷慨激昂的手段赚取民众的情感或偏见而得到权力的领导者','The sentence contains impassioned rhetoric.','这个句子含有富有表现力的修辞。'}

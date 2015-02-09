@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["two"]={"two","[tuː]","[tu]","num.二",'num.二，两个','||Two|| plus five is seven.','二加五等于七。','We shall have meetings on two consecutive days, Monday and Tuesday.','周一周二连续两天我们都将开会。'}

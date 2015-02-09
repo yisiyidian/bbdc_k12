@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hoax"]={"hoax","[həʊks]","[hoks]","v.欺骗",'v.欺骗,哄骗,愚弄|||n.愚弄人,恶作剧','I was hoaxed into believing their story.','我上当了，还以为他们的玩笑是真的呢。','He denied making the hoax call but was convicted after a short trial.','他否认打过恶作剧电话，但经过一番短暂的审讯后被判有罪。'}

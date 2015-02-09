@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bombastic"]={"bombastic","[bɒm'bæstɪk]","[bɑm'bæstɪk]","adj.夸大的",'adj.夸大的','The candidate spoke in a bombastic way of all that he would do if elected.','候选人大肆吹嘘,一旦他当选将要如何如何.','He was vain and bombastic.','他既虚荣又浮夸。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reduction"]={"reduction","[rɪ'dʌkʃ(ə)n]","[rɪ'dʌkʃən]","n.减少",'n.减少,缩小,(化学)还原反应,(数学)约分','The reduction of unemployment should be paramount in the government\'s economic policy.','降低失业率应是政府经济政策的头等大事.','The development of the project was seriously impeded by a reduction in funds.','由於基金削减工程进度严重受阻.'}

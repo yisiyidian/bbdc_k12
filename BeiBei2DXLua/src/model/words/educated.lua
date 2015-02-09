@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["educated"]={"educated","['edjʊkeɪtɪd]","['ɛdʒə'ketɪd]","adj.受过教育的",'adj.受过教育的,有教养的|||动词educate的过去式和过去分词','Where were you educated?','你在哪（些）所学校学习过?','The public should be educated in how to use energy more effectively.','公众应受到合理地利用能源的教育.'}

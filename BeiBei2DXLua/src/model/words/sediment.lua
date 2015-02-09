@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sediment"]={"sediment","['sedɪm(ə)nt]","['sɛdɪmənt]","n.沉淀物",'n.沉淀物','The sediment of coffee will settle.','咖啡渣会沉淀下去.','The sediment settled and the water was clear.','杂质沉淀后,水变清了.'}

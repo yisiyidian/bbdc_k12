@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["butter"]={"butter","['bʌtə]","['bʌtɚ]","n.黄油",'n.黄油,阿谀奉承|||vt.涂黄油','She cooks omelets in butter as they do in France.','她用奶油做法国式的蛋卷。','My mother asked me to cream the butter and sugar together.','妈妈让我把黄油和糖搅成奶油状。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tinkle"]={"tinkle","['tɪŋk(ə)l]","['tɪŋkl]","n.清脆的金属音",'n.清脆的金属音|||v.发出tinkle的声响','He went to open the door when he heard the tinkle of the bell.','他听到铃声响, 就走过去开门。','The little clock tinkled out the hours.','那只小钟叮叮当当地报时。'}

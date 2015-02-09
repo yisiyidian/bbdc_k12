@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sparrow"]={"sparrow","['spærəʊ]","['spæro]","n.麻雀",'n.麻雀','The sparrow is sorry for the peacock at the burden of its tail.','麻雀看见孔雀负担着它的翎尾，替它担忧。','It isn\'t a rare bird, just a common or garden sparrow.','那不是稀有的鸟, 只不过是普通的麻雀.'}

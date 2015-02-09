@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["append"]={"append","[ə'pend]","[ə'pɛnd]","v.附加",'v.附加,添加,悬挂|||n.[计算机]DOS命令建立数据文件的子目录搜索路经','It was a relief that his real name hadn\'t been appended to the manuscript.','令人庆幸的是，手稿未落上他的真实姓名。','I append a list of those shops which sell our products.','我附上一张出售我们产品的商店名单。'}

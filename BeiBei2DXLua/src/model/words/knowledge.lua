@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knowledge"]={"knowledge","['nɒlɪdʒ]","['nɑlɪdʒ]","n.知识",'n.知识,了解','My knowledge of Japanese is rather poor.','我的日语相当差。','They did it without my knowledge.','他们是背着我做这件事的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peer"]={"peer","[pɪə]","[pɪr]","vi.凝视",'vi.凝视，盯着看；窥视|||vt.封为贵族；与…同等|||n.贵族；同等的人','The opinions of his peers are more important to him than his parents\' ideas.','在他看来，他同辈人的观点比他父母的观点更为重要。','She peers through the mist, trying to find the right path.','她透过雾眯着眼看，想找出正确的路。'}

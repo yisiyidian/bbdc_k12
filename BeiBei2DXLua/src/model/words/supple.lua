@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["supple"]={"supple","['sʌp(ə)l]","['sʌpl]","adj.柔软的",'adj.柔软的,易弯的，逢迎的,顺从的，灵活的|||vt.使柔软，使柔顺，使顺从|||vi.变柔软，变柔顺','She has a supple mind.','她头脑灵活。','Exercise keeps you supple.','经常锻炼可使身体灵活。'}

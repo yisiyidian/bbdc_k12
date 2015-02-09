@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["denote"]={"denote","[dɪ'nəʊt]","[dɪ'not]","vt.象征",'vt.象征,表示','A smile often denotes pleasure and friendship.','微笑常常表示高兴和友善。','This word denotes a certain kind of animal.','这个词是一种野兽的名称。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inimitable"]={"inimitable","[ɪ'nɪmɪtəb(ə)l]","[ɪ'nɪmɪtəbl]","adj.无法仿效的",'adj.无法仿效的,不可比拟的','Wonders are not inimitable.','奇迹是无法仿效的。','Hero can be studied but the god is inimitable for ever','英雄可以被学习，但神明无法被模仿。'}

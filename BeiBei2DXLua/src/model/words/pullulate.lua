@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pullulate"]={"pullulate","['pʌljʊleɪt]","[ 'pʌljuleit ]","vi.繁殖",'vi.繁殖,剧增','a lagoon that pullulated with tropical fish.','聚满了热带鱼的咸水湖','The population of unemployee pullulates.','失业人数剧增。'}

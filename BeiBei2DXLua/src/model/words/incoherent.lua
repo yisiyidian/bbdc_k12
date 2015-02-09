@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incoherent"]={"incoherent","[ɪnkə(ʊ)'hɪər(ə)nt]","['ɪnko'hɪrənt]","adj.不连贯的",'adj.不连贯的,语无伦次的','He was so drunk that he was quite incoherent.','他喝得这样醉，说起话来语无伦次。','The man was almost incoherent with fear.','那个人吓得几乎语无伦次了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exhale"]={"exhale","[ɪks'heɪl; eks-]","[ɛks'hel]","v.呼气",'v.呼气,发出,散发','Follow me please, inhale! exhale!','跟我做，吸气!呼气!','He lit his cigar and exhaled smoke.','他点燃雪茄，然后吐出烟雾。'}

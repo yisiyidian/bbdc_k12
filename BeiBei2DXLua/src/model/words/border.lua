@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["border"]={"border","['bɔːdə]","['bɔrdɚ]","n.边缘",'n.边缘|||vt.作...之疆界,加边','Our garden is bordered on one side by a stream.','我们的花园有一边以小河为界。','France borders Germany along parts of the Rhine.','法国沿莱茵河部分河段与德国接壤。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rove"]={"rove","[rəʊv]","[rov]","v.漂泊",'v.漂泊,漫游|||vt.把线穿过孔|||n.徘徊,流浪|||n.粗纺线|||动词reeve的过去式和过去分词','His eyes roved around the room.','他的眼睛扫视着房间的每个角落。','He roves about his student.','他扫了他的学生一眼。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rugby"]={"rugby","['rʌgbɪ]","['rʌɡbi]","n.橄榄球",'n.橄榄球','The M6 diverges from the M1 just north of ||Rugby||.','6号高速公路与1号高速公路在拉格比市以北处岔开.','The rugby team made merry at their captain\'s expense when they discovered that he\'d once won a beautiful baby contest.','当橄榄球队的队员们得知队长小时候曾在漂亮婴儿比赛中获奖时, 他们以此开他的玩笑。'}

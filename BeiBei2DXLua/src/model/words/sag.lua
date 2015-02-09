@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sag"]={"sag","[sæg]","[sɑɡ]","vt.下垂",'vt.下垂(凹陷,下跌,塌箱)|||n.垂度(下垂,经济萧条,物价下跌)','The chair sagged down under the fat man\'s weight.','椅子经这胖人一坐便压弯了。','The villagers shored up sagging huts.','村民们撑起摇摇欲坠的茅棚。'}

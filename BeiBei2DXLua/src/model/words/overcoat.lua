@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overcoat"]={"overcoat","['əʊvəkəʊt]","['ovɚkot]","n.外套",'n.外套,大衣','That overcoat should see me through the winter.','有那件大衣我应该能过冬了.','My overcoat is wet through.','我的大衣完全湿透了。'}

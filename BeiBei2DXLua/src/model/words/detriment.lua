@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detriment"]={"detriment","['detrɪm(ə)nt]","['dɛtrɪmənt]","n.损伤",'n.损伤，引起损害的物质','He works long hours to the detriment of his health.','他长时间的工作，有损健康。','This tax can not be introduced without detriment to the economy.','这一税收制度一旦施行，必定会危害国民经济。'}

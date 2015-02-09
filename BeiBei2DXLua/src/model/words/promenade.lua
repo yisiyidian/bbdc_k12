@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["promenade"]={"promenade","[,prɒmə'nɑːd; -'neɪd; 'prɒm-]","[,prɑmə'ned]","n.散步",'n.散步,骑马,舞会|||v.漫步,骑马','There were two or three palm trees flourishing in the promenade garden.','街心花园里有两三棵枝繁叶茂的棕榈树。','A shady public walk or promenade.','林荫路有林荫的公用步行道或散步区'}

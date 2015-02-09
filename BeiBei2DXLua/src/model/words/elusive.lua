@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elusive"]={"elusive","[ɪ'l(j)uːsɪv]","[ɪ'lusɪv]","adj.难懂的",'adj.难懂的,难捉摸的,难记的,逃避的','Interpol have searched all the corners of the earth for the elusive hijackers.','国际刑警组织已在世界各地搜查在逃的飞机劫持者。','The harder researchers look for it, the more elusive it appears.','研究人员越苦苦寻觅，它越显得扑朔迷离。'}

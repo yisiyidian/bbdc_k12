@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infertile"]={"infertile","[ɪn'fɜːtaɪl]","[ɪn'fɝtl]","adj.贫瘠的",'adj.贫瘠的，不结果实的，不能生育的','The farmers in this area have to struggle to wrest a living from the infertile soil.','该地区的农民不得不在这块贫瘠的土地上挣扎谋生。','More than ten percent of couples worldwide are infertile.','全球超过10%的夫妻不孕。'}

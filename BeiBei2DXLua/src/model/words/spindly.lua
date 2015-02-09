@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spindly"]={"spindly","['spɪndlɪ]","['spɪndli]","adj.细长的",'adj.细长的,纤弱的','I did have rather spindly legs.','我的腿以前细长而纤弱。','His wife was a frail, spindly woman.','他的妻子是一个纤弱高瘦的女人'}

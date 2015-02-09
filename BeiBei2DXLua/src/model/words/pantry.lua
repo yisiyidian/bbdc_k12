@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pantry"]={"pantry","['pæntrɪ]","['pæntri]","n.食品储藏室",'n.食品储藏室，备膳室','No food is left in the pantry except some bread.','食品柜里除了一些面包其它什麽也不剩。','He wanted to find some wine in the pantry.','他想在餐具室里找到一些酒。'}

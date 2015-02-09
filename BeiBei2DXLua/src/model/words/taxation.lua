@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["taxation"]={"taxation","[tæk'seɪʃ(ə)n]","[tæk'seʃən]","n.课税",'n.课税,征税,税金','||Taxation|| bears heavily on us all.','交税成了我们大家的沉重负担。','||Taxation|| bears heavily on all classes in Britain.','税收使英国各阶层均感压迫。'}

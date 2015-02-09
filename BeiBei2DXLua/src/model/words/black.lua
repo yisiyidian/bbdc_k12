@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["black"]={"black","[blæk]","[blæk]","adj.黑（色）的",'adj.黑（色）的；黑色人种的；黑暗的|||n.黑色；黑人；黑颜料；黑暗|||v.使变黑；抵制；拒绝；使变黑暗','He blacked his shoes before visiting his father-in-law.','在拜访岳父之前，他把鞋子擦黑。','Do you have a black jacket?','你有一件黑夹克吗？'}

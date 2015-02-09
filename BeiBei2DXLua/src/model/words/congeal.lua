@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congeal"]={"congeal","[kən'dʒiːl]","[kən'dʒil]","v.(使)凝结",'v.(使)凝结,凝固','The blood had congealed round the cut on her knee.','她的膝盖伤口周围的血液凝结了。','You may use hot water to rinse the congealed fat off the dinner plates.','你可以用热水把菜盘上凝结的油污冲洗掉。'}

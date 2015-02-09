@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cargo"]={"cargo","['kɑːgəʊ]","['kɑrɡo]","n.船货",'n.船货,货物','How long will the discharge of the cargo take?','卸货需要多久？','This port handles 100 million tons of cargo each year.','这个港口每年货物吞吐量达1亿吨.'}

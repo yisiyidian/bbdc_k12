@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["west"]={"west","[west]","[wɛst]","adj.西方的",'adj.西方的|||adv.向(在)西方|||n.西,西方','The sun rises in the east and sets in the west.','太阳从东方升起，在西方落下。','I live in the west of the city.','我住在该城市的西部。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rummage"]={"rummage","['rʌmɪdʒ]","['rʌmɪdʒ]","v.到处翻寻",'v.到处翻寻,搜出,检查|||n.翻箱倒柜的寻找,临检,碎屑','I rummaged all the drawers before I found my ballpoint pen.','我翻遍了所有的抽屉才找到我的圆珠笔。','A brief rummage will provide several pairs of gloves.','稍许翻一下就会找到几副手套。'}

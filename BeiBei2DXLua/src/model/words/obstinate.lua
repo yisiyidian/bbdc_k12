@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obstinate"]={"obstinate","['ɒbstɪnət]","['ɑbstɪnət]","adj.固执的",'adj.固执的,倔强的，不易屈服的，（病）难治的','Don\'t be so obstinate!','别这么固执！','This child is obstinate and rebellious.','这孩子难以管束又很执拗。'}

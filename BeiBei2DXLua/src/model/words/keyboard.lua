@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["keyboard"]={"keyboard","['kiːbɔːd]","['ki'bɔrd]","n.键盘",'n.键盘|||vt.用键盘输入(信息)','Her hands swept the keyboard.','她的手快速按动键盘。','I bought a keyboard in the supermarket yesterday.','昨天我在超市上买了个键盘.'}

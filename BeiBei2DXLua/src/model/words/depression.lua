@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depression"]={"depression","[dɪ'preʃ(ə)n]","[dɪ'prɛʃən]","n.沮丧",'n.沮丧,萧条','The threat of an economic depression hangs over the world.','经济衰退的威胁笼罩着世界。','Her feeling of depression was transient.','她那抑郁的心情一会儿就过去了。'}

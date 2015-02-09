@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tonsure"]={"tonsure","['tɒnsjə; 'tɒnʃə]","['tɑnʃɚ]","n.削发",'n.削发，光顶|||vt.剃发，为...举行剃发式','The ferule is used for conversion, tonsure, ordination and parlance.','戒尺用于皈依、剃度、传戒、说法等场合。','He received the clerical tonsure.','他接受了神职人员的剃度。'}

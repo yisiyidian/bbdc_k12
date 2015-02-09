@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["essentially"]={"essentially","[ɪ'senʃ(ə)lɪ]","[ɪ'sɛnʃəli]","adv.本质上",'adv.本质上,本来','The culture areas are essentially coincident with language areas.','文化区与语言区基本重合。','She\'s essentially kind.','她本质上是和善的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rustle"]={"rustle","['rʌs(ə)l]","['rʌsl]","n.沙沙声",'n.沙沙声,瑟瑟声,飒飒声|||v.发出沙沙声,飒飒作响','I\'ll rustle up some eggs and bacon for you.','我给你弄些鸡蛋和腌猪肉。','A cold wind rustled the leaves.','寒风刮得树叶沙沙响。'}

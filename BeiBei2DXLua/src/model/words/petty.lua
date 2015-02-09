@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["petty"]={"petty","['petɪ]","['pɛti]","adj.琐碎的",'adj.琐碎的,小规模的,小气的','The paymasters of these petty crooks are the big crime syndicates.','操纵这帮小流氓的就是那个大犯罪集团。','She grew tired of his petty jealousies.','她越来越讨厌他那种心胸狭窄的忌妒行为。'}

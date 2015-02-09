@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wallow"]={"wallow","['wɒləʊ]","['wɑlo]","v.打滚",'v.打滚','His tired mind continued to wallow in self-pity.','他疲惫的心继续沉溺于自哀自怜之中。','Dogs love splashing in mud and hippos wallow in it.','狗喜欢在泥水洼里扑腾，河马则喜欢在其中打滚撒欢儿。'}

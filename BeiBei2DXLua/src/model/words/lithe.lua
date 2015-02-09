@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lithe"]={"lithe","[laɪð]","[ laið ]","adj.柔软的",'adj.柔软的,易弯的','Little babies have lithe bodies.','小孩有着柔软的身体。','She has the lithe grace of a gymnast.','她有体操运动员轻盈而优美的体态。'}

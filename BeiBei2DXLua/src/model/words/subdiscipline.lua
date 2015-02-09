@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subdiscipline"]={"subdiscipline","[sʌb'dɪsɪplɪn]","['sʌb,dɪsəplɪn]","n.学科的分支",'n.学科的分支','Molecular biology is a subdiscipline of biology.','分子生物学是生物学的学科分支。','Ecological anthropology is an important subdiscipline of anthropology','生态人类学是人类学领域中一门重要的分支学科。'}

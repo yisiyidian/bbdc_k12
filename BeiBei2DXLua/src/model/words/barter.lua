@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barter"]={"barter","['bɑːtə]","['bɑrtɚ]","n.物物交换",'n.物物交换,实物交易|||v.物物交换,交换','The colonists bartered calico for Indian land.','殖民者以印花布交换印地安人的土地。','On these islands a system of barter is used.','在这些岛上仍然实行着物物交换的制度。'}

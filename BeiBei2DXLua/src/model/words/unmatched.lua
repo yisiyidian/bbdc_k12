@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unmatched"]={"unmatched","[ʌn'mætʃt]","['ʌn'mætʃt]","adj.无配偶的",'adj.无配偶的,无匹敌的,不相配的','He wore unmatched socks.','他穿了左右不成对的袜子。','Although blind by the explosion, he faced the future with unmatched courage.','他虽然因爆炸而失明, 但仍然能以无比的勇气面对未来.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decree"]={"decree","[dɪ'kriː]","[dɪ'kri]","n.法令",'n.法令,判决,天意|||vt.通过法令颁布,裁定','They had to obey the decree that beards be shaved off.','他们只得服从剃光胡须的法令.','This decree has the force of law behind it.','这一裁决有法律的力量作後盾.'}

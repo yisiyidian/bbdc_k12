@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prairie"]={"prairie","['preərɪ]","['prɛri]","n.大草原",'n.大草原','Andrew traversed the prairie on horseback.','安德鲁骑马穿越大草原.','A single spark can start a prairie fire.','星星之火,可以燎原.'}

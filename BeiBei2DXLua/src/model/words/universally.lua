@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["universally"]={"universally","[juːnɪ'vɜːsəlɪ]","[,junɪ'vɝsəli]","adv.普遍地",'adv.普遍地','It is universally acknowledged that...','普遍认为...','His actions made him universally respected.','他的行为使他受到普遍尊敬.'}

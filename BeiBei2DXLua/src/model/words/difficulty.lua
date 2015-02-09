@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["difficulty"]={"difficulty","['dɪfɪk(ə)ltɪ]","['dɪfɪkəlti]","n.困难",'n.困难，争议，反对，麻烦','The young teacher had difficulty in holding the children under her girdle.','那位年轻的老师很难让孩子们听话。','He experienced great difficulty in getting a visa to leave the country.','他申请出国签证经历了很大的困难。'}

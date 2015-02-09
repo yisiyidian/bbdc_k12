@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["he"]={"he","[hiː]","[hi]","pron.他",'pron.他','He took the ninth position in his class of forty.','他在40 个人的班级里排第九名。','It was not until he came that I left.','直到他来我才离开。'}

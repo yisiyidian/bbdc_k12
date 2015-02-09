@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cession"]={"cession","['seʃ(ə)n]","['sɛʃən]","n.割让",'n.割让,转让','Third-party states have no title to object to cession.','第三国无权反对割让。','the act of ceding is cession','转让就是一种放弃的行为'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peony"]={"peony","['piːənɪ]","['piəni]","n.牡丹",'n.牡丹,芍药','I like the carpets patterned with ||peonies||.','我喜欢印有牡丹花图案的地毯。','The ||peonies|| are in full bloom now.','现在牡丹花正盛开。'}

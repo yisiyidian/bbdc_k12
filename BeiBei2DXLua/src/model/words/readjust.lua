@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["readjust"]={"readjust","[riːə'dʒʌst]","[,riə'dʒʌst]","v.再调整",'v.再调整,(使)重新适应','You may find it necessary to readjust the wheels from time to time.','你会发现不时调整轮子很有必要.','We don\'t expect you to readjust the whole matter out of hand.','我们也不巴望你马上就把这运费率全调整得妥妥贴贴.'}

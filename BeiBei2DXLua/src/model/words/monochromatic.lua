@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monochromatic"]={"monochromatic","[mɒnə(ʊ)krə'mætɪk]","[,mɑnəkrə'mætɪk]","adj.单色的",'adj.单色的,一色的','Thanks to that, they do not look so monochromatic.','得益于此，他们看起来不才不至于那么单调。','Plants under continuous monochromatic light produce high sugar.','长期照射单色光的植物产生了高糖分。'}

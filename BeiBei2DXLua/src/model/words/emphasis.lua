@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emphasis"]={"emphasis","['emfəsɪs]","['ɛmfəsɪs]","n.强调",'n.强调,重点','Our English course places great emphasis on conversational skills.','我们的英语课程非常重视会话技能。','What\'s the emphasis?','重点是什么？'}

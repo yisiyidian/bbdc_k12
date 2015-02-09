@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["birch"]={"birch","[bɜːtʃ]","[bɝtʃ]","n.桦树",'n.桦树,桦木|||vt.用桦条抽打','Lithe birch branches.','柔软的桦树枝','Alder trees belong to the birch family.','赤杨属于桦木科。'}

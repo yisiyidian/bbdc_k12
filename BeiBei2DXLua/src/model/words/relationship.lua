@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relationship"]={"relationship","[rɪ'leɪʃ(ə)nʃɪp]","[rɪ'leʃən'ʃɪp]","n.关系",'n.关系,关联','Our relationship has been normalized.','我们的关系正常了.','In view of our long-standing relationship, we agree to allow you a discount.','考虑到我们长期的关系, 我方同意给你方折扣。'}

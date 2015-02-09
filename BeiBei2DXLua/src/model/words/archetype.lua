@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["archetype"]={"archetype","['ɑːkɪtaɪp]","['ɑrkə'taɪp]","n.原型",'n.原型','Old Mr. Duff is the archetype of the elderly British gentleman.','年迈的达夫先生是英国老绅士的典型代表。','He came to this country 20 years ago and is the archetype of the successful Asian businessman.','他20年前来到这个国家，是成功亚裔商人的典范。'}

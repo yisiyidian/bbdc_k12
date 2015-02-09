@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feedback"]={"feedback","['fiːdbæk]","['fidbæk]","n.反馈",'n.反馈,成果','Can you give me some feedback?','你能给我一些建议吗？','Meanwhile, you are allowed to feedback your thoughts and opinions regularly to develop our program and the club.','及时反馈自己的意见和建议，以便不断提高我们节目的质量和促进俱乐部的发展。'}

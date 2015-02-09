@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wake"]={"wake","[weɪk]","[wek]","vi.醒",'vt.守灵,叫醒,醒来|||vi.醒,叫醒|||n.清醒,守护神节日,守灵,尾流,后果','The incident ||woke|| memories of his past sufferings.','这件事唤起了他对过去苦难经历的回忆。','She spends all her ||waking|| hours worrying about her job.','她只要醒著就一直为工作发愁。'}

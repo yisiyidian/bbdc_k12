@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lesson"]={"lesson","['les(ə)n]","['lɛsn]","n.课",'n.课，教训|||vt.给...上课,教训','The first lesson is taken from St John\'s Gospel.','第一段圣经选自《约翰福音》。','I missed a lesson yesterday.','昨天我误了一节课。'}

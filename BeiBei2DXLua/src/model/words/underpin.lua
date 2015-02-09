@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["underpin"]={"underpin","[ʌndə'pɪn]","[,ʌndɚ'pɪn]","v.从下头支持",'v.从下头支持,支撑,支持','These developments are underpinned by solid progress in heavy industry.','重工业的稳固发展为这些进展打下了基础.','The evidence underpinning his case was sound.','有利於他的证据是确凿的.'}

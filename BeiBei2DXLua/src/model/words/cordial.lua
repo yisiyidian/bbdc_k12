@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cordial"]={"cordial","['kɔːdɪəl]","['kɔrdʒəl]","n.兴奋剂",'n.兴奋剂,补品|||adj.热忱的,诚恳的,兴奋的','The conversation was carried on in a cordial and friendly atmosphere.','会谈是在亲切友好的气氛中进行的。','The meeting of the old classmates was extremely cordial.','老同学聚会在一起，分外亲热。'}

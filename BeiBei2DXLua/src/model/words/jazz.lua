@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jazz"]={"jazz","[dʒæz]","[dʒæz]","n.爵士乐",'n.爵士乐，爵士舞，空扯的话，以及类似的东西|||vt.使...活泼，把...演奏成爵士风格|||vi.闲逛，跳爵士舞','brought the food and all the jazz to go with it.','把食物和所有的杂物都拿来','She\'s potty about jazz.','她迷上了爵士音乐.'}

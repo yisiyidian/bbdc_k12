@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frown"]={"frown","[fraʊn]","[fraʊn]","n.皱眉",'n.皱眉,不悦|||vt.&vi.皱眉头,不同意','She looked up from her exam paper with a worried frown.','她看完自己的试卷愁眉不展地抬起头来。','The frown on the man\'s face showed that he was displeased.','那人皱着眉头，面露不悦。'}

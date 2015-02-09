@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["philharmonic"]={"philharmonic","[,fɪlhɑː'mɒnɪk]","[,fɪlhɑ'mɔnɪk]","adj.爱好音乐的",'adj.爱好音乐的,交响乐团的|||n.音乐爱好者,音乐协会,音乐会','Seiji Ozawa will conduct the Boston ||Philharmonic|| in Beethoven\'s Ninth.','小泽征尔将指挥波士顿乐团演奏贝多芬第九交响曲。','In 1842, the New York ||Philharmonic|| gave its first concert.','1842年, 纽约交响乐团举办第一次音乐会.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mean"]={"mean","[miːn]","[min]","v.意味",'n.平均值,平均数;中部|||adj.低劣的,卑贱的;卑鄙的;吝啬的|||adj.平均的,中等的|||v.意味,想要,意欲','I wasn\'t serious. I meant it as a joke.','我并非有意。我是想开个玩笑而已。','He means business: he really will shoot us if we try to escape.','他不是说著玩的；我们要是逃，他真会开枪。'}

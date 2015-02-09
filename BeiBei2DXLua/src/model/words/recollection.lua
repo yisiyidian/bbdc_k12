@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recollection"]={"recollection","[,rekə'lekʃ(ə)n]","[,rɛkə'lɛkʃən]","n.回忆",'n.记忆,回想,回忆','His recollection of the campaign is not too clear.','他对竞选的记忆不是那么清楚。','That evening together is one of my happiest recollections.','我们一起欢度的那个晚上是我最快乐的事情之一。'}

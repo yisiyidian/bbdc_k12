@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transfer"]={"transfer","[træns'fɜː; trɑːns-; -nz-]","[træns'fɝ]","v.转移",'n.迁移,移动,换车|||v.转移,调转,调任','He intends to transfer the property to his son.','他打算把财产转让给儿子。','He was soon transferred to another post.','他很快被调职。'}

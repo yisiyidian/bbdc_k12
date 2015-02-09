@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presume"]={"presume","[prɪ'zjuːm]","[prɪ'zum]","vt.姑且认定",'vt.姑且认定，假定，推测，认为是理所当然|||vi.假设，越权行事','May I presume to advise you?','我可以冒昧向你进一言吗？','The law presumes innocence until guilt is proved.','在罪状未证实前，法律假定被告无罪。'}

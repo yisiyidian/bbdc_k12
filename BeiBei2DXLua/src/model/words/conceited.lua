@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conceited"]={"conceited","[kən'siːtɪd]","[kən'sitɪd]","adj.自负的",'adj.自负的,幻想的','He\'s so conceited that when she refused his invitation, it really put his nose out of joint.','他很自负, 她没接受他的邀请可把他的鼻子气歪了.','Arrogant or proud; conceited.','骄傲的傲慢的或骄傲的；自负的'}

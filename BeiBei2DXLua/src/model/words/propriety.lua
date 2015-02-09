@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["propriety"]={"propriety","[prə'praɪətɪ]","[prə'praɪəti]","n.适当",'n.适当，正当，得体|||(复数）proprieties:礼节，礼仪','I am doubtful about the propriety of granting such a request.','我怀疑答应这项要求是否合适。','We should observe the ||proprieties||.','我们应该遵守礼节。'}

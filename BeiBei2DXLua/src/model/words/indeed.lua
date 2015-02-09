@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indeed"]={"indeed","[ɪn'diːd]","[ɪn'did]","adv.的确",'adv.的确,真正地,事实上','I was annoyed, indeed furious, over what happened.','出了这件事我很不痛快，实际上是愤怒已极。','The future of this firm will be very bleak indeed if we keep losing money.','要是我们继续亏本的话，这家公司的前途会非常黯淡。'}

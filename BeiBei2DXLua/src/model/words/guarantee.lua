@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guarantee"]={"guarantee","[gær(ə)n'tiː]","[,ɡærən'ti]","vt.保证",'n.保证(书),担保(书)|||n.担保人;抵押品|||vt.保证,担保','Blue skies are not a guarantee of continuing fine weather.','蔚蓝的天空不一定担保天气持续晴朗。','I guarantee that you\'ll enjoy yourself.','我包你玩得痛快。'}

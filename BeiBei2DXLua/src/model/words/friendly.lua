@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["friendly"]={"friendly","['fren(d)lɪ]","['frɛndli]","adj.友好的",'adj.友好的|||adv.友好地|||n.友好者','Our neighbourhood police are very friendly.','我们邻近的警察非常友善。','He was always friendly to his subordinates.','他对下级一向和蔼可亲。'}

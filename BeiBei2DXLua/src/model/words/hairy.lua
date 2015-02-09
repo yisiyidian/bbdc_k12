@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hairy"]={"hairy","['heərɪ]","['hɛri]","adj.多毛的",'adj.多毛的,毛状的,长毛的|||adj.令人恐怖的，难对付的','She thinks hairy chests are a turn-on!','她觉得胸部有毛很让人兴奋!','In brief, mammals are warm-blooded, lung-breathing, hairy vertebrates.','简言之，哺乳动物是温血、肺呼吸和多毛的脊椎动物。'}

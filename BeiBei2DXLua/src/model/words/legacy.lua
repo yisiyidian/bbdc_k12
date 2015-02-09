@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["legacy"]={"legacy","['legəsɪ]","['lɛgəsi]","n.祖先传下来之物",'n.祖先传下来之物,遗赠物|||adj.[计算机]旧系统的','His weak chest was a legacy of a childhood illness.','他那瘦弱的胸脯是儿时患病的后遗症。','The park will become an important legacy of the London Olympics.','这个公园将成为伦敦奥运后的重要遗产。'}

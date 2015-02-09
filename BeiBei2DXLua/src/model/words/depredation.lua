@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depredation"]={"depredation","[,deprɪ'deɪʃ(ə)n]","[,dɛprə'deʃən]","n.掠夺",'n.掠夺,破坏、蹂躏','Most southern town have suffer from the reckless depredation of the armed gang.','大多数南方城镇都遭受过这帮武装匪徒的鲁蛮掠夺。','The town survived the depredations of marauding gangs.','这个城镇从抢劫团伙的掠夺中幸存了下来。'}

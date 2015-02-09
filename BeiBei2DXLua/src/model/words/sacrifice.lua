@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sacrifice"]={"sacrifice","['sækrɪfaɪs]","['sækrɪfaɪs]","n.牺牲",'n.牺牲,供俸,祭品|||vt.牺牲,祭祀,贱卖|||vi.献祭,(棒球)作牺牲一击','A calf was offered up as a sacrifice to the goddess.','向女神祭献了一头牺牲小牛.','The high priest sacrificed the goat on the altar.','大祭司把山羊献在祭坛上。'}

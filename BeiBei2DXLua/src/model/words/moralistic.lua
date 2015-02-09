@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moralistic"]={"moralistic","[mɒrə'lɪstɪk]","[,mɔrə'lɪstɪk]","adj.道学气的",'adj.道学气的','He has become more moralistic.','他变得更喜欢说教了。','We should not take such a highly moralistic attitude towards cheating in exams.','我们不能用一个旧的态度去对待现在在考试中作弊的人。'}

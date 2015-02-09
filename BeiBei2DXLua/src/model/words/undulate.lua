@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undulate"]={"undulate","['ʌndjʊleɪt]","['ʌndʒə'let]","adj.波动的",'adj.波动的,起伏的|||v.(使)波动,(使)起伏,(使)震动','Fields of wheat are ||undulating|| in the breeze.','在微风中起伏着一片麦浪。','As we travel south, the countryside begins to undulate as the rolling hills sweep down to the riverbanks.','我们一路南行，乡间开始变得起伏不平，绵延的山峦一直延伸到河岸。'}

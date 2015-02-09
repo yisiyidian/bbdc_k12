@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["propellant"]={"propellant","[prə'pel(ə)nt]","[prə'pɛlənt]","n.使推进之物",'n.使推进之物,发射火药,推进燃料','The factory produces propellant for ballistic missiles.','这个工厂为弹道导弹生产推进剂。','The final operation in propellant manufacture is the curing of the binder.','制造推进剂的最后操作是粘合剂的固化。'}

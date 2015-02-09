@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strange"]={"strange","[streɪn(d)ʒ]","[strendʒ]","adj.奇怪的",'adj.陌生的,奇怪的','Do you know why she is so strange to him?','你知道她为什么对他如此冷淡吗？','It\'s strange for her to be so rude.','真奇怪，她竟然会如此粗暴无礼。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["merge"]={"merge","[mɜːdʒ]","[mɝdʒ]","vt.&vi.合并",'vt.&vi.合并,消失,吞没,融合|||[计算机]合并','The two marching columns moved closer and finally merged.','行进中的两路纵队越走越近，终于合成一路。','Where does this stream merge into the Rhine?','这条小河在什么地方与莱茵河合流？'}

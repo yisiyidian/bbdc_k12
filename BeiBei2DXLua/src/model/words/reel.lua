@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reel"]={"reel","[riːl]","[ril]","n.卷筒",'n.卷筒,线轴|||vi.蹒跚地走,旋转,骚乱,退缩,摇晃|||vt.卷,卷...于轴上,旋转','He reeled back into the room.','他摇摇摆摆地走回房间。','His mind was reeling with all that he had seen and heard.','他的所见所闻使他内心大为震动。'}

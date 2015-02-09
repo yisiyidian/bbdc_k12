@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inertia"]={"inertia","[ɪ'nɜːʃə]","[ɪ'nɝʃə]","n.惯性",'n.惯性,惰性','This might help you overcome inertia.','这可能有助于你克服惰性。','He resented her inertia, her lack of energy and self-direction.','他讨厌她的懒惰、缺乏活力和自我。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infirm"]={"infirm","[ɪn'fɜːm]","[ɪn'fɝm]","adj.弱的",'adj.弱的,虚弱的,柔弱的','An infirm support.','不坚定的支持','She\'s old and infirm and has to keep to the house.','她因年老体弱而足不出户.'}

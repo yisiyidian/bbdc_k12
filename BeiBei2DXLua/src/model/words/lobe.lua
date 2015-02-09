@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lobe"]={"lobe","[ləʊb]","[lob]","n.圆形突出部",'n.圆形突出部,耳朵,裂片','the lobe of an ear.','耳垂','A giant abscess was detected in the upper lobe of the right lung.','右肺上叶检测到一个巨大的脓肿。'}

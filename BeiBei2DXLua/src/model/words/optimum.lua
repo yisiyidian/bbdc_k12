@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["optimum"]={"optimum","['ɒptɪməm]","['ɑptəməm]","n.最适宜",'n.最适宜|||adj.最适宜的','Do you know the optimum temperature for the growth of plants?','你知道庄稼生长的最佳温度吗 ?','The market offers optimum condition for sale.','市场为销售提供了最佳条件。'}

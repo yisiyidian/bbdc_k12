@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["technology"]={"technology","[tek'nɒlədʒɪ]","[tɛk'nɑlədʒi]","n.技术",'n.技术,工艺(学)','The firm has to overcome its resistance to new technology.','这家公司必须克服对采用新技术的阻力.','The results of this research can be applied to new developments in technology.','这项研究成果能应用於新的技术开发方面.'}

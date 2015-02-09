@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skinny"]={"skinny","['skɪnɪ]","[ 'skini ]","adj.皮状的(体积小的)",'adj.皮状的(体积小的),皮包骨头的','He looks much too skinny/scrawny to be a weight-lifter.','他瘦骨嶙峋的, 当不了举重运动员.','You\'re skinny enough without going on a diet!','你不必节食就已经够瘦的了!'}

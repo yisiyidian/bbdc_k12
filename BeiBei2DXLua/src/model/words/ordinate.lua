@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ordinate"]={"ordinate","['ɔːdɪnət]","['ɔrdɪnət]","n.纵线",'n.纵线,纵座标','ordinate','纵坐标','The ordinate scale is linear in decibels.','纵坐标比例尺以分贝为单位是线性的。'}

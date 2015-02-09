@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crass"]={"crass","[kræs]","[kræs]","adj.粗鲁的",'adj.粗鲁的,愚钝的,粗厚的','||Crass|| materialism causes people to forget spiritual values.','极端唯物主义使人忘掉精神价值。','The government has behaved with crass insensitivity.','该政府行事愚蠢而且麻木不仁。'}

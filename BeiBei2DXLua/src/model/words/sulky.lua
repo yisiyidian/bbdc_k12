@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sulky"]={"sulky","['sʌlkɪ]","['sʌlki]","adj.生气的(阴沉的)",'adj.生气的(阴沉的)','sulky weather.','阴沉的天气','I was quite sulky, so I didn\'t take part in much.','我相当闷闷不乐，所以没有怎么参与。'}

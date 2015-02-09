@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sleep"]={"sleep","[sliːp]","[slip]","v.睡觉",'n.睡眠,静止,睡意|||v.睡觉,睡眠,静止','He\'d been sleeping rough for a week, in ditches and haystacks.','他在沟里和草堆里露宿了一个星期。','I haven\'t had enough sleep lately.','最近我睡眠不够。'}

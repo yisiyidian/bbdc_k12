@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shoot"]={"shoot","[ʃuːt]","[ʃut]","vt.射击",'n.射击,芽,发射|||vt.射击,发出,发芽|||vi.飞驰','Rose bushes shoot again after being cut back.','玫瑰丛修剪後还能再长出新枝。','The film was ||shot|| in black and white.','这部电影拍成了黑白片。'}

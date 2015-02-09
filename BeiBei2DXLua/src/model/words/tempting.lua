@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tempting"]={"tempting","['tem(p)tɪŋ]","['tɛmptɪŋ]","adj.诱惑人的",'adj.诱惑人的|||动词tempt的现在分词','Seeing the tempting apples, the baby made a long arm for them.','小宝宝看到那些诱人的苹果，便伸手去拿。','The Devil ||tempted|| Adam and Eve.','魔鬼诱惑了亚当和夏娃.'}

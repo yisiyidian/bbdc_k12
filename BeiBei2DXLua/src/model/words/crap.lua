@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crap"]={"crap","[kræp]","[ kræp ]","n.废话",'n.废话,粪,屎,排便|||v.排便','That\'s a lot of crap.','那真是一派胡言。','He used to crap around like that.','他老做那样的傻事。'}

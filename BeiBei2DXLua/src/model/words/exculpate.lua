@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exculpate"]={"exculpate","['ekskʌlpeɪt]","[ 'ekskʌlpeit ]","vt.为某人开脱",'vt.为某人开脱，证明无罪','He exculpate himself from stealing the money.','他自行辩白没有偷钱。','He has been exculpated from the charge.','他已被证明无罪。'}

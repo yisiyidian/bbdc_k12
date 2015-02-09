@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nitrate"]={"nitrate","['naɪtreɪt]","['naɪtret]","n.硝酸盐",'n.硝酸盐','||Nitrate|| of soda may be sown on pasture that does not eat off.','可以把硝酸钠撒在牧草还没有吃光的草地上。','A highly explosive mixture of ammonium nitrate and trinitrotoluene.','阿马托炸药一种由硝酸铵和三硝基甲苯组成的烈性混合炸药'}

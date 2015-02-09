@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flannel"]={"flannel","['flæn(ə)l]","['flænl]","n.法兰绒",'n.法兰绒|||(复数）flannel：法兰绒衣服','Stop flannelling and give a straight answer!','别再兜圈子了，直截了当地回答！','The girl looked happy in her new flannel.','女孩穿着新的法兰绒衣服，看上去很高兴。'}

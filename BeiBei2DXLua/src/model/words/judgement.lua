@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["judgement"]={"judgement","['dʒʌdʒm(ə)nt]","[ 'dʒʌdʒmənt ]","n.判断",'n.判断','Don\'t make a judgement easily.','不要轻易做出判断','The disaster was seen as a judgement from on high.','这一灾难被视为上天的惩罚.'}

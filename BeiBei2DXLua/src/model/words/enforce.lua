@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enforce"]={"enforce","[ɪn'fɔːs; en-]","[ɪn'fɔrs]","vt.加强",'vt.加强,强迫,执行','Policemen and judges enforce the law.','警察与法官执行法律。','Have you any statistics that would enforce your argument?','你有任何统计资料可以加强你的论点吗？'}

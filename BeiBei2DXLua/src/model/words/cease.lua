@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cease"]={"cease","[siːs]","[sis]","n.停止",'n.停止|||vt.&vi.停止,终了','The newspaper had ceased publication.','报纸已停刊。','The old man ceased breathing the night before.','老人前一天晚上停止了呼吸。'}

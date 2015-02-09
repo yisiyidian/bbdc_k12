@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hype"]={"hype","[haɪp]","[haɪp]","v.大肆宣传",'v.大肆宣传,炒作','The hype surrounding the murder trial.','围绕谋杀案审判法庭的骚乱','The public are not fooled by all the hype the press gave the event.','新闻界言过其实的种种报道并没有愚弄得了公众。'}

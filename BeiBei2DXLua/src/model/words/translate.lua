@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["translate"]={"translate","[træns'leɪt; trɑːns-; -nz-]","[træns'let]","vt.翻译",'vt.翻译；转化；解释；转变为；调动|||vi.翻译','I need to translate it into English.','我必须把它译成英语。','Can you translate the sentence into English?','你能把这句话翻译成英语吗？'}

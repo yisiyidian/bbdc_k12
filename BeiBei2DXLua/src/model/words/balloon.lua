@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["balloon"]={"balloon","[bə'luːn]","[bə'lun]","n.气球",'n.气球|||vt.使膨胀|||vi.如气球般膨胀,激增|||adj.气球状的','The child pricked the balloon and it burst.','那孩子在气球上刺了个洞, 气球就爆了.','A balloon floated across the sky.','有个气球从空中飘过.'}

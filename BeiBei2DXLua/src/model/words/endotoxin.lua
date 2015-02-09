@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["endotoxin"]={"endotoxin","['endəʊ,tɒksɪn]","[,ɛndo'tɑksɪn]","n.内毒素",'n.内毒素','In some of the facilities, there has been evidence of endotoxin contamination.','在一些设施中也有发现内毒素污染的情况。','||Endotoxin|| is a part of toxin.','内毒素是毒素的一部分。'}

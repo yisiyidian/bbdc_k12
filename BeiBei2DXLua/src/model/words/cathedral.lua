@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cathedral"]={"cathedral","[kə'θiːdr(ə)l]","[kə'θidrəl]","n.大教堂",'n.大教堂','This street offers a fine vista of the cathedral.','这条街的尽头是个大教堂, 远远望去非常好看.','The bishops, priests and deacons processed into the cathedral.','主教、 司铎以及助祭列队走进大教堂.'}

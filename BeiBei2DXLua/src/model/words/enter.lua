@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enter"]={"enter","['entə]","['ɛntɚ]","vi.进入",'vi.进入,参加,开始,上台,进入角色|||vt.进入,报名,开始,加入,报价,提出|||[计算机]送入','Let\'s not enter into details at this stage.','咱们不要在现阶段著手处理具体问题。','Please do not enter before knocking on the door.','进来前请先敲门。'}

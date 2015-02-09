@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apolitical"]={"apolitical","[eɪpə'lɪtɪk(ə)l]","[,epə'lɪtɪkl]","adj.不关心政治的(无政治意义的)",'adj.不关心政治的(无政治意义的)','These institutions have to be apolitical in order to function and to perform effectively.','要有效运转和发挥作用，这些机构就必须不牵连政治。','As a musician, you cannot be apolitical.','作为一位音乐家，你不能对政治不感兴趣。'}

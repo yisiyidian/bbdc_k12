@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["handsome"]={"handsome","['hæns(ə)m]","['hænsəm]","adj.英俊的",'adj.英俊的,慷慨大方的,可观的,灵巧的','He is not more handsome than I.','他不比我潇洒－－顶多跟我一样潇洒。','Fine clothes added to his strikingly handsome appearance.','华丽的服装使他那极其英俊的外貌更为增色.'}

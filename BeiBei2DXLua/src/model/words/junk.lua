@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["junk"]={"junk","[dʒʌŋk]","[dʒʌŋk]","n.垃圾",'n.垃圾,废旧杂物,中国平底帆船|||vt.丢弃','She likes to pick up some interesting junk in junk shops.','她喜欢在旧货店买些有趣的旧货。','||Junk|| is anything that has outlived its usefulness.','破烂货，是一些比它本身的用处还活久了的东西。'}

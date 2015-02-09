@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outmoded"]={"outmoded","[aʊt'məʊdɪd]","[,aʊt'modɪd]","adj.过时的",'adj.过时的|||动词outmode的过去式和过去分词形式','My father\'s vision is outmoded.','我父亲的眼光过时了。','She is in an outmoded style.','她的穿着很过时'}

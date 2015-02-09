@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hydrophobia"]={"hydrophobia","[,haɪdrə(ʊ)'fəʊbɪə]","['haɪdrə'fobɪə]","n.恐水病",'n.恐水病,狂犬病','The pool man has hydrophobia.','这个可怜的男人得了狂犬病。','How long the hydrophobia incubation period has grow most？','狂犬病的潜伏期最长有多久？'}

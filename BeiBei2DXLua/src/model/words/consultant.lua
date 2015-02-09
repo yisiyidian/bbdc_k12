@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consultant"]={"consultant","[kən'sʌlt(ə)nt]","[kən'sʌltənt]","n.顾问",'n.顾问,咨询专家','I want to be a consultant engineer.','我想成为一名顾问工程师。','Of all the consultants, only Mr. Wang gave us some proposals in point.','所有的顾问当中, 只有王先生提了一些中肯的建议。'}

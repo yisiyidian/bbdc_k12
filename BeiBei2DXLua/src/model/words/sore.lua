@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sore"]={"sore","[sɔː]","[sɔr]","adj.疼痛的",'adj.疼痛的,痛心的|||n.痛处,疮口','The poor dog was covered with sores.','这只可怜的狗满身全是伤。','My legs are sore from all that running yesterday.','我的腿因为昨天跑步而感到酸痛。'}

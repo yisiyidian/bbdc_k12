@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beverage"]={"beverage","['bev(ə)rɪdʒ]","['bɛvərɪdʒ]","n.饮料",'n.饮料','She hasn\'t intended to serve food and beverage at the party.','她没打算在晚会上提供食物和饮料','The bar steward is accountable to the beverage manager.','酒吧间服务员要对餐饮部经理负责。'}

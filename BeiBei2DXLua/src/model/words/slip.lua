@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slip"]={"slip","[slɪp]","[slɪp]","vi.滑",'vi.滑，滑脱；犯过失，出错；（时间）不知不觉地过去；（健康状况等）变差|||vt.使顺利滑动；摆脱；放松，松开|||n.跌倒，失足；纸条；失误，口误；事故|||adj.滑动的；可拆卸的；打有活结的','The ship slipped into the harbour at night.','那艘船夜里悄悄开进了港口。','He caught the ball, then it slipped through his fingers.','那球他已接住却又从手中滑脱了。'}

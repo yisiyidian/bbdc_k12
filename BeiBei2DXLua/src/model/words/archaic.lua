@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["archaic"]={"archaic","[ɑː'keɪɪk]","[ɑr'keɪk]","adj.已不通用的",'adj.已不通用的,古老的,古代的','In fact, the rules were as unrealistic as they were archaic.','实际上这些规章既陈旧又不现实。','||Archaic|| practices such as these are usually put forward by people of limited outlook.','视野狭隘的人通常会提出类似于这些的陈腐做法。'}

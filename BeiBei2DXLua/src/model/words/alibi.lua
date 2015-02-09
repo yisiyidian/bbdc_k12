@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alibi"]={"alibi","['ælɪbaɪ]","['æləbaɪ]","n.不在场证明或辩解",'n.不在场证明或辩解,托辞|||v.辩解，找托辞开脱','They\'ve got nothing on me I\'ve got an alibi.','他们没抓我的罪证--我有不在现场的证据.','The false alibi threw the police off the scent.','那个不在犯罪现场的伪证使警方失去了线索。'}

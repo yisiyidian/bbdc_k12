@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inborn"]={"inborn","['ɪnbɔːn; ɪn'bɔːn]","[,ɪn'bɔrn]","adj.天生的",'adj.天生的,生来的,生成的','He had an inborn talent for languages.','他有天生的语言才能。','an inborn defect in the formation of collagen.','胶原质构成的先天缺陷。'}

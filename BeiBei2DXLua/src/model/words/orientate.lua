@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orientate"]={"orientate","['ɔːrɪənteɪt; 'ɒr-]","['orɪɛntet]","vt.给...定位",'vt.使向东，给...定位|||vi.面向东|||（英)=orient','It took him some time to orientate himself in his new school.','他花了一些时间才了解了新学校的情况.','Our firm is orientated towards the export side of the business.','我公司业务已转向出口方面.'}

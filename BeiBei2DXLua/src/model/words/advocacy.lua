@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["advocacy"]={"advocacy","['ædvəkəsɪ]","['ædvəkəsi]","n.拥护",'n.拥护,支持,鼓吹','||Advocacy|| of the abolition of slavery.','废奴主义废除奴隶制的主张','||Advocacy|| of causes in court.','辩护法庭中案件的辩护'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sibylline"]={"sibylline","['sɪbɪlaɪn]","['sɪbɪlaɪn]","adj.女巫的",'adj.女巫的；预言性的','God is a sibylline man.','上帝是个预言家。','In these sibylline leaves are gathered prophecies of the past upon the cases in which the axe will fall.','在这些提供预言的书卷中收集了过去对于一些案件的零散预言，在这些案件中，危险会降临。'}

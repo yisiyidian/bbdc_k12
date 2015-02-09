@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["asset"]={"asset","['æset]","['æsɛt]","n.资产",'n.资产,有用的东西,优点,长处','The tennis player\'s speed is his great asset.','那个网球运动员动作迅速，这是他的一大优势。','Our creativity in the field of technology is our greatest asset.','我们在技术领域的创造力是我们最大的资本。'}

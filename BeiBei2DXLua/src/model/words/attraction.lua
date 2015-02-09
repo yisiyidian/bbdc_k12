@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attraction"]={"attraction","[ə'trækʃ(ə)n]","[ə'trækʃən]","n.吸引",'n.吸引,吸引力,有吸引力的人或事物','She felt a strong attraction to him.','她感到他对她有强烈的吸引力。','The attraction of the moon for the earth causes the tides.','月球对地球的吸引力造成潮汐。'}

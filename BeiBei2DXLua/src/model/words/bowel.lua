@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bowel"]={"bowel","['baʊəl]","['baʊəl]","n.肠",'n.肠','Sharp, spasmodic pains in the bowels.','肠绞痛肠内痉挛性剧痛','Do you have a bowel movement today?','你今天上过厕所吗？'}

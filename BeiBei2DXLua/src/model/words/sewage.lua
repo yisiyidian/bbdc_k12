@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sewage"]={"sewage","['suːɪdʒ]","['sʊɪdʒ]","n.脏水",'n.脏水,污水','Chemicals in the factory\'s sewage system have changed the ecology of the whole area.','这座工厂排出的化学物质改变了整个地区的生态.','A pipe for carrying off water or sewage.','排水管排水或污水的管子'}

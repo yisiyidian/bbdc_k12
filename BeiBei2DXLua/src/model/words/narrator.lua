@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["narrator"]={"narrator","[nə'reɪtə]","[næ'retɚ]","n.叙述者",'n.叙述者(讲解员,播音员)','He listens and waits for the narrator to explain more.','他听著，等待讲的人进一步解释','The narrator helps tell the story.','旁白（叙述者）帮助讲故事。'}

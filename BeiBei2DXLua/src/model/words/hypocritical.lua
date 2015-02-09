@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypocritical"]={"hypocritical","[,hɪpə'krɪtɪkl]","[,hɪpə'krɪtɪkl]","adj.伪善的",'adj.伪善的,伪善者的','The politician, left and right, is hypocritical, caring about themselves but never about others.','不管是左派或右派，政客们都很虚伪，他们只关心自己，从不关心别人。','If someone is being hypocritical then it is fair to expose that.','如果有人虚伪矫饰，那就应该暴露他的真面目。'}

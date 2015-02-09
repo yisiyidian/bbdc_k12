@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bitterly"]={"bitterly","['bɪtəlɪ]","['bɪtɚli]","adv.怨恨地",'adv.怨恨地,悲痛地，残酷地','He bitterly repented his folly.','他对自己干的蠢事後悔已极.','He spoke most bitterly of his experiences in prison.','他十分痛苦地讲述了他在监狱中的经历。'}

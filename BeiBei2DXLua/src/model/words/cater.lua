@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cater"]={"cater","['keɪtə]","['ketɚ]","vi.备办食物",'vi.备办食物,迎合|||vt.为(宴会等)提供餐饮服务','Shops cater for the do-it- yourself craze by offering consumers bits and pieces which they can assemble at home.','商店为了迎合“自己动手”的狂热心理，为消费者提供可以在家里组装的零件。','He has to cater for his boss.','他得迎合他的老板。'}

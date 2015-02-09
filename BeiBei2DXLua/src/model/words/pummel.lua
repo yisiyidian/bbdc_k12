@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pummel"]={"pummel","['pʌm(ə)l]","['pʌml]","v.(用拳)接连地打",'v.(用拳)接连地打,打击','Cyclones continually pummel the reef.','龙卷风不断地拍打暗礁。','Meltdown in US finance system pummels stock market.','美国金融体系衰退连累股市。'}

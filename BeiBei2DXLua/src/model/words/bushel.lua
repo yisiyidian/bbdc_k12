@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bushel"]={"bushel","['bʊʃ(ə)l]","['bʊʃəl]","n.蒲式耳",'n.蒲式耳|||vt.修整（衣服等）|||n.(Bushel)人名；(英)布谢尔','He measures another\'s corn by his own bushel.','用自己的标准衡量别人；以己度人。','He is a man who always hides his light under a bushel.','他是一个锋芒不外露的人。'}

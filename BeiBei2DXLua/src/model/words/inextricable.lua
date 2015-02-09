@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inextricable"]={"inextricable","[ɪn'ekstrɪkəb(ə)l; ,ɪnɪk'strɪk-; ,ɪnek-]","['ɪnɪk'strɪkəbl]","adj.解不开的",'adj.无法摆脱的,纠缠的,解不开的','My heart sink again on viewing the inextricable complexity of this deception.','看到这个骗局的错综复杂，我的心又沉了下来。','an inextricable maze; an inextricable web of deceit.','走不出的迷宫；无法逃脱的圈套'}

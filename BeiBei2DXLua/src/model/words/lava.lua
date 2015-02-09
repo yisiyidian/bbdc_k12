@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lava"]={"lava","['lɑːvə]","['lɑvə]","n.熔岩",'n.熔岩,火山岩','The volcano spewed molten lava.','火山喷出了熔岩.','The lava flowed down the sides of the volcano.','熔岩从火山口里滚滚喷出.'}

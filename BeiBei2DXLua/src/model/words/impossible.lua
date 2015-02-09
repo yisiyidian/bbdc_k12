@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impossible"]={"impossible","[ɪm'pɒsɪb(ə)l]","[ɪm'pɑsəbl]","adj.不可能的",'adj.不可能的','It\'s almost impossible to find him in the immense ocean.','在无边无际的海洋中要找到他几乎是不可能的。','It\'s impossible to tell who will win the next election.','下届选举谁能获胜无法预知。'}

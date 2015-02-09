@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["justification"]={"justification","[dʒʌstɪfɪ'keɪʃ(ə)n]","[,dʒʌstɪfɪ'keʃən]","n.辩护",'n.辩护,证明正当,释罪|||[计算机]对齐','A formal justification or defense.','正式辩解，正式辩护','I can see no justification for dividing the company into smaller units.','我认为没有理由把公司划分为小单位。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amplifier"]={"amplifier","['æmplɪfaɪə]","['æmplɪfaɪɚ]","n.放大器",'n.放大器,扩音机','I bought an amplifier yesterday.','我昨天买了一个扩音器。','The internet easily becomes an amplifier of negative opinions.','互联网是负面舆论的放大器。'}

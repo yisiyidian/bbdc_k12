@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["march"]={"march","[mɑːtʃ]","[mɑrtʃ]","vi.行军",'n.(March)三月|||n.示威游行|||vt.使前进,使行军|||vi.行军,进军','This term will begin on ||March|| 1st.','这个学期三月一日开始。','Science is on the march.','科学正在进步中。'}

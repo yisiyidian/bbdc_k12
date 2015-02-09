@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["island"]={"island","['aɪlənd]","['aɪlənd]","n.岛",'n.岛，岛屿|||vt.使孤立','The mountainous island loomed on the horizon.','那座巨大的岛屿隐隐约约浮现在地平线上。','The two countries had a territorial dispute over which one owned the island.','两国之间存在着涉及那个岛屿归属的领土争端。'}

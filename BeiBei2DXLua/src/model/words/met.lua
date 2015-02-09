@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["met"]={"met","[met]","[mɛt]","v.遇见（过去式和过去分词）",'v.遇见（meet的过去式和过去分词）','I met him at the bus stop.','我在公共汽车站遇到他的。','I met her in the street.','我在街上遇见她。'}

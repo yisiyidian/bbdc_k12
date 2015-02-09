@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wend"]={"wend","[wend]","[wɛnd]","vi.行",'vi.行(走,去,往,向,前进)','wend one\'s way home.','向家走去','Sleepy-eyed commuters were wending their way to work.','睡眼朦胧的通勤者拖着沉重的步子去上班。'}

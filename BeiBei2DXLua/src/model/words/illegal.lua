@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illegal"]={"illegal","[ɪ'liːg(ə)l]","[ɪ'ligl]","adj.不合法的",'adj.不合法的,非法的|||n.非法移民','All protests are brutally repressed by the government as illegal.','所有的抗议活动都遭到当局的野蛮镇压，并被宣布为非法。','It\'s illegal to carry guns in our country.','在我们国家，携带枪支是违法的。'}

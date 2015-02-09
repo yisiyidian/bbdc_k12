@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enterprise"]={"enterprise","['entəpraɪz]","['ɛntɚ'praɪz]","n.企业",'n.企业,企划,进取心','You shouldn\'t underestimate the risks of the enterprise.','你不应低估这一计划的风险.','The enterprise was doomed to failure.','该企业注定要失败.'}

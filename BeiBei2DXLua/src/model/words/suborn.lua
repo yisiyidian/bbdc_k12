@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suborn"]={"suborn","[sə'bɔːn]","[sə'bɔrn]","vt.收买",'vt.教唆，收买，贿赂，教唆某人作伪证','He was suborned into killing the old Tom.','他受唆使杀死了老汤姆。','He was charged with conspiracy to suborn witnesses.','他被控图谋收买证人作伪证。'}

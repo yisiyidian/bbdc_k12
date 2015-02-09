@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quadrant"]={"quadrant","['kwɒdr(ə)nt]","['kwɑdrənt]","n.象限",'n.象限','The river runs through the southwest quadrant of the city.','这条河穿过这座城市的西南区域。','The line AB lies in the second quadrant .','线段ab是处在第二象限中。'}

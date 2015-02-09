@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arroyo"]={"arroyo","[ə'rɒɪəʊ]","[ə'rɔɪo]","n.干涸的河道",'n.干涸的河道,峡谷，小河','There was a arroyo river in front of my old house.','在我老家门前有一条干涸的河。','She continued along the path until she came to the arroyo.','她沿着小路一直走到小河边。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["removal"]={"removal","[rɪ'muːv(ə)l]","[rɪ'muvl]","n.移动",'n.移动,移居,除去','The removal of petty restrictions has made life easier.','对一些琐碎规定的取消使生活更自在了.','After the removal of the soup, fish was served.','汤撤去后, 鱼就上来了.'}

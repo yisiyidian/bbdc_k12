@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["don"]={"don","[dɒn]","[ dɔn ]","n.君",'n.君,先生,阁下|||v.著,穿','In wintertime he will don a wet suit and go right on surfing.','到冬季，他就穿上橡皮紧身衣去冲浪。','The crowd threw petrol bombs at the police, who responded by donning riot gear.','人群向警察扔汽油弹，警察则穿上了防暴衣。'}

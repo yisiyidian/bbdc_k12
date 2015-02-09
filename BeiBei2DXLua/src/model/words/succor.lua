@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["succor"]={"succor","['sʌkə]","['sʌkɚ]","n.救援",'n.救援,援助者','The government has worked out a plan of succoring the needy.','政府已经制定出了救济贫民的计划。','These refugees are very grateful to the government\'s succor.','这些难民非常感激政府的救援。'}

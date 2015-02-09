@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["measure"]={"measure","['meʒə]","['mɛʒɚ]","n.措施",'n.措施,办法,量度,尺寸|||v.测量,量','The pianist gave a long and varied recital, with a couple of encores for good measure.','那钢琴家的独奏演出会时间长、节目多，还加奏了两支曲子。','His resignation is a measure of how angry he is.','从他辞职一事可见其气愤的程度。'}

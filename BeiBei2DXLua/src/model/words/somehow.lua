@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["somehow"]={"somehow","['sʌmhaʊ]","['sʌmhaʊ]","adv.不知怎么地",'adv.不知怎么地,以某种方式','||Somehow|| or other, the baby burst into tears.','那个婴儿不知为什么大哭起来。','He could have finished it on schedule, but somehow he fell behind.','他原本能按预定进度做完这件事的，但不知怎地却落后了。'}

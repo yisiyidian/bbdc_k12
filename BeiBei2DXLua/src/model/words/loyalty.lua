@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loyalty"]={"loyalty","['lɒɪəltɪ]","['lɔɪəlti]","n.忠诚",'n.忠诚,忠心','||Loyalty|| to the former king still persists in parts of the country.','该国一些地方仍有人忠於前国王.','Don\'t allow personal loyalty to colour your judgement.','不要因讲义气而影响了你的判断。'}

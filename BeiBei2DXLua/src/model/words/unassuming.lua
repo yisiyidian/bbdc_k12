@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unassuming"]={"unassuming","[ʌnə'sjuːmɪŋ]","['ʌnə'sʊmɪŋ]","adj.谦逊的",'adj.谦逊的,不装腔作势的','Despite his position, he has an unassuming personality.','虽然有地位，但他为人谦逊。','He\'s a man of few words, very polite and unassuming.','他话不多，很有礼貌，为人谦和。'}

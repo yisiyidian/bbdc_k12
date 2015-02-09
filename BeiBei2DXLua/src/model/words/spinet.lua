@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spinet"]={"spinet","[spɪ'net; 'spɪnɪt]","[ˈspɪnɪt]","n.古时的小型竖琴",'n.古时的小型竖琴,小型立式钢琴','But the spinet was too big for me to play.','但是钢琴太大了不适合我弹。','I had learned in my youth to play a little upon the spinet.','年轻时我曾学过弹几下古钢琴.'}

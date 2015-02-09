@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lank"]={"lank","[læŋk]","[læŋk]","adj.瘦的",'adj.瘦的,细长的,长而柔软的','She ran her fingers through her hair; it felt lank and dirty.','她用手指梳了梳自己的长发，头发摸起来又油又脏。','She had lank hair and sallow skin.','她头发平直，皮肤发黄。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insinuate"]={"insinuate","[ɪn'sɪnjʊeɪt]","[ɪn'sɪnjuet]","vt.暗示",'vt.暗示，迂回进入|||vi.迂回进行','Are you ||insinuating|| that I am a liar?','你绕来绕去是否暗指我在撒谎？','He insinuated that she was not his type.','他暗示她不是他喜欢的类型。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["freeway"]={"freeway","['friːweɪ]","['friwe]","n.高速公路",'n.高速公路','Drive the freeways to work.','开车走高速公路上班','Heavy traffic clogged the freeways.','拥挤的交通堵塞了高速公路'}

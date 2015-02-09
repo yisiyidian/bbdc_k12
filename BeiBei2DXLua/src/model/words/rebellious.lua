@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rebellious"]={"rebellious","[rɪ'beljəs]","[rɪ'bɛljəs]","adj.造反的",'adj.造反的,反抗的,难控制的','This child is obstinate and rebellious.','这个孩子倔强，难以管束。','The tribesmen were as rebellious as ever.','这个部落仍旧有反叛的倾向.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wealth"]={"wealth","[welθ]","[wɛlθ]","n.财富",'n.财产,财富,大量,丰富','He\'s always flaunting his wealth.','他总是摆阔。','Success and wealth transformed his character.','成功和财富改变了他的性格。'}

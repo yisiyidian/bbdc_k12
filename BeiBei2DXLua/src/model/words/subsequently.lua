@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subsequently"]={"subsequently","['sʌbsɪkwəntlɪ]","['sʌbsɪkwəntli]","adv.后来",'adv.后来,随后','The mixture is subsequently passed through a flat membrane filter.','接着让混合物通过一个平板膜滤器.','Many of the earlier reports were subsequently shown to be unsatisfactory.','许多较早的文献结果都显得不够理想.'}

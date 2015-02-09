@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diaper"]={"diaper","['daɪəpə]","['daɪpɚ]","n.尿布",'n.尿布|||vt.换尿布','An article, such as a paper diaper or hypodermic syringe, that can be disposed of after one use.','用后即丢弃的物品，一次性物品用后即可丢弃的物品，如纸制尿布或皮下注射器','I just nurse him and changed his diaper, and he\'s crying again!','刚喂完奶，换了尿布，却又在哭了！'}

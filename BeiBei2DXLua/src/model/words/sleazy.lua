@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sleazy"]={"sleazy","['sliːzɪ]","['slizi]","adj.质地薄的",'adj.质地薄的,没有内容的,廉价的','Downstairs in the windowless basement, where the real work is done, it is sleazy and sweaty.','工作实际上在楼下没有窗户的地下室里完成，又脏又累。','The accusations are making the government\'s conduct appear increasingly sleazy.','这些指控让政府的行为显得越发不光彩了。'}

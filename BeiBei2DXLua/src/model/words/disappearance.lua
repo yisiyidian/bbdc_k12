@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disappearance"]={"disappearance","[dɪsə'pɪərəns]","[,dɪsə'pɪrəns]","n.消失",'n.消失','His disappearance is being looked into by the police.','他失踪一事警方正在调查.','Her disappearance gave rise to the wildest rumours.','她失踪一事引起了各种流言蜚语.'}

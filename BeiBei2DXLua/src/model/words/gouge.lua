@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gouge"]={"gouge","[gaʊdʒ; guːdʒ]","[ɡaʊdʒ]","n.圆凿",'n.圆凿,沟,以圆凿刨|||v.用圆凿子削除,挖出,欺骗','A maniac had gouged several holes in the priceless painting.','有个狂徒在那幅价值连城的画上乱凿了几个洞。','He has accused her of threatening to gouge his eyes out.','他指控她曾威胁要挖出他的眼睛。'}

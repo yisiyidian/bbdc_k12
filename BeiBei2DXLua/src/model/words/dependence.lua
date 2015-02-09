@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dependence"]={"dependence","[dɪ'pend(ə)ns]","[dɪ'pɛndəns]","n.依赖",'n.依赖,信赖，上瘾','Find a job and end your dependence on your parents.','找个工作，别再依赖你的父母了。','an alcohol dependence.','酒瘾'}

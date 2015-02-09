@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["countenance"]={"countenance","['kaʊnt(ə)nəns; -tɪn-]","['kaʊntənəns]","n.面容",'n.面容,面部表情,支持v.支持,赞成,同意','His countenance fell.','他愁眉不展。','Few people gave countenance to some of the greatest inventions or discoveries.','有些最伟大的发明和发现最初是很少有人支持的。'}

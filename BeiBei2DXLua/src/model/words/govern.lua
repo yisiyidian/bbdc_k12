@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["govern"]={"govern","['gʌv(ə)n]","['ɡʌvɚn]","vt.统治",'vt.统治,支配,管理,规定|||vi.统治,执行','Britain was mandated to govern the former colony of German East Africa.','英国受权代管德国在东非的前殖民地.','You must not be governed by the opinions of others.','你决不要受别人意见的支配。'}

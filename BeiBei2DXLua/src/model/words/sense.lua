@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sense"]={"sense","[sens]","[sɛns]","n.感觉",'n.侦测,感官,感觉;理智;意义|||vt.感觉,了解;检测','It would make sense to leave early.','早点离开是明智的。','No one in their right senses would let a small child go out alone.','凡是有理智的人，谁都不会让那麽小的孩子独自出门。'}

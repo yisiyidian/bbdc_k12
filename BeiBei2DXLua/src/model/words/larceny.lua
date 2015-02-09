@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["larceny"]={"larceny","['lɑːs(ə)nɪ]","['lɑrsəni]","n.盗窃(罪)",'n.盗窃(罪)','The man was imprisoned for larceny.','那个人因犯盗窃罪而入狱。','commit larceny','犯偷盗罪'}

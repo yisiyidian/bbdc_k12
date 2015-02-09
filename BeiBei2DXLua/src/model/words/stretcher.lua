@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stretcher"]={"stretcher","['stretʃə]","['strɛtʃɚ]","n.担架",'n.担架，伸张器，横砖，横木','The injured were carried away on stretchers.','用担架把受伤的人抬走了。','An ambulance officer brought a stretcher for the injured woman.','救护车工作人员带来了一副担架抢救那位受伤的女子。'}

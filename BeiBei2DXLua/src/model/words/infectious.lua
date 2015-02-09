@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infectious"]={"infectious","[ɪn'fekʃəs]","[ɪn'fɛkʃəs]","adj.传染的",'adj.传染的','Diphtheria is a serious infectious disease.','白喉是一种严重的传染病。','Flu is an infectious disease characterized by fever, aches and pains and exhaustion.','流感是一种传染病，其特征是发热、全身疼痛和疲乏无力。'}

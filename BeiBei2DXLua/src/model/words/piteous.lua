@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["piteous"]={"piteous","['pɪtɪəs]","['pɪtɪəs]","adj.哀怨的",'adj.哀怨的,可怜的','The other deities were vexed beyond words, but dared attempt no rescue for all her piteous cries.','别的神祗气恼万分, 但不敢拯救赫拉, 尽管她哭喊得十分凄惨。','The politician found the piteous cries of the starving children unbearable.','这个政治家发现饥饿的孩子们可怜的哭声让人不忍心听下去。'}

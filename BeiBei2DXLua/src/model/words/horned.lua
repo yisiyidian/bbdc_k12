@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["horned"]={"horned","[hɔːnd]","[hɔrnd]","adj.有角的",'adj.有角的,角状的','He horned in with some suggestions while we were talking.','我们正在讨论时，他打断我们的话提出一些建议。','The young bull horned the old cow out of the herd.','小公牛用角把老母牛从牛群中顶了出去.'}

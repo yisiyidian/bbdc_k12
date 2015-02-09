@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attire"]={"attire","[ə'taɪə]","[ ə'taiə ]","n.服装",'n.服装,盛装|||v.穿衣,打扮','Your interview attire should match the dress code of the company, or be one step up.','你的面试服装应该符合公司的着装规范，或更上一层楼。','He was attired in blue.','他穿着蓝色衣服。'}

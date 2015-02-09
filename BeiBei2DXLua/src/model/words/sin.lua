@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sin"]={"sin","[sɪn]","[sɪn]","n.罪",'n.罪,罪孽,过失|||vi.犯罪,违反','Catholics go to confession to be purged of sin/purge (away) their sin/purge their souls of sin.','天主教徒透过告解以获得赦罪[净化灵魂].','He thinks it\'s a sin to covet other\'s properties.','他认为贪图他人的财物是有罪的。'}

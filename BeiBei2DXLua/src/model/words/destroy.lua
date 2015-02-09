@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["destroy"]={"destroy","[dɪ'strɒɪ]","[dɪ'strɔɪ]","vt.&vi.破坏",'vt.&vi.破坏,毁坏|||[计算机]撤消','If the tree falls that way, it will destroy the house.','这棵树向那边倒下就会把那所房子压坏。','Before they fled the country, the enemy vainly attempted to destroy all the factories.','敌人在逃往国外前，妄图把所有工厂都毁掉。'}

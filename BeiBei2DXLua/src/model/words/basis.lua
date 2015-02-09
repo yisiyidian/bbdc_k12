@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["basis"]={"basis","['beɪsɪs]","['besɪs]","n.基础",'n.基础,根据,主要成分','Payments can be evened out on a monthly basis over the year.','全部款项可以在一年中按月平均交纳.','According to conventional wisdom, voters usually make their choice on the basis of domestic issues.','按一般人在这些问题上的看法，选民常常着眼于国内问题来选择候选人。'}

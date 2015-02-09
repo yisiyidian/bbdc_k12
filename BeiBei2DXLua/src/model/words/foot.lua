@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foot"]={"foot","[fʊt]","[fʊt]","n.脚",'n.脚,山脚,最底部,一步长,音步，进程|||vi.跳舞,步行|||vt.表演舞步,付账,踩踏,结算','Only our party\'s policies will put the country on its ||feet|| again.','只有我们党的政策才会使国家恢复元气。','It\'s easier to get there on foot than by car.','到那儿去，步行比坐车容易。'}

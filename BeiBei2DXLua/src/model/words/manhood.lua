@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manhood"]={"manhood","['mænhʊd]","['mænhʊd]","n.成年",'n.成年,勇气,男子气概','He is killed in an accident in the first flush of manhood.','他正当盛年时在一次事故中丧生。','Members of certain tribes perform special ceremonies when they reach manhood.','某些部落的男人在达到成年时要举行特殊的庆祝仪式。'}

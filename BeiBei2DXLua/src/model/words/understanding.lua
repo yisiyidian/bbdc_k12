@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["understanding"]={"understanding","[ʌndə'stændɪŋ]","[,ʌndɚ'stændɪŋ]","n.理解",'n.了解,理解,个人见解,非正式协议,谅解,同情心,洞察力|||adj.有同情心的','She found great difficulties in understanding him.','她觉得很难理解他。','We are trying to get a thorough understanding of the government\'s fiscal policy.','我们正努力对政府的财政政策进行全面的了解。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["usury"]={"usury","['juːʒ(ə)rɪ]","['juʒəri]","n.高利贷",'n.高利贷','||Usury|| is interest in excess of a legal rate.','高利贷是指超过法定利率取息。','The interest of usury is unfairly high.','高利贷的利息惊人得高。'}

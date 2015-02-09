@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beast"]={"beast","[biːst]","[bist]","n.畜牲",'n.畜牲|||n.凶残的人,令人厌憎的人','Clumsy beast!','笨拙的畜生！','The lion is called the king of beasts.','狮子号称百兽之王。'}

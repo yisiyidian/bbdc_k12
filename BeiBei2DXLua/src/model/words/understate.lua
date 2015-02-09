@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["understate"]={"understate","[ʌndə'steɪt]","['ʌndɚ'stet]","v.打著折扣说",'v.打著折扣说,保守地说,少说','understate corporate financial worth.','少报公司的经济价值','The government chooses deliberately to understate the increase in prices.','政府有意选择对价格的上涨轻描淡写。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["putative"]={"putative","['pjuːtətɪv]","['pjʊtətɪv]","adj.假定的",'adj.假定的，被公认的','The government gives a putative date of the project.','政府给出了这个计划的一个假定日期。','The custom has its putative origins in the ancient Greek tradition of belief in oracles.','一般都认为，这个习俗起源于古希腊人信仰神论的传统。'}

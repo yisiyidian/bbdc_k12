@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["predictable"]={"predictable","[prɪ'dɪktəb(ə)l]","[prɪ'dɪktəbl]","adj.可预言的",'adj.可预言的','I knew you\'d say that you\'re so predictable!','我早就知道你会这样说--果不其然!','This was a predictable reaction, given the bitter hostility between the two countries.','考虑到两国之间的强烈敌意，这种反应是可以预见的。'}

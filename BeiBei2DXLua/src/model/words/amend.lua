@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amend"]={"amend","[ə'mend]","[ə'mɛnd]","vt.修正",'vt.修正,改善,改良|||vi.自我修正','Since you insist, I must amend the letter of credit.','既然你坚持，我就只好修改信用证。','Please amend your copy of the contract accordingly.','请将你的合同文本作相应的修正。'}

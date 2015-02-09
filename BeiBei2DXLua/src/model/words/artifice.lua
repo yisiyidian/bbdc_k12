@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["artifice"]={"artifice","['ɑːtɪfɪs]","['ɑrtɪfɪs]","n.技巧",'n.技巧,巧妙,诡计','He display a great deal of artifice in decorate his new house.','他在布置新房子中运用了丰富的技巧。','Pretending to faint was merely an artifice.','假装昏迷只不过是个诡计。'}

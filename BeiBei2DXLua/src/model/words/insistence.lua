@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insistence"]={"insistence","[ɪn'sɪst(ə)ns]","[ in'sistəns ]","n.坚持(强调",'n.坚持(强调,坚决主张)','They were united in their insistence that she should go to college.','他们一致坚持她应上大学.','I did it ,but only at your insistence','我做了这件事，只因是你的坚决要求'}

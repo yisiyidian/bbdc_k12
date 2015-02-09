@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["asperity"]={"asperity","[ə'sperɪtɪ]","[æ'spɛrəti]","n.严酷",'n.严酷，严厉，粗暴','He spoke to the boy with asperity.','他严厉地对那男孩讲话。','He remarked with some asperity.','他颇为不耐烦地说道。'}

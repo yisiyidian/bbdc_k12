@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["privacy"]={"privacy","['prɪvəsɪ; 'praɪ-]","['praɪvəsi]","n.隐私",'n.隐私,隐居,秘密','He was sentenced to be guilty of intrusion upon my privacy.','他因侵犯我的隐私权被判有罪。','I object to our privacy being invaded.','我反对我们的隐私权受到侵害。'}

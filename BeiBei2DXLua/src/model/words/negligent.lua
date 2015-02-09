@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["negligent"]={"negligent","['neɡlɪdʒənt]","['nɛɡlɪdʒənt]","adj.疏忽的",'adj.疏忽的,粗心的,不在意的','I was negligent, I admit it.','我太疏忽大意，这一点我承认。','She was taxed with negligence/with having been negligent.','她被指控疏忽职守.'}

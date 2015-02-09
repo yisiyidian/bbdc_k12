@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["purloin"]={"purloin","[pɜː'lɒɪn]","[ pə:'lɔin ]","vt.偷窃",'vt.偷窃','Each side purloins the other\'s private letters.','双方都偷窃对方的私人信件。','Tom purloin the car from his neighber','汤姆从邻居那偷了车'}

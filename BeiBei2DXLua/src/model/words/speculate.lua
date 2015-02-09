@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["speculate"]={"speculate","['spekjʊleɪt]","['spɛkjə'let]","vt.推测",'vt.推测,好奇|||vi.深思,投机','speculated that high cholesterol was a contributing factor to the patient\'s health problems.','推测高胆固醇含量是影响病人健康的一个因素','He did not speculate on who would get the prize.','他没有去猜测谁将得奖。'}

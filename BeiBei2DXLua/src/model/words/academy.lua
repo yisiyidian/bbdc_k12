@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["academy"]={"academy","[ə'kædəmɪ]","[ə'kædəmi]","n.学院",'n.学院,学术,学会','This is an academy of art','这是一所艺术专科学院','I visited Chinese ||Academy|| of Sciences yesterday.','我昨天去访问了中国科学院。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suspicious"]={"suspicious","[sə'spɪʃəs]","[sə'spɪʃəs]","adj.可疑的",'adj.可疑的,多疑的','He looks suspicious do you think he\'s rumbled us/what we\'re up to?','他好像起了疑心--你觉得他看穿我们[我们要干的事]了吗?','Two suspicious characters were brought in.','逮捕了两名嫌疑犯.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ranking"]={"ranking","['ræŋkɪŋ]","['ræŋkɪŋ]","n.名次",'adj.最高级的,一流的|||n.分等级,名次,队','ranking officer','高级军官','entering a ranking university is my dream','进入一所一流大学是我的梦想'}

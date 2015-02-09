@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undesirable"]={"undesirable","[ʌndɪ'zaɪərəb(ə)l]","[,ʌndɪ'zaɪərəbl]","adj.不受欢迎的",'adj.不受欢迎的,不良的，不合意的，讨厌的|||n.不受欢迎的人，不良分子','undesirable intrusions.','不受欢迎的侵扰','She\'s a most undesirable influence.','她是个专门不起好作用的人.'}

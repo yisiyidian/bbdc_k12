@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feint"]={"feint","[feɪnt]","[fent]","n.伪装",'n.伪装,佯装攻击|||v.佯攻,佯击','He placed the ball and tried a couple of feints.','他把球放好，试着虚打了几下。','Make a feint to the east but attack in the west.','声东击西。'}

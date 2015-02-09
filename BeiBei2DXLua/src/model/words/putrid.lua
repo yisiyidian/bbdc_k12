@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["putrid"]={"putrid","['pjuːtrɪd]","[ 'pju:trid ]","adj.腐臭的",'adj.腐臭的','He sometimes thinks the whole world is just a putrid wasteyard.','他有时候觉得整个世界不过是个腐臭的垃圾场。','A putrid smell drove us from the room.','一股腐臭的气味迫使我们离开这房间。'}

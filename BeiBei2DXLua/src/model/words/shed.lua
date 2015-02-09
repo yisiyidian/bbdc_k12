@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shed"]={"shed","[ʃed]","[ʃɛd]","n.车棚",'n.车棚,小屋,脱落物|||vt.使...流出,散发,脱落,除掉','The carpenter ran his ruler over the shed and sized it up at once.','木匠量了一下棚屋的尺寸, 立刻估计出它的大小。','The snow has banked up against the shed.','雪在小屋旁聚积起来.'}

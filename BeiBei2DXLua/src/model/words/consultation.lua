@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consultation"]={"consultation","[kɒnsəl'teɪʃ(ə)n]","[,kɑnsl'teʃən]","n.请教",'n.请教,谘询,协议会','The standard charge for consultation be$50.','正常的咨询费为50美元。','He mastered these words through the arduous consultation of the dictionary.','通过勤查字典，他掌握了这些单词。'}

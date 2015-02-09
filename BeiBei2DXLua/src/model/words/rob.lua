@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rob"]={"rob","[rɒb]","[rɑb]","v.抢劫",'v.抢劫|||vi.抢劫,盗窃|||vt.非法剥夺,使丧失,抢劫','Not only do they rob you, they smash everything too.','他们不仅抢夺你的财物，还要把每样东西都捣毁。','Do not rob Peter to pay Paul.','【谚】不要挖肉补疮。'}

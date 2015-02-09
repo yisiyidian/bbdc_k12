@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mountebank"]={"mountebank","['maʊntɪbæŋk]","[ 'mauntibæŋk ]","n.江湖郎中",'n.江湖郎中,骗子','He is a totally mountebank.','他是个彻头彻尾的江湖骗子。','He was led astray by a mountebank.','他被一个夸夸其谈的骗子引入歧途。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weakness"]={"weakness","['wiːknɪs]","['wiknəs]","n.软弱",'n.软弱','The Governmentis worried about the weakness of the pound (against other currencies).','英国政府忧虑货币（较之其他货币）疲软.','The book\'s weakness is the author\'s inability to sustain an argument.','该书的缺点在於作者未能把论证展开.'}

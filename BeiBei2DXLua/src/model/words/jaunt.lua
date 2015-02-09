@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jaunt"]={"jaunt","[dʒɔːnt]","[ dʒɔ:nt ]","n.远足",'n.远足|||vi.短程旅游','They are off for a day\'s jaunt to the beach.','他们出去到海边玩了一天。','I jaunted daily back and forth to school on a bus.','我每天上学来回都乘公交车。'}

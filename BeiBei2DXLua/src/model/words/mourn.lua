@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mourn"]={"mourn","[mɔːn]","[mɔrn]","v.哀悼",'v.哀悼,忧伤,服丧','People wore crapes to mourn our leader.','人们戴着黑纱哀悼我们的领导。','The old woman still mourns for her son.','这位老太太还在为儿子的死伤心。'}

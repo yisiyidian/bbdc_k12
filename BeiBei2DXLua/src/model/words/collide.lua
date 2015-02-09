@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collide"]={"collide","[kə'laɪd]","[kə'laɪd]","vi.碰撞",'vi.碰撞,互撞,砥触','As the bus turned the corner, it collided with a van.','公共汽车转过拐角时与客货车相撞.','The interests of the two countries collide.','两国的利益发生冲突.'}

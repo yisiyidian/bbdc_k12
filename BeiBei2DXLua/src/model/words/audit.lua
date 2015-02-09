@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["audit"]={"audit","['ɔːdɪt]","['ɔdɪt]","n.查帐",'n.查帐,审计|||vt.审计,旁听','As usual, the yearly audit will take place in December.','跟往常一样，年度审计将在十二月份进行。','Which course do you want to audit?','你想旁听哪门课?'}

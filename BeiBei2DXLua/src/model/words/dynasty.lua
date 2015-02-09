@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dynasty"]={"dynasty","['dɪnəstɪ]","['daɪnəsti]","n.朝代",'n.朝代,王朝','The Tang ||Dynasty|| is a period remarkable for its liberality.','唐朝是一段以开明著称的时期。','Erect a dynasty.','建立一个朝代'}

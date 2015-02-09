@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meaningful"]={"meaningful","['miːnɪŋfʊl; -f(ə)l]","['minɪŋfl]","adj.意义深长的",'adj.意义深长的,有意义的','That statement is not very meaningful.','那项声明没有多大意义。','The company was one of the first to offer meaningful employment to the blind.','这家公司是为盲人提供有意义工作的先驱之一.'}

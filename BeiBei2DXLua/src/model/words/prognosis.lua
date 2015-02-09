@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prognosis"]={"prognosis","[prɒg'nəʊsɪs]","[prɑg'nosɪs]","n.预知",'n.预知,预测,预后','The prognosis for the economy is uncertain.','对经济的前景预测还不确定。','If the cancer is caught early the prognosis is excellent.','如果癌症在早期发现，预后效果还是非常好的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dose"]={"dose","[dəʊs]","[dos]","n.剂量",'n.剂量,服用量|||vt.配','A dose of this stuff will purge you!','这种药只须一剂就能让你通便!','The smaller boys badly wanted to give the bully a dose of his own medicine.','那些小男孩儿巴不得让那欺负人的坏蛋也尝点苦头.'}

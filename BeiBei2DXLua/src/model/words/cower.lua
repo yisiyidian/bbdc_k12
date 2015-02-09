@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cower"]={"cower","['kaʊə]","['kaʊɚ]","v.畏缩",'v.畏缩,退缩,抖缩','He cowered away as she raised her hand to hit him.','她扬手打他，他立即退缩开。','The dog cowered down under the table.','那只狗吓得蜷伏在桌子底下。'}

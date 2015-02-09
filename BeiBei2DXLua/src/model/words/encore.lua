@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encore"]={"encore","['ɒŋkɔː]","['ɑŋkɔr]","n.再演",'n.再演，加演，安可曲|||v.要求加演','The group gave three encores.','演出小组应听众之请又演出了三个节目.','The violinist got an enthusiastic encore.','听众热情要求小提琴手再演奏一曲.'}

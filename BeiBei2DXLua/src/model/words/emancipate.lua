@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emancipate"]={"emancipate","[ɪ'mænsɪpeɪt]","[ɪ'mænsɪpet]","vt.释放",'vt.释放,解放','Women are still struggling to be fully emancipated.','妇女仍在为彻底解放而斗争。','I decide to emancipate him from dull study.','我决定把他从烦闷的学习中解放出来。'}

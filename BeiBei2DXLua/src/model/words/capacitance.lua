@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capacitance"]={"capacitance","[kə'pæsɪt(ə)ns]","[kə'pæsətns]","n.电容",'n.电容','My cell phone has a big capacitance.','我手机的电池容量很大。','The effect of the diffusion capacitance can be troublesome.','扩散电容会引起麻烦.'}

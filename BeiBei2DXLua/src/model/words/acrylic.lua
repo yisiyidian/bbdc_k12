@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acrylic"]={"acrylic","[ə'krɪlɪk]","[ə'krɪlɪk]","adj.丙烯酸的",'adj.丙烯酸的|||n.丙烯酸的纤维,塑料或树脂','A trademark used for an acrylic fiber or yarns made from this fiber.','奥纶一种聚丙烯酸纤维或该种纤维制成的纱线的商标名称','...her pink acrylic sweater.','…她那件粉红色的丙烯酸纤维毛衣。'}

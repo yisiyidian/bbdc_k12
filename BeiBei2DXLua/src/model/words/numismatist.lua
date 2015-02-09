@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["numismatist"]={"numismatist","[njuː'mɪzmətɪst]","[nu'mɪzmətɪst]","n.钱币奖章收藏家",'n.钱币奖章收藏家','These old coins look indistinguishable to laymen, but they are distinct in the eye of a numismatist.','这几枚古币在普通人看来一模一样，但在收藏古币的人看来却各不相同。','My father is a numismatist.','我爸爸是一个钱币收藏家。'}

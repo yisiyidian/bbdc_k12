@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imagery"]={"imagery","['ɪmɪdʒ(ə)rɪ]","['ɪmɪdʒəri]","n.意象",'n.肖像,比喻,影像，意象','He argued that Shakespeare\'s plays were patterns of imagery.','他认为莎士比亚的剧本是形象塑造的典范.','The pictorial imagery of symbols suits that role better than text does.','符号具有的图形表意的外在形象,比文本更适合担当这种角色.'}

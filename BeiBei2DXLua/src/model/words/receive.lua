@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["receive"]={"receive","[rɪ'siːv]","[rɪ'siv]","vt.收到",'vt.收到,接受,迎接,容纳,遭受,相信|||vi.接到,获得','I was on vacation last week and didn\'t receive your fax.','上星期我正在度假, 没收到你们的传真。','I didn\'t receive an acknowledgement of my application.','对我的申请，我还没有收到回信。'}

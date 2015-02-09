@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["much"]={"much","[mʌtʃ]","[mʌtʃ]","adj.许多的",'adj.许多的|||adv.很,非常|||pron.&n.许多','||Much|| as I would like to stay, I really must go home.','我倒是很愿意呆在这儿，可确实得回家了。','The patient is much the same this morning.','今晨病人情况几无变化。'}

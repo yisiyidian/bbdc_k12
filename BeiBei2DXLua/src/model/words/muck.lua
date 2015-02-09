@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["muck"]={"muck","[mʌk]","[mʌk]","n.垃圾",'n.垃圾,肥料|||v.施肥,弄脏,弄糟','He fell down and came home with his clothes all mucked up.','他摔倒了，结果回家时衣服上全是泥。','There was muck everywhere.','到处都是淤泥。'}

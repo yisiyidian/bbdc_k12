@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breathless"]={"breathless","['breθlɪs]","['brɛθləs]","adj.喘不过气来的",'adj.喘不过气来的','The children are breathless as they watch the tightrope act.','孩子们在看走绳索表演时呼吸都屏住了。','I met him in a hot and breathless afternoon.','我是在一个又闷又热的下午遇到他的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zing"]={"zing","[zɪŋ]","[zɪŋ]","n.子弹声",'n.子弹声，尖啸声,活力|||v.发出尖啸声，尖刻批评','You need to put more zing into your playing.','你在这一活动中需要再增加些干劲.','an arrow zinging toward its target.','箭“嗖”的一声射向靶子'}

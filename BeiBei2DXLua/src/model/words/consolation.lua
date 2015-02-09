@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consolation"]={"consolation","[,kɒnsə'leɪʃ(ə)n]","[ˌkɑnsəˈleʃən]","n.安慰",'n.安慰,令人安慰的事物','Getting third prize was poor consolation for all their hard work.','他们那麽努力才获得三等奖, 真有点说不过去.','I got many letters of consolation when my mother died.','母亲死后，我收到许多安慰信。'}

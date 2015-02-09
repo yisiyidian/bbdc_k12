@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["downstream"]={"downstream","['daʊn'striːm]","[,daʊn'strim]","adj.下游的",'adv.下游地|||adj.下游的','Is the water polluted at source or further downstream?','河水是在源头还是在流出之後受到污染的？','You can cross the river a short distance below (ie downstream from) the waterfall.','在瀑布下游附近可以过河.'}

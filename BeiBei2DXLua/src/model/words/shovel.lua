@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shovel"]={"shovel","['ʃʌv(ə)l]","['ʃʌvl]","n.铲",'n.铲,挖斗机,一铲的量|||vt.铲,挖,舀|||vi.用铲子','The giant shovel is biting off big chunks from the hill.','巨型铲土机正在把小山头一大口一大口地啃掉。','They shoveled a path through the snow.','他们在雪地上铲出了一条路。'}

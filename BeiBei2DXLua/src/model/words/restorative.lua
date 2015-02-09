@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["restorative"]={"restorative","[rɪ'stɒrətɪv]","[rɪ'stɔrətɪv]","adj.恢复健康的",'adj.恢复健康的,恢复的|||n.使恢复的东西，恢复药','Nature has an exhilarative and restorative effect.','大自然具有使人畅快并恢复体力的效果。','An invigorating, refreshing, or restorative agent or influence.','增强物增加活力、精神或帮助恢复的物品或影响'}

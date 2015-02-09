@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quasar"]={"quasar","['kweɪzɑː; -sɑː]","['kwezɑr]","n.恒星状球体",'n.恒星状球体,半星球体,类星球体','A lunar occultation of a quasar.','类星体的月星掩测定','Merely Useing your eyes could not see the quasar.','仅仅用肉眼无法看到类星球体。'}

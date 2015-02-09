@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recess"]={"recess","[rɪ'ses; 'riːses]","['risɛs]","n.休息",'n.休息,幽深处,凹缝,壁龛,放假|||vt.放入壁龛,作凹处,休息|||vi.休息','An open recess for holding a fire at the base of a chimney; a hearth.','壁炉用于在烟囱底部燃火的敞口的凹窝；炉床','A recess or room in a church set apart for special or small services.','特殊小房间教堂内相隔开的用来做特殊或小型仪式的小房间'}

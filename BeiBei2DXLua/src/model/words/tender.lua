@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tender"]={"tender","['tendə]","['tɛndɚ]","adj.温和的",'adj.温和的,亲切的,未成熟的|||vt.提供,投标','The old pound note is no longer legal tender.','旧制的英镑纸币已不是法定货币了。','He gave her a tender kiss.','他给了她一个温柔的吻。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["puny"]={"puny","['pjuːnɪ]","['pjuni]","adj.微小的",'adj.微小的,不足取的，瘦弱的','||Puny|| though he looked, he was as brave as a lion.','他看上去虽然瘦弱，但人很勇敢。','The lamb was a puny little thing.','羊羔瘦小孱弱。'}

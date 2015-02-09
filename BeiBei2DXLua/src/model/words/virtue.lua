@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["virtue"]={"virtue","['vɜːtjuː; -tʃuː]","['vɝtʃʊ]","n.美德",'n.美德,优点;贞操','||Virtue|| is fairer far than beauty.','美德远胜于美貌。','She is a paragon of virtue.','她是美德的典范。'}

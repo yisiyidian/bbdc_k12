@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["station"]={"station","['steɪʃ(ə)n]","['steʃən]","n.车(站)",'n.车(站),位置,姿势,地位|||vt.(配)安置','He was walking up and down the station platform.','他在火车站的月台上走来走去。','It is no more than ten minutes\' walk from the station.','由车站走到这里只有十分钟的路程。'}

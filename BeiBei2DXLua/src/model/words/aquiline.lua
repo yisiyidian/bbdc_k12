@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aquiline"]={"aquiline","['ækwɪlaɪn]","['ækwɪlaɪn]","adj.鹰的",'adj.鹰的,似鹰的,弯曲的','He had a thin aquiline nose and deep-set brown eyes.','他长着窄长的鹰钩鼻和深陷的褐色眼睛。','he has an aquiline nose','他有个鹰勾鼻'}

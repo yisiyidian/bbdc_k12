@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zigzag"]={"zigzag","['zɪgzæg]","['zɪɡzæɡ]","n.曲折",'n.曲折,之字形|||adj.曲折的,锯齿形的|||adv.曲折地,成锯齿形地|||vt.使曲折|||vi.曲折前行','The path zigzags up the hill.','这条小道向山顶蜿蜒而上。','There is a zigzag path in the garden.','花园里有一条之字形的小道。'}

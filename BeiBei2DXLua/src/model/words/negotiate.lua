@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["negotiate"]={"negotiate","[nɪ'gəʊʃɪeɪt]","[nɪ'ɡoʃɪet]","vt.转让",'vt.转让,越过,处理,协商|||vi.协商','Today\'s newspapers made a savage attack on the unions for their refusal to negotiate.','今天的报纸就工会拒绝谈判一事对工会进行了猛烈的抨击。','Since our contract is near its term we must negotiate a new one.','由于我们的合同快到期了，我们必须谈判新的合约。'}

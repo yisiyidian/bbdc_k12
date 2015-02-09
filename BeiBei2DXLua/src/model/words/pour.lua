@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pour"]={"pour","[pɔː]","[pɔr]","vt.&vi.倾泻",'n.流出,倾泻,骤雨|||vt.&vi.倒,倾泻,蜂涌而来','The fans poured out of the stadium cheering wildly.','体育爱好者们欣喜若狂地从体育场中蜂涌而出。','I\'ve poured coffee into your cup by mistake.','我错把咖啡倒在你的杯子里了。'}

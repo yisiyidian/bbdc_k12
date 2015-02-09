@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strategy"]={"strategy","['strætɪdʒɪ]","['strætədʒi]","n.战略",'n.战略,策略','The essence of all good strategy is simplicity.','一切优秀战略的精髓是简单。','The strategy was designed to wear down the enemy\'s resistance.','这一策略旨在逐步削弱敌人的抵抗力.'}

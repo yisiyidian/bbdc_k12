@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["photography"]={"photography","[fə'tɒgrəfɪ]","[fə'tɑɡrəfi]","n.摄影术",'n.摄影术','||Photography|| is her favourite pastime.','摄影是她喜爱的消遣.','The contrast of light and shade is important in photography.','在摄影艺术中明暗的反差是很重要的.'}

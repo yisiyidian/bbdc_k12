@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thrash"]={"thrash","[θræʃ]","[θræʃ]","n.打(谷)",'n.打(谷)，鞭打|||vt.抽打，彻底击败|||vi.痛打，猛烈移动（动荡）','The child was soundly thrashed.','这个孩子被痛打了一顿。','Let\'s thrash the matter over before putting it on the agenda.','我们先把这件事仔细研究一下，再把它列入议事日程。'}

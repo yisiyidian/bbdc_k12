@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imitate"]={"imitate","['ɪmɪteɪt]","['ɪmɪtet]","v.模仿",'v.模仿|||vt.仿制,仿造,模仿,仿效','They watched jig on TV and tried to imitate.','他们看着电视里的快步舞并且试图模仿。','You should imitate great and good people.','你应仿效伟大善良的人。'}

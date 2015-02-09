@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bedrock"]={"bedrock","['bedrɒk]","['bɛdrɑk]","n.岩床",'n.岩床,根底,基础','The poor old man has come down to the bedrock.','那可怜的老人只剩下最后一块钱了。','That’s a bedrock value of our country.','这是我们这个国家价值的基础'}

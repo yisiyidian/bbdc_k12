@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["primary"]={"primary","['praɪm(ə)rɪ]","['praɪmɛri]","adj.主要的",'n.最主要者|||adj.主要的,初期的,根本的','The demand for primary products is on the increase in European market.','欧洲市场对初级产品的需求在增长。','He only accepted the primary education off and on in his childhood.','他小时候只断断续续地接受过初等教育。'}

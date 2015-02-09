@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["teaching"]={"teaching","['tiːtʃɪŋ]","['titʃɪŋ]","n.教学",'n.教学,教义|||adj.教学的|||动词teach的现在分词','The teaching method marked a now epoch in education.','这种教学方法标志着教育的新时代。','He is equipped with much experience in teaching.','他具有丰富的教学经验。'}

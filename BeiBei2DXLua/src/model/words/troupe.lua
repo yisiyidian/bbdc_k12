@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["troupe"]={"troupe","[truːp]","[trʊp]","n.（演出的）一团",'n.（演出的）一团,一班|||vi.巡回演出','A troupe of minstrels.','一群吟游诗人、歌手','The acrobatic troupe livened the garden party up immensely.','杂技团的表演使游园会大为活跃。'}

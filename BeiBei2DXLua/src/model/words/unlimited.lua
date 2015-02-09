@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unlimited"]={"unlimited","[ʌn'lɪmɪtɪd]","[ʌn'lɪmɪtɪd]","adj.无限的",'adj.无限的,不受控制的,无条件的','An unlimited arms race may well increase the danger of war.','无限度的武器竞赛当然会增加战争的危险性。','An unlimited horizon.','无限的地平线'}

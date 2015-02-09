@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["south"]={"south","[saʊθ]","[saʊð]","n.南",'adj.南方的|||adv.在南方|||n.南,南方','The land dips gently to the south.','地面缓缓向南倾斜。','Our party has a large following in the south.','我党在南方有一大批拥护者.'}

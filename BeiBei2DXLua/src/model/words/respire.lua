@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["respire"]={"respire","[rɪ'spaɪə]","[rɪ'spaɪɚ]","v.呼吸",'v.呼吸，松口气','Just be the air for your respire.','意思是成为你呼吸的空气。','people can not respire under water','人们在水下是不能呼吸的'}

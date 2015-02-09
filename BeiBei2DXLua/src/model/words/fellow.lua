@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fellow"]={"fellow","['feləʊ]","['fɛlo]","n.朋友",'n.朋友,家伙,同类,校董,研究生|||adj.同类的,同事的,同伴的','We\'ve sinned against you, and against our fellow men.','我们得罪了你，也得罪了我们的邻人。','He is a friendly jovial fellow.','他是个和蔼而快乐的人。'}

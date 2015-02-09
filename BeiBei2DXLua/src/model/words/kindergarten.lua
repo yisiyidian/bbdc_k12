@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kindergarten"]={"kindergarten","['kɪndə,gɑːt(ə)n]","['kɪndɚɡɑrtn]","n.幼儿园",'n.幼儿园','The nurse walked the children out of the kindergarten.','保育员把狱子们带出了幼儿园。','Children begin to learn basic morals in the kindergarten.','孩子们从幼儿园开始学习基本的道德规范。'}

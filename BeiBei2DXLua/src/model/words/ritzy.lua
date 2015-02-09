@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ritzy"]={"ritzy","['rɪtsɪ]","['rɪtsi]","adj.豪华的",'adj.高雅的,时髦的,豪华的','Palm Springs has ritzy restaurants and glitzy nightlife.','棕榈泉有高档餐厅和奢华的夜生活。','There is a ritzy hotel in my hometown.','我家乡有个豪华酒店。'}

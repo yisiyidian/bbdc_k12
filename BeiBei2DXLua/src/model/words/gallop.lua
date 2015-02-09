@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gallop"]={"gallop","['gæləp]","['ɡæləp]","n.疾驰",'n.疾驰,飞奔|||v.飞驰,急速进行,急急忙忙的说','After a hard gallop, the horse was played out.','那马跑得精疲力竭.','The horse slowed to a walk after its long gallop.','那匹马跑了一大阵後慢下来缓步而行.'}

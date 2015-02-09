@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exercise"]={"exercise","['eksəsaɪz]","['ɛksɚsaɪz]","n.练习",'n.练习,作业,运动|||vt.运用|||vi.锻炼','If you don\'t get more exercise, you\'ll get fat.','如果你不多作运动，就会发胖。','What others think exercises a great influence on most of us.','别人怎样想对我们多半会产生很大影响。'}

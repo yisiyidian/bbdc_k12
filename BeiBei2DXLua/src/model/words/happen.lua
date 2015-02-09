@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["happen"]={"happen","['hæp(ə)n]","['hæpən]","vi.发生",'vi.发生,碰巧,出现,偶然遇到','What happened when you told him the news?','你告诉他这消息时, 他有何反应?','I happened on just the thing I\'d been looking for.','我偶然发现了我一直在寻找的东西。'}

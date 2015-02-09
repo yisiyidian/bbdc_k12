@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tempo"]={"tempo","['tempəʊ]","['tɛmpo]","n.拍子",'n.拍子,速率','Your tempo is too slow.','你演奏的速度太慢了。','The boss is unsatisfied with the tardy tempo.','老板不满于这种缓慢的进度。'}

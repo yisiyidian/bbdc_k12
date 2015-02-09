@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weak"]={"weak","[wiːk]","[wik]","adj.虚弱的",'adj.不充分的,淡薄的,弱的,虚弱的,无力的','The small weak child became the scorn of the class.','这个瘦小软弱的孩子成为全班嘲笑的对象。','Your argument is too weak to convince me.','你的论点太薄弱了，说服不了我。'}

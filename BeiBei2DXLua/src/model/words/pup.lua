@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pup"]={"pup","[pʌp]","[pʌp]","n.小狗",'n.小狗,幼兽,幼畜','The boy told the teacher that he couldn\'t come to school, because his mother was ill; but I think he sold he teacher a pup.','男孩对老师说，他没能来上学，是因为母亲病了，可我却认为他欺骗了老师。','You\'ve been sold a pup -- that house is nearly falling down!','你上当了--那所房子都要塌了!'}

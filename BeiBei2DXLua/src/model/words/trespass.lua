@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trespass"]={"trespass","['trespəs]","['trɛspəs]","n.非法侵入",'n.非法侵入，罪过，[法]侵害诉讼v.非法侵入,侵害，冒犯；客气话〕叨扰，打扰，妨碍(on;upon).','May I trespass on you for that book?','请你拿那本书给我好吗？','Are you familiar with the laws relating to trespass?','你熟悉关于侵入私人领地的法律吗？'}

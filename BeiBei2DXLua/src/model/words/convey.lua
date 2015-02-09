@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["convey"]={"convey","[kən'veɪ]","[kən've]","vt.传达",'vt.传达,运输,转移|||[计算机]输送','A vibrating membrane in the ear helps to convey sounds to the brain.','耳膜的振动帮助声音传送到大脑。','The marching men had to close up to let the on-coming convey go past.','行军的人们不得不靠紧些以便让前来的运输队过去。'}

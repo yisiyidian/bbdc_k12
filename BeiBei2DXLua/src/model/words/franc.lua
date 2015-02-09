@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["franc"]={"franc","[fræŋk]","[fræŋk]","n.法郎",'n.法郎','What is 5 equivalent to in French francs?','5英镑相当於多少法国法郎?','I need to change my dollars into francs.','我需要把美金换成法郎.'}

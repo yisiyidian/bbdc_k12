@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["psychiatrist"]={"psychiatrist","[saɪ'kaɪətrɪst]","[saɪ'kaɪətrɪst]","n.精神病医师",'n.精神病医师,精神病学家','You\'d probably better see a psychiatrist.','你可能最好去看一下精神病医师。','My psychiatrist says a healthy body equals a healthy mind.','我的心理医生说，健康的体魄相当于健康的精神。'}

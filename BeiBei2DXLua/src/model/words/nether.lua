@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nether"]={"nether","['neðə]","['nɛðɚ]","adj.下面的",'adj.下面的,下方的,下界的','Her nether lip trembled.','她的下唇颤抖着。','He was escorted back to the nether regions of Main Street.','他被护送回中央大道南面的地方。'}

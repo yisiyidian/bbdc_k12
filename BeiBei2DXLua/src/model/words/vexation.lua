@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vexation"]={"vexation","[vek'seɪʃ(ə)n]","[vɛk'seʃən]","n.恼怒",'n.恼怒','A state of vexation caused by a perceived slight or indignity; a feeling of wounded pride.','生气，自尊受损因被看不起或轻视而生气的状态；自尊心受损的感觉','Much to my vexation, I just missed a chance of visiting China.','错过一个访问中国的机会，真气人。'}

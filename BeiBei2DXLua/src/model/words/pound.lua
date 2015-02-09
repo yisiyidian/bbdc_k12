@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pound"]={"pound","[paʊnd]","[paʊnd]","n.英镑",'n.英镑；磅；兽栏；重击声|||vt.&vi.连续重击；咚咚地走|||vi.（持续地）苦干；（驾舟时）拍打（水面）；（心脏）狂跳；脚步沉重地走（或跑）|||vt.连续重击；捣碎，碾碎；强迫吸收；猛烈袭击','He pounded the table angrily.','他生气地猛拍桌子。','I lost several pounds last month.','我上个月瘦了好几磅。'}

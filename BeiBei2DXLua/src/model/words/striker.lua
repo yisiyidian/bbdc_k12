@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["striker"]={"striker","['straɪkə]","['straɪkɚ]","n.罢工者",'n.罢工者，(足球)前锋，钟锤','Arsenal have just signed a new striker.','阿塞纳尔队刚雇用了一名新前锋。','The strikers were threatened with dismissal if they did not return to work.','罢工者受到威胁说, 如果他们不复工, 就会被解雇。'}

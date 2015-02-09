@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["speck"]={"speck","[spek]","[spɛk]","n.斑点",'n.斑点,灰尘,污点|||vt.用斑点标记','The car accelerated away and was soon just a speck on the horizon.','汽车加大油门开走了，不一会儿就消失在地平线上，看上去只有一个小点了。','A small dark speck or stain made by the excrement of a fly.','苍蝇斑点苍蝇排泄的小而黑的污点'}

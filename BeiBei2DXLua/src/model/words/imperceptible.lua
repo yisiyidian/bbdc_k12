@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imperceptible"]={"imperceptible","[ɪmpə'septɪb(ə)l]","[,ɪmpɚ'sɛptəbl]","adj.不能感知的",'adj.不能感知的,不知不觉的,微细的','The difference between the two colors is imperceptible.','这两种颜色之间的差别很难区别。','There is an imperceptible change in temperature.','温度有细微的变化。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incorporeal"]={"incorporeal","[,ɪnkɔː'pɔːrɪəl]","[ ,inkɔ:'pɔ:riəl ]","adj.无实体的",'adj.无实体的,灵魂的,无体的','They seemed to have the power to touch the incorporeal and see the invisible.','他们似乎有一种力量能触摸到无形的和看到不可见的东西。','Ghost is incorporeal.','幽灵是无形的。'}

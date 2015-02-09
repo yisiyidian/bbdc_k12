@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assignment"]={"assignment","[ə'saɪnm(ə)nt]","[ə'saɪnmənt]","n.分配",'n.分配,功课,任务,被指定的(课外)作业;(分派的)任务,委派','How are you going to get through the assignment?','你将如何完成作业呢?','I\'ll finish the assignment early if I have to.','如果我必须提前完成作业，我就提前。'}

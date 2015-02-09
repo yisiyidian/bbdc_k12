@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disavow"]={"disavow","[dɪsə'vaʊ]","[,dɪsə'vaʊ]","v.否认",'v.否认,否定,抵赖','I disavow all responsibility for you.','我不承认对你有任何责任。','She disavows any part (ie says she was not involved) in the plot.','她否认参与了这一密谋.'}

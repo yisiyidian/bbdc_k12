@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["van"]={"van","[væn]","[væn]","n.货车",'n.货车,先驱|||vt.用货车运','I was bundled into a police van.','我被推进警车.','As the bus turned the corner, it collided with a van.','公共汽车转过拐角时与客货车相撞.'}

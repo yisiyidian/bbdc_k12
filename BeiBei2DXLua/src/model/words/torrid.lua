@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["torrid"]={"torrid","['tɒrɪd]","['tɔrɪd]","adj.酷热的",'adj.酷热的，热情的，快速的','She is sit on the rock in the torrid sun.','她坐在火辣辣骄阳下的石头上。','She almost can tolerate any kind of torrid days.','她几乎能忍受各种酷热的天气。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["professionalism"]={"professionalism","[prə'feʃ(ə)n(ə)lɪz(ə)m]","[prə'fɛʃənə'lɪzəm]","n.专家的地位",'n.专家的地位,特性或方法,专业主义','They were impressed by the sheer professionalism of the performance.','他们赞佩表演炉火纯青.','You can rely on your solicitor\'s professionalism in dealing with the house purchase.','你尽可依靠律师处理购房事宜.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chop"]={"chop","[tʃɒp]","[tʃɑp]","n.厚肉片",'n.厚肉片,排骨,砍|||vt.剁碎,砍(价),切|||vi.砍','The hunter cut off the animal\'s head with one chop of an ax.','猎人一斧砍下猎物的头。','He chopped in with a sarcastic remark.','他突然插进一句讽刺的话。'}

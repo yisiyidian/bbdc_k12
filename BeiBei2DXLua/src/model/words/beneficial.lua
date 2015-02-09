@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beneficial"]={"beneficial","[benɪ'fɪʃ(ə)l]","[,bɛnɪ'fɪʃl]","adj.有益的",'adj.有益的,有利的','A good diet is beneficial to health.','良好的饮食有益于健康。','Calcium is beneficial to our bones.','钙对我们的骨骼有益。'}

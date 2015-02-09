@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["listless"]={"listless","['lɪs(t)lɪs]","['lɪstləs]","adj.无精打采的",'adj.无精打采的','Because of the death of his mother he is listless all day.','因为母亲的去世，他整天无精打采的。','I\'m badly listless for a little sleep last night.','我昨天晚上没睡，今天无精打采的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ponder"]={"ponder","['pɒndə]","['pɑndɚ]","vt.&vi.沉思",'vt.&vi.沉思,考虑','We pondered whether to tell her.','我们考虑是否要告诉她。','They are pondering moving their offices outside London.','他们正在考虑把办事处搬出伦敦。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wisdom"]={"wisdom","['wɪzdəm]","['wɪzdəm]","n.智慧",'n.智慧,学问','He is not a man with worldly wisdom.','他不是一个有处世才能的人。','His father\'s wisdom was hardly handed down to him.','他父亲的智慧几乎没有传到他身上。'}

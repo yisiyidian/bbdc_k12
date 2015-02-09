@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissent"]={"dissent","[dɪ'sent]","[dɪ'sɛnt]","n.异议",'n.异议|||v.持异议','It is too late to make any dissent.','现在提出异议太晚了。','We dissented from the decision.','我不同意这个决定。'}

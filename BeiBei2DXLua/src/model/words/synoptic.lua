@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["synoptic"]={"synoptic","[sɪ'nɒptɪk]","[sɪ'nɑptɪk]","adj.摘要的",'adj.摘要的,纵观全局的|||Synoptic|||adj.与《新约》前三本福音书有关的','Data are collected on a weather map, which helps the exports to get a synoptic view of world weather.','数据被集中在一张气象图上，这张图有助于专家概览世界天气。','These results are compared with the synoptic facts.','最后把理论结果与观测事实作了比较。'}

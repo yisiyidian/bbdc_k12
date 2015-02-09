@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intrigue"]={"intrigue","[ɪn'triːg]","['ɪn'triɡ]","n.阴谋",'n.阴谋,复杂的事,私通|||vt.欺骗,激起...的兴趣|||vi.密谋','Some of the members had been ||intriguing|| to get the secretary dismissed.','有些人一直密谋想让老板把秘书解雇。','She was ||intriguing|| with her sister against her mother.','她和妹妹串通捣鬼和母亲作对。'}

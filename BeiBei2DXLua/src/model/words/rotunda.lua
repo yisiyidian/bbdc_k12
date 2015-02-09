@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rotunda"]={"rotunda","[rə(ʊ)'tʌndə]","[ro'tʌndə]","n.圆形建筑",'n.圆形建筑,圆形大厅','The arena is a rotunda.','竞技场是一座圆形建筑。','I like some exquisite styles of buildings just like an antique rotunda.','我喜欢一些精美的建筑风格，如一座古典的圆形建筑。'}

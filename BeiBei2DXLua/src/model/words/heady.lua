@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heady"]={"heady","['hedɪ]","[ 'hedi ]","adj.顽固的",'adj.顽固的,任性的,性急的','A heady, throbbing feeling.','头痛、悸跳的感觉','Having the qualities or taste of wine; heady or intoxicating.','有酒香的，有酒味的；易使人醉的或令人陶醉的'}

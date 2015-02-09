@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["furry"]={"furry","['fɜːrɪ]","['fɝi]","adj.毛皮的",'adj.毛皮的,盖着毛皮的,似毛皮的','||Furry|| animals grow long coats in winter.','长毛皮的动物在冬天长出长长的皮毛。','I love furry animals','我喜欢带毛的动物'}

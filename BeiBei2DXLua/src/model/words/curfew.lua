@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curfew"]={"curfew","['kɜːfjuː]","['kɝfju]","n.宵禁",'n.宵禁','The police managed to restore calm and the curfew was partially lifted.','警方设法恢复了平静,宵禁部分解除.','The village was placed under curfew.','该村处于宵禁之中。'}

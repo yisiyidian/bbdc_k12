@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["luxuriant"]={"luxuriant","[lʌg'ʒʊərɪənt; lʌg'zjʊə-; lʌk'sjʊə-]","[lʌɡ'ʒʊrɪənt]","adj.繁茂的",'adj.繁茂的,丰富的,肥沃的','||Luxuriant|| forests covered the hills.','山上长满茂密的树林。','There is luxuriant tropical vegetation in our country.','我们国家有很多繁茂的热带植物。'}

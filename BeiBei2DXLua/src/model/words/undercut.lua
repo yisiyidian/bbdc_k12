@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undercut"]={"undercut","[ʌndə'kʌt]","[,ʌndɚ'kʌt]","v.削弱",'v.削弱，廉价出售或工作,从下边切|||n.（牛的）嫩腰肉,下部切割，切口','If our two companies were to join forces we could undercut all our competitors.','如果我们两家公司联合起来的话，我们可以削价同我们的所有竞争对手抢生意。','Information shipper undercut at sacrifice for establish record','有消息说，货主为了建立业绩，不惜削价大抛售。'}

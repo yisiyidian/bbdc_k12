@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carping"]={"carping","['kɑːpɪŋ]","[ 'kɑ:piŋ ]","adj.吹毛求疵的",'adj.吹毛求疵的,挑毛病的','She was in no mood to put up with his carping manner.','她心情不好，受不了他那吹毛求疵的态度。','Don\'t be so carping.','别那么吹毛求疵。'}

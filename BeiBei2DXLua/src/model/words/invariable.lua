@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invariable"]={"invariable","[ɪn'veərɪəb(ə)l]","[ɪn'vɛrərɪəbl]","adj.不变的",'n.不变的东西,常数|||adj.不变的,不易的,常数的','He came to see me with the invariable request for a loan.','他来见我时又提出了他那一贯的借钱的要求。','This process, however, was not invariable.','但是, 这个过程并非始终不变.'}

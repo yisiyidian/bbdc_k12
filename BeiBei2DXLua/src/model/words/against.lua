@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["against"]={"against","[ə'genst; ə'geɪnst]","[ə'ɡɛnst]","prep.反对",'prep.反对,倚靠,违背,防御,相比,相对','We sailed against the wind.','我们逆风航行。','We have saved some money against our old age.','我们存了一些钱，以备老年之用。'}

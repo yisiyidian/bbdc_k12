@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unexpected"]={"unexpected","[ʌnɪk'spektɪd; ʌnek-]","['ʌnɪk'spɛktɪd]","adj.想不到的",'adj.想不到的,意外的','Their unexpected arrival threw our plan into confusion.','他们的突然到来打乱了我们的计划。','The unexpected defeat came as a thunderbolt.','这意外的失败犹如晴天霹雳。'}

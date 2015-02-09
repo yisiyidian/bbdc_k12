@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["industrialized"]={"industrialized","[ɪn'dʌstrɪəlaɪzd]","[ in'dʌstriəlaizd ]","adj.工业化的",'adj.工业化的|||动词industrialize的过去式和过去分词形式','The energy shortage of the world results partly from wasteful use by the industrialized countries.','世界能源的短缺，部分是由于工业化国家挥霍能源而引起的。','This is an industrialized country.','这是个工业化的国家。'}

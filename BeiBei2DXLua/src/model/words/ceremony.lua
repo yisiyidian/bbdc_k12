@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ceremony"]={"ceremony","['serɪmənɪ]","['sɛrə'moni]","n.典礼",'n.典礼,仪式,礼节,礼仪','All the local clergy attended the ceremony.','当地所有的牧师出席了仪式。','The Baptist will hold a ceremony this Sunday.','这个星期天浸信会教友将要举行一场典礼。'}

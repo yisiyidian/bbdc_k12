@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transparency"]={"transparency","[træn'spær(ə)nsɪ; trɑːn-; -'speə-]","[træns'pærənsi]","n.透明度",'n.透明度,幻灯片','A machine for projecting the images of opaque objects or ||transparencies|| on a screen.','透反射两用幻灯机用于将不透明或透明物体的影象投影到屏幕上的机器','The transparency and luster of a gem.','水色宝石的透明度及光洁度'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["claustrophobia"]={"claustrophobia","[,klɔːstrə'fəʊbɪə]","['klɔstrə'fobɪə]","n.对寂闭著的场所的恐怖症",'n.对寂闭著的场所的恐怖症','I hate lifts — they give me claustrophobia.','我讨厌电梯——它让我有封闭恐惧的感觉。','In the claustrophobia of her parents\' house she had no stimulus for creativity.','在父母那所令人感到封闭恐惧的房子里，没有任何东西可以刺激她的创作。'}

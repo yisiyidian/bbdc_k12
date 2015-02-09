@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypochondriac"]={"hypochondriac","[haɪpə(ʊ)'kɒndrɪæk]","[,haɪpə'kɑndrɪæk]","n.忧郁症患者",'n.忧郁症患者|||adj.忧郁症的,患疑病的','The hypochondriacs always complain society around themselves.','忧郁症患者总是抱怨周遭的社会。','Don\'t be such a hypochondriac!','别这么忧心忡忡的了！'}

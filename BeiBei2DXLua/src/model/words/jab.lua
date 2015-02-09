@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jab"]={"jab","[dʒæb]","[dʒæb]","n.戳",'n.戳,刺,猛击|||注射|||v.刺，戳，猛击','The vet jabbed (at) the dog with a needle.','兽医给狗扎针.','Have you had your cholera jabs yet?','你打霍乱预防针了吗？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["search"]={"search","[sɜːtʃ]","[sɝtʃ]","v.搜寻",'n.搜寻,探究|||v.搜寻,探求,调查','Where\'s the newspaper?\' ||Search|| me, I haven\'t seen it.\'','｀报纸在哪儿呢?＇｀不知道, 我没看见.＇','I want to search out an old school friend.','我想寻找我的一个老同学。'}

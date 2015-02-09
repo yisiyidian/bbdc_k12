@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revolutionize"]={"revolutionize","['rɛvə'lʊʃə'naɪz]","[ ,revə'lju:ʃənaiz ]","vt.使革命化",'vt.使革命化，使彻底变革|||vi.变革|||=revolutionise（英）','Television has revolutionized news coverage.','电视已经根本改变了新闻覆盖','Today computers have revolutionized our daily life.','今天，计算机已经改变了我们的日常生活。'}

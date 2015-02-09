@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enthral"]={"enthral","[ɪn'θrɔl]","[ in'θrɔ:l ]","vt.迷惑",'vt.迷惑,奴役|||=enthrall','He was enthralled by the exciting story.','那紧张的故事使他看得入神了。','The passengers were enthralled by the scenery.','乘客们为景致所吸引。'}

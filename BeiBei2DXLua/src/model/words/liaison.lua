@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liaison"]={"liaison","[lɪ'eɪz(ə)n; -zɒn]","[lɪ'ezɑn]","n.联络",'n.联络','She embarked on a series of sexual liaisons with society figures.','她开始接二连三地与社会名流有染。','||Liaison|| between police forces and the art world is vital to combat art crime.','警方和艺术界的联手对于打击艺术品犯罪至关重要。'}

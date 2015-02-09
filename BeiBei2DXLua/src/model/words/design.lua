@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["design"]={"design","[dɪ'zaɪn]","[dɪ'zaɪn]","vt.&vi.设计",'vt.&vi.设计；绘制|||vt.设计；计划；企图；决意（做）|||n.设计；图案；结构；计划|||vi.设计略图；（为工艺品、装潢项目等）设计；当设计师；构思','The route was designed to relieve traffic congestion.','这条路是为缓解交通拥挤而开辟的。','His evil designs were frustrated.','他的罪恶企图未能得逞。'}

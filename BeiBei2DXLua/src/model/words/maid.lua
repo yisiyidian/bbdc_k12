@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maid"]={"maid","[meɪd]","[med]","n.女仆",'n.女仆,侍女','Her maid helped her to dress for the ball.','她的女仆帮她穿上参加舞会的晚礼服.','I\'ll send the maid round to carry it to your house.','我将派女仆把它送到你家去。'}

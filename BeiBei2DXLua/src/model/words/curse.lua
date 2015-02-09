@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curse"]={"curse","[kɜːs]","[kɝs]","n.诅咒",'n.诅咒,咒骂,祸端,行经|||vt.咒骂,诅咒,引起灾祸|||vi.诅咒','bewailed the curse of ill health.','因身体不好而悲叹','She cursed him for ruining her life.','她诅咒他，说他毁了她的一生。'}

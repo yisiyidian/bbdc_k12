@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sovereignty"]={"sovereignty","['sɒvrɪntɪ]","['sɑvrənti]","n.主权",'n.主权,独立国','China exercises sovereignty over Hong Kong.','中国对香港行使主权.','The sovereignty of these islands is in dispute.','这些岛屿的主权有争议.'}

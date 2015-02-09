@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brink"]={"brink","[brɪŋk]","[brɪŋk]","n.边缘",'n.边缘,边沿,界限','His incompetence has brought the company to the brink of bankruptcy.','他的无能让公司濒临破产。','He dissipated most of his money and was on the brink of bankruptcy.','他挥霍掉了大部分钱财, 濒于破产。'}

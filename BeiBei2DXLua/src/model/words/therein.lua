@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["therein"]={"therein","[ðeər'ɪn]","[,ðɛr'ɪn]","adv.在其中",'adv.在其中,在那里,在那一点上','||Therein|| lies the crux of the matter.','问题的关键就在那里.','He is not a snob and therein lay his downfall.','他不是个势利小人，而他失败的原因正在于此。'}

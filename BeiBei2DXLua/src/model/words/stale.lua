@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stale"]={"stale","[steɪl]","[stel]","adj.不新鲜的",'adj.不新鲜的,陈腐的,失效的|||vt.使腐坏|||vi.变得不新鲜,腐坏,(动物)撒尿|||n.(动物的)尿','Do you smell the reek of stale tobacco?','你闻到发霉烟草的臭味了吗？','I\'ve no wish to be fobbed off wish one of those stale loaf.','我可不愿上当受骗去买不新鲜的面包。'}

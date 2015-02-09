@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ambiguity"]={"ambiguity","[æmbɪ'gjuːɪtɪ]","[,æmbɪ'ɡjuəti]","n.不明确",'n.不明确,含糊,暧昧,模棱两可','Signal which prevents accidental operation by spurious signals or avoids possible ambiguity.','防止假信号的意外作用或者避免二义性而设置的信号。','A state of ambiguity or obscurity.','含糊不清或者晦涩的状态'}

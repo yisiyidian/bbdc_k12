@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trinket"]={"trinket","['trɪŋkɪt]","['trɪŋkɪt]","n.小装饰品",'n.小装饰品,不值钱的珠宝','She sold trinkets to tourists.','她向游客出售廉价饰品。','He bought her trinkets .','他给她买小饰品。'}

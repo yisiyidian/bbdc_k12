@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["devious"]={"devious","['diːvɪəs]","['divɪəs]","adj.弯曲的(远隔的",'adj.弯曲的(远隔的,不正当的)','Let\'s take the devious route home to avoid the crowds in the main roads.','为了避免大街上的拥挤，我们还是绕道回家去吧。','By devious means she tracked down the other woman.','她通过不正当的手段追查到了另外那个女人。'}

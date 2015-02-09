@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cafe"]={"cafe","['kæfeɪ; 'kæfɪ]","[kæ'fe]","n.咖啡馆",'n.咖啡馆,小餐馆','This cafe is a rendezvous for writers and artists.','这家小餐馆是作家和艺术家经常聚会的地方.','The police came and ejected the noisy youths from the cafe room.','＂警察来了，把那些吵吵嚷嚷的青年人从咖啡馆里撵了出去。＂'}

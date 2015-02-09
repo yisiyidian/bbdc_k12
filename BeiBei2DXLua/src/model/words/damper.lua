@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["damper"]={"damper","['dæmpə]","['dæmpɚ]","n.阻尼器",'n.阻尼器,减音器,风阀|||adj.微湿的，沮丧的|||vi.减少震动|||vt.使潮湿，抑制，检查振幅','Mary\'s absence cast a damper over the party.','玛丽缺席使晚会为之扫兴。','Rain put a damper on our picnic plans.','大雨阻止了我们的野餐计划'}

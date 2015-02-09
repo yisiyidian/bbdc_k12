@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["probity"]={"probity","['prəʊbɪtɪ; 'prɒb-]","['probəti]","n.诚实",'n.诚实,廉洁,正直','Jason’s probity is unquestionable and qualifies him to decide which one of us deserves the money.','杰森的正直毋庸置疑，他有资格来决定我们之中哪一个应该得到那笔钱。','||Probity|| and purity will command respect everywhere.','为人正派的人到处都会受人尊敬。'}

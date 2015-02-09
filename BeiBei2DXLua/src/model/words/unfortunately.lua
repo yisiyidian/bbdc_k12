@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unfortunately"]={"unfortunately","[ʌnˈfɔːtʃənətli]","[ʌn'fɔrtʃənətli]","adv.不幸地",'adv.不幸地','||Unfortunately|| the restaurant he recommended fell far short of our expectations.','遗憾的是他推荐的餐厅与我们心目中的相去甚远.','I like cats but unfortunately I\'m allergic to them.','我很喜欢猫, 但可惜我对猫过敏.'}

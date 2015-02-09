@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ghost"]={"ghost","[gəʊst]","[ɡost]","n.鬼",'n.鬼,幽灵,一丝|||vt.&vi.像(鬼一样)地行进','The ghost has been laid and will not return to haunt you again.','那鬼魂已经祛除，不会再回来缠著你了。','I can\'t have seen a ghost it must have been imagination.','我看到的不可能是鬼－－一定是幻想的东西吧。'}

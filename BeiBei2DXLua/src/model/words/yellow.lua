@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yellow"]={"yellow","['jeləʊ]","['jɛlo]","adj.黄色的",'adj.黄色的|||n.黄色','She wore on her head a yellow kerchief.','她头上带着一块黄色的头巾。','She opened the door, and the yellow light from inside rimmed about her.','她打开门，里面射出的灯光在她的身影四周镶了一圈黄色的边。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recumbent"]={"recumbent","[rɪ'kʌmb(ə)nt]","[rɪ'kʌmbənt]","adj.侧卧的",'adj.侧卧的,休息的','It glided noiselessly towards the recumbent woman.','它无声无息地向那斜倚着的女人走去。','He looked down at the recumbent figure.','他低头看躺着的那个人。'}

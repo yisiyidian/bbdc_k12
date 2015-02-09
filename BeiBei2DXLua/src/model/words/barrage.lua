@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barrage"]={"barrage","['bærɑːʒ]","[bə'rɑʒ]","n.弹幕",'n.弹幕,掩护炮火|||n.拦河坝|||vt.以密集火力进攻','The attack jumped off under cover of a barrage.','进攻在炮火的掩护下开始了。','The artillery barrage on the city was the heaviest since the ceasefire.','针对市中心的炮火是停战以来最猛烈的。'}

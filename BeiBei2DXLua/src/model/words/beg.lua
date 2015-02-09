@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beg"]={"beg","[beg]","[bɛɡ]","vt.乞讨",'vt.乞讨，恳求，合理需要|||vi.行乞，乞求|||abbr.（begin）的缩写，开始','He knew he had hurt her and begged her to forgive him.','他自知伤了她的心而央求她原谅.','I beg leave to address the Council.','我请求允许向议会发表演说。'}

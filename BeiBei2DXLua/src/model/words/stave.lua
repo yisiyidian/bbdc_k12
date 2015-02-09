@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stave"]={"stave","[steɪv]","[stev]","n.桶板",'n.桶板,窄板，诗句，诗节，五线谱表|||v.敲破，穿孔，挡开，避开，快步走动','The lost explorers ate birds\' eggs to stave off starvation.','为了避免饿死，那些迷路的勘探人员吃鸟蛋充饥。','He made a barrel with staves by himself.','他自己用桶板做了一只桶。'}

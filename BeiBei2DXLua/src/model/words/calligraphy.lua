@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calligraphy"]={"calligraphy","[kə'lɪgrəfɪ]","[kə'lɪɡrəfi]","n.书法",'n.书法','The graphic arts include calligraphy and lithography.','平面造型艺术包括书法和平版印刷术。','Susannah won the calligraphy prize when she was at school.','苏珊娜上学时赢得了书法奖。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["covetous"]={"covetous","[ˈkʌvətəs]","['kʌvətəs]","adj.贪婪的",'adj.贪婪的,贪心的','She shows a covetous look.','她露出贪婪的表情。','He is covetous of her high salary.','他垂涎她的高薪。'}

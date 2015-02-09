@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hoop"]={"hoop","[huːp]","[hup]","n.箍",'n.箍,铁环,叫声|||v.加箍于,包围,呼喊','The hoop rolled along the pavement.','圆环沿人行道滚动.','A long, bag-shaped fishing net held open by hoops.','长袋网一种用箍圈固定开口处的长的袋形渔网'}

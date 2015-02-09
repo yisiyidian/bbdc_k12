@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grape"]={"grape","[greɪp]","[ɡrep]","n.葡萄",'n.葡萄','||Grapes|| are rich in vitamin.','葡萄富含维他命。','A dry red wine made from the black grape variety Cabernet sauvignon.','卡勃耐酒一种无甜味的红色的酒，用卡勃耐白葡萄的变种黑葡萄制成'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inflation"]={"inflation","[ɪn'fleɪʃ(ə)n]","[ɪn'fleʃən]","n.膨胀",'n.膨胀,通货膨胀','The new government\'s prime task is to reduce the level of inflation.','新政府的主要任务是减低通货膨胀的水平。','Is inflation symptomatic of economic decline?','通货膨胀是经济衰退的征兆吗？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profoundly"]={"profoundly","[prə'faʊndlɪ]","[prə'faʊndli]","adj.深深地",'adj.深深地,深远地,非常地|||adv.深深地','The news moved her profoundly.','这消息使她深受感动。','I am profoundly touched.','我为之深深感动。'}

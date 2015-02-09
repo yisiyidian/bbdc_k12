@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["epitome"]={"epitome","[ɪ'pɪtəmɪ; e-]","[ɪ'pɪtəmi]","n.摘要",'n.摘要,缩影,化身','He is the epitome of diligence.','他是勤勉的典型。','He is a vast library in epitome.','他脑中有万卷藏书。'}

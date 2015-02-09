@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["journal"]={"journal","['dʒɜːn(ə)l]","['dʒɝnl]","n.杂志",'n.日记,杂志,日报','She writes (about/on politics) for a weekly journal.','她为一家周刊写（政治性）文章.','The journal makes its appearance once two months.','这本刊物两个月出版一次。'}

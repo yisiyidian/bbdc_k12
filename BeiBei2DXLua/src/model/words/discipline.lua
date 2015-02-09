@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discipline"]={"discipline","['dɪsɪplɪn]","['dɪsəplɪn]","n.纪律",'n.训练,纪律,惩罚;学科|||vt.训练,惩罚','The children are happy at the school, but they lack discipline.','孩子们在学校里很快活，但很散漫。','His army is a very disciplined force.','他的军队是一支训练有素的队伍。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aftermath"]={"aftermath","['ɑːftəmæθ]","['æftəmæθ]","n.(不幸事件的)后果",'n.(不幸事件的)后果,余波,灾后时期，进入同季第二生长期的作物,','A series of consequences wrought by an event; aftermath.','后果由一事件造成的一系列结果；后果','A result of an event; an aftermath.','后果事件的结果；后果'}

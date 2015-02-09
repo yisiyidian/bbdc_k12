@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reputation"]={"reputation","[repjʊ'teɪʃ(ə)n]","[,rɛpju'teʃən]","n.声誉",'n.声誉,好名声','He spotted his reputation by lying repeatedly.','他因反复说谎而败坏了自己的名声。','His failures did his reputation a lot of harm.','他屡次失败使他的声誉受到很大损害。'}

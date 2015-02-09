@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consent"]={"consent","[kən'sent]","[kən'sɛnt]","n.同意",'n.同意,许可|||v.同意,承诺','By the common consent of critics, Shakespeare is the prince of character delineators.','评论家一致公认莎士比亚是刻画人物的大师。','Her father reluctantly consented to the marriage.','她父亲勉强答应了这桩婚姻。'}

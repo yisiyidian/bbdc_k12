@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["artful"]={"artful","['ɑːtfʊl; -f(ə)l]","['ɑrtfl]","adj.狡猾的",'adj.狡猾的,欺诈的,有技巧的,巧妙的','He tripped the witness by artful questions.','他以巧妙的质问诱使证人说话前後矛盾。','It\'s an artful little gadget for opening tins.','那是个小巧玲珑的开罐头工具。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cede"]={"cede","[siːd]","[sid]","v.割让",'v.割让(领土，权利)|||v.放弃','The Qing Dynasty ceded Hong Kong to Britain.','清王朝把香港割让给了英国。','They ceded territory to a neighboring state.','他们把领土割让给邻国。'}

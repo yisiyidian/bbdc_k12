@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["periodical"]={"periodical","[pɪərɪ'ɒdɪk(ə)l]","[,pɪrɪ'ɑdɪkl]","n.期刊",'n.期刊|||adj.周期的,定期的','Reader\'s Digest is a periodical.','《读者文摘》是一种期刊。','A periodical published yearly; a yearbook.','年刊；年鉴每年出版一次的期刊；年刊'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mine"]={"mine","[maɪn]","[maɪn]","pron.我的（东西）",'pron.(I的所有格)我的（东西）|||n.矿；矿井；地雷；水雷|||vt.&vi.在…中开采，开采|||vt.在…中[下]布雷；以地雷[水雷]炸毁','He is a distant cousin of mine.','他是我的一位远房表亲。','The mine was closed owing to exhaustion.','这个煤矿因矿源枯竭而被关闭。'}

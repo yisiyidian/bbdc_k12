@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chortle"]={"chortle","['tʃɔːt(ə)l]","['tʃɔrtl]","v.开心地笑",'v.开心地笑|||n.咯咯的笑','When I told them what had happened to me, they all chortled with mirth.','我把我的事告诉他们以後, 他们咯咯地笑起来了.','There was silence for a moment, then Larry began ||chortling|| like an idiot.','一片寂静之后，拉里开始像个白痴一样哈哈大笑。'}

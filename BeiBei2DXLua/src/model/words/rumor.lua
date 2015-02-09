@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rumor"]={"rumor","['rʊmɚ]","[ 'ru:mə ]","n.谣言",'n.谣言,传闻|||vt.谣传','I\'m rather bored by the rumor.','这谣传我真听腻了。','Despite persistent denials, the rumor continued to spread.','尽管一再否认，谣言还是不胫而走。'}

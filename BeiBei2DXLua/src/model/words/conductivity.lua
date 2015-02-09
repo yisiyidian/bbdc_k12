@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conductivity"]={"conductivity","[kɒndʌk'tɪvɪtɪ]","[,kɑndʌk'tɪvəti]","n.[物]传导性",'n.[物]传导性,传导率','The distinct conductivity of semiconductor is useful','半导体的独特传导性非常有用','Voice conductivity are widely used in many aspects.','声音的传导性被利用在很多方面。'}

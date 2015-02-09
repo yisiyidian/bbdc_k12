@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fuse"]={"fuse","[fjuːz]","[fjuz]","n.保险丝",'n.保险丝,引线,导火线|||vt.熔化,融合,装导线,装引信于|||vi.熔化,融合','Changing a fuse is one of those fiddly jobs I hate.','我最不愿意干换保险丝这类活儿了。','It seems that you\'ve blown a fuse.','看样子你把保险丝烧断了。'}

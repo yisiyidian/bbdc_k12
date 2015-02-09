@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["effeminate"]={"effeminate","[ɪ'femɪnət]","[ɪ'fɛmɪnət]","adj.女人气的",'adj.女人气的,柔弱的','He has an effeminate manner.','他的举止很娘。','His character is effeminate.','他的性格很柔弱。'}

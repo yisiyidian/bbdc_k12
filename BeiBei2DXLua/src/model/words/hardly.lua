@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hardly"]={"hardly","['hɑːdlɪ]","['hɑrdli]","adv.几乎不",'adv.几乎不','||Hardly|| anybody came.','几乎没有人来.','||Hardly|| had the game begun when it started raining.','比赛刚刚开始就下起雨来。'}

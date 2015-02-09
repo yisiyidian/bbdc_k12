@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["critique"]={"critique","[krɪ'tiːk]","[krɪ'tik]","n.批评",'n.批评,批评法,评论','A pointed critique.','尖锐的批判','Presented us with a dry critique.','向我们表述了不带偏见的观点'}

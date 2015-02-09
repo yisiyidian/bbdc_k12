@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gusher"]={"gusher","['gʌʃə]","['ɡʌʃɚ]","n.喷油穴(迸发出的东西)",'n.喷油穴(迸发出的东西)','Luckily they finally found a gusher.','最后他们幸运的发现了一个喷油井。','Petrobras is planning to double its output to 5.4m barrels a day by 2020. If so, the government—which owns a controlling stake in Petrobras—will enjoy a gusher of revenues.','.'}

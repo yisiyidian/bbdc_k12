@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ineligible"]={"ineligible","[ɪn'elɪdʒɪb(ə)l]","[ɪn'ɛlɪdʒəbl]","adj.无被选任资格的",'adj.无被选任资格的,不适任的,不适当的|||n.无被选任资格的人,不合录用资格的人','They were ineligible to remain in the USA.','他们不符合条件，不能继续留在美国','His conflict of interest made him ineligible for the post.','他本身的利益冲突使他不适合那个职位.'}

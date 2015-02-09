@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bind"]={"bind","[baɪnd]","[baɪnd]","vt.绑",'vt.绑,约束,装订,粘合','She ||bound|| up her hair with a handkerchief.','她用手绢把头发扎了起来。','Their refusal to sign the contract has put us in a bit of a bind.','他们拒绝签约，从而使我们的处境有些困难。'}

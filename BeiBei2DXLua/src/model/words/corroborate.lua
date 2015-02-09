@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corroborate"]={"corroborate","[kə'rɒbəreɪt]","[kə'rɑbəret]","v.使坚固",'v.使坚固,确证,给确证与...','Experiments have corroborated her predictions.','实验证实了她的预言。','His friend corroborated his guilt.','他的朋友证实他犯了罪。'}

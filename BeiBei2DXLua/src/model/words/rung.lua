@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rung"]={"rung","[rʌŋ]","[rʌŋ]","n.阶梯",'n.阶梯,横档，车辐|||动词ring的过去分词','Hold the ladder tightly and move up a rung at a time.','抓紧梯子一级一级地往上爬.','rung','n. 脚蹬横木,横档,车辐,棍子 v. vbl. ring的过去式和过去分词'}

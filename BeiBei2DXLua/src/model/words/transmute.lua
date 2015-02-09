@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transmute"]={"transmute","[trænz'mjuːt; trɑːnz-; -ns-]","[trænz'mjut]","v.使...变形",'v.使...变形，经历变化','It is possible to transmute one form of energy into another.','把某种形态的能量改变成另一形态的能量是可能的。','In former times it was thought that ordinary metal could be transmuted into gold.','古人认为普通金属能变成黄金。'}

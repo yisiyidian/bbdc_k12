@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["synthetic"]={"synthetic","[sɪn'θetɪk]","[sɪn'θɛtɪk]","adj.综合的",'adj.综合的,合成的,人造的|||n.人工制品','Most synthetic detergents are in the form of powder or liquid.','大多数合成洗涤剂呈粉状或液态。','Some synthetic materials do not crush easily.','有些化纤衣料不易起皱。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["receiver"]={"receiver","[rɪ'siːvə]","[rɪ'sivɚ]","n.接收器",'n.接收器,收款员,接待者，听筒','Please put the receiver back after calling.','打完电话后，请把听筒放回原位。','a receiver of many compliments.','受到许多赞扬的人'}

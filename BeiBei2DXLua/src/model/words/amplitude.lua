@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amplitude"]={"amplitude","['æmplɪtjuːd]","['æmplə'tʊd]","n.广阔",'n.广阔,充足,增幅|||n.振幅、波幅(物理)','The amplitude of the vibration determines the loudness of the sound.','振动幅度的大小决定声音的大小.','The frequency and amplitude of vibration are monitored .','振动的频率与振幅受到监控。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["debit"]={"debit","['debɪt]","['dɛbɪt]","n.借方",'n.借方,借,借项,缺点|||vt.记入借方','Is this item a debit or a credit?','这笔帐属於借方还是属於贷方?','||Debit|| 50 to me.','把50英镑记入我的帐户借方.'}

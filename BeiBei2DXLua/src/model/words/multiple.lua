@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multiple"]={"multiple","['mʌltɪpl]","['mʌltəpl]","adj.许多",'adj.许多,多种多样的|||n.倍数,并联','Friendship multiple joy and divide grieve.','朋友之间，欢乐同享，苦难同当。','A multiple of the basic number of chromosomes in a cell.','倍数性一个细胞中染色体基本数目的倍数'}

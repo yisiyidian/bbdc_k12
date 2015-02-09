@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antipode"]={"antipode","['æntɪpəʊd]","['æntɪ,pod]","n.正相反的事物",'n.正相反的事物','We just sit and listen to the fullness of the quiet, as an antipode to focused busyness','“我们坐下来享受一下完全安静的环境，这是和高度繁忙恰恰相反的”','Xenomaia is the antipode of xenophobia','媚外和仇外正相反'}

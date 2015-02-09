@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["philanderer"]={"philanderer","[fɪ'lændərɚ]","[ fi'lændərə, fə- ]","n.爱和女人调情的男人",'n.爱和女人调情的男人,玩弄女性的男人','He\'s a bit of a philanderer so don\'t take him too seriously!','他这个人有点花心，所以别跟他太认真！','page one on the philanderer\'s handbook.','在花花公子杂质的第一页。'}

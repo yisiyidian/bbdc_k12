@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clang"]={"clang","[klæŋ]","[klæŋ]","n.铿锵声",'v.（使）发出铿锵声，鹤鸣声|||n.铿锵声，（鹤等）鸣叫声','The clang of the firebell alarmed the village.','火警铃的铛铛声惊动了全村的人。','The prison gate clanged shut.','监狱的大门哐当一声关上了。'}

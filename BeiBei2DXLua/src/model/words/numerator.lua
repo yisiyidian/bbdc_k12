@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["numerator"]={"numerator","['njuːməreɪtə]","['numəretɚ]","n.分子",'n.分子,计算者,计算的东西|||[计算机]分子','numerator','n. 分子','a fraction with a numerator smaller than the denominator.','分子小于分母的分数。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["informed"]={"informed","[ɪn'fɔːmd]","[ɪn'fɔrmd]","adj.见多识广的",'adj.见多识广的|||v.通告,告发|||vbl.通告,告发','The secretary informed me of his arrival.','秘书通知我他来了。','All those who are immediately involved will be informed of the decision.','这个决定将被通知给所有直接有关的人。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tuition"]={"tuition","[tjuː'ɪʃ(ə)n]","[tʊ'ɪʃən]","n.学费",'n.教诲,教学,学费','Mary has derived a lot of benefit from her tuition.','玛丽从她的教学中得到很大收益。','By pinch and scraping for the last five year, she have enough money to pay for her son\'s tuition.','在过去的五年里，她省吃俭用，终於积足了钱可支付她儿子的学费。'}

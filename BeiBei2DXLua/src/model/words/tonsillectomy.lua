@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tonsillectomy"]={"tonsillectomy","[,tɒnsɪ'lektəmɪ]","[,tɑnsə'lɛktəmi]","n.扁桃腺切除术",'n.扁桃腺切除术','he had a tonsillectomy','他做了扁桃体切除术','tonsillectomy','扁桃腺切除术'}

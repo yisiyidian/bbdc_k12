@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["instill"]={"instill","[ɪn'stɪl]","[ in'stil ]","v.滴注",'v.滴注,逐渐灌输(尤指思想或情感)','Fear of the father is instilled into some children from their infancy.','有的小孩从小就慢慢养成害怕父亲的心理。','The idea was gradually instilled in the mind of the young prince.','那种思想已逐渐灌输到了年幼的王子的头脑中。'}

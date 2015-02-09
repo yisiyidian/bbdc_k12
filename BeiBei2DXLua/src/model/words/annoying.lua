@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annoying"]={"annoying","[ə'nɒɪɪŋ]","[ə'nɔɪɪŋ]","adj.恼人的",'adj.恼人的,讨厌的','I like her even though she can be annoying.','尽管她有时很恼人，但我还是喜欢她。','How annoying!','真气人!'}

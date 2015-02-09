@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pendulum"]={"pendulum","['pendjʊləm]","['pɛndʒələm]","n.摆",'n.摆,钟摆，摇摆不定的事态（或局面）','A pendulum oscillates.','摆锤能摆动.','The pendulum of the clock in my room is a bear.','我房间的钟摆是小熊形状的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["litigant"]={"litigant","['lɪtɪg(ə)nt]","['lɪtɪɡənt]","n.诉讼当事人",'n.诉讼当事人','i will be a litigant suit for my right','我会作为诉讼当事人。。。。','Speech or reply by the third party and his litigant representative.','第三人及其诉讼代理人发言或者答辩。'}

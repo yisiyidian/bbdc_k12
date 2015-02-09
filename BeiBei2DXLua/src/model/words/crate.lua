@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crate"]={"crate","[kreɪt]","[kret]","n.板条箱",'n.板条箱,篓子','Empty bottles chinked as the milkman put them into the crate.','送奶人把空瓶放进箱格时，瓶子发出咣啷咣啷的碰撞声。','A large glass or plastic bottle, usually encased in a protective basket or crate and often used to hold corrosive liquids.','小口的大瓶一种大玻璃瓶或大塑料瓶，通常套装在一个保护性的篮子或板条箱内，用于盛装腐蚀性液体'}

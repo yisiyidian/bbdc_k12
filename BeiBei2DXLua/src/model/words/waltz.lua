@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waltz"]={"waltz","[wɔːl(t)s; wɒl-]","[wɔlts]","n.华尔兹舞",'n.华尔兹舞；华尔兹舞曲|||vt.与…跳华尔兹舞；带领，率领或迫使|||vi.轻快地走动；旋转；豪不费力地完成一项工作','He\'s just waltzed off with my cigarette lighter!','他刚才把我的打火机偷走了。','She waltzed off with the school prizes for maths and science.','她轻而易举赢得了全校数学奖和理科奖。'}

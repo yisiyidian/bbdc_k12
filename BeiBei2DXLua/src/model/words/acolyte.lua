@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acolyte"]={"acolyte","['ækəlaɪt]","['ækəlaɪt]","n.(教士的)助手",'n.(教士的)助手,侍僧','To his acolytes, he is known simply as "the Boss."','对于他的助手来说，他就只是“老板”。','an acolyte who carries a thurible','搬香炉的侍僧'}

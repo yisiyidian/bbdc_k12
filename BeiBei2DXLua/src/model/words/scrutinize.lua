@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scrutinize"]={"scrutinize","['skru:tənaɪz]","['skrutənaɪz]","n.详细检查",'n.详细检查,细读|||v.仔细检查|||vt.细察','The custom scrutinized each tourist\'s baggage in case of drug smuggle.','海关详细检查每位旅客的行李以防毒品走私。','The statement was carefully scrutinized before publication.','声明在发表之前经过了严格的审查。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sixty"]={"sixty","['sɪkstɪ]","['sɪksti]","n.六十",'n.六十|||adj.六十的,六十个的','The expansion of the factory will mean the employment of sixty extra workers.','工厂的扩展意味著将增雇六十名工人.','The school admits sixty new boys and girls every year.','这所学校每年招收六十名男女新生.'}

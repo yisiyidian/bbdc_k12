@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sophist"]={"sophist","['sɒfɪst]","['sɑfɪst]","n.诡辩家",'n.诡辩家|||Sophist:|||n.（古希腊的）诡辩学家','Many politicians are cunning sophists.','许多政客都是狡猾的诡辩家。','The terms "sophist" and "sophistry" have taken on derogatory connotations in modern times.','今社会，“诡辩家”以及“诡辩”等词汇已染上贬义色彩。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["streptomycin"]={"streptomycin","[,streptə(ʊ)'maɪsɪn]","[,strɛptə'maɪsɪn]","n.[药]链霉素",'n.[药]链霉素','streptomycin is used widespread','链霉素曾被广泛使用','I’ll give you a dose of streptomycin.','我给你开一些链霉素。'}

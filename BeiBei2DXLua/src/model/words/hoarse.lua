@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hoarse"]={"hoarse","[hɔːs]","[hɔrs]","adj.沙哑的",'adj.沙哑的,嘶哑的,刺耳的','His voice sounded hoarse.','他说话声音嘶哑.','She screamed herself hoarse.','她把嗓子喊哑了。'}

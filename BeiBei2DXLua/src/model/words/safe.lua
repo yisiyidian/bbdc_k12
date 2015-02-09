@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["safe"]={"safe","[seɪf]","[sef]","adj.安全的",'adj.安全的|||n.保险箱','If you fix the brakes the car will be as safe as houses.','把制动器修好，汽车就非常安全了。','The rescuers brought the climbers back safe and sound.','救援人员把登山的人都平安地救了回来。'}

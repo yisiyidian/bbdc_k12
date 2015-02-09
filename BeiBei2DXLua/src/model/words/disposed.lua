@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disposed"]={"disposed","[dɪ'spəʊzd]","[dɪ'spozd]","adj.愿意的",'adj.愿意的，想干的，有...倾向的|||动词dispose的过去式和过去分词','She disposed of the champion in straight sets.','她一盘未输战胜了冠军.','The committee are well disposed towards the idea.','委员会同意这一意见.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["notwithstanding"]={"notwithstanding","[nɒtwɪð'stændɪŋ; -wɪθ-]","[,nɑtwɪθ'stændɪŋ]","adv.虽然",'adv.虽然,尽管|||prep.纵使|||conj.虽然','He went, notwithstanding he was ordered to stay.','他虽被命令不许去，但还是去了。','||Notwithstanding|| her naughtiness, I love my little girl.','尽管我的小姑娘很淘气，我还是很爱她。'}

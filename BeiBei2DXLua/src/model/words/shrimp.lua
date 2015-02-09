@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shrimp"]={"shrimp","[ʃrɪmp]","[ʃrɪmp]","n.虾",'n.虾,瘦小的人事物|||vi.钓虾','When the shrimp farm is built it will block the stream.','一旦养虾场建起来，将会截断这条河流。','Millions of blind shrimp can be found there too.','那里还有无数的盲虾.'}

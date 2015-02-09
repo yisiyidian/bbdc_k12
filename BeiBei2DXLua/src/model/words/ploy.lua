@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ploy"]={"ploy","[plɒɪ]","[plɔɪ]","n.活动(手法)",'n.活动(手法)','His ploy is to pretend to be ill.','他的手法就是装病。','It is all a ploy to distract attention from his real aim.','那纯粹是障眼法，用以分散人们对他真正意图的注意力。'}

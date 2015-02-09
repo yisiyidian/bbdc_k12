@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drizzly"]={"drizzly","['drɪzli]","[ 'drizli ]","adj.毛毛雨的",'adj.毛毛雨的','...a dull, drizzly afternoon.','...一个阴沉且下着细雨的午后。','It was dull and slightly drizzly as we left.','我们离开时，天阴沉沉的，飘着小雨。'}

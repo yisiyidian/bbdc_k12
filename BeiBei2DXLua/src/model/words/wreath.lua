@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wreath"]={"wreath","[riːθ]","[riθ]","n.花环",'n.花环,花圈','A group of student placed a wreath at the tomb of the national hero.','一群学生在那位民族英雄墓前献上花圈。','The Queen pain homage to the victims of two world wars by laying a wreath on the Cenotaph.','女王向纪念碑了献花圈，以此向两次世界大战这中的牺牲者们表示敬意。'}

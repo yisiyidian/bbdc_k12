@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["airy"]={"airy","['eərɪ]","['ɛri]","adj.空气的",'adj.空气的,幻想的，航空的，轻快的','The large window makes the room seem airy.','那扇大窗户使这间房间显得很通风。','Nothing results from his airy plan.','他那不切实际的计划毫无结果。'}

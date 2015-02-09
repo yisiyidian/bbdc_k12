@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curt"]={"curt","[kɜːt]","[kɝt]","adj.简略的",'adj.简略的,简短的,生硬的','||Curt|| never did a stroke of work. Catch him!','柯特从未做过一点工作。','`No!\' was his curt rejoinder.','他草率地回答了一声｀不!＇'}

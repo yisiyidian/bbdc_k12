@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["despotic"]={"despotic","[dɪ'spɒtɪk]","[dɪ'spɑtɪk]","adj.专横的",'adj.专横的,暴虐的','People rose up against the despotic rule of their potentate.','人们起来反抗君主的专制统治。','He was a despotic emperor.','他是一个暴君。'}

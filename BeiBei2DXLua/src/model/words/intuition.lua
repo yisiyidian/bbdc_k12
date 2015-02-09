@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intuition"]={"intuition","[ɪntjʊ'ɪʃ(ə)n]","[,ɪntu'ɪʃən]","n.直觉",'n.直觉,直觉的知识','My intuitions proved correct.','我的直觉确实是正确的。','I had an intuition that I would find you.','我有一种直觉，我能找到你们。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["colloquialism"]={"colloquialism","[kə'ləʊkwɪəlɪz(ə)m]","[kə'lokwɪəlɪzəm]","n.白话",'n.白话,口语,俗语','The prince\'s colloquialism makes him a amiable person.','王子口语化得表达使他受人喜爱','Oh,my god is a common colloquialism.','上帝啊是我们常用的口语。'}

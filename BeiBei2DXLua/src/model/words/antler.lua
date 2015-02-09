@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antler"]={"antler","['æntlə]","['æntlɚ]","n.鹿角",'n.鹿角,茸角','The deer had his antler broken by the bush.','那头鹿的角被灌木钩断了.','Traditionally, velvet  antler  is used for a wide variety of ailments.','传统用鹿茸可以防止很多常见病.'}

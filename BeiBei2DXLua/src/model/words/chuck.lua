@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chuck"]={"chuck","[tʃʌk]","[tʃʌk]","n.轻叩",'n.轻叩,抛掷|||v.轻叩,抛掷|||v.放弃,离职','Let\'s chuck all these old papers away.','我们把这些旧报纸都丢掉吧。','He gave me a chuck last week; can you find me a new job?','他上个星期把我解雇了，你能帮我找个新工作吗？'}

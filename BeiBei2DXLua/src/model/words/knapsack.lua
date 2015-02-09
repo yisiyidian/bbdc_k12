@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knapsack"]={"knapsack","['næpsæk]","['næpsæk]","n.背包",'n.背包','After a short rest, they took up their knapsacks and went on.','休息了一会儿之后，他们又背起背包上路了。','The moment he received the order, the soldier packed his knapsack.','士兵一接到命令就打了背包.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["roughly"]={"roughly","['rʌflɪ]","['rʌfli]","adv.概略地",'adv.概略地,粗糙地,粗鲁地','The speaker was roughly handled by the mob.','演说者受到暴民的粗暴对待。','The Antarctica is a continent centered roughly on the South Pole.','南极洲是一片大致以南极为中心的大陆。'}

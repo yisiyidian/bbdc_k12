@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["applicable"]={"applicable","[ə'plɪkəb(ə)l; 'æplɪk-]","['æplɪkəbl]","adj.合适的",'adj.合适的,适用的','The section of the form is not applicable in your case.','表格这一部分不适合你的情况.','This section of the law is applicable only to corporations.','这部分法律只适用于公司。'}

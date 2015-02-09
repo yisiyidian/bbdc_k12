@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["muddy"]={"muddy","['mʌdɪ]","['mʌdi]","adj.泥泞的",'adj.泥泞的,肮脏的,混浊的|||v.弄脏,使...混浊,使迷惑','The muddy water slowly cleared.','有泥的水慢慢地变清了.','It\'s muddy underfoot.','地上很泥泞.'}

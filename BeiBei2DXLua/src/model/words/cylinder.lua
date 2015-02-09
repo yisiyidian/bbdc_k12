@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cylinder"]={"cylinder","['sɪlɪndə]","['sɪlɪndɚ]","n.汽缸",'n.汽缸,圆筒,圆柱体','The engine is misfiring badly on one cylinder.','发动机有一个汽缸严重失灵.','The cylinder is a crucial part of the washing machine.','滚筒是洗衣机必不可少的部分。'}

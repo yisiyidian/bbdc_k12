@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immigrant"]={"immigrant","['ɪmɪgr(ə)nt]","['ɪmɪɡrənt]","n.移民",'n.移民,侨民|||adj.移民的','||Immigrant|| workers were classed as resident aliens.','移民来的工人已归入外侨类.','He admitted that he was an illegal immigrant.','他承认他是非法移民。'}

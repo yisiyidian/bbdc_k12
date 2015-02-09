@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["on"]={"on","[ɒn]","[ɑn]","prep.在...之上",'prep.在...之上,由…支撑着,在（某一天）,使用,根据|||[计算机]开|||adv.穿着,向前（移动),（表示持续性）|||adj.表示已连接、处于工作状态或使用中,表示发生,值班|||abbr.=Ontario','I\'m on in five minutes.','我五分钟后上场。','The strike has been on now for six weeks.','罢工至今已进行六个星期了。'}

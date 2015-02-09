@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["estimable"]={"estimable","['estɪməb(ə)l]","['ɛstɪməbl]","adj.可估计的",'adj.可估计的，值得尊敬的|||adj.','A young lady fall in love with the estimable prelate.','一个年轻女士爱上了这位可尊敬的高级教士。','estimable assets; an estimable distance.','可估计的财产；可估算的距离'}

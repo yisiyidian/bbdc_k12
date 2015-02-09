@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inadvertent"]={"inadvertent","[,ɪnəd'vɜːt(ə)nt]","[ɪnəd'vɝtənt]","adj.不注意的",'adj.不注意的,疏忽的，非故意的','An inadvertent inquiry would have brought us into troubled waters.','一次调查不当心，就会使我们陷入混乱局面。','The government has said it was an inadvertent error.','政府声称那是无意的过失。'}

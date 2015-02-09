@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["living"]={"living","['lɪvɪŋ]","['lɪvɪŋ]","adj.活着的",'adj.活着的|||n.生活,生计','The judge advised him to amend his way of living.','法官劝告他改变生活方式。','We should improve what is called the quality of living.','我们应该改进所谓的生活品质。'}

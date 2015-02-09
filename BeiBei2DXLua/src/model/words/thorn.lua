@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thorn"]={"thorn","[θɔːn]","[θɔrn]","n.刺",'n.刺,荆棘','He stepped on a sharp thorn.','他踩到一根尖刺。','His sister is a thorn in his flesh.','他的妹妹使他伤透脑筋。'}

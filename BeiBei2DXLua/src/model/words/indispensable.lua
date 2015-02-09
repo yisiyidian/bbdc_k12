@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indispensable"]={"indispensable","[ɪndɪ'spensəb(ə)l]","['ɪndɪ'spɛnsəbl]","adj.不可缺少的",'adj.不可缺少的','The computer is now an indispensable tool in many businesses.','目前计算机是很多公司不可或缺的用具。','A good dictionary is indispensable for learning a foreign language.','学习外语离不开好的词典。'}

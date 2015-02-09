@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["upper"]={"upper","['ʌpə]","['ʌpɚ]","adj.上部的",'adj.上部的,地位较高的,上面的,北方的|||n.鞋帮,上牙,兴奋剂,令人愉快的经历','The first-stage vehicle is used to launch the rocket and is then jettisoned in the upper atmosphere.','第一级运载火箭是用来发射火箭的, 进入高层大气後即抛掉.','Tears are secreted by an organ under the upper eyelid.','眼泪由上眼睑下面的器官分泌。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obliging"]={"obliging","[ə'blaɪdʒɪŋ]","[ə'blaɪdʒɪŋ]","adj.乐于助人的",'adj.乐于助人的|||oblige的现在分词','You are not ||obliged|| to answer these questions, but it would make our task easier.','这些问题并非非答不可, 但答问对我们大有助益.','Exhibiting a desire or willingness to please; cheerfully obliging.','殷勤的表现出取悦别人意愿的；乐于顺从的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fro"]={"fro","[frəʊ]","[fro]","adv.往回",'adv.向那边,向后，离开，回来','The ship was rolling heavily to and fro.','那船晃来晃去很不平稳。','Trucks shuttled to and fro on the high ways.','车辆在高速公路上穿梭行驶。'}

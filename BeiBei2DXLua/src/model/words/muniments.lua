@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["muniments"]={"muniments","['mju:nimənts]","[ 'mju:nimənts ]","n.契据",'n.契据,房契','muniments of title','[法] 产权证书','Holy Spirit wants you to listen and muniments must be made to record this miracle.','圣灵希望你们听从及记录这个神迹作为证据。'}

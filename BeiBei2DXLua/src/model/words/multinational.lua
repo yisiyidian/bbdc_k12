@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multinational"]={"multinational","[mʌltɪ'næʃ(ə)n(ə)l]","[,mʌltɪ'næʃnəl]","adj.多国的",'adj.多国的,多种国籍的|||n.多国籍公司,跨国公司','Some people believe that the multinationals have too much power.','有人认为跨国公司的权力太大了.','a multinational corporation.','跨国公司'}

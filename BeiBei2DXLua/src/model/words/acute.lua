@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acute"]={"acute","[ə'kjuːt]","[ə'kjut]","adj.敏锐的",'adj.敏锐的,激烈的,尖锐的','The patient is complaining of acute earache.','病人说耳部剧痛.','He suffers from acute depression.','他患有严重的抑郁症。'}

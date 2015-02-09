@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["threaten"]={"threaten","['θret(ə)n]","['θrɛtn]","vt.&vi.威胁",'vt.&vi.威胁,构成威胁','The strikers were threatened with dismissal if they did not return to work.','罢工者受到威胁说，如果他们不复工，就会被解雇。','While danger threatens we must all be on guard.','危险正逼近，我们必须保持警惕。'}

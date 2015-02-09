@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clause"]={"clause","[klɔːz]","[klɔz]","n.条款",'n.分句,从句,条款,款项','This is a coordinate clause.','这是一个并列子句。','A penalty clause was written into the contract.','在合同中写入了一项罚款条款.'}

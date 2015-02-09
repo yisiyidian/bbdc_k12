@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bath"]={"bath","[bɑːθ]","[ bɑ:θ/bæθ ]","n.洗澡",'n.洗澡,洗澡水,浴盆,浴室,财政亏损,(复)游泳池|||n.(Bath)巴斯(英国城市)|||vt.&vi.洗澡','This is the turn-off for ||Bath||.','这是通往巴斯市的岔道.','Our suppliers have removed to ||Bath||.','我们的供应厂商已迁往巴斯.'}

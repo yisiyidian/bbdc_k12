@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glass"]={"glass","[glɑːs]","[ɡlæs]","n.玻璃",'n.玻璃,(复)眼镜,透镜|||vt.用玻璃把…盖（或罩、围）住,使成玻璃状,反映|||vi.成为玻璃状,用光学仪器眺望','In case of emergency, break the glass and press the button.','遇到紧急情况时，击碎玻璃罩并摁下按钮。','He put down his glass.','他放下杯子。'}

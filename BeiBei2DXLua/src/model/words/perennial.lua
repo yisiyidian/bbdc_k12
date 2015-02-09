@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perennial"]={"perennial","[pə'renɪəl]","[pə'rɛnɪəl]","adj.四季不断的",'adj.四季不断的,继续多年的，永久的|||n.多年生植物','The novel\'s central theme is the perennial conflict between men and women.','小说的主题是男人和女人之间永无休止的冲突。','I wonder at her perennial youthfulness.','我对她青春常驻感到惊讶。'}

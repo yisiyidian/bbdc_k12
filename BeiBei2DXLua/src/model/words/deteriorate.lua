@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deteriorate"]={"deteriorate","[dɪ'tɪərɪəreɪt]","[dɪ'tɪrɪəret]","vt.(使)恶化",'vt.(使)恶化|||vi.(使)恶化,瓦解,衰退','Food is apt to deteriorate in summer.','食物在夏天容易变质。','Relation between the two countries has deteriorated sharply in recent week.','最近几周那两个国家间的关系严重恶化了。'}

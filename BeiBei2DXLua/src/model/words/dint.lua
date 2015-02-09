@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dint"]={"dint","[dɪnt]","[dɪnt]","n.凹痕",'n.凹痕，力量|||vt.打出凹痕','He succeeded by dint of hard work.','他完全是凭借着努力工作取得了成功。','They overcame all kinds of difficulties by dint of an indomitable spirit.','他们凭仗着顽强不屈的精神克服了重重困难。'}

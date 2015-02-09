@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rationalize"]={"rationalize","['ræʃnə'laɪz]","[ 'ræʃənəlaiz ]","vt.使合理化",'vt.使合理化，合理地说明，[数]给...消根','I poured my thoughts out on paper in an attempt to rationalize my feelings.','我把自己的想法一股脑地写在纸上，以试图给自己的感受找个说辞。','He rationalized his quit by saying he had something more important to do.','他为自己的退出辩解，说是因为有更重要的事情做。'}

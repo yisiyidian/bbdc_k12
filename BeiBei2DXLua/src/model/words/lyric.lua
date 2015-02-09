@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lyric"]={"lyric","['lɪrɪk]","['lɪrɪk]","adj.抒情的",'adj.抒情的|||n.抒情诗','This is a good example of Shelley\'s lyric poetry.','这首诗是雪莱抒情诗的范例.','The anthology reveals a prejudice in favour of lyric poets.','这部选集显示出对抒情诗人有所偏爱.'}

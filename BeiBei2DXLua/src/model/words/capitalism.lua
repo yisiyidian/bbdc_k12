@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["capitalism"]={"capitalism","['kæpɪt(ə)lɪz(ə)m]","['kæpɪtəlɪzəm]","n.资本主义",'n.资本主义','Do you like capitalism?','你喜欢资本主义吗？','The essence of his argument is that capitalism cannot succeed.','他的论点的核心是资本主义不能成功.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lighten"]={"lighten","['laɪt(ə)n]","['laɪtn]","v.点亮",'v.点亮,变亮,减轻','If you want to lighten the weight, had better eat little bread.','如果你想减轻体重，最好少吃面包。','A solitary candle lightened the darkness of the room.','一支孤烛使黑暗的房间亮了起来。'}

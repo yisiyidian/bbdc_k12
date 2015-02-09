@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alchemy"]={"alchemy","['ælkɪmɪ]","['ælkəmi]","n.炼金术",'n.炼金术，魔力','Religion had an intimate association with alchemy during the Middle Ages.','在中世纪，宗教和炼金术密切相联。','waht is alchemy','炼金术师什么？'}

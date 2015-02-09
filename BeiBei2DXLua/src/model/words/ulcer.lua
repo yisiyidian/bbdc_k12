@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ulcer"]={"ulcer","['ʌlsə]","['ʌlsɚ]","n.&adj.溃疡",'n.&adj.溃疡','His ulcer has kicked up again.','他的溃疡又发病了','An ulcer located at the initial point of entry of a pathogen.','初疮病原体最初侵入的那点处的溃疡'}

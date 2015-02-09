@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ire"]={"ire","['aɪə]","['aɪɚ]","n.忿怒",'n.忿怒','The home side is ire at die moment; but we shall be batting soon.','主队正在进攻, 但很快就轮到我们击球了。','The boy got ire to the athletic school after a special test.','男孩经过一次专门测验后进入了体育学校。'}

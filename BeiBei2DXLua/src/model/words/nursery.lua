@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nursery"]={"nursery","['nɜːs(ə)rɪ]","['nɝsəri]","n.托儿所",'n.托儿所','Many children under 5 go to nursery school.','5岁以下的许多儿童都上幼儿园.','This nursery rhyme is very familiar to me.','我对这首摇篮曲很熟悉。'}

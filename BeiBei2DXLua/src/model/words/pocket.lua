@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pocket"]={"pocket","['pɒkɪt]","['pɑkɪt]","n.口袋",'n.口袋,钱,袋|||vt.装...在口袋里,隐藏,私吞|||adj.小型的,钱的','He paid for it out of his own pocket.','他是自己掏腰包的。','She quickly pocketed the note without reading it.','她很快把通知放进口袋里，连看都没看。'}

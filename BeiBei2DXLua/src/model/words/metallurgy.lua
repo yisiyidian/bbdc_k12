@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["metallurgy"]={"metallurgy","[mɪ'tælədʒɪ; 'met(ə),lɜːdʒɪ]","['mɛtəlɝdʒi]","n.冶金学",'n.冶金学，冶金术','||Metallurgy|| is a feature to show a country\'s power in history.','冶金在历史上是显示一个国家实力的特征。','Newton was once addicted in metallurgy study.','牛顿曾沉迷于炼金术的学习。'}

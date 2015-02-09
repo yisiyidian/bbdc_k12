@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["treasurer"]={"treasurer","['treʒ(ə)rə]","['trɛʒərɚ]","n.会计",'n.会计,出纳员，司库','Who can we have as treasurer?','我们能让谁掌管财务呢?','Only the treasurer has authority to sign cheques.','只有司库有权签署支票.'}

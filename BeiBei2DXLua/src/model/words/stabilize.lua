@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stabilize"]={"stabilize","['steɪbəlaɪz]","['stebəlaɪz]","v.使安定",'v.使安定,使坚固','His condition has now stabilized.','他的情况稳定下来了.','He can now ride his bike without stabilizers.','他现在骑自行车不需要平衡器了.'}

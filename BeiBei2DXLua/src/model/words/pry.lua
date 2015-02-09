@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pry"]={"pry","[praɪ]","[praɪ]","v.打听",'v.打听,窥探,用杠杆撬开|||n.窥探，杠杆，爱打探的人','They tried to use an iron bar to pry open the lock.','他们试图用一根铁棒撬开锁。','Can you try prying information out of her?','你能从她嘴里弄到消息吗？'}

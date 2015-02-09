@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aplomb"]={"aplomb","[ə'plɒm]","[ə'plɑm]","n.自信",'n.自信，沉着,镇静','She performs the duties of a princess with great aplomb.','她泰然自若地履行王妃的职责。','Although something went wrong in the middle, he finished his job with great aplomb','尽管中间出错了，他沉着冷静地完成了他的工作'}

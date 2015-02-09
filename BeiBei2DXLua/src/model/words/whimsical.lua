@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whimsical"]={"whimsical","['wɪmzɪk(ə)l]","['wɪmzɪkl]","adj.心情浮动的",'adj.心情浮动的,反覆无常的,古怪的','The whimsical creations allow the viewer to come to their own conclusions.','这些异想天开的创作给参观者留下了很大的想象空间。','She was a child full of imaginings and whimsical thoughts.','她是一个充满幻想又富有奇思异想的小女孩。'}

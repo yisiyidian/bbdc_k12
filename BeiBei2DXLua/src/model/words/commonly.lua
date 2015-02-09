@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commonly"]={"commonly","['kɒmənlɪ]","['kɑmənli]","adv.一般地",'adv.一般地,通常地，普通地','The question is more complicated than(is) commonly supposed.','这问题比一般人想象的更复杂一些。','It was commonly believed that he was an honest man.','一般都认为他是一个诚实的人。'}

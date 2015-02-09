@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["order"]={"order","['ɔːdə]","['ɔrdɚ]","n.命令",'n.命令；秩序；规则，制度；次序|||vt.命令；订购；整理|||vi.下订单','The policeman ordered the motorist to stop.','警察指示让那开车的人停车','The chairman ordered silence.','主席要大家安静。'}

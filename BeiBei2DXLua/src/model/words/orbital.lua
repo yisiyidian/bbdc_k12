@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orbital"]={"orbital","['ɔːbɪt(ə)l]","['ɔrbɪtl]","adj.轨道的",'adj.轨道的，眼窝的|||n.【数学】轨函数','The unoccupied orbital are called virtual orbitals.','未占轨道叫虚轨道.','Saturn was to launch the 15th flight, a Moon orbital mission.','第15次飞行利用萨杜恩将飞船送人月球轨道.'}

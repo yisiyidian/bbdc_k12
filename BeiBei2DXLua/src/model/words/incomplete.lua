@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incomplete"]={"incomplete","[ɪnkəm'pliːt]","['ɪnkəm'plit]","adj.不完全的",'adj.不完全的,不完整的','Difficult, incomplete, or infrequent evacuation of dry, hardened feces from the bowels.','便秘有困难的、不完全的或不经常从肠道排泄干燥且硬的大便','Her handbooks are incomplete.','她的手册不完整。'}

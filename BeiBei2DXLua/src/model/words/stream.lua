@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stream"]={"stream","[striːm]","[strim]","n.(人,车,气)流",'n.(人,车,气)流,水流,组|||vt.流出,飘动|||vi.流动,飘动,接踵而来','They streamed out of the cinema.','他们涌出电影院。','Visitors to the exhibition came in an endless stream.','参观展览会的人络绎不绝。'}

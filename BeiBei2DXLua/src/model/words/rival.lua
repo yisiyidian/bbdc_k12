@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rival"]={"rival","['raɪvl]","['raɪvl]","n.对手",'n.对手,同伴,竞争者|||adj.竞争的|||vt.与…相匹敌,比得上|||vi.竞争','He was utterly unscrupulous in his competition with rival firms.','他与对立公司竞争完全不讲道德。','The party leader has been supplanted by his rival.','那位政党领导已被他的对手取而代之了。'}

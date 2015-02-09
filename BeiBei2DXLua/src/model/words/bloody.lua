@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bloody"]={"bloody","['blʌdɪ]","['blʌdi]","adj.血腥的",'adj.流血的,血腥的,嗜杀的|||vt.使流血|||adv.[俚]非常','Excuse my French, but he\'s a bloody nuisance!','别怪我骂人, 可他实在太不是东西!','This bloody company keeps fucking me about.','这倒霉的公司一直亏待我.'}

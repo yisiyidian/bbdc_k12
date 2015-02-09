@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["summary"]={"summary","['sʌm(ə)rɪ]","['sʌməri]","n.摘要",'n.摘要,概要|||adj.摘要的,简略的','Your summary will need fleshing out before you present it.','你的总结需要增加一些具体材料再交出.','I went through by a summary method.','我用简易的方法通过了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remunerative"]={"remunerative","[rɪ'mjuːn(ə)rətɪv]","[rɪ'mjunərətɪv]","adj.有报酬的",'adj.有报酬的,有利的,合算的','A doctor advised her to seek remunerative employment.','一个医生建议她去找有酬劳的工作。','I don\'t think this investment is remunerative.','我不认为这项投资有利可图。'}

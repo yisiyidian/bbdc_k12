@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["need"]={"need","[niːd]","[nid]","v.需要",'n.需要,必须,缺乏|||v.需要,必需|||conj.需要','I feel a need to talk to you about it.','我觉得有必要跟你谈谈那件事。','We are collecting money for children in need.','我们在为贫困儿童募捐。'}

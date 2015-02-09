@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["screen"]={"screen","[skriːn]","[skrin]","n.屏幕",'n.屏幕；银幕；屏风|||vt.筛（煤、矿石等）；拍摄；放映（电影）；庇护','The camera lens must be screened from direct sunlight.','照相机的镜头不可受到阳光的直射。','They put a screen around his bed so that the doctor could examine him.','他们在他床的四周放上屏风，以便医生给他检查。'}

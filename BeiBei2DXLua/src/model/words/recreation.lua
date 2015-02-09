@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recreation"]={"recreation","[,rekrɪ'eɪʃ(ə)n]","[,rɛkrɪ'eʃən]","n.消遣",'n.消遣,娱乐','Sport and recreation have always been part of university life.','运动和娱乐活动一直是大学生活的一部分。','In other words, we had better take sufficient recreation to relax after work.','换句话说，我们最好工作后，消遣消遣来轻松一下。'}

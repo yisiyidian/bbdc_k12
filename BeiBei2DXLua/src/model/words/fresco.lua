@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fresco"]={"fresco","['freskəʊ]","['frɛsko]","n.壁画",'n.壁画','The frescos in the Sistine Chapel are world-famous.','西斯廷教堂的壁画举世闻名。','There\'s a beautiful fresco on the wall of our school.','我们学校的墙上有一幅美丽的壁画。'}

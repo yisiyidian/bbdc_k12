@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inhabit"]={"inhabit","[ɪn'hæbɪt]","[ɪn'hæbɪt]","v.居住于",'v.居住于,占据,栖息','Many forms of aquatic life inhabit ponds.','有很多种水生动植物均栖居於池塘.','Fish inhabit the sea.','鱼栖息于海中。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undo"]={"undo","[ʌn'duː]","[ʌn'du]","v.解开",'v.解开，松开，取消','The knot was fastened in such a way that it was impossible to undo.','这个结系得那麽紧, 根本解不开.','He ||undid|| most of the good work of his predecessor.','他把前任的大部分业绩毁掉了。'}

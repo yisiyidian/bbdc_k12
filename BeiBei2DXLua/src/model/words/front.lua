@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["front"]={"front","[frʌnt]","[frʌnt]","n.前面",'n.前面；正面；身体前部；前线|||adj.前面的；正面的；舌前的|||v.面向；在…前面；用…作正面；领导','At the front of the house, someone had planted a beautiful garden.','有人在房前种上了花，成了个漂亮的花园。','The jewellery firm is just a front for their illegal trade in diamonds.','该珠宝公司不过是进行非法的钻石交易的幌子。'}

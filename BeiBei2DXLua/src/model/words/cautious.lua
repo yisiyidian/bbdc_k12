@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cautious"]={"cautious","['kɔːʃəs]","['kɔʃəs]","adj.十分小心的",'adj.十分小心的,谨慎的','Felt a cautious optimism that the offer would be accepted.','怀着提议将被接受的谨慎的乐观情绪','Be cautious in spending money.','谨慎的使用钱财'}

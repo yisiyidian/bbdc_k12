@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vignette"]={"vignette","[viː'njet; vɪ-]","[vɪn'jɛt]","n.小插图",'n.小插图,晕映照,简介,简述,小场景|||vt.晕映,简洁地表述','This vignette illustrates the principle behind the scene.','这幅插图解释了场景背后的原理。','This vignette captures rather well the secret of Mrs Palin\'s appeal.','这个细节很好的表现了佩林夫人的喜好。'}

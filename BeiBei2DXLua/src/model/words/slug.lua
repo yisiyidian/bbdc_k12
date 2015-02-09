@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slug"]={"slug","[slʌg]","[slʌɡ]","n.动作缓慢的人",'n.动作缓慢的人','My daughter screamed when she saw a slug.','我的女儿看见了一条鼻涕虫, 尖叫了起来。','Edgar took a slug of his drink.','埃德加喝了一大口饮料。'}

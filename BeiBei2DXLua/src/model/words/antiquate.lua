@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antiquate"]={"antiquate","['æntɪkweɪt]","['æntə,kwet]","vt.废弃",'vt.废弃；使…过时；使…具有古旧形式或风格','this antiquated central heating system.','这种老式的中央供热系统。','This latest device will antiquate the ice-cube tray.','这个最新的装置使小方冰块盘变成废物。'}

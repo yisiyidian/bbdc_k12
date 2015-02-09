@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depreciation"]={"depreciation","[dɪ,priːʃɪ'eɪʃ(ə)n; -sɪ'eɪ-]","[dɪ,priʃɪ'eʃən]","n.价值减低",'n.价值减低,减价,跌落|||[计算机]折旧','She can\'t bear the depreciation of the enemy.','她受不了敌人的蹂躏。','Our equitments are used with one year and have depreciation.','我们的所有物已使用了一年有所折旧了。'}

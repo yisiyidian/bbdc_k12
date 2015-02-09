@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swipe"]={"swipe","[swaɪp]","[swaɪp]","v.重击",'v.重击,猛打,[非正式]偷窃,在解码器上刮刷（信用卡）|||n.重击,猛打,[非正式]尖刻的评论','He swiped at the ball and missed it.','他向球猛击，但未打中。','He swiped the ball into the grandstand.','他把球打到看台上去了.'}

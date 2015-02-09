@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ossify"]={"ossify","['ɒsɪfaɪ]","['ɑsɪfaɪ]","v.变骨",'v.变骨,骨化,使硬化|||v.骨化,硬化,变无情','British society tended to ossify and close ranks as the 1930s drew to their close.','英国社会在20世纪30年代末期趋于保守和自闭。','It reckons that rationing would ossify the farm industry.','人们认为实行配给制会使农业失去活力。'}

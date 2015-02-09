@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disposal"]={"disposal","[dɪ'spəʊz(ə)l]","[dɪ'spozl]","n.处理",'n.处理,消除,销毁,处置|||n.弃菜碾碎器','He has too many things at his disposal to go home early.','有太多事要他处理，使他不能早点回家。','The money is at our own disposal.','这钱由我们自由支配使用。'}

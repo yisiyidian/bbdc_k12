@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["molest"]={"molest","[mə'lest]","[mə'lɛst]","vt.骚扰",'vt.骚扰,干扰,调戏','Cares do still their thoughts molest, and still the unhappy poet\'s breast.','烦忧仍然困扰诗人的思绪，诗人郁闷的胸膛。','The dog that molested the sheep was killed.','那只骚扰绵羊的狗被杀死了。'}

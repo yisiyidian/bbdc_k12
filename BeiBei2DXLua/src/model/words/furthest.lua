@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["furthest"]={"furthest","['fɜːðɪst]","['fɝðɪst]","adv.&adj.最远",'adv.&adj.最远','Our house is the furthest away.','我们的房屋是离这里最远的一座。','That\'s the furthest thing from my mind.','我只能想这么多了。'}

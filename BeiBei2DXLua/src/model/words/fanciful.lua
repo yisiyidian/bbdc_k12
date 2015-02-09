@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fanciful"]={"fanciful","['fænsɪfʊl; -f(ə)l]","['fænsɪfl]","adj.奇怪的",'adj.奇怪的,稀奇的,想像的','We love him because he is full of fanciful stories.','我们喜欢他是因为他有一肚子稀奇古怪的故事。','He is a fanciful writer.','他是个富于幻想的作家。'}

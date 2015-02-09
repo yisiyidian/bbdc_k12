@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manifesto"]={"manifesto","[mænɪ'festəʊ]","[,mænɪ'fɛsto]","n.宣言",'n.宣言,声明|||vi.发表宣言','His manifesto promised measures to protect them.','他在宣言里保证要为他们采取保护措施。','Obama issued his election manifesto.','奥巴马发表了他的竞选宣言。'}

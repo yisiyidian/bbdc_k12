@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["delegation"]={"delegation","[delɪ'geɪʃ(ə)n]","[,dɛlɪ'ɡeʃən]","n.代表团",'n.代表团，委派,，授权','Our cultural delegation met with a hearty welcome.','我们的文化代表团受到热烈欢迎。','The delegation ended their visit to China on March30.','代表团3月30日结束了对中国的访问。'}

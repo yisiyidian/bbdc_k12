@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ninety"]={"ninety","['naɪntɪ]","['naɪnti]","num.&n.九十",'num.&n.九十','He must be going on for ninety.','他准有九十岁了.','My grandparents are in their ||nineties||.','我的祖父母已经九十多岁了。'}

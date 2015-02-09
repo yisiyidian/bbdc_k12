@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["influence"]={"influence","['ɪnflʊəns]","['ɪnfluəns]","vt.影响",'vt.影响,感化|||n.影响力,势力;影响,权势|||n.有影响的人(或事物)','His parents no longer have any real influence over him.','他的父母对他不再有任何真正的约束力了。','Don\'t let me influence your decision.','不要让我影响你的决定。'}

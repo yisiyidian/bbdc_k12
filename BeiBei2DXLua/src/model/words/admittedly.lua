@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["admittedly"]={"admittedly","[əd'mɪtɪdlɪ]","[əd'mɪtɪdli]","adv.不可否认的",'adv.不可否认的，公认地','||Admittedly||, he is rather foolish.','无人否认他是相当愚蠢的。','||Admittedly||, your equipment is somewhat better than those from other supplier but your price is too high.','应当承认，你方的设备比其他供货商的要好一些，可是你方的价格太高。'}

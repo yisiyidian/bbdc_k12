@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stalk"]={"stalk","[stɔːk]","[stɔk]","n.茎",'n.茎,追踪,高视阔步|||vt.&vi.悄悄靠近,蔓延,高视阔步','He moved like a tiger stalking its prey.','他像老虎一样悄悄潜近他的猎物。','He cut off the flowers at the stalk with a pair of scissors.','他用剪子连花带茎都剪下来。'}

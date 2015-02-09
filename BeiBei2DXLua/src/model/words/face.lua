@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["face"]={"face","[feɪs]","[fes]","n.脸",'n.脸,神情,面子,表面|||vt.面对,朝|||vi.朝,向','Her exam results were disappointing but she tried to put a brave face on it.','她的考试成绩令人失望，但却装出若无其事的样子。','We saw many new faces on the first day of classes.','上课第一天我们看到许多新面孔'}

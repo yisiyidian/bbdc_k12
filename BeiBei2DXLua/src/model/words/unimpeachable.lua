@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unimpeachable"]={"unimpeachable","[ʌnɪm'piːtʃəb(ə)l]","[,ʌnɪm'pitʃəbl]","adj.无懈可击的",'adj.无懈可击的,无可指责的,无过失的','Your testimony on this matter can almost be unimpeachable.','在这个问题上你的辩驳几乎是无懈可击的。','He said all five were men of unimpeachable character.','他说这五个都是品格完美无缺的人。'}

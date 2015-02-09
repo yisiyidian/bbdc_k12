@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["site"]={"site","[saɪt]","[saɪt]","n.现场",'n.位置,场所|||v.使...位于,使...放置','The local council intends to build on this site.','地方议会打算在这块地上盖房子.','That sale precludes further development on this site.','卖出以後妨碍了这一地点的进一步发展.'}

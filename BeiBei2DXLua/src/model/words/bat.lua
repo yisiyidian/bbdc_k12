@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bat"]={"bat","[bæt]","[bæt]","n.蝙蝠",'n.蝙蝠,棒,击打,球拍|||vt.&vi.用棒击打|||[计算机]DOS文件名:批文件','I want to buy a new tennis bat.','我想要买一个新网球拍。','The cat batted the balloon with its paws.','猫用爪子击打气球。'}

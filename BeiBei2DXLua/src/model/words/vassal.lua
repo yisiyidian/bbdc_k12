@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vassal"]={"vassal","['væs(ə)l]","['væsl]","n.诸侯",'n.诸侯,封臣,附庸,诸侯|||adj.为臣的,仆从的','The vassal swore that he would be loyal to the king forever.','这位封臣宣誓他将永远忠诚于国王。','Women in the family is no longer a vassal of men, with opportunities for self-expression.','女子在家庭中不再是男人的附庸，有了表达自我的机会。'}

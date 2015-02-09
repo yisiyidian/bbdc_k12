@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["concurrent"]={"concurrent","[kən'kʌr(ə)nt]","[kən'kɝənt]","adj.同时发生的",'adj.同时发生的','National elections were concurrent with the out break of war.','在全国举行大选的同时，战争爆发了。','He was imprisoned for two concurrent terms of 30 months and 18 months.','他被判处30个月和18个月的监禁，合并执行。'}

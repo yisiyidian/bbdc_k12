@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mythical"]={"mythical","['mɪθɪkəl]","['mɪθɪkl]","adj.神话的",'adj.神话的，虚构的，杜撰出来的','Undeniably, he is a man of mythical status.','不可否认，他是一个神话般的人物。','The space between the stars is not some mythical void at all.','恒星际空间根本不是人们凭空想象的虚空.'}

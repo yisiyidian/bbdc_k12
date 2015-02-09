@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crazy"]={"crazy","['kreɪzɪ]","['krezi]","adj.疯狂的",'adj.疯狂的，荒唐的|||n.荒唐的人|||adv.疯狂地','Are you crazy?','你疯了吗？','I\'m crazy about English.','我非常喜欢英语。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["piece"]={"piece","[piːs]","[pis]","n.片",'n.块,片,篇|||vt.修补,结合','a piece of string.','一段细绳','After the car accident, she seemed to go to pieces.','撞车事故后她好像精神崩溃了。'}

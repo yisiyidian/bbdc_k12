@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depict"]={"depict","[dɪ'pɪkt]","[dɪ'pɪkt]","vt.描述",'vt.描述,描绘','It\'s a picture depicting him as a clown.','这幅画把他画成了一个小丑。','The book depicts him as a rather unpleasant character.','这本书把他刻画成一个相当令人讨厌的人物。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blot"]={"blot","[blɒt]","[blɑt]","n.污点",'n.污点，墨迹，玷污|||n.（十五子棋中）暴露的棋子|||n.弱点|||vt.玷污，弄脏，吸干（墨汁等）|||vi.弄上污迹','The picture was ruined by several blots of ink.','几滴墨水点毁了这幅画。','His apron was blotted with oil.','他的围裙上满是油点。'}

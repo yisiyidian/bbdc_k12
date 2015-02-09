@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["junket"]={"junket","['dʒʌŋkɪt]","['dʒʌŋkɪt]","n.野宴",'n.野宴,游览','Sheldon was in Moscow yesterday, for some publicity junket.','昨天谢尔登在莫斯科参加一些公共活动。','He has never taken a government-paid junket.','他从来没有公费旅游过。'}

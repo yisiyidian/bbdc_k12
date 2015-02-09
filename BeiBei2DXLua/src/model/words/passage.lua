@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["passage"]={"passage","['pæsɪdʒ]","['pæsɪdʒ]","n.通道",'n.通道,走廊,一段文章,旅程|||vi.通过|||vt.通过','He knew the passage like the palm of his hand.','他对这条航线了如指掌。','This passage may be given several interpretations.','这段文字可以有不同的解释。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commend"]={"commend","[kə'mend]","[kə'mɛnd]","vt.推荐",'vt.推荐,嘉奖，把...托付给|||vi.推荐','His work was highly commended.','他的工作备受赞赏。','She commended the child to her sister\'s care.','她将孩子委托给她妹妹照管。'}

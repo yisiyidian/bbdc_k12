@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tutelary"]={"tutelary","['tjuːtɪlərɪ]","[ 'tju:tiləri ]","n.守护神",'n.守护神,守护圣徒|||adj.保护(人)','Procurator system is a sign of law rule, and public prosecutor is also called Law ||Tutelary||.','检察制度是现代法治的标志之一，检察官更是被称为法律守护人。','Batman served as a tutelary of Gotham City.','蝙蝠侠是高谭市的守护神。'}

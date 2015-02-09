@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["computation"]={"computation","[kɒmpjʊ'teɪʃ(ə)n]","['kɑmpjʊ'teʃən]","n.计算",'n.计算，计算机的使用，计算方法，计算结果','It will cost 5000 at the lowest computation.','估计最少也值5000英镑.','Addition and division are forms of computation.','加法和除法都是计算方法.'}

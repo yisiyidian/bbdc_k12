@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["writing"]={"writing","['raɪtɪŋ]","['raɪtɪŋ]","n.著述",'n.著述,笔迹,作品|||vbl.写,著述','||Writing|| is his life.','写作是他的生命。','Have you read his writings?','你读过他的作品吗？'}

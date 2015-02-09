@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indefatigable"]={"indefatigable","[,ɪndɪ'fætɪgəb(ə)l]","[,ɪndɪ'fætɪɡəbl]","adj.不知疲倦的",'adj.不知疲倦的','He was indefatigable in his efforts to secure funding for new projects.','他不知疲倦地努力为新项目寻求资金。','His indefatigable spirit helped him to cope with his illness.','他不屈不挠的精神帮助他对抗病魔。'}

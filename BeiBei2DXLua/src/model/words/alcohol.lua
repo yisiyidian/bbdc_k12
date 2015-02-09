@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alcohol"]={"alcohol","['ælkəhɒl]","['ælkəhɔl]","n.酒精",'n.酒精，酒,醇','He is addicted to alcohol.','他嗜好喝酒。','Whisky contains a large percentage of alcohol.','威士忌所含酒精的百分比很高.'}

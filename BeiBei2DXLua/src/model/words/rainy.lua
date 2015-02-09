@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rainy"]={"rainy","['reɪnɪ]","['reni]","adj.多雨的",'adj.多雨的,下雨的','I work both on sunny days and on rainy ones.','我风雨无阻地工作。','There are a succession of rainy days here.','这里一连好几天都是雨天。'}

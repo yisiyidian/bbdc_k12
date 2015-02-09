@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resign"]={"resign","[rɪ'zaɪn]","[rɪ'zaɪn]","vi.辞职",'vi.辞职,顺从|||vt.辞职,放弃,使顺从','I\'ve made a decision to resign.','我已决定辞职了。','Have you heard of her intention to resign?','你听到她打算辞职的传闻了吗？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aghast"]={"aghast","[ə'gɑːst]","[ə'ɡæst]","adj.惊骇的",'adj.惊骇的,吓呆的','He stood aghast on hearing the news.','他听到这消息吓呆了。','The robbers stood aghast at the sudden appearance of the policemen.','警察人员突然出现，使那几个盗贼大惊失色。'}

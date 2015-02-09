@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["daredevil"]={"daredevil","['deədev(ə)l]","['dɛrdɛvl]","adj.胆大的(人)",'adj.胆大的(人),冒失的(人)|||n.铤而走险的人,不怕死的人','A daredevil who laughed at danger.','鲁莽大胆的蔑视危险','He\'s a daredevil on the racing-track.','他在跑道上十分胆大鲁莽.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["temperance"]={"temperance","['temp(ə)r(ə)ns]","['tɛmpərəns]","n.节制(尤指饮食)",'n.节制(尤指饮食)；节欲；戒酒','I would like some temperance drinks.','我想要一些没有酒精的饮料。','||Temperance|| is the best physic.','节欲是灵丹妙药。'}

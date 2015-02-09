@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["therefore"]={"therefore","['ðeəfɔː]","['ðɛrfɔr]","adv.因此",'adv.因此,所以','The committee had been improperly constituted, and therefore had no legal power.','该委员会的建立不合规定, 因而没有合法的权力.','The lazy girl is dreaming of marrying a millionaire and therefore won\'t do any work.','这个懒惰的女孩正梦想着嫁给一个有钱人, 从此不再工作。'}

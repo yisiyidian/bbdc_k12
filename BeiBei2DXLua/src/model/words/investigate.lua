@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["investigate"]={"investigate","[ɪn'vestɪgeɪt]","[ɪn'vɛstɪɡet]","vt.&vi.调查",'vt.&vi.调查,研究|||[计算机]研究','The company hired a detective to investigate the accident.','公司雇佣了一名侦探来调查这次事故。','I felt impelled to investigate the matter further.','我觉得自己有责任对事情作进一步调查.'}

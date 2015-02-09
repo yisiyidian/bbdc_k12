@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scorn"]={"scorn","[skɔːn]","[skɔrn]","v.轻蔑",'n.轻蔑,被叱责的人|||v.轻蔑,不屑做','She poured scorn on the suggestion that he might never return.','她鄙弃有人暗示他一去不复返之意.','The small weak child became the scorn of the class.','这个瘦小软弱的孩子成为全班嘲笑的对象。'}

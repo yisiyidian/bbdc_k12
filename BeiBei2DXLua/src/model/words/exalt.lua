@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exalt"]={"exalt","[ɪg'zɔːlt; eg-]","[ɪɡ'zɔlt]","v.赞扬",'v.赞扬,提升，加强','He was exalted to the position of general manager.','他被提升到总经理的职位。','We were exalted by his poems.','他的诗激发了我们的想象力。'}

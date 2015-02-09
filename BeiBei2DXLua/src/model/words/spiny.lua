@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spiny"]={"spiny","['spaɪnɪ]","['spaɪni]","adj.多针的",'adj.多针的,尽是尖刺的,尖刺状的','These spiny claws could hurt you.','这些尖尖的爪子可能会伤到你。','Watch out! There are many spiny plants in the woods!','小心！森林里有很多尖刺状的植物！'}

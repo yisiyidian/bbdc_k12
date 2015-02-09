@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obliterate"]={"obliterate","[ə'blɪtəreɪt]","[ə'blɪtə'ret]","v.涂去",'v.涂去,擦去,删除','Anne was eager to obliterate her error.','安妮极想忘却她的错误。','The criminal obliterated all fingerprints.','罪犯擦掉全部指印。'}

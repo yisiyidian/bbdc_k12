@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shoe"]={"shoe","[ʃuː]","[ʃu]","n.鞋",'n.鞋','I can feel a nail sticking into my shoe.','我觉得有钉子扎进鞋里.','My shoe laces have come undone.','我的鞋带松开了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aromatic"]={"aromatic","[ærə'mætɪk]","[,ærə'mætɪk]","adj.芳香的",'adj.芳香的|||n.芳香植物,芳香族化合物','It is just as aromatic as a rose.','它像玫瑰花一样清香。','i like aromatic flowers','我喜欢芬芳的花朵。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indefinitely"]={"indefinitely","[ɪn'defɪnɪtlɪ]","[ɪn'dɛfɪnətli]","adv.无限地(在长时期内",'adv.无限地(在长时期内,无穷地)','The event has been postponed indefinitely due to lack of interest.','由于反应冷淡,这一活动被无限期地搁置了.','Dick wrote that he was coming back to Paris to stay indefinitely.','迪克来信,说他要回巴黎长期呆下去.'}

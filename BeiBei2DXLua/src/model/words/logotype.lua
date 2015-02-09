@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["logotype"]={"logotype","['lɒgə(ʊ)taɪp]","['lɔɡotaɪp]","n.标识",'n.[印]连合活字，标识','Download the logotype for World Health Day 2010.','下载2010年世界卫生日的标识。','In internet it\'s the same, if your logotype appears all over the places then you will be very well known.','在因特网上的一样，如果你的标识全国各地出现，那么你会很出名的地方。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chart"]={"chart","[tʃɑːt]","[tʃɑrt]","n.图表",'n.图表|||vt.制成图表','Can you read the weather chart?','你能看懂气象图吗？','The pilot charted the plane\'s course.','飞行员制定了飞机的航线。'}

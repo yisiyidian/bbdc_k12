@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["update"]={"update","[ʌp'deɪt]","[,ʌp'det]","vt.&vi.更新",'vt.&vi.更新,补充最新资料|||n.更新','The feedback from the computer enables us to update the program.','计算机的反馈能使我们更新程序.','The data should be updated once a week.','这些数据应该每星期更新一次。'}

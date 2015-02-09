@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diplomat"]={"diplomat","['dɪpləmæt]","['dɪpləmæt]","n.外交家",'n.外交家，外交官；有外交手腕的人；处事圆滑机敏的人','His job as a diplomat was a blind for his spying.','他担任外交官的职务是为了给他的间谍身分打掩护.','They had to ransom the kidnapped diplomat.','他们不得不赎回被绑架的外交官。'}

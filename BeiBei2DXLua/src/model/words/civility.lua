@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["civility"]={"civility","[sɪ'vɪlɪtɪ]","[sə'vɪləti]","n.礼貌",'n.礼貌,端庄','They greeted us with civility.','他们很有礼貌地迎接了我们。','Tom shows his civility before his parents\' friends.','汤姆在他父母的朋友面前表现得很有礼貌。'}

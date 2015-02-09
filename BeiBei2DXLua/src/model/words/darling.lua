@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["darling"]={"darling","['dɑːlɪŋ]","['dɑrlɪŋ]","n.亲爱的",'n.亲爱的,可爱的人,可爱的物|||adj.可爱的,亲爱的','My darling, you are adorable.','亲爱的, 你真迷人.','You look simply divine, darling!','你简直动人极了, 亲爱的!'}

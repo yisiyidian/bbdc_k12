@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hiccup"]={"hiccup","['hɪkʌp]","['hɪkəp]","n.打嗝",'n.打嗝','In the middle of the prayer there was a loud hiccup from my son.','祷告做到一半, 我儿子大声打了个呃。','||Hiccup|| out sth.','一边打着嗝一边说'}

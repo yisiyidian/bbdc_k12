@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fray"]={"fray","[freɪ]","[fre]","vt.擦",'vt.擦,磨损|||n.磨损处；争论；辩论','The electric wire is fraying and could be dangerous to handle.','电线快磨破了，使用起来可能有危险。','Her nerves were frayed by the noises in the street.','街上的噪音使她神经紧张。'}

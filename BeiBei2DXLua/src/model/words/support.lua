@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["support"]={"support","[sə'pɔːt]","[sə'pɔrt]","n.支持",'n.支持,援助,供养|||vt.支援,帮助,支持','Jim was a great support to us when father died.','父亲死後，吉姆给了我们巨大的帮助。','The theatre has had to close for lack of support.','这家剧院光顾者寡只好关闭。'}

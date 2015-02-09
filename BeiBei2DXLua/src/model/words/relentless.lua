@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relentless"]={"relentless","[rɪ'lentlɪs]","[rɪ'lɛntləs]","adj.无情的",'adj.无情的,冷酷的,残酷的','the relentless beat of the drums.','持续不断的击鼓声','He was relentless in demanding repayment of the debt.','他冷酷无情地要求偿还那笔债。'}

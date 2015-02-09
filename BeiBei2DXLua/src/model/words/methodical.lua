@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["methodical"]={"methodical","[mɪ'θɒdɪk(ə)l]","[mə'θɑdɪkl]","adj.有方法的",'adj.有方法的,有系统的','He is a precise, methodical, cerebral man who carefully chooses his words.','他是一个一丝不苟、有条理和理智的人，措辞谨慎。','Da Vinci was methodical in his research, carefully recording his observations and theories.','达·芬奇搞研究井井有条，会详细记录观察资料和理论学说。'}

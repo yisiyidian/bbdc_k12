@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whittle"]={"whittle","['wɪt(ə)l]","['wɪtl]","v.削(木头)",'v.削(木头),削减','Don\'t whittle the stick down too much or it won\'t be long enough.','别把那棍削得太多，不然就不够长了。','Make this plug smaller for me, but don\'t whittle away too much.','帮我把这个塞子弄小一点，但木头不要削掉太多。'}

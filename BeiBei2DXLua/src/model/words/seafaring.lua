@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seafaring"]={"seafaring","['siːfeərɪŋ]","['sifɛrɪŋ]","adj.航海的",'adj.航海的,跟航海有关的|||n.海上航行','seafaring peoples of the world; seafaring nations.','世界上以航海为业的人；以航海为业的民族','seafaring vessels.','适于航海的船只'}

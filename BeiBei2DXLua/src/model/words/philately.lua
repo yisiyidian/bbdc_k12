@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["philately"]={"philately","[fɪ'læt(ə)lɪ]","[fɪ'lætəli]","n.集邮",'n.集邮','Federation of Inter-Asian ||Philately||','亚洲集邮联合会','Value-added tax is levied on the production and allocation of philately commodities.','集邮业的生产和运输需要缴纳增值税。'}

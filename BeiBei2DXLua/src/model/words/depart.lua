@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depart"]={"depart","[dɪ'pɑːt]","[dɪ'pɑrt]","vt.离开",'vt.离开|||vi.离开,死亡,脱轨','Misfortunes come on wings and depart on foot.','【谚】祸来如飞行，祸去似步行。','He seemed somewhat loath to depart.','他似乎不愿离去。'}

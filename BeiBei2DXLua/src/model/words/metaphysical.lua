@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["metaphysical"]={"metaphysical","[metə'fɪzɪk(ə)l]","[,mɛtə'fɪzɪkl]","adj.形而上学的",'adj.形而上学的，抽象的|||Metaphysicaladj.(英国)玄学派诗歌或诗人的','The bent of his mind was at all times much to metaphysical theology.','他一向对玄奥的神学理论很感兴趣。','Their argument was too metaphysical for me to follow.','他们的辩论太深奥，我弄不懂。'}

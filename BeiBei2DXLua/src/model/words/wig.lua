@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wig"]={"wig","[wɪg]","[wɪɡ]","n.假发",'n.假发，呵斥|||vt.给...戴假发；严斥','She have a wig on, but we soon penetrate her disguise.','她戴了一顶假发，但是我们很快就识穿了她的伪装。','Judges wear wigs in court.','法官开庭时戴假发。'}

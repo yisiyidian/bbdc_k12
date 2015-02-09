@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acquisitive"]={"acquisitive","[ə'kwɪzɪtɪv]","[ə'kwɪzətɪv]","adj.想获得的",'adj.想获得的,贪得的','An acquisitive mind.','易获得信息的头脑','an acquisitive mind.','易获得信息的头脑'}

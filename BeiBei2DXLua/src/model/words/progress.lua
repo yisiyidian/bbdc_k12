@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["progress"]={"progress","['prəʊgres]","['prɑɡrɛs]","n.进步",'n.进步,发展,前进|||vi.促进，进步,进行','The student is showing rapid progress in his studies.','这个学生学习上进步很快。','The ship made slow progress through the rough sea.','船只在汹涌的大海中缓慢前进。'}

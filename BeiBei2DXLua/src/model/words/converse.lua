@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["converse"]={"converse","[kən'vɜːs]","[kən'vɝs]","n.相反的事物",'n.相反的事物,倒,逆向|||adj.相反的,逆向的,倒的|||v.交谈,谈话|||[计算机]转换','This statement is converse to that one.','这个声明和那个相反。','Would you give me half an hour to converse with you?','你能给我半个小时的时间谈谈吗？'}

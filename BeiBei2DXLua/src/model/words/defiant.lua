@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defiant"]={"defiant","[dɪ'faɪənt]","[dɪ'faɪənt]","adj.挑衅的",'adj.挑衅的,目中无人','A menacing or defiant wave or flourish.','威胁性或蔑视性的挥动或舞动','Chanted defiant slogans.','反复呼喊抗议口号'}

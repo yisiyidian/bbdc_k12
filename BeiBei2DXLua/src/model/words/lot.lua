@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lot"]={"lot","[lɒt]","[lɑt]","adv.很",'adv.很,非常|||pron.大量|||n.许多,量,小组,抽签,场地,命运|||vt.分配,划分','I would not want to share his lot.','我可不愿和他同甘共苦。','She was chosen by lot to represent us.','她抽中签当我们的代表。'}

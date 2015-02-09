@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stodgy"]={"stodgy","['stɒdʒɪ]","['stɑdʒi]","adj.塞满的",'adj.塞满的，笨重的，沉闷的,式样难看的，难消化的','The company hasn\'t been able to shake off its image as stodgy and old-fashioned.','该公司一直未能摆脱其古板守旧的形象。','They\'re not cultured or interesting, they are boring stodgy old things.','他们没修养，很乏味，是一群无聊古板的老家伙。'}

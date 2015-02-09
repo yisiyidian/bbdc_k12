@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accord"]={"accord","[ə'kɔːd]","[ə'kɔrd]","n.一致",'n.一致,调和,协议，自愿|||vi.(与)一致（accordwith）|||vt.使一致，调解；给予，赠予','The teachers praised him with one accord.','老师们异口同声地称赞他。','His words are in accord with his ideas.','他心口一致。'}

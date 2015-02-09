@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abrupt"]={"abrupt","[ə'brʌpt]","[ə'brʌpt]","adj.突然的",'adj.突然的；唐突的,陡峭的','It\'s very unlike him to be so abrupt.','他这麽粗鲁可不像他平时的样子.','Rosie\'s idyllic world came to an abrupt end when her parents\' marriage broke up.','当她的父母婚姻破裂后，罗茜的田园诗一般的世界骤然结束了。'}

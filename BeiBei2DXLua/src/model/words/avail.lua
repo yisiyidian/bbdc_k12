@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["avail"]={"avail","[ə'veɪl]","[ə'vel]","n.益处",'vi.有利|||vt.有用|||n.益处','He tried and tried but all his efforts were of no avail.','他试了又试, 但一切努力都不起作用。','Your efforts will not come to no avail, if you can achieve something at last.','如果最后你能够有所成就, 你的努力就不会白费。'}

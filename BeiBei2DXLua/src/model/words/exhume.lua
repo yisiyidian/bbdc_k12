@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exhume"]={"exhume","[eks'(h)juːm; ɪg'zjuːm]","[ɪɡ'zum]","vt.发掘",'vt.掘出(尸体以检验)，发掘','When the police exhumed the corpse they discovered traces of poison in it.','警方掘出尸体，发现有中毒的痕迹。','',''}

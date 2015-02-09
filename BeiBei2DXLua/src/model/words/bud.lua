@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bud"]={"bud","[bʌd]","[bʌd]","n.芽",'n.芽,花蕾|||vi.发芽,萌芽|||vt.使发芽','She wanted to be an actress, but her father soon nipped that idea in the bud.','她想当演员，但她父亲一知道这个想法就阻止住了。','The new buds appear in the spring.','春天嫩芽初绽。'}

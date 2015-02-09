@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contrive"]={"contrive","[kən'traɪv]","[kən'traɪv]","vt.(不顾困难地)促成某事",'vt.1.(不顾困难地)促成某事2.巧妙地策划；精巧地制造（如机器）vi.1.(不顾困难而)设法做到(正式)','Can you contrive to be here early?','你能不能设法早到点？','I can contrive without meat.','我没有肉也能凑合（吃这顿饭）。'}

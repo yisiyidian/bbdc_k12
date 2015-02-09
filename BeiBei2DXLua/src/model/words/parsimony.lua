@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parsimony"]={"parsimony","['pɑːsɪmənɪ]","['pɑrsə'moni]","n.过度节俭",'n.过度节俭,吝啬','Due to official parsimony only the one machine was built.','由于官方过于吝啬，仅制造了那一台机器。','Capitals are increased by parsimony, and diminished by prodigality and misconduct.','节俭使资本增长，挥霍和运用不当使资本减少。'}

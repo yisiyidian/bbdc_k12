@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["off"]={"off","[ɒf]","[ɔf]","prep.离开",'adj.远的,休假的,空闲的,落后懈怠的|||adv.离开,出发,距离隔断,分割,不继续运行,下台|||prep.离开,脱落,下班|||vi.离开,走开','Make sure the central heating is off.','集中供暖设备一定要关掉。','It rained on and off all day.','整天断断续续地下著雨。'}

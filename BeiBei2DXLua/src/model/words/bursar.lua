@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bursar"]={"bursar","['bɜːsə]","[ 'bə:sə ]","n.会计",'n.会计,司库,财务主管','Non-resident students who wish to lunch in should inform the bursar before ten o\'clock.','走读生凡拟在校用午餐者希于10时前通知总务管理员。','bursar\'s office','财务处'}

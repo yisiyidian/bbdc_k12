@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["demented"]={"demented","[dɪ'mentɪd]","[dɪ'mɛntɪd]","adj.发狂的",'adj.发狂的,精神错乱状态的','When her child was two hours late, she became quite demented.','她孩子晚了两个小时，她心急如焚。','He broke into demented laughter.','他突然狂笑起来。'}

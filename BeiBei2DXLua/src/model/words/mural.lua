@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mural"]={"mural","['mjʊər(ə)l]","['mjʊrəl]","adj.墙壁的",'adj.墙壁的，挂在墙壁上的|||n.壁画','John, the artist, could see the commission for the murals going up in smoke.','艺术家约翰看出委托制作壁画的事己告吹了。','Dunhuang is famous for its mural art.','敦煌以它的壁画艺术而闻名。'}

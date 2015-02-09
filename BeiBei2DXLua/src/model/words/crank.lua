@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crank"]={"crank","[kræŋk]","[kræŋk]","n.曲柄",'n.曲柄|||v.用曲柄启动或转动','The pedal of a cycle is attached to a crank.','自行车的踏板与曲柄相连。','He started to crank the engine.','他开始用曲柄启动发动机。'}

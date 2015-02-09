@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quack"]={"quack","[kwæk]","[kwæk]","n.庸医",'n.庸医，(指鸭)呷呷地叫,大声闲聊,吹嘘|||n.(鸭子)呷呷叫声,庸医,骗子|||adj.骗人','The miser was killed by a quack doctor.','那个守财奴最后死在了一个庸医的手中。','Why do intelligent people find quack remedies so appealing?','为什么聪明人会被江湖医术所吸引？'}

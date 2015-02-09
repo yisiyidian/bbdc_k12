@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adjuration"]={"adjuration","[,ædʒʊə'reɪʃən]","[ ,ædʒuə'reiʃən ]","n.恳求",'n.恳求','Her last adjuration to daughter was to escape from dinginess if she could.','她对女儿最后的叮嘱是要竭尽全力摆脱这种困难。','He adjured（adjuration） them to tell the truth.','他要求他们讲真话。'}

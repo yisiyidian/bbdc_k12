@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["purification"]={"purification","[,pjʊərɪfɪ'keɪʃən]","[,pjʊrəfə'keʃən]","n.净化",'n.净化，提纯,[宗]涤罪','Distillation has traditionally been the major system for water purification.','蒸馏法已传统地成了水提纯的主要方法.','The water goes through three stages of purification.','这水经过3个步骤的净化.'}

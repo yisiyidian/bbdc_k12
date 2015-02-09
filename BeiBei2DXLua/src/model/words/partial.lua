@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["partial"]={"partial","['pɑːʃ(ə)l]","['pɑrʃəl]","adj.部分的",'adj.部分的,偏袒的,偏爱的|||n.泛音','I\'m very partial to sweet foods.','我很偏爱甜食。','The police have only a partial description of the suspect.','警察只对嫌疑犯进行了不完全的描述。'}

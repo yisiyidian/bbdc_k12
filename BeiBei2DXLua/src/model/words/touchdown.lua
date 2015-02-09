@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["touchdown"]={"touchdown","['tʌtʃdaʊn]","['tʌtʃdaʊn]","n.触地",'n.触地,触地得分,着地','The team was behind, but at the last minute Sam saved the day with a touchdown.','这个队落后了，但在最后时刻塞姆底线得分转败为胜。','The end gathered in the pass and went over for a touchdown.','后卫接住传来的球，并跑过底线触地得分。'}

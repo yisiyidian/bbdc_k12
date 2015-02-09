@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utilize"]={"utilize","['jutəlaɪz]","[ 'ju:tilaiz ]","vt.利用",'vt.利用','In a magazine you can utilize a picture of your product.','在杂志里，你可以用你产品的照片。','In order to utilize land more fully, they adopted close planting.','为了更充分利用土地，他们采取了密植的办法。'}

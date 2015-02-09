@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trivia"]={"trivia","['trɪvɪə]","['trɪvɪə]","n.琐事",'n.琐事，不重要的事情','We spent the whole evening discussing domestic trivia.','我们整个晚上谈论家庭琐事。','The newspaper is now weighted in favour of trivia.','这份报纸如今倾向于报道一些花边消息。'}

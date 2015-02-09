@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tricky"]={"tricky","['trɪkɪ]","[ 'triki ]","adj.狡猾的",'adj.狡猾的,欺骗的,棘手的','The interviewer corner the politician with a particularly tricky question.','采访者用一个极其巧妙的问题难住了那个政客。','She showed great tact in dealing with a tricky situation.','她处理棘手的局面表现得十分老练.'}

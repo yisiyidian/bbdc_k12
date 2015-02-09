@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seem"]={"seem","[siːm]","[sim]","vi.像是",'vi.像是,似乎','The children seem unaffected emotionally by their parent\'s divorce.','孩子在情绪上似乎未受到父母离婚的影响。','He seems to know everything.','他似乎什么都懂。'}

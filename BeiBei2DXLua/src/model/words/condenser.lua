@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["condenser"]={"condenser","[kən'densə]","[kən'dɛnsɚ]","n.凝结器",'n.凝结器,凝缩器,冷却器','Water flows from the condenser to the ash room.','水从冷凝器流出，流入灰浆室。','The condenser has been corroded by acid rain','这个压缩机被酸雨腐蚀了'}

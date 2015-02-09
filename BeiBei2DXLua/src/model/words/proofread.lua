@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proofread"]={"proofread","['pruːfriːd]","['prufrid]","vt.校对",'vt.校对','I didn\'t even have the chance to proofread my own report.','我甚至没有机会校对自己的报告。','I have proofread twenty pages.','我已经校对完二十页了。'}

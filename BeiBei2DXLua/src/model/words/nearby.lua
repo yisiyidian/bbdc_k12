@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nearby"]={"nearby","['nɪəbaɪ]","[,nɪr'baɪ]","adj.附近的",'adj.附近的|||adv.在附近|||prep.在...附近','He usually trades at the nearby supermarket.','他通常在附近的超市购物。','The fleeing rebels found a sanctuary in the nearby church.','叛乱後逃跑的人躲入附近教堂寻求庇护.'}

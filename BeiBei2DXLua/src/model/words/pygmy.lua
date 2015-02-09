@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pygmy"]={"pygmy","['pɪɡmi]","[ 'piɡmi ]","n.矮人",'n.矮人,侏儒','||Pygmy||\'s body is shorter than the normal\'s.','侏儒的身体要比普通人矮。','pygmy','n. 矮人,侏儒'}

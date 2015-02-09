@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adjust"]={"adjust","[ə'dʒʌst]","[ə'dʒʌst]","vt.调整",'vt.调整,使...适于|||vi.适应','Could you teach me how to adjust the iris of the camera?','你能教我怎么调照相机的光圈吗？','He can\'t adjust himself to the whirl of modern life in this big city.','他无法适应这个大都市的现代生活的忙碌。'}

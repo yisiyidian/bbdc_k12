@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["settle"]={"settle","['set(ə)l]","['sɛtl]","vt.解决",'n.有背的长凳|||vt.安放,安顿,解决,决定,付清(欠款)|||vi.定居,降落','If you pay for both of us now, we can settle up later.','你要是现在先付清咱们两人的帐，事后咱们俩再细算。','The thunderstorm may settle the weather.','这场雷暴过後天气可能反而好些。'}

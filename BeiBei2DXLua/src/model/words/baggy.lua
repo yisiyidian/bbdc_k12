@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["baggy"]={"baggy","['bægɪ]","['bæɡi]","adj.宽松的",'adj.宽松的','A large, baggy umbrella.','大的、袋状的伞','His trousers were baggy at the knees.','他的裤子膝盖处宽松似袋。'}

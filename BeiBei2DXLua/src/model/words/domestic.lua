@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["domestic"]={"domestic","[də'mestɪk]","[də'mɛstɪk]","adj.国内的",'adj.国内的,家庭的,驯养的|||n.家仆,佣人','She felt fenced in by domestic routine.','她觉得自己完全被家务事束缚住了。','A pig is a domestic animal.','猪是一种家畜。'}

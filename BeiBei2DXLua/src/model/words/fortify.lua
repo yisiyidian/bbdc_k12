@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fortify"]={"fortify","['fɔːtɪfaɪ]","['fɔrtɪfaɪ]","vt.强化",'vt.强化，增强，筑防御工事于，（物质或精神上）支持或鼓励|||vi.构建防御工事','The medieval town is ||fortified|| with a high wall and a deep moat.','这座中世纪的城市用高墙深沟来加强防御。','After praying quietly he faced his difficulties with a ||fortified|| spirit.','默默地祈祷后，他面对困难的勇气倍增。'}

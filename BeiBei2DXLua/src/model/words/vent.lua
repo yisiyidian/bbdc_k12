@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vent"]={"vent","[vent]","[vɛnt]","n.排气口",'n.排气口,表达,发泄,火山口|||vt.&vi.发泄,表达,排放','When I get frustrated and angry, I have to vent my spleen on someone.','我受尽挫折怒火冲天时，禁不住就想找谁发一顿脾气。','He gave vent to his feelings in an impassioned speech.','他在一篇充满激情的演说里吐露了心声。'}

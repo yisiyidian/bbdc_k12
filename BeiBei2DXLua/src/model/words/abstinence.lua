@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abstinence"]={"abstinence","['æbstɪnəns]","['æbstɪnəns]","n.节制",'n.节制,禁食,戒酒','In the temperance question, Mr White takes his stand on total abstinence.','在戒酒问题上，怀特先生是主张完全戒掉。','To many, total abstinence is easier than total moderation.','对许多人来说，完全适度比完全禁欲更难做到。'}

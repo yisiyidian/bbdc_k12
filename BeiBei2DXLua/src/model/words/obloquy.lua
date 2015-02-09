@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obloquy"]={"obloquy","['ɒbləkwɪ]","['ɑbləkwi]","n.漫骂",'n.漫骂,叱骂,毁谤','I have had enough obloquy for one lifetime.','我一辈子受够了诽谤。','The accused murderer was condemned to live out his days in perpetual obloquy.','凶手终将在骂名中度过余生。'}

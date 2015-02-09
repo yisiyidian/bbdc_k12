@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["earthquake"]={"earthquake","['ɜːθkweɪk]","['ɝθ'kwek]","n.地震",'n.地震','The wall declined slightly on account of the earthquake.','墙壁因地震而倾斜。','The city was rased by an earthquake.','地震把这个城市夷为平地。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["habituate"]={"habituate","[hə'bɪtʃʊeɪt; -tjʊ-]","[ hə'bitjueit ]","v.使习惯于",'v.使习惯于','habituate','habituate','You must habituate yourself to hard work.','你必须使自己习惯于艰苦的工作。'}

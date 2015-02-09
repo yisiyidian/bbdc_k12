@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agglomeration"]={"agglomeration","[əglɒmə'reɪʃ(ə)n]","[ə,ɡlɑmə'reʃən]","n.结块",'n.结块,凝聚,块','To avoid the problems of large urban agglomerations, the state decentralized the university system','为了避免大城市聚结，国家把大学分散开来。','The album is a bizarre agglomeration of styles.','这张专辑不同寻常地集各种风格于一体。'}

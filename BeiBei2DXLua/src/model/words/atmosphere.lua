@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["atmosphere"]={"atmosphere","['ætməsfɪə]","['ætməsfɪr]","n.大气",'n.大气,气氛，空气,格调,情趣,气压','The office is full of a happy atmosphere.','办公室里充满了欢乐的气氛。','There is an atmosphere of peace and calm in the country, quite different from the atmosphere of a big city.','在乡间有一种和平宁静的气氛，和大城市的气氛截然不同。'}

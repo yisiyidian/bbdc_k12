@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["worthy"]={"worthy","['wɜːðɪ]","['wɝði]","adj.有价值的",'adj.有价值的,可尊敬的,值得的,配得上的|||n.知名人士,杰出人物','This book is worthy of reading.','这本书值得一读。','He who does his duty is worthy of praising.','凡是忠于职守的人都值得奖励。'}

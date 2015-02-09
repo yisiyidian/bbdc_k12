@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["microphone"]={"microphone","['maɪkrəfəʊn]","['maɪkrə'fon]","n.麦克风",'n.麦克风,扩音器','Speak clearly into the microphone.','对著话筒说清楚些.','He gave a tap at the microphone before speaking.','他在讲话前先轻叩了一下扩音器.'}

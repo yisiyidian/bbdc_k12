@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["addle"]={"addle","['æd(ə)l]","['ædl]","v.使腐坏",'v.使腐坏,使昏乱|||adj.腐烂的，昏乱的','My brain feels addled.','我感到昏头昏脑的。','My brain is a bit addled by whiskey.','威士忌搞得我头晕脑胀的。'}

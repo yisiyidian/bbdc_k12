@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cosmos"]={"cosmos","['kɒzmɒs]","['kɑzmos]","n.宇宙",'n.宇宙|||(复数）cosmos或cosmoses:大波斯菊','I know little about the cosmos.','关于宇宙我知道得很少。','There are many planets in cosmos.','宇宙中有很多行星。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sofa"]={"sofa","['səʊfə]","['sofə]","n.沙发",'n.沙发','The old man is dropping away in the sofa.','这位老人在沙发上打起瞌睡来。','Our wooden sofa seems not very comfortable.','我们的木头沙发似乎不太舒服。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["teacup"]={"teacup","['tiːkʌp]","[ˈtiˌkʌp]","n.茶杯",'n.茶杯','Mrs. Wilkins, I am awfully sorry...I have broke a teacup.','威尔金斯太太, 我非常抱歉……我打碎了一个茶杯。','Juggled the ball but finally caught it; shook hands while juggling a cookie and a teacup.','尽力使球保持平衡但最后还是接住了它; 握手时忙乱地抓着点心和茶杯'}

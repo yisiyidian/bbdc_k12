@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["calcium"]={"calcium","['kælsɪəm]","['kælsɪəm]","n.钙",'n.钙','I have a slight calcium deficiency.','我有点缺钙。','||Calcium|| is beneficial to our bones.','钙对我们的骨骼有益。'}

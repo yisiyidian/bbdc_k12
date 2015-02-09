@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["laboratory"]={"laboratory","[lə'bɒrə,t(ə)rɪ; 'læb(ə)rə,t(ə)rɪ]","['læbrə'tɔri]","n.实验室",'n.实验室,实验大楼','As soon as Jane arrived at this laboratory, she got down to work.','珍一到实验室, 就开始处理工作。','The school has a large biological laboratory.','这所学校有一个很大的生物实验室。'}
