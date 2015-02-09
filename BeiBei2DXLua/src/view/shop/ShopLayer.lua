@@ -118,9 +118,7 @@ function ShopLayer.create()
             item_name_back:addChild(item_name)
         end
     end
-
-
-
+    
     return layer
 end
 

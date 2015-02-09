@@ -76,7 +76,7 @@ function CorePlayManager.initStudyModel()
     CorePlayManager.currentIndex          = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     CorePlayManager.wrongWordNum          = #CorePlayManager.currentWrongWordList
 
-    CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
+    CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex-1]
     CorePlayManager.preWordNameState      = s_LocalDatabaseManager.getPrevWordState()
 
     local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
@@ -88,6 +88,14 @@ function CorePlayManager.enterStudyModel(wordName, wrongWordNum, preWordName, pr
         -- book over
         -- TODO
     else
+        if preWordName ~= nil then
+            print("preWordName: "..preWordName)
+            if preWordNameState then
+                print("preWordNameState: true")
+            else
+                print("preWordNameState: false")
+            end
+        end
         local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
         local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
         s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
