@@ -79,7 +79,7 @@ function ShopLayer.create()
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 local shopAlter = ShopAlter.create(i, 'in')
-                shopAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+                shopAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(shopAlter)
             end
         end
