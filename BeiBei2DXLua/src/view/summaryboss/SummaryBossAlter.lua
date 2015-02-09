@@ -14,7 +14,6 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     layer.levelIndex = levelIndex
     layer.wordList = wordList
     if layer.win then
-        s_CURRENT_USER:addBeans(3)
         -- s_CURRENT_USER:removeSummaryBoss(levelIndex)
         -- s_CURRENT_USER:updateDataToServer()
         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
@@ -241,6 +240,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
             if entrance == ENTRANCE_WORD_LIBRARY then
                 s_CorePlayManager.enterLevelLayer()
             else
+                s_CURRENT_USER:addBeans(3)
                 s_CorePlayManager.leaveSummaryModel(true)
                 if not hasCheckedIn then
                     s_SCENE:checkInAnimation()
