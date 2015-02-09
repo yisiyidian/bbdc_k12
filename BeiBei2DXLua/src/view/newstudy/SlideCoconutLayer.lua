@@ -14,7 +14,6 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
 end)
 
 function SlideCoconutLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
-    AnalyticsStudyLookBackWord()
     local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
