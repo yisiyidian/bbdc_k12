@@ -156,9 +156,9 @@ function LoginRewardPopup:ctor()
                     table.insert(currentData,loginData_array[#loginData][day + i - 1 - 7])
                 end
             end
-            table.insert(currentData,-1)
-        end
-     end
+        end   
+        table.insert(currentData,-1)
+    end
 
     local lastTime = s_CURRENT_USER.getDailyRewardTime
     local todayMark = 0
@@ -174,7 +174,7 @@ function LoginRewardPopup:ctor()
         mark:setScale(0.8)
         sprite:addChild(mark)
         if i < #currentData then
-            if tonumber(currentData[i]) <= 0  then
+            if currentData[i] <= 0  then
                 mark:setTexture("image/loginreward/miss.png")
             end  
             sprite:setVisible(true)
