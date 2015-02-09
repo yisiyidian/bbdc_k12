@@ -372,12 +372,13 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
 
                 s_SCENE:callFuncWithDelay(1,function()
                 rbCurrentWordIndex = rbCurrentWordIndex + 1
-                s_CURRENT_USER:addBeans(3)
+
                 if number == Review_From_Word_Bank then
                 	local SuccessLayer = require("view.newreviewboss.SuccessLayer")
                 	local successLayer = SuccessLayer.create()
                     s_SCENE:replaceGameLayer(successLayer)
                 else
+                    s_CURRENT_USER:addBeans(3)
                     if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                         s_CorePlayManager.leaveReviewModel(true)  
                     else
