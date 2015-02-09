@@ -153,12 +153,12 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 --    local levelState = math.random(0, 3)
 --    levelState = 2
     if levelState == 0 then
-        local deco = cc.Sprite:create('image/chapter/elements/big_tubiao_daizi_tanchu_xiaoguan.png')
-        deco:setPosition(levelPosition.x+10,levelPosition.y+20)
+        local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
+        deco:setPosition(levelPosition.x,levelPosition.y+20)
         self:addChild(deco, 130)
     elseif levelState == 1 then
-        local deco = cc.Sprite:create('image/chapter/elements/big_tubiao_chuizi_tanchu_xiaoguan.png')
-        deco:setPosition(levelPosition.x+10,levelPosition.y+20)
+        local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
+        deco:setPosition(levelPosition.x,levelPosition.y+20)
         self:addChild(deco, 130)
     elseif levelState == 2 or levelIndex == currentTaskBossIndex then
         local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
