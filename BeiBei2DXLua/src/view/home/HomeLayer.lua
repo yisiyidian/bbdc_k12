@@ -463,6 +463,34 @@ function HomeLayer.create(share)
 
             layer.button_friend = button_friend
 
+            local function updateFriendButton(delta)
+                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+                    -- local unlocked_button_friend = cc.Sprite:create("image/homescene/home_page_function_bg2.png")
+                    -- unlocked_button_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+                    -- local unlocked_icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+                    -- unlocked_icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+                    
+                    -- button_friend:addChild(unlocked_button_friend)
+                    -- button_friend:addChild(unlocked_icon_friend)
+                    -- button_friend:setPosition(bigWidth / 2 - 0.5, 200)
+                    -- button_friend:unscheduleUpdate()
+                    button_friend:removeFromParent()
+                    button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+                    button_friend:setPosition(bigWidth / 2 - 1, 200)
+                    icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+                    button_friend:setScale9Enabled(true)
+                    button_friend:setAnchorPoint(1,0.5)
+                    --button_friend:setPosition(bigWidth / 2 - 1, 200)
+                    button_friend:addTouchEventListener(button_right_clicked)
+                    backColor:addChild(button_friend)   
+
+                    icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+                    button_friend:addChild(icon_friend)
+                    button_friend:unscheduleUpdate()
+                end
+            end
+            button_friend:scheduleUpdateWithPriorityLua(updateFriendButton,0)
+
             s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
                 function (api, result)
                     print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
