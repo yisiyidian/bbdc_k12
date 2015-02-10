@@ -7,9 +7,11 @@ local NewReviewBossWordInfo = class("NewReviewBossWordInfo", function()
     return cc.Layer:create()
 end)
 
-function NewReviewBossWordInfo.create(word)
+function NewReviewBossWordInfo.create(word,y)
     local height = 520
-
+    if y ~= nil then
+    	height = y
+    end
     local main = cc.Layer:create()
     main:setContentSize(s_DESIGN_WIDTH, height)
     main:setAnchorPoint(0.5,1)

@@ -133,12 +133,12 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong()
-                    local bean = s_CURRENT_USER.beanReward
+                    local bean = s_CURRENT_USER.beanRewardForCollect
                     local total = 3
                     if bean > 0 then
                         local guessWrong = GuessWrong.create(bean,total)
                         s_SCENE:popup(guessWrong)
-                        s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
+                        s_CURRENT_USER.beanRewardForCollect  = s_CURRENT_USER.beanRewardForCollect - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, nil, preWordName, preWordNameState)

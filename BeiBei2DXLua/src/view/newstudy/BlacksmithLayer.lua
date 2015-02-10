@@ -54,9 +54,8 @@ local function createOptions(randomNameArray,wordlist,position)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
                     if #wordlist == 0 then
-                        s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
+                        s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForIron)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
-                        s_CURRENT_USER.beanReward = 3
                         if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                             s_CorePlayManager.leaveTestModel() 
                         else
@@ -79,12 +78,12 @@ local function createOptions(randomNameArray,wordlist,position)
                 local action1 = cc.DelayTime:create(0.5)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong_strikeWhileHot()
-                    local bean = s_CURRENT_USER.beanReward
+                    local bean = s_CURRENT_USER.beanRewardForIron
                     local total = 3
                     if bean > 0 then
                         local guessWrong = GuessWrong.create(bean,total)
                         s_SCENE:popup(guessWrong)
-                        s_CURRENT_USER.beanReward = s_CURRENT_USER.beanReward - 1
+                        s_CURRENT_USER.beanRewardForIron = s_CURRENT_USER.beanRewardForIron - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
                     local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
