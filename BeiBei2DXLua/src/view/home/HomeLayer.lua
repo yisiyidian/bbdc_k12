@@ -529,7 +529,7 @@ function HomeLayer.create(share)
         if i == 1 or i == 2 then
         else
             if online == false then
-               label:setColor(cc.c4b(157,157,157,255))
+               label[i]:setColor(cc.c4b(157,157,157,255))
             end
         end
     end
