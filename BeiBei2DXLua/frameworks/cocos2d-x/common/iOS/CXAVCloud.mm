@@ -20,9 +20,17 @@ void CXAVCloud::callAVCloudFunction(const std::string& func, const std::string& 
     m_callback = callback;
     
     retain();
+#if (COCOS2D_DEBUG > 0)
+    NSString* funcx = [NSString stringWithUTF8String:func.c_str()];
+    NSString* parametersx = [NSString stringWithUTF8String:parameters.c_str()];
+#endif
     if (error_json == nil) {
         [AVCloud callFunctionInBackground:avcloudFunc withParameters:parsedData block:^(id object, NSError *error) {
             if (error) {
+#if (COCOS2D_DEBUG > 0)
+                CCLOG("funcx:%s", funcx.UTF8String);
+                CCLOG("parametersx:%s", parametersx.UTF8String);
+#endif
                 NSString* errorjson = NSErrorToJSONString(error);
                 invokeCallback(nullptr, errorjson.UTF8String);
             } else {

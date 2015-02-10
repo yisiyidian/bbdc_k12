@@ -115,6 +115,7 @@ function getNotContainedInLocalDatasFromServer(className, sqlCondition, callback
         if row.objectId ~= nil and row.objectId ~= '' then
             if i > 0 then objectIds = objectIds .. ',' end
             objectIds = objectIds .. '"' .. row.objectId .. '"'
+            i = i + 1
         end
     end
     s_LocalDatabaseManager.getDatas(className, 
