@@ -13,6 +13,7 @@ local Chapter0ResTable = {
     back2 = {'res/image/chapter/chapter0/2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-970)},
     back3_1 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
     back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
+    rest = {'res/image/chapter/chapter0/rest.png',cc.p(0,1),cc.p(200,2630)},
     island0Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(527, 2662),"island","level0"}
     ,island1Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(533, 2344),"island","level1"}
     ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(333, 2071),"island","level2"}
@@ -80,6 +81,8 @@ function ChapterLayer0:loadResource()
         self:createObjectForResource(Chapter0ResTable['back3_1'])
     end
     
+    self:createObjectForResource(Chapter0ResTable['rest'])
+    
     -- plot boat
     local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
     boat1:addAnimation(0, 'animation', true)
@@ -104,7 +107,7 @@ function ChapterLayer0:loadResource()
     --crab
     local crab = sp.SkeletonAnimation:create('spine/chapterlevel/pangxie.json', 'spine/chapterlevel/pangxie.atlas',1)
     crab:addAnimation(0, 'animation', true)
-    crab:setPosition(500,1800)
+    crab:setPosition(500,1760)
     self:addChild(crab, 140)  
     local crabAction1 = cc.MoveBy:create(2,cc.p(50,-10))  
     local crabAction2 = cc.MoveBy:create(2,cc.p(-50,10))  
@@ -118,11 +121,11 @@ function ChapterLayer0:loadResource()
     -- tree animation
     local tree1 = sp.SkeletonAnimation:create('spine/chapterlevel/xinxuanxiaoguan.json', 'spine/chapterlevel/xinxuanxiaoguan.atlas',1)
     tree1:addAnimation(0, 'animation', true)
-    tree1:setPosition(530,1860)
+    tree1:setPosition(570,1820)
     self:addChild(tree1, 140)
-    local tree2 = sp.SkeletonAnimation:create('spine/chapterlevel/skeleton.json', 'spine/chapterlevel/skeleton.atlas',1)
+    local tree2 = sp.SkeletonAnimation:create('spine/chapterlevel/2xuanxiaoguanyizishu.json', 'spine/chapterlevel/2xuanxiaoguanyizishu.atlas',1)
     tree2:addAnimation(0, 'animation', true)
-    tree2:setPosition(200,2420)
+    tree2:setPosition(100,2530)
     self:addChild(tree2, 140)
     
     -- wave action

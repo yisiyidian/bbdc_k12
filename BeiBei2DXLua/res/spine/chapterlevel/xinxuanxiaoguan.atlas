@@ -5,43 +5,36 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 xuanxiaoguanyizishuzhi
-  rotate: false
-  xy: 112, 83
+  rotate: true
+  xy: 190, 291
   size: 77, 178
   orig: 77, 178
   offset: 0, 0
   index: -1
 yezi2
   rotate: false
-  xy: 2, 2
+  xy: 2, 11
   size: 25, 46
   orig: 25, 46
   offset: 0, 0
   index: -1
 yezishu
   rotate: false
-  xy: 190, 286
+  xy: 2, 59
   size: 162, 142
   orig: 162, 142
   offset: 0, 0
   index: -1
 yezishuye
   rotate: false
-  xy: 2, 263
+  xy: 2, 203
   size: 186, 165
   orig: 186, 165
   offset: 0, 0
   index: -1
-yisiyingzi
-  rotate: true
-  xy: 2, 50
-  size: 211, 108
-  orig: 211, 108
-  offset: 0, 0
-  index: -1
 yizi1
   rotate: false
-  xy: 354, 401
+  xy: 190, 262
   size: 25, 27
   orig: 25, 27
   offset: 0, 0

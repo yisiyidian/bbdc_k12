@@ -4,7 +4,7 @@ size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
- 2xinxuanxiaoguanyezishuzhi
+2xinxuanxiaoguanyezishuzhi
   rotate: false
   xy: 2, 2
   size: 106, 184

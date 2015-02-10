@@ -1,10 +1,10 @@
 {
 "skeleton": {
-	"hash": "/UiEx9VDwV8Cw365wv2dzzWbXQc",
-	"spine": "2.1.07",
-	"width": 197.61,
-	"height": 272.19,
-	"images": "/Users/yehanjie/Desktop/spine/2xuanxiaoguanyizishu"
+	"hash": "eSXlByyWS2KrMUNBeDTbsdxSNCY",
+	"spine": "2.1.09",
+	"width": 197.09,
+	"height": 270.25,
+	"images": "./2xuanxiaoguanyizishu/"
 },
 "bones": [
 	{ "name": "root" },
@@ -12,13 +12,13 @@
 	{ "name": "bone2", "parent": "bone", "length": 44.86, "x": 233.97, "y": 6.99, "rotation": -154.9 }
 ],
 "slots": [
-	{ "name": "2xinxuanxiaoguanyezishuzhi", "bone": "bone", "attachment": " 2xinxuanxiaoguanyezishuzhi" },
+	{ "name": "2xinxuanxiaoguanyezishuzhi", "bone": "bone", "attachment": "2xinxuanxiaoguanyezishuzhi" },
 	{ "name": "2xuanxiaoguanyeshuye", "bone": "bone2", "attachment": "2xuanxiaoguanyeshuye" }
 ],
 "skins": {
 	"default": {
 		"2xinxuanxiaoguanyezishuzhi": {
-			" 2xinxuanxiaoguanyezishuzhi": { "x": 99.63, "y": 4.7, "rotation": -60.25, "width": 106, "height": 184 }
+			"2xinxuanxiaoguanyezishuzhi": { "x": 101.57, "y": 5.21, "rotation": -60.25, "width": 106, "height": 184 }
 		},
 		"2xuanxiaoguanyeshuye": {
 			"2xuanxiaoguanyeshuye": { "x": 29.37, "y": -8.23, "rotation": 94.65, "width": 181, "height": 182 }
