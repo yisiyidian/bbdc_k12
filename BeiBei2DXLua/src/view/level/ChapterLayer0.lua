@@ -8,14 +8,14 @@ local ChapterLayer0 = class("ChapterLayer0",function()
 end)
 
 local Chapter0ResTable = {
-    back1_1 = {'res/image/chapter/chapter0/1_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height)},
-    back1_2 = {'res/image/chapter/chapter0/1_2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height)},
-    back2 = {'res/image/chapter/chapter0/2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-970)},
-    back3_1 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
-    back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
-    rest = {'res/image/chapter/chapter0/rest.png',cc.p(0,1),cc.p(200,2630)},
-    leftIsland = {'image/chapter/leftIsland.png',cc.p(0,1),cc.p(200,2630)},
-    rightIsland = {'image/chapter/rightIsland.png',cc.p(0,1),cc.p(500,2330)},
+    back1_1 = {'res/image/chapter/chapter0/1_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height),"back"},
+    back1_2 = {'res/image/chapter/chapter0/1_2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height),"back"},
+    back2 = {'res/image/chapter/chapter0/2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-970),"back"},
+    back3_1 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940),"back"},
+    back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940),"back"},
+    rest = {'res/image/chapter/chapter0/rest.png',cc.p(0,1),cc.p(200,2630),"island"},
+    leftIsland = {'image/chapter/leftIsland.png',cc.p(0,1),cc.p(0,2900),"island"},
+    rightIsland = {'image/chapter/rightIsland.png',cc.p(1,1),cc.p(s_chapter_layer_width,2130)},
     island0Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(527, 2662),"island","level0"}
     ,island1Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(533, 2344),"island","level1"}
     ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(333, 2071),"island","level2"}
