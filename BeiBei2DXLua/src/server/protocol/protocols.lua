@@ -254,6 +254,10 @@ function getNotContainedInLocalEverydayInfosFromServer(callback)
 end
 
 function updateCurrentEverydayInfo()
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) or s_LocalDatabaseManager.isLogOut() then
+        return
+    end
+
     local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
     local week = getCurrentLogInWeek(os.time() , s_CURRENT_USER.localTime)
     if currentWeek ~= nil and currentWeek.week == week then return end
