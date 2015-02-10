@@ -137,7 +137,7 @@ function DataEverydayInfo:getReward(secondsFrom1970)
 end
 
 function DataEverydayInfo:isGotReward(secondsFrom1970)
-    self:isCheckIn(secondsFrom1970,WEEKDAYSTATE_GETREWARD_KEY)
+    return self:isCheckIn(secondsFrom1970,WEEKDAYSTATE_GETREWARD_KEY)
 end
 
 function DataEverydayInfo:getDays()

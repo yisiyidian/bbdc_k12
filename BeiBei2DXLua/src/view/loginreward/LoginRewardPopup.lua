@@ -129,7 +129,7 @@ function LoginRewardPopup:ctor()
      for i = 1,#loginData do
          loginData_array[i] = loginData[i]:getDays()
      end
-     local day = 0
+     local dayInWeekBegin = 0
      for i = 1,7 do
          if loginData_array[1][i] > 0 then
              day = i
@@ -139,33 +139,31 @@ function LoginRewardPopup:ctor()
      local currentData = {}
      local currentTime = os.time()
      local today = math.floor((currentTime - s_CURRENT_USER.localTime) / ( 24 * 60 * 60 ) ) % 7
+     local dayInWeekEnd = dayInWeekBegin + today
 
-     if today == 0 then
-        table.insert(currentData,-1)
-     else 
-        for i = 1,today do
-            if day + today <= 7 then
-                table.insert(currentData,loginData_array[#loginData][day + i - 1])
-            else
-                if day + i - 1 <= 7 then          
-                    if loginData_array[#loginData - 1] ~= nil then
-                        table.insert(currentData,loginData_array[#loginData - 1][day + i - 1])
-                    else
-                        table.insert(currentData,0)  
-                    end
-                else
-                    table.insert(currentData,loginData_array[#loginData][day + i - 1 - 7])
-                end
-            end
-        end   
-        table.insert(currentData,-1)
-    end
+     local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
 
-    for i = 1 ,#currentData do
-        if currentData[i] <= 0 then
-
+     currentWeek:getReward(os.time())
+     if dayInWeekEnd <= 7 then
+        for i = dayInWeekBegin,dayInWeekEnd do
+            table.insert(currentData,currentWeek:isGotReward(os.time() - (dayInWeekEnd - dayInWeekBegin + i - dayInWeekBegin) * dayTime))
         end
-    end
+     else
+        local lastWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas - 1]
+        for i = 8,dayInWeekEnd do
+            if lastWeek == nil then
+               table.insert(currentData,false)
+            else
+               table.insert(currentData,lastWeek:isGotReward(os.time() - (dayInWeekEnd - dayInWeekBegin + i - 8) * dayTime))
+            end     
+        end
+        for i = 1,dayInWeekBegin do
+            table.insert(currentData,currentWeek:isGotReward(os.time() - (i - dayInWeekBegin) * dayTime))
+        end
+     end
+     
+    local dayTime = 24 * 60 * 60
+
 
     local lastTime = s_CURRENT_USER.getDailyRewardTime
     local todayMark = 0
@@ -181,7 +179,7 @@ function LoginRewardPopup:ctor()
         mark:setScale(0.8)
         sprite:addChild(mark)
         if i < #currentData then
-            if s_CURRENT_USER.getWeekReward[i] <= 0  then
+            if currentData[i] == false  then
                 mark:setTexture("image/loginreward/miss.png")
             end  
             sprite:setVisible(true)
