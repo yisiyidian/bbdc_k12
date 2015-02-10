@@ -1,6 +1,6 @@
 require("cocos.init")
 require('common.global')
-s_chapter0_base_height = 3014
+s_0_base_height = 3014
 s_islands_per_page = 10
 local ChapterLayer = class('ChapterLayer', function() 
     return cc.Layer:create()
