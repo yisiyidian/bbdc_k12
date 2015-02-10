@@ -173,6 +173,11 @@ function ChapterLayer:addNotification()
         self:scrollLevelLayer(taskIndex,0)
     end
     
+    local text = cc.Label:createWithSystemFont('当前任务','',23)
+    text:setPosition(notification:getContentSize().width/2,notification:getContentSize().height/2+10)
+    text:setColor(cc.c3b(95,112,116))
+    notification:addChild(text,10)
+    
     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
     local taskKey = 'level'..taskIndex
 --    print('task:'..taskKey..taskChapterKey)
@@ -553,7 +558,7 @@ function ChapterLayer:addBackToHome()
 
 
     -- return to homepage button
-    local homeButton = ccui.Button:create("image/chapter_level/button_home_book.png","image/chapter_level/button_home_book.png","")
+    local homeButton = ccui.Button:create("image/chapter/chapter0/backHome.png","image/chapter_level/button_home_book.png","")
     homeButton:addTouchEventListener(click_home)
     homeButton:ignoreAnchorPointForPosition(false)
     homeButton:setAnchorPoint(0,1)
