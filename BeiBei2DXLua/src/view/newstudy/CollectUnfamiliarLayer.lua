@@ -61,6 +61,7 @@ function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
         end
     end
     
+    local test = 1
     while 1 do
         if #randomNameArray >= randomWrongNumber then
             break
@@ -69,6 +70,10 @@ function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
         local randomWord = s_BookWord[s_CURRENT_USER.bookKey][randomIndex]
         local isIn = 0
         for i = 1, #randomNameArray do
+            test = test + 1
+            if test > 200 then
+               break
+            end
             if randomNameArray[i] == randomWord then
                 isIn = 1
                 break
@@ -80,6 +85,7 @@ function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
                 break
             end
         end
+        
         if isIn == 0 then
             table.insert(randomNameArray, randomWord)
         end
