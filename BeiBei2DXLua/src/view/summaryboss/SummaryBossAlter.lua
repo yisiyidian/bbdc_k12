@@ -1,5 +1,8 @@
 require("common.global")
 
+local ENTRANCE_WORD_LIBRARY = false
+local ENTRANCE_NORMAL = true
+
 local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
@@ -26,7 +29,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     if win then
-        if entrance == true then
+        if entrance == ENTRANCE_NORMAL then
             s_CURRENT_USER:addBeans(3)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
         end
@@ -195,8 +198,8 @@ function SummaryBossAlter:win1(entrance)
     if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 and not hasCheckedIn then
         checkInEverydayInfo()
     end
-    if not hasCheckedIn then
-    local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+    if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
+        local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
             self:win2(entrance,hasCheckedIn)
@@ -234,8 +237,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
 
     local function onButton(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            local ENTRANCE_WORD_LIBRARY = false
-            local ENTRANCE_NORMAL = true
+            
             if entrance == ENTRANCE_WORD_LIBRARY then
                 s_CorePlayManager.enterLevelLayer()
             else
