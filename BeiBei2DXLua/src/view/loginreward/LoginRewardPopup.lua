@@ -151,7 +151,7 @@ function LoginRewardPopup:ctor()
                     if loginData_array[#loginData - 1] ~= nil then
                         table.insert(currentData,loginData_array[#loginData - 1][day + i - 1])
                     else
-                        table.insert(currentData,0)
+                        table.insert(currentData,0)  
                     end
                 else
                     table.insert(currentData,loginData_array[#loginData][day + i - 1 - 7])
@@ -159,6 +159,12 @@ function LoginRewardPopup:ctor()
             end
         end   
         table.insert(currentData,-1)
+    end
+
+    for i = 1 ,#currentData do
+        if currentData[i] <= 0 then
+
+        end
     end
 
     local lastTime = s_CURRENT_USER.getDailyRewardTime
@@ -175,7 +181,7 @@ function LoginRewardPopup:ctor()
         mark:setScale(0.8)
         sprite:addChild(mark)
         if i < #currentData then
-            if currentData[i] <= 0  then
+            if s_CURRENT_USER.getWeekReward[i] <= 0  then
                 mark:setTexture("image/loginreward/miss.png")
             end  
             sprite:setVisible(true)
@@ -192,14 +198,15 @@ function LoginRewardPopup:ctor()
 
     local sprite = backPopup:getChildByName("reward"..(today + 1))
     local onTouchEnded = function(touch, event)
-        if todayMark == 0 then
+        if todayMark == 0 and sprite ~= nil then
             local location = backPopup:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint(sprite:getBoundingBox(), location)  then
                 s_CURRENT_USER:addBeans(rewardList[#currentData].reward)  
                 saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                 sprite:setVisible(true) 
                 s_CURRENT_USER.getDailyRewardTime = currentTime 
-                saveUserToServer({['getDailyRewardTime']=s_CURRENT_USER.getDailyRewardTime})
+                saveUserToServer({['getDailyRewardTime'] = s_CURRENT_USER.getDailyRewardTime})
+
                 todayMark = 1   
             end
         end

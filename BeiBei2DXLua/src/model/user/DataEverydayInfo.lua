@@ -9,6 +9,8 @@ WEEKDAYSTATE_LOGEDIN = 1
 
 WEEKDAYSTATE_CHECKEDIN_MASK = nil
 
+WEEKDAYSTATE_GETREWARD_KEY = 'getreward'
+
 ---------------------------------------------------------------------------------------------------
 
 local DataEverydayInfo = class(CLASSNAME, function()
@@ -23,6 +25,7 @@ function DataEverydayInfo.initCheckedInMask()
         for i, v in ipairs(g_BOOKKEYS) do
             WEEKDAYSTATE_CHECKEDIN_MASK[v] = math.pow(2, i) -- 1st bit is WEEKDAYSTATE_LOGEDIN
         end
+        WEEKDAYSTATE_CHECKEDIN_MASK[WEEKDAYSTATE_GETREWARD_KEY] = math.pow(2,30)
         print('DataEverydayInfo.initCheckedInMask()')
         print_lua_table(WEEKDAYSTATE_CHECKEDIN_MASK)
     end
@@ -127,6 +130,14 @@ function DataEverydayInfo:isCheckIn(secondsFrom1970, bookKey)
     local weekDayState = getWeekDayState(self, secondsFrom1970)
     local ret = math["and"](weekDayState, WEEKDAYSTATE_CHECKEDIN_MASK[bookKey]) > 0
     return ret
+end
+
+function DataEverydayInfo:getReward(secondsFrom1970)
+    self:checkIn(secondsFrom1970,WEEKDAYSTATE_GETREWARD_KEY)
+end
+
+function DataEverydayInfo:isGotReward(secondsFrom1970)
+    self:isCheckIn(secondsFrom1970,WEEKDAYSTATE_GETREWARD_KEY)
 end
 
 function DataEverydayInfo:getDays()

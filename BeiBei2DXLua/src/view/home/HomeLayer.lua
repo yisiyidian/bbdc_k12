@@ -269,16 +269,15 @@ function HomeLayer.create(share)
     setting_back:setAnchorPoint(1,0.5)
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
     layer:addChild(setting_back)
-
     
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER:getNameForDisplay()
         logo_name = {"head","book","feedback","logout"}
         label_name = {username,"选择书籍","用户反馈","登出游戏"}
     end
-    local label
-    local logo
-    local button_back
+    local label = {}
+    local logo = {}
+    local button_back = {}
     for i = 1, #logo_name do
         local button_back_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
@@ -306,17 +305,17 @@ function HomeLayer.create(share)
                         improveInfo.close = function()
                             layer:removeChildByTag(1)
                             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                                button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+                                local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
                                 button_back:setOpacity(0)
                                 button_back:setAnchorPoint(0, 1)
                                 button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (1 - 1) - 80)
                                 setting_back:addChild(button_back)
 
-                                logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
+                                local logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
                                 logo:setScale(0.9)
                                 logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
                                 button_back:addChild(logo)
-                                label = cc.Label:createWithSystemFont(s_CURRENT_USER.username,"",36)
+                                local label = cc.Label:createWithSystemFont(s_CURRENT_USER.username,"",36)
                                 label:setColor(cc.c4b(0,0,0,255))
                                 label:setAnchorPoint(0, 0)
                                 label:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
@@ -334,9 +333,13 @@ function HomeLayer.create(share)
                                 split:setPosition(button_back:getContentSize().width/2, 0)
                                 button_back:addChild(split)
 
-                                if list[1].button_back ~= nil then list[1].button_back:removeFromParent() end
-                                list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 90)
-                                if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+
+                                local sprite1 = setting_back:getChildByName("button1")                               
+                                if sprite1 ~= nil then sprite1:removeFromParent() end
+                                local sprite2 = setting_back:getChildByName("button5")  
+                                if sprite2 ~= nil then sprite2:setPosition(0, s_DESIGN_HEIGHT - sprite2:getContentSize().height * (4 - 1) - 90) end
+                                local sprite3 = setting_back:getChildByName("button4")                               
+                                if sprite3 ~= nil then sprite3:removeFromParent() end
                             end
                         end
                     end
@@ -381,9 +384,40 @@ function HomeLayer.create(share)
 
                                     item_popup.update = function()
                                         if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                                            list[1].label:setString(s_CURRENT_USER.username)
-                                            list[5].button_back:setPosition(0, s_DESIGN_HEIGHT - list[5].button_back:getContentSize().height * (4 - 1) - 20)
-                                            if list[4].button_back ~= nil then list[4].button_back:removeFromParent() end
+                                           local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+                                           button_back:setOpacity(0)
+                                           button_back:setAnchorPoint(0, 1)
+                                           button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (1 - 1) - 80)
+                                           setting_back:addChild(button_back)
+
+                                           local logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
+                                           logo:setScale(0.9)
+                                           logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
+                                           button_back:addChild(logo)
+                                           local label = cc.Label:createWithSystemFont(s_CURRENT_USER.username,"",36)
+                                           label:setColor(cc.c4b(0,0,0,255))
+                                           label:setAnchorPoint(0, 0)
+                                           label:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
+                                           button_back:addChild(label)
+
+                                           local label2 = cc.Label:createWithSystemFont('正在学习'..bookName..'词汇',"",24)
+                                           label2:setColor(cc.c4b(0,0,0,255))
+                                           label2:setAnchorPoint(0, 1)
+                                           label2:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
+                                           button_back:addChild(label2)
+
+                                           local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
+                                           split:ignoreAnchorPointForPosition(false)
+                                           split:setAnchorPoint(0.5,0)
+                                           split:setPosition(button_back:getContentSize().width/2, 0)
+                                           button_back:addChild(split)
+
+                                            local sprite1 = setting_back:getChildByName("button1")                               
+                                            if sprite1 ~= nil then sprite1:removeFromParent() end
+                                            local sprite2 = setting_back:getChildByName("button5")  
+                                            if sprite2 ~= nil then sprite2:setPosition(0, s_DESIGN_HEIGHT - sprite2:getContentSize().height * (4 - 1) - 90) end
+                                            local sprite3 = setting_back:getChildByName("button4")                               
+                                            if sprite3 ~= nil then sprite3:removeFromParent() end
                                         end
                                     end
 
@@ -450,45 +484,46 @@ function HomeLayer.create(share)
             )
 
 ----
-        button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
-        button_back:setOpacity(0)
-        button_back:setAnchorPoint(0, 1)
-        button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (i - 1) - 80)
-        button_back:addTouchEventListener(button_back_clicked)
-        setting_back:addChild(button_back)
+        button_back[i] = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+        button_back[i]:setOpacity(0)
+        button_back[i]:setAnchorPoint(0, 1)
+        button_back[i]:setPosition(0, s_DESIGN_HEIGHT-button_back[i]:getContentSize().height * (i - 1) - 80)
+        button_back[i]:addTouchEventListener(button_back_clicked)
+        button_back[i]:setName("button"..i)
+        setting_back:addChild(button_back[i])
         
         if i > 1 then
-            logo = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
-            logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2)
-            button_back:addChild(logo)
-            label = cc.Label:createWithSystemFont(label_name[i],"",32)
-            label:setColor(cc.c4b(0,0,0,255))
-            label:setAnchorPoint(0, 0.5)
-            label:setPosition(button_back:getContentSize().width-offset+200, button_back:getContentSize().height/2)
-            button_back:addChild(label)
+            logo[i] = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
+            logo[i]:setPosition(button_back[i]:getContentSize().width-offset+120, button_back[i]:getContentSize().height/2)
+            button_back[i]:addChild(logo[i])
+            label[i] = cc.Label:createWithSystemFont(label_name[i],"",32)
+            label[i]:setColor(cc.c4b(0,0,0,255))
+            label[i]:setAnchorPoint(0, 0.5)
+            label[i]:setPosition(button_back[i]:getContentSize().width-offset+200, button_back[i]:getContentSize().height/2)
+            button_back[i]:addChild(label[i])
         else
-            logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
-            logo:setScale(0.9)
-            logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
-            button_back:addChild(logo)
-            label = cc.Label:createWithSystemFont(label_name[i],"",36)
-            label:setColor(cc.c4b(0,0,0,255))
-            label:setAnchorPoint(0, 0)
-            label:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
-            button_back:addChild(label)
+            logo[i] = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
+            logo[i]:setScale(0.9)
+            logo[i]:setPosition(button_back[i]:getContentSize().width-offset+120, button_back[i]:getContentSize().height/2 + 40)
+            button_back[i]:addChild(logo[i])
+            label[i] = cc.Label:createWithSystemFont(label_name[i],"",36)
+            label[i]:setColor(cc.c4b(0,0,0,255))
+            label[i]:setAnchorPoint(0, 0)
+            label[i]:setPosition(button_back[i]:getContentSize().width-offset+210, button_back[i]:getContentSize().height/2 + 30)
+            button_back[i]:addChild(label[i])
 
             local label2 = cc.Label:createWithSystemFont('正在学习'..bookName..'词汇',"",24)
             label2:setColor(cc.c4b(0,0,0,255))
             label2:setAnchorPoint(0, 1)
-            label2:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
-            button_back:addChild(label2)
+            label2:setPosition(button_back[i]:getContentSize().width-offset+210, button_back[i]:getContentSize().height/2 + 30)
+            button_back[i]:addChild(label2)
         end
 
         local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
         split:ignoreAnchorPointForPosition(false)
         split:setAnchorPoint(0.5,0)
-        split:setPosition(button_back:getContentSize().width/2, 0)
-        button_back:addChild(split)
+        split:setPosition(button_back[i]:getContentSize().width/2, 0)
+        button_back[i]:addChild(split)
         
         --add offline 
         if i == 1 or i == 2 then
@@ -497,13 +532,6 @@ function HomeLayer.create(share)
                label:setColor(cc.c4b(157,157,157,255))
             end
         end
-
-        local t = {}
-        t.button_back = button_back
-        t.logo = logo
-        t.label = label
-        t.split = split
-        table.insert(list, t)
     end
     
     local moveLength = 100
