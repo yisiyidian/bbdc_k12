@@ -39,6 +39,19 @@ function LastWordInfoPopup:ctor(currentWordName)
     
     soundMark.scale(0.8)
     
+--    local tmp = cc.Layer:create()
+--    tmp:setContentSize(back:getContentSize().width, back:getContentSize().height)
+--    tmp:setAnchorPoint(0.5,0.5)
+--    tmp:ignoreAnchorPointForPosition(false)
+--    tmp:setPosition(back:getContentSize().width/2, back:getContentSize().height * 0.35 )
+--    back:addChild(tmp)
+--    
+--    local color = cc.LayerColor:create(cc.c4b(0,0,0,255),back:getContentSize().width,back:getContentSize().height)
+--    color:setAnchorPoint(0.5,0.5)
+--    color:ignoreAnchorPointForPosition(false)
+--    color:setPosition(back:getContentSize().width/2, back:getContentSize().height * 0.35 )
+--    back:addChild(color)
+    
     local detailInfo = DetailInfo.create(currentWord)
     detailInfo:setAnchorPoint(0.5,0.5)
     detailInfo:ignoreAnchorPointForPosition(false)

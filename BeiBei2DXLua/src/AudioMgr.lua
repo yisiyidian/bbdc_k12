@@ -6,6 +6,9 @@ currentBGM = ""
 function playMusic(filename, isLoop)
     currentBGM = filename
     if db.isMusicOn() then
+        if cc.SimpleAudioEngine:getInstance():isMusicPlaying() then
+        	cc.SimpleAudioEngine:getInstance():stopMusic()
+        end
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename) 
         cc.SimpleAudioEngine:getInstance():setMusicVolume(0.2) 
         if cc.FileUtils:getInstance():isFileExist(localPath) then
