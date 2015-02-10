@@ -139,6 +139,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
                 if wrongWordList == nil then
                     if wrongNum == s_max_wrong_num_everyday - 1 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanReward)
+                        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                         print('logInDatas')
                         print_lua_table(s_CURRENT_USER.logInDatas)
                         print('isCheckIn')
