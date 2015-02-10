@@ -39,10 +39,10 @@ function LastWordInfoPopup:ctor(currentWordName)
     
     soundMark.scale(0.8)
     
-    local detailInfo = DetailInfo.create(currentWord)
+    local detailInfo = DetailInfo.create(currentWord,400)
     detailInfo:setAnchorPoint(0.5,0.5)
     detailInfo:ignoreAnchorPointForPosition(false)
-    detailInfo:setPosition(back:getContentSize().width/2, back:getContentSize().height * 0.35 )
+    detailInfo:setPosition(back:getContentSize().width/2, back:getContentSize().height * 0.45 )
     back:addChild(detailInfo)
    
     local button_goon_clicked = function(sender, eventType)

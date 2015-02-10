@@ -93,9 +93,11 @@ function EndLayer:ctor()
     backColor:addChild(partical)
     backColor:addChild(beibeiAnimation)
 
-    self.getBean = s_CURRENT_USER.beanReward
+    self.getBean = s_CURRENT_USER.beanRewardForIron
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
+    
+    s_CURRENT_USER.beanRewardForIron = 3
 
     AnalyticsTasksFinished('NewStudySuccessLayer')
 end
