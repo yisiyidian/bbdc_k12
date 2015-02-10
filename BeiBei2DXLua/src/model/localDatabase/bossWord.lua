@@ -92,16 +92,22 @@ function M.getTodayReviewBoss()
     end
 
     local getGapDay = function(day1, day2)
+        print('local getGapDay = function(day1, day2)', day1, day2)
         local t1 = split(day1, "/")
         local t2 = split(day2, "/")
         local d1 = {}
         local d2 = {}
-        d1.year  = "20"..t1[3]
-        d1.month = t1[1]
-        d1.day   = t1[2]
-        d2.year  = "20"..t2[3]
-        d2.month = t2[1]
-        d2.day   = t2[2]
+        d1.year  = tonumber("20"..t1[3])
+        d1.month = tonumber(t1[1])
+        d1.day   = tonumber(t1[2])
+        d2.year  = tonumber("20"..t2[3])
+        d2.month = tonumber(t2[1])
+        d2.day   = tonumber(t2[2])
+
+        local y = tonumber(os.date('%Y', os.time()))
+        if d1.year > y then d1.year = y end
+        if d2.year > y then d2.year = y end
+
         local numDay1 = os.time(d1)
         local numDay2 = os.time(d2)
         local gap = (numDay2-numDay1)/(3600*24)
@@ -125,6 +131,9 @@ function M.getTodayReviewBoss()
         end
 
         local lastUpdateDay = os.date("%x", boss.lastUpdate)
+        if boss.lastUpdate == nil or boss.lastUpdate == 0 then
+            lastUpdateDay = os.date("%x", boss.updatedAt)
+        end
         local gapDayNum = getGapDay(lastUpdateDay, today)
         if gapDayNum >= gap then
             table.insert(todayReviewBoss, boss.bossID)
@@ -204,16 +213,22 @@ function M.getBossInfo(bossID)
 
         -- get cooling day
         local getGapDay = function(day1, day2)
+            print('local getGapDay = function(day1, day2)', day1, day2)
             local t1 = split(day1, "/")
             local t2 = split(day2, "/")
             local d1 = {}
             local d2 = {}
-            d1.year  = "20"..t1[3]
-            d1.month = t1[1]
-            d1.day   = t1[2]
-            d2.year  = "20"..t2[3]
-            d2.month = t2[1]
-            d2.day   = t2[2]
+            d1.year  = tonumber("20"..t1[3])
+            d1.month = tonumber(t1[1])
+            d1.day   = tonumber(t1[2])
+            d2.year  = tonumber("20"..t2[3])
+            d2.month = tonumber(t2[1])
+            d2.day   = tonumber(t2[2])
+
+            local y = tonumber(os.date('%Y', os.time()))
+            if d1.year > y then d1.year = y end
+            if d2.year > y then d2.year = y end
+
             local numDay1 = os.time(d1)
             local numDay2 = os.time(d2)
             local gap = (numDay2-numDay1)/(3600*24)
@@ -238,6 +253,9 @@ function M.getBossInfo(bossID)
 
             local today = os.date("%x", time)
             local lastUpdateDay = os.date("%x", boss.lastUpdate)
+            if boss.lastUpdate == nil or boss.lastUpdate == 0 then
+                lastUpdateDay = os.date("%x", boss.updatedAt)
+            end
             local gapDayNum = getGapDay(lastUpdateDay, today)
             if gapDayNum >= gap then
                 boss.coolingDay = 0

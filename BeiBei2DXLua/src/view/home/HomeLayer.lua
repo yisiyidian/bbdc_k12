@@ -486,6 +486,7 @@ function HomeLayer.create(share)
 
                     icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
                     button_friend:addChild(icon_friend)
+                    layer.button_friend = button_friend
                     button_friend:unscheduleUpdate()
                 end
             end
@@ -624,7 +625,7 @@ function HomeLayer.create(share)
         if now_x + moveLength < start_x and not isDataShow then
             if viewIndex == 2 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
+                mission_progress.stopListener = false
                 viewIndex = 1
 
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))

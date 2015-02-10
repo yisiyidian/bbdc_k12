@@ -20,19 +20,25 @@ function FriendSearch:ctor()
     local searchButton = ccui.Button:create('image/friend/fri_button_search.png','','')
     searchButton:setPosition(0.9 * inputBack:getContentSize().width,0.5 * inputBack:getContentSize().height)
     searchButton:setScale9Enabled(true)
-    inputBack:addChild(searchButton)
+    inputBack:addChild(searchButton,10)
+
+    local cursor
     
     local function textFieldEvent(sender, eventType)
         if eventType == ccui.TextFiledEventType.attach_with_ime then
             local textField = sender
+            cursor:setVisible(true)
             textField:setPlaceHolder("")
         elseif eventType == ccui.TextFiledEventType.detach_with_ime then
             local textField = sender
             textField:setPlaceHolder("请输入好友名字")
+            cursor:setVisible(false)
         elseif eventType == ccui.TextFiledEventType.insert_text then
             local textField = sender
+            cursor:setVisible(true)
         elseif eventType == ccui.TextFiledEventType.delete_backward then
             local textField = sender
+            cursor:setVisible(true)
         end
     end
 
@@ -51,9 +57,22 @@ function FriendSearch:ctor()
     inputBack:addChild(textField) 
     textField:setTouchSize(inputBack:getContentSize())
     textField:setTouchAreaEnabled(true)
+
+    cursor = cc.Label:createWithSystemFont("|","",34)
+    cursor:setColor(cc.c4b(0,0,0,255))
+    cursor:setVisible(false)
+    cursor:setPosition(textField:getContentSize().width,34)
+    cursor:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.FadeIn:create(0.5),cc.FadeOut:create(0.5))))
+    inputBack:addChild(cursor)
+    
+    local update = function(dt)
+        cursor:setPosition(34+textField:getContentSize().width, inputBack:getContentSize().height/2)
+    end
+    inputBack:scheduleUpdateWithPriorityLua(update, 0)
     
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
+            print('touchEvent')
             self:removeChildByName('searchResult',true)
             local username = textField:getString()
             if username == s_CURRENT_USER.username then
@@ -91,7 +110,9 @@ function FriendSearch:ctor()
                                 listView:setPosition(s_LEFT_X,0)
                                 self:addChild(listView)
                                 listView:setName('searchResult')
-                                for i, user in ipairs(f_user) do
+                                for i, fuser in ipairs(f_user) do
+                                    local user = DataUser.create()
+                                    parseServerDataToClientData(fuser,user)
                                     local button = cc.Sprite:create("image/friend/friendRankButton.png")
                                     --button:setPosition(0.5 * s_DESIGN_WIDTH, 0.65 * s_DESIGN_HEIGHT)
                                     --button:setScale9Enabled(true)
@@ -120,7 +141,6 @@ function FriendSearch:ctor()
                                     fri_name:setAnchorPoint(0,0)
                                     fri_name:setPosition(0.42 * button:getContentSize().width,0.52 * button:getContentSize().height)
                                     button:addChild(fri_name)
-                
                                     local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',user.wordsCount),'',24)
                                     fri_word:setColor(cc.c3b(0,0,0))
                                     fri_word:ignoreAnchorPointForPosition(false)

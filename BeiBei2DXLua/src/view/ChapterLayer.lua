@@ -1,6 +1,6 @@
 require("cocos.init")
 require('common.global')
-s_chapter0_base_height = 3014
+s_0_base_height = 3014
 s_islands_per_page = 10
 local ChapterLayer = class('ChapterLayer', function() 
     return cc.Layer:create()
@@ -53,6 +53,7 @@ function ChapterLayer:ctor()
     -- add chapter node
     self:addChapterIntoListView('chapter0')
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey) + 0
+    print('#### current levelINfo '..levelInfo)
     local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)   
     for i = 1, currentChapterIndex do
         self:addChapterIntoListView('chapter'..i)
@@ -74,7 +75,7 @@ end
 
 function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)+0
-    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
+    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() +0
 --    currentProgress = 10
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
  if currentProgress % s_islands_per_page == 0 and currentProgress > 0 and currentProgress - oldProgress > 0 then       
