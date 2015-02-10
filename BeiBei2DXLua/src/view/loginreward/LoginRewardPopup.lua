@@ -192,7 +192,7 @@ function LoginRewardPopup:ctor()
 
     local sprite = backPopup:getChildByName("reward"..(today + 1))
     local onTouchEnded = function(touch, event)
-        if todayMark == 0 then
+        if todayMark == 0 and sprite ~= nil then
             local location = backPopup:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint(sprite:getBoundingBox(), location)  then
                 s_CURRENT_USER:addBeans(rewardList[#currentData].reward)  
