@@ -74,9 +74,9 @@
     <channel name="360qihu" 
         packageName="com.beibei.wordmaster.qihu"
 
-        leanCloudAppName="贝贝单词X_0"
-        leanCloudAppID="2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq"
-        leanCloudAppKey="gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc"
+        leanCloudAppName="beibeidanci_v180"
+        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
+        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"

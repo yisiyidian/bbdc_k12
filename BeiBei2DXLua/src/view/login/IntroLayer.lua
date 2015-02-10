@@ -59,9 +59,10 @@ function IntroLayer.create(directOnLogin)
     
     local button_visitor_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local hasGuest = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_GUEST)
+            local tmpUser = DataUser.create()
+            local hasGuest = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_GUEST)
             if hasGuest then
-                s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+                s_O2OController.logInOnline(tmpUser.username, tmpUser.password)
             else
                 s_O2OController.signUpWithRandomUserName()
             end
@@ -125,9 +126,10 @@ function IntroLayer.create(directOnLogin)
                 loginAlter.close = function() layer:removeChildByTag(2) end 
             end
 
-            local hasAccount = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
+            local tmpUser = DataUser.create()
+            local hasAccount = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
 
-            if not (hasAccount and s_CURRENT_USER.usertype == USER_TYPE_GUEST) then
+            if not (hasAccount and tmpUser.usertype == USER_TYPE_GUEST) then
                 gotoRegistNewAccount()
             else
                 local visitorRegister = VisitorRegister.create()
