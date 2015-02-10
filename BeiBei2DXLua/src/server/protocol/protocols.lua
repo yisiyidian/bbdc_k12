@@ -199,10 +199,10 @@ function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
     protocol:request()
 end
 
-function checkInEverydayInfo()
+local function saveEverydayInfo(key)
     resetLocalEverydayInfos()
     local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
-    currentWeek:checkIn(os.time(), s_CURRENT_USER.bookKey)
+    currentWeek:checkIn(os.time(), key)
 
     local function cb (currentWeek)
         s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
@@ -224,6 +224,15 @@ function checkInEverydayInfo()
     end)
 end
 
+function checkInEverydayInfo()
+    saveEverydayInfo(s_CURRENT_USER.bookKey)
+end
+
+function getRewardEverydayInfo()
+    local DataEverydayInfo = require('model.user.DataEverydayInfo')
+    saveEverydayInfo(WEEKDAYSTATE_GETREWARD_KEY)
+end
+
 function getNotContainedInLocalEverydayInfosFromServer(callback)
     getNotContainedInLocalDatasFromServer('DataEverydayInfo', nil, function (serverDatas, error)
         if error == nil then
@@ -239,6 +248,31 @@ function getNotContainedInLocalEverydayInfosFromServer(callback)
         else
             resetLocalEverydayInfos()
             if callback then callback(nil, error) end
+        end
+    end)
+end
+
+function updateCurrentEverydayInfo()
+    local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+    local week = getCurrentLogInWeek(os.time() , s_CURRENT_USER.localTime)
+    if currentWeek ~= nil and currentWeek.week == week then return end
+
+    print('updateCurrentEverydayInfo')
+
+    local DataEverydayInfo = require('model.user.DataEverydayInfo')
+    currentWeek = DataEverydayInfo.create()
+    updateDataFromUser(currentWeek, s_CURRENT_USER)
+    currentWeek.week = week
+    currentWeek:setWeekDay(os.time())
+    sysEverydayInfo(nil, currentWeek, function (serverDatas, error) 
+        if serverDatas ~= nil then
+            for i, v in ipairs(serverDatas) do
+                local data = DataEverydayInfo.create()
+                parseServerDataToClientData(v, data)
+                s_LocalDatabaseManager.saveDataClassObject(data, data.userId, data.username, " and week = " .. tostring(data.week))
+            end
+        elseif currentWeek ~= nil then
+            s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
         end
     end)
 end

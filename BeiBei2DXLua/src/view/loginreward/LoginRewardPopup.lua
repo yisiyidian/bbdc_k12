@@ -209,6 +209,7 @@ function LoginRewardPopup:ctor()
                 saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                 sprite:setVisible(true) 
                 currentWeek:getReward(os.time())
+                getRewardEverydayInfo()
                 s_CURRENT_USER.getDailyRewardTime = currentTime 
                 saveUserToServer({['getDailyRewardTime'] = s_CURRENT_USER.getDailyRewardTime})
 
