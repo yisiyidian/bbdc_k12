@@ -160,7 +160,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
         deco:setPosition(levelPosition.x,levelPosition.y+20)
         self:addChild(deco, 130)
-    elseif levelState == 2 or levelIndex == currentTaskBossIndex then
+    elseif levelState == 2 or (levelState >= 4 and levelIndex == currentTaskBossIndex) then
         local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
 --        reviewBoss:addAnimation(0, '1', false)
 --        s_SCENE:callFuncWithDelay(1,function()

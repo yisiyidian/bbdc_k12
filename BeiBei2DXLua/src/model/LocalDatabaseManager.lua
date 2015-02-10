@@ -101,14 +101,16 @@ function Manager.getWordInfoFromWordName(word)
             raw = s_WordDictionaryDatabase.allwords[word]
         end
         if raw ~= nil then
-            ret.wordSoundMarkEn    =   raw[1]
-            ret.wordSoundMarkAm    =   raw[2]
-            ret.wordMeaningSmall   =   raw[3]
-            ret.wordMeaning        =   raw[4]
-            ret.sentenceEn         =   raw[5]
-            ret.sentenceCn         =   raw[6]
-            ret.sentenceEn2        =   raw[7]
-            ret.sentenceCn2        =   raw[8]
+            local indexOffset = 0
+            if IS_DEVELOPMENT_MODE then indexOffset = 1 end
+            ret.wordSoundMarkEn    =   raw[1 + indexOffset]
+            ret.wordSoundMarkAm    =   raw[2 + indexOffset]
+            ret.wordMeaningSmall   =   raw[3 + indexOffset]
+            ret.wordMeaning        =   raw[4 + indexOffset]
+            ret.sentenceEn         =   raw[5 + indexOffset]
+            ret.sentenceCn         =   raw[6 + indexOffset]
+            ret.sentenceEn2        =   raw[7 + indexOffset]
+            ret.sentenceCn2        =   raw[8 + indexOffset]
         end
     end
 
